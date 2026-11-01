@@ -25,7 +25,7 @@ Sütun adları yalnızca görseldir. Ayrıştırıcı her satırı böler ve de�
 İçe aktarma modal penceresinden bir başlangıç dosyası indirin (**CSV şablonunu indir**). Örnek:
 
 ```csv
-# OmniRoute sağlayıcı içe aktarma dosyası (konumsal sütunlar)
+# 67router sağlayıcı içe aktarma dosyası (konumsal sütunlar)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

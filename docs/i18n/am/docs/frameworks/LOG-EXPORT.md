@@ -4,7 +4,7 @@
 
 ---
 
-የOmniRoute ጥሪ ምዝግቦችን ወደ ውጫዊ የትንታኔ ማከማቻ በተከታታይ እና በየደረጃው መላክ።
+የ67router ጥሪ ምዝግቦችን ወደ ውጫዊ የትንታኔ ማከማቻ በተከታታይ እና በየደረጃው መላክ።
 
 የLogs ዳሽቦርድ ትር የጥያቄ ታሪክን በSQLite (`call_logs`) ውስጥ ያስቀምጣል፤ ይህም
 በማዞር እና በማቆያ ፖሊሲ የተገደበ ነው። የምዝግብ መላክ ተመሳሳዩን የመዝገብ ስብስብ በጊዜ ሰሌዳ መሠረት
@@ -291,7 +291,7 @@ insertAll ጥሪዎች ይከፋፍለዋል፤ ስለዚህ ትልቅ `batch_si
 - በከፊል ሲወድቅ `send()` **የግድ ስህተት መወርወር አለበት**። በስኬት መጠናቀቁ “መድረሻው እነዚህን ረድፎች ይዟል” ማለት ሲሆን፣
   cursorውም እነሱን በቋሚነት አልፎ ይሄዳል።
 - ተጠቃሚው ያቀረበውን URL የሚቀበል መድረሻ፣ ልክ webhooks እንደሚያደርጉት፣ fetch ከማድረጉ በፊት
-  በ`parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) በኩል ማረጋገጥ አለበት።
+  በ`parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) በኩል ማረጋገጥ አለበት።
   BigQuery ይህን አያስፈልገውም፦ hostsዎቹ ቋሚዎች ናቸው።
 
 ---

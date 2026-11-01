@@ -5,7 +5,7 @@
 ---
 
 > **ہر ڈائریکٹری اور روٹ فائل کی ایک سطری وضاحت۔**
-> آخری بار اپ ڈیٹ کیا گیا: 2026-06-28 — OmniRoute v3.8.40
+> آخری بار اپ ڈیٹ کیا گیا: 2026-06-28 — 67router v3.8.40
 >
 > کوڈ بیس میں تیزی سے نیویگیٹ کرنے کے لیے یہ نقشہ استعمال کریں۔ تفصیلی معلومات کے لیے مخصوص دستاویزات کے لنکس پر جائیں۔
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # مارکیٹنگ / README تصویری اثاثے
 ├── @omniroute/           # شائع کیے جانے کے قابل معاون پیکیجز (opencode-plugin، opencode-provider)
 ├── skills/               # CLI/ایجنٹ اسکل پیکس (cli-* + omni-* + config-codex-cli)
-├── examples/             # نمونہ پلگ اِنز + omniroute-cmd-hello اسٹارٹر
+├── examples/             # Quickstart client samples
 ├── contrib/              # کمیونٹی کی شراکتیں (podman/)
 ├── .source/              # Fumadocs سورس کنفیگ (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions ورک فلوز + ایشو ٹیمپلیٹس + PR ٹیمپلیٹ
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `app/api/v1/`                                                                | عوامی OpenAI-مطابق API (~25 ذیلی روٹس: چیٹ، تکمیلات، ایمبیڈنگز، فائلیں، بیچز، آڈیو، تصاویر، ویڈیوز، موسیقی، دوبارہ درجہ بندی، ماڈریشنز، تلاش، ws، ایجنٹس، اکاؤنٹس، فراہم کنندگان وغیرہ)                                                                                                                            |
 | `app/api/v1beta/`                                                            | Gemini طرز کے API اینڈ پوائنٹس                                                                                                                                                                                                                                                                                     |
-| `app/api/playground/`                                                        | Playground Studio روٹس: `improve-prompt/` (POST — LLM پرامپٹ کو دوبارہ لکھنے والا)، `presets/` (GET فہرست / POST تخلیق)، `presets/[id]/` (GET / PUT / DELETE) — `docs/frameworks/PLAYGROUND_STUDIO.md` دیکھیں                                                                                                      |
 | `app/api/` (غیر-v1)                                                          | انتظامی/ایڈمن روٹس (~60 ڈائریکٹریاں: فراہم کنندگان، کومبوز، ترتیبات، mcp، a2a، جائزے، میموری، مہارتیں، ویب ہکس، تعمیل، لچک، نگرانی، ٹنلز، cli-tools وغیرہ)                                                                                                                                                         |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 روٹس (سرور کنٹرول، ایجنٹ اسٹیٹ/DNS/میپنگز، بائی پاس، سرٹیفکیٹ، upstream-CA)۔ LOCAL_ONLY + SPAWN_CAPABLE۔ `docs/frameworks/AGENTBRIDGE.md §7` دیکھیں۔                                                                                                                                     |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ روٹس (درخواستیں، سیشنز، ہوسٹس، کیپچر موڈز، برآمد، ws)۔ LOCAL_ONLY + SPAWN_CAPABLE۔ `docs/frameworks/TRAFFIC_INSPECTOR.md §8` دیکھیں۔                                                                                                                                         |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 داخلہ نقطہ (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (دریافت)                                                                                                                                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/`                                                 | ڈیش بورڈ UI صفحات (50+ حصے، ~118 page.tsx فائلیں: فراہم کنندگان، کومبوز، ترتیبات، میموری، مہارتیں، ویب ہکس، جائزے، آڈٹ، بیچ، کیش، اخراجات، صحت، نظام، سرگرمی وغیرہ)                                                                                                                                                |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ٹیبز: تلاش/اسکریپ/موازنہ + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` دیکھیں                                                                                                                                                                        |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (منصوبہ 21): `page.tsx` (3-ٹیب شیل)، `components/` (MemoryConceptCard، MemoryEngineStatus، EmbeddingSourceSelector، EditMemoryModal، RetrievePreview، QdrantConfigCard، RerankConfigCard)، `components/tabs/` (MemoriesTab، PlaygroundTab، EngineTab)، `hooks/` (useEngineStatus، useMemorySettings) |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | سیشن، پاس ورڈ ہیشنگ، ٹوکن کی توثیق                                                                                                                                                                                                                                                                                   |
 | `batches/`                               | OpenAI Batches API ہینڈلرز                                                                                                                                                                                                                                                                                           |
 | `catalog/`                               | فراہم کنندہ کیٹلاگ کی Zod توثیق + صلاحیت کا تعین                                                                                                                                                                                                                                                                     |
-| `cloudAgent/`                            | کلاؤڈ ایجنٹس (Codex Cloud، Devin، Jules) — `docs/frameworks/CLOUD_AGENT.md` دیکھیں                                                                                                                                                                                                                                   |
 | `combos/`                                | کومبو کا تعین + ترتیبِ نو کے معاون فنکشنز                                                                                                                                                                                                                                                                            |
 | `audit/`                                 | سرگرمی فیڈ کے معاون فنکشنز: `highLevelActions.ts` (اجازت یافتہ فہرست + `isHighLevelAction()`)، `activityIcons.ts` (عمل → آئیکن/فعل میپ)، `timeline.ts` (groupByDay/relativeTime) — `docs/architecture/MONITORING_SECTIONS.md` دیکھیں                                                                                 |
 | `compliance/`                            | آڈٹ لاگ + فراہم کنندہ آڈٹ — `docs/security/COMPLIANCE.md` دیکھیں                                                                                                                                                                                                                                                     |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | UI فارمیٹنگ کے معاون افعال (لاگت، تاخیر وغیرہ)                                                                                                                                                                                                                                                                       |
 | `embeddings/`                            | Embeddings سروس کے معاون افعال                                                                                                                                                                                                                                                                                       |
 | `env/`                                   | Env متغیرات کی پارسنگ + توثیق                                                                                                                                                                                                                                                                                        |
-| `evals/`                                 | Eval فریم ورک (سوٹس، رنر، رن ٹائم) — دیکھیے `docs/frameworks/EVALS.md`                                                                                                                                                                                                                                               |
 | `guardrails/`                            | PII ماسکر، پرامپٹ انجیکشن، وژن برج — دیکھیے `docs/security/GUARDRAILS.md`                                                                                                                                                                                                                                            |
 | `jobs/`                                  | پسِ منظر کے جابز (cron جیسے)                                                                                                                                                                                                                                                                                         |
 | `memory/`                                | مکالماتی میموری (SQLite FTS5 + sqlite-vec ہائبرڈ RRF + Qdrant ٹیئر 2) — دیکھیے `docs/frameworks/MEMORY.md`                                                                                                                                                                                                           |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — پسِ منظر میں `needs_reindex=1` والی میموریز کو پروسیس کرتا ہے؛ `POST /api/memory/reindex` اور ضرورت پر بیک فل کے راستے کے ذریعے کال کیا جاتا ہے۔ (منصوبہ 21)                                                                                                                                   |
 | `monitoring/`                            | صحت کی جانچ، میٹرکس کا اخراج                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | 22 فراہم کنندہ ماڈیولز کے لیے OAuth/درآمد کے بہاؤ (agy، antigravity، claude، cline، codebuddy-cn، codex، cursor، devin-desktop، ghe-copilot، github، gitlab-duo، grok-cli-oauth، grok-cli، kilocode، kimi-coding، kiro، openference، qoder، trae، xai-oauth، zed-hosted، zed)                                        |
-| `plugins/`                               | پلگ اِن رجسٹری                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Anthropic طرز کے پرامپٹ کیش بریک پوائنٹس                                                                                                                                                                                                                                                                             |
 | `skills/`                                | اسکلز فریم ورک (بلٹ اِن + مارکیٹ پلیس + SkillsSH) — دیکھیے `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                               |
-| `playground/`                            | Playground Studio کے مشترکہ معاونین: `codeExport.ts` (curl/Python/TS جنریٹر)، `promptImprover.ts` (میٹا پرامپٹ بلڈر)، `streamMetrics.ts` (خالص TTFT/TPS)، `types.ts` (قیمتوں کا جدول) — دیکھیے `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                |
 | `webhookDispatcher.ts`                   | HMAC ویب ہک ترسیل — دیکھیے `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                             |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | ٹنل مینیجرز — دیکھیے `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                     |
 | `cloudSync.ts`, `initCloudSync.ts`       | حالت کی اختیاری کلاؤڈ ہم وقت سازی                                                                                                                                                                                                                                                                                    |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — ڈیٹابیس (147 ماڈیولز + 208 مائیگریشنز)
 
-| ذیلی ڈائریکٹری            | مقصد                                                                                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | WAL جرنلنگ کے ساتھ `getDbInstance()` سنگلٹن                                                                                                                                      |
-| `db/migrations/`          | ورژن شدہ SQL فائلیں (یک باریتی، ٹرانزیکشنل)۔ `073_memory_vec.sql`، `memory_vec_meta` + `needs_reindex` کالم شامل کرتی ہے (منصوبہ 21)۔                                            |
-| `db/playgroundPresets.ts` | Playground Studio پری سیٹس کے لیے CRUD ماڈیول (`listPlaygroundPresets`، `getPlaygroundPreset`، `createPlaygroundPreset`، `updatePlaygroundPreset`، `deletePlaygroundPreset`)     |
-| `db/memoryVec.ts`         | `memory_vec_meta` کے لیے CRUD (active_dim، embedding_signature، last_reset_at، vec_loaded) + `markMemoryNeedsReindex`، `getMemoryReindexQueue` وغیرہ (منصوبہ 21)                 |
-| `db/<domain>.ts`          | ہر ڈومین کے لیے ایک ماڈیول: providers، combos، apiKeys، users، sessions، usage، audit*log، webhooks، skills، memory_entries، cloud_agent_tasks، evals*\*، reasoning_cache وغیرہ۔ |
+| ذیلی ڈائریکٹری    | مقصد                                                                                                                                                                             |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | WAL جرنلنگ کے ساتھ `getDbInstance()` سنگلٹن                                                                                                                                      |
+| `db/migrations/`  | ورژن شدہ SQL فائلیں (یک باریتی، ٹرانزیکشنل)۔ `073_memory_vec.sql`، `memory_vec_meta` + `needs_reindex` کالم شامل کرتی ہے (منصوبہ 21)۔                                            |
+| `db/memoryVec.ts` | `memory_vec_meta` کے لیے CRUD (active_dim، embedding_signature، last_reset_at، vec_loaded) + `markMemoryNeedsReindex`، `getMemoryReindexQueue` وغیرہ (منصوبہ 21)                 |
+| `db/<domain>.ts`  | ہر ڈومین کے لیے ایک ماڈیول: providers، combos، apiKeys، users، sessions، usage، audit*log، webhooks، skills، memory_entries، cloud_agent_tasks، evals*\*، reasoning_cache وغیرہ۔ |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | مکمل ریلیز کا بہاؤ (اسکلز، husky، روایتی کمیٹس، تعیناتی)                                                 |
 | `COVERAGE_PLAN.md`          | کوریج کے اہداف اور موجودہ حالت                                                                           |
 | `FREE_TIERS.md`             | منتخب کردہ مفت درجے کے فراہم کنندگان (48+ مفت + 11 OAuth)                                                |
-| `CLI-TOOLS.md`              | بیرونی CLI انضمامات + اندرونی OmniRoute CLI                                                              |
+| `CLI-TOOLS.md`              | بیرونی CLI انضمامات + اندرونی 67router CLI                                                               |
 | `I18N.md`                   | i18n فنِ تعمیر، زبان شامل کرنے کا طریقہ، 67 مقامات                                                       |
 | `UNINSTALL.md`              | صاف اَن انسٹال کرنے کے مراحل                                                                             |
 | `PROVIDER_REFERENCE.md`     | 375 فراہم کنندگان کا **خودکار طور پر تیار کردہ** کیٹلاگ (دوبارہ تخلیق: `npm run gen:provider-reference`) |
@@ -403,13 +395,10 @@ open-sse/
 | دستاویز                                    | مقصد                                                             |
 | ------------------------------------------ | ---------------------------------------------------------------- |
 | `MCP-SERVER.md`                            | MCP سرور: 110 ٹولز، 3 ٹرانسپورٹس، 33 اسکوپس، REST اینڈ پوائنٹس   |
-| `A2A-SERVER.md`                            | A2A v0.3: JSON-RPC، 6 اسکلز، REST معاونین، ایجنٹ کارڈ            |
 | `AGENT_PROTOCOLS_GUIDE.md`                 | متحد رہنما: A2A بمقابلہ ACP بمقابلہ کلاؤڈ ایجنٹس                 |
-| `CLOUD_AGENT.md`                           | Codex Cloud / Devin / Jules کی آرکیسٹریشن                        |
 | `SKILLS.md`                                | اسکلز فریم ورک (بلٹ اِن + مارکیٹ پلیس + SkillsSH + سینڈ باکس)    |
 | `RADAR.md`                                 | Radar مفت ماڈل کیٹلاگ اوورلے (`RADAR_ENABLED`، بطور ڈیفالٹ بند)  |
 | `MEMORY.md`                                | میموری نظام (SQLite FTS5 + Qdrant)                               |
-| `EVALS.md`                                 | جانچ کا فریم ورک (سوٹس، رنز، معیارات)                            |
 | `GUARDRAILS.md`                            | PII ماسکر، پرامپٹ انجیکشن، وژن برج                               |
 | `COMPLIANCE.md`                            | آڈٹ لاگ، برقرار رکھنے کی مدت، noLog سے خارج ہونے کا اختیار       |
 | `WEBHOOKS.md`                              | HMAC سے دستخط شدہ ویب ہُک کی ترسیل                               |
@@ -574,7 +563,6 @@ open-sse/
 - **کوئی provider شامل کر رہے ہیں؟** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` کی پیروی کریں اور `docs/reference/PROVIDER_REFERENCE.md` سے دوبارہ جانچ کریں۔
 - **کوئی route شامل کر رہے ہیں؟** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`۔
 - **کوئی MCP tool شامل کر رہے ہیں؟** `docs/frameworks/MCP-SERVER.md § Adding a Tool`۔
-- **کوئی A2A skill شامل کر رہے ہیں؟** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`۔
 - **مقامی طور پر چلا رہے ہیں؟** `docs/guides/SETUP_GUIDE.md`۔
 - **تعینات کر رہے ہیں؟** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`۔
 - **ریلیز کر رہے ہیں؟** `docs/ops/RELEASE_CHECKLIST.md` (اور `/generate-release-cc` Claude Code skill)۔

@@ -214,7 +214,7 @@ Dokokin tsabtacewa da ake amfani da su ga `upstreamDetails`:
 3. Iyakar zurfi: ana maye gurbin nesting da ya wuce matakai 4 da string `"[truncated]"`.
 4. Ana iyakance arrays zuwa elements 32.
 
-Call sites masu parsed provider error body ne kawai ya kamata su aika `upstreamDetails`. Kurakuran OmniRoute
+Call sites masu parsed provider error body ne kawai ya kamata su aika `upstreamDetails`. Kurakuran 67router
 na ciki (gazawar SSE parse, empty content, guardrail blocks) ba dole su haɗa shi ba.
 
 KADA a aika ɗanyen `err.stack`, `err.message`, ko kowane string daga runtime exception zuwa
@@ -225,7 +225,7 @@ Zaɓaɓɓen upstream 4xx passthrough yana kiyaye safe JSON shape da wording na p
 client auto-recovery, amma ba byte-for-byte passthrough ba ne: recursive sanitizer yana gudana koyaushe
 kafin serialization. Jikunan da ke da cyclic, BigInt, ko hostile `toJSON()` suna gazawa cikin aminci kuma
 ba su cancanci passthrough ba. OCR da moderation suna amfani da wannan doka ɗaya; ana sauya upstream bodies
-marasa JSON, marasa komai, ko waɗanda aka yi wa label ba daidai ba zuwa canonical OmniRoute JSON error envelope.
+marasa JSON, marasa komai, ko waɗanda aka yi wa label ba daidai ba zuwa canonical 67router JSON error envelope.
 
 ## Sananniyar iyakancewar CodeQL: ba a gane masu tsabtace bayanai na musamman
 

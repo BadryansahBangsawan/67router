@@ -6,7 +6,7 @@ lastUpdated: 2026-10-13
 
 # Log export
 
-Continuous, incremental export of OmniRoute call logs to an external analytics store.
+Continuous, incremental export of 67router call logs to an external analytics store.
 
 The Logs dashboard tab keeps request history in SQLite (`call_logs`), which is bounded by
 rotation and retention. Log export ships the same record set out on a schedule so it can outlive
@@ -272,8 +272,8 @@ Two rules for a new destination:
 - `send()` **must throw** on a partial failure. Resolving means "the destination has these rows",
   and the cursor moves past them permanently.
 - A destination that takes a user-supplied URL must validate it through
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) before fetching,
-  the same way webhooks do. BigQuery does not need this: its hosts are constants.
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) before fetching.
+  BigQuery does not need this: its hosts are constants.
 
 ---
 

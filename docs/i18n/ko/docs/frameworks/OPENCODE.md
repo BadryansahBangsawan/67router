@@ -5,11 +5,11 @@
 ---
 
 > **상태:** 일반 제공.
-> **대상:** OpenCode를 OmniRoute 배포 환경에 연결하는 운영자.
+> **대상:** OpenCode를 67router 배포 환경에 연결하는 운영자.
 > **신뢰할 수 있는 원본(config 스키마):** `src/shared/services/opencodeConfig.ts`
 > **신뢰할 수 있는 원본(npm package):** `@omniroute/opencode-provider/` (게시 가능한 workspace)
 
-[OpenCode](https://opencode.ai)는 에이전트형 CLI/데스크톱 AI 클라이언트입니다. `~/.config/opencode/opencode.json`(또는 `opencode.jsonc`)에서 provider 카탈로그를 읽으며 `https://opencode.ai/config.json`의 스키마를 따릅니다. OmniRoute는 이러한 provider 중 하나로 OpenCode에 노출됩니다. 모든 요청은 OmniRoute의 표준 OpenAI 호환 `/v1` 인터페이스를 통과하므로 OpenCode에서 Auto-Combo 라우팅, circuit breaker, 키 정책, observability 등의 기능을 자동으로 활용할 수 있습니다.
+[OpenCode](https://opencode.ai)는 에이전트형 CLI/데스크톱 AI 클라이언트입니다. `~/.config/opencode/opencode.json`(또는 `opencode.jsonc`)에서 provider 카탈로그를 읽으며 `https://opencode.ai/config.json`의 스키마를 따릅니다. 67router는 이러한 provider 중 하나로 OpenCode에 노출됩니다. 모든 요청은 67router의 표준 OpenAI 호환 `/v1` 인터페이스를 통과하므로 OpenCode에서 Auto-Combo 라우팅, circuit breaker, 키 정책, observability 등의 기능을 자동으로 활용할 수 있습니다.
 
 **두 가지 지원되는 통합 경로**가 있습니다. 하나를 선택하세요. 두 경로 모두 동일한 config를 생성합니다.
 
@@ -17,16 +17,16 @@
 
 ## 경로 1 — CLI 생성기(npm 설치 불필요)
 
-최종 사용자에게 권장됩니다. OmniRoute와 함께 제공되며 기존 위치에 `opencode.json`을 작성합니다.
+최종 사용자에게 권장됩니다. 67router와 함께 제공되며 기존 위치에 `opencode.json`을 작성합니다.
 
 ```bash
-# OmniRoute 설치 후(npm i -g @omniroute/cli 또는 로컬 clone)
+# 67router 설치 후(npm i -g @omniroute/cli 또는 로컬 clone)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-내부적으로 CLI는 `mergeOpenCodeConfigText()`(`src/shared/services/opencodeConfig.ts:104`)를 호출하므로 기존 `opencode.json`의 다른 provider와 주석이 유지됩니다. OmniRoute 항목은 원자적으로 추가되거나 교체됩니다.
+내부적으로 CLI는 `mergeOpenCodeConfigText()`(`src/shared/services/opencodeConfig.ts:104`)를 호출하므로 기존 `opencode.json`의 다른 provider와 주석이 유지됩니다. 67router 항목은 원자적으로 추가되거나 교체됩니다.
 
 생성되는 파일(기본 model 카탈로그):
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 OpenCode UI/agent
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute OpenAI 인터페이스)
-         → OmniRoute /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router OpenAI 인터페이스)
+         → 67router /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
             → combo routing / Auto-Combo / executor
                → upstream provider
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 `models: [...]`를 통해 재정의할 수 있습니다. 권장 추가 항목:
 
-- `"auto"` — OmniRoute의 [Auto-Combo](../routing/AUTO-COMBO.md) 무설정 라우터를 표시합니다. 카탈로그를 하드 코딩하지 않아도 OpenCode가 "사용 가능한 최적의 모델"을 선택할 수 있습니다.
-- `"<combo-name>"` — 대시보드에서 정의한 임의의 콤보입니다. OmniRoute가 이를 투명하게 해석합니다.
+- `"auto"` — 67router의 [Auto-Combo](../routing/AUTO-COMBO.md) 무설정 라우터를 표시합니다. 카탈로그를 하드 코딩하지 않아도 OpenCode가 "사용 가능한 최적의 모델"을 선택할 수 있습니다.
+- `"<combo-name>"` — 대시보드에서 정의한 임의의 콤보입니다. 67router가 이를 투명하게 해석합니다.
 
 ---
 
@@ -135,29 +135,29 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## 인증 모드
 
-| OmniRoute 설정                               | 권장 `apiKey` 값                                         |
+| 67router 설정                                | 권장 `apiKey` 값                                         |
 | -------------------------------------------- | -------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (로컬 환경의 기본값) | `sk_omniroute` (리터럴 자리 표시자)                      |
 | `REQUIRE_API_KEY=true`                       | 대시보드 → API 키에서 발급한 실제 사용자별 API 키입니다. |
 
-`x-api-key`와 `anthropic-version`을 전송하는 Anthropic 스타일 클라이언트의 경우, OmniRoute의 `extractApiKey`는 `x-api-key`의 키도 인식합니다. OpenCode는 OpenAI 인터페이스를 사용하므로 항상 `Authorization: Bearer ${apiKey}`를 전송합니다. 따라서 여기에는 Anthropic 관련 특수 처리가 적용되지 않습니다.
+`x-api-key`와 `anthropic-version`을 전송하는 Anthropic 스타일 클라이언트의 경우, 67router의 `extractApiKey`는 `x-api-key`의 키도 인식합니다. OpenCode는 OpenAI 인터페이스를 사용하므로 항상 `Authorization: Bearer ${apiKey}`를 전송합니다. 따라서 여기에는 Anthropic 관련 특수 처리가 적용되지 않습니다.
 
 ---
 
 ## 문제 해결
 
-| 증상                                                     | 원인                                                                            | 해결 방법                                                                                                |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `/v1/v1/`이 포함된 URL의 모든 요청에서 `404` 발생        | `/v1`을 이중으로 추가하던 v3.8 이전 플러그인의 오래된 구성입니다.               | 경로 1 또는 2를 통해 다시 생성하세요.                                                                    |
-| `401 Invalid API key`                                    | OmniRoute에서 `REQUIRE_API_KEY=true`로 설정되어 있으며 키를 인식할 수 없습니다. | 대시보드에서 키를 생성하거나 `REQUIRE_API_KEY=false`로 설정한 후(로컬 전용) `sk_omniroute`를 사용하세요. |
-| OpenCode UI에서 모델 목록이 비어 있음                    | 4개의 기본 모델이 모두 OmniRoute의 제공자 표시 설정에서 숨겨져 있습니다.        | 활성화한 모델을 표시하려면 `models: ["auto", ...]`를 전달하세요.                                         |
-| `cannot read property 'models'`와 함께 OpenCode 500 발생 | 이전 OpenCode(< 0.1.x)는 인라인 `models`를 허용하지 않았습니다.                 | v1 스키마(`opencode.ai/config.json`)를 따르는 버전으로 OpenCode를 업그레이드하세요.                      |
+| 증상                                                     | 원인                                                                           | 해결 방법                                                                                                |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| `/v1/v1/`이 포함된 URL의 모든 요청에서 `404` 발생        | `/v1`을 이중으로 추가하던 v3.8 이전 플러그인의 오래된 구성입니다.              | 경로 1 또는 2를 통해 다시 생성하세요.                                                                    |
+| `401 Invalid API key`                                    | 67router에서 `REQUIRE_API_KEY=true`로 설정되어 있으며 키를 인식할 수 없습니다. | 대시보드에서 키를 생성하거나 `REQUIRE_API_KEY=false`로 설정한 후(로컬 전용) `sk_omniroute`를 사용하세요. |
+| OpenCode UI에서 모델 목록이 비어 있음                    | 4개의 기본 모델이 모두 67router의 제공자 표시 설정에서 숨겨져 있습니다.        | 활성화한 모델을 표시하려면 `models: ["auto", ...]`를 전달하세요.                                         |
+| `cannot read property 'models'`와 함께 OpenCode 500 발생 | 이전 OpenCode(< 0.1.x)는 인라인 `models`를 허용하지 않았습니다.                | v1 스키마(`opencode.ai/config.json`)를 따르는 버전으로 OpenCode를 업그레이드하세요.                      |
 
 ---
 
 ## 함께 보기
 
-- [API 참조](../reference/API_REFERENCE.md) — OmniRoute REST 전체 범위
+- [API 참조](../reference/API_REFERENCE.md) — 67router REST 전체 범위
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"`의 의미
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - 소스: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

@@ -5,5 +5,6 @@
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo-typecheck-dashboard"
   },
+  "files": ["node_modules/next/types/global.d.ts"],
   "include": ["src/app/(dashboard)/**/*.ts", "src/app/(dashboard)/**/*.tsx"]
 }

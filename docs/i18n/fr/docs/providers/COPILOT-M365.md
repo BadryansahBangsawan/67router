@@ -39,7 +39,7 @@ L’URL complète se présente sous la forme suivante :
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Dans OmniRoute, accédez à **Fournisseurs → Ajouter un fournisseur**, sélectionnez **Microsoft 365 Copilot
+6. Dans 67router, accédez à **Fournisseurs → Ajouter un fournisseur**, sélectionnez **Microsoft 365 Copilot
    (BizChat)**, puis collez l’identifiant de connexion au format suivant :
 
 ```
@@ -56,9 +56,9 @@ depuis les outils de développement :
 1. Ouvrez **Outils de développement → Réseau**.
 2. Démarrez ou poursuivez une conversation BizChat (cela déclenche la connexion WebSocket).
 3. Faites un clic droit dans le panneau Réseau, puis sélectionnez **Enregistrer tout au format HAR avec le contenu**.
-4. Dans OmniRoute, utilisez le bouton **Importer un fichier .har** dans la boîte de dialogue de connexion au fournisseur.
+4. Dans 67router, utilisez le bouton **Importer un fichier .har** dans la boîte de dialogue de connexion au fournisseur.
 
-OmniRoute recherche l’URL WebSocket Chathub dans le fichier HAR, extrait
+67router recherche l’URL WebSocket Chathub dans le fichier HAR, extrait
 `access_token` et `chathubPath`, puis renseigne automatiquement les champs de l’identifiant de connexion. L’importation
 HAR décode la date d’expiration du JWT et affiche la durée de validité restante du jeton.
 
@@ -81,7 +81,7 @@ Pour éviter de devoir récupérer manuellement l’identifiant, vous pouvez sto
 | `tier`         | `individual` (par défaut), `edu` ou `enterprise`                                   |
 
 Obtenez le jeton d’actualisation à partir d’un flux Microsoft de code d’appareil ou de code d’autorisation
-utilisant la portée `substrate.office.com/sydney`. Lorsque `refreshToken` est défini, OmniRoute
+utilisant la portée `substrate.office.com/sydney`. Lorsque `refreshToken` est défini, 67router
 actualise de manière préventive `access_token` avant chaque requête. Vous n’avez donc pas besoin de
 récupérer à nouveau l’identifiant après chaque expiration d’environ 75 minutes.
 

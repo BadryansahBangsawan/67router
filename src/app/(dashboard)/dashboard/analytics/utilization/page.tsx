@@ -1,7 +1,12 @@
 "use client";
 
+import AnalyticsSubpage from "../components/AnalyticsSubpage";
 import ProviderUtilizationTab from "../ProviderUtilizationTab";
 
 export default function AnalyticsUtilizationPage() {
-  return <ProviderUtilizationTab />;
+  return (
+    <AnalyticsSubpage titleKey="analyticsUtilization" subtitleKey="analyticsUtilizationSubtitle">
+      <ProviderUtilizationTab />
+    </AnalyticsSubpage>
+  );
 }

@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` cho phép runtime Claude Code thực sử dụng điểm cuối Anthropic
-Messages cục bộ của OmniRoute, trong khi Devin CLI chính thức cung cấp phản hồi mô hình qua ACP stdio. Nó
+Messages cục bộ của 67router, trong khi Devin CLI chính thức cung cấp phản hồi mô hình qua ACP stdio. Nó
 không sửa đổi các nhà cung cấp Anthropic, Claude OAuth, Claude Web hoặc `devin-cli` hiện có.
 
 Đối với các lệnh gọi công cụ do máy khách sở hữu, hãy định tuyến qua `devin-cli-agentic` (bí danh `dva`),
@@ -18,7 +18,7 @@ mô hình của nó được đánh dấu tương ứng để tính năng địn
 > `3000.2.17` và mô hình `swe-1-7-lightning`; lần chạy trực tiếp cuối cùng đó đã chứng minh các lượt `Read`,
 > `Edit` và `Bash` do máy khách sở hữu, kết quả `npm test` thành công, khả năng khám phá lệnh và kỹ năng
 > của dự án, định tuyến chỉ qua Devin và không có lưu lượng Claude đi ra ngoài. Sau đó, phiên bản ghim được nâng lên `2.1.258`
-> (thế hệ CLI mà danh tính Claude của OmniRoute mạo danh và là bản đầu tiên tích hợp sẵn
+> (thế hệ CLI mà danh tính Claude của 67router mạo danh và là bản đầu tiên tích hợp sẵn
 > cấp Fable 5.1). Trên phiên bản ghim mới, lớp cài đặt và `claude --version` đã được
 > xác minh trên ảnh cơ sở được ghim, đồng thời bộ kiểm thử đơn vị của cầu nối, `compose config` và
 > bằng chứng cô lập tĩnh đều đạt — nhưng kịch bản mô phỏng ngoại tuyến và bộ ba kịch bản
@@ -51,11 +51,11 @@ Trình phân tích cú pháp chấp nhận một khối bao `<tool>{...}</tool>`
 tên dựa trên danh sách công cụ của yêu cầu, xác thực các đối số theo JSON
 Schema của công cụ đó, từ chối việc trộn lẫn phần tường thuật với hành động và cho phép một lần sửa có giới hạn. Sau đó, Claude Code
 thực thi `tool_use` Anthropic thu được ở cục bộ và gửi `tool_result` trở lại thông qua
-OmniRoute.
+67router.
 
 ## Định tuyến tự động
 
-Nhà cung cấp này đủ điều kiện tham gia các nhóm ứng viên `auto/*` của OmniRoute khi không bị chặn.
+Nhà cung cấp này đủ điều kiện tham gia các nhóm ứng viên `auto/*` của 67router khi không bị chặn.
 Việc đủ điều kiện làm ứng viên không đảm bảo sẽ được chọn: chiến lược định tuyến của combo (ví dụ:
 trạng thái tốt gần nhất đã biết) có thể ưu tiên một nhà cung cấp khác. Hãy sử dụng `dva/<model>` hoặc một combo ưu tiên Devin khi
 bạn yêu cầu mọi yêu cầu đều phải đi qua Devin.
@@ -67,16 +67,16 @@ bị cấm truy cập. Các dịch vụ Compose:
 
 - chạy với UID/GID `10001:10001`, hệ thống tệp gốc chỉ đọc, các capability bị loại bỏ và
   `no-new-privileges`;
-- sử dụng `/home/bridge` riêng tư, một volume cấu hình Claude chuyên dụng, dữ liệu OmniRoute được cô lập
+- sử dụng `/home/bridge` riêng tư, một volume cấu hình Claude chuyên dụng, dữ liệu 67router được cô lập
   và một volume `devin-auth` riêng biệt;
 - chỉ gắn kết các không gian làm việc/bằng chứng `.sandbox` dùng một lần;
 - không gắn kết thư mục home của máy chủ, Keychain, thông tin xác thực SSH, thông tin xác thực đám mây hoặc socket Docker;
 - tạo các môi trường tường minh và loại bỏ các biến API/OAuth/định tuyến của Anthropic;
 - chỉ chuyển hoạt động suy luận của Claude Code đến `http://omniroute:20128` bằng một khóa chỉ dùng cục bộ.
 
-Cấu hình ngoại tuyến sử dụng mạng nội bộ. Trong cấu hình trực tuyến, OmniRoute chỉ truy cập
+Cấu hình ngoại tuyến sử dụng mạng nội bộ. Trong cấu hình trực tuyến, 67router chỉ truy cập
 các endpoint Devin chính thức thông qua `network-guard`; các đích không liên quan đều bị từ chối.
-Claude Code có một cơ chế bảo vệ lưu lượng đi riêng biệt theo chính sách từ chối tất cả và chỉ có thể truy cập dịch vụ OmniRoute
+Claude Code có một cơ chế bảo vệ lưu lượng đi riêng biệt theo chính sách từ chối tất cả và chỉ có thể truy cập dịch vụ 67router
 cục bộ thông qua `NO_PROXY`. Các tệp kiểm tra của cơ chế bảo vệ chỉ được gắn kết vào tiến trình bảo vệ tương ứng.
 Các tập lệnh xác minh quyền sở hữu tệp, chế độ, số lượng liên kết và mọi quyết định trước khi xuất
 bằng chứng không chứa token.

@@ -5,7 +5,7 @@
 ---
 
 ពូល self-hosted ដំណើរការនៅលើម៉ាស៊ីន **.113** (`tomni-proxmox-113`)។ ចាប់តាំងពី 2026-10-18 មក
-OmniRoute runner នីមួយៗមាន **តួនាទីតែមួយ** ស្លាកមួយ និងកម្រិតកំណត់ memory/CPU ដែលកំណត់ទំហំតាមបន្ទុកការងារ
+67router runner នីមួយៗមាន **តួនាទីតែមួយ** ស្លាកមួយ និងកម្រិតកំណត់ memory/CPU ដែលកំណត់ទំហំតាមបន្ទុកការងារ
 ដែលបានវាស់វែង។ ស្លុត Turbopack ទទួលបានធនធានតាមតម្រូវការរបស់ build ចំណែកស្លុតផ្សេងទៀតត្រូវបានកំណត់ទំហំតាម
 កម្រិតប្រើប្រាស់ខ្ពស់បំផុតដែលបានវាស់វែង។ ម៉ាស៊ីននេះប្រើធនធានលើសកម្រិតសរុបតែក្នុងករណីដែល build របស់ Turbopack កើតឡើងដំណាលគ្នាជាមួយ build របស់ Release-Green
 ដែលប្រើ webpack និងការងារ lint មួយប៉ុណ្ណោះ។ host swap (16 GB) នឹងស្រូបយកការប្រើប្រាស់លើសនោះ ហើយដោយសារ Build សម្រាប់ pull request ដំណើរការ
@@ -27,7 +27,7 @@ OmniRoute runner នីមួយៗមាន **តួនាទីតែមួយ
 | swap      | 16 GB                            | `omniroute-113-5` ដំណើរការដោយបិទ swap (`MemorySwapMax=0`) ដូច្នេះ build ដែលប្រើធនធានមិនអាចគ្រប់គ្រងបាននឹងត្រូវកាត់ផ្តាច់នៅកម្រិតកំណត់របស់វា ជំនួសឱ្យការធ្វើឱ្យម៉ាស៊ីនទាំងមូលប្រើ swap                                                                                                                                                                                                                                                                     |
 | `/tmp`    | **12 GB tmpfs = RAM**            | អ្វីៗដែលដាក់រក្សាទុកនៅទីនោះសុទ្ធតែប្រើ memory ហើយឯកសារសំណល់ត្រូវបានសម្អាតចេញក្រោយរយៈពេល 3 ម៉ោង                                                                                                                                                                                                                                                                                                                                                            |
 | CPU       | បានសង្កេតឃើញ load 60 លើ 32 ស្នូល | មុនពេលដាក់កម្រិត quota build ដោយ Turbopack មួយ (~1166 % CPU) រួមជាមួយ coverage suite មួយនៅលើម៉ាស៊ីនដូចគ្នា បានដណ្តើមធនធានពី heartbeat របស់ listeners ផ្សេងទៀត (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                                                       |
-| runners   | **listeners ចំនួន 6**            | OmniRoute 4 + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ត្រូវបានបិទ (`systemctl enable --now` អាចបើកមួយក្នុងចំណោមនោះឱ្យដំណើរការឡើងវិញ)                                                                                                                                                                                                                                                                                                            |
+| runners   | **listeners ចំនួន 6**            | 67router 4 + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ត្រូវបានបិទ (`systemctl enable --now` អាចបើកមួយក្នុងចំណោមនោះឱ្យដំណើរការឡើងវិញ)                                                                                                                                                                                                                                                                                                             |
 
 កម្រិតកំណត់ស្ថិតនៅក្នុង `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` របស់ unit នីមួយៗ
 (តម្លៃមុនៗត្រូវបានរក្សាទុកជា `override.conf.bak-20261018`) ហើយត្រូវបានអនុវត្តភ្លាមៗដោយប្រើ
@@ -72,7 +72,7 @@ worker រាយការណ៍ថា job ត្រូវបានលុបច�
 
 `KillMode=process` លំនាំដើមរបស់ runner ទុកឱ្យ `Runner.Worker → npm → next-build`
 បន្តដំណើរការ នៅពេល unit ត្រូវបានបញ្ឈប់ ឬចាប់ផ្តើមឡើងវិញ — build កំព្រាមួយបន្តប្រើប្រាស់ RAM និង
-CPU ដោយគ្មាន job ភ្ជាប់ជាមួយ។ រាល់ unit របស់ OmniRoute មាន drop-in មួយ
+CPU ដោយគ្មាន job ភ្ជាប់ជាមួយ។ រាល់ unit របស់ 67router មាន drop-in មួយ
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ដែលមាន `KillMode=mixed`៖ SIGTERM ទៅកាន់ listener ជាមុន បន្ទាប់មក SIGKILL ទៅកាន់ cgroup ទាំងមូលនៅ
 `TimeoutStop`។ វានឹងមានប្រសិទ្ធភាពនៅពេល unit ចាប់ផ្តើមឡើងវិញលើកក្រោយ — ចាប់ផ្តើមឡើងវិញ **មួយ runner
@@ -115,7 +115,7 @@ CPU ដោយគ្មាន job ភ្ជាប់ជាមួយ។ រាល�
   `next build` សម្រាប់តែ backend (~5–6 GB; webpack) និង `quality.yml` `lint-guard`។ `omniroute-113`
   មាន `MemoryHigh=4G` រហូតដល់ 2026-10-18 — promptfoo build បានចំណាយពេល 54 នាទីដោយសារការប្រមូល memory ត្រឡប់មកប្រើឡើងវិញ
   នៅទីនោះ។ ការកំណត់ 8 GB លុបបំបាត់ការបង្អាក់ល្បឿននេះ។
-- **កាត់បន្ថយចំនួន listeners ដោយចេតនា។** OmniRoute units ចំនួនបួនត្រូវបានបិទនៅថ្ងៃទី 2026-08-29 — listener បន្ថែមនីមួយៗ
+- **កាត់បន្ថយចំនួន listeners ដោយចេតនា។** 67router units ចំនួនបួនត្រូវបានបិទនៅថ្ងៃទី 2026-08-29 — listener បន្ថែមនីមួយៗ
   គឺជា tenant មួយបន្ថែមទៀតសម្រាប់ថវិកា memory ខាងលើ។ ដែនកំណត់អតិបរមារបស់កម្មវិធីសម្អាតគឺ 6 (`MAX_ACTIVE_RUNNERS=6` ក្នុង cron)៖ វារាប់
   រាល់ `Runner.Listener` នៅលើម៉ាស៊ីន ហើយ OmniHeuris + OmniMind បន្ថែមចំនួនពីរទៅលើចំនួនបួនរបស់យើង។
 - **កុំសម្អាត `/tmp` ឬ `_work` ដោយដៃជាដាច់ខាត ខណៈដែល runner ណាមួយកំពុងរវល់។** ដំណើរការ

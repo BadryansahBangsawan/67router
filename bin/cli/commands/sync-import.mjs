@@ -54,7 +54,7 @@ async function inspectBackupLocally(filePath) {
         .map((r) => r.name);
       const missing = IMPORT_REQUIRED_TABLES.filter((t) => !tables.includes(t));
       if (missing.length > 0) {
-        return { error: `not an OmniRoute database; missing tables: ${missing.join(", ")}` };
+        return { error: `not a 67router database; missing tables: ${missing.join(", ")}` };
       }
       const count = (table) => db.prepare(`SELECT COUNT(*) AS cnt FROM ${table}`).get()?.cnt ?? 0;
       const schemaVersion = tables.includes("_omniroute_migrations")

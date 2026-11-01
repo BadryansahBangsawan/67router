@@ -5,7 +5,7 @@
 ---
 
 Kumpulan dihoskan sendiri berjalan pada mesin **.113** (`tomni-proxmox-113`). Sejak 2026-10-18, setiap
-runner OmniRoute mempunyai **satu peranan**, satu label dan peruntukan memori/CPU yang disesuaikan dengan ukuran beban kerjanya.
+runner 67router mempunyai **satu peranan**, satu label dan peruntukan memori/CPU yang disesuaikan dengan ukuran beban kerjanya.
 Slot Turbopack mendapat sumber yang diperlukan oleh binaan; slot lain diperuntukkan mengikut
 puncak penggunaan yang diukur. Mesin ini hanya terlebih komit apabila binaan Turbopack berlaku serentak dengan binaan webpack
 Release-Green dan tugas lint; swap hos (16 GB) menampung keadaan itu, dan oleh sebab binaan pull request dijalankan
@@ -27,7 +27,7 @@ Diukur pada 2026-10-18:
 | swap      | 16 GB                               | `omniroute-113-5` berjalan dengan swap dimatikan (`MemorySwapMax=0`), supaya binaan yang tidak terkawal dihentikan apabila mencapai hadnya dan bukannya menyebabkan mesin menggunakan swap                                                                                                                                                                                                                       |
 | `/tmp`    | **12 GB tmpfs = RAM**               | apa-apa yang disimpan di situ menggunakan memori; baki fail dibersihkan selepas 3 jam                                                                                                                                                                                                                                                                                                                            |
 | CPU       | beban 60 pada 32 teras diperhatikan | sebelum kuota dilaksanakan, satu binaan Turbopack (~1166 % CPU) berserta suit liputan pada mesin yang sama menyebabkan isyarat heartbeat listener lain kebuluran sumber (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                    |
-| runner    | **6 listener**                      | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` dinyahdayakan (`systemctl enable --now` mengaktifkan semula salah satu daripadanya)                                                                                                                                                                                                                                                              |
+| runner    | **6 listener**                      | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` dinyahdayakan (`systemctl enable --now` mengaktifkan semula salah satu daripadanya)                                                                                                                                                                                                                                                               |
 
 Had tersebut berada dalam `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` bagi setiap unit
 (nilai sebelumnya disimpan sebagai `override.conf.bak-20261018`) dan telah diterapkan secara langsung dengan
@@ -72,7 +72,7 @@ melaporkan tugas sebagai dibatalkan dan listener kembali dalam talian dengan sen
 
 `KillMode=process` lalai runner membiarkan `Runner.Worker → npm → next-build`
 terus hidup apabila unit dihentikan atau dimulakan semula — binaan yatim terus menggunakan RAM dan
-CPU tanpa tugas yang dilampirkan. Setiap unit OmniRoute mempunyai drop-in
+CPU tanpa tugas yang dilampirkan. Setiap unit 67router mempunyai drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 dengan `KillMode=mixed`: SIGTERM dihantar kepada listener dahulu, kemudian SIGKILL kepada seluruh cgroup apabila
 `TimeoutStop` dicapai. Ia berkuat kuasa pada mula semula unit yang berikutnya — mulakan semula **satu runner pada
@@ -122,7 +122,7 @@ satu-satu masa, hanya apabila tidak aktif**, dengan semakan tidak aktif dan mula
   `quality.yml` `lint-guard`. `omniroute-113` mempunyai `MemoryHigh=4G` sehingga 2026-10-18 —
   binaan promptfoo menghabiskan 54 minit menuntut semula memori di situ; 8 GB menghapuskan
   pendikitan tersebut.
-- **Kurang pendengar dengan sengaja.** Empat unit OmniRoute telah dilumpuhkan pada 2026-08-29 —
+- **Kurang pendengar dengan sengaja.** Empat unit 67router telah dilumpuhkan pada 2026-08-29 —
   setiap pendengar tambahan ialah penyewa lain bagi belanjawan memori di atas. Had maksimum
   petugas pembersihan ialah 6 (`MAX_ACTIVE_RUNNERS=6` dalam cron): ia mengira setiap
   `Runner.Listener` pada mesin tersebut, dan OmniHeuris + OmniMind menambah dua lagi kepada

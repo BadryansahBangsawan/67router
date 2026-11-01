@@ -88,14 +88,12 @@ export function EngineNode({ data }: NodeProps) {
 
   return (
     <div
-      className="rounded-lg border-2 bg-bg transition-all duration-300 min-w-[150px] max-w-[180px]"
+      className="min-w-[150px] max-w-[180px] rounded-control border bg-surface transition-colors duration-300"
       style={{
+        // 67router is flat: hairline border, the state lives on the border colour and only the
+        // in-flight step keeps a soft halo.
         borderColor,
-        boxShadow: running
-          ? `0 0 14px ${flowColorAlpha(RUNNING_COLOR, 25)}`
-          : skipped
-            ? "none"
-            : `0 0 10px ${flowColorAlpha(color, 19)}`,
+        boxShadow: running ? `0 0 0 3px ${flowColorAlpha(RUNNING_COLOR, 15)}` : "none",
       }}
     >
       <Handle
@@ -115,18 +113,20 @@ export function EngineNode({ data }: NodeProps) {
         style={{ borderBottom: "1px solid var(--color-border)" }}
       >
         {running && <StatusDot color={RUNNING_COLOR} sizeClass="size-1.5" />}
-        <span className="text-xs font-semibold truncate flex-1" title={engine as string}>
+        <span className="flex-1 truncate font-mono text-xs font-medium" title={engine as string}>
           {engine as string}
         </span>
         {skipped && (
-          <span className="text-[10px] text-text-muted px-1 rounded bg-bg-subtle">skip</span>
+          <span className="rounded-[5px] border border-border bg-bg-subtle px-1 text-[10px] text-text-muted">
+            skip
+          </span>
         )}
       </div>
 
       {/* Body — token bar */}
       {!skipped && (
         <div className="px-2.5 py-1.5">
-          <div className="flex justify-between text-[10px] text-text-muted mb-0.5">
+          <div className="mb-0.5 flex justify-between text-[10px] tabular-nums text-text-muted">
             <span>{tokIn.toLocaleString()}</span>
             <span>→</span>
             <span>{tokOut.toLocaleString()}</span>

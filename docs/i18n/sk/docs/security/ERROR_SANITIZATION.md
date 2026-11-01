@@ -215,7 +215,7 @@ Pravidlá sanitizácie aplikované na `upstreamDetails`:
 4. Polia sú obmedzené na 32 prvkov.
 
 Iba miesta volania s analyzovaným telom chyby poskytovateľa by mali odovzdávať `upstreamDetails`. Interné
-chyby OmniRoute (zlyhania analýzy SSE, prázdny obsah, blokovania ochrannými mechanizmami) ho nesmú zahŕňať.
+chyby 67router (zlyhania analýzy SSE, prázdny obsah, blokovania ochrannými mechanizmami) ho nesmú zahŕňať.
 
 Do `upstreamDetails` NEODOVZDÁVAJTE nespracované `err.stack`, `err.message` ani žiadny reťazec z výnimky
 za behu programu. Tie musia naďalej prechádzať cez `errorResponse` / `buildErrorBody(code, msg)`
@@ -226,7 +226,7 @@ poskytovateľa potrebné na automatické obnovenie klienta, nejde však o odovzd
 pred serializáciou sa vždy spustí rekurzívny sanitizátor. Cyklické telá, telá obsahujúce BigInt alebo
 telá s nepriateľským `toJSON()` bezpečne zlyhajú a nie sú oprávnené na odovzdanie. OCR a moderovanie
 uplatňujú rovnaké pravidlo; telá nadradeného systému, ktoré nie sú vo formáte JSON, sú prázdne alebo
-nesprávne označené, sa prevedú na kanonickú chybovú obálku JSON systému OmniRoute.
+nesprávne označené, sa prevedú na kanonickú chybovú obálku JSON systému 67router.
 
 ## Známe obmedzenie CodeQL: vlastné sanitizátory nie sú rozpoznané
 

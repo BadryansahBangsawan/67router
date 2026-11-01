@@ -15,7 +15,7 @@
 - [네이티브 앱용 OAuth 2.0(PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — 설치형 앱의 OAuth client_id / client_secret은 공개 정보이며, 실제 보안은 PKCE가 제공합니다.
 - [Firebase API 키](https://firebase.google.com/docs/projects/api-keys) — 웹 클라이언트 식별자는 설계상 공개 정보입니다.
 
-OmniRoute는 `.env`를 구성하지 않은 사용자도 별도 설정 없이 정상적으로 작동하는 OAuth 흐름을 사용할 수 있도록 이러한 값을 포함해야 합니다. 내장된 대체 값이 없으면 "그냥 클론하고 실행"하는 경로를 따르는 모든 사용자에게 Gemini / Antigravity 프로바이더가 작동하지 않습니다.
+67router는 `.env`를 구성하지 않은 사용자도 별도 설정 없이 정상적으로 작동하는 OAuth 흐름을 사용할 수 있도록 이러한 값을 포함해야 합니다. 내장된 대체 값이 없으면 "그냥 클론하고 실행"하는 경로를 따르는 모든 사용자에게 Gemini / Antigravity 프로바이더가 작동하지 않습니다.
 
 하지만 `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` 같은 리터럴 값은 **GitHub Secret Scanning**, **Semgrep** 및 유사한 패턴 스캐너에 탐지됩니다. 릴리스할 때마다 오탐 알림이 쏟아지고, 푸시 보호 기능이 정상적인 커밋을 차단하며, 운영자는 알림 피드를 신뢰하지 않게 됩니다.
 

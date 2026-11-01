@@ -1,5 +1,5 @@
 /**
- * Behavioral matrix: adaptive-admission enforce rejection across the 10 real
+ * Behavioral matrix: adaptive-admission enforce rejection across the 9 real
  * shared LLM POST route modules. Uses a test-owned POST table (not production
  * registries/globs). Asserts standardized 503 contract, zero provider fetch,
  * provider-health isolation, and runtime reject accounting.
@@ -9,7 +9,6 @@
  */
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { createChatPipelineHarness } from "../integration/_chatPipelineHarness.ts";
 
 const harness = await createChatPipelineHarness("adaptive-admission-route-matrix");
@@ -31,8 +30,6 @@ const { reloadResourcePressureRuntime } = await import("../../open-sse/utils/res
 const { getProviderConnectionById } = await import("../../src/lib/db/providers.ts");
 const { getCircuitBreaker, resetAllCircuitBreakers, STATE } =
   await import("../../src/shared/utils/circuitBreaker.ts");
-const core = await import("../../src/lib/db/core.ts");
-const relayProxies = await import("../../src/lib/db/relayProxies.ts");
 
 const chatCompletionsRoute = await import("../../src/app/api/v1/chat/completions/route.ts");
 const messagesRoute = await import("../../src/app/api/v1/messages/route.ts");
@@ -43,7 +40,6 @@ const ollamaRoute = await import("../../src/app/api/v1/api/chat/route.ts");
 const antigravityRoute = await import("../../src/app/api/v1/antigravity/route.ts");
 const providerPinnedRoute =
   await import("../../src/app/api/v1/providers/[provider]/chat/completions/route.ts");
-const relayRoute = await import("../../src/app/api/v1/relay/chat/completions/route.ts");
 const geminiRoute = await import("../../src/app/api/v1beta/models/[...path]/route.ts");
 
 const originalFetch = globalThis.fetch;
@@ -129,24 +125,6 @@ function geminiBody(label: string) {
   };
 }
 
-function insertRelayToken(rawToken: string) {
-  const db = core.getDbInstance();
-  const id = "rl_admission_matrix";
-  const now = Math.floor(Date.now() / 1000);
-  const tokenHash = createHash("sha256").update(rawToken).digest("hex");
-  db.prepare(
-    `
-    INSERT INTO relay_tokens (id, name, token_hash, token_prefix, description, combo_id, allowed_models,
-      max_tokens_per_request, max_requests_per_minute, max_requests_per_day, max_cost_per_day,
-      enabled, created_at, updated_at, expires_at, metadata)
-    VALUES (?, ?, ?, ?, '', NULL, '["*"]', 128000, 1000, 100000, 0, 1, ?, ?, NULL, '{}')
-  `
-  ).run(id, "admission-matrix-relay", tokenHash, "rl_matrix", now, now);
-  const token = relayProxies.getRelayToken(id);
-  if (!token) throw new Error("failed to insert matrix relay token");
-  return { token, rawToken };
-}
-
 function reloadNormalResourcePressure() {
   reloadResourcePressureRuntime({
     heapThresholdMb: 10_000,
@@ -161,7 +139,13 @@ function reloadNormalResourcePressure() {
         availableBytes: null,
         constrainedBytes: null,
       },
-      cgroup: { currentBytes: null, maxBytes: null, highBytes: null, fileBytes: null, events: null },
+      cgroup: {
+        currentBytes: null,
+        maxBytes: null,
+        highBytes: null,
+        fileBytes: null,
+        events: null,
+      },
       psi: null,
     }),
   });
@@ -231,7 +215,7 @@ async function assertAdmissionOversized(response: Response, fetchCalls: number) 
   assert.equal(payload.error?.message, ADMISSION_MESSAGE);
 }
 
-// Test-owned table of the exact 10 canonical shared LLM POST handlers.
+// Test-owned table of the exact 9 canonical shared LLM POST handlers.
 const ROUTE_CASES: RouteCase[] = [
   {
     name: "chat.completions",
@@ -291,13 +275,6 @@ const ROUTE_CASES: RouteCase[] = [
       }),
   },
   {
-    name: "relay.chat.completions",
-    invoke: (request) => relayRoute.POST(request),
-    buildRequest: () => {
-      throw new Error("relay buildRequest is set per-test after token insert");
-    },
-  },
-  {
     name: "gemini.v1beta.generateContent",
     invoke: (request) =>
       geminiRoute.POST(request, {
@@ -319,15 +296,11 @@ test.beforeEach(async () => {
   reloadNormalResourcePressure();
   reloadEnforceOversized();
   globalThis.fetch = originalFetch;
-  delete process.env.OMNIROUTE_RELAY_BACKEND;
-  delete process.env.RELAY_ROUTING_BACKEND;
 });
 
 test.afterEach(async () => {
   globalThis.fetch = originalFetch;
   resetAdaptiveAdmissionRuntimeForTests();
-  delete process.env.OMNIROUTE_RELAY_BACKEND;
-  delete process.env.RELAY_ROUTING_BACKEND;
   await resetStorage();
 });
 
@@ -338,7 +311,7 @@ test.after(async () => {
 });
 
 test(
-  "adaptive admission enforce rejects all 10 shared LLM POST routes with standardized contract",
+  "adaptive admission enforce rejects all 9 shared LLM POST routes with standardized contract",
   { timeout: 30_000 },
   async () => {
     const connection = await seedConnection("openai", {
@@ -353,22 +326,9 @@ test(
     const beforeBreaker = breakerSnapshot(breaker);
     assert.equal(beforeBreaker.state, STATE.CLOSED);
 
-    const rawRelayToken = `relay_matrix_${createHash("sha256").update("admission").digest("hex").slice(0, 24)}`;
-    insertRelayToken(rawRelayToken);
-    process.env.OMNIROUTE_RELAY_BACKEND = "ts";
+    const cases: RouteCase[] = ROUTE_CASES;
 
-    const cases: RouteCase[] = ROUTE_CASES.map((routeCase) => {
-      if (routeCase.name !== "relay.chat.completions") return routeCase;
-      return {
-        ...routeCase,
-        buildRequest: () =>
-          jsonRequest("http://localhost/api/v1/relay/chat/completions", chatBody("relay"), {
-            Authorization: `Bearer ${rawRelayToken}`,
-          }),
-      };
-    });
-
-    assert.equal(cases.length, 10);
+    assert.equal(cases.length, 9);
 
     let fetchCalls = 0;
     globalThis.fetch = async () => {

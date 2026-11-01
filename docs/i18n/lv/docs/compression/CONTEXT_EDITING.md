@@ -4,13 +4,13 @@
 
 ---
 
-Deleģētā **konteksta rediģēšana** ir tikai Claude pieejams konteksta pārvaldības līdzeklis. Atšķirībā no OmniRoute lokālajiem
+Deleģētā **konteksta rediģēšana** ir tikai Claude pieejams konteksta pārvaldības līdzeklis. Atšķirībā no 67router lokālajiem
 saspiešanas dzinējiem (Caveman, RTK, LLMLingua, vairāku posmu konveijeriem), kas pārraksta pieprasījuma pamattekstu,
 _pirms_ tas atstāj starpniekserveri, konteksta rediģēšana lūdz **pakalpojuma sniedzējam** iztīrīt novecojušus
-rīka lietojuma / rīka rezultātu blokus no paša aktīvā konteksta loga. OmniRoute tikai pievieno pamatteksta
+rīka lietojuma / rīka rezultātu blokus no paša aktīvā konteksta loga. 67router tikai pievieno pamatteksta
 parametru (`context_management.edits[]`); faktisko tīrīšanu Claude veic atbilstoši savam tokenizatoram.
 
-Pēc būtības tā ir deleģēta iespēja: citi pakalpojumu sniedzēji šo parametru noraida, tāpēc OmniRoute stingri ierobežo
+Pēc būtības tā ir deleģēta iespēja: citi pakalpojumu sniedzēji šo parametru noraida, tāpēc 67router stingri ierobežo
 tā izmantošanu tikai ar Claude un Claude Code saderīgiem starpniekpakalpojumiem.
 
 Patiesais avots: `open-sse/config/contextEditing.ts` (stratēģiju identifikatori, ievietošana pamattekstā, telemetrijas
@@ -19,7 +19,7 @@ izgūšana), `open-sse/executors/base.ts` (ievietošanas pārbaude + atkāpšan�
 
 ## Ko dara `clear_tool_uses`
 
-OmniRoute izejošajā Anthropic Messages pamattekstā ievieto vienu labojumu:
+67router izejošajā Anthropic Messages pamattekstā ievieto vienu labojumu:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute izejošajā Anthropic Messages pamattekstā ievieto vienu labojumu:
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Beta iespēja tiek pieteikta, izmantojot galveni `anthropic-beta: context-management-2025-06-27`, kuru
-OmniRoute jau nosūta Claude pieprasījumos.
+67router jau nosūta Claude pieprasījumos.
 
 Ievietošanu veic `applyContextEditingToBody()`, un tā ir **idempotenta**: ja pamattekstā jau pastāv `clear_tool_uses`
 labojums (to pievienojis iepriekšējs izsaukums vai nodrošinājis klients), pamatteksts tiek atstāts
-nemainīts. Ja ir arī `clear_thinking_20251015` labojums, OmniRoute ar stabilu kārtošanu pārvieto
+nemainīts. Ja ir arī `clear_thinking_20251015` labojums, 67router ar stabilu kārtošanu pārvieto
 `clear_thinking` labojumu uz sākumu, jo Anthropic pieprasa, lai `clear_thinking` atrastos pirms
 `clear_tool_uses` masīvā `edits[]`.
 
@@ -149,7 +149,7 @@ mehānisma ceļā.
 
 ## `applied_edits` telemetrija
 
-Pēc Claude atbildes OmniRoute reģistrē, cik lielu konteksta daļu nodrošinātājs faktiski notīrīja. Šie
+Pēc Claude atbildes 67router reģistrē, cik lielu konteksta daļu nodrošinātājs faktiski notīrīja. Šie
 dati **netiek** straumēti — tie pēc iespējas tiek izgūti no nestraumētas atbildes ķermeņa un nekad
 neietekmē atbildi (telemetrijas kļūdas tiek ignorētas).
 
@@ -179,16 +179,16 @@ Tādējādi deleģētā tīrīšana saspiešanas analītikā tiek attēlota kop�
 
 ## Saistība ar lokālajiem saspiešanas dzinējiem
 
-| Aspekts                 | Lokālie dzinēji (Caveman / RTK / LLMLingua / stacked)          | Deleģētā konteksta rediģēšana                        |
-| ----------------------- | -------------------------------------------------------------- | ---------------------------------------------------- |
-| Kur tas darbojas        | OmniRoute ietvaros, pirms pieprasījums atstāj starpniekserveri | Pakalpojuma sniedzēja pusē (Claude), servera pusē    |
-| Ko tas rediģē           | Uzvednes / konteksta / rīka rezultātu tekstu                   | Vecos rīku izmantošanas / rīku rezultātu blokus      |
-| Pakalpojumu tvērums     | Visi pakalpojumu sniedzēji                                     | Tikai `claude` + `anthropic-compatible-cc-*`         |
-| Pārslēgšana             | Saspiešanas režīma iestatījumi                                 | `contextEditing.enabled`                             |
-| Kļūmes režīms           | Kļūmes gadījumā turpina ar sākotnējo tekstu                    | 400 atkāpšanās: noņem parametru, atkārto vienu reizi |
-| Ietaupījumu telemetrija | `engine: <engine id>`                                          | `engine: "context-editing"`                          |
+| Aspekts                 | Lokālie dzinēji (Caveman / RTK / LLMLingua / stacked)         | Deleģētā konteksta rediģēšana                        |
+| ----------------------- | ------------------------------------------------------------- | ---------------------------------------------------- |
+| Kur tas darbojas        | 67router ietvaros, pirms pieprasījums atstāj starpniekserveri | Pakalpojuma sniedzēja pusē (Claude), servera pusē    |
+| Ko tas rediģē           | Uzvednes / konteksta / rīka rezultātu tekstu                  | Vecos rīku izmantošanas / rīku rezultātu blokus      |
+| Pakalpojumu tvērums     | Visi pakalpojumu sniedzēji                                    | Tikai `claude` + `anthropic-compatible-cc-*`         |
+| Pārslēgšana             | Saspiešanas režīma iestatījumi                                | `contextEditing.enabled`                             |
+| Kļūmes režīms           | Kļūmes gadījumā turpina ar sākotnējo tekstu                   | 400 atkāpšanās: noņem parametru, atkārto vienu reizi |
+| Ietaupījumu telemetrija | `engine: <engine id>`                                         | `engine: "context-editing"`                          |
 
-Abi risinājumi viens otru papildina: lokālie dzinēji saspiež OmniRoute nosūtītos baitus; konteksta rediģēšana ļauj
+Abi risinājumi viens otru papildina: lokālie dzinēji saspiež 67router nosūtītos baitus; konteksta rediģēšana ļauj
 Claude secīgi retināt aktīvo kontekstu vairākos dialoga posmos. Tos var iespējot kopā.
 
 ## Skatiet arī

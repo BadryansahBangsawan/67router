@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima **dva** sustava traka lokalna procesu s različitim područjima primjene. Oni se
+67router ima **dva** sustava traka lokalna procesu s različitim područjima primjene. Oni se
 međusobno nadopunjuju; operateri bi trebali znati koji od njih promatraju.
 
 ## 1. Prihvat na razini bajtova za cijeli proces (`chatBodyAdmission.ts`)

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute controlează ce **origini ale browserului** pot citi răspunsurile între origini
+67router controlează ce **origini ale browserului** pot citi răspunsurile între origini
 printr-o singură listă centralizată de permisiuni. Modelul este **închis implicit în caz de eșec**:
 nicio origine nu este permisă până când nu o autorizați explicit. Această pagină documentează modul în care este
 evaluată lista de permisiuni, ce expune de fapt `CORS_ALLOW_ALL=true` (și, aspect important, ce
@@ -45,13 +45,13 @@ Pentru fiecare solicitare, middleware-ul calculează valoarea `Access-Control-Al
 ## Modelul de amenințări — ce expune cu adevărat `CORS_ALLOW_ALL=true`
 
 Avertismentul generic OWASP („CORS cu wildcard = orice site vă poate apela API-ul”) merită
-luat în serios, însă expunerea OmniRoute este **mai restrânsă decât în cazul generic**,
+luat în serios, însă expunerea 67router este **mai restrânsă decât în cazul generic**,
 datorită unui aspect concret al implementării:
 
 > **Funcția centrală `applyCorsHeaders()` nu emite niciodată
 > `Access-Control-Allow-Credentials`.** Un browser nu va expune un răspuns între origini
 > _cu credențiale_ (care conține cookie-uri), cu excepția cazului în care serverul trimite
-> `Access-Control-Allow-Credentials: true`. Calea CORS partajată a OmniRoute nu face
+> `Access-Control-Allow-Credentials: true`. Calea CORS partajată a 67router nu face
 > niciodată acest lucru.
 
 Iată ce înseamnă acest lucru pentru fiecare suprafață, chiar și cu `CORS_ALLOW_ALL=true`:
@@ -68,20 +68,6 @@ permiterea reușitei solicitărilor CORS **preflight** pe rutele de administrare
 pe care o pagină de altă origine nu o poate furniza. Aceasta **nu** reprezintă un vector pentru deturnarea sesiunii sau
 furtul credențialelor pe calea CORS partajată.
 
-### O singură excepție reală — `/api/v1/agents/`
-
-Rutele Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) își setează
-**propriile** anteturi CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) și **emit**
-`Access-Control-Allow-Origin: <origin>|*` împreună cu
-`Access-Control-Allow-Credentials: true`. Aceasta este singura suprafață unde
-returnarea originii și credențialele coexistă și este **independentă de
-`CORS_ALLOW_ALL`**. Aceste rute sunt autentificate pentru administrare
-(`requireManagementAuth`); operatorii care expun panoul de control în afara gazdei trebuie să
-știe că acesta este singurul loc în care anteturile răspunsului permit o citire cu credențiale
-între origini. Restrângerea acesteia la o listă explicită de permisiuni este urmărită
-separat de aceste recomandări CORS.
-
 ## Listă de verificare pentru producție
 
 - **Nu setați niciodată `CORS_ALLOW_ALL=true` în producție.** Lăsați variabila nesetată.
@@ -91,7 +77,7 @@ separat de aceste recomandări CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Dacă OmniRoute rulează în spatele unui proxy invers / tunel (nginx, Caddy, Cloudflare
+- Dacă 67router rulează în spatele unui proxy invers / tunel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **nu** este singurul mecanism de control — protecția rutelor
   loopback continuă să protejeze rutele capabile să lanseze procese (consultați
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nu falsificați
@@ -107,7 +93,7 @@ separat de aceste recomandări CORS.
 Rareori aveți nevoie de wildcard chiar și în dezvoltare. Permiteți doar serverele de dezvoltare pe care le utilizați:
 
 ```bash
-# Serverele de dezvoltare Vite (5173) + Next.js (3000) care apelează un OmniRoute local
+# Serverele de dezvoltare Vite (5173) + Next.js (3000) care apelează un 67router local
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +113,14 @@ repornire.
   originile de administrare/ale tabloului de bord în nicio configurație permisivă; acestea trebuie să rămână strict
   blocate în mod implicit.
 
-## Exemplu: proxy invers în fața OmniRoute
+## Exemplu: proxy invers în fața 67router
 
-CORS este aplicat chiar de OmniRoute, astfel încât, în general, proxy-ul **nu** ar trebui să adauge sau să
+CORS este aplicat chiar de 67router, astfel încât, în general, proxy-ul **nu** ar trebui să adauge sau să
 rescrie antetele `Access-Control-*` (antetele duplicate afectează funcționarea browserelor). Terminați TLS
-și redirecționați traficul — lăsați OmniRoute să răspundă solicitărilor preflight:
+și redirecționați traficul — lăsați 67router să răspundă solicitărilor preflight:
 
 ```nginx
-# nginx — redirecționați traficul către OmniRoute; NU injectați Access-Control-* aici
+# nginx — redirecționați traficul către 67router; NU injectați Access-Control-* aici
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +128,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Păstrați antetele de redirecționare: un proxy de pe aceeași gazdă se conectează din interfața loopback, iar acestea sunt
-    # cele care îi indică lui OmniRoute că apelantul nu este operatorul local. Un proxy care nu adaugă niciunul dintre ele
+    # cele care îi indică lui 67router că apelantul nu este operatorul local. Un proxy care nu adaugă niciunul dintre ele
     # face ca fiecare apelant de la distanță să pară local. De asemenea, nu setați niciodată X-Forwarded-For la 127.0.0.1.
 }
 ```
 
-Setați originile permise pentru browsere în OmniRoute (`CORS_ALLOWED_ORIGINS` sau fila
+Setați originile permise pentru browsere în 67router (`CORS_ALLOWED_ORIGINS` sau fila
 Security), nu în proxy.
 
 ## Fișiere sursă
@@ -160,7 +146,6 @@ Security), nu în proxy.
 | Starea la rulare pentru tabloul de bord             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Bannerul de avertizare din tabloul de bord          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Câmpul Origini CORS permise                         | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS per rută pentru Cloud-Agent (excepția)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Consultați și
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Na kratko**: OmniRoute spremlja porabo žetonov za vsako zahtevo, izračunava stroške, uveljavlja kvoto za posamezen ključ API in prikazuje analitiko na nadzorni plošči. Ta vodnik pojasnjuje, kako vse to deluje.
+> **Na kratko**: 67router spremlja porabo žetonov za vsako zahtevo, izračunava stroške, uveljavlja kvoto za posamezen ključ API in prikazuje analitiko na nadzorni plošči. Ta vodnik pojasnjuje, kako vse to deluje.
 
 **Viri:**
 
@@ -17,7 +17,7 @@
 
 ## Pregled
 
-Vsaka zahteva, ki gre skozi OmniRoute, ustvari **zapis o porabi**, ki zajema:
+Vsaka zahteva, ki gre skozi 67router, ustvari **zapis o porabi**, ki zajema:
 
 - **Identiteto**: kateri ključ API, ponudnik, model in kombinacija
 - **Žetone**: žetone poziva, žetone dokončanja, predpomnjene žetone in skupno število
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Za ponudnike, ki ne vrnejo podatkov o porabi (nekateri ponudniki, ki uporabljajo spletne piškotke), OmniRoute **oceni** število žetonov s hevristiko `~4 znaki na žeton` (glejte `open-sse/services/autoCombo/pipelineRouter.ts`).
+Za ponudnike, ki ne vrnejo podatkov o porabi (nekateri ponudniki, ki uporabljajo spletne piškotke), 67router **oceni** število žetonov s hevristiko `~4 znaki na žeton` (glejte `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Predpomnjeni žetoni
 
-OmniRoute spremlja `cached_tokens` ločeno od `prompt_tokens`, ker:
+67router spremlja `cached_tokens` ločeno od `prompt_tokens`, ker:
 
 - Anthropicovo predpomnjenje pozivov zaračuna nižjo ceno za predpomnjene žetone (10 % običajne cene)
 - Nekateri ponudniki vrnejo `cache_read_input_tokens`, ki jih je treba ovrednotiti drugače
@@ -117,7 +117,7 @@ Podatki o cenah se samodejno sinhronizirajo iz LiteLLM prek končne točke `/api
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Pri modelih brez podatkov o cenah OmniRoute uporabi **oceno stroškov** na podlagi notranjih povprečnih tarif (pridobljenih iz podatkov o cenah LiteLLM).
+Pri modelih brez podatkov o cenah 67router uporabi **oceno stroškov** na podlagi notranjih povprečnih tarif (pridobljenih iz podatkov o cenah LiteLLM).
 
 ---
 

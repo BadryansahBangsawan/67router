@@ -4,7 +4,7 @@
 
 ---
 
-Die OmniRoute-Komprimierung basiert auf Engine-Verträgen. Ein Modus kann eine Engine direkt
+Die 67router-Komprimierung basiert auf Engine-Verträgen. Ein Modus kann eine Engine direkt
 ausführen (`caveman` oder `rtk`) oder eine deterministische gestapelte Pipeline, die mehrere Engines nacheinander ausführt.
 
 ## Modi
@@ -43,9 +43,9 @@ noch kein Verlauf angesammelt hat, bei `below_min_chars`, und die Engine transfo
 ist `aggressive` statt des sichersten Profils die Standardeinstellung.
 
 Das Paket bestimmt seinen eigenen Modellumfang und sein Profil aus seiner Umgebungskonfiguration.
-OmniRoute delegiert diese Entscheidung niemals: Der Adapter legt die Modellbeschränkung auf den
+67router delegiert diese Entscheidung niemals: Der Adapter legt die Modellbeschränkung auf den
 restriktivsten Umfang des Pakets fest, sodass Host-Umgebungseinstellungen die Zulassungsliste nur einschränken, aber niemals
-über die von OmniRoute gemessenen Belege hinaus erweitern können.
+über die von 67router gemessenen Belege hinaus erweitern können.
 
 ## Engine-Registry
 
@@ -112,7 +112,7 @@ Die entsprechende Dashboard-Oberfläche befindet sich unter `Dashboard -> Contex
 
 Das Caveman-Upstream-Projekt berichtet von `~75%` weniger Ausgabetokens, durchschnittlichen Einsparungen
 von `65%` bei der Ausgabe in Benchmarks mit einer Spanne von `22-87%` sowie von einem Tool mit `~46%`
-Eingabekompression. OmniRoute verwendet bei der Dokumentation kombinierter Einsparungen für Prompts und
+Eingabekompression. 67router verwendet bei der Dokumentation kombinierter Einsparungen für Prompts und
 Kontext den eingabeseitigen Caveman-Wert; der Caveman-Ausgabemodus bleibt eine separate Funktion zur
 Steuerung des Antwortverhaltens.
 

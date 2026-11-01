@@ -4,77 +4,30 @@
 
 ---
 
-> **ምንጭ፦** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **መጨረሻ የተዘመነው፦** 2026-06-28 — v3.8.40
 
-OmniRoute ከወኪሎች ጋር የተያያዙ ሦስት የተለያዩ በይነገጾችን ያቀርባል። በመጀመሪያ እይታ ተመሳሳይ ቢመስሉም፣ የተለያዩ ችግሮችን ይፈታሉ። ትክክለኛውን ለመምረጥ ይህን ገጽ ይጠቀሙ።
+67router ከወኪሎች ጋር የተያያዙ ሦስት የተለያዩ በይነገጾችን ያቀርባል። በመጀመሪያ እይታ ተመሳሳይ ቢመስሉም፣ የተለያዩ ችግሮችን ይፈታሉ። ትክክለኛውን ለመምረጥ ይህን ገጽ ይጠቀሙ።
 
 ## ባጭሩ
 
 | በይነገጽ                    | ተስማሚ የሆነው ለ                                                                                                      | ማጓጓዣ                        | መስፈርት                |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------- | --------------------------- | -------------------- |
 | **A2A — ከወኪል ወደ ወኪል**    | የA2A ፕሮቶኮልን ከሚጠቀሙ አቻ ወኪሎች ጋር የወኪል-ተሻጋሪ ትብብር                                                                      | JSON-RPC 2.0 በHTTP ላይ       | A2A v0.3 (ክፍት መስፈርት) |
-| **ACP — የCLI ወኪሎች መዝገብ** | በተጠቃሚው ማሽን ላይ የተጫኑ የCLI ኮድ ማበልጸጊያ ወኪሎችን መለየት / መመዝገብ / ማስጀመር (Cursor, Cline, Codex CLI, Claude Code, Aider, ወዘተ) | HTTP REST                   | ለOmniRoute የተለየ      |
-| **የደመና ወኪሎች**            | ረጅም ጊዜ የሚወስዱ የኮድ ማበልጸጊያ ተግባራትን ወደ ውጫዊ የደመና አገልግሎቶች መላክ (Codex Cloud, Devin, Jules, Cursor Cloud)                 | HTTP REST + በDB የሚደገፉ ተግባራት | ለOmniRoute የተለየ      |
+| **ACP — የCLI ወኪሎች መዝገብ** | በተጠቃሚው ማሽን ላይ የተጫኑ የCLI ኮድ ማበልጸጊያ ወኪሎችን መለየት / መመዝገብ / ማስጀመር (Cursor, Cline, Codex CLI, Claude Code, Aider, ወዘተ) | HTTP REST                   | ለ67router የተለየ       |
+| **የደመና ወኪሎች**            | ረጅም ጊዜ የሚወስዱ የኮድ ማበልጸጊያ ተግባራትን ወደ ውጫዊ የደመና አገልግሎቶች መላክ (Codex Cloud, Devin, Jules, Cursor Cloud)                 | HTTP REST + በDB የሚደገፉ ተግባራት | ለ67router የተለየ       |
 
 ሦስቱም እርስ በርስ ገለልተኛ ናቸው — የፈለጉትን ንዑስ ስብስብ ይምረጡ።
 
 ## የውሳኔ ዛፍ
 
-```
-ከዚህ ማሽን ውጭ ሥራ እንዲሠራ የደመና አገልግሎት ያስፈልግዎታል (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ አዎ → የደመና ወኪሎች (POST /api/v1/agents/tasks)
-└─ አይ → ይቀጥሉ
-    │
-    A2Aን የሚጠቀምና መተባበር የሚፈልግ አቻ ወኪል አለዎት?
-    ├─ አዎ → A2A (POST /a2a)
-    └─ አይ → ይቀጥሉ
-        │
-        በአካባቢው የተጫኑ የCLI ኮድ ማበልጸጊያ ወኪሎችን መዘርዘር / ማዋቀር ያስፈልግዎታል?
-        ├─ አዎ → ACP (GET /api/acp/agents)
-        └─ አይ → መደበኛውን /v1/chat/completions ይጠቀሙ
-```
-
-## 1. A2A — ከወኪል ወደ ወኪል
-
-**መስፈርት፦** [A2A v0.3](https://a2a-protocol.org)
-**የOmniRoute መዳረሻ፦** `POST /a2a` (JSON-RPC 2.0)
-**የወኪል ካርድ፦** `GET /.well-known/agent.json`
-
-### መቼ መጠቀም እንዳለብዎት
-
-- OmniRoute ከአቻዎቹ አንዱ የሆነበትን ባለብዙ-ወኪል ሥርዓት ሲገነቡ
-- የOmniRouteን የማስተላለፊያ ብልህነት (ብልህ ማስተላለፊያ፣ የኮታ አስተዳደር፣ ወዘተ) Google ADKን በመሳሰሉ ማዕቀፎች ወይም አጠቃላይ የወኪል መረቦች ውስጥ ላሉ ወኪሎች ሲያቀርቡ
-- OmniRouteን በመደበኛ የፍለጋ + የጥሪ በይነገጽ ኋላ ሲያቀናጁ
-
-### ስልቶች
-
-- `message/send` — መልዕክት ያስገቡ፣ የተመሳሰለ ምላሽ ይቀበሉ
-- `message/stream` — ያስገቡ + በSSE የሚለቀቁ የሂደት ክስተቶችን ይቀበሉ
-- `tasks/get` — ተግባሩን በID ያንብቡ
-- `tasks/cancel` — በመሠራት ላይ ያለን ተግባር ይሰርዙ
-
-### አብረው የተካተቱ ክህሎቶች (6)
-
-- `smart-routing` — ጥያቄን በምርጥ ጥምረት በኩል ያስተላልፉ
-- `quota-management` — የእያንዳንዱን አቅራቢ የኮታ ሁኔታ ሪፖርት ያድርጉ
-- `provider-discovery` — የተጫኑ አቅራቢዎችን ከችሎታዎቻቸው ጋር ይዘርዝሩ
-- `cost-analysis` — የጥያቄ/ውይይት ወጪን ይገምቱ
-- `health-report` — የእያንዳንዱን አቅራቢ breaker/cooldown/lockout ሁኔታ ያጠቃልሉ
-- `list-capabilities` — የወኪሉን የሚገኙ ክህሎቶችና ሜታዳታ ይዘርዝሩ
-
-### ዝርዝር ማብራሪያ
-
-ስለ ማጓጓዣ ዝርዝሮች፣ የወኪል ካርድ መዋቅር፣ የተግባር TTL ውቅር እና አዳዲስ ክህሎቶችን ለመጨመር የሚያገለግለው አብነት [A2A-SERVER.md](./A2A-SERVER.md)ን ይመልከቱ።
-
 ## 2. ACP — የCLI ኤጀንቶች መዝገብ
 
-**OmniRoute መጨረሻ ነጥብ:** `GET /api/acp/agents`
+**67router መጨረሻ ነጥብ:** `GET /api/acp/agents`
 **ምንጭ:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### ምንድን ነው
 
-ACP የOmniRoute **አካባቢያዊ የCLI ኤጀንት ዝርዝር** ነው። በአስተናጋጁ ላይ የትኞቹ የኮድ ማዘጋጃ CLI-ዎች እንደተጫኑ (Cursor፣ Cline፣ Claude Code፣ Codex CLI፣ Continue፣ ወዘተ) ይለያል፣ ስሪቶቻቸውን ይወስናል፣ እና ተጠቃሚው እያንዳንዱ CLI ወደ OmniRoute እንዲያመለክት ለማዋቀር እንዲችል በዳሽቦርዱ ላይ ያሳያቸዋል።
+ACP የ67router **አካባቢያዊ የCLI ኤጀንት ዝርዝር** ነው። በአስተናጋጁ ላይ የትኞቹ የኮድ ማዘጋጃ CLI-ዎች እንደተጫኑ (Cursor፣ Cline፣ Claude Code፣ Codex CLI፣ Continue፣ ወዘተ) ይለያል፣ ስሪቶቻቸውን ይወስናል፣ እና ተጠቃሚው እያንዳንዱ CLI ወደ 67router እንዲያመለክት ለማዋቀር እንዲችል በዳሽቦርዱ ላይ ያሳያቸዋል።
 
 የHTTP በይነገጹ የ"CLI Tools" የተጠቃሚ በይነገጽን እና
 የCLI አሻራ ክትትልን የሚያስችል ውስጣዊ ዝርዝር ነው ([CLI-TOOLS.md](../reference/CLI-TOOLS.md)ን ይመልከቱ)። በተናጠል፣
@@ -114,8 +67,8 @@ ACP የOmniRoute **አካባቢያዊ የCLI ኤጀንት ዝርዝር** ነው�
 
 ### የአጠቃቀም ሁኔታዎች
 
-- የዳሽቦርዱ "CLI Tools" ገጽ የተጫኑትን ይዘረዝራል እና እያንዳንዳቸው ወደ OmniRoute እንዲያመለክቱ ለማዋቀር ይረዳዎታል
-- ብጁ ኤጀንቶች፣ የላቁ ተጠቃሚዎች OmniRoute በነባሪ የማያውቃቸውን ውስጣዊ/የግል ባለቤትነት CLI-ዎች እንዲመዘግቡ ያስችላሉ
+- የዳሽቦርዱ "CLI Tools" ገጽ የተጫኑትን ይዘረዝራል እና እያንዳንዳቸው ወደ 67router እንዲያመለክቱ ለማዋቀር ይረዳዎታል
+- ብጁ ኤጀንቶች፣ የላቁ ተጠቃሚዎች 67router በነባሪ የማያውቃቸውን ውስጣዊ/የግል ባለቤትነት CLI-ዎች እንዲመዘግቡ ያስችላሉ
 - የመለየቱ ውጤት የ`cli-tools` አሻራ ማትሪክስን ያቀርባል
 
 ### ACPን መጠቀም የሌለብዎት ጊዜ
@@ -125,86 +78,7 @@ ACP የOmniRoute **አካባቢያዊ የCLI ኤጀንት ዝርዝር** ነው�
   ተተኪ ሆኖ አልተዋቀረም። ለተለመደ በይነተገናኝ አጠቃቀም፣ ያዋቀሩትን CLI እራስዎ ያስጀምሩ ወይም
   `omniroute run`ን ይጠቀሙ።
 
-## 3. የደመና ወኪሎች
-
-**የOmniRoute መዳረሻዎች:** `/api/v1/agents/tasks/*` (የሕይወት ዑደት) + `/api/cloud/*` (መሠረታዊ ግንኙነቶች)
-**ምንጭ:** `src/lib/cloudAgent/`
-
-### ምንድን ነው
-
-በሦስተኛ ወገን የደመና ኮድ ማዘጋጃ ወኪሎች ላይ ወጥ የሆነ በይነገጽ ነው። መመሪያ + የማከማቻ ዩአርኤል ያስገባሉ፣ OmniRoute ወደ ትክክለኛው የደመና ወኪል ይልካል፣ ሁኔታውን በየጊዜው ይፈትሻል፣ ውጤቶችንም ይመልሳል።
-
-### የሚደገፉ ወኪሎች (4፣ ሁሉም በ`src/lib/cloudAgent/agents/` ውስጥ የተረጋገጡ)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### የሕይወት ዑደት
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() ለእያንዳንዱ የወኪል ክፍል
-  → ውጫዊ አገልግሎቱ ሥራውን ይጀምራል
-  → የተግባር ረድፍ በDB ውስጥ ይፈጠራል (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → ከአቅራቢው የዘገየ የሁኔታ ማመሳሰል
-  → የአሁኑን ሁኔታ + ዕቅድ + የእንቅስቃሴ ምዝግብ ይመልሳል
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → ወደ አቅራቢው ያስተላልፋል (ወይም በአካባቢው እንደተሰረዘ ምልክት ያደርጋል)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → በአካባቢው ይሰርዛል
-```
-
-### ማረጋገጫ
-
-⚠️ **ሁሉም የ`/api/v1/agents/tasks/*` መዳረሻዎች የአስተዳደር ማረጋገጫ ይፈልጋሉ** (commit `588a0333`)። Bearer ብቻ የሚጠቀሙ ጠሪዎች ከv3.8.0 ጀምሮ 401 ይቀበላሉ።
-
-### ጥልቅ ማብራሪያ
-
-ስለ `CloudAgentBase` ውል፣ የእያንዳንዱ ወኪል ዝርዝሮች፣ የመርሃግብር ዝርዝሮች እና የማረጋገጫ መረጃ ግንኙነት መዳረሻዎች [CLOUD_AGENT.md](./CLOUD_AGENT.md)ን ይመልከቱ።
-
-## ንጽጽር፦ A2A ከ Cloud Agents ጋር
-
-ሁለቱም "ረጅም ጊዜ የሚወስዱ ተግባራት" አሏቸው፣ ነገር ግን በተለያዩ ንብርብሮች ላይ ነው፦
-
-| ገጽታ          | A2A                                                                           | Cloud Agents                              |
-| ------------ | ----------------------------------------------------------------------------- | ----------------------------------------- |
-| መስፈርት        | Open A2A v0.3                                                                 | ለOmniRoute የተለየ                           |
-| ስሌቱ የሚከናወንበት | በOmniRoute ውስጥ (የተዋቀሩ ጥምረቶችን ይጠቀማል)                                           | ውጫዊ (Codex / Devin / Jules አገልጋዮች)        |
-| የተግባር ቆይታ    | ነባሪ TTL 5 ደቂቃ (በ`TaskManager` ውስጥ ሊዋቀር ይችላል)                                  | ከደቂቃዎች እስከ ሰዓታት                           |
-| Repoን የሚያውቅ  | አይደለም (ጥያቄዎችን ብቻ ያስተላልፋል)                                                     | አዎ (የrepo URL + branch)                   |
-| የአጠቃቀም ሁኔታ   | በወኪሎች መካከል ትብብር፣ ብልህ ማዘዋወር እንደ አገልግሎት                                         | "ባህሪ Xን በrepo Y ውስጥ ተግብር" የሚለውን ውክልና መስጠት |
-| ማረጋገጫ        | አማራጭ `OMNIROUTE_API_KEY` ለ`/a2a`፤ ለ`/api/a2a/*` REST አጋዥ መሣሪያዎች የአስተዳደር ማረጋገጫ | ሁልጊዜ የአስተዳደር ማረጋገጫ                        |
-
 ## የውህደት ምሳሌዎች
-
-### የOmniRouteን A2A ችሎታዎች ያግኙ
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ሁሉንም 6 ክህሎቶች፣ ማጓጓዣዎች እና ስሪት የያዘውን Agent Card ይመልሳል።
-
-### OmniRouteን እንደ A2A ወኪል ይጠቀሙ
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### በACP በኩል የተጫኑ CLI ወኪሎችን ይዘርዝሩ
 
@@ -229,30 +103,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### የCloud Agent ተግባር ያስገቡ
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### የCloud ተግባር ሁኔታን በየጊዜው ይፈትሹ
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## የትኛውን መቼ መጠቀም እንዳለብዎ
 
 - **Chatbot / copilot የፊት ገጽ** → `/v1/chat/completions` (ከOpenAI ጋር ተኳሃኝ — የወኪል ፕሮቶኮል አይደለም)
@@ -264,7 +114,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute ኮር     │
+                │   67router ኮር     │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## በተጨማሪ ይመልከቱ
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — ስለ A2A ዝርዝር ማብራሪያ
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — ስለ የደመና ወኪሎች ዝርዝር ማብራሪያ
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — የውጫዊ CLI ውህደቶች (ACPን ይጠቀማል)
 - [SKILLS.md](./SKILLS.md) — የክህሎቶች ማዕቀፍ (ከA2A ክህሎቶች የተለየ — የአካባቢያዊ ማስፈጸሚያ ማግለያ)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — የመዳረሻ ነጥብ ማጣቀሻ

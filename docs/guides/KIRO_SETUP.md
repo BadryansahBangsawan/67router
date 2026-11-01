@@ -4,7 +4,7 @@ title: "Kiro Setup Guide"
 
 # Kiro Setup Guide
 
-This guide covers adding Kiro (AWS-hosted AI coding assistant) accounts to OmniRoute,
+This guide covers adding Kiro (AWS-hosted AI coding assistant) accounts to 67router,
 with a focus on running multiple accounts simultaneously without session conflicts.
 
 ---
@@ -22,10 +22,10 @@ first account's token.
 
 ---
 
-## How OmniRoute Solves This (v3.8.0+)
+## How 67router Solves This (v3.8.0+)
 
-Starting with v3.8.0, OmniRoute calls `registerClient()` (AWS SSO OIDC) during every
-Kiro connection import. This gives each OmniRoute connection its own dedicated OIDC
+Starting with v3.8.0, 67router calls `registerClient()` (AWS SSO OIDC) during every
+Kiro connection import. This gives each 67router connection its own dedicated OIDC
 client registration. Because each client registration is independent, refreshing or
 re-authenticating one account does not affect any other account's refresh token.
 
@@ -59,7 +59,7 @@ receive their own client registration automatically.
 
 ### Prerequisites
 
-- OmniRoute v3.8.0 or later.
+- 67router v3.8.0 or later.
 - A working Kiro account (email + password, Google, or GitHub login).
 - Optionally a second Kiro account.
 
@@ -70,7 +70,7 @@ receive their own client registration automatically.
    - **Import Token** — paste a refresh token starting with `aorAAAAAG`.
    - **API Key** — paste a long-lived Kiro / CodeWhisperer API key.
    - **Google / GitHub login** — complete the OAuth flow in the browser.
-   - **Auto-Import** — click the button; OmniRoute reads credentials from the
+   - **Auto-Import** — click the button; 67router reads credentials from the
      local kiro-cli database or `~/.aws/sso/cache`.
 3. The connection is saved. Refresh-token flows automatically register a dedicated
    OIDC client. API-key flows validate the key with AWS and do not store a refresh token.
@@ -127,7 +127,7 @@ not use OAuth refresh, so it avoids shared OIDC session invalidation.
 2. Choose **API Key**.
 3. Paste the API key and pick the AWS region: **Auto-detect** (default), **US East
    (N. Virginia)** or **Europe (Frankfurt)**.
-4. OmniRoute validates the key and saves the connection pinned to the region where the
+4. 67router validates the key and saves the connection pinned to the region where the
    key works.
 
 ### API
@@ -177,7 +177,7 @@ included — because the Kiro IDE gateway rejects `TokenType=API_KEY` and
 ## OIDC Client Expiry
 
 AWS SSO OIDC public clients typically expire after 90 days
-(`clientSecretExpiresAt`). OmniRoute stores this timestamp in `providerSpecificData`
+(`clientSecretExpiresAt`). 67router stores this timestamp in `providerSpecificData`
 for observability. If a connection stops refreshing after ~90 days, re-import the
 connection to obtain a fresh OIDC client registration. Automatic re-registration on
 expiry is tracked as a future improvement.
@@ -198,7 +198,7 @@ through AWS SSO OIDC.
 ### Import fails with "Token validation failed"
 
 - Ensure the refresh token starts with `aorAAAAAG`.
-- Ensure OmniRoute can reach `https://oidc.us-east-1.amazonaws.com` (or the configured
+- Ensure 67router can reach `https://oidc.us-east-1.amazonaws.com` (or the configured
   region). If you are behind a corporate proxy, set a provider-level proxy in
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ through AWS SSO OIDC.
 
 - Confirm the key is a Kiro / CodeWhisperer API key, not a refresh token.
 - Confirm the AWS region matches the key/account. `us-east-1` is the default.
-- The key must be able to call `ListAvailableProfiles`; otherwise OmniRoute cannot
+- The key must be able to call `ListAvailableProfiles`; otherwise 67router cannot
   resolve the required `profileArn`.
 
 For other issues, see the main [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

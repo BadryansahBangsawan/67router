@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (עברית)
+# 67router MCP Server Documentation (עברית)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## התקנה
 
-OmniRoute MCP מובנה במערכת. הפעילו אותו באמצעות:
+67router MCP מובנה במערכת. הפעילו אותו באמצעות:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline ולקוחות MCP תואמים.
 | `omniroute_switch_combo`        | `write:combos`        | הפעלה או השבתה של שילוב                                                                                                      |
 | `omniroute_create_combo`        | `write:combos`        | יצירת שילוב מאומת באמצעות API השילובים הקיים                                                                                 |
 | `omniroute_check_quota`         | `read:quota`          | מכסה בשימוש/כוללת, אחוז נותר, זמן איפוס, תקינות אסימון                                                                       |
-| `omniroute_route_request`       | `execute:completions` | שליחת השלמת צ'אט באמצעות הניתוב של OmniRoute                                                                                 |
+| `omniroute_route_request`       | `execute:completions` | שליחת השלמת צ'אט באמצעות הניתוב של 67router                                                                                  |
 | `omniroute_cost_report`         | `read:usage`          | דוח עלויות לפי תקופה (הפעלה/יום/שבוע/חודש)                                                                                   |
 | `omniroute_list_models_catalog` | `read:models`         | קטלוג מודלים מלא הכולל יכולות, מצב ותמחור                                                                                    |
 | `omniroute_radar_catalog`       | `read:radar`          | קטלוג Radar מקומי וחתום; מסננים אופציונליים לפי ספק/משפחה                                                                    |
@@ -152,7 +152,7 @@ Cursor, Cline ולקוחות MCP תואמים.
 
 ### מסנן עץ הנגישות של MCP (v3.8.0)
 
-בנפרד מכלי הדחיסה שלעיל, OmniRoute כולל מסנן שפועל לאחר הביצוע ודוחס את **תוצאות הכלים** של כלי
+בנפרד מכלי הדחיסה שלעיל, 67router כולל מסנן שפועל לאחר הביצוע ודוחס את **תוצאות הכלים** של כלי
 דפדפן/נגישות של MCP לפני שהן מוחזרות לסוכן. מסנן זה אינו כלי בפני עצמו — הוא פועל באופן שקוף על כל
 תוצאת כלי שמכילה טקסט מפורט של עץ נגישות או תמונת מצב של דפדפן (≥2000 תווים).
 
@@ -244,17 +244,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 מלאי כלי ה-MCP שלעיל (110 כלים ייחודיים, כפי שחושב על ידי `countUniqueMcpTools()`) מוגבל במכוון
 לפעולות ניתוב/מטמון/דחיסה/זיכרון/מיומנויות/פרוקסי/מקור-הקשר בזמן ריצה. שתי מסגרות סמוכות
 מסופקות לצד שרת ה-MCP ב-v3.8.0 ומתועדות בנפרד:
-
-### סוכני ענן
-
-סוכני ענן הם סוכני קידוד מבוססי AI הפועלים מחוץ לתהליך (codex-cloud, cursor-cloud, devin, jules), המשולבים
-ב-OmniRoute באמצעות אותו מודל חיבור המשמש ספקי LLM. הם נחשפים באמצעות
-ממשק REST משלהם (`/api/v1/agents/*`) ו**אינם** חלק מקטלוג כלי ה-MCP
-— קריאה לסוכן ענן אינה צורכת היקף MCP.
-
-- מימוש: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- מחזור חיים: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- תיעוד: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### מנגנוני הגנה
 
@@ -426,8 +415,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                   |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                            |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                              |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                          |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                             |
 | `read:obsidian`       | 13 כלי קריאה — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 כלי כתיבה — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
@@ -480,7 +467,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 
 | משתנה                                   | ברירת מחדל                      | מטרה                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | :-------------------------------------- | :------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`        | כתובת ה-URL הבסיסית שבה שרת ה-MCP משתמש בעת קריאה לממשקי ה-API הפנימיים של OmniRoute                                                                                                                                                                                                                                                                                                                                                                            |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`        | כתובת ה-URL הבסיסית שבה שרת ה-MCP משתמש בעת קריאה לממשקי ה-API הפנימיים של 67router                                                                                                                                                                                                                                                                                                                                                                             |
 | `OMNIROUTE_API_KEY`                     | (ריק)                           | מפתח API שמועבר בתור `Authorization: Bearer` לקריאות API פנימיות                                                                                                                                                                                                                                                                                                                                                                                                |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (רק `"true"` מפעיל זאת) | כאשר האפשרות מופעלת, היעדר היקפים גורם לדחיית קריאות לכלים ולרישום `scope_denied:<reason>` ביומן הביקורת. האכיפה נכפית גם ללא קשר לדגל זה עבור כל קורא HTTP/SSE שמזוהה מכותרת Authorization ייעודית למפתח (`source === "authInfo"`) ושאין לו היקף `manage`/`admin` מלא — לדוגמה, מפתח שמחזיק רק בהיקף המעקף המצומצם `mcp:connect` — ולכן ברירת מחדל זו בטוחה רק עבור תהליך מקומי/stdio המופעל בידי מפעיל יחיד, ולעולם לא עבור גישה מרוחקת שאינה מכתובת loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (ריק)                           | רשימת היקפים מופרדת בפסיקים שנחשבים "זמינים" כברירת מחדל (משמשת כאשר הקורא אינו מספק היקפים משלו)                                                                                                                                                                                                                                                                                                                                                               |
@@ -583,7 +570,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | הגדרות כלי מיומנויות (4 כלים)                                    |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | הגדרות כלי מקור הקשר של Notion (6 כלים)                          |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | הגדרות כלי משחוק (8 כלים)                                        |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | כלים לרישום ולניהול תוספים (8 כלים)                              |
 | `src/app/api/mcp/status/route.ts`                                        | נקודת קצה `/api/mcp/status`                                      |
 | `src/app/api/mcp/tools/route.ts`                                         | נקודת קצה `/api/mcp/tools`                                       |
 | `src/app/api/mcp/sse/route.ts`                                           | נתיב תעבורת SSE‏ `/api/mcp/sse`                                  |

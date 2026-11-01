@@ -6,7 +6,7 @@
 
 ## Kwetsbaarheden melden
 
-Als u een beveiligingskwetsbaarheid in OmniRoute ontdekt, meld deze dan op verantwoorde wijze:
+Als u een beveiligingskwetsbaarheid in 67router ontdekt, meld deze dan op verantwoorde wijze:
 
 1. Open **GEEN** openbare GitHub-issue
 2. Gebruik [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Na 3.8.59 is de volgende versie **3.9.0**, waarmee de lijn voor langdurige onder
 
 ## Beveiligingsarchitectuur
 
-OmniRoute implementeert een meerlagig beveiligingsmodel:
+67router implementeert een meerlagig beveiligingsmodel:
 
 ```
 Verzoek → CORS → Authz-pijplijn (classificeren → beleid → afdwingen)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework voor beveiligingsrails
 
-OmniRoute wordt geleverd met een direct herlaadbaar **register voor beveiligingsrails** (`src/lib/guardrails/`) met 3 ingebouwde beveiligingsrails, geordend op prioriteit:
+67router wordt geleverd met een direct herlaadbaar **register voor beveiligingsrails** (`src/lib/guardrails/`) met 3 ingebouwde beveiligingsrails, geordend op prioriteit:
 
 | Beveiligingsrail   | Prioriteit | Doel                                                                                                                    |
 | ------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------- |

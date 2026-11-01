@@ -6,7 +6,7 @@
 
 ## Prijavljanje ranljivosti
 
-Če odkrijete varnostno ranljivost v OmniRoute, jo odgovorno prijavite:
+Če odkrijete varnostno ranljivost v 67router, jo odgovorno prijavite:
 
 1. **NE** odpirajte javne težave v GitHubu
 2. Uporabite [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Po različici 3.8.59 je naslednja različica **3.9.0**, ki na veji
 
 ## Varnostna arhitektura
 
-OmniRoute uporablja večplastni varnostni model:
+67router uporablja večplastni varnostni model:
 
 ```
 Zahteva → CORS → Cevovod Authz (razvrsti → pravilniki → uveljavi)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Ogrodje varoval
 
-OmniRoute vključuje **register varoval** z možnostjo ponovnega nalaganja med delovanjem (`src/lib/guardrails/`) s 3 vgrajenimi varovali, razvrščenimi po prioriteti:
+67router vključuje **register varoval** z možnostjo ponovnega nalaganja med delovanjem (`src/lib/guardrails/`) s 3 vgrajenimi varovali, razvrščenimi po prioriteti:
 
 | Varovalo           | Prioriteta | Namen                                                                                                |
 | ------------------ | ---------- | ---------------------------------------------------------------------------------------------------- |

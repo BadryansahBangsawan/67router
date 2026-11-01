@@ -169,5 +169,4 @@ curl / Python / TypeScript фрагменти както за извиквани
 - Главен план: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - План на функционалността: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Регистър на доставчиците за търсене: `open-sse/config/searchRegistry.ts`
-- Playground Studio (споделени `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Бекенд за извличане от уеб: `src/app/api/v1/web/fetch/route.ts`

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute가 Docker 내부에서 실행될 때는 컨테이너에서 호스트의 Cursor 설치를 볼 수 없으므로 기존 **Cursor IDE에서 가져오기** /
+67router가 Docker 내부에서 실행될 때는 컨테이너에서 호스트의 Cursor 설치를 볼 수 없으므로 기존 **Cursor IDE에서 가져오기** /
 `cursor-agent` 흐름이 실패합니다. 대신 **Cursor로 로그인**(deep-control PKCE)을 사용하세요.
 
 ## Docker에서 IDE / CLI 가져오기가 실패하는 이유
@@ -13,7 +13,7 @@ OmniRoute가 Docker 내부에서 실행될 때는 컨테이너에서 호스트�
    `~/.config/Cursor/User/globalStorage/state.vscdb` 같은 Linux 경로를 찾습니다.
    macOS용 Docker Desktop에서는 호스트 IDE DB가 기본적으로 마운트되지 않으며,
    호스트가 Darwin인 경우에도 컨테이너 OS는 Linux입니다.
-2. **`cursor-agent` 바이너리 없음** — 공식 OmniRoute 이미지에는
+2. **`cursor-agent` 바이너리 없음** — 공식 67router 이미지에는
    `cursor-agent`가 포함되어 있지 않습니다. 이전에는 사용 가능한 모델을 확인하기 위해
    `cursor-agent --list-models`를 셸에서 실행한 후 정적 카탈로그로 폴백했습니다.
 3. **잘못된 바이너리** — macOS용 `cursor-agent`를 Linux
@@ -23,11 +23,11 @@ OmniRoute가 Docker 내부에서 실행될 때는 컨테이너에서 호스트�
 
 1. **대시보드 → 제공업체 → Cursor**를 엽니다.
 2. **Cursor로 로그인** 탭을 선택합니다.
-3. **Cursor로 로그인**을 클릭합니다. 그러면 OmniRoute가 **호스트** 브라우저에서
+3. **Cursor로 로그인**을 클릭합니다. 그러면 67router가 **호스트** 브라우저에서
    `https://cursor.com/loginDeepControl?…`를 엽니다.
-4. 브라우저에서 로그인을 승인한 다음 대시보드로 돌아갑니다. OmniRoute는
+4. 브라우저에서 로그인을 승인한 다음 대시보드로 돌아갑니다. 67router는
    토큰이 도착할 때까지 `api2.cursor.sh/auth/poll`을 폴링합니다.
-5. OmniRoute는 **액세스 + 새로 고침** 토큰을 저장하고
+5. 67router는 **액세스 + 새로 고침** 토큰을 저장하고
    `https://api2.cursor.sh/auth/exchange_user_api_key`를 통해 갱신합니다.
 
 이 경로에서는 컨테이너 내부에 Cursor IDE 또는 `cursor-agent`가 필요하지 않습니다.
@@ -36,10 +36,10 @@ OmniRoute가 Docker 내부에서 실행될 때는 컨테이너에서 호스트�
 
 로그인된 연결이 있으면 **사용 가능한 모델 / 자동 동기화**는 연결의 Bearer 토큰을 사용하여 Cursor의
 HTTP `AiService/AvailableModels` 카탈로그를 우선적으로 사용합니다.
-실패하면 OmniRoute는 호스트의 `cursor-agent`가 있을 경우 이를 시도한 다음
+실패하면 67router는 호스트의 `cursor-agent`가 있을 경우 이를 시도한 다음
 정적 레지스트리 시드를 사용합니다.
 
-OmniRoute는 카탈로그에 항상 **`auto`**(표시 이름 “Auto”)를 노출하며,
+67router는 카탈로그에 항상 **`auto`**(표시 이름 “Auto”)를 노출하며,
 OpenCodex 스타일 라우터 모드인 **`auto-cost`**, **`auto-balance`**,
 **`auto-intelligence`**도 함께 노출합니다. 전송 시 이들은 Cursor의 `default` 모델로
 매핑되며, 세 가지 변형에는 `optimization` ModelParameter가 포함됩니다. 프리미엄 모델의
@@ -86,7 +86,7 @@ Cursor의 **사용량 → 제공업체 한도**는 PKCE 또는 토큰 가져오�
 ## 빈 응답 턴 / 사용량 소진
 
 Cursor가 Run을 수락했지만 어시스턴트 텍스트를 반환하지 않는 경우(프리미엄
-사용량이 소진되었을 때 흔함), OmniRoute는 단순한 “제공업체가 빈 콘텐츠를 반환했습니다”가
+사용량이 소진되었을 때 흔함), 67router는 단순한 “제공업체가 빈 콘텐츠를 반환했습니다”가
 아니라 조치 가능한 **429**(할당량 단서) 또는 안내가 포함된 **502**를 표시합니다.
 `not_found: AI Model Not Found`(사용량 기간 소진)와 같은 스트리밍 실패는
 **Cursor 요청 속도 제한 / 사용량 초과**로 분류되며 SSE 파이프라인 전체에서 해당
@@ -95,7 +95,7 @@ Cursor가 Run을 수락했지만 어시스턴트 텍스트를 반환하지 않�
 
 ## 클라이언트 버전(헤드리스)
 
-로컬 `cursor-agent` 설치가 없으면 OmniRoute는 먼저 env
+로컬 `cursor-agent` 설치가 없으면 67router는 먼저 env
 `CURSOR_AGENT_CLI_VERSION`을 사용하고, 그다음 디스크에 캐시된 Cursor 설치 프로그램
 스크립트 스크레이핑 결과를 사용하며, 마지막으로 고정된 빌드 ID를 사용하여
 `x-cursor-client-version`을 확인합니다. 필요한 경우

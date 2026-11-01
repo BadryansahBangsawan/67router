@@ -2,21 +2,17 @@
  * getAllToolDefinitions — unified catalog of all MCP tool definitions.
  *
  * Aggregates the same collections referenced by TOTAL_MCP_TOOL_COUNT in server.ts:
- *   MCP_TOOLS + memoryTools + skillTools + agentSkillTools + githubSkillTools +
- *   poolTools + gamificationTools + pluginTools + notionTools + obsidianTools +
+ *   MCP_TOOLS + agentSkillTools +
+ *   poolTools + gamificationTools + notionTools + obsidianTools +
  *   localCorpusTools + compressionTools
  *
  * Tolerates both Array and Record shapes. Deduplicates by name (first wins).
  */
 
 import { MCP_TOOLS } from "../schemas/tools.ts";
-import { memoryTools } from "../tools/memoryTools.ts";
-import { skillTools } from "../tools/skillTools.ts";
 import { agentSkillTools } from "../tools/agentSkillTools.ts";
-import { githubSkillTools } from "../tools/githubSkillTools.ts";
 import { poolTools } from "../tools/poolTools.ts";
 import { gamificationTools } from "../tools/gamificationTools.ts";
-import { pluginTools } from "../tools/pluginTools.ts";
 import { notionTools } from "../tools/notionTools.ts";
 import { obsidianTools } from "../tools/obsidianTools.ts";
 import { localCorpusTools } from "../tools/localCorpusTools.ts";
@@ -71,13 +67,9 @@ function collectAny(collection: unknown): ToolCatalogEntry[] {
 export function getAllToolDefinitions(): ToolCatalogEntry[] {
   const collections: unknown[] = [
     MCP_TOOLS,
-    memoryTools,
-    skillTools,
     agentSkillTools,
-    githubSkillTools,
     poolTools,
     gamificationTools,
-    pluginTools,
     notionTools,
     obsidianTools,
     localCorpusTools,

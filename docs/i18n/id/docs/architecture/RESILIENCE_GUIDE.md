@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memiliki tiga mekanisme ketahanan yang berbeda tetapi saling terkait. Masing-masing memiliki cakupan dan tujuan yang berbeda. Pisahkan ketiganya saat men-debug perilaku routing.
+67router memiliki tiga mekanisme ketahanan yang berbeda tetapi saling terkait. Masing-masing memiliki cakupan dan tujuan yang berbeda. Pisahkan ketiganya saat men-debug perilaku routing.
 
 ![Model ketahanan 3 lapis](../diagrams/exported/resilience-3layers.svg)
 
@@ -214,7 +214,7 @@ Ketiga header afinitas sesi tidak pernah diteruskan ke upstream — executor mem
 
 ### Lease koneksi sesi terkelola eksklusif
 
-**Cakupan:** satu klien/sesi HTTP terkelola yang aktif memiliki satu koneksi OmniRoute yang eligible.
+**Cakupan:** satu klien/sesi HTTP terkelola yang aktif memiliki satu koneksi 67router yang eligible.
 
 **Tujuan:** menyediakan kepemilikan koneksi eksklusif yang tahan lama bagi klien yang membutuhkan
 pagar routing tegas di seluruh permintaan. Ini berbeda dari afinitas sesi, yang merupakan
@@ -238,7 +238,7 @@ ID koneksi aktif. Header kontrol lease dihapus dari log, snapshot permintaan yan
 header executor upstream.
 
 Jika routing biasa memiliki kandidat terkelola yang memenuhi syarat tetapi setiap kandidat bebas
-ditempati oleh lease aktif asing, OmniRoute mengembalikan HTTP `429`, kode
+ditempati oleh lease aktif asing, 67router mengembalikan HTTP `429`, kode
 lease-capacity-unavailable, status waiting-for-capacity, dan `Retry-After` terbatas yang diturunkan
 dari waktu kedaluwarsa relevan yang paling awal. Eligibilitas kosong biasa bukanlah kontensi lease
 dan mempertahankan semantik error routing yang sudah ada.
@@ -263,7 +263,7 @@ ditulis oleh lockout (`resolveLockoutScope()` di `open-sse/services/accountFallb
   koneksi tersebut), untuk provider lain `getQuotaScopedModelForProvider()`.
 - `404` mengunci model tunggal (`getModelLockKey()` mempersempit `not_found`).
 - Status lainnya — kegagalan transport/server `5xx` dan `502` hasil sintesis
-  OmniRoute sendiri dari validasi kualitas — hanya mengunci tupel
+  67router sendiri dari validasi kualitas — hanya mengunci tupel
   provider/koneksi/model yang **persis**. Stream yang buruk pada satu model bukanlah
   bukti tentang kuota akun; sebelum aturan ini, satu respons kosong pada
   `codex/gpt-5.6-luna` menghapus setiap model `gpt-5*` milik koneksi tersebut dari
@@ -399,7 +399,7 @@ concurrency caps**, satu `model=cap` per baris) atau melalui
   berupa bilangan bulat positif.
 - **Antrean lokal, tanpa discovery:** permintaan berlebih mengantre secara
   lokal dengan semantik antrean/timeout yang sudah ada (error admission bertipe
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute tidak menemukan atau
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router tidak menemukan atau
   menyimpulkan kebijakan upstream — ia menegakkan batas persis yang
   dikonfigurasikan operator. Gerbang model yang jenuh tidak pernah menonaktifkan
   provider dan tidak pernah membuat lockout model permanen; perilaku
@@ -570,7 +570,7 @@ dapat diuji unit tanpa limiter Bottleneck sungguhan.
 ### Jaring Pengaman Auto-Enable Rate-Limit & Perlindungan Koneksi (`rateLimitProtection`)
 
 **Jaring pengaman auto-enable** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, default `true`):
-Secara default, OmniRoute secara otomatis mengaktifkan perlindungan antrean rate-limit untuk semua koneksi provider API-key yang aktif (`getProviderCategory(provider) === "apikey"`). Ini memastikan request masuk ke API key upstream yang sensitif terhadap rate akan diantrekan dan dibatasi lajunya melalui Bottleneck, alih-alih membanjiri upstream hingga memicu error 429. Jaring pengaman ini dapat ditimpa melalui variabel lingkungan `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` menonaktifkan, `true`/`1`/`on` memaksa aktif), yang lebih diutamakan daripada pengaturan dashboard yang tersimpan (**Pengaturan → Resiliensi** / `PATCH /api/resilience`).
+Secara default, 67router secara otomatis mengaktifkan perlindungan antrean rate-limit untuk semua koneksi provider API-key yang aktif (`getProviderCategory(provider) === "apikey"`). Ini memastikan request masuk ke API key upstream yang sensitif terhadap rate akan diantrekan dan dibatasi lajunya melalui Bottleneck, alih-alih membanjiri upstream hingga memicu error 429. Jaring pengaman ini dapat ditimpa melalui variabel lingkungan `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` menonaktifkan, `true`/`1`/`on` memaksa aktif), yang lebih diutamakan daripada pengaturan dashboard yang tersimpan (**Pengaturan → Resiliensi** / `PATCH /api/resilience`).
 
 **Semantik `rateLimitProtection` per koneksi:**
 Perlindungan rate-limit per koneksi dilacak melalui field boolean `rateLimitProtection` pada koneksi provider (disimpan sebagai `rate_limit_protection` di SQLite):
@@ -930,7 +930,7 @@ dengan kuota yang habis. Batasan yang jujur:
 > panduan agen tetap di bawah anggaran konteks 40k. Ini adalah tampilan ringkas yang ditujukan
 > untuk agen dari bagian-bagian di atas; bagian bernomor tetap menjadi referensi lengkap.
 
-OmniRoute memiliki tiga mekanisme kegagalan sementara yang saling terkait tetapi berbeda.
+67router memiliki tiga mekanisme kegagalan sementara yang saling terkait tetapi berbeda.
 Jaga agar cakupannya tetap terpisah saat men-debug perilaku routing. Lihat
 [diagram ketahanan 3 lapis](../diagrams/exported/resilience-3layers.svg)
 (sumber: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

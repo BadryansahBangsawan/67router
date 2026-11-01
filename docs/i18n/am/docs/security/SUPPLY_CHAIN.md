@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute npm + Docker artifacts ያትማል። እነዚህ መግቢያዎች (gates) ምንጩን (provenance)፣ ክምችትን (inventory (SBOM)) እና CVE ቅኝትን (scanning) ይሰጣሉ፤ ሁሉም ክፍት ምንጭ (OSS) ሲሆኑ፣ ወደ መልቀቂያ የስራ ፍሰቶች (release workflows) የተዋሃዱ ናቸው። **መጀመሪያ የማስጠንቀቂያ** አቀራረብ — አሁን ሪፖርት ያደርጋሉ፣ ከመጀመሪያው ስኬታማ (green) መልቀቂያ በኋላ ወደ ማገድ (blocking) ይሸጋገራሉ።
+67router npm + Docker artifacts ያትማል። እነዚህ መግቢያዎች (gates) ምንጩን (provenance)፣ ክምችትን (inventory (SBOM)) እና CVE ቅኝትን (scanning) ይሰጣሉ፤ ሁሉም ክፍት ምንጭ (OSS) ሲሆኑ፣ ወደ መልቀቂያ የስራ ፍሰቶች (release workflows) የተዋሃዱ ናቸው። **መጀመሪያ የማስጠንቀቂያ** አቀራረብ — አሁን ሪፖርት ያደርጋሉ፣ ከመጀመሪያው ስኬታማ (green) መልቀቂያ በኋላ ወደ ማገድ (blocking) ይሸጋገራሉ።
 
 | መግቢያ (Gate)           | መሳሪያ                                           | የት                            | ያግዳል?         | ውጤት                                           |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------ | :-------------------------------------------- |
@@ -45,7 +45,7 @@ osv ወይም Trivy በአዲስ በተገለጸ CVE ምክንያት ቀይ ሲ�
   (`promptfoo`) `@openai/codex-security`ን ያውጃል።
 - **በሰንሰለቱ ውስጥ የትኛውም የተስተካከለ ልቀት የለም።** `extract-zip@2.0.1` (በ2020 የታተመ) የጥቅሉ የመጨረሻ ልቀት ነው — ጥገና የሌለው ነው። `@openai/codex-security`'s
   የአሁኑ npm-latest (`0.1.29`) አሁንም `extract-zip@2.0.1`ን ይጎትታል።
-- **ከምርት ሊደረስበት የማይችል ነው።** `promptfoo` ለልማት ጥገኝነት ብቻ ነው (በ`dependencies` ስር በጭራሽ ያልተዘረዘረ)፣ እና በ`src/`፣ `open-sse/`፣ ወይም `bin/` ስር ያለ ምንም ፋይል የ`extract-zip` npm ጥቅልን አያስመጣም — የOmniRoute የራሱ `extractZip()` ረዳት
+- **ከምርት ሊደረስበት የማይችል ነው።** `promptfoo` ለልማት ጥገኝነት ብቻ ነው (በ`dependencies` ስር በጭራሽ ያልተዘረዘረ)፣ እና በ`src/`፣ `open-sse/`፣ ወይም `bin/` ስር ያለ ምንም ፋይል የ`extract-zip` npm ጥቅልን አያስመጣም — የ67router የራሱ `extractZip()` ረዳት
   (`src/lib/versionManager/binaryManager.ts:93`) ወደ ቤተኛ `unzip`/`tar` ይወጣል
   እና ተዛማጅነት የሌለው ነው። `@openai/codex-security` የራሱን የሲምሊንክ-ትራቨርሳል መከላከያ
   በextract-zip's onEntry callback ላይ ይልካል።

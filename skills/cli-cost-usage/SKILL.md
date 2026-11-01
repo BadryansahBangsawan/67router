@@ -141,51 +141,6 @@ omniroute usage
 omniroute usage analytics
 ```
 
-### `usage budget`
-
-**Example:**
-
-```bash
-omniroute usage budget
-```
-
-### `usage list`
-
-**Example:**
-
-```bash
-omniroute usage list
-```
-
-### `usage get [scope]`
-
-**Example:**
-
-```bash
-omniroute usage get [scope]
-```
-
-### `usage set <amount>`
-
-**Flags:**
-
-- `--scope <s>`
-- `--period <p>`
-
-**Example:**
-
-```bash
-omniroute usage set <amount>
-```
-
-### `usage reset [scope]`
-
-**Example:**
-
-```bash
-omniroute usage reset [scope]
-```
-
 ### `usage quota`
 
 **Flags:**

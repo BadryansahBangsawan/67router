@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Tiếng Việt)
+# Providers Guide: Connect AI Models to 67router (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Tóm tắt**: Nhà cung cấp là một kết nối đến dịch vụ AI (như OpenAI, Anthropic, Google). Bạn cần ít nhất một nhà cung cấp để sử dụng OmniRoute.
+> **Tóm tắt**: Nhà cung cấp là một kết nối đến dịch vụ AI (như OpenAI, Anthropic, Google). Bạn cần ít nhất một nhà cung cấp để sử dụng 67router.
 
 ---
 
 ## Nhà cung cấp là gì?
 
-Hãy hình dung nhà cung cấp giống như một **nhà mạng di động**. Cũng như bạn cần nhà mạng để thực hiện cuộc gọi, bạn cần nhà cung cấp AI để sử dụng các mô hình AI. OmniRoute giống như một chiếc điện thoại hoạt động với **mọi nhà mạng** — bạn có thể tự động chuyển đổi giữa các nhà cung cấp.
+Hãy hình dung nhà cung cấp giống như một **nhà mạng di động**. Cũng như bạn cần nhà mạng để thực hiện cuộc gọi, bạn cần nhà cung cấp AI để sử dụng các mô hình AI. 67router giống như một chiếc điện thoại hoạt động với **mọi nhà mạng** — bạn có thể tự động chuyển đổi giữa các nhà cung cấp.
 
 ### Các loại nhà cung cấp
 
@@ -30,7 +30,7 @@ Xem **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** để biết hướng dẫn
 
 ### Thiết lập nhà cung cấp miễn phí tùy chọn trong lần chạy đầu tiên
 
-Trình hướng dẫn trong lần chạy đầu tiên cung cấp một thẻ **Thiết lập nhà cung cấp miễn phí** rõ ràng. Trình hướng dẫn lấy danh sách đủ điều kiện hiện tại từ sổ đăng ký nhà cung cấp không yêu cầu xác thực của OmniRoute, sau đó cho phép bạn xem lại và bỏ chọn từng nhà cung cấp trước khi xác nhận. OmniRoute hiển thị thông báo lưu ý của nhà cung cấp và liên kết đến trang web của họ để bạn có thể xem trước các điều khoản, chính sách quyền riêng tư, tình trạng khả dụng và giới hạn tốc độ của bên thứ ba.
+Trình hướng dẫn trong lần chạy đầu tiên cung cấp một thẻ **Thiết lập nhà cung cấp miễn phí** rõ ràng. Trình hướng dẫn lấy danh sách đủ điều kiện hiện tại từ sổ đăng ký nhà cung cấp không yêu cầu xác thực của 67router, sau đó cho phép bạn xem lại và bỏ chọn từng nhà cung cấp trước khi xác nhận. 67router hiển thị thông báo lưu ý của nhà cung cấp và liên kết đến trang web của họ để bạn có thể xem trước các điều khoản, chính sách quyền riêng tư, tình trạng khả dụng và giới hạn tốc độ của bên thứ ba.
 
 Hành động này là tùy chọn: việc hoàn tất trình hướng dẫn không bao giờ âm thầm tạo kết nối với các nhà cung cấp miễn phí. Trình hướng dẫn chỉ tạo những nhà cung cấp vẫn còn thiếu, giữ nguyên các kết nối hiện có đã được tùy chỉnh, đồng thời báo cáo riêng từng nhà cung cấp đã tạo, đã cấu hình và bị lỗi. Sau khi nhận được kết quả một phần, bạn có thể thử lại một cách an toàn chỉ với những nhà cung cấp bị lỗi.
 
@@ -74,7 +74,7 @@ Hành động này là tùy chọn: việc hoàn tất trình hướng dẫn kh�
 
 ### Tùy chọn D: Các mô hình MLX cục bộ (Apple Silicon)
 
-Đối với máy Mac Apple Silicon có bộ nhớ hợp nhất, OmniRoute hỗ trợ kết nối với các mô hình MLX cục bộ chạy qua `mlx-lm.server` dưới dạng các nhà cung cấp cục bộ thông thường tương thích với OpenAI.
+Đối với máy Mac Apple Silicon có bộ nhớ hợp nhất, 67router hỗ trợ kết nối với các mô hình MLX cục bộ chạy qua `mlx-lm.server` dưới dạng các nhà cung cấp cục bộ thông thường tương thích với OpenAI.
 
 #### Điều kiện tiên quyết
 
@@ -104,14 +104,14 @@ Hành động này là tùy chọn: việc hoàn tất trình hướng dẫn kh�
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Kết nối trong bảng điều khiển OmniRoute**:
+3. **Kết nối trong bảng điều khiển 67router**:
    - Đi tới **Nhà cung cấp** → **Thêm nhà cung cấp**
    - Chọn **MLX Gemma 26B** hoặc **MLX Qwen 3.8 27B**
    - Nhấp vào **Kết nối** (không cần khóa API)
 
 4. **Sử dụng với OpenCode**:
    ```bash
-   # Cấu hình OpenCode để sử dụng OmniRoute
+   # Cấu hình OpenCode để sử dụng 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@ Bạn phải quản lý việc này theo cách thủ công:
 - Chạy cả hai trên các máy riêng biệt, hoặc
 - Dừng một máy chủ trước khi khởi động máy chủ còn lại
 
-OmniRoute không tự động quản lý các tiến trình máy chủ MLX — nó chỉ định tuyến yêu cầu đến các điểm cuối tương thích với OpenAI mà bạn cấu hình.
+67router không tự động quản lý các tiến trình máy chủ MLX — nó chỉ định tuyến yêu cầu đến các điểm cuối tương thích với OpenAI mà bạn cấu hình.
 
 #### Hỗ trợ gọi công cụ
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Hết bộ nhớ                   | Đảm bảo chỉ có một mô hình đang chạy; đóng các ứng dụng khác; kiểm tra Activity Monitor |
 | Kết nối bị từ chối           | Xác minh máy chủ đang chạy trên đúng cổng (11435/11436)                                 |
 | Phản hồi chậm                | Yêu cầu đầu tiên tải mô hình vào bộ nhớ (~30-60 giây); các yêu cầu tiếp theo sẽ nhanh   |
-| Gọi công cụ không thành công | Đảm bảo mô hình hỗ trợ công cụ; kiểm tra nhật ký OmniRoute để tìm lỗi chuyển đổi        |
+| Gọi công cụ không thành công | Đảm bảo mô hình hỗ trợ công cụ; kiểm tra nhật ký 67router để tìm lỗi chuyển đổi         |
 
 ---
 
@@ -230,12 +230,12 @@ Nhà cung cấp của bạn hiện đã được kết nối. Bạn có thể s�
 
 ## Sử dụng nhiều nhà cung cấp
 
-OmniRoute hoạt động hiệu quả nhất với **nhiều nhà cung cấp**. Điều này mang lại cho bạn:
+67router hoạt động hiệu quả nhất với **nhiều nhà cung cấp**. Điều này mang lại cho bạn:
 
-- **Tự động chuyển đổi dự phòng** — Nếu một nhà cung cấp gặp lỗi, OmniRoute sẽ thử nhà cung cấp tiếp theo
-- **Tối ưu hóa chi phí** — OmniRoute chọn nhà cung cấp có chi phí thấp nhất cho mỗi yêu cầu
-- **Tối ưu hóa tốc độ** — OmniRoute chọn nhà cung cấp nhanh nhất cho mỗi yêu cầu
-- **Tối ưu hóa chất lượng** — OmniRoute chọn nhà cung cấp tốt nhất cho từng tác vụ
+- **Tự động chuyển đổi dự phòng** — Nếu một nhà cung cấp gặp lỗi, 67router sẽ thử nhà cung cấp tiếp theo
+- **Tối ưu hóa chi phí** — 67router chọn nhà cung cấp có chi phí thấp nhất cho mỗi yêu cầu
+- **Tối ưu hóa tốc độ** — 67router chọn nhà cung cấp nhanh nhất cho mỗi yêu cầu
+- **Tối ưu hóa chất lượng** — 67router chọn nhà cung cấp tốt nhất cho từng tác vụ
 
 ### Thiết lập được đề xuất
 
@@ -245,7 +245,7 @@ Kết nối ít nhất **3 nhà cung cấp** để có trải nghiệm tốt nh�
 2. **Một nhà cung cấp tốc độ cao** (Groq, Cerebras) — Dành cho các phản hồi nhanh
 3. **Một nhà cung cấp chất lượng cao** (OpenAI, Anthropic, Google) — Dành cho các tác vụ phức tạp
 
-Sau đó, sử dụng `model: "auto"` và OmniRoute sẽ tự động chọn nhà cung cấp phù hợp nhất cho mỗi yêu cầu.
+Sau đó, sử dụng `model: "auto"` và 67router sẽ tự động chọn nhà cung cấp phù hợp nhất cho mỗi yêu cầu.
 
 ---
 
@@ -254,25 +254,25 @@ Sau đó, sử dụng `model: "auto"` và OmniRoute sẽ tự động chọn nh�
 ### OpenAI
 
 1. Lấy API key: https://platform.openai.com/api-keys
-2. Trong OmniRoute: Nhà cung cấp → Thêm nhà cung cấp → OpenAI
+2. Trong 67router: Nhà cung cấp → Thêm nhà cung cấp → OpenAI
 3. Dán API key → Kết nối
 
 ### Anthropic
 
 1. Lấy API key: https://console.anthropic.com/
-2. Trong OmniRoute: Nhà cung cấp → Thêm nhà cung cấp → Anthropic
+2. Trong 67router: Nhà cung cấp → Thêm nhà cung cấp → Anthropic
 3. Dán API key → Kết nối
 
 ### Google (Gemini)
 
 1. Lấy API key: https://aistudio.google.com/apikey
-2. Trong OmniRoute: Nhà cung cấp → Thêm nhà cung cấp → Gemini
+2. Trong 67router: Nhà cung cấp → Thêm nhà cung cấp → Gemini
 3. Dán API key → Kết nối
 
 ### DeepSeek
 
 1. Lấy API key: https://platform.deepseek.com/
-2. Trong OmniRoute: Nhà cung cấp → Thêm nhà cung cấp → DeepSeek
+2. Trong 67router: Nhà cung cấp → Thêm nhà cung cấp → DeepSeek
 3. Dán API key → Kết nối
 
 ### Qoder: chọn phương thức truyền thông tin xác thực
@@ -280,12 +280,12 @@ Sau đó, sử dụng `model: "auto"` và OmniRoute sẽ tự động chọn nh�
 Qoder yêu cầu thông tin xác thực. Hai phương thức truyền của Qoder có các khả năng khác nhau; chỉ riêng tên mô hình
 không thể xác định một kết nối cụ thể có thể làm gì.
 
-| Thông tin xác thực                       | Phương thức truyền của OmniRoute                    | Gọi công cụ từ bên gọi                                         | Truyền phát                                                      |
+| Thông tin xác thực                       | Phương thức truyền của 67router                     | Gọi công cụ từ bên gọi                                         | Truyền phát                                                      |
 | ---------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------- |
-| PAT bắt đầu bằng `pt-`                   | Tiến trình `qodercli` cục bộ trên máy chủ OmniRoute | Không được hỗ trợ                                              | Có bộ đệm: SSE chỉ được phát sau khi CLI trả về toàn bộ phản hồi |
+| PAT bắt đầu bằng `pt-`                   | Tiến trình `qodercli` cục bộ trên máy chủ 67router  | Không được hỗ trợ                                              | Có bộ đệm: SSE chỉ được phát sau khi CLI trả về toàn bộ phản hồi |
 | Access token không phải PAT hoặc API key | Điểm cuối HTTP tương thích với OpenAI của DashScope | Được chuyển tiếp, tùy thuộc vào mô hình/khóa phía thượng nguồn | Đường dẫn HTTP/SSE phía thượng nguồn                             |
 
-Đối với PAT, hãy cài đặt Qoder CLI trên cùng máy chủ hoặc container với OmniRoute. Tệp thực thi
+Đối với PAT, hãy cài đặt Qoder CLI trên cùng máy chủ hoặc container với 67router. Tệp thực thi
 phải có thể được tìm thấy dưới tên `qodercli`, hoặc đặt `CLI_QODER_BIN` thành đường dẫn đến tệp thực thi đó. CLI
 chỉ được cài đặt trên máy chủ Docker sẽ không tự động có mặt trong container. Khi thiếu
 tệp nhị phân, hệ thống sẽ trả về lỗi rõ ràng hướng dẫn bạn cài đặt hoặc cấu hình đường dẫn.
@@ -318,16 +318,16 @@ và thời gian chờ có thể cấu hình là các cải tiến riêng biệt;
 ### Groq
 
 1. Lấy API key: https://console.groq.com/
-2. Trong OmniRoute: Nhà cung cấp → Thêm nhà cung cấp → Groq
+2. Trong 67router: Nhà cung cấp → Thêm nhà cung cấp → Groq
 3. Dán API key → Kết nối
 
 ---
 
 ## Các câu hỏi thường gặp
 
-### "Tôi có cần trả phí để sử dụng OmniRoute không?"
+### "Tôi có cần trả phí để sử dụng 67router không?"
 
-**Không!** OmniRoute miễn phí và có mã nguồn mở. Bạn có thể sử dụng các nhà cung cấp miễn phí (Kiro, Pollinations) mà không phải trả bất kỳ khoản phí nào. Bạn chỉ phải trả phí nếu chọn sử dụng các nhà cung cấp có tính phí.
+**Không!** 67router miễn phí và có mã nguồn mở. Bạn có thể sử dụng các nhà cung cấp miễn phí (Kiro, Pollinations) mà không phải trả bất kỳ khoản phí nào. Bạn chỉ phải trả phí nếu chọn sử dụng các nhà cung cấp có tính phí.
 
 ### "Tôi nên bắt đầu với nhà cung cấp nào?"
 
@@ -335,11 +335,11 @@ Hãy bắt đầu với **Kiro AI** — dịch vụ này miễn phí, không yê
 
 ### "Tôi có thể sử dụng nhiều nhà cung cấp cùng lúc không?"
 
-**Có!** Đó chính là mục đích của OmniRoute. Hãy kết nối nhiều nhà cung cấp và sử dụng `model: "auto"` để OmniRoute chọn nhà cung cấp phù hợp nhất cho từng yêu cầu.
+**Có!** Đó chính là mục đích của 67router. Hãy kết nối nhiều nhà cung cấp và sử dụng `model: "auto"` để 67router chọn nhà cung cấp phù hợp nhất cho từng yêu cầu.
 
 ### "Điều gì xảy ra nếu một nhà cung cấp ngừng hoạt động?"
 
-OmniRoute tự động bỏ qua các nhà cung cấp gặp lỗi và thử nhà cung cấp tiếp theo. Bạn không cần làm gì cả.
+67router tự động bỏ qua các nhà cung cấp gặp lỗi và thử nhà cung cấp tiếp theo. Bạn không cần làm gì cả.
 
 ### "Làm cách nào để ngắt kết nối một nhà cung cấp?"
 
@@ -347,17 +347,13 @@ OmniRoute tự động bỏ qua các nhà cung cấp gặp lỗi và thử nhà 
 
 ### "Tôi có thể sử dụng các API key hiện có của mình không?"
 
-**Có!** Nếu bạn đã có API key cho OpenAI, Anthropic, Google, v.v., bạn có thể sử dụng chúng trong OmniRoute. Chỉ cần dán chúng khi kết nối nhà cung cấp.
+**Có!** Nếu bạn đã có API key cho OpenAI, Anthropic, Google, v.v., bạn có thể sử dụng chúng trong 67router. Chỉ cần dán chúng khi kết nối nhà cung cấp.
 
 ---
 
 ## Tiếp theo là gì?
 
-- **[Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Để OmniRoute chọn AI tốt nhất cho bạn
+- **[Hướng dẫn Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Để 67router chọn AI tốt nhất cho bạn
 - **[Hướng dẫn các gói miễn phí](./FREE-TIERS-GUIDE.md)** — Sử dụng AI miễn phí mà không cần thẻ tín dụng
 - **[Khắc phục sự cố](../guides/TROUBLESHOOTING.md)** — Khắc phục các sự cố thường gặp
 - **[Tài liệu tham khảo về nhà cung cấp](../reference/PROVIDER_REFERENCE.md)** — Danh sách đầy đủ gồm 226 nhà cung cấp
-
-## Hình ảnh Cursor
-
-Các hình ảnh của gói Cursor sử dụng `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Xem [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

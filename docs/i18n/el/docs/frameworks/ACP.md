@@ -4,7 +4,7 @@
 
 ---
 
-Το OmniRoute διαχωρίζει την **ανίχνευση CLI**, το **εγγενές Agent Client Protocol** και τους
+Το 67router διαχωρίζει την **ανίχνευση CLI**, το **εγγενές Agent Client Protocol** και τους
 **παλαιούς προσαρμογείς stdio**. Η εύρεση ενός εγκατεστημένου εκτελέσιμου αρχείου δεν αποδεικνύει
 τον έλεγχο ταυτότητάς του, τη συμβατότητα μοντέλων ή την ετοιμότητά του να διαχειριστεί ένα prompt.
 
@@ -119,5 +119,3 @@ frame περιορίζεται σε 2 MiB byte πριν από την ανάλυ
 - [Πρωτόκολλα agents](./AGENT_PROTOCOLS_GUIDE.md)
 - [Συμβάσεις εκκίνησης CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Εργαλεία CLI](../reference/CLI-TOOLS.md)
-- [Διακομιστής A2A](./A2A-SERVER.md)
-- [Agents cloud](./CLOUD_AGENT.md)

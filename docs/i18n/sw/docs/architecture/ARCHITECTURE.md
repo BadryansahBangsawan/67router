@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Kiswahili)
+# 67router Architecture (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Ilisasishwa mara ya mwisho: 2026-06-28_
 
 ## Muhtasari Mkuu
 
-OmniRoute ni lango la ndani la uelekezaji wa AI na dashibodi iliyojengwa kwa Next.js.
+67router ni lango la ndani la uelekezaji wa AI na dashibodi iliyojengwa kwa Next.js.
 Hutoa endpoint moja inayooana na OpenAI (`/v1/*`) na kuelekeza trafiki kupitia watoa huduma wengi wa upstream, ikiwa na utafsiri, fallback, uonyeshaji upya wa tokeni na ufuatiliaji wa matumizi.
 
 Uwezo mkuu:
@@ -128,13 +128,11 @@ Kurasa kuu zilizo chini ya `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — vidhibiti vya kiwango cha matumizi/kasi
 - `/dashboard/cli-tools` — utambulishaji wa CLI, utambuzi wa mazingira ya utekelezaji, utengenezaji wa usanidi
 - `/dashboard/agents` — mawakala wa ACP waliotambuliwa + usajili wa mawakala maalum
-- `/dashboard/cloud-agents` — kazi za mawakala wanaopangishwa kwenye cloud (Codex Cloud, Devin, Jules) na mzunguko wa maisha wa kazi
 - `/dashboard/skills` — sajili ya ujuzi wa A2A, utekelezaji katika sandbox, katalogi ya ujuzi uliojengewa ndani
 - `/dashboard/memory` — ukaguzi na urejeshaji wa kumbukumbu endelevu za mazungumzo
 - `/dashboard/webhooks` — usajili wa webhook zinazotoka, ubadilishaji wa siri, takwimu za majaribio ya kutuma tena
 - `/dashboard/batch` — uwasilishaji wa kazi za kundi na maendeleo
 - `/dashboard/cache` — takwimu za akiba ya usomaji-pitia na uhoji, vidhibiti vya uondoaji
-- `/dashboard/playground` — mazingira shirikishi ya mazungumzo dhidi ya combo/modeli yoyote iliyosanidiwa
 - `/dashboard/changelog` — kitazamaji cha kumbukumbu ya mabadiliko ndani ya programu (huonyesha `CHANGELOG.md`)
 - `/dashboard/system` — uchunguzi wa mazingira ya utekelezaji, taarifa za toleo, sehemu ya uthibitishaji wa mazingira
 - `/dashboard/onboarding` — mchawi wa usanidi wa matumizi ya kwanza kwa usakinishaji mpya
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Dashibodi ya Kivinjari]
     end
 
-    subgraph Router[Mchakato wa Ndani wa OmniRoute]
+    subgraph Router[Mchakato wa Ndani wa 67router]
         API[API ya Uoanifu ya V1\n/v1/*]
         DASH[Dashibodi + API ya Usimamizi\n/api/*]
         CORE[SSE + Kiini cha Utafsiri\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Vikoa vya usimamizi:
 - Bajeti: `src/app/api/usage/budget` (GET/POST)
 - Minyororo ya mbadala: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ukaguzi wa utiifu: `src/app/api/compliance/audit-log` (GET, pamoja na upangaji wa kurasa + metadata iliyopangwa)
-- Tathmini: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Sera: `src/app/api/policies` (GET/POST)
 - Tokeni za usawazishaji: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Kifurushi cha usanidi: `src/app/api/sync/bundle` (GET, picha-tuli yenye toleo la ETag ya mipangilio/watoa huduma/michanganyiko/funguo)
@@ -316,7 +313,6 @@ Moduli za safu ya kikoa:
 - Muda wa kusubiri wa uchotaji: `src/shared/utils/fetchTimeout.ts`
 - Telemetria ya maombi: `src/shared/utils/requestTelemetry.ts`
 - Uzingatiaji/ukaguzi: `src/lib/compliance/index.ts`
-- Kiendesha tathmini: `src/lib/evals/evalRunner.ts`
 - Udumishaji wa hali ya kikoa: `src/lib/db/domainState.ts` — SQLite CRUD kwa misururu ya kutumia mbadala, bajeti, historia ya gharama, hali ya kufungia na vivunja mzunguko
 
 Moduli za watoa huduma wa OAuth (faili 27 mahususi chini ya `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ Moduli za watoa huduma wa OAuth (faili 27 mahususi chini ya `src/lib/oauth/provi
 
 ## 5) Huduma Zilizopachikwa (v3.8.4)
 
-OmniRoute inaweza kusakinisha, kusimamia na kuelekeza maombi kwa michakato ya zana za AI inayoendeshwa ndani ya mfumo
+67router inaweza kusakinisha, kusimamia na kuelekeza maombi kwa michakato ya zana za AI inayoendeshwa ndani ya mfumo
 inayoitwa **huduma zilizopachikwa**. Huduma tano hutolewa: 9Router, CLIProxyAPI, Bifrost, Mux na Dario.
 
 Tabaka za usanifu:
@@ -386,23 +382,6 @@ Uwezo mkuu:
 Kwa maelezo kamili ya kialgorithimu (fomula za vipengele, urekebishaji wa uzani), angalia
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Mawakala wa Wingu
-
-Cloud Agents hufunika majukwaa ya mawakala wa msimbo yanayopangishwa na wahusika wengine (Codex Cloud, Devin,
-Jules) nyuma ya mzunguko mmoja wa maisha ya jukumu unaotegemea DB. Vituo vyote vya kuunda/kukagua majukumu
-vinahitaji uthibitishaji wa usimamizi.
-
-- Mzizi wa moduli: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, pamoja na saraka ndogo za kila wakala chini ya `agents/`)
-- Utekelezaji wa kila wakala: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Vituo vya umma: `/api/v1/agents/tasks/*` (orodhesha/unda/pata/ghairi)
-- Vituo vya usimamizi: `/api/cloud/*` (uandaaji, hali, kundi)
-- Dashibodi: `/dashboard/cloud-agents`
-- Hifadhi: jedwali la `cloud_agent_tasks`
-
-Kwa maelezo ya uandaaji wa kila wakala na vipengele maalum vya OAuth, angalia
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Vizuizi vya Usalama
 
 Moduli ya vizuizi vya usalama ni safu ya programu kati inayoweza kupakiwa upya papo hapo, ambayo hukagua maombi
@@ -438,7 +417,7 @@ kuunganisha wenyewe mantiki ya kufungia/bajeti/fallback.
 - Kache ya kota: `src/domain/quotaCache.ts`
 - Hali ya kuzorota: `src/domain/degradation.ts`
 - Ukaguzi wa usanidi: `src/domain/configAudit.ts`
-- Kiunda metadata ya majibu ya OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Kiunda metadata ya majibu ya 67router: `src/domain/omnirouteResponseMeta.ts`
 - Mfumo mdogo wa tathmini: `src/domain/assessment/` — kazi za tathmini za mara kwa mara
 
 ### E. Mnyororo wa Uidhinishaji
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Kivinjari cha Dashibodi]
     end
 
-    subgraph ContainerOrProcess[Mazingira ya Utekelezaji ya OmniRoute]
+    subgraph ContainerOrProcess[Mazingira ya Utekelezaji ya 67router]
         Next[Seva ya Next.js\nPORT=20128]
         Core[Kiini cha SSE + Vitekelezaji]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ Watoa huduma wengine wote (ikiwemo nodi maalum zinazooana) hutumia `DefaultExecu
 ## Jedwali la Uoanifu wa Watoa Huduma
 
 > **Kumbuka:** Jedwali lililo hapa chini ni sampuli wakilishi ya watoa huduma 351 waliosajiliwa katika
-> OmniRoute v3.8.0. Kwa orodha rasmi na inayosasishwa kila wakati, rejelea
+> 67router v3.8.0. Kwa orodha rasmi na inayosasishwa kila wakati, rejelea
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (inayozalishwa kiotomatiki) au chanzo
 > halisi kilicho katika `src/shared/constants/providers.ts` (kinachothibitishwa na Zod wakati wa kupakia).
 
@@ -1117,7 +1096,7 @@ Unakili wa kina wa data ya ombi huhifadhi hadi hatua nne za data ya JSON kwa kil
 - ombi ghafi lililopokelewa kutoka kwa mteja
 - ombi lililotafsiriwa ambalo kwa hakika lilitumwa kwa huduma ya juu
 - jibu la mtoa huduma lililoundwa upya kama JSON; majibu ya mtiririko hubanwa kuwa muhtasari wa mwisho pamoja na metadata ya mtiririko
-- jibu la mwisho kwa mteja lililorejeshwa na OmniRoute; majibu ya mtiririko huhifadhiwa katika muundo huo huo wa muhtasari uliobanwa
+- jibu la mwisho kwa mteja lililorejeshwa na 67router; majibu ya mtiririko huhifadhiwa katika muundo huo huo wa muhtasari uliobanwa
 
 ## Mipaka Nyeti ya Usalama
 

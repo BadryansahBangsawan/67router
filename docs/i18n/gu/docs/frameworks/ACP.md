@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI શોધ**, **મૂળ Agent Client Protocol**, અને
+67router **CLI શોધ**, **મૂળ Agent Client Protocol**, અને
 **લેગસી stdio ઍડેપ્ટર્સ**ને અલગ રાખે છે. ઇન્સ્ટોલ કરેલું બાઇનરી મળવું એ તેના
 પ્રમાણીકરણ, મોડેલ સુસંગતતા અથવા પ્રોમ્પ્ટ સંભાળવાની તૈયારીનો પુરાવો નથી.
 
@@ -121,5 +121,3 @@ try {
 - [એજન્ટ પ્રોટોકોલ્સ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI લૉન્ચ કરારો](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ટૂલ્સ](../reference/CLI-TOOLS.md)
-- [A2A સર્વર](./A2A-SERVER.md)
-- [ક્લાઉડ એજન્ટ્સ](./CLOUD_AGENT.md)

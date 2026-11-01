@@ -13,7 +13,7 @@ Stainless SDK -otsakkeet jne.).
 
 ## Pika-aloitus — käytä natiivia `agentrouter`-palveluntarjoajaa (suositus)
 
-Useimmat käyttäjät **eivät tarvitse erityisiä määrityksiä**. OmniRoute sisältää
+Useimmat käyttäjät **eivät tarvitse erityisiä määrityksiä**. 67router sisältää
 sisäänrakennetun `agentrouter`-palveluntarjoajan, johon Claude Coden täydellinen
 verkkoliikenneprofiili on jo sisällytetty (katso
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Sen käyttäminen:
@@ -37,7 +37,7 @@ keskustelupolun tai otsakejoukon.
 
 ## Edistynyt: yhdistäminen Claude Code -yhteensopivan palveluntarjoajatyypin kautta
 
-OmniRoute tukee AgentRouteria (ja vastaavia välityspalveluita) myös **Claude Code
+67router tukee AgentRouteria (ja vastaavia välityspalveluita) myös **Claude Code
 -yhteensopivan** palveluntarjoajatyypin (`anthropic-compatible-cc-*`) kautta. Se
 käyttää Anthropic Messages APIa oikealla verkkoliikenneprofiililla. Yleinen
 `openai-compatible-chat`-palveluntarjoaja, joka osoittaa osoitteeseen
@@ -50,14 +50,14 @@ näytä Claude Coden lähettämiltä.
 
 - AgentRouter-tili ja API-avain. Uudet rekisteröityjät saavat ilmaista saldoa
   projektin [README](../README.md)-tiedostossa olevan kumppanuuslinkin kautta.
-- OmniRoute on käynnissä siten, että `ENABLE_CC_COMPATIBLE_PROVIDER`-ominaisuuslippu
+- 67router on käynnissä siten, että `ENABLE_CC_COMPATIBLE_PROVIDER`-ominaisuuslippu
   on käytössä (katso alta).
 
 ## 1. Ota CC-yhteensopiva palveluntarjoajatyyppi käyttöön
 
 Claude Code -yhteensopiva palveluntarjoajatyyppi on ominaisuuslipun takana, koska se
 lähettää liikennettä, joka jäljittelee tarkasti virallista Claude Code
--asiakasohjelmaa. Ota se käyttöön määrittämällä ympäristömuuttuja ennen OmniRouten
+-asiakasohjelmaa. Ota se käyttöön määrittämällä ympäristömuuttuja ennen 67routerin
 käynnistämistä:
 
 ```bash

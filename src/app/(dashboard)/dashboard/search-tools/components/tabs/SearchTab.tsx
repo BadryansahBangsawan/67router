@@ -7,7 +7,6 @@ import type { SearchProviderCatalogItem } from "@/shared/schemas/searchTools";
 
 const SearchForm = dynamic(() => import("../SearchForm"), { ssr: false });
 const ResultsPanel = dynamic(() => import("../ResultsPanel"), { ssr: false });
-const RerankPanel = dynamic(() => import("../RerankPanel"), { ssr: false });
 const SearchHistory = dynamic(() => import("../SearchHistory"), { ssr: false });
 
 interface SearchResult {
@@ -50,7 +49,6 @@ interface SearchTabProps {
 
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import Button from "@/shared/components/Button";
 
 export default function SearchTab({
   configState,
@@ -66,7 +64,6 @@ export default function SearchTab({
   const [statusCode, setStatusCode] = useState(0);
   const [duration, setDuration] = useState(0);
   const [lastQuery, setLastQuery] = useState<SearchFormData | null>(null);
-  const [showRerank, setShowRerank] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
 
   const handleSearch = async (formData: SearchFormData) => {
@@ -75,7 +72,6 @@ export default function SearchTab({
     setResponse(null);
     setRawJson("");
     setStatusCode(0);
-    setShowRerank(false);
 
     const controller = new AbortController();
     abortRef.current = controller;
@@ -156,7 +152,7 @@ export default function SearchTab({
         <SearchHistory onReplay={handleHistoryReplay} />
       </div>
 
-      {/* Right: results + rerank */}
+      {/* Right: results */}
       <div className="flex-1 overflow-y-auto p-1">
         <ResultsPanel
           response={response}
@@ -167,30 +163,6 @@ export default function SearchTab({
           duration={duration}
           noProvidersConfigured={providers.filter((p) => p.status === "active").length === 0}
         />
-
-        {response && (
-          <div className="px-4 py-2 flex gap-2">
-            <Button
-              variant="outline"
-              fullWidth
-              icon="swap_vert"
-              aria-expanded={showRerank}
-              onClick={() => setShowRerank(!showRerank)}
-            >
-              {t("rerank")}
-            </Button>
-          </div>
-        )}
-
-        {showRerank && response && (
-          <div className="px-4 pb-3">
-            <RerankPanel
-              query={response.query}
-              results={response.results}
-              onClose={() => setShowRerank(false)}
-            />
-          </div>
-        )}
       </div>
     </div>
   );

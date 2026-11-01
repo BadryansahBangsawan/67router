@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Card, Toggle } from "@/shared/components";
+import { Toggle } from "@/shared/components";
+import { SettingsRow, SettingsSection } from "./SettingsSection";
 import { useTranslations } from "next-intl";
 
 export default function LogToolSourcesCard() {
@@ -50,20 +51,19 @@ export default function LogToolSourcesCard() {
   };
 
   return (
-    // Header-only card: the toggle sits in the header action slot (no body below it).
-    <Card
-      icon="troubleshoot"
-      title={t("logToolSourcesToggle")}
-      subtitle={t("logToolSourcesDescription")}
-      className="[&>[data-slot=card-header]]:mb-0"
-      action={
-        <Toggle
-          ariaLabel={t("logToolSourcesToggle")}
-          checked={logToolSources}
-          onChange={updateLogToolSources}
-          disabled={loading}
-        />
-      }
-    />
+    <SettingsSection>
+      <SettingsRow
+        label={t("logToolSourcesToggle")}
+        description={t("logToolSourcesDescription")}
+        control={
+          <Toggle
+            ariaLabel={t("logToolSourcesToggle")}
+            checked={logToolSources}
+            onChange={updateLogToolSources}
+            disabled={loading}
+          />
+        }
+      />
+    </SettingsSection>
   );
 }

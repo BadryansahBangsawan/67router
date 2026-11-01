@@ -10,7 +10,7 @@
 > Injection-Blockmodus als verbindliche Grenze (#16413) und was eine Antwort vor dem Post-Call sieht)
 
 Guardrails erzwingen Sicherheits-, Richtlinien- und Inhaltstransformationen an der Grenze
-zwischen OmniRoute und den Upstream-Anbietern. Jede Guardrail kann Request-Payloads
+zwischen 67router und den Upstream-Anbietern. Jede Guardrail kann Request-Payloads
 (`preCall`) und Upstream-Antworten (`postCall`) prüfen (und optional ablehnen,
 transformieren oder annotieren).
 
@@ -114,7 +114,7 @@ Wenn der API-Schlüssel des Aufrufers `allowedConnections`, Kontingent-Pools
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), wählt die Bridge
 nur Reroute- und Describe-Modelle aus, die der Schlüssel verwenden darf, auf
 Verbindungen, die der Schlüssel verwenden darf. Der Describe-Aufruf läuft dann
-immer über den OmniRoute-Self-Loop mit dem Header
+immer über den 67router-Self-Loop mit dem Header
 `x-omniroute-self-loop-key-id`, sodass die empfangende Chat-Anfrage die
 Verbindungs- und Modellrichtlinie dieses Schlüssels erneut durchsetzt.
 `enforceApiKeyPolicy()` berücksichtigt diesen Header nur zusammen mit dem
@@ -147,7 +147,7 @@ OCR-Genauigkeit für genau die Text-Transkriptionsaufgabe, um die dieser
 Prompt bittet. Daher fordert der Describe-Aufruf selbst immer eine hohe
 Detailstufe an, unabhängig davon, welche Detailstufe die ursprüngliche
 eingehende Anfrage verwendet hat. Dies betrifft nur den internen
-Describe-Request-Body; es ändert nicht, wie OmniRoute das eigene
+Describe-Request-Body; es ändert nicht, wie 67router das eigene
 `image_url.detail` des Aufrufers bei der primären Anfrage weiterleitet —
 dieser Standard wird separat angewendet, und nur für erkannte
 OpenCode-Clients, in `defaultImageDetail()`
@@ -251,7 +251,7 @@ neuen Seite; sie besitzt keine zweite Kopie des Formulars mehr. Media Providers
 verlinkt außerdem die Image-to-Text- und Speech-to-Text-Workflows mit den entsprechenden Modality-
 Bridge-Tabs, ohne den vorhandenen Speech-to-Text-Playground zu entfernen.
 
-**Self-Loop-Admission-Bypass:** Wenn der Describe-Call über OmniRoutes
+**Self-Loop-Admission-Bypass:** Wenn der Describe-Call über 67routers
 eigenen `/v1`-Self-Loop (Non-Standard-Provider-Modell) geroutet wird, sendet
 die Sub-Anfrage
 `x-omniroute-admission-bypass: internal` und wird mit der aufgelösten
@@ -471,7 +471,7 @@ Aufruf liefert; das Skript erfindet niemals eines der beiden Ergebnisse.
 
 Jeder Frame ist auf 4 MiB begrenzt, alle Roh-Frames zusammen auf 23 MiB und die
 serialisierte Broker-Antwort auf 32 MiB. Ein privates temporäres Verzeichnis
-wird in `finally` entfernt. OmniRoute bündelt FFmpeg nicht und akzeptiert
+wird in `finally` entfernt. 67router bündelt FFmpeg nicht und akzeptiert
 keinen benutzerdefinierten Pfad zu einer ausführbaren Datei. Vor der
 Bildbeschriftung führt die Bridge einen konservativen visuellen
 Deduplizierungsdurchlauf durch: Jedes JPEG wird auf einen
@@ -523,7 +523,7 @@ abgestimmten Text verfügen. Jede Cue muss `text`, ein endliches
 `start`/`end`-Intervall innerhalb der beim Probing ermittelten Dauer und eine
 per Whitelist zugelassene `source` (`client`, `embedded` oder `audio-bridge`)
 enthalten; `confidence` hat den Standardwert `1` und muss zwischen `0` und
-`1` bleiben. Exakte doppelte Cues werden zusammengeführt. OmniRoute startet
+`1` bleiben. Exakte doppelte Cues werden zusammengeführt. 67router startet
 niemals eine Transkription aus diesen Metadaten: Validierte Cues werden mit
 Quelle, Konfidenz und Intervall in das beschriebene Ergebnis kopiert und als
 nicht vertrauenswürdige Beobachtungen neben den Frame-Beschriftungen
@@ -1018,7 +1018,7 @@ Dispatch) hat zwei Jobs:
   `error.code === "SECURITY_001"` enthält, d. h. dass der Guard die Anfrage tatsächlich
   abgelehnt hat.
 - **`garak` (nicht blockierend)** — führt garak `--probes promptinject,dan,leakreplay`
-  gegen eine lokale OmniRoute-Instanz (`http://localhost:20128/v1`) aus. Abhängig von
+  gegen eine lokale 67router-Instanz (`http://localhost:20128/v1`) aus. Abhängig von
   einem Provider-Secret (`PROMPTFOO_PROVIDER_KEY`); wird bei Fehlen sauber übersprungen
   und ist mit `|| true` versehen, sodass es Bericht erstattet, ohne die CI fehlschlagen
   zu lassen.

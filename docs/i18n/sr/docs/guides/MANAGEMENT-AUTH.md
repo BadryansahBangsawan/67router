@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima **četiri porodice akreditiva** koje mogu autorizovati rute za upravljanje.
+67router ima **četiri porodice akreditiva** koje mogu autorizovati rute za upravljanje.
 Nisu međusobno zamenljivi. API ključevi za inferencu (`sk-…`) NE upravljaju
 serverom osim ako im nije eksplicitno dodeljen `manage` ili `admin` opseg.
 

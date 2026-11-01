@@ -4,7 +4,7 @@
 
 ---
 
-ဤလမ်းညွှန်တွင် Kiro (AWS မှ လက်ခံဆောင်ရွက်ပေးထားသော AI ကုဒ်ရေးသားမှု အကူအညီပေးစနစ်) အကောင့်များကို OmniRoute သို့ ထည့်သွင်းပုံကို ဖော်ပြထားပြီး၊ session ပဋိပက္ခများ မဖြစ်ပေါ်စေဘဲ အကောင့်များစွာကို တစ်ပြိုင်နက် အသုံးပြုနိုင်ရေးကို အဓိကထား ရှင်းလင်းထားသည်။
+ဤလမ်းညွှန်တွင် Kiro (AWS မှ လက်ခံဆောင်ရွက်ပေးထားသော AI ကုဒ်ရေးသားမှု အကူအညီပေးစနစ်) အကောင့်များကို 67router သို့ ထည့်သွင်းပုံကို ဖော်ပြထားပြီး၊ session ပဋိပက္ခများ မဖြစ်ပေါ်စေဘဲ အကောင့်များစွာကို တစ်ပြိုင်နက် အသုံးပြုနိုင်ရေးကို အဓိကထား ရှင်းလင်းထားသည်။
 
 ---
 
@@ -17,9 +17,9 @@ Kiro ၏ backend သည် အသုံးပြုနေဆဲ session မျ�
 
 ---
 
-## OmniRoute က ဤပြဿနာကို ဖြေရှင်းပုံ (v3.8.0+)
+## 67router က ဤပြဿနာကို ဖြေရှင်းပုံ (v3.8.0+)
 
-v3.8.0 မှစတင်၍ OmniRoute သည် Kiro connection တစ်ခုစီကို import လုပ်သည့်အခါ `registerClient()` (AWS SSO OIDC) ကို ခေါ်ဆိုသည်။ ထို့ကြောင့် OmniRoute connection တစ်ခုစီတွင် ၎င်းအတွက် သီးသန့် OIDC client registration ရရှိသည်။ Client registration တစ်ခုစီသည် သီးခြားလွတ်လပ်သောကြောင့် အကောင့်တစ်ခုကို refresh ပြုလုပ်ခြင်း သို့မဟုတ် authentication ပြန်လည်ပြုလုပ်ခြင်းသည် အခြားမည်သည့်အကောင့်၏ refresh token ကိုမျှ သက်ရောက်မှုမရှိစေပါ။
+v3.8.0 မှစတင်၍ 67router သည် Kiro connection တစ်ခုစီကို import လုပ်သည့်အခါ `registerClient()` (AWS SSO OIDC) ကို ခေါ်ဆိုသည်။ ထို့ကြောင့် 67router connection တစ်ခုစီတွင် ၎င်းအတွက် သီးသန့် OIDC client registration ရရှိသည်။ Client registration တစ်ခုစီသည် သီးခြားလွတ်လပ်သောကြောင့် အကောင့်တစ်ခုကို refresh ပြုလုပ်ခြင်း သို့မဟုတ် authentication ပြန်လည်ပြုလုပ်ခြင်းသည် အခြားမည်သည့်အကောင့်၏ refresh token ကိုမျှ သက်ရောက်မှုမရှိစေပါ။
 
 ဤသီးခြားခွဲထားမှုသည် refresh-token import နည်းလမ်းများနှင့် သက်ဆိုင်ပြီး API-key authentication သည် OIDC refresh session များကို လုံးဝအသုံးမပြုပါ-
 
@@ -45,7 +45,7 @@ v3.8.0 မတိုင်မီ import လုပ်ထားသော connection
 
 ### ကြိုတင်လိုအပ်ချက်များ
 
-- OmniRoute v3.8.0 သို့မဟုတ် နောက်ပိုင်းဗားရှင်း။
+- 67router v3.8.0 သို့မဟုတ် နောက်ပိုင်းဗားရှင်း။
 - အလုပ်လုပ်နေသော Kiro အကောင့်တစ်ခု (အီးမေးလ် + စကားဝှက်၊ Google သို့မဟုတ် GitHub login)။
 - လိုအပ်ပါက ဒုတိယ Kiro အကောင့်တစ်ခု။
 
@@ -56,7 +56,7 @@ v3.8.0 မတိုင်မီ import လုပ်ထားသော connection
    - **Import Token** — `aorAAAAAG` ဖြင့် စတင်သော refresh token ကို ကူးထည့်ပါ။
    - **API Key** — သက်တမ်းရှည် Kiro / CodeWhisperer API key ကို ကူးထည့်ပါ။
    - **Google / GitHub login** — browser အတွင်း OAuth flow ကို အပြီးသတ်ပါ။
-   - **Auto-Import** — ခလုတ်ကို နှိပ်ပါ၊ OmniRoute သည် local kiro-cli database သို့မဟုတ် `~/.aws/sso/cache` မှ credential များကို ဖတ်ယူမည်။
+   - **Auto-Import** — ခလုတ်ကို နှိပ်ပါ၊ 67router သည် local kiro-cli database သို့မဟုတ် `~/.aws/sso/cache` မှ credential များကို ဖတ်ယူမည်။
 3. Connection ကို သိမ်းဆည်းမည်။ Refresh-token flow များသည် သီးသန့် OIDC client တစ်ခုကို အလိုအလျောက် register လုပ်သည်။ API-key flow များသည် key ကို AWS ဖြင့် စစ်ဆေးအတည်ပြုပြီး refresh token ကို သိမ်းဆည်းခြင်းမပြုပါ။
 
 ### အဆင့် 2- ဒုတိယအကောင့်ကို import လုပ်ပါ
@@ -110,7 +110,7 @@ OAuth refresh ကို အသုံးမပြုသောကြောင့�
 2. **API Key** ကို ရွေးချယ်ပါ။
 3. API ကီးကို ကူးထည့်ပြီး AWS region ကို ရွေးချယ်ပါ- **Auto-detect** (မူလသတ်မှတ်ချက်), **US East
    (N. Virginia)** သို့မဟုတ် **Europe (Frankfurt)**။
-4. OmniRoute သည် ကီးကို အတည်ပြုပြီး ကီး အလုပ်လုပ်သည့် region နှင့် ချိတ်ဆက်ထားသော connection ကို
+4. 67router သည် ကီးကို အတည်ပြုပြီး ကီး အလုပ်လုပ်သည့် region နှင့် ချိတ်ဆက်ထားသော connection ကို
    သိမ်းဆည်းသည်။
 
 ### API
@@ -161,7 +161,7 @@ Runtime တွင် `KiroExecutor.buildHeaders()` သည် ကီးကို
 ## OIDC Client သက်တမ်းကုန်ဆုံးမှု
 
 AWS SSO OIDC public client များသည် ပုံမှန်အားဖြင့် ရက် 90 ကြာပြီးနောက် သက်တမ်းကုန်ဆုံးသည်
-(`clientSecretExpiresAt`)။ OmniRoute သည် စောင့်ကြည့်လေ့လာနိုင်ရန် ဤ timestamp ကို `providerSpecificData`
+(`clientSecretExpiresAt`)။ 67router သည် စောင့်ကြည့်လေ့လာနိုင်ရန် ဤ timestamp ကို `providerSpecificData`
 တွင် သိမ်းဆည်းထားသည်။ ချိတ်ဆက်မှုတစ်ခုသည် ရက် 90 ခန့်အကြာတွင် refresh မလုပ်နိုင်တော့ပါက
 OIDC client registration အသစ်တစ်ခု ရရှိရန် ချိတ်ဆက်မှုကို ပြန်လည်တင်သွင်းပါ။ သက်တမ်းကုန်ဆုံးချိန်တွင်
 အလိုအလျောက် ပြန်လည်မှတ်ပုံတင်ခြင်းကို အနာဂတ်တိုးတက်မှုအဖြစ် မှတ်တမ်းတင်ထားသည်။
@@ -182,7 +182,7 @@ API-key ချိတ်ဆက်မှုများသည် AWS SSO OIDC မ�
 ### "Token စစ်ဆေးအတည်ပြုမှု မအောင်မြင်ပါ" ဟု ပြသပြီး တင်သွင်းမှု မအောင်မြင်ခြင်း
 
 - refresh token သည် `aorAAAAAG` ဖြင့် စတင်ကြောင်း သေချာပါစေ။
-- OmniRoute သည် `https://oidc.us-east-1.amazonaws.com` (သို့မဟုတ် စီစဉ်သတ်မှတ်ထားသော
+- 67router သည် `https://oidc.us-east-1.amazonaws.com` (သို့မဟုတ် စီစဉ်သတ်မှတ်ထားသော
   region) ကို ဆက်သွယ်နိုင်ကြောင်း သေချာပါစေ။ လုပ်ငန်းသုံး proxy နောက်ကွယ်တွင် ရှိနေပါက
   **ဒက်ရှ်ဘုတ် → ဆက်တင်များ → Proxy များ** တွင် ပံ့ပိုးသူအဆင့် proxy တစ်ခုကို သတ်မှတ်ပါ။
 
@@ -190,7 +190,7 @@ API-key ချိတ်ဆက်မှုများသည် AWS SSO OIDC မ�
 
 - key သည် refresh token မဟုတ်ဘဲ Kiro / CodeWhisperer API key ဖြစ်ကြောင်း အတည်ပြုပါ။
 - AWS region သည် key/account နှင့် ကိုက်ညီကြောင်း အတည်ပြုပါ။ `us-east-1` သည် မူလတန်ဖိုးဖြစ်သည်။
-- key သည် `ListAvailableProfiles` ကို ခေါ်ဆိုနိုင်ရမည်။ မဟုတ်ပါက OmniRoute သည် လိုအပ်သော
+- key သည် `ListAvailableProfiles` ကို ခေါ်ဆိုနိုင်ရမည်။ မဟုတ်ပါက 67router သည် လိုအပ်သော
   `profileArn` ကို သတ်မှတ်ရယူနိုင်မည် မဟုတ်ပါ။
 
 အခြားပြဿနာများအတွက် ပင်မ [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) ကို ကြည့်ပါ။

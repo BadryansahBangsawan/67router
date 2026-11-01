@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Português (Brasil))
+# 67router MCP Server Documentation (Português (Brasil))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Instalação
 
-O OmniRoute MCP é integrado. Inicie-o com:
+O 67router MCP é integrado. Inicie-o com:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline e clientes MCP compatíveis.
 | `omniroute_switch_combo`        | `write:combos`        | Ativar ou desativar um combo                                                                                                                     |
 | `omniroute_create_combo`        | `write:combos`        | Criar um combo validado por meio da API de combos existente                                                                                      |
 | `omniroute_check_quota`         | `read:quota`          | Cota usada/total, percentual restante, horário de redefinição, integridade do token                                                              |
-| `omniroute_route_request`       | `execute:completions` | Enviar uma conclusão de chat por meio do roteamento do OmniRoute                                                                                 |
+| `omniroute_route_request`       | `execute:completions` | Enviar uma conclusão de chat por meio do roteamento do 67router                                                                                  |
 | `omniroute_cost_report`         | `read:usage`          | Relatório de custos por período (sessão/dia/semana/mês)                                                                                          |
 | `omniroute_list_models_catalog` | `read:models`         | Catálogo completo de modelos com recursos, status e preços                                                                                       |
 | `omniroute_radar_catalog`       | `read:radar`          | Catálogo Radar local assinado; filtros opcionais por provedor/família                                                                            |
@@ -152,7 +152,7 @@ do provedor e são marcados com `source: "mcp_metadata_estimate"`.
 
 ### Filtro de Árvore de Acessibilidade MCP (v3.8.0)
 
-Separadamente das ferramentas de compactação acima, o OmniRoute inclui um filtro de pós-execução que
+Separadamente das ferramentas de compactação acima, o 67router inclui um filtro de pós-execução que
 compacta os **resultados de ferramentas** de ferramentas MCP de navegador/acessibilidade antes que sejam retornados ao
 agente. Esse filtro não é uma ferramenta — ele é executado de forma transparente em qualquer resultado de ferramenta que contenha
 texto detalhado de árvore de acessibilidade ou snapshot de navegador (≥2000 caracteres).
@@ -245,17 +245,6 @@ Consulte [AGENT-SKILLS.md](./AGENT-SKILLS.md) para ver o catálogo completo e co
 O inventário de ferramentas MCP acima (110 ferramentas únicas, calculadas por `countUniqueMcpTools()`) é intencionalmente
 limitado a operações de roteamento/cache/compressão/memória/habilidades/proxy/fontes de contexto em tempo de execução. Dois frameworks
 adjacentes são distribuídos junto com o servidor MCP na v3.8.0 e são documentados separadamente:
-
-### Agentes na Nuvem
-
-Os Agentes na Nuvem são agentes de codificação com IA executados fora do processo (codex-cloud, cursor-cloud, devin, jules), integrados ao
-OmniRoute por meio do mesmo modelo de conexão usado para provedores de LLM. Eles são expostos por meio
-de sua própria superfície REST (`/api/v1/agents/*`) e **não** fazem parte do catálogo de ferramentas MCP
-— chamar um Agente na Nuvem não consome um escopo MCP.
-
-- Implementação: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ciclo de vida: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentação: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Proteções
 
@@ -427,8 +416,6 @@ Cada ferramenta exige escopos específicos:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                                |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                         |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                           |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                       |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                          |
 | `read:obsidian`       | 13 ferramentas de leitura — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 ferramentas de escrita — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                        |
@@ -481,7 +468,7 @@ inalterado o comportamento existente condicionado por `OMNIROUTE_MCP_ENFORCE_SCO
 
 | Variável                                | Padrão                              | Finalidade                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | :-------------------------------------- | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL base usada pelo servidor MCP ao chamar APIs internas do OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL base usada pelo servidor MCP ao chamar APIs internas do 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `OMNIROUTE_API_KEY`                     | (vazio)                             | Chave de API encaminhada como `Authorization: Bearer` para chamadas internas de API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (somente `"true"` habilita) | Quando habilitada, a ausência de escopos nega chamadas de ferramentas e registra `scope_denied:<reason>` no log de auditoria. A aplicação também é SEMPRE ativada, independentemente desta opção, para qualquer chamador HTTP/SSE identificado por meio de um cabeçalho Authorization específico por chave (`source === "authInfo"`) que não tenha o escopo completo `manage`/`admin` — por exemplo, uma chave que tenha apenas o escopo restrito de desvio `mcp:connect` — portanto, esse padrão é seguro somente para o fluxo local/stdio com um único operador, nunca para acesso remoto fora da interface de loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (vazio)                             | Lista de escopos separados por vírgulas considerados "disponíveis" por padrão (usada quando o chamador não fornece seus próprios escopos)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -584,7 +571,6 @@ Use o painel ou os endpoints REST `/api/mcp/audit` e `/api/mcp/audit/stats` para
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definições de ferramentas de habilidades (4 ferramentas)                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definições de ferramentas de fonte de contexto do Notion (6 ferramentas)             |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definições de ferramentas de gamificação (8 ferramentas)                             |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Ferramentas de registro e gerenciamento de plugins (8 ferramentas)                   |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                                           |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                                            |
 | `src/app/api/mcp/sse/route.ts`                                           | Rota de transporte SSE `/api/mcp/sse`                                                |

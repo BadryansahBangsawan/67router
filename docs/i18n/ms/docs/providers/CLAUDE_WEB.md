@@ -181,7 +181,7 @@ masa ini, maka kes yang dilangkau tersebut bukan bukti masa jalan.
 
 ### Persediaan
 
-1. Mulakan OmniRoute dengan `npm run dev` atau pemasangan yang telah dibina.
+1. Mulakan 67router dengan `npm run dev` atau pemasangan yang telah dibina.
 2. Buka Dashboard → Providers → Add Provider.
 3. Pilih kategori Web Cookie dan Claude Web.
 4. Tampalkan pengepala Cookie lengkap yang disalin daripada permintaan `claude.ai` yang telah disahkan.

@@ -8,9 +8,9 @@
 > **Poslední aktualizace:** 2026-09-16
 > **Pro koho je určeno:** Inženýři, kteří přidávají, udržují nebo ladí vložené služby (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Vložené služby jsou lokálně nainstalované pomocné procesní nástroje, které OmniRoute instaluje, spravuje a
+Vložené služby jsou lokálně nainstalované pomocné procesní nástroje, které 67router instaluje, spravuje a
 zpřístupňuje jako plnohodnotné cíle směrování. Na rozdíl od externích poskytovatelů (kteří jsou dostupní přes internet
-pomocí API klíčů) běží vložené služby na stejném počítači jako OmniRoute a komunikují přes rozhraní loopback.
+pomocí API klíčů) běží vložené služby na stejném počítači jako 67router a komunikují přes rozhraní loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Je integrováno sedm služeb:
 
 | Služba          | npm balíček                                  | Výchozí port | Účel                                                                                                                                                                                                                                                                                                                                                                                          |
 | --------------- | -------------------------------------------- | :----------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                    |    20130     | AI router, který může OmniRoute používat jako dílčího poskytovatele. Modely jsou vystaveny jako `9router/{sub}/{model}`                                                                                                                                                                                                                                                                       |
+| **9Router**     | `9router`                                    |    20130     | AI router, který může 67router používat jako dílčího poskytovatele. Modely jsou vystaveny jako `9router/{sub}/{model}`                                                                                                                                                                                                                                                                        |
 | **CLIProxyAPI** | Binární soubor z GitHub release (`cliproxy`) |     8317     | Lokální proxy adaptér pro autentizační toky Anthropic CLI. Poskytuje záložní směrování při vypršení platnosti tokenů OAuth                                                                                                                                                                                                                                                                    |
 | **Mux**         | `mux` (bezobslužný `mux server`)             |     8322     | Lokální démon pro orchestraci agentů (coder/mux). Pouze se spravovaným životním cyklem — není cílem směrování (bez proxyování LLM).                                                                                                                                                                                                                                                           |
 | **Bifrost**     | `@maximhq/bifrost`                           |     8080     | Backend přenosové brány AI v jazyce Go. Když je spuštěný, je automaticky vybrán trasou přenosu (`/v1/relay/`)                                                                                                                                                                                                                                                                                 |
@@ -45,21 +45,21 @@ Je integrováno sedm služeb:
 
 Všech sedm používá stejný model dohledu:
 
-- OmniRoute je instaluje do `DATA_DIR/services/{name}/` (izolovaně od vlastního souboru `package.json` služby OmniRoute)
-- OmniRoute je spouští a monitoruje jako podřízené procesy
-- OmniRoute vkládá do prostředí podřízeného procesu dočasný klíč API a obměňuje jej bez výpadku (kde je to možné)
+- 67router je instaluje do `DATA_DIR/services/{name}/` (izolovaně od vlastního souboru `package.json` služby 67router)
+- 67router je spouští a monitoruje jako podřízené procesy
+- 67router vkládá do prostředí podřízeného procesu dočasný klíč API a obměňuje jej bez výpadku (kde je to možné)
 - Všechny trasy pro správu (`/api/services/*`) jsou **LOCAL_ONLY** — přístupné pouze z rozhraní zpětné smyčky (pevné pravidlo č. 17)
 
 ### Klíčová rozhodnutí (z návrhového plánu)
 
-| Rozhodnutí                                | Hodnota                                                                                               |
-| ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Přístup dashboardu k nativnímu UI 9Router | Reverzní proxy na `/dashboard/providers/services/9router/embed/*`                                     |
-| Mechanismus instalace                     | `npm install {package}` prostřednictvím `execFile` (bez shellové interpolace)                         |
-| Režim použití                             | Poskytovatel je ve směrovacím enginu registrován jako `9router/{sub}/{model}`                         |
-| Správa klíčů API                          | OmniRoute je generuje, šifruje v úložišti (AES-256-GCM) a vkládá prostřednictvím proměnných prostředí |
-| Umístění dashboardu                       | `/dashboard/providers/services` (tři karty)                                                           |
-| Automatické spuštění                      | Přepínač pro každou službu, ve výchozím nastavení VYPNUTO                                             |
+| Rozhodnutí                                | Hodnota                                                                                              |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Přístup dashboardu k nativnímu UI 9Router | Reverzní proxy na `/dashboard/providers/services/9router/embed/*`                                    |
+| Mechanismus instalace                     | `npm install {package}` prostřednictvím `execFile` (bez shellové interpolace)                        |
+| Režim použití                             | Poskytovatel je ve směrovacím enginu registrován jako `9router/{sub}/{model}`                        |
+| Správa klíčů API                          | 67router je generuje, šifruje v úložišti (AES-256-GCM) a vkládá prostřednictvím proměnných prostředí |
+| Umístění dashboardu                       | `/dashboard/providers/services` (tři karty)                                                          |
+| Automatické spuštění                      | Přepínač pro každou službu, ve výchozím nastavení VYPNUTO                                            |
 
 ---
 
@@ -222,7 +222,7 @@ Požadavky, které nepocházejí z loopbacku, obdrží `403 LOCAL_ONLY` bez ohle
 #### `POST /api/services/9router/install`
 
 Nainstaluje 9Router z npm. Vytvoří `DATA_DIR/services/9router/` s vlastním
-`package.json` a `node_modules/`. Není v konfliktu s vlastními závislostmi OmniRoute.
+`package.json` a `node_modules/`. Není v konfliktu s vlastními závislostmi 67router.
 
 **Tělo požadavku** (vše volitelné):
 
@@ -383,7 +383,7 @@ Vrací kombinovaný aktuální stav a stav z databáze včetně metadat verze a 
 #### `POST /api/services/9router/auto-start`
 
 Přepne příznak automatického spuštění. Když je `enabled: true`, služba se automaticky spustí
-při příštím spuštění OmniRoute (pokud je služba nainstalována).
+při příštím spuštění 67router (pokud je služba nainstalována).
 
 **Tělo požadavku:**
 
@@ -598,7 +598,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Tento proxy server:
 
 - Předává požadavek na `http://127.0.0.1:{port}/{path}` (pouze místní smyčka)
-- Odstraňuje příchozí hlavičky `cookie` a `authorization` (žádný únik relace OmniRoute)
+- Odstraňuje příchozí hlavičky `cookie` a `authorization` (žádný únik relace 67router)
 - Vkládá `Authorization: Bearer {apiKey}` pro autentizaci 9Router
 - Z odpovědi odstraňuje `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*`
 - Přepisuje odpovědi HTML tak, aby vložil `<base href>` a normalizoval absolutní cesty (`/foo` → `/dashboard/.../embed/foo`)
@@ -635,7 +635,7 @@ Tím se zabrání tomu, aby uniklý JWT (např. prostřednictvím tunelu) spusti
 ### Vkládání API klíče
 
 9Router a Mux vyžadují pro své vlastní HTTP endpointy API klíč / bearer token.
-OmniRoute:
+67router:
 
 1. Vygeneruje klíč pomocí `crypto.randomBytes(32).toString("base64url")` s prefixem
    specifickým pro službu (`nr_` pro 9Router, `mx_` pro Mux).
@@ -822,7 +822,7 @@ Pokud vestavěná služba zpřístupňuje koncový bod `/v1/chat/completions` ko
 
 1. Zkontrolujte `GET /api/services/{name}/logs` (nebo panel Protokoly v řídicím panelu). Hledejte
    řádky jako `Error: ENOENT`, `address already in use` nebo `Cannot find module`.
-2. Ověřte, že je `npm` v PATH: spusťte `which npm` ze stejného uživatelského účtu, pod kterým běží OmniRoute.
+2. Ověřte, že je `npm` v PATH: spusťte `which npm` ze stejného uživatelského účtu, pod kterým běží 67router.
 3. Ověřte, že je služba nainstalována: zkontrolujte `GET /api/services/{name}/status`
    a hodnotu `installedVersion`. Pokud je `null`, nejprve spusťte instalaci.
 4. Zkontrolujte, že `DATA_DIR/services/{name}/node_modules/` existuje a není prázdný.
@@ -860,7 +860,7 @@ dobou spouštění zvyšte `healthIntervalMs` na 5000 a `stopTimeoutMs` na 30 00
 3. Port lze pro každou službu nakonfigurovat v souboru `bootstrap.ts` pomocí pole `port`.
 
 **Poznámka:** 9Router ve výchozím nastavení používá port 20130, aby nedocházelo ke kolizi
-s výchozím portem 20128 služby OmniRoute.
+s výchozím portem 20128 služby 67router.
 
 ---
 
@@ -870,13 +870,13 @@ s výchozím portem 20128 služby OmniRoute.
 
 **Příčiny:**
 
-- Proces OmniRoute nemá oprávnění k zápisu do `DATA_DIR` nebo jeho nadřazeného adresáře.
+- Proces 67router nemá oprávnění k zápisu do `DATA_DIR` nebo jeho nadřazeného adresáře.
 - Spuštění v režimu rootless Dockeru bez oprávnění k zápisu do připojeného svazku.
 
 **Řešení:**
 
 1. Zkontrolujte `DATA_DIR` (výchozí hodnota: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Zajistěte, aby adresář vlastnil uživatel procesu OmniRoute: `chown -R $USER ~/.omniroute/`
+2. Zajistěte, aby adresář vlastnil uživatel procesu 67router: `chown -R $USER ~/.omniroute/`
 3. V Dockeru zajistěte, aby měl připojený svazek správná oprávnění pro uživatele kontejneru.
 
 ---
@@ -925,16 +925,16 @@ Viz `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **Otázka: Budou 9Router a CLIProxyAPI dostupné v produkčních/cloudových nasazeních?**
 
-Ano. Obě služby používají stejný model local-first jako samotný OmniRoute. Běží
+Ano. Obě služby používají stejný model local-first jako samotný 67router. Běží
 na stejném počítači a komunikují přes loopback. „Produkční“ zde označuje VPS
-nebo místní server, na kterém je OmniRoute nasazen, nikoli vzdáleného poskytovatele cloudu.
+nebo místní server, na kterém je 67router nasazen, nikoli vzdáleného poskytovatele cloudu.
 
 ---
 
 **Otázka: Jak mohu ladit supervisor?**
 
 1. Sledujte výpis protokolu SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Zkontrolujte strukturované protokoly ve výstupu pino systému OmniRoute filtrované podle
+2. Zkontrolujte strukturované protokoly ve výstupu pino systému 67router filtrované podle
    jmenného prostoru `service:supervisor`.
 3. Prozkoumejte řádek databáze: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Pomocí `GET /api/services/9router/status` zobrazte v jediném volání aktuální živý stav, PID, stav funkčnosti

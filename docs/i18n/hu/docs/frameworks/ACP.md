@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute elkülöníti a **CLI-felderítést**, a **natív Agent Client Protocolt** és a
+A 67router elkülöníti a **CLI-felderítést**, a **natív Agent Client Protocolt** és a
 **régi stdio-adaptereket**. Egy telepített bináris megtalálása nem igazolja annak
 hitelesítését, modellkompatibilitását vagy arra való készenlétét, hogy feldolgozzon egy promptot.
 
@@ -119,5 +119,3 @@ a célkörnyezetben.
 - [Ügynökprotokollok](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-indítási szerződések](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-eszközök](../reference/CLI-TOOLS.md)
-- [A2A-kiszolgáló](./A2A-SERVER.md)
-- [Felhőalapú ügynökök](./CLOUD_AGENT.md)

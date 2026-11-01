@@ -9,9 +9,9 @@
 > **Soʻnggi tadqiqot sanasi:** 2026-06-17 — har bir provayder boʻyicha veb-tadqiqot (rasmiy hujjatlar + soʻnggi 7 kundagi yangiliklar, adversarial verifikatsiyali 50 agentli tekshiruv) barcha bepul tarif kvotalari va ToS maʼlumotlarini yangiladi. **Qisman qayta audit: 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — quyidagi sanali qaydga qarang).
 > **Asosiy ishonchli manba (katalog):** `open-sse/config/freeModelCatalog.ts` (har bir MODEL boʻyicha byudjetlar, pool boʻyicha takrorlari chiqarilgan). Quyidagi token byudjeti raqamlari jonli veb-tadqiqotdan olingan va **taxminiy** hisoblanadi — [Metodologiya va cheklovlar](#methodology--caveats)ni koʻring.
 
-## Qisqacha — OmniRoute aslida qancha bepul inferensiyani birlashtiradi?
+## Qisqacha — 67router aslida qancha bepul inferensiyani birlashtiradi?
 
-Bu raqamlar katalogdagi alohida uchinchi tomon hisoblari va muvofiqlik shartlarini tavsiflaydi. OmniRoute bu byudjetni taqdim etmaydi: kerakli hisoblar yoki hisob maʼlumotlarini olishingiz, mos provayderlarni ulashingiz va ularning cheklovlariga rioya qilishingiz kerak. Amalda foydalanish mumkin boʻlgan sigʻim bundan kamroq, jumladan, hech qanday mos marshruti boʻlmagan yangi oʻrnatmada nol boʻlishi mumkin. `tos: avoid` bilan belgilangan provayderlar standart holatda avtomatik marshrutlashdan chiqarib tashlanadi.
+Bu raqamlar katalogdagi alohida uchinchi tomon hisoblari va muvofiqlik shartlarini tavsiflaydi. 67router bu byudjetni taqdim etmaydi: kerakli hisoblar yoki hisob maʼlumotlarini olishingiz, mos provayderlarni ulashingiz va ularning cheklovlariga rioya qilishingiz kerak. Amalda foydalanish mumkin boʻlgan sigʻim bundan kamroq, jumladan, hech qanday mos marshruti boʻlmagan yangi oʻrnatmada nol boʻlishi mumkin. `tos: avoid` bilan belgilangan provayderlar standart holatda avtomatik marshrutlashdan chiqarib tashlanadi.
 
 **2026-10-08 kuni tekshirilgan:** [Cerebras](https://www.cerebras.ai/pricing) toʻlov usulini talab qiladigan va 30 kundan keyin muddati tugaydigan bir martalik $5 reklama kreditini taklif qiladi. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) loyiha/model/tarif darajasidagi tezlik cheklovlarini eʼlon qiladi; u miqdoriy oylik asosiy koʻrsatkichga kiritilmagan.
 
@@ -94,7 +94,7 @@ izohida batafsil bayon qilingan.
 
 ## Ikki rejim — hisoblash va qaror qilish
 
-OmniRoute «bu bepulmi?» degan savolga ataylab turli manbalarni oʻqiydigan
+67router «bu bepulmi?» degan savolga ataylab turli manbalarni oʻqiydigan
 ikki rejim orqali javob beradi:
 
 | Rejim                      | Haqiqat manbai                                                                                                                                                                          | Qoʻllaniladigan joylar                                                                                                                                    |
@@ -143,7 +143,7 @@ Bu sohadagi aksariyat «oyiga bepul tokenlar» ko‘rsatkichlari har bir model u
 
 ### ⚠️ Ehtiyot bo‘ling — tekshirishga arziydigan shaxsiy foydalanish / proksi bandlari (16)
 
-> Ularning bepul kirish imkoniyati haqiqiy va OmniRoute ularga marshrutlay oladi; quyidagi bandlarni shunchaki bilib qo‘yish kerak. OAuth/kalitsiz variantlarning token miqdorini aniqlab bo‘lmaydi, shuning uchun ular asosiy ko‘rsatkichga kiritilmagan (foydalanib bo‘lmagani uchun emas).
+> Ularning bepul kirish imkoniyati haqiqiy va 67router ularga marshrutlay oladi; quyidagi bandlarni shunchaki bilib qo‘yish kerak. OAuth/kalitsiz variantlarning token miqdorini aniqlab bo‘lmaydi, shuning uchun ular asosiy ko‘rsatkichga kiritilmagan (foydalanib bo‘lmagani uchun emas).
 
 | Provayder        | Izoh                                                                                                                                                                                                                      |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -157,7 +157,7 @@ Bu sohadagi aksariyat «oyiga bepul tokenlar» ko‘rsatkichlari har bir model u
 | `fireworks`      | ToS proksi/vositachi sifatida foydalanish, API kalitlarini uzatish va sublitsenziyalashni aniq taqiqlaydi (2.1 va 2.2(i)(j) bo‘limlari); o‘z serverida joylashtirilgan shaxsiy proksilar…                                 |
 | `friendliai`     | ToS 8(e) va 8(f) bo‘limlari FriendliAI’dan proksi sifatida foydalanish yoki uchinchi tomonlarga alohida asosda kirish imkonini berishni aniq taqiqlaydi, shuningdek, qayta sotishni/…                                     |
 | `iflytek`        | iFlytek Spark LLM Service Agreement hujjatining 2.4(3)-bo‘limi «ma’lumotlar yoki chiqish natijalarini ajratib olish uchun har qanday avtomatlashtirilgan yoki dasturiy usullardan foydalanish»ni aniq taqiqlaydi…         |
-| `kiro`           | Kiro FAQ «OpenClaw va uchinchi tomon harnesslaridan foydalanadigan shunga o‘xshash vositalar» bilan ishlatishni aniq taqiqlaydi — OmniRoute kabi o‘z serverida joylashtirilgan AI proksi orqali marshrutlash…             |
+| `kiro`           | Kiro FAQ «OpenClaw va uchinchi tomon harnesslaridan foydalanadigan shunga o‘xshash vositalar» bilan ishlatishni aniq taqiqlaydi — 67router kabi o‘z serverida joylashtirilgan AI proksi orqali marshrutlash…              |
 | `modal`          | ToS 1.3-bo‘limi «xizmatni ijaraga berish, qayta sotish yoki boshqa tarzda uchinchi tomonga to‘g‘ridan-to‘g‘ri kirish yoxud foydalanish imkonini berish»ni aniq taqiqlaydi — o‘z serverida joylashtirilgan…                |
 | `muse-spark-web` | Meta ToS oldindan ruxsatsiz avtomatlashtirilgan kirishni, yozma ruxsatsiz teskari muhandislikni va texnologik cheklovlarni chetlab o‘tishni aniq taqiqlaydi…                                                              |
 | `nlpcloud`       | ToS «boshqalarga xizmatga u orqali kirish imkonini beradigan proksi yoki boshqa qurilma o‘rnatish»ni aniq taqiqlaydi va faqat boshqalarga o‘tkazib bo‘lmaydigan,…                                                         |
@@ -319,7 +319,7 @@ Bu sohadagi aksariyat «oyiga bepul tokenlar» ko‘rsatkichlari har bir model u
 
 - **`360ai`** — Yetkazib berilgan freeNote’dagi "Bepul 360 AI Brain modellari" eskirgan ko‘rinadi. Hozir kirish ariza asosida beriladi va pulli. 2023-yildagi ishga tushirish davriga oid bir martalik reklama tokenlari (100M–250M) bunga asos bo‘lgan bo‘lishi mumkin…
 - **`agentrouter`** — Biz yetkazib bergan freeNote’da "Ro‘yxatdan o‘tganda $200 bepul kredit" deyiladi. Hozirgi holatda standart (referalsiz) ro‘yxatdan o‘tganlar atigi $100 oladi; referal orqali ro‘yxatdan o‘tganlar $200 olishi mumkin, ammo 2026-yil aprel oyidagi hamjamiyat izohi…
-- **`agy`** — Biz yetkazib bergan freeNote’da "(yo‘q)" deyilgan va bu bepul tarif yo‘qligini anglatadi, biroq Antigravity’da OAuth orqali kiriladigan bepul tarif mavjud. Ammo ToS ushbu bepul tarifdan OmniRoute kabi proksi orqali foydalanishni aniq taqiqlaydi …
+- **`agy`** — Biz yetkazib bergan freeNote’da "(yo‘q)" deyilgan va bu bepul tarif yo‘qligini anglatadi, biroq Antigravity’da OAuth orqali kiriladigan bepul tarif mavjud. Ammo ToS ushbu bepul tarifdan 67router kabi proksi orqali foydalanishni aniq taqiqlaydi …
 - **`ai21`** — Shartlar qat’iylashtirildi: sinov muddati "3 oy"dan 7 kungacha qisqardi. $10 kredit miqdori o‘zgarmadi, ammo amal qilish muddati ~90 kundan 7 kungacha keskin kamaydi.
 - **`aimlapi`** — Sezilarli darajada o‘zgardi. Yetkazib berilgan freeNote’da "$0.025/kun bepul kredit — 200+ model" deb reklama qilingan, ammo bepul tarif hozir to‘xtatilgan/bekor qilingan. $0.025/kunlik kredit ajratmasi (kuniga 50,000 kredit, 10 so‘rov/k…
 - **`amazon-q`** — Biz yetkazib bergan freeNote’da "(yo‘q)" deyilgan — amaldagi holat esa bundan ham yomonroq: mahsulot endi yangi ro‘yxatdan o‘tuvchilar uchun to‘xtatilgan (2026-yil 15-may). Avval bepul tarif oyiga 50 ta agentli so‘rov + cheksiz ichki…

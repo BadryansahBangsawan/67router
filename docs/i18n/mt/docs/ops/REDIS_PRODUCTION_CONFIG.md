@@ -6,7 +6,7 @@
 
 ## Ħarsa Ġenerali
 
-Redis huwa **dipendenza fakultattiva u mhux essenzjali** f’OmniRoute — l-applikazzjoni tkompli taħdem b’mod degradat iżda kkontrollat (b’alternattivi fil-memorja)
+Redis huwa **dipendenza fakultattiva u mhux essenzjali** f’67router — l-applikazzjoni tkompli taħdem b’mod degradat iżda kkontrollat (b’alternattivi fil-memorja)
 meta Redis ma jkunx disponibbli. Fil-produzzjoni, l-irfinar ta’ Redis inaqqas il-latenza għal erba’
 tagħbijiet tax-xogħol distinti:
 
@@ -17,7 +17,7 @@ tagħbijiet tax-xogħol distinti:
 | Maħżen tal-kwoti           | `redisQuotaStore.ts`          | Singleton separat `getRedisClient(url)`                                      | `<prefix>quota:*` konfigurabbli għal kull istanza                 |
 | Circuit breaker tat-tisħin | `redisCircuitBreakerStore.ts` | Klijent separat f’`circuitBreakerFactory.ts`                                 | `<prefix>warmup:cb:<connectionId>`                                |
 
-L-erba’ tagħbijiet tax-xogħol kollha jaqsmu prefiss wieħed tal-ispazju tal-ismijiet sabiex OmniRoute jkun jista’ jikkoeżisti ma’ applikazzjonijiet oħra fuq
+L-erba’ tagħbijiet tax-xogħol kollha jaqsmu prefiss wieħed tal-ispazju tal-ismijiet sabiex 67router jkun jista’ jikkoeżisti ma’ applikazzjonijiet oħra fuq
 istanza waħda ta’ Redis (eż. `127.0.0.1:6379`). Ara [Spazju tal-Ismijiet taċ-Ċwievet](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ istanza waħda ta’ Redis (eż. `127.0.0.1:6379`). Ara [Spazju tal-Ismijiet ta�
 
 ## Spazju tal-Ismijiet taċ-Ċwievet
 
-OmniRoute jaqsam istanza ta’ Redis ma’ kwalunkwe servizz ieħor li jaħdem fuq il-host. Mingħajr spazju tal-ismijiet,
+67router jaqsam istanza ta’ Redis ma’ kwalunkwe servizz ieħor li jaħdem fuq il-host. Mingħajr spazju tal-ismijiet,
 ċwievet bħal `auth:api_key:<sha256>` jew `rl:*` jistgħu jikkonfliġġu ma’ ċwievet minn applikazzjonijiet oħra
 li jużaw l-istess Redis (din l-istanza tħaddem Redis fuq `127.0.0.1:6379` flimkien ma’ servizzi oħra).
 
-Issettja `REDIS_KEY_PREFIX` għal string mhux vojt sabiex iżżid prefiss ma’ **kull** ċavetta ta’ OmniRoute:
+Issettja `REDIS_KEY_PREFIX` għal string mhux vojt sabiex iżżid prefiss ma’ **kull** ċavetta ta’ 67router:
 
 ```bash
-# .env — iċ-ċwievet kollha ta’ OmniRoute jsiru omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — iċ-ċwievet kollha ta’ 67router jsiru omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # ħalli spazju għall-cache tal-paġni tal-OS
 maxmemory-policy allkeys-lru         # neħħi entrati qodma tal-cache tal-awtentikazzjoni taħt pressjoni
 
-# Persistenza (mhux obbligatorja — OmniRoute huwa sikur kontra l-kraxxijiet mingħajrha)
+# Persistenza (mhux obbligatorja — 67router huwa sikur kontra l-kraxxijiet mingħajrha)
 save 300 1                           # ħu snapshot mill-inqas kull 5 min jekk inbidlet ≥1 ċavetta
 appendonly no                        # AOF mhuwiex meħtieġ; id-data tista’ terġa’ tiġi ġġenerata
 appendfsync no                       # l-ebda spiża addizzjonali ta’ fsync (RDB huwa biżżejjed)

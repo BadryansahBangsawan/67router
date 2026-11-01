@@ -4,7 +4,7 @@
 
 ---
 
-> **Kurz gesagt**: Verwenden Sie Ihre eigenen berechtigten Anbieterkonten. OmniRoute kombiniert die von Ihnen konfigurierten Verbindungen; es stellt nicht das beworbene aggregierte Token-Budget bereit. Kostenloser Zugriff kann eine Registrierung, einen API-Schlüssel, eine Genehmigung oder eine Zahlungsmethode erfordern. Die Limits, Datenschutzrichtlinien und Nutzungsbedingungen der Anbieter gelten weiterhin.
+> **Kurz gesagt**: Verwenden Sie Ihre eigenen berechtigten Anbieterkonten. 67router kombiniert die von Ihnen konfigurierten Verbindungen; es stellt nicht das beworbene aggregierte Token-Budget bereit. Kostenloser Zugriff kann eine Registrierung, einen API-Schlüssel, eine Genehmigung oder eine Zahlungsmethode erfordern. Die Limits, Datenschutzrichtlinien und Nutzungsbedingungen der Anbieter gelten weiterhin.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Viele KI-Anbieter bieten eine Form von **kostenlosem Zugang** an. Je nach Anbieter kann dies einen Endpunkt ohne Authentifizierung, ein regelmäßig erneuertes Kontingent, einen ratenbegrenzten unbegrenzten Zugang, ein Startguthaben bei der Registrierung, eine manuelle Freigabe oder eine zeitlich begrenzte Aktion bedeuten. Einige Optionen erfordern ein Konto, einen API-Schlüssel, eine Kreditkarte, eine KYC-Prüfung oder die Zustimmung zu anbieterspezifischen Bedingungen.
 
-OmniRoute **bündelt** konfigurierte Verbindungen in einem Endpunkt. Für jeden Anbieter, der ein Konto voraussetzt, müssen Sie sich weiterhin separat registrieren. Verbinden Sie diese Konten und verwenden Sie `model: "auto"`, um Anfragen an geeignete Ziele weiterzuleiten. Bei einer Neuinstallation ist möglicherweise kein geeignetes Ziel ohne API-Schlüssel verfügbar; die alleinige Installation von OmniRoute garantiert keine erfolgreiche Chat-Antwort.
+67router **bündelt** konfigurierte Verbindungen in einem Endpunkt. Für jeden Anbieter, der ein Konto voraussetzt, müssen Sie sich weiterhin separat registrieren. Verbinden Sie diese Konten und verwenden Sie `model: "auto"`, um Anfragen an geeignete Ziele weiterzuleiten. Bei einer Neuinstallation ist möglicherweise kein geeignetes Ziel ohne API-Schlüssel verfügbar; die alleinige Installation von 67router garantiert keine erfolgreiche Chat-Antwort.
 
 ---
 
@@ -57,7 +57,7 @@ Diese Anbieter verfügen über **kostenlose Tarifstufen** mit bestimmten Limits:
 
 ## So kombinieren Sie kostenlose Kontingente
 
-Das Besondere an OmniRoute ist das **Kombinieren kostenloser Kontingente**. Anstatt sich auf einen einzigen Anbieter zu verlassen, verbinden Sie mehrere kostenlose Anbieter und lassen OmniRoute automatisch den besten für jede Anfrage auswählen.
+Das Besondere an 67router ist das **Kombinieren kostenloser Kontingente**. Anstatt sich auf einen einzigen Anbieter zu verlassen, verbinden Sie mehrere kostenlose Anbieter und lassen 67router automatisch den besten für jede Anfrage auswählen.
 
 ### Beispiel: Breitere Abdeckung durch kostenlose Kontingente
 
@@ -68,7 +68,7 @@ Verbinden Sie mehrere Anbieter, um die Abhängigkeit von einem einzelnen Konting
 3. **Pollinations** — schlüsselloser, ratenbegrenzter Zugriff
 4. **LongCat** — einmaliges Startguthaben bei der Registrierung (erfordert KYC)
 
-Verwenden Sie anschließend `model: "auto"`. OmniRoute wird dann:
+Verwenden Sie anschließend `model: "auto"`. 67router wird dann:
 
 - Zuerst die am höchsten eingestufte geeignete Verbindung ausprobieren
 - Wenn deren Kontingent ausgeschöpft ist oder die Integritätsprüfung fehlschlägt → den nächsten konfigurierten Anbieter ausprobieren
@@ -101,7 +101,7 @@ unbegrenztem bzw. schlüssellosem Zugriff, Startguthaben, eingestellten Angebote
 
 ### Schritt 5: Auf „Verbinden“ klicken
 
-Bei einem `NOAUTH`-Anbieter fordert OmniRoute keine Zugangsdaten für den vorgelagerten Dienst an. Dies garantiert nicht, dass der vorgelagerte Dienst Drittanbieter-Clients akzeptiert oder über freie Kapazitäten verfügt. Anbieter mit OAuth- oder API-Schlüssel-Authentifizierung müssen über den jeweils dokumentierten Kontoablauf verbunden werden. Ihr Client verwendet weiterhin den unter **Dashboard → Endpunkte** angezeigten OmniRoute-API-Schlüssel, wenn die Router-Authentifizierung aktiviert ist.
+Bei einem `NOAUTH`-Anbieter fordert 67router keine Zugangsdaten für den vorgelagerten Dienst an. Dies garantiert nicht, dass der vorgelagerte Dienst Drittanbieter-Clients akzeptiert oder über freie Kapazitäten verfügt. Anbieter mit OAuth- oder API-Schlüssel-Authentifizierung müssen über den jeweils dokumentierten Kontoablauf verbunden werden. Ihr Client verwendet weiterhin den unter **Dashboard → Endpunkte** angezeigten 67router-API-Schlüssel, wenn die Router-Authentifizierung aktiviert ist.
 
 ### Schritt 6: Wiederholen
 
@@ -111,7 +111,7 @@ Verbinden Sie mehrere Anbieter, deren Bedingungen und Datenschutzmodell zu Ihrem
 
 ## Den Katalog richtig lesen
 
-- `NOAUTH` bedeutet, dass OmniRoute keine Anbieterzugangsdaten von Ihnen anfordert; dies garantiert weder Verfügbarkeit noch Datenschutz oder unbegrenzte Kapazität.
+- `NOAUTH` bedeutet, dass 67router keine Anbieterzugangsdaten von Ihnen anfordert; dies garantiert weder Verfügbarkeit noch Datenschutz oder unbegrenzte Kapazität.
 - `hasFree` sind Metadaten zur Erkennung. Sie können ein wiederkehrendes Kontingent, schlüssellosen Zugriff, Startguthaben, ein Genehmigungsprogramm oder eine Werbeaktion darstellen.
 - `recurring-uncapped` bedeutet, dass keine veröffentlichte Token-Obergrenze verfügbar war; Beschränkungen für Anfragerate und Parallelität gelten weiterhin.
 - `one-time-initial` wird nicht erneuert, nachdem das Startguthaben aufgebraucht wurde.
@@ -120,15 +120,15 @@ Verbinden Sie mehrere Anbieter, deren Bedingungen und Datenschutzmodell zu Ihrem
 
 ---
 
-## So verbessert OmniRoute kostenlose Kontingente
+## So verbessert 67router kostenlose Kontingente
 
 ### 1. Automatische Ausweichfunktion
 
-Wenn ein kostenloser Anbieter ausgelastet oder nicht verfügbar ist, probiert OmniRoute automatisch den nächsten aus. Sie müssen nichts unternehmen.
+Wenn ein kostenloser Anbieter ausgelastet oder nicht verfügbar ist, probiert 67router automatisch den nächsten aus. Sie müssen nichts unternehmen.
 
 ### 2. Intelligentes Routing
 
-OmniRoute wählt für jede Anfrage den **besten kostenlosen Anbieter** anhand folgender Kriterien aus:
+67router wählt für jede Anfrage den **besten kostenlosen Anbieter** anhand folgender Kriterien aus:
 
 - Geschwindigkeit — Welcher Anbieter ist derzeit am schnellsten?
 - Qualität — Welcher Anbieter eignet sich am besten für diese Aufgabe?
@@ -136,13 +136,13 @@ OmniRoute wählt für jede Anfrage den **besten kostenlosen Anbieter** anhand fo
 
 ### 3. Token-Einsparungen
 
-Die Komprimierungspipeline von OmniRoute kann die Anzahl geeigneter Prompt- und Tool-Ausgabe-Token reduzieren. Die
+Die Komprimierungspipeline von 67router kann die Anzahl geeigneter Prompt- und Tool-Ausgabe-Token reduzieren. Die
 tatsächliche Einsparung hängt von den Inhalten, den ausgewählten Engines, der Abrechnung des Anbieters und den Einstellungen
 zur Wiedergabetreue ab; durch Komprimierung wird nicht jedes Anbieterkontingent um einen festen Faktor vervielfacht.
 
 ### 4. Unterstützung mehrerer Konten
 
-Wenn die Bedingungen des Anbieters mehrere Konten oder Anmeldedaten zulassen, kann OmniRoute jede
+Wenn die Bedingungen des Anbieters mehrere Konten oder Anmeldedaten zulassen, kann 67router jede
 Verbindung als separaten Routing-Kandidaten behandeln. Erstellen Sie keine zusätzlichen Konten, um das
 Kontingent oder die Zugriffsrichtlinien eines Anbieters zu umgehen.
 
@@ -157,7 +157,7 @@ Der aktuelle, live verfügbare und nach Pools deduplizierte Katalog weist Folgen
 | Wiederkehrendes quantifiziertes Kontingent  |   **~1.62B Token/Monat** | Gemeinsam genutzte Pools werden einmal gezählt; unbegrenzte Anbieter sind von der Summe ausgeschlossen |
 | Erster Monat mit Registrierungsgutschriften |         **~2.22B Token** | Wiederkehrende Gesamtsumme zuzüglich einmaliger und wiederkehrender Gutschriften                       |
 
-Dabei handelt es sich um katalogweite Schätzungen für separate berechtigte Konten, nicht um ein von OmniRoute bereitgestelltes Kontingent oder eine Prognose für eine Neuinstallation. Ihre nutzbare Kapazität hängt von den verbundenen Anbietern und deren aktuellen Bedingungen ab. Die Werte werden aus `open-sse/config/freeModelCatalog.ts` berechnet; Informationen zur Pool-Deduplizierung, zu Kennzeichnungen bezüglich der Nutzungsbedingungen, zu eingestellten Einträgen und zur Methodik für Registrierungsgutschriften finden Sie in der
+Dabei handelt es sich um katalogweite Schätzungen für separate berechtigte Konten, nicht um ein von 67router bereitgestelltes Kontingent oder eine Prognose für eine Neuinstallation. Ihre nutzbare Kapazität hängt von den verbundenen Anbietern und deren aktuellen Bedingungen ab. Die Werte werden aus `open-sse/config/freeModelCatalog.ts` berechnet; Informationen zur Pool-Deduplizierung, zu Kennzeichnungen bezüglich der Nutzungsbedingungen, zu eingestellten Einträgen und zur Methodik für Registrierungsgutschriften finden Sie in der
 [Referenz zu kostenlosen Kontingenten](../reference/FREE_TIERS.md).
 
 ---
@@ -183,7 +183,7 @@ Produktionsanforderungen erfüllen. Für kritische Workloads sollten überwachte
 
 Zu den möglichen Nachteilen gehören strenge Limits, Wartelisten, KYC-Prüfungen, Kreditkartenverifizierung, Training anhand von
 Prompts, schwächerer Datenschutz, kein SLA, häufige Modellwechsel, geografische Einschränkungen, kostenpflichtige Mehrnutzung oder
-Risiken aufgrund von Kontorichtlinien. OmniRoute stellt die verfügbaren Metadaten bereit; Sie entscheiden, was Sie aktivieren.
+Risiken aufgrund von Kontorichtlinien. 67router stellt die verfügbaren Metadaten bereit; Sie entscheiden, was Sie aktivieren.
 
 ### „Wie erhalte ich ein größeres kostenloses Kontingent?“
 
@@ -202,7 +202,7 @@ Ranglistenseite für kostenlose Anbieter als Qualitätssignal und überprüfen S
 
 ## Wie geht es weiter?
 
-- **[Auto-Combo-Anleitung](./AUTO-COMBO-GUIDE.md)** — Lassen Sie OmniRoute die beste KI für Sie auswählen
+- **[Auto-Combo-Anleitung](./AUTO-COMBO-GUIDE.md)** — Lassen Sie 67router die beste KI für Sie auswählen
 - **[Anleitung zu Anbietern](./PROVIDERS-GUIDE.md)** — Verbinden Sie weitere Anbieter
 - **[Fehlerbehebung](../guides/TROUBLESHOOTING.md)** — Beheben Sie häufige Probleme
 - **[Übersicht der kostenlosen Tarife](../reference/FREE_TIERS.md)** — Vollständige Liste der kostenlosen Tarife

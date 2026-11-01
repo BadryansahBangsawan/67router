@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute používá model vydávání s **paralelními cykly**: vyhrazenou větev `release/vX.Y.Z`
+67router používá model vydávání s **paralelními cykly**: vyhrazenou větev `release/vX.Y.Z`
 pro aktivní cyklus, `main` pro publikovanou řadu a neměnnou značku
 `vX.Y.Z`, jakmile je daný cyklus vydán. Je očekávané, že commity přibývají do `release/*` _i_ do
 `main` — nejde o omyl.

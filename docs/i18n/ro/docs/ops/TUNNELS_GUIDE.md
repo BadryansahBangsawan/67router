@@ -7,7 +7,7 @@
 > **Sursa de referință:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute își poate expune serverul local (`http://localhost:20128`) către internetul
+67router își poate expune serverul local (`http://localhost:20128`) către internetul
 public prin intermediul a trei backenduri de tunel. Acest lucru este util pentru:
 
 - Callbackuri OAuth de la furnizorii cloud (Antigravity, Gemini, Cursor) care necesită un
@@ -15,7 +15,7 @@ public prin intermediul a trei backenduri de tunel. Acest lucru este util pentru
 - Partajarea instanței locale cu colegii de echipă fără a implementa o mașină virtuală.
 - Testare de pe mobil, de la distanță sau între rețele.
 
-Toate cele trei backenduri sunt gestionate în cadrul procesului — OmniRoute pornește/oprește
+Toate cele trei backenduri sunt gestionate în cadrul procesului — 67router pornește/oprește
 binarul sau SDK-ul subiacent din panoul de control sau prin API-ul REST. Nu este necesară
 configurarea unui reverse proxy sau a systemd.
 
@@ -41,7 +41,7 @@ două moduri, selectate în funcție de furnizarea unei configurații pentru tun
 http://localhost:<apiPort>` și preia URL-ul `*.trycloudflare.com` alocat
   din stdout. URL-urile sunt efemere și se schimbă la fiecare repornire.
 - **Tunel denumit (opțional).** Când `CLOUDFLARED_CONFIG` indică un
-  `config.yml` cloudflared gestionat local, OmniRoute rulează `cloudflared tunnel --no-autoupdate
+  `config.yml` cloudflared gestionat local, 67router rulează `cloudflared tunnel --no-autoupdate
 --config <path> run`, oferindu-vă un **nume de gazdă stabil și denumit**. Configurația
   furnizează UUID-ul tunelului, `credentials-file` și rutarea `ingress`, astfel încât
   nu este transmis niciun `--url` și nu este necesar niciun token pentru panoul de control Zero Trust. `run` citește
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` și preia URL-ul `*.trycloudflare.com` alocat
 
 Comportamente esențiale:
 
-- **Instalare automată.** La prima utilizare, OmniRoute descarcă cel mai recent binar
+- **Instalare automată.** La prima utilizare, 67router descarcă cel mai recent binar
   `cloudflared` din versiunile oficiale GitHub (instalarea gestionată se află în
   `DATA_DIR/cloudflared/`). SHA256 al resursei descărcate este verificat în raport cu
   manifestul versiunii înainte de execuție.
@@ -68,7 +68,7 @@ Comportamente esențiale:
    ```
 
 2. Creați un fișier `~/.cloudflared/config.yml` care să direcționeze numele de gazdă către portul
-   API local al OmniRoute (implicit 20128):
+   API local al 67router (implicit 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Comportamente esențiale:
      - service: http_status:404
    ```
 
-3. Indicați configurația către OmniRoute și (re)porniți tunelul:
+3. Indicați configurația către 67router și (re)porniți tunelul:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # opțional — suprascrie numele de gazdă raportat de OmniRoute; în caz contrar, acesta este citit din
+   # opțional — suprascrie numele de gazdă raportat de 67router; în caz contrar, acesta este citit din
    # prima regulă ingress a configurației:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ Sau prin panoul de control: **Setări → Tuneluri → Cloudflare**.
 
 ### Variabile de mediu opționale
 
-| Variabilă                                            | Scop                                                                                                                                                                                     |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Suprascrie calea către fișierul binar. Dacă este setată și validă, OmniRoute o utilizează în loc să descarce fișierul.                                                                   |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocolul de transport (implicit `http2`; sunt disponibile și `quic`, `auto`).                                                                                                          |
-| `CLOUDFLARED_CONFIG`                                 | Calea către un fișier cloudflared `config.yml` gestionat local. Când este setată, OmniRoute rulează un tunel **denumit/persistent** (`tunnel --config <path> run`) în locul unuia rapid. |
-| `CLOUDFLARED_HOSTNAME`                               | Suprascrie numele de gazdă public raportat al tunelului denumit (de ex. `ai.example.com`). Dacă nu este setată, acesta este citit din primul nume de gazdă `ingress` din configurație.   |
+| Variabilă                                            | Scop                                                                                                                                                                                    |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Suprascrie calea către fișierul binar. Dacă este setată și validă, 67router o utilizează în loc să descarce fișierul.                                                                   |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protocolul de transport (implicit `http2`; sunt disponibile și `quic`, `auto`).                                                                                                         |
+| `CLOUDFLARED_CONFIG`                                 | Calea către un fișier cloudflared `config.yml` gestionat local. Când este setată, 67router rulează un tunel **denumit/persistent** (`tunnel --config <path> run`) în locul unuia rapid. |
+| `CLOUDFLARED_HOSTNAME`                               | Suprascrie numele de gazdă public raportat al tunelului denumit (de ex. `ai.example.com`). Dacă nu este setată, acesta este citit din primul nume de gazdă `ingress` din configurație.  |
 
 ## 2. ngrok
 
@@ -169,7 +169,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 Răspunsul include `publicUrl` atribuit (de exemplu,
-`https://abcd-1234.ngrok-free.app`). Domeniile personalizate, regiunile și regulile de politică trebuie configurate în panoul de control ngrok — OmniRoute transmite către SDK doar URL-ul țintei locale.
+`https://abcd-1234.ngrok-free.app`). Domeniile personalizate, regiunile și regulile de politică trebuie configurate în panoul de control ngrok — 67router transmite către SDK doar URL-ul țintei locale.
 
 ## 3. Tailscale Funnel
 
@@ -179,12 +179,12 @@ Implementarea invocă `tailscale funnel --bg <port>` (modul de fundal). URL-ul p
 
 ### Cerințe preliminare
 
-1. Instalați Tailscale (sau permiteți-i aplicației OmniRoute să facă acest lucru — consultați endpoint-ul `install` de mai jos).
-2. Autentificați-vă (`tailscale login` sau prin endpoint-ul `login` al OmniRoute).
+1. Instalați Tailscale (sau permiteți-i aplicației 67router să facă acest lucru — consultați endpoint-ul `install` de mai jos).
+2. Autentificați-vă (`tailscale login` sau prin endpoint-ul `login` al 67router).
 3. Activați Funnel pentru rețeaua dvs. tailnet în consola de administrare Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
-Pe Linux și macOS, daemonul (`tailscaled`) necesită `sudo` pentru a fi controlat. Endpoint-urile POST acceptă un câmp opțional `sudoPassword`, care este transmis cache-ului de parole MITM al OmniRoute (`getCachedPassword` / `setCachedPassword`) pe durata apelului. Windows utilizează instalarea implicită a serviciului din `C:\Program Files\Tailscale\tailscale.exe`.
+Pe Linux și macOS, daemonul (`tailscaled`) necesită `sudo` pentru a fi controlat. Endpoint-urile POST acceptă un câmp opțional `sudoPassword`, care este transmis cache-ului de parole MITM al 67router (`getCachedPassword` / `setCachedPassword`) pe durata apelului. Windows utilizează instalarea implicită a serviciului din `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### Endpoint-uri REST
 
@@ -241,7 +241,7 @@ independent.
 
 ## Considerații privind callbackurile OAuth
 
-Atunci când expuneți OmniRoute printr-un tunel, tabloul de bord și fluxurile OAuth trebuie
+Atunci când expuneți 67router printr-un tunel, tabloul de bord și fluxurile OAuth trebuie
 să construiască URL-urile de callback folosind numele de gazdă **public**, nu `localhost`. În caz contrar,
 furnizorul OAuth redirecționează utilizatorul către un URL pe care serverele sale nu îl pot accesa,
 iar procesul de autentificare eșuează.
@@ -257,7 +257,7 @@ Setați:
 NEXT_PUBLIC_BASE_URL=https://<gazda-tunelului-dvs>
 ```
 
-și reporniți OmniRoute înainte de a iniția OAuth. Pentru tunelurile efemere Cloudflare Quick
+și reporniți 67router înainte de a iniția OAuth. Pentru tunelurile efemere Cloudflare Quick
 Tunnel, URL-ul se schimbă după fiecare repornire, așadar, pentru utilizarea OAuth în producție,
 preferați ngrok cu un domeniu rezervat sau Tailscale Funnel.
 
@@ -272,14 +272,14 @@ Tabloul de bord afișează starea tunelului în **Setări → Tuneluri**:
 - Ultimul mesaj de eroare, dacă există.
 
 Pentru monitorizare programatică, interogați periodic endpointurile `GET` pentru fiecare backend. Este permisă rularea
-simultană a mai multor backenduri; OmniRoute va urmări fiecare backend
+simultană a mai multor backenduri; 67router va urmări fiecare backend
 în mod independent.
 
 ## Depanare
 
 ### „Fișierul binar cloudflared nu a fost găsit”
 
-OmniRoute încearcă instalarea automată la prima utilizare. Dacă instalarea este blocată
+67router încearcă instalarea automată la prima utilizare. Dacă instalarea este blocată
 (rețea restricționată, fără acces la GitHub), descărcați manual `cloudflared` de la
 <https://github.com/cloudflare/cloudflared/releases> și setați
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

@@ -48,7 +48,7 @@
 | Linux+Firefox/Chromium | ការធ្វើបច្ចុប្បន្នភាព NSS DB តាម profile នីមួយៗ តាមរយៈ `certutil -d sql:<profile>`                                |
 
 ទាំងនេះគឺជាពាក្យបញ្ជាដូចគ្នាដែលប្រើដោយ `mitmproxy`, Charles Proxy, Fiddler និង
-Caddy។ ការដែលពាក្យបញ្ជាទាំងនេះមានក្នុង OmniRoute ត្រូវបានកត់ត្រានៅ
+Caddy។ ការដែលពាក្យបញ្ជាទាំងនេះមានក្នុង 67router ត្រូវបានកត់ត្រានៅ
 `docs/security/STEALTH_GUIDE.md`។
 
 **វិធានការកាត់បន្ថយក្នុង v3.8.6**៖
@@ -102,7 +102,7 @@ env flag `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` រក្សាឥរិយ
 ដកចេញក្នុង v3.9។
 
 **មូលហេតុដែលយើងរក្សាវាទុក**៖ ការនាំចូលពី Zed គឺជាវិធីចាប់ផ្ដើមប្រើប្រាស់ដែលងាយស្រួលបំផុតសម្រាប់អ្នកប្រើ
-ដែលប្រើ Zed រួចហើយ និងចង់ចម្លង provider keys របស់ពួកគេចូលទៅក្នុង OmniRoute
+ដែលប្រើ Zed រួចហើយ និងចង់ចម្លង provider keys របស់ពួកគេចូលទៅក្នុង 67router
 ដោយមិនចាំបាច់បិទភ្ជាប់ឡើងវិញ។
 
 ---
@@ -114,7 +114,7 @@ env flag `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` រក្សាឥរិយ
 **មូលហេតុដែលត្រូវបានដាក់ទង់សម្គាល់**៖ chunk នេះនាំចេញឡើងវិញនូវ `execFileWithPassword`,
 `runElevatedPowerShell` និង helper រួម `quotePowerShell`។ AI classifier របស់ Socket.dev
 ចាត់ទុកពួកវាជា "ឧបករណ៍ទូទៅសម្រាប់ការប្រតិបត្តិលើ host + ការដំឡើងកម្រិតសិទ្ធិ"។
-នៅក្នុង OmniRoute ពួកវាត្រូវបានប្រើតែដោយដំណើរការដំឡើងវិញ្ញាបនបត្រ MITM
+នៅក្នុង 67router ពួកវាត្រូវបានប្រើតែដោយដំណើរការដំឡើងវិញ្ញាបនបត្រ MITM
 (§1) និងដោយ `execFileWithPassword` សម្រាប់ការប្រតិបត្តិ command របស់ `sudo` ប៉ុណ្ណោះ។
 
 **ការកាត់បន្ថយហានិភ័យក្នុង v3.8.6**៖
@@ -163,7 +163,7 @@ env flag `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` រក្សាឥរិយ
 
 ---
 
-## §5 — ការសរសេរព័ត៌មានសម្ងាត់ត្រឡប់ទៅ OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — ការសរសេរព័ត៌មានសម្ងាត់ត្រឡប់ទៅ 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **ឯកសារប្រភព**:
 
@@ -196,7 +196,7 @@ rawBody)`) មុនពេល parse JSON។ ប្រសិនបើ secret ត�
    `rateLimitedUntil`, `updatedAt`)។ នេះគឺជា **ការផ្លាស់ប្ដូរដែលមិនឆបគ្នាជាមួយកំណែមុន** សម្រាប់អ្នកប្រើ
    ដែលបានពឹងផ្អែកលើការធ្វើសមកាលកម្ម token ពីចម្ងាយ — ពួកគេត្រូវតែជ្រើសរើសចូលដោយជាក់លាក់។
 
-**ហេតុអ្វីយើងរក្សាវា**: Cloud Sync គឺជាមធ្យោបាយតែមួយគត់សម្រាប់ OmniRoute Cloud tenant
+**ហេតុអ្វីយើងរក្សាវា**: Cloud Sync គឺជាមធ្យោបាយតែមួយគត់សម្រាប់ 67router Cloud tenant
 ក្នុងការប្រមូលផ្ដុំព័ត៌មានសម្ងាត់របស់ក្រុមនៅកន្លែងតែមួយ។ ការកែតម្រូវនេះធ្វើឱ្យគំរូគំរាមកំហែងមានភាពត្រឹមត្រូវ៖
 "server ចុះហត្ថលេខា, client ផ្ទៀងផ្ទាត់, operator ជ្រើសរើសចូល។"
 

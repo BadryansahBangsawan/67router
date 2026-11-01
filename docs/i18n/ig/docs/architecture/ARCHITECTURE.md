@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Igbo)
+# 67router Architecture (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Emelitere ikpeazụ: 2026-06-28_
 
 ## Nchịkọta Ndị Isi
 
-OmniRoute bụ ọnụ ụzọ ntụgharị AI mpaghara na dashboard e wuru n'elu Next.js.
+67router bụ ọnụ ụzọ ntụgharị AI mpaghara na dashboard e wuru n'elu Next.js.
 Ọ na-enye otu endpoint dakọtara na OpenAI (`/v1/*`) ma na-ebuga okporo ụzọ gafee ọtụtụ ndị na-eweta ọrụ upstream site na ntụgharị, fallback, mmegharị token, na nsuso ojiji.
 
 Ikike ndị bụ isi:
@@ -128,13 +128,11 @@ Peeji ndị bụ isi dị n’okpuru `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — njikwa quota/rate
 - `/dashboard/cli-tools` — ntinye CLI, nchọpụta runtime, na imepụta nhazi
 - `/dashboard/agents` — agent ACP achọpụtara + ndebanye agent ahaziri iche
-- `/dashboard/cloud-agents` — ọrụ agent ndị a na-akwado na cloud (Codex Cloud, Devin, Jules) na usoro ndụ ọrụ
 - `/dashboard/skills` — ndekọ skill A2A, mmezu sandbox, na katalọgụ skill arụnyere n’ime ya
 - `/dashboard/memory` — nyocha na iweghachite ebe nchekwa mkparịta ụka na-adịgide adịgide
 - `/dashboard/webhooks` — ndebanye webhook na-apụ apụ, mgbanwe secret, na ọnụ ọgụgụ nnwale ọzọ
 - `/dashboard/batch` — izipu ọrụ batch na ọganihu
 - `/dashboard/cache` — ọnụ ọgụgụ cache read-through na reasoning, yana njikwa eviction
-- `/dashboard/playground` — ebe nnwale nkata na-emekọrịta ihe megide combo/model ọ bụla ahaziri
 - `/dashboard/changelog` — ihe nlele changelog dị n’ime ngwa (na-egosipụta `CHANGELOG.md`)
 - `/dashboard/system` — nchọpụta nsogbu runtime, ozi ụdị, na akụkụ nkwado gburugburu
 - `/dashboard/onboarding` — ọkachamara nhazi mbụ maka nrụnye ọhụrụ
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Dashboard ihe nchọgharị]
     end
 
-    subgraph Router[Usoro Mpaghara OmniRoute]
+    subgraph Router[Usoro Mpaghara 67router]
         API[API Ndakọrịta V1\n/v1/*]
         DASH[Dashboard + API Nlekọta\n/api/*]
         CORE[SSE + Isi Ntụgharị\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Ngalaba nlekọta:
 - Mmefu ego: `src/app/api/usage/budget` (GET/POST)
 - Usoro fallback: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Nyocha nrubeisi: `src/app/api/compliance/audit-log` (GET, nwere nkewa peeji + metadata ahaziri)
-- Nnwale nyocha: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Iwu: `src/app/api/policies` (GET/POST)
 - Token mmekọrịta: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Ngwugwu nhazi: `src/app/api/sync/bundle` (GET, snapshot nke ntọala/ndị na-enye ọrụ/ngwakọta/igodo nke ETag kewara dịka ụdị)
@@ -316,7 +313,6 @@ Modul oyi akwa ngalaba:
 - Oge ngwụcha nnweta: `src/shared/utils/fetchTimeout.ts`
 - Telemetry arịrịọ: `src/shared/utils/requestTelemetry.ts`
 - Nrubeisi/nyocha: `src/lib/compliance/index.ts`
-- Ihe na-agba ntule: `src/lib/evals/evalRunner.ts`
 - Nchekwa na-adịgide adịgide nke ọnọdụ ngalaba: `src/lib/db/domainState.ts` — SQLite CRUD maka agbụ ndabere, oke ego, akụkọ ihe mere eme nke ọnụ ahịa, ọnọdụ mkpọchi, na ihe nkwụsị sekit
 
 Modul ndị na-eweta OAuth (faịlụ 27 dị iche iche n'okpuru `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ Modul ndị na-eweta OAuth (faịlụ 27 dị iche iche n'okpuru `src/lib/oauth/
 
 ## 5) Ọrụ Ndị Agbakwunyere (v3.8.4)
 
-OmniRoute nwere ike ịwụnye, ilekọta, ma duru arịrịọ gaa na usoro ngwaọrụ AI ndị na-arụ ọrụ na mpaghara
+67router nwere ike ịwụnye, ilekọta, ma duru arịrịọ gaa na usoro ngwaọrụ AI ndị na-arụ ọrụ na mpaghara
 nke a na-akpọ **ọrụ ndị agbakwunyere**. E tinyere ise: 9Router, CLIProxyAPI, Bifrost, Mux na Dario.
 
 Ọkwa nhazi sistemụ:
@@ -386,23 +382,6 @@ Ike ndị bụ isi:
 Maka nkọwa algọridim zuru ezu (usoro mgbako ihe, nhazi ibu), lee
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Ndị Nnọchi Anya Cloud
-
-Cloud Agents na-etinye nyiwe code-agent ndị ọzọ na-akwado (Codex Cloud, Devin,
-Jules) n'azụ okirikiri ndụ ọrụ edo edo nke DB na-akwado. Endpoint niile maka imepụta/nyochaa
-ọrụ chọrọ nkwenye njikwa.
-
-- Mgbọrọgwụ modul: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, tinyere subdirectory nke agent ọ bụla n'okpuru `agents/`)
-- Mmejuputa nke agent ọ bụla: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoint ọha: `/api/v1/agents/tasks/*` (depụta/mepụta/nweta/kagbuo)
-- Endpoint njikwa: `/api/cloud/*` (ịkwadebe, ọnọdụ, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Nchekwa: tebụl `cloud_agent_tasks`
-
-Maka nkọwa gbasara ịkwadebe agent ọ bụla na OAuth, lee
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Ihe Nchekwa
 
 Modul guardrails bụ layer middleware enwere ike ibugharị ọzọ ozugbo nke na-enyocha arịrịọ
@@ -438,7 +417,7 @@ Namespace `src/domain/` na-achịkọta mkpebi amụma n'otu ebe ka route handle
 - Cache quota: `src/domain/quotaCache.ts`
 - Ọnọdụ mbelata arụmọrụ: `src/domain/degradation.ts`
 - Nyocha nhazi: `src/domain/configAudit.ts`
-- Onye na-ewu metadata nzaghachi OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Onye na-ewu metadata nzaghachi 67router: `src/domain/omnirouteResponseMeta.ts`
 - Sistemụ nta nyocha: `src/domain/assessment/` — ọrụ nyocha oge ụfọdụ
 
 ### E. Pipeline Ikike
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Ihe Nchọgharị Dashboard]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Runtime]
+    subgraph ContainerOrProcess[67router Runtime]
         Next[Next.js Server\nPORT=20128]
         Core[Isi SSE + Ndị Mmezu]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ Ndị na-eweta ọrụ ndị ọzọ niile (gụnyere node dakọtara ahaziri ic
 ## Matriks Ndakọrịta nke Ndị Na-eweta Ọrụ
 
 > **Rịba ama:** Matriks dị n'okpuru bụ ihe atụ na-anọchi anya ndị na-eweta ọrụ 351 e debanyere aha na
-> OmniRoute v3.8.0. Maka ndepụta izizi a na-emelite mgbe niile, rụtụ aka na
+> 67router v3.8.0. Maka ndepụta izizi a na-emelite mgbe niile, rụtụ aka na
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (emepụtara na-akpaghị aka) ma ọ bụ isi iyi
 > eziokwu dị na `src/shared/constants/providers.ts` (Zod na-enyocha ya mgbe a na-ebunye ya).
 
@@ -1117,7 +1096,7 @@ Nchekwa payload arịrịọ zuru ezu na-edobe ruo ọkwa payload JSON anọ mak
 - arịrịọ raw enwetara n'aka client
 - arịrịọ a tụgharịrị nke e zigara upstream n’ezie
 - nzaghachi onye na-eweta ọrụ e wughachiri dịka JSON; a na-achịkọta nzaghachi e zigara dịka stream ka ọ bụrụ nchịkọta ikpeazụ tinyere metadata stream
-- nzaghachi ikpeazụ e nyeghachiri client site na OmniRoute; a na-echekwa nzaghachi e zigara dịka stream n’otu ụdị nchịkọta a chịkọtara ọnụ ahụ
+- nzaghachi ikpeazụ e nyeghachiri client site na 67router; a na-echekwa nzaghachi e zigara dịka stream n’otu ụdị nchịkọta a chịkọtara ọnụ ahụ
 
 ## Oke Ndị Metụtara Nchedo
 

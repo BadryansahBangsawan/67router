@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Zadnja posodobitev:** 2026-06-28 — v3.8.40
 
-OmniRoute beleži skrbniška dejanja, dogodke preverjanja pristnosti, spremembe življenjskega cikla poverilnic ponudnikov in klice orodij MCP v revizijske tabele, podprte s SQLite. Ta stran opisuje, kaj se beleži, kje so podatki shranjeni, kako dolgo se hranijo, kako lahko ključi API onemogočijo beleženje in kako poizvedovati po podatkih.
+67router beleži skrbniška dejanja, dogodke preverjanja pristnosti, spremembe življenjskega cikla poverilnic ponudnikov in klice orodij MCP v revizijske tabele, podprte s SQLite. Ta stran opisuje, kaj se beleži, kje so podatki shranjeni, kako dolgo se hranijo, kako lahko ključi API onemogočijo beleženje in kako poizvedovati po podatkih.
 
 Implementacija je v `src/lib/compliance/index.ts` (T-43 — »Nadzor skladnosti«) in `src/lib/compliance/providerAudit.ts`. Revizijski zapisi nikoli ne sprožijo izjeme: ob kakršni koli napaki je klic tiho prezrt, zato revizijsko beleženje ne more prekiniti glavnega toka zahteve.
 

@@ -6,7 +6,7 @@ lastUpdated: 2026-09-06
 
 # OpenCode v2 plugin — install and configure
 
-`@omniroute/opencode-plugin-v2` puts your whole OmniRoute catalog — models, combos and
+`@omniroute/opencode-plugin-v2` puts your whole 67router catalog — models, combos and
 auto-combos — into OpenCode v2's model picker, with display names, pricing and free-tier
 budgets.
 
@@ -17,7 +17,7 @@ shared between them, so upgrading one never forces the other.
 ## Requirements
 
 - OpenCode v2.
-- A reachable OmniRoute gateway (`http://localhost:20128` by default).
+- A reachable 67router gateway (`http://localhost:20128` by default).
 - Node.js 22 or 24.
 
 ## Install
@@ -130,7 +130,7 @@ Set `"geminiSanitization": false` to turn it off.
 
 | Symptom                               | Cause                                                                                                           |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Picker shows no OmniRoute model       | No key resolved (check the startup warning), or the gateway is unreachable                                      |
+| Picker shows no 67router model        | No key resolved (check the startup warning), or the gateway is unreachable                                      |
 | Raw model ids, no combos, no pricing  | The management endpoints refused the token — set `managementReadToken`                                          |
 | Short or empty `freeOnly` catalog     | No management token or a refused token — read the refresh summary line (`unmatched-free` count) in the host log |
 | A session pinned to `opencode-<id>/…` | The v1 plugin published `opencode-<id>`; v2 publishes `<id>` bare, so re-select the model under `<id>/…`        |

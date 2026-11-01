@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Български)
+# 67router MCP Server Documentation (Български)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Инсталиране
 
-OmniRoute MCP е вграден. Стартирайте го с:
+67router MCP е вграден. Стартирайте го с:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline и съвместими MCP клиенти.
 | `omniroute_switch_combo`        | `write:combos`        | Активиране или деактивиране на комбинация                                                                                                |
 | `omniroute_create_combo`        | `write:combos`        | Създаване на валидирана комбинация чрез съществуващия API за комбинации                                                                  |
 | `omniroute_check_quota`         | `read:quota`          | Използвана/обща квота, оставащ процент, време за нулиране, състояние на токена                                                           |
-| `omniroute_route_request`       | `execute:completions` | Изпращане на заявка за завършване на чат чрез маршрутизирането на OmniRoute                                                              |
+| `omniroute_route_request`       | `execute:completions` | Изпращане на заявка за завършване на чат чрез маршрутизирането на 67router                                                               |
 | `omniroute_cost_report`         | `read:usage`          | Отчет за разходите по периоди (сесия/ден/седмица/месец)                                                                                  |
 | `omniroute_list_models_catalog` | `read:models`         | Пълен каталог с модели, включващ възможности, състояние и цени                                                                           |
 | `omniroute_radar_catalog`       | `read:radar`          | Локален подписан каталог Radar; незадължителни филтри по доставчик/семейство                                                             |
@@ -152,7 +152,7 @@ CCR записите се съхраняват само в паметта и и�
 
 ### Филтър за дървото за достъпност на MCP (v3.8.0)
 
-Отделно от инструментите за компресиране по-горе, OmniRoute включва филтър след изпълнение, който
+Отделно от инструментите за компресиране по-горе, 67router включва филтър след изпълнение, който
 компресира **резултатите от инструментите** на MCP инструменти за браузъри/достъпност, преди да бъдат върнати на
 агента. Този филтър сам по себе си не е инструмент — той се изпълнява прозрачно за всеки резултат от инструмент, който съдържа
 подробен текст от дърво за достъпност или моментна снимка на браузър (≥2000 знака).
@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 Списъкът с MCP инструменти по-горе (110 уникални инструмента, изчислени чрез `countUniqueMcpTools()`) е умишлено
 ограничен до операции по маршрутизиране по време на изпълнение, кеширане, компресиране, памет, умения, прокси и източници на контекст. Две съседни
 платформи се доставят заедно с MCP сървъра във v3.8.0 и са документирани отделно:
-
-### Облачни агенти
-
-Облачните агенти са AI агенти за програмиране, изпълнявани извън процеса (codex-cloud, cursor-cloud, devin, jules), свързани с
-OmniRoute чрез същия модел за свързване, който се използва за доставчиците на LLM. Те са достъпни чрез
-собствен REST интерфейс (`/api/v1/agents/*`) и **не** са част от каталога с MCP инструменти
-— извикването на облачен агент не използва MCP обхват.
-
-- Реализация: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Жизнен цикъл: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Документация: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Предпазни механизми
 
@@ -425,8 +414,6 @@ OmniRoute чрез същия модел за свързване, който с�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                               |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                        |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                          |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                      |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                         |
 | `read:obsidian`       | 13 инструмента за четене — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 инструмента за запис — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                       |
@@ -479,7 +466,7 @@ OmniRoute чрез същия модел за свързване, който с�
 
 | Променлива                              | Стойност по подразбиране            | Предназначение                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | :-------------------------------------- | :---------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | Базов URL адрес, който MCP сървърът използва при извикване на вътрешните API на OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | Базов URL адрес, който MCP сървърът използва при извикване на вътрешните API на 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `OMNIROUTE_API_KEY`                     | (празно)                            | API ключ, препращан като `Authorization: Bearer` към вътрешните API извиквания                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (само `"true"` го активира) | Когато е активирано, липсващите обхвати блокират извикванията на инструменти и записват `scope_denied:<reason>` в журнала за одит. Прилагането СЪЩО се налага независимо от този флаг за всеки HTTP/SSE клиент, идентифициран чрез индивидуален Authorization header за ключ (`source === "authInfo"`), който няма пълен обхват `manage`/`admin` — например ключ, притежаващ само тесния обхват за заобикаляне `mcp:connect` — така че тази стойност по подразбиране е безопасна само за локалния/stdio режим с един оператор, но никога за отдалечен достъп извън loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (празно)                            | Разделен със запетаи списък с разрешени обхвати, считани за „налични“ по подразбиране (използва се, когато клиентът не предоставя свои собствени обхвати)                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -582,7 +569,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Дефиниции на инструменти за умения (4 инструмента)                                     |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Дефиниции на инструменти за източник на контекст от Notion (6 инструмента)             |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Дефиниции на инструменти за геймификация (8 инструмента)                               |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Инструменти за регистриране и управление на приставки (8 инструмента)                  |
 | `src/app/api/mcp/status/route.ts`                                        | Крайна точка `/api/mcp/status`                                                         |
 | `src/app/api/mcp/tools/route.ts`                                         | Крайна точка `/api/mcp/tools`                                                          |
 | `src/app/api/mcp/sse/route.ts`                                           | Маршрут за SSE транспорт `/api/mcp/sse`                                                |

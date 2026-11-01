@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute levereras som en fullständigt installerbar progressiv webbapp. När du öppnar instrumentpanelen från valfri mobilwebbläsare — Android (Chrome) eller iOS (Safari) — kan du välja ”Lägg till på startskärmen” och få en upplevelse som liknar en inbyggd app, utan att behöva använda en appbutik.
+67router levereras som en fullständigt installerbar progressiv webbapp. När du öppnar instrumentpanelen från valfri mobilwebbläsare — Android (Chrome) eller iOS (Safari) — kan du välja ”Lägg till på startskärmen” och få en upplevelse som liknar en inbyggd app, utan att behöva använda en appbutik.
 
 ## Vad är en PWA?
 
-En progressiv webbapp förvandlar OmniRoutes webbaserade instrumentpanel till något som ser ut och fungerar som en inbyggd mobilapp. När den har installerats:
+En progressiv webbapp förvandlar 67routers webbaserade instrumentpanel till något som ser ut och fungerar som en inbyggd mobilapp. När den har installerats:
 
 - Startas den från startskärmen med en egen ikon
 - Öppnas den i helskärmsläge — utan webbläsarens adressfält eller flikgränssnitt
@@ -20,26 +20,26 @@ En progressiv webbapp förvandlar OmniRoutes webbaserade instrumentpanel till n�
 
 ### Android (Chrome)
 
-1. Öppna OmniRoutes instrumentpanel i Chrome: `http://YOUR_IP:20128`
-2. Chrome visar automatiskt en banderoll med **”Lägg till OmniRoute på startskärmen”**, eller:
+1. Öppna 67routers instrumentpanel i Chrome: `http://YOUR_IP:20128`
+2. Chrome visar automatiskt en banderoll med **”Lägg till 67router på startskärmen”**, eller:
    - Tryck på menyn **⋮** (tre punkter) → **”Lägg till på startskärmen”** eller **”Installera app”**
 3. Bekräfta uppmaningen
-4. OmniRoute visas på startskärmen som en fristående app
+4. 67router visas på startskärmen som en fristående app
 
 ### iOS (Safari)
 
-1. Öppna OmniRoutes instrumentpanel i Safari: `http://YOUR_IP:20128`
+1. Öppna 67routers instrumentpanel i Safari: `http://YOUR_IP:20128`
 2. Tryck på knappen **Dela** (ruta med pil)
 3. Rulla ned och tryck på **”Lägg till på hemskärmen”**
-4. Ange ett namn (standardvärdet är ”OmniRoute”) och tryck på **Lägg till**
-5. OmniRoute visas på startskärmen med appikonen
+4. Ange ett namn (standardvärdet är ”67router”) och tryck på **Lägg till**
+5. 67router visas på startskärmen med appikonen
 
 ### Dator (Chrome / Edge)
 
-1. Öppna OmniRoutes instrumentpanel
-2. Klicka på **installationsikonen** i adressfältet (eller ⋮ → ”Installera OmniRoute...”)
+1. Öppna 67routers instrumentpanel
+2. Klicka på **installationsikonen** i adressfältet (eller ⋮ → ”Installera 67router...”)
 3. Bekräfta uppmaningen
-4. OmniRoute öppnas som ett fristående fönster — utan flikar och adressfält
+4. 67router öppnas som ett fristående fönster — utan flikar och adressfält
 
 ## Funktioner
 
@@ -49,15 +49,15 @@ Manifestet är konfigurerat med `display: "fullscreen"`, vilket innebär att den
 
 ### Offlinestöd
 
-OmniRoute innehåller en service worker (`sw.js`) som tillhandahåller intelligent cachelagring:
+67router innehåller en service worker (`sw.js`) som tillhandahåller intelligent cachelagring:
 
-| Resurstyp                                                       | Strategi                           | Beteende                                                                                                                |
-| --------------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Appskal**                                                     | Cache först                        | `/`, `/offline`, manifestet och ikonerna förhandscachelagras vid installation                                           |
-| **Statiska resurser** (CSS, JS, bilder, teckensnitt)            | Nätverk först med cache som reserv | Hämtar aktuella resurser från nätverket; använder cachen som reserv offline                                             |
-| **Next.js-paket** (`/_next/`)                                   | Nätverk först med cacheuppdatering | Hämtar från nätverket och uppdaterar cachen; använder den cachelagrade versionen offline                                |
-| **Navigeringsbegäranden**                                       | Kringgås (fångas aldrig upp)       | Webbläsaren hanterar återgången från HTTP/3 till HTTP/2; en inaktiv QUIC-socket får inte resultera i `Response.error()` |
-| **API-/instrumentpanelsrutter** (`/api/`, `/a2a`, `/dashboard`) | Kringgås (cachelagras aldrig)      | Går alltid direkt till servern — fångas aldrig upp av service workern                                                   |
+| Resurstyp                                               | Strategi                           | Beteende                                                                                                                |
+| ------------------------------------------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Appskal**                                             | Cache först                        | `/`, `/offline`, manifestet och ikonerna förhandscachelagras vid installation                                           |
+| **Statiska resurser** (CSS, JS, bilder, teckensnitt)    | Nätverk först med cache som reserv | Hämtar aktuella resurser från nätverket; använder cachen som reserv offline                                             |
+| **Next.js-paket** (`/_next/`)                           | Nätverk först med cacheuppdatering | Hämtar från nätverket och uppdaterar cachen; använder den cachelagrade versionen offline                                |
+| **Navigeringsbegäranden**                               | Kringgås (fångas aldrig upp)       | Webbläsaren hanterar återgången från HTTP/3 till HTTP/2; en inaktiv QUIC-socket får inte resultera i `Response.error()` |
+| **API-/instrumentpanelsrutter** (`/api/`, `/dashboard`) | Kringgås (cachelagras aldrig)      | Går alltid direkt till servern — fångas aldrig upp av service workern                                                   |
 
 ### Offlinesida
 
@@ -70,7 +70,7 @@ När nätverket inte är tillgängligt och en användare navigerar till en ny si
 
 ### Appikoner
 
-OmniRoute tillhandahåller ikoner som är optimerade för varje plattform:
+67router tillhandahåller ikoner som är optimerade för varje plattform:
 
 | Fil                    | Storlek          | Används av                               |
 | ---------------------- | ---------------- | ---------------------------------------- |
@@ -93,9 +93,9 @@ Genereras av Next.js via `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Den här klientkomponenten finns i `src/shared/components/PwaRegister.tsx` och:
 
 ## Användning med Termux (Android)
 
-När OmniRoute körs på Android via Termux fungerar PWA:n sömlöst:
+När 67router körs på Android via Termux fungerar PWA:n sömlöst:
 
-1. Starta OmniRoute i Termux: `npx omniroute`
+1. Starta 67router i Termux: `npx omniroute`
 2. Öppna Chrome på samma telefon: `http://localhost:20128`
 3. Installera PWA:n via ”Lägg till på startskärmen”
 4. PWA:n ansluter till den lokala Termux-servern — allt körs på enheten
@@ -156,7 +156,7 @@ Den här kombinationen innebär att din Android-telefon är både **servern** (T
 
 ## Användning från andra enheter
 
-Installera PWA:n på valfri enhet vars webbläsare har åtkomst till din OmniRoute-server:
+Installera PWA:n på valfri enhet vars webbläsare har åtkomst till din 67router-server:
 
 - **En annan telefon/surfplatta**: Navigera till `http://PHONE_IP:20128` och installera PWA:n
 - **Bärbar dator**: Öppna Chrome/Edge och installera den som en PWA för datorn

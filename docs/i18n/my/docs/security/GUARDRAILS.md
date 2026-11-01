@@ -9,7 +9,7 @@
 > hooks များ လက်လှမ်းမီသည့် routes နှင့် response paths များ၊ ပေါင်းစည်းထားသော disable headers (#16412)၊ မဖြစ်မနေလိုအပ်သည့် နယ်နိမိတ်အဖြစ် injection
 > block mode (#16413) နှင့် post-call မတိုင်မီ response ကို မြင်ရသည့်အရာများ)
 
-Guardrails များသည် OmniRoute နှင့် upstream providers များကြားရှိ နယ်နိမိတ်တွင်
+Guardrails များသည် 67router နှင့် upstream providers များကြားရှိ နယ်နိမိတ်တွင်
 ဘေးကင်းလုံခြုံရေး၊ မူဝါဒနှင့် content transformations များကို အတည်ပြုကျင့်သုံးသည်။
 guardrail တစ်ခုစီသည် request payloads (`preCall`) နှင့် upstream responses
 (`postCall`) များကို စစ်ဆေးနိုင်ပြီး (လိုအပ်ပါက ငြင်းပယ်ခြင်း၊ ပြောင်းလဲခြင်း သို့မဟုတ်
@@ -113,7 +113,7 @@ Forced mode များသည် auto heuristic မအလည်မီ **အရ�
 bridge သည် key အသုံးပြုခွင့်ရသော connection များပေါ်တွင် key
 အသုံးပြုနိုင်သော reroute နှင့် describe မော်ဒယ်များကိုသာ ရွေးချယ်သည်။
 ပြီးနောက် describe call သည် `x-omniroute-self-loop-key-id` header ဖြင့်
-OmniRoute self-loop မှတဆင့် အမြဲတမ်း ဖြတ်သန်းသွားသောကြောင့်၊ လက်ခံရသော
+67router self-loop မှတဆင့် အမြဲတမ်း ဖြတ်သန်းသွားသောကြောင့်၊ လက်ခံရသော
 chat request က ထို key ၏ connection နှင့် model policy ကို နောက်တစ်ဖန်
 enforce လုပ်သည်။ `enforceApiKeyPolicy()` သည် ထို header ကို self-loop
 bearer နှင့် အတူတကွရှိမှသာ လေးစားလိုက်နာသောကြောင့်၊ ၎င်းက ဝင်ရောက်ခွင့်ကို
@@ -147,7 +147,7 @@ caller/provider တိုင်းအတွက်၊ မည်သည့် clien
 လျှော့ချစေသောကြောင့်၊ မူရင်း inbound request က မည်သည့် detail level ကို
 အသုံးပြုခဲ့ပါစေ describe call ကိုယ်တိုင်က အမြဲတမ်း high detail ကို
 တောင်းဆိုသည်။ ဤအရာသည် internal describe request body ကိုသာ
-သက်ရောက်စေသည်။ primary request ပေါ်တွင် OmniRoute က caller ၏ ကိုယ်ပိုင်
+သက်ရောက်စေသည်။ primary request ပေါ်တွင် 67router က caller ၏ ကိုယ်ပိုင်
 `image_url.detail` ကို forward လုပ်ပုံကို မပြောင်းလဲပါ — ထို default ကို
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`) တွင်
 သီးခြားစီ၊ တွေ့ရှိထားသော OpenCode client များအတွက်သာ အသုံးချသည်။
@@ -270,7 +270,7 @@ link သာ ဖြစ်သည်။ ၎င်းက form ၏ ဒုတိယပ
 Image-to-Text နှင့် Speech-to-Text workflow များကို သက်ဆိုင်ရာ Modality
 Bridge tab များနှင့် ချိတ်ဆက်ပေးပြီး ရှိပြီးသား Speech-to-Text playground ကို မဖယ်ရှားပါ။
 
-**Self-loop admission bypass:** describe call က OmniRoute ၏
+**Self-loop admission bypass:** describe call က 67router ၏
 ကိုယ်ပိုင် `/v1` self-loop (non-standard provider model) မှတဆင့် route လုပ်သောအခါ sub-request က
 `x-omniroute-admission-bypass: internal` ကို ပေးပို့ပြီး ဖြေရှင်းထားသော
 self-loop credential ဖြင့် authentication လုပ်ခံရသည် — local mode တွင် local `sk_omniroute`
@@ -335,7 +335,7 @@ Filter ပျောက်ဆုံးခြင်း၊ ပုံစံမှာ
 
 `scripts/perf/video-bridge-fu07-eval.ts` သည် post-dedup caption-call savings၊ dense-motion budget allocation၊ blur/exposure/SI-TI evidence၊ ရှည်လျားသော tail ပါသော rapid cut များနှင့် gradual-fade false positive များအတွက် deterministic real FFmpeg fixture များကို ထုတ်လုပ်ပေးသည်။ ၎င်းက pre-analysis wall time ကို မှတ်တမ်းတင်ပြီး၊ `/usr/bin/time` ရရှိနိုင်သော နေရာများတွင် child CPU နှင့် peak RSS ကိုလည်း မှတ်တမ်းတင်သည်။ ၎င်း၏ quality check များသည် structural oracle များသာ ဖြစ်သည်။ ဤ harness တွင် authorized endpoint သို့မဟုတ် frozen judge မရှိသဖြင့် real caption-model quality သည် `HOLD` အဖြစ် ဆက်လက်တည်ရှိနေသည်။ `--caption-cost-per-call-usd` က explicit positive per-call estimate ကို မပေးရပေမယ့် ငွေပိုက်ချဆိုင်ရာ savings များလည်း `HOLD` အဖြစ် ဆက်လက်တည်ရှိနေပြီး၊ script က နှစ်မျိုးလုံးအနက် တစ်ခုကိုမျှ လுப்பမ invented ဖန်တီးခြင်း မပြုပါ။
 
-Frame တစ်ခုချင်းစီသည် 4 MiB အထိသာလျှင် ကန့်သတ်ခံထားရပြီး၊ raw frame အားလုံးပေါင်းသည် 23 MiB အထိ၊ serialized broker response သည် 32 MiB အထိ ကန့်သတ်ခံထားရသည်။ Private ခေတ္တ directory ကို `finally` အတွင်းတွင် ဖျက်လိုက်သည်။ OmniRoute သည် FFmpeg ကို အတူအစုပါဝင်စေခြင်း မပြုပါ၊ စိတ်ကြိုက် executable path ကိုလည်း လက်ခံခြင်း မပြုပါ။ Caption ချခြင်း မပြုမီ bridge သည် သတိထားသ_selectionသော visual deduplication pass တစ်ခုကို အသုံးပြုသည်။ JPEG တစ်ခုချင်းစီကို 16×16 grayscale buffer သို့ လျှော့ချပြီး နောက်ဆုံး retain လုပ်ထားသော frame နှင့်သာ နှိုင်းယှဉ်သည်။ Frame တစ်ခုထက် ပိုသော caption budget ကို တောင်းဆိုပါက extraction သည် ထို budget ၏ နှစ်ဆအထိရှိပြီး 16 frame ထက် ဘယ်သောအခါမျှ မကျော်လွန်သော ကန့်သတ်ထားသော candidate pool ကို ထောက်ပံ့သည်။ တောင်းဆိုထားသော cap ကို deduplication ပြီးမှသာ အသုံးပြုပြီး၊ budget သည် အနည်းဆုံး နှစ်ခုရှိပါက နောက်ဆုံး thinning အဆင့်တွင် ပထမဦးဆုံးနှင့် နောက်ဆုံး ရွေးချယ်ထားသော candidate များကို ထိန်းသိမ်းထားသည်။ Version သတ်မှတ်ထားသော
+Frame တစ်ခုချင်းစီသည် 4 MiB အထိသာလျှင် ကန့်သတ်ခံထားရပြီး၊ raw frame အားလုံးပေါင်းသည် 23 MiB အထိ၊ serialized broker response သည် 32 MiB အထိ ကန့်သတ်ခံထားရသည်။ Private ခေတ္တ directory ကို `finally` အတွင်းတွင် ဖျက်လိုက်သည်။ 67router သည် FFmpeg ကို အတူအစုပါဝင်စေခြင်း မပြုပါ၊ စိတ်ကြိုက် executable path ကိုလည်း လက်ခံခြင်း မပြုပါ။ Caption ချခြင်း မပြုမီ bridge သည် သတိထားသ_selectionသော visual deduplication pass တစ်ခုကို အသုံးပြုသည်။ JPEG တစ်ခုချင်းစီကို 16×16 grayscale buffer သို့ လျှော့ချပြီး နောက်ဆုံး retain လုပ်ထားသော frame နှင့်သာ နှိုင်းယှဉ်သည်။ Frame တစ်ခုထက် ပိုသော caption budget ကို တောင်းဆိုပါက extraction သည် ထို budget ၏ နှစ်ဆအထိရှိပြီး 16 frame ထက် ဘယ်သောအခါမျှ မကျော်လွန်သော ကန့်သတ်ထားသော candidate pool ကို ထောက်ပံ့သည်။ တောင်းဆိုထားသော cap ကို deduplication ပြီးမှသာ အသုံးပြုပြီး၊ budget သည် အနည်းဆုံး နှစ်ခုရှိပါက နောက်ဆုံး thinning အဆင့်တွင် ပထမဦးဆုံးနှင့် နောက်ဆုံး ရွေးချယ်ထားသော candidate များကို ထိန်းသိမ်းထားသည်။ Version သတ်မှတ်ထားသော
 `grayscale-16x16-mean-cells-v2` policy သည် mean luma delta နှင့် normalized delta အနည်းဆုံး 0.05 ရှိသော thumbnail cell များ၏ ratio တို့အနက် ပိုကြီးသော တန်ဖိုးကို အသုံးပြုသည်။ Duplicate threshold သည် constant 0.04 ဖြစ်ပြီး runtime setting အဖြစ် မဖော်ထုတ်ဘဲ ခန့်မှန်းနိုင်စွမ်းအတွက် ရွေးချယ်ထားခြင်း ဖြစ်သည်။ ဤ ဒုတိယ high-contrast signal သည် mean-only နှိုင်းယှဉ်ချက်က ဖုံးကွယ်နိုင်သော အလှုပ်အရှားငယ်များနှင့် မြင်နိုင်သော text ပြောင်းလဲမှုများကို ထိန်းသိမ်းပေးသည်။ Comparator သို့မဟုတ် decoder error များသည် fail open ဖြစ်စေပြီး coverage ကို ဆက်လက်ထိန်းသိမ်းသည်။ Output metadata သည် extract လုပ်ထားသော candidate များ၊ အောင်မြင်စွာ အသုံးပြုထားသော frame များနှင့် ဖယ်ထုတ်လိုက်သော visual duplicate များကို ခွဲခြားဖော်ပြသည်။
 
 အထင်းအရှား မှတ်သားထားသော video part သည် timestamp ပါသော contact sheet ကို တောင်းဆိုနိုင်သည်။ Bridge သည် အများဆုံး 4-column, 16-frame JPEG grid ကို တည်ဆောက်သည်။ 512-pixel cell တိုင်းသည် ၎င်း၏ source timestamp ကို high-contrast အောက်ခြေ band အတွင်းသို့ ထည်စိုက်ထားပြီး၊ ထို timestamp အတူတူပင်သည် downstream association နှင့် audit အတွက် textual metadata အတွင်းတွင် ဆက်လက်ရှိနေသည်။ JPEG အပြည့်အစုံသည် 32 MiB အထိသာ ကန့်သတ်ထားဆဲ ဖြစ်သည်။ `sharp` က grid ကို decode သို့မဟုတ် compose လုပ် မနိုင်ပါက bridge သည် JPEG frame ခွဲတိုက်များသို့ fallback ရောက်ရှိသွားပြီး၊ client abort သည် sheet operation မှတဆင့် ဆက်လက်ဖြတ်ကျော်သွားသည်။
@@ -343,7 +343,7 @@ Frame တစ်ခုချင်းစီသည် 4 MiB အထိသာလျ�
 Promotion evidence သည် synthetic composition microbenchmark မှ ရည်ရွယ်ချက်ရှိရှိ ခွဲခြားထားသည်။
 `scripts/perf/video-bridge-contact-sheet-eval.ts` သည် OpenAI-compatible vision model အစစ်အမှန်များအတွက် schema-version သတ်မှတ်ထားသော A/B harness ကို သတ်မှတ်သည်။ ၎င်းသည် provider မှအစီရင်ခံသော token များ၊ end-to-end wall latency (sheet composition အပါအဝင်)၊ model-call အကြိမ်ရေနှင့် manifest သတ်မှတ်ထားသော fact retention ကို တိုင်းတာသည်။ Raw model response များကို report ထဲသို့ မရေးထည့်ပါ။ SHA-256 digest များနှင့် ကိုက်ညီသော fact ID များကိုသာ သိမ်းဆည်းထားသည်။ Harness သည် `--execute-real` ကို pass လုပ်ပြီး `--model`၊ `OMNIROUTE_BASE_URL` နှင့် `OMNIROUTE_API_KEY` တို့ကို configure လုပ်ထားမှသာ network သို့မဟုတ် ငွေပေးချေရသော model call ကို ပြုလုပ်သည်။ ထို အထင်းအရှား real run မရှိဘဲနှင့် ၎င်း၏ machine-readable verdict သည် `HOLD` ဖြစ်နေဆဲဖြစ်သည်။ Synthetic payload/call-count တိုင်းတာချက်များတည်းဟူသည် promotion evidence မဟုတ်ပါ။
 
-Caller များသည် aligned text ကို ရပြီးဖြစ်ပါက supported video part တစ်ခုသို့ ရွေးချယ်နိုင်သော `transcript.cues` array ကို ပူးတွဲနိုင်သည်။ Cue တစ်ခုချင်းစီသည် `text`၊ probe လုပ်ထားသော duration အတွင်းရှိ ကန့်သတ်ချက်ရှိသော `start`/`end` interval နှင့် whitelist လုပ်ထားသော `source` (`client`၊ `embedded` သို့မဟုတ် `audio-bridge`) တို့ကို ပါရှိရမည်။ `confidence` သည် `1` သို့ default ဖြစ်ပြီး `0` နှင့် `1` ကြားတွင် ရှိနေရမည်။ အတိအကျ တူနေသော duplicate cue များကို ပေါင်းစပ်ဖျက်သိမ်းသည်။ OmniRoute သည် ဤ metadata မှ transcription ကို ဘယ်သောအခါမျှ မစတင်ပါ။ Validated cue များကို source၊ confidence နှင့် interval တို့နှင့်အတူ ဖော်ပြထားသော result ထဲသို့ ကူးထည့်ပြီး frame caption များနှင့်အတူ ယုံကြည်စိတ်ချရခြင်းမရှိသော observation များအဖြစ် ပြသသည်။ မမှန်ကန်သော၊ ကန့်သတ်ချက်ကျော်လွန်သော သို့မဟုတ် provenance မရှိသော text ကို caption stream ထဲသို့ ရောစပ်ခြင်းမပြုဘဲ ပယ်ချသည်။ Request-body transcript channel နှစ်ခုလုံးသည် ကိုယ်တိုင်အခိုင်အမာဖော်ပြသော `embedded` သို့မဟုတ် `audio-bridge` label များအပါအဝင် ထောက်ပံ့ပေးထားသော provenance ကို `client` သို့ normalize လုပ်သည်။ Server ပိုင် adapter မှသာ code-only `trustedSource` argument မှတဆင့် ထို ယုံကြည်ရသော label များကို သတ်မှတ်နိုင်သည်။ Request JSON field သည် ထို argument သို့ မရောက်ရှိနိုင်ပါ။ Transcript text သည် ၎င်း၏ provenance မည်သို့ပင်ဖြစ်စေ ယုံကြည်စိတ်ချရခြင်းမရှိသော media မှဆင်းသက်လာသော content ဖြစ်နေဆဲဖြစ်ပြီး authorization ကို ဘယ်သောအခါမျှ ဆုံးဖြတ်ခြင်း မပြုရပါ။
+Caller များသည် aligned text ကို ရပြီးဖြစ်ပါက supported video part တစ်ခုသို့ ရွေးချယ်နိုင်သော `transcript.cues` array ကို ပူးတွဲနိုင်သည်။ Cue တစ်ခုချင်းစီသည် `text`၊ probe လုပ်ထားသော duration အတွင်းရှိ ကန့်သတ်ချက်ရှိသော `start`/`end` interval နှင့် whitelist လုပ်ထားသော `source` (`client`၊ `embedded` သို့မဟုတ် `audio-bridge`) တို့ကို ပါရှိရမည်။ `confidence` သည် `1` သို့ default ဖြစ်ပြီး `0` နှင့် `1` ကြားတွင် ရှိနေရမည်။ အတိအကျ တူနေသော duplicate cue များကို ပေါင်းစပ်ဖျက်သိမ်းသည်။ 67router သည် ဤ metadata မှ transcription ကို ဘယ်သောအခါမျှ မစတင်ပါ။ Validated cue များကို source၊ confidence နှင့် interval တို့နှင့်အတူ ဖော်ပြထားသော result ထဲသို့ ကူးထည့်ပြီး frame caption များနှင့်အတူ ယုံကြည်စိတ်ချရခြင်းမရှိသော observation များအဖြစ် ပြသသည်။ မမှန်ကန်သော၊ ကန့်သတ်ချက်ကျော်လွန်သော သို့မဟုတ် provenance မရှိသော text ကို caption stream ထဲသို့ ရောစပ်ခြင်းမပြုဘဲ ပယ်ချသည်။ Request-body transcript channel နှစ်ခုလုံးသည် ကိုယ်တိုင်အခိုင်အမာဖော်ပြသော `embedded` သို့မဟုတ် `audio-bridge` label များအပါအဝင် ထောက်ပံ့ပေးထားသော provenance ကို `client` သို့ normalize လုပ်သည်။ Server ပိုင် adapter မှသာ code-only `trustedSource` argument မှတဆင့် ထို ယုံကြည်ရသော label များကို သတ်မှတ်နိုင်သည်။ Request JSON field သည် ထို argument သို့ မရောက်ရှိနိုင်ပါ။ Transcript text သည် ၎င်း၏ provenance မည်သို့ပင်ဖြစ်စေ ယုံကြည်စိတ်ချရခြင်းမရှိသော media မှဆင်းသက်လာသော content ဖြစ်နေဆဲဖြစ်ပြီး authorization ကို ဘယ်သောအခါမျှ ဆုံးဖြတ်ခြင်း မပြုရပါ။
 
 အဆင့်မြင့် caller သည် တူညီသော video အတွက် `audioTranscript` track ကို ပေးနိုင်သည်။ ၎င်းကို client မှထောက်ပံ့သော text အဖြစ် သဘောထားပြီး server transcription ၏ အထောက်အထားအဖြစ် မသဘောထားပါ။ Fusion seam သည် visual နှင့် audio observation များကို deadline တစ်ခုနှင့် abort signal တစ်ခုတည်း အောက်တွင် လည်ပတ်စေပြီး၊ ၎င်းတို့ကို timeline တစ်ခုတည်းပေါ်တွင် အစဉ်လိုက်စီစဉ်ကာ၊ အတိအကျ တူညီသော duplicate များကို ပေါင်းစပ်ဖျက်သိမ်းပြီး တစ်ဖက်တည်းသာ အောင်မြင်ပါက partial result ကို အစီရင်ခံသည်။ မမှန်ကန်သော `audioTranscript` သည် video တစ်ခုလုံး မအောင်မြင်စေဘဲ ထို partial result သို့ လျှော့ချသွားသည်။ Visual description ကို ထိန်းသိမ်းထားပြီး audio branch သည် sanitize လုပ်ထားသော failure code ကို မှတ်တမ်းတင်သည်။ Branch တစ်ခုချင်းစီ၏ availability၊ partial flag နှင့် sanitize လုပ်ထားသော failure code များကို ဖော်ပြထားသော result ထဲတွင်၊ guardrail metadata (`audioFusionRuns`/`audioFusionPartials`/
 `audioFusionFailureCodes`) ထဲတွင်၊ result-cache metadata ထဲတွင် နှင့် bridge fusion counter များထဲတွင် ထိန်းသိမ်းထားသည်။ Default Video Bridge path သည် speech-to-text ကို ခေါ်ယူခြင်းမပြုဘဲ ဒုတိယ media မိတ္တူကို download လုပ်ခြင်းလည်း မပြုပါ။ ထို အထင်းအရှား track မရှိဘဲ ၎င်းသည် video-only ဖြစ်နေဆဲဖြစ်သည်။
@@ -734,7 +734,7 @@ dispatch) တွင် job နှစ်ခု ရှိပါသည်-
   တစ်ခုချင်းစီ (ဥပမာ "ignore all previous instructions…"၊ DAN-ပုံစံ jailbreak များ) သည်
   response တွင် `error.code === "SECURITY_001"` ပါဝင်ကြောင်း စစ်ဆေးအတည်ပြုပါသည်၊
   ဆိုလိုသည်မှာ guard က request ကို အမှန်တကယ် ငြင်းပယ်ခဲ့သည်ဟူခြင်းဖြစ်ပါသည်။
-- **`garak` (အကြံပြု)** — local OmniRoute instance (`http://localhost:20128/v1`) အပေါ်တွင်
+- **`garak` (အကြံပြု)** — local 67router instance (`http://localhost:20128/v1`) အပေါ်တွင်
   garak `--probes promptinject,dan,leakreplay` ကို လုပ်ဆောင်ပါသည်။ provider secret
   (`PROMPTFOO_PROVIDER_KEY`) ပေါ်တွင် gate လုပ်ထားပါသည်။ ချောမွေ့စွာ ကျော်သွားပြီး
   `|| true` ဖြင့် နောက်ဆက်တွဲထားသောကြောင့် CI ကို မအောင်မြင်စေဘဲ report သာ ပေးပါသည်။

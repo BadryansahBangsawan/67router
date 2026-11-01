@@ -25,7 +25,7 @@ Ha az első sor első oszlopa a `provider` szó (kis- és nagybetűktől függet
 Töltsön le egy kezdőfájlt az importálási modális ablakból (**CSV-sablon letöltése**). Példa:
 
 ```csv
-# OmniRoute-szolgáltatók importálása (pozícióalapú oszlopok)
+# 67router-szolgáltatók importálása (pozícióalapú oszlopok)
 provider,name,apiKey,baseUrl,priority
 openai,Éles OpenAI,sk-your-openai-key,,1
 ```

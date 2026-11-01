@@ -6,7 +6,7 @@
 
 # Integracija Zed IDE-a u Docker okruženjima
 
-Kada se OmniRoute pokreće unutar Dockera, standardni tok "Uvoz iz Zed privjeska ključeva" (Import from Zed Keychain) ne uspijeva jer kontejner ne može pristupiti demonu privjeska ključeva host OS-a (libsecret na Linuxu, Keychain na macOS-u, Credential Manager na Windowsu), a Zed konfiguracijski direktoriji na host datotečnom sistemu nisu vidljivi unutar kontejnera po zadanim postavkama.
+Kada se 67router pokreće unutar Dockera, standardni tok "Uvoz iz Zed privjeska ključeva" (Import from Zed Keychain) ne uspijeva jer kontejner ne može pristupiti demonu privjeska ključeva host OS-a (libsecret na Linuxu, Keychain na macOS-u, Credential Manager na Windowsu), a Zed konfiguracijski direktoriji na host datotečnom sistemu nisu vidljivi unutar kontejnera po zadanim postavkama.
 
 ## Zašto uvoz iz privjeska ključeva ne uspijeva u Dockeru
 
@@ -15,7 +15,7 @@ Unutar kontejnera se javljaju dva blokirajuća problema:
 1. **Izolacija datotečnog sistema** — `isZedInstalled()` traži `~/.config/zed` (Linux), `~/Library/Application Support/Zed` (macOS) ili ekvivalent na Windowsu. Ove putanje se nalaze na hostu i nisu dostupne osim ako se eksplicitno ne montiraju kao volume.
 2. **IPC izolacija** — Čak i kada je konfiguracijski direktorij montiran, `keytar` izvorni modul komunicira sa servisom privjeska ključeva OS-a putem Unix socketa ili D-Bus sesije. Nijedan od njih nije premošten u kontejner po zadanim postavkama, pa čitanje vjerodajnica uvijek ne uspijeva.
 
-OmniRoute detektuje Docker okruženje putem dvije heuristike:
+67router detektuje Docker okruženje putem dvije heuristike:
 
 - Prisustvo `/.dockerenv` (zapisuje Docker demon pri pokretanju kontejnera).
 - String `docker` koji se pojavljuje u `/proc/1/cgroup` (Linux cgroup v1).
@@ -25,7 +25,7 @@ Kada se bilo koja od ovih heuristika aktivira, ruta za uvoz vraća HTTP 422 sa `
 ## Korištenje kartice Ručni uvoz tokena
 
 1. Otvorite **Dashboard → Providers → Zed**.
-2. Panel **Manual Token Import** se pojavljuje ispod kartice za uvoz iz privjeska ključeva. Kada OmniRoute detektuje Docker, ovaj panel se automatski proširuje nakon prvog neuspjelog pokušaja uvoza iz privjeska ključeva.
+2. Panel **Manual Token Import** se pojavljuje ispod kartice za uvoz iz privjeska ključeva. Kada 67router detektuje Docker, ovaj panel se automatski proširuje nakon prvog neuspjelog pokušaja uvoza iz privjeska ključeva.
 3. Odaberite provajdera iz padajućeg menija (OpenAI, Anthropic, Google, Mistral, xAI, OpenRouter ili DeepSeek).
 4. Zalijepite API ključ u polje za lozinku.
 5. Kliknite **Import**.

@@ -35,10 +35,6 @@ export function elevenLabsOptionsResponse(): Response {
   return handleCorsOptions();
 }
 
-export function isSafeElevenLabsVoiceId(value: string): boolean {
-  return /^[A-Za-z0-9_-]+$/.test(value);
-}
-
 function proxyResponseHeaders(upstream: Response): Headers {
   const headers = new Headers(CORS_HEADERS);
   for (const name of ALLOWED_RESPONSE_HEADERS) {

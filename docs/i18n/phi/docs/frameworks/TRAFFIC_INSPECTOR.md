@@ -4,7 +4,7 @@
 
 ---
 
-Ang Traffic Inspector ay ang built-in na HTTPS traffic debugger ng OmniRoute — isang tool na katulad ng Charles Proxy / mitmweb / HTTP Toolkit na **LLM-aware** at **agent-aware**. Matatagpuan ito sa `/dashboard/tools/traffic-inspector` at tumatanggap ng live na traffic mula sa hanggang 5 sabay-sabay na capture source.
+Ang Traffic Inspector ay ang built-in na HTTPS traffic debugger ng 67router — isang tool na katulad ng Charles Proxy / mitmweb / HTTP Toolkit na **LLM-aware** at **agent-aware**. Matatagpuan ito sa `/dashboard/tools/traffic-inspector` at tumatanggap ng live na traffic mula sa hanggang 5 sabay-sabay na capture source.
 
 **Lokasyon sa dashboard:** `/dashboard/tools/traffic-inspector`
 **Grupo sa sidebar:** Tools (pagkatapos ng AgentBridge)
@@ -16,21 +16,21 @@ Ang Traffic Inspector ay ang built-in na HTTPS traffic debugger ng OmniRoute —
 
 ### Ano ang dahilan kung bakit natatangi ang Traffic Inspector
 
-| Tampok                                                                              | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Nakabatay sa web                                                                    |    ✓    |    ✗    |    ✗    |                ✓                |
-| Open-source                                                                         |    ✓    |    ✗    | bahagya |                ✓                |
-| **Agent-aware** (alam kung ang request ay mula sa Antigravity/Copilot/atbp.)        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-aware** (pino-parse ang anyo, mga token, at model ng OpenAI/Anthropic/Gemini) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Nakikita ang model mapping** (gemini-3-flash → claude-sonnet-4.7)                 |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Hiwalay na latency ng proxy/upstream**                                            | bahagya |    ✗    |    ✗    |                ✓                |
-| **Naka-integrate sa OmniRoute** para sa routing, fallback, at gastos                |    ✗    |    ✗    |    ✗    |                ✓                |
-| **System-wide na pag-debug ng proxy** (anumang app sa machine)                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Custom host capture** (DNS redirect kada host)                                    |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY env mode**                                                             |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Conversation view** (mga multi-turn bubble, tool_use/tool_result)                 |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE stream merger** (muling bumubuo mula sa mga delta event)                      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Pagre-record ng session** (may pangalan, nae-export na .har/.jsonl)               |    ✗    |    ✓    |    ✓    |                ✓                |
+| Tampok                                                                              | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ----------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Nakabatay sa web                                                                    |    ✓    |    ✗    |    ✗    |               ✓                |
+| Open-source                                                                         |    ✓    |    ✗    | bahagya |               ✓                |
+| **Agent-aware** (alam kung ang request ay mula sa Antigravity/Copilot/atbp.)        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-aware** (pino-parse ang anyo, mga token, at model ng OpenAI/Anthropic/Gemini) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Nakikita ang model mapping** (gemini-3-flash → claude-sonnet-4.7)                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Hiwalay na latency ng proxy/upstream**                                            | bahagya |    ✗    |    ✗    |               ✓                |
+| **Naka-integrate sa 67router** para sa routing, fallback, at gastos                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **System-wide na pag-debug ng proxy** (anumang app sa machine)                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Custom host capture** (DNS redirect kada host)                                    |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY env mode**                                                             |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Conversation view** (mga multi-turn bubble, tool_use/tool_result)                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE stream merger** (muling bumubuo mula sa mga delta event)                      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Pagre-record ng session** (may pangalan, nae-export na .har/.jsonl)               |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arkitektura sa isang talata
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true kung SSE ang tugon
   mappedTo: string | null; // x-omniroute-mapped header
-  costEstimateUsd: number | null; // tinatayang gastos batay sa pagpepresyo ng OmniRoute
+  costEstimateUsd: number | null; // tinatayang gastos batay sa pagpepresyo ng 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Hindi naibalik ang system proxy
 
-Kung mag-crash ang OmniRoute habang aktibo ang system-wide proxy mode:
+Kung mag-crash ang 67router habang aktibo ang system-wide proxy mode:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Base path: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Ilista ang mga request (maaaring i-filter: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Mga detalye ng isang request                                                                       |
 | DELETE | `/requests`                 | I-clear ang in-memory buffer                                                                       |
-| POST   | `/requests/{id}/replay`     | Isagawang muli ang parehong request sa pamamagitan ng OmniRoute router                             |
+| POST   | `/requests/{id}/replay`     | Isagawang muli ang parehong request sa pamamagitan ng 67router router                              |
 | PUT    | `/requests/{id}/annotation` | Mag-save o mag-update ng tala sa isang request                                                     |
 
 ### WebSocket

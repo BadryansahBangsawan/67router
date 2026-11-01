@@ -53,7 +53,7 @@ kò sí ìgbòkègbodò. Èyí ni rate limiter kan náà tó so mọ́ IP àti k
 àwọn àṣìṣe `400 content-blocked` aláìgbàdéédé nígbà tí Claude Code tàbí Codex CLI
 bá ṣe ọ̀pọ̀ ìpè tool-use / message-send ní kíákíá léraléra.
 
-## Àwọn ọ̀nà ìdènà tí a ti lò nínú OmniRoute
+## Àwọn ọ̀nà ìdènà tí a ti lò nínú 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — burst guard tó ń fipá mú kí
    àlàfo tó kéré jù jẹ́ 500 ms láàárín àwọn ìbéèrè outbound sí URL

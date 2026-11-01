@@ -34,9 +34,6 @@ const IGNORE = [
 // Format for stale-enforcement: entries must match the string produced by
 // the checkers below (i.e. the raw apiPath or prefix string, not the file+arrow).
 const KNOWN_MISSING = new Set([
-  // src/lib/evals/evalRunner.ts → /api/data  (server-side eval runner calling a
-  // local data endpoint that is not a Next.js route; needs a real route or fix)
-  "/api/data",
   // src/app/(dashboard)/…/AgentBridgePageClient.tsx calls bypass with PUT but
   // the route only exports GET/POST/DELETE — real method miss, tracked for fix.
   "/api/tools/agent-bridge/bypass::PUT",
@@ -155,17 +152,18 @@ export function resolveApiPrefixToRoute(prefix, routeFiles) {
  */
 export function routeExportsMethod(routeSource, method) {
   // Direct export: `export [async] function METHOD` or `export const METHOD`
-  const directRe = new RegExp(
-    `export\\s+(?:async\\s+)?(?:function|const)\\s+${method}\\b`
-  );
+  const directRe = new RegExp(`export\\s+(?:async\\s+)?(?:function|const)\\s+${method}\\b`);
   if (directRe.test(routeSource)) return true;
   // Re-export: `export { GET, PUT } from "…"`
   const reExportRe = /export\s*\{([^}]+)\}\s*from/g;
   let m;
   while ((m = reExportRe.exec(routeSource))) {
-    const names = m[1]
-      .split(",")
-      .map((s) => s.trim().split(/\s+as\s+/)[0].trim());
+    const names = m[1].split(",").map((s) =>
+      s
+        .trim()
+        .split(/\s+as\s+/)[0]
+        .trim()
+    );
     if (names.includes(method)) return true;
   }
   return false;

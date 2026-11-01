@@ -7,7 +7,7 @@
 > **Əsas mənbə:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute istifadəçiləri platforma ilə qarşılıqlı əlaqəyə — sorğular göndərməyə, provayderləri dəyişməyə, kombinasiyalar yaratmağa, tokenləri paylaşmağa və icmaya töhfə verməyə görə mükafatlandıran, ilk növbədə lokal işləyən oyunlaşdırma qatını ehtiva edir. Bütün vəziyyət SQLite-da saxlanılır; icma serverləri ilə federasiya könüllüdür və göndərmə əsaslıdır.
+67router istifadəçiləri platforma ilə qarşılıqlı əlaqəyə — sorğular göndərməyə, provayderləri dəyişməyə, kombinasiyalar yaratmağa, tokenləri paylaşmağa və icmaya töhfə verməyə görə mükafatlandıran, ilk növbədə lokal işləyən oyunlaşdırma qatını ehtiva edir. Bütün vəziyyət SQLite-da saxlanılır; icma serverləri ilə federasiya könüllüdür və göndərmə əsaslıdır.
 
 Sistem **əsas icra yolunda sıfır gecikmə** təmin etmək üçün hazırlanıb — oyunlaşdırma hadisələri sorğu emalı xəttindən nəticə gözlənilmədən göndərilir və heç vaxt LLM cavabını bloklamır.
 
@@ -29,7 +29,7 @@ Görünən irəliləyiş (XP, səviyyələr, nişanlar), sosial təsdiq (liderli
 | Liderlik cədvəlləri          | Qlobal, həftəlik, aylıq, token paylaşımı və töhfə əhatələri                                   |
 | Token paylaşımı              | İkitərəfli qeydiyyat reyestri vasitəsilə istifadəçilər arasında kreditlərin köçürülməsi       |
 | Dəvət və istifadə            | SHA-256 ilə heşlənmiş yaddaşda saxlanan yönləndirmə kodları                                   |
-| İcma serverləri              | Xarici OmniRoute instansiyaları ilə federasiya                                                |
+| İcma serverləri              | Xarici 67router instansiyaları ilə federasiya                                                 |
 | Fırıldaqçılığa qarşı müdafiə | Server tərəfində xal hesablanması, tezlik məhdudlaşdırması, z-xalı ilə anomaliya aşkarlanması |
 
 ### Dizayn prinsipləri
@@ -101,7 +101,7 @@ src/app/api/gamification/
 
 ### Verilənlər Bazası Cədvəlləri
 
-Bütün cədvəllər `060_create_gamification.sql` miqrasiyası ilə yaradılan əsas OmniRoute SQLite verilənlər bazasında yerləşir. WAL jurnallaşdırması `src/lib/db/core.ts` faylındakı singleton `getDbInstance()` funksiyasından miras alınır.
+Bütün cədvəllər `060_create_gamification.sql` miqrasiyası ilə yaradılan əsas 67router SQLite verilənlər bazasında yerləşir. WAL jurnallaşdırması `src/lib/db/core.ts` faylındakı singleton `getDbInstance()` funksiyasından miras alınır.
 
 ```
 ┌─────────────────────────┐     ┌──────────────────────────┐
@@ -158,7 +158,7 @@ Bütün cədvəllər `060_create_gamification.sql` miqrasiyası ilə yaradılan 
 
 ### Domen Modulu: `src/lib/db/gamification.ts`
 
-Standart OmniRoute nümunəsinə uyğundur — `getDbInstance()` funksiyasını `core.ts` faylından idxal edir və tipləşdirilmiş CRUD funksiyalarını ixrac edir. Marşrut emalçılarında birbaşa SQL istifadə edilmir.
+Standart 67router nümunəsinə uyğundur — `getDbInstance()` funksiyasını `core.ts` faylından idxal edir və tipləşdirilmiş CRUD funksiyalarını ixrac edir. Marşrut emalçılarında birbaşa SQL istifadə edilmir.
 
 Əsas funksiyalar:
 
@@ -220,7 +220,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Əməl              | XP  | Təsvir                                                         |
 | ----------------- | --- | -------------------------------------------------------------- |
-| `request`         | 1   | OmniRoute vasitəsilə yönləndirilən hər API sorğusu üçün        |
+| `request`         | 1   | 67router vasitəsilə yönləndirilən hər API sorğusu üçün         |
 | `provider_switch` | 5   | Fərqli provayderə keçid                                        |
 | `model_switch`    | 3   | Fərqli modelə keçid                                            |
 | `combo_create`    | 10  | Yeni kombinasiya yaratmaq                                      |
@@ -554,7 +554,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unikal, indekslənmiş) |
 | `token_hash` | SHA-256(raw_token)                |
 
-Xam token yaradılma zamanı istifadəçiyə yalnız bir dəfə qaytarılır. OmniRoute
+Xam token yaradılma zamanı istifadəçiyə yalnız bir dəfə qaytarılır. 67router
 onu bir daha nə saxlayır, nə də göstərir — yalnız heş qalıcı olaraq saxlanılır.
 
 ### Özünə İstinadın Qarşısının Alınması
@@ -678,7 +678,7 @@ Administratorlar `GET /api/gamification/anomalies` vasitəsilə tam audit izini 
 
 ## API Marşrutları
 
-Bütün marşrutlar standart OmniRoute strukturuna uyğundur:
+Bütün marşrutlar standart 67router strukturuna uyğundur:
 
 ```
 Marşrut → CORS ilkin sorğusu → Sorğu gövdəsinin yoxlanması (Zod) → Autentifikasiya (extractApiKey)

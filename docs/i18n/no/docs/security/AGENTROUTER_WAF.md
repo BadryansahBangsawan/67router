@@ -52,7 +52,7 @@ aktivitet. Dette er den samme IP- og nøkkelbundne hastighetsbegrenseren som for
 sporadiske `400 content-blocked`-feil når Claude Code eller Codex CLI
 foretar flere verktøybruk-/meldingskall i rask rekkefølge.
 
-## Tiltak som allerede er implementert i OmniRoute
+## Tiltak som allerede er implementert i 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — beskyttelse mot trafikkøkninger som håndhever et
    minimumsintervall på 500 ms mellom utgående forespørsler til enhver `agentrouter:*`-

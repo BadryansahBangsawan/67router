@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Nederlands)
+# 67router Architecture (Nederlands)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,12 +10,12 @@ _Laatst bijgewerkt: 2026-06-28_
 
 ## Samenvatting
 
-OmniRoute is een lokale AI-routeringsgateway en een dashboard, gebouwd met Next.js.
+67router is een lokale AI-routeringsgateway en een dashboard, gebouwd met Next.js.
 Het biedt één OpenAI-compatibel endpoint (`/v1/*`) en routeert verkeer naar meerdere upstreamproviders, met vertaling, fallback, tokenvernieuwing en gebruiksregistratie.
 
 Kernfunctionaliteiten:
 
-- OpenAI-compatibel API-oppervlak voor CLI/tools (375 providers, 156 uitvoeringsmodules)
+- OpenAI-compatibel API-oppervlak voor CLI/tools (372 providers, 156 uitvoeringsmodules)
 - Vertaling van requests/responses tussen providerindelingen
 - Fallback voor modelcombinaties (reeks van meerdere modellen)
 - Gestructureerde combinatiestappen (`provider + model + connection`) met runtimevolgorde op basis van `compositeTiers`
@@ -128,13 +128,11 @@ Hoofdpagina's onder `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — quota- en frequentiebeheer
 - `/dashboard/cli-tools` — CLI-onboarding, runtimedetectie, configuratiegeneratie
 - `/dashboard/agents` — gedetecteerde ACP-agents + registratie van aangepaste agents
-- `/dashboard/cloud-agents` — in de cloud gehoste agenttaken (Codex Cloud, Devin, Jules) en taaklevenscyclus
 - `/dashboard/skills` — A2A-vaardighedenregister, uitvoering in sandbox, ingebouwde vaardighedencatalogus
 - `/dashboard/memory` — inspectie en ophalen van persistent gespreksgeheugen
 - `/dashboard/webhooks` — uitgaande webhookabonnementen, rotatie van geheimen, statistieken voor nieuwe pogingen
 - `/dashboard/batch` — indienen van batchtaken en voortgang
 - `/dashboard/cache` — statistieken voor read-through- en redeneercache, beheer voor verwijdering
-- `/dashboard/playground` — interactieve chatomgeving voor elke geconfigureerde combo of elk geconfigureerd model
 - `/dashboard/changelog` — changelogviewer in de app (geeft `CHANGELOG.md` weer)
 - `/dashboard/system` — runtimediagnostiek, versie-informatie, interface voor omgevingsvalidatie
 - `/dashboard/onboarding` — wizard voor de eerste configuratie van nieuwe installaties
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Browserdashboard]
     end
 
-    subgraph Router[Lokaal OmniRoute-proces]
+    subgraph Router[Lokaal 67router-proces]
         API[V1-compatibiliteits-API\n/v1/*]
         DASH[Dashboard + beheer-API\n/api/*]
         CORE[SSE + vertaalkern\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Beheerdomeinen:
 - Budget: `src/app/api/usage/budget` (GET/POST)
 - Terugvalketens: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance-audit: `src/app/api/compliance/audit-log` (GET, met paginering + gestructureerde metadata)
-- Evaluaties: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Beleidsregels: `src/app/api/policies` (GET/POST)
 - Synchronisatietokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Configuratiebundel: `src/app/api/sync/bundle` (GET, met ETag geversioneerde momentopname van instellingen/providers/combinaties/sleutels)
@@ -316,7 +313,6 @@ Domeinlaagmodules:
 - Ophaaltime-out: `src/shared/utils/fetchTimeout.ts`
 - Requesttelemetrie: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Evaluatierunner: `src/lib/evals/evalRunner.ts`
 - Persistentie van domeinstatus: `src/lib/db/domainState.ts` — SQLite-CRUD voor terugvalketens, budgetten, kostengeschiedenis, uitsluitingsstatus en stroomonderbrekers
 
 OAuth-providermodules (27 afzonderlijke bestanden onder `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ OAuth-providermodules (27 afzonderlijke bestanden onder `src/lib/oauth/providers
 
 ## 5) Ingebedde services (v3.8.4)
 
-OmniRoute kan lokaal uitgevoerde AI-toolprocessen, **ingebedde services** genoemd, installeren, bewaken en er verzoeken naartoe routeren. Er worden er vijf meegeleverd: 9Router, CLIProxyAPI, Bifrost, Mux en Dario.
+67router kan lokaal uitgevoerde AI-toolprocessen, **ingebedde services** genoemd, installeren, bewaken en er verzoeken naartoe routeren. Er worden er vijf meegeleverd: 9Router, CLIProxyAPI, Bifrost, Mux en Dario.
 
 Architectuurlagen:
 
@@ -376,23 +372,6 @@ Belangrijkste mogelijkheden:
 Zie voor alle algoritmische details (factorformules, afstemming van gewichten)
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Cloud Agents
-
-Cloud Agents plaatst extern gehoste platforms voor code-agents (Codex Cloud, Devin,
-Jules) achter een uniforme, door een database ondersteunde taaklevenscyclus. Alle eindpunten voor het
-aanmaken en inspecteren van taken vereisen beheerautorisatie.
-
-- Hoofdmap van module: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus submappen per agent onder `agents/`)
-- Implementaties per agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Openbare eindpunten: `/api/v1/agents/tasks/*` (weergeven/aanmaken/ophalen/annuleren)
-- Beheereindpunten: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Opslag: tabel `cloud_agent_tasks`
-
-Zie voor details over provisioning en OAuth per agent
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Guardrails
 
 De guardrails-module is een middlewarelaag die zonder herstart opnieuw kan worden geladen en aanvragen
@@ -428,7 +407,7 @@ zelf logica voor blokkeringen, budgetten en terugvalopties hoeven samen te stell
 - Quotumcache: `src/domain/quotaCache.ts`
 - Degradatiestatus: `src/domain/degradation.ts`
 - Configuratie-audit: `src/domain/configAudit.ts`
-- Builder voor OmniRoute-antwoordmetadata: `src/domain/omnirouteResponseMeta.ts`
+- Builder voor 67router-antwoordmetadata: `src/domain/omnirouteResponseMeta.ts`
 - Beoordelingssubsysteem: `src/domain/assessment/` — periodieke evaluatietaken
 
 ### E. Autorisatiepipeline
@@ -806,7 +785,7 @@ flowchart LR
         Browser[Dashboardbrowser]
     end
 
-    subgraph ContainerOrProcess[OmniRoute-runtime]
+    subgraph ContainerOrProcess[67router-runtime]
         Next[Next.js-server\nPORT=20128]
         Core[SSE-kern + uitvoerders]
         MainDB[(storage.sqlite)]
@@ -925,7 +904,7 @@ Alle andere providers (inclusief aangepaste compatibele nodes) gebruiken de `Def
 ## Compatibiliteitsmatrix voor providers
 
 > **Opmerking:** De onderstaande matrix is een representatieve steekproef van de 351 geregistreerde providers in
-> OmniRoute v3.8.0. Raadpleeg voor de canonieke en continu bijgewerkte lijst
+> 67router v3.8.0. Raadpleeg voor de canonieke en continu bijgewerkte lijst
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automatisch gegenereerd) of de
 > gezaghebbende bron in `src/shared/constants/providers.ts` (bij het laden gevalideerd met Zod).
 
@@ -1106,7 +1085,7 @@ Bij gedetailleerde registratie van verzoekpayloads worden maximaal vier JSON-pay
 - het onbewerkte verzoek dat van de client is ontvangen
 - het vertaalde verzoek dat daadwerkelijk upstream is verzonden
 - de providerrespons, gereconstrueerd als JSON; gestreamde responsen worden teruggebracht tot de definitieve samenvatting plus streammetadata
-- de definitieve clientrespons die door OmniRoute is geretourneerd; gestreamde responsen worden in dezelfde compacte samenvattingsvorm opgeslagen
+- de definitieve clientrespons die door 67router is geretourneerd; gestreamde responsen worden in dezelfde compacte samenvattingsvorm opgeslagen
 
 ## Beveiligingsgevoelige grenzen
 

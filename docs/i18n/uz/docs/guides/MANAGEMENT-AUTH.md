@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'da **to'rtta hisobga olish ma'lumotlari oilasi** mavjud bo'lib, ular boshqaruv marshrutlarini avtorizatsiya qila oladi.
+67router'da **to'rtta hisobga olish ma'lumotlari oilasi** mavjud bo'lib, ular boshqaruv marshrutlarini avtorizatsiya qila oladi.
 Ular bir-birini almashtira olmaydi. Inference API kalitlari (`sk-…`) serverni boshqarmaydi,
 agar ularga aniq `manage` yoki `admin` doirasi berilmagan bo'lsa.
 

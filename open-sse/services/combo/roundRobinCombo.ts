@@ -40,7 +40,6 @@ import {
   resolveDisableSessionStickiness,
 } from "./sessionStickiness.ts";
 import { makeConnectionConcurrencyResolver } from "./concurrencyCaps.ts";
-import { orderTargetsByEvalScores } from "../evalRouting.ts";
 import {
   applyPromptCacheAffinity,
   expandPromptCacheAffinityTargets,
@@ -231,14 +230,13 @@ export async function handleRoundRobinCombo({
     apiKeyAllowedConnectionIds: apiKeyAllowedConnections,
   });
   const tagFilteredTargets = await applyRequestTagRouting(orderedTargets, body, log);
-  const evalRankedTargets = orderTargetsByEvalScores(tagFilteredTargets, config.evalRouting, log);
   // Align with the main/auto paths: combo config OR top-level settings (#8488 / #8494).
   const rrCompatFailOpen =
     (config as { compatFilterFailOpen?: unknown }).compatFilterFailOpen === true ||
     (settings as { compatFilterFailOpen?: unknown } | null | undefined)?.compatFilterFailOpen ===
       true;
   let filteredTargets = filterTargetsByRequestCompatibility(
-    evalRankedTargets,
+    tagFilteredTargets,
     body,
     log,
     "Context-aware round-robin fallback",
@@ -256,14 +254,14 @@ export async function handleRoundRobinCombo({
   // runtime-unavailable, we must reconsider these before returning 503, instead of
   // permanently dropping a compat-rejected-but-healthy provider.
   const compatRejectedTargets = computeCompatRejectedTargets(
-    evalRankedTargets,
+    tagFilteredTargets,
     filteredTargets,
     body
   );
   let modelCount = filteredTargets.length;
   if (modelCount === 0) {
     const exhaustion = describeCapabilityFilterExhaustion(
-      evalRankedTargets,
+      tagFilteredTargets,
       body,
       rrExpandedCombo?.name || combo?.name
     );
@@ -272,7 +270,7 @@ export async function handleRoundRobinCombo({
         400,
         exhaustion.message,
         {
-          poolSize: evalRankedTargets.length,
+          poolSize: tagFilteredTargets.length,
           attempted: 0,
           excluded: exhaustion.excluded,
           attemptOrder: [],

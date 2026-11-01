@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mempunyai **dua** sistem lorong setempat proses dengan skop yang berbeza. Kedua-duanya
+67router mempunyai **dua** sistem lorong setempat proses dengan skop yang berbeza. Kedua-duanya
 saling melengkapi; pengendali perlu mengetahui sistem yang sedang mereka perhatikan.
 
 ## 1. Kemasukan seluruh proses pada aras bait (`chatBodyAdmission.ts`)

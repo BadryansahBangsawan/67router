@@ -6,7 +6,7 @@
 
 # Vodič za nadzor i opservabilnost
 
-> **TL;DR**: OmniRoute dolazi sa ugrađenim nadzorom zdravlja (health monitoring), autopilotom provajdera, praćenjem kvota i kukicama za opservabilnost. Ovaj vodič pokriva kontrolnu tablu, upozorenja i rješavanje problema.
+> **TL;DR**: 67router dolazi sa ugrađenim nadzorom zdravlja (health monitoring), autopilotom provajdera, praćenjem kvota i kukicama za opservabilnost. Ovaj vodič pokriva kontrolnu tablu, upozorenja i rješavanje problema.
 
 **Izvori:**
 
@@ -22,7 +22,7 @@
 
 ## Pregled
 
-OmniRoute ima **3 sloja nadzora**:
+67router ima **3 sloja nadzora**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -103,7 +103,7 @@ Po kombinaciji:
 
 ## API za provjeru stanja
 
-OmniRoute izlaže **dvije** HTTP površine za provjeru stanja. One nisu međusobno zamjenjive za orkestratore.
+67router izlaže **dvije** HTTP površine za provjeru stanja. One nisu međusobno zamjenjive za orkestratore.
 
 | Putanja                      | Svrha                                                                  | Opterećenje                             | Koristiti za                                                                       |
 | ---------------------------- | ---------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -182,7 +182,7 @@ krajnje tačke. Koristite `failed` + `failedConnections` za trenutne neuspjehe p
 
 ### Preporuke za Kubernetes provjere
 
-OmniRoute je **jedan Node proces** (jedna petlja događaja). Standardni Docker `HEALTHCHECK` cilja laganu rutu `/healthz`. `/api/monitoring/health` je **previše zahtjevan** za kubelet intervale provjere dostupnosti.
+67router je **jedan Node proces** (jedna petlja događaja). Standardni Docker `HEALTHCHECK` cilja laganu rutu `/healthz`. `/api/monitoring/health` je **previše zahtjevan** za kubelet intervale provjere dostupnosti.
 
 | Sonda                        | Preporučeni cilj                                                                | Napomene                                                                                                                                                                                                                                                                                                                                                                                    |
 | ---------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -229,7 +229,7 @@ Povezano: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (sond
 
 ### systemd watchdog (zamrznuta petlja događaja)
 
-Na systemd hostu OmniRoute obavještava upravitelja usluge kada je spreman i nastavlja mu slati signale, tako da se server čija je petlja događaja zaglavljena zaustavi i ponovo pokrene umjesto da ostane pokrenut i bez odgovora. Signali dolaze iz vlastite petlje događaja servera: kada se ona blokira, signali prestaju, a systemd ponovo pokreće uslugu kada `WatchdogSec` istekne bez ijednog signala.
+Na systemd hostu 67router obavještava upravitelja usluge kada je spreman i nastavlja mu slati signale, tako da se server čija je petlja događaja zaglavljena zaustavi i ponovo pokrene umjesto da ostane pokrenut i bez odgovora. Signali dolaze iz vlastite petlje događaja servera: kada se ona blokira, signali prestaju, a systemd ponovo pokreće uslugu kada `WatchdogSec` istekne bez ijednog signala.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) već zapisuje korisničku jedinicu s ovom postavkom. Jedinica koju sami napišete (zadano `Type=simple`) nema watchdog, pa dodajte ove redove u njen odjeljak `[Service]`:
 
@@ -445,7 +445,7 @@ Konfiguracija provjere zdravlja tokena se interno obrađuje putem `tokenHealthCh
 
 ### Ugrađeni kanali
 
-OmniRoute podržava **3 kanala za upozorenja**:
+67router podržava **3 kanala za upozorenja**:
 
 | Kanal                     | Podešavanje     | Slučaj upotrebe                |
 | ------------------------- | --------------- | ------------------------------ |
@@ -561,7 +561,7 @@ Kreirajte `~/.omniroute/dashboard.json`:
 ### "Kvota kaže da je zdrava, ali vidim 429 greške"
 
 - 429 znači da provajder kaže da ste iskoristili svoju kvotu
-- OmniRoute praćenje kvota može biti **zastarjelo** — istina provajdera je uzvodno
+- 67router praćenje kvota može biti **zastarjelo** — istina provajdera je uzvodno
 - Podaci o kvotama se automatski osvježavaju putem internog monitora kvota
 
 ### "Combo ne uspijeva, ali svi ciljevi izgledaju zdravi"
@@ -574,7 +574,7 @@ Kreirajte `~/.omniroute/dashboard.json`:
 
 - Pokrenite `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Ako je "ok" — lažni alarm, provjera zdravlja je previše stroga
-- Ako je bilo šta drugo — **zaustavite OmniRoute** i pratite [vodič za oporavak od katastrofe](./DATABASE_GUIDE.md#disaster-recovery)
+- Ako je bilo šta drugo — **zaustavite 67router** i pratite [vodič za oporavak od katastrofe](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Pritisak na memorijski heap je kritičan"
 

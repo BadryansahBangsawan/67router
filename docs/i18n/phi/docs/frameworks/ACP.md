@@ -4,7 +4,7 @@
 
 ---
 
-Pinaghihiwalay ng OmniRoute ang **pagtuklas ng CLI**, **native Agent Client Protocol**, at
+Pinaghihiwalay ng 67router ang **pagtuklas ng CLI**, **native Agent Client Protocol**, at
 **mga legacy stdio adapter**. Ang pagkakatuklas sa isang naka-install na binary ay hindi nagpapatunay sa
 authentication, compatibility ng modelo, o kahandaan nitong humawak ng prompt.
 
@@ -119,5 +119,3 @@ test sa target environment.
 - [Mga protocol ng agent](./AGENT_PROTOCOLS_GUIDE.md)
 - [Mga kontrata sa paglulunsad ng CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Mga tool ng CLI](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)
-- [Mga cloud agent](./CLOUD_AGENT.md)

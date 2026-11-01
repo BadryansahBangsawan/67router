@@ -4,7 +4,7 @@
 
 ---
 
-> **ĪSUMĀ**: OmniRoute saspiešanas dzinis ir **paplašināms** — varat reģistrēt pielāgotus dziņus, piegādāt valodu pakotnes jaunām valodām un veidot vairāku posmu konveijerus. Šajā rokasgrāmatā parādīts, kā to izdarīt.
+> **ĪSUMĀ**: 67router saspiešanas dzinis ir **paplašināms** — varat reģistrēt pielāgotus dziņus, piegādāt valodu pakotnes jaunām valodām un veidot vairāku posmu konveijerus. Šajā rokasgrāmatā parādīts, kā to izdarīt.
 
 **Saistītās rokasgrāmatas:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projekta līmenī (tiek ielādēts palaišanas laikā)
 ```
 
-Vai ielādējiet programmatiski no spraudņa:
+Or register it programmatically at startup:
 
 ```ts
-// Jūsu spraudnī
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Spraudņa SDK nodrošina onRequest / onResponse / onError āķus. Reģistrējiet
-  // dzinēju, kad tiek ielādēts spraudņa modulis (vai pirmajā onRequest); atceliet tā
-  // reģistrāciju savā izslēgšanas ceļā.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Izslēgšanas laikā:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ stratēģijas atlasītājā, izmantojot tā `id`. Pārbaudiet integrāciju, iek�
 
 ## Valodu pakotņu izveide
 
-Alu cilvēka stila saspiešana izmanto **valodai specifiskas kārtulu pakotnes**, lai apstrādātu liekvārdību, izvairīgus formulējumus un daudzvārdīgas konstrukcijas katrā dabiskajā valodā. OmniRoute komplektācijā ir **6 valodu pakotnes**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Alu cilvēka stila saspiešana izmanto **valodai specifiskas kārtulu pakotnes**, lai apstrādātu liekvārdību, izvairīgus formulējumus un daudzvārdīgas konstrukcijas katrā dabiskajā valodā. 67router komplektācijā ir **6 valodu pakotnes**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Pakotnes struktūra
 
@@ -388,7 +379,7 @@ Dzinēja N izvade kļūst par dzinēja N+1 ievadi.
 
 ### Saspiešanas režīmi
 
-OmniRoute katram pieprasījumam atlasa **VIENU režīmu**, pamatojoties uz konfigurāciju, automātiskās aktivizēšanas sliekšņiem un kombināciju ignorēšanas iestatījumiem.
+67router katram pieprasījumam atlasa **VIENU režīmu**, pamatojoties uz konfigurāciju, automātiskās aktivizēšanas sliekšņiem un kombināciju ignorēšanas iestatījumiem.
 Pieejamie režīmi ir definēti failā `open-sse/services/compression/types.ts` (tips `CompressionMode`):
 
 | Režīms       | Dzinēji              | Lietojums                                                                                                                                                                                                                    |
@@ -505,10 +496,10 @@ Lai to pārvaldītu no konfigurācijas, iestatiet `mode: "stacked"` un norādiet
 
 ## Augšupstraumes sinhronizācijas politika
 
-OmniRoute saspiešanas dzinēji README failā atsaucas uz vairākiem augšupstraumes projektiem
+67router saspiešanas dzinēji README failā atsaucas uz vairākiem augšupstraumes projektiem
 („iedvesmojoties no RTK, Caveman, LLMLingua-2, Troglodita”). Biežs līdzstrādnieku
 jautājums ir: **kad augšupstraumes RTK pievieno jaunu rīku filtru vai Caveman pievieno noteikumu
-pakotni, kā tas nonāk OmniRoute?** Šī sadaļa sniedz autoritatīvu atbildi.
+pakotni, kā tas nonāk 67router?** Šī sadaļa sniedz autoritatīvu atbildi.
 
 ### Iekļautās kopijas un neatkarīgas implementācijas
 
@@ -529,7 +520,7 @@ augšupstraumes kopijas, no kuras izpildīt `git pull` — tieši tāpēc README
 **Nav automatizētas augšupstraumes laidienu izsekošanas un nav `compression-sync`
 etiķetes** — tas ir apzināti. Tā kā dzinēji ir atkārtotas implementācijas, augšupstraumes RTK
 filtrs vai Caveman noteikumu pakotne netiek apvienota kā kods; tā tiek **no jauna izteikta kā jauns
-noteikums/filtrs OmniRoute formātā** (skatiet
+noteikums/filtrs 67router formātā** (skatiet
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) un tiek pievienota pēc vajadzības,
 izmantojot parastu PR. Iepriekš minētie paplašinājuma punkti (pielāgots dzinējs, valodas pakotne, RTK filtrs)
 ir oficiāli apstiprinātais veids, kā tādu pievienot.
@@ -543,14 +534,14 @@ Nesenie tieši šīs plūsmas piemēri:
 ### Headroom (ievades saspiešanas starpniekserveris)
 
 Headroom ir **pilnībā iekšējs** — fiksēta iekļautā `gcf` kodeka momentuzņēmuma versija kopā ar
-OmniRoute paša `smartcrusher` / `toon` / `tabular` slāņiem. Nav aktīvas
+67router paša `smartcrusher` / `toon` / `tabular` slāņiem. Nav aktīvas
 augšupstraumes, ko izsekot ārpus iekļautās kopijas; `gcf` atjauninājumi tiek
 manuāli atsvaidzināti, kad kodeks mainās, un atkārtoti validēti pret saspiešanas budžeta
 kontroli (`check:compression-budget`).
 
 ### Augšupstraumes iedvesmota uzlabojuma ierosināšana
 
-1. **Neiekļaujiet ārēju kopiju** — no jauna izsakiet augšupstraumes noteikumu/filtru OmniRoute formātā.
+1. **Neiekļaujiet ārēju kopiju** — no jauna izsakiet augšupstraumes noteikumu/filtru 67router formātā.
 2. Pievienojiet to, izmantojot tālāk norādīto atbilstošo paplašinājuma punktu (valodas pakotni, RTK filtru vai
    pielāgotu dzinēju).
 3. PR aprakstā norādiet atsauci uz augšupstraumes projektu (autortiesību atzīšanai), nevis

@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` zpřístupní celý váš katalog OmniRoute — modely, komba a
+`@omniroute/opencode-plugin-v2` zpřístupní celý váš katalog 67router — modely, komba a
 automatická komba — ve výběru modelů OpenCode v2, včetně zobrazovaných názvů, cen a
 limitů bezplatné úrovně.
 
@@ -15,7 +15,7 @@ nic mezi nimi není sdíleno, takže aktualizace jednoho nikdy nevynutí aktuali
 ## Požadavky
 
 - OpenCode v2.
-- Dostupná brána OmniRoute (ve výchozím nastavení `http://localhost:20128`).
+- Dostupná brána 67router (ve výchozím nastavení `http://localhost:20128`).
 - Node.js 22 nebo 24.
 
 ## Instalace
@@ -116,7 +116,7 @@ Tuto funkci lze vypnout nastavením `"geminiSanitization": false`.
 
 | Příznak                                                         | Příčina                                                                                                                             |
 | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Výběr nezobrazuje žádný model OmniRoute                         | Nebyl nalezen žádný klíč (zkontrolujte varování při spuštění) nebo je brána nedostupná                                              |
+| Výběr nezobrazuje žádný model 67router                          | Nebyl nalezen žádný klíč (zkontrolujte varování při spuštění) nebo je brána nedostupná                                              |
 | Nezpracované identifikátory modelů, žádné kombinace, žádné ceny | Koncové body správy odmítly token — nastavte `managementReadToken`                                                                  |
 | Krátký nebo prázdný katalog `freeOnly`                          | Chybí token pro správu nebo byl token odmítnut — přečtěte si souhrnný řádek obnovení (počet `unmatched-free`) v protokolu hostitele |
 | Relace připnutá k `opencode-<id>/…`                             | Plugin v1 publikoval `opencode-<id>`; v2 publikuje pouze `<id>`, proto znovu vyberte model pod `<id>/…`                             |

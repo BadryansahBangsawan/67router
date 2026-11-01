@@ -4,7 +4,7 @@
 
 ---
 
-本文档是 OmniRoute 中所有 CI 质量门禁的权威参考。
+本文档是 67router 中所有 CI 质量门禁的权威参考。
 它描述了每个门禁、门禁所验证的内容、其运行所在的 CI 作业、采用棘轮基线还是通过/失败策略，以及该门禁会阻止构建还是仅提供建议。
 
 有关简要概述和允许列表策略，请参阅 `AGENTS.md` 中的“Quality Gates & Ratchets”部分。有关同一系统的关键评估、成熟度分类和工具无关的复现计划，请参阅
@@ -250,14 +250,14 @@ BASE_REF=origin/release/vX.Y.Z npm run i18n:check-value-drift
 
 这些工作流按 cron 计划运行(以及 `workflow_dispatch`),从不在 PR 上运行。均为建议性。
 
-| 工作流                 | 验证内容                                                                                                                               | 是否阻塞   |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `nightly-property`     | 使用随机种子 + 高运行次数的 fast-check 属性测试                                                                                        | **建议性** |
-| `nightly-resilience`   | 堆增长门禁、混沌故障注入、k6 负载/浸泡测试                                                                                             | **建议性** |
-| `nightly-llm-security` | promptfoo 注入防护(阻断模式)+ garak 探测(无提供方密钥时跳过)                                                                           | **建议性** |
-| `nightly-schemathesis` | 针对运行中的 OmniRoute,使用 `docs/openapi.yaml` 进行 OpenAPI 契约模糊测试(schemathesis)—— 暴露规范违规 / 未处理的 500 错误(Fase 8 B.4) | **建议性** |
-| `nightly-mutation`     | 对快速单元测试通道的 Stryker 变异测试评分 —— 存活的变异体会暴露薄弱的断言                                                              | **建议性** |
-| `nightly-compat`       | 跨受支持的 `engines.node` 版本的 Node 引擎兼容性矩阵                                                                                   | **建议性** |
+| 工作流                 | 验证内容                                                                                                                              | 是否阻塞   |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `nightly-property`     | 使用随机种子 + 高运行次数的 fast-check 属性测试                                                                                       | **建议性** |
+| `nightly-resilience`   | 堆增长门禁、混沌故障注入、k6 负载/浸泡测试                                                                                            | **建议性** |
+| `nightly-llm-security` | promptfoo 注入防护(阻断模式)+ garak 探测(无提供方密钥时跳过)                                                                          | **建议性** |
+| `nightly-schemathesis` | 针对运行中的 67router,使用 `docs/openapi.yaml` 进行 OpenAPI 契约模糊测试(schemathesis)—— 暴露规范违规 / 未处理的 500 错误(Fase 8 B.4) | **建议性** |
+| `nightly-mutation`     | 对快速单元测试通道的 Stryker 变异测试评分 —— 存活的变异体会暴露薄弱的断言                                                             | **建议性** |
+| `nightly-compat`       | 跨受支持的 `engines.node` 版本的 Node 引擎兼容性矩阵                                                                                  | **建议性** |
 
 性能基线(堆、TTFB、构建时间)仅做记录,不做门禁:参见 [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md)(`npm run perf:lts-baseline`)。
 
@@ -513,7 +513,7 @@ JSON，十秒钟即可完成，也是解除红色 PR 阻塞的最快方式。**�
 
 ## 智能体工具：LSP-in-the-loop（选择启用）
 
-除 CI 门禁外，OmniRoute 还提供了一个**选择启用**的 `agent-lsp` 脚手架
+除 CI 门禁外，67router 还提供了一个**选择启用**的 `agent-lsp` 脚手架
 （项目级 `.mcp.json`，Fase 7 Task 15）。创建 `.mcp.json`
 以向编码智能体公开 TypeScript 语言服务器，使其在编写代码**之前**解析符号/
 诊断信息——作为 `typecheck:core` 的“先编译再声明”配套机制，从源头减少“虚构符号”错误。

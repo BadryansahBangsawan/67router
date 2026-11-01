@@ -6,7 +6,7 @@
 
 Đối với manifest tệp thực thi dùng chung, môi trường tiến trình con bị hạn chế và thiết lập Gemini bền vững, hãy xem [các hợp đồng khởi chạy CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute cung cấp một nhóm lệnh `setup-*` để cấu hình một CLI lập trình (Codex, Claude Code, OpenCode, Cline, …) sử dụng OmniRoute làm backend — nhờ đó công cụ giao tiếp với **một** endpoint duy nhất và OmniRoute định tuyến đến nhà cung cấp phù hợp với cơ chế tự động chuyển đổi dự phòng. Mỗi lệnh đọc danh mục mô hình **đang hoạt động** từ một phiên bản OmniRoute đang chạy (cục bộ hoặc từ xa) và ghi tệp cấu hình riêng của công cụ trên máy của **bạn**. Khóa API được tham chiếu thông qua một biến môi trường ở bất cứ đâu công cụ hỗ trợ. Các lệnh lưu giữ tệp môi trường cục bộ của công cụ được ghi chú bên dưới.
+67router cung cấp một nhóm lệnh `setup-*` để cấu hình một CLI lập trình (Codex, Claude Code, OpenCode, Cline, …) sử dụng 67router làm backend — nhờ đó công cụ giao tiếp với **một** endpoint duy nhất và 67router định tuyến đến nhà cung cấp phù hợp với cơ chế tự động chuyển đổi dự phòng. Mỗi lệnh đọc danh mục mô hình **đang hoạt động** từ một phiên bản 67router đang chạy (cục bộ hoặc từ xa) và ghi tệp cấu hình riêng của công cụ trên máy của **bạn**. Khóa API được tham chiếu thông qua một biến môi trường ở bất cứ đâu công cụ hỗ trợ. Các lệnh lưu giữ tệp môi trường cục bộ của công cụ được ghi chú bên dưới.
 
 Ngoài ra còn có một trình khởi chạy tổng quát — `omniroute run <target>` — dùng để khởi chạy `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` hoặc `gemini` với môi trường phù hợp được chèn vào mà không ghi bất kỳ cấu hình nào. Các đích và bí danh của chúng đến từ manifest chuẩn `bin/cli/cli-manifest.mjs` (`claude-code|cc|anthropic`, `codex-cli|openai-codex|openai`, `goose-cli`, `open-code`, `qwen-code`, `gemini-cli`), và `omniroute completion` cung cấp cùng các từ đích được lấy từ manifest. Các trình khởi chạy riêng cho từng công cụ theo kiểu cũ — `omniroute launch` (Claude Code) và `omniroute launch-codex` (Codex) — vẫn tiếp tục khả dụng.
 
@@ -28,7 +28,7 @@ Các bộ chọn nhà cung cấp từ chối tiền tố ID, tên hoặc tên nh
 
 - [Cấu hình Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Cấu hình Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Chế độ từ xa](./REMOTE-MODE.md) — điều khiển một OmniRoute từ xa (VPS / Tailnet) từ máy tính xách tay của bạn
+- [Chế độ từ xa](./REMOTE-MODE.md) — điều khiển một 67router từ xa (VPS / Tailnet) từ máy tính xách tay của bạn
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — tiện ích mở rộng OmniCopilot; tiện ích này cũng có thể chạy các lệnh
   `setup-*` này cho bạn ngay bên trong trình chỉnh sửa
 
@@ -64,7 +64,7 @@ máy chủ đó và ghi cấu hình vào máy cục bộ.
 
 Ghi chú về các cờ (đã xác minh trong mã nguồn của lệnh):
 
-- `--remote <url>` — lấy danh mục từ một OmniRoute từ xa (ghi đè `--port`
+- `--remote <url>` — lấy danh mục từ một 67router từ xa (ghi đè `--port`
   và ngữ cảnh đang hoạt động). `--api-key <key>` cung cấp thông tin xác thực cho
   máy chủ đó (mặc định là biến môi trường `OMNIROUTE_API_KEY` hoặc token của ngữ cảnh đang hoạt động).
 - `--only <patterns>` — các chuỗi con được phân tách bằng dấu phẩy; chỉ giữ lại các ID mô hình khớp
@@ -85,7 +85,7 @@ Ghi chú về các cờ (đã xác minh trong mã nguồn của lệnh):
   **codex** thông qua các đối số `-c model_providers.omniroute.*`. **Qwen là đích chạy duy nhất
   bắt buộc phải có `--model`** — `omniroute run qwen` không có cờ này sẽ thoát
   với mã `2` và thông báo lỗi rõ ràng.
-- `--port <port>` — cổng OmniRoute cục bộ (mặc định `20128`, bị bỏ qua khi đặt `--remote`).
+- `--port <port>` — cổng 67router cục bộ (mặc định `20128`, bị bỏ qua khi đặt `--remote`).
   Có trên tất cả các lệnh `setup-*` và cả hai trình khởi chạy.
 - Mã thoát của `omniroute run`: mã thoát riêng của CLI con được truyền nguyên vẹn;
   `2` = đối số không hợp lệ (đích không được hỗ trợ, thiếu `--model` bắt buộc,
@@ -130,7 +130,7 @@ không được trình bày dưới dạng đích có thể khởi chạy.
 
 ## Sử dụng cục bộ
 
-Khi OmniRoute đang chạy trên `localhost:20128`, chỉ cần chạy lệnh thiết lập cho
+Khi 67router đang chạy trên `localhost:20128`, chỉ cần chạy lệnh thiết lập cho
 công cụ của bạn. Danh mục được tải từ máy chủ cục bộ.
 
 ```bash
@@ -158,8 +158,8 @@ omniroute setup-continue --dry-run
 Khởi chạy mà không ghi bất kỳ cấu hình nào (chỉ chèn biến môi trường):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute cục bộ
-omniroute launch-codex           # Codex CLI → OmniRoute cục bộ
+omniroute launch                 # Claude Code → 67router cục bộ
+omniroute launch-codex           # Codex CLI → 67router cục bộ
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -177,7 +177,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Sử dụng từ xa
 
-Trỏ bất kỳ lệnh thiết lập nào đến một OmniRoute từ xa bằng `--remote` + `--api-key`.
+Trỏ bất kỳ lệnh thiết lập nào đến một 67router từ xa bằng `--remote` + `--api-key`.
 Danh mục được tải từ máy chủ từ xa; cấu hình được ghi trên máy cục bộ của bạn.
 
 ```bash
@@ -221,7 +221,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Cả hai dạng đều ghi một **profile xác thực** 5dive, và sau đó mọi seat `claude` được
-liên kết với profile đó sẽ giao tiếp với OmniRoute. Có ba điểm riêng biệt đối với
+liên kết với profile đó sẽ giao tiếp với 67router. Có ba điểm riêng biệt đối với
 đích này:
 
 - **Nó chạy trên máy chủ của đội agent với quyền root.** Các động từ của 5dive tác
@@ -240,7 +240,7 @@ liên kết với profile đó sẽ giao tiếp với OmniRoute. Có ba điểm 
 API key được chuyển cho 5dive qua **stdin** (`--api-key=-`), vì vậy nó không bao giờ
 xuất hiện trong đầu ra của `ps`.
 
-Việc trỏ profile đến một **combo** OmniRoute thay vì một model đơn lẻ chính là cách
+Việc trỏ profile đến một **combo** 67router thay vì một model đơn lẻ chính là cách
 đội agent có được khả năng chuyển đổi dự phòng giữa các provider: khi endpoint
 chính ngừng hoạt động hoàn toàn giữa chừng trong lượt chạy được ghi lại tại
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), agent đã hoàn tất
@@ -250,7 +250,7 @@ các bước còn lại trên phương án dự phòng mà không để sự c�
 
 ## Quy ước URL cơ sở (công cụ nào cần `/v1`)
 
-OmniRoute cung cấp giao diện OpenAI tại `/v1`, giao diện Anthropic tại thư mục gốc,
+67router cung cấp giao diện OpenAI tại `/v1`, giao diện Anthropic tại thư mục gốc,
 và giao diện Gemini gốc tại `/v1beta`. Mỗi tích hợp được cấu hình theo định dạng mà
 công cụ tương ứng yêu cầu (đã được xác minh trong mã nguồn lệnh):
 
@@ -272,7 +272,7 @@ công cụ tương ứng yêu cầu (đã được xác minh trong mã nguồn l
 ## Giữ lại các phần phụ thuộc nguyên bản khi cập nhật: `--include=optional`
 
 Khi bạn cập nhật bằng `omniroute update` (sau khi xác nhận hoặc dùng `--apply`),
-OmniRoute chạy lệnh cài đặt với `--include=optional` được tích hợp sẵn:
+67router chạy lệnh cài đặt với `--include=optional` được tích hợp sẵn:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -300,13 +300,13 @@ Các cờ khác của `omniroute update` (đã xác minh trong mã nguồn): `--
 Giao ước đã được xác minh với `@google/gemini-cli` 0.50.0: CLI tuân theo
 `GOOGLE_GEMINI_BASE_URL` và gửi `POST /v1beta/models/<model>:generateContent`
 (cũng như `:streamGenerateContent?alt=sse`) đến URL đó — khớp chính xác với giao diện Gemini
-nguyên bản của OmniRoute (`/v1beta`). `omniroute run gemini` tự động cấu hình như sau:
+nguyên bản của 67router (`/v1beta`). `omniroute run gemini` tự động cấu hình như sau:
 
-- `GOOGLE_GEMINI_BASE_URL` → URL cơ sở OmniRoute đang hoạt động (gốc, không có `/v1`);
-- `GEMINI_API_KEY` → thông tin xác thực OmniRoute đã được phân giải (tùy chọn/biến môi trường/ngữ cảnh);
+- `GOOGLE_GEMINI_BASE_URL` → URL cơ sở 67router đang hoạt động (gốc, không có `/v1`);
+- `GEMINI_API_KEY` → thông tin xác thực 67router đã được phân giải (tùy chọn/biến môi trường/ngữ cảnh);
 - một **`GEMINI_CLI_HOME` tạm thời và biệt lập**, trong đó `.gemini/settings.json`
   chọn phương thức xác thực `gemini-api-key`, để phiên Google OAuth đã lưu (Code Assist)
-  không bao giờ ghi đè lần khởi chạy được định tuyến qua OmniRoute — thư mục này bị xóa sau khi thoát;
+  không bao giờ ghi đè lần khởi chạy được định tuyến qua 67router — thư mục này bị xóa sau khi thoát;
 - **vệ sinh môi trường**: môi trường của tiến trình con được loại bỏ `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` và `GOOGLE_GENAI_USE_GCA` (những biến có thể chuyển hướng
   xác thực sang Vertex/Code Assist), đồng thời đặt `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -330,7 +330,7 @@ tích hợp giao thức tác tử dành cho `/dashboard/acp-agents`.
 
 Các lần chạy hồi quy kế hoạch khởi chạy mang tính xác định được thực hiện trong CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Để kiểm tra các tệp nhị phân THỰC TẾ với một máy chủ
-OmniRoute THỰC TẾ, có một bộ kiểm thử tùy chọn bật tại
+67router THỰC TẾ, có một bộ kiểm thử tùy chọn bật tại
 `tests/integration/upstream-cli-smoke.int.test.ts`. Bộ kiểm thử này không bao giờ tự động chạy
 (mọi kiểm thử con đều bị bỏ qua trừ khi `RUN_CLI_SMOKE=1`), truyền thông tin xác thực bằng TÊN
 biến môi trường (không bao giờ truyền giá trị), che các chuỗi có dạng khóa khỏi mọi đầu ra được ghi lại, bỏ qua

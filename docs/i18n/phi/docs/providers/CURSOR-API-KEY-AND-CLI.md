@@ -4,16 +4,16 @@
 
 ---
 
-Dalawang paraan upang gamitin ang Cursor sa likod ng OmniRoute nang walang IDE session:
+Dalawang paraan upang gamitin ang Cursor sa likod ng 67router nang walang IDE session:
 
 1. **Provider na `cursor-api`** (card na "Cursor API", alias na `cua`): isang provider
    na gumagamit ng API key at naglalaman ng Cursor user API key (`crsr_…`, na binubuo sa
-   `https://cursor.com/dashboard/api`). Maa-access ng alinmang OmniRoute client ang
+   `https://cursor.com/dashboard/api`). Maa-access ng alinmang 67router client ang
    mga modelo ng Cursor sa pamamagitan ng `/v1/chat/completions` bilang `cursor-api/<model>` o
    `cua/<model>`, kasama ang karaniwang mga layer ng quota, fallback, at logging. Hindi
    nagbabago ang IDE provider (`cursor`, OAuth/IDE session).
-2. **Cursor CLI passthrough**: ituro ang Cursor CLI (`agent`) sa OmniRoute upang
-   ang bawat RPC na ginagawa ng CLI ay ma-authenticate gamit ang isang OmniRoute API key, ma-forward
+2. **Cursor CLI passthrough**: ituro ang Cursor CLI (`agent`) sa 67router upang
+   ang bawat RPC na ginagawa ng CLI ay ma-authenticate gamit ang isang 67router API key, ma-forward
    sa Cursor gamit ang credential ng isang `cursor-api` connection, at maitala sa
    pahina ng Logs.
 
@@ -60,7 +60,7 @@ Mga tala:
 
 - Ang listahan ng mga modelo para sa `cursor-api` ay nagmumula sa static na Cursor registry (ang
   parehong listahan na ginagamit bilang fallback ng IDE provider); hindi kailangang mag-install ng
-  `cursor-agent` sa OmniRoute host.
+  `cursor-agent` sa 67router host.
 - Ang `POST /api/providers/{id}/refresh-cursor` ay para lamang sa `cursor` IDE provider;
   walang IDE session na kailangang i-renew ang mga `cursor-api` connection.
 
@@ -68,7 +68,7 @@ Mga tala:
 
 Para sa `cursor` / `cu` at `cursor-api` / `cua`, pinananatiling buo ng nakabahaging Claude-effort normalizer
 ang hiniling na model ID. Maaaring mag-advertise ang Cursor ng suffix gaya ng
-`-low` bilang bahagi ng isang tunay na model ID, sa halip na bilang OmniRoute effort alias.
+`-low` bilang bahagi ng isang tunay na model ID, sa halip na bilang 67router effort alias.
 Pinapanatili ng Cursor executor ang eksaktong katugma mula sa live catalog; kapag walang
 katugma, ang kasalukuyang model resolver nito ang nangangasiwa sa suffix-to-parameter fallback.
 
@@ -82,18 +82,18 @@ Ruta: `src/app/api/cursor-cli/[...path]/route.ts` →
 `src/shared/constants/publicApiRoutes.ts` dahil ipinapatupad ng handler
 ang sarili nitong authentication:
 
-| Path                                                                                                                            | Auth na inaasahan mula sa CLI | Ginagawa ng OmniRoute                                                                                                                                                                   |
+| Path                                                                                                                            | Auth na inaasahan mula sa CLI | Ginagawa ng 67router                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <OmniRoute API key>`  | Bine-validate ang key, gumagawa ng 1h HS256 JWT (nilagdaan gamit ang `JWT_SECRET`), at ibinabalik ito                                                                                   |
+| `POST /auth/exchange_user_api_key`                                                                                              | `Bearer <67router API key>`   | Bine-validate ang key, gumagawa ng 1h HS256 JWT (nilagdaan gamit ang `JWT_SECRET`), at ibinabalik ito                                                                                   |
 | bawat iba pang path (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`           | Bine-verify ang issuer/audience/expiry, pumipili ng aktibong `cursor-api` connection, pinapalitan ang Authorization header ng ipinalit na Cursor token, at ini-stream pabalik ang tugon |
 
 Dine-decode ng CLI ang `exp` mula sa anumang token na natatanggap nito, kaya kapag opaque
 token ang ibinigay dito, muli itong nagsasagawa ng exchange bago ang halos bawat request; iniiwasan
-ito ng ginawang JWT. Kapag nakatanggap ng 401 mula sa OmniRoute, muling nagsasagawa ng exchange ang CLI.
+ito ng ginawang JWT. Kapag nakatanggap ng 401 mula sa 67router, muling nagsasagawa ng exchange ang CLI.
 
 ### Pag-setup
 
-1. Gumawa ng OmniRoute API key (Dashboard → API keys) at isang `cursor-api`
+1. Gumawa ng 67router API key (Dashboard → API keys) at isang `cursor-api`
    connection.
 2. Itakda ang CLI na gumamit ng HTTP/1.1 para sa agent stream. Sa
    `~/.cursor/cli-config.json`:
@@ -106,7 +106,7 @@ ito ng ginawang JWT. Kapag nakatanggap ng 401 mula sa OmniRoute, muling nagsasag
    na naka-configure na agent host, at ang mga control-plane RPC lamang ang dadaan sa
    endpoint.
 
-3. Patakbuhin ang CLI gamit ang OmniRoute:
+3. Patakbuhin ang CLI gamit ang 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -115,18 +115,18 @@ ito ng ginawang JWT. Kapag nakatanggap ng 401 mula sa OmniRoute, muling nagsasag
    ```
 
 Lalabas ang bawat hop sa Logs bilang provider na `cursor-api`, request type na `cursor-cli`,
-path na `/api/cursor-cli/<rpc>`, na iniuugnay sa OmniRoute API key at sa
+path na `/api/cursor-cli/<rpc>`, na iniuugnay sa 67router API key at sa
 connection na nagserbisyo rito.
 
 ### Mga uri ng pagkabigo
 
-| Sitwasyon                                              | Tugon sa CLI                                             |
-| ------------------------------------------------------ | -------------------------------------------------------- |
-| Hindi kilalang OmniRoute key at `REQUIRE_API_KEY=true` | 401 `unauthenticated` sa exchange                        |
-| `REQUIRE_API_KEY=false`                                | anonymous session (ginagaya ang gawi ng `/v1/*`)         |
-| Nag-expire / banyaga / binagong session JWT            | 401, muling nagsasagawa ng exchange ang CLI              |
-| Binawi ang OmniRoute API key pagkatapos ng exchange    | 401 sa susunod na RPC                                    |
-| Walang aktibong `cursor-api` connection                | 503 `unavailable`                                        |
-| Tinanggihan ng Cursor ang key ng connection            | 401 `unauthenticated`, inaalis ang naka-cache na session |
-| Hindi maabot ang upstream                              | 502 `unavailable` (nilinis na mensahe)                   |
-| Hindi nakatakda ang `JWT_SECRET`                       | 503 sa exchange                                          |
+| Sitwasyon                                             | Tugon sa CLI                                             |
+| ----------------------------------------------------- | -------------------------------------------------------- |
+| Hindi kilalang 67router key at `REQUIRE_API_KEY=true` | 401 `unauthenticated` sa exchange                        |
+| `REQUIRE_API_KEY=false`                               | anonymous session (ginagaya ang gawi ng `/v1/*`)         |
+| Nag-expire / banyaga / binagong session JWT           | 401, muling nagsasagawa ng exchange ang CLI              |
+| Binawi ang 67router API key pagkatapos ng exchange    | 401 sa susunod na RPC                                    |
+| Walang aktibong `cursor-api` connection               | 503 `unavailable`                                        |
+| Tinanggihan ng Cursor ang key ng connection           | 401 `unauthenticated`, inaalis ang naka-cache na session |
+| Hindi maabot ang upstream                             | 502 `unavailable` (nilinis na mensahe)                   |
+| Hindi nakatakda ang `JWT_SECRET`                      | 503 sa exchange                                          |

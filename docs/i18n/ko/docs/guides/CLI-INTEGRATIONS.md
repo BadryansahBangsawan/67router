@@ -7,10 +7,10 @@
 공유 실행 파일 매니페스트, 제한된 자식 환경 및 영구적인
 Gemini 설정에 대해서는 [CLI 실행 계약](./CLI-LAUNCH-CONTRACTS.md)을 참조하세요.
 
-OmniRoute는 코딩 CLI(Codex, Claude Code, OpenCode, Cline, …)가 OmniRoute를
+67router는 코딩 CLI(Codex, Claude Code, OpenCode, Cline, …)가 67router를
 백엔드로 사용하도록 구성하는 `setup-*` 명령어 제품군을 제공합니다. 따라서
-도구는 **하나의** 엔드포인트와 통신하고 OmniRoute는 자동 폴백을 통해 적절한
-제공자로 라우팅합니다. 각 명령어는 실행 중인 OmniRoute(로컬 또는 원격)에서
+도구는 **하나의** 엔드포인트와 통신하고 67router는 자동 폴백을 통해 적절한
+제공자로 라우팅합니다. 각 명령어는 실행 중인 67router(로컬 또는 원격)에서
 **실시간** 모델 카탈로그를 읽고 **사용자의** 머신에 있는 도구 자체의 구성 파일에
 기록합니다. 도구가 지원하는 경우 API 키는 환경 변수를 통해 참조됩니다.
 도구 전용 환경 파일을 영구적으로 저장하는 명령어는 아래에 별도로 표시되어 있습니다.
@@ -53,7 +53,7 @@ omniroute providers remove <connection-id> --yes
 
 - [Claude Code 구성](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI 구성](./CODEX-CLI-CONFIGURATION.md)
-- [원격 모드](./REMOTE-MODE.md) — 노트북에서 원격 OmniRoute(VPS / Tailnet) 제어
+- [원격 모드](./REMOTE-MODE.md) — 노트북에서 원격 67router(VPS / Tailnet) 제어
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot 확장 프로그램이며, 편집기
   내부에서 이러한 `setup-*` 명령어를 대신 실행할 수도 있습니다
 
@@ -86,7 +86,7 @@ omniroute providers remove <connection-id> --yes
 
 플래그 참고 사항(명령 소스에서 검증됨):
 
-- `--remote <url>` — 원격 OmniRoute에서 카탈로그를 가져옵니다(`--port`
+- `--remote <url>` — 원격 67router에서 카탈로그를 가져옵니다(`--port`
   및 활성 컨텍스트를 재정의함). `--api-key <key>`는 해당 서버의 자격 증명을
   제공합니다(기본값은 `OMNIROUTE_API_KEY` 환경 변수 또는 활성 컨텍스트의 토큰).
 - `--only <patterns>` — 쉼표로 구분된 부분 문자열이며, 일치하는 모델 ID만
@@ -108,7 +108,7 @@ omniroute providers remove <connection-id> --yes
   **Qwen은 `--model`을 반드시 요구하는 유일한 실행 대상입니다** —
   이 옵션 없이 `omniroute run qwen`을 실행하면 명시적인 오류와 함께 종료 코드
   `2`로 종료됩니다.
-- `--port <port>` — 로컬 OmniRoute 포트입니다(기본값 `20128`, `--remote`가
+- `--port <port>` — 로컬 67router 포트입니다(기본값 `20128`, `--remote`가
   설정된 경우 무시됨). 모든 `setup-*` 명령과 두 런처에서 사용할 수 있습니다.
 - `omniroute run` 종료 코드: 하위 CLI 자체의 종료 코드가 그대로 전파됩니다.
   `2` = 잘못된 인수(지원되지 않는 대상, 필수 `--model` 누락, 컨테이너 가드),
@@ -151,7 +151,7 @@ MITM 및 가이드 전용 카탈로그 항목은 명시적인 `setup-*`/수동 �
 
 ## 로컬 사용법
 
-OmniRoute가 `localhost:20128`에서 실행 중인 상태에서 사용하는 도구의 설정 명령만 실행하면 됩니다. 카탈로그는 로컬 서버에서 가져옵니다.
+67router가 `localhost:20128`에서 실행 중인 상태에서 사용하는 도구의 설정 명령만 실행하면 됩니다. 카탈로그는 로컬 서버에서 가져옵니다.
 
 ```bash
 # Codex: 일치하는 모델별 프로필을 ~/.codex/에 작성
@@ -178,8 +178,8 @@ omniroute setup-continue --dry-run
 구성을 전혀 작성하지 않고 실행할 수도 있습니다(환경 변수 주입만 사용):
 
 ```bash
-omniroute launch                 # Claude Code → 로컬 OmniRoute
-omniroute launch-codex           # Codex CLI → 로컬 OmniRoute
+omniroute launch                 # Claude Code → 로컬 67router
+omniroute launch-codex           # Codex CLI → 로컬 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -197,7 +197,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## 원격 사용법
 
-`--remote` + `--api-key`를 사용하여 설정 명령이 원격 OmniRoute를 가리키도록 합니다. 카탈로그는 원격 서버에서 가져오며, 구성은 로컬 머신에 작성됩니다.
+`--remote` + `--api-key`를 사용하여 설정 명령이 원격 67router를 가리키도록 합니다. 카탈로그는 원격 서버에서 가져오며, 구성은 로컬 머신에 작성됩니다.
 
 ```bash
 # 원격 VPS의 OpenCode에서 glm/kimi 모델만 유지
@@ -235,7 +235,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-두 형식 모두 하나의 5dive **인증 프로필**을 작성하며, 이후 해당 프로필에 바인딩된 모든 `claude` 시트가 OmniRoute와 통신합니다. 이 대상에는 다음 세 가지 고유 사항이 있습니다.
+두 형식 모두 하나의 5dive **인증 프로필**을 작성하며, 이후 해당 프로필에 바인딩된 모든 `claude` 시트가 67router와 통신합니다. 이 대상에는 다음 세 가지 고유 사항이 있습니다.
 
 - **플릿 호스트에서 root로 실행됩니다.** 5dive의 동작은 로컬 systemd 유닛과 root 소유 상태 디렉터리에 적용되며, 원격 모드는 없습니다. 이미 root가 아닌 경우 레시피는 `sudo`를 통해 다시 실행됩니다(`--no-sudo`를 사용하면 이 동작을 끄고 대신 명령을 출력합니다).
 - **루프백이 아닌 경우 엔드포인트는 `https://`여야 합니다.** 에이전트의 API 키는 모든 요청에서 해당 URL을 통해 전송되며, 5dive는 외부 머신을 가리키는 평문 엔드포인트를 거부합니다. 사설 LAN 주소도 예외가 아닙니다.
@@ -243,13 +243,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API 키는 **stdin**을 통해 5dive에 전달되므로(`--api-key=-`) `ps` 출력에 절대 나타나지 않습니다.
 
-프로필이 단일 모델이 아닌 OmniRoute **콤보**를 가리키도록 해야 플릿 공급자 장애 조치가 적용됩니다. [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578)에 기록된 실행에서는 기본 엔드포인트가 턴 중간에 완전히 다운되었지만, 에이전트는 대체 엔드포인트에서 남은 단계를 완료했으며 장애를 외부에 노출하지 않았습니다.
+프로필이 단일 모델이 아닌 67router **콤보**를 가리키도록 해야 플릿 공급자 장애 조치가 적용됩니다. [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578)에 기록된 실행에서는 기본 엔드포인트가 턴 중간에 완전히 다운되었지만, 에이전트는 대체 엔드포인트에서 남은 단계를 완료했으며 장애를 외부에 노출하지 않았습니다.
 
 ---
 
 ## 기본 URL 규칙(`/v1`이 필요한 도구)
 
-OmniRoute는 `/v1`에서 OpenAI 인터페이스를, 루트에서 Anthropic 인터페이스를,
+67router는 `/v1`에서 OpenAI 인터페이스를, 루트에서 Anthropic 인터페이스를,
 `/v1beta`에서 네이티브 Gemini 인터페이스를 제공합니다. 각 통합은 해당 도구가
 기대하는 형식에 맞게 구성됩니다(명령 소스에서 확인됨).
 
@@ -271,7 +271,7 @@ OmniRoute는 `/v1`에서 OpenAI 인터페이스를, 루트에서 Anthropic 인�
 ## 업데이트 시 네이티브 의존성 유지: `--include=optional`
 
 `omniroute update`로 업데이트하면(확인 후 또는 `--apply` 사용 시),
-OmniRoute는 `--include=optional`이 포함된 설치 명령을 실행합니다.
+67router는 `--include=optional`이 포함된 설치 명령을 실행합니다.
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -300,15 +300,15 @@ omniroute update --dry-run
 `@google/gemini-cli` 0.50.0을 기준으로 동작이 확인되었습니다. CLI는
 `GOOGLE_GEMINI_BASE_URL`을 따르며, 해당 URL에 대해
 `POST /v1beta/models/<model>:generateContent`(및
-`:streamGenerateContent?alt=sse`) 요청을 보냅니다. 이는 OmniRoute의 네이티브
+`:streamGenerateContent?alt=sse`) 요청을 보냅니다. 이는 67router의 네이티브
 Gemini 인터페이스(`/v1beta`)와 정확히 일치합니다. `omniroute run gemini`는
 이를 자동으로 연결합니다.
 
-- `GOOGLE_GEMINI_BASE_URL` → 활성 OmniRoute 기본 URL(루트, `/v1` 없음);
-- `GEMINI_API_KEY` → 확인된 OmniRoute 자격 증명(옵션/환경 변수/컨텍스트);
+- `GOOGLE_GEMINI_BASE_URL` → 활성 67router 기본 URL(루트, `/v1` 없음);
+- `GEMINI_API_KEY` → 확인된 67router 자격 증명(옵션/환경 변수/컨텍스트);
 - `.gemini/settings.json`에서 `gemini-api-key` 인증을 선택하는 **임시로 격리된
   `GEMINI_CLI_HOME`**. 따라서 저장된 Google OAuth 세션(Code Assist)이
-  OmniRoute를 대상으로 한 실행을 재정의하지 않으며, 종료 후 제거됩니다;
+  67router를 대상으로 한 실행을 재정의하지 않으며, 종료 후 제거됩니다;
 - **환경 변수 정리**: 하위 프로세스 환경에서 `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI`, `GOOGLE_GENAI_USE_GCA`를 제거합니다. 이러한
   변수는 인증을 Vertex/Code Assist로 리디렉션할 수 있습니다. 또한 이중
@@ -331,7 +331,7 @@ Gemini의 작업 공간 신뢰 보호 기능은 헤드리스 모드에서도 계
 ## 실제 스모크 스윕(옵트인)
 
 결정론적 실행 계획 회귀 테스트는 CI에서 실행됩니다(`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). 실제 OmniRoute 서버를 대상으로 실제 바이너리를
+`tests/unit/cli/run-execution.test.ts`). 실제 67router 서버를 대상으로 실제 바이너리를
 검증하기 위한 옵트인 하네스는 `tests/integration/upstream-cli-smoke.int.test.ts`에 있습니다.
 이 하네스는 자동으로 실행되지 않으며(`RUN_CLI_SMOKE=1`이 아니면 모든 하위 테스트를 건너뜀),
 자격 증명의 값이 아닌 환경 변수 이름을 전달하고, 기록된 모든 출력에서 키 형태의 문자열을

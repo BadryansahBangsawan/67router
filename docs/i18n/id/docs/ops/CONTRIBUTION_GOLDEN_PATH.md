@@ -113,7 +113,7 @@ atau pemeriksaan manual terdokumentasi yang sesuai dengan perubahan.
 - Katalog CLI berada secara terpisah di bawah `bin/cli/locales/`.
 - Pertahankan placeholder dan tag ICU secara persis. Jangan terjemahkan nama produk/provider/model,
   nama protokol dan header, perintah, identifier kode/JSON, URL, environment variable, atau
-  istilah terlindungi seperti `OmniRoute`, `OAuth`, `MCP`, dan `A2A`. Daftar sumber saat ini adalah
+  istilah terlindungi seperti `67router`, `OAuth`, `MCP`, dan `A2A`. Daftar sumber saat ini adalah
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Siklus terfokus**
@@ -268,7 +268,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # gunakan kembali tarbal
   `current` serta `previous` kembali ketika pemeriksaan tersebut gagal. Kandidat yang gagal pada
   validasi pertama tidak akan pernah dipromosikan.
 
-Semuanya ditulis di bawah `_artifacts/candidate/` yang diabaikan oleh git; instalasi OmniRoute yang
+Semuanya ditulis di bawah `_artifacts/candidate/` yang diabaikan oleh git; instalasi 67router yang
 sudah ada dan direktori datanya tidak pernah disentuh. CLI yang dipromosikan berada di
 `_artifacts/candidate/current/prefix/bin/omniroute`; jalankan dengan `DATA_DIR` milik Anda sendiri
 saat menggunakannya. Kode keluar: `0` berhasil, `1` validasi atau promosi gagal, `2` kesalahan

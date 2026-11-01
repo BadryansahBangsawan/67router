@@ -214,7 +214,7 @@ Saneringsregler som brukes på `upstreamDetails`:
 3. Dybdegrense: nesting utover 4 nivåer erstattes med strengen `"[truncated]"`.
 4. Tabeller begrenses til 32 elementer.
 
-Bare kallesteder med en tolket feiltekst fra leverandøren skal sende `upstreamDetails`. Interne OmniRoute-feil
+Bare kallesteder med en tolket feiltekst fra leverandøren skal sende `upstreamDetails`. Interne 67router-feil
 (feil ved tolkning av SSE, tomt innhold, blokkeringer fra sikkerhetsmekanismer) må ikke inkludere det.
 
 IKKE send rå `err.stack`, `err.message` eller noen streng fra et kjøretidsunntak til
@@ -225,7 +225,7 @@ Selektiv videreformidling av oppstrøms 4xx-svar bevarer leverandørens sikre JS
 automatisk klientgjenoppretting, men det er ikke videreformidling byte for byte: den rekursive saneringen kjøres alltid
 før serialisering. Sykliske svartekster, svartekster som inneholder BigInt, eller svartekster med ondsinnet `toJSON()` avvises på en sikker måte og er ikke
 kvalifisert for videreformidling. OCR og moderering bruker samme regel; oppstrømssvar som ikke er JSON, er tomme eller
-har feil innholdstype, konverteres til den kanoniske OmniRoute-konvolutten for JSON-feil.
+har feil innholdstype, konverteres til den kanoniske 67router-konvolutten for JSON-feil.
 
 ## Kjent CodeQL-begrensning: egendefinerte saniteringsfunksjoner gjenkjennes ikke
 

@@ -4,7 +4,7 @@
 
 ---
 
-Când OmniRoute rulează în Docker, fluxurile vechi **Import din Cursor IDE** /
+Când 67router rulează în Docker, fluxurile vechi **Import din Cursor IDE** /
 `cursor-agent` eșuează deoarece containerul nu poate vedea instalarea Cursor de
 pe gazdă. Folosiți în schimb **Autentificare cu Cursor** (PKCE deep-control).
 
@@ -15,7 +15,7 @@ pe gazdă. Folosiți în schimb **Autentificare cu Cursor** (PKCE deep-control).
    În Docker Desktop pentru macOS, baza de date a IDE-ului de pe gazdă nu este
    montată implicit, iar sistemul de operare al containerului este Linux chiar
    și atunci când gazda este Darwin.
-2. **Lipsește binarul `cursor-agent`** — Imaginile oficiale OmniRoute nu includ
+2. **Lipsește binarul `cursor-agent`** — Imaginile oficiale 67router nu includ
    `cursor-agent`. Anterior, Modelele disponibile executau
    `cursor-agent --list-models` și reveneau la un catalog static în caz de eșec.
 3. **Binar greșit** — **Nu** montați prin bind un `cursor-agent` pentru macOS
@@ -25,12 +25,12 @@ pe gazdă. Folosiți în schimb **Autentificare cu Cursor** (PKCE deep-control).
 
 1. Deschideți **Panou de control → Furnizori → Cursor**.
 2. Selectați fila **Autentificare cu Cursor**.
-3. Faceți clic pe **Autentificare cu Cursor** — OmniRoute deschide
+3. Faceți clic pe **Autentificare cu Cursor** — 67router deschide
    `https://cursor.com/loginDeepControl?…` în browserul de pe **gazdă**.
 4. Aprobați autentificarea în browser, apoi reveniți la panoul de control.
-   OmniRoute interoghează periodic `api2.cursor.sh/auth/poll` până la primirea
+   67router interoghează periodic `api2.cursor.sh/auth/poll` până la primirea
    tokenurilor.
-5. OmniRoute stochează tokenurile de **acces + reîmprospătare** și le
+5. 67router stochează tokenurile de **acces + reîmprospătare** și le
    reîmprospătează prin `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Această metodă nu necesită Cursor IDE sau `cursor-agent` în interiorul
@@ -40,11 +40,11 @@ containerului.
 
 Cu o conexiune autentificată, **Modele disponibile / Sincronizare automată**
 preferă catalogul HTTP `AiService/AvailableModels` al Cursor, utilizând tokenul
-bearer al conexiunii. Dacă această metodă eșuează, OmniRoute încearcă în
+bearer al conexiunii. Dacă această metodă eșuează, 67router încearcă în
 continuare `cursor-agent` de pe gazdă (când este prezent), apoi datele inițiale
 din registrul static.
 
-OmniRoute expune întotdeauna **`auto`** în catalog (afișat drept „Auto”), plus
+67router expune întotdeauna **`auto`** în catalog (afișat drept „Auto”), plus
 modurile de rutare în stil OpenCodex **`auto-cost`**, **`auto-balance`** și
 **`auto-intelligence`**. La nivelul protocolului, acestea sunt mapate la modelul
 `default` al Cursor (cu un `ModelParameter` `optimization` pentru cele trei
@@ -98,7 +98,7 @@ reimportați tokenurile (importul exclusiv din IDE nu mai este necesar).
 ## Răspunsuri goale / utilizare epuizată
 
 Când Cursor acceptă o rulare, dar nu returnează text de la asistent (situație
-frecventă când utilizarea premium este epuizată), OmniRoute afișează o eroare
+frecventă când utilizarea premium este epuizată), 67router afișează o eroare
 **429** relevantă (indicii privind cota) sau **502** cu îndrumări — nu doar
 „Furnizorul a returnat conținut gol”. Erorile de streaming precum
 `not_found: AI Model Not Found` (fereastra de utilizare epuizată) sunt
@@ -110,7 +110,7 @@ Cursor.
 
 ## Versiunea clientului (fără interfață grafică)
 
-Fără o instalare locală `cursor-agent`, OmniRoute determină
+Fără o instalare locală `cursor-agent`, 67router determină
 `x-cursor-client-version` prin variabila de mediu `CURSOR_AGENT_CLI_VERSION`,
 apoi printr-o extragere stocată în cache pe disc din scriptul de instalare
 Cursor și, în final, printr-un ID de versiune fixat. Suprascrieți valoarea cu

@@ -9,7 +9,7 @@
 > hvilke ruter og svarstier hooksne når, de samlede deaktiveringsheadere (#16412), injektionsblokeringstilstand som en obligatorisk grænse (#16413), og hvad der ser et svar før post-call)
 
 Guardrails håndhæver sikkerheds-, politik- og indholdstransformationer ved grænsen
-mellem OmniRoute og opstrømsudbydere. Hver guardrail kan inspicere (og
+mellem 67router og opstrømsudbydere. Hver guardrail kan inspicere (og
 valgfrit afvise, transformere eller annotere) forespørgsels-payloads (`preCall`) og
 opstrømssvar (`postCall`).
 
@@ -112,7 +112,7 @@ Når den kaldendes API-nøgle begrænser `allowedConnections`, kvotepuljer
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), vælger broen kun
 omdirigerings- og beskrivelsesmodeller, som nøglen må bruge, på forbindelser
 som nøglen må bruge. Beskrivelseskaldet går derefter altid gennem
-OmniRoute-selvsløjfen med `x-omniroute-self-loop-key-id`-headeren, så den
+67router-selvsløjfen med `x-omniroute-self-loop-key-id`-headeren, så den
 modtagende chatforespørgsel håndhæver nøglens forbindelses- og modelpolitik
 igen. `enforceApiKeyPolicy()` respekterer kun den header sammen med
 selvsløjfe-beareren, så den kun kan indsnævre adgang, og et id der ikke kan
@@ -143,7 +143,7 @@ OCR-nøjagtigheden for præcis den teksttransskriptionsopgave denne prompt beder
 om, så beskrivelseskaldet selv anmoder altid om høj detaljegrad uanset hvilket
 detaljeniveau den oprindelige indgående forespørgsel brugte. Dette påvirker
 kun den interne beskrivelsesforespørgsels body; det ændrer ikke hvordan
-OmniRoute videresender den kaldendes egen `image_url.detail` på den primære
+67router videresender den kaldendes egen `image_url.detail` på den primære
 forespørgsel — den standard anvendes separat, og kun for registrerede
 OpenCode-klienter, i `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`).
@@ -248,7 +248,7 @@ nye side; det ejer ikke længere en anden kopi af formularen. Media Providers li
 også Image-to-Text- og Speech-to-Text-arbejdsgange til de tilsvarende Modality
 Bridge-faner uden at fjerne det eksisterende Speech-to-Text-playground.
 
-**Self-loop admission-bypass:** når describe-kaldet routes gennem OmniRoutes
+**Self-loop admission-bypass:** når describe-kaldet routes gennem 67routers
 egen `/v1` self-loop (ikke-standard udbydermodel), sender underanmodningen
 `x-omniroute-admission-bypass: internal` og autentificeres med den opløste
 self-loop-legitimation — den lokale `sk_omniroute`-sentinel i lokal tilstand eller den
@@ -380,7 +380,7 @@ Manglende filtre, misdannet/tom evidens, en detektorfejl eller timeout i det afg
 
 Hver ramme er begrænset til 4 MiB, alle rå rammer tilsammen til 23 MiB, og det
 serialiserede broker-svar til 32 MiB. En privat midlertidig mappe fjernes i
-`finally`. OmniRoute bundler ikke FFmpeg og accepterer ikke en brugerdefineret
+`finally`. 67router bundler ikke FFmpeg og accepterer ikke en brugerdefineret
 sti til en eksekverbar fil. Før billedtekstning anvender broen et konservativt
 visuelt deduplikeringstrin: hvert JPEG reduceres til en 16×16-gråtonebuffer og
 sammenlignes kun med den sidst bevarede ramme. Ved et anmodet billedtekstbudget
@@ -428,7 +428,7 @@ videodel, når de allerede besidder tidsjusteret tekst. Hver cue skal indeholde
 og en whitelistet `source` (`client`, `embedded` eller `audio-bridge`);
 `confidence` har standardværdien `1` og skal forblive mellem `0` og `1`.
 Eksakte duplikat-cues slås sammen.
-OmniRoute starter aldrig transskription ud fra disse metadata: validerede cues
+67router starter aldrig transskription ud fra disse metadata: validerede cues
 kopieres ind i det beskrevne resultat med kilde, confidence og interval og
 gengives som ikke-betroede observationer ved siden af rammernes billedtekster.
 Ugyldig tekst, tekst uden for intervallet eller tekst uden proveniens afvises
@@ -990,7 +990,7 @@ udløsning) har to jobs:
   previous instructions…", DAN-lignende jailbreaks) verificerer, at svaret indeholder
   `error.code === "SECURITY_001"`, dvs. at guard'en faktisk afviste forespørgslen.
 - **`garak` (rådgivende)** — kører garak `--probes promptinject,dan,leakreplay`
-  mod en lokal OmniRoute-instans (`http://localhost:20128/v1`). Betinget af en
+  mod en lokal 67router-instans (`http://localhost:20128/v1`). Betinget af en
   provider-secret (`PROMPTFOO_PROVIDER_KEY`); springes elegant over og har suffikset
   `|| true`, så den rapporterer uden at lade CI fejle.
 

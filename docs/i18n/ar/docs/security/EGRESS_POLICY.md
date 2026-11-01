@@ -8,7 +8,7 @@
 
 > **المصدر المعتمد:** `open-sse/utils/proxyFamily.ts`، `open-sse/utils/proxyDispatcher.ts`، `open-sse/utils/proxyFetch.ts`، `open-sse/utils/socksConnectorWithFamily.ts`، `open-sse/utils/proxyFamilyResolve.ts`، `src/shared/validation/schemas.ts`، `src/lib/db/proxies.ts`، `src/lib/db/upstreamProxy.ts`، `src/lib/db/migrations/099_proxy_family.sql`
 
-يتيح OmniRoute لكل وكيل حمل **توجيه لعائلة عناوين الخروج**. افتراضيًا، يختار نظام التشغيل IPv4 أو IPv6 (المكدس المزدوج، "Happy Eyeballs"). عند ضبط التوجيه على `ipv4` أو `ipv6`، يثبّت OmniRoute كل اتصال عبر ذلك الوكيل على العائلة المختارة و**يفشل بشكل مغلق** بدلًا من الرجوع إلى العائلة الأخرى.
+يتيح 67router لكل وكيل حمل **توجيه لعائلة عناوين الخروج**. افتراضيًا، يختار نظام التشغيل IPv4 أو IPv6 (المكدس المزدوج، "Happy Eyeballs"). عند ضبط التوجيه على `ipv4` أو `ipv6`، يثبّت 67router كل اتصال عبر ذلك الوكيل على العائلة المختارة و**يفشل بشكل مغلق** بدلًا من الرجوع إلى العائلة الأخرى.
 
 توثّق هذه الصفحة ماهية التوجيه، وسبب وجوده، ومكان تهيئته، وكيفية حسمه في وقت التشغيل.
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## كيفية تحليل `auto`
 
-عندما تكون قيمة `family` هي `auto`، فإن OmniRoute **لا** يُلحق أي توجيه — ويُستخدم عنوان URL الخاص بالوكيل كما هو، وتُحدَّد عائلة الاتصال بصورة متأصلة.
+عندما تكون قيمة `family` هي `auto`، فإن 67router **لا** يُلحق أي توجيه — ويُستخدم عنوان URL الخاص بالوكيل كما هو، وتُحدَّد عائلة الاتصال بصورة متأصلة.
 
 أثناء إنشاء عنوان URL (`proxyConfigToUrl` / `normalizeProxyUrl` في `open-sse/utils/proxyDispatcher.ts`)، ينتج الوكيل ذو القيمة `auto` عنوان URL عاديًا دون علامة:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 ينتقل أي توجيه غير `auto` على هيئة علامة استعلام اصطناعية واحدة — `?family=ipv4` أو `?family=ipv6` — تُضاف مرة واحدة إلى عنوان URL الموحّد للوكيل. تحرص `normalizeProxyUrl` على إزالة هذه العلامة وإعادة إضافتها مرة واحدة بالضبط، بحيث لا تتسبب مطلقًا في إفساد تحليل المنفذ.
 
-عند إنشاء الموزّع، تُقرأ العلامة وتُحوَّل إلى عائلة اتصال محددة. إذا كان المضيف عنوان IP حرفيًا من العائلة **المعاكسة**، فإن OmniRoute يطرح خطأً (يؤدي التعارض إلى الإغلاق الآمن):
+عند إنشاء الموزّع، تُقرأ العلامة وتُحوَّل إلى عائلة اتصال محددة. إذا كان المضيف عنوان IP حرفيًا من العائلة **المعاكسة**، فإن 67router يطرح خطأً (يؤدي التعارض إلى الإغلاق الآمن):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## توافق SOCKS5
 
-يعمل تثبيت العائلة مع وكلاء SOCKS5، لكن `fetch-socks` القياسي لا يتيح خيارات المقبس اللازمة لتثبيت عائلة قفزة الوكيل. يوفّر OmniRoute موصّلًا خاصًا به لهذا الغرض:
+يعمل تثبيت العائلة مع وكلاء SOCKS5، لكن `fetch-socks` القياسي لا يتيح خيارات المقبس اللازمة لتثبيت عائلة قفزة الوكيل. يوفّر 67router موصّلًا خاصًا به لهذا الغرض:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

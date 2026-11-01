@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Card, Button, Input, ModelSelectField, Select, Toggle } from "@/shared/components";
+import { Button, Input, ModelSelectField, Select, Toggle } from "@/shared/components";
 import Icon from "@/shared/components/Icon";
 import { matchesSearch } from "@/shared/utils/turkishText";
+import { SettingsSection } from "./SettingsSection";
 import FusionDefaultsFields from "./FusionDefaultsFields";
 import {
   ROUTING_STRATEGIES,
@@ -322,25 +323,21 @@ export default function ComboDefaultsTab() {
   };
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-4">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
-          <Icon name="tune" size={20} />
-        </div>
-        <h3 className="text-lg font-semibold">
-          {translateOrFallback(t, "comboDefaultsTitle", "Default Routing & Combo Settings")}
-        </h3>
-        <span className="text-xs text-text-muted ml-auto">{t("globalComboConfig")}</span>
-        {status.message && (
+    <SettingsSection
+      title={translateOrFallback(t, "comboDefaultsTitle", "Default Routing & Combo Settings")}
+      description={t("globalComboConfig")}
+      action={
+        status.message ? (
           <span
-            className={`text-xs font-medium ml-2 ${
+            className={`text-xs font-medium ${
               status.type === "success" ? "text-success" : "text-error"
             }`}
           >
             {status.message}
           </span>
-        )}
-      </div>
+        ) : null
+      }
+    >
       <div className="mb-4 rounded-lg border border-info/20 bg-info/5 p-3">
         <p className="text-xs font-medium text-info">
           {translateOrFallback(t, "routingAdvancedGuideTitle", "Advanced routing guidance")}
@@ -924,6 +921,6 @@ export default function ComboDefaultsTab() {
           </Button>
         </div>
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

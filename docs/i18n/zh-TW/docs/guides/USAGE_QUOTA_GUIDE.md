@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**：OmniRoute 會追蹤每個請求的權杖使用量、計算成本、強制執行每個 API 金鑰的配額，並在儀表板中呈現分析資料。本指南將說明這一切如何運作。
+> **TL;DR**：67router 會追蹤每個請求的權杖使用量、計算成本、強制執行每個 API 金鑰的配額，並在儀表板中呈現分析資料。本指南將說明這一切如何運作。
 
 **來源：**
 
@@ -17,7 +17,7 @@
 
 ## 概覽
 
-每個流經 OmniRoute 的請求都會產生一筆**使用量記錄**，其中包含：
+每個流經 67router 的請求都會產生一筆**使用量記錄**，其中包含：
 
 - **識別資訊**：使用了哪個 API 金鑰、提供者、模型及組合
 - **權杖**：提示詞權杖、補全權杖、快取權杖及總量
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-對於未傳回使用量的提供者（例如某些使用 Web Cookie 的提供者），OmniRoute 會使用 `每個權杖約 4 個字元` 的啟發式方法**估算**權杖數量（請參閱 `open-sse/services/autoCombo/pipelineRouter.ts`）。
+對於未傳回使用量的提供者（例如某些使用 Web Cookie 的提供者），67router 會使用 `每個權杖約 4 個字元` 的啟發式方法**估算**權杖數量（請參閱 `open-sse/services/autoCombo/pipelineRouter.ts`）。
 
 ### 快取權杖
 
-OmniRoute 會分別追蹤 `cached_tokens` 與 `prompt_tokens`，原因如下：
+67router 會分別追蹤 `cached_tokens` 與 `prompt_tokens`，原因如下：
 
 - Anthropic 提示詞快取會對快取權杖收取較低的費率（一般費率的 10%）
 - 某些提供者會傳回 `cache_read_input_tokens`，這些權杖應採用不同的計價方式
@@ -117,7 +117,7 @@ cost =
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-對於沒有定價資料的模型，OmniRoute 會改用內部平均費率來**估算成本**（資料來源為 LiteLLM 的定價資料）。
+對於沒有定價資料的模型，67router 會改用內部平均費率來**估算成本**（資料來源為 LiteLLM 的定價資料）。
 
 ---
 

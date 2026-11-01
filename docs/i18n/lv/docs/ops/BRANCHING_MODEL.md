@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute izmanto **paralēlo ciklu** laidienu modeli: aktīvajam ciklam ir
+67router izmanto **paralēlo ciklu** laidienu modeli: aktīvajam ciklam ir
 paredzēts atsevišķs `release/vX.Y.Z` zars, `main` ir paredzēts publicētajai
 versiju līnijai, un, izlaižot cikla laidienu, tiek izveidots nemainīgs
 `vX.Y.Z` tags. Ir sagaidāms, ka izmaiņu iesniegumi nonāk gan `release/*`, _gan_

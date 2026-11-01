@@ -1,14 +1,7 @@
 import { getFeatureFlagOverride } from "@/lib/db/featureFlags";
 import { parseEnvBoolean } from "@/shared/utils/envBoolean";
 import { resolveFeatureFlag } from "@/shared/utils/featureFlags";
-import {
-  OutboundUrlGuardError,
-  PROVIDER_URL_BLOCKED_MESSAGE,
-  isCloudMetadataHost,
-  isPrivateHost,
-  parseOutboundUrl,
-  type OutboundUrlGuardMode,
-} from "./outboundUrlGuard";
+import type { OutboundUrlGuardMode } from "./outboundUrlGuard";
 
 // #7682: this module is the DB/feature-flag-backed half of the outbound URL guard, split out
 // of `./outboundUrlGuard.ts` so the CLI (`omniroute setup-opencode`, loaded via tsx with no
@@ -104,7 +97,7 @@ export function areLocalProviderUrlsAllowed(): boolean {
 }
 
 /**
- * Guard mode for the provider VALIDATION/use path (not webhooks or remote images). Precedence:
+ * Guard mode for the provider VALIDATION/use path (not remote images). Precedence:
  *  1. explicit full opt-in (`arePrivateProviderUrlsAllowed`) → "none" (no checks; power users).
  *  2. local-first default (`areLocalProviderUrlsAllowed`) → "block-metadata" (allow LAN, block IMDS).
  *  3. otherwise → "public-only" (strict).
@@ -113,35 +106,4 @@ export function getProviderValidationGuard(): OutboundUrlGuardMode {
   if (arePrivateProviderUrlsAllowed()) return "none";
   if (areLocalProviderUrlsAllowed()) return "block-metadata";
   return "public-only";
-}
-
-/**
- * Webhook variant of `parseAndValidatePublicUrl`. Webhooks legitimately point at
- * internal services (n8n, Home Assistant, a LAN box) in Docker/self-hosted deployments,
- * so the private-host block is gated behind the same explicit opt-in used for private
- * provider URLs (`OMNIROUTE_ALLOW_PRIVATE_PROVIDER_URLS`, default OFF). Protocol and
- * embedded-credential checks in `parseOutboundUrl` remain unconditional. (#3269)
- */
-export function parseAndValidateWebhookUrl(input: string | URL) {
-  const url = parseOutboundUrl(input);
-
-  // Cloud-metadata / link-local endpoints are NEVER a valid webhook target — block them
-  // even when the private opt-in is enabled (SSRF→IAM-credential pivot). (#3269)
-  if (isCloudMetadataHost(url.hostname)) {
-    throw new OutboundUrlGuardError(PROVIDER_URL_BLOCKED_MESSAGE, {
-      code: "OUTBOUND_URL_GUARD_BLOCKED",
-      url: url.toString(),
-      hostname: url.hostname || null,
-    });
-  }
-
-  if (!arePrivateProviderUrlsAllowed() && isPrivateHost(url.hostname)) {
-    throw new OutboundUrlGuardError(PROVIDER_URL_BLOCKED_MESSAGE, {
-      code: "OUTBOUND_URL_GUARD_BLOCKED",
-      url: url.toString(),
-      hostname: url.hostname || null,
-    });
-  }
-
-  return url;
 }

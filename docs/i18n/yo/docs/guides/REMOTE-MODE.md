@@ -4,7 +4,7 @@
 
 ---
 
-Ṣi `omniroute` CLI ṣiṣẹ́ lórí kọ̀ǹpútà alágbèéká rẹ nígbà tí OmniRoute fúnra rẹ̀ ń ṣiṣẹ́ níbòmíràn
+Ṣi `omniroute` CLI ṣiṣẹ́ lórí kọ̀ǹpútà alágbèéká rẹ nígbà tí 67router fúnra rẹ̀ ń ṣiṣẹ́ níbòmíràn
 (VPS kan, olupin ilé kan, ẹ̀rọ míì lórí Tailnet rẹ). O wọlé lẹ́ẹ̀kan pẹ̀lú
 `omniroute connect`, láti ìgbà náà lọ, **gbogbo** àṣẹ CLI yóò tọ́ka sí olupin
 jíjìn yẹn — àwọn àṣẹ kan náà, àbájáde kan náà, àmọ́ a ó ṣiṣẹ́ wọn lórí olupin jíjìn náà.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← ó kọ prófáìlì Codex agbèg
 ## Bí ó ṣe ń ṣiṣẹ́
 
 ```
-kọ̀ǹpútà alágbèéká rẹ                     OmniRoute jíjìn (VPS)
+kọ̀ǹpútà alágbèéká rẹ                     67router jíjìn (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (ọ̀rọ̀ aṣínà → tóókì)       │
 │  context: vps      │ ───────────────►  │ ó ṣẹ̀dá tóókì ìráyè tí a ní ààlà │
@@ -106,14 +106,14 @@ apèsè, kì í ṣe lórí ẹ̀rọ rẹ, nítorí náà ojú-ìwé ìfọwọ
 kò sì ní fi kóòdù kankan jáde** — ọ̀nà ìrànwọ́ àtẹ̀yìnwá “lẹ URL callback náà”
 kò ní nǹkan kankan láti lẹ̀. (Èyí jẹ́ ìdíwọ́ láti ọ̀dọ̀ Google: ìdádúró kan náà
 máa ń ṣẹlẹ̀ nínú proxy èyíkéyìí tí ó bá lo desktop client Antigravity tí a so mọ́ ọn,
-kì í ṣe OmniRoute nìkan.)
+kì í ṣe 67router nìkan.)
 
 Dashboard náà máa ń ṣàwárí èyí kí o tó di mọ́lẹ̀: ṣíṣí **Providers → Antigravity →
 Connect** láti àdírẹ́sì tí kì í ṣe localhost máa rọ́pò àkíyèsí gbogbogbò “da URL callback
 kọ” pẹ̀lú àwọn ojútùú méjì tó wà nísàlẹ̀, tí host àti port rẹ ti kún sínú ọ̀kọ̀ọ̀kan.
 (Àdírẹ́sì LAN náà wúlò — `192.168.x.x` kì í ṣe localhost ní ti callback yìí.)
 
-Ọ̀nà méjì tí a ṣe àtìlẹ́yìn fún ló wà láti so Antigravity pọ̀ mọ́ OmniRoute jíjìnnà.
+Ọ̀nà méjì tí a ṣe àtìlẹ́yìn fún ló wà láti so Antigravity pọ̀ mọ́ 67router jíjìnnà.
 
 ### Àṣàyàn A — olùrànlọ́wọ́ ìwọlé agbègbè (a dábàá rẹ̀)
 
@@ -151,7 +151,7 @@ npx omniroute login antigravity --no-push
 
 Lẹ́yìn náà, nínú dashboard **jíjìnnà** náà: **Providers → Antigravity → Connect**, kí o
 sì lẹ̀ blob `omniroute-cred-v1.…` náà sínú ààyè **Step 2** (ó gba yálà URL callback
-tàbí blob ẹ̀rí ìdánimọ̀). OmniRoute máa tú ìtumọ̀ rẹ̀, ó máa ṣiṣẹ́ ìbẹ̀rẹ̀-lílo Cloud
+tàbí blob ẹ̀rí ìdánimọ̀). 67router máa tú ìtumọ̀ rẹ̀, ó máa ṣiṣẹ́ ìbẹ̀rẹ̀-lílo Cloud
 Code ní ẹ̀gbẹ́ apèsè, ó sì máa tọ́jú àsopọ̀ náà.
 
 > Blob náà ní refresh token nínú — tọ́jú rẹ̀ bí ọ̀rọ̀ aṣínà. Ní ọ̀nà ìfiránṣẹ́, a máa
@@ -192,7 +192,7 @@ nítorí náà kò sí provider-specific port kejì láti ṣe tunnel fún.
 ## Ṣíṣopọ̀ Codex / Grok lórí ìfisórí ẹ̀rọ jíjìn (àwọn olùpèsè loopback tí a ti ṣètò dúró)
 
 Codex, xAI (`xai-oauth`) àti Grok CLI (`grok-cli`) forúkọsílẹ̀ `redirect_uri`
-loopback **tí a ti ṣètò dúró** pẹ̀lú ìṣàfilọ́lẹ̀ OAuth wọn. OmniRoute kò lè yí i padà —
+loopback **tí a ti ṣètò dúró** pẹ̀lú ìṣàfilọ́lẹ̀ OAuth wọn. 67router kò lè yí i padà —
 olùpèsè náà máa ń dá aṣàwákiri padà sí àdírẹ́sì kan náà tí a ti kọ sínú rẹ̀:
 
 | Olùpèsè     | Callback tí a ti ṣètò dúró tí olùpèsè ń darí sí |
@@ -202,7 +202,7 @@ olùpèsè náà máa ń dá aṣàwákiri padà sí àdírẹ́sì kan náà t�
 | `grok-cli`  | `http://127.0.0.1:56122/callback`               |
 
 `localhost` níbẹ̀ túmọ̀ sí **ẹ̀rọ tí aṣàwákiri ń ṣiṣẹ́ lórí rẹ̀**, nígbà tí olupin
-callback PKCE ti OmniRoute ń fetí sí loopback **olupin náà**. Ṣí dashboard náà ní
+callback PKCE ti 67router ń fetí sí loopback **olupin náà**. Ṣí dashboard náà ní
 àdírẹ́sì LAN bíi `http://192.168.0.15:20128`, àwọn méjèèjì kì yóò sì pàdé: kóòdù
 àṣẹ ni a máa fi ránṣẹ́ sí `localhost:1455` kọ̀ǹpútà alágbèéká tirẹ, níbi tí kò sí
 ohunkóhun tó ń fetí sí, olùpèsè náà yóò sì kuna láti wọlé láìfi àṣìṣe hàn.
@@ -221,7 +221,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Àwọn ìdarí-síwájú méjì ni a nílò, ìdarí ọ̀kan ṣoṣo síwájú sì tún máa ń kuna:
 
 - **`20128`** (port dashboard) ń mú kí origin jẹ́ localhost gidi, èyí sì ni ohun tó
-  ń mú kí OmniRoute bẹ̀rẹ̀ olupin callback PKCE rárá — origin LAN kì í dé
+  ń mú kí 67router bẹ̀rẹ̀ olupin callback PKCE rárá — origin LAN kì í dé
   ẹ̀ka yẹn.
 - **`1455`** (port callback tí olùpèsè ṣètò dúró) ni ibi tí a ti ń dá aṣàwákiri
   padà sí; ó gbọ́dọ̀ gba inú tunnel kọjá sí loopback olupin náà.
@@ -337,7 +337,7 @@ omniroute contexts current         # olupin ti nṣiṣẹ lọwọ, ipo ijẹri
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

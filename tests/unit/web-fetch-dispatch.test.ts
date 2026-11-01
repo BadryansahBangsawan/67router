@@ -13,8 +13,6 @@ const TEST_DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "omniroute-web-fetch
 process.env.DATA_DIR = TEST_DATA_DIR;
 
 const coreDb = await import("../../src/lib/db/core.ts");
-const { skillRegistry } = await import("../../src/lib/skills/registry.ts");
-const { skillExecutor } = await import("../../src/lib/skills/executor.ts");
 const { handleToolCallExecution } = await import("../../src/lib/skills/interception.ts");
 const { builtinSkills } = await import("../../src/lib/skills/builtins.ts");
 const { OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME } =
@@ -22,15 +20,7 @@ const { OMNIROUTE_WEB_FETCH_FALLBACK_TOOL_NAME } =
 
 const originalWebFetchHandler = builtinSkills.web_fetch;
 
-function resetRuntime() {
-  skillRegistry["registeredSkills"].clear();
-  skillRegistry["versionCache"].clear();
-  skillExecutor["handlers"].clear();
-  skillExecutor.setTimeout(50);
-}
-
 test.beforeEach(() => {
-  resetRuntime();
   coreDb.resetDbInstance();
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
   fs.mkdirSync(TEST_DATA_DIR, { recursive: true });
@@ -38,7 +28,6 @@ test.beforeEach(() => {
 
 test.after(() => {
   builtinSkills.web_fetch = originalWebFetchHandler;
-  resetRuntime();
   coreDb.resetDbInstance();
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 });

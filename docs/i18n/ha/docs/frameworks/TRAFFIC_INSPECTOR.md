@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector shi ne mai gyara matsalolin zirga-zirgar HTTPS da aka gina a cikin OmniRoute — kayan aiki irin na Charles Proxy / mitmweb / HTTP Toolkit wanda yake **fahimtar LLM** kuma yake **fahimtar wakilai**. Yana nan a `/dashboard/tools/traffic-inspector` kuma yana karɓar zirga-zirga kai-tsaye daga hanyoyin ɗaukar bayanai har guda 5 a lokaci guda.
+Traffic Inspector shi ne mai gyara matsalolin zirga-zirgar HTTPS da aka gina a cikin 67router — kayan aiki irin na Charles Proxy / mitmweb / HTTP Toolkit wanda yake **fahimtar LLM** kuma yake **fahimtar wakilai**. Yana nan a `/dashboard/tools/traffic-inspector` kuma yana karɓar zirga-zirga kai-tsaye daga hanyoyin ɗaukar bayanai har guda 5 a lokaci guda.
 
 **Wurin dashboard:** `/dashboard/tools/traffic-inspector`
 **Rukunin sidebar:** Tools (bayan AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector shi ne mai gyara matsalolin zirga-zirgar HTTPS da aka gina a c
 
 ### Abin da ya sa Traffic Inspector ya bambanta
 
-| Fasali                                                                                    | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Mai tushen yanar gizo                                                                     |    ✓    |    ✗    |    ✗    |                ✓                |
-| Buɗaɗɗen tushe                                                                            |    ✓    |    ✗    | ɓangare |                ✓                |
-| **Mai fahimtar wakilai** (ya san ko buƙatar ta fito daga Antigravity/Copilot/da sauransu) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Mai fahimtar LLM** (yana fassara tsarin OpenAI/Anthropic/Gemini, tokens, model)         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ana iya ganin taswirar model** (gemini-3-flash → claude-sonnet-4.7)                     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Rarrabe latency na proxy/upstream**                                                     | ɓangare |    ✗    |    ✗    |                ✓                |
-| **Haɗe da tsarin OmniRoute** na routing, fallback, da cost                                |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Gyaran proxy na dukkan tsarin** (kowace manhaja a kan na’urar)                          |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Ɗaukar bayanan host na musamman** (juya DNS bisa kowane host)                           |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Yanayin env na HTTP_PROXY**                                                             |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Duban tattaunawa** (kumfa masu zagaye da yawa, tool_use/tool_result)                    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Mai haɗa rafin SSE** (sake ginawa daga delta events)                                    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Rikodin zaman aiki** (mai suna, ana iya fitarwa zuwa .har/.jsonl)                       |    ✗    |    ✓    |    ✓    |                ✓                |
+| Fasali                                                                                    | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ----------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Mai tushen yanar gizo                                                                     |    ✓    |    ✗    |    ✗    |               ✓                |
+| Buɗaɗɗen tushe                                                                            |    ✓    |    ✗    | ɓangare |               ✓                |
+| **Mai fahimtar wakilai** (ya san ko buƙatar ta fito daga Antigravity/Copilot/da sauransu) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Mai fahimtar LLM** (yana fassara tsarin OpenAI/Anthropic/Gemini, tokens, model)         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ana iya ganin taswirar model** (gemini-3-flash → claude-sonnet-4.7)                     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Rarrabe latency na proxy/upstream**                                                     | ɓangare |    ✗    |    ✗    |               ✓                |
+| **Haɗe da tsarin 67router** na routing, fallback, da cost                                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Gyaran proxy na dukkan tsarin** (kowace manhaja a kan na’urar)                          |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Ɗaukar bayanan host na musamman** (juya DNS bisa kowane host)                           |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Yanayin env na HTTP_PROXY**                                                             |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Duban tattaunawa** (kumfa masu zagaye da yawa, tool_use/tool_result)                    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Mai haɗa rafin SSE** (sake ginawa daga delta events)                                    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Rikodin zaman aiki** (mai suna, ana iya fitarwa zuwa .har/.jsonl)                       |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Tsarin gine-gine a sakin layi guda
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true idan martanin SSE ne
   mappedTo: string | null; // taken x-omniroute-mapped
-  costEstimateUsd: number | null; // kimanta kuɗi bisa farashin OmniRoute
+  costEstimateUsd: number | null; // kimanta kuɗi bisa farashin 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Ba a mayar da wakilin tsarin yadda yake ba
 
-Idan OmniRoute ya samu matsala yayin da yanayin wakilin gabaɗayan tsarin yake aiki:
+Idan 67router ya samu matsala yayin da yanayin wakilin gabaɗayan tsarin yake aiki:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Asalin hanya: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Jera buƙatu (ana iya tacewa: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Cikakkun bayanan buƙata guda ɗaya                                                    |
 | DELETE | `/requests`                 | Share ma'ajiyar wucin gadi ta cikin ƙwaƙwalwa                                        |
-| POST   | `/requests/{id}/replay`     | Sake aiwatar da buƙatar iri ɗaya ta na'ura mai ba da hanya ta OmniRoute              |
+| POST   | `/requests/{id}/replay`     | Sake aiwatar da buƙatar iri ɗaya ta na'ura mai ba da hanya ta 67router               |
 | PUT    | `/requests/{id}/annotation` | Ajiye ko sabunta bayanin kula kan wata buƙata                                        |
 
 ### WebSocket

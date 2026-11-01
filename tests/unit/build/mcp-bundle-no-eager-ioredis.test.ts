@@ -20,7 +20,7 @@ import { join } from "node:path";
 // This test reproduces the exact bundling step used at publish time and
 // asserts the compiled output never contains a top-level static `ioredis`
 // import — it must stay a lazy `await import("ioredis")`, matching the
-// established soft-dependency pattern in src/lib/quota/redisQuotaStore.ts.
+// established soft-dependency pattern in src/shared/utils/rateLimiter.ts.
 
 const repoRoot = process.cwd();
 
@@ -51,10 +51,10 @@ test("MCP server bundle has no top-level static import of ioredis", () => {
       bundled,
       /^import\s+.*["']ioredis["'];?\s*$/m,
       "MCP bundle must not eagerly (statically) import 'ioredis' at the top level — " +
-        'it must stay a lazy `await import("ioredis")` (see src/lib/quota/redisQuotaStore.ts)'
+        'it must stay a lazy `await import("ioredis")` (see src/shared/utils/rateLimiter.ts)'
     );
 
-    // The lazy dynamic import from redisQuotaStore.ts must still be present —
+    // The lazy dynamic import from rateLimiter.ts must still be present —
     // proves the assertion above isn't vacuously true (e.g. ioredis missing entirely).
     assert.match(
       bundled,

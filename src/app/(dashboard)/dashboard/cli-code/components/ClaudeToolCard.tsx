@@ -370,7 +370,7 @@ export default function ClaudeToolCard({
                 <div className="flex items-center gap-2">
                   {/*
                     Always surface Manual Config even when the CLI is not
-                    detected locally — typical of remote OmniRoute
+                    detected locally — typical of remote 67router
                     deployments where the CLI lives on the user's machine,
                     not on the server. Upstream report: #589.
                   */}
@@ -440,7 +440,7 @@ export default function ClaudeToolCard({
                     placeholder={t("baseUrlPlaceholder")}
                     aria-label={t("baseUrl")}
                     className="min-w-0 w-auto flex-1"
-                    inputClassName="text-xs"
+                    inputClassName="font-mono text-xs"
                   />
                   {customBaseUrl && customBaseUrl !== baseUrl && (
                     <Button
@@ -449,7 +449,7 @@ export default function ClaudeToolCard({
                       onClick={() => setCustomBaseUrl("")}
                       title={t("resetToDefault")}
                       aria-label={t("resetToDefault")}
-                      className="text-text-muted hover:text-primary"
+                      className="text-text-muted hover:text-text-main"
                     >
                       <Icon name="restart_alt" size={14} />
                     </Button>

@@ -7,10 +7,10 @@
 Untuk manifes boleh laku yang dikongsi, persekitaran anak yang terhad dan persediaan
 Gemini yang berterusan, lihat [kontrak pelancaran CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute menyediakan rangkaian perintah `setup-*` yang mengkonfigurasi CLI
-pengekodan (Codex, Claude Code, OpenCode, Cline, …) untuk menggunakan OmniRoute sebagai bahagian belakangnya — supaya
-alat tersebut berkomunikasi dengan **satu** titik akhir dan OmniRoute menghalakan permintaan kepada penyedia yang betul dengan
-sandaran automatik. Setiap perintah membaca katalog model **langsung** daripada OmniRoute yang sedang berjalan
+67router menyediakan rangkaian perintah `setup-*` yang mengkonfigurasi CLI
+pengekodan (Codex, Claude Code, OpenCode, Cline, …) untuk menggunakan 67router sebagai bahagian belakangnya — supaya
+alat tersebut berkomunikasi dengan **satu** titik akhir dan 67router menghalakan permintaan kepada penyedia yang betul dengan
+sandaran automatik. Setiap perintah membaca katalog model **langsung** daripada 67router yang sedang berjalan
 (setempat atau jauh) dan menulis fail konfigurasi alat itu sendiri pada mesin **anda**.
 Kunci API dirujuk melalui pemboleh ubah persekitaran apabila alat tersebut
 menyokongnya. Perintah yang menyimpan fail persekitaran setempat alat secara berterusan dinyatakan di bawah.
@@ -53,7 +53,7 @@ huraian mendalam bagi setiap alat:
 
 - [Konfigurasi Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Konfigurasi Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Mod Jauh](./REMOTE-MODE.md) — kendalikan OmniRoute jauh (VPS / Tailnet) daripada komputer riba anda
+- [Mod Jauh](./REMOTE-MODE.md) — kendalikan 67router jauh (VPS / Tailnet) daripada komputer riba anda
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — sambungan OmniCopilot; ia juga boleh menjalankan
   perintah `setup-*` ini untuk anda dari dalam editor
 
@@ -89,7 +89,7 @@ pelayan tersebut dan menulis konfigurasi secara setempat.
 
 Nota tentang bendera (disahkan dalam sumber perintah):
 
-- `--remote <url>` — mendapatkan katalog daripada OmniRoute jauh (mengatasi `--port`
+- `--remote <url>` — mendapatkan katalog daripada 67router jauh (mengatasi `--port`
   dan konteks aktif). `--api-key <key>` membekalkan kelayakan untuk pelayan
   tersebut (lalai kepada pemboleh ubah persekitaran `OMNIROUTE_API_KEY`, atau token konteks aktif).
 - `--only <patterns>` — subrentetan dipisahkan koma; hanya kekalkan ID model yang sepadan
@@ -110,7 +110,7 @@ Nota tentang bendera (disahkan dalam sumber perintah):
   **codex** melalui argumen `-c model_providers.omniroute.*`. **Qwen ialah satu-satunya sasaran
   pelaksanaan yang mewajibkan `--model`** — `omniroute run qwen` tanpanya akan keluar
   dengan kod `2` berserta ralat yang jelas.
-- `--port <port>` — port OmniRoute setempat (lalai `20128`, diabaikan apabila `--remote`
+- `--port <port>` — port 67router setempat (lalai `20128`, diabaikan apabila `--remote`
   ditetapkan). Tersedia pada semua `setup-*` dan kedua-dua pelancar.
 - Kod keluar `omniroute run`: kod keluar CLI anak disebarkan
   tanpa perubahan; `2` = argumen tidak sah (sasaran tidak disokong, `--model` wajib
@@ -155,7 +155,7 @@ tidak dipaparkan sebagai sasaran yang boleh dilancarkan.
 
 ## Penggunaan setempat
 
-Dengan OmniRoute berjalan pada `localhost:20128`, hanya jalankan perintah persediaan untuk alat anda. Katalog diperoleh daripada pelayan setempat.
+Dengan 67router berjalan pada `localhost:20128`, hanya jalankan perintah persediaan untuk alat anda. Katalog diperoleh daripada pelayan setempat.
 
 ```bash
 # Codex: tulis satu profil bagi setiap model yang sepadan ke dalam ~/.codex/
@@ -182,8 +182,8 @@ omniroute setup-continue --dry-run
 Lancarkan tanpa menulis sebarang konfigurasi langsung (suntikan persekitaran sahaja):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute setempat
-omniroute launch-codex           # Codex CLI → OmniRoute setempat
+omniroute launch                 # Claude Code → 67router setempat
+omniroute launch-codex           # Codex CLI → 67router setempat
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -201,7 +201,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Penggunaan jauh
 
-Halakan mana-mana perintah persediaan kepada OmniRoute jauh dengan `--remote` + `--api-key`. Katalog diperoleh daripada pelayan jauh; konfigurasi ditulis pada mesin setempat anda.
+Halakan mana-mana perintah persediaan kepada 67router jauh dengan `--remote` + `--api-key`. Katalog diperoleh daripada pelayan jauh; konfigurasi ditulis pada mesin setempat anda.
 
 ```bash
 # OpenCode terhadap VPS jauh, kekalkan model glm/kimi sahaja
@@ -240,7 +240,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Kedua-dua bentuk menulis satu **profil pengesahan** 5dive, dan setiap kedudukan `claude` yang terikat pada profil tersebut kemudiannya berkomunikasi dengan OmniRoute. Tiga perkara adalah khusus untuk sasaran ini:
+Kedua-dua bentuk menulis satu **profil pengesahan** 5dive, dan setiap kedudukan `claude` yang terikat pada profil tersebut kemudiannya berkomunikasi dengan 67router. Tiga perkara adalah khusus untuk sasaran ini:
 
 - **Ia berjalan pada hos armada, sebagai root.** Kata kerja 5dive bertindak pada unit systemd setempat dan direktori keadaan milik root; tiada mod jauh. Resipi melaksanakan semula melalui `sudo` apabila ia belum dijalankan sebagai root (`--no-sudo` mematikan tindakan itu dan sebaliknya mencetak perintah tersebut).
 - **Titik akhir mestilah `https://` melainkan ia gelung balik.** Kunci API ejen dihantar melalui URL tersebut pada setiap permintaan, dan 5dive menolak titik akhir di luar mesin yang menggunakan teks biasa. Alamat LAN persendirian bukanlah pengecualian.
@@ -248,13 +248,13 @@ Kedua-dua bentuk menulis satu **profil pengesahan** 5dive, dan setiap kedudukan 
 
 Kunci API diserahkan kepada 5dive melalui **stdin** (`--api-key=-`), jadi ia tidak pernah muncul dalam output `ps`.
 
-Menghalakan profil kepada **kombo** OmniRoute dan bukannya satu model tunggal membolehkan armada mendapat pemindahan ganti penyedia: apabila titik akhir utama terputus sepenuhnya di pertengahan giliran dalam pelaksanaan yang direkodkan pada [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), ejen menyelesaikan langkah-langkah yang selebihnya menggunakan sandaran tanpa pernah mendedahkan gangguan tersebut.
+Menghalakan profil kepada **kombo** 67router dan bukannya satu model tunggal membolehkan armada mendapat pemindahan ganti penyedia: apabila titik akhir utama terputus sepenuhnya di pertengahan giliran dalam pelaksanaan yang direkodkan pada [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), ejen menyelesaikan langkah-langkah yang selebihnya menggunakan sandaran tanpa pernah mendedahkan gangguan tersebut.
 
 ---
 
 ## Konvensyen URL asas (alat yang memerlukan `/v1`)
 
-OmniRoute menyediakan antara muka OpenAI pada `/v1`, antara muka Anthropic pada akar,
+67router menyediakan antara muka OpenAI pada `/v1`, antara muka Anthropic pada akar,
 dan antara muka asli Gemini pada `/v1beta`. Setiap integrasi dikonfigurasikan mengikut format yang
 dijangkakan oleh alat tersebut (disahkan dalam sumber perintah):
 
@@ -276,7 +276,7 @@ dijangkakan oleh alat tersebut (disahkan dalam sumber perintah):
 ## Mengekalkan kebergantungan natif semasa kemas kini: `--include=optional`
 
 Apabila anda mengemas kini dengan `omniroute update` (selepas mengesahkan, atau dengan `--apply`),
-OmniRoute menjalankan pemasangan dengan `--include=optional` terbina dalam:
+67router menjalankan pemasangan dengan `--include=optional` terbina dalam:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -304,13 +304,13 @@ lapuk), `--apply` (pasang tanpa meminta pengesahan), `--changelog`, `--no-backup
 Kontrak disahkan terhadap `@google/gemini-cli` 0.50.0: CLI mematuhi
 `GOOGLE_GEMINI_BASE_URL` dan menghantar `POST /v1beta/models/<model>:generateContent`
 (dan `:streamGenerateContent?alt=sse`) kepadanya — tepat seperti antara muka Gemini natif
-OmniRoute (`/v1beta`). `omniroute run gemini` mengkonfigurasikannya secara automatik:
+67router (`/v1beta`). `omniroute run gemini` mengkonfigurasikannya secara automatik:
 
-- `GOOGLE_GEMINI_BASE_URL` → URL asas OmniRoute yang aktif (akar, tanpa `/v1`);
-- `GEMINI_API_KEY` → kelayakan OmniRoute yang telah diselesaikan (pilihan/persekitaran/konteks);
+- `GOOGLE_GEMINI_BASE_URL` → URL asas 67router yang aktif (akar, tanpa `/v1`);
+- `GEMINI_API_KEY` → kelayakan 67router yang telah diselesaikan (pilihan/persekitaran/konteks);
 - **`GEMINI_CLI_HOME` terpencil sementara** yang `.gemini/settings.json`-nya
   memilih pengesahan `gemini-api-key`, supaya sesi Google OAuth (Code Assist) yang disimpan
-  tidak pernah mengatasi pelancaran yang diarahkan kepada OmniRoute — dipadamkan selepas keluar;
+  tidak pernah mengatasi pelancaran yang diarahkan kepada 67router — dipadamkan selepas keluar;
 - **kebersihan persekitaran**: persekitaran proses anak dibersihkan daripada `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` dan `GOOGLE_GENAI_USE_GCA` (yang akan mengubah hala
   pengesahan kepada Vertex/Code Assist), dan `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -333,7 +333,7 @@ protokol ejen untuk `/dashboard/acp-agents`.
 ## Ujian menyeluruh sebenar (pilihan ikut serta)
 
 Ujian regresi pelan pelancaran deterministik dijalankan dalam CI (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). Untuk mengesahkan binari SEBENAR terhadap pelayan OmniRoute
+`tests/unit/cli/run-execution.test.ts`). Untuk mengesahkan binari SEBENAR terhadap pelayan 67router
 SEBENAR, tersedia satu peralatan ujian pilihan ikut serta di
 `tests/integration/upstream-cli-smoke.int.test.ts`. Ia tidak pernah dijalankan secara automatik
 (setiap subujian dilangkau melainkan `RUN_CLI_SMOKE=1`), menghantar bukti kelayakan melalui NAMA

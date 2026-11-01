@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Fejl: {message}",
-    "serverOffline": "OmniRoute-serveren er offline. Start med: omniroute serve",
+    "serverOffline": "67router-serveren er offline. Start med: omniroute serve",
     "authRequired": "Godkendelse kræves. Sæt OMNIROUTE_API_KEY eller kør: omniroute setup",
     "rateLimited": "Anmodningsgrænse overskredet. Prøv igen om {seconds}s.",
     "timeout": "Anmodningen timed ud efter {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Spring bekræftelse over"
   },
   "setup": {
-    "title": "Opsætning af OmniRoute",
+    "title": "Opsætning af 67router",
     "passwordPrompt": "Administratoradgangskode",
     "providerPrompt": "Standardudbyder (lad feltet være tomt for at springe over)",
     "done": "Opsætning fuldført",
@@ -30,7 +30,7 @@
     "opencode": "Installer og konfigurer det medfølgende @omniroute/opencode-plugin til OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute-diagnosticering",
+    "title": "67router-diagnosticering",
     "dbOk": "Database: OK ({path})",
     "dbMissing": "Database: ikke initialiseret — kør `omniroute setup`",
     "portOk": "Port {port}: tilgængelig",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrer efter udbydernavn",
       "header": "ID         Udbyder        Navn                     Udløbsstatus  Teststatus  Nedkøling indtil",
       "noData": "Ingen data om udbyderforbindelser tilgængelige.",
-      "requiresServer": "providers status kræver, at OmniRoute-serveren kører."
+      "requiresServer": "providers status kræver, at 67router-serveren kører."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Tilføj eller opdater en API-nøgle for en udbyder",
     "listDescription": "Vis alle konfigurerede API-nøgler",
     "removeDescription": "Fjern en API-nøgle for en udbyder",
-    "regenerateDescription": "Generér en OmniRoute API-nøgle igen",
-    "revokeDescription": "Tilbagekald en OmniRoute API-nøgle",
+    "regenerateDescription": "Generér en 67router API-nøgle igen",
+    "revokeDescription": "Tilbagekald en 67router API-nøgle",
     "revealDescription": "Vis den umaskerede API-nøgleværdi",
     "usageDescription": "Vis seneste brug af en API-nøgle",
     "usageLimitOpt": "Antal seneste anmodninger",
@@ -172,13 +172,6 @@
       "period": "Tidsinterval: 1d|7d|30d|90d|ytd|all (standard: 30d)",
       "provider": "Filtrer efter udbyder-id"
     },
-    "budget": {
-      "description": "Administrer omkostningsbudgetter",
-      "set": {
-        "scope": "Budgetomfang (standard: globalt)",
-        "period": "Budgetperiode: daily|weekly|monthly (standard: monthly)"
-      }
-    },
     "quota": {
       "description": "Vis udbyderens kvoteforbrug",
       "provider": "Filtrer efter udbyder-id",
@@ -225,7 +218,7 @@
     "noCombo": "Ingen matchende kombination fundet. Konfigurer en med: omniroute combo create"
   },
   "chat": {
-    "description": "Send en enkeltstående chatprompt til OmniRoute",
+    "description": "Send en enkeltstående chatprompt til 67router",
     "file": "Læs prompt fra fil",
     "stdin": "Læs prompt fra stdin",
     "system": "Systemprompt",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Start OmniRoute-serveren (standardhandling)",
-    "starting": "Starter OmniRoute-serveren på port {port}...",
+    "description": "Start 67router-serveren (standardhandling)",
+    "starting": "Starter 67router-serveren på port {port}...",
     "ready": "Klar på http://localhost:{port}",
     "stopping": "Stopper serveren (PID {pid})...",
     "stopped": "Serveren er stoppet.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Sikkerhedskopi",
-    "description": "Opret en sikkerhedskopi af OmniRoute-data",
+    "description": "Opret en sikkerhedskopi af 67router-data",
     "creating": "Opretter sikkerhedskopi...",
     "done": "Sikkerhedskopien blev gemt i {path}",
     "noFiles": "Ingen filer at sikkerhedskopiere (databasen er ikke initialiseret)",
@@ -277,7 +270,7 @@
     "noBackups": "Ingen sikkerhedskopier fundet.",
     "notFound": "Sikkerhedskopien blev ikke fundet: {name}",
     "confirmRestore": "Overskriv aktuelle data med sikkerhedskopien fra {ts}?",
-    "createDescription": "Opret en sikkerhedskopi af OmniRoute-data",
+    "createDescription": "Opret en sikkerhedskopi af 67router-data",
     "nameOpt": "Brugerdefineret navn på sikkerhedskopi",
     "cloudOpt": "Upload sikkerhedskopi til cloudlager",
     "encryptOpt": "Kryptér sikkerhedskopi med AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Cachen kunne ikke ryddes."
   },
   "redis": {
-    "description": "Start en lokal Redis-container med ét klik (Podman eller Docker) til OmniRoute-caching og kvoteovervågning"
+    "description": "Start en lokal Redis-container med ét klik (Podman eller Docker) til 67router-caching og kvoteovervågning"
   },
   "test": {
     "description": "Test en udbyderforbindelse",
@@ -390,36 +383,8 @@
       "description": "MCP-revisionslog (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Vis tilgængelige A2A-færdigheder fra agentkortet"
-    },
-    "invoke": {
-      "description": "Kald en A2A-færdighed, og returner opgave-ID'et",
-      "input": "JSON-inputobjekt",
-      "input_file": "Sti til JSON-inputfil",
-      "wait": "Vent på, at opgaven fuldføres, før der returneres",
-      "timeout": "Timeout for ventetid på fuldførelse i ms (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Administrer A2A-opgaver",
-      "list": {
-        "status": "Filtrer efter status",
-        "skill": "Filtrer efter færdigheds-ID"
-      },
-      "watch": {
-        "description": "Forespørg opgavestatus løbende, indtil opgaven er fuldført"
-      },
-      "stream": {
-        "description": "Stream hændelser fra opgaveudførelsen via SSE"
-      },
-      "logs": {
-        "description": "Vis opgavemeddelelser og artefakter"
-      }
-    }
-  },
   "policy": {
-    "description": "Administrer OmniRoute-godkendelsespolitikker",
+    "description": "Administrer 67router-godkendelsespolitikker",
     "list": {
       "description": "Vis politikker",
       "kind": "Filtrer efter type (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurer og inspicer OmniRoute-komprimeringspipelinen",
+    "description": "Konfigurer og inspicer 67router-komprimeringspipelinen",
     "status": {
       "description": "Vis aktuel komprimeringsstatus og indstillinger"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Skift URL for tunnel {type}? (en ny URL bliver genereret)"
   },
   "stop": {
-    "description": "Stop OmniRoute-serveren",
+    "description": "Stop 67router-serveren",
     "stopping": "Stopper serveren (PID {pid})...",
     "stopped": "Serveren er stoppet.",
     "notRunning": "Der kører ingen server.",
     "portFallback": "Ingen PID-fil fundet, forsøger portbaseret stop..."
   },
   "restart": {
-    "description": "Genstart OmniRoute-serveren",
-    "restarting": "Genstarter OmniRoute-serveren..."
+    "description": "Genstart 67router-serveren",
+    "restarting": "Genstarter 67router-serveren..."
   },
   "dashboard": {
-    "description": "Åbn OmniRoute-dashboardet i en browser",
+    "description": "Åbn 67router-dashboardet i en browser",
     "opening": "Åbner dashboardet på {url}",
     "urlOnly": "Udskriv dashboardets URL uden at åbne browseren",
     "tui": "Åbn interaktivt TUI-dashboard (terminalbrugerflade, 7 faner)"
@@ -560,120 +525,6 @@
       "description": "Hent en enkelt revisionslogpost efter id"
     }
   },
-  "skills": {
-    "description": "Administrer OmniRoute-færdigheder (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Vis installerede færdigheder",
-      "type": "Filtrer efter type (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Vis kun aktiverede færdigheder",
-      "disabled": "Vis kun deaktiverede færdigheder",
-      "api_key": "Filtrer efter API-nøgle"
-    },
-    "get": {
-      "description": "Hent oplysninger om en færdighed efter id"
-    },
-    "install": {
-      "description": "Installér en færdighed fra en fil eller URL",
-      "from_file": "Sti til JSON-definitionsfilen for færdigheden",
-      "from_url": "URL til ekstern færdighedsdefinition",
-      "type": "Færdighedstype (sandbox|custom|hybrid)",
-      "enable": "Aktivér færdigheden efter installation"
-    },
-    "enable": {
-      "description": "Aktivér en færdighed efter id"
-    },
-    "disable": {
-      "description": "Deaktiver en færdighed efter id",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "delete": {
-      "description": "Slet en færdighed efter id",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "execute": {
-      "description": "Kør en færdighed efter id",
-      "input": "JSON-inputobjekt",
-      "input_file": "Sti til JSON-inputfil",
-      "timeout": "Timeout for kørsel i ms (standard: 30000)"
-    },
-    "executions": {
-      "description": "Vis historik over kørsel af færdigheder",
-      "skill": "Filtrer efter færdigheds-ID",
-      "limit": "Maksimalt antal resultater (standard: 50)",
-      "status": "Filtrer efter status (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Administrer færdigheder installeret via SSH"
-    },
-    "marketplace": {
-      "description": "Gennemse og installer færdigheder fra markedspladsen"
-    },
-    "mp": {
-      "search": {
-        "description": "Søg efter pakker på markedspladsen",
-        "category": "Filtrer efter kategori",
-        "tag": "Filtrer efter tag",
-        "limit": "Maksimalt antal resultater (standard: 30)",
-        "sort": "Sortér efter: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Vis pakkedetaljer og readme"
-      },
-      "install": {
-        "description": "Installer en pakke fra markedspladsen",
-        "version": "Pakkeversion (standard: latest)",
-        "enable": "Aktivér efter installation",
-        "yes": "Spring bekræftelsesprompt over"
-      },
-      "categories": {
-        "description": "Vis kategorier på markedspladsen"
-      },
-      "featured": {
-        "description": "Vis fremhævede pakker på markedspladsen"
-      }
-    }
-  },
-  "memory": {
-    "description": "Administrer OmniRoute-samtalehukommelse (FTS5 + vector)",
-    "search": {
-      "description": "Søg i hukommelsesposter med en semantisk forespørgsel",
-      "type": "Filtrer efter hukommelsestype (user|feedback|project|reference)",
-      "limit": "Maksimalt antal resultater (standard: 20)",
-      "api_key": "Filtrer efter API-nøgle",
-      "token_budget": "Begræns det samlede antal tokens i resultaterne"
-    },
-    "add": {
-      "description": "Tilføj en ny hukommelsespost",
-      "content": "Hukommelsens tekstindhold",
-      "file": "Læs indhold fra fil",
-      "type": "Hukommelsestype (standard: user)",
-      "metadata": "JSON-metadataobjekt",
-      "api_key": "Knyt til API-nøgle"
-    },
-    "clear": {
-      "description": "Slet hukommelsesposter, der matcher filtrene",
-      "type": "Filtrer efter type",
-      "older": "Slet poster, der er ældre end varigheden (30d, 6m, 1y)",
-      "api_key": "Filtrer efter API-nøgle",
-      "yes": "Spring bekræftelsesprompt over"
-    },
-    "list": {
-      "description": "Vis hukommelsesposter uden søgerangering",
-      "type": "Filtrer efter type",
-      "limit": "Maksimalt antal resultater (standard: 100)",
-      "api_key": "Filtrer efter API-nøgle"
-    },
-    "get": {
-      "description": "Hent en enkelt hukommelsespost efter ID"
-    },
-    "delete": {
-      "description": "Slet en hukommelsespost efter ID",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "health": {
-      "description": "Vis hukommelsesundersystemets tilstand (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Administrer forbindelser til OAuth-udbydere",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Spring bekræftelsesprompten over"
     }
   },
-  "cloud": {
-    "description": "Administrer opgaver for cloudbaserede AI-agenter (codex, devin, jules)",
-    "agents": {
-      "description": "Vis tilgængelige cloudagenter"
-    },
-    "agent": {
-      "description": "Administrer opgaver for cloudagenten {agent}",
-      "auth": {
-        "description": "Godkend {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Administrer cloudagentopgaver",
-      "create": {
-        "description": "Opret en ny agentopgave",
-        "title": "Opgavetitel (som standard de første 80 tegn i prompten)",
-        "prompt": "Prompttekst til opgaven",
-        "prompt_file": "Læs prompt fra fil",
-        "repo": "URL til repository, der skal klones til opgaven",
-        "branch": "Navn på branch, der skal bruges",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Vis agentopgaver",
-        "status": "Filtrer efter status (running|completed|failed|cancelled)",
-        "limit": "Maksimalt antal resultater (standard: 50)"
-      },
-      "get": {
-        "description": "Hent opgavedetaljer efter id"
-      },
-      "status": {
-        "description": "Udskriv opgavestatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annuller en kørende opgave",
-        "yes": "Spring bekræftelsesprompten over"
-      },
-      "approve": {
-        "description": "Godkend agentplanen for at starte udførelsen"
-      },
-      "message": {
-        "description": "Send en besked til en kørende opgave"
-      }
-    },
-    "sources": {
-      "description": "Vis kildefiler, der er oprettet af en opgave"
-    }
-  },
-  "eval": {
-    "description": "Administrer evalueringspakker og kørsler",
-    "suites": {
-      "description": "Administrer evalueringspakker",
-      "list": {
-        "description": "Vis evalueringssuiter"
-      },
-      "get": {
-        "description": "Hent oplysninger om evalueringssuite via ID"
-      },
-      "create": {
-        "description": "Opret en evalueringssuite fra en JSON-fil",
-        "file": "Sti til JSON-filen med suitedefinitionen"
-      }
-    },
-    "run": {
-      "description": "Start en evalueringskørsel for en suite",
-      "model": "Model-ID, der skal evalueres (standard: auto)",
-      "combo": "Gennemtving en bestemt kombination efter navn",
-      "concurrency": "Antal samtidige prøver (standard: 4)",
-      "tag": "Mærk denne kørsel til senere filtrering",
-      "watch": "Overvåg kørslens status, indtil den er fuldført"
-    },
-    "list": {
-      "description": "Vis evalueringskørsler",
-      "suite": "Filtrer efter suite-ID",
-      "status": "Filtrer efter status",
-      "since": "Returner kørsler siden dette tidsstempel",
-      "limit": "Maksimalt antal resultater (standard: 50)"
-    },
-    "get": {
-      "description": "Hent oplysninger om evalueringskørsel via ID"
-    },
-    "results": {
-      "description": "Vis prøveresultater for en evalueringskørsel",
-      "failed": "Vis kun mislykkede prøver"
-    },
-    "cancel": {
-      "description": "Annuller en igangværende evaluering",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "scorecard": {
-      "description": "Vis scorekort for en fuldført evalueringskørsel"
-    }
-  },
-  "webhooks": {
-    "description": "Administrer OmniRoute-webhooks",
-    "events": {
-      "description": "Vis alle tilgængelige webhook-hændelsestyper"
-    },
-    "list": {
-      "description": "Vis konfigurerede webhooks"
-    },
-    "get": {
-      "description": "Hent webhook-oplysninger via ID"
-    },
-    "add": {
-      "description": "Registrer en ny webhook",
-      "url": "Destinations-URL",
-      "events": "Kommasepareret liste over hændelsestyper",
-      "secret": "HMAC-signeringshemmelighed",
-      "header": "Ekstra header i formatet key=value (kan gentages)",
-      "no_enabled": "Opret webhook i deaktiveret tilstand"
-    },
-    "update": {
-      "description": "Opdater en eksisterende webhook",
-      "enabled": "Angiv aktiveret tilstand (true|false)"
-    },
-    "remove": {
-      "description": "Slet en webhook",
-      "yes": "Spring bekræftelsesprompten over"
-    },
-    "test": {
-      "description": "Send en testhændelse til en webhook",
-      "event": "Hændelsestype, der skal simuleres (standard: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Smart AI-router med automatisk fallback",
+    "description": "67router — Smart AI-router med automatisk fallback",
     "version": "Vis version og afslut",
     "output": "Outputformat (table, json, jsonl, csv)",
     "quiet": "Undertryk ikke-essentielt output",
     "no_color": "Deaktiver farvet output",
     "timeout": "HTTP-anmodnings timeout i millisekunder",
-    "api_key": "API-nøgle til OmniRoute-serveren",
-    "base_url": "OmniRoute-serverens basis-URL",
+    "api_key": "API-nøgle til 67router-serveren",
+    "base_url": "67router-serverens basis-URL",
     "context": "Server-kontekst/profil til denne kommando",
     "lang": "Angiv CLI-visningssprog (tilsidesætter OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Administrer filer (upload, vis, hent, download, slet)",
-    "list": {
-      "purpose": "Filtrer efter formål",
-      "limit": "Maksimalt antal resultater"
-    },
-    "get": {
-      "description": "Hent filmetadata"
-    },
-    "upload": {
-      "description": "Upload en fil",
-      "purpose": "Filformål (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Download filindhold",
-      "out": "Gem til sti (standard: stdout)"
-    },
-    "delete": {
-      "yes": "Spring bekræftelse over"
-    }
-  },
-  "batches": {
-    "description": "Administrer OpenAI-kompatible batchjob",
-    "list": {
-      "status": "Filtrer efter status",
-      "limit": "Maks. antal resultater"
-    },
-    "create": {
-      "description": "Opret et batchjob",
-      "inputFile": "Inputfil-id",
-      "endpoint": "Målslutpunkt",
-      "window": "Fuldførelsesvindue",
-      "metadata": "Tilføj metadata key=value"
-    },
-    "submit": {
-      "description": "Upload JSONL-fil, og opret batch",
-      "jsonl": "Sti til JSONL-fil",
-      "endpoint": "Målslutpunkt",
-      "wait": "Vent på fuldførelse"
-    },
-    "cancel": {
-      "yes": "Spring bekræftelse over"
-    },
-    "wait": {
-      "timeout": "Timeout i ms"
-    },
-    "output": {
-      "out": "Gem output på sti"
-    },
-    "errors": {
-      "out": "Gem fejl på sti"
-    }
   },
   "translator": {
     "description": "Oversæt anmodningstekster mellem LLM-formater",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Tilgå og test OmniRoute OpenAPI-specifikationen",
+    "description": "Tilgå og test 67router OpenAPI-specifikationen",
     "dump": {
       "description": "Udskriv OpenAPI-specifikationen til stdout eller en fil",
       "format": "Outputformat: yaml|json (standard: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Aktivér den højest rangerede kombination"
     }
   },
-  "oneproxy": {
-    "description": "Administrer OneProxy-upstreampuljen",
-    "stats": {
-      "provider": "Filtrer efter udbyder",
-      "period": "Tidsperiode (standard: 24h)"
-    },
-    "fetch": {
-      "description": "Hent proxyer fra puljen",
-      "count": "Antal proxyer, der skal hentes (standard: 1)",
-      "type": "Proxytype: http|socks5 (standard: http)"
-    },
-    "rotate": {
-      "description": "Gennemtving proxyrotation",
-      "provider": "Udbyder, der skal roteres for",
-      "connectionId": "Specifikt forbindelses-id, der skal roteres"
-    },
-    "config": {
-      "description": "Vis eller opdater OneProxy-konfigurationen",
-      "enabled": "Aktivér proxypulje (true|false)",
-      "poolSize": "Puljestørrelse",
-      "providerSource": "URL til proxyudbyder",
-      "rotationPolicy": "Rotationspolitik: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Vis den aktuelle proxypulje med målinger"
-    }
-  },
   "open": {
-    "description": "Åbn en bestemt OmniRoute-dashboardside i browseren",
+    "description": "Åbn en bestemt 67router-dashboardside i browseren",
     "url": "Udskriv kun URL, åbn ikke browseren"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Synkroniser konfiguration mellem OmniRoute-instanser",
+    "description": "Synkroniser konfiguration mellem 67router-instanser",
     "push": {
       "description": "Send konfiguration til cloud eller fjerninstans"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtrér efter niveau (error,warn,info) — kommasepareret",
     "lines": "Antal linjer, der skal hentes",
     "timeout": "Timeout for forbindelse i ms",
-    "baseUrl": "Basis-URL til OmniRoute API",
+    "baseUrl": "Basis-URL til 67router API",
     "requestId": "Filtrér efter anmodnings-id",
     "apiKey": "Filtrér efter API-nøgle",
     "combo": "Filtrér efter kombinationsnavn",
@@ -1244,10 +890,10 @@
     "description": "Administrer ikonet i systembakken",
     "show": "Vis ikonet i systembakken (hvis serveren kører med --tray)",
     "hide": "Skjul ikonet i systembakken",
-    "quit": "Afslut OmniRoute via systembakken"
+    "quit": "Afslut 67router via systembakken"
   },
   "autostart": {
-    "description": "Administrer automatisk start af OmniRoute ved opstart (Linux: systemd-brugertjeneste)",
+    "description": "Administrer automatisk start af 67router ved opstart (Linux: systemd-brugertjeneste)",
     "enable": "Aktivér automatisk start ved opstart",
     "disable": "Deaktivér automatisk start ved opstart",
     "toggle": "Slå automatisk start ved opstart til eller fra",
@@ -1268,30 +914,20 @@
     "system": "Systemprompt",
     "resume": "Genoptag en gemt session efter navn"
   },
-  "plugin": {
-    "description": "Administrer CLI-plugins (omniroute-cmd-*)",
-    "list": "Vis installerede plugins",
-    "install": "Installer et plugin fra npm eller en lokal sti",
-    "remove": "Fjern et installeret plugin",
-    "info": "Vis oplysninger om et installeret plugin",
-    "search": "Søg i npm-registret efter tilgængelige plugins",
-    "update": "Opdater installerede plugins",
-    "scaffold": "Opret en skabelon til et nyt plugin"
-  },
   "launch": {
-    "description": "Start Claude Code med forbindelse til OmniRoute (lokalt eller eksternt, med --profile)",
+    "description": "Start Claude Code med forbindelse til 67router (lokalt eller eksternt, med --profile)",
     "token": "Token, som Claude-klienten skal sende (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute kan ikke nås på {port}. Start den med 'omniroute serve'.",
+    "notRunning": "67router kan ikke nås på {port}. Start den med 'omniroute serve'.",
     "notFound": "'claude'-CLI'en blev ikke fundet i PATH."
   },
   "run": {
-    "description": "Start et understøttet CLI-mål via OmniRoute"
+    "description": "Start et understøttet CLI-mål via 67router"
   },
   "setupClaude": {
-    "description": "Generér Claude Code-profiler i ~/.claude/profiles ud fra OmniRoutes modelkatalog"
+    "description": "Generér Claude Code-profiler i ~/.claude/profiles ud fra 67routers modelkatalog"
   },
   "connect": {
-    "description": "Opret forbindelse til en ekstern OmniRoute-server, og skift til ekstern tilstand"
+    "description": "Opret forbindelse til en ekstern 67router-server, og skift til ekstern tilstand"
   },
   "tokens": {
     "description": "Administrer afgrænsede CLI-adgangstokens (ekstern tilstand)"
@@ -1300,10 +936,10 @@
     "description": "Vælg en udbyder og model fra den aktive server, og konfigurer en understøttet lokal CLI"
   },
   "launchCodex": {
-    "description": "Start Codex CLI med forbindelse til OmniRoute (lokalt eller på en ekstern VPS)"
+    "description": "Start Codex CLI med forbindelse til 67router (lokalt eller på en ekstern VPS)"
   },
   "setupCodex": {
-    "description": "Generér profilfiler i ~/.codex ud fra OmniRoutes aktive modelkatalog"
+    "description": "Generér profilfiler i ~/.codex ud fra 67routers aktive modelkatalog"
   },
   "packs": {
     "description": "Administrer valgfrie runtime-pakker (ML/browserautomatisering)",
@@ -1316,7 +952,7 @@
     "errUnknown": "ukendt pakke: {name}",
     "errNoIndex": "pakkeindekset blev ikke fundet; angiv --source <dir> med pakkedataene (desktop-pakker indeholder det ved siden af appen)",
     "installed": "pakken \"{name}\" er installeret og kontrolleret i {dir}",
-    "restartHint": "genstart OmniRoute-serveren (eller desktopappen), så runtime-miljøet registrerer pakken",
+    "restartHint": "genstart 67router-serveren (eller desktopappen), så runtime-miljøet registrerer pakken",
     "removed": "pakken \"{name}\" er fjernet",
     "notInstalled": "pakken \"{name}\" var ikke installeret",
     "verifyOk": "alle installerede pakker er verificeret",

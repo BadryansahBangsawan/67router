@@ -4,7 +4,7 @@
 
 ---
 
-Ten dokument stanowi wiążący materiał referencyjny dla wszystkich bramek jakości CI w OmniRoute.
+Ten dokument stanowi wiążący materiał referencyjny dla wszystkich bramek jakości CI w 67router.
 Opisuje każdą bramkę, zakres jej weryfikacji, zadanie CI, w którym jest uruchamiana, to, czy
 wykorzystuje bazową wartość mechanizmu zapadkowego, czy zasady zaliczenia/niezaliczenia, oraz to,
 czy blokuje kompilację, czy ma charakter doradczy.
@@ -262,14 +262,14 @@ Uruchamiane po `build`. Blokuje scalenie w razie niepowodzenia.
 
 Uruchamiane według harmonogramu cron (oraz `workflow_dispatch`), nigdy przy PR-ach. Wszystkie mają charakter doradczy.
 
-| Workflow               | Waliduje                                                                                                                                                                       | Blokujący    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| `nightly-property`     | Testy właściwości fast-check z losowym ziarnem + dużą liczbą przebiegów                                                                                                        | **Doradczy** |
-| `nightly-resilience`   | Bramka wzrostu sterty, wstrzykiwanie błędów chaos engineering, obciążenie/testy wytrzymałościowe k6                                                                            | **Doradczy** |
-| `nightly-llm-security` | Strażnik wstrzykiwań promptfoo (tryb blokowania) + sondy garak (pomijane bez sekretu dostawcy)                                                                                 | **Doradczy** |
-| `nightly-schemathesis` | Fuzzing kontraktu OpenAPI (schemathesis) względem działającego OmniRoute z użyciem `docs/openapi.yaml` — ujawnia naruszenia specyfikacji / nieobsłużone błędy 500 (Fase 8 B.4) | **Doradczy** |
-| `nightly-mutation`     | Wynik testów mutacyjnych Stryker na szybkiej ścieżce jednostkowej — przetrwałe mutanty ujawniają słabe asercje                                                                 | **Doradczy** |
-| `nightly-compat`       | Macierz kompatybilności silnika Node w obsługiwanych zakresach `engines.node`                                                                                                  | **Doradczy** |
+| Workflow               | Waliduje                                                                                                                                                                      | Blokujący    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | Testy właściwości fast-check z losowym ziarnem + dużą liczbą przebiegów                                                                                                       | **Doradczy** |
+| `nightly-resilience`   | Bramka wzrostu sterty, wstrzykiwanie błędów chaos engineering, obciążenie/testy wytrzymałościowe k6                                                                           | **Doradczy** |
+| `nightly-llm-security` | Strażnik wstrzykiwań promptfoo (tryb blokowania) + sondy garak (pomijane bez sekretu dostawcy)                                                                                | **Doradczy** |
+| `nightly-schemathesis` | Fuzzing kontraktu OpenAPI (schemathesis) względem działającego 67router z użyciem `docs/openapi.yaml` — ujawnia naruszenia specyfikacji / nieobsłużone błędy 500 (Fase 8 B.4) | **Doradczy** |
+| `nightly-mutation`     | Wynik testów mutacyjnych Stryker na szybkiej ścieżce jednostkowej — przetrwałe mutanty ujawniają słabe asercje                                                                | **Doradczy** |
+| `nightly-compat`       | Macierz kompatybilności silnika Node w obsługiwanych zakresach `engines.node`                                                                                                 | **Doradczy** |
 
 Linie bazowe wydajności (sterta, TTFB, czas budowania) są rejestrowane, a nie bramkowane: patrz [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -540,7 +540,7 @@ liście dozwolonych elementów daje fałszywe poczucie jakości.
 
 ## Narzędzia dla agentów: LSP w pętli (opcjonalne)
 
-Poza bramkami CI OmniRoute udostępnia **opcjonalny** szkielet `agent-lsp`
+Poza bramkami CI 67router udostępnia **opcjonalny** szkielet `agent-lsp`
 (plik `.mcp.json` na poziomie projektu, faza 7, zadanie 15). Utwórz `.mcp.json`,
 aby udostępnić agentom programistycznym serwer języka TypeScript, dzięki czemu będą rozwiązywać symbole /
 diagnostykę **przed** napisaniem kodu — jest to działające według zasady „najpierw kompilacja, potem deklaracja” uzupełnienie

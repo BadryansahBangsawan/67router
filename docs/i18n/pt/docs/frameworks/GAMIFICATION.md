@@ -7,7 +7,7 @@
 > **Fonte oficial:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Última atualização:** 2026-06-28 — v3.8.40
 
-O OmniRoute inclui uma camada de gamificação local-first que recompensa os utilizadores por
+O 67router inclui uma camada de gamificação local-first que recompensa os utilizadores por
 interagirem com a plataforma — fazerem pedidos, mudarem de fornecedores, criarem
 combos, partilharem tokens e contribuírem para a comunidade. Todo o estado reside no
 SQLite; a federação com servidores da comunidade é opcional e baseada em push.
@@ -36,7 +36,7 @@ tokens, recompensas por convites).
 | Tabelas classificativas  | Âmbitos global, semanal, mensal, de partilha de tokens e de contribuição             |
 | Partilha de tokens       | Transfira créditos entre utilizadores através de um livro-razão de partidas dobradas |
 | Convites e resgate       | Códigos de referência armazenados com hashes SHA-256                                 |
-| Servidores da comunidade | Federe com instâncias externas do OmniRoute                                          |
+| Servidores da comunidade | Federe com instâncias externas do 67router                                           |
 | Prevenção de fraude      | Pontuação no servidor, limitação de taxa e deteção de anomalias por z-score          |
 
 ### Princípios de design
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tabelas da Base de Dados
 
-Todas as tabelas residem na base de dados SQLite principal do OmniRoute, criada pela migração
+Todas as tabelas residem na base de dados SQLite principal do 67router, criada pela migração
 `060_create_gamification.sql`. O registo WAL é herdado da instância singleton
 `getDbInstance()` em `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Todas as tabelas residem na base de dados SQLite principal do OmniRoute, criada 
 
 ### Módulo de Domínio: `src/lib/db/gamification.ts`
 
-Segue o padrão habitual do OmniRoute — importa `getDbInstance()` de
+Segue o padrão habitual do 67router — importa `getDbInstance()` de
 `core.ts` e exporta funções CRUD tipadas. Não existe SQL em bruto nos processadores de rotas.
 
 Funções principais:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Ação              | XP  | Descrição                                                         |
 | ----------------- | --- | ----------------------------------------------------------------- |
-| `request`         | 1   | Por pedido à API encaminhado através do OmniRoute                 |
+| `request`         | 1   | Por pedido à API encaminhado através do 67router                  |
 | `provider_switch` | 5   | Mudar para um fornecedor diferente                                |
 | `model_switch`    | 3   | Mudar para um modelo diferente                                    |
 | `combo_create`    | 10  | Criar uma nova combinação                                         |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (único, indexado) |
 | `token_hash` | SHA-256(raw_token)           |
 
-O token em bruto é devolvido ao utilizador exatamente uma vez, no momento da criação. O OmniRoute
+O token em bruto é devolvido ao utilizador exatamente uma vez, no momento da criação. O 67router
 nunca volta a armazená-lo ou apresentá-lo — apenas o hash persiste.
 
 ### Prevenção de Autorreferenciação
@@ -714,7 +714,7 @@ Os administradores podem consultar o registo de auditoria completo através de `
 
 ## Rotas da API
 
-Todas as rotas seguem o padrão OmniRoute habitual:
+Todas as rotas seguem o padrão 67router habitual:
 
 ```
 Rota → Preflight CORS → Validação do corpo (Zod) → Autenticação (extractApiKey)

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ကို အခြားတစ်နေရာတွင် (VPS၊ အိမ်သုံးဆာဗာ သို့မဟုတ် သင့် Tailnet ပေါ်ရှိ အခြားစက်တစ်လုံးတွင်) အသုံးပြုနေစဉ် သင့်လက်ပ်တော့ပေါ်၌ `omniroute` CLI ကို အသုံးပြုနိုင်သည်။
+67router ကို အခြားတစ်နေရာတွင် (VPS၊ အိမ်သုံးဆာဗာ သို့မဟုတ် သင့် Tailnet ပေါ်ရှိ အခြားစက်တစ်လုံးတွင်) အသုံးပြုနေစဉ် သင့်လက်ပ်တော့ပေါ်၌ `omniroute` CLI ကို အသုံးပြုနိုင်သည်။
 `omniroute connect` ဖြင့် တစ်ကြိမ် အကောင့်ဝင်ပြီးနောက် **CLI command အားလုံး** သည် ထိုအဝေးထိန်းဆာဗာကို ဦးတည်မည်ဖြစ်သည် — command များနှင့် output များသည် အတူတူပင်ဖြစ်ပြီး အဝေးထိန်းဆာဗာပေါ်တွင်သာ လုပ်ဆောင်ပါသည်။
 
 ဒုတိယ tool တစ်ခု ထပ်မံထည့်သွင်းရန် မလိုပါ။ remote mode သည် ပုံမှန် `omniroute` CLI နှင့် scope သတ်မှတ်ထားသော **access token များ** ကို အသုံးပြုပါသည်။
@@ -21,7 +21,7 @@ omniroute configure codex                # ← အဝေးထိန်း catal
 ## အလုပ်လုပ်ပုံ
 
 ```
-သင့်လက်ပ်တော့                              အဝေးထိန်း OmniRoute (VPS)
+သင့်လက်ပ်တော့                              အဝေးထိန်း 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (စကားဝှက် → token)         │
 │  context: vps      │ ───────────────►  │ scope သတ်မှတ်ထားသော access token ထုတ်ပေးသည် │
@@ -98,7 +98,7 @@ Antigravity သည် Google ၏ firstparty/nativeapp သဘောတူညီ�
 ထည့်သွင်းထားပါက ထို loopback သည် သင့်စက်ပေါ်တွင်မဟုတ်ဘဲ server ပေါ်တွင် ရှိသောကြောင့်
 သဘောတူညီချက်မျက်နှာပြင်သည် **အဆုံးမရှိ ရပ်ဆိုင်းနေပြီး code ကို လုံးဝ
 မထုတ်ပေးပါ** — ပုံမှန် "callback URL ကို paste လုပ်ပါ" အစားထိုးနည်းတွင် paste လုပ်စရာ
-ဘာမျှမရှိပါ။ (၎င်းသည် Google ဘက်မှ ကန့်သတ်ချက်ဖြစ်သည်။ OmniRoute သာမက
+ဘာမျှမရှိပါ။ (၎င်းသည် Google ဘက်မှ ကန့်သတ်ချက်ဖြစ်သည်။ 67router သာမက
 ပူးတွဲပါ Antigravity desktop client ကို အသုံးပြုသည့် မည်သည့် proxy တွင်မဆို
 အလားတူ ရပ်ဆိုင်းမှု ဖြစ်ပေါ်သည်။)
 
@@ -108,7 +108,7 @@ Dashboard သည် သင်ပိတ်မိမသွားမီ ယင်�
 ကြိုတင်ဖြည့်ထားလျက် ပြသပေးမည်။ (LAN လိပ်စာလည်း အကျုံးဝင်သည် — ဤ callback အတွက်
 `192.168.x.x` ကို localhost ဟု မသတ်မှတ်ပါ။)
 
-Antigravity ကို အဝေးရှိ OmniRoute နှင့် ချိတ်ဆက်ရန် ပံ့ပိုးထားသော နည်းလမ်းနှစ်ခုရှိသည်။
+Antigravity ကို အဝေးရှိ 67router နှင့် ချိတ်ဆက်ရန် ပံ့ပိုးထားသော နည်းလမ်းနှစ်ခုရှိသည်။
 
 ### ရွေးချယ်စရာ A — local login helper (အကြံပြုထားသည်)
 
@@ -148,7 +148,7 @@ npx omniroute login antigravity --no-push
 
 ထို့နောက် **အဝေးရှိ** dashboard တွင် **Providers → Antigravity → Connect** သို့သွားပြီး
 `omniroute-cred-v1.…` blob ကို **Step 2** အကွက်ထဲသို့ paste လုပ်ပါ (callback URL
-သို့မဟုတ် credential blob နှစ်မျိုးစလုံးကို လက်ခံသည်)။ OmniRoute က ၎င်းကို decode
+သို့မဟုတ် credential blob နှစ်မျိုးစလုံးကို လက်ခံသည်)။ 67router က ၎င်းကို decode
 လုပ်ပြီး Cloud Code onboarding ကို server ဘက်တွင် လုပ်ဆောင်ကာ ချိတ်ဆက်မှုကို
 အမြဲတမ်း သိမ်းဆည်းပေးသည်။
 
@@ -193,7 +193,7 @@ tunnel လုပ်ရန် ဒုတိယ provider-specific port မလို
 ## အဝေးထိန်းစက်တွင် ထည့်သွင်းထားသော Codex / Grok ကို ချိတ်ဆက်ခြင်း (သတ်မှတ်ထားသော loopback ပံ့ပိုးသူများ)
 
 Codex၊ xAI (`xai-oauth`) နှင့် Grok CLI (`grok-cli`) တို့သည် ၎င်းတို့၏ upstream OAuth app တွင် **ပုံသေသတ်မှတ်ထားသော** loopback
-`redirect_uri` ကို မှတ်ပုံတင်ထားသည်။ OmniRoute က ၎င်းကို ပြောင်းလဲ၍မရပါ — ပံ့ပိုးသူသည် browser ကို အမြဲတမ်း တူညီသော hardcoded လိပ်စာသို့ ပြန်ပို့သည်-
+`redirect_uri` ကို မှတ်ပုံတင်ထားသည်။ 67router က ၎င်းကို ပြောင်းလဲ၍မရပါ — ပံ့ပိုးသူသည် browser ကို အမြဲတမ်း တူညီသော hardcoded လိပ်စာသို့ ပြန်ပို့သည်-
 
 | ပံ့ပိုးသူ   | ပံ့ပိုးသူက ပြန်လည်ညွှန်းပို့သည့် ပုံသေ callback |
 | ----------- | ----------------------------------------------- |
@@ -201,7 +201,7 @@ Codex၊ xAI (`xai-oauth`) နှင့် Grok CLI (`grok-cli`) တို့သ
 | `xai-oauth` | `http://127.0.0.1:56121/callback`               |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`               |
 
-ဤနေရာရှိ `localhost` သည် **browser လည်ပတ်နေသော စက်** ကို ဆိုလိုပြီး၊ OmniRoute ၏ PKCE
+ဤနေရာရှိ `localhost` သည် **browser လည်ပတ်နေသော စက်** ကို ဆိုလိုပြီး၊ 67router ၏ PKCE
 callback server ကတော့ **server ၏** loopback တွင် စောင့်ကြည့်နေသည်။ Dashboard ကို
 `http://192.168.0.15:20128` ကဲ့သို့သော LAN လိပ်စာဖြင့် ဖွင့်ပါက ၎င်းနှစ်ခုသည် ဘယ်တော့မှ မဆုံနိုင်ပါ။ Authorization
 code ကို သင့် laptop ၏ `localhost:1455` သို့ ပို့ပေးသော်လည်း ထိုနေရာတွင် မည်သည့်အရာကမျှ စောင့်ကြည့်မနေသောကြောင့်
@@ -221,7 +221,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Forward နှစ်ခု လိုအပ်ပြီး၊ တစ်ခုတည်းကိုသာ forward လုပ်ပါကလည်း မအောင်မြင်ပါ-
 
 - **`20128`** (dashboard port) သည် origin ကို အမှန်တကယ် local ဖြစ်သော localhost ဖြစ်စေပြီး၊ ထိုသို့ဖြစ်မှသာ
-  OmniRoute သည် PKCE callback server ကို စတင်မည်ဖြစ်သည် — LAN origin သည်
+  67router သည် PKCE callback server ကို စတင်မည်ဖြစ်သည် — LAN origin သည်
   ထို branch သို့ ဘယ်တော့မှ မရောက်ပါ။
 - **`1455`** (ပံ့ပိုးသူ၏ ပုံသေ callback port) သည် browser ကို ပြန်ပို့သည့်နေရာဖြစ်ပြီး
   server ၏ loopback သို့ tunnel မှတစ်ဆင့် ရောက်ရှိရမည်ဖြစ်သည်။
@@ -339,7 +339,7 @@ omniroute contexts current         # active ဖြစ်နေသော ဆာ�
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

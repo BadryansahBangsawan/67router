@@ -14,7 +14,7 @@ código de executores, predefinições OAuth, cabeçalhos ou o estado do ambient
 O mesmo manifesto está disponível através de HTTP em
 `GET /api/v1/provider-plugin-manifest` para sidecars executados fora do processo.
 
-O OmniRoute anuncia esse URL ao Bifrost e ao CLIProxyAPI através do cabeçalho
+O 67router anuncia esse URL ao Bifrost e ao CLIProxyAPI através do cabeçalho
 de pedido `X-OmniRoute-Provider-Manifest-Url`. Defina
 `OMNIROUTE_PROVIDER_MANIFEST_URL` quando o sidecar necessitar de um URL público ou
 da rede de contentores em vez da origem do pedido local.
@@ -31,7 +31,7 @@ o sidecar deve emitir um pedido incondicional em vez de aceitar um `304`.
 
 Fazer evoluir os metadados dos fornecedores para um contrato de plugin, para que o caminho
 de pedidos crítico possa, eventualmente, ficar a cargo de um sidecar com menor latência,
-enquanto o OmniRoute mantém a rota TypeScript como ponto de aplicação de políticas e mecanismo
+enquanto o 67router mantém a rota TypeScript como ponto de aplicação de políticas e mecanismo
 de contingência. O manifesto é aditivo: por si só, não altera o encaminhamento de pedidos.
 
 ## Contrato
@@ -74,7 +74,7 @@ em vez de voltarem a consultar os ficheiros de origem TypeScript.
 | `usage-fetch`        | Tem um recuperador de utilização ou quota configurado (`getUsageForProvider`).                |
 | `usage-supported`    | A API de utilização aceita este fornecedor (`isSupportedUsageConnection`).                    |
 
-`usage-fetch` destina-se apenas à descoberta. Indica que o OmniRoute sabe como obter a utilização do
+`usage-fetch` destina-se apenas à descoberta. Indica que o 67router sabe como obter a utilização do
 fornecedor; não ativa a obtenção, não altera a semântica das quotas nem implica que o
 widget de quotas do Dashboard esteja ativado para o fornecedor — esse widget é controlado separadamente por
 `USAGE_SUPPORTED_PROVIDERS`. A fonte de verdade é `USAGE_FETCHER_PROVIDERS` em

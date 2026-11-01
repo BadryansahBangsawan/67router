@@ -4,7 +4,7 @@
 
 ---
 
-Continue, incrementeel exporteren van OmniRoute-aanroeplogboeken naar een externe analyticsopslag.
+Continue, incrementeel exporteren van 67router-aanroeplogboeken naar een externe analyticsopslag.
 
 Het tabblad Logs van het dashboard bewaart de aanvraaggeschiedenis in SQLite (`call_logs`), die wordt begrensd door rotatie en retentie. Logexport verzendt dezelfde recordset volgens een schema, zodat deze langer kan worden bewaard dan in de lokale database en kan worden gecombineerd met andere gegevens. BigQuery is de eerste bestemming; de pipeline is een register, zodat meer bestemmingen eenvoudig kunnen worden toegevoegd.
 
@@ -270,7 +270,7 @@ Twee regels voor een nieuwe bestemming:
 - `send()` **moet een fout genereren** bij een gedeeltelijke mislukking. Als de functie succesvol wordt afgehandeld, betekent dit: "de bestemming bevat deze rijen",
   en de cursor wordt er permanent voorbij verplaatst.
 - Een bestemming die een door de gebruiker opgegeven URL accepteert, moet deze vóór het ophalen valideren met
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   op dezelfde manier als webhooks. Voor BigQuery is dit niet nodig: de hosts zijn constanten.
 
 ---

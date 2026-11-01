@@ -111,7 +111,7 @@ npm run lint
 - CLI कॅटलॉग्स `bin/cli/locales/` अंतर्गत स्वतंत्रपणे आहेत.
 - ICU प्लेसहोल्डर्स आणि टॅग्ज तंतोतंत जतन करा. उत्पादन/प्रोव्हायडर/मॉडेलची नावे,
   प्रोटोकॉल आणि हेडरची नावे, कमांड्स, कोड/JSON आयडेंटिफायर्स, URLs, एन्व्हायर्नमेंट व्हेरिएबल्स किंवा
-  `OmniRoute`, `OAuth`, `MCP`, आणि `A2A` यांसारख्या संरक्षित संज्ञांचे भाषांतर करू नका. सध्याची स्रोत सूची
+  `67router`, `OAuth`, `MCP`, आणि `A2A` यांसारख्या संरक्षित संज्ञांचे भाषांतर करू नका. सध्याची स्रोत सूची
   `scripts/i18n/glossary/protected-terms.json` आहे.
 
 **केंद्रित चक्र**
@@ -263,7 +263,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # अन्यत्र 
   झाल्यास `current` आणि `previous` यांची पुन्हा अदलाबदल करते. पहिल्या validation मध्ये अयशस्वी
   झालेला candidate कधीही promote केला जात नाही.
 
-सर्वकाही gitignored `_artifacts/candidate/` अंतर्गत लिहिले जाते; विद्यमान OmniRoute installation
+सर्वकाही gitignored `_artifacts/candidate/` अंतर्गत लिहिले जाते; विद्यमान 67router installation
 आणि त्याची data directory यांना कधीही स्पर्श केला जात नाही. Promote केलेला CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` आहे; तो वापरताना तुमच्या स्वतःच्या `DATA_DIR`
 सह सुरू करा. Exit codes: यशासाठी `0`, validation किंवा promotion अयशस्वी झाल्यास `1`, वापरातील

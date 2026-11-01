@@ -25,7 +25,7 @@ En första rad vars första kolumn är det exakta ordet `provider` (oavsett skif
 Hämta en startfil från importdialogrutan (**Hämta CSV-mall**). Exempel:
 
 ```csv
-# Import av OmniRoute-leverantörer (positionella kolumner)
+# Import av 67router-leverantörer (positionella kolumner)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

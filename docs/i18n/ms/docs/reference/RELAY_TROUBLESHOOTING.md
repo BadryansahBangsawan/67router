@@ -4,7 +4,7 @@
 
 ---
 
-Relay (Vercel, Deno, Cloudflare) menamatkan sambungan huluan pada bahagian belakang tanpa pelayan supaya OmniRoute boleh menyalurkan trafik keluar dari rantau yang stabil sambil memastikan kunci API penyedia kekal di sisi pelayan. Dokumen ini merangkumi dua mod kegagalan yang dihadapi oleh pengendali dalam persekitaran pengeluaran serta laluan pemulihan yang disediakan oleh OmniRoute untuk setiap satunya.
+Relay (Vercel, Deno, Cloudflare) menamatkan sambungan huluan pada bahagian belakang tanpa pelayan supaya 67router boleh menyalurkan trafik keluar dari rantau yang stabil sambil memastikan kunci API penyedia kekal di sisi pelayan. Dokumen ini merangkumi dua mod kegagalan yang dihadapi oleh pengendali dalam persekitaran pengeluaran serta laluan pemulihan yang disediakan oleh 67router untuk setiap satunya.
 
 ## Cara pengesahan relay disimpan
 
@@ -24,7 +24,7 @@ Pada masa permintaan, `extractRelayAuth(notes)` mengembalikan apa-apa bentuk yan
 
 1. Buka **Tetapan → Kumpulan Proksi**.
 2. Baris relay yang pengesahannya tiada memaparkan lencana kuning `pengesahan tiada` dan butang **Baiki**.
-3. Klik **Baiki**. OmniRoute memanggil
+3. Klik **Baiki**. 67router memanggil
    `POST /api/settings/proxies/[id]/repair-relay`, yang:
    - menyahsulit `relayAuthEnc` dengan kunci **semasa**,
    - menulis semula teks biasa `relayAuth` ke dalam `notes`,
@@ -49,7 +49,7 @@ Dalam UI, butang **Baiki** itu sendiri mencetuskan modal penggunaan semula apabi
 
 **Gejala:** ujian proksi (butang `speed`) menunjukkan relay aktif tetapi permintaan masih gagal sekali-sekala.
 
-Semak pengepala kesedaran relay yang dikembalikan oleh prob ujian automatik OmniRoute (lihat **Tetapan → Kumpulan Proksi** dan pembilang `relayTested` / `relayAlive`):
+Semak pengepala kesedaran relay yang dikembalikan oleh prob ujian automatik 67router (lihat **Tetapan → Kumpulan Proksi** dan pembilang `relayTested` / `relayAlive`):
 
 - `x-relay-url` — bahagian belakang relay yang memberikan respons.
 - `x-relay-mode` — `ts` | `bifrost` | `auto` untuk permintaan tersebut.

@@ -43,8 +43,8 @@ cuando el túnel y el conector están configurados.
 
 1. Abra el proveedor **ChatGPT Web (Codex)** y añada una conexión.
 2. Pegue el encabezado Cookie completo de ChatGPT, el ID del túnel, la clave de tiempo de ejecución y el nombre del conector personalizado. Las nuevas configuraciones con capacidad para usar herramientas deben utilizar un conector recién creado llamado exactamente `OmniRoute Codex v2`, con Authentication establecido en None y Permissions establecido en Allow all actions.
-3. Ejecute la comprobación de la conexión. OmniRoute abre un chat temporal respaldado por un navegador y detecta si Sol y Pro están disponibles para la cuenta.
-4. Guarde la conexión. OmniRoute sustituye la cookie pegada por el estado de almacenamiento verificado de Playwright y lo almacena con la clave de tiempo de ejecución mediante la abstracción de credenciales cifradas.
+3. Ejecute la comprobación de la conexión. 67router abre un chat temporal respaldado por un navegador y detecta si Sol y Pro están disponibles para la cuenta.
+4. Guarde la conexión. 67router sustituye la cookie pegada por el estado de almacenamiento verificado de Playwright y lo almacena con la clave de tiempo de ejecución mediante la abstracción de credenciales cifradas.
 
 La cookie sin procesar no se conserva después de guardarla correctamente. Cuando caduque la sesión, abra la conexión, pegue un encabezado Cookie completo nuevo y vuelva a ejecutar la comprobación. El estado de diagnóstico del cuadro de diálogo de edición informa por separado sobre el navegador, el estado de almacenamiento, el inicio de sesión, el chat temporal, el túnel, el conector y el recorrido de ida y vuelta de la herramienta. Para automatizar las actualizaciones de cookies cuando roten las sesiones, consulte la herramienta complementaria en [Extensión de sincronización de sesiones del navegador](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -96,19 +96,19 @@ El entorno de ejecución rechaza esas identidades heredadas y exige un conector 
 
 ## VPS sin pantalla y Docker
 
-Para instalaciones con npm, systemd y PM2, OmniRoute detecta rutas comunes de Chrome y Chromium.
+Para instalaciones con npm, systemd y PM2, 67router detecta rutas comunes de Chrome y Chromium.
 Como alternativa, configure `CHATGPT_WEB_CODEX_CHROME_PATH`. Los turnos de tiempo de ejecución usan deliberadamente
 Chrome con interfaz gráfica porque ChatGPT rechaza la configuración de un navegador realmente sin interfaz. Por lo tanto, un host sin pantalla debe
-ejecutar OmniRoute con una pantalla Xvfb privada; configurar únicamente la ruta de Chrome no proporciona una.
+ejecutar 67router con una pantalla Xvfb privada; configurar únicamente la ruta de Chrome no proporciona una.
 
 El perfil `web` de Docker inicia `chatgpt-web-codex-browser` en la red interna de
 Compose. El sidecar ejecuta Chrome con interfaz gráfica dentro de Xvfb, por lo que no se requiere una pantalla física. Su puerto
 CDP no se publica en el host. El volumen protegido del perfil del navegador está separado del
-volumen de datos de OmniRoute, y el navegador recibe suficiente memoria compartida. El proxy CDP interno
+volumen de datos de 67router, y el navegador recibe suficiente memoria compartida. El proxy CDP interno
 escucha únicamente en el puerto `9223` dentro de la red de Compose; Chrome permanece vinculado a la interfaz de bucle local en el
 sidecar.
 
-Un arrendamiento de supervisor bajo `DATA_DIR` evita que varios procesos de OmniRoute sean propietarios
+Un arrendamiento de supervisor bajo `DATA_DIR` evita que varios procesos de 67router sean propietarios
 del mismo estado del túnel y del broker. El doctor informa de los conflictos.
 
 ## Recuperación interactiva

@@ -4,7 +4,7 @@
 
 ---
 
-Suorita `omniroute`-CLI:tä kannettavallasi samalla, kun OmniRoute itse toimii muualla
+Suorita `omniroute`-CLI:tä kannettavallasi samalla, kun 67router itse toimii muualla
 (VPS-palvelimella, kotipalvelimella tai toisella Tailnet-verkkosi koneella). Kirjaudut kerran sisään
 komennolla `omniroute connect`, minkä jälkeen **jokainen** CLI-komento kohdistuu kyseiseen
 etäpalvelimeen — samat komennot ja sama tuloste, mutta suoritus tapahtuu etäpalvelimella.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← kirjoittaa paikallisen Codex-prof
 ## Toimintaperiaate
 
 ```
-kannettavasi                             OmniRoute-etäpalvelin (VPS)
+kannettavasi                             67router-etäpalvelin (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute-CLI      │  POST /api/cli/connect  (salasana → tunnus)        │
 │  konteksti: vps    │ ───────────────►  │ luo rajatun käyttöoikeus-     │
@@ -108,7 +108,7 @@ palvelimella, ei omalla koneellasi, joten suostumusnäyttö **jää odottamaan i
 eikä koskaan tuota koodia** — tavanomaisessa ”liitä callback-URL” -varamenetelmässä
 ei ole mitään liitettävää. (Tämä on Googlen asettama rajoitus: sama jumiutuminen
 tapahtuu missä tahansa välityspalvelimessa, joka käyttää mukana toimitettua
-Antigravity-työpöytäsovellusta, ei ainoastaan OmniRoutessa.)
+Antigravity-työpöytäsovellusta, ei ainoastaan 67routerissa.)
 
 Hallintapaneeli havaitsee tämän ennen kuin jäät jumiin: kun avaat muusta kuin
 localhost-osoitteesta kohdan **Providers → Antigravity → Connect**, yleinen
@@ -116,7 +116,7 @@ localhost-osoitteesta kohdan **Providers → Antigravity → Connect**, yleinen
 joihin isäntäsi ja porttisi on jo täytetty. (Myös LAN-osoite lasketaan —
 `192.168.x.x` ei tämän callback-kutsun kannalta ole localhost.)
 
-Antigravity voidaan yhdistää OmniRoute-etäasennukseen kahdella tuetulla tavalla.
+Antigravity voidaan yhdistää 67router-etäasennukseen kahdella tuetulla tavalla.
 
 ### Vaihtoehto A — paikallinen kirjautumisavustaja (suositeltu)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Avaa sitten **etäpalvelimen** hallintapaneelissa **Providers → Antigravity →
 Connect** ja liitä `omniroute-cred-v1.…`-blob **Step 2** -kenttään (kenttä hyväksyy
-joko callback-URL:n tai tunnistetietoblobin). OmniRoute purkaa sen, suorittaa
+joko callback-URL:n tai tunnistetietoblobin). 67router purkaa sen, suorittaa
 Cloud Code -käyttöönoton palvelinpuolella ja tallentaa yhteyden pysyvästi.
 
 > Blob sisältää päivitystunnuksen — käsittele sitä kuin salasanaa. Lähetysmenetelmässä
@@ -199,7 +199,7 @@ palveluntarjoajakohtaista porttia ei tarvitse tunneloida.
 ## Codexin / Grokin yhdistäminen etäasennukseen (kiinteän loopback-osoitteen palveluntarjoajat)
 
 Codex, xAI (`xai-oauth`) ja Grok CLI (`grok-cli`) rekisteröivät OAuth-yläpalveluunsa
-**kiinteän** loopback-osoitteen `redirect_uri`. OmniRoute ei voi muuttaa sitä —
+**kiinteän** loopback-osoitteen `redirect_uri`. 67router ei voi muuttaa sitä —
 palveluntarjoaja lähettää selaimen aina takaisin samaan kovakoodattuun osoitteeseen:
 
 | Palveluntarjoaja | Kiinteä callback-osoite, johon palveluntarjoaja uudelleenohjaa |
@@ -208,7 +208,7 @@ palveluntarjoaja lähettää selaimen aina takaisin samaan kovakoodattuun osoitt
 | `xai-oauth`      | `http://127.0.0.1:56121/callback`                              |
 | `grok-cli`       | `http://127.0.0.1:56122/callback`                              |
 
-Tässä `localhost` tarkoittaa **konetta, jossa selain on käynnissä**, kun taas OmniRouten
+Tässä `localhost` tarkoittaa **konetta, jossa selain on käynnissä**, kun taas 67routerin
 PKCE-callback-palvelin kuuntelee **palvelimen** loopback-osoitetta. Jos hallintapaneeli
 avataan lähiverkko-osoitteessa, kuten `http://192.168.0.15:20128`, nämä eivät koskaan
 kohtaa: valtuutuskoodi toimitetaan oman kannettavan tietokoneesi osoitteeseen
@@ -229,7 +229,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Molemmat välitykset tarvitaan, ja vain yhden portin välittäminen epäonnistuu edelleen:
 
 - **`20128`** (hallintapaneelin portti) tekee originista aidosti localhost-osoitteen,
-  minkä ansiosta OmniRoute ylipäätään käynnistää PKCE-callback-palvelimen —
+  minkä ansiosta 67router ylipäätään käynnistää PKCE-callback-palvelimen —
   lähiverkko-origin ei koskaan päädy kyseiseen haaraan.
 - **`1455`** (palveluntarjoajan kiinteä callback-portti) on portti, johon selain
   lähetetään takaisin; liikenne on tunneloitava sen kautta palvelimen
@@ -351,7 +351,7 @@ omniroute contexts current         # aktiivinen palvelin, todennustila, laajuus
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

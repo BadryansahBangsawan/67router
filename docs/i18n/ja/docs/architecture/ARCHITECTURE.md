@@ -1,4 +1,4 @@
-# OmniRoute Architecture (日本語)
+# 67router Architecture (日本語)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _最終更新日: 2026-06-28_
 
 ## エグゼクティブサマリー
 
-OmniRoute は、Next.js 上に構築されたローカル AI ルーティングゲートウェイおよびダッシュボードです。
+67router は、Next.js 上に構築されたローカル AI ルーティングゲートウェイおよびダッシュボードです。
 単一の OpenAI 互換エンドポイント（`/v1/*`）を提供し、変換、フォールバック、トークン更新、使用量追跡を行いながら、複数のアップストリームプロバイダー間でトラフィックをルーティングします。
 
 主な機能：
@@ -128,13 +128,11 @@ v3.8.0 プラットフォームの正規かつバージョン管理された Mer
 - `/dashboard/limits` — クォータ/レート制御
 - `/dashboard/cli-tools` — CLI オンボーディング、ランタイム検出、設定生成
 - `/dashboard/agents` — 検出された ACP エージェント + カスタムエージェント登録
-- `/dashboard/cloud-agents` — クラウドホスト型エージェントタスク（Codex Cloud、Devin、Jules）とタスクライフサイクル
 - `/dashboard/skills` — A2A スキルレジストリ、サンドボックス実行、組み込みスキルカタログ
 - `/dashboard/memory` — 永続的な会話メモリの検査と取得
 - `/dashboard/webhooks` — 送信 Webhook サブスクリプション、シークレットローテーション、再試行統計
 - `/dashboard/batch` — バッチジョブの送信と進捗
 - `/dashboard/cache` — リードスルーキャッシュと推論キャッシュの統計、エビクション制御
-- `/dashboard/playground` — 設定済みの任意のコンボ/モデルを使用する対話型チャットプレイグラウンド
 - `/dashboard/changelog` — アプリ内変更履歴ビューア（`CHANGELOG.md` をレンダリング）
 - `/dashboard/system` — ランタイム診断、バージョン情報、環境検証画面
 - `/dashboard/onboarding` — 新規インストール向けの初回セットアップウィザード
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[ブラウザダッシュボード]
     end
 
-    subgraph Router[OmniRouteローカルプロセス]
+    subgraph Router[67routerローカルプロセス]
         API[V1互換API\n/v1/*]
         DASH[ダッシュボード + 管理API\n/api/*]
         CORE[SSE + 変換コア\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - バジェット：`src/app/api/usage/budget`（GET/POST）
 - フォールバックチェーン：`src/app/api/fallback/chains`（GET/POST/DELETE）
 - コンプライアンス監査：`src/app/api/compliance/audit-log`（GET、ページネーション + 構造化メタデータ対応）
-- 評価：`src/app/api/evals`（GET/POST）、`src/app/api/evals/[suiteId]`（GET）
 - ポリシー：`src/app/api/policies`（GET/POST）
 - 同期トークン：`src/app/api/sync/tokens`（GET/POST）、`src/app/api/sync/tokens/[id]`（GET/DELETE）
 - 設定バンドル：`src/app/api/sync/bundle`（GET、設定/プロバイダー/コンボ/キーのETagバージョン付きスナップショット）
@@ -316,7 +313,6 @@ flowchart LR
 - フェッチタイムアウト: `src/shared/utils/fetchTimeout.ts`
 - リクエストテレメトリ: `src/shared/utils/requestTelemetry.ts`
 - コンプライアンス/監査: `src/lib/compliance/index.ts`
-- 評価ランナー: `src/lib/evals/evalRunner.ts`
 - ドメイン状態の永続化: `src/lib/db/domainState.ts` — フォールバックチェーン、バジェット、コスト履歴、ロックアウト状態、サーキットブレーカーに対するSQLite CRUD
 
 OAuthプロバイダーモジュール（`src/lib/oauth/providers/`配下の個別ファイル27個）:
@@ -328,7 +324,7 @@ OAuthプロバイダーモジュール（`src/lib/oauth/providers/`配下の個�
 
 ## 5) 組み込みサービス (v3.8.4)
 
-OmniRoute は、**組み込みサービス**と呼ばれるローカル実行の AI ツールプロセスをインストール、監視し、それらへルーティングできます。9Router、CLIProxyAPI、Bifrost、Mux、Dario の 5 種類が同梱されています。
+67router は、**組み込みサービス**と呼ばれるローカル実行の AI ツールプロセスをインストール、監視し、それらへルーティングできます。9Router、CLIProxyAPI、Bifrost、Mux、Dario の 5 種類が同梱されています。
 
 アーキテクチャレイヤー:
 
@@ -374,23 +370,6 @@ Auto Combo は、静的なコンボ定義に依存するのではなく、リク
 アルゴリズムの詳細 (要素の計算式、重みの調整) については、
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) を参照してください。
 
-### B. Cloud Agents
-
-Cloud Agents は、サードパーティーのホスト型コードエージェントプラットフォーム (Codex Cloud、Devin、
-Jules) を、DB に支えられた統一的なタスクライフサイクルでラップします。すべてのタスク作成および確認用
-エンドポイントでは、管理認証が必要です。
-
-- モジュールルート: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`、および `agents/` 配下のエージェント別サブディレクトリ)
-- エージェント別の実装: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- パブリックエンドポイント: `/api/v1/agents/tasks/*` (一覧取得/作成/取得/キャンセル)
-- 管理エンドポイント: `/api/cloud/*` (プロビジョニング、ステータス、バッチ)
-- ダッシュボード: `/dashboard/cloud-agents`
-- ストレージ: `cloud_agent_tasks` テーブル
-
-エージェント別のプロビジョニングと OAuth の詳細については、
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) を参照してください。
-
 ### C. ガードレール
 
 ガードレールモジュールは、PII、プロンプトインジェクション、安全でない画像コンテンツについて
@@ -426,7 +405,7 @@ Jules) を、DB に支えられた統一的なタスクライフサイクルで�
 - クォータキャッシュ: `src/domain/quotaCache.ts`
 - デグラデーション状態: `src/domain/degradation.ts`
 - 設定監査: `src/domain/configAudit.ts`
-- OmniRoute レスポンスメタデータビルダー: `src/domain/omnirouteResponseMeta.ts`
+- 67router レスポンスメタデータビルダー: `src/domain/omnirouteResponseMeta.ts`
 - 評価サブシステム: `src/domain/assessment/` — 定期評価ジョブ
 
 ### E. 認可パイプライン
@@ -793,7 +772,7 @@ flowchart LR
         Browser[ダッシュボードブラウザー]
     end
 
-    subgraph ContainerOrProcess[OmniRouteランタイム]
+    subgraph ContainerOrProcess[67routerランタイム]
         Next[Next.jsサーバー\nPORT=20128]
         Core[SSEコア + エグゼキューター]
         MainDB[(storage.sqlite)]
@@ -911,7 +890,7 @@ flowchart LR
 
 ## プロバイダー互換性マトリックス
 
-> **注:** 以下のマトリックスは、OmniRoute v3.8.0 に登録されている 351 個のプロバイダーの代表的なサンプルです。
+> **注:** 以下のマトリックスは、67router v3.8.0 に登録されている 351 個のプロバイダーの代表的なサンプルです。
 > 正式かつ継続的に更新される一覧については、
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md)（自動生成）または信頼できる唯一の情報源である
 > `src/shared/constants/providers.ts`（読み込み時に Zod で検証）を参照してください。
@@ -1093,7 +1072,7 @@ flowchart LR
 - クライアントから受信した未加工のリクエスト
 - 実際に上流へ送信された変換済みリクエスト
 - JSON として再構築されたプロバイダーのレスポンス。ストリーミングレスポンスは、最終サマリーとストリームメタデータに圧縮されます
-- OmniRoute が返した最終的なクライアントレスポンス。ストリーミングレスポンスは、同じ圧縮サマリー形式で保存されます
+- 67router が返した最終的なクライアントレスポンス。ストリーミングレスポンスは、同じ圧縮サマリー形式で保存されます
 
 ## セキュリティ上重要な境界
 

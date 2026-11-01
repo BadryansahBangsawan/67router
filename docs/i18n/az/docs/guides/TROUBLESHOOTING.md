@@ -8,17 +8,17 @@
 
 🌐 **Dillər:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-OmniRoute üçün ümumi problemlər və həllər.
+67router üçün ümumi problemlər və həllər.
 
 ---
 
 ## Qısa arayış
 
-**OmniRoute-da yenisiniz?** Buradan başlayın — bunlar problemlərin 90%-ni həll edir:
+**67router-da yenisiniz?** Buradan başlayın — bunlar problemlərin 90%-ni həll edir:
 
 | Bunu görürəm                       | Mənası                                       | Nə etməli                                                                                               |
 | ---------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| "Qoşulmaq mümkün deyil"            | OmniRoute işləmir                            | `omniroute` və ya `docker restart omniroute` əmrini icra edin                                           |
+| "Qoşulmaq mümkün deyil"            | 67router işləmir                             | `omniroute` və ya `docker restart omniroute` əmrini icra edin                                           |
 | "Etibarsız API açarı"              | Açarınız yanlışdır və ya vaxtı bitib         | Açarı provayderin veb-saytından yenidən köçürün                                                         |
 | "Sorğu limiti aşılıb"              | Həddindən artıq çox sorğu göndərirsiniz      | 1 dəqiqə gözləyin və ya avtomatik alternativə keçid üçün `model: "auto"` istifadə edin                  |
 | "Kvota aşılıb"                     | Pulsuz/ödənişli kvotanızı bitirmisiniz       | Daha çox provayder qoşun və ya pulsuz provayderlərdən (Kiro, Pollinations) istifadə edin                |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # ağır sorğular üçün açıq 
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # yavaş yuxarı axınlar üçün məhdud gözləmə müddətini standart RATE_LIMIT_MAX_WAIT_MS dəyərindən yuxarı qaldırın
 ```
 
-Bunları OmniRoute prosesinin mühitində (demon üçün, məsələn, LaunchAgent plist və ya `systemctl edit` vasitəsilə) təyin edin, sonra OmniRoute-u yenidən başladın. Rotasiya bayrağı ən böyük təsirə malik tək parametrdir: o, sərt xətanı hovuzdakı sağlam provayderə qarşı şəffaf təkrar cəhdə çevirir.
+Bunları 67router prosesinin mühitində (demon üçün, məsələn, LaunchAgent plist və ya `systemctl edit` vasitəsilə) təyin edin, sonra 67router-u yenidən başladın. Rotasiya bayrağı ən böyük təsirə malik tək parametrdir: o, sərt xətanı hovuzdakı sağlam provayderə qarşı şəffaf təkrar cəhdə çevirir.
 
 **Qeyd**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` eyni anda neçə ağır — uzun kontekstli — sorğunun işləyə biləcəyini məhdudlaşdırır; bu məhdudiyyət provayderin sorğu tezliyi məhdudlaşdırıcısı deyil, qəbul qapısıdır. **#503-fanout yeniləməsi:** bu dəyişən artıq standart olaraq təyin edilmir (indi yalnız yuxarıdakı kimi açıq şəkildə konfiqurasiya edildikdə qüvvəyə minir) — bunun əvəzinə ağır sorğuların qəbulu hostun real yaddaş həddinə uyğun avtomatik miqyaslanan, avtomatik hesablanmış bayt büdcəsi (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) ilə idarə olunur. Buna görə də yeni yerləşdirmədə bu dəyişən ümumiyyətlə təyin edilmədən xeyli az `503 chat_admission_busy` rəddi müşahidə edilməlidir; onu burada açıq şəkildə təyin etmək hələ də sənədləşdirildiyi kimi işləyir. Açıq şəkildə təyin edilən bayt büdcəsi dəyərləri 8 MiB–2 GiB aralığı ilə məhdudlaşdırılır. `413 body_exceeds_budget` keçici deyil: həmin bayt büdcəsini artırın, `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` dəyərini azaldın və ya prosesin yaddaş həddini artırın. `inflight_bytes_budget` səbəbindən yükün azaldılması müvəqqəti resurs rəqabətidir və təkrar cəhd edilə bilər. Hər provayder üzrə sorğu tezliyinin məhdudlaşdırılması (`open-sse/services/rateLimitManager.ts`) ayrıca `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` və `RATE_LIMIT_AUTO_ENABLE` tərəfindən idarə olunur — `.env.example` faylına baxın.
 
 **İşlədiyini necə yoxlamaq olar**: agentinizi/cron tapşırığınızı qısa fasilə ilə iki dəfə işə salın və hər ikisinin uğurla tamamlandığını təsdiqləyin. Həll tətbiq edilməzdən əvvəl ikinci icra adətən `429`/`401` xətası verir. Həll tətbiq edildikdən sonra xətalar (əgər olarsa) şəffaf şəkildə yenidən sınanır və çağırış tamamlanır. Həmçinin `curl /monitoring/health` əmri ilə provayder bağlantılarındakı `rateLimitedUntil` sahəsini və təsirlənən provayderlər üçün `circuitBreakers.providerBreakers[].state` dəyərini izləyə bilərsiniz — vəziyyət `CLOSED`, `DEGRADED`, `OPEN` və ya `HALF_OPEN` dəyərlərindən biri olur (`src/shared/utils/circuitBreaker.ts` faylına baxın) və davamlı şəkildə uğursuz olan provayder sıfırlama intervalı yoxlama sorğusuna imkan verməzdən (`HALF_OPEN`) əvvəl `CLOSED → DEGRADED → OPEN` vəziyyətlərinə keçir.
 
-**Hələ də 429 görürsünüzsə**: həmin provayder üçün aktiv hesab həqiqətən öz _kvotasını_ tükədib (bu, sadəcə sorğu tezliyi limiti deyil). OmniRoute idarəetmə paneli → Providers → Accounts bölməsində eyni provayder üçün ikinci hesab əlavə edin və ya başqa pulsuz provayderi (məsələn, `routeway`, `auggie`) qarışığa daxil edin. Rotasiya yalnız keçici sorğu tezliyi/400/401 xətalarında kömək edir; kvotanın tam tükənməsi ikinci giriş məlumatı və ya fərqli provayder tələb edir.
+**Hələ də 429 görürsünüzsə**: həmin provayder üçün aktiv hesab həqiqətən öz _kvotasını_ tükədib (bu, sadəcə sorğu tezliyi limiti deyil). 67router idarəetmə paneli → Providers → Accounts bölməsində eyni provayder üçün ikinci hesab əlavə edin və ya başqa pulsuz provayderi (məsələn, `routeway`, `auggie`) qarışığa daxil edin. Rotasiya yalnız keçici sorğu tezliyi/400/401 xətalarında kömək edir; kvotanın tam tükənməsi ikinci giriş məlumatı və ya fərqli provayder tələb edir.
 
 **Görüntü modellərində (`auto/vision`, `bazaarlink/*`) 403 görürsünüzsə**: qoşulmuş hesabın görüntü imkanını əhatə edən ödənişli planı yoxdur və ya API açarının icazələri kifayət etmir. Provayderin idarəetmə panelində açarın əhatə dairəsinə görüntü/multimodal imkanlarının daxil olduğunu yoxlayın və ya ödənişli tarif hesabını qoşaraq onu görüntü üçün hədəf kimi saxlayın.
 
@@ -71,7 +71,7 @@ Bunları OmniRoute prosesinin mühitində (demon üçün, məsələn, LaunchAgen
 
 `npm install -g omniroute` əmrini işlətdiyiniz zaman `npm warn ERESOLVE`, peer-asılılıq bildirişləri və `deprecated` mesajları kimi çoxlu sayda xəbərdarlıq görə bilərsiniz. **Bunlar gözləniləndir və zərərsizdir.** Çıxışda `added <N> packages` görürsünüzsə, quraşdırma uğurla tamamlanıb.
 
-Peer-asılılıqların həlli ilə bağlı xəbərdarlıqları gizlətmək üçün OmniRoute tərəfindən dəstəklənən aşağıdakı quraşdırma formasından istifadə edin:
+Peer-asılılıqların həlli ilə bağlı xəbərdarlıqları gizlətmək üçün 67router tərəfindən dəstəklənən aşağıdakı quraşdırma formasından istifadə edin:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` yalnız `ERESOLVE` və peer-asılılıq bildirişlərini gizlədir. Köhnəlmə bildirişləri keçidli üçüncü tərəf paketlərindən gəldiyi üçün görünməyə davam edir; onlar quraşdırmanın uğursuz olduğunu göstərmir.
 
-Xəbərdarlıqlar OmniRoute-un nəzarət etmədiyi üçüncü tərəf paketlərindəki köhnəlmiş peer-asılılıq diapazonlarından qaynaqlanır:
+Xəbərdarlıqlar 67router-un nəzarət etmədiyi üçüncü tərəf paketlərindəki köhnəlmiş peer-asılılıq diapazonlarından qaynaqlanır:
 
 1. **`marked-terminal` paketi `marked >=1 <16` tələb edir, lakin `marked@18` tapılıb** — praktikada problemsiz işləyir; yuxarı axındakı peer diapazonu sadəcə köhnəlib.
 2. **`deprecated prebuild-install@7.1.3`** — keçidli yerli ikili fayl əldəetmə köməkçisidir. O,
@@ -104,19 +104,19 @@ npm warn install-scripts 7 paketin quraşdırma skripti allowScripts tərəfind�
 
 ### Bu xəbərdarlığa məhəl qoymamaq olarmı?
 
-**Qismən, lakin skriptlər olmadan işlətmək tövsiyə edilmir.** OmniRoute problemsiz ehtiyat mexanizmləri ehtiva edir: əgər yerli `better-sqlite3` binar modulları müstəqil paketdən yüklənə bilmirsə, tətbiq `node:sqlite` və ya `sql.js` kimi alternativ drayverlərə keçir (baxın: [SQLite İcra Mühitinin Müəyyənləşdirilməsi](../ops/SQLITE_RUNTIME.md)). Server yenə də işə düşəcək, lakin `sql.js` kimi WASM ehtiyat mexanizmlərindən istifadə SQLite WAL (Öncədən Yazılan Jurnal) rejimini deaktiv edir və yaddaşla disk sinxronizasiyası üzrə əlavə yükü artırır.
+**Qismən, lakin skriptlər olmadan işlətmək tövsiyə edilmir.** 67router problemsiz ehtiyat mexanizmləri ehtiva edir: əgər yerli `better-sqlite3` binar modulları müstəqil paketdən yüklənə bilmirsə, tətbiq `node:sqlite` və ya `sql.js` kimi alternativ drayverlərə keçir (baxın: [SQLite İcra Mühitinin Müəyyənləşdirilməsi](../ops/SQLITE_RUNTIME.md)). Server yenə də işə düşəcək, lakin `sql.js` kimi WASM ehtiyat mexanizmlərindən istifadə SQLite WAL (Öncədən Yazılan Jurnal) rejimini deaktiv edir və yaddaşla disk sinxronizasiyası üzrə əlavə yükü artırır.
 
 ### Əslində hansı skriptlər tələb olunur?
 
-Bloklanmış skriptlərin hamısı OmniRoute-un işləməsi üçün vacib deyil:
+Bloklanmış skriptlərin hamısı 67router-un işləməsi üçün vacib deyil:
 
-- **Vacib (`omniroute`, `better-sqlite3`):** OmniRoute Next.js müstəqil tətbiq paketindən (`dist/`) işləyir. Quraşdırma zamanı npm hosta uyğun yerli SQLite drayverini üst səviyyədəki `node_modules/better-sqlite3/` qovluğuna endirir və ya kompilyasiya edir. Daha sonra OmniRoute-un `postinstall` skripti (`scripts/build/postinstall.mjs`) bu hosta uyğun binar faylları yoxlayır və müstəqil serverin onlara çıxış əldə edə bilməsi üçün `dist/node_modules/` qovluğuna köçürür. `omniroute` paketinin postinstall skripti bloklanarsa, bu köçürmə addımı ötürülür.
+- **Vacib (`omniroute`, `better-sqlite3`):** 67router Next.js müstəqil tətbiq paketindən (`dist/`) işləyir. Quraşdırma zamanı npm hosta uyğun yerli SQLite drayverini üst səviyyədəki `node_modules/better-sqlite3/` qovluğuna endirir və ya kompilyasiya edir. Daha sonra 67router-un `postinstall` skripti (`scripts/build/postinstall.mjs`) bu hosta uyğun binar faylları yoxlayır və müstəqil serverin onlara çıxış əldə edə bilməsi üçün `dist/node_modules/` qovluğuna köçürür. `omniroute` paketinin postinstall skripti bloklanarsa, bu köçürmə addımı ötürülür.
 - **İxtiyari/tranzitiv (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Bunlar yığma köməkçiləri, dəyişiklikləri izləmə alətləri və ya sistem açarlar zənciri utilitləridir. Onlara icazə vermək yığma xəbərdarlıqlarının qarşısını alır, lakin əsas marşrutlaşdırma funksionallığı üçün tələb olunmurlar.
-- **İstisna edilən (`onnxruntime-node`):** Lokal süni intellekt vektor təsvirləri üçün ixtiyari asılılıqdır və OmniRoute-un işləməsi üçün **tələb olunmur**. Onun postinstall skripti NuGet-dən təxminən 300MB həcmində CUDA resursu endirir; dəstəklənən avadanlıqda lokal ONNX sürətləndirilməsindən istifadə etməyi açıq şəkildə planlaşdırmırsınızsa, onu icazə siyahısına daxil etməyin.
+- **İstisna edilən (`onnxruntime-node`):** Lokal süni intellekt vektor təsvirləri üçün ixtiyari asılılıqdır və 67router-un işləməsi üçün **tələb olunmur**. Onun postinstall skripti NuGet-dən təxminən 300MB həcmində CUDA resursu endirir; dəstəklənən avadanlıqda lokal ONNX sürətləndirilməsindən istifadə etməyi açıq şəkildə planlaşdırmırsınızsa, onu icazə siyahısına daxil etməyin.
 
 ### Tövsiyə edilən həll
 
-Qlobal quraşdırma zamanı tələb olunan quraşdırma skriptlərinə icazə vermək və xəbərdarlıqları susdurmaq üçün OmniRoute və onun yerli asılılıqları üzrə `--allow-scripts` parametrini ötürün:
+Qlobal quraşdırma zamanı tələb olunan quraşdırma skriptlərinə icazə vermək və xəbərdarlıqları susdurmaq üçün 67router və onun yerli asılılıqları üzrə `--allow-scripts` parametrini ötürün:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -144,14 +144,14 @@ omniroute doctor
 Gemini Web sorğusu Playwright Chromium-un quraşdırılmadığını bildirən mesajla `503` qaytarırsa, npm paketi mövcuddur, lakin brauzerin binar faylı yoxdur.
 Playwright brauzer endirmələrini qəsdən npm paketinin quraşdırılmasından ayrı saxlayır, buna görə də brauzer quraşdırılana qədər bu cavab gözləniləndir.
 
-Qlobal npm quraşdırması üçün Chromium-u OmniRoute paketinin qovluğundan quraşdırın ki, brauzer keşi eyni Playwright quraşdırmasına aid olsun:
+Qlobal npm quraşdırması üçün Chromium-u 67router paketinin qovluğundan quraşdırın ki, brauzer keşi eyni Playwright quraşdırmasına aid olsun:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Quraşdırmadan sonra OmniRoute-u yenidən başladın, sonra Gemini Web sorğusunu təkrar edin. OmniRoute-u Docker obrazından işlədirsinizsə, Chromium və onun asılılıqlarını ehtiva edən `-web` obrazından (və ya `runner-web` yığım hədəfindən) istifadə edin; baza obrazı bunları ehtiva etmir.
+Quraşdırmadan sonra 67router-u yenidən başladın, sonra Gemini Web sorğusunu təkrar edin. 67router-u Docker obrazından işlədirsinizsə, Chromium və onun asılılıqlarını ehtiva edən `-web` obrazından (və ya `runner-web` yığım hədəfindən) istifadə edin; baza obrazı bunları ehtiva etmir.
 
 ---
 
@@ -181,7 +181,7 @@ Quraşdırmadan sonra OmniRoute-u yenidən başladın, sonra Gemini Web sorğusu
 
 **Bu, yanlış müsbət nəticədir. Heç nə yoluxmayıb və heç bir tədbir tələb olunmur.**
 
-Avast və AVG çoxlu HTTP sorğusuna bənzəyən keçidlər ehtiva edən düz mətn/Markdown fayllarını işarələyən evristik yoxlama tətbiq edir. OmniRoute-un `README.md` faylı npm paketinə daxildir (`package.json` → `files` siyahısında göstərilib), buna görə də qlobal quraşdırma zamanı `node_modules/omniroute/README.md` ünvanına yerləşdirilir və təxminən 15 `http://localhost:20128/...` nümunəsi (MCP HTTP/SSE son nöqtələri, A2A `.well-known` URL-i və `curl` fraqmentləri) ehtiva edir. Keçidlərin bu sıxlığı evristik yoxlamanın işə düşməsi üçün kifayətdir.
+Avast və AVG çoxlu HTTP sorğusuna bənzəyən keçidlər ehtiva edən düz mətn/Markdown fayllarını işarələyən evristik yoxlama tətbiq edir. 67router-un `README.md` faylı npm paketinə daxildir (`package.json` → `files` siyahısında göstərilib), buna görə də qlobal quraşdırma zamanı `node_modules/omniroute/README.md` ünvanına yerləşdirilir və təxminən 15 `http://localhost:20128/...` nümunəsi (MCP HTTP/SSE son nöqtələri, A2A `.well-known` URL-i və `curl` fraqmentləri) ehtiva edir. Keçidlərin bu sıxlığı evristik yoxlamanın işə düşməsi üçün kifayətdir.
 
 Bu, yalnız yaxın zamanda baş verməyə başlayıbsa: faylın mahiyyəti dəyişməyib. README-dəki son nöqtələr cədvəli genişləndirilib (MCP HTTP + SSE + A2A əlavə olunub) və daha çox `curl` nümunəsi əlavə edilib; bu da faylın həddi keçməsinə səbəb olub.
 
@@ -189,7 +189,7 @@ Fayl heç bir icra edilə bilən məzmunu olmayan passiv sənədləşdirmədir. 
 
 **Nə etməli:**
 
-1. **Bildirişləri dayandırın** — antivirusunuzda quraşdırma qovluğunu istisnalara əlavə edin (Avast: Settings → Exceptions); qlobal `node_modules` yolunuzu və/və ya OmniRoute məlumat qovluğunu (`~/.omniroute/`) əlavə edin.
+1. **Bildirişləri dayandırın** — antivirusunuzda quraşdırma qovluğunu istisnalara əlavə edin (Avast: Settings → Exceptions); qlobal `node_modules` yolunuzu və/və ya 67router məlumat qovluğunu (`~/.omniroute/`) əlavə edin.
 2. **Yanlış müsbət nəticəni bildirin** — <https://www.avast.com/false-positive-file-form.php> ünvanına keçərək karantinə alınmış `README.md` faylını əlavə edin. Bu, hər kəsə kömək edən həll yoludur, çünki problem təchizatçının evristik yoxlamasının mətn faylına həddindən artıq reaksiya verməsidir.
 
 **Niyə bunu öz tərəfimizdə «düzəltmirik»:** bütün nümunələr `http://localhost` istifadə edir və localhost öz-özünə imzalanmış sertifikatların yaratdığı çətinliklər olmadan `https` istifadə edə bilməz. Bir təchizatçının evristik yoxlamasından yayınmaq üçün sənədləri təhrif etmək, skaner xətasını aradan qaldırmaq naminə bütün oxuculara zərər verərdi.
@@ -227,7 +227,7 @@ Fayl heç bir icra edilə bilən məzmunu olmayan passiv sənədləşdirmədir. 
 
 ### Giriş səhifəsi çökür və ya "Module self-registration" xətası göstərir
 
-**Səbəb:** OmniRoute-un təsdiqlənmiş təhlükəsiz icra mühiti üçün minimum tələbindən kənar Node.js versiyasından istifadə edirsiniz. Ən çox rast gəlinən hal OmniRoute-un tələb etdiyi yenilənmiş təhlükəsizlik minimumundan aşağı olan köhnə Node 22 və ya 24 yamaq versiyasının istifadə edilməsidir.
+**Səbəb:** 67router-un təsdiqlənmiş təhlükəsiz icra mühiti üçün minimum tələbindən kənar Node.js versiyasından istifadə edirsiniz. Ən çox rast gəlinən hal 67router-un tələb etdiyi yenilənmiş təhlükəsizlik minimumundan aşağı olan köhnə Node 22 və ya 24 yamaq versiyasının istifadə edilməsidir.
 
 **Əlamətlər:**
 
@@ -243,7 +243,7 @@ Fayl heç bir icra edilə bilən məzmunu olmayan passiv sənədləşdirmədir. 
    nvm use 24
    ```
 2. Versiyanızı yoxlayın: `node --version` 24.x LTS xəttində `v24.0.0` və ya daha yeni versiyanı göstərməlidir
-3. OmniRoute-u yenidən quraşdırın: `npm install -g omniroute`
+3. 67router-u yenidən quraşdırın: `npm install -g omniroute`
 4. Yenidən başladın: `omniroute`
 
 > **Dəstəklənən təhlükəsiz versiyalar:** `>=22.22.2 <23` və ya `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) və Node.js 26 tam şəkildə dəstəklənir.
@@ -326,13 +326,13 @@ omniroute
 
 **Səbəb:** Node.js 22-də undici@8 dispetçeri Node-un daxili `fetch()` implementasiyası ilə uyğun deyil.
 
-**Həll (v3.5.5+):** OmniRoute indi proksi dispetçeri aktiv olduqda undici-nin öz `fetch()` funksiyasından istifadə edir və beləliklə ardıcıl davranışı təmin edir. v3.5.5+ versiyasına yeniləyin.
+**Həll (v3.5.5+):** 67router indi proksi dispetçeri aktiv olduqda undici-nin öz `fetch()` funksiyasından istifadə edir və beləliklə ardıcıl davranışı təmin edir. v3.5.5+ versiyasına yeniləyin.
 
 ### WSL altında MITM proksisi: Windows hostundakı masaüstü tətbiqləri ələ keçirilmir
 
-**Səbəb:** MITM proksisi və onun CA sertifikatı OmniRoute-un işlədiyi mühitə quraşdırılır. WSL altında həmin mühit Linux qonaq sistemidir, AI masaüstü tətbiqləri (Kiro, Trae, Copilot, Zed, …) isə Windows hostunda işləyir. Host tətbiqləri qonaq sisteminin sertifikat deposuna etibar etmir və qonaq sisteminin sistem proksisi vasitəsilə marşrutlaşdırılmır, buna görə də masaüstü trafikinin ələ keçirilməsi burada işə düşmür.
+**Səbəb:** MITM proksisi və onun CA sertifikatı 67router-un işlədiyi mühitə quraşdırılır. WSL altında həmin mühit Linux qonaq sistemidir, AI masaüstü tətbiqləri (Kiro, Trae, Copilot, Zed, …) isə Windows hostunda işləyir. Host tətbiqləri qonaq sisteminin sertifikat deposuna etibar etmir və qonaq sisteminin sistem proksisi vasitəsilə marşrutlaşdırılmır, buna görə də masaüstü trafikinin ələ keçirilməsi burada işə düşmür.
 
-**Tövsiyə:** OmniRoute-u ələ keçirmək istədiyiniz masaüstü tətbiqləri ilə eyni əməliyyat sistemində yerli şəkildə işə salın (Windows tətbiqləri üçün Windows; macOS/Linux üçün də müvafiq olaraq). Host tətbiqlərini hədəfləyərkən OmniRoute-u WSL daxilində saxlamaq üçün yaradılmış CA sertifikatına Windows hostunda əl ilə etibar etmək və hər bir host tətbiqinin şəbəkə/proksi parametrlərini WSL proksi son nöqtəsinə yönəltmək tələb olunur — bu, dəstəklənməyən və etibarsız bir konfiqurasiyadır.
+**Tövsiyə:** 67router-u ələ keçirmək istədiyiniz masaüstü tətbiqləri ilə eyni əməliyyat sistemində yerli şəkildə işə salın (Windows tətbiqləri üçün Windows; macOS/Linux üçün də müvafiq olaraq). Host tətbiqlərini hədəfləyərkən 67router-u WSL daxilində saxlamaq üçün yaradılmış CA sertifikatına Windows hostunda əl ilə etibar etmək və hər bir host tətbiqinin şəbəkə/proksi parametrlərini WSL proksi son nöqtəsinə yönəltmək tələb olunur — bu, dəstəklənməyən və etibarsız bir konfiqurasiyadır.
 
 ---
 
@@ -359,7 +359,7 @@ omniroute
 
 ### OAuth tokeninin müddəti bitib
 
-OmniRoute tokenləri avtomatik yeniləyir. Problemlər davam edərsə:
+67router tokenləri avtomatik yeniləyir. Problemlər davam edərsə:
 
 1. İdarə paneli → Provayder → Yenidən qoşul
 2. Provayder bağlantısını silin və yenidən əlavə edin
@@ -569,7 +569,7 @@ Provayder profilləri bu parametrləri dəstəkləyir:
 
 ### Kütləvi eyni vaxtlı sorğuların qarşısının alınması
 
-Çoxsaylı paralel sorğular sorğu tezliyi məhdudlaşdırılmış provayderə göndərildikdə, OmniRoute sorğuları ardıcıl icra etmək və zəncirvari xətaların qarşısını almaq üçün mutex + avtomatik sorğu tezliyi məhdudiyyətindən istifadə edir. API açarı provayderləri üçün bu, avtomatik həyata keçirilir.
+Çoxsaylı paralel sorğular sorğu tezliyi məhdudlaşdırılmış provayderə göndərildikdə, 67router sorğuları ardıcıl icra etmək və zəncirvari xətaların qarşısını almaq üçün mutex + avtomatik sorğu tezliyi məhdudiyyətindən istifadə edir. API açarı provayderləri üçün bu, avtomatik həyata keçirilir.
 
 ### Söhbət sorğuları 503 / chat_admission_busy xətası ilə uğursuz olur
 
@@ -605,7 +605,7 @@ Standart hədlərdə sorğuda ən azı `200` mesaj, ən azı `64` alət və ya �
 təxmini token olduqda, yaxud məhdudlaşdırılmış struktur qiymətləndirilməsi `10,000` ziyarət
 edilmiş qovşaq və ya `12` dərinlik hədlərini tükətdikdə sorğu struktur baxımından ağır hesab olunur.
 
-**Səbəb:** Bu, yuxarı axın provayderinin xətası deyil, OmniRoute daxilində məqsədli yükün
+**Səbəb:** Bu, yuxarı axın provayderinin xətası deyil, 67router daxilində məqsədli yükün
 azaldılmasıdır. Hər proses böyük sorğu gövdəsini yaddaşda saxlamazdan və təhlil etməzdən əvvəl
 məhdud ağır yük tutumunu rezerv etmək üçün prosesə lokal qoruyucudan istifadə edir. Ağır yük
 icarəsi SSE cavabının bütün ömrü boyunca saxlanılır.
@@ -655,7 +655,7 @@ baxın.
 
 ## İstəyə bağlı RAG / LLM xəta taksonomiyası (16 problem)
 
-Bəzi OmniRoute istifadəçiləri şlüzü RAG və ya agent steklərinin önündə yerləşdirirlər. Belə konfiqurasiyalarda qəribə bir vəziyyətə tez-tez rast gəlinir: OmniRoute sağlam görünür (provayderlər işləyir, marşrutlaşdırma profilləri qaydasındadır, sürət məhdudiyyəti xəbərdarlıqları yoxdur), lakin yekun cavab yenə də səhv olur.
+Bəzi 67router istifadəçiləri şlüzü RAG və ya agent steklərinin önündə yerləşdirirlər. Belə konfiqurasiyalarda qəribə bir vəziyyətə tez-tez rast gəlinir: 67router sağlam görünür (provayderlər işləyir, marşrutlaşdırma profilləri qaydasındadır, sürət məhdudiyyəti xəbərdarlıqları yoxdur), lakin yekun cavab yenə də səhv olur.
 
 Təcrübədə bu insidentlər adətən şlüzün özündən deyil, sonrakı RAG konveyerindən qaynaqlanır.
 
@@ -674,17 +674,17 @@ Bu xətaları təsvir etmək üçün ortaq terminologiyadan istifadə etmək ist
 
 1. Səhv cavabı araşdırarkən aşağıdakıları qeydə alın:
    - istifadəçi tapşırığı və sorğusu
-   - OmniRoute daxilindəki marşrut və ya provayder kombinasiyası
+   - 67router daxilindəki marşrut və ya provayder kombinasiyası
    - sonrakı mərhələdə istifadə olunan hər hansı RAG konteksti (əldə edilmiş sənədlər, alət çağırışları və s.)
 2. İnsidenti bir və ya iki WFGY ProblemMap nömrəsi (`No.1` … `No.16`) ilə uyğunlaşdırın.
-3. Nömrəni öz idarə panelinizdə, əməliyyat təlimatınızda və ya insident izləmə sisteminizdə OmniRoute jurnallarının yanında saxlayın.
+3. Nömrəni öz idarə panelinizdə, əməliyyat təlimatınızda və ya insident izləmə sisteminizdə 67router jurnallarının yanında saxlayın.
 4. RAG stekinizi, axtarış komponentinizi və ya marşrutlaşdırma strategiyanızı dəyişdirməli olub-olmadığınızı müəyyənləşdirmək üçün müvafiq WFGY səhifəsindən istifadə edin.
 
 Tam mətn və konkret reseptlər burada yerləşir (MIT lisenziyası, yalnız mətn):
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-OmniRoute arxasında RAG və ya agent konveyerləri işlətmirsinizsə, bu bölməni nəzərə almaya bilərsiniz.
+67router arxasında RAG və ya agent konveyerləri işlətmirsinizsə, bu bölməni nəzərə almaya bilərsiniz.
 
 ---
 
@@ -708,7 +708,7 @@ v3.8.0 buraxılışına xas problemlər və onların cari müvəqqəti həlləri
 
 1. Platformanız üçün Devin CLI-ni quraşdırın
 2. `.env` faylında `CLI_DEVIN_BIN=/usr/local/bin/devin` (və ya faktiki yol) təyin edin
-3. OmniRoute-u yenidən başladın və **Dashboard → CLI Tools** bölməsindən təkrar sınaqdan keçirin
+3. 67router-u yenidən başladın və **Dashboard → CLI Tools** bölməsindən təkrar sınaqdan keçirin
 
 ### Modelin gözləmə müddəti ilişib qalır (əl ilə sıfırlama)
 
@@ -763,7 +763,7 @@ v3.8.0 buraxılışına xas problemlər və onların cari müvəqqəti həlləri
 
 1. Təsadüfi məxfi dəyər yaradın: `openssl rand -hex 32`
 2. İstehsal serverinin mühitində (və körpü ilə əlaqə saxlayan bütün klientlərdə) `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` təyin edin
-3. OmniRoute-u yenidən başladın
+3. 67router-u yenidən başladın
 
 ### Responses API: fon rejimi sinxron rejimə endirilib
 

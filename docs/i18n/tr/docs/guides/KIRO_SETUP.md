@@ -5,7 +5,7 @@
 ---
 
 Bu kılavuz, oturum çakışmaları olmadan birden fazla hesabı aynı anda çalıştırmaya
-odaklanarak OmniRoute'a Kiro (AWS tarafından barındırılan yapay zekâ kodlama asistanı) hesaplarının nasıl ekleneceğini açıklar.
+odaklanarak 67router'a Kiro (AWS tarafından barındırılan yapay zekâ kodlama asistanı) hesaplarının nasıl ekleneceğini açıklar.
 
 ---
 
@@ -22,10 +22,10 @@ ilk hesabın belirtecini iptal eder.
 
 ---
 
-## OmniRoute Bunu Nasıl Çözüyor (v3.8.0+)
+## 67router Bunu Nasıl Çözüyor (v3.8.0+)
 
-OmniRoute, v3.8.0'dan itibaren her Kiro bağlantısı içe aktarma işlemi sırasında
-`registerClient()` (AWS SSO OIDC) çağrısını yapar. Bu, her OmniRoute bağlantısına kendine
+67router, v3.8.0'dan itibaren her Kiro bağlantısı içe aktarma işlemi sırasında
+`registerClient()` (AWS SSO OIDC) çağrısını yapar. Bu, her 67router bağlantısına kendine
 özel bir OIDC istemci kaydı sağlar. Her istemci kaydı bağımsız olduğundan, bir hesabı
 yenilemek veya yeniden doğrulamak diğer hesapların yenileme belirteçlerini etkilemez.
 
@@ -60,7 +60,7 @@ kaydı alır.
 
 ### Ön Koşullar
 
-- OmniRoute v3.8.0 veya üzeri.
+- 67router v3.8.0 veya üzeri.
 - Çalışan bir Kiro hesabı (e-posta + parola, Google veya GitHub ile oturum açma).
 - İsteğe bağlı olarak ikinci bir Kiro hesabı.
 
@@ -71,7 +71,7 @@ kaydı alır.
    - **Belirteci İçe Aktar** — `aorAAAAAG` ile başlayan bir yenileme belirteci yapıştırın.
    - **API Anahtarı** — uzun ömürlü bir Kiro / CodeWhisperer API anahtarı yapıştırın.
    - **Google / GitHub ile oturum açma** — tarayıcıda OAuth akışını tamamlayın.
-   - **Otomatik İçe Aktarma** — düğmeye tıklayın; OmniRoute, kimlik bilgilerini
+   - **Otomatik İçe Aktarma** — düğmeye tıklayın; 67router, kimlik bilgilerini
      yerel kiro-cli veritabanından veya `~/.aws/sso/cache` konumundan okur.
 3. Bağlantı kaydedilir. Yenileme belirteci akışları otomatik olarak bağlantıya özel
    bir OIDC istemcisi kaydeder. API anahtarı akışları, anahtarı AWS ile doğrular ve
@@ -128,7 +128,7 @@ API anahtarı kimlik doğrulaması, uzun ömürlü Kiro / AWS CodeWhisperer bear
 2. **API Anahtarı** seçeneğini belirleyin.
 3. API anahtarını yapıştırın ve AWS bölgesini seçin: **Otomatik algıla** (varsayılan), **ABD Doğu
    (Kuzey Virginia)** veya **Avrupa (Frankfurt)**.
-4. OmniRoute, anahtarı doğrular ve bağlantıyı anahtarın çalıştığı bölgeye sabitlenmiş olarak kaydeder.
+4. 67router, anahtarı doğrular ve bağlantıyı anahtarın çalıştığı bölgeye sabitlenmiş olarak kaydeder.
 
 ### API
 
@@ -164,7 +164,7 @@ Kaydedilen bağlantı şunu kullanır:
 ## OIDC İstemci Süresinin Dolması
 
 AWS SSO OIDC genel istemcilerinin süresi genellikle 90 gün sonra dolar
-(`clientSecretExpiresAt`). OmniRoute, gözlemlenebilirlik amacıyla bu zaman damgasını `providerSpecificData`
+(`clientSecretExpiresAt`). 67router, gözlemlenebilirlik amacıyla bu zaman damgasını `providerSpecificData`
 içinde saklar. Bir bağlantı yaklaşık 90 gün sonra yenilenmemeye başlarsa yeni bir OIDC istemci kaydı
 almak için bağlantıyı yeniden içe aktarın. Süre dolduğunda otomatik yeniden kayıt,
 gelecekte yapılacak bir iyileştirme olarak takip edilmektedir.
@@ -185,7 +185,7 @@ sahip değildir.
 ### İçe aktarma "Token validation failed" hatasıyla başarısız oluyor
 
 - Yenileme belirtecinin `aorAAAAAG` ile başladığından emin olun.
-- OmniRoute'un `https://oidc.us-east-1.amazonaws.com` adresine (veya yapılandırılmış
+- 67router'un `https://oidc.us-east-1.amazonaws.com` adresine (veya yapılandırılmış
   bölgeye) erişebildiğinden emin olun. Kurumsal bir proxy arkasındaysanız
   **Dashboard → Settings → Proxies** bölümünde sağlayıcı düzeyinde bir proxy ayarlayın.
 
@@ -193,7 +193,7 @@ sahip değildir.
 
 - Anahtarın bir yenileme belirteci değil, Kiro / CodeWhisperer API anahtarı olduğunu doğrulayın.
 - AWS bölgesinin anahtarla/hesapla eşleştiğini doğrulayın. Varsayılan değer `us-east-1` şeklindedir.
-- Anahtarın `ListAvailableProfiles` çağrısını yapabilmesi gerekir; aksi takdirde OmniRoute
+- Anahtarın `ListAvailableProfiles` çağrısını yapabilmesi gerekir; aksi takdirde 67router
   gerekli `profileArn` değerini çözemez.
 
 Diğer sorunlar için ana [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) dosyasına bakın.

@@ -14,7 +14,7 @@
 
 ## Nega bu ehtiyotkor yondashuv
 
-OmniRoute’ning mavjud joylashtirish tuzilmasi allaqachon ixcham va amalda sinalgan:
+67router’ning mavjud joylashtirish tuzilmasi allaqachon ixcham va amalda sinalgan:
 
 - **`redis:7-alpine`** ishlab chiqarish miqyosidagi tezlik cheklovi/kesh ish yukini boshqaradi.
 - **SQLite + sqlite-vec + FTS5** lokal xotira + vektor + matn bo‘yicha qidiruvni qamrab oladi ([`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts) fayliga qarang).
@@ -49,7 +49,7 @@ Bu yerdagi ikki profil **SQLite imkoniyatlari chegarasiga yetgan joylashtirishla
 
 - Siz ≥3 ta `omniroute` replikasini ishlatasiz va provayderlar rotatsiyasini yagona Go jarayonida markazlashtirmoqchisiz.
 - Barcha replikalardagi yuqori oqim provayderlariga yuboriladigan so‘rovlar uchun yagona audit/jurnallash interfeysini xohlaysiz.
-- Tier-1 marshrutlash qatlamini OmniRoute replikalaridan mustaqil ravishda gorizontal masshtablashni xohlaysiz.
+- Tier-1 marshrutlash qatlamini 67router replikalaridan mustaqil ravishda gorizontal masshtablashni xohlaysiz.
 
 **Nima qo‘shadi:**
 

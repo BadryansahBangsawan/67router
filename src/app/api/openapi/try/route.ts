@@ -12,7 +12,7 @@ import { isLocalOnlyPath } from "@/server/authz/routeGuard";
 import { getRequestPeerLocality } from "@/shared/utils/apiAuth";
 import { validateBody, isValidationFailure } from "@/shared/validation/helpers";
 
-const ALLOWED_TRY_PATH_PREFIXES = ["/api/", "/v1/", "/v1beta/", "/a2a", "/.well-known/agent.json"];
+const ALLOWED_TRY_PATH_PREFIXES = ["/api/", "/v1/", "/v1beta/"];
 const BLOCKED_FORWARD_HEADERS = new Set([
   "connection",
   "content-length",
@@ -44,7 +44,7 @@ const tryRequestSchema = z.object({
     .min(1, "Path is required")
     .startsWith("/", "Path must start with /")
     .refine((value) => !value.startsWith("//"), "Path must be a same-origin path")
-    .refine((value) => isAllowedTryPath(value), "Path must target an OmniRoute API endpoint"),
+    .refine((value) => isAllowedTryPath(value), "Path must target a 67router API endpoint"),
   headers: z.record(z.string(), z.string()).optional().default({}),
   body: z.any().optional(),
 });
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     // pass the raw-string check but resolve elsewhere.
     if (!isAllowedTryPath(targetUrl.pathname)) {
       return NextResponse.json(
-        { error: "Path must target an OmniRoute API endpoint" },
+        { error: "Path must target a 67router API endpoint" },
         { status: 400 }
       );
     }

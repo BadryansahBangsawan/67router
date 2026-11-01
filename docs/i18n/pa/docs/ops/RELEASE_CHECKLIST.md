@@ -45,7 +45,7 @@ npm run test:e2e           # ਵਿਕਲਪਿਕ, ਪਰ ਸਿਫ਼ਾਰਸ
 ਆਟੋਮੈਟਿਕ ਪ੍ਰਵਾਹ ਨੂੰ ਮੁੜ ਬਹਾਲ ਕਰਦਾ ਹੈ (ਲੀਕ ਹੋਇਆ ਟੋਕਨ ਇਕੱਲਾ ਪ੍ਰਕਾਸ਼ਿਤ ਨਹੀਂ ਕਰ ਸਕਦਾ — ਕਿਉਂਕਿ ਕੋਈ ਟੋਕਨ ਹੈ ਹੀ ਨਹੀਂ)।
 
 **ਇੱਕ-ਵਾਰ ਦੀ ਸੈਟਅੱਪ (ਮਾਲਕ):** npmjs.com → ਪੈਕੇਜ `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: ਮਾਲਕ `diegosouzapw`, ਰਿਪੋ `OmniRoute`, ਵਰਕਫ਼ਲੋ `npm-publish.yml`
+Publisher_ → GitHub: ਮਾਲਕ `diegosouzapw`, ਰਿਪੋ `67router`, ਵਰਕਫ਼ਲੋ `npm-publish.yml`
 (ਵਾਤਾਵਰਣ: ਕੋਈ ਨਹੀਂ)। ਜਦੋਂ ਤੱਕ ਇਹ ਮੌਜੂਦ ਨਹੀਂ ਹੁੰਦਾ, ਆਟੋਮੈਟਿਕ ਪੜਾਅ `ENEEDAUTH` ਨਾਲ ਅਸਫਲ ਰਹਿੰਦਾ ਹੈ:
 `publish_mode=staged` (ਹੇਠਾਂ) ਜਾਂ `direct` ਨਾਲ ਦੁਬਾਰਾ ਡਿਸਪੈਚ ਕਰੋ।
 

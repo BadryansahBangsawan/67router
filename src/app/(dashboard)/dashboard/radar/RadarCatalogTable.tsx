@@ -328,7 +328,7 @@ export function RadarCatalogTable({ entries, refreshCatalog, onError }: RadarCat
                       {capabilityBadge(
                         t("capVision"),
                         entry.capabilities?.vision,
-                        "bg-primary/10 text-primary",
+                        "border border-border bg-surface text-text-muted",
                         t("capabilityUnknownHelp")
                       )}
                       {capabilityBadge(
@@ -439,7 +439,7 @@ export function RadarCatalogTable({ entries, refreshCatalog, onError }: RadarCat
             {hiddenModels.map((state) => (
               <div
                 key={`${state.provider}:${state.modelId}:hidden`}
-                className="flex flex-wrap items-center justify-between gap-3 border-b border-border/50 pb-3 last:border-b-0 last:pb-0"
+                className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-3 last:border-b-0 last:pb-0"
               >
                 <div>
                   <span className="font-medium">{state.provider}</span>

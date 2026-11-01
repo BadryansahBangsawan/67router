@@ -4,7 +4,7 @@
 
 ---
 
-یہ دستاویز OmniRoute میں شامل کی گئی فیڈبیک سے چلنے والی موافق روٹنگ کی بنیاد بیان کرتی ہے۔
+یہ دستاویز 67router میں شامل کی گئی فیڈبیک سے چلنے والی موافق روٹنگ کی بنیاد بیان کرتی ہے۔
 یہ جان بوجھ کر مختصر رکھی گئی ہے: یہ ایک ٹائپ شدہ روٹنگ-نتیجہ
 چینل، ایک آن لائن معیار سگنل جو موجودہ auto-combo اسکورر کو فیڈ کرتا ہے، ایک
 اختیاری OpenTelemetry ایکسپورٹر، اور ایک قابلِ توضیح endpoint متعارف کراتی ہے۔ یہ موجودہ
@@ -13,7 +13,7 @@ model lockout، health matrix، autopilot) کو تبدیل **نہیں** کرتی
 
 ## 1. معماری سیاق و سباق
 
-OmniRoute ایک ڈیٹا پلین ہے جس میں ایک **درخواست کا ہاٹ پاتھ** اور ایک **کنٹرول/انٹیلیجنس
+67router ایک ڈیٹا پلین ہے جس میں ایک **درخواست کا ہاٹ پاتھ** اور ایک **کنٹرول/انٹیلیجنس
 پلین** ہے۔ ہاٹ پاتھ کو تیز، میموری کے مؤثر استعمال کا حامل، غیر ہم وقت، لچک پذیر اور
 قابلِ پیش گوئی رہنا چاہیے۔ جانچ، معیار کی اسکورنگ، تجربات اور تاریخی تجزیہ
 کنٹرول پلین سے تعلق رکھتے ہیں۔
@@ -23,7 +23,7 @@ AI ایجنٹ / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   ڈیٹا پلین (تیز، ہم وقت، اِن میموری)
+│    67router        │   ڈیٹا پلین (تیز، ہم وقت، اِن میموری)
 │  روٹنگ / فیل اوور   │
 │  صحت / حفاظتی حد    │
 │  کیش / اسٹریمنگ     │
@@ -49,7 +49,6 @@ AI ایجنٹ / IDE
 | شیڈو ٹریفک                            | `open-sse/services/combo/shadowRouting.ts`                                                         |
 | حفاظتی حدود                           | `src/lib/guardrails/` (پری/پوسٹ ہکس)                                                               |
 | عین کیش                               | `src/lib/semanticCache.ts` (دستخط پر مبنی)                                                         |
-| جائزہ کار / جائزہ سے چلنے والی روٹنگ  | `src/lib/evals/`، `open-sse/services/evalRouting.ts`                                               |
 | Combo فیصلے کی قابلِ توضیحیت          | `open-sse/services/combo/decisionTrace.ts`                                                         |
 | ڈیش بورڈ کے حقیقی وقت کے واقعات       | `src/lib/events/eventBus.ts` (UI اطلاعاتی چینل، `unknown` پے لوڈز، 100 اندراجات کی تاریخ)          |
 
@@ -235,7 +234,7 @@ OTel sink کے ذریعے GenAI/OmniRoute span attributes کے طور پر expor
   کوئی `@opentelemetry/*` SDK نہیں)۔
 - Spans، GenAI semantic conventions (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) کے ساتھ OmniRoute routing
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) کے ساتھ 67router routing
   attributes (outcome، status، ttft، retries، fallback) کی پیروی کرتے ہیں۔
 - `record()` صرف ایک محدود buffer میں enqueue کرتا ہے (O(1))؛ ایک پسِ منظر timer
   غیر ہم وقت طور پر `POST {endpoint}/v1/traces` کے ذریعے flush کرتا ہے۔ overload کی
@@ -257,7 +256,7 @@ OTel sink کے ذریعے GenAI/OmniRoute span attributes کے طور پر expor
 
 ## 6. Evaluation-plane انضمام (مستقبل کی AGI تیاری)
 
-OmniRoute، Future AGI (یا کسی بھی evaluator) کو ایک **ممکنہ
+67router، Future AGI (یا کسی بھی evaluator) کو ایک **ممکنہ
 intelligence/evaluation backend سمجھتا ہے، dependency نہیں**۔ دستیاب seams یہ ہیں:
 
 - ایک `RoutingEventSink` events کو غیر ہم وقت طور پر evaluator تک فارورڈ کر سکتا ہے۔
@@ -266,8 +265,6 @@ intelligence/evaluation backend سمجھتا ہے، dependency نہیں**۔ دس
 - مستقبل کا ایک `Evaluator` (deterministic، local judge، HTTP، WASM)،
   events/traces استعمال کرے گا اور ایک `QualityScore` واپس کرے گا جو اسی
   `getQualityScore`/quality-factor پاتھ میں شامل ہوگا۔
-- موجودہ eval-driven routing (`open-sse/services/evalRouting.ts`) فعال ہونے پر
-  پہلے ہی `eval_runs` کی pass-rates کے مطابق combo targets کو دوبارہ ترتیب دیتی ہے۔
 
 کوئی evaluation درخواست کے پاتھ پر ہم وقت طور پر نہیں چلتی، اور evaluator کی
 عدم موجودگی میں بھی gateway مکمل طور پر کام کرتا ہے۔

@@ -1,10 +1,10 @@
-# OmniRoute Antigravity (Google One AI) Onboarding Guide (Igbo)
+# 67router Antigravity (Google One AI) Onboarding Guide (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇹 [am](../../../am/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇦 [ar](../../../ar/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇿 [az](../../../az/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇬 [bg](../../../bg/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇩 [bn](../../../bn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇦 [bs](../../../bs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇿 [cs](../../../cs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇰 [da](../../../da/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇪 [de](../../../de/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇷 [el](../../../el/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇸 [es](../../../es/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇪 [et](../../../et/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇷 [fa](../../../fa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇮 [fi](../../../fi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇷 [fr](../../../fr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇪 [ga](../../../ga/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [gu](../../../gu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ha](../../../ha/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇱 [he](../../../he/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [hi](../../../hi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇷 [hr](../../../hr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇺 [hu](../../../hu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇲 [hy](../../../hy/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇩 [id](../../../id/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇹 [it](../../../it/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇯🇵 [ja](../../../ja/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇪 [ka](../../../ka/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇭 [km](../../../km/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [kn](../../../kn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇷 [ko](../../../ko/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇹 [lt](../../../lt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇻 [lv](../../../lv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ml](../../../ml/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [mr](../../../mr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇾 [ms](../../../ms/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇹 [mt](../../../mt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇲 [my](../../../my/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇵 [ne](../../../ne/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇱 [nl](../../../nl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇴 [no](../../../no/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [or](../../../or/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [pa](../../../pa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇭 [phi](../../../phi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇱 [pl](../../../pl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇹 [pt](../../../pt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇴 [ro](../../../ro/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇺 [ru](../../../ru/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇰 [si](../../../si/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇰 [sk](../../../sk/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇮 [sl](../../../sl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇸 [sr](../../../sr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇪 [sv](../../../sv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇪 [sw](../../../sw/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ta](../../../ta/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [te](../../../te/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇭 [th](../../../th/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇷 [tr](../../../tr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇰 [ur](../../../ur/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇿 [uz](../../../uz/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇻🇳 [vi](../../../vi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [yo](../../../yo/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/ANTIGRAVITY-ONBOARDING.md)
 
 ---
 
-> **Ihe ị ga-enweta**: Ohere iji Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6, na ụdị ndị ọzọ site na ndenye aha Google One AI Pro gị — nke a na-ebufe site na OmniRoute dị ka otu ọnụ ụzọ jikọtara ọnụ.
+> **Ihe ị ga-enweta**: Ohere iji Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6, na ụdị ndị ọzọ site na ndenye aha Google One AI Pro gị — nke a na-ebufe site na 67router dị ka otu ọnụ ụzọ jikọtara ọnụ.
 
 **Ntụaka ndị gọọmentị**:
 
@@ -22,17 +22,17 @@ Ndị na-eweta ọrụ abụọ a na-eji **otu Google backend ahụ** — otu OA
 
 > Lee [ọkwa Antigravity CLI](https://antigravity.google/blog/introducing-google-antigravity-cli) maka ntụnyere gọọmentị Google.
 
-| Akụkụ                   | `antigravity` (IDE)                                               | `agy` (CLI)                                                           |
-| ----------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **Ngwaahịa Google**     | Antigravity 2.0 / Antigravity IDE                                 | Antigravity CLI                                                       |
-| **Backend**             | Otu Google Cloud Code API ahụ                                     | Otu Google Cloud Code API ahụ                                         |
-| **OAuth / Token**       | Otu client, otu mmegharị                                          | Otu client, otu mmegharị                                              |
-| **Katalọgụ ụdị**        | Ndepụta ahọpụtara na-adịghị agbanwe agbanwe (OmniRoute hardcoded) | A na-enyocha ya ozugbo site na Google site na `:fetchAvailableModels` |
-| **Ụdị Claude**          | Sonnet 4.6, Opus 4.6 (ụdịdị 4 nke ọ bụla)                         | Sonnet 4.6, Opus 4.6 (ụdịdị 4 nke ọ bụla)                             |
-| **Ịkpọ Gemini aha**     | Aha ndị doro anya (Low/Medium/High)                               | Upstream IDs (extra-low/low/agent)                                    |
-| **Ụdị ndị ọzọ**         | `gpt-oss-120b-medium`                                             | O nwere ike ịgụnye ụdị ndị ọzọ sitere na Google                       |
-| **Ọnọdụ ojiji ndabere** | Njikọ IDE (VS Code, JetBrains)                                    | Ohere iji CLI / API                                                   |
-| **Oke ojiji**           | A na-ekekọrịta ya na agy (otu akaụntụ Google ahụ)                 | A na-ekekọrịta ya na antigravity (otu akaụntụ Google ahụ)             |
+| Akụkụ                   | `antigravity` (IDE)                                              | `agy` (CLI)                                                           |
+| ----------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Ngwaahịa Google**     | Antigravity 2.0 / Antigravity IDE                                | Antigravity CLI                                                       |
+| **Backend**             | Otu Google Cloud Code API ahụ                                    | Otu Google Cloud Code API ahụ                                         |
+| **OAuth / Token**       | Otu client, otu mmegharị                                         | Otu client, otu mmegharị                                              |
+| **Katalọgụ ụdị**        | Ndepụta ahọpụtara na-adịghị agbanwe agbanwe (67router hardcoded) | A na-enyocha ya ozugbo site na Google site na `:fetchAvailableModels` |
+| **Ụdị Claude**          | Sonnet 4.6, Opus 4.6 (ụdịdị 4 nke ọ bụla)                        | Sonnet 4.6, Opus 4.6 (ụdịdị 4 nke ọ bụla)                             |
+| **Ịkpọ Gemini aha**     | Aha ndị doro anya (Low/Medium/High)                              | Upstream IDs (extra-low/low/agent)                                    |
+| **Ụdị ndị ọzọ**         | `gpt-oss-120b-medium`                                            | O nwere ike ịgụnye ụdị ndị ọzọ sitere na Google                       |
+| **Ọnọdụ ojiji ndabere** | Njikọ IDE (VS Code, JetBrains)                                   | Ohere iji CLI / API                                                   |
+| **Oke ojiji**           | A na-ekekọrịta ya na agy (otu akaụntụ Google ahụ)                | A na-ekekọrịta ya na antigravity (otu akaụntụ Google ahụ)             |
 
 **Ụdị ndị dị (nke nnwale kwadoro, 2026-07-29)**:
 
@@ -89,11 +89,11 @@ A na-azụta kredit iche, a na-ewepụkwa ya dịka ọnụahịa API ọkọl�
 
 ### Nkọwa Ndị Dị Mkpa
 
-- Oke ojiji bụ nke **akaụntụ niile na-ekekọrịta** — otu akaụntụ Google ahụ n'ime Antigravity IDE, CLI, na OmniRoute na-ekekọrịta otu nchịkọta oke ojiji
+- Oke ojiji bụ nke **akaụntụ niile na-ekekọrịta** — otu akaụntụ Google ahụ n'ime Antigravity IDE, CLI, na 67router na-ekekọrịta otu nchịkọta oke ojiji
 - Akaụntụ Google ọ bụla nwere oke ojiji nke ya — ọtụtụ akaụntụ = ọtụtụ nchịkọta oke ojiji
 - Ndị ọrụ AI Pro akọpụtala **mgbochi ụbọchị 7** kama mmalitegharị awa 5 mgbe e ruru oke ntọala kwa izu (Google kwadoro na e mere nke a n'ebumnuche maka nnukwu ọchịchọ)
 
-**Mgbe oke akaụntụ gị gwụsịrị**: OmniRoute na-anwale ọzọ na-akpaghị aka site na akaụntụ ọzọ dịnụ n'ime combo route. Enweghị mkpa itinye aka n'onwe gị.
+**Mgbe oke akaụntụ gị gwụsịrị**: 67router na-anwale ọzọ na-akpaghị aka site na akaụntụ ọzọ dịnụ n'ime combo route. Enweghị mkpa itinye aka n'onwe gị.
 
 ---
 
@@ -103,9 +103,9 @@ Njikọ antigravity/agy ọ bụla chọrọ Google Cloud Code `projectId`. Na-e
 
 ### Usoro A: Akpaka (Akwadoro)
 
-OmniRoute na-eme nke a na-akpaghị aka. Mgbe ị gbakwunyere akaụntụ Google ọhụrụ site na Dashboard OAuth:
+67router na-eme nke a na-akpaghị aka. Mgbe ị gbakwunyere akaụntụ Google ọhụrụ site na Dashboard OAuth:
 
-1. OmniRoute na-emegharị token ahụ
+1. 67router na-emegharị token ahụ
 2. Ọ na-akpọ `loadCodeAssist` iji chọpụta projectId
 3. Ọ bụrụ na project adịghị, ọ na-akpọ `onboardUser` iji mepụta otu
 4. Ọ na-anwale `loadCodeAssist` ọzọ iji nweta projectId e mepụtara ọhụrụ
@@ -128,14 +128,14 @@ agy login
 # Nke a na-ebute ndebanye Cloud Code ma kenye projectId
 ```
 
-Mgbe `agy login` gara nke ọma, mee ka token ahụ dị ọhụrụ na OmniRoute Dashboard. A ga-achọpụta projectId na-akpaghị aka.
+Mgbe `agy login` gara nke ọma, mee ka token ahụ dị ọhụrụ na 67router Dashboard. A ga-achọpụta projectId na-akpaghị aka.
 
 ### Otu E Si Nyochaa Ya
 
 Lelee database:
 
 ```bash
-# N'ime container OmniRoute
+# N'ime container 67router
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### Nsogbu Ahụ
 
-Google OAuth chọrọ URI ntụgharị ziri ezi. Nke ndabara OmniRoute na-eji `http://127.0.0.1:20128/callback` (loopback). Nke a na-arụ ọrụ maka build mpaghara mana ọ **na-ada maka nnyefe dịpụrụ adịpụ** (dịka ọmụmaatụ, sava a na-enweta site na IP LAN).
+Google OAuth chọrọ URI ntụgharị ziri ezi. Nke ndabara 67router na-eji `http://127.0.0.1:20128/callback` (loopback). Nke a na-arụ ọrụ maka build mpaghara mana ọ **na-ada maka nnyefe dịpụrụ adịpụ** (dịka ọmụmaatụ, sava a na-enweta site na IP LAN).
 
 Google na-ajụ URI ntụgharị ndị:
 
@@ -165,7 +165,7 @@ Google na-ajụ URI ntụgharị ndị:
 
 **Nhọrọ A: Jiri usoro OAuth arụnyere n'ime ya (nke ndabara)**
 
-- Ọ na-arụ ọrụ mgbe ị na-enweta OmniRoute site na `localhost` ma ọ bụ `127.0.0.1`
+- Ọ na-arụ ọrụ mgbe ị na-enweta 67router site na `localhost` ma ọ bụ `127.0.0.1`
 - Enweghị nhazi achọrọ
 
 **Nhọrọ B: Ozi njirimara OAuth ahaziri iche**
@@ -180,9 +180,9 @@ Google na-ajụ URI ntụgharị ndị:
 
 **Nhọrọ C: Jiri agy CLI maka nbanye mbụ**
 
-- Gbaa `agy login` na kọmputa ga-enweta OmniRoute
+- Gbaa `agy login` na kọmputa ga-enweta 67router
 - Usoro OAuth ga-agwụcha na mpaghara ahụ, a ga-echekwa token
-- Bubata njikọ ahụ n'ime OmniRoute site na Dashboard
+- Bubata njikọ ahụ n'ime 67router site na Dashboard
 
 ### Mmachi
 
@@ -193,7 +193,7 @@ Google na-ajụ URI ntụgharị ndị:
 
 ## 5. Nchọpụta na Ndozi Nsogbu: Mgbe Ntọlite Akpaka Dara
 
-OmniRoute na-ejikwa ịchọpụta projectId na onboarding na-akpaghị aka maka ọtụtụ akaụntụ. Mgbe ọ dara, ihe kpatara ya na-abụkarị otu n'ime ihe ndị a:
+67router na-ejikwa ịchọpụta projectId na onboarding na-akpaghị aka maka ọtụtụ akaụntụ. Mgbe ọ dara, ihe kpatara ya na-abụkarị otu n'ime ihe ndị a:
 
 ### A gbochiri mpaghara akaụntụ ahụ
 
@@ -221,7 +221,7 @@ OmniRoute na-ejikwa ịchọpụta projectId na onboarding na-akpaghị aka maka
 
 **Isi ihe kpatara ya**: Edebanyebeghị akaụntụ ahụ na Google Cloud Code, ntinye onboarding akpaka ahụ adakwara.
 
-**Ndozi**: Jiri aka gbaa `agy login` iji kpalite ndebanye aha Cloud Code, wee mee token ahụ refresh na OmniRoute Dashboard.
+**Ndozi**: Jiri aka gbaa `agy login` iji kpalite ndebanye aha Cloud Code, wee mee token ahụ refresh na 67router Dashboard.
 
 ### Token kubiela ma ọ bụ kagbuo
 
@@ -273,4 +273,4 @@ Akaụntụ anaghị arụ ọrụ?
 
 ---
 
-_Mmelite ikpeazụ: 2026-07-31. Dabere na OmniRoute v3.8.50._
+_Mmelite ikpeazụ: 2026-07-31. Dabere na 67router v3.8.50._

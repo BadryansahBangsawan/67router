@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-មគ្គុទ្ទេសក៍ពេញលេញសម្រាប់កំណត់រចនាសម្ព័ន្ធអ្នកផ្តល់សេវា បង្កើតបន្សំ រួមបញ្ចូលឧបករណ៍ CLI និងដាក់ឱ្យប្រើប្រាស់ OmniRoute។
+មគ្គុទ្ទេសក៍ពេញលេញសម្រាប់កំណត់រចនាសម្ព័ន្ធអ្នកផ្តល់សេវា បង្កើតបន្សំ រួមបញ្ចូលឧបករណ៍ CLI និងដាក់ឱ្យប្រើប្រាស់ 67router។
 
 ---
 
@@ -24,7 +24,6 @@
 - [ប្រព័ន្ធជំនាញ](#-skills-system)
 - [ប្រព័ន្ធអង្គចងចាំ](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Cloud Agents](#-cloud-agents)
 - [ការគ្រប់គ្រងតាមកម្មវិធី](#-programmatic-management)
 - [CLI ផ្ទៃក្នុង](#-internal-cli)
 - [កម្មវិធីកុំព្យូទ័រលើតុ (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@
   cc/claude-haiku-4-5-20251001
 ```
 
-**គន្លឹះជំនាញ:** ប្រើ Opus សម្រាប់កិច្ចការស្មុគស្មាញ និង Sonnet សម្រាប់ល្បឿន។ OmniRoute តាមដានកូតាដោយឡែកសម្រាប់ម៉ូដែលនីមួយៗ!
+**គន្លឹះជំនាញ:** ប្រើ Opus សម្រាប់កិច្ចការស្មុគស្មាញ និង Sonnet សម្រាប់ល្បឿន។ 67router តាមដានកូតាដោយឡែកសម្រាប់ម៉ូដែលនីមួយៗ!
 
-គ្មាន browser នៅលើ host របស់ OmniRoute មែនទេ? ដំណើរការ `claude setup-token` នៅទីណាក៏បានដែលបានចូល Claude Code រួច ហើយបិទភ្ជាប់ token ដែលមានសុពលភាពមួយឆ្នាំទៅក្នុងផ្ទាំង **Setup Token**។ សូមមើល [Claude Code ជាមួយ setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md)។
+គ្មាន browser នៅលើ host របស់ 67router មែនទេ? ដំណើរការ `claude setup-token` នៅទីណាក៏បានដែលបានចូល Claude Code រួច ហើយបិទភ្ជាប់ token ដែលមានសុពលភាពមួយឆ្នាំទៅក្នុងផ្ទាំង **Setup Token**។ សូមមើល [Claude Code ជាមួយ setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md)។
 
-Route ដែលឆបគ្នាជាមួយ Claude និង Claude Code រក្សាកម្រិតការគិត `max` សម្រាប់ម៉ូដែល Opus និង Sonnet។ ម៉ូដែល Haiku មិនទទួលយកកម្រិតការគិត `max` ទេ ដូច្នេះ OmniRoute នឹងបន្ថយសំណើនោះទៅជាកញ្ចប់ថវិកាគិតកម្រិតខ្ពស់ មុនពេលផ្ញើវាទៅ upstream។
+Route ដែលឆបគ្នាជាមួយ Claude និង Claude Code រក្សាកម្រិតការគិត `max` សម្រាប់ម៉ូដែល Opus និង Sonnet។ ម៉ូដែល Haiku មិនទទួលយកកម្រិតការគិត `max` ទេ ដូច្នេះ 67router នឹងបន្ថយសំណើនោះទៅជាកញ្ចប់ថវិកាគិតកម្រិតខ្ពស់ មុនពេលផ្ញើវាទៅ upstream។
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,7 +260,7 @@ Route ដែលឆបគ្នាជាមួយ Claude និង Claude Code �
 
 ### Cursor IDE
 
-**ការប្រើ Cursor ជាម៉ាស៊ីនភ្ញៀវ OmniRoute** (បញ្ជូនការជជែក Cursor តាមរយៈ OmniRoute)៖
+**ការប្រើ Cursor ជាម៉ាស៊ីនភ្ញៀវ 67router** (បញ្ជូនការជជែក Cursor តាមរយៈ 67router)៖
 
 ```
 ការកំណត់ → ម៉ូដែល → កម្រិតខ្ពស់៖
@@ -270,7 +269,7 @@ Route ដែលឆបគ្នាជាមួយ Claude និង Claude Code �
   Model: cc/claude-opus-4-7
 ```
 
-**ការប្រើ OmniRoute ជាអ្នកផ្តល់សេវា Cursor** (OmniRoute ហៅទៅ Cursor ខ្សែខាងលើ)៖ គួរប្រើ
+**ការប្រើ 67router ជាអ្នកផ្តល់សេវា Cursor** (67router ហៅទៅ Cursor ខ្សែខាងលើ)៖ គួរប្រើ
 **ផ្ទាំងគ្រប់គ្រង → អ្នកផ្តល់សេវា → Cursor → ចូលប្រើជាមួយ Cursor**។ ក្នុង Docker សូមមើល
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md)។
 
@@ -357,7 +356,7 @@ CLI ផ្ទុក `.env` ដោយស្វ័យប្រវត្តិព�
 
 ### របៀប Tray
 
-ចាប់ផ្តើម OmniRoute ក្នុងថាសប្រព័ន្ធ៖
+ចាប់ផ្តើម 67router ក្នុងថាសប្រព័ន្ធ៖
 
 ```bash
 omniroute serve --tray
@@ -374,7 +373,7 @@ omniroute serve --tray
 - បើកផ្ទាំងគ្រប់គ្រង។
 - បើក `/dashboard/logs`។
 - ផ្លាស់ប្តូរការចាប់ផ្តើមដោយស្វ័យប្រវត្តិ។
-- បញ្ឈប់ OmniRoute។
+- បញ្ឈប់ 67router។
 
 កុំប្រើ `--tray` រួមជាមួយជម្រើសទាំងនេះ៖
 
@@ -400,14 +399,14 @@ omniroute autostart disable
 
 ### ការលុបការដំឡើង
 
-នៅពេលអ្នកលែងត្រូវការ OmniRoute យើងផ្តល់ស្គ្រីបរហ័សពីរសម្រាប់ការលុបចេញឱ្យស្អាត៖
+នៅពេលអ្នកលែងត្រូវការ 67router យើងផ្តល់ស្គ្រីបរហ័សពីរសម្រាប់ការលុបចេញឱ្យស្អាត៖
 
 | ពាក្យបញ្ជា               | សកម្មភាព                                                                                          |
 | ------------------------ | ------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | លុបកម្មវិធីប្រព័ន្ធ ប៉ុន្តែ **រក្សាទុក DB និងការកំណត់រចនាសម្ព័ន្ធរបស់អ្នក** ក្នុង `~/.omniroute`។ |
 | `npm run uninstall:full` | លុបកម្មវិធី ហើយ **លុបជាអចិន្ត្រៃយ៍នូវការកំណត់រចនាសម្ព័ន្ធ សោ និងមូលដ្ឋានទិន្នន័យទាំងអស់**។        |
 
-> ចំណាំ៖ ដើម្បីដំណើរការពាក្យបញ្ជាទាំងនេះ សូមចូលទៅកាន់ថតគម្រោង OmniRoute (ប្រសិនបើអ្នកបាន clone វា) រួចដំណើរការពួកវា។ ជាជម្រើស ប្រសិនបើបានដំឡើងជាសកល អ្នកអាចដំណើរការ `npm uninstall -g omniroute` បានដោយផ្ទាល់។
+> ចំណាំ៖ ដើម្បីដំណើរការពាក្យបញ្ជាទាំងនេះ សូមចូលទៅកាន់ថតគម្រោង 67router (ប្រសិនបើអ្នកបាន clone វា) រួចដំណើរការពួកវា។ ជាជម្រើស ប្រសិនបើបានដំឡើងជាសកល អ្នកអាចដំណើរការ `npm uninstall -g omniroute` បានដោយផ្ទាល់។
 
 ### ការដាក់ឱ្យដំណើរការលើ VPS
 
@@ -479,7 +478,7 @@ docker run -d --name omniroute -p 20128:20128 --env-file ./.env -v omniroute-dat
 
 ### Void Linux (xbps-src)
 
-អ្នកប្រើប្រាស់ Void Linux អាចវេចខ្ចប់ និងដំឡើង OmniRoute ដោយផ្ទាល់តាមប្រព័ន្ធ ដោយប្រើក្របខណ្ឌចងក្រងឆ្លងវេទិកា `xbps-src`។ វាធ្វើស្វ័យប្រវត្តិកម្មលើការបង្កើត Node.js standalone រួមជាមួយ native bindings របស់ `better-sqlite3` ដែលត្រូវការ។
+អ្នកប្រើប្រាស់ Void Linux អាចវេចខ្ចប់ និងដំឡើង 67router ដោយផ្ទាល់តាមប្រព័ន្ធ ដោយប្រើក្របខណ្ឌចងក្រងឆ្លងវេទិកា `xbps-src`។ វាធ្វើស្វ័យប្រវត្តិកម្មលើការបង្កើត Node.js standalone រួមជាមួយ native bindings របស់ `better-sqlite3` ដែលត្រូវការ។
 
 <details>
 <summary><b>មើលគំរូ xbps-src</b></summary>
@@ -659,7 +658,7 @@ post_install() {
 
 **អ្នកផ្តល់សេវាដែលត្រូវគ្នាផ្សេងទៀត** (បានជ្រើសរើស): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (តាមរយៈ `aws-bedrock`), `azure-ai`, `openrouter` (កាតាឡុកឆ្លងកាត់ដោយផ្ទាល់), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`។ អ្នកផ្តល់សេវានីមួយៗរក្សាបញ្ជីម៉ូដែលផ្ទាល់ខ្លួននៅក្នុង `providerRegistry.ts` ហើយអាចធ្វើសមកាលកម្មដោយស្វ័យប្រវត្តិ នៅពេលអ្នកផ្តល់សេវាបង្ហាញ endpoint `/models`។
 
-**កំណត់ចំណាំអំពីលេខសម្គាល់ម៉ូដែល:** OmniRoute ប្រើលេខសម្គាល់ដើមរបស់អ្នកផ្តល់សេវា (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`)។ លេខសម្គាល់ខ្លះមានកំណែប្រើសញ្ញាចុច ពីព្រោះ API ប្រភពដើមតម្រូវឱ្យប្រើទម្រង់នោះ។ ប្រសិនបើម៉ូដែលមួយមិនមានក្នុងបញ្ជីខាងលើ សូមដំណើរការ `omniroute models --search <term>` ឬហៅ `GET /api/models/catalog` ដើម្បីបញ្ជាក់ភាពអាចប្រើបាន។
+**កំណត់ចំណាំអំពីលេខសម្គាល់ម៉ូដែល:** 67router ប្រើលេខសម្គាល់ដើមរបស់អ្នកផ្តល់សេវា (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`)។ លេខសម្គាល់ខ្លះមានកំណែប្រើសញ្ញាចុច ពីព្រោះ API ប្រភពដើមតម្រូវឱ្យប្រើទម្រង់នោះ។ ប្រសិនបើម៉ូដែលមួយមិនមានក្នុងបញ្ជីខាងលើ សូមដំណើរការ `omniroute models --search <term>` ឬហៅ `GET /api/models/catalog` ដើម្បីបញ្ជាក់ភាពអាចប្រើបាន។
 
 </details>
 
@@ -725,9 +724,9 @@ prefix: "<prefix>" គឺជា prefix របស់ provider ដែលបាន�
 ត្រូវបានបម្រុងទុកឬអត់៖ ថ្នាំងដែលបានរក្សាទុក មុនពេលមានច្បាប់នេះ នៅតែត្រូវបានរក្សាទុក ប៉ុន្តែ prefix របស់វាត្រូវបាន route ទៅកាន់
 provider ដែលមានស្រាប់ក្នុងប្រព័ន្ធ។ កែសម្រួលថ្នាំង ហើយផ្តល់ prefix ថ្មីឱ្យវា។
 
-### ការតភ្ជាប់ OmniRoute Peer ជាខ្សែសង្វាក់
+### ការតភ្ជាប់ 67router Peer ជាខ្សែសង្វាក់
 
-OmniRoute gateway មួយទៀតអាចត្រូវបានបន្ថែមជា provider **Custom OpenAI-compatible**។ ប្រើ
+67router gateway មួយទៀតអាចត្រូវបានបន្ថែមជា provider **Custom OpenAI-compatible**។ ប្រើ
 base URL `/v1` របស់ peer និង API key ដាច់ដោយឡែកដែលមានសិទ្ធិតិចបំផុត ដែលចេញដោយ peer នោះ។
 
 សម្រាប់ខ្សែសង្វាក់តបតគ្នា ឬច្រើនតំណ សូមបើក loop guard ដែលត្រូវជ្រើសរើសបើកដោយចេតនា នៅលើ gateway នីមួយៗ៖
@@ -753,7 +752,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 ការតភ្ជាប់ peer ជាខ្សែសង្វាក់ មិនមែនជាការចម្លង database ឬ failover របស់ host ទេ។ Gateway នីមួយៗរក្សា
 ស្ថានភាព SQLite, cache, counter កម្រិតប្រើប្រាស់ និង session ដោយឯករាជ្យ។ ប្រើ reverse proxy ដែលមានការពិនិត្យសុខភាព ឬ client
 failover សម្រាប់ភាពអាចប្រើបានបែប active/passive ឬ active/active ហើយកុំ mount database SQLite មួយ
-ទៅក្នុង instance OmniRoute ច្រើនដែលកំពុងដំណើរការ។
+ទៅក្នុង instance 67router ច្រើនដែលកំពុងដំណើរការ។
 
 ### Route សម្រាប់ Provider ជាក់លាក់
 
@@ -804,7 +803,7 @@ curl http://localhost:20128/api/models/catalog
 - មាននៅក្នុង **Dashboard → Endpoints** សម្រាប់ Docker និងការដាក់ឱ្យដំណើរការដែលបង្ហោះដោយខ្លួនឯងផ្សេងទៀត
 - បង្កើត URL `https://*.trycloudflare.com` បណ្ដោះអាសន្ន ដែលបញ្ជូនបន្តទៅកាន់ endpoint `/v1` ដែលឆបគ្នាជាមួយ OpenAI បច្ចុប្បន្នរបស់អ្នក
 - ការបើកប្រើលើកដំបូងនឹងដំឡើង `cloudflared` តែនៅពេលចាំបាច់ប៉ុណ្ណោះ; ការចាប់ផ្ដើមឡើងវិញនៅពេលក្រោយនឹងប្រើ binary ដែលបានគ្រប់គ្រងដដែលឡើងវិញ
-- Quick Tunnels មិនត្រូវបានស្ដារឡើងវិញដោយស្វ័យប្រវត្តិបន្ទាប់ពីការចាប់ផ្ដើម OmniRoute ឬ container ឡើងវិញទេ; សូមបើកពួកវាឡើងវិញពី dashboard នៅពេលចាំបាច់
+- Quick Tunnels មិនត្រូវបានស្ដារឡើងវិញដោយស្វ័យប្រវត្តិបន្ទាប់ពីការចាប់ផ្ដើម 67router ឬ container ឡើងវិញទេ; សូមបើកពួកវាឡើងវិញពី dashboard នៅពេលចាំបាច់
 - URL របស់ tunnel មានលក្ខណៈបណ្ដោះអាសន្ន និងផ្លាស់ប្ដូររាល់ពេលដែលអ្នកបញ្ឈប់/ចាប់ផ្ដើម tunnel
 - Managed Quick Tunnels ប្រើការបញ្ជូនតាម HTTP/2 ជាលំនាំដើម ដើម្បីជៀសវាងការព្រមានរំខានអំពី QUIC UDP buffer នៅក្នុង container ដែលមានធនធានកំណត់
 - កំណត់ `CLOUDFLARED_PROTOCOL=quic` ឬ `auto` ប្រសិនបើអ្នកចង់កំណត់ជម្រើសការបញ្ជូនដែលបានគ្រប់គ្រងឡើងវិញ
@@ -821,7 +820,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### កន្លែងសាកល្បងកម្មវិធីបកប្រែ
 
-ចូលប្រើតាមរយៈ **Dashboard → Translator**។ ស្វែងរកកំហុស និងមើលជារូបភាពពីរបៀបដែល OmniRoute បកប្រែសំណើ API រវាង provider នានា។
+ចូលប្រើតាមរយៈ **Dashboard → Translator**។ ស្វែងរកកំហុស និងមើលជារូបភាពពីរបៀបដែល 67router បកប្រែសំណើ API រវាង provider នានា។
 
 | របៀប                     | គោលបំណង                                                                           |
 | ------------------------ | --------------------------------------------------------------------------------- |
@@ -874,7 +873,7 @@ curl http://localhost:20128/api/models/catalog
 X-Session-Id: your-session-key
 ```
 
-OmniRoute ក៏ទទួលយក `x_session_id` ហើយត្រឡប់ session key ដែលមានប្រសិទ្ធភាពនៅក្នុង `X-OmniRoute-Session-Id` ផងដែរ។
+67router ក៏ទទួលយក `x_session_id` ហើយត្រឡប់ session key ដែលមានប្រសិទ្ធភាពនៅក្នុង `X-OmniRoute-Session-Id` ផងដែរ។
 
 ប្រសិនបើអ្នកប្រើ Nginx និងផ្ញើ header ដែលមានទម្រង់ underscore សូមបើក៖
 
@@ -908,7 +907,7 @@ Wildcard គាំទ្រ `*` (តួអក្សរណាមួយ) និង
 
 ### បន្សំ Provider និងលំនាំកំណត់ផ្លូវដែលប្រើជាទូទៅ
 
-ខាងក្រោមនេះជាលំនាំឧទាហរណ៍សម្រាប់បញ្ចូល provider ច្រើន និងកំណត់ផ្លូវរវាងពួកវានៅក្នុង OmniRoute៖
+ខាងក្រោមនេះជាលំនាំឧទាហរណ៍សម្រាប់បញ្ចូល provider ច្រើន និងកំណត់ផ្លូវរវាងពួកវានៅក្នុង 67router៖
 
 #### 1. Combo សម្រាប់ភ្នាក់ងារសរសេរកូដ៖ ការវែកញែកកម្រិតខ្ពស់ជាមួយជម្រើសបម្រុងតាមតម្លៃ/ល្បឿន
 
@@ -969,7 +968,7 @@ omniroute combo create free-stack \
 
 កំណត់រចនាសម្ព័ន្ធតាមរយៈ **Dashboard → Settings → Resilience**។
 
-OmniRoute អនុវត្តភាពធន់នៅកម្រិតអ្នកផ្តល់សេវាដោយមានសមាសភាគចំនួនប្រាំ៖
+67router អនុវត្តភាពធន់នៅកម្រិតអ្នកផ្តល់សេវាដោយមានសមាសភាគចំនួនប្រាំ៖
 
 1. **ជួរសំណើ និងការកំណត់ចង្វាក់** — ការរៀបចំសំណើនៅកម្រិតប្រព័ន្ធ៖
    - **សំណើក្នុងមួយនាទី (RPM)** — ចំនួនសំណើអតិបរមាក្នុងមួយនាទីសម្រាប់គណនីនីមួយៗ
@@ -994,7 +993,7 @@ OmniRoute អនុវត្តភាពធន់នៅកម្រិតអ្�
 
    ស្ថានភាពពេលដំណើរការរបស់ឧបករណ៍កាត់ផ្តាច់របស់អ្នកផ្តល់សេវា ត្រូវបានបង្ហាញតែនៅលើ **Dashboard → Health** ប៉ុណ្ណោះ។
 
-4. **រង់ចាំរយៈពេលសម្រាក** — ប្រសិនបើការតភ្ជាប់ដែលជាបេក្ខភាពទាំងអស់កំពុងសម្រាករួចហើយ OmniRoute អាចរង់ចាំរហូតដល់រយៈពេលសម្រាកដែលបញ្ចប់មុនគេ ហើយព្យាយាមសំណើដដែលរបស់កម្មវិធីអតិថិជនឡើងវិញដោយស្វ័យប្រវត្តិ។
+4. **រង់ចាំរយៈពេលសម្រាក** — ប្រសិនបើការតភ្ជាប់ដែលជាបេក្ខភាពទាំងអស់កំពុងសម្រាករួចហើយ 67router អាចរង់ចាំរហូតដល់រយៈពេលសម្រាកដែលបញ្ចប់មុនគេ ហើយព្យាយាមសំណើដដែលរបស់កម្មវិធីអតិថិជនឡើងវិញដោយស្វ័យប្រវត្តិ។
 
 5. **ការរកឃើញដែនកំណត់អត្រាដោយស្វ័យប្រវត្តិ** — នៅពេលអ្នកផ្តល់សេវាខាងលើត្រឡប់ចន្លោះពេលរង់ចាំជាក់លាក់ ការណែនាំទាំងនោះនឹងជំនួសរយៈពេលសម្រាកការតភ្ជាប់មូលដ្ឋាន នៅពេលការកំណត់នេះត្រូវបានបើក។
 
@@ -1028,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **ករណីប្រើប្រាស់៖**
 
-- ផ្ទេរ OmniRoute រវាងម៉ាស៊ីន
+- ផ្ទេរ 67router រវាងម៉ាស៊ីន
 - បង្កើតការបម្រុងទុកខាងក្រៅសម្រាប់ការសង្គ្រោះពីគ្រោះមហន្តរាយ
 - ចែករំលែកការកំណត់រចនាសម្ព័ន្ធរវាងសមាជិកក្រុម (នាំចេញទាំងអស់ → ចែករំលែកប័ណ្ណសារ)
 
@@ -1080,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### ការចម្លងសំឡេងទៅជាអត្ថបទ
 
-OmniRoute គាំទ្រការចម្លងសំឡេងទៅជាអត្ថបទតាមរយៈ endpoint ដែលឆបគ្នាជាមួយ OpenAI៖
+67router គាំទ្រការចម្លងសំឡេងទៅជាអត្ថបទតាមរយៈ endpoint ដែលឆបគ្នាជាមួយ OpenAI៖
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1156,7 +1155,7 @@ latency ដែលទាបជាងមុន។
 `max_tokens` / `maxOutputTokens` ដ៏តឹងរ៉ឹង។ នៅពេលបើកដំណើរការ ការកំណត់ផ្លូវបែបបន្សំនឹងបន្ថែមតែចន្លោះបម្រុងសម្រាប់ម៉ូដែលវែកញែក
 ចំពោះម៉ូដែលដែលមានដែនកំណត់លទ្ធផលដែលគេស្គាល់ប៉ុណ្ណោះ ហើយរក្សាដែនកំណត់ថូខឹនរបស់ម៉ាស៊ីនភ្ញៀវឱ្យនៅដដែល នៅពេលតម្លៃដែលបានបន្ថែមចន្លោះបម្រុងដោយសុវត្ថិភាព
 លើសពីដែនកំណត់នោះ។ ប្រសិនបើដែនកំណត់របស់ម៉ាស៊ីនភ្ញៀវខ្ពស់ជាងដែនកំណត់ដែលគេស្គាល់រួចហើយ
-OmniRoute នឹងកាត់បន្ថយវាឱ្យស្មើនឹងដែនកំណត់នោះ មុនពេលផ្ញើសំណើទៅក្រុមហ៊ុនផ្ដល់សេវាខាងលើ។
+67router នឹងកាត់បន្ថយវាឱ្យស្មើនឹងដែនកំណត់នោះ មុនពេលផ្ញើសំណើទៅក្រុមហ៊ុនផ្ដល់សេវាខាងលើ។
 
 ---
 
@@ -1179,7 +1178,7 @@ OmniRoute នឹងកាត់បន្ថយវាឱ្យស្មើនឹ�
 
 ## 🤖 ការកំណត់ផ្លូវដោយស្វ័យប្រវត្តិ (មិនបាច់កំណត់រចនាសម្ព័ន្ធ)
 
-OmniRoute ភ្ជាប់មកជាមួយ **កម្មវិធីកំណត់ផ្លូវដោយស្វ័យប្រវត្តិផ្អែកលើពិន្ទុ** ដែលជ្រើសរើសម៉ូដែលល្អបំផុតសម្រាប់សំណើនីមួយៗ ក្នុងចំណោមគ្រប់អ្នកផ្តល់សេវាដែលបានភ្ជាប់ — មិនចាំបាច់ថែទាំបន្សំណាមួយឡើយ។ គ្រាន់តែផ្ញើសំណើដោយប្រើបុព្វបទ `auto/*` ណាមួយ ហើយ OmniRoute នឹងបង្កើតបន្សំនិម្មិតភ្លាមៗ ដោយដាក់ពិន្ទុបេក្ខភាពផ្អែកលើភាពយឺតយ៉ាវ តម្លៃ អត្រាជោគជ័យ ភាពសមស្របនៃបរិបទ ភាពស័ក្តិសមរបស់ម៉ូដែលសម្រាប់កិច្ចការ ការបរាជ័យថ្មីៗ កូតា និងស្ថានភាព circuit-breaker។
+67router ភ្ជាប់មកជាមួយ **កម្មវិធីកំណត់ផ្លូវដោយស្វ័យប្រវត្តិផ្អែកលើពិន្ទុ** ដែលជ្រើសរើសម៉ូដែលល្អបំផុតសម្រាប់សំណើនីមួយៗ ក្នុងចំណោមគ្រប់អ្នកផ្តល់សេវាដែលបានភ្ជាប់ — មិនចាំបាច់ថែទាំបន្សំណាមួយឡើយ។ គ្រាន់តែផ្ញើសំណើដោយប្រើបុព្វបទ `auto/*` ណាមួយ ហើយ 67router នឹងបង្កើតបន្សំនិម្មិតភ្លាមៗ ដោយដាក់ពិន្ទុបេក្ខភាពផ្អែកលើភាពយឺតយ៉ាវ តម្លៃ អត្រាជោគជ័យ ភាពសមស្របនៃបរិបទ ភាពស័ក្តិសមរបស់ម៉ូដែលសម្រាប់កិច្ចការ ការបរាជ័យថ្មីៗ កូតា និងស្ថានភាព circuit-breaker។
 
 | បុព្វបទ        | បង្កើនប្រសិទ្ធភាពសម្រាប់                                                                                        |
 | -------------- | --------------------------------------------------------------------------------------------------------------- |
@@ -1210,7 +1209,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 ការរួមបញ្ចូល MCP និង A2A
 
-OmniRoute គឺជា **ម៉ាស៊ីនមេ MCP** (Model Context Protocol) និងជា **ម៉ាស៊ីនមេ A2A** (Agent-to-Agent JSON-RPC 2.0)។ IDE ឬម៉ាស៊ីនទទួលភ្នាក់ងារណាមួយដែលត្រូវគ្នាជាមួយ MCP អាចហៅឧបករណ៍ OmniRoute ដោយផ្ទាល់ — មិនចាំបាច់មាន wrapper បន្ថែមឡើយ។
+67router គឺជា **ម៉ាស៊ីនមេ MCP** (Model Context Protocol) និងជា **ម៉ាស៊ីនមេ A2A** (Agent-to-Agent JSON-RPC 2.0)។ IDE ឬម៉ាស៊ីនទទួលភ្នាក់ងារណាមួយដែលត្រូវគ្នាជាមួយ MCP អាចហៅឧបករណ៍ 67router ដោយផ្ទាល់ — មិនចាំបាច់មាន wrapper បន្ថែមឡើយ។
 
 ### មធ្យោបាយដឹកជញ្ជូន MCP
 
@@ -1239,17 +1238,14 @@ OmniRoute គឺជា **ម៉ាស៊ីនមេ MCP** (Model Context Protoc
 
 ### វិសាលភាព
 
-បច្ចុប្បន្ន MCP កំណត់វិសាលភាពដែលមានឈ្មោះចំនួន 32។ សោ Bearer នីមួយៗអាចត្រូវបានកំណត់ឱ្យប្រើតែវិសាលភាពជាក់លាក់ — សូមមើល [MCP-SERVER.md](../frameworks/MCP-SERVER.md) សម្រាប់បញ្ជីវិសាលភាព និងឧបករណ៍ផ្លូវការ និង [A2A-SERVER.md](../frameworks/A2A-SERVER.md) សម្រាប់គ្រោងការណ៍ JSON-RPC។
-
 ---
 
 ## 🧠 ប្រព័ន្ធជំនាញ
 
-OmniRoute ផ្តល់នូវ **ក្របខណ្ឌជំនាញ** ដែលអាចពង្រីកបាន (`src/lib/skills/`) ដើម្បីឱ្យភ្នាក់ងារ និង endpoint A2A អាចដំណើរការទម្រង់ការងារជាក់លាក់តាមដែន (ឧ. `code-review`, `summarize`, `extract-facts`, `web-research`)។
+67router ផ្តល់នូវ **ក្របខណ្ឌជំនាញ** ដែលអាចពង្រីកបាន (`src/lib/skills/`) ដើម្បីឱ្យភ្នាក់ងារ និង endpoint A2A អាចដំណើរការទម្រង់ការងារជាក់លាក់តាមដែន (ឧ. `code-review`, `summarize`, `extract-facts`, `web-research`)។
 
 - **ចំណុចប្រទាក់ Marketplace** — រុករក និងដំឡើងជំនាញពី **Dashboard → Skills**
 - **វិសាលភាពតាម key នីមួយៗ** — កំណត់ថា API key ណាខ្លះអាចហៅប្រើជំនាញណាខ្លះ
-- **ជំនាញផ្ទាល់ខ្លួន** — ដាក់ឯកសារ TypeScript មួយក្នុង `src/lib/a2a/skills/` ចុះឈ្មោះវា ហើយវានឹងអាចត្រូវបានហៅប្រើភ្លាមៗតាមរយៈ A2A
 
 ឯកសារយោងពេញលេញ៖ [SKILLS.md](../frameworks/SKILLS.md)។
 
@@ -1257,7 +1253,7 @@ OmniRoute ផ្តល់នូវ **ក្របខណ្ឌជំនាញ** �
 
 ## 💾 ប្រព័ន្ធអង្គចងចាំ
 
-OmniRoute រក្សាទុក **អង្គចងចាំការសន្ទនារយៈពេលវែង** ជាមួយការទាញយកបែបកូនកាត់៖
+67router រក្សាទុក **អង្គចងចាំការសន្ទនារយៈពេលវែង** ជាមួយការទាញយកបែបកូនកាត់៖
 
 - **SQLite FTS5** សម្រាប់ស្វែងរកតាមពាក្យគន្លឹះក្នុងវេនសន្ទនាកន្លងមក
 - **ឃ្លាំងវ៉ិចទ័រ Qdrant** (ជាជម្រើស) សម្រាប់ការរំលឹកតាមអត្ថន័យ
@@ -1270,7 +1266,7 @@ OmniRoute រក្សាទុក **អង្គចងចាំការសន�
 
 ## 🔔 Webhooks
 
-ជាវព្រឹត្តិការណ៍ OmniRoute សម្រាប់ការត្រួតពិនិត្យ និងស្វ័យប្រវត្តិកម្មតាមពេលវេលាជាក់ស្តែង។
+ជាវព្រឹត្តិការណ៍ 67router សម្រាប់ការត្រួតពិនិត្យ និងស្វ័យប្រវត្តិកម្មតាមពេលវេលាជាក់ស្តែង។
 
 - បង្កើត webhook ក្នុង **Dashboard → Webhooks** ដោយមាន URL គោលដៅ និង secret សម្រាប់ការចុះហត្ថលេខា HMAC
 - ព្រឹត្តិការណ៍ដែលមាន៖ `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1281,21 +1277,9 @@ OmniRoute រក្សាទុក **អង្គចងចាំការសន�
 
 ---
 
-## ☁️ ភ្នាក់ងារ Cloud
-
-OmniRoute រួមបញ្ចូលជាមួយភ្នាក់ងារសរសេរកូដលើ cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) ដូច្នេះអ្នកអាចបញ្ជូនភារកិច្ចដែលដំណើរការរយៈពេលយូរពី dashboard ដូចគ្នាដែលគ្រប់គ្រងការបញ្ជូនផ្លូវក្នុងម៉ាស៊ីនរបស់អ្នក។
-
-- បង្កើតភារកិច្ចក្នុង **Dashboard → Cloud Agents** ឬតាមរយៈ `POST /api/v1/agents/tasks`
-- តាមដានស្ថានភាព កំណត់ហេតុ និងវត្ថុលទ្ធផលតាមភារកិច្ចនីមួយៗ
-- ប្រើ API key ផ្ទាល់ខ្លួនរបស់អ្នកសម្រាប់ provider នីមួយៗ — ព័ត៌មានសម្ងាត់មិនដែលចាកចេញពី instance របស់ OmniRoute ទេ
-
-ឯកសារយោងពេញលេញ៖ [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)។
-
----
-
 ## 🛠️ ការគ្រប់គ្រងតាមកម្មវិធី
 
-អ្នកអាចគ្រប់គ្រងធនធាន OmniRoute ទាំងអស់ (providers, combos, keys, settings) តាមរយៈ HTTP ដោយប្រើ **Bearer key ដែលមានវិសាលភាព `manage`**។
+អ្នកអាចគ្រប់គ្រងធនធាន 67router ទាំងអស់ (providers, combos, keys, settings) តាមរយៈ HTTP ដោយប្រើ **Bearer key ដែលមានវិសាលភាព `manage`**។
 
 បង្កើត key ក្នុង **Dashboard → API Keys → New Key → Scope: manage** បន្ទាប់មក៖
 
@@ -1328,7 +1312,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 CLI ផ្ទៃក្នុង
 
-OmniRoute ភ្ជាប់មកជាមួយ CLI ផ្ទៃក្នុង (`omniroute …`) សម្រាប់ការដំឡើង ការធ្វើរោគវិនិច្ឆ័យ និងការគ្រប់គ្រងពេលដំណើរការ។ វា**ដាច់ដោយឡែកពីទំព័រ "CLI Tools" នៅក្នុងផ្ទាំងគ្រប់គ្រង** ដែលកំណត់រចនាសម្ព័ន្ធ CLI របស់ភាគីទីបី (Claude Code, Cursor, Codex, Cline, …) ដើម្បីឱ្យពួកវាអាចទាក់ទងជាមួយ OmniRoute បាន។
+67router ភ្ជាប់មកជាមួយ CLI ផ្ទៃក្នុង (`omniroute …`) សម្រាប់ការដំឡើង ការធ្វើរោគវិនិច្ឆ័យ និងការគ្រប់គ្រងពេលដំណើរការ។ វា**ដាច់ដោយឡែកពីទំព័រ "CLI Tools" នៅក្នុងផ្ទាំងគ្រប់គ្រង** ដែលកំណត់រចនាសម្ព័ន្ធ CLI របស់ភាគីទីបី (Claude Code, Cursor, Codex, Cline, …) ដើម្បីឱ្យពួកវាអាចទាក់ទងជាមួយ 67router បាន។
 
 ```bash
 omniroute setup                    # អ្នកជំនួយការអន្តរកម្ម (ពាក្យសម្ងាត់ អ្នកផ្តល់សេវា បន្សំ)
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # ស្ដារពីរូបថតចម�
 omniroute health                   # ព័ត៌មានសុខភាពលម្អិត (ឧបករណ៍ផ្ដាច់ cache អង្គចងចាំ)
 omniroute quota                    # ការប្រើប្រាស់កូតារបស់អ្នកផ្តល់សេវា
 omniroute mcp status               # ស្ថានភាពម៉ាស៊ីនមេ MCP
-omniroute a2a status               # ស្ថានភាពម៉ាស៊ីនមេ A2A
 omniroute tunnel list|create|stop  # ផ្លូវរូង Cloudflare/Tailscale/ngrok
 omniroute reset-password           # កំណត់ពាក្យសម្ងាត់អ្នកគ្រប់គ្រងឡើងវិញ
 omniroute --mcp                    # ចាប់ផ្ដើមម៉ាស៊ីនមេ MCP តាម stdio
@@ -1359,7 +1342,7 @@ omniroute --port 3000              # ចាប់ផ្ដើមម៉ាស៊�
 
 ## 🖥️ កម្មវិធីកុំព្យូទ័រលើតុ (Electron)
 
-OmniRoute មានជាកម្មវិធីកុំព្យូទ័រលើតុដើមសម្រាប់ Windows, macOS និង Linux។
+67router មានជាកម្មវិធីកុំព្យូទ័រលើតុដើមសម្រាប់ Windows, macOS និង Linux។
 
 ### ការដំឡើង
 

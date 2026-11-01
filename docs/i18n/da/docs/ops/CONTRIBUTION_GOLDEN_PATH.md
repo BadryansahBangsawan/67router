@@ -113,7 +113,7 @@ eller dokumenteret manuel kontrol, der passer til ændringen.
 - CLI-kataloger findes separat under `bin/cli/locales/`.
 - Bevar ICU-placeholders og tags nøjagtigt. Oversæt ikke produkt-/provider-/modelnavne,
   protokol- og headernavne, kommandoer, kode-/JSON-identifikatorer, URL'er, miljøvariabler eller
-  beskyttede termer såsom `OmniRoute`, `OAuth`, `MCP` og `A2A`. Den aktuelle kildeliste er
+  beskyttede termer såsom `67router`, `OAuth`, `MCP` og `A2A`. Den aktuelle kildeliste er
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Fokuseret cyklus**
@@ -264,7 +264,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # genbrug en tarball byg
   tilbage, når kontrollen fejler. En kandidat, der ikke består den første validering, promoveres
   aldrig.
 
-Alt skrives under den gitignorerede `_artifacts/candidate/`; en eksisterende OmniRoute-installation
+Alt skrives under den gitignorerede `_artifacts/candidate/`; en eksisterende 67router-installation
 og dens datamappe berøres aldrig. Den promoverede CLI er
 `_artifacts/candidate/current/prefix/bin/omniroute`; start den med din egen `DATA_DIR`, når du bruger
 den. Afslutningskoder: `0` for succes, `1` for mislykket validering eller promovering, `2` for

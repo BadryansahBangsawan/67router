@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-järjestelmässä on **neljä tunnistetietoperhettä**, jotka voivat valtuuttaa hallintareittejä.
+67router-järjestelmässä on **neljä tunnistetietoperhettä**, jotka voivat valtuuttaa hallintareittejä.
 Ne eivät ole keskenään vaihdettavissa. Päättely-API-avaimet (`sk-…`) eivät **hallinnoi** palvelinta, ellei niille ole erikseen myönnetty `manage`- tai `admin`-laajuutta.
 
 Kanoninen toteutus: `src/lib/api/requireManagementAuth.ts`.

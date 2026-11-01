@@ -8,7 +8,7 @@ lastUpdated: 2026-09-18
 
 # OpenAI-compatible protocol
 
-OmniRoute exposes a client-facing OpenAI-shaped API at `/v1`. Authenticate with
+67router exposes a client-facing OpenAI-shaped API at `/v1`. Authenticate with
 `Authorization: Bearer <key>` and use a model id returned by `GET /v1/models`.
 The model id normally has the form `<provider-prefix>/<model-id>`; combos are
 also valid model targets.
@@ -25,22 +25,18 @@ model selection.
 | ------------------------------- | ----------------------- | ------------------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `POST /v1/chat/completions`     | OpenAI Chat Completions | `stream: true` returns SSE           | `messages` (or compatible `input`/`prompt` forms accepted by the shared schema) | Text, tool calls, reasoning controls, structured-output fields, and multimodal message content are translated when the selected model/provider supports them. | [`chat-completions-route-shape-gate.test.ts`](../../tests/unit/chat-completions-route-shape-gate.test.ts), [`openai-compatible-tools.test.ts`](../../tests/unit/openai-compatible-tools.test.ts)                                             |
 | `POST /v1/responses`            | OpenAI Responses        | SSE event stream when `stream: true` | `input`                                                                         | Responses input, tools, reasoning, and output events are translated for providers that expose a compatible path.                                              | [`responses-passthrough-openai-compatible.test.ts`](../../tests/unit/responses-passthrough-openai-compatible.test.ts), [`openclaw-omniroute-tool-boundary.live.test.ts`](../../tests/boundary/openclaw-omniroute-tool-boundary.live.test.ts) |
-| `POST /v1/embeddings`           | OpenAI Embeddings       | No                                   | `input`                                                                         | Text embeddings are broadly supported; multimodal input is limited to models advertising it. Inline media is capped at 8 MiB per item and 16 MiB per request. | [`v1-contracts-behavior.test.ts`](../../tests/integration/v1-contracts-behavior.test.ts)                                                                                                                                                     |
-| `POST /v1/images/generations`   | OpenAI Images           | No                                   | `prompt`                                                                        | Image-capable models only; response format may be `url` or `b64_json`.                                                                                        | [`v1-contracts-behavior.test.ts`](../../tests/integration/v1-contracts-behavior.test.ts)                                                                                                                                                     |
-| `POST /v1/images/edits`         | OpenAI Images edit      | No                                   | multipart image + prompt                                                        | Supported for the providers/models that implement image editing.                                                                                              | [`image-generation-handler.test.ts`](../../tests/unit/image-generation-handler.test.ts)                                                                                                                                                      |
 | `POST /v1/audio/transcriptions` | OpenAI Audio            | No                                   | multipart audio                                                                 | Speech-to-text providers/models only.                                                                                                                         | [`audio-transcription-handler.test.ts`](../../tests/unit/audio-transcription-handler.test.ts)                                                                                                                                                |
-| `POST /v1/audio/speech`         | OpenAI Audio            | No                                   | `input`, `voice`, `model`                                                       | Text-to-speech providers/models only; returns an audio body.                                                                                                  | [`audio-speech-handler.test.ts`](../../tests/unit/audio-speech-handler.test.ts)                                                                                                                                                              |
 | `GET /v1/models`                | OpenAI model list       | No                                   | —                                                                               | Lists visible chat, media, embedding models, and combos. Use `?prefix=alias`, `dual`, or `canonical` to select id presentation.                               | [`v1-contracts-behavior.test.ts`](../../tests/integration/v1-contracts-behavior.test.ts), [`provider-journey.contract.test.ts`](../../tests/integration/provider-journey.contract.test.ts)                                                   |
 
 Other compatibility surfaces are listed in [API Reference](./API_REFERENCE.md),
-including `/v1/messages`, `/v1/rerank`, `/v1/moderations`, video/music routes,
-Files, Batches, and the tokenized VS Code aliases.
+including `/v1/messages`, video/music routes, and the tokenized VS Code
+aliases.
 
 ## Chat request fields
 
 The chat route requires `model` and at least one of `messages`, `input`, or
 `prompt`. The schema is intentionally forward-compatible and preserves unknown
-OpenAI-style fields for translation; the canonical fields used by OmniRoute
+OpenAI-style fields for translation; the canonical fields used by 67router
 include:
 
 | Field                                                 | Behavior                                                                                                                                            |
@@ -55,7 +51,7 @@ include:
 | multimodal content                                    | Use the OpenAI message content parts supported by the target model. Do not assume that a text model accepts image, audio, video, or document parts. |
 
 Tool calls can be emitted as one or more calls in a single assistant turn.
-When a provider does not natively use OpenAI tool-call objects, OmniRoute's
+When a provider does not natively use OpenAI tool-call objects, 67router's
 translator maps the provider representation back to `tool_calls` in the
 OpenAI response. The application remains responsible for executing tools and
 sending the matching tool results in the next request.
@@ -65,7 +61,7 @@ sending the matching tool results in the next request.
 Chat and Responses streams are long-lived HTTP responses. Keep the connection
 open until the terminal event, propagate client cancellation, and treat a
 non-2xx response before the stream starts as an ordinary JSON error. A provider
-failure during dispatch is returned through OmniRoute's sanitized error shape;
+failure during dispatch is returned through 67router's sanitized error shape;
 raw upstream stacks and credential material are not exposed.
 
 Typical client-visible statuses are `400` for validation or unsupported request
@@ -100,7 +96,7 @@ An operator can add a provider node with `type: "openai-compatible"`, a
 ```
 
 Supported `apiType` values are `chat`, `responses`, `embeddings`,
-`audio-transcriptions`, `audio-speech`, and `images-generations`. OmniRoute
+`audio-transcriptions`, `audio-speech`, and `images-generations`. 67router
 appends the corresponding standard path (`/chat/completions`, `/responses`,
 `/embeddings`, `/audio/transcriptions`, `/audio/speech`, or
 `/images/generations`) to the configured base URL. A trailing slash is removed.
@@ -123,7 +119,7 @@ curl "$OMNIROUTE_BASE_URL/chat/completions" \
 ```
 
 For an OpenAI SDK, set its base URL to `http://localhost:20128/v1` (the `/v1`
-root, not `/v1/chat/completions`) and supply the OmniRoute key as the API key.
+root, not `/v1/chat/completions`) and supply the 67router key as the API key.
 The same root works for clients that use Chat Completions or Responses, subject
 to the client's own wire-format setting.
 

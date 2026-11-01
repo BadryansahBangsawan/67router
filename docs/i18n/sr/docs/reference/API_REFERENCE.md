@@ -6,7 +6,7 @@
 
 🌐 **Језици:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Основна референца за OmniRoute API. Обухвата јавну површину `/v1` и најчешће коришћене крајње тачке за управљање; машински читљиви [`docs/openapi.yaml`](../openapi.yaml) и стабло рута у `src/app/api/` представљају исцрпне изворе.
+Основна референца за 67router API. Обухвата јавну површину `/v1` и најчешће коришћене крајње тачке за управљање; машински читљиви [`docs/openapi.yaml`](../openapi.yaml) и стабло рута у `src/app/api/` представљају исцрпне изворе.
 
 За детаљно усмерен протокол компатибилан са OpenAI-јем и матрицу могућности добављача погледајте
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Одговор | `HIT` или `MISS` (без стримовања)                                                                                                                                                                                               |
 | `X-OmniRoute-Idempotent` | Одговор | `true` ако је извршена дедупликација                                                                                                                                                                                            |
 | `X-OmniRoute-Progress`   | Одговор | `enabled` ако је праћење напретка укључено                                                                                                                                                                                      |
-| `X-OmniRoute-Session-Id` | Одговор | Ефективни ID сесије који користи OmniRoute                                                                                                                                                                                      |
+| `X-OmniRoute-Session-Id` | Одговор | Ефективни ID сесије који користи 67router                                                                                                                                                                                       |
 | `X-OmniRoute-Request-Id` | Одговор | ID за корелацију захтева (када је познат)                                                                                                                                                                                       |
-| `X-OmniRoute-Version`    | Одговор | Верзија OmniRoute издања (увек присутна)                                                                                                                                                                                        |
+| `X-OmniRoute-Version`    | Одговор | Верзија 67router издања (увек присутна)                                                                                                                                                                                         |
 | `X-OmniRoute-Cost-Saved` | Одговор | Износ у USD који је уштеђен захваљујући кешу при резултату HIT (само за поготке у кешу)                                                                                                                                         |
 | `X-OmniRoute-Decision`   | Одговор | Траг усмеравања: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` је стратегија комбинације или `single` за захтев који није комбинација) — увек је присутан у одговорима по завршетку                             |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Закључавање налога по захтеву
 
-Када добављач има више веза (налога или кључева), OmniRoute обично бира једну
+Када добављач има више веза (налога или кључева), 67router обично бира једну
 помоћу своје стратегије избора налога. Уместо тога, захтев може да се веже за једну одређену везу
 помоћу заглавља `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ Claude Code шаље прилагођена заглавља путем `ANTHROP
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Claude Code шаље прилагођена заглавља путем `ANTHROP
 ## Ексклузивни управљани закупи сесија
 
 Ексклузивни управљани закуп сесије је опциони уговор о усмеравању, независан од клијента: један активни власник
-држи једну одговарајућу OmniRoute везу. Он не закупљује модел, не захтева OAuth, не идентификује
+држи једну одговарајућу 67router везу. Он не закупљује модел, не захтева OAuth, не идентификује
 одређеног клијента нити захтева одређеног провајдера.
 
 API кључ који се користи за аутентификацију мора имати опсег `lease:exclusive` и експлицитну непразну
@@ -190,7 +190,7 @@ X-OmniRoute-Lease-Owner: vlo_<43-base64url-characters>
 
 Ова опиона радња провере статуса заштићена је непрозирним идентификатором власника, аутентификованим управљаним API кључем и тачном
 активном генерацијом у оквиру једне трансакције базе података. `displayName` је искључиво конфигурисани назив
-везе са уклоњеним околним размацима; има вредност `null` када не постоји безбедан конфигурисани назив. OmniRoute никада не замењује тај назив
+везе са уклоњеним околним размацима; има вредност `null` када не постоји безбедан конфигурисани назив. 67router никада не замењује тај назив
 адресом е-поште или генерисаним идентитетом налога. Вредност провајдера је неосетљива ознака за приказ и никада
 није генерисани идентификатор компатибилног провајдера. Акредитиви, токени, колачићи, сирови идентификатори веза или API
 кључева, хешеви власника, тајне за ограђивање и интерни подаци за усмеравање су изузети.
@@ -231,7 +231,7 @@ X-OmniRoute-Lease-Generation: 1
 
 Овај одговор само значи да уобичајени скуп одговарајућих веза није био празан и да је сваки слободни кандидат
 био заузет страним активним закупом. Неподржани модели/провајдери, неусклађеност са смерницама, период мировања, квота,
-стање исправности и други уобичајени неуспеси провере подобности задржавају своје постојеће OmniRoute одговоре.
+стање исправности и други уобичајени неуспеси провере подобности задржавају своје постојеће 67router одговоре.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request документе и **прослеђује их непро
 ```
 
 Изворне вредности `{ image | audio | video | pdf }` могу бити јавни HTTPS URL, `data:` URI или сирови
-base64. OmniRoute не претвара те објекте у ниске нити преузима изворне URL-ове слика — Jina сама преузима
+base64. 67router не претвара те објекте у ниске нити преузима изворне URL-ове слика — Jina сама преузима
 јавне медијске садржаје. Додатна Jina поља (`task`, `normalized`, `truncate`, `embedding_type`) се
 прослеђују. Jina SKU-ови намењени само тексту и даље одбијају документе који нису текстуални.
 
@@ -454,7 +454,7 @@ Azure Document Intelligence `analyze` API је асинхрон: почетни 
 
 ### Аутентификација и разрешавање крајње тачке за Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` поново користи исту Vertex AI аутентификацију коју OmniRoute већ подржава за
+`vertex-deepseek-ocr` поново користи исту Vertex AI аутентификацију коју 67router већ подржава за
 саобраћај ћаскања/слика (`open-sse/executors/vertex.ts`): API кључ везе је или
 Service Account JSON акредитив (који се размењује за краткотрајни OAuth приступни токен путем JWT-bearer
 тока) или већ генерисан OAuth приступни токен који се користи без измена. URL узводне крајње тачке је Vertex-ова
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Цене модела (`pricing`)
 
-Ставка садржи објекат `pricing` када OmniRoute зна цену модела. Цена потиче
+Ставка садржи објекат `pricing` када 67router зна цену модела. Цена потиче
 из табеле цена коју користи обрачун трошкова: уграђене подразумеване вредности, синхронизоване цене и
 замене подешене преко `/api/pricing`. Ово су каталошке цене, па и добављачи претплата
 приказују цену по токену.
@@ -632,8 +632,8 @@ GET /api/v1/provider-plugin-manifest
 
 ## ElevenLabs генерисање звука
 
-Конфигуришите везу са `elevenlabs` провајдером у OmniRoute-у помоћу свог ElevenLabs API кључа.
-Клијенти се аутентификују својим **OmniRoute** кључем (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Конфигуришите везу са `elevenlabs` провајдером у 67router-у помоћу свог ElevenLabs API кључа.
+Клијенти се аутентификују својим **67router** кључем (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 мрежни пролаз прослеђује сачувани кључ провајдера као `xi-api-key`. Никада не шаљите ElevenLabs кључ
 као bearer токен мрежног пролаза.
 
@@ -698,7 +698,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 ограничење плана и `429` за ограничење квоте. Заглавља `character-cost`, `song-id`, `request-id` и `retry-after`
 остају очувана када су присутна. Бесплатно кредитно стање не гарантује приступ сваком
 музичком моделу, излазном формату или API функцији: ElevenLabs одлучује о праву приступа за сваки захтев.
-Обједињена крајња тачка задржава статусне кодове грешака у нормализованом OmniRoute омотачу грешке.
+Обједињена крајња тачка задржава статусне кодове грешака у нормализованом 67router омотачу грешке.
 
 Узводни уговори: [звучни ефекти](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [компоновање музике](https://elevenlabs.io/docs/api-reference/music/compose) и
@@ -739,7 +739,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 
 Све POST руте имају исти облик: `Bearer your-api-key` + JSON тело валидирано помоћу Zod-а (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` итд.; погледајте `src/shared/validation/schemas.ts`). У случају неуспешне валидације шеме враћа се 4xx.
 
-За клијенте који не могу да додају `Authorization: Bearer ...`, OmniRoute такође прихвата API кључеве у URL-у, било преко компатибилних параметара упита (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) или преко наменских крајњих тачака `/api/v1/vscode/{token}/...` документованих у наставку.
+За клијенте који не могу да додају `Authorization: Bearer ...`, 67router такође прихвата API кључеве у URL-у, било преко компатибилних параметара упита (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) или преко наменских крајњих тачака `/api/v1/vscode/{token}/...` документованих у наставку.
 
 ```bash
 # Рерангирање (добављач из регистра у облаку или чвор добављача компатибилан са OpenAI-јем у облику "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, исти API кључ као за Parallel Search) враћа искључиво Markdown
 — сваки други `format` доводи до одговора `400` — и ограничава садржај на 100.000 знакова. Када
 сама циљна страница не може да се издвоји, узводни сервис то пријављује унутар HTTP одговора 200;
-OmniRoute то приказује као `422` са фиксном поруком.
+67router то приказује као `422` са фиксном поруком.
 
 | Метод | Путања          | Опис                                                                |
 | ----- | --------------- | ------------------------------------------------------------------- |
@@ -963,14 +963,14 @@ codex OAuth везу и тунелује до `wss://chatgpt.com/backend-api/cod
 OpenAI **Codex CLI** валидира назив модела на страни клијента када је
 `supports_websockets = true` и **одбија ИД-ове са префиксом провајдера** попут
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Пошаљите **основни** ИД (нпр. `gpt-5.5`). OmniRoute мост је
+a ChatGPT account`). Пошаљите **основни** ИД (нпр. `gpt-5.5`). 67router мост је
 намењен само за codex, па поново разрешава основни ИД као codex модел
 (`resolveCodexWsModelInfo`) пре тунеловања ка узводном сервису — иако би се основни
 `gpt-5.5` иначе преко HTTP-а рутирао ка другом провајдеру.
 
 #### Конфигурисање OpenAI Codex CLI-ја
 
-Усмерите Codex CLI ка OmniRoute-у додавањем прилагођеног провајдера са WebSocket
+Усмерите Codex CLI ка 67router-у додавањем прилагођеног провајдера са WebSocket
 подршком у `~/.codex/config.toml` (користите засебан `CODEX_HOME` да не бисте мењали
 постојећу конфигурацију):
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # без завршне косе црте; WS URL се изводи аутоматски (у продукцији користите https/wss)
 wire_api = "responses"                    # једина подржана вредност од фебруара 2026.
 supports_websockets = true                # омогућава Responses-over-WS транспорт
-env_key = "OMNIROUTE_API_KEY"             # садржи OmniRoute API кључ (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # садржи 67router API кључ (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API кључ (било који кључ ако је REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router API кључ (било који кључ ако је REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI надограђује `base_url + /responses` у WebSocket, а OmniRoute га тунелује
+CLI надограђује `base_url + /responses` у WebSocket, а 67router га тунелује
 до изабране codex OAuth везе. Валидирано од почетка до краја на локалном
 серверу: ChatGPT враћа `codex.rate_limits` + `response.created` и стримује
 довршавање.
@@ -1075,7 +1075,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### Формула за прилагођавање граничној вредности
 
-OmniRoute подржава проактивне граничне вредности квота ради спречавања исцрпљивања узводних ресурса (конфигурисане преко
+67router подржава проактивне граничне вредности квота ради спречавања исцрпљивања узводних ресурса (конфигурисане преко
 `quotaWindowThresholds` везе, подразумеваних вредности провајдера или глобалних подешавања отпорности). Када је гранична вредност
 (нпр. `cutoff = 25%`) активна за прозор квоте, приказивач текста израчунава преостали износ на следећи начин:
 
@@ -1440,9 +1440,8 @@ GET одговор садржи `agents[]` (id, name, binary, version, installed
 
 ### Евалуације
 
-| Крајња тачка | Метод    | Опис                                  |
-| ------------ | -------- | ------------------------------------- |
-| `/api/evals` | GET/POST | Приказ пакета евалуација / евалуација |
+| Крајња тачка | Метод | Опис |
+| ------------ | ----- | ---- |
 
 ### Политике
 
@@ -1626,7 +1625,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - Алијаси са токеном поново користе исте обрађиваче као `/v1/*` и `/api/tags`; облици одговора остају идентични.
 - Кад год клијент подржава прилагођена заглавља, предност дајте заглављу `Authorization: Bearer ...`.
-- Токени засновани на URL-у могу да се појаве у евиденцијама реверзног проксија, историји прегледача и телеметрији изван OmniRoute. Третирајте их као опцију за компатибилност, а не као подразумевани режим аутентификације.
+- Токени засновани на URL-у могу да се појаве у евиденцијама реверзног проксија, историји прегледача и телеметрији изван 67router. Третирајте их као опцију за компатибилност, а не као подразумевани режим аутентификације.
 
 ---
 
@@ -1734,7 +1733,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## Веб-хукови
 
-Претплате на одлазне веб-хукове за OmniRoute догађаје (завршетак захтева, исцрпљивање квоте, ротација кључева итд.).
+Претплате на одлазне веб-хукове за 67router догађаје (завршетак захтева, исцрпљивање квоте, ротација кључева итд.).
 
 | Метод  | Путања                    | Опис                                                                  |
 | ------ | ------------------------- | --------------------------------------------------------------------- |
@@ -1765,31 +1764,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Протокол агената
-
-Задаци агената у облаку (Claude Code, Codex Cloud, OpenHands итд.) који се извршавају удаљено у име OmniRoute корисника.
-
-| Метод  | Путања                        | Опис                                                                                                                                                   |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Наводи задатке — опционо `?provider=`, `?status=`, `?limit=` (1–500, подразумевано 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | Креира задатак — тело се проверава помоћу `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Враћа `201` са омотачем задатка |
-| DELETE | `/api/v1/agents/tasks?id=...` | Брише задатак                                                                                                                                          |
-| GET    | `/api/v1/agents/tasks/[id]`   | Чита задатак — синхроно освежава статус од узводног агента у облаку када је постављен `external_id`                                                    |
-| POST   | `/api/v1/agents/tasks/[id]`   | Дискриминисана радња: `{action: "approve"}`, `{action: "message", message}` или `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Брише одређени задатак према ID-у                                                                                                                      |
-
-> **Аутентификација:** аутентификација за управљање је обавезна за сваки метод (`requireCloudAgentManagementAuth`). Пре верзије v3.8.0 ови методи нису захтевали аутентификацију — погледајте комит `588a0333` за некомпатибилну измену.
-
-```bash
-# Креирање Claude Code задатка у облаку
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Проксији за управљање
 
 Излазни HTTP(S)/SOCKS проксији који се могу доделити добављачима, налозима или глобално.
@@ -1813,7 +1787,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## Отпорност (проширено)
 
-OmniRoute нуди три независна механизма за привремене отказе; управљачке крајње тачке у наставку омогућавају операторима да их прегледају и замене њихова подешавања:
+67router нуди три независна механизма за привремене отказе; управљачке крајње тачке у наставку омогућавају операторима да их прегледају и замене њихова подешавања:
 
 | Опсег                | Складиште стања                        | Читање                                    | Ресетовање / брисање                                                    |
 | -------------------- | -------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------- |
@@ -1848,7 +1822,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## Вештине
 
-Оквир за проширивање OmniRoute-а прилагођеним извршним руковаоцима, уз интеграције са платформама за дистрибуцију.
+Оквир за проширивање 67router-а прилагођеним извршним руковаоцима, уз интеграције са платформама за дистрибуцију.
 
 | Метод  | Путања                            | Опис                                                                                                                                   |
 | ------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1885,7 +1859,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## MCP сервер
 
-OmniRoute се испоручује са уграђеним Model Context Protocol сервером са 3 транспорта (stdio, SSE, streamable-http) и алатима ограниченим опсезима. Крајње тачке контролне табле наведене испод читају податке о статусу/евиденцији и проксирају HTTP транспорте.
+67router се испоручује са уграђеним Model Context Protocol сервером са 3 транспорта (stdio, SSE, streamable-http) и алатима ограниченим опсезима. Крајње тачке контролне табле наведене испод читају податке о статусу/евиденцији и проксирају HTTP транспорте.
 
 | Метод | Путања | Опис |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1907,50 +1881,12 @@ OmniRoute се испоручује са уграђеним Model Context Protoc
 
 ## A2A сервер
 
-OmniRoute пружа A2A (Agent-to-Agent) JSON-RPC 2.0 крајњу тачку, као и REST омотач за потребе прегледа и контролне табле.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # опционо, осим ако је OMNIROUTE_API_KEY подешен
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Подржани методи (сви зависе од `settings.a2aEnabled`):
-
-| Метод            | Опис                                                             |
-| ---------------- | ---------------------------------------------------------------- |
-| `message/send`   | Синхроно извршавање вештине; враћа `{task, artifacts, metadata}` |
-| `message/stream` | SSE стримовање извршавања истог скупа вештина                    |
-| `tasks/get`      | Добавља задатак према `taskId`                                   |
-| `tasks/cancel`   | Отказује задатак према `taskId`                                  |
-
-Уграђене вештине: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Картица агента
-
-```bash
-GET /.well-known/agent.json
-```
-
-Враћа јавну A2A картицу агента (назив, опис, могућности, каталог вештина, шему аутентификације) — јавно се кешира 1 сат. Аутентификација није потребна.
+67router пружа A2A (Agent-to-Agent) JSON-RPC 2.0 крајњу тачку, као и REST омотач за потребе прегледа и контролне табле.
 
 ### REST помоћне крајње тачке
 
 | Метод | Путања                       | Опис                                                                                                                |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Статус омогућености A2A-а + статистика задатака + сажетак кеширане картице агента                                   |
 | GET   | `/api/a2a/tasks`             | Листа задатака — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Није имплементирано као REST помоћна крајња тачка — креирајте преко JSON-RPC метода `message/send`)                |
 | GET   | `/api/a2a/tasks/[id]`        | Добавља један задатак                                                                                               |
@@ -1970,12 +1906,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Наводи алијасе модела који су изложени синхронизацији са облаком |
 | GET | `/api/assess` | Чита најновије категоризације процене (по добављачу/моделу) |
 | POST | `/api/assess` | Покреће процену — тело: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Наводи уграђене пакете евалуација + најновија извршавања |
-| POST | `/api/evals` | Покреће извршавање евалуације |
-| POST | `/api/evals/suites` | Креира прилагођени пакет евалуација — тело се валидира помоћу `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Добавља прилагођени пакет евалуација |
 
-**Аутентификација:** `/api/cloud/auth` директно проверава Bearer кључ и враћа маскирани кључ и `projectId` сваке везе само за кључ са опсегом `manage` / `admin`; остале руте `/api/cloud/*`, `/api/evals/*` и `/api/assess` захтевају управљачку сесију/API кључ. POST захтев за `/api/assess` користи `validateBody` са шемом опсега заснованом на дискриминисаној унији.
+**Аутентификација:** `/api/cloud/auth` директно проверава Bearer кључ и враћа маскирани кључ и `projectId` сваке везе само за кључ са опсегом `manage` / `admin`; остале руте `/api/cloud/*` и `/api/assess` захтевају управљачку сесију/API кључ. POST захтев за `/api/assess` користи `validateBody` са шемом опсега заснованом на дискриминисаној унији.
 
 ---
 
@@ -2133,7 +2065,7 @@ GET /.well-known/agent.json
 
 ## Управљање CLI алатима
 
-Управљајте CLI алатима који се интегришу са OmniRoute (antigravity, commandCode,
+Управљајте CLI алатима који се интегришу са 67router (antigravity, commandCode,
 devin-cli итд.). Погледајте [Референцу добављача](./PROVIDER_REFERENCE.md) за комплетну листу.
 
 | Метод | Путања                                  | Опис                                                                                                                                                                         |
@@ -2242,26 +2174,6 @@ devin-cli итд.). Погледајте [Референцу добављача]
 
 ---
 
-## Додаци
-
-Управљајте OmniRoute додацима (проширењима трећих страна).
-
-| Метод  | Путања                             | Опис                             |
-| ------ | ---------------------------------- | -------------------------------- |
-| GET    | `/api/plugins`                     | Прикажите инсталиране додатке    |
-| POST   | `/api/plugins/marketplace/install` | Инсталирајте додатак са тржишта  |
-| DELETE | `/api/plugins/[name]`              | Деинсталирајте додатак           |
-| POST   | `/api/plugins/[name]/activate`     | Активирајте додатак              |
-| POST   | `/api/plugins/[name]/deactivate`   | Деактивирајте додатак            |
-| GET    | `/api/plugins/[name]/config`       | Преузмите конфигурацију додатка  |
-| PUT    | `/api/plugins/[name]/config`       | Ажурирајте конфигурацију додатка |
-
-**Аутентификација:** Захтева управљачку сесију.
-
-Све детаље погледајте у одељку [Оквир додатака](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Рутиранје у сенци
 
 Поређење провајдера у сенци / A-B поређење **није самостални REST интерфејс** — конфигурише се путем комбинованог рутирања (погледајте [Аутоматске комбинације](../routing/AUTO-COMBO.md)). Метрике поређења по комбинацији доступне су преко `GET /api/combos/metrics`.
@@ -2296,5 +2208,3 @@ devin-cli итд.). Погледајте [Референцу добављача]
 - `requireLogin` се може укључити или искључити преко `/api/settings/require-login`
 - Руте `/v1/*` опционо захтевају Bearer API кључ када је `REQUIRE_API_KEY=true`
 - „токен за управљање“ / „API кључ са опсегом за управљање“ у овој референци означава једну од врста из тог водича — а не недефинисани додатни тип тајне
-
-> **Промена која нарушава компатибилност (v3.8.0)** — `/api/v1/agents/tasks/*` и крајње тачке за управљање периодом мировања сада захтевају **аутентификацију за управљање** (колачић `auth_token` контролне табле или API кључ са опсегом за управљање). Клијенти који су раније позивали ове руте без аутентификације добиће `401 Unauthorized`. Погледајте комит `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

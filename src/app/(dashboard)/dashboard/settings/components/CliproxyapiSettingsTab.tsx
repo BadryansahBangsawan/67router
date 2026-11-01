@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Card, Button, Input, Toggle, Spinner } from "@/shared/components";
+import { Button, Input, Toggle, Spinner } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 
 interface Settings {
@@ -179,11 +180,11 @@ export default function CliproxyapiSettingsTab() {
         </div>
       )}
 
-      <Card
+      <SettingsSection
         padding="md"
-        icon="swap_horiz"
+
         title={t("cliproxyapiFallback")}
-        subtitle={t("cliproxyapiFallbackDescription")}
+        description={t("cliproxyapiFallbackDescription")}
       >
         <div className="space-y-4">
           <div className="flex items-center justify-between gap-4">
@@ -215,9 +216,9 @@ export default function CliproxyapiSettingsTab() {
             </>
           )}
         </div>
-      </Card>
+      </SettingsSection>
 
-      <Card padding="md" title={t("cliproxyapiStatus")}>
+      <SettingsSection padding="md" title={t("cliproxyapiStatus")}>
         {loading ? (
           <div className="flex items-center gap-2 text-text-muted text-sm">
             <Spinner size="sm" />
@@ -268,12 +269,12 @@ export default function CliproxyapiSettingsTab() {
         ) : (
           <p className="text-sm text-text-muted">{t("cliproxyapiNotDetected")}</p>
         )}
-      </Card>
+      </SettingsSection>
 
-      <Card
+      <SettingsSection
         padding="md"
         title={t("cliproxyapiImportAuthTitle")}
-        subtitle={t("cliproxyapiImportAuthDesc")}
+        description={t("cliproxyapiImportAuthDesc")}
       >
         <Button onClick={handleImportAuth} loading={importing} disabled={importing}>
           {t("cliproxyapiImportAuthButton")}
@@ -283,7 +284,7 @@ export default function CliproxyapiSettingsTab() {
             {importResult}
           </p>
         ) : null}
-      </Card>
+      </SettingsSection>
     </div>
   );
 }

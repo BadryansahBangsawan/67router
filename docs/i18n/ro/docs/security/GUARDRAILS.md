@@ -10,7 +10,7 @@
 > blocare a injecției ca limită obligatorie (#16413) și ce vede un răspuns înainte de post-apel)
 
 Guardrail-urile aplică transformări de siguranță, politici și conținut la granița
-dintre OmniRoute și furnizorii upstream. Fiecare guardrail poate inspecta (și,
+dintre 67router și furnizorii upstream. Fiecare guardrail poate inspecta (și,
 opțional, respinge, transforma sau adnota) payload-urile cererilor (`preCall`) și
 răspunsurile upstream (`postCall`).
 
@@ -111,7 +111,7 @@ Atunci când cheia API a apelantului restricționează `allowedConnections`, gru
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), puntea alege doar
 modele de redirecționare și describe pe care cheia are voie să le folosească, pe conexiuni
 pe care cheia are voie să le folosească. Apelul describe trece apoi întotdeauna prin
-self-loop-ul OmniRoute cu antetul `x-omniroute-self-loop-key-id`, astfel încât cererea
+self-loop-ul 67router cu antetul `x-omniroute-self-loop-key-id`, astfel încât cererea
 de chat receptoare aplică din nou politica de conexiuni și modele a acelei chei.
 `enforceApiKeyPolicy()` respectă acel antet doar împreună cu bearer-ul self-loop, deci
 poate doar restrânge accesul, iar un id care nu se rezolvă este respins.
@@ -139,7 +139,7 @@ Eșantionarea cu detaliu scăzut degradează acuratețea OCR exact pentru sarcin
 transcriere a textului pe care o cere acest prompt, deci apelul describe în sine
 solicită întotdeauna detaliu ridicat, indiferent de nivelul de detaliu folosit de
 cererea inițială de intrare. Acest lucru afectează doar corpul cererii interne
-describe; nu schimbă modul în care OmniRoute redirecționează propriul `image_url.detail`
+describe; nu schimbă modul în care 67router redirecționează propriul `image_url.detail`
 al apelantului în cererea principală — acel implicit este aplicat separat, și doar
 pentru clienții OpenCode detectați, în `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Ramura în format wire Anthropic a
@@ -202,7 +202,7 @@ Pagina dedicată din panoul de bord este `/dashboard/settings/modality-bridge`. 
 
 Fostul card Vision Bridge din setările AI este un link de compatibilitate către noua pagină; nu mai deține o a doua copie a formularului. Media Providers leagă, de asemenea, fluxurile de lucru Image-to-Text și Speech-to-Text de filele Modality Bridge corespunzătoare, fără a elimina playground-ul Speech-to-Text existent.
 
-**Ocolirea admiterii prin self-loop:** când apelul describe este rutat prin propriul self-loop `/v1` al OmniRoute (model de furnizor non-standard), sub-cererea trimite `x-omniroute-admission-bypass: internal` și este autentificată cu credențialul self-loop rezolvat — santinela locală `sk_omniroute` în modul local sau cheia de mediu `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` configurată de operator (#1350), astfel încât implementările cu `REQUIRE_API_KEY=true` pot rula în continuare apelul describe. Ocolirea este onorată doar pentru acele credențiale exacte, astfel încât clienții externi nu pot folosi antetul pentru a sări peste admitere.
+**Ocolirea admiterii prin self-loop:** când apelul describe este rutat prin propriul self-loop `/v1` al 67router (model de furnizor non-standard), sub-cererea trimite `x-omniroute-admission-bypass: internal` și este autentificată cu credențialul self-loop rezolvat — santinela locală `sk_omniroute` în modul local sau cheia de mediu `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` configurată de operator (#1350), astfel încât implementările cu `REQUIRE_API_KEY=true` pot rula în continuare apelul describe. Ocolirea este onorată doar pentru acele credențiale exacte, astfel încât clienții externi nu pot folosi antetul pentru a sări peste admitere.
 
 Valorile implicite vechi se află în `src/shared/constants/visionBridgeDefaults.ts`; noile valori implicite pentru mod/task-aware/cache și resolverul de setări se află în `src/shared/constants/modalityBridgeDefaults.ts`. Guardrail-ul expune o opțiune de constructor `deps`, astfel încât testele pot injecta implementări false de `getSettings` și `callVisionModel`.
 
@@ -255,7 +255,7 @@ Filtrele lipsă, dovezile malformate/goale, o eroare a detectorului sau timeout-
 
 Fiecare cadru este limitat la 4 MiB, toate cadrele brute împreună la 23 MiB, iar
 răspunsul serializat al brokerului la 32 MiB. Un director temporar privat este
-eliminat în `finally`. OmniRoute nu include FFmpeg și nu acceptă o cale
+eliminat în `finally`. 67router nu include FFmpeg și nu acceptă o cale
 personalizată către executabil. Înainte de generarea descrierilor, puntea aplică
 o trecere conservatoare de deduplicare vizuală: fiecare JPEG este redus la un
 buffer în tonuri de gri de 16×16 și este comparat doar cu ultimul cadru reținut.
@@ -301,7 +301,7 @@ acceptată atunci când dețin deja text aliniat. Fiecare cue trebuie să conți
 `text`, un interval finit `start`/`end` în interiorul duratei detectate și o
 valoare `source` din lista permisă (`client`, `embedded` sau `audio-bridge`);
 `confidence` are valoarea implicită `1` și trebuie să rămână între `0` și `1`.
-Cue-urile duplicate exact sunt comasate. OmniRoute nu pornește niciodată
+Cue-urile duplicate exact sunt comasate. 67router nu pornește niciodată
 transcrierea pe baza acestor metadate: cue-urile validate sunt copiate în
 rezultatul descris împreună cu sursa, încrederea și intervalul și sunt redate ca
 observații de neîncredere alături de descrierile cadrelor. Textul invalid, în
@@ -884,7 +884,7 @@ manuală) are două joburi:
   instrucțiunile anterioare…", jailbreak-uri de tip DAN) verifică că răspunsul poartă
   `error.code === "SECURITY_001"`, adică că guard-ul a respins efectiv cererea.
 - **`garak` (consultativ)** — rulează garak `--probes promptinject,dan,leakreplay`
-  împotriva unei instanțe locale OmniRoute (`http://localhost:20128/v1`). Este condiționat de
+  împotriva unei instanțe locale 67router (`http://localhost:20128/v1`). Este condiționat de
   un secret al furnizorului (`PROMPTFOO_PROVIDER_KEY`); este omis grațios și este sufixat cu
   `|| true`, astfel că raportează fără a cauza eșecul CI-ului.
 

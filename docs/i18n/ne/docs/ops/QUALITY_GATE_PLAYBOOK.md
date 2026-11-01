@@ -4,7 +4,7 @@
 
 ---
 
-> **यो दस्तावेज के हो।** OmniRoute को गुणस्तर-गेट प्रणालीको आलोचनात्मक मूल्याङ्कन,
+> **यो दस्तावेज के हो।** 67router को गुणस्तर-गेट प्रणालीको आलोचनात्मक मूल्याङ्कन,
 > उद्योगका उत्कृष्ट अभ्यासहरूसँग तुलना, **साथै** सबै गुणस्तर
 > जाँचबिन्दुहरूको विस्तृत सूची र सोही प्रणालीलाई
 > कुनै पनि परियोजनामा लागू गर्नका लागि **उपकरण-निरपेक्ष पुनरावृत्ति योजना**। वास्तविक रिपोजिटरी अवस्थाबाट 2026-06-16 मा तयार पारिएको (स्मृतिका आधारमा होइन)।
@@ -101,62 +101,62 @@
 
 ### 1. शैली र ढाँचाबद्धता (निर्धारित, छिटो)
 
-- **OmniRoute:** lint-staged मार्फत Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col।
+- **67router:** lint-staged मार्फत Prettier + ESLint (pre-commit), 2-spaces/double-quotes/100col।
 - **सामान्य:** staged फाइलहरूमा pre-commit का बेला चल्ने, स्वतः सुधार गर्न मिल्ने एउटा formatter + एउटा linter।
 
 ### 2. प्रकारहरू
 
-- **OmniRoute:** `typecheck:core` (अवरोधक) + `typecheck:noimplicit:core` (परामर्शात्मक) + `type-coverage` र्याचेट 92.17% + प्रत्येक फाइलका लागि any-बजेट।
+- **67router:** `typecheck:core` (अवरोधक) + `typecheck:noimplicit:core` (परामर्शात्मक) + `type-coverage` र्याचेट 92.17% + प्रत्येक फाइलका लागि any-बजेट।
 - **सामान्य:** CI मा strict typecheck + र्याचेट गरिएको type-coverage मेट्रिक + प्रत्येक फाइलका लागि `any`/escape-hatch बजेट।
 
 ### 3. परीक्षणहरू (तीव्रता)
 
-- **OmniRoute:** एकअर्कासँग नखप्टिने 2 runners (Node native + vitest), 8 shards, समग्र coverage 60/60/60/60 + र्याचेट ~76% + **महत्त्वपूर्ण मोड्युलहरूका लागि प्रत्येक मोड्युलमा 8 न्यूनतम सीमा** + रात्रीकालीन property tests + रात्रीकालीन **mutation testing**।
+- **67router:** एकअर्कासँग नखप्टिने 2 runners (Node native + vitest), 8 shards, समग्र coverage 60/60/60/60 + र्याचेट ~76% + **महत्त्वपूर्ण मोड्युलहरूका लागि प्रत्येक मोड्युलमा 8 न्यूनतम सीमा** + रात्रीकालीन property tests + रात्रीकालीन **mutation testing**।
 - **सामान्य:** test runner(s) + **निरपेक्ष** coverage न्यूनतम सीमा (शून्य-विरोधी) + coverage **र्याचेट** (प्रतिगमन-विरोधी) + **उच्च-जोखिम कोडका लागि प्रत्येक मोड्युलमा न्यूनतम सीमा** (Goodhart-विरोधी) + शुद्ध logic का लागि property-based परीक्षण + परीक्षणको गुणस्तरको वास्तविक मापनका रूपमा रात्रीकालीन **mutation testing**।
 
 ### 4. परीक्षण नीति (छल-विरोधी)
 
-- **OmniRoute:** `pr-test-policy` (production code का लागि परीक्षण आवश्यक), `check-test-masking` (कमजोर बनाइएका asserts रोक्छ), `pr-evidence` (सफलताको दाबीका लागि evidence block आवश्यक), `test-discovery` (हरेक परीक्षण runner द्वारा सङ्कलित)।
+- **67router:** `pr-test-policy` (production code का लागि परीक्षण आवश्यक), `check-test-masking` (कमजोर बनाइएका asserts रोक्छ), `pr-evidence` (सफलताको दाबीका लागि evidence block आवश्यक), `test-discovery` (हरेक परीक्षण runner द्वारा सङ्कलित)।
 - **सामान्य:** "नयाँ code ⇒ नयाँ test" gate + हटाइएको assert/tautology detector + प्रमाणको आवश्यकता (TDD वा living test) + कुनै पनि परीक्षण globs बाहिर छुटेको छैन भन्ने प्रत्याभूति।
 
 ### 5. जटिलता र कोडको स्वास्थ्य (र्याचेटहरू)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), प्रत्येक फाइलको file-size (स्थिर, घटाउन मात्र मिल्ने), circular-deps (custom Tarjan, अवरोधक)।
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), प्रत्येक फाइलको file-size (स्थिर, घटाउन मात्र मिल्ने), circular-deps (custom Tarjan, अवरोधक)।
 - **सामान्य:** हरेक health metric (warnings, duplication, cyclomatic **र** cognitive complexity, dead code, file size, import cycles) लाई र्याचेट गर्नुहोस्। दिशा सधैँ "प्रतिगमन नगर्नुहोस्" हुन्छ।
 
 ### 6. स्थिर सुरक्षा (SAST + गोप्य विवरणहरू)
 
-- **OmniRoute:** CodeQL (alerts र्याचेट = 0), gitleaks (`[extend] useDefault=true` — अत्यन्त महत्त्वपूर्ण!), SonarQube, custom security rules (public-creds, error-helper, route-guard-membership, route-validation)।
+- **67router:** CodeQL (alerts र्याचेट = 0), gitleaks (`[extend] useDefault=true` — अत्यन्त महत्त्वपूर्ण!), SonarQube, custom security rules (public-creds, error-helper, route-guard-membership, route-validation)।
 - **सामान्य:** alert र्याचेटसहित SAST (CodeQL/Sonar/semgrep) + **विरासतमा प्राप्त पूर्वनिर्धारित नियमसमूह** सहितको secrets scanner (पूर्वनिर्धारितलाई अधिलेखन गर्ने custom config = अन्धोपन) + परियोजना-विशिष्ट Hard Rule security gates।
 
 ### 7. आपूर्ति शृङ्खला (निर्भरताहरू)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + उमेर ≥72h)।
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + उमेर ≥72h)।
 - **सामान्य:** बहु-स्रोत SCA + license allowlist + lockfile integrity check + उमेर/typosquatting जाँचसहित dependency allowlist + grouped update bot।
 
 ### 8. आपूर्ति शृङ्खला (बिल्ड र रिलिज)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (साप्ताहिक), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)।
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (साप्ताहिक), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)।
 - **सामान्य:** publish गर्दा SBOM उत्पन्न गर्नुहोस् + हस्ताक्षरित provenance (SLSA L2+) + निर्धारित Scorecard + सबै workflows सुदृढ बनाउनुहोस् (न्यूनतम-अधिकार tokens, non-pusher checkout मा persisted credentials नराख्ने, actions लाई SHA द्वारा pin गर्ने)।
 
 ### 9. सम्झौताहरू र API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (रात्रीकालीन contract fuzz), openapi-coverage (% documented routes, र्याचेट 38.3%), openapi-security-tiers (spec vs route-guard)।
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (रात्रीकालीन contract fuzz), openapi-coverage (% documented routes, र्याचेट 38.3%), openapi-security-tiers (spec vs route-guard)।
 - **सामान्य:** breaking-change contract diff (oasdiff/buf) + spec विरुद्ध property-based fuzz (schemathesis) + र्याचेट गरिएको documentation coverage + spec↔code consistency।
 
 ### 10. दस्तावेज र i18n (क्षय-विरोधी)
 
-- **OmniRoute:** docs-sync (प्रतिबिम्बित versions), docs-counts-sync (docs का सङ्ख्या vs code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + र्याचेट 80.1%)।
+- **67router:** docs-sync (प्रतिबिम्बित versions), docs-counts-sync (docs का सङ्ख्या vs code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + र्याचेट 80.1%)।
 - **सामान्य:** docs र code बीच versions/counts/env-vars समक्रमण गर्नुहोस् (gate, विश्वास होइन) + internal links प्रमाणित गर्नुहोस् + र्याचेट गरिएको i18n coverage।
 
 ### 11. भ्रम-विरोधी / एकरूपता (दुर्लभ श्रेणी)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ वास्तविक route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering।
+- **67router:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ वास्तविक route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering।
 - **सामान्य:** हरेक "दोहोरो source of truth" (registry, string dispatch, cross-layer references) का लागि, दुवै पक्ष मेल खान्छन् भनी प्रमाणित गर्ने gate। यसले typecheck/test ले पत्ता नलगाउने क्षय समात्छ।
 
 ### 12. लचिलोपन र डोमेन (उत्पादन-विशिष्ट)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), लचिलोपनका 3 नियम (circuit-breaker/cooldown/lockout)।
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), लचिलोपनका 3 नियम (circuit-breaker/cooldown/lockout)।
 - **सामान्य:** **तपाईंको** डोमेनका failure modes पहिचान गर्नुहोस् र प्रत्येकका लागि एउटा gate राख्नुहोस् (रात्रीकालीन भए पनि)। AI apps का लागि: injection red-team। distributed systems का लागि: chaos + leak + soak।
 
 ---

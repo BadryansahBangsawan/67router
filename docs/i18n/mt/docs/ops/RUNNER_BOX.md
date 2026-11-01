@@ -5,7 +5,7 @@
 ---
 
 Il-pool self-hosted jaħdem fuq il-magna **.113** (`tomni-proxmox-113`). Mit-2026-10-18 ’l hawn, kull
-runner ta’ OmniRoute għandu **rwol wieħed**, tikketta waħda, u baġit tal-memorja/CPU adattat għal dak li
+runner ta’ 67router għandu **rwol wieħed**, tikketta waħda, u baġit tal-memorja/CPU adattat għal dak li
 tkejjel mit-tagħbija tax-xogħol tiegħu. Is-slot ta’ Turbopack jingħata dak li jeħtieġ il-build; is-slots l-oħra huma adattati
 għall-quċċati mkejla tagħhom. Il-magna talloka żżejjed biss meta build ta’ Turbopack jaħbat ma’ build
 webpack ta’ Release-Green u job tal-lint; is-swap tal-host (16 GB) jassorbi dan, u billi l-Builds tal-pull requests
@@ -27,7 +27,7 @@ Kejl tal-2026-10-18:
 | swap      | 16 GB                                       | `omniroute-113-5` jaħdem bis-swap mitfi (`MemorySwapMax=0`) sabiex build li jaħrab mill-kontroll jinqata’ mal-limitu tiegħu minflok ma jġiegħel lill-magna tuża s-swap                                                                                                                                                                                                                                                                         |
 | `/tmp`    | **12 GB tmpfs = RAM**                       | kull ħaġa li titħalla hemm tuża l-memorja; il-fdalijiet jitneħħew wara 3 sigħat                                                                                                                                                                                                                                                                                                                                                                |
 | CPU       | ġiet osservata tagħbija ta’ 60 fuq 32 qalba | qabel il-kwoti, build wieħed ta’ Turbopack (~1166 % CPU) flimkien ma’ sett ta’ testijiet tal-kopertura fuq l-istess magna ċaħħdu s-sinjali ta’ ħajja tal-listeners l-oħra mir-riżorsi (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                    |
-| runners   | **6 listeners**                             | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` huma diżattivati (`systemctl enable --now` jerġa’ jattiva wieħed)                                                                                                                                                                                                                                                                                                              |
+| runners   | **6 listeners**                             | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` huma diżattivati (`systemctl enable --now` jerġa’ jattiva wieħed)                                                                                                                                                                                                                                                                                                               |
 
 Il-limiti jinsabu fil-fajl `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` ta’ kull unità
 (il-valuri preċedenti nżammu bħala `override.conf.bak-20261018`) u ġew applikati waqt it-tħaddim permezz ta’
@@ -53,7 +53,7 @@ Ir-regola tal-75 minuta ma taqbadx build li GitHub ikun diġà qata’ qalbu min
 
 ## Unitajiet tar-runner: KillMode
 
-Il-`KillMode=process` default tar-runner iħalli `Runner.Worker → npm → next-build` jaħdem meta unità titwaqqaf jew terġa’ tinbeda — build orfni jibqa’ jikkonsma r-RAM u s-CPU mingħajr job marbut miegħu. Kull unità ta’ OmniRoute għandha drop-in (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) b’`KillMode=mixed`: l-ewwel jintbagħat SIGTERM lil-listener, imbagħad SIGKILL liċ-cgroup kollu f’`TimeoutStop`. Dan jidħol fis-seħħ meta l-unità terġa’ tinbeda — erġa’ ibda **runner wieħed kull darba, u biss meta ma jkunx qed jintuża**, bil-verifika li mhuwiex qed jintuża u r-restart fl-istess command.
+Il-`KillMode=process` default tar-runner iħalli `Runner.Worker → npm → next-build` jaħdem meta unità titwaqqaf jew terġa’ tinbeda — build orfni jibqa’ jikkonsma r-RAM u s-CPU mingħajr job marbut miegħu. Kull unità ta’ 67router għandha drop-in (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`) b’`KillMode=mixed`: l-ewwel jintbagħat SIGTERM lil-listener, imbagħad SIGKILL liċ-cgroup kollu f’`TimeoutStop`. Dan jidħol fis-seħħ meta l-unità terġa’ tinbeda — erġa’ ibda **runner wieħed kull darba, u biss meta ma jkunx qed jintuża**, bil-verifika li mhuwiex qed jintuża u r-restart fl-istess command.
 
 ## Regoli operattivi
 
@@ -98,7 +98,7 @@ Il-`KillMode=process` default tar-runner iħalli `Runner.Worker → npm → next
   jeħtieġu `next build` tal-backend biss (~5–6 GB; webpack) u `lint-guard` ta’ `quality.yml`.
   `omniroute-113` kellu `MemoryHigh=4G` sal-2026-10-18 — il-build ta’ promptfoo qatta’ 54 minuta
   jirriklama l-memorja hemmhekk; 8 GB ineħħu t-throttling.
-- **Inqas listeners apposta.** Erba’ units ta’ OmniRoute ġew diżattivati fit-2026-08-29 — kull
+- **Inqas listeners apposta.** Erba’ units ta’ 67router ġew diżattivati fit-2026-08-29 — kull
   listener addizzjonali huwa tenant ieħor għall-baġit tal-memorja ta’ hawn fuq. Il-limitu
   massimu tal-janitor huwa 6 (`MAX_ACTIVE_RUNNERS=6` fil-cron): jgħodd kull `Runner.Listener`
   fuq il-magna, u OmniHeuris + OmniMind iżidu tnejn mal-erbgħa tagħna.

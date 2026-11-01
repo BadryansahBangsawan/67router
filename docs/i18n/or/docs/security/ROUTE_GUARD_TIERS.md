@@ -6,7 +6,7 @@
 
 ## ସାରାଂଶ
 
-ସମସ୍ତ OmniRoute ପରିଚାଳନା API ରୁଟ୍କୁ ତିନୋଟି ସୁରକ୍ଷା
+ସମସ୍ତ 67router ପରିଚାଳନା API ରୁଟ୍କୁ ତିନୋଟି ସୁରକ୍ଷା
 ସ୍ତର ମଧ୍ୟରୁ ଗୋଟିଏରେ ବର୍ଗୀକୃତ କରାଯାଇଛି। ବର୍ଗୀକରଣ ସ୍ଥିର, ଯାହା `src/server/authz/routeGuard.ts`ରେ
 ପରିଭାଷିତ ହୋଇଛି, ଏବଂ ଅନ୍ୟ କୌଣସି ପ୍ରମାଣୀକରଣ ଶାଖା ଚାଲିବା ପୂର୍ବରୁ ଏହାର ମୂଲ୍ୟାଙ୍କନ କରାଯାଏ।
 
@@ -27,9 +27,9 @@ API କି ରହିଥାଏ, ସେତେବେଳେ `LOCAL_ONLY_MANAGE_SCOPE
 **GHSA-fhh6-4qxv-rpqj କ’ଣ (ଆକ୍ରମଣର ଶ୍ରେଣୀ):** ଏକ ପରିଚାଳନା/ଏଜେଣ୍ଟ ସର୍ଭର୍
 ଏପରି ଏକ ଏଣ୍ଡପଏଣ୍ଟ ଉନ୍ମୁକ୍ତ କରେ ଯାହା ଏକ ସବ୍ପ୍ରୋସେସ୍ (`npm install`, `node`, ଏକ ବ୍ରାଉଜର୍,
 ଏକ ପ୍ରକ୍ସି, `git`, `tar`, …) ଆରମ୍ଭ କରେ। ଯଦି ସେହି ଏଣ୍ଡପଏଣ୍ଟକୁ ହୋଷ୍ଟ ବାହାରୁ ପହଞ୍ଚିହୁଏ — କାରଣ
-ଅପରେଟର୍ OmniRouteକୁ ଏକ nginx/Cloudflare/Tailscale ଟନେଲ୍ ପଛରେ ରଖିଛନ୍ତି ଏବଂ ଏକ JWT
+ଅପରେଟର୍ 67routerକୁ ଏକ nginx/Cloudflare/Tailscale ଟନେଲ୍ ପଛରେ ରଖିଛନ୍ତି ଏବଂ ଏକ JWT
 ଲିକ୍ ହୋଇଛି, କିମ୍ବା ପ୍ରମାଣୀକରଣ ଭୁଲ୍ ଭାବେ ବିନ୍ୟାସ କରାଯାଇଛି — ତେବେ ଆକ୍ରମଣକାରୀ "ଏକ APIକୁ କଲ୍ କରିବା"କୁ
-"ହୋଷ୍ଟରେ ଏକ କମାଣ୍ଡ ଚଲାଇବା"ରେ ପରିଣତ କରିଦିଅନ୍ତି (ରିମୋଟ୍ କୋଡ୍ ନିଷ୍ପାଦନ)। OmniRoute ପ୍ରତ୍ୟେକ
+"ହୋଷ୍ଟରେ ଏକ କମାଣ୍ଡ ଚଲାଇବା"ରେ ପରିଣତ କରିଦିଅନ୍ତି (ରିମୋଟ୍ କୋଡ୍ ନିଷ୍ପାଦନ)। 67router ପ୍ରତ୍ୟେକ
 ପ୍ରୋସେସ୍-ଆରମ୍ଭ-ସକ୍ଷମ ରୁଟ୍ରେ **କୌଣସି ପ୍ରମାଣୀକରଣ ଯାଞ୍ଚ ପୂର୍ବରୁ, ବିନା ସର୍ତ୍ତରେ ଏକ ଲୁପବ୍ୟାକ୍ ହୋଷ୍ଟ ଯାଞ୍ଚ**
 ବଳବତ୍ତର କରି ଏହାକୁ ବନ୍ଦ କରେ: ଏକ ଟନେଲ୍ ମାଧ୍ୟମରେ ଲିକ୍ ହୋଇଥିବା ଟୋକେନ୍ ମଧ୍ୟ ପ୍ରୋସେସ୍ ଆରମ୍ଭ ପର୍ଯ୍ୟନ୍ତ ପହଞ୍ଚିପାରିବ ନାହିଁ।
 
@@ -57,7 +57,6 @@ API କି ରହିଥାଏ, ସେତେବେଳେ `LOCAL_ONLY_MANAGE_SCOPE
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy ଲିସନର୍ + ସିଷ୍ଟମ୍ ପ୍ରକ୍ସି                                                |
 | `/api/settings/mitm`                                                                                     | MITM ଇଣ୍ଟରସେପ୍ସନ୍ ସକ୍ଷମ କରେ (ସିଷ୍ଟମ୍-ସ୍ତରୀୟ ପ୍ରକ୍ସି ସ୍ଥିତି)                                            |
 | `/api/issue-agent/`                                                                                      | ଇସ୍ୟୁ ଏଜେଣ୍ଟ — ରେପୋ ବିରୁଦ୍ଧରେ ସ୍ଥାନୀୟ ଟୁଲିଂ ଆରମ୍ଭ କରେ                                                  |
-| `/api/plugins/`, `/api/plugins`                                                                          | ପ୍ଲଗ୍ଇନ୍ଗୁଡ଼ିକ — `worker_threads` + `child_process` ମାଧ୍ୟମରେ ଲୋଡ୍/ନିଷ୍ପାଦନ କରେ                         |
 | `/api/middleware/`                                                                                       | ବ୍ୟବହାରକାରୀ ମିଡଲ୍ୱେୟାର୍ — ପ୍ରକ୍ରିୟା ମଧ୍ୟରେ ଅପରେଟର୍ କୋଡ୍ ଲୋଡ୍/ନିଷ୍ପାଦନ କରେ                              |
 | `/api/system/version`                                                                                    | ସ୍ୱୟଂଚାଳିତ ଅପଡେଟ୍ (କେବଳ POST; GET/HEAD/OPTIONS ଛାଡ଼ପ୍ରାପ୍ତ) — `git checkout` + `npm install` ଆରମ୍ଭ କରେ |
 | `/api/db-backups/exportAll`                                                                              | ରପ୍ତାନି ଆର୍କାଇଭ୍ ପାଇଁ `tar` ଆରମ୍ଭ କରେ                                                                  |
@@ -118,7 +117,7 @@ management routeରେ `mcp:connect` କିଛି ମଧ୍ୟ ଅନୁମତ�
 
 #### Operator ମାର୍ଗଦର୍ଶନ ଏବଂ auditing
 
-ଯଦି ଆପଣ OmniRouteକୁ ଏକ reverse proxy କିମ୍ବା tunnel (nginx, Caddy, Cloudflare
+ଯଦି ଆପଣ 67routerକୁ ଏକ reverse proxy କିମ୍ବା tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) ପଛରେ ଚଳାନ୍ତି, loopback ଯାଞ୍ଚ ତଥାପି ଉପରୋକ୍ତ spawn-ସକ୍ଷମ
 routeଗୁଡ଼ିକୁ ସୁରକ୍ଷିତ ରଖେ — ଯେଉଁ requestର client address non-loopback, ତାହାକୁ
 **auth ଚାଲିବା ପୂର୍ବରୁ** `403 LOCAL_ONLY` ସହିତ ପ୍ରତ୍ୟାଖ୍ୟାନ କରାଯାଏ, ତେଣୁ ଏକ leaked JWT spawn ପର୍ଯ୍ୟନ୍ତ ପହଞ୍ଚିପାରିବ ନାହିଁ। ଦୁଇଟି
@@ -155,7 +154,7 @@ operator ଦାୟିତ୍ୱ ଅବଶିଷ୍ଟ ରହେ:
 - ଉପରୋକ୍ତ prefixଗୁଡ଼ିକ ସହ non-loopback client address ଯୋଡ଼ି ଆପଣଙ୍କ reverse-proxy / access logଗୁଡ଼ିକୁ Grep କରନ୍ତୁ।
   ଏପରି କୌଣସି hit `403 LOCAL_ONLY` ପରିବର୍ତ୍ତେ `200` ଫେରାଇଥିଲେ,
   proxy ପ୍ରକୃତ client IPକୁ ଲୁଚାଉଛି — proxyକୁ ଠିକ୍ କରନ୍ତୁ।
-- ଏହି pathଗୁଡ଼ିକ ମଧ୍ୟରୁ ଗୋଟିଏ ପାଇଁ OmniRouteର logରେ ଥିବା `403 LOCAL_ONLY` ହେଉଛି guard
+- ଏହି pathଗୁଡ଼ିକ ମଧ୍ୟରୁ ଗୋଟିଏ ପାଇଁ 67routerର logରେ ଥିବା `403 LOCAL_ONLY` ହେଉଛି guard
   ଉଦ୍ଦେଶ୍ୟାନୁସାରେ କାମ କରୁଥିବାର ସୂଚନା, ଦମନ କରିବାକୁ ଥିବା error ନୁହେଁ।
 
 #### call-site probe gate ସହିତ remote-reachable routeଗୁଡ଼ିକ

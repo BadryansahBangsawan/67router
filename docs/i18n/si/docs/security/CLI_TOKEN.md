@@ -6,7 +6,7 @@
 
 ## දළ විශ්ලේෂණය
 
-OmniRoute CLI විධාන, `x-omniroute-cli-token` ඉල්ලීම් ශීර්ෂකය හරහා යවන
+67router CLI විධාන, `x-omniroute-cli-token` ඉල්ලීම් ශීර්ෂකය හරහා යවන
 `HMAC-SHA256(machine-id, salt)` ටෝකනයක් භාවිත කරමින් දේශීය කළමනාකරණ API වෙත
 සත්යාපනය වේ.
 

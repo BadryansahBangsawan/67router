@@ -7,7 +7,7 @@
 > **Tõeallikas:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Viimati uuendatud:** 2026-06-28 — v3.8.40
 
-OmniRoute sisaldab lokaalsusest lähtuvat mängustamiskihti, mis premeerib kasutajaid
+67router sisaldab lokaalsusest lähtuvat mängustamiskihti, mis premeerib kasutajaid
 platvormi kasutamise eest — päringute tegemise, teenusepakkujate vahetamise,
 kombode loomise, tokenite jagamise ja kogukonda panustamise eest. Kogu olek asub
 SQLite'is; liitmine kogukonnaserveritega on vabatahtlik ja põhineb andmete saatmisel.
@@ -36,7 +36,7 @@ jagamine, kutsete preemiad).
 | Edetabelid               | Üldised, nädalased, kuised, tokenite jagamise ja panustamise jaotised                                |
 | Tokenite jagamine        | Krediidi ülekandmine kasutajate vahel kahekordse kirjendamisega pearaamatu kaudu                     |
 | Kutsumine ja lunastamine | Soovituskoodid, mida talletatakse SHA-256 räsidena                                                   |
-| Kogukonnaserverid        | Liitmine väliste OmniRoute'i eksemplaridega                                                          |
+| Kogukonnaserverid        | Liitmine väliste 67router'i eksemplaridega                                                           |
 | Pettusevastane kaitse    | Serveripoolne punktiarvestus, päringusageduse piiramine ja z-skooril põhinev anomaaliate tuvastamine |
 
 ### Disainipõhimõtted
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Andmebaasitabelid
 
-Kõik tabelid asuvad OmniRoute’i peamises SQLite’i andmebaasis ja luuakse migratsiooniga
+Kõik tabelid asuvad 67router’i peamises SQLite’i andmebaasis ja luuakse migratsiooniga
 `060_create_gamification.sql`. WAL-logimine pärineb üksikeksemplarilt
 `getDbInstance()` failis `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Kõik tabelid asuvad OmniRoute’i peamises SQLite’i andmebaasis ja luuakse mi
 
 ### Domeenimoodul: `src/lib/db/gamification.ts`
 
-Järgib standardset OmniRoute’i mustrit — impordib `getDbInstance()` failist
+Järgib standardset 67router’i mustrit — impordib `getDbInstance()` failist
 `core.ts` ja ekspordib tüübistatud CRUD-funktsioonid. Marsruudikäitlejates ei kasutata SQL-i otse.
 
 Põhifunktsioonid:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Tegevus           | XP  | Kirjeldus                                                        |
 | ----------------- | --- | ---------------------------------------------------------------- |
-| `request`         | 1   | Iga OmniRoute’i kaudu suunatud API-päringu eest                  |
+| `request`         | 1   | Iga 67router’i kaudu suunatud API-päringu eest                   |
 | `provider_switch` | 5   | Teisele teenusepakkujale lülitumine                              |
 | `model_switch`    | 3   | Teisele mudelile lülitumine                                      |
 | `combo_create`    | 10  | Uue kombinatsiooni loomine                                       |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unikaalne, indekseeritud) |
 | `token_hash` | SHA-256(raw_token)                    |
 
-Toortoken tagastatakse kasutajale loomise ajal täpselt ühe korra. OmniRoute
+Toortoken tagastatakse kasutajale loomise ajal täpselt ühe korra. 67router
 ei talleta ega kuva seda enam kunagi — säilib ainult räsi.
 
 ### Enese kaudu soovitamise vältimine
@@ -704,7 +704,7 @@ Administraatorid saavad täielikku auditijälge pärida lõpp-punkti `GET /api/g
 
 ## API marsruudid
 
-Kõik marsruudid järgivad standardset OmniRoute'i mustrit:
+Kõik marsruudid järgivad standardset 67router'i mustrit:
 
 ```
 Marsruut → CORS-i eelkontroll → Keha valideerimine (Zod) → Autentimine (extractApiKey)

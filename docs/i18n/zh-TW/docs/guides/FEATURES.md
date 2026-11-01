@@ -1,4 +1,4 @@
-# OmniRoute — Dashboard Features Gallery (中文 (繁體))
+# 67router — Dashboard Features Gallery (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **語言：** 🇺🇸 [English](./FEATURES.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/FEATURES.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/FEATURES.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/FEATURES.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/FEATURES.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/FEATURES.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/FEATURES.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/FEATURES.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/FEATURES.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/FEATURES.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/FEATURES.md) | 🇪🇸 [Español](../i18n/es/docs/guides/FEATURES.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/FEATURES.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/FEATURES.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/FEATURES.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/FEATURES.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/FEATURES.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/FEATURES.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/FEATURES.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/FEATURES.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/FEATURES.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/FEATURES.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/FEATURES.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/FEATURES.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/FEATURES.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/FEATURES.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/FEATURES.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/FEATURES.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/FEATURES.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/FEATURES.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/FEATURES.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/FEATURES.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/FEATURES.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/FEATURES.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/FEATURES.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/FEATURES.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/FEATURES.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/FEATURES.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/FEATURES.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/FEATURES.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/FEATURES.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/FEATURES.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/FEATURES.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/FEATURES.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/FEATURES.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/FEATURES.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/FEATURES.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/FEATURES.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/FEATURES.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/FEATURES.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/FEATURES.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/FEATURES.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/FEATURES.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/FEATURES.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/FEATURES.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/FEATURES.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/FEATURES.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/FEATURES.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/FEATURES.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/FEATURES.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/FEATURES.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/FEATURES.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/FEATURES.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/FEATURES.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/FEATURES.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/FEATURES.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/FEATURES.md)
 
-OmniRoute 儀表板所有區段的視覺化指南。
+67router 儀表板所有區段的視覺化指南。
 
 > 📅 **最後更新：** 2026-06-28 — **v3.8.40**
 
@@ -43,15 +43,13 @@ v3.7.x → v3.8.0 週期新增了零設定自動路由、新提供者、OAuth �
 - 🤝 **GitLab Duo OAuth 提供者** — 使用 GitLab 憑證登入
 - 🧠 **推理重播快取** — 以混合式記憶體內 + SQLite 持久化方式儲存推理軌跡
 
-📚 **相關文件：** [技能框架](../frameworks/SKILLS.md) · [記憶系統](../frameworks/MEMORY.md) · [雲端代理](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [推理重播快取](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 提供者
 
 管理 AI 提供者連線：OAuth 提供者（Claude Code、Codex）、API 金鑰提供者（Groq、DeepSeek、OpenRouter），以及免費提供者（Qoder、Kiro）。Kiro 帳戶支援點數餘額追蹤，可在「儀表板 → 用量」中查看剩餘點數、總額度及續期日期。
 
-OpenRouter 連線可在「進階設定」中儲存每個連線專屬的 `preset`。設定後，OmniRoute 會將其作為 OpenRouter 的頂層請求欄位傳送，例如 `"preset": "email-copywriter"`；但若用戶端請求已提供自己的 `preset`，則不會覆寫。
+OpenRouter 連線可在「進階設定」中儲存每個連線專屬的 `preset`。設定後，67router 會將其作為 OpenRouter 的頂層請求欄位傳送，例如 `"preset": "email-copywriter"`；但若用戶端請求已提供自己的 `preset`，則不會覆寫。
 
 ![提供者儀表板](../screenshots/01-providers.png)
 
@@ -107,12 +105,6 @@ OpenRouter 連線可在「進階設定」中儲存每個連線專屬的 `preset`
 
 ---
 
-## 🎮 模型遊樂場 _(v2.0.9+)_
-
-直接從儀表板測試任何模型。選擇提供者、模型及端點，使用 Monaco Editor 撰寫提示詞、即時串流回應、在串流途中中止，並檢視計時指標。
-
----
-
 ## 🎨 佈景主題 _(v2.0.5+)_
 
 可自訂整個儀表板的色彩佈景主題。可從 7 種預設色彩（珊瑚色、藍色、紅色、綠色、紫羅蘭色、橘色、青色）中選擇，或挑選任意十六進位色彩來建立自訂佈景主題。支援淺色、深色及系統模式。
@@ -157,7 +149,7 @@ OpenRouter 連線可在「進階設定」中儲存每個連線專屬的 `preset`
 
 ## 🔗 上下文接力 _(v3.5.5+)_
 
-一種組合策略，可在對話途中發生帳戶輪替時維持工作階段的連續性。在使用中的帳戶額度耗盡前，OmniRoute 會在背景產生結構化的交接摘要。下一個請求改由其他帳戶處理後，該摘要會以系統訊息的形式注入，讓新帳戶能在具備完整上下文的情況下繼續處理。
+一種組合策略，可在對話途中發生帳戶輪替時維持工作階段的連續性。在使用中的帳戶額度耗盡前，67router 會在背景產生結構化的交接摘要。下一個請求改由其他帳戶處理後，該摘要會以系統訊息的形式注入，讓新帳戶能在具備完整上下文的情況下繼續處理。
 
 可透過組合層級或全域設定進行配置：
 
@@ -267,7 +259,7 @@ OAuth 帳戶的電子郵件地址預設會被遮蔽（例如 `di*****@g****.com`
 
 ## 🖥️ 桌面應用程式
 
-適用於 Windows、macOS 及 Linux 的原生 Electron 桌面應用程式。將 OmniRoute 作為獨立應用程式執行，並支援系統匣整合、離線使用、自動更新及一鍵安裝。
+適用於 Windows、macOS 及 Linux 的原生 Electron 桌面應用程式。將 67router 作為獨立應用程式執行，並支援系統匣整合、離線使用、自動更新及一鍵安裝。
 
 主要功能：
 
@@ -286,7 +278,7 @@ OAuth 帳戶的電子郵件地址預設會被遮蔽（例如 `di*****@g****.com`
 
 ## 🌐 V1 WebSocket 橋接器 _(v3.6.6+)_
 
-OmniRoute 現在可透過 `/v1/ws` 升級端點支援**與 OpenAI 相容的 WebSocket 用戶端**。自訂的 `scripts/dev/v1-ws-bridge.mjs` 伺服器會封裝 Next.js，並將 WS 連線升級為完整的雙向串流工作階段。驗證會使用與 HTTP 請求相同的 API 金鑰或工作階段 Cookie。
+67router 現在可透過 `/v1/ws` 升級端點支援**與 OpenAI 相容的 WebSocket 用戶端**。自訂的 `scripts/dev/v1-ws-bridge.mjs` 伺服器會封裝 Next.js，並將 WS 連線升級為完整的雙向串流工作階段。驗證會使用與 HTTP 請求相同的 API 金鑰或工作階段 Cookie。
 
 主要行為：
 
@@ -312,7 +304,7 @@ OmniRoute 現在可透過 `/v1/ws` 升級端點支援**與 OpenAI 相容的 WebS
 
 **GLM Thinking (`glmt`)** 現已註冊為一級提供者：最大輸出權杖數為 65 536、思考預算為 24 576、預設逾時為 900 s、採用與 Claude 相容的 API 格式，並與 GLM 系列共用用量同步。
 
-**混合式權杖計數**也於 v3.6.6 推出：當與 Claude 相容的提供者提供 `/messages/count_tokens` 時，OmniRoute 會在大型請求前呼叫該端點；若無法使用，則會平順地改用估算方式。
+**混合式權杖計數**也於 v3.6.6 推出：當與 Claude 相容的提供者提供 `/messages/count_tokens` 時，67router 會在大型請求前呼叫該端點；若無法使用，則會平順地改用估算方式。
 
 ---
 

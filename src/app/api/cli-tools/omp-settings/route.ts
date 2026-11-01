@@ -253,7 +253,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       message:
-        "Oh My Pi settings applied! Run omp and all OmniRoute models appear under omniroute in /model.",
+        "Oh My Pi settings applied! Run omp and all 67router models appear under omniroute in /model.",
       configPath: getOmpModelsYmlPath(),
       ...(configYml ? { modelRoles: getRouterRoles(configYml) } : {}),
     });
@@ -295,7 +295,7 @@ export async function DELETE(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "OmniRoute removed from Oh My Pi",
+      message: "67router removed from Oh My Pi",
     });
   } catch (error) {
     const refusal = configClobberRefusalResponse(error);

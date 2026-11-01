@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (ქართული)
+# 🐳 Docker Guide — 67router (ქართული)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [გარემოს ფაილით](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [ხელმისაწვდომი პროფილები](#available-profiles)
-- [ჰოსტის CLI ინსტრუმენტების კონფიგურაცია, როდესაც OmniRoute Docker-ში მუშაობს](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [ჰოსტის CLI ინსტრუმენტების კონფიგურაცია, როდესაც 67router Docker-ში მუშაობს](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis-ის გვერდითი კონტეინერი](#redis-sidecar)
 - [საწარმოო Compose](#production-compose)
 - [Dockerfile-ის ეტაპები](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## ხელმისაწვდომი პროფილები
 
-OmniRoute-ს მოჰყვება Compose-ის პროფილები განთავსების ძირითადი ვარიანტებისთვის. აირჩიეთ ის, რომელიც თქვენს გარემოს შეესაბამება.
+67router-ს მოჰყვება Compose-ის პროფილები განთავსების ძირითადი ვარიანტებისთვის. აირჩიეთ ის, რომელიც თქვენს გარემოს შეესაბამება.
 
 | პროფილი               | სერვისი          | როდის უნდა გამოიყენოთ                                                                                                                                                  | ბრძანება                                     |
 | --------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute-ს მოჰყვება Compose-ის პროფილებ�
 
 > შესაძლებელია რამდენიმე პროფილის კომბინირება: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## ჰოსტის CLI ხელსაწყოების კონფიგურაცია, როდესაც OmniRoute Docker-ში მუშაობს
+## ჰოსტის CLI ხელსაწყოების კონფიგურაცია, როდესაც 67router Docker-ში მუშაობს
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` და მართვის პანელის
 **კონფიგურაციის შენახვა** ღილაკი წერენ ფაილებს, როგორიცაა `~/.codex/*.config.toml`. ამ ბილიკებს
@@ -103,11 +103,11 @@ OmniRoute-ს მოჰყვება Compose-ის პროფილებ�
 image მუშაობს `USER node`-ით) მოხვდება, საიდანაც მას ჰოსტის არცერთი CLI არასოდეს წაიკითხავს და
 რომელიც კონტეინერის ხელახლა შექმნისთანავე წაიშლება.
 
-OmniRoute ამას ამოიცნობს და გამოუსადეგარი წარმატების შეტყობინების ნაცვლად,
+67router ამას ამოიცნობს და გამოუსადეგარი წარმატების შეტყობინების ნაცვლად,
 ინსტრუქციებთან ერთად უარს ამბობს ჩაწერაზე: CLI სრულდება `2` კოდით, ხოლო API პასუხობს `422`
 კოდითა და `containerEphemeralTarget: true`-ით.
 
-### რეკომენდებული: გაუშვით CLI ჰოსტზე, ხოლო OmniRoute — Docker-ში
+### რეკომენდებული: გაუშვით CLI ჰოსტზე, ხოლო 67router — Docker-ში
 
 კონტეინერი API-ს ემსახურება; CLI კი თქვენი ჰოსტის ხელსაწყოებს აკონფიგურირებს.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-ბილიკს სანდოს სწორედ bind mount ხდის: OmniRoute კითხულობს
+ბილიკს სანდოს სწორედ bind mount ხდის: 67router კითხულობს
 `/proc/self/mountinfo`-ს და ჩაწერას უშვებს დამონტაჟებულ ბილიკებში (ასევე იმ დირექტორიებში,
 რომელთა შვილობილი დირექტორიებიც mount-ებია, რაც ზუსტად შეესაბამება ზემოთ მოცემულ
 `/host-home` სტრუქტურას), ხოლო დაუმონტაჟებელ ბილიკებში ჩაწერაზე კვლავ უარს ამბობს.
@@ -179,7 +179,7 @@ volumes:
 
 ## Redis Sidecar
 
-OmniRoute იყენებს Redis-ს განაწილებული მოთხოვნების სიხშირის შემზღუდველისა და საზიარო კეშის მხარდასაჭერად. `redis` სერვისი **ყოველთვის განსაზღვრულია** `docker-compose.yml`-ში (მას პროფილით შეზღუდვა არ აქვს) და ნებისმიერ სხვა პროფილთან ერთად იშვება.
+67router იყენებს Redis-ს განაწილებული მოთხოვნების სიხშირის შემზღუდველისა და საზიარო კეშის მხარდასაჭერად. `redis` სერვისი **ყოველთვის განსაზღვრულია** `docker-compose.yml`-ში (მას პროფილით შეზღუდვა არ აქვს) და ნებისმიერ სხვა პროფილთან ერთად იშვება.
 
 | დეტალი                   | მნიშვნელობა                                   |
 | ------------------------ | --------------------------------------------- |
@@ -359,7 +359,6 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 | `DASHBOARD_PORT` / `API_PORT` | dashboard-ისა (20128) და API-ის (20129) გამოქვეყნებული პორტების გადაფარვა                                                                                                                                                                                                                             | `20128` / `20129`                 |
 | `APP_BIND_HOST`               | ჰოსტის ინტერფეისი, რომელზეც docker-compose dashboard/API/live-WS პორტებს აქვეყნებს. როდესაც `REQUIRE_API_KEY=false` (ნაგულისხმევი), `0.0.0.0` ანონიმურ `/v1` პროქსის LAN-ისთვის ხელმისაწვდომს ხდის — წვდომა გააფართოეთ მხოლოდ `REQUIRE_API_KEY=true`-ის ან წინ მდგომი reverse proxy-ის გამოყენებისას. | `127.0.0.1`                       |
 | `CLIPROXY_BIND_HOST`          | ჰოსტის ინტერფეისი, რომელზეც docker-compose `cliproxyapi` sidecar-ს აქვეყნებს — მისი მონაცემთა ტომი პროვაიდერის ავტორიზაციის მონაცემებს ინახავს.                                                                                                                                                       | `127.0.0.1`                       |
-| `OMNIROUTE_PLUGINS_DIR`       | დირექტორია, რომელსაც გაშვებისას plugin-ების სკანერი კითხულობს და რომელშიც აყენებს მათ. მიუთითეთ, როდესაც plugin-ები bind-mount-ითაა მონტაჟებული: ნაგულისხმევი მნიშვნელობა `HOME`-ს მიჰყვება, რომლის ექსპორტირებაც image-მა შეიძლება არ მოახდინოს.                                                     | `~/.omniroute/plugins`            |
 | `OMNIROUTE_BASE_PATH`         | URL-ის ქვებილიკი, როდესაც აპი reverse proxy-ის უკან ქვეყნდება (მაგ., `/omniroute`)                                                                                                                                                                                                                    | _(ცარიელი = root)_                |
 | `NEXT_PUBLIC_BASE_URL`        | ბრაუზერის საჯარო origin ქვებილიკის ჩათვლით (მაგ., `https://host/omniroute`)                                                                                                                                                                                                                           | არ არის მითითებული                |
 | `PROD_DASHBOARD_PORT`         | ჰოსტის მხარის dashboard-ის პორტი `docker-compose.prod.yml`-ისთვის                                                                                                                                                                                                                                     | `20130`                           |
@@ -367,7 +366,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## უკუპროქსი ქვეკატალოგზე (Traefik / nginx)
 
-Next.js-ის `basePath` კომპილირდება standalone-პაკეტში. OmniRoute ჩაშენებულ
+Next.js-ის `basePath` კომპილირდება standalone-პაკეტში. 67router ჩაშენებულ
 მნიშვნელობას აპლიკაციის root-ში არსებულ sentinel-ფაილში ინახავს (იწერება `npm run build`-ის დროს;
 იკითხება `scripts/docker/ensure-docker-base-path.mjs`-ის მიერ) და კონტეინერის გაშვებისას
 ადარებს მას `OMNIROUTE_BASE_PATH`-ს. როდესაც ისინი განსხვავდება და image
@@ -443,7 +442,7 @@ Kubernetes-ის `livenessProbe` ინტერვალებისთვი�
 
 ## Docker Compose Caddy-სთან ერთად (HTTPS Auto-TLS)
 
-OmniRoute-ის უსაფრთხოდ გამოქვეყნება შესაძლებელია Caddy-ის მიერ SSL-ის ავტომატური უზრუნველყოფის გამოყენებით. დარწმუნდით, რომ თქვენი დომენის DNS A ჩანაწერი თქვენი სერვერის IP მისამართზე მიუთითებს.
+67router-ის უსაფრთხოდ გამოქვეყნება შესაძლებელია Caddy-ის მიერ SSL-ის ავტომატური უზრუნველყოფის გამოყენებით. დარწმუნდით, რომ თქვენი დომენის DNS A ჩანაწერი თქვენი სერვერის IP მისამართზე მიუთითებს.
 
 ```yaml
 services:
@@ -474,11 +473,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy ზედა დონის კონტეინერისთვის გადამისამართების სტანდარტულ სათაურებს ადგენს. OmniRoute
+Caddy ზედა დონის კონტეინერისთვის გადამისამართების სტანდარტულ სათაურებს ადგენს. 67router
 `NEXT_PUBLIC_BASE_URL`-ს იყენებს კანონიკურ საჯარო წყაროდ OAuth-ის უკუგამოძახებებისა და გენერირებული საჯარო
 ბმულებისთვის; მართვის პანელში ავთენტიფიცირებული ჩაწერის ოპერაციები იყენებს იმავე წყაროს მოთხოვნებსა და სესიასთან მიბმულ CSRF
 დაცვას. `OMNIROUTE_TRUST_PROXY` ჩართეთ მხოლოდ გაფართოებულ განთავსებებში, სადაც განზრახ
-გსურთ, რომ OmniRoute-მა საჯარო წყარო ცხადი
+გსურთ, რომ 67router-მა საჯარო წყარო ცხადი
 კონფიგურაციის ნაცვლად სანდო გადამისამართების სათაურებიდან განსაზღვროს.
 
 ## Cloudflare Quick Tunnel
@@ -490,11 +489,11 @@ Docker-ის განთავსებებისთვის მართ�
 ### შენიშვნები გვირაბის შესახებ
 
 - Quick Tunnel-ის URL-ები დროებითია და ყოველი გადატვირთვის შემდეგ იცვლება.
-- Quick Tunnel-ები OmniRoute-ის ან კონტეინერის გადატვირთვის შემდეგ ავტომატურად არ აღდგება. საჭიროების შემთხვევაში ისინი კვლავ ჩართეთ მართვის პანელიდან.
+- Quick Tunnel-ები 67router-ის ან კონტეინერის გადატვირთვის შემდეგ ავტომატურად არ აღდგება. საჭიროების შემთხვევაში ისინი კვლავ ჩართეთ მართვის პანელიდან.
 - მართული ინსტალაცია ამჟამად მხარს უჭერს Linux-ს, macOS-სა და Windows-ს `x64` / `arm64` არქიტექტურებზე.
 - მართული Quick Tunnel-ები ნაგულისხმევად იყენებს HTTP/2 ტრანსპორტს, რათა რესურსებით შეზღუდულ კონტეინერულ გარემოებში თავიდან იქნეს აცილებული ხმაურიანი QUIC UDP ბუფერის გაფრთხილებები. თუ განსხვავებული ტრანსპორტის გამოყენება გსურთ, დააყენეთ `CLOUDFLARED_PROTOCOL=quic` ან `auto`.
 - Docker-ის გამოსახულებები შეიცავს სისტემურ CA ფესვებს და გადასცემს მათ მართულ `cloudflared`-ს, რაც თავიდან გვაცილებს TLS-ის ნდობასთან დაკავშირებულ შეცდომებს კონტეინერის შიგნით გვირაბის საწყისი გაშვებისას.
-- თუ გსურთ, რომ OmniRoute-მა ჩამოტვირთვის ნაცვლად არსებული ბინარული ფაილი გამოიყენოს, დააყენეთ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`.
+- თუ გსურთ, რომ 67router-მა ჩამოტვირთვის ნაცვლად არსებული ბინარული ფაილი გამოიყენოს, დააყენეთ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`.
 
 ## გამოსახულების ტეგები
 
@@ -507,7 +506,7 @@ Docker-ის განთავსებებისთვის მართ�
 
 ### გამოშვების არხები
 
-OmniRoute აქვეყნებს Docker-ის ცალკეულ არხებს სტაბილური გამოშვებებისთვის, აქტიური გამოშვების განშტოების ტესტირებისა და დეველოპერული აგებებისთვის.
+67router აქვეყნებს Docker-ის ცალკეულ არხებს სტაბილური გამოშვებებისთვის, აქტიური გამოშვების განშტოების ტესტირებისა და დეველოპერული აგებებისთვის.
 
 | არხი                            | წყარო                                         | ცვალებადობა                                | რეკომენდებული გამოყენება                                                                                                                     |
 | ------------------------------- | --------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -560,7 +559,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-ტესტირებამდე შექმენით OmniRoute-ის მონაცემთა volume-ის ან bind-mounted მონაცემთა დირექტორიის სარეზერვო ასლი. წინა ვერსიაზე დასაბრუნებლად აღადგინეთ ადრე გამოყენებული სტაბილური ვერსია ან digest და ხელახლა შექმენით კონტეინერი:
+ტესტირებამდე შექმენით 67router-ის მონაცემთა volume-ის ან bind-mounted მონაცემთა დირექტორიის სარეზერვო ასლი. წინა ვერსიაზე დასაბრუნებლად აღადგინეთ ადრე გამოყენებული სტაბილური ვერსია ან digest და ხელახლა შექმენით კონტეინერი:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -580,7 +579,7 @@ release ბრენჩის build ვერასოდეს შეცვლ�
 
 ## Dashboard-ის განახლებები Docker-ში
 
-გამოქვეყნებული image-ის container საკუთარ თავს ვერ ჩაანაცვლებს. როდესაც OmniRoute აღმოაჩენს, რომ
+გამოქვეყნებული image-ის container საკუთარ თავს ვერ ჩაანაცვლებს. როდესაც 67router აღმოაჩენს, რომ
 container-ის შიგნით მუშაობს (`.git` checkout-ის გარეშე და არა npm-ის ინსტალაციიდან), მთავარი Dashboard-ის განახლების ბანერი npm/git-ის ინსტრუქციების ნაცვლად აჩვენებს
 host-ზე გასაშვებ ბრძანებას და კოპირების ღილაკს:
 
@@ -595,7 +594,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 ### ერთი დაწკაპუნებით განახლება host-ის trigger ფაილით
 
 იმისთვის, რომ **Update Now**-მ მუშაობა გააგრძელოს `/var/run/docker.sock`-ის mount-ის გარეშე (რაც container-ს
-host-ზე root წვდომას აძლევს — იხილეთ ზემოთ `cli` პროფილის გაფრთხილება), OmniRoute-ის სერვისზე დააყენეთ `DOCKER_UPDATE_TRIGGER_FILE` და host-ზე გაუშვით დამკვირვებელი:
+host-ზე root წვდომას აძლევს — იხილეთ ზემოთ `cli` პროფილის გაფრთხილება), 67router-ის სერვისზე დააყენეთ `DOCKER_UPDATE_TRIGGER_FILE` და host-ზე გაუშვით დამკვირვებელი:
 
 ```yaml
 services:
@@ -609,7 +608,7 @@ services:
 ბილიკი `DATA_DIR`-ის შიგნით უნდა იყოს (ფარდობითი მნიშვნელობები მის მიმართ განისაზღვრება); ნებისმიერი სხვა მდებარეობა
 უარყოფილი იქნება. ამის შემდეგ **Update Now** ამ ფაილში წერს `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`-ს,
 პასუხობს `202`-ით, ხოლო Dashboard პერიოდულად ამოწმებს `/api/system/version`-ს, სანამ ახალი ვერსია
-ამოქმედდება, რის შემდეგაც გვერდს თავიდან ჩატვირთავს. ამ რეჟიმში OmniRoute არასოდეს უშვებს shell-ის ან Docker-ის ბრძანებას. როგორც ყველა განახლების
+ამოქმედდება, რის შემდეგაც გვერდს თავიდან ჩატვირთავს. ამ რეჟიმში 67router არასოდეს უშვებს shell-ის ან Docker-ის ბრძანებას. როგორც ყველა განახლების
 მოქმედების შემთხვევაში, მოთხოვნა მიიღება მხოლოდ loopback/LAN კლიენტებისგან.
 
 bind-mounted მონაცემთა დირექტორია host-ს დასაკვირვებლად სტაბილურ ბილიკს აძლევს. `systemd`-ის ერთეულების მაგალითები
@@ -618,7 +617,7 @@ bind-mounted მონაცემთა დირექტორია host-ს
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=OmniRoute-ის Dashboard-იდან განახლების მოთხოვნების მონიტორინგი
+Description=67router-ის Dashboard-იდან განახლების მოთხოვნების მონიტორინგი
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -630,7 +629,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=OmniRoute-ის container-ის ჩამოტვირთვა და ხელახლა შექმნა
+Description=67router-ის container-ის ჩამოტვირთვა და ხელახლა შექმნა
 
 [Service]
 Type=oneshot
@@ -650,13 +649,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## ხელმისაწვდომობა: ნაგულისხმევი SQLite მხოლოდ ერთ replica-ს უჭერს მხარს
 
-სტანდარტული Docker / Kubernetes OmniRoute წარმოადგენს **ერთ Node პროცესს + ერთ SQLite writer-ს**. ამ ტოპოლოგიაზე მაღალი ხელმისაწვდომობა **მხარდაჭერილი არ არის**.
+სტანდარტული Docker / Kubernetes 67router წარმოადგენს **ერთ Node პროცესს + ერთ SQLite writer-ს**. ამ ტოპოლოგიაზე მაღალი ხელმისაწვდომობა **მხარდაჭერილი არ არის**.
 
-| შეზღუდვა                                                    | შედეგი                                                                                                                                                                                                                                                                                                                                                                                |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ერთი writer                                                 | **არ** გაუშვათ რამდენიმე replica ერთი და იმავე SQLite ფაილის გამოყენებით. ეს DB-ს დააზიანებს.                                                                                                                                                                                                                                                                                         |
-| ხელახლა შექმნა / გადატვირთვა / HEALTHCHECK-ის მიერ შეწყვეტა | პროცესში მყოფი SSE კავშირების, Dashboard-ის სესიებისა და მეხსიერებაში არსებული მდგომარეობის **სრული გათიშვა**. ყველა დაკავშირებული კლიენტის კავშირი წყდება. ცარიელი endpoint-ის დროის მონაკვეთში ახალი მოთხოვნები reverse-proxy-სგან იღებს **`502 Bad Gateway: Unknown error`**-ს და არა OmniRoute-ის JSON-ს — კლიენტები ამას provider-ის გაუმართაობისგან ვერ განასხვავებენ (#11015). |
-| `/healthz`-ის იგივე event loop                              | დატვირთულმა catalog-მა ან compression tick-მა შეიძლება probe-ები შეაყოვნოს; მოკლე timeout შემდეგ **ერთადერთ** replica-ს გადატვირთავს.                                                                                                                                                                                                                                                 |
+| შეზღუდვა                                                    | შედეგი                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ერთი writer                                                 | **არ** გაუშვათ რამდენიმე replica ერთი და იმავე SQLite ფაილის გამოყენებით. ეს DB-ს დააზიანებს.                                                                                                                                                                                                                                                                                        |
+| ხელახლა შექმნა / გადატვირთვა / HEALTHCHECK-ის მიერ შეწყვეტა | პროცესში მყოფი SSE კავშირების, Dashboard-ის სესიებისა და მეხსიერებაში არსებული მდგომარეობის **სრული გათიშვა**. ყველა დაკავშირებული კლიენტის კავშირი წყდება. ცარიელი endpoint-ის დროის მონაკვეთში ახალი მოთხოვნები reverse-proxy-სგან იღებს **`502 Bad Gateway: Unknown error`**-ს და არა 67router-ის JSON-ს — კლიენტები ამას provider-ის გაუმართაობისგან ვერ განასხვავებენ (#11015). |
+| `/healthz`-ის იგივე event loop                              | დატვირთულმა catalog-მა ან compression tick-მა შეიძლება probe-ები შეაყოვნოს; მოკლე timeout შემდეგ **ერთადერთ** replica-ს გადატვირთავს.                                                                                                                                                                                                                                                |
 
 **Probe-ების მატრიცა** (ასევე იხილეთ [Kubernetes-ის probe-ების რეკომენდაციები](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -759,7 +758,7 @@ IPv4/IPv6 კავშირი, VPN-ის მარშრუტიზაცი
 
 ### უპირატესობა მიანიჭეთ კონკრეტული კავშირისთვის განკუთვნილ პროქსის
 
-დაზარალებული Gemini კავშირისთვის გამოიყენეთ OmniRoute-ის
+დაზარალებული Gemini კავშირისთვის გამოიყენეთ 67router-ის
 [თითოეული კავშირისთვის განკუთვნილი პროქსის კონფიგურაცია](../ops/PROXY_GUIDE.md#4-level-proxy-system),
 შემდეგ კი იმავე მოდელით გაიმეორეთ **Test Connection** და მცირე მოთხოვნა.
 ამგვარად, მარშრუტის ცვლილება მხოლოდ ამ კავშირით შემოიფარგლება. დარწმუნდით,
@@ -835,7 +834,7 @@ bind-mount-ით მიამაგრეთ და ცვლილების
 
 ## მნიშვნელოვანი შენიშვნები
 
-- **SQLite WAL რეჟიმი:** `docker stop`-ს უნდა მიეცეს დასრულების საშუალება, რათა OmniRoute-მა უახლესი ცვლილებების საკონტროლო წერტილი კვლავ `storage.sqlite`-ში ჩაწეროს. თანდართულ Compose ფაილებში გაჩერების საშეღავათო პერიოდად უკვე მითითებულია 40 წამი. თუ image-ს პირდაპირ უშვებთ, შეინარჩუნეთ `--stop-timeout 40`.
+- **SQLite WAL რეჟიმი:** `docker stop`-ს უნდა მიეცეს დასრულების საშუალება, რათა 67router-მა უახლესი ცვლილებების საკონტროლო წერტილი კვლავ `storage.sqlite`-ში ჩაწეროს. თანდართულ Compose ფაილებში გაჩერების საშეღავათო პერიოდად უკვე მითითებულია 40 წამი. თუ image-ს პირდაპირ უშვებთ, შეინარჩუნეთ `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** დააყენეთ `true`, თუ რეგულარული/ჩაწერამდე სარეზერვო ასლების შექმნა გარედან იმართება. არსებული მონაცემთა ბაზის მიგრაციებისთვის კვლავ საჭიროა საკუთარი, საიმედოდ შენახული უსაფრთხოების snapshot-ი და მასობრივი მიგრაციის დამცავი მექანიზმი.
 - **მონაცემების მუდმივი შენახვა:** კონტეინერის ხელახლა გაშვებებს შორის მონაცემთა ბაზის, გასაღებებისა და კონფიგურაციების შესანარჩუნებლად ყოველთვის დაამაუნტეთ volume მისამართზე `/app/data`.
 - **პორტის კონფიგურაცია:** ნაგულისხმევი `20128` პორტის შესაცვლელად გადააწერეთ `PORT` გარემოს ცვლადს.

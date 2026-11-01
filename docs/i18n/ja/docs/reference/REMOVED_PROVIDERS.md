@@ -4,16 +4,16 @@
 
 ---
 
-一部のサービスは OmniRoute に統合された後、それらを運営する方々からの要請により削除されました。このページは、それらの削除に関する恒久的な記録です。その唯一の目的は、誤って再導入されることを防ぐことです。古いフォーク、キャッシュされた npm tarball、アーカイブされた Issue、または「プロバイダー X を復元してほしい」というリクエストを見つけたコントリビューターが、**再導入してはならない**ことを確認できる場所として使用されます。
+一部のサービスは 67router に統合された後、それらを運営する方々からの要請により削除されました。このページは、それらの削除に関する恒久的な記録です。その唯一の目的は、誤って再導入されることを防ぐことです。古いフォーク、キャッシュされた npm tarball、アーカイブされた Issue、または「プロバイダー X を復元してほしい」というリクエストを見つけたコントリビューターが、**再導入してはならない**ことを確認できる場所として使用されます。
 
 このページは、終了または廃止されたサービスの一覧では**ありません**。それらは
 [`FREE_TIERS.md`](FREE_TIERS.md)（「削除済み／無料枠なし」）で管理されており、サービスが復活すれば再導入できます。以下の項目を再導入できるのは、要請に記載された運営者から書面による許可を得た場合のみであり、その許可へのリンクを該当項目に記載する必要があります。
 
 ## ポリシー
 
-1. **サービス運営者からの削除要請は受け入れるものであり、交渉するものではありません。** OmniRoute は、いかなる上流サービスとも提携していません。サービスの運営者から統合を削除するよう求められた場合、その統合が公式 API を使用していたかどうかにかかわらず、削除します。
-2. **「削除」とは、OmniRoute が管理するすべての対象から削除することを意味します。** Executor、レジストリエントリ、プロバイダー ID とエイリアス、モデル一覧、エンドポイント、環境変数、アイコン、ダッシュボードカード、生成されたプロバイダーリファレンス、`FREE_TIERS.md`、環境リファレンス、README の件数、`llm.txt` のミラー、専用テストとゴールデンスナップショット、コードコメント、CHANGELOG の箇条書き（台帳に記録された調整を伴うこと。`config/release/changelog-reconciliations.json` を参照）、GitHub Releases のリリースノート、Wiki、および当該プロバイダーを主題とする GitHub の Issue、Discussion、Pull Request が含まれます（Issue と Discussion は削除します。GitHub では Pull Request を削除できないため、Pull Request はタイトルを変更し、説明を差し替えたうえでスレッドをロックします）。
-3. **書面による許可なしに、このページの項目を再導入してはなりません。** これには、ID またはエイリアスをプロバイダーカタログへ戻すこと、ドメインを Executor に追加すること、それを「復元」するコントリビューターの PR を受け入れること、無料モデルカタログに追加すること、または OmniRoute 経由で手動アクセスする方法を文書化することが含まれます。このような PR や Issue は、このページへのリンクを添えてクローズしてください。
+1. **サービス運営者からの削除要請は受け入れるものであり、交渉するものではありません。** 67router は、いかなる上流サービスとも提携していません。サービスの運営者から統合を削除するよう求められた場合、その統合が公式 API を使用していたかどうかにかかわらず、削除します。
+2. **「削除」とは、67router が管理するすべての対象から削除することを意味します。** Executor、レジストリエントリ、プロバイダー ID とエイリアス、モデル一覧、エンドポイント、環境変数、アイコン、ダッシュボードカード、生成されたプロバイダーリファレンス、`FREE_TIERS.md`、環境リファレンス、README の件数、`llm.txt` のミラー、専用テストとゴールデンスナップショット、コードコメント、CHANGELOG の箇条書き（台帳に記録された調整を伴うこと。`config/release/changelog-reconciliations.json` を参照）、GitHub Releases のリリースノート、Wiki、および当該プロバイダーを主題とする GitHub の Issue、Discussion、Pull Request が含まれます（Issue と Discussion は削除します。GitHub では Pull Request を削除できないため、Pull Request はタイトルを変更し、説明を差し替えたうえでスレッドをロックします）。
+3. **書面による許可なしに、このページの項目を再導入してはなりません。** これには、ID またはエイリアスをプロバイダーカタログへ戻すこと、ドメインを Executor に追加すること、それを「復元」するコントリビューターの PR を受け入れること、無料モデルカタログに追加すること、または 67router 経由で手動アクセスする方法を文書化することが含まれます。このような PR や Issue は、このページへのリンクを添えてクローズしてください。
 4. **項目は最小限に保ってください。** 再導入をレビュー担当者が識別するために必要な情報（識別子、ドメイン、日付、および削除を行った Pull Request）のみを記録してください。統合がどのように機能していたかは記載しないでください。
 5. **回帰防止機構は `tests/unit/removed-providers-blocklist.test.ts` です。** 以下の識別子またはドメインのいずれかが、プロバイダーカタログ、Executor マップ、またはプロバイダーレジストリのソースに再び現れると、このテストは失敗します。ここに行を追加する PR と同じ PR で、新しい識別子をそのテストに追加してください。
 
@@ -24,7 +24,7 @@
 | 2026-08-12 | `puter`           | `pu`       | `puter.com`                                                    | Puter の所有者（Nariman Jelveh）                                                                                                     | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | API キーを使用するプロバイダー。マイグレーション `152_remove_puter_provider.sql` により、保存済みの設定がクリーンアップされます。                                                                                                                                                                                                                                                                                                              |
 | 2026-09-02 | `theoldllm`       | `tllm`     | `theoldllm.com`, `theoldllm.vercel.app`                        | サービス運営者（サポートメール経由）                                                                                                 | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | キー不要のプロバイダー。書面による要請を 2026-08-30 に受領。専用の Issue とディスカッションは削除され、PR のタイトルは変更されました。                                                                                                                                                                                                                                                                                                         |
 | 2026-09-21 | `gemini-business` | `gembiz`   | `business.gemini.google`                                       | プロジェクト所有者の判断（Issue [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217)）                                   | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Cookie ベースの Web プロバイダー。Google は、エグゼキューターが対象としていた `BardFrontendService/StreamGenerate` エンドポイントを廃止しました。代替手段（`biz-discoveryengine.googleapis.com` の `widgetStreamAssist`、`__Secure-C_SES`/`csesidx` から初期化される Bearer JWT）は、プロジェクトが保有していない有効な Gemini Enterprise/Workspace アカウントなしでは構築も検証もできません。未検証のまま書き直すのではなく、廃止されました。 |
-| 2026-09-21 | `suno`            | `suno`     | `studio-api.suno.ai`, `studio-api-prod.suno.com`               | プロジェクト所有者の判断（`#14224`）                                                                                                 | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Cookie 認証プロバイダーであり、運営者からの削除要請によるものではありません。`studio-api.suno.ai` は停止されており（503）、稼働中のホストでは Clerk JWT の交換に加え、有料の hCaptcha 解決依存関係が必要です。OmniRoute は、1 つの音楽プロバイダーのためにこれを追加しないことを選択しました。`kie/suno-v4.0` と `kie/suno-v3.5`（kie.ai でホスト）は影響を受けず、引き続きサポートされます。                                                  |
+| 2026-09-21 | `suno`            | `suno`     | `studio-api.suno.ai`, `studio-api-prod.suno.com`               | プロジェクト所有者の判断（`#14224`）                                                                                                 | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Cookie 認証プロバイダーであり、運営者からの削除要請によるものではありません。`studio-api.suno.ai` は停止されており（503）、稼働中のホストでは Clerk JWT の交換に加え、有料の hCaptcha 解決依存関係が必要です。67router は、1 つの音楽プロバイダーのためにこれを追加しないことを選択しました。`kie/suno-v4.0` と `kie/suno-v3.5`（kie.ai でホスト）は影響を受けず、引き続きサポートされます。                                                   |
 | 2026-10-10 | `opencode`        | `oc`       | `opencode.ai/zen/v1`（無料枠。ホストは `opencode-zen` と共有） | 予防的な削除（プロジェクト所有者の判断）。OpenCode の運営者が上流の 9router プロジェクトに対して公開した削除要請（2026-09-19）を尊重 | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | キー不要の「OpenCode Free」プロバイダーのみが削除されます。認証済みの `opencode-zen` と `opencode-go`、Zen カタログの全モデルとそのリクエストコントラクト、OpenCode クライアント統合、および `@omniroute/opencode-plugin*` は引き続き残ります。マイグレーション `207_remove_opencode_free_provider.sql` は、API キーを保持する従来の接続を Zen に移行し、キー不要の設定をクリーンアップします。                                                |
 
 ## 項目の追加
@@ -36,4 +36,4 @@
    [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) を、接続情報が保存される API キー方式のプロバイダーについては [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) を参照してください（マイグレーションを追加します）。
 3. 同じ PR で、上の表に 1 行追加し、識別子を
    `tests/unit/removed-providers-blocklist.test.ts` に追加してください。
-4. PR がマージされたら、削除した内容と OmniRoute では変更できないもの（すでに公開済みの npm および Docker バージョン、git 履歴、サードパーティーのフォーク）を列挙して、運営者に返信してください。
+4. PR がマージされたら、削除した内容と 67router では変更できないもの（すでに公開済みの npm および Docker バージョン、git 履歴、サードパーティーのフォーク）を列挙して、運営者に返信してください。

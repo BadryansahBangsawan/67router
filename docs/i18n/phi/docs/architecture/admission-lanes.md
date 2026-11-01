@@ -4,7 +4,7 @@
 
 ---
 
-Ang OmniRoute ay may **dalawang** process-local lane system na may magkaibang saklaw. Ang mga ito ay
+Ang 67router ay may **dalawang** process-local lane system na may magkaibang saklaw. Ang mga ito ay
 magkatuwang; dapat malaman ng mga operator kung alin ang kanilang tinitingnan.
 
 ## 1. Byte-level na admission sa buong proseso (`chatBodyAdmission.ts`)

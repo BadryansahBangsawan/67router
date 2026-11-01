@@ -6,7 +6,7 @@
 
 ## Bayani
 
-An rarraba duk hanyoyin API na gudanar da OmniRoute zuwa ɗaya daga cikin matakan
+An rarraba duk hanyoyin API na gudanar da 67router zuwa ɗaya daga cikin matakan
 kariya uku. Rarrabawar tabbatacciya ce, an ayyana ta a `src/server/authz/routeGuard.ts`,
 kuma ana tantance ta kafin kowane reshen tantance izini ya fara aiki.
 
@@ -27,9 +27,9 @@ CVE ne ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)
 **Abin da GHSA-fhh6-4qxv-rpqj yake nufi (rukunin harin):** sabar gudanarwa/agent
 tana bayyana endpoint da ke ƙaddamar da subprocess (`npm install`, `node`, browser,
 proxy, `git`, `tar`, …). Idan ana iya isa ga wannan endpoint daga wajen rundunar — saboda
-mai gudanarwa ya sanya OmniRoute a bayan tunnel na nginx/Cloudflare/Tailscale kuma JWT
+mai gudanarwa ya sanya 67router a bayan tunnel na nginx/Cloudflare/Tailscale kuma JWT
 ya fallasa, ko kuma an yi kuskuren saita tabbatar da izini — maharin zai juya “kiran API” zuwa “gudanar da
-umarni a kan rundunar” (aiwatar da lamba daga nesa). OmniRoute yana toshe wannan ta hanyar tilasta
+umarni a kan rundunar” (aiwatar da lamba daga nesa). 67router yana toshe wannan ta hanyar tilasta
 **binciken rundunar loopback ba tare da wani sharadi ba, kafin kowane binciken tabbatar da izini**, a kan kowace
 hanya mai iya ƙaddamar da process: ko da token ya fallasa ta cikin tunnel, har yanzu ba zai iya isa ga ƙaddamarwar ba.
 
@@ -57,7 +57,6 @@ prefixes masu iya ƙaddamar da process, kuma tana sa CI ya gaza idan ba a ware k
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — mai sauraron http-proxy + proxy na tsarin                                                           |
 | `/api/settings/mitm`                                                                                     | Yana kunna katsalandan na MITM (yanayin proxy a matakin tsarin)                                                         |
 | `/api/issue-agent/`                                                                                      | Wakilin issue — yana ƙaddamar da kayan aikin gida a kan repo                                                            |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — ana lodawa/aiwatar da su ta `worker_threads` + `child_process`                                                |
 | `/api/middleware/`                                                                                       | Middleware na mai amfani — yana lodawa/aiwatar da lambar operator a cikin process                                       |
 | `/api/system/version`                                                                                    | Sabuntawa ta atomatik (POST kawai; GET/HEAD/OPTIONS an keɓe su) — yana ƙaddamar da `git checkout` + `npm install`       |
 | `/api/db-backups/exportAll`                                                                              | Yana ƙaddamar da `tar` don kundin fitarwa                                                                               |
@@ -118,7 +117,7 @@ ga masu kira daga nesa na MCP-kawai waɗanda bai kamata su buƙaci faffadan dama
 
 #### Jagorar mai gudanarwa & dubawa
 
-Idan kana gudanar da OmniRoute a bayan reverse proxy ko tunnel (nginx, Caddy, Cloudflare
+Idan kana gudanar da 67router a bayan reverse proxy ko tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), binciken loopback har yanzu yana kare hanyoyin da za su iya
 ƙaddamarwa da ke sama — ana ƙin buƙatar da adireshin abokin hulɗarta ba loopback ba ne da
 `403 LOCAL_ONLY` **kafin tantancewa ta gudana**, don haka JWT da ya fallasa ba zai iya isa ga ƙaddamarwa ba. Har yanzu akwai
@@ -156,7 +155,7 @@ nauyi biyu na mai gudanarwa:
 - Yi grep a cikin reverse-proxy / access logs ɗinka don prefix da ke sama tare da
   adireshin abokin hulɗa wanda ba loopback ba. Duk irin wannan bugun da ya dawo da `200` maimakon
   `403 LOCAL_ONLY` yana nufin proxy yana ɓoye ainihin IP na abokin hulɗa — gyara proxy ɗin.
-- `403 LOCAL_ONLY` a cikin logs na OmniRoute ga ɗaya daga cikin waɗannan paths yana nuna kariyar
+- `403 LOCAL_ONLY` a cikin logs na 67router ga ɗaya daga cikin waɗannan paths yana nuna kariyar
   tana aiki yadda aka tsara, ba kuskuren da ya kamata a danne ba.
 
 #### Hanyoyin da ake iya isa daga nesa masu shingen call-site probe

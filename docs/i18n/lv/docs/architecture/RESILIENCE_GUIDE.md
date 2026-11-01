@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ir trīs atšķirīgi, bet savstarpēji saistīti noturības mehānismi. Katram no tiem ir atšķirīgs tvērums un mērķis. Atkļūdojot maršrutēšanas uzvedību, nesajauciet tos savā starpā.
+67router ir trīs atšķirīgi, bet savstarpēji saistīti noturības mehānismi. Katram no tiem ir atšķirīgs tvērums un mērķis. Atkļūdojot maršrutēšanas uzvedību, nesajauciet tos savā starpā.
 
 ![Trīs līmeņu noturības modelis](../diagrams/exported/resilience-3layers.svg)
 
@@ -193,7 +193,7 @@ Trīs sesijas afinitātes galvenes nekad netiek pārsūtītas uz augšplūsmu �
 
 ### Ekskluzīvas pārvaldītas sesijas savienojumu īres
 
-**Tvērums:** vienam aktīvam pārvaldītam HTTP klientam/sesijai pieder viens atbilstīgs OmniRoute savienojums.
+**Tvērums:** vienam aktīvam pārvaldītam HTTP klientam/sesijai pieder viens atbilstīgs 67router savienojums.
 
 **Mērķis:** nodrošināt ilgstošas ekskluzīvas savienojuma īpašumtiesības klientiem, kuriem vajadzīga stingra maršrutēšanas barjera starp pieprasījumiem. Tas atšķiras no sesijas afinitātes, kas ir mīksta nepārtrauktības preference: ekskluzīva īre saglabā dzīvescikla stāvokli SQLite, nodrošina globālu aktīvā īpašnieka un aktīvā savienojuma unikalitāti un noraida novecojušu paaudzi pirms nosūtīšanas nodrošinātājam.
 
@@ -207,7 +207,7 @@ ID un aktīvā savienojuma ID. Nomas vadības galvenes tiek izņemtas no žurnā
 momentuzņēmumiem un augšupvirzības izpildītāju galvenēm.
 
 Ja parastajai maršrutēšanai ir atbilstīgi pārvaldītie kandidāti, bet katru brīvo kandidātu aizņem sveša aktīva
-noma, OmniRoute atgriež HTTP `429`, kodu lease-capacity-unavailable, stāvokli waiting-for-capacity un ierobežotu
+noma, 67router atgriež HTTP `429`, kodu lease-capacity-unavailable, stāvokli waiting-for-capacity un ierobežotu
 `Retry-After` vērtību, kas atvasināta no agrākā attiecīgā derīguma termiņa. Parasta tukša atbilstība nav nomas
 konkurence un saglabā esošo maršrutēšanas kļūdu semantiku.
 
@@ -229,7 +229,7 @@ Saistītie mehānismi paliek atsevišķi:
   codex gadījumā viss `codex` / `spark` tvērums (katrs savienojuma
   `gpt-5*` modelis), citiem pakalpojumu sniedzējiem `getQuotaScopedModelForProvider()`.
 - `404` bloķē pašu modeli (`getModelLockKey()` sašaurina `not_found`).
-- Jebkurš cits statuss — `5xx` transporta/servera kļūmes un paša OmniRoute
+- Jebkurš cits statuss — `5xx` transporta/servera kļūmes un paša 67router
   sintezētais `502` no kvalitātes validācijas — bloķē tikai **precīzu**
   pakalpojumu sniedzēja/savienojuma/modeļa kopu. Slikta plūsma vienā modelī nav
   pierādījums par konta kvotu; pirms šī noteikuma viena tukša atbilde no
@@ -370,7 +370,7 @@ Galvenā semantika:
   veseli skaitļi — vienlaicīgo pieprasījumu griesti.
 - **Lokāla rindēšana, bez automātiskas noteikšanas:** liekie pieprasījumi tiek
   rindoti lokāli ar esošo rindas/noilguma semantiku (tipizētas
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` uzņemšanas kļūdas). OmniRoute
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` uzņemšanas kļūdas). 67router
   neatklāj un neizsecina upstream politiku — tas īsteno tieši tos griestus,
   kurus konfigurējis operators. Piesātināti modeļa vārti nekad neatspējo
   sniedzēju un neizveido pastāvīgu modeļa bloķēšanu; upstream
@@ -553,7 +553,7 @@ tāpēc to var vienību-testēt bez reāla Bottleneck ierobežotāja.
 ### Pieprasījumu biežuma ierobežojuma automātiskās iespējošanas drošības tīkls un savienojumu aizsardzība (`rateLimitProtection`)
 
 **Automātiskās iespējošanas drošības tīkls** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, noklusējums `true`):
-Pēc noklusējuma OmniRoute automātiski iespējo pieprasījumu biežuma ierobežojuma rindas aizsardzību visiem aktīvajiem API atslēgu nodrošinātāju savienojumiem (`getProviderCategory(provider) === "apikey"`). Tas nodrošina, ka ienākošie pieprasījumi uz pret biežuma ierobežojumiem jūtīgām augšupējām API atslēgām tiek ievietoti rindā un to plūsma tiek ierobežota ar Bottleneck, nevis strauji izraisot augšupējās 429 kļūdas. Drošības tīklu var pārdefinēt ar `RATE_LIMIT_AUTO_ENABLE` vides mainīgo (`false`/`0`/`off` atspējo, `true`/`1`/`on` piespiež ieslēgt), kuram ir prioritāte pār saglabāto informācijas paneļa iestatījumu (**Iestatījumi → Noturība** / `PATCH /api/resilience`).
+Pēc noklusējuma 67router automātiski iespējo pieprasījumu biežuma ierobežojuma rindas aizsardzību visiem aktīvajiem API atslēgu nodrošinātāju savienojumiem (`getProviderCategory(provider) === "apikey"`). Tas nodrošina, ka ienākošie pieprasījumi uz pret biežuma ierobežojumiem jūtīgām augšupējām API atslēgām tiek ievietoti rindā un to plūsma tiek ierobežota ar Bottleneck, nevis strauji izraisot augšupējās 429 kļūdas. Drošības tīklu var pārdefinēt ar `RATE_LIMIT_AUTO_ENABLE` vides mainīgo (`false`/`0`/`off` atspējo, `true`/`1`/`on` piespiež ieslēgt), kuram ir prioritāte pār saglabāto informācijas paneļa iestatījumu (**Iestatījumi → Noturība** / `PATCH /api/resilience`).
 
 **Katra savienojuma `rateLimitProtection` semantika:**
 Katra savienojuma pieprasījumu biežuma ierobežojuma aizsardzība tiek izsekota ar `rateLimitProtection` loģisko lauku nodrošinātāju savienojumos (SQLite saglabāts kā `rate_limit_protection`):
@@ -894,7 +894,7 @@ ir tāds pats signāls kā izsmelta kvota. Godīgi ierobežojumi:
 > aģenta ceļvedis nepārsniegtu 40k konteksta budžetu. Tas ir iepriekšējo sadaļu saīsināts,
 > aģentam vērsts skatījums; numurētās sadaļas paliek pilnā atsauce.
 
-OmniRoute ir trīs savstarpēji saistīti, bet atšķirīgi pagaidu kļūmju mehānismi. Atkļūdojot
+67router ir trīs savstarpēji saistīti, bet atšķirīgi pagaidu kļūmju mehānismi. Atkļūdojot
 maršrutēšanas uzvedību, turiet to darbības jomas atsevišķi. Skatiet
 [3 slāņu noturības diagrammu](../diagrams/exported/resilience-3layers.svg)
 (avots: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)),

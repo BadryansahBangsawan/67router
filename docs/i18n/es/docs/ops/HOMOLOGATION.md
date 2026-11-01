@@ -4,7 +4,7 @@
 
 ---
 
-Validación E2E en un entorno real del despliegue de OmniRoute que se ejecuta en el VPS de homologación
+Validación E2E en un entorno real del despliegue de 67router que se ejecuta en el VPS de homologación
 (`HOMOLOG_BASE_URL`, p. ej., `http://192.168.0.15:20128`). Un solo comando sustituye la lista de comprobación manual
 de la versión STOP #2 por una ejecución automatizada que genera evidencias.
 

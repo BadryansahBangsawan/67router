@@ -4,7 +4,7 @@
 
 ---
 
-Ligeann soláthraithe Fianán Gréasáin do OmniRoute seirbhís AI a úsáid trí do sheisiún brabhsálaí reatha in ionad eochair API. Bíonn siad úsáideach nuair atá rochtain agat cheana féin ar sheirbhís trína suíomh gréasáin agus nuair is mian leat go n-úsáidfeadh OmniRoute an seisiún fíordheimhnithe céanna.
+Ligeann soláthraithe Fianán Gréasáin do 67router seirbhís AI a úsáid trí do sheisiún brabhsálaí reatha in ionad eochair API. Bíonn siad úsáideach nuair atá rochtain agat cheana féin ar sheirbhís trína suíomh gréasáin agus nuair is mian leat go n-úsáidfeadh 67router an seisiún fíordheimhnithe céanna.
 
 Murab ionann agus soláthraithe eochrach API, déanann soláthraithe Fianán Gréasáin fíordheimhniú trí úsáid a bhaint as na dintiúir a sheolann do bhrabhsálaí chuig an suíomh gréasáin.
 
@@ -49,7 +49,7 @@ DevTools
 
 Tá an fhaisnéis fíordheimhnithe bheacht a d’úsáid do bhrabhsálaí go rathúil sa cheanntásc iarratais `Cookie`.
 
-I gcás fhormhór na soláthraithe Fianán Gréasáin, is é seo an luach ba cheart a ghreamú in OmniRoute.
+I gcás fhormhór na soláthraithe Fianán Gréasáin, is é seo an luach ba cheart a ghreamú in 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Is ionann an próiseas socraithe d’fhormhór na soláthraithe Fianán Gréasá
 4. Athnuaigh an leathanach.
 5. Oscail iarratas fíordheimhnithe comhrá nó comhráite.
 6. Cóipeáil na dintiúir fíordheimhnithe riachtanacha.
-7. Oscail OmniRoute.
+7. Oscail 67router.
 8. Téigh chuig **Providers → Add Provider**.
 9. Roghnaigh do sholáthraí Fianán Gréasáin.
 10. Greamaigh na dintiúir.
@@ -92,17 +92,17 @@ Stórálann suíomhanna gréasáin éagsúla fíordheimhniú ar bhealaí éagsú
 
 ## NoTrack (notrack-web)
 
-Is ardán comhrá saor in aisce do thomhaltóirí é NoTrack ([notrack.ai](https://notrack.ai)) nach dteastaíonn clárú dó — cruthaítear an seisiún gan ainm ar an gcéad chuairt agus coinnítear é trí fhianán: `uid`, `si_usr_id`, agus `si_ses_id`. Cuireann OmniRoute an críochphointe céanna `/api/dispatch` trí sheachfhreastalaí le haitheantas samhla amháin (`notrack-c`, ailias `ntw`).
+Is ardán comhrá saor in aisce do thomhaltóirí é NoTrack ([notrack.ai](https://notrack.ai)) nach dteastaíonn clárú dó — cruthaítear an seisiún gan ainm ar an gcéad chuairt agus coinnítear é trí fhianán: `uid`, `si_usr_id`, agus `si_ses_id`. Cuireann 67router an críochphointe céanna `/api/dispatch` trí sheachfhreastalaí le haitheantas samhla amháin (`notrack-c`, ailias `ntw`).
 
 ### Céimeanna chun ceangal
 
 1. Oscail [notrack.ai](https://notrack.ai) i do bhrabhsálaí agus lig d'fhianán an tseisiúin gan ainm a bheith socraithe.
 2. Oscail **Uirlisí Forbróra → Líonra**, athnuaigh an leathanach, agus cliceáil aon iarratas `/api`.
 3. Faoi **Ceanntásca Iarratais**, cóipeáil luach iomlán an cheanntáisc `Cookie`.
-4. In OmniRoute, téigh chuig **Soláthraithe → Cuir Soláthraí Leis → NoTrack Web (Saor in Aisce)**.
+4. In 67router, téigh chuig **Soláthraithe → Cuir Soláthraí Leis → NoTrack Web (Saor in Aisce)**.
 5. Greamaigh teaghrán an fhianáin sa réimse `apiKey` agus roghnaigh **Sábháil**.
 
-Baineann OmniRoute `uid`, `si_usr_id`, agus `si_ses_id` as an teaghrán greamaithe agus atógann sé ceanntásc glan `Cookie` nach bhfuil ann ach na péirí sin — chomh maith le `nt_session` (an comhartha `ntk_…` a shocraítear do chuntais atá logáilte isteach) nuair atá sé i láthair. Má tá ceann ar bith den trí cinn in easnamh, cuirtear an teaghrán amh greamaithe ar aghaidh gan athrú ionas gur féidir le hoibreoirí triail a bhaint as foirmeacha eile.
+Baineann 67router `uid`, `si_usr_id`, agus `si_ses_id` as an teaghrán greamaithe agus atógann sé ceanntásc glan `Cookie` nach bhfuil ann ach na péirí sin — chomh maith le `nt_session` (an comhartha `ntk_…` a shocraítear do chuntais atá logáilte isteach) nuair atá sé i láthair. Má tá ceann ar bith den trí cinn in easnamh, cuirtear an teaghrán amh greamaithe ar aghaidh gan athrú ionas gur féidir le hoibreoirí triail a bhaint as foirmeacha eile.
 
 ### Aitheantais samhla
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Oibríonn an Fianán sa Bhrabhsálaí ach Ní Oibríonn sé in OmniRoute
+## Oibríonn an Fianán sa Bhrabhsálaí ach Ní Oibríonn sé in 67router
 
 Cuireann roinnt soláthraithe fianáin san áireamh nach seoltar ach le linn iarratais fhíordheimhnithe.
 

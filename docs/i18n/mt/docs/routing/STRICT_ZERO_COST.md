@@ -31,7 +31,7 @@ Għal kull kandidat fil-ġabra (`open-sse/services/autoCombo/virtualFactory.ts::
 eżatt wara `filterPaidOnlyCandidates`):
 
 1. **Ma jinsab xejn f’`FREE_MODEL_BUDGETS`** → jiġi eskluż. Dan ikopri mudelli ġenwinament bi ħlas
-   u kwalunkwe fornitur/mudell li OmniRoute għadu ma kklassifikax — kandidati ġodda jibdew
+   u kwalunkwe fornitur/mudell li 67router għadu ma kklassifikax — kandidati ġodda jibdew
    esklużi, mhux inklużi.
 2. **`freeType: "keyless"`** → jgħaddi minnufih, **iżda biss għal kandidat li ġenwinament
    wasal permezz tar-rotta mingħajr awtentikazzjoni** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -89,7 +89,7 @@ qatt kont differenti u mhux ivverifikat fuq l-istess kandidat. Ara
 (każijiet A/B/C ta’ keyless-bypass, każijiet 1-5 b’diversi kontijiet).
 
 `skopert awtomatikament`: fornitur/mudell rilaxxat għada bil-metadata t-tajba (fil-
-katalgu, b’adapter tal-użu, `hardStopGuaranteed: true`) jista’ jintuża mill-mument li OmniRoute jsir jaf
+katalgu, b’adapter tal-użu, `hardStopGuaranteed: true`) jista’ jintuża mill-mument li 67router jsir jaf
 bih — ebda bidla fil-kodiċi, ebda entrata fil-whitelist, xejn x’jiġi editjat f’dan il-modulu. Wieħed li jitneħħa mill-
 katalgu jisparixxi bl-istess mod. Ara
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` għall-prova tar-rigressjoni (permezz ta’

@@ -4,7 +4,7 @@
 
 ---
 
-يتحكم OmniRoute في **أصول المتصفح** التي يمكنها قراءة الاستجابات عبر الأصول
+يتحكم 67router في **أصول المتصفح** التي يمكنها قراءة الاستجابات عبر الأصول
 من خلال قائمة سماح مركزية واحدة. يعتمد النموذج مبدأ **الرفض افتراضيًا**:
 لا يُسمح بأي أصل حتى تضيفه صراحةً. توثّق هذه الصفحة كيفية مطابقة قائمة السماح،
 وما الذي يكشفه `CORS_ALLOW_ALL=true` فعليًا (والأهم، ما الذي **لا** يكشفه)،
@@ -47,14 +47,14 @@
 ## نموذج التهديد — ما الذي يكشفه `CORS_ALLOW_ALL=true` فعليًا
 
 يستحق تحذير OWASP العام ("CORS بحرف بدل = يمكن لأي موقع استدعاء واجهة API
-الخاصة بك") أن يؤخذ بجدية، لكن نطاق تعرض OmniRoute **أضيق من الحالة العامة**،
+الخاصة بك") أن يؤخذ بجدية، لكن نطاق تعرض 67router **أضيق من الحالة العامة**،
 وذلك بسبب حقيقة تنفيذية محددة:
 
 > **لا تُرسل الدالة المركزية `applyCorsHeaders()` مطلقًا
 > `Access-Control-Allow-Credentials`.** لن يسمح المتصفح بإتاحة استجابة عبر
 > الأصول _مرفقة ببيانات اعتماد_ (تتضمن ملف تعريف ارتباط) ما لم يرسل الخادم
 > `Access-Control-Allow-Credentials: true`. ولا يفعل مسار CORS المشترك في
-> OmniRoute ذلك مطلقًا.
+> 67router ذلك مطلقًا.
 
 ما يعنيه ذلك لكل واجهة، حتى مع `CORS_ALLOW_ALL=true`:
 
@@ -70,21 +70,6 @@
 الإدارة — التي تظل تتطلب مصادقة لا تستطيع صفحة من أصل آخر توفيرها. ولا يشكّل
 ذلك وسيلة لاختطاف الجلسة أو سرقة بيانات الاعتماد ضمن مسار CORS المشترك.
 
-### استثناء حقيقي واحد — `/api/v1/agents/`
-
-تضبط مسارات Cloud-Agent
-(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ترويسات CORS
-**الخاصة بها**
-(`src/lib/cloudAgent/api.ts`، `getCloudAgentCorsHeaders`) كما أنها **ترسل**
-`Access-Control-Allow-Origin: <origin>|*` إلى جانب
-`Access-Control-Allow-Credentials: true`. وهذه هي الواجهة الوحيدة التي
-يتزامن فيها تكرار الأصل مع بيانات الاعتماد، وهي **مستقلة عن
-`CORS_ALLOW_ALL`**. تخضع هذه المسارات لمصادقة الإدارة
-(`requireManagementAuth`)؛ وينبغي للمشغّلين الذين يتيحون لوحة المعلومات خارج
-المضيف إدراك أن هذا هو الموضع الوحيد الذي تسمح فيه ترويسات الاستجابة بقراءة
-عبر الأصول مرفقة ببيانات اعتماد. ويُتابَع تقييدها بقائمة سماح صريحة بصورة
-منفصلة عن إرشادات CORS هذه.
-
 ## قائمة التحقق للإنتاج
 
 - **لا تضبط `CORS_ALLOW_ALL=true` مطلقًا في بيئة الإنتاج.** اتركه دون تعيين.
@@ -94,7 +79,7 @@
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- إذا كان OmniRoute يعمل خلف وكيل عكسي / نفق (nginx أو Caddy أو Cloudflare
+- إذا كان 67router يعمل خلف وكيل عكسي / نفق (nginx أو Caddy أو Cloudflare
   Tunnel أو Tailscale)، فإن CORS **ليس** وسيلة التحكم الوحيدة لديك — إذ تظل آلية
   حماية مسارات loopback تحمي المسارات القادرة على تشغيل العمليات (راجع
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). لا تزوّر
@@ -110,7 +95,7 @@
 نادرًا ما تحتاج إلى حرف البدل حتى في بيئة التطوير. اسمح فقط بخوادم التطوير التي تستخدمها:
 
 ```bash
-# خادما تطوير Vite (5173) وNext.js (3000) اللذان يستدعيان نسخة OmniRoute محلية
+# خادما تطوير Vite (5173) وNext.js (3000) اللذان يستدعيان نسخة 67router محلية
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -130,14 +115,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   مصادر الإدارة/لوحة المعلومات خارج أي إعداد متساهل؛ إذ يجب أن تظل مغلقة تمامًا عند
   الفشل.
 
-## مثال: وكيل عكسي أمام OmniRoute
+## مثال: وكيل عكسي أمام 67router
 
-يفرض OmniRoute سياسة CORS بنفسه، لذا ينبغي للوكيل عمومًا **ألّا** يضيف ترويسات
+يفرض 67router سياسة CORS بنفسه، لذا ينبغي للوكيل عمومًا **ألّا** يضيف ترويسات
 `Access-Control-*` أو يعيد كتابتها (الترويسات المكررة تُعطّل المتصفحات). أنهِ اتصال TLS
-وأعِد التوجيه — ودَع OmniRoute يستجيب لطلب التحقق المسبق:
+وأعِد التوجيه — ودَع 67router يستجيب لطلب التحقق المسبق:
 
 ```nginx
-# nginx — أعِد التوجيه إلى OmniRoute؛ لا تُدرج Access-Control-* هنا
+# nginx — أعِد التوجيه إلى 67router؛ لا تُدرج Access-Control-* هنا
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -145,25 +130,24 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # أبقِ ترويسات إعادة التوجيه: فالوكيل الموجود على المضيف نفسه يتصل عبر عنوان الاسترجاع، وهي
-    # التي تُعلم OmniRoute بأن المتصل ليس المشغّل المحلي. والوكيل الذي لا يضيف أيًا منها
+    # التي تُعلم 67router بأن المتصل ليس المشغّل المحلي. والوكيل الذي لا يضيف أيًا منها
     # يجعل كل متصل بعيد يبدو محليًا. ولا تضبط X-Forwarded-For على 127.0.0.1 أيضًا.
 }
 ```
 
-اضبط أصول المتصفح المسموح بها في OmniRoute (عبر `CORS_ALLOWED_ORIGINS` أو علامة تبويب
+اضبط أصول المتصفح المسموح بها في 67router (عبر `CORS_ALLOWED_ORIGINS` أو علامة تبويب
 الأمان)، وليس في الوكيل.
 
 ## ملفات المصدر
 
-| الجانب                                         | الملف                                                                |
-| ---------------------------------------------- | -------------------------------------------------------------------- |
-| تحديد قائمة السماح + `getCorsStatus()`         | `src/server/cors/origins.ts`                                         |
-| تطبيق البرمجيات الوسيطة (مصدر الحقيقة الوحيد)  | `src/server/authz/pipeline.ts`                                       |
-| الإعدادات → حقن المصادر في وقت التشغيل         | `src/lib/config/runtimeSettings.ts`                                  |
-| حالة وقت التشغيل للوحة المعلومات               | `src/app/api/settings/authz-inventory/route.ts`                      |
-| شريط التحذير في لوحة المعلومات                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| حقل مصادر CORS المسموح بها                     | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS الخاص بكل مسار في Cloud-Agent (الاستثناء) | `src/lib/cloudAgent/api.ts`                                          |
+| الجانب                                        | الملف                                                                |
+| --------------------------------------------- | -------------------------------------------------------------------- |
+| تحديد قائمة السماح + `getCorsStatus()`        | `src/server/cors/origins.ts`                                         |
+| تطبيق البرمجيات الوسيطة (مصدر الحقيقة الوحيد) | `src/server/authz/pipeline.ts`                                       |
+| الإعدادات → حقن المصادر في وقت التشغيل        | `src/lib/config/runtimeSettings.ts`                                  |
+| حالة وقت التشغيل للوحة المعلومات              | `src/app/api/settings/authz-inventory/route.ts`                      |
+| شريط التحذير في لوحة المعلومات                | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| حقل مصادر CORS المسموح بها                    | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## انظر أيضًا
 

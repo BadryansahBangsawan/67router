@@ -52,7 +52,7 @@ wani aiki ba. Wannan shi ne rate limiter ɗin da aka ɗaure da IP da key wanda k
 kurakuran `400 content-blocked` lokaci-lokaci yayin da Claude Code ko Codex CLI
 ke yin kiraye-kirayen amfani da kayan aiki / aika saƙo da yawa cikin sauri a jere.
 
-## Matakan rage matsalar da aka riga aka aiwatar a OmniRoute
+## Matakan rage matsalar da aka riga aka aiwatar a 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — burst guard wanda ke tilasta
    mafi ƙarancin tazarar 500 ms tsakanin buƙatun fita zuwa kowace URL ta `agentrouter:*`.

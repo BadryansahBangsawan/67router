@@ -13,21 +13,13 @@ const block = (selector: string) => {
   return css.slice(start, css.indexOf("\n}", start));
 };
 
-test("globals.css loads the self-hosted Keak fonts and the vendored kit CSS right after Tailwind", () => {
+test("globals.css loads the self-hosted 67router fonts and the vendored kit CSS right after Tailwind", () => {
   const order = [
     '@import "tailwindcss" source(none);',
-    // Static weights, not `@fontsource-variable/inter`: the variable package registers the
-    // family "Inter Variable", which the kit's `--ci-font-ui: "Inter", …` never matches.
-    '@import "@fontsource/inter/400.css";',
-    '@import "@fontsource/inter/500.css";',
-    '@import "@fontsource/inter/600.css";',
-    '@import "@fontsource/inter/700.css";',
-    '@import "@fontsource/instrument-serif/400.css";',
-    '@import "@fontsource/instrument-serif/400-italic.css";',
-    '@import "@fontsource/ibm-plex-mono/400.css";',
-    '@import "@fontsource/ibm-plex-mono/500.css";',
-    '@import "@fontsource/ibm-plex-mono/600.css";',
-    '@import "@fontsource/ibm-plex-mono/700.css";',
+    // Variable builds: they register "Geist Variable" / "Geist Mono Variable", which is exactly
+    // what the 67router token layer puts first in --ci-font-ui / --ci-font-mono.
+    '@import "@fontsource-variable/geist/wght.css";',
+    '@import "@fontsource-variable/geist-mono/wght.css";',
     '@import "../../packages/ui-kit/src/ci-ui.css";',
   ].map((needle) => css.indexOf(needle));
   assert.ok(
@@ -40,7 +32,12 @@ test("globals.css loads the self-hosted Keak fonts and the vendored kit CSS righ
     "imports keep this order"
   );
   assert.doesNotMatch(css, /fonts\.googleapis\.com/);
-  assert.doesNotMatch(css, /@fontsource-variable/);
+  // The Keak ramp is gone: no Inter / Instrument Serif / IBM Plex imports, and the display
+  // family is Geist (no serif headings).
+  assert.doesNotMatch(css, /@fontsource\/(inter|instrument-serif|ibm-plex-mono)/);
+  assert.match(css, /--ci-font-ui:\s*"Geist Variable"/);
+  assert.match(css, /--ci-font-mono:\s*"Geist Mono Variable"/);
+  assert.match(css, /--ci-font-display:\s*var\(--ci-font-ui\);/);
 });
 
 test("the OmniRoute color tokens are aliases of kit tokens (no hex left in :root / .dark)", () => {
@@ -53,7 +50,8 @@ test("the OmniRoute color tokens are aliases of kit tokens (no hex left in :root
     ["--color-bg-subtle", "var(--ci-color-surface-subtle)"],
     ["--color-surface", "var(--ci-color-surface)"],
     ["--color-card", "var(--ci-color-surface)"],
-    ["--color-sidebar", "var(--ci-color-surface)"],
+    // 67router: the sidebar has its own fill (#FAFAFA / #111111), the kit's sidebar token.
+    ["--color-sidebar", "var(--ci-sidebar-bg)"],
     ["--surface-2", "var(--ci-color-surface-muted)"],
     ["--color-border", "var(--ci-color-border-subtle)"],
     ["--color-text-main", "var(--ci-color-foreground)"],
@@ -147,8 +145,9 @@ test("adapter extension classes exist for the Button warning variant and Badge t
   }
 });
 
-test("no class literal pairs a solid bg-accent/bg-primary with text-white (lime needs dark ink)", () => {
-  // `--color-accent` / `--color-primary` are the kit's lime (#d8ff00): white on it is ~1.1:1.
+test("no class literal pairs a solid bg-accent/bg-primary with text-white (the primary is near-white in dark)", () => {
+  // `--color-accent` / `--color-primary` are the solid monochrome primary: near-white in dark,
+  // where white ink on it is ~1.04:1. Pair them with text-accent-foreground instead.
   // Solid token = `bg-accent` / `bg-primary` followed by whitespace, a quote or the end —
   // `bg-accent/10`, `bg-accent-light`, `bg-primary/20` are tints and stay out of scope.
   const SOLID = /(?<![\w/:-])bg-(?:accent|primary)(?=[\s"'`]|$)/;
@@ -193,15 +192,30 @@ test("no class literal pairs a solid bg-accent/bg-primary with text-white (lime 
   );
 });
 
-test("STATUS_HEX mirrors the kit status palette (ReactFlow/SVG need hex)", async () => {
+test("STATUS_HEX is the 67router status palette (ReactFlow/SVG need hex)", async () => {
   const { STATUS_HEX } = await import("../../src/shared/constants/statusColors.ts");
-  const { ciTokens } = await import("../../packages/ui-kit/src/tokens.ts");
-  assert.equal(STATUS_HEX.success, ciTokens.color.status.success);
-  assert.equal(STATUS_HEX.warning, ciTokens.color.status.warning);
-  assert.equal(STATUS_HEX.error, ciTokens.color.status.danger);
-  assert.equal(STATUS_HEX.muted, ciTokens.color.neutral[500]);
-  assert.equal(STATUS_HEX.approval, ciTokens.color.chart[3]);
-  assert.doesNotMatch(read("src/shared/constants/statusColors.ts"), /#[0-9a-fA-F]{6}/);
+  assert.deepEqual(
+    { ...STATUS_HEX },
+    {
+      success: "#16a34a",
+      warning: "#d97706",
+      error: "#dc2626",
+      muted: "#a3a3a3",
+      approval: "#737373",
+      fallback: "#ff4f00",
+    }
+  );
+  // The hexes that have a light-mode 67router token must stay equal to it.
+  const css = read("src/app/globals.css");
+  const light = (name: string) => css.match(new RegExp(`--r67-${name}:\\s*(#[0-9a-f]{6})`))?.[1];
+  assert.equal(STATUS_HEX.success, light("success"));
+  assert.equal(STATUS_HEX.error, light("danger"));
+  assert.equal(STATUS_HEX.muted, light("neutral-dot"));
+  assert.equal(STATUS_HEX.fallback, light("fallback"));
+  // No Keak kit hue survives (old success/warning/danger/violet).
+  for (const keak of ["#087a4f", "#a75a00", "#bf3636", "#7d4fc7"]) {
+    assert.ok(!Object.values(STATUS_HEX).includes(keak as never), `${keak} is a Keak hue`);
+  }
 });
 
 test("<html> opts into the kit theme surface", () => {
@@ -306,10 +320,9 @@ test("every flow surface expresses state with --orch-status-* tokens; categorica
   // Deliberately NOT migrated — categorical/brand palettes, not state.
   assert.ok(strategy.includes("STRATEGY_COLORS"), "strategy hues stay a categorical palette");
   assert.ok(engine.includes("LAYER_COLORS"), "layer pills stay a categorical palette");
-  assert.ok(
-    io.includes('isInput ? "#6366f1" : "#22c55e"'),
-    "IoNode keeps its indigo/green input-output identity pair"
-  );
+  // 67router: the input/output identity is the label; the node frame is monochrome ink.
+  assert.ok(io.includes('"var(--color-text-main)"'), "IoNode reads the text ink token");
+  assert.ok(!io.includes('"#6366f1"'), "IoNode hardcodes no indigo hex");
 });
 
 test("@theme inline still exposes bg-surface-2 and rounded-card", () => {
@@ -324,48 +337,62 @@ test("cn() still dedupes via tailwind-merge and DataTable paints an opaque surfa
   assert.ok(read("src/shared/components/DataTable.tsx").includes("var(--color-surface)"));
 });
 
-test("text-primary resolves to a readable primary ink; lime stays on bg/border/ring (KEA-7886)", () => {
+test("text-primary resolves to a readable primary ink through the 67router layer", () => {
   // Tailwind 4 resolves `text-*` colors from `--text-color-*` BEFORE `--color-*`
   // (tailwindcss/dist/lib.js: valueThemeKeys ["--text-color", "--color"]), so this one alias
-  // repaints every `text-primary` (+ hover:/group-hover:/`/80` variants) without touching
-  // `bg-primary`, `border-primary` or `ring-primary`, which keep reading `--color-primary`.
+  // repaints every `text-primary` without touching `bg-primary`, `border-primary`, `ring-primary`.
   const theme = block("@theme inline {");
   assert.match(theme, /--text-color-primary:\s*var\(--color-primary-ink\);/);
-  assert.match(theme, /--color-primary:\s*var\(--color-primary\);/, "bg/border/ring stay lime");
-  // `--color-accent` is the same lime, so `text-accent` reads the same ink (bg-accent stays lime).
+  assert.match(theme, /--color-primary:\s*var\(--color-primary\);/);
   assert.match(theme, /--text-color-accent:\s*var\(--color-primary-ink\);/);
-  assert.match(theme, /--color-accent:\s*var\(--color-accent\);/, "bg-accent stays lime");
+  assert.match(theme, /--color-accent:\s*var\(--color-accent\);/);
+  assert.match(theme, /--color-fallback:\s*var\(--color-fallback\);/);
+  // `text-fallback` reads the AA text token; `bg-fallback` / `border-fallback` keep the orange.
+  assert.match(theme, /--text-color-fallback:\s*var\(--color-fallback-text\);/);
 
   const root = block(":root {\n  --desktop-safe-top");
-  const darkRoot = block(':root[data-theme="dark"] {');
-  const inkOf = (scope: string, theme: string) => {
-    const m = /--color-primary-ink:\s*var\((--ci-[\w-]+)\);/.exec(scope);
-    assert.ok(m, `--color-primary-ink is bridged to a --ci-* kit token in ${theme}`);
-    return m[1];
-  };
-  const lightInk = inkOf(root, "light");
-  const darkInk = inkOf(darkRoot, "dark");
+  assert.ok(root.includes("--color-primary: var(--ci-color-accent);"));
+  assert.ok(root.includes("--color-accent: var(--ci-color-accent);"));
+  assert.ok(root.includes("--color-primary-ink: var(--ci-color-accent);"));
+  assert.ok(root.includes("--color-fallback: var(--r67-fallback);"));
 
-  // Resolve through the vendored kit like integration-wiring's "opaque theme colors" test.
-  const kitCss = read("packages/ui-kit/src/ci-tokens.css").replace(/\/\*[\s\S]*?\*\//g, "");
-  const kitBlock = (selector: RegExp) => {
-    const match = selector.exec(kitCss);
-    assert.ok(match, `ci-tokens.css declares ${selector}`);
-    const body = kitCss.slice(match.index + match[0].length, kitCss.indexOf("}", match.index));
+  // Resolve like the browser does: the 67router layer in globals.css shadows the vendored kit
+  // (same selectors, later in source), so look there first, then in ci-tokens.css.
+  const strip = (text: string) => text.replace(/\/\*[\s\S]*?\*\//g, "");
+  const kitCss = strip(read("packages/ui-kit/src/ci-tokens.css"));
+  const appCss = strip(css);
+  const declarations = (source: string, selector: RegExp, nth = 0) => {
+    const re = new RegExp(selector.source, "gm");
+    let match: RegExpExecArray | null = null;
+    for (let i = 0; i <= nth; i++) match = re.exec(source);
+    assert.ok(match, `found ${selector} (#${nth})`);
+    const body = source.slice(match.index + match[0].length, source.indexOf("}", match.index));
     return new Map([...body.matchAll(/(--[\w-]+):\s*([^;]+);/g)].map((m) => [m[1], m[2].trim()]));
   };
-  const light = kitBlock(/^:root,\s*\.ci-theme\s*\{/m);
-  const dark = kitBlock(/^:root\[data-theme="dark"\][^{]*\{/m);
+  const LIGHT = /^:root,\s*\.ci-theme\s*\{/;
+  const DARK =
+    /^:root\[data-theme="dark"\],\s*\.ci-theme\[data-theme="dark"\],\s*\[data-theme="dark"\] \.ci-theme\s*\{/;
+  const MAPPING = /^:root,\s*\.ci-theme,\s*:root\[data-theme="dark"\][^{]*\{/;
+  const kitLight = declarations(kitCss, LIGHT);
+  const kitDark = declarations(kitCss, DARK);
+  const r67Light = declarations(appCss, LIGHT);
+  const r67Dark = declarations(appCss, DARK);
+  const mapping = declarations(appCss, MAPPING);
+  const darkOverrides = declarations(appCss, DARK, 1);
+  const appRoot = declarations(appCss, /^:root \{\n\s*--desktop-safe-top/);
+  const lightScopes = [mapping, appRoot, r67Light, kitLight];
+  const darkScopes = [darkOverrides, mapping, appRoot, r67Dark, kitDark, r67Light, kitLight];
+
   const resolve = (token: string, scopes: Map<string, string>[]) => {
     let value = `var(${token})`;
-    for (let hops = 0; hops < 10; hops++) {
+    for (let hops = 0; hops < 12; hops++) {
       const ref = /^var\((--[\w-]+)\)$/.exec(value);
       if (!ref) {
         assert.match(value, /^#[0-9a-f]{6}$/i, `${token} resolves to a 6-digit hex`);
-        return value;
+        return value.toLowerCase();
       }
       const next = scopes.map((scope) => scope.get(ref[1])).find((v) => v !== undefined);
-      assert.ok(next, `${ref[1]} is declared in ci-tokens.css`);
+      assert.ok(next, `${ref[1]} is declared`);
       value = next;
     }
     return assert.fail(`${token} does not resolve to a literal colour`);
@@ -381,24 +408,37 @@ test("text-primary resolves to a readable primary ink; lime stays on bg/border/r
     return (hi + 0.05) / (lo + 0.05);
   };
 
-  const lightBg = resolve("--ci-color-background", [light]);
-  const darkBg = resolve("--ci-color-background", [dark, light]);
-  const lightRatio = contrast(resolve(lightInk, [light]), lightBg);
-  const darkRatio = contrast(resolve(darkInk, [dark, light]), darkBg);
-  assert.ok(
-    lightRatio >= 4.5,
-    `light ink ${lightInk} on the background: ${lightRatio.toFixed(2)}:1`
-  );
-  assert.ok(darkRatio >= 4.5, `dark ink ${darkInk} on the background: ${darkRatio.toFixed(2)}:1`);
-
-  // --color-primary itself is still the lime accent (the surface that carries dark ink).
-  assert.ok(root.includes("--color-primary: var(--ci-color-accent);"));
-  assert.ok(root.includes("--color-accent: var(--ci-color-accent);"), "accent is the same lime");
-  assert.equal(resolve("--ci-color-accent", [light]), resolve("--ci-lime-400", [light]));
-  assert.ok(
-    contrast(resolve("--ci-color-accent", [light]), lightBg) < 4.5,
-    "sanity: lime itself is unreadable as text on light — the reason for the ink"
-  );
+  for (const [name, scopes, page, primary] of [
+    ["light", lightScopes, "#ffffff", "#0a0a0a"],
+    ["dark", darkScopes, "#0a0a0a", "#fafafa"],
+  ] as const) {
+    const bg = resolve("--ci-color-background", scopes);
+    assert.equal(bg, page, `${name} page colour`);
+    const accent = resolve("--ci-color-accent", scopes);
+    assert.equal(accent, primary, `${name} primary is the solid monochrome ink`);
+    assert.ok(contrast(accent, bg) >= 4.5, `${name} primary ink on the page`);
+    const onPrimary = resolve("--ci-color-accent-foreground", scopes);
+    assert.ok(contrast(onPrimary, accent) >= 4.5, `${name} text on a solid primary button`);
+    assert.ok(
+      contrast(resolve("--ci-color-text-muted", scopes), bg) >= 4.5,
+      `${name} muted text stays AA on the page`
+    );
+    // The orange is the fallback marker, never the accent / primary.
+    assert.equal(resolve("--r67-fallback", scopes), "#ff4f00");
+    assert.notEqual(accent, "#ff4f00");
+    // #FF4F00 is only 3.3:1 on white: fills / bars / dots keep it, TEXT reads a darker token
+    // that stays AA on the page and on the fallback tint.
+    const fallbackText = resolve("--color-fallback-text", scopes);
+    assert.ok(contrast(fallbackText, bg) >= 4.5, `${name} fallback text on the page`);
+    assert.ok(
+      contrast(fallbackText, resolve("--color-fallback-bg", scopes)) >= 4.5,
+      `${name} fallback text on the fallback tint`
+    );
+    assert.ok(
+      contrast(fallbackText, resolve("--ci-color-surface", scopes)) >= 4.5,
+      `${name} fallback text on a surface`
+    );
+  }
 
   // The inline ::selection rule colours TEXT, so it reads the ink too.
   assert.match(css, /::selection \{[^}]*\n\s*color: var\(--color-primary-ink\);/);
@@ -421,16 +461,21 @@ test("token aliases with no consumer are gone (KEA-7886 F4)", () => {
   assert.doesNotMatch(css, /\.traffic-lights?\b/, "the unused .traffic-light(s) chrome is gone");
 });
 
-test("the primary Badge tone keeps dark ink in light and takes the lime ink in dark (F4)", () => {
-  // Light: near-black ink on lime-100. Dark: the kit keeps --ci-color-accent-foreground near-black
-  // while the surface becomes a 14 % lime tint over the dark background, so the "8 features"
-  // translator badge read near-black on near-black. Dark flips the ink to the lime itself.
+test("the primary Badge tone is a neutral chip; the fallback tone is the only orange badge", () => {
+  // The monochrome primary is readable ink in both themes, so the lime-era dark-only flip is gone.
   assert.match(
     css,
-    /\.ci-badge\[data-tone="primary"\] \{\s*color: var\(--ci-color-accent-foreground\);\s*background: var\(--ci-color-accent-surface-strong\);/
+    /\.ci-badge\[data-tone="primary"\] \{\s*color: var\(--ci-color-accent\);\s*background: var\(--ci-color-accent-surface-strong\);/
   );
-  assert.match(
-    css,
-    /:root\[data-theme="dark"\] \.ci-badge\[data-tone="primary"\] \{\s*color: var\(--ci-color-accent\);/
-  );
+  assert.doesNotMatch(css, /:root\[data-theme="dark"\] \.ci-badge\[data-tone="primary"\]/);
+  assert.match(css, /\.ci-badge\[data-tone="fallback"\] \{\s*color: var\(--color-fallback-text\);/);
+});
+
+test("kit Stat values follow the 28/600 KPI spec and section headers use a 15 px title", () => {
+  const stat = block(".ci-stat__value,");
+  assert.match(stat, /font-family: var\(--ci-font-ui\);/);
+  assert.match(stat, /font-size: 1\.75rem;/);
+  assert.match(stat, /font-weight: var\(--ci-font-weight-semibold\);/);
+  assert.match(stat, /letter-spacing: -0\.03em;/);
+  assert.match(css, /\.ci-section-header__title \{\s*font-size: 0\.9375rem;/);
 });

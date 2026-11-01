@@ -7,7 +7,7 @@
 > **Sumber kebenaran:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Terakhir diperbarui:** 2026-09-22 — namespace cakupan mengarah ke MCP-SERVER.md
 
-OmniRoute memiliki pipeline otorisasi yang sadar rute yang menjaga setiap permintaan API. Klasifikasi bersifat **deterministik** dan **fail-closed** — apa pun yang tidak dapat diklasifikasikan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token tingkat manajemen. Halaman ini menjelaskan model untuk insinyur yang memelihara rute atau merancang endpoint baru.
+67router memiliki pipeline otorisasi yang sadar rute yang menjaga setiap permintaan API. Klasifikasi bersifat **deterministik** dan **fail-closed** — apa pun yang tidak dapat diklasifikasikan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token tingkat manajemen. Halaman ini menjelaskan model untuk insinyur yang memelihara rute atau merancang endpoint baru.
 
 ![Pipeline AuthZ (3 kelas rute + evaluasi kebijakan)](../diagrams/exported/authz-pipeline.svg)
 
@@ -228,8 +228,6 @@ Ini tetap mati kecuali `OMNIROUTE_MCP_ENFORCE_SCOPES=true`.
 Penegakan kunci API klien menggunakan `isRequireApiKeyEnabled()` di `src/shared/utils/featureFlags.ts`, bukan pembacaan langsung `process.env.REQUIRE_API_KEY`. Ini penting untuk instans yang di-deploy: mengubah `REQUIRE_API_KEY` di Dashboard → Feature Flags menyimpan override DB dan langsung memengaruhi `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*`, dan pemeriksaan autentikasi API klien lainnya yang memakai helper ini. Jika penyimpanan feature flag tidak dapat dibaca, autentikasi API klien gagal tertutup dan mewajibkan kunci.
 
 ## Perubahan yang Tidak Kompatibel — v3.8.0
-
-Endpoint `/api/v1/agents/tasks/*` dan `/api/resilience/model-cooldowns` **kini memerlukan autentikasi pengelolaan** (commit `588a0333`). Klien yang sebelumnya mengirimkan kunci API biasa tanpa cakupan `manage` akan menerima `403`. Migrasi: berikan cakupan `manage` pada kunci tersebut di dasbor Kunci API, atau gunakan sesi dasbor yang telah login.
 
 ## Perubahan Perilaku — v3.8.2
 

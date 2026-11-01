@@ -8,7 +8,7 @@
 
 > **உண்மைக்கான ஆதாரம்:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-ஒவ்வொரு proxy-யும் ஓர் **முகவரி-family egress வழிகாட்டுதலை** கொண்டிருக்க OmniRoute அனுமதிக்கிறது. இயல்புநிலையில் OS ஆனது IPv4 அல்லது IPv6-ஐத் தேர்ந்தெடுக்கிறது (dual-stack, "Happy Eyeballs"). வழிகாட்டுதலை `ipv4` அல்லது `ipv6` என அமைக்கும்போது, அந்த proxy வழியாகச் செல்லும் ஒவ்வொரு இணைப்பையும் OmniRoute தேர்ந்தெடுக்கப்பட்ட family-க்குக் கட்டுப்படுத்தி, மற்றொரு family-க்கு மாறுவதற்குப் பதிலாக **மூடிய நிலையில் தோல்வியடைகிறது**.
+ஒவ்வொரு proxy-யும் ஓர் **முகவரி-family egress வழிகாட்டுதலை** கொண்டிருக்க 67router அனுமதிக்கிறது. இயல்புநிலையில் OS ஆனது IPv4 அல்லது IPv6-ஐத் தேர்ந்தெடுக்கிறது (dual-stack, "Happy Eyeballs"). வழிகாட்டுதலை `ipv4` அல்லது `ipv6` என அமைக்கும்போது, அந்த proxy வழியாகச் செல்லும் ஒவ்வொரு இணைப்பையும் 67router தேர்ந்தெடுக்கப்பட்ட family-க்குக் கட்டுப்படுத்தி, மற்றொரு family-க்கு மாறுவதற்குப் பதிலாக **மூடிய நிலையில் தோல்வியடைகிறது**.
 
 வழிகாட்டுதல் என்றால் என்ன, அது ஏன் உள்ளது, அதை எங்கு உள்ளமைப்பது, runtime அதை எவ்வாறு resolve செய்கிறது ஆகியவற்றை இந்தப் பக்கம் ஆவணப்படுத்துகிறது.
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` எவ்வாறு தீர்மானிக்கப்படுகிறது
 
-`family` என்பது `auto` ஆக இருக்கும்போது, OmniRoute எந்த உத்தரவையும் **சேர்ப்பதில்லை** — ப்ராக்ஸி URL உள்ளபடியே பயன்படுத்தப்படுகிறது; மேலும் இணைப்புக் குடும்பம் இயல்பாகவே தீர்மானிக்கப்படுகிறது.
+`family` என்பது `auto` ஆக இருக்கும்போது, 67router எந்த உத்தரவையும் **சேர்ப்பதில்லை** — ப்ராக்ஸி URL உள்ளபடியே பயன்படுத்தப்படுகிறது; மேலும் இணைப்புக் குடும்பம் இயல்பாகவே தீர்மானிக்கப்படுகிறது.
 
 URL உருவாக்கும் நேரத்தில் (`open-sse/utils/proxyDispatcher.ts`-இல் உள்ள `proxyConfigToUrl` / `normalizeProxyUrl`), ஓர் `auto` ப்ராக்ஸி எந்தக் குறிப்பானும் இல்லாத எளிய URL-ஐ வழங்குகிறது:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 `auto` அல்லாத ஒரு directive, இயல்பாக்கப்பட்ட proxy URL-இல் ஒரே முறை சேர்க்கப்படும் `?family=ipv4` அல்லது `?family=ipv6` என்ற ஒற்றை செயற்கை query marker ஆகப் பயணிக்கிறது. இந்த marker-ஐ மிகச் சரியாக ஒரே முறை நீக்கி மீண்டும் சேர்ப்பதில் `normalizeProxyUrl` கவனமாகச் செயல்படுவதால், அது port parsing-ஐ ஒருபோதும் சிதைக்காது.
 
-dispatcher உருவாக்கப்படும்போது, marker வாசிக்கப்பட்டு ஒரு திட்டவட்டமான connect family ஆக மாற்றப்படுகிறது. host ஆனது **எதிர்** family-ஐச் சேர்ந்த IP literal ஆக இருந்தால், OmniRoute ஒரு பிழையை எறியும் (முரண்பாடு ஏற்பட்டால் fail-closed):
+dispatcher உருவாக்கப்படும்போது, marker வாசிக்கப்பட்டு ஒரு திட்டவட்டமான connect family ஆக மாற்றப்படுகிறது. host ஆனது **எதிர்** family-ஐச் சேர்ந்த IP literal ஆக இருந்தால், 67router ஒரு பிழையை எறியும் (முரண்பாடு ஏற்பட்டால் fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 இணக்கத்தன்மை
 
-family pin, SOCKS5 proxy-களுடன் செயல்படும்; ஆனால் வழக்கமான `fetch-socks`, proxy hop-இன் family-ஐ நிலைநிறுத்துவதற்குத் தேவையான socket option-களை வெளிப்படுத்துவதில்லை. இதற்காக OmniRoute தனது சொந்த connector-ஐ வழங்குகிறது:
+family pin, SOCKS5 proxy-களுடன் செயல்படும்; ஆனால் வழக்கமான `fetch-socks`, proxy hop-இன் family-ஐ நிலைநிறுத்துவதற்குத் தேவையான socket option-களை வெளிப்படுத்துவதில்லை. இதற்காக 67router தனது சொந்த connector-ஐ வழங்குகிறது:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

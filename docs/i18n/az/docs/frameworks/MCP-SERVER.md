@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Azərbaycan dili)
+# 67router MCP Server Documentation (Azərbaycan dili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Quraşdırma
 
-OmniRoute MCP daxildə mövcuddur. Onu belə başladın:
+67router MCP daxildə mövcuddur. Onu belə başladın:
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ Claude Desktop, Cursor, Cline və uyğun MCP klientlərinin qurulması üçün [
 | `omniroute_switch_combo`        | `write:combos`        | Kombonu aktivləşdirmək və ya deaktivləşdirmək                                                                                                            |
 | `omniroute_create_combo`        | `write:combos`        | Mövcud kombo API-si vasitəsilə doğrulanmış kombo yaratmaq                                                                                                |
 | `omniroute_check_quota`         | `read:quota`          | İstifadə edilmiş/ümumi kvota, qalan faiz, sıfırlanma vaxtı, token vəziyyəti                                                                              |
-| `omniroute_route_request`       | `execute:completions` | OmniRoute marşrutlaşdırması vasitəsilə çat tamamlama sorğusu göndərmək                                                                                   |
+| `omniroute_route_request`       | `execute:completions` | 67router marşrutlaşdırması vasitəsilə çat tamamlama sorğusu göndərmək                                                                                    |
 | `omniroute_cost_report`         | `read:usage`          | Dövr üzrə xərc hesabatı (sessiya/gün/həftə/ay)                                                                                                           |
 | `omniroute_list_models_catalog` | `read:models`         | İmkanlar, status və qiymətlərlə birlikdə tam model kataloqu                                                                                              |
 | `omniroute_radar_catalog`       | `read:radar`          | Lokal imzalanmış Radar kataloqu; istəyə bağlı provayder/ailə filtrləri                                                                                   |
@@ -151,7 +151,7 @@ onlar provayder istifadə qəbzləri deyil və `source: "mcp_metadata_estimate"`
 
 ### MCP Əlçatanlıq Ağacı Filtri (v3.8.0)
 
-Yuxarıdakı sıxılma alətlərindən ayrı olaraq, OmniRoute MCP brauzer/əlçatanlıq alətlərinin
+Yuxarıdakı sıxılma alətlərindən ayrı olaraq, 67router MCP brauzer/əlçatanlıq alətlərinin
 **alət nəticələrini** agentə qaytarmazdan əvvəl sıxan icradan sonrakı filtr ehtiva edir. Bu filtr özü
 alət deyil — geniş həcmli əlçatanlıq ağacı və ya brauzer ani görüntüsü mətni (≥2000 simvol) ehtiva
 edən istənilən alət nəticəsi üzərində şəffaf şəkildə işləyir.
@@ -234,7 +234,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
 | `omniroute_agent_skills_list`     | `read:catalog`  | İxtiyari `category` (api\|cli) və `area` filtrləri ilə bütün 45 agent bacarığını siyahıya alır; metadata + əhatə məlumatını qaytarır  |
 | `omniroute_agent_skills_get`      | `read:catalog`  | Kanonik `id` əsasında tək bir bacarıq üçün tam metadata + SKILL.md məzmununu əldə edir                                                |
-| `omniroute_agent_skills_coverage` | `read:catalog`  | Əhatə statistikası: 23 API, 21 CLI və 1 konfiqurasiya bacarığından neçəsinin fayl sistemində SKILL.md faylı olduğu və kataloq cəmləri |
+| `omniroute_agent_skills_coverage` | `read:catalog`  | Əhatə statistikası: 22 API, 20 CLI və 1 konfiqurasiya bacarığından neçəsinin fayl sistemində SKILL.md faylı olduğu və kataloq cəmləri |
 
 Tam kataloq və xarici agentlərin ondan necə istifadə etdiyi barədə məlumat üçün [AGENT-SKILLS.md](./AGENT-SKILLS.md) sənədinə baxın.
 
@@ -243,17 +243,6 @@ Tam kataloq və xarici agentlərin ondan necə istifadə etdiyi barədə məluma
 Yuxarıdakı MCP alət inventarı (`countUniqueMcpTools()` tərəfindən hesablanan 110 unikal alət) məqsədli şəkildə
 icra vaxtı marşrutlaşdırma/keşləmə/sıxılma/yaddaş/bacarıqlar/proksi/kontekst-mənbə əməliyyatları ilə məhdudlaşdırılıb. İki əlaqəli
 freymvörk v3.8.0 versiyasında MCP serveri ilə birlikdə təqdim olunur və ayrıca sənədləşdirilir:
-
-### Bulud Agentləri
-
-Bulud Agentləri LLM provayderləri üçün istifadə olunan eyni bağlantı modeli vasitəsilə
-OmniRoute-a qoşulan, prosesdənkənar AI kodlaşdırma agentləridir (codex-cloud, cursor-cloud, devin, jules). Onlar
-öz REST səthləri (`/api/v1/agents/*`) vasitəsilə təqdim olunur və MCP alət kataloqunun bir hissəsi **deyil**
-— Bulud Agentinin çağırılması MCP əhatə dairəsini sərf etmir.
-
-- Reallaşdırma: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Həyat dövrü: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Sənədləşdirmə: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Qoruyucu Mexanizmlər
 
@@ -428,8 +417,6 @@ Hər bir alət konkret səlahiyyətlər tələb edir:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                     |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                              |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                            |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                               |
 | `read:obsidian`       | 13 oxuma aləti — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 yazma aləti — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                             |
@@ -482,7 +469,7 @@ mövcud `OMNIROUTE_MCP_ENFORCE_SCOPES` ilə şərtləndirilən davranışı dəy
 
 | Dəyişən                                 | Standart dəyər                       | Məqsəd                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | :-------------------------------------- | :----------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`             | MCP serverinin OmniRoute daxili API-lərinə müraciət edərkən istifadə etdiyi əsas URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`             | MCP serverinin 67router daxili API-lərinə müraciət edərkən istifadə etdiyi əsas URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `OMNIROUTE_API_KEY`                     | (boş)                                | Daxili API çağırışlarına `Authorization: Bearer` kimi ötürülən API açarı                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (yalnız `"true"` aktiv edir) | Aktiv olduqda çatışmayan əhatə dairələri alət çağırışlarını rədd edir və audit jurnalına `scope_denied:<reason>` yazır. Tam `manage`/`admin` əhatə dairəsi olmayan, hər açara aid Authorization başlığından müəyyən edilmiş istənilən HTTP/SSE çağırışçısı (`source === "authInfo"`) üçün bu bayraqdan asılı olmayaraq məcburi yoxlama HƏMÇİNİN aktiv edilir — məsələn, yalnız məhdud `mcp:connect` yan keçid əhatə dairəsinə malik açar üçün — buna görə də bu standart dəyər yalnız lokal/stdio tək operatorlu iş axını üçün təhlükəsizdir, uzaq qeyri-loopback giriş üçün isə heç vaxt təhlükəsiz deyil |
 | `OMNIROUTE_MCP_SCOPES`                  | (boş)                                | Standart olaraq "mövcud" hesab edilən əhatə dairələrinin vergüllə ayrılmış icazə siyahısı (çağırışçı öz əhatə dairələrini təqdim etmədikdə istifadə olunur)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -585,7 +572,6 @@ Son çağırışları yoxlamaq üçün idarə panelindən və ya `/api/mcp/audit
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Bacarıq alətlərinin tərifləri (4 alət)                                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion kontekst mənbəyi alətlərinin tərifləri (6 alət)                            |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Oyunlaşdırma alətlərinin tərifləri (8 alət)                                       |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Plaginlərin qeydiyyatı və idarə edilməsi alətləri (8 alət)                        |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` son nöqtəsi                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` son nöqtəsi                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE nəqliyyat marşrutu                                             |

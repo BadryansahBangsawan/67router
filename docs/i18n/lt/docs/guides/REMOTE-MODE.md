@@ -4,7 +4,7 @@
 
 ---
 
-Paleiskite `omniroute` CLI savo nešiojamajame kompiuteryje, o pati „OmniRoute“ tegul veikia kitur
+Paleiskite `omniroute` CLI savo nešiojamajame kompiuteryje, o pati „67router“ tegul veikia kitur
 (VPS, namų serveryje ar kitame jūsų „Tailnet“ įrenginyje). Vieną kartą prisijungiate naudodami
 `omniroute connect`, o nuo tada **kiekviena** CLI komanda nukreipiama į tą nuotolinį
 serverį — tos pačios komandos, ta pati išvestis, tik vykdoma nuotoliniame serveryje.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← pagal nuotolinį katalogą sukuri
 ## Kaip tai veikia
 
 ```
-jūsų nešiojamasis kompiuteris             nuotolinė „OmniRoute“ (VPS)
+jūsų nešiojamasis kompiuteris             nuotolinė „67router“ (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (slaptažodis → prieigos raktas) │
 │  kontekstas: vps   │ ───────────────►  │ išduoda aprėptimi apribotą    │
@@ -108,7 +108,7 @@ serveryje, o ne jūsų kompiuteryje, todėl sutikimo ekranas **užstringa visam 
 kodo nepateikia** — įprastame atsarginiame variante „įklijuokite atgalinio iškvietimo
 URL“ nėra ko įklijuoti. (Tai Google pusės apribojimas: taip pat užstringa bet kuris
 tarpinis serveris, naudojantis komplekte pateikiamą Antigravity darbalaukio klientą,
-ne tik OmniRoute.)
+ne tik 67router.)
 
 Prietaisų skydelis tai aptinka dar prieš jums įstringant: atidarius **Providers → Antigravity →
 Connect** ne iš localhost adreso, bendrasis pranešimas „nukopijuokite atgalinio iškvietimo URL“
@@ -116,7 +116,7 @@ pakeičiamas dviem toliau nurodytais sprendimais, kuriuose jūsų prieglobos ser
 jau įrašyti. (LAN adresas taip pat įskaitomas — šio atgalinio iškvietimo požiūriu
 `192.168.x.x` nėra localhost.)
 
-Yra du palaikomi būdai prijungti Antigravity prie nuotolinio OmniRoute.
+Yra du palaikomi būdai prijungti Antigravity prie nuotolinio 67router.
 
 ### A variantas — vietinė prisijungimo pagalbinė priemonė (rekomenduojama)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Tada **nuotoliniame** prietaisų skydelyje pasirinkite **Providers → Antigravity → Connect**
 ir įklijuokite `omniroute-cred-v1.…` bloką į lauką **Step 2** (jame galima įvesti
-atgalinio iškvietimo URL arba prisijungimo duomenų bloką). OmniRoute jį dekoduoja,
+atgalinio iškvietimo URL arba prisijungimo duomenų bloką). 67router jį dekoduoja,
 serveryje atlieka Cloud Code įvedimo procesą ir išsaugo ryšį.
 
 > Duomenų bloke yra atnaujinimo prieigos raktas — saugokite jį kaip slaptažodį. Naudojant
@@ -196,7 +196,7 @@ todėl nereikia tuneliu persiųsti antro, konkrečiam teikėjui skirto prievado.
 ## Codex / Grok prijungimas nuotoliniame diegime (fiksuoto „loopback“ adreso paslaugų teikėjai)
 
 Codex, xAI (`xai-oauth`) ir Grok CLI (`grok-cli`) savo pirminėje OAuth programoje
-užregistruoja **fiksuotą** „loopback“ `redirect_uri`. OmniRoute negali jo pakeisti —
+užregistruoja **fiksuotą** „loopback“ `redirect_uri`. 67router negali jo pakeisti —
 paslaugų teikėjas visada nukreipia naršyklę tuo pačiu programoje įrašytu adresu:
 
 | Paslaugų teikėjas | Fiksuotas atgalinio iškvietimo adresas, į kurį nukreipia paslaugų teikėjas |
@@ -205,7 +205,7 @@ paslaugų teikėjas visada nukreipia naršyklę tuo pačiu programoje įrašytu 
 | `xai-oauth`       | `http://127.0.0.1:56121/callback`                                          |
 | `grok-cli`        | `http://127.0.0.1:56122/callback`                                          |
 
-Čia `localhost` reiškia **įrenginį, kuriame veikia naršyklė**, o OmniRoute PKCE
+Čia `localhost` reiškia **įrenginį, kuriame veikia naršyklė**, o 67router PKCE
 atgalinio iškvietimo serveris klausosi **serverio** „loopback“ sąsajoje. Atidarius
 valdymo skydelį LAN adresu, pvz., `http://192.168.0.15:20128`, jie niekada
 nesusijungia: autorizavimo kodas pristatomas jūsų nešiojamojo kompiuterio
@@ -226,7 +226,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Reikia dviejų persiuntimų; persiuntus tik vieną, prisijungti vis tiek nepavyks:
 
 - **`20128`** (valdymo skydelio prievadas) padaro šaltinį tikru vietiniu `localhost`,
-  todėl OmniRoute apskritai paleidžia PKCE atgalinio iškvietimo serverį — naudojant
+  todėl 67router apskritai paleidžia PKCE atgalinio iškvietimo serverį — naudojant
   LAN šaltinį ši programos šaka niekada nepasiekiama.
 - **`1455`** (fiksuotas paslaugų teikėjo atgalinio iškvietimo prievadas) yra vieta,
   į kurią grąžinama naršyklė; jis turi būti tuneliu nukreiptas į serverio
@@ -350,7 +350,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (中文 (繁體))
+# 🐳 Docker Guide — 67router (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [搭配環境變數檔案](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [可用的設定檔](#available-profiles)
-- [當 OmniRoute 在 Docker 中執行時設定主機 CLI 工具](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [當 67router 在 Docker 中執行時設定主機 CLI 工具](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [正式環境 Compose](#production-compose)
 - [Dockerfile 階段](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## 可用的設定檔
 
-OmniRoute 提供適用於主要部署形式的 Compose 設定檔。請選擇符合您環境的設定檔。
+67router 提供適用於主要部署形式的 Compose 設定檔。請選擇符合您環境的設定檔。
 
 | 設定檔         | 服務             | 使用時機                                                                                                                      | 指令                                         |
 | -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute 提供適用於主要部署形式的 Compose 設定檔。請選擇符�
 
 > 可組合多個設定檔：`docker compose --profile cli --profile cliproxyapi up -d`。
 
-## OmniRoute 在 Docker 中執行時設定主機 CLI 工具
+## 67router 在 Docker 中執行時設定主機 CLI 工具
 
 `omniroute setup-codex`、`setup-claude`、`config set <tool>`，以及儀表板上的
 **儲存設定**按鈕，都會寫入類似 `~/.codex/*.config.toml` 的檔案。這些路徑
@@ -103,11 +103,11 @@ OmniRoute 提供適用於主要部署形式的 Compose 設定檔。請選擇符�
 執行）；主機上的 CLI 永遠不會讀取該位置，而且容器一旦重新建立，
 其中的內容就會被捨棄。
 
-OmniRoute 會偵測這種情況並拒絕寫入，同時提供操作指示，而不會回報一個
+67router 會偵測這種情況並拒絕寫入，同時提供操作指示，而不會回報一個
 實際上無法使用的成功結果：CLI 會以 `2` 結束，而 API 則會回應 `422`，
 並附帶 `containerEphemeralTarget: true`。
 
-### 建議方式：在主機上執行 CLI，在 Docker 中執行 OmniRoute
+### 建議方式：在主機上執行 CLI，在 Docker 中執行 67router
 
 容器負責提供 API；CLI 則負責設定主機上的工具。
 
@@ -136,7 +136,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-繫結掛載能讓該路徑值得信任：OmniRoute 會讀取
+繫結掛載能讓該路徑值得信任：67router 會讀取
 `/proc/self/mountinfo`，並允許寫入已掛載的路徑（以及子目錄為掛載點的
 目錄，而上述 `/host-home` 正是這種結構），同時仍會拒絕寫入未掛載的
 路徑。
@@ -177,7 +177,7 @@ volumes:
 
 ## Redis Sidecar
 
-OmniRoute 仰賴 Redis 支援分散式速率限制器與共用快取。`redis` 服務在 `docker-compose.yml` 中**一律會定義**（不受任何 profile 限制），並會與任何其他 profile 一同啟動。
+67router 仰賴 Redis 支援分散式速率限制器與共用快取。`redis` 服務在 `docker-compose.yml` 中**一律會定義**（不受任何 profile 限制），並會與任何其他 profile 一同啟動。
 
 | 詳細資料             | 值                                      |
 | -------------------- | --------------------------------------- |
@@ -345,26 +345,25 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 除了 [ENVIRONMENT.md](../reference/ENVIRONMENT.md) 中記錄的預設值之外，在 Docker 下執行時，以下變數最為重要：
 
-| 變數                          | 用途                                                                                                                                                                                                                      | 預設值                 |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| `OMNIROUTE_WS_BRIDGE_SECRET`  | WebSocket 橋接器的共用密鑰。**生產環境中為必填** — 請設定為高強度隨機字串。                                                                                                                                               | 未設定（必須提供）     |
-| `REDIS_URL`                   | 速率限制器／快取後端的連線字串                                                                                                                                                                                            | `redis://redis:6379`   |
-| `REDIS_PORT`                  | 隨附 Redis 容器的主機端連接埠                                                                                                                                                                                             | `6379`                 |
-| `REDIS_BIND_HOST`             | 隨附 Redis 連接埠所發布至的主機介面（除非您新增 AUTH，否則使用迴路介面）                                                                                                                                                  | `127.0.0.1`            |
-| `AUTO_UPDATE_HOST_REPO_DIR`   | 掛載至 `cli` profile 中 `/workspace/omniroute` 的主機路徑，用於自我更新工作流程                                                                                                                                           | `.`（目前目錄）        |
-| `OMNIROUTE_MEMORY_MB`         | Docker 獨立伺服器執行階段的 Node 堆積上限；會覆寫上述映像檔預設值。程式設計代理：`8192`+（請參閱[執行階段 RAM](#runtime-ram-for-coding-agents)）。                                                                        | `1024`                 |
-| `DASHBOARD_PORT` / `API_PORT` | 覆寫儀表板 (20128) 與 API (20129) 的公開連接埠                                                                                                                                                                            | `20128` / `20129`      |
-| `APP_BIND_HOST`               | docker-compose 用來發布儀表板／API／即時 WS 連接埠的主機介面。當 `REQUIRE_API_KEY=false`（預設值）時，`0.0.0.0` 會將匿名 `/v1` Proxy 公開至區域網路 — 僅應在 `REQUIRE_API_KEY=true` 或前方設有反向 Proxy 時擴大存取範圍。 | `127.0.0.1`            |
-| `CLIPROXY_BIND_HOST`          | docker-compose 用來發布 `cliproxyapi` sidecar 的主機介面 — 其資料磁碟區包含提供者憑證。                                                                                                                                   | `127.0.0.1`            |
-| `OMNIROUTE_PLUGINS_DIR`       | 執行階段外掛掃描器讀取及安裝外掛的目錄。當外掛透過繫結掛載時，請設定此變數：預設值會跟隨 `HOME`，而映像檔不一定會匯出該變數。                                                                                             | `~/.omniroute/plugins` |
-| `OMNIROUTE_BASE_PATH`         | 應用程式發布於反向 Proxy 後方時的 URL 子路徑（例如 `/omniroute`）                                                                                                                                                         | _(空白 = 根目錄)_      |
-| `NEXT_PUBLIC_BASE_URL`        | 包含子路徑的公開瀏覽器來源（例如 `https://host/omniroute`）                                                                                                                                                               | 未設定                 |
-| `PROD_DASHBOARD_PORT`         | `docker-compose.prod.yml` 的主機端儀表板連接埠                                                                                                                                                                            | `20130`                |
-| `CLIPROXYAPI_PORT`            | `cliproxyapi` sidecar 的主機端連接埠                                                                                                                                                                                      | `8317`                 |
+| 變數                          | 用途                                                                                                                                                                                                                      | 預設值               |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `OMNIROUTE_WS_BRIDGE_SECRET`  | WebSocket 橋接器的共用密鑰。**生產環境中為必填** — 請設定為高強度隨機字串。                                                                                                                                               | 未設定（必須提供）   |
+| `REDIS_URL`                   | 速率限制器／快取後端的連線字串                                                                                                                                                                                            | `redis://redis:6379` |
+| `REDIS_PORT`                  | 隨附 Redis 容器的主機端連接埠                                                                                                                                                                                             | `6379`               |
+| `REDIS_BIND_HOST`             | 隨附 Redis 連接埠所發布至的主機介面（除非您新增 AUTH，否則使用迴路介面）                                                                                                                                                  | `127.0.0.1`          |
+| `AUTO_UPDATE_HOST_REPO_DIR`   | 掛載至 `cli` profile 中 `/workspace/omniroute` 的主機路徑，用於自我更新工作流程                                                                                                                                           | `.`（目前目錄）      |
+| `OMNIROUTE_MEMORY_MB`         | Docker 獨立伺服器執行階段的 Node 堆積上限；會覆寫上述映像檔預設值。程式設計代理：`8192`+（請參閱[執行階段 RAM](#runtime-ram-for-coding-agents)）。                                                                        | `1024`               |
+| `DASHBOARD_PORT` / `API_PORT` | 覆寫儀表板 (20128) 與 API (20129) 的公開連接埠                                                                                                                                                                            | `20128` / `20129`    |
+| `APP_BIND_HOST`               | docker-compose 用來發布儀表板／API／即時 WS 連接埠的主機介面。當 `REQUIRE_API_KEY=false`（預設值）時，`0.0.0.0` 會將匿名 `/v1` Proxy 公開至區域網路 — 僅應在 `REQUIRE_API_KEY=true` 或前方設有反向 Proxy 時擴大存取範圍。 | `127.0.0.1`          |
+| `CLIPROXY_BIND_HOST`          | docker-compose 用來發布 `cliproxyapi` sidecar 的主機介面 — 其資料磁碟區包含提供者憑證。                                                                                                                                   | `127.0.0.1`          |
+| `OMNIROUTE_BASE_PATH`         | 應用程式發布於反向 Proxy 後方時的 URL 子路徑（例如 `/omniroute`）                                                                                                                                                         | _(空白 = 根目錄)_    |
+| `NEXT_PUBLIC_BASE_URL`        | 包含子路徑的公開瀏覽器來源（例如 `https://host/omniroute`）                                                                                                                                                               | 未設定               |
+| `PROD_DASHBOARD_PORT`         | `docker-compose.prod.yml` 的主機端儀表板連接埠                                                                                                                                                                            | `20130`              |
+| `CLIPROXYAPI_PORT`            | `cliproxyapi` sidecar 的主機端連接埠                                                                                                                                                                                      | `8317`               |
 
 ## 子路徑上的反向代理（Traefik / nginx）
 
-Next.js 的 `basePath` 會被編譯進獨立套件中。OmniRoute 會將建置時寫入的值記錄在應用程式根目錄的哨兵檔案中（於 `npm run build` 期間寫入；由 `scripts/docker/ensure-docker-base-path.mjs` 讀取），並在容器啟動時將其與 `OMNIROUTE_BASE_PATH` 比較。當兩者不同，且映像是針對網域根目錄建置時，進入點會在 `node dev/run-standalone.mjs` 執行前，重寫獨立套件資訊清單、內嵌的 `basePath`/`assetPrefix` 常值（Next 16 僅從 `assetPrefix` 產生 SSR 資產 URL，因此修補程式會將子路徑同步至其中）、建置時寫入的 `/_next/static` 資產 URL（用戶端參照資訊清單、媒體匯入、預先算繪的錯誤頁面），以及用戶端的 `process.env` 墊片。
+Next.js 的 `basePath` 會被編譯進獨立套件中。67router 會將建置時寫入的值記錄在應用程式根目錄的哨兵檔案中（於 `npm run build` 期間寫入；由 `scripts/docker/ensure-docker-base-path.mjs` 讀取），並在容器啟動時將其與 `OMNIROUTE_BASE_PATH` 比較。當兩者不同，且映像是針對網域根目錄建置時，進入點會在 `node dev/run-standalone.mjs` 執行前，重寫獨立套件資訊清單、內嵌的 `basePath`/`assetPrefix` 常值（Next 16 僅從 `assetPrefix` 產生 SSR 資產 URL，因此修補程式會將子路徑同步至其中）、建置時寫入的 `/_next/static` 資產 URL（用戶端參照資訊清單、媒體匯入、預先算繪的錯誤頁面），以及用戶端的 `process.env` 墊片。
 
 ### Compose 建置（建議）
 
@@ -412,7 +411,7 @@ Docker 健康檢查會探測輕量級的 `/healthz` 生命週期端點，並加�
 
 ## 搭配 Caddy 使用 Docker Compose（HTTPS 自動 TLS）
 
-OmniRoute 可透過 Caddy 的自動 SSL 配置安全地對外提供服務。請確保您網域的 DNS A 紀錄指向伺服器的 IP。
+67router 可透過 Caddy 的自動 SSL 配置安全地對外提供服務。請確保您網域的 DNS A 紀錄指向伺服器的 IP。
 
 ```yaml
 services:
@@ -443,11 +442,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy 會為上游容器設定標準轉送標頭。OmniRoute 使用
+Caddy 會為上游容器設定標準轉送標頭。67router 使用
 `NEXT_PUBLIC_BASE_URL` 作為 OAuth 回呼及所產生公開連結的標準公開來源；
 經驗證的儀表板寫入操作會使用同源請求，並搭配與工作階段綁定的 CSRF
 保護。僅應在進階部署中啟用 `OMNIROUTE_TRUST_PROXY`，亦即您有意讓
-OmniRoute 從受信任的轉送標頭推導公開來源，而不是使用明確設定。
+67router 從受信任的轉送標頭推導公開來源，而不是使用明確設定。
 
 ## Cloudflare Quick Tunnel
 
@@ -458,11 +457,11 @@ Docker 部署的儀表板支援在 `Dashboard → Endpoints` 上一鍵啟用 **C
 ### 通道注意事項
 
 - Quick Tunnel URL 是暫時性的，每次重新啟動後都會變更。
-- OmniRoute 或容器重新啟動後，不會自動還原 Quick Tunnel。需要時請從儀表板重新啟用。
+- 67router 或容器重新啟動後，不會自動還原 Quick Tunnel。需要時請從儀表板重新啟用。
 - 受管理安裝目前支援 Linux、macOS 及 Windows 的 `x64`／`arm64`。
 - 受管理 Quick Tunnel 預設使用 HTTP/2 傳輸，以避免在資源受限的容器環境中出現大量 QUIC UDP 緩衝區警告。如需不同的傳輸方式，請設定 `CLOUDFLARED_PROTOCOL=quic` 或 `auto`。
 - Docker 映像檔內含系統 CA 根憑證，並將其傳遞給受管理的 `cloudflared`，以避免通道在容器內啟動時發生 TLS 信任失敗。
-- 如果您希望 OmniRoute 使用現有的二進位檔，而不是下載新的二進位檔，請設定 `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`。
+- 如果您希望 67router 使用現有的二進位檔，而不是下載新的二進位檔，請設定 `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`。
 
 ## 映像檔標籤
 
@@ -475,7 +474,7 @@ Docker 部署的儀表板支援在 `Dashboard → Endpoints` 上一鍵啟用 **C
 
 ### 發布管道
 
-OmniRoute 針對穩定版本、作用中發布分支測試及開發組建，分別發布不同的 Docker 管道。
+67router 針對穩定版本、作用中發布分支測試及開發組建，分別發布不同的 Docker 管道。
 
 | 管道                            | 來源                         | 可變性           | 建議用途                                                                                     |
 | ------------------------------- | ---------------------------- | ---------------- | -------------------------------------------------------------------------------------------- |
@@ -528,7 +527,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-測試之前，請備份 OmniRoute 資料磁碟區或以繫結方式掛載的資料目錄。若要復原，請還原先前使用的穩定版本或摘要，並重新建立容器：
+測試之前，請備份 67router 資料磁碟區或以繫結方式掛載的資料目錄。若要復原，請還原先前使用的穩定版本或摘要，並重新建立容器：
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -548,7 +547,7 @@ docker compose up -d
 
 ## Docker 中的儀表板更新
 
-已發佈映像檔的容器無法自行取代。當 OmniRoute 偵測到它在容器內執行時（沒有 `.git` 簽出，也不是 npm 安裝），首頁儀表板的更新橫幅會顯示要執行的主機命令，而不是 npm/git 指示，並附有複製按鈕：
+已發佈映像檔的容器無法自行取代。當 67router 偵測到它在容器內執行時（沒有 `.git` 簽出，也不是 npm 安裝），首頁儀表板的更新橫幅會顯示要執行的主機命令，而不是 npm/git 指示，並附有複製按鈕：
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -561,7 +560,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 ### 使用主機觸發檔案進行一鍵更新
 
 若要讓 **立即更新** 保持可用，同時不掛載 `/var/run/docker.sock`（這會讓容器取得主機上的
-root 權限——請參閱上方的 `cli` 設定檔警告），請在 OmniRoute 服務上設定 `DOCKER_UPDATE_TRIGGER_FILE`，並在主機上執行監看程式：
+root 權限——請參閱上方的 `cli` 設定檔警告），請在 67router 服務上設定 `DOCKER_UPDATE_TRIGGER_FILE`，並在主機上執行監看程式：
 
 ```yaml
 services:
@@ -572,14 +571,14 @@ services:
       - ./data:/app/data
 ```
 
-該路徑必須位於 `DATA_DIR` 內（相對值會以它為基準解析）；其他任何路徑都會遭到拒絕。之後，**立即更新** 會將 `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` 寫入該檔案、回應 `202`，而儀表板會輪詢 `/api/system/version`，直到新版本上線後重新載入。在此模式下，OmniRoute 絕不會執行 shell 或 Docker 命令。與所有更新動作一樣，僅接受來自迴路位址/LAN 用戶端的請求。
+該路徑必須位於 `DATA_DIR` 內（相對值會以它為基準解析）；其他任何路徑都會遭到拒絕。之後，**立即更新** 會將 `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` 寫入該檔案、回應 `202`，而儀表板會輪詢 `/api/system/version`，直到新版本上線後重新載入。在此模式下，67router 絕不會執行 shell 或 Docker 命令。與所有更新動作一樣，僅接受來自迴路位址/LAN 用戶端的請求。
 
 透過繫結掛載的資料目錄，主機便有穩定的路徑可供監看。以下為 `systemd` 單元範例（請將 `/srv/omniroute` 調整為存放 compose 檔案及 `data/` 的目錄）：
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=監看 OmniRoute 儀表板更新請求
+Description=監看 67router 儀表板更新請求
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -591,7 +590,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=拉取並重新建立 OmniRoute 容器
+Description=拉取並重新建立 67router 容器
 
 [Service]
 Type=oneshot
@@ -610,13 +609,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## 可用性：預設 SQLite 僅支援單一複本
 
-標準 Docker / Kubernetes OmniRoute 是 **一個 Node 程序 + 一個 SQLite 寫入器**。此拓撲**不支援高可用性**。
+標準 Docker / Kubernetes 67router 是 **一個 Node 程序 + 一個 SQLite 寫入器**。此拓撲**不支援高可用性**。
 
-| 限制                                   | 後果                                                                                                                                                                                                                                                      |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 單一寫入器                             | **請勿**讓多個複本對同一個 SQLite 檔案執行。這會損毀資料庫。                                                                                                                                                                                              |
-| 重新建立 / 重新啟動 / HEALTHCHECK 終止 | 進行中的 SSE、儀表板工作階段與記憶體內狀態會**完全中斷**。每個已連線的用戶端都會斷線。在沒有端點可用的空窗期間，新請求會從反向 Proxy 收到 **`502 Bad Gateway: Unknown error`**，而不是 OmniRoute JSON——用戶端無法將此情況與提供者故障區分開來（#11015）。 |
-| 與 `/healthz` 使用相同的事件迴圈       | 忙碌的目錄或壓縮週期可能延遲探查；過短的逾時接著會重新啟動**唯一的**複本。                                                                                                                                                                                |
+| 限制                                   | 後果                                                                                                                                                                                                                                                     |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 單一寫入器                             | **請勿**讓多個複本對同一個 SQLite 檔案執行。這會損毀資料庫。                                                                                                                                                                                             |
+| 重新建立 / 重新啟動 / HEALTHCHECK 終止 | 進行中的 SSE、儀表板工作階段與記憶體內狀態會**完全中斷**。每個已連線的用戶端都會斷線。在沒有端點可用的空窗期間，新請求會從反向 Proxy 收到 **`502 Bad Gateway: Unknown error`**，而不是 67router JSON——用戶端無法將此情況與提供者故障區分開來（#11015）。 |
+| 與 `/healthz` 使用相同的事件迴圈       | 忙碌的目錄或壓縮週期可能延遲探查；過短的逾時接著會重新啟動**唯一的**複本。                                                                                                                                                                               |
 
 **探查矩陣**（另請參閱 [Kubernetes 探查建議](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)）：
 
@@ -719,7 +718,7 @@ IPv4/IPv6 連線能力、VPN 路由及已設定的代理伺服器都可能不同
 
 ### 優先使用連線專屬代理伺服器
 
-針對受影響的 Gemini 連線，使用 OmniRoute 的[個別連線代理伺服器設定](../ops/PROXY_GUIDE.md#4-level-proxy-system)，
+針對受影響的 Gemini 連線，使用 67router 的[個別連線代理伺服器設定](../ops/PROXY_GUIDE.md#4-level-proxy-system)，
 然後使用相同模型再次執行**測試連線**和一個小型請求。
 這可將路由變更限制在該連線的範圍內。請確認容器可連線至代理伺服器，
 且該連線確實選用了它。變更路由並不保證符合上游的區域資格。
@@ -786,7 +785,7 @@ networks:
 
 ## 重要注意事項
 
-- **SQLite WAL 模式：** 應允許 `docker stop` 完整執行，讓 OmniRoute 能將最新變更檢查點寫回 `storage.sqlite`。隨附的 Compose 檔案已設定 40 秒的停止寬限期。若直接執行映像檔，請保留 `--stop-timeout 40`。
+- **SQLite WAL 模式：** 應允許 `docker stop` 完整執行，讓 67router 能將最新變更檢查點寫回 `storage.sqlite`。隨附的 Compose 檔案已設定 40 秒的停止寬限期。若直接執行映像檔，請保留 `--stop-timeout 40`。
 - **`DISABLE_SQLITE_AUTO_BACKUP`：** 若例行／寫入前備份由外部管理，請設為 `true`。現有資料庫的移轉仍需建立其自身的持久安全快照，並使用大量移轉防護機制。
 - **資料持久化：** 請務必將磁碟區掛載至 `/app/data`，以便在容器重新啟動後保留資料庫、金鑰與設定。
 - **連接埠設定：** 覆寫 `PORT` 環境變數即可變更預設的 `20128` 連接埠。

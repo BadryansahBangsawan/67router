@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI शोध**, **मूळ Agent Client Protocol**, आणि
+67router **CLI शोध**, **मूळ Agent Client Protocol**, आणि
 **लेगसी stdio अडॅप्टर** वेगळे ठेवते. स्थापित बायनरी सापडल्याने तिचे
 प्रमाणीकरण, मॉडेल सुसंगतता किंवा प्रॉम्प्ट हाताळण्याची सज्जता सिद्ध होत नाही.
 
@@ -119,5 +119,3 @@ SIGKILL पाठवते. लेगसी प्रॉम्प्ट टा�
 - [एजंट प्रोटोकॉल](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI लॉन्च करार](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI साधने](../reference/CLI-TOOLS.md)
-- [A2A सर्व्हर](./A2A-SERVER.md)
-- [क्लाउड एजंट](./CLOUD_AGENT.md)

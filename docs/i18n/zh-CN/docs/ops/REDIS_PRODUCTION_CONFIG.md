@@ -6,7 +6,7 @@
 
 ## 概述
 
-Redis 是 OmniRoute 中的**可选软依赖项**——当 Redis 不可用时，应用程序会优雅降级（回退到内存实现）。在生产环境中，调优 Redis 可以降低四种不同工作负载的延迟：
+Redis 是 67router 中的**可选软依赖项**——当 Redis 不可用时，应用程序会优雅降级（回退到内存实现）。在生产环境中，调优 Redis 可以降低四种不同工作负载的延迟：
 
 | 工作负载     | 驱动                          | 客户端工厂                                       | 键模式                                         |
 | ------------ | ----------------------------- | ------------------------------------------------ | ---------------------------------------------- |
@@ -15,7 +15,7 @@ Redis 是 OmniRoute 中的**可选软依赖项**——当 Redis 不可用时，�
 | 配额存储     | `redisQuotaStore.ts`          | 独立的 `getRedisClient(url)` 单例                | `<prefix>quota:*`，可按实例配置                |
 | 预热熔断器   | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` 中的独立客户端        | `<prefix>warmup:cb:<connectionId>`             |
 
-所有四种工作负载共享同一个命名空间前缀，因此 OmniRoute 可以与其他应用共存于同一个 Redis 实例中（例如 `127.0.0.1:6379`）。请参阅[键命名空间](#key-namespacing)。
+所有四种工作负载共享同一个命名空间前缀，因此 67router 可以与其他应用共存于同一个 Redis 实例中（例如 `127.0.0.1:6379`）。请参阅[键命名空间](#key-namespacing)。
 
 ---
 
@@ -38,12 +38,12 @@ Redis 是 OmniRoute 中的**可选软依赖项**——当 Redis 不可用时，�
 
 ## 键命名空间
 
-OmniRoute 与主机上运行的其他服务共享 Redis 实例。如果没有命名空间，`auth:api_key:<sha256>` 或 `rl:*` 等键可能会与使用同一 Redis 的其他应用程序的键发生冲突（此实例在 `127.0.0.1:6379` 上运行 Redis，并与其他服务共存）。
+67router 与主机上运行的其他服务共享 Redis 实例。如果没有命名空间，`auth:api_key:<sha256>` 或 `rl:*` 等键可能会与使用同一 Redis 的其他应用程序的键发生冲突（此实例在 `127.0.0.1:6379` 上运行 Redis，并与其他服务共存）。
 
-将 `REDIS_KEY_PREFIX` 设置为非空字符串，为**每个** OmniRoute 键添加前缀：
+将 `REDIS_KEY_PREFIX` 设置为非空字符串，为**每个** 67router 键添加前缀：
 
 ```bash
-# .env — 所有 OmniRoute 键都会变成 omniroute:rl:*、omniroute:auth:*、omniroute:quota:*、omniroute:warmup:cb:*
+# .env — 所有 67router 键都会变成 omniroute:rl:*、omniroute:auth:*、omniroute:quota:*、omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -89,7 +89,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # 为操作系统页缓存预留空间
 maxmemory-policy allkeys-lru         # 在内存压力下淘汰过期的身份验证缓存条目
 
-# 持久化（可选 — 即使不启用，OmniRoute 也具备崩溃安全性）
+# 持久化（可选 — 即使不启用，67router 也具备崩溃安全性）
 save 300 1                           # 如果至少有 1 个键发生变化，则每 5 分钟至少创建一次快照
 appendonly no                        # 不需要 AOF；数据可以重新生成
 appendfsync no                       # 无 fsync 开销（RDB 已足够）

@@ -4,7 +4,7 @@
 
 ---
 
-Šajā ceļvedī ir aprakstīta Kiro (AWS mitināta MI programmēšanas asistenta) kontu pievienošana OmniRoute,
+Šajā ceļvedī ir aprakstīta Kiro (AWS mitināta MI programmēšanas asistenta) kontu pievienošana 67router,
 īpašu uzmanību pievēršot vairāku kontu vienlaicīgai izmantošanai bez sesiju konfliktiem.
 
 ---
@@ -22,10 +22,10 @@ pirmā konta pilnvaru.
 
 ---
 
-## Kā OmniRoute to atrisina (v3.8.0+)
+## Kā 67router to atrisina (v3.8.0+)
 
-Sākot ar v3.8.0, OmniRoute katras Kiro savienojuma importēšanas laikā izsauc
-`registerClient()` (AWS SSO OIDC). Tādējādi katrs OmniRoute savienojums iegūst savu
+Sākot ar v3.8.0, 67router katras Kiro savienojuma importēšanas laikā izsauc
+`registerClient()` (AWS SSO OIDC). Tādējādi katrs 67router savienojums iegūst savu
 atsevišķu OIDC klienta reģistrāciju. Tā kā katra klienta reģistrācija ir neatkarīga,
 viena konta atsvaidzināšana vai atkārtota autentificēšana neietekmē neviena cita
 konta atsvaidzināšanas pilnvaru.
@@ -60,7 +60,7 @@ savienojumi automātiski saņems savu klienta reģistrāciju.
 
 ### Priekšnosacījumi
 
-- OmniRoute v3.8.0 vai jaunāka versija.
+- 67router v3.8.0 vai jaunāka versija.
 - Darbojošs Kiro konts (e-pasts un parole vai pieteikšanās ar Google vai GitHub).
 - Pēc izvēles — otrs Kiro konts.
 
@@ -71,7 +71,7 @@ savienojumi automātiski saņems savu klienta reģistrāciju.
    - **Importēt pilnvaru** — ielīmējiet atsvaidzināšanas pilnvaru, kas sākas ar `aorAAAAAG`.
    - **API atslēga** — ielīmējiet ilgtermiņa Kiro / CodeWhisperer API atslēgu.
    - **Pieteikšanās ar Google / GitHub** — pabeidziet OAuth plūsmu pārlūkprogrammā.
-   - **Automātiskā importēšana** — noklikšķiniet uz pogas; OmniRoute nolasa akreditācijas datus no
+   - **Automātiskā importēšana** — noklikšķiniet uz pogas; 67router nolasa akreditācijas datus no
      lokālās kiro-cli datubāzes vai `~/.aws/sso/cache`.
 3. Savienojums tiek saglabāts. Atsvaidzināšanas pilnvaru plūsmas automātiski reģistrē atsevišķu
    OIDC klientu. API atslēgu plūsmas validē atslēgu ar AWS un nesaglabā atsvaidzināšanas pilnvaru.
@@ -128,7 +128,7 @@ neizmanto OAuth atsvaidzināšanu, tādēļ novērš koplietotas OIDC sesijas an
 2. Izvēlieties **API atslēga**.
 3. Ielīmējiet API atslēgu un izvēlieties AWS reģionu: **Automātiski noteikt** (noklusējums), **ASV austrumi
    (Ziemeļvirdžīnija)** vai **Eiropa (Frankfurte)**.
-4. OmniRoute validē atslēgu un saglabā savienojumu, piesaistot to reģionam, kurā
+4. 67router validē atslēgu un saglabā savienojumu, piesaistot to reģionam, kurā
    atslēga darbojas.
 
 ### API
@@ -178,7 +178,7 @@ uz `https://q.<region>.amazonaws.com/generateAssistantResponse` — tostarp `us-
 ## OIDC klienta derīguma termiņš
 
 AWS SSO OIDC publisko klientu derīguma termiņš parasti beidzas pēc 90 dienām
-(`clientSecretExpiresAt`). Novērojamības nolūkos OmniRoute saglabā šo laikspiedolu laukā `providerSpecificData`.
+(`clientSecretExpiresAt`). Novērojamības nolūkos 67router saglabā šo laikspiedolu laukā `providerSpecificData`.
 Ja savienojuma atsvaidzināšana pārstāj darboties pēc aptuveni 90 dienām, atkārtoti importējiet
 savienojumu, lai iegūtu jaunu OIDC klienta reģistrāciju. Automātiska pārreģistrācija pēc
 derīguma termiņa beigām ir ieplānota kā turpmāks uzlabojums.
@@ -199,7 +199,7 @@ izmantojot AWS SSO OIDC.
 ### Importēšana neizdodas ar kļūdu "Pilnvaras validācija neizdevās"
 
 - Pārliecinieties, ka atsvaidzināšanas pilnvara sākas ar `aorAAAAAG`.
-- Pārliecinieties, ka OmniRoute var sasniegt `https://oidc.us-east-1.amazonaws.com` (vai konfigurētā
+- Pārliecinieties, ka 67router var sasniegt `https://oidc.us-east-1.amazonaws.com` (vai konfigurētā
   reģiona adresi). Ja izmantojat uzņēmuma starpniekserveri, iestatiet pakalpojumu sniedzēja līmeņa starpniekserveri sadaļā
   **Informācijas panelis → Iestatījumi → Starpniekserveri**.
 
@@ -207,7 +207,7 @@ izmantojot AWS SSO OIDC.
 
 - Pārliecinieties, ka atslēga ir Kiro / CodeWhisperer API atslēga, nevis atsvaidzināšanas pilnvara.
 - Pārliecinieties, ka AWS reģions atbilst atslēgai/kontam. Noklusējuma reģions ir `us-east-1`.
-- Atslēgai jāspēj izsaukt `ListAvailableProfiles`; pretējā gadījumā OmniRoute nevar
+- Atslēgai jāspēj izsaukt `ListAvailableProfiles`; pretējā gadījumā 67router nevar
   noteikt nepieciešamo `profileArn`.
 
 Informāciju par citām problēmām skatiet galvenajā failā [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

@@ -3,8 +3,9 @@ import { hasUnsafeModelIdSyntax } from "../utils/modelIdSafety.ts";
 /**
  * Rerank Provider Registry
  *
- * Defines providers that support the /v1/rerank endpoint.
- * Follows the Cohere rerank API request/response format (industry standard).
+ * Rerank models of each provider (Cohere request/response format). OmniRoute no longer
+ * serves /v1/rerank; the catalog still feeds /v1/models, provider validation and model
+ * discovery.
  *
  * API keys are stored in the same provider credentials system,
  * keyed by provider ID (e.g. "cohere", "together").
@@ -54,7 +55,7 @@ export const RERANK_PROVIDERS = {
 
   // Voyage AI is NOT Cohere-compatible: uses `top_k` (not `top_n`), rejects empty-string
   // documents, and returns `{data:[{relevance_score,index}]}` instead of `{results:[…]}`.
-  // The `voyage` format adapter in open-sse/handlers/rerank.ts handles both directions (#7809).
+  // Voyage uses its own request/response shape (#7809); the removed /v1/rerank handler adapted it.
   "voyage-ai": {
     id: "voyage-ai",
     baseUrl: "https://api.voyageai.com/v1/rerank",
@@ -116,8 +117,7 @@ export const RERANK_PROVIDERS = {
   },
 
   // DeepInfra rerank is NOT Cohere-shaped: POST /v1/inference/<MODEL> with {queries:[q],documents}
-  // returning {scores:[…]} (one score per document, positional). The `deepinfra` format adapter in
-  // open-sse/handlers/rerank.ts builds the per-model URL and maps scores → Cohere results (#5332).
+  // returning {scores:[…]} (one score per document, positional) (#5332).
   deepinfra: {
     id: "deepinfra",
     baseUrl: "https://api.deepinfra.com/v1/inference",

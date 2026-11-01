@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Slovenčina)
+# CLI Tools — 67router (Slovenčina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Posledná aktualizácia: 2026-08-23
 
-OmniRoute sa integruje s tromi kategóriami nástrojov CLI, ktoré sú rozdelené medzi tri samostatné stránky ovládacieho panela:
+67router sa integruje s tromi kategóriami nástrojov CLI, ktoré sú rozdelené medzi tri samostatné stránky ovládacieho panela:
 
-| Stránka        | Trasa                   | Koncept                                                                                 | Počet          |
-| -------------- | ----------------------- | --------------------------------------------------------------------------------------- | -------------- |
-| **CLI Code's** | `/dashboard/cli-code`   | Programovacie nástroje smerované na OmniRoute (Klient → CLI → OmniRoute → Poskytovateľ) | 26             |
-| **CLI Agents** | `/dashboard/cli-agents` | Autonómni agenti smerovaní na OmniRoute (rovnaký tok, širší rozsah)                     | 10             |
-| **ACP Agents** | `/dashboard/acp-agents` | Nástroje CLI, ktoré OmniRoute spúšťa ako backend cez stdio/ACP (opačný tok)             | pozri register |
+| Stránka        | Trasa                   | Koncept                                                                               | Počet          |
+| -------------- | ----------------------- | ------------------------------------------------------------------------------------- | -------------- |
+| **CLI Code's** | `/dashboard/cli-code`   | Programovacie nástroje smerované na 67router (Klient → CLI → 67router → Poskytovateľ) | 26             |
+| **CLI Agents** | `/dashboard/cli-agents` | Autonómni agenti smerovaní na 67router (rovnaký tok, širší rozsah)                    | 10             |
+| **ACP Agents** | `/dashboard/acp-agents` | Nástroje CLI, ktoré 67router spúšťa ako backend cez stdio/ACP (opačný tok)            | pozri register |
 
 Staršie trasy sa presmerujú prostredníctvom 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Staršie trasy sa presmerujú prostredníctvom 308: `/dashboard/cli-tools` → `
 CLI Code's / CLI Agents (tok spotreby):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (všetky smerujú na OmniRoute)
+           ▼  (všetky smerujú na 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute smeruje požiadavku k správnemu poskytovateľovi)
+           ▼  (67router smeruje požiadavku k správnemu poskytovateľovi)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (opačný tok spúšťania):
-    Požiadavka klienta → OmniRoute → spustí CLI cez stdio/ACP → odpoveď
+    Požiadavka klienta → 67router → spustí CLI cez stdio/ACP → odpoveď
 ```
 
 **Výhody:**
@@ -45,9 +45,9 @@ ACP Agents (opačný tok spúšťania):
 
 ## Automatická konfigurácia pomocou `setup-*`
 
-Konfiguráciu každého nástroja nemusíte písať ručne. OmniRoute poskytuje príkaz `setup-*`
+Konfiguráciu každého nástroja nemusíte písať ručne. 67router poskytuje príkaz `setup-*`
 pre každé podporované CLI, ktorý načíta **aktuálny** katalóg modelov zo spustenej
-inštancie OmniRoute (lokálnej alebo vzdialenej) a zapíše vlastnú konfiguráciu nástroja vo vašom počítači:
+inštancie 67router (lokálnej alebo vzdialenej) a zapíše vlastnú konfiguráciu nástroja vo vašom počítači:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Každý z nich podporuje `--remote <url> --api-key <key>` (konfigurácia lokálneho nástroja
-pre vzdialenú inštanciu OmniRoute), `--dry-run` (ukážka bez zápisu) a `--port`. Nástroje
+pre vzdialenú inštanciu 67router), `--dry-run` (ukážka bez zápisu) a `--port`. Nástroje
 bez automatického zisťovania modelov (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) používajú
 `--model <id>` (a `--yes` pri neinteraktívnom spustení). `setup-5dive` je jediný
 postup, ktorý nezapisuje do `$HOME`: konfiguruje flotilu agentov 5dive
@@ -77,9 +77,9 @@ ale nemá postup `setup-*`/`configure`.
 
 ### Spúšťanie týchto príkazov v kontajneri
 
-Príkaz `setup-*` spustený v kontajneri OmniRoute zapisuje do vlastného domovského
+Príkaz `setup-*` spustený v kontajneri 67router zapisuje do vlastného domovského
 adresára kontajnera, ktorý žiadne CLI hostiteľa nečíta a ktorý po odstránení
-kontajnera zmizne. OmniRoute túto situáciu rozpozná a namiesto zápisu skončí s kódom `2`
+kontajnera zmizne. 67router túto situáciu rozpozná a namiesto zápisu skončí s kódom `2`
 a zobrazí pokyny. Existujú dva podporované spôsoby ďalšieho postupu — nainštalovať CLI na hostiteľovi a
 použiť `omniroute connect` na pripojenie ku kontajneru alebo pripojiť konfiguračné adresáre pomocou bind mount a nastaviť
 `CLI_CONFIG_HOME` (profil compose `host`). Každý príkaz `setup-*`, ako aj
@@ -203,7 +203,7 @@ Autonómni agenti, ktorí sa zobrazujú v `/dashboard/cli-agents`:
 
 ## 3. ACP agenti (/dashboard/acp-agents)
 
-Táto stránka (premenovaná z `/dashboard/agents`) zobrazuje CLI, ktoré môže OmniRoute **spustiť** ako backendové vykonávacie mechanizmy prostredníctvom protokolu stdio/ACP. Katalóg sa spravuje samostatne v `src/lib/acp/registry.ts` a **nie je** rovnaký ako `CLI_TOOLS`.
+Táto stránka (premenovaná z `/dashboard/agents`) zobrazuje CLI, ktoré môže 67router **spustiť** ako backendové vykonávacie mechanizmy prostredníctvom protokolu stdio/ACP. Katalóg sa spravuje samostatne v `src/lib/acp/registry.ts` a **nie je** rovnaký ako `CLI_TOOLS`.
 
 ---
 
@@ -330,7 +330,7 @@ K dispozícii sú úplné preklady do PT-BR a EN. Ďalších 39 lokalizácií au
 
 ## 9. Rýchly štart
 
-### Krok 1 — Získajte API kľúč OmniRoute
+### Krok 1 — Získajte API kľúč 67router
 
 1. Otvorte `/dashboard/api-manager` → **Vytvoriť API kľúč**
 2. Pomenujte ho (napr. `cli-tools`) a vyberte všetky povolenia
@@ -394,7 +394,7 @@ cargo install smelt  # Založený na jazyku Rust
 ### Krok 4 — Nastavte globálne premenné prostredia
 
 ```bash
-# Univerzálny koncový bod OmniRoute
+# Univerzálny koncový bod 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Režim VS Code:**
 Nastavenia rozšírenia Cline → Poskytovateľ API: `OpenAI Compatible` → Základná URL: `http://localhost:20128/v1`
 
-Prípadne použite ovládací panel OmniRoute → **Nástroje CLI → Cline → Použiť konfiguráciu**.
+Prípadne použite ovládací panel 67router → **Nástroje CLI → Cline → Použiť konfiguráciu**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Prípadne použite ovládací panel OmniRoute → **Nástroje CLI → KiloCode → Použiť konfiguráciu**.
+Prípadne použite ovládací panel 67router → **Nástroje CLI → KiloCode → Použiť konfiguráciu**.
 
 ---
 
@@ -551,14 +551,14 @@ Po úprave reštartujte VS Code.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Použite túto možnosť, keď je VS Code Insiders nakonfigurovaný pre modely s vlastnými koncovými bodmi a chcete, aby OmniRoute fungoval bez vlastného poľa hlavičky.
+Použite túto možnosť, keď je VS Code Insiders nakonfigurovaný pre modely s vlastnými koncovými bodmi a chcete, aby 67router fungoval bez vlastného poľa hlavičky.
 
 **Odporúčané umiestnenie:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Príklad použitia tokenizovaného aliasu OmniRoute:**
+**Príklad použitia tokenizovaného aliasu 67router:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Použite túto možnosť, keď je VS Code Insiders nakonfigurovaný pre modely s
 
 **Poznámky:**
 
-- Nahraďte `sk-your-omniroute-key` kľúčom API vytvoreným v OmniRoute.
+- Nahraďte `sk-your-omniroute-key` kľúčom API vytvoreným v 67router.
 - Pole `url` by malo smerovať na `/api/v1/vscode/{token}/chat/completions`.
 - Pole `modelsUrl` by malo smerovať na `/api/v1/vscode/{token}/models`.
 - Ak klient podporuje vlastné hlavičky, uprednostnite štandardný spôsob s `/v1` a hlavičkou Bearer.
@@ -596,17 +596,17 @@ Použite túto možnosť, keď je VS Code Insiders nakonfigurovaný pre modely s
 # Prihláste sa do svojho účtu AWS/Kiro:
 kiro-cli login
 
-# Rozhranie CLI používa vlastné overovanie – OmniRoute nie je potrebný ako backend pre samotné Kiro CLI.
-# Používajte kiro-cli spolu s OmniRoute pre ostatné nástroje.
+# Rozhranie CLI používa vlastné overovanie – 67router nie je potrebný ako backend pre samotné Kiro CLI.
+# Používajte kiro-cli spolu s 67router pre ostatné nástroje.
 kiro-cli status
 ```
 
-Pre desktopovú aplikáciu **Kiro IDE** použite koncový bod MITM sprístupnený službou OmniRoute
+Pre desktopovú aplikáciu **Kiro IDE** použite koncový bod MITM sprístupnený službou 67router
 v časti `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. Interné CLI OmniRoute
+## 10. Interné CLI 67router
 
 Binárny súbor `omniroute` poskytuje príkazy na správu životného cyklu servera, nastavenie, diagnostiku a správu poskytovateľov. Vstupný bod: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Rozpoznávané premenné prostredia pre neinteraktívne nastavenie:
 | Premenná            | Účel                                                                    |
 | ------------------- | ----------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | Kľúč API poskytovateľa (prepojený s `--api-key` cez Commander `.env()`) |
-| `DATA_DIR`          | Prepísanie dátového adresára OmniRoute                                  |
+| `DATA_DIR`          | Prepísanie dátového adresára 67router                                   |
 
 Všetky ostatné neinteraktívne vstupy sa odovzdávajú ako príznaky, nie ako premenné prostredia:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ Príkaz doctor vykonáva tieto kontroly: `Config`, `Database`, `Storage/encrypti
 ### Správa poskytovateľov
 
 ```bash
-omniroute providers available                       # Katalóg poskytovateľov OmniRoute
+omniroute providers available                       # Katalóg poskytovateľov 67router
 omniroute providers available --search openai       # Filtrovať katalóg podľa ID/názvu/aliasu/kategórie
 omniroute providers available --category api-key    # Filtrovať podľa kategórie (api-key, oauth, free, ...)
 omniroute providers available --json                # Strojovo čitateľný formát JSON
@@ -684,7 +684,7 @@ omniroute providers remove <id|name> --yes
 Príkazy `providers add/import/auth/edit/remove` používajú primárne API, a preto fungujú voči
 aktívnemu lokálnemu alebo vzdialenému kontextu. Na zadanie prihlasovacích údajov použite
 `--credential-stdin` alebo `--credential-env`; `--dry-run --json` uvádza iba
-redigované informácie o prítomnosti/štruktúre. Príkaz `providers available` číta katalóg OmniRoute;
+redigované informácie o prítomnosti/štruktúre. Príkaz `providers available` číta katalóg 67router;
 `providers list/test/test-all/validate` zachovávajú svoje lokálne správanie SQLite a
 nevyžadujú spustený server.
 
@@ -728,7 +728,7 @@ sa namiesto prerušenia celého exportu alebo odhalenia pôvodnej chyby označí
 
 ### Ďalšie podpríkazy
 
-Ak nie je uvedené inak, tieto príkazy predpokladajú spustený server OmniRoute:
+Ak nie je uvedené inak, tieto príkazy predpokladajú spustený server 67router:
 
 ```bash
 omniroute status                       # Komplexný stav behu
@@ -736,7 +736,7 @@ omniroute logs                         # Streamovanie protokolov požiadaviek (-
 omniroute config list                  # Zobrazenie nakonfigurovaných nástrojov CLI
 
 omniroute provider list                # Zoznam dostupných poskytovateľov (alias príkazu providers list)
-omniroute provider add                 # Registrácia OmniRoute ako poskytovateľa v nástroji
+omniroute provider add                 # Registrácia 67router ako poskytovateľa v nástroji
 omniroute keys add | list | remove     # Správa kľúčov API
 omniroute models [provider]            # Zoznam modelov (--json, --search)
 omniroute combo list | switch | create | delete
@@ -750,7 +750,6 @@ omniroute cache                        # Stav vyrovnávacej pamäte
 omniroute cache clear                  # Vymazanie sémantickej vyrovnávacej pamäte a vyrovnávacej pamäte podpisov
 
 omniroute mcp status | restart         # Stav/reštart servera MCP
-omniroute a2a status | card            # Stav servera A2A/karta agenta
 
 omniroute tunnel list | create | stop  # Správa tunelov (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Kontrola/nastavenie premenných prostredia (dočasne)
@@ -786,7 +785,7 @@ omniroute completion                   # Generovanie dokončovania príkazov she
 | `/v1/audio/speech`         | Prevod textu na reč                     | ElevenLabs, OpenAI TTS                 |
 | `/v1/audio/transcriptions` | Prevod reči na text                     | Deepgram, AssemblyAI                   |
 
-Príklady pripravené na vloženie s tokenizovanou URL adresou OmniRoute:
+Príklady pripravené na vloženie s tokenizovanou URL adresou 67router:
 
 ```txt
 Príklad tokenu: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -805,7 +804,7 @@ Chat Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070
 
 | Chyba                                                 | Príčina                              | Riešenie                                                  |
 | ----------------------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
-| `Connection refused`                                  | OmniRoute nie je spustený            | `omniroute serve`                                         |
+| `Connection refused`                                  | 67router nie je spustený             | `omniroute serve`                                         |
 | `401 Unauthorized`                                    | Nesprávny kľúč API                   | Skontrolujte v `/dashboard/api-manager`                   |
 | `No combo configured`                                 | Žiadna aktívna kombinácia smerovania | Nastavte v `/dashboard/combos`                            |
 | CLI zobrazuje „not installed“                         | Binárny súbor nie je v PATH          | Skontrolujte pomocou `which <command>`                    |
@@ -813,7 +812,7 @@ Chat Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-070
 | Starý odkaz `/dashboard/cli-tools`                    | Záložka spred v3.8.6                 | Automaticky presmerované na `/dashboard/cli-code` (308)   |
 | Starý odkaz `/dashboard/agents`                       | Záložka spred v3.8.6                 | Automaticky presmerované na `/dashboard/acp-agents` (308) |
 
-## Správa politiky inferenčného kľúča pomocou OmniRoute CLI
+## Správa politiky inferenčného kľúča pomocou 67router CLI
 
 Použite autentifikovaný kontext správy (pozrite si [Vzdialený režim](../guides/REMOTE-MODE.md))
 na kontrolu alebo aktualizáciu existujúceho inferenčného kľúča podľa jeho ID:

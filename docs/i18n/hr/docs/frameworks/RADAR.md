@@ -41,7 +41,7 @@ ili vanjska integracija trenutačno dostupna.
 | Ponude za podržavatelje                   | Implementirano kao zaseban potpisani sažetak sadržaja dostupan samo uživo i stranica nadzorne ploče. Klijent ponovno provjerava zatvorenu shemu pogodnosti, čuva posljednju valjanu predmemoriju, filtrira istekle unose i izričito označava partnerske ponude.             |
 | Informacije i prepoznavanje podržavatelja | Implementirano kao strogo potpisani sažetak sadržaja dostupan samo uživo, s Radarovim ELO-om, činjeničnim podacima o svježini/trendu kataloga, provjerenom lokalnom značkom podržavatelja, stranicom nadzorne ploče i lokalnim CLI naredbama samo za status/sinkronizaciju. |
 | Plaćanja i transakcijska e-pošta          | Nije implementirano u OSS klijentu. Kupnja, donacija, pregled potvrda, oporavak i dostava pošte pripadaju privatnoj usluzi; dostupnost hostirane usluge i dalje ovisi o njezinoj nadziranoj implementaciji i konfiguraciji pružatelja.                                      |
-| Tok rada istraživačkog agenta             | Nije dio ovog izdanja klijenta. Sadržaj kuriranih sažetaka ostaje podatak na strani poslužitelja; u instalaciji OmniRoutea ne izvodi se nikakav autonomni istraživački agent.                                                                                               |
+| Tok rada istraživačkog agenta             | Nije dio ovog izdanja klijenta. Sadržaj kuriranih sažetaka ostaje podatak na strani poslužitelja; u instalaciji 67routera ne izvodi se nikakav autonomni istraživački agent.                                                                                                |
 
 ---
 
@@ -119,7 +119,7 @@ Kada je oboje uključeno, tijek sinkronizacije izgleda ovako:
    IP adrese za ručni pregled zloupotrebe; te tablice ne pohranjuju ni ključ ni IP adresu u izvornom obliku.
    Dnevnici pristupa infrastrukturi i šifrirani izlazni spremnik za isporuku zasebne su operativne
    granice.
-3. OmniRoute servisu Radar nikada ne šalje upite, odgovore, razgovore, vjerodajnice pružatelja, promet modela,
+3. 67router servisu Radar nikada ne šalje upite, odgovore, razgovore, vjerodajnice pružatelja, promet modela,
    vrijeme rada, latenciju ni lokalnu konfiguraciju pružatelja.
 4. Odgovor se provjerava, validira i lokalno predmemorira (pogledajte
    [Sigurnosni model](#security-model)). Radar ima točno četiri mrežna puta na strani poslužitelja:
@@ -243,13 +243,13 @@ koji ga već ima.
 ### Aktivacija od početka do kraja i vođeno postavljanje
 
 Privatna usluga sažetka i ovaj OSS klijent imaju namjerno usko definiranu granicu: usluga
-izdaje i provjerava ključ podržavatelja, dok lokalna instalacija OmniRoute šifrira ključ,
+izdaje i provjerava ključ podržavatelja, dok lokalna instalacija 67router šifrira ključ,
 sinkronizira potpisane artefakte na strani poslužitelja i vodi kroz postavljanje pružatelja usluga. Redoslijed potpomognute provjere jest:
 
 1. Nabavite novoizdani ili obnovljeni ključ putem postupka za suradnike, planova/naplate, postupka
    oporavka ili od ovlaštenog operatora privatnog poslužitelja. Nemojte lijepiti neobrađeni ključ u zapisnike,
    snimke zaslona, komentare problema ni argumente naredbenog retka.
-2. Omogućite zastavicu značajke `RADAR_ENABLED` u lokalnoj instalaciji OmniRoutea. Time se prikazuje korisničko
+2. Omogućite zastavicu značajke `RADAR_ENABLED` u lokalnoj instalaciji 67routera. Time se prikazuje korisničko
    sučelje, ali mreža ostaje neaktivna dok se ne spremi zasebna privola.
 3. Otvorite `/dashboard/radar`, zalijepite ključ i aktivirajte. Preglednik šalje jedan lokalni
    `POST /api/radar/settings` s `{ optIn: true, supporterKey }`; ključ se šifrira lokalno, a
@@ -314,7 +314,7 @@ valjani sve do ponovne sinkronizacije.
 ### Nadjačavanja varijablama okruženja prilagođena fork inačicama
 
 Dvije varijable okruženja omogućuju fork inačicama i korisnicima s vlastitim hostingom
-da klijent usmjere na vlastiti izvor umjesto na zadanu uslugu OmniRoute — pogledajte
+da klijent usmjere na vlastiti izvor umjesto na zadanu uslugu 67router — pogledajte
 [Kako samostalno hostati izvor](#how-to-self-host-a-feed) u nastavku:
 
 | Var                 | Svrha                                                                                                        |
@@ -469,7 +469,7 @@ Nadzorna ploča omogućuje četiri lokalne radnje:
 Objave kataloga upotrebljavaju `schemaVersion: 2`. `contextWindow` i svako od polja `tools`, `vision` i
 `thinking` neovisno su tipa `number | null` / `boolean | null`: `null` znači nepoznato, dok
 `false` znači da službeni izvor pružatelja, potvrđen prema D16, izričito navodi da mogućnost nije dostupna.
-Interne zastavice registra/specifikacije modela OmniRoute nikada se izravno ne promiču u činjenice feeda. Klijent
+Interne zastavice registra/specifikacije modela 67router nikada se izravno ne promiču u činjenice feeda. Klijent
 i dalje prihvaća snimke v1; budući da je stari alat za izgradnju upotrebljavao `false` kao zamjensku vrijednost za odsutnost, v1 `false`
 normalizira se u nepoznato, dok v1 `true` ostaje činjenična vrijednost. Nepoznate verzije sheme sigurno se odbijaju, a
 posljednja valjana predmemorija ostaje dostupna. Svaki model v2 s kontekstom/mogućnošću različitom od null mora imati
@@ -530,7 +530,7 @@ Lokalne obitelji Radar ruta u nastavku podržavaju korisničko sučelje unutar `
 | `/api/radar/local-model-state` | DELETE | Briše polja nadjačavanja koja se mogu uređivati, uz očuvanje postojeće nadgrobne oznake.                                                |
 
 **Strogo pravilo: ove rute nikad ne djeluju kao proxy za uslugu feeda.** Preglednik uvijek komunicira
-isključivo s lokalnim OmniRoute poslužiteljem. Četiri modula koja pristupaju usluzi Radar su
+isključivo s lokalnim 67router poslužiteljem. Četiri modula koja pristupaju usluzi Radar su
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (preporuke) i
 `src/lib/radar/offersSync.ts` (ponude) te `src/lib/radar/intelSync.ts` (Intel); svi se izvršavaju
 na strani poslužitelja, nikad na strani klijenta. Time se
@@ -573,7 +573,7 @@ Intel je potpisani artefakt dostupan putem `GET /v1/intel/latest`. Zatvoreni `Ra
 
 `syncRadarIntel()` primjenjuje isti poslužiteljski Bearer, vremensko ograničenje od 30 sekundi, ograničenje toka od 10 MiB, Ed25519 provjeru točnih bajtova, strogu shemu, zahtjev za vrijednost `live` u tijelu i zaglavlju, donju granicu verzije te očuvanje posljednje ispravne predmemorije kao i ponude. Nakon pohrane provjerene aktivne snimke klijent izvodi `radar:<sha256(supporter key)>`, pohranjuje samo taj jednosmjerni identitet i emitira namjenski događaj prepoznavanja `radar_supporter`. Njegova značka `radar-supporter` idempotentna je i dodjeljuje nula XP-a; nikada ne ažurira ljestvice poretka niti ponovno upotrebljava `token_share`. `/dashboard/radar/intel` prikazuje značku isključivo na temelju provjerenih metapodataka lokalne predmemorije.
 
-CLI izlaže `omniroute radar status` i `omniroute radar sync`. Obje naredbe komuniciraju isključivo s lokalnim OmniRoute API-jem. `status` izvodi `GET /api/radar/status` samo za čitanje; `sync` šalje jedan `POST /api/radar/sync-all` i ispisuje rezultat za svaki sažetak sadržaja. Nijedna naredba ne čita, ne prihvaća niti ispisuje ključ podržavatelja i nijedna ne kontaktira izravno uslugu Radar.
+CLI izlaže `omniroute radar status` i `omniroute radar sync`. Obje naredbe komuniciraju isključivo s lokalnim 67router API-jem. `status` izvodi `GET /api/radar/status` samo za čitanje; `sync` šalje jedan `POST /api/radar/sync-all` i ispisuje rezultat za svaki sažetak sadržaja. Nijedna naredba ne čita, ne prihvaća niti ispisuje ključ podržavatelja i nijedna ne kontaktira izravno uslugu Radar.
 
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: "Claude Code CLI — Configuration with OmniRoute"
+title: "Claude Code CLI — Configuration with 67router"
 version: 3.8.40
 lastUpdated: 2026-07-24
 ---
 
-# Claude Code CLI — Configuration with OmniRoute
+# Claude Code CLI — Configuration with 67router
 
-Point the **Claude Code** CLI (`claude`) at OmniRoute — local or a remote VPS —
+Point the **Claude Code** CLI (`claude`) at 67router — local or a remote VPS —
 with per-model profiles, mirroring the Codex setup.
 
 ---
@@ -14,15 +14,15 @@ with per-model profiles, mirroring the Codex setup.
 ## Quick start
 
 ```bash
-# Launch Claude Code against a local OmniRoute (auto-detects the active context)
+# Launch Claude Code against a local 67router (auto-detects the active context)
 omniroute launch
 
-# Against a remote OmniRoute (after `omniroute connect <host>`, this is automatic)
+# Against a remote 67router (after `omniroute connect <host>`, this is automatic)
 omniroute launch --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # Generate per-model profiles, then launch one
 omniroute setup-claude            # writes ~/.claude/profiles/<name>/settings.json
-omniroute launch --profile glm52  # Claude Code using glm/glm-5.2 via OmniRoute
+omniroute launch --profile glm52  # Claude Code using glm/glm-5.2 via 67router
 ```
 
 ---
@@ -35,7 +35,7 @@ endpoint with environment variables (it has no `--base-url` flag):
 | Variable                                     | Purpose                                                                                |
 | -------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `ANTHROPIC_BASE_URL`                         | Gateway root URL (Claude Code appends `/v1/messages`). **No `/v1` suffix.**            |
-| `ANTHROPIC_AUTH_TOKEN`                       | Sent as `Authorization: Bearer …` — use your OmniRoute access token / API key          |
+| `ANTHROPIC_AUTH_TOKEN`                       | Sent as `Authorization: Bearer …` — use your 67router access token / API key           |
 | `ANTHROPIC_API_KEY`                          | Alternative: sent as `x-api-key`. If both set, `ANTHROPIC_AUTH_TOKEN` wins             |
 | `ANTHROPIC_MODEL`                            | Force a specific model (overrides the `/model` picker default)                         |
 | `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY` | `1` → the native `/model` picker lists `claude*`/`anthropic*` models from `/v1/models` |
@@ -54,10 +54,10 @@ just works), health-checks the server, and execs `claude`.
 
 Claude Code's gateway model discovery only lists ids that begin with `claude`
 or `anthropic`, so with `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` the native
-`/model` picker normally shows **only** OmniRoute's Claude/Anthropic models — a
+`/model` picker normally shows **only** 67router's Claude/Anthropic models — a
 `kimi/kimi-k2.6` or `glm/glm-5.2` never appears, even though it routes fine.
 
-OmniRoute can mirror any enabled model (and combo) under a `claude/…` id so it
+67router can mirror any enabled model (and combo) under a `claude/…` id so it
 passes that filter and shows up in the picker:
 
 ```
@@ -66,7 +66,7 @@ glm/glm-5.2              →  claude/glm/glm-5.2         "GLM 5.2 (OmniRoute)"
 <combo "custo-otimizado"> →  claude/combo/custo-otimizado
 ```
 
-When you pick one of these in Claude Code, OmniRoute strips the `claude/` wrapper
+When you pick one of these in Claude Code, 67router strips the `claude/` wrapper
 back to the real id before routing — a genuine `claude/<real-claude-model>` id
 (the actual Claude OAuth provider) is always left untouched.
 
@@ -79,7 +79,7 @@ listed at all is still governed by `OMNIROUTE_DISABLE_THINKING_LEVEL_VARIANTS` �
 mirror never adds a variant the base catalog doesn't have.
 
 **This is off by default** and controlled by a three-level gate (most specific
-wins), so a plain OmniRoute never doubles its catalog for clients that don't use
+wins), so a plain 67router never doubles its catalog for clients that don't use
 Claude Code:
 
 | Level    | Where                                                                  |
@@ -111,8 +111,8 @@ for this instance, next to the discovery-alias info button, with a copy button:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
   },
 }
@@ -177,7 +177,7 @@ profile per model at `~/.claude/profiles/<name>/settings.json`, reusing the
 > active context), or export `ANTHROPIC_AUTH_TOKEN` yourself and run
 > `CLAUDE_CONFIG_DIR=~/.claude/profiles/<name> claude`.
 
-**Auto-sync after model discovery (opt-in).** OmniRoute can regenerate these same
+**Auto-sync after model discovery (opt-in).** 67router can regenerate these same
 `~/.claude/profiles/<name>/settings.json` files automatically whenever a provider model
 sync changes the live catalog — so new/renamed models get profiles without re-running the
 command. It is **off by default**: toggle it from the **CLI Code dashboard** ("CLI profile
@@ -188,7 +188,7 @@ changes your active/default Claude config, auth, or the `~/.claude/settings.json
 ### Generating + using profiles
 
 ```bash
-# Local OmniRoute
+# Local 67router
 omniroute setup-claude
 
 # Remote VPS (bakes the VPS URL into every profile)
@@ -212,7 +212,7 @@ omniroute launch --profile kimi-k27
 
 ## Model tiers (optional)
 
-Claude Code routes to capability tiers. Map each to an OmniRoute model via env /
+Claude Code routes to capability tiers. Map each to a 67router model via env /
 settings if you want different providers per tier:
 
 ```bash
@@ -248,7 +248,7 @@ v2.1.219+ and `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1`. Only `claude*` /
 **`400 Ambiguous model 'claude-…'`** — Claude Code always sends **unprefixed**
 model IDs (e.g. `claude-opus-4-8`), so when both the Claude Code (`cc/…`) and
 Claude (`claude/…`) providers are connected the bare id matches two routes and
-OmniRoute refuses to guess. Fix it either way: pin a prefixed id with
+67router refuses to guess. Fix it either way: pin a prefixed id with
 `ANTHROPIC_MODEL=cc/claude-opus-4-8`, or enable **Prefer Claude Code for
 unprefixed Claude models** — the toggle on the Claude provider page, or
 `OMNIROUTE_PREFER_CLAUDE_CODE_FOR_UNPREFIXED_CLAUDE_MODELS=true` (default off;

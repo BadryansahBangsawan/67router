@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge ir OmniRoute MITM (Man-in-the-Middle — starpnieka) starpniekserveris, kas pārtver HTTPS datplūsmu no IDE MI aģentiem un novirza to caur OmniRoute vienoto maršrutēšanas dzini. Tas atbalsta **10 IDE aģentus** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code un Trae (tiek izpētīts) — padarot OmniRoute par tirgū pieejamo MITM starpniekserveri ar visplašāko MI programmēšanas asistentu pārklājumu.
+AgentBridge ir 67router MITM (Man-in-the-Middle — starpnieka) starpniekserveris, kas pārtver HTTPS datplūsmu no IDE MI aģentiem un novirza to caur 67router vienoto maršrutēšanas dzini. Tas atbalsta **10 IDE aģentus** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code un Trae (tiek izpētīts) — padarot 67router par tirgū pieejamo MITM starpniekserveri ar visplašāko MI programmēšanas asistentu pārklājumu.
 
 **Informācijas paneļa atrašanās vieta:** `/dashboard/tools/agent-bridge`
 **Sānjoslas grupa:** Rīki (pēc Mākoņa aģentiem)
@@ -16,34 +16,34 @@ AgentBridge ir OmniRoute MITM (Man-in-the-Middle — starpnieka) starpniekserver
 
 ### Kas ir AgentBridge?
 
-Kad IDE aģents (piem., GitHub Copilot, Cursor, Claude Code) veic API izsaukumu, tas izveido savienojumu tieši ar upstream AI pakalpojumu sniedzēju (OpenAI, Anthropic u.c.). AgentBridge šo savienojumu pārķer caurspīdīgi TLS līmenī — neprasot nekādas aģenta konfigurācijas izmaiņas — un pārraksta pieprasījumu caur OmniRoute.
+Kad IDE aģents (piem., GitHub Copilot, Cursor, Claude Code) veic API izsaukumu, tas izveido savienojumu tieši ar upstream AI pakalpojumu sniedzēju (OpenAI, Anthropic u.c.). AgentBridge šo savienojumu pārķer caurspīdīgi TLS līmenī — neprasot nekādas aģenta konfigurācijas izmaiņas — un pārraksta pieprasījumu caur 67router.
 
 Tas nozīmē, ka jūs varat:
 
-- **Pāradresēt jebkuru aģentu uz jebkuru pakalpojumu sniedzēju**: Copilot sazinās ar OpenAI? Pāradresējiet to uz Anthropic Claude, Gemini vai jebkuru no OmniRoute 375 pakalpojumu sniedzējiem.
+- **Pāradresēt jebkuru aģentu uz jebkuru pakalpojumu sniedzēju**: Copilot sazinās ar OpenAI? Pāradresējiet to uz Anthropic Claude, Gemini vai jebkuru no 67router 375 pakalpojumu sniedzējiem.
 - **Lietot modeļu kartējumus**: `gemini-3-flash` → `claude-sonnet-4.7` caurspīdīgi apstrādātāja līmenī.
 - **Vērot visu aģentu trafiku**: katrs pārķertais pieprasījums tiek publicēts [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Lietot OmniRoute noturību**: kombinētā maršrutēšana, ķēdes pārtraucēji, rezerves maršruti un izmaksu izsekošana darbojas arī IDE aģentu trafikā.
+- **Lietot 67router noturību**: kombinētā maršrutēšana, ķēdes pārtraucēji, rezerves maršruti un izmaksu izsekošana darbojas arī IDE aģentu trafikā.
 
 ### Pozicionējums salīdzinājumā ar tirgu
 
-| Funkcija                | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ----------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity             |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot          |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)              |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex            |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE              |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries          |    —    |    ✓     |        —        |             ✓             |
-| Claude Code             |    —    |    —     |        ✓        |             ✓             |
-| Open Code               |    —    |    —     |        ✓        |             ✓             |
-| Trae                    |    —    |    —     |        —        |     🔍 Notiek izpēte      |
-| Informācijas paneļa UI  |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector       |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute maršrutēšana  |    ✗    |    ✗     |        ✗        |             ✓             |
-| Modeļu kartēšanas UI    |    ✗    |    ✗     |        ✗        |             ✓             |
-| Apiešanas saraksts      |    ✗    |    ✗     |        ✓        |             ✓             |
-| Upstream CA sertifikāts |    ✗    |    ✗     |        ✓        |             ✓             |
+| Funkcija                | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ----------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity             |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot          |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)              |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex            |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE              |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries          |    —    |    ✓     |        —        |            ✓             |
+| Claude Code             |    —    |    —     |        ✓        |            ✓             |
+| Open Code               |    —    |    —     |        ✓        |            ✓             |
+| Trae                    |    —    |    —     |        —        |     🔍 Notiek izpēte     |
+| Informācijas paneļa UI  |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector       |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router maršrutēšana   |    ✗    |    ✗     |        ✗        |            ✓             |
+| Modeļu kartēšanas UI    |    ✗    |    ✗     |        ✗        |            ✓             |
+| Apiešanas saraksts      |    ✗    |    ✗     |        ✓        |            ✓             |
+| Upstream CA sertifikāts |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (ports 443, CJS bērnprocess)
     │  nosaka mērķi pēc Host galvenes SNI
     │  ģenerē katram SNI atsevišķu TLS sertifikātu, ko parakstījusi AgentBridge CA
     ├── Atbilst apiešanas sarakstam? → TCP tiešā pārsūtīšana (bez atšifrēšanas)
-    ├── Atbilst mērķim? → fetch → OmniRoute maršrutētājs (ports 20128)
+    ├── Atbilst mērķim? → fetch → 67router maršrutētājs (ports 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() pieprasījuma ķermenim/galvenēm
     │               ├── TrafficBuffer.push() — publicē Traffic Inspector
@@ -209,7 +209,7 @@ Pirms IDE pieņems MITM savienojumu, operētājsistēmai ir jāuzticas AgentBrid
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -265,10 +265,10 @@ GitHub Copilot `/etc/hosts` ierakstu piemērs:
 
 Izmantojiet modeļu kartēšanas tabulu katra aģenta kartītē, lai definētu avota → mērķa kartējumus:
 
-| Avota modelis (aģenta vietējais) | Mērķa modelis (OmniRoute) |
-| -------------------------------- | ------------------------- |
-| `gpt-4o`                         | `claude-sonnet-4.7`       |
-| `*` (aizstājējzīme)              | `claude-haiku-4.7`        |
+| Avota modelis (aģenta vietējais) | Mērķa modelis (67router) |
+| -------------------------------- | ------------------------ |
+| `gpt-4o`                         | `claude-sonnet-4.7`      |
+| `*` (aizstājējzīme)              | `claude-haiku-4.7`       |
 
 Aizstājējzīme `*` kartē jebkuru neatpazītu modeli uz norādīto mērķi. Kartējumi tiek saglabāti tabulā `agent_bridge_mappings`.
 
@@ -281,7 +281,7 @@ Aizstājējzīme `*` kartē jebkuru neatpazītu modeli uz norādīto mērķi. Ka
 
 ### 3.5 Riska paziņojums
 
-AgentBridge pārtver akreditācijas datus (OAuth pilnvaras, API atslēgas), ko IDE izmanto, lai autentificētos pie augšupējiem pakalpojumu sniedzējiem. Pirms reģistrēšanas žurnālā tie tiek **maskēti** (skatiet §2.7), taču ir redzami OmniRoute MITM slānim. Katra aģenta pirmās aktivizēšanas laikā tiek parādīts aizverams riska paziņojuma modālais logs.
+AgentBridge pārtver akreditācijas datus (OAuth pilnvaras, API atslēgas), ko IDE izmanto, lai autentificētos pie augšupējiem pakalpojumu sniedzējiem. Pirms reģistrēšanas žurnālā tie tiek **maskēti** (skatiet §2.7), taču ir redzami 67router MITM slānim. Katra aģenta pirmās aktivizēšanas laikā tiek parādīts aizverams riska paziņojuma modālais logs.
 
 ### 3.6 Uzturēšana un diagnostika
 
@@ -401,7 +401,7 @@ Noteikšanai tiek izmantoti operētājsistēmai specifiski ceļi un bināro fail
 
 ### Izņēmumu saraksts sensitīviem resursdatoriem
 
-Izņēmumu saraksts nodrošina, ka finanšu iestāžu, OAuth/SSO nodrošinātāju un citu sensitīvu resursdatoru dati **nekad netiek atšifrēti**. To TLS datplūsma tiek pārsūtīta kā caurspīdīgs TCP tunelis — OmniRoute nekad neredz nešifrēto saturu.
+Izņēmumu saraksts nodrošina, ka finanšu iestāžu, OAuth/SSO nodrošinātāju un citu sensitīvu resursdatoru dati **nekad netiek atšifrēti**. To TLS datplūsma tiek pārsūtīta kā caurspīdīgs TCP tunelis — 67router nekad neredz nešifrēto saturu.
 
 Noklusējuma izņēmumu šabloni ietver:
 
@@ -452,7 +452,7 @@ Alternatīvi AgentBridge iestatījumos konfigurējiet neprivilēģētu portu un 
 
 Ja pēc AgentBridge palaišanas IDE rāda TLS kļūdas:
 
-1. Pārbaudiet, vai sertifikāts tika instalēts: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) vai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Pārbaudiet, vai sertifikāts tika instalēts: `security find-certificate -c "OmniRoute MITM CA"` (macOS) vai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Dažas lietotnes uztur savu uzticamības krātuvi (Firefox, Chrome operētājsistēmā Linux). Vēlreiz palaidiet „Trust Cert” un pārbaudiet NSS/Firefox specifisko sertifikātu krātuvi.
 3. Pēc uzticamības piešķiršanas restartējiet IDE — aktīvās TLS sesijas izmanto iepriekšējo uzticamības stāvokli.
 
@@ -503,7 +503,7 @@ Automātiskā noteikšana izmanto izplatītākos instalēšanas ceļus. Ja notei
 Ja AgentBridge pārtver pieprasījumus, bet tie visi neizdodas:
 
 1. Pārbaudiet, vai ceļā `/dashboard/providers` ir savienots vismaz viens nodrošinātājs
-2. Pārbaudiet OmniRoute servera žurnālus: `APP_LOG_LEVEL=debug` failā `.env`
+2. Pārbaudiet 67router servera žurnālus: `APP_LOG_LEVEL=debug` failā `.env`
 3. Pārbaudiet, vai `OMNIROUTE_BASE_URL` norāda uz pareizo maršrutētāja galapunktu (noklusējums: `http://127.0.0.1:20128`)
 
 ---

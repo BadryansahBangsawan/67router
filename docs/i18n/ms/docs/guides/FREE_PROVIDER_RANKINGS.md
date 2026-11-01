@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute menyusun kedudukan penyedia **percuma** berdasarkan kualiti model menggunakan **skor ELO Arena AI
+> **TL;DR**: 67router menyusun kedudukan penyedia **percuma** berdasarkan kualiti model menggunakan **skor ELO Arena AI
 > (gaya LMArena)**. Buka halaman **Kedudukan Penyedia Percuma** dalam
 > papan pemuka untuk melihat penyedia percuma yang menawarkan model paling berkuasa untuk tugasan anda —
 > secara keseluruhan atau ditapis mengikut kategori (pengekodan, semakan, dokumentasi, penyahpepijatan).
@@ -13,7 +13,7 @@
 
 ## Apa Itu
 
-OmniRoute mendaftarkan 375 pembekal, termasuk 155 entri katalog bertanda **free/no-auth**
+67router mendaftarkan 375 pembekal, termasuk 155 entri katalog bertanda **free/no-auth**
 (no-auth, OAuth peringkat percuma, atau kunci API peringkat percuma — lihat
 [Panduan Free Tiers](../getting-started/FREE-TIERS-GUIDE.md) dan direktori penuh
 [Free Tiers](../reference/FREE_TIERS.md)). Masalahnya: pembekal percuma sangat
@@ -129,9 +129,9 @@ dan `code` — daripada API papan pendahulu Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Setiap entri papan pendahulu
 mengandungi nama model, vendor, `score` ELO, selang keyakinan dan bilangan undian.
 
-Kategori papan pendahulu dipetakan kepada kategori tugas OmniRoute:
+Kategori papan pendahulu dipetakan kepada kategori tugas 67router:
 
-| Papan pendahulu Arena | Kategori tugas OmniRoute                          |
+| Papan pendahulu Arena | Kategori tugas 67router                           |
 | --------------------- | ------------------------------------------------- |
 | `text`                | `default`, `review`, `documentation`, `debugging` |
 | `code`                | `coding`                                          |
@@ -168,7 +168,7 @@ Penyegerakan **diaktifkan secara lalai**:
 
 - Ia dijalankan sekali semasa pelayan dimulakan dan kemudian mengikut pemasa berkala
   (`src/lib/arenaEloSync.ts`, disambungkan daripada `src/instrumentation-node.ts`).
-- Ia **tidak menyekat dan tidak pernah menyebabkan kegagalan kritikal** — jika pengambilan daripada sumber huluan gagal, OmniRoute terus
+- Ia **tidak menyekat dan tidak pernah menyebabkan kegagalan kritikal** — jika pengambilan daripada sumber huluan gagal, 67router terus
   berjalan dan kedudukan hanya memaparkan data sah terakhir (atau keadaan kosong).
 
 Dua pemboleh ubah persekitaran mengawalnya (didokumentasikan dalam
@@ -203,7 +203,7 @@ pemadanan fleksibel (`findMatchingIntelligence` dalam `src/lib/freeProviderRanki
 3. Padanan awalan (nama model papan pendahulu ialah awalan kepada ID registri).
 
 Pada bahagian penyegerakan, awalan vendor yang diketahui (`anthropic/`, `openai/`, `google/`, …)
-dibuang dan peta alias kecil mengembangkan nama kanonik kepada varian yang digunakan OmniRoute
+dibuang dan peta alias kecil mengembangkan nama kanonik kepada varian yang digunakan 67router
 secara dalaman, supaya model kekal boleh ditemukan di bawah sebarang nama.
 
 ### Cara penyedia diberi kedudukan

@@ -157,7 +157,7 @@ export async function runSetupZedCommand(opts = {}) {
   });
   if (guard !== 0) return guard;
 
-  printHeading("OmniRoute → Zed (openai_compatible)");
+  printHeading("67router → Zed (openai_compatible)");
   const current = readSettings(configPath);
 
   let out;
@@ -174,7 +174,7 @@ export async function runSetupZedCommand(opts = {}) {
         models = await fetchModels(baseUrl, apiKey);
       } catch (e) {
         printError(`Could not fetch models: ${e.message}`);
-        printInfo("Make sure OmniRoute is running and --remote/--api-key are correct.");
+        printInfo("Make sure 67router is running and --remote/--api-key are correct.");
         return 1;
       }
       if (only) models = models.filter((m) => only.some((f) => String(m.id).includes(f)));
@@ -214,13 +214,13 @@ export async function runSetupZedCommand(opts = {}) {
 export function registerSetupZed(program) {
   program
     .command("setup-zed")
-    .description("Add OmniRoute as an OpenAI-compatible provider in Zed's settings.json")
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key used to list models (never written to disk)")
+    .description("Add 67router as an OpenAI-compatible provider in Zed's settings.json")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key used to list models (never written to disk)")
     .option("--only <patterns>", "Comma-separated substrings — keep only matching model IDs")
     .option("--config-path <path>", "settings.json path (default: ~/.config/zed/settings.json)")
-    .option("--reset", "Remove the OmniRoute provider from settings.json")
+    .option("--reset", "Remove the 67router provider from settings.json")
     .option("--dry-run", "Print what would be written without touching the filesystem")
     .option(
       "--allow-container-write",

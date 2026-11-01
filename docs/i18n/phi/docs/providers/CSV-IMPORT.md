@@ -25,7 +25,7 @@ Nilalaktawan bilang header ang unang linya kung ang unang column nito ay ang lit
 Mag-download ng panimulang file mula sa import modal (**Download CSV template**). Halimbawa:
 
 ```csv
-# Pag-import ng provider sa OmniRoute (mga column ayon sa posisyon)
+# Pag-import ng provider sa 67router (mga column ayon sa posisyon)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

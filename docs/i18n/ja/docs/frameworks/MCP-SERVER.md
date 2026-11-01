@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (日本語)
+# 67router MCP Server Documentation (日本語)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## インストール
 
-OmniRoute MCPは組み込みです。次のコマンドで起動します。
+67router MCPは組み込みです。次のコマンドで起動します。
 
 ```bash
 omniroute --mcp
@@ -82,7 +82,7 @@ Claude Desktop、Cursor、Cline、および互換性のある MCP クライア�
 | `omniroute_switch_combo`        | `write:combos`        | コンボを有効化または無効化                                                                                                  |
 | `omniroute_create_combo`        | `write:combos`        | 既存のコンボ API を通じて検証済みのコンボを作成                                                                             |
 | `omniroute_check_quota`         | `read:quota`          | 使用済み／合計クォータ、残量の割合、リセット時刻、トークンの状態                                                            |
-| `omniroute_route_request`       | `execute:completions` | OmniRoute のルーティングを通じてチャット補完を送信                                                                          |
+| `omniroute_route_request`       | `execute:completions` | 67router のルーティングを通じてチャット補完を送信                                                                           |
 | `omniroute_cost_report`         | `read:usage`          | 期間別（セッション／日／週／月）のコストレポート                                                                            |
 | `omniroute_list_models_catalog` | `read:models`         | 機能、ステータス、価格を含む完全なモデルカタログ                                                                            |
 | `omniroute_radar_catalog`       | `read:radar`          | ローカルで署名された Radar カタログ（プロバイダー／ファミリーによるフィルターは任意）                                       |
@@ -145,7 +145,7 @@ CCR エントリはインメモリ専用であり、再起動すると消失し�
 
 ### MCP アクセシビリティツリーフィルター (v3.8.0)
 
-上記の圧縮ツールとは別に、OmniRoute には、MCP のブラウザ／アクセシビリティツールの**ツール結果**をエージェントへ返す前に圧縮する、実行後フィルターが含まれています。このフィルター自体はツールではありません。冗長なアクセシビリティツリーまたはブラウザスナップショットのテキスト（2,000文字以上）を含む任意のツール結果に対して透過的に実行されます。
+上記の圧縮ツールとは別に、67router には、MCP のブラウザ／アクセシビリティツールの**ツール結果**をエージェントへ返す前に圧縮する、実行後フィルターが含まれています。このフィルター自体はツールではありません。冗長なアクセシビリティツリーまたはブラウザスナップショットのテキスト（2,000文字以上）を含む任意のツール結果に対して透過的に実行されます。
 
 主な動作:
 
@@ -234,17 +234,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 上記のMCPツール一覧（`countUniqueMcpTools()`で算出された110個の一意なツール）は、意図的に
 ランタイムのルーティング、キャッシュ、圧縮、メモリ、スキル、プロキシ、コンテキストソース操作に限定されています。v3.8.0では、
 隣接する2つのフレームワークがMCPサーバーとともに提供されており、それぞれ個別にドキュメント化されています。
-
-### クラウドエージェント
-
-クラウドエージェントは、LLMプロバイダーに使用されるものと同じ接続モデルを通じて
-OmniRouteに統合された、プロセス外のAIコーディングエージェント（codex-cloud、cursor-cloud、devin、jules）です。これらは
-独自のRESTインターフェース（`/api/v1/agents/*`）を介して公開され、MCPツールカタログには**含まれません**
-— クラウドエージェントを呼び出してもMCPスコープは消費されません。
-
-- 実装：`src/lib/cloudAgent/`（`registry.ts`、`agents/codex.ts`、`agents/cursor.ts`、`agents/devin.ts`、`agents/jules.ts`）。
-- ライフサイクル：`createTask`、`getStatus`、`approvePlan`、`sendMessage`、`listSources`。
-- ドキュメント：[docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)。
 
 ### ガードレール
 
@@ -415,8 +404,6 @@ API キーの `manage`、MCP ツールの `read:compression`、および
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                           |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                    |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                      |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                  |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                     |
 | `read:obsidian`       | 13個の読み取りツール — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9個の書き込みツール — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                   |
@@ -469,7 +456,7 @@ HTTP経由の完全な`manage`/`admin`キー、およびすべてのstdio/ロー
 
 | 変数                                    | デフォルト                         | 用途                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | :-------------------------------------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | MCP サーバーが OmniRoute の内部 API を呼び出す際に使用するベース URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | MCP サーバーが 67router の内部 API を呼び出す際に使用するベース URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `OMNIROUTE_API_KEY`                     | （空）                             | 内部 API 呼び出しに `Authorization: Bearer` として転送される API キー                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false`（`"true"` の場合のみ有効） | 有効にすると、必要なスコープがない場合はツール呼び出しを拒否し、監査ログに `scope_denied:<reason>` を記録します。また、このフラグに関係なく、キーごとの Authorization ヘッダーから解決された HTTP/SSE 呼び出し元（`source === "authInfo"`）が完全な `manage`/`admin` スコープを持たない場合（たとえば、限定的な `mcp:connect` バイパススコープしか持たないキー）にも、適用が強制されます。そのため、このデフォルト設定が安全なのはローカル/stdio の単一オペレーター構成のみであり、リモートの非ループバックアクセスには決して使用しないでください |
 | `OMNIROUTE_MCP_SCOPES`                  | （空）                             | デフォルトで「利用可能」と見なされるスコープのカンマ区切り許可リスト（呼び出し元が独自のスコープを指定しない場合に使用）                                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -572,7 +559,6 @@ stdioトランスポートは、5秒ごとに稼働状態を `${DATA_DIR}/runtim
 | `open-sse/mcp-server/tools/skillTools.ts`                                | スキルツール定義（4 ツール）                                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion コンテキストソースツール定義（6 ツール）                          |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | ゲーミフィケーションツール定義（8 ツール）                               |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | プラグイン登録および管理ツール（8 ツール）                               |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` エンドポイント                                         |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` エンドポイント                                          |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE トランスポートルート                                  |

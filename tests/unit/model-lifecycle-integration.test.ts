@@ -121,7 +121,9 @@ test("unified catalog suppresses stale OpenAI chat rows but retains typed media"
   // this file guards (#8627: stale chat rows suppressed, typed media retained)
   // is unchanged — only the "static rows survive a sync" expectation moved.
   assert.equal(ids.has("openai/gpt-5.6-sol"), false);
-  assert.equal(body.data.find((item) => item.id === "openai/gpt-image-2")?.type, "image");
+  // Image models are no longer listed (67router removed /v1/images/*); transcription stays.
+  assert.equal(ids.has("openai/gpt-image-2"), false);
+  assert.equal(body.data.find((item) => item.id === "openai/whisper-1")?.type, "audio");
 });
 
 test("chat-only provider catalog excludes OpenAI lifecycle and media models", async () => {

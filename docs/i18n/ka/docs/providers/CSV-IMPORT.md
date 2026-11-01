@@ -25,7 +25,7 @@ Dashboard → Providers → **ფაილიდან იმპორტი** �
 ჩამოტვირთეთ საწყისი ფაილი იმპორტის მოდალური ფანჯრიდან (**CSV შაბლონის ჩამოტვირთვა**). მაგალითი:
 
 ```csv
-# OmniRoute-ის პროვაიდერების იმპორტი (პოზიციური სვეტები)
+# 67router-ის პროვაიდერების იმპორტი (პოზიციური სვეტები)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

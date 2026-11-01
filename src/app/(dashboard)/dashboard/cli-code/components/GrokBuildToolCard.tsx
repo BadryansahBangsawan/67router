@@ -479,7 +479,7 @@ export default function GrokBuildToolCard({
               value={effectiveKeyId}
               onChange={(event) => setSelectedKeyId(event.target.value)}
             >
-              <option value="">Use the OmniRoute default key</option>
+              <option value="">Use the 67router default key</option>
               {apiKeys.map((key) => (
                 <option key={key.id} value={key.id}>
                   {key.key || key.name || key.id}
@@ -522,7 +522,7 @@ export default function GrokBuildToolCard({
           </div>
 
           <div className="my-2 h-px bg-border/50" />
-          <div className="mb-2 text-right text-[11px] font-medium uppercase tracking-wider text-text-muted">
+          <div className="mb-2 text-right text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
             Subagent model overrides
           </div>
           {SUBAGENTS.map((type) => (
@@ -533,7 +533,7 @@ export default function GrokBuildToolCard({
               <Icon
                 name="arrow_forward"
                 size={14}
-                className="text-border transition-colors group-hover:text-primary"
+                className="text-border transition-colors group-hover:text-text-main"
               />
               <Button
                 variant="outline"

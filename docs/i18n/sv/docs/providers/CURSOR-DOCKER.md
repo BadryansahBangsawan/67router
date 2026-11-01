@@ -4,7 +4,7 @@
 
 ---
 
-När OmniRoute körs i Docker misslyckas de äldre flödena **Importera från Cursor IDE** /
+När 67router körs i Docker misslyckas de äldre flödena **Importera från Cursor IDE** /
 `cursor-agent` eftersom containern inte kan se värddatorns Cursor-installation.
 Använd **Logga in med Cursor** (deep-control PKCE) i stället.
 
@@ -14,7 +14,7 @@ Använd **Logga in med Cursor** (deep-control PKCE) i stället.
    `~/.config/Cursor/User/globalStorage/state.vscdb` _inuti_ containern.
    I Docker Desktop för macOS monteras värddatorns IDE-databas inte som standard,
    och containerns operativsystem är Linux även när värddatorn kör Darwin.
-2. **Ingen `cursor-agent`-binärfil** — Officiella OmniRoute-avbilder innehåller
+2. **Ingen `cursor-agent`-binärfil** — Officiella 67router-avbilder innehåller
    inte `cursor-agent`. Tillgängliga modeller körde tidigare
    `cursor-agent --list-models` i ett skal och föll tillbaka till en statisk katalog.
 3. **Fel binärfil** — Bindmontera **inte** en `cursor-agent` för macOS i en
@@ -24,11 +24,11 @@ Använd **Logga in med Cursor** (deep-control PKCE) i stället.
 
 1. Öppna **Kontrollpanel → Leverantörer → Cursor**.
 2. Välj fliken **Logga in med Cursor**.
-3. Klicka på **Logga in med Cursor** — OmniRoute öppnar
+3. Klicka på **Logga in med Cursor** — 67router öppnar
    `https://cursor.com/loginDeepControl?…` i webbläsaren på din **värddator**.
 4. Godkänn inloggningen i webbläsaren och återgå sedan till kontrollpanelen.
-   OmniRoute avfrågar `api2.cursor.sh/auth/poll` tills token erhålls.
-5. OmniRoute lagrar token för både **åtkomst och uppdatering** och uppdaterar dem via
+   67router avfrågar `api2.cursor.sh/auth/poll` tills token erhålls.
+5. 67router lagrar token för både **åtkomst och uppdatering** och uppdaterar dem via
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Den här metoden kräver inte Cursor IDE eller `cursor-agent` inuti containern.
@@ -37,10 +37,10 @@ Den här metoden kräver inte Cursor IDE eller `cursor-agent` inuti containern.
 
 Med en inloggad anslutning föredrar **Tillgängliga modeller/Automatisk synkronisering**
 Cursors HTTP-katalog `AiService/AvailableModels` med anslutningens Bearer-token.
-Om det misslyckas försöker OmniRoute fortfarande använda värddatorns
+Om det misslyckas försöker 67router fortfarande använda värddatorns
 `cursor-agent` (när den finns) och därefter den statiska registerbasen.
 
-OmniRoute visar alltid **`auto`** i katalogen (visningsnamn ”Auto”) samt
+67router visar alltid **`auto`** i katalogen (visningsnamn ”Auto”) samt
 routerlägen i OpenCodex-stil: **`auto-cost`**, **`auto-balance`** och
 **`auto-intelligence`**. I protokollet motsvarar dessa Cursors `default`-modell
 (med en `optimization`-ModelParameter för de tre varianterna). Föredra
@@ -92,7 +92,7 @@ token (enbart IDE-import krävs inte längre).
 ## Tomma turer/slut på användningsutrymme
 
 När Cursor accepterar en körning men inte returnerar någon assistenttext (vilket
-är vanligt när premiumanvändningen är förbrukad) visar OmniRoute ett användbart
+är vanligt när premiumanvändningen är förbrukad) visar 67router ett användbart
 **429** (kvotinformation) eller **502** med vägledning — inte bara ”Leverantören
 returnerade tomt innehåll”. Strömningsfel som
 `not_found: AI Model Not Found` (användningsperioden är förbrukad) klassificeras
@@ -103,7 +103,7 @@ ett fel som redan har skickats). Kontrollera Leverantörsgränser, prova modelle
 
 ## Klientversion (utan grafiskt gränssnitt)
 
-Utan en lokal installation av `cursor-agent` fastställer OmniRoute
+Utan en lokal installation av `cursor-agent` fastställer 67router
 `x-cursor-client-version` först via miljövariabeln `CURSOR_AGENT_CLI_VERSION`,
 därefter via en diskcachad avläsning av Cursors installationsskript och slutligen
 via ett fastnålat bygg-ID. Åsidosätt med `CURSOR_AGENT_CLI_VERSION` vid behov.

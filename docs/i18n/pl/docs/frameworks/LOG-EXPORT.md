@@ -4,7 +4,7 @@
 
 ---
 
-Ciągły, przyrostowy eksport dzienników wywołań OmniRoute do zewnętrznego magazynu analitycznego.
+Ciągły, przyrostowy eksport dzienników wywołań 67router do zewnętrznego magazynu analitycznego.
 
 Karta panelu Dzienniki przechowuje historię żądań w SQLite (`call_logs`), której rozmiar jest ograniczony przez
 rotację i retencję. Eksport dzienników wysyła ten sam zestaw rekordów zgodnie z harmonogramem, dzięki czemu mogą one być przechowywane
@@ -270,7 +270,7 @@ Dwie zasady dotyczące nowego miejsca docelowego:
 - `send()` **musi zgłaszać wyjątek** w przypadku częściowego niepowodzenia. Pomyślne zakończenie oznacza „miejsce docelowe zawiera te wiersze”,
   a kursor zostaje trwale przesunięty poza nie.
 - Miejsce docelowe przyjmujące adres URL podany przez użytkownika musi przed pobraniem zweryfikować go za pomocą
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   tak samo jak webhooki. BigQuery tego nie wymaga, ponieważ jego hosty są stałe.
 
 ---

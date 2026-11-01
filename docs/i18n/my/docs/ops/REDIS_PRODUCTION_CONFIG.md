@@ -6,7 +6,7 @@
 
 ## အနှစ်ချုပ်
 
-Redis သည် OmniRoute တွင် **ရွေးချယ်အသုံးပြုနိုင်သော၊ မဖြစ်မနေမဟုတ်သည့် dependency** တစ်ခုဖြစ်သည် — Redis ကို အသုံးမပြုနိုင်သည့်အခါ application သည် (in-memory
+Redis သည် 67router တွင် **ရွေးချယ်အသုံးပြုနိုင်သော၊ မဖြစ်မနေမဟုတ်သည့် dependency** တစ်ခုဖြစ်သည် — Redis ကို အသုံးမပြုနိုင်သည့်အခါ application သည် (in-memory
 fallback များဖြင့်) လုပ်ဆောင်နိုင်စွမ်းကို အဆင့်ဆင့်ညင်သာစွာ လျှော့ချသည်။ Production တွင် Redis ကို ချိန်ညှိခြင်းက သီးခြား
 workload လေးမျိုးအတွက် latency ကို လျှော့ချပေးသည်-
 
@@ -17,7 +17,7 @@ workload လေးမျိုးအတွက် latency ကို လျှေ�
 | Quota store            | `redisQuotaStore.ts`          | သီးခြား `getRedisClient(url)` singleton       | instance တစ်ခုချင်းစီအလိုက် ပြင်ဆင်သတ်မှတ်နိုင်သည့် `<prefix>quota:*` |
 | Warmup circuit breaker | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` ရှိ သီးခြား client | `<prefix>warmup:cb:<connectionId>`                                    |
 
-Workload လေးမျိုးလုံးသည် namespace prefix တစ်ခုတည်းကို မျှဝေသုံးစွဲသောကြောင့် OmniRoute သည်
+Workload လေးမျိုးလုံးသည် namespace prefix တစ်ခုတည်းကို မျှဝေသုံးစွဲသောကြောင့် 67router သည်
 Redis instance တစ်ခုတည်း (ဥပမာ `127.0.0.1:6379`) ပေါ်ရှိ အခြား app များနှင့် အတူတကွ တည်ရှိနိုင်သည်။ [Key Namespacing](#key-namespacing) ကို ကြည့်ပါ။
 
 ---
@@ -41,14 +41,14 @@ Redis instance တစ်ခုတည်း (ဥပမာ `127.0.0.1:6379`) ပ�
 
 ## Key Namespacing
 
-OmniRoute သည် host ပေါ်တွင် လည်ပတ်နေသည့် အခြားအရာများနှင့် Redis instance တစ်ခုကို မျှဝေသုံးစွဲသည်။ Namespace မရှိပါက
+67router သည် host ပေါ်တွင် လည်ပတ်နေသည့် အခြားအရာများနှင့် Redis instance တစ်ခုကို မျှဝေသုံးစွဲသည်။ Namespace မရှိပါက
 `auth:api_key:<sha256>` သို့မဟုတ် `rl:*` ကဲ့သို့သော key များသည် Redis တစ်ခုတည်းကို
 အသုံးပြုနေသည့် အခြား application များ၏ key များနှင့် ထပ်တူကျနိုင်သည် (ဤ instance သည် အခြား service များနှင့်အတူ `127.0.0.1:6379` ပေါ်တွင် Redis ကို လည်ပတ်စေသည်)။
 
-OmniRoute key **တိုင်း**၏ ရှေ့တွင် prefix ထည့်ရန် `REDIS_KEY_PREFIX` ကို အလွတ်မဟုတ်သော string တစ်ခုအဖြစ် သတ်မှတ်ပါ-
+67router key **တိုင်း**၏ ရှေ့တွင် prefix ထည့်ရန် `REDIS_KEY_PREFIX` ကို အလွတ်မဟုတ်သော string တစ်ခုအဖြစ် သတ်မှတ်ပါ-
 
 ```bash
-# .env — OmniRoute key အားလုံးသည် omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* ဖြစ်လာမည်
+# .env — 67router key အားလုံးသည် omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* ဖြစ်လာမည်
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # OS page cache အတွက် နေရာချန်ထားပါ
 maxmemory-policy allkeys-lru         # ဖိအားများလာသောအခါ ဟောင်းနေသည့် auth cache entry များကို ဖယ်ရှားပါ
 
-# Persistence (မဖြစ်မနေမဟုတ်ပါ — OmniRoute သည် ၎င်းမရှိဘဲလည်း crash‑safe ဖြစ်သည်)
+# Persistence (မဖြစ်မနေမဟုတ်ပါ — 67router သည် ၎င်းမရှိဘဲလည်း crash‑safe ဖြစ်သည်)
 save 300 1                           # key ≥1 ခု ပြောင်းလဲပါက အနည်းဆုံး 5 min တိုင်း snapshot ရိုက်ပါ
 appendonly no                        # AOF မလိုအပ်ပါ၊ data ကို ပြန်လည်ဖန်တီးနိုင်သည်
 appendfsync no                       # fsync overhead မရှိပါ (RDB ဖြင့် လုံလောက်သည်)

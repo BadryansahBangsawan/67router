@@ -4,7 +4,7 @@
 
 ---
 
-Relelər (Vercel, Deno, Cloudflare) yuxarı axın bağlantısını serverless backend-də sonlandırır ki, OmniRoute provayderin API açarını server tərəfində saxlayaraq sabit regiondan çıxış edə bilsin. Bu sənəddə operatorların istehsal mühitində qarşılaşdığı iki nasazlıq rejimi və OmniRoute-un hər biri üçün təqdim etdiyi bərpa yolları izah olunur.
+Relelər (Vercel, Deno, Cloudflare) yuxarı axın bağlantısını serverless backend-də sonlandırır ki, 67router provayderin API açarını server tərəfində saxlayaraq sabit regiondan çıxış edə bilsin. Bu sənəddə operatorların istehsal mühitində qarşılaşdığı iki nasazlıq rejimi və 67router-un hər biri üçün təqdim etdiyi bərpa yolları izah olunur.
 
 ## Rele autentifikasiya məlumatlarının saxlanması
 
@@ -25,7 +25,7 @@ Sorğu zamanı `extractRelayAuth(notes)` mövcud olan formanı qaytarır, buna g
 1. **Settings → Proxy Pool** bölməsini açın.
 2. Autentifikasiya məlumatı olmayan rele sətirlərində sarı `auth missing` nişanı və
    **Repair** düyməsi göstərilir.
-3. **Repair** düyməsinə klikləyin. OmniRoute
+3. **Repair** düyməsinə klikləyin. 67router
    `POST /api/settings/proxies/[id]/repair-relay` çağırışını edir və bu çağırış:
    - `relayAuthEnc` məlumatını **cari** açarla deşifrə edir,
    - açıq mətn şəklindəki `relayAuth` məlumatını yenidən `notes` sahəsinə yazır,
@@ -50,7 +50,7 @@ Saxlanmış token cari açarla bərpa edilə bilməz. Releni əvvəlcə istifad�
 
 **Əlamət:** proksi testi (`speed` düyməsi) relenin işlək olduğunu göstərir, lakin sorğular yenə də fasilələrlə uğursuz olur.
 
-OmniRoute-un avtomatik test yoxlaması tərəfindən qaytarılan rele məlumatlılığı başlıqlarını yoxlayın
+67router-un avtomatik test yoxlaması tərəfindən qaytarılan rele məlumatlılığı başlıqlarını yoxlayın
 (**Settings → Proxy Pool** bölməsinə və `relayTested` / `relayAlive` sayğaclarına baxın):
 
 - `x-relay-url` — hansı rele backend-inin cavab verdiyi.

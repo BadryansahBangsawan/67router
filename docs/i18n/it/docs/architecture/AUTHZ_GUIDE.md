@@ -7,7 +7,7 @@
 > **Fonte di verità:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Ultimo aggiornamento:** 2026-09-22 — gli spazi dei nomi degli scope puntano a MCP-SERVER.md
 
-OmniRoute dispone di una pipeline di autorizzazione consapevole del percorso che filtra ogni richiesta API. La classificazione è **deterministica** e **fail-closed** — tutto ciò che non può essere classificato finisce come `MANAGEMENT` e richiede una sessione o un token di livello management. Questa pagina spiega il modello per gli ingegneri che mantengono i percorsi o progettano nuovi endpoint.
+67router dispone di una pipeline di autorizzazione consapevole del percorso che filtra ogni richiesta API. La classificazione è **deterministica** e **fail-closed** — tutto ciò che non può essere classificato finisce come `MANAGEMENT` e richiede una sessione o un token di livello management. Questa pagina spiega il modello per gli ingegneri che mantengono i percorsi o progettano nuovi endpoint.
 
 ![Pipeline AuthZ (3 classi di percorso + valutazione delle policy)](../diagrams/exported/authz-pipeline.svg)
 
@@ -269,8 +269,6 @@ credenziale del token di accesso. Vedi [Autenticazione di gestione](../guides/MA
 L'applicazione delle chiavi API client usa `isRequireApiKeyEnabled()` in `src/shared/utils/featureFlags.ts`, non una lettura diretta di `process.env.REQUIRE_API_KEY`. Questo conta per le istanze distribuite: attivare o disattivare `REQUIRE_API_KEY` in Dashboard → Feature Flags salva un override nel database e incide subito su `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` e sugli altri controlli di autenticazione dell'API client che condividono questo helper. Se l'archivio dei feature flag non può essere letto, l'autenticazione dell'API client fallisce in modo chiuso e richiede una chiave.
 
 ## Modifica incompatibile — v3.8.0
-
-Gli endpoint `/api/v1/agents/tasks/*` e `/api/resilience/model-cooldowns` **ora richiedono l'autenticazione di gestione** (commit `588a0333`). I client che in precedenza inviavano una normale chiave API senza l'ambito `manage` ricevono `403`. Migrazione: assegnare alla chiave l'ambito `manage` nella dashboard delle chiavi API oppure utilizzare una sessione autenticata della dashboard.
 
 ## Modifica del comportamento — v3.8.2
 

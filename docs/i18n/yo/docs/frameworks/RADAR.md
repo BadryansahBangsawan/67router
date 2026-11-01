@@ -41,7 +41,7 @@ tàbí ìsopọ̀ òde kan wà nílẹ̀ lọ́wọ́lọ́wọ́.
 | Àwọn ìpèsè alátìlẹ́yìn        | A ti mú wọn ṣiṣẹ́ gẹ́gẹ́ bí ìṣàn ọ̀tọ̀ tí a fọwọ́ sí, tó sì wà fún ìpele alààyè nìkan, pẹ̀lú ojú ìṣàkóso. Kíláyẹ́ǹtì náà tún máa ń fìdí schema àǹfààní tó ní ààlà múlẹ̀, ó máa ń pa ìpamọ́ rere tó kẹ́yìn mọ́, ó yọ àwọn àkọsílẹ̀ tó ti parí, ó sì ń fi àmì sí àwọn ìpèsè alábàáṣiṣẹ́ ní kedere. |
 | Ìmọ̀ àti ìdánimọ̀ alátìlẹ́yìn   | A ti mú un ṣiṣẹ́ gẹ́gẹ́ bí ìṣàn ìpele alààyè nìkan tó muna, tí a sì fọwọ́ sí, pẹ̀lú ELO tí Radar ń ṣàkóso, ìtàn gidi nípa bí àkójọ ṣe jẹ́ tuntun/ìtẹ̀sí, báàjì alátìlẹ́yìn agbègbè tí a fìdí rẹ̀ múlẹ̀, ojú ìṣàkóso, àti àwọn àṣẹ ipò/ìmúdọ́gba CLI tí ó ṣiṣẹ́ ní agbègbè nìkan.               |
 | Ìsanwó àti ímeèlì ìdúnàádúrà | A kò mú wọn ṣiṣẹ́ nínú kíláyẹ́ǹtì OSS. Rírà, ọrẹ owó, àyẹ̀wò owó ìdánwò, ìmúpadàbọ̀sípò, àti fífi lẹ́tà ránṣẹ́ jẹ́ ti iṣẹ́ aládàáni; wíwà iṣẹ́ tí a gbàlejò ṣì gbára lé ìmúṣiṣẹ́ rẹ̀ lábẹ́ àbójútó àti ètò olùpèsè.                                                                            |
-| Ìṣàn iṣẹ́ aṣojú ìwádìí        | Kì í ṣe apá kan ìtújáde kíláyẹ́ǹtì yìí. Àkóónú ìṣàn tí a ṣàkójọ ṣì jẹ́ dátà ẹ̀gbẹ́ olupin; kò sí aṣojú ìwádìí aládàáṣiṣẹ́ tó ń ṣiṣẹ́ nínú fifi OmniRoute sílẹ̀.                                                                                                                           |
+| Ìṣàn iṣẹ́ aṣojú ìwádìí        | Kì í ṣe apá kan ìtújáde kíláyẹ́ǹtì yìí. Àkóónú ìṣàn tí a ṣàkójọ ṣì jẹ́ dátà ẹ̀gbẹ́ olupin; kò sí aṣojú ìwádìí aládàáṣiṣẹ́ tó ń ṣiṣẹ́ nínú fifi 67router sílẹ̀.                                                                                                                            |
 
 ---
 
@@ -119,7 +119,7 @@ Nígbà tí àwọn méjèèjì bá tàn, ọ̀nà sync náà ni:
    fún àyẹ̀wò abuse ọwọ́; àwọn table wọ̀nyẹn kò fi key tàbí IP pamọ́ ní ìrísí aise.
    Àwọn log ìwọlé amáyédẹrùn àti outbox ìfiránṣẹ́ tí a encrypt jẹ́ àwọn ààlà iṣẹ́
    ọ̀tọ̀.
-3. OmniRoute kì í fi prompt, response, conversation, credential olùpèsè, traffic model,
+3. 67router kì í fi prompt, response, conversation, credential olùpèsè, traffic model,
    uptime, latency, tàbí àtúnṣe olùpèsè agbègbè ránṣẹ́ sí service Radar.
 4. A máa verify response náà, validate rẹ̀, a sì máa cache rẹ̀ ní agbègbè (wo
    [Àwòṣe ààbò](#security-model)). Radar ní ọ̀nà network ẹgbẹ́ server mẹ́rin gan-an:
@@ -243,12 +243,12 @@ tó ti ní ọ̀kan ti máa ń mú un ṣiṣẹ́.
 ### Ìmúṣiṣẹ́ láti ìbẹ̀rẹ̀ dé òpin àti ìṣètò pẹ̀lú ìtọ́sọ́nà
 
 Iṣẹ́ feed aládani àti oníbàárà OSS yìí ní ààlà tóóró tí a mọ̀ọ́mọ̀ ṣe: iṣẹ́ náà
-ń ṣe ìmújáde, ó sì ń fìdí kọ́kọ́rọ́ alátìlẹ́yìn múlẹ̀, nígbà tí ìfisílẹ̀ OmniRoute ti agbègbè ń fi ìpàrokò dáàbò bo kọ́kọ́rọ́ náà,
+ń ṣe ìmújáde, ó sì ń fìdí kọ́kọ́rọ́ alátìlẹ́yìn múlẹ̀, nígbà tí ìfisílẹ̀ 67router ti agbègbè ń fi ìpàrokò dáàbò bo kọ́kọ́rọ́ náà,
 ń mú àwọn artifact tí a fọwọ́ sí bá ara wọn mu ní ẹ̀gbẹ́ olupin, ó sì ń ṣe ìtọ́sọ́nà ìṣètò olùpèsè. Ètò ìfọwọ́sí pẹ̀lú ìrànlọ́wọ́ ni:
 
 1. Gba kọ́kọ́rọ́ tí a ṣẹ̀ṣẹ̀ fúnni tàbí tí a gba padà láti inú ìbéèrè olùkópa, plans/checkout, ìrìnàjò ìmúpadàbọ̀sípò, tàbí lọ́wọ́ olùṣàkóso olupin aládàáni tí a fún láṣẹ. Má ṣe lẹ kọ́kọ́rọ́ gidi náà sínú àwọn log,
    àwọn screenshot, àwọn àsọyé issue, tàbí àwọn argument command-line.
-2. Mú feature flag `RADAR_ENABLED` ṣiṣẹ́ lórí fifi OmniRoute sori ẹ̀rọ abẹ́lé. Èyí yóò ṣí UI sílẹ̀
+2. Mú feature flag `RADAR_ENABLED` ṣiṣẹ́ lórí fifi 67router sori ẹ̀rọ abẹ́lé. Èyí yóò ṣí UI sílẹ̀
    ṣùgbọ́n kò ní ṣe ohunkóhun lórí nẹ́tíwọ́ọ̀kì títí tí a ó fi fi ìyọ̀ǹda ọ̀tọ̀ náà pamọ́.
 3. Ṣí `/dashboard/radar`, lẹ kọ́kọ́rọ́ náà, kí o sì mú un ṣiṣẹ́. Browser náà fi ìbéèrè abẹ́lé kan ṣoṣo ránṣẹ́:
    `POST /api/radar/settings` pẹ̀lú `{ optIn: true, supporterKey }`; a pa kọ́kọ́rọ́ náà mọ́ ní ìkọ̀kọ̀ lórí ẹ̀rọ abẹ́lé, ìdáhùn náà sì ní `omr_****<last4>` nìkan.
@@ -312,7 +312,7 @@ a ó fi tún wọn sync.
 ### Àwọn override env tó rọrùn fún fork
 
 Àwọn env var méjì jẹ́ kí àwọn fork àti àwọn olùgbàlejò-fúnra-wọn darí client sí feed tiwọn dípò
-iṣẹ́ OmniRoute àiyipada — wo
+iṣẹ́ 67router àiyipada — wo
 [Bí a ṣe ń gbàlejò feed fúnra ẹni](#how-to-self-host-a-feed) nísàlẹ̀:
 
 | Var                 | Ìdí                                                                                                                       |
@@ -466,7 +466,7 @@ Feed `enabled: false` ṣì jẹ́ ààyè àyọkà ààbò: ó máa ń borí `
 Àwọn ìtẹ̀jáde àkójọ ń lo `schemaVersion: 2`. `contextWindow` àti ọ̀kọ̀ọ̀kan nínú `tools`, `vision`, àti
 `thinking` jẹ́ `number | null` / `boolean | null` lọ́tọ̀ọ̀tọ̀: `null` túmọ̀ sí àìmọ̀, nígbà tí
 `false` túmọ̀ sí pé orísun provider oníṣẹ́ tí D16 fìdí rẹ̀ múlẹ̀ sọ ní pàtó pé capability náà kò sí.
-A kì í gbé àwọn flag registry/model-spec OmniRoute inú lọ́nà tààrà sí ipò àwọn òtítọ́ feed láé. Oníbàárà
+A kì í gbé àwọn flag registry/model-spec 67router inú lọ́nà tààrà sí ipò àwọn òtítọ́ feed láé. Oníbàárà
 ṣì ń gba àwọn snapshot v1; nítorí builder àtijọ́ lo `false` gẹ́gẹ́ bí ààmì àìsí, a ń ṣe normalization v1 `false` sí àìmọ̀ nígbà tí v1 `true` ṣì jẹ́ òtítọ́. Àwọn ẹ̀yà schema àìmọ̀ máa ń kùnà lọ́nà tí ó di ohun gbogbo, cache tó fẹsẹ̀múlẹ̀ kẹ́yìn sì máa ń wà lárọ̀ọ́wọ́tó. Gbogbo model v2 tí ó ní context/capability tí kì í ṣe null gbọ́dọ̀ ní
 `metadataEvidenceUrls[]` HTTPS tí kò nílò credential; bí bẹ́ẹ̀ kọ́, ìfẹsẹ̀múlẹ̀ schema yóò kùnà, a kò sì ní
 rọ́pò cache náà. Tábìlì àkójọ ń fi gbogbo ipò mẹ́tẹ̀ẹ̀ta hàn gẹ́gẹ́ bí `✓`, `✕`, àti `?`.
@@ -525,7 +525,7 @@ Gbogbo àkọsílẹ̀ tí a dapọ̀ ní field `origin` kan tí UI ń ṣàfih�
 | `/api/radar/local-model-state` | DELETE | Ó pa àwọn field override tí a lè ṣàtúnṣe rẹ́, nígbà tó ń pa tombstone èyíkéyìí mọ́.                                              |
 
 **Òfin líle: àwọn ipa-ọ̀nà wọ̀nyí kì í ṣe aṣojú iṣẹ́ ìṣàn láéláé.** Browser máa ń bá
-server OmniRoute abẹ́lé nìkan sọ̀rọ̀. Àwọn module mẹ́rin tó ní ìbáṣepọ̀ pẹ̀lú iṣẹ́ Radar ni
+server 67router abẹ́lé nìkan sọ̀rọ̀. Àwọn module mẹ́rin tó ní ìbáṣepọ̀ pẹ̀lú iṣẹ́ Radar ni
 `src/lib/radar/sync.ts` (katalogi), `src/lib/radar/referralsSync.ts` (referrals), àti
 `src/lib/radar/offersSync.ts` (offers), pẹ̀lú `src/lib/radar/intelSync.ts` (Intel); gbogbo wọn ń ṣiṣẹ́
 ní ẹ̀gbẹ́ server, kì í ṣe ní ẹ̀gbẹ́ client láéláé. Èyí mú kí
@@ -567,7 +567,7 @@ Intel jẹ́ artifact tí a fọwọ́sí ní `GET /v1/intel/latest`. `RadarInte
 
 `syncRadarIntel()` máa ń lo Bearer server-side kan náà, timeout ìṣẹ́jú-àáyá 30, streamed cap 10 MiB, exact-byte Ed25519 verification, strict schema, ìbéèrè body/header `live`, version floor, àti pípa last-good-cache mọ́ bí offers. Lẹ́yìn tí a bá ti fi verified live snapshot pamọ́, client náà máa ń yọ `radar:<sha256(supporter key)>` jáde, ó máa ń tọ́jú one-way identity yẹn nìkan, ó sì ń ṣe ìjáde dedicated recognition event `radar_supporter`. Badge `radar-supporter` rẹ̀ jẹ́ idempotent, ó sì ń fúnni ní XP òdo; kò ṣe update leaderboards láé, bẹ́ẹ̀ ni kò tún lo `token_share`. `/dashboard/radar/intel` máa ń render badge náà láti inú verified local cache metadata nìkan.
 
-CLI náà ṣí `omniroute radar status` àti `omniroute radar sync` síta. Àwọn méjèèjì ń bá local OmniRoute API nìkan sọ̀rọ̀. `status` máa ń ṣe read-only `GET /api/radar/status`; `sync` máa ń fi `POST /api/radar/sync-all` kan ránṣẹ́, ó sì ń tẹ result jáde fún feed kọ̀ọ̀kan. Kò sí èyíkéyìí nínú àwọn command náà tó ń ka, gba, tàbí tẹ kọ́kọ́rọ́ alátìlẹ́yìn jáde, bẹ́ẹ̀ ni kò sí èyíkéyìí tó ń kàn sí Radar service ní tààrà.
+CLI náà ṣí `omniroute radar status` àti `omniroute radar sync` síta. Àwọn méjèèjì ń bá local 67router API nìkan sọ̀rọ̀. `status` máa ń ṣe read-only `GET /api/radar/status`; `sync` máa ń fi `POST /api/radar/sync-all` kan ránṣẹ́, ó sì ń tẹ result jáde fún feed kọ̀ọ̀kan. Kò sí èyíkéyìí nínú àwọn command náà tó ń ka, gba, tàbí tẹ kọ́kọ́rọ́ alátìlẹ́yìn jáde, bẹ́ẹ̀ ni kò sí èyíkéyìí tó ń kàn sí Radar service ní tààrà.
 
 ---
 

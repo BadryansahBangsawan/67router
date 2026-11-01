@@ -4,7 +4,7 @@
 
 ---
 
-> **Īsumā**: OmniRoute kā primāro datu glabātuvi izmanto **SQLite ar WAL žurnalēšanu**, un sensitīvie lauki glabāšanas laikā tiek šifrēti ar **AES-256-GCM**. Šajā rokasgrāmatā ir aplūkota shēma, migrācijas, dublēšana/atkopšana un ekspluatācijas instrukcijas.
+> **Īsumā**: 67router kā primāro datu glabātuvi izmanto **SQLite ar WAL žurnalēšanu**, un sensitīvie lauki glabāšanas laikā tiek šifrēti ar **AES-256-GCM**. Šajā rokasgrāmatā ir aplūkota shēma, migrācijas, dublēšana/atkopšana un ekspluatācijas instrukcijas.
 
 **Avoti:**
 
@@ -19,7 +19,7 @@
 
 ## Kāpēc SQLite?
 
-OmniRoute izvēlējās SQLite, nevis PostgreSQL/MySQL, vairāku iemeslu dēļ:
+67router izvēlējās SQLite, nevis PostgreSQL/MySQL, vairāku iemeslu dēļ:
 
 | Faktors         | SQLite                                        | PostgreSQL                                      |
 | --------------- | --------------------------------------------- | ----------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute izvēlējās SQLite, nevis PostgreSQL/MySQL, vairāku iemeslu dēļ:
 | **Dublēšana**   | Viena faila kopēšana                          | `pg_dump` vai failu sistēmas momentuzņēmums     |
 | **Lietojums**   | Instalācija katram lietotājam, iegulta        | Vairāku nomnieku SaaS                           |
 
-**Viena lietotāja un vienas instances** izvietojumiem (OmniRoute primārajam lietojuma scenārijam) SQLite ir vienkāršāka un ātrāka.
+**Viena lietotāja un vienas instances** izvietojumiem (67router primārajam lietojuma scenārijam) SQLite ir vienkāršāka un ātrāka.
 
 ### WAL žurnalēšana
 
@@ -50,7 +50,7 @@ Noklusējuma kešatmiņas lielums ir **65,536 KiB (64 MiB)**. SQLite negatīvu
 `cache_size` vērtību interpretē kā aptuvenu augšējo robežu KiB vienībās un piešķir lapas pēc nepieciešamības.
 Iestatījumā **Iestatījumi > Sistēma un krātuve > Kešatmiņas lielums** var ievadīt veselus skaitļus no **1 līdz
 1,000,000 KiB**; iestatījuma saglabāšana to piemēro aktīvajam datubāzes savienojumam,
-un OmniRoute startēšanas laikā atjauno saglabāto vērtību.
+un 67router startēšanas laikā atjauno saglabāto vērtību.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Domēna moduļu arhitektūra
 
-OmniRoute datubāzē ir **110 augstākā līmeņa TypeScript moduļi** direktorijā `src/lib/db/`. Katrs domēna modulis:
+67router datubāzē ir **110 augstākā līmeņa TypeScript moduļi** direktorijā `src/lib/db/`. Katrs domēna modulis:
 
 - Pārvalda vienu vai vairākas konkrētas tabulas
 - Eksportē tipizētas CRUD funkcijas
@@ -90,7 +90,7 @@ OmniRoute datubāzē ir **110 augstākā līmeņa TypeScript moduļi** direktori
 
 ### 110 augstākā līmeņa datubāzes moduļi
 
-OmniRoute ir **110 augstākā līmeņa TypeScript faili** direktorijā `src/lib/db/`. Tālāk ir sniegts galveno moduļu piemēru saraksts; pilnu sarakstu skatiet direktorija saturā:
+67router ir **110 augstākā līmeņa TypeScript faili** direktorijā `src/lib/db/`. Tālāk ir sniegts galveno moduļu piemēru saraksts; pilnu sarakstu skatiet direktorija saturā:
 
 | Modulis                 | Tabulas                                                        | Atbildība                                                                         |
 | ----------------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Pilns saraksts ar vairāk nekā 30 tabulām atrodas `src/lib/db/migrations/`.
 
 ## Migrācijas
 
-OmniRoute izmanto **versijotas, idempotentas migrācijas**, kas atrodas `src/lib/db/migrations/`. Katra migrācija ir atsevišķs SQL fails ar nosaukumu `NNN_description.sql`.
+67router izmanto **versijotas, idempotentas migrācijas**, kas atrodas `src/lib/db/migrations/`. Katra migrācija ir atsevišķs SQL fails ar nosaukumu `NNN_description.sql`.
 
 ### Migrāciju nosaukumi
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Ar iepriekšējām versijām nesaderīgas izmaiņas** (piemēram, kolonnu dzēšana) ir sarežģītas. OmniRoute NEATBALSTA versijas pazemināšanu — tiklīdz migrācija ir lietota, shēmas izmaiņas ir neatgriezeniskas. Plānojiet atbilstoši.
+> **Ar iepriekšējām versijām nesaderīgas izmaiņas** (piemēram, kolonnu dzēšana) ir sarežģītas. 67router NEATBALSTA versijas pazemināšanu — tiklīdz migrācija ir lietota, shēmas izmaiņas ir neatgriezeniskas. Plānojiet atbilstoši.
 
 ---
 
@@ -310,7 +310,7 @@ Veiktspējas apsvērumu dēļ tālāk norādītā informācija tiek glabāta kā
 
 ## Šifrēšanas ierobežojumi (v3.8.16+)
 
-OmniRoute izmanto **`migrateLegacyEncryptedString()`**, lai pārredzami apstrādātu divas šifrēšanas shēmas:
+67router izmanto **`migrateLegacyEncryptedString()`**, lai pārredzami apstrādātu divas šifrēšanas shēmas:
 
 - **Mantotā** (pirms v3.5.0): uz XOR balstīta „šifrēšana” (nav īsta kriptogrāfija)
 - **Pašreizējā**: AES-256-GCM ar atbilstošu IV un autentifikācijas tagu
@@ -399,7 +399,7 @@ Lai bez dīkstāves dublētu aktīvu DB:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Tiek izmantota SQLite tiešsaistes dublēšanas API — to var droši izpildīt, kamēr darbojas OmniRoute.
+Tiek izmantota SQLite tiešsaistes dublēšanas API — to var droši izpildīt, kamēr darbojas 67router.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Sablīvēšana
 
-Ilgstoši darbinātām OmniRoute instancēm ir lietderīgi periodiski izpildīt `VACUUM`:
+Ilgstoši darbinātām 67router instancēm ir lietderīgi periodiski izpildīt `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Visu datu atiestatīšana (dzēšana)
 
 ```bash
-# Vispirms apturiet OmniRoute
+# Vispirms apturiet 67router
 omniroute stop
 
 # Dzēsiet datubāzes failu
@@ -613,7 +613,7 @@ Cits process tur rakstīšanas bloķējumu. Varat:
 
 - Gaidīt, līdz otrs process pabeidz darbu (pārbaudiet ar `lsof | grep storage.sqlite`)
 - Apturēt otru procesu piespiedu kārtā
-- Ja problēma saglabājas, restartēt OmniRoute
+- Ja problēma saglabājas, restartēt 67router
 
 ### "Ārējās atslēgas ierobežojuma pārkāpums"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Migrācija tika veikta transakcijā, tāpēc izmaiņām vajadzēja tikt atsauktām. Ja tas nenotika:
 
-1. **Apturiet OmniRoute** (lai novērstu turpmākus mēģinājumus)
+1. **Apturiet 67router** (lai novērstu turpmākus mēģinājumus)
 2. **Pārbaudiet datubāzes stāvokli**, izmantojot `sqlite3`
 3. **Manuāli izlabojiet** daļēji veikto migrāciju
-4. **Atkārtoti palaidiet** OmniRoute (migrācija tiks mēģināta vēlreiz)
+4. **Atkārtoti palaidiet** 67router (migrācija tiks mēģināta vēlreiz)
 
 Lai to novērstu, vienmēr vispirms pārbaudiet migrācijas datubāzes kopijā.
 

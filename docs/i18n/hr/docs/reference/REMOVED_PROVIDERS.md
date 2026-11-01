@@ -4,7 +4,7 @@
 
 ---
 
-Neke su usluge bile integrirane u OmniRoute, a kasnije uklonjene jer su to zatražile osobe koje
+Neke su usluge bile integrirane u 67router, a kasnije uklonjene jer su to zatražile osobe koje
 njima upravljaju. Ova je stranica trajna evidencija tih uklanjanja. Njezina je jedina svrha
 spriječiti njihovo slučajno vraćanje: suradniku koji pronađe stari fork, predmemorirani npm
 tarball, arhivirani problem ili zahtjev za „vraćanje pružatelja X” potrebno je jedno mjesto na kojem piše **nemoj
@@ -17,10 +17,10 @@ zahtjevu, a poveznica na to dopuštenje mora biti navedena u stavci.
 
 ## Pravila
 
-1. **Zahtjev upravitelja usluge za uklanjanje poštuje se i nije predmet pregovora.** OmniRoute
+1. **Zahtjev upravitelja usluge za uklanjanje poštuje se i nije predmet pregovora.** 67router
    nije povezan ni s jednom izvornom uslugom. Kada upravitelj usluge zatraži uklanjanje
    integracije, ona se uklanja bez obzira na to je li integracija upotrebljavala službeni API.
-2. **„Uklonjeno” znači sa svake površine kojom OmniRoute upravlja.** Izvršitelj, unos u registru, ID pružatelja
+2. **„Uklonjeno” znači sa svake površine kojom 67router upravlja.** Izvršitelj, unos u registru, ID pružatelja
    i pseudonim, popis modela, krajnje točke, varijable okruženja, ikona, kartice nadzorne ploče,
    generirana referenca pružatelja, `FREE_TIERS.md`, referenca okruženja, brojevi u README datotekama,
    zrcalne kopije datoteke `llm.txt`, namjenski testovi i referentne snimke, komentari u kodu, stavke u CHANGELOG-u
@@ -31,7 +31,7 @@ zahtjevu, a poveznica na to dopuštenje mora biti navedena u stavci.
 3. **Nikada nemojte ponovno uvoditi stavku s ove stranice bez pisanog dopuštenja.** To uključuje
    ponovno dodavanje ID-a ili pseudonima u bilo koji katalog pružatelja, dodavanje domena izvršitelju,
    prihvaćanje suradnikova PR-a koji je „vraća”, dodavanje u katalog besplatnih modela ili
-   dokumentiranje ručnog načina pristupa toj usluzi putem OmniRoutea. Zatvorite takve PR-ove i probleme uz
+   dokumentiranje ručnog načina pristupa toj usluzi putem 67routera. Zatvorite takve PR-ove i probleme uz
    poveznicu na ovu stranicu.
 4. **Neka stavka bude sažeta.** Zabilježite samo ono što je pregledavatelju potrebno da prepozna
    ponovno uvođenje: identifikatore, domene, datume i zahtjev za povlačenje kojim je provedeno uklanjanje.
@@ -48,7 +48,7 @@ zahtjevu, a poveznica na to dopuštenje mora biti navedena u stavci.
 | 2026-08-12 | `puter`           | `pu`     | `puter.com`                                                              | Vlasnik Putera (Nariman Jelveh)                                                                                                                            | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Pružatelj s API ključem. Migracija `152_remove_puter_provider.sql` čisti pohranjenu konfiguraciju.                                                                                                                                                                                                                                                                                                                            |
 | 2026-09-02 | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                  | Operater usluge (e-pošta podrške)                                                                                                                          | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Pružatelj bez ključa. Pisani zahtjev primljen je 2026-08-30. Namjenski problemi i rasprava su izbrisani, a PR-ovi preimenovani.                                                                                                                                                                                                                                                                                               |
 | 2026-09-21 | `gemini-business` | `gembiz` | `business.gemini.google`                                                 | Odluka vlasnika projekta (problem [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                        | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Web-p pružatelj temeljen na kolačićima. Google je ukinuo krajnju točku `BardFrontendService/StreamGenerate` koju je izvršitelj koristio; zamjenu (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT inicijaliziran iz `__Secure-C_SES`/`csesidx`) nije moguće izraditi ni provjeriti bez aktivnog Gemini Enterprise/Workspace računa, koji projekt nema. Ukinut je umjesto da bude prepisan bez provjere. |
-| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Odluka vlasnika projekta (`#14224`)                                                                                                                        | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Pružatelj s autentifikacijom putem kolačića, a ne uklanjanje na zahtjev operatera. `studio-api.suno.ai` bio je obustavljen (503); aktivni host zahtijeva razmjenu za Clerk JWT te plaćenu ovisnost za rješavanje hCaptcha izazova, koju OmniRoute nije želio dodati zbog samo jednog pružatelja glazbe. `kie/suno-v4.0` i `kie/suno-v3.5` (hostani na kie.ai) nisu zahvaćeni i ostaju podržani.                               |
+| 2026-09-21 | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Odluka vlasnika projekta (`#14224`)                                                                                                                        | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Pružatelj s autentifikacijom putem kolačića, a ne uklanjanje na zahtjev operatera. `studio-api.suno.ai` bio je obustavljen (503); aktivni host zahtijeva razmjenu za Clerk JWT te plaćenu ovisnost za rješavanje hCaptcha izazova, koju 67router nije želio dodati zbog samo jednog pružatelja glazbe. `kie/suno-v4.0` i `kie/suno-v3.5` (hostani na kie.ai) nisu zahvaćeni i ostaju podržani.                                |
 | 2026-10-10 | `opencode`        | `oc`     | `opencode.ai/zen/v1` (besplatna razina; host se dijeli s `opencode-zen`) | Preventivno uklanjanje (odluka vlasnika projekta), u skladu s javnim zahtjevom operatera OpenCodea za uklanjanje iz izvornog projekta 9router (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Uklonjen je samo pružatelj „OpenCode Free” bez ključa. Autentificirani `opencode-zen` i `opencode-go`, svi modeli iz kataloga Zen i njihovi ugovori zahtjeva, integracije klijenta OpenCode te `@omniroute/opencode-plugin*` ostaju. Migracija `207_remove_opencode_free_provider.sql` premješta naslijeđene veze koje sadrže API ključ u Zen i čisti konfiguraciju bez ključa.                                               |
 
 ## Dodavanje stavke
@@ -63,5 +63,5 @@ Kada stigne novi zahtjev za uklanjanje:
    pružatelja s API ključem i pohranjenim vezama (dodajte migraciju).
 3. Dodajte jedan redak u gornju tablicu, a identifikatore u
    `tests/unit/removed-providers-blocklist.test.ts`, u istom PR-u.
-4. Odgovorite upravitelju nakon spajanja PR-a i navedite što je uklonjeno te što OmniRoute
+4. Odgovorite upravitelju nakon spajanja PR-a i navedite što je uklonjeno te što 67router
    ne može promijeniti (već objavljene npm i Docker verzije, git povijest, forkove trećih strana).

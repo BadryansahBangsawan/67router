@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima tri različita, ali međusobno povezana mehanizma otpornosti. Svaki ima drugačiji opseg i svrhu. Držite ih odvojenima prilikom otklanjanja grešaka u ponašanju usmjeravanja.
+67router ima tri različita, ali međusobno povezana mehanizma otpornosti. Svaki ima drugačiji opseg i svrhu. Držite ih odvojenima prilikom otklanjanja grešaka u ponašanju usmjeravanja.
 
 ![Model otpornosti s 3 sloja](../diagrams/exported/resilience-3layers.svg)
 
@@ -214,7 +214,7 @@ Tri zaglavlja afiniteta sesije nikada se ne prosljeđuju upstream — izvršioci
 
 ### Ekskluzivni zakupi veza upravljanih sesija
 
-**Opseg:** jedan aktivni upravljani HTTP klijent/sesija posjeduje jednu podobnu OmniRoute vezu.
+**Opseg:** jedan aktivni upravljani HTTP klijent/sesija posjeduje jednu podobnu 67router vezu.
 
 **Svrha:** pružiti trajno ekskluzivno vlasništvo nad vezom za klijente kojima je potrebna tvrda
 ograda usmjeravanja kroz zahtjeve. Ovo se razlikuje od afiniteta sesije, koji je meka preferencija
@@ -236,7 +236,7 @@ ID aktivne veze. Zaglavlja za kontrolu lease-a uklanjaju se iz logova, zadržani
 zaglavlja upstream izvršioca.
 
 Ako obično usmjeravanje ima podobne upravljane kandidate, ali je svaki slobodni kandidat zauzet
-tuđim aktivnim lease-om, OmniRoute vraća HTTP `429`, kod nedostupnog kapaciteta lease-a,
+tuđim aktivnim lease-om, 67router vraća HTTP `429`, kod nedostupnog kapaciteta lease-a,
 stanje čekanja na kapacitet i ograničeni `Retry-After` izveden iz najranijeg relevantnog isteka.
 Obična prazna podobnost nije spor oko lease-a i zadržava svoju postojeću semantiku grešaka usmjeravanja.
 
@@ -260,7 +260,7 @@ Povezani mehanizmi ostaju odvojeni:
   konekcije), za ostale provajdere `getQuotaScopedModelForProvider()`.
 - `404` zaključava sami model (`getModelLockKey()` sužava `not_found`).
 - Bilo koji drugi status — `5xx` transportne/serverske greške i vlastiti sintetizovani `502`
-  OmniRoute-a iz validacije kvaliteta — zaključava samo **tačnu**
+  67router-a iz validacije kvaliteta — zaključava samo **tačnu**
   trojku provajder/konekcija/model. Loš stream na jednom modelu nije dokaz
   o kvoti naloga; prije ovog pravila jedan prazan odgovor na
   `codex/gpt-5.6-luna` uklanjao je svaki `gpt-5*` model te konekcije iz
@@ -396,7 +396,7 @@ Ograničenja istovremenosti po modelu**, jedan `model=cap` po redu) ili putem
   pozitivnih cijelih brojeva.
 - **Lokalno čekanje u redu, bez otkrivanja:** višak zahtjeva čeka lokalno u redu
   s postojećom semantikom reda/isteka vremena (tipizirane greške prijema
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute ne otkriva niti
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router ne otkriva niti
   zaključuje upstream politiku — on nameće tačne granice koje je operator
   konfigurisao. Zasićena kapija modela nikada ne onemogućava provajdera i nikada
   ne stvara trajnu blokadu modela; upstream ponašanje 429/cooldown/fallback
@@ -556,7 +556,7 @@ se može jedinično testirati bez stvarnog Bottleneck limitera.
 ### Sigurnosna mreža automatskog uključivanja rate-limita i zaštita konekcija (`rateLimitProtection`)
 
 **Sigurnosna mreža automatskog uključivanja** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, zadano `true`):
-Po zadanome, OmniRoute automatski uključuje zaštitu reda čekanja za rate-limit za sve aktivne konekcije API-key provajdera (`getProviderCategory(provider) === "apikey"`). To osigurava da dolazni zahtjevi prema osjetljivim upstream API ključevima budu stavljeni u red čekanja i prigušeni kroz Bottleneck, umjesto da u naletima izazovu upstream 429 greške. Sigurnosna mreža može se nadjačati putem varijable okruženja `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` je isključuje, `true`/`1`/`on` je prisilno uključuje), što ima prednost nad trajno sačuvanom postavkom na nadzornoj ploči (**Postavke → Otpornost** / `PATCH /api/resilience`).
+Po zadanome, 67router automatski uključuje zaštitu reda čekanja za rate-limit za sve aktivne konekcije API-key provajdera (`getProviderCategory(provider) === "apikey"`). To osigurava da dolazni zahtjevi prema osjetljivim upstream API ključevima budu stavljeni u red čekanja i prigušeni kroz Bottleneck, umjesto da u naletima izazovu upstream 429 greške. Sigurnosna mreža može se nadjačati putem varijable okruženja `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` je isključuje, `true`/`1`/`on` je prisilno uključuje), što ima prednost nad trajno sačuvanom postavkom na nadzornoj ploči (**Postavke → Otpornost** / `PATCH /api/resilience`).
 
 **Semantika polja `rateLimitProtection` po konekciji:**
 Zaštita od rate-limita po konekciji prati se putem boolean polja `rateLimitProtection` na konekcijama provajdera (trajno pohranjenog kao `rate_limit_protection` u SQLite):
@@ -817,7 +817,7 @@ Iskrena ograničenja:
 > vodič za agente ostao ispod budžeta konteksta od 40k. Ovo je sažeti prikaz gornjih
 > odjeljaka namijenjen agentima; numerirani odjeljci ostaju potpuna referenca.
 
-OmniRoute ima tri povezana, ali različita mehanizma za privremene kvarove. Prilikom
+67router ima tri povezana, ali različita mehanizma za privremene kvarove. Prilikom
 otklanjanja grešaka u ponašanju rutiranja držite njihove opsege odvojenima. Pogledajte
 [dijagram otpornosti u 3 sloja](../diagrams/exported/resilience-3layers.svg)
 (izvor: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

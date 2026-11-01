@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Bahasa Indonesia)
+# 🌐 67router Proxy Guide (Bahasa Indonesia)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Lewati pemblokiran geografis, lindungi identitas Anda, dan rutekan lalu lintas AI melalui proksi apa pun — tanpa kerumitan konfigurasi.**
 
-OmniRoute menyertakan sistem manajemen proksi berfitur lengkap yang memungkinkan Anda merutekan lalu lintas penyedia AI upstream melalui proksi HTTP, HTTPS, atau SOCKS5. Baik Anda berada di wilayah yang diblokir, memerlukan rotasi IP, maupun menginginkan penyamaran sidik jari — panduan ini mencakup semuanya.
+67router menyertakan sistem manajemen proksi berfitur lengkap yang memungkinkan Anda merutekan lalu lintas penyedia AI upstream melalui proksi HTTP, HTTPS, atau SOCKS5. Baik Anda berada di wilayah yang diblokir, memerlukan rotasi IP, maupun menginginkan penyamaran sidik jari — panduan ini mencakup semuanya.
 
 ---
 
@@ -51,7 +51,7 @@ Bahkan di luar wilayah yang diblokir, proksi berguna untuk:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Server OmniRoute                        │
+│                       Server 67router                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Registri    │    │ Dispatcher   │    │ Fetch            │  │
@@ -83,7 +83,7 @@ Bahkan di luar wilayah yang diblokir, proksi berguna untuk:
 
 ## Sistem Proxy 4 Tingkat
 
-OmniRoute mendukung konfigurasi proxy pada **empat cakupan independen**, yang diresolusikan berdasarkan urutan prioritas:
+67router mendukung konfigurasi proxy pada **empat cakupan independen**, yang diresolusikan berdasarkan urutan prioritas:
 
 ```
 Urutan Prioritas Resolusi (tertinggi → terendah):
@@ -96,7 +96,7 @@ Urutan Prioritas Resolusi (tertinggi → terendah):
 
 ### Cara Kerja Resolusi
 
-Ketika OmniRoute mengirim permintaan ke penyedia hulu, OmniRoute memanggil `resolveProxyForConnectionFromRegistry()` yang memeriksa setiap tingkat secara berurutan:
+Ketika 67router mengirim permintaan ke penyedia hulu, 67router memanggil `resolveProxyForConnectionFromRegistry()` yang memeriksa setiap tingkat secara berurutan:
 
 1. **Tingkat akun** — Apakah ada proxy yang ditetapkan ke ID koneksi tertentu ini?
 2. **Tingkat penyedia** — Apakah ada proxy yang ditetapkan ke penyedia ini (misalnya, `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Impor/Ekspor
 
-Proxy disertakan dalam sistem **Pencadangan/Pemulihan**. Saat Anda mengekspor konfigurasi OmniRoute:
+Proxy disertakan dalam sistem **Pencadangan/Pemulihan**. Saat Anda mengekspor konfigurasi 67router:
 
 1. Buka **Dasbor → Pengaturan → Pencadangan**
 2. Klik **Ekspor** — registri proxy dan penetapannya akan disertakan
@@ -248,7 +248,7 @@ Registri proxy juga mendukung **upsert berdasarkan host+port** — jika Anda men
 
 ### Migrasi Lama
 
-Jika Anda mengonfigurasi proxy pada versi lama (sebelum registry), OmniRoute akan memigrasikannya secara otomatis:
+Jika Anda mengonfigurasi proxy pada versi lama (sebelum registry), 67router akan memigrasikannya secara otomatis:
 
 ```
 Penyimpanan key_value lama → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Proses ini hanya terjadi sekali saat startup pertama setelah upgrade. Gunakan `m
 
 > 🆕 **Dikontribusikan oleh [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Isu [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute terintegrasi dengan platform komunitas **[1proxy](https://1proxy-api.aitradepulse.com)** untuk menyediakan akses ke **ratusan proxy gratis yang telah divalidasi** dari seluruh dunia. Fitur ini sangat cocok bagi pengguna yang tidak memiliki infrastruktur proxy sendiri.
+67router terintegrasi dengan platform komunitas **[1proxy](https://1proxy-api.aitradepulse.com)** untuk menyediakan akses ke **ratusan proxy gratis yang telah divalidasi** dari seluruh dunia. Fitur ini sangat cocok bagi pengguna yang tidak memiliki infrastruktur proxy sendiri.
 
 ### Cara Kerjanya
 
@@ -273,7 +273,7 @@ OmniRoute terintegrasi dengan platform komunitas **[1proxy](https://1proxy-api.a
 └─────────────┘    proxy      └─────────────────┘   kualitas    └──────────┘
 ```
 
-1. **Sinkronisasi** — OmniRoute mengambil proxy yang telah divalidasi dari 1proxy API
+1. **Sinkronisasi** — 67router mengambil proxy yang telah divalidasi dari 1proxy API
 2. **Penyimpanan** — Proxy disimpan dalam tabel `proxy_registry` yang sama dengan `source = 'oneproxy'`
 3. **Pemfilteran** — Filter berdasarkan protokol, negara, dan skor kualitas
 4. **Rotasi** — Pilih proxy terbaik menggunakan strategi berdasarkan kualitas, acak, atau berurutan
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Anti-Deteksi & Mode Siluman
 
-OmniRoute tidak hanya merutekan lalu lintas melalui proksi — OmniRoute membuat lalu lintas tersebut terlihat sah:
+67router tidak hanya merutekan lalu lintas melalui proksi — 67router membuat lalu lintas tersebut terlihat sah:
 
 ### Pemalsuan Sidik Jari TLS
 
@@ -407,11 +407,11 @@ Lencana tersebut juga menampilkan IP proksi yang telah di-resolve untuk verifika
 
 ## Mode Proksi Upstream
 
-Untuk penyedia yang menggunakan pola CLIProxyAPI, OmniRoute mendukung tiga mode proksi upstream:
+Untuk penyedia yang menggunakan pola CLIProxyAPI, 67router mendukung tiga mode proksi upstream:
 
 | Mode          | Deskripsi                                                        |
 | ------------- | ---------------------------------------------------------------- |
-| `native`      | OmniRoute menangani perutean proksi secara langsung (default)    |
+| `native`      | 67router menangani perutean proksi secara langsung (default)     |
 | `cliproxyapi` | Mendelegasikan ke instans CLIProxyAPI eksternal                  |
 | `fallback`    | Mencoba mode native terlebih dahulu, lalu beralih ke CLIProxyAPI |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API Tunnel
 
-Untuk mengekspos instans OmniRoute Anda ke internet publik (Cloudflare/ngrok/Tailscale), alih-alih merutekan lalu lintas keluar melalui proksi, lihat [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API tunnel berada di bawah `/api/tunnels/{cloudflared,ngrok,tailscale}/*` dan tidak bergantung pada rantai proksi keluar yang didokumentasikan di atas.
+Untuk mengekspos instans 67router Anda ke internet publik (Cloudflare/ngrok/Tailscale), alih-alih merutekan lalu lintas keluar melalui proksi, lihat [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API tunnel berada di bawah `/api/tunnels/{cloudflared,ngrok,tailscale}/*` dan tidak bergantung pada rantai proksi keluar yang didokumentasikan di atas.
 
 ### API 1proxy
 
@@ -516,7 +516,7 @@ Tetapkan `ENABLE_SOCKS5_PROXY=true` dalam file `.env` Anda, lalu mulai ulang.
 
 ### Error "socket hang up" saat melalui proksi
 
-Hal ini normal pada proksi murah yang memutus koneksi tidak aktif. OmniRoute telah menanganinya dengan:
+Hal ini normal pada proksi murah yang memutus koneksi tidak aktif. 67router telah menanganinya dengan:
 
 - Menonaktifkan keep-alive pada koneksi proksi (`keepAliveTimeout: 1`)
 - Menonaktifkan pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ Jika masalah berlanjut, coba proksi lain atau gunakan fitur rotasi 1proxy.
 
 ### "unsupported_country_region_territory" selama OAuth
 
-Pastikan proksi dikonfigurasi **sebelum** memulai alur OAuth. OmniRoute merutekan pertukaran token OAuth melalui proksi yang dikonfigurasi. Tetapkan proksi global atau tingkat penyedia terlebih dahulu, lalu hubungkan.
+Pastikan proksi dikonfigurasi **sebelum** memulai alur OAuth. 67router merutekan pertukaran token OAuth melalui proksi yang dikonfigurasi. Tetapkan proksi global atau tingkat penyedia terlebih dahulu, lalu hubungkan.
 
 ### Proksi tidak digunakan
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Pemeriksaan Kesehatan Proksi (v3.8.16+)
 
-Mekanisme **proxy fast-fail** OmniRoute (`src/lib/proxyHealth.ts`) mendeteksi proksi yang tidak aktif dalam <2 detik melalui pemeriksaan koneksi TCP cepat, lalu **menyimpan hasilnya dalam cache** untuk menghindari overhead per permintaan.
+Mekanisme **proxy fast-fail** 67router (`src/lib/proxyHealth.ts`) mendeteksi proksi yang tidak aktif dalam <2 detik melalui pemeriksaan koneksi TCP cepat, lalu **menyimpan hasilnya dalam cache** untuk menghindari overhead per permintaan.
 
 ### Cara Kerjanya
 
@@ -659,11 +659,11 @@ Port khusus dalam URL (`http://host:9999`) selalu lebih diutamakan daripada defa
 
 ## Analitik & Observabilitas Proksi
 
-OmniRoute melacak penggunaan per proksi untuk membantu operator mendiagnosis pola perutean, lonjakan latensi, dan kegagalan berulang.
+67router melacak penggunaan per proksi untuk membantu operator mendiagnosis pola perutean, lonjakan latensi, dan kegagalan berulang.
 
 ### Yang Dilacak
 
-Untuk setiap permintaan melalui proksi yang dikonfigurasi, OmniRoute mencatat:
+Untuk setiap permintaan melalui proksi yang dikonfigurasi, 67router mencatat:
 
 | Metrik       | Deskripsi                                              |
 | ------------ | ------------------------------------------------------ |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Pohon Keputusan Strategi Rotasi
 
-Ketika beberapa proksi ditetapkan ke suatu cakupan, OmniRoute menggunakan **strategi rotasi** untuk memilih proksi yang akan digunakan bagi setiap permintaan. Strategi tersebut dikonfigurasi pada tingkat cakupan (global, per penyedia, per akun, per kombinasi).
+Ketika beberapa proksi ditetapkan ke suatu cakupan, 67router menggunakan **strategi rotasi** untuk memilih proksi yang akan digunakan bagi setiap permintaan. Strategi tersebut dikonfigurasi pada tingkat cakupan (global, per penyedia, per akun, per kombinasi).
 
 ### Strategi yang Tersedia
 

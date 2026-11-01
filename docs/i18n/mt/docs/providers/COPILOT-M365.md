@@ -39,7 +39,7 @@ Il-URL sħiħ għandu din il-forma:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. F’OmniRoute, mur **Providers → Add Provider**, agħżel **Microsoft 365 Copilot
+6. F’67router, mur **Providers → Add Provider**, agħżel **Microsoft 365 Copilot
    (BizChat)**, u waħħal il-kredenzjali fil-format:
 
 ```
@@ -55,9 +55,9 @@ Minflok tikkopja l-valuri manwalment mill-URL tal-WebSocket, tista’ tesporta f
 1. Iftaħ **DevTools → Network**.
 2. Ibda jew kompli konverżazzjoni f’BizChat (dan jattiva l-konnessjoni WebSocket).
 3. Ikklikkja bil-lemin fil-pannell Network u agħżel **Save all as HAR with content**.
-4. F’OmniRoute, uża l-buttuna **Import .har file** fid-djalogu tal-konnessjoni tal-fornitur.
+4. F’67router, uża l-buttuna **Import .har file** fid-djalogu tal-konnessjoni tal-fornitur.
 
-OmniRoute jiskennja l-HAR għall-URL tal-WebSocket ta’ Chathub, jestratta
+67router jiskennja l-HAR għall-URL tal-WebSocket ta’ Chathub, jestratta
 `access_token` u `chathubPath`, u jimla l-oqsma tal-kredenzjali awtomatikament. L-importazzjoni
 tal-HAR tiddekodifika l-iskadenza tal-JWT u turi kemm fadal żmien qabel jiskadi t-token.
 
@@ -80,7 +80,7 @@ Biex tevita li terġa’ taqbadha manwalment, tista’ taħżen refresh token ta
 | `tier`         | `individual` (predefinit), `edu`, jew `enterprise`                           |
 
 Ikseb ir-refresh token minn fluss ta’ device-code jew authorization-code ta’ Microsoft
-bl-ambitu `substrate.office.com/sydney`. Meta `refreshToken` ikun issettjat, OmniRoute
+bl-ambitu `substrate.office.com/sydney`. Meta `refreshToken` ikun issettjat, 67router
 iġedded minn qabel l-`access_token` qabel kull talba, għalhekk ma jkollokx għalfejn
 terġa’ taqbdu wara kull skadenza ta’ madwar 75 minuta.
 

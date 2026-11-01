@@ -6,7 +6,7 @@
 
 ## Ħarsa ġenerali
 
-Ir-rotot kollha tal-API ta’ ġestjoni ta’ OmniRoute huma kklassifikati f’wieħed minn tliet livelli ta’
+Ir-rotot kollha tal-API ta’ ġestjoni ta’ 67router huma kklassifikati f’wieħed minn tliet livelli ta’
 protezzjoni. Il-klassifikazzjoni hija statika, definita f’`src/server/authz/routeGuard.ts`,
 u evalwata qabel ma titħaddem kwalunkwe fergħa oħra tal-awtentikazzjoni.
 
@@ -28,9 +28,9 @@ klassi magħrufa ta’ CVE
 **X’inhu GHSA-fhh6-4qxv-rpqj (il-klassi tal-attakk):** server ta’ ġestjoni/aġent
 jesponi endpoint li jħaddem sottoproċess (`npm install`, `node`, brawżer,
 proxy, `git`, `tar`, …). Jekk dak l-endpoint ikun aċċessibbli minn barra l-host —
-għax l-operatur poġġa lil OmniRoute wara mina nginx/Cloudflare/Tailscale u nkixef
+għax l-operatur poġġa lil 67router wara mina nginx/Cloudflare/Tailscale u nkixef
 JWT, jew l-awtentikazzjoni kienet ikkonfigurata ħażin — l-attakkant jibdel “sejħa
-lil API” f’“ħaddem kmand fuq il-host” (eżekuzzjoni remota ta’ kodiċi). OmniRoute
+lil API” f’“ħaddem kmand fuq il-host” (eżekuzzjoni remota ta’ kodiċi). 67router
 jagħlaq din il-possibbiltà billi jinforza **verifika tal-host loopback mingħajr
 eċċezzjoni, qabel kwalunkwe verifika tal-awtentikazzjoni**, fuq kull rotta li
 tista’ toħloq proċessi: token mikxuf minn ġo mina xorta ma jistax jilħaq il-ħolqien
@@ -61,7 +61,6 @@ minnhom ma jkunx ikklassifikat bħala lokali biss.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — listener http-proxy + proxy tas-sistema                                                      |
 | `/api/settings/mitm`                                                                                     | Jippermetti l-interċettazzjoni MITM (stat tal-proxy fil-livell tas-sistema)                                      |
 | `/api/issue-agent/`                                                                                      | Aġent tal-issues — iniedi għodod lokali fuq ir-repożitorju                                                       |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — jitgħabbew/jiġu eżegwiti permezz ta' `worker_threads` + `child_process`                                |
 | `/api/middleware/`                                                                                       | Middleware tal-utent — jgħabbi/jeżegwixxi l-kodiċi tal-operatur fl-istess proċess                                |
 | `/api/system/version`                                                                                    | Aġġornament awtomatiku (POST biss; GET/HEAD/OPTIONS eżentati) — iniedi `git checkout` + `npm install`            |
 | `/api/db-backups/exportAll`                                                                              | Iniedi `tar` għall-arkivju tal-esportazzjoni                                                                     |
@@ -121,7 +120,7 @@ għal klijenti remoti li jużaw MCP biss u li m’għandhomx bżonn aċċess wie
 
 #### Gwida għall-operaturi u awditjar
 
-Jekk tħaddem OmniRoute wara reverse proxy jew tunnel (nginx, Caddy, Cloudflare
+Jekk tħaddem 67router wara reverse proxy jew tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), il-kontroll tal-loopback xorta jipproteġi r-rotot ta’ hawn fuq
 li jistgħu jniedu proċessi — talba li l-indirizz tal-klijent tagħha mhuwiex loopback tiġi rrifjutata b’
 `403 LOCAL_ONLY` **qabel ma titħaddem l-awtentikazzjoni**, għalhekk JWT żvelat ma jistax jilħaq tnedija ta’ proċess. Jibqgħu żewġ
@@ -159,7 +158,7 @@ responsabbiltajiet għall-operatur:
 - Fittex fir-reġistri tar-reverse proxy / tal-aċċess tiegħek għall-prefissi ta’ hawn fuq flimkien ma’
   indirizz tal-klijent li mhuwiex loopback. Kull hit bħal dan li rritorna `200` minflok
   `403 LOCAL_ONLY` ifisser li l-proxy qed jaħbi l-IP reali tal-klijent — sewwi l-proxy.
-- `403 LOCAL_ONLY` fir-reġistri ta’ OmniRoute għal wieħed minn dawn il-paths ifisser li l-gwardja
+- `403 LOCAL_ONLY` fir-reġistri ta’ 67router għal wieħed minn dawn il-paths ifisser li l-gwardja
   qed taħdem kif intenzjonat, mhux żball li għandu jiġi soppress.
 
 #### Rotot aċċessibbli mill-bogħod b’kontroll tal-probe fil-punt tas-sejħa

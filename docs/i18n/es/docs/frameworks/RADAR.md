@@ -41,7 +41,7 @@ o una integración externa concreta estén disponibles actualmente.
 | Ofertas para colaboradores                    | Implementadas como un feed independiente, firmado y exclusivo del nivel en vivo, y como una página del panel. El cliente vuelve a validar el esquema cerrado de beneficios, conserva la última caché válida, filtra las entradas caducadas y etiqueta explícitamente las ofertas de socios.            |
 | Información y reconocimiento de colaboradores | Implementados como un feed estricto, firmado y exclusivo del nivel en vivo, con ELO propiedad de Radar, datos objetivos sobre la actualidad/tendencia del catálogo, una insignia local verificada de colaborador, una página del panel y comandos CLI de estado/sincronización exclusivamente locales. |
 | Pagos y correo electrónico transaccional      | No implementados en el cliente OSS. La compra, la donación, la revisión de recibos, la recuperación y la entrega de correo pertenecen al servicio privado; la disponibilidad del servicio alojado sigue dependiendo de su despliegue supervisado y de la configuración del proveedor.                  |
-| Línea de trabajo del agente de investigación  | No forma parte de esta versión del cliente. El contenido seleccionado del feed sigue siendo información del lado del servidor; ninguna instalación de OmniRoute ejecuta un agente de investigación autónomo.                                                                                           |
+| Línea de trabajo del agente de investigación  | No forma parte de esta versión del cliente. El contenido seleccionado del feed sigue siendo información del lado del servidor; ninguna instalación de 67router ejecuta un agente de investigación autónomo.                                                                                            |
 
 ---
 
@@ -119,7 +119,7 @@ Cuando ambas están activadas, la ruta de sincronización es la siguiente:
    que rota diariamente para la revisión manual de abusos; esas tablas no conservan ni la clave ni la IP sin procesar.
    Los registros de acceso de la infraestructura y la bandeja de salida cifrada de entregas constituyen límites operativos
    independientes.
-3. OmniRoute nunca envía prompts, respuestas, conversaciones, credenciales de proveedores, tráfico de modelos,
+3. 67router nunca envía prompts, respuestas, conversaciones, credenciales de proveedores, tráfico de modelos,
    tiempo de actividad, latencia ni la configuración local de proveedores al servicio Radar.
 4. La respuesta se verifica, valida y almacena localmente en caché (consulte
    [Modelo de seguridad](#security-model)). Radar tiene exactamente cuatro rutas de red del lado del servidor:
@@ -243,13 +243,13 @@ que ya dispone de una.
 ### Activación de extremo a extremo y configuración guiada
 
 El servicio privado de fuentes y este cliente OSS tienen una frontera deliberadamente limitada: el servicio
-emite y valida la clave de colaborador, mientras que la instalación local de OmniRoute cifra la clave,
+emite y valida la clave de colaborador, mientras que la instalación local de 67router cifra la clave,
 sincroniza los artefactos firmados en el servidor y guía la configuración del proveedor. El orden de validación asistida es:
 
 1. Obtén una clave recién emitida o recuperada desde la reclamación del colaborador, los planes/pago, el
    proceso de recuperación o un operador autorizado de un servidor privado. No pegues la clave sin procesar en registros,
    capturas de pantalla, comentarios de incidencias ni argumentos de línea de comandos.
-2. Habilita la bandera de funcionalidad `RADAR_ENABLED` en la instalación local de OmniRoute. Esto habilita la interfaz de usuario,
+2. Habilita la bandera de funcionalidad `RADAR_ENABLED` en la instalación local de 67router. Esto habilita la interfaz de usuario,
    pero permanece inactivo en la red hasta que se guarde la suscripción voluntaria por separado.
 3. Abre `/dashboard/radar`, pega la clave y actívala. El navegador envía una única solicitud local
    `POST /api/radar/settings` con `{ optIn: true, supporterKey }`; la clave se cifra localmente y
@@ -314,7 +314,7 @@ se vuelvan a sincronizar.
 ### Sobrescrituras mediante variables de entorno compatibles con forks
 
 Dos variables de entorno permiten que los forks y las instalaciones autoalojadas dirijan el cliente a su propio feed en lugar de
-al servicio OmniRoute predeterminado; consulte
+al servicio 67router predeterminado; consulte
 [Cómo autoalojar un feed](#cómo-autoalojar-un-feed) más abajo:
 
 | Variable            | Propósito                                                                                                             |
@@ -468,7 +468,7 @@ Un `enabled: false` del feed sigue siendo la excepción de seguridad: prevalece 
 Las publicaciones del catálogo utilizan `schemaVersion: 2`. `contextWindow` y cada uno de `tools`, `vision` y
 `thinking` son, de forma independiente, `number | null` / `boolean | null`: `null` significa desconocido, mientras que
 `false` significa que una fuente oficial del proveedor confirmada mediante D16 indica explícitamente que la capacidad está ausente.
-Los indicadores internos del registro/especificación de modelos de OmniRoute nunca se promueven directamente a hechos del feed. El cliente
+Los indicadores internos del registro/especificación de modelos de 67router nunca se promueven directamente a hechos del feed. El cliente
 sigue aceptando instantáneas v1; como el generador antiguo utilizaba `false` como marcador de ausencia, un `false` de v1 se
 normaliza como desconocido, mientras que un `true` de v1 sigue siendo un hecho. Las versiones de esquema desconocidas fallan de forma segura y la
 última caché válida sigue disponible. Cada modelo v2 con un contexto/capacidad no nulo debe incluir
@@ -529,7 +529,7 @@ Las siguientes familias de rutas locales de Radar respaldan la interfaz de usuar
 | `/api/radar/local-model-state` | DELETE | Borra los campos de anulación editables y conserva cualquier marcador de eliminación.                                           |
 
 **Regla estricta: estas rutas nunca actúan como proxy del servicio de feeds.** El navegador solo se comunica
-con el servidor local de OmniRoute. Los cuatro módulos que se comunican con el servicio Radar son
+con el servidor local de 67router. Los cuatro módulos que se comunican con el servicio Radar son
 `src/lib/radar/sync.ts` (catálogo), `src/lib/radar/referralsSync.ts` (referidos) y
 `src/lib/radar/offersSync.ts` (ofertas), además de `src/lib/radar/intelSync.ts` (Intel); todos se ejecutan
 en el servidor, nunca en el cliente. Esto mantiene
@@ -572,7 +572,7 @@ Intel es un artefacto firmado disponible en `GET /v1/intel/latest`. El esquema c
 
 `syncRadarIntel()` aplica el mismo Bearer del lado del servidor, tiempo de espera de 30 segundos, límite de transmisión de 10 MiB, verificación Ed25519 de los bytes exactos, esquema estricto, requisito de `live` en el cuerpo y el encabezado, versión mínima y conservación de la última caché válida que las ofertas. Después de conservar una instantánea activa verificada, el cliente deriva `radar:<sha256(supporter key)>`, almacena únicamente esa identidad unidireccional y emite el evento de reconocimiento específico `radar_supporter`. Su insignia `radar-supporter` es idempotente y otorga cero XP; nunca actualiza las tablas de clasificación ni reutiliza `token_share`. `/dashboard/radar/intel` renderiza la insignia únicamente a partir de metadatos verificados de la caché local.
 
-La CLI expone `omniroute radar status` y `omniroute radar sync`. Ambos se comunican únicamente con la API local de OmniRoute. `status` realiza una solicitud de solo lectura `GET /api/radar/status`; `sync` envía una solicitud `POST /api/radar/sync-all` e imprime un resultado por cada feed. Ninguno de los comandos lee, acepta ni imprime la clave de colaborador, y ninguno se comunica directamente con el servicio Radar.
+La CLI expone `omniroute radar status` y `omniroute radar sync`. Ambos se comunican únicamente con la API local de 67router. `status` realiza una solicitud de solo lectura `GET /api/radar/status`; `sync` envía una solicitud `POST /api/radar/sync-all` e imprime un resultado por cada feed. Ninguno de los comandos lee, acepta ni imprime la clave de colaborador, y ninguno se comunica directamente con el servicio Radar.
 
 ---
 

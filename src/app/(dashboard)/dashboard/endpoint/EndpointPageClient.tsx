@@ -18,7 +18,6 @@ import { useCopyToClipboard } from "@/shared/hooks/useCopyToClipboard";
 import { isPublicDisplayBaseUrl, useDisplayBaseUrl } from "@/shared/hooks";
 import { extractApiErrorMessage } from "@/shared/http/apiErrorMessage";
 import { useTranslations } from "next-intl";
-import A2ADashboardPage from "./components/A2ADashboard";
 import McpDashboardPage from "./components/MCPDashboard";
 import NotionSourceCard from "./components/NotionSourceCard";
 import ObsidianSourceCard from "./components/ObsidianSourceCard";
@@ -117,12 +116,11 @@ type EndpointTunnelVisibility = {
   showNgrokTunnel: boolean;
 };
 
-type EndpointTab = "apis" | "mcp" | "a2a" | "context-sources";
+type EndpointTab = "apis" | "mcp" | "context-sources";
 
 const ENDPOINT_TABS: Array<{ value: EndpointTab; labelKey: string; icon: string }> = [
   { value: "apis", labelKey: "tabApis", icon: "api" },
   { value: "mcp", labelKey: "tabMcp", icon: "extension" },
-  { value: "a2a", labelKey: "tabA2a", icon: "hub" },
   { value: "context-sources", labelKey: "tabContextSources", icon: "database" },
 ];
 
@@ -161,7 +159,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   const [cloudBaseUrl, setCloudBaseUrl] = useState(BUILD_TIME_CLOUD_URL); // dynamic cloud URL from API response
   const [cloudConfigured, setCloudConfigured] = useState(Boolean(BUILD_TIME_CLOUD_URL));
   const [_mcpStatus, setMcpStatus] = useState<any>(null);
-  const [_a2aStatus, setA2aStatus] = useState<any>(null);
   const [searchProviders, setSearchProviders] = useState<any[]>([]);
   const [cloudflaredStatus, setCloudflaredStatus] = useState<CloudflaredTunnelStatus | null>(null);
   const [cloudflaredBusy, setCloudflaredBusy] = useState(false);
@@ -331,16 +328,10 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
   const fetchProtocolStatus = async () => {
     try {
-      const [mcpRes, a2aRes] = await Promise.allSettled([
-        fetch("/api/mcp/status"),
-        fetch("/api/a2a/status"),
-      ]);
+      const [mcpRes] = await Promise.allSettled([fetch("/api/mcp/status")]);
 
       if (mcpRes.status === "fulfilled" && mcpRes.value.ok) {
         setMcpStatus(await mcpRes.value.json());
-      }
-      if (a2aRes.status === "fulfilled" && a2aRes.value.ok) {
-        setA2aStatus(await a2aRes.value.json());
       }
     } catch {
       // Ignore status failures; protocols panel has fallback text.
@@ -351,27 +342,15 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   // Filter out parent models (models with parent field set) to avoid showing duplicates
   const endpointData = useMemo(() => {
     const chat = allModels.filter((m) => !m.type && !m.parent);
-    const embeddings = allModels.filter((m) => m.type === "embedding" && !m.parent);
-    const images = allModels.filter((m) => m.type === "image" && !m.parent);
     const video = allModels.filter((m) => m.type === "video" && !m.parent);
-    const rerank = allModels.filter((m) => m.type === "rerank" && !m.parent);
     const audioTranscription = allModels.filter(
       (m) => m.type === "audio" && m.subtype === "transcription" && !m.parent
     );
-    const audioSpeech = allModels.filter(
-      (m) => m.type === "audio" && m.subtype === "speech" && !m.parent
-    );
-    const moderation = allModels.filter((m) => m.type === "moderation" && !m.parent);
     const music = allModels.filter((m) => m.type === "music" && !m.parent);
     return {
       chat,
-      embeddings,
-      images,
       video,
-      rerank,
       audioTranscription,
-      audioSpeech,
-      moderation,
       music,
     };
   }, [allModels]);
@@ -383,19 +362,14 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
   const availableEndpointCount = useMemo(() => {
     const chatCount = endpointData.chat.length > 0 ? 4 : 0; // chat + responses + completions + messages
-    const imageCount = endpointData.images.length > 0 ? 2 : 0; // image gen + image edits
     const otherMedia = [
-      endpointData.embeddings,
       endpointData.audioTranscription,
-      endpointData.audioSpeech,
       endpointData.music,
       endpointData.video,
     ].filter((m) => m.length > 0).length;
-    const utilityFixed = 3; // batch + files + list models (always available)
-    const modelUtility =
-      (endpointData.rerank.length > 0 ? 1 : 0) + (endpointData.moderation.length > 0 ? 1 : 0);
+    const utilityFixed = 1; // list models (always available)
     const searchCount = searchProviders.length > 0 ? 1 : 0;
-    return chatCount + imageCount + otherMedia + utilityFixed + modelUtility + searchCount;
+    return chatCount + otherMedia + utilityFixed + searchCount;
   }, [endpointData, searchProviders]);
 
   const postCloudAction = async (action, timeoutMs = CLOUD_ACTION_TIMEOUT_MS) => {
@@ -854,7 +828,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
           type: "info",
           message: translateOrFallback(
             "tailscaleWaitingForLogin",
-            "Complete the Tailscale login in the opened browser tab. OmniRoute will retry automatically."
+            "Complete the Tailscale login in the opened browser tab. 67router will retry automatically."
           ),
         });
 
@@ -882,7 +856,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
           type: "info",
           message: translateOrFallback(
             "tailscaleWaitingForFunnel",
-            "Enable Funnel for this device in the opened browser tab. OmniRoute will keep polling."
+            "Enable Funnel for this device in the opened browser tab. 67router will keep polling."
           ),
         });
 
@@ -1259,15 +1233,18 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
   const ngrokUrlNotice = translateOrFallback("ngrokUrlNotice", "Creates a public ngrok tunnel.");
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       {/* Guided connection header (#11228): /v1 URL + test action lead; advanced protocols demoted */}
       <div className="flex flex-col gap-2">
         <PageHeader compact title={t("title")} description={t("subtitle")} />
         <div className="flex items-center gap-3 mt-2">
-          <code className="text-sm bg-card-subtle px-3 py-1 rounded-md text-text-main font-mono">
+          <code className="text-[13px] border border-border bg-bg-subtle px-3 py-1 rounded-lg text-text-main font-mono">
             {displayBaseUrl}/v1
           </code>
-          <a href="#test" className="text-sm text-action font-medium hover:underline">
+          <a
+            href="#test"
+            className="text-[13px] text-text-main font-medium underline-offset-2 hover:underline"
+          >
             {t("testEndpoint")}
           </a>
         </div>
@@ -1284,7 +1261,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       />
 
       {activeEndpointTab === "mcp" ? <McpDashboardPage /> : null}
-      {activeEndpointTab === "a2a" ? <A2ADashboardPage /> : null}
       {activeEndpointTab === "context-sources" ? (
         <div className="flex flex-col gap-4">
           <NotionSourceCard />
@@ -1294,7 +1270,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
       {/* Endpoint Card */}
       <Card>
-        <h2 className="text-lg font-semibold mb-4">{t("title")}</h2>
+        <h2 className="text-sm font-semibold mb-4">{t("title")}</h2>
 
         {/* Cloud Status Toast */}
         {cloudStatus && (
@@ -1327,8 +1303,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
 
         {/* Active URLs bar */}
         {activeUrls.length > 0 && (
-          <div className="mb-4 rounded-lg border border-primary/20 bg-primary/5 p-3">
-            <p className="text-[10px] font-semibold text-primary uppercase tracking-wider mb-2">
+          <div className="mb-4 rounded-lg border border-border bg-bg-subtle p-3">
+            <p className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em] mb-2">
               {t("activeEndpoints")}
             </p>
             <div className="flex flex-col gap-1.5">
@@ -1403,7 +1379,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
           {/* Tunnels section header */}
           <div className="flex items-center gap-2 pt-4 pb-1 border-t border-border/50">
             <Icon name="network_node" size={14} className="text-text-muted" />
-            <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+            <span className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("tunnels")}
             </span>
             <div className="flex-1 h-px bg-border/50" />
@@ -1419,7 +1395,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
               status pill and the action move to the next line instead of squeezing it; only
               the URL may break anywhere ("Cloud sync d|estination" at 390 px, F4). */}
           <div className="flex flex-wrap items-center gap-3 py-3">
-            <Icon name="cloud" size={18} className="text-info" />
+            <Icon name="cloud" size={18} className="text-text-muted" />
             <div className="flex-1 min-w-[12rem]">
               <span className="text-sm font-medium">{t("cloudOmniroute")}</span>
               <p
@@ -1481,7 +1457,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
           {showCloudflaredTunnel && (
             <div className="border-t border-border/30">
               <div className="flex items-center gap-3 py-3">
-                <Icon name="cloud_queue" size={18} className="text-warning" />
+                <Icon name="cloud_queue" size={18} className="text-text-muted" />
                 <div className="flex-1 min-w-0">
                   <span className="text-sm font-medium">
                     {translateOrFallback("cloudflaredTitle", "Cloudflare Quick Tunnel")}
@@ -1561,7 +1537,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
                   }
                 }}
               >
-                <Icon name="vpn_lock" size={18} className="text-chart-3" />
+                <Icon name="vpn_lock" size={18} className="text-text-muted" />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline gap-1 flex-wrap">
                     <span className="text-sm font-medium">
@@ -1720,7 +1696,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
                   }
                 }}
               >
-                <Icon name="public" size={18} className="text-chart-3" />
+                <Icon name="public" size={18} className="text-text-muted" />
                 <div className="flex-1 min-w-0">
                   <span className="text-sm font-medium">
                     {translateOrFallback("ngrokTitle", "ngrok Tunnel")}
@@ -1845,7 +1821,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
       <Card>
         <div className="flex items-center justify-between mb-5">
           <div>
-            <h2 className="text-lg font-semibold">{t("available")}</h2>
+            <h2 className="text-sm font-semibold">{t("available")}</h2>
             <p className="text-sm text-text-muted">
               {modelsLoading
                 ? translateOrFallback("loadingModels", "Loading available models...")
@@ -1860,8 +1836,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {/* Core APIs */}
         <div className="mb-5">
           <div className="flex items-center gap-2 mb-3">
-            <Icon name="hub" className="text-sm text-primary" />
-            <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <Icon name="hub" className="text-sm text-text-muted" />
+            <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("categoryCore")}
             </h3>
             <div className="flex-1 h-px bg-border/50" />
@@ -1921,49 +1897,13 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {/* Media & Multi-Modal */}
         <div className="mb-5">
           <div className="flex items-center gap-2 mb-3">
-            <Icon name="perm_media" className="text-sm text-chart-3" />
-            <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <Icon name="perm_media" className="text-sm text-text-muted" />
+            <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("categoryMedia")}
             </h3>
             <div className="flex-1 h-px bg-border/50" />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            <EndpointCard
-              icon="data_array"
-              iconColor="text-success"
-              iconBg="bg-success/10"
-              title={t("embeddings")}
-              path="/v1/embeddings"
-              models={endpointData.embeddings}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="image"
-              iconColor="text-chart-3"
-              iconBg="bg-chart-3/10"
-              title={t("imageGeneration")}
-              path="/v1/images/generations"
-              models={endpointData.images}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="edit_square"
-              iconColor="text-chart-3"
-              iconBg="bg-chart-3/10"
-              title={t("imageEdits")}
-              path="/v1/images/edits"
-              models={endpointData.images}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
             <EndpointCard
               icon="mic"
               iconColor="text-error"
@@ -1971,18 +1911,6 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
               title={t("audioTranscription")}
               path="/v1/audio/transcriptions"
               models={endpointData.audioTranscription}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="record_voice_over"
-              iconColor="text-info"
-              iconBg="bg-info/10"
-              title={t("textToSpeech")}
-              path="/v1/audio/speech"
-              models={endpointData.audioSpeech}
               copy={copy}
               copied={copied}
               baseUrl={currentEndpoint}
@@ -2019,8 +1947,8 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {searchProviders.length > 0 && (
           <div className="mb-5">
             <div className="flex items-center gap-2 mb-3">
-              <Icon name="travel_explore" className="text-sm text-info" />
-              <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+              <Icon name="travel_explore" className="text-sm text-text-muted" />
+              <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
                 {t("categorySearch")}
               </h3>
               <div className="flex-1 h-px bg-border/50" />
@@ -2044,60 +1972,13 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
         {/* Utility & Management */}
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Icon name="build" className="text-sm text-warning" />
-            <h3 className="text-xs font-semibold text-text-muted uppercase tracking-wider">
+            <Icon name="build" className="text-sm text-text-muted" />
+            <h3 className="text-[11px] font-medium text-text-muted uppercase tracking-[0.04em]">
               {t("categoryUtility")}
             </h3>
             <div className="flex-1 h-px bg-border/50" />
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            <EndpointCard
-              icon="sort"
-              iconColor="text-warning"
-              iconBg="bg-warning/10"
-              title={t("rerank")}
-              path="/v1/rerank"
-              models={endpointData.rerank}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="shield"
-              iconColor="text-warning"
-              iconBg="bg-warning/10"
-              title={t("moderations")}
-              path="/v1/moderations"
-              models={endpointData.moderation}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-              modelsLoading={modelsLoading}
-            />
-            <EndpointCard
-              icon="view_list"
-              iconColor="text-chart-4"
-              iconBg="bg-chart-4/10"
-              title={t("batchApi")}
-              path="/v1/batches"
-              models={null}
-              badge="OpenAI"
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-            />
-            <EndpointCard
-              icon="folder"
-              iconColor="text-warning"
-              iconBg="bg-warning/10"
-              title={t("filesApi")}
-              path="/v1/files"
-              models={null}
-              copy={copy}
-              copied={copied}
-              baseUrl={currentEndpoint}
-            />
             <EndpointCard
               icon="list"
               iconColor="text-chart-4"
@@ -2148,7 +2029,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
             <p className="text-sm mt-2">
               {translateOrFallback(
                 "cloudUploadWarning",
-                "Cloud sync is disabled by default on new installations. Enabling it uploads provider API keys, OAuth access/refresh tokens, OmniRoute API keys, and configuration to the destination above, now and during future syncs. This is separate from local Storage backups. Only enable it if you trust that server."
+                "Cloud sync is disabled by default on new installations. Enabling it uploads provider API keys, OAuth access/refresh tokens, 67router API keys, and configuration to the destination above, now and during future syncs. This is separate from local Storage backups. Only enable it if you trust that server."
               )}
             </p>
             <Checkbox
@@ -2290,7 +2171,7 @@ export default function APIPageClient({ machineId }: Readonly<APIPageClientProps
             <p className="text-sm font-medium text-info">
               {translateOrFallback(
                 "tailscaleInstallIntro",
-                "Installs Tailscale on this machine and prepares OmniRoute to enable Funnel."
+                "Installs Tailscale on this machine and prepares 67router to enable Funnel."
               )}
             </p>
             <p className="mt-2 text-sm text-info/80">
@@ -2385,7 +2266,6 @@ function ProviderModelsModal({
 
   const chatModels = providerModels.filter((m) => !m.type);
   const embeddingModels = providerModels.filter((m) => m.type === "embedding");
-  const imageModels = providerModels.filter((m) => m.type === "image");
 
   const renderModelGroup = (title, icon, groupModels) => {
     if (groupModels.length === 0) return null;
@@ -2439,7 +2319,6 @@ function ProviderModelsModal({
           <>
             {renderModelGroup(t("chat"), "chat", chatModels)}
             {renderModelGroup(t("embedding"), "data_array", embeddingModels)}
-            {renderModelGroup(t("image"), "image", imageModels)}
           </>
         )}
       </div>
@@ -2478,22 +2357,26 @@ function EndpointCard({
   const copyId = `endpoint_${path}`;
   const fullUrl = `${baseUrl.replace(/\/v1$/, "")}${path}`;
 
+  // 67router: one neutral icon chip for every endpoint; `iconColor`/`iconBg` stay in the props
+  // so the call sites keep compiling, but the calm monochrome tile ignores them.
+  void iconColor;
+  void iconBg;
   return (
-    <div className="border border-border rounded-lg p-3 hover:bg-surface/30 transition-colors flex flex-col gap-2">
+    <div className="border border-border rounded-lg p-3 hover:border-border-strong transition-colors flex flex-col gap-2">
       <div className="flex items-start gap-2.5">
-        <div className={`flex items-center justify-center size-8 rounded-lg ${iconBg} shrink-0`}>
-          <Icon name={icon} size={16} className={iconColor} />
+        <div className="flex items-center justify-center size-8 rounded-lg border border-border bg-surface shrink-0">
+          <Icon name={icon} size={16} className="text-text-muted" />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-1.5 flex-wrap">
             <span className="font-semibold text-xs leading-tight">{title}</span>
             {badge && (
-              <span className="text-[9px] px-1.5 py-0.5 rounded-full border border-border/60 text-text-muted font-medium uppercase tracking-wider leading-none">
+              <span className="text-[11px] px-1.5 py-px rounded-md border border-border bg-bg-subtle text-text-secondary font-medium leading-tight">
                 {badge}
               </span>
             )}
           </div>
-          <span className="text-xs text-text-muted mt-0.5 block">
+          <span className="text-xs tabular-nums text-text-muted mt-0.5 block">
             {models === null
               ? "—"
               : modelsLoading
@@ -2503,7 +2386,7 @@ function EndpointCard({
         </div>
       </div>
       <div className="flex items-center gap-1.5">
-        <code className="flex-1 text-[10px] font-mono text-text-muted bg-surface/80 px-2 py-1 rounded truncate">
+        <code className="flex-1 text-[11px] font-mono text-text-secondary bg-bg-subtle border border-border px-2 py-1 rounded-md truncate">
           {path}
         </code>
         <Button

@@ -24,12 +24,13 @@ export const ROUTING_STRATEGY_VALUES = [
 export type RoutingStrategyValue = (typeof ROUTING_STRATEGY_VALUES)[number];
 
 /**
- * Internal-only routing strategy values. These are used by system-generated
- * combos (e.g. the auto-minted quota-share `qtSd/` combos) and are NEVER exposed
- * in the UI or user-facing API — deliberately kept OUT of ROUTING_STRATEGY_VALUES
- * and ROUTING_STRATEGIES so they never appear as a selectable option.
+ * Internal-only routing strategy values for system-generated combos. They are
+ * NEVER exposed in the UI or user-facing API — deliberately kept OUT of
+ * ROUTING_STRATEGY_VALUES and ROUTING_STRATEGIES. Empty since the Quota Share
+ * (`qtSd/`) combos were removed; kept as the typed extension point the strategy
+ * registry and the known-symbols gate read.
  */
-export const INTERNAL_ROUTING_STRATEGY_VALUES = ["quota-share"] as const;
+export const INTERNAL_ROUTING_STRATEGY_VALUES = [] as const;
 
 export type InternalRoutingStrategyValue = (typeof INTERNAL_ROUTING_STRATEGY_VALUES)[number];
 
@@ -71,8 +72,8 @@ export function normalizeRoutingStrategy(value: unknown): AnyRoutingStrategyValu
   if (normalized === "usage") return "least-used";
   if (normalized === "context") return "context-optimized";
   if (normalized === "weekly-reset" || normalized === "reset-window-order") return "reset-window";
-  // Internal strategies (e.g. quota-share) are preserved verbatim, never stripped
-  // to "priority", so system-minted combos resolve to their dedicated dispatch.
+  // Internal strategies are preserved verbatim, never stripped to "priority", so
+  // system-minted combos resolve to their dedicated dispatch.
   if ((INTERNAL_ROUTING_STRATEGY_VALUES as readonly string[]).includes(normalized))
     return normalized as InternalRoutingStrategyValue;
   return (ROUTING_STRATEGY_VALUES as readonly string[]).includes(normalized)

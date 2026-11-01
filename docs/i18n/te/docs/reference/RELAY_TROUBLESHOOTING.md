@@ -4,7 +4,7 @@
 
 ---
 
-రిలేలు (Vercel, Deno, Cloudflare) serverless బ్యాకెండ్పై upstream కనెక్షన్ను ముగిస్తాయి, తద్వారా provider API కీని server-sideలోనే ఉంచుతూ OmniRoute స్థిరమైన ప్రాంతం నుండి egress చేయగలదు. ప్రొడక్షన్లో ఆపరేటర్లు ఎదుర్కొనే రెండు వైఫల్య రీతులను, అలాగే ప్రతి దానికి OmniRoute అందించే పునరుద్ధరణ మార్గాలను ఈ పత్రం వివరిస్తుంది.
+రిలేలు (Vercel, Deno, Cloudflare) serverless బ్యాకెండ్పై upstream కనెక్షన్ను ముగిస్తాయి, తద్వారా provider API కీని server-sideలోనే ఉంచుతూ 67router స్థిరమైన ప్రాంతం నుండి egress చేయగలదు. ప్రొడక్షన్లో ఆపరేటర్లు ఎదుర్కొనే రెండు వైఫల్య రీతులను, అలాగే ప్రతి దానికి 67router అందించే పునరుద్ధరణ మార్గాలను ఈ పత్రం వివరిస్తుంది.
 
 ## రిలే auth ఎలా నిల్వ చేయబడుతుంది
 
@@ -26,7 +26,7 @@
 1. **Settings → Proxy Pool** తెరవండి.
 2. auth లేని రిలే వరుసలు పసుపు రంగు `auth missing` బ్యాడ్జ్ను మరియు
    **Repair** బటన్ను చూపుతాయి.
-3. **Repair** క్లిక్ చేయండి. OmniRoute
+3. **Repair** క్లిక్ చేయండి. 67router
    `POST /api/settings/proxies/[id]/repair-relay`ను కాల్ చేస్తుంది, ఇది:
    - **ప్రస్తుత** కీతో `relayAuthEnc`ను డీక్రిప్ట్ చేస్తుంది,
    - plaintext `relayAuth`ను తిరిగి `notes`లో వ్రాస్తుంది,
@@ -51,7 +51,7 @@ UIలో, టోకెన్ను తిరిగి పొందడం సా�
 
 **లక్షణం:** ప్రాక్సీ పరీక్ష (`speed` బటన్) రిలే పనిచేస్తున్నట్లు చూపుతుంది, కానీ రిక్వెస్ట్లు ఇప్పటికీ అడపాదడపా విఫలమవుతాయి.
 
-OmniRoute యొక్క auto-test probe తిరిగి ఇచ్చే relay awareness headersను తనిఖీ చేయండి
+67router యొక్క auto-test probe తిరిగి ఇచ్చే relay awareness headersను తనిఖీ చేయండి
 (**Settings → Proxy Pool** మరియు `relayTested` / `relayAlive` కౌంటర్లను చూడండి):
 
 - `x-relay-url` — ఏ relay backend స్పందించింది.

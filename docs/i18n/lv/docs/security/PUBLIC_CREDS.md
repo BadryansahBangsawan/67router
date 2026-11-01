@@ -15,7 +15,7 @@
 - [OAuth 2.0 vietējām lietotnēm (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — instalēto lietotņu OAuth client_id / client_secret ir publiski; faktisko drošību nodrošina PKCE.
 - [Firebase API atslēgas](https://firebase.google.com/docs/projects/api-keys) — tīmekļa klientu identifikatori pēc būtības ir publiski.
 
-OmniRoute ir jāiegulst šīs vērtības, lai lietotāji, kuri nekonfigurē `.env`, uzreiz saņemtu funkcionējošu OAuth plūsmu. Bez iegultas rezerves vērtības Gemini / Antigravity pakalpojumu sniedzēji pārstāj darboties ikvienam lietotājam, kurš izvēlas pieeju „vienkārši klonē un palaid”.
+67router ir jāiegulst šīs vērtības, lai lietotāji, kuri nekonfigurē `.env`, uzreiz saņemtu funkcionējošu OAuth plūsmu. Bez iegultas rezerves vērtības Gemini / Antigravity pakalpojumu sniedzēji pārstāj darboties ikvienam lietotājam, kurš izvēlas pieeju „vienkārši klonē un palaid”.
 
 Tomēr tādas literālas vērtības kā `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` atpazīst **GitHub Secret Scanning**, **Semgrep** un līdzīgi veidņu skeneri. Katrs laidiens rada trokšņainu kļūdaini pozitīvu rezultātu plūsmu, push aizsardzība bloķē leģitīmus komitus, un operatori pārstāj uzticēties brīdinājumu plūsmai.
 

@@ -45,7 +45,7 @@ tas atjauno pilnībā automātisko plūsmu, kas projektā bija līdz v3.8.48, vi
 WS1.3 garantiju (nopludināts marķieris viens pats nevar nodrošināt publicēšanu — marķiera nav).
 
 **Vienreizēja iestatīšana (īpašniekam):** npmjs.com → pakotne `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: īpašnieks `diegosouzapw`, repozitorijs `OmniRoute`, darbplūsma `npm-publish.yml`
+Publisher_ → GitHub: īpašnieks `diegosouzapw`, repozitorijs `67router`, darbplūsma `npm-publish.yml`
 (vide: nav). Kamēr tas nav izdarīts, automātiskā darbība neizdodas ar `ENEEDAUTH`:
 palaidiet to atkārtoti ar `publish_mode=staged` (skatiet tālāk) vai `direct`.
 

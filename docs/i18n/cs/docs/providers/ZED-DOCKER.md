@@ -4,7 +4,7 @@
 
 ---
 
-Když OmniRoute běží uvnitř Dockeru, standardní postup „Importovat z klíčenky Zed“ selže,
+Když 67router běží uvnitř Dockeru, standardní postup „Importovat z klíčenky Zed“ selže,
 protože kontejner nemá přístup k démonu klíčenky hostitelského operačního systému (`libsecret` v Linuxu,
 Keychain v macOS, Credential Manager ve Windows) a konfigurační adresáře Zed v
 souborovém systému hostitele nejsou ve výchozím nastavení uvnitř kontejneru viditelné.
@@ -20,7 +20,7 @@ Uvnitř kontejneru dochází ke dvěma problémům, které import blokují:
    komunikuje se službou klíčenky operačního systému prostřednictvím unixového socketu nebo relace D-Bus.
    Ani jedno není ve výchozím nastavení zpřístupněno kontejneru, takže načtení přihlašovacích údajů vždy selže.
 
-OmniRoute detekuje prostředí Dockeru pomocí dvou heuristik:
+67router detekuje prostředí Dockeru pomocí dvou heuristik:
 
 - Přítomnost `/.dockerenv` (zapisuje jej démon Dockeru při spuštění kontejneru).
 - Výskyt řetězce `docker` v `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Když se aktivuje některá z těchto heuristik, trasa importu vrátí HTTP 422 
 
 1. Otevřete **Řídicí panel → Poskytovatelé → Zed**.
 2. Panel **Ruční import tokenu** se zobrazí pod kartou importu z klíčenky. Když
-   OmniRoute detekuje Docker, tento panel se automaticky rozbalí po prvním neúspěšném
+   67router detekuje Docker, tento panel se automaticky rozbalí po prvním neúspěšném
    pokusu o import z klíčenky.
 3. V rozevíracím seznamu vyberte poskytovatele (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter nebo DeepSeek).

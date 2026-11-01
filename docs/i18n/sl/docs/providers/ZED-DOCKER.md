@@ -4,7 +4,7 @@
 
 ---
 
-Ko OmniRoute deluje znotraj Dockerja, standardni postopek »Uvoz iz shrambe ključev Zed« ne uspe,
+Ko 67router deluje znotraj Dockerja, standardni postopek »Uvoz iz shrambe ključev Zed« ne uspe,
 ker vsebnik ne more dostopati do demona shrambe ključev gostiteljskega operacijskega sistema (`libsecret` v Linuxu,
 Keychain v sistemu macOS, Credential Manager v sistemu Windows), imeniki s konfiguracijo Zed v
 datotečnem sistemu gostitelja pa privzeto niso vidni znotraj vsebnika.
@@ -20,7 +20,7 @@ Znotraj vsebnika se pojavita dve težavi, ki preprečujeta uvoz:
    modul `keytar` komunicira s storitvijo shrambe ključev operacijskega sistema prek vtičnice Unix ali seje D-Bus.
    Nobena od njiju privzeto ni povezana z vsebnikom, zato branje poverilnic vedno ne uspe.
 
-OmniRoute zazna okolje Docker z dvema hevristikama:
+67router zazna okolje Docker z dvema hevristikama:
 
 - Prisotnost `/.dockerenv` (zapiše ga demon Docker ob zagonu vsebnika).
 - Niz `docker` v `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Ko se sproži katera koli od teh hevristik, uvozna pot vrne HTTP 422 z
 
 1. Odprite **Nadzorna plošča → Ponudniki → Zed**.
 2. Pod kartico za uvoz iz shrambe ključev se prikaže plošča **Ročni uvoz žetona**. Ko
-   OmniRoute zazna Docker, se ta plošča samodejno razširi po prvem neuspelem
+   67router zazna Docker, se ta plošča samodejno razširi po prvem neuspelem
    poskusu uvoza iz shrambe ključev.
 3. Na spustnem seznamu izberite ponudnika (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter ali DeepSeek).

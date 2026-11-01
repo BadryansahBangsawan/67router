@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jiddetermina d-driver SQLite tiegħu waqt l-istartjar permezz ta’ katina ta’ riżerva f’5 passi:
+67router jiddetermina d-driver SQLite tiegħu waqt l-istartjar permezz ta’ katina ta’ riżerva f’5 passi:
 
 1. **`better-sqlite3` inkluż** (permezz ta’ `dependencies` f’`package.json`)
    — l-aktar veloċi, binarju nattiv, installat minn `npm install` meta jkunu preżenti l-għodod tal-build.
@@ -28,13 +28,13 @@ OmniRoute jiddetermina d-driver SQLite tiegħu waqt l-istartjar permezz ta’ ka
 - **Ebda għodda tal-build**: Xi ambjenti (Windows korporattiv mingħajr VS Build
   Tools, immaġnijiet Docker minimi) ma jistgħux jikkompilaw `better-sqlite3`. L-installatur
   waqt it-tħaddim isib binarju mibni minn qabel mir-reġistru ta’ npm; id-drivers
-  ta’ riżerva jiżguraw li OmniRoute xorta jistartja anki jekk dan ifalli.
+  ta’ riżerva jiżguraw li 67router xorta jistartja anki jekk dan ifalli.
 - **Sistemi iżolati min-network**: Jekk ir-reġistru ta’ npm ma jkunx aċċessibbli, `node:sqlite`
   jew `sql.js` jiggarantixxu funzjonalità bażika.
 
 ## Validazzjoni tal-magic bytes
 
-Qabel it-tagħbija ta’ fajl `.node` installat waqt it-tħaddim, OmniRoute jaqra l-ewwel 8
+Qabel it-tagħbija ta’ fajl `.node` installat waqt it-tħaddim, 67router jaqra l-ewwel 8
 bytes u jqabbilhom mal-magic bytes magħrufa tal-pjattaformi:
 
 | Pjattaforma            | Bytes (hex)   | Tikketta    |
@@ -107,9 +107,9 @@ Implimentazzjoni:
 ## Topoloġija b’kittieb wieħed (HA mhux appoġġjat)
 
 Il-katina ta’ drivers ta’ riżerva hawn fuq xorta taħdem fi **proċess wieħed**. Bil-konfigurazzjoni
-SQLite predefinita, OmniRoute għandu **kittieb wieħed**:
+SQLite predefinita, 67router għandu **kittieb wieħed**:
 
-- Tqabbadx żewġ repliki ta’ OmniRoute mal-istess fajl `storage.sqlite`.
+- Tqabbadx żewġ repliki ta’ 67router mal-istess fajl `storage.sqlite`.
 - Ristartjar ta’ container, deploy Recreate, OOM kill, jew ristartjar minn HEALTHCHECK iwaqqaf
   kull sessjoni SSE li tkun għaddejja. Fil-mogħdija standard ma jsir ebda tbattil tas-sessjonijiet.
 - Kontroll tal-liveness tal-orkestratur li jqis `/healthz` bil-mod bħala mejjet joqtol l-unika

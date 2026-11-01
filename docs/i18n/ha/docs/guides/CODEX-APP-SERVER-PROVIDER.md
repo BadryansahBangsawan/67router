@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute yana samar da hanyoyi **biyu** na amfani da OpenAI Codex:
+67router yana samar da hanyoyi **biyu** na amfani da OpenAI Codex:
 
 | Mai samarwa            | Yadda yake sadarwa da OpenAI                                                                                                                                                                                   | Gargadin amfani                                                |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | **`codex`**            | Yana sake aika token ɗin ChatGPT/OpenAI OAuth ɗinka kai tsaye zuwa Responses API                                                                                                                               | **Eh** — ba a ba zaman hukuma izinin amfani da proxy/router ba |
-| **`codex-app-server`** | Yana sarrafa **`codex app-server` na Codex CLI da kansa** ta JSON-RPC/WebSocket; CLI ne ke mallaka kuma yake sabunta OAuth ɗinsa da kansa (`~/.codex/auth.json`) daidai kamar zaman `codex` na hulɗa kai tsaye | **A'a** — OmniRoute ba ya taɓa sake aika token zuwa API        |
+| **`codex-app-server`** | Yana sarrafa **`codex app-server` na Codex CLI da kansa** ta JSON-RPC/WebSocket; CLI ne ke mallaka kuma yake sabunta OAuth ɗinsa da kansa (`~/.codex/auth.json`) daidai kamar zaman `codex` na hulɗa kai tsaye | **A'a** — 67router ba ya taɓa sake aika token zuwa API         |
 
 Saboda `codex-app-server` ba ya taɓa sake aika token, bai ƙunshi gargadin
 amfani na sake aika zaman ba. Amma yana buƙatar **Codex CLI da za a iya isa gare shi a
@@ -20,7 +20,7 @@ URL na app-server da aka saita**, kuma dole ne a **shiga** wannan CLI.
 ## 1. Tsarin gine-gine
 
 ```
-┌─ Manhajar OmniRoute ─────────────┐        ┌─ Sidecar na codex-app-server ───────┐
+┌─ Manhajar 67router ─────────────┐        ┌─ Sidecar na codex-app-server ───────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token na damar aiki)         │  JSON  │  --ws-auth capability-token         │
@@ -73,7 +73,7 @@ ne kawai idan fayil ɗin ba ya nan ko token ɗinsa ya tsufa (kullum ana yin kwaf
   `~/.codex` na host ɗinka cikin sidecar (`codex-appserver-home`) sannan ka tsallake matakin shiga.
 - **Mai amfani na jama'a, ba shi da codex da aka shigar a na'urarsa** — wannan ba matsala ba ce: sidecar yana da
   CLI. Mai amfani yana tabbatar da kansa ne kawai ta dashboard.
-- **OmniRoute na bare-metal (babu sidecar, codex na host)** — saita
+- **67router na bare-metal (babu sidecar, codex na host)** — saita
   `OMNIROUTE_CODEX_APPSERVER_WS` zuwa `codex app-server` naka kuma ka tabbatar an shiga
   codex na host; alamar "ba a shigar da codex ba" za ta bayyana idan binary
   ɗin ba ya nan.

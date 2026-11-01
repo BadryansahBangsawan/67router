@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY şəffaf deşifrləmə OmniRoute-un
+TPROXY şəffaf deşifrləmə 67router-un
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM steki üçün **5-ci tutma rejimidir**. O, nüvə TPROXY-si + siyasət əsaslı marşrutlaşdırmadan istifadə edərək Linux-da lokal çıxış HTTPS trafikini — `/etc/hosts` faylını saxtalaşdırmadan və ƏS miqyaslı sistem proksi parametrlərini dəyişdirmədən — ələ keçirir və **deşifrləyir**. O, başsız mühitlər üçün əlverişlidir
 (təmizlənməli DNS dəyişiklikləri yoxdur) və təhlükəsizlik divarı qaydaları yenidən başladılma zamanı avtomatik təmizlənir.
@@ -42,7 +42,7 @@ Aşağıdakı xüsusiyyətlərə malik prosesdən gələn trafiki tutmaq və de�
 - sistem miqyaslı proksi dəyişikliyi ilə ona müdaxilə etmək istəmirsiniz.
 
 Ələ keçirmə nüvədə baş verdiyi üçün trafiki başladan prosesdə **heç bir
-konfiqurasiya dəyişikliyi** tələb olunmur — lakin proses OmniRoute-un quraşdırdığı dinamik CA-ya etibar etməlidir ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) bölməsinə baxın).
+konfiqurasiya dəyişikliyi** tələb olunmur — lakin proses 67router-un quraşdırdığı dinamik CA-ya etibar etməlidir ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer) bölməsinə baxın).
 
 ---
 
@@ -60,7 +60,7 @@ sistem, alətlər zəncirinin olmaması, addon-un yığılmaması), addon yükl�
 (`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`) xəta atmaq əvəzinə
 `null` qaytarır. Bundan sonra tutma rejiminin statusu `available: false` göstərir,
 idarəetmə panelindəki keçid "TPROXY şifrəsinin açılması üçün Linux + root + native
-addon tələb olunur" ipucu ilə **deaktiv edilir** və OmniRoute-un qalan hissəsi
+addon tələb olunur" ipucu ilə **deaktiv edilir** və 67router-un qalan hissəsi
 işləməyə davam edir.
 
 ---
@@ -252,7 +252,7 @@ Yönləndirmə yolu bypass soket işarəsi (**SO_MARK**) ilə bunun qarşısın�
 | **Yuxarı axın sertifikatının yoxlanması** | Yenidən şifrələnmiş yönləndirmə standart olaraq yuxarı axın sertifikatını yoxlayır (`rejectUnauthorized: true`).                                                                                                                                                                                                                                                                                                                  |
 | **Xətaların təmizlənməsi**                | Marşrutun xəta cavabları `sanitizeErrorMessage()` vasitəsilə işlənir (Sərt Qayda #12).                                                                                                                                                                                                                                                                                                                                            |
 
-**MITM CA güclü bir imkandır.** İstənilən host üçün sertifikat imzalaya bilən və ƏS tərəfindən etibar edilən CA o deməkdir ki, OmniRoute-un ələ keçirdiyi hər şeyin şifrəsi açıla bilər. Bu imkan standart olaraq söndürülüb, yalnız açıq şəkildə aktivləşdirilən, lokal TPROXY ələkeçirmə rejimi ilə məhdudlaşdırılıb və rejimi dayandırdığınız zaman etibar deposundakı qeyd silinir.
+**MITM CA güclü bir imkandır.** İstənilən host üçün sertifikat imzalaya bilən və ƏS tərəfindən etibar edilən CA o deməkdir ki, 67router-un ələ keçirdiyi hər şeyin şifrəsi açıla bilər. Bu imkan standart olaraq söndürülüb, yalnız açıq şəkildə aktivləşdirilən, lokal TPROXY ələkeçirmə rejimi ilə məhdudlaşdırılıb və rejimi dayandırdığınız zaman etibar deposundakı qeyd silinir.
 
 ---
 
@@ -363,7 +363,7 @@ idarə edir; əlavə olmadıqda `GET /api/tools/agent-bridge/tproxy`
 ### Qəzadan sonra qalan firewall qaydaları
 
 `revertTproxy()` tətbiqetmə əməliyyatının tam əksidir və idempotentdir. Rejimin
-dayandırılması qaydaları geri qaytarır; OmniRoute sessiyanın ortasında məcburi
+dayandırılması qaydaları geri qaytarır; 67router sessiyanın ortasında məcburi
 dayandırılıbsa, sahibsiz sistem vəziyyətini (DNS saxtalaşdırması, kök CA, sistem
 proksisi) geri qaytarmaq üçün AgentBridge **Repair** əməliyyatından
 (`POST /api/tools/agent-bridge/repair`) istifadə edin. TPROXY `mangle` qaydaları

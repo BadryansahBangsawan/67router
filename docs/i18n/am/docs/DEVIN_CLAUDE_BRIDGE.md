@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` እውነተኛው Claude Code runtime የOmniRouteን አካባቢያዊ Anthropic
+`devin-cli-agentic` እውነተኛው Claude Code runtime የ67routerን አካባቢያዊ Anthropic
 Messages endpoint እንዲጠቀም ሲያደርግ፣ ኦፊሴላዊው Devin CLI ደግሞ በACP stdio በኩል የሞዴል ምላሾችን
 ያቀርባል። ነባሮቹን Anthropic፣ Claude OAuth፣ Claude Web ወይም `devin-cli` providers
 አይቀይርም።
@@ -19,7 +19,7 @@ metadata በዚሁ መሠረት ምልክት ስለተደረገበት፣ መሣ�
 > `3000.2.17` እና model `swe-1-7-lightning` በኩል ሦስት የተነጠሉ scenariosን አጠናቋል፤ ያ የመጨረሻው live ሙከራ በደንበኛው የሚተዳደሩ `Read`፣
 > `Edit` እና `Bash` turns፣ የተሳካ `npm test` ውጤቶች፣ የproject command እና skill
 > discovery፣ በDevin-ብቻ routing እና ዜሮ Claude egress መኖሩን አረጋግጧል። ከዚያም ቁልፉ ወደ `2.1.258`
-> ከፍ ተደርጓል (ይህም የOmniRoute Claude identity የሚመስለው የCLI generation እና
+> ከፍ ተደርጓል (ይህም የ67router Claude identity የሚመስለው የCLI generation እና
 > የFable 5.1 tierን በተፈጥሯዊ ሁኔታ የሚያካትት የመጀመሪያው line ነው)። በአዲሱ ቁልፍ ላይ install layer እና `claude --version`
 > በተቆለፈው base image ላይ ተረጋግጠዋል፣ እንዲሁም bridge unit suite፣ `compose config` እና
 > static isolation proof ያልፋሉ—ነገር ግን offline mock scenario እና live የሦስት-scenario
@@ -50,12 +50,12 @@ Claude Code 2.1.258 (በተነጠለ root ያልሆነ Linux container ውስጥ
 parser በእያንዳንዱ የሞዴል turn አንድ ለብቻው የቆመ `<tool>{...}</tool>` envelope ይቀበላል። ስሙን
 ከrequestው የመሣሪያዎች ዝርዝር ጋር ያረጋግጣል፣ argumentsን ከዚያ መሣሪያ JSON
 Schema ጋር ያረጋግጣል፣ የተቀላቀለ narrative/actionsን ውድቅ ያደርጋል፣ እንዲሁም አንድ የተገደበ repair ይፈቅዳል። ከዚያ Claude Code
-የተገኘውን Anthropic `tool_use` በአካባቢው ያስኬዳል፣ እና `tool_result`ን በOmniRoute በኩል መልሶ
+የተገኘውን Anthropic `tool_use` በአካባቢው ያስኬዳል፣ እና `tool_result`ን በ67router በኩል መልሶ
 ይልካል።
 
 ## ራስ-ሰር routing
 
-providerው ካልታገደ በOmniRoute `auto/*` candidate pools ውስጥ ለመመረጥ ብቁ ነው።
+providerው ካልታገደ በ67router `auto/*` candidate pools ውስጥ ለመመረጥ ብቁ ነው።
 የcandidate ብቁነት መመረጥን ዋስትና አይሰጥም፦ የcomboው routing strategy (ለምሳሌ፣
 last-known-good) ሌላ providerን ሊመርጥ ይችላል። እያንዳንዱ request በDevin በኩል
 እንዲያልፍ ሲፈልጉ `dva/<model>` ወይም Devin-first combo ይጠቀሙ።
@@ -67,16 +67,16 @@ last-known-good) ሌላ providerን ሊመርጥ ይችላል። እያንዳን
 
 - በUID/GID `10001:10001`፣ ለንባብ ብቻ በሆነ የስር ፋይል ስርዓት፣ በተወገዱ ችሎታዎች እና
   በ`no-new-privileges` ይሰራሉ፤
-- የግል `/home/bridge`፣ የተለየ የClaude ውቅር ቮልዩም፣ የተገለለ የOmniRoute ውሂብ
+- የግል `/home/bridge`፣ የተለየ የClaude ውቅር ቮልዩም፣ የተገለለ የ67router ውሂብ
   እና የተለየ `devin-auth` ቮልዩም ይጠቀማሉ፤
 - የሚጫኑት ሊጣሉ የሚችሉ `.sandbox` የሥራ ቦታዎችን/ማስረጃዎችን ብቻ ነው፤
 - የአስተናጋጁን መነሻ ማውጫ፣ Keychain፣ SSH፣ የደመና ማረጋገጫዎች ወይም የDocker ሶኬት አይጭኑም፤
 - ግልጽ አካባቢዎችን ይገነባሉ እና የAnthropic API/OAuth/ማዘዋወሪያ ተለዋዋጮችን ያስወግዳሉ፤
 - የClaude Code ኢንፈረንስን በአካባቢያዊ-ብቻ ቁልፍ ወደ `http://omniroute:20128` ብቻ ይመራሉ።
 
-ከመስመር ውጭ ያለው መገለጫ ውስጣዊ አውታረ መረብ ይጠቀማል። በቀጥታ መገለጫው ውስጥ፣ OmniRoute ይፋዊ
+ከመስመር ውጭ ያለው መገለጫ ውስጣዊ አውታረ መረብ ይጠቀማል። በቀጥታ መገለጫው ውስጥ፣ 67router ይፋዊ
 የDevin መዳረሻዎችን የሚደርሰው በ`network-guard` በኩል ብቻ ነው፤ ያልተዛመዱ መዳረሻዎች ይከለከላሉ።
-Claude Code የተለየ ሁሉንም የወጪ ትራፊክ የሚከለክል ጠባቂ አለው፣ እና በ`NO_PROXY` በኩል የአካባቢውን OmniRoute
+Claude Code የተለየ ሁሉንም የወጪ ትራፊክ የሚከለክል ጠባቂ አለው፣ እና በ`NO_PROXY` በኩል የአካባቢውን 67router
 አገልግሎት ብቻ መድረስ ይችላል። የጠባቂው የኦዲት ፋይሎች የሚጫኑት በየራሳቸው የጠባቂ ሂደት ብቻ ነው።
 ስክሪፕቶቹ ከቶከን ነፃ የሆነ ማስረጃ ከመላካቸው በፊት የፋይል ባለቤትነትን፣ ሁነታን፣ የአገናኝ ብዛትን እና እያንዳንዱን ውሳኔ
 ያረጋግጣሉ።

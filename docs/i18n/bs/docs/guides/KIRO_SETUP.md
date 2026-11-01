@@ -6,7 +6,7 @@
 
 # Vodič za podešavanje Kiro-a
 
-Ovaj vodič obuhvata dodavanje Kiro (AWS-hostovan AI asistent za kodiranje) naloga u OmniRoute, sa fokusom na istovremeno pokretanje više naloga bez konflikata sesija.
+Ovaj vodič obuhvata dodavanje Kiro (AWS-hostovan AI asistent za kodiranje) naloga u 67router, sa fokusom na istovremeno pokretanje više naloga bez konflikata sesija.
 
 ---
 
@@ -19,9 +19,9 @@ Ovo je isti mehanizam koji uzrokuje probleme pri pokretanju `kiro-cli login` na 
 
 ---
 
-## Kako OmniRoute rešava ovo (v3.8.0+)
+## Kako 67router rešava ovo (v3.8.0+)
 
-Počevši od v3.8.0, OmniRoute poziva `registerClient()` (AWS SSO OIDC) tokom svakog uvoza Kiro konekcije. Ovo daje svakoj OmniRoute konekciji njenu sopstvenu namensku OIDC registraciju klijenta. Pošto je svaka registracija klijenta nezavisna, osvežavanje ili ponovna autentifikacija jednog naloga ne utiče na token za osvežavanje bilo kog drugog naloga.
+Počevši od v3.8.0, 67router poziva `registerClient()` (AWS SSO OIDC) tokom svakog uvoza Kiro konekcije. Ovo daje svakoj 67router konekciji njenu sopstvenu namensku OIDC registraciju klijenta. Pošto je svaka registracija klijenta nezavisna, osvežavanje ili ponovna autentifikacija jednog naloga ne utiče na token za osvežavanje bilo kog drugog naloga.
 
 Izolacija se primenjuje na metode uvoza tokena za osvežavanje, a autentifikacija putem API ključa u potpunosti izbegava OIDC sesije osvežavanja:
 
@@ -47,7 +47,7 @@ Konekcije uvezene pre v3.8.0 nemaju namensku OIDC registraciju klijenta sačuvan
 
 ### Preduslovi
 
-- OmniRoute v3.8.0 ili novija.
+- 67router v3.8.0 ili novija.
 - Kiro nalog koji radi (email + lozinka, Google ili GitHub prijava).
 - Opciono drugi Kiro nalog.
 
@@ -58,7 +58,7 @@ Konekcije uvezene pre v3.8.0 nemaju namensku OIDC registraciju klijenta sačuvan
    - **Import Token** — nalepite token za osvežavanje koji počinje sa `aorAAAAAG`.
    - **API ključ** — nalepite dugotrajni Kiro / CodeWhisperer API ključ.
    - **Google / GitHub prijava** — završite OAuth tok u pretraživaču.
-   - **Auto-Import** — kliknite na dugme; OmniRoute čita akreditive iz lokalne kiro-cli baze podataka ili `~/.aws/sso/cache`.
+   - **Auto-Import** — kliknite na dugme; 67router čita akreditive iz lokalne kiro-cli baze podataka ili `~/.aws/sso/cache`.
 3. Konekcija je sačuvana. Tokovi sa tokenom za osvežavanje automatski registruju namenski OIDC klijent. Tokovi sa API ključem validiraju ključ kod AWS-a i ne čuvaju token za osvežavanje.
 
 ### Korak 2: Uvezite drugi nalog
@@ -112,7 +112,7 @@ ne koristi OAuth osvježavanje, čime se izbjegava poništavanje zajedničke OID
 2. Odaberite **API ključ**.
 3. Zalijepite API ključ i odaberite AWS regiju: **Automatsko otkrivanje** (zadano), **Istok SAD-a
    (Sjeverna Virginia)** ili **Evropa (Frankfurt)**.
-4. OmniRoute provjerava ključ i sprema vezu vezanu za regiju u kojoj
+4. 67router provjerava ključ i sprema vezu vezanu za regiju u kojoj
    ključ funkcioniše.
 
 ### API
@@ -162,7 +162,7 @@ na `https://q.<region>.amazonaws.com/generateAssistantResponse` — uključujuć
 ## Istek OIDC klijenta
 
 AWS SSO OIDC javni klijenti obično ističu nakon 90 dana
-(`clientSecretExpiresAt`). OmniRoute čuva ovaj vremenski pečat u `providerSpecificData`
+(`clientSecretExpiresAt`). 67router čuva ovaj vremenski pečat u `providerSpecificData`
 radi mogućnosti praćenja. Ako konekcija prestane da se osvježava nakon ~90 dana, ponovo
 uvezite konekciju da biste dobili novu registraciju OIDC klijenta. Automatska ponovna
 registracija po isteku je planirana kao buduće poboljšanje.
@@ -183,7 +183,7 @@ AWS SSO OIDC-a.
 ### Uvoz ne uspijeva uz grešku "Token validation failed"
 
 - Osigurajte da refresh token počinje sa `aorAAAAAG`.
-- Osigurajte da OmniRoute može pristupiti `https://oidc.us-east-1.amazonaws.com` (ili
+- Osigurajte da 67router može pristupiti `https://oidc.us-east-1.amazonaws.com` (ili
   konfigurisanom regionu). Ako se nalazite iza korporativnog proxy-ja, podesite proxy na
   nivou provajdera u **Dashboard → Settings → Proxies**.
 
@@ -191,7 +191,7 @@ AWS SSO OIDC-a.
 
 - Potvrdite da je ključ Kiro / CodeWhisperer API ključ, a ne refresh token.
 - Potvrdite da se AWS region poklapa sa ključem/nalogom. `us-east-1` je podrazumijevani.
-- Ključ mora biti u mogućnosti da pozove `ListAvailableProfiles`; u suprotnom, OmniRoute ne može
+- Ključ mora biti u mogućnosti da pozove `ListAvailableProfiles`; u suprotnom, 67router ne može
   razriješiti traženi `profileArn`.
 
 Za ostale probleme, pogledajte glavni [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

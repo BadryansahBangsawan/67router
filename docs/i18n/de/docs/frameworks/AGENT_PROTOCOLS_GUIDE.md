@@ -4,77 +4,30 @@
 
 ---
 
-> **Quelle:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute stellt drei verschiedene agentenbezogene Schnittstellen bereit. Auf den ersten Blick sehen sie ähnlich aus, lösen jedoch unterschiedliche Probleme. Verwenden Sie diese Seite, um die richtige auszuwählen.
+67router stellt drei verschiedene agentenbezogene Schnittstellen bereit. Auf den ersten Blick sehen sie ähnlich aus, lösen jedoch unterschiedliche Probleme. Verwenden Sie diese Seite, um die richtige auszuwählen.
 
 ## Kurzfassung
 
 | Schnittstelle                 | Optimal für                                                                                                                                                       | Transport                         | Standard                        |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- | ------------------------------- |
 | **A2A — Agent-to-Agent**      | Agentenübergreifende Zusammenarbeit mit Peer-Agenten, die das A2A-Protokoll unterstützen                                                                          | JSON-RPC 2.0 über HTTP            | A2A v0.3 (offene Spezifikation) |
-| **ACP — CLI-Agentenregister** | Erkennen, Registrieren und Starten von CLI-Coding-Agenten, die auf dem Rechner des Benutzers installiert sind (Cursor, Cline, Codex CLI, Claude Code, Aider usw.) | HTTP REST                         | OmniRoute-spezifisch            |
-| **Cloud-Agenten**             | Übermitteln lang laufender Coding-Aufgaben an externe Cloud-Dienste (Codex Cloud, Devin, Jules, Cursor Cloud)                                                     | HTTP REST + DB-gestützte Aufgaben | OmniRoute-spezifisch            |
+| **ACP — CLI-Agentenregister** | Erkennen, Registrieren und Starten von CLI-Coding-Agenten, die auf dem Rechner des Benutzers installiert sind (Cursor, Cline, Codex CLI, Claude Code, Aider usw.) | HTTP REST                         | 67router-spezifisch             |
+| **Cloud-Agenten**             | Übermitteln lang laufender Coding-Aufgaben an externe Cloud-Dienste (Codex Cloud, Devin, Jules, Cursor Cloud)                                                     | HTTP REST + DB-gestützte Aufgaben | 67router-spezifisch             |
 
 Die drei Schnittstellen sind unabhängig voneinander — wählen Sie eine beliebige Kombination aus.
 
 ## Entscheidungsbaum
 
-```
-Benötigen Sie einen Cloud-Dienst, der Arbeiten außerhalb dieses Rechners ausführt (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ JA → Cloud-Agenten (POST /api/v1/agents/tasks)
-└─ NEIN → Weiter
-    │
-    Haben Sie einen Peer-Agenten, der A2A unterstützt und zusammenarbeiten möchte?
-    ├─ JA → A2A (POST /a2a)
-    └─ NEIN → Weiter
-        │
-        Müssen Sie lokal installierte CLI-Coding-Agenten auflisten oder konfigurieren?
-        ├─ JA → ACP (GET /api/acp/agents)
-        └─ NEIN → Verwenden Sie einfach /v1/chat/completions
-```
-
-## 1. A2A — Agent-to-Agent
-
-**Spezifikation:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute-Endpunkt:** `POST /a2a` (JSON-RPC 2.0)
-**Agentenkarte:** `GET /.well-known/agent.json`
-
-### Einsatzgebiete
-
-- Aufbau eines Multi-Agenten-Systems, in dem OmniRoute einer der Peer-Agenten ist
-- Bereitstellung der Routing-Intelligenz von OmniRoute (intelligentes Routing, Kontingentverwaltung usw.) für Agenten in Frameworks wie Google ADK oder generischen Agentennetzwerken
-- Einbindung von OmniRoute hinter einer standardisierten Schnittstelle für Erkennung und Aufruf
-
-### Methoden
-
-- `message/send` — eine Nachricht übermitteln und eine synchrone Antwort empfangen
-- `message/stream` — eine Nachricht übermitteln und per SSE gestreamte Fortschrittsereignisse empfangen
-- `tasks/get` — eine Aufgabe anhand ihrer ID abrufen
-- `tasks/cancel` — eine laufende Aufgabe abbrechen
-
-### Integrierte Fähigkeiten (6)
-
-- `smart-routing` — einen Prompt über die optimale Kombination routen
-- `quota-management` — den Kontingentstatus für jeden Anbieter melden
-- `provider-discovery` — installierte Anbieter mit ihren Funktionen auflisten
-- `cost-analysis` — die Kosten einer Anfrage oder Unterhaltung schätzen
-- `health-report` — den Status von Schutzschaltern, Abklingzeiten und Sperren für jeden Anbieter aggregieren
-- `list-capabilities` — die verfügbaren Fähigkeiten und Metadaten des Agenten auflisten
-
-### Vertiefung
-
-Weitere Informationen zu Transportdetails, zur Struktur der Agentenkarte, zur TTL-Konfiguration von Aufgaben und zur Vorlage für das Hinzufügen neuer Fähigkeiten finden Sie unter [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — CLI-Agentenregister
 
-**OmniRoute-Endpunkt:** `GET /api/acp/agents`
+**67router-Endpunkt:** `GET /api/acp/agents`
 **Quelle:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Was es ist
 
-ACP ist OmniRoutes **lokales Verzeichnis für CLI-Agenten**. Es erkennt, welche Coding-CLIs auf dem Host installiert sind (Cursor, Cline, Claude Code, Codex CLI, Continue usw.), ermittelt deren Versionen und stellt sie dem Dashboard bereit, damit Benutzer jede CLI so konfigurieren können, dass sie auf OmniRoute verweist.
+ACP ist 67routers **lokales Verzeichnis für CLI-Agenten**. Es erkennt, welche Coding-CLIs auf dem Host installiert sind (Cursor, Cline, Claude Code, Codex CLI, Continue usw.), ermittelt deren Versionen und stellt sie dem Dashboard bereit, damit Benutzer jede CLI so konfigurieren können, dass sie auf 67router verweist.
 
 Die HTTP-Schnittstelle ist ein internes Verzeichnis, das die Benutzeroberfläche „CLI Tools“ und
 die Verfolgung von CLI-Fingerprints ermöglicht (siehe [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Unabhängig davon
@@ -114,8 +67,8 @@ Body-Struktur für POST (`customAgentBodySchema` in `src/app/api/acp/agents/rout
 
 ### Anwendungsfälle
 
-- Die Dashboard-Seite „CLI Tools“ zeigt an, was installiert ist, und hilft Ihnen dabei, jede CLI auf OmniRoute auszurichten
-- Mit benutzerdefinierten Agenten können erfahrene Benutzer interne/proprietäre CLIs registrieren, die OmniRoute standardmäßig nicht kennt
+- Die Dashboard-Seite „CLI Tools“ zeigt an, was installiert ist, und hilft Ihnen dabei, jede CLI auf 67router auszurichten
+- Mit benutzerdefinierten Agenten können erfahrene Benutzer interne/proprietäre CLIs registrieren, die 67router standardmäßig nicht kennt
 - Das Erkennungsergebnis speist die `cli-tools`-Fingerprint-Matrix
 
 ### Wann ACP NICHT verwendet werden sollte
@@ -125,86 +78,7 @@ Body-Struktur für POST (`customAgentBodySchema` in `src/app/api/acp/agents/rout
   Fallback eingebunden. Starten Sie für die gewöhnliche interaktive Nutzung die konfigurierte CLI selbst oder
   verwenden Sie `omniroute run`.
 
-## 3. Cloud-Agenten
-
-**OmniRoute-Endpunkte:** `/api/v1/agents/tasks/*` (Lebenszyklus) + `/api/cloud/*` (Infrastruktur)
-**Quelle:** `src/lib/cloudAgent/`
-
-### Was es ist
-
-Eine einheitliche Schnittstelle für Cloud-Coding-Agenten von Drittanbietern. Sie übermitteln einen Prompt + eine Repository-URL, OmniRoute leitet die Anfrage an den richtigen Cloud-Agenten weiter, fragt den Status ab und gibt die Ergebnisse zurück.
-
-### Unterstützte Agenten (4, alle in `src/lib/cloudAgent/agents/` bestätigt)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Lebenszyklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() je Agentenklasse
-  → externer Dienst beginnt mit der Arbeit
-  → Aufgabenzeile wird in der DB erstellt (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → verzögerte Statussynchronisierung mit dem Anbieter
-  → gibt aktuellen Status + Plan + Aktivitätsprotokoll zurück
-  ↓
-POST /api/v1/agents/tasks/[id]   (Aktion: "approve" | "message" | "cancel")
-  → leitet die Anfrage an den Anbieter weiter (oder markiert sie lokal als abgebrochen)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokaler Abbruch
-```
-
-### Authentifizierung
-
-⚠️ **Alle `/api/v1/agents/tasks/*`-Endpunkte erfordern eine Management-Authentifizierung** (Commit `588a0333`). Aufrufer, die ausschließlich Bearer-Authentifizierung verwenden, erhalten seit v3.8.0 den Statuscode 401.
-
-### Ausführliche Informationen
-
-Siehe [CLOUD_AGENT.md](./CLOUD_AGENT.md) für den `CloudAgentBase`-Vertrag, agentenspezifische Details, Schemadetails und Endpunkte für die Anmeldedaten-Infrastruktur.
-
-## Vergleich: A2A vs. Cloud Agents
-
-Beide unterstützen „lang laufende Aufgaben“, jedoch auf unterschiedlichen Ebenen:
-
-| Aspekt                 | A2A                                                                                        | Cloud Agents                                          |
-| ---------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------- |
-| Standard               | Offenes A2A v0.3                                                                           | OmniRoute-spezifisch                                  |
-| Ausführungsort         | Innerhalb von OmniRoute (verwendet konfigurierte Kombinationen)                            | Extern (Codex-/Devin-/Jules-Server)                   |
-| Aufgabendauer          | Standard-TTL: 5 Min. (in `TaskManager` konfigurierbar)                                     | Minuten bis Stunden                                   |
-| Repository-Verständnis | Nein (übergibt nur Prompts)                                                                | Ja (Repository-URL + Branch)                          |
-| Anwendungsfall         | Agentenübergreifende Zusammenarbeit, intelligentes Routing als Dienst                      | „Feature X in Repository Y implementieren“ delegieren |
-| Authentifizierung      | Optionaler `OMNIROUTE_API_KEY` für `/a2a`; Verwaltungszugriff für `/api/a2a/*`-REST-Helfer | Immer Verwaltungszugriff                              |
-
 ## Integrationsbeispiele
-
-### A2A-Funktionen von OmniRoute ermitteln
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Gibt die Agent Card mit allen 6 Fähigkeiten, Transporten und der Version zurück.
-
-### OmniRoute als A2A-Agent aufrufen
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Installierte CLI-Agenten über ACP auflisten
 
@@ -229,30 +103,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Eine Cloud-Agent-Aufgabe übermitteln
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Status einer Cloud-Aufgabe abfragen
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Wann was verwendet werden sollte
 
 - **Chatbot-/Copilot-Frontend** → `/v1/chat/completions` (OpenAI-kompatibel – kein Agentenprotokoll)
@@ -264,7 +114,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute Core    │
+                │   67router Core    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Siehe auch
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — ausführliche Informationen zu A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — ausführliche Informationen zu Cloud-Agenten
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — externe CLI-Integrationen (verwenden ACP)
 - [SKILLS.md](./SKILLS.md) — Skills-Framework (unterscheidet sich von A2A-Skills — lokale Ausführungs-Sandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — Endpunktreferenz

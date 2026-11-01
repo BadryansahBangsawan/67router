@@ -5,7 +5,7 @@
 ---
 
 Den selvhostede pulje kører på **.113**-maskinen (`tomni-proxmox-113`). Siden 2026-10-18 har hver
-OmniRoute-runner haft **én rolle**, én label og et hukommelses-/CPU-budget dimensioneret efter den målte
+67router-runner haft **én rolle**, én label og et hukommelses-/CPU-budget dimensioneret efter den målte
 arbejdsbelastning. Turbopack-pladsen får de ressourcer, buildet kræver; de øvrige pladser er dimensioneret efter deres
 målte spidsbelastninger. Maskinen overbooker kun, når et Turbopack-build falder sammen med et Release-Green-
 webpack-build og et lint-job; værtens swap (16 GB) absorberer dette, og fordi pull request-Builds kører
@@ -27,7 +27,7 @@ Målt 2026-10-18:
 | swap      | 16 GB                           | `omniroute-113-5` kører med swap slået fra (`MemorySwapMax=0`), så et løbsk build stoppes ved sin grænse i stedet for at få maskinen til at swappe                                                                                                                                                                                                                       |
 | `/tmp`    | **12 GB tmpfs = RAM**           | alt, der placeres der, bruger hukommelse; rester ryddes efter 3 timer                                                                                                                                                                                                                                                                                                    |
 | CPU       | load 60 på 32 kerner observeret | før kvoterne fratog ét Turbopack-build (~1166 % CPU) plus en coverage-suite på samme maskine de øvrige lytteres heartbeats de nødvendige ressourcer (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                |
-| runners   | **6 lyttere**                   | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` er deaktiveret (`systemctl enable --now` aktiverer én igen)                                                                                                                                                                                                                                              |
+| runners   | **6 lyttere**                   | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` er deaktiveret (`systemctl enable --now` aktiverer én igen)                                                                                                                                                                                                                                               |
 
 Grænserne findes i hver units `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (tidligere værdier er bevaret som `override.conf.bak-20261018`) og blev anvendt live med
@@ -72,7 +72,7 @@ rapporterer jobbet som annulleret, og listeneren går selv online igen.
 
 Runnerens standardindstilling `KillMode=process` lader `Runner.Worker → npm → next-build`
 fortsætte med at køre, når en enhed stoppes eller genstartes — et forældreløst build fortsætter med at bruge RAM og
-CPU uden et tilknyttet job. Hver OmniRoute-enhed har en drop-in-fil
+CPU uden et tilknyttet job. Hver 67router-enhed har en drop-in-fil
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 med `KillMode=mixed`: SIGTERM sendes først til listeneren og derefter SIGKILL til hele cgroup'en ved
 `TimeoutStop`. Den træder i kraft ved enhedens næste genstart — genstart **én runner ad
@@ -117,7 +117,7 @@ gangen, og kun når den er inaktiv**, med inaktivitetskontrollen og genstarten i
   et backend-only `next build` (~5–6 GB; webpack), samt `quality.yml` `lint-guard`.
   `omniroute-113` havde `MemoryHigh=4G` indtil 2026-10-18 — promptfoo-buildet måtte genvinde
   hukommelse under hele den 54 minutter lange kørsel dér; 8 GB fjerner begrænsningen.
-- **Færre listeners med vilje.** Fire OmniRoute-enheder blev deaktiveret den 2026-08-29 — hver ekstra
+- **Færre listeners med vilje.** Fire 67router-enheder blev deaktiveret den 2026-08-29 — hver ekstra
   listener er endnu en tenant i ovenstående hukommelsesbudget. Janitorens loft er 6
   (`MAX_ACTIVE_RUNNERS=6` i cron): den tæller alle `Runner.Listener` på maskinen, og OmniHeuris +
   OmniMind føjer to til vores fire.

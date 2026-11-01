@@ -4,7 +4,7 @@
 
 ---
 
-> **Ohun tí ìwé yìí jẹ́.** Àyẹ̀wò ṣíṣe pàtàkì lórí ètò ẹnu-ọ̀nà dídánwò dídára OmniRoute,
+> **Ohun tí ìwé yìí jẹ́.** Àyẹ̀wò ṣíṣe pàtàkì lórí ètò ẹnu-ọ̀nà dídánwò dídára 67router,
 > ní ìfiwéra pẹ̀lú àwọn ìlànà tó dára jù lọ nínú ilé-iṣẹ́, **pẹ̀lú** àkójọ tó péye ti gbogbo
 > àwọn ibi àyẹ̀wò dídára àti **ètò àtúnṣe tí kò gbára lé irinṣẹ́ kan pàtó** láti fi ètò kan náà sílò fún
 > iṣẹ́-àkànṣe èyíkéyìí. A dá a sílẹ̀ ní 2026-06-16 láti inú ipò ibi ìpamọ́ gidi (kì í ṣe láti inú ìrántí).
@@ -102,62 +102,62 @@ láti tún un ṣe lórí àkójọpọ̀ ìmọ̀-ẹ̀rọ èyíkéyìí.
 
 ### 1. Ara ìkọ̀wé & ìṣètò (tó ní àbájáde kan náà ní gbogbo ìgbà, tó sì yára)
 
-- **OmniRoute:** Prettier + ESLint nípasẹ̀ lint-staged (pre-commit), àyè méjì/àmì-àyọlò méjì/100col.
+- **67router:** Prettier + ESLint nípasẹ̀ lint-staged (pre-commit), àyè méjì/àmì-àyọlò méjì/100col.
 - **Gbogbogbò:** formatter kan tó lè ṣàtúnṣe fúnra rẹ̀ + linter kan, tí ń ṣiṣẹ́ ní pre-commit lórí àwọn fáìlì staged.
 
 ### 2. Àwọn type
 
-- **OmniRoute:** `typecheck:core` (tó ń dí iṣẹ́ dúró) + `typecheck:noimplicit:core` (ìmọ̀ràn) + `type-coverage` ratchet 92.17% + ìwọ̀n any fún fáìlì kọ̀ọ̀kan.
+- **67router:** `typecheck:core` (tó ń dí iṣẹ́ dúró) + `typecheck:noimplicit:core` (ìmọ̀ràn) + `type-coverage` ratchet 92.17% + ìwọ̀n any fún fáìlì kọ̀ọ̀kan.
 - **Gbogbogbò:** strict typecheck nínú CI + òṣùwọ̀n type-coverage tí a fi ratchet sí + ìwọ̀n `any`/ọ̀nà-àbáyọ fún fáìlì kọ̀ọ̀kan.
 
 ### 3. Àwọn ìdánwò (ìgbóná rẹ̀)
 
-- **OmniRoute:** runners 2 tí kò bo ara wọn (Node native + vitest), shards 8, àpapọ̀ coverage 60/60/60/60 + ratchet ~76% + **ìwọ̀n-kéré-jù 8 fún module kọ̀ọ̀kan lára àwọn module tó ṣe pàtàkì** + àwọn property tests alẹ́ + **mutation testing** alẹ́.
+- **67router:** runners 2 tí kò bo ara wọn (Node native + vitest), shards 8, àpapọ̀ coverage 60/60/60/60 + ratchet ~76% + **ìwọ̀n-kéré-jù 8 fún module kọ̀ọ̀kan lára àwọn module tó ṣe pàtàkì** + àwọn property tests alẹ́ + **mutation testing** alẹ́.
 - **Gbogbogbò:** test runner(s) + ìwọ̀n-kéré-jù coverage tó jẹ́ **ojúlówó iye** (òdì sí òdo) + **ratchet** coverage (òdì sí ìfàsẹ́yìn) + **ìwọ̀n-kéré-jù fún module kọ̀ọ̀kan fún kóòdù tó ní ewu gíga** (òdì sí Goodhart) + ìdánwò tó dá lórí property fún pure logic + **mutation testing** alẹ́ gẹ́gẹ́ bí òṣùwọ̀n gidi fún didára ìdánwò.
 
 ### 4. Ìlànà ìdánwò (òdì sí yíyí ètò ṣeré)
 
-- **OmniRoute:** `pr-test-policy` (kóòdù prod nílò ìdánwò), `check-test-masking` (ń dènà asserts tí a sọ di aláìlágbára), `pr-evidence` (ìkéde àṣeyọrí nílò evidence block), `test-discovery` (runner kan gbọ́dọ̀ kó gbogbo ìdánwò jọ).
+- **67router:** `pr-test-policy` (kóòdù prod nílò ìdánwò), `check-test-masking` (ń dènà asserts tí a sọ di aláìlágbára), `pr-evidence` (ìkéde àṣeyọrí nílò evidence block), `test-discovery` (runner kan gbọ́dọ̀ kó gbogbo ìdánwò jọ).
 - **Gbogbogbò:** ibodè “kóòdù tuntun ⇒ ìdánwò tuntun” + aṣàwárí assert tí a yọ/tautology + àìní-ẹni-kò evidence (TDD tàbí living test) + ìdánilójú pé kò sí ìdánwò tí a fi sílẹ̀ ní òde àwọn globs.
 
 ### 5. Ìdíjú & ìlera kóòdù (àwọn ratchet)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ìwọ̀n fáìlì fún fáìlì kọ̀ọ̀kan (tí a ti dì mú, ó lè dín kù nìkan), circular-deps (Tarjan àdáni, tó ń dí iṣẹ́ dúró).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ìwọ̀n fáìlì fún fáìlì kọ̀ọ̀kan (tí a ti dì mú, ó lè dín kù nìkan), circular-deps (Tarjan àdáni, tó ń dí iṣẹ́ dúró).
 - **Gbogbogbò:** fi ratchet sí gbogbo òṣùwọ̀n ìlera (àwọn ìkìlọ̀, àtúnsọ, ìdíjú cyclomatic **àti** cognitive, dead code, ìwọ̀n fáìlì, import cycles). Ìtọ́sọ́nà náà jẹ́ “má ṣe fà sẹ́yìn” ní gbogbo ìgbà.
 
 ### 6. Ààbò statiki (SAST + àwọn àṣírí)
 
-- **OmniRoute:** CodeQL (àwọn alert ratchet = 0), gitleaks (`[extend] useDefault=true` — ó ṣe pàtàkì gan-an!), SonarQube, àwọn òfin ààbò àdáni (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (àwọn alert ratchet = 0), gitleaks (`[extend] useDefault=true` — ó ṣe pàtàkì gan-an!), SonarQube, àwọn òfin ààbò àdáni (public-creds, error-helper, route-guard-membership, route-validation).
 - **Gbogbogbò:** SAST (CodeQL/Sonar/semgrep) pẹ̀lú alert ratchet + scanner àṣírí pẹ̀lú **ruleset àìyẹsẹ̀ tí a jogún** (àtòpọ̀ àdáni tó rọ́pò èyí àìyẹsẹ̀ = ìfọ́jú) + àwọn ibodè ààbò Òfin Tó Múná Doko tó jẹ́ ti iṣẹ́ náà pàtó.
 
 ### 7. Ẹ̀wọ̀n ìpèsè (àwọn dependency)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ọjọ́-orí ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + ọjọ́-orí ≥72h).
 - **Gbogbogbò:** SCA láti ọ̀pọ̀ orísun + allowlist ìwé-àṣẹ + àyẹ̀wò ìdúróṣinṣin lockfile + allowlist dependency pẹ̀lú àyẹ̀wò ọjọ́-orí/typosquatting + bot ìmúdójúìwọ̀n tó ń pín wọn sí ẹgbẹ́.
 
 ### 8. Ẹ̀wọ̀n ìpèsè (build & release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), ìjérìí orísun SLSA (`--provenance`), OpenSSF Scorecard (ọ̀sẹ̀ kọ̀ọ̀kan), fífún workflow lókun (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), ìjérìí orísun SLSA (`--provenance`), OpenSSF Scorecard (ọ̀sẹ̀ kọ̀ọ̀kan), fífún workflow lókun (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Gbogbogbò:** ṣe SBOM nígbà publish + ìjérìí orísun tí a fọwọ́ sí (SLSA L2+) + Scorecard tí a ṣètò sí àsìkò + fún gbogbo workflow lókun (àwọn token tó ní àṣẹ tó kéré jù, kò gbọdọ̀ sí credentials tí a pa mọ́ lórí checkout tí kì í ṣe ti pusher, actions tí a so mọ́ SHA).
 
 ### 9. Àwọn àdéhùn & API
 
-- **OmniRoute:** oasdiff (ìyípadà OpenAPI tó ń fọ́ nǹkan), schemathesis (contract fuzz alẹ́), openapi-coverage (% àwọn route tí a ṣàkọsílẹ̀, ratchet 38.3%), openapi-security-tiers (spec vs route-guard).
+- **67router:** oasdiff (ìyípadà OpenAPI tó ń fọ́ nǹkan), schemathesis (contract fuzz alẹ́), openapi-coverage (% àwọn route tí a ṣàkọsílẹ̀, ratchet 38.3%), openapi-security-tiers (spec vs route-guard).
 - **Gbogbogbò:** ìfiwéra àdéhùn fún ìyípadà tó ń fọ́ nǹkan (oasdiff/buf) + fuzz tó dá lórí property lòdì sí spec (schemathesis) + coverage ìwé-àkọsílẹ̀ tí a fi ratchet sí + ìbámu spec↔kóòdù.
 
 ### 10. Àwọn ìwé-àkọsílẹ̀ & i18n (òdì sí jíjẹrà)
 
-- **OmniRoute:** docs-sync (àwọn ẹ̀yà tó ń ṣe àwòkọ́ṣe ara wọn), docs-counts-sync (àwọn nọ́ńbà nínú ìwé-àkọsílẹ̀ vs kóòdù), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (àwọn ẹ̀yà tó ń ṣe àwòkọ́ṣe ara wọn), docs-counts-sync (àwọn nọ́ńbà nínú ìwé-àkọsílẹ̀ vs kóòdù), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Gbogbogbò:** mú àwọn ẹ̀yà/nọ́ńbà/env-vars nínú ìwé-àkọsílẹ̀ àti kóòdù bá ara wọn mu (ibodè, kì í ṣe ìgbẹ́kẹ̀lé) + fìdí àwọn link inú rẹ̀ múlẹ̀ + coverage i18n tí a fi ratchet sí.
 
 ### 11. Òdì sí ìrò-àròsọ / ìbámu (ẹ̀ka tí kò wọ́pọ̀)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ route gidi), docs-symbols, db-rules (Àwọn Òfin Tó Múná Doko #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ route gidi), docs-symbols, db-rules (Àwọn Òfin Tó Múná Doko #2/#5), migration-numbering.
 - **Gbogbogbò:** fún gbogbo “orísun òtítọ́ tí a ṣe àdáwòkọ” (registry, string dispatch, àwọn ìtọ́kasí tó ré kọjá layer), ibodè kan tó jẹ́rìí pé ẹ̀gbẹ́ méjèèjì bára mu. Ó ń mú jíjẹrà tí typecheck/test kò rí.
 
 ### 12. Ìfaradà & àgbègbè iṣẹ́ (tó jẹ́ ti ọjà náà pàtó)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), àwọn òfin ìfaradà 3 (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), àwọn òfin ìfaradà 3 (circuit-breaker/cooldown/lockout).
 - **Gbogbogbò:** ṣe ìdánimọ̀ àwọn ọ̀nà tí nǹkan lè kùnà nínú àgbègbè iṣẹ́ **tirẹ**, kí o sì ní ibodè kan (kódà bí ó bá jẹ́ ti alẹ́) fún ọ̀kọ̀ọ̀kan. Fún àwọn app AI: injection red-team. Fún àwọn distributed systems: chaos + leak + soak.
 
 ---

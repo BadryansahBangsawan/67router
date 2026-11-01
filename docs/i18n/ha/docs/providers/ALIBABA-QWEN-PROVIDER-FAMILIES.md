@@ -10,7 +10,7 @@ a matsayin iyalan masu samarwa guda huɗu. Yanki bayanan haɗi ne, ba wani samfu
 
 ## Shawara
 
-| Iyalin mai samarwa                                  | OmniRoute ID            | Yankin duniya | Yankin China |
+| Iyalin mai samarwa                                  | 67router ID             | Yankin duniya | Yankin China |
 | --------------------------------------------------- | ----------------------- | ------------- | ------------ |
 | Alibaba Cloud Model Studio (biya gwargwadon amfani) | `alibaba`               | Singapore     | Beijing      |
 | Alibaba Cloud Token Plan                            | `bailian-coding-plan`   | Singapore     | Beijing      |

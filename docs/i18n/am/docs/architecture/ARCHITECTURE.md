@@ -1,4 +1,4 @@
-# OmniRoute Architecture (አማርኛ)
+# 67router Architecture (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _መጨረሻ የተዘመነው: 2026-06-28_
 
 ## አጠቃላይ ማጠቃለያ
 
-OmniRoute በNext.js ላይ የተገነባ አካባቢያዊ የAI ማዘዋወሪያ መግቢያ እና ዳሽቦርድ ነው።
+67router በNext.js ላይ የተገነባ አካባቢያዊ የAI ማዘዋወሪያ መግቢያ እና ዳሽቦርድ ነው።
 አንድ ከOpenAI ጋር ተኳሃኝ የሆነ መዳረሻ (`/v1/*`) ያቀርባል፤ ትራፊክንም በትርጉም፣ በአማራጭ ውድቀት መቋቋሚያ፣ በቶከን እድሳት እና በአጠቃቀም ክትትል አማካኝነት ወደ በርካታ የላይኛው ደረጃ አቅራቢዎች ያዘዋውራል።
 
 ዋና ችሎታዎች፦
@@ -128,13 +128,11 @@ OmniRoute በNext.js ላይ የተገነባ አካባቢያዊ የAI ማዘዋ�
 - `/dashboard/limits` — የኮታ/ፍጥነት መቆጣጠሪያዎች
 - `/dashboard/cli-tools` — የCLI መጀመሪያ ዝግጅት፣ የአሂድ አካባቢ ማወቂያ፣ የውቅር ማመንጫ
 - `/dashboard/agents` — የተገኙ ACP agentዎች + ብጁ agent ምዝገባ
-- `/dashboard/cloud-agents` — በcloud የሚስተናገዱ የagent ተግባራት (Codex Cloud፣ Devin፣ Jules) እና የተግባር የሕይወት ዑደት
 - `/dashboard/skills` — የA2A skill ምዝገባ፣ የsandbox አፈጻጸም፣ አብሮገነብ የskill ካታሎግ
 - `/dashboard/memory` — የቋሚ ውይይት ማህደረ ትውስታ ምርመራ እና ሰርስሮ ማውጣት
 - `/dashboard/webhooks` — ወደ ውጭ የሚላኩ የwebhook ምዝገባዎች፣ የsecret ማዞሪያ፣ የድጋሚ ሙከራ ስታቲስቲክስ
 - `/dashboard/batch` — የbatch ሥራ ማስገባት እና ሂደት
 - `/dashboard/cache` — የread-through እና reasoning cache ስታቲስቲክስ፣ የማስወገጃ መቆጣጠሪያዎች
-- `/dashboard/playground` — በማንኛውም በተዋቀረ combo/model ላይ የሚሠራ መስተጋብራዊ የውይይት መሞከሪያ
 - `/dashboard/changelog` — በመተግበሪያው ውስጥ ያለ የለውጥ ምዝግብ መመልከቻ (`CHANGELOG.md`ን ያሳያል)
 - `/dashboard/system` — የአሂድ አካባቢ ምርመራዎች፣ የስሪት መረጃ፣ የአካባቢ ማረጋገጫ ገጽታ
 - `/dashboard/onboarding` — ለአዲስ ጭነቶች የመጀመሪያ አሂድ ማዋቀሪያ አዋቂ
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[የአሳሽ ዳሽቦርድ]
     end
 
-    subgraph Router[OmniRoute አካባቢያዊ ሂደት]
+    subgraph Router[67router አካባቢያዊ ሂደት]
         API[V1 የተኳኋኝነት API\n/v1/*]
         DASH[ዳሽቦርድ + የአስተዳደር API\n/api/*]
         CORE[SSE + የትርጉም ዋና ክፍል\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - በጀት፦ `src/app/api/usage/budget` (GET/POST)
 - የመጠባበቂያ ሰንሰለቶች፦ `src/app/api/fallback/chains` (GET/POST/DELETE)
 - የተገዢነት ኦዲት፦ `src/app/api/compliance/audit-log` (GET፣ ከገጽ ክፍፍል + ከተዋቀረ ሜታዳታ ጋር)
-- ግምገማዎች፦ `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - ፖሊሲዎች፦ `src/app/api/policies` (GET/POST)
 - የማመሳሰል ቶከኖች፦ `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - የውቅር ጥቅል፦ `src/app/api/sync/bundle` (GET፣ በETag ስሪት የተያዘ የቅንብሮች/አቅራቢዎች/ጥምረቶች/ቁልፎች ቅጽበታዊ ቅጂ)
@@ -316,7 +313,6 @@ flowchart LR
 - የFetch የጊዜ ገደብ፦ `src/shared/utils/fetchTimeout.ts`
 - የጥያቄ ቴሌሜትሪ፦ `src/shared/utils/requestTelemetry.ts`
 - ተገዢነት/ኦዲት፦ `src/lib/compliance/index.ts`
-- የግምገማ አስኪያጅ፦ `src/lib/evals/evalRunner.ts`
 - የጎራ ሁኔታ ማቆያ፦ `src/lib/db/domainState.ts` — ለምትክ ሰንሰለቶች፣ በጀቶች፣ የወጪ ታሪክ፣ የመቆለፊያ ሁኔታ እና የወረዳ መቆራረጫዎች SQLite CRUD
 
 የOAuth አቅራቢ ሞጁሎች (በ`src/lib/oauth/providers/` ስር ያሉ 27 የተናጠል ፋይሎች)፦
@@ -328,7 +324,7 @@ flowchart LR
 
 ## 5) የተካተቱ አገልግሎቶች (v3.8.4)
 
-OmniRoute በአካባቢው የሚሰሩና **የተካተቱ አገልግሎቶች** ተብለው የሚጠሩ የAI መሣሪያ ሂደቶችን
+67router በአካባቢው የሚሰሩና **የተካተቱ አገልግሎቶች** ተብለው የሚጠሩ የAI መሣሪያ ሂደቶችን
 መጫን፣ መቆጣጠር እና ወደእነሱ መምራት ይችላል። አምስት አገልግሎቶች አብረው ይቀርባሉ፦ 9Router፣ CLIProxyAPI፣ Bifrost፣ Mux እና Dario።
 
 የአርክቴክቸር ንብርብሮች፦
@@ -385,23 +381,6 @@ Auto Combo በቋሚ combo ትርጉም ላይ ከመመርኮዝ ይልቅ፣ �
 ለሙሉ የአልጎሪዝም ዝርዝር (የምክንያት ቀመሮች፣ የክብደት ማስተካከያ)፣
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)ን ይመልከቱ።
 
-### B. Cloud Agents
-
-Cloud Agents በሦስተኛ ወገን የሚስተናገዱ የኮድ-ወኪል መድረኮችን (Codex Cloud፣ Devin፣
-Jules) በወጥ የውሂብ ጎታ የተደገፈ የተግባር የሕይወት ዑደት ጀርባ ያቀርባል። ሁሉም የተግባር መፍጠሪያ/መመርመሪያ
-መጨረሻ ነጥቦች የአስተዳደር ማረጋገጫ ይፈልጋሉ።
-
-- የሞጁሉ ሥር፦ `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`፣ እንዲሁም በ`agents/` ስር ያሉ የየወኪሉ ንዑስ ማውጫዎች)
-- የየወኪሉ ትግበራዎች፦ `agents/codex/`፣ `agents/devin/`፣ `agents/jules/`
-- ይፋዊ መጨረሻ ነጥቦች፦ `/api/v1/agents/tasks/*` (መዘርዘር/መፍጠር/ማግኘት/መሰረዝ)
-- የአስተዳደር መጨረሻ ነጥቦች፦ `/api/cloud/*` (ማቅረብ፣ ሁኔታ፣ ባች)
-- ዳሽቦርድ፦ `/dashboard/cloud-agents`
-- ማከማቻ፦ `cloud_agent_tasks` ሰንጠረዥ
-
-ለየወኪሉ የማቅረብ እና የOAuth ዝርዝሮች፣
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)ን ይመልከቱ።
-
 ### C. Guardrails
 
 የguardrails ሞጁል ጥያቄዎችን እና ምላሾችን ለPII፣ ለprompt injection እና ደህንነቱ ያልተጠበቀ የምስል ይዘት
@@ -437,7 +416,7 @@ Jules) በወጥ የውሂብ ጎታ የተደገፈ የተግባር የሕይ�
 - የኮታ መሸጎጫ፦ `src/domain/quotaCache.ts`
 - የመቀነስ ሁኔታ፦ `src/domain/degradation.ts`
 - የውቅር ኦዲት፦ `src/domain/configAudit.ts`
-- የOmniRoute ምላሽ metadata ገንቢ፦ `src/domain/omnirouteResponseMeta.ts`
+- የ67router ምላሽ metadata ገንቢ፦ `src/domain/omnirouteResponseMeta.ts`
 - የግምገማ ንዑስ ስርዓት፦ `src/domain/assessment/` — ወቅታዊ የግምገማ ስራዎች
 
 ### E. የፈቃድ መስጫ የስራ ፍሰት
@@ -815,7 +794,7 @@ flowchart LR
         Browser[የዳሽቦርድ አሳሽ]
     end
 
-    subgraph ContainerOrProcess[OmniRoute የአሂድ ጊዜ]
+    subgraph ContainerOrProcess[67router የአሂድ ጊዜ]
         Next[Next.js አገልጋይ\nPORT=20128]
         Core[SSE ኮር + አስፈጻሚዎች]
         MainDB[(storage.sqlite)]
@@ -933,7 +912,7 @@ flowchart LR
 
 ## የአቅራቢዎች ተኳኋኝነት ማትሪክስ
 
-> **ማስታወሻ፦** ከታች ያለው ማትሪክስ በOmniRoute v3.8.0 ውስጥ ከተመዘገቡት 351 አቅራቢዎች ተወካይ ናሙና ነው።
+> **ማስታወሻ፦** ከታች ያለው ማትሪክስ በ67router v3.8.0 ውስጥ ከተመዘገቡት 351 አቅራቢዎች ተወካይ ናሙና ነው።
 > ለዋናው እና በቀጣይነት ለሚዘመነው ዝርዝር፣
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (በራስ-ሰር የመነጨ) ወይም በ
 > `src/shared/constants/providers.ts` የሚገኘውን ዋና ምንጭ (በሚጫንበት ጊዜ በZod የተረጋገጠ) ይመልከቱ።
@@ -1115,7 +1094,7 @@ flowchart LR
 - ከደንበኛው የተቀበለ ጥሬ ጥያቄ
 - በእርግጥ ወደ ላይኛው ምንጭ የተላከ የተተረጎመ ጥያቄ
 - እንደ JSON ዳግም የተገነባ የአቅራቢ ምላሽ፤ በዥረት የተላለፉ ምላሾች ወደ የመጨረሻው ማጠቃለያ እና የዥረት ሜታዳታ ይጠቀለላሉ
-- በOmniRoute የተመለሰ የመጨረሻ የደንበኛ ምላሽ፤ በዥረት የተላለፉ ምላሾች በተመሳሳይ የታመቀ የማጠቃለያ ቅርጽ ይከማቻሉ
+- በ67router የተመለሰ የመጨረሻ የደንበኛ ምላሽ፤ በዥረት የተላለፉ ምላሾች በተመሳሳይ የታመቀ የማጠቃለያ ቅርጽ ይከማቻሉ
 
 ## ደህንነት-ነክ ወሰኖች
 

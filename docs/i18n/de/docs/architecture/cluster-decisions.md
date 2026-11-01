@@ -14,7 +14,7 @@ Zwei optionale Compose-Profile (`memory`, `bifrost`) für die bestehende Bereits
 
 ## Warum dieser Ansatz konservativ ist
 
-Die bestehende Bereitstellungsarchitektur von OmniRoute ist bereits schlank und bewährt:
+Die bestehende Bereitstellungsarchitektur von 67router ist bereits schlank und bewährt:
 
 - **`redis:7-alpine`** verarbeitet die Rate-Limit- und Cache-Workloads im Produktionsmaßstab.
 - **SQLite + sqlite-vec + FTS5** decken lokalen Speicher sowie Vektor- und Textsuche ab (siehe [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Die beiden Profile sind **Skalierungsoptionen für Bereitstellungen, die an die 
 
 - Es werden ≥3 `omniroute`-Replikate ausgeführt und die Provider-Rotation soll zentral in einem einzigen Go-Prozess erfolgen.
 - Es soll eine zentrale Audit-/Protokollierungsoberfläche für Anfragen an vorgelagerte Provider über alle Replikate hinweg geben.
-- Die Tier-1-Routingebene soll unabhängig von den OmniRoute-Replikaten horizontal skaliert werden.
+- Die Tier-1-Routingebene soll unabhängig von den 67router-Replikaten horizontal skaliert werden.
 
 **Was hinzugefügt wird:**
 

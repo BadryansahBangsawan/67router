@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector، OmniRoute کا بلٹ اِن HTTPS ٹریفک ڈیبگر ہے — Charles Proxy / mitmweb / HTTP Toolkit جیسا ایک ٹول، جو **LLM-aware** اور **agent-aware** ہے۔ یہ `/dashboard/tools/traffic-inspector` پر موجود ہے اور بیک وقت زیادہ سے زیادہ 5 کیپچر ذرائع سے لائیو ٹریفک وصول کرتا ہے۔
+Traffic Inspector، 67router کا بلٹ اِن HTTPS ٹریفک ڈیبگر ہے — Charles Proxy / mitmweb / HTTP Toolkit جیسا ایک ٹول، جو **LLM-aware** اور **agent-aware** ہے۔ یہ `/dashboard/tools/traffic-inspector` پر موجود ہے اور بیک وقت زیادہ سے زیادہ 5 کیپچر ذرائع سے لائیو ٹریفک وصول کرتا ہے۔
 
 **ڈیش بورڈ کا مقام:** `/dashboard/tools/traffic-inspector`
 **سائیڈبار گروپ:** Tools (AgentBridge کے بعد)
@@ -16,21 +16,21 @@ Traffic Inspector، OmniRoute کا بلٹ اِن HTTPS ٹریفک ڈیبگر ہ�
 
 ### Traffic Inspector کو منفرد کیا بناتا ہے
 
-| خصوصیت                                                                          | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| ویب پر مبنی                                                                     |    ✓    |    ✗    |    ✗    |                ✓                |
-| اوپن سورس                                                                       |    ✓    |    ✗    |  جزوی   |                ✓                |
-| **Agent-aware** (جانتا ہے کہ درخواست Antigravity/Copilot/وغیرہ سے ہے یا نہیں)   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM-aware** (OpenAI/Anthropic/Gemini کی ساخت، ٹوکنز اور ماڈل کو پارس کرتا ہے) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **ماڈل میپنگ نمایاں** (gemini-3-flash → claude-sonnet-4.7)                      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **پراکسی/اپ اسٹریم لیٹنسی کی علیحدہ تفصیل**                                     |  جزوی   |    ✗    |    ✗    |                ✓                |
-| **OmniRoute کے ساتھ مربوط** روٹنگ، فال بیک، لاگت                                |    ✗    |    ✗    |    ✗    |                ✓                |
-| **سسٹم گیر پراکسی ڈیبگ** (مشین پر موجود کوئی بھی ایپ)                           |    ✓    |    ✓    |    ✓    |                ✓                |
-| **حسبِ ضرورت ہوسٹ کیپچر** (ہر ہوسٹ کے لیے DNS ری ڈائریکٹ)                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY ماحول موڈ**                                                        |    ✓    |    ✓    |    ✓    |                ✓                |
-| **گفتگو کا منظر** (ملٹی ٹرن ببلز، tool_use/tool_result)                         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE اسٹریم مرجر** (ڈیلٹا ایونٹس سے دوبارہ تشکیل)                              |    ✗    |    ✗    |    ✗    |                ✓                |
-| **سیشن ریکارڈنگ** (نام یافتہ، قابلِ ایکسپورٹ .har/.jsonl)                       |    ✗    |    ✓    |    ✓    |                ✓                |
+| خصوصیت                                                                          | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| ویب پر مبنی                                                                     |    ✓    |    ✗    |    ✗    |               ✓                |
+| اوپن سورس                                                                       |    ✓    |    ✗    |  جزوی   |               ✓                |
+| **Agent-aware** (جانتا ہے کہ درخواست Antigravity/Copilot/وغیرہ سے ہے یا نہیں)   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM-aware** (OpenAI/Anthropic/Gemini کی ساخت، ٹوکنز اور ماڈل کو پارس کرتا ہے) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **ماڈل میپنگ نمایاں** (gemini-3-flash → claude-sonnet-4.7)                      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **پراکسی/اپ اسٹریم لیٹنسی کی علیحدہ تفصیل**                                     |  جزوی   |    ✗    |    ✗    |               ✓                |
+| **67router کے ساتھ مربوط** روٹنگ، فال بیک، لاگت                                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **سسٹم گیر پراکسی ڈیبگ** (مشین پر موجود کوئی بھی ایپ)                           |    ✓    |    ✓    |    ✓    |               ✓                |
+| **حسبِ ضرورت ہوسٹ کیپچر** (ہر ہوسٹ کے لیے DNS ری ڈائریکٹ)                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY ماحول موڈ**                                                        |    ✓    |    ✓    |    ✓    |               ✓                |
+| **گفتگو کا منظر** (ملٹی ٹرن ببلز، tool_use/tool_result)                         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE اسٹریم مرجر** (ڈیلٹا ایونٹس سے دوبارہ تشکیل)                              |    ✗    |    ✗    |    ✗    |               ✓                |
+| **سیشن ریکارڈنگ** (نام یافتہ، قابلِ ایکسپورٹ .har/.jsonl)                       |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### ایک پیراگراف میں فنِ تعمیر
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // اگر SSE جواب ہو تو true
   mappedTo: string | null; // x-omniroute-mapped ہیڈر
-  costEstimateUsd: number | null; // OmniRoute کی قیمتوں کی بنیاد پر تخمینی لاگت
+  costEstimateUsd: number | null; // 67router کی قیمتوں کی بنیاد پر تخمینی لاگت
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### سسٹم پراکسی واپس بحال نہیں ہوئی
 
-اگر سسٹم گیر پراکسی موڈ فعال ہونے کے دوران OmniRoute کریش ہو جائے:
+اگر سسٹم گیر پراکسی موڈ فعال ہونے کے دوران 67router کریش ہو جائے:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ netsh winhttp reset proxy
 | GET    | `/requests`                 | درخواستوں کی فہرست (فلٹر کے قابل: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | ایک درخواست کی تفصیلات                                                                    |
 | DELETE | `/requests`                 | اِن میموری بفر صاف کریں                                                                   |
-| POST   | `/requests/{id}/replay`     | اسی درخواست کو OmniRoute راؤٹر کے ذریعے دوبارہ چلائیں                                     |
+| POST   | `/requests/{id}/replay`     | اسی درخواست کو 67router راؤٹر کے ذریعے دوبارہ چلائیں                                      |
 | PUT    | `/requests/{id}/annotation` | درخواست پر نوٹ محفوظ یا اپ ڈیٹ کریں                                                       |
 
 ### WebSocket

@@ -9,9 +9,9 @@
 > **Terakhir diteliti:** 2026-06-17 — riset web per penyedia (dokumentasi resmi + berita 7 hari terakhir, proses 50 agen dengan verifikasi adversarial) yang memperbarui setiap kuota tingkat gratis + ToS. **Audit ulang parsial 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — lihat catatan bertanggal di bawah).
 > **Sumber kebenaran (katalog):** `open-sse/config/freeModelCatalog.ts` (anggaran per model, kumpulan yang dideduplikasi). Angka anggaran token di bawah berasal dari riset web langsung dan merupakan **perkiraan** — lihat [Metodologi & catatan penting](#methodology--caveats).
 
-## TL;DR — berapa banyak inferensi gratis yang sebenarnya diagregasi OmniRoute?
+## TL;DR — berapa banyak inferensi gratis yang sebenarnya diagregasi 67router?
 
-Angka-angka ini menggambarkan akun pihak ketiga dan persyaratan kelayakan yang berbeda di seluruh katalog. OmniRoute tidak memberikan anggaran ini: Anda harus memperoleh akun atau kredensial yang diperlukan, menghubungkan penyedia yang memenuhi syarat, dan mematuhi batas mereka. Kapasitas yang benar-benar dapat digunakan mungkin lebih rendah, termasuk nol pada instalasi baru tanpa rute yang memenuhi syarat. Penyedia yang ditandai `tos: avoid` secara default dikecualikan dari perutean otomatis.
+Angka-angka ini menggambarkan akun pihak ketiga dan persyaratan kelayakan yang berbeda di seluruh katalog. 67router tidak memberikan anggaran ini: Anda harus memperoleh akun atau kredensial yang diperlukan, menghubungkan penyedia yang memenuhi syarat, dan mematuhi batas mereka. Kapasitas yang benar-benar dapat digunakan mungkin lebih rendah, termasuk nol pada instalasi baru tanpa rute yang memenuhi syarat. Penyedia yang ditandai `tos: avoid` secara default dikecualikan dari perutean otomatis.
 
 **Diperiksa 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) menawarkan kredit promosi satu kali sebesar $5 yang memerlukan metode pembayaran dan kedaluwarsa setelah 30 hari. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) memublikasikan batas laju berdasarkan proyek/model/tingkat; Gemini tetap berada di luar angka utama bulanan yang dikuantifikasi.
 
@@ -94,7 +94,7 @@ mendetail dalam catatan penyedia di bawah.
 
 ## Dua rezim — menghitung vs memutuskan
 
-OmniRoute menjawab "apakah ini gratis?" melalui dua rezim yang secara sengaja
+67router menjawab "apakah ini gratis?" melalui dua rezim yang secara sengaja
 membaca sumber berbeda:
 
 | Rezim                      | Sumber kebenaran                                                                                                                                                      | Cakupan                                                                                                                      |
@@ -142,7 +142,7 @@ Sebagian besar angka "token gratis per bulan" di ranah ini merupakan penjumlahan
 
 ### ⚠️ Perhatian — klausul penggunaan pribadi / proksi yang perlu diperiksa (16)
 
-> Akses gratis mereka nyata dan OmniRoute dapat merutekan permintaan kepada mereka; klausul di bawah ini hanya perlu diketahui. Penyedia berbasis OAuth/tanpa kunci tidak dapat dikuantifikasi dalam token, sehingga tidak dimasukkan dalam angka utama (bukan karena tidak dapat digunakan).
+> Akses gratis mereka nyata dan 67router dapat merutekan permintaan kepada mereka; klausul di bawah ini hanya perlu diketahui. Penyedia berbasis OAuth/tanpa kunci tidak dapat dikuantifikasi dalam token, sehingga tidak dimasukkan dalam angka utama (bukan karena tidak dapat digunakan).
 
 | Penyedia         | Catatan                                                                                                                                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -156,7 +156,7 @@ Sebagian besar angka "token gratis per bulan" di ranah ini merupakan penjumlahan
 | `fireworks`      | ToS secara eksplisit melarang penggunaan sebagai proksi/perantara, pemindahan kunci API, dan pemberian sublisensi (Bagian 2.1 dan 2.2(i)(j)); proksi pribadi yang di-hosting sendiri tidak…                                     |
 | `friendliai`     | ToS Bagian 8(e) dan 8(f) secara eksplisit melarang penggunaan FriendliAI sebagai proksi atau pemberian akses kepada pihak ketiga secara mandiri, serta melarang penjualan kembali/…                                             |
 | `iflytek`        | Bagian 2.4(3) dari iFlytek Spark LLM Service Agreement secara eksplisit melarang "penggunaan metode otomatis atau terprogram apa pun untuk mengekstrak data atau keluaran…                                                      |
-| `kiro`           | FAQ Kiro secara eksplisit melarang penggunaan dengan "OpenClaw dan alat serupa yang memanfaatkan harness pihak ketiga" — proksi AI yang di-hosting sendiri (seperti OmniRoute) yang merutekan…                                  |
+| `kiro`           | FAQ Kiro secara eksplisit melarang penggunaan dengan "OpenClaw dan alat serupa yang memanfaatkan harness pihak ketiga" — proksi AI yang di-hosting sendiri (seperti 67router) yang merutekan…                                   |
 | `modal`          | ToS Bagian 1.3 secara eksplisit melarang "menyewakan, menjual kembali, atau dengan cara lain mengizinkan pihak ketiga mana pun mengakses atau menggunakan Layanan secara langsung" — membangun layanan yang di-hosting sendiri… |
 | `muse-spark-web` | ToS Meta secara eksplisit melarang akses otomatis tanpa izin sebelumnya, rekayasa balik tanpa izin tertulis, dan upaya mengakali teknologi…                                                                                     |
 | `nlpcloud`       | ToS secara eksplisit melarang "menyiapkan proksi atau perangkat lain yang memungkinkan orang lain mengakses Layanan melaluinya" dan hanya memberikan hak yang tidak dapat dialihkan,…                                           |
@@ -318,7 +318,7 @@ Sebagian besar angka "token gratis per bulan" di ranah ini merupakan penjumlahan
 
 - **`360ai`** — freeNote bawaan "Model Free 360 AI Brain gratis" tampaknya sudah usang. Akses saat ini memerlukan pengajuan dan berbayar. Token promosi pada masa peluncuran tahun 2023 (100M–250M satu kali) mungkin menjadi dasar untuk…
 - **`agentrouter`** — freeNote bawaan kami menyatakan "kredit gratis $200 saat mendaftar." Kenyataannya saat ini, pendaftaran standar (non-referral) hanya menerima $100; pendaftaran melalui referral mungkin mendapatkan $200, tetapi komentar komunitas dari April 2026…
-- **`agy`** — freeNote bawaan kami menyatakan "(tidak ada)", yang menyiratkan tidak adanya tingkat gratis, tetapi Antigravity memiliki tingkat gratis yang aksesnya dibatasi melalui OAuth. Namun, ToS secara eksplisit melarang penggunaan tingkat gratis ini melalui proksi seperti OmniRoute …
+- **`agy`** — freeNote bawaan kami menyatakan "(tidak ada)", yang menyiratkan tidak adanya tingkat gratis, tetapi Antigravity memiliki tingkat gratis yang aksesnya dibatasi melalui OAuth. Namun, ToS secara eksplisit melarang penggunaan tingkat gratis ini melalui proksi seperti 67router …
 - **`ai21`** — Diperketat: periode uji coba dipangkas dari "3 bulan" menjadi 7 hari. Jumlah kredit $10 tetap sama, tetapi masa berlakunya turun drastis dari sekitar 90 hari menjadi 7 hari.
 - **`aimlapi`** — Berubah secara signifikan. freeNote bawaan mengiklankan "kredit gratis $0.025/hari — 200+ model", tetapi tingkat gratis kini dijeda/dihentikan. Alokasi kredit $0.025/hari (50.000 kredit/hari, 10 permintaan/h…
 - **`amazon-q`** — freeNote bawaan kami menyatakan "(tidak ada)" — kenyataannya lebih buruk: produk ini kini dihentikan untuk pendaftaran baru (15 Mei 2026). Sebelumnya, tingkat gratis menawarkan 50 permintaan agentik/bulan + inline tanpa bata…

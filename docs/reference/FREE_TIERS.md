@@ -11,9 +11,9 @@ lastUpdated: 2026-10-18
 > **Last researched:** 2026-06-17 — per-provider web research (official docs + last-7-days news, 50-agent pass with adversarial verification) refreshing every free-tier quota + ToS. **Partial re-audit 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — see the dated note below).
 > **Source of truth (catalog):** `open-sse/config/freeModelCatalog.ts` (per-MODEL budgets, pool-deduped). The token-budget numbers below come from live web research and are an **approximation** — see [Methodology & caveats](#methodology--caveats).
 
-## TL;DR — how much free inference does OmniRoute actually aggregate?
+## TL;DR — how much free inference does 67router actually aggregate?
 
-These figures describe separate third-party accounts and eligibility conditions across the catalog. OmniRoute does not grant this budget: you must obtain the required accounts or credentials, connect eligible providers, and respect their limits. Actual usable capacity can be lower, including zero on a fresh installation with no eligible route. Providers marked `tos: avoid` are excluded from automatic routing by default.
+These figures describe separate third-party accounts and eligibility conditions across the catalog. 67router does not grant this budget: you must obtain the required accounts or credentials, connect eligible providers, and respect their limits. Actual usable capacity can be lower, including zero on a fresh installation with no eligible route. Providers marked `tos: avoid` are excluded from automatic routing by default.
 
 **Checked 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) offers a one-time $5 promotional credit requiring a payment method, expiring after 30 days. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publishes project/model/tier rate limits; it remains outside the quantified monthly headline.
 
@@ -94,7 +94,7 @@ free credits. The Nous changes are detailed in the provider note below.
 
 ## Two regimes — counting vs deciding
 
-OmniRoute answers "is it free?" through two regimes that intentionally read
+67router answers "is it free?" through two regimes that intentionally read
 different sources:
 
 | Regime                    | Source of truth                                                                                                                                                        | Surfaces                                                                                                                       |
@@ -142,7 +142,7 @@ Most "free tokens per month" figures in this space are sums of per-model labels.
 
 ### ⚠️ Caution — personal-use / proxy clauses worth checking (16)
 
-> Their free access is real and OmniRoute can route to them; the clauses below are just worth knowing. The OAuth/keyless ones aren't token-quantifiable, so they're not in the headline number (not because they're unusable).
+> Their free access is real and 67router can route to them; the clauses below are just worth knowing. The OAuth/keyless ones aren't token-quantifiable, so they're not in the headline number (not because they're unusable).
 
 | Provider         | Note                                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -156,7 +156,7 @@ Most "free tokens per month" figures in this space are sums of per-model labels.
 | `fireworks`      | ToS explicitly prohibits proxy/intermediary use, API key transfers, and sublicensing (Sections 2.1 and 2.2(i)(j)); self-hosted personal proxies are n… |
 | `friendliai`     | ToS Section 8(e) and 8(f) explicitly prohibit using FriendliAI as a proxy or allowing third-party access on a standalone basis, and forbid reselling/… |
 | `iflytek`        | Section 2.4(3) of the iFlytek Spark LLM Service Agreement explicitly prohibits "using any automated or programmatic methods to extract data or output… |
-| `kiro`           | Kiro FAQ explicitly prohibits use with "OpenClaw and similar tools that leverage third-party harnesses" — a self-hosted AI proxy (like OmniRoute) rou… |
+| `kiro`           | Kiro FAQ explicitly prohibits use with "OpenClaw and similar tools that leverage third-party harnesses" — a self-hosted AI proxy (like 67router) rou…  |
 | `modal`          | ToS Section 1.3 explicitly prohibits "rent, resell or otherwise allow any third party direct access to or use of the Service" — building a self-hoste… |
 | `muse-spark-web` | Meta ToS explicitly prohibits automated access without prior permission, reverse engineering without written permission, and circumventing technologi… |
 | `nlpcloud`       | ToS explicitly prohibits "setting up a proxy or other device that allows others to access the Service through it" and grants only a non-transferable,… |
@@ -318,7 +318,7 @@ Most "free tokens per month" figures in this space are sums of per-model labels.
 
 - **`360ai`** — The shipped freeNote "Free 360 AI Brain models" appears outdated. Current access is application-gated and paid. The 2023 launch-era promotional tokens (100M–250M one-time) may have been the basis for…
 - **`agentrouter`** — Our shipped freeNote says "$200 free credits on signup." Current reality shows standard (non-referral) signups receive only $100; referral signups may get $200 but a community comment from April 2026…
-- **`agy`** — Our shipped freeNote says "(none)" implying no free tier, but Antigravity does have a free OAuth-gated tier. However, the ToS explicitly prohibits using this free tier through a proxy like OmniRoute …
+- **`agy`** — Our shipped freeNote says "(none)" implying no free tier, but Antigravity does have a free OAuth-gated tier. However, the ToS explicitly prohibits using this free tier through a proxy like 67router …
 - **`ai21`** — Tightened: trial window shrunk from "3 months" to 7 days. The $10 credit amount remains the same, but validity dropped sharply from ~90 days to 7 days.
 - **`aimlapi`** — Changed significantly. Shipped freeNote advertised "$0.025/day free credits — 200+ models" but the free tier is now paused/discontinued. The $0.025/day credit allocation (50,000 credits/day, 10 req/d…
 - **`amazon-q`** — Our shipped freeNote says "(none)" — the reality is worse: the product is now discontinued for new signups (May 15, 2026). Previously the free tier offered 50 agentic requests/month + unlimited inlin…
@@ -347,7 +347,7 @@ Most "free tokens per month" figures in this space are sums of per-model labels.
 - **`gemini`** — The shipped freeNote says "1,500 req/day for Gemini 2.5 Flash" — this was accurate before December 2025. Google cut free-tier limits by 50-80% in December 2025, reducing Gemini 2.5 Flash from 1,500 R…
 - **`gitlawb`** — The shipped freeNote "Free tier available" is effectively stale. The original free MiMo access was removed in May 2026; the only remaining "free" option is a temporary promotional model (Nemotron 3 U…
 - **`gitlawb-gmi`** — Partially still accurate — free tier exists but is now narrowed to a single model (Nemotron 3 Ultra) after MiMo free access was revoked in late May 2026. The shipped note "Free tier available" unders…
-- **`groq`** — The shipped freeNote "30 RPM / 14.4K RPD" is accurate only for llama-3.1-8b-instant. Most other models (including llama-3.3-70b-versatile) have a much lower 1K RPD cap. The note omits model-specific … **Resolved 2026-09-02:** the `freeNote` now reads "Free plan: per-model caps (200K tokens/day per chat model; see console.groq.com/docs/rate-limits for RPM/RPD) — no payment method on file." and the catalog carries five per-model 6M caps (llama-3.3-70b-versatile retired from the free tier on 2026-08-16) — see the [2026-09-02 re-audit note](#tldr--how-much-free-inference-does-omniroute-actually-aggregate).
+- **`groq`** — The shipped freeNote "30 RPM / 14.4K RPD" is accurate only for llama-3.1-8b-instant. Most other models (including llama-3.3-70b-versatile) have a much lower 1K RPD cap. The note omits model-specific … **Resolved 2026-09-02:** the `freeNote` now reads "Free plan: per-model caps (200K tokens/day per chat model; see console.groq.com/docs/rate-limits for RPM/RPD) — no payment method on file." and the catalog carries five per-model 6M caps (llama-3.3-70b-versatile retired from the free tier on 2026-08-16) — see the [2026-09-02 re-audit note](#tldr--how-much-free-inference-does-67router-actually-aggregate).
 - **`huggingchat`** — The shipped freeNote ("Free LLM chat — no subscription required. Rate limits apply.") is partially accurate but significantly understates the restrictions. The free tier now operates on a hard $0.10/…
 - **`huggingface`** — Significantly tightened. The shipped freeNote ("Free Inference API for thousands of models") implied unlimited/generous free access, but as of mid-2025 the free tier is capped at $0.10/month in recur…
 - **`hyperbolic`** — Our shipped freeNote says "$1-5 trial credits on signup" — the $1 trial credit portion is accurate, but the "$5" figure refers to the minimum deposit required to unlock GPU rental (not free credits g…

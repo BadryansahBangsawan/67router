@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute oddeľuje **zisťovanie CLI**, **natívny Agent Client Protocol** a
+67router oddeľuje **zisťovanie CLI**, **natívny Agent Client Protocol** a
 **staršie adaptéry stdio**. Nájdenie nainštalovaného binárneho súboru nepotvrdzuje jeho
 autentifikáciu, kompatibilitu modelu ani pripravenosť spracovať prompt.
 
@@ -125,5 +125,3 @@ poskytovateľa; tie vyžadujú samostatne autorizovaný základný test v cieľo
 - [Protokoly agentov](./AGENT_PROTOCOLS_GUIDE.md)
 - [Spúšťacie kontrakty CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Nástroje CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)
-- [Cloudoví agenti](./CLOUD_AGENT.md)

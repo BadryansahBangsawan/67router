@@ -4,77 +4,30 @@
 
 ---
 
-> **Chanzo:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute hutoa violesura vitatu tofauti vinavyohusiana na mawakala. Kwa mtazamo wa kwanza vinafanana, lakini hutatua matatizo tofauti. Tumia ukurasa huu kuchagua kinachofaa.
+67router hutoa violesura vitatu tofauti vinavyohusiana na mawakala. Kwa mtazamo wa kwanza vinafanana, lakini hutatua matatizo tofauti. Tumia ukurasa huu kuchagua kinachofaa.
 
 ## Kwa Ufupi
 
 | Kiolesura                           | Kinafaa zaidi kwa                                                                                                                                                    | Usafirishaji                               | Kiwango                |
 | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | ---------------------- |
 | **A2A — Wakala-kwa-Wakala**         | Ushirikiano kati ya mawakala na mawakala wenza wanaotumia itifaki ya A2A                                                                                             | JSON-RPC 2.0 kupitia HTTP                  | A2A v0.3 (vipimo wazi) |
-| **ACP — Sajili ya Mawakala wa CLI** | Kugundua / kusajili / kuzindua mawakala wa uandishi wa msimbo wa CLI waliosakinishwa kwenye mashine ya mtumiaji (Cursor, Cline, Codex CLI, Claude Code, Aider, n.k.) | HTTP REST                                  | Mahususi kwa OmniRoute |
-| **Mawakala wa Wingu**               | Kuwasilisha kazi za muda mrefu za uandishi wa msimbo kwa huduma za nje za wingu (Codex Cloud, Devin, Jules, Cursor Cloud)                                            | HTTP REST + kazi zinazohifadhiwa kwenye DB | Mahususi kwa OmniRoute |
+| **ACP — Sajili ya Mawakala wa CLI** | Kugundua / kusajili / kuzindua mawakala wa uandishi wa msimbo wa CLI waliosakinishwa kwenye mashine ya mtumiaji (Cursor, Cline, Codex CLI, Claude Code, Aider, n.k.) | HTTP REST                                  | Mahususi kwa 67router  |
+| **Mawakala wa Wingu**               | Kuwasilisha kazi za muda mrefu za uandishi wa msimbo kwa huduma za nje za wingu (Codex Cloud, Devin, Jules, Cursor Cloud)                                            | HTTP REST + kazi zinazohifadhiwa kwenye DB | Mahususi kwa 67router  |
 
 Vyote vitatu vinajitegemea — chagua mchanganyiko wowote.
 
 ## Mti wa Maamuzi
 
-```
-Je, unahitaji huduma ya wingu kufanya kazi nje ya mashine hii (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ NDIYO → Mawakala wa Wingu (POST /api/v1/agents/tasks)
-└─ HAPANA → Endelea
-    │
-    Je, una wakala mwenza anayetumia A2A na anayetaka kushirikiana?
-    ├─ NDIYO → A2A (POST /a2a)
-    └─ HAPANA → Endelea
-        │
-        Je, unahitaji kuorodhesha / kusanidi mawakala wa uandishi wa msimbo wa CLI waliosakinishwa ndani ya mashine?
-        ├─ NDIYO → ACP (GET /api/acp/agents)
-        └─ HAPANA → Tumia /v1/chat/completions moja kwa moja
-```
-
-## 1. A2A — Wakala-kwa-Wakala
-
-**Vipimo:** [A2A v0.3](https://a2a-protocol.org)
-**Endpoint ya OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Kadi ya Wakala:** `GET /.well-known/agent.json`
-
-### Wakati wa kutumia
-
-- Kujenga mfumo wa mawakala wengi ambapo OmniRoute ni mmoja wa washiriki
-- Kutoa uwezo mahiri wa uelekezaji wa OmniRoute (uelekezaji mahiri, usimamizi wa mgao, n.k.) kwa mawakala katika mifumo kama Google ADK au mitandao ya jumla ya mawakala
-- Kufunika OmniRoute kwa kiolesura sanifu cha ugunduzi + utekelezaji
-
-### Mbinu
-
-- `message/send` — wasilisha ujumbe, pokea jibu lililosawazishwa
-- `message/stream` — wasilisha + pokea matukio ya maendeleo yanayotiririshwa kupitia SSE
-- `tasks/get` — soma kazi kwa kutumia kitambulisho
-- `tasks/cancel` — ghairi kazi inayoendelea
-
-### Ujuzi uliojengewa ndani (6)
-
-- `smart-routing` — elekeza kidokezo kupitia mchanganyiko bora zaidi
-- `quota-management` — ripoti hali ya mgao kwa kila mtoa huduma
-- `provider-discovery` — orodhesha watoa huduma waliosakinishwa pamoja na uwezo wao
-- `cost-analysis` — kadiria gharama ya ombi/mazungumzo
-- `health-report` — kusanya hali ya breaker/cooldown/lockout kwa kila mtoa huduma
-- `list-capabilities` — orodhesha ujuzi na metadata zinazopatikana za wakala
-
-### Maelezo ya kina
-
-Tazama [A2A-SERVER.md](./A2A-SERVER.md) kwa maelezo ya usafirishaji, muundo wa kadi ya wakala, usanidi wa TTL ya kazi, na kiolezo cha kuongeza ujuzi mpya.
-
 ## 2. ACP — Sajili ya Mawakala wa CLI
 
-**Endpoint ya OmniRoute:** `GET /api/acp/agents`
+**Endpoint ya 67router:** `GET /api/acp/agents`
 **Chanzo:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Ni nini
 
-ACP ni **orodha ya ndani ya mawakala wa CLI** ya OmniRoute. Hutambua CLI za kuandika msimbo zilizosakinishwa kwenye seva mwenyeji (Cursor, Cline, Claude Code, Codex CLI, Continue, n.k.), hubaini matoleo yake, na kuzionyesha kwenye dashibodi ili mtumiaji aweze kusanidi kila CLI ielekezwe kwenye OmniRoute.
+ACP ni **orodha ya ndani ya mawakala wa CLI** ya 67router. Hutambua CLI za kuandika msimbo zilizosakinishwa kwenye seva mwenyeji (Cursor, Cline, Claude Code, Codex CLI, Continue, n.k.), hubaini matoleo yake, na kuzionyesha kwenye dashibodi ili mtumiaji aweze kusanidi kila CLI ielekezwe kwenye 67router.
 
 Kiolesura cha HTTP ni orodha ya ndani inayowezesha UI ya "Zana za CLI" na
 ufuatiliaji wa alama bainishi za CLI (angalia [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Kando na hilo,
@@ -114,8 +67,8 @@ Muundo wa body kwa POST (`customAgentBodySchema` katika `src/app/api/acp/agents/
 
 ### Matumizi
 
-- Ukurasa wa "Zana za CLI" wa dashibodi huorodhesha vilivyosakinishwa na kukusaidia kuelekeza kila kimoja kwenye OmniRoute
-- Mawakala maalum huwawezesha watumiaji mahiri kusajili CLI za ndani/miliki ambazo OmniRoute haizitambui kwa chaguo-msingi
+- Ukurasa wa "Zana za CLI" wa dashibodi huorodhesha vilivyosakinishwa na kukusaidia kuelekeza kila kimoja kwenye 67router
+- Mawakala maalum huwawezesha watumiaji mahiri kusajili CLI za ndani/miliki ambazo 67router haizitambui kwa chaguo-msingi
 - Matokeo ya utambuzi hujaza matriki ya alama bainishi ya `cli-tools`
 
 ### Wakati wa KUTOTUMIA ACP
@@ -125,86 +78,7 @@ Muundo wa body kwa POST (`customAgentBodySchema` katika `src/app/api/acp/agents/
   Kwa matumizi ya kawaida ya maingiliano, anzisha mwenyewe CLI iliyosanidiwa au
   tumia `omniroute run`.
 
-## 3. Mawakala wa Wingu
-
-**Endpoint za OmniRoute:** `/api/v1/agents/tasks/*` (mzunguko wa maisha) + `/api/cloud/*` (miundombinu unganishi)
-**Chanzo:** `src/lib/cloudAgent/`
-
-### Ni nini
-
-Kiolesura sanifu juu ya mawakala wa nje wa uandishi wa msimbo kwenye wingu. Unawasilisha kidokezo + URL ya hazina, OmniRoute hukielekeza kwa wakala sahihi wa wingu, hukagua hali mara kwa mara, na kurejesha matokeo.
-
-### Mawakala wanaotumika (4, wote wamethibitishwa katika `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Mzunguko wa maisha
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() kwa kila darasa la wakala
-  → huduma ya nje huanza kazi
-  → safu mlalo ya kazi huundwa katika DB (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → usawazishaji wa hali inapohitajika kutoka kwa mtoa huduma
-  → hurejesha hali ya sasa + mpango + kumbukumbu ya shughuli
-  ↓
-POST /api/v1/agents/tasks/[id]   (kitendo: "approve" | "message" | "cancel")
-  → hutuma kwa mtoa huduma (au hutia alama ya kughairiwa ndani ya mfumo)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → kughairi ndani ya mfumo
-```
-
-### Uthibitishaji
-
-⚠️ **Endpoint zote za `/api/v1/agents/tasks/*` zinahitaji uthibitishaji wa usimamizi** (commit `588a0333`). Wapigaji wanaotumia Bearer pekee hupokea 401 tangu v3.8.0.
-
-### Maelezo ya kina
-
-Angalia [CLOUD_AGENT.md](./CLOUD_AGENT.md) kwa mkataba wa `CloudAgentBase`, maelezo mahususi ya kila wakala, maelezo ya schema, na endpoint za miundombinu ya vitambulisho.
-
-## Ulinganisho: A2A dhidi ya Cloud Agents
-
-Zote zina "majukumu yanayotekelezwa kwa muda mrefu" lakini katika tabaka tofauti:
-
-| Kipengele                   | A2A                                                                                        | Cloud Agents                                   |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------- |
-| Kiwango                     | Open A2A v0.3                                                                              | Mahususi kwa OmniRoute                         |
-| Mahali uchakataji hufanyika | Ndani ya OmniRoute (hutumia michanganyiko iliyosanidiwa)                                   | Nje (seva za Codex / Devin / Jules)            |
-| Muda wa jukumu              | TTL chaguomsingi ya dakika 5 (inaweza kusanidiwa katika `TaskManager`)                     | Dakika hadi saa                                |
-| Ufahamu wa repo             | Hapana (hupitisha vidokezo pekee)                                                          | Ndiyo (URL ya repo + tawi)                     |
-| Matumizi                    | Ushirikiano baina ya mawakala, urutishaji mahiri kama huduma                               | Kukabidhi "tekeleza kipengele X katika repo Y" |
-| Uthibitishaji               | `OMNIROUTE_API_KEY` ya hiari kwa `/a2a`; usimamizi kwa visaidizi vya REST vya `/api/a2a/*` | Usimamizi kila wakati                          |
-
 ## Mifano ya Ujumuishaji
-
-### Gundua uwezo wa A2A wa OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Hurejesha Agent Card yenye stadi zote 6, njia za usafirishaji, na toleo.
-
-### Ita OmniRoute kama wakala wa A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Orodhesha mawakala wa CLI waliosakinishwa kupitia ACP
 
@@ -229,30 +103,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Wasilisha jukumu la Cloud Agent
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Kagua mara kwa mara hali ya jukumu la wingu
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Wakati wa Kutumia Nini
 
 - **Kiolesura cha mbele cha chatbot / copilot** → `/v1/chat/completions` (kinachooana na OpenAI — si itifaki ya wakala)
@@ -264,7 +114,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Kiini cha OmniRoute│
+                │   Kiini cha 67router│
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Tazama Pia
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — Uchambuzi wa kina wa A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Uchambuzi wa kina wa Mawakala wa Wingu
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — Miunganisho ya CLI za nje (hutumia ACP)
 - [SKILLS.md](./SKILLS.md) — Mfumo wa ujuzi (tofauti na ujuzi wa A2A — sandbox ya utekelezaji wa ndani)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — marejeleo ya endpoint

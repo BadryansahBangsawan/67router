@@ -39,8 +39,8 @@ sama saat tunnel dan konektor dikonfigurasi.
 
 1. Buka penyedia **ChatGPT Web (Codex)** dan tambahkan koneksi.
 2. Tempelkan header Cookie ChatGPT lengkap, ID tunnel, kunci runtime, dan nama konektor khusus. Penyiapan baru yang mendukung alat harus menggunakan konektor yang baru dibuat dengan nama persis `OmniRoute Codex v2`, dengan Authentication diatur ke None dan Permissions diatur ke Allow all actions.
-3. Jalankan pemeriksaan koneksi. OmniRoute membuka Temporary Chat berbasis browser dan mendeteksi apakah Sol dan Pro tersedia untuk akun tersebut.
-4. Simpan koneksi. OmniRoute mengganti cookie yang ditempelkan dengan status penyimpanan Playwright yang telah diverifikasi dan menyimpannya bersama kunci runtime melalui abstraksi kredensial terenkripsi.
+3. Jalankan pemeriksaan koneksi. 67router membuka Temporary Chat berbasis browser dan mendeteksi apakah Sol dan Pro tersedia untuk akun tersebut.
+4. Simpan koneksi. 67router mengganti cookie yang ditempelkan dengan status penyimpanan Playwright yang telah diverifikasi dan menyimpannya bersama kunci runtime melalui abstraksi kredensial terenkripsi.
 
 Cookie mentah tidak disimpan setelah penyimpanan berhasil. Ketika sesi berakhir, buka koneksi, tempelkan header Cookie lengkap yang baru, lalu jalankan kembali pemeriksaan. Status pemeriksaan di dialog edit melaporkan browser, status penyimpanan, proses masuk, Temporary Chat, tunnel, konektor, dan perjalanan pulang-pergi alat secara terpisah. Untuk mengotomatiskan pembaruan cookie saat sesi berganti, lihat alat pendamping di [Ekstensi Sinkronisasi Sesi Browser](../guides/SESSION-SYNC-EXTENSION.md).
 
@@ -92,19 +92,19 @@ yang baru. Runtime menolak identitas lama tersebut dan mengharuskan konektor bar
 
 ## VPS tanpa layar dan Docker
 
-Untuk instalasi npm, systemd, dan PM2, OmniRoute mendeteksi jalur Chrome dan Chromium yang umum.
+Untuk instalasi npm, systemd, dan PM2, 67router mendeteksi jalur Chrome dan Chromium yang umum.
 Sebagai alternatif, tetapkan `CHATGPT_WEB_CODEX_CHROME_PATH`. Turn runtime sengaja menggunakan
 Chrome dengan antarmuka karena ChatGPT menolak karakteristik browser yang benar-benar headless. Oleh karena itu,
-host tanpa layar harus menjalankan OmniRoute dengan tampilan Xvfb privat; menetapkan jalur Chrome saja tidak menyediakan tampilan tersebut.
+host tanpa layar harus menjalankan 67router dengan tampilan Xvfb privat; menetapkan jalur Chrome saja tidak menyediakan tampilan tersebut.
 
 Profil Docker `web` menjalankan `chatgpt-web-codex-browser` di jaringan internal Compose.
 Sidecar menjalankan Chrome dengan antarmuka di dalam Xvfb, sehingga tidak diperlukan layar fisik. Port CDP-nya
 tidak dipublikasikan pada host. Volume profil browser yang dilindungi terpisah dari
-volume data OmniRoute, dan browser menerima memori bersama yang memadai. Proksi CDP internal
+volume data 67router, dan browser menerima memori bersama yang memadai. Proksi CDP internal
 hanya mendengarkan pada port `9223` di dalam jaringan Compose; Chrome tetap terikat ke loopback di
 sidecar.
 
-Lease supervisor di bawah `DATA_DIR` mencegah beberapa proses OmniRoute memiliki
+Lease supervisor di bawah `DATA_DIR` mencegah beberapa proses 67router memiliki
 status tunnel dan broker yang sama. Konflik dilaporkan oleh doctor.
 
 ## Pemulihan interaktif

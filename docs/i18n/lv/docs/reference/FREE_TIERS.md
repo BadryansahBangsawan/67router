@@ -9,9 +9,9 @@
 > **Pēdējoreiz izpētīts:** 2026-06-17 — katra pakalpojumu sniedzēja izpēte tīmeklī (oficiālā dokumentācija + pēdējo 7 dienu ziņas, 50 aģentu pārbaude ar kritisku verifikāciju), atjauninot visas bezmaksas līmeņa kvotas un ToS. **Daļēja atkārtota revīzija 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — skatiet tālāk piezīmi ar datumu).
 > **Autoritatīvais avots (katalogs):** `open-sse/config/freeModelCatalog.ts` (katra MODEĻA budžeti, novēršot kopīgo kvotu kopu dublēšanos). Tālāk norādītie tokenu budžeta skaitļi ir iegūti aktuālā tīmekļa izpētē un ir **aptuveni** — skatiet [Metodoloģiju un atrunas](#methodology--caveats).
 
-## Īsumā — cik daudz bezmaksas inferenču OmniRoute patiesībā apkopo?
+## Īsumā — cik daudz bezmaksas inferenču 67router patiesībā apkopo?
 
-Šie skaitļi attiecas uz atsevišķiem trešo pušu kontiem un atbilstības nosacījumiem visā katalogā. OmniRoute nepiešķir šo budžetu: jums jāiegūst nepieciešamie konti vai akreditācijas dati, jāpievieno atbilstoši pakalpojumu sniedzēji un jāievēro to ierobežojumi. Faktiski izmantojamā kapacitāte var būt mazāka, tostarp nulle jaunā instalācijā bez neviena atbilstoša maršruta. Pakalpojumu sniedzēji, kas atzīmēti ar `tos: avoid`, pēc noklusējuma netiek iekļauti automātiskajā maršrutēšanā.
+Šie skaitļi attiecas uz atsevišķiem trešo pušu kontiem un atbilstības nosacījumiem visā katalogā. 67router nepiešķir šo budžetu: jums jāiegūst nepieciešamie konti vai akreditācijas dati, jāpievieno atbilstoši pakalpojumu sniedzēji un jāievēro to ierobežojumi. Faktiski izmantojamā kapacitāte var būt mazāka, tostarp nulle jaunā instalācijā bez neviena atbilstoša maršruta. Pakalpojumu sniedzēji, kas atzīmēti ar `tos: avoid`, pēc noklusējuma netiek iekļauti automātiskajā maršrutēšanā.
 
 **Pārbaudīts 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) piedāvā vienreizēju $5 reklāmas kredītu, kam nepieciešams maksājuma veids un kura derīguma termiņš beidzas pēc 30 dienām. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publicē projektu/modeļu/līmeņu ātruma ierobežojumus; tas joprojām nav iekļauts kvantificētajā mēneša kopsavilkuma rādītājā.
 
@@ -93,7 +93,7 @@ detalizēti aprakstītas tālāk esošajā pakalpojumu sniedzēja piezīmē.
 
 ## Divi režīmi — skaitīšana un lēmumu pieņemšana
 
-OmniRoute uz jautājumu „vai tas ir bez maksas?” atbild, izmantojot divus režīmus,
+67router uz jautājumu „vai tas ir bez maksas?” atbild, izmantojot divus režīmus,
 kas apzināti nolasa dažādus avotus:
 
 | Režīms                      | Patiesības avots                                                                                                                                                                    | Lietojuma vietas                                                                                                                           |
@@ -141,7 +141,7 @@ Vairums šajā jomā minēto „bezmaksas žetonu mēnesī” skaitļu ir katram
 
 ### ⚠️ Uzmanību — personīgās lietošanas / starpniekservera klauzulas, kuras vērts pārbaudīt (16)
 
-> Viņu bezmaksas piekļuve ir reāla, un OmniRoute var maršrutēt pieprasījumus uz tiem; tālāk minētās klauzulas vienkārši ir vērts zināt. OAuth/bezatslēgas variantiem žetonu apjomu nevar noteikt, tāpēc tie nav iekļauti virsraksta skaitlī (nevis tāpēc, ka tie nebūtu izmantojami).
+> Viņu bezmaksas piekļuve ir reāla, un 67router var maršrutēt pieprasījumus uz tiem; tālāk minētās klauzulas vienkārši ir vērts zināt. OAuth/bezatslēgas variantiem žetonu apjomu nevar noteikt, tāpēc tie nav iekļauti virsraksta skaitlī (nevis tāpēc, ka tie nebūtu izmantojami).
 
 | Pakalpojumu sniedzējs | Piezīme                                                                                                                                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -155,7 +155,7 @@ Vairums šajā jomā minēto „bezmaksas žetonu mēnesī” skaitļu ir katram
 | `fireworks`           | ToS nepārprotami aizliedz starpniekservera/starpnieka izmantošanu, API atslēgu nodošanu un apakšlicencēšanu (2.1. un 2.2(i)(j) sadaļa); pašu mitināti personīgie starpniekserveri nav…                         |
 | `friendliai`          | ToS 8(e) un 8(f) sadaļa nepārprotami aizliedz izmantot FriendliAI kā starpniekserveri vai patstāvīgi nodrošināt trešajām pusēm piekļuvi, kā arī aizliedz tālākpārdošanu/…                                      |
 | `iflytek`             | iFlytek Spark LLM Service Agreement 2.4(3) sadaļa nepārprotami aizliedz „izmantot jebkādas automatizētas vai programmiskas metodes datu vai izvades iegūšanai…                                                 |
-| `kiro`                | Kiro FAQ nepārprotami aizliedz lietošanu ar „OpenClaw un līdzīgiem rīkiem, kas izmanto trešo pušu ietvarus” — pašu mitināts AI starpniekserveris (piemēram, OmniRoute), kas marš…                              |
+| `kiro`                | Kiro FAQ nepārprotami aizliedz lietošanu ar „OpenClaw un līdzīgiem rīkiem, kas izmanto trešo pušu ietvarus” — pašu mitināts AI starpniekserveris (piemēram, 67router), kas marš…                               |
 | `modal`               | ToS 1.3 sadaļa nepārprotami aizliedz „iznomāt, tālākpārdot vai citādi atļaut jebkurai trešajai pusei tiešu piekļuvi Pakalpojumam vai tā izmantošanu” — pašu mitināta pakalpojuma izveide…                      |
 | `muse-spark-web`      | Meta ToS nepārprotami aizliedz automatizētu piekļuvi bez iepriekšējas atļaujas, reverso inženieriju bez rakstiskas atļaujas un tehnoloģisko… apiešanu                                                          |
 | `nlpcloud`            | ToS nepārprotami aizliedz „izveidot starpniekserveri vai citu ierīci, kas ļauj citiem caur to piekļūt Pakalpojumam”, un piešķir tikai nenododamu,…                                                             |
@@ -317,7 +317,7 @@ Vairums šajā jomā minēto „bezmaksas žetonu mēnesī” skaitļu ir katram
 
 - **`360ai`** — Piegādātā freeNote piezīme „Bezmaksas 360 AI Brain modeļi” šķiet novecojusi. Pašlaik piekļuvei nepieciešams pieteikums, un tā ir maksas. Iespējams, par pamatu kalpoja 2023. gada palaišanas perioda vienreizējie reklāmas žetoni (100M–250M)…
 - **`agentrouter`** — Mūsu piegādātajā freeNote norādīts „$200 bezmaksas kredītos pēc reģistrēšanās”. Pašlaik standarta reģistrācijas gadījumā (bez uzaicinājuma saites) tiek piešķirti tikai $100; reģistrējoties ar uzaicinājuma saiti, iespējams saņemt $200, taču kopienas komentārs no 2026. gada aprīļa…
-- **`agy`** — Mūsu piegādātajā freeNote norādīts „(nav)”, tādējādi radot iespaidu, ka bezmaksas līmeņa nav, taču Antigravity piedāvā bezmaksas līmeni, kam nepieciešama OAuth autentifikācija. Tomēr pakalpojuma noteikumi nepārprotami aizliedz izmantot šo bezmaksas līmeni ar tāda starpniekservera kā OmniRoute palīdzību…
+- **`agy`** — Mūsu piegādātajā freeNote norādīts „(nav)”, tādējādi radot iespaidu, ka bezmaksas līmeņa nav, taču Antigravity piedāvā bezmaksas līmeni, kam nepieciešama OAuth autentifikācija. Tomēr pakalpojuma noteikumi nepārprotami aizliedz izmantot šo bezmaksas līmeni ar tāda starpniekservera kā 67router palīdzību…
 - **`ai21`** — Nosacījumi kļuvuši stingrāki: izmēģinājuma periods ir sarucis no „3 mēnešiem” līdz 7 dienām. $10 kredīta apjoms nav mainījies, taču tā derīguma termiņš ir strauji samazināts no aptuveni 90 dienām līdz 7 dienām.
 - **`aimlapi`** — Būtiski mainījies. Piegādātajā freeNote tika reklamēti „$0.025 dienā bezmaksas kredītos — vairāk nekā 200 modeļu”, taču bezmaksas līmenis tagad ir apturēts/pārtraukts. $0.025 dienas kredītu piešķīrums (50 000 kredītu dienā, 10 piepr./d.…
 - **`amazon-q`** — Mūsu piegādātajā freeNote norādīts „(nav)” — realitāte ir vēl sliktāka: produkts kopš 2026. gada 15. maija vairs nav pieejams jauniem lietotājiem. Iepriekš bezmaksas līmenis piedāvāja 50 aģentiskus pieprasījumus mēnesī un neierobežotus iekļautos…

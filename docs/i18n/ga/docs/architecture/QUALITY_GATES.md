@@ -4,7 +4,7 @@
 
 ---
 
-Is é an doiciméad seo an tagairt údarásach do gach geata cáilíochta CI in OmniRoute.
+Is é an doiciméad seo an tagairt údarásach do gach geata cáilíochta CI in 67router.
 Déantar cur síos ann ar gach geata, ar a bhfíoraíonn sé, ar an jab CI ina ritear é, ar cé acu a úsáideann sé
 bonnlíne raicéid nó polasaí pas/teip, agus ar cé acu a chuireann sé bac ar an tógáil nó atá sé comhairleach.
 
@@ -260,14 +260,14 @@ Ritheann sé tar éis `build`. Cuireann sé bac ar chumasc má theipeann air.
 
 Ritheann siad seo ar sceideal cron (agus `workflow_dispatch`), riamh ar iarratais tarraingthe. Tá siad go léir comhairleach.
 
-| Workflow               | Bailíochtíonn                                                                                                                                                                         | Blocálach        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `nightly-property`     | tástálacha airíonna fast-check le síol randamach + líon ard rithí                                                                                                                     | **Comhairleach** |
-| `nightly-resilience`   | geata fáis chairn, instealladh lochtanna chaos, ualach/tumadh k6                                                                                                                      | **Comhairleach** |
-| `nightly-llm-security` | garda insteallta promptfoo (mód blocála) + probalacha garak (scipeáiltear iad gan rún soláthraí)                                                                                      | **Comhairleach** |
-| `nightly-schemathesis` | fuzzing conartha OpenAPI (schemathesis) i gcoinne OmniRoute beo ag baint úsáide as `docs/openapi.yaml` — nochtann sé sáruithe ar an sonraíocht / 500anna neamhláimhsithe (Fase 8 B.4) | **Comhairleach** |
-| `nightly-mutation`     | scór tástála-mutáin Stryker thar an lána aonaid tapa — nochtann mutáin mharthanacha dearbhuithe lag                                                                                   | **Comhairleach** |
-| `nightly-compat`       | maitrís chomhoiriúnachta inneall Node thar na raonta `engines.node` a dtacaítear leo                                                                                                  | **Comhairleach** |
+| Workflow               | Bailíochtíonn                                                                                                                                                                        | Blocálach        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| `nightly-property`     | tástálacha airíonna fast-check le síol randamach + líon ard rithí                                                                                                                    | **Comhairleach** |
+| `nightly-resilience`   | geata fáis chairn, instealladh lochtanna chaos, ualach/tumadh k6                                                                                                                     | **Comhairleach** |
+| `nightly-llm-security` | garda insteallta promptfoo (mód blocála) + probalacha garak (scipeáiltear iad gan rún soláthraí)                                                                                     | **Comhairleach** |
+| `nightly-schemathesis` | fuzzing conartha OpenAPI (schemathesis) i gcoinne 67router beo ag baint úsáide as `docs/openapi.yaml` — nochtann sé sáruithe ar an sonraíocht / 500anna neamhláimhsithe (Fase 8 B.4) | **Comhairleach** |
+| `nightly-mutation`     | scór tástála-mutáin Stryker thar an lána aonaid tapa — nochtann mutáin mharthanacha dearbhuithe lag                                                                                  | **Comhairleach** |
+| `nightly-compat`       | maitrís chomhoiriúnachta inneall Node thar na raonta `engines.node` a dtacaítear leo                                                                                                 | **Comhairleach** |
 
 Déantar bunlínte feidhmíochta (carn, TTFB, am tógála) a thaifeadadh, ní a gheataiú: féach [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -540,7 +540,7 @@ ceadaithe atá ag fás tuiscint bhréagach ar cháilíocht.
 
 ## Uirlisí gníomhaire: LSP sa lúb (roghnach)
 
-Taobh amuigh de gheataí CI, soláthraíonn OmniRoute scafall **roghnach** `agent-lsp`
+Taobh amuigh de gheataí CI, soláthraíonn 67router scafall **roghnach** `agent-lsp`
 (`.mcp.json` ar leibhéal an tionscadail, Fase 7 Tasc 15). Cruthaigh `.mcp.json`
 chun freastalaí teanga TypeScript a chur ar fáil do ghníomhairí códaithe, ionas go réiteoidh siad siombailí /
 diagnóisic **sula** scríobhfaidh siad cód — compánach tiomsaithe-roimh-éileamh do

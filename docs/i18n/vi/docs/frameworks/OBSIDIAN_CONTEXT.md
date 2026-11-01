@@ -13,7 +13,7 @@
 
 ## Đây là gì
 
-OmniRoute kết nối với một kho ghi chú **Obsidian** dưới dạng **nguồn ngữ cảnh** — một cơ sở
+67router kết nối với một kho ghi chú **Obsidian** dưới dạng **nguồn ngữ cảnh** — một cơ sở
 tri thức Markdown cục bộ mà các tác nhân đọc và ghi thông qua máy chủ MCP tích hợp sẵn.
 Tích hợp này giao tiếp với plugin cộng đồng **Obsidian Local REST API** đang chạy bên trong
 ứng dụng máy tính, nhờ đó các tác nhân có thể tìm kiếm ghi chú, đọc/ghi/vá tệp, liệt kê kho
@@ -75,7 +75,7 @@ và xác thực token bằng cách gọi điểm cuối trạng thái của Loca
 ### Đồng bộ vault qua WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` quản lý tính năng đồng bộ vault tùy chọn
-dựa trên WebDAV (được điều khiển bởi `src/lib/obsidianSync.ts`). Khi bật, tính năng này trỏ OmniRoute đến một
+dựa trên WebDAV (được điều khiển bởi `src/lib/obsidianSync.ts`). Khi bật, tính năng này trỏ 67router đến một
 thư mục vault cục bộ và tạo một cặp tên người dùng/mật khẩu WebDAV ngẫu nhiên:
 
 ```bash
@@ -111,26 +111,26 @@ Bốn công cụ `obsidian_sync_*` vẫn giữ hành vi token đồng bộ riên
 
 Được định nghĩa trong `open-sse/mcp-server/tools/obsidianTools.ts`. Token/base-URL được phân giải
 cho từng lệnh gọi (ưu tiên theo API key, sau đó mới đến cấu hình toàn cục). Các công cụ truy cập **máy chủ đồng bộ**
-OmniRoute (bốn công cụ `obsidian_sync_*`) còn yêu cầu token xác thực đồng bộ được cấu hình
-trong phần cài đặt OmniRoute.
+67router (bốn công cụ `obsidian_sync_*`) còn yêu cầu token xác thực đồng bộ được cấu hình
+trong phần cài đặt 67router.
 
 ### Công cụ đọc (`read:obsidian`)
 
-| Công cụ                      | Mô tả                                                                                                        |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `obsidian_check_status`      | Kiểm tra xem Local REST API có thể truy cập được và đã xác thực hay chưa.                                    |
-| `obsidian_search_simple`     | Tìm kiếm toàn văn trong nội dung ghi chú; trả về các đoạn trích kèm đường dẫn tệp.                           |
-| `obsidian_search_structured` | Tìm kiếm bằng biểu thức JSON Logic (các bộ lọc and/or/regex/path).                                           |
-| `obsidian_read_note`         | Đọc ghi chú theo đường dẫn tương đối với vault; có thể chỉ định heading/block/frontmatter cụ thể.            |
-| `obsidian_list_vault`        | Liệt kê các tệp và thư mục trong vault (dạng cây mục nhập).                                                  |
-| `obsidian_get_document_map`  | Lấy cấu trúc heading của ghi chú dưới dạng ánh xạ heading → số dòng.                                         |
-| `obsidian_get_note_metadata` | Lấy frontmatter, thẻ, liên kết và số ký tự/từ mà không cần toàn bộ nội dung.                                 |
-| `obsidian_get_active_file`   | Lấy đường dẫn + nội dung của tệp hiện đang hoạt động trong Obsidian.                                         |
-| `obsidian_get_periodic_note` | Lấy ghi chú định kỳ hằng ngày/hằng tuần/hằng tháng cho một ngày (mặc định là hôm nay nếu bỏ qua).            |
-| `obsidian_get_tags`          | Liệt kê tất cả thẻ trong vault cùng tần suất xuất hiện.                                                      |
-| `obsidian_list_commands`     | Liệt kê các ID lệnh Obsidian hiện có (dùng với `obsidian_execute_command`).                                  |
-| `obsidian_sync_status`       | Trạng thái máy chủ đồng bộ OmniRoute: đang chạy, tên vault, cổng, thời gian hoạt động, lần đồng bộ gần nhất. |
-| `obsidian_sync_conflicts`    | Liệt kê các xung đột đồng bộ chưa được giải quyết (đường dẫn, đường dẫn xung đột, thời điểm phát hiện).      |
+| Công cụ                      | Mô tả                                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Kiểm tra xem Local REST API có thể truy cập được và đã xác thực hay chưa.                                   |
+| `obsidian_search_simple`     | Tìm kiếm toàn văn trong nội dung ghi chú; trả về các đoạn trích kèm đường dẫn tệp.                          |
+| `obsidian_search_structured` | Tìm kiếm bằng biểu thức JSON Logic (các bộ lọc and/or/regex/path).                                          |
+| `obsidian_read_note`         | Đọc ghi chú theo đường dẫn tương đối với vault; có thể chỉ định heading/block/frontmatter cụ thể.           |
+| `obsidian_list_vault`        | Liệt kê các tệp và thư mục trong vault (dạng cây mục nhập).                                                 |
+| `obsidian_get_document_map`  | Lấy cấu trúc heading của ghi chú dưới dạng ánh xạ heading → số dòng.                                        |
+| `obsidian_get_note_metadata` | Lấy frontmatter, thẻ, liên kết và số ký tự/từ mà không cần toàn bộ nội dung.                                |
+| `obsidian_get_active_file`   | Lấy đường dẫn + nội dung của tệp hiện đang hoạt động trong Obsidian.                                        |
+| `obsidian_get_periodic_note` | Lấy ghi chú định kỳ hằng ngày/hằng tuần/hằng tháng cho một ngày (mặc định là hôm nay nếu bỏ qua).           |
+| `obsidian_get_tags`          | Liệt kê tất cả thẻ trong vault cùng tần suất xuất hiện.                                                     |
+| `obsidian_list_commands`     | Liệt kê các ID lệnh Obsidian hiện có (dùng với `obsidian_execute_command`).                                 |
+| `obsidian_sync_status`       | Trạng thái máy chủ đồng bộ 67router: đang chạy, tên vault, cổng, thời gian hoạt động, lần đồng bộ gần nhất. |
+| `obsidian_sync_conflicts`    | Liệt kê các xung đột đồng bộ chưa được giải quyết (đường dẫn, đường dẫn xung đột, thời điểm phát hiện).     |
 
 ### Công cụ ghi (`write:obsidian`)
 

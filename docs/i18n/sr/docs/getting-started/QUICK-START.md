@@ -1,14 +1,14 @@
-# Quick Start: Get OmniRoute Running in 3 Minutes (Српски)
+# Quick Start: Get 67router Running in 3 Minutes (Српски)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/QUICK-START.md) · 🇪🇹 [am](../../../am/docs/getting-started/QUICK-START.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/QUICK-START.md) · 🇦🇿 [az](../../../az/docs/getting-started/QUICK-START.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/QUICK-START.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/QUICK-START.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/QUICK-START.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/QUICK-START.md) · 🇩🇰 [da](../../../da/docs/getting-started/QUICK-START.md) · 🇩🇪 [de](../../../de/docs/getting-started/QUICK-START.md) · 🇬🇷 [el](../../../el/docs/getting-started/QUICK-START.md) · 🇪🇸 [es](../../../es/docs/getting-started/QUICK-START.md) · 🇪🇪 [et](../../../et/docs/getting-started/QUICK-START.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/QUICK-START.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/QUICK-START.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/QUICK-START.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/QUICK-START.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/QUICK-START.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/QUICK-START.md) · 🇮🇱 [he](../../../he/docs/getting-started/QUICK-START.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/QUICK-START.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/QUICK-START.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/QUICK-START.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/QUICK-START.md) · 🇮🇩 [id](../../../id/docs/getting-started/QUICK-START.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/QUICK-START.md) · 🇮🇹 [it](../../../it/docs/getting-started/QUICK-START.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/QUICK-START.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/QUICK-START.md) · 🇰🇭 [km](../../../km/docs/getting-started/QUICK-START.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/QUICK-START.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/QUICK-START.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/QUICK-START.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/QUICK-START.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/QUICK-START.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/QUICK-START.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/QUICK-START.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/QUICK-START.md) · 🇲🇲 [my](../../../my/docs/getting-started/QUICK-START.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/QUICK-START.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/QUICK-START.md) · 🇳🇴 [no](../../../no/docs/getting-started/QUICK-START.md) · 🇮🇳 [or](../../../or/docs/getting-started/QUICK-START.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/QUICK-START.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/QUICK-START.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/QUICK-START.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/QUICK-START.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/QUICK-START.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/QUICK-START.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/QUICK-START.md) · 🇱🇰 [si](../../../si/docs/getting-started/QUICK-START.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/QUICK-START.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/QUICK-START.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/QUICK-START.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/QUICK-START.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/QUICK-START.md) · 🇮🇳 [te](../../../te/docs/getting-started/QUICK-START.md) · 🇹🇭 [th](../../../th/docs/getting-started/QUICK-START.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/QUICK-START.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/QUICK-START.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/QUICK-START.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/QUICK-START.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/QUICK-START.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/QUICK-START.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/QUICK-START.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/QUICK-START.md)
 
 ---
 
-> **Укратко**: Инсталирајте → Повежите подржаног провајдера → Усмерите свој IDE ка OmniRoute-у. Готово.
+> **Укратко**: Инсталирајте → Повежите подржаног провајдера → Усмерите свој IDE ка 67router-у. Готово.
 
 ---
 
-## Корак 1: Инсталирајте OmniRoute
+## Корак 1: Инсталирајте 67router
 
 Изаберите жељени метод:
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## Корак 2: Покрените OmniRoute
+## Корак 2: Покрените 67router
 
 ```bash
 omniroute
 ```
 
-OmniRoute се покреће на адреси `http://localhost:20128`. Контролна табла се аутоматски отвара.
+67router се покреће на адреси `http://localhost:20128`. Контролна табла се аутоматски отвара.
 
 ---
 
@@ -57,7 +57,7 @@ OmniRoute се покреће на адреси `http://localhost:20128`. Кон
 
 ## Корак 4: Проверите да ли ради
 
-На страници [API кључеви](http://localhost:20128/dashboard/api-manager) направите нови кључ. Сачувајте га јер се неће поново приказати. Имајте у виду да је овај кључ намењен алатима за приступ систему OmniRoute, а не за приступ спољним добављачима.
+На страници [API кључеви](http://localhost:20128/dashboard/api-manager) направите нови кључ. Сачувајте га јер се неће поново приказати. Имајте у виду да је овај кључ намењен алатима за приступ систему 67router, а не за приступ спољним добављачима.
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
@@ -67,7 +67,7 @@ curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 
 ---
 
-## Корак 5: Усмерите свој IDE или CLI на OmniRoute
+## Корак 5: Усмерите свој IDE или CLI на 67router
 
 У свом IDE или CLI алату подесите:
 
@@ -77,7 +77,7 @@ API кључ:    [копирајте са Контролна табла → Кр
 Модел:       auto
 ```
 
-То је све! Ваш IDE сада користи OmniRoute са аутоматским избором добављача.
+То је све! Ваш IDE сада користи 67router са аутоматским избором добављача.
 
 ### Пример за IDE: VSCode/Continue.dev
 
@@ -92,7 +92,7 @@ API кључ:    [копирајте са Контролна табла → Кр
     apiKey: <YOUR_KEY>
 ```
 
-3. У Continue.dev окну за ћаскање изаберите `OmniRoute - Auto` и слаћете захтеве систему OmniRoute.
+3. У Continue.dev окну за ћаскање изаберите `OmniRoute - Auto` и слаћете захтеве систему 67router.
 4. (Опционално) Вежба за читаоца — нека ваш IDE ажурира `config.yaml` свим осталим унапред припремљеним конфигурацијама 😊
 
 ### Пример за CLI: Codex CLI
@@ -110,19 +110,19 @@ export OMNIROUTE_API_KEY="<YOUR_KEY>"
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. Сада покренимо Codex, али конфигурисан за OmniRoute. Покрените:
+2. Сада покренимо Codex, али конфигурисан за 67router. Покрените:
 
 ```
 omniroute launch-codex --model auto
 ```
 
-Ово можете урадити ручно преко команде `codex` и параметара командне линије којима се задају крајња тачка и API кључ, али уз горњу команду OmniRoute све обавља уместо вас.
+Ово можете урадити ручно преко команде `codex` и параметара командне линије којима се задају крајња тачка и API кључ, али уз горњу команду 67router све обавља уместо вас.
 
 Исто покретање једном командом функционише и за друге CLI алате преко генеричког покретача — `omniroute run <target>` подржава `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` и `gemini` (погледајте [CLI интеграције](../guides/CLI-INTEGRATIONS.md)).
 
-3. CLI би сада требало да шаље захтеве систему OmniRoute.
+3. CLI би сада требало да шаље захтеве систему 67router.
 
-### Потврдите да ваш алат усмерава саобраћај на OmniRoute
+### Потврдите да ваш алат усмерава саобраћај на 67router
 
 Детаље захтева можете видети тако што ћете на левој бочној траци кликнути на [Надзор/евиденције](http://localhost:20128/dashboard/logs). Даљим кликовима можете видети више детаља. Узгред, можете видети које се информације шаљу из вашег омиљеног окружења. Ово је корисно за учење и отклањање грешака.
 
@@ -130,7 +130,7 @@ omniroute launch-codex --model auto
 
 ## Шта је следеће?
 
-- **[Водич за аутоматско комбиновање](./AUTO-COMBO-GUIDE.md)** — Препустите OmniRoute-у да изабере најбољу вештачку интелигенцију за вас
+- **[Водич за аутоматско комбиновање](./AUTO-COMBO-GUIDE.md)** — Препустите 67router-у да изабере најбољу вештачку интелигенцију за вас
 - **[Водич за добављаче](./PROVIDERS-GUIDE.md)** — Повежите више добављача (бесплатних и плаћених)
 - **[Водич за бесплатне нивое](./FREE-TIERS-GUIDE.md)** — Прегледајте услове добављача и ограничења бесплатних нивоа
 - **[Решавање проблема](../guides/TROUBLESHOOTING.md)** — Решите уобичајене проблеме
@@ -141,23 +141,23 @@ omniroute launch-codex --model auto
 
 ### „Да ли ми је потребан API кључ?“
 
-OmniRoute API кључ служи за аутентификацију ваших алата. Приступни подаци за спољне услуге зависе од провајдера: неки захтевају API кључ или пријављивање на налог. Бесплатан приступ није загарантован.
+67router API кључ служи за аутентификацију ваших алата. Приступни подаци за спољне услуге зависе од провајдера: неки захтевају API кључ или пријављивање на налог. Бесплатан приступ није загарантован.
 
 ### „Шта је `auto`?“
 
-`auto` налаже OmniRoute-у да аутоматски изабере најбољег провајдера за сваки захтев. Узима у обзир брзину, цену, квалитет и доступност. За више детаља погледајте [Водич за Auto-Combo](./AUTO-COMBO-GUIDE.md).
+`auto` налаже 67router-у да аутоматски изабере најбољег провајдера за сваки захтев. Узима у обзир брзину, цену, квалитет и доступност. За више детаља погледајте [Водич за Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ### „Колико кошта?“
 
-Сам OmniRoute је **бесплатан и отвореног кода**. Плаћате само услуге провајдера које користите. Многи провајдери имају бесплатне пакете — погледајте [Водич за бесплатне пакете](./FREE-TIERS-GUIDE.md).
+Сам 67router је **бесплатан и отвореног кода**. Плаћате само услуге провајдера које користите. Многи провајдери имају бесплатне пакете — погледајте [Водич за бесплатне пакете](./FREE-TIERS-GUIDE.md).
 
 ### „Могу ли да га користим са Claude Code / Cursor / Copilot?“
 
-**Да!** OmniRoute ради са свим алатима који подржавају OpenAI формат. Само подесите основни URL на `http://localhost:20128/v1`. За конкретна упутства за подешавање погледајте [Водич за CLI алате](../reference/CLI-TOOLS.md).
+**Да!** 67router ради са свим алатима који подржавају OpenAI формат. Само подесите основни URL на `http://localhost:20128/v1`. За конкретна упутства за подешавање погледајте [Водич за CLI алате](../reference/CLI-TOOLS.md).
 
 ### „Шта ако провајдер престане да ради?“
 
-OmniRoute аутоматски прескаче провајдере код којих је дошло до грешке и покушава са следећим. Не морате ништа да предузимате. За више детаља погледајте [Водич за Auto-Combo](./AUTO-COMBO-GUIDE.md).
+67router аутоматски прескаче провајдере код којих је дошло до грешке и покушава са следећим. Не морате ништа да предузимате. За више детаља погледајте [Водич за Auto-Combo](./AUTO-COMBO-GUIDE.md).
 
 ---
 

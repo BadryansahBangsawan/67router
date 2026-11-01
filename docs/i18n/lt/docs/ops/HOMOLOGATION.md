@@ -4,7 +4,7 @@
 
 ---
 
-Realios aplinkos „OmniRoute“ diegimo, veikiančio homologacijos VPS, E2E validavimas
+Realios aplinkos „67router“ diegimo, veikiančio homologacijos VPS, E2E validavimas
 (`HOMOLOG_BASE_URL`, pvz., `http://192.168.0.15:20128`). Viena komanda pakeičia rankinį
 leidimo STOP #2 kontrolinį sąrašą automatizuotu vykdymu, pateikiančiu įrodymus.
 

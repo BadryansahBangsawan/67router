@@ -1,9 +1,9 @@
 openapi: 3.1.0
 info:
-  title: OmniRoute API
+  title: 67router API
   version: 3.8.53
   description: |
-    OmniRoute is a local-first AI API proxy router. It provides an OpenAI-compatible
+    67router is a local-first AI API proxy router. It provides an OpenAI-compatible
     endpoint that routes requests to multiple AI providers with load balancing,
     failover, and usage tracking.
 
@@ -23,26 +23,16 @@ servers:
     description: Local development
 
 tags:
-  - name: Playground
-    description: Playground Studio — preset management and prompt improvement
-  - name: Memory
-    description: Conversational memory management — CRUD, engine status, playground preview, summarization, reindex, and Qdrant settings (plan 21 — v3.8.6). All routes require management auth.
   - name: Chat
     description: OpenAI-compatible chat completions
   - name: Messages
     description: Anthropic-compatible messages
   - name: Responses
     description: OpenAI Responses API
-  - name: Embeddings
-    description: Text embedding generation
   - name: Images
     description: Image generation
   - name: Audio
     description: Audio speech and transcription
-  - name: Moderations
-    description: Content moderation
-  - name: Rerank
-    description: Document reranking
   - name: Search
     description: Unified web, news, and X search
   - name: Models
@@ -91,7 +81,7 @@ tags:
   - name: Agent Skills
     description: >-
       Agent Skills catalog — 42 SKILL.md files (22 REST API + 20 CLI) for external agents,
-      MCP clients, and A2A orchestrators to discover OmniRoute capabilities.
+      MCP clients, and A2A orchestrators to discover 67router capabilities.
   - name: AgentBridge
     description: >-
       MITM proxy manager for 9 IDE agents (Antigravity, Kiro, Copilot, Codex, Cursor, Zed,
@@ -118,8 +108,6 @@ tags:
     description: Assess endpoints (generated route coverage)
   - name: Auth
     description: Auth endpoints (generated route coverage)
-  - name: Batches
-    description: Batches endpoints (generated route coverage)
   - name: Cache
     description: Cache endpoints (generated route coverage)
   - name: Chaos
@@ -146,10 +134,6 @@ tags:
     description: Discovery endpoints (generated route coverage)
   - name: Docs
     description: Docs endpoints (generated route coverage)
-  - name: Evals
-    description: Evals endpoints (generated route coverage)
-  - name: Files
-    description: Files endpoints (generated route coverage)
   - name: Free models
     description: Free models endpoints (generated route coverage)
   - name: Free provider rankings
@@ -158,8 +142,6 @@ tags:
     description: Free tier endpoints (generated route coverage)
   - name: Gamification
     description: Gamification endpoints (generated route coverage)
-  - name: Github skills
-    description: Github skills endpoints (generated route coverage)
   - name: Guardrails
     description: Guardrails endpoints (generated route coverage)
   - name: Headroom
@@ -180,8 +162,6 @@ tags:
     description: Logs endpoints (generated route coverage)
   - name: Mcp
     description: Mcp endpoints (generated route coverage)
-  - name: Middleware
-    description: Middleware endpoints (generated route coverage)
   - name: Model capability overrides
     description: Model capability overrides endpoints (generated route coverage)
   - name: Model combo mappings
@@ -192,20 +172,14 @@ tags:
     description: Omniroute endpoints (generated route coverage)
   - name: OmnirouteApiCatchAll
     description: OmnirouteApiCatchAll endpoints (generated route coverage)
-  - name: Plugins
-    description: Plugins endpoints (generated route coverage)
   - name: Provider metrics
     description: Provider metrics endpoints (generated route coverage)
   - name: Provider stats
     description: Provider stats endpoints (generated route coverage)
   - name: Proxy fallback
     description: Proxy fallback endpoints (generated route coverage)
-  - name: Quota
-    description: Quota endpoints (generated route coverage)
   - name: Radar
     description: Radar endpoints (generated route coverage)
-  - name: Relay
-    description: Relay endpoints (generated route coverage)
   - name: Resilience
     description: Resilience endpoints (generated route coverage)
   - name: Routing
@@ -228,8 +202,6 @@ tags:
     description: Upstream proxy endpoints (generated route coverage)
   - name: V1 Accounts
     description: V1 Accounts endpoints (generated route coverage)
-  - name: V1 Agents
-    description: V1 Agents endpoints (generated route coverage)
   - name: V1 Antigravity
     description: V1 Antigravity endpoints (generated route coverage)
   - name: V1 Auto-combo
@@ -286,8 +258,6 @@ tags:
     description: Version manager endpoints (generated route coverage)
   - name: Vnc session
     description: Vnc session endpoints (generated route coverage)
-  - name: Webhooks
-    description: Webhooks endpoints (generated route coverage)
 
 paths:
   /api/v1/session-leases:
@@ -368,981 +338,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/ExclusiveConnectionLeaseCapacity"
   # --- Playground + Search Tools (plans 17+18) ---
-  /api/playground/improve-prompt:
-    post:
-      tags:
-        - Playground
-      summary: Improve prompt via LLM
-      description: |
-        Rewrites the supplied system prompt and/or user prompt using a meta-prompt
-        (inspired by Anthropic Console Prompt Improver). Internally calls
-        `/v1/chat/completions` with the model specified in the request body.
-        Quota is consumed from the caller's account.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required:
-                - model
-              properties:
-                system:
-                  type: string
-                  maxLength: 50000
-                  description: System prompt to improve (at least one of system/prompt required)
-                prompt:
-                  type: string
-                  maxLength: 50000
-                  description: User prompt to improve
-                model:
-                  type: string
-                  description: Model to use for the improvement call (e.g. openai/gpt-4o)
-                tone:
-                  type: string
-                  enum:
-                    - concise
-                    - detailed
-                  default: concise
-      responses:
-        "200":
-          description: Improved prompt(s)
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  improvedSystem:
-                    type: string
-                  improvedPrompt:
-                    type: string
-                  tokensIn:
-                    type: integer
-                  tokensOut:
-                    type: integer
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/playground/presets:
-    get:
-      tags:
-        - Playground
-      summary: List playground presets
-      description: Returns all saved playground presets ordered by creation date (newest first).
-      security:
-        - BearerAuth: []
-      responses:
-        "200":
-          description: Preset list
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  presets:
-                    type: array
-                    items:
-                      $ref: "#/components/schemas/PlaygroundPreset"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-    post:
-      tags:
-        - Playground
-      summary: Create playground preset
-      description: Saves the current playground configuration as a named preset in the database.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PlaygroundPresetCreate"
-      responses:
-        "201":
-          description: Created preset
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PlaygroundPreset"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/playground/presets/{id}:
-    parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: string
-          format: uuid
-    get:
-      tags:
-        - Playground
-      summary: Get playground preset
-      security:
-        - BearerAuth: []
-      responses:
-        "200":
-          description: Preset found
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PlaygroundPreset"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "404":
-          description: Preset not found
-    put:
-      tags:
-        - Playground
-      summary: Update playground preset
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PlaygroundPresetCreate"
-      responses:
-        "200":
-          description: Updated preset
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PlaygroundPreset"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "404":
-          description: Preset not found
-    delete:
-      tags:
-        - Playground
-      summary: Delete playground preset
-      security:
-        - BearerAuth: []
-      responses:
-        "204":
-          description: Deleted
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "404":
-          description: Preset not found
-  # --- Memory Engine (plan 21) ---
-  /api/memory:
-    get:
-      tags:
-        - Memory
-      summary: List memory entries
-      security:
-        - ManagementSessionAuth: []
-      parameters:
-        - name: apiKeyId
-          in: query
-          schema:
-            type: string
-        - name: type
-          in: query
-          schema:
-            type: string
-            enum:
-              - factual
-              - episodic
-              - procedural
-              - semantic
-        - name: sessionId
-          in: query
-          schema:
-            type: string
-        - name: q
-          in: query
-          schema:
-            type: string
-        - name: limit
-          in: query
-          schema:
-            type: integer
-            minimum: 1
-            maximum: 200
-            default: 50
-        - name: page
-          in: query
-          schema:
-            type: integer
-            minimum: 1
-            default: 1
-        - name: offset
-          in: query
-          schema:
-            type: integer
-            minimum: 0
-      responses:
-        "200":
-          description: Paginated list of memories with stats
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  data:
-                    type: array
-                    items:
-                      $ref: "#/components/schemas/MemoryEntry"
-                  total:
-                    type: integer
-                  totalPages:
-                    type: integer
-                  stats:
-                    type: object
-                    properties:
-                      total:
-                        type: integer
-                      tokensUsed:
-                        type: integer
-                      hitRate:
-                        type: number
-                      cacheStats:
-                        type: object
-                        properties:
-                          hits:
-                            type: integer
-                          misses:
-                            type: integer
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-    post:
-      tags:
-        - Memory
-      summary: Create a memory entry
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required:
-                - content
-                - key
-              properties:
-                content:
-                  type: string
-                  minLength: 1
-                key:
-                  type: string
-                  minLength: 1
-                type:
-                  type: string
-                  enum:
-                    - factual
-                    - episodic
-                    - procedural
-                    - semantic
-                  default: factual
-                sessionId:
-                  type: string
-                  nullable: true
-                apiKeyId:
-                  type: string
-                metadata:
-                  type: object
-                  additionalProperties: true
-                expiresAt:
-                  type: string
-                  format: date-time
-                  nullable: true
-      responses:
-        "201":
-          description: Created memory entry
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MemoryEntry"
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/memory/{id}:
-    parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: string
-        description: Memory UUID
-    get:
-      tags:
-        - Memory
-      summary: Get a single memory entry
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Memory entry
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MemoryEntry"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "404":
-          description: Memory not found
-    put:
-      tags:
-        - Memory
-      summary: Update a memory entry
-      description: Update `type`, `key`, `content`, and/or `metadata` of an existing memory. If an embedding source is available, the vector in `vec_memories` is also regenerated. Corresponds to `MemoryUpdatePutSchema`.
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                type:
-                  type: string
-                  enum:
-                    - factual
-                    - episodic
-                    - procedural
-                    - semantic
-                key:
-                  type: string
-                  minLength: 1
-                content:
-                  type: string
-                  minLength: 1
-                metadata:
-                  type: object
-                  additionalProperties: true
-              additionalProperties: false
-      responses:
-        "200":
-          description: Updated memory entry
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MemoryEntry"
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "404":
-          description: Memory not found
-    delete:
-      tags:
-        - Memory
-      summary: Delete a memory entry
-      description: Deletes the SQLite row, removes the vector from `vec_memories`, and best-effort deletes the point from Qdrant.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Deleted
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  success:
-                    type: boolean
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "404":
-          description: Memory not found
-  /api/memory/health:
-    get:
-      tags:
-        - Memory
-      summary: Memory store health check
-      description: Round-trip create→list→delete to verify the store is alive.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Health result
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  working:
-                    type: boolean
-                  latencyMs:
-                    type: number
-                  error:
-                    type: string
-                    nullable: true
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/memory/retrieve-preview:
-    post:
-      tags:
-        - Memory
-      summary: Dry-run memory retrieval (Playground)
-      description: Simulates `retrieveMemories()` for a given query and returns the ranked results with score, tier, and token count. Does NOT modify any memory. Corresponds to `RetrievePreviewSchema`.
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required:
-                - query
-              properties:
-                query:
-                  type: string
-                  minLength: 1
-                strategy:
-                  type: string
-                  enum:
-                    - exact
-                    - semantic
-                    - hybrid
-                  default: hybrid
-                maxTokens:
-                  type: integer
-                  minimum: 1
-                  maximum: 16000
-                  default: 2000
-                apiKeyId:
-                  type: string
-                  description: Optional — tests global pool when omitted
-                limit:
-                  type: integer
-                  minimum: 1
-                  maximum: 100
-                  default: 20
-              additionalProperties: false
-      responses:
-        "200":
-          description: Preview results
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  memories:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        id:
-                          type: string
-                        type:
-                          type: string
-                          enum:
-                            - factual
-                            - episodic
-                            - procedural
-                            - semantic
-                        key:
-                          type: string
-                        content:
-                          type: string
-                        score:
-                          type: number
-                        tokens:
-                          type: integer
-                        tier:
-                          type: string
-                          enum:
-                            - fts5
-                            - vector
-                            - hybrid-rrf
-                            - qdrant
-                        vecScore:
-                          type: number
-                          nullable: true
-                        ftsScore:
-                          type: number
-                          nullable: true
-                  resolution:
-                    type: object
-                    properties:
-                      embeddingSource:
-                        type: string
-                        enum:
-                          - remote
-                          - static
-                          - transformers
-                        nullable: true
-                      embeddingModel:
-                        type: string
-                        nullable: true
-                      vectorStore:
-                        type: string
-                        enum:
-                          - sqlite-vec
-                          - qdrant
-                          - none
-                      strategyUsed:
-                        type: string
-                        enum:
-                          - exact
-                          - semantic
-                          - hybrid
-                      rerankApplied:
-                        type: boolean
-                      fallbackReason:
-                        type: string
-                        nullable: true
-                  totalTokensUsed:
-                    type: integer
-                  budgetMaxTokens:
-                    type: integer
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/memory/embedding-providers:
-    get:
-      tags:
-        - Memory
-      summary: List embedding providers
-      description: Returns all providers that have embedding-capable models, indicating which have an active API key configured.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Provider list
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  providers:
-                    type: array
-                    items:
-                      type: object
-                      properties:
-                        provider:
-                          type: string
-                        hasKey:
-                          type: boolean
-                        models:
-                          type: array
-                          items:
-                            type: object
-                            properties:
-                              id:
-                                type: string
-                                description: "Format: provider/model"
-                              name:
-                                type: string
-                              dimensions:
-                                type: integer
-                                nullable: true
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/memory/engine-status:
-    get:
-      tags:
-        - Memory
-      summary: Memory engine status
-      description: Returns the full engine status including keyword tier availability, embedding resolution, vector store statistics (sqlite-vec), Qdrant health, and rerank configuration. Corresponds to `MemoryEngineStatusSchema`.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Engine status
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  keyword:
-                    type: object
-                    properties:
-                      available:
-                        type: boolean
-                      backend:
-                        type: string
-                        enum:
-                          - FTS5
-                  embedding:
-                    type: object
-                    properties:
-                      source:
-                        type: string
-                        enum:
-                          - remote
-                          - static
-                          - transformers
-                        nullable: true
-                      model:
-                        type: string
-                        nullable: true
-                      dimensions:
-                        type: integer
-                        nullable: true
-                      available:
-                        type: boolean
-                      reason:
-                        type: string
-                      cacheStats:
-                        type: object
-                        properties:
-                          hits:
-                            type: integer
-                          misses:
-                            type: integer
-                          size:
-                            type: integer
-                  vectorStore:
-                    type: object
-                    properties:
-                      backend:
-                        type: string
-                        enum:
-                          - sqlite-vec
-                          - qdrant
-                          - none
-                      available:
-                        type: boolean
-                      rowCount:
-                        type: integer
-                      needsReindex:
-                        type: integer
-                      reason:
-                        type: string
-                  qdrant:
-                    type: object
-                    properties:
-                      enabled:
-                        type: boolean
-                      healthy:
-                        type: boolean
-                        nullable: true
-                      latencyMs:
-                        type: number
-                        nullable: true
-                      error:
-                        type: string
-                        nullable: true
-                  rerank:
-                    type: object
-                    properties:
-                      enabled:
-                        type: boolean
-                      provider:
-                        type: string
-                        nullable: true
-                      model:
-                        type: string
-                        nullable: true
-                      available:
-                        type: boolean
-                      reason:
-                        type: string
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/memory/summarize:
-    post:
-      tags:
-        - Memory
-      summary: Compact old memories
-      description: "Manually triggers memory compaction for memories older than `olderThanDays`. Use `dryRun: true` to preview candidates. Corresponds to `MemorySummarizeSchema`."
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                olderThanDays:
-                  type: integer
-                  minimum: 1
-                  maximum: 365
-                  default: 30
-                apiKeyId:
-                  type: string
-                  description: Optional — compacts all keys when omitted
-                dryRun:
-                  type: boolean
-                  default: false
-              additionalProperties: false
-      responses:
-        "200":
-          description: Summarization result
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  candidates:
-                    type: integer
-                  tokensSaved:
-                    type: integer
-                  dryRun:
-                    type: boolean
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/memory/reindex:
-    post:
-      tags:
-        - Memory
-      summary: Trigger vector reindex
-      description: "Starts background reindexing of memories with `needs_reindex = 1`. Use `force: true` to regenerate ALL vectors regardless of index status. Corresponds to `MemoryReindexSchema`."
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                force:
-                  type: boolean
-                  default: false
-                  description: When true, marks all memories needs_reindex=1 before running.
-              additionalProperties: false
-      responses:
-        "200":
-          description: Reindex started
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  started:
-                    type: boolean
-                  pending:
-                    type: integer
-                    description: Memories still pending after this batch
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/settings/memory:
-    get:
-      tags:
-        - Memory
-        - Settings
-      summary: Get memory settings
-      description: Returns the extended memory settings including 7 new fields added in plan 21 (embeddingSource, embeddingProviderModel, transformersEnabled, staticEnabled, rerankEnabled, rerankProviderModel, vectorStore).
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Extended memory settings
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MemorySettingsExtended"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-    put:
-      tags:
-        - Memory
-        - Settings
-      summary: Update memory settings
-      description: "Update any subset of the extended memory settings. All fields are optional; only provided fields are updated. Schema: `MemorySettingsExtendedSchema`."
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/MemorySettingsExtended"
-      responses:
-        "200":
-          description: Updated memory settings
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MemorySettingsExtended"
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/settings/qdrant:
-    get:
-      tags:
-        - Memory
-        - Settings
-      summary: Get Qdrant settings
-      description: Returns current Qdrant configuration. The `apiKey` field is never returned raw — use `hasApiKey` / `apiKeyMasked` instead.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Qdrant settings
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/QdrantSettings"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-    put:
-      tags:
-        - Memory
-        - Settings
-      summary: Update Qdrant settings
-      description: 'Update Qdrant configuration. Pass `apiKey: ""` to remove the stored key. Schema: `QdrantSettingsUpdateSchema`.'
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                enabled:
-                  type: boolean
-                host:
-                  type: string
-                port:
-                  type: integer
-                  minimum: 1
-                  maximum: 65535
-                collection:
-                  type: string
-                  minLength: 1
-                embeddingModel:
-                  type: string
-                  minLength: 1
-                apiKey:
-                  type: string
-                  description: Empty string removes the key
-              additionalProperties: false
-      responses:
-        "200":
-          description: Updated Qdrant settings
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/QdrantSettings"
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/settings/qdrant/health:
-    get:
-      tags:
-        - Memory
-      summary: Qdrant health probe
-      description: Performs a liveness check against the configured Qdrant instance. Returns latency and any connection error (sanitized — no stack traces).
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Health result
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/QdrantHealthResult"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-  /api/settings/qdrant/search:
-    post:
-      tags:
-        - Memory
-      summary: Qdrant semantic search test
-      description: "Performs a test semantic search against the Qdrant collection. Useful for validating that the integration works end-to-end. Schema: `QdrantSearchSchema`."
-      security:
-        - ManagementSessionAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required:
-                - query
-              properties:
-                query:
-                  type: string
-                  minLength: 1
-                topK:
-                  type: integer
-                  minimum: 1
-                  maximum: 50
-                  default: 5
-              additionalProperties: false
-      responses:
-        "200":
-          description: Search results
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  results:
-                    type: array
-                    items:
-                      type: object
-        "400":
-          description: Validation error
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "503":
-          description: Qdrant unavailable (structured error, no stack trace)
-  /api/settings/qdrant/cleanup:
-    post:
-      tags:
-        - Memory
-      summary: Clean up expired Qdrant points
-      description: Removes Qdrant points for memories that have expired or exceeded the configured retention window.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Cleanup result
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  deleted:
-                    type: integer
-                  checked:
-                    type: integer
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "503":
-          description: Qdrant unavailable (structured error, no stack trace)
-  /api/settings/qdrant/embedding-models:
-    get:
-      tags:
-        - Memory
-      summary: List Qdrant embedding models
-      description: Returns the list of embedding models available for use with Qdrant.
-      security:
-        - ManagementSessionAuth: []
-      responses:
-        "200":
-          description: Embedding models list
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  models:
-                    type: array
-                    items:
-                      type: string
-        "401":
-          $ref: "#/components/responses/Unauthorized"
   # ─── Proxy Endpoints ──────────────────────────────────────────
 
   /api/v1/search:
@@ -1610,7 +605,7 @@ paths:
             X-OmniRoute-Version:
               schema:
                 type: string
-              description: OmniRoute build version (always present).
+              description: 67router build version (always present).
             X-OmniRoute-Cost-Saved:
               schema:
                 type: string
@@ -1770,209 +765,6 @@ paths:
         "401":
           $ref: "#/components/responses/Unauthorized"
 
-  /api/v1/embeddings:
-    post:
-      tags: [Embeddings]
-      summary: Create embeddings
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [input, model]
-              properties:
-                input:
-                  description: >-
-                    Text, token IDs, or up to 32 canonical multimodal items. Structured media
-                    input is accepted only when the resolved registry model advertises the
-                    requested modalities. URL sources must be public HTTPS and are fetched
-                    server-side into bounded inline media (redirect revalidation, timeout,
-                    size limits, public DNS checks, and connection pinning) before provider
-                    submission. Inline media is limited to 8 MiB decoded per item and 16 MiB
-                    decoded per request. Canonical items are translated to provider-native
-                    request shapes (Jina modality-keyed objects / Gemini embedContent parts)
-                    rather than forwarded unchanged.
-                  oneOf:
-                    - type: string
-                    - type: array
-                      minItems: 1
-                      items:
-                        type: string
-                    - type: array
-                      minItems: 1
-                      items:
-                        type: integer
-                        minimum: 0
-                    - type: array
-                      minItems: 1
-                      items:
-                        type: array
-                        minItems: 1
-                        items:
-                          type: integer
-                          minimum: 0
-                    - type: array
-                      minItems: 1
-                      maxItems: 32
-                      items:
-                        $ref: "#/components/schemas/EmbeddingMultimodalItem"
-                model:
-                  type: string
-                dimensions:
-                  type: integer
-                  minimum: 1
-                encoding_format:
-                  type: string
-                  enum: [float, base64]
-              additionalProperties: true
-      responses:
-        "200":
-          description: >-
-            Embedding vectors. Success responses carry the `X-OmniRoute-*`
-            cost-telemetry headers (see `POST /api/v1/chat/completions`); media
-            cost is computed per modality when pricing is available, otherwise
-            `0` (fail-open).
-
-  /api/v1/multimodal-embeddings:
-    post:
-      tags: [Embeddings]
-      summary: Create embeddings (Jina multimodal-embeddings alias)
-      description: >-
-        Same handler as `POST /api/v1/embeddings`. Provided so Jina-compatible
-        clients that call `/v1/multimodal-embeddings` do not receive HTTP 404
-        `unknown_route`.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [input, model]
-              additionalProperties: true
-      responses:
-        "200":
-          description: Embedding vectors (same contract as POST /api/v1/embeddings).
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-    get:
-      tags: [Embeddings]
-      summary: List embedding models (Jina multimodal-embeddings alias)
-      security:
-        - BearerAuth: []
-      responses:
-        "200":
-          description: Embedding model catalog (same as GET /api/v1/embeddings).
-
-  /api/v1/providers/{provider}/embeddings:
-    post:
-      tags: [Embeddings]
-      summary: Create embeddings (provider-specific)
-      security:
-        - BearerAuth: []
-      parameters:
-        - name: provider
-          in: path
-          required: true
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        "200":
-          description: Embedding vectors
-
-  /api/v1/images/generations:
-    post:
-      tags: [Images]
-      summary: Generate images
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [prompt]
-              properties:
-                prompt:
-                  type: string
-                model:
-                  type: string
-                n:
-                  type: integer
-                  default: 1
-                size:
-                  type: string
-                  default: 1024x1024
-      responses:
-        "200":
-          description: >-
-            Generated images. Success responses carry the `X-OmniRoute-*`
-            cost-telemetry headers (see `POST /api/v1/chat/completions`); image
-            cost is computed per image when pricing is available, otherwise `0`
-            (fail-open).
-
-  /api/v1/providers/{provider}/images/generations:
-    post:
-      tags: [Images]
-      summary: Generate images (provider-specific)
-      security:
-        - BearerAuth: []
-      parameters:
-        - name: provider
-          in: path
-          required: true
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        "200":
-          description: Generated images
-
-  /api/v1/audio/speech:
-    post:
-      tags: [Audio]
-      summary: Generate speech audio
-      description: Text-to-speech endpoint. Routes to configured TTS providers.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [input]
-              properties:
-                input:
-                  type: string
-                model:
-                  type: string
-                voice:
-                  type: string
-      responses:
-        "200":
-          description: >-
-            Audio data. Success responses carry the `X-OmniRoute-*`
-            cost-telemetry headers (see `POST /api/v1/chat/completions`); speech
-            cost is computed per character when pricing is available, otherwise
-            `0` (fail-open).
-
   /api/v1/audio/transcriptions:
     post:
       tags: [Audio]
@@ -1999,65 +791,6 @@ paths:
             Transcription result. Success responses carry the `X-OmniRoute-*`
             cost-telemetry headers (see `POST /api/v1/chat/completions`);
             transcription cost is computed per second when pricing is available,
-            otherwise `0` (fail-open).
-
-  /api/v1/moderations:
-    post:
-      tags: [Moderations]
-      summary: Create moderation
-      description: Content moderation endpoint. Routes to configured moderation providers.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [input]
-              properties:
-                input:
-                  oneOf:
-                    - type: string
-                    - type: array
-                      items:
-                        type: string
-      responses:
-        "200":
-          description: >-
-            Moderation result. Success responses carry the `X-OmniRoute-*`
-            cost-telemetry headers (see `POST /api/v1/chat/completions`);
-            moderations are always cost `0` (free).
-
-  /api/v1/rerank:
-    post:
-      tags: [Rerank]
-      summary: Rerank documents
-      description: Document reranking endpoint.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              required: [query, documents]
-              properties:
-                query:
-                  type: string
-                documents:
-                  type: array
-                  items:
-                    type: string
-                model:
-                  type: string
-      responses:
-        "200":
-          description: >-
-            Reranked documents. Success responses carry the `X-OmniRoute-*`
-            cost-telemetry headers (see `POST /api/v1/chat/completions`); rerank
-            cost is computed per search-unit when pricing is available,
             otherwise `0` (fail-open).
 
   /api/v1:
@@ -2633,7 +1366,6 @@ paths:
         and canonical OpenAI-compatible nodes using a single Bearer credential and an
         exact JSON model field. Specialized executors and other providers are unsupported;
         session pools, extra-key rotation, HTTP redirects and credential refresh are refused.
-        Active runtime plugins also fail closed; plugin policies are not silently skipped.
       security:
         - BearerAuth: []
       requestBody:
@@ -2995,7 +1727,7 @@ paths:
         "404":
           description: Combo not found
         "409":
-          description: Name already taken, or the combo is quota-share managed
+          description: Name already taken
     patch:
       tags: [Combos]
       summary: Update combo
@@ -3018,7 +1750,7 @@ paths:
         "404":
           description: Combo not found
         "409":
-          description: Name already taken, or the combo is quota-share managed
+          description: Name already taken
     delete:
       tags: [Combos]
       summary: Delete combo
@@ -4185,28 +2917,6 @@ paths:
         "200":
           description: Request log entries
 
-  /api/usage/budget:
-    get:
-      tags: [Usage]
-      summary: Get usage budget status
-      description: Returns current budget limits and consumption.
-      responses:
-        "200":
-          description: Budget status
-    post:
-      tags: [Usage]
-      summary: Configure usage budget
-      description: Set or update budget limits for usage tracking.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        "200":
-          description: Updated budget configuration
-
   /api/usage/cache-health:
     get:
       tags: [Usage]
@@ -5083,7 +3793,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle 9Router auto-start
       description: >-
-        When enabled, 9Router starts automatically on the next OmniRoute boot.
+        When enabled, 9Router starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -5113,8 +3823,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle 9Router auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) 9Router
-        process is restarted under OmniRoute's own supervisor on the next
+        When enabled, an externally-adopted (not 67router-spawned) 9Router
+        process is restarted under 67router's own supervisor on the next
         health-check cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -5271,7 +3981,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle CLIProxyAPI auto-start
       description: >-
-        When enabled, CLIProxyAPI starts automatically on the next OmniRoute boot.
+        When enabled, CLIProxyAPI starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -5301,8 +4011,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle CLIProxyAPI auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) CLIProxyAPI
-        process is restarted under OmniRoute's own supervisor on the next
+        When enabled, an externally-adopted (not 67router-spawned) CLIProxyAPI
+        process is restarted under 67router's own supervisor on the next
         health-check cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -5458,7 +4168,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle Mux auto-start
       description: >-
-        When enabled, Mux starts automatically on the next OmniRoute boot.
+        When enabled, Mux starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -5488,8 +4198,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle Mux auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) Mux
-        process is restarted under OmniRoute's own supervisor on the next
+        When enabled, an externally-adopted (not 67router-spawned) Mux
+        process is restarted under 67router's own supervisor on the next
         health-check cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -5655,7 +4365,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle open-wa auto-start
       description: >-
-        When enabled, open-wa starts automatically on the next OmniRoute boot.
+        When enabled, open-wa starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -5685,8 +4395,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle open-wa auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) open-wa
-        process is restarted under OmniRoute's own supervisor on the next
+        When enabled, an externally-adopted (not 67router-spawned) open-wa
+        process is restarted under 67router's own supervisor on the next
         health-check cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -5799,7 +4509,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle Bifrost auto-start
       description: >-
-        When enabled, Bifrost starts automatically on the next OmniRoute boot.
+        When enabled, Bifrost starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -5822,8 +4532,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle Bifrost auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) Bifrost
-        process is restarted under OmniRoute's own supervisor on the next
+        When enabled, an externally-adopted (not 67router-spawned) Bifrost
+        process is restarted under 67router's own supervisor on the next
         health-check cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -5991,7 +4701,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle Dario auto-start
       description: >-
-        When enabled, Dario starts automatically on the next OmniRoute boot.
+        When enabled, Dario starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -6016,8 +4726,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle Dario auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) Dario process
-        is restarted under OmniRoute's own supervisor on the next health-check
+        When enabled, an externally-adopted (not 67router-spawned) Dario process
+        is restarted under 67router's own supervisor on the next health-check
         cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -6190,9 +4900,9 @@ paths:
   /api/services/dario/admin/import-from-omniroute:
     get:
       tags: [Embedded Services]
-      summary: List OmniRoute claude connections eligible for Dario import
+      summary: List 67router claude connections eligible for Dario import
       description: >-
-        Returns eligible OmniRoute `claude` OAuth provider connections (metadata
+        Returns eligible 67router `claude` OAuth provider connections (metadata
         only — id/name/email/org tier, never tokens) so the UI can offer a picker
         when more than one exists. **LOCAL_ONLY** — loopback only.
       responses:
@@ -6225,7 +4935,7 @@ paths:
           description: Missing or invalid admin auth
     post:
       tags: [Embedded Services]
-      summary: Import an OmniRoute claude connection's OAuth tokens into Dario
+      summary: Import a 67router claude connection's OAuth tokens into Dario
       description: >-
         Writes the source connection's access/refresh token pair directly into
         Dario's own account-file store (`~/.dario/accounts/<alias>.json`), reusing
@@ -6364,7 +5074,7 @@ paths:
       tags: [Embedded Services]
       summary: Toggle LLMLingua auto-start
       description: >-
-        When enabled, LLMLingua starts automatically on the next OmniRoute boot.
+        When enabled, LLMLingua starts automatically on the next 67router boot.
         **LOCAL_ONLY** — loopback only.
       requestBody:
         required: true
@@ -6387,8 +5097,8 @@ paths:
       tags: [Embedded Services]
       summary: Toggle LLMLingua auto-restart-when-adopted
       description: >-
-        When enabled, an externally-adopted (not OmniRoute-spawned) LLMLingua
-        process is restarted under OmniRoute's own supervisor on the next
+        When enabled, an externally-adopted (not 67router-spawned) LLMLingua
+        process is restarted under 67router's own supervisor on the next
         health-check cycle instead of being left as adopted-only.
         **LOCAL_ONLY** — loopback only.
       requestBody:
@@ -6567,7 +5277,7 @@ paths:
     post:
       tags: [Cloud]
       summary: Authenticate with cloud worker
-      description: Authenticates with the OmniRoute cloud worker for remote access.
+      description: Authenticates with the 67router cloud worker for remote access.
       requestBody:
         required: true
         content:
@@ -7624,41 +6334,7 @@ paths:
         "200":
           description: Token health status
 
-  # ─── Evals & Policies ──────────────────────────────────────────
-
-  /api/evals:
-    get:
-      tags: [System]
-      summary: List eval suites
-      responses:
-        "200":
-          description: Eval suite list
-    post:
-      tags: [System]
-      summary: Run evaluation
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        "200":
-          description: Eval results
-
-  /api/evals/{suiteId}:
-    get:
-      tags: [System]
-      summary: Get eval suite details
-      parameters:
-        - name: suiteId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: Eval suite details
+  # ─── Policies ──────────────────────────────────────────────────
 
   /api/policies:
     get:
@@ -7734,306 +6410,6 @@ paths:
           description: Internal server error
 
   # ─── Quota Sharing (Group B, plan 22) ────────────────────────────
-
-  /api/quota/pools:
-    get:
-      tags: [Quota]
-      summary: List quota pools
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: Array of QuotaPool objects
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/QuotaPool"
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
-    post:
-      tags: [Quota]
-      summary: Create quota pool
-      security:
-        - bearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PoolCreate"
-      responses:
-        "201":
-          description: Pool created
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/QuotaPool"
-        "400":
-          description: Validation error (Zod)
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
-
-  /api/quota/pools/{id}:
-    get:
-      tags: [Quota]
-      summary: Get quota pool by ID
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: QuotaPool object
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/QuotaPool"
-        "401":
-          description: Unauthorized
-        "404":
-          description: Pool not found
-        "500":
-          description: Internal server error
-    patch:
-      tags: [Quota]
-      summary: Update quota pool (name or allocations)
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PoolUpdate"
-      responses:
-        "200":
-          description: Updated pool
-        "400":
-          description: Validation error
-        "401":
-          description: Unauthorized
-        "404":
-          description: Pool not found
-        "500":
-          description: Internal server error
-    delete:
-      tags: [Quota]
-      summary: Delete quota pool
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "204":
-          description: Deleted
-        "401":
-          description: Unauthorized
-        "404":
-          description: Pool not found
-        "500":
-          description: Internal server error
-
-  /api/quota/pools/{id}/usage:
-    get:
-      tags: [Quota]
-      summary: Get pool usage snapshot (per-key consumption + burn rate)
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: PoolUsageSnapshot
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PoolUsageSnapshot"
-        "401":
-          description: Unauthorized
-        "404":
-          description: Pool not found
-        "500":
-          description: Internal server error
-
-  /api/quota/plans:
-    get:
-      tags: [Quota]
-      summary: List resolved provider plans (catalog + manual overrides)
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: Array of ProviderPlan
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
-
-  /api/quota/plans/{connectionId}:
-    get:
-      tags: [Quota]
-      summary: Get resolved plan for a connection
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: connectionId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: ProviderPlan (source = auto | manual)
-        "401":
-          description: Unauthorized
-        "404":
-          description: Connection not found
-        "500":
-          description: Internal server error
-    put:
-      tags: [Quota]
-      summary: Upsert manual plan override for a connection
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: connectionId
-          in: path
-          required: true
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/PlanUpsert"
-      responses:
-        "200":
-          description: Updated plan
-        "400":
-          description: Validation error (Zod)
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
-    delete:
-      tags: [Quota]
-      summary: Delete manual plan override (reverts to catalog/auto)
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: connectionId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        "204":
-          description: Override deleted
-        "401":
-          description: Unauthorized
-        "404":
-          description: Override not found
-        "500":
-          description: Internal server error
-
-  /api/quota/preview:
-    get:
-      tags: [Quota]
-      summary: Dry-run quota enforcement check (preview only, no consumption recorded)
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: apiKeyId
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: poolId
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: estimatedTokens
-          in: query
-          schema:
-            type: number
-        - name: estimatedUsd
-          in: query
-          schema:
-            type: number
-        - name: estimatedRequests
-          in: query
-          schema:
-            type: integer
-      responses:
-        "200":
-          description: EnforceDecision (allow/block + reason)
-        "400":
-          description: Validation error (Zod)
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
-
-  /api/settings/quota-store:
-    get:
-      tags: [Settings]
-      summary: Get current quota store driver settings
-      description: Redis URL is masked in the response (shows only scheme+host).
-      security:
-        - bearerAuth: []
-      responses:
-        "200":
-          description: QuotaStoreSettings (driver + masked redisUrl)
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
-    put:
-      tags: [Settings]
-      summary: Update quota store driver settings
-      security:
-        - bearerAuth: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/QuotaStoreSettings"
-      responses:
-        "200":
-          description: Settings updated
-        "400":
-          description: Validation error (Zod) — e.g. driver=redis without valid URL
-        "401":
-          description: Unauthorized
-        "500":
-          description: Internal server error
 
   # ─── v1beta (Gemini-Compatible) ─────────────────────────────────
 
@@ -8334,7 +6710,7 @@ paths:
   /api/tools/traffic-inspector/requests/{id}/replay:
     post:
       tags: [Traffic Inspector]
-      summary: Replay a captured request through OmniRoute router
+      summary: Replay a captured request through 67router router
       description: Re-executes the original request body against /v1/chat/completions. Consumes quota.
       parameters:
         - name: id
@@ -8718,7 +7094,7 @@ paths:
   /api/openapi/try:
     post:
       tags: [System]
-      summary: Proxy an API Explorer request to an OmniRoute endpoint
+      summary: Proxy an API Explorer request to a 67router endpoint
       description: >-
         Executes an API Explorer request through a server-side, same-origin proxy. The target
         must start with `/api/`, `/v1/`, `/v1beta/`, `/a2a`, or
@@ -8748,8 +7124,8 @@ paths:
                 path:
                   type: string
                   minLength: 1
-                  pattern: "^/(?:api/|v1/|v1beta/|a2a|\\.well-known/agent\\.json)"
-                  description: Same-origin OmniRoute API path, optionally including a query string.
+                  pattern: "^/(?:api/|v1/|v1beta/)"
+                  description: Same-origin 67router API path, optionally including a query string.
                 headers:
                   type: object
                   default: {}
@@ -8821,7 +7197,7 @@ paths:
       summary: List agent skills catalog
       description: |
         Returns the full 42-entry Agent Skills catalog with optional filtering.
-        Skills describe how to use OmniRoute's REST API and CLI — they are structured
+        Skills describe how to use 67router's REST API and CLI — they are structured
         SKILL.md documentation files discoverable by external agents, MCP clients, and
         A2A orchestrators. No authentication required.
       parameters:
@@ -9084,127 +7460,6 @@ paths:
           $ref: "#/components/responses/Unauthorized"
         "500":
           $ref: "#/components/responses/InternalError"
-  /api/v1/audio/translations:
-    post:
-      tags:
-        - Audio
-      summary: Translate audio to English
-      description: >-
-        OpenAI Whisper–compatible audio translation (multipart/form-data).
-        Unlike `/api/v1/audio/transcriptions`, output is always English
-        regardless of the source language. Success responses carry the
-        `X-OmniRoute-*` cost-telemetry headers.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              required:
-                - file
-              properties:
-                file:
-                  type: string
-                  format: binary
-                model:
-                  type: string
-      responses:
-        "200":
-          description: English translation of the audio.
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "500":
-          $ref: "#/components/responses/InternalError"
-  /api/v1/voices:
-    get:
-      tags: [Audio]
-      summary: List ElevenLabs voices
-      description: >-
-        Proxies `GET https://api.elevenlabs.io/v1/voices` using the stored
-        `elevenlabs` provider credentials (the caller never sends `xi-api-key`).
-        The incoming query string is forwarded unchanged.
-      security:
-        - BearerAuth: []
-      responses:
-        "200":
-          description: ElevenLabs voice list, relayed verbatim.
-        "401":
-          description: No usable `elevenlabs` credential is configured.
-        "429":
-          description: Every configured `elevenlabs` credential is rate limited.
-        "500":
-          $ref: "#/components/responses/InternalError"
-  /api/v1/speech-to-text:
-    post:
-      tags: [Audio]
-      summary: ElevenLabs speech-to-text
-      description: >-
-        Streams the request body to `POST https://api.elevenlabs.io/v1/speech-to-text`
-        using the stored `elevenlabs` provider credentials. `content-type` and
-        `accept` are forwarded; the upstream body is relayed unchanged.
-      security:
-        - BearerAuth: []
-      requestBody:
-        required: true
-        content:
-          multipart/form-data:
-            schema:
-              type: object
-              properties:
-                file:
-                  type: string
-                  format: binary
-      responses:
-        "200":
-          description: Transcription payload, relayed verbatim from ElevenLabs.
-        "401":
-          description: No usable `elevenlabs` credential is configured.
-        "429":
-          description: Every configured `elevenlabs` credential is rate limited.
-        "500":
-          $ref: "#/components/responses/InternalError"
-  /api/v1/text-to-speech/{voiceId}:
-    post:
-      tags: [Audio]
-      summary: ElevenLabs text-to-speech
-      description: >-
-        Streams the request body to
-        `POST https://api.elevenlabs.io/v1/text-to-speech/{voiceId}` using the stored
-        `elevenlabs` provider credentials. `voiceId` must match `^[A-Za-z0-9_-]+$`
-        or the request is rejected with 400 before any upstream call.
-      security:
-        - BearerAuth: []
-      parameters:
-        - name: voiceId
-          in: path
-          required: true
-          schema:
-            type: string
-            pattern: "^[A-Za-z0-9_-]+$"
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                text:
-                  type: string
-      responses:
-        "200":
-          description: Audio stream, relayed verbatim from ElevenLabs.
-        "400":
-          description: Invalid ElevenLabs voice ID.
-        "401":
-          description: No usable `elevenlabs` credential is configured.
-        "429":
-          description: Every configured `elevenlabs` credential is rate limited.
-        "500":
-          $ref: "#/components/responses/InternalError"
   /api/v1/sound-generation:
     post:
       tags: [Audio]
@@ -9264,7 +7519,7 @@ paths:
         "422":
           description: Native ElevenLabs request validation failed.
         "429":
-          description: OmniRoute policy, provider cooldown or upstream quota exceeded.
+          description: 67router policy, provider cooldown or upstream quota exceeded.
         "502":
           description: Could not reach ElevenLabs.
   /api/v1/music:
@@ -9326,7 +7581,7 @@ paths:
         "422":
           description: Native ElevenLabs request validation failed.
         "429":
-          description: OmniRoute policy, provider cooldown or upstream quota exceeded.
+          description: 67router policy, provider cooldown or upstream quota exceeded.
         "502":
           description: Could not reach ElevenLabs.
   /api/v1/music/stream:
@@ -9388,7 +7643,7 @@ paths:
         "422":
           description: Native ElevenLabs request validation failed.
         "429":
-          description: OmniRoute policy, provider cooldown or upstream quota exceeded.
+          description: 67router policy, provider cooldown or upstream quota exceeded.
         "502":
           description: Could not reach ElevenLabs.
   /api/v1/music/detailed:
@@ -9450,7 +7705,7 @@ paths:
         "422":
           description: Native ElevenLabs request validation failed.
         "429":
-          description: OmniRoute policy, provider cooldown or upstream quota exceeded.
+          description: 67router policy, provider cooldown or upstream quota exceeded.
         "502":
           description: Could not reach ElevenLabs.
   /api/v1/music/detailed/stream:
@@ -9512,7 +7767,7 @@ paths:
         "422":
           description: Native ElevenLabs request validation failed.
         "429":
-          description: OmniRoute policy, provider cooldown or upstream quota exceeded.
+          description: 67router policy, provider cooldown or upstream quota exceeded.
         "502":
           description: Could not reach ElevenLabs.
   /api/v1/music/plan:
@@ -9564,7 +7819,7 @@ paths:
         "422":
           description: Native ElevenLabs request validation failed.
         "429":
-          description: OmniRoute policy, provider cooldown or upstream quota exceeded.
+          description: 67router policy, provider cooldown or upstream quota exceeded.
         "502":
           description: Could not reach ElevenLabs.
   /api/v1/explain/routing:
@@ -9707,9 +7962,9 @@ paths:
     get:
       tags:
         - CLI Tools
-      summary: Read Crush CLI OmniRoute config
+      summary: Read Crush CLI 67router config
       x-loopback-only: true
-      description: Local-only. Reads the OmniRoute provider block in Crush's config.
+      description: Local-only. Reads the 67router provider block in Crush's config.
       x-internal: true
       responses:
         "200":
@@ -9717,9 +7972,9 @@ paths:
     post:
       tags:
         - CLI Tools
-      summary: Write Crush CLI OmniRoute config
+      summary: Write Crush CLI 67router config
       x-loopback-only: true
-      description: Local-only. Registers OmniRoute as an `openai-compat` provider in Crush's config.
+      description: Local-only. Registers 67router as an `openai-compat` provider in Crush's config.
       x-internal: true
       responses:
         "200":
@@ -9727,9 +7982,9 @@ paths:
     delete:
       tags:
         - CLI Tools
-      summary: Remove OmniRoute from Crush CLI config
+      summary: Remove 67router from Crush CLI config
       x-loopback-only: true
-      description: Local-only. Removes the OmniRoute provider block from Crush's config.
+      description: Local-only. Removes the 67router provider block from Crush's config.
       x-internal: true
       responses:
         "200":
@@ -9738,10 +7993,10 @@ paths:
     get:
       tags:
         - CLI Tools
-      summary: Read CodeWhale CLI OmniRoute config
+      summary: Read CodeWhale CLI 67router config
       x-loopback-only: true
       description: >-
-        Local-only. Reads the OmniRoute config block from
+        Local-only. Reads the 67router config block from
         `~/.codewhale/config.toml` (with `~/.deepseek/config.toml` legacy
         fallback).
       x-internal: true
@@ -9751,9 +8006,9 @@ paths:
     post:
       tags:
         - CLI Tools
-      summary: Write CodeWhale CLI OmniRoute config
+      summary: Write CodeWhale CLI 67router config
       x-loopback-only: true
-      description: Local-only. Writes the OmniRoute config block in CodeWhale TOML format.
+      description: Local-only. Writes the 67router config block in CodeWhale TOML format.
       x-internal: true
       responses:
         "200":
@@ -9761,9 +8016,9 @@ paths:
     delete:
       tags:
         - CLI Tools
-      summary: Remove OmniRoute from CodeWhale CLI config
+      summary: Remove 67router from CodeWhale CLI config
       x-loopback-only: true
-      description: Local-only. Removes the OmniRoute config block from CodeWhale's config.
+      description: Local-only. Removes the 67router config block from CodeWhale's config.
       x-internal: true
       responses:
         "200":
@@ -9806,14 +8061,6 @@ paths:
       tags:
         - OmnirouteApiCatchAll
       summary: "PUT <omnirouteApiCatchAll>"
-      responses:
-        "200":
-          description: OK
-  /api/a2a/status:
-    get:
-      tags:
-        - A2a
-      summary: "GET a2a › status"
       responses:
         "200":
           description: OK
@@ -9940,22 +8187,6 @@ paths:
       tags:
         - Auth
       summary: "GET auth › status"
-      responses:
-        "200":
-          description: OK
-  /api/batches:
-    get:
-      tags:
-        - Batches
-      summary: "GET batches"
-      responses:
-        "200":
-          description: OK
-  /api/batches/{id}:
-    get:
-      tags:
-        - Batches
-      summary: "GET batches › <id>"
       responses:
         "200":
           description: OK
@@ -10685,7 +8916,7 @@ paths:
       description: >-
         Replaces the live database with an uploaded `.sqlite` backup (multipart `file` field,
         or the raw bytes with `?filename=`). The upload is checked for SQLite integrity and the
-        required OmniRoute tables first. Operator-only: accepts the dashboard session, the
+        required 67router tables first. Operator-only: accepts the dashboard session, the
         local CLI credential, or login disabled; API keys of any scope and `oma_` access tokens
         are refused (403), for the dry run as well.
       parameters:
@@ -10711,7 +8942,7 @@ paths:
             Imported (`imported: true`), or, for a dry run, validated (`dryRun: true,
             valid: true, imported: false`) with the counts the upload would load.
         "400":
-          description: Not a valid OmniRoute SQLite backup (type, size, integrity or tables).
+          description: Not a valid 67router SQLite backup (type, size, integrity or tables).
         "401":
           description: No accepted credential.
         "403":
@@ -10791,52 +9022,6 @@ paths:
       tags:
         - Docs
       summary: "GET docs › codex cli"
-      responses:
-        "200":
-          description: OK
-  /api/evals/suites:
-    post:
-      tags:
-        - Evals
-      summary: "POST evals › suites"
-      responses:
-        "200":
-          description: OK
-  /api/evals/suites/{suiteId}:
-    delete:
-      tags:
-        - Evals
-      summary: "DELETE evals › suites › <suiteId>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Evals
-      summary: "GET evals › suites › <suiteId>"
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Evals
-      summary: "PUT evals › suites › <suiteId>"
-      responses:
-        "200":
-          description: OK
-  /api/files:
-    get:
-      tags:
-        - Files
-      summary: "GET files"
-      responses:
-        "200":
-          description: OK
-  /api/files/{id}/content:
-    get:
-      tags:
-        - Files
-      summary: "GET files › <id> › content"
       responses:
         "200":
           description: OK
@@ -11008,21 +9193,6 @@ paths:
       tags:
         - Gamification
       summary: "POST gamification › transfer"
-      responses:
-        "200":
-          description: OK
-  /api/github-skills:
-    get:
-      tags:
-        - Github skills
-      summary: "GET github skills"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Github skills
-      summary: "POST github skills"
       responses:
         "200":
           description: OK
@@ -11397,48 +9567,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/middleware/hooks:
-    get:
-      tags:
-        - Middleware
-      summary: "GET middleware › hooks"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Middleware
-      summary: "POST middleware › hooks"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/middleware/hooks/{name}:
-    delete:
-      tags:
-        - Middleware
-      summary: "DELETE middleware › hooks › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Middleware
-      summary: "GET middleware › hooks › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Middleware
-      summary: "PUT middleware › hooks › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
   /api/model-capability-overrides:
     delete:
       tags:
@@ -11629,110 +9757,6 @@ paths:
       tags:
         - Omniroute
       summary: "GET omniroute › status"
-      responses:
-        "200":
-          description: OK
-  /api/playground/simulate-route:
-    post:
-      tags:
-        - Playground
-      summary: "POST playground › simulate route"
-      responses:
-        "200":
-          description: OK
-  /api/plugins:
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}:
-    delete:
-      tags:
-        - Plugins
-      summary: "DELETE plugins › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins › <name>"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}/activate:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › <name> › activate"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}/config:
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins › <name> › config"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Plugins
-      summary: "PUT plugins › <name> › config"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/{name}/deactivate:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › <name> › deactivate"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/marketplace:
-    get:
-      tags:
-        - Plugins
-      summary: "GET plugins › marketplace"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/marketplace/install:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › marketplace › install"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/plugins/scan:
-    post:
-      tags:
-        - Plugins
-      summary: "POST plugins › scan"
-      x-loopback-only: true
       responses:
         "200":
           description: OK
@@ -12191,52 +10215,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/quota/groups:
-    get:
-      tags:
-        - Quota
-      summary: "GET quota › groups"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Quota
-      summary: "POST quota › groups"
-      responses:
-        "200":
-          description: OK
-  /api/quota/groups/{id}:
-    delete:
-      tags:
-        - Quota
-      summary: "DELETE quota › groups › <id>"
-      responses:
-        "200":
-          description: OK
-    patch:
-      tags:
-        - Quota
-      summary: "PATCH quota › groups › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/quota/keys/{id}/models:
-    get:
-      tags:
-        - Quota
-      summary: "GET quota › keys › <id> › models"
-      responses:
-        "200":
-          description: OK
-  /api/quota/pools/{id}/log:
-    get:
-      tags:
-        - Quota
-      summary: "GET quota › pools › <id> › log"
-      responses:
-        "200":
-          description: OK
   /api/radar/catalog:
     get:
       tags:
@@ -12350,48 +10328,6 @@ paths:
       tags:
         - Radar
       summary: "POST radar › sync all"
-      responses:
-        "200":
-          description: OK
-  /api/relay/tokens:
-    get:
-      tags:
-        - Relay
-      summary: "GET relay › tokens"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Relay
-      summary: "POST relay › tokens"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-  /api/relay/tokens/{id}:
-    delete:
-      tags:
-        - Relay
-      summary: "DELETE relay › tokens › <id>"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Relay
-      summary: "GET relay › tokens › <id>"
-      x-always-protected: true
-      responses:
-        "200":
-          description: OK
-    patch:
-      tags:
-        - Relay
-      summary: "PATCH relay › tokens › <id>"
-      x-always-protected: true
       responses:
         "200":
           description: OK
@@ -12729,53 +10665,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/settings/free-proxies:
-    delete:
-      tags:
-        - Settings
-      summary: "DELETE settings › free proxies"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Settings
-      summary: "GET settings › free proxies"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/{id}/add-to-pool:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › free proxies › <id> › add to pool"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/bulk-add-to-pool:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › free proxies › bulk add to pool"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/stats:
-    get:
-      tags:
-        - Settings
-      summary: "GET settings › free proxies › stats"
-      responses:
-        "200":
-          description: OK
-  /api/settings/free-proxies/sync:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › free proxies › sync"
-      responses:
-        "200":
-          description: OK
   /api/settings/import-json:
     post:
       tags:
@@ -12958,36 +10847,6 @@ paths:
         - Settings
       summary: "POST settings › obsidian › webdav"
       x-always-protected: true
-      responses:
-        "200":
-          description: OK
-  /api/settings/oneproxy:
-    delete:
-      tags:
-        - Settings
-      summary: "DELETE settings › oneproxy"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Settings
-      summary: "GET settings › oneproxy"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › oneproxy"
-      responses:
-        "200":
-          description: OK
-  /api/settings/oneproxy/rotate:
-    post:
-      tags:
-        - Settings
-      summary: "POST settings › oneproxy › rotate"
       responses:
         "200":
           description: OK
@@ -13192,7 +11051,7 @@ paths:
                   connections:
                     type: integer
                     minimum: 0
-                    description: Distinct OmniRoute connections logged through the pool members.
+                    description: Distinct 67router connections logged through the pool members.
                   distinctExits:
                     type: integer
                     minimum: 0
@@ -13490,111 +11349,12 @@ paths:
             Machine credential refused. Selective transfer requires the dashboard session or
             the local CLI (or login disabled); API keys of any scope and `oma_` access tokens
             get 403.
-  /api/skills:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills"
-      responses:
-        "200":
-          description: OK
-  /api/skills/{id}:
-    delete:
-      tags:
-        - Skills
-      summary: "DELETE skills › <id>"
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Skills
-      summary: "PUT skills › <id>"
-      responses:
-        "200":
-          description: OK
   /api/skills/collect/chaos:
     post:
       tags:
         - Skills
       summary: "POST skills › collect › chaos"
       x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/collect/detect:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › collect › detect"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/collect/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › collect › install"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/executions:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › executions"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › executions"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › install"
-      x-loopback-only: true
-      responses:
-        "200":
-          description: OK
-  /api/skills/marketplace:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › marketplace"
-      responses:
-        "200":
-          description: OK
-  /api/skills/marketplace/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › marketplace › install"
-      responses:
-        "200":
-          description: OK
-  /api/skills/skillssh:
-    get:
-      tags:
-        - Skills
-      summary: "GET skills › skillssh"
-      responses:
-        "200":
-          description: OK
-  /api/skills/skillssh/install:
-    post:
-      tags:
-        - Skills
-      summary: "POST skills › skillssh › install"
       responses:
         "200":
           description: OK
@@ -13674,7 +11434,7 @@ paths:
                 type: object
                 required: [current, latest, updateAvailable, channel, releaseChannel, channels]
                 properties:
-                  current: { type: string, description: Running OmniRoute version. }
+                  current: { type: string, description: Running 67router version. }
                   latest:
                     type: string
                     description: Latest published version, or "unavailable" when every lookup failed.
@@ -13971,14 +11731,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/usage/budget/bulk:
-    get:
-      tags:
-        - Usage
-      summary: "GET usage › budget › bulk"
-      responses:
-        "200":
-          description: OK
   /api/usage/codex-reset-credit:
     get:
       tags:
@@ -14186,73 +11938,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/v1/agents/credentials:
-    get:
-      tags:
-        - V1 Agents
-      summary: "GET agents › credentials"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Agents
-      summary: "POST agents › credentials"
-      responses:
-        "200":
-          description: OK
-  /api/v1/agents/health:
-    get:
-      tags:
-        - V1 Agents
-      summary: "GET agents › health"
-      responses:
-        "200":
-          description: OK
-  /api/v1/agents/tasks:
-    delete:
-      tags:
-        - V1 Agents
-      summary: "DELETE agents › tasks"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - V1 Agents
-      summary: "GET agents › tasks"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Agents
-      summary: "POST agents › tasks"
-      responses:
-        "200":
-          description: OK
-  /api/v1/agents/tasks/{id}:
-    delete:
-      tags:
-        - V1 Agents
-      summary: "DELETE agents › tasks › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - V1 Agents
-      summary: "GET agents › tasks › <id>"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Agents
-      summary: "POST agents › tasks › <id>"
-      responses:
-        "200":
-          description: OK
   /api/v1/antigravity:
     post:
       tags:
@@ -14266,52 +11951,6 @@ paths:
       tags:
         - V1 Auto-combo
       summary: "GET auto combo › <channel> › candidates"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches:
-    get:
-      tags:
-        - V1 Batches
-      summary: "GET batches"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Batches
-      summary: "POST batches"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches/{id}:
-    delete:
-      tags:
-        - V1 Batches
-      summary: "DELETE batches › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - V1 Batches
-      summary: "GET batches › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches/{id}/cancel:
-    post:
-      tags:
-        - V1 Batches
-      summary: "POST batches › <id> › cancel"
-      responses:
-        "200":
-          description: OK
-  /api/v1/batches/delete-completed:
-    delete:
-      tags:
-        - V1 Batches
-      summary: "DELETE batches › delete completed"
       responses:
         "200":
           description: OK
@@ -14342,67 +11981,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/v1/files:
-    get:
-      tags:
-        - V1 Files
-      summary: "GET files"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Files
-      summary: "POST files"
-      responses:
-        "200":
-          description: OK
-  /api/v1/files/{id}:
-    delete:
-      tags:
-        - V1 Files
-      summary: "DELETE files › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - V1 Files
-      summary: "GET files › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/v1/files/{id}/content:
-    get:
-      tags:
-        - V1 Files
-      summary: "GET files › <id> › content"
-      responses:
-        "200":
-          description: OK
-  /api/v1/images/edits:
-    post:
-      tags:
-        - V1 Images
-      summary: "POST images › edits"
-      responses:
-        "200":
-          description: OK
-  /api/v1/images/upscale:
-    get:
-      tags:
-        - V1 Images
-      summary: "GET images › upscale"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - V1 Images
-      summary: "POST images › upscale"
-      responses:
-        "200":
-          description: OK
   /api/v1/media/{id}:
     get:
       tags:
@@ -14412,7 +11990,7 @@ paths:
         Serves media that a video job stored on this gateway because the provider's own result URL
         is auth-gated (OpenRouter `unsigned_urls`). The id is returned in the `url` of a
         `/api/v1/videos/generations` response. Readable by the API key that generated it, a
-        manage-scope key or the dashboard session (same ownership rule as `/api/v1/files/{id}/content`);
+        manage-scope key or the dashboard session;
         anything else, an unknown id or an expired file (call-log retention window) answers 404.
       parameters:
         - name: id
@@ -14646,22 +12224,6 @@ paths:
           $ref: "#/components/responses/ManagementAuthenticationRequired"
         "403":
           $ref: "#/components/responses/ManagementInvalidToken"
-  /api/v1/relay/chat/completions:
-    post:
-      tags:
-        - V1 Relay
-      summary: "POST relay › chat › completions"
-      responses:
-        "200":
-          description: OK
-  /api/v1/relay/chat/completions/bifrost:
-    post:
-      tags:
-        - V1 Relay
-      summary: "POST relay › chat › completions › bifrost"
-      responses:
-        "200":
-          description: OK
   /api/v1/responses/{path}:
     post:
       tags:
@@ -15001,68 +12563,6 @@ paths:
       responses:
         "200":
           description: OK
-  /api/webhooks:
-    get:
-      tags:
-        - Webhooks
-      summary: "GET webhooks"
-      responses:
-        "200":
-          description: OK
-    post:
-      tags:
-        - Webhooks
-      summary: "POST webhooks"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/{id}:
-    delete:
-      tags:
-        - Webhooks
-      summary: "DELETE webhooks › <id>"
-      responses:
-        "200":
-          description: OK
-    get:
-      tags:
-        - Webhooks
-      summary: "GET webhooks › <id>"
-      responses:
-        "200":
-          description: OK
-    put:
-      tags:
-        - Webhooks
-      summary: "PUT webhooks › <id>"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/{id}/deliveries:
-    get:
-      tags:
-        - Webhooks
-      summary: "GET webhooks › <id> › deliveries"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/{id}/test:
-    post:
-      tags:
-        - Webhooks
-      summary: "POST webhooks › <id> › test"
-      responses:
-        "200":
-          description: OK
-  /api/webhooks/validate-url:
-    post:
-      tags:
-        - Webhooks
-      summary: "POST webhooks › validate url"
-      responses:
-        "200":
-          description: OK
-
 components:
   securitySchemes:
     BearerAuth:
@@ -15301,48 +12801,6 @@ components:
         retryAfter: { type: integer, minimum: 1, maximum: 3600 }
         eligibleCount: { type: integer, minimum: 0 }
         freeCount: { type: integer, minimum: 0 }
-    EmbeddingMultimodalItem:
-      oneOf:
-        - type: object
-          required: [type, text]
-          properties:
-            type:
-              type: string
-              const: text
-            text:
-              type: string
-              minLength: 1
-        - type: object
-          required: [type, source]
-          properties:
-            type:
-              type: string
-              enum: [image, audio, video, document]
-            source:
-              oneOf:
-                - type: object
-                  required: [type, url]
-                  properties:
-                    type:
-                      type: string
-                      const: url
-                    url:
-                      type: string
-                      format: uri
-                      description: Public HTTPS URL.
-                - type: object
-                  required: [type, data, media_type]
-                  properties:
-                    type:
-                      type: string
-                      const: base64
-                    data:
-                      type: string
-                      format: byte
-                    media_type:
-                      type: string
-      description: Provider-neutral structured embedding input item.
-
     PlaygroundPreset:
       type: object
       required:
@@ -15398,138 +12856,10 @@ components:
           type: object
           additionalProperties: true
           default: {}
-    MemoryEntry:
-      type: object
-      description: A single persisted memory entry
-      properties:
-        id:
-          type: string
-          description: UUID
-        apiKeyId:
-          type: string
-        sessionId:
-          type: string
-          nullable: true
-        type:
-          type: string
-          enum:
-            - factual
-            - episodic
-            - procedural
-            - semantic
-        key:
-          type: string
-          description: Stable upsert key (e.g. preference:i_prefer_python)
-        content:
-          type: string
-        metadata:
-          type: object
-          additionalProperties: true
-        createdAt:
-          type: string
-          format: date-time
-        updatedAt:
-          type: string
-          format: date-time
-        expiresAt:
-          type: string
-          format: date-time
-          nullable: true
-        needsReindex:
-          type: integer
-          description: 1 if the vector for this memory is stale or missing
-    MemorySettingsExtended:
-      type: object
-      description: Extended memory settings including 7 new fields from plan 21. All fields are optional for PUT (patch semantics).
-      properties:
-        enabled:
-          type: boolean
-        maxTokens:
-          type: integer
-          minimum: 0
-          maximum: 16000
-        retentionDays:
-          type: integer
-          minimum: 1
-          maximum: 365
-        strategy:
-          type: string
-          enum:
-            - recent
-            - semantic
-            - hybrid
-        skillsEnabled:
-          type: boolean
-        embeddingSource:
-          type: string
-          enum:
-            - remote
-            - static
-            - transformers
-            - auto
-          description: Which embedding source to use. "auto" = remote > static > transformers.
-        embeddingProviderModel:
-          type: string
-          nullable: true
-          description: Embedding provider/model in "provider/model" format (e.g. openai/text-embedding-3-small).
-        transformersEnabled:
-          type: boolean
-          description: Opt-in for Transformers.js local MiniLM model (~400MB RAM)
-        staticEnabled:
-          type: boolean
-          description: Opt-in for static potion-base-8M local model
-        rerankEnabled:
-          type: boolean
-          description: Enable reranking step (+200-500ms/req)
-        rerankProviderModel:
-          type: string
-          nullable: true
-          description: Rerank provider/model in "provider/model" format
-        vectorStore:
-          type: string
-          enum:
-            - sqlite-vec
-            - qdrant
-            - auto
-          description: Which vector backend to use
-    QdrantSettings:
-      type: object
-      description: Qdrant vector database configuration (read shape — no raw apiKey)
-      properties:
-        enabled:
-          type: boolean
-        host:
-          type: string
-        port:
-          type: integer
-          minimum: 1
-          maximum: 65535
-        collection:
-          type: string
-        embeddingModel:
-          type: string
-        hasApiKey:
-          type: boolean
-        apiKeyMasked:
-          type: string
-          nullable: true
-          description: First 4 chars of the configured API key, or null
-    QdrantHealthResult:
-      type: object
-      description: Result of a Qdrant liveness probe
-      properties:
-        ok:
-          type: boolean
-        latencyMs:
-          type: number
-        error:
-          type: string
-          nullable: true
-          description: Sanitized error message (no stack traces)
     AgentSkill:
       type: object
       description: >-
-        Single entry in the Agent Skills catalog. Describes one OmniRoute REST API surface
+        Single entry in the Agent Skills catalog. Describes one 67router REST API surface
         (category: api) or CLI subcommand group (category: cli) with a canonical ID and a
         link to its SKILL.md documentation file.
       required: [id, name, description, category, area, rawUrl, githubUrl]
@@ -16570,7 +13900,7 @@ components:
     ModelPricing:
       type: object
       description: >-
-        Model price from the same pricing table OmniRoute uses for cost accounting.
+        Model price from the same pricing table 67router uses for cost accounting.
         Omitted when the price is unknown. A combo carries the price of its first
         visible target. A model with no pricing row that the catalog marks free is
         `"0"`. The string fields are OpenRouter-compatible (USD per token, plain

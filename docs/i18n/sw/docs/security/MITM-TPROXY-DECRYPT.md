@@ -4,7 +4,7 @@
 
 ---
 
-Usimbuaji fiche wa uwazi wa TPROXY ni **hali ya 5 ya kunasa** ya OmniRoute kwa
+Usimbuaji fiche wa uwazi wa TPROXY ni **hali ya 5 ya kunasa** ya 67router kwa
 mlundikano wa MITM wa [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Huingilia na **kusimbua fiche** trafiki ya ndani inayotoka ya HTTPS kwenye Linux
 kwa kutumia TPROXY ya kernel pamoja na uelekezaji wa kisera — **bila** kuiga `/etc/hosts` na
@@ -55,7 +55,7 @@ Itumie unapotaka kunasa na kusimbua fiche trafiki kutoka kwa mchakato ambao:
 - hutaki kuutatiza kwa kubadilisha proksi ya mfumo mzima.
 
 Kwa sababu uingiliaji hutokea katika kernel, mchakato unaoanzisha trafiki hauhitaji **mabadiliko
-yoyote ya usanidi** — lakini mchakato huo lazima uamini CA badilifu ambayo OmniRoute
+yoyote ya usanidi** — lakini mchakato huo lazima uamini CA badilifu ambayo 67router
 husakinisha (tazama [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -74,7 +74,7 @@ nyongeza haijajengwa), kipakiaji cha nyongeza (`src/mitm/tproxy/transparentSocke
 hurejesha `null` badala ya kutupa hitilafu. Kisha hali ya modi ya kunasa huripoti
 `available: false`, kigeuzi cha dashibodi **hulemazwa** kikiwa na kidokezo
 "Usimbuaji wa TPROXY unahitaji Linux + root + nyongeza asilia", na sehemu nyingine ya
-OmniRoute huendelea kufanya kazi.
+67router huendelea kufanya kazi.
 
 ---
 
@@ -262,7 +262,7 @@ kupita pembeni (**SO_MARK**):
 | **Usafishaji wa hitilafu**                             | Majibu ya hitilafu ya njia hupitia `sanitizeErrorMessage()` (Kanuni Thabiti #12).                                                                                                                                                                                                                                                                                                                                                         |
 
 **CA ya MITM ni uwezo wenye nguvu.** CA inayoaminiwa na OS ambayo inaweza kutia saini seva pangishi
-yoyote inamaanisha kuwa chochote kinachonaswa na OmniRoute kinaweza kusimbuliwa. Uwezo huu unadhibitiwa kupitia
+yoyote inamaanisha kuwa chochote kinachonaswa na 67router kinaweza kusimbuliwa. Uwezo huu unadhibitiwa kupitia
 hali bayana ya kunasa kwa TPROXY inayopatikana ndani ya mashine pekee, ambayo imezimwa kwa chaguo-msingi, na ingizo la
 hifadhi ya uaminifu huondolewa unaposimamisha hali hiyo.
 
@@ -373,7 +373,7 @@ hurejesha `available: false` wakati programu-jalizi haipo.
 ### Sheria za zamani za ngome baada ya hitilafu
 
 `revertTproxy()` ni kinyume kamili cha utumiaji na ni idempotenti. Kusimamisha
-hali hutengua sheria; ikiwa OmniRoute ilisimamishwa katikati ya kipindi, tumia kitendo cha
+hali hutengua sheria; ikiwa 67router ilisimamishwa katikati ya kipindi, tumia kitendo cha
 **Urekebishaji** cha AgentBridge (`POST /api/tools/agent-bridge/repair`) ili kutengua hali
 ya mfumo iliyoachwa bila usimamizi (udanganyifu wa DNS, CA ya msingi, proksi ya mfumo). Sheria za TPROXY
 za `mangle` na njia pia huondolewa kiotomatiki mfumo unapowashwa upya.

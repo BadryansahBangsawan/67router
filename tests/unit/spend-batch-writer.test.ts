@@ -10,8 +10,12 @@ process.env.DATA_DIR = TEST_DATA_DIR;
 const core = await import("../../src/lib/db/core.ts");
 const costRules = await import("../../src/domain/costRules.ts");
 const domainState = await import("../../src/lib/db/domainState.ts");
-const { SpendBatchWriter, flushSpendBatchWriter, resetSpendBatchWriterForTests } =
-  await import("../../src/lib/spend/batchWriter.ts");
+const {
+  SpendBatchWriter,
+  discardSpendBatchEntries,
+  flushSpendBatchWriter,
+  resetSpendBatchWriterForTests,
+} = await import("../../src/lib/spend/batchWriter.ts");
 
 function quietLogger() {
   return {
@@ -120,16 +124,13 @@ test("spend batch writer requeues failed flushes and flushes pending entries on 
   ]);
 });
 
-test("recordCost buffers writes while budget checks and summaries still see pending spend", async () => {
-  costRules.setBudget("key-live", { dailyLimitUsd: 5 });
+test("recordCost buffers writes while summaries still see pending spend", async () => {
   costRules.recordCost("key-live", 3.5);
   costRules.recordCost("key-live", 1.0);
 
   assert.deepEqual(domainState.loadCostEntries("key-live", 0), []);
   assert.equal(costRules.getDailyTotal("key-live"), 4.5);
   assert.equal(costRules.getCostSummary("key-live").dailyTotal, 4.5);
-  assert.equal(costRules.checkBudget("key-live", 0).periodUsed, 4.5);
-  assert.equal(costRules.checkBudget("key-live", 1).allowed, false);
 
   const flushResult = await flushSpendBatchWriter();
   assert.equal(flushResult.flushedEntries, 2);
@@ -139,10 +140,9 @@ test("recordCost buffers writes while budget checks and summaries still see pend
   assert.equal(costRules.getDailyTotal("key-live"), 4.5);
 });
 
-test("deleteBudget discards pending spend before it reaches the database", async () => {
-  costRules.setBudget("key-drop", { dailyLimitUsd: 10 });
+test("discardSpendBatchEntries drops pending spend before it reaches the database", async () => {
   costRules.recordCost("key-drop", 2);
-  costRules.deleteBudget("key-drop");
+  discardSpendBatchEntries("key-drop");
 
   const flushResult = await flushSpendBatchWriter();
   assert.equal(flushResult.flushedEntries, 0);

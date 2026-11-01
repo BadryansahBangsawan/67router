@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Lietuvių)
+# 67router Auto-Combo Engine (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # pigiausias pagal žetoną
 
 **Kas vyksta:**
 
-1. OmniRoute aptinka `auto/` priešdėlį faile `src/sse/handlers/chat.ts`
+1. 67router aptinka `auto/` priešdėlį faile `src/sse/handlers/chat.ts`
 2. Duomenų bazėje užklausia visų **aktyvių teikėjų jungčių**
 3. Atrenka tas, kurios turi galiojančius prisijungimo duomenis (API raktą arba OAuth prieigos raktą)
 4. Nustato kiekvienos jungties modelį (`connection.defaultModel` arba pirmąjį teikėjo modelį)
@@ -90,7 +90,7 @@ pertraukiklio `state`):
 
 Kiekvienas kandidatas taip pat turi šio API rakto žymą `excluded`. Išimtys saugomos
 atskirai kiekvienam API raktui (`auto_candidate_overrides` lentelė, migracija `128`) —
-OmniRoute yra vieno nuomininko sistema be `users` lentelės, todėl `apiKeyId` yra
+67router yra vieno nuomininko sistema be `users` lentelės, todėl `apiKeyId` yra
 artimiausia tikra kiekvieno kvietėjo tapatybė — ir pritaikomos kandidatų rinkinio
 kontroliniame taške, esančiame
 `open-sse/services/autoCombo/virtualFactory.ts`, naudojant gryną, vienetų testais
@@ -184,7 +184,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Dvi dažnos klaidos:
 
 - **`auto` nenaudoja jūsų kombinacijų.** `auto`/`auto/*` sukuria savo be konfigūracijos veikiančių kandidatų telkinį ir atsižvelgia į išsaugotas kombinacijas tik tuo atveju, jei kombinacija tiesiogine prasme pavadinta `auto` (nerekomenduojama). Norėdami nukreipti per kombinaciją, siųskite tikslų jos pavadinimą, o ne `auto`.
-- **`openrouter/auto` yra tikras mokamas OpenRouter produktas** („Automatiškai parenkamas geriausias prieinamas“), o ne OmniRoute alternatyvusis pavadinimas. Tai yra vienintelis statinis OpenRouter registro modelio įrašas (`open-sse/config/providers/registry/openrouter/index.ts`), už kurį atsiskaitoma atskirai. Norėdami jo neįtraukti į `auto` telkinius, naudokite Nustatymai → Maršruto parinkimas → Slėpti mokamus modelius.
+- **`openrouter/auto` yra tikras mokamas OpenRouter produktas** („Automatiškai parenkamas geriausias prieinamas“), o ne 67router alternatyvusis pavadinimas. Tai yra vienintelis statinis OpenRouter registro modelio įrašas (`open-sse/config/providers/registry/openrouter/index.ts`), už kurį atsiskaitoma atskirai. Norėdami jo neįtraukti į `auto` telkinius, naudokite Nustatymai → Maršruto parinkimas → Slėpti mokamus modelius.
 
 Pirminė painiava, kurią paaiškina šis dokumentas, aprašyta [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) ir [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111).
 
@@ -284,7 +284,7 @@ nustatytos reikšmės perduodamos esamoms variklio `config.modePack` / `config.b
 
 ## Visos maršruto parinkimo strategijos
 
-„OmniRoute“ kombinacijų variklis palaiko **20 maršruto parinkimo strategijų** (deklaruotų `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Pats automatinio kombinavimo variklis pasiekiamas naudojant strategiją `auto`, o kitos strategijos gali būti naudojamos išsaugotoms kombinacijoms.
+„67router“ kombinacijų variklis palaiko **20 maršruto parinkimo strategijų** (deklaruotų `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Pats automatinio kombinavimo variklis pasiekiamas naudojant strategiją `auto`, o kitos strategijos gali būti naudojamos išsaugotoms kombinacijoms.
 
 | Strategija          | Aprašymas                                                                                                                                                                                                         |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -335,7 +335,7 @@ griežtą balansą.
 
 `pipeline` derinys, turintis bent du modelius, gali įjungti planuotojo / vykdytojo maršruto parinkimą
 naudojant `config.agenticOrchestration.enabled`. Pirmasis tikslas atsakingas už planavimą ir galutinius atsakymus;
-antrasis tikslas generuoja kliento vietinio formato įrankių iškvietimus. „OmniRoute“ pagal užklausos protokolą aptinka
+antrasis tikslas generuoja kliento vietinio formato įrankių iškvietimus. „67router“ pagal užklausos protokolą aptinka
 tęsinius su įrankių rezultatais, klausia planuotojo, ar reikia dar vieno įrankių vykdymo ciklo,
 ir dinamiškai parenka vykdytoją arba planuotoją kaip galutinį klientui skirtą
 etapą.
@@ -861,11 +861,11 @@ Aprėpiama:
 
 ### Sąlyginiai tiesioginiai baziniai testai (NE CI aplinkoje — tikri teikėjai)
 
-| Komanda                                | Ką ji atlieka                                                                                                                |
-| :------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Tikras maršruto parinkimas tame pačiame procese su `RUN_COMBO_LIVE=1`; sukuriama veikiančios „OmniRoute“ DB momentinė kopija |
-| `npm run test:combo:live:vps`          | HTTP iškvietos į veikiantį „OmniRoute“ serverį (nustatykite `COMBO_LIVE_BASE_URL`)                                           |
-| `npm run test:combo:live:vps:failover` | Tas pats, tačiau su sąmoningai sukeltais perjungimo sutrikimo atveju scenarijais                                             |
+| Komanda                                | Ką ji atlieka                                                                                                               |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Tikras maršruto parinkimas tame pačiame procese su `RUN_COMBO_LIVE=1`; sukuriama veikiančios „67router“ DB momentinė kopija |
+| `npm run test:combo:live:vps`          | HTTP iškvietos į veikiantį „67router“ serverį (nustatykite `COMBO_LIVE_BASE_URL`)                                           |
+| `npm run test:combo:live:vps:failover` | Tas pats, tačiau su sąmoningai sukeltais perjungimo sutrikimo atveju scenarijais                                            |
 
 Šie baziniai testai tikrina tikrąjį duomenų perdavimo kelią (derinys → teikėjas → užbaigimas). Jie
 sąmoningai neįtraukti į CI, nes jiems reikia tikrų prisijungimo duomenų ir prieigos prie VPS.

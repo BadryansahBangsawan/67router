@@ -8,9 +8,9 @@
 > **Sabuntawa na ƙarshe:** 2026-09-16
 > **Masu karantawa:** Injiniyoyin da ke ƙara, kula da, ko gano matsalolin ayyukan da aka haɗa cikin gida (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Ayyukan da aka haɗa cikin gida kayan aikin tsari ne na gefe da ake girkawa a cikin na’ura, waɗanda OmniRoute ke girkawa, sa ido a kansu, kuma yake
+Ayyukan da aka haɗa cikin gida kayan aikin tsari ne na gefe da ake girkawa a cikin na’ura, waɗanda 67router ke girkawa, sa ido a kansu, kuma yake
 bayar da su a matsayin cikakkun wuraren da ake iya tura zirga-zirga zuwa gare su. Ba kamar masu samar da sabis na waje ba (waɗanda ake isa gare su ta intanet
-ta amfani da maɓallan API), ayyukan da aka haɗa cikin gida suna gudana a kan na’ura ɗaya da OmniRoute kuma suna sadarwa ta hanyar loopback.
+ta amfani da maɓallan API), ayyukan da aka haɗa cikin gida suna gudana a kan na’ura ɗaya da 67router kuma suna sadarwa ta hanyar loopback.
 
 ---
 
@@ -35,7 +35,7 @@ An haɗa ayyuka guda bakwai:
 
 | Aiki            | Kunshin npm                                   | Tsohuwar tashar jirgi | Manufa                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------- | --------------------------------------------- | :-------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                     |         20130         | Na'ura mai ba da hanya ta AI wadda OmniRoute zai iya amfani da ita a matsayin ƙaramin mai samarwa. Ana gabatar da samfura a matsayin `9router/{sub}/{model}`                                                                                                                                                                                                                |
+| **9Router**     | `9router`                                     |         20130         | Na'ura mai ba da hanya ta AI wadda 67router zai iya amfani da ita a matsayin ƙaramin mai samarwa. Ana gabatar da samfura a matsayin `9router/{sub}/{model}`                                                                                                                                                                                                                 |
 | **CLIProxyAPI** | Fayil ɗin binary na sakin GitHub (`cliproxy`) |         8317          | Adaftar wakili ta gida don hanyoyin tantancewar Anthropic CLI. Tana samar da madadin isar da buƙatu lokacin da OAuth tokens suka ƙare                                                                                                                                                                                                                                       |
 | **Mux**         | `mux` (`mux server` mara fuskar mai amfani)   |         8322          | Daemon na gida don tsara tafiyar wakilai (coder/mux). Ana sarrafa zagayowar rayuwarsa kawai — ba wurin isar da buƙatu ba ne (babu wakilcin LLM).                                                                                                                                                                                                                            |
 | **Bifrost**     | `@maximhq/bifrost`                            |         8080          | Backend na isarwar ƙofar AI na Go. Idan yana aiki, hanyar relay (`/v1/relay/`) tana zaɓarsa ta atomatik                                                                                                                                                                                                                                                                     |
@@ -45,21 +45,21 @@ An haɗa ayyuka guda bakwai:
 
 Dukkan ayyukan guda bakwai suna bin tsarin kulawa iri ɗaya:
 
-- OmniRoute yana girka su a ƙarƙashin `DATA_DIR/services/{name}/` (a keɓe daga `package.json` na OmniRoute)
-- OmniRoute yana ƙaddamar da su a matsayin child processes kuma yana sa ido a kansu
-- OmniRoute yana shigar da maɓallin API na wucin gadi cikin muhallin child process kuma yana sabunta shi ba tare da dakatar da aiki ba (inda ya dace)
+- 67router yana girka su a ƙarƙashin `DATA_DIR/services/{name}/` (a keɓe daga `package.json` na 67router)
+- 67router yana ƙaddamar da su a matsayin child processes kuma yana sa ido a kansu
+- 67router yana shigar da maɓallin API na wucin gadi cikin muhallin child process kuma yana sabunta shi ba tare da dakatar da aiki ba (inda ya dace)
 - Dukkan hanyoyin gudanarwa (`/api/services/*`) **LOCAL_ONLY** ne — ana iya isa gare su daga loopback kawai (ƙa'ida mai tsauri #17)
 
 ### Muhimman shawarwari (daga tsarin ƙira)
 
-| Shawara                                             | Ƙima                                                                                          |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Samun dama ga UI na asali na 9Router daga dashboard | Reverse proxy a `/dashboard/providers/services/9router/embed/*`                               |
-| Hanyar girkawa                                      | `npm install {package}` ta hanyar `execFile` (babu shell interpolation)                       |
-| Yanayin amfani                                      | An yi wa mai samarwa rajista a matsayin `9router/{sub}/{model}` a cikin routing engine        |
-| Gudanar da maɓallin API                             | OmniRoute yana ƙirƙira, yana ɓoyewa yayin ajiya (AES-256-GCM), kuma yana shigar da shi ta env |
-| Wurin dashboard                                     | `/dashboard/providers/services` (shafuka uku)                                                 |
-| Farawa ta atomatik                                  | Sauyawa ga kowane aiki, tsohon saiti OFF                                                      |
+| Shawara                                             | Ƙima                                                                                         |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Samun dama ga UI na asali na 9Router daga dashboard | Reverse proxy a `/dashboard/providers/services/9router/embed/*`                              |
+| Hanyar girkawa                                      | `npm install {package}` ta hanyar `execFile` (babu shell interpolation)                      |
+| Yanayin amfani                                      | An yi wa mai samarwa rajista a matsayin `9router/{sub}/{model}` a cikin routing engine       |
+| Gudanar da maɓallin API                             | 67router yana ƙirƙira, yana ɓoyewa yayin ajiya (AES-256-GCM), kuma yana shigar da shi ta env |
+| Wurin dashboard                                     | `/dashboard/providers/services` (shafuka uku)                                                |
+| Farawa ta atomatik                                  | Sauyawa ga kowane aiki, tsohon saiti OFF                                                     |
 
 ---
 
@@ -222,7 +222,7 @@ Buƙatun da ba na loopback ba za su karɓi `403 LOCAL_ONLY` ba tare da la’akar
 #### `POST /api/services/9router/install`
 
 Shigar da 9Router daga npm. Yana ƙirƙirar `DATA_DIR/services/9router/` tare da nasa
-`package.json` da `node_modules/`. Ba ya cin karo da dependencies na OmniRoute.
+`package.json` da `node_modules/`. Ba ya cin karo da dependencies na 67router.
 
 **Jikin buƙata** (duk na zaɓi ne):
 
@@ -383,7 +383,7 @@ Yana mayar da haɗaɗɗen matsayin kai-tsaye + DB, ciki har da metadata na siga 
 #### `POST /api/services/9router/auto-start`
 
 Kunna ko kashe tutar farawa ta atomatik. Lokacin da `enabled: true`, service ɗin zai fara da kansa
-a lokacin da OmniRoute ya sake farawa na gaba (idan an girka service ɗin).
+a lokacin da 67router ya sake farawa na gaba (idan an girka service ɗin).
 
 **Jikin buƙata:**
 
@@ -592,7 +592,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Wannan proxy:
 
 - Yana tura request zuwa `http://127.0.0.1:{port}/{path}` (loopback kawai)
-- Yana cire headers na `cookie` da `authorization` masu shigowa (babu fallasar session na OmniRoute)
+- Yana cire headers na `cookie` da `authorization` masu shigowa (babu fallasar session na 67router)
 - Yana saka `Authorization: Bearer {apiKey}` don authentication na 9Router
 - Yana cire `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` daga response
 - Yana sake rubuta responses na HTML don saka `<base href>` da daidaita absolute paths (`/foo` → `/dashboard/.../embed/foo`)
@@ -628,7 +628,7 @@ matakai.
 ### Saka API key
 
 9Router da Mux suna buƙatar API key/bearer token don HTTP endpoints nasu.
-OmniRoute:
+67router:
 
 1. Yana samar da key ta hanyar `crypto.randomBytes(32).toString("base64url")` tare da
    prefix na musamman ga service (`nr_` don 9Router, `mx_` don Mux).
@@ -808,7 +808,7 @@ Idan embedded service ɗin yana samar da endpoint mai dacewa da OpenAI na `/v1/c
 
 1. Duba `GET /api/services/{name}/logs` (ko sashen Logs a cikin dashboard). Nemo
    layuka kamar `Error: ENOENT`, `address already in use`, ko `Cannot find module`.
-2. Tabbatar cewa `npm` yana cikin PATH: gudanar da `which npm` daga asusun mai amfani ɗaya da ke gudanar da OmniRoute.
+2. Tabbatar cewa `npm` yana cikin PATH: gudanar da `which npm` daga asusun mai amfani ɗaya da ke gudanar da 67router.
 3. Tabbatar cewa an girka sabis ɗin: duba `GET /api/services/{name}/status` don
    `installedVersion`. Idan `null` ne, fara gudanar da girkawa.
 4. Duba cewa `DATA_DIR/services/{name}/node_modules/` yana nan kuma ba fanko ba ne.
@@ -846,7 +846,7 @@ wajen farawa, ƙara `healthIntervalMs` zuwa 5000 da `stopTimeoutMs` zuwa 30 000.
 3. Ana iya saita tashar ga kowane sabis a cikin `bootstrap.ts` ta hanyar filin `port`.
 
 **Lura:** A tsohon tsari, 9Router yana amfani da tashar 20130 musamman don kauce wa karo da
-tsohuwar tashar OmniRoute ta 20128.
+tsohuwar tashar 67router ta 20128.
 
 ---
 
@@ -856,13 +856,13 @@ tsohuwar tashar OmniRoute ta 20128.
 
 **Dalilai:**
 
-- Tsarin OmniRoute ba shi da izinin rubutu a cikin `DATA_DIR` ko babban kundinsa.
+- Tsarin 67router ba shi da izinin rubutu a cikin `DATA_DIR` ko babban kundinsa.
 - Ana gudanarwa a cikin Docker rootless ba tare da izinin rubutu a kan volume da aka haɗa ba.
 
 **Gyara:**
 
 1. Duba `DATA_DIR` (tsohon ƙima: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Tabbatar cewa mai amfani da tsarin OmniRoute ne ya mallaki kundin: `chown -R $USER ~/.omniroute/`
+2. Tabbatar cewa mai amfani da tsarin 67router ne ya mallaki kundin: `chown -R $USER ~/.omniroute/`
 3. A cikin Docker, tabbatar cewa volume mount yana da ingantattun izini ga mai amfani da container.
 
 ---
@@ -910,16 +910,16 @@ Duba `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **T: Shin 9Router da CLIProxyAPI za su kasance samammu a deployments na production/cloud?**
 
-Eh. Duk ayyukan biyu suna bin tsarin local-first iri ɗaya da OmniRoute kansa. Suna aiki
+Eh. Duk ayyukan biyu suna bin tsarin local-first iri ɗaya da 67router kansa. Suna aiki
 a kan na'ura ɗaya kuma suna sadarwa ta loopback. "Production" a nan yana nufin VPS
-ko local server inda aka deploy OmniRoute, ba wani remote cloud provider ba.
+ko local server inda aka deploy 67router, ba wani remote cloud provider ba.
 
 ---
 
 **T: Ta yaya zan debug supervisor?**
 
 1. Bi SSE log stream kai tsaye: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Duba structured logs a cikin output na pino na OmniRoute waɗanda aka tace ta
+2. Duba structured logs a cikin output na pino na 67router waɗanda aka tace ta
    namespace na `service:supervisor`.
 3. Bincika row na DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Yi amfani da `GET /api/services/9router/status` don ganin live state na yanzu, PID, health,

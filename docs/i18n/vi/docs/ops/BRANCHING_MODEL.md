@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute sử dụng mô hình phát hành **chu kỳ song song**: một nhánh `release/vX.Y.Z`
+67router sử dụng mô hình phát hành **chu kỳ song song**: một nhánh `release/vX.Y.Z`
 riêng cho chu kỳ đang hoạt động, `main` cho dòng đã phát hành và một thẻ
 `vX.Y.Z` bất biến khi chu kỳ đó được phát hành. Việc thấy các commit được đưa vào cả `release/*` _lẫn_
 `main` là điều bình thường — không phải nhầm lẫn.

@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Čeština)
+# 🌐 67router Proxy Guide (Čeština)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Obcházejte geografická omezení, chraňte svou identitu a směrujte provoz AI přes libovolný proxy server — bez složité konfigurace.**
 
-OmniRoute obsahuje plnohodnotný systém pro správu proxy serverů, který umožňuje směrovat provoz k poskytovatelům AI přes proxy servery HTTP, HTTPS nebo SOCKS5. Ať už se nacházíte v blokované oblasti, potřebujete rotaci IP adres nebo chcete skrýt svůj digitální otisk — tato příručka pokrývá vše.
+67router obsahuje plnohodnotný systém pro správu proxy serverů, který umožňuje směrovat provoz k poskytovatelům AI přes proxy servery HTTP, HTTPS nebo SOCKS5. Ať už se nacházíte v blokované oblasti, potřebujete rotaci IP adres nebo chcete skrýt svůj digitální otisk — tato příručka pokrývá vše.
 
 ---
 
@@ -51,7 +51,7 @@ Proxy servery jsou užitečné i mimo blokované oblasti:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Server OmniRoute                        │
+│                       Server 67router                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Registr     │    │ Dispečer     │    │ Fetch (undici)   │  │
@@ -83,7 +83,7 @@ Proxy servery jsou užitečné i mimo blokované oblasti:
 
 ## Čtyřúrovňový systém proxy
 
-OmniRoute podporuje konfiguraci proxy na **čtyřech nezávislých úrovních**, které se vyhodnocují podle priority:
+67router podporuje konfiguraci proxy na **čtyřech nezávislých úrovních**, které se vyhodnocují podle priority:
 
 ```
 Pořadí vyhodnocování priorit (od nejvyšší → po nejnižší):
@@ -96,7 +96,7 @@ Pořadí vyhodnocování priorit (od nejvyšší → po nejnižší):
 
 ### Jak vyhodnocování funguje
 
-Když OmniRoute odešle požadavek nadřazenému poskytovateli, zavolá `resolveProxyForConnectionFromRegistry()`, která postupně zkontroluje jednotlivé úrovně:
+Když 67router odešle požadavek nadřazenému poskytovateli, zavolá `resolveProxyForConnectionFromRegistry()`, která postupně zkontroluje jednotlivé úrovně:
 
 1. **Úroveň účtu** — Je tomuto konkrétnímu ID připojení přiřazena proxy?
 2. **Úroveň poskytovatele** — Je tomuto poskytovateli (např. `openai`) přiřazena proxy?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Import/export
 
-Proxy jsou součástí systému **zálohování/obnovení**. Při exportu konfigurace OmniRoute:
+Proxy jsou součástí systému **zálohování/obnovení**. Při exportu konfigurace 67router:
 
 1. Přejděte do **Dashboard → Settings → Backup**
 2. Klikněte na **Export** — registr proxy a přiřazení jsou zahrnuty
@@ -248,7 +248,7 @@ Registr proxy podporuje také **upsert podle hostitele a portu** — pokud impor
 
 ### Migrace ze starší verze
 
-Pokud jste nakonfigurovali proxy v dřívější verzi (před zavedením registru), OmniRoute je automaticky migruje:
+Pokud jste nakonfigurovali proxy v dřívější verzi (před zavedením registru), 67router je automaticky migruje:
 
 ```
 Starší úložiště key_value → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ K tomu dojde jednou při prvním spuštění po upgradu. Pro opětovné spuště
 
 > 🆕 **Přispěl [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Problém [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute se integruje s komunitní platformou **[1proxy](https://1proxy-api.aitradepulse.com)** a poskytuje přístup ke **stovkám bezplatných, ověřených proxy serverů** z celého světa. To je ideální pro uživatele, kteří nemají vlastní proxy infrastrukturu.
+67router se integruje s komunitní platformou **[1proxy](https://1proxy-api.aitradepulse.com)** a poskytuje přístup ke **stovkám bezplatných, ověřených proxy serverů** z celého světa. To je ideální pro uživatele, kteří nemají vlastní proxy infrastrukturu.
 
 ### Jak to funguje
 
@@ -273,7 +273,7 @@ OmniRoute se integruje s komunitní platformou **[1proxy](https://1proxy-api.ait
 └─────────────┘                  └─────────────────┘               └──────────┘
 ```
 
-1. **Synchronizace** — OmniRoute načítá ověřené proxy servery z API 1proxy
+1. **Synchronizace** — 67router načítá ověřené proxy servery z API 1proxy
 2. **Uložení** — Proxy servery se ukládají do stejné tabulky `proxy_registry` s hodnotou `source = 'oneproxy'`
 3. **Filtrování** — Filtrování podle protokolu, země a skóre kvality
 4. **Rotace** — Výběr nejlepšího proxy serveru pomocí strategie založené na kvalitě, náhodném nebo sekvenčním výběru
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Ochrana proti detekci a utajení
 
-OmniRoute nesměruje provoz pouze přes proxy — zároveň zajišťuje, aby provoz vypadal legitimně:
+67router nesměruje provoz pouze přes proxy — zároveň zajišťuje, aby provoz vypadal legitimně:
 
 ### Napodobení otisku TLS
 
@@ -407,13 +407,13 @@ Barevně odlišené štítky na řídicím panelu ukazují, která úroveň prox
 
 ## Režimy nadřazené proxy
 
-U poskytovatelů používajících vzor CLIProxyAPI podporuje OmniRoute tři režimy nadřazené proxy:
+U poskytovatelů používajících vzor CLIProxyAPI podporuje 67router tři režimy nadřazené proxy:
 
-| Režim         | Popis                                                     |
-| ------------- | --------------------------------------------------------- |
-| `native`      | OmniRoute zpracovává směrování přes proxy přímo (výchozí) |
-| `cliproxyapi` | Deleguje zpracování externí instanci CLIProxyAPI          |
-| `fallback`    | Nejprve zkusí nativní režim a poté přejde na CLIProxyAPI  |
+| Režim         | Popis                                                    |
+| ------------- | -------------------------------------------------------- |
+| `native`      | 67router zpracovává směrování přes proxy přímo (výchozí) |
+| `cliproxyapi` | Deleguje zpracování externí instanci CLIProxyAPI         |
+| `fallback`    | Nejprve zkusí nativní režim a poté přejde na CLIProxyAPI |
 
 Konfigurace pro jednotlivé poskytovatele:
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API tunelů
 
-Informace o zpřístupnění instance OmniRoute veřejnému internetu (Cloudflare/ngrok/Tailscale) namísto směrování odchozího provozu přes proxy naleznete v souboru [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API tunelů se nachází pod `/api/tunnels/{cloudflared,ngrok,tailscale}/*` a je nezávislé na výše zdokumentovaném řetězci odchozích proxy.
+Informace o zpřístupnění instance 67router veřejnému internetu (Cloudflare/ngrok/Tailscale) namísto směrování odchozího provozu přes proxy naleznete v souboru [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API tunelů se nachází pod `/api/tunnels/{cloudflared,ngrok,tailscale}/*` a je nezávislé na výše zdokumentovaném řetězci odchozích proxy.
 
 ### API 1proxy
 
@@ -516,7 +516,7 @@ Nastavte `ENABLE_SOCKS5_PROXY=true` v souboru `.env` a restartujte aplikaci.
 
 ### Chyby „socket hang up“ při použití proxy
 
-U levných proxy, které ukončují neaktivní připojení, je to běžné. OmniRoute to již řeší následujícími způsoby:
+U levných proxy, které ukončují neaktivní připojení, je to běžné. 67router to již řeší následujícími způsoby:
 
 - Zakázáním udržování připojení na proxy spojeních (`keepAliveTimeout: 1`)
 - Zakázáním pipeliningu (`pipelining: 0`)
@@ -526,7 +526,7 @@ Pokud problém přetrvává, zkuste jinou proxy nebo použijte funkci rotace 1pr
 
 ### „unsupported_country_region_territory“ během OAuth
 
-Před zahájením procesu OAuth se ujistěte, že je proxy nakonfigurována. OmniRoute směruje výměnu tokenů OAuth přes nakonfigurovanou proxy. Nejprve nastavte globální proxy nebo proxy na úrovni poskytovatele a poté se připojte.
+Před zahájením procesu OAuth se ujistěte, že je proxy nakonfigurována. 67router směruje výměnu tokenů OAuth přes nakonfigurovanou proxy. Nejprve nastavte globální proxy nebo proxy na úrovni poskytovatele a poté se připojte.
 
 ### Proxy se nepoužívá
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Kontrola stavu proxy (v3.8.16+)
 
-Mechanismus **rychlého selhání proxy** v OmniRoute (`src/lib/proxyHealth.ts`) detekuje nefunkční proxy za méně než 2 s pomocí rychlé kontroly připojení TCP a poté **uloží výsledek do mezipaměti**, aby se předešlo režii u každého požadavku.
+Mechanismus **rychlého selhání proxy** v 67router (`src/lib/proxyHealth.ts`) detekuje nefunkční proxy za méně než 2 s pomocí rychlé kontroly připojení TCP a poté **uloží výsledek do mezipaměti**, aby se předešlo režii u každého požadavku.
 
 ### Jak to funguje
 
@@ -659,11 +659,11 @@ Vlastní porty uvedené v URL (`http://host:9999`) mají vždy přednost před v
 
 ## Analytika a pozorovatelnost proxy serverů
 
-OmniRoute sleduje využití jednotlivých proxy serverů, aby operátorům pomohl diagnostikovat vzorce směrování, nárůsty latence a opakující se selhání.
+67router sleduje využití jednotlivých proxy serverů, aby operátorům pomohl diagnostikovat vzorce směrování, nárůsty latence a opakující se selhání.
 
 ### Co se sleduje
 
-Pro každý požadavek směrovaný přes nakonfigurovaný proxy server zaznamenává OmniRoute následující údaje:
+Pro každý požadavek směrovaný přes nakonfigurovaný proxy server zaznamenává 67router následující údaje:
 
 | Metrika      | Popis                                                        |
 | ------------ | ------------------------------------------------------------ |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Rozhodovací strom strategie rotace
 
-Pokud je k jednomu rozsahu přiřazeno více proxy serverů, OmniRoute používá **strategii rotace**, pomocí které vybírá proxy server pro každý požadavek. Strategie se konfiguruje na úrovni rozsahu (globálně, pro jednotlivé poskytovatele, účty nebo kombinace).
+Pokud je k jednomu rozsahu přiřazeno více proxy serverů, 67router používá **strategii rotace**, pomocí které vybírá proxy server pro každý požadavek. Strategie se konfiguruje na úrovni rozsahu (globálně, pro jednotlivé poskytovatele, účty nebo kombinace).
 
 ### Dostupné strategie
 

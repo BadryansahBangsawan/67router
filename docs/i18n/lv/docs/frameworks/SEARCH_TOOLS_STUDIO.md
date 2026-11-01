@@ -169,5 +169,4 @@ API atslēgas vietturis vienmēr ir `$OMNIROUTE_API_KEY` (D11, koplietots ar Pla
 - Galvenais plāns: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Funkcionalitātes plāns: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Meklēšanas pakalpojumu sniedzēju reģistrs: `open-sse/config/searchRegistry.ts`
-- Playground Studio (koplietotais `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Tīmekļa satura izgūšanas aizmugursistēma: `src/app/api/v1/web/fetch/route.ts`

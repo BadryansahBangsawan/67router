@@ -235,7 +235,6 @@ test("ACP agents route requires management authentication before CLI discovery",
 
 test("T06 route payload validation uses validateBody in critical endpoints", () => {
   const targets = [
-    "src/app/api/usage/budget/route.ts",
     "src/app/api/policies/route.ts",
     "src/app/api/fallback/chains/route.ts",
     "src/app/api/models/route.ts",
@@ -243,11 +242,6 @@ test("T06 route payload validation uses validateBody in critical endpoints", () 
     "src/app/api/pricing/route.ts",
     "src/app/api/rate-limits/route.ts",
     "src/app/api/resilience/route.ts",
-    "src/app/api/v1/embeddings/route.ts",
-    "src/app/api/v1/images/generations/route.ts",
-    "src/app/api/v1/audio/speech/route.ts",
-    "src/app/api/v1/moderations/route.ts",
-    "src/app/api/v1/rerank/route.ts",
     "src/app/api/oauth/[provider]/[action]/route.ts",
     "src/app/api/oauth/cursor/import/route.ts",
     "src/app/api/oauth/kiro/import/route.ts",
@@ -259,7 +253,6 @@ test("T06 route payload validation uses validateBody in critical endpoints", () 
     "src/app/api/combos/[id]/route.ts",
     "src/app/api/combos/test/route.ts",
     "src/app/api/db-backups/route.ts",
-    "src/app/api/evals/route.ts",
     "src/app/api/keys/[id]/route.ts",
     "src/app/api/models/alias/route.ts",
     "src/app/api/provider-nodes/route.ts",

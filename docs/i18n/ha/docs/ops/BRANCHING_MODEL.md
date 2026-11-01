@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana amfani da tsarin fitarwa na **zagayowar layi ɗaya**: reshen `release/vX.Y.Z`
+67router yana amfani da tsarin fitarwa na **zagayowar layi ɗaya**: reshen `release/vX.Y.Z`
 na musamman don zagayowar da ake aiki a kai, `main` don layin da aka wallafa, da kuma alamar
 `vX.Y.Z` marar canzawa lokacin da aka fitar da wannan zagayowar. Ganin ana shigar da commits a `release/*` _da kuma_ a
 `main` abu ne da ake tsammani — ba ruɗani ba ne.

@@ -6,11 +6,11 @@
 
 # Vodič za Progressive Web App (PWA)
 
-OmniRoute dolazi kao potpuno instalabilna Progressive Web aplikacija. Kada pristupite kontrolnoj tabli iz bilo kojeg mobilnog pretraživača — Android (Chrome) ili iOS (Safari) — možete odabrati "Dodaj na početni ekran" (Add to Home Screen) i dobiti iskustvo slično izvornoj (native) aplikaciji bez potrebe za prodavnicom aplikacija.
+67router dolazi kao potpuno instalabilna Progressive Web aplikacija. Kada pristupite kontrolnoj tabli iz bilo kojeg mobilnog pretraživača — Android (Chrome) ili iOS (Safari) — možete odabrati "Dodaj na početni ekran" (Add to Home Screen) i dobiti iskustvo slično izvornoj (native) aplikaciji bez potrebe za prodavnicom aplikacija.
 
 ## Šta je PWA?
 
-Progressive Web aplikacija pretvara OmniRoute web kontrolnu tablu u nešto što izgleda i djeluje kao izvorna mobilna aplikacija. Jednom instalirana, ona:
+Progressive Web aplikacija pretvara 67router web kontrolnu tablu u nešto što izgleda i djeluje kao izvorna mobilna aplikacija. Jednom instalirana, ona:
 
 - Pokreće se sa vašeg početnog ekrana sa svojom ikonicom
 - Otvara se preko cijelog ekrana — bez adresne trake pretraživača ili korisničkog interfejsa sa karticama
@@ -22,26 +22,26 @@ Progressive Web aplikacija pretvara OmniRoute web kontrolnu tablu u nešto što 
 
 ### Android (Chrome)
 
-1. Otvorite OmniRoute kontrolnu tablu u Chrome-u: `http://YOUR_IP:20128`
-2. Chrome će automatski prikazati baner **"Dodaj OmniRoute na početni ekran"**, ili:
+1. Otvorite 67router kontrolnu tablu u Chrome-u: `http://YOUR_IP:20128`
+2. Chrome će automatski prikazati baner **"Dodaj 67router na početni ekran"**, ili:
    - Dodirnite meni **⋮** (tri tačke) → **"Dodaj na početni ekran"** ili **"Instaliraj aplikaciju"**
 3. Potvrdite upit
-4. OmniRoute se pojavljuje na vašem početnom ekranu kao samostalna aplikacija
+4. 67router se pojavljuje na vašem početnom ekranu kao samostalna aplikacija
 
 ### iOS (Safari)
 
-1. Otvorite OmniRoute kontrolnu tablu u Safari-ju: `http://YOUR_IP:20128`
+1. Otvorite 67router kontrolnu tablu u Safari-ju: `http://YOUR_IP:20128`
 2. Dodirnite dugme **Dijeli** (kvadrat sa strelicom)
 3. Skrolujte dole i dodirnite **"Dodaj na početni ekran"**
-4. Imenujte je (podrazumijevano je "OmniRoute") i dodirnite **Dodaj**
-5. OmniRoute se pojavljuje na vašem početnom ekranu sa ikonicom aplikacije
+4. Imenujte je (podrazumijevano je "67router") i dodirnite **Dodaj**
+5. 67router se pojavljuje na vašem početnom ekranu sa ikonicom aplikacije
 
 ### Desktop (Chrome / Edge)
 
-1. Otvorite OmniRoute kontrolnu tablu
-2. Kliknite na **ikonu za instalaciju** u adresnoj traci (ili ⋮ → "Instaliraj OmniRoute...")
+1. Otvorite 67router kontrolnu tablu
+2. Kliknite na **ikonu za instalaciju** u adresnoj traci (ili ⋮ → "Instaliraj 67router...")
 3. Potvrdite upit
-4. OmniRoute se otvara kao samostalan prozor — bez kartica, bez adresne trake
+4. 67router se otvara kao samostalan prozor — bez kartica, bez adresne trake
 
 ## Funkcionalnosti
 
@@ -51,15 +51,15 @@ Manifest je konfigurisan sa `display: "fullscreen"`, što znači da instalirana 
 
 ### Offline podrška
 
-OmniRoute uključuje service worker (`sw.js`) koji omogućava inteligentno keširanje:
+67router uključuje service worker (`sw.js`) koji omogućava inteligentno keširanje:
 
-| Tip resursa                                                    | Strategija                                                        | Ponašanje                                                                                          |
-| -------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **App Shell**                                                  | Prvo keš (Cache-first)                                            | `/`, `/offline`, manifest i ikonice se unaprijed keširaju pri instalaciji                          |
-| **Statički resursi** (CSS, JS, slike, fontovi)                 | Prvo mreža sa rezervom u kešu (Network-first with cache fallback) | Dohvata svježe podatke sa mreže; vraća se na keš ako je offline                                    |
-| **Next.js paketi** (`/_next/`)                                 | Prvo mreža sa ažuriranjem keša (Network-first with cache update)  | Dohvata sa mreže i ažurira keš; servira keširanu verziju ako je offline                            |
-| **Navigacioni zahtjevi**                                       | Zaobilaženje (nikada se ne presreću)                              | Pretraživač upravlja HTTP/3→HTTP/2 rezervom; mrtav QUIC socket ne smije postati `Response.error()` |
-| **API / rute kontrolne table** (`/api/`, `/a2a`, `/dashboard`) | Zaobilaženje (nikada se ne kešira)                                | Uvijek ide direktno na server — nikada se ne presreće od strane service workera                    |
+| Tip resursa                                            | Strategija                                                        | Ponašanje                                                                                          |
+| ------------------------------------------------------ | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **App Shell**                                          | Prvo keš (Cache-first)                                            | `/`, `/offline`, manifest i ikonice se unaprijed keširaju pri instalaciji                          |
+| **Statički resursi** (CSS, JS, slike, fontovi)         | Prvo mreža sa rezervom u kešu (Network-first with cache fallback) | Dohvata svježe podatke sa mreže; vraća se na keš ako je offline                                    |
+| **Next.js paketi** (`/_next/`)                         | Prvo mreža sa ažuriranjem keša (Network-first with cache update)  | Dohvata sa mreže i ažurira keš; servira keširanu verziju ako je offline                            |
+| **Navigacioni zahtjevi**                               | Zaobilaženje (nikada se ne presreću)                              | Pretraživač upravlja HTTP/3→HTTP/2 rezervom; mrtav QUIC socket ne smije postati `Response.error()` |
+| **API / rute kontrolne table** (`/api/`, `/dashboard`) | Zaobilaženje (nikada se ne kešira)                                | Uvijek ide direktno na server — nikada se ne presreće od strane service workera                    |
 
 ### Offline stranica
 
@@ -72,7 +72,7 @@ Kada mreža nije dostupna i korisnik pređe na novu stranicu, service worker ser
 
 ### Ikonice aplikacije
 
-OmniRoute pruža ikonice optimizovane za svaku platformu:
+67router pruža ikonice optimizovane za svaku platformu:
 
 | Datoteka               | Veličina         | Koristi se za                             |
 | ---------------------- | ---------------- | ----------------------------------------- |
@@ -95,9 +95,9 @@ Generisano od strane Next.js putem `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -147,9 +147,9 @@ Nalazi se na `src/shared/components/PwaRegister.tsx`, ova klijentska komponenta:
 
 ## Korištenje sa Termux-om (Android)
 
-Kada pokrećete OmniRoute na Androidu putem Termux-a, PWA radi besprijekorno:
+Kada pokrećete 67router na Androidu putem Termux-a, PWA radi besprijekorno:
 
-1. Pokrenite OmniRoute u Termux-u: `npx omniroute`
+1. Pokrenite 67router u Termux-u: `npx omniroute`
 2. Otvorite Chrome na istom telefonu: `http://localhost:20128`
 3. Instalirajte PWA putem "Add to Home Screen"
 4. PWA se povezuje sa lokalnim Termux serverom — sve se pokreće na samom uređaju
@@ -158,7 +158,7 @@ Ova kombinacija znači da je vaš Android telefon istovremeno i server (Termux) 
 
 ## Korištenje sa drugih uređaja
 
-Instalirajte PWA na bilo koji uređaj koji ima pristup vašem OmniRoute serveru putem preglednika:
+Instalirajte PWA na bilo koji uređaj koji ima pristup vašem 67router serveru putem preglednika:
 
 - **Drugi telefon/tablet**: Idite na `http://PHONE_IP:20128` i instalirajte PWA
 - **Laptop**: Otvorite Chrome/Edge i instalirajte ga kao desktop PWA

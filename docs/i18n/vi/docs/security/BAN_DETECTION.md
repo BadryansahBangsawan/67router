@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute quét các phản hồi lỗi từ upstream để tìm các tín hiệu cho biết một
+67router quét các phản hồi lỗi từ upstream để tìm các tín hiệu cho biết một
 **tài khoản của nhà cung cấp đã ngừng hoạt động vĩnh viễn** (bị đình chỉ / vô hiệu hóa / cấm do vi phạm ToS) và khi
 khớp, chuyển kết nối đó sang **trạng thái `banned` cuối cùng** để kết nối này không
 còn được chọn cho các yêu cầu. Đây là nội dung được cấu hình bởi thẻ cài đặt

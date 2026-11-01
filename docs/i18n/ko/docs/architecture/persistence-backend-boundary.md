@@ -10,7 +10,7 @@
 
 ## 배경
 
-현재 OmniRoute는 `src/lib/db/`에서 도메인 중심의 영속성 함수를 제공하며,
+현재 67router는 `src/lib/db/`에서 도메인 중심의 영속성 함수를 제공하며,
 `src/lib/db/core.ts`에서 반환되는 공유 연결은 `src/lib/db/adapters/types.ts`의 동기식 `SqliteAdapter`
 계약을 구현합니다. 이 어댑터는 여러 SQLite 런타임을 지원하지만, 해당 인터페이스는 여전히 SQLite에
 특화되어 있습니다. 여기에는 동기식 준비된 문, `pragma`, 지연 및 즉시 트랜잭션, 네이티브/파일 복사

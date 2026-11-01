@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nwere ike ịrụ ọrụ dịka sava na-enweghị ihu njirimara na Android site na Termux. A naghị akwado ngwa desktọọpụ Electron na Termux, mana dashboard weebụ na API dakọtara na OpenAI na-arụ ọrụ site na ihe nchọgharị mpaghara ma ọ bụ site na ngwaọrụ ndị ọzọ nọ n'otu netwọk ahụ.
+67router nwere ike ịrụ ọrụ dịka sava na-enweghị ihu njirimara na Android site na Termux. A naghị akwado ngwa desktọọpụ Electron na Termux, mana dashboard weebụ na API dakọtara na OpenAI na-arụ ọrụ site na ihe nchọgharị mpaghara ma ọ bụ site na ngwaọrụ ndị ọzọ nọ n'otu netwọk ahụ.
 
 ## Ihe Ndị Achọrọ Tupu Amalite
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Ụdị Node.js:** OmniRoute chọrọ Node `>=22.22.2 <23 || >=24.0.0 <27` (nke kwekọrọ na `engines` dị na `package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` nke Termux na-ebukarị Node 20 LTS, nke **anaghịzi akwado** — kama nke ahụ, wụnye `pkg install nodejs` (ụdị dị ugbu a) ma nyochaa na `node --version` na-egosi ahịrị 22.x/24.x+.
+> **Ụdị Node.js:** 67router chọrọ Node `>=22.22.2 <23 || >=24.0.0 <27` (nke kwekọrọ na `engines` dị na `package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` nke Termux na-ebukarị Node 20 LTS, nke **anaghịzi akwado** — kama nke ahụ, wụnye `pkg install nodejs` (ụdị dị ugbu a) ma nyochaa na `node --version` na-egosi ahịrị 22.x/24.x+.
 
-Ọ bụrụ na mkpokọta ngwugwu native ada, mee iwu `pkg install` dị n'elu ọzọ, wee nwaa nrụnye OmniRoute ọzọ.
+Ọ bụrụ na mkpokọta ngwugwu native ada, mee iwu `pkg install` dị n'elu ọzọ, wee nwaa nrụnye 67router ọzọ.
 
 ## Nrụnye
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Otu E Si Agba Ya
 
-Bido OmniRoute n'ụdị sava na-enweghị ihu njirimara:
+Bido 67router n'ụdị sava na-enweghị ihu njirimara:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Dịka ọmụmaatụ:
 http://192.168.1.50:20128
 ```
 
-Debe ekwentị na client n'otu netwọk a tụkwasịrị obi. Ọ bụrụ na ị mee ka OmniRoute dịrị site n'èzí ekwentị ahụ, gbanye igodo API na nyocha njirimara dashboard.
+Debe ekwentị na client n'otu netwọk a tụkwasịrị obi. Ọ bụrụ na ị mee ka 67router dịrị site n'èzí ekwentị ahụ, gbanye igodo API na nyocha njirimara dashboard.
 
 ## Ebe Nchekwa Data
 
-Na ndabara, OmniRoute na-echekwa data n'okpuru ndekọ ụlọ Termux, dịka omume ụzọ data nke akụkụ sava a na-eji na Linux. Iji tinye database n'ebe akọwapụtara nke ọma:
+Na ndabara, 67router na-echekwa data n'okpuru ndekọ ụlọ Termux, dịka omume ụzọ data nke akụkụ sava a na-eji na Linux. Iji tinye database n'ebe akọwapụtara nke ọma:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Platform Anaghị Akwado: android (arịrịọ ọ bụla na-eweghachi HTTP 500)
 
-**Mgbaàmà:** `omniroute` / `omniroute serve` na-ebipụta `✔ OmniRoute is running!`, mana arịrịọ dashboard ma ọ bụ API ọ bụla na-eweghachi naanị `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` na-anọgide ghe oghe, `APP_LOG_LEVEL=debug` anaghị ebipụta ihe bara uru, ma ọdịnaya nzaghachi bụ ederede nkịtị (`Internal Server Error`) na-enweghị nkọwa JSON.
+**Mgbaàmà:** `omniroute` / `omniroute serve` na-ebipụta `✔ 67router is running!`, mana arịrịọ dashboard ma ọ bụ API ọ bụla na-eweghachi naanị `500 Internal Server Error`. `~/.omniroute/logs/application/app.log` na-anọgide ghe oghe, `APP_LOG_LEVEL=debug` anaghị ebipụta ihe bara uru, ma ọdịnaya nzaghachi bụ ederede nkịtị (`Internal Server Error`) na-enweghị nkọwa JSON.
 
 **Ihe kpatara ya:** Ụfọdụ build Termux/Node na-akọ `process.platform === "android"`. `getCacheDirectory()` nke Next.js anaghị akwado platform ahụ: ọ chọrọ ka `~/.cache` (ma ọ bụ ndekọ tmp izugbe) _dịrịrị_ tupu oge eruo, ma ọ bụghị ya, ọ ga-ada mgbe ọ na-ebunye instrumentation hook site na njehie a:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-N'ihi na hook ahụ anaghị ebunye ma ọlị, ndekọ log anaghị amalite — nke a na-eme ka o yie na enweghị ụzọ isi chọpụta ihe kpatara 500 ahụ. OmniRoute na-emepụta `~/.cache` (ma na-ahazi `XDG_CACHE_HOME` mgbe ahazibeghị ya) n'ebe mbido CLI tupu Next.js amalite, ka nyocha a wee gaa nke ọma na Android/Termux.
+N'ihi na hook ahụ anaghị ebunye ma ọlị, ndekọ log anaghị amalite — nke a na-eme ka o yie na enweghị ụzọ isi chọpụta ihe kpatara 500 ahụ. 67router na-emepụta `~/.cache` (ma na-ahazi `XDG_CACHE_HOME` mgbe ahazibeghị ya) n'ebe mbido CLI tupu Next.js amalite, ka nyocha a wee gaa nke ọma na Android/Termux.
 
 **Ndozi akwadoro (na-enweghị imegharị ngwugwu):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Na build OmniRoute ndị dị ugbu a, CLI na-eme nke a na akpaaka na Android/Termux — `npx -y omniroute@latest` ọhụrụ / nrụnye zuru ụwa ọnụ ekwesịghị ịchọ usoro aka a. Ọ bụrụ na ị ka na-ahụ njehie ahụ mgbe nkwalite gasịrị, mepụta `~/.cache` otu ugboro dịka e gosiri n'elu ma malitegharịa ya.
+Na build 67router ndị dị ugbu a, CLI na-eme nke a na akpaaka na Android/Termux — `npx -y omniroute@latest` ọhụrụ / nrụnye zuru ụwa ọnụ ekwesịghị ịchọ usoro aka a. Ọ bụrụ na ị ka na-ahụ njehie ahụ mgbe nkwalite gasịrị, mepụta `~/.cache` otu ugboro dịka e gosiri n'elu ma malitegharịa ya.
 
 **Emela** mgbanwe na `dist/server.js` iji manye `process.platform = "linux"`. A na-edegharị ụdị mgbanwe ngwugwu ahụ n'oge nrụnye/nkwalite ọ bụla, ọ dịghịkwa mkpa ozugbo ndekọ cache dị.
 

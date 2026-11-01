@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: `open-sse/` je základný streamovací engine, ktorý zabezpečuje každú požiadavku na LLM v OmniRoute. Obsahuje približne 1 400 súborov implementujúcich spracovanie požiadaviek, exekútory, služby, server MCP a prekladovú vrstvu. Táto príručka vysvetľuje, ako jednotlivé časti spolupracujú.
+> **TL;DR**: `open-sse/` je základný streamovací engine, ktorý zabezpečuje každú požiadavku na LLM v 67router. Obsahuje približne 1 400 súborov implementujúcich spracovanie požiadaviek, exekútory, služby, server MCP a prekladovú vrstvu. Táto príručka vysvetľuje, ako jednotlivé časti spolupracujú.
 
 **Zdroj:** `open-sse/` (balík pracovného priestoru, približne 1 440 netestovacích súborov `.ts`)
 
@@ -12,10 +12,10 @@
 
 ## Prečo samostatný balík pracovného priestoru?
 
-`open-sse/` je **samostatný pracovný priestor** v monorepozitári OmniRoute z niekoľkých dôvodov:
+`open-sse/` je **samostatný pracovný priestor** v monorepozitári 67router z niekoľkých dôvodov:
 
 1. **Opätovná použiteľnosť** — `open-sse` je publikovaný na npm ako `@omniroute/open-sse`, takže ho môžu nezávisle používať aj iné projekty
-2. **Jasné hranice** — streamovací engine je oddelený od vrstvy používateľského rozhrania/databázy špecifickej pre OmniRoute
+2. **Jasné hranice** — streamovací engine je oddelený od vrstvy používateľského rozhrania/databázy špecifickej pre 67router
 3. **Výkon** — engine nemá žiadne závislosti od Next.js, čo umožňuje rýchlejšie studené štarty v prostrediach CLI/serverless
 4. **Verzovanie** — `open-sse` môže vydávať nové verzie podľa vlastného harmonogramu
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Prečo samostatný transformátor?
 
-Responses API je nový formát OpenAI so **stavovými konverzáciami** (`previous_response_id`). Keď klient odošle požiadavku Responses, OmniRoute:
+Responses API je nový formát OpenAI so **stavovými konverzáciami** (`previous_response_id`). Keď klient odošle požiadavku Responses, 67router:
 
 1. Interne konvertuje Responses → Chat Completions
 2. Odošle ju poskytovateľovi (ľubovoľnému poskytovateľovi, ktorý podporuje Chat Completions)
@@ -573,5 +573,4 @@ Smerovací engine má prísne výkonnostné limity:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — prehľad jednotlivých adresárov
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — hodnotenie podľa 16 faktorov
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Zdroj: `open-sse/` (viac ako 400 súborov, ~143K riadkov kódu)

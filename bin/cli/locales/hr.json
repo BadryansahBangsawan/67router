@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Greška: {message}",
-    "serverOffline": "OmniRoute poslužitelj je izvan mreže. Pokrenite ga s: omniroute serve",
+    "serverOffline": "67router poslužitelj je izvan mreže. Pokrenite ga s: omniroute serve",
     "authRequired": "Potrebna je autentifikacija. Postavite OMNIROUTE_API_KEY ili pokrenite: omniroute setup",
     "rateLimited": "Prekoračeno ograničenje brzine zahtjeva. Pokušajte ponovo nakon {seconds}s.",
     "timeout": "Zahtjev je istekao nakon {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Preskoči upit za potvrdu"
   },
   "setup": {
-    "title": "OmniRoute Postavljanje",
+    "title": "67router Postavljanje",
     "passwordPrompt": "Administratorska lozinka",
     "providerPrompt": "Zadani pružatelj usluge (ostavite prazno za preskakanje)",
     "done": "Postavljanje dovršeno",
@@ -30,7 +30,7 @@
     "opencode": "Instalirajte i konfigurirajte priloženi @omniroute/opencode-plugin za OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute Dijagnostika",
+    "title": "67router Dijagnostika",
     "dbOk": "Baza podataka: U redu ({path})",
     "dbMissing": "Baza podataka: nije inicijalizirana — pokrenite `omniroute setup`",
     "portOk": "Priključak {port}: dostupan",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtriraj prema nazivu pružatelja usluga",
       "header": "ID         Pružatelj      Naziv                    Status isteka  Status testa  Hlađenje do",
       "noData": "Nema dostupnih podataka o vezama s pružateljima usluga.",
-      "requiresServer": "providers status zahtijeva da OmniRoute poslužitelj bude pokrenut."
+      "requiresServer": "providers status zahtijeva da 67router poslužitelj bude pokrenut."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Dodaj ili ažuriraj API ključ za pružatelja usluga",
     "listDescription": "Prikaži sve konfigurirane API ključeve",
     "removeDescription": "Ukloni API ključ za pružatelja usluga",
-    "regenerateDescription": "Regeneriraj OmniRoute API ključ",
-    "revokeDescription": "Opozovi OmniRoute API ključ",
+    "regenerateDescription": "Regeneriraj 67router API ključ",
+    "revokeDescription": "Opozovi 67router API ključ",
     "revealDescription": "Otkrij nemaskiranu vrijednost API ključa",
     "usageDescription": "Prikaži nedavnu upotrebu za API ključ",
     "usageLimitOpt": "Broj nedavnih zahtjeva",
@@ -172,13 +172,6 @@
       "period": "Vremenski raspon: 1d|7d|30d|90d|ytd|all (zadano: 30d)",
       "provider": "Filtriraj prema ID-u pružatelja usluge"
     },
-    "budget": {
-      "description": "Upravljanje troškovnim proračunima",
-      "set": {
-        "scope": "Opseg proračuna (zadano: global)",
-        "period": "Razdoblje proračuna: daily|weekly|monthly (zadano: monthly)"
-      }
-    },
     "quota": {
       "description": "Prikaži iskorištenost kvote pružatelja usluge",
       "provider": "Filtriraj prema ID-u pružatelja usluge",
@@ -225,7 +218,7 @@
     "noCombo": "Nije pronađen odgovarajući combo. Konfigurirajte ga s: omniroute combo create"
   },
   "chat": {
-    "description": "Pošalji jednokratni chat upit u OmniRoute",
+    "description": "Pošalji jednokratni chat upit u 67router",
     "file": "Pročitaj upit iz datoteke",
     "stdin": "Pročitaj upit sa stdin-a",
     "system": "Sistemski upit",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Pokreni OmniRoute poslužitelj (zadana radnja)",
-    "starting": "Pokretanje OmniRoute poslužitelja na portu {port}...",
+    "description": "Pokreni 67router poslužitelj (zadana radnja)",
+    "starting": "Pokretanje 67router poslužitelja na portu {port}...",
     "ready": "Spreman na http://localhost:{port}",
     "stopping": "Zaustavljanje poslužitelja (PID {pid})...",
     "stopped": "Poslužitelj je zaustavljen.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Sigurnosna kopija",
-    "description": "Izrada sigurnosne kopije podataka OmniRoute",
+    "description": "Izrada sigurnosne kopije podataka 67router",
     "creating": "Izrada sigurnosne kopije...",
     "done": "Sigurnosna kopija spremljena u {path}",
     "noFiles": "Nema datoteka za sigurnosno kopiranje (baza podataka nije inicijalizirana)",
@@ -277,7 +270,7 @@
     "noBackups": "Nije pronađena nijedna sigurnosna kopija.",
     "notFound": "Sigurnosna kopija nije pronađena: {name}",
     "confirmRestore": "Prepisati trenutne podatke sigurnosnom kopijom od {ts}?",
-    "createDescription": "Izrada sigurnosne kopije podataka OmniRoute",
+    "createDescription": "Izrada sigurnosne kopije podataka 67router",
     "nameOpt": "Prilagođeni naziv sigurnosne kopije",
     "cloudOpt": "Učitaj sigurnosnu kopiju u pohranu u oblaku",
     "encryptOpt": "Šifriranje sigurnosne kopije algoritmom AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Čišćenje predmemorije nije uspjelo."
   },
   "redis": {
-    "description": "Pokrenite lokalni Redis spremnik jednim klikom (Podman ili Docker) za predmemoriranje i praćenje kvota u OmniRoute"
+    "description": "Pokrenite lokalni Redis spremnik jednim klikom (Podman ili Docker) za predmemoriranje i praćenje kvota u 67router"
   },
   "test": {
     "description": "Testiraj vezu s davateljem usluge",
@@ -390,36 +383,8 @@
       "description": "MCP zapisnik revizije (alias za audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Prikaz dostupnih A2A vještina iz kartice agenta"
-    },
-    "invoke": {
-      "description": "Pozovi A2A vještinu i vrati ID zadatka",
-      "input": "Ulazni JSON objekt",
-      "input_file": "Putanja do ulazne JSON datoteke",
-      "wait": "Čekaj dovršetak zadatka prije vraćanja rezultata",
-      "timeout": "Vremensko ograničenje za čekanje dovršetka u ms (zadano: 60000)"
-    },
-    "tasks": {
-      "description": "Upravljanje A2A zadacima",
-      "list": {
-        "status": "Filtriraj po statusu",
-        "skill": "Filtriraj po ID-u vještine"
-      },
-      "watch": {
-        "description": "Provjeravaj status zadatka do dovršetka"
-      },
-      "stream": {
-        "description": "Streaming događaja izvršavanja zadatka putem SSE"
-      },
-      "logs": {
-        "description": "Prikaz poruka i artefakata zadatka"
-      }
-    }
-  },
   "policy": {
-    "description": "Upravljanje OmniRoute politikama autorizacije",
+    "description": "Upravljanje 67router politikama autorizacije",
     "list": {
       "description": "Prikaz politika",
       "kind": "Filtriraj po vrsti (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurirajte i pregledajte OmniRoute cjevovod komprimiranja",
+    "description": "Konfigurirajte i pregledajte 67router cjevovod komprimiranja",
     "status": {
       "description": "Prikaz trenutnog statusa i postavki komprimiranja"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Rotirati tunel {type}? (bit će generiran novi URL)"
   },
   "stop": {
-    "description": "Zaustavi OmniRoute server",
+    "description": "Zaustavi 67router server",
     "stopping": "Zaustavljanje servera (PID {pid})...",
     "stopped": "Server zaustavljen.",
     "notRunning": "Nijedan server nije aktivan.",
     "portFallback": "Nije pronađena PID datoteka, pokušava se zaustavljanje putem porta..."
   },
   "restart": {
-    "description": "Ponovno pokreni OmniRoute server",
-    "restarting": "Ponovno pokretanje OmniRoute servera..."
+    "description": "Ponovno pokreni 67router server",
+    "restarting": "Ponovno pokretanje 67router servera..."
   },
   "dashboard": {
-    "description": "Otvori OmniRoute nadzornu ploču u pregledniku",
+    "description": "Otvori 67router nadzornu ploču u pregledniku",
     "opening": "Otvaranje nadzorne ploče na {url}",
     "urlOnly": "Ispiši URL nadzorne ploče bez otvaranja preglednika",
     "tui": "Otvori interaktivnu TUI nadzornu ploču (terminalsko sučelje, 7 kartica)"
@@ -560,120 +525,6 @@
       "description": "Dohvati jedan unos revizijskog zapisa po ID-u"
     }
   },
-  "skills": {
-    "description": "Upravljanje OmniRoute vještinama (sandbox, ugrađene, prilagođene, hibridne, skillssh)",
-    "list": {
-      "description": "Prikaži instalirane vještine",
-      "type": "Filtriraj po vrsti (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Prikaži samo omogućene vještine",
-      "disabled": "Prikaži samo onemogućene vještine",
-      "api_key": "Filtriraj po API ključu"
-    },
-    "get": {
-      "description": "Dohvati pojedinosti vještine po ID-u"
-    },
-    "install": {
-      "description": "Instaliraj vještinu iz datoteke ili URL-a",
-      "from_file": "Putanja do JSON datoteke s definicijom vještine",
-      "from_url": "URL udaljene definicije vještine",
-      "type": "Vrsta vještine (sandbox|custom|hybrid)",
-      "enable": "Omogući vještinu nakon instalacije"
-    },
-    "enable": {
-      "description": "Omogući vještinu po ID-u"
-    },
-    "disable": {
-      "description": "Onemogući vještinu po ID-u",
-      "yes": "Preskoči potvrdni upit"
-    },
-    "delete": {
-      "description": "Izbriši vještinu po ID-u",
-      "yes": "Preskoči upit za potvrdu"
-    },
-    "execute": {
-      "description": "Izvrši vještinu po ID-u",
-      "input": "JSON ulazni objekt",
-      "input_file": "Putanja do JSON ulazne datoteke",
-      "timeout": "Vremensko ograničenje izvršavanja u ms (zadano: 30000)"
-    },
-    "executions": {
-      "description": "Prikaz povijesti izvršavanja vještina",
-      "skill": "Filtriraj po ID-u vještine",
-      "limit": "Maksimalan broj rezultata (zadano: 50)",
-      "status": "Filtriraj po statusu (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Upravljanje vještinama instaliranima putem SSH-a"
-    },
-    "marketplace": {
-      "description": "Pregledaj i instaliraj vještine s tržišta"
-    },
-    "mp": {
-      "search": {
-        "description": "Pretraži pakete na tržištu",
-        "category": "Filtriraj po kategoriji",
-        "tag": "Filtriraj po oznaci",
-        "limit": "Maksimalan broj rezultata (zadano: 30)",
-        "sort": "Sortiraj po: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Prikaz detalja paketa i readme datoteke"
-      },
-      "install": {
-        "description": "Instaliraj paket s tržišta",
-        "version": "Verzija paketa (zadano: najnovija)",
-        "enable": "Omogući nakon instalacije",
-        "yes": "Preskoči upit za potvrdu"
-      },
-      "categories": {
-        "description": "Prikaz kategorija na tržištu"
-      },
-      "featured": {
-        "description": "Prikaz istaknutih paketa s tržišta"
-      }
-    }
-  },
-  "memory": {
-    "description": "Upravljanje konverzacijskom memorijom OmniRoute (FTS5 + vektor)",
-    "search": {
-      "description": "Pretraži unose memorije prema semantičkom upitu",
-      "type": "Filtriraj po tipu memorije (user|feedback|project|reference)",
-      "limit": "Maksimalan broj rezultata (zadano: 20)",
-      "api_key": "Filtriraj po API ključu",
-      "token_budget": "Ograniči ukupan broj tokena u rezultatima"
-    },
-    "add": {
-      "description": "Dodaj novi unos memorije",
-      "content": "Tekstualni sadržaj memorije",
-      "file": "Učitaj sadržaj iz datoteke",
-      "type": "Tip memorije (zadano: user)",
-      "metadata": "JSON objekt metapodataka",
-      "api_key": "Povezati s API ključem"
-    },
-    "clear": {
-      "description": "Izbriši unose memorije koji odgovaraju filtrima",
-      "type": "Filtriraj po tipu",
-      "older": "Izbriši unose starije od trajanja (30d, 6m, 1y)",
-      "api_key": "Filtriraj po API ključu",
-      "yes": "Preskoči potvrdu"
-    },
-    "list": {
-      "description": "Prikaži unose memorije bez rangiranja pretraživanja",
-      "type": "Filtriraj po tipu",
-      "limit": "Maksimalan broj rezultata (zadano: 100)",
-      "api_key": "Filtriraj po API ključu"
-    },
-    "get": {
-      "description": "Dohvati jedan unos memorije po ID-u"
-    },
-    "delete": {
-      "description": "Izbriši unos memorije po ID-u",
-      "yes": "Preskoči potvrdu"
-    },
-    "health": {
-      "description": "Prikaži stanje podsustava memorije (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Upravljaj OAuth vezama s pružateljima usluga",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Preskoči potvrdu"
     }
   },
-  "cloud": {
-    "description": "Upravljaj zadacima cloud AI agenata (codex, devin, jules)",
-    "agents": {
-      "description": "Prikaži dostupne cloud agente"
-    },
-    "agent": {
-      "description": "Upravljaj zadacima {agent} cloud agenta",
-      "auth": {
-        "description": "Autoriziraj {agent} putem OAuth-a"
-      }
-    },
-    "task": {
-      "description": "Upravljaj zadacima cloud agenta",
-      "create": {
-        "description": "Stvori novi zadatak agenta",
-        "title": "Naslov zadatka (zadano: prvih 80 znakova upita)",
-        "prompt": "Tekst upita zadatka",
-        "prompt_file": "Pročitaj upit iz datoteke",
-        "repo": "URL repozitorija za kloniranje za zadatak",
-        "branch": "Naziv granice za korištenje",
-        "metadata": "JSON objekt metapodataka"
-      },
-      "list": {
-        "description": "Prikaži zadatke agenta",
-        "status": "Filtriraj po statusu (running|completed|failed|cancelled)",
-        "limit": "Maksimalan broj rezultata (zadano: 50)"
-      },
-      "get": {
-        "description": "Dohvati detalje zadatka po ID-u"
-      },
-      "status": {
-        "description": "Ispiši status zadatka (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Otkaži zadatak koji je u tijeku",
-        "yes": "Zaobiđi upit za potvrdu"
-      },
-      "approve": {
-        "description": "Odobri plan agenta za pokretanje izvršavanja"
-      },
-      "message": {
-        "description": "Pošalji poruku zadatku koji je u tijeku"
-      }
-    },
-    "sources": {
-      "description": "Prikaži popis izvornih datoteka koje je izradio zadatak"
-    }
-  },
-  "eval": {
-    "description": "Upravljaj evaluacijskim paketima i pokretanjima",
-    "suites": {
-      "description": "Upravljaj evaluacijskim paketima",
-      "list": {
-        "description": "Prikaži popis evaluacijskih paketa"
-      },
-      "get": {
-        "description": "Prikaži pojedinosti evaluacijskog paketa po ID-u"
-      },
-      "create": {
-        "description": "Izradi evaluacijski paket iz JSON datoteke",
-        "file": "Putanja do JSON datoteke s definicijom paketa"
-      }
-    },
-    "run": {
-      "description": "Pokreni evaluacijsko izvršavanje za paket",
-      "model": "ID modela za evaluaciju (zadano: automatski)",
-      "combo": "Prisilno koristi određenu kombinaciju po nazivu",
-      "concurrency": "Broj istovremenih uzoraka (zadano: 4)",
-      "tag": "Označi ovo izvršavanje za kasnije filtriranje",
-      "watch": "Pratite napredak izvršavanja do završetka"
-    },
-    "list": {
-      "description": "Prikaži popis evaluacijskih izvršavanja",
-      "suite": "Filtriraj po ID-u paketa",
-      "status": "Filtriraj po statusu",
-      "since": "Vrati izvršavanja od ove vremenske oznake",
-      "limit": "Maksimalan broj rezultata (zadano: 50)"
-    },
-    "get": {
-      "description": "Prikaži pojedinosti evaluacijskog izvršavanja po ID-u"
-    },
-    "results": {
-      "description": "Prikaži rezultate uzoraka za evaluacijsko izvršavanje",
-      "failed": "Prikaži samo neuspjele uzorke"
-    },
-    "cancel": {
-      "description": "Otkaži evaluacijsko izvršavanje koje je u tijeku",
-      "yes": "Zaobiđi upit za potvrdu"
-    },
-    "scorecard": {
-      "description": "Prikaži rezultatsku karticu za dovršeno evaluacijsko izvršavanje"
-    }
-  },
-  "webhooks": {
-    "description": "Upravljaj OmniRoute webhookovima",
-    "events": {
-      "description": "Prikaži popis svih dostupnih vrsta webhook događaja"
-    },
-    "list": {
-      "description": "Prikaži popis konfiguriranih webhookova"
-    },
-    "get": {
-      "description": "Prikaži pojedinosti webhooka po ID-u"
-    },
-    "add": {
-      "description": "Registriraj novi webhook",
-      "url": "Odredišni URL",
-      "events": "Popis vrsta događaja odvojenih zarezom",
-      "secret": "HMAC ključ za potpisivanje",
-      "header": "Dodatno zaglavlje u formatu ključ=vrijednost (može se ponavljati)",
-      "no_enabled": "Izradi webhook u onemogućenom stanju"
-    },
-    "update": {
-      "description": "Ažuriraj postojeći webhook",
-      "enabled": "Postavi omogućeno stanje (true|false)"
-    },
-    "remove": {
-      "description": "Izbriši webhook",
-      "yes": "Preskoči potvrdni upit"
-    },
-    "test": {
-      "description": "Pošalji testni događaj na webhook",
-      "event": "Vrsta događaja za simulaciju (zadano: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Pametni AI Router s automatskim prebacivanjem",
+    "description": "67router — Pametni AI Router s automatskim prebacivanjem",
     "version": "Ispiši verziju i izađi",
     "output": "Format izlaza (table, json, jsonl, csv)",
     "quiet": "Prikaži samo nužni izlaz",
     "no_color": "Isključi obojeni izlaz",
     "timeout": "Vrijeme čekanja HTTP zahtjeva u milisekundama",
-    "api_key": "API ključ za OmniRoute server",
-    "base_url": "Osnovni URL OmniRoute servera",
+    "api_key": "API ključ za 67router server",
+    "base_url": "Osnovni URL 67router servera",
     "context": "Kontekst/profil servera za korištenje u ovoj naredbi",
     "lang": "Postavi jezik prikaza CLI-a (nadjačava OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Upravljanje datotekama (učitavanje, popis, dohvat, preuzimanje, brisanje)",
-    "list": {
-      "purpose": "Filtriraj po namjeni",
-      "limit": "Maksimalan broj rezultata"
-    },
-    "get": {
-      "description": "Dohvati metapodatke datoteke"
-    },
-    "upload": {
-      "description": "Učitaj datoteku",
-      "purpose": "Namjena datoteke (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Preuzmi sadržaj datoteke",
-      "out": "Spremi na putanju (zadano: stdout)"
-    },
-    "delete": {
-      "yes": "Preskoči potvrdu"
-    }
-  },
-  "batches": {
-    "description": "Upravljanje OpenAI-kompatibilnim batch poslovima",
-    "list": {
-      "status": "Filtriraj po statusu",
-      "limit": "Maksimalan broj rezultata"
-    },
-    "create": {
-      "description": "Kreiraj batch posao",
-      "inputFile": "ID ulazne datoteke",
-      "endpoint": "Ciljni endpoint",
-      "window": "Prozor za dovršetak",
-      "metadata": "Dodaj metapodatak ključ=vrijednost"
-    },
-    "submit": {
-      "description": "Učitaj JSONL datoteku i kreiraj batch",
-      "jsonl": "Putanja do JSONL datoteke",
-      "endpoint": "Ciljni endpoint",
-      "wait": "Čekaj dovršetak"
-    },
-    "cancel": {
-      "yes": "Preskoči potvrdu"
-    },
-    "wait": {
-      "timeout": "Vrijeme čekanja u ms"
-    },
-    "output": {
-      "out": "Spremi izlaz na putanju"
-    },
-    "errors": {
-      "out": "Spremi pogreške na putanju"
-    }
   },
   "translator": {
     "description": "Prevedi tijela zahtjeva između LLM formata",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Pristup i testiranje OmniRoute OpenAPI specifikacije",
+    "description": "Pristup i testiranje 67router OpenAPI specifikacije",
     "dump": {
       "description": "Izvezi OpenAPI specifikaciju u stdout ili datoteku",
       "format": "Izlazni format: yaml|json (zadano: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Aktiviraj najbolje rangiranu kombinaciju"
     }
   },
-  "oneproxy": {
-    "description": "Upravljanje skupom nadređenih proxyja OneProxy",
-    "stats": {
-      "provider": "Filtriraj po pružatelju usluge",
-      "period": "Vremensko razdoblje (zadano: 24h)"
-    },
-    "fetch": {
-      "description": "Dohvati proxyje iz skupa",
-      "count": "Broj proxyja za dohvaćanje (zadano: 1)",
-      "type": "Vrsta proxyja: http|socks5 (zadano: http)"
-    },
-    "rotate": {
-      "description": "Prisilna rotacija proxyja",
-      "provider": "Pružatelj usluge za koji se vrši rotacija",
-      "connectionId": "ID određene veze za rotaciju"
-    },
-    "config": {
-      "description": "Prikaži ili ažuriraj konfiguraciju OneProxy",
-      "enabled": "Omogući skup proxyja (true|false)",
-      "poolSize": "Veličina skupa",
-      "providerSource": "URL pružatelja proxyja",
-      "rotationPolicy": "Politika rotacije: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Prikaži trenutni skup proxyja s metrikama"
-    }
-  },
   "open": {
-    "description": "Otvori određenu stranicu OmniRoute nadzorne ploče u pregledniku",
+    "description": "Otvori određenu stranicu 67router nadzorne ploče u pregledniku",
     "url": "Ispiši samo URL, ne otvaraj preglednik"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sinkroniziraj konfiguraciju između instanci OmniRoute",
+    "description": "Sinkroniziraj konfiguraciju između instanci 67router",
     "push": {
       "description": "Pošalji konfiguraciju u oblak ili udaljenu instancu"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtriraj po razini (error,warn,info) — odvojeno zarezom",
     "lines": "Broj redaka za preuzimanje",
     "timeout": "Vremensko ograničenje veze u ms",
-    "baseUrl": "Osnovni URL OmniRoute API-ja",
+    "baseUrl": "Osnovni URL 67router API-ja",
     "requestId": "Filtriraj po ID-u zahtjeva",
     "apiKey": "Filtriraj po API ključu",
     "combo": "Filtriraj po nazivu kombinacije",
@@ -1244,10 +890,10 @@
     "description": "Upravljanje ikonom u sistemskoj traci",
     "show": "Prikaži ikonu u sistemskoj traci (ako je poslužitelj pokrenut s --tray)",
     "hide": "Skrij ikonu u sistemskoj traci",
-    "quit": "Zatvori OmniRoute putem sistemske trake"
+    "quit": "Zatvori 67router putem sistemske trake"
   },
   "autostart": {
-    "description": "Upravljanje automatskim pokretanjem OmniRoutea kod podizanja sustava (Linux: systemd korisnička usluga)",
+    "description": "Upravljanje automatskim pokretanjem 67routera kod podizanja sustava (Linux: systemd korisnička usluga)",
     "enable": "Omogući automatsko pokretanje kod podizanja sustava",
     "disable": "Onemogući automatsko pokretanje kod podizanja sustava",
     "toggle": "Uklj./isklj. automatsko pokretanje kod podizanja sustava",
@@ -1268,30 +914,20 @@
     "system": "Sistemski prompt",
     "resume": "Nastavi spremljenu sesiju po nazivu"
   },
-  "plugin": {
-    "description": "Upravljanje CLI dodacima (omniroute-cmd-*)",
-    "list": "Prikaži popis instaliranih dodataka",
-    "install": "Instaliraj dodatak s npm-a ili lokalne putanje",
-    "remove": "Ukloni instalirani dodatak",
-    "info": "Prikaži pojedinosti za instalirani dodatak",
-    "search": "Pretraži npm registar za dostupnim dodacima",
-    "update": "Ažuriraj instalirani(e) dodatak(e)",
-    "scaffold": "Izradi predložak novog dodatka"
-  },
   "launch": {
-    "description": "Pokreni Claude Code usmjeren na OmniRoute (lokalno ili udaljeno, s --profile)",
+    "description": "Pokreni Claude Code usmjeren na 67router (lokalno ili udaljeno, s --profile)",
     "token": "Token koji bi Claude klijent trebao slati (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute nije dostupan na {port}. Pokrenite ga naredbom 'omniroute serve'.",
+    "notRunning": "67router nije dostupan na {port}. Pokrenite ga naredbom 'omniroute serve'.",
     "notFound": "CLI alat 'claude' nije pronađen u PATH-u."
   },
   "run": {
-    "description": "Pokreni podržani CLI cilj kroz OmniRoute"
+    "description": "Pokreni podržani CLI cilj kroz 67router"
   },
   "setupClaude": {
-    "description": "Generiraj profile za Claude Code u ~/.claude/profiles iz kataloga modela OmniRoute"
+    "description": "Generiraj profile za Claude Code u ~/.claude/profiles iz kataloga modela 67router"
   },
   "connect": {
-    "description": "Poveži se s udaljenim OmniRoute serverom i uđi u udaljeni način rada"
+    "description": "Poveži se s udaljenim 67router serverom i uđi u udaljeni način rada"
   },
   "tokens": {
     "description": "Upravljaj ograničenim CLI pristupnim tokenima (udaljeni način rada)"
@@ -1300,10 +936,10 @@
     "description": "Odaberi pružatelja usluge i model s aktivnog servera i konfiguriraj podržani lokalni CLI"
   },
   "launchCodex": {
-    "description": "Pokreni Codex CLI usmjeren na OmniRoute (lokalno ili udaljeni VPS)"
+    "description": "Pokreni Codex CLI usmjeren na 67router (lokalno ili udaljeni VPS)"
   },
   "setupCodex": {
-    "description": "Generiraj datoteke profila u ~/.codex iz uživo kataloga modela OmniRoute"
+    "description": "Generiraj datoteke profila u ~/.codex iz uživo kataloga modela 67router"
   },
   "packs": {
     "description": "Upravljaj neobaveznim runtime paketima (ML / automatizacija preglednika)",
@@ -1316,7 +952,7 @@
     "errUnknown": "nepoznat paket: {name}",
     "errNoIndex": "indeks paketa nije pronađen; proslijedite --source <dir> koji sadrži sadržaj paketa (desktop paketi ga isporučuju uz aplikaciju)",
     "installed": "paket \"{name}\" instaliran i provjeren u {dir}",
-    "restartHint": "ponovno pokrenite OmniRoute server (ili desktop aplikaciju) da bi runtime prepoznao paket",
+    "restartHint": "ponovno pokrenite 67router server (ili desktop aplikaciju) da bi runtime prepoznao paket",
     "removed": "paket \"{name}\" uklonjen",
     "notInstalled": "paket \"{name}\" nije bio instaliran",
     "verifyOk": "svi instalirani paketi su provjereni",

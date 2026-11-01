@@ -13,7 +13,7 @@
 
 ## Wat het is
 
-OmniRoute maakt verbinding met een **Obsidian**-kluis als **contextbron** — een lokale
+67router maakt verbinding met een **Obsidian**-kluis als **contextbron** — een lokale
 Markdown-kennisbank die agents lezen en schrijven via de ingebouwde MCP-server. De
 integratie communiceert met de communityplug-in **Obsidian Local REST API** die in de
 desktopapp wordt uitgevoerd, zodat agents notities kunnen doorzoeken, bestanden kunnen
@@ -77,7 +77,7 @@ en valideert het token door het statuseindpunt van de Local REST API aan te roep
 ### WebDAV-vaultsynchronisatie
 
 `src/app/api/settings/obsidian/webdav/route.ts` beheert een optionele, door WebDAV ondersteunde
-vaultsynchronisatie (aangestuurd door `src/lib/obsidianSync.ts`). Wanneer deze wordt ingeschakeld, verwijst OmniRoute naar een
+vaultsynchronisatie (aangestuurd door `src/lib/obsidianSync.ts`). Wanneer deze wordt ingeschakeld, verwijst 67router naar een
 lokale vaultmap en wordt een willekeurig WebDAV-gebruikersnaam-/wachtwoordpaar aangemaakt:
 
 ```bash
@@ -112,27 +112,27 @@ De vier tools `obsidian_sync_*` behouden hun afzonderlijke gedrag voor synchroni
 ## MCP-tools (22)
 
 Gedefinieerd in `open-sse/mcp-server/tools/obsidianTools.ts`. Het token/de basis-URL worden
-per aanroep bepaald (eerst per API-sleutel, daarna globaal). Tools die de OmniRoute-**synchronisatieserver**
+per aanroep bepaald (eerst per API-sleutel, daarna globaal). Tools die de 67router-**synchronisatieserver**
 gebruiken (de vier `obsidian_sync_*`-tools), vereisen daarnaast het synchronisatie-authenticatietoken dat
-in de OmniRoute-instellingen is geconfigureerd.
+in de 67router-instellingen is geconfigureerd.
 
 ### Leestools (`read:obsidian`)
 
-| Tool                         | Beschrijving                                                                                                  |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Controleer of de Local REST API bereikbaar is en geauthenticeerd is.                                          |
-| `obsidian_search_simple`     | Doorzoek de inhoud van notities op volledige tekst; retourneert fragmenten met bestandspaden.                 |
-| `obsidian_search_structured` | Zoek met een JSON Logic-expressie (and/or/regex/path-filters).                                                |
-| `obsidian_read_note`         | Lees een notitie via een kluisrelatief pad; optioneel een specifieke kop/blok/frontmatter.                    |
-| `obsidian_list_vault`        | Toon bestanden en mappen in de kluis (boomstructuur van items).                                               |
-| `obsidian_get_document_map`  | Haal de kopstructuur van de notitie op als een koppeling van koppen → regelnummers.                           |
-| `obsidian_get_note_metadata` | Haal frontmatter, tags, links en het aantal tekens/woorden op zonder de volledige inhoud.                     |
-| `obsidian_get_active_file`   | Haal het pad en de inhoud op van het momenteel actieve bestand in Obsidian.                                   |
-| `obsidian_get_periodic_note` | Haal de dagelijkse/wekelijkse/maandelijkse periodieke notitie voor een datum op (vandaag indien weggelaten).  |
-| `obsidian_get_tags`          | Toon alle kluistags met hun frequenties.                                                                      |
-| `obsidian_list_commands`     | Toon beschikbare Obsidian-opdracht-ID's (te gebruiken met `obsidian_execute_command`).                        |
-| `obsidian_sync_status`       | Status van de OmniRoute-synchronisatieserver: actief, kluisnaam, poort, bedrijfstijd, laatste synchronisatie. |
-| `obsidian_sync_conflicts`    | Toon onopgeloste synchronisatieconflicten (pad, conflictpad, detectietijdstip).                               |
+| Tool                         | Beschrijving                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `obsidian_check_status`      | Controleer of de Local REST API bereikbaar is en geauthenticeerd is.                                         |
+| `obsidian_search_simple`     | Doorzoek de inhoud van notities op volledige tekst; retourneert fragmenten met bestandspaden.                |
+| `obsidian_search_structured` | Zoek met een JSON Logic-expressie (and/or/regex/path-filters).                                               |
+| `obsidian_read_note`         | Lees een notitie via een kluisrelatief pad; optioneel een specifieke kop/blok/frontmatter.                   |
+| `obsidian_list_vault`        | Toon bestanden en mappen in de kluis (boomstructuur van items).                                              |
+| `obsidian_get_document_map`  | Haal de kopstructuur van de notitie op als een koppeling van koppen → regelnummers.                          |
+| `obsidian_get_note_metadata` | Haal frontmatter, tags, links en het aantal tekens/woorden op zonder de volledige inhoud.                    |
+| `obsidian_get_active_file`   | Haal het pad en de inhoud op van het momenteel actieve bestand in Obsidian.                                  |
+| `obsidian_get_periodic_note` | Haal de dagelijkse/wekelijkse/maandelijkse periodieke notitie voor een datum op (vandaag indien weggelaten). |
+| `obsidian_get_tags`          | Toon alle kluistags met hun frequenties.                                                                     |
+| `obsidian_list_commands`     | Toon beschikbare Obsidian-opdracht-ID's (te gebruiken met `obsidian_execute_command`).                       |
+| `obsidian_sync_status`       | Status van de 67router-synchronisatieserver: actief, kluisnaam, poort, bedrijfstijd, laatste synchronisatie. |
+| `obsidian_sync_conflicts`    | Toon onopgeloste synchronisatieconflicten (pad, conflictpad, detectietijdstip).                              |
 
 ### Schrijftools (`write:obsidian`)
 

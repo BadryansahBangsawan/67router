@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute finder sin SQLite-driver ved opstart via en fallbackkæde i 5 trin:
+67router finder sin SQLite-driver ved opstart via en fallbackkæde i 5 trin:
 
 1. **Medfølgende `better-sqlite3`** (via `dependencies` i `package.json`)
    — hurtigst, oprindelig binær fil, installeret af `npm install`, når byggeværktøjer er tilgængelige.
@@ -28,13 +28,13 @@ OmniRoute finder sin SQLite-driver ved opstart via en fallbackkæde i 5 trin:
 - **Ingen byggeværktøjer**: Nogle miljøer (virksomheds-Windows uden VS Build
   Tools, minimale Docker-images) kan ikke kompilere `better-sqlite3`. Kørselstids-
   installationsprogrammet finder en prækompileret binær fil i npm-registret; fallback-
-  driverne sikrer, at OmniRoute stadig starter, selv hvis dette mislykkes.
+  driverne sikrer, at 67router stadig starter, selv hvis dette mislykkes.
 - **Systemer uden netværksadgang**: Hvis npm-registret ikke kan nås, garanterer `node:sqlite`
   eller `sql.js` grundlæggende funktionalitet.
 
 ## Validering af magiske bytes
 
-Før en kørselstidsinstalleret `.node`-fil indlæses, læser OmniRoute de første 8
+Før en kørselstidsinstalleret `.node`-fil indlæses, læser 67router de første 8
 bytes og sammenligner dem med kendte platformsignaturer:
 
 | Platform              | Bytes (hex)   | Etiket      |
@@ -106,10 +106,10 @@ Implementering:
 
 ## Topologi med én skriver (HA understøttes ikke)
 
-Driverens fallbackkæde ovenfor kører stadig i **én proces**. OmniRoute med SQLite
+Driverens fallbackkæde ovenfor kører stadig i **én proces**. 67router med SQLite
 som standard er en **enkelt skriver**:
 
-- Tilknyt ikke to OmniRoute-replikaer til den samme `storage.sqlite`-fil.
+- Tilknyt ikke to 67router-replikaer til den samme `storage.sqlite`-fil.
 - En genstart af en container, en Recreate-udrulning, et OOM-drab eller en
   HEALTHCHECK-genstart afbryder alle igangværende SSE-sessioner. Der er ingen
   sessionsdræning i standardforløbet.

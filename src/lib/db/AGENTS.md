@@ -24,20 +24,16 @@ Live count: `ls src/lib/db/*.ts | wc -l` (currently 131). Migrations: `ls src/li
 | `settings.ts`          | `settings`                | KV store for system configuration                   |
 | `secrets.ts`           | `secrets`                 | Encrypted secret storage (API keys at rest)         |
 | `quotaSnapshots.ts`    | `quota_snapshots`         | Historical quota usage for analytics                |
-| `quotaPools.ts`        | `quota_pools`             | Quota-Share pool management                         |
 | `creditBalance.ts`     | `credit_balance`          | Per-provider credit tracking                        |
 | `compression.ts`       | compression settings      | Prompt compression pipeline config                  |
 | `compressionCombos.ts` | `compression_combos`      | Per-combo compression pipeline assignments          |
 | `evals.ts`             | eval tables               | Eval framework persistence                          |
-| `webhooks.ts`          | `webhooks`                | Event-driven webhook subscriptions and logs         |
 | `reasoningCache.ts`    | reasoning cache           | Hybrid in-memory + SQLite reasoning replay          |
 | `skills.ts`            | `skills`                  | Skill registration and metadata                     |
 | `plugins.ts`           | `plugins`                 | Plugin marketplace state                            |
 | `gamification.ts`      | gamification tables       | Levels, badges, leaderboard                         |
 | `notion.ts`            | notion tables             | Notion integration state                            |
 | `obsidian.ts`          | obsidian tables           | Obsidian vault integration state                    |
-| `files.ts`             | file storage              | Uploaded file management                            |
-| `batches.ts`           | batch processing          | Batch job tracking                                  |
 | `featureFlags.ts`      | feature flags             | Runtime feature flag overrides                      |
 | `backup.ts`            | backup ops                | Serialize/deserialize entire DB state               |
 | `cleanup.ts`           | cleanup ops               | Stale data purging                                  |

@@ -12,7 +12,7 @@ lastUpdated: 2026-07-23
 
 ## Kontekst
 
-OmniRoute obecnie udostępnia zorientowane domenowo funkcje persystencji z `src/lib/db/`, podczas gdy
+67router obecnie udostępnia zorientowane domenowo funkcje persystencji z `src/lib/db/`, podczas gdy
 współdzielone połączenie zwracane przez `src/lib/db/core.ts` implementuje synchroniczny kontrakt
 `SqliteAdapter` w `src/lib/db/adapters/types.ts`. Ten adapter obsługuje kilka runtime'ów SQLite, ale
 jego powierzchnia pozostaje ukształtowana pod SQLite: synchroniczne prepared statements, `pragma`,

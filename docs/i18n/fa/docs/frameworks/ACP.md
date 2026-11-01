@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute میان **کشف CLI**، **پروتکل بومی Agent Client Protocol** و
+67router میان **کشف CLI**، **پروتکل بومی Agent Client Protocol** و
 **آداپتورهای قدیمی stdio** تفکیک قائل میشود. یافتن یک فایل اجرایی نصبشده،
 احراز هویت، سازگاری مدل یا آمادگی آن برای پردازش یک پرامپت را اثبات نمیکند.
 
@@ -125,5 +125,3 @@ try {
 - [پروتکلهای عامل](./AGENT_PROTOCOLS_GUIDE.md)
 - [قراردادهای راهاندازی CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [ابزارهای CLI](../reference/CLI-TOOLS.md)
-- [سرور A2A](./A2A-SERVER.md)
-- [عاملهای ابری](./CLOUD_AGENT.md)

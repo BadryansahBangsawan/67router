@@ -110,7 +110,7 @@ production build နှင့် ပိုမိုကျယ်ပြန့်�
 - CLI catalogs များကို `bin/cli/locales/` အောက်တွင် သီးခြားထားရှိသည်။
 - ICU placeholders နှင့် tags များကို အတိအကျ ထိန်းသိမ်းပါ။ product/provider/model အမည်များ၊
   protocol နှင့် header အမည်များ၊ commands၊ code/JSON identifiers၊ URLs၊ environment variables သို့မဟုတ်
-  `OmniRoute`၊ `OAuth`၊ `MCP` နှင့် `A2A` ကဲ့သို့သော protected terms များကို ဘာသာမပြန်ပါနှင့်။ လက်ရှိ source list မှာ
+  `67router`၊ `OAuth`၊ `MCP` နှင့် `A2A` ကဲ့သို့သော protected terms များကို ဘာသာမပြန်ပါနှင့်။ လက်ရှိ source list မှာ
   `scripts/i18n/glossary/protected-terms.json` ဖြစ်သည်။
 
 **အဓိကထားသည့် loop**
@@ -251,7 +251,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # အခြားနေ�
 - **Rollback လုပ်ပါ။** `run` သည် promote လုပ်ထားသော slot ကို ထပ်မံ validate လုပ်ပြီး
   ထိုစစ်ဆေးမှု မအောင်မြင်ပါက `current` နှင့် `previous` ကို မူလအတိုင်း ပြန်လဲသည်။ ပထမ validation မအောင်မြင်သော candidate ကို မည်သည့်အခါမျှ promote မလုပ်ပါ။
 
-အရာအားလုံးကို gitignore လုပ်ထားသော `_artifacts/candidate/` အောက်တွင် ရေးသားသည်။ ရှိပြီးသား OmniRoute
+အရာအားလုံးကို gitignore လုပ်ထားသော `_artifacts/candidate/` အောက်တွင် ရေးသားသည်။ ရှိပြီးသား 67router
 installation နှင့် ၎င်း၏ data directory ကို မည်သည့်အခါမျှ မထိပါ။ Promote လုပ်ထားသော CLI သည်
 `_artifacts/candidate/current/prefix/bin/omniroute` ဖြစ်သည်။ ၎င်းကို အသုံးပြုသောအခါ သင့်ကိုယ်ပိုင် `DATA_DIR` ဖြင့်
 စတင်ပါ။ Exit code များ- အောင်မြင်ပါက `0`၊ validation သို့မဟုတ် promotion မအောင်မြင်ပါက `1`၊ အသုံးပြုပုံ error သို့မဟုတ် build မရှိပါက `2`။

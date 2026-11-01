@@ -4,7 +4,7 @@
 
 ---
 
-Cách OmniRoute ước tính, ghi nhận và báo cáo chi phí của mọi yêu cầu — và lý do con số trên
+Cách 67router ước tính, ghi nhận và báo cáo chi phí của mọi yêu cầu — và lý do con số trên
 bảng điều khiển là một **công cụ theo dõi khoản tiết kiệm**, không phải hóa đơn.
 
 Xem thêm: [Hướng dẫn sử dụng](./USER_GUIDE.md) · [Thư viện tính năng](./FEATURES.md)
@@ -13,11 +13,11 @@ Xem thêm: [Hướng dẫn sử dụng](./USER_GUIDE.md) · [Thư viện tính n
 
 ## Đây là gì (và không phải là gì)
 
-OmniRoute gán chi phí USD cho từng yêu cầu hoàn thành bằng cách nhân số lượng token
+67router gán chi phí USD cho từng yêu cầu hoàn thành bằng cách nhân số lượng token
 với mức giá của mô hình. Các số liệu này được sử dụng cho bảng điều khiển **Chi phí**,
 CLI `omniroute cost` / `omniroute usage`, các bản xuất CSV/JSON và ngân sách theo từng khóa API.
 
-> **"Chi phí" trên bảng điều khiển là công cụ theo dõi khoản tiết kiệm, không phải hóa đơn.** OmniRoute không bao giờ thu phí bạn
+> **"Chi phí" trên bảng điều khiển là công cụ theo dõi khoản tiết kiệm, không phải hóa đơn.** 67router không bao giờ thu phí bạn
 > — nó định tuyến các yêu cầu của bạn đến những nhà cung cấp mà bạn đã kết nối (các gói đăng ký,
 > bậc miễn phí và khóa API của chính bạn). Nếu "$290 tổng chi phí" được tích lũy hoàn toàn trên các mô hình miễn phí,
 > điều đó có nghĩa là bạn đã **không phải trả khoảng $290** cho một API trả phí. Con số này là một _ước tính_
@@ -29,7 +29,7 @@ trên bảng điều khiển là công cụ theo dõi khoản tiết kiệm, kh�
 
 Vì con số này là một ước tính:
 
-- Nó phụ thuộc vào bảng giá mà OmniRoute có cho từng mô hình. Một mô hình không có mục giá
+- Nó phụ thuộc vào bảng giá mà 67router có cho từng mô hình. Một mô hình không có mục giá
   sẽ đóng góp chi phí `0` (được hiển thị dưới dạng hàng "Cũ / Miễn phí" trong trình khám phá).
 - Lưu lượng thuộc bậc miễn phí và gói đăng ký vẫn tích lũy một khoản chi phí _ước tính_ — đó là
   số tiền bạn đang tiết kiệm, không phải số tiền phải trả.
@@ -47,7 +47,7 @@ Chi phí được lấy từ một bảng giá, được phân giải theo thứ
 2. **Giá bên ngoài đã đồng bộ** — được lấy từ
    `model_prices_and_context_window.json` công khai của LiteLLM khi tính năng đồng bộ được bật (được lưu trong một
    không gian tên `pricing_synced` riêng biệt để không bao giờ ghi đè các thiết lập của bạn).
-3. **Giá mặc định được mã hóa cứng** — đi kèm với OmniRoute.
+3. **Giá mặc định được mã hóa cứng** — đi kèm với 67router.
 
 Tính năng đồng bộ giá bên ngoài là **tùy chọn tham gia** và bị tắt theo mặc định. Các biến môi trường liên quan
 (xem [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ có ghi chú khác.
 
 ## CLI
 
-CLI của OmniRoute cung cấp các lệnh về chi phí, mức sử dụng và giá (được đăng ký trong
+CLI của 67router cung cấp các lệnh về chi phí, mức sử dụng và giá (được đăng ký trong
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

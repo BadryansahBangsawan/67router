@@ -7,7 +7,7 @@
 > **Patiesības avots:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute var padarīt savu lokālo serveri (`http://localhost:20128`) pieejamu publiskajā
+67router var padarīt savu lokālo serveri (`http://localhost:20128`) pieejamu publiskajā
 internetā, izmantojot trīs tuneļu aizmugursistēmas. Tas ir noderīgi:
 
 - OAuth atzvaniem no mākoņpakalpojumu sniedzējiem (Antigravity, Gemini, Cursor), kuriem nepieciešams
@@ -15,7 +15,7 @@ internetā, izmantojot trīs tuneļu aizmugursistēmas. Tas ir noderīgi:
 - Lokālās instances kopīgošanai ar komandas biedriem bez VM izvietošanas.
 - Testēšanai mobilajās ierīcēs, attālināti vai starp dažādiem tīkliem.
 
-Visas trīs aizmugursistēmas tiek pārvaldītas procesa ietvaros — OmniRoute palaiž/aptur pamatā esošo
+Visas trīs aizmugursistēmas tiek pārvaldītas procesa ietvaros — 67router palaiž/aptur pamatā esošo
 bināro failu vai SDK no informācijas paneļa vai REST API. Reversā starpniekservera vai systemd konfigurēšana
 nav nepieciešama.
 
@@ -41,7 +41,7 @@ divus režīmus, kas tiek izvēlēti atkarībā no tā, vai ir norādīta nosauk
 http://localhost:<apiPort>` un no standarta izvades iegūst piešķirto `*.trycloudflare.com` URL.
   URL ir īslaicīgi un mainās katrā restartēšanas reizē.
 - **Nosauktais tunelis (pēc izvēles).** Ja `CLOUDFLARED_CONFIG` norāda uz lokāli pārvaldītu
-  cloudflared `config.yml`, OmniRoute palaiž `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml`, 67router palaiž `cloudflared tunnel --no-autoupdate
 --config <path> run`, nodrošinot **stabilu, nosauktu resursdatora nosaukumu**. Konfigurācija
   nodrošina tuneļa UUID, `credentials-file` un `ingress` maršrutēšanu, tāpēc
   `--url` netiek nodots un Zero Trust informācijas paneļa pilnvara nav nepieciešama. `run` nolasa
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` un no standarta izvades iegūst piešķirto `*.trycl
 
 Galvenās darbības īpatnības:
 
-- **Automātiska instalēšana.** Pirmajā lietošanas reizē OmniRoute lejupielādē jaunāko `cloudflared`
+- **Automātiska instalēšana.** Pirmajā lietošanas reizē 67router lejupielādē jaunāko `cloudflared`
   bināro failu no oficiālajiem GitHub laidieniem (pārvaldītā instalācija atrodas zem
   `DATA_DIR/cloudflared/`). Pirms izpildes lejupielādētā artefakta SHA256 tiek pārbaudīta pret
   laidiena manifestu.
@@ -67,7 +67,7 @@ Galvenās darbības īpatnības:
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Izveidojiet `~/.cloudflared/config.yml`, kas maršrutē jūsu resursdatora nosaukumu uz OmniRoute lokālo
+2. Izveidojiet `~/.cloudflared/config.yml`, kas maršrutē jūsu resursdatora nosaukumu uz 67router lokālo
    API portu (pēc noklusējuma 20128):
 
    ```yaml
@@ -79,11 +79,11 @@ Galvenās darbības īpatnības:
      - service: http_status:404
    ```
 
-3. Norādiet OmniRoute konfigurācijas failu un (atkārtoti) palaidiet tuneli:
+3. Norādiet 67router konfigurācijas failu un (atkārtoti) palaidiet tuneli:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # neobligāti — pārraksta OmniRoute uzrādīto resursdatora nosaukumu; pretējā gadījumā tas tiek nolasīts no
+   # neobligāti — pārraksta 67router uzrādīto resursdatora nosaukumu; pretējā gadījumā tas tiek nolasīts no
    # konfigurācijas pirmās ingress kārtulas:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -122,9 +122,9 @@ Vai informācijas panelī: **Iestatījumi → Tuneļi → Cloudflare**.
 
 | Mainīgais                                            | Mērķis                                                                                                                                                                                      |
 | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Pārraksta binārā faila ceļu. Ja tas ir iestatīts un derīgs, OmniRoute izmanto to, nevis veic lejupielādi.                                                                                   |
+| `CLOUDFLARED_BIN`                                    | Pārraksta binārā faila ceļu. Ja tas ir iestatīts un derīgs, 67router izmanto to, nevis veic lejupielādi.                                                                                    |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transporta protokols (pēc noklusējuma `http2`; pieejami arī `quic`, `auto`).                                                                                                                |
-| `CLOUDFLARED_CONFIG`                                 | Ceļš uz lokāli pārvaldītu cloudflared `config.yml`. Ja tas ir iestatīts, OmniRoute ātrā tuneļa vietā palaiž **nosauktu/pastāvīgu** tuneli (`tunnel --config <path> run`).                   |
+| `CLOUDFLARED_CONFIG`                                 | Ceļš uz lokāli pārvaldītu cloudflared `config.yml`. Ja tas ir iestatīts, 67router ātrā tuneļa vietā palaiž **nosauktu/pastāvīgu** tuneli (`tunnel --config <path> run`).                    |
 | `CLOUDFLARED_HOSTNAME`                               | Pārraksta nosauktā tuneļa publiski uzrādīto resursdatora nosaukumu (piem., `ai.example.com`). Ja nav iestatīts, tas tiek nolasīts no konfigurācijas pirmā `ingress` resursdatora nosaukuma. |
 
 ## 2. ngrok
@@ -173,7 +173,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Atbildē ir iekļauts piešķirtais `publicUrl` (piemēram,
 `https://abcd-1234.ngrok-free.app`). Pielāgoti domēni, reģioni un politiku
-kārtulas ir jākonfigurē ngrok informācijas panelī — OmniRoute tikai pārsūta
+kārtulas ir jākonfigurē ngrok informācijas panelī — 67router tikai pārsūta
 lokālā mērķa URL uz SDK.
 
 ## 3. Tailscale Funnel
@@ -188,15 +188,15 @@ formāts ir `https://<machine>.<tailnet>.ts.net/`.
 
 ### Priekšnosacījumi
 
-1. Instalējiet Tailscale (vai ļaujiet OmniRoute to izdarīt — skatiet tālāk
+1. Instalējiet Tailscale (vai ļaujiet 67router to izdarīt — skatiet tālāk
    aprakstīto `install` galapunktu).
-2. Piesakieties (`tailscale login` vai izmantojot OmniRoute `login` galapunktu).
+2. Piesakieties (`tailscale login` vai izmantojot 67router `login` galapunktu).
 3. Iespējojiet Funnel savam tailnet Tailscale administrēšanas konsolē:
    <https://login.tailscale.com/admin/settings/features>.
 
 Linux un macOS sistēmās dēmona (`tailscaled`) pārvaldībai ir nepieciešams
 `sudo`. POST galapunkti pieņem neobligātu lauku `sudoPassword`, kas izsaukuma
-laikā tiek pārsūtīts uz OmniRoute MITM paroļu kešatmiņu (`getCachedPassword` /
+laikā tiek pārsūtīts uz 67router MITM paroļu kešatmiņu (`getCachedPassword` /
 `setCachedPassword`). Windows izmanto noklusējuma pakalpojuma instalāciju:
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -257,7 +257,7 @@ neatkarīga.
 
 ## OAuth atzvanīšanas apsvērumi
 
-Kad OmniRoute tiek padarīts pieejams, izmantojot tuneli, informācijas panelim un OAuth plūsmām
+Kad 67router tiek padarīts pieejams, izmantojot tuneli, informācijas panelim un OAuth plūsmām
 atzvanīšanas vietrāži URL ir jāveido, izmantojot **publisko** resursdatora nosaukumu, nevis `localhost`. Pretējā gadījumā
 OAuth nodrošinātājs novirza lietotāju atpakaļ uz vietrādi URL, kuru tā serveri nevar sasniegt,
 un rokasspiediens neizdodas.
@@ -273,7 +273,7 @@ Iestatiet:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-un pirms OAuth sākšanas restartējiet OmniRoute. Īslaicīgajiem Cloudflare Quick
+un pirms OAuth sākšanas restartējiet 67router. Īslaicīgajiem Cloudflare Quick
 Tunnels vietrādis URL mainās pēc katras restartēšanas, tādēļ OAuth izmantošanai produkcijas vidē dodiet priekšroku ngrok ar rezervētu
 domēnu vai Tailscale Funnel.
 
@@ -288,14 +288,14 @@ Informācijas panelī tuneļa stāvoklis ir redzams sadaļā **Iestatījumi → 
 - Pēdējais kļūdas ziņojums, ja tāds ir.
 
 Programmiskai pārraudzībai periodiski aptaujājiet katras aizmugursistēmas `GET` galapunktus. Vairāku
-aizmugursistēmu vienlaicīga darbināšana ir atļauta; OmniRoute katru no tām izsekos
+aizmugursistēmu vienlaicīga darbināšana ir atļauta; 67router katru no tām izsekos
 neatkarīgi.
 
 ## Problēmu novēršana
 
 ### "cloudflared binārais fails nav atrasts"
 
-OmniRoute pirmajā lietošanas reizē mēģina to instalēt automātiski. Ja instalēšana ir bloķēta
+67router pirmajā lietošanas reizē mēģina to instalēt automātiski. Ja instalēšana ir bloķēta
 (ierobežots tīkls, nav piekļuves GitHub), manuāli lejupielādējiet `cloudflared` no
 <https://github.com/cloudflare/cloudflared/releases> un iestatiet
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

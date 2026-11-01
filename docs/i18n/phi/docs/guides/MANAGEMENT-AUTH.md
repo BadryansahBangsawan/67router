@@ -4,7 +4,7 @@
 
 ---
 
-Ang OmniRoute ay may **apat na pamilya ng kredensyal** na maaaring magbigay pahintulot sa mga ruta ng pamamahala.
+Ang 67router ay may **apat na pamilya ng kredensyal** na maaaring magbigay pahintulot sa mga ruta ng pamamahala.
 Hindi sila mapagpapalit. Ang mga Inference API key (`sk-…`) ay **hindi** namamahala sa
 server maliban kung sila ay tahasang binigyan ng `manage` o `admin` scope.
 

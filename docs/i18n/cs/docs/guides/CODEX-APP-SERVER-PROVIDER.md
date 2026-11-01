@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute nabízí **dva** způsoby použití OpenAI Codex:
+67router nabízí **dva** způsoby použití OpenAI Codex:
 
 | Poskytovatel           | Jak komunikuje s OpenAI                                                                                                                                                                         | Omezení použití                                                            |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | **`codex`**            | Předává váš OAuth token ChatGPT/OpenAI přímo rozhraní Responses API                                                                                                                             | **Ano** — oficiální relace není autorizována pro použití přes proxy/router |
-| **`codex-app-server`** | Ovládá **vlastní `codex app-server` nástroje Codex CLI** přes JSON-RPC/WebSocket; CLI spravuje a automaticky obnovuje svůj OAuth (`~/.codex/auth.json`) přesně jako interaktivní relace `codex` | **Ne** — OmniRoute nikdy nepředává token rozhraní API                      |
+| **`codex-app-server`** | Ovládá **vlastní `codex app-server` nástroje Codex CLI** přes JSON-RPC/WebSocket; CLI spravuje a automaticky obnovuje svůj OAuth (`~/.codex/auth.json`) přesně jako interaktivní relace `codex` | **Ne** — 67router nikdy nepředává token rozhraní API                       |
 
 Protože `codex-app-server` nikdy nepředává token, nevztahuje se na něj
 omezení použití týkající se opakovaného přehrávání relace. Vyžaduje však
@@ -21,7 +21,7 @@ omezení použití týkající se opakovaného přehrávání relace. Vyžaduje 
 ## 1. Architektura
 
 ```
-┌─ Aplikace OmniRoute ─────────────┐        ┌─ Sidecar codex-app-server ─────────┐
+┌─ Aplikace 67router ─────────────┐        ┌─ Sidecar codex-app-server ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token schopností)             │  JSON  │  --ws-auth capability-token         │
@@ -79,7 +79,7 @@ vytvoří záloha).
   `~/.codex` do sidecaru (`codex-appserver-home`) a krok přihlášení přeskočte.
 - **Veřejný uživatel bez lokálně nainstalovaného codexu** — na tom nezáleží:
   sidecar obsahuje CLI. Uživatel se pouze ověří prostřednictvím řídicího panelu.
-- **OmniRoute přímo na serveru (bez sidecaru, codex na hostiteli)** — nastavte
+- **67router přímo na serveru (bez sidecaru, codex na hostiteli)** — nastavte
   `OMNIROUTE_CODEX_APPSERVER_WS` na svůj vlastní `codex app-server` a zajistěte,
   aby byl codex na hostiteli přihlášený; pokud binární soubor chybí, zobrazí se
   upozornění „codex není nainstalován“.

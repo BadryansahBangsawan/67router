@@ -4,7 +4,7 @@
 
 ---
 
-Apabila OmniRoute berjalan di dalam Docker, aliran legasi **Import daripada Cursor IDE** /
+Apabila 67router berjalan di dalam Docker, aliran legasi **Import daripada Cursor IDE** /
 `cursor-agent` gagal kerana bekas tidak dapat melihat pemasangan Cursor pada hos.
 Sebaliknya, gunakan **Log masuk dengan Cursor** (PKCE deep-control).
 
@@ -14,7 +14,7 @@ Sebaliknya, gunakan **Log masuk dengan Cursor** (PKCE deep-control).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _di dalam_ bekas.
    Pada Docker Desktop untuk macOS, pangkalan data IDE hos tidak dilekapkan secara lalai, dan
    OS bekas ialah Linux walaupun hos ialah Darwin.
-2. **Tiada perduaan `cursor-agent`** — Imej rasmi OmniRoute tidak menyertakan
+2. **Tiada perduaan `cursor-agent`** — Imej rasmi 67router tidak menyertakan
    `cursor-agent`. Sebelum ini, Model Tersedia menjalankan
    `cursor-agent --list-models` melalui shell dan menggunakan katalog statik sebagai pilihan sandaran.
 3. **Perduaan yang salah** — **Jangan** lekap-ikat `cursor-agent` macOS ke dalam bekas
@@ -24,11 +24,11 @@ Sebaliknya, gunakan **Log masuk dengan Cursor** (PKCE deep-control).
 
 1. Buka **Papan Pemuka → Penyedia → Cursor**.
 2. Pilih tab **Log masuk dengan Cursor**.
-3. Klik **Log masuk dengan Cursor** — OmniRoute membuka
+3. Klik **Log masuk dengan Cursor** — 67router membuka
    `https://cursor.com/loginDeepControl?…` dalam pelayar **hos** anda.
-4. Luluskan log masuk dalam pelayar, kemudian kembali ke papan pemuka. OmniRoute
+4. Luluskan log masuk dalam pelayar, kemudian kembali ke papan pemuka. 67router
    meninjau `api2.cursor.sh/auth/poll` sehingga token diterima.
-5. OmniRoute menyimpan token **akses + segar semula** dan menyegarkannya melalui
+5. 67router menyimpan token **akses + segar semula** dan menyegarkannya melalui
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Laluan ini tidak memerlukan Cursor IDE atau `cursor-agent` di dalam bekas.
@@ -37,10 +37,10 @@ Laluan ini tidak memerlukan Cursor IDE atau `cursor-agent` di dalam bekas.
 
 Dengan sambungan yang telah dilog masuk, **Model Tersedia / Segerak Automatik** mengutamakan
 katalog HTTP `AiService/AvailableModels` Cursor menggunakan token pembawa sambungan.
-Jika itu gagal, OmniRoute masih mencuba `cursor-agent` hos (apabila tersedia), kemudian
+Jika itu gagal, 67router masih mencuba `cursor-agent` hos (apabila tersedia), kemudian
 benih pendaftaran statik.
 
-OmniRoute sentiasa mendedahkan **`auto`** dalam katalog (paparan “Auto”), serta
+67router sentiasa mendedahkan **`auto`** dalam katalog (paparan “Auto”), serta
 mod penghala gaya OpenCodex **`auto-cost`**, **`auto-balance`**, dan
 **`auto-intelligence`**. Pada talian, ini dipetakan kepada model `default` Cursor
 (dengan `optimization` ModelParameter untuk ketiga-tiga varian). Utamakan
@@ -87,7 +87,7 @@ sahaja tidak lagi diperlukan).
 ## Giliran kosong / penggunaan habis
 
 Apabila Cursor menerima Run tetapi tidak mengembalikan teks pembantu (lazim apabila penggunaan
-premium telah habis), OmniRoute memaparkan **429** yang boleh diambil tindakan (petunjuk kuota) atau
+premium telah habis), 67router memaparkan **429** yang boleh diambil tindakan (petunjuk kuota) atau
 **502** dengan panduan — bukannya sekadar “Penyedia mengembalikan kandungan kosong”. Kegagalan
 penstriman seperti `not_found: AI Model Not Found` (tetingkap penggunaan telah habis)
 dikelaskan sebagai **had kadar / penggunaan Cursor terlampaui** dan mengekalkan mesej tersebut
@@ -97,7 +97,7 @@ had pelan Cursor.
 
 ## Versi klien (tanpa antaramuka)
 
-Tanpa pemasangan `cursor-agent` setempat, OmniRoute menentukan
+Tanpa pemasangan `cursor-agent` setempat, 67router menentukan
 `x-cursor-client-version` melalui env `CURSOR_AGENT_CLI_VERSION`, kemudian kikisan skrip
 pemasang Cursor yang dicache pada cakera, diikuti ID binaan yang disematkan. Atasi dengan
 `CURSOR_AGENT_CLI_VERSION` apabila diperlukan.

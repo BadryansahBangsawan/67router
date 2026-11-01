@@ -4,7 +4,7 @@
 
 ---
 
-Compresia OmniRoute este construită în jurul contractelor motoarelor. Un mod poate rula direct un singur motor
+Compresia 67router este construită în jurul contractelor motoarelor. Un mod poate rula direct un singur motor
 (`caveman` sau `rtk`) ori o conductă stivuită deterministă care execută mai multe motoare în ordine.
 
 ## Moduri
@@ -45,10 +45,10 @@ motorul nu transformă nimic. Acesta este motivul pentru care implicit este `agg
 nu cel mai sigur profil.
 
 Pachetul își rezolvă propriul domeniu de aplicare al modelului și profilul din
-configurația mediului său. OmniRoute nu deleagă niciodată decizia: adaptorul fixează
+configurația mediului său. 67router nu deleagă niciodată decizia: adaptorul fixează
 poarta modelului la cel mai restrictiv domeniu de aplicare al pachetului, astfel încât
 setările mediului gazdă pot doar restrânge lista permisă, niciodată să o extindă dincolo
-de chitanțele măsurate de OmniRoute.
+de chitanțele măsurate de 67router.
 
 ## Registrul motoarelor
 
@@ -111,7 +111,7 @@ Modul Caveman se concentrează pe condensarea semantică a prozei obișnuite:
 
 Secțiunea din panoul de control este `Dashboard -> Context & Cache -> Caveman`.
 
-Proiectul Caveman din amonte raportează cu `~75%` mai puțini tokeni de ieșire, economii medii de `65%` pentru ieșire în testele de performanță, cu un interval de `22-87%`, și un instrument de comprimare a intrării de `~46%`. OmniRoute utilizează valoarea Caveman pentru partea de intrare atunci când documentează economiile cumulate pentru prompt/context; modul de ieșire Caveman rămâne o funcționalitate separată privind comportamentul răspunsului.
+Proiectul Caveman din amonte raportează cu `~75%` mai puțini tokeni de ieșire, economii medii de `65%` pentru ieșire în testele de performanță, cu un interval de `22-87%`, și un instrument de comprimare a intrării de `~46%`. 67router utilizează valoarea Caveman pentru partea de intrare atunci când documentează economiile cumulate pentru prompt/context; modul de ieșire Caveman rămâne o funcționalitate separată privind comportamentul răspunsului.
 
 ## RTK
 

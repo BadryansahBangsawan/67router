@@ -4,7 +4,7 @@
 
 ---
 
-Ang TPROXY transparent decrypt ang **ika-5 capture mode** ng OmniRoute para sa
+Ang TPROXY transparent decrypt ang **ika-5 capture mode** ng 67router para sa
 MITM stack ng [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Hinaharang at **dini-decrypt** nito ang lokal na outbound HTTPS traffic sa Linux
 gamit ang kernel TPROXY + policy routing — **nang hindi** nagsi-spoof ng `/etc/hosts` at
@@ -53,7 +53,7 @@ Gamitin ito kapag gusto mong kumuha at mag-decrypt ng traffic mula sa isang proc
 - ayaw mong gambalain sa pamamagitan ng pagbabago sa system-wide proxy.
 
 Dahil nangyayari ang interception sa kernel, **walang kailangang baguhin sa configuration** ng pinagmulang
-process — ngunit dapat pagkatiwalaan ng process ang dynamic CA na ini-install ng OmniRoute
+process — ngunit dapat pagkatiwalaan ng process ang dynamic CA na ini-install ng 67router
 (tingnan ang [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ hindi na-build ang addon), nagbabalik ang addon loader (`src/mitm/tproxy/transpa
 ng `null` sa halip na mag-throw. Pagkatapos, iniulat ng status ng capture mode ang
 `available: false`, **naka-disable** ang toggle sa dashboard na may tooltip na
 "Kailangan ng TPROXY decrypt ang Linux + root + ang native addon", at patuloy na
-gumagana ang natitirang bahagi ng OmniRoute.
+gumagana ang natitirang bahagi ng 67router.
 
 ---
 
@@ -270,7 +270,7 @@ gamit ang bypass socket mark (**SO_MARK**):
 | **Paglilinis ng error**                          | Dumaraan sa `sanitizeErrorMessage()` ang mga tugon sa error ng route (Mahigpit na Panuntunan #12).                                                                                                                                                                                                                                                                                                                                                                 |
 
 **Makapangyarihang kakayahan ang MITM CA.** Ang isang CA na pinagkakatiwalaan ng OS at maaaring lumagda para sa anumang
-host ay nangangahulugang maaaring i-decrypt ang anumang naharang ng OmniRoute. Protektado ito sa likod ng
+host ay nangangahulugang maaaring i-decrypt ang anumang naharang ng 67router. Protektado ito sa likod ng
 hayagan at local-only na TPROXY capture mode, naka-off bilang default, at inaalis ang entry sa trust-store
 kapag itinigil mo ang mode.
 
@@ -379,7 +379,7 @@ ng `available: false` kapag nawawala ang addon.
 ### Mga lumang firewall rule pagkatapos ng pag-crash
 
 Ang `revertTproxy()` ang eksaktong kabaligtaran ng apply at idempotent ito. Ibinabalik ng paghinto sa
-mode ang mga rule; kung sapilitang nahinto ang OmniRoute habang nasa kalagitnaan ng session, gamitin ang
+mode ang mga rule; kung sapilitang nahinto ang 67router habang nasa kalagitnaan ng session, gamitin ang
 **Repair** action ng AgentBridge (`POST /api/tools/agent-bridge/repair`) upang i-undo ang naiwang system
 state (DNS spoof, root CA, system proxy). Awtomatikong nafa-flush din ang mga TPROXY `mangle` rule at route
 kapag nag-reboot.

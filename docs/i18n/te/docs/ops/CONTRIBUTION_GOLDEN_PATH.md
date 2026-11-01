@@ -112,7 +112,7 @@ npm run lint
 - CLI కేటలాగ్లు `bin/cli/locales/` కింద విడిగా ఉంటాయి.
 - ICU ప్లేస్హోల్డర్లు మరియు ట్యాగ్లను యథాతథంగా ఉంచండి. ప్రొడక్ట్/ప్రొవైడర్/మోడల్ పేర్లు,
   ప్రోటోకాల్ మరియు హెడర్ పేర్లు, కమాండ్లు, కోడ్/JSON ఐడెంటిఫయర్లు, URLలు, ఎన్విరాన్మెంట్ వేరియబుల్లు లేదా
-  `OmniRoute`, `OAuth`, `MCP`, మరియు `A2A` వంటి రక్షిత పదాలను అనువదించవద్దు. ప్రస్తుత సోర్స్ జాబితా
+  `67router`, `OAuth`, `MCP`, మరియు `A2A` వంటి రక్షిత పదాలను అనువదించవద్దు. ప్రస్తుత సోర్స్ జాబితా
   `scripts/i18n/glossary/protected-terms.json`.
 
 **కేంద్రీకృత లూప్**
@@ -258,7 +258,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # వేరే చోట
   `current` మరియు `previous`ను తిరిగి పరస్పరం మారుస్తుంది. మొదటి validationలో విఫలమైన candidate
   ఎప్పటికీ promote చేయబడదు.
 
-ప్రతిదీ gitignore చేసిన `_artifacts/candidate/` కింద వ్రాయబడుతుంది; ఇప్పటికే ఉన్న OmniRoute
+ప్రతిదీ gitignore చేసిన `_artifacts/candidate/` కింద వ్రాయబడుతుంది; ఇప్పటికే ఉన్న 67router
 installation మరియు దాని data directory ఎప్పటికీ మార్చబడవు. Promote చేసిన CLI
 `_artifacts/candidate/current/prefix/bin/omniroute`; దాన్ని ఉపయోగించేటప్పుడు మీ స్వంత `DATA_DIR`తో
 ప్రారంభించండి. Exit codes: విజయం కోసం `0`, విఫలమైన validation లేదా promotion కోసం `1`, వినియోగ

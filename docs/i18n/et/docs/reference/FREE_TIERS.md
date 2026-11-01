@@ -9,9 +9,9 @@
 > **Viimati uuritud:** 2026-06-17 — teenusepakkujate kaupa tehtud veebiuuring (ametlik dokumentatsioon + viimase 7 päeva uudised, 50 agendiga läbivaatus koos vastandkontrolliga), mille käigus värskendati kõiki tasuta tasemete kvoote ja kasutustingimusi. **Osaline kordusaudit 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — vt allpool kuupäevaga märkust).
 > **Tõeallikas (kataloog):** `open-sse/config/freeModelCatalog.ts` (MUDELIPÕHISED eelarved, puulide kaupa deduplikeeritud). Alltoodud tokenieelarve arvud pärinevad reaalajas veebiuuringust ja on **ligikaudsed** — vt [Metoodika ja piirangud](#methodology--caveats).
 
-## TL;DR — kui palju tasuta inferentsi OmniRoute tegelikult koondab?
+## TL;DR — kui palju tasuta inferentsi 67router tegelikult koondab?
 
-Need arvud kirjeldavad kataloogi eri kolmandate poolte kontosid ja sobivustingimusi. OmniRoute ei anna seda eelarvet: peate hankima vajalikud kontod või identimisteabe, ühendama sobivad teenusepakkujad ja järgima nende piiranguid. Tegelik kasutatav maht võib olla väiksem, sealhulgas null värske installi korral, millel puudub sobiv marsruut. Teenusepakkujad märkega `tos: avoid` jäetakse vaikimisi automaatsest marsruutimisest välja.
+Need arvud kirjeldavad kataloogi eri kolmandate poolte kontosid ja sobivustingimusi. 67router ei anna seda eelarvet: peate hankima vajalikud kontod või identimisteabe, ühendama sobivad teenusepakkujad ja järgima nende piiranguid. Tegelik kasutatav maht võib olla väiksem, sealhulgas null värske installi korral, millel puudub sobiv marsruut. Teenusepakkujad märkega `tos: avoid` jäetakse vaikimisi automaatsest marsruutimisest välja.
 
 **Kontrollitud 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) pakub ühekordset 5-dollarilist kampaaniakrediiti, mis nõuab makseviisi ja aegub 30 päeva pärast. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) avaldab projekti-, mudeli- ja tasemepõhised kiiruspiirangud; see jääb endiselt kvantifitseeritud kuupõhisest põhinäitajast välja.
 
@@ -81,7 +81,7 @@ allolevas pakkuja märkuses.
 
 ## Kaks režiimi — loendamine ja otsustamine
 
-OmniRoute vastab küsimusele „kas see on tasuta?“ kahe režiimi kaudu, mis loevad
+67router vastab küsimusele „kas see on tasuta?“ kahe režiimi kaudu, mis loevad
 tahtlikult erinevaid allikaid:
 
 | Režiim                    | Tõeallikas                                                                                                                                                                        | Kasutuskohad                                                                                                                           |
@@ -128,25 +128,25 @@ Enamik selles valdkonnas esitatud „tasuta tokenite arv kuus” näitajaid saad
 
 ### ⚠️ Ettevaatust — isiklikku kasutust / puhverserverit puudutavad klauslid, mida tasub kontrollida (16)
 
-> Nende tasuta juurdepääs on tegelik ja OmniRoute saab päringuid neile marsruutida; alltoodud klausleid tasub lihtsalt teada. OAuthi/võtmeta variante ei saa tokenites kvantifitseerida, mistõttu ei sisaldu need pealkirja näitajas (mitte seetõttu, et neid ei saaks kasutada).
+> Nende tasuta juurdepääs on tegelik ja 67router saab päringuid neile marsruutida; alltoodud klausleid tasub lihtsalt teada. OAuthi/võtmeta variante ei saa tokenites kvantifitseerida, mistõttu ei sisaldu need pealkirja näitajas (mitte seetõttu, et neid ei saaks kasutada).
 
-| Teenusepakkuja   | Märkus                                                                                                                                                                                            |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `agy`            | Google Antigravity ToS keelab sõnaselgelt kolmanda osapoole tarkvara, tööriistade või teenuste (sealhulgas puhverserverite) kasutamise teenusele OAuthi kaudu juurdepääsuks; see…                 |
-| `ai21`           | ToS-i §4.2/§8.2 keelab API-juurdepääsu all-litsentsimise või kolmandatele osapooltele levitamise; §3.3 piirab prooviversioonide/hindamistoodete kasutuse „sisemise hindamisega…                   |
-| `amazon-q`       | Uutele registreerujatele on toode lõpetatud; olemasolevatele kasutajatele kehtib AWS Customer Agreement, mis reguleerib hallatud teenuste kasutamist — ise hostitud pro…                          |
-| `blackbox`       | ToS keelab sõnaselgelt all-litsentsimise, edasimüügi, teenuse kolmandatele osapooltele kättesaadavaks tegemise ja tuletatud teenuste loomise — ise hostitud is…                                   |
-| `coze`           | Coze ToS piirab kasutuse sõnaselgelt „isikliku ja mitteärilise kasutusega” ning keelab teenuse rentimise, levitamise, all-litsentsimise või edasimüügi; …                                         |
-| `duckduckgo-web` | Duck.ai ToS (duckduckgo.com/duckai/privacy-terms) keelab sõnaselgelt „automatiseeritud päringud ning tehisintellektiteenuste arendamise või pakkumise” ja piirangutest möödahiilimise…            |
-| `featherless-ai` | Individuaalpaketid on sõnaselgelt piiratud „ostja interaktiivse kasutuse või prototüüpimise ja katsetamisega” — inferentsi edasimüük ja puhverserveri kasutamine nõu…                             |
-| `fireworks`      | ToS keelab sõnaselgelt puhverserveri/vahendaja kasutamise, API-võtmete edastamise ja all-litsentsimise (jaotised 2.1 ja 2.2(i)(j)); ise hostitud isiklikud puhverserverid ei…                     |
-| `friendliai`     | ToS-i jaotised 8(e) ja 8(f) keelavad sõnaselgelt FriendliAI kasutamise puhverserverina või kolmanda osapoole eraldiseisva juurdepääsu võimaldamise ning edasimüügi/…                              |
-| `iflytek`        | iFlytek Spark LLM Service Agreementi jaotis 2.4(3) keelab sõnaselgelt „mis tahes automatiseeritud või programmiliste meetodite kasutamise andmete või väljundi eraldamiseks…                      |
-| `kiro`           | Kiro KKK keelab sõnaselgelt kasutamise koos „OpenClawi ja sarnaste tööriistadega, mis kasutavad kolmandate osapoolte rakenduskeskkondi” — ise hostitud AI-puhverserver (nagu OmniRoute), mis mar… |
-| `modal`          | ToS-i jaotis 1.3 keelab sõnaselgelt „rentida, edasi müüa või muul viisil võimaldada kolmandale osapoolele otsest juurdepääsu teenusele või selle kasutamist” — ise hostitud…                      |
-| `muse-spark-web` | Meta ToS keelab sõnaselgelt automatiseeritud juurdepääsu ilma eelneva loata, pöördprojekteerimise ilma kirjaliku loata ja tehnoloogilistest…                                                      |
-| `nlpcloud`       | ToS keelab sõnaselgelt „puhverserveri või muu seadme seadistamise, mis võimaldab teistel selle kaudu teenusele juurde pääseda”, ning annab ainult mitteüleantava,…                                |
-| `t3-web`         | ToS piirab kontod sõnaselgelt ainult isiklikuks kasutuseks, keelab autentimisandmete jagamise kolmandate osapooltega ning automatiseeritud/robootilise/andmekraapimisega juurdepääsu — i…         |
+| Teenusepakkuja   | Märkus                                                                                                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `agy`            | Google Antigravity ToS keelab sõnaselgelt kolmanda osapoole tarkvara, tööriistade või teenuste (sealhulgas puhverserverite) kasutamise teenusele OAuthi kaudu juurdepääsuks; see…                |
+| `ai21`           | ToS-i §4.2/§8.2 keelab API-juurdepääsu all-litsentsimise või kolmandatele osapooltele levitamise; §3.3 piirab prooviversioonide/hindamistoodete kasutuse „sisemise hindamisega…                  |
+| `amazon-q`       | Uutele registreerujatele on toode lõpetatud; olemasolevatele kasutajatele kehtib AWS Customer Agreement, mis reguleerib hallatud teenuste kasutamist — ise hostitud pro…                         |
+| `blackbox`       | ToS keelab sõnaselgelt all-litsentsimise, edasimüügi, teenuse kolmandatele osapooltele kättesaadavaks tegemise ja tuletatud teenuste loomise — ise hostitud is…                                  |
+| `coze`           | Coze ToS piirab kasutuse sõnaselgelt „isikliku ja mitteärilise kasutusega” ning keelab teenuse rentimise, levitamise, all-litsentsimise või edasimüügi; …                                        |
+| `duckduckgo-web` | Duck.ai ToS (duckduckgo.com/duckai/privacy-terms) keelab sõnaselgelt „automatiseeritud päringud ning tehisintellektiteenuste arendamise või pakkumise” ja piirangutest möödahiilimise…           |
+| `featherless-ai` | Individuaalpaketid on sõnaselgelt piiratud „ostja interaktiivse kasutuse või prototüüpimise ja katsetamisega” — inferentsi edasimüük ja puhverserveri kasutamine nõu…                            |
+| `fireworks`      | ToS keelab sõnaselgelt puhverserveri/vahendaja kasutamise, API-võtmete edastamise ja all-litsentsimise (jaotised 2.1 ja 2.2(i)(j)); ise hostitud isiklikud puhverserverid ei…                    |
+| `friendliai`     | ToS-i jaotised 8(e) ja 8(f) keelavad sõnaselgelt FriendliAI kasutamise puhverserverina või kolmanda osapoole eraldiseisva juurdepääsu võimaldamise ning edasimüügi/…                             |
+| `iflytek`        | iFlytek Spark LLM Service Agreementi jaotis 2.4(3) keelab sõnaselgelt „mis tahes automatiseeritud või programmiliste meetodite kasutamise andmete või väljundi eraldamiseks…                     |
+| `kiro`           | Kiro KKK keelab sõnaselgelt kasutamise koos „OpenClawi ja sarnaste tööriistadega, mis kasutavad kolmandate osapoolte rakenduskeskkondi” — ise hostitud AI-puhverserver (nagu 67router), mis mar… |
+| `modal`          | ToS-i jaotis 1.3 keelab sõnaselgelt „rentida, edasi müüa või muul viisil võimaldada kolmandale osapoolele otsest juurdepääsu teenusele või selle kasutamist” — ise hostitud…                     |
+| `muse-spark-web` | Meta ToS keelab sõnaselgelt automatiseeritud juurdepääsu ilma eelneva loata, pöördprojekteerimise ilma kirjaliku loata ja tehnoloogilistest…                                                     |
+| `nlpcloud`       | ToS keelab sõnaselgelt „puhverserveri või muu seadme seadistamise, mis võimaldab teistel selle kaudu teenusele juurde pääseda”, ning annab ainult mitteüleantava,…                               |
+| `t3-web`         | ToS piirab kontod sõnaselgelt ainult isiklikuks kasutuseks, keelab autentimisandmete jagamise kolmandate osapooltega ning automatiseeritud/robootilise/andmekraapimisega juurdepääsu — i…        |
 
 ### ✅ Üldiselt lubav — caution / ambiguous / ok (ülejäänud)
 
@@ -304,7 +304,7 @@ Enamik selles valdkonnas esitatud „tasuta tokenite arv kuus” näitajaid saad
 
 - **`360ai`** — Kaasasolev freeNote „Free 360 AI Brain models” näib olevat aegunud. Praegu on juurdepääs taotluspõhine ja tasuline. 2023. aasta turuletoomise aegsed kampaaniatokenid (ühekordselt 100M–250M) võisid olla selle aluseks…
 - **`agentrouter`** — Meie kaasasolev freeNote ütleb „$200 free credits on signup”. Tegelikult saavad tavalised (ilma soovituseta) registreerujad praegu ainult $100; soovituse kaudu registreerujad võivad saada $200, kuid 2026. aasta aprilli kogukonnakommentaar…
-- **`agy`** — Meie kaasasolev freeNote ütleb „(none)”, vihjates tasuta taseme puudumisele, kuid Antigravityl on tasuta OAuth-põhine tase. Kasutustingimused keelavad siiski selgesõnaliselt selle tasuta taseme kasutamise sellise puhverserveri kaudu nagu OmniRoute …
+- **`agy`** — Meie kaasasolev freeNote ütleb „(none)”, vihjates tasuta taseme puudumisele, kuid Antigravityl on tasuta OAuth-põhine tase. Kasutustingimused keelavad siiski selgesõnaliselt selle tasuta taseme kasutamise sellise puhverserveri kaudu nagu 67router …
 - **`ai21`** — Piiranguid karmistati: prooviperiood lühenes „3 kuult” 7 päevale. $10 krediidisumma jäi samaks, kuid kehtivusaeg vähenes järsult ligikaudu 90 päevalt 7 päevale.
 - **`aimlapi`** — Oluliselt muutunud. Kaasasolev freeNote reklaamis „$0.025/day free credits — 200+ models”, kuid tasuta tase on nüüd peatatud/lõpetatud. $0.025 suurune päevane krediidieraldis (50 000 krediiti päevas, 10 päringut p…
 - **`amazon-q`** — Meie kaasasolev freeNote ütleb „(none)” — tegelikkus on veel halvem: uued kasutajad ei saa alates 15. maist 2026 enam tootega liituda. Varem pakkus tasuta tase 50 agendipõhist päringut kuus ja piiramatult tekstisiseseid…

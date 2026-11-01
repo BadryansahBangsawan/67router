@@ -14,7 +14,7 @@ Divi pēc izvēles aktivizējami Compose profili (`memory`, `bifrost`) esošajai
 
 ## Kāpēc šī ir konservatīva pieeja
 
-OmniRoute esošā izvietošanas arhitektūra jau ir kompakta un pārbaudīta:
+67router esošā izvietošanas arhitektūra jau ir kompakta un pārbaudīta:
 
 - **`redis:7-alpine`** apstrādā pieprasījumu biežuma ierobežošanas un kešatmiņas slodzi produkcijas mērogā.
 - **SQLite + sqlite-vec + FTS5** nodrošina lokālo atmiņu, vektoru meklēšanu un teksta meklēšanu (skatiet [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Abi šeit aprakstītie profili ir **horizontālās mērogošanas iespējas izvie
 
 - Jūs darbināt ≥3 `omniroute` replikas un vēlaties centralizēt pakalpojumu sniedzēju rotāciju vienā Go procesā.
 - Jūs vēlaties vienotu audita un žurnālu saskarni visu repliku pieprasījumiem augšupējiem pakalpojumu sniedzējiem.
-- Jūs vēlaties horizontāli mērogot 1. līmeņa maršrutēšanas slāni neatkarīgi no OmniRoute replikām.
+- Jūs vēlaties horizontāli mērogot 1. līmeņa maršrutēšanas slāni neatkarīgi no 67router replikām.
 
 **Ko tas pievieno:**
 

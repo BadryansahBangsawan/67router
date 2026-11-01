@@ -30,19 +30,18 @@ export default function CliComparisonCard({ currentType }: CliComparisonCardProp
           return (
             <div
               key={type}
+              data-current={isCurrent ? "true" : undefined}
               className={cn(
-                "flex flex-col gap-2 p-3 rounded-lg",
-                isCurrent
-                  ? "bg-primary/10 border border-primary/30"
-                  : "bg-bg-subtle border border-transparent"
+                "flex flex-col gap-2 rounded-control border p-3",
+                isCurrent ? "border-border-strong bg-surface" : "border-border bg-bg-subtle"
               )}
             >
               {/* Title */}
               <div className="flex items-center justify-between gap-1 flex-wrap">
                 <span
                   className={cn(
-                    "text-xs font-semibold uppercase tracking-wider",
-                    isCurrent ? "text-primary" : "text-text-muted"
+                    "text-[11px] font-medium uppercase tracking-[0.04em]",
+                    isCurrent ? "text-text-main" : "text-text-muted"
                   )}
                 >
                   {t(`comparison.${type}.title`)}
@@ -54,7 +53,7 @@ export default function CliComparisonCard({ currentType }: CliComparisonCardProp
                 ) : (
                   <Link
                     href={TYPE_HREFS[type]}
-                    className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-bg-subtle text-text-muted hover:text-primary hover:bg-primary/10 transition-colors whitespace-nowrap"
+                    className="inline-flex items-center whitespace-nowrap rounded-[5px] border border-border bg-surface px-1.5 py-px text-[11px] font-medium text-text-muted transition-colors hover:border-border-strong hover:text-text-main"
                   >
                     {t("comparison.open")}
                   </Link>

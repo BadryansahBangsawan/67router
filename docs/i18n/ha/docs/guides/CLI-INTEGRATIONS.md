@@ -7,10 +7,10 @@
 Don bayanin manifest ɗin executable na bai ɗaya, keɓantattun muhallan child da saitin
 Gemini mai ɗorewa, duba [yarjejeniyoyin ƙaddamar da CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute yana zuwa da jerin umarnin `setup-*` waɗanda ke saita wani
-CLI na rubuta lamba (Codex, Claude Code, OpenCode, Cline, …) don amfani da OmniRoute a matsayin backend ɗinsa — don haka
-kayan aikin yana sadarwa da endpoint **ɗaya** kuma OmniRoute yana tura buƙatar zuwa provider da ya dace tare da
-auto-fallback. Kowane umarni yana karanta kundin model na **live** daga OmniRoute da ke gudana
+67router yana zuwa da jerin umarnin `setup-*` waɗanda ke saita wani
+CLI na rubuta lamba (Codex, Claude Code, OpenCode, Cline, …) don amfani da 67router a matsayin backend ɗinsa — don haka
+kayan aikin yana sadarwa da endpoint **ɗaya** kuma 67router yana tura buƙatar zuwa provider da ya dace tare da
+auto-fallback. Kowane umarni yana karanta kundin model na **live** daga 67router da ke gudana
 (na gida ko na nesa) sannan ya rubuta fayil ɗin saitunan kayan aikin a kan na'urarka
 **kai tsaye**. Ana komawa ga API key ta hanyar environment variable a duk inda kayan aikin
 ke goyon bayansa. An bayyana a ƙasa umarnin da ke adana environment file na cikin kayan aikin har abada.
@@ -53,7 +53,7 @@ cikakken bayani na kowane kayan aiki:
 
 - [Saitin Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Saitin Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Remote Mode](./REMOTE-MODE.md) — sarrafa OmniRoute na nesa (VPS / Tailnet) daga laptop ɗinka
+- [Remote Mode](./REMOTE-MODE.md) — sarrafa 67router na nesa (VPS / Tailnet) daga laptop ɗinka
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — extension na OmniCopilot; yana kuma iya gudanar da waɗannan
   umarnin `setup-*` a madadinka daga cikin editor
 
@@ -89,7 +89,7 @@ uwar garken sannan ya rubuta daidaitawar a gida.
 
 Bayanan flags (an tabbatar da su a tushen command):
 
-- `--remote <url>` — ɗauko catalog daga OmniRoute na nesa (yana rinjayar `--port`
+- `--remote <url>` — ɗauko catalog daga 67router na nesa (yana rinjayar `--port`
   da context mai aiki). `--api-key <key>` yana bayar da credential na wannan
   server (ta tsohuwa daga env var na `OMNIROUTE_API_KEY`, ko token na context mai aiki).
 - `--only <patterns>` — substrings da waƙafi ya raba; a bar model IDs kawai da suka dace
@@ -110,7 +110,7 @@ Bayanan flags (an tabbatar da su a tushen command):
   **codex** ta args na `-c model_providers.omniroute.*`. **Qwen ne kaɗai run
   target da ke tilasta buƙatar `--model`** — `omniroute run qwen` ba tare da shi ba yana fita
   da `2` tare da kuskure bayyananne.
-- `--port <port>` — port na OmniRoute na gida (tsoho `20128`, ana watsi da shi idan an saita `--remote`).
+- `--port <port>` — port na 67router na gida (tsoho `20128`, ana watsi da shi idan an saita `--remote`).
   Yana nan a duk `setup-*` da launchers ɗin biyu.
 - Exit codes na `omniroute run`: ana tura exit code na child CLI
   yadda yake; `2` = arguments marasa inganci (target mara tallafi, rashin
@@ -155,7 +155,7 @@ ba a nuna su a matsayin targets da za a iya ƙaddamarwa.
 
 ## Amfani na gida
 
-Yayin da OmniRoute ke aiki a kan `localhost:20128`, kawai gudanar da umarnin saiti na
+Yayin da 67router ke aiki a kan `localhost:20128`, kawai gudanar da umarnin saiti na
 kayan aikinka. Ana ɗauko katalog ɗin daga sabar gida.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Ƙaddamar ba tare da rubuta wani config kwata-kwata ba (allurar env kawai):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute na gida
-omniroute launch-codex           # Codex CLI → OmniRoute na gida
+omniroute launch                 # Claude Code → 67router na gida
+omniroute launch-codex           # Codex CLI → 67router na gida
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Amfani daga nesa
 
-Nuna kowane umarnin saiti zuwa OmniRoute na nesa da `--remote` + `--api-key`. Ana
+Nuna kowane umarnin saiti zuwa 67router na nesa da `--remote` + `--api-key`. Ana
 ɗauko katalog ɗin daga wurin nesa; ana rubuta config ɗin a kan na'urarka ta gida.
 
 ```bash
@@ -246,7 +246,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Duk siffofin biyu suna rubuta 5dive **auth profile** ɗaya, sannan kowane `claude` seat
-da aka ɗaura wa wannan profile zai yi magana da OmniRoute. Abubuwa uku sun keɓanta
+da aka ɗaura wa wannan profile zai yi magana da 67router. Abubuwa uku sun keɓanta
 ga wannan manufa:
 
 - **Yana aiki a kan fleet host, a matsayin root.** Verbs na 5dive suna aiki a kan
@@ -265,7 +265,7 @@ ga wannan manufa:
 Ana miƙa API key ɗin ga 5dive ta **stdin** (`--api-key=-`), don haka ba ya taɓa
 bayyana a cikin fitowar `ps`.
 
-Nuna profile ɗin zuwa **combo** na OmniRoute maimakon model guda ɗaya shi ne ke ba
+Nuna profile ɗin zuwa **combo** na 67router maimakon model guda ɗaya shi ne ke ba
 rundunar damar failover na provider: lokacin da primary endpoint ya daina aiki
 gaba ɗaya a tsakiyar turn a cikin aikin da aka rubuta a
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), agent ɗin ya
@@ -275,7 +275,7 @@ kammala sauran matakansa a kan fallback kuma bai taɓa bayyana katsewar ba.
 
 ## Ka'idojin Base URL (waɗanne kayan aiki ne ke buƙatar `/v1`)
 
-OmniRoute yana samar da mahadar OpenAI a `/v1`, mahadar Anthropic a tushen URL,
+67router yana samar da mahadar OpenAI a `/v1`, mahadar Anthropic a tushen URL,
 da kuma mahadar Gemini ta asali a `/v1beta`. An saita kowace haɗawa bisa tsarin da
 kayan aikinta ke tsammani (an tabbatar da hakan a cikin lambar umarni):
 
@@ -297,7 +297,7 @@ kayan aikinta ke tsammani (an tabbatar da hakan a cikin lambar umarni):
 ## Kiyaye native deps yayin sabuntawa: `--include=optional`
 
 Lokacin da kuka sabunta da `omniroute update` (bayan tabbatarwa, ko tare da `--apply`),
-OmniRoute yana gudanar da shigarwar tare da `--include=optional` da aka riga aka haɗa:
+67router yana gudanar da shigarwar tare da `--include=optional` da aka riga aka haɗa:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -326,14 +326,14 @@ Sauran flags na `omniroute update` (an tabbatar a cikin tushe): `--check` (fita 
 An tabbatar da ƙa’idar aiki da `@google/gemini-cli` 0.50.0: CLI yana mutunta
 `GOOGLE_GEMINI_BASE_URL` kuma yana aika `POST /v1beta/models/<model>:generateContent`
 (da `:streamGenerateContent?alt=sse`) zuwa gare shi — daidai da shimfiɗar Gemini
-ta asali ta OmniRoute (`/v1beta`). `omniroute run gemini` yana haɗa wannan ta
+ta asali ta 67router (`/v1beta`). `omniroute run gemini` yana haɗa wannan ta
 atomatik:
 
-- `GOOGLE_GEMINI_BASE_URL` → Base URL na OmniRoute mai aiki (tushe, babu `/v1`);
-- `GEMINI_API_KEY` → bayanan shaidar OmniRoute da aka warware (zaɓi/env/context);
+- `GOOGLE_GEMINI_BASE_URL` → Base URL na 67router mai aiki (tushe, babu `/v1`);
+- `GEMINI_API_KEY` → bayanan shaidar 67router da aka warware (zaɓi/env/context);
 - **`GEMINI_CLI_HOME` na ɗan lokaci kuma keɓantacce** wanda `.gemini/settings.json`
   ɗinsa yake zaɓar auth na `gemini-api-key`, don kada zaman Google OAuth da aka
-  adana (Code Assist) ya taɓa rinjayar ƙaddamarwar da aka karkatar zuwa OmniRoute
+  adana (Code Assist) ya taɓa rinjayar ƙaddamarwar da aka karkatar zuwa 67router
   — ana cire shi bayan fita;
 - **tsabtar env**: ana cire `GOOGLE_API_KEY`, `GOOGLE_GENAI_USE_VERTEXAI` da
   `GOOGLE_GENAI_USE_GCA` daga env na child process (waɗanda za su karkatar da auth
@@ -358,7 +358,7 @@ ce haɗawar agent-protocol don `/dashboard/acp-agents`.
 
 Ana gudanar da gwajin koma-bayan tsarin ƙaddamarwa mai tabbataccen sakamako a cikin CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Don tabbatar da binaries na AINIHI a kan sabar
-OmniRoute ta AINIHI, akwai tsarin gwaji na zaɓi a
+67router ta AINIHI, akwai tsarin gwaji na zaɓi a
 `tests/integration/upstream-cli-smoke.int.test.ts`. Ba ya taɓa gudana ta atomatik
 (kowane ƙaramin gwaji ana tsallake shi sai idan `RUN_CLI_SMOKE=1`), yana miƙa bayanan shiga ta SUNAN env-var
 (ba ta ƙimarsa ba), yana ɓoye jerin haruffa masu kama da maɓalli daga duk wani fitarwa da aka adana, yana tsallake

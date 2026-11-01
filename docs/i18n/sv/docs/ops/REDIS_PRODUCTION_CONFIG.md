@@ -6,7 +6,7 @@
 
 ## Översikt
 
-Redis är ett **valfritt, mjukt beroende** i OmniRoute — applikationen fortsätter fungera med reducerad funktionalitet (reservlösningar i minnet) när Redis inte är tillgängligt. I produktion minskar optimering av Redis latensen för fyra separata arbetsbelastningar:
+Redis är ett **valfritt, mjukt beroende** i 67router — applikationen fortsätter fungera med reducerad funktionalitet (reservlösningar i minnet) när Redis inte är tillgängligt. I produktion minskar optimering av Redis latensen för fyra separata arbetsbelastningar:
 
 | Arbetsbelastning             | Drivrutin                     | Klientfabrik                                     | Nyckelmönster                                                |
 | ---------------------------- | ----------------------------- | ------------------------------------------------ | ------------------------------------------------------------ |
@@ -15,7 +15,7 @@ Redis är ett **valfritt, mjukt beroende** i OmniRoute — applikationen fortsä
 | Kvotlagring                  | `redisQuotaStore.ts`          | Separat singleton för `getRedisClient(url)`      | `<prefix>quota:*` konfigurerbart per instans                 |
 | Kretsbrytare för uppvärmning | `redisCircuitBreakerStore.ts` | Separat klient i `circuitBreakerFactory.ts`      | `<prefix>warmup:cb:<connectionId>`                           |
 
-Alla fyra arbetsbelastningar delar ett namnområdesprefix så att OmniRoute kan samexistera med andra appar på en enda Redis-instans (t.ex. `127.0.0.1:6379`). Se [Namnområden för nycklar](#key-namespacing).
+Alla fyra arbetsbelastningar delar ett namnområdesprefix så att 67router kan samexistera med andra appar på en enda Redis-instans (t.ex. `127.0.0.1:6379`). Se [Namnområden för nycklar](#key-namespacing).
 
 ---
 
@@ -38,12 +38,12 @@ Alla fyra arbetsbelastningar delar ett namnområdesprefix så att OmniRoute kan 
 
 ## Namnområden för nycklar
 
-OmniRoute delar en Redis-instans med allt annat som körs på värden. Utan ett namnområde kan nycklar som `auth:api_key:<sha256>` eller `rl:*` kollidera med nycklar från andra applikationer som använder samma Redis (den här instansen kör Redis på `127.0.0.1:6379` tillsammans med andra tjänster).
+67router delar en Redis-instans med allt annat som körs på värden. Utan ett namnområde kan nycklar som `auth:api_key:<sha256>` eller `rl:*` kollidera med nycklar från andra applikationer som använder samma Redis (den här instansen kör Redis på `127.0.0.1:6379` tillsammans med andra tjänster).
 
-Ange `REDIS_KEY_PREFIX` som en icke-tom sträng för att lägga till ett prefix till **varje** OmniRoute-nyckel:
+Ange `REDIS_KEY_PREFIX` som en icke-tom sträng för att lägga till ett prefix till **varje** 67router-nyckel:
 
 ```bash
-# .env — alla OmniRoute-nycklar blir omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — alla 67router-nycklar blir omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # lämna utrymme för operativsystemets sidcache
 maxmemory-policy allkeys-lru         # avlägsna inaktuella poster i autentiseringscachen vid minnesbrist
 
-# Persistens (valfritt — OmniRoute är kraschsäkert utan detta)
+# Persistens (valfritt — 67router är kraschsäkert utan detta)
 save 300 1                           # skapa ögonblicksbild minst var 5:e minut om ≥1 nyckel har ändrats
 appendonly no                        # AOF behövs inte; data kan återskapas
 appendfsync no                       # ingen fsync-overhead (RDB är tillräckligt)

@@ -4,16 +4,16 @@
 
 ---
 
-Njia mbili za kuweka Cursor nyuma ya OmniRoute bila kipindi cha IDE:
+Njia mbili za kuweka Cursor nyuma ya 67router bila kipindi cha IDE:
 
 1. **Mtoa huduma wa `cursor-api`** (kadi ya "Cursor API", jina mbadala `cua`): mtoa huduma wa ufunguo wa API
    anayehifadhi ufunguo wa API wa mtumiaji wa Cursor (`crsr_…`, unaozalishwa kwenye
-   `https://cursor.com/dashboard/api`). Kisha kiteja chochote cha OmniRoute kinaweza kufikia
+   `https://cursor.com/dashboard/api`). Kisha kiteja chochote cha 67router kinaweza kufikia
    modeli za Cursor kupitia `/v1/chat/completions` kama `cursor-api/<model>` au
    `cua/<model>`, pamoja na safu za kawaida za kikomo, urejeaji mbadala na uwekaji kumbukumbu. Mtoa huduma wa IDE
    (`cursor`, kipindi cha OAuth/IDE) habadilishwi.
-2. **Upitishaji wa moja kwa moja wa Cursor CLI**: elekeza Cursor CLI (`agent`) kwenye OmniRoute ili
-   kila RPC inayofanywa na CLI ithibitishwe kwa ufunguo wa API wa OmniRoute, ipelekwe
+2. **Upitishaji wa moja kwa moja wa Cursor CLI**: elekeza Cursor CLI (`agent`) kwenye 67router ili
+   kila RPC inayofanywa na CLI ithibitishwe kwa ufunguo wa API wa 67router, ipelekwe
    kwa Cursor kwa kutumia kitambulisho cha muunganisho wa `cursor-api`, na irekodiwe kwenye
    ukurasa wa Kumbukumbu.
 
@@ -60,7 +60,7 @@ Maelezo:
 
 - Orodha ya modeli za `cursor-api` hutoka kwenye sajili tuli ya Cursor (orodha
   ileile ambayo mtoa huduma wa IDE hutumia kama chaguo mbadala); usakinishaji wa `cursor-agent`
-  hauhitajiki kwenye seva mwenyeji ya OmniRoute.
+  hauhitajiki kwenye seva mwenyeji ya 67router.
 - `POST /api/providers/{id}/refresh-cursor` ni ya mtoa huduma wa IDE wa `cursor`
   pekee; miunganisho ya `cursor-api` haina kipindi cha IDE cha kuhuisha.
 
@@ -68,7 +68,7 @@ Maelezo:
 
 Kwa `cursor` / `cu` na `cursor-api` / `cua`, kirekebishaji shirikishi cha kiwango cha jitihada cha Claude
 huacha kitambulisho cha modeli kilichoombwa bila kubadilishwa. Cursor inaweza kutangaza kiambishi kama
-`-low` kama sehemu ya kitambulisho halisi cha modeli, badala ya kuwa jina mbadala la kiwango cha jitihada la OmniRoute.
+`-low` kama sehemu ya kitambulisho halisi cha modeli, badala ya kuwa jina mbadala la kiwango cha jitihada la 67router.
 Kitekelezaji cha Cursor huhifadhi ulinganifu kamili na katalogi hai; kunapokuwa hakuna
 ulinganifu, kitatuzi chake kilichopo cha modeli hushughulikia urejeaji mbadala wa kiambishi hadi kwenye kigezo.
 
@@ -83,18 +83,18 @@ Njia: `src/app/api/cursor-cli/[...path]/route.ts` →
 kimesajiliwa katika `src/shared/constants/publicApiRoutes.ts` kwa sababu kishughulikiaji
 hutekeleza uthibitishaji wake chenyewe:
 
-| Njia                                                                                                                           | Uthibitishaji unaotarajiwa kutoka kwa CLI | Kile ambacho OmniRoute hufanya                                                                                                                                                                 |
+| Njia                                                                                                                           | Uthibitishaji unaotarajiwa kutoka kwa CLI | Kile ambacho 67router hufanya                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <OmniRoute API key>`              | Huthibitisha ufunguo, huunda JWT ya HS256 ya saa 1 (iliyotiwa saini kwa `JWT_SECRET`) na kuirejesha                                                                                            |
+| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <67router API key>`               | Huthibitisha ufunguo, huunda JWT ya HS256 ya saa 1 (iliyotiwa saini kwa `JWT_SECRET`) na kuirejesha                                                                                            |
 | kila njia nyingine (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                       | Huthibitisha mtoaji/hadhira/muda wa kuisha, huchagua muunganisho amilifu wa `cursor-api`, hubadilisha kichwa cha Authorization kwa tokeni ya Cursor iliyobadilishwa na kutiririsha jibu kurudi |
 
 CLI husimbua `exp` kutoka kwenye tokeni yoyote inayopokea, kwa hivyo kuipa tokeni
 isiyo na muundo unaoonekana huifanya ibadilishane tena kabla ya takriban kila ombi; JWT iliyoundwa
-huepusha hilo. Jibu la 401 kutoka OmniRoute huifanya CLI ibadilishane tena.
+huepusha hilo. Jibu la 401 kutoka 67router huifanya CLI ibadilishane tena.
 
 ### Usanidi
 
-1. Unda ufunguo wa API wa OmniRoute (Dashibodi → Funguo za API) na muunganisho wa
+1. Unda ufunguo wa API wa 67router (Dashibodi → Funguo za API) na muunganisho wa
    `cursor-api`.
 2. Iambie CLI itumie HTTP/1.1 kwa mtiririko wa ajenti. Katika
    `~/.cursor/cli-config.json`:
@@ -107,7 +107,7 @@ huepusha hilo. Jibu la 401 kutoka OmniRoute huifanya CLI ibadilishane tena.
    kilichosanidiwa kando, na ni RPC za sehemu ya udhibiti pekee ndizo hupitia
    kituo cha mwisho.
 
-3. Endesha CLI dhidi ya OmniRoute:
+3. Endesha CLI dhidi ya 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -116,18 +116,18 @@ huepusha hilo. Jibu la 401 kutoka OmniRoute huifanya CLI ibadilishane tena.
    ```
 
 Kila hatua huingia katika Kumbukumbu kama mtoa huduma `cursor-api`, aina ya ombi `cursor-cli`,
-njia `/api/cursor-cli/<rpc>`, ikihusishwa na ufunguo wa API wa OmniRoute na
+njia `/api/cursor-cli/<rpc>`, ikihusishwa na ufunguo wa API wa 67router na
 muunganisho ulioihudumia.
 
 ### Hali za kutofaulu
 
-| Hali                                                              | Jibu kwa CLI                                                  |
-| ----------------------------------------------------------------- | ------------------------------------------------------------- |
-| Ufunguo wa OmniRoute usiojulikana na `REQUIRE_API_KEY=true`       | 401 `unauthenticated` wakati wa ubadilishanaji                |
-| `REQUIRE_API_KEY=false`                                           | kipindi kisichotambulisha mtumiaji (huakisi tabia ya `/v1/*`) |
-| JWT ya kipindi iliyokwisha muda / ya kigeni / iliyochezewa        | 401, CLI hubadilishana tena                                   |
-| Ufunguo wa API wa OmniRoute umebatilishwa baada ya ubadilishanaji | 401 kwenye RPC inayofuata                                     |
-| Hakuna muunganisho amilifu wa `cursor-api`                        | 503 `unavailable`                                             |
-| Cursor inakataa ufunguo wa muunganisho                            | 401 `unauthenticated`, kipindi kilichohifadhiwa huondolewa    |
-| Huduma ya juu haifikiki                                           | 502 `unavailable` (ujumbe uliosafishwa)                       |
-| `JWT_SECRET` haijawekwa                                           | 503 wakati wa ubadilishanaji                                  |
+| Hali                                                             | Jibu kwa CLI                                                  |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Ufunguo wa 67router usiojulikana na `REQUIRE_API_KEY=true`       | 401 `unauthenticated` wakati wa ubadilishanaji                |
+| `REQUIRE_API_KEY=false`                                          | kipindi kisichotambulisha mtumiaji (huakisi tabia ya `/v1/*`) |
+| JWT ya kipindi iliyokwisha muda / ya kigeni / iliyochezewa       | 401, CLI hubadilishana tena                                   |
+| Ufunguo wa API wa 67router umebatilishwa baada ya ubadilishanaji | 401 kwenye RPC inayofuata                                     |
+| Hakuna muunganisho amilifu wa `cursor-api`                       | 503 `unavailable`                                             |
+| Cursor inakataa ufunguo wa muunganisho                           | 401 `unauthenticated`, kipindi kilichohifadhiwa huondolewa    |
+| Huduma ya juu haifikiki                                          | 502 `unavailable` (ujumbe uliosafishwa)                       |
+| `JWT_SECRET` haijawekwa                                          | 503 wakati wa ubadilishanaji                                  |

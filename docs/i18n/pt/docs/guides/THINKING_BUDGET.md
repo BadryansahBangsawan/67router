@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Origem:** `open-sse/services/thinkingBudget.ts`
 
-O Orçamento de Raciocínio controla se o OmniRoute **reescreve os parâmetros de pensamento/raciocínio do cliente** antes de os enviar aos fornecedores. **Não** ativa nem desativa a compressão, o encaminhamento ou a cache de prompts.
+O Orçamento de Raciocínio controla se o 67router **reescreve os parâmetros de pensamento/raciocínio do cliente** antes de os enviar aos fornecedores. **Não** ativa nem desativa a compressão, o encaminhamento ou a cache de prompts.
 
 ## Modos
 
-| Modo                             | O que o OmniRoute faz                                                                                                               | Quando utilizar                                                                                                                                                                                                 |
+| Modo                             | O que o 67router faz                                                                                                                | Quando utilizar                                                                                                                                                                                                 |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (predefinição) | Mantém inalterados os campos do cliente (`reasoning`, `reasoning_effort`, `thinking` do Claude, `thinking_config` do Gemini, etc.). | **Codex / Desktop / qualquer cliente que deva controlar o esforço e os resumos de raciocínio.** Necessário para apresentar painéis de pensamento quando o cliente solicita `reasoning.summary`.                 |
 | **`auto`**                       | **Remove todos** os campos de pensamento/raciocínio do corpo do pedido antes de o enviar ao serviço a montante.                     | Apenas quando pretende deliberadamente que o **fornecedor** defina os valores predefinidos e **não** necessita de pensamento controlado pelo cliente. **Não** significa «mostrar o pensamento automaticamente». |
@@ -38,7 +38,7 @@ Se um cliente (por exemplo, o Codex Desktop) tiver enviado `reasoning: { effort:
 | **Encaminhamento combinado / alternativas**                   | Separado. Não é afetado.                                                                                                                        |
 | **Limites de tokens de chaves de API / orçamentos de custos** | Separados. Não são afetados.                                                                                                                    |
 | **Cache de repetição de raciocínio**                          | Reinjeção em vários turnos para fornecedores restritos (DeepSeek, Kimi, Qwen-thinking, …). Não é o mesmo que «mostrar o pensamento» no Desktop. |
-| **Desencriptação de `encrypted_content`**                     | **Impossível.** Os blocos privados de raciocínio do OpenAI/Codex são opacos. O OmniRoute nunca os desencripta (#7095 / #7176 / #7304).          |
+| **Desencriptação de `encrypted_content`**                     | **Impossível.** Os blocos privados de raciocínio do OpenAI/Codex são opacos. O 67router nunca os desencripta (#7095 / #7176 / #7304).           |
 
 ## Pensamento visível (clientes Codex / Responses)
 
@@ -51,7 +51,7 @@ Para um cliente apresentar texto de raciocínio, é necessário cumprir **todos*
 Se apenas obtiver “raciocínio privado encriptado”, então:
 
 - o modo era **`auto`** (o pedido do cliente foi removido), ou
-- o serviço a montante devolveu `encrypted_content` sem texto de resumo (limitação do fornecedor; o OmniRoute apenas pode apresentar um marcador de posição, não texto simples).
+- o serviço a montante devolveu `encrypted_content` sem texto de resumo (limitação do fornecedor; o 67router apenas pode apresentar um marcador de posição, não texto simples).
 
 ## Exemplos da API
 
@@ -71,7 +71,7 @@ Esquema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adap
 
 ### Persistência / reinício
 
-O valor é armazenado na chave de definições `thinkingBudget` e carregado no arranque do processo (`hydrateThinkingBudgetConfig`). Após uma alteração através da base de dados ou de alguns métodos não relacionados com a API, **reinicie o processo do OmniRoute** para que o singleton em memória corresponda ao conteúdo do disco.
+O valor é armazenado na chave de definições `thinkingBudget` e carregado no arranque do processo (`hydrateThinkingBudgetConfig`). Após uma alteração através da base de dados ou de alguns métodos não relacionados com a API, **reinicie o processo do 67router** para que o singleton em memória corresponda ao conteúdo do disco.
 
 ## Lista de verificação do operador
 

@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute được cung cấp dưới dạng Progressive Web App có thể cài đặt hoàn chỉnh. Khi truy cập bảng điều khiển từ bất kỳ trình duyệt di động nào — Android (Chrome) hoặc iOS (Safari) — bạn có thể chọn "Thêm vào màn hình chính" để có trải nghiệm tương tự ứng dụng gốc mà không cần thông qua cửa hàng ứng dụng.
+67router được cung cấp dưới dạng Progressive Web App có thể cài đặt hoàn chỉnh. Khi truy cập bảng điều khiển từ bất kỳ trình duyệt di động nào — Android (Chrome) hoặc iOS (Safari) — bạn có thể chọn "Thêm vào màn hình chính" để có trải nghiệm tương tự ứng dụng gốc mà không cần thông qua cửa hàng ứng dụng.
 
 ## PWA là gì?
 
-Progressive Web App biến bảng điều khiển web của OmniRoute thành một ứng dụng có giao diện và trải nghiệm giống như ứng dụng di động gốc. Sau khi được cài đặt, ứng dụng sẽ:
+Progressive Web App biến bảng điều khiển web của 67router thành một ứng dụng có giao diện và trải nghiệm giống như ứng dụng di động gốc. Sau khi được cài đặt, ứng dụng sẽ:
 
 - Khởi chạy từ màn hình chính với biểu tượng riêng
 - Mở ở chế độ toàn màn hình — không có thanh địa chỉ hoặc giao diện tab của trình duyệt
@@ -20,26 +20,26 @@ Progressive Web App biến bảng điều khiển web của OmniRoute thành m�
 
 ### Android (Chrome)
 
-1. Mở bảng điều khiển OmniRoute trong Chrome: `http://YOUR_IP:20128`
-2. Chrome sẽ tự động hiển thị biểu ngữ **"Thêm OmniRoute vào Màn hình chính"**, hoặc:
+1. Mở bảng điều khiển 67router trong Chrome: `http://YOUR_IP:20128`
+2. Chrome sẽ tự động hiển thị biểu ngữ **"Thêm 67router vào Màn hình chính"**, hoặc:
    - Nhấn vào menu **⋮** (ba dấu chấm) → **"Thêm vào Màn hình chính"** hoặc **"Cài đặt ứng dụng"**
 3. Xác nhận lời nhắc
-4. OmniRoute xuất hiện trên màn hình chính dưới dạng một ứng dụng độc lập
+4. 67router xuất hiện trên màn hình chính dưới dạng một ứng dụng độc lập
 
 ### iOS (Safari)
 
-1. Mở bảng điều khiển OmniRoute trong Safari: `http://YOUR_IP:20128`
+1. Mở bảng điều khiển 67router trong Safari: `http://YOUR_IP:20128`
 2. Nhấn vào nút **Chia sẻ** (hộp có mũi tên)
 3. Cuộn xuống và nhấn vào **"Thêm vào Màn hình chính"**
-4. Đặt tên cho ứng dụng (mặc định là "OmniRoute") và nhấn **Thêm**
-5. OmniRoute xuất hiện trên màn hình chính với biểu tượng ứng dụng
+4. Đặt tên cho ứng dụng (mặc định là "67router") và nhấn **Thêm**
+5. 67router xuất hiện trên màn hình chính với biểu tượng ứng dụng
 
 ### Máy tính để bàn (Chrome / Edge)
 
-1. Mở bảng điều khiển OmniRoute
-2. Nhấp vào **biểu tượng cài đặt** trên thanh địa chỉ (hoặc ⋮ → "Cài đặt OmniRoute...")
+1. Mở bảng điều khiển 67router
+2. Nhấp vào **biểu tượng cài đặt** trên thanh địa chỉ (hoặc ⋮ → "Cài đặt 67router...")
 3. Xác nhận lời nhắc
-4. OmniRoute mở dưới dạng một cửa sổ độc lập — không có tab, không có thanh địa chỉ
+4. 67router mở dưới dạng một cửa sổ độc lập — không có tab, không có thanh địa chỉ
 
 ## Tính năng
 
@@ -49,15 +49,15 @@ Tệp manifest được cấu hình với `display: "fullscreen"`, nghĩa là �
 
 ### Hỗ trợ ngoại tuyến
 
-OmniRoute bao gồm một service worker (`sw.js`) cung cấp cơ chế lưu vào bộ nhớ đệm thông minh:
+67router bao gồm một service worker (`sw.js`) cung cấp cơ chế lưu vào bộ nhớ đệm thông minh:
 
-| Loại tài nguyên                                                     | Chiến lược                                     | Hành vi                                                                                                                    |
-| ------------------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Khung ứng dụng**                                                  | Ưu tiên bộ nhớ đệm                             | `/`, `/offline`, manifest và các biểu tượng được lưu sẵn vào bộ nhớ đệm khi cài đặt                                        |
-| **Tài nguyên tĩnh** (CSS, JS, hình ảnh, phông chữ)                  | Ưu tiên mạng, dự phòng bằng bộ nhớ đệm         | Tải bản mới từ mạng; chuyển sang bộ nhớ đệm nếu ngoại tuyến                                                                |
-| **Các gói Next.js** (`/_next/`)                                     | Ưu tiên mạng và cập nhật bộ nhớ đệm            | Tải từ mạng và cập nhật bộ nhớ đệm; cung cấp phiên bản đã lưu nếu ngoại tuyến                                              |
-| **Yêu cầu điều hướng**                                              | Bỏ qua (không bao giờ bị chặn)                 | Trình duyệt xử lý việc chuyển đổi dự phòng HTTP/3→HTTP/2; socket QUIC ngắt kết nối không được trở thành `Response.error()` |
-| **API / các tuyến bảng điều khiển** (`/api/`, `/a2a`, `/dashboard`) | Bỏ qua (không bao giờ được lưu vào bộ nhớ đệm) | Luôn truy cập trực tiếp vào máy chủ — service worker không bao giờ chặn                                                    |
+| Loại tài nguyên                                             | Chiến lược                                     | Hành vi                                                                                                                    |
+| ----------------------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Khung ứng dụng**                                          | Ưu tiên bộ nhớ đệm                             | `/`, `/offline`, manifest và các biểu tượng được lưu sẵn vào bộ nhớ đệm khi cài đặt                                        |
+| **Tài nguyên tĩnh** (CSS, JS, hình ảnh, phông chữ)          | Ưu tiên mạng, dự phòng bằng bộ nhớ đệm         | Tải bản mới từ mạng; chuyển sang bộ nhớ đệm nếu ngoại tuyến                                                                |
+| **Các gói Next.js** (`/_next/`)                             | Ưu tiên mạng và cập nhật bộ nhớ đệm            | Tải từ mạng và cập nhật bộ nhớ đệm; cung cấp phiên bản đã lưu nếu ngoại tuyến                                              |
+| **Yêu cầu điều hướng**                                      | Bỏ qua (không bao giờ bị chặn)                 | Trình duyệt xử lý việc chuyển đổi dự phòng HTTP/3→HTTP/2; socket QUIC ngắt kết nối không được trở thành `Response.error()` |
+| **API / các tuyến bảng điều khiển** (`/api/`, `/dashboard`) | Bỏ qua (không bao giờ được lưu vào bộ nhớ đệm) | Luôn truy cập trực tiếp vào máy chủ — service worker không bao giờ chặn                                                    |
 
 ### Trang ngoại tuyến
 
@@ -70,7 +70,7 @@ Khi mạng không khả dụng và người dùng điều hướng đến một 
 
 ### Biểu tượng ứng dụng
 
-OmniRoute cung cấp các biểu tượng được tối ưu hóa cho từng nền tảng:
+67router cung cấp các biểu tượng được tối ưu hóa cho từng nền tảng:
 
 | Tệp                    | Kích thước       | Được sử dụng bởi                             |
 | ---------------------- | ---------------- | -------------------------------------------- |
@@ -93,9 +93,9 @@ Service worker được đăng ký tự động thông qua thành phần `<PwaRe
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Nằm tại `src/shared/components/PwaRegister.tsx`, client component này:
 
 ## Sử dụng với Termux (Android)
 
-Khi chạy OmniRoute trên Android thông qua Termux, PWA hoạt động liền mạch:
+Khi chạy 67router trên Android thông qua Termux, PWA hoạt động liền mạch:
 
-1. Khởi động OmniRoute trong Termux: `npx omniroute`
+1. Khởi động 67router trong Termux: `npx omniroute`
 2. Mở Chrome trên cùng điện thoại: `http://localhost:20128`
 3. Cài đặt PWA thông qua "Thêm vào màn hình chính"
 4. PWA kết nối với máy chủ Termux cục bộ — mọi thứ đều chạy trên thiết bị
@@ -156,7 +156,7 @@ Sự kết hợp này có nghĩa là điện thoại Android của bạn vừa l
 
 ## Sử dụng từ các thiết bị khác
 
-Cài đặt PWA trên bất kỳ thiết bị nào có thể truy cập máy chủ OmniRoute của bạn bằng trình duyệt:
+Cài đặt PWA trên bất kỳ thiết bị nào có thể truy cập máy chủ 67router của bạn bằng trình duyệt:
 
 - **Điện thoại/máy tính bảng khác**: Truy cập `http://PHONE_IP:20128` và cài đặt PWA
 - **Máy tính xách tay**: Mở Chrome/Edge và cài đặt ứng dụng dưới dạng PWA dành cho máy tính

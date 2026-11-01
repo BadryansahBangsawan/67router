@@ -150,7 +150,7 @@ com credenciais, pelo que esses casos ignorados não constituem prova em tempo d
 
 ### Configuração
 
-1. Inicie o OmniRoute com `npm run dev` ou uma instalação compilada.
+1. Inicie o 67router com `npm run dev` ou uma instalação compilada.
 2. Abra Painel → Fornecedores → Adicionar fornecedor.
 3. Selecione a categoria Cookie da Web e Claude Web.
 4. Cole o cabeçalho Cookie completo copiado de um pedido autenticado para `claude.ai`.

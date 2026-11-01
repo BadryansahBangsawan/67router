@@ -137,8 +137,9 @@ test("intelligent combo selection defaults only inside the intelligent filter", 
 
 test("sidebar visibility excludes the removed auto-combo item", async () => {
   const sidebarVisibility = await import("../../src/shared/constants/sidebarVisibility.ts");
+  // Sidebar v2: the old OmniProxy section folded into Routing.
   const omniProxySection = sidebarVisibility.SIDEBAR_SECTIONS.find(
-    (section) => section.id === "omni-proxy"
+    (section) => section.id === "routing"
   );
 
   assert.equal(

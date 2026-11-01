@@ -16,6 +16,7 @@ import Toggle from "@/shared/components/Toggle";
 import Button from "@/shared/components/Button";
 import Badge from "@/shared/components/Badge";
 import Select from "@/shared/components/Select";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { PageHeader as KitPageHeader } from "@omniroute/ui-kit/page-header";
 import { SAMPLE_BEFORE_TEXT, SAMPLE_PAGE_PNG_DATA_URI, SAMPLE_METRICS } from "./sampleData";
 
@@ -81,26 +82,25 @@ function PageHeader() {
 function EconomicsCard() {
   const t = useTranslations("omniglyph");
   return (
-    <Card className="p-6">
-      <h2 className="mb-4 text-lg font-semibold">{t("economicsTitle")}</h2>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+    <section aria-label={t("economicsTitle")} className="flex flex-col gap-2">
+      <h2 className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+        {t("economicsTitle")}
+      </h2>
+      <KpiStrip columns={4}>
         {ECONOMICS.map((e) => (
-          <div key={e.id} className="flex flex-col gap-1">
-            <span className="text-2xl font-semibold tabular-nums">{e.value}</span>
-            <span className="text-xs text-text-muted">{t(`economics.${e.id}`)}</span>
-          </div>
+          <KpiCell key={e.id} label={t(`economics.${e.id}`)} value={e.value} />
         ))}
-      </div>
-    </Card>
+      </KpiStrip>
+    </section>
   );
 }
 
 function BeforeAfterCard() {
   const t = useTranslations("omniglyph");
   return (
-    <Card className="p-6">
+    <Card className="p-5">
       <div className="mb-1 flex items-baseline justify-between">
-        <h2 className="text-lg font-semibold">{t("beforeAfterTitle")}</h2>
+        <h2 className="text-sm font-semibold text-text-main">{t("beforeAfterTitle")}</h2>
         <span className="text-sm font-medium text-success">
           {t("blockSavings", { percent: SAMPLE_METRICS.savingsPct })}
         </span>
@@ -110,19 +110,19 @@ function BeforeAfterCard() {
       </p>
       <div className="grid gap-4 md:grid-cols-2">
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-medium uppercase tracking-wide text-text-muted">
+          <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
             {t("textTokens", { tokens: SAMPLE_METRICS.textTokens })}
           </span>
-          <pre className="max-h-60 overflow-auto rounded border border-border bg-bg-subtle p-3 text-[11px] leading-relaxed">
+          <pre className="max-h-60 overflow-auto rounded-control border border-border bg-bg-subtle p-3 font-mono text-[11px] leading-relaxed">
             {SAMPLE_BEFORE_TEXT}
           </pre>
         </div>
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-medium uppercase tracking-wide text-text-muted">
+          <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
             {t("renderedTokens", { tokens: SAMPLE_METRICS.imageTokens })}
           </span>
           {/* White paper behind the rendered page image (its own background), in both themes. */}
-          <div className="overflow-auto rounded border border-border bg-white p-3">
+          <div className="overflow-auto rounded-control border border-border bg-white p-3">
             {/* eslint-disable-next-line @next/next/no-img-element -- data URI, no loader needed */}
             <img
               src={SAMPLE_PAGE_PNG_DATA_URI}
@@ -144,8 +144,8 @@ function BeforeAfterCard() {
 function GatesCard() {
   const t = useTranslations("omniglyph");
   return (
-    <Card className="p-6">
-      <h2 className="mb-1 text-lg font-semibold">{t("gatesTitle")}</h2>
+    <Card className="p-5">
+      <h2 className="mb-1 text-sm font-semibold text-text-main">{t("gatesTitle")}</h2>
       <p className="mb-4 text-xs text-text-muted">
         {t.rich("gatesDescription", {
           code: (chunks) => <code>{chunks}</code>,
@@ -154,7 +154,7 @@ function GatesCard() {
       <ol className="flex flex-col gap-3">
         {GATES.map((g, i) => (
           <li key={g.id} className="flex gap-3">
-            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-bg-subtle text-xs font-semibold tabular-nums">
+            <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-border bg-surface text-xs font-semibold tabular-nums">
               {i + 1}
             </span>
             <div className="flex flex-col">
@@ -179,9 +179,9 @@ function ProfileCard(props: {
   const t = useTranslations("omniglyph");
   const selected = PROFILES.find((p) => p.id === props.profile) ?? PROFILES[0];
   return (
-    <Card className="p-6">
+    <Card className="p-5">
       <div className="flex flex-col gap-3">
-        <h2 className="text-lg font-semibold">{t("profileTitle")}</h2>
+        <h2 className="text-sm font-semibold text-text-main">{t("profileTitle")}</h2>
         <p className="max-w-xl text-sm text-text-muted">{t("profileDescription")}</p>
         <Select
           className="w-full max-w-sm"
@@ -213,10 +213,10 @@ function EnableCard(props: {
 }) {
   const t = useTranslations("omniglyph");
   return (
-    <Card className="p-6">
+    <Card className="p-5">
       <div className="flex items-start justify-between gap-4">
         <div className="flex flex-col gap-1">
-          <h2 className="text-lg font-semibold">{t("enableTitle")}</h2>
+          <h2 className="text-sm font-semibold text-text-main">{t("enableTitle")}</h2>
           <p className="max-w-xl text-sm text-text-muted">
             {t.rich("enableDescription", {
               code: (chunks) => <code>{chunks}</code>,
@@ -250,7 +250,7 @@ function LoadErrorCard(props: { onRetry: () => void }) {
   const t = useTranslations("settings");
   const tCommon = useTranslations("common");
   return (
-    <Card className="p-6">
+    <Card className="p-5">
       <div className="flex items-center justify-between gap-4">
         <p role="alert" className="text-sm text-error">
           {t("compressionTitle")}: {tCommon("failedToLoad")}

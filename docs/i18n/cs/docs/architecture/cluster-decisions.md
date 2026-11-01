@@ -14,7 +14,7 @@ Dva volitelné profily Compose (`memory`, `bifrost`) pro stávající nasazení 
 
 ## Proč je tento přístup konzervativní
 
-Stávající architektura nasazení OmniRoute je již úsporná a osvědčená:
+Stávající architektura nasazení 67router je již úsporná a osvědčená:
 
 - **`redis:7-alpine`** zvládá při produkčním zatížení omezení rychlosti a ukládání do mezipaměti.
 - **SQLite + sqlite-vec + FTS5** pokrývají lokální paměť, vektorové vyhledávání a textové vyhledávání (viz [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Tyto dva profily představují **možnosti škálování pro nasazení, která n
 
 - Provozujete ≥3 repliky `omniroute` a chcete centralizovat rotaci poskytovatelů v jediném procesu Go.
 - Chcete jednotné místo pro audit a protokolování požadavků na upstream poskytovatele napříč všemi replikami.
-- Chcete horizontálně škálovat směrovací vrstvu 1. úrovně nezávisle na replikách OmniRoute.
+- Chcete horizontálně škálovat směrovací vrstvu 1. úrovně nezávisle na replikách 67router.
 
 **Co přidává:**
 

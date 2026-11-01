@@ -4,7 +4,7 @@
 
 ---
 
-> **Yhteenveto**: OmniRoute asettaa **ilmaiset** palveluntarjoajansa järjestykseen mallien laadun perusteella käyttämällä **Arena AI:n
+> **Yhteenveto**: 67router asettaa **ilmaiset** palveluntarjoajansa järjestykseen mallien laadun perusteella käyttämällä **Arena AI:n
 > (LMArena-tyylisiä) ELO-pisteitä**. Avaa hallintapaneelin **Ilmaisten palveluntarjoajien sijoitukset** -sivu nähdäksesi, mitkä ilmaiset palveluntarjoajat tarjoavat tehtävääsi parhaat mallit —
 > joko kokonaisuutena tai luokan mukaan suodatettuina (ohjelmointi, katselmointi, dokumentointi, virheenkorjaus).
 
@@ -12,7 +12,7 @@
 
 ## Mikä tämä on
 
-OmniRoute rekisteröi 375 palveluntarjoajaa, mukaan lukien 155 luettelomerkintää, jotka on merkitty **ilmainen/ei todennusta** (ei todennusta, ilmaisen tason OAuth tai ilmaisen tason API-avain — katso [Ilmaistasojen opas](../getting-started/FREE-TIERS-GUIDE.md) ja koko [Ilmaistasot-hakemisto](../reference/FREE_TIERS.md)). Siinä on kuitenkin muttansa: ilmaisten palveluntarjoajien mallien laatu vaihtelee suuresti. Huipputason mallia tarjoava todennukseton palveluntarjoaja on paljon hyödyllisempi kuin sellainen, joka tarjoaa pientä vanhentunutta mallia.
+67router rekisteröi 375 palveluntarjoajaa, mukaan lukien 155 luettelomerkintää, jotka on merkitty **ilmainen/ei todennusta** (ei todennusta, ilmaisen tason OAuth tai ilmaisen tason API-avain — katso [Ilmaistasojen opas](../getting-started/FREE-TIERS-GUIDE.md) ja koko [Ilmaistasot-hakemisto](../reference/FREE_TIERS.md)). Siinä on kuitenkin muttansa: ilmaisten palveluntarjoajien mallien laatu vaihtelee suuresti. Huipputason mallia tarjoava todennukseton palveluntarjoaja on paljon hyödyllisempi kuin sellainen, joka tarjoaa pientä vanhentunutta mallia.
 
 **Ilmaisten palveluntarjoajien sijoitukset** vastaa kysymykseen "**mikä ilmainen palveluntarjoaja antaa minulle parhaan mallin?**" yhdistämällä kunkin ilmaisen palveluntarjoajan luettelon **joukkoutettuihin laatupisteisiin** **Arena AI -tulostaulusta** (ihmisten mieltymyksiin perustuva ELO, sama idea kuin LMArena-chatbot-areenan taustalla). Palveluntarjoajat sijoitetaan sitten niiden **parhaan ilmaisen mallin** vahvuuden mukaan.
 
@@ -115,9 +115,9 @@ ja `code` — Arena AI -tulostaulukon API:sta
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Jokainen tulostaulukon tietue
 sisältää mallin nimen, toimittajan, ELO-`score`-arvon, luottamusvälin ja äänten määrän.
 
-Tulostaulukoiden luokat yhdistetään OmniRouten tehtäväluokkiin seuraavasti:
+Tulostaulukoiden luokat yhdistetään 67routerin tehtäväluokkiin seuraavasti:
 
-| Arena-tulostaulukko | OmniRouten tehtäväluokat                          |
+| Arena-tulostaulukko | 67routerin tehtäväluokat                          |
 | ------------------- | ------------------------------------------------- |
 | `text`              | `default`, `review`, `documentation`, `debugging` |
 | `code`              | `coding`                                          |
@@ -154,7 +154,7 @@ Synkronointi on **oletusarvoisesti käytössä**:
 
 - Se suoritetaan kerran palvelimen käynnistyessä ja sen jälkeen säännöllisin väliajoin
   (`src/lib/arenaEloSync.ts`, kytkentä tiedostossa `src/instrumentation-node.ts`).
-- Se **ei estä toimintaa eikä koskaan aiheuta vakavaa virhettä** — jos tietojen haku lähteestä epäonnistuu, OmniRoute jatkaa
+- Se **ei estä toimintaa eikä koskaan aiheuta vakavaa virhettä** — jos tietojen haku lähteestä epäonnistuu, 67router jatkaa
   toimintaansa ja sijoituksissa näytetään vain viimeisimmät onnistuneesti haetut tiedot (tai tyhjä tila).
 
 Sitä hallitaan kahdella ympäristömuuttujalla (dokumentoitu tiedostossa
@@ -189,7 +189,7 @@ joustavaa vastaavuushakua (`findMatchingIntelligence` tiedostossa `src/lib/freeP
 3. Etuliitteen vastaavuus (tulostaulukon mallin nimi on rekisteritunnuksen etuliite).
 
 Synkronoinnin yhteydessä tunnetut toimittajien etuliitteet (`anthropic/`, `openai/`, `google/`, …)
-poistetaan ja pieni aliasmääritys laajentaa kanoniset nimet OmniRouten sisäisesti käyttämiin
+poistetaan ja pieni aliasmääritys laajentaa kanoniset nimet 67routerin sisäisesti käyttämiin
 muunnelmiin, joten mallit löytyvät kaikilla nimillä.
 
 ### Miten palveluntarjoaja sijoitetaan

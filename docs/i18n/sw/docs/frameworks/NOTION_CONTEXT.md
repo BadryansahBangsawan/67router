@@ -11,11 +11,11 @@
 
 ## Ni nini
 
-OmniRoute inaweza kuunganishwa na nafasi ya kazi ya **Notion** kama **chanzo cha muktadha** — hazina ya maarifa
+67router inaweza kuunganishwa na nafasi ya kazi ya **Notion** kama **chanzo cha muktadha** — hazina ya maarifa
 inayoweza kusomwa/kuandikwa ambayo mawakala huifikia kupitia seva ya MCP iliyojengewa ndani. Baada ya tokeni ya
 muunganisho wa Notion kusanidiwa, zana za MCP huruhusu LLM kutafuta kurasa na hifadhidata,
 kusoma maudhui ya kurasa na miti ya vizuizi, kuhoji hifadhidata kwa vichujio/mipangilio ya kupanga, na kuambatisha
-vizuizi vipya — yote yakipitishwa kupitia OmniRoute (ikiwa na majaribio upya, muda wa kuisha, na uainishaji wa hitilafu)
+vizuizi vipya — yote yakipitishwa kupitia 67router (ikiwa na majaribio upya, muda wa kuisha, na uainishaji wa hitilafu)
 ili modeli isiwasiliane moja kwa moja na API ya Notion.
 
 Muunganisho huu ni kifuniko chepesi na kilichoimarishwa juu ya API rasmi ya REST ya Notion
@@ -40,7 +40,7 @@ jedwali la SQLite la `key_value` (nafasi ya majina `notion`, ufunguo `integratio
 > [!NOTE]
 > Tokeni hiyo ni **tokeni ya muunganisho wa ndani wa Notion**. Unda muunganisho katika
 > <https://www.notion.com/my-integrations>, kisha shiriki na muunganisho huo kurasa/hifadhidata unazotaka
-> OmniRoute ifikie (mfumo wa ruhusa wa Notion hutegemea kushiriki,
+> 67router ifikie (mfumo wa ruhusa wa Notion hutegemea kushiriki,
 > si nafasi nzima ya kazi).
 
 ### Sanidi kupitia REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Mbinu zote tatu zinahitaji uthibitishaji wa dashibodi (`isAuthenticated`). Kwa `POST`,
-OmniRoute huhifadhi tokeni na mara moja huendesha utafutaji wa majaribio wenye tokeo 1; ikiwa Notion
+67router huhifadhi tokeni na mara moja huendesha utafutaji wa majaribio wenye tokeo 1; ikiwa Notion
 itarejesha kipengee cha hitilafu, tokeni hufutwa na ombi hushindwa kwa `400`.
 
 ## Zana za MCP (6)

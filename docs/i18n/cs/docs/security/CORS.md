@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute řídí, které **zdroje prohlížeče** mohou číst odpovědi z jiných zdrojů,
+67router řídí, které **zdroje prohlížeče** mohou číst odpovědi z jiných zdrojů,
 pomocí jediného centralizovaného seznamu povolených zdrojů. Model je **ve výchozím
 nastavení uzavřený**: žádný zdroj není povolen, dokud jej výslovně nepovolíte.
 Tato stránka popisuje, jak se seznam povolených zdrojů vyhodnocuje, co
@@ -49,13 +49,13 @@ v tomto pořadí:
 ## Model hrozeb — co `CORS_ALLOW_ALL=true` skutečně zpřístupňuje
 
 Obecné varování OWASP („CORS se zástupným znakem = váš API může volat jakýkoli
-web“) je třeba brát vážně, ale míra vystavení OmniRoute je **užší než v obecném
+web“) je třeba brát vážně, ale míra vystavení 67router je **užší než v obecném
 případě**, a to kvůli jednomu konkrétnímu implementačnímu faktu:
 
 > **Centrální `applyCorsHeaders()` nikdy negeneruje
 > `Access-Control-Allow-Credentials`.** Prohlížeč nezpřístupní _ověřenou_
 > odpověď z jiného zdroje (obsahující soubory cookie), pokud server neodešle
-> `Access-Control-Allow-Credentials: true`. Sdílená cesta CORS v OmniRoute to
+> `Access-Control-Allow-Credentials: true`. Sdílená cesta CORS v 67router to
 > nikdy nedělá.
 
 Co to znamená pro jednotlivá rozhraní, a to i při `CORS_ALLOW_ALL=true`:
@@ -72,20 +72,6 @@ neověřená čtení již veřejně dostupných dat z jiného zdroje a (b) povol
 ověření, které stránka z jiného zdroje nemůže poskytnout. Ve sdílené cestě CORS
 **nejde** o vektor pro únos relace ani krádež přihlašovacích údajů.
 
-### Jediná skutečná výjimka — `/api/v1/agents/`
-
-Trasy Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
-nastavují **vlastní** hlavičky CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) a **generují**
-`Access-Control-Allow-Origin: <origin>|*` společně s
-`Access-Control-Allow-Credentials: true`. Jde o jediné rozhraní, kde se současně
-používá vrácení zdroje a přihlašovací údaje, a je **nezávislé na
-`CORS_ALLOW_ALL`**. Tyto trasy jsou ověřovány na úrovni správy
-(`requireManagementAuth`); provozovatelé, kteří zpřístupňují řídicí panel mimo
-hostitelský systém, by si měli uvědomit, že jde o jediné místo, kde hlavičky
-odpovědi povolují ověřené čtení z jiného zdroje. Omezení na explicitní seznam
-povolených zdrojů se řeší odděleně od těchto pokynů pro CORS.
-
 ## Kontrolní seznam pro produkční prostředí
 
 - **V produkčním prostředí nikdy nenastavujte `CORS_ALLOW_ALL=true`.** Ponechte tuto proměnnou nenastavenou.
@@ -95,7 +81,7 @@ povolených zdrojů se řeší odděleně od těchto pokynů pro CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Pokud OmniRoute běží za reverzním proxy serverem / tunelem (nginx, Caddy, Cloudflare
+- Pokud 67router běží za reverzním proxy serverem / tunelem (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **není** jediným bezpečnostním mechanismem — ochrana tras
   omezených na loopback nadále chrání trasy schopné spouštět procesy (viz
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nepodvrhujte
@@ -111,7 +97,7 @@ povolených zdrojů se řeší odděleně od těchto pokynů pro CORS.
 Ani při vývoji zástupný znak obvykle nepotřebujete. Povolte pouze vývojové servery, které používáte:
 
 ```bash
-# Vývojové servery Vite (5173) + Next.js (3000) volající místní OmniRoute
+# Vývojové servery Vite (5173) + Next.js (3000) volající místní 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -132,14 +118,14 @@ restartu.
   panel nezahrnujte do žádné permisivní konfigurace; musí zůstat striktně uzavřené
   při selhání.
 
-## Příklad: reverzní proxy před OmniRoute
+## Příklad: reverzní proxy před 67router
 
-CORS vynucuje samotný OmniRoute, takže proxy by obecně **neměla** přidávat ani
+CORS vynucuje samotný 67router, takže proxy by obecně **neměla** přidávat ani
 přepisovat hlavičky `Access-Control-*` (duplicitní hlavičky způsobují problémy v prohlížečích). Ukončete TLS
-a předejte požadavek dál — odpověď na preflight požadavky nechte na OmniRoute:
+a předejte požadavek dál — odpověď na preflight požadavky nechte na 67router:
 
 ```nginx
-# nginx — předejte požadavek do OmniRoute; zde NEVKLÁDEJTE Access-Control-*
+# nginx — předejte požadavek do 67router; zde NEVKLÁDEJTE Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -147,12 +133,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Zachovejte hlavičky pro předávání: proxy na stejném hostiteli se připojuje z adresy zpětné smyčky a právě tyto
-    # hlavičky sdělují OmniRoute, že volající není místní operátor. Pokud proxy nepřidá žádnou z nich,
+    # hlavičky sdělují 67router, že volající není místní operátor. Pokud proxy nepřidá žádnou z nich,
     # bude každý vzdálený volající vypadat jako místní. Nikdy také nenastavujte X-Forwarded-For na 127.0.0.1.
 }
 ```
 
-Povolené zdroje pro prohlížeče nastavte v OmniRoute (`CORS_ALLOWED_ORIGINS` nebo na
+Povolené zdroje pro prohlížeče nastavte v 67router (`CORS_ALLOWED_ORIGINS` nebo na
 kartě Security), nikoli v proxy.
 
 ## Zdrojové soubory
@@ -165,7 +151,6 @@ kartě Security), nikoli v proxy.
 | Stav za běhu pro řídicí panel                             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Varovný banner řídicího panelu                            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Pole Povolené zdroje CORS                                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS pro jednotlivé trasy Cloud-Agent (výjimka)           | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Viz také
 

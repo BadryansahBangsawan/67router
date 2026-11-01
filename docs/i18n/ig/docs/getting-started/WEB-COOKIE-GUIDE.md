@@ -4,7 +4,7 @@
 
 ---
 
-Ndị na-eweta Web Cookie na-enye OmniRoute ohere iji ọrụ AI site na nnọkọ ihe nchọgharị gị dị ugbu a kama iji igodo API. Ha bara uru mgbe i nwere ohere iji ọrụ site na webụsaịtị ya ma chọọ ka OmniRoute jiri otu nnọkọ ahụ e nyochalarị njirimara ya.
+Ndị na-eweta Web Cookie na-enye 67router ohere iji ọrụ AI site na nnọkọ ihe nchọgharị gị dị ugbu a kama iji igodo API. Ha bara uru mgbe i nwere ohere iji ọrụ site na webụsaịtị ya ma chọọ ka 67router jiri otu nnọkọ ahụ e nyochalarị njirimara ya.
 
 N'adịghị ka ndị na-eweta ji igodo API, ndị na-eweta Web Cookie na-enyocha njirimara site na nzere ndị ihe nchọgharị gị na-eziga na webụsaịtị ahụ.
 
@@ -49,7 +49,7 @@ DevTools
 
 Isiokwu arịrịọ `Cookie` nwere ozi nyocha njirimara kpọmkwem nke ihe nchọgharị gị jiri mee ihe nke ọma.
 
-Maka ọtụtụ ndị na-eweta Web Cookie, nke a bụ ụkpụrụ ekwesịrị ịmado n'ime OmniRoute.
+Maka ọtụtụ ndị na-eweta Web Cookie, nke a bụ ụkpụrụ ekwesịrị ịmado n'ime 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Usoro nhazi ahụ bụ otu maka ọtụtụ ndị na-eweta Web Cookie.
 4. Mee ka ibe ahụ dị ọhụrụ.
 5. Mepee arịrịọ nkata ma ọ bụ mkparịta ụka enyochalarị njirimara ya.
 6. Detuo nzere nyocha njirimara achọrọ.
-7. Mepee OmniRoute.
+7. Mepee 67router.
 8. Gaa na **Providers → Add Provider**.
 9. Họrọ onye na-eweta Web Cookie gị.
 10. Mado nzere ndị ahụ.
@@ -92,17 +92,17 @@ Webụsaịtị dị iche iche na-echekwa nyocha njirimara n'ụzọ dị iche i
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) bụ ikpo okwu nkata ndị ahịa n’efu nke na-achọghị ndebanye aha — a na-emepụta nnọkọ ahụ n’amaghị onye ọrụ na nleta mbụ, ọ na-adịgidekwa site na kuki atọ: `uid`, `si_usr_id`, na `si_ses_id`. OmniRoute na-ebufe otu endpoint `/api/dispatch` ahụ site n’otu NJ model (`notrack-c`, aha ọzọ `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) bụ ikpo okwu nkata ndị ahịa n’efu nke na-achọghị ndebanye aha — a na-emepụta nnọkọ ahụ n’amaghị onye ọrụ na nleta mbụ, ọ na-adịgidekwa site na kuki atọ: `uid`, `si_usr_id`, na `si_ses_id`. 67router na-ebufe otu endpoint `/api/dispatch` ahụ site n’otu NJ model (`notrack-c`, aha ọzọ `ntw`).
 
 ### Usoro ijikọ
 
 1. Mepee [notrack.ai](https://notrack.ai) na ihe nchọgharị gị ma hapụ ka edobe kuki nnọkọ nke amaghị onye ọrụ.
 2. Mepee **DevTools → Network**, mee ka ibe ahụ buo ọzọ, wee pịa arịrịọ `/api` ọ bụla.
 3. N’ime **Request Headers**, detuo uru header `Cookie` ahụ dum.
-4. Na OmniRoute, gaa na **Providers → Add Provider → NoTrack Web (Free)**.
+4. Na 67router, gaa na **Providers → Add Provider → NoTrack Web (Free)**.
 5. Mado eriri kuki ahụ n’ime mpaghara `apiKey` wee **Save**.
 
-OmniRoute na-ewepụta `uid`, `si_usr_id`, na `si_ses_id` site na eriri ahụ e madore, ma wughachi header `Cookie` dị ọcha nke nwere naanị ụzọ abụọ ndị ahụ — tinyere `nt_session` (token `ntk_…` a na-edobe maka akaụntụ ndị banyere) mgbe ọ dị. Ọ bụrụ na nke ọ bụla n’ime atọ ahụ adịghị, a na-ebufe eriri e madore ahụ dịka ọ dị ka ndị na-ahụ maka sistemụ nwee ike ịnwale nhazi ndị ọzọ.
+67router na-ewepụta `uid`, `si_usr_id`, na `si_ses_id` site na eriri ahụ e madore, ma wughachi header `Cookie` dị ọcha nke nwere naanị ụzọ abụọ ndị ahụ — tinyere `nt_session` (token `ntk_…` a na-edobe maka akaụntụ ndị banyere) mgbe ọ dị. Ọ bụrụ na nke ọ bụla n’ime atọ ahụ adịghị, a na-ebufe eriri e madore ahụ dịka ọ dị ka ndị na-ahụ maka sistemụ nwee ike ịnwale nhazi ndị ọzọ.
 
 ### NJ model
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Kuki Na-arụ Ọrụ n'Ihe Nchọgharị mana Ọ naghị arụ Ọrụ na OmniRoute
+## Kuki Na-arụ Ọrụ n'Ihe Nchọgharị mana Ọ naghị arụ Ọrụ na 67router
 
 Ụfọdụ ndị na-enye ọrụ na-etinye kuki ndị a na-eziga naanị n'oge arịrịọ nwere nkwenye njirimara.
 

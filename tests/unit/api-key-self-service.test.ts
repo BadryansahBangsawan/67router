@@ -15,7 +15,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import DatabaseSync from "better-sqlite3";
 
-import { SELF_ACCOUNT_QUOTA_SCOPE, SELF_USAGE_SCOPE } from "../../src/shared/constants/selfServiceScopes.ts";
+import {
+  SELF_ACCOUNT_QUOTA_SCOPE,
+  SELF_USAGE_SCOPE,
+} from "../../src/shared/constants/selfServiceScopes.ts";
 import { buildApiKeySelfServiceStatus } from "../../src/lib/usage/apiKeySelfService.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -57,10 +60,7 @@ test("self-service scope migration backfills own usage once and preserves explic
   assert.deepEqual(scopesById.get("legacy-empty"), [SELF_USAGE_SCOPE]);
   assert.deepEqual(scopesById.get("legacy-null"), [SELF_USAGE_SCOPE]);
   assert.deepEqual(scopesById.get("custom"), ["custom:scope", SELF_USAGE_SCOPE]);
-  assert.deepEqual(scopesById.get("quota-opt-in"), [
-    SELF_ACCOUNT_QUOTA_SCOPE,
-    SELF_USAGE_SCOPE,
-  ]);
+  assert.deepEqual(scopesById.get("quota-opt-in"), [SELF_ACCOUNT_QUOTA_SCOPE, SELF_USAGE_SCOPE]);
   assert.deepEqual(scopesById.get("already-disabled-after-migration"), ["custom:scope"]);
 });
 
@@ -78,20 +78,7 @@ function makeDeps(overrides: Record<string, unknown> = {}) {
     dbParams,
     deps: {
       now: () => Date.UTC(2026, 4, 29, 12, 0, 0),
-      getCostSummary: () => ({
-        budget: null,
-        totalCostMonth: 12.34,
-        totalCostPeriod: 0,
-        activeLimitUsd: 0,
-        resetInterval: null,
-        resetTime: null,
-        budgetResetAt: null,
-        lastBudgetResetAt: null,
-        periodStartAt: null,
-        nextResetAt: null,
-        warningThreshold: null,
-      }),
-      checkBudget: () => ({ allowed: true }),
+      getCostSummary: () => ({ totalCostMonth: 12.34 }),
       getDbInstance: () => ({
         prepare: () => ({
           get: (...params: unknown[]) => {
@@ -110,7 +97,7 @@ function makeDeps(overrides: Record<string, unknown> = {}) {
   };
 }
 
-test("self-service status reports own cost and token usage with null budget fields when no budget exists", async () => {
+test("self-service status reports own monthly cost and token usage with null limit fields", async () => {
   const metadata = {
     id: "key-a",
     name: "team-a",
@@ -131,71 +118,6 @@ test("self-service status reports own cost and token usage with null budget fiel
   assert.equal(dbParams[0][0], "key-a");
   assert.equal(dbParams[0][1], "2026-05-01T00:00:00.000Z");
   assert.equal("accountQuota" in status, false);
-});
-
-test("self-service status reports USD budget percentage using the budget period", async () => {
-  const metadata = {
-    id: "key-budget",
-    name: "budgeted",
-    scopes: [SELF_USAGE_SCOPE],
-    allowedConnections: [],
-  };
-  const periodStart = Date.UTC(2026, 4, 1, 0, 0, 0);
-  const nextReset = Date.UTC(2026, 5, 1, 0, 0, 0);
-  const { deps } = makeDeps({
-    getCostSummary: () => ({
-      budget: { resetInterval: "monthly" },
-      totalCostMonth: 99,
-      totalCostPeriod: 12.5,
-      activeLimitUsd: 50,
-      resetInterval: "monthly",
-      resetTime: "00:00",
-      budgetResetAt: nextReset,
-      lastBudgetResetAt: periodStart,
-      periodStartAt: periodStart,
-      nextResetAt: nextReset,
-      warningThreshold: 0.8,
-    }),
-  });
-
-  const status = await buildApiKeySelfServiceStatus(metadata, deps);
-
-  assert.equal(status.usage.cost.usedUsd, 12.5);
-  assert.equal(status.usage.cost.limitUsd, 50);
-  assert.equal(status.usage.cost.remainingUsd, 37.5);
-  assert.equal(status.usage.cost.usedPercent, 25);
-  assert.equal(status.usage.cost.periodStartAt, "2026-05-01T00:00:00.000Z");
-  assert.equal(status.usage.cost.resetAt, "2026-06-01T00:00:00.000Z");
-});
-
-test("self-service status preserves ISO and Date budget timestamps", async () => {
-  const metadata = {
-    id: "key-budget-date",
-    name: "budgeted date",
-    scopes: [SELF_USAGE_SCOPE],
-    allowedConnections: [],
-  };
-  const { deps, dbParams } = makeDeps({
-    getCostSummary: () => ({
-      budget: { resetInterval: "weekly" },
-      totalCostMonth: 99,
-      totalCostPeriod: 15,
-      activeLimitUsd: 60,
-      resetInterval: "weekly",
-      resetTime: "00:00",
-      budgetResetAt: null,
-      lastBudgetResetAt: null,
-      periodStartAt: "2026-05-18T00:00:00.000Z",
-      nextResetAt: new Date("2026-05-25T00:00:00.000Z"),
-      warningThreshold: 0.8,
-    }),
-  });
-
-  const status = await buildApiKeySelfServiceStatus(metadata, deps);
-
-  assert.equal(status.usage.cost.periodStartAt, "2026-05-18T00:00:00.000Z");
-  assert.equal(status.usage.cost.resetAt, "2026-05-25T00:00:00.000Z");
-  assert.equal(dbParams[0][1], "2026-05-18T00:00:00.000Z");
 });
 
 test("self-service status reports all explicitly allowed provider account quotas", async () => {
@@ -231,7 +153,11 @@ test("self-service status reports all explicitly allowed provider account quotas
         usage: {
           plan: "Claude Max",
           quotas: {
-            daily: { usedPercentage: 35, remainingPercentage: 65, resetAt: "2026-05-30T00:00:00.000Z" },
+            daily: {
+              usedPercentage: 35,
+              remainingPercentage: 65,
+              resetAt: "2026-05-30T00:00:00.000Z",
+            },
           },
         },
         cache: { quotas: null, plan: null, message: null, fetchedAt: "" },
@@ -268,7 +194,10 @@ test("self-service status reports all active provider account quotas for unrestr
       { id: "conn-disabled", provider: "claude", isActive: false },
     ],
     fetchAndPersistProviderLimits: async (connectionId: string) => ({
-      connection: { id: connectionId, provider: connectionId === "conn-codex" ? "codex" : "cursor" },
+      connection: {
+        id: connectionId,
+        provider: connectionId === "conn-codex" ? "codex" : "cursor",
+      },
       usage: {
         plan: connectionId === "conn-codex" ? "ChatGPT Plus" : "Cursor Pro",
         quotas: {
@@ -454,11 +383,19 @@ test("self-service fetches Moonshot custom-node quota via providerSpecificData h
     fetchAndPersistProviderLimits: async (connectionId: string) => {
       fetches.push(connectionId);
       return {
-        connection: { id: connectionId, provider: "openai-compatible-chat-e2971611-bc02-4c37-8fc5-39b8e3906fdf" },
+        connection: {
+          id: connectionId,
+          provider: "openai-compatible-chat-e2971611-bc02-4c37-8fc5-39b8e3906fdf",
+        },
         usage: {
           plan: "Kimi 开放平台（国内）",
           quotas: {
-            available: { remaining: 15, remainingPercentage: 100, unlimited: true, currency: "CNY" },
+            available: {
+              remaining: 15,
+              remainingPercentage: 100,
+              unlimited: true,
+              currency: "CNY",
+            },
           },
         },
         cache: { quotas: null, plan: null, message: null, fetchedAt: "" },

@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector bụ ngwa nchọpụta nsogbu okporo HTTPS arụnyere n’ime OmniRoute — ngwa yiri Charles Proxy / mitmweb / HTTP Toolkit nke **maara maka LLM** ma **marakwa maka agent**. Ọ dị na `/dashboard/tools/traffic-inspector` ma na-anata okporo dị ndụ site n’ebe nnweta ruru 5 n’otu oge.
+Traffic Inspector bụ ngwa nchọpụta nsogbu okporo HTTPS arụnyere n’ime 67router — ngwa yiri Charles Proxy / mitmweb / HTTP Toolkit nke **maara maka LLM** ma **marakwa maka agent**. Ọ dị na `/dashboard/tools/traffic-inspector` ma na-anata okporo dị ndụ site n’ebe nnweta ruru 5 n’otu oge.
 
 **Ebe ọ dị na dashboard:** `/dashboard/tools/traffic-inspector`
 **Otu sidebar:** Ngwaọrụ (mgbe AgentBridge gasịrị)
@@ -16,21 +16,21 @@ Traffic Inspector bụ ngwa nchọpụta nsogbu okporo HTTPS arụnyere n’ime 
 
 ### Ihe mere Traffic Inspector ji pụọ iche
 
-| Njirimara                                                                     | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Dabere na web                                                                 |    ✓    |    ✗    |    ✗    |                ✓                |
-| Open-source                                                                   |    ✓    |    ✗    |  akụkụ  |                ✓                |
-| **Maara maka agent** (ọ maara ma arịrịọ sitere na Antigravity/Copilot/wdg.)   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Maara maka LLM** (ọ na-enyocha nhazi OpenAI/Anthropic/Gemini, token, model) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **A na-ahụ njikọ model** (gemini-3-flash → claude-sonnet-4.7)                 |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Nkewa latency nke proxy/upstream**                                          |  akụkụ  |    ✗    |    ✗    |                ✓                |
-| **Ejikọtara ya na routing, fallback, na ọnụ ahịa nke OmniRoute**              |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Nchọpụta nsogbu proxy n’usoro niile** (ngwa ọ bụla dị na kọmputa ahụ)       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Nnweta host ahaziri iche** (ntụgharị DNS maka host ọ bụla)                  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Usoro env HTTP_PROXY**                                                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Nlele mkparịta ụka** (afụ ọtụtụ ntụgharị, tool_use/tool_result)             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ngwakọta stream SSE** (iwughachi site na delta event)                       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ndekọ session** (nwere aha, a pụrụ ibupụ dị ka .har/.jsonl)                 |    ✗    |    ✓    |    ✓    |                ✓                |
+| Njirimara                                                                     | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ----------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Dabere na web                                                                 |    ✓    |    ✗    |    ✗    |               ✓                |
+| Open-source                                                                   |    ✓    |    ✗    |  akụkụ  |               ✓                |
+| **Maara maka agent** (ọ maara ma arịrịọ sitere na Antigravity/Copilot/wdg.)   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Maara maka LLM** (ọ na-enyocha nhazi OpenAI/Anthropic/Gemini, token, model) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **A na-ahụ njikọ model** (gemini-3-flash → claude-sonnet-4.7)                 |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Nkewa latency nke proxy/upstream**                                          |  akụkụ  |    ✗    |    ✗    |               ✓                |
+| **Ejikọtara ya na routing, fallback, na ọnụ ahịa nke 67router**               |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Nchọpụta nsogbu proxy n’usoro niile** (ngwa ọ bụla dị na kọmputa ahụ)       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Nnweta host ahaziri iche** (ntụgharị DNS maka host ọ bụla)                  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Usoro env HTTP_PROXY**                                                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Nlele mkparịta ụka** (afụ ọtụtụ ntụgharị, tool_use/tool_result)             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ngwakọta stream SSE** (iwughachi site na delta event)                       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ndekọ session** (nwere aha, a pụrụ ibupụ dị ka .har/.jsonl)                 |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Nhazi ya n’otu paragraf
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true ma ọ bụrụ na ọ bụ nzaghachi SSE
   mappedTo: string | null; // header x-omniroute-mapped
-  costEstimateUsd: number | null; // atụmatụ ọnụahịa dabere na ọnụahịa OmniRoute
+  costEstimateUsd: number | null; // atụmatụ ọnụahịa dabere na ọnụahịa 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Eweghachighị proxy sistemụ
 
-Ọ bụrụ na OmniRoute daa mgbe ọnọdụ proxy nke sistemụ niile nọ n'ọrụ:
+Ọ bụrụ na 67router daa mgbe ọnọdụ proxy nke sistemụ niile nọ n'ọrụ:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Mgbe buffer ruru `INSPECTOR_BUFFER_SIZE` (ndabara bụ 1000), ndenye ọhụrụ
 | GET    | `/requests`                 | Depụta arịrịọ (enwere ike inyocha: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Nkọwa nke otu arịrịọ                                                                       |
 | DELETE | `/requests`                 | Hichapụ buffer dị na ebe nchekwa                                                           |
-| POST   | `/requests/{id}/replay`     | Megharịa otu arịrịọ ahụ site na router OmniRoute                                           |
+| POST   | `/requests/{id}/replay`     | Megharịa otu arịrịọ ahụ site na router 67router                                            |
 | PUT    | `/requests/{id}/annotation` | Chekwaa ma ọ bụ melite ndetu dị n’arịrịọ                                                   |
 
 ### WebSocket

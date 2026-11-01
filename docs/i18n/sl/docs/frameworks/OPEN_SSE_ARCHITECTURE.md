@@ -4,7 +4,7 @@
 
 ---
 
-> **Na kratko**: `open-sse/` je osrednji pretočni mehanizem, ki poganja vsako zahtevo LLM v OmniRoute. Vsebuje približno 1.400 datotek, ki implementirajo cevovod zahtev, izvajalnike, storitve, strežnik MCP in prevajalsko plast. Ta vodnik pojasnjuje, kako so ti deli povezani.
+> **Na kratko**: `open-sse/` je osrednji pretočni mehanizem, ki poganja vsako zahtevo LLM v 67router. Vsebuje približno 1.400 datotek, ki implementirajo cevovod zahtev, izvajalnike, storitve, strežnik MCP in prevajalsko plast. Ta vodnik pojasnjuje, kako so ti deli povezani.
 
 **Vir:** `open-sse/` (paket delovnega prostora, približno 1.440 netestnih datotek `.ts`)
 
@@ -12,10 +12,10 @@
 
 ## Zakaj ločen paket delovnega prostora?
 
-`open-sse/` je **samostojen delovni prostor** v monorepozitoriju OmniRoute iz več razlogov:
+`open-sse/` je **samostojen delovni prostor** v monorepozitoriju 67router iz več razlogov:
 
 1. **Ponovna uporabnost** — `open-sse` je objavljen kot `@omniroute/open-sse` na npm, zato ga lahko drugi projekti uporabljajo neodvisno
-2. **Jasne meje** — pretočni mehanizem je ločen od plasti uporabniškega vmesnika/podatkovne zbirke, specifične za OmniRoute
+2. **Jasne meje** — pretočni mehanizem je ločen od plasti uporabniškega vmesnika/podatkovne zbirke, specifične za 67router
 3. **Zmogljivost** — mehanizem nima odvisnosti od Next.js, kar omogoča hitrejše hladne zagone v okoljih CLI/brezstrežniških okoljih
 4. **Različice** — `open-sse` lahko izdaja različice po lastnem urniku
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Zakaj ločen pretvornik?
 
-Responses API je novi format OpenAI s **pogovori s stanjem** (`previous_response_id`). Ko odjemalec pošlje zahtevo Responses, OmniRoute:
+Responses API je novi format OpenAI s **pogovori s stanjem** (`previous_response_id`). Ko odjemalec pošlje zahtevo Responses, 67router:
 
 1. Interno pretvori Responses → Chat Completions
 2. Pošlje ponudniku (kateremu koli ponudniku, ki podpira Chat Completions)
@@ -573,5 +573,4 @@ Usmerjevalni mehanizem ima strogo določene zmogljivostne omejitve:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — pregled po imenikih
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16-faktorsko ocenjevanje
 - [MCP-SERVER.md](./MCP-SERVER.md) — strežnik MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — strežnik A2A
 - Izvorna koda: `open-sse/` (več kot 400 datotek, ~143K vrstic kode)

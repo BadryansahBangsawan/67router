@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Ghid complet pentru configurarea furnizorilor, crearea combinațiilor, integrarea instrumentelor CLI și implementarea OmniRoute.
+Ghid complet pentru configurarea furnizorilor, crearea combinațiilor, integrarea instrumentelor CLI și implementarea 67router.
 
 ---
 
@@ -24,7 +24,6 @@ Ghid complet pentru configurarea furnizorilor, crearea combinațiilor, integrare
 - [Sistemul de abilități](#-skills-system)
 - [Sistemul de memorie](#-memory-system)
 - [Webhook-uri](#-webhooks)
-- [Agenți cloud](#-cloud-agents)
 - [Gestionare programatică](#-programmatic-management)
 - [CLI intern](#-internal-cli)
 - [Aplicație desktop (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@ Modele:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Sfat util:** Utilizați Opus pentru sarcini complexe și Sonnet pentru viteză. OmniRoute monitorizează cota pentru fiecare model!
+**Sfat util:** Utilizați Opus pentru sarcini complexe și Sonnet pentru viteză. 67router monitorizează cota pentru fiecare model!
 
-Nu aveți un browser pe gazda OmniRoute? Rulați `claude setup-token` oriunde sunteți autentificat în Claude Code și inserați tokenul valabil un an în fila **Token de configurare**. Consultați [Claude Code cu un token de configurare](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Nu aveți un browser pe gazda 67router? Rulați `claude setup-token` oriunde sunteți autentificat în Claude Code și inserați tokenul valabil un an în fila **Token de configurare**. Consultați [Claude Code cu un token de configurare](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Rutele compatibile cu Claude și Claude Code păstrează nivelul `max` al efortului de raționament pentru modelele Opus și Sonnet. Modelele Haiku nu acceptă nivelul de efort `max`, astfel încât OmniRoute reduce solicitarea la un buget ridicat de raționament înainte de a o trimite serviciului din amonte.
+Rutele compatibile cu Claude și Claude Code păstrează nivelul `max` al efortului de raționament pentru modelele Opus și Sonnet. Modelele Haiku nu acceptă nivelul de efort `max`, astfel încât 67router reduce solicitarea la un buget ridicat de raționament înainte de a o trimite serviciului din amonte.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,16 +261,16 @@ Cost: afișat în prezent ca $0; termenii și disponibilitatea se pot modifica
 
 ### Cursor IDE
 
-**Utilizarea Cursor drept client OmniRoute** (direcționează conversațiile Cursor prin OmniRoute):
+**Utilizarea Cursor drept client 67router** (direcționează conversațiile Cursor prin 67router):
 
 ```
 Setări → Modele → Avansat:
   URL de bază pentru API-ul OpenAI: http://localhost:20128/v1
-  Cheie API OpenAI: [din panoul de control OmniRoute]
+  Cheie API OpenAI: [din panoul de control 67router]
   Model: cc/claude-opus-4-7
 ```
 
-**Utilizarea OmniRoute drept furnizor Cursor** (OmniRoute apelează Cursor în amonte): este recomandat
+**Utilizarea 67router drept furnizor Cursor** (67router apelează Cursor în amonte): este recomandat
 **Panou de control → Furnizori → Cursor → Autentificare cu Cursor**. În Docker, consultă
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -358,7 +357,7 @@ CLI-ul încarcă automat `.env` din `~/.omniroute/.env` sau `./.env`.
 
 ### Modul bară de sistem
 
-Pornește OmniRoute în bara de sistem:
+Pornește 67router în bara de sistem:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +374,7 @@ Folosește meniul din bara de sistem pentru următoarele acțiuni:
 - Deschide panoul de control.
 - Deschide `/dashboard/logs`.
 - Modifică pornirea automată.
-- Oprește OmniRoute.
+- Oprește 67router.
 
 Nu combina `--tray` cu următoarele opțiuni:
 
@@ -401,14 +400,14 @@ omniroute autostart disable
 
 ### Dezinstalare
 
-Când nu mai ai nevoie de OmniRoute, punem la dispoziție două scripturi rapide pentru eliminarea completă:
+Când nu mai ai nevoie de 67router, punem la dispoziție două scripturi rapide pentru eliminarea completă:
 
 | Comandă                  | Acțiune                                                                                           |
 | ------------------------ | ------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Elimină aplicația din sistem, dar **păstrează baza de date și configurațiile** în `~/.omniroute`. |
 | `npm run uninstall:full` | Elimină aplicația ȘI **șterge definitiv toate configurațiile, cheile și bazele de date**.         |
 
-> Notă: Pentru a executa aceste comenzi, accesează directorul proiectului OmniRoute (dacă l-ai clonat) și rulează-le. Alternativ, dacă este instalat global, poți executa pur și simplu `npm uninstall -g omniroute`.
+> Notă: Pentru a executa aceste comenzi, accesează directorul proiectului 67router (dacă l-ai clonat) și rulează-le. Alternativ, dacă este instalat global, poți executa pur și simplu `npm uninstall -g omniroute`.
 
 ### Implementare pe VPS
 
@@ -480,7 +479,7 @@ Pentru modul integrat cu gazda, cu binare CLI, consultă secțiunea Docker din d
 
 ### Void Linux (xbps-src)
 
-Utilizatorii Void Linux pot împacheta și instala OmniRoute în mod nativ folosind cadrul de compilare încrucișată `xbps-src`. Acesta automatizează compilarea autonomă Node.js împreună cu legăturile native `better-sqlite3` necesare.
+Utilizatorii Void Linux pot împacheta și instala 67router în mod nativ folosind cadrul de compilare încrucișată `xbps-src`. Acesta automatizează compilarea autonomă Node.js împreună cu legăturile native `better-sqlite3` necesare.
 
 <details>
 <summary><b>Vizualizați șablonul xbps-src</b></summary>
@@ -660,7 +659,7 @@ Pentru referința completă a variabilelor de mediu, consultați [README](../REA
 
 **Alți furnizori compatibili** (selecție): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (prin `aws-bedrock`), `azure-ai`, `openrouter` (catalog transmis direct), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Fiecare își menține propria listă de modele în `providerRegistry.ts` și poate fi sincronizat automat atunci când furnizorul expune un punct final `/models`.
 
-**Notă privind ID-urile modelelor:** OmniRoute utilizează ID-uri native ale furnizorilor (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Unele ID-uri includ versiuni cu puncte, deoarece acesta este formatul solicitat de API-ul din amonte. Dacă un model nu este enumerat mai sus, rulați `omniroute models --search <term>` sau accesați `GET /api/models/catalog` pentru a confirma disponibilitatea.
+**Notă privind ID-urile modelelor:** 67router utilizează ID-uri native ale furnizorilor (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Unele ID-uri includ versiuni cu puncte, deoarece acesta este formatul solicitat de API-ul din amonte. Dacă un model nu este enumerat mai sus, rulați `omniroute models --search <term>` sau accesați `GET /api/models/catalog` pentru a confirma disponibilitatea.
 
 </details>
 
@@ -726,9 +725,9 @@ eroare care menționează un furnizor încorporat sau acreditările acestuia, ve
 rezervat: nodurile salvate înainte de introducerea acestei reguli sunt încă păstrate, dar prefixul lor direcționează solicitările
 către furnizorul încorporat. Editați nodul și atribuiți-i un prefix nou.
 
-### Înlănțuirea instanțelor OmniRoute omoloage
+### Înlănțuirea instanțelor 67router omoloage
 
-Un alt gateway OmniRoute poate fi adăugat ca furnizor **personalizat compatibil cu OpenAI**. Utilizați
+Un alt gateway 67router poate fi adăugat ca furnizor **personalizat compatibil cu OpenAI**. Utilizați
 URL-ul de bază `/v1` al instanței omoloage și o cheie API dedicată, cu privilegii minime, emisă de aceasta.
 
 Pentru lanțurile reciproce sau cu mai multe salturi, activați protecția opțională împotriva buclelor pe fiecare gateway:
@@ -754,7 +753,7 @@ de salturi cu HTTP `508 Loop Detected`; furnizorii upstream obișnuiți nu prime
 Înlănțuirea instanțelor omoloage nu reprezintă replicarea bazei de date sau failover-ul gazdei. Fiecare gateway păstrează
 independent starea SQLite, cache-urile, contoarele de rată și sesiunile. Utilizați un proxy invers cu verificări de stare sau mecanisme
 de failover la nivel de client pentru disponibilitate activă/pasivă sau activă/activă și nu montați niciodată aceeași bază de date SQLite
-în mai multe instanțe OmniRoute care rulează simultan.
+în mai multe instanțe 67router care rulează simultan.
 
 ### Rute dedicate furnizorilor
 
@@ -805,7 +804,7 @@ Returnează modelele grupate după furnizor, împreună cu tipurile (`chat`, `em
 - Disponibil în **Dashboard → Endpoints** pentru Docker și alte implementări auto-găzduite
 - Creează un URL temporar `https://*.trycloudflare.com` care redirecționează către endpointul `/v1` curent, compatibil cu OpenAI
 - La prima activare, instalează `cloudflared` numai când este necesar; repornirile ulterioare reutilizează același binar gestionat
-- Tunelurile rapide nu sunt restaurate automat după repornirea OmniRoute sau a containerului; reactivați-le din tabloul de bord când este necesar
+- Tunelurile rapide nu sunt restaurate automat după repornirea 67router sau a containerului; reactivați-le din tabloul de bord când este necesar
 - URL-urile tunelurilor sunt efemere și se schimbă de fiecare dată când opriți/porniți tunelul
 - Tunelurile rapide gestionate utilizează implicit transportul HTTP/2 pentru a evita avertismentele zgomotoase privind bufferul UDP QUIC în containerele cu resurse limitate
 - Setați `CLOUDFLARED_PROTOCOL=quic` sau `auto` dacă doriți să suprascrieți alegerea gestionată a transportului
@@ -822,7 +821,7 @@ Returnează modelele grupate după furnizor, împreună cu tipurile (`chat`, `em
 
 ### Spațiu de testare pentru traducător
 
-Accesați prin **Dashboard → Translator**. Depanați și vizualizați modul în care OmniRoute traduce cererile API între furnizori.
+Accesați prin **Dashboard → Translator**. Depanați și vizualizați modul în care 67router traduce cererile API între furnizori.
 
 | Mod                   | Scop                                                                                                    |
 | --------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -875,7 +874,7 @@ Pentru afinitatea externă a sesiunilor (de exemplu, agenți Claude Code/Codex a
 X-Session-Id: your-session-key
 ```
 
-OmniRoute acceptă și `x_session_id` și returnează cheia efectivă a sesiunii în `X-OmniRoute-Session-Id`.
+67router acceptă și `x_session_id` și returnează cheia efectivă a sesiunii în `X-OmniRoute-Session-Id`.
 
 Dacă utilizați Nginx și trimiteți antete care conțin caractere de subliniere, activați:
 
@@ -909,7 +908,7 @@ Lanț: production-fallback
 
 ### Combinații uzuale de furnizori și modele de rutare
 
-Mai jos sunt exemple de modele pentru combinarea mai multor furnizori și rutarea între aceștia în OmniRoute:
+Mai jos sunt exemple de modele pentru combinarea mai multor furnizori și rutarea între aceștia în 67router:
 
 #### 1. Combinație pentru agenți de programare: raționament avansat cu soluție de rezervă pentru cost/viteză
 
@@ -970,7 +969,7 @@ Asocierea modelelor specializate în procesarea imaginilor cu generarea de text 
 
 Configurați prin **Panou de control → Setări → Reziliență**.
 
-OmniRoute implementează reziliența la nivel de furnizor prin cinci componente:
+67router implementează reziliența la nivel de furnizor prin cinci componente:
 
 1. **Coadă de solicitări și ritmare** — Modelarea solicitărilor la nivel de sistem:
    - **Solicitări pe minut (RPM)** — Numărul maxim de solicitări pe minut pentru fiecare cont
@@ -995,7 +994,7 @@ OmniRoute implementează reziliența la nivel de furnizor prin cinci componente:
 
    Starea de execuție a întrerupătorului furnizorului este afișată numai în **Panou de control → Stare de funcționare**.
 
-4. **Așteptarea încheierii perioadei de așteptare** — Dacă toate conexiunile candidate se află deja într-o perioadă de așteptare, OmniRoute poate aștepta încheierea celei mai apropiate perioade și poate reîncerca automat aceeași solicitare a clientului.
+4. **Așteptarea încheierii perioadei de așteptare** — Dacă toate conexiunile candidate se află deja într-o perioadă de așteptare, 67router poate aștepta încheierea celei mai apropiate perioade și poate reîncerca automat aceeași solicitare a clientului.
 
 5. **Detectarea automată a limitării ratei** — Când furnizorii din amonte returnează ferestre explicite de așteptare, aceste indicații suprascriu perioada locală de așteptare a conexiunii dacă setarea este activată.
 
@@ -1029,7 +1028,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Cazuri de utilizare:**
 
-- Migrarea OmniRoute între sisteme
+- Migrarea 67router între sisteme
 - Crearea unor copii de rezervă externe pentru recuperarea în caz de dezastru
 - Partajarea configurațiilor între membrii echipei (exportare completă → partajarea arhivei)
 
@@ -1081,7 +1080,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Transcriere audio
 
-OmniRoute acceptă transcrierea audio prin endpointul compatibil OpenAI:
+67router acceptă transcrierea audio prin endpointul compatibil OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1156,7 +1155,7 @@ Dezactivați **Memoria tampon pentru tokenuri de raționament** atunci când fur
 `max_tokens` / `maxOutputTokens`. Când este activată, rutarea combinată adaugă spațiu suplimentar pentru modelele de raționament
 doar în cazul modelelor cu o limită de ieșire cunoscută și lasă neschimbată limita de tokenuri a clientului atunci când
 valoarea sigură cu memorie tampon ar depăși limita respectivă. Dacă limita clientului depășește deja o limită cunoscută,
-OmniRoute o reduce la acea limită înainte de a trimite cererea în amonte.
+67router o reduce la acea limită înainte de a trimite cererea în amonte.
 
 ---
 
@@ -1179,7 +1178,7 @@ Accesați-l prin **Panou de control → Stare**. Prezentare generală în timp r
 
 ## 🤖 Rutare automată (fără configurare)
 
-OmniRoute include un **router automat bazat pe scoruri**, care alege cel mai bun model pentru fiecare solicitare dintre toți furnizorii conectați — fără combinații de întreținut. Trimiteți pur și simplu solicitarea folosind unul dintre prefixele `auto/*`, iar OmniRoute va asambla dinamic o combinație virtuală, evaluând candidații în funcție de latență, cost, rata de succes, compatibilitatea cu dimensiunea contextului, adecvarea modelului pentru sarcină, eșecurile recente, cotă și starea mecanismului de întrerupere a circuitului.
+67router include un **router automat bazat pe scoruri**, care alege cel mai bun model pentru fiecare solicitare dintre toți furnizorii conectați — fără combinații de întreținut. Trimiteți pur și simplu solicitarea folosind unul dintre prefixele `auto/*`, iar 67router va asambla dinamic o combinație virtuală, evaluând candidații în funcție de latență, cost, rata de succes, compatibilitatea cu dimensiunea contextului, adecvarea modelului pentru sarcină, eșecurile recente, cotă și starea mecanismului de întrerupere a circuitului.
 
 | Prefix         | Optimizează pentru                                                                                             |
 | -------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -1210,7 +1209,7 @@ Routerul automat este descris în detaliu în [AUTO-COMBO.md](../routing/AUTO-CO
 
 ## 🔌 Integrare MCP și A2A
 
-OmniRoute este atât un **server MCP** (Model Context Protocol), cât și un **server A2A** (JSON-RPC 2.0 între agenți). Orice IDE sau gazdă de agenți compatibilă cu MCP poate apela direct instrumentele OmniRoute — fără a necesita un wrapper suplimentar.
+67router este atât un **server MCP** (Model Context Protocol), cât și un **server A2A** (JSON-RPC 2.0 între agenți). Orice IDE sau gazdă de agenți compatibilă cu MCP poate apela direct instrumentele 67router — fără a necesita un wrapper suplimentar.
 
 ### Transporturi MCP
 
@@ -1239,17 +1238,14 @@ Utilizați URL-ul SSE `http://localhost:20128/api/mcp/sse` și o cheie API Beare
 
 ### Domenii de acces
 
-MCP definește în prezent 32 de domenii de acces denumite. Fiecare cheie Bearer poate fi limitată la anumite domenii de acces — consultați [MCP-SERVER.md](../frameworks/MCP-SERVER.md) pentru lista oficială a domeniilor de acces și a instrumentelor și [A2A-SERVER.md](../frameworks/A2A-SERVER.md) pentru schema JSON-RPC.
-
 ---
 
 ## 🧠 Sistemul de abilități
 
-OmniRoute oferă un **cadru extensibil pentru abilități** (`src/lib/skills/`), astfel încât agenții și endpointul A2A să poată executa rutine specifice domeniului (de exemplu, `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router oferă un **cadru extensibil pentru abilități** (`src/lib/skills/`), astfel încât agenții și endpointul A2A să poată executa rutine specifice domeniului (de exemplu, `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Interfață Marketplace** — Răsfoiți și instalați abilități din **Panou de control → Abilități**
 - **Domenii per cheie** — Restricționați abilitățile pe care le poate invoca fiecare cheie API
-- **Abilități personalizate** — Adăugați un fișier TypeScript în `src/lib/a2a/skills/`, înregistrați-l și acesta devine imediat invocabil prin A2A
 
 Referință completă: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1257,7 +1253,7 @@ Referință completă: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Sistemul de memorie
 
-OmniRoute păstrează **memoria conversațională pe termen lung** folosind regăsirea hibridă:
+67router păstrează **memoria conversațională pe termen lung** folosind regăsirea hibridă:
 
 - **SQLite FTS5** pentru căutarea după cuvinte-cheie în interacțiunile anterioare
 - **Depozit vectorial Qdrant** (opțional) pentru regăsirea semantică
@@ -1270,7 +1266,7 @@ Gestionați memoriile în **Panou de control → Memorie** (căutare, editare, e
 
 ## 🔔 Webhookuri
 
-Abonați-vă la evenimentele OmniRoute pentru monitorizare și automatizare în timp real.
+Abonați-vă la evenimentele 67router pentru monitorizare și automatizare în timp real.
 
 - Creați un webhook în **Panou de control → Webhookuri**, folosind URL-ul țintă și secretul de semnare HMAC
 - Evenimente disponibile: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1281,21 +1277,9 @@ Schema completă este disponibilă în [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Agenți în cloud
-
-OmniRoute se integrează cu agenți de programare în cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), astfel încât să puteți expedia sarcini de lungă durată din același panou de control care gestionează rutarea locală.
-
-- Creați sarcini în **Panou de control → Agenți în cloud** sau prin `POST /api/v1/agents/tasks`
-- Urmăriți starea, jurnalele și artefactele fiecărei sarcini
-- Folosiți propria cheie API pentru fiecare furnizor — datele de autentificare nu părăsesc niciodată instanța OmniRoute
-
-Referință completă: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Gestionare programatică
 
-Puteți gestiona fiecare resursă OmniRoute (furnizori, combinații, chei, setări) prin HTTP, utilizând o **cheie Bearer cu domeniul `manage`**.
+Puteți gestiona fiecare resursă 67router (furnizori, combinații, chei, setări) prin HTTP, utilizând o **cheie Bearer cu domeniul `manage`**.
 
 Generați cheia în **Panou de control → Chei API → Cheie nouă → Domeniu: manage**, apoi:
 
@@ -1328,7 +1312,7 @@ Consultați [API_REFERENCE.md](../reference/API_REFERENCE.md) pentru catalogul c
 
 ## 💻 CLI intern
 
-OmniRoute include un CLI intern (`omniroute …`) pentru configurare, diagnosticare și control în timpul rulării. Acesta este **separat de pagina „Instrumente CLI” din panoul de control**, care configurează CLI-uri terțe (Claude Code, Cursor, Codex, Cline, …), astfel încât acestea să poată comunica cu OmniRoute.
+67router include un CLI intern (`omniroute …`) pentru configurare, diagnosticare și control în timpul rulării. Acesta este **separat de pagina „Instrumente CLI” din panoul de control**, care configurează CLI-uri terțe (Claude Code, Cursor, Codex, Cline, …), astfel încât acestea să poată comunica cu 67router.
 
 ```bash
 omniroute setup                    # Expert interactiv (parolă, furnizori, combinații)
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Restaurează dintr-un instantaneu
 omniroute health                   # Stare detaliată (întrerupătoare, cache, memorie)
 omniroute quota                    # Utilizarea cotei furnizorului
 omniroute mcp status               # Starea serverului MCP
-omniroute a2a status               # Starea serverului A2A
 omniroute tunnel list|create|stop  # Tuneluri Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Resetează parola de administrator
 omniroute --mcp                    # Pornește serverul MCP prin stdio
@@ -1359,7 +1342,7 @@ Sfat: utilizați `omniroute doctor --json` împreună cu instrumentul dumneavoas
 
 ## 🖥️ Aplicație desktop (Electron)
 
-OmniRoute este disponibil ca aplicație desktop nativă pentru Windows, macOS și Linux.
+67router este disponibil ca aplicație desktop nativă pentru Windows, macOS și Linux.
 
 ### Instalare
 

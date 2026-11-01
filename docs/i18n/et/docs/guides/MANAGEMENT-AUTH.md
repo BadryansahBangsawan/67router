@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'il on **neli mandaatide perekonda**, mis saavad autoriseerida haldusmarsruute.
+67router'il on **neli mandaatide perekonda**, mis saavad autoriseerida haldusmarsruute.
 Need ei ole omavahel asendatavad. Järeldus-API võtmed (`sk-…`) **ei** halda
 serverit, välja arvatud juhul, kui neile on selgesõnaliselt antud `manage` või `admin` ulatus.
 

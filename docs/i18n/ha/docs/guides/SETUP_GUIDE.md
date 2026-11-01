@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Hausa)
+# 📖 Setup Guide — 67router (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Cikakken bayani na saitin OmniRoute. Don taƙaitacciyar siga, duba [Farawa Cikin Sauri a README](../README.md#-quick-start).
+> Cikakken bayani na saitin 67router. Don taƙaitacciyar siga, duba [Farawa Cikin Sauri a README](../README.md#-quick-start).
 
 ## Jadawalin Abubuwan Ciki
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Kunshin AUR](https://aur.archlinux.org/packages/omniroute-bin) yana shigar da OmniRoute kuma yana samar da sabis na mai amfani na systemd.
+[Kunshin AUR](https://aur.archlinux.org/packages/omniroute-bin) yana shigar da 67router kuma yana samar da sabis na mai amfani na systemd.
 
 ### Daga Lambar Tushe
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Bayanan Windows:** Ta tsohuwa, OmniRoute yana amfani da `%APPDATA%\omniroute` idan tsohon kundin adireshi na `%USERPROFILE%\.omniroute` ba ya nan. Saita `DATA_DIR` don zaɓar wani wurin kundin bayanai daban.
+> **Bayanan Windows:** Ta tsohuwa, 67router yana amfani da `%APPDATA%\omniroute` idan tsohon kundin adireshi na `%USERPROFILE%\.omniroute` ba ya nan. Saita `DATA_DIR` don zaɓar wani wurin kundin bayanai daban.
 
 > **Lura:** `npm install` yana samar da `.env` kai tsaye daga `.env.example` a farkon gudanarwa. Shigarwa na gaba ba za su sake rubuta `.env` da ke akwai ba, don haka ana adana gyare-gyare. Don sake samar da shi daga tushe, share `.env` kafin sake gudanarwa.
 
@@ -64,7 +64,7 @@ Duba [Jagorar Docker](./DOCKER_GUIDE.md) don cikakken saitin Docker, ciki har da
 
 ### Manhajar Tebur (Electron)
 
-OmniRoute yana zuwa da manhajar tebur da aka gina bisa Electron 41 + electron-builder 26.10. Rubutun da ake da su (a tushen workspace):
+67router yana zuwa da manhajar tebur da aka gina bisa Electron 41 + electron-builder 26.10. Rubutun da ake da su (a tushen workspace):
 
 ```bash
 npm run electron:dev          # Gudanar da manhajar tebur tare da sake lodawa kai tsaye
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Idan aka haɗa da sauye-sauyen muhalli (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, da sauransu), wannan yana ba ka damar ƙaddamar da wani misalin OmniRoute da za a iya sarrafa shi gaba ɗaya ta rubutun umarni.
+Idan aka haɗa da sauye-sauyen muhalli (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, da sauransu), wannan yana ba ka damar ƙaddamar da wani misalin 67router da za a iya sarrafa shi gaba ɗaya ta rubutun umarni.
 
 ### Zaɓuɓɓukan CLI
 
@@ -99,7 +99,7 @@ Idan aka haɗa da sauye-sauyen muhalli (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE
 | `omniroute config`      | Tsarin kayan aikin CLI — jera, samu, saita, tabbatar da tsare-tsare   |
 | `omniroute status`      | Dashboard na matsayi marar layi — siga, DB, kayan aiki, tsari         |
 | `omniroute logs`        | Nuna rajistan amfani kai tsaye daga API (yana goyon bayan `--follow`) |
-| `omniroute update`      | Bincika ko aiwatar da sabuntawar OmniRoute                            |
+| `omniroute update`      | Bincika ko aiwatar da sabuntawar 67router                             |
 | `omniroute provider`    | Sarrafa haɗin masu samarwa — ƙara, jera, cire, gwada, tsoho           |
 | `omniroute --port 3000` | Saita port na asali/API zuwa 3000                                     |
 | `omniroute --mcp`       | Fara sabar MCP (sufurin stdio)                                        |
@@ -165,7 +165,7 @@ Yana aiki da Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode, da SDKs 
 
 #### Yi daidaitawa ta atomatik da `setup-*`
 
-Maimakon manna tushen URL da maɓallin da hannu, bari OmniRoute ya rubuta saitunan kowane kayan aiki
+Maimakon manna tushen URL da maɓallin da hannu, bari 67router ya rubuta saitunan kowane kayan aiki
 daga kundin samfuran da ke aiki. Umurni ɗaya ga kowane kayan aiki:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Kowannensu yana karɓar `--remote <url> --api-key <key>` don daidaita kayan aikin gida da
-OmniRoute na **nesa**, tare da `--dry-run` don samfoti. Don ƙaddamar da CLI tare da
+67router na **nesa**, tare da `--dry-run` don samfoti. Don ƙaddamar da CLI tare da
 env ɗin da ya dace da aka saka ba tare da rubuta wani saitin ba, yi amfani da mai ƙaddamarwa na gama-gari
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 tsofaffin masu ƙaddamarwa na kowane kayan aiki `omniroute launch` (Claude Code) da
@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Cikakkun takardun MCP:** [README na Sabar MCP](../../open-sse/mcp-server/README.md) — kayan aiki 110, saitunan IDE, clients na Python/TS/Go.
 
-### Saitin A2A (Yarjejeniyar Agent-zuwa-Agent)
-
-Tabbatar da Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Aika wani aiki:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Cikakkun takardun A2A:** [README na Sabar A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ƙwarewa, watsawa kai tsaye, da zagayowar rayuwar aiki.
-
----
-
 ## Saitin Lokacin Jira
 
 ### Lokutan Jira na Asali
@@ -277,15 +257,15 @@ Ga yawancin turawa, waɗannan canje-canje guda biyu kaɗai kake buƙata:
 | Canji                    | Tsoho                               | Manufa                                                                                                                                                                  |
 | ------------------------ | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                            | Ma'aunin tushe na bai ɗaya don lokacin jiran fara amsar uwar-garke, ɓoyayyun lokutan jiran Undici, buƙatun sawun yatsan TLS, da lokutan jiran buƙata/proxy na gadar API |
-| `STREAM_IDLE_TIMEOUT_MS` | yana gado daga `REQUEST_TIMEOUT_MS` | Matsakaicin tazarar lokaci tsakanin gutsattsarin bayanan da ake watsawa kafin OmniRoute ya dakatar da rafin SSE                                                         |
+| `STREAM_IDLE_TIMEOUT_MS` | yana gado daga `REQUEST_TIMEOUT_MS` | Matsakaicin tazarar lokaci tsakanin gutsattsarin bayanan da ake watsawa kafin 67router ya dakatar da rafin SSE                                                          |
 
 An kiyaye dacewa da tsoffin nau'ikan: `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS`, da sauran canje-canjen lokacin jira na kowane mataki da ake da su har yanzu suna aiki kuma suna maye gurbin ma'aunin tushe na bai ɗaya.
 
 ### Bayanan Musamman na Mai Bayarwa
 
-Ga uwar-garken da suka dace da Claude Code (`anthropic-compatible-cc-*`), OmniRoute yana samar da kanun `X-Stainless-Timeout` mai fita daga lokacin jiran fetch da aka ƙayyade, domin lokutan jiran karantawa a ɓangaren mai bayarwa su ci gaba da daidaituwa da saitunan env ɗinka.
+Ga uwar-garken da suka dace da Claude Code (`anthropic-compatible-cc-*`), 67router yana samar da kanun `X-Stainless-Timeout` mai fita daga lokacin jiran fetch da aka ƙayyade, domin lokutan jiran karantawa a ɓangaren mai bayarwa su ci gaba da daidaituwa da saitunan env ɗinka.
 
-Ga reverse proxies na wasu kamfanoni masu dacewa da Claude Code, OmniRoute yana kiyaye tsoffin saitunan `anthropic-beta` cikin taka-tsantsan kuma, idan an bar `Client Cache Control` a kan `Auto`, yana tura alamomin `cache_control` da abokin ciniki ya bayar kawai. Kunna maɓallin "Enable redact-thinking beta" na kowace haɗi ne kawai idan uwar-garken yana buƙatar rafukan tunanin Claude da aka ɓoye musamman.
+Ga reverse proxies na wasu kamfanoni masu dacewa da Claude Code, 67router yana kiyaye tsoffin saitunan `anthropic-beta` cikin taka-tsantsan kuma, idan an bar `Client Cache Control` a kan `Auto`, yana tura alamomin `cache_control` da abokin ciniki ya bayar kawai. Kunna maɓallin "Enable redact-thinking beta" na kowace haɗi ne kawai idan uwar-garken yana buƙatar rafukan tunanin Claude da aka ɓoye musamman.
 
 ### Sauye-sauyen Lokacin Jira na Ci-gaba
 
@@ -303,11 +283,11 @@ Ga reverse proxies na wasu kamfanoni masu dacewa da Claude Code, OmniRoute yana 
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                          | Lokacin jiran keep-alive a sabar gadar API                                              |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                             | Lokacin jiran rashin aiki na soket a sabar gadar API (`0` yana kashe shi)               |
 
-> **Lura:** Ga buƙatun watsawa, `FETCH_TIMEOUT_MS` yana rufe kafa haɗi / jiran amsar farko daga uwar-garke kawai. Da zarar rafin ya fara aiki, OmniRoute zai dakatar da shi ne kawai idan an samu tsayawar gaske (`STREAM_IDLE_TIMEOUT_MS`) ko rashin aikin jikin Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Lura:** Ga buƙatun watsawa, `FETCH_TIMEOUT_MS` yana rufe kafa haɗi / jiran amsar farko daga uwar-garke kawai. Da zarar rafin ya fara aiki, 67router zai dakatar da shi ne kawai idan an samu tsayawar gaske (`STREAM_IDLE_TIMEOUT_MS`) ko rashin aikin jikin Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Dacewa da Reverse Proxy
 
-Idan kana gudanar da OmniRoute a bayan Nginx, Caddy, Cloudflare, ko wani reverse proxy, ka tabbatar cewa lokutan jiran proxy ɗin ma sun fi lokutan jiran stream/fetch na OmniRoute tsawo.
+Idan kana gudanar da 67router a bayan Nginx, Caddy, Cloudflare, ko wani reverse proxy, ka tabbatar cewa lokutan jiran proxy ɗin ma sun fi lokutan jiran stream/fetch na 67router tsawo.
 
 ---
 

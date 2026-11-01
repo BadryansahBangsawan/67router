@@ -10,7 +10,7 @@
 > toshe injection a matsayin iyaka ta wajibi (#16413), da abin da ke ganin amsa kafin post-call)
 
 Guardrails suna aiwatar da tsaro, manufofi, da sauye-sauyen abun ciki a iyakar
-da ke tsakanin OmniRoute da masu samarwa na upstream. Kowane guardrail na iya
+da ke tsakanin 67router da masu samarwa na upstream. Kowane guardrail na iya
 bincika (kuma bisa zaɓi ƙi, canza, ko ƙara bayanin kula) payloads na buƙata
 (`preCall`) da amsoshin upstream (`postCall`).
 
@@ -113,7 +113,7 @@ Idan maɓallin API na mai kiran yana ƙuntata `allowedConnections`, tafkunan quo
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), gada tana zaɓar kawai
 models na reroute da describe waɗanda maɓallin na iya amfani da su, a kan
 connections da maɓallin na iya amfani da su. Kiran describe koyaushe yana wucewa ta
-OmniRoute self-loop tare da header `x-omniroute-self-loop-key-id`, don haka
+67router self-loop tare da header `x-omniroute-self-loop-key-id`, don haka
 buƙatar chat da ta karɓa tana sake ƙaddamar da manufofin connection da model na wannan
 maɓallin. `enforceApiKeyPolicy()` yana girmama wannan header kawai tare da self-loop
 bearer, don haka zai iya ragin dama kawai, kuma id da ba ya warwarewa ana ƙinsa.
@@ -142,7 +142,7 @@ alama ta client ba. Sampling na ƙaramin detail yana lalata daidaiton OCR ga ain
 aikin rubuta-rubutu da wannan prompt yake nema, don haka kiran describe
 kanta koyaushe tana neman babban detail duk da wane matakin detail da asalin
 buƙatar shigowa ta yi amfani da shi. Wannan yana shafar jikin buƙatar describe na
-ciki kawai; ba ya canza yadda OmniRoute yake aika `image_url.detail` na caller a kan
+ciki kawai; ba ya canza yadda 67router yake aika `image_url.detail` na caller a kan
 buƙata ta farko — ana amfani da wannan tsoho daban, kuma kawai ga clients na
 OpenCode da aka gano, a cikin `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`).
 Reshen Anthropic wire-format na describe self-loop ba ya da filin `detail`
@@ -205,7 +205,7 @@ Shafin dashboard na musamman shine `/dashboard/settings/modality-bridge`. Shafuk
 
 Tsohon katin Vision Bridge a ƙarƙashin saitunan AI yanzu hanyar haɗin jituwa (compatibility link) ce zuwa sabon shafi; ba ya sake mallakar kwafi na biyu na form ɗin. Media Providers kuma yana haɗa ayyukan Image-to-Text da Speech-to-Text zuwa shafukan Modality Bridge da suka dace ba tare da cire Speech-to-Text playground da ke akwai ba.
 
-**Self-loop admission bypass:** lokacin da kiran describe ya wuce ta hanyar self-loop `/v1` na OmniRoute (samfurin provider maras daidaito), ƙaramar buƙatar tana aika `x-omniroute-admission-bypass: internal` kuma ana tantance ta da shaidar self-loop da aka warware — sentinel ɗin `sk_omniroute` na gida a yanayin local, ko maɓallin env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` da mai aiki ya saita (#1350) don haka deployments masu `REQUIRE_API_KEY=true` su ci gaba da iya gudanar da kiran describe. Ana amincewa da bypass ɗin kawai don waɗancan ainihin shaidodi, don haka masu amfani na waje ba za su iya amfani da header ɗin don tsallake admission ba.
+**Self-loop admission bypass:** lokacin da kiran describe ya wuce ta hanyar self-loop `/v1` na 67router (samfurin provider maras daidaito), ƙaramar buƙatar tana aika `x-omniroute-admission-bypass: internal` kuma ana tantance ta da shaidar self-loop da aka warware — sentinel ɗin `sk_omniroute` na gida a yanayin local, ko maɓallin env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` da mai aiki ya saita (#1350) don haka deployments masu `REQUIRE_API_KEY=true` su ci gaba da iya gudanar da kiran describe. Ana amincewa da bypass ɗin kawai don waɗancan ainihin shaidodi, don haka masu amfani na waje ba za su iya amfani da header ɗin don tsallake admission ba.
 
 Tsofaffin tsoho (legacy defaults) suna a cikin `src/shared/constants/visionBridgeDefaults.ts`; sababbin tsoho na mode/task-aware/cache da mai warware saituna (settings resolver) suna a cikin `src/shared/constants/modalityBridgeDefaults.ts`. Guardrail ɗin yana fallasa zaɓin constructor `deps` don gwaji su iya shigar da aiwatarwar `getSettings` da `callVisionModel` na ƙarya (fake).
 
@@ -330,7 +330,7 @@ script ɗin ba ya taɓa ƙirƙirar ɗayan sakamakon.
 
 An iyakance kowane frame zuwa 4 MiB, dukkan raw frames tare zuwa 23 MiB, kuma
 martanin broker da aka serialized zuwa 32 MiB. Ana cire wani keɓaɓɓen kundin
-adireshin wucin gadi a cikin `finally`. OmniRoute ba ya zuwa tare da FFmpeg
+adireshin wucin gadi a cikin `finally`. 67router ba ya zuwa tare da FFmpeg
 kuma ba ya karɓar hanyar executable da aka keɓance. Kafin sanya caption, gadar
 na yin matakin cire kwafin gani mai tsanaki: ana rage kowane JPEG zuwa buffer
 na grayscale 16×16 kuma ana kwatanta shi ne kawai da ƙarshen frame da aka
@@ -377,7 +377,7 @@ kowane cue ya ɗauke `text`, tsaka-tsaki na `start`/`end` mai iyaka a cikin
 tsawon lokacin da aka bincika, da `source` da aka whitelisted (`client`,
 `embedded`, ko `audio-bridge`); `confidence` na tashi a tsohuwa zuwa `1` kuma
 dole ya kasance tsakanin `0` da `1`. Ana narkar da cues masu kwafi daidai.
-OmniRoute ba ya taɓa fara transcription daga wannan metadata: ana kwafe cues
+67router ba ya taɓa fara transcription daga wannan metadata: ana kwafe cues
 da aka tantance cikin sakamakon da aka bayyana tare da source, confidence, da
 tsaka-tsaki, kuma ana gabatar da su a matsayin abubuwan lura marasa amana
 tare da captions na frame. Ana ƙin rubutun da ba daidai ba, wanda ya wuce
@@ -867,7 +867,7 @@ hannu) yana da ayyuka biyu:
   umarnin da suka gabata…", jailbreaks na salon DAN) tana tabbatar da cewa amsar tana ɗauke da
   `error.code === "SECURITY_001"`, wato mai tsaron ya ki buƙatar a zahiri.
 - **`garak` (mai ba da shawara)** — yana gudanar da garak `--probes promptinject,dan,leakreplay`
-  akan misalin OmniRoute na gida (`http://localhost:20128/v1`). An ɗora shi akan
+  akan misalin 67router na gida (`http://localhost:20128/v1`). An ɗora shi akan
   sirrin mai bayarwa (`PROMPTFOO_PROVIDER_KEY`); yana tsallakawa cikin sauƙi kuma an ƙara masa
   `|| true`, don haka yana ba da rahoto ba tare da kasa CI ba.
 

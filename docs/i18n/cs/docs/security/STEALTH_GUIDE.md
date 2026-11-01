@@ -8,11 +8,11 @@
 > **Poslední aktualizace:** 2026-09-02 — v3.8.51
 > **Cílová skupina:** Vývojáři spravující stealth integrace specifické pro jednotlivé poskytovatele.
 
-OmniRoute se integruje s poskytovateli, jejichž hraniční infrastruktura aktivně vytváří otisky neoficiálních klientů (TLS JA3/JA4, pořadí hlaviček, struktura těla JSON, tokeny integrity). Tato stránka dokumentuje stealth prvky, které OmniRoute zpřístupňuje, a místa jejich implementace.
+67router se integruje s poskytovateli, jejichž hraniční infrastruktura aktivně vytváří otisky neoficiálních klientů (TLS JA3/JA4, pořadí hlaviček, struktura těla JSON, tokeny integrity). Tato stránka dokumentuje stealth prvky, které 67router zpřístupňuje, a místa jejich implementace.
 
 ## Právní a etické upozornění
 
-Stealth funkce existují proto, aby OmniRoute mohla fungovat jako vrstva kompatibility mezi oficiálními účty vlastněnými uživateli (Claude Code CLI, Codex, Antigravity, Cursor atd.) a jednotným API OmniRoute. **Nejsou** určeny k obcházení detekce podvodů, sdílení přihlašovacích údajů ani porušování podmínek poskytovatelů. Správci očekávají, že provozovatelé budou dodržovat podmínky upstreamových služeb, které přijali při vytváření účtů.
+Stealth funkce existují proto, aby 67router mohla fungovat jako vrstva kompatibility mezi oficiálními účty vlastněnými uživateli (Claude Code CLI, Codex, Antigravity, Cursor atd.) a jednotným API 67router. **Nejsou** určeny k obcházení detekce podvodů, sdílení přihlašovacích údajů ani porušování podmínek poskytovatelů. Správci očekávají, že provozovatelé budou dodržovat podmínky upstreamových služeb, které přijali při vytváření účtů.
 
 ---
 
@@ -55,7 +55,7 @@ Profily jsou podporovány připnutým balíčkem, ale skutečné přijetí syst�
 
 ## Balíček utajení Claude Code
 
-Když je zapnutý režim `cliCompatMode`, OmniRoute upravuje odchozí požadavky Claude tak, aby byly nerozeznatelné od provozu `claude-cli`. Spolupracují na tom tři moduly:
+Když je zapnutý režim `cliCompatMode`, 67router upravuje odchozí požadavky Claude tak, aby byly nerozeznatelné od provozu `claude-cli`. Spolupracují na tom tři moduly:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -71,7 +71,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (hash obsahu klienta)
 
-Kontrola integrity na straně serveru, kterou oficiální CLI Claude Code počítá prostřednictvím Bun/Zig. OmniRoute ji znovu implementuje pomocí `xxhash-wasm`:
+Kontrola integrity na straně serveru, kterou oficiální CLI Claude Code počítá prostřednictvím Bun/Zig. 67router ji znovu implementuje pomocí `xxhash-wasm`:
 
 1. Serializovat tělo se zástupným symbolem `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -117,7 +117,7 @@ Sesterské moduly ve stejném balíčku:
 
 ## Utajení Antigravity
 
-Požadavky Antigravity zachovávají text volajícího přesně na úrovni jednotlivých bajtů. OmniRoute nevkládá do promptů znaky s nulovou šířkou ani nepřejmenovává či nevkládá nástroje za účelem napodobení klienta IDE.
+Požadavky Antigravity zachovávají text volajícího přesně na úrovni jednotlivých bajtů. 67router nevkládá do promptů znaky s nulovou šířkou ani nepřejmenovává či nevkládá nástroje za účelem napodobení klienta IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -127,13 +127,13 @@ Před předáním požadavku odstraňuje značky SDK Stainless (`x-stainless-lan
 
 `ANTIGRAVITY_CREDITS=always` (zpracovávané souborem `open-sse/executors/antigravity.ts`) směruje **každý** požadavek přes placené překročení kreditů Antigravity AI (placené kredity Google), místo aby využití omezovala kvóta bezplatné úrovně Google. Tato možnost je zdokumentována jako funkce, ale představuje **zdaleka nejčastější hlášené porušení podmínek služby, se kterým se setkáváme** — po několika hodinách provozu s nastavením `=always` bylo několik účtů Google Ultra zablokováno s odpovědí `403 / "service disabled for ToS violation" / insufficient_quota`.
 
-Vynucování probíhá na **straně společnosti Google** a OmniRoute mu nemůže nijak zabránit. Název proměnné prostředí a stávající dokumentace budí dojem, že jde o bezpečný přepínač; není tomu tak.
+Vynucování probíhá na **straně společnosti Google** a 67router mu nemůže nijak zabránit. Název proměnné prostředí a stávající dokumentace budí dojem, že jde o bezpečný přepínač; není tomu tak.
 
 **Proč toto nastavení spouští detekci zneužití agresivněji než používání omezené pouze na bezplatnou úroveň:**
 
 - Trvalé automatizované výdaje na jednom účtu Google jsou vyhodnocovány jinak než provoz v bezplatné úrovni, který po vyčerpání kvóty skončí.
 - Překročení kreditů nemá žádný limit rychlosti, takže chybně nakonfigurovaný klient může během několika minut spotřebovat několik stovek USD a působit jako přeprodej API klíčů nebo provoz botů.
-- Pokud více uživatelů OmniRoute souběžně čerpá kredity nad limit ze stejné externí IP adresy, signál se dále zesiluje.
+- Pokud více uživatelů 67router souběžně čerpá kredity nad limit ze stejné externí IP adresy, signál se dále zesiluje.
 
 **Doporučený přístup:**
 
@@ -172,7 +172,7 @@ Přepíná se pro každého poskytovatele prostřednictvím proměnných prostř
 
 ## MITM proxy (Antigravity, Linux/macOS/Windows)
 
-Pro CLI, jejichž binární soubory nelze přesměrovat pomocí `OPENAI_BASE_URL`, spouští OmniRoute lokální proxy ukončující TLS. Koncové body se nacházejí pod `src/app/api/cli-tools/antigravity-mitm/`.
+Pro CLI, jejichž binární soubory nelze přesměrovat pomocí `OPENAI_BASE_URL`, spouští 67router lokální proxy ukončující TLS. Koncové body se nacházejí pod `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metoda | Koncový bod                             | Účel                                               |
 | ------ | --------------------------------------- | -------------------------------------------------- |
@@ -253,7 +253,7 @@ IP adresa poskytovatele je **vždy zachována** — přepínač pouze mění pod
 
 ## Čištění příchozích hlaviček
 
-OmniRoute před předáním odstraňuje příchozí hlavičky klienta, aby požadavek přijatý z Cursoru neprozradil nadřazené službě Claude hlavičku `User-Agent: Cursor/X.Y.Z`. Seznam zakázaných hlaviček najdete v `src/shared/constants/upstreamHeaders.ts`; je udržován v přesném souladu se schématy Zod a jednotkovými testy.
+67router před předáním odstraňuje příchozí hlavičky klienta, aby požadavek přijatý z Cursoru neprozradil nadřazené službě Claude hlavičku `User-Agent: Cursor/X.Y.Z`. Seznam zakázaných hlaviček najdete v `src/shared/constants/upstreamHeaders.ts`; je udržován v přesném souladu se schématy Zod a jednotkovými testy.
 
 ---
 

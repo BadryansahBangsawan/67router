@@ -19,7 +19,6 @@ const { USAGE_FETCHER_PROVIDERS } =
   await import("../../open-sse/services/usage/fetcherProviders.ts");
 const { USAGE_SUPPORTED_PROVIDERS } =
   await import("../../open-sse/services/usage/supportedProviders.ts");
-const { handleAudioSpeech } = await import("../../open-sse/handlers/audioSpeech.ts");
 const N = await import("../../open-sse/services/usage/nan.ts");
 
 const NAN_API = "https://api.nan.builders/v1";
@@ -81,42 +80,6 @@ test("nan resolves in the embedding, audio, image and rerank registries", () => 
 
   const rerank = getRerankProvider("nan");
   assert.equal(rerank?.baseUrl, `${NAN_API}/rerank`);
-});
-
-test("nan TTS falls back to the Kokoro default voice, never the OpenAI stock voice", async () => {
-  const originalFetch = globalThis.fetch;
-  const captured: Array<{ url: string; body: Record<string, unknown> }> = [];
-  globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-    captured.push({ url: String(input), body: JSON.parse(String(init?.body ?? "{}")) });
-    return new Response(new Uint8Array([1, 2, 3]), {
-      status: 200,
-      headers: { "content-type": "audio/mpeg" },
-    });
-  };
-  try {
-    const implicit = await handleAudioSpeech({
-      body: { model: "nan/kokoro", input: "hello" },
-      credentials: { apiKey: "nan-key" },
-    });
-    assert.equal(implicit.status, 200);
-    const explicit = await handleAudioSpeech({
-      body: { model: "nan/kokoro", input: "hello", voice: "am_adam" },
-      credentials: { apiKey: "nan-key" },
-    });
-    assert.equal(explicit.status, 200);
-    const openai = await handleAudioSpeech({
-      body: { model: "openai/tts-1", input: "hello" },
-      credentials: { apiKey: "openai-key" },
-    });
-    assert.equal(openai.status, 200);
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
-  assert.equal(captured[0].url, `${NAN_API}/audio/speech`);
-  assert.equal(captured[0].body.model, "kokoro");
-  assert.equal(captured[0].body.voice, "af_heart");
-  assert.equal(captured[1].body.voice, "am_adam");
-  assert.equal(captured[2].body.voice, "alloy", "providers without defaultVoice keep alloy");
 });
 
 test("nan usage fetcher is wired into both provider lists", () => {

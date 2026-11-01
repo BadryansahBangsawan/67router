@@ -7,7 +7,7 @@
 > **Vir resnice:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Zadnja posodobitev:** 2026-09-22 — imenski prostori obsega kažejo na MCP-SERVER.md
 
-OmniRoute ima cevovod za avtorizacijo, ki je odvisen od poti in varuje vsako zahtevo API-ja. Klasifikacija je **determinirana** in **zapira ob napaki** — vse, kar ni mogoče klasificirati, se konča kot `MANAGEMENT` in zahteva sejo ali žeton za upravljanje. Ta stran pojasnjuje model za inženirje, ki vzdržujejo poti ali načrtujejo nove končne točke.
+67router ima cevovod za avtorizacijo, ki je odvisen od poti in varuje vsako zahtevo API-ja. Klasifikacija je **determinirana** in **zapira ob napaki** — vse, kar ni mogoče klasificirati, se konča kot `MANAGEMENT` in zahteva sejo ali žeton za upravljanje. Ta stran pojasnjuje model za inženirje, ki vzdržujejo poti ali načrtujejo nove končne točke.
 
 ![Cevovod AuthZ (3 razredi poti + vrednotenje pravilnika)](../diagrams/exported/authz-pipeline.svg)
 
@@ -224,8 +224,6 @@ Glejte [Avtentikacija upravljanja](../guides/MANAGEMENT-AUTH.md).
 Uveljavljanje ključa API odjemalca uporablja `isRequireApiKeyEnabled()` v `src/shared/utils/featureFlags.ts`, ne neposrednega branja `process.env.REQUIRE_API_KEY`. To je pomembno za nameščene instance: preklop `REQUIRE_API_KEY` v Dashboard → Feature Flags shrani prepis v bazo in takoj vpliva na `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` in druge preverjanje avtentikacije API-ja odjemalca, ki delijo ta pomočnik. Če shrambe zastavic ni mogoče prebrati, se avtentikacija API-ja odjemalca zapre in zahteva ključ.
 
 ## Nezdružljiva sprememba — v3.8.0
-
-Končne točke `/api/v1/agents/tasks/*` in `/api/resilience/model-cooldowns` **zdaj zahtevajo upravljalsko preverjanje pristnosti** (potrditev `588a0333`). Odjemalci, ki so prej pošiljali običajen ključ API brez obsega `manage`, prejmejo `403`. Migracija: ključu bodisi dodelite obseg `manage` na nadzorni plošči API Keys bodisi uporabite prijavljeno sejo nadzorne plošče.
 
 ## Sprememba vedenja — v3.8.2
 

@@ -4,7 +4,7 @@
 
 ---
 
-Ìtúòdù aláfarahàn TPROXY jẹ́ **ìpo ìmúwọlé karùn-ún** ti OmniRoute fún akopọ MITM
+Ìtúòdù aláfarahàn TPROXY jẹ́ **ìpo ìmúwọlé karùn-ún** ti 67router fún akopọ MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Ó ń dáwọ́ dúró, ó sì ń **túòdù** ìrìnàjò HTTPS àbájáde agbègbè lórí Linux
 nípa lílo TPROXY ekuro + ìdarí ipa-ọ̀nà gẹ́gẹ́ bí ìlànà — **láì ṣe** àfarawé `/etc/hosts` àti
@@ -53,7 +53,7 @@ Lò ó nígbà tí o bá fẹ́ gba àti túòdù ìrìnàjò láti inú iṣẹ
 - tí o kò fẹ́ dá láàmú pẹ̀lú àyípadà aṣojú káàkiri ètò.
 
 Nítorí pé ìdádúró náà ń ṣẹlẹ̀ nínú ekuro, iṣẹ́ tó dá ìrìnàjò náà sílẹ̀ kò nílò **ìyípadà
-ìṣètò kankan** — ṣùgbọ́n iṣẹ́ náà gbọ́dọ̀ fọkàn tán CA aláyípadà tí OmniRoute
+ìṣètò kankan** — ṣùgbọ́n iṣẹ́ náà gbọ́dọ̀ fọkàn tán CA aláyípadà tí 67router
 fi sílẹ̀ (wo [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ a kò kọ addon náà), loader addon náà (`src/mitm/tproxy/transparentSocket.
 yóò dá `null` padà dípò jíju àṣìṣe. Ipò capture-mode yóò sì fi
 `available: false` hàn, toggle dashboard náà yóò jẹ́ **aláìṣiṣẹ́** pẹ̀lú tooltip
 "TPROXY decrypt nílò Linux + root + addon abinibi náà", apá tó kù nínú
-OmniRoute yóò sì máa ṣiṣẹ́.
+67router yóò sì máa ṣiṣẹ́.
 
 ---
 
@@ -244,7 +244,7 @@ Nítorí pé àwọn rule náà ń fi àmì sí àwọn ìsopọ̀ outbound agb�
 | **Ìsọdimímọ́ error**                    | Àwọn response error ti route náà máa ń kọjá nípasẹ̀ `sanitizeErrorMessage()` (Òfin Líle #12).                                                                                                                                                                                                                                                                                           |
 
 **MITM CA jẹ́ agbára tó lágbára.** CA tí OS fọkàn tán tí ó lè sign host èyíkéyìí
-túmọ̀ sí pé a lè decrypt ohunkóhun tí OmniRoute bá intercept. A fi sí ẹ̀yìn
+túmọ̀ sí pé a lè decrypt ohunkóhun tí 67router bá intercept. A fi sí ẹ̀yìn
 mode ìgbà TPROXY tó ṣe kedere, tó sì jẹ́ ti local-nìkan, ó wà ní pípa nípa àiyẹ̀wù, a sì máa ń yọ
 entry trust-store náà kúrò nígbà tí o bá dá mode náà dúró.
 
@@ -354,7 +354,7 @@ máa dá `available: false` padà nígbà tí àfikún náà kò bá sí.
 ### Àwọn òfin ogiri iná àtijọ́ lẹ́yìn ìjàmbá
 
 `revertTproxy()` jẹ́ òdì pàtó ti ìlò, ó sì jẹ́ idempotent. Dídá
-ìpo náà dúró máa ń dá àwọn òfin náà padà; tí a bá pa OmniRoute ní àárín àkókò, lo ìṣe
+ìpo náà dúró máa ń dá àwọn òfin náà padà; tí a bá pa 67router ní àárín àkókò, lo ìṣe
 **Repair** ti AgentBridge (`POST /api/tools/agent-bridge/repair`) láti tú ipò ètò
 tí kò ní olùdarí (àyípadà DNS, root CA, aṣojú ètò). Àwọn òfin `mangle` TPROXY àti route náà
 máa ń fọ ara wọn kúrò nígbà tí ẹ̀rọ bá tún bẹ̀rẹ̀.

@@ -6,7 +6,7 @@ lastUpdated: 2026-06-28
 
 # Cost & Spend Tracking
 
-How OmniRoute estimates, records, and reports the cost of every request — and why the
+How 67router estimates, records, and reports the cost of every request — and why the
 dashboard number is a **savings tracker**, not a bill.
 
 See also: [User Guide](./USER_GUIDE.md) · [Features Gallery](./FEATURES.md)
@@ -15,11 +15,11 @@ See also: [User Guide](./USER_GUIDE.md) · [Features Gallery](./FEATURES.md)
 
 ## What it is (and what it is not)
 
-OmniRoute attributes a per-request USD cost to every completion by multiplying token
+67router attributes a per-request USD cost to every completion by multiplying token
 counts by a model's pricing rates. These numbers power the **Costs** dashboard, the
-`omniroute cost` / `omniroute usage` CLI, CSV/JSON exports, and per-API-key budgets.
+`omniroute cost` / `omniroute usage` CLI and CSV/JSON exports.
 
-> **The dashboard "cost" is a savings tracker, not a bill.** OmniRoute never charges you
+> **The dashboard "cost" is a savings tracker, not a bill.** 67router never charges you
 > — it routes your requests to providers you have already connected (your own
 > subscriptions, free tiers, and API keys). A "$290 total cost" accrued entirely on free
 > models means roughly **$290 you did _not_ pay** a paid API. The figure is an _estimate_
@@ -31,7 +31,7 @@ This framing is stated directly in the project [README](../../README.md) ("the d
 
 Because the number is an estimate:
 
-- It depends on the pricing table OmniRoute has for each model. A model with no pricing
+- It depends on the pricing table 67router has for each model. A model with no pricing
   entry contributes `0` cost (it shows as a "Legacy / Free" row in the explorer).
 - Free-tier and subscription traffic still accrues an _estimated_ cost — that is the
   amount you are saving, not an amount owed.
@@ -49,7 +49,7 @@ Costs come from a pricing table resolved in this precedence order
 2. **Synced external pricing** — fetched from LiteLLM's public
    `model_prices_and_context_window.json` when sync is enabled (stored in a separate
    `pricing_synced` namespace so it never clobbers your overrides).
-3. **Hardcoded defaults** — shipped with OmniRoute.
+3. **Hardcoded defaults** — shipped with 67router.
 
 External pricing sync is **opt-in**, disabled by default. Relevant env vars
 (see [`.env.example`](../../.env.example)):
@@ -82,8 +82,7 @@ Model names are normalized first (provider-path prefixes such as `openai/` or
 ### How spend is recorded
 
 - The per-request cost is computed after the response and recorded fire-and-forget so it
-  never adds latency to the client. Shared-quota consumption is scheduled on the next
-  event-loop tick via [`src/lib/quota/spendRecorder.ts`](../../src/lib/quota/spendRecorder.ts).
+  never adds latency to the client.
 - API-key spend is buffered and flushed in batches by the
   [`SpendBatchWriter`](../../src/lib/spend/batchWriter.ts) (default 60s flush interval,
   1,000-entry buffer). Tunable via:
@@ -135,10 +134,6 @@ The Costs area also hosts (all under `/dashboard/costs/`):
 
 - **Pricing** (`/dashboard/costs/pricing`) — view and override per-model prices (renders
   the shared Pricing tab).
-- **Budget** (`/dashboard/costs/budget`) — set per-scope spend limits (renders the shared
-  Budget tab).
-- **Quota Share** (`/dashboard/costs/quota-share`) — shared-quota pools and burn-rate
-  views.
 
 ---
 
@@ -158,18 +153,6 @@ noted.
 | `GET`  | `/api/usage/quota`       | Provider quota status.                                                                                                                                   |
 | `GET`  | `/api/usage/proxy-logs`  | Proxy request logs.                                                                                                                                      |
 
-### Budgets
-
-| Method | Endpoint                 | Purpose                                                                        |
-| ------ | ------------------------ | ------------------------------------------------------------------------------ |
-| `GET`  | `/api/usage/budget`      | Cost summary + budget check for one API key (`apiKeyId` query param required). |
-| `POST` | `/api/usage/budget`      | Set daily/weekly/monthly USD limits + warning threshold for an API key.        |
-| `GET`  | `/api/usage/budget/bulk` | Bulk budget summaries across API keys.                                         |
-
-> The budget API is scoped per **API key** (`apiKeyId`). Limits returned by
-> `GET /api/usage/budget` include `dailyLimitUsd`, `weeklyLimitUsd`, `monthlyLimitUsd`,
-> a `warningThreshold`, and the running totals (`totalCostToday`, `totalCostMonth`, …).
-
 ### Pricing
 
 | Method   | Endpoint                | Purpose                                                                                         |
@@ -185,16 +168,15 @@ noted.
 
 ### Other cost-relevant endpoints
 
-| Method | Endpoint                      | Purpose                                                                 |
-| ------ | ----------------------------- | ----------------------------------------------------------------------- |
-| `GET`  | `/api/free-tier/summary`      | Free-model token totals, used-this-month, and remaining free allowance. |
-| `GET`  | `/api/quota/pools/[id]/usage` | Usage for a shared-quota pool.                                          |
+| Method | Endpoint                 | Purpose                                                                 |
+| ------ | ------------------------ | ----------------------------------------------------------------------- |
+| `GET`  | `/api/free-tier/summary` | Free-model token totals, used-this-month, and remaining free allowance. |
 
 ---
 
 ## CLI
 
-OmniRoute's CLI exposes cost, usage, and pricing commands (registered in
+67router's CLI exposes cost, usage, and pricing commands (registered in
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`
@@ -221,12 +203,6 @@ omniroute usage quota [--provider <id>] [--check]
 omniroute usage utilization [--api-key <k>]
 omniroute usage history [--limit 100]
 omniroute usage proxy-logs [--limit 100]
-
-# Budgets
-omniroute usage budget list
-omniroute usage budget get [scope]
-omniroute usage budget set <amount> [--scope global] [--period monthly]
-omniroute usage budget reset [scope]
 ```
 
 ### `omniroute pricing`

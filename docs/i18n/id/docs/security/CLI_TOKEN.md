@@ -6,7 +6,7 @@
 
 ## Ikhtisar
 
-Perintah OmniRoute CLI melakukan autentikasi terhadap API manajemen lokal menggunakan token
+Perintah 67router CLI melakukan autentikasi terhadap API manajemen lokal menggunakan token
 `HMAC-SHA256(machine-id, salt)` yang dikirim melalui header permintaan
 `x-omniroute-cli-token`.
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute hansı **brauzer mənşələrinin** vahid, mərkəzləşdirilmiş icazə siyahısından istifadə edərək domenlərarası cavabları oxuya biləcəyini idarə edir. Model **standart olaraq qapalıdır**:
+67router hansı **brauzer mənşələrinin** vahid, mərkəzləşdirilmiş icazə siyahısından istifadə edərək domenlərarası cavabları oxuya biləcəyini idarə edir. Model **standart olaraq qapalıdır**:
 siz açıq şəkildə icazə verməyənədək heç bir mənşəyə icazə verilmir. Bu səhifə icazə siyahısının necə müəyyən edildiyini, `CORS_ALLOW_ALL=true` parametrinin əslində nələri əlçatan etdiyini (və ən vacibi, nələri **etmədiyini**), inkişaf və istehsal mühitlərinin təhlükəsiz şəkildə necə konfiqurasiya olunacağını və joker işarə aktiv olduqda idarəetmə panelinin göstərdiyi icra vaxtı xəbərdarlığını sənədləşdirir.
 
 **Əsas etibarlı mənbə:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
@@ -28,12 +28,12 @@ Hər sorğu üçün ara proqram `Access-Control-Allow-Origin` dəyərini aşağ�
 
 ## Təhdid modeli — `CORS_ALLOW_ALL=true` əslində nələri əlçatan edir
 
-OWASP-ın ümumi xəbərdarlığını ("joker işarəli CORS = istənilən sayt API-nizi çağıra bilər") ciddi qəbul etməyə dəyər, lakin bir konkret reallaşdırma faktına görə OmniRoute-un məruz qalma sahəsi **ümumi haldan daha dardır**:
+OWASP-ın ümumi xəbərdarlığını ("joker işarəli CORS = istənilən sayt API-nizi çağıra bilər") ciddi qəbul etməyə dəyər, lakin bir konkret reallaşdırma faktına görə 67router-un məruz qalma sahəsi **ümumi haldan daha dardır**:
 
 > **Mərkəzi `applyCorsHeaders()` heç vaxt
 > `Access-Control-Allow-Credentials` göndərmir.** Server
 > `Access-Control-Allow-Credentials: true` göndərmədiyi halda brauzer _etimadnaməli_
-> (kukilər daşıyan) domenlərarası cavabı əlçatan etməyəcək. OmniRoute-un ortaq CORS yolu bunu heç vaxt
+> (kukilər daşıyan) domenlərarası cavabı əlçatan etməyəcək. 67router-un ortaq CORS yolu bunu heç vaxt
 > etmir.
 
 Bu, hətta `CORS_ALLOW_ALL=true` olduqda belə, hər səth üçün aşağıdakı mənaya gəlir:
@@ -46,13 +46,6 @@ Bu, hətta `CORS_ALLOW_ALL=true` olduqda belə, hər səth üçün aşağıdakı
 
 Beləliklə, `CORS_ALLOW_ALL=true` parametrinin **qalıq** məruz qalması bunlarla məhdudlaşır: (a) artıq autentifikasiya tələb etməyən məlumatların etimadnaməsiz domenlərarası **oxunması** və (b) idarəetmə marşrutlarında CORS **ilkin sorğusunun keçməsinə** icazə verilməsi — həmin marşrutlar yenə də domenlərarası səhifənin təqdim edə bilməyəcəyi autentifikasiya tələb edir. Ortaq CORS yolunda bu, sessiyanın ələ keçirilməsi və ya etimadnamənin oğurlanması vektoru **deyil**.
 
-### Bir real istisna — `/api/v1/agents/`
-
-Cloud-Agent marşrutları (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) **öz** CORS başlıqlarını təyin edir
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) və
-`Access-Control-Allow-Origin: <origin>|*` ilə birlikdə
-`Access-Control-Allow-Credentials: true` başlığını **göndərir**. Bu, mənşənin geri qaytarılması ilə etimadnamələrin birlikdə mövcud olduğu yeganə səthdir və `CORS_ALLOW_ALL` parametrindən **asılı deyil**. Bu marşrutlar idarəetmə autentifikasiyasından keçir (`requireManagementAuth`); idarəetmə panelini hostdan kənarda əlçatan edən operatorlar bilməlidir ki, cavab başlıqlarının domenlərarası etimadnaməli oxumaya icazə verdiyi yeganə yer buradır. Bunun açıq icazə siyahısı ilə məhdudlaşdırılması bu CORS təlimatından ayrıca izlənilir.
-
 ## İstehsal mühiti üçün yoxlama siyahısı
 
 - **İstehsal mühitində heç vaxt `CORS_ALLOW_ALL=true` təyin etməyin.** Onu təyin edilməmiş saxlayın.
@@ -62,7 +55,7 @@ Cloud-Agent marşrutları (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute əks proksi / tunel (nginx, Caddy, Cloudflare
+- 67router əks proksi / tunel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) arxasında işləyirsə, CORS sizin yeganə nəzarət mexanizminiz
   **deyil** — loopback marşrut qoruyucusu proses başlatmağa imkan verən marşrutları
   hələ də qoruyur (bax:
@@ -80,7 +73,7 @@ Hətta inkişaf mühitində də nadir hallarda wildcard-a ehtiyacınız olur. Ya
 etdiyiniz inkişaf serverlərinə icazə verin:
 
 ```bash
-# Lokal OmniRoute-a sorğu göndərən Vite (5173) + Next.js (3000) inkişaf serverləri
+# Lokal 67router-a sorğu göndərən Vite (5173) + Next.js (3000) inkişaf serverləri
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -100,12 +93,12 @@ bölməsində təyin edilə bilər.
   qorunur. İdarəetmə/idarəetmə paneli mənbələrini hər hansı sərbəst
   konfiqurasiyadan kənarda saxlayın; onlar tam olaraq qapalı qalmalıdır.
 
-## Nümunə: OmniRoute qarşısında əks proksi
+## Nümunə: 67router qarşısında əks proksi
 
-CORS qaydaları OmniRoute tərəfindən tətbiq edilir, buna görə proksi, ümumiyyətlə, `Access-Control-*` başlıqlarını əlavə etməməli və ya yenidən yazmamalıdır (təkrarlanan başlıqlar brauzerlərin işini pozur). TLS-i sonlandırın və sorğunu yönləndirin — ilkin sorğuya OmniRoute cavab versin:
+CORS qaydaları 67router tərəfindən tətbiq edilir, buna görə proksi, ümumiyyətlə, `Access-Control-*` başlıqlarını əlavə etməməli və ya yenidən yazmamalıdır (təkrarlanan başlıqlar brauzerlərin işini pozur). TLS-i sonlandırın və sorğunu yönləndirin — ilkin sorğuya 67router cavab versin:
 
 ```nginx
-# nginx — OmniRoute-a yönləndirin; burada Access-Control-* əlavə ETMƏYİN
+# nginx — 67router-a yönləndirin; burada Access-Control-* əlavə ETMƏYİN
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -113,12 +106,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Yönləndirmə başlıqlarını saxlayın: eyni hostdakı proksi geridönüş interfeysi üzərindən qoşulur və
-    # məhz bu başlıqlar OmniRoute-a sorğunu göndərənin lokal operator olmadığını bildirir. Bu başlıqların
+    # məhz bu başlıqlar 67router-a sorğunu göndərənin lokal operator olmadığını bildirir. Bu başlıqların
     # heç birini əlavə etməyən proksi bütün uzaq istifadəçiləri lokal kimi göstərir. X-Forwarded-For başlığını da heç vaxt 127.0.0.1 olaraq təyin etməyin.
 }
 ```
 
-Brauzer üçün icazə verilən mənbələri proksidə deyil, OmniRoute-da (`CORS_ALLOWED_ORIGINS` və ya Security bölməsində) təyin edin.
+Brauzer üçün icazə verilən mənbələri proksidə deyil, 67router-da (`CORS_ALLOWED_ORIGINS` və ya Security bölməsində) təyin edin.
 
 ## Mənbə faylları
 
@@ -130,7 +123,6 @@ Brauzer üçün icazə verilən mənbələri proksidə deyil, OmniRoute-da (`COR
 | İdarəetmə paneli üçün icra vaxtı statusu                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | İdarəetmə panelində xəbərdarlıq banneri                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins sahəsi                               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Hər marşrut üzrə Cloud-Agent CORS-u (istisna)             | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Həmçinin baxın
 

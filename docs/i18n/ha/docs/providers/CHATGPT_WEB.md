@@ -28,9 +28,9 @@ Ana buƙatar tunnel ne kawai don zagayen kayan aiki. Kowace hanya da aka jera, c
    Sabbin saituna masu iya amfani da kayan aiki dole ne su yi amfani da sabon connector da aka ƙirƙira mai suna daidai
    `OmniRoute Codex v2`, tare da saita Authentication zuwa None da Permissions zuwa Allow all
    actions.
-3. Gudanar da binciken haɗin. OmniRoute yana buɗe Temporary Chat mai amfani da browser sannan ya gano
+3. Gudanar da binciken haɗin. 67router yana buɗe Temporary Chat mai amfani da browser sannan ya gano
    ko Sol da Pro suna samuwa ga asusun.
-4. Ajiye haɗin. OmniRoute yana maye gurbin cookie ɗin da aka liƙa da ingantaccen
+4. Ajiye haɗin. 67router yana maye gurbin cookie ɗin da aka liƙa da ingantaccen
    Playwright storage state sannan ya adana shi tare da runtime key ta hanyar tsarin ɓoye
    bayanan shaidar shiga.
 
@@ -72,20 +72,20 @@ Kada a sake suna ko a sake amfani da tsohon connector na `Codex Native` ko `Omni
 
 ## VPS mara allon nuni da Docker
 
-Ga shigarwar npm, systemd, da PM2, OmniRoute yana gano sanannun hanyoyin Chrome da Chromium.
+Ga shigarwar npm, systemd, da PM2, 67router yana gano sanannun hanyoyin Chrome da Chromium.
 A madadin haka, saita `CHATGPT_WEB_CODEX_CHROME_PATH`. Da gangan, runtime turns suna amfani da
 Chrome mai taga saboda ChatGPT yana ƙin tsarin browser na ainihin headless. Saboda haka, na'ura marar
-allon nuni dole ne ta gudanar da OmniRoute tare da nuni na Xvfb mai zaman kansa; saita hanyar Chrome
+allon nuni dole ne ta gudanar da 67router tare da nuni na Xvfb mai zaman kansa; saita hanyar Chrome
 kawai ba ya samar da shi.
 
 Profile na Docker mai suna `web` yana fara `chatgpt-web-codex-browser` a kan cibiyar sadarwar Compose
 ta ciki. Sidecar ɗin yana gudanar da Chrome mai taga a cikin Xvfb, don haka ba a buƙatar allon nuni na zahiri. Ba a
 bayyana port ɗinsa na CDP a kan host ba. Volume ɗin browser profile da aka kare ya bambanta da
-volume ɗin bayanan OmniRoute, kuma browser ɗin yana samun isasshen shared memory. Proxy na CDP
+volume ɗin bayanan 67router, kuma browser ɗin yana samun isasshen shared memory. Proxy na CDP
 na ciki yana sauraro ne kawai a port `9223` a cikin cibiyar sadarwar Compose; Chrome yana ci gaba da kasancewa
 a ɗaure da loopback a cikin sidecar.
 
-Supervisor lease a ƙarƙashin `DATA_DIR` yana hana matakan sarrafa OmniRoute da yawa mallakar
+Supervisor lease a ƙarƙashin `DATA_DIR` yana hana matakan sarrafa 67router da yawa mallakar
 tunnel da broker state iri ɗaya. Doctor yana bayar da rahoton rikici.
 
 ## Farfadowa ta hulɗa

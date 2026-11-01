@@ -4,7 +4,7 @@
 
 ---
 
-Mwongozo huu unaelezea jinsi ya kuongeza akaunti za Kiro (msaidizi wa uandishi wa msimbo wa AI anayopangishwa na AWS) kwenye OmniRoute,
+Mwongozo huu unaelezea jinsi ya kuongeza akaunti za Kiro (msaidizi wa uandishi wa msimbo wa AI anayopangishwa na AWS) kwenye 67router,
 huku ukilenga kuendesha akaunti nyingi kwa wakati mmoja bila migongano ya vipindi.
 
 ---
@@ -22,10 +22,10 @@ tokeni ya akaunti ya kwanza.
 
 ---
 
-## Jinsi OmniRoute Inavyotatua Tatizo Hili (v3.8.0+)
+## Jinsi 67router Inavyotatua Tatizo Hili (v3.8.0+)
 
-Kuanzia v3.8.0, OmniRoute huita `registerClient()` (AWS SSO OIDC) wakati wa kila
-uletaji wa muunganisho wa Kiro. Hili huupa kila muunganisho wa OmniRoute usajili wake
+Kuanzia v3.8.0, 67router huita `registerClient()` (AWS SSO OIDC) wakati wa kila
+uletaji wa muunganisho wa Kiro. Hili huupa kila muunganisho wa 67router usajili wake
 maalumu wa kiteja cha OIDC. Kwa sababu kila usajili wa kiteja unajitegemea, kuonyesha upya au
 kuthibitisha tena utambulisho wa akaunti moja hakuathiri tokeni ya kuonyesha upya ya akaunti nyingine yoyote.
 
@@ -58,7 +58,7 @@ usajili wake wa kiteja kiotomatiki.
 
 ### Mahitaji ya Awali
 
-- OmniRoute v3.8.0 au toleo jipya zaidi.
+- 67router v3.8.0 au toleo jipya zaidi.
 - Akaunti ya Kiro inayofanya kazi (barua pepe + nenosiri, au uingiaji wa Google au GitHub).
 - Kwa hiari, akaunti ya pili ya Kiro.
 
@@ -69,7 +69,7 @@ usajili wake wa kiteja kiotomatiki.
    - **Leta Tokeni** — bandika tokeni ya kuonyesha upya inayoanza na `aorAAAAAG`.
    - **Ufunguo wa API** — bandika ufunguo wa API wa Kiro / CodeWhisperer wa muda mrefu.
    - **Uingiaji wa Google / GitHub** — kamilisha mtiririko wa OAuth kwenye kivinjari.
-   - **Uletaji Kiotomatiki** — bofya kitufe; OmniRoute husoma vitambulisho kutoka kwenye
+   - **Uletaji Kiotomatiki** — bofya kitufe; 67router husoma vitambulisho kutoka kwenye
      hifadhidata ya kiro-cli ya ndani au `~/.aws/sso/cache`.
 3. Muunganisho unahifadhiwa. Mitiririko ya tokeni za kuonyesha upya husajili kiotomatiki kiteja maalumu
    cha OIDC. Mitiririko ya ufunguo wa API huthibitisha ufunguo kupitia AWS na haihifadhi tokeni ya kuonyesha upya.
@@ -126,7 +126,7 @@ uonyeshaji upya wa OAuth, kwa hivyo huepuka kubatilishwa kwa kipindi cha OIDC ki
 2. Chagua **Ufunguo wa API**.
 3. Bandika ufunguo wa API na uchague eneo la AWS: **Tambua kiotomatiki** (chaguo-msingi), **US East
    (N. Virginia)** au **Europe (Frankfurt)**.
-4. OmniRoute huhalalisha ufunguo na kuhifadhi muunganisho ukiwa umefungamanishwa na eneo ambako
+4. 67router huhalalisha ufunguo na kuhifadhi muunganisho ukiwa umefungamanishwa na eneo ambako
    ufunguo unafanya kazi.
 
 ### API
@@ -176,7 +176,7 @@ ikiwa imejumuishwa — kwa sababu lango la Kiro IDE hukataa `TokenType=API_KEY` 
 ## Kuisha kwa Muda wa OIDC Client
 
 Kwa kawaida, public clients za AWS SSO OIDC huisha baada ya siku 90
-(`clientSecretExpiresAt`). OmniRoute huhifadhi muhuri huu wa muda katika `providerSpecificData`
+(`clientSecretExpiresAt`). 67router huhifadhi muhuri huu wa muda katika `providerSpecificData`
 kwa ajili ya uangalizi. Ikiwa muunganisho utaacha kuonyeshwa upya baada ya takribani siku 90, leta tena
 muunganisho ili kupata usajili mpya wa OIDC client. Usajili upya wa kiotomatiki baada ya
 muda kuisha umeainishwa kama uboreshaji wa baadaye.
@@ -197,7 +197,7 @@ kupitia AWS SSO OIDC.
 ### Uletaji unashindikana kwa "Token validation failed"
 
 - Hakikisha refresh token inaanza na `aorAAAAAG`.
-- Hakikisha OmniRoute inaweza kufikia `https://oidc.us-east-1.amazonaws.com` (au eneo
+- Hakikisha 67router inaweza kufikia `https://oidc.us-east-1.amazonaws.com` (au eneo
   lililosanidiwa). Ikiwa uko nyuma ya proxy ya shirika, weka proxy ya kiwango cha provider katika
   **Dashboard → Settings → Proxies**.
 
@@ -205,7 +205,7 @@ kupitia AWS SSO OIDC.
 
 - Thibitisha kuwa key ni API key ya Kiro / CodeWhisperer, si refresh token.
 - Thibitisha kuwa eneo la AWS linalingana na key/akaunti. `us-east-1` ndilo chaguo-msingi.
-- Key lazima iweze kuita `ListAvailableProfiles`; vinginevyo OmniRoute haiwezi
+- Key lazima iweze kuita `ListAvailableProfiles`; vinginevyo 67router haiwezi
   kutambua `profileArn` inayohitajika.
 
 Kwa matatizo mengine, angalia [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) kuu.

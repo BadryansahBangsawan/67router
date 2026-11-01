@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tana da makanikan juriya guda uku masu bambanta amma masu alaƙa. Kowannensu yana da fanni da manufa daban. Riƙe su daban lokacin da kake gano kura-kurai (debugging) na halayen tsara hanya (routing).
+67router tana da makanikan juriya guda uku masu bambanta amma masu alaƙa. Kowannensu yana da fanni da manufa daban. Riƙe su daban lokacin da kake gano kura-kurai (debugging) na halayen tsara hanya (routing).
 
 ![Tsarin juriya na matakai uku](../diagrams/exported/resilience-3layers.svg)
 
@@ -205,7 +205,7 @@ Ba a taɓa tura taken alaƙar zama guda uku zuwa upstream — masu aiwatarwa sun
 
 ### Hayar haɗin zama da ake sarrafawa ta keɓance
 
-**Iyaka:** abokin cinikin/zaman HTTP guda ɗaya mai aiki da ake sarrafawa ne yake mallakar haɗin OmniRoute guda ɗaya da ya cancanta.
+**Iyaka:** abokin cinikin/zaman HTTP guda ɗaya mai aiki da ake sarrafawa ne yake mallakar haɗin 67router guda ɗaya da ya cancanta.
 
 **Manufa:** samar da mallakar haɗi ta keɓance mai ɗorewa ga abokan ciniki da ke buƙatar tsayayyen
 shingen sarrafa hanya a tsakanin buƙatu. Wannan ya bambanta da alaƙar zama, wadda fifikon ci gaba ne mai sassauci:
@@ -227,7 +227,7 @@ API da aka tabbatar da shi da kuma ID na haɗi mai aiki. Ana cire kanun (headers
 hotunan buƙatu da aka riƙe, da kuma kanun mai aiwatarwa na upstream.
 
 Idan tsarin tsara hanya na yau da kullum yana da ƴan takara da aka sarrafa waɗanda suka cancanta amma kowane
-ɗan takara da ke talla wani lease mai aiki na waje ya kwashe shi, OmniRoute tana mayar da HTTP `429`, lambar
+ɗan takara da ke talla wani lease mai aiki na waje ya kwashe shi, 67router tana mayar da HTTP `429`, lambar
 lease-capacity-unavailable, yanayin waiting-for-capacity, da kuma `Retry-After` mai iyaka wanda aka samo daga
 ƙarewar farko da ta dace. Rashin samun wanda ya cancanta na yau da kullum ba gardama ta lease ba ne kuma yana
 riƙe ma'anar kurakuran tsara hanya da yake da su a halin yanzu.
@@ -248,7 +248,7 @@ Abubuwan da suka shafi juna suna ci gaba da kasancewa daban-daban:
 
 - `429` / `403` / `402` — sigina na kima ko na 'yanci — kulle **iyalin kima**: ga codex duka fannin `codex` / `spark` (kowane samfur `gpt-5*` na wannan haɗin), ga sauran masu samarwa `getQuotaScopedModelForProvider()`.
 - `404` yana kulle samfur kaɗai (`getModelLockKey()` yana ƙuntata `not_found`).
-- Kowane wani matsayi — gazawar watsawa/uwar garken `5xx` da kuma `502` da OmniRoute kanta ta ƙirƙira daga tantance inganci — yana kulle **ainihin** ƙungiyar mai samarwa/haɗi/samfur kawai. Mummunan stream a kan samfur ɗaya ba shaida ba ce game da kimar asusun; kafin wannan ƙa'ida amsa ɗaya mara komai a kan `codex/gpt-5.6-luna` ta cire kowane samfur `gpt-5*` na wannan haɗin daga tsarin jagora na minti 2–30 (yana ƙaruwa) yayin da ba a taɓa kimarsa ba.
+- Kowane wani matsayi — gazawar watsawa/uwar garken `5xx` da kuma `502` da 67router kanta ta ƙirƙira daga tantance inganci — yana kulle **ainihin** ƙungiyar mai samarwa/haɗi/samfur kawai. Mummunan stream a kan samfur ɗaya ba shaida ba ce game da kimar asusun; kafin wannan ƙa'ida amsa ɗaya mara komai a kan `codex/gpt-5.6-luna` ta cire kowane samfur `gpt-5*` na wannan haɗin daga tsarin jagora na minti 2–30 (yana ƙaruwa) yayin da ba a taɓa kimarsa ba.
 - Zaɓin `scope` da mai kira ya bayyana a fili koyaushe yana cin nasara (Antigravity yana miƙa `"exact"`).
 
 **Manufa:** gujewa kashe haɗi gaba ɗaya lokacin da samfur ɗaya kawai ba ya samuwa ko kuma an takaita shi bisa kima.
@@ -355,7 +355,7 @@ Saita shi a cikin modal ɗin haɗi (**Ƙetare iyakar sauri → Iyakokin yawan ai
 
 - **Na haɗi gaba ɗaya vs na takamaiman samfuri:** `maxConcurrent` yana ci gaba da kasancewa iyakar haɗi gaba ɗaya da aka raba. Idan dukkansu biyu sun shafi aiki, ana samun ƙofofin biyu tare a ɗan lokaci a cikin wannan ƙofar hadaka (`global → provider → account → model`); halin da ke aiki shi ne iyakar da ta fi tsaurara a cikin waɗanda suka dace.
 - **Daidaituwar maɓallin samfuri daidai:** maɓallin shi ne rubutun samfurin da aka miƙa wa mai aiwatarwa bayan warware jagora — yawanci ainihin ID ɗin samfurin sama marar ƙari (`glm-5`), ba laƙabin `provider/model` na gefen abokin ciniki ba (`zai/glm-5` bai dace da `glm-5` ba). Ƙimomin su ne iyakokin buƙatun lokaci guda na cikakkiyar lamba mai kyau.
-- **Jerin gida, babu bincike:** buƙatun da suka wuce suna yin jerin gwano a gida da ma'anar jeri/timeout da yake akwai (kurakuran shiga na `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute ba ya gano ko fahimtar manufar sama da kansa — yana tilasta ainihin iyakokin da mai aiki ya saita. Ƙofar samfuri da ta cika ba ta kashe mai samarwa kuma ba ta ƙirƙirar kulle samfuri na dindindin; halin 429/cooldown/fallback na sama ya kasance matsayin ƙarshe na kuskure.
+- **Jerin gida, babu bincike:** buƙatun da suka wuce suna yin jerin gwano a gida da ma'anar jeri/timeout da yake akwai (kurakuran shiga na `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router ba ya gano ko fahimtar manufar sama da kansa — yana tilasta ainihin iyakokin da mai aiki ya saita. Ƙofar samfuri da ta cika ba ta kashe mai samarwa kuma ba ta ƙirƙirar kulle samfuri na dindindin; halin 429/cooldown/fallback na sama ya kasance matsayin ƙarshe na kuskure.
 - **Fannin kowace haɗi, kowace tsari (process):** iyakokin su ne na kowace haɗin bayanai (database) kuma ana riƙe su a cikin ƙwaƙwalwa, don haka haɗi biyu da ke sake amfani da maɓallin API ɗaya na sama ba sa haɗin kai da juna.
 - **Rashin saita yana nufin babu canji:** barin taswirar (ko barin filin dashboard babu komai) ba ya ƙara ƙofar samfuri. Misalin saiti ba tare da ayyana wata iyaka ta duniya ta mai samarwa ba:
 
@@ -435,7 +435,7 @@ haka ana iya gwada shi ta unit test ba tare da ainihin mai takaitawa na Bottlene
 ### Kariyar Tsaro ta Kai-Aiwatar (Auto-Enable) ta Rate-Limit & Kariyar Haɗi (`rateLimitProtection`)
 
 **Kariyar tsaro ta kai-aiwatar** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, tsohuwa `true`):
-A matsayin tsohuwa, OmniRoute yana aiwatar da kariyar layi na rate-limit kai tsaye ga duk haɗin masu samar da API-key masu aiki (`getProviderCategory(provider) === "apikey"`). Wannan yana tabbatar da cewa buƙatun da ke shiga ga maɓallan API na upstream masu sensitiwa ga rate ana sanya su a layi kuma ana takaita su ta Bottleneck maimakon su fashe zuwa kurakuran 429 na upstream. Ana iya yiwa kariyar tsaron watsi (override) ta hanyar canjin muhalli `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` yana kashewa, `true`/`1`/`on` yana tilasta kunna), wanda yana fi karfin saitin dashboard da aka ajiye (**Saituna → Juriya** / `PATCH /api/resilience`).
+A matsayin tsohuwa, 67router yana aiwatar da kariyar layi na rate-limit kai tsaye ga duk haɗin masu samar da API-key masu aiki (`getProviderCategory(provider) === "apikey"`). Wannan yana tabbatar da cewa buƙatun da ke shiga ga maɓallan API na upstream masu sensitiwa ga rate ana sanya su a layi kuma ana takaita su ta Bottleneck maimakon su fashe zuwa kurakuran 429 na upstream. Ana iya yiwa kariyar tsaron watsi (override) ta hanyar canjin muhalli `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` yana kashewa, `true`/`1`/`on` yana tilasta kunna), wanda yana fi karfin saitin dashboard da aka ajiye (**Saituna → Juriya** / `PATCH /api/resilience`).
 
 **Ma'anar `rateLimitProtection` na kowane haɗi:**
 Ana bin diddigar kariyar rate-limit na kowane haɗi ta hanyar filin boolean `rateLimitProtection` akan haɗin masu samarwa (ana ajiye shi azaman `rate_limit_protection` a cikin SQLite):
@@ -772,7 +772,7 @@ Iyakoki na gaskiya:
 > ta kasance ƙasa da kasafin context na 40k. Wannan shi ne ra'ayin da aka taƙaita wa agent na
 > sassan da ke sama; sassan da aka lamba su ne cikakken bayani.
 
-OmniRoute yana da hanyoyi uku masu alaƙa amma daban-daban na magance gazawar wucin gadi. Riƙe
+67router yana da hanyoyi uku masu alaƙa amma daban-daban na magance gazawar wucin gadi. Riƙe
 fagen kowanne a daban lokacin warware halin tsara hanya. Duba
 [zane-zanen juriya na matakai 3](../diagrams/exported/resilience-3layers.svg)
 (tushe: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

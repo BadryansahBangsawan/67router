@@ -38,7 +38,7 @@ Cikakken URL yana da wannan tsari:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. A cikin OmniRoute, je zuwa **Providers → Add Provider**, zaɓi **Microsoft 365 Copilot
+6. A cikin 67router, je zuwa **Providers → Add Provider**, zaɓi **Microsoft 365 Copilot
    (BizChat)**, sannan ka liƙa bayanan shaidar a wannan tsari:
 
 ```
@@ -55,9 +55,9 @@ na DevTools:
 1. Buɗe **DevTools → Network**.
 2. Fara ko ci gaba da tattaunawar BizChat (wannan yana kunna haɗin WebSocket).
 3. Danna-dama a cikin ɓangaren Network sannan ka zaɓi **Save all as HAR with content**.
-4. A cikin OmniRoute, yi amfani da maɓallin **Import .har file** a akwatin tattaunawar haɗin mai samarwa.
+4. A cikin 67router, yi amfani da maɓallin **Import .har file** a akwatin tattaunawar haɗin mai samarwa.
 
-OmniRoute yana bincika HAR domin nemo URL na WebSocket na Chathub, yana ciro
+67router yana bincika HAR domin nemo URL na WebSocket na Chathub, yana ciro
 `access_token` da `chathubPath`, sannan yana cika filayen bayanan shaida ta atomatik. Shigo da
 HAR yana fassara lokacin ƙarewar JWT kuma yana nuna ragowar tsawon rayuwar token.
 
@@ -80,7 +80,7 @@ Domin kauce wa sake samun bayanan da hannu, za ka iya adana Microsoft refresh to
 | `tier`         | `individual` (tsoho), `edu`, ko `enterprise`                          |
 
 Samo refresh token daga tsarin Microsoft device-code ko authorization-code
-wanda aka iyakance zuwa `substrate.office.com/sydney`. Idan an saita `refreshToken`, OmniRoute
+wanda aka iyakance zuwa `substrate.office.com/sydney`. Idan an saita `refreshToken`, 67router
 yana sabunta `access_token` kafin kowace buƙata, don haka ba sai ka
 sake samun sa bayan duk lokacin ƙarewar ~minti 75 ba.
 

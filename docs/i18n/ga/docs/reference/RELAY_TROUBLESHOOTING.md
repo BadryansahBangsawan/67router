@@ -4,7 +4,7 @@
 
 ---
 
-Déanann athsheachadáin (Vercel, Deno, Cloudflare) an nasc in aghaidh srutha a fhoirceannadh ar inneall gan freastalaí ionas gur féidir le OmniRoute trácht amach a sheoladh ó réigiún cobhsaí agus eochair API an tsoláthraí a choinneáil ar thaobh an fhreastalaí. Clúdaíonn an doiciméad seo an dá mhodh teipe a bhíonn le sárú ag oibreoirí i dtáirgeadh agus na bealaí athshlánaithe a chuireann OmniRoute ar fáil do gach ceann díobh.
+Déanann athsheachadáin (Vercel, Deno, Cloudflare) an nasc in aghaidh srutha a fhoirceannadh ar inneall gan freastalaí ionas gur féidir le 67router trácht amach a sheoladh ó réigiún cobhsaí agus eochair API an tsoláthraí a choinneáil ar thaobh an fhreastalaí. Clúdaíonn an doiciméad seo an dá mhodh teipe a bhíonn le sárú ag oibreoirí i dtáirgeadh agus na bealaí athshlánaithe a chuireann 67router ar fáil do gach ceann díobh.
 
 ## Conas a stóráiltear fíordheimhniú an athsheachadáin
 
@@ -31,7 +31,7 @@ fhíordheimhniú.
 1. Oscail **Socruithe → Linn Seachfhreastalaithe**.
 2. Taispeánann rónna athsheachadáin a bhfuil a bhfíordheimhniú ar iarraidh suaitheantas buí `fíordheimhniú ar iarraidh` agus cnaipe
    **Deisigh**.
-3. Cliceáil **Deisigh**. Glaonn OmniRoute ar
+3. Cliceáil **Deisigh**. Glaonn 67router ar
    `POST /api/settings/proxies/[id]/repair-relay`, a dhéanann na nithe seo:
    - díchriptíonn sé `relayAuthEnc` leis an eochair **reatha**,
    - scríobhann sé an gnáth-théacs `relayAuth` ar ais isteach i `notes`,
@@ -63,7 +63,7 @@ an comhartha a athshlánú, mar sin ní gá duit cuardach a dhéanamh air de lá
 **Siomptóm:** taispeánann tástáil an tseachfhreastalaí (cnaipe `speed`) go bhfuil an t-athsheachadán ar fáil ach
 teipeann ar iarratais ó am go chéile fós.
 
-Seiceáil na ceanntásca feasachta athsheachadáin a thugann taiscéalaí uath-thástála OmniRoute ar ais
+Seiceáil na ceanntásca feasachta athsheachadáin a thugann taiscéalaí uath-thástála 67router ar ais
 (féach **Socruithe → Linn Seachfhreastalaithe** agus na cuntair `relayTested` / `relayAlive`):
 
 - `x-relay-url` — cén t-inneall athsheachadáin a d’fhreagair.

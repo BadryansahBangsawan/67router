@@ -5,9 +5,9 @@
 ---
 
 Os relays (Vercel, Deno, Cloudflare) encerram a conexão upstream em um backend
-serverless para que o OmniRoute possa encaminhar o tráfego de saída por uma região estável, mantendo
+serverless para que o 67router possa encaminhar o tráfego de saída por uma região estável, mantendo
 a chave de API do provedor no lado do servidor. Este documento aborda os dois modos de falha
-encontrados pelos operadores em produção e os procedimentos de recuperação fornecidos pelo OmniRoute
+encontrados pelos operadores em produção e os procedimentos de recuperação fornecidos pelo 67router
 para cada um deles.
 
 ## Como a autenticação do relay é armazenada
@@ -36,7 +36,7 @@ autenticação.
 1. Abra **Settings → Proxy Pool**.
 2. As linhas de relays cuja autenticação está ausente exibem um selo amarelo `auth missing` e um
    botão **Repair**.
-3. Clique em **Repair**. O OmniRoute chama
+3. Clique em **Repair**. O 67router chama
    `POST /api/settings/proxies/[id]/repair-relay`, que:
    - descriptografa `relayAuthEnc` com a chave **atual**,
    - grava novamente o `relayAuth` em texto simples em `notes`,
@@ -69,7 +69,7 @@ token é irrecuperável, portanto você nunca precisa procurá-lo manualmente.
 ainda falham de forma intermitente.
 
 Verifique os cabeçalhos de reconhecimento do relay retornados pela sondagem de teste automático
-do OmniRoute (consulte **Settings → Proxy Pool** e os contadores `relayTested` / `relayAlive`):
+do 67router (consulte **Settings → Proxy Pool** e os contadores `relayTested` / `relayAlive`):
 
 - `x-relay-url` — qual backend de relay respondeu.
 - `x-relay-mode` — `ts` | `bifrost` | `auto` para essa solicitação.

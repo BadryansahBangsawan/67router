@@ -4,7 +4,7 @@
 
 ---
 
-Spúšťajte CLI `omniroute` na svojom notebooku, zatiaľ čo samotný OmniRoute beží niekde inde
+Spúšťajte CLI `omniroute` na svojom notebooku, zatiaľ čo samotný 67router beží niekde inde
 (na VPS, domácom serveri alebo inom zariadení vo vašej sieti Tailnet). Raz sa prihlásite pomocou
 `omniroute connect` a odvtedy sa **každý** príkaz CLI zameria na tento vzdialený
 server — rovnaké príkazy, rovnaký výstup, iba sa vykonávajú voči vzdialenému serveru.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← vytvorí lokálny profil Codex zo
 ## Ako to funguje
 
 ```
-váš notebook                             vzdialený OmniRoute (VPS)
+váš notebook                             vzdialený 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (heslo → token)           │
 │  kontext: vps      │ ───────────────►  │ vydá prístupový token s       │
@@ -108,7 +108,7 @@ nachádza na serveri, nie na vašom počítači, takže súhlasná obrazovka **z
 navždy visieť a nikdy nevygeneruje kód** — bežná záložná možnosť „vložiť URL
 spätného volania“ teda nemá čo vložiť. (Ide o obmedzenie na strane Googlu:
 rovnaké zaseknutie nastane v každom proxy serveri, ktorý používa pribaleného
-desktopového klienta Antigravity, nielen v OmniRoute.)
+desktopového klienta Antigravity, nielen v 67router.)
 
 Ovládací panel to zistí skôr, než sa zaseknete: ak otvoríte **Providers → Antigravity →
 Connect** z adresy, ktorá nie je localhost, všeobecné upozornenie „skopírujte URL
@@ -116,7 +116,7 @@ spätného volania“ sa nahradí dvoma riešeniami uvedenými nižšie, pričom
 už bude vyplnený váš hostiteľ a port. (Počíta sa aj adresa siete LAN —
 `192.168.x.x` sa z pohľadu tohto spätného volania nepovažuje za localhost.)
 
-Existujú dva podporované spôsoby pripojenia Antigravity k vzdialenému OmniRoute.
+Existujú dva podporované spôsoby pripojenia Antigravity k vzdialenému 67router.
 
 ### Možnosť A — lokálny pomocník na prihlásenie (odporúčané)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Potom vo **vzdialenom** ovládacom paneli prejdite na **Providers → Antigravity →
 Connect** a vložte blob `omniroute-cred-v1.…` do poľa v časti **Step 2** (prijíma
-URL spätného volania aj blob s poverením). OmniRoute ho dekóduje, spustí
+URL spätného volania aj blob s poverením). 67router ho dekóduje, spustí
 registráciu Cloud Code na strane servera a pripojenie natrvalo uloží.
 
 > Blob obsahuje obnovovací token — zaobchádzajte s ním ako s heslom. Pri automatickom
@@ -197,7 +197,7 @@ panela, takže nie je potrebné tunelovať druhý port špecifický pre poskytov
 ## Pripojenie Codex / Grok k vzdialenej inštalácii (poskytovatelia s pevnou loopback adresou)
 
 Codex, xAI (`xai-oauth`) a Grok CLI (`grok-cli`) registrujú vo svojej nadradenej aplikácii OAuth **pevnú** loopback adresu
-`redirect_uri`. OmniRoute ju nemôže zmeniť — poskytovateľ vždy presmeruje prehliadač späť na rovnakú pevne zakódovanú adresu:
+`redirect_uri`. 67router ju nemôže zmeniť — poskytovateľ vždy presmeruje prehliadač späť na rovnakú pevne zakódovanú adresu:
 
 | Poskytovateľ | Pevná adresa spätného volania, na ktorú poskytovateľ presmeruje |
 | ------------ | --------------------------------------------------------------- |
@@ -205,7 +205,7 @@ Codex, xAI (`xai-oauth`) a Grok CLI (`grok-cli`) registrujú vo svojej nadradene
 | `xai-oauth`  | `http://127.0.0.1:56121/callback`                               |
 | `grok-cli`   | `http://127.0.0.1:56122/callback`                               |
 
-`localhost` tu znamená **počítač, na ktorom beží prehliadač**, zatiaľ čo server spätného volania PKCE služby OmniRoute počúva na loopback rozhraní **servera**. Ak otvoríte ovládací panel na adrese v sieti LAN, napríklad `http://192.168.0.15:20128`, tieto dve strany sa nikdy nespoja: autorizačný kód sa doručí na `localhost:1455` vášho notebooku, kde nič nepočúva, a poskytovateľ prihlásenie neúspešne ukončí bez zobrazenia chyby.
+`localhost` tu znamená **počítač, na ktorom beží prehliadač**, zatiaľ čo server spätného volania PKCE služby 67router počúva na loopback rozhraní **servera**. Ak otvoríte ovládací panel na adrese v sieti LAN, napríklad `http://192.168.0.15:20128`, tieto dve strany sa nikdy nespoja: autorizačný kód sa doručí na `localhost:1455` vášho notebooku, kde nič nepočúva, a poskytovateľ prihlásenie neúspešne ukončí bez zobrazenia chyby.
 
 Ovládací panel to zistí pred otvorením vyskakovacieho okna a namiesto tichého zlyhania prihlásenia zobrazí príkaz na vytvorenie tunela (#8046).
 
@@ -219,7 +219,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 
 Vyžadujú sa dve presmerovania a presmerovanie iba jedného portu bude stále zlyhávať:
 
-- **`20128`** (port ovládacieho panela) nastaví pôvod skutočne na localhost, čo je podmienka, aby OmniRoute vôbec spustil server spätného volania PKCE — pôvod v sieti LAN sa do tejto vetvy nikdy nedostane.
+- **`20128`** (port ovládacieho panela) nastaví pôvod skutočne na localhost, čo je podmienka, aby 67router vôbec spustil server spätného volania PKCE — pôvod v sieti LAN sa do tejto vetvy nikdy nedostane.
 - **`1455`** (pevný port spätného volania poskytovateľa) je miesto, na ktoré sa prehliadač presmeruje späť; musí byť tunelovaný na loopback rozhranie servera.
 
 Pri pripájaní xAI alebo Grok CLI nahraďte `1455` hodnotou `56121`/`56122` a `20128` skutočným portom vášho ovládacieho panela. Tunel nechajte otvorený, kým sa pripojenie nezobrazí ako aktívne.
@@ -331,7 +331,7 @@ omniroute contexts current         # aktívny server, stav autentifikácie, rozs
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Popis
-● | vps     | http://100.67.86.91:20128 | token | admin | Vzdialený OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Vzdialený 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

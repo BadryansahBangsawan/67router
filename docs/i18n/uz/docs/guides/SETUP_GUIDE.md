@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Oʻzbekcha)
+# 📖 Setup Guide — 67router (Oʻzbekcha)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute uchun toʻliq sozlash maʼlumotnomasi. Qisqa versiya uchun [README ichidagi tezkor boshlash](../README.md#-quick-start) boʻlimiga qarang.
+> 67router uchun toʻliq sozlash maʼlumotnomasi. Qisqa versiya uchun [README ichidagi tezkor boshlash](../README.md#-quick-start) boʻlimiga qarang.
 
 ## Mundarija
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR paketi](https://aur.archlinux.org/packages/omniroute-bin) OmniRouteʼni oʻrnatadi va systemd foydalanuvchi xizmatini taqdim etadi.
+[AUR paketi](https://aur.archlinux.org/packages/omniroute-bin) 67routerʼni oʻrnatadi va systemd foydalanuvchi xizmatini taqdim etadi.
 
 ### Manba kodidan
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows uchun eslatma:** Agar eski `%USERPROFILE%\.omniroute` katalogi mavjud boʻlmasa, OmniRoute standart holatda `%APPDATA%\omniroute` katalogidan foydalanadi. Boshqa maʼlumotlar katalogi joylashuvini tanlash uchun `DATA_DIR` ni belgilang.
+> **Windows uchun eslatma:** Agar eski `%USERPROFILE%\.omniroute` katalogi mavjud boʻlmasa, 67router standart holatda `%APPDATA%\omniroute` katalogidan foydalanadi. Boshqa maʼlumotlar katalogi joylashuvini tanlash uchun `DATA_DIR` ni belgilang.
 
 > **Eslatma:** Birinchi ishga tushirishda `npm install` `.env.example` asosida `.env` faylini avtomatik yaratadi. Keyingi oʻrnatishlar mavjud `.env` faylining ustiga yozmaydi, shu sababli maxsus sozlamalar saqlanib qoladi. Uni qayta yaratish uchun qayta ishga tushirishdan oldin `.env` faylini oʻchiring.
 
@@ -64,7 +64,7 @@ Compose profillari va Caddy HTTPS bilan birga Dockerʼni toʻliq sozlash uchun [
 
 ### Ish stoli ilovasi (Electron)
 
-OmniRoute Electron 41 + electron-builder 26.10 asosida yaratilgan ish stoli qobigʻi bilan taqdim etiladi. Mavjud skriptlar (ish maydoni ildizi):
+67router Electron 41 + electron-builder 26.10 asosida yaratilgan ish stoli qobigʻi bilan taqdim etiladi. Mavjud skriptlar (ish maydoni ildizi):
 
 ```bash
 npm run electron:dev          # Ish stoli ilovasini tezkor qayta yuklash bilan ishga tushirish
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Muhit oʻzgaruvchilari (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` va boshqalar) bilan birgalikda bu OmniRoute nusxasini toʻliq skript orqali ishga tushirish imkonini beradi.
+Muhit oʻzgaruvchilari (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` va boshqalar) bilan birgalikda bu 67router nusxasini toʻliq skript orqali ishga tushirish imkonini beradi.
 
 ### CLI parametrlari
 
@@ -99,7 +99,7 @@ Muhit oʻzgaruvchilari (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` va bosh
 | `omniroute config`      | CLI vositasini sozlash — konfiguratsiyalarni roʻyxatlash, olish, oʻrnatish va tekshirish           |
 | `omniroute status`      | Oflayn holat paneli — versiya, MB, vositalar, konfiguratsiya                                       |
 | `omniroute logs`        | APIʼdan foydalanish jurnallarini oqimda koʻrsatish (`--follow` qoʻllab-quvvatlanadi)               |
-| `omniroute update`      | OmniRoute yangilanishlarini tekshirish yoki qoʻllash                                               |
+| `omniroute update`      | 67router yangilanishlarini tekshirish yoki qoʻllash                                                |
 | `omniroute provider`    | Provayder ulanishlarini boshqarish — qoʻshish, roʻyxatlash, olib tashlash, sinash, standart qilish |
 | `omniroute --port 3000` | Kanonik/API portini 3000 ga oʻrnatish                                                              |
 | `omniroute --mcp`       | MCP serverini ishga tushirish (stdio transporti)                                                   |
@@ -165,7 +165,7 @@ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode va OpenAI bilan mos SD
 
 #### `setup-*` yordamida avtomatik sozlash
 
-Asosiy URL va kalitni qo‘lda kiritish o‘rniga, OmniRoute har bir vositaning
+Asosiy URL va kalitni qo‘lda kiritish o‘rniga, 67router har bir vositaning
 o‘z konfiguratsiyasini amaldagi modellar katalogi asosida yozishiga ruxsat bering. Har bir vosita uchun bitta buyruq:
 
 ```bash
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Har bir buyruq mahalliy vositani **masofaviy** OmniRoute bilan ishlashga sozlash uchun `--remote <url> --api-key <key>` parametrlarini, shuningdek, oldindan ko‘rish uchun `--dry-run` parametrini qabul qiladi. CLI’ni to‘g‘ri
+Har bir buyruq mahalliy vositani **masofaviy** 67router bilan ishlashga sozlash uchun `--remote <url> --api-key <key>` parametrlarini, shuningdek, oldindan ko‘rish uchun `--dry-run` parametrini qabul qiladi. CLI’ni to‘g‘ri
 muhit o‘zgaruvchilari kiritilgan holda va hech qanday konfiguratsiyani yozmasdan ishga tushirish uchun
 umumiy `omniroute run <target>` ishga tushirgichidan foydalaning (claude, codex, aider, goose, opencode, qwen, gemini);
 har bir vosita uchun eski `omniroute launch` (Claude Code) va
@@ -247,26 +247,6 @@ MCP sozlamalaringizga qo‘shing:
 
 **To‘liq MCP hujjatlari:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 ta vosita, IDE konfiguratsiyalari, Python/TS/Go mijozlari.
 
-### A2A sozlamalari (Agentlararo protokol)
-
-Agent kartasini tekshiring:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Vazifa yuboring:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**To‘liq A2A hujjatlari:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ko‘nikmalar, oqimli uzatish, vazifaning hayot sikli.
-
----
-
 ## Taym-aut sozlamalari
 
 ### Asosiy taym-autlar
@@ -276,15 +256,15 @@ Koʻpgina joylashtirishlarda sizga faqat ushbu ikkita oʻzgaruvchi kerak boʻlad
 | Oʻzgaruvchi              | Standart qiymat                                  | Maqsad                                                                                                                                                                       |
 | ------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                                         | Yuqori oqim javobi boshlanishi taym-auti, yashirin Undici taym-autlari, TLS raqamli izi soʻrovlari hamda API koʻprigi soʻrovi/proksi taym-autlari uchun umumiy asosiy qiymat |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` qiymatini meros qilib oladi | OmniRoute SSE oqimini bekor qilishidan oldin oqim qismlari orasidagi maksimal tanaffus                                                                                       |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS` qiymatini meros qilib oladi | 67router SSE oqimini bekor qilishidan oldin oqim qismlari orasidagi maksimal tanaffus                                                                                        |
 
 Orqaga muvofiqlik saqlanadi: mavjud `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` va boshqa qatlamga xos taym-aut oʻzgaruvchilari ishlashda davom etadi hamda umumiy asosiy qiymatni bekor qiladi.
 
 ### Provayderga xos eslatmalar
 
-Claude Code bilan mos yuqori oqimlar (`anthropic-compatible-cc-*`) uchun OmniRoute chiquvchi `X-Stainless-Timeout` sarlavhasini aniqlangan olish taym-autidan hosil qiladi, shunda provayder tomonidagi oʻqish taym-autlari muhit konfiguratsiyangiz bilan mos boʻlib qoladi.
+Claude Code bilan mos yuqori oqimlar (`anthropic-compatible-cc-*`) uchun 67router chiquvchi `X-Stainless-Timeout` sarlavhasini aniqlangan olish taym-autidan hosil qiladi, shunda provayder tomonidagi oʻqish taym-autlari muhit konfiguratsiyangiz bilan mos boʻlib qoladi.
 
-Uchinchi tomon Claude Code bilan mos teskari proksilar uchun OmniRoute standart `anthropic-beta` toʻplamini konservativ holatda saqlaydi va `Client Cache Control` parametri `Auto` holatida qoldirilganda, faqat mijoz taqdim etgan `cache_control` belgilarini uzatadi. Har bir ulanish uchun “Enable redact-thinking beta” parametrini faqat yuqori oqim maxsus ravishda tahrirlangan Claude fikrlash oqimlarini talab qilganda yoqing.
+Uchinchi tomon Claude Code bilan mos teskari proksilar uchun 67router standart `anthropic-beta` toʻplamini konservativ holatda saqlaydi va `Client Cache Control` parametri `Auto` holatida qoldirilganda, faqat mijoz taqdim etgan `cache_control` belgilarini uzatadi. Har bir ulanish uchun “Enable redact-thinking beta” parametrini faqat yuqori oqim maxsus ravishda tahrirlangan Claude fikrlash oqimlarini talab qilganda yoqing.
 
 ### Kengaytirilgan taym-aut almashtirishlari
 
@@ -302,11 +282,11 @@ Uchinchi tomon Claude Code bilan mos teskari proksilar uchun OmniRoute standart 
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                                         | API koʻprigi serveridagi keep-alive taym-auti                                        |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                            | API koʻprigi serveridagi soket nofaolligi taym-auti (`0` uni oʻchiradi)              |
 
-> **Eslatma:** Oqimli soʻrovlar uchun `FETCH_TIMEOUT_MS` faqat ulanishni sozlash / yuqori oqimdan birinchi javobni kutish jarayonini qamrab oladi. Oqim faollashgach, OmniRoute uni faqat haqiqiy toʻxtab qolish (`STREAM_IDLE_TIMEOUT_MS`) yoki Undici tanasi nofaolligi (`FETCH_BODY_TIMEOUT_MS`) yuz berganda bekor qiladi.
+> **Eslatma:** Oqimli soʻrovlar uchun `FETCH_TIMEOUT_MS` faqat ulanishni sozlash / yuqori oqimdan birinchi javobni kutish jarayonini qamrab oladi. Oqim faollashgach, 67router uni faqat haqiqiy toʻxtab qolish (`STREAM_IDLE_TIMEOUT_MS`) yoki Undici tanasi nofaolligi (`FETCH_BODY_TIMEOUT_MS`) yuz berganda bekor qiladi.
 
 ### Teskari proksi bilan muvofiqlik
 
-Agar OmniRoute’ni Nginx, Caddy, Cloudflare yoki boshqa teskari proksi ortida ishga tushirsangiz, proksi taym-autlari ham OmniRoute oqim/olish taym-autlaridan yuqori ekaniga ishonch hosil qiling.
+Agar 67router’ni Nginx, Caddy, Cloudflare yoki boshqa teskari proksi ortida ishga tushirsangiz, proksi taym-autlari ham 67router oqim/olish taym-autlaridan yuqori ekaniga ishonch hosil qiling.
 
 ---
 

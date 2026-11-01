@@ -6,7 +6,7 @@
 
 🌐 **Limbi:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Referință principală pentru API-ul OmniRoute. Aceasta acoperă suprafața publică `/v1` și cele mai utilizate endpointuri de administrare; fișierul interpretabil automat [`docs/openapi.yaml`](../openapi.yaml) și arborele de rute din `src/app/api/` sunt sursele exhaustive.
+Referință principală pentru API-ul 67router. Aceasta acoperă suprafața publică `/v1` și cele mai utilizate endpointuri de administrare; fișierul interpretabil automat [`docs/openapi.yaml`](../openapi.yaml) și arborele de rute din `src/app/api/` sunt sursele exhaustive.
 
 Pentru protocolul specializat compatibil cu OpenAI și matricea capabilităților furnizorilor, consultați
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Răspuns  | `HIT` sau `MISS` (fără streaming)                                                                                                                                                                                                                  |
 | `X-OmniRoute-Idempotent` | Răspuns  | `true` dacă a fost deduplicată                                                                                                                                                                                                                     |
 | `X-OmniRoute-Progress`   | Răspuns  | `enabled` dacă urmărirea progresului este activată                                                                                                                                                                                                 |
-| `X-OmniRoute-Session-Id` | Răspuns  | ID-ul efectiv al sesiunii utilizat de OmniRoute                                                                                                                                                                                                    |
+| `X-OmniRoute-Session-Id` | Răspuns  | ID-ul efectiv al sesiunii utilizat de 67router                                                                                                                                                                                                     |
 | `X-OmniRoute-Request-Id` | Răspuns  | ID-ul de corelare al cererii (când este cunoscut)                                                                                                                                                                                                  |
-| `X-OmniRoute-Version`    | Răspuns  | Versiunea compilării OmniRoute (prezentă întotdeauna)                                                                                                                                                                                              |
+| `X-OmniRoute-Version`    | Răspuns  | Versiunea compilării 67router (prezentă întotdeauna)                                                                                                                                                                                               |
 | `X-OmniRoute-Cost-Saved` | Răspuns  | Suma în USD economisită datorită memoriei cache la un HIT (numai pentru rezultate din cache)                                                                                                                                                       |
 | `X-OmniRoute-Decision`   | Răspuns  | Urmărirea rutării: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` este strategia combinației sau `single` pentru o cerere fără combinație) — prezentă întotdeauna în răspunsurile finale                                            |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Fixarea contului pentru fiecare solicitare
 
-Atunci când un furnizor are mai multe conexiuni (conturi sau chei), OmniRoute alege în mod normal una
+Atunci când un furnizor are mai multe conexiuni (conturi sau chei), 67router alege în mod normal una
 prin strategia sa de selectare a contului. În schimb, o solicitare poate fixa o anumită conexiune
 cu antetul `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <cheia API OmniRoute>" \
+  -H "Authorization: Bearer <cheia API 67router>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <id-ul conexiunii>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ cont diferit pentru fiecare proiect:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<instanța OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<cheia API OmniRoute>",
+    "ANTHROPIC_BASE_URL": "http://<instanța 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<cheia API 67router>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <id-ul conexiunii>",
   },
 }
@@ -140,7 +140,7 @@ Sursă: `src/sse/handlers/chat.ts` (citirea antetului), `src/sse/services/auth.t
 ## Închirieri exclusive ale sesiunilor gestionate
 
 Închirierea exclusivă a sesiunilor gestionate este un contract de rutare opțional și neutru față de client: un proprietar activ
-deține o conexiune OmniRoute eligibilă. Aceasta nu închiriază un model, nu necesită OAuth, nu identifică un
+deține o conexiune 67router eligibilă. Aceasta nu închiriază un model, nu necesită OAuth, nu identifică un
 anumit client și nu necesită un anumit furnizor.
 
 Cheia API utilizată pentru autentificare trebuie să aibă domeniul de autorizare `lease:exclusive` și o listă
@@ -190,7 +190,7 @@ Proprietarul unei închirieri active poate solicita explicit metadate de afișar
 
 Această acțiune opțională de verificare a stării este protejată de proprietarul opac, cheia API gestionată autentificată și
 generația activă exactă, în cadrul unei singure tranzacții în baza de date. `displayName` reprezintă numai numele configurat
-al conexiunii, fără spațiile albe de la extremități; acesta este `null` atunci când nu există un nume configurat sigur. OmniRoute nu îl înlocuiește niciodată cu
+al conexiunii, fără spațiile albe de la extremități; acesta este `null` atunci când nu există un nume configurat sigur. 67router nu îl înlocuiește niciodată cu
 o adresă de e-mail sau cu o identitate de cont generată. Valoarea furnizorului este o etichetă de afișare nesensibilă și nu este niciodată
 un identificator generat al unui furnizor compatibil. Sunt excluse acreditările, tokenurile, modulele cookie, identificatorii neprelucrați ai conexiunilor sau ai cheilor
 API, hashurile proprietarilor, secretele de delimitare și datele interne de rutare.
@@ -231,7 +231,7 @@ Concurența temporară returnează HTTP `429` cu `Retry-After` și:
 
 Acest răspuns înseamnă doar că setul obișnuit de conexiuni eligibile nu era gol și că fiecare candidat liber era
 deținut de o închiriere activă străină. Modelele/furnizorii neacceptați, neconcordanțele cu politica, perioadele de așteptare, cotele,
-starea de funcționare și alte eșecuri obișnuite de eligibilitate își păstrează răspunsurile OmniRoute existente.
+starea de funcționare și alte eșecuri obișnuite de eligibilitate își păstrează răspunsurile 67router existente.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request ale Jina și **le redirecționează intacte** către `https:
 ```
 
 Valorile native `{ image | audio | video | pdf }` pot fi un URL HTTPS public, un URI `data:` sau date brute
-base64. OmniRoute nu transformă acele obiecte în șiruri și nu preia URL-urile imaginilor native — Jina preia
+base64. 67router nu transformă acele obiecte în șiruri și nu preia URL-urile imaginilor native — Jina preia
 direct conținutul media public. Câmpurile Jina suplimentare (`task`, `normalized`, `truncate`, `embedding_type`) sunt
 redirecționate. SKU-urile Jina exclusiv text resping în continuare documentele care nu sunt text.
 
@@ -454,7 +454,7 @@ apelantului, astfel încât codul client nu trebuie să trateze furnizorul ca pe
 
 ### Autentificarea și rezolvarea endpointului pentru Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` reutilizează aceeași autentificare Vertex AI pe care OmniRoute o acceptă deja pentru
+`vertex-deepseek-ocr` reutilizează aceeași autentificare Vertex AI pe care 67router o acceptă deja pentru
 traficul de chat/imagini (`open-sse/executors/vertex.ts`): cheia API a conexiunii este fie o
 credențială Service Account în format JSON (schimbată cu un token de acces OAuth cu durată scurtă prin fluxul JWT-bearer),
 fie un token de acces OAuth deja emis, utilizat ca atare. URL-ul endpointului din amonte este endpointul partener generic
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Prețurile modelelor (`pricing`)
 
-O intrare conține un obiect `pricing` atunci când OmniRoute cunoaște prețul modelului. Prețul provine
+O intrare conține un obiect `pricing` atunci când 67router cunoaște prețul modelului. Prețul provine
 din tabelul de prețuri utilizat pentru contabilizarea costurilor: valorile implicite încorporate, prețurile sincronizate și
 suprascrierile configurate prin `/api/pricing`. Acestea sunt prețuri de listă, astfel încât furnizorii pe bază de abonament afișează, de asemenea,
 un preț per token.
@@ -632,8 +632,8 @@ direct `open-sse/config/providerPluginManifestRegistry.ts`.
 
 ## Generarea audio ElevenLabs
 
-Configurați în OmniRoute o conexiune la furnizorul `elevenlabs` folosind cheia API ElevenLabs.
-Clienții se autentifică folosind cheia lor **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Configurați în 67router o conexiune la furnizorul `elevenlabs` folosind cheia API ElevenLabs.
+Clienții se autentifică folosind cheia lor **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gateway-ul furnizează cheia stocată a furnizorului drept `xi-api-key`. Nu trimiteți niciodată o cheie ElevenLabs
 drept token bearer pentru gateway.
 
@@ -698,7 +698,7 @@ native returnează neschimbate codurile de stare și corpurile erorilor din amon
 a planului și `429` pentru o limită de cotă. Anteturile `character-cost`, `song-id`, `request-id` și `retry-after`
 sunt păstrate atunci când sunt prezente. Un sold de credite gratuite nu garantează accesul la fiecare
 model muzical, format de ieșire sau funcționalitate API: ElevenLabs stabilește drepturile pentru fiecare cerere.
-Endpointul unificat păstrează codurile de stare ale erorilor în anvelopa de eroare normalizată a OmniRoute.
+Endpointul unificat păstrează codurile de stare ale erorilor în anvelopa de eroare normalizată a 67router.
 
 Contracte din amonte: [efecte sonore](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [compoziție muzicală](https://elevenlabs.io/docs/api-reference/music/compose) și
@@ -739,7 +739,7 @@ Contracte din amonte: [efecte sonore](https://elevenlabs.io/docs/api-reference/t
 
 Toate rutele POST urmează aceeași structură: `Bearer your-api-key` + corp JSON validat cu Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` etc.; consultați `src/shared/validation/schemas.ts`). La eșecul validării schemei se returnează 4xx.
 
-Pentru clienții care nu pot atașa `Authorization: Bearer ...`, OmniRoute acceptă și chei API în URL, fie prin compatibilitate cu șirul de interogare (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), fie prin endpointurile dedicate `/api/v1/vscode/{token}/...` documentate mai jos.
+Pentru clienții care nu pot atașa `Authorization: Bearer ...`, 67router acceptă și chei API în URL, fie prin compatibilitate cu șirul de interogare (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), fie prin endpointurile dedicate `/api/v1/vscode/{token}/...` documentate mai jos.
 
 ```bash
 # Rerank (furnizor din registrul cloud sau nod de furnizor compatibil cu OpenAI sub forma "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, aceeași cheie API ca pentru Parallel Search) returnează numai Markdown
 — orice alt `format` generează un `400` — și limitează conținutul la 100.000 de caractere. Atunci când
 pagina-țintă nu poate fi extrasă, serviciul din amonte raportează acest lucru într-un răspuns HTTP 200;
-OmniRoute îl expune ca `422`, cu un mesaj fix.
+67router îl expune ca `422`, cu un mesaj fix.
 
 | Metodă | Cale            | Descriere                                                 |
 | ------ | --------------- | --------------------------------------------------------- |
@@ -964,14 +964,14 @@ trebuie să fie punctul de intrare activ (și este în mod implicit atunci când
 **Codex CLI** de la OpenAI validează numele modelului pe partea clientului atunci când
 `supports_websockets = true` și **respinge ID-urile prefixate cu furnizorul**, precum
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Trimiteți ID-ul **simplu** (de exemplu, `gpt-5.5`). Puntea OmniRoute este
+a ChatGPT account`). Trimiteți ID-ul **simplu** (de exemplu, `gpt-5.5`). Puntea 67router este
 exclusiv pentru codex, astfel încât aceasta rezolvă din nou un ID simplu drept model codex
 (`resolveCodexWsModelInfo`) înainte de tunelarea către serviciul din amonte — chiar dacă un ID simplu
 `gpt-5.5` ar fi direcționat altfel către un alt furnizor prin HTTP.
 
 #### Configurarea OpenAI Codex CLI
 
-Direcționați Codex CLI către OmniRoute adăugând în `~/.codex/config.toml` un furnizor personalizat cu suport
+Direcționați Codex CLI către 67router adăugând în `~/.codex/config.toml` un furnizor personalizat cu suport
 WebSocket (utilizați un `CODEX_HOME` separat pentru a evita modificarea
 unei configurații existente):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # fără bară oblică la final; URL-ul WS este derivat (utilizați https/wss în producție)
 wire_api = "responses"                    # singura valoare acceptată din februarie 2026
 supports_websockets = true                # activează transportul Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # conține cheia API OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # conține cheia API 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # o cheie API OmniRoute (orice cheie dacă REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # o cheie API 67router (orice cheie dacă REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI-ul transformă `base_url + /responses` într-o conexiune WebSocket, iar OmniRoute o tunelizează
+CLI-ul transformă `base_url + /responses` într-o conexiune WebSocket, iar 67router o tunelizează
 către conexiunea OAuth codex selectată. Fluxul a fost validat integral cu serverul local:
 ChatGPT returnează `codex.rate_limits` + `response.created` și transmite finalizarea
 în flux continuu.
@@ -1076,7 +1076,7 @@ procentele prezentate în **rezultatul în text simplu** și în rezultatul stru
 
 #### Formula de ajustare în funcție de pragul de întrerupere
 
-OmniRoute acceptă praguri proactive de întrerupere a cotelor pentru a preveni epuizarea resurselor din amonte (configurate prin
+67router acceptă praguri proactive de întrerupere a cotelor pentru a preveni epuizarea resurselor din amonte (configurate prin
 `quotaWindowThresholds` ale conexiunii, valorile implicite ale furnizorului sau setările globale de reziliență). Când un prag de întrerupere
 (de exemplu, `cutoff = 25%`) este activ într-o fereastră de cotă, componenta de redare a textului calculează capacitatea rămasă astfel:
 
@@ -1438,9 +1438,8 @@ Răspunsul GET include `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluări
 
-| Endpoint     | Metodă   | Descriere                                      |
-| ------------ | -------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST | Listează suitele de evaluare/rulează evaluarea |
+| Endpoint | Metodă | Descriere |
+| -------- | ------ | --------- |
 
 ### Politici
 
@@ -1624,7 +1623,7 @@ Note:
 
 - Aliasurile tokenizate reutilizează aceleași rutine de gestionare ca `/v1/*` și `/api/tags`; structurile răspunsurilor rămân identice.
 - Preferați `Authorization: Bearer ...` ori de câte ori clientul acceptă antete personalizate.
-- Tokenurile bazate pe URL pot apărea în jurnalele proxy-ului invers, istoricul browserului și telemetria din afara OmniRoute. Tratați-le ca pe o opțiune de compatibilitate, nu ca pe modul implicit de autentificare.
+- Tokenurile bazate pe URL pot apărea în jurnalele proxy-ului invers, istoricul browserului și telemetria din afara 67router. Tratați-le ca pe o opțiune de compatibilitate, nu ca pe modul implicit de autentificare.
 
 ---
 
@@ -1732,7 +1731,7 @@ Combinațiile de rutare de nivel superior (deja rezumate în secțiunea `/api/co
 
 ## Webhook-uri
 
-Abonamente webhook de ieșire pentru evenimentele OmniRoute (finalizarea cererii, epuizarea cotei, rotația cheilor etc.).
+Abonamente webhook de ieșire pentru evenimentele 67router (finalizarea cererii, epuizarea cotei, rotația cheilor etc.).
 
 | Metodă | Cale                      | Descriere                                                                            |
 | ------ | ------------------------- | ------------------------------------------------------------------------------------ |
@@ -1763,31 +1762,6 @@ Utilizate de subsistemul de administrare automată a cheilor pentru a emite și 
 
 ---
 
-## Protocolul agenților
-
-Sarcini pentru agenți cloud (Claude Code, Codex Cloud, OpenHands etc.) executate de la distanță în numele utilizatorilor OmniRoute.
-
-| Metodă | Cale                          | Descriere                                                                                                                                              |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Listează sarcinile — parametri opționali `?provider=`, `?status=`, `?limit=` (1–500, implicit 50)                                                      |
-| POST   | `/api/v1/agents/tasks`        | Creează o sarcină — corp validat de `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returnează `201` cu anvelopa sarcinii |
-| DELETE | `/api/v1/agents/tasks?id=...` | Șterge o sarcină                                                                                                                                       |
-| GET    | `/api/v1/agents/tasks/[id]`   | Citește sarcina — actualizează sincron starea de la agentul cloud din amonte când este setat un `external_id`                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | Acțiune discriminatorie: `{action: "approve"}`, `{action: "message", message}` sau `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Șterge o anumită sarcină după id                                                                                                                       |
-
-> **Autentificare:** autentificarea de administrare este obligatorie pentru fiecare metodă (`requireCloudAgentManagementAuth`). Înainte de v3.8.0, acestea nu necesitau autentificare — consultați commitul `588a0333` pentru modificarea incompatibilă.
-
-```bash
-# Creează o sarcină cloud Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy-uri de administrare
 
 Proxy-uri HTTP(S)/SOCKS pentru trafic de ieșire, care pot fi atribuite furnizorilor, conturilor sau la nivel global.
@@ -1811,7 +1785,7 @@ Proxy-uri HTTP(S)/SOCKS pentru trafic de ieșire, care pot fi atribuite furnizor
 
 ## Reziliență (extinsă)
 
-OmniRoute oferă trei mecanisme independente pentru gestionarea defecțiunilor temporare; endpointurile de administrare de mai jos le permit operatorilor să le consulte și să le suprascrie:
+67router oferă trei mecanisme independente pentru gestionarea defecțiunilor temporare; endpointurile de administrare de mai jos le permit operatorilor să le consulte și să le suprascrie:
 
 | Domeniu de aplicare                | Stocarea stării                                       | Consultare                                | Resetare / ștergere                                           |
 | ---------------------------------- | ----------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------- |
@@ -1846,7 +1820,7 @@ Pentru referința conceptuală completă și valorile implicite ale circuit brea
 
 ## Abilități
 
-Cadru de abilități pentru extinderea OmniRoute cu handlere executabile personalizate, împreună cu integrări pentru marketplace.
+Cadru de abilități pentru extinderea 67router cu handlere executabile personalizate, împreună cu integrări pentru marketplace.
 
 | Metodă | Cale                              | Descriere                                                                                                                            |
 | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1883,7 +1857,7 @@ Spațiu persistent de stocare a memoriei conversaționale/factuale, izolat pentr
 
 ## Server MCP
 
-OmniRoute include un server Model Context Protocol încorporat, cu 3 mecanisme de transport (stdio, SSE, HTTP cu streaming) și instrumente cu domenii de acces definite. Endpointurile panoului de control de mai jos citesc date despre stare/audit și intermediază mecanismele de transport HTTP.
+67router include un server Model Context Protocol încorporat, cu 3 mecanisme de transport (stdio, SSE, HTTP cu streaming) și instrumente cu domenii de acces definite. Endpointurile panoului de control de mai jos citesc date despre stare/audit și intermediază mecanismele de transport HTTP.
 
 | Metodă | Cale | Descriere |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1905,50 +1879,12 @@ OmniRoute include un server Model Context Protocol încorporat, cu 3 mecanisme d
 
 ## Server A2A
 
-OmniRoute expune un endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, precum și un wrapper REST pentru inspectare/utilizare în panoul de control.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opțional, cu excepția cazului în care OMNIROUTE_API_KEY este setată
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Metode acceptate (toate condiționate de `settings.a2aEnabled`):
-
-| Metodă           | Descriere                                                                  |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Executarea sincronă a abilității; returnează `{task, artifacts, metadata}` |
-| `message/stream` | Executarea prin flux SSE a aceluiași set de abilități                      |
-| `tasks/get`      | Preia o sarcină după `taskId`                                              |
-| `tasks/cancel`   | Anulează o sarcină după `taskId`                                           |
-
-Abilități încorporate: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Fișa agentului
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returnează fișa publică a agentului A2A (nume, descriere, capabilități, catalog de abilități, schemă de autentificare) — stocată în cache public timp de 1 h. Nu este necesară autentificarea.
+67router expune un endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, precum și un wrapper REST pentru inspectare/utilizare în panoul de control.
 
 ### Utilitare REST
 
 | Metodă | Cale                         | Descriere                                                                                                               |
 | ------ | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Starea de activare A2A + statistici despre sarcini + rezumatul fișei agentului din cache                                |
 | GET    | `/api/a2a/tasks`             | Listează sarcinile — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Neimplementat ca utilitar REST — creați prin JSON-RPC `message/send`)                                                  |
 | GET    | `/api/a2a/tasks/[id]`        | Preia o sarcină                                                                                                         |
@@ -1968,12 +1904,8 @@ Returnează fișa publică a agentului A2A (nume, descriere, capabilități, cat
 | GET | `/api/cloud/models/alias` | Listează aliasurile modelelor așa cum sunt expuse sincronizării în cloud |
 | GET | `/api/assess` | Citește cele mai recente clasificări ale evaluărilor (pentru fiecare furnizor/model) |
 | POST | `/api/assess` | Rulează o analiză — corp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Listează suitele de evaluare încorporate + cele mai recente rulări |
-| POST | `/api/evals` | Declanșează o rulare de evaluare |
-| POST | `/api/evals/suites` | Creează o suită de evaluare personalizată — corp validat de `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Preia o suită de evaluare personalizată |
 
-**Autentificare:** `/api/cloud/auth` validează direct o cheie Bearer și returnează cheia mascată și `projectId` pentru fiecare conexiune numai în cazul unei chei cu domeniul de aplicare `manage` / `admin`; celelalte rute `/api/cloud/*`, `/api/evals/*` și `/api/assess` necesită o sesiune/cheie API de administrare. Solicitările POST către `/api/assess` utilizează `validateBody` cu o schemă de domeniu de aplicare de tip uniune discriminată.
+**Autentificare:** `/api/cloud/auth` validează direct o cheie Bearer și returnează cheia mascată și `projectId` pentru fiecare conexiune numai în cazul unei chei cu domeniul de aplicare `manage` / `admin`; celelalte rute `/api/cloud/*` și `/api/assess` necesită o sesiune/cheie API de administrare. Solicitările POST către `/api/assess` utilizează `validateBody` cu o schemă de domeniu de aplicare de tip uniune discriminată.
 
 ---
 
@@ -2134,7 +2066,7 @@ Endpointuri destinate exclusiv administratorilor pentru gestionarea operațional
 
 ## Gestionarea instrumentelor CLI
 
-Gestionați instrumentele CLI care se integrează cu OmniRoute (antigravity, commandCode,
+Gestionați instrumentele CLI care se integrează cu 67router (antigravity, commandCode,
 devin-cli etc.). Consultați [Referința furnizorilor](./PROVIDER_REFERENCE.md) pentru lista completă.
 
 | Metodă | Cale                                    | Descriere                                                                                                                                                                                  |
@@ -2243,26 +2175,6 @@ Consultați [Cadrul Skills](../frameworks/SKILLS.md) pentru detalii complete.
 
 ---
 
-## Pluginuri
-
-Gestionați pluginurile OmniRoute (extensii terțe).
-
-| Metodă | Cale                               | Descriere                            |
-| ------ | ---------------------------------- | ------------------------------------ |
-| GET    | `/api/plugins`                     | Listează pluginurile instalate       |
-| POST   | `/api/plugins/marketplace/install` | Instalează un plugin din marketplace |
-| DELETE | `/api/plugins/[name]`              | Dezinstalează un plugin              |
-| POST   | `/api/plugins/[name]/activate`     | Activează un plugin                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Dezactivează un plugin               |
-| GET    | `/api/plugins/[name]/config`       | Obține configurația pluginului       |
-| PUT    | `/api/plugins/[name]/config`       | Actualizează configurația pluginului |
-
-**Autentificare:** Necesită o sesiune de administrare.
-
-Consultați [Cadrul pentru pluginuri](../frameworks/PLUGIN_SDK.md) pentru detalii complete.
-
----
-
 ## Rutare în umbră
 
 Compararea în umbră / A-B a furnizorilor **nu este o suprafață REST independentă** — aceasta este configurată prin rutarea combo (consultați [Auto-Combo](../routing/AUTO-COMBO.md)). Metricile de comparație pentru fiecare combo sunt furnizate de `GET /api/combos/metrics`.
@@ -2297,5 +2209,3 @@ familii de credențiale (sesiune de panou de control, token CLI local, token de 
 - `requireLogin` poate fi activat sau dezactivat prin `/api/settings/require-login`
 - Rutele `/v1/*` necesită opțional o cheie API Bearer când `REQUIRE_API_KEY=true`
 - În această documentație de referință, „token de administrare” / „cheie API cu domeniu de administrare” înseamnă una dintre familiile descrise în ghidul respectiv — nu un tip suplimentar de secret nedefinit
-
-> **Modificare incompatibilă (v3.8.0)** — `/api/v1/agents/tasks/*` și endpointurile de administrare a perioadei de așteptare necesită acum **autentificare pentru administrare** (cookie-ul `auth_token` al panoului de control sau o cheie API cu domeniu de administrare). Clienții care apelau anterior aceste rute fără autentificare vor primi `401 Unauthorized`. Consultați commitul `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

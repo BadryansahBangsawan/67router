@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ya **ìṣàwárí CLI**, **Agent Client Protocol abinibi**, àti
+67router ya **ìṣàwárí CLI**, **Agent Client Protocol abinibi**, àti
 **àwọn ohun amúlò ìbámu stdio àtijọ́** sọ́tọ̀. Rírí fáìlì aláṣẹ kan tí a ti fi sílẹ̀ kò jẹ́ ẹ̀rí pé
 ìfàṣẹsí rẹ̀, ìbámu awoṣe rẹ̀, tàbí ìmúrasílẹ̀ rẹ̀ tó láti bójú tó ìbéèrè kan.
 
@@ -120,5 +120,3 @@ nínú environment àfojúsùn.
 - [Àwọn ìlànà aṣojú](./AGENT_PROTOCOLS_GUIDE.md)
 - [Àwọn àdéhùn ìfilọ́lẹ̀ CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Àwọn irinṣẹ́ CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)
-- [Àwọn aṣojú cloud](./CLOUD_AGENT.md)

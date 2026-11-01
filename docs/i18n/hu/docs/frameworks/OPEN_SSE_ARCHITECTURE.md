@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Az `open-sse/` az OmniRoute minden LLM-kérését kiszolgáló alapvető streamelési motor. Körülbelül 1 400 fájlt tartalmaz, amelyek a kérésfeldolgozási folyamatot, a végrehajtókat, a szolgáltatásokat, az MCP-szervert és a fordítási réteget valósítják meg. Ez az útmutató bemutatja, hogyan kapcsolódnak egymáshoz ezek az elemek.
+> **TL;DR**: Az `open-sse/` a 67router minden LLM-kérését kiszolgáló alapvető streamelési motor. Körülbelül 1 400 fájlt tartalmaz, amelyek a kérésfeldolgozási folyamatot, a végrehajtókat, a szolgáltatásokat, az MCP-szervert és a fordítási réteget valósítják meg. Ez az útmutató bemutatja, hogyan kapcsolódnak egymáshoz ezek az elemek.
 
 **Forrás:** `open-sse/` (munkaterület-csomag, ~1 440 nem tesztcélú `.ts` fájl)
 
@@ -12,10 +12,10 @@
 
 ## Miért különálló munkaterület-csomag?
 
-Az `open-sse/` több okból is **önálló munkaterület** az OmniRoute monorepóban:
+Az `open-sse/` több okból is **önálló munkaterület** a 67router monorepóban:
 
 1. **Újrafelhasználhatóság** — az `open-sse` `@omniroute/open-sse` néven van közzétéve az npm-en, így más projektek önállóan is használhatják
-2. **Egyértelmű határok** — a streamelési motor el van választva az OmniRoute-specifikus felhasználóifelület-/adatbázisrétegtől
+2. **Egyértelmű határok** — a streamelési motor el van választva a 67router-specifikus felhasználóifelület-/adatbázisrétegtől
 3. **Teljesítmény** — a motor nem rendelkezik Next.js-függőségekkel, így gyorsabb hidegindítást tesz lehetővé CLI- és szerver nélküli környezetekben
 4. **Verziókezelés** — az `open-sse` a saját ütemezése szerint adhat ki új verziókat
 
@@ -460,7 +460,7 @@ Az `open-sse/transformer/` a **Chat Completions** és a **Responses API** formá
 
 ### Miért van szükség külön transzformátorra?
 
-A Responses API az OpenAI új formátuma, amely **állapottartó beszélgetéseket** (`previous_response_id`) használ. Amikor egy kliens Responses-kérést küld, az OmniRoute:
+A Responses API az OpenAI új formátuma, amely **állapottartó beszélgetéseket** (`previous_response_id`) használ. Amikor egy kliens Responses-kérést küld, a 67router:
 
 1. Belsőleg Responses → Chat Completions formátumra konvertál
 2. Elküldi a szolgáltatónak (bármely, a Chat Completions formátumot támogató szolgáltatónak)
@@ -573,5 +573,4 @@ Az útválasztó motor szigorú teljesítménykorlátokkal rendelkezik:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — könyvtárankénti áttekintés
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 tényezős pontozás
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-kiszolgáló
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-kiszolgáló
 - Forrás: `open-sse/` (több mint 400 fájl, ~143K kódsor)

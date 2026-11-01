@@ -8,9 +8,9 @@
 > **Viimeksi päivitetty:** 2026-09-16
 > **Kohderyhmä:** Upotettuja palveluita (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua) lisäävät, ylläpitävät tai virheenkorjaavat ohjelmistokehittäjät.
 
-Upotetut palvelut ovat paikallisesti asennettuja prosessien rinnakkaistyökaluja, jotka OmniRoute asentaa, valvoo ja
+Upotetut palvelut ovat paikallisesti asennettuja prosessien rinnakkaistyökaluja, jotka 67router asentaa, valvoo ja
 tarjoaa ensiluokkaisina reitityskohteina. Toisin kuin ulkoiset palveluntarjoajat (joihin muodostetaan yhteys internetin kautta
-API-avaimilla), upotetut palvelut suoritetaan samalla koneella kuin OmniRoute, ja ne viestivät takaisinkytkentärajapinnan kautta.
+API-avaimilla), upotetut palvelut suoritetaan samalla koneella kuin 67router, ja ne viestivät takaisinkytkentärajapinnan kautta.
 
 ---
 
@@ -35,7 +35,7 @@ Seitsemän palvelua on upotettu:
 
 | Palvelu         | npm-paketti                         | Oletusportti | Tarkoitus                                                                                                                                                                                                                                                                                                                                                                             |
 | --------------- | ----------------------------------- | :----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                           |    20130     | AI-reititin, jota OmniRoute voi käyttää alipalveluntarjoajana. Mallit tarjotaan muodossa `9router/{sub}/{model}`                                                                                                                                                                                                                                                                      |
+| **9Router**     | `9router`                           |    20130     | AI-reititin, jota 67router voi käyttää alipalveluntarjoajana. Mallit tarjotaan muodossa `9router/{sub}/{model}`                                                                                                                                                                                                                                                                       |
 | **CLIProxyAPI** | GitHub-julkaisubinaari (`cliproxy`) |     8317     | Paikallinen välityssovitin Anthropic CLI -todennusprosesseille. Tarjoaa varareitityksen OAuth-tunnusten vanhentuessa                                                                                                                                                                                                                                                                  |
 | **Mux**         | `mux` (headless `mux server`)       |     8322     | Paikallinen agenttien orkestrointitaustaprosessi (coder/mux). Vain elinkaaren hallinta — ei reitityskohde (ei LLM-välitystä).                                                                                                                                                                                                                                                         |
 | **Bifrost**     | `@maximhq/bifrost`                  |     8080     | Go-pohjainen AI-yhdyskäytävän välitystaustajärjestelmä. Kun se on käynnissä, välitysreitti (`/v1/relay/`) valitsee sen automaattisesti                                                                                                                                                                                                                                                |
@@ -45,21 +45,21 @@ Seitsemän palvelua on upotettu:
 
 Kaikki seitsemän noudattavat samaa valvontamallia:
 
-- OmniRoute asentaa ne hakemistoon `DATA_DIR/services/{name}/` (erillään OmniRouten omasta `package.json`-tiedostosta)
-- OmniRoute käynnistää ne aliprosesseina ja valvoo niitä
-- OmniRoute syöttää lyhytikäisen API-avaimen aliprosessin ympäristöön ja kierrättää sen ilman käyttökatkoa (soveltuvin osin)
+- 67router asentaa ne hakemistoon `DATA_DIR/services/{name}/` (erillään 67routerin omasta `package.json`-tiedostosta)
+- 67router käynnistää ne aliprosesseina ja valvoo niitä
+- 67router syöttää lyhytikäisen API-avaimen aliprosessin ympäristöön ja kierrättää sen ilman käyttökatkoa (soveltuvin osin)
 - Kaikki hallintareitit (`/api/services/*`) ovat **LOCAL_ONLY** — niitä voi käyttää vain loopback-osoitteesta (ehdoton sääntö #17)
 
 ### Keskeiset päätökset (suunnitelmasta)
 
-| Päätös                                                  | Arvo                                                                                          |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Hallintapaneelin pääsy 9Routerin omaan käyttöliittymään | Käänteinen välityspalvelin osoitteessa `/dashboard/providers/services/9router/embed/*`        |
-| Asennusmekanismi                                        | `npm install {package}` komennolla `execFile` (ei komentotulkin interpolointia)               |
-| Käyttötapa                                              | Palveluntarjoaja rekisteröidään reititysmoottoriin muodossa `9router/{sub}/{model}`           |
-| API-avainten hallinta                                   | OmniRoute luo avaimet, salaa ne levossa (AES-256-GCM) ja syöttää ne ympäristömuuttujan kautta |
-| Hallintapaneelin sijainti                               | `/dashboard/providers/services` (kolme välilehteä)                                            |
-| Automaattinen käynnistys                                | Palvelukohtainen valitsin, oletuksena POIS PÄÄLTÄ                                             |
+| Päätös                                                  | Arvo                                                                                         |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Hallintapaneelin pääsy 9Routerin omaan käyttöliittymään | Käänteinen välityspalvelin osoitteessa `/dashboard/providers/services/9router/embed/*`       |
+| Asennusmekanismi                                        | `npm install {package}` komennolla `execFile` (ei komentotulkin interpolointia)              |
+| Käyttötapa                                              | Palveluntarjoaja rekisteröidään reititysmoottoriin muodossa `9router/{sub}/{model}`          |
+| API-avainten hallinta                                   | 67router luo avaimet, salaa ne levossa (AES-256-GCM) ja syöttää ne ympäristömuuttujan kautta |
+| Hallintapaneelin sijainti                               | `/dashboard/providers/services` (kolme välilehteä)                                           |
+| Automaattinen käynnistys                                | Palvelukohtainen valitsin, oletuksena POIS PÄÄLTÄ                                            |
 
 ## 2. Arkkitehtuuri — 4 kerrosta
 
@@ -219,7 +219,7 @@ Muualta kuin loopback-osoitteesta tulevat pyynnöt saavat vastauksen `403 LOCAL_
 #### `POST /api/services/9router/install`
 
 Asentaa 9Routerin npm:stä. Luo hakemiston `DATA_DIR/services/9router/`, jossa ovat sen omat
-`package.json`- ja `node_modules/`-resurssit. Ei aiheuta ristiriitoja OmniRouten omien riippuvuuksien kanssa.
+`package.json`- ja `node_modules/`-resurssit. Ei aiheuta ristiriitoja 67routerin omien riippuvuuksien kanssa.
 
 **Pyynnön runko** (kaikki valinnaisia):
 
@@ -380,7 +380,7 @@ Palauttaa yhdistetyn reaaliaikaisen ja tietokantaan tallennetun tilan, mukaan lu
 #### `POST /api/services/9router/auto-start`
 
 Ottaa automaattisen käynnistyksen käyttöön tai poistaa sen käytöstä. Kun `enabled: true`, palvelu käynnistyy automaattisesti
-seuraavan kerran, kun OmniRoute käynnistyy (jos palvelu on asennettu).
+seuraavan kerran, kun 67router käynnistyy (jos palvelu on asennettu).
 
 **Pyynnön runko:**
 
@@ -588,7 +588,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Tämä välityspalvelin:
 
 - Välittää pyynnön osoitteeseen `http://127.0.0.1:{port}/{path}` (vain silmukkaosoite)
-- Poistaa saapuvat `cookie`- ja `authorization`-otsakkeet (OmniRoute-istunto ei vuoda)
+- Poistaa saapuvat `cookie`- ja `authorization`-otsakkeet (67router-istunto ei vuoda)
 - Lisää 9Router-todennusta varten otsakkeen `Authorization: Bearer {apiKey}`
 - Poistaa vastauksesta otsakkeet `set-cookie`, `content-security-policy`, `x-frame-options` ja `cross-origin-*`
 - Kirjoittaa HTML-vastaukset uudelleen lisätäkseen `<base href>` -elementin ja normalisoidakseen absoluuttiset polut (`/foo` → `/dashboard/.../embed/foo`)
@@ -624,7 +624,7 @@ tai prosesseja. Katso täydellinen tasomatriisi tiedostosta
 ### API-avaimen syöttäminen
 
 9Router ja Mux edellyttävät API-avainta/bearer-tokenia omille HTTP-päätepisteilleen.
-OmniRoute:
+67router:
 
 1. Luo avaimen kutsulla `crypto.randomBytes(32).toString("base64url")` käyttäen
    palvelukohtaista etuliitettä (`nr_` 9Routerille, `mx_` Muxille).
@@ -808,7 +808,7 @@ Jos sulautettu palvelu tarjoaa OpenAI-yhteensopivan `/v1/chat/completions`-pää
 
 1. Tarkista `GET /api/services/{name}/logs` (tai hallintapaneelin Logs-paneeli). Etsi
    rivejä, kuten `Error: ENOENT`, `address already in use` tai `Cannot find module`.
-2. Varmista, että `npm` on PATH-muuttujassa: suorita `which npm` samalla käyttäjätilillä, jolla OmniRoute suoritetaan.
+2. Varmista, että `npm` on PATH-muuttujassa: suorita `which npm` samalla käyttäjätilillä, jolla 67router suoritetaan.
 3. Varmista, että palvelu on asennettu: tarkista `GET /api/services/{name}/status`-vastauksen
    `installedVersion`. Jos se on `null`, suorita ensin asennus.
 4. Tarkista, että `DATA_DIR/services/{name}/node_modules/` on olemassa eikä ole tyhjä.
@@ -846,7 +846,7 @@ käynnistyminen kestää pidempään, suurenna `healthIntervalMs` arvoon 5000 ja
 3. Portti voidaan määrittää palvelukohtaisesti tiedostossa `bootstrap.ts` `port`-kentän avulla.
 
 **Huomautus:** 9Router käyttää oletuksena nimenomaan porttia 20130 välttääkseen
-ristiriidan OmniRouten oletusportin 20128 kanssa.
+ristiriidan 67routerin oletusportin 20128 kanssa.
 
 ---
 
@@ -856,13 +856,13 @@ ristiriidan OmniRouten oletusportin 20128 kanssa.
 
 **Syyt:**
 
-- OmniRoute-prosessilla ei ole kirjoitusoikeutta `DATA_DIR`-hakemistoon tai sen ylähakemistoon.
+- 67router-prosessilla ei ole kirjoitusoikeutta `DATA_DIR`-hakemistoon tai sen ylähakemistoon.
 - Sovellusta suoritetaan rootless Dockerissa ilman kirjoitusoikeutta liitettyyn taltioon.
 
 **Korjaus:**
 
 1. Tarkista `DATA_DIR` (oletus: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Varmista, että OmniRoute-prosessin käyttäjä omistaa hakemiston: `chown -R $USER ~/.omniroute/`
+2. Varmista, että 67router-prosessin käyttäjä omistaa hakemiston: `chown -R $USER ~/.omniroute/`
 3. Varmista Dockerissa, että taltioliitoksella on oikeat käyttöoikeudet kontin käyttäjälle.
 
 ---
@@ -910,16 +910,16 @@ ohitusluetteloon. Katso `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **K: Ovatko 9Router ja CLIProxyAPI käytettävissä tuotanto- tai pilviympäristöissä?**
 
-Kyllä. Molemmat palvelut noudattavat samaa ensisijaisesti paikallista mallia kuin OmniRoute itse. Ne toimivat
+Kyllä. Molemmat palvelut noudattavat samaa ensisijaisesti paikallista mallia kuin 67router itse. Ne toimivat
 samalla koneella ja viestivät loopback-yhteyden kautta. Tässä ”tuotanto” tarkoittaa VPS-palvelinta
-tai paikallista palvelinta, johon OmniRoute on otettu käyttöön, ei pilvipalveluntarjoajan etäpalvelua.
+tai paikallista palvelinta, johon 67router on otettu käyttöön, ei pilvipalveluntarjoajan etäpalvelua.
 
 ---
 
 **K: Miten teen supervisorin vianmäärityksen?**
 
 1. Seuraa SSE-lokivirtaa: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Tarkista OmniRouten pino-tulosteen rakenteiset lokit suodatettuina
+2. Tarkista 67routerin pino-tulosteen rakenteiset lokit suodatettuina
    `service:supervisor`-nimiavaruuden perusteella.
 3. Tarkista tietokantarivi: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Käytä pyyntöä `GET /api/services/9router/status`, jotta näet nykyisen ajonaikaisen tilan, PID:n, terveystilan

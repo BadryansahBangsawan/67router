@@ -25,7 +25,7 @@ Prvý riadok, ktorého prvý stĺpec obsahuje doslovné slovo `provider` (bez oh
 Úvodný súbor si môžete stiahnuť z modálneho okna importu (**Stiahnuť šablónu CSV**). Príklad:
 
 ```csv
-# Import poskytovateľov OmniRoute (pozičné stĺpce)
+# Import poskytovateľov 67router (pozičné stĺpce)
 provider,name,apiKey,baseUrl,priority
 openai,Produkčný OpenAI,sk-your-openai-key,,1
 ```

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute máa ń ṣàyẹ̀wò àwọn ìdáhùn àṣìṣe láti upstream fún àwọn àmì tó ń tọ́ka sí i pé
+67router máa ń ṣàyẹ̀wò àwọn ìdáhùn àṣìṣe láti upstream fún àwọn àmì tó ń tọ́ka sí i pé
 **àkọọ́lẹ̀ olupèsè ti kú títí láé** (a ti dá a dúró / a ti mú un kúrò níṣiṣẹ́ / a ti fòfin dè é nítorí ToS), àti pé, nígbà tí
 àmì bá bá a mu, ó máa ń gbé àsopọ̀ náà sínú **ipò ìparí `banned`** kí a má bàa
 yan án mọ́ fún àwọn ìbéèrè. Èyí ni ohun tí káàdì ètò **Security → Banned Keywords**

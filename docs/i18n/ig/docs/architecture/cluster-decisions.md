@@ -14,7 +14,7 @@ Profaịlụ compose abụọ a na-ahọrọ iji mee ihe (`memory`, `bifrost`) m
 
 ## Ihe mere usoro a ji kpachapụ anya
 
-Ụdị nhazi OmniRoute dị ugbu a adịlarị mfe ma gosipụta na ọ na-arụ ọrụ nke ọma:
+Ụdị nhazi 67router dị ugbu a adịlarị mfe ma gosipụta na ọ na-arụ ọrụ nke ọma:
 
 - **`redis:7-alpine`** na-ahụ maka ibu ọrụ mmachi ọnụego/cache n'ọ̀tụ̀tụ̀ mmepụta.
 - **SQLite + sqlite-vec + FTS5** na-ahụ maka ebe nchekwa mpaghara + vector + ọchụchọ ederede (lee [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Profaịlụ abụọ a bụ **nhọrọ maka ịgbasa nhazi ndị ruru oke SQLi
 
 - Ị na-eji oyiri `omniroute` ≥3 ma chọọ ka e jikọta ntụgharị ndị na-eweta ọrụ n'otu usoro Go.
 - Ị chọrọ otu ebe maka audit/ndekọ log nke arịrịọ ndị na-aga n'aka ndị na-eweta ọrụ upstream n'ofe oyiri niile.
-- Ị chọrọ ịgbasa oyi akwa routing Tier-1 n'ụzọ kwụ ọtọ, na-adabereghị na oyiri OmniRoute.
+- Ị chọrọ ịgbasa oyi akwa routing Tier-1 n'ụzọ kwụ ọtọ, na-adabereghị na oyiri 67router.
 
 **Ihe ọ na-agbakwunye:**
 

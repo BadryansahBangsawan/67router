@@ -5,11 +5,11 @@
 ---
 
 > **حیثیت:** عمومی طور پر دستیاب۔
-> **مخاطبین:** وہ آپریٹرز جو OpenCode کو OmniRoute کی تعیناتی سے مربوط کر رہے ہیں۔
+> **مخاطبین:** وہ آپریٹرز جو OpenCode کو 67router کی تعیناتی سے مربوط کر رہے ہیں۔
 > **حتمی ماخذ (کنفیگ اسکیما):** `src/shared/services/opencodeConfig.ts`
 > **حتمی ماخذ (npm پیکیج):** `@omniroute/opencode-provider/` (شائع کیے جانے کے قابل workspace)
 
-[OpenCode](https://opencode.ai) ایک ایجنٹ پر مبنی CLI/desktop AI کلائنٹ ہے۔ یہ اپنا provider catalog `~/.config/opencode/opencode.json` (یا `opencode.jsonc`) سے پڑھتا ہے اور `https://opencode.ai/config.json` پر موجود اسکیما کی پیروی کرتا ہے۔ OmniRoute خود کو OpenCode کے سامنے ان providers میں سے ایک کے طور پر پیش کرتا ہے — ہر درخواست OmniRoute کے معیاری OpenAI-compatible `/v1` انٹرفیس سے گزرتی ہے، اس لیے OpenCode خودکار طور پر Auto-Combo routing، circuit breakers، key policies، observability وغیرہ سے فائدہ اٹھاتا ہے۔
+[OpenCode](https://opencode.ai) ایک ایجنٹ پر مبنی CLI/desktop AI کلائنٹ ہے۔ یہ اپنا provider catalog `~/.config/opencode/opencode.json` (یا `opencode.jsonc`) سے پڑھتا ہے اور `https://opencode.ai/config.json` پر موجود اسکیما کی پیروی کرتا ہے۔ 67router خود کو OpenCode کے سامنے ان providers میں سے ایک کے طور پر پیش کرتا ہے — ہر درخواست 67router کے معیاری OpenAI-compatible `/v1` انٹرفیس سے گزرتی ہے، اس لیے OpenCode خودکار طور پر Auto-Combo routing، circuit breakers، key policies، observability وغیرہ سے فائدہ اٹھاتا ہے۔
 
 انضمام کے **دو معاونت یافتہ طریقے** ہیں۔ کسی ایک کو منتخب کریں — دونوں ایک جیسا کنفیگ تیار کرتے ہیں۔
 
@@ -17,16 +17,16 @@
 
 ## طریقہ 1 — CLI generator (npm install کے بغیر)
 
-آخری صارفین کے لیے تجویز کردہ۔ OmniRoute کے ساتھ شامل ہوتا ہے۔ `opencode.json` کو اسی جگہ تحریر کرتا ہے۔
+آخری صارفین کے لیے تجویز کردہ۔ 67router کے ساتھ شامل ہوتا ہے۔ `opencode.json` کو اسی جگہ تحریر کرتا ہے۔
 
 ```bash
-# OmniRoute انسٹال کرنے کے بعد (npm i -g @omniroute/cli یا local clone)
+# 67router انسٹال کرنے کے بعد (npm i -g @omniroute/cli یا local clone)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-پسِ پردہ CLI، `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`) کو کال کرتا ہے، لہٰذا موجودہ `opencode.json` اپنے دیگر providers اور comments برقرار رکھتا ہے۔ OmniRoute entry کو یک جوہری انداز میں شامل/تبدیل کیا جاتا ہے۔
+پسِ پردہ CLI، `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`) کو کال کرتا ہے، لہٰذا موجودہ `opencode.json` اپنے دیگر providers اور comments برقرار رکھتا ہے۔ 67router entry کو یک جوہری انداز میں شامل/تبدیل کیا جاتا ہے۔
 
 نتیجے میں بننے والی فائل (ڈیفالٹ model catalog):
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 OpenCode UI/agent
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute کا OpenAI انٹرفیس)
-         → OmniRoute /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router کا OpenAI انٹرفیس)
+         → 67router /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
             → combo routing / Auto-Combo / executor
                → upstream provider
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 آپ `models: [...]` کے ذریعے انہیں تبدیل کر سکتے ہیں۔ تجویز کردہ اضافے:
 
-- `"auto"` — OmniRoute کا [Auto-Combo](../routing/AUTO-COMBO.md) بغیر کنفیگریشن والا راؤٹر دستیاب کرتا ہے۔ یہ آپ کو کیٹلاگ کو ہارڈ کوڈ کیے بغیر OpenCode کو "بہترین دستیاب ماڈل" منتخب کرنے دیتا ہے۔
-- `"<combo-name>"` — کوئی بھی کومبو جس کی آپ نے ڈیش بورڈ میں تعریف کی ہو؛ OmniRoute اسے شفاف طریقے سے حل کرتا ہے۔
+- `"auto"` — 67router کا [Auto-Combo](../routing/AUTO-COMBO.md) بغیر کنفیگریشن والا راؤٹر دستیاب کرتا ہے۔ یہ آپ کو کیٹلاگ کو ہارڈ کوڈ کیے بغیر OpenCode کو "بہترین دستیاب ماڈل" منتخب کرنے دیتا ہے۔
+- `"<combo-name>"` — کوئی بھی کومبو جس کی آپ نے ڈیش بورڈ میں تعریف کی ہو؛ 67router اسے شفاف طریقے سے حل کرتا ہے۔
 
 ---
 
@@ -135,12 +135,12 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## توثیق کے طریقے
 
-| OmniRoute کی ترتیب                           | تجویز کردہ `apiKey` قدر                                  |
+| 67router کی ترتیب                            | تجویز کردہ `apiKey` قدر                                  |
 | -------------------------------------------- | -------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (لوکل کے لیے طے شدہ) | `sk_omniroute` (لفظی پلیس ہولڈر)                         |
 | `REQUIRE_API_KEY=true`                       | ڈیش بورڈ → API Keys سے حاصل کردہ حقیقی فی صارف API کلید۔ |
 
-Anthropic طرز کے ایسے کلائنٹس کے لیے جو `x-api-key` + `anthropic-version` بھیجتے ہیں، OmniRoute کا `extractApiKey` بھی `x-api-key` سے کلید قبول کرتا ہے۔ OpenCode، OpenAI انٹرفیس استعمال کرتا ہے، اس لیے یہ ہمیشہ `Authorization: Bearer ${apiKey}` بھیجے گا — یہاں Anthropic کے لیے کوئی خصوصی صورت لاگو نہیں ہوتی۔
+Anthropic طرز کے ایسے کلائنٹس کے لیے جو `x-api-key` + `anthropic-version` بھیجتے ہیں، 67router کا `extractApiKey` بھی `x-api-key` سے کلید قبول کرتا ہے۔ OpenCode، OpenAI انٹرفیس استعمال کرتا ہے، اس لیے یہ ہمیشہ `Authorization: Bearer ${apiKey}` بھیجے گا — یہاں Anthropic کے لیے کوئی خصوصی صورت لاگو نہیں ہوتی۔
 
 ---
 
@@ -149,15 +149,15 @@ Anthropic طرز کے ایسے کلائنٹس کے لیے جو `x-api-key` + `an
 | علامت                                                | وجہ                                                                       | حل                                                                                                        |
 | ---------------------------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `/v1/v1/` والے URL کی ہر درخواست پر `404`            | v3.8 سے پہلے کے پلگ اِن کی فرسودہ کنفیگریشن، جس نے `/v1` دو بار شامل کیا۔ | طریقہ 1 یا 2 کے ذریعے دوبارہ جنریٹ کریں۔                                                                  |
-| `401 Invalid API key`                                | OmniRoute میں `REQUIRE_API_KEY=true` ہے اور کلید نامعلوم ہے۔              | ڈیش بورڈ میں کلید بنائیں، یا `REQUIRE_API_KEY=false` (صرف لوکل) سیٹ کریں اور `sk_omniroute` استعمال کریں۔ |
-| OpenCode UI میں ماڈلز کی فہرست خالی ہے               | تمام 4 طے شدہ ماڈلز OmniRoute کی پرووائیڈر ویزیبلٹی میں پوشیدہ ہیں۔       | اپنے فعال کردہ ماڈلز ظاہر کرنے کے لیے `models: ["auto", ...]` پاس کریں۔                                   |
+| `401 Invalid API key`                                | 67router میں `REQUIRE_API_KEY=true` ہے اور کلید نامعلوم ہے۔               | ڈیش بورڈ میں کلید بنائیں، یا `REQUIRE_API_KEY=false` (صرف لوکل) سیٹ کریں اور `sk_omniroute` استعمال کریں۔ |
+| OpenCode UI میں ماڈلز کی فہرست خالی ہے               | تمام 4 طے شدہ ماڈلز 67router کی پرووائیڈر ویزیبلٹی میں پوشیدہ ہیں۔        | اپنے فعال کردہ ماڈلز ظاہر کرنے کے لیے `models: ["auto", ...]` پاس کریں۔                                   |
 | `cannot read property 'models'` کے ساتھ OpenCode 500 | پرانے OpenCode (< 0.1.x) میں اِن لائن `models` قبول نہیں کیے جاتے تھے۔    | OpenCode کو ایسے ورژن پر اپ گریڈ کریں جو v1 اسکیما (`opencode.ai/config.json`) کی پیروی کرتا ہو۔          |
 
 ---
 
 ## مزید دیکھیں
 
-- [API حوالہ](../reference/API_REFERENCE.md) — مکمل OmniRoute REST سطح
+- [API حوالہ](../reference/API_REFERENCE.md) — مکمل 67router REST سطح
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"` کا مطلب
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - ماخذ: `src/shared/services/opencodeConfig.ts`، `src/lib/cli-helper/config-generator/opencode.ts`، `@omniroute/opencode-provider/src/index.ts`

@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Malti)
+# CLI Tools — 67router (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Aġġornat l-aħħar: 2026-08-23
 
-OmniRoute jintegra ma’ tliet kategoriji ta’ għodod CLI mifruxa fuq tliet paġni ddedikati tad-dashboard:
+67router jintegra ma’ tliet kategoriji ta’ għodod CLI mifruxa fuq tliet paġni ddedikati tad-dashboard:
 
-| Paġna          | Rotta                   | Kunċett                                                                                   | Għadd          |
-| -------------- | ----------------------- | ----------------------------------------------------------------------------------------- | -------------- |
-| **Kodiċi CLI** | `/dashboard/cli-code`   | Għodod tal-ipprogrammar li tipponta lejn OmniRoute (Klijent → CLI → OmniRoute → Fornitur) | 26             |
-| **Aġenti CLI** | `/dashboard/cli-agents` | Aġenti awtonomi li tipponta lejn OmniRoute (l-istess fluss, ambitu usa’)                  | 10             |
-| **Aġenti ACP** | `/dashboard/acp-agents` | CLIs li OmniRoute iniedi bħala backend permezz ta’ stdio/ACP (fluss bil-maqlub)           | ara r-reġistru |
+| Paġna          | Rotta                   | Kunċett                                                                                 | Għadd          |
+| -------------- | ----------------------- | --------------------------------------------------------------------------------------- | -------------- |
+| **Kodiċi CLI** | `/dashboard/cli-code`   | Għodod tal-ipprogrammar li tipponta lejn 67router (Klijent → CLI → 67router → Fornitur) | 26             |
+| **Aġenti CLI** | `/dashboard/cli-agents` | Aġenti awtonomi li tipponta lejn 67router (l-istess fluss, ambitu usa’)                 | 10             |
+| **Aġenti ACP** | `/dashboard/acp-agents` | CLIs li 67router iniedi bħala backend permezz ta’ stdio/ACP (fluss bil-maqlub)          | ara r-reġistru |
 
 Ir-rotot preċedenti jagħmlu redirect permezz ta’ 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Ir-rotot preċedenti jagħmlu redirect permezz ta’ 308: `/dashboard/cli-tools`
 Kodiċi CLI / Aġenti CLI (fluss tal-konsum):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (kollha jippontaw lejn OmniRoute)
+           ▼  (kollha jippontaw lejn 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute jidderieġi lejn il-fornitur it-tajjeb)
+           ▼  (67router jidderieġi lejn il-fornitur it-tajjeb)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 Aġenti ACP (fluss ta’ tnedija bil-maqlub):
-    Talba tal-klijent → OmniRoute → iniedi CLI permezz ta’ stdio/ACP → tweġiba
+    Talba tal-klijent → 67router → iniedi CLI permezz ta’ stdio/ACP → tweġiba
 ```
 
 **Benefiċċji:**
@@ -45,9 +45,9 @@ Aġenti ACP (fluss ta’ tnedija bil-maqlub):
 
 ## Ikkonfigura awtomatikament b’`setup-*`
 
-M’għandekx għalfejn tikteb il-konfigurazzjoni ta’ kull għodda manwalment. OmniRoute jipprovdi kmand `setup-*`
+M’għandekx għalfejn tikteb il-konfigurazzjoni ta’ kull għodda manwalment. 67router jipprovdi kmand `setup-*`
 għal kull CLI appoġġjat li jaqra l-katalgu **attiv** tal-mudelli minn istanza ta’
-OmniRoute li tkun qed taħdem (lokali jew remota) u jikteb il-konfigurazzjoni tal-għodda fuq il-magna tiegħek:
+67router li tkun qed taħdem (lokali jew remota) u jikteb il-konfigurazzjoni tal-għodda fuq il-magna tiegħek:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Kull wieħed jaċċetta `--remote <url> --api-key <key>` (biex tikkonfigura għodda lokali ma’
-OmniRoute remot), `--dry-run` (biex tara minn qabel mingħajr ma tikteb), u `--port`. Għodod
+67router remot), `--dry-run` (biex tara minn qabel mingħajr ma tikteb), u `--port`. Għodod
 mingħajr skoperta awtomatika tal-mudelli (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) jieħdu
 `--model <id>` (u `--yes` għal eżekuzzjonijiet mhux interattivi). `setup-5dive` huwa l-unika
 riċetta li ma tiktebx taħt `$HOME`: din tikkonfigura flotta ta’ aġenti 5dive billi
@@ -77,9 +77,9 @@ iżda m’għandux riċetta `setup-*`/`configure`.
 
 ### It-tħaddim ta’ dawn ġewwa container
 
-Kmand `setup-*` eżegwit ġewwa l-container ta’ OmniRoute jikteb fil-home
+Kmand `setup-*` eżegwit ġewwa l-container ta’ 67router jikteb fil-home
 tal-container stess, li ma jinqara minn ebda CLI tal-host u li jisparixxi mal-
-container. OmniRoute jidentifika dan u joħroġ b’`2` flimkien ma’ istruzzjonijiet minflok
+container. 67router jidentifika dan u joħroġ b’`2` flimkien ma’ istruzzjonijiet minflok
 ma jikteb. Hemm żewġ modi appoġġjati biex tkompli — installa s-CLI fuq il-host u
 uża `omniroute connect` biex tikkonnettja mal-container, jew agħmel bind-mount tad-direttorji tal-konfigurazzjoni u ssettja
 `CLI_CONFIG_HOME` (il-profil `host` ta’ compose). Kull kmand `setup-*`, flimkien ma’
@@ -203,7 +203,7 @@ Aġenti awtonomi li jidhru f’`/dashboard/cli-agents`:
 
 ## 3. Aġenti ACP (/dashboard/acp-agents)
 
-Din il-paġna (li isimha nbidel minn `/dashboard/agents`) turi CLIs li OmniRoute jista’ **jniedi** bħala magni ta’ eżekuzzjoni backend permezz tal-protokoll stdio/ACP. Il-katalgu jinżamm separatament f’`src/lib/acp/registry.ts` u **mhuwiex** l-istess bħal `CLI_TOOLS`.
+Din il-paġna (li isimha nbidel minn `/dashboard/agents`) turi CLIs li 67router jista’ **jniedi** bħala magni ta’ eżekuzzjoni backend permezz tal-protokoll stdio/ACP. Il-katalgu jinżamm separatament f’`src/lib/acp/registry.ts` u **mhuwiex** l-istess bħal `CLI_TOOLS`.
 
 ---
 
@@ -330,7 +330,7 @@ Huma pprovduti traduzzjonijiet sħaħ għall-PT-BR u l-EN. 39 locale oħra juża
 
 ## 9. Bidu Rapidu
 
-### Pass 1 — Ikseb API Key ta' OmniRoute
+### Pass 1 — Ikseb API Key ta' 67router
 
 1. Iftaħ `/dashboard/api-manager` → **Oħloq API Key**
 2. Agħtiha isem (eż. `cli-tools`) u agħżel il-permessi kollha
@@ -394,7 +394,7 @@ cargo install smelt  # Ibbażat fuq Rust
 ### Pass 4 — Issettja l-Varjabbli Globali tal-Ambjent
 
 ```bash
-# Endpoint Universali ta' OmniRoute
+# Endpoint Universali ta' 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Modalità VS Code:**
 Settings tal-estensjoni Cline → API Provider: `OpenAI Compatible` → Base URL: `http://localhost:20128/v1`
 
-Jew uża d-dashboard ta' OmniRoute → **Għodod CLI → Cline → Applika l-Konfigurazzjoni**.
+Jew uża d-dashboard ta' 67router → **Għodod CLI → Cline → Applika l-Konfigurazzjoni**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Jew uża d-dashboard ta' OmniRoute → **Għodod CLI → KiloCode → Applika l-Konfigurazzjoni**.
+Jew uża d-dashboard ta' 67router → **Għodod CLI → KiloCode → Applika l-Konfigurazzjoni**.
 
 ---
 
@@ -551,14 +551,14 @@ Erġa' ibda VS Code wara li teditja.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Uża dan meta VS Code Insiders ikun ikkonfigurat għal mudelli b'endpoint personalizzat u tkun trid li OmniRoute jaħdem mingħajr field personalizzat tal-header.
+Uża dan meta VS Code Insiders ikun ikkonfigurat għal mudelli b'endpoint personalizzat u tkun trid li 67router jaħdem mingħajr field personalizzat tal-header.
 
 **Post rakkomandat:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Eżempju bl-użu tal-alias tokenizzat ta’ OmniRoute:**
+**Eżempju bl-użu tal-alias tokenizzat ta’ 67router:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Uża dan meta VS Code Insiders ikun ikkonfigurat għal mudelli b'endpoint person
 
 **Noti:**
 
-- Issostitwixxi `sk-your-omniroute-key` b’ċavetta API maħluqa f’OmniRoute.
+- Issostitwixxi `sk-your-omniroute-key` b’ċavetta API maħluqa f’67router.
 - Il-field `url` għandu jipponta lejn `/api/v1/vscode/{token}/chat/completions`.
 - Il-field `modelsUrl` għandu jipponta lejn `/api/v1/vscode/{token}/models`.
 - Agħti preferenza lill-fluss normali ta’ `/v1` + header Bearer meta l-klijent jappoġġja headers personalizzati.
@@ -596,17 +596,17 @@ Uża dan meta VS Code Insiders ikun ikkonfigurat għal mudelli b'endpoint person
 # Idħol fil-kont AWS/Kiro tiegħek:
 kiro-cli login
 
-# Is-CLI juża l-awtentikazzjoni tiegħu stess — OmniRoute mhuwiex meħtieġ bħala backend għall-Kiro CLI innifsu.
-# Uża kiro-cli flimkien ma’ OmniRoute għal għodod oħra.
+# Is-CLI juża l-awtentikazzjoni tiegħu stess — 67router mhuwiex meħtieġ bħala backend għall-Kiro CLI innifsu.
+# Uża kiro-cli flimkien ma’ 67router għal għodod oħra.
 kiro-cli status
 ```
 
-Għall-app tad-desktop **Kiro IDE**, uża l-endpoint MITM espost minn OmniRoute
+Għall-app tad-desktop **Kiro IDE**, uża l-endpoint MITM espost minn 67router
 taħt `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. CLI Interna ta’ OmniRoute
+## 10. CLI Interna ta’ 67router
 
 Il-binarju `omniroute` jipprovdi kmandi għaċ-ċiklu tal-ħajja tas-server, il-konfigurazzjoni, id-dijanjostika, u l-ġestjoni tal-fornituri. Punt tad-dħul: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Varjabbli tal-ambjent rikonoxxuti għall-konfigurazzjoni mhux interattiva:
 | Var                 | Għan                                                                              |
 | ------------------- | --------------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | Ċavetta API tal-fornitur (marbuta ma’ `--api-key` permezz ta’ Commander `.env()`) |
-| `DATA_DIR`          | Tissostitwixxi d-direttorju tad-data ta’ OmniRoute                                |
+| `DATA_DIR`          | Tissostitwixxi d-direttorju tad-data ta’ 67router                                 |
 
 L-inputs mhux interattivi l-oħra kollha jiġu mgħoddija bħala flags, mhux bħala varjabbli tal-ambjent:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ Id-doctor iwettaq dawn il-kontrolli: `Config`, `Database`, `Storage/encryption`,
 ### Ġestjoni tal-Fornituri
 
 ```bash
-omniroute providers available                       # Katalgu tal-fornituri ta’ OmniRoute
+omniroute providers available                       # Katalgu tal-fornituri ta’ 67router
 omniroute providers available --search openai       # Iffiltra l-katalgu skont l-id/isem/alias/kategorija
 omniroute providers available --category api-key    # Iffiltra skont il-kategorija (api-key, oauth, free, ...)
 omniroute providers available --json                # JSON li jista’ jinqara minn magna
@@ -684,7 +684,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` jużaw l-API bħala l-ewwel għażla u għalhekk jaħdmu mal-kuntest
 lokali jew remot attiv. Għall-input tal-kredenzjali għandhom jintużaw
 `--credential-stdin` jew `--credential-env`; `--dry-run --json` jirrapporta biss
-il-preżenza/forma b’informazzjoni sensittiva moħbija. `providers available` jaqra l-katalgu ta’ OmniRoute;
+il-preżenza/forma b’informazzjoni sensittiva moħbija. `providers available` jaqra l-katalgu ta’ 67router;
 `providers list/test/test-all/validate` iżommu l-imġiba SQLite lokali tagħhom u
 ma jeħtiġux li s-server ikun qed jaħdem.
 
@@ -727,7 +727,7 @@ ikun issettjat. Field li ma jirnexxilux jiġi deċifrat (ċavetta skaduta, ciphe
 
 ### Sottokmandi oħra
 
-Dawn jassumu li server OmniRoute qed jaħdem, sakemm ma jkunx indikat mod ieħor:
+Dawn jassumu li server 67router qed jaħdem, sakemm ma jkunx indikat mod ieħor:
 
 ```bash
 omniroute status                       # Status komprensiv waqt it-tħaddim
@@ -735,7 +735,7 @@ omniroute logs                         # Uri r-reġistri tat-talbiet kontinwamen
 omniroute config list                  # Uri l-għodod CLI kkonfigurati
 
 omniroute provider list                # Elenka l-fornituri disponibbli (alias ta’ providers list)
-omniroute provider add                 # Irreġistra OmniRoute bħala fornitur fuq għodda
+omniroute provider add                 # Irreġistra 67router bħala fornitur fuq għodda
 omniroute keys add | list | remove     # Immaniġġja ċ-ċwievet tal-API
 omniroute models [provider]            # Elenka l-mudelli (--json, --search)
 omniroute combo list | switch | create | delete
@@ -749,7 +749,6 @@ omniroute cache                        # Status tal-cache
 omniroute cache clear                  # Żvojta l-caches semantiċi u tal-firem
 
 omniroute mcp status | restart         # Status / startjar mill-ġdid tas-server MCP
-omniroute a2a status | card            # Status tas-server A2A / kard tal-aġent
 
 omniroute tunnel list | create | stop  # Immaniġġja t-tunnels (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Eżamina / issettja l-varjabbli tal-ambjent (temporanji)
@@ -785,7 +784,7 @@ omniroute completion                   # Iġġenera l-awtokompletament tax-shell
 | `/v1/audio/speech`         | Minn test għal diskors               | ElevenLabs, OpenAI TTS            |
 | `/v1/audio/transcriptions` | Minn diskors għal test               | Deepgram, AssemblyAI              |
 
-Eżempji lesti biex jitwaħħlu b’URL tokenizzat ta’ OmniRoute:
+Eżempji lesti biex jitwaħħlu b’URL tokenizzat ta’ 67router:
 
 ```txt
 Eżempju ta’ token: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -804,7 +803,7 @@ Chat ta’ Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4
 
 | Żball                                                  | Kawża                         | Soluzzjoni                                                       |
 | ------------------------------------------------------ | ----------------------------- | ---------------------------------------------------------------- |
-| `Connection refused`                                   | OmniRoute mhux qed jaħdem     | `omniroute serve`                                                |
+| `Connection refused`                                   | 67router mhux qed jaħdem      | `omniroute serve`                                                |
 | `401 Unauthorized`                                     | API key ħażina                | Iċċekkja f’`/dashboard/api-manager`                              |
 | `No combo configured`                                  | Ebda combo attiva tar-routing | Ikkonfigura waħda f’`/dashboard/combos`                          |
 | Is-CLI juri "not installed"                            | Il-binary mhuwiex fil-PATH    | Iċċekkja `which <command>`                                       |
@@ -812,7 +811,7 @@ Chat ta’ Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4
 | Link antika `/dashboard/cli-tools`                     | Bookmark ta’ qabel v3.8.6     | Ridirezzjonata awtomatikament lejn `/dashboard/cli-code` (308)   |
 | Link antika `/dashboard/agents`                        | Bookmark ta’ qabel v3.8.6     | Ridirezzjonata awtomatikament lejn `/dashboard/acp-agents` (308) |
 
-## Immaniġġja l-politika tal-inference key bis-CLI ta’ OmniRoute
+## Immaniġġja l-politika tal-inference key bis-CLI ta’ 67router
 
 Uża kuntest ta’ ġestjoni awtentikat (ara [Modalità Remota](../guides/REMOTE-MODE.md))
 biex tispezzjona jew taġġorna inference key eżistenti permezz tal-ID tagħha:

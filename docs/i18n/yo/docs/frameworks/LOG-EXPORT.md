@@ -4,7 +4,7 @@
 
 ---
 
-Ìkójáde àkọsílẹ̀ àwọn ìpè OmniRoute lọ́wọ́lọ́wọ́, ní ìpele-kékeré, sí ibi ìpamọ́ ìtúpalẹ̀ òde.
+Ìkójáde àkọsílẹ̀ àwọn ìpè 67router lọ́wọ́lọ́wọ́, ní ìpele-kékeré, sí ibi ìpamọ́ ìtúpalẹ̀ òde.
 
 Taabu dasibodu Logs ń tọ́jú ìtàn àwọn ìbéèrè sínú SQLite (`call_logs`), èyí tí
 yíyípo àti ìlànà ìdádúró ń fi ààlà sí. Ìkójáde àkọsílẹ̀ ń fi àkójọpọ̀ àkọsílẹ̀ kan náà ránṣẹ́ ní ìbámu pẹ̀lú àkókò tí a ṣètò, kí ó lè
@@ -270,7 +270,7 @@ fọ́ọ̀mù dashboard, gbogbo wọn ló ń ka registry náà.
 - `send()` **gbọ́dọ̀ throw** nígbà tí apá kan bá kùnà. Bí ó bá parí láìsí àṣìṣe, ó túmọ̀ sí pé "ibi ìránṣẹ́ náà ní àwọn ìlà wọ̀nyí",
   kọ́sọ̀ náà sì máa kọjá wọn títí láéláé.
 - Ibi ìránṣẹ́ tí ó gba URL tí olùṣàmúlò pèsè gbọ́dọ̀ ṣe ìfọwọ́sí rẹ̀ nípasẹ̀
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) kí ó tó ṣe fetching,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) kí ó tó ṣe fetching,
   gẹ́gẹ́ bí àwọn webhook ṣe ń ṣe. BigQuery kò nílò èyí: àwọn host rẹ̀ jẹ́ àwọn iye tí kò yí padà.
 
 ---

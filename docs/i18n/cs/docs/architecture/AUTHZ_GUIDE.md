@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Poslední aktualizace:** 2026-09-22 — jmenné prostory rozsahů odkazují na MCP-SERVER.md
 
-OmniRoute používá autorizační řetězec zohledňující routy, který kontroluje každý požadavek API. Klasifikace je **deterministická** a **fail-closed** — cokoli, co nelze klasifikovat, spadá do kategorie `MANAGEMENT` a vyžaduje relaci nebo token s oprávněními pro správu. Tato stránka vysvětluje model určený technikům, kteří udržují routy nebo navrhují nové koncové body.
+67router používá autorizační řetězec zohledňující routy, který kontroluje každý požadavek API. Klasifikace je **deterministická** a **fail-closed** — cokoli, co nelze klasifikovat, spadá do kategorie `MANAGEMENT` a vyžaduje relaci nebo token s oprávněními pro správu. Tato stránka vysvětluje model určený technikům, kteří udržují routy nebo navrhují nové koncové body.
 
 ![Autorizační řetězec (3 třídy rout + vyhodnocení zásad)](../diagrams/exported/authz-pipeline.svg)
 
@@ -226,8 +226,6 @@ přístupového tokenu. Viz [Ověřování pro správu](../guides/MANAGEMENT-AUT
 Vynucení klientského API klíče používá `isRequireApiKeyEnabled()` v `src/shared/utils/featureFlags.ts`, nikoli přímé čtení `process.env.REQUIRE_API_KEY`. To je důležité pro nasazené instance: přepnutí `REQUIRE_API_KEY` v Dashboard → Feature Flags uloží přepsání do databáze a okamžitě ovlivní `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` a další kontroly autentizace klientského API, které sdílejí tento pomocník. Pokud nelze přečíst úložiště feature flagů, autentizace klientského API selže uzavřeně a vyžaduje klíč.
 
 ## Zásadní změna — v3.8.0
-
-Koncové body `/api/v1/agents/tasks/*` a `/api/resilience/model-cooldowns` **nyní vyžadují ověření pro správu** (commit `588a0333`). Klienti, kteří dříve odesílali běžný klíč API bez rozsahu oprávnění `manage`, obdrží `403`. Migrace: buď klíči přidělte rozsah oprávnění `manage` na panelu API Keys, nebo použijte přihlášenou relaci panelu.
 
 ## Změna chování — v3.8.2
 

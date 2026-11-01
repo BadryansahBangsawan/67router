@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (ខ្មែរ)
+# 🐳 Docker Guide — 67router (ខ្មែរ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [ជាមួយឯកសារបរិស្ថាន](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Profiles ដែលមាន](#available-profiles)
-- [ការកំណត់រចនាសម្ព័ន្ធឧបករណ៍ CLI លើ host នៅពេល OmniRoute ដំណើរការក្នុង Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [ការកំណត់រចនាសម្ព័ន្ធឧបករណ៍ CLI លើ host នៅពេល 67router ដំណើរការក្នុង Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [Compose សម្រាប់ Production](#production-compose)
 - [ដំណាក់កាល Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Profiles ដែលមាន
 
-OmniRoute ផ្ដល់ជូន Compose profiles សម្រាប់ទម្រង់សំខាន់ៗនៃការដាក់ឱ្យដំណើរការ។ សូមជ្រើសរើសមួយដែលត្រូវនឹងបរិស្ថានរបស់អ្នក។
+67router ផ្ដល់ជូន Compose profiles សម្រាប់ទម្រង់សំខាន់ៗនៃការដាក់ឱ្យដំណើរការ។ សូមជ្រើសរើសមួយដែលត្រូវនឹងបរិស្ថានរបស់អ្នក។
 
 | Profile           | Service          | ពេលដែលគួរប្រើ                                                                                                                                  | Command                                      |
 | ----------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute ផ្ដល់ជូន Compose profiles សម្រាប់ទម�
 
 > អាចផ្សំ profiles ច្រើនជាមួយគ្នាបាន៖ `docker compose --profile cli --profile cliproxyapi up -d`។
 
-## ការកំណត់រចនាសម្ព័ន្ធឧបករណ៍ CLI លើ host នៅពេល OmniRoute ដំណើរការក្នុង Docker
+## ការកំណត់រចនាសម្ព័ន្ធឧបករណ៍ CLI លើ host នៅពេល 67router ដំណើរការក្នុង Docker
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` និងប៊ូតុង
 **រក្សាទុកការកំណត់រចនាសម្ព័ន្ធ** របស់ dashboard សុទ្ធតែសរសេរឯកសារដូចជា `~/.codex/*.config.toml`។ ផ្លូវទាំងនោះ
@@ -103,11 +103,11 @@ container ការសរសេរនោះនឹងធ្លាក់ទៅក�
 image ដំណើរការជា `USER node`) ដែល CLI ណាមួយនៅលើ host នឹងមិនអានវាឡើយ ហើយវានឹងត្រូវ
 លុបចោលភ្លាមៗនៅពេល container ត្រូវបានបង្កើតឡើងវិញ។
 
-OmniRoute រកឃើញករណីនេះ ហើយបដិសេធការសរសេរ ដោយផ្តល់សេចក្តីណែនាំជំនួសឱ្យ
+67router រកឃើញករណីនេះ ហើយបដិសេធការសរសេរ ដោយផ្តល់សេចក្តីណែនាំជំនួសឱ្យ
 ការរាយការណ៍ថាជោគជ័យដែលអ្នកមិនអាចប្រើបាន៖ CLI បញ្ចប់ដោយលេខកូដ `2` ហើយ API ឆ្លើយតប `422`
 ជាមួយ `containerEphemeralTarget: true`។
 
-### បានណែនាំ៖ ដំណើរការ CLI នៅលើ host និង OmniRoute ក្នុង Docker
+### បានណែនាំ៖ ដំណើរការ CLI នៅលើ host និង 67router ក្នុង Docker
 
 Container ផ្តល់សេវា API; CLI កំណត់រចនាសម្ព័ន្ធឧបករណ៍នៅលើ host របស់អ្នក។
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind mount គឺជាអ្វីដែលធ្វើឱ្យ path អាចទុកចិត្តបាន៖ OmniRoute អាន
+Bind mount គឺជាអ្វីដែលធ្វើឱ្យ path អាចទុកចិត្តបាន៖ 67router អាន
 `/proc/self/mountinfo` ហើយអនុញ្ញាតឱ្យសរសេរទៅកាន់ path ដែលបាន mount (និងថត
 ដែលថតកូនរបស់វាជា mount ដែលត្រូវគ្នាពិតប្រាកដនឹងទម្រង់ `/host-home` ខាងលើ) ខណៈដែល
 នៅតែបដិសេធ path ដែលមិនបាន mount។
@@ -178,7 +178,7 @@ Bind mount គឺជាអ្វីដែលធ្វើឱ្យ path អាច
 
 ## Redis Sidecar
 
-OmniRoute ពឹងផ្អែកលើ Redis ដើម្បីគាំទ្រកម្មវិធីកំណត់អត្រាបែបចែកចាយ និងឃ្លាំងសម្ងាត់រួម។ សេវា `redis` ត្រូវបានកំណត់ **ជានិច្ច** នៅក្នុង `docker-compose.yml` (វាមិនមានការកំណត់តាម profile ទេ) ហើយចាប់ផ្ដើមជាមួយ profile ផ្សេងទៀតណាមួយ។
+67router ពឹងផ្អែកលើ Redis ដើម្បីគាំទ្រកម្មវិធីកំណត់អត្រាបែបចែកចាយ និងឃ្លាំងសម្ងាត់រួម។ សេវា `redis` ត្រូវបានកំណត់ **ជានិច្ច** នៅក្នុង `docker-compose.yml` (វាមិនមានការកំណត់តាម profile ទេ) ហើយចាប់ផ្ដើមជាមួយ profile ផ្សេងទៀតណាមួយ។
 
 | ព័ត៌មានលម្អិត                    | តម្លៃ                                      |
 | -------------------------------- | ------------------------------------------ |
@@ -358,7 +358,6 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 | `DASHBOARD_PORT` / `API_PORT` | កំណត់ច្រកដែលបើកបង្ហាញសម្រាប់ dashboard (20128) និង API (20129) ជំនួសតម្លៃលំនាំដើម                                                                                                                                                                               | `20128` / `20129`          |
 | `APP_BIND_HOST`               | host interface ដែល docker-compose បើកផ្សាយច្រក dashboard/API/live-WS លើវា។ ជាមួយ `REQUIRE_API_KEY=false` (តម្លៃលំនាំដើម) `0.0.0.0` នឹងបើក anonymous proxy `/v1` ទៅកាន់ LAN — គួរពង្រីកការចូលប្រើតែនៅពេលប្រើ `REQUIRE_API_KEY=true` ឬមាន reverse proxy នៅខាងមុខ។ | `127.0.0.1`                |
 | `CLIPROXY_BIND_HOST`          | host interface ដែល docker-compose បើកផ្សាយ sidecar `cliproxyapi` លើវា — data volume របស់វាផ្ទុកព័ត៌មានសម្គាល់អត្តសញ្ញាណរបស់ provider។                                                                                                                           | `127.0.0.1`                |
-| `OMNIROUTE_PLUGINS_DIR`       | ថតដែល runtime plugin scanner អាន និងដំឡើង plugin ទៅក្នុង។ កំណត់វានៅពេល plugin ត្រូវបាន bind-mount៖ តម្លៃលំនាំដើមអាស្រ័យតាម `HOME` ដែល image មិនចាំបាច់ export នោះទេ។                                                                                            | `~/.omniroute/plugins`     |
 | `OMNIROUTE_BASE_PATH`         | URL subpath នៅពេល app ត្រូវបានបើកផ្សាយនៅពីក្រោយ reverse proxy (ឧ. `/omniroute`)                                                                                                                                                                                 | _(ទទេ = root)_             |
 | `NEXT_PUBLIC_BASE_URL`        | origin សាធារណៈសម្រាប់ browser ដែលរួមបញ្ចូល subpath (ឧ. `https://host/omniroute`)                                                                                                                                                                                | មិនបានកំណត់                |
 | `PROD_DASHBOARD_PORT`         | ច្រក dashboard នៅខាង host សម្រាប់ `docker-compose.prod.yml`                                                                                                                                                                                                     | `20130`                    |
@@ -366,7 +365,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## ប្រូកស៊ីបញ្ច្រាសលើផ្លូវរង (Traefik / nginx)
 
-`basePath` របស់ Next.js ត្រូវបានចងក្រងបញ្ចូលទៅក្នុងបណ្ដុំ standalone។ OmniRoute កត់ត្រាតម្លៃដែលបានបង្កប់នេះនៅក្នុងឯកសារ sentinel មួយនៅថតគោលរបស់កម្មវិធី (សរសេរក្នុងអំឡុងពេល `npm run build`; អានដោយ `scripts/docker/ensure-docker-base-path.mjs`) ហើយប្រៀបធៀបវាជាមួយ `OMNIROUTE_BASE_PATH` នៅពេល container ចាប់ផ្ដើម។ នៅពេលតម្លៃទាំងពីរខុសគ្នា ហើយ image ត្រូវបាន build សម្រាប់ថតគោលរបស់ដែន entrypoint នឹងសរសេរឡើងវិញនូវ manifest របស់ standalone, literal `basePath`/`assetPrefix` ដែលបានបង្កប់ (Next 16 បង្ហាញ URL asset របស់ SSR ពី `assetPrefix` តែប៉ុណ្ណោះ — patcher ចម្លងផ្លូវរងទៅក្នុងវាផងដែរ), URL asset `/_next/static` ដែលបានបង្កប់ (manifest យោងរបស់ client, ការនាំចូល media, ទំព័រកំហុសដែលបាន render ជាមុន) និង shim `process.env` របស់ client មុនពេល `node dev/run-standalone.mjs` ដំណើរការ។
+`basePath` របស់ Next.js ត្រូវបានចងក្រងបញ្ចូលទៅក្នុងបណ្ដុំ standalone។ 67router កត់ត្រាតម្លៃដែលបានបង្កប់នេះនៅក្នុងឯកសារ sentinel មួយនៅថតគោលរបស់កម្មវិធី (សរសេរក្នុងអំឡុងពេល `npm run build`; អានដោយ `scripts/docker/ensure-docker-base-path.mjs`) ហើយប្រៀបធៀបវាជាមួយ `OMNIROUTE_BASE_PATH` នៅពេល container ចាប់ផ្ដើម។ នៅពេលតម្លៃទាំងពីរខុសគ្នា ហើយ image ត្រូវបាន build សម្រាប់ថតគោលរបស់ដែន entrypoint នឹងសរសេរឡើងវិញនូវ manifest របស់ standalone, literal `basePath`/`assetPrefix` ដែលបានបង្កប់ (Next 16 បង្ហាញ URL asset របស់ SSR ពី `assetPrefix` តែប៉ុណ្ណោះ — patcher ចម្លងផ្លូវរងទៅក្នុងវាផងដែរ), URL asset `/_next/static` ដែលបានបង្កប់ (manifest យោងរបស់ client, ការនាំចូល media, ទំព័រកំហុសដែលបាន render ជាមុន) និង shim `process.env` របស់ client មុនពេល `node dev/run-standalone.mjs` ដំណើរការ។
 
 ### ការ build ដោយ Compose (បានណែនាំ)
 
@@ -414,7 +413,7 @@ Docker healthcheck ពិនិត្យ endpoint lifecycle ស្រាល `/he
 
 ## Docker Compose ជាមួយ Caddy (HTTPS Auto-TLS)
 
-OmniRoute អាចត្រូវបានដាក់ឱ្យចូលប្រើដោយសុវត្ថិភាព ដោយប្រើការផ្ដល់ SSL ដោយស្វ័យប្រវត្តិរបស់ Caddy។ សូមប្រាកដថា DNS A record របស់ដែនអ្នកចង្អុលទៅកាន់អាសយដ្ឋាន IP របស់ម៉ាស៊ីនមេអ្នក។
+67router អាចត្រូវបានដាក់ឱ្យចូលប្រើដោយសុវត្ថិភាព ដោយប្រើការផ្ដល់ SSL ដោយស្វ័យប្រវត្តិរបស់ Caddy។ សូមប្រាកដថា DNS A record របស់ដែនអ្នកចង្អុលទៅកាន់អាសយដ្ឋាន IP របស់ម៉ាស៊ីនមេអ្នក។
 
 ```yaml
 services:
@@ -445,11 +444,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy កំណត់ forwarding headers ស្តង់ដារសម្រាប់ container ខាងដើម។ OmniRoute ប្រើ
+Caddy កំណត់ forwarding headers ស្តង់ដារសម្រាប់ container ខាងដើម។ 67router ប្រើ
 `NEXT_PUBLIC_BASE_URL` ជាប្រភពដើមសាធារណៈផ្លូវការសម្រាប់ OAuth callbacks និងតំណសាធារណៈ
 ដែលបានបង្កើត។ ការសរសេរដែលបានផ្ទៀងផ្ទាត់ទៅផ្ទាំងគ្រប់គ្រង ប្រើសំណើ same-origin រួមជាមួយការការពារ CSRF
 ដែលភ្ជាប់នឹង session។ បើកប្រើ `OMNIROUTE_TRUST_PROXY` តែសម្រាប់ការដាក់ឱ្យប្រើប្រាស់កម្រិតខ្ពស់ ដែលអ្នកមានបំណង
-ឱ្យ OmniRoute កំណត់ប្រភពដើមសាធារណៈពី forwarded headers ដែលទុកចិត្ត ជំនួសឱ្យការកំណត់រចនាសម្ព័ន្ធ
+ឱ្យ 67router កំណត់ប្រភពដើមសាធារណៈពី forwarded headers ដែលទុកចិត្ត ជំនួសឱ្យការកំណត់រចនាសម្ព័ន្ធ
 ជាក់លាក់។
 
 ## Cloudflare Quick Tunnel
@@ -461,11 +460,11 @@ Caddy កំណត់ forwarding headers ស្តង់ដារសម្រា
 ### កំណត់សម្គាល់អំពី Tunnel
 
 - URL របស់ Quick Tunnel គឺបណ្ដោះអាសន្ន ហើយផ្លាស់ប្ដូរបន្ទាប់ពីការចាប់ផ្ដើមឡើងវិញរាល់លើក។
-- Quick Tunnels មិនត្រូវបានស្ដារឡើងវិញដោយស្វ័យប្រវត្តិ បន្ទាប់ពី OmniRoute ឬ container ចាប់ផ្ដើមឡើងវិញទេ។ បើកពួកវាឡើងវិញពីផ្ទាំងគ្រប់គ្រងនៅពេលចាំបាច់។
+- Quick Tunnels មិនត្រូវបានស្ដារឡើងវិញដោយស្វ័យប្រវត្តិ បន្ទាប់ពី 67router ឬ container ចាប់ផ្ដើមឡើងវិញទេ។ បើកពួកវាឡើងវិញពីផ្ទាំងគ្រប់គ្រងនៅពេលចាំបាច់។
 - ការដំឡើងដែលបានគ្រប់គ្រង បច្ចុប្បន្នគាំទ្រ Linux, macOS និង Windows លើ `x64` / `arm64`។
 - Managed Quick Tunnels ប្រើ HTTP/2 transport តាមលំនាំដើម ដើម្បីជៀសវាងការព្រមានអំពី QUIC UDP buffer ដែលរំខាន នៅក្នុងបរិស្ថាន container ដែលមានធនធានកំណត់។ កំណត់ `CLOUDFLARED_PROTOCOL=quic` ឬ `auto` ប្រសិនបើអ្នកចង់ប្រើ transport ផ្សេង។
 - Docker images រួមបញ្ចូល system CA roots និងបញ្ជូនពួកវាទៅឱ្យ `cloudflared` ដែលបានគ្រប់គ្រង ដើម្បីជៀសវាងបញ្ហាបរាជ័យនៃការទុកចិត្ត TLS នៅពេល tunnel ចាប់ផ្ដើមនៅក្នុង container។
-- កំណត់ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ប្រសិនបើអ្នកចង់ឱ្យ OmniRoute ប្រើ binary ដែលមានស្រាប់ ជំនួសឱ្យការទាញយកថ្មីមួយ។
+- កំណត់ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ប្រសិនបើអ្នកចង់ឱ្យ 67router ប្រើ binary ដែលមានស្រាប់ ជំនួសឱ្យការទាញយកថ្មីមួយ។
 
 ## ស្លាក Image
 
@@ -478,7 +477,7 @@ Manifest ពហុវេទិកា៖ `linux/amd64` + `linux/arm64` ដើម 
 
 ### បណ្ដាញចេញផ្សាយ
 
-OmniRoute បោះពុម្ពផ្សាយបណ្ដាញ Docker ដាច់ដោយឡែកសម្រាប់ការចេញផ្សាយមានស្ថិរភាព ការសាកល្បង release branch ដែលកំពុងសកម្ម និង development builds។
+67router បោះពុម្ពផ្សាយបណ្ដាញ Docker ដាច់ដោយឡែកសម្រាប់ការចេញផ្សាយមានស្ថិរភាព ការសាកល្បង release branch ដែលកំពុងសកម្ម និង development builds។
 
 | បណ្ដាញ                          | ប្រភព                                                 | លទ្ធភាពកែប្រែ                       | ការប្រើប្រាស់ដែលបានណែនាំ                                                                                                            |
 | ------------------------------- | ----------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -531,7 +530,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-មុនពេលសាកល្បង សូមបម្រុងទុក volume ទិន្នន័យ OmniRoute ឬថតទិន្នន័យដែលបាន bind-mount។ ដើម្បីត្រឡប់ទៅកំណែមុន សូមស្ដារកំណែស្ថិរភាព ឬ digest ដែលធ្លាប់បានប្រើពីមុន ហើយបង្កើត container ឡើងវិញ៖
+មុនពេលសាកល្បង សូមបម្រុងទុក volume ទិន្នន័យ 67router ឬថតទិន្នន័យដែលបាន bind-mount។ ដើម្បីត្រឡប់ទៅកំណែមុន សូមស្ដារកំណែស្ថិរភាព ឬ digest ដែលធ្លាប់បានប្រើពីមុន ហើយបង្កើត container ឡើងវិញ៖
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -551,7 +550,7 @@ build ពីសាខា release មិនអាចផ្លាស់ទី `lat
 
 ## ការអាប់ដេតផ្ទាំងគ្រប់គ្រងក្នុង Docker
 
-កុងតឺន័រដែលប្រើ image បានបោះពុម្ពផ្សាយមិនអាចជំនួសខ្លួនឯងបានទេ។ នៅពេល OmniRoute រកឃើញថាវាកំពុងដំណើរការនៅក្នុង
+កុងតឺន័រដែលប្រើ image បានបោះពុម្ពផ្សាយមិនអាចជំនួសខ្លួនឯងបានទេ។ នៅពេល 67router រកឃើញថាវាកំពុងដំណើរការនៅក្នុង
 កុងតឺន័រ (គ្មានការទាញយក `.git` និងមិនមែនជាការដំឡើងតាម npm) បដាអាប់ដេតនៅលើផ្ទាំងគ្រប់គ្រងទំព័រដើមនឹងបង្ហាញ
 ពាក្យបញ្ជា host ដែលត្រូវដំណើរការ ជំនួសឱ្យសេចក្តីណែនាំ npm/git ដោយមានប៊ូតុងចម្លង៖
 
@@ -567,7 +566,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 
 ដើម្បីឱ្យ **អាប់ដេតឥឡូវនេះ** បន្តដំណើរការដោយមិនចាំបាច់ mount `/var/run/docker.sock` (ដែលផ្តល់ឱ្យកុងតឺន័រ
 នូវសិទ្ធិ root លើ host — សូមមើលការព្រមានអំពី profile `cli` ខាងលើ) សូមកំណត់ `DOCKER_UPDATE_TRIGGER_FILE` នៅលើ
-សេវាកម្ម OmniRoute ហើយដំណើរការ watcher នៅលើ host៖
+សេវាកម្ម 67router ហើយដំណើរការ watcher នៅលើ host៖
 
 ```yaml
 services:
@@ -581,7 +580,7 @@ services:
 ផ្លូវត្រូវតែស្ថិតនៅក្នុង `DATA_DIR` (តម្លៃដែលមានលក្ខណៈ relative នឹងត្រូវបានដោះស្រាយដោយផ្អែកលើវា)។ ផ្លូវផ្សេងទៀត
 ទាំងអស់នឹងត្រូវបានបដិសេធ។ បន្ទាប់មក **អាប់ដេតឥឡូវនេះ** នឹងសរសេរ `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` ទៅក្នុង
 ឯកសារនោះ ឆ្លើយតបដោយ `202` ហើយផ្ទាំងគ្រប់គ្រងនឹងស្ទង់ `/api/system/version` រហូតដល់កំណែថ្មីដំណើរការ
-រួចផ្ទុកឡើងវិញ។ OmniRoute មិនដែលដំណើរការ shell ឬពាក្យបញ្ជា Docker ក្នុងរបៀបនេះទេ។ ដូចសកម្មភាពអាប់ដេត
+រួចផ្ទុកឡើងវិញ។ 67router មិនដែលដំណើរការ shell ឬពាក្យបញ្ជា Docker ក្នុងរបៀបនេះទេ។ ដូចសកម្មភាពអាប់ដេត
 ទាំងអស់ដែរ សំណើត្រូវបានទទួលយកតែពី client នៅលើ loopback/LAN ប៉ុណ្ណោះ។
 
 ថតទិន្នន័យដែលបាន bind-mount ផ្តល់ឱ្យ host នូវផ្លូវថេរសម្រាប់ត្រួតពិនិត្យ។ ឯកតា `systemd` គំរូ
@@ -590,7 +589,7 @@ services:
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Watch for OmniRoute dashboard update requests
+Description=Watch for 67router dashboard update requests
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -602,7 +601,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Pull and recreate the OmniRoute container
+Description=Pull and recreate the 67router container
 
 [Service]
 Type=oneshot
@@ -622,13 +621,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## ភាពអាចប្រើបាន៖ SQLite លំនាំដើមគាំទ្រតែ replica មួយ
 
-OmniRoute ស្តង់ដារសម្រាប់ Docker / Kubernetes គឺ **Node process មួយ + SQLite writer មួយ**។ ភាពអាចប្រើបានខ្ពស់ **មិនត្រូវបានគាំទ្រ** លើ topology នេះទេ។
+67router ស្តង់ដារសម្រាប់ Docker / Kubernetes គឺ **Node process មួយ + SQLite writer មួយ**។ ភាពអាចប្រើបានខ្ពស់ **មិនត្រូវបានគាំទ្រ** លើ topology នេះទេ។
 
-| កម្រិតកំណត់                                                     | ផលវិបាក                                                                                                                                                                                                                                                                                                                                          |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| writer តែមួយ                                                    | **កុំ** ដំណើរការ replica ច្រើនដោយប្រើឯកសារ SQLite ដូចគ្នា។ វានឹងធ្វើឱ្យ DB ខូច។                                                                                                                                                                                                                                                                  |
-| ការបង្កើតឡើងវិញ / ការចាប់ផ្តើមឡើងវិញ / ការបញ្ឈប់ដោយ HEALTHCHECK | **ការដាច់សេវាទាំងស្រុង** សម្រាប់ SSE ដែលកំពុងដំណើរការ session របស់ផ្ទាំងគ្រប់គ្រង និង state ក្នុង memory។ client ដែលបានតភ្ជាប់ទាំងអស់នឹងផ្តាច់។ សំណើថ្មីក្នុងអំឡុងពេលដែលគ្មាន endpoint នឹងទទួលបាន **`502 Bad Gateway: Unknown error`** ពី reverse proxy មិនមែន OmniRoute JSON ទេ — client មិនអាចបែងចែកវាពីការបរាជ័យរបស់ provider បានទេ (#11015)។ |
-| event loop ដូចគ្នានឹង `/healthz`                                | catalog ដែលមមាញឹក ឬ compression tick អាចពន្យារពេល probe បាន។ timeout ខ្លីនឹងចាប់ផ្តើម replica **តែមួយគត់** ឡើងវិញ។                                                                                                                                                                                                                               |
+| កម្រិតកំណត់                                                     | ផលវិបាក                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| writer តែមួយ                                                    | **កុំ** ដំណើរការ replica ច្រើនដោយប្រើឯកសារ SQLite ដូចគ្នា។ វានឹងធ្វើឱ្យ DB ខូច។                                                                                                                                                                                                                                                                 |
+| ការបង្កើតឡើងវិញ / ការចាប់ផ្តើមឡើងវិញ / ការបញ្ឈប់ដោយ HEALTHCHECK | **ការដាច់សេវាទាំងស្រុង** សម្រាប់ SSE ដែលកំពុងដំណើរការ session របស់ផ្ទាំងគ្រប់គ្រង និង state ក្នុង memory។ client ដែលបានតភ្ជាប់ទាំងអស់នឹងផ្តាច់។ សំណើថ្មីក្នុងអំឡុងពេលដែលគ្មាន endpoint នឹងទទួលបាន **`502 Bad Gateway: Unknown error`** ពី reverse proxy មិនមែន 67router JSON ទេ — client មិនអាចបែងចែកវាពីការបរាជ័យរបស់ provider បានទេ (#11015)។ |
+| event loop ដូចគ្នានឹង `/healthz`                                | catalog ដែលមមាញឹក ឬ compression tick អាចពន្យារពេល probe បាន។ timeout ខ្លីនឹងចាប់ផ្តើម replica **តែមួយគត់** ឡើងវិញ។                                                                                                                                                                                                                              |
 
 **ម៉ាទ្រីស probe** (សូមមើលផងដែរ [អនុសាសន៍ probe សម្រាប់ Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations))៖
 
@@ -732,7 +731,7 @@ Google AI Studio / Gemini API អាចត្រឡប់ HTTP 400 ជាមួ�
 ### ផ្តល់អាទិភាពដល់ proxy សម្រាប់ការតភ្ជាប់នីមួយៗ
 
 ប្រើ [ការកំណត់រចនាសម្ព័ន្ធ proxy សម្រាប់ការតភ្ជាប់នីមួយៗ](../ops/PROXY_GUIDE.md#4-level-proxy-system)
-របស់ OmniRoute សម្រាប់ការតភ្ជាប់ Gemini ដែលរងផលប៉ះពាល់ រួចធ្វើ **Test Connection** និងសំណើតូចមួយ
+របស់ 67router សម្រាប់ការតភ្ជាប់ Gemini ដែលរងផលប៉ះពាល់ រួចធ្វើ **Test Connection** និងសំណើតូចមួយ
 ម្តងទៀតដោយប្រើ model ដដែល។ វារក្សាការផ្លាស់ប្តូរផ្លូវឱ្យមានវិសាលភាពត្រឹមការតភ្ជាប់នោះ។ ផ្ទៀងផ្ទាត់
 ថា container អាចចូលដល់ proxy ហើយការតភ្ជាប់ពិតជាជ្រើសរើស
 វា។ ការផ្លាស់ប្តូរផ្លូវមិនធានាថា upstream នឹងអនុញ្ញាតតាមលក្ខខណ្ឌតំបន់នោះទេ។
@@ -801,7 +800,7 @@ repository បច្ចុប្បន្នប្រើ Debian។ image ផ្�
 
 ## កំណត់សម្គាល់សំខាន់ៗ
 
-- **របៀប SQLite WAL:** គួរអនុញ្ញាតឱ្យ `docker stop` ដំណើរការរហូតដល់ចប់ ដើម្បីឱ្យ OmniRoute អាចធ្វើ checkpoint ការផ្លាស់ប្តូរចុងក្រោយត្រឡប់ទៅក្នុង `storage.sqlite`។ ឯកសារ Compose ដែលបានភ្ជាប់មកជាមួយបានកំណត់រយៈពេលអនុគ្រោះសម្រាប់ការបញ្ឈប់ចំនួន 40 វិនាទីរួចហើយ។ ប្រសិនបើអ្នកដំណើរការ image ដោយផ្ទាល់ សូមរក្សា `--stop-timeout 40`។
+- **របៀប SQLite WAL:** គួរអនុញ្ញាតឱ្យ `docker stop` ដំណើរការរហូតដល់ចប់ ដើម្បីឱ្យ 67router អាចធ្វើ checkpoint ការផ្លាស់ប្តូរចុងក្រោយត្រឡប់ទៅក្នុង `storage.sqlite`។ ឯកសារ Compose ដែលបានភ្ជាប់មកជាមួយបានកំណត់រយៈពេលអនុគ្រោះសម្រាប់ការបញ្ឈប់ចំនួន 40 វិនាទីរួចហើយ។ ប្រសិនបើអ្នកដំណើរការ image ដោយផ្ទាល់ សូមរក្សា `--stop-timeout 40`។
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** កំណត់ជា `true` ប្រសិនបើការបម្រុងទុកតាមកាលកំណត់/មុនពេលសរសេរ ត្រូវបានគ្រប់គ្រងពីខាងក្រៅ។ ការផ្លាស់ប្តូរទិន្នន័យរបស់មូលដ្ឋានទិន្នន័យដែលមានស្រាប់ នៅតែតម្រូវឱ្យមាន snapshot សុវត្ថិភាពដែលរក្សាទុកបានយូរ និងយន្តការការពារសម្រាប់ការផ្លាស់ប្តូរទិន្នន័យទ្រង់ទ្រាយធំដោយឡែក។
 - **ការរក្សាទុកទិន្នន័យជាអចិន្ត្រៃយ៍:** ត្រូវ mount volume ទៅកាន់ `/app/data` ជានិច្ច ដើម្បីរក្សាមូលដ្ឋានទិន្នន័យ សោ និងការកំណត់រចនាសម្ព័ន្ធរបស់អ្នក នៅពេល container ចាប់ផ្តើមឡើងវិញ។
 - **ការកំណត់រចនាសម្ព័ន្ធច្រក:** កំណត់ជំនួសអថេរបរិស្ថាន `PORT` ដើម្បីផ្លាស់ប្តូរច្រកលំនាំដើម `20128`។

@@ -209,7 +209,7 @@ provider contract-ዎች የሚሰሩ ሆነው ይቀጥላሉ። ተመሳሳ�
 3. የጥልቀት ገደብ፦ ከ4 ደረጃዎች በላይ ያለ nesting በstring `"[truncated]"` ይተካል።
 4. Array-ዎች በ32 elements ይገደባሉ።
 
-parsed provider error body ያላቸው call site-ዎች ብቻ `upstreamDetails`-ን ማስተላለፍ አለባቸው። የውስጥ OmniRoute
+parsed provider error body ያላቸው call site-ዎች ብቻ `upstreamDetails`-ን ማስተላለፍ አለባቸው። የውስጥ 67router
 error-ዎች (SSE parse failure-ዎች፣ ባዶ content፣ guardrail block-ዎች) ሊያካትቱት አይገባም።
 
 raw `err.stack`፣ `err.message`፣ ወይም ከruntime exception የመጣ ማንኛውንም string ወደ
@@ -217,7 +217,7 @@ raw `err.stack`፣ `err.message`፣ ወይም ከruntime exception የመጣ ማ
 በ`errorResponse` / `buildErrorBody(code, msg)` ማለፍ አለባቸው።
 
 የተመረጡ upstream 4xx-ዎች passthrough በclient auto-recovery የሚፈለገውን የprovider-ውን ደህንነቱ የተጠበቀ JSON shape እና አገላለጽ ይጠብቃል፣
-ነገር ግን byte-for-byte passthrough አይደለም፦ recursive sanitizer-ው ሁልጊዜ ከserialization በፊት ይሰራል። Cyclic፣ BigInt የያዙ፣ ወይም ጠላትነት ያለው `toJSON()` የያዙ body-ዎች fail closed ያደርጋሉ እና ለpassthrough ብቁ አይሆኑም። OCR እና moderation ተመሳሳይ ደንብ ይተገብራሉ፤ JSON ያልሆኑ፣ ባዶ፣ ወይም በተሳሳተ መለያ የቀረቡ upstream body-ዎች ወደ canonical OmniRoute JSON error envelope ይቀየራሉ።
+ነገር ግን byte-for-byte passthrough አይደለም፦ recursive sanitizer-ው ሁልጊዜ ከserialization በፊት ይሰራል። Cyclic፣ BigInt የያዙ፣ ወይም ጠላትነት ያለው `toJSON()` የያዙ body-ዎች fail closed ያደርጋሉ እና ለpassthrough ብቁ አይሆኑም። OCR እና moderation ተመሳሳይ ደንብ ይተገብራሉ፤ JSON ያልሆኑ፣ ባዶ፣ ወይም በተሳሳተ መለያ የቀረቡ upstream body-ዎች ወደ canonical 67router JSON error envelope ይቀየራሉ።
 
 ## የሚታወቅ የCodeQL ገደብ፦ ብጁ የማጽጃ ተግባራት አይታወቁም
 

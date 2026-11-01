@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Latviešu)
+# Providers Guide: Connect AI Models to 67router (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Īsumā**: Pakalpojumu sniedzējs ir savienojums ar MI pakalpojumu (piemēram, OpenAI, Anthropic vai Google). Lai izmantotu OmniRoute, nepieciešams vismaz viens pakalpojumu sniedzējs.
+> **Īsumā**: Pakalpojumu sniedzējs ir savienojums ar MI pakalpojumu (piemēram, OpenAI, Anthropic vai Google). Lai izmantotu 67router, nepieciešams vismaz viens pakalpojumu sniedzējs.
 
 ---
 
 ## Kas ir pakalpojumu sniedzējs?
 
-Uztveriet pakalpojumu sniedzēju kā **mobilo sakaru operatoru**. Tāpat kā zvanu veikšanai ir nepieciešams mobilo sakaru operators, AI modeļu izmantošanai ir nepieciešams AI pakalpojumu sniedzējs. OmniRoute ir kā tālrunis, kas darbojas ar **visiem operatoriem** — starp tiem var pārslēgties automātiski.
+Uztveriet pakalpojumu sniedzēju kā **mobilo sakaru operatoru**. Tāpat kā zvanu veikšanai ir nepieciešams mobilo sakaru operators, AI modeļu izmantošanai ir nepieciešams AI pakalpojumu sniedzējs. 67router ir kā tālrunis, kas darbojas ar **visiem operatoriem** — starp tiem var pārslēgties automātiski.
 
 ### Pakalpojumu sniedzēju veidi
 
@@ -31,8 +31,8 @@ Vispārīgus iestatīšanas norādījumus, ierobežojumus, problēmu novēršana
 ### Neobligāta bezmaksas pakalpojumu sniedzēju iestatīšana pirmajā palaišanas reizē
 
 Pirmās palaišanas vednī ir pieejama atsevišķa kartīte **Iestatīt bezmaksas pakalpojumu sniedzējus**. Tas iegūst pašreizējo
-piemēroto pakalpojumu sniedzēju sarakstu no OmniRoute pakalpojumu sniedzēju reģistra, kuriem nav nepieciešama autentifikācija, un pēc tam ļauj pārskatīt un atcelt katra
-pakalpojumu sniedzēja atlasi pirms apstiprināšanas. OmniRoute parāda pakalpojumu sniedzēja brīdinājumu un saiti uz tā vietni,
+piemēroto pakalpojumu sniedzēju sarakstu no 67router pakalpojumu sniedzēju reģistra, kuriem nav nepieciešama autentifikācija, un pēc tam ļauj pārskatīt un atcelt katra
+pakalpojumu sniedzēja atlasi pirms apstiprināšanas. 67router parāda pakalpojumu sniedzēja brīdinājumu un saiti uz tā vietni,
 lai vispirms varētu pārskatīt trešās puses noteikumus, privātuma nosacījumus, pieejamību un ātruma ierobežojumus.
 
 Šī darbība nav obligāta: vedņa pabeigšana nekad nemanāmi neizveido savienojumus ar bezmaksas pakalpojumu sniedzējiem.
@@ -80,7 +80,7 @@ droši atkārtoti mēģināt tikai neveiksmīgos savienojumus.
 
 ### D variants: lokālie MLX modeļi (Apple Silicon)
 
-Apple Silicon Mac datoros ar vienoto atmiņu OmniRoute atbalsta savienojumu ar lokāliem MLX modeļiem, kas darbojas, izmantojot `mlx-lm.server`, kā ar parastiem, ar OpenAI saderīgiem lokāliem pakalpojumu sniedzējiem.
+Apple Silicon Mac datoros ar vienoto atmiņu 67router atbalsta savienojumu ar lokāliem MLX modeļiem, kas darbojas, izmantojot `mlx-lm.server`, kā ar parastiem, ar OpenAI saderīgiem lokāliem pakalpojumu sniedzējiem.
 
 #### Priekšnosacījumi
 
@@ -110,14 +110,14 @@ Apple Silicon Mac datoros ar vienoto atmiņu OmniRoute atbalsta savienojumu ar l
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Izveidojiet savienojumu OmniRoute informācijas panelī**:
+3. **Izveidojiet savienojumu 67router informācijas panelī**:
    - Dodieties uz **Pakalpojumu sniedzēji** → **Pievienot pakalpojumu sniedzēju**
    - Atlasiet **MLX Gemma 26B** vai **MLX Qwen 3.8 27B**
    - Noklikšķiniet uz **Savienot** (API atslēga nav nepieciešama)
 
 4. **Izmantojiet ar OpenCode**:
    ```bash
-   # Konfigurējiet OpenCode, lai izmantotu OmniRoute
+   # Konfigurējiet OpenCode, lai izmantotu 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Tas jāpārvalda manuāli:
 - Darbiniet abus atsevišķās ierīcēs, vai
 - Apturiet vienu pirms otra palaišanas
 
-OmniRoute automātiski nepārvalda MLX serveru procesus — tas tikai novirza pieprasījumus uz jūsu konfigurētajiem ar OpenAI saderīgajiem galapunktiem.
+67router automātiski nepārvalda MLX serveru procesus — tas tikai novirza pieprasījumus uz jūsu konfigurētajiem ar OpenAI saderīgajiem galapunktiem.
 
 #### Rīku izsaukšanas atbalsts
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Nepietiek atmiņas         | Pārliecinieties, ka darbojas tikai viens modelis; aizveriet citas lietotnes; pārbaudiet Activity Monitor |
 | Savienojums noraidīts     | Pārliecinieties, ka serveris darbojas pareizajā portā (11435/11436)                                      |
 | Lēnas atbildes            | Pirmais pieprasījums ielādē modeli atmiņā (~30-60s); nākamie pieprasījumi ir ātri                        |
-| Rīku izsaukšana neizdodas | Pārliecinieties, ka modelis atbalsta rīkus; pārbaudiet OmniRoute žurnālus, vai nav tulkošanas kļūdu      |
+| Rīku izsaukšana neizdodas | Pārliecinieties, ka modelis atbalsta rīkus; pārbaudiet 67router žurnālus, vai nav tulkošanas kļūdu       |
 
 ---
 
@@ -236,12 +236,12 @@ Jūsu pakalpojumu sniedzējs tagad ir savienots. Varat to izmantot ar `model: "a
 
 ## Vairāku pakalpojumu sniedzēju izmantošana
 
-OmniRoute vislabāk darbojas ar **vairākiem pakalpojumu sniedzējiem**. Tas nodrošina:
+67router vislabāk darbojas ar **vairākiem pakalpojumu sniedzējiem**. Tas nodrošina:
 
-- **Automātisku pārslēgšanos** — ja viens pakalpojumu sniedzējs nedarbojas, OmniRoute izmēģina nākamo
-- **Izmaksu optimizāciju** — OmniRoute katram pieprasījumam izvēlas lētāko pakalpojumu sniedzēju
-- **Ātruma optimizāciju** — OmniRoute katram pieprasījumam izvēlas ātrāko pakalpojumu sniedzēju
-- **Kvalitātes optimizāciju** — OmniRoute katram uzdevumam izvēlas labāko pakalpojumu sniedzēju
+- **Automātisku pārslēgšanos** — ja viens pakalpojumu sniedzējs nedarbojas, 67router izmēģina nākamo
+- **Izmaksu optimizāciju** — 67router katram pieprasījumam izvēlas lētāko pakalpojumu sniedzēju
+- **Ātruma optimizāciju** — 67router katram pieprasījumam izvēlas ātrāko pakalpojumu sniedzēju
+- **Kvalitātes optimizāciju** — 67router katram uzdevumam izvēlas labāko pakalpojumu sniedzēju
 
 ### Ieteicamā konfigurācija
 
@@ -251,7 +251,7 @@ Lai iegūtu vislabāko pieredzi, pievienojiet vismaz **3 pakalpojumu sniedzējus
 2. **Viens ātrs pakalpojumu sniedzējs** (Groq, Cerebras) — ātrām atbildēm
 3. **Viens augstas kvalitātes pakalpojumu sniedzējs** (OpenAI, Anthropic, Google) — sarežģītiem uzdevumiem
 
-Pēc tam izmantojiet `model: "auto"`, un OmniRoute automātiski izvēlēsies labāko pakalpojumu sniedzēju katram pieprasījumam.
+Pēc tam izmantojiet `model: "auto"`, un 67router automātiski izvēlēsies labāko pakalpojumu sniedzēju katram pieprasījumam.
 
 ---
 
@@ -260,25 +260,25 @@ Pēc tam izmantojiet `model: "auto"`, un OmniRoute automātiski izvēlēsies lab
 ### OpenAI
 
 1. Iegūstiet API atslēgu: https://platform.openai.com/api-keys
-2. OmniRoute saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → OpenAI
+2. 67router saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → OpenAI
 3. Ielīmējiet API atslēgu → Savienot
 
 ### Anthropic
 
 1. Iegūstiet API atslēgu: https://console.anthropic.com/
-2. OmniRoute saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → Anthropic
+2. 67router saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → Anthropic
 3. Ielīmējiet API atslēgu → Savienot
 
 ### Google (Gemini)
 
 1. Iegūstiet API atslēgu: https://aistudio.google.com/apikey
-2. OmniRoute saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → Gemini
+2. 67router saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → Gemini
 3. Ielīmējiet API atslēgu → Savienot
 
 ### DeepSeek
 
 1. Iegūstiet API atslēgu: https://platform.deepseek.com/
-2. OmniRoute saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → DeepSeek
+2. 67router saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → DeepSeek
 3. Ielīmējiet API atslēgu → Savienot
 
 ### Qoder: izvēlieties akreditācijas datu transportu
@@ -286,12 +286,12 @@ Pēc tam izmantojiet `model: "auto"`, un OmniRoute automātiski izvēlēsies lab
 Qoder nepieciešami akreditācijas dati. Abiem tā transportiem ir atšķirīgas iespējas; modeļa nosaukums
 vien neidentificē, ko konkrētais savienojums spēj paveikt.
 
-| Akreditācijas dati                              | OmniRoute transports                             | Izsaucēja rīku izsaukšana                                              | Straumēšana                                                              |
-| ----------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| PAT, kas sākas ar `pt-`                         | Lokāls `qodercli` process OmniRoute resursdatorā | Netiek atbalstīta                                                      | Buferēta: SSE tiek izvadīts tikai pēc tam, kad CLI atgriež pilnu atbildi |
-| Piekļuves pilnvara vai API atslēga, kas nav PAT | Ar OpenAI saderīgs DashScope HTTP galapunkts     | Tiek pārsūtīta, ievērojot augšupstraumes modeļa/atslēgas ierobežojumus | Augšupstraumes HTTP/SSE ceļš                                             |
+| Akreditācijas dati                              | 67router transports                             | Izsaucēja rīku izsaukšana                                              | Straumēšana                                                              |
+| ----------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| PAT, kas sākas ar `pt-`                         | Lokāls `qodercli` process 67router resursdatorā | Netiek atbalstīta                                                      | Buferēta: SSE tiek izvadīts tikai pēc tam, kad CLI atgriež pilnu atbildi |
+| Piekļuves pilnvara vai API atslēga, kas nav PAT | Ar OpenAI saderīgs DashScope HTTP galapunkts    | Tiek pārsūtīta, ievērojot augšupstraumes modeļa/atslēgas ierobežojumus | Augšupstraumes HTTP/SSE ceļš                                             |
 
-PAT gadījumā instalējiet Qoder CLI tajā pašā resursdatorā vai konteinerā, kurā darbojas OmniRoute. Izpildāmajam failam
+PAT gadījumā instalējiet Qoder CLI tajā pašā resursdatorā vai konteinerā, kurā darbojas 67router. Izpildāmajam failam
 jābūt atrodamam kā `qodercli`, vai arī iestatiet `CLI_QODER_BIN` uz tā izpildāmā faila ceļu. CLI,
 kas instalēts tikai Docker resursdatorā, nav automātiski pieejams konteinerā. Ja binārie faili
 nav pieejami, tiek parādīta skaidra kļūda, kas norāda uz instalēšanu vai ceļa iestatīšanu.
@@ -324,16 +324,16 @@ un konfigurējams taimauts ir atsevišķi uzlabojumi; šī darbība tos nesola.
 ### Groq
 
 1. Iegūstiet API atslēgu: https://console.groq.com/
-2. OmniRoute saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → Groq
+2. 67router saskarnē: Pakalpojumu sniedzēji → Pievienot pakalpojumu sniedzēju → Groq
 3. Ielīmējiet API atslēgu → Savienot
 
 ---
 
 ## Biežāk uzdotie jautājumi
 
-### "Vai man ir jāmaksā par OmniRoute lietošanu?"
+### "Vai man ir jāmaksā par 67router lietošanu?"
 
-**Nē!** OmniRoute ir bezmaksas un atvērtā pirmkoda risinājums. Varat izmantot bezmaksas pakalpojumu sniedzējus (Kiro, Pollinations), neko nemaksājot. Jums jāmaksā tikai tad, ja izvēlaties izmantot maksas pakalpojumu sniedzējus.
+**Nē!** 67router ir bezmaksas un atvērtā pirmkoda risinājums. Varat izmantot bezmaksas pakalpojumu sniedzējus (Kiro, Pollinations), neko nemaksājot. Jums jāmaksā tikai tad, ja izvēlaties izmantot maksas pakalpojumu sniedzējus.
 
 ### "Ar kuru pakalpojumu sniedzēju man sākt?"
 
@@ -341,11 +341,11 @@ Sāciet ar **Kiro AI** — tas ir bezmaksas, tam nav nepieciešama API atslēga,
 
 ### "Vai varu vienlaikus izmantot vairākus pakalpojumu sniedzējus?"
 
-**Jā!** Tieši tam ir paredzēts OmniRoute. Pievienojiet vairākus pakalpojumu sniedzējus un izmantojiet `model: "auto"`, lai OmniRoute katram pieprasījumam izvēlētos piemērotāko.
+**Jā!** Tieši tam ir paredzēts 67router. Pievienojiet vairākus pakalpojumu sniedzējus un izmantojiet `model: "auto"`, lai 67router katram pieprasījumam izvēlētos piemērotāko.
 
 ### "Kas notiek, ja pakalpojumu sniedzējs pārstāj darboties?"
 
-OmniRoute automātiski izlaiž pakalpojumu sniedzējus, kuriem radušās kļūmes, un izmēģina nākamo. Jums nekas nav jādara.
+67router automātiski izlaiž pakalpojumu sniedzējus, kuriem radušās kļūmes, un izmēģina nākamo. Jums nekas nav jādara.
 
 ### "Kā atvienot pakalpojumu sniedzēju?"
 
@@ -353,17 +353,13 @@ Atveriet sadaļu Providers → noklikšķiniet uz pakalpojumu sniedzēja → nok
 
 ### "Vai varu izmantot savas esošās API atslēgas?"
 
-**Jā!** Ja jums jau ir OpenAI, Anthropic, Google u.c. API atslēgas, varat tās izmantot OmniRoute. Vienkārši ielīmējiet tās, kad pievienojat pakalpojumu sniedzēju.
+**Jā!** Ja jums jau ir OpenAI, Anthropic, Google u.c. API atslēgas, varat tās izmantot 67router. Vienkārši ielīmējiet tās, kad pievienojat pakalpojumu sniedzēju.
 
 ---
 
 ## Kas tālāk?
 
-- **[Automātiskās kombinēšanas ceļvedis](./AUTO-COMBO-GUIDE.md)** — Ļaujiet OmniRoute izvēlēties jums piemērotāko mākslīgo intelektu
+- **[Automātiskās kombinēšanas ceļvedis](./AUTO-COMBO-GUIDE.md)** — Ļaujiet 67router izvēlēties jums piemērotāko mākslīgo intelektu
 - **[Bezmaksas līmeņu ceļvedis](./FREE-TIERS-GUIDE.md)** — Iegūstiet bezmaksas mākslīgo intelektu bez kredītkartes
 - **[Problēmu novēršana](../guides/TROUBLESHOOTING.md)** — Novērsiet bieži sastopamas problēmas
 - **[Pakalpojumu sniedzēju uzziņu materiāls](../reference/PROVIDER_REFERENCE.md)** — Pilns 226 pakalpojumu sniedzēju saraksts
-
-## Cursor attēli
-
-Cursor plāna attēli izmanto `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Skatiet [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

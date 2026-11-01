@@ -8,7 +8,7 @@
 
 > **සත්යයේ මූලාශ්රය:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute මඟින් එක් එක් proxy එකට **ලිපින-family egress නියෝගයක්** තබාගැනීමට ඉඩ සලසයි. පෙරනිමියෙන් OS එක IPv4 හෝ IPv6 තෝරාගනී (dual-stack, "Happy Eyeballs"). ඔබ නියෝගය `ipv4` හෝ `ipv6` ලෙස සැකසූ විට, OmniRoute එම proxy එක හරහා සිදුවන සෑම සම්බන්ධතාවක්ම තෝරාගත් family එකට සීමා කරන අතර අනෙක් family එක වෙත ආපසු යාම වෙනුවට **fail-closed** වේ.
+67router මඟින් එක් එක් proxy එකට **ලිපින-family egress නියෝගයක්** තබාගැනීමට ඉඩ සලසයි. පෙරනිමියෙන් OS එක IPv4 හෝ IPv6 තෝරාගනී (dual-stack, "Happy Eyeballs"). ඔබ නියෝගය `ipv4` හෝ `ipv6` ලෙස සැකසූ විට, 67router එම proxy එක හරහා සිදුවන සෑම සම්බන්ධතාවක්ම තෝරාගත් family එකට සීමා කරන අතර අනෙක් family එක වෙත ආපසු යාම වෙනුවට **fail-closed** වේ.
 
 මෙම පිටුව නියෝගය කුමක්ද, එය පවතින්නේ ඇයි, ඔබ එය වින්යාස කරන්නේ කොතැනද, සහ runtime එක එය resolve කරන්නේ කෙසේද යන්න ලේඛනගත කරයි.
 
@@ -122,7 +122,7 @@ upstream-proxy ඇතුළත් කිරීම් සඳහා භාවි�
 
 ## `auto` විසඳෙන ආකාරය
 
-`family` යනු `auto` වූ විට, OmniRoute කිසිදු නියෝගයක් එක් **නොකරයි** — ප්රොක්සි URL එක පවතින ආකාරයෙන්ම භාවිත කෙරෙන අතර සම්බන්ධතා පවුල ආවේණිකව තීරණය වේ.
+`family` යනු `auto` වූ විට, 67router කිසිදු නියෝගයක් එක් **නොකරයි** — ප්රොක්සි URL එක පවතින ආකාරයෙන්ම භාවිත කෙරෙන අතර සම්බන්ධතා පවුල ආවේණිකව තීරණය වේ.
 
 URL ගොඩනැගීමේ අවස්ථාවේදී (`open-sse/utils/proxyDispatcher.ts` තුළ `proxyConfigToUrl` / `normalizeProxyUrl`), `auto` ප්රොක්සියක් කිසිදු සලකුණක් නොමැති සරල URL එකක් ලබා දෙයි:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 `auto` නොවන විධානයක්, සාමාන්යකරණය කළ proxy URL එකට එක් වරක් පමණක් අමුණන ලද තනි කෘත්රිම query සලකුණක් — `?family=ipv4` හෝ `?family=ipv6` — ලෙස ගමන් කරයි. මෙම සලකුණ කිසි විටෙකත් port විග්රහ කිරීම දූෂිත නොකරන ලෙස, එය හරියටම එක් වරක් ඉවත් කර නැවත ඇමිණීමට `normalizeProxyUrl` සැලකිලිමත් වේ.
 
-dispatcher එක ගොඩනඟන විට, සලකුණ කියවා නිශ්චිත සම්බන්ධතා family එකක් බවට පරිවර්තනය කරයි. host එක **ප්රතිවිරුද්ධ** family එකේ IP literal එකක් නම්, OmniRoute දෝෂයක් නිකුත් කරයි (පරස්පරතාවකදී fail-closed වේ):
+dispatcher එක ගොඩනඟන විට, සලකුණ කියවා නිශ්චිත සම්බන්ධතා family එකක් බවට පරිවර්තනය කරයි. host එක **ප්රතිවිරුද්ධ** family එකේ IP literal එකක් නම්, 67router දෝෂයක් නිකුත් කරයි (පරස්පරතාවකදී fail-closed වේ):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 ගැළපුම
 
-family එක ස්ථිර කිරීම SOCKS5 proxies සමඟ ක්රියා කරයි, නමුත් සම්මත `fetch-socks` මඟින් proxy hop එකේ family එක ස්ථිර කිරීමට අවශ්ය socket options නිරාවරණය නොකරයි. ඒ සඳහා OmniRoute තමන්ගේම connector එකක් සපයයි:
+family එක ස්ථිර කිරීම SOCKS5 proxies සමඟ ක්රියා කරයි, නමුත් සම්මත `fetch-socks` මඟින් proxy hop එකේ family එක ස්ථිර කිරීමට අවශ්ය socket options නිරාවරණය නොකරයි. ඒ සඳහා 67router තමන්ගේම connector එකක් සපයයි:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

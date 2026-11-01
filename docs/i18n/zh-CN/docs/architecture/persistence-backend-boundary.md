@@ -10,7 +10,7 @@
 
 ## 背景
 
-OmniRoute 当前通过 `src/lib/db/` 提供面向领域的持久化函数，而由 `src/lib/db/core.ts` 返回的共享连接实现了 `src/lib/db/adapters/types.ts` 中的同步 `SqliteAdapter` 契约。该适配器支持多种 SQLite 运行时，但其接口仍然以 SQLite 为中心：同步预处理语句、`pragma`、延迟事务和立即事务、原生备份/文件复制备份、检查点，以及本地数据库句柄。
+67router 当前通过 `src/lib/db/` 提供面向领域的持久化函数，而由 `src/lib/db/core.ts` 返回的共享连接实现了 `src/lib/db/adapters/types.ts` 中的同步 `SqliteAdapter` 契约。该适配器支持多种 SQLite 运行时，但其接口仍然以 SQLite 为中心：同步预处理语句、`pragma`、延迟事务和立即事务、原生备份/文件复制备份、检查点，以及本地数据库句柄。
 
 当前的启动和恢复流程也负责管理 SQLite 文件的生命周期。`src/lib/db/core.ts` 解析 `storage.sqlite`，维护一个进程级全局适配器，执行 WAL 检查点，在恢复期间保留选定的表，并在重建数据库时删除 SQLite 伴随文件。`src/lib/db/adapters/driverFactory.ts` 中的驱动程序选择逻辑会从受支持的 SQLite 运行时中进行选择；它并不是外部后端抽象。
 

@@ -36,9 +36,6 @@ vi.mock("@/app/(dashboard)/dashboard/settings/components/CodexAutoPingTab", () =
 vi.mock("@/app/(dashboard)/dashboard/settings/components/ClaudeFastModeTab", () => ({
   default: () => null,
 }));
-vi.mock("@/app/(dashboard)/dashboard/settings/components/MemorySkillsTab", () => ({
-  default: () => null,
-}));
 vi.mock("@/app/(dashboard)/dashboard/settings/components/ModelsDevSyncTab", () => ({
   default: () => null,
 }));
@@ -54,9 +51,6 @@ vi.mock("@/app/(dashboard)/dashboard/media-providers/components/MediaProviderHea
 }));
 vi.mock("@/app/(dashboard)/dashboard/media-providers/components/MediaProviderKindNav", () => ({
   default: () => null,
-}));
-vi.mock("@/app/(dashboard)/dashboard/media-providers/components/EmbeddingExampleCard", () => ({
-  EmbeddingExampleCard: () => null,
 }));
 vi.mock("@/app/(dashboard)/dashboard/media-providers/components/ImageExampleCard", () => ({
   ImageExampleCard: () => null,

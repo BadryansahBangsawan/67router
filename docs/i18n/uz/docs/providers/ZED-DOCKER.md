@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Docker ichida ishlaganda, standart "Zed Keychain’dan import qilish" jarayoni muvaffaqiyatsiz tugaydi,
+67router Docker ichida ishlaganda, standart "Zed Keychain’dan import qilish" jarayoni muvaffaqiyatsiz tugaydi,
 chunki konteyner host operatsion tizimidagi keychain demoniga (Linux’da libsecret,
 macOS’da Keychain, Windows’da Credential Manager) ulana olmaydi va host fayl tizimidagi
 Zed konfiguratsiya kataloglari odatiy holatda konteyner ichidan ko‘rinmaydi.
@@ -20,7 +20,7 @@ Konteyner ichida ikkita to‘sqinlik qiluvchi muammo yuzaga keladi:
    moduli Unix soketi yoki D-Bus seansi orqali operatsion tizimning keychain xizmati bilan aloqa qiladi.
    Ularning hech biri odatiy holatda konteynerga uzatilmaydi, shu sababli hisob ma’lumotlarini o‘qish doimo muvaffaqiyatsiz tugaydi.
 
-OmniRoute Docker muhitini ikkita evristika orqali aniqlaydi:
+67router Docker muhitini ikkita evristika orqali aniqlaydi:
 
 - `/.dockerenv` mavjudligi (konteyner ishga tushirilganda Docker demoni tomonidan yoziladi).
 - `/proc/1/cgroup` ichida `docker` satrining mavjudligi (Linux cgroup v1).
@@ -32,7 +32,7 @@ Evristikalardan biri ishga tushganda, import marshruti HTTP 422 javobini
 
 1. **Boshqaruv paneli → Provayderlar → Zed** bo‘limini oching.
 2. **Qo‘lda token import qilish** paneli keychain’dan import qilish kartasi ostida paydo bo‘ladi.
-   OmniRoute Docker’ni aniqlaganida, keychain’dan import qilishga birinchi muvaffaqiyatsiz
+   67router Docker’ni aniqlaganida, keychain’dan import qilishga birinchi muvaffaqiyatsiz
    urinishdan so‘ng bu panel avtomatik ravishda kengayadi.
 3. Ochiluvchi ro‘yxatdan provayderni tanlang (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter yoki DeepSeek).

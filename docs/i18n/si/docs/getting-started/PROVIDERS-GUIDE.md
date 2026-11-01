@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (සිංහල)
+# Providers Guide: Connect AI Models to 67router (සිංහල)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **කෙටියෙන්**: සපයන්නෙකු යනු AI සේවාවකට (OpenAI, Anthropic, Google වැනි) ඇති සම්බන්ධතාවයකි. OmniRoute භාවිත කිරීමට ඔබට අවම වශයෙන් එක් සපයන්නෙකුවත් අවශ්ය වේ.
+> **කෙටියෙන්**: සපයන්නෙකු යනු AI සේවාවකට (OpenAI, Anthropic, Google වැනි) ඇති සම්බන්ධතාවයකි. 67router භාවිත කිරීමට ඔබට අවම වශයෙන් එක් සපයන්නෙකුවත් අවශ්ය වේ.
 
 ---
 
 ## සැපයුම්කරුවෙකු යනු කුමක්ද?
 
-සැපයුම්කරුවෙකු **දුරකථන සේවා සපයන්නෙකු** ලෙස සිතන්න. ඇමතුම් ලබා ගැනීමට ඔබට දුරකථන සේවා සපයන්නෙකු අවශ්ය වන ආකාරයටම, AI ආකෘති භාවිත කිරීමට ඔබට AI සැපයුම්කරුවෙකු අවශ්ය වේ. OmniRoute යනු **සියලුම සේවා සපයන්නන්** සමඟ ක්රියා කරන දුරකථනයක් වැනියි — ඔබට ඒවා අතර ස්වයංක්රීයව මාරු විය හැක.
+සැපයුම්කරුවෙකු **දුරකථන සේවා සපයන්නෙකු** ලෙස සිතන්න. ඇමතුම් ලබා ගැනීමට ඔබට දුරකථන සේවා සපයන්නෙකු අවශ්ය වන ආකාරයටම, AI ආකෘති භාවිත කිරීමට ඔබට AI සැපයුම්කරුවෙකු අවශ්ය වේ. 67router යනු **සියලුම සේවා සපයන්නන්** සමඟ ක්රියා කරන දුරකථනයක් වැනියි — ඔබට ඒවා අතර ස්වයංක්රීයව මාරු විය හැක.
 
 ### සැපයුම්කරුවන්ගේ වර්ග
 
@@ -30,7 +30,7 @@
 
 ### විකල්ප පළමු ධාවන නොමිලේ-සැපයුම්කරු සැකසුම
 
-පළමු ධාවන විශාරදය පැහැදිලි **නොමිලේ සැපයුම්කරුවන් සකසන්න** කාඩ්පතක් පිරිනමයි. එය OmniRoute හි සත්යාපනය අවශ්ය නොවන සැපයුම්කරු ලේඛනයෙන් දැනට සුදුසුකම් ලබන ලැයිස්තුව සකසන අතර, තහවුරු කිරීමට පෙර එක් එක් සැපයුම්කරු සමාලෝචනය කර තේරීම ඉවත් කිරීමට ඔබට ඉඩ දෙයි. තෙවන පාර්ශ්ව කොන්දේසි, පෞද්ගලිකත්වය, ලබාගත හැකි බව සහ අනුපාත සීමා පළමුව සමාලෝචනය කිරීමට හැකි වන පරිදි OmniRoute විසින් සැපයුම්කරුගේ අවවාදාත්මක නිවේදනය සහ එහි අඩවියට සබැඳියක් පෙන්වයි.
+පළමු ධාවන විශාරදය පැහැදිලි **නොමිලේ සැපයුම්කරුවන් සකසන්න** කාඩ්පතක් පිරිනමයි. එය 67router හි සත්යාපනය අවශ්ය නොවන සැපයුම්කරු ලේඛනයෙන් දැනට සුදුසුකම් ලබන ලැයිස්තුව සකසන අතර, තහවුරු කිරීමට පෙර එක් එක් සැපයුම්කරු සමාලෝචනය කර තේරීම ඉවත් කිරීමට ඔබට ඉඩ දෙයි. තෙවන පාර්ශ්ව කොන්දේසි, පෞද්ගලිකත්වය, ලබාගත හැකි බව සහ අනුපාත සීමා පළමුව සමාලෝචනය කිරීමට හැකි වන පරිදි 67router විසින් සැපයුම්කරුගේ අවවාදාත්මක නිවේදනය සහ එහි අඩවියට සබැඳියක් පෙන්වයි.
 
 මෙම ක්රියාව විකල්පයකි: විශාරදය අවසන් කිරීමේදී කිසිවිටෙකත් නොමිලේ-සැපයුම්කරු සම්බන්ධතා නිහඬව නිර්මාණය නොකරයි. එය තවමත් නොමැති සැපයුම්කරුවන් පමණක් නිර්මාණය කරයි, දැනට පවතින අභිරුචිකරණය කළ සම්බන්ධතා වෙනස් නොකරයි, සහ නිර්මාණය කළ, දැනටමත් වින්යාස කර ඇති සහ අසාර්ථක වූ සැපයුම්කරුවන් පිළිබඳව වෙන් වෙන්ව වාර්තා කරයි. අර්ධ ප්රතිඵලයකින් පසු අසාර්ථක වූ ඒවා පමණක් ඔබට ආරක්ෂිතව නැවත උත්සාහ කළ හැක.
 
@@ -74,7 +74,7 @@
 
 ### විකල්පය D: දේශීය MLX මාදිලි (Apple Silicon)
 
-ඒකාබද්ධ මතකය සහිත Apple Silicon Macs සඳහා, සාමාන්ය OpenAI-අනුකූල දේශීය සැපයුම්කරුවන් ලෙස `mlx-lm.server` හරහා ක්රියාත්මක වන දේශීය MLX මාදිලිවලට සම්බන්ධ වීමට OmniRoute සහාය දක්වයි.
+ඒකාබද්ධ මතකය සහිත Apple Silicon Macs සඳහා, සාමාන්ය OpenAI-අනුකූල දේශීය සැපයුම්කරුවන් ලෙස `mlx-lm.server` හරහා ක්රියාත්මක වන දේශීය MLX මාදිලිවලට සම්බන්ධ වීමට 67router සහාය දක්වයි.
 
 #### පූර්ව අවශ්යතා
 
@@ -104,14 +104,14 @@
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **OmniRoute උපකරණ පුවරුව තුළ සම්බන්ධ කරන්න**:
+3. **67router උපකරණ පුවරුව තුළ සම්බන්ධ කරන්න**:
    - **සැපයුම්කරුවන්** → **සැපයුම්කරුවෙකු එක් කරන්න** වෙත යන්න
    - **MLX Gemma 26B** හෝ **MLX Qwen 3.8 27B** තෝරන්න
    - **සම්බන්ධ කරන්න** ක්ලික් කරන්න (API යතුරක් අවශ්ය නොවේ)
 
 4. **OpenCode සමඟ භාවිත කරන්න**:
    ```bash
-   # OmniRoute භාවිත කිරීමට OpenCode වින්යාස කරන්න
+   # 67router භාවිත කිරීමට OpenCode වින්යාස කරන්න
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@
 - දෙකම වෙන් වූ යන්ත්රවල ධාවනය කරන්න, හෝ
 - අනෙක ආරම්භ කිරීමට පෙර එකක් නවත්වන්න
 
-OmniRoute විසින් MLX සේවාදායක ක්රියාවලි ස්වයංක්රීයව කළමනාකරණය නොකරයි — එය කරන්නේ ඔබ වින්යාස කරන OpenAI-අනුකූල අන්ත ලක්ෂ්ය වෙත ඉල්ලීම් යොමු කිරීම පමණි.
+67router විසින් MLX සේවාදායක ක්රියාවලි ස්වයංක්රීයව කළමනාකරණය නොකරයි — එය කරන්නේ ඔබ වින්යාස කරන OpenAI-අනුකූල අන්ත ලක්ෂ්ය වෙත ඉල්ලීම් යොමු කිරීම පමණි.
 
 #### මෙවලම් කැඳවීමේ සහාය
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | මතකය ප්රමාණවත් නොවේ       | එක් මාදිලියක් පමණක් ක්රියාත්මක වන බව සහතික කරන්න; අනෙකුත් යෙදුම් වසන්න; Activity Monitor පරීක්ෂා කරන්න |
 | සම්බන්ධතාව ප්රතික්ෂේප විය | සේවාදායකය නිවැරදි port එකෙහි (11435/11436) ක්රියාත්මක වන බව සත්යාපනය කරන්න                             |
 | මන්දගාමී ප්රතිචාර         | පළමු ඉල්ලීම මාදිලිය මතකයට පූරණය කරයි (~30-60s); පසුව ලැබෙන ඉල්ලීම් වේගවත්ය                             |
-| මෙවලම් කැඳවීම අසාර්ථක වේ  | මාදිලිය මෙවලම් සඳහා සහාය දක්වන බව සහතික කරන්න; පරිවර්තන දෝෂ සඳහා OmniRoute ලොග් පරීක්ෂා කරන්න          |
+| මෙවලම් කැඳවීම අසාර්ථක වේ  | මාදිලිය මෙවලම් සඳහා සහාය දක්වන බව සහතික කරන්න; පරිවර්තන දෝෂ සඳහා 67router ලොග් පරීක්ෂා කරන්න           |
 
 ---
 
@@ -230,12 +230,12 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## බහු සැපයුම්කරුවන් භාවිත කිරීම
 
-OmniRoute වඩාත් හොඳින් ක්රියා කරන්නේ **බහු සැපයුම්කරුවන්** සමඟයි. මෙයින් ඔබට ලැබෙන්නේ:
+67router වඩාත් හොඳින් ක්රියා කරන්නේ **බහු සැපයුම්කරුවන්** සමඟයි. මෙයින් ඔබට ලැබෙන්නේ:
 
-- **ස්වයංක්රීය විකල්ප භාවිතය** — එක් සැපයුම්කරුවෙකු අසාර්ථක වුවහොත්, OmniRoute ඊළඟ සැපයුම්කරු උත්සාහ කරයි
-- **පිරිවැය ප්රශස්තකරණය** — OmniRoute එක් එක් ඉල්ලීම සඳහා අඩුම පිරිවැය සහිත සැපයුම්කරු තෝරා ගනී
-- **වේග ප්රශස්තකරණය** — OmniRoute එක් එක් ඉල්ලීම සඳහා වේගවත්ම සැපයුම්කරු තෝරා ගනී
-- **ගුණාත්මකභාව ප්රශස්තකරණය** — OmniRoute එක් එක් කාර්යය සඳහා හොඳම සැපයුම්කරු තෝරා ගනී
+- **ස්වයංක්රීය විකල්ප භාවිතය** — එක් සැපයුම්කරුවෙකු අසාර්ථක වුවහොත්, 67router ඊළඟ සැපයුම්කරු උත්සාහ කරයි
+- **පිරිවැය ප්රශස්තකරණය** — 67router එක් එක් ඉල්ලීම සඳහා අඩුම පිරිවැය සහිත සැපයුම්කරු තෝරා ගනී
+- **වේග ප්රශස්තකරණය** — 67router එක් එක් ඉල්ලීම සඳහා වේගවත්ම සැපයුම්කරු තෝරා ගනී
+- **ගුණාත්මකභාව ප්රශස්තකරණය** — 67router එක් එක් කාර්යය සඳහා හොඳම සැපයුම්කරු තෝරා ගනී
 
 ### නිර්දේශිත සැකසුම
 
@@ -245,7 +245,7 @@ OmniRoute වඩාත් හොඳින් ක්රියා කරන්න�
 2. **එක් වේගවත් සැපයුම්කරුවෙක්** (Groq, Cerebras) — ඉක්මන් ප්රතිචාර සඳහා
 3. **එක් උසස් ගුණාත්මක සැපයුම්කරුවෙක්** (OpenAI, Anthropic, Google) — සංකීර්ණ කාර්යයන් සඳහා
 
-ඉන්පසු `model: "auto"` භාවිත කරන්න; OmniRoute එක් එක් ඉල්ලීම සඳහා හොඳම සැපයුම්කරු ස්වයංක්රීයව තෝරා ගනු ඇත.
+ඉන්පසු `model: "auto"` භාවිත කරන්න; 67router එක් එක් ඉල්ලීම සඳහා හොඳම සැපයුම්කරු ස්වයංක්රීයව තෝරා ගනු ඇත.
 
 ---
 
@@ -254,25 +254,25 @@ OmniRoute වඩාත් හොඳින් ක්රියා කරන්න�
 ### OpenAI
 
 1. API යතුර ලබා ගන්න: https://platform.openai.com/api-keys
-2. OmniRoute තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → OpenAI
+2. 67router තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → OpenAI
 3. API යතුර අලවන්න → සම්බන්ධ කරන්න
 
 ### Anthropic
 
 1. API යතුර ලබා ගන්න: https://console.anthropic.com/
-2. OmniRoute තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → Anthropic
+2. 67router තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → Anthropic
 3. API යතුර අලවන්න → සම්බන්ධ කරන්න
 
 ### Google (Gemini)
 
 1. API යතුර ලබා ගන්න: https://aistudio.google.com/apikey
-2. OmniRoute තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → Gemini
+2. 67router තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → Gemini
 3. API යතුර අලවන්න → සම්බන්ධ කරන්න
 
 ### DeepSeek
 
 1. API යතුර ලබා ගන්න: https://platform.deepseek.com/
-2. OmniRoute තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → DeepSeek
+2. 67router තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → DeepSeek
 3. API යතුර අලවන්න → සම්බන්ධ කරන්න
 
 ### Qoder: අක්තපත්ර ප්රවාහන ක්රමය තෝරන්න
@@ -280,12 +280,12 @@ OmniRoute වඩාත් හොඳින් ක්රියා කරන්න�
 Qoder සඳහා අක්තපත්ර අවශ්ය වේ. එහි ප්රවාහන ක්රම දෙකට වෙනස් හැකියාවන් ඇත; ආකෘති නාමයකින්
 පමණක් යම් සම්බන්ධතාවයකට කළ හැකි දේ හඳුනාගත නොහැක.
 
-| අක්තපත්රය                             | OmniRoute ප්රවාහන ක්රමය                         | ඇමතුම්කරුගේ මෙවලම් ඇමතීම                        | ප්රවාහනය                                                            |
-| ------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------- |
-| `pt-` සමඟ ආරම්භ වන PAT                | OmniRoute සත්කාරකයේ දේශීය `qodercli` ක්රියාවලිය | සහාය නොදක්වයි                                   | බෆරගතයි: CLI සම්පූර්ණ පිළිතුර ලබා දීමෙන් පසුව පමණක් SSE නිකුත් කෙරේ |
-| PAT නොවන ප්රවේශ ටෝකනයක් හෝ API යතුරක් | DashScope OpenAI-අනුකූල HTTP අන්ත ලක්ෂ්යය       | ඉහළ මට්ටමේ ආකෘතියට/යතුරට යටත්ව, එලෙසම යවනු ලැබේ | ඉහළ මට්ටමේ HTTP/SSE මාර්ගය                                          |
+| අක්තපත්රය                             | 67router ප්රවාහන ක්රමය                         | ඇමතුම්කරුගේ මෙවලම් ඇමතීම                        | ප්රවාහනය                                                            |
+| ------------------------------------- | ---------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------- |
+| `pt-` සමඟ ආරම්භ වන PAT                | 67router සත්කාරකයේ දේශීය `qodercli` ක්රියාවලිය | සහාය නොදක්වයි                                   | බෆරගතයි: CLI සම්පූර්ණ පිළිතුර ලබා දීමෙන් පසුව පමණක් SSE නිකුත් කෙරේ |
+| PAT නොවන ප්රවේශ ටෝකනයක් හෝ API යතුරක් | DashScope OpenAI-අනුකූල HTTP අන්ත ලක්ෂ්යය      | ඉහළ මට්ටමේ ආකෘතියට/යතුරට යටත්ව, එලෙසම යවනු ලැබේ | ඉහළ මට්ටමේ HTTP/SSE මාර්ගය                                          |
 
-PAT එකක් සඳහා, OmniRoute තිබෙන සත්කාරකයේ හෝ කන්ටේනරයේම Qoder CLI ස්ථාපනය කරන්න. ක්රියාත්මක කළ හැකි ගොනුව
+PAT එකක් සඳහා, 67router තිබෙන සත්කාරකයේ හෝ කන්ටේනරයේම Qoder CLI ස්ථාපනය කරන්න. ක්රියාත්මක කළ හැකි ගොනුව
 `qodercli` ලෙස සොයාගත හැකි විය යුතුය, නැතහොත් `CLI_QODER_BIN` එහි ක්රියාත්මක කළ හැකි ගොනු මාර්ගයට සකසන්න. Docker සත්කාරකයේ
 පමණක් ස්ථාපනය කළ CLI එකක් ස්වයංක්රීයව කන්ටේනරය තුළ නොපවතී. ද්විමය ගොනු අස්ථානගත නම්,
 ස්ථාපනය හෝ මාර්ග සැකසුම වෙත ඔබව යොමු කරන පැහැදිලි දෝෂයක් ඇති වේ.
@@ -318,16 +318,16 @@ CLI විසින්ම භාවිත කළ හැකි අභ්යන්
 ### Groq
 
 1. API යතුර ලබා ගන්න: https://console.groq.com/
-2. OmniRoute තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → Groq
+2. 67router තුළ: සැපයුම්කරුවන් → සැපයුම්කරුවෙකු එක් කරන්න → Groq
 3. API යතුර අලවන්න → සම්බන්ධ කරන්න
 
 ---
 
 ## පොදු ප්රශ්න
 
-### "OmniRoute භාවිත කිරීමට මට ගෙවීමට අවශ්යද?"
+### "67router භාවිත කිරීමට මට ගෙවීමට අවශ්යද?"
 
-**නැහැ!** OmniRoute නොමිලේ ලබාගත හැකි විවෘත මූලාශ්ර මෘදුකාංගයකි. ඔබට කිසිදු ගෙවීමකින් තොරව නොමිලේ සපයන්නන් (Kiro, Pollinations) භාවිත කළ හැකිය. ඔබ ගෙවිය යුත්තේ ගෙවීම් සහිත සපයන්නන් භාවිත කිරීමට තෝරාගතහොත් පමණි.
+**නැහැ!** 67router නොමිලේ ලබාගත හැකි විවෘත මූලාශ්ර මෘදුකාංගයකි. ඔබට කිසිදු ගෙවීමකින් තොරව නොමිලේ සපයන්නන් (Kiro, Pollinations) භාවිත කළ හැකිය. ඔබ ගෙවිය යුත්තේ ගෙවීම් සහිත සපයන්නන් භාවිත කිරීමට තෝරාගතහොත් පමණි.
 
 ### "මා මුලින්ම භාවිත කළ යුත්තේ කුමන සපයන්නාද?"
 
@@ -335,11 +335,11 @@ CLI විසින්ම භාවිත කළ හැකි අභ්යන්
 
 ### "මට එකවර සපයන්නන් කිහිපදෙනෙකු භාවිත කළ හැකිද?"
 
-**ඔව්!** OmniRoute හි සම්පූර්ණ අරමුණ එයයි. සපයන්නන් කිහිපදෙනෙකු සම්බන්ධ කර, එක් එක් ඉල්ලීම සඳහා හොඳම සපයන්නා තෝරාගැනීමට OmniRoute වෙත ඉඩ දීම සඳහා `model: "auto"` භාවිත කරන්න.
+**ඔව්!** 67router හි සම්පූර්ණ අරමුණ එයයි. සපයන්නන් කිහිපදෙනෙකු සම්බන්ධ කර, එක් එක් ඉල්ලීම සඳහා හොඳම සපයන්නා තෝරාගැනීමට 67router වෙත ඉඩ දීම සඳහා `model: "auto"` භාවිත කරන්න.
 
 ### "සපයන්නෙකුගේ සේවාව අක්රිය වුවහොත් කුමක් සිදුවේද?"
 
-OmniRoute අසාර්ථක වූ සපයන්නන් ස්වයංක්රීයව මඟහැර ඊළඟ සපයන්නා උත්සාහ කරයි. ඔබට කිසිවක් කිරීමට අවශ්ය නැත.
+67router අසාර්ථක වූ සපයන්නන් ස්වයංක්රීයව මඟහැර ඊළඟ සපයන්නා උත්සාහ කරයි. ඔබට කිසිවක් කිරීමට අවශ්ය නැත.
 
 ### "සපයන්නෙකු විසන්ධි කරන්නේ කෙසේද?"
 
@@ -347,17 +347,13 @@ Providers වෙත යන්න → සපයන්නා මත ක්ලි�
 
 ### "මට දැනටමත් ඇති API යතුරු භාවිත කළ හැකිද?"
 
-**ඔව්!** ඔබට දැනටමත් OpenAI, Anthropic, Google ආදිය සඳහා API යතුරු තිබේ නම්, ඒවා OmniRoute තුළ භාවිත කළ හැකිය. සපයන්නා සම්බන්ධ කරන විට ඒවා අලවන්න.
+**ඔව්!** ඔබට දැනටමත් OpenAI, Anthropic, Google ආදිය සඳහා API යතුරු තිබේ නම්, ඒවා 67router තුළ භාවිත කළ හැකිය. සපයන්නා සම්බන්ධ කරන විට ඒවා අලවන්න.
 
 ---
 
 ## මීළඟට කුමක්ද?
 
-- **[ස්වයංක්රීය සංයෝජන මාර්ගෝපදේශය](./AUTO-COMBO-GUIDE.md)** — ඔබ වෙනුවෙන් හොඳම AI තෝරා ගැනීමට OmniRoute වෙත ඉඩ දෙන්න
+- **[ස්වයංක්රීය සංයෝජන මාර්ගෝපදේශය](./AUTO-COMBO-GUIDE.md)** — ඔබ වෙනුවෙන් හොඳම AI තෝරා ගැනීමට 67router වෙත ඉඩ දෙන්න
 - **[නොමිලේ ස්ථර පිළිබඳ මාර්ගෝපදේශය](./FREE-TIERS-GUIDE.md)** — ක්රෙඩිට් කාඩ්පතක් නොමැතිව නොමිලේ AI ලබා ගන්න
 - **[දෝෂ නිරාකරණය](../guides/TROUBLESHOOTING.md)** — පොදු ගැටලු විසඳන්න
 - **[සපයන්නන් පිළිබඳ යොමුව](../reference/PROVIDER_REFERENCE.md)** — සපයන්නන් 226 දෙනාගේ සම්පූර්ණ ලැයිස්තුව
-
-## Cursor රූප
-
-Cursor සැලසුම් රූප `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) භාවිත කරයි. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) බලන්න.

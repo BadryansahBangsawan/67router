@@ -1,4 +1,4 @@
-import { systemMessageMustBeFirst } from "../../../src/lib/memory/injection.ts";
+import { systemMessageMustBeFirst } from "./systemMessagePolicy.ts";
 
 type Message = { role: string; content: unknown; [key: string]: unknown };
 
@@ -19,8 +19,8 @@ function toTextContent(content: unknown): string {
 
 /**
  * #7293: hoist every `system`-role message onto index 0 for providers that reject a
- * non-first system message (`systemMessageMustBeFirst()` — the single source of truth
- * already used by `src/lib/memory/injection.ts`'s memory-injection half, #6135/PR#6225).
+ * non-first system message (`systemMessageMustBeFirst()` in `./systemMessagePolicy.ts` — the
+ * single source of truth for strict providers, #6135/PR#6225).
  *
  * `translateRequest()` is the single outbound choke point every request passes through,
  * including same-format (OpenAI→OpenAI) passthrough where none of the format-specific

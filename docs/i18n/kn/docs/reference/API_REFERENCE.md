@@ -6,7 +6,7 @@
 
 🌐 **ಭಾಷೆಗಳು:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API ಗಾಗಿ ಪ್ರಮುಖ ಉಲ್ಲೇಖ. ಇದು ಸಾರ್ವಜನಿಕ `/v1` ಮೇಲ್ಮೈ ಮತ್ತು ಅತಿ ಹೆಚ್ಚು ಬಳಸಲಾಗುವ ನಿರ್ವಹಣಾ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳನ್ನು ಒಳಗೊಂಡಿದೆ; ಯಂತ್ರ-ಓದಬಹುದಾದ [`docs/openapi.yaml`](../openapi.yaml) ಮತ್ತು `src/app/api/` ಅಡಿಯಲ್ಲಿರುವ ರೂಟ್ ಟ್ರೀ ಸಮಗ್ರ ಮೂಲಗಳಾಗಿವೆ.
+67router API ಗಾಗಿ ಪ್ರಮುಖ ಉಲ್ಲೇಖ. ಇದು ಸಾರ್ವಜನಿಕ `/v1` ಮೇಲ್ಮೈ ಮತ್ತು ಅತಿ ಹೆಚ್ಚು ಬಳಸಲಾಗುವ ನಿರ್ವಹಣಾ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳನ್ನು ಒಳಗೊಂಡಿದೆ; ಯಂತ್ರ-ಓದಬಹುದಾದ [`docs/openapi.yaml`](../openapi.yaml) ಮತ್ತು `src/app/api/` ಅಡಿಯಲ್ಲಿರುವ ರೂಟ್ ಟ್ರೀ ಸಮಗ್ರ ಮೂಲಗಳಾಗಿವೆ.
 
 OpenAI-ಹೊಂದಾಣಿಕೆಯ ಪ್ರೋಟೋಕಾಲ್ ಮತ್ತು ಪೂರೈಕೆದಾರರ ಸಾಮರ್ಥ್ಯ ಮ್ಯಾಟ್ರಿಕ್ಸ್ ಕುರಿತ ಕೇಂದ್ರೀಕೃತ ಮಾಹಿತಿಗಾಗಿ,
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) ನೋಡಿ.
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | ಪ್ರತಿಕ್ರಿಯೆ | `HIT` ಅಥವಾ `MISS` (ಸ್ಟ್ರೀಮಿಂಗ್ ಅಲ್ಲದ)                                                                                                                                                                                       |
 | `X-OmniRoute-Idempotent` | ಪ್ರತಿಕ್ರಿಯೆ | ನಕಲು ನಿವಾರಣೆಯಾಗಿದ್ದರೆ `true`                                                                                                                                                                                                |
 | `X-OmniRoute-Progress`   | ಪ್ರತಿಕ್ರಿಯೆ | ಪ್ರಗತಿ ಟ್ರ್ಯಾಕಿಂಗ್ ಆನ್ ಆಗಿದ್ದರೆ `enabled`                                                                                                                                                                                   |
-| `X-OmniRoute-Session-Id` | ಪ್ರತಿಕ್ರಿಯೆ | OmniRoute ಬಳಸಿದ ಪರಿಣಾಮಕಾರಿ ಸೆಷನ್ ID                                                                                                                                                                                         |
+| `X-OmniRoute-Session-Id` | ಪ್ರತಿಕ್ರಿಯೆ | 67router ಬಳಸಿದ ಪರಿಣಾಮಕಾರಿ ಸೆಷನ್ ID                                                                                                                                                                                          |
 | `X-OmniRoute-Request-Id` | ಪ್ರತಿಕ್ರಿಯೆ | ವಿನಂತಿಯ ಸಹಸಂಬಂಧ ID (ತಿಳಿದಿರುವಾಗ)                                                                                                                                                                                            |
-| `X-OmniRoute-Version`    | ಪ್ರತಿಕ್ರಿಯೆ | OmniRoute ಬಿಲ್ಡ್ ಆವೃತ್ತಿ (ಯಾವಾಗಲೂ ಇರುತ್ತದೆ)                                                                                                                                                                                 |
+| `X-OmniRoute-Version`    | ಪ್ರತಿಕ್ರಿಯೆ | 67router ಬಿಲ್ಡ್ ಆವೃತ್ತಿ (ಯಾವಾಗಲೂ ಇರುತ್ತದೆ)                                                                                                                                                                                  |
 | `X-OmniRoute-Cost-Saved` | ಪ್ರತಿಕ್ರಿಯೆ | HIT ಆದಾಗ ಕ್ಯಾಶ್ ತಪ್ಪಿಸಿದ USD ವೆಚ್ಚ (ಕ್ಯಾಶ್ ಹಿಟ್ಗಳಿಗೆ ಮಾತ್ರ)                                                                                                                                                                 |
 | `X-OmniRoute-Decision`   | ಪ್ರತಿಕ್ರಿಯೆ | ರೂಟಿಂಗ್ ಟ್ರೇಸ್: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` ಎಂಬುದು ಕಾಂಬೊ ತಂತ್ರವಾಗಿದೆ, ಅಥವಾ ಕಾಂಬೊ ಅಲ್ಲದ ವಿನಂತಿಗೆ `single`) — ಪೂರ್ಣಗೊಳಿಸುವಿಕೆ ಪ್ರತಿಕ್ರಿಯೆಗಳಲ್ಲಿ ಯಾವಾಗಲೂ ಇರುತ್ತದೆ                            |
 
@@ -88,11 +88,11 @@ Content-Type: application/json
 
 #### ಪ್ರತಿ ವಿನಂತಿಗೆ ಖಾತೆ ಪಿನ್ನಿಂಗ್
 
-ಒಂದು ಪೂರೈಕೆದಾರನು ಹಲವು ಸಂಪರ್ಕಗಳನ್ನು (ಖಾತೆಗಳು ಅಥವಾ ಕೀಗಳು) ಹೊಂದಿರುವಾಗ, OmniRoute ಸಾಮಾನ್ಯವಾಗಿ ತನ್ನ ಖಾತೆ-ಆಯ್ಕೆ ಕಾರ್ಯತಂತ್ರದ ಮೂಲಕ ಒಂದನ್ನು ಆರಿಸುತ್ತದೆ. ಬದಲಿಗೆ, ವಿನಂತಿಯೊಂದು `x-omniroute-connection` ಹೆಡರ್ನೊಂದಿಗೆ ಒಂದು ನಿರ್ದಿಷ್ಟ ಸಂಪರ್ಕವನ್ನು ಪಿನ್ ಮಾಡಬಹುದು:
+ಒಂದು ಪೂರೈಕೆದಾರನು ಹಲವು ಸಂಪರ್ಕಗಳನ್ನು (ಖಾತೆಗಳು ಅಥವಾ ಕೀಗಳು) ಹೊಂದಿರುವಾಗ, 67router ಸಾಮಾನ್ಯವಾಗಿ ತನ್ನ ಖಾತೆ-ಆಯ್ಕೆ ಕಾರ್ಯತಂತ್ರದ ಮೂಲಕ ಒಂದನ್ನು ಆರಿಸುತ್ತದೆ. ಬದಲಿಗೆ, ವಿನಂತಿಯೊಂದು `x-omniroute-connection` ಹೆಡರ್ನೊಂದಿಗೆ ಒಂದು ನಿರ್ದಿಷ್ಟ ಸಂಪರ್ಕವನ್ನು ಪಿನ್ ಮಾಡಬಹುದು:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -121,8 +121,8 @@ Claude Code ಕಸ್ಟಮ್ ಹೆಡರ್ಗಳನ್ನು `ANTHROPIC_CUST
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -138,7 +138,7 @@ Claude Code ಕಸ್ಟಮ್ ಹೆಡರ್ಗಳನ್ನು `ANTHROPIC_CUST
 ## ಎಕ್ಸ್ಕ್ಲೂಸಿವ್ ಮ್ಯಾನೇಜ್ಡ್ ಸೆಷನ್ ಲೀಸ್ಗಳು
 
 ಎಕ್ಸ್ಕ್ಲೂಸಿವ್ ಮ್ಯಾನೇಜ್ಡ್ ಸೆಷನ್ ಲೀಸಿಂಗ್ ಎಂಬುದು ಆಯ್ಕೆಮಾಡಿ ಬಳಸಬಹುದಾದ, ಕ್ಲೈಂಟ್-ತಟಸ್ಥ ರೂಟಿಂಗ್ ಒಪ್ಪಂದವಾಗಿದೆ: ಒಬ್ಬ ಸಕ್ರಿಯ ಮಾಲೀಕರು
-ಒಂದು ಅರ್ಹ OmniRoute ಸಂಪರ್ಕವನ್ನು ಹೊಂದಿರುತ್ತಾರೆ. ಇದು ಯಾವುದೇ ಮಾದರಿಯನ್ನು ಲೀಸ್ಗೆ ನೀಡುವುದಿಲ್ಲ, OAuth ಅಗತ್ಯವಿಲ್ಲ, ನಿರ್ದಿಷ್ಟ
+ಒಂದು ಅರ್ಹ 67router ಸಂಪರ್ಕವನ್ನು ಹೊಂದಿರುತ್ತಾರೆ. ಇದು ಯಾವುದೇ ಮಾದರಿಯನ್ನು ಲೀಸ್ಗೆ ನೀಡುವುದಿಲ್ಲ, OAuth ಅಗತ್ಯವಿಲ್ಲ, ನಿರ್ದಿಷ್ಟ
 ಕ್ಲೈಂಟ್ ಅನ್ನು ಗುರುತಿಸುವುದಿಲ್ಲ ಅಥವಾ ನಿರ್ದಿಷ್ಟ ಪೂರೈಕೆದಾರರ ಅಗತ್ಯವಿಲ್ಲ.
 
 ದೃಢೀಕರಿಸುವ API ಕೀ `lease:exclusive` ಸ್ಕೋಪ್ ಮತ್ತು ಸ್ಪಷ್ಟವಾದ, ಖಾಲಿಯಲ್ಲದ
@@ -188,7 +188,7 @@ JSON ಬಾಡಿಯಲ್ಲಿ ಜನರೇಶನ್ ಅನ್ನು ಒದಗ
 
 ಈ ಆಯ್ಕಾಧಾರಿತ ಸ್ಥಿತಿ ಕ್ರಿಯೆಯನ್ನು ಅಪಾರದರ್ಶಕ ಮಾಲೀಕ, ದೃಢೀಕರಿಸಿದ ಮ್ಯಾನೇಜ್ಡ್ API ಕೀ ಮತ್ತು ನಿಖರವಾದ
 ಸಕ್ರಿಯ ಜನರೇಶನ್ ಮೂಲಕ ಒಂದೇ ಡೇಟಾಬೇಸ್ ಟ್ರಾನ್ಸಾಕ್ಷನ್ನಲ್ಲಿ ನಿರ್ಬಂಧಿಸಲಾಗುತ್ತದೆ. `displayName` ಕೇವಲ ಟ್ರಿಮ್ ಮಾಡಿದ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾದ
-ಸಂಪರ್ಕದ ಹೆಸರಾಗಿದೆ; ಸುರಕ್ಷಿತವಾಗಿ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾದ ಹೆಸರು ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲದಿದ್ದಾಗ ಅದು `null` ಆಗಿರುತ್ತದೆ. OmniRoute ಎಂದಿಗೂ
+ಸಂಪರ್ಕದ ಹೆಸರಾಗಿದೆ; ಸುರಕ್ಷಿತವಾಗಿ ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾದ ಹೆಸರು ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲದಿದ್ದಾಗ ಅದು `null` ಆಗಿರುತ್ತದೆ. 67router ಎಂದಿಗೂ
 ಇಮೇಲ್ ಅಥವಾ ರಚಿಸಲಾದ ಖಾತೆ ಗುರುತನ್ನು ಬದಲಿಯಾಗಿ ಬಳಸುವುದಿಲ್ಲ. ಪೂರೈಕೆದಾರ ಮೌಲ್ಯವು ಸಂವೇದನಾಶೀಲವಲ್ಲದ ಡಿಸ್ಪ್ಲೇ ಲೇಬಲ್ ಆಗಿದ್ದು, ಎಂದಿಗೂ
 ರಚಿಸಲಾದ ಹೊಂದಾಣಿಕೆಯ-ಪೂರೈಕೆದಾರ ಐಡೆಂಟಿಫೈಯರ್ ಅಲ್ಲ. ರುಜುವಾತುಗಳು, ಟೋಕನ್ಗಳು, ಕುಕೀಗಳು, ಕಚ್ಚಾ ಸಂಪರ್ಕ ಅಥವಾ API
 ಕೀ ಐಡಿಗಳು, ಮಾಲೀಕರ ಹ್ಯಾಶ್ಗಳು, ಫೆನ್ಸಿಂಗ್ ಸೀಕ್ರೆಟ್ಗಳು ಮತ್ತು ಆಂತರಿಕ ರೂಟಿಂಗ್ ಡೇಟಾವನ್ನು ಹೊರಗಿಡಲಾಗುತ್ತದೆ.
@@ -228,7 +228,7 @@ X-OmniRoute-Lease-Generation: 1
 
 ಈ ಪ್ರತಿಕ್ರಿಯೆಯು ಸಾಮಾನ್ಯ ಅರ್ಹ ಸೆಟ್ ಖಾಲಿಯಾಗಿರಲಿಲ್ಲ ಮತ್ತು ಪ್ರತಿಯೊಂದು ಮುಕ್ತ ಅಭ್ಯರ್ಥಿಯೂ
 ಬೇರೊಬ್ಬರ ಸಕ್ರಿಯ ಲೀಸ್ನ ಹಿಡಿತದಲ್ಲಿತ್ತು ಎಂಬುದನ್ನು ಮಾತ್ರ ಸೂಚಿಸುತ್ತದೆ. ಬೆಂಬಲಿಸದ ಮಾದರಿಗಳು/ಪೂರೈಕೆದಾರರು, ನೀತಿ ಹೊಂದಾಣಿಕೆಯಾಗದಿರುವುದು, ಕೂಲ್ಡೌನ್, ಕೋಟಾ,
-ಆರೋಗ್ಯ ಮತ್ತು ಇತರ ಸಾಮಾನ್ಯ ಅರ್ಹತಾ ವೈಫಲ್ಯಗಳು ತಮ್ಮ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ OmniRoute ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತವೆ.
+ಆರೋಗ್ಯ ಮತ್ತು ಇತರ ಸಾಮಾನ್ಯ ಅರ್ಹತಾ ವೈಫಲ್ಯಗಳು ತಮ್ಮ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ 67router ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತವೆ.
 
 ### `x-omniroute-compression`
 
@@ -301,7 +301,7 @@ EmbeddingsV5Request ಡಾಕ್ಯುಮೆಂಟ್ಗಳನ್ನೂ ಸ್�
 ```
 
 ಮೂಲ `{ image | audio | video | pdf }` ಮೌಲ್ಯಗಳು ಸಾರ್ವಜನಿಕ HTTPS URL, `data:` URI, ಅಥವಾ ಕಚ್ಚಾ
-base64 ಆಗಿರಬಹುದು. OmniRoute ಆ ಆಬ್ಜೆಕ್ಟ್ಗಳನ್ನು ಸ್ಟ್ರಿಂಗ್ ಆಗಿ ಪರಿವರ್ತಿಸುವುದಿಲ್ಲ ಅಥವಾ ಮೂಲ ಇಮೇಜ್ URL ಗಳನ್ನು ಪಡೆಯುವುದಿಲ್ಲ — ಸಾರ್ವಜನಿಕ ಮಾಧ್ಯಮವನ್ನು Jina
+base64 ಆಗಿರಬಹುದು. 67router ಆ ಆಬ್ಜೆಕ್ಟ್ಗಳನ್ನು ಸ್ಟ್ರಿಂಗ್ ಆಗಿ ಪರಿವರ್ತಿಸುವುದಿಲ್ಲ ಅಥವಾ ಮೂಲ ಇಮೇಜ್ URL ಗಳನ್ನು ಪಡೆಯುವುದಿಲ್ಲ — ಸಾರ್ವಜನಿಕ ಮಾಧ್ಯಮವನ್ನು Jina
 ಸ್ವತಃ ಪಡೆಯುತ್ತದೆ. ಹೆಚ್ಚುವರಿ Jina ಫೀಲ್ಡ್ಗಳನ್ನು (`task`, `normalized`, `truncate`, `embedding_type`)
 ಫಾರ್ವರ್ಡ್ ಮಾಡಲಾಗುತ್ತದೆ. ಪಠ್ಯ-ಮಾತ್ರದ Jina SKU ಗಳು ಇನ್ನೂ ಪಠ್ಯೇತರ ಡಾಕ್ಯುಮೆಂಟ್ಗಳನ್ನು ತಿರಸ್ಕರಿಸುತ್ತವೆ.
 
@@ -449,7 +449,7 @@ Azure Document Intelligence ನ `analyze` API ಅಸಮಕಾಲಿಕವಾಗ�
 
 ### Vertex AI DeepSeek OCR ದೃಢೀಕರಣ ಮತ್ತು ಎಂಡ್ಪಾಯಿಂಟ್ ಪರಿಹಾರ
 
-`vertex-deepseek-ocr`, ಚಾಟ್/ಚಿತ್ರ ಸಂಚಾರಕ್ಕಾಗಿ OmniRoute ಈಗಾಗಲೇ ಬೆಂಬಲಿಸುವ ಅದೇ Vertex AI ದೃಢೀಕರಣವನ್ನು
+`vertex-deepseek-ocr`, ಚಾಟ್/ಚಿತ್ರ ಸಂಚಾರಕ್ಕಾಗಿ 67router ಈಗಾಗಲೇ ಬೆಂಬಲಿಸುವ ಅದೇ Vertex AI ದೃಢೀಕರಣವನ್ನು
 ಮರುಬಳಕೆ ಮಾಡುತ್ತದೆ (`open-sse/executors/vertex.ts`): ಸಂಪರ್ಕದ API ಕೀ Service Account JSON ರುಜುವಾತಾಗಿರಬಹುದು
 (JWT-bearer ಹರಿವಿನ ಮೂಲಕ ಅಲ್ಪಾವಧಿಯ OAuth ಪ್ರವೇಶ ಟೋಕನ್ಗಾಗಿ ವಿನಿಮಯ ಮಾಡಲಾಗುತ್ತದೆ)
 ಅಥವಾ ಈಗಾಗಲೇ ನೀಡಲಾದ OAuth ಪ್ರವೇಶ ಟೋಕನ್ ಆಗಿರಬಹುದು, ಅದನ್ನು ಹಾಗೆಯೇ ಬಳಸಲಾಗುತ್ತದೆ. ಅಪ್ಸ್ಟ್ರೀಮ್ ಎಂಡ್ಪಾಯಿಂಟ್ URL, ಸಂಪರ್ಕದ ಪ್ರಾಜೆಕ್ಟ್ ಮತ್ತು
@@ -472,7 +472,7 @@ Authorization: Bearer your-api-key
 
 ### ಮಾದರಿ ಬೆಲೆಗಳು (`pricing`)
 
-OmniRouteಗೆ ಮಾದರಿಯ ಬೆಲೆ ತಿಳಿದಿರುವಾಗ, ನಮೂದು ಒಂದು `pricing` ಆಬ್ಜೆಕ್ಟ್ ಅನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ವೆಚ್ಚ ಲೆಕ್ಕಾಚಾರವು ಬಳಸುವ ಬೆಲೆಪಟ್ಟಿಯಿಂದ ಬೆಲೆ ಬರುತ್ತದೆ: ಅಂತರ್ನಿರ್ಮಿತ ಡೀಫಾಲ್ಟ್ಗಳು, ಸಿಂಕ್ ಮಾಡಿದ ಬೆಲೆಗಳು ಮತ್ತು `/api/pricing` ಮೂಲಕ ಹೊಂದಿಸಲಾದ ಓವರ್ರೈಡ್ಗಳು. ಇವು ಪಟ್ಟಿ ಬೆಲೆಗಳಾಗಿರುವುದರಿಂದ, ಚಂದಾದಾರಿಕೆ ಪೂರೈಕೆದಾರರೂ ಪ್ರತಿ-ಟೋಕನ್ ಬೆಲೆಯನ್ನು ತೋರಿಸುತ್ತಾರೆ.
+67routerಗೆ ಮಾದರಿಯ ಬೆಲೆ ತಿಳಿದಿರುವಾಗ, ನಮೂದು ಒಂದು `pricing` ಆಬ್ಜೆಕ್ಟ್ ಅನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. ವೆಚ್ಚ ಲೆಕ್ಕಾಚಾರವು ಬಳಸುವ ಬೆಲೆಪಟ್ಟಿಯಿಂದ ಬೆಲೆ ಬರುತ್ತದೆ: ಅಂತರ್ನಿರ್ಮಿತ ಡೀಫಾಲ್ಟ್ಗಳು, ಸಿಂಕ್ ಮಾಡಿದ ಬೆಲೆಗಳು ಮತ್ತು `/api/pricing` ಮೂಲಕ ಹೊಂದಿಸಲಾದ ಓವರ್ರೈಡ್ಗಳು. ಇವು ಪಟ್ಟಿ ಬೆಲೆಗಳಾಗಿರುವುದರಿಂದ, ಚಂದಾದಾರಿಕೆ ಪೂರೈಕೆದಾರರೂ ಪ್ರತಿ-ಟೋಕನ್ ಬೆಲೆಯನ್ನು ತೋರಿಸುತ್ತಾರೆ.
 
 ```json
 "pricing": {
@@ -604,8 +604,8 @@ Bifrost, CLIProxyAPI ಮತ್ತು ಭವಿಷ್ಯದ ಸೈಡ್ಕಾರ
 
 ## ElevenLabs ಆಡಿಯೊ ಉತ್ಪಾದನೆ
 
-ನಿಮ್ಮ ElevenLabs API ಕೀಲಿಯೊಂದಿಗೆ OmniRoute ನಲ್ಲಿ `elevenlabs` ಪೂರೈಕೆದಾರ ಸಂಪರ್ಕವನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ.
-ಕ್ಲೈಂಟ್ಗಳು ತಮ್ಮ **OmniRoute** ಕೀಲಿಯೊಂದಿಗೆ (`Authorization: Bearer $OMNIROUTE_API_KEY`) ದೃಢೀಕರಿಸುತ್ತಾರೆ;
+ನಿಮ್ಮ ElevenLabs API ಕೀಲಿಯೊಂದಿಗೆ 67router ನಲ್ಲಿ `elevenlabs` ಪೂರೈಕೆದಾರ ಸಂಪರ್ಕವನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ.
+ಕ್ಲೈಂಟ್ಗಳು ತಮ್ಮ **67router** ಕೀಲಿಯೊಂದಿಗೆ (`Authorization: Bearer $OMNIROUTE_API_KEY`) ದೃಢೀಕರಿಸುತ್ತಾರೆ;
 ಗೇಟ್ವೇ ಸಂಗ್ರಹಿತ ಪೂರೈಕೆದಾರ ಕೀಲಿಯನ್ನು `xi-api-key` ಆಗಿ ಒದಗಿಸುತ್ತದೆ. ElevenLabs ಕೀಲಿಯನ್ನು
 ಗೇಟ್ವೇ ಬೇರರ್ ಟೋಕನ್ ಆಗಿ ಎಂದಿಗೂ ಕಳುಹಿಸಬೇಡಿ.
 
@@ -669,7 +669,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 ನಿರ್ಬಂಧಕ್ಕಾಗಿ `402` ಮತ್ತು ಕೋಟಾ ಮಿತಿಗಾಗಿ `429` ಸೇರಿವೆ. ಲಭ್ಯವಿದ್ದಾಗ `character-cost`, `song-id`, `request-id` ಮತ್ತು `retry-after`
 ಹೆಡರ್ಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತದೆ. ಉಚಿತ ಕ್ರೆಡಿಟ್ ಬ್ಯಾಲೆನ್ಸ್ ಇದ್ದ ಮಾತ್ರಕ್ಕೆ ಪ್ರತಿಯೊಂದು
 ಸಂಗೀತ ಮಾದರಿ, ಔಟ್ಪುಟ್ ಸ್ವರೂಪ ಅಥವಾ API ವೈಶಿಷ್ಟ್ಯಕ್ಕೆ ಪ್ರವೇಶ ಖಾತರಿಯಾಗುವುದಿಲ್ಲ: ಪ್ರತಿ ವಿನಂತಿಯ ಅರ್ಹತೆಯನ್ನು ElevenLabs ನಿರ್ಧರಿಸುತ್ತದೆ.
-ಏಕೀಕೃತ ಎಂಡ್ಪಾಯಿಂಟ್ OmniRoute ನ ಸಾಮಾನ್ಯೀಕರಿಸಿದ ದೋಷ ಎನ್ವಲಪ್ನಲ್ಲಿ ದೋಷ ಸ್ಥಿತಿ ಕೋಡ್ಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ.
+ಏಕೀಕೃತ ಎಂಡ್ಪಾಯಿಂಟ್ 67router ನ ಸಾಮಾನ್ಯೀಕರಿಸಿದ ದೋಷ ಎನ್ವಲಪ್ನಲ್ಲಿ ದೋಷ ಸ್ಥಿತಿ ಕೋಡ್ಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ.
 
 ಅಪ್ಸ್ಟ್ರೀಮ್ ಒಪ್ಪಂದಗಳು: [ಧ್ವನಿ ಪರಿಣಾಮಗಳು](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [ಸಂಗೀತ ಸಂಯೋಜನೆ](https://elevenlabs.io/docs/api-reference/music/compose) ಮತ್ತು
@@ -710,7 +710,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 
 ಎಲ್ಲಾ POST ರೂಟ್ಗಳು ಒಂದೇ ರಚನೆಯನ್ನು ಅನುಸರಿಸುತ್ತವೆ: `Bearer your-api-key` + Zod-ಮೌಲ್ಯೀಕರಿಸಿದ JSON ಬಾಡಿ (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, ಇತ್ಯಾದಿ; `src/shared/validation/schemas.ts` ನೋಡಿ). ಸ್ಕೀಮಾ ವಿಫಲವಾದಾಗ 4xx ಅನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗುತ್ತದೆ.
 
-`Authorization: Bearer ...` ಅನ್ನು ಲಗತ್ತಿಸಲು ಸಾಧ್ಯವಾಗದ ಕ್ಲೈಂಟ್ಗಳಿಗಾಗಿ, OmniRoute ಕ್ವೆರಿ-ಸ್ಟ್ರಿಂಗ್ ಹೊಂದಾಣಿಕೆ (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ಅಥವಾ ಕೆಳಗೆ ದಾಖಲಿಸಲಾದ ಮೀಸಲಾದ `/api/v1/vscode/{token}/...` ಎಂಡ್ಪಾಯಿಂಟ್ಗಳ ಮೂಲಕ URL ನಲ್ಲಿ API ಕೀಗಳನ್ನು ಸಹ ಸ್ವೀಕರಿಸುತ್ತದೆ.
+`Authorization: Bearer ...` ಅನ್ನು ಲಗತ್ತಿಸಲು ಸಾಧ್ಯವಾಗದ ಕ್ಲೈಂಟ್ಗಳಿಗಾಗಿ, 67router ಕ್ವೆರಿ-ಸ್ಟ್ರಿಂಗ್ ಹೊಂದಾಣಿಕೆ (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ಅಥವಾ ಕೆಳಗೆ ದಾಖಲಿಸಲಾದ ಮೀಸಲಾದ `/api/v1/vscode/{token}/...` ಎಂಡ್ಪಾಯಿಂಟ್ಗಳ ಮೂಲಕ URL ನಲ್ಲಿ API ಕೀಗಳನ್ನು ಸಹ ಸ್ವೀಕರಿಸುತ್ತದೆ.
 
 ```bash
 # ಮರುಶ್ರೇಣೀಕರಣ (ಕ್ಲೌಡ್ ರಿಜಿಸ್ಟ್ರಿ ಪೂರೈಕೆದಾರ, ಅಥವಾ "<prefix>/<model>" ರೂಪದಲ್ಲಿರುವ OpenAI-ಹೊಂದಾಣಿಕೆಯ ಪೂರೈಕೆದಾರ ನೋಡ್)
@@ -872,7 +872,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract) ಮೂ
 Parallel Extract (`parallel-search`, Parallel Searchನದ್ದೇ API ಕೀ) Markdown ಅನ್ನು
 ಮಾತ್ರ ಹಿಂದಿರುಗಿಸುತ್ತದೆ — ಬೇರೆ ಯಾವುದೇ `format` ನೀಡಿದರೆ `400` ಬರುತ್ತದೆ — ಮತ್ತು ವಿಷಯವನ್ನು 100,000 ಅಕ್ಷರಗಳಿಗೆ ಮಿತಿಗೊಳಿಸುತ್ತದೆ. ಗುರಿ ಪುಟವನ್ನೇ
 ಹೊರತೆಗೆಯಲು ಸಾಧ್ಯವಾಗದಿದ್ದಾಗ, ಅಪ್ಸ್ಟ್ರೀಮ್ ಅದನ್ನು HTTP 200 ಒಳಗೆ ವರದಿ ಮಾಡುತ್ತದೆ;
-OmniRoute ಅದನ್ನು ಸ್ಥಿರ ಸಂದೇಶದೊಂದಿಗೆ `422` ಆಗಿ ಪ್ರಕಟಿಸುತ್ತದೆ.
+67router ಅದನ್ನು ಸ್ಥಿರ ಸಂದೇಶದೊಂದಿಗೆ `422` ಆಗಿ ಪ್ರಕಟಿಸುತ್ತದೆ.
 
 | ವಿಧಾನ | ಪಥ              | ವಿವರಣೆ                                                                                    |
 | ----- | --------------- | ----------------------------------------------------------------------------------------- |
@@ -934,7 +934,7 @@ codex OAuth ಸಂಪರ್ಕವನ್ನು ಆಯ್ಕೆಮಾಡುತ್�
 OpenAI **Codex CLI**, `supports_websockets = true` ಆಗಿರುವಾಗ ಮಾದರಿ ಹೆಸರನ್ನು ಕ್ಲೈಂಟ್ ಬದಿಯಲ್ಲೇ ಮೌಲ್ಯೀಕರಿಸುತ್ತದೆ ಮತ್ತು
 `codex/gpt-5.5` ನಂತಹ **ಪೂರೈಕೆದಾರ-ಪೂರ್ವಪ್ರತ್ಯಯ ಹೊಂದಿರುವ ಐಡಿಗಳನ್ನು ತಿರಸ್ಕರಿಸುತ್ತದೆ**
 (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). **ಮೂಲ** ಐಡಿಯನ್ನು ಕಳುಹಿಸಿ (ಉದಾ. `gpt-5.5`). OmniRouteನ ಬ್ರಿಡ್ಜ್
+a ChatGPT account`). **ಮೂಲ** ಐಡಿಯನ್ನು ಕಳುಹಿಸಿ (ಉದಾ. `gpt-5.5`). 67routerನ ಬ್ರಿಡ್ಜ್
 codex-ಮಾತ್ರವಾಗಿರುವುದರಿಂದ, ಅಪ್ಸ್ಟ್ರೀಮ್ಗೆ ಟನಲ್ ಮಾಡುವ ಮೊದಲು ಅದು ಮೂಲ ಐಡಿಯನ್ನು codex ಮಾದರಿಯಾಗಿ
 (`resolveCodexWsModelInfo`) ಮರು-ಪರಿಹರಿಸುತ್ತದೆ — ಮೂಲ
 `gpt-5.5` ಇಲ್ಲದಿದ್ದರೆ HTTP ಮೂಲಕ ಮತ್ತೊಂದು ಪೂರೈಕೆದಾರಕ್ಕೆ ರೂಟ್ ಆಗುತ್ತಿದ್ದರೂ ಸಹ.
@@ -942,7 +942,7 @@ codex-ಮಾತ್ರವಾಗಿರುವುದರಿಂದ, ಅಪ್ಸ್ಟ
 #### OpenAI Codex CLI ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡುವುದು
 
 `~/.codex/config.toml` ಗೆ WebSocket
-ಬೆಂಬಲದೊಂದಿಗೆ ಕಸ್ಟಮ್ ಪೂರೈಕೆದಾರರನ್ನು ಸೇರಿಸುವ ಮೂಲಕ Codex CLI ಅನ್ನು OmniRoute ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ (ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಕಾನ್ಫಿಗ್ ಅನ್ನು ಬದಲಾಯಿಸುವುದನ್ನು ತಪ್ಪಿಸಲು ಪ್ರತ್ಯೇಕ `CODEX_HOME` ಬಳಸಿ):
+ಬೆಂಬಲದೊಂದಿಗೆ ಕಸ್ಟಮ್ ಪೂರೈಕೆದಾರರನ್ನು ಸೇರಿಸುವ ಮೂಲಕ Codex CLI ಅನ್ನು 67router ಕಡೆಗೆ ನಿರ್ದೇಶಿಸಿ (ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಕಾನ್ಫಿಗ್ ಅನ್ನು ಬದಲಾಯಿಸುವುದನ್ನು ತಪ್ಪಿಸಲು ಪ್ರತ್ಯೇಕ `CODEX_HOME` ಬಳಸಿ):
 
 ```toml
 model = "gpt-5.5"                 # ಮೂಲ ಐಡಿ — "codex/gpt-5.5" ಅಲ್ಲ
@@ -953,15 +953,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # ಕೊನೆಯಲ್ಲಿ ಸ್ಲ್ಯಾಶ್ ಬೇಡ; WS URL ಅನ್ನು ವ್ಯುತ್ಪನ್ನಗೊಳಿಸಲಾಗುತ್ತದೆ (ಪ್ರೊಡಕ್ಷನ್ನಲ್ಲಿ https/wss ಬಳಸಿ)
 wire_api = "responses"                    # Feb 2026 ರಿಂದ ಬೆಂಬಲಿತ ಏಕೈಕ ಮೌಲ್ಯ
 supports_websockets = true                # Responses-over-WS ಟ್ರಾನ್ಸ್ಪೋರ್ಟ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತದೆ
-env_key = "OMNIROUTE_API_KEY"             # OmniRoute API ಕೀಯನ್ನು ಹೊಂದಿರುತ್ತದೆ (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # 67router API ಕೀಯನ್ನು ಹೊಂದಿರುತ್ತದೆ (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # ಒಂದು OmniRoute API ಕೀ (REQUIRE_API_KEY=false ಆಗಿದ್ದರೆ ಯಾವುದೇ ಕೀ)
+export OMNIROUTE_API_KEY=sk-...           # ಒಂದು 67router API ಕೀ (REQUIRE_API_KEY=false ಆಗಿದ್ದರೆ ಯಾವುದೇ ಕೀ)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI, `base_url + /responses` ಅನ್ನು WebSocket ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡುತ್ತದೆ ಮತ್ತು OmniRoute ಅದನ್ನು
+CLI, `base_url + /responses` ಅನ್ನು WebSocket ಗೆ ಅಪ್ಗ್ರೇಡ್ ಮಾಡುತ್ತದೆ ಮತ್ತು 67router ಅದನ್ನು
 ಆಯ್ಕೆಮಾಡಿದ codex OAuth ಸಂಪರ್ಕಕ್ಕೆ ಟನಲ್ ಮಾಡುತ್ತದೆ. ಸ್ಥಳೀಯ
 ಸರ್ವರ್ ವಿರುದ್ಧ ಆರಂಭದಿಂದ ಅಂತ್ಯದವರೆಗೆ ಮೌಲ್ಯೀಕರಿಸಲಾಗಿದೆ: ChatGPT `codex.rate_limits` + `response.created` ಅನ್ನು ಹಿಂದಿರುಗಿಸಿ,
 ಪೂರ್ಣಗೊಳಿಸುವಿಕೆಯನ್ನು ಸ್ಟ್ರೀಮ್ ಮಾಡುತ್ತದೆ.
@@ -1041,7 +1041,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### ಮಿತಿಬಿಂದು ಹೊಂದಾಣಿಕೆಯ ಸೂತ್ರ
 
-ಅಪ್ಸ್ಟ್ರೀಮ್ ಕೋಟಾ ಖಾಲಿಯಾಗುವುದನ್ನು ತಡೆಯಲು OmniRoute ಪೂರ್ವಭಾವಿ ಕೋಟಾ ಮಿತಿಬಿಂದುಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ (ಸಂಪರ್ಕದ
+ಅಪ್ಸ್ಟ್ರೀಮ್ ಕೋಟಾ ಖಾಲಿಯಾಗುವುದನ್ನು ತಡೆಯಲು 67router ಪೂರ್ವಭಾವಿ ಕೋಟಾ ಮಿತಿಬಿಂದುಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ (ಸಂಪರ್ಕದ
 `quotaWindowThresholds`, ಪೂರೈಕೆದಾರರ ಪೂರ್ವನಿಯೋಜಿತಗಳು ಅಥವಾ ಜಾಗತಿಕ ಸ್ಥಿತಿಸ್ಥಾಪಕತ್ವದ ಸೆಟ್ಟಿಂಗ್ಗಳ ಮೂಲಕ ಸಂರಚಿಸಲಾಗುತ್ತದೆ). ಕೋಟಾ ವಿಂಡೋದಲ್ಲಿ ಮಿತಿಬಿಂದು ಮಿತಿ
 (ಉದಾ., `cutoff = 25%`) ಸಕ್ರಿಯವಾಗಿರುವಾಗ, ಪಠ್ಯ ರೆಂಡರರ್ ಉಳಿದ ಹಂಚಿಕೆಯನ್ನು ಈ ರೀತಿ ಲೆಕ್ಕಾಚಾರ ಮಾಡುತ್ತದೆ:
 
@@ -1403,9 +1403,8 @@ GET ಪ್ರತಿಕ್ರಿಯೆಯು `agents[]` (id, name, binary, versio
 
 ### ಮೌಲ್ಯಮಾಪನಗಳು
 
-| Endpoint     | Method   | Description                                              |
-| ------------ | -------- | -------------------------------------------------------- |
-| `/api/evals` | GET/POST | ಮೌಲ್ಯಮಾಪನ ಸೂಟ್ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ / ಮೌಲ್ಯಮಾಪನವನ್ನು ಚಲಾಯಿಸಿ |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### ನೀತಿಗಳು
 
@@ -1589,7 +1588,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - ಟೋಕನ್ಯುಕ್ತ ಪರ್ಯಾಯ ಹೆಸರುಗಳು `/v1/*` ಮತ್ತು `/api/tags` ಬಳಸುವ ಅದೇ ಹ್ಯಾಂಡ್ಲರ್ಗಳನ್ನು ಮರುಬಳಕೆ ಮಾಡುತ್ತವೆ; ಪ್ರತಿಕ್ರಿಯೆಯ ರಚನೆಗಳು ಒಂದೇ ಆಗಿರುತ್ತವೆ.
 - ಕ್ಲೈಂಟ್ ಕಸ್ಟಮ್ ಹೆಡರ್ಗಳನ್ನು ಬೆಂಬಲಿಸುವಾಗಲೆಲ್ಲ `Authorization: Bearer ...` ಬಳಕೆಗೆ ಆದ್ಯತೆ ನೀಡಿ.
-- URL-ಆಧಾರಿತ ಟೋಕನ್ಗಳು OmniRoute ಹೊರಗಿನ ರಿವರ್ಸ್-ಪ್ರಾಕ್ಸಿ ಲಾಗ್ಗಳು, ಬ್ರೌಸರ್ ಇತಿಹಾಸ ಮತ್ತು ಟೆಲಿಮೆಟ್ರಿಯಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು. ಅವುಗಳನ್ನು ಡೀಫಾಲ್ಟ್ ದೃಢೀಕರಣ ವಿಧಾನವಾಗಿ ಪರಿಗಣಿಸದೆ, ಹೊಂದಾಣಿಕೆ ಆಯ್ಕೆಯಾಗಿ ಪರಿಗಣಿಸಿ.
+- URL-ಆಧಾರಿತ ಟೋಕನ್ಗಳು 67router ಹೊರಗಿನ ರಿವರ್ಸ್-ಪ್ರಾಕ್ಸಿ ಲಾಗ್ಗಳು, ಬ್ರೌಸರ್ ಇತಿಹಾಸ ಮತ್ತು ಟೆಲಿಮೆಟ್ರಿಯಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳಬಹುದು. ಅವುಗಳನ್ನು ಡೀಫಾಲ್ಟ್ ದೃಢೀಕರಣ ವಿಧಾನವಾಗಿ ಪರಿಗಣಿಸದೆ, ಹೊಂದಾಣಿಕೆ ಆಯ್ಕೆಯಾಗಿ ಪರಿಗಣಿಸಿ.
 
 ---
 
@@ -1697,7 +1696,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## ವೆಬ್ಹುಕ್ಗಳು
 
-OmniRoute ಈವೆಂಟ್ಗಳಿಗೆ (ವಿನಂತಿ ಪೂರ್ಣಗೊಳ್ಳುವಿಕೆ, ಕೋಟಾ ಮುಗಿಯುವಿಕೆ, ಕೀ ರೊಟೇಶನ್ ಇತ್ಯಾದಿ) ಔಟ್ಬೌಂಡ್ ವೆಬ್ಹುಕ್ ಚಂದಾದಾರಿಕೆಗಳು.
+67router ಈವೆಂಟ್ಗಳಿಗೆ (ವಿನಂತಿ ಪೂರ್ಣಗೊಳ್ಳುವಿಕೆ, ಕೋಟಾ ಮುಗಿಯುವಿಕೆ, ಕೀ ರೊಟೇಶನ್ ಇತ್ಯಾದಿ) ಔಟ್ಬೌಂಡ್ ವೆಬ್ಹುಕ್ ಚಂದಾದಾರಿಕೆಗಳು.
 
 | ವಿಧಾನ  | ಪಥ                        | ವಿವರಣೆ                                                                            |
 | ------ | ------------------------- | --------------------------------------------------------------------------------- |
@@ -1728,31 +1727,6 @@ OmniRoute ಈವೆಂಟ್ಗಳಿಗೆ (ವಿನಂತಿ ಪೂರ್ಣ�
 
 ---
 
-## ಏಜೆಂಟ್ಗಳ ಪ್ರೋಟೋಕಾಲ್
-
-OmniRoute ಬಳಕೆದಾರರ ಪರವಾಗಿ ದೂರಸ್ಥವಾಗಿ ಕಾರ್ಯಗತಗೊಳಿಸಲಾದ ಕ್ಲೌಡ್ ಏಜೆಂಟ್ ಕಾರ್ಯಗಳು (Claude Code, Codex Cloud, OpenHands, ಇತ್ಯಾದಿ).
-
-| ವಿಧಾನ  | ಪಥ                            | ವಿವರಣೆ                                                                                                                                                                                 |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | ಕಾರ್ಯಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ — ಐಚ್ಛಿಕ `?provider=`, `?status=`, `?limit=` (1–500, ಪೂರ್ವನಿಯೋಜಿತ 50)                                                                                      |
-| POST   | `/api/v1/agents/tasks`        | ಕಾರ್ಯವನ್ನು ರಚಿಸುತ್ತದೆ — ವಿನಂತಿಯ ದೇಹವನ್ನು `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`) ಮೂಲಕ ಮೌಲ್ಯೀಕರಿಸಲಾಗುತ್ತದೆ. ಕಾರ್ಯದ ಎನ್ವಲಪ್ನೊಂದಿಗೆ `201` ಮರಳಿಸುತ್ತದೆ |
-| DELETE | `/api/v1/agents/tasks?id=...` | ಕಾರ್ಯವನ್ನು ಅಳಿಸುತ್ತದೆ                                                                                                                                                                  |
-| GET    | `/api/v1/agents/tasks/[id]`   | ಕಾರ್ಯವನ್ನು ಓದುತ್ತದೆ — `external_id` ಹೊಂದಿಸಿದಾಗ ಅಪ್ಸ್ಟ್ರೀಮ್ ಕ್ಲೌಡ್ ಏಜೆಂಟ್ನಿಂದ ಸ್ಥಿತಿಯನ್ನು ಸಮಕಾಲಿಕವಾಗಿ ರಿಫ್ರೆಶ್ ಮಾಡುತ್ತದೆ                                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | ವಿಭೇದಿತ ಕ್ರಿಯೆ: `{action: "approve"}`, `{action: "message", message}`, ಅಥವಾ `{action: "cancel"}`                                                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | ನಿರ್ದಿಷ್ಟ ಕಾರ್ಯವನ್ನು id ಮೂಲಕ ಅಳಿಸುತ್ತದೆ                                                                                                                                                |
-
-> **ದೃಢೀಕರಣ:** ಪ್ರತಿ ವಿಧಾನಕ್ಕೂ ನಿರ್ವಹಣಾ ದೃಢೀಕರಣ ಅಗತ್ಯವಿದೆ (`requireCloudAgentManagementAuth`). v3.8.0 ಕ್ಕಿಂತ ಮೊದಲು ಇವು ದೃಢೀಕರಣವಿಲ್ಲದವುಗಳಾಗಿದ್ದವು — ಹೊಂದಾಣಿಕೆಯನ್ನು ಮುರಿಯುವ ಬದಲಾವಣೆಗಾಗಿ `588a0333` ಕಮಿಟ್ ನೋಡಿ.
-
-```bash
-# Claude Code ಕ್ಲೌಡ್ ಕಾರ್ಯವನ್ನು ರಚಿಸಿ
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ನಿರ್ವಹಣಾ ಪ್ರಾಕ್ಸಿಗಳು
 
 ಪೂರೈಕೆದಾರರು, ಖಾತೆಗಳು ಅಥವಾ ಜಾಗತಿಕವಾಗಿ ನಿಯೋಜಿಸಬಹುದಾದ ಔಟ್ಬೌಂಡ್ HTTP(S)/SOCKS ಪ್ರಾಕ್ಸಿಗಳು.
@@ -1776,7 +1750,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## ಸ್ಥಿತಿಸ್ಥಾಪಕತೆ (ವಿಸ್ತೃತ)
 
-OmniRoute ಮೂರು ಸ್ವತಂತ್ರ ತಾತ್ಕಾಲಿಕ-ವೈಫಲ್ಯ ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ; ಕೆಳಗಿನ ನಿರ್ವಹಣಾ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳು ಅವುಗಳನ್ನು ಓದಲು ಮತ್ತು ಅತಿಕ್ರಮಿಸಲು ನಿರ್ವಾಹಕರಿಗೆ ಅವಕಾಶ ನೀಡುತ್ತವೆ:
+67router ಮೂರು ಸ್ವತಂತ್ರ ತಾತ್ಕಾಲಿಕ-ವೈಫಲ್ಯ ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ; ಕೆಳಗಿನ ನಿರ್ವಹಣಾ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳು ಅವುಗಳನ್ನು ಓದಲು ಮತ್ತು ಅತಿಕ್ರಮಿಸಲು ನಿರ್ವಾಹಕರಿಗೆ ಅವಕಾಶ ನೀಡುತ್ತವೆ:
 
 | ವ್ಯಾಪ್ತಿ          | ಸ್ಥಿತಿ ಸಂಗ್ರಹಣೆ                            | ಓದುವುದು                                   | ಮರುಹೊಂದಿಸುವುದು / ತೆರವುಗೊಳಿಸುವುದು                                  |
 | ----------------- | ------------------------------------------ | ----------------------------------------- | ----------------------------------------------------------------- |
@@ -1811,7 +1785,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## ಸ್ಕಿಲ್ಗಳು
 
-ಕಸ್ಟಮ್ ಕಾರ್ಯಗತಗೊಳಿಸಬಹುದಾದ ಹ್ಯಾಂಡ್ಲರ್ಗಳು ಮತ್ತು ಮಾರ್ಕೆಟ್ಪ್ಲೇಸ್ ಏಕೀಕರಣಗಳೊಂದಿಗೆ OmniRoute ಅನ್ನು ವಿಸ್ತರಿಸುವ ಸ್ಕಿಲ್ ಫ್ರೇಮ್ವರ್ಕ್.
+ಕಸ್ಟಮ್ ಕಾರ್ಯಗತಗೊಳಿಸಬಹುದಾದ ಹ್ಯಾಂಡ್ಲರ್ಗಳು ಮತ್ತು ಮಾರ್ಕೆಟ್ಪ್ಲೇಸ್ ಏಕೀಕರಣಗಳೊಂದಿಗೆ 67router ಅನ್ನು ವಿಸ್ತರಿಸುವ ಸ್ಕಿಲ್ ಫ್ರೇಮ್ವರ್ಕ್.
 
 | ವಿಧಾನ  | ಮಾರ್ಗ                             | ವಿವರಣೆ                                                                                                                              |
 | ------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -1848,7 +1822,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## MCP ಸರ್ವರ್
 
-OmniRoute 3 ಸಾರಿಗೆ ವಿಧಾನಗಳು (stdio, SSE, streamable-http) ಮತ್ತು ವ್ಯಾಪ್ತಿಗೊಳಿಸಲಾದ ಪರಿಕರಗಳೊಂದಿಗೆ ಅಂತರ್ನಿರ್ಮಿತ Model Context Protocol ಸರ್ವರ್ ಅನ್ನು ಒದಗಿಸುತ್ತದೆ. ಕೆಳಗಿನ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅಂತ್ಯಬಿಂದುಗಳು ಸ್ಥಿತಿ/ಲೆಕ್ಕಪರಿಶೋಧನಾ ಡೇಟಾವನ್ನು ಓದುತ್ತವೆ ಮತ್ತು HTTP ಸಾರಿಗೆ ವಿಧಾನಗಳಿಗೆ ಪ್ರಾಕ್ಸಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ.
+67router 3 ಸಾರಿಗೆ ವಿಧಾನಗಳು (stdio, SSE, streamable-http) ಮತ್ತು ವ್ಯಾಪ್ತಿಗೊಳಿಸಲಾದ ಪರಿಕರಗಳೊಂದಿಗೆ ಅಂತರ್ನಿರ್ಮಿತ Model Context Protocol ಸರ್ವರ್ ಅನ್ನು ಒದಗಿಸುತ್ತದೆ. ಕೆಳಗಿನ ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಅಂತ್ಯಬಿಂದುಗಳು ಸ್ಥಿತಿ/ಲೆಕ್ಕಪರಿಶೋಧನಾ ಡೇಟಾವನ್ನು ಓದುತ್ತವೆ ಮತ್ತು HTTP ಸಾರಿಗೆ ವಿಧಾನಗಳಿಗೆ ಪ್ರಾಕ್ಸಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ.
 
 | ವಿಧಾನ | ಪಥ | ವಿವರಣೆ |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1870,50 +1844,12 @@ OmniRoute 3 ಸಾರಿಗೆ ವಿಧಾನಗಳು (stdio, SSE, streamable-
 
 ## A2A ಸರ್ವರ್
 
-OmniRoute, ಪರಿಶೀಲನೆ/ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಬಳಕೆಗಾಗಿ REST ರ್ಯಾಪರ್ ಜೊತೆಗೆ A2A (ಏಜೆಂಟ್-ಟು-ಏಜೆಂಟ್) JSON-RPC 2.0 ಎಂಡ್ಪಾಯಿಂಟ್ ಅನ್ನು ಒದಗಿಸುತ್ತದೆ.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY ಹೊಂದಿಸದಿದ್ದರೆ ಐಚ್ಛಿಕ
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-ಬೆಂಬಲಿತ ವಿಧಾನಗಳು (ಎಲ್ಲವೂ `settings.a2aEnabled` ಮೂಲಕ ನಿಯಂತ್ರಿತವಾಗಿವೆ):
-
-| ವಿಧಾನ            | ವಿವರಣೆ                                                                                    |
-| ---------------- | ----------------------------------------------------------------------------------------- |
-| `message/send`   | ಸಿಂಕ್ರೊನಸ್ ಕೌಶಲ್ಯ ಕಾರ್ಯಗತಗೊಳಿಸುವಿಕೆ; `{task, artifacts, metadata}` ಅನ್ನು ಹಿಂತಿರುಗಿಸುತ್ತದೆ |
-| `message/stream` | ಅದೇ ಕೌಶಲ್ಯ ಸಮೂಹದ ಸ್ಟ್ರೀಮಿಂಗ್ SSE ಕಾರ್ಯಗತಗೊಳಿಸುವಿಕೆ                                        |
-| `tasks/get`      | `taskId` ಮೂಲಕ ಕಾರ್ಯವನ್ನು ಪಡೆಯುತ್ತದೆ                                                       |
-| `tasks/cancel`   | `taskId` ಮೂಲಕ ಕಾರ್ಯವನ್ನು ರದ್ದುಗೊಳಿಸುತ್ತದೆ                                                 |
-
-ಅಂತರ್ನಿರ್ಮಿತ ಕೌಶಲ್ಯಗಳು: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### ಏಜೆಂಟ್ ಕಾರ್ಡ್
-
-```bash
-GET /.well-known/agent.json
-```
-
-ಸಾರ್ವಜನಿಕ A2A ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಅನ್ನು (ಹೆಸರು, ವಿವರಣೆ, ಸಾಮರ್ಥ್ಯಗಳು, ಕೌಶಲ್ಯ ಕ್ಯಾಟಲಾಗ್, ದೃಢೀಕರಣ ಸ್ಕೀಮ್) ಹಿಂತಿರುಗಿಸುತ್ತದೆ — ಸಾರ್ವಜನಿಕವಾಗಿ 1 ಗಂಟೆಯವರೆಗೆ ಕ್ಯಾಶ್ ಮಾಡಲಾಗುತ್ತದೆ. ದೃಢೀಕರಣ ಅಗತ್ಯವಿಲ್ಲ.
+67router, ಪರಿಶೀಲನೆ/ಡ್ಯಾಶ್ಬೋರ್ಡ್ ಬಳಕೆಗಾಗಿ REST ರ್ಯಾಪರ್ ಜೊತೆಗೆ A2A (ಏಜೆಂಟ್-ಟು-ಏಜೆಂಟ್) JSON-RPC 2.0 ಎಂಡ್ಪಾಯಿಂಟ್ ಅನ್ನು ಒದಗಿಸುತ್ತದೆ.
 
 ### REST ಸಹಾಯಕಗಳು
 
 | ವಿಧಾನ | ಪಥ                           | ವಿವರಣೆ                                                                                                             |
 | ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET   | `/api/a2a/status`            | A2A ಸಕ್ರಿಯ ಸ್ಥಿತಿ + ಕಾರ್ಯದ ಅಂಕಿಅಂಶಗಳು + ಕ್ಯಾಶ್ ಮಾಡಿದ ಏಜೆಂಟ್ ಕಾರ್ಡ್ ಸಾರಾಂಶ                                          |
 | GET   | `/api/a2a/tasks`             | ಕಾರ್ಯಗಳ ಪಟ್ಟಿ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST ಸಹಾಯಕವಾಗಿ ಅಳವಡಿಸಲಾಗಿಲ್ಲ — JSON-RPC `message/send` ಮೂಲಕ ರಚಿಸಿ)                                                |
 | GET   | `/api/a2a/tasks/[id]`        | ಒಂದು ಕಾರ್ಯವನ್ನು ಹಿಂಪಡೆಯುತ್ತದೆ                                                                                      |
@@ -1933,12 +1869,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | ಕ್ಲೌಡ್ ಸಿಂಕ್ಗೆ ಬಹಿರಂಗಪಡಿಸಿದ ಮಾದರಿ ಅಲಿಯಾಸ್ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ |
 | GET | `/api/assess` | ಇತ್ತೀಚಿನ ಅಸೆಸ್ಮೆಂಟ್ ವರ್ಗೀಕರಣಗಳನ್ನು ಓದುತ್ತದೆ (ಪ್ರತಿ ಪ್ರೊವೈಡರ್/ಮಾದರಿಗೆ) |
 | POST | `/api/assess` | ಅಸೆಸ್ಮೆಂಟ್ ಅನ್ನು ಚಲಾಯಿಸುತ್ತದೆ — ಬಾಡಿ: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | ಅಂತರ್ನಿರ್ಮಿತ ಇವ್ಯಾಲ್ ಸೂಟ್ಗಳು + ತೀರಾ ಇತ್ತೀಚಿನ ರನ್ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ |
-| POST | `/api/evals` | ಇವ್ಯಾಲ್ ರನ್ ಅನ್ನು ಪ್ರಚೋದಿಸುತ್ತದೆ |
-| POST | `/api/evals/suites` | ಕಸ್ಟಮ್ ಇವ್ಯಾಲ್ ಸೂಟ್ ಅನ್ನು ರಚಿಸುತ್ತದೆ — ಬಾಡಿಯನ್ನು `evalSuiteSaveSchema` ಮೂಲಕ ಮೌಲ್ಯೀಕರಿಸಲಾಗುತ್ತದೆ |
-| GET | `/api/evals/suites/[id]` | ಕಸ್ಟಮ್ ಇವ್ಯಾಲ್ ಸೂಟ್ ಅನ್ನು ಹಿಂಪಡೆಯುತ್ತದೆ |
 
-**ದೃಢೀಕರಣ:** `/api/cloud/auth` ನೇರವಾಗಿ Bearer ಕೀಲಿಯನ್ನು ಮೌಲ್ಯೀಕರಿಸುತ್ತದೆ ಮತ್ತು `manage` / `admin` ವ್ಯಾಪ್ತಿಯನ್ನು ಹೊಂದಿರುವ ಕೀಲಿಗೆ ಮಾತ್ರ ಪ್ರತಿ ಸಂಪರ್ಕದ ಮರೆಮಾಡಿದ ಕೀಲಿ ಮತ್ತು `projectId` ಅನ್ನು ಹಿಂತಿರುಗಿಸುತ್ತದೆ; ಇತರ `/api/cloud/*`, `/api/evals/*`, ಮತ್ತು `/api/assess` ರೂಟ್ಗಳಿಗೆ ನಿರ್ವಹಣಾ ಸೆಷನ್/API ಕೀಲಿ ಅಗತ್ಯವಿದೆ. `/api/assess` POST, ಡಿಸ್ಕ್ರಿಮಿನೇಟೆಡ್-ಯೂನಿಯನ್ ವ್ಯಾಪ್ತಿ ಸ್ಕೀಮಾ ಜೊತೆಗೆ `validateBody` ಅನ್ನು ಬಳಸುತ್ತದೆ.
+**ದೃಢೀಕರಣ:** `/api/cloud/auth` ನೇರವಾಗಿ Bearer ಕೀಲಿಯನ್ನು ಮೌಲ್ಯೀಕರಿಸುತ್ತದೆ ಮತ್ತು `manage` / `admin` ವ್ಯಾಪ್ತಿಯನ್ನು ಹೊಂದಿರುವ ಕೀಲಿಗೆ ಮಾತ್ರ ಪ್ರತಿ ಸಂಪರ್ಕದ ಮರೆಮಾಡಿದ ಕೀಲಿ ಮತ್ತು `projectId` ಅನ್ನು ಹಿಂತಿರುಗಿಸುತ್ತದೆ; ಇತರ `/api/cloud/*`, ಮತ್ತು `/api/assess` ರೂಟ್ಗಳಿಗೆ ನಿರ್ವಹಣಾ ಸೆಷನ್/API ಕೀಲಿ ಅಗತ್ಯವಿದೆ. `/api/assess` POST, ಡಿಸ್ಕ್ರಿಮಿನೇಟೆಡ್-ಯೂನಿಯನ್ ವ್ಯಾಪ್ತಿ ಸ್ಕೀಮಾ ಜೊತೆಗೆ `validateBody` ಅನ್ನು ಬಳಸುತ್ತದೆ.
 
 ---
 
@@ -2099,7 +2031,7 @@ GET /.well-known/agent.json
 
 ## CLI ಪರಿಕರಗಳ ನಿರ್ವಹಣೆ
 
-OmniRoute ಜೊತೆಗೆ ಸಂಯೋಜನೆಗೊಳ್ಳುವ CLI ಪರಿಕರಗಳನ್ನು (antigravity, commandCode,
+67router ಜೊತೆಗೆ ಸಂಯೋಜನೆಗೊಳ್ಳುವ CLI ಪರಿಕರಗಳನ್ನು (antigravity, commandCode,
 devin-cli, ಇತ್ಯಾದಿ) ನಿರ್ವಹಿಸಿ. ಸಂಪೂರ್ಣ ಪಟ್ಟಿಗಾಗಿ [ಪೂರೈಕೆದಾರರ ಉಲ್ಲೇಖ](./PROVIDER_REFERENCE.md) ನೋಡಿ.
 
 | ವಿಧಾನ | ಪಥ                                      | ವಿವರಣೆ                                                                                                                                                                                       |
@@ -2208,26 +2140,6 @@ AI ಏಜೆಂಟ್ ಕೌಶಲ್ಯಗಳನ್ನು ನಿರ್ವಹಿ
 
 ---
 
-## ಪ್ಲಗಿನ್ಗಳು
-
-OmniRoute ಪ್ಲಗಿನ್ಗಳನ್ನು (ಮೂರನೇ-ಪಕ್ಷದ ವಿಸ್ತರಣೆಗಳು) ನಿರ್ವಹಿಸಿ.
-
-| ವಿಧಾನ  | ಪಥ                                 | ವಿವರಣೆ                              |
-| ------ | ---------------------------------- | ----------------------------------- |
-| GET    | `/api/plugins`                     | ಸ್ಥಾಪಿಸಲಾದ ಪ್ಲಗಿನ್ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ |
-| POST   | `/api/plugins/marketplace/install` | ಮಾರ್ಕೆಟ್ಪ್ಲೇಸ್ನಿಂದ ಪ್ಲಗಿನ್ ಸ್ಥಾಪಿಸಿ |
-| DELETE | `/api/plugins/[name]`              | ಪ್ಲಗಿನ್ ಅನ್ನು ಅಸ್ಥಾಪಿಸಿ             |
-| POST   | `/api/plugins/[name]/activate`     | ಪ್ಲಗಿನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ          |
-| POST   | `/api/plugins/[name]/deactivate`   | ಪ್ಲಗಿನ್ ಅನ್ನು ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ       |
-| GET    | `/api/plugins/[name]/config`       | ಪ್ಲಗಿನ್ ಸಂರಚನೆಯನ್ನು ಪಡೆಯಿರಿ         |
-| PUT    | `/api/plugins/[name]/config`       | ಪ್ಲಗಿನ್ ಸಂರಚನೆಯನ್ನು ನವೀಕರಿಸಿ        |
-
-**ದೃಢೀಕರಣ:** ನಿರ್ವಹಣಾ ಸೆಷನ್ ಅಗತ್ಯವಿದೆ.
-
-ಸಂಪೂರ್ಣ ವಿವರಗಳಿಗಾಗಿ [ಪ್ಲಗಿನ್ಗಳ ಫ್ರೇಮ್ವರ್ಕ್](../frameworks/PLUGIN_SDK.md) ನೋಡಿ.
-
----
-
 ## ಛಾಯಾ ರೂಟಿಂಗ್
 
 ಪೂರೈಕೆದಾರರ ಛಾಯಾ / A-B ಹೋಲಿಕೆಯು **ಸ್ವತಂತ್ರ REST ಸರ್ಫೇಸ್ ಅಲ್ಲ** — ಅದನ್ನು ಕಾಂಬೊ ರೂಟಿಂಗ್ ಮೂಲಕ ಸಂರಚಿಸಲಾಗುತ್ತದೆ ([ಸ್ವಯಂ-ಕಾಂಬೊ](../routing/AUTO-COMBO.md) ನೋಡಿ). ಪ್ರತಿ ಕಾಂಬೊಗೆ ಸಂಬಂಧಿಸಿದ ಹೋಲಿಕೆ ಮೆಟ್ರಿಕ್ಗಳನ್ನು `GET /api/combos/metrics` ಮೂಲಕ ಒದಗಿಸಲಾಗುತ್ತದೆ.
@@ -2260,5 +2172,3 @@ OmniRoute ಪ್ಲಗಿನ್ಗಳನ್ನು (ಮೂರನೇ-ಪಕ್ಷ�
 - `requireLogin` ಅನ್ನು `/api/settings/require-login` ಮೂಲಕ ಟಾಗಲ್ ಮಾಡಬಹುದು
 - `REQUIRE_API_KEY=true` ಆಗಿರುವಾಗ `/v1/*` ಮಾರ್ಗಗಳಿಗೆ ಐಚ್ಛಿಕವಾಗಿ Bearer API ಕೀ ಅಗತ್ಯವಿರುತ್ತದೆ
 - ಈ ಉಲ್ಲೇಖದಲ್ಲಿನ "ನಿರ್ವಹಣಾ ಟೋಕನ್" / "ನಿರ್ವಹಣೆ-ವ್ಯಾಪ್ತಿಯ API ಕೀ" ಎಂದರೆ ಆ ಮಾರ್ಗದರ್ಶಿಯಲ್ಲಿರುವ ವರ್ಗಗಳಲ್ಲಿ ಒಂದು — ವ್ಯಾಖ್ಯಾನಿಸದ ಹೆಚ್ಚುವರಿ ರಹಸ್ಯದ ಪ್ರಕಾರವಲ್ಲ
-
-> **ಪ್ರಮುಖ ಬದಲಾವಣೆ (v3.8.0)** — `/api/v1/agents/tasks/*` ಮತ್ತು ಕೂಲ್ಡೌನ್ ನಿರ್ವಹಣಾ ಎಂಡ್ಪಾಯಿಂಟ್ಗಳಿಗೆ ಈಗ **ನಿರ್ವಹಣಾ ದೃಢೀಕರಣ** (ಡ್ಯಾಶ್ಬೋರ್ಡ್ `auth_token` ಕುಕಿ ಅಥವಾ ನಿರ್ವಹಣೆ-ವ್ಯಾಪ್ತಿಯ API ಕೀ) ಅಗತ್ಯವಿದೆ. ಈ ಹಿಂದೆ ದೃಢೀಕರಣವಿಲ್ಲದೆ ಈ ಮಾರ್ಗಗಳನ್ನು ಕರೆಮಾಡುತ್ತಿದ್ದ ಕ್ಲೈಂಟ್ಗಳು `401 Unauthorized` ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಸ್ವೀಕರಿಸುತ್ತವೆ. ಕಮಿಟ್ `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`) ನೋಡಿ.

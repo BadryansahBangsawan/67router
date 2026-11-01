@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Tiếng Việt)
+# 67router Auto-Combo Engine (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # rẻ nhất trên mỗi token
 
 **Điều gì xảy ra:**
 
-1. OmniRoute phát hiện tiền tố `auto/` trong `src/sse/handlers/chat.ts`
+1. 67router phát hiện tiền tố `auto/` trong `src/sse/handlers/chat.ts`
 2. Truy vấn tất cả **kết nối nhà cung cấp đang hoạt động** từ cơ sở dữ liệu
 3. Lọc ra các kết nối có thông tin xác thực hợp lệ (API key hoặc OAuth token)
 4. Xác định mô hình cho mỗi kết nối (`connection.defaultModel` hoặc mô hình đầu tiên của nhà cung cấp)
@@ -90,7 +90,7 @@ tiếp `state` của breaker):
 
 Mỗi ứng viên cũng mang cờ `excluded` dành cho API key này. Các trường hợp loại trừ
 được lưu theo từng API key (bảng `auto_candidate_overrides`, migration `128`) —
-OmniRoute là hệ thống đơn đối tượng thuê và không có bảng `users`, vì vậy `apiKeyId`
+67router là hệ thống đơn đối tượng thuê và không có bảng `users`, vì vậy `apiKeyId`
 là danh tính thực tế gần nhất theo từng bên gọi — đồng thời được thực thi tại điểm
 kiểm soát nhóm ứng viên trong `open-sse/services/autoCombo/virtualFactory.ts` thông
 qua `filterExcludedCandidates()` thuần túy, đã được kiểm thử đơn vị
@@ -184,7 +184,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Hai lỗi thường gặp:
 
 - **`auto` không sử dụng các combo của bạn.** `auto`/`auto/*` tự xây dựng nhóm ứng viên không cần cấu hình và chỉ tham chiếu các combo đã lưu nếu có một combo thực sự mang tên `auto` (không khuyến nghị). Để định tuyến qua một combo, hãy gửi chính xác tên của combo đó — không phải `auto`.
-- **`openrouter/auto` là một sản phẩm OpenRouter trả phí thực sự** ("Tự động chọn tùy chọn tốt nhất hiện có"), không phải bí danh OmniRoute. Đây là mục mô hình tĩnh duy nhất trong registry OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) và được tính phí riêng. Sử dụng Settings → Routing → Hide paid models để loại trừ nó khỏi các nhóm `auto`.
+- **`openrouter/auto` là một sản phẩm OpenRouter trả phí thực sự** ("Tự động chọn tùy chọn tốt nhất hiện có"), không phải bí danh 67router. Đây là mục mô hình tĩnh duy nhất trong registry OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) và được tính phí riêng. Sử dụng Settings → Routing → Hide paid models để loại trừ nó khỏi các nhóm `auto`.
 
 Xem [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) và [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) để biết sự nhầm lẫn ban đầu mà tài liệu này đề cập.
 
@@ -281,7 +281,7 @@ giá trị đã phân giải được truyền vào các đầu vào `config.mod
 
 ## Tất cả chiến lược định tuyến
 
-Công cụ combo của OmniRoute hỗ trợ **20 chiến lược định tuyến** (được khai báo trong `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Bản thân công cụ Auto Combo được cung cấp dưới chiến lược `auto`; các chiến lược còn lại khả dụng cho các combo đã được lưu.
+Công cụ combo của 67router hỗ trợ **20 chiến lược định tuyến** (được khai báo trong `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Bản thân công cụ Auto Combo được cung cấp dưới chiến lược `auto`; các chiến lược còn lại khả dụng cho các combo đã được lưu.
 
 | Chiến lược          | Mô tả                                                                                                                                                                                                                 |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -332,7 +332,7 @@ nghiêm ngặt.
 
 Một combo `pipeline` có ít nhất hai mô hình có thể chọn sử dụng định tuyến bộ lập kế hoạch/bộ thực thi bằng
 `config.agenticOrchestration.enabled`. Mục tiêu đầu tiên đảm nhiệm việc lập kế hoạch và câu trả lời cuối cùng;
-mục tiêu thứ hai phát ra các lệnh gọi công cụ nguyên bản của máy khách. OmniRoute phát hiện các lượt tiếp nối
+mục tiêu thứ hai phát ra các lệnh gọi công cụ nguyên bản của máy khách. 67router phát hiện các lượt tiếp nối
 chứa kết quả công cụ từ giao thức yêu cầu, hỏi bộ lập kế hoạch xem có cần thêm một vòng công cụ hay không
 và tự động chọn bộ thực thi hoặc bộ lập kế hoạch làm bước cuối cùng hướng tới máy khách.
 
@@ -863,11 +863,11 @@ Bộ kiểm thử này chạy trong CI (tác vụ `test:integration`) với `--t
 
 ### Kiểm thử nhanh trực tiếp có điều kiện (KHÔNG chạy trong CI — nhà cung cấp thực)
 
-| Lệnh                                   | Chức năng                                                                                                   |
-| :------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Định tuyến thực trong tiến trình với `RUN_COMBO_LIVE=1`; tạo snapshot của cơ sở dữ liệu OmniRoute trực tiếp |
-| `npm run test:combo:live:vps`          | Các lệnh gọi HTTP đến máy chủ OmniRoute trực tiếp (đặt `COMBO_LIVE_BASE_URL`)                               |
-| `npm run test:combo:live:vps:failover` | Tương tự, với các kịch bản chuyển đổi dự phòng có chủ đích                                                  |
+| Lệnh                                   | Chức năng                                                                                                  |
+| :------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Định tuyến thực trong tiến trình với `RUN_COMBO_LIVE=1`; tạo snapshot của cơ sở dữ liệu 67router trực tiếp |
+| `npm run test:combo:live:vps`          | Các lệnh gọi HTTP đến máy chủ 67router trực tiếp (đặt `COMBO_LIVE_BASE_URL`)                               |
+| `npm run test:combo:live:vps:failover` | Tương tự, với các kịch bản chuyển đổi dự phòng có chủ đích                                                 |
 
 Các kiểm thử nhanh này thực thi đường truyền thực tế (combo → nhà cung cấp → completion). Chúng được
 chủ ý loại khỏi CI vì yêu cầu thông tin xác thực thực tế và quyền truy cập VPS.

@@ -8,9 +8,9 @@
 > **Sist oppdatert:** 2026-09-16
 > **Målgruppe:** Ingeniører som legger til, vedlikeholder eller feilsøker innebygde tjenester (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Innebygde tjenester er lokalt installerte sideverktøy som kjører som prosesser, og som OmniRoute installerer, overvåker og
+Innebygde tjenester er lokalt installerte sideverktøy som kjører som prosesser, og som 67router installerer, overvåker og
 eksponerer som fullverdige rutingsmål. I motsetning til eksterne leverandører (som nås over internett
-via API-nøkler) kjører innebygde tjenester på samme maskin som OmniRoute og kommuniserer via loopback.
+via API-nøkler) kjører innebygde tjenester på samme maskin som 67router og kommuniserer via loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Sju tjenester er innebygd:
 
 | Tjeneste        | npm-pakke                                  | Standardport | Formål                                                                                                                                                                                                                                                                                                                                                  |
 | --------------- | ------------------------------------------ | :----------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                  |    20130     | AI-ruter som OmniRoute kan bruke som underleverandør. Modeller eksponeres som `9router/{sub}/{model}`                                                                                                                                                                                                                                                   |
+| **9Router**     | `9router`                                  |    20130     | AI-ruter som 67router kan bruke som underleverandør. Modeller eksponeres som `9router/{sub}/{model}`                                                                                                                                                                                                                                                    |
 | **CLIProxyAPI** | Binærfil fra GitHub-utgivelse (`cliproxy`) |     8317     | Lokal proxyadapter for Anthropic CLI-autentiseringsflyter. Tilbyr reserveruting når OAuth-tokener utløper                                                                                                                                                                                                                                               |
 | **Mux**         | `mux` (hodeløs `mux server`)               |     8322     | Lokal demon for agentorkestrering (coder/mux). Kun livssyklusadministrert — ikke et rutingsmål (ingen LLM-proxying).                                                                                                                                                                                                                                    |
 | **Bifrost**     | `@maximhq/bifrost`                         |     8080     | Go-basert backend for AI-gatewayrelé. Når den kjører, velges den automatisk av reléruten (`/v1/relay/`)                                                                                                                                                                                                                                                 |
@@ -45,21 +45,21 @@ Sju tjenester er innebygd:
 
 Alle de sju følger den samme overvåkingsmodellen:
 
-- OmniRoute installerer dem under `DATA_DIR/services/{name}/` (isolert fra OmniRoutes egen `package.json`)
-- OmniRoute starter og overvåker dem som underprosesser
-- OmniRoute injiserer en midlertidig API-nøkkel i underprosessens miljø og roterer den uten nedetid (der det er aktuelt)
+- 67router installerer dem under `DATA_DIR/services/{name}/` (isolert fra 67routers egen `package.json`)
+- 67router starter og overvåker dem som underprosesser
+- 67router injiserer en midlertidig API-nøkkel i underprosessens miljø og roterer den uten nedetid (der det er aktuelt)
 - Alle administrasjonsruter (`/api/services/*`) er **LOCAL_ONLY** — kun tilgjengelige fra loopback (ufravikelig regel nr. 17)
 
 ### Viktige beslutninger (fra designplanen)
 
-| Beslutning                                                      | Verdi                                                                             |
-| --------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| Dashbordtilgang til det innebygde brukergrensesnittet i 9Router | Omvendt proxy på `/dashboard/providers/services/9router/embed/*`                  |
-| Installasjonsmekanisme                                          | `npm install {package}` via `execFile` (ingen skallinterpolering)                 |
-| Bruksmodus                                                      | Leverandør registrert som `9router/{sub}/{model}` i rutingsmotoren                |
-| Administrasjon av API-nøkler                                    | OmniRoute genererer, krypterer ved lagring (AES-256-GCM) og injiserer via miljøet |
-| Plassering i dashbordet                                         | `/dashboard/providers/services` (tre faner)                                       |
-| Automatisk oppstart                                             | Bryter per tjeneste, AV som standard                                              |
+| Beslutning                                                      | Verdi                                                                            |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Dashbordtilgang til det innebygde brukergrensesnittet i 9Router | Omvendt proxy på `/dashboard/providers/services/9router/embed/*`                 |
+| Installasjonsmekanisme                                          | `npm install {package}` via `execFile` (ingen skallinterpolering)                |
+| Bruksmodus                                                      | Leverandør registrert som `9router/{sub}/{model}` i rutingsmotoren               |
+| Administrasjon av API-nøkler                                    | 67router genererer, krypterer ved lagring (AES-256-GCM) og injiserer via miljøet |
+| Plassering i dashbordet                                         | `/dashboard/providers/services` (tre faner)                                      |
+| Automatisk oppstart                                             | Bryter per tjeneste, AV som standard                                             |
 
 ---
 
@@ -220,7 +220,7 @@ Forespørsler som ikke kommer fra loopback, mottar `403 LOCAL_ONLY` uavhengig av
 #### `POST /api/services/9router/install`
 
 Installer 9Router fra npm. Oppretter `DATA_DIR/services/9router/` med egne
-`package.json` og `node_modules/`. Er ikke i konflikt med OmniRoutes egne avhengigheter.
+`package.json` og `node_modules/`. Er ikke i konflikt med 67routers egne avhengigheter.
 
 **Forespørselsinnhold** (alt er valgfritt):
 
@@ -381,7 +381,7 @@ Returnerer kombinert direkte- og DB-status, inkludert versjonsmetadata og en for
 #### `POST /api/services/9router/auto-start`
 
 Slå automatisk oppstart av eller på. Når `enabled: true`, starter tjenesten automatisk
-neste gang OmniRoute starter opp (hvis tjenesten er installert).
+neste gang 67router starter opp (hvis tjenesten er installert).
 
 **Forespørselsinnhold:**
 
@@ -591,7 +591,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Denne proxyen:
 
 - Videresender forespørselen til `http://127.0.0.1:{port}/{path}` (kun tilbakekobling)
-- Fjerner innkommende `cookie`- og `authorization`-headere (ingen lekkasje av OmniRoute-økten)
+- Fjerner innkommende `cookie`- og `authorization`-headere (ingen lekkasje av 67router-økten)
 - Injiserer `Authorization: Bearer {apiKey}` for 9Router-autentisering
 - Fjerner `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` fra responsen
 - Omskriver HTML-responser for å injisere `<base href>` og normalisere absolutte baner (`/foo` → `/dashboard/.../embed/foo`)
@@ -628,7 +628,7 @@ nivåmatrisen.
 ### Injisering av API-nøkkel
 
 9Router og Mux krever en API-nøkkel/bærertoken for sine egne HTTP-endepunkter.
-OmniRoute:
+67router:
 
 1. Genererer en nøkkel via `crypto.randomBytes(32).toString("base64url")` med et
    tjenestespesifikt prefiks (`nr_` for 9Router, `mx_` for Mux).
@@ -811,7 +811,7 @@ Hvis den innebygde tjenesten tilbyr et OpenAI-kompatibelt endepunkt på `/v1/cha
 
 1. Sjekk `GET /api/services/{name}/logs` (eller loggpanelet i kontrollpanelet). Se
    etter linjer som `Error: ENOENT`, `address already in use` eller `Cannot find module`.
-2. Kontroller at `npm` finnes i PATH: Kjør `which npm` fra den samme brukerkontoen som kjører OmniRoute.
+2. Kontroller at `npm` finnes i PATH: Kjør `which npm` fra den samme brukerkontoen som kjører 67router.
 3. Kontroller at tjenesten er installert: Sjekk `GET /api/services/{name}/status` for
    `installedVersion`. Hvis verdien er `null`, må du kjøre installasjonen først.
 4. Kontroller at `DATA_DIR/services/{name}/node_modules/` finnes og ikke er tom.
@@ -849,7 +849,7 @@ oppstartstid kan du øke `healthIntervalMs` til 5000 og `stopTimeoutMs` til 30 0
 3. Porten kan konfigureres per tjeneste i `bootstrap.ts` via feltet `port`.
 
 **Merk:** 9Router bruker port 20130 som standard, spesielt for å unngå konflikt med
-OmniRoutes standardport 20128.
+67routers standardport 20128.
 
 ---
 
@@ -859,13 +859,13 @@ OmniRoutes standardport 20128.
 
 **Årsaker:**
 
-- `DATA_DIR` eller den overordnede katalogen er ikke skrivbar for OmniRoute-prosessen.
+- `DATA_DIR` eller den overordnede katalogen er ikke skrivbar for 67router-prosessen.
 - Kjøring i Docker uten root-tilgang og uten skrivetilgang til det tilordnede volumet.
 
 **Løsning:**
 
 1. Sjekk `DATA_DIR` (standard: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Sørg for at brukeren som kjører OmniRoute-prosessen, eier katalogen: `chown -R $USER ~/.omniroute/`
+2. Sørg for at brukeren som kjører 67router-prosessen, eier katalogen: `chown -R $USER ~/.omniroute/`
 3. I Docker må du sørge for at volummonteringen har riktige tillatelser for containerbrukeren.
 
 ---
@@ -913,16 +913,16 @@ omgåelser for administrasjonstilgang. Se `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **S: Vil 9Router og CLIProxyAPI være tilgjengelige i produksjons-/skyimplementeringer?**
 
-Ja. Begge tjenestene følger den samme lokal-først-modellen som OmniRoute selv. De
+Ja. Begge tjenestene følger den samme lokal-først-modellen som 67router selv. De
 kjører på samme maskin og kommuniserer via loopback. «Produksjon» betyr her VPS-en
-eller den lokale serveren der OmniRoute er distribuert, ikke en ekstern skyleverandør.
+eller den lokale serveren der 67router er distribuert, ikke en ekstern skyleverandør.
 
 ---
 
 **S: Hvordan feilsøker jeg prosessovervåkeren?**
 
 1. Følg SSE-loggstrømmen: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Kontroller strukturerte logger i OmniRoutes pino-utdata, filtrert etter
+2. Kontroller strukturerte logger i 67routers pino-utdata, filtrert etter
    navnerommet `service:supervisor`.
 3. Undersøk DB-raden: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Bruk `GET /api/services/9router/status` for å se gjeldende sanntidstilstand, PID,

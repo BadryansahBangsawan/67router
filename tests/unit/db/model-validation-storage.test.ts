@@ -6,7 +6,7 @@ import {
   updateProviderConnection,
 } from "../../../src/lib/db/providers.ts";
 import { getCustomModels } from "../../../src/lib/db/models.ts";
-import { insertPlugin, deletePlugin } from "../../../src/lib/db/plugins.ts";
+import { getDbInstance } from "../../../src/lib/db/core.ts";
 import {
   createValidationSnapshot,
   commitValidatedModel,
@@ -81,15 +81,13 @@ test("plugin configuration mutation invalidates transactional evidence", async (
     apiFormat: "chat-completions" as const,
   };
   const snapshot = createValidationSnapshot(input);
-  insertPlugin({
-    id: "changed-plugin",
-    name: "changed-plugin",
-    version: "1.0.0",
-    main: "absent.js",
-    pluginDir: "/nonexistent-validation-fixture",
-    manifest: {},
-    status: "inactive",
-  });
+  // The plugin runtime is gone but its table stays and still feeds the fingerprint.
+  getDbInstance()
+    .prepare(
+      `INSERT INTO plugins (id, name, manifest, plugin_dir, status)
+       VALUES ('changed-plugin', 'changed-plugin', '{}', '/nonexistent-validation-fixture', 'inactive')`
+    )
+    .run();
   try {
     assert.throws(() => commitValidatedModel(snapshot, input, {}), /changed|unavailable/);
     assert.equal(
@@ -97,6 +95,6 @@ test("plugin configuration mutation invalidates transactional evidence", async (
       false
     );
   } finally {
-    deletePlugin("changed-plugin");
+    getDbInstance().prepare("DELETE FROM plugins WHERE id = 'changed-plugin'").run();
   }
 });

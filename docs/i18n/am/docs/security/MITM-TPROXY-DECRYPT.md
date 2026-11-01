@@ -6,7 +6,7 @@
 
 TPROXY ግልጽ ዲክሪፕት ለ
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
-MITM ስታክ የOmniRoute **5ኛው የቀረጻ ሁነታ** ነው። በLinux ላይ የአካባቢ ወጪ HTTPS ትራፊክን
+MITM ስታክ የ67router **5ኛው የቀረጻ ሁነታ** ነው። በLinux ላይ የአካባቢ ወጪ HTTPS ትራፊክን
 kernel TPROXY + policy routing በመጠቀም — `/etc/hosts`ን **ሳያስመስል** እና
 የመላ OS የስርዓት-proxy ቅንብሮችን **ሳይቀይር** ይጠልፍና **ዲክሪፕት** ያደርጋል። ለheadless አጠቃቀም ምቹ ነው
 (ለማጽዳት የDNS ለውጦች የሉም)፣ እንዲሁም የfirewall ደንቦቹ ሲስተሙ እንደገና ሲነሳ በራስ-ሰር ይወገዳሉ።
@@ -53,7 +53,7 @@ kernel TPROXY + policy routing በመጠቀም — `/etc/hosts`ን **ሳያስ�
 - በመላ ስርዓቱ የproxy ለውጥ ማወክ የማይፈልጉት።
 
 መጥለፉ በkernel ውስጥ ስለሚከናወን፣ ግንኙነቱን የጀመረው process **ምንም
-የውቅረት ለውጥ** አያስፈልገውም — ነገር ግን processው OmniRoute የሚጭነውን dynamic CA
+የውቅረት ለውጥ** አያስፈልገውም — ነገር ግን processው 67router የሚጭነውን dynamic CA
 ማመን አለበት ([§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)ን ይመልከቱ)።
 
 ---
@@ -72,7 +72,7 @@ kernel TPROXY + policy routing በመጠቀም — `/etc/hosts`ን **ሳያስ�
 ስህተት ከመወርወር ይልቅ `null` ይመልሳል። ከዚያም የcapture-mode ሁኔታ
 `available: false` ብሎ ያሳያል፣ የdashboard toggle ደግሞ
 "TPROXY decrypt Linux + root + native addon ያስፈልገዋል" በሚለው tooltip
-**ይሰናከላል**፣ የቀረው OmniRoute ግን መስራቱን ይቀጥላል።
+**ይሰናከላል**፣ የቀረው 67router ግን መስራቱን ይቀጥላል።
 
 ---
 
@@ -240,7 +240,7 @@ root ባልሆነ desktop ላይ `sudoPassword` በstdin በኩል ለ`sudo -S` 
 | **የስህተት ማጽዳት**                | የመንገዱ የስህተት ምላሾች በ`sanitizeErrorMessage()` በኩል ያልፋሉ (ጥብቅ ደንብ #12)።                                                                                                                                                                                                                                                      |
 
 **MITM CA ኃይለኛ ችሎታ ነው።** ማንኛውንም አስተናጋጅ መፈረም የሚችል በስርዓተ ክወናው የታመነ CA
-ማለት OmniRoute የሚጠልፈው ማንኛውም ነገር ዲክሪፕት ሊደረግ ይችላል ማለት ነው። በግልጽ፣ ለአካባቢያዊ አገልግሎት ብቻ ከተወሰነው
+ማለት 67router የሚጠልፈው ማንኛውም ነገር ዲክሪፕት ሊደረግ ይችላል ማለት ነው። በግልጽ፣ ለአካባቢያዊ አገልግሎት ብቻ ከተወሰነው
 የTPROXY ቀረጻ ሁነታ ጀርባ የተገደበ ሲሆን፣ በነባሪነት ጠፍቷል፤ እንዲሁም ሁነታውን
 ሲያቆሙ የታማኝነት ማከማቻው ግቤት ይወገዳል።
 
@@ -349,7 +349,7 @@ native addon-ውን መጫን አይቻልም። የሚከተሉትን ያረጋ
 ### ከመበላሸት በኋላ የቀሩ የfirewall ደንቦች
 
 `revertTproxy()` የapply ትክክለኛ ተቃራኒ ሲሆን idempotent ነው። ሁነታውን ማቆም
-ደንቦቹን ይመልሳል፤ OmniRoute በsession መካከል ከተቋረጠ፣ ወላጅ አልባ የsystem
+ደንቦቹን ይመልሳል፤ 67router በsession መካከል ከተቋረጠ፣ ወላጅ አልባ የsystem
 ሁኔታን (DNS spoof፣ root CA፣ system proxy) ለመቀልበስ የAgentBridge
 **Repair** እርምጃን (`POST /api/tools/agent-bridge/repair`) ይጠቀሙ። የTPROXY `mangle`
 ደንቦች እና route-ውም እንደገና ሲነሳ በራስ-ሰር ይጸዳሉ።

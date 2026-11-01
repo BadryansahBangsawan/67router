@@ -4,7 +4,7 @@
 
 ---
 
-જ્યારે OmniRoute Dockerની અંદર ચાલે છે, ત્યારે જૂના **Import from Cursor IDE** /
+જ્યારે 67router Dockerની અંદર ચાલે છે, ત્યારે જૂના **Import from Cursor IDE** /
 `cursor-agent` પ્રવાહો નિષ્ફળ જાય છે, કારણ કે કન્ટેનર હોસ્ટ પરનું Cursor
 ઇન્સ્ટોલેશન જોઈ શકતું નથી. તેના બદલે **Login with Cursor** (deep-control PKCE) નો ઉપયોગ કરો.
 
@@ -14,7 +14,7 @@
    `~/.config/Cursor/User/globalStorage/state.vscdb` જેવા Linux પાથ શોધે છે.
    macOS માટેના Docker Desktop પર હોસ્ટ IDE DB ડિફૉલ્ટ રૂપે માઉન્ટ થયેલું હોતું નથી અને
    હોસ્ટ Darwin હોય ત્યારે પણ કન્ટેનર OS Linux હોય છે.
-2. **`cursor-agent` બાઇનરી નથી** — અધિકૃત OmniRoute ઇમેજોમાં
+2. **`cursor-agent` બાઇનરી નથી** — અધિકૃત 67router ઇમેજોમાં
    `cursor-agent` સામેલ નથી. અગાઉ Available Models
    `cursor-agent --list-models` ને શેલ મારફતે ચલાવતું હતું અને નિષ્ફળતા પર સ્ટેટિક કૅટલૉગનો ઉપયોગ કરતું હતું.
 3. **ખોટી બાઇનરી** — macOS `cursor-agent` ને Linux
@@ -24,11 +24,11 @@
 
 1. **Dashboard → Providers → Cursor** ખોલો.
 2. **Login with Cursor** ટૅબ પસંદ કરો.
-3. **Login with Cursor** પર ક્લિક કરો — OmniRoute તમારા **હોસ્ટ** બ્રાઉઝરમાં
+3. **Login with Cursor** પર ક્લિક કરો — 67router તમારા **હોસ્ટ** બ્રાઉઝરમાં
    `https://cursor.com/loginDeepControl?…` ખોલે છે.
-4. બ્રાઉઝરમાં લૉગિન મંજૂર કરો અને પછી ડૅશબોર્ડ પર પાછા ફરો. ટોકન આવે ત્યાં સુધી OmniRoute
+4. બ્રાઉઝરમાં લૉગિન મંજૂર કરો અને પછી ડૅશબોર્ડ પર પાછા ફરો. ટોકન આવે ત્યાં સુધી 67router
    `api2.cursor.sh/auth/poll` ને પોલ કરે છે.
-5. OmniRoute **access + refresh** ટોકન સંગ્રહે છે અને
+5. 67router **access + refresh** ટોકન સંગ્રહે છે અને
    `https://api2.cursor.sh/auth/exchange_user_api_key` મારફતે તેમને રિફ્રેશ કરે છે.
 
 આ પાથ માટે કન્ટેનરની અંદર Cursor IDE અથવા `cursor-agent` હોવું જરૂરી નથી.
@@ -37,10 +37,10 @@
 
 લૉગિન કરેલા કનેક્શન સાથે, **Available Models / Auto-Sync** કનેક્શનના bearer token નો ઉપયોગ કરીને Cursorના
 HTTP `AiService/AvailableModels` કૅટલૉગને પ્રાથમિકતા આપે છે.
-જો તે નિષ્ફળ જાય, તો OmniRoute હજી પણ હોસ્ટ `cursor-agent` (જ્યારે ઉપલબ્ધ હોય) અજમાવે છે અને ત્યારબાદ
+જો તે નિષ્ફળ જાય, તો 67router હજી પણ હોસ્ટ `cursor-agent` (જ્યારે ઉપલબ્ધ હોય) અજમાવે છે અને ત્યારબાદ
 સ્ટેટિક રજિસ્ટ્રી સીડનો ઉપયોગ કરે છે.
 
-OmniRoute કૅટલૉગમાં હંમેશાં **`auto`** (પ્રદર્શન નામ “Auto”), ઉપરાંત
+67router કૅટલૉગમાં હંમેશાં **`auto`** (પ્રદર્શન નામ “Auto”), ઉપરાંત
 OpenCodex-શૈલીના રાઉટર મોડ **`auto-cost`**, **`auto-balance`**, અને
 **`auto-intelligence`** ઉપલબ્ધ કરાવે છે. વાયર પર આ Cursorના `default` મૉડલ સાથે
 મૅપ થાય છે (ત્રણ વેરિઅન્ટ માટે `optimization` ModelParameter સાથે). પ્રીમિયમ
@@ -87,7 +87,7 @@ PKCE અથવા ટોકન ઇમ્પોર્ટ પછી Cursor મા�
 ## ખાલી ટર્ન / ઉપયોગ સમાપ્ત
 
 જ્યારે Cursor Run સ્વીકારે છે પરંતુ assistant ટેક્સ્ટ પરત કરતું નથી (પ્રીમિયમ
-ઉપયોગ સમાપ્ત થઈ ગયો હોય ત્યારે આ સામાન્ય છે), ત્યારે OmniRoute ઉપયોગી માર્ગદર્શન સાથે **429** (ક્વોટા સંકેતો) અથવા
+ઉપયોગ સમાપ્ત થઈ ગયો હોય ત્યારે આ સામાન્ય છે), ત્યારે 67router ઉપયોગી માર્ગદર્શન સાથે **429** (ક્વોટા સંકેતો) અથવા
 **502** દર્શાવે છે — માત્ર “Provider returned empty content” નહીં. `not_found: AI Model Not Found`
 (ઉપયોગ વિન્ડો સમાપ્ત) જેવી સ્ટ્રીમિંગ નિષ્ફળતાઓને
 **Cursor rate limit / usage exceeded** તરીકે વર્ગીકૃત કરવામાં આવે છે અને તે સંદેશ
@@ -96,7 +96,7 @@ Provider Limits તપાસો, **`auto`** મૉડલ અજમાવો અ�
 
 ## ક્લાયન્ટ વર્ઝન (હેડલેસ)
 
-સ્થાનિક `cursor-agent` ઇન્સ્ટોલેશન વિના, OmniRoute
+સ્થાનિક `cursor-agent` ઇન્સ્ટોલેશન વિના, 67router
 `x-cursor-client-version` ને પહેલાં env `CURSOR_AGENT_CLI_VERSION`, ત્યારબાદ Cursor installer script ના disk-cached
 scrape અને પછી pinned build id દ્વારા રિઝોલ્વ કરે છે. જરૂર પડે ત્યારે
 `CURSOR_AGENT_CLI_VERSION` વડે ઓવરરાઇડ કરો.

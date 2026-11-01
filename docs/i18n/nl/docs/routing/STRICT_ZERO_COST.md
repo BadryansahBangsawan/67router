@@ -31,7 +31,7 @@ Voor elke kandidaat in de pool (`open-sse/services/autoCombo/virtualFactory.ts::
 direct na `filterPaidOnlyCandidates`):
 
 1. **Helemaal niet aanwezig in `FREE_MODEL_BUDGETS`** → uitgesloten. Dit omvat daadwerkelijk betaalde modellen en
-   elke provider/elk model dat OmniRoute nog niet heeft geclassificeerd — nieuwe kandidaten worden aanvankelijk
+   elke provider/elk model dat 67router nog niet heeft geclassificeerd — nieuwe kandidaten worden aanvankelijk
    uitgesloten, niet opgenomen.
 2. **`freeType: "keyless"`** → wordt onmiddellijk toegelaten, **maar alleen voor een kandidaat die daadwerkelijk
    via het pad zonder authenticatie is binnengekomen** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -87,7 +87,7 @@ nooit een ander, niet-geverifieerd account voor dezelfde kandidaat. Zie
 (gevallen A/B/C voor omzeiling zonder sleutel, gevallen 1-5 met meerdere accounts).
 
 `automatisch ontdekt`: een provider/model dat morgen met de juiste metadata wordt uitgebracht (in de
-catalogus, met een gebruiksadapter, `hardStopGuaranteed: true`) is bruikbaar zodra OmniRoute ervan op de hoogte is
+catalogus, met een gebruiksadapter, `hardStopGuaranteed: true`) is bruikbaar zodra 67router ervan op de hoogte is
 — geen codewijziging, geen vermelding in een whitelist en niets om in deze module te bewerken. Als een item uit
 de catalogus wordt verwijderd, verdwijnt het op dezelfde manier. Zie
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` voor het regressiebewijs (via

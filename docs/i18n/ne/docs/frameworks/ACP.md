@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ले **CLI खोज**, **नेटिभ Agent Client Protocol**, र
+67router ले **CLI खोज**, **नेटिभ Agent Client Protocol**, र
 **लिगेसी stdio एडेप्टरहरू** अलग गर्छ। इन्स्टल गरिएको बाइनरी फेला पर्दैमा त्यसको
 प्रमाणीकरण, मोडेल अनुकूलता, वा प्रम्प्ट सम्हाल्ने तत्परता प्रमाणित हुँदैन।
 
@@ -130,5 +130,3 @@ CLI को आफ्नै स्थानीय प्रमाणीकरण�
 - [एजेन्ट प्रोटोकलहरू](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI लन्च सम्झौताहरू](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI उपकरणहरू](../reference/CLI-TOOLS.md)
-- [A2A सर्भर](./A2A-SERVER.md)
-- [क्लाउड एजेन्टहरू](./CLOUD_AGENT.md)

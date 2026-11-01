@@ -31,28 +31,16 @@ export const ENDPOINT_CATEGORIES: readonly EndpointCategory[] = [
     prefixes: ["/v1/search"],
   },
   {
-    id: "embeddings",
-    label: "Embeddings",
-    description: "Text embeddings generation",
-    prefixes: ["/v1/embeddings", "/v1/multimodal-embeddings"],
-  },
-  {
-    id: "images",
-    label: "Images",
-    description: "Image generation, editing and upscaling",
-    prefixes: ["/v1/images"],
-  },
-  {
     id: "audio",
     label: "Audio / Speech",
-    description: "Text-to-speech and speech-to-text",
+    description: "Speech-to-text transcription",
     prefixes: ["/v1/audio"],
   },
   {
     id: "elevenlabs",
     label: "ElevenLabs Voice",
-    description: "Native ElevenLabs speech-to-text, text-to-speech, voices and sound effects",
-    prefixes: ["/v1/speech-to-text", "/v1/text-to-speech", "/v1/voices", "/v1/sound-generation"],
+    description: "Native ElevenLabs sound effects",
+    prefixes: ["/v1/sound-generation"],
   },
   {
     id: "video",
@@ -67,40 +55,16 @@ export const ENDPOINT_CATEGORIES: readonly EndpointCategory[] = [
     prefixes: ["/v1/music"],
   },
   {
-    id: "rerank",
-    label: "Rerank",
-    description: "Document reranking",
-    prefixes: ["/v1/rerank"],
-  },
-  {
     id: "models",
     label: "Models",
     description: "List available models (read-only)",
     prefixes: ["/v1/models"],
   },
   {
-    id: "moderations",
-    label: "Moderations",
-    description: "Content moderation",
-    prefixes: ["/v1/moderations"],
-  },
-  {
     id: "ocr",
     label: "OCR",
     description: "Optical character recognition",
     prefixes: ["/v1/ocr"],
-  },
-  {
-    id: "batches",
-    label: "Batch Processing",
-    description: "Batch API operations",
-    prefixes: ["/v1/batches"],
-  },
-  {
-    id: "files",
-    label: "Files",
-    description: "File upload and management",
-    prefixes: ["/v1/files"],
   },
   {
     id: "web-fetch",

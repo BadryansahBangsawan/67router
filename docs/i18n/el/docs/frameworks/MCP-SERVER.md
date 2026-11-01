@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Ελληνικά)
+# 67router MCP Server Documentation (Ελληνικά)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Εγκατάσταση
 
-Το OmniRoute MCP είναι ενσωματωμένο. Εκκινήστε το με:
+Το 67router MCP είναι ενσωματωμένο. Εκκινήστε το με:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline και συμβατούς MCP clients.
 | `omniroute_switch_combo`        | `write:combos`        | Ενεργοποίηση ή απενεργοποίηση ενός combo                                                                                                        |
 | `omniroute_create_combo`        | `write:combos`        | Δημιουργία επικυρωμένου combo μέσω του υπάρχοντος combo API                                                                                     |
 | `omniroute_check_quota`         | `read:quota`          | Χρησιμοποιημένη/συνολική ποσόστωση, ποσοστό που απομένει, χρόνος επαναφοράς, υγεία token                                                        |
-| `omniroute_route_request`       | `execute:completions` | Αποστολή ολοκλήρωσης συνομιλίας μέσω της δρομολόγησης OmniRoute                                                                                 |
+| `omniroute_route_request`       | `execute:completions` | Αποστολή ολοκλήρωσης συνομιλίας μέσω της δρομολόγησης 67router                                                                                  |
 | `omniroute_cost_report`         | `read:usage`          | Αναφορά κόστους ανά περίοδο (session/ημέρα/εβδομάδα/μήνα)                                                                                       |
 | `omniroute_list_models_catalog` | `read:models`         | Πλήρης κατάλογος μοντέλων με δυνατότητες, κατάσταση, τιμολόγηση                                                                                 |
 | `omniroute_radar_catalog`       | `read:radar`          | Τοπικός υπογεγραμμένος κατάλογος Radar· προαιρετικά φίλτρα παρόχου/οικογένειας                                                                  |
@@ -152,7 +152,7 @@ Cursor, Cline και συμβατούς MCP clients.
 
 ### Φίλτρο Δέντρου Προσβασιμότητας MCP (v3.8.0)
 
-Ξεχωριστό από τα παραπάνω εργαλεία συμπίεσης, το OmniRoute περιλαμβάνει ένα φίλτρο μετά την εκτέλεση που
+Ξεχωριστό από τα παραπάνω εργαλεία συμπίεσης, το 67router περιλαμβάνει ένα φίλτρο μετά την εκτέλεση που
 συμπιέζει τα **αποτελέσματα εργαλείων** των εργαλείων περιήγησης/προσβασιμότητας MCP πριν επιστραφούν στον
 πράκτορα. Αυτό το φίλτρο δεν είναι από μόνο του εργαλείο — εκτελείται διαφανώς σε οποιοδήποτε αποτέλεσμα εργαλείου περιέχει
 λεπτομερές κείμενο δέντρου προσβασιμότητας ή στιγμιότυπου περιήγησης (≥2000 χαρακτήρες).
@@ -236,7 +236,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Εμφανίζει όλες τις 45 δεξιότητες πράκτορα με προαιρετικά φίλτρα `category` (api\|cli) και `area`· επιστρέφει μεταδεδομένα + κάλυψη                     |
 | `omniroute_agent_skills_get`      | `read:catalog` | Ανακτά πλήρη μεταδεδομένα + περιεχόμενο SKILL.md για μία δεξιότητα με βάση το κανονικό `id`                                                            |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Στατιστικά κάλυψης: πόσες από τις 23 δεξιότητες API, 21 CLI και 1 config διαθέτουν αρχεία SKILL.md στο σύστημα αρχείων σε σχέση με τα σύνολα καταλόγου |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Στατιστικά κάλυψης: πόσες από τις 22 δεξιότητες API, 20 CLI και 1 config διαθέτουν αρχεία SKILL.md στο σύστημα αρχείων σε σχέση με τα σύνολα καταλόγου |
 
 Δείτε το [AGENT-SKILLS.md](./AGENT-SKILLS.md) για τον πλήρη κατάλογο και τον τρόπο που οι εξωτερικοί πράκτορες τον χρησιμοποιούν.
 
@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 Το παραπάνω ευρετήριο εργαλείων MCP (110 μοναδικά εργαλεία, υπολογισμένα από το `countUniqueMcpTools()`) έχει σκοπίμως
 περιορισμένο εύρος σε λειτουργίες δρομολόγησης/κρυφής μνήμης/συμπίεσης/μνήμης/δεξιοτήτων/proxy/πηγών-περιβάλλοντος κατά το χρόνο εκτέλεσης. Δύο συμπληρωματικά
 πλαίσια παρέχονται μαζί με τον MCP server στην έκδοση v3.8.0 και τεκμηριώνονται χωριστά:
-
-### Cloud Agents
-
-Τα Cloud Agents είναι πράκτορες κώδικα τεχνητής νοημοσύνης εκτός διεργασίας (codex-cloud, cursor-cloud, devin, jules) που συνδέονται στο
-OmniRoute μέσω του ίδιου μοντέλου σύνδεσης που χρησιμοποιείται για τους παρόχους LLM. Εκτίθενται μέσω
-της δικής τους REST επιφάνειας (`/api/v1/agents/*`) και **δεν** αποτελούν μέρος του καταλόγου εργαλείων MCP
-— η κλήση ενός Cloud Agent δεν καταναλώνει εμβέλεια MCP.
-
-- Υλοποίηση: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Κύκλος ζωής: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Τεκμηρίωση: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Guardrails
 
@@ -422,8 +411,6 @@ OmniRoute μέσω του ίδιου μοντέλου σύνδεσης που χ
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | 13 εργαλεία ανάγνωσης — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 εργαλεία εγγραφής — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -476,7 +463,7 @@ OmniRoute μέσω του ίδιου μοντέλου σύνδεσης που χ
 
 | Μεταβλητή                               | Προεπιλογή                                    | Σκοπός                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | :-------------------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                      | Βασικό URL που χρησιμοποιεί ο διακομιστής MCP κατά την κλήση εσωτερικών API του OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                      | Βασικό URL που χρησιμοποιεί ο διακομιστής MCP κατά την κλήση εσωτερικών API του 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `OMNIROUTE_API_KEY`                     | (κενό)                                        | Κλειδί API που προωθείται ως `Authorization: Bearer` στις εσωτερικές κλήσεις API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (μόνο η τιμή `"true"` το ενεργοποιεί) | Όταν είναι ενεργοποιημένο, τα scope που λείπουν απορρίπτουν τις κλήσεις εργαλείων και καταγράφουν `scope_denied:<reason>` στο αρχείο καταγραφής ελέγχου. Η επιβολή ενεργοποιείται ΕΠΙΣΗΣ υποχρεωτικά, ανεξάρτητα από αυτήν τη σημαία, για οποιονδήποτε καλούντα HTTP/SSE ταυτοποιείται μέσω μιας κεφαλίδας Authorization ανά κλειδί (`source === "authInfo"`) και δεν διαθέτει πλήρες scope `manage`/`admin` — π.χ. ένα κλειδί που διαθέτει μόνο το περιορισμένο scope παράκαμψης `mcp:connect` — επομένως αυτή η προεπιλογή είναι ασφαλής μόνο για την τοπική ροή ενός διαχειριστή μέσω stdio, ποτέ για απομακρυσμένη πρόσβαση εκτός loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (κενό)                                        | Λίστα επιτρεπόμενων scope, διαχωρισμένων με κόμματα, που θεωρούνται «διαθέσιμα» από προεπιλογή (χρησιμοποιείται όταν ο καλών δεν παρέχει τα δικά του scope)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -579,7 +566,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Ορισμοί εργαλείων δεξιοτήτων (4 εργαλεία)                                  |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Ορισμοί εργαλείων πηγής περιεχομένου Notion (6 εργαλεία)                   |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Ορισμοί εργαλείων gamification (8 εργαλεία)                                |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Εργαλεία καταχώρισης και διαχείρισης plugin (8 εργαλεία)                   |
 | `src/app/api/mcp/status/route.ts`                                        | Τελικό σημείο `/api/mcp/status`                                            |
 | `src/app/api/mcp/tools/route.ts`                                         | Τελικό σημείο `/api/mcp/tools`                                             |
 | `src/app/api/mcp/sse/route.ts`                                           | Διαδρομή μεταφοράς SSE `/api/mcp/sse`                                      |

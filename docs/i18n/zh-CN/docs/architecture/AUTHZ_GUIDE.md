@@ -7,7 +7,7 @@
 > **事实来源：** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **最后更新：** 2026-09-22 — 范围命名空间指向 MCP-SERVER.md
 
-OmniRoute 拥有一个路由感知的授权管道，用于守卫每个 API 请求。分类是**确定性**的且**故障关闭**的——任何无法分类的内容最终都会被归类为 `MANAGEMENT`，并要求会话或管理级别的令牌。本页面为维护路由或设计新端点的工程师解释了该模型。
+67router 拥有一个路由感知的授权管道，用于守卫每个 API 请求。分类是**确定性**的且**故障关闭**的——任何无法分类的内容最终都会被归类为 `MANAGEMENT`，并要求会话或管理级别的令牌。本页面为维护路由或设计新端点的工程师解释了该模型。
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 
@@ -241,8 +241,6 @@ API 密钥带有一个 `scopes` 数组（以 JSON 格式存储在 `api_keys.scop
 客户端 API 密钥的强制执行使用 `src/shared/utils/featureFlags.ts` 中的 `isRequireApiKeyEnabled()`，而不是直接读取 `process.env.REQUIRE_API_KEY`。这对已部署的实例很重要：在仪表板 → 功能开关中切换 `REQUIRE_API_KEY` 会存储一个数据库覆盖值，并立即影响 `/v1/*`、`/v1beta/*`、`/models`、`/responses`、`/chat/completions`、`/codex/*` 以及其他共享此辅助函数的客户端 API 认证检查。如果无法读取功能开关存储，客户端 API 认证将失败时默认拒绝，并要求提供密钥。
 
 ## 破坏性变更 — v3.8.0
-
-`/api/v1/agents/tasks/*` 和 `/api/resilience/model-cooldowns` 端点**现在需要管理身份验证**（提交 `588a0333`）。此前发送不含 `manage` 作用域的普通 API 密钥的客户端将收到 `403`。迁移方式：在 API Keys 仪表板中为密钥授予 `manage` 作用域，或使用已登录的仪表板会话。
 
 ## 行为变更 — v3.8.2
 

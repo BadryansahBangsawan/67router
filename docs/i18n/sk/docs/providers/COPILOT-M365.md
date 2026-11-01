@@ -39,7 +39,7 @@ overenej relácie prehliadača Microsoft 365 Copilot BizChat na adrese
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. V OmniRoute prejdite na **Providers → Add Provider**, vyberte **Microsoft 365 Copilot
+6. V 67router prejdite na **Providers → Add Provider**, vyberte **Microsoft 365 Copilot
    (BizChat)** a vložte prihlasovací údaj v tomto formáte:
 
 ```
@@ -56,9 +56,9 @@ z DevTools:
 1. Otvorte **DevTools → Network**.
 2. Začnite konverzáciu BizChat alebo v nej pokračujte (tým sa aktivuje pripojenie WebSocket).
 3. Kliknite pravým tlačidlom myši na panel Network a vyberte **Save all as HAR with content**.
-4. V OmniRoute použite tlačidlo **Import .har file** v dialógovom okne pripojenia poskytovateľa.
+4. V 67router použite tlačidlo **Import .har file** v dialógovom okne pripojenia poskytovateľa.
 
-OmniRoute vyhľadá v súbore HAR adresu URL WebSocketu Chathub, extrahuje
+67router vyhľadá v súbore HAR adresu URL WebSocketu Chathub, extrahuje
 `access_token` a `chathubPath` a automaticky vyplní polia prihlasovacích údajov. Pri
 importe HAR sa dekóduje čas vypršania platnosti JWT a zobrazí sa zostávajúca doba platnosti tokenu.
 
@@ -81,7 +81,7 @@ Aby ste sa vyhli manuálnemu opätovnému získavaniu údajov, môžete obnovova
 | `tier`         | `individual` (predvolené), `edu` alebo `enterprise`                       |
 
 Obnovovací token získate pomocou toku Microsoft s kódom zariadenia alebo autorizačným kódom
-s rozsahom `substrate.office.com/sydney`. Ak je nastavený `refreshToken`, OmniRoute
+s rozsahom `substrate.office.com/sydney`. Ak je nastavený `refreshToken`, 67router
 pred každou požiadavkou preventívne obnoví `access_token`, takže ho nemusíte
 získavať znova po každom uplynutí približne 75-minútovej platnosti.
 

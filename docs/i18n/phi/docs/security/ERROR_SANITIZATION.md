@@ -208,13 +208,13 @@ Mga panuntunan sa sanitization na inilalapat sa `upstreamDetails`:
 3. Limitasyon sa depth: ang nesting na lampas sa 4 na level ay pinapalitan ng string na `"[truncated]"`.
 4. Nililimitahan ang mga array sa 32 elemento.
 
-Ang mga call site lamang na may na-parse na error body ng provider ang dapat magpasa ng `upstreamDetails`. Hindi ito dapat isama ng mga internal na error ng OmniRoute (mga pagkabigo sa pag-parse ng SSE, walang laman na content, mga pag-block ng guardrail).
+Ang mga call site lamang na may na-parse na error body ng provider ang dapat magpasa ng `upstreamDetails`. Hindi ito dapat isama ng mga internal na error ng 67router (mga pagkabigo sa pag-parse ng SSE, walang laman na content, mga pag-block ng guardrail).
 
 Huwag ipasa ang raw na `err.stack`, `err.message`, o anumang string mula sa runtime exception sa
 `upstreamDetails`. Dapat pa ring dumaan ang mga iyon sa `errorResponse` / `buildErrorBody(code, msg)`
 nang walang upstream body.
 
-Pinapanatili ng selective na upstream 4xx passthrough ang ligtas na JSON shape at pananalita ng provider na kinakailangan ng awtomatikong pag-recover ng client, ngunit hindi ito byte-for-byte na passthrough: palaging tumatakbo ang recursive sanitizer bago ang serialization. Ang mga body na cyclic, may BigInt, o may mapaminsalang `toJSON()` ay awtomatikong itinatanggi at hindi kwalipikado para sa passthrough. Inilalapat ng OCR at moderation ang parehong panuntunan; ang mga upstream body na hindi JSON, blangko, o may maling label ay kino-convert sa canonical na JSON error envelope ng OmniRoute.
+Pinapanatili ng selective na upstream 4xx passthrough ang ligtas na JSON shape at pananalita ng provider na kinakailangan ng awtomatikong pag-recover ng client, ngunit hindi ito byte-for-byte na passthrough: palaging tumatakbo ang recursive sanitizer bago ang serialization. Ang mga body na cyclic, may BigInt, o may mapaminsalang `toJSON()` ay awtomatikong itinatanggi at hindi kwalipikado para sa passthrough. Inilalapat ng OCR at moderation ang parehong panuntunan; ang mga upstream body na hindi JSON, blangko, o may maling label ay kino-convert sa canonical na JSON error envelope ng 67router.
 
 ## Kilalang limitasyon ng CodeQL: hindi nakikilala ang mga custom sanitizer
 

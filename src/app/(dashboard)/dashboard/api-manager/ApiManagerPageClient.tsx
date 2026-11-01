@@ -117,7 +117,6 @@ interface ApiKey {
   usageLimitEnabled?: boolean;
   dailyUsageLimitUsd?: number | null;
   weeklyUsageLimitUsd?: number | null;
-  allowedQuotas?: string[] | null;
   createdAt: string;
 }
 
@@ -160,7 +159,6 @@ export default function ApiManagerPageClient() {
   const [activeOnly, setActiveOnly] = useState(false);
   const [statusFilter, setStatusFilter] = useState<KeyStatus | null>(null);
   const [typeFilter, setTypeFilter] = useState<KeyType | null>(null);
-  const [quotaPoolGroup, setQuotaPoolGroup] = useState<Record<string, string>>({});
 
   const { copied, copy } = useCopyToClipboard();
 
@@ -194,44 +192,6 @@ export default function ApiManagerPageClient() {
   useEffect(() => {
     writeActiveOnlyPreference(activeOnly);
   }, [activeOnly]);
-
-  useEffect(() => {
-    let cancelled = false;
-    const loadQuotaGroups = async () => {
-      try {
-        const [poolsRes, groupsRes] = await Promise.all([
-          fetch("/api/quota/pools"),
-          fetch("/api/quota/groups"),
-        ]);
-        if (!poolsRes.ok || !groupsRes.ok) return;
-        const poolsData = await poolsRes.json();
-        const groupsData = await groupsRes.json();
-        const pools: Array<{ id: string; groupId: string }> = Array.isArray(poolsData.pools)
-          ? poolsData.pools
-          : [];
-        const groups: Array<{ id: string; name: string }> = Array.isArray(groupsData.groups)
-          ? groupsData.groups
-          : [];
-        const groupNameById: Record<string, string> = {};
-        for (const g of groups) {
-          groupNameById[g.id] = g.name;
-        }
-        const map: Record<string, string> = {};
-        for (const p of pools) {
-          if (groupNameById[p.groupId]) {
-            map[p.id] = groupNameById[p.groupId];
-          }
-        }
-        if (!cancelled) setQuotaPoolGroup(map);
-      } catch {
-        // fail open — quota group chips simply won't render
-      }
-    };
-    loadQuotaGroups();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   useEffect(() => {
     if (!showAddModal || !nameError) return;
@@ -395,25 +355,6 @@ export default function ApiManagerPageClient() {
 
   const isFiltered =
     activeOnly || statusFilter !== null || typeFilter !== null || searchQuery.trim() !== "";
-
-  const isQuotaKey = (k: ApiKey) => Array.isArray(k.allowedQuotas) && k.allowedQuotas.length > 0;
-
-  const quotaKeys = filteredKeys.filter(isQuotaKey);
-  const normalKeys = filteredKeys.filter((k) => !isQuotaKey(k));
-
-  const quotaGroupsForKey = (k: ApiKey): string[] => {
-    if (!Array.isArray(k.allowedQuotas)) return [];
-    const seen = new Set<string>();
-    const result: string[] = [];
-    for (const poolId of k.allowedQuotas) {
-      const groupName = quotaPoolGroup[poolId];
-      if (groupName && !seen.has(groupName)) {
-        seen.add(groupName);
-        result.push(groupName);
-      }
-    }
-    return result;
-  };
 
   const handleClearFilters = () => {
     setSearchQuery("");
@@ -602,7 +543,7 @@ export default function ApiManagerPageClient() {
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       {/* Error Banner */}
       {pageError && (
         <Alert
@@ -664,11 +605,11 @@ export default function ApiManagerPageClient() {
       <Card>
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center size-10 rounded-lg bg-warning/10 shrink-0">
-              <Icon name="vpn_key" className="text-xl text-warning" />
+            <div className="flex items-center justify-center size-8 rounded-lg border border-border bg-surface shrink-0">
+              <Icon name="vpn_key" size={16} className="text-text-muted" />
             </div>
             <div>
-              <h3 className="font-semibold">
+              <h3 className="text-sm font-semibold tabular-nums">
                 {t("registeredKeys")}
                 {isFiltered && (
                   <span className="ml-1.5 text-sm font-normal text-text-muted">
@@ -701,11 +642,11 @@ export default function ApiManagerPageClient() {
           </Button>
         </div>
 
-        <p className="text-sm text-text-muted mb-4">{t("keysSecurityNote")}</p>
+        <p className="text-[13px] text-text-muted mb-4">{t("keysSecurityNote")}</p>
 
         {keys.length === 0 ? (
-          <div className="text-center py-12 border border-dashed border-border rounded-lg">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
+          <div className="text-center py-12 border border-dashed border-border rounded-xl bg-bg-subtle">
+            <div className="inline-flex items-center justify-center size-12 rounded-xl border border-border bg-surface text-text-muted mb-4">
               <Icon name="vpn_key" size={32} />
             </div>
             <p className="text-text-main font-medium mb-2">{t("noKeys")}</p>
@@ -722,8 +663,8 @@ export default function ApiManagerPageClient() {
             </Button>
           </div>
         ) : filteredKeys.length === 0 ? (
-          <div className="text-center py-12 border border-dashed border-border rounded-lg">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
+          <div className="text-center py-12 border border-dashed border-border rounded-xl bg-bg-subtle">
+            <div className="inline-flex items-center justify-center size-12 rounded-xl border border-border bg-surface text-text-muted mb-4">
               <Icon name="search_off" size={32} />
             </div>
             <p className="text-text-main font-medium mb-2">{t("emptyFilterTitle")}</p>
@@ -765,10 +706,6 @@ export default function ApiManagerPageClient() {
               const activeSessions = sessionCounts[key.id] || 0;
               const deviceCount = deviceCounts[key.id] || 0;
               const hasSchedule = key.accessSchedule?.enabled === true;
-              const keyIsQuota = isQuotaKey(key);
-              const groups = quotaGroupsForKey(key);
-              const visibleGroups = groups.slice(0, 3);
-              const extraGroupCount = groups.length - visibleGroups.length;
               return (
                 <TableRow key={key.id} className="group">
                   <TableCell className="max-w-48">
@@ -778,14 +715,14 @@ export default function ApiManagerPageClient() {
                         size={14}
                         className={isRestricted ? "text-warning" : "text-success"}
                       />
-                      <span className="text-sm font-medium truncate" title={key.name}>
+                      <span className="text-[13px] font-medium truncate" title={key.name}>
                         {key.name}
                       </span>
                     </div>
                   </TableCell>
                   <TableCell className="max-w-64">
                     <div className="flex items-center gap-1.5">
-                      <code className="text-sm text-text-muted font-mono truncate">
+                      <code className="text-[12.5px] text-text-secondary font-mono truncate">
                         {visibleKeys.has(key.id) ? (revealedKeys.get(key.id) ?? key.key) : key.key}
                       </code>
                       {allowKeyReveal ? (
@@ -822,27 +759,6 @@ export default function ApiManagerPageClient() {
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-col items-start gap-1">
-                      {/* QUOTA differentiation chips — prepended before existing badges */}
-                      {keyIsQuota && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-chart-3/10 text-chart-3 text-[11px] font-medium">
-                          {t("quotaModeOnly")}
-                        </span>
-                      )}
-                      {keyIsQuota &&
-                        visibleGroups.map((groupName) => (
-                          <span
-                            key={groupName}
-                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-info/10 text-info text-[11px] font-medium truncate max-w-full"
-                          >
-                            {groupName}
-                          </span>
-                        ))}
-                      {keyIsQuota && extraGroupCount > 0 && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-info/10 text-info text-[11px] font-medium">
-                          +{extraGroupCount}
-                        </span>
-                      )}
-                      {/* Existing badges */}
                       {isModelRestricted ? (
                         <Link
                           href={`/dashboard/api-manager/${encodeURIComponent(key.id)}/access?tab=models`}
@@ -863,7 +779,7 @@ export default function ApiManagerPageClient() {
                       {hasConnectionRestrictions && (
                         <Link
                           href={`/dashboard/api-manager/${encodeURIComponent(key.id)}/access?tab=connections`}
-                          className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-info/10 text-info text-xs font-medium hover:bg-info/20 transition-colors"
+                          className="flex items-center gap-1.5 px-2 py-1 rounded-md border border-border bg-bg-subtle text-text-secondary text-xs font-medium hover:bg-surface-2 transition-colors"
                         >
                           <Icon name="cable" size={14} />
                           {key.allowedConnections!.length} conn
@@ -872,7 +788,7 @@ export default function ApiManagerPageClient() {
                       {hasExclusiveLeaseScope && (
                         <Link
                           href={`/dashboard/api-manager/${encodeURIComponent(key.id)}/access`}
-                          className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-chart-3/10 text-chart-3 text-xs font-medium hover:bg-chart-3/20 transition-colors"
+                          className="flex items-center gap-1.5 px-2 py-1 rounded-md border border-border bg-bg-subtle text-text-secondary text-xs font-medium hover:bg-surface-2 transition-colors"
                         >
                           <Icon name="key_vertical" size={14} />
                           {t("exclusiveLease")}
@@ -881,32 +797,32 @@ export default function ApiManagerPageClient() {
                       {hasComboRestrictions && (
                         <Link
                           href={`/dashboard/api-manager/${encodeURIComponent(key.id)}/access?tab=combos`}
-                          className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-chart-4/10 text-chart-4 text-xs font-medium hover:bg-chart-4/20 transition-colors"
+                          className="flex items-center gap-1.5 px-2 py-1 rounded-md border border-border bg-bg-subtle text-text-secondary text-xs font-medium hover:bg-surface-2 transition-colors"
                         >
                           <Icon name="hub" size={14} />
                           {key.allowedCombos!.length} combos
                         </Link>
                       )}
                       {noLogEnabled && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-chart-3/10 text-chart-3 text-[11px] font-medium">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
                           <Icon name="visibility_off" size={12} />
                           No-Log
                         </span>
                       )}
                       {key.autoResolve && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-info/10 text-info text-[11px] font-medium">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
                           <Icon name="auto_fix_high" size={12} />
                           Auto-Resolve
                         </span>
                       )}
                       {hasJsonStreamDefault && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-info/10 text-info text-[11px] font-medium">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
                           <Icon name="data_object" size={12} />
                           {t("streamDefaultBadge")}
                         </span>
                       )}
                       {hasLocalUsageCommand && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-2 text-text-muted text-[11px] font-medium">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
                           <Icon name="terminal" size={12} />
                           {t("localUsageCommandBadge")}
                         </span>
@@ -924,14 +840,14 @@ export default function ApiManagerPageClient() {
                         </span>
                       )}
                       {hasSessionLimit && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-chart-3/10 text-chart-3 text-[11px] font-medium">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
                           <Icon name="group" size={12} />
                           Sessions: {activeSessions}/{maxSessions}
                         </span>
                       )}
                       {deviceCount > 0 && (
                         <span
-                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-info/10 text-info text-[11px] font-medium"
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium"
                           title={t("devicesTooltip", { count: deviceCount })}
                         >
                           <Icon name="devices" size={12} />
@@ -968,7 +884,7 @@ export default function ApiManagerPageClient() {
                         </span>
                       )}
                       {key.expiresAt && new Date(key.expiresAt).getTime() < Date.now() && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-surface-2 text-text-muted text-[11px] font-medium">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md border border-border bg-bg-subtle text-text-secondary text-[11px] font-medium">
                           <Icon name="event_busy" size={12} />
                           EXPIRED
                         </span>
@@ -977,7 +893,7 @@ export default function ApiManagerPageClient() {
                   </TableCell>
                   <TableCell>
                     <div className="flex flex-col justify-center">
-                      <span className="text-sm font-medium tabular-nums">
+                      <span className="text-[13px] font-medium tabular-nums">
                         {stats?.totalRequests ?? 0}{" "}
                         <span className="text-text-muted font-normal text-xs">{t("reqs")}</span>
                       </span>
@@ -995,7 +911,7 @@ export default function ApiManagerPageClient() {
                       )}
                     </div>
                   </TableCell>
-                  <TableCell className="text-sm text-text-muted whitespace-nowrap">
+                  <TableCell className="text-[13px] tabular-nums text-text-muted whitespace-nowrap">
                     {new Date(key.createdAt).toLocaleDateString()}
                   </TableCell>
                   <TableCell>
@@ -1019,7 +935,7 @@ export default function ApiManagerPageClient() {
                       />
                       <Link
                         href={`/dashboard/api-manager/${encodeURIComponent(key.id)}/access`}
-                        className="p-2 hover:bg-primary/10 rounded text-text-muted hover:text-primary opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all inline-flex items-center justify-center"
+                        className="p-2 hover:bg-bg-subtle rounded text-text-muted hover:text-text-main opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all inline-flex items-center justify-center"
                         title={t("editPermissions")}
                       >
                         <Icon name="tune" size={18} />
@@ -1054,7 +970,7 @@ export default function ApiManagerPageClient() {
 
             return (
               <div className="flex flex-col gap-4">
-                {normalKeys.length > 0 && (
+                {filteredKeys.length > 0 && (
                   <div>
                     {/* Normal keys section heading */}
                     <div className="flex items-center gap-2 mb-2">
@@ -1062,34 +978,13 @@ export default function ApiManagerPageClient() {
                       <span className="text-sm font-medium text-text-main">
                         {t("normalKeysSection")}
                       </span>
-                      <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-surface/80 border border-border text-[11px] font-semibold text-text-muted">
-                        {normalKeys.length}
+                      <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-bg-subtle border border-border text-[11px] font-medium tabular-nums text-text-muted">
+                        {filteredKeys.length}
                       </span>
                     </div>
                     <Table scrollbarLabel={t("normalKeysSection")}>
                       {tableHeader}
-                      <TableBody>{normalKeys.map(renderKeyRow)}</TableBody>
-                    </Table>
-                  </div>
-                )}
-                {quotaKeys.length > 0 && (
-                  <div>
-                    {/* Quota keys section heading */}
-                    <div className="flex items-center gap-2 mb-2">
-                      <Icon name="toll" className="text-base text-chart-3" />
-                      <span className="text-sm font-medium text-text-main">
-                        {t("quotaKeysSection")}
-                      </span>
-                      <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-surface/80 border border-border text-[11px] font-semibold text-text-muted">
-                        {quotaKeys.length}
-                      </span>
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-chart-3/10 text-chart-3 text-[11px] font-semibold">
-                        {t("quotaPill")}
-                      </span>
-                    </div>
-                    <Table scrollbarLabel={t("quotaKeysSection")}>
-                      {tableHeader}
-                      <TableBody>{quotaKeys.map(renderKeyRow)}</TableBody>
+                      <TableBody>{filteredKeys.map(renderKeyRow)}</TableBody>
                     </Table>
                   </div>
                 )}

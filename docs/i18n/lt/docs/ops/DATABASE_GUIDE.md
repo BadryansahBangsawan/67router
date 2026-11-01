@@ -4,7 +4,7 @@
 
 ---
 
-> **Trumpai**: „OmniRoute“ kaip pagrindinę duomenų saugyklą naudoja **SQLite su WAL žurnalizavimu**, o konfidencialūs laukai ramybės būsenoje šifruojami naudojant **AES-256-GCM**. Šiame vadove aptariama schema, migracijos, atsarginių kopijų kūrimas ir atkūrimas bei eksploatavimo procedūros.
+> **Trumpai**: „67router“ kaip pagrindinę duomenų saugyklą naudoja **SQLite su WAL žurnalizavimu**, o konfidencialūs laukai ramybės būsenoje šifruojami naudojant **AES-256-GCM**. Šiame vadove aptariama schema, migracijos, atsarginių kopijų kūrimas ir atkūrimas bei eksploatavimo procedūros.
 
 **Šaltiniai:**
 
@@ -19,7 +19,7 @@
 
 ## Kodėl SQLite?
 
-„OmniRoute“ pasirinko SQLite, o ne PostgreSQL ar MySQL, dėl kelių priežasčių:
+„67router“ pasirinko SQLite, o ne PostgreSQL ar MySQL, dėl kelių priežasčių:
 
 | Veiksnys              | SQLite                                    | PostgreSQL                                           |
 | --------------------- | ----------------------------------------- | ---------------------------------------------------- |
@@ -30,7 +30,7 @@
 | **Atsarginė kopija**  | Vieno failo kopijavimas                   | `pg_dump` arba failų sistemos momentinė kopija       |
 | **Naudojimo atvejis** | Diegimas vienam naudotojui, integruota    | Kelių nuomininkų SaaS                                |
 
-**Vieno naudotojo ir vieno egzemplioriaus** diegimams (pagrindiniam „OmniRoute“ naudojimo atvejui) SQLite yra paprastesnė ir spartesnė.
+**Vieno naudotojo ir vieno egzemplioriaus** diegimams (pagrindiniam „67router“ naudojimo atvejui) SQLite yra paprastesnė ir spartesnė.
 
 ### WAL žurnalizavimas
 
@@ -50,7 +50,7 @@ Numatytasis podėlio dydis yra **65 536 KiB (64 MiB)**. Neigiamą
 `cache_size` reikšmę SQLite interpretuoja kaip apytikslę viršutinę ribą KiB vienetais ir puslapius paskirsto pagal poreikį.
 Skiltyje **Nustatymai > Sistema ir saugykla > Podėlio dydis** priimamos sveikųjų skaičių reikšmės nuo **1 iki
 1 000 000 KiB**; išsaugojus nustatymą, jis pritaikomas aktyviam duomenų bazės ryšiui,
-o paleidimo metu „OmniRoute“ atkuria išsaugotą reikšmę.
+o paleidimo metu „67router“ atkuria išsaugotą reikšmę.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Domenų modulių architektūra
 
-„OmniRoute“ duomenų bazėje yra **110 aukščiausio lygio TypeScript modulių**, esančių `src/lib/db/`. Kiekvienas domeno modulis:
+„67router“ duomenų bazėje yra **110 aukščiausio lygio TypeScript modulių**, esančių `src/lib/db/`. Kiekvienas domeno modulis:
 
 - Valdo vieną ar kelias konkrečias lenteles
 - Eksportuoja tipizuotas CRUD funkcijas
@@ -90,7 +90,7 @@ DATA_DIR=/custom/path omniroute
 
 ### 110 aukščiausio lygio DB modulių
 
-„OmniRoute“ turi **110 aukščiausio lygio TypeScript failų**, esančių `src/lib/db/`. Toliau pateikiama pagrindinių modulių imtis; visą sąrašą rasite katalogo turinyje:
+„67router“ turi **110 aukščiausio lygio TypeScript failų**, esančių `src/lib/db/`. Toliau pateikiama pagrindinių modulių imtis; visą sąrašą rasite katalogo turinyje:
 
 | Modulis                 | Lentelės                                                       | Paskirtis                                                                                        |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -186,7 +186,7 @@ Visas daugiau nei 30 lentelių sąrašas pateiktas `src/lib/db/migrations/`.
 
 ## Migracijos
 
-OmniRoute naudoja **versijuojamas, idempotentines migracijas**, esančias `src/lib/db/migrations/`. Kiekviena migracija yra vienas SQL failas, pavadintas `NNN_description.sql`.
+67router naudoja **versijuojamas, idempotentines migracijas**, esančias `src/lib/db/migrations/`. Kiekviena migracija yra vienas SQL failas, pavadintas `NNN_description.sql`.
 
 ### Migracijų pavadinimai
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Atgal nesuderinami pakeitimai** (pvz., stulpelių šalinimas) yra sudėtingi. OmniRoute NEPALAIKO ankstesnės versijos atkūrimo — pritaikius migraciją, schemos pakeitimas tampa nuolatinis. Planuokite atitinkamai.
+> **Atgal nesuderinami pakeitimai** (pvz., stulpelių šalinimas) yra sudėtingi. 67router NEPALAIKO ankstesnės versijos atkūrimo — pritaikius migraciją, schemos pakeitimas tampa nuolatinis. Planuokite atitinkamai.
 
 ---
 
@@ -310,7 +310,7 @@ Siekiant geresnio našumo, toliau nurodyti duomenys saugomi atviruoju tekstu:
 
 ## Šifravimo ypatumai (v3.8.16+)
 
-OmniRoute naudoja **`migrateLegacyEncryptedString()`**, kad skaidriai palaikytų dvi šifravimo schemas:
+67router naudoja **`migrateLegacyEncryptedString()`**, kad skaidriai palaikytų dvi šifravimo schemas:
 
 - **Senoji** (iki v3.5.0): XOR pagrįstas „šifravimas“ (ne tikra kriptografija)
 - **Dabartinė**: AES-256-GCM su tinkamu IV ir autentifikavimo žyma
@@ -399,7 +399,7 @@ Veikiančios DB atsarginei kopijai sukurti be prastovos:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Tam naudojama SQLite internetinio atsarginių kopijų kūrimo API — komandą saugu vykdyti, kol veikia OmniRoute.
+Tam naudojama SQLite internetinio atsarginių kopijų kūrimo API — komandą saugu vykdyti, kol veikia 67router.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Sutankinimas
 
-Ilgai veikiančioms OmniRoute instancijoms naudinga retkarčiais vykdyti `VACUUM`:
+Ilgai veikiančioms 67router instancijoms naudinga retkarčiais vykdyti `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -574,7 +574,7 @@ EOF
 ### Visų duomenų nustatymas iš naujo (ištrynimas)
 
 ```bash
-# Pirmiausia sustabdykite OmniRoute
+# Pirmiausia sustabdykite 67router
 omniroute stop
 
 # Ištrinkite DB failą
@@ -612,7 +612,7 @@ Kitas procesas laiko rašymo užraktą. Galite:
 
 - Palaukti, kol kitas procesas bus baigtas (patikrinkite naudodami `lsof | grep storage.sqlite`)
 - Priverstinai nutraukti kitą procesą
-- Jei problema išlieka, paleisti OmniRoute iš naujo
+- Jei problema išlieka, paleisti 67router iš naujo
 
 ### „Pažeistas išorinio rakto apribojimas“
 
@@ -642,10 +642,10 @@ PRAGMA mmap_size = 0;
 
 Migracija buvo vykdoma operacijoje, todėl pakeitimai turėjo būti atšaukti. Jei taip neįvyko:
 
-1. **Sustabdykite OmniRoute** (kad išvengtumėte tolesnių bandymų)
+1. **Sustabdykite 67router** (kad išvengtumėte tolesnių bandymų)
 2. **Patikrinkite DB būseną** naudodami `sqlite3`
 3. **Rankiniu būdu pataisykite** dalinę migraciją
-4. **Iš naujo paleiskite** OmniRoute (migracija bus bandoma dar kartą)
+4. **Iš naujo paleiskite** 67router (migracija bus bandoma dar kartą)
 
 Kad to išvengtumėte, migracijas visada pirmiausia išbandykite kopijoje.
 

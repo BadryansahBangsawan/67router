@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Հայերեն)
+# 67router MCP Server Documentation (Հայերեն)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Տեղադրում
 
-OmniRoute MCP-ն ներկառուցված է։ Գործարկեք այն հետևյալ կերպ․
+67router MCP-ն ներկառուցված է։ Գործարկեք այն հետևյալ կերպ․
 
 ```bash
 omniroute --mcp
@@ -82,7 +82,7 @@ Claude Desktop-ի, Cursor-ի, Cline-ի և համատեղելի MCP հաճախո�
 | `omniroute_switch_combo`        | `write:combos`        | Ակտիվացնել կամ ապաակտիվացնել համակցությունը                                                                                                             |
 | `omniroute_create_combo`        | `write:combos`        | Ստեղծել վավերացված համակցություն՝ առկա համակցությունների API-ի միջոցով                                                                                  |
 | `omniroute_check_quota`         | `read:quota`          | Օգտագործված/ընդհանուր քվոտա, մնացած տոկոսը, վերակայման ժամանակը, թոքենի վիճակը                                                                          |
-| `omniroute_route_request`       | `execute:completions` | Ուղարկել զրույցի ավարտման հարցում OmniRoute-ի երթուղավորման միջոցով                                                                                     |
+| `omniroute_route_request`       | `execute:completions` | Ուղարկել զրույցի ավարտման հարցում 67router-ի երթուղավորման միջոցով                                                                                      |
 | `omniroute_cost_report`         | `read:usage`          | Ծախսերի հաշվետվություն՝ ըստ ժամանակահատվածի (աշխատաշրջան/օր/շաբաթ/ամիս)                                                                                 |
 | `omniroute_list_models_catalog` | `read:models`         | Մոդելների ամբողջական կատալոգը՝ հնարավորություններով, կարգավիճակով և գնագոյացմամբ                                                                        |
 | `omniroute_radar_catalog`       | `read:radar`          | Տեղային ստորագրված Radar կատալոգ՝ մատակարարի/ընտանիքի ընտրովի զտիչներով                                                                                 |
@@ -145,7 +145,7 @@ CCR գրառումները պահվում են միայն հիշողության
 
 ### MCP հասանելիության ծառի զտիչ (v3.8.0)
 
-Վերոնշյալ սեղմման գործիքներից առանձին՝ OmniRoute-ը ներառում է հետկատարման զտիչ, որը
+Վերոնշյալ սեղմման գործիքներից առանձին՝ 67router-ը ներառում է հետկատարման զտիչ, որը
 սեղմում է MCP դիտարկիչի/հասանելիության գործիքների **գործիքի արդյունքները**՝ նախքան դրանք
 գործակալին վերադարձնելը։ Այս զտիչն ինքնին գործիք չէ․ այն թափանցիկ կերպով գործարկվում է գործիքի ցանկացած արդյունքի համար, որը պարունակում է
 ծավալուն հասանելիության ծառի կամ դիտարկիչի պատկերի տեքստ (≥2000 նիշ)։
@@ -237,17 +237,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 Վերը ներկայացված MCP գործիքների ցանկը (110 եզակի գործիք՝ հաշվարկված `countUniqueMcpTools()`-ի միջոցով) միտումնավոր
 սահմանափակված է կատարման ժամանակ երթուղավորման/քեշավորման/սեղմման/հիշողության/հմտությունների/պրոքսիի/համատեքստի աղբյուրի գործողություններով։ Երկու հարակից
 ֆրեյմվորքներ մատակարարվում են MCP սերվերի հետ միասին v3.8.0-ում և փաստաթղթավորված են առանձին․
-
-### Ամպային գործակալներ
-
-Ամպային գործակալները պրոցեսից դուրս գործող AI կոդավորման գործակալներ են (codex-cloud, cursor-cloud, devin, jules), որոնք
-OmniRoute-ին միացված են LLM մատակարարների համար օգտագործվող նույն կապի մոդելի միջոցով։ Դրանք հասանելի են
-իրենց սեփական REST մակերեսով (`/api/v1/agents/*`) և MCP գործիքների կատալոգի մաս **չեն**
-— Ամպային գործակալի կանչը չի սպառում MCP տիրույթ։
-
-- Իրականացում՝ `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)։
-- Կենսացիկլ՝ `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`։
-- Փաստաթղթեր՝ [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)։
 
 ### Պաշտպանիչ սահմանափակումներ
 
@@ -427,8 +416,6 @@ Scope-ների կիրառումը կենտրոնացված է `open-sse/mcp-serv
 | `read:radar`           | `omniroute_radar_catalog`                                                                                                                                                         |
 | `read:gamification`    | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                  |
 | `write:gamification`   | `gamification_invite`, `gamification_transfer`                                                                                                                                    |
-| `read:plugins`         | `plugin_list`, `plugin_executions`                                                                                                                                                |
-| `write:plugins`        | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                   |
 | `read:obsidian`        | Ընթերցման 13 գործիք՝ `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`       | Գրառման 9 գործիք՝ `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                  |
 | `read:local-corpus`    | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                 |
@@ -481,7 +468,7 @@ HTTP/SSE-ի միջոցով `open-sse/mcp-server/httpTransport.ts`-ն այժմ ս
 
 | Փոփոխական                               | Լռելյայն արժեք                            | Նպատակ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | :-------------------------------------- | :---------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                  | Հիմնական URL-ը, որն MCP սերվերն օգտագործում է OmniRoute-ի ներքին API-ները կանչելիս                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                  | Հիմնական URL-ը, որն MCP սերվերն օգտագործում է 67router-ի ներքին API-ները կանչելիս                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `OMNIROUTE_API_KEY`                     | (դատարկ)                                  | API բանալին, որը ներքին API կանչերին փոխանցվում է որպես `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (միայն `"true"`-ն է այն միացնում) | Միացված լինելու դեպքում բացակայող տիրույթները մերժում են գործիքների կանչերը և աուդիտի մատյանում գրանցում `scope_denied:<reason>`։ Կիրարկումը ՆԱԵՎ հարկադրաբար միացվում է՝ անկախ այս դրոշակից, յուրաքանչյուր HTTP/SSE կանչողի համար, որը որոշվել է ըստ առանձին բանալու Authorization վերնագրի (`source === "authInfo"`) և չունի ամբողջական `manage`/`admin` տիրույթ, օրինակ՝ բանալի, որն ունի միայն նեղ `mcp:connect` շրջանցման տիրույթը։ Ուստի այս լռելյայն արժեքն անվտանգ է միայն տեղային/stdio՝ մեկ օպերատորով աշխատանքի համար և երբեք՝ հեռակա ոչ loopback հասանելիության դեպքում |
 | `OMNIROUTE_MCP_SCOPES`                  | (դատարկ)                                  | Ստորակետերով բաժանված տիրույթների թույլատրացուցակ, որոնք լռելյայն համարվում են «հասանելի» (օգտագործվում է, երբ կանչողը չի տրամադրում սեփական տիրույթները)                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -584,7 +571,6 @@ stdio փոխադրամիջոցը յուրաքանչյուր 5 վայրկյանը
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Հմտությունների գործիքների սահմանումներ (4 գործիք)                                                  |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion համատեքստային աղբյուրի գործիքների սահմանումներ (6 գործիք)                                   |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Խաղայնացման գործիքների սահմանումներ (8 գործիք)                                                     |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Փլագինների գրանցման և կառավարման գործիքներ (8 գործիք)                                              |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` վերջնակետ                                                                        |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` վերջնակետ                                                                         |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE փոխադրման երթուղի                                                               |

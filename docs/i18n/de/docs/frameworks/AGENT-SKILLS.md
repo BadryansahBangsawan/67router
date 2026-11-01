@@ -1,4 +1,4 @@
-# OmniRoute Agent Skills Catalog (Deutsch)
+# 67router Agent Skills Catalog (Deutsch)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/AGENT-SKILLS.md) · 🇪🇹 [am](../../../am/docs/frameworks/AGENT-SKILLS.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/AGENT-SKILLS.md) · 🇦🇿 [az](../../../az/docs/frameworks/AGENT-SKILLS.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/AGENT-SKILLS.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/AGENT-SKILLS.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/AGENT-SKILLS.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/AGENT-SKILLS.md) · 🇩🇰 [da](../../../da/docs/frameworks/AGENT-SKILLS.md) · 🇬🇷 [el](../../../el/docs/frameworks/AGENT-SKILLS.md) · 🇪🇸 [es](../../../es/docs/frameworks/AGENT-SKILLS.md) · 🇪🇪 [et](../../../et/docs/frameworks/AGENT-SKILLS.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/AGENT-SKILLS.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/AGENT-SKILLS.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/AGENT-SKILLS.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/AGENT-SKILLS.md) · 🇮🇱 [he](../../../he/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/AGENT-SKILLS.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/AGENT-SKILLS.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/AGENT-SKILLS.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/AGENT-SKILLS.md) · 🇮🇩 [id](../../../id/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/AGENT-SKILLS.md) · 🇮🇹 [it](../../../it/docs/frameworks/AGENT-SKILLS.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/AGENT-SKILLS.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/AGENT-SKILLS.md) · 🇰🇭 [km](../../../km/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/AGENT-SKILLS.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/AGENT-SKILLS.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/AGENT-SKILLS.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/AGENT-SKILLS.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/AGENT-SKILLS.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/AGENT-SKILLS.md) · 🇲🇲 [my](../../../my/docs/frameworks/AGENT-SKILLS.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/AGENT-SKILLS.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/AGENT-SKILLS.md) · 🇳🇴 [no](../../../no/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [or](../../../or/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/AGENT-SKILLS.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/AGENT-SKILLS.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/AGENT-SKILLS.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/AGENT-SKILLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/AGENT-SKILLS.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/AGENT-SKILLS.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/AGENT-SKILLS.md) · 🇱🇰 [si](../../../si/docs/frameworks/AGENT-SKILLS.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/AGENT-SKILLS.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/AGENT-SKILLS.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/AGENT-SKILLS.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/AGENT-SKILLS.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [te](../../../te/docs/frameworks/AGENT-SKILLS.md) · 🇹🇭 [th](../../../th/docs/frameworks/AGENT-SKILLS.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/AGENT-SKILLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/AGENT-SKILLS.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/AGENT-SKILLS.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/AGENT-SKILLS.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/AGENT-SKILLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/AGENT-SKILLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/AGENT-SKILLS.md)
 
@@ -7,7 +7,7 @@
 > **Maßgebliche Quelle:** `src/lib/agentSkills/` (Katalog, Generator, Parser) + Verzeichnis `skills/` (SKILL.md-Dateien)
 > **Zuletzt aktualisiert:** 2026-08-02 — v3.8.50
 
-Agent Skills sind strukturierte SKILL.md-Dateien, die externen Agenten, MCP-Clients und A2A-Orchestratoren vermitteln, wie die REST-API und CLI von OmniRoute verwendet werden. Im Gegensatz zu [Omni Skills](./SKILLS.md) (LLM-Tooldefinitionen, die innerhalb von OmniRoute ausgeführt werden) sind Agent Skills ein _Dokumentationskatalog_ — statisches Markdown, das direkt in den Kontext eines Agenten eingebunden werden kann.
+Agent Skills sind strukturierte SKILL.md-Dateien, die externen Agenten, MCP-Clients und A2A-Orchestratoren vermitteln, wie die REST-API und CLI von 67router verwendet werden. Im Gegensatz zu [Omni Skills](./SKILLS.md) (LLM-Tooldefinitionen, die innerhalb von 67router ausgeführt werden) sind Agent Skills ein _Dokumentationskatalog_ — statisches Markdown, das direkt in den Kontext eines Agenten eingebunden werden kann.
 
 ---
 
@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (Authentifizierung erforderlich)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP-Tools (Auflisten, Abrufen, Abdeckung)
-src/lib/a2a/skills/listCapabilities.ts        — A2A-Skill: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ Die A2A-Fähigkeit `list-capabilities` gibt den vollständigen Katalog mit 45 F�
 }
 ```
 
-Protokolldetails finden Sie unter [A2A-SERVER.md](./A2A-SERVER.md).
-
 ---
 
 ## Katalog — 45 Fähigkeits-IDs
@@ -175,29 +172,27 @@ Protokolldetails finden Sie unter [A2A-SERVER.md](./A2A-SERVER.md).
 
 ### CLI-Fähigkeiten (21)
 
-| ID                    | Bereich            | CLI-Befehlsstamm        |
-| :-------------------- | :----------------- | :---------------------- |
-| `cli-serve`           | cli-serve          | `omniroute serve`       |
-| `cli-health`          | cli-health         | `omniroute health`      |
-| `cli-providers`       | cli-providers      | `omniroute providers`   |
-| `cli-keys`            | cli-keys           | `omniroute keys`        |
-| `cli-models`          | cli-models         | `omniroute models`      |
-| `cli-chat`            | cli-chat           | `omniroute chat`        |
-| `cli-routing`         | cli-routing        | `omniroute routing`     |
-| `cli-resilience`      | cli-resilience     | `omniroute resilience`  |
-| `cli-compression`     | cli-compression    | `omniroute compression` |
-| `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
-| `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
-| `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
-| `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
-| `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
-| `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
-| `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
-| `cli-setup`           | cli-setup          | `omniroute setup`       |
-| `cli-skill-collector` | cli-setup          | `omniroute skills`      |
+| ID                    | Bereich          | CLI-Befehlsstamm        |
+| :-------------------- | :--------------- | :---------------------- |
+| `cli-serve`           | cli-serve        | `omniroute serve`       |
+| `cli-health`          | cli-health       | `omniroute health`      |
+| `cli-providers`       | cli-providers    | `omniroute providers`   |
+| `cli-keys`            | cli-keys         | `omniroute keys`        |
+| `cli-models`          | cli-models       | `omniroute models`      |
+| `cli-chat`            | cli-chat         | `omniroute chat`        |
+| `cli-routing`         | cli-routing      | `omniroute routing`     |
+| `cli-resilience`      | cli-resilience   | `omniroute resilience`  |
+| `cli-compression`     | cli-compression  | `omniroute compression` |
+| `cli-contexts`        | cli-contexts     | `omniroute contexts`    |
+| `cli-cost-usage`      | cli-cost-usage   | `omniroute cost`        |
+| `cli-mcp`             | cli-mcp          | `omniroute mcp`         |
+| `cli-tunnel`          | cli-tunnel       | `omniroute tunnel`      |
+| `cli-backup-sync`     | cli-backup-sync  | `omniroute backup`      |
+| `cli-policy-audit`    | cli-policy-audit | `omniroute policy`      |
+| `cli-batches`         | cli-batches      | `omniroute batch`       |
+| `cli-eval`            | cli-eval         | `omniroute simulate`    |
+| `cli-setup`           | cli-setup        | `omniroute setup`       |
+| `cli-skill-collector` | cli-setup        | `omniroute skills`      |
 
 ### Konfigurationsworkflow (1)
 
@@ -312,6 +307,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni-Skills-Framework (LLM-Tool-Injektion + Marktplatz)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-Tool-Katalog (`omniroute_agent_skills_*`-Tools)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-Protokoll (`list-capabilities`-Skill)
 - `src/lib/agentSkills/` — Katalog, Generator, Parser
 - `skills/` — generierte SKILL.md-Dateien (45 Einträge)

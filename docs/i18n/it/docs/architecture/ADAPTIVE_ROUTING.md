@@ -5,7 +5,7 @@
 ---
 
 Questo documento descrive la base del routing adattivo guidato dal feedback aggiunta a
-OmniRoute. È volutamente minimale: introduce un canale tipizzato per gli esiti del routing,
+67router. È volutamente minimale: introduce un canale tipizzato per gli esiti del routing,
 un segnale di qualità online che alimenta lo scorer auto-combo esistente, un exporter
 OpenTelemetry opzionale e un endpoint di spiegabilità. **Non** sostituisce lo stack di
 resilienza esistente (circuit breaker, cooldown della connessione, lockout del modello,
@@ -13,7 +13,7 @@ matrice di integrità, autopilot), ma lo integra.
 
 ## 1. Contesto architetturale
 
-OmniRoute è un data plane con un **percorso critico delle richieste** e un **piano di
+67router è un data plane con un **percorso critico delle richieste** e un **piano di
 controllo/intelligence**. Il percorso critico deve rimanere veloce, efficiente nell'uso
 della memoria, asincrono, resiliente e prevedibile. Valutazione, assegnazione dei punteggi
 di qualità, esperimenti e analisi storica appartengono al piano di controllo.
@@ -23,7 +23,7 @@ Agente AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (veloce, sincrono, in memoria)
+│    67router        │   data plane (veloce, sincrono, in memoria)
 │  routing / failover │
 │  integrità / vincoli│
 │  cache / streaming  │
@@ -42,16 +42,15 @@ Agente AI / IDE
 
 ### Ciò che era già presente (verificato, non duplicato)
 
-| Concetto                                       | Implementazione esistente                                                                                            |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Disponibilità (possiamo inviare traffico?)     | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistito nel DB), cooldown della connessione, lockout del modello |
-| Report sull'integrità                          | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                              |
-| Traffico shadow                                | `open-sse/services/combo/shadowRouting.ts`                                                                           |
-| Vincoli di sicurezza                           | `src/lib/guardrails/` (hook pre/post)                                                                                |
-| Cache esatta                                   | `src/lib/semanticCache.ts` (basata sulla firma)                                                                      |
-| Valutatori / routing guidato dalle valutazioni | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                 |
-| Spiegabilità delle decisioni combo             | `open-sse/services/combo/decisionTrace.ts`                                                                           |
-| Eventi in tempo reale della dashboard          | `src/lib/events/eventBus.ts` (canale di notifica UI, payload `unknown`, cronologia di 100 elementi)                  |
+| Concetto                                   | Implementazione esistente                                                                                            |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| Disponibilità (possiamo inviare traffico?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, persistito nel DB), cooldown della connessione, lockout del modello |
+| Report sull'integrità                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                              |
+| Traffico shadow                            | `open-sse/services/combo/shadowRouting.ts`                                                                           |
+| Vincoli di sicurezza                       | `src/lib/guardrails/` (hook pre/post)                                                                                |
+| Cache esatta                               | `src/lib/semanticCache.ts` (basata sulla firma)                                                                      |
+| Spiegabilità delle decisioni combo         | `open-sse/services/combo/decisionTrace.ts`                                                                           |
+| Eventi in tempo reale della dashboard      | `src/lib/events/eventBus.ts` (canale di notifica UI, payload `unknown`, cronologia di 100 elementi)                  |
 
 Il livello degli eventi di routing **non** è una reimplementazione di `eventBus`: quel bus
 è il canale di notifica in tempo reale della dashboard (nomi degli _eventi_ tipizzati,
@@ -238,7 +237,7 @@ File: `open-sse/services/routing/otel.ts`
 - Gli span seguono le convenzioni semantiche GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) insieme agli attributi di routing
-  OmniRoute (risultato, stato, ttft, tentativi, fallback).
+  67router (risultato, stato, ttft, tentativi, fallback).
 - `record()` accoda soltanto gli elementi in un buffer limitato (O(1)); un timer in background
   effettua il flush in modo asincrono tramite `POST {endpoint}/v1/traces`. In caso di sovraccarico, gli
   eventi meno recenti vengono eliminati (contatore `dropped`), senza mai applicare backpressure al data
@@ -259,7 +258,7 @@ File: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrazione del piano di valutazione (predisposizione per Future AGI)
 
-OmniRoute considera Future AGI (o qualsiasi altro valutatore) come un **potenziale
+67router considera Future AGI (o qualsiasi altro valutatore) come un **potenziale
 backend di intelligence/valutazione, non come una dipendenza**. I punti di integrazione:
 
 - Un `RoutingEventSink` può inoltrare gli eventi a un valutatore in modo asincrono.
@@ -268,8 +267,6 @@ backend di intelligence/valutazione, non come una dipendenza**. I punti di integ
 - Un futuro `Evaluator` (deterministico, giudice locale, HTTP, WASM) potrebbe elaborare
   eventi/tracce e restituire un `QualityScore` da immettere nello stesso percorso
   `getQualityScore`/fattore di qualità.
-- Il routing esistente basato sulle valutazioni (`open-sse/services/evalRouting.ts`) già
-  riordina le destinazioni delle combo in base ai tassi di superamento di `eval_runs`, quando abilitato.
 
 Nessuna valutazione viene eseguita in modo sincrono nel percorso della richiesta e il gateway funziona
 completamente anche in assenza del valutatore.

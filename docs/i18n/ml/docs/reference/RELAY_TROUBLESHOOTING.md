@@ -4,7 +4,7 @@
 
 ---
 
-റിലേകൾ (Vercel, Deno, Cloudflare) ഒരു serverless backend-ൽ upstream കണക്ഷൻ അവസാനിപ്പിക്കുന്നു. ഇതുവഴി provider API key server-side-ൽ തന്നെ സൂക്ഷിച്ചുകൊണ്ട് സ്ഥിരതയുള്ള ഒരു region-ൽ നിന്ന് OmniRoute-ന് egress ചെയ്യാൻ കഴിയും. production-ൽ operators നേരിടുന്ന രണ്ട് failure mode-കളും ഓരോന്നിനുമായി OmniRoute നൽകുന്ന recovery path-കളും ഈ രേഖ വിശദീകരിക്കുന്നു.
+റിലേകൾ (Vercel, Deno, Cloudflare) ഒരു serverless backend-ൽ upstream കണക്ഷൻ അവസാനിപ്പിക്കുന്നു. ഇതുവഴി provider API key server-side-ൽ തന്നെ സൂക്ഷിച്ചുകൊണ്ട് സ്ഥിരതയുള്ള ഒരു region-ൽ നിന്ന് 67router-ന് egress ചെയ്യാൻ കഴിയും. production-ൽ operators നേരിടുന്ന രണ്ട് failure mode-കളും ഓരോന്നിനുമായി 67router നൽകുന്ന recovery path-കളും ഈ രേഖ വിശദീകരിക്കുന്നു.
 
 ## Relay auth എങ്ങനെ സംഭരിക്കുന്നു
 
@@ -31,7 +31,7 @@ auth ഒന്നും അയയ്ക്കാതിരിക്കുകയ�
 1. **Settings → Proxy Pool** തുറക്കുക.
 2. auth നഷ്ടമായ relay row-കളിൽ മഞ്ഞ നിറത്തിലുള്ള `auth missing` badge-ഉം
    **Repair** button-ഉം കാണിക്കും.
-3. **Repair** ക്ലിക്ക് ചെയ്യുക. OmniRoute
+3. **Repair** ക്ലിക്ക് ചെയ്യുക. 67router
    `POST /api/settings/proxies/[id]/repair-relay` call ചെയ്യുന്നു, അത്:
    - **നിലവിലെ** key ഉപയോഗിച്ച് `relayAuthEnc` decrypt ചെയ്യുന്നു,
    - plaintext `relayAuth` വീണ്ടും `notes`-ലേക്ക് എഴുതുന്നു,
@@ -63,7 +63,7 @@ Token വീണ്ടെടുക്കാനാകാത്തപ്പോൾ U
 **ലക്ഷണം:** proxy test (`speed` button) relay പ്രവർത്തനക്ഷമമാണെന്ന് കാണിക്കുന്നു, എന്നാൽ request-ുകൾ
 ഇപ്പോഴും ഇടയ്ക്കിടെ പരാജയപ്പെടുന്നു.
 
-OmniRoute-ന്റെ auto-test probe തിരികെ നൽകുന്ന relay awareness header-കൾ പരിശോധിക്കുക
+67router-ന്റെ auto-test probe തിരികെ നൽകുന്ന relay awareness header-കൾ പരിശോധിക്കുക
 (**Settings → Proxy Pool**-ഉം `relayTested` / `relayAlive` counter-ുകളും കാണുക):
 
 - `x-relay-url` — ഏത് relay backend ആണ് മറുപടി നൽകിയത്.

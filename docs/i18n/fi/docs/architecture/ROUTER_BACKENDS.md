@@ -20,10 +20,10 @@ Moottorin roolia kuvataan **kahdella itsenäisellä akselilla**, jotka on koodat
 rekisterin `RouterBackendDefinition`-määritykseen:
 
 1. **Elinkaari** (`RouterBackendLifecycle`) — _miten moottori suoritetaan_:
-   - `in-process` — suoritetaan OmniRouten Node-prosessissa (natiivi TS-putki).
-   - `supervised` — paikallinen aliprosessi, jonka OmniRoute asentaa, käynnistää, pysäyttää ja jonka kunnon se tarkistaa
+   - `in-process` — suoritetaan 67routerin Node-prosessissa (natiivi TS-putki).
+   - `supervised` — paikallinen aliprosessi, jonka 67router asentaa, käynnistää, pysäyttää ja jonka kunnon se tarkistaa
      `ServiceSupervisor`-komponentin kautta ja jota se käyttää tämän jälkeen palveluntarjoajayhteytenä.
-   - `external` — HTTP-päätepiste, johon OmniRoute välittää pyynnöt mutta jota se **ei** hallinnoi
+   - `external` — HTTP-päätepiste, johon 67router välittää pyynnöt mutta jota se **ei** hallinnoi
      (määritetään ympäristömuuttujan perus-URL-osoitteella).
    - `disabled` — rekisteröity, mutta ei valittavissa.
 2. **Valinta-akseli** (välityksen reititystaustajärjestelmä) — _välittääkö välityspalvelu pyynnöt sille_:

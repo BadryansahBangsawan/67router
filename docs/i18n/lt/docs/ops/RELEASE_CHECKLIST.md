@@ -46,7 +46,7 @@ jis atkuria visiškai automatinį procesą, kurį projektas turėjo iki v3.8.48,
 WS1.3 garantiją (nutekintas prieigos raktas negali publikuoti savarankiškai — jokio rakto nėra).
 
 **Vienkartinė sąranka (savininkui):** npmjs.com → paketas `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: savininkas `diegosouzapw`, saugykla `OmniRoute`, darbo eiga `npm-publish.yml`
+Publisher_ → GitHub: savininkas `diegosouzapw`, saugykla `67router`, darbo eiga `npm-publish.yml`
 (aplinka: nėra). Kol tai nesukonfigūruota, automatinis veiksmas baigiasi klaida `ENEEDAUTH`:
 paleiskite iš naujo su `publish_mode=staged` (žr. toliau) arba `direct`.
 

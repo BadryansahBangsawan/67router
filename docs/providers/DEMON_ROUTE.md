@@ -16,7 +16,7 @@ for current model IDs, costs, entitlement and privacy policy.
 
 1. Create a Demon Route account and an API key on [demonroute.com](https://demonroute.com).
    A confirmed deposit is required for paid models **and** to unlock its conditional
-   complimentary lane. OmniRoute deliberately does not mark this provider as `hasFree`:
+   complimentary lane. 67router deliberately does not mark this provider as `hasFree`:
    the complimentary lane is **not** unconditional.
 2. In **Providers → API Key Providers → Demon Route**, create a connection and paste
    the key. The built-in endpoint is `https://api.demonroute.com/v1`; do **not**
@@ -25,7 +25,7 @@ for current model IDs, costs, entitlement and privacy policy.
    Auto-Sync to obtain the models your key can access. The small bundled seed list is
    for offline fallback, **not** proof of current entitlement, model health or price.
 4. Choose an exact, case-sensitive upstream channel ID, retaining its vendor prefix
-   (for example `dphn/Dolphin3.0-Llama3.1-8B`). On the OmniRoute API, prefix
+   (for example `dphn/Dolphin3.0-Llama3.1-8B`). On the 67router API, prefix
    it **once** with `demonroute/`, giving
    `demonroute/dphn/Dolphin3.0-Llama3.1-8B`. The extra slash is intentional:
    the upstream vendor/model string must not be truncated or rewritten.
@@ -35,7 +35,7 @@ for current model IDs, costs, entitlement and privacy policy.
 
 ## Request example
 
-With a separate **OmniRoute gateway** API key, a local non-streaming smoke request is:
+With a separate **67router gateway** API key, a local non-streaming smoke request is:
 
 ```bash
 curl -sS http://localhost:20128/v1/chat/completions \
@@ -45,7 +45,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 ```
 
 Use the same endpoint with `"stream":true` and `curl -N` to verify SSE.
-The key above authenticates the **client to OmniRoute**. Demon Route's own
+The key above authenticates the **client to 67router**. Demon Route's own
 Bearer key belongs only in its stored provider connection; **do not paste the
 provider key into source code, combo definitions, logs, or screenshots**.
 Smoke requests are real upstream requests and may consume balance or daily quotas.
@@ -63,8 +63,8 @@ Smoke requests are real upstream requests and may consume balance or daily quota
 
 Demon Route currently describes a conditional complimentary lane of up to 50 requests/day
 after a confirmed deposit, and claims failed requests are refunded. These are **provider
-policies**, not features implemented or verified by OmniRoute. Check the official pricing
-before enabling automatic fallback: OmniRoute does not guarantee refunds or zero cost.
+policies**, not features implemented or verified by 67router. Check the official pricing
+before enabling automatic fallback: 67router does not guarantee refunds or zero cost.
 A `429` can be transient; a `402` needs balance rather than repeated immediate retries.
 Its own documentation advertises a 30-day notice and 90-day successor policy for
 retired IDs, but old IDs are not guaranteed by the local seed list. Privacy statements
@@ -74,7 +74,7 @@ If model import fails, first check the key and its per-key model entitlement; do
 interpret an offline seed fallback as a successful live sync. If chat fails with
 `404` on an old model, re-import the catalog and choose the current upstream
 channel name. If streaming stalls, inspect the client timeout and account limits
-without disabling OmniRoute's normal outbound URL, proxy, or credential safeguards.
+without disabling 67router's normal outbound URL, proxy, or credential safeguards.
 
 ## Acceptance and troubleshooting checklist
 

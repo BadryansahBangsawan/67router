@@ -4,7 +4,7 @@
 
 ---
 
-See juhend käsitleb Kiro (AWS-i hostitud AI-kodeerimisassistendi) kontode lisamist OmniRoute'i,
+See juhend käsitleb Kiro (AWS-i hostitud AI-kodeerimisassistendi) kontode lisamist 67router'i,
 keskendudes mitme konto samaaegsele kasutamisele ilma seansikonfliktideta.
 
 ---
@@ -22,10 +22,10 @@ esimese konto tõendi.
 
 ---
 
-## Kuidas OmniRoute selle lahendab (v3.8.0+)
+## Kuidas 67router selle lahendab (v3.8.0+)
 
-Alates versioonist v3.8.0 kutsub OmniRoute iga Kiro ühenduse importimise ajal välja
-`registerClient()` (AWS SSO OIDC). See annab igale OmniRoute'i ühendusele oma spetsiaalse
+Alates versioonist v3.8.0 kutsub 67router iga Kiro ühenduse importimise ajal välja
+`registerClient()` (AWS SSO OIDC). See annab igale 67router'i ühendusele oma spetsiaalse
 OIDC kliendiregistreeringu. Kuna iga kliendiregistreering on sõltumatu, ei mõjuta ühe
 konto värskendamine või uuesti autentimine ühegi teise konto värskendustõendit.
 
@@ -59,7 +59,7 @@ automaatselt oma kliendiregistreeringu.
 
 ### Eeltingimused
 
-- OmniRoute v3.8.0 või uuem.
+- 67router v3.8.0 või uuem.
 - Töötav Kiro konto (e-post + parool, Google'i või GitHubi sisselogimine).
 - Soovi korral teine Kiro konto.
 
@@ -70,7 +70,7 @@ automaatselt oma kliendiregistreeringu.
    - **Tõendi importimine** — kleepige värskendustõend, mis algab tekstiga `aorAAAAAG`.
    - **API-võti** — kleepige pika elueaga Kiro / CodeWhispereri API-võti.
    - **Google'i / GitHubi sisselogimine** — viige OAuthi voog brauseris lõpule.
-   - **Automaatne importimine** — klõpsake nuppu; OmniRoute loeb identimisteabe
+   - **Automaatne importimine** — klõpsake nuppu; 67router loeb identimisteabe
      kohalikust kiro-cli andmebaasist või asukohast `~/.aws/sso/cache`.
 3. Ühendus salvestatakse. Värskendustõendi vood registreerivad automaatselt spetsiaalse
    OIDC kliendi. API-võtme vood valideerivad võtme AWS-is ega talleta värskendustõendit.
@@ -126,7 +126,7 @@ API-võtmega autentimine on mõeldud pikaajaliste Kiro / AWS CodeWhispereri kand
 2. Valige **API-võti**.
 3. Kleepige API-võti ja valige AWS-i piirkond: **Automaatne tuvastamine** (vaikimisi), **USA idaosa
    (Põhja-Virginia)** või **Euroopa (Frankfurt)**.
-4. OmniRoute valideerib võtme ja salvestab ühenduse seotuna piirkonnaga, kus
+4. 67router valideerib võtme ja salvestab ühenduse seotuna piirkonnaga, kus
    võti töötab.
 
 ### API
@@ -177,7 +177,7 @@ OIDC- või sotsiaalvõrgustiku juurdepääsutõendina. `KiroExecutor.execute()` 
 ## OIDC-kliendi aegumine
 
 AWS SSO OIDC avalikud kliendid aeguvad tavaliselt 90 päeva pärast
-(`clientSecretExpiresAt`). OmniRoute salvestab selle ajatempli jälgitavuse huvides
+(`clientSecretExpiresAt`). 67router salvestab selle ajatempli jälgitavuse huvides
 väljal `providerSpecificData`. Kui ühenduse värskendamine lakkab umbes 90 päeva pärast
 töötamast, importige ühendus uuesti, et saada uus OIDC-kliendi registreering. Automaatne
 uuesti registreerimine aegumise korral on kavandatud tulevase täiendusena.
@@ -199,7 +199,7 @@ AWS SSO OIDC kaudu.
 ### Importimine nurjub veateatega „Token validation failed”
 
 - Veenduge, et värskendustõend algaks väärtusega `aorAAAAAG`.
-- Veenduge, et OmniRoute pääseks juurde aadressile `https://oidc.us-east-1.amazonaws.com`
+- Veenduge, et 67router pääseks juurde aadressile `https://oidc.us-east-1.amazonaws.com`
   (või seadistatud piirkonnale). Kui kasutate ettevõtte puhverserverit, määrake pakkuja
   tasemel puhverserver asukohas **Töölaud → Sätted → Puhverserverid**.
 
@@ -208,6 +208,6 @@ AWS SSO OIDC kaudu.
 - Veenduge, et võti oleks Kiro / CodeWhispereri API-võti, mitte värskendustõend.
 - Veenduge, et AWS-i piirkond vastaks võtmele/kontole. Vaikeväärtus on `us-east-1`.
 - Võti peab saama kutsuda meetodit `ListAvailableProfiles`; vastasel juhul ei saa
-  OmniRoute nõutavat väärtust `profileArn` lahendada.
+  67router nõutavat väärtust `profileArn` lahendada.
 
 Muude probleemide korral vaadake peamist faili [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

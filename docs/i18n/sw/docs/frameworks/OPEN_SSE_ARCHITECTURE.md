@@ -4,7 +4,7 @@
 
 ---
 
-> **Kwa Ufupi**: `open-sse/` ni injini kuu ya utiririshaji inayowezesha kila ombi la LLM katika OmniRoute. Ina takribani faili 1,400 zinazotekeleza mchakato wa maombi, vitekelezaji, huduma, seva ya MCP, na safu ya utafsiri. Mwongozo huu unaeleza jinsi vipande hivi vinavyoungana.
+> **Kwa Ufupi**: `open-sse/` ni injini kuu ya utiririshaji inayowezesha kila ombi la LLM katika 67router. Ina takribani faili 1,400 zinazotekeleza mchakato wa maombi, vitekelezaji, huduma, seva ya MCP, na safu ya utafsiri. Mwongozo huu unaeleza jinsi vipande hivi vinavyoungana.
 
 **Chanzo:** `open-sse/` (kifurushi cha workspace, takribani faili 1,440 zisizo za majaribio za `.ts`)
 
@@ -12,10 +12,10 @@
 
 ## Kwa Nini Kuwe na Kifurushi Tofauti cha Workspace?
 
-`open-sse/` ni **workspace inayojitegemea** katika monorepo ya OmniRoute kwa sababu kadhaa:
+`open-sse/` ni **workspace inayojitegemea** katika monorepo ya 67router kwa sababu kadhaa:
 
 1. **Uwezo wa kutumika tena** — `open-sse` huchapishwa kama `@omniroute/open-sse` kwenye npm, hivyo miradi mingine inaweza kuitumia kivyake
-2. **Mipaka iliyo wazi** — injini ya utiririshaji imetenganishwa na safu ya UI/DB inayohusika mahususi na OmniRoute
+2. **Mipaka iliyo wazi** — injini ya utiririshaji imetenganishwa na safu ya UI/DB inayohusika mahususi na 67router
 3. **Utendaji** — injini haina utegemezi wowote wa Next.js, jambo linalowezesha uanzishaji wa awali ulio wa haraka zaidi katika mazingira ya CLI/serverless
 4. **Udhibiti wa matoleo** — `open-sse` inaweza kutoa matoleo kwa ratiba yake yenyewe
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Kwa Nini Kigeuzi Tofauti?
 
-Responses API ni muundo mpya wa OpenAI wenye **mazungumzo yanayohifadhi hali** (`previous_response_id`). Mteja anapotuma ombi la Responses, OmniRoute:
+Responses API ni muundo mpya wa OpenAI wenye **mazungumzo yanayohifadhi hali** (`previous_response_id`). Mteja anapotuma ombi la Responses, 67router:
 
 1. Hubadilisha Responses → Chat Completions kwa matumizi ya ndani
 2. Hutuma kwa mtoa huduma (mtoa huduma yeyote anayetumia Chat Completions)
@@ -573,5 +573,4 @@ Injini ya uelekezaji ina viwango vikali vya utendaji:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — maelezo ya kila directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ukadiriaji wa vipengele 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — seva ya MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — seva ya A2A
 - Chanzo: `open-sse/` (faili 400+, ~143K LOC)

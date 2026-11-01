@@ -6,7 +6,7 @@
 
 # Praćenje troškova i potrošnje
 
-Kako OmniRoute procjenjuje, bilježi i izvještava o trošku svakog zahtjeva — i zašto je broj na kontrolnoj ploči **praćenje ušteda**, a ne račun.
+Kako 67router procjenjuje, bilježi i izvještava o trošku svakog zahtjeva — i zašto je broj na kontrolnoj ploči **praćenje ušteda**, a ne račun.
 
 Pogledajte također: [Korisnički vodič](./USER_GUIDE.md) · [Galerija funkcija](./FEATURES.md)
 
@@ -14,15 +14,15 @@ Pogledajte također: [Korisnički vodič](./USER_GUIDE.md) · [Galerija funkcija
 
 ## Šta je to (a šta nije)
 
-OmniRoute pripisuje USD trošak po zahtjevu svakom završetku (completion) množenjem broja tokena sa cijenama modela. Ovi brojevi pokreću kontrolnu ploču **Troškovi**, CLI komande `omniroute cost` / `omniroute usage`, CSV/JSON izvoze i budžete po API ključu.
+67router pripisuje USD trošak po zahtjevu svakom završetku (completion) množenjem broja tokena sa cijenama modela. Ovi brojevi pokreću kontrolnu ploču **Troškovi**, CLI komande `omniroute cost` / `omniroute usage`, CSV/JSON izvoze i budžete po API ključu.
 
-> **"Trošak" na kontrolnoj ploči je praćenje ušteda, a ne račun.** OmniRoute vam nikada ne naplaćuje — on usmjerava vaše zahtjeve provajderima koje ste već povezali (vaše vlastite pretplate, besplatne nivoe i API ključeve). "Ukupan trošak od $290" akumuliran u potpunosti na besplatnim modelima znači otprilike **$290 koje niste platili** plaćenom API-ju. Ova brojka je _procjena_ onoga što bi isti saobraćaj koštao po standardnim cijenama sa liste, tako da možete vidjeti gdje je vaša upotreba koncentrisana i koliko vam usmjeravanje na jeftinije/besplatne provajdere štedi novac.
+> **"Trošak" na kontrolnoj ploči je praćenje ušteda, a ne račun.** 67router vam nikada ne naplaćuje — on usmjerava vaše zahtjeve provajderima koje ste već povezali (vaše vlastite pretplate, besplatne nivoe i API ključeve). "Ukupan trošak od $290" akumuliran u potpunosti na besplatnim modelima znači otprilike **$290 koje niste platili** plaćenom API-ju. Ova brojka je _procjena_ onoga što bi isti saobraćaj koštao po standardnim cijenama sa liste, tako da možete vidjeti gdje je vaša upotreba koncentrisana i koliko vam usmjeravanje na jeftinije/besplatne provajdere štedi novac.
 
 Ovo uokvirivanje je direktno navedeno u [README](../../README.md) projekta ("trošak na kontrolnoj ploči je praćenje ušteda, a ne račun").
 
 Budući da je broj procjena:
 
-- Zavisi od tabele cijena koju OmniRoute ima za svaki model. Model bez unosa cijene doprinosi `0` trošku (prikazuje se kao red "Legacy / Free" u istraživaču).
+- Zavisi od tabele cijena koju 67router ima za svaki model. Model bez unosa cijene doprinosi `0` trošku (prikazuje se kao red "Legacy / Free" u istraživaču).
 - Saobraćaj na besplatnom nivou i pretplati i dalje akumulira _procijenjeni_ trošak — to je iznos koji štedite, a ne iznos koji dugujete.
 
 ---
@@ -35,7 +35,7 @@ Troškovi dolaze iz tabele cijena koja se rješava ovim redoslijedom prioriteta 
 
 1. **Korisnička nadjačavanja (overrides)** — cijene koje postavite na kontrolnoj ploči / putem `PATCH /api/pricing`.
 2. **Sinhronizovane vanjske cijene** — preuzete iz javnog `model_prices_and_context_window.json` datoteke LiteLLM-a kada je sinhronizacija omogućena (pohranjeno u zasebnom `pricing_synced` imenskom prostoru tako da nikada ne prebriše vaša nadjačavanja).
-3. **Hardkodirane zadane vrijednosti** — isporučene uz OmniRoute.
+3. **Hardkodirane zadane vrijednosti** — isporučene uz 67router.
 
 Sinhronizacija vanjskih cijena je **opcionalna (opt-in)**, onemogućena po zadanim postavkama. Relevantne env varijable (pogledajte [`.env.example`](../../.env.example)):
 
@@ -167,7 +167,7 @@ ako nije drugačije naznačeno.
 
 ## CLI
 
-CLI alata OmniRoute izlaže komande za troškove (cost), upotrebu (usage) i cijene (pricing) (registrovane u [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
+CLI alata 67router izlaže komande za troškove (cost), upotrebu (usage) i cijene (pricing) (registrovane u [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`
 

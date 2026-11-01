@@ -10,7 +10,7 @@
 
 ## Kontekst
 
-OmniRoute tilbyr for øyeblikket domeneorienterte persistensfunksjoner fra `src/lib/db/`, mens den
+67router tilbyr for øyeblikket domeneorienterte persistensfunksjoner fra `src/lib/db/`, mens den
 delte tilkoblingen som returneres av `src/lib/db/core.ts`, implementerer den synkrone `SqliteAdapter`-kontrakten
 i `src/lib/db/adapters/types.ts`. Denne adapteren støtter flere SQLite-kjøretidsmiljøer, men
 grensesnittet er fortsatt utformet etter SQLite: synkrone forberedte uttrykk, `pragma`, utsatte og umiddelbare

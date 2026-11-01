@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (Hausa)
+# Codex CLI — Configuration with 67router (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-Cikakken jagora don amfani da Codex CLI wanda aka saita zuwa OmniRoute a matsayin backend mai dacewa da OpenAI.
+Cikakken jagora don amfani da Codex CLI wanda aka saita zuwa 67router a matsayin backend mai dacewa da OpenAI.
 
 ---
 
@@ -60,17 +60,17 @@ command -v codex
 codex --version
 ```
 
-### OmniRoute na gida mara buƙatar tantancewa: placeholder key ya isa
+### 67router na gida mara buƙatar tantancewa: placeholder key ya isa
 
 Codex yana tabbatar da cewa environment variable da `env_key` ya ambata yana nan
-**kafin** buƙata ta farko ta fita daga CLI. Idan instance na OmniRoute na **gida**
+**kafin** buƙata ta farko ta fita daga CLI. Idan instance na 67router na **gida**
 ba ya buƙatar tantancewa, duk wani placeholder mara komai zai yi aiki:
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-Yi amfani da ainihin maɓalli maimakon haka idan ana kare uwar garken OmniRoute ɗinka ko kuma tana nesa.
+Yi amfani da ainihin maɓalli maimakon haka idan ana kare uwar garken 67router ɗinka ko kuma tana nesa.
 
 > **Zaɓuɓɓukan host da aka fi amfani da su**
 >
@@ -86,19 +86,19 @@ Yi amfani da ainihin maɓalli maimakon haka idan ana kare uwar garken OmniRoute 
 
 Codex CLI ya daina goyon bayan `wire_api = "chat"` (Chat Completions) a Fabrairu 2026 kuma yanzu yana **buƙatar** `wire_api = "responses"` (OpenAI Responses API). Saita `wire_api = "chat"` yana sa manhajar ta rushe nan take yayin farawa tun daga v0.138.
 
-Providers da yawa, ciki har da GLM da Kimi, har yanzu suna samar da endpoint na Chat Completions kawai. DeepSeek V4 yanzu yana samar da Responses API na asali tare da endpoint mai dacewa da Anthropic; OmniRoute yana amfani da Responses a matsayin tsoho kuma yana barin kowace haɗin DeepSeek ta zaɓi dacewa da Anthropic.
+Providers da yawa, ciki har da GLM da Kimi, har yanzu suna samar da endpoint na Chat Completions kawai. DeepSeek V4 yanzu yana samar da Responses API na asali tare da endpoint mai dacewa da Anthropic; 67router yana amfani da Responses a matsayin tsoho kuma yana barin kowace haɗin DeepSeek ta zaɓi dacewa da Anthropic.
 
-**OmniRoute yana warware wannan ba tare da ka lura ba:**
+**67router yana warware wannan ba tare da ka lura ba:**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → OmniRoute yana zaɓar protocol na asali na provider kuma yana fassara idan ya zama dole
+  → POST /v1/responses (67router)
+    → 67router yana zaɓar protocol na asali na provider kuma yana fassara idan ya zama dole
     → POST /responses (DeepSeek V4) ko /chat/completions (Mistral / GLM / Kimi / wasu)
 ```
 
-Ba ka taɓa buƙatar wani translation proxy na daban yayin amfani da OmniRoute. **Duk models suna amfani da `wire_api = "responses"`** — OmniRoute yana kula da sauran.
+Ba ka taɓa buƙatar wani translation proxy na daban yayin amfani da 67router. **Duk models suna amfani da `wire_api = "responses"`** — 67router yana kula da sauran.
 
 > **`wire_api` shi ne tsohon saiti** — field ɗin yana amfani da `"responses"` a matsayin tsoho kuma ana iya cire shi gaba ɗaya daga `config.toml`. Ka saita shi a bayyane ne kawai idan kana son bayyana manufar saitin.
 
@@ -119,7 +119,7 @@ Ba ka taɓa buƙatar wani translation proxy na daban yayin amfani da OmniRoute. 
 
 ### Tagogin mahallin rubutu bisa ga samfuri
 
-| Samfuri                              | OmniRoute ID                         | Tagar mahallin rubutu           | `auto_compact` | `tool_output_limit` |
+| Samfuri                              | 67router ID                          | Tagar mahallin rubutu           | `auto_compact` | `tool_output_limit` |
 | ------------------------------------ | ------------------------------------ | ------------------------------- | -------------- | ------------------- |
 | GPT-5.5                              | `cx/gpt-5.5`                         | 400k abin dogaro (1M mafi yawa) | 350,000        | 32,768              |
 | Kimi K2.7 (mai tunani)               | `kmc/kimi-k2.7`                      | 131,072                         | 112,000        | 32,768              |
@@ -147,16 +147,16 @@ Ba ka taɓa buƙatar wani translation proxy na daban yayin amfani da OmniRoute. 
 
 ## Prefix ɗin samfur: `cx/`
 
-Duk samfuran Codex a cikin OmniRoute suna amfani da prefix ɗin `cx/`:
+Duk samfuran Codex a cikin 67router suna amfani da prefix ɗin `cx/`:
 
-| Sunan Codex CLI         | Samfurin OmniRoute       |
+| Sunan Codex CLI         | Samfurin 67router        |
 | ----------------------- | ------------------------ |
 | `cx/gpt-5.5`            | GPT-5.5 na yau da kullum |
 | `cx/gpt-5.4`            | GPT-5.4 na yau da kullum |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini             |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini       |
 
-Sauran masu samarwa suna amfani da prefix nasu (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — prefix ɗin yana dacewa da laƙabin mai samarwa na OmniRoute.
+Sauran masu samarwa suna amfani da prefix nasu (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — prefix ɗin yana dacewa da laƙabin mai samarwa na 67router.
 
 ---
 
@@ -186,9 +186,9 @@ model_reasoning_effort = "xhigh"   # ko ultra idan ana goyon bayansa
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### Kasafin Tunanin OmniRoute (saitin saba)
+### Kasafin Tunanin 67router (saitin saba)
 
-A kan uwar-garken OmniRoute, dole ne **Settings → AI → Thinking Budget** ya kasance **`passthrough`** domin ƙoƙarin/taƙaitaccen bayanin Codex ya isa ga sabis na sama. Yanayin **`auto` yana cire** duk filayen `reasoning` / `reasoning_effort` na abokin ciniki kuma zai bar bangarorin tunani babu komai ko da an saita Codex daidai.
+A kan uwar-garken 67router, dole ne **Settings → AI → Thinking Budget** ya kasance **`passthrough`** domin ƙoƙarin/taƙaitaccen bayanin Codex ya isa ga sabis na sama. Yanayin **`auto` yana cire** duk filayen `reasoning` / `reasoning_effort` na abokin ciniki kuma zai bar bangarorin tunani babu komai ko da an saita Codex daidai.
 
 Cikakken jagora: [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -274,10 +274,10 @@ codex -p chat     # cx/gpt-5.5, ba a saita ƙoƙari ba (tsohon saitin saba)
 
 ## Samar da bayanan martaba ta atomatik da `omniroute setup-codex`
 
-Idan kana gudanar da OmniRoute a kan VPS, za ka iya samar da fayilolin bayanan martaba ta atomatik daga kundin samfurori da ke aiki kai tsaye:
+Idan kana gudanar da 67router a kan VPS, za ka iya samar da fayilolin bayanan martaba ta atomatik daga kundin samfurori da ke aiki kai tsaye:
 
 ```bash
-# Daga VPS (yana amfani da OmniRoute na gida a tashar 20128)
+# Daga VPS (yana amfani da 67router na gida a tashar 20128)
 omniroute setup-codex
 
 # Daga kowace na'ura — nuna VPS ɗinka
@@ -304,7 +304,7 @@ a babban fayil yana dakatar da samarwa kafin a rubuta bayanan martaba.
 Lokacin da ka bayar da `--api-key` ko `OMNIROUTE_API_KEY`, sabon mai samarwa da aka ayyana yana nuni zuwa
 `env_key = "OMNIROUTE_API_KEY"`; ba a taɓa adana maɓallin kansa ko buga shi a cikin
 samfoti. Saita wannan canjin a muhallin da kake ƙaddamar da Codex. Idan ba a
-bayar da maɓalli ba, sabuwar ma'anar ba ta buƙatar maɓalli, don wani misalin OmniRoute
+bayar da maɓalli ba, sabuwar ma'anar ba ta buƙatar maɓalli, don wani misalin 67router
 da aka saita ya karɓi buƙatun da ba su da tabbatar da sahihanci.
 
 Daidaitawar kundin ta atomatik da ake iya kunna wa, wadda aka bayyana a ƙasa, tana kiyaye ma'anonin masu samarwa da suka riga
@@ -312,16 +312,16 @@ suke cikin shimfiɗaɗɗen fayil amma ba ta fara sabbin saitunan mai samarwa; fa
 ta hanyar saitawa kai tsaye ko dashboard. Ana cire saitunan mai samarwa da suke akwai
 daga samfotin dry-run saboda suna iya ƙunsar bayanan shaidar shiga da mai gudanarwa ke sarrafawa.
 
-OmniRoute kuma zai iya **daidaita ta atomatik** waɗannan fayilolin bayanan martaba iri ɗaya bayan nasarar gano/shigo da samfurin mai samarwa ya canza kundin da ke aiki kai tsaye. Wannan **na zaɓi ne kuma a kashe yake ta tsohuwa**: kunna shi daga **CLI Code dashboard** ("CLI profile auto-sync" → Codex), ko saita `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (yana kuma mutunta `CLI_ALLOW_CONFIG_WRITES`, wanda yake kunne ta tsohuwa). Idan an kunna shi, yana rubuta fayilolin bayanan martaba na `~/.codex/*.config.toml` daban-daban kawai; ba ya taɓa canza `~/.codex/config.toml` mai aiki/na tsohuwa, saitunan Codex-lb, tabbatar da sahihanci, ko zaɓin mai samarwa.
+67router kuma zai iya **daidaita ta atomatik** waɗannan fayilolin bayanan martaba iri ɗaya bayan nasarar gano/shigo da samfurin mai samarwa ya canza kundin da ke aiki kai tsaye. Wannan **na zaɓi ne kuma a kashe yake ta tsohuwa**: kunna shi daga **CLI Code dashboard** ("CLI profile auto-sync" → Codex), ko saita `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (yana kuma mutunta `CLI_ALLOW_CONFIG_WRITES`, wanda yake kunne ta tsohuwa). Idan an kunna shi, yana rubuta fayilolin bayanan martaba na `~/.codex/*.config.toml` daban-daban kawai; ba ya taɓa canza `~/.codex/config.toml` mai aiki/na tsohuwa, saitunan Codex-lb, tabbatar da sahihanci, ko zaɓin mai samarwa.
 
 ---
 
 ## Ƙaddamar da Codex da `omniroute launch-codex`
 
-Yana bincika lafiyar instance na OmniRoute kafin ƙaddamar da Codex:
+Yana bincika lafiyar instance na 67router kafin ƙaddamar da Codex:
 
 ```bash
-# Ƙaddamar ta hanyar OmniRoute na cikin gida (port na tsohuwa 20128)
+# Ƙaddamar ta hanyar 67router na cikin gida (port na tsohuwa 20128)
 omniroute launch-codex
 
 # Ƙaddamar da wani takamaiman profile
@@ -471,7 +471,7 @@ A cikin zama mai hulɗa:
 
 ## Ayyuka masu ɗaukar dogon lokaci
 
-Tsoffin saituna biyu na OmniRoute na iya lalata zaman Codex CLI na sa'o'i da yawa ba tare da an lura ba. Babu ɗayansu da yake saitin Codex CLI — dukansu suna ɓangaren OmniRoute. Masu amfani da ke ƙaura da tsari daga upstream proxies waɗanda ke ɗaure asusu kuma suke kashe iyakokin zaman banza sukan gamu da matsalolin biyu, sannan su yanke hukuncin cewa OmniRoute “ba zai iya ci gaba da dogon zama ba.”
+Tsoffin saituna biyu na 67router na iya lalata zaman Codex CLI na sa'o'i da yawa ba tare da an lura ba. Babu ɗayansu da yake saitin Codex CLI — dukansu suna ɓangaren 67router. Masu amfani da ke ƙaura da tsari daga upstream proxies waɗanda ke ɗaure asusu kuma suke kashe iyakokin zaman banza sukan gamu da matsalolin biyu, sannan su yanke hukuncin cewa 67router “ba zai iya ci gaba da dogon zama ba.”
 
 | Alama                                                                            | Dalili mai yiwuwa                                                                              | Maɓallin saiti           |
 | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------ |
@@ -493,7 +493,7 @@ Tattaunawa masu alaƙa: [#7126](https://github.com/diegosouzapw/OmniRoute/discus
 
 **Abin da ke lalacewa idan ya ci gaba da kasancewa 0**
 
-Kowane juyi na tattaunawar Codex mai juyi da yawa ana yi masa routing daban bisa ga dabarar combo da ke aiki, kuma zai iya sauka kan **wani asusu daban a kowane juyi**. Wannan yana karya ci gaban session / prompt-cache na upstream. OmniRoute yana duba Codex session headers (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) da body fields kamar `prompt_cache_key` / `session_id` ne kawai idan TTL ya fi `0` (`extractSessionAffinityKey` a cikin `src/sse/services/auth.ts`).
+Kowane juyi na tattaunawar Codex mai juyi da yawa ana yi masa routing daban bisa ga dabarar combo da ke aiki, kuma zai iya sauka kan **wani asusu daban a kowane juyi**. Wannan yana karya ci gaban session / prompt-cache na upstream. 67router yana duba Codex session headers (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) da body fields kamar `prompt_cache_key` / `session_id` ne kawai idan TTL ya fi `0` (`extractSessionAffinityKey` a cikin `src/sse/services/auth.ts`).
 
 **Abin da aka ba da shawara don aiki guda da zai ɗauki sa'o'i da yawa**
 
@@ -515,13 +515,13 @@ Shiga da zaɓi abu ne da aka yi da gangan: kashe affinity yana fifita daidaita n
 
 Zagayen tunani / kayan aiki na Codex da ya yi shiru fiye da mintuna 10 ba tare da **wani ainihin ɓangaren bayanai daga upstream ba** ana rufe shi da ƙarfi ta mai sa ido kan zaman banza na SSE (`open-sse/utils/stream.ts`). Sau da yawa abokin ciniki yana ganin haɗin ya yanke kawai — abin da ya yi daidai da “ya tsaya ta atomatik ba tare da wani sanarwa ba.”
 
-Muhimmin bayani: Bugun-zuciyar SSE na wucin gadi na OmniRoute **ba ya sake saita** agogon zaman banza. Ainihin ɓangaren jikin bayanai daga upstream ne kawai yake sabunta `lastChunkTime`. Samfurin da ya yi shiru alhali har yanzu yana “tunani” yana kama da upstream da ya tsaya cik a mahangar mai sa idon.
+Muhimmin bayani: Bugun-zuciyar SSE na wucin gadi na 67router **ba ya sake saita** agogon zaman banza. Ainihin ɓangaren jikin bayanai daga upstream ne kawai yake sabunta `lastChunkTime`. Samfurin da ya yi shiru alhali har yanzu yana “tunani” yana kama da upstream da ya tsaya cik a mahangar mai sa idon.
 
 Rashin aiki na jikin Undici mai alaƙa: `FETCH_BODY_TIMEOUT_MS` (shi ma a tsohuwa yana amfani da ma’aunin mintuna 10 iri ɗaya; `0` yana kashe shi). Don yawo, `FETCH_TIMEOUT_MS` yana rufe kafa haɗi / karɓar headers na farko ne kawai — da zarar yawo ya fara aiki, `STREAM_IDLE_TIMEOUT_MS` da `FETCH_BODY_TIMEOUT_MS` ne ke sarrafa tsayawar bayanai.
 
 **Shawarar da ta dace don aiki guda da zai ɗauki sa’o’i da yawa**
 
-A cikin muhallin aikin OmniRoute (`.env` / compose / systemd):
+A cikin muhallin aikin 67router (`.env` / compose / systemd):
 
 ```bash
 # Kashe iyakokin zaman banza na yawo + rashin aikin jiki don zagayen tunani masu tsawo
@@ -537,12 +537,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-Sake kunna OmniRoute bayan canza waɗannan env vars.
+Sake kunna 67router bayan canza waɗannan env vars.
 
 ### Takamaiman hanya — aikin Codex na sa’o’i da yawa
 
 1. **Ƙayyade asusun:** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200` (12h) ko `86400` (iyakar 24h).
-2. **Ɗaga / kashe iyakokin zaman banza** a muhallin OmniRoute:
+2. **Ɗaga / kashe iyakokin zaman banza** a muhallin 67router:
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -550,7 +550,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. Ci gaba da amfani da `config.toml` na Codex na yau da kullum (`wire_api = "responses"`, `base_url` daidai, `OMNIROUTE_API_KEY`) — babu saitunan affinity/zaman banza a ɓangaren Codex don waɗannan halaye biyu.
-4. Sake kunna OmniRoute, sannan ka fara aikin Codex mai tsawo.
+4. Sake kunna 67router, sannan ka fara aikin Codex mai tsawo.
 
 ### Shawarar tsoffin ƙimomi (#7287)
 
@@ -563,13 +563,13 @@ Sauya ɗaya daga cikin tsoffin ƙimomin a duniya zai canza hali ga kowane abokin
 
 ### Gano yankewar zaman banza
 
-Lokacin da mai sa idon zaman banza ya fara aiki, OmniRoute yana rubuta layi mai kama da haka:
+Lokacin da mai sa idon zaman banza ya fara aiki, 67router yana rubuta layi mai kama da haka:
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-Yi grep don `Idle timeout: no data from` (ko lambar `stream_idle_timeout` / sunan kuskure `StreamIdleTimeoutError`). Sashen provider shi ne duk abin da OmniRoute ya yi amfani da shi don wannan buƙatar (`codex`, wani provider id, ko `provider` idan ba a sani ba) — ba koyaushe ne zai zama ainihin rubutun `codex` ba.
+Yi grep don `Idle timeout: no data from` (ko lambar `stream_idle_timeout` / sunan kuskure `StreamIdleTimeoutError`). Sashen provider shi ne duk abin da 67router ya yi amfani da shi don wannan buƙatar (`codex`, wani provider id, ko `provider` idan ba a sani ba) — ba koyaushe ne zai zama ainihin rubutun `codex` ba.
 
 ---
 
@@ -579,7 +579,7 @@ Yi grep don `Idle timeout: no data from` (ko lambar `stream_idle_timeout` / suna
 Cire `wire_api = "chat"` daga saitunanka. Saita `wire_api = "responses"` ko ka bar filin ba tare da komai ba (tun daga v0.138, tsohon ƙimarsa ita ce `"responses"`).
 
 **`Error: model not found`**
-Tabbatar cewa samfurin yana cikin OmniRoute tare da madaidaicin prefix. Yi amfani da `omniroute models list` ko buɗe `/dashboard/providers/<provider>`.
+Tabbatar cewa samfurin yana cikin 67router tare da madaidaicin prefix. Yi amfani da `omniroute models list` ko buɗe `/dashboard/providers/<provider>`.
 
 **`Authentication error`**
 Tabbatar an fitar da `OMNIROUTE_API_KEY`: `echo $OMNIROUTE_API_KEY`.
@@ -587,11 +587,11 @@ Tabbatar an fitar da `OMNIROUTE_API_KEY`: `echo $OMNIROUTE_API_KEY`.
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
 Codex yana tabbatar da cewa env var ɗin yana nan kafin yin buƙata ta farko. Fitar da
 maɓalli na ainihi don sabarori masu kariya, ko wata ƙima marar fanko ta wucin gadi kamar
-`OMNIROUTE_API_KEY=local` idan OmniRoute na **local** ɗinka baya
+`OMNIROUTE_API_KEY=local` idan 67router na **local** ɗinka baya
 buƙatar tantancewa. Sake kunna shell idan ka ƙara shi zuwa `~/.bashrc` ko `~/.zshrc`.
 
 **`Connection refused`**
-Tabbatar cewa OmniRoute yana aiki kuma host/port na `base_url` ya dace da hanyar sadarwarka (local ko Tailscale ko VPS).
+Tabbatar cewa 67router yana aiki kuma host/port na `base_url` ya dace da hanyar sadarwarka (local ko Tailscale ko VPS).
 
 **Zaman yana rushewa kusa da iyakar mahallin**
 Saita `model_context_window` da `model_auto_compact_token_limit` a sarari. Duba jadawalin taga mahallin da ke sama.
@@ -603,4 +603,4 @@ Rage `model_auto_compact_token_limit` zuwa 80–85% na tagar. Kada ka taɓa sait
 Tabbatar cewa fayil ɗin yana nan a `~/.codex/<name>.config.toml` (ba tare da prefix na `profile-` ba). Gudanar da `ls ~/.codex/*.config.toml`.
 
 **Dogon aikin Codex yana yankewa a tsakiyar aiki / yana sauya asusu tsakanin matakai**
-Duba [Ayyuka masu ɗaukar lokaci mai tsawo](#long-running-tasks). Kunna manne wa zaman (TTL ya fi tsawon aikin) sannan ka ƙara ko ka kashe `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Yi grep a cikin log na OmniRoute don `Idle timeout: no data from`.
+Duba [Ayyuka masu ɗaukar lokaci mai tsawo](#long-running-tasks). Kunna manne wa zaman (TTL ya fi tsawon aikin) sannan ka ƙara ko ka kashe `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Yi grep a cikin log na 67router don `Idle timeout: no data from`.

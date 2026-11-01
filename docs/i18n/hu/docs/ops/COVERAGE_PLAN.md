@@ -71,11 +71,9 @@ Jelenleg ezekben a fájlokban a legalacsonyabb a sorlefedettség (< 60%), és ez
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |  13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |  13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |  13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |  13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |  14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |  14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |  15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |  15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |  16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |  16.66% |
 
@@ -83,7 +81,6 @@ A 6–7. fázis témái:
 
 - Az `open-sse/services/compression/**` terület tartalmazza az alacsony lefedettségű fájlok legsűrűbb csoportját, és ez adja a fennmaradó hiány legnagyobb részét.
 - A kötegelt és újrarangsoroló API-útvonalakhoz (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) kezelőszintű tesztekre van szükség.
-- A felhőügynök-adapterekhez (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) és a `tierResolver.ts` fájlhoz forgatókönyv-alapú tesztekre van szükség.
 - A dokumentációs felület komponensei és a `src/mitm/systemCommands.ts` alacsonyabb prioritásúak, de kevés ráfordítással javítható velük az áglefedettség.
 
 ## Végrehajtási ellenőrzőlista

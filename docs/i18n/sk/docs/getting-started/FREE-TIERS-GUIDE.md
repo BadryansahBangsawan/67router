@@ -4,7 +4,7 @@
 
 ---
 
-> **Stručne**: Použite vlastné účty u podporovaných poskytovateľov. OmniRoute kombinuje pripojenia, ktoré nakonfigurujete; neposkytuje propagovaný súhrnný limit tokenov. Bezplatný prístup môže vyžadovať registráciu, API kľúč, schválenie alebo platobnú metódu. Naďalej platia limity, zásady ochrany súkromia a podmienky poskytovateľov.
+> **Stručne**: Použite vlastné účty u podporovaných poskytovateľov. 67router kombinuje pripojenia, ktoré nakonfigurujete; neposkytuje propagovaný súhrnný limit tokenov. Bezplatný prístup môže vyžadovať registráciu, API kľúč, schválenie alebo platobnú metódu. Naďalej platia limity, zásady ochrany súkromia a podmienky poskytovateľov.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Mnohí poskytovatelia AI ponúkajú určitú formu **bezplatného prístupu**. V závislosti od poskytovateľa to môže znamenať koncový bod bez autentifikácie, pravidelne obnovovanú kvótu, neobmedzený prístup s obmedzenou frekvenciou požiadaviek, kredit za registráciu, manuálne schválenie alebo dočasnú promoakciu. Niektoré možnosti vyžadujú účet, API kľúč, kreditnú kartu, KYC alebo prijatie podmienok konkrétneho poskytovateľa.
 
-OmniRoute **združuje** nakonfigurované pripojenia do jedného koncového bodu. U každého poskytovateľa, ktorý vyžaduje účet, sa musíte aj naďalej zaregistrovať samostatne. Pripojte tieto účty a použite `model: "auto"` na smerovanie medzi dostupnými cieľmi. Nová inštalácia nemusí mať žiadny dostupný cieľ bez potreby kľúča; samotná inštalácia OmniRoute nezaručuje úspešnú odpoveď chatu.
+67router **združuje** nakonfigurované pripojenia do jedného koncového bodu. U každého poskytovateľa, ktorý vyžaduje účet, sa musíte aj naďalej zaregistrovať samostatne. Pripojte tieto účty a použite `model: "auto"` na smerovanie medzi dostupnými cieľmi. Nová inštalácia nemusí mať žiadny dostupný cieľ bez potreby kľúča; samotná inštalácia 67router nezaručuje úspešnú odpoveď chatu.
 
 ---
 
@@ -57,7 +57,7 @@ Títo poskytovatelia majú **bezplatné úrovne** so špecifickými limitmi:
 
 ## Ako kombinovať bezplatné úrovne
 
-Čaro OmniRoute spočíva v **kombinovaní bezplatných úrovní**. Namiesto spoliehania sa na jedného poskytovateľa pripojíte viacerých bezplatných poskytovateľov a necháte OmniRoute automaticky vybrať toho najlepšieho pre každú požiadavku.
+Čaro 67router spočíva v **kombinovaní bezplatných úrovní**. Namiesto spoliehania sa na jedného poskytovateľa pripojíte viacerých bezplatných poskytovateľov a necháte 67router automaticky vybrať toho najlepšieho pre každú požiadavku.
 
 ### Príklad: Širšie pokrytie bezplatných úrovní
 
@@ -68,7 +68,7 @@ Pripojte viacerých poskytovateľov, aby ste znížili závislosť od jednej kv�
 3. **Pollinations** — prístup bez kľúča s obmedzenou frekvenciou požiadaviek
 4. **LongCat** — jednorazový bonus za registráciu (vyžaduje KYC)
 
-Potom použite `model: "auto"` a OmniRoute:
+Potom použite `model: "auto"` a 67router:
 
 - Najprv vyskúša oprávnené pripojenie s najvyšším hodnotením
 - Ak jeho kvóta alebo kontrola stavu zlyhá → vyskúša ďalšieho nakonfigurovaného poskytovateľa
@@ -102,7 +102,7 @@ neobmedzený prístup alebo prístup bez kľúča, kredity za registráciu, ukon
 
 ### Krok 5: Kliknite na Pripojiť
 
-V prípade poskytovateľa typu `NOAUTH` OmniRoute nevyžaduje prihlasovacie údaje pre nadradenú službu. Nezaručuje to, že nadradená služba akceptuje klientov tretích strán alebo má dostupnú kapacitu. Poskytovatelia využívajúci OAuth a API kľúč musia byť pripojení prostredníctvom zdokumentovaného postupu pre ich účet. Ak je povolené overovanie smerovača, váš klient naďalej používa API kľúč OmniRoute zobrazený v časti **Ovládací panel → Koncové body**.
+V prípade poskytovateľa typu `NOAUTH` 67router nevyžaduje prihlasovacie údaje pre nadradenú službu. Nezaručuje to, že nadradená služba akceptuje klientov tretích strán alebo má dostupnú kapacitu. Poskytovatelia využívajúci OAuth a API kľúč musia byť pripojení prostredníctvom zdokumentovaného postupu pre ich účet. Ak je povolené overovanie smerovača, váš klient naďalej používa API kľúč 67router zobrazený v časti **Ovládací panel → Koncové body**.
 
 ### Krok 6: Zopakujte postup
 
@@ -112,7 +112,7 @@ Pripojte niekoľkých poskytovateľov, ktorých podmienky a model ochrany súkro
 
 ## Správne čítanie katalógu
 
-- `NOAUTH` znamená, že OmniRoute od vás nepožaduje prihlasovací údaj poskytovateľa; nezaručuje však dostupnosť, ochranu súkromia ani neobmedzenú kapacitu.
+- `NOAUTH` znamená, že 67router od vás nepožaduje prihlasovací údaj poskytovateľa; nezaručuje však dostupnosť, ochranu súkromia ani neobmedzenú kapacitu.
 - `hasFree` sú metadáta na vyhľadávanie. Môžu predstavovať opakovanú kvótu, prístup bez kľúča, kredit za registráciu, schvaľovací program alebo propagačnú ponuku.
 - `recurring-uncapped` znamená, že nebol dostupný žiadny zverejnený limit počtu tokenov; naďalej však platia obmedzenia rýchlosti a súbežnosti.
 - `one-time-initial` sa po vyčerpaní kreditu udeleného pri registrácii neobnovuje.
@@ -121,15 +121,15 @@ Pripojte niekoľkých poskytovateľov, ktorých podmienky a model ochrany súkro
 
 ---
 
-## Ako OmniRoute zlepšuje bezplatné úrovne
+## Ako 67router zlepšuje bezplatné úrovne
 
 ### 1. Automatické záložné riešenie
 
-Ak je jeden bezplatný poskytovateľ zaneprázdnený alebo nedostupný, OmniRoute automaticky vyskúša ďalšieho. Nemusíte robiť nič.
+Ak je jeden bezplatný poskytovateľ zaneprázdnený alebo nedostupný, 67router automaticky vyskúša ďalšieho. Nemusíte robiť nič.
 
 ### 2. Inteligentné smerovanie
 
-OmniRoute vyberie **najlepšieho bezplatného poskytovateľa** pre každú požiadavku na základe týchto faktorov:
+67router vyberie **najlepšieho bezplatného poskytovateľa** pre každú požiadavku na základe týchto faktorov:
 
 - Rýchlosť — Ktorý poskytovateľ je práve teraz najrýchlejší?
 - Kvalita — Ktorý poskytovateľ je najlepší pre túto úlohu?
@@ -137,13 +137,13 @@ OmniRoute vyberie **najlepšieho bezplatného poskytovateľa** pre každú poži
 
 ### 3. Úspora tokenov
 
-Kompresný proces OmniRoute môže znížiť počet vhodných tokenov výzvy a výstupu nástrojov. Skutočná
+Kompresný proces 67router môže znížiť počet vhodných tokenov výzvy a výstupu nástrojov. Skutočná
 úspora závisí od obsahu, vybraných mechanizmov, účtovania poskytovateľa a nastavení
 vernosti; kompresia nenásobí každú kvótu poskytovateľa pevne stanoveným koeficientom.
 
 ### 4. Podpora viacerých účtov
 
-Ak podmienky poskytovateľa povoľujú viacero účtov alebo prihlasovacích údajov, OmniRoute môže každé
+Ak podmienky poskytovateľa povoľujú viacero účtov alebo prihlasovacích údajov, 67router môže každé
 pripojenie považovať za samostatného kandidáta na smerovanie. Nevytvárajte ďalšie účty s cieľom obísť
 kvótu alebo zásady prístupu poskytovateľa.
 
@@ -158,7 +158,7 @@ Aktuálny katalóg s deduplikáciou spoločných fondov momentálne uvádza:
 | Opakujúci sa kvantifikovaný prídel    |   **~1.62B tokenov/mesiac** | Zdieľané fondy sa započítavajú iba raz; súčet nezahŕňa poskytovateľov bez stanoveného limitu |
 | Prvý mesiac s kreditmi za registráciu |          **~2.22B tokenov** | Opakujúci sa celkový objem plus jednorazové a opakujúce sa kredity                           |
 
-Ide o odhady pre celý katalóg naprieč samostatnými oprávnenými účtami, nie o prídel poskytovaný službou OmniRoute ani o predpoveď pre novú inštaláciu. Využiteľná kapacita závisí od poskytovateľov, ktorých pripojíte, a od ich aktuálnych podmienok. Hodnoty sa vypočítavajú zo súboru `open-sse/config/freeModelCatalog.ts`; informácie o deduplikácii fondov, príznakoch ToS,
+Ide o odhady pre celý katalóg naprieč samostatnými oprávnenými účtami, nie o prídel poskytovaný službou 67router ani o predpoveď pre novú inštaláciu. Využiteľná kapacita závisí od poskytovateľov, ktorých pripojíte, a od ich aktuálnych podmienok. Hodnoty sa vypočítavajú zo súboru `open-sse/config/freeModelCatalog.ts`; informácie o deduplikácii fondov, príznakoch ToS,
 ukončených položkách a metodike kreditov za registráciu nájdete v dokumente
 [Referenčné informácie o bezplatných úrovniach](../reference/FREE_TIERS.md).
 
@@ -185,7 +185,7 @@ požiadavky. Kritické pracovné zaťaženia by mali mať monitorovanú a zmluvn
 
 Kompromisy môžu zahŕňať prísne limity, čakacie zoznamy, KYC, overenie kreditnou kartou, trénovanie na
 promptoch, slabšiu ochranu súkromia, absenciu SLA, časté zmeny modelov, geografické obmedzenia, platené prekročenie limitu alebo
-riziká súvisiace so zásadami účtu. OmniRoute zobrazuje dostupné metadáta; vy rozhodujete, čo povolíte.
+riziká súvisiace so zásadami účtu. 67router zobrazuje dostupné metadáta; vy rozhodujete, čo povolíte.
 
 ### „Ako môžem získať väčšiu bezplatnú kvótu?“
 
@@ -204,7 +204,7 @@ rebríčka bezplatných poskytovateľov ako ukazovateľ kvality a overte si, ak�
 
 ## Čo ďalej?
 
-- **[Sprievodca Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Nechajte OmniRoute vybrať pre vás najlepšiu AI
+- **[Sprievodca Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Nechajte 67router vybrať pre vás najlepšiu AI
 - **[Sprievodca poskytovateľmi](./PROVIDERS-GUIDE.md)** — Pripojte ďalších poskytovateľov
 - **[Riešenie problémov](../guides/TROUBLESHOOTING.md)** — Vyriešte bežné problémy
 - **[Prehľad bezplatných úrovní](../reference/FREE_TIERS.md)** — Úplný zoznam bezplatných úrovní

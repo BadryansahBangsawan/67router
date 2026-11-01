@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: OmniRoute əsas məlumat anbarı kimi **WAL jurnallaşdırması ilə SQLite** istifadə edir və həssas sahələr saxlanma zamanı **AES-256-GCM** ilə şifrələnir. Bu təlimatda sxem, miqrasiyalar, ehtiyat nüsxələmə/bərpa və əməliyyat təlimatları əhatə olunur.
+> **Qısa xülasə**: 67router əsas məlumat anbarı kimi **WAL jurnallaşdırması ilə SQLite** istifadə edir və həssas sahələr saxlanma zamanı **AES-256-GCM** ilə şifrələnir. Bu təlimatda sxem, miqrasiyalar, ehtiyat nüsxələmə/bərpa və əməliyyat təlimatları əhatə olunur.
 
 **Mənbələr:**
 
@@ -19,7 +19,7 @@
 
 ## Niyə SQLite?
 
-OmniRoute bir neçə səbəbə görə PostgreSQL/MySQL əvəzinə SQLite seçib:
+67router bir neçə səbəbə görə PostgreSQL/MySQL əvəzinə SQLite seçib:
 
 | Amil                   | SQLite                                   | PostgreSQL                                       |
 | ---------------------- | ---------------------------------------- | ------------------------------------------------ |
@@ -30,7 +30,7 @@ OmniRoute bir neçə səbəbə görə PostgreSQL/MySQL əvəzinə SQLite seçib:
 | **Ehtiyat nüsxə**      | Tək faylın kopyalanması                  | `pg_dump` və ya fayl sistemi anlıq görüntüsü     |
 | **İstifadə ssenarisi** | Hər istifadəçi üçün quraşdırma, daxili   | Çoxicarəçili SaaS                                |
 
-**Tək istifadəçili, tək instanslı** yerləşdirmələr (OmniRoute-un əsas istifadə ssenarisi) üçün SQLite daha sadə və sürətlidir.
+**Tək istifadəçili, tək instanslı** yerləşdirmələr (67router-un əsas istifadə ssenarisi) üçün SQLite daha sadə və sürətlidir.
 
 ### WAL jurnallaşdırması
 
@@ -50,7 +50,7 @@ Standart keş ölçüsü **65,536 KiB (64 MiB)** təşkil edir. SQLite mənfi
 `cache_size` dəyərini KiB ilə təxmini yuxarı hədd kimi şərh edir və səhifələri tələb olunduqca ayırır.
 **Parametrlər > Sistem və yaddaş > Keş ölçüsü** bölməsi **1-dən
 1,000,000 KiB-dək** tam ədəd dəyərləri qəbul edir; parametrin yadda saxlanması onu aktiv verilənlər bazası bağlantısına tətbiq edir,
-OmniRoute isə saxlanılmış dəyəri başlanğıc zamanı bərpa edir.
+67router isə saxlanılmış dəyəri başlanğıc zamanı bərpa edir.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Domen Modulu Arxitekturası
 
-OmniRoute-un verilənlər bazasında `src/lib/db/` daxilində **110 üst səviyyəli TypeScript modulu** var. Hər bir domen modulu:
+67router-un verilənlər bazasında `src/lib/db/` daxilində **110 üst səviyyəli TypeScript modulu** var. Hər bir domen modulu:
 
 - Bir və ya daha çox konkret cədvələ sahibdir
 - Tipləşdirilmiş CRUD funksiyalarını ixrac edir
@@ -90,7 +90,7 @@ OmniRoute-un verilənlər bazasında `src/lib/db/` daxilində **110 üst səviyy
 
 ### 110 Üst Səviyyəli Verilənlər Bazası Modulu
 
-OmniRoute-un `src/lib/db/` daxilində **110 üst səviyyəli TypeScript faylı** var. Aşağıda əsas modullardan bəziləri göstərilib; tam siyahı üçün qovluq siyahısına baxın:
+67router-un `src/lib/db/` daxilində **110 üst səviyyəli TypeScript faylı** var. Aşağıda əsas modullardan bəziləri göstərilib; tam siyahı üçün qovluq siyahısına baxın:
 
 | Modul                   | Cədvəllər                                                      | Məsuliyyət                                                                               |
 | ----------------------- | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Təxminən 30-dan çox cədvəlin tam siyahısı `src/lib/db/migrations/` daxili
 
 ## Miqrasiyalar
 
-OmniRoute `src/lib/db/migrations/` qovluğunda **versiyalaşdırılmış, idempotent miqrasiyalardan** istifadə edir. Hər miqrasiya `NNN_description.sql` formatında adlandırılmış ayrıca SQL faylıdır.
+67router `src/lib/db/migrations/` qovluğunda **versiyalaşdırılmış, idempotent miqrasiyalardan** istifadə edir. Hər miqrasiya `NNN_description.sql` formatında adlandırılmış ayrıca SQL faylıdır.
 
 ### Miqrasiyaların adlandırılması
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Geriyə uyğun olmayan dəyişikliklər** (məsələn, sütunların silinməsi) mürəkkəbdir. OmniRoute əvvəlki versiyaya qayıtmanı dəstəkləmir — miqrasiya tətbiq edildikdən sonra sxem dəyişikliyi qalıcı olur. Planlaşdırarkən bunu nəzərə alın.
+> **Geriyə uyğun olmayan dəyişikliklər** (məsələn, sütunların silinməsi) mürəkkəbdir. 67router əvvəlki versiyaya qayıtmanı dəstəkləmir — miqrasiya tətbiq edildikdən sonra sxem dəyişikliyi qalıcı olur. Planlaşdırarkən bunu nəzərə alın.
 
 ---
 
@@ -310,7 +310,7 @@ Performans səbəblərinə görə aşağıdakılar açıq mətn şəklində saxl
 
 ## Şifrələmə ilə bağlı məhdudiyyətlər (v3.8.16+)
 
-OmniRoute iki şifrələmə sxemini şəffaf şəkildə idarə etmək üçün **`migrateLegacyEncryptedString()`** funksiyasından istifadə edir:
+67router iki şifrələmə sxemini şəffaf şəkildə idarə etmək üçün **`migrateLegacyEncryptedString()`** funksiyasından istifadə edir:
 
 - **Köhnə** (v3.5.0-dan əvvəl): XOR əsaslı "şifrələmə" (həqiqi kriptoqrafiya deyil)
 - **Cari**: Düzgün IV və autentifikasiya teqi ilə AES-256-GCM
@@ -398,7 +398,7 @@ Cədvəl server tərəfində, hər 30 saniyədən bir (standart olaraq) işə d�
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Bu, SQLite-ın onlayn ehtiyat nüsxələmə API-sindən istifadə edir — OmniRoute işləyərkən icra edilməsi təhlükəsizdir.
+Bu, SQLite-ın onlayn ehtiyat nüsxələmə API-sindən istifadə edir — 67router işləyərkən icra edilməsi təhlükəsizdir.
 
 ---
 
@@ -441,7 +441,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Sıxlaşdırma
 
-Uzun müddət işləyən OmniRoute instansiyaları ara-sıra `VACUUM` əməliyyatından faydalanır:
+Uzun müddət işləyən 67router instansiyaları ara-sıra `VACUUM` əməliyyatından faydalanır:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -574,7 +574,7 @@ EOF
 ### Bütün Məlumatları Sıfırlamaq (Silmək)
 
 ```bash
-# Əvvəlcə OmniRoute-u dayandırın
+# Əvvəlcə 67router-u dayandırın
 omniroute stop
 
 # Verilənlər bazası faylını silin
@@ -612,7 +612,7 @@ Başqa proses yazma kilidini saxlayır. Aşağıdakılardan birini edin:
 
 - Digər prosesin bitməsini gözləyin (`lsof | grep storage.sqlite` ilə yoxlayın)
 - Digər prosesi dayandırın
-- Problem davam edərsə, OmniRoute-u yenidən başladın
+- Problem davam edərsə, 67router-u yenidən başladın
 
 ### "Xarici açar məhdudiyyəti pozulub"
 
@@ -642,10 +642,10 @@ PRAGMA mmap_size = 0;
 
 Miqrasiya tranzaksiya daxilində icra edildiyi üçün geri qaytarılmalı idi. Əgər qaytarılmayıbsa:
 
-1. **OmniRoute-u dayandırın** (sonrakı cəhdlərin qarşısını alın)
+1. **67router-u dayandırın** (sonrakı cəhdlərin qarşısını alın)
 2. `sqlite3` ilə **verilənlər bazasının vəziyyətini yoxlayın**
 3. Qismən tətbiq edilmiş miqrasiyanı **əl ilə düzəldin**
-4. OmniRoute-u **yenidən başladın** (miqrasiya yenidən sınanacaq)
+4. 67router-u **yenidən başladın** (miqrasiya yenidən sınanacaq)
 
 Bunun qarşısını almaq üçün miqrasiyaları həmişə əvvəlcə nüsxə üzərində sınaqdan keçirin.
 

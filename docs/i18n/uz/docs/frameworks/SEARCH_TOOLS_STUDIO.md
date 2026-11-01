@@ -168,5 +168,4 @@ Ushbu funksiya uchun backendda faqat bitta oʻzgarish talab qilindi:
 - Asosiy reja: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Funksiya rejasi: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Qidiruv provayderlari reyestri: `open-sse/config/searchRegistry.ts`
-- Playground Studio (umumiy `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Veb-ma’lumotlarni olish backendi: `src/app/api/v1/web/fetch/route.ts`

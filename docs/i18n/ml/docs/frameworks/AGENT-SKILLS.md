@@ -1,4 +1,4 @@
-# OmniRoute Agent Skills Catalog (മലയാളം)
+# 67router Agent Skills Catalog (മലയാളം)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/AGENT-SKILLS.md) · 🇪🇹 [am](../../../am/docs/frameworks/AGENT-SKILLS.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/AGENT-SKILLS.md) · 🇦🇿 [az](../../../az/docs/frameworks/AGENT-SKILLS.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/AGENT-SKILLS.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/AGENT-SKILLS.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/AGENT-SKILLS.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/AGENT-SKILLS.md) · 🇩🇰 [da](../../../da/docs/frameworks/AGENT-SKILLS.md) · 🇩🇪 [de](../../../de/docs/frameworks/AGENT-SKILLS.md) · 🇬🇷 [el](../../../el/docs/frameworks/AGENT-SKILLS.md) · 🇪🇸 [es](../../../es/docs/frameworks/AGENT-SKILLS.md) · 🇪🇪 [et](../../../et/docs/frameworks/AGENT-SKILLS.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/AGENT-SKILLS.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/AGENT-SKILLS.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/AGENT-SKILLS.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/AGENT-SKILLS.md) · 🇮🇱 [he](../../../he/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/AGENT-SKILLS.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/AGENT-SKILLS.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/AGENT-SKILLS.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/AGENT-SKILLS.md) · 🇮🇩 [id](../../../id/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/AGENT-SKILLS.md) · 🇮🇹 [it](../../../it/docs/frameworks/AGENT-SKILLS.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/AGENT-SKILLS.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/AGENT-SKILLS.md) · 🇰🇭 [km](../../../km/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/AGENT-SKILLS.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/AGENT-SKILLS.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/AGENT-SKILLS.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/AGENT-SKILLS.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/AGENT-SKILLS.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/AGENT-SKILLS.md) · 🇲🇲 [my](../../../my/docs/frameworks/AGENT-SKILLS.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/AGENT-SKILLS.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/AGENT-SKILLS.md) · 🇳🇴 [no](../../../no/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [or](../../../or/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/AGENT-SKILLS.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/AGENT-SKILLS.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/AGENT-SKILLS.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/AGENT-SKILLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/AGENT-SKILLS.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/AGENT-SKILLS.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/AGENT-SKILLS.md) · 🇱🇰 [si](../../../si/docs/frameworks/AGENT-SKILLS.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/AGENT-SKILLS.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/AGENT-SKILLS.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/AGENT-SKILLS.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/AGENT-SKILLS.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [te](../../../te/docs/frameworks/AGENT-SKILLS.md) · 🇹🇭 [th](../../../th/docs/frameworks/AGENT-SKILLS.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/AGENT-SKILLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/AGENT-SKILLS.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/AGENT-SKILLS.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/AGENT-SKILLS.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/AGENT-SKILLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/AGENT-SKILLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/AGENT-SKILLS.md)
 
@@ -7,13 +7,13 @@
 > **ആധികാരിക ഉറവിടം:** `src/lib/agentSkills/` (കാറ്റലോഗ്, ജനറേറ്റർ, പാർസറുകൾ) + `skills/` ഡയറക്ടറി (SKILL.md ഫയലുകൾ)
 > **അവസാനം പുതുക്കിയത്:** 2026-08-02 — v3.8.50
 
-OmniRoute-ന്റെ REST API-യും CLI-യും എങ്ങനെ ഉപയോഗിക്കണമെന്ന് ബാഹ്യ ഏജന്റുമാരെയും MCP ക്ലയന്റുകളെയും A2A ഓർക്കസ്ട്രേറ്ററുകളെയും പഠിപ്പിക്കുന്ന ഘടനാപരമായ SKILL.md ഫയലുകളാണ് Agent Skills. OmniRoute-നുള്ളിൽ നിർവഹിക്കപ്പെടുന്ന LLM ടൂൾ നിർവചനങ്ങളായ [Omni Skills](./SKILLS.md)-ൽ നിന്ന് വ്യത്യസ്തമായി, Agent Skills ഒരു _ഡോക്യുമെന്റേഷൻ കാറ്റലോഗ്_ ആണ് — ഏജന്റ് കോൺടെക്സ്റ്റിലേക്ക് നേരിട്ട് നൽകാവുന്ന സ്റ്റാറ്റിക് മാർക്ക്ഡൗൺ.
+67router-ന്റെ REST API-യും CLI-യും എങ്ങനെ ഉപയോഗിക്കണമെന്ന് ബാഹ്യ ഏജന്റുമാരെയും MCP ക്ലയന്റുകളെയും A2A ഓർക്കസ്ട്രേറ്ററുകളെയും പഠിപ്പിക്കുന്ന ഘടനാപരമായ SKILL.md ഫയലുകളാണ് Agent Skills. 67router-നുള്ളിൽ നിർവഹിക്കപ്പെടുന്ന LLM ടൂൾ നിർവചനങ്ങളായ [Omni Skills](./SKILLS.md)-ൽ നിന്ന് വ്യത്യസ്തമായി, Agent Skills ഒരു _ഡോക്യുമെന്റേഷൻ കാറ്റലോഗ്_ ആണ് — ഏജന്റ് കോൺടെക്സ്റ്റിലേക്ക് നേരിട്ട് നൽകാവുന്ന സ്റ്റാറ്റിക് മാർക്ക്ഡൗൺ.
 
 ---
 
 ## അവലോകനം
 
-കാറ്റലോഗിൽ **45 Agent Skills** അടങ്ങിയിരിക്കുന്നു (23 REST API + 21 CLI + 1 കോൺഫിഗറേഷൻ വർക്ക്ഫ്ലോ). ഓരോ സ്കില്ലിലും ഇവയുണ്ട്:
+കാറ്റലോഗിൽ **43 Agent Skills** അടങ്ങിയിരിക്കുന്നു (22 REST API + 20 CLI + 1 കോൺഫിഗറേഷൻ വർക്ക്ഫ്ലോ). ഓരോ സ്കില്ലിലും ഇവയുണ്ട്:
 
 - ഒരു **കാനോണിക്കൽ ID** (`omni-auth`, `cli-serve` തുടങ്ങിയവ)
 - YAML ഫ്രണ്ട്മാറ്ററും (`name`, `description`) സമ്പന്നമായ മാർക്ക്ഡൗൺ ഉള്ളടക്കവുമുള്ള `skills/{id}/SKILL.md` എന്ന **SKILL.md** ഫയൽ
@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (ഓതന്റിക്കേഷൻ ആവശ്യമാണ്)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP ടൂളുകൾ (പട്ടികപ്പെടുത്തൽ, ലഭ്യമാക്കൽ, കവറേജ്)
-src/lib/a2a/skills/listCapabilities.ts        — A2A സ്കിൽ: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A2A സ്കിൽ `list-capabilities`, 45 സ്കില്ലുകളുള
 }
 ```
 
-പ്രോട്ടോക്കോൾ വിശദാംശങ്ങൾക്ക് [A2A-SERVER.md](./A2A-SERVER.md) കാണുക.
-
 ---
 
 ## കാറ്റലോഗ് — 45 സ്കിൽ ID-കൾ
@@ -175,29 +172,27 @@ A2A സ്കിൽ `list-capabilities`, 45 സ്കില്ലുകളുള
 
 ### CLI സ്കില്ലുകൾ (21)
 
-| ID                    | മേഖല               | CLI കമാൻഡ് റൂട്ട്       |
-| :-------------------- | :----------------- | :---------------------- |
-| `cli-serve`           | cli-serve          | `omniroute serve`       |
-| `cli-health`          | cli-health         | `omniroute health`      |
-| `cli-providers`       | cli-providers      | `omniroute providers`   |
-| `cli-keys`            | cli-keys           | `omniroute keys`        |
-| `cli-models`          | cli-models         | `omniroute models`      |
-| `cli-chat`            | cli-chat           | `omniroute chat`        |
-| `cli-routing`         | cli-routing        | `omniroute routing`     |
-| `cli-resilience`      | cli-resilience     | `omniroute resilience`  |
-| `cli-compression`     | cli-compression    | `omniroute compression` |
-| `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
-| `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
-| `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
-| `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
-| `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
-| `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
-| `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
-| `cli-setup`           | cli-setup          | `omniroute setup`       |
-| `cli-skill-collector` | cli-setup          | `omniroute skills`      |
+| ID                    | മേഖല             | CLI കമാൻഡ് റൂട്ട്       |
+| :-------------------- | :--------------- | :---------------------- |
+| `cli-serve`           | cli-serve        | `omniroute serve`       |
+| `cli-health`          | cli-health       | `omniroute health`      |
+| `cli-providers`       | cli-providers    | `omniroute providers`   |
+| `cli-keys`            | cli-keys         | `omniroute keys`        |
+| `cli-models`          | cli-models       | `omniroute models`      |
+| `cli-chat`            | cli-chat         | `omniroute chat`        |
+| `cli-routing`         | cli-routing      | `omniroute routing`     |
+| `cli-resilience`      | cli-resilience   | `omniroute resilience`  |
+| `cli-compression`     | cli-compression  | `omniroute compression` |
+| `cli-contexts`        | cli-contexts     | `omniroute contexts`    |
+| `cli-cost-usage`      | cli-cost-usage   | `omniroute cost`        |
+| `cli-mcp`             | cli-mcp          | `omniroute mcp`         |
+| `cli-tunnel`          | cli-tunnel       | `omniroute tunnel`      |
+| `cli-backup-sync`     | cli-backup-sync  | `omniroute backup`      |
+| `cli-policy-audit`    | cli-policy-audit | `omniroute policy`      |
+| `cli-batches`         | cli-batches      | `omniroute batch`       |
+| `cli-eval`            | cli-eval         | `omniroute simulate`    |
+| `cli-setup`           | cli-setup        | `omniroute setup`       |
+| `cli-skill-collector` | cli-setup        | `omniroute skills`      |
 
 ### കോൺഫിഗറേഷൻ വർക്ക്ഫ്ലോ (1)
 
@@ -312,6 +307,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills ഫ്രെയിംവർക്ക് (LLM ടൂൾ ഇൻജക്ഷൻ + മാർക്കറ്റ്പ്ലേസ്)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP ടൂൾ കാറ്റലോഗ് (`omniroute_agent_skills_*` ടൂളുകൾ)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A പ്രോട്ടോക്കോൾ (`list-capabilities` സ്കിൽ)
 - `src/lib/agentSkills/` — കാറ്റലോഗ്, ജനറേറ്റർ, പാർസറുകൾ
 - `skills/` — ജനറേറ്റ് ചെയ്ത SKILL.md ഫയലുകൾ (45 എൻട്രികൾ)

@@ -13,7 +13,7 @@
 
 ## یہ کیا ہے
 
-OmniRoute ایک **Obsidian** والٹ سے بطور **سیاقی ماخذ** منسلک ہوتا ہے — ایک مقامی Markdown
+67router ایک **Obsidian** والٹ سے بطور **سیاقی ماخذ** منسلک ہوتا ہے — ایک مقامی Markdown
 نالج بیس جسے ایجنٹس بلٹ اِن MCP سرور کے ذریعے پڑھتے اور اس میں لکھتے ہیں۔ یہ
 انٹیگریشن ڈیسک ٹاپ ایپ کے اندر چلنے والے کمیونٹی پلگ اِن **Obsidian Local REST API**
 سے رابطہ کرتا ہے، تاکہ ایجنٹس نوٹس تلاش کر سکیں، فائلیں پڑھ/لکھ/پیچ کر سکیں، والٹ کی
@@ -76,7 +76,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV vault sync
 
 `src/app/api/settings/obsidian/webdav/route.ts` ایک اختیاری WebDAV کی پشت پناہی والا
-vault sync منظم کرتا ہے (جسے `src/lib/obsidianSync.ts` چلاتا ہے)۔ اسے فعال کرنے پر OmniRoute
+vault sync منظم کرتا ہے (جسے `src/lib/obsidianSync.ts` چلاتا ہے)۔ اسے فعال کرنے پر 67router
 کو ایک مقامی vault ڈائریکٹری کی طرف متوجہ کیا جاتا ہے اور ایک بے ترتیب WebDAV صارف نام/پاس ورڈ جوڑا تیار کیا جاتا ہے:
 
 ```bash
@@ -111,7 +111,7 @@ Obsidian کنفیگریشن کو `api_key_context_sources` ٹیبل
 
 ## MCP ٹولز (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` میں متعین ہیں۔ ٹوکن/base-URL ہر کال کے لیے حل کیے جاتے ہیں (پہلے فی-API-key، پھر عالمی)۔ OmniRoute **sync server** سے رابطہ کرنے والے ٹولز (چار `obsidian_sync_*` ٹولز) کے لیے اضافی طور پر OmniRoute کی ترتیبات میں تشکیل کردہ sync auth token درکار ہوتا ہے۔
+`open-sse/mcp-server/tools/obsidianTools.ts` میں متعین ہیں۔ ٹوکن/base-URL ہر کال کے لیے حل کیے جاتے ہیں (پہلے فی-API-key، پھر عالمی)۔ 67router **sync server** سے رابطہ کرنے والے ٹولز (چار `obsidian_sync_*` ٹولز) کے لیے اضافی طور پر 67router کی ترتیبات میں تشکیل کردہ sync auth token درکار ہوتا ہے۔
 
 ### پڑھنے کے ٹولز (`read:obsidian`)
 
@@ -128,7 +128,7 @@ Obsidian کنفیگریشن کو `api_key_context_sources` ٹیبل
 | `obsidian_get_periodic_note` | کسی تاریخ کے لیے روزانہ/ہفتہ وار/ماہانہ periodic note حاصل کریں (اگر تاریخ نہ دی جائے تو آج کا)۔ |
 | `obsidian_get_tags`          | vault کے تمام tags کو ان کی frequencies کے ساتھ فہرست کریں۔                                      |
 | `obsidian_list_commands`     | دستیاب Obsidian command IDs کی فہرست بنائیں (`obsidian_execute_command` کے ساتھ استعمال کریں)۔   |
-| `obsidian_sync_status`       | OmniRoute sync server کی حالت: چل رہا ہے یا نہیں، vault کا نام، port، uptime، آخری sync۔         |
+| `obsidian_sync_status`       | 67router sync server کی حالت: چل رہا ہے یا نہیں، vault کا نام، port، uptime، آخری sync۔          |
 | `obsidian_sync_conflicts`    | حل نہ ہونے والے sync conflicts کی فہرست بنائیں (path، conflict path، detected-at)۔               |
 
 ### لکھنے کے ٹولز (`write:obsidian`)

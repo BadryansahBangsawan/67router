@@ -1,10 +1,10 @@
-# OmniRoute Architecture (Eesti)
+# 67router Architecture (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
 ---
 
-# OmniRoute Arhitektuur
+# 67router Arhitektuur
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -12,7 +12,7 @@ _Viimati uuendatud: 2026-06-28_
 
 ## Kokkuvõte
 
-OmniRoute on Next.js-il põhinev kohalik tehisintellekti marsruutimislüüs ja juhtpaneel.
+67router on Next.js-il põhinev kohalik tehisintellekti marsruutimislüüs ja juhtpaneel.
 See pakub ühtset OpenAI-ga ühilduvat lõpp-punkti (`/v1/*`) ning marsruudib liiklust mitme ülesvoolu teenusepakkuja vahel, toetades teisendamist, varuvarianti, tokenite värskendamist ja kasutuse jälgimist.
 
 Põhifunktsioonid:
@@ -128,13 +128,11 @@ Peamised lehed kausta `src/app/(dashboard)/dashboard/` alt:
 - `/dashboard/limits` — kvoodi/kiirusepiirangute kontroll
 - `/dashboard/cli-tools` — CLI kasutuselevõtt, käitusaja tuvastamine, konfiguratsiooni genereerimine
 - `/dashboard/agents` — tuvastatud ACP agendid + kohandatud agendi registreerimine
-- `/dashboard/cloud-agents` — pilves majutatud agendi ülesanded (Codex Cloud, Devin, Jules) ja ülesande eluring
 - `/dashboard/skills` — A2A oskuste registreerimine, sandbox täitmine, sisseehitatud oskuste katalog
 - `/dashboard/memory` — püsiva vestlusmälu ülevaatus ja pärimine
 - `/dashboard/webhooks` — väljuvad veebihaagi (webhook) tellimused, saladuste rotatsioon, uuestisaatmise statistika
 - `/dashboard/batch` — partii tööde esitamine ja edenemine
 - `/dashboard/cache` — läbilugemise ja põhjendamise puhvri (cache) statistika, eemaldamise kontrollid
-- `/dashboard/playground` — interaktiivne vestluse mänguväljak vastu suvalise seadistatud kombo/mudeli
 - `/dashboard/changelog` — rakendusesisene muudatuste logi vaatur (renderdab `CHANGELOG.md`)
 - `/dashboard/system` — käitusaja diagnostika, versiooniinfo, keskkonna valideerimise pind
 - `/dashboard/onboarding` — esmakordse käivituse seadistusviisard uute paigalduste jaoks
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Brauseri töölaud]
     end
 
-    subgraph Router[OmniRoute kohalik protsess]
+    subgraph Router[67router kohalik protsess]
         API[V1 ühilduvuse API\n/v1/*]
         DASH[Töölaud + haldus-API\n/api/*]
         CORE[SSE + tõlketuum\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Haldusdomeenid:
 - Eelarve: `src/app/api/usage/budget` (GET/POST)
 - Varuahelad (fallback chains): `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Vastavuse auditeerimine: `src/app/api/compliance/audit-log` (GET, koos lehestamise ja struktureeritud metaandmetega)
-- Hindamised (evals): `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Poliitikad: `src/app/api/policies` (GET/POST)
 - Sünkroonimise märgid (tokens): `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfiguratsioonipakett: `src/app/api/sync/bundle` (GET, ETag-versiooniga seadete/pakkujate/kombode/võtmete hetktõmmis)
@@ -316,7 +313,6 @@ Domeenikihi moodulid:
 - Päringu ajalõpp: `src/shared/utils/fetchTimeout.ts`
 - Päringu telemeetria: `src/shared/utils/requestTelemetry.ts`
 - Vastavus / audit: `src/lib/compliance/index.ts`
-- Hindamiste käitaja: `src/lib/evals/evalRunner.ts`
 - Domeenioleku püsisalvestus: `src/lib/db/domainState.ts` — SQLite CRUD varuahelate, eelarvete, kuluajaloo, lukustusoleku ja kaitselülitite jaoks
 
 OAuth-pakkujate moodulid (27 eraldi faili kataloogis `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ OAuth-pakkujate moodulid (27 eraldi faili kataloogis `src/lib/oauth/providers/`)
 
 ## 5) Manustatud teenused (v3.8.4)
 
-OmniRoute saab paigaldada, jälgida ja marsruutida kohalikult töötavatesse AI tööriistade protsessidesse, mida nimetatakse **manustatud teenusteks** (embedded services). Tarnitakse viit: 9Router, CLIProxyAPI, Bifrost, Mux ja Dario.
+67router saab paigaldada, jälgida ja marsruutida kohalikult töötavatesse AI tööriistade protsessidesse, mida nimetatakse **manustatud teenusteks** (embedded services). Tarnitakse viit: 9Router, CLIProxyAPI, Bifrost, Mux ja Dario.
 
 Arhitektuuri kihid:
 
@@ -385,23 +381,6 @@ Põhivõimalused:
 Täielikud algoritmilised üksikasjad (tegurite valemid, kaalude häälestamine) leiate failist
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Pilveagendid
-
-Pilveagendid koondavad kolmandate poolte majutatud koodiagendi platvormid (Codex Cloud, Devin,
-Jules) ühtse andmebaasipõhise ülesande elutsükli taha. Kõik ülesannete loomise ja kontrollimise
-otspunktid nõuavad haldusautentimist.
-
-- Mooduli juurkataloog: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` ning agendipõhised alamkataloogid kataloogis `agents/`)
-- Agendipõhised teostused: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Avalikud otspunktid: `/api/v1/agents/tasks/*` (loendamine/loomine/hankimine/tühistamine)
-- Haldusotspunktid: `/api/cloud/*` (ettevalmistamine, olek, pakktöötlus)
-- Juhtpaneel: `/dashboard/cloud-agents`
-- Salvestusruum: tabel `cloud_agent_tasks`
-
-Agendipõhise ettevalmistamise ja OAuthi üksikasjad leiate failist
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Kaitsepiirded
 
 Kaitsepiirete moodul on käigult taaslaaditav vahevarakiht, mis kontrollib päringuid
@@ -437,7 +416,7 @@ lukustuse, eelarve ja varuvariandi loogikat ise koostama.
 - Kvoodivahemälu: `src/domain/quotaCache.ts`
 - Degradeerumisolek: `src/domain/degradation.ts`
 - Konfiguratsiooniaudit: `src/domain/configAudit.ts`
-- OmniRoute'i vastuse metaandmete koostaja: `src/domain/omnirouteResponseMeta.ts`
+- 67router'i vastuse metaandmete koostaja: `src/domain/omnirouteResponseMeta.ts`
 - Hindamise alamsüsteem: `src/domain/assessment/` — perioodilised hindamistööd
 
 ### E. Autoriseerimiskonveier
@@ -812,7 +791,7 @@ flowchart LR
         Browser[Töölaua veebilehitseja]
     end
 
-    subgraph ContainerOrProcess[OmniRoute töötlusaegne keskkond]
+    subgraph ContainerOrProcess[67router töötlusaegne keskkond]
         Next[Next.js server\nPORT=20128]
         Core[SSE tuum + täiturid]
         MainDB[(storage.sqlite)]
@@ -931,7 +910,7 @@ Kõik muud pakkujad (kaasa arvatud kohandatud ühilduvad sõlmed) kasutavad `Def
 ## Pakkujate ühilduvusmaatriks
 
 > **Märkus:** Allolev maatriks on esinduslik valik 351 registreeritud pakkujast
-> OmniRoute v3.8.0-s. Kanoonilise ja pidevalt värskendatava loendi leiate
+> 67router v3.8.0-s. Kanoonilise ja pidevalt värskendatava loendi leiate
 > failist [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automaatselt genereeritud) või usaldusväärikast allikast
 > `src/shared/constants/providers.ts` (valideeritud Zod-iga laadimisel).
 
@@ -1113,7 +1092,7 @@ Detailne päringu andmekoormuse jäädvustus salvestab kuni neli JSON-andmekoorm
 - kliendilt saadud töötlemata päring
 - tõlgitud päring, mis tegelikult upstream-i saadeti
 - pakkuja vastus, taastatud JSON-ina; voogesitatud vastused pakitakse kokku lõppkokkuvõtteks pluss voo metaandmed
-- OmniRoute'i tagastatud lõplik kliendivastus; voogesitatud vastused salvestatakse samal kokkupakitud kokkuvõtte kujul
+- 67router'i tagastatud lõplik kliendivastus; voogesitatud vastused salvestatakse samal kokkupakitud kokkuvõtte kujul
 
 ## Turvatundlikud piirid
 

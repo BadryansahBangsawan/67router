@@ -5,10 +5,10 @@
 ---
 
 Välityspalvelut (Vercel, Deno, Cloudflare) päättävät ylävirran yhteyden
-palvelimettomassa taustajärjestelmässä, jotta OmniRoute voi ohjata lähtevän liikenteen
+palvelimettomassa taustajärjestelmässä, jotta 67router voi ohjata lähtevän liikenteen
 vakaalta alueelta ja pitää samalla palveluntarjoajan API-avaimen palvelinpuolella.
 Tässä asiakirjassa käsitellään kahta tuotantoympäristössä esiintyvää vikatilaa
-sekä OmniRouten tarjoamia palautusmenetelmiä kummallekin.
+sekä 67routerin tarjoamia palautusmenetelmiä kummallekin.
 
 ## Välityspalvelimen todennuksen tallennustapa
 
@@ -36,7 +36,7 @@ välityspalvelin lähetä todennustietoja.
 1. Avaa **Asetukset → Välityspalvelinvaranto**.
 2. Välityspalvelinriveillä, joilta todennus puuttuu, näkyy keltainen `auth missing` -merkki ja
    **Korjaa**-painike.
-3. Napsauta **Korjaa**. OmniRoute kutsuu
+3. Napsauta **Korjaa**. 67router kutsuu
    `POST /api/settings/proxies/[id]/repair-relay` -päätepistettä, joka:
    - purkaa `relayAuthEnc`-arvon salauksen **nykyisellä** avaimella,
    - kirjoittaa selväkielisen `relayAuth`-arvon takaisin `notes`-kenttään,
@@ -71,7 +71,7 @@ sitä manuaalisesti.
 **Oire:** välityspalvelintesti (`speed`-painike) näyttää välityspalvelimen olevan
 toiminnassa, mutta pyynnöt epäonnistuvat edelleen ajoittain.
 
-Tarkista OmniRouten automaattisen testikyselyn palauttamat välityspalvelimen
+Tarkista 67routerin automaattisen testikyselyn palauttamat välityspalvelimen
 tilatieto-otsakkeet (katso **Asetukset → Välityspalvelinvaranto** sekä
 `relayTested`- ja `relayAlive`-laskurit):
 

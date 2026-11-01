@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Šaltinis:** `open-sse/services/thinkingBudget.ts`
 
-Mąstymo biudžetas nustato, ar OmniRoute, perduodama užklausas paslaugų teikėjams, **perrašo kliento mąstymo / samprotavimo parametrus**. Jis **neįjungia ir neišjungia** glaudinimo, maršruto parinkimo ar užklausų podėlio.
+Mąstymo biudžetas nustato, ar 67router, perduodama užklausas paslaugų teikėjams, **perrašo kliento mąstymo / samprotavimo parametrus**. Jis **neįjungia ir neišjungia** glaudinimo, maršruto parinkimo ar užklausų podėlio.
 
 ## Režimai
 
-| Režimas                         | Ką daro OmniRoute                                                                                                         | Kada naudoti                                                                                                                                                                           |
+| Režimas                         | Ką daro 67router                                                                                                          | Kada naudoti                                                                                                                                                                           |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (numatytasis) | Palieka kliento laukus nepakeistus (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` ir kt.). | **Codex / Desktop / bet kuriam klientui, kuris turi valdyti pastangų lygį ir samprotavimo suvestines.** Būtina matomiems mąstymo skydeliams, kai klientas prašo `reasoning.summary`.   |
 | **`auto`**                      | Prieš perduodant aukštesnio lygio paslaugai, iš užklausos turinio **pašalina visus** mąstymo / samprotavimo laukus.       | Tik kai sąmoningai norite, kad **paslaugos teikėjas** pats nustatytų numatytąsias reikšmes, ir jums nereikia kliento valdomo mąstymo. Tai **nereiškia** „automatiškai rodyti mąstymą“. |
@@ -38,7 +38,7 @@ Jei klientas (pvz., Codex Desktop) atsiuntė `reasoning: { effort: "ultra", summ
 | **Kombinuotas maršruto parinkimas / atsarginiai variantai** | Atskira. Įtakos neturi.                                                                                                                                            |
 | **API rakto žetonų limitai / išlaidų biudžetai**            | Atskira. Įtakos neturi.                                                                                                                                            |
 | **Samprotavimo atkūrimo podėlis**                           | Pakartotinis įterpimas kelių žinučių dialoguose griežtiems paslaugų teikėjams (DeepSeek, Kimi, Qwen-thinking, …). Tai nėra tas pats, kas Desktop „rodyti mąstymą“. |
-| **`encrypted_content` iššifravimas**                        | **Neįmanomas.** Privatūs OpenAI/Codex samprotavimo objektai yra neskaidrūs. OmniRoute niekada jų neiššifruoja (#7095 / #7176 / #7304).                             |
+| **`encrypted_content` iššifravimas**                        | **Neįmanomas.** Privatūs OpenAI/Codex samprotavimo objektai yra neskaidrūs. 67router niekada jų neiššifruoja (#7095 / #7176 / #7304).                              |
 
 ## Matomas mąstymo procesas (Codex / Responses klientai)
 
@@ -51,7 +51,7 @@ Kad klientas rodytų mąstymo proceso tekstą, būtinos **visos** šios sąlygos
 Jei gaunate tik „užšifruotą privatų mąstymo procesą“, vadinasi:
 
 - buvo naudojamas **`auto`** režimas (kliento užklausa buvo pašalinta), arba
-- pirminis paslaugos teikėjas grąžino `encrypted_content` be santraukos teksto (paslaugos teikėjo apribojimas; OmniRoute gali pateikti tik vietaženklį, o ne atvirąjį tekstą).
+- pirminis paslaugos teikėjas grąžino `encrypted_content` be santraukos teksto (paslaugos teikėjo apribojimas; 67router gali pateikti tik vietaženklį, o ne atvirąjį tekstą).
 
 ## API pavyzdžiai
 
@@ -71,7 +71,7 @@ Schema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapt
 
 ### Išsaugojimas / paleidimas iš naujo
 
-Reikšmė saugoma nustatymų rakte `thinkingBudget` ir įkeliama paleidžiant procesą (`hydrateThinkingBudgetConfig`). Pakeitę ją duomenų bazėje arba kitais, ne API, būdais, **paleiskite OmniRoute procesą iš naujo**, kad atmintyje esantis vienintelis egzempliorius atitiktų diske saugomą būseną.
+Reikšmė saugoma nustatymų rakte `thinkingBudget` ir įkeliama paleidžiant procesą (`hydrateThinkingBudgetConfig`). Pakeitę ją duomenų bazėje arba kitais, ne API, būdais, **paleiskite 67router procesą iš naujo**, kad atmintyje esantis vienintelis egzempliorius atitiktų diske saugomą būseną.
 
 ## Operatoriaus kontrolinis sąrašas
 

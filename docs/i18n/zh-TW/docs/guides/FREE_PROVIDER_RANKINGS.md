@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**：OmniRoute 使用 **Arena AI
+> **TL;DR**：67router 使用 **Arena AI
 > （LMArena 風格）ELO 分數**，依模型品質對其**免費**提供者進行排名。開啟儀表板中的
 > **免費提供者排名**頁面，即可查看哪些免費提供者為您的任務提供最強大的模型——
 > 可查看整體排名，或依類別（程式設計、審查、文件撰寫、偵錯）篩選。
@@ -13,7 +13,7 @@
 
 ## 功能簡介
 
-OmniRoute 註冊了 375 家提供者，其中包括 155 個標記為**免費/免驗證**的目錄項目（免驗證、免費額度 OAuth，或免費額度 API 金鑰——請參閱[免費額度指南](../getting-started/FREE-TIERS-GUIDE.md)與完整的[免費額度目錄](../reference/FREE_TIERS.md)）。問題在於：免費提供者的模型品質參差不齊。提供前沿模型的免驗證提供者，遠比提供小型舊模型的提供者來得有用。
+67router 註冊了 375 家提供者，其中包括 155 個標記為**免費/免驗證**的目錄項目（免驗證、免費額度 OAuth，或免費額度 API 金鑰——請參閱[免費額度指南](../getting-started/FREE-TIERS-GUIDE.md)與完整的[免費額度目錄](../reference/FREE_TIERS.md)）。問題在於：免費提供者的模型品質參差不齊。提供前沿模型的免驗證提供者，遠比提供小型舊模型的提供者來得有用。
 
 **免費提供者排名**回答了「**哪家免費提供者能提供最好的模型？**」這個問題，做法是將每個免費提供者的目錄，與來自 **Arena AI 排行榜**的**群眾外包品質分數**（人類偏好 ELO，與 LMArena 聊天機器人競技場背後的概念相同）進行比對整合。接著再依照各家**最佳免費模型**的實力為提供者排名。
 
@@ -119,9 +119,9 @@ Arena ELO 同步引擎（`src/lib/arenaEloSync.ts`）會從 Arena AI 排行榜 A
 （`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`）擷取兩個排行榜——`text`
 和 `code`。每個排行榜項目都包含模型名稱、提供者、ELO `score`、信賴區間和票數。
 
-排行榜類別會對應至 OmniRoute 任務類別：
+排行榜類別會對應至 67router 任務類別：
 
-| Arena 排行榜 | OmniRoute 任務類別                                |
+| Arena 排行榜 | 67router 任務類別                                 |
 | ------------ | ------------------------------------------------- |
 | `text`       | `default`、`review`、`documentation`、`debugging` |
 | `code`       | `coding`                                          |
@@ -157,7 +157,7 @@ taskFit = 0.4 + 0.58 * ((elo - minElo) / (maxElo - minElo))
 
 - 它會在伺服器啟動時執行一次，之後依週期性計時器執行
   （`src/lib/arenaEloSync.ts`，由 `src/instrumentation-node.ts` 接線啟用）。
-- 它**不會阻塞，也永遠不會造成致命錯誤**——如果上游擷取失敗，OmniRoute 仍會
+- 它**不會阻塞，也永遠不會造成致命錯誤**——如果上游擷取失敗，67router 仍會
   繼續運作，而排行榜只會顯示最近一次成功取得的資料（或空白狀態）。
 
 有兩個環境變數可控制此功能（記錄於
@@ -192,7 +192,7 @@ DELETE /api/intelligence/sync          # 清除所有已同步的 arena_elo 情�
 3. 前綴比對（排行榜模型名稱是登錄檔 ID 的前綴）。
 
 在同步端，會移除已知的提供者前綴（`anthropic/`、`openai/`、`google/` 等），
-並使用小類型名對照表將標準名稱展開為 OmniRoute 內部使用的各種變體，讓模型無論
+並使用小類型名對照表將標準名稱展開為 67router 內部使用的各種變體，讓模型無論
 使用哪個名稱都能被找到。
 
 ### 提供者的排名方式

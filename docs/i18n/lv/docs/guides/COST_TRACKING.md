@@ -4,7 +4,7 @@
 
 ---
 
-Kā OmniRoute novērtē, reģistrē un atspoguļo katra pieprasījuma izmaksas — un kāpēc
+Kā 67router novērtē, reģistrē un atspoguļo katra pieprasījuma izmaksas — un kāpēc
 informācijas paneļa skaitlis ir **ietaupījumu uzskaites rādītājs**, nevis rēķins.
 
 Skatiet arī: [Lietotāja rokasgrāmata](./USER_GUIDE.md) · [Funkciju galerija](./FEATURES.md)
@@ -13,11 +13,11 @@ Skatiet arī: [Lietotāja rokasgrāmata](./USER_GUIDE.md) · [Funkciju galerija]
 
 ## Kas tas ir (un kas tas nav)
 
-OmniRoute katram pabeigšanas pieprasījumam piešķir izmaksas USD valūtā, reizinot tokenu
+67router katram pabeigšanas pieprasījumam piešķir izmaksas USD valūtā, reizinot tokenu
 skaitu ar modeļa cenu likmēm. Šie skaitļi tiek izmantoti informācijas panelī **Izmaksas**,
 `omniroute cost` / `omniroute usage` CLI komandās, CSV/JSON eksportos un katras API atslēgas budžetos.
 
-> **Informācijas paneļa „izmaksas” ir ietaupījumu uzskaites rādītājs, nevis rēķins.** OmniRoute nekad neiekasē no jums maksu
+> **Informācijas paneļa „izmaksas” ir ietaupījumu uzskaites rādītājs, nevis rēķins.** 67router nekad neiekasē no jums maksu
 > — tas novirza jūsu pieprasījumus pakalpojumu sniedzējiem, kurus jau esat pievienojis (jūsu pašu
 > abonementiem, bezmaksas līmeņiem un API atslēgām). Ja „kopējās izmaksas $290” ir uzkrātas, izmantojot tikai bezmaksas
 > modeļus, tas nozīmē, ka jūs aptuveni **$290 _nesamaksājāt_** maksas API. Šis skaitlis ir _aptuvens novērtējums_
@@ -29,7 +29,7 @@ skaitu ar modeļa cenu likmēm. Šie skaitļi tiek izmantoti informācijas panel
 
 Tā kā šis skaitlis ir aptuvens novērtējums:
 
-- Tas ir atkarīgs no cenu tabulas, kas OmniRoute ir pieejama katram modelim. Modelis bez cenas
+- Tas ir atkarīgs no cenu tabulas, kas 67router ir pieejama katram modelim. Modelis bez cenas
   ieraksta rada `0` izmaksas (pārlūkā tas tiek parādīts kā rinda „Mantots / bezmaksas”).
 - Bezmaksas līmeņa un abonementu datplūsmai joprojām tiek uzkrātas _aptuvenās_ izmaksas — tā ir
   summa, ko ietaupāt, nevis maksājamā summa.
@@ -47,7 +47,7 @@ Izmaksas tiek iegūtas no cenu tabulas, kas tiek noteikta šādā prioritātes s
 2. **Sinhronizētās ārējās cenas** — tiek iegūtas no LiteLLM publiskā
    `model_prices_and_context_window.json`, ja ir iespējota sinhronizācija (tās tiek glabātas atsevišķā
    `pricing_synced` nosaukumvietā, tāpēc tās nekad nepārraksta jūsu iestatītās vērtības).
-3. **Kodā iekļautās noklusējuma vērtības** — tiek piegādātas kopā ar OmniRoute.
+3. **Kodā iekļautās noklusējuma vērtības** — tiek piegādātas kopā ar 67router.
 
 Ārējo cenu sinhronizācija ir **jāiespējo manuāli**, un pēc noklusējuma tā ir atspējota. Attiecīgie vides mainīgie
 (skatiet [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ nav norādīts citādi.
 
 ## CLI
 
-OmniRoute CLI nodrošina izmaksu, lietojuma un cenu komandas (reģistrētas
+67router CLI nodrošina izmaksu, lietojuma un cenu komandas (reģistrētas
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

@@ -15,10 +15,10 @@ Ta ADR natančno določa medsebojna razmerja med `ts` (izvorni), `bifrost`, `cli
 Vloga pogona je opisana z **dvema neodvisnima osema**, ki sta skupaj kodirani v `RouterBackendDefinition` registra:
 
 1. **Življenjski cikel** (`RouterBackendLifecycle`) — _kako se pogon izvaja_:
-   - `in-process` — izvaja se znotraj procesa Node aplikacije OmniRoute (izvorni cevovod TS).
-   - `supervised` — lokalni podrejeni proces, ki ga OmniRoute namesti/zažene/ustavi/preverja njegovo stanje
+   - `in-process` — izvaja se znotraj procesa Node aplikacije 67router (izvorni cevovod TS).
+   - `supervised` — lokalni podrejeni proces, ki ga 67router namesti/zažene/ustavi/preverja njegovo stanje
      prek `ServiceSupervisor`, nato pa ga uporablja kot povezavo s ponudnikom.
-   - `external` — končna točka HTTP, na katero OmniRoute posreduje zahteve, vendar je **ne** upravlja
+   - `external` — končna točka HTTP, na katero 67router posreduje zahteve, vendar je **ne** upravlja
      (konfigurirana je z osnovnim URL-jem iz okoljske spremenljivke).
    - `disabled` — registriran, vendar ga ni mogoče izbrati.
 2. **Os izbire** (usmerjevalno zaledje posrednika) — _ali posrednik vanj usmerja zahteve_:

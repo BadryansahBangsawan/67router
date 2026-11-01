@@ -5,7 +5,7 @@
 ---
 
 თვითჰოსტირებული პული მუშაობს **.113** ჰოსტზე (`tomni-proxmox-113`). 2026-10-18-დან მოყოლებული,
-OmniRoute-ის თითოეულ runner-ს აქვს **ერთი როლი**, ერთი label და მისი დატვირთვის გაზომილი
+67router-ის თითოეულ runner-ს აქვს **ერთი როლი**, ერთი label და მისი დატვირთვის გაზომილი
 მოთხოვნების შესაბამისი მეხსიერების/CPU-ის ბიუჯეტი. Turbopack-ის სლოტი იღებს იმდენ რესურსს, რამდენიც
 აგებას სჭირდება; დანარჩენი სლოტები მათი გაზომილი პიკური მოხმარების მიხედვითაა განსაზღვრული. ჰოსტზე
 რესურსების გადანაწილება მხოლოდ მაშინ აჭარბებს ხელმისაწვდომ მოცულობას, როდესაც Turbopack-ის აგება
@@ -29,7 +29,7 @@ OmniRoute-ის თითოეულ runner-ს აქვს **ერთი �
 | swap      | 16 GB                         | `omniroute-113-5` მუშაობს გამორთული swap-ით (`MemorySwapMax=0`), რათა უკონტროლო აგება ლიმიტის მიღწევისას შეწყდეს და მთლიანმა ჰოსტმა swap-ის გამოყენება არ დაიწყოს                                                                                                                                                                                                                                 |
 | `/tmp`    | **12 GB tmpfs = RAM**         | ყველაფერი, რაც იქ ინახება, მეხსიერებას იკავებს; ნარჩენები 3 სთ-ის შემდეგ იწმინდება                                                                                                                                                                                                                                                                                                                |
 | CPU       | 32 ბირთვზე დაფიქსირდა load 60 | კვოტების შემოღებამდე, Turbopack-ის ერთმა აგებამ (~1166 % CPU) იმავე ჰოსტზე გაშვებულ coverage suite-თან ერთად სხვა listener-ების heartbeat-ებს რესურსი წაართვა (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                               |
-| runners   | **6 listener**                | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` გათიშულია (`systemctl enable --now` ერთ-ერთ მათგანს კვლავ ააქტიურებს)                                                                                                                                                                                                                                                             |
+| runners   | **6 listener**                | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` გათიშულია (`systemctl enable --now` ერთ-ერთ მათგანს კვლავ ააქტიურებს)                                                                                                                                                                                                                                                              |
 
 ლიმიტები ინახება თითოეული unit-ის `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`-ში
 (წინა მნიშვნელობები შენახულია როგორც `override.conf.bak-20261018`) და გაშვებულ სისტემაზე გამოყენებულ
@@ -78,7 +78,7 @@ build-ის ხეს — `next-build`, `npm run build`, `build-next-isolated.m
 
 Runner-ის ნაგულისხმევი `KillMode=process` unit-ის შეჩერების ან გადატვირთვისას
 `Runner.Worker → npm → next-build`-ს ცოცხალს ტოვებს — ობოლი build მიბმული დავალების
-გარეშე აგრძელებს RAM-ისა და CPU-ის მოხმარებას. OmniRoute-ის ყველა unit-ს აქვს drop-in
+გარეშე აგრძელებს RAM-ისა და CPU-ის მოხმარებას. 67router-ის ყველა unit-ს აქვს drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 `KillMode=mixed`-ით: ჯერ listener-ს ეგზავნება SIGTERM, ხოლო `TimeoutStop`-ისას
 მთელ cgroup-ს — SIGKILL. ის ძალაში unit-ის მომდევნო გადატვირთვისას შევა — ერთ ჯერზე
@@ -123,7 +123,7 @@ Runner-ის ნაგულისხმევი `KillMode=process` unit-ი�
   მხოლოდ backend-ის `next build` სჭირდება (~5–6 GB; webpack), ასევე `quality.yml`-ის `lint-guard`-ს. `omniroute-113`-ს
   2026-10-18-მდე `MemoryHigh=4G` ჰქონდა — promptfoo build იქ 54 წუთის განმავლობაში მეხსიერების განთავისუფლებით
   ძლივს მიიწევდა წინ; 8 GB throttling-ს აღმოფხვრის.
-- **განზრახ ნაკლები listener.** ოთხი OmniRoute unit 2026-08-29-ს გაითიშა — ყოველი დამატებითი
+- **განზრახ ნაკლები listener.** ოთხი 67router unit 2026-08-29-ს გაითიშა — ყოველი დამატებითი
   listener ზემოთ აღწერილი მეხსიერების ბიუჯეტის კიდევ ერთი მომხმარებელია. janitor-ის ზედა ზღვარია 6 (`MAX_ACTIVE_RUNNERS=6` cron-ში): ის ითვლის
   box-ზე არსებულ ყველა `Runner.Listener`-ს, ხოლო OmniHeuris და OmniMind ჩვენს ოთხს კიდევ ორს ამატებს.
 - **არასოდეს გაასუფთაოთ `/tmp` ან `_work` ხელით, სანამ რომელიმე runner დაკავებულია.**

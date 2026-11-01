@@ -7,7 +7,7 @@
 > **Sursă de adevăr:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Ultima actualizare:** 2026-09-22 — spațiile de nume ale scopurilor indică spre MCP-SERVER.md
 
-OmniRoute are un pipeline de autorizare conștient de rute, care filtrează fiecare cerere API. Clasificarea este **determinată** și **fail-closed** — orice nu poate fi clasificat ajunge ca `MANAGEMENT` și necesită o sesiune sau un token de nivel management. Această pagină explică modelul pentru inginerii care întrețin rute sau proiectează noi endpoint-uri.
+67router are un pipeline de autorizare conștient de rute, care filtrează fiecare cerere API. Clasificarea este **determinată** și **fail-closed** — orice nu poate fi clasificat ajunge ca `MANAGEMENT` și necesită o sesiune sau un token de nivel management. Această pagină explică modelul pentru inginerii care întrețin rute sau proiectează noi endpoint-uri.
 
 ![Pipeline AuthZ (3 clase de rute + evaluare politici)](../diagrams/exported/authz-pipeline.svg)
 
@@ -229,8 +229,6 @@ Vezi [Autentificarea Managementului](../guides/MANAGEMENT-AUTH.md).
 Aplicarea cheii API a clientului folosește `isRequireApiKeyEnabled()` din `src/shared/utils/featureFlags.ts`, nu o citire directă a `process.env.REQUIRE_API_KEY`. Acest lucru contează pentru instanțele implementate: comutarea `REQUIRE_API_KEY` în Dashboard → Feature Flags stochează o suprascriere în baza de date și afectează imediat `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` și celelalte verificări de autentificare a API-ului clientului care partajează acest helper. Dacă depozitul de feature flag-uri nu poate fi citit, autentificarea API-ului clientului eșuează închis și cere o cheie.
 
 ## Modificare incompatibilă — v3.8.0
-
-Endpointurile `/api/v1/agents/tasks/*` și `/api/resilience/model-cooldowns` **necesită acum autentificare pentru administrare** (commitul `588a0333`). Clienții care trimiteau anterior o cheie API obișnuită, fără domeniul de acces `manage`, primesc `403`. Migrare: fie acordați cheii domeniul de acces `manage` în panoul API Keys, fie utilizați o sesiune autentificată în panoul de control.
 
 ## Modificare de comportament — v3.8.2
 

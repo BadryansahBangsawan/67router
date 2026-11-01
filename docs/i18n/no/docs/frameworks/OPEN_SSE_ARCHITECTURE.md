@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: `open-sse/` er kjernemotoren for strømming som driver alle LLM-forespørsler i OmniRoute. Den inneholder rundt 1 400 filer som implementerer forespørselspipelinen, eksekveringsmoduler, tjenester, MCP-serveren og oversettelseslaget. Denne veiledningen forklarer hvordan delene henger sammen.
+> **Kort fortalt**: `open-sse/` er kjernemotoren for strømming som driver alle LLM-forespørsler i 67router. Den inneholder rundt 1 400 filer som implementerer forespørselspipelinen, eksekveringsmoduler, tjenester, MCP-serveren og oversettelseslaget. Denne veiledningen forklarer hvordan delene henger sammen.
 
 **Kilde:** `open-sse/` (arbeidsområdepakke, rundt 1 440 `.ts`-filer som ikke er testfiler)
 
@@ -12,10 +12,10 @@
 
 ## Hvorfor en separat arbeidsområdepakke?
 
-`open-sse/` er et **frittstående arbeidsområde** i OmniRoute-monorepoet av flere grunner:
+`open-sse/` er et **frittstående arbeidsområde** i 67router-monorepoet av flere grunner:
 
 1. **Gjenbrukbarhet** — `open-sse` publiseres som `@omniroute/open-sse` på npm, slik at andre prosjekter kan bruke den uavhengig
-2. **Tydelige grenser** — strømmemotoren er frikoblet fra det OmniRoute-spesifikke UI-/database-laget
+2. **Tydelige grenser** — strømmemotoren er frikoblet fra det 67router-spesifikke UI-/database-laget
 3. **Ytelse** — motoren har ingen Next.js-avhengigheter, noe som gir raskere kaldstarter i CLI- og serverløse kontekster
 4. **Versjonering** — `open-sse` kan lanseres etter sin egen tidsplan
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Hvorfor en separat transformator?
 
-Responses API er OpenAIs nye format med **tilstandsfulle samtaler** (`previous_response_id`). Når en klient sender en Responses-forespørsel, gjør OmniRoute følgende:
+Responses API er OpenAIs nye format med **tilstandsfulle samtaler** (`previous_response_id`). Når en klient sender en Responses-forespørsel, gjør 67router følgende:
 
 1. Konverterer Responses → Chat Completions internt
 2. Sender til leverandøren (enhver leverandør som støtter Chat Completions)
@@ -573,5 +573,4 @@ Rutingmotoren har strenge ytelsesbudsjetter:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — katalog for katalog
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — poengberegning med 16 faktorer
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Kilde: `open-sse/` (400+ filer, ~143K kodelinjer)

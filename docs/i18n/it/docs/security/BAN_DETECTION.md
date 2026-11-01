@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute analizza le risposte di errore upstream alla ricerca di segnali che indicano che un
+67router analizza le risposte di errore upstream alla ricerca di segnali che indicano che un
 **account del provider è definitivamente inutilizzabile** (sospeso / disattivato / bloccato per violazione dei ToS) e, quando
 trova una corrispondenza, sposta tale connessione in uno **stato terminale `banned`**, in modo che non venga
 più selezionata per le richieste. Questo è ciò che configura la scheda delle impostazioni

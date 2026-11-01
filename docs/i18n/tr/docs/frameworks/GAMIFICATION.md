@@ -7,7 +7,7 @@
 > **Doğruluk kaynağı:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute, kullanıcıları platformla etkileşim kurdukları için ödüllendiren yerel öncelikli bir oyunlaştırma katmanı içerir — istek gönderme, sağlayıcı değiştirme, kombinasyon oluşturma, token paylaşma ve topluluğa katkıda bulunma. Tüm durum SQLite'ta tutulur; topluluk sunucularıyla federasyon isteğe bağlıdır ve gönderim tabanlıdır.
+67router, kullanıcıları platformla etkileşim kurdukları için ödüllendiren yerel öncelikli bir oyunlaştırma katmanı içerir — istek gönderme, sağlayıcı değiştirme, kombinasyon oluşturma, token paylaşma ve topluluğa katkıda bulunma. Tüm durum SQLite'ta tutulur; topluluk sunucularıyla federasyon isteğe bağlıdır ve gönderim tabanlıdır.
 
 Sistem, **kritik işlem yolunda sıfır gecikme** sağlayacak şekilde tasarlanmıştır — oyunlaştırma olayları istek işlem hattından beklemeden gönderilir ve hiçbir zaman bir LLM yanıtını engellemez.
 
@@ -29,7 +29,7 @@ Görünür ilerleme (XP, seviyeler, rozetler), sosyal kanıt (liderlik tablolar�
 | Liderlik Tabloları  | Genel, haftalık, aylık, token paylaşımı ve katkı kapsamları                  |
 | Token Paylaşımı     | Çift taraflı kayıt defteri aracılığıyla kullanıcılar arasında kredi aktarımı |
 | Davet ve Kullanma   | SHA-256 ile karma oluşturularak saklanan yönlendirme kodları                 |
-| Topluluk Sunucuları | Harici OmniRoute örnekleriyle federasyon                                     |
+| Topluluk Sunucuları | Harici 67router örnekleriyle federasyon                                      |
 | Hile Önleme         | Sunucu taraflı puanlama, hız sınırlama, z-skoru anomali tespiti              |
 
 ### Tasarım İlkeleri
@@ -102,7 +102,7 @@ src/app/api/gamification/
 ### Veritabanı Tabloları
 
 Tüm tablolar, `060_create_gamification.sql` migrasyonu tarafından oluşturulan ana
-OmniRoute SQLite veritabanında bulunur. WAL günlükleme, `src/lib/db/core.ts`
+67router SQLite veritabanında bulunur. WAL günlükleme, `src/lib/db/core.ts`
 içindeki tekil `getDbInstance()` örneğinden devralınır.
 
 ```
@@ -160,7 +160,7 @@ içindeki tekil `getDbInstance()` örneğinden devralınır.
 
 ### Etki Alanı Modülü: `src/lib/db/gamification.ts`
 
-Standart OmniRoute kalıbını izler — `core.ts` dosyasından `getDbInstance()`
+Standart 67router kalıbını izler — `core.ts` dosyasından `getDbInstance()`
 işlevini içe aktarır ve türü belirlenmiş CRUD işlevlerini dışa aktarır. Rota
 işleyicilerinde ham SQL bulunmaz.
 
@@ -224,7 +224,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Eylem             | XP  | Açıklama                                                       |
 | ----------------- | --- | -------------------------------------------------------------- |
-| `request`         | 1   | OmniRoute üzerinden yönlendirilen her API isteği için          |
+| `request`         | 1   | 67router üzerinden yönlendirilen her API isteği için           |
 | `provider_switch` | 5   | Farklı bir sağlayıcıya geçiş                                   |
 | `model_switch`    | 3   | Farklı bir modele geçiş                                        |
 | `combo_create`    | 10  | Yeni bir kombinasyon oluşturma                                 |
@@ -562,7 +562,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (benzersiz, indekslenmiş) |
 | `token_hash` | SHA-256(raw_token)                   |
 
-Ham token, oluşturulma sırasında kullanıcıya yalnızca bir kez döndürülür. OmniRoute
+Ham token, oluşturulma sırasında kullanıcıya yalnızca bir kez döndürülür. 67router
 bunu bir daha asla saklamaz veya göstermez — yalnızca karma değeri kalıcı olarak tutulur.
 
 ### Kendi Kendine Referans Vermeyi Önleme
@@ -685,7 +685,7 @@ Yöneticiler, `GET /api/gamification/anomalies` aracılığıyla denetim izinin 
 
 ## API Rotaları
 
-Tüm rotalar standart OmniRoute düzenini izler:
+Tüm rotalar standart 67router düzenini izler:
 
 ```
 Rota → CORS ön kontrolü → Gövde doğrulaması (Zod) → Kimlik doğrulama (extractApiKey)

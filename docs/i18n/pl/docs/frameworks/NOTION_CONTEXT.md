@@ -13,11 +13,11 @@ lastUpdated: 2026-06-28
 
 ## Czym to jest
 
-OmniRoute może połączyć się z workspace'em **Notion** jako **źródłem kontekstu** — bazą
+67router może połączyć się z workspace'em **Notion** jako **źródłem kontekstu** — bazą
 wiedzy do odczytu i zapisu, do której agenci docierają przez wbudowany serwer MCP. Po
 skonfigurowaniu tokenu integracji Notion narzędzia MCP pozwalają LLM wyszukiwać strony
 i bazy danych, czytać treść stron i drzewa bloków, odpytywać bazy z filtrami/sortowaniem
-oraz dopisywać nowe bloki — wszystko proksowane przez OmniRoute (z retry, timeoutem
+oraz dopisywać nowe bloki — wszystko proksowane przez 67router (z retry, timeoutem
 i klasyfikacją błędów), dzięki czemu model nigdy nie wywołuje Notion API bezpośrednio.
 
 Integracja to cienka, utwardzona nakładka na oficjalne Notion REST API
@@ -44,7 +44,7 @@ ustawień.
 > [!NOTE]
 > Token to **Notion internal integration token**. Utwórz integrację pod
 > <https://www.notion.com/my-integrations>, a następnie udostępnij tej integracji
-> strony/bazy, do których OmniRoute ma mieć dostęp (model uprawnień Notion opiera się
+> strony/bazy, do których 67router ma mieć dostęp (model uprawnień Notion opiera się
 > na udostępnianiu, a nie na dostępie do całego workspace'u).
 
 ### Konfiguracja przez REST
@@ -63,7 +63,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Wszystkie trzy metody wymagają uwierzytelnienia dashboardu (`isAuthenticated`). Przy
-`POST` OmniRoute zapisuje token i od razu wykonuje testowe wyszukiwanie z 1 wynikiem;
+`POST` 67router zapisuje token i od razu wykonuje testowe wyszukiwanie z 1 wynikiem;
 jeśli Notion zwróci obiekt błędu, token jest czyszczony, a wywołanie kończy się
 `400`.
 

@@ -4,7 +4,7 @@
 
 ---
 
-Kuidas OmniRoute hindab, salvestab ja esitab iga päringu maksumust — ning miks juhtpaneelil kuvatav arv on **säästu jälgija**, mitte arve.
+Kuidas 67router hindab, salvestab ja esitab iga päringu maksumust — ning miks juhtpaneelil kuvatav arv on **säästu jälgija**, mitte arve.
 
 Vaata ka: [Kasutusjuhend](./USER_GUIDE.md) · [Funktsioonide galerii](./FEATURES.md)
 
@@ -12,9 +12,9 @@ Vaata ka: [Kasutusjuhend](./USER_GUIDE.md) · [Funktsioonide galerii](./FEATURES
 
 ## Mis see on (ja mis see ei ole)
 
-OmniRoute omistab igale lõpetamisele päringupõhise maksumuse USA dollarites, korrutades tokenite arvud mudeli hinnamääradega. Need arvud on aluseks **Kulude** juhtpaneelile, `omniroute cost` / `omniroute usage` käsurealiidese käskudele, CSV/JSON-ekspordile ja API-võtmepõhistele eelarvetele.
+67router omistab igale lõpetamisele päringupõhise maksumuse USA dollarites, korrutades tokenite arvud mudeli hinnamääradega. Need arvud on aluseks **Kulude** juhtpaneelile, `omniroute cost` / `omniroute usage` käsurealiidese käskudele, CSV/JSON-ekspordile ja API-võtmepõhistele eelarvetele.
 
-> **Juhtpaneeli „maksumus” on säästu jälgija, mitte arve.** OmniRoute ei võta teilt kunagi tasu
+> **Juhtpaneeli „maksumus” on säästu jälgija, mitte arve.** 67router ei võta teilt kunagi tasu
 > — see suunab teie päringud teenusepakkujatele, kelle olete juba ühendanud (teie enda
 > tellimused, tasuta paketid ja API-võtmed). Täielikult tasuta mudelite kasutamisel kogunenud
 > „290 $ kogumaksumus” tähendab, et te **ei maksnud ligikaudu 290 $** tasulisele API-le.
@@ -27,7 +27,7 @@ Seda käsitlust kirjeldatakse otse projekti [README-s](../../README.md) („juht
 
 Kuna see arv on hinnanguline:
 
-- See sõltub hinnatabelist, mida OmniRoute iga mudeli jaoks kasutab. Mudel, millel puudub
+- See sõltub hinnatabelist, mida 67router iga mudeli jaoks kasutab. Mudel, millel puudub
   hinnakirje, annab maksumuseks `0` (see kuvatakse ülevaates reana „Pärandmudel / tasuta”).
 - Tasuta paketi ja tellimuse kaudu toimuv liiklus kogub samuti _hinnangulist_ maksumust —
   see on säästetav, mitte võlgnetav summa.
@@ -45,7 +45,7 @@ Maksumused pärinevad hinnatabelist, mis määratakse järgmises tähtsuse järj
 2. **Sünkroonitud väline hinnateave** — hangitakse LiteLLM-i avalikust failist
    `model_prices_and_context_window.json`, kui sünkroonimine on lubatud (salvestatakse eraldi
    nimeruumi `pricing_synced`, et see ei kirjutaks kunagi teie ülekirjutusi üle).
-3. **Programmisisene vaikehinnastus** — sisaldub OmniRoute'is.
+3. **Programmisisene vaikehinnastus** — sisaldub 67router'is.
 
 Välise hinnateabe sünkroonimine on **valikuline** ja vaikimisi keelatud. Asjakohased keskkonnamuutujad
 (vt [`.env.example`](../../.env.example)):
@@ -190,7 +190,7 @@ pole märgitud teisiti.
 
 ## CLI
 
-OmniRoute'i CLI pakub kulu-, kasutus- ja hinnakujunduskäske (registreeritud failis
+67router'i CLI pakub kulu-, kasutus- ja hinnakujunduskäske (registreeritud failis
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI ፍለጋን**፣ **የመነሻ Agent Client Protocolን** እና
+67router **CLI ፍለጋን**፣ **የመነሻ Agent Client Protocolን** እና
 **የቆዩ stdio አስማሚዎችን** ለይቶ ይይዛል። የተጫነ binary ማግኘት የእሱን
 ማረጋገጫ፣ ከሞዴል ጋር ተኳኋኝነት ወይም prompt ለማስተናገድ ዝግጁነት አያረጋግጥም።
 
@@ -120,5 +120,3 @@ regressions እንደተሸፈኑ ይቆያሉ። እነዚህ tests ቀጥታ �
 - [የAgent protocols](./AGENT_PROTOCOLS_GUIDE.md)
 - [የCLI ማስጀመሪያ ውሎች](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [የCLI tools](../reference/CLI-TOOLS.md)
-- [የA2A server](./A2A-SERVER.md)
-- [የCloud agents](./CLOUD_AGENT.md)

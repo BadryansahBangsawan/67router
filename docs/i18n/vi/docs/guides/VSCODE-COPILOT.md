@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** đưa mọi mô hình mà OmniRoute của bạn cung cấp vào trình chọn mô hình _gốc_ của GitHub Copilot Chat.
+**OmniCopilot** đưa mọi mô hình mà 67router của bạn cung cấp vào trình chọn mô hình _gốc_ của GitHub Copilot Chat.
 Không có thanh bên thứ hai, không có giao diện trò chuyện riêng — chế độ agent của Copilot, khả năng gọi công cụ,
 máy chủ MCP và hướng dẫn tùy chỉnh đều tiếp tục hoạt động, chỉ khác là chạy trên mô hình bạn chọn.
 
@@ -23,13 +23,13 @@ máy chủ MCP và hướng dẫn tùy chỉnh đều tiếp tục hoạt độn
 
 ## Thiết lập
 
-1. **Chạy OmniRoute** — `npm install -g omniroute && omniroute` (bảng điều khiển tại `http://localhost:20128`).
+1. **Chạy 67router** — `npm install -g omniroute && omniroute` (bảng điều khiển tại `http://localhost:20128`).
 2. **Cài đặt tiện ích mở rộng** — tìm kiếm "OmniRoute" trong chế độ xem Extensions.
 3. **Chọn mô hình** — Copilot Chat → trình chọn mô hình → **Manage Models…** → **OmniRoute**, sau đó đánh dấu
    những mô hình bạn muốn.
 
-Không cần cấu hình gì khi OmniRoute chạy trên cổng mặc định. Với một phiên bản từ xa, hãy mở
-**biểu tượng OmniRoute trên Activity Bar** (hoặc chạy `OmniRoute: Manage Connection`) và thiết lập:
+Không cần cấu hình gì khi 67router chạy trên cổng mặc định. Với một phiên bản từ xa, hãy mở
+**biểu tượng 67router trên Activity Bar** (hoặc chạy `OmniRoute: Manage Connection`) và thiết lập:
 
 - **URL máy chủ** — URL gốc của máy chủ, ví dụ: `http://192.168.0.15:20128`. Hậu tố `/v1` được
   tiện ích mở rộng tự động thêm vào; đừng đưa nó vào.
@@ -75,7 +75,7 @@ HTTP 400 — Mô hình '<id>' là mô hình tạo hình ảnh và không thể s
 
 vì vậy, chúng được lọc dựa trên trường `type` trước khi xuất hiện trong trình chọn. **Các mô hình Responses-API
 vẫn được giữ lại** — mọi mục Codex / GPT-5.x đều quảng bá `supported_endpoints: ["responses"]`,
-và OmniRoute chuyển đổi chúng cho `/v1/chat/completions`, vì vậy chúng hoàn toàn có thể sử dụng được.
+và 67router chuyển đổi chúng cho `/v1/chat/completions`, vì vậy chúng hoàn toàn có thể sử dụng được.
 
 ### Các nhà cung cấp bạn chưa từng cấu hình
 
@@ -88,11 +88,11 @@ không thay đổi gì.
 
 ## Bảng điều khiển bên trong tab VS Code
 
-`omnicopilot.dashboardOpen: "editor"` hiển thị bảng điều khiển OmniRoute trong một tab trình soạn thảo thông qua
+`omnicopilot.dashboardOpen: "editor"` hiển thị bảng điều khiển 67router trong một tab trình soạn thảo thông qua
 Simple Browser thay vì trình duyệt bên ngoài. Việc nhúng phải được **chủ động bật trên máy chủ** thông qua
 `DASHBOARD_ALLOW_EMBED=vscode`, khi đó các trang HTML sẽ được phục vụ với
 `frame-ancestors 'self' vscode-webview:` thay vì thiết lập mặc định `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Bề mặt API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) vẫn giữ
+`X-Frame-Options: DENY`. Bề mặt API (`/api`, `/v1`, `/v1beta`, `/healthz`) vẫn giữ
 các header nghiêm ngặt trong cả hai trường hợp.
 
 > ⚠️ **Đây là cờ tại thời điểm build, không phải tại thời điểm chạy.** Next.js biên dịch `headers()` vào manifest
@@ -133,7 +133,7 @@ Kilo và Roo — các cấu hình tương tự được mô tả trong
 
 | Triệu chứng                                                         | Nguyên nhân / cách khắc phục                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Không có model OmniRoute trong trình chọn                           | Không thể kết nối đến máy chủ. Dấu chấm trên thanh trạng thái chuyển sang màu xám; chạy `OmniRoute: Check Connection`. Theo thiết kế, quá trình khám phá diễn ra âm thầm và không cung cấp model nào thay vì hiển thị lời nhắc.                                   |
+| Không có model 67router trong trình chọn                            | Không thể kết nối đến máy chủ. Dấu chấm trên thanh trạng thái chuyển sang màu xám; chạy `OmniRoute: Check Connection`. Theo thiết kế, quá trình khám phá diễn ra âm thầm và không cung cấp model nào thay vì hiển thị lời nhắc.                                   |
 | Mỗi model xuất hiện hai lần                                         | Bạn đang dùng phiên bản OmniCopilot cũ hơn 1.0.1 — hãy cập nhật. Extension hiện yêu cầu `?prefix=alias`.                                                                                                                                                          |
 | Một model hình ảnh/âm thanh từng được liệt kê nhưng nay đã biến mất | Đây là thay đổi có chủ đích kể từ 1.0.1 — model đó vốn không thể phản hồi yêu cầu trò chuyện.                                                                                                                                                                     |
 | Bảng điều khiển bị thiếu trên Activity Bar                          | VS Code chuyển các container khung nhìn bổ sung vào mục tràn **"…"** ở cuối Activity Bar, và container bị ẩn bằng thao tác nhấp chuột phải sẽ tiếp tục bị ẩn. Nhấp chuột phải vào Activity Bar → chọn **OmniRoute**, hoặc mở bằng `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ Kilo và Roo — các cấu hình tương tự được mô tả trong
 ## Xem thêm
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — tất cả các công cụ lập trình khác
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — điều khiển OmniRoute từ xa
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — điều khiển 67router từ xa
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — hợp đồng `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — các ghi chú danh mục riêng của tiện ích mở rộng

@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Lietuvių)
+# 67router MCP Server Documentation (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Diegimas
 
-„OmniRoute MCP“ yra integruotas. Paleiskite jį taip:
+„67router MCP“ yra integruotas. Paleiskite jį taip:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline ir suderinamiems MCP klientams nustatyti.
 | `omniroute_switch_combo`        | `write:combos`        | Aktyvinti arba išjungti derinį                                                                                                                              |
 | `omniroute_create_combo`        | `write:combos`        | Sukurti patikrintą derinį naudojant esamą derinių API                                                                                                       |
 | `omniroute_check_quota`         | `read:quota`          | Panaudota ir bendra kvota, likęs procentas, atkūrimo laikas, prieigos raktų būklė                                                                           |
-| `omniroute_route_request`       | `execute:completions` | Siųsti pokalbio užbaigimo užklausą naudojant OmniRoute maršruto parinkimą                                                                                   |
+| `omniroute_route_request`       | `execute:completions` | Siųsti pokalbio užbaigimo užklausą naudojant 67router maršruto parinkimą                                                                                    |
 | `omniroute_cost_report`         | `read:usage`          | Išlaidų ataskaita pagal laikotarpį (seansą / dieną / savaitę / mėnesį)                                                                                      |
 | `omniroute_list_models_catalog` | `read:models`         | Visas modelių katalogas su galimybėmis, būsena ir kainodara                                                                                                 |
 | `omniroute_radar_catalog`       | `read:radar`          | Vietinis pasirašytas Radar katalogas; pasirinktiniai teikėjo ar šeimos filtrai                                                                              |
@@ -152,7 +152,7 @@ apskaitos įrašai, ir jie pažymėti `source: "mcp_metadata_estimate"`.
 
 ### MCP pritaikymo neįgaliesiems medžio filtras (v3.8.0)
 
-Be pirmiau nurodytų glaudinimo įrankių, OmniRoute apima filtrą, kuris po vykdymo
+Be pirmiau nurodytų glaudinimo įrankių, 67router apima filtrą, kuris po vykdymo
 suglaudina MCP naršyklės / pritaikymo neįgaliesiems įrankių **rezultatus**, prieš juos grąžinant
 agentui. Pats šis filtras nėra įrankis — jis skaidriai vykdomas bet kokiam įrankio rezultatui, kuriame yra
 išsamus pritaikymo neįgaliesiems medžio arba naršyklės momentinės kopijos tekstas (≥2000 simbolių).
@@ -236,7 +236,7 @@ Apibrėžti faile `open-sse/mcp-server/tools/agentSkillTools.ts`. Veikimą užti
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Pateikia visus 45 agentų įgūdžius su pasirenkamais `category` (api\|cli) ir `area` filtrais; grąžina metaduomenis ir aprėptį                                |
 | `omniroute_agent_skills_get`      | `read:catalog` | Pagal kanoninį `id` gauna visus vieno įgūdžio metaduomenis ir SKILL.md turinį                                                                               |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Aprėpties statistika: kiek iš 23 API, 21 CLI ir 1 konfigūracijos įgūdžio turi SKILL.md failus failų sistemoje, palyginti su katalogo bendraisiais skaičiais |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Aprėpties statistika: kiek iš 22 API, 20 CLI ir 1 konfigūracijos įgūdžio turi SKILL.md failus failų sistemoje, palyginti su katalogo bendraisiais skaičiais |
 
 Visą katalogą ir informaciją, kaip jį naudoja išoriniai agentai, rasite [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -245,17 +245,6 @@ Visą katalogą ir informaciją, kaip jį naudoja išoriniai agentai, rasite [AG
 Pirmiau pateiktas MCP įrankių sąrašas (110 unikalių įrankių, apskaičiuotų naudojant `countUniqueMcpTools()`) yra sąmoningai
 apribotas vykdymo maršruto parinkimo, talpyklos, glaudinimo, atminties, įgūdžių, tarpinio serverio ir konteksto šaltinio operacijomis. Dvi gretimos
 sistemos pateikiamos kartu su MCP serveriu versijoje v3.8.0 ir yra dokumentuotos atskirai:
-
-### Debesijos agentai
-
-Debesijos agentai yra už proceso ribų veikiantys DI programavimo agentai (codex-cloud, cursor-cloud, devin, jules), integruoti į
-OmniRoute naudojant tą patį ryšio modelį, kuris naudojamas LLM teikėjams. Jie pasiekiami per
-atskirą REST sąsają (`/api/v1/agents/*`) ir **nėra** MCP įrankių katalogo dalis
-— iškviečiant debesijos agentą MCP apimtis nenaudojama.
-
-- Įgyvendinimas: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Gyvavimo ciklas: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentacija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Apsaugos priemonės
 
@@ -427,8 +416,6 @@ Kiekvienam įrankiui reikalingos konkrečios aprėptys:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | 13 skaitymo įrankių — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 rašymo įrankiai — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -482,7 +469,7 @@ ir kiekvienas stdio / vietinis iškvietėjas išlaiko esamą veikimą, valdomą
 
 | Kintamasis                              | Numatytoji reikšmė             | Paskirtis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | :-------------------------------------- | :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | Bazinis URL, kurį MCP serveris naudoja kreipdamasis į vidines OmniRoute API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | Bazinis URL, kurį MCP serveris naudoja kreipdamasis į vidines 67router API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `OMNIROUTE_API_KEY`                     | (tuščia)                       | API raktas, persiunčiamas kaip `Authorization: Bearer` vidinėms API užklausoms                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (įjungia tik `"true"`) | Kai įjungta, trūkstant sričių įrankių iškvietimai atmetami, o audito žurnale įrašoma `scope_denied:<reason>`. Vykdymas TAIP PAT priverstinai įjungiamas neatsižvelgiant į šią žymą bet kuriam HTTP/SSE kvietėjui, nustatytam pagal konkrečiam raktui skirtą Authorization antraštę (`source === "authInfo"`), kuris neturi visos `manage`/`admin` srities, pvz., raktui, turinčiam tik siaurąją `mcp:connect` apėjimo sritį, todėl ši numatytoji reikšmė yra saugi tik vietiniam/stdio vieno operatoriaus srautui ir niekada nėra saugi nuotolinei ne grįžtamojo ryšio sąsajos prieigai |
 | `OMNIROUTE_MCP_SCOPES`                  | (tuščia)                       | Kableliais atskirtas sričių, pagal numatytąsias nuostatas laikomų „prieinamomis“, leidžiamųjų reikšmių sąrašas (naudojamas, kai kvietėjas nepateikia savo sričių)                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -585,7 +572,6 @@ Naujausius iškvietimus tikrinkite valdymo skydelyje arba naudodami `/api/mcp/au
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Įgūdžių įrankių apibrėžtys (4 įrankiai)                                                    |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion konteksto šaltinio įrankių apibrėžtys (6 įrankiai)                                  |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Žaidybinimo įrankių apibrėžtys (8 įrankiai)                                                |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Papildinių registravimo ir valdymo įrankiai (8 įrankiai)                                   |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` galinis taškas                                                           |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` galinis taškas                                                            |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transporto maršrutas                                                    |

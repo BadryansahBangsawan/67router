@@ -202,11 +202,11 @@ Her açık sınıflandırmayı bu dördüncü bağımsız değişkende iletin. `
 3. Derinlik sınırı: 4 seviyeyi aşan iç içe yerleştirme, `"[truncated]"` dizesiyle değiştirilir.
 4. Diziler en fazla 32 öğeyle sınırlandırılır.
 
-Yalnızca ayrıştırılmış bir sağlayıcı hata gövdesine sahip çağrı noktaları `upstreamDetails` iletmelidir. Dahili OmniRoute hataları (SSE ayrıştırma hataları, boş içerik, koruma kuralı engellemeleri) bunu içermemelidir.
+Yalnızca ayrıştırılmış bir sağlayıcı hata gövdesine sahip çağrı noktaları `upstreamDetails` iletmelidir. Dahili 67router hataları (SSE ayrıştırma hataları, boş içerik, koruma kuralı engellemeleri) bunu içermemelidir.
 
 Ham `err.stack`, `err.message` veya çalışma zamanı istisnasından gelen herhangi bir dizeyi `upstreamDetails` öğesine GEÇİRMEYİN. Bunlar, üst kaynak gövdesi olmadan yine `errorResponse` / `buildErrorBody(code, msg)` üzerinden geçirilmelidir.
 
-Seçici üst kaynak 4xx aktarımı, istemcinin otomatik kurtarması için gereken sağlayıcının güvenli JSON şeklini ve ifadesini korur; ancak bu, bayt düzeyinde bire bir aktarım değildir: özyinelemeli temizleyici, serileştirmeden önce her zaman çalışır. Döngüsel, BigInt içeren veya kötü niyetli `toJSON()` gövdeleri güvenli biçimde başarısız olur ve aktarım için uygun sayılmaz. OCR ve moderasyon da aynı kuralı uygular; JSON olmayan, boş veya yanlış etiketlenmiş üst kaynak gövdeleri, standart OmniRoute JSON hata zarfına dönüştürülür.
+Seçici üst kaynak 4xx aktarımı, istemcinin otomatik kurtarması için gereken sağlayıcının güvenli JSON şeklini ve ifadesini korur; ancak bu, bayt düzeyinde bire bir aktarım değildir: özyinelemeli temizleyici, serileştirmeden önce her zaman çalışır. Döngüsel, BigInt içeren veya kötü niyetli `toJSON()` gövdeleri güvenli biçimde başarısız olur ve aktarım için uygun sayılmaz. OCR ve moderasyon da aynı kuralı uygular; JSON olmayan, boş veya yanlış etiketlenmiş üst kaynak gövdeleri, standart 67router JSON hata zarfına dönüştürülür.
 
 ## Bilinen CodeQL sınırlaması: özel temizleyiciler tanınmıyor
 

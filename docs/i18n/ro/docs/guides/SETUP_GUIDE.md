@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Română)
+# 📖 Setup Guide — 67router (Română)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Referință completă pentru configurarea OmniRoute. Pentru versiunea rapidă, consultați [Ghidul de pornire rapidă din README](../README.md#-quick-start).
+> Referință completă pentru configurarea 67router. Pentru versiunea rapidă, consultați [Ghidul de pornire rapidă din README](../README.md#-quick-start).
 
 ## Cuprins
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Pachetul AUR](https://aur.archlinux.org/packages/omniroute-bin) instalează OmniRoute și oferă un serviciu systemd la nivel de utilizator.
+[Pachetul AUR](https://aur.archlinux.org/packages/omniroute-bin) instalează 67router și oferă un serviciu systemd la nivel de utilizator.
 
 ### Din sursă
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Notă pentru Windows:** În mod implicit, OmniRoute utilizează `%APPDATA%\omniroute` atunci când directorul vechi `%USERPROFILE%\.omniroute` nu este prezent. Setați `DATA_DIR` pentru a alege o altă locație pentru directorul de date.
+> **Notă pentru Windows:** În mod implicit, 67router utilizează `%APPDATA%\omniroute` atunci când directorul vechi `%USERPROFILE%\.omniroute` nu este prezent. Setați `DATA_DIR` pentru a alege o altă locație pentru directorul de date.
 
 > **Notă:** La prima rulare, `npm install` generează automat `.env` din `.env.example`. Instalările ulterioare nu vor suprascrie un fișier `.env` existent, astfel încât personalizările sunt păstrate. Pentru a-l genera din nou, ștergeți `.env` înainte de a rula din nou comanda.
 
@@ -64,7 +64,7 @@ Consultați [Ghidul Docker](./DOCKER_GUIDE.md) pentru configurarea completă a D
 
 ### Aplicația desktop (Electron)
 
-OmniRoute include un înveliș desktop construit pe Electron 41 + electron-builder 26.10. Scripturi disponibile (în rădăcina spațiului de lucru):
+67router include un înveliș desktop construit pe Electron 41 + electron-builder 26.10. Scripturi disponibile (în rădăcina spațiului de lucru):
 
 ```bash
 npm run electron:dev          # Rulează aplicația desktop cu reîncărcare automată
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Împreună cu variabilele de mediu (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` etc.), acest lucru vă permite să porniți o instanță OmniRoute complet scriptabilă.
+Împreună cu variabilele de mediu (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` etc.), acest lucru vă permite să porniți o instanță 67router complet scriptabilă.
 
 ### Opțiuni CLI
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | Configurarea instrumentelor CLI — listează, obține, setează și validează configurații                  |
 | `omniroute status`      | Panou de stare offline — versiune, bază de date, instrumente, configurație                             |
 | `omniroute logs`        | Transmite în flux jurnalele de utilizare din API (acceptă `--follow`)                                  |
-| `omniroute update`      | Verifică sau aplică actualizările OmniRoute                                                            |
+| `omniroute update`      | Verifică sau aplică actualizările 67router                                                             |
 | `omniroute provider`    | Gestionează conexiunile furnizorilor — adaugă, listează, elimină, testează, setează opțiunea implicită |
 | `omniroute --port 3000` | Setează portul canonic/API la 3000                                                                     |
 | `omniroute --mcp`       | Pornește serverul MCP (transport stdio)                                                                |
@@ -165,7 +165,7 @@ Funcționează cu Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode și 
 
 #### Configurare automată cu `setup-*`
 
-În loc să introduceți manual URL-ul de bază și cheia, permiteți OmniRoute să scrie configurația
+În loc să introduceți manual URL-ul de bază și cheia, permiteți 67router să scrie configurația
 proprie a fiecărui instrument pe baza catalogului activ de modele. Câte o comandă pentru fiecare instrument:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Fiecare acceptă `--remote <url> --api-key <key>` pentru configurarea unui instrument local cu o instanță
-OmniRoute **la distanță**, precum și `--dry-run` pentru previzualizare. Pentru a lansa un CLI cu variabilele de
+67router **la distanță**, precum și `--dry-run` pentru previzualizare. Pentru a lansa un CLI cu variabilele de
 mediu corecte injectate, fără a scrie nicio configurație, utilizați lansatorul generic
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 lansatoarele vechi specifice fiecărui instrument, `omniroute launch` (Claude Code) și
@@ -248,26 +248,6 @@ Adăugați în setările MCP:
 
 **Documentația MCP completă:** [README-ul serverului MCP](../../open-sse/mcp-server/README.md) — 110 instrumente, configurații IDE, clienți Python/TS/Go.
 
-### Configurarea A2A (Agent-to-Agent Protocol)
-
-Verificați Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Trimiteți o sarcină:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Oferă-mi un rezumat scurt al cotelor."}]}}'
-```
-
-**Documentația A2A completă:** [README-ul serverului A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, abilități, streaming, ciclul de viață al sarcinilor.
-
----
-
 ## Configurarea timeouturilor
 
 ### Timeouturi de bază
@@ -277,15 +257,15 @@ Pentru majoritatea implementărilor, aveți nevoie doar de aceste două variabil
 | Variabilă                | Valoare implicită               | Scop                                                                                                                                                                                      |
 | ------------------------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                        | Valoare de bază comună pentru timeoutul de începere a răspunsului upstream, timeouturile Undici ascunse, solicitările de amprentă TLS și timeouturile solicitărilor/proxy-ului punții API |
-| `STREAM_IDLE_TIMEOUT_MS` | moștenește `REQUEST_TIMEOUT_MS` | Intervalul maxim dintre fragmentele fluxului înainte ca OmniRoute să întrerupă fluxul SSE                                                                                                 |
+| `STREAM_IDLE_TIMEOUT_MS` | moștenește `REQUEST_TIMEOUT_MS` | Intervalul maxim dintre fragmentele fluxului înainte ca 67router să întrerupă fluxul SSE                                                                                                  |
 
 Compatibilitatea cu versiunile anterioare este păstrată: variabilele existente `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` și alte variabile de timeout specifice fiecărui nivel continuă să funcționeze și suprascriu valoarea de bază comună.
 
 ### Note specifice furnizorilor
 
-Pentru serviciile upstream compatibile cu Claude Code (`anthropic-compatible-cc-*`), OmniRoute derivă antetul outbound `X-Stainless-Timeout` din timeoutul de preluare determinat, astfel încât timeouturile de citire de la nivelul furnizorului să rămână aliniate cu configurația variabilelor de mediu.
+Pentru serviciile upstream compatibile cu Claude Code (`anthropic-compatible-cc-*`), 67router derivă antetul outbound `X-Stainless-Timeout` din timeoutul de preluare determinat, astfel încât timeouturile de citire de la nivelul furnizorului să rămână aliniate cu configurația variabilelor de mediu.
 
-Pentru proxy-urile inverse terțe compatibile cu Claude Code, OmniRoute păstrează setul implicit `anthropic-beta` la un nivel conservator și, când `Client Cache Control` este lăsat pe `Auto`, transmite doar marcajele `cache_control` furnizate de client. Activați comutatorul per conexiune „Enable redact-thinking beta” numai atunci când serviciul upstream necesită în mod explicit fluxuri de raționament Claude redactate.
+Pentru proxy-urile inverse terțe compatibile cu Claude Code, 67router păstrează setul implicit `anthropic-beta` la un nivel conservator și, când `Client Cache Control` este lăsat pe `Auto`, transmite doar marcajele `cache_control` furnizate de client. Activați comutatorul per conexiune „Enable redact-thinking beta” numai atunci când serviciul upstream necesită în mod explicit fluxuri de raționament Claude redactate.
 
 ### Suprascrieri avansate ale timeouturilor
 
@@ -303,11 +283,11 @@ Pentru proxy-urile inverse terțe compatibile cu Claude Code, OmniRoute păstrea
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                       | Timeoutul keep-alive pe serverul punții API                                                           |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                          | Timeoutul de inactivitate al socketului pe serverul punții API (`0` îl dezactivează)                  |
 
-> **Notă:** Pentru solicitările de streaming, `FETCH_TIMEOUT_MS` acoperă doar configurarea conexiunii / așteptarea primului răspuns upstream. După ce fluxul devine activ, OmniRoute îl va întrerupe numai în cazul unui blocaj efectiv (`STREAM_IDLE_TIMEOUT_MS`) sau al inactivității corpului Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Notă:** Pentru solicitările de streaming, `FETCH_TIMEOUT_MS` acoperă doar configurarea conexiunii / așteptarea primului răspuns upstream. După ce fluxul devine activ, 67router îl va întrerupe numai în cazul unui blocaj efectiv (`STREAM_IDLE_TIMEOUT_MS`) sau al inactivității corpului Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Compatibilitatea cu proxy-urile inverse
 
-Dacă rulați OmniRoute în spatele Nginx, Caddy, Cloudflare sau al altui proxy invers, asigurați-vă că timeouturile proxy-ului sunt, de asemenea, mai mari decât timeouturile de flux/preluare OmniRoute.
+Dacă rulați 67router în spatele Nginx, Caddy, Cloudflare sau al altui proxy invers, asigurați-vă că timeouturile proxy-ului sunt, de asemenea, mai mari decât timeouturile de flux/preluare 67router.
 
 ---
 

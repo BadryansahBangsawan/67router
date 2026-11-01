@@ -15,9 +15,9 @@ Ovaj ADR precizno definira međusobni odnos između mehanizama `ts` (izvorni), `
 Uloga mehanizma opisana je pomoću **dviju neovisnih osi**, koje su zajedno kodirane u definiciji registra `RouterBackendDefinition`:
 
 1. **Životni ciklus** (`RouterBackendLifecycle`) — _kako se mehanizam izvršava_:
-   - `in-process` — izvršava se unutar OmniRouteova Node procesa (izvorni TS protočni sustav).
-   - `supervised` — lokalni podređeni proces koji OmniRoute instalira/pokreće/zaustavlja/provjerava mu stanje putem `ServiceSupervisor`, a zatim ga koristi kao vezu s pružateljem.
-   - `external` — HTTP krajnja točka kojoj OmniRoute prosljeđuje zahtjeve, ali njome **ne** upravlja (konfigurirana putem osnovnog URL-a iz varijable okruženja).
+   - `in-process` — izvršava se unutar 67routerova Node procesa (izvorni TS protočni sustav).
+   - `supervised` — lokalni podređeni proces koji 67router instalira/pokreće/zaustavlja/provjerava mu stanje putem `ServiceSupervisor`, a zatim ga koristi kao vezu s pružateljem.
+   - `external` — HTTP krajnja točka kojoj 67router prosljeđuje zahtjeve, ali njome **ne** upravlja (konfigurirana putem osnovnog URL-a iz varijable okruženja).
    - `disabled` — registriran, ali nije dostupan za odabir.
 2. **Os odabira** (pozadinski sustav usmjeravanja releja) — _prosljeđuje li relej zahtjeve tom mehanizmu_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` u

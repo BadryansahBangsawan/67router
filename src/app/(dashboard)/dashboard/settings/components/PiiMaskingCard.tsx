@@ -4,7 +4,8 @@ import { useEffect, useId, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Checkbox, CheckboxGroup } from "@omniroute/ui-kit/checkbox";
 import { Field } from "@omniroute/ui-kit/field";
-import { Card, Button, Input, Select, Toggle, Textarea, Badge } from "@/shared/components";
+import { Button, Input, Select, Toggle, Textarea, Badge } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import {
   PII_BUILTIN_TYPES,
   PII_CUSTOM_PATTERN_LIMITS,
@@ -150,11 +151,7 @@ export default function PiiMaskingCard() {
     : [];
 
   return (
-    <Card
-      title={t("piiMasking.title")}
-      subtitle={t("piiMasking.description")}
-      icon="visibility_off"
-    >
+    <SettingsSection title={t("piiMasking.title")} description={t("piiMasking.description")}>
       <div className="flex flex-wrap gap-3 text-xs mb-4">
         {[
           ["piiMasking.requestFlag", "PII_REDACTION_ENABLED", data?.requestMaskingEnabled],
@@ -320,6 +317,6 @@ export default function PiiMaskingCard() {
           ))}
         </ul>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Bahasa Indonesia)
+# Providers Guide: Connect AI Models to 67router (Bahasa Indonesia)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **TL;DR**: Penyedia adalah koneksi ke layanan AI (seperti OpenAI, Anthropic, Google). Anda memerlukan setidaknya satu penyedia untuk menggunakan OmniRoute.
+> **TL;DR**: Penyedia adalah koneksi ke layanan AI (seperti OpenAI, Anthropic, Google). Anda memerlukan setidaknya satu penyedia untuk menggunakan 67router.
 
 ---
 
 ## Apa Itu Penyedia?
 
-Bayangkan penyedia seperti **operator seluler**. Sama seperti Anda memerlukan operator seluler untuk melakukan panggilan, Anda memerlukan penyedia AI untuk menggunakan model AI. OmniRoute seperti ponsel yang dapat digunakan dengan **semua operator** — Anda dapat beralih di antara mereka secara otomatis.
+Bayangkan penyedia seperti **operator seluler**. Sama seperti Anda memerlukan operator seluler untuk melakukan panggilan, Anda memerlukan penyedia AI untuk menggunakan model AI. 67router seperti ponsel yang dapat digunakan dengan **semua operator** — Anda dapat beralih di antara mereka secara otomatis.
 
 ### Jenis Penyedia
 
@@ -30,7 +30,7 @@ Lihat **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** untuk petunjuk penyiapan 
 
 ### Penyiapan opsional penyedia gratis saat pertama kali dijalankan
 
-Wizard saat pertama kali dijalankan menyediakan kartu **Siapkan penyedia gratis** secara eksplisit. Wizard ini mengambil daftar penyedia yang saat ini memenuhi syarat dari registri penyedia tanpa autentikasi OmniRoute, lalu memungkinkan Anda meninjau dan membatalkan pilihan setiap penyedia sebelum mengonfirmasi. OmniRoute menampilkan pemberitahuan peringatan dari penyedia dan tautan ke situsnya agar Anda dapat terlebih dahulu meninjau ketentuan pihak ketiga, privasi, ketersediaan, dan batas penggunaan.
+Wizard saat pertama kali dijalankan menyediakan kartu **Siapkan penyedia gratis** secara eksplisit. Wizard ini mengambil daftar penyedia yang saat ini memenuhi syarat dari registri penyedia tanpa autentikasi 67router, lalu memungkinkan Anda meninjau dan membatalkan pilihan setiap penyedia sebelum mengonfirmasi. 67router menampilkan pemberitahuan peringatan dari penyedia dan tautan ke situsnya agar Anda dapat terlebih dahulu meninjau ketentuan pihak ketiga, privasi, ketersediaan, dan batas penggunaan.
 
 Tindakan ini bersifat opsional: menyelesaikan wizard tidak pernah membuat koneksi penyedia gratis secara diam-diam. Wizard hanya membuat penyedia yang masih belum tersedia, membiarkan koneksi yang telah disesuaikan tetap tidak berubah, serta melaporkan secara terpisah penyedia yang berhasil dibuat, telah dikonfigurasi, dan gagal. Setelah mendapatkan hasil parsial, Anda dapat mencoba ulang hanya penyedia yang gagal dengan aman.
 
@@ -74,7 +74,7 @@ Tindakan ini bersifat opsional: menyelesaikan wizard tidak pernah membuat koneks
 
 ### Opsi D: Model MLX Lokal (Apple Silicon)
 
-Untuk Mac Apple Silicon dengan memori terpadu, OmniRoute mendukung koneksi ke model MLX lokal yang berjalan melalui `mlx-lm.server` sebagai penyedia lokal biasa yang kompatibel dengan OpenAI.
+Untuk Mac Apple Silicon dengan memori terpadu, 67router mendukung koneksi ke model MLX lokal yang berjalan melalui `mlx-lm.server` sebagai penyedia lokal biasa yang kompatibel dengan OpenAI.
 
 #### Prasyarat
 
@@ -104,14 +104,14 @@ Untuk Mac Apple Silicon dengan memori terpadu, OmniRoute mendukung koneksi ke mo
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Hubungkan di Dasbor OmniRoute**:
+3. **Hubungkan di Dasbor 67router**:
    - Buka **Penyedia** → **Tambahkan Penyedia**
    - Pilih **MLX Gemma 26B** atau **MLX Qwen 3.8 27B**
    - Klik **Hubungkan** (tidak memerlukan kunci API)
 
 4. **Gunakan dengan OpenCode**:
    ```bash
-   # Konfigurasikan OpenCode untuk menggunakan OmniRoute
+   # Konfigurasikan OpenCode untuk menggunakan 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@ Anda harus mengelolanya secara manual:
 - Jalankan keduanya di mesin terpisah, atau
 - Hentikan salah satunya sebelum memulai yang lain
 
-OmniRoute tidak mengelola proses server MLX secara otomatis — OmniRoute hanya merutekan permintaan ke endpoint kompatibel OpenAI yang Anda konfigurasi.
+67router tidak mengelola proses server MLX secara otomatis — 67router hanya merutekan permintaan ke endpoint kompatibel OpenAI yang Anda konfigurasi.
 
 #### Dukungan Pemanggilan Alat
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Kehabisan memori           | Pastikan hanya satu model yang berjalan; tutup aplikasi lain; periksa Activity Monitor          |
 | Koneksi ditolak            | Pastikan server berjalan pada port yang benar (11435/11436)                                     |
 | Respons lambat             | Permintaan pertama memuat model ke memori (~30–60 dtk); permintaan berikutnya berlangsung cepat |
-| Pemanggilan alat gagal     | Pastikan model mendukung alat; periksa log OmniRoute untuk kesalahan penerjemahan               |
+| Pemanggilan alat gagal     | Pastikan model mendukung alat; periksa log 67router untuk kesalahan penerjemahan                |
 
 ---
 
@@ -230,12 +230,12 @@ Penyedia Anda kini telah terhubung. Anda dapat menggunakannya dengan `model: "au
 
 ## Menggunakan Beberapa Penyedia
 
-OmniRoute berfungsi paling baik dengan **beberapa penyedia**. Hal ini memberi Anda:
+67router berfungsi paling baik dengan **beberapa penyedia**. Hal ini memberi Anda:
 
-- **Failover otomatis** — Jika satu penyedia gagal, OmniRoute mencoba penyedia berikutnya
-- **Optimalisasi biaya** — OmniRoute memilih penyedia termurah untuk setiap permintaan
-- **Optimalisasi kecepatan** — OmniRoute memilih penyedia tercepat untuk setiap permintaan
-- **Optimalisasi kualitas** — OmniRoute memilih penyedia terbaik untuk setiap tugas
+- **Failover otomatis** — Jika satu penyedia gagal, 67router mencoba penyedia berikutnya
+- **Optimalisasi biaya** — 67router memilih penyedia termurah untuk setiap permintaan
+- **Optimalisasi kecepatan** — 67router memilih penyedia tercepat untuk setiap permintaan
+- **Optimalisasi kualitas** — 67router memilih penyedia terbaik untuk setiap tugas
 
 ### Penyiapan yang Direkomendasikan
 
@@ -245,7 +245,7 @@ Hubungkan setidaknya **3 penyedia** untuk mendapatkan pengalaman terbaik:
 2. **Satu penyedia cepat** (Groq, Cerebras) — Untuk respons cepat
 3. **Satu penyedia berkualitas** (OpenAI, Anthropic, Google) — Untuk tugas kompleks
 
-Kemudian gunakan `model: "auto"` dan OmniRoute akan secara otomatis memilih penyedia terbaik untuk setiap permintaan.
+Kemudian gunakan `model: "auto"` dan 67router akan secara otomatis memilih penyedia terbaik untuk setiap permintaan.
 
 ---
 
@@ -254,37 +254,37 @@ Kemudian gunakan `model: "auto"` dan OmniRoute akan secara otomatis memilih peny
 ### OpenAI
 
 1. Dapatkan kunci API: https://platform.openai.com/api-keys
-2. Di OmniRoute: Penyedia → Tambahkan Penyedia → OpenAI
+2. Di 67router: Penyedia → Tambahkan Penyedia → OpenAI
 3. Tempelkan kunci API → Hubungkan
 
 ### Anthropic
 
 1. Dapatkan kunci API: https://console.anthropic.com/
-2. Di OmniRoute: Penyedia → Tambahkan Penyedia → Anthropic
+2. Di 67router: Penyedia → Tambahkan Penyedia → Anthropic
 3. Tempelkan kunci API → Hubungkan
 
 ### Google (Gemini)
 
 1. Dapatkan kunci API: https://aistudio.google.com/apikey
-2. Di OmniRoute: Penyedia → Tambahkan Penyedia → Gemini
+2. Di 67router: Penyedia → Tambahkan Penyedia → Gemini
 3. Tempelkan kunci API → Hubungkan
 
 ### DeepSeek
 
 1. Dapatkan kunci API: https://platform.deepseek.com/
-2. Di OmniRoute: Penyedia → Tambahkan Penyedia → DeepSeek
+2. Di 67router: Penyedia → Tambahkan Penyedia → DeepSeek
 3. Tempelkan kunci API → Hubungkan
 
 ### Qoder: pilih metode pengiriman kredensial
 
 Qoder memerlukan kredensial. Kedua metode pengirimannya memiliki kemampuan yang berbeda; nama model saja tidak dapat mengidentifikasi kemampuan koneksi tertentu.
 
-| Kredensial                         | Metode pengiriman OmniRoute                           | Pemanggilan alat oleh pemanggil                  | Streaming                                                              |
+| Kredensial                         | Metode pengiriman 67router                            | Pemanggilan alat oleh pemanggil                  | Streaming                                                              |
 | ---------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------- |
-| PAT yang diawali dengan `pt-`      | Proses `qodercli` lokal pada host OmniRoute           | Tidak didukung                                   | Di-buffer: SSE hanya dikirim setelah CLI mengembalikan respons lengkap |
+| PAT yang diawali dengan `pt-`      | Proses `qodercli` lokal pada host 67router            | Tidak didukung                                   | Di-buffer: SSE hanya dikirim setelah CLI mengembalikan respons lengkap |
 | Token akses non-PAT atau kunci API | Endpoint HTTP DashScope yang kompatibel dengan OpenAI | Diteruskan, bergantung pada model/kunci upstream | Jalur HTTP/SSE upstream                                                |
 
-Untuk PAT, instal Qoder CLI pada host atau kontainer yang sama dengan OmniRoute. File yang dapat dieksekusi harus dapat ditemukan sebagai `qodercli`, atau atur `CLI_QODER_BIN` ke jalur file tersebut. CLI yang hanya diinstal pada host Docker tidak secara otomatis tersedia di dalam kontainer. Ketiadaan file biner menghasilkan galat eksplisit yang mengarahkan Anda ke penginstalan atau pengaturan jalur.
+Untuk PAT, instal Qoder CLI pada host atau kontainer yang sama dengan 67router. File yang dapat dieksekusi harus dapat ditemukan sebagai `qodercli`, atau atur `CLI_QODER_BIN` ke jalur file tersebut. CLI yang hanya diinstal pada host Docker tidak secara otomatis tersedia di dalam kontainer. Ketiadaan file biner menghasilkan galat eksplisit yang mengarahkan Anda ke penginstalan atau pengaturan jalur.
 
 Jalur percakapan PAT memiliki batas waktu proses 45 detik. Jalur ini meratakan percakapan menjadi sebuah prompt dan menjalankan CLI dalam mode cetak non-streaming. Meminta `stream: true` mengubah pembungkus respons menjadi SSE; hal ini tidak menyediakan pengiriman token upstream secara bertahap. Validasi CLI/daftar model menggunakan batas waktu terpisah selama 20 detik. Ini adalah nilai default kode saat ini, bukan pengaturan dasbor yang dapat dikonfigurasi.
 
@@ -301,16 +301,16 @@ Referensi implementasi: [Eksekutor Qoder](../../open-sse/executors/qoder.ts),
 ### Groq
 
 1. Dapatkan kunci API: https://console.groq.com/
-2. Di OmniRoute: Penyedia → Tambahkan Penyedia → Groq
+2. Di 67router: Penyedia → Tambahkan Penyedia → Groq
 3. Tempelkan kunci API → Hubungkan
 
 ---
 
 ## Pertanyaan Umum
 
-### "Apakah saya perlu membayar untuk menggunakan OmniRoute?"
+### "Apakah saya perlu membayar untuk menggunakan 67router?"
 
-**Tidak!** OmniRoute gratis dan bersifat sumber terbuka. Anda dapat menggunakan penyedia gratis (Kiro, Pollinations) tanpa membayar apa pun. Anda hanya perlu membayar jika memilih menggunakan penyedia berbayar.
+**Tidak!** 67router gratis dan bersifat sumber terbuka. Anda dapat menggunakan penyedia gratis (Kiro, Pollinations) tanpa membayar apa pun. Anda hanya perlu membayar jika memilih menggunakan penyedia berbayar.
 
 ### "Penyedia mana yang sebaiknya saya gunakan terlebih dahulu?"
 
@@ -318,11 +318,11 @@ Mulailah dengan **Kiro AI** — layanan ini gratis, tidak memerlukan kunci API, 
 
 ### "Bisakah saya menggunakan beberapa penyedia sekaligus?"
 
-**Ya!** Itulah tujuan utama OmniRoute. Hubungkan beberapa penyedia dan gunakan `model: "auto"` agar OmniRoute memilih penyedia terbaik untuk setiap permintaan.
+**Ya!** Itulah tujuan utama 67router. Hubungkan beberapa penyedia dan gunakan `model: "auto"` agar 67router memilih penyedia terbaik untuk setiap permintaan.
 
 ### "Bagaimana jika suatu penyedia mengalami gangguan?"
 
-OmniRoute secara otomatis melewati penyedia yang gagal dan mencoba penyedia berikutnya. Anda tidak perlu melakukan apa pun.
+67router secara otomatis melewati penyedia yang gagal dan mencoba penyedia berikutnya. Anda tidak perlu melakukan apa pun.
 
 ### "Bagaimana cara memutuskan koneksi penyedia?"
 
@@ -330,17 +330,13 @@ Buka Penyedia → klik penyedia tersebut → klik **Putuskan Koneksi**.
 
 ### "Bisakah saya menggunakan kunci API yang sudah saya miliki?"
 
-**Ya!** Jika Anda sudah memiliki kunci API untuk OpenAI, Anthropic, Google, dan sebagainya, Anda dapat menggunakannya di OmniRoute. Cukup tempelkan kunci tersebut saat menghubungkan penyedia.
+**Ya!** Jika Anda sudah memiliki kunci API untuk OpenAI, Anthropic, Google, dan sebagainya, Anda dapat menggunakannya di 67router. Cukup tempelkan kunci tersebut saat menghubungkan penyedia.
 
 ---
 
 ## Langkah Berikutnya
 
-- **[Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Biarkan OmniRoute memilih AI terbaik untuk Anda
+- **[Panduan Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Biarkan 67router memilih AI terbaik untuk Anda
 - **[Panduan Tingkat Gratis](./FREE-TIERS-GUIDE.md)** — Dapatkan AI gratis tanpa kartu kredit
 - **[Pemecahan Masalah](../guides/TROUBLESHOOTING.md)** — Atasi masalah umum
 - **[Referensi Penyedia](../reference/PROVIDER_REFERENCE.md)** — Daftar lengkap 226 penyedia
-
-## Gambar Cursor
-
-Gambar paket Cursor menggunakan `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Lihat [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

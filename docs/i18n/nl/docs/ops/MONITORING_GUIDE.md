@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute wordt geleverd met ingebouwde gezondheidsbewaking, een autopilot voor providers, quotumregistratie en observability-hooks. Deze handleiding behandelt het dashboard, waarschuwingen en probleemoplossing.
+> **TL;DR**: 67router wordt geleverd met ingebouwde gezondheidsbewaking, een autopilot voor providers, quotumregistratie en observability-hooks. Deze handleiding behandelt het dashboard, waarschuwingen en probleemoplossing.
 
 **Bronnen:**
 
@@ -20,7 +20,7 @@
 
 ## Overzicht
 
-OmniRoute heeft **3 bewakingslagen**:
+67router heeft **3 bewakingslagen**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Per combinatie:
 
 ## Healthcheck-API
 
-OmniRoute biedt **twee** HTTP-healthcheckinterfaces. Ze zijn niet onderling uitwisselbaar voor orchestrators.
+67router biedt **twee** HTTP-healthcheckinterfaces. Ze zijn niet onderling uitwisselbaar voor orchestrators.
 
 | Pad                          | Doel                                                                           | Belasting                            | Gebruiken voor                                                                  |
 | ---------------------------- | ------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------- |
@@ -181,7 +181,7 @@ persistente statussen nodig hebt.
 
 ### Aanbevelingen voor Kubernetes-probes
 
-OmniRoute is één **Node-proces** (één eventloop). De standaard-Docker-`HEALTHCHECK` richt zich op het lichtgewicht `/healthz`. `/api/monitoring/health` is **te zwaar** voor liveness-intervallen van kubelet.
+67router is één **Node-proces** (één eventloop). De standaard-Docker-`HEALTHCHECK` richt zich op het lichtgewicht `/healthz`. `/api/monitoring/health` is **te zwaar** voor liveness-intervallen van kubelet.
 
 | Probe                       | Aanbevolen doel                                                                   | Opmerkingen                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -228,7 +228,7 @@ Gerelateerd: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (p
 
 ### systemd-watchdog (vastgelopen eventloop)
 
-Op een systemd-host laat OmniRoute de servicebeheerder weten wanneer de service gereed is en blijft het pings versturen, zodat een server waarvan de eventloop is vastgelopen, wordt beëindigd en opnieuw gestart in plaats van actief maar stil te blijven. De pings zijn afkomstig van de eigen eventloop van de server: wanneer deze wordt geblokkeerd, stoppen de pings en start systemd de service opnieuw zodra `WatchdogSec` is verstreken zonder dat er een ping is ontvangen.
+Op een systemd-host laat 67router de servicebeheerder weten wanneer de service gereed is en blijft het pings versturen, zodat een server waarvan de eventloop is vastgelopen, wordt beëindigd en opnieuw gestart in plaats van actief maar stil te blijven. De pings zijn afkomstig van de eigen eventloop van de server: wanneer deze wordt geblokkeerd, stoppen de pings en start systemd de service opnieuw zodra `WatchdogSec` is verstreken zonder dat er een ping is ontvangen.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) schrijft al een gebruikerseenheid met deze configuratie. Een eenheid die u zelf schrijft (standaard `Type=simple`) krijgt geen watchdog, dus voeg deze regels toe aan de sectie `[Service]`:
 
@@ -444,7 +444,7 @@ De configuratie van de tokenstatuscontrole wordt intern afgehandeld door `tokenH
 
 ### Ingebouwde kanalen
 
-OmniRoute ondersteunt **3 waarschuwingskanalen**:
+67router ondersteunt **3 waarschuwingskanalen**:
 
 | Kanaal          | Configuratie     | Gebruiksscenario                      |
 | --------------- | ---------------- | ------------------------------------- |
@@ -560,7 +560,7 @@ Maak een `~/.omniroute/dashboard.json`:
 ### "Het quotum wordt als gezond weergegeven, maar ik zie 429-fouten"
 
 - 429 betekent dat de provider aangeeft dat u uw quotum hebt opgebruikt
-- De quotumregistratie van OmniRoute kan **verouderd** zijn — de gegevens van de bovenstroomse provider zijn leidend
+- De quotumregistratie van 67router kan **verouderd** zijn — de gegevens van de bovenstroomse provider zijn leidend
 - Quotumgegevens worden automatisch vernieuwd via de interne quotummonitor
 
 ### "De combinatie mislukt, maar alle doelen lijken gezond"
@@ -573,7 +573,7 @@ Maak een `~/.omniroute/dashboard.json`:
 
 - Voer `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"` uit
 - Als het resultaat "ok" is — vals alarm, de statuscontrole is te streng
-- Bij elk ander resultaat — **stop OmniRoute** en volg de [handleiding voor noodherstel](./DATABASE_GUIDE.md#disaster-recovery)
+- Bij elk ander resultaat — **stop 67router** en volg de [handleiding voor noodherstel](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "De druk op het geheugengebied is kritiek"
 

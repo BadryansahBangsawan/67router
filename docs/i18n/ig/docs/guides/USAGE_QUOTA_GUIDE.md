@@ -4,7 +4,7 @@
 
 ---
 
-> **Na nkenke**: OmniRoute na-enyocha ojiji token nke arịrịọ ọ bụla, na-agbakọ ụgwọ, na-amanye oke ojiji maka API key ọ bụla, ma na-egosi nyocha data na dashboard. Nduzi a na-akọwa etu ihe ndị a niile si arụ ọrụ.
+> **Na nkenke**: 67router na-enyocha ojiji token nke arịrịọ ọ bụla, na-agbakọ ụgwọ, na-amanye oke ojiji maka API key ọ bụla, ma na-egosi nyocha data na dashboard. Nduzi a na-akọwa etu ihe ndị a niile si arụ ọrụ.
 
 **Ebe e si nweta ozi:**
 
@@ -17,7 +17,7 @@
 
 ## Nchịkọta
 
-Arịrịọ ọ bụla na-agafe na OmniRoute na-emepụta **ndekọ ojiji** nke na-edekọ:
+Arịrịọ ọ bụla na-agafe na 67router na-emepụta **ndekọ ojiji** nke na-edekọ:
 
 - **Njirimara**: API key, provider, model, na combo e ji mee arịrịọ ahụ
 - **Token**: token prompt, token mmecha, token e debere na cache, na mkpokọta
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Maka provider ndị na-adịghị eweghachi ozi ojiji (ụfọdụ provider web-cookie), OmniRoute na-eji atụmatụ `~4 chars per token` **atụ ọnụ ọgụgụ** token (lee `open-sse/services/autoCombo/pipelineRouter.ts`).
+Maka provider ndị na-adịghị eweghachi ozi ojiji (ụfọdụ provider web-cookie), 67router na-eji atụmatụ `~4 chars per token` **atụ ọnụ ọgụgụ** token (lee `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Token Ndị E Debere na Cache
 
-OmniRoute na-enyocha `cached_tokens` iche na `prompt_tokens` n'ihi na:
+67router na-enyocha `cached_tokens` iche na `prompt_tokens` n'ihi na:
 
 - Cache prompt Anthropic na-ana ọnụego dị ala maka token ndị dị na cache (10% nke ọnụego nkịtị)
 - Ụfọdụ provider na-eweghachi `cache_read_input_tokens` nke e kwesịrị ịgbakọ ọnụahịa ya n'ụzọ dị iche
@@ -117,7 +117,7 @@ A na-emekọrịta data ọnụahịa na-akpaghị aka site na LiteLLM site na e
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Maka model ndị na-enweghị data ọnụahịa, OmniRoute na-eji **atụmatụ ụgwọ** dabere na nkezi ọnụego dị n'ime sistemụ (nke sitere na data ọnụahịa LiteLLM).
+Maka model ndị na-enweghị data ọnụahịa, 67router na-eji **atụmatụ ụgwọ** dabere na nkezi ọnụego dị n'ime sistemụ (nke sitere na data ọnụahịa LiteLLM).
 
 ---
 

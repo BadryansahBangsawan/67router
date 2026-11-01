@@ -12,7 +12,7 @@ chính thức, vì vậy chỉ chấp nhận lưu lượng khớp với đặc t
 
 ## Bắt đầu nhanh — sử dụng provider `agentrouter` gốc (khuyến nghị)
 
-Đối với hầu hết người dùng, **không cần thiết lập đặc biệt**. OmniRoute tích hợp sẵn
+Đối với hầu hết người dùng, **không cần thiết lập đặc biệt**. 67router tích hợp sẵn
 provider `agentrouter` với đầy đủ đặc trưng giao tiếp của Claude Code (xem
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Để sử dụng:
 
@@ -34,7 +34,7 @@ URL cơ sở, đường dẫn trò chuyện hay bộ header.
 
 ## Nâng cao: kết nối thông qua loại provider tương thích với Claude Code
 
-OmniRoute cũng hỗ trợ AgentRouter (và các dịch vụ chuyển tiếp tương tự) thông qua loại
+67router cũng hỗ trợ AgentRouter (và các dịch vụ chuyển tiếp tương tự) thông qua loại
 provider **tương thích với Claude Code** (`anthropic-compatible-cc-*`), sử dụng
 Anthropic Messages API với đặc trưng giao tiếp chính xác. Một provider
 `openai-compatible-chat` thông thường trỏ đến `https://agentrouter.org` sẽ
@@ -47,14 +47,14 @@ giống Claude Code.
 
 - Tài khoản và API key AgentRouter. Người đăng ký mới nhận được tín dụng miễn phí thông qua
   liên kết tiếp thị liên kết trong [README](../README.md) của dự án.
-- OmniRoute đang chạy với cờ tính năng `ENABLE_CC_COMPATIBLE_PROVIDER` được bật
+- 67router đang chạy với cờ tính năng `ENABLE_CC_COMPATIBLE_PROVIDER` được bật
   (xem bên dưới).
 
 ## 1. Bật loại provider tương thích với CC
 
 Loại provider tương thích với Claude Code được kiểm soát bằng một cờ tính năng vì nó
 gửi lưu lượng mô phỏng sát client Claude Code chính thức. Bật loại này bằng cách
-đặt biến môi trường trước khi khởi động OmniRoute:
+đặt biến môi trường trước khi khởi động 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

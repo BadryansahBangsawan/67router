@@ -4,7 +4,7 @@
 
 ---
 
-تنشر OmniRoute عناصر npm + Docker. توفر هذه البوابات إثبات المنشأ، وجرد المكونات البرمجية (SBOM)، وفحص CVE، وكلها مفتوحة المصدر (OSS)، ومدمجة في سير عمل الإصدار.
+تنشر 67router عناصر npm + Docker. توفر هذه البوابات إثبات المنشأ، وجرد المكونات البرمجية (SBOM)، وفحص CVE، وكلها مفتوحة المصدر (OSS)، ومدمجة في سير عمل الإصدار.
 نهج **استشاري أولاً** — يتم الإبلاغ عنها الآن، ثم يتم ترقيتها إلى حظر بعد الإصدار الأخضر الأول.
 
 | البوابة               | الأداة                                         | المكان                        | هل تحظر؟            | المخرجات                                        |
@@ -42,7 +42,7 @@
 - **السلسلة:** `promptfoo` (تبعية تطوير) → `@openai/codex-security` → `extract-zip@2.0.1`.
   تم التأكيد عبر `package-lock.json` — حزمة واحدة بالضبط في شجرة التبعيات بأكملها (`@openai/codex-security`) تعلن عن `extract-zip`، وحزمة واحدة بالضبط (`promptfoo`) تعلن عن `@openai/codex-security`.
 - **لا يوجد إصدار ثابت في أي مكان في السلسلة.** `extract-zip@2.0.1` (نُشر عام 2020) هو الإصدار الأخير للحزمة — وهو غير مُصان. لا يزال الإصدار الحالي الأحدث من npm لـ `@openai/codex-security` (`0.1.29`) يسحب `extract-zip@2.0.1`.
-- **لا يمكن الوصول إليه من بيئة الإنتاج.** `promptfoo` هي تبعية تطوير فقط (لم تُدرج أبدًا ضمن `dependencies`)، ولا يوجد ملف ضمن `src/` أو `open-sse/` أو `bin/` يستورد حزمة npm `extract-zip` — المساعد `extractZip()` الخاص بـ OmniRoute (`src/lib/versionManager/binaryManager.ts:93`) يستخدم `unzip`/`tar` الأصلي وهو غير ذي صلة. يشحن `@openai/codex-security` أيضًا حماية خاصة به لاجتياز الروابط الرمزية (symlink-traversal guard) بالإضافة إلى رد الاتصال `onEntry` الخاص بـ `extract-zip`.
+- **لا يمكن الوصول إليه من بيئة الإنتاج.** `promptfoo` هي تبعية تطوير فقط (لم تُدرج أبدًا ضمن `dependencies`)، ولا يوجد ملف ضمن `src/` أو `open-sse/` أو `bin/` يستورد حزمة npm `extract-zip` — المساعد `extractZip()` الخاص بـ 67router (`src/lib/versionManager/binaryManager.ts:93`) يستخدم `unzip`/`tar` الأصلي وهو غير ذي صلة. يشحن `@openai/codex-security` أيضًا حماية خاصة به لاجتياز الروابط الرمزية (symlink-traversal guard) بالإضافة إلى رد الاتصال `onEntry` الخاص بـ `extract-zip`.
 - **لا تقم** بإنشاء اسم مستعار لـ `extract-zip` عبر `overrides` في `package.json` — البديل الوحيد القابل للتطبيق هو Electron-org-internal وغير متوافق مع واجهة برمجة التطبيقات (API) مع فحوصات `onEntry`/`defaultDirMode`/`defaultFileMode` الخاصة بـ `@openai/codex-security`؛ تجاوزها سيعطل فحوصات الأمان لتلك الحزمة بصمت.
 - **الخط الأساسي:** عدد الثغرات الأمنية (osv `vulnCount`) المقاس (3) هو بالفعل أقل بكثير من الخط الأساسي المجمد في `config/quality/quality-baseline.json` (27) — لا يلزم تغيير في آلية التقييم.
 - **حماية التراجع:** `tests/unit/extract-zip-14482-exposure.test.ts` يؤكد السلسلة والثابتة "عدم الاستيراد في بيئة الإنتاج" المذكورة أعلاه؛ ويفشل CI إذا انكسر أي منهما (على سبيل المثال، إذا جعل طلب سحب مستقبلي `extract-zip` قابلاً للوصول من بيئة الإنتاج).

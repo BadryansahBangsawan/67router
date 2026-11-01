@@ -4,77 +4,30 @@
 
 ---
 
-> **Zdroj:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **Naposledy aktualizované:** 2026-06-28 — v3.8.40
 
-OmniRoute poskytuje tri rôzne rozhrania súvisiace s agentmi. Na prvý pohľad vyzerajú podobne, ale riešia odlišné problémy. Táto stránka vám pomôže vybrať si správne rozhranie.
+67router poskytuje tri rôzne rozhrania súvisiace s agentmi. Na prvý pohľad vyzerajú podobne, ale riešia odlišné problémy. Táto stránka vám pomôže vybrať si správne rozhranie.
 
 ## Stručne
 
 | Rozhranie                      | Najvhodnejšie na                                                                                                                                              | Prenos                         | Štandard                         |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ | -------------------------------- |
 | **A2A — Agent-to-Agent**       | Spoluprácu medzi agentmi s partnerskými agentmi, ktorí podporujú protokol A2A                                                                                 | JSON-RPC 2.0 cez HTTP          | A2A v0.3 (otvorená špecifikácia) |
-| **ACP — register CLI agentov** | Zisťovanie / registráciu / spúšťanie CLI agentov na programovanie nainštalovaných v zariadení používateľa (Cursor, Cline, Codex CLI, Claude Code, Aider atď.) | HTTP REST                      | Špecifické pre OmniRoute         |
-| **Cloudoví agenti**            | Odosielanie dlhotrvajúcich programátorských úloh externým cloudovým službám (Codex Cloud, Devin, Jules, Cursor Cloud)                                         | HTTP REST + úlohy uložené v DB | Špecifické pre OmniRoute         |
+| **ACP — register CLI agentov** | Zisťovanie / registráciu / spúšťanie CLI agentov na programovanie nainštalovaných v zariadení používateľa (Cursor, Cline, Codex CLI, Claude Code, Aider atď.) | HTTP REST                      | Špecifické pre 67router          |
+| **Cloudoví agenti**            | Odosielanie dlhotrvajúcich programátorských úloh externým cloudovým službám (Codex Cloud, Devin, Jules, Cursor Cloud)                                         | HTTP REST + úlohy uložené v DB | Špecifické pre 67router          |
 
 Tieto tri rozhrania sú nezávislé — vyberte si ľubovoľnú podmnožinu.
 
 ## Rozhodovací strom
 
-```
-Potrebujete, aby cloudová služba vykonávala prácu mimo tohto zariadenia (Codex Cloud / Cursor Cloud / Devin / Jules)?
-├─ ÁNO → Cloudoví agenti (POST /api/v1/agents/tasks)
-└─ NIE → Pokračujte
-    │
-    Máte partnerského agenta, ktorý podporuje A2A a chce spolupracovať?
-    ├─ ÁNO → A2A (POST /a2a)
-    └─ NIE → Pokračujte
-        │
-        Potrebujete zobraziť / konfigurovať lokálne nainštalovaných CLI agentov na programovanie?
-        ├─ ÁNO → ACP (GET /api/acp/agents)
-        └─ NIE → Použite bežné /v1/chat/completions
-```
-
-## 1. A2A — Agent-to-Agent
-
-**Špecifikácia:** [A2A v0.3](https://a2a-protocol.org)
-**Koncový bod OmniRoute:** `POST /a2a` (JSON-RPC 2.0)
-**Karta agenta:** `GET /.well-known/agent.json`
-
-### Kedy použiť
-
-- Pri vytváraní systému s viacerými agentmi, v ktorom je OmniRoute jedným z partnerských agentov
-- Pri sprístupňovaní smerovacej inteligencie OmniRoute (inteligentné smerovanie, správa kvót atď.) agentom vo frameworkoch, ako je Google ADK, alebo vo všeobecných sieťach agentov
-- Pri sprístupňovaní OmniRoute prostredníctvom štandardného rozhrania na vyhľadávanie a vyvolávanie
-
-### Metódy
-
-- `message/send` — odošle správu a prijme synchrónnu odpoveď
-- `message/stream` — odošle správu a prijíma udalosti priebehu streamované cez SSE
-- `tasks/get` — načíta úlohu podľa ID
-- `tasks/cancel` — zruší prebiehajúcu úlohu
-
-### Vstavané zručnosti (6)
-
-- `smart-routing` — smeruje výzvu cez optimálnu kombináciu
-- `quota-management` — poskytuje stav kvóty pre jednotlivých poskytovateľov
-- `provider-discovery` — zobrazí zoznam nainštalovaných poskytovateľov s ich schopnosťami
-- `cost-analysis` — odhadne náklady na požiadavku/konverzáciu
-- `health-report` — agreguje stav prerušovača/cooldownu/uzamknutia pre jednotlivých poskytovateľov
-- `list-capabilities` — vymenuje dostupné zručnosti agenta a metadáta
-
-### Podrobnosti
-
-Podrobnosti o prenose, štruktúre karty agenta, konfigurácii TTL úloh a šablóne na pridávanie nových zručností nájdete v dokumente [A2A-SERVER.md](./A2A-SERVER.md).
-
 ## 2. ACP — Register CLI agentov
 
-**Endpoint OmniRoute:** `GET /api/acp/agents`
+**Endpoint 67router:** `GET /api/acp/agents`
 **Zdroj:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### Čo to je
 
-ACP je **lokálny inventár CLI agentov** platformy OmniRoute. Zisťuje, ktoré programátorské CLI sú nainštalované v hostiteľskom systéme (Cursor, Cline, Claude Code, Codex CLI, Continue atď.), identifikuje ich verzie a sprístupňuje ich ovládaciemu panelu, aby používateľ mohol každé CLI nastaviť tak, aby smerovalo na OmniRoute.
+ACP je **lokálny inventár CLI agentov** platformy 67router. Zisťuje, ktoré programátorské CLI sú nainštalované v hostiteľskom systéme (Cursor, Cline, Claude Code, Codex CLI, Continue atď.), identifikuje ich verzie a sprístupňuje ich ovládaciemu panelu, aby používateľ mohol každé CLI nastaviť tak, aby smerovalo na 67router.
 
 Rozhranie HTTP predstavuje interný inventár, ktorý poskytuje údaje používateľskému rozhraniu „CLI Tools“ a
 sledovaniu odtlačkov CLI (pozrite si [CLI-TOOLS.md](../reference/CLI-TOOLS.md)). Samostatne
@@ -114,8 +67,8 @@ Informácie o týchto odlišných režimoch a obmedzeniach nájdete v dokumente 
 
 ### Prípady použitia
 
-- Stránka „CLI Tools“ na ovládacom paneli uvádza, čo je nainštalované, a pomáha nasmerovať jednotlivé nástroje na OmniRoute
-- Vlastné agenty umožňujú pokročilým používateľom zaregistrovať interné/proprietárne CLI, ktoré OmniRoute predvolene nepozná
+- Stránka „CLI Tools“ na ovládacom paneli uvádza, čo je nainštalované, a pomáha nasmerovať jednotlivé nástroje na 67router
+- Vlastné agenty umožňujú pokročilým používateľom zaregistrovať interné/proprietárne CLI, ktoré 67router predvolene nepozná
 - Výsledok zisťovania poskytuje údaje matici odtlačkov `cli-tools`
 
 ### Kedy ACP NEPOUŽÍVAŤ
@@ -125,86 +78,7 @@ Informácie o týchto odlišných režimoch a obmedzeniach nájdete v dokumente 
   poskytovateľ. Pri bežnom interaktívnom používaní spustite nakonfigurované CLI sami alebo
   použite `omniroute run`.
 
-## 3. Cloudoví agenti
-
-**Koncové body OmniRoute:** `/api/v1/agents/tasks/*` (životný cyklus) + `/api/cloud/*` (infraštruktúra)
-**Zdroj:** `src/lib/cloudAgent/`
-
-### Čo to je
-
-Jednotné rozhranie pre cloudových programátorských agentov tretích strán. Odošlete zadanie + adresu URL repozitára, OmniRoute ho odošle správnemu cloudovému agentovi, pravidelne zisťuje stav a vráti výsledky.
-
-### Podporovaní agenti (3, všetci potvrdení v `src/lib/cloudAgent/agents/`)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Životný cyklus
-
-```
-POST /api/v1/agents/tasks
-  → BaseAgent.createTask() pre každú triedu agenta
-  → externá služba začne pracovať
-  → v databáze sa vytvorí riadok úlohy (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → odložená synchronizácia stavu od poskytovateľa
-  → vráti aktuálny stav + plán + denník aktivity
-  ↓
-POST /api/v1/agents/tasks/[id]   (akcia: "approve" | "message" | "cancel")
-  → odošle požiadavku poskytovateľovi (alebo ju lokálne označí ako zrušenú)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → lokálne zrušenie
-```
-
-### Overenie
-
-⚠️ **Všetky koncové body `/api/v1/agents/tasks/*` vyžadujú overenie správy** (commit `588a0333`). Volajúci používajúci iba token Bearer dostanú od verzie v3.8.0 odpoveď 401.
-
-### Podrobnosti
-
-Podrobnosti o kontrakte `CloudAgentBase`, špecifikách jednotlivých agentov, schémach a koncových bodoch infraštruktúry prihlasovacích údajov nájdete v dokumente [CLOUD_AGENT.md](./CLOUD_AGENT.md).
-
-## Porovnanie: A2A vs. cloudoví agenti
-
-Oba podporujú „dlhotrvajúce úlohy“, ale na rôznych vrstvách:
-
-| Aspekt                 | A2A                                                                                                      | Cloudoví agenti                                    |
-| ---------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| Štandard               | Open A2A v0.3                                                                                            | Špecifický pre OmniRoute                           |
-| Kde prebiehajú výpočty | V rámci OmniRoute (používa nakonfigurované kombinácie)                                                   | Externe (servery Codex / Devin / Jules)            |
-| Trvanie úlohy          | Predvolené TTL 5 min (konfigurovateľné v `TaskManager`)                                                  | Minúty až hodiny                                   |
-| Znalosť repozitára     | Nie (odovzdáva iba prompty)                                                                              | Áno (URL repozitára + vetva)                       |
-| Prípad použitia        | Spolupráca medzi agentmi, inteligentné smerovanie ako služba                                             | Delegovanie „implementuj funkciu X v repozitári Y“ |
-| Autentifikácia         | Voliteľný `OMNIROUTE_API_KEY` pre `/a2a`; správcovské oprávnenia pre pomocné REST rozhrania `/api/a2a/*` | Vždy správcovské oprávnenia                        |
-
 ## Príklady integrácie
-
-### Zistenie možností A2A služby OmniRoute
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Vráti kartu agenta so všetkými 6 schopnosťami, prenosmi a verziou.
-
-### Volanie OmniRoute ako agenta A2A
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Smeruj tento prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### Zobrazenie zoznamu nainštalovaných agentov CLI prostredníctvom ACP
 
@@ -229,30 +103,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Odoslanie úlohy cloudovému agentovi
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implementuj funkciu X v repozitári Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Kontrola stavu cloudovej úlohy
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## Kedy čo použiť
 
 - **Frontend chatbota / kopilota** → `/v1/chat/completions` (kompatibilné s OpenAI — nejde o protokol agenta)
@@ -264,7 +114,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   Jadro OmniRoute   │
+                │   Jadro 67router   │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐
@@ -283,8 +133,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## Pozrite tiež
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — podrobný prehľad A2A
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — podrobný prehľad cloudových agentov
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — externé integrácie CLI (používajú ACP)
 - [SKILLS.md](./SKILLS.md) — rámec zručností (odlišný od zručností A2A — lokálny sandbox na vykonávanie)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — referencia koncových bodov

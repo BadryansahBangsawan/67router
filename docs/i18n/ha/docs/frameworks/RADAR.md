@@ -41,7 +41,7 @@ ko haɗin waje yana samuwa a halin yanzu ba.
 | Tayin masu tallafawa                  | An aiwatar da shi a matsayin bayanai masu sa hannu na daban, na kai-tsaye kawai, da kuma shafin dashboard. Abokin hulɗar yana sake tabbatar da rufaffen tsarin bayanan fa’ida, yana adana ingantacciyar ma’ajiya ta ƙarshe, yana tace shigarwar da wa’adinsu ya ƙare, kuma yana yi wa tayin abokan hulɗa lakabi a sarari. |
 | Bayanan nazari da gane masu tallafawa | An aiwatar da shi a matsayin tsauraran bayanai masu sa hannu na kai-tsaye kawai, tare da ELO mallakin Radar, sabuntar kasida/salon sauyi bisa hujjoji, tambarin mai tallafawa na gida da aka tabbatar, shafin dashboard, da umarnin matsayi/aiki tare na CLI na gida kawai.                                               |
 | Biyan kuɗi da imel na mu’amala        | Ba a aiwatar da su a cikin abokin hulɗar OSS ba. Saye, gudummawa, nazarin rasit, dawo da dama, da isar da saƙo suna ƙarƙashin sabis mai zaman kansa; samuwar sabis ɗin da aka saukar har yanzu tana dogaro da turawar sa da ake sa ido a kai da kuma saitunan mai samarwa.                                                |
-| Aikin wakilin bincike                 | Ba ya cikin wannan sakin abokin hulɗar. Abubuwan da aka tace na bayanai suna ci gaba da kasancewa bayanan ɓangaren uwar garke; babu wakilin bincike mai cin gashin kansa da ke aiki a cikin shigarwar OmniRoute.                                                                                                          |
+| Aikin wakilin bincike                 | Ba ya cikin wannan sakin abokin hulɗar. Abubuwan da aka tace na bayanai suna ci gaba da kasancewa bayanan ɓangaren uwar garke; babu wakilin bincike mai cin gashin kansa da ke aiki a cikin shigarwar 67router.                                                                                                           |
 
 ---
 
@@ -119,7 +119,7 @@ Lokacin da dukansu suke kunne, hanyar sync ita ce:
    mai sauyawa kullum domin duba cin zarafi da hannu; waɗannan tables ba sa adana key ko IP a ɗanyen tsari.
    Logs na samun damar ababen more rayuwa da encrypted delivery outbox iyakokin aiki ne
    daban-daban.
-3. OmniRoute ba ya taɓa aika prompts, responses, conversations, provider credentials, model traffic,
+3. 67router ba ya taɓa aika prompts, responses, conversations, provider credentials, model traffic,
    uptime, latency, ko tsarin provider na gida zuwa service na Radar.
 4. Ana tabbatar da response, a duba ingancinsa, sannan a adana shi a cache na gida (duba
    [Tsarin tsaro](#security-model)). Radar yana da hanyoyin hanyar sadarwa guda huɗu kacal a server-side:
@@ -243,13 +243,13 @@ da ke da maɓalli tuni yake kunna shi.
 ### Kunnawa daga farko zuwa ƙarshe da saitawa mai jagoranci
 
 Sabis ɗin feed mai zaman kansa da wannan abokin cinikin OSS suna da iyaka ƙunƙuntacciya da aka tsara da gangan: sabis ɗin
-yana bayarwa kuma yana tabbatar da maɓallin mai tallafawa, yayin da girkin OmniRoute na cikin gida yake rufe maɓallin,
+yana bayarwa kuma yana tabbatar da maɓallin mai tallafawa, yayin da girkin 67router na cikin gida yake rufe maɓallin,
 yana daidaita kayan aikin da aka sanya wa hannu a ɓangaren saba, kuma yana jagorantar saitin mai samarwa. Tsarin tabbatarwa mai taimako shi ne:
 
 1. Sami sabon maɓalli da aka bayar ko aka dawo da shi daga da'awar mai ba da gudummawa, plans/checkout, tsarin
    dawo da maɓalli, ko daga mai gudanar da sabar sirri mai izini. Kada a liƙa maɓallin kai tsaye cikin rajistan ayyuka,
    hotunan allo, sharhin matsala, ko hujjojin layin umarni.
-2. Kunna tutar fasalin `RADAR_ENABLED` a kan shigarwar OmniRoute ta gida. Wannan yana bayyana UI
+2. Kunna tutar fasalin `RADAR_ENABLED` a kan shigarwar 67router ta gida. Wannan yana bayyana UI
    amma ba ya yin hulɗa da hanyar sadarwa har sai an adana amincewar shiga ta daban.
 3. Buɗe `/dashboard/radar`, liƙa maɓallin, sannan a kunna. Burauzar za ta aika `POST /api/radar/settings`
    guda ɗaya na gida mai `{ optIn: true, supporterKey }`; ana ɓoye maɓallin da sirri a gida kuma
@@ -314,7 +314,7 @@ an sake sync ɗinsu.
 ### Sauye-sauyen env masu sauƙaƙa forks
 
 Env vars guda biyu suna bai wa forks da masu self-hosting damar sa client ya yi amfani da nasu feed maimakon
-tsohuwar sabis ɗin OmniRoute — duba
+tsohuwar sabis ɗin 67router — duba
 [Yadda ake self-hosting na feed](#how-to-self-host-a-feed) a ƙasa:
 
 | Var                 | Manufa                                                                                                                                |
@@ -467,7 +467,7 @@ Dashboard yana samar da ayyukan gida guda huɗu:
 Wallafar kundin suna amfani da `schemaVersion: 2`. `contextWindow` da kowane ɗaya daga `tools`, `vision`, da
 `thinking` suna zaman kansu a matsayin `number | null` / `boolean | null`: `null` yana nufin ba a sani ba, yayin da
 `false` ke nufin wata majiyar provider ta hukuma da D16 ya tabbatar ta bayyana a sarari cewa babu wannan damar.
-Ba a taɓa ɗaga flags na registry/model-spec na cikin OmniRoute kai tsaye zuwa matsayin hujjojin feed ba. Har yanzu abokin hulɗa
+Ba a taɓa ɗaga flags na registry/model-spec na cikin 67router kai tsaye zuwa matsayin hujjojin feed ba. Har yanzu abokin hulɗa
 yana karɓar snapshots na v1; saboda tsohon builder ya yi amfani da `false` a matsayin madadin rashin ƙima, ana daidaita `false` na v1
 zuwa ba a sani ba, yayin da `true` na v1 ke ci gaba da zama tabbatacciyar hujja. Sigogin schema da ba a sani ba suna gaza cikin tsaro kuma
 cache na ƙarshe mai inganci yana ci gaba da samuwa. Kowane model na v2 mai context/capability da ba null ba dole ne ya ɗauki
@@ -528,7 +528,7 @@ Rukunin hanyoyin Radar na gida da ke ƙasa suna tallafa wa UI da ke ƙarƙashin 
 | `/api/radar/local-model-state` | DELETE | Yana share filayen maye-gurbi da za a iya gyarawa yayin da yake adana duk wata alamar gogewa.                                                      |
 
 **Ƙa'ida mai tsauri: waɗannan hanyoyin ba su taɓa wakiltar sabis ɗin feed ba.** Burauzar tana magana ne kawai
-da sabar OmniRoute ta gida. Kayayyaki huɗu da ke mu'amala da sabis ɗin Radar su ne
+da sabar 67router ta gida. Kayayyaki huɗu da ke mu'amala da sabis ɗin Radar su ne
 `src/lib/radar/sync.ts` (kundin), `src/lib/radar/referralsSync.ts` (turawa), da
 `src/lib/radar/offersSync.ts` (tayi) tare da `src/lib/radar/intelSync.ts` (Intel); dukkansu suna aiki
 a gefen sabar, ba a gefen abokin ciniki ba. Wannan yana hana
@@ -570,7 +570,7 @@ Intel artifact ne mai sa hannu a `GET /v1/intel/latest`. Rufaffen `RadarIntelFee
 
 `syncRadarIntel()` yana amfani da Bearer na ɓangaren uwar garken iri ɗaya, timeout na daƙiƙa 30, iyakar streamed ta 10 MiB, tabbatar da Ed25519 kan ainihin bytes, tsauraran schema, buƙatar `live` a jiki/header, mafi ƙarancin siga, da kiyaye cache na ƙarshe mai kyau kamar tayoyi. Bayan an adana tabbataccen snapshot na live, abokin ciniki yana samar da `radar:<sha256(supporter key)>`, yana adana wannan ainihi na hanya-ɗaya kawai, kuma yana fitar da keɓaɓɓen taron ganewa na `radar_supporter`. Bajinsa na `radar-supporter` ba ya haifar da kwafi kuma yana bayar da sifilin XP; ba ya taɓa sabunta leaderboards ko sake amfani da `token_share`. `/dashboard/radar/intel` yana nuna bajin ne kawai daga tabbatattun metadata na cache na cikin gida.
 
-CLI yana samar da `omniroute radar status` da `omniroute radar sync`. Dukansu suna sadarwa ne kawai da OmniRoute API na cikin gida. `status` yana yin `GET /api/radar/status` na karatu kawai; `sync` yana aika `POST /api/radar/sync-all` guda ɗaya kuma yana buga sakamako ga kowane feed. Babu ɗayan commands ɗin da ke karantawa, karɓa, ko buga maɓallin mai tallafawa, kuma babu wanda ke tuntuɓar sabis na Radar kai tsaye.
+CLI yana samar da `omniroute radar status` da `omniroute radar sync`. Dukansu suna sadarwa ne kawai da 67router API na cikin gida. `status` yana yin `GET /api/radar/status` na karatu kawai; `sync` yana aika `POST /api/radar/sync-all` guda ɗaya kuma yana buga sakamako ga kowane feed. Babu ɗayan commands ɗin da ke karantawa, karɓa, ko buga maɓallin mai tallafawa, kuma babu wanda ke tuntuɓar sabis na Radar kai tsaye.
 
 ---
 

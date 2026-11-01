@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort sagt**: OmniRoutes komprimeringsmotor är **utbyggbar** — du kan registrera anpassade motorer, leverera språkpaket för nya språk och sätta samman staplade pipelines. Den här guiden visar hur.
+> **Kort sagt**: 67routers komprimeringsmotor är **utbyggbar** — du kan registrera anpassade motorer, leverera språkpaket för nya språk och sätta samman staplade pipelines. Den här guiden visar hur.
 
 **Relaterade guider:**
 
@@ -202,27 +202,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projektnivå (läses in vid start)
 ```
 
-Eller läs in dem programmatiskt från ett plugin:
+Or register it programmatically at startup:
 
 ```ts
-// I ditt plugin
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Plugin-SDK:t tillhandahåller hakarna onRequest / onResponse / onError. Registrera
-  // motorn när pluginmodulen läses in (eller vid första onRequest); avregistrera den
-  // via din egen nedstängningsrutin.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Vid nedstängning:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -235,7 +226,7 @@ i strategiväljaren via sitt `id`. Testa integrationen genom att infoga den i en
 
 ## Skapa språkpaket
 
-Komprimering i grottmänniskostil använder **språkspecifika regelpaket** för att hantera utfyllnadsord, garderingar och omständliga formuleringar i varje naturligt språk. OmniRoute levereras med **6 språkpaket**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Komprimering i grottmänniskostil använder **språkspecifika regelpaket** för att hantera utfyllnadsord, garderingar och omständliga formuleringar i varje naturligt språk. 67router levereras med **6 språkpaket**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paketstruktur
 
@@ -394,7 +385,7 @@ Utdata från motor N blir indata till motor N+1.
 
 ### Komprimeringslägen
 
-OmniRoute väljer **ETT läge per begäran** baserat på konfiguration, tröskelvärden för automatisk aktivering och kombinationsåsidosättningar.
+67router väljer **ETT läge per begäran** baserat på konfiguration, tröskelvärden för automatisk aktivering och kombinationsåsidosättningar.
 De tillgängliga lägena definieras i `open-sse/services/compression/types.ts` (typen `CompressionMode`):
 
 | Läge         | Motorer              | Användningsområde                                                                                                                                                                                                                     |
@@ -514,10 +505,10 @@ Om du vill styra den via konfigurationen anger du `mode: "stacked"` och tillhand
 
 ## Policy för synkronisering med uppströmsprojekt
 
-OmniRoutes komprimeringsmotorer hänvisar till flera uppströmsprojekt i README
+67routers komprimeringsmotorer hänvisar till flera uppströmsprojekt i README
 ("inspirerad av RTK, Caveman, LLMLingua-2, Troglodita"). En vanlig fråga från
 bidragsgivare är: **när RTK uppströms lägger till ett nytt verktygsfilter eller Caveman lägger till ett
-regelpaket, hur når det OmniRoute?** Det här avsnittet är det auktoritativa svaret.
+regelpaket, hur når det 67router?** Det här avsnittet är det auktoritativa svaret.
 
 ### Levererade kopior jämfört med oberoende implementationer
 
@@ -538,7 +529,7 @@ uppströmskopia att köra `git pull` från – vilket är precis varför README 
 Det finns **ingen automatiserad spårning av uppströmsversioner och ingen etikett
 `compression-sync`** – avsiktligt. Eftersom motorerna är nyimplementationer
 införlivas inte ett RTK-filter eller Caveman-regelpaket från uppströmsprojektet som kod; det
-**omformuleras som en ny regel/ett nytt filter i OmniRoutes eget format** (se
+**omformuleras som en ny regel/ett nytt filter i 67routers eget format** (se
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) och läggs till från fall till fall via
 en vanlig PR. Utökningspunkterna ovan (anpassad motor, språkpaket, RTK-filter)
 är de godkända sätten att bidra med en sådan förbättring.
@@ -552,14 +543,14 @@ Nya exempel på exakt detta flöde:
 ### Headroom (proxy för indatakomprimering)
 
 Headroom är **helt intern** – en fastnålad, levererad ögonblicksbild av `gcf`-kodeken samt
-OmniRoutes egna lager `smartcrusher` / `toon` / `tabular`. Det finns inget aktivt
+67routers egna lager `smartcrusher` / `toon` / `tabular`. Det finns inget aktivt
 uppströmsprojekt att följa utöver den levererade kopian; uppdateringar av `gcf` hämtas
 manuellt när kodeken ändras och valideras på nytt mot kontrollen av komprimeringsbudgeten
 (`check:compression-budget`).
 
 ### Föreslå en förbättring inspirerad av ett uppströmsprojekt
 
-1. **Leverera ingen kopia** – omformulera uppströmsregeln/-filtret i OmniRoutes format.
+1. **Leverera ingen kopia** – omformulera uppströmsregeln/-filtret i 67routers format.
 2. Lägg till den via motsvarande utökningspunkt nedan (språkpaket, RTK-filter eller
    anpassad motor).
 3. Hänvisa till uppströmsprojektet i PR-beskrivningen (erkännande), inte genom att

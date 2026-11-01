@@ -2,7 +2,6 @@ import initializeCloudSync from "@/shared/services/initializeCloudSync";
 import { startModelSyncScheduler } from "@/shared/services/modelSyncScheduler";
 import { isAutomatedTestProcess } from "@/shared/utils/testProcess";
 import { getJobRegistry } from "@/lib/jobRegistry";
-import { registerBudgetResetJob } from "@/lib/jobs/budgetResetJob";
 import { registerTokenHealthCheck } from "@/lib/jobs/tokenHealthCheckJob";
 import { registerLogExportJob } from "@/lib/jobs/logExportJob";
 import { backfillVolcPlanAutoSync } from "@/lib/providers/volcPlanAutoSyncBackfill";
@@ -37,12 +36,9 @@ export async function ensureCloudSyncInitialized() {
       startModelSyncScheduler();
 
       // startAll() runs each interval job's first tick synchronously, so it has to
-      // come after initializeCloudSync(). The old wiring got that ordering two
-      // different ways: the budget reset was started right here, and the health
-      // check's first sweep sat behind a 10s timer. Awaiting the init is a firmer
-      // guarantee than the timer was.
+      // come after initializeCloudSync(). The health check's first sweep used to sit
+      // behind a 10s timer; awaiting the init is a firmer guarantee than the timer was.
       const registry = getJobRegistry();
-      registerBudgetResetJob(registry);
       registerTokenHealthCheck(registry);
       registerLogExportJob(registry);
       await registry.startAll();

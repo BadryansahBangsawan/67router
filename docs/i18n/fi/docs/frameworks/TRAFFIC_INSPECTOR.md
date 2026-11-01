@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector on OmniRouten sisäänrakennettu HTTPS-liikenteen vianmääritystyökalu — Charles Proxya / mitmwebiä / HTTP Toolkitia muistuttava työkalu, joka on **LLM-tietoinen** ja **agenttitietoinen**. Se sijaitsee osoitteessa `/dashboard/tools/traffic-inspector` ja vastaanottaa reaaliaikaista liikennettä enintään viidestä samanaikaisesta kaappauslähteestä.
+Traffic Inspector on 67routerin sisäänrakennettu HTTPS-liikenteen vianmääritystyökalu — Charles Proxya / mitmwebiä / HTTP Toolkitia muistuttava työkalu, joka on **LLM-tietoinen** ja **agenttitietoinen**. Se sijaitsee osoitteessa `/dashboard/tools/traffic-inspector` ja vastaanottaa reaaliaikaista liikennettä enintään viidestä samanaikaisesta kaappauslähteestä.
 
 **Sijainti hallintapaneelissa:** `/dashboard/tools/traffic-inspector`
 **Sivupalkin ryhmä:** Työkalut (AgentBridgen jälkeen)
@@ -16,21 +16,21 @@ Traffic Inspector on OmniRouten sisäänrakennettu HTTPS-liikenteen vianmäärit
 
 ### Mikä tekee Traffic Inspectorista ainutlaatuisen
 
-| Ominaisuus                                                                           |  mitmweb   | Charles |  Fiddler   | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------------ | :--------: | :-----: | :--------: | :-----------------------------: |
-| Verkkopohjainen                                                                      |     ✓      |    ✗    |     ✗      |                ✓                |
-| Avoimen lähdekoodin                                                                  |     ✓      |    ✗    | osittainen |                ✓                |
-| **Agenttitietoinen** (tunnistaa, onko pyyntö Antigravitysta/Copilotista/jne.)        |     ✗      |    ✗    |     ✗      |                ✓                |
-| **LLM-tietoinen** (jäsentää OpenAI-/Anthropic-/Gemini-rakenteen, tokenit ja mallin)  |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Mallikohdistus näkyvissä** (gemini-3-flash → claude-sonnet-4.7)                    |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Välityspalvelimen ja ylävirran viiveiden erittely**                                | osittainen |    ✗    |     ✗      |                ✓                |
-| **Integroitu OmniRouten** reititykseen, varamenettelyihin ja kustannuksiin           |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Järjestelmänlaajuinen välityspalvelinvianmääritys** (mikä tahansa koneen sovellus) |     ✓      |    ✓    |     ✓      |                ✓                |
-| **Mukautettujen isäntien kaappaus** (isäntäkohtainen DNS-uudelleenohjaus)            |     ✓      |    ✓    |     ✓      |                ✓                |
-| **HTTP_PROXY-ympäristömuuttujatila**                                                 |     ✓      |    ✓    |     ✓      |                ✓                |
-| **Keskustelunäkymä** (monikierroksiset kuplat, tool_use/tool_result)                 |     ✗      |    ✗    |     ✗      |                ✓                |
-| **SSE-virran yhdistäjä** (rekonstruoi delta-tapahtumista)                            |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Istunnon tallennus** (nimettävissä, vietävissä .har/.jsonl-muodossa)               |     ✗      |    ✓    |     ✓      |                ✓                |
+| Ominaisuus                                                                           |  mitmweb   | Charles |  Fiddler   | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------------ | :--------: | :-----: | :--------: | :----------------------------: |
+| Verkkopohjainen                                                                      |     ✓      |    ✗    |     ✗      |               ✓                |
+| Avoimen lähdekoodin                                                                  |     ✓      |    ✗    | osittainen |               ✓                |
+| **Agenttitietoinen** (tunnistaa, onko pyyntö Antigravitysta/Copilotista/jne.)        |     ✗      |    ✗    |     ✗      |               ✓                |
+| **LLM-tietoinen** (jäsentää OpenAI-/Anthropic-/Gemini-rakenteen, tokenit ja mallin)  |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Mallikohdistus näkyvissä** (gemini-3-flash → claude-sonnet-4.7)                    |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Välityspalvelimen ja ylävirran viiveiden erittely**                                | osittainen |    ✗    |     ✗      |               ✓                |
+| **Integroitu 67routerin** reititykseen, varamenettelyihin ja kustannuksiin           |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Järjestelmänlaajuinen välityspalvelinvianmääritys** (mikä tahansa koneen sovellus) |     ✓      |    ✓    |     ✓      |               ✓                |
+| **Mukautettujen isäntien kaappaus** (isäntäkohtainen DNS-uudelleenohjaus)            |     ✓      |    ✓    |     ✓      |               ✓                |
+| **HTTP_PROXY-ympäristömuuttujatila**                                                 |     ✓      |    ✓    |     ✓      |               ✓                |
+| **Keskustelunäkymä** (monikierroksiset kuplat, tool_use/tool_result)                 |     ✗      |    ✗    |     ✗      |               ✓                |
+| **SSE-virran yhdistäjä** (rekonstruoi delta-tapahtumista)                            |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Istunnon tallennus** (nimettävissä, vietävissä .har/.jsonl-muodossa)               |     ✗      |    ✓    |     ✓      |               ✓                |
 
 ### Arkkitehtuuri yhdessä kappaleessa
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, jos vastaus on SSE
   mappedTo: string | null; // x-omniroute-mapped-otsake
-  costEstimateUsd: number | null; // OmniRoute-hinnoitteluun perustuva arvioitu kustannus
+  costEstimateUsd: number | null; // 67router-hinnoitteluun perustuva arvioitu kustannus
 }
 ```
 
@@ -394,7 +394,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Järjestelmän välityspalvelinasetuksia ei palautettu
 
-Jos OmniRoute kaatuu järjestelmänlaajuisen välityspalvelintilan ollessa käytössä:
+Jos 67router kaatuu järjestelmänlaajuisen välityspalvelintilan ollessa käytössä:
 
 **macOS:**
 
@@ -439,7 +439,7 @@ Peruspolku: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Listaa pyynnöt (suodatettavissa: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Yksittäisen pyynnön tiedot                                                               |
 | DELETE | `/requests`                 | Tyhjennä muistissa oleva puskuri                                                         |
-| POST   | `/requests/{id}/replay`     | Suorita sama pyyntö uudelleen OmniRoute-reitittimen kautta                               |
+| POST   | `/requests/{id}/replay`     | Suorita sama pyyntö uudelleen 67router-reitittimen kautta                                |
 | PUT    | `/requests/{id}/annotation` | Tallenna pyyntöön liittyvä huomautus tai päivitä sitä                                    |
 
 ### WebSocket

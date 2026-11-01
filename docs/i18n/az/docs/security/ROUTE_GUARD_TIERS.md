@@ -6,7 +6,7 @@
 
 ## Ümumi baxış
 
-Bütün OmniRoute idarəetmə API marşrutları üç qoruma səviyyəsindən birinə aid edilir. Təsnifat statikdir, `src/server/authz/routeGuard.ts` faylında müəyyən edilir və hər hansı digər autentifikasiya şaxəsi işə düşməzdən əvvəl qiymətləndirilir.
+Bütün 67router idarəetmə API marşrutları üç qoruma səviyyəsindən birinə aid edilir. Təsnifat statikdir, `src/server/authz/routeGuard.ts` faylında müəyyən edilir və hər hansı digər autentifikasiya şaxəsi işə düşməzdən əvvəl qiymətləndirilir.
 
 ## Səviyyələr
 
@@ -17,7 +17,7 @@ Bütün OmniRoute idarəetmə API marşrutları üç qoruma səviyyəsindən bir
 
 Bu marşrutlar alt proseslər yaradır və ya icra mühiti kodunu işə salır. Onları geri döngə olmayan trafik üçün əlçatan etmək etibarlı JWT əldə etmiş hücumçuya (məsələn, Cloudflared/Ngrok tuneli vasitəsilə) proseslərin yaradılmasını başladmağa imkan verərdi — bu, məlum CVE sinfidir ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 
-**GHSA-fhh6-4qxv-rpqj nədir (hücum sinfi):** idarəetmə/agent serveri alt prosesi (`npm install`, `node`, brauzer, proksi, `git`, `tar`, …) işə salan son nöqtəni əlçatan edir. Əgər həmin son nöqtəyə host xaricindən daxil olmaq mümkündürsə — məsələn, operator OmniRoute-u nginx/Cloudflare/Tailscale tunelinin arxasına yerləşdirib və JWT sızıbsa və ya autentifikasiya yanlış konfiqurasiya edilibsə — hücumçu «API-ni çağırmağı» «hostda əmr icra etməyə» (uzaqdan kod icrası) çevirir. OmniRoute hər bir proses yarada bilən marşrutda **hər hansı autentifikasiya yoxlamasından əvvəl, qeyd-şərtsiz geri döngə hostu yoxlamasını tətbiq etməklə** bunun qarşısını alır: tunel vasitəsilə sızmış token belə proses yaratma funksiyasına çata bilmir.
+**GHSA-fhh6-4qxv-rpqj nədir (hücum sinfi):** idarəetmə/agent serveri alt prosesi (`npm install`, `node`, brauzer, proksi, `git`, `tar`, …) işə salan son nöqtəni əlçatan edir. Əgər həmin son nöqtəyə host xaricindən daxil olmaq mümkündürsə — məsələn, operator 67router-u nginx/Cloudflare/Tailscale tunelinin arxasına yerləşdirib və JWT sızıbsa və ya autentifikasiya yanlış konfiqurasiya edilibsə — hücumçu «API-ni çağırmağı» «hostda əmr icra etməyə» (uzaqdan kod icrası) çevirir. 67router hər bir proses yarada bilən marşrutda **hər hansı autentifikasiya yoxlamasından əvvəl, qeyd-şərtsiz geri döngə hostu yoxlamasını tətbiq etməklə** bunun qarşısını alır: tunel vasitəsilə sızmış token belə proses yaratma funksiyasına çata bilmir.
 
 **Tam LOCAL_ONLY dəsti.** Səlahiyyətli mənbə `src/server/authz/routeGuard.ts` daxilindəki `LOCAL_ONLY_API_PREFIXES` / `LOCAL_ONLY_API_PATTERNS`-dır; aşağıdakı cədvəl cari vəziyyəti əks etdirir. `check-route-guard-membership` keçidi proses yarada bilən prefikslərin altındakı hər bir `route.ts` faylını sadalayır və onlardan hər hansı biri yalnız lokal kimi təsnif edilməyibsə, CI yoxlaması uğursuz olur.
 
@@ -39,7 +39,6 @@ Bu marşrutlar alt proseslər yaradır və ya icra mühiti kodunu işə salır. 
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy dinləyicisi + sistem proksisi                                                     |
 | `/api/settings/mitm`                                                                                     | MITM ələkeçirməsini aktivləşdirir (sistem səviyyəli proksi vəziyyəti)                                            |
 | `/api/issue-agent/`                                                                                      | Tapşırıq agenti — repozitoriya üzərində lokal alətləri işə salır                                                 |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plaginlər — `worker_threads` + `child_process` vasitəsilə yükləyir/icra edir                                     |
 | `/api/middleware/`                                                                                       | İstifadəçi ara proqramı — operator kodunu proses daxilində yükləyir/icra edir                                    |
 | `/api/system/version`                                                                                    | Avtomatik yeniləmə (yalnız POST; GET/HEAD/OPTIONS istisnadır) — `git checkout` + `npm install` işə salır         |
 | `/api/db-backups/exportAll`                                                                              | Eksport arxivi üçün `tar` işə salır                                                                              |
@@ -100,7 +99,7 @@ ehtiyacı olmamalı olan yalnız uzaq MCP çağırıcıları üçün daha aşağ
 
 #### Operator üçün təlimat və audit
 
-OmniRoute-u əks proksi və ya tunel (nginx, Caddy, Cloudflare
+67router-u əks proksi və ya tunel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) arxasında işlədirsinizsə, loopback yoxlaması yenə də yuxarıdakı
 proses işə sala bilən marşrutları qoruyur — müştəri ünvanı loopback olmayan sorğu
 **autentifikasiya işə düşməzdən əvvəl** `403 LOCAL_ONLY` ilə rədd edilir, buna görə sızdırılmış
@@ -144,7 +143,7 @@ JWT proses işə salınmasına çata bilməz. Operatorun iki məsuliyyəti qalı
   ünvanı ilə birlikdə axtarın. `403 LOCAL_ONLY` əvəzinə `200` qaytaran hər hansı
   belə sorğu proksinin həqiqi müştəri IP-sini gizlətdiyini göstərir — proksini
   düzəldin.
-- Bu yollardan biri üçün OmniRoute jurnallarındakı `403 LOCAL_ONLY` aradan
+- Bu yollardan biri üçün 67router jurnallarındakı `403 LOCAL_ONLY` aradan
   qaldırılmalı xəta deyil, qoruyucu mexanizmin nəzərdə tutulduğu kimi işləməsidir.
 
 #### Çağırış nöqtəsində yoxlama şlüzü olan uzaqdan əlçatan marşrutlar

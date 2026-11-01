@@ -1,19 +1,19 @@
-# OmniRoute Codebase Documentation (中文 (繁體))
+# 67router Codebase Documentation (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/CODEBASE_DOCUMENTATION.md) · 🇪🇹 [am](../../../am/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇸🇦 [ar](../../../ar/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇦🇿 [az](../../../az/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇧🇬 [bg](../../../bg/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇧🇩 [bn](../../../bn/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇧🇦 [bs](../../../bs/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇨🇿 [cs](../../../cs/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇩🇰 [da](../../../da/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇩🇪 [de](../../../de/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇬🇷 [el](../../../el/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇪🇸 [es](../../../es/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇪🇪 [et](../../../et/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇷 [fa](../../../fa/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇫🇮 [fi](../../../fi/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇫🇷 [fr](../../../fr/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇪 [ga](../../../ga/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [gu](../../../gu/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇳🇬 [ha](../../../ha/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇱 [he](../../../he/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [hi](../../../hi/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇭🇷 [hr](../../../hr/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇭🇺 [hu](../../../hu/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇦🇲 [hy](../../../hy/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇩 [id](../../../id/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇳🇬 [ig](../../../ig/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇹 [it](../../../it/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇯🇵 [ja](../../../ja/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇬🇪 [ka](../../../ka/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇰🇭 [km](../../../km/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [kn](../../../kn/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇰🇷 [ko](../../../ko/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇱🇹 [lt](../../../lt/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇱🇻 [lv](../../../lv/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [ml](../../../ml/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [mr](../../../mr/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇲🇾 [ms](../../../ms/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇲🇹 [mt](../../../mt/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇲🇲 [my](../../../my/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇳🇵 [ne](../../../ne/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇳🇱 [nl](../../../nl/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇳🇴 [no](../../../no/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [or](../../../or/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [pa](../../../pa/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇵🇭 [phi](../../../phi/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇵🇱 [pl](../../../pl/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇵🇹 [pt](../../../pt/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇷🇴 [ro](../../../ro/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇷🇺 [ru](../../../ru/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇱🇰 [si](../../../si/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇸🇰 [sk](../../../sk/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇸🇮 [sl](../../../sl/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇷🇸 [sr](../../../sr/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇸🇪 [sv](../../../sv/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇰🇪 [sw](../../../sw/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [ta](../../../ta/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇮🇳 [te](../../../te/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇹🇭 [th](../../../th/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇹🇷 [tr](../../../tr/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇵🇰 [ur](../../../ur/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇺🇿 [uz](../../../uz/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇻🇳 [vi](../../../vi/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇳🇬 [yo](../../../yo/docs/architecture/CODEBASE_DOCUMENTATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/CODEBASE_DOCUMENTATION.md)
 
 ---
 
-title: "OmniRoute 程式碼基礎文件"
+title: "67router 程式碼基礎文件"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute 程式碼基礎文件
+# 67router 程式碼基礎文件
 
 > **版本：** v3.8.0
 > **最後更新：** 2026-06-28
-> **讀者對象：** 為 OmniRoute 貢獻程式碼或在其之上建立整合的工程師。
+> **讀者對象：** 為 67router 貢獻程式碼或在其之上建立整合的工程師。
 >
 > 如需高階架構圖表及各子系統背後的設計理念，請參閱 [ARCHITECTURE.md](./ARCHITECTURE.md)。如需深入了解各子系統（Auto Combo、MCP 伺服器、A2A 伺服器、技能、記憶體、雲端代理、韌性、壓縮等），請參閱 `docs/` 目錄中的對應文件。
 
@@ -92,179 +92,6 @@ src/
 └── proxy.ts              頂層代理啟動輔助工具
 ```
 
-### 3.1 `src/app/` — App Router
-
-App Router 同時提供儀表板 UI 與公開／管理 HTTP API。
-此處**沒有全域中介軟體**——攔截作業是在各路由中執行。
-
-`src/app/` 下的頂層區段：
-
-| 路徑                                                                          | 用途                                 |
-| ----------------------------------------------------------------------------- | ------------------------------------ |
-| `api/`                                                                        | 所有 HTTP API 路由（細分如下）       |
-| `a2a/`                                                                        | A2A JSON-RPC 2.0 端點（`POST /a2a`） |
-| `.well-known/agent.json/`                                                     | A2A Agent Card 探索文件              |
-| `(dashboard)/`                                                                | 儀表板 UI（路由群組，無 URL 前綴）   |
-| `auth/`, `login/`, `forgot-password/`, `callback/`                            | 驗證流程                             |
-| `landing/`                                                                    | 行銷／登陸頁面                       |
-| `docs/`                                                                       | 內嵌 API 文件檢視器                  |
-| `status/`, `maintenance/`, `offline/`                                         | 維運頁面                             |
-| `privacy/`, `terms/`                                                          | 法律頁面                             |
-| `400/`, `401/`, `403/`, `408/`, `429/`, `500/`, `502/`, `503/`                | 靜態錯誤頁面                         |
-| `error.tsx`, `global-error.tsx`, `not-found.tsx`, `forbidden/`, `loading.tsx` | 框架錯誤／載入邊界                   |
-| `layout.tsx`, `page.tsx`, `globals.css`, `manifest.ts`                        | 根層殼架                             |
-
-#### 3.1.1 `src/app/(dashboard)/dashboard/` — UI 頁面
-
-`agents`、`analytics`、`api-manager`、`audit`、`auto-combo`、`batch`、`cache`、
-`changelog`、`cli-tools`、`cloud-agents`、`combos`、`compression`、`context`、
-`costs`、`endpoint`、`health`、`limits`、`logs`、`memory`、`onboarding`、
-`playground`、`providers`、`search-tools`、`settings`、`skills`、`system`、
-`translator`、`usage`、`webhooks`，以及根層的 `page.tsx`、`HomePageClient.tsx`、
-`BootstrapBanner.tsx`。
-
-#### 3.1.2 `src/app/api/` — 頂層 API 群組
-
-```
-src/app/api/
-├── a2a/{status, tasks}
-├── acp/
-├── admin/
-├── analytics/
-├── assess/
-├── auth/
-├── batches/
-├── cache/
-├── cli-tools/
-├── cloud/{codex-responses-ws}
-├── combos/
-├── compliance/
-├── compression/
-├── context/
-├── db/, db-backups/
-├── evals/
-├── fallback/
-├── files/
-├── health/
-├── init/
-├── internal/{concurrency}
-├── keys/
-├── logs/
-├── mcp/{audit, sse, status, stream, tools}
-├── memory/{health, [id]/, route.ts}
-├── model-combo-mappings/
-├── models/
-├── monitoring/
-├── oauth/
-├── openapi/
-├── policies/
-├── pricing/
-├── provider-metrics/, provider-models/, provider-nodes/
-├── providers/
-├── rate-limit/, rate-limits/
-├── resilience/
-├── restart/, shutdown/
-├── search/
-├── sessions/
-├── settings/
-├── skills/{executions, [id], install, marketplace, route.ts, skillssh}
-├── storage/
-├── sync/, synced-available-models/
-├── system/
-├── tags/
-├── telemetry/
-├── token-health/
-├── translator/
-├── tunnels/
-├── services/   內嵌服務管理（9router、cliproxy）— LOCAL_ONLY
-├── upstream-proxy/
-├── usage/
-├── v1/         與 OpenAI 相容的公開 API
-├── v1beta/     Gemini 風格的相容介面
-├── version-manager/
-└── webhooks/
-```
-
-#### 3.1.2a `src/app/api/services/` — 內嵌服務管理
-
-用於安裝、啟動、停止及監控 9Router 與 CLIProxyAPI 的路由。
-所有路徑皆分類為 **LOCAL_ONLY**（僅限迴路位址，硬性規則 #17），因為它們
-可以叫用 `npm install` 並產生子行程。
-
-```
-src/app/api/services/
-├── 9router/
-│   ├── _lib.ts             getOrInitSupervisor() 輔助函式
-│   ├── install/route.ts    POST — 透過 execFile 執行 npm install
-│   ├── start/route.ts      POST — supervisor.start()
-│   ├── stop/route.ts       POST — supervisor.stop()
-│   ├── restart/route.ts    POST — supervisor.restart()
-│   ├── update/route.ts     POST — npm install 較新版本
-│   ├── rotate-key/route.ts POST — 產生新的 API 金鑰並重新啟動
-│   ├── status/route.ts     GET  — 即時狀態 + 資料庫狀態 + 版本中繼資料
-│   └── auto-start/route.ts POST — 切換 auto_start 旗標
-├── cliproxy/
-│   ├── _lib.ts             getOrInitSupervisor() 輔助函式
-│   ├── install/route.ts    POST — npm install
-│   ├── start/route.ts      POST — supervisor.start()
-│   ├── stop/route.ts       POST — supervisor.stop()
-│   ├── restart/route.ts    POST — supervisor.restart()
-│   ├── update/route.ts     POST — npm install 較新版本
-│   ├── status/route.ts     GET  — 即時狀態 + 資料庫狀態 + 版本中繼資料
-│   └── auto-start/route.ts POST — 切換 auto_start 旗標
-└── [name]/
-    └── logs/route.ts       GET  — SSE 日誌尾端串流（由所有服務共用）
-```
-
-對應的儀表板 UI：
-`src/app/(dashboard)/dashboard/providers/services/` — 雙分頁頁面（CLIProxyAPI + 9Router）。
-供 9Router 嵌入式 UI 使用的反向代理：
-`src/app/(dashboard)/dashboard/providers/services/[name]/embed/[[...path]]/route.ts`
-
-深入說明：`docs/frameworks/EMBEDDED-SERVICES.md`
-
-#### 3.1.3 `src/app/api/v1/` — OpenAI 相容的公開 API
-
-```
-v1/
-├── accounts/[id]/                       帳戶查詢
-├── agents/tasks/[id]/, agents/tasks/    A2A 風格的任務端點
-├── api/                                 在 v1/api 下公開的內部 API 輔助工具
-├── audio/{speech, transcriptions}/      TTS + STT
-├── batches/[id]/{cancel}, batches/      OpenAI Batches API
-├── chat/completions/                    Chat Completions（主要端點）
-├── completions/                         舊版文字補全
-├── embeddings/                          嵌入向量
-├── files/[id]/, files/                  Files API
-├── _helpers/                            共用路由輔助工具（無公開 URL）
-├── images/{edits, generations}/         圖像生成 + 編輯
-├── issues/                              分流輔助端點
-├── management/{proxies}/                v1 內管理範圍的路由
-├── messages/{count_tokens}/             Anthropic 風格的 messages 相容介面
-├── models/                              模型清單（`route.ts`、`catalog.ts`）
-├── moderations/                         內容審核
-├── music/                               音樂生成
-├── providers/[provider]/                各提供者操作
-├── quotas/{check}                       配額探測
-├── registered-keys/                     已註冊金鑰管理
-├── rerank/                              重新排序
-├── responses/[...path]/                 OpenAI Responses API（全捕捉路由）
-├── search/                              網頁搜尋
-├── videos/                              影片生成
-├── ws/                                  WebSocket 橋接器
-└── route.ts                             索引處理常式
-```
-
-每個路由檔案都遵循相同的模式：
-
-```
-路由 → CORS 預檢 → Zod 請求主體驗證 → 選用的身分驗證
-     → API 金鑰原則強制執行 → 處理常式委派（open-sse）
-```
-
-`v1beta/` 是 Gemini 風格的相容介面（此輕量包裝器會將請求轉換至
-相同的 `open-sse/handlers/` 管線）。
-
 ### 3.2 `src/lib/` — 核心函式庫
 
 資料、同步、OAuth、技能、記憶體等一律透過這些模組匯入。下表將
@@ -278,7 +105,6 @@ v1/
 | `auth/`           | `managementPassword.ts`（密碼重設／雜湊）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `batches/`        | OpenAI Batches API 服務（`service.ts`）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `catalog/`        | OpenRouter 目錄同步（`openrouterCatalog.ts`）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `cloudAgent/`     | 雲端代理程式登錄檔：`api.ts`、`baseAgent.ts`、`db.ts`、`index.ts`、`registry.ts`、`types.ts`、`agents/{codex, devin, jules}.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `combos/`         | 組合解析輔助工具                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `compliance/`     | 稽核 + 提供者稽核：`index.ts`、`providerAudit.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `config/`         | 執行階段設定黏合層                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -286,13 +112,11 @@ v1/
 | `display/`        | API 回應使用的 UI／顯示輔助工具                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `embeddings/`     | 嵌入服務登錄檔                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `env/`            | 環境載入 + 自我檢視                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `evals/`          | 評估執行階段                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `guardrails/`     | `piiMasker.ts`、`promptInjection.ts`、`visionBridge.ts`、`visionBridgeHelpers.ts`、`registry.ts`、`base.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `jobs/`           | 背景工作（`autoUpdate.ts`，…）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `memory/`         | 持久化記憶體：`store.ts`、`cache.ts`、`retrieval.ts`、`summarization.ts`、`extraction.ts`、`injection.ts`、`qdrant.ts`、`settings.ts`、`verify.ts`、`schemas.ts`、`types.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `monitoring/`     | `observability.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `oauth/`          | OAuth／提供者匯入模組（22 個）：`agy`、`antigravity`、`claude`、`cline`、`codebuddy-cn`、`codex`、`cursor`、`devin-desktop`、`ghe-copilot`、`github`、`gitlab-duo`、`grok-cli-oauth`、`grok-cli`、`kilocode`、`kimi-coding`、`kiro`、`openference`、`qoder`、`trae`、`xai-oauth`、`zed-hosted`、`zed`，以及 `services/`、`utils/` 和 `constants/oauth.ts`                                                                                                                                                                                                                                                                                          |
-| `plugins/`        | 外掛載入器（`index.ts`）                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `promptCache/`    | `prefixAnalyzer.ts`、`index.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `providerModels/` | 受管理的模型生命週期：`modelDiscovery.ts`、`managedModelImport.ts`、`managedAvailableModels.ts`、`cursorAgent.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `providers/`      | 提供者輔助工具：`catalog.ts`、`validation.ts`、`imageValidation.ts`、`claudeExtraUsage.ts`、`codexConnectionDefaults.ts`、`codexFastTier.ts`、`webCookieAuth.ts`、`managedAvailableModels.ts`、`requestDefaults.ts`                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -772,9 +596,6 @@ bin/
 
 ### 新增 A2A 技能
 
-參見 [A2A-SERVER.md § 新增技能](../frameworks/A2A-SERVER.md)。技能位於
-`src/lib/a2a/skills/`，並透過 A2A 任務管理器註冊。
-
 ---
 
 ## 11. 慣例
@@ -816,7 +637,6 @@ bin/
 - [RESILIENCE_GUIDE.md](./RESILIENCE_GUIDE.md) — 斷路器、冷卻、鎖定深入探討。
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — Auto Combo 評分與策略。
 - [MCP-SERVER.md](../frameworks/MCP-SERVER.md) — 完整 MCP 工具目錄 + 傳輸方式。
-- [A2A-SERVER.md](../frameworks/A2A-SERVER.md) — A2A 協定技能與探索。
 - [COMPRESSION_GUIDE.md](../compression/COMPRESSION_GUIDE.md) — RTK + Caveman 壓縮。
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — CLI 整合。
 - [ELECTRON_GUIDE.md](../guides/ELECTRON_GUIDE.md)（若存在）、[DOCKER_GUIDE.md](../guides/DOCKER_GUIDE.md)、[FLY_IO_DEPLOYMENT_GUIDE.md](../ops/FLY_IO_DEPLOYMENT_GUIDE.md)、[VM_DEPLOYMENT_GUIDE.md](../ops/VM_DEPLOYMENT_GUIDE.md)、[TERMUX_GUIDE.md](../guides/TERMUX_GUIDE.md)、[PWA_GUIDE.md](../guides/PWA_GUIDE.md) — 部署目標。

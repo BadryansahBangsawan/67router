@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (中文 (繁體))
+# Providers Guide: Connect AI Models to 67router (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **TL;DR**：提供者是與 AI 服務（例如 OpenAI、Anthropic、Google）的連線。你至少需要一個提供者才能使用 OmniRoute。
+> **TL;DR**：提供者是與 AI 服務（例如 OpenAI、Anthropic、Google）的連線。你至少需要一個提供者才能使用 67router。
 
 ---
 
 ## 什麼是提供者？
 
-可以將提供者想像成**電信業者**。就像您需要電信業者才能撥打電話一樣，您需要 AI 提供者才能使用 AI 模型。OmniRoute 就像一支適用於**所有電信業者**的手機——您可以在它們之間自動切換。
+可以將提供者想像成**電信業者**。就像您需要電信業者才能撥打電話一樣，您需要 AI 提供者才能使用 AI 模型。67router 就像一支適用於**所有電信業者**的手機——您可以在它們之間自動切換。
 
 ### 提供者類型
 
@@ -30,7 +30,7 @@
 
 ### 可選的首次執行免費提供者設定
 
-首次執行精靈會提供一張明確的 **設定免費提供者** 卡片。它會根據 OmniRoute 的免驗證提供者登錄檔產生目前符合資格的清單，然後讓您在確認前檢視並取消選取各個提供者。OmniRoute 會顯示提供者的注意事項及其網站連結，讓您可以先查看第三方條款、隱私權、可用性和速率限制。
+首次執行精靈會提供一張明確的 **設定免費提供者** 卡片。它會根據 67router 的免驗證提供者登錄檔產生目前符合資格的清單，然後讓您在確認前檢視並取消選取各個提供者。67router 會顯示提供者的注意事項及其網站連結，讓您可以先查看第三方條款、隱私權、可用性和速率限制。
 
 此操作為可選：完成精靈絕不會在未告知您的情況下建立免費提供者連線。它只會建立仍未設定的提供者，保留現有的自訂連線不變，並個別回報已建立、已設定及失敗的提供者。若只完成部分操作，您可以安全地只重試失敗的項目。
 
@@ -74,7 +74,7 @@
 
 ### 選項 D：本機 MLX 模型（Apple Silicon）
 
-對於配備統一記憶體的 Apple Silicon Mac，OmniRoute 支援將透過 `mlx-lm.server` 執行的本機 MLX 模型，連接為一般與 OpenAI 相容的本機提供者。
+對於配備統一記憶體的 Apple Silicon Mac，67router 支援將透過 `mlx-lm.server` 執行的本機 MLX 模型，連接為一般與 OpenAI 相容的本機提供者。
 
 #### 必要條件
 
@@ -104,14 +104,14 @@
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **在 OmniRoute 儀表板中連接**：
+3. **在 67router 儀表板中連接**：
    - 前往 **提供者** → **新增提供者**
    - 選取 **MLX Gemma 26B** 或 **MLX Qwen 3.8 27B**
    - 按一下 **連接**（不需 API 金鑰）
 
 4. **搭配 OpenCode 使用**：
    ```bash
-   # 設定 OpenCode 使用 OmniRoute
+   # 設定 OpenCode 使用 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@
 - 在不同電腦上分別執行兩者，或
 - 在啟動另一個之前先停止其中一個
 
-OmniRoute 不會自動管理 MLX 伺服器處理程序，而只會將請求路由至您設定的 OpenAI 相容端點。
+67router 不會自動管理 MLX 伺服器處理程序，而只會將請求路由至您設定的 OpenAI 相容端點。
 
 #### 工具呼叫支援
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | 記憶體不足     | 確認只有一個模型正在執行；關閉其他應用程式；檢查「活動監視器」 |
 | 連線遭拒       | 確認伺服器正在正確的連接埠（11435/11436）上執行                |
 | 回應速度緩慢   | 第一次請求會將模型載入記憶體（約 30-60 秒）；後續請求會很快    |
-| 工具呼叫失敗   | 確認模型支援工具；檢查 OmniRoute 記錄中的轉譯錯誤              |
+| 工具呼叫失敗   | 確認模型支援工具；檢查 67router 記錄中的轉譯錯誤               |
 
 ---
 
@@ -230,12 +230,12 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 使用多個提供者
 
-OmniRoute 搭配**多個提供者**時效果最佳。這能為您提供：
+67router 搭配**多個提供者**時效果最佳。這能為您提供：
 
-- **自動容錯切換** — 如果某個提供者失敗，OmniRoute 會嘗試下一個
-- **成本最佳化** — OmniRoute 會為每個請求選擇成本最低的提供者
-- **速度最佳化** — OmniRoute 會為每個請求選擇速度最快的提供者
-- **品質最佳化** — OmniRoute 會為每項工作選擇最佳的提供者
+- **自動容錯切換** — 如果某個提供者失敗，67router 會嘗試下一個
+- **成本最佳化** — 67router 會為每個請求選擇成本最低的提供者
+- **速度最佳化** — 67router 會為每個請求選擇速度最快的提供者
+- **品質最佳化** — 67router 會為每項工作選擇最佳的提供者
 
 ### 建議設定
 
@@ -245,7 +245,7 @@ OmniRoute 搭配**多個提供者**時效果最佳。這能為您提供：
 2. **一個快速提供者**（Groq、Cerebras）— 用於快速回應
 3. **一個高品質提供者**（OpenAI、Anthropic、Google）— 用於複雜工作
 
-接著使用 `model: "auto"`，OmniRoute 就會自動為每個請求選擇最合適的提供者。
+接著使用 `model: "auto"`，67router 就會自動為每個請求選擇最合適的提供者。
 
 ---
 
@@ -254,37 +254,37 @@ OmniRoute 搭配**多個提供者**時效果最佳。這能為您提供：
 ### OpenAI
 
 1. 取得 API 金鑰：https://platform.openai.com/api-keys
-2. 在 OmniRoute 中：提供者 → 新增提供者 → OpenAI
+2. 在 67router 中：提供者 → 新增提供者 → OpenAI
 3. 貼上 API 金鑰 → 連線
 
 ### Anthropic
 
 1. 取得 API 金鑰：https://console.anthropic.com/
-2. 在 OmniRoute 中：提供者 → 新增提供者 → Anthropic
+2. 在 67router 中：提供者 → 新增提供者 → Anthropic
 3. 貼上 API 金鑰 → 連線
 
 ### Google (Gemini)
 
 1. 取得 API 金鑰：https://aistudio.google.com/apikey
-2. 在 OmniRoute 中：提供者 → 新增提供者 → Gemini
+2. 在 67router 中：提供者 → 新增提供者 → Gemini
 3. 貼上 API 金鑰 → 連線
 
 ### DeepSeek
 
 1. 取得 API 金鑰：https://platform.deepseek.com/
-2. 在 OmniRoute 中：提供者 → 新增提供者 → DeepSeek
+2. 在 67router 中：提供者 → 新增提供者 → DeepSeek
 3. 貼上 API 金鑰 → 連線
 
 ### Qoder：選擇憑證傳輸方式
 
 Qoder 需要憑證。其兩種傳輸方式具備不同的功能；僅憑模型名稱，無法判斷特定連線能執行哪些操作。
 
-| 憑證                       | OmniRoute 傳輸方式                     | 呼叫端工具呼叫                 | 串流                                      |
-| -------------------------- | -------------------------------------- | ------------------------------ | ----------------------------------------- |
-| 以 `pt-` 開頭的 PAT        | OmniRoute 主機上的本機 `qodercli` 程序 | 不支援                         | 緩衝：僅在 CLI 傳回完整回覆後才會發出 SSE |
-| 非 PAT 存取權杖或 API 金鑰 | 與 DashScope OpenAI 相容的 HTTP 端點   | 直接傳遞，取決於上游模型／金鑰 | 上游 HTTP/SSE 路徑                        |
+| 憑證                       | 67router 傳輸方式                     | 呼叫端工具呼叫                 | 串流                                      |
+| -------------------------- | ------------------------------------- | ------------------------------ | ----------------------------------------- |
+| 以 `pt-` 開頭的 PAT        | 67router 主機上的本機 `qodercli` 程序 | 不支援                         | 緩衝：僅在 CLI 傳回完整回覆後才會發出 SSE |
+| 非 PAT 存取權杖或 API 金鑰 | 與 DashScope OpenAI 相容的 HTTP 端點  | 直接傳遞，取決於上游模型／金鑰 | 上游 HTTP/SSE 路徑                        |
 
-若使用 PAT，請在與 OmniRoute 相同的主機或容器上安裝 Qoder CLI。系統必須能以 `qodercli` 找到該執行檔，否則請將 `CLI_QODER_BIN` 設為其執行檔路徑。僅安裝在 Docker 主機上的 CLI 不會自動出現在容器中。若缺少二進位檔，系統會產生明確錯誤，引導您進行安裝或設定路徑。
+若使用 PAT，請在與 67router 相同的主機或容器上安裝 Qoder CLI。系統必須能以 `qodercli` 找到該執行檔，否則請將 `CLI_QODER_BIN` 設為其執行檔路徑。僅安裝在 Docker 主機上的 CLI 不會自動出現在容器中。若缺少二進位檔，系統會產生明確錯誤，引導您進行安裝或設定路徑。
 
 PAT 聊天路徑的程序逾時時間為 45 秒。它會將對話扁平化為提示詞，並以非串流列印模式叫用 CLI。要求 `stream: true` 會將回應封裝格式變更為 SSE；這不會提供上游權杖的增量傳遞。CLI 驗證／模型清單使用獨立的 20 秒逾時。這些是目前的程式碼預設值，無法在儀表板中設定。
 
@@ -299,16 +299,16 @@ PAT 聊天路徑的程序逾時時間為 45 秒。它會將對話扁平化為提
 ### Groq
 
 1. 取得 API 金鑰：https://console.groq.com/
-2. 在 OmniRoute 中：提供者 → 新增提供者 → Groq
+2. 在 67router 中：提供者 → 新增提供者 → Groq
 3. 貼上 API 金鑰 → 連線
 
 ---
 
 ## 常見問題
 
-### 「我需要付費才能使用 OmniRoute 嗎？」
+### 「我需要付費才能使用 67router 嗎？」
 
-**不需要！** OmniRoute 是免費且開放原始碼的。你可以免費使用免費的提供者（Kiro、Pollinations），無須支付任何費用。只有當你選擇使用付費提供者時，才需要付費。
+**不需要！** 67router 是免費且開放原始碼的。你可以免費使用免費的提供者（Kiro、Pollinations），無須支付任何費用。只有當你選擇使用付費提供者時，才需要付費。
 
 ### 「我應該從哪個提供者開始？」
 
@@ -316,11 +316,11 @@ PAT 聊天路徑的程序逾時時間為 45 秒。它會將對話扁平化為提
 
 ### 「我可以同時使用多個提供者嗎？」
 
-**可以！** 這正是 OmniRoute 的核心功能。連接多個提供者，並使用 `model: "auto"`，讓 OmniRoute 為每個請求選擇最合適的提供者。
+**可以！** 這正是 67router 的核心功能。連接多個提供者，並使用 `model: "auto"`，讓 67router 為每個請求選擇最合適的提供者。
 
 ### 「如果提供者停止服務，該怎麼辦？」
 
-OmniRoute 會自動跳過發生故障的提供者，並嘗試下一個。你無須進行任何操作。
+67router 會自動跳過發生故障的提供者，並嘗試下一個。你無須進行任何操作。
 
 ### 「如何中斷與提供者的連線？」
 
@@ -328,17 +328,13 @@ OmniRoute 會自動跳過發生故障的提供者，並嘗試下一個。你無�
 
 ### 「我可以使用現有的 API 金鑰嗎？」
 
-**可以！** 如果你已經擁有 OpenAI、Anthropic、Google 等服務的 API 金鑰，就可以在 OmniRoute 中使用。連接提供者時貼上金鑰即可。
+**可以！** 如果你已經擁有 OpenAI、Anthropic、Google 等服務的 API 金鑰，就可以在 67router 中使用。連接提供者時貼上金鑰即可。
 
 ---
 
 ## 下一步
 
-- **[自動組合指南](./AUTO-COMBO-GUIDE.md)** — 讓 OmniRoute 為你挑選最佳 AI
+- **[自動組合指南](./AUTO-COMBO-GUIDE.md)** — 讓 67router 為你挑選最佳 AI
 - **[免費方案指南](./FREE-TIERS-GUIDE.md)** — 無須信用卡即可免費使用 AI
 - **[疑難排解](../guides/TROUBLESHOOTING.md)** — 修正常見問題
 - **[提供者參考資料](../reference/PROVIDER_REFERENCE.md)** — 226 個提供者的完整清單
-
-## Cursor 圖片
-
-Cursor 方案圖片使用 `IMAGE_PROVIDERS.cursor`（`cursor-agent-image`）。請參閱 [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)。

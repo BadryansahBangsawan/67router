@@ -6,7 +6,7 @@
 
 ## Raportarea vulnerabilităților
 
-Dacă descoperiți o vulnerabilitate de securitate în OmniRoute, raportați-o în mod responsabil:
+Dacă descoperiți o vulnerabilitate de securitate în 67router, raportați-o în mod responsabil:
 
 1. **NU** deschideți o problemă publică pe GitHub
 2. Utilizați [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ După 3.8.59, următoarea versiune este **3.9.0**, care deschide linia de asiste
 
 ## Arhitectura de securitate
 
-OmniRoute implementează un model de securitate pe mai multe niveluri:
+67router implementează un model de securitate pe mai multe niveluri:
 
 ```
 Solicitare → CORS → Flux Authz (clasificare → politici → aplicare)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Cadrul de măsuri de protecție
 
-OmniRoute include un **registru de măsuri de protecție** reîncărcabil dinamic (`src/lib/guardrails/`), cu 3 măsuri de protecție integrate, ordonate după prioritate:
+67router include un **registru de măsuri de protecție** reîncărcabil dinamic (`src/lib/guardrails/`), cu 3 măsuri de protecție integrate, ordonate după prioritate:
 
 | Măsură de protecție | Prioritate | Scop                                                                                                                         |
 | ------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |

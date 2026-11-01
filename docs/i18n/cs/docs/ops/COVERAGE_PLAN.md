@@ -71,11 +71,9 @@ Tyto soubory mají dnes nejnižší pokrytí řádků (< 60 %) a nabízejí nejl
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |  13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |  13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |  13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |  13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |  14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |  14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |  15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |  15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |  16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |  16.66% |
 
@@ -83,7 +81,6 @@ Témata pro fáze 6–7:
 
 - `open-sse/services/compression/**` představuje nejhustší skupinu souborů s nízkým pokrytím a tvoří největší část zbývající mezery.
 - Trasy API pro dávky a přehodnocení pořadí (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) potřebují testy na úrovni obslužných funkcí.
-- Adaptéry cloudových agentů (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) a `tierResolver.ts` potřebují scénářové testy.
 - Komponenty uživatelského rozhraní dokumentace a `src/mitm/systemCommands.ts` mají nižší prioritu, ale umožňují snadno zvýšit pokrytí větví.
 
 ## Kontrolní seznam realizace

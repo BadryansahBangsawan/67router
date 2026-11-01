@@ -8,17 +8,17 @@
 
 🌐 **ቋንቋዎች:** 🇺🇸 [እንግሊዝኛ](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-ለOmniRoute የተለመዱ ችግሮች እና መፍትሔዎች።
+ለ67router የተለመዱ ችግሮች እና መፍትሔዎች።
 
 ---
 
 ## ፈጣን ማጣቀሻ
 
-**OmniRouteን አዲስ እየተጠቀሙ ነው?** ከዚህ ይጀምሩ — እነዚህ 90% የሚሆኑትን ችግሮች ይፈታሉ፦
+**67routerን አዲስ እየተጠቀሙ ነው?** ከዚህ ይጀምሩ — እነዚህ 90% የሚሆኑትን ችግሮች ይፈታሉ፦
 
 | ይህን አያለሁ                | ትርጉሙ                                    | ምን ማድረግ እንዳለብዎ                                                                           |
 | ----------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------- |
-| "መገናኘት አልተቻለም"          | OmniRoute እየሰራ አይደለም                    | `omniroute` ወይም `docker restart omniroute` ያስኪዱ                                          |
+| "መገናኘት አልተቻለም"          | 67router እየሰራ አይደለም                     | `omniroute` ወይም `docker restart omniroute` ያስኪዱ                                          |
 | "ልክ ያልሆነ API ቁልፍ"       | ቁልፍዎ የተሳሳተ ወይም ጊዜው ያለፈበት ነው             | ቁልፉን ከአቅራቢው ድረ ገጽ እንደገና ይቅዱ                                                              |
 | "የጥያቄ መጠን ገደብ ታልፏል"     | በጣም ብዙ ጥያቄዎችን እየላኩ ነው                   | 1 ደቂቃ ይጠብቁ፣ ወይም በራስ-ሰር ወደ አማራጭ ለመቀየር `model: "auto"`ን ይጠቀሙ                               |
 | "ኮታው አልቋል"              | ነፃ/የተከፈለበትን ኮታዎን ሙሉ በሙሉ ተጠቅመዋል          | ተጨማሪ አቅራቢዎችን ያገናኙ፣ ወይም ነፃ አቅራቢዎችን (Kiro, Pollinations) ይጠቀሙ                              |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # ግልጽ የከባድ ጥያቄ
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ለዘገዩ የላይኛው ዥረት አገልግሎቶች የተገደበውን የጥበቃ ጊዜ ከRATE_LIMIT_MAX_WAIT_MS ነባሪ በላይ ያሳድጉ
 ```
 
-እነዚህን በOmniRoute ሂደት አካባቢ ውስጥ (daemon፣ ለምሳሌ በLaunchAgent plist ወይም `systemctl edit`) ያቀናብሩ፣ ከዚያ OmniRouteን ዳግም ያስጀምሩ። የሽክርክር ባንዲራው በጣም ከፍተኛ ተጽዕኖ ያለው ማስተካከያ ነው፦ ከባድ ውድቀትን በስብስቡ ውስጥ ባለ ጤናማ አቅራቢ ላይ ወደሚደረግ ግልጽ ዳግም ሙከራ ይለውጠዋል።
+እነዚህን በ67router ሂደት አካባቢ ውስጥ (daemon፣ ለምሳሌ በLaunchAgent plist ወይም `systemctl edit`) ያቀናብሩ፣ ከዚያ 67routerን ዳግም ያስጀምሩ። የሽክርክር ባንዲራው በጣም ከፍተኛ ተጽዕኖ ያለው ማስተካከያ ነው፦ ከባድ ውድቀትን በስብስቡ ውስጥ ባለ ጤናማ አቅራቢ ላይ ወደሚደረግ ግልጽ ዳግም ሙከራ ይለውጠዋል።
 
 **ማስታወሻ**፦ `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` በአንድ ጊዜ የሚሰሩ ከባድ — ረጅም-አውድ — ጥያቄዎችን ብዛት ይገድባል፤ ይህ ገደብ የመቀበያ በር እንጂ የአቅራቢ የጥያቄ መጠን ገደብ አይደለም። **የ#503-fanout ማሻሻያ፦** ይህ ተለዋዋጭ ከእንግዲህ በነባሪ አይዋቀርም (አሁን የሚተገበረው ከላይ እንደተገለጸው በግልጽ ሲዋቀር ብቻ ነው) — በምትኩ የከባድ ጥያቄዎች መቀበያ ከአስተናጋጁ ትክክለኛ የማህደረ ትውስታ ከፍተኛ ገደብ በመነሳት ራሱን በሚያመጣጥን፣ በራስ-ሰር በሚመነጭ የባይት በጀት (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`) ይገደባል። ስለዚህ አዲስ ስምሪት ይህን ተለዋዋጭ ሳያቀናብር እንኳን በጣም ያነሱ `503 chat_admission_busy` ውድቅ ማድረጎችን ማየት አለበት፤ እዚህ በግልጽ ማቀናበሩ አሁንም ልክ በተመዘገበው መንገድ ይሰራል። ግልጽ የባይት-በጀት መሻሮች ከ8 MiB–2 GiB ውስጥ ይገደባሉ። `413 body_exceeds_budget` ጊዜያዊ አይደለም፦ የባይት በጀቱን ይጨምሩ፣ `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES`ን ይቀንሱ፣ ወይም የሂደቱን የማህደረ ትውስታ ከፍተኛ ገደብ ይጨምሩ። የ`inflight_bytes_budget` ጭነት መቀነስ ጊዜያዊ የሀብት ፉክክር ሲሆን እንደገና ሊሞከር ይችላል። የእያንዳንዱ አቅራቢ የጥያቄ መጠን ገደብ (`open-sse/services/rateLimitManager.ts`) በተናጠል በ`RATE_LIMIT_MAX_WAIT_MS`፣ `RATE_LIMIT_MAX_QUEUE_DEPTH` እና `RATE_LIMIT_AUTO_ENABLE` ይተዳደራል — `.env.example`ን ይመልከቱ።
 
 **መፍትሔው መሥራቱን እንዴት ማረጋገጥ እንደሚቻል**፦ ወኪልዎን/cronን በፍጥነት ተከታትሎ ሁለት ጊዜ ያስኪዱ እና ሁለቱም መሳካታቸውን ያረጋግጡ። ከመፍትሔው በፊት፣ ሁለተኛው ሙከራ በተለምዶ `429`/`401` ያስከትላል። ከመፍትሔው በኋላ፣ ውድቀቶች (ካሉ) በግልጽነት እንደገና ይሞከራሉ እና ጥሪው ይጠናቀቃል። እንዲሁም `curl /monitoring/health`ን ማስኬድ እና በአቅራቢ ግንኙነቶች ላይ ያለውን `rateLimitedUntil` መስክ እንዲሁም ለተጎዱት አቅራቢዎች `circuitBreakers.providerBreakers[].state`ን መከታተል ይችላሉ — ሁኔታው ከ`CLOSED`፣ `DEGRADED`፣ `OPEN` ወይም `HALF_OPEN` አንዱ ነው (`src/shared/utils/circuitBreaker.ts`ን ይመልከቱ)፣ እና ደጋግሞ የሚወድቅ አቅራቢ የዳግም ማስጀመሪያ መስኮቱ የሙከራ ጥያቄን ከማሳለፉ (`HALF_OPEN`) በፊት `CLOSED → DEGRADED → OPEN` ብሎ ይቀየራል።
 
-**አሁንም 429 ካዩ**፦ ለዚያ አቅራቢ ንቁ የሆነው መለያ በእውነት _ኮታውን_ ጨርሷል (የጥያቄ መጠን ብቻ አይደለም)። በOmniRoute ዳሽቦርድ → Providers → Accounts ውስጥ ለተመሳሳዩ አቅራቢ ሁለተኛ መለያ ያክሉ፣ ወይም ሌላ ነፃ አቅራቢን (ለምሳሌ `routeway`፣ `auggie`) ያቀላቅሉ። ሽክርክር የሚረዳው ለጊዜያዊ የጥያቄ መጠን/400/401 ብቻ ነው፤ ኮታው ሙሉ በሙሉ ካለቀ ሁለተኛ የመግቢያ ማረጋገጫ ወይም የተለየ አቅራቢ ያስፈልጋል።
+**አሁንም 429 ካዩ**፦ ለዚያ አቅራቢ ንቁ የሆነው መለያ በእውነት _ኮታውን_ ጨርሷል (የጥያቄ መጠን ብቻ አይደለም)። በ67router ዳሽቦርድ → Providers → Accounts ውስጥ ለተመሳሳዩ አቅራቢ ሁለተኛ መለያ ያክሉ፣ ወይም ሌላ ነፃ አቅራቢን (ለምሳሌ `routeway`፣ `auggie`) ያቀላቅሉ። ሽክርክር የሚረዳው ለጊዜያዊ የጥያቄ መጠን/400/401 ብቻ ነው፤ ኮታው ሙሉ በሙሉ ካለቀ ሁለተኛ የመግቢያ ማረጋገጫ ወይም የተለየ አቅራቢ ያስፈልጋል።
 
 **በምስል ሞዴሎች (`auto/vision`፣ `bazaarlink/*`) ላይ 403 ካዩ**፦ የተገናኘው መለያ ምስልን የሚያካትት የሚከፈልበት ዕቅድ የለውም፣ ወይም API keyው በቂ ፈቃዶች የሉትም። በአቅራቢው ዳሽቦርድ ውስጥ የkeyው ወሰን ምስል/ባለብዙ-ሞዳሊቲን ማካተቱን ያረጋግጡ፣ ወይም የሚከፈልበት ደረጃ መለያን ያገናኙ እና እንደ ምስል ዒላማ ያቆዩት።
 
@@ -71,7 +71,7 @@ export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # ለዘገዩ የላይኛው �
 
 `npm install -g omniroute` ሲያስኬዱ እንደ `npm warn ERESOLVE`፣ የ peer-dependency ማሳወቂያዎች እና `deprecated` መልዕክቶች ያሉ ብዙ ማስጠንቀቂያዎችን ሊያዩ ይችላሉ። **እነዚህ የሚጠበቁ እና ጉዳት የሌላቸው ናቸው።** በውጤቱ ውስጥ `added <N> packages` ካዩ ጭነቱ በተሳካ ሁኔታ ተጠናቋል።
 
-የ peer-dependency መፍትሔ ማስጠንቀቂያዎችን ለማስቀረት፣ በ OmniRoute የሚደገፈውን የጭነት ቅርጸት ይጠቀሙ፦
+የ peer-dependency መፍትሔ ማስጠንቀቂያዎችን ለማስቀረት፣ በ 67router የሚደገፈውን የጭነት ቅርጸት ይጠቀሙ፦
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` የሚያስቀረው `ERESOLVE` እና የ peer-dependency ማሳወቂያዎችን ብቻ ነው። የማቋረጥ ማሳወቂያዎች ከተዘዋዋሪ የሶስተኛ ወገን ፓኬጆች ስለሚመጡ መታየታቸውን ይቀጥላሉ፤ እነዚህም ጭነቱ እንዳልተሳካ አያመለክቱም።
 
-ማስጠንቀቂያዎቹ የሚመጡት OmniRoute በማይቆጣጠራቸው የሶስተኛ ወገን ፓኬጆች ውስጥ ካሉ ጊዜ ያለፈባቸው የ peer-dependency ክልሎች ነው፦
+ማስጠንቀቂያዎቹ የሚመጡት 67router በማይቆጣጠራቸው የሶስተኛ ወገን ፓኬጆች ውስጥ ካሉ ጊዜ ያለፈባቸው የ peer-dependency ክልሎች ነው፦
 
 1. **`marked-terminal`፣ `marked >=1 <16`ን ይፈልጋል፣ `marked@18` ግን ተገኝቷል** — በተግባር በሚገባ ይሠራል፤ የ upstream peer ክልሉ ጊዜ ያለፈበት ብቻ ነው።
 2. **`deprecated prebuild-install@7.1.3`** — ተዘዋዋሪ የ native-binary ማውረጃ ረዳት ነው። የተወሰነውን `wreq-js` transport binding ለመጫን
@@ -104,19 +104,19 @@ npm warn install-scripts 7 ጥቅሎች በallowScripts ውስጥ ስላልተ�
 
 ### ይህን ማስጠንቀቂያ ችላ ማለት ይቻላል?
 
-**በከፊል ይቻላል፣ ነገር ግን ያለ ስክሪፕቶች ማስኬድ አይመከርም።** OmniRoute ችግርን በለሆሳስ የሚቋቋሙ አማራጭ ዘዴዎችን ያካትታል፦ ቤተኛ የ`better-sqlite3` ማያያዣዎች ከብቻውን ከሚሠራው ጥቅል መጫን ካልቻሉ፣ መተግበሪያው እንደ `node:sqlite` ወይም `sql.js` ባሉ አማራጭ ነጂዎች ይቀጥላል ([የSQLite የአሂድ ጊዜ መፍትሔ](../ops/SQLITE_RUNTIME.md)ን ይመልከቱ)። አገልጋዩ አሁንም ይጀምራል፣ ነገር ግን እንደ `sql.js` ባሉ የWASM አማራጭ ዘዴዎች ላይ ማስኬድ የSQLite WAL (Write-Ahead Logging) ሁነታን ያሰናክላል፣ እንዲሁም የማህደረ ትውስታ እና የዲስክ ማመሳሰል ተጨማሪ ወጪን ይጨምራል።
+**በከፊል ይቻላል፣ ነገር ግን ያለ ስክሪፕቶች ማስኬድ አይመከርም።** 67router ችግርን በለሆሳስ የሚቋቋሙ አማራጭ ዘዴዎችን ያካትታል፦ ቤተኛ የ`better-sqlite3` ማያያዣዎች ከብቻውን ከሚሠራው ጥቅል መጫን ካልቻሉ፣ መተግበሪያው እንደ `node:sqlite` ወይም `sql.js` ባሉ አማራጭ ነጂዎች ይቀጥላል ([የSQLite የአሂድ ጊዜ መፍትሔ](../ops/SQLITE_RUNTIME.md)ን ይመልከቱ)። አገልጋዩ አሁንም ይጀምራል፣ ነገር ግን እንደ `sql.js` ባሉ የWASM አማራጭ ዘዴዎች ላይ ማስኬድ የSQLite WAL (Write-Ahead Logging) ሁነታን ያሰናክላል፣ እንዲሁም የማህደረ ትውስታ እና የዲስክ ማመሳሰል ተጨማሪ ወጪን ይጨምራል።
 
 ### በእርግጥ የሚያስፈልጉት የትኞቹ ስክሪፕቶች ናቸው?
 
-የታገዱት ስክሪፕቶች በሙሉ OmniRouteን ለማስኬድ አስፈላጊ አይደሉም፦
+የታገዱት ስክሪፕቶች በሙሉ 67routerን ለማስኬድ አስፈላጊ አይደሉም፦
 
-- **አስፈላጊ (`omniroute`፣ `better-sqlite3`)፦** OmniRoute ከNext.js ብቻውን የሚሠራ የመተግበሪያ ጥቅል (`dist/`) ውስጥ ይሠራል። በጭነት ወቅት npm ከአስተናጋጁ ጋር የሚዛመደውን ቤተኛ የSQLite ነጂ ከከፍተኛ ደረጃው `node_modules/better-sqlite3/` ውስጥ ያወርዳል ወይም ያጠናቅራል። ከዚያም የOmniRoute `postinstall` ስክሪፕት (`scripts/build/postinstall.mjs`) ብቻውን የሚሠራው አገልጋይ ሊደርስባቸው እንዲችል እነዚህን ከአስተናጋጁ ጋር የሚዛመዱ ሁለትዮሽ ፋይሎች አረጋግጦ ወደ `dist/node_modules/` ይቀዳል። የ`omniroute` postinstall ስክሪፕት ከታገደ፣ ይህ የመቅዳት ደረጃ ይዘለላል።
+- **አስፈላጊ (`omniroute`፣ `better-sqlite3`)፦** 67router ከNext.js ብቻውን የሚሠራ የመተግበሪያ ጥቅል (`dist/`) ውስጥ ይሠራል። በጭነት ወቅት npm ከአስተናጋጁ ጋር የሚዛመደውን ቤተኛ የSQLite ነጂ ከከፍተኛ ደረጃው `node_modules/better-sqlite3/` ውስጥ ያወርዳል ወይም ያጠናቅራል። ከዚያም የ67router `postinstall` ስክሪፕት (`scripts/build/postinstall.mjs`) ብቻውን የሚሠራው አገልጋይ ሊደርስባቸው እንዲችል እነዚህን ከአስተናጋጁ ጋር የሚዛመዱ ሁለትዮሽ ፋይሎች አረጋግጦ ወደ `dist/node_modules/` ይቀዳል። የ`omniroute` postinstall ስክሪፕት ከታገደ፣ ይህ የመቅዳት ደረጃ ይዘለላል።
 - **አማራጭ/ተዘዋዋሪ (`keytar`፣ `@parcel/watcher`፣ `@swc/core`፣ `protobufjs`፣ `esbuild`)፦** እነዚህ የግንባታ አጋዦች፣ የክትትል መሣሪያዎች ወይም የስርዓት ቁልፍ ማከማቻ መገልገያዎች ናቸው። እንዲሠሩ መፍቀድ የግንባታ ማስጠንቀቂያዎችን ይከላከላል፣ ነገር ግን ለዋናው የማዞሪያ ተግባር አያስፈልጉም።
-- **የተገለለ (`onnxruntime-node`)፦** ለአካባቢያዊ የAI ውክልናዎች የሚያገለግል አማራጭ ጥገኝነት ሲሆን OmniRoute እንዲሠራ **አያስፈልግም**። የእሱ postinstall ስክሪፕት ከNuGet በግምት 300MB የCUDA ሀብቶችን ያወርዳል፤ በሚደገፍ ሃርድዌር ላይ አካባቢያዊ የONNX ማፋጠንን ለመጠቀም በግልጽ ካላሰቡ በስተቀር በፍቃድ ዝርዝሩ ውስጥ አያካትቱት።
+- **የተገለለ (`onnxruntime-node`)፦** ለአካባቢያዊ የAI ውክልናዎች የሚያገለግል አማራጭ ጥገኝነት ሲሆን 67router እንዲሠራ **አያስፈልግም**። የእሱ postinstall ስክሪፕት ከNuGet በግምት 300MB የCUDA ሀብቶችን ያወርዳል፤ በሚደገፍ ሃርድዌር ላይ አካባቢያዊ የONNX ማፋጠንን ለመጠቀም በግልጽ ካላሰቡ በስተቀር በፍቃድ ዝርዝሩ ውስጥ አያካትቱት።
 
 ### የሚመከር መፍትሔ
 
-በዓለም አቀፍ ጭነት ወቅት አስፈላጊዎቹን የመጫኛ ስክሪፕቶች ለመፍቀድ እና ማስጠንቀቂያዎቹን ለማጥፋት፣ ለOmniRoute እና ለቤተኛ ጥገኞቹ `--allow-scripts`ን ያስተላልፉ፦
+በዓለም አቀፍ ጭነት ወቅት አስፈላጊዎቹን የመጫኛ ስክሪፕቶች ለመፍቀድ እና ማስጠንቀቂያዎቹን ለማጥፋት፣ ለ67router እና ለቤተኛ ጥገኞቹ `--allow-scripts`ን ያስተላልፉ፦
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Playwright ሆን ብሎ የአሳሽ ማውረዶችን ከnpm ጥቅል
 ጭነት ለይቶ ያስቀምጣል፣ ስለዚህ አሳሹ እስኪጫን ድረስ ይህ ምላሽ የሚጠበቅ ነው።
 
 ለሁሉን አቀፍ የnpm ጭነት፣ የአሳሹ መሸጎጫ የዚያው Playwright ጭነት
-እንዲሆን Chromiumን ከOmniRoute ጥቅል ማውጫ ውስጥ ይጫኑ፦
+እንዲሆን Chromiumን ከ67router ጥቅል ማውጫ ውስጥ ይጫኑ፦
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-ከጭነቱ በኋላ OmniRouteን እንደገና ያስጀምሩ፣ ከዚያ የGemini Web ጥያቄውን እንደገና ይሞክሩ።
-OmniRouteን ከDocker ምስል የሚያስኬዱ ከሆነ፣ Chromiumን እና ጥገኞቹን አካቶ የያዘውን
+ከጭነቱ በኋላ 67routerን እንደገና ያስጀምሩ፣ ከዚያ የGemini Web ጥያቄውን እንደገና ይሞክሩ።
+67routerን ከDocker ምስል የሚያስኬዱ ከሆነ፣ Chromiumን እና ጥገኞቹን አካቶ የያዘውን
 `-web` ምስል (ወይም `runner-web`
 የግንባታ ዒላማ) ይጠቀሙ፤ መሠረታዊው ምስል እነዚህን አያካትትም።
 
@@ -187,7 +187,7 @@ OmniRouteን ከDocker ምስል የሚያስኬዱ ከሆነ፣ Chromiumን እ
 
 **ይህ የተሳሳተ ማስጠንቀቂያ ነው። ምንም ነገር በቫይረስ አልተበከለም፣ እና ምንም እርምጃ አያስፈልግም።**
 
-Avast እና AVG ብዙ HTTP ጥያቄዎችን የሚመስሉ አገናኞችን የያዙ ግልጽ-ጽሑፍ/Markdown ፋይሎችን የሚጠቁም ሂዩሪስቲክ ያስኬዳሉ። የOmniRoute `README.md` በnpm ጥቅሉ ውስጥ ተካትቶ ይላካል (በ`package.json` → `files` ውስጥ ተዘርዝሯል)፣ ስለዚህ በዓለም አቀፍ ጭነት ጊዜ በ`node_modules/omniroute/README.md` ላይ ይቀመጣል — እንዲሁም ~15 የ`http://localhost:20128/...` ምሳሌዎችን (የMCP HTTP/SSE የመዳረሻ ነጥቦችን፣ የA2A `.well-known` URLን፣ እና የ`curl` ቅንጥቦችን) ይዟል። ይህ የአገናኞች ጥግግት ሂዩሪስቲኩን ለማስነሳት በቂ ነው።
+Avast እና AVG ብዙ HTTP ጥያቄዎችን የሚመስሉ አገናኞችን የያዙ ግልጽ-ጽሑፍ/Markdown ፋይሎችን የሚጠቁም ሂዩሪስቲክ ያስኬዳሉ። የ67router `README.md` በnpm ጥቅሉ ውስጥ ተካትቶ ይላካል (በ`package.json` → `files` ውስጥ ተዘርዝሯል)፣ ስለዚህ በዓለም አቀፍ ጭነት ጊዜ በ`node_modules/omniroute/README.md` ላይ ይቀመጣል — እንዲሁም ~15 የ`http://localhost:20128/...` ምሳሌዎችን (የMCP HTTP/SSE የመዳረሻ ነጥቦችን፣ የA2A `.well-known` URLን፣ እና የ`curl` ቅንጥቦችን) ይዟል። ይህ የአገናኞች ጥግግት ሂዩሪስቲኩን ለማስነሳት በቂ ነው።
 
 ይህ በቅርቡ ብቻ የጀመረ ከሆነ፦ የፋይሉ ዓይነት አልተለወጠም። README የመዳረሻ ነጥቦች ሰንጠረዡን አስፋፍቷል (MCP HTTP + SSE + A2A ተጨምረዋል) እና ተጨማሪ የ`curl` ምሳሌዎች ተካትተዋል፣ ይህም ከገደቡ እንዲያልፍ አድርጎታል።
 
@@ -195,7 +195,7 @@ Avast እና AVG ብዙ HTTP ጥያቄዎችን የሚመስሉ አገናኞች�
 
 **ማድረግ ያለብዎት፦**
 
-1. **ማሳወቂያዎቹን ያቁሙ** — የጭነት ማውጫውን በጸረ-ቫይረስዎ ውስጥ ከቅኝት ያስቀሩ (Avast፦ Settings → Exceptions)፣ የዓለም አቀፍ `node_modules` ዱካዎን እና/ወይም የOmniRoute ውሂብ ማውጫን (`~/.omniroute/`) ያክሉ።
+1. **ማሳወቂያዎቹን ያቁሙ** — የጭነት ማውጫውን በጸረ-ቫይረስዎ ውስጥ ከቅኝት ያስቀሩ (Avast፦ Settings → Exceptions)፣ የዓለም አቀፍ `node_modules` ዱካዎን እና/ወይም የ67router ውሂብ ማውጫን (`~/.omniroute/`) ያክሉ።
 2. **የተሳሳተውን ማስጠንቀቂያ ሪፖርት ያድርጉ** — <https://www.avast.com/false-positive-file-form.php>፣ ማግለያ ውስጥ የገባውን `README.md` በማያያዝ። ችግሩ የአቅራቢው ሂዩሪስቲክ ለጽሑፍ ፋይል ከመጠን በላይ ምላሽ መስጠቱ ስለሆነ፣ ይህ ሁሉንም ሰው የሚጠቅም መፍትሔ ነው።
 
 **ይህን በእኛ በኩል ለምን “አናስተካክለውም”፦** ምሳሌዎቹ በሙሉ `http://localhost` ናቸው፣ እና localhost ከራስ-የተፈረሙ ሰርተፊኬቶች ችግር ውጭ `https` መሆን አይችልም። የአንድን አቅራቢ ሂዩሪስቲክ ለማለፍ ሰነዶቹን ማዛባት፣ የቅኝት መሣሪያውን ስህተት ለማርካት ሲባል ሁሉንም አንባቢ ይጎዳል።
@@ -233,7 +233,7 @@ Avast እና AVG ብዙ HTTP ጥያቄዎችን የሚመስሉ አገናኞች�
 
 ### የመግቢያ ገጹ ይበላሻል ወይም "Module self-registration" ስህተት ያሳያል
 
-**ምክንያት፦** ከOmniRoute ከተፈቀደው የደህንነት ማስኬጃ ዝቅተኛ ገደብ ውጪ የሆነ የNode.js ስሪት እያስኬዱ ነው። በጣም የተለመደው ሁኔታ፣ OmniRoute ከሚጠይቀው የታረመ የደህንነት ዝቅተኛ ገደብ በታች የሆነ የቆየ የNode 22 ወይም 24 ጥገና ስሪት ማስኬድ ነው።
+**ምክንያት፦** ከ67router ከተፈቀደው የደህንነት ማስኬጃ ዝቅተኛ ገደብ ውጪ የሆነ የNode.js ስሪት እያስኬዱ ነው። በጣም የተለመደው ሁኔታ፣ 67router ከሚጠይቀው የታረመ የደህንነት ዝቅተኛ ገደብ በታች የሆነ የቆየ የNode 22 ወይም 24 ጥገና ስሪት ማስኬድ ነው።
 
 **ምልክቶች፦**
 
@@ -249,7 +249,7 @@ Avast እና AVG ብዙ HTTP ጥያቄዎችን የሚመስሉ አገናኞች�
    nvm use 24
    ```
 2. ስሪትዎን ያረጋግጡ፦ `node --version` በ24.x LTS መስመር ላይ `v24.0.0` ወይም ከዚያ በላይ ማሳየት አለበት
-3. OmniRouteን እንደገና ይጫኑ፦ `npm install -g omniroute`
+3. 67routerን እንደገና ይጫኑ፦ `npm install -g omniroute`
 4. እንደገና ያስጀምሩ፦ `omniroute`
 
 > **የሚደገፉ ደህንነታቸው የተጠበቁ ስሪቶች፦** `>=22.22.2 <23` ወይም `>=24.0.0 <27`። Node.js 24.x LTS (Krypton) እና Node.js 26 ሙሉ በሙሉ ይደገፋሉ።
@@ -332,13 +332,13 @@ omniroute
 
 **ምክንያት፦** በNode.js 22 ላይ፣ የundici@8 ማሰራጫ ከNode አብሮገነብ `fetch()` አተገባበር ጋር ተኳሃኝ አይደለም።
 
-**መፍትሔ (v3.5.5+)፦** ወጥ የሆነ ባህሪን ለማረጋገጥ፣ OmniRoute አሁን የፕሮክሲ ማሰራጫ ገቢር በሚሆንበት ጊዜ የundici የራሱን `fetch()` ተግባር ይጠቀማል። ወደ v3.5.5+ ያዘምኑ።
+**መፍትሔ (v3.5.5+)፦** ወጥ የሆነ ባህሪን ለማረጋገጥ፣ 67router አሁን የፕሮክሲ ማሰራጫ ገቢር በሚሆንበት ጊዜ የundici የራሱን `fetch()` ተግባር ይጠቀማል። ወደ v3.5.5+ ያዘምኑ።
 
 ### በWSL ስር ያለ MITM ፕሮክሲ፦ በWindows አስተናጋጅ ላይ ያሉ የዴስክቶፕ መተግበሪያዎች አይጠለፉም
 
-**ምክንያት፦** MITM ፕሮክሲው እና የCA ሰርቲፊኬቱ OmniRoute በሚሰራበት አካባቢ ውስጥ ይጫናሉ። በWSL ስር ያ አካባቢ የLinux እንግዳ ሲሆን፣ የAI ዴስክቶፕ መተግበሪያዎች (Kiro, Trae, Copilot, Zed, …) ደግሞ በWindows አስተናጋጅ ላይ ይሰራሉ። የአስተናጋጁ መተግበሪያዎች የእንግዳውን የሰርቲፊኬት ማከማቻ አያምኑም፣ እንዲሁም በእንግዳው የስርዓት ፕሮክሲ በኩል አይተላለፉም፤ ስለዚህ የዴስክቶፕ ጠለፋ በዚያ አይሰራም።
+**ምክንያት፦** MITM ፕሮክሲው እና የCA ሰርቲፊኬቱ 67router በሚሰራበት አካባቢ ውስጥ ይጫናሉ። በWSL ስር ያ አካባቢ የLinux እንግዳ ሲሆን፣ የAI ዴስክቶፕ መተግበሪያዎች (Kiro, Trae, Copilot, Zed, …) ደግሞ በWindows አስተናጋጅ ላይ ይሰራሉ። የአስተናጋጁ መተግበሪያዎች የእንግዳውን የሰርቲፊኬት ማከማቻ አያምኑም፣ እንዲሁም በእንግዳው የስርዓት ፕሮክሲ በኩል አይተላለፉም፤ ስለዚህ የዴስክቶፕ ጠለፋ በዚያ አይሰራም።
 
-**ምክር፦** OmniRouteን ለመጥለፍ ከሚፈልጓቸው የዴስክቶፕ መተግበሪያዎች ጋር በአንድ ስርዓተ ክወና ላይ በቀጥታ ያስኪዱት (ለWindows መተግበሪያዎች Windows፤ ለmacOS/Linuxም እንደዚሁ)። የአስተናጋጅ መተግበሪያዎችን ዒላማ እያደረጉ OmniRouteን በWSL ውስጥ ማቆየት፣ የተፈጠረውን የCA ሰርቲፊኬት በWindows አስተናጋጅ ላይ በእጅ ማመን እና የእያንዳንዱን የአስተናጋጅ መተግበሪያ የአውታረ መረብ/ፕሮክሲ ቅንብሮች ወደ WSL ፕሮክሲ መጨረሻ ነጥብ ማመልከትን ይጠይቃል—ይህ የማይደገፍ እና በቀላሉ ሊበላሽ የሚችል ውቅረት ነው።
+**ምክር፦** 67routerን ለመጥለፍ ከሚፈልጓቸው የዴስክቶፕ መተግበሪያዎች ጋር በአንድ ስርዓተ ክወና ላይ በቀጥታ ያስኪዱት (ለWindows መተግበሪያዎች Windows፤ ለmacOS/Linuxም እንደዚሁ)። የአስተናጋጅ መተግበሪያዎችን ዒላማ እያደረጉ 67routerን በWSL ውስጥ ማቆየት፣ የተፈጠረውን የCA ሰርቲፊኬት በWindows አስተናጋጅ ላይ በእጅ ማመን እና የእያንዳንዱን የአስተናጋጅ መተግበሪያ የአውታረ መረብ/ፕሮክሲ ቅንብሮች ወደ WSL ፕሮክሲ መጨረሻ ነጥብ ማመልከትን ይጠይቃል—ይህ የማይደገፍ እና በቀላሉ ሊበላሽ የሚችል ውቅረት ነው።
 
 ---
 
@@ -365,7 +365,7 @@ omniroute
 
 ### OAuth ቶከን ጊዜው አልፏል
 
-OmniRoute ቶከኖችን በራስ-ሰር ያድሳል። ችግሮቹ ከቀጠሉ፦
+67router ቶከኖችን በራስ-ሰር ያድሳል። ችግሮቹ ከቀጠሉ፦
 
 1. ዳሽቦርድ → አቅራቢ → እንደገና ያገናኙ
 2. የአቅራቢውን ግንኙነት ሰርዘው እንደገና ያክሉት
@@ -576,7 +576,7 @@ curl http://localhost:20128/api/monitoring/health
 
 ### የተመሳሳይ ጊዜ ጥያቄዎች መጨናነቅን መከላከል
 
-ብዙ በአንድ ጊዜ የሚከናወኑ ጥያቄዎች የፍጥነት ገደብ የተጣለበትን አቅራቢ ሲደርሱ፣ OmniRoute ጥያቄዎችን በተራ ለማስኬድና ተከታታይ ውድቀቶችን ለመከላከል mutex + ራስ-ሰር የፍጥነት ገደብን ይጠቀማል። ይህ ለAPI ቁልፍ አቅራቢዎች በራስ-ሰር ይከናወናል።
+ብዙ በአንድ ጊዜ የሚከናወኑ ጥያቄዎች የፍጥነት ገደብ የተጣለበትን አቅራቢ ሲደርሱ፣ 67router ጥያቄዎችን በተራ ለማስኬድና ተከታታይ ውድቀቶችን ለመከላከል mutex + ራስ-ሰር የፍጥነት ገደብን ይጠቀማል። ይህ ለAPI ቁልፍ አቅራቢዎች በራስ-ሰር ይከናወናል።
 
 ### የውይይት ጥያቄዎች በ503 / chat_admission_busy ይወድቃሉ
 
@@ -612,7 +612,7 @@ byte-ተኮር የምላሽ አካሉ፦
 ቢያንስ `64` መሣሪያዎች፣ ወይም ቢያንስ `32,000` የተገመቱ tokens ሲኖሩት፣ ወይም የተገደበ መዋቅር ግምቱ
 የ`10,000` የተጎበኙ nodes ወይም የ`12` ጥልቀት ገደቦቹን ሲያሟጥጥ በመዋቅር ደረጃ ከባድ ነው።
 
-**ምክንያት፦** ይህ በOmniRoute ውስጥ ሆን ተብሎ የሚደረግ የጭነት ቅነሳ እንጂ የupstream አቅራቢ ውድቀት አይደለም።
+**ምክንያት፦** ይህ በ67router ውስጥ ሆን ተብሎ የሚደረግ የጭነት ቅነሳ እንጂ የupstream አቅራቢ ውድቀት አይደለም።
 እያንዳንዱ process አንድን ትልቅ የጥያቄ አካል ከማቆየቱና ከመተንተኑ በፊት የተገደበ የከባድ ጥያቄ አቅምን ለማስያዝ
 process-አካባቢያዊ guard ይጠቀማል። የከባድ ጥያቄ ፈቃድ ለSSE
 ምላሽ የሕይወት ዘመን ሙሉ እንደተያዘ ይቆያል።
@@ -656,7 +656,7 @@ false` እና ሰፊ `maxInflightBytes` ማለት በራስ-ሰር የተገኘ�
 
 ## አማራጭ RAG / LLM የብልሽት ምደባ (16 ችግሮች)
 
-አንዳንድ OmniRoute ተጠቃሚዎች gateway-ውን ከRAG ወይም agent stacks ፊት ያስቀምጣሉ። በእነዚህ አወቃቀሮች ውስጥ አንድ እንግዳ ሁኔታ ማየት የተለመደ ነው፦ OmniRoute ጤናማ ይመስላል (providers እየሰሩ ነው፣ routing profiles ትክክል ናቸው፣ የrate limit ማንቂያዎች የሉም)፣ ነገር ግን የመጨረሻው መልስ አሁንም የተሳሳተ ነው።
+አንዳንድ 67router ተጠቃሚዎች gateway-ውን ከRAG ወይም agent stacks ፊት ያስቀምጣሉ። በእነዚህ አወቃቀሮች ውስጥ አንድ እንግዳ ሁኔታ ማየት የተለመደ ነው፦ 67router ጤናማ ይመስላል (providers እየሰሩ ነው፣ routing profiles ትክክል ናቸው፣ የrate limit ማንቂያዎች የሉም)፣ ነገር ግን የመጨረሻው መልስ አሁንም የተሳሳተ ነው።
 
 በተግባር እነዚህ ክስተቶች ብዙውን ጊዜ የሚመጡት ከgateway-ው ራሱ ሳይሆን ከታችኛው RAG pipeline ነው።
 
@@ -675,17 +675,17 @@ false` እና ሰፊ `maxInflightBytes` ማለት በራስ-ሰር የተገኘ�
 
 1. መጥፎ ምላሽን ሲመረምሩ፣ የሚከተሉትን ይመዝግቡ፦
    - የተጠቃሚውን ተግባር እና ጥያቄ
-   - በOmniRoute ውስጥ ያለውን route ወይም provider combo
+   - በ67router ውስጥ ያለውን route ወይም provider combo
    - በታችኛው ሂደት ጥቅም ላይ የዋለ ማንኛውንም RAG context (የተገኙ ሰነዶች፣ tool calls፣ ወዘተ)
 2. ክስተቱን ከአንድ ወይም ከሁለት WFGY ProblemMap ቁጥሮች (`No.1` … `No.16`) ጋር ያዛምዱ።
-3. ቁጥሩን ከOmniRoute logs አጠገብ በራስዎ dashboard፣ runbook ወይም incident tracker ውስጥ ያስቀምጡ።
+3. ቁጥሩን ከ67router logs አጠገብ በራስዎ dashboard፣ runbook ወይም incident tracker ውስጥ ያስቀምጡ።
 4. የRAG stack፣ retriever ወይም routing strategyዎን መቀየር እንዳለብዎት ለመወሰን ተዛማጁን WFGY ገጽ ይጠቀሙ።
 
 ሙሉው ጽሑፍ እና ተግባራዊ መመሪያዎች እዚህ ይገኛሉ (MIT license፣ ጽሑፍ ብቻ)፦
 
 [WFGY ProblemMap README](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-ከOmniRoute በስተጀርባ RAG ወይም agent pipelines የማያስኬዱ ከሆነ ይህን ክፍል ችላ ማለት ይችላሉ።
+ከ67router በስተጀርባ RAG ወይም agent pipelines የማያስኬዱ ከሆነ ይህን ክፍል ችላ ማለት ይችላሉ።
 
 ---
 
@@ -709,7 +709,7 @@ false` እና ሰፊ `maxInflightBytes` ማለት በራስ-ሰር የተገኘ�
 
 1. ለplatformዎ Devin CLIን ይጫኑ
 2. በ`.env` ውስጥ `CLI_DEVIN_BIN=/usr/local/bin/devin` (ወይም ትክክለኛውን ዱካ) ያዘጋጁ
-3. OmniRouteን እንደገና ያስጀምሩ እና ከ**Dashboard → CLI Tools** እንደገና ይፈትሹ
+3. 67routerን እንደገና ያስጀምሩ እና ከ**Dashboard → CLI Tools** እንደገና ይፈትሹ
 
 ### የModel cooldown ተጣብቆ መቆየት (በእጅ ዳግም ማስጀመር)
 
@@ -764,7 +764,7 @@ false` እና ሰፊ `maxInflightBytes` ማለት በራስ-ሰር የተገኘ�
 
 1. የዘፈቀደ secret ይፍጠሩ፦ `openssl rand -hex 32`
 2. በproduction server env ውስጥ (እና ከbridge-ው ጋር በሚገናኝ ማንኛውም client ውስጥ) `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` ያዘጋጁ
-3. OmniRouteን እንደገና ያስጀምሩ
+3. 67routerን እንደገና ያስጀምሩ
 
 ### Responses API፦ background mode ወደ synchronous ዝቅ ብሏል
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute uporablja model izdajanja z **vzporednimi cikli**: namensko vejo `release/vX.Y.Z`
+67router uporablja model izdajanja z **vzporednimi cikli**: namensko vejo `release/vX.Y.Z`
 za aktivni cikel, `main` za objavljeno linijo in nespremenljivo
 oznako `vX.Y.Z`, ko je cikel izdan. Pričakovano je, da se potrditve znajdejo tako na `release/*` _kot_ na
 `main` — ne gre za pomoto.

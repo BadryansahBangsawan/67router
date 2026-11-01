@@ -5,7 +5,7 @@
 ---
 
 Dokumen ini menerangkan asas penghalaan adaptif dipacu maklum balas yang ditambahkan pada
-OmniRoute. Ia sengaja direka dalam skop kecil: ia memperkenalkan saluran hasil penghalaan
+67router. Ia sengaja direka dalam skop kecil: ia memperkenalkan saluran hasil penghalaan
 berjenis, isyarat kualiti dalam talian yang disalurkan kepada penilai auto-combo sedia ada,
 pengeksport OpenTelemetry pilihan, dan titik akhir kebolehjelasan. Ia **tidak**
 menggantikan tindanan daya tahan sedia ada (pemutus litar, tempoh bertenang sambungan,
@@ -13,7 +13,7 @@ penguncian model, matriks kesihatan, autopilot) — sebaliknya, ia melengkapkann
 
 ## 1. Konteks seni bina
 
-OmniRoute ialah satah data dengan **laluan panas permintaan** dan **satah kawalan/kecerdasan**.
+67router ialah satah data dengan **laluan panas permintaan** dan **satah kawalan/kecerdasan**.
 Laluan panas mesti kekal pantas, cekap memori, tak segerak, berdaya tahan dan
 boleh diramal. Penilaian, pemarkahan kualiti, eksperimen dan analisis sejarah tergolong
 dalam satah kawalan.
@@ -23,7 +23,7 @@ Ejen AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   satah data (pantas, segerak, dalam memori)
+│    67router        │   satah data (pantas, segerak, dalam memori)
 │  penghalaan /       │
 │  tukar ganti        │
 │  kesihatan / batasan│
@@ -51,7 +51,6 @@ Ejen AI / IDE
 | Trafik bayangan                                 | `open-sse/services/combo/shadowRouting.ts`                                                                      |
 | Batasan                                         | `src/lib/guardrails/` (cangkuk pra/pasca)                                                                       |
 | Cache tepat                                     | `src/lib/semanticCache.ts` (berasaskan tandatangan)                                                             |
-| Penilai / penghalaan dipacu penilaian           | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                            |
 | Kebolehjelasan keputusan combo                  | `open-sse/services/combo/decisionTrace.ts`                                                                      |
 | Peristiwa masa nyata papan pemuka               | `src/lib/events/eventBus.ts` (saluran pemberitahuan UI, muatan `unknown`, sejarah 100 entri)                    |
 
@@ -237,7 +236,7 @@ Fail: `open-sse/services/routing/otel.ts`
 - Span mematuhi konvensyen semantik GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) berserta atribut penghalaan
-  OmniRoute (hasil, status, ttft, percubaan semula, sandaran).
+  67router (hasil, status, ttft, percubaan semula, sandaran).
 - `record()` hanya memasukkan data ke dalam penimbal terbatas (O(1)); pemasa latar belakang
   mengosongkannya melalui `POST {endpoint}/v1/traces` secara tak segerak. Ketika beban berlebihan,
   peristiwa paling lama digugurkan (pembilang `dropped`) — satah data tidak sekali-kali dikenakan tekanan balik.
@@ -257,7 +256,7 @@ Fail: `open-sse/services/routing/otel.ts`
 
 ## 6. Penyepaduan satah penilaian (Kesediaan Future AGI)
 
-OmniRoute menganggap Future AGI (atau mana-mana penilai) sebagai **bahagian belakang
+67router menganggap Future AGI (atau mana-mana penilai) sebagai **bahagian belakang
 kecerdasan/penilaian yang berpotensi, bukan kebergantungan**. Titik penyepaduannya:
 
 - `RoutingEventSink` boleh memajukan peristiwa kepada penilai secara tak segerak.
@@ -266,8 +265,6 @@ kecerdasan/penilaian yang berpotensi, bukan kebergantungan**. Titik penyepaduann
 - `Evaluator` pada masa hadapan (deterministik, penilai setempat, HTTP, WASM) akan menggunakan
   peristiwa/jejak dan mengembalikan `QualityScore` yang disalurkan ke laluan
   `getQualityScore`/faktor kualiti yang sama.
-- Penghalaan dipacu penilaian sedia ada (`open-sse/services/evalRouting.ts`) sudah
-  menyusun semula sasaran kombo mengikut kadar kelulusan `eval_runs` apabila didayakan.
 
 Tiada penilaian dijalankan secara segerak pada laluan permintaan, dan get laluan beroperasi
 sepenuhnya tanpa penilai.

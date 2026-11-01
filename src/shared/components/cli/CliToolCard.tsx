@@ -62,7 +62,7 @@ export default function CliToolCard({
           <span className="font-semibold text-text-main text-sm leading-tight truncate">
             {tool.name}
           </span>
-          <span className="text-[11px] text-text-muted font-mono bg-bg-subtle px-1.5 py-0.5 rounded">
+          <span className="rounded-[5px] border border-border bg-bg-subtle px-1.5 py-px font-mono text-[11px] text-text-muted">
             {version}
           </span>
         </div>
@@ -80,7 +80,7 @@ export default function CliToolCard({
       className={cn(
         // Kit card surface on the link itself (the whole card is the navigation target).
         "ci-card block min-h-[180px]",
-        "hover:shadow-md hover:border-primary/30 transition-all",
+        "transition-colors hover:border-border-strong",
         "p-4 flex flex-col gap-3"
       )}
     >
@@ -92,11 +92,18 @@ export default function CliToolCard({
         {/* Detection */}
         <span
           className={cn(
-            "inline-flex items-center gap-1 text-[11px] font-medium px-1.5 py-0.5 rounded",
-            installed ? "text-success" : "text-text-muted"
+            "inline-flex items-center gap-1.5 text-[11px] font-medium",
+            installed ? "text-text-main" : "text-text-muted"
           )}
         >
-          <span aria-hidden="true">{installed ? "✓" : "✗"}</span>
+          {/* 67router status dot: filled green when detected, hollow ring when not. */}
+          <span
+            aria-hidden="true"
+            className={cn(
+              "inline-block size-2 shrink-0 rounded-full",
+              installed ? "bg-success" : "border-[1.5px] border-text-muted"
+            )}
+          />
           {installed ? t("card.detected") : t("card.notDetected")}
         </span>
 
@@ -139,7 +146,7 @@ export default function CliToolCard({
 
       {/* Footer */}
       <div className="mt-auto pt-1 flex items-center justify-between">
-        <span className="text-xs text-primary font-medium">
+        <span className="inline-flex items-center gap-1 text-xs font-medium text-text-main">
           {installed ? t("card.configure") : t("card.howToInstall")}
         </span>
         {!hasActiveProviders && (

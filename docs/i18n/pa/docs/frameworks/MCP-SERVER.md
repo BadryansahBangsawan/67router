@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (ਪੰਜਾਬੀ)
+# 67router MCP Server Documentation (ਪੰਜਾਬੀ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## ਇੰਸਟਾਲੇਸ਼ਨ
 
-OmniRoute MCP ਅੰਦਰੂਨੀ ਤੌਰ 'ਤੇ ਸ਼ਾਮਲ ਹੈ। ਇਸਨੂੰ ਇਸ ਤਰ੍ਹਾਂ ਸ਼ੁਰੂ ਕਰੋ:
+67router MCP ਅੰਦਰੂਨੀ ਤੌਰ 'ਤੇ ਸ਼ਾਮਲ ਹੈ। ਇਸਨੂੰ ਇਸ ਤਰ੍ਹਾਂ ਸ਼ੁਰੂ ਕਰੋ:
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ Claude Desktop, Cursor, Cline ਅਤੇ ਅਨੁਕੂਲ MCP ਕਲਾਇੰ�
 | `omniroute_switch_combo`        | `write:combos`        | ਕਿਸੇ ਕੌਂਬੋ ਨੂੰ ਸਰਗਰਮ ਜਾਂ ਅਕਿਰਿਆਸ਼ੀਲ ਕਰੋ                                                                                      |
 | `omniroute_create_combo`        | `write:combos`        | ਮੌਜੂਦਾ ਕੌਂਬੋ API ਰਾਹੀਂ ਇੱਕ ਪ੍ਰਮਾਣਿਤ ਕੌਂਬੋ ਬਣਾਓ                                                                               |
 | `omniroute_check_quota`         | `read:quota`          | ਵਰਤਿਆ ਗਿਆ/ਕੁੱਲ ਕੋਟਾ, ਬਾਕੀ ਪ੍ਰਤੀਸ਼ਤ, ਰੀਸੈੱਟ ਸਮਾਂ, ਟੋਕਨ ਦੀ ਸਥਿਤੀ                                                               |
-| `omniroute_route_request`       | `execute:completions` | OmniRoute ਰੂਟਿੰਗ ਰਾਹੀਂ ਚੈਟ ਪੂਰਤੀ ਬੇਨਤੀ ਭੇਜੋ                                                                                  |
+| `omniroute_route_request`       | `execute:completions` | 67router ਰੂਟਿੰਗ ਰਾਹੀਂ ਚੈਟ ਪੂਰਤੀ ਬੇਨਤੀ ਭੇਜੋ                                                                                   |
 | `omniroute_cost_report`         | `read:usage`          | ਮਿਆਦ ਅਨੁਸਾਰ ਲਾਗਤ ਰਿਪੋਰਟ (ਸੈਸ਼ਨ/ਦਿਨ/ਹਫ਼ਤਾ/ਮਹੀਨਾ)                                                                              |
 | `omniroute_list_models_catalog` | `read:models`         | ਸਮਰੱਥਾਵਾਂ, ਸਥਿਤੀ ਅਤੇ ਕੀਮਤਾਂ ਸਮੇਤ ਪੂਰਾ ਮਾਡਲ ਕੈਟਾਲਾਗ                                                                           |
 | `omniroute_radar_catalog`       | `read:radar`          | ਸਥਾਨਕ ਹਸਤਾਖਰਿਤ Radar ਕੈਟਾਲਾਗ; ਵਿਕਲਪਿਕ ਪ੍ਰਦਾਤਾ/ਪਰਿਵਾਰ ਫਿਲਟਰ                                                                   |
@@ -148,7 +148,7 @@ API-ਕੁੰਜੀ ਪ੍ਰਿੰਸੀਪਲ ਅਨੁਸਾਰ ਅਲੱਗ 
 
 ### MCP ਐਕਸੈਸਿਬਿਲਿਟੀ ਟ੍ਰੀ ਫਿਲਟਰ (v3.8.0)
 
-ਉਪਰੋਕਤ ਕੰਪਰੈਸ਼ਨ ਟੂਲਾਂ ਤੋਂ ਵੱਖਰੇ ਤੌਰ 'ਤੇ, OmniRoute ਵਿੱਚ ਇੱਕ ਪੋਸਟ-ਐਗਜ਼ੀਕਿਊਸ਼ਨ ਫਿਲਟਰ ਸ਼ਾਮਲ ਹੈ ਜੋ MCP ਬ੍ਰਾਊਜ਼ਰ/ਐਕਸੈਸਿਬਿਲਿਟੀ ਟੂਲਾਂ ਦੇ **ਟੂਲ ਨਤੀਜਿਆਂ** ਨੂੰ ਏਜੰਟ ਕੋਲ ਵਾਪਸ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਕੰਪ੍ਰੈੱਸ ਕਰਦਾ ਹੈ। ਇਹ ਫਿਲਟਰ ਆਪਣੇ ਆਪ ਵਿੱਚ ਕੋਈ ਟੂਲ ਨਹੀਂ ਹੈ — ਇਹ ਅਜਿਹੇ ਕਿਸੇ ਵੀ ਟੂਲ ਨਤੀਜੇ ਉੱਤੇ ਪਾਰਦਰਸ਼ੀ ਢੰਗ ਨਾਲ ਚੱਲਦਾ ਹੈ ਜਿਸ ਵਿੱਚ ਵਿਸਤ੍ਰਿਤ ਐਕਸੈਸਿਬਿਲਿਟੀ-ਟ੍ਰੀ ਜਾਂ ਬ੍ਰਾਊਜ਼ਰ-ਸਨੈਪਸ਼ਾਟ ਟੈਕਸਟ (≥2000 ਅੱਖਰ) ਸ਼ਾਮਲ ਹੋਵੇ।
+ਉਪਰੋਕਤ ਕੰਪਰੈਸ਼ਨ ਟੂਲਾਂ ਤੋਂ ਵੱਖਰੇ ਤੌਰ 'ਤੇ, 67router ਵਿੱਚ ਇੱਕ ਪੋਸਟ-ਐਗਜ਼ੀਕਿਊਸ਼ਨ ਫਿਲਟਰ ਸ਼ਾਮਲ ਹੈ ਜੋ MCP ਬ੍ਰਾਊਜ਼ਰ/ਐਕਸੈਸਿਬਿਲਿਟੀ ਟੂਲਾਂ ਦੇ **ਟੂਲ ਨਤੀਜਿਆਂ** ਨੂੰ ਏਜੰਟ ਕੋਲ ਵਾਪਸ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਕੰਪ੍ਰੈੱਸ ਕਰਦਾ ਹੈ। ਇਹ ਫਿਲਟਰ ਆਪਣੇ ਆਪ ਵਿੱਚ ਕੋਈ ਟੂਲ ਨਹੀਂ ਹੈ — ਇਹ ਅਜਿਹੇ ਕਿਸੇ ਵੀ ਟੂਲ ਨਤੀਜੇ ਉੱਤੇ ਪਾਰਦਰਸ਼ੀ ਢੰਗ ਨਾਲ ਚੱਲਦਾ ਹੈ ਜਿਸ ਵਿੱਚ ਵਿਸਤ੍ਰਿਤ ਐਕਸੈਸਿਬਿਲਿਟੀ-ਟ੍ਰੀ ਜਾਂ ਬ੍ਰਾਊਜ਼ਰ-ਸਨੈਪਸ਼ਾਟ ਟੈਕਸਟ (≥2000 ਅੱਖਰ) ਸ਼ਾਮਲ ਹੋਵੇ।
 
 ਮੁੱਖ ਵਿਹਾਰ:
 
@@ -228,7 +228,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | ਵਿਕਲਪਿਕ `category` (api\|cli) ਅਤੇ `area` ਫਿਲਟਰਾਂ ਨਾਲ ਸਾਰੇ 45 ਏਜੰਟ ਸਕਿੱਲਾਂ ਦੀ ਸੂਚੀ ਦਿੰਦਾ ਹੈ; ਮੈਟਾਡੇਟਾ + ਕਵਰੇਜ ਵਾਪਸ ਕਰਦਾ ਹੈ                 |
 | `omniroute_agent_skills_get`      | `read:catalog` | ਕੈਨੋਨਿਕਲ `id` ਰਾਹੀਂ ਕਿਸੇ ਇੱਕ ਸਕਿੱਲ ਲਈ ਪੂਰਾ ਮੈਟਾਡੇਟਾ + SKILL.md ਸਮੱਗਰੀ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ                                                      |
-| `omniroute_agent_skills_coverage` | `read:catalog` | ਕਵਰੇਜ ਅੰਕੜੇ: ਕੈਟਾਲਾਗ ਦੇ ਕੁੱਲ ਅੰਕੜਿਆਂ ਦੇ ਮੁਕਾਬਲੇ ਫਾਈਲ-ਸਿਸਟਮ ਉੱਤੇ 23 API, 21 CLI ਅਤੇ 1 config ਸਕਿੱਲਾਂ ਵਿੱਚੋਂ ਕਿੰਨਿਆਂ ਕੋਲ SKILL.md ਫਾਈਲਾਂ ਹਨ |
+| `omniroute_agent_skills_coverage` | `read:catalog` | ਕਵਰੇਜ ਅੰਕੜੇ: ਕੈਟਾਲਾਗ ਦੇ ਕੁੱਲ ਅੰਕੜਿਆਂ ਦੇ ਮੁਕਾਬਲੇ ਫਾਈਲ-ਸਿਸਟਮ ਉੱਤੇ 22 API, 20 CLI ਅਤੇ 1 config ਸਕਿੱਲਾਂ ਵਿੱਚੋਂ ਕਿੰਨਿਆਂ ਕੋਲ SKILL.md ਫਾਈਲਾਂ ਹਨ |
 
 ਪੂਰੇ ਕੈਟਾਲਾਗ ਅਤੇ ਬਾਹਰੀ ਏਜੰਟਾਂ ਦੁਆਰਾ ਇਸਦੀ ਵਰਤੋਂ ਦੇ ਤਰੀਕੇ ਲਈ [AGENT-SKILLS.md](./AGENT-SKILLS.md) ਵੇਖੋ।
 
@@ -237,17 +237,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ਉੱਪਰ ਦਿੱਤੀ MCP ਟੂਲ ਸੂਚੀ (110 ਵਿਲੱਖਣ ਟੂਲ, `countUniqueMcpTools()` ਦੁਆਰਾ ਗਿਣੇ ਗਏ) ਨੂੰ ਜਾਣ-ਬੁੱਝ ਕੇ
 ਰਨਟਾਈਮ ਰਾਊਟਿੰਗ/ਕੈਸ਼/ਕੰਪ੍ਰੈਸ਼ਨ/ਮੈਮੋਰੀ/ਸਕਿੱਲ/ਪ੍ਰੌਕਸੀ/ਕਾਂਟੈਕਸਟ-ਸਰੋਤ ਕਾਰਵਾਈਆਂ ਤੱਕ ਸੀਮਿਤ ਰੱਖਿਆ ਗਿਆ ਹੈ। v3.8.0 ਵਿੱਚ MCP ਸਰਵਰ ਦੇ ਨਾਲ ਦੋ ਨਜ਼ਦੀਕੀ
 ਫਰੇਮਵਰਕ ਵੀ ਸ਼ਾਮਲ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਵੱਖਰੇ ਤੌਰ 'ਤੇ ਦਸਤਾਵੇਜ਼ਬੱਧ ਕੀਤਾ ਗਿਆ ਹੈ:
-
-### ਕਲਾਊਡ ਏਜੰਟ
-
-ਕਲਾਊਡ ਏਜੰਟ ਵੱਖਰੀ ਪ੍ਰਕਿਰਿਆ ਵਿੱਚ ਚੱਲਣ ਵਾਲੇ AI ਕੋਡਿੰਗ ਏਜੰਟ (codex-cloud, cursor-cloud, devin, jules) ਹਨ, ਜੋ
-LLM ਪ੍ਰਦਾਤਾਵਾਂ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਉਸੇ ਕਨੈਕਸ਼ਨ ਮਾਡਲ ਰਾਹੀਂ OmniRoute ਨਾਲ ਜੋੜੇ ਗਏ ਹਨ। ਉਹ
-ਆਪਣੇ REST ਇੰਟਰਫੇਸ (`/api/v1/agents/*`) ਰਾਹੀਂ ਉਪਲਬਧ ਹਨ ਅਤੇ MCP ਟੂਲ ਕੈਟਾਲਾਗ ਦਾ ਹਿੱਸਾ **ਨਹੀਂ** ਹਨ
-— ਕਿਸੇ ਕਲਾਊਡ ਏਜੰਟ ਨੂੰ ਕਾਲ ਕਰਨ ਨਾਲ ਕੋਈ MCP ਸਕੋਪ ਵਰਤਿਆ ਨਹੀਂ ਜਾਂਦਾ।
-
-- ਇੰਪਲੀਮੈਂਟੇਸ਼ਨ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)।
-- ਜੀਵਨ-ਚੱਕਰ: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`।
-- ਦਸਤਾਵੇਜ਼: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)।
 
 ### ਗਾਰਡਰੇਲ
 
@@ -419,8 +408,6 @@ Scope enforcement ਨੂੰ `open-sse/mcp-server/scopeEnforcement.ts` ਵਿੱ�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                        |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                 |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                   |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                               |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                  |
 | `read:obsidian`       | 13 ਪੜ੍ਹਨ ਵਾਲੇ ਟੂਲ — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 ਲਿਖਣ ਵਾਲੇ ਟੂਲ — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                |
@@ -474,7 +461,7 @@ HTTP/SSE ਉੱਤੇ, `open-sse/mcp-server/httpTransport.ts` ਹੁਣ
 
 | ਵੇਰੀਏਬਲ                                 | ਡਿਫੌਲਟ                                       | ਉਦੇਸ਼                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | :-------------------------------------- | :------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                     | ਉਹ ਬੇਸ URL ਜਿਸਦੀ ਵਰਤੋਂ MCP ਸਰਵਰ OmniRoute ਦੀਆਂ ਅੰਦਰੂਨੀ APIs ਨੂੰ ਕਾਲ ਕਰਨ ਵੇਲੇ ਕਰਦਾ ਹੈ                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                     | ਉਹ ਬੇਸ URL ਜਿਸਦੀ ਵਰਤੋਂ MCP ਸਰਵਰ 67router ਦੀਆਂ ਅੰਦਰੂਨੀ APIs ਨੂੰ ਕਾਲ ਕਰਨ ਵੇਲੇ ਕਰਦਾ ਹੈ                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `OMNIROUTE_API_KEY`                     | (ਖਾਲੀ)                                       | ਅੰਦਰੂਨੀ API ਕਾਲਾਂ ਲਈ `Authorization: Bearer` ਵਜੋਂ ਅੱਗੇ ਭੇਜੀ ਜਾਣ ਵਾਲੀ API ਕੁੰਜੀ                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (ਸਿਰਫ਼ `"true"` ਇਸਨੂੰ ਸਮਰੱਥ ਕਰਦਾ ਹੈ) | ਸਮਰੱਥ ਹੋਣ 'ਤੇ, ਗੁੰਮ ਸਕੋਪ ਟੂਲ ਕਾਲਾਂ ਨੂੰ ਅਸਵੀਕਾਰ ਕਰਦੇ ਹਨ ਅਤੇ ਆਡਿਟ ਲੌਗ ਵਿੱਚ `scope_denied:<reason>` ਦਰਜ ਕਰਦੇ ਹਨ। ਇਸ ਫਲੈਗ ਦੀ ਪਰਵਾਹ ਕੀਤੇ ਬਿਨਾਂ, ਹਰ ਉਸ HTTP/SSE ਕਾਲਰ ਲਈ ਲਾਗੂਕਰਨ ਵੀ ਲਾਜ਼ਮੀ ਤੌਰ 'ਤੇ ਚਾਲੂ ਕੀਤਾ ਜਾਂਦਾ ਹੈ, ਜਿਸਦੀ ਪਛਾਣ ਪ੍ਰਤੀ-ਕੁੰਜੀ Authorization ਹੈਡਰ (`source === "authInfo"`) ਤੋਂ ਕੀਤੀ ਗਈ ਹੋਵੇ ਅਤੇ ਜਿਸ ਕੋਲ ਪੂਰਾ `manage`/`admin` ਸਕੋਪ ਨਾ ਹੋਵੇ — ਉਦਾਹਰਨ ਵਜੋਂ, ਸਿਰਫ਼ ਸੀਮਤ `mcp:connect` ਬਾਈਪਾਸ ਸਕੋਪ ਰੱਖਣ ਵਾਲੀ ਕੁੰਜੀ — ਇਸ ਲਈ ਇਹ ਡਿਫੌਲਟ ਕੇਵਲ ਸਥਾਨਕ/stdio ਇਕੱਲੇ-ਓਪਰੇਟਰ ਪ੍ਰਵਾਹ ਲਈ ਹੀ ਸੁਰੱਖਿਅਤ ਹੈ, ਰਿਮੋਟ ਗੈਰ-ਲੂਪਬੈਕ ਪਹੁੰਚ ਲਈ ਕਦੇ ਨਹੀਂ |
 | `OMNIROUTE_MCP_SCOPES`                  | (ਖਾਲੀ)                                       | ਡਿਫੌਲਟ ਤੌਰ 'ਤੇ "ਉਪਲਬਧ" ਮੰਨੇ ਜਾਣ ਵਾਲੇ ਸਕੋਪਾਂ ਦੀ ਕਾਮਾ-ਵੱਖ ਕੀਤੀ ਮਨਜ਼ੂਰ-ਸੂਚੀ (ਜਦੋਂ ਕਾਲਰ ਆਪਣੇ ਸਕੋਪ ਪ੍ਰਦਾਨ ਨਹੀਂ ਕਰਦਾ, ਉਦੋਂ ਵਰਤੀ ਜਾਂਦੀ ਹੈ)                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -577,7 +564,6 @@ stdio ਟ੍ਰਾਂਸਪੋਰਟ ਹਰ 5 ਸਕਿੰਟਾਂ ਬਾਅਦ
 | `open-sse/mcp-server/tools/skillTools.ts`                                | ਹੁਨਰ ਟੂਲ ਪਰਿਭਾਸ਼ਾਵਾਂ (4 ਟੂਲ)                                       |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion ਸੰਦਰਭ ਸਰੋਤ ਟੂਲ ਪਰਿਭਾਸ਼ਾਵਾਂ (6 ਟੂਲ)                          |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | ਗੇਮੀਫਿਕੇਸ਼ਨ ਟੂਲ ਪਰਿਭਾਸ਼ਾਵਾਂ (8 ਟੂਲ)                                |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | ਪਲੱਗਇਨ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਤੇ ਪ੍ਰਬੰਧਨ ਟੂਲ (8 ਟੂਲ)                         |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` ਐਂਡਪੁਆਇੰਟ                                        |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` ਐਂਡਪੁਆਇੰਟ                                         |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE ਟ੍ਰਾਂਸਪੋਰਟ ਰੂਟ                                  |

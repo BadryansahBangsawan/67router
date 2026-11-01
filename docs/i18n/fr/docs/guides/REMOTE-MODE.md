@@ -4,7 +4,7 @@
 
 ---
 
-Exécutez la CLI `omniroute` sur votre ordinateur portable tandis qu’OmniRoute s’exécute ailleurs
+Exécutez la CLI `omniroute` sur votre ordinateur portable tandis que 67router s’exécute ailleurs
 (un VPS, un serveur domestique, une autre machine sur votre Tailnet). Vous vous connectez une fois avec
 `omniroute connect`, puis **toutes** les commandes de la CLI ciblent ce serveur distant —
 mêmes commandes, même sortie, mais exécutées sur le serveur distant.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← écrit un profil Codex local à p
 ## Fonctionnement
 
 ```
-votre ordinateur portable                OmniRoute distant (VPS)
+votre ordinateur portable                67router distant (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (mot de passe → jeton)    │
 │  contexte : vps    │ ───────────────►  │ émet un jeton d’accès doté    │
@@ -108,7 +108,7 @@ se trouve sur le serveur, et non sur votre machine ; l’écran de consentement 
 bloqué indéfiniment sans jamais générer de code** — la solution de secours habituelle
 consistant à « coller l’URL de callback » ne fournit rien à coller. (Il s’agit d’une
 contrainte imposée par Google : le même blocage se produit dans tout proxy utilisant le
-client de bureau Antigravity intégré, pas uniquement dans OmniRoute.)
+client de bureau Antigravity intégré, pas uniquement dans 67router.)
 
 Le tableau de bord détecte ce problème avant que vous ne soyez bloqué : lorsque vous ouvrez
 **Providers → Antigravity → Connect** depuis une adresse autre que localhost, l’avis
@@ -117,7 +117,7 @@ avec votre hôte et votre port déjà renseignés. (Une adresse de réseau local
 concernée — `192.168.x.x` n’est pas localhost pour ce callback.)
 
 Il existe deux méthodes prises en charge pour connecter Antigravity à une instance
-OmniRoute distante.
+67router distante.
 
 ### Option A — assistant de connexion local (recommandé)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Ensuite, dans le tableau de bord **distant** : **Providers → Antigravity → Connect**,
 collez le blob `omniroute-cred-v1.…` dans le champ de l’**Étape 2** (il accepte soit une
-URL de callback, soit un blob d’identifiant). OmniRoute le décode, exécute l’intégration
+URL de callback, soit un blob d’identifiant). 67router le décode, exécute l’intégration
 Cloud Code côté serveur et conserve la connexion.
 
 > Le blob contient un jeton d’actualisation — traitez-le comme un mot de passe. Lors d’un
@@ -199,7 +199,7 @@ il n’est donc pas nécessaire de créer un second tunnel pour un port propre a
 ## Connexion de Codex / Grok sur une installation distante (fournisseurs à boucle locale fixe)
 
 Codex, xAI (`xai-oauth`) et Grok CLI (`grok-cli`) enregistrent un
-`redirect_uri` de boucle locale **fixe** auprès de leur application OAuth en amont. OmniRoute ne peut pas le modifier — le
+`redirect_uri` de boucle locale **fixe** auprès de leur application OAuth en amont. 67router ne peut pas le modifier — le
 fournisseur renvoie toujours le navigateur vers la même adresse codée en dur :
 
 | Fournisseur | Callback fixe vers lequel le fournisseur redirige |
@@ -209,7 +209,7 @@ fournisseur renvoie toujours le navigateur vers la même adresse codée en dur :
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                 |
 
 Ici, `localhost` désigne **la machine exécutant le navigateur**, tandis que le serveur
-de callback PKCE d’OmniRoute écoute sur la boucle locale du **serveur**. Si vous ouvrez le tableau de bord à une adresse du réseau local
+de callback PKCE de 67router écoute sur la boucle locale du **serveur**. Si vous ouvrez le tableau de bord à une adresse du réseau local
 comme `http://192.168.0.15:20128`, les deux ne se rencontrent jamais : le code
 d’autorisation est envoyé au `localhost:1455` de votre propre ordinateur portable, où rien n’écoute,
 et le fournisseur fait échouer la connexion sans afficher d’erreur.
@@ -228,7 +228,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Deux transferts sont nécessaires, et n’en effectuer qu’un seul échoue également :
 
 - **`20128`** (le port du tableau de bord) fait de l’origine un véritable localhost, ce qui
-  permet à OmniRoute de démarrer le serveur de callback PKCE — une origine du réseau local
+  permet à 67router de démarrer le serveur de callback PKCE — une origine du réseau local
   n’atteint jamais cette branche.
 - **`1455`** (le port de callback fixe du fournisseur) est l’adresse vers laquelle le navigateur est renvoyé ;
   il doit être transféré par le tunnel vers la boucle locale du serveur.
@@ -352,7 +352,7 @@ omniroute contexts current         # le serveur actif, le statut d'authentificat
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | OmniRoute distant (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | 67router distant (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

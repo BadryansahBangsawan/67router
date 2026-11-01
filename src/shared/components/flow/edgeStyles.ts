@@ -6,13 +6,12 @@
  */
 /**
  * Theme-aware CSS custom properties (light values in `:root`, dark values in `.dark`
- * of `src/app/globals.css`) — the dark values are exactly the old `STATUS_HEX` hexes,
- * so dark mode is byte-identical while light mode finally gets legible contrast.
+ * of `src/app/globals.css`), resolving to the 67router status palette in each theme.
  * `idle` was already a var, which is the precedent that proves a `var()` resolves in
  * an SVG `stroke` (ReactFlow renders edge `style` onto a real `<path>`).
  *
- * `STATUS_HEX` stays exported for the callers that genuinely need a resolved hex
- * (canvas 2D, string math); it is no longer used here.
+ * `STATUS_HEX` (the same palette as light-mode hex) stays exported for the callers that
+ * genuinely need a resolved hex (canvas 2D, string math); it is not used here.
  */
 export const FLOW_EDGE_COLORS = {
   active: "var(--orch-status-success)",

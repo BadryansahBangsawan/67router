@@ -7,7 +7,6 @@ import {
   sanitizeProviderUsageForRequest,
 } from "../../open-sse/utils/usageTracking.ts";
 import { recordStreamingCost } from "../../open-sse/handlers/chatCore/streamingCost.ts";
-import { recordStreamingConsumption } from "../../src/lib/quota/spendRecorder.ts";
 import { computeCostFromPricing } from "../../src/lib/usage/costCalculator.ts";
 import { resetDbInstance } from "../../src/lib/db/core.ts";
 
@@ -46,9 +45,6 @@ async function replay(
   let usage: Usage | undefined;
   let callbackCount = 0;
   let ledgerCost: number | undefined;
-  let quotaCost: number | undefined;
-  let quotaTokens: number | undefined;
-  let quotaCompletion: Promise<void> | undefined;
   let resolverCalls = 0;
   const calculateCost: Parameters<typeof recordStreamingCost>[0]["calculateCost"] = async (
     provider,
@@ -87,23 +83,6 @@ async function replay(
         },
         ledger: { success: true, requestId: "cache-cost-stream" },
       });
-      quotaCompletion = recordStreamingConsumption(
-        {
-          apiKeyId: "cache-cost-key",
-          connectionId: "cache-cost-connection",
-          provider,
-          model,
-          streamUsage: usage,
-          streamStatus: payload.status,
-        },
-        {
-          calculateCost,
-          schedule(input) {
-            quotaCost = input.cost.usd;
-            quotaTokens = input.cost.tokens;
-          },
-        }
-      );
     },
   });
   const response = { id: "resp-cache-cost", object: "response", model };
@@ -161,22 +140,17 @@ async function replay(
   await writer.close();
   const clientWire = await reading;
   assert.equal(callbackCount, 1);
-  assert.ok(quotaCompletion, "quota consumer must run");
-  await quotaCompletion;
   assert.ok(usage);
-  assert.equal(resolverCalls, 2);
+  assert.equal(resolverCalls, 1);
   assert.equal(typeof ledgerCost, "number");
-  assert.equal(typeof quotaCost, "number");
   const directCost = computeCostFromPricing(PRICING, usage as CostUsage);
-  console.log(
-    JSON.stringify({ mode, direction, provider, model, usage, directCost, ledgerCost, quotaCost })
-  );
-  return { usage, directCost, ledgerCost, quotaCost, quotaTokens, clientWire };
+  console.log(JSON.stringify({ mode, direction, provider, model, usage, directCost, ledgerCost }));
+  return { usage, directCost, ledgerCost, clientWire };
 }
 
 test.after(() => resetDbInstance());
 
-test("translated Responses streams discount cached input in the ledger and shared quota", async () => {
+test("translated Responses streams discount cached input in the ledger", async () => {
   const result = await replay("translate");
   assert.equal(result.usage.prompt_tokens, 100_000);
   assert.equal(result.usage.completion_tokens, 100);
@@ -185,9 +159,7 @@ test("translated Responses streams discount cached input in the ledger and share
   assert.match(result.clientWire, /"cached_tokens":95000/);
   // (5000 * 2 + 95000 * 0.2 + 100 * 10) / 1e6 = 0.03.
   assertCost(result.ledgerCost, 0.03);
-  assertCost(result.quotaCost, 0.03);
   assertCost(result.directCost, 0.03);
-  assert.equal(result.quotaTokens, 100_100);
 });
 
 for (const model of ["deepseek-v4-pro", "kimi-k3"]) {
@@ -211,7 +183,6 @@ for (const model of ["deepseek-v4-pro", "kimi-k3"]) {
     assert.equal(result.usage.cached_tokens, undefined);
     assert.match(result.clientWire, /"cached_tokens":95000/);
     assertCost(result.ledgerCost, 0.03);
-    assertCost(result.quotaCost, 0.03);
     assertCost(result.directCost, 0.03);
   });
 }
@@ -220,7 +191,6 @@ test("Responses passthrough retains its discounted streaming cost", async () => 
   const result = await replay("passthrough");
   assert.equal(result.usage.cached_tokens, 95_000);
   assertCost(result.ledgerCost, 0.03);
-  assertCost(result.quotaCost, 0.03);
 });
 
 test("non-streaming normalized Responses usage retains its discounted cost", () => {
@@ -242,7 +212,6 @@ test("translated cache creation is subtracted once from an inclusive prompt", as
   });
   // (1000 * 2 + 95000 * 0.2 + 4000 * 2.5 + 100 * 10) / 1e6 = 0.032.
   assertCost(result.ledgerCost, 0.032);
-  assertCost(result.quotaCost, 0.032);
 });
 
 test("translated cache creation outside the prompt does not subtract uncached input", async () => {
@@ -260,16 +229,14 @@ test("translated cache creation outside the prompt does not subtract uncached in
     cache_creation_in_prompt: false,
   });
   assertCost(result.ledgerCost, 0.032);
-  assertCost(result.quotaCost, 0.032);
 });
 
-test("translated reasoning retains the output premium in both cost consumers", async () => {
+test("translated reasoning retains the output premium in the ledger", async () => {
   const result = await replay("translate", {
     ...UPSTREAM_USAGE,
     output_tokens_details: { reasoning_tokens: 40 },
   });
   assertCost(result.ledgerCost, 0.0304);
-  assertCost(result.quotaCost, 0.0304);
 });
 
 for (const detailsKey of ["prompt_tokens_details", "input_tokens_details"]) {

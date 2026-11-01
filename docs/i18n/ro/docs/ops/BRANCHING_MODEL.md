@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute utilizează un model de lansare cu **cicluri paralele**: o ramură dedicată `release/vX.Y.Z`
+67router utilizează un model de lansare cu **cicluri paralele**: o ramură dedicată `release/vX.Y.Z`
 pentru ciclul activ, `main` pentru linia publicată și o etichetă imuabilă
 `vX.Y.Z` atunci când ciclul respectiv este lansat. Este normal ca unele commituri să ajungă atât în `release/*`, _cât și_ în
 `main` — nu este o confuzie.

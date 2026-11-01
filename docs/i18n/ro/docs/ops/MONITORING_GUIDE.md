@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: OmniRoute include monitorizarea integrată a stării de funcționare, pilot automat pentru furnizori, urmărirea cotelor și mecanisme de observabilitate. Acest ghid prezintă panoul de control, alertele și depanarea.
+> **Pe scurt**: 67router include monitorizarea integrată a stării de funcționare, pilot automat pentru furnizori, urmărirea cotelor și mecanisme de observabilitate. Acest ghid prezintă panoul de control, alertele și depanarea.
 
 **Surse:**
 
@@ -20,7 +20,7 @@
 
 ## Prezentare generală
 
-OmniRoute are **3 niveluri de monitorizare**:
+67router are **3 niveluri de monitorizare**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Pentru fiecare combinație:
 
 ## API de verificare a stării
 
-OmniRoute expune **două** puncte HTTP pentru verificarea stării. Acestea nu sunt interschimbabile pentru orchestratoare.
+67router expune **două** puncte HTTP pentru verificarea stării. Acestea nu sunt interschimbabile pentru orchestratoare.
 
 | Cale                         | Scop                                                                                          | Cost                                                 | Utilizare                                                                                            |
 | ---------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -172,7 +172,7 @@ Nu declanșați alerte exclusiv pe baza `provider_connections.test_status` atunc
 
 ### Recomandări pentru sondele Kubernetes
 
-OmniRoute este un **singur proces Node** (o singură buclă de evenimente). Configurația Docker `HEALTHCHECK` standard vizează ruta simplă `/healthz`. `/api/monitoring/health` este **prea costisitoare** pentru intervalele de verificare a disponibilității folosite de kubelet.
+67router este un **singur proces Node** (o singură buclă de evenimente). Configurația Docker `HEALTHCHECK` standard vizează ruta simplă `/healthz`. `/api/monitoring/health` este **prea costisitoare** pentru intervalele de verificare a disponibilității folosite de kubelet.
 
 | Sondă                 | Țintă recomandată                                                                           | Note                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -219,7 +219,7 @@ Subiecte asociate: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/100
 
 ### Watchdog systemd (buclă de evenimente blocată)
 
-Pe o gazdă systemd, OmniRoute informează managerul de servicii când este pregătit și continuă să-i trimită semnale, astfel încât un server a cărui buclă de evenimente este blocată să fie oprit și repornit, în loc să rămână activ și să nu răspundă. Semnalele provin din propria buclă de evenimente a serverului: când aceasta se blochează, semnalele se opresc, iar systemd repornește serviciul după ce trece intervalul `WatchdogSec` fără niciun semnal.
+Pe o gazdă systemd, 67router informează managerul de servicii când este pregătit și continuă să-i trimită semnale, astfel încât un server a cărui buclă de evenimente este blocată să fie oprit și repornit, în loc să rămână activ și să nu răspundă. Semnalele provin din propria buclă de evenimente a serverului: când aceasta se blochează, semnalele se opresc, iar systemd repornește serviciul după ce trece intervalul `WatchdogSec` fără niciun semnal.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) scrie deja o unitate de utilizator care include această configurare. O unitate scrisă de dvs. (cu valoarea implicită `Type=simple`) nu beneficiază de watchdog, așadar adăugați următoarele linii în secțiunea sa `[Service]`:
 
@@ -435,7 +435,7 @@ Configurarea verificării stării tokenurilor este gestionată intern de `tokenH
 
 ### Canale încorporate
 
-OmniRoute acceptă **3 canale de alertare**:
+67router acceptă **3 canale de alertare**:
 
 | Canal                     | Configurare        | Caz de utilizare                      |
 | ------------------------- | ------------------ | ------------------------------------- |
@@ -551,7 +551,7 @@ Creați un fișier `~/.omniroute/dashboard.json`:
 ### „Cota este indicată ca fiind în regulă, dar văd răspunsuri 429”
 
 - 429 înseamnă că furnizorul indică faptul că v-ați consumat cota
-- Monitorizarea cotei de către OmniRoute poate fi **învechită** — datele reale ale furnizorului se află în amonte
+- Monitorizarea cotei de către 67router poate fi **învechită** — datele reale ale furnizorului se află în amonte
 - Datele despre cotă sunt reîmprospătate automat prin monitorul intern de cote
 
 ### „Combinația eșuează, dar toate țintele par funcționale”
@@ -564,7 +564,7 @@ Creați un fișier `~/.omniroute/dashboard.json`:
 
 - Rulați `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Dacă rezultatul este „ok” — este o alarmă falsă, verificarea stării este prea strictă
-- Dacă rezultatul este orice altceva — **opriți OmniRoute** și urmați [ghidul de recuperare în caz de dezastru](./DATABASE_GUIDE.md#disaster-recovery)
+- Dacă rezultatul este orice altceva — **opriți 67router** și urmați [ghidul de recuperare în caz de dezastru](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „Presiunea asupra memoriei heap este critică”
 

@@ -25,7 +25,7 @@ Eine erste Zeile, deren erste Spalte das exakte Wort `provider` enthält (Groß-
 Laden Sie über das Import-Modal eine Ausgangsdatei herunter (**CSV-Vorlage herunterladen**). Beispiel:
 
 ```csv
-# OmniRoute-Anbieterimport (positionsbasierte Spalten)
+# 67router-Anbieterimport (positionsbasierte Spalten)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

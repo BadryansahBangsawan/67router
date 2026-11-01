@@ -11,7 +11,6 @@ export interface ConfigState {
   searchType: "web" | "news";
   fetchFormat: "markdown" | "html" | "text";
   fullPage: boolean;
-  rerankModel: string;
 }
 
 interface SearchToolsConfigPaneProps {
@@ -19,7 +18,6 @@ interface SearchToolsConfigPaneProps {
   onConfigChange: (patch: Partial<ConfigState>) => void;
   providers: SearchProviderCatalogItem[];
   activeTab: ActiveTab;
-  rerankModels?: { value: string; label: string }[];
 }
 
 export default function SearchToolsConfigPane({
@@ -27,7 +25,6 @@ export default function SearchToolsConfigPane({
   onConfigChange,
   providers,
   activeTab,
-  rerankModels = [],
 }: SearchToolsConfigPaneProps) {
   const t = useTranslations("search");
   const [historyExpanded, setHistoryExpanded] = useState(false);
@@ -45,7 +42,7 @@ export default function SearchToolsConfigPane({
       aria-label={t("configurationPane")}
     >
       <div className="p-3 border-b border-border">
-        <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+        <span className="text-[10px] font-semibold text-text-muted uppercase tracking-[0.04em]">
           {t("configuration")}
         </span>
       </div>
@@ -157,21 +154,6 @@ export default function SearchToolsConfigPane({
         </div>
       )}
 
-      {/* Rerank model (only for search tab) */}
-      {activeTab === "search" && rerankModels.length > 0 && (
-        <div className="p-3 border-b border-border space-y-1">
-          <Select
-            label={t("rerankModelLabel")}
-            value={config.rerankModel}
-            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
-              onConfigChange({ rerankModel: e.target.value })
-            }
-            options={[{ value: "", label: t("noneOption") }, ...rerankModels]}
-            className="w-full"
-          />
-        </div>
-      )}
-
       {/* History section (collapsible placeholder) */}
       <div className="p-3 flex-1">
         {/* kit-exception: Full-width disclosure header: stays a native <button> on kit tokens. */}
@@ -181,7 +163,7 @@ export default function SearchToolsConfigPane({
           onClick={() => setHistoryExpanded((e) => !e)}
           aria-expanded={historyExpanded}
         >
-          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-[0.04em]">
             {t("history")}
           </span>
           <span className="text-text-muted text-xs" aria-hidden="true">

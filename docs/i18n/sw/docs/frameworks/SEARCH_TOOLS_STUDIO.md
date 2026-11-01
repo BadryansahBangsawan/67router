@@ -169,5 +169,4 @@ Ni badiliko moja tu la backend lililohitajika kwa kipengele hiki:
 - Mpango mkuu: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Mpango wa kipengele: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Sajili ya watoa huduma wa utafutaji: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` zinazoshirikiwa): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Seva ya nyuma ya Web fetch: `src/app/api/v1/web/fetch/route.ts`

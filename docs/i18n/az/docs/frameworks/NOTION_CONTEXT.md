@@ -11,12 +11,12 @@
 
 ## Bu nədir
 
-OmniRoute **Notion** iş sahəsinə **kontekst mənbəyi** kimi — agentlərin daxili MCP serveri
+67router **Notion** iş sahəsinə **kontekst mənbəyi** kimi — agentlərin daxili MCP serveri
 vasitəsilə istifadə etdiyi oxuma/yazma imkanlı bilik bazası kimi qoşula bilər. Notion
 inteqrasiya tokeni konfiqurasiya edildikdən sonra MCP alətləri LLM-ə səhifələrdə və verilənlər
 bazalarında axtarış aparmağa, səhifə məzmununu və blok ağaclarını oxumağa, verilənlər bazalarını
 filtrlər/çeşidləmələr ilə sorğulamağa və yeni bloklar əlavə etməyə imkan verir — bütün bunlar
-OmniRoute üzərindən proksi edilir (təkrar cəhd, vaxt məhdudiyyəti və xətaların təsnifatı ilə),
+67router üzərindən proksi edilir (təkrar cəhd, vaxt məhdudiyyəti və xətaların təsnifatı ilə),
 beləliklə model heç vaxt birbaşa Notion API-yə müraciət etmir.
 
 İnteqrasiya rəsmi Notion REST API-si
@@ -41,7 +41,7 @@ açar `integration_token`) saxlanılır. Onu Endpoint idarəetmə panelinin
 
 > [!NOTE]
 > Token **Notion daxili inteqrasiya tokenidir**. <https://www.notion.com/my-integrations>
-> ünvanında inteqrasiya yaradın, sonra OmniRoute-un giriş əldə etməsini istədiyiniz
+> ünvanında inteqrasiya yaradın, sonra 67router-un giriş əldə etməsini istədiyiniz
 > səhifələri/verilənlər bazalarını həmin inteqrasiya ilə paylaşın (Notion-un icazə modeli
 > bütün iş sahəsini deyil, paylaşımı əsas götürür).
 
@@ -61,7 +61,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Hər üç metod idarəetmə paneli autentifikasiyasını (`isAuthenticated`) tələb edir. `POST`
-zamanı OmniRoute tokeni saxlayır və dərhal 1 nəticəli sınaq axtarışı başladır; Notion
+zamanı 67router tokeni saxlayır və dərhal 1 nəticəli sınaq axtarışı başladır; Notion
 xəta obyekti qaytararsa, token təmizlənir və çağırış `400` ilə uğursuz olur.
 
 ## MCP alətləri (6)

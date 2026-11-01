@@ -6,7 +6,7 @@
 
 ## Ìjábọ̀ Àwọn Àìlera Aabo
 
-Tí o bá ṣàwárí àìlera aabo kan nínú OmniRoute, jọ̀wọ́ jábọ̀ rẹ̀ lọ́nà tó bójú mu:
+Tí o bá ṣàwárí àìlera aabo kan nínú 67router, jọ̀wọ́ jábọ̀ rẹ̀ lọ́nà tó bójú mu:
 
 1. **MÁ ṢE** ṣí ìṣòro GitHub kan síta fún gbogbo ènìyàn
 2. Lo [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Lẹ́yìn 3.8.59, ẹ̀yà tó kàn ni **3.9.0**, èyí tó ṣí ìlà atilẹ
 
 ## Ìṣètò Aabo
 
-OmniRoute ń lo àwòṣe aabo onípele púpọ̀:
+67router ń lo àwòṣe aabo onípele púpọ̀:
 
 ```
 Ìbéèrè → CORS → Ìlànà Authz (sọ̀rí → àwọn ìlànà → múlò)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Ètò Àwọn Ìdènà
 
-OmniRoute ní **àkọsílẹ̀ àwọn ìdènà** tí a lè tún rù lẹ́sẹ̀kẹsẹ̀ (`src/lib/guardrails/`) pẹ̀lú àwọn ìdènà 3 tó wà nínú rẹ̀, tí a tò ní ìbámu pẹ̀lú ààyò:
+67router ní **àkọsílẹ̀ àwọn ìdènà** tí a lè tún rù lẹ́sẹ̀kẹsẹ̀ (`src/lib/guardrails/`) pẹ̀lú àwọn ìdènà 3 tó wà nínú rẹ̀, tí a tò ní ìbámu pẹ̀lú ààyò:
 
 | Ìdènà              | Ààyò | Ète                                                                                          |
 | ------------------ | ---- | -------------------------------------------------------------------------------------------- |

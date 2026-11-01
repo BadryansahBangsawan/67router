@@ -7,7 +7,7 @@
 > **Orísun òtítọ́:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-06-28 — v3.8.40
 
-OmniRoute ń gba `reasoning_content` olùrànlọ́wọ́ tí àwọn àwòṣe ipò-ìrònú ṣẹ̀dá, ó sì ń tún un ṣe ní gbangba lórí àwọn ìbéèrè olóríṣiríṣi ìyípadà nígbà tí olùpèsè upstream bá nílò rẹ̀. Èyí ń mú àwọn àṣìṣe HTTP 400 tí àwọn olùpèsè tó muna ń gbé jáde kúrò, nígbà tí ìtàn ìjíròrò oníbàárà kò bá ní èrò láti ìyípadà tó ṣáájú.
+67router ń gba `reasoning_content` olùrànlọ́wọ́ tí àwọn àwòṣe ipò-ìrònú ṣẹ̀dá, ó sì ń tún un ṣe ní gbangba lórí àwọn ìbéèrè olóríṣiríṣi ìyípadà nígbà tí olùpèsè upstream bá nílò rẹ̀. Èyí ń mú àwọn àṣìṣe HTTP 400 tí àwọn olùpèsè tó muna ń gbé jáde kúrò, nígbà tí ìtàn ìjíròrò oníbàárà kò bá ní èrò láti ìyípadà tó ṣáájú.
 
 ## Ìdí Tí Èyí Fi Wà
 
@@ -17,7 +17,7 @@ OmniRoute ń gba `reasoning_content` olùrànlọ́wọ́ tí àwọn àwòṣe 
 Párámítà Kò Tọ̀nà: A gbọ́dọ̀ fi reasoning_content inú ipò ìrònú padà sí API náà.
 ```
 
-Ṣùgbọ́n àwọn oníbàárà tí a sábà máa ń lò (Cursor, Cline, Roo Code, OpenAI SDK) máa ń yọ `reasoning_content` kúrò nínú ìtàn tí wọ́n tún ń fi ránṣẹ́. OmniRoute máa ń mú un padà láti inú cache ẹgbẹ́ server kí ìbéèrè tí upstream rí lè wà ní ìbámu. Issue #1628 ló mú ìtọ́jú àkópọ̀ memory/SQLite wọlé kí cache náà lè yè lẹ́yìn ìbẹ̀rẹ̀ process tuntun.
+Ṣùgbọ́n àwọn oníbàárà tí a sábà máa ń lò (Cursor, Cline, Roo Code, OpenAI SDK) máa ń yọ `reasoning_content` kúrò nínú ìtàn tí wọ́n tún ń fi ránṣẹ́. 67router máa ń mú un padà láti inú cache ẹgbẹ́ server kí ìbéèrè tí upstream rí lè wà ní ìbámu. Issue #1628 ló mú ìtọ́jú àkópọ̀ memory/SQLite wọlé kí cache náà lè yè lẹ́yìn ìbẹ̀rẹ̀ process tuntun.
 
 ## Àwòrán-ẹ̀rọ
 

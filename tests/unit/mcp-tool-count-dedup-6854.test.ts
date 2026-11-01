@@ -12,13 +12,9 @@ import assert from "node:assert/strict";
 
 const { countUniqueMcpTools } = await import("../../open-sse/mcp-server/toolCount.ts");
 const { MCP_TOOLS } = await import("../../open-sse/mcp-server/schemas/tools.ts");
-const { memoryTools } = await import("../../open-sse/mcp-server/tools/memoryTools.ts");
-const { skillTools } = await import("../../open-sse/mcp-server/tools/skillTools.ts");
 const { agentSkillTools } = await import("../../open-sse/mcp-server/tools/agentSkillTools.ts");
-const { githubSkillTools } = await import("../../open-sse/mcp-server/tools/githubSkillTools.ts");
 const { poolTools } = await import("../../open-sse/mcp-server/tools/poolTools.ts");
 const { gamificationTools } = await import("../../open-sse/mcp-server/tools/gamificationTools.ts");
-const { pluginTools } = await import("../../open-sse/mcp-server/tools/pluginTools.ts");
 const { notionTools } = await import("../../open-sse/mcp-server/tools/notionTools.ts");
 const { obsidianTools } = await import("../../open-sse/mcp-server/tools/obsidianTools.ts");
 const { localCorpusTools } = await import("../../open-sse/mcp-server/tools/localCorpusTools.ts");
@@ -46,13 +42,9 @@ test("#6854: countUniqueMcpTools de-duplicates tools registered in multiple coll
 
   const collections = {
     MCP_TOOLS: MCP_TOOLS as unknown as NamedTool[],
-    memoryTools: memoryTools as unknown as Record<string, NamedTool>,
-    skillTools: skillTools as unknown as Record<string, NamedTool>,
     agentSkillTools: agentSkillTools as unknown as Record<string, NamedTool>,
-    githubSkillTools: githubSkillTools as unknown as Record<string, NamedTool>,
     poolTools: poolTools as unknown as Record<string, NamedTool>,
     gamificationTools: gamificationTools as unknown as NamedTool[],
-    pluginTools: pluginTools as unknown as NamedTool[],
     notionTools: notionTools as unknown as NamedTool[],
     obsidianTools: obsidianTools as unknown as NamedTool[],
     localCorpusTools: localCorpusTools as unknown as NamedTool[],
@@ -60,7 +52,8 @@ test("#6854: countUniqueMcpTools de-duplicates tools registered in multiple coll
   };
 
   const total = countUniqueMcpTools(collections);
-  assert.equal(total, 110, "the published MCP inventory must match the registered tool set");
+  // 67router: PR-3 removed the 8 plugin tools and PR-6 the 10 memory/skill tools (107 -> 89).
+  assert.equal(total, 89, "the published MCP inventory must match the registered tool set");
 
   // Independently compute the "true" unique count by unioning every collection's
   // tool names into a Set — this must equal countUniqueMcpTools's own result AND

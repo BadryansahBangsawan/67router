@@ -4,7 +4,7 @@
 
 ---
 
-> **Lühidalt**: OmniRoute sisaldab sisseehitatud terviseseiret, teenusepakkujate autopilooti, kvootide jälgimist ja jälgitavuse integratsioonipunkte. See juhend käsitleb töölauda, hoiatusi ja tõrkeotsingut.
+> **Lühidalt**: 67router sisaldab sisseehitatud terviseseiret, teenusepakkujate autopilooti, kvootide jälgimist ja jälgitavuse integratsioonipunkte. See juhend käsitleb töölauda, hoiatusi ja tõrkeotsingut.
 
 **Allikad:**
 
@@ -20,7 +20,7 @@
 
 ## Ülevaade
 
-OmniRoute'il on **3 seirekihti**:
+67router'il on **3 seirekihti**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Iga kombinatsiooni kohta:
 
 ## Tervisekontrolli API
 
-OmniRoute pakub **kahte** HTTP-tervisekontrolli liidest. Need ei ole orkestreerijate jaoks omavahel asendatavad.
+67router pakub **kahte** HTTP-tervisekontrolli liidest. Need ei ole orkestreerijate jaoks omavahel asendatavad.
 
 | Tee                          | Eesmärk                                                                      | Koormus                                 | Kasutusotstarve                                                              |
 | ---------------------------- | ---------------------------------------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ põhjal. Kasutage reaalajas kontrollpäringute tõrgete jaoks välju `failed` + 
 
 ### Kubernetese kontrollpäringute soovitused
 
-OmniRoute on **üks Node'i protsess** (üks sündmusetsükkel). Dockeri vaikimisi `HEALTHCHECK` kasutab kerget lõpp-punkti `/healthz`. `/api/monitoring/health` on kubeleti elusolekukontrolli intervallide jaoks **liiga raske**.
+67router on **üks Node'i protsess** (üks sündmusetsükkel). Dockeri vaikimisi `HEALTHCHECK` kasutab kerget lõpp-punkti `/healthz`. `/api/monitoring/health` on kubeleti elusolekukontrolli intervallide jaoks **liiga raske**.
 
 | Kontroll                     | Soovitatav sihtmärk                                                           | Märkused                                                                                                                                                                                                                                                                                                                                                                              |
 | ---------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Seotud: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (kontro
 
 ### systemd valvekoer (hangunud sündmusetsükkel)
 
-systemd hostis teatab OmniRoute teenusehaldurile, millal see on valmis, ja saadab jätkuvalt impulsse, et hangunud sündmusetsükliga server lõpetataks ning taaskäivitataks, selle asemel et see töötavana, kuid vaikivana alles jääks. Impulsse saadetakse serveri enda sündmusetsüklist: selle blokeerumisel impulsid peatuvad ning systemd taaskäivitab teenuse, kui `WatchdogSec` möödub ühtegi impulssi saamata.
+systemd hostis teatab 67router teenusehaldurile, millal see on valmis, ja saadab jätkuvalt impulsse, et hangunud sündmusetsükliga server lõpetataks ning taaskäivitataks, selle asemel et see töötavana, kuid vaikivana alles jääks. Impulsse saadetakse serveri enda sündmusetsüklist: selle blokeerumisel impulsid peatuvad ning systemd taaskäivitab teenuse, kui `WatchdogSec` möödub ühtegi impulssi saamata.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) kirjutab juba seda sisaldava kasutajaüksuse. Ise kirjutatud üksusel (vaikimisi `Type=simple`) valvekoera pole, seega lisa selle jaotisse `[Service]` järgmised read:
 
@@ -443,7 +443,7 @@ Tokeni seisundikontrolli seadistamist haldab sisemiselt `tokenHealthCheck.ts`.
 
 ### Sisseehitatud kanalid
 
-OmniRoute toetab **3 hoiatuskanalit**:
+67router toetab **3 hoiatuskanalit**:
 
 | Kanal          | Seadistamine          | Kasutusjuht                  |
 | -------------- | --------------------- | ---------------------------- |
@@ -559,7 +559,7 @@ Looge fail `~/.omniroute/dashboard.json`:
 ### „Kvoodi seisund on korras, kuid näen vastuseid 429“
 
 - 429 tähendab, et teenusepakkuja sõnul olete oma kvoodi ära kasutanud
-- OmniRoute'i kvoodijälgimine võib olla **aegunud** — määrav on teenusepakkuja ülesvoolu teave
+- 67router'i kvoodijälgimine võib olla **aegunud** — määrav on teenusepakkuja ülesvoolu teave
 - Kvoodiandmeid värskendatakse automaatselt sisemise kvoodimonitori kaudu
 
 ### „Kombinatsioon nurjub, kuid kõik sihtmärgid näivad korras olevat“
@@ -572,7 +572,7 @@ Looge fail `~/.omniroute/dashboard.json`:
 
 - Käivitage `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Kui tulemus on „ok“ — valehäire, seisundikontroll on liiga range
-- Kui tulemus on midagi muud — **peatage OmniRoute** ja järgige [avariitaaste juhendit](./DATABASE_GUIDE.md#disaster-recovery)
+- Kui tulemus on midagi muud — **peatage 67router** ja järgige [avariitaaste juhendit](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### „Mälukuhja koormus on kriitiline“
 

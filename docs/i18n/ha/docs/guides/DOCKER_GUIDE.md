@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Hausa)
+# 🐳 Docker Guide — 67router (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Tare da Fayil ɗin Muhalli](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Profiles da Ake da Su](#available-profiles)
-- [Saita kayan aikin CLI na host lokacin da OmniRoute ke gudana a Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Saita kayan aikin CLI na host lokacin da 67router ke gudana a Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [Compose na Production](#production-compose)
 - [Matakan Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Profiles da Ake da Su
 
-OmniRoute yana zuwa da Compose profiles don manyan nau'ikan turawa. Zaɓi wanda ya dace da muhallinka.
+67router yana zuwa da Compose profiles don manyan nau'ikan turawa. Zaɓi wanda ya dace da muhallinka.
 
 | Profile        | Sabis            | Lokacin amfani                                                                                                                                                              | Umarni                                       |
 | -------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute yana zuwa da Compose profiles don manyan nau'ikan turawa. Zaɓi wanda 
 
 > Ana iya haɗa profiles da yawa: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Daidaita kayan aikin CLI na na’ura mai masaukin baki lokacin da OmniRoute ke gudana a Docker
+## Daidaita kayan aikin CLI na na’ura mai masaukin baki lokacin da 67router ke gudana a Docker
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` da maɓallin
 **Ajiye daidaitawa** na dashboard duk suna rubuta fayiloli kamar `~/.codex/*.config.toml`. Waɗannan hanyoyin
@@ -103,11 +103,11 @@ container, rubutun zai sauka a home na container ɗin (`/home/node` —
 image ɗin yana gudana da `USER node`), inda babu wani CLI na na’ura mai masaukin baki da zai taɓa karanta shi, kuma inda za a
 share shi da zarar an sake ƙirƙirar container ɗin.
 
-OmniRoute yana gano wannan kuma ya ƙi yin rubutun tare da bayar da umarni maimakon
+67router yana gano wannan kuma ya ƙi yin rubutun tare da bayar da umarni maimakon
 bayar da rahoton nasarar da ba za ka iya amfani da ita ba: CLI yana fita da `2`, kuma API yana amsawa da `422`
 tare da `containerEphemeralTarget: true`.
 
-### Shawarar da aka fi so: gudanar da CLI a na’ura mai masaukin baki, OmniRoute kuma a Docker
+### Shawarar da aka fi so: gudanar da CLI a na’ura mai masaukin baki, 67router kuma a Docker
 
 Container ɗin yana samar da API; CLI kuma yana daidaita kayan aikin na’ura mai masaukin bakinka.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind mount ne yake sa hanyar ta zama abin amincewa: OmniRoute yana karanta
+Bind mount ne yake sa hanyar ta zama abin amincewa: 67router yana karanta
 `/proc/self/mountinfo` kuma yana ba da izinin rubutu zuwa hanyoyin da aka yi mount (da kuma zuwa kundin
 da ’ya’yansu suke mounts, wanda shi ne ainihin tsarin `/host-home` da ke sama), yayin da
 har yanzu yake ƙin waɗanda ba a yi mount ba.
@@ -178,7 +178,7 @@ tare da gargaɗin cewa ba zai tsira bayan container ɗin ba.
 
 ## Redis Sidecar
 
-OmniRoute yana dogaro da Redis don tallafa wa mai iyakance ƙimar da aka rarraba da ma'ajiyar bayanai ta bai ɗaya. **A koyaushe ana ayyana** sabis ɗin `redis` a cikin `docker-compose.yml` (ba shi da shingen profile) kuma yana farawa tare da kowane profile.
+67router yana dogaro da Redis don tallafa wa mai iyakance ƙimar da aka rarraba da ma'ajiyar bayanai ta bai ɗaya. **A koyaushe ana ayyana** sabis ɗin `redis` a cikin `docker-compose.yml` (ba shi da shingen profile) kuma yana farawa tare da kowane profile.
 
 | Bayani               | Ƙima                                         |
 | -------------------- | -------------------------------------------- |
@@ -358,7 +358,6 @@ Baya ga tsoffin ƙimomin da aka rubuta a [ENVIRONMENT.md](../reference/ENVIRONME
 | `DASHBOARD_PORT` / `API_PORT` | Sauya ports da aka fallasa don dashboard (20128) da API (20129)                                                                                                                                                                                                       | `20128` / `20129`            |
 | `APP_BIND_HOST`               | Interface na host da docker-compose ke wallafa ports na dashboard/API/live-WS a kai. Da `REQUIRE_API_KEY=false` (tsohon ƙima), `0.0.0.0` yana fallasa proxy na `/v1` marar tantancewa ga LAN — faɗaɗa shi kawai da `REQUIRE_API_KEY=true` ko reverse proxy a gabansa. | `127.0.0.1`                  |
 | `CLIPROXY_BIND_HOST`          | Interface na host da docker-compose ke wallafa sidecar na `cliproxyapi` a kai — data volume ɗinsa yana ɗauke da bayanan shaidar masu samarwa.                                                                                                                         | `127.0.0.1`                  |
-| `OMNIROUTE_PLUGINS_DIR`       | Directory da mai binciken plugin na lokacin aiki ke karantawa kuma yake girka plugins a ciki. Saita shi idan an ɗora plugins da bind mount: tsohon ƙimar yana bin `HOME`, wanda ba lallai image ya export ba.                                                         | `~/.omniroute/plugins`       |
 | `OMNIROUTE_BASE_PATH`         | Ƙaramin path na URL lokacin da aka wallafa app a bayan reverse proxy (misali `/omniroute`)                                                                                                                                                                            | _(babu komai = root)_        |
 | `NEXT_PUBLIC_BASE_URL`        | Asalin adireshin browser na jama'a wanda ya haɗa da ƙaramin path (misali `https://host/omniroute`)                                                                                                                                                                    | ba a saita ba                |
 | `PROD_DASHBOARD_PORT`         | Port na dashboard a ɓangaren host don `docker-compose.prod.yml`                                                                                                                                                                                                       | `20130`                      |
@@ -366,7 +365,7 @@ Baya ga tsoffin ƙimomin da aka rubuta a [ENVIRONMENT.md](../reference/ENVIRONME
 
 ## Reverse Proxy a kan Ƙaramin Hanya (Traefik / nginx)
 
-Ana haɗa `basePath` na Next.js cikin kunshin standalone yayin ginawa. OmniRoute yana rubuta
+Ana haɗa `basePath` na Next.js cikin kunshin standalone yayin ginawa. 67router yana rubuta
 ƙimar da aka haɗa a cikin fayil ɗin sentinel da ke tushen manhajar (ana rubuta shi yayin `npm run build`; ana karanta shi ta
 `scripts/docker/ensure-docker-base-path.mjs`) sannan yana kwatanta shi da
 `OMNIROUTE_BASE_PATH` lokacin da container ya fara aiki. Idan ƙimomin suka bambanta kuma an
@@ -439,7 +438,7 @@ liveness idan HTTP probes suna ƙarewar lokaci. Cikakken jagorar probes:
 
 ## Docker Compose tare da Caddy (HTTPS Auto-TLS)
 
-Ana iya fallasa OmniRoute cikin tsaro ta amfani da samar da SSL ta atomatik na Caddy. Tabbatar cewa rikodin DNS A na domain ɗinka yana nuni zuwa IP na sabarka.
+Ana iya fallasa 67router cikin tsaro ta amfani da samar da SSL ta atomatik na Caddy. Tabbatar cewa rikodin DNS A na domain ɗinka yana nuni zuwa IP na sabarka.
 
 ```yaml
 services:
@@ -470,11 +469,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy yana saita daidaitattun taken turawa don container na upstream. OmniRoute yana amfani da
+Caddy yana saita daidaitattun taken turawa don container na upstream. 67router yana amfani da
 `NEXT_PUBLIC_BASE_URL` a matsayin tabbataccen asalin adireshin jama'a don kiran-komawar OAuth da hanyoyin
 jama'a da aka samar; rubuce-rubucen dashboard masu buƙatar tantancewa suna amfani da buƙatun asali ɗaya tare da kariyar CSRF
 da ke daure da zaman. Kunna `OMNIROUTE_TRUST_PROXY` kawai don turawar matakin-gaba inda da gangan kake
-son OmniRoute ya samo asalin adireshin jama'a daga amintattun taken da aka tura maimakon takamaiman
+son 67router ya samo asalin adireshin jama'a daga amintattun taken da aka tura maimakon takamaiman
 saiti.
 
 ## Cloudflare Quick Tunnel
@@ -486,11 +485,11 @@ Ana iya nuna ko ɓoye bangarorin tunnel na endpoint (Cloudflare, Tailscale, ngro
 ### Bayanan Tunnel
 
 - URL na Quick Tunnel na ɗan lokaci ne kuma suna canzawa bayan kowane sake farawa.
-- Ba a maido da Quick Tunnels ta atomatik bayan sake farawa na OmniRoute ko container. Sake kunna su daga dashboard idan an buƙata.
+- Ba a maido da Quick Tunnels ta atomatik bayan sake farawa na 67router ko container. Sake kunna su daga dashboard idan an buƙata.
 - Shigarwar da ake sarrafawa a halin yanzu tana tallafawa Linux, macOS, da Windows a kan `x64` / `arm64`.
 - Quick Tunnels da ake sarrafawa suna amfani da jigilar HTTP/2 ta tsohuwa don kauce wa gargaɗin buffer na QUIC UDP masu hayaniya a muhallan container masu ƙarancin albarkatu. Saita `CLOUDFLARED_PROTOCOL=quic` ko `auto` idan kana son wata hanyar jigilar daban.
 - Images na Docker sun haɗa da tushen CA na tsarin kuma suna miƙa su ga `cloudflared` da ake sarrafawa, wanda ke hana gazawar amincewar TLS lokacin da tunnel yake fara aiki a cikin container.
-- Saita `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` idan kana son OmniRoute ya yi amfani da binary da ke akwai maimakon sauke sabo.
+- Saita `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` idan kana son 67router ya yi amfani da binary da ke akwai maimakon sauke sabo.
 
 ## Tags na Image
 
@@ -503,7 +502,7 @@ Manifest na dandamali da yawa: `linux/amd64` + `linux/arm64` na asali (Apple Sil
 
 ### Tashoshin Release
 
-OmniRoute yana wallafa tashoshin Docker daban-daban don fitowar tabbatattu, gwajin reshen release mai aiki, da builds na ci gaba.
+67router yana wallafa tashoshin Docker daban-daban don fitowar tabbatattu, gwajin reshen release mai aiki, da builds na ci gaba.
 
 | Tasha                           | Tushe                                           | Sauyawa                         | Amfani da aka ba da shawara                                                                                                   |
 | ------------------------------- | ----------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -556,7 +555,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Kafin gwaji, a yi madadin ajiya na OmniRoute data volume ko data directory da aka bind-mount. Don komawa baya, a dawo da stable version ko digest da aka yi amfani da shi a baya sannan a sake ƙirƙirar container:
+Kafin gwaji, a yi madadin ajiya na 67router data volume ko data directory da aka bind-mount. Don komawa baya, a dawo da stable version ko digest da aka yi amfani da shi a baya sannan a sake ƙirƙirar container:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -576,7 +575,7 @@ Build na release-branch ba zai taɓa iya matsar da `latest` ba; stable semantic 
 
 ## Sabuntawar dashboard a cikin Docker
 
-Container na published-image ba zai iya maye gurbin kansa ba. Lokacin da OmniRoute ya gano cewa yana aiki a cikin
+Container na published-image ba zai iya maye gurbin kansa ba. Lokacin da 67router ya gano cewa yana aiki a cikin
 container (babu `.git` checkout, kuma ba shigarwar npm ba ce), tutar sabuntawa ta dashboard na gida tana nuna
 umarnin host da za a gudanar maimakon umarnin npm/git, tare da maɓallin kwafi:
 
@@ -592,7 +591,7 @@ pinned tag na `:X.Y.Z`, fara gyara tag ɗin.
 
 Don tabbatar da cewa **Sabunta Yanzu** yana ci gaba da aiki ba tare da mounting `/var/run/docker.sock` ba (wanda ke bai wa container
 ikon root a kan host — duba gargaɗin profile na `cli` da ke sama), saita `DOCKER_UPDATE_TRIGGER_FILE` a kan
-service na OmniRoute sannan ka gudanar da watcher a kan host:
+service na 67router sannan ka gudanar da watcher a kan host:
 
 ```yaml
 services:
@@ -606,7 +605,7 @@ services:
 Dole ne path ɗin ya kasance a cikin `DATA_DIR` (relative values suna dogara da shi); duk wani abu dabam
 za a ƙi shi. Daga nan **Sabunta Yanzu** zai rubuta `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` zuwa wannan
 fayil, ya amsa da `202`, sannan dashboard ya riƙa duba `/api/system/version` har sai sabon sigar ya fara aiki
-kuma ya sake lodawa. OmniRoute ba ya taɓa gudanar da umarnin shell ko Docker a wannan yanayin. Kamar kowane aikin
+kuma ya sake lodawa. 67router ba ya taɓa gudanar da umarnin shell ko Docker a wannan yanayin. Kamar kowane aikin
 sabuntawa, ana karɓar buƙatar ne kawai daga clients na loopback/LAN.
 
 Bind-mounted data directory yana bai wa host tabbataccen path da zai sa ido a kai. Misalan units na `systemd`
@@ -615,7 +614,7 @@ Bind-mounted data directory yana bai wa host tabbataccen path da zai sa ido a ka
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Sa ido kan buƙatun sabuntawa daga dashboard na OmniRoute
+Description=Sa ido kan buƙatun sabuntawa daga dashboard na 67router
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -627,7 +626,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Ja image sannan a sake ƙirƙirar container na OmniRoute
+Description=Ja image sannan a sake ƙirƙirar container na 67router
 
 [Service]
 Type=oneshot
@@ -647,13 +646,13 @@ Service ɗin yana cire buƙatar kafin yin pulling domin aikin da ya gaza kada ya
 
 ## Samuwa: SQLite na asali replica guda ɗaya ne
 
-Docker / Kubernetes OmniRoute na yau da kullum yana da **Node process guda ɗaya + SQLite writer guda ɗaya**. **Ba a goyon bayan** high availability a wannan topology.
+Docker / Kubernetes 67router na yau da kullum yana da **Node process guda ɗaya + SQLite writer guda ɗaya**. **Ba a goyon bayan** high availability a wannan topology.
 
-| Ƙuntatawa                                   | Sakamako                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Writer guda ɗaya                            | **Kada** a gudanar da replicas da yawa a kan fayil ɗin SQLite guda ɗaya. Hakan yana lalata DB.                                                                                                                                                                                                                                                        |
-| Recreate / restart / kashewa ta HEALTHCHECK | **Cikakken katsewar aiki** ga SSE da ke gudana, sessions na dashboard, da state da ke cikin memory. Kowane client da aka haɗa zai katse. Sabbin buƙatu a lokacin da babu endpoint za su sami **`502 Bad Gateway: Unknown error`** daga reverse-proxy, ba JSON na OmniRoute ba — clients ba za su iya bambance wannan da gazawar provider ba (#11015). |
-| Event loop ɗaya da `/healthz`               | Aikin catalog ko compression tick mai nauyi zai iya jinkirta probes; daga nan ɗan gajeren timeout ya sake kunna replica **ɗaya tilo**.                                                                                                                                                                                                                |
+| Ƙuntatawa                                   | Sakamako                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Writer guda ɗaya                            | **Kada** a gudanar da replicas da yawa a kan fayil ɗin SQLite guda ɗaya. Hakan yana lalata DB.                                                                                                                                                                                                                                                       |
+| Recreate / restart / kashewa ta HEALTHCHECK | **Cikakken katsewar aiki** ga SSE da ke gudana, sessions na dashboard, da state da ke cikin memory. Kowane client da aka haɗa zai katse. Sabbin buƙatu a lokacin da babu endpoint za su sami **`502 Bad Gateway: Unknown error`** daga reverse-proxy, ba JSON na 67router ba — clients ba za su iya bambance wannan da gazawar provider ba (#11015). |
+| Event loop ɗaya da `/healthz`               | Aikin catalog ko compression tick mai nauyi zai iya jinkirta probes; daga nan ɗan gajeren timeout ya sake kunna replica **ɗaya tilo**.                                                                                                                                                                                                               |
 
 **Jadawalin probes** (duba kuma [shawarwarin probes na Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -757,7 +756,7 @@ da kuma ainihin hanyar haɗin; wannan kuskuren shi kaɗai ba ya nuna cewa API ke
 ### Fi son proxy na takamaiman haɗi
 
 Yi amfani da [daidaitawar proxy ta kowane haɗi](../ops/PROXY_GUIDE.md#4-level-proxy-system)
-na OmniRoute don haɗin Gemini da abin ya shafa, sannan ka sake yin **Gwada Haɗi** da ƙaramar buƙata
+na 67router don haɗin Gemini da abin ya shafa, sannan ka sake yin **Gwada Haɗi** da ƙaramar buƙata
 ta amfani da model iri ɗaya. Wannan yana taƙaita canjin hanya ga wannan haɗin kawai. Tabbatar
 cewa ana iya isa ga proxy daga container, kuma cewa haɗin yana zaɓar sa da gaske.
 Canza hanyar ba ya tabbatar da cancantar yanki a bangaren sabis na sama.
@@ -826,7 +825,7 @@ na iya katse sauran containers da ke haɗe da shi; kada ka goge persistent data 
 
 ## Muhimman Bayanan Kula
 
-- **Yanayin SQLite WAL:** Ya kamata a bar `docker stop` ya kammala domin OmniRoute ya iya rubuta sabbin canje-canje na ƙarshe zuwa `storage.sqlite` ta hanyar checkpoint. Fayilolin Compose da aka haɗa sun riga sun saita wa’adin dakatarwa na daƙiƙa 40. Idan kana gudanar da image ɗin kai tsaye, ci gaba da amfani da `--stop-timeout 40`.
+- **Yanayin SQLite WAL:** Ya kamata a bar `docker stop` ya kammala domin 67router ya iya rubuta sabbin canje-canje na ƙarshe zuwa `storage.sqlite` ta hanyar checkpoint. Fayilolin Compose da aka haɗa sun riga sun saita wa’adin dakatarwa na daƙiƙa 40. Idan kana gudanar da image ɗin kai tsaye, ci gaba da amfani da `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Saita shi zuwa `true` idan ana sarrafa madadin bayanai na yau da kullum/na kafin rubutawa a waje. Har yanzu ƙaura na bayanan da suke akwai suna buƙatar nasu hoton kariya mai ɗorewa da matakin kariya na ƙaura mai yawa.
 - **Dawwamar Bayanai:** Koyaushe haɗa volume zuwa `/app/data` domin adana database ɗinka, maɓallai, da saituna a duk lokacin da aka sake kunna container.
 - **Saitin Port:** Sauya environment variable na `PORT` domin canza port na asali mai lamba `20128`.

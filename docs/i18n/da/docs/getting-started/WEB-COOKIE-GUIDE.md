@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie-udbydere lader OmniRoute bruge en AI-tjeneste via din eksisterende browsersession i stedet for en API-nøgle. De er nyttige, når du allerede har adgang til en tjeneste via dens websted og ønsker, at OmniRoute bruger den samme godkendte session.
+Web Cookie-udbydere lader 67router bruge en AI-tjeneste via din eksisterende browsersession i stedet for en API-nøgle. De er nyttige, når du allerede har adgang til en tjeneste via dens websted og ønsker, at 67router bruger den samme godkendte session.
 
 I modsætning til udbydere med API-nøgler godkendes Web Cookie-udbydere ved hjælp af de legitimationsoplysninger, som din browser sender til webstedet.
 
@@ -49,7 +49,7 @@ DevTools
 
 `Cookie`-anmodningsheaderen indeholder de præcise godkendelsesoplysninger, som din browser brugte med succes.
 
-For de fleste Web Cookie-udbydere er dette den værdi, der skal indsættes i OmniRoute.
+For de fleste Web Cookie-udbydere er dette den værdi, der skal indsættes i 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Opsætningsprocessen er den samme for de fleste Web Cookie-udbydere.
 4. Opdater siden.
 5. Åbn en godkendt chat- eller samtaleanmodning.
 6. Kopiér de nødvendige godkendelsesoplysninger.
-7. Åbn OmniRoute.
+7. Åbn 67router.
 8. Gå til **Providers → Add Provider**.
 9. Vælg din Web Cookie-udbyder.
 10. Indsæt legitimationsoplysningerne.
@@ -92,17 +92,17 @@ Forskellige websteder gemmer godkendelsesoplysninger på forskellige måder. Nog
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) er en gratis chatplatform for forbrugere, som ikke kræver tilmelding — sessionen oprettes anonymt ved første besøg og bevares via tre cookies: `uid`, `si_usr_id` og `si_ses_id`. OmniRoute videresender det samme `/api/dispatch`-slutpunkt gennem ét enkelt model-id (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) er en gratis chatplatform for forbrugere, som ikke kræver tilmelding — sessionen oprettes anonymt ved første besøg og bevares via tre cookies: `uid`, `si_usr_id` og `si_ses_id`. 67router videresender det samme `/api/dispatch`-slutpunkt gennem ét enkelt model-id (`notrack-c`, alias `ntw`).
 
 ### Trin til tilslutning
 
 1. Åbn [notrack.ai](https://notrack.ai) i din browser, og lad den anonyme sessionscookie blive indstillet.
 2. Åbn **Udviklerværktøjer → Netværk**, genindlæs siden, og klik på en vilkårlig `/api`-anmodning.
 3. Under **Anmodningsheadere** skal du kopiere hele værdien af `Cookie`-headeren.
-4. Gå i OmniRoute til **Udbydere → Tilføj udbyder → NoTrack Web (gratis)**.
+4. Gå i 67router til **Udbydere → Tilføj udbyder → NoTrack Web (gratis)**.
 5. Indsæt cookie-strengen i feltet `apiKey`, og klik på **Gem**.
 
-OmniRoute udtrækker `uid`, `si_usr_id` og `si_ses_id` fra den indsatte streng og genopbygger en ren `Cookie`-header, der kun indeholder disse par — samt `nt_session` (`ntk_…`-tokenet, der indstilles for konti, som er logget ind), når den er til stede. Hvis en af de tre mangler, videresendes den rå indsatte streng uændret, så operatører kan eksperimentere med alternative formater.
+67router udtrækker `uid`, `si_usr_id` og `si_ses_id` fra den indsatte streng og genopbygger en ren `Cookie`-header, der kun indeholder disse par — samt `nt_session` (`ntk_…`-tokenet, der indstilles for konti, som er logget ind), når den er til stede. Hvis en af de tre mangler, videresendes den rå indsatte streng uændret, så operatører kan eksperimentere med alternative formater.
 
 ### Model-id'er
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Cookien virker i browseren, men ikke i OmniRoute
+## Cookien virker i browseren, men ikke i 67router
 
 Nogle udbydere inkluderer cookies, der kun sendes under godkendte anmodninger.
 

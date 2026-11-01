@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` įtraukia visą jūsų OmniRoute katalogą — modelius, kombinacijas ir
+`@omniroute/opencode-plugin-v2` įtraukia visą jūsų 67router katalogą — modelius, kombinacijas ir
 automatines kombinacijas — į OpenCode v2 modelių parinkiklį kartu su rodomais pavadinimais, kainomis ir nemokamo lygio
 limitais.
 
@@ -15,7 +15,7 @@ neturi nieko bendro, todėl vieno atnaujinimas niekada nepriverčia atnaujinti k
 ## Reikalavimai
 
 - OpenCode v2.
-- Pasiekiamas OmniRoute šliuzas (pagal numatytuosius nustatymus `http://localhost:20128`).
+- Pasiekiamas 67router šliuzas (pagal numatytuosius nustatymus `http://localhost:20128`).
 - Node.js 22 arba 24.
 
 ## Diegimas
@@ -126,12 +126,12 @@ Norėdami tai išjungti, nustatykite `"geminiSanitization": false`.
 
 ## Trikčių šalinimas
 
-| Požymis                                               | Priežastis                                                                                                                                              |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modelių parinkiklyje nerodomas joks OmniRoute modelis | Nepavyko aptikti rakto (patikrinkite paleidimo įspėjimą) arba tinklų sietuvas nepasiekiamas                                                             |
-| Neapdoroti modelių ID, nėra derinių ir kainodaros     | Valdymo galiniai taškai atmetė prieigos raktą — nustatykite `managementReadToken`                                                                       |
-| Trumpas arba tuščias `freeOnly` katalogas             | Nėra valdymo prieigos rakto arba jis buvo atmestas — pagrindinio proceso žurnale perskaitykite atnaujinimo suvestinės eilutę (`unmatched-free` skaičių) |
-| Sesija susieta su `opencode-<id>/…`                   | v1 papildinys paskelbė `opencode-<id>`; v2 skelbia tik `<id>`, todėl iš naujo pasirinkite modelį skiltyje `<id>/…`                                      |
+| Požymis                                              | Priežastis                                                                                                                                              |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modelių parinkiklyje nerodomas joks 67router modelis | Nepavyko aptikti rakto (patikrinkite paleidimo įspėjimą) arba tinklų sietuvas nepasiekiamas                                                             |
+| Neapdoroti modelių ID, nėra derinių ir kainodaros    | Valdymo galiniai taškai atmetė prieigos raktą — nustatykite `managementReadToken`                                                                       |
+| Trumpas arba tuščias `freeOnly` katalogas            | Nėra valdymo prieigos rakto arba jis buvo atmestas — pagrindinio proceso žurnale perskaitykite atnaujinimo suvestinės eilutę (`unmatched-free` skaičių) |
+| Sesija susieta su `opencode-<id>/…`                  | v1 papildinys paskelbė `opencode-<id>`; v2 skelbia tik `<id>`, todėl iš naujo pasirinkite modelį skiltyje `<id>/…`                                      |
 
 Aplinkos kintamieji turi pasiekti opencode serverio procesą: kai pagrindinis procesas
 veikia kaip tarnyba, apvalkalas, kuriame vykdoma `opencode models`, ir serverio

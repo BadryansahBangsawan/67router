@@ -6,7 +6,7 @@
 
 # Quality-Gate sistem — Kritička procjena, katalog i priručnik za replikaciju
 
-> **Šta je ovaj dokument.** Kritička procjena OmniRoute sistema kapija kvaliteta (quality-gate), u poređenju sa najboljim industrijskim praksama, **plus** sveobuhvatan katalog svih kontrolnih tačaka kvaliteta i **plan replikacije nezavisan od alata** za primjenu istog sistema na bilo koji projekat. Generisano 16.06.2026. na osnovu stvarnog stanja repozitorijuma (ne iz memorije).
+> **Šta je ovaj dokument.** Kritička procjena 67router sistema kapija kvaliteta (quality-gate), u poređenju sa najboljim industrijskim praksama, **plus** sveobuhvatan katalog svih kontrolnih tačaka kvaliteta i **plan replikacije nezavisan od alata** za primjenu istog sistema na bilo koji projekat. Generisano 16.06.2026. na osnovu stvarnog stanja repozitorijuma (ne iz memorije).
 >
 > Referentne vrijednosti (Benchmarks): OWASP DSOMM · OpenSSF Scorecard · SLSA · SonarQube "Clean as You Code" · Quality-Ratchet obrazac · DORA 2024 · OWASP LLM Top 10 (2025) · najbolje prakse za mutation-testing.
 >
@@ -60,62 +60,62 @@
 
 ### 1. Stil i formatiranje (deterministički, brzo)
 
-- **OmniRoute:** Prettier + ESLint putem lint-staged (pre-commit), 2-razmaka/dvostruki-navodnici/100col.
+- **67router:** Prettier + ESLint putem lint-staged (pre-commit), 2-razmaka/dvostruki-navodnici/100col.
 - **Generic:** jedan auto-popravljivi formatizer + jedan linter, koji se pokreće u pre-commit fazi na pripremljenim (staged) datotekama.
 
 ### 2. Tipovi
 
-- **OmniRoute:** `typecheck:core` (blokirajući) + `typecheck:noimplicit:core` (savjetodavni) + `type-coverage` ratchet 92.17% + budžet za `any` po datoteci.
+- **67router:** `typecheck:core` (blokirajući) + `typecheck:noimplicit:core` (savjetodavni) + `type-coverage` ratchet 92.17% + budžet za `any` po datoteci.
 - **Generic:** stroga provjera tipova u CI + metrička vrijednost pokrivenosti tipovima sa ratchetom + budžet za `any`/escape-hatch po datoteci.
 
 ### 3. Testovi (intenzitet)
 
-- **OmniRoute:** 2 runnera koji se ne preklapaju (Node native + vitest), 8 sharda, globalna pokrivenost 60/60/60/60 + ratchet ~76% + **8 donjih granica po modulu za kritične module** + noćni property testovi + **mutacijsko testiranje** svake noći.
+- **67router:** 2 runnera koji se ne preklapaju (Node native + vitest), 8 sharda, globalna pokrivenost 60/60/60/60 + ratchet ~76% + **8 donjih granica po modulu za kritične module** + noćni property testovi + **mutacijsko testiranje** svake noći.
 - **Generic:** test runner(i) + **apsolutna** donja granica pokrivenosti (anti-nula) + **ratchet** pokrivenosti (anti-regresija) + **donje granice po modulu za visokorizični kod** (anti-Goodhart) + property-based za čistu logiku + **mutacijsko testiranje** svake noći kao stvarna mjera kvaliteta testa.
 
 ### 4. Politika testiranja (anti-gaming)
 
-- **OmniRoute:** `pr-test-policy` (prod kod zahtijeva test), `check-test-masking` (blokira oslabljene asertacije), `pr-evidence` (tvrdnja o uspjehu zahtijeva blok dokaza), `test-discovery` (svaki test sakupljen od strane runnera).
+- **67router:** `pr-test-policy` (prod kod zahtijeva test), `check-test-masking` (blokira oslabljene asertacije), `pr-evidence` (tvrdnja o uspjehu zahtijeva blok dokaza), `test-discovery` (svaki test sakupljen od strane runnera).
 - **Generic:** kapija „novi kod ⇒ novi test“ + detektor uklonjenih asertacija/tautologija + zahtjev za dokazom (TDD ili živi test) + garancija da nijedan test nije ostavljen izvan globova.
 
 ### 5. Kompleksnost i zdravlje koda (ratchets)
 
-- **OmniRoute:** ESLint-upozorenja (3769↓), jscpd duplikati (5.72%↓), ciklomatska+max-lines kompleksnost (1800↓), kognitivna kompleksnost sonarjs (753↓), mrtvi-kod/neiskorišteni-exporti knip (339↓), veličina datoteke po datoteci (zamrznuto, samo smanjivanje), kružne zavisnosti (prilagođeni Tarjan, blokirajući).
+- **67router:** ESLint-upozorenja (3769↓), jscpd duplikati (5.72%↓), ciklomatska+max-lines kompleksnost (1800↓), kognitivna kompleksnost sonarjs (753↓), mrtvi-kod/neiskorišteni-exporti knip (339↓), veličina datoteke po datoteci (zamrznuto, samo smanjivanje), kružne zavisnosti (prilagođeni Tarjan, blokirajući).
 - **Generic:** ratchet za svaku metriku zdravlja (upozorenja, duplikati, ciklomatska **i** kognitivna kompleksnost, mrtvi kod, veličina datoteke, ciklusi uvozâ). Smjer uvijek „ne nazadovati“.
 
 ### 6. Statička sigurnost (SAST + tajne)
 
-- **OmniRoute:** CodeQL (ratchet upozorenja = 0), gitleaks (`[extend] useDefault=true` — kritično!), SonarQube, prilagođena sigurnosna pravila (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet upozorenja = 0), gitleaks (`[extend] useDefault=true` — kritično!), SonarQube, prilagođena sigurnosna pravila (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generic:** SAST (CodeQL/Sonar/semgrep) sa ratchetom za upozorenja + skener tajni sa **naslijeđenim podrazumijevanim skupom pravila** (prilagođena konfiguracija koja nadjačava podrazumijevanu = slijepa tačka) + sigurnosne kapije sa strogim pravilima (Hard Rule) specifične za projekat.
 
 ### 7. Lanac snabdijevanja (zavisnosti)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX lista dozvoljenih), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (lista dozvoljenih + starost ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX lista dozvoljenih), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (lista dozvoljenih + starost ≥72h).
 - **Generic:** SCA iz više izvora + lista dozvoljenih licenci + provjera integriteta lockfile-a + lista dozvoljenih zavisnosti sa provjerom starosti/typosquattinga + bot za grupna ažuriranja.
 
 ### 8. Lanac snabdijevanja (izgradnja i izdanje)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA porijeklo (`--provenance`), OpenSSF Scorecard (sedmično), ojačavanje radnih tokova (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA porijeklo (`--provenance`), OpenSSF Scorecard (sedmično), ojačavanje radnih tokova (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Generic:** generisanje SBOM-a pri objavljivanju + potpisano porijeklo (SLSA L2+) + zakazani Scorecard + ojačavanje svih radnih tokova (tokeni sa minimalnim privilegijama, bez trajnih akreditiva pri checkout-u koji nije pusher, akcije fiksirane SHA-om).
 
 ### 9. Ugovori i API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (contract fuzz svake noći), openapi-coverage (% dokumentovanih ruta, ratchet 38.3%), openapi-security-tiers (spec vs route-guard).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (contract fuzz svake noći), openapi-coverage (% dokumentovanih ruta, ratchet 38.3%), openapi-security-tiers (spec vs route-guard).
 - **Generic:** diff ugovora za promjene koje narušavaju kompatibilnost (oasdiff/buf) + property-based fuzzing prema specifikaciji (schemathesis) + ratchetovana pokrivenost dokumentacijom + konzistentnost specifikacija↔kod.
 
 ### 10. Dokumentacija i i18n (anti-propadanje)
 
-- **OmniRoute:** docs-sync (zrcaljene verzije), docs-counts-sync (brojevi u dokumentaciji vs kod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (zrcaljene verzije), docs-counts-sync (brojevi u dokumentaciji vs kod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Generic:** sinhronizacija verzija/brojeva/env-vars između dokumentacije i koda (kapija, ne povjerenje) + validacija internih linkova + ratchetovana i18n pokrivenost.
 
 ### 11. Anti-halucinacija / konzistentnost (rijetka kategorija)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ živi simbol), provider-consistency, fetch-targets (client fetch ⇒ stvarna ruta), docs-symbols, db-rules (Hard Rules #2/#5), numerisanje migracija.
+- **67router:** known-symbols (string dispatch ⇒ živi simbol), provider-consistency, fetch-targets (client fetch ⇒ stvarna ruta), docs-symbols, db-rules (Hard Rules #2/#5), numerisanje migracija.
 - **Generic:** za svaki „duplirani izvor istine“ (registar, string dispatch, reference između slojeva), kapija koja dokazuje da se obje strane podudaraju. Hvata propadanje koje typecheck/test ne hvataju.
 
 ### 12. Otpornost i domen (specifično za proizvod)
 
-- **OmniRoute:** chaos (ubacivanje grešaka), heap-growth (curenje), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 zakona otpornosti (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (ubacivanje grešaka), heap-growth (curenje), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 zakona otpornosti (circuit-breaker/cooldown/lockout).
 - **Generic:** identifikujte modove otkaza **vašeg** domena i imajte kapiju (čak i ako je noćna) za svaki. Za AI aplikacije: injection red-team. Za distribuirane sisteme: chaos + leak + soak.
 
 ---

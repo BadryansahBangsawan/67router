@@ -8,7 +8,7 @@
 > **Ultimo aggiornamento:** 2026-10-17 — v3.8.52 (aggiunta [Copertura e limiti](#coverage-and-limits):
 > quali route e percorsi di risposta raggiungono gli hook, gli header di disabilitazione combinati (#16412), la modalità di blocco delle injection come confine obbligatorio (#16413) e cosa vede una risposta prima della post-call)
 
-I guardrail applicano controlli di sicurezza, policy e trasformazioni dei contenuti al confine tra OmniRoute e i provider upstream. Ogni guardrail può ispezionare (ed eventualmente rifiutare, trasformare o annotare) i payload delle richieste (`preCall`) e le risposte upstream (`postCall`).
+I guardrail applicano controlli di sicurezza, policy e trasformazioni dei contenuti al confine tra 67router e i provider upstream. Ogni guardrail può ispezionare (ed eventualmente rifiutare, trasformare o annotare) i payload delle richieste (`preCall`) e le risposte upstream (`postCall`).
 
 Il sistema è **fail-open**: se un guardrail genera un'eccezione durante l'esecuzione, il registro registra l'errore e continua con il guardrail successivo invece di far fallire la richiesta. Il blocco è una decisione esplicita (`block: true`), mai un incidente. L'unica eccezione è una richiesta interrotta: quando il `signal` del chiamante viene annullato, un guardrail che genera un'eccezione rigetta l'esecuzione dell'hook invece di essere saltato.
 
@@ -94,7 +94,7 @@ Quando la chiave API del chiamante limita `allowedConnections`, i pool di quota
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), il bridge sceglie
 solo modelli di reroute e describe utilizzabili dalla chiave, su connessioni
 utilizzabili dalla chiave. La chiamata describe passa poi sempre attraverso il
-self-loop di OmniRoute con l'header `x-omniroute-self-loop-key-id`, così la
+self-loop di 67router con l'header `x-omniroute-self-loop-key-id`, così la
 richiesta chat ricevente applica di nuovo la policy su connessioni e modelli di
 quella chiave. `enforceApiKeyPolicy()` onora quell'header solo insieme al bearer
 del self-loop, per cui può solo restringere l'accesso, e un id che non viene
@@ -125,7 +125,7 @@ dettaglio degrada l'accuratezza dell'OCR proprio per il task di trascrizione del
 testo richiesto da questo prompt, quindi la chiamata describe stessa chiede
 sempre il dettaglio alto, indipendentemente dal livello di dettaglio utilizzato
 dalla richiesta in ingresso originale. Questo influisce solo sul corpo della
-richiesta describe interna; non cambia il modo in cui OmniRoute inoltra
+richiesta describe interna; non cambia il modo in cui 67router inoltra
 l'`image_url.detail` del chiamante sulla richiesta primaria — quel valore
 predefinito viene applicato separatamente, e solo per i client OpenCode
 rilevati, in `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`).
@@ -189,7 +189,7 @@ La pagina dedicata della dashboard è `/dashboard/settings/modality-bridge`. Le 
 
 La precedente scheda Vision Bridge nelle impostazioni AI è un collegamento di compatibilità alla nuova pagina; non possiede più una seconda copia del modulo. Anche Media Providers collega i flussi di lavoro Image-to-Text e Speech-to-Text alle corrispondenti schede del Modality Bridge senza rimuovere il playground Speech-to-Text esistente.
 
-**Bypass dell'ammissione self-loop:** quando la chiamata describe viene instradata attraverso il self-loop `/v1` di OmniRoute stesso (modello di provider non standard), la sotto-richiesta invia `x-omniroute-admission-bypass: internal` ed è autenticata con la credenziale self-loop risolta — il valore sentinella locale `sk_omniroute` in modalità locale, oppure la chiave env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` configurata dall'operatore (#1350), così che i deployment con `REQUIRE_API_KEY=true` possano comunque eseguire la chiamata describe. Il bypass è onorato solo per quelle credenziali esatte, quindi i client esterni non possono usare l'header per saltare l'ammissione.
+**Bypass dell'ammissione self-loop:** quando la chiamata describe viene instradata attraverso il self-loop `/v1` di 67router stesso (modello di provider non standard), la sotto-richiesta invia `x-omniroute-admission-bypass: internal` ed è autenticata con la credenziale self-loop risolta — il valore sentinella locale `sk_omniroute` in modalità locale, oppure la chiave env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` configurata dall'operatore (#1350), così che i deployment con `REQUIRE_API_KEY=true` possano comunque eseguire la chiamata describe. Il bypass è onorato solo per quelle credenziali esatte, quindi i client esterni non possono usare l'header per saltare l'ammissione.
 
 I default legacy risiedono in `src/shared/constants/visionBridgeDefaults.ts`; i nuovi default di modalità/task-aware/cache e il resolver delle impostazioni risiedono in `src/shared/constants/modalityBridgeDefaults.ts`. Il guardrail espone un'opzione del costruttore `deps` così che i test possano iniettare implementazioni fittizie di `getSettings` e `callVisionModel`.
 
@@ -313,7 +313,7 @@ Filtri mancanti, evidenza malformata o vuota, un errore del rilevatore o il time
 
 Ogni fotogramma è limitato a 4 MiB, tutti i fotogrammi grezzi complessivamente a 23 MiB, e la
 risposta serializzata del broker a 32 MiB. Una directory temporanea privata viene rimossa
-nel blocco `finally`. OmniRoute non include FFmpeg e non accetta un percorso
+nel blocco `finally`. 67router non include FFmpeg e non accetta un percorso
 eseguibile personalizzato. Prima della generazione delle didascalie, il bridge applica un
 passaggio conservativo di deduplicazione visiva: ogni JPEG viene ridotto a un buffer in
 scala di grigi 16×16 e viene confrontato solo con l'ultimo fotogramma conservato. Per un
@@ -355,7 +355,7 @@ supportata quando dispongono già di testo allineato. Ogni cue deve contenere `t
 intervallo finito `start`/`end` all'interno della durata rilevata e una
 `source` in whitelist (`client`, `embedded` o `audio-bridge`); `confidence` ha come valore predefinito
 `1` e deve rimanere tra `0` e `1`. I cue duplicati esatti vengono compressi.
-OmniRoute non avvia mai la trascrizione da questi metadati: i cue validati vengono
+67router non avvia mai la trascrizione da questi metadati: i cue validati vengono
 copiati nel risultato descritto con sorgente, confidenza e intervallo, e
 vengono resi come osservazioni non attendibili accanto alle didascalie dei fotogrammi. Il testo non valido,
 fuori intervallo o privo di provenienza viene rifiutato anziché mescolato nel
@@ -942,7 +942,7 @@ manuale) ha due job:
   istruzioni precedenti…", jailbreak in stile DAN) verifica che la risposta contenga
   `error.code === "SECURITY_001"`, ovvero che il guard abbia effettivamente rifiutato la richiesta.
 - **`garak` (consultivo)** — esegue garak `--probes promptinject,dan,leakreplay`
-  contro un'istanza OmniRoute locale (`http://localhost:20128/v1`). Condizionato da un
+  contro un'istanza 67router locale (`http://localhost:20128/v1`). Condizionato da un
   secret del provider (`PROMPTFOO_PROVIDER_KEY`); salta senza errori ed è seguito dal
   suffisso `|| true`, quindi riporta i risultati senza far fallire la CI.
 

@@ -7,7 +7,7 @@
 > **Sannhetskilde:** `electron/`-arbeidsområdet
 > **Sist oppdatert:** 2026-06-28 — v3.8.40
 
-OmniRoute leveres med en skrivebordsapp for flere plattformer (Windows / macOS / Linux), bygget med
+67router leveres med en skrivebordsapp for flere plattformer (Windows / macOS / Linux), bygget med
 **Electron 41** + **electron-builder 26.10**. Skrivebordsappen starter den frittstående Next.js-serveren
 som en underprosess, peker et `BrowserWindow` mot den og legger til et
 systemstatusfelt, automatisk oppdatering, en IPC-bro og konfigurasjonsfri oppstart av hemmeligheter.
@@ -196,7 +196,7 @@ bør du bruke `.env`-filen, deretter avslutte helt (systemstatusfeltet, **Avslut
 - `BrowserWindow`: 1400×900 (min. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, trafikklys ved `{ x: 16, y: 16 }`.
 - Windows/Linux: innebygd tittellinje.
-- Lukkeknappen minimerer til systemstatusfeltet. Menyen i systemstatusfeltet har **Åpne OmniRoute**, **Åpne kontrollpanelet** (ekstern nettleser), undermenyen **Serverport**, **Se etter oppdateringer** og **Avslutt**.
+- Lukkeknappen minimerer til systemstatusfeltet. Menyen i systemstatusfeltet har **Åpne 67router**, **Åpne kontrollpanelet** (ekstern nettleser), undermenyen **Serverport**, **Se etter oppdateringer** og **Avslutt**.
 
 ## Retningslinjer for innholdssikkerhet
 

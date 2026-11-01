@@ -10,7 +10,7 @@
 > wstrzykiwań jako obowiązkową granicę (#16413) oraz co widzi odpowiedź przed post-call)
 
 Guardraile wymuszają bezpieczeństwo, polityki i transformacje treści na granicy
-między OmniRoute a dostawcami upstream. Każdy guardrail może sprawdzać (i
+między 67router a dostawcami upstream. Każdy guardrail może sprawdzać (i
 opcjonalnie odrzucać, transformować lub adnotować) ładunki żądań (`preCall`)
 oraz odpowiedzi upstream (`postCall`).
 
@@ -115,7 +115,7 @@ Gdy klucz API wywołującego ogranicza `allowedConnections`, pule limitów
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), most wybiera
 wyłącznie modele przekierowania i describe, których klucz może używać, na
 połączeniach, których klucz może używać. Wywołanie describe zawsze przechodzi
-następnie przez pętlę zwrotną (self-loop) OmniRoute z nagłówkiem
+następnie przez pętlę zwrotną (self-loop) 67router z nagłówkiem
 `x-omniroute-self-loop-key-id`, więc odbierające żądanie czatu ponownie wymusza
 politykę połączeń i modeli tego klucza. `enforceApiKeyPolicy()` respektuje ten
 nagłówek tylko w połączeniu z tokenem bearer pętli zwrotnej, więc może jedynie
@@ -146,7 +146,7 @@ szczegółowości obniża dokładność OCR dokładnie w zadaniu transkrypcji te
 o które prosi ten prompt, więc samo wywołanie describe zawsze żąda wysokiej
 szczegółowości, niezależnie od poziomu szczegółowości użytego w oryginalnym
 żądaniu przychodzącym. Dotyczy to wyłącznie treści wewnętrznego żądania
-describe; nie zmienia to sposobu, w jaki OmniRoute przekazuje własne
+describe; nie zmienia to sposobu, w jaki 67router przekazuje własne
 `image_url.detail` wywołującego w żądaniu głównym — ta wartość domyślna jest
 stosowana osobno i tylko dla wykrytych klientów OpenCode, w
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). Gałąź
@@ -277,7 +277,7 @@ Speech-to-Text do odpowiednich kart Modality Bridge, nie usuwając
 istniejącego placu zabaw Speech-to-Text.
 
 **Obejście kontroli dostępu self-loop:** gdy wywołanie describe jest
-kierowane przez własny self-loop `/v1` OmniRoute (niestandardowy model
+kierowane przez własny self-loop `/v1` 67router (niestandardowy model
 dostawcy), podżądanie wysyła `x-omniroute-admission-bypass: internal` i
 jest uwierzytelniane rozstrzygniętym poświadczeniem self-loop —
 lokalnym wartownikiem `sk_omniroute` w trybie lokalnym lub
@@ -345,13 +345,13 @@ Brakujące filtry, nieprawidłowe/puste dane pomiarowe, błąd detektora lub prz
 
 `scripts/perf/video-bridge-fu07-eval.ts` generuje deterministyczne, rzeczywiste fixture'y FFmpeg dla oszczędności wywołań podpisów po deduplikacji, przydziału budżetu przy gęstym ruchu, danych pomiarowych rozmycia/ekspozycji/SI-TI, szybkich cięć z długim ogonem oraz fałszywie dodatnich wyników dla stopniowych przeniknięć (fade). Rejestruje czas rzeczywisty wstępnej analizy oraz — tam, gdzie dostępny jest `/usr/bin/time` — czas CPU procesu potomnego i szczytowe RSS. Jego kontrole jakości są wyłącznie wyroczniami strukturalnymi. Rzeczywista jakość modelu podpisów pozostaje w stanie `HOLD`, ponieważ to środowisko testowe nie ma autoryzowanego punktu końcowego ani zamrożonego sędziego. Oszczędności pieniężne również pozostają w stanie `HOLD`, chyba że `--caption-cost-per-call-usd` dostarczy jawnie dodatni szacunek kosztu na wywołanie; skrypt nigdy nie zmyśla żadnego z tych wyników.
 
-Każda klatka jest ograniczona do 4 MiB, wszystkie surowe klatki łącznie do 23 MiB, a zserializowana odpowiedź brokera do 32 MiB. Prywatny katalog tymczasowy jest usuwany w `finally`. OmniRoute nie zawiera w pakiecie FFmpeg i nie akceptuje niestandardowej ścieżki pliku wykonywalnego. Przed generowaniem podpisów most stosuje konserwatywny etap wizualnej deduplikacji: każdy plik JPEG jest redukowany do bufora w skali szarości 16×16 i porównywany wyłącznie z ostatnią zachowaną klatką. Dla żądanego budżetu podpisów powyżej jednej klatki ekstrakcja dostarcza ograniczoną pulę kandydatów wynoszącą maksymalnie dwukrotność tego budżetu i nigdy więcej niż 16 klatek. Żądany limit jest stosowany dopiero po deduplikacji, przy czym pierwszy i ostatni wybrany kandydat są zachowywani podczas końcowego przerzedzania, gdy budżet wynosi co najmniej dwa. Wersjonowana polityka `grayscale-16x16-mean-cells-v2` używa większej z dwóch wartości: średniej różnicy luminancji oraz odsetka komórek miniatury, których znormalizowana różnica wynosi co najmniej 0.05. Próg duplikatu stanowi stała 0.04, wybrana dla przewidywalności, a nie udostępniana jako ustawienie wykonawcze. Ten drugorzędny sygnał wysokiego kontrastu zachowuje niewielkie ruchy i zmiany widocznego tekstu, które porównanie oparte wyłącznie na średniej może ukryć. Błędy komparatora lub dekodera działają w trybie fail-open i zachowują pokrycie. Metadane wyjściowe rozdzielają wyodrębnionych kandydatów, pomyślnie użyte klatki oraz odrzucone duplikaty wizualne.
+Każda klatka jest ograniczona do 4 MiB, wszystkie surowe klatki łącznie do 23 MiB, a zserializowana odpowiedź brokera do 32 MiB. Prywatny katalog tymczasowy jest usuwany w `finally`. 67router nie zawiera w pakiecie FFmpeg i nie akceptuje niestandardowej ścieżki pliku wykonywalnego. Przed generowaniem podpisów most stosuje konserwatywny etap wizualnej deduplikacji: każdy plik JPEG jest redukowany do bufora w skali szarości 16×16 i porównywany wyłącznie z ostatnią zachowaną klatką. Dla żądanego budżetu podpisów powyżej jednej klatki ekstrakcja dostarcza ograniczoną pulę kandydatów wynoszącą maksymalnie dwukrotność tego budżetu i nigdy więcej niż 16 klatek. Żądany limit jest stosowany dopiero po deduplikacji, przy czym pierwszy i ostatni wybrany kandydat są zachowywani podczas końcowego przerzedzania, gdy budżet wynosi co najmniej dwa. Wersjonowana polityka `grayscale-16x16-mean-cells-v2` używa większej z dwóch wartości: średniej różnicy luminancji oraz odsetka komórek miniatury, których znormalizowana różnica wynosi co najmniej 0.05. Próg duplikatu stanowi stała 0.04, wybrana dla przewidywalności, a nie udostępniana jako ustawienie wykonawcze. Ten drugorzędny sygnał wysokiego kontrastu zachowuje niewielkie ruchy i zmiany widocznego tekstu, które porównanie oparte wyłącznie na średniej może ukryć. Błędy komparatora lub dekodera działają w trybie fail-open i zachowują pokrycie. Metadane wyjściowe rozdzielają wyodrębnionych kandydatów, pomyślnie użyte klatki oraz odrzucone duplikaty wizualne.
 
 Jawnie oznaczona część wideo może zażądać arkusza kontaktowego ze znacznikami czasu. Most buduje co najwyżej 4-kolumnową, 16-klatkową siatkę JPEG. Każda komórka o rozmiarze 512 pikseli wypala swój źródłowy znacznik czasu w wysokokontrastowym dolnym pasie, podczas gdy te same znaczniki czasu pozostają w metadanych tekstowych na potrzeby późniejszego powiązania i audytu. Kompletny plik JPEG pozostaje ograniczony do 32 MiB. Jeśli `sharp` nie może zdekodować ani złożyć siatki, most wraca do pojedynczych klatek JPEG; przerwanie po stronie klienta nadal propaguje przez operację arkusza.
 
 Dowody promocji są celowo oddzielone od syntetycznego mikrobenchmarku kompozycji. `scripts/perf/video-bridge-contact-sheet-eval.ts` definiuje wersjonowane schematem środowisko testowe A/B dla rzeczywistych modeli wizyjnych zgodnych z OpenAI. Mierzy ono tokeny raportowane przez dostawcę, całkowite opóźnienie zegarowe od początku do końca (w tym kompozycję arkusza), liczbę wywołań modelu oraz retencję faktów zdefiniowaną w manifeście. Surowe odpowiedzi modelu nie są zapisywane w raporcie; zachowywane są jedynie skróty SHA-256 oraz dopasowane identyfikatory faktów. Środowisko nie wykonuje żadnych wywołań sieciowych ani płatnych wywołań modelu, chyba że przekazano `--execute-real` oraz skonfigurowano `--model`, `OMNIROUTE_BASE_URL` i `OMNIROUTE_API_KEY`. Bez takiego jawnego, rzeczywistego uruchomienia jego maszynowo odczytywalny werdykt pozostaje `HOLD`; same syntetyczne pomiary ładunku i liczby wywołań nie stanowią dowodu promocji.
 
-Wywołujący mogą dołączyć opcjonalną tablicę `transcript.cues` do obsługiwanej części wideo, gdy dysponują już wyrównanym tekstem. Każdy cue musi zawierać `text`, skończony przedział `start`/`end` mieszczący się w obrębie wykrytego czasu trwania oraz umieszczone na liście dozwolonych `source` (`client`, `embedded` lub `audio-bridge`); `confidence` domyślnie wynosi `1` i musi pozostawać między `0` a `1`. Dokładne duplikaty cue są łączone. OmniRoute nigdy nie rozpoczyna transkrypcji na podstawie tych metadanych: zweryfikowane cue są kopiowane do opisywanego wyniku wraz ze źródłem, pewnością i przedziałem oraz są renderowane jako niezaufane obserwacje obok podpisów klatek. Nieprawidłowy tekst, tekst poza zakresem lub pozbawiony pochodzenia jest odrzucany, a nie mieszany ze strumieniem podpisów. Oba kanały transkrypcji w treści żądania normalizują podane pochodzenie do `client`, w tym samozadeklarowane etykiety `embedded` lub `audio-bridge`. Tylko adapter należący do serwera może przypisać te zaufane etykiety za pomocą dostępnego wyłącznie w kodzie argumentu `trustedSource`; pole JSON żądania nie może dotrzeć do tego argumentu. Tekst transkrypcji pozostaje niezaufaną treścią pochodzącą z mediów, niezależnie od jej pochodzenia, i nigdy nie może determinować autoryzacji.
+Wywołujący mogą dołączyć opcjonalną tablicę `transcript.cues` do obsługiwanej części wideo, gdy dysponują już wyrównanym tekstem. Każdy cue musi zawierać `text`, skończony przedział `start`/`end` mieszczący się w obrębie wykrytego czasu trwania oraz umieszczone na liście dozwolonych `source` (`client`, `embedded` lub `audio-bridge`); `confidence` domyślnie wynosi `1` i musi pozostawać między `0` a `1`. Dokładne duplikaty cue są łączone. 67router nigdy nie rozpoczyna transkrypcji na podstawie tych metadanych: zweryfikowane cue są kopiowane do opisywanego wyniku wraz ze źródłem, pewnością i przedziałem oraz są renderowane jako niezaufane obserwacje obok podpisów klatek. Nieprawidłowy tekst, tekst poza zakresem lub pozbawiony pochodzenia jest odrzucany, a nie mieszany ze strumieniem podpisów. Oba kanały transkrypcji w treści żądania normalizują podane pochodzenie do `client`, w tym samozadeklarowane etykiety `embedded` lub `audio-bridge`. Tylko adapter należący do serwera może przypisać te zaufane etykiety za pomocą dostępnego wyłącznie w kodzie argumentu `trustedSource`; pole JSON żądania nie może dotrzeć do tego argumentu. Tekst transkrypcji pozostaje niezaufaną treścią pochodzącą z mediów, niezależnie od jej pochodzenia, i nigdy nie może determinować autoryzacji.
 
 Zaawansowany wywołujący może dostarczyć ścieżkę `audioTranscript` dla tego samego wideo; jest ona traktowana jako tekst dostarczony przez klienta, a nie dowód serwerowej transkrypcji. Punkt styku fuzji uruchamia obserwacje wizualne i dźwiękowe w ramach jednego terminu i sygnału przerwania, porządkuje je na wspólnej osi czasu, łączy dokładne duplikaty i zgłasza wynik częściowy, gdy powiedzie się tylko jedna strona. Nieprawidłowy `audioTranscript` degraduje do takiego wyniku częściowego — opis wizualny jest zachowywany, a gałąź audio rejestruje oczyszczony kod błędu — zamiast powodować niepowodzenie całego wideo. Dostępność poszczególnych gałęzi, flaga częściowości oraz oczyszczone kody błędów są zachowywane w opisywanym wyniku, w metadanych barier ochronnych (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), w metadanych pamięci podręcznej wyników oraz w licznikach fuzji mostu. Domyślna ścieżka Video Bridge nie wywołuje zamiany mowy na tekst ani nie pobiera drugiej kopii mediów; bez tej jawnej ścieżki pozostaje wyłącznie wideo.
 
@@ -843,7 +843,7 @@ wyzwalanie) ma dwa zadania:
   previous instructions…", jailbreaki w stylu DAN) sprawdza, czy odpowiedź zawiera
   `error.code === "SECURITY_001"`, tzn. czy zabezpieczenie faktycznie odrzuciło żądanie.
 - **`garak` (doradcze)** — uruchamia garak `--probes promptinject,dan,leakreplay`
-  przeciwko lokalnej instancji OmniRoute (`http://localhost:20128/v1`). Uzależnione
+  przeciwko lokalnej instancji 67router (`http://localhost:20128/v1`). Uzależnione
   od sekretu dostawcy (`PROMPTFOO_PROVIDER_KEY`); w razie braku pomija się bezbłędnie
   i ma przyrostek `|| true`, więc raportuje bez przerywania CI.
 

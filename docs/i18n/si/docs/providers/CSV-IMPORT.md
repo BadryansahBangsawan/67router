@@ -25,7 +25,7 @@
 ආයාත මොඩලයෙන් ආරම්භක ගොනුවක් බාගන්න (**CSV අච්චුව බාගන්න**). උදාහරණය:
 
 ```csv
-# OmniRoute සපයන්නන් ආයාත කිරීම (ස්ථානීය තීරු)
+# 67router සපයන්නන් ආයාත කිරීම (ස්ථානීය තීරු)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

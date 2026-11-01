@@ -4,7 +4,7 @@
 
 ---
 
-Käivita `omniroute` CLI oma sülearvutis, samal ajal kui OmniRoute ise töötab kusagil mujal
+Käivita `omniroute` CLI oma sülearvutis, samal ajal kui 67router ise töötab kusagil mujal
 (VPS-is, koduserveris või mõnes teises sinu Tailneti masinas). Logid ühe korra sisse käsuga
 `omniroute connect` ning seejärel sihib **iga** CLI-käsk seda kaugserverit
 — samad käsud, sama väljund, kuid need käivitatakse kaugserveri suhtes.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← loob kaugkataloogi põhjal kohali
 ## Kuidas see töötab
 
 ```
-sinu sülearvuti                          OmniRoute'i kaugserver (VPS)
+sinu sülearvuti                          67router'i kaugserver (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (parool → tõend)           │
 │  kontekst: vps     │ ───────────────►  │ väljastab piiratud õigustega   │
@@ -108,7 +108,7 @@ serveris, mitte teie arvutis, mistõttu nõusolekukuva **jääb igaveseks ootele
 väljasta kunagi koodi** — tavapärase varuvariandi „kleebi tagasikutse URL” puhul
 pole midagi kleepida. (See on Google'i-poolne piirang: sama hangumine ilmneb igas
 puhverserveris, mis kasutab komplekti kuuluvat Antigravity töölauaklienti, mitte
-ainult OmniRoute'is.)
+ainult 67router'is.)
 
 Juhtpaneel tuvastab selle enne, kui kinni jääte: kui avate **Providers → Antigravity →
 Connect** aadressilt, mis pole localhost, asendatakse üldine teade „kopeeri tagasikutse
@@ -116,7 +116,7 @@ URL” kahe alltoodud lahendusega, milles teie host ja port on juba sisestatud.
 (Ka LAN-aadress läheb arvesse — selle tagasikutse seisukohast pole `192.168.x.x`
 localhost.)
 
-Antigravity ühendamiseks OmniRoute'i kauginstallatsiooniga on kaks toetatud viisi.
+Antigravity ühendamiseks 67router'i kauginstallatsiooniga on kaks toetatud viisi.
 
 ### Variant A — kohalik sisselogimisabiline (soovitatud)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Seejärel avage **kaugserveri** juhtpaneelil **Providers → Antigravity → Connect** ja
 kleepige `omniroute-cred-v1.…` plokk väljale **Step 2** (see aktsepteerib nii
-tagasikutse URL-i kui ka identimisteabe plokki). OmniRoute dekodeerib selle, käivitab
+tagasikutse URL-i kui ka identimisteabe plokki). 67router dekodeerib selle, käivitab
 serveris Cloud Code'i kasutuselevõtu ja salvestab ühenduse püsivalt.
 
 > Plokk sisaldab värskendustõendit — käsitlege seda nagu parooli. Saatmise korral
@@ -198,7 +198,7 @@ porti, seega pole vaja tunnelida teist pakkujapõhist porti.
 ## Codexi / Groki ühendamine kauginstallatsioonis (fikseeritud loopback-aadressiga pakkujad)
 
 Codex, xAI (`xai-oauth`) ja Grok CLI (`grok-cli`) registreerivad oma ülesvoolu OAuthi rakenduses **fikseeritud** loopback-aadressiga
-`redirect_uri`. OmniRoute ei saa seda muuta — pakkuja saadab brauseri alati tagasi samale püsikodeeritud aadressile:
+`redirect_uri`. 67router ei saa seda muuta — pakkuja saadab brauseri alati tagasi samale püsikodeeritud aadressile:
 
 | Pakkuja     | Fikseeritud tagasikutseaadress, kuhu pakkuja ümber suunab |
 | ----------- | --------------------------------------------------------- |
@@ -206,7 +206,7 @@ Codex, xAI (`xai-oauth`) ja Grok CLI (`grok-cli`) registreerivad oma ülesvoolu 
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                         |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                         |
 
-`localhost` tähendab siin **masinat, milles brauser töötab**, samas kui OmniRoute'i PKCE
+`localhost` tähendab siin **masinat, milles brauser töötab**, samas kui 67router'i PKCE
 tagasikutse server kuulab **serveri** loopback-aadressil. Kui avate juhtpaneeli LAN-aadressil,
 näiteks `http://192.168.0.15:20128`, ei saa need kaks omavahel ühendust: autoriseerimiskood
 edastatakse teie sülearvuti aadressile `localhost:1455`, kus miski ei kuula,
@@ -226,7 +226,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Vaja on kahte pordiedastust ning ainult ühe edastamine ebaõnnestub endiselt:
 
 - **`20128`** (juhtpaneeli port) muudab lähtekoha tegelikuks localhost'iks, mis
-  paneb OmniRoute'i üldse PKCE tagasikutse serverit käivitama — LAN-lähtekoht ei
+  paneb 67router'i üldse PKCE tagasikutse serverit käivitama — LAN-lähtekoht ei
   jõua kunagi selle haruni.
 - **`1455`** (pakkuja fikseeritud tagasikutse port) on koht, kuhu brauser tagasi
   saadetakse; see peab tunneli kaudu jõudma serveri loopback-aadressile.
@@ -346,7 +346,7 @@ omniroute contexts current         # aktiivne server, autentimise staatus, ulatu
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

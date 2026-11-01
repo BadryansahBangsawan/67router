@@ -4,7 +4,7 @@
 
 ---
 
-> **Bu sənəd nədir.** OmniRoute-un keyfiyyət şlüzü sisteminin sənayedəki ən yaxşı təcrübələrlə
+> **Bu sənəd nədir.** 67router-un keyfiyyət şlüzü sisteminin sənayedəki ən yaxşı təcrübələrlə
 > müqayisəli kritik qiymətləndirilməsi, **üstəlik** bütün keyfiyyət yoxlama nöqtələrinin əhatəli
 > kataloqu və eyni sistemi istənilən layihəyə tətbiq etmək üçün **alətdən asılı olmayan təkrarlama planı**.
 > Real repozitoriyanın vəziyyəti əsasında (yaddaşdan deyil) 2026-06-16 tarixində yaradılıb.
@@ -107,62 +107,62 @@ Aşağıdakı 12 kateqoriya təkrar istifadə edilə bilən formada "keyfiyyət 
 
 ### 1. Üslub və formatlama (deterministik, sürətli)
 
-- **OmniRoute:** lint-staged vasitəsilə Prettier + ESLint (pre-commit), 2 boşluq/qoşa dırnaqlar/100 sütun.
+- **67router:** lint-staged vasitəsilə Prettier + ESLint (pre-commit), 2 boşluq/qoşa dırnaqlar/100 sütun.
 - **Ümumi:** avtomatik düzəliş edə bilən bir formatlayıcı + bir linter; mərhələlənmiş fayllar üzərində pre-commit zamanı işə salınır.
 
 ### 2. Tiplər
 
-- **OmniRoute:** `typecheck:core` (bloklayıcı) + `typecheck:noimplicit:core` (tövsiyə xarakterli) + `type-coverage` üçün 92.17% xırxacı + hər fayl üzrə any büdcəsi.
+- **67router:** `typecheck:core` (bloklayıcı) + `typecheck:noimplicit:core` (tövsiyə xarakterli) + `type-coverage` üçün 92.17% xırxacı + hər fayl üzrə any büdcəsi.
 - **Ümumi:** CI-da sərt tip yoxlaması + xırxaclı tip əhatəsi metrikası + hər fayl üzrə `any`/çıxış yolu büdcəsi.
 
 ### 3. Testlər (intensivlik)
 
-- **OmniRoute:** üst-üstə düşməyən 2 icra mühərriki (Node native + vitest), 8 şard, 60/60/60/60 qlobal əhatə + təxminən 76% xırxac + **kritik modullar üçün modul üzrə 8 minimum hədd** + gecəlik xüsusiyyət testləri + gecəlik **mutasiya testi**.
+- **67router:** üst-üstə düşməyən 2 icra mühərriki (Node native + vitest), 8 şard, 60/60/60/60 qlobal əhatə + təxminən 76% xırxac + **kritik modullar üçün modul üzrə 8 minimum hədd** + gecəlik xüsusiyyət testləri + gecəlik **mutasiya testi**.
 - **Ümumi:** test icra mühərriki(ləri) + **mütləq** əhatə minimumu (sıfıra qarşı) + əhatə **xırxacı** (reqressiyaya qarşı) + **yüksək riskli kod üçün modul üzrə minimum hədlər** (Qudhart effektinə qarşı) + saf məntiq üçün xüsusiyyət əsaslı testlər + test keyfiyyətinin real ölçüsü kimi gecəlik **mutasiya testi**.
 
 ### 4. Test siyasəti (manipulyasiyaya qarşı)
 
-- **OmniRoute:** `pr-test-policy` (məhsul kodu test tələb edir), `check-test-masking` (zəiflədilmiş təsdiqləri bloklayır), `pr-evidence` (uğur iddiası sübut bloku tələb edir), `test-discovery` (hər test bir icra mühərriki tərəfindən toplanır).
+- **67router:** `pr-test-policy` (məhsul kodu test tələb edir), `check-test-masking` (zəiflədilmiş təsdiqləri bloklayır), `pr-evidence` (uğur iddiası sübut bloku tələb edir), `test-discovery` (hər test bir icra mühərriki tərəfindən toplanır).
 - **Ümumi:** "yeni kod ⇒ yeni test" keçidi + silinmiş təsdiq/tavtologiya detektoru + sübut tələbi (TDD və ya canlı test) + heç bir testin glob-lardan kənarda yetim qalmadığına zəmanət.
 
 ### 5. Mürəkkəblik və kod sağlamlığı (xırxaclar)
 
-- **OmniRoute:** ESLint xəbərdarlıqları (3769↓), jscpd təkrarlanması (5.72%↓), siklomatik mürəkkəblik + maksimum sətir sayı (1800↓), sonarjs koqnitiv mürəkkəbliyi (753↓), knip ölü kodu/istifadə olunmayan ixracları (339↓), hər fayl üzrə fayl ölçüsü (dondurulmuş, yalnız azala bilər), dövri asılılıqlar (xüsusi Tarjan, bloklayıcı).
+- **67router:** ESLint xəbərdarlıqları (3769↓), jscpd təkrarlanması (5.72%↓), siklomatik mürəkkəblik + maksimum sətir sayı (1800↓), sonarjs koqnitiv mürəkkəbliyi (753↓), knip ölü kodu/istifadə olunmayan ixracları (339↓), hər fayl üzrə fayl ölçüsü (dondurulmuş, yalnız azala bilər), dövri asılılıqlar (xüsusi Tarjan, bloklayıcı).
 - **Ümumi:** hər sağlamlıq metrikasına xırxac tətbiq edin (xəbərdarlıqlar, təkrarlanma, siklomatik **və** koqnitiv mürəkkəblik, ölü kod, fayl ölçüsü, import dövrləri). İstiqamət həmişə "reqressiyaya yol vermə" olmalıdır.
 
 ### 6. Statik təhlükəsizlik (SAST + məxfi məlumatlar)
 
-- **OmniRoute:** CodeQL (xəbərdarlıq xırxacı = 0), gitleaks (`[extend] useDefault=true` — kritikdir!), SonarQube, xüsusi təhlükəsizlik qaydaları (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (xəbərdarlıq xırxacı = 0), gitleaks (`[extend] useDefault=true` — kritikdir!), SonarQube, xüsusi təhlükəsizlik qaydaları (public-creds, error-helper, route-guard-membership, route-validation).
 - **Ümumi:** xəbərdarlıq xırxacı olan SAST (CodeQL/Sonar/semgrep) + **miras alınmış standart qaydalar dəsti** olan məxfi məlumat skaneri (standart qaydaları əvəz edən xüsusi konfiqurasiya = korluq) + layihəyə xas Sərt Qayda təhlükəsizlik keçidləri.
 
 ### 7. Təchizat zənciri (asılılıqlar)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX icazə siyahısı), lockfile-lint (HTTPS+sha512+reyestr), `check-deps` anti-slopsquatting (icazə siyahısı + yaş ≥72 saat).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX icazə siyahısı), lockfile-lint (HTTPS+sha512+reyestr), `check-deps` anti-slopsquatting (icazə siyahısı + yaş ≥72 saat).
 - **Ümumi:** çoxmənbəli SCA + lisenziya icazə siyahısı + kilid faylının bütövlüyünün yoxlanması + yaş/tayposkvottinq yoxlaması olan asılılıq icazə siyahısı + qruplaşdırılmış yeniləmə botu.
 
 ### 8. Təchizat zənciri (quruluş və buraxılış)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA mənşə sübutu (`--provenance`), OpenSSF Scorecard (həftəlik), iş axınının sərtləşdirilməsi (zizmor: artipacked→`persist-credentials:false`, keşin zəhərlənməsi, token icazələri).
+- **67router:** SBOM (CycloneDX + syft), SLSA mənşə sübutu (`--provenance`), OpenSSF Scorecard (həftəlik), iş axınının sərtləşdirilməsi (zizmor: artipacked→`persist-credentials:false`, keşin zəhərlənməsi, token icazələri).
 - **Ümumi:** dərc zamanı SBOM yaradın + imzalanmış mənşə sübutu (SLSA L2+) + planlaşdırılmış Scorecard + bütün iş axınlarını sərtləşdirin (minimum səlahiyyətli tokenlər, push etməyən checkout zamanı saxlanılan etimadnamələr olmasın, action-lar SHA ilə sabitlənsin).
 
 ### 9. Müqavilələr və API
 
-- **OmniRoute:** oasdiff (OpenAPI-də pozucu dəyişiklik), schemathesis (gecəlik müqavilə fazzinqi), openapi-coverage (sənədləşdirilmiş marşrutların faizi, xırxac 38.3%), openapi-security-tiers (spesifikasiya ilə route-guard müqayisəsi).
+- **67router:** oasdiff (OpenAPI-də pozucu dəyişiklik), schemathesis (gecəlik müqavilə fazzinqi), openapi-coverage (sənədləşdirilmiş marşrutların faizi, xırxac 38.3%), openapi-security-tiers (spesifikasiya ilə route-guard müqayisəsi).
 - **Ümumi:** pozucu dəyişikliklər üçün müqavilə fərqi (oasdiff/buf) + spesifikasiyaya qarşı xüsusiyyət əsaslı fazzinq (schemathesis) + xırxaclı sənədləşdirmə əhatəsi + spesifikasiya↔kod uyğunluğu.
 
 ### 10. Sənədlər və i18n (köhnəlməyə qarşı)
 
-- **OmniRoute:** docs-sync (güzgülənmiş versiyalar), docs-counts-sync (sənədlərdəki rəqəmlər ilə koddakı rəqəmlər), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + 80.1% xırxac).
+- **67router:** docs-sync (güzgülənmiş versiyalar), docs-counts-sync (sənədlərdəki rəqəmlər ilə koddakı rəqəmlər), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + 80.1% xırxac).
 - **Ümumi:** sənədlər və kod arasında versiyaları/sayları/mühit dəyişənlərini sinxronlaşdırın (etimada deyil, keçidə əsaslanın) + daxili keçidləri doğrulayın + xırxaclı i18n əhatəsi.
 
 ### 11. Hallüsinasiyaya qarşı / uyğunluq (nadir kateqoriya)
 
-- **OmniRoute:** known-symbols (sətir dispetçerizasiyası ⇒ canlı simvol), provider-consistency, fetch-targets (müştəri sorğusu ⇒ real marşrut), docs-symbols, db-rules (Sərt Qaydalar #2/#5), migration-numbering.
+- **67router:** known-symbols (sətir dispetçerizasiyası ⇒ canlı simvol), provider-consistency, fetch-targets (müştəri sorğusu ⇒ real marşrut), docs-symbols, db-rules (Sərt Qaydalar #2/#5), migration-numbering.
 - **Ümumi:** hər bir "təkrarlanan həqiqət mənbəyi" (reyestr, sətir dispetçerizasiyası, laylararası istinadlar) üçün hər iki tərəfin uyğunluğunu sübut edən keçid yaradın. Bu, tip yoxlamasının/testlərin aşkar etmədiyi köhnəlməni tutur.
 
 ### 12. Dayanıqlılıq və domen (məhsula xas)
 
-- **OmniRoute:** chaos (nasazlıq inyeksiyası), heap-growth (yaddaş sızması), k6 (uzunmüddətli yük testi), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 dayanıqlılıq qanunu (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (nasazlıq inyeksiyası), heap-growth (yaddaş sızması), k6 (uzunmüddətli yük testi), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 dayanıqlılıq qanunu (circuit-breaker/cooldown/lockout).
 - **Ümumi:** **öz** domeninizin nasazlıq rejimlərini müəyyənləşdirin və hər biri üçün bir keçid yaradın (gecəlik olsa belə). Süni intellekt tətbiqləri üçün: inyeksiyaya qarşı red-team testi. Paylanmış sistemlər üçün: xaos + yaddaş sızması + uzunmüddətli yük testi.
 
 ---

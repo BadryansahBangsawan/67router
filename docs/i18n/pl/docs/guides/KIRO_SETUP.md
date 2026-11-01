@@ -9,7 +9,7 @@ title: "Przewodnik konfiguracji Kiro"
 
 # Przewodnik konfiguracji Kiro
 
-Ten przewodnik opisuje dodawanie kont Kiro (hostowany w AWS asystent AI do kodowania) do OmniRoute,
+Ten przewodnik opisuje dodawanie kont Kiro (hostowany w AWS asystent AI do kodowania) do 67router,
 ze szczególnym uwzględnieniem jednoczesnej pracy wielu kont bez konfliktów sesji.
 
 ---
@@ -27,10 +27,10 @@ token pierwszego konta.
 
 ---
 
-## Jak OmniRoute to rozwiązuje (v3.8.0+)
+## Jak 67router to rozwiązuje (v3.8.0+)
 
-Od v3.8.0 OmniRoute wywołuje `registerClient()` (AWS SSO OIDC) przy każdym
-imporcie połączenia Kiro. Dzięki temu każde połączenie OmniRoute ma własną, dedykowaną
+Od v3.8.0 67router wywołuje `registerClient()` (AWS SSO OIDC) przy każdym
+imporcie połączenia Kiro. Dzięki temu każde połączenie 67router ma własną, dedykowaną
 rejestrację klienta OIDC. Ponieważ rejestracje klientów są od siebie niezależne,
 odświeżanie lub ponowne uwierzytelnienie jednego konta nie wpływa na refresh token
 żadnego innego konta.
@@ -65,7 +65,7 @@ połączenia automatycznie otrzymają własną rejestrację klienta.
 
 ### Wymagania wstępne
 
-- OmniRoute v3.8.0 lub nowszy.
+- 67router v3.8.0 lub nowszy.
 - Działające konto Kiro (e-mail + hasło, Google lub logowanie GitHub).
 - Opcjonalnie drugie konto Kiro.
 
@@ -76,7 +76,7 @@ połączenia automatycznie otrzymają własną rejestrację klienta.
    - **Import Token** — wklej refresh token zaczynający się od `aorAAAAAG`.
    - **API Key** — wklej długoterminowy klucz API Kiro / CodeWhisperer.
    - **Google / GitHub login** — dokończ flow OAuth w przeglądarce.
-   - **Auto-Import** — kliknij przycisk; OmniRoute odczyta poświadczenia z
+   - **Auto-Import** — kliknij przycisk; 67router odczyta poświadczenia z
      lokalnej bazy kiro-cli lub z `~/.aws/sso/cache`.
 3. Połączenie zostaje zapisane. Flow oparte o refresh token automatycznie rejestrują
    dedykowanego klienta OIDC. Flow klucza API walidują klucz w AWS i nie przechowują refresh tokena.
@@ -133,7 +133,7 @@ z odświeżania OAuth, dzięki czemu pozwala uniknąć unieważniania współdzi
 2. Wybierz **Klucz API**.
 3. Wklej klucz API i wybierz region AWS: **Automatyczne wykrywanie** (domyślnie), **Wschodnie
    stany USA (Północna Wirginia)** lub **Europa (Frankfurt)**.
-4. OmniRoute weryfikuje klucz i zapisuje połączenie przypisane do regionu, w którym
+4. 67router weryfikuje klucz i zapisuje połączenie przypisane do regionu, w którym
    klucz działa.
 
 ### API
@@ -183,7 +183,7 @@ do `https://q.<region>.amazonaws.com/generateAssistantResponse` — w tym do `us
 ## Wygaśnięcie klienta OIDC
 
 Publiczne klienty AWS SSO OIDC zwykle wygasają po 90 dniach
-(`clientSecretExpiresAt`). OmniRoute przechowuje ten znacznik czasu w `providerSpecificData`
+(`clientSecretExpiresAt`). 67router przechowuje ten znacznik czasu w `providerSpecificData`
 na potrzeby obserwowalności. Jeśli połączenie przestanie się odświeżać po ok. 90 dniach,
 zaimportuj je ponownie, aby uzyskać świeżą rejestrację klienta OIDC. Automatyczna
 ponowna rejestracja po wygaśnięciu jest planowana jako przyszłe usprawnienie.
@@ -204,7 +204,7 @@ odświeżają się przez AWS SSO OIDC.
 ### Import kończy się błędem "Token validation failed"
 
 - Upewnij się, że refresh token zaczyna się od `aorAAAAAG`.
-- Upewnij się, że OmniRoute może dotrzeć do `https://oidc.us-east-1.amazonaws.com` (lub
+- Upewnij się, że 67router może dotrzeć do `https://oidc.us-east-1.amazonaws.com` (lub
   skonfigurowanego regionu). Jeśli jesteś za proxy firmowym, ustaw proxy na poziomie
   providera w **Dashboard → Settings → Proxies**.
 
@@ -212,7 +212,7 @@ odświeżają się przez AWS SSO OIDC.
 
 - Potwierdź, że klucz to klucz API Kiro / CodeWhisperer, a nie refresh token.
 - Potwierdź, że region AWS odpowiada kluczowi/kontu. Domyślnie jest to `us-east-1`.
-- Klucz musi móc wywołać `ListAvailableProfiles`; w przeciwnym razie OmniRoute nie może
+- Klucz musi móc wywołać `ListAvailableProfiles`; w przeciwnym razie 67router nie może
   rozwiązać wymaganego `profileArn`.
 
 W przypadku innych problemów zobacz główny plik [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

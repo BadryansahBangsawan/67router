@@ -11,11 +11,11 @@
 
 ## Kas tai yra
 
-OmniRoute gali prisijungti prie **Notion** darbo srities kaip prie **konteksto šaltinio** —
+67router gali prisijungti prie **Notion** darbo srities kaip prie **konteksto šaltinio** —
 skaitymo ir rašymo žinių bazės, kurią agentai pasiekia per integruotą MCP serverį.
 Sukonfigūravus Notion integracijos žetoną, MCP įrankiai leidžia LLM ieškoti puslapių ir
 duomenų bazių, skaityti puslapių turinį ir blokų medžius, vykdyti duomenų bazių užklausas
-su filtrais bei rikiavimu ir pridėti naujų blokų — visa tai perduodama per OmniRoute
+su filtrais bei rikiavimu ir pridėti naujų blokų — visa tai perduodama per 67router
 (su pakartotiniais bandymais, skirtuoju laiku ir klaidų klasifikavimu), todėl modelis
 niekada tiesiogiai nepasiekia Notion API.
 
@@ -42,7 +42,7 @@ arba naudodami nustatymų REST API.
 > [!NOTE]
 > Žetonas yra **Notion vidinės integracijos žetonas**. Sukurkite integraciją adresu
 > <https://www.notion.com/my-integrations>, tada bendrinkite puslapius ir duomenų bazes,
-> kurias norite leisti OmniRoute pasiekti, su ta integracija (Notion leidimų modelis
+> kurias norite leisti 67router pasiekti, su ta integracija (Notion leidimų modelis
 > pagrįstas bendrinimu, o ne visa darbo sritimi).
 
 ### Konfigūravimas per REST
@@ -61,7 +61,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Visiems trims metodams reikalingas valdymo skydelio autentifikavimas (`isAuthenticated`).
-Atliekant `POST`, OmniRoute išsaugo žetoną ir nedelsdamas paleidžia bandomąją paiešką,
+Atliekant `POST`, 67router išsaugo žetoną ir nedelsdamas paleidžia bandomąją paiešką,
 pateikiančią 1 rezultatą; jei Notion grąžina klaidos objektą, žetonas pašalinamas, o
 iškvieta nepavyksta ir grąžina `400`.
 

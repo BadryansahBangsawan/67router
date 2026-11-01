@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Bahasa Indonesia)
+# 📖 Setup Guide — 67router (Bahasa Indonesia)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Referensi penyiapan lengkap untuk OmniRoute. Untuk versi ringkas, lihat [Mulai Cepat di README](../README.md#-quick-start).
+> Referensi penyiapan lengkap untuk 67router. Untuk versi ringkas, lihat [Mulai Cepat di README](../README.md#-quick-start).
 
 ## Daftar Isi
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Paket AUR](https://aur.archlinux.org/packages/omniroute-bin) menginstal OmniRoute dan menyediakan layanan pengguna systemd.
+[Paket AUR](https://aur.archlinux.org/packages/omniroute-bin) menginstal 67router dan menyediakan layanan pengguna systemd.
 
 ### Dari Sumber
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Catatan Windows:** Secara default, OmniRoute menggunakan `%APPDATA%\omniroute` ketika direktori lama `%USERPROFILE%\.omniroute` tidak tersedia. Atur `DATA_DIR` untuk memilih lokasi direktori data yang berbeda.
+> **Catatan Windows:** Secara default, 67router menggunakan `%APPDATA%\omniroute` ketika direktori lama `%USERPROFILE%\.omniroute` tidak tersedia. Atur `DATA_DIR` untuk memilih lokasi direktori data yang berbeda.
 
 > **Catatan:** `npm install` secara otomatis menghasilkan `.env` dari `.env.example` saat pertama kali dijalankan. Instalasi berikutnya tidak akan menimpa `.env` yang sudah ada, sehingga penyesuaian tetap dipertahankan. Untuk menginisialisasi ulang, hapus `.env` sebelum menjalankannya kembali.
 
@@ -64,7 +64,7 @@ Lihat [Panduan Docker](./DOCKER_GUIDE.md) untuk penyiapan Docker lengkap, termas
 
 ### Aplikasi Desktop (Electron)
 
-OmniRoute menyediakan pembungkus desktop yang dibuat dengan Electron 41 + electron-builder 26.10. Skrip yang tersedia (root ruang kerja):
+67router menyediakan pembungkus desktop yang dibuat dengan Electron 41 + electron-builder 26.10. Skrip yang tersedia (root ruang kerja):
 
 ```bash
 npm run electron:dev          # Jalankan desktop dengan hot-reload
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Jika digabungkan dengan variabel lingkungan (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, dan sebagainya), ini memungkinkan Anda menjalankan instans OmniRoute yang sepenuhnya dapat dikendalikan melalui skrip.
+Jika digabungkan dengan variabel lingkungan (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, dan sebagainya), ini memungkinkan Anda menjalankan instans 67router yang sepenuhnya dapat dikendalikan melalui skrip.
 
 ### Opsi CLI
 
@@ -99,7 +99,7 @@ Jika digabungkan dengan variabel lingkungan (`INITIAL_PASSWORD`, `OMNIROUTE_WS_B
 | `omniroute config`      | Konfigurasi alat CLI — tampilkan, dapatkan, atur, validasi konfigurasi |
 | `omniroute status`      | Dasbor status offline — versi, DB, alat, konfigurasi                   |
 | `omniroute logs`        | Streaming log penggunaan dari API (mendukung `--follow`)               |
-| `omniroute update`      | Periksa atau terapkan pembaruan OmniRoute                              |
+| `omniroute update`      | Periksa atau terapkan pembaruan 67router                               |
 | `omniroute provider`    | Kelola koneksi penyedia — tambah, tampilkan, hapus, uji, default       |
 | `omniroute --port 3000` | Atur port kanonis/API ke 3000                                          |
 | `omniroute --mcp`       | Mulai server MCP (transport stdio)                                     |
@@ -165,7 +165,7 @@ Berfungsi dengan Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode, dan 
 
 #### Konfigurasi otomatis dengan `setup-*`
 
-Alih-alih menempelkan URL dasar dan kunci secara manual, biarkan OmniRoute menulis konfigurasi masing-masing alat dari katalog model aktif. Satu perintah untuk setiap alat:
+Alih-alih menempelkan URL dasar dan kunci secara manual, biarkan 67router menulis konfigurasi masing-masing alat dari katalog model aktif. Satu perintah untuk setiap alat:
 
 ```bash
 omniroute setup-codex        # profil ~/.codex/<name>.config.toml
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Setiap perintah menerima `--remote <url> --api-key <key>` untuk mengonfigurasi alat lokal agar menggunakan OmniRoute **jarak jauh**, serta `--dry-run` untuk melakukan pratinjau. Untuk menjalankan CLI dengan env yang tepat disuntikkan tanpa menulis konfigurasi apa pun, gunakan peluncur generik `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); peluncur per alat versi lama `omniroute launch` (Claude Code) dan `omniroute launch-codex` (Codex) tetap tersedia.
+Setiap perintah menerima `--remote <url> --api-key <key>` untuk mengonfigurasi alat lokal agar menggunakan 67router **jarak jauh**, serta `--dry-run` untuk melakukan pratinjau. Untuk menjalankan CLI dengan env yang tepat disuntikkan tanpa menulis konfigurasi apa pun, gunakan peluncur generik `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); peluncur per alat versi lama `omniroute launch` (Claude Code) dan `omniroute launch-codex` (Codex) tetap tersedia.
 
 Untuk tabel lengkap (apa yang ditulis setiap perintah, semua flag, lokal vs. jarak jauh, konvensi URL dasar `/v1`), lihat **[Integrasi CLI](./CLI-INTEGRATIONS.md)**.
 
@@ -241,26 +241,6 @@ Tambahkan ke pengaturan MCP Anda:
 
 **Dokumentasi lengkap MCP:** [README Server MCP](../../open-sse/mcp-server/README.md) — 110 alat, konfigurasi IDE, klien Python/TS/Go.
 
-### Penyiapan A2A (Agent-to-Agent Protocol)
-
-Verifikasi Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Kirim tugas:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Dokumentasi lengkap A2A:** [README Server A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, keterampilan, streaming, siklus hidup tugas.
-
----
-
 ## Konfigurasi Timeout
 
 ### Timeout Dasar
@@ -270,15 +250,15 @@ Untuk sebagian besar deployment, Anda hanya memerlukan dua variabel berikut:
 | Variabel                 | Default                       | Tujuan                                                                                                                                                        |
 | ------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                      | Baseline bersama untuk timeout dimulainya respons upstream, timeout Undici tersembunyi, permintaan fingerprint TLS, serta timeout permintaan/proxy bridge API |
-| `STREAM_IDLE_TIMEOUT_MS` | mewarisi `REQUEST_TIMEOUT_MS` | Jeda maksimum antar-chunk streaming sebelum OmniRoute membatalkan stream SSE                                                                                  |
+| `STREAM_IDLE_TIMEOUT_MS` | mewarisi `REQUEST_TIMEOUT_MS` | Jeda maksimum antar-chunk streaming sebelum 67router membatalkan stream SSE                                                                                   |
 
 Kompatibilitas mundur tetap dipertahankan: `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS`, dan variabel timeout per-lapisan lainnya yang sudah ada tetap berfungsi dan menggantikan baseline bersama.
 
 ### Catatan Khusus Penyedia
 
-Untuk upstream yang kompatibel dengan Claude Code (`anthropic-compatible-cc-*`), OmniRoute memperoleh header `X-Stainless-Timeout` keluar dari timeout fetch yang telah ditetapkan sehingga timeout baca di sisi penyedia tetap selaras dengan konfigurasi env Anda.
+Untuk upstream yang kompatibel dengan Claude Code (`anthropic-compatible-cc-*`), 67router memperoleh header `X-Stainless-Timeout` keluar dari timeout fetch yang telah ditetapkan sehingga timeout baca di sisi penyedia tetap selaras dengan konfigurasi env Anda.
 
-Untuk reverse proxy pihak ketiga yang kompatibel dengan Claude Code, OmniRoute mempertahankan set default `anthropic-beta` secara konservatif dan, ketika `Client Cache Control` tetap diatur ke `Auto`, hanya meneruskan penanda `cache_control` yang disediakan klien. Aktifkan toggle "Enable redact-thinking beta" per-koneksi hanya ketika upstream secara khusus memerlukan stream pemikiran Claude yang telah disunting.
+Untuk reverse proxy pihak ketiga yang kompatibel dengan Claude Code, 67router mempertahankan set default `anthropic-beta` secara konservatif dan, ketika `Client Cache Control` tetap diatur ke `Auto`, hanya meneruskan penanda `cache_control` yang disediakan klien. Aktifkan toggle "Enable redact-thinking beta" per-koneksi hanya ketika upstream secara khusus memerlukan stream pemikiran Claude yang telah disunting.
 
 ### Penggantian Timeout Lanjutan
 
@@ -296,11 +276,11 @@ Untuk reverse proxy pihak ketiga yang kompatibel dengan Claude Code, OmniRoute m
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                      | Timeout keep-alive pada server bridge API                                         |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                         | Timeout ketidakaktifan soket pada server bridge API (`0` menonaktifkannya)        |
 
-> **Catatan:** Untuk permintaan streaming, `FETCH_TIMEOUT_MS` hanya mencakup penyiapan koneksi / waktu menunggu respons upstream pertama. Setelah stream aktif, OmniRoute hanya akan membatalkannya jika benar-benar terjadi kemacetan (`STREAM_IDLE_TIMEOUT_MS`) atau ketidakaktifan body Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Catatan:** Untuk permintaan streaming, `FETCH_TIMEOUT_MS` hanya mencakup penyiapan koneksi / waktu menunggu respons upstream pertama. Setelah stream aktif, 67router hanya akan membatalkannya jika benar-benar terjadi kemacetan (`STREAM_IDLE_TIMEOUT_MS`) atau ketidakaktifan body Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Kompatibilitas Reverse Proxy
 
-Jika Anda menjalankan OmniRoute di belakang Nginx, Caddy, Cloudflare, atau reverse proxy lainnya, pastikan timeout proxy juga lebih tinggi daripada timeout stream/fetch OmniRoute Anda.
+Jika Anda menjalankan 67router di belakang Nginx, Caddy, Cloudflare, atau reverse proxy lainnya, pastikan timeout proxy juga lebih tinggi daripada timeout stream/fetch 67router Anda.
 
 ---
 

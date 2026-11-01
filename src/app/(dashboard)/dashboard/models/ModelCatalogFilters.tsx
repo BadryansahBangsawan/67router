@@ -157,7 +157,7 @@ export default function ModelCatalogFiltersComponent({
   const t = useTranslations("modelCatalog");
 
   return (
-    <div className="flex flex-col gap-4 border-b border-border p-4">
+    <div className="flex flex-col gap-4 border-b border-border px-5 py-4">
       <FilterSearchRow
         label={t("searchModels")}
         placeholder={t("searchModelsPlaceholder")}

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Docker ichida ishlaganda, eski **Cursor IDE’dan import qilish** /
+67router Docker ichida ishlaganda, eski **Cursor IDE’dan import qilish** /
 `cursor-agent` jarayonlari muvaffaqiyatsiz tugaydi, chunki konteyner hostdagi Cursor
 oʻrnatmasini koʻra olmaydi. Buning oʻrniga **Cursor bilan kirish** (deep-control PKCE) usulidan foydalaning.
 
@@ -14,7 +14,7 @@ oʻrnatmasini koʻra olmaydi. Buning oʻrniga **Cursor bilan kirish** (deep-cont
    `~/.config/Cursor/User/globalStorage/state.vscdb` kabi Linux yoʻllarini qidiradi.
    macOS uchun Docker Desktop’da host IDE maʼlumotlar bazasi sukut boʻyicha ulanmaydi va
    host Darwin boʻlsa ham, konteyner operatsion tizimi Linux boʻladi.
-2. **`cursor-agent` binar fayli mavjud emas** — Rasmiy OmniRoute obrazlari
+2. **`cursor-agent` binar fayli mavjud emas** — Rasmiy 67router obrazlari
    `cursor-agent` bilan birga yetkazib berilmaydi. Mavjud modellar avval
    `cursor-agent --list-models` buyrugʻini ishga tushirar, u ishlamasa statik katalogga oʻtar edi.
 3. **Notoʻgʻri binar fayl** — macOS uchun `cursor-agent` faylini Linux
@@ -24,11 +24,11 @@ oʻrnatmasini koʻra olmaydi. Buning oʻrniga **Cursor bilan kirish** (deep-cont
 
 1. **Boshqaruv paneli → Provayderlar → Cursor** sahifasini oching.
 2. **Cursor bilan kirish** ichki oynasini tanlang.
-3. **Cursor bilan kirish** tugmasini bosing — OmniRoute
+3. **Cursor bilan kirish** tugmasini bosing — 67router
    `https://cursor.com/loginDeepControl?…` manzilini **host** brauzeringizda ochadi.
-4. Brauzerda kirishni tasdiqlang, soʻng boshqaruv paneliga qayting. OmniRoute
+4. Brauzerda kirishni tasdiqlang, soʻng boshqaruv paneliga qayting. 67router
    tokenlar kelguncha `api2.cursor.sh/auth/poll` manzilini davriy tekshiradi.
-5. OmniRoute **kirish + yangilash** tokenlarini saqlaydi va ularni
+5. 67router **kirish + yangilash** tokenlarini saqlaydi va ularni
    `https://api2.cursor.sh/auth/exchange_user_api_key` orqali yangilaydi.
 
 Bu usul konteyner ichida Cursor IDE yoki `cursor-agent` boʻlishini talab qilmaydi.
@@ -38,10 +38,10 @@ Bu usul konteyner ichida Cursor IDE yoki `cursor-agent` boʻlishini talab qilmay
 Tizimga kirilgan ulanish mavjud boʻlsa, **Mavjud modellar / Avtomatik sinxronlash**
 ulanishning bearer tokenidan foydalanadigan Cursor’ning HTTP
 `AiService/AvailableModels` katalogini afzal koʻradi. Agar bu bajarilmasa,
-OmniRoute hostdagi `cursor-agent`ni (mavjud boʻlsa), soʻng statik reyestr
+67router hostdagi `cursor-agent`ni (mavjud boʻlsa), soʻng statik reyestr
 boshlangʻich maʼlumotlarini sinab koʻradi.
 
-OmniRoute katalogda har doim **`auto`** modelini (“Auto” nomi bilan), shuningdek
+67router katalogda har doim **`auto`** modelini (“Auto” nomi bilan), shuningdek
 OpenCodex uslubidagi **`auto-cost`**, **`auto-balance`** va
 **`auto-intelligence`** marshrutizator rejimlarini taqdim etadi. Tarmoq orqali ular
 Cursor’ning `default` modeliga (uchta variant uchun `optimization` ModelParameter
@@ -91,7 +91,7 @@ tokenlarni qayta import qiling (faqat IDE orqali import qilish endi talab etilma
 ## Boʻsh javoblar / foydalanish limiti tugashi
 
 Cursor Run’ni qabul qilib, ammo yordamchi matnini qaytarmasa (bu premium
-foydalanish limiti tugaganda koʻp uchraydi), OmniRoute oddiy
+foydalanish limiti tugaganda koʻp uchraydi), 67router oddiy
 “Provayder boʻsh kontent qaytardi” xabari oʻrniga amaliy tavsiyalarga ega **429**
 (kvota koʻrsatmalari) yoki **502** xatosini koʻrsatadi.
 `not_found: AI Model Not Found` (foydalanish davri limiti tugagan) kabi oqimli
@@ -103,7 +103,7 @@ tarif rejasidagi limitlarni oshiring.
 
 ## Mijoz versiyasi (headless)
 
-Mahalliy `cursor-agent` oʻrnatmasi boʻlmasa, OmniRoute
+Mahalliy `cursor-agent` oʻrnatmasi boʻlmasa, 67router
 `x-cursor-client-version` qiymatini avval `CURSOR_AGENT_CLI_VERSION` muhit
 oʻzgaruvchisidan, keyin Cursor oʻrnatish skriptining diskda keshlangan
 scrape natijasidan, soʻng biriktirilgan build identifikatoridan aniqlaydi.

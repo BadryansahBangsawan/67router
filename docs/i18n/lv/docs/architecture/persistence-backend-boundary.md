@@ -10,7 +10,7 @@
 
 ## Konteksts
 
-OmniRoute pašlaik nodrošina uz domēniem orientētas persistences funkcijas no `src/lib/db/`, savukārt
+67router pašlaik nodrošina uz domēniem orientētas persistences funkcijas no `src/lib/db/`, savukārt
 koplietotais savienojums, ko atgriež `src/lib/db/core.ts`, īsteno sinhrono `SqliteAdapter`
 līgumu no `src/lib/db/adapters/types.ts`. Šis adapters atbalsta vairākas SQLite izpildvides, taču tā
 saskarne joprojām ir veidota atbilstoši SQLite: sinhroni sagatavotie priekšraksti, `pragma`, atliktie un tūlītējie

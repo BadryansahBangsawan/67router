@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute resolve seu driver SQLite na inicialização por meio de uma cadeia de fallback de 5 etapas:
+O 67router resolve seu driver SQLite na inicialização por meio de uma cadeia de fallback de 5 etapas:
 
 1. **`better-sqlite3` incluído** (via `dependencies` no `package.json`)
    — mais rápido, binário nativo, instalado pelo `npm install` quando as ferramentas de compilação estão presentes.
@@ -28,13 +28,13 @@ O OmniRoute resolve seu driver SQLite na inicialização por meio de uma cadeia 
 - **Ausência de ferramentas de compilação**: alguns ambientes (Windows corporativo sem VS Build
   Tools, imagens Docker mínimas) não conseguem compilar o `better-sqlite3`. O instalador
   em tempo de execução obtém um binário pré-compilado do registro do npm; os drivers de fallback
-  garantem que o OmniRoute ainda seja inicializado mesmo se isso falhar.
+  garantem que o 67router ainda seja inicializado mesmo se isso falhar.
 - **Sistemas isolados da rede**: se o registro do npm estiver inacessível, `node:sqlite`
   ou `sql.js` garantem a funcionalidade básica.
 
 ## Validação de magic bytes
 
-Antes de carregar um arquivo `.node` instalado em tempo de execução, o OmniRoute lê os primeiros 8
+Antes de carregar um arquivo `.node` instalado em tempo de execução, o 67router lê os primeiros 8
 bytes e os compara com as assinaturas conhecidas das plataformas:
 
 | Plataforma            | Bytes (hex)   | Rótulo      |
@@ -104,9 +104,9 @@ Implementação:
 ## Topologia de gravador único (HA não suportada)
 
 A cadeia de fallback de drivers acima ainda é executada em **um processo**. Por padrão, o SQLite
-do OmniRoute usa **um único gravador**:
+do 67router usa **um único gravador**:
 
-- Não conecte duas réplicas do OmniRoute ao mesmo arquivo `storage.sqlite`.
+- Não conecte duas réplicas do 67router ao mesmo arquivo `storage.sqlite`.
 - Uma reinicialização de contêiner, implantação Recreate, encerramento por OOM ou reinicialização por HEALTHCHECK interrompe
   todas as sessões SSE em andamento. Não há drenagem de sessões no fluxo padrão.
 - Uma verificação de atividade do orquestrador que trate um `/healthz` lento como inativo encerrará a única

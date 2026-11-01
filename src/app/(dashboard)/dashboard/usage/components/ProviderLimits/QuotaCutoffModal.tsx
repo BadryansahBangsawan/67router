@@ -209,7 +209,7 @@ export default function QuotaCutoffModal({
                   aria-label={w.displayName}
                   onChange={(e) => setDrafts((prev) => ({ ...prev, [w.key]: e.target.value }))}
                   className="w-20"
-                  inputClassName={`text-center ${isOverride ? "border-primary/40" : ""}`}
+                  inputClassName={`text-center ${isOverride ? "border-primary" : ""}`}
                 />
                 <span className="text-xs text-text-muted">%</span>
               </div>

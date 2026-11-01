@@ -112,7 +112,7 @@ node --import tsx/esm --test tests/unit/claude-web-auto-refresh.test.ts tests/un
 
 ### Sozlash
 
-1. OmniRoute’ni `npm run dev` yoki yig‘ilgan o‘rnatma orqali ishga tushiring.
+1. 67router’ni `npm run dev` yoki yig‘ilgan o‘rnatma orqali ishga tushiring.
 2. Dashboard → Providers → Add Provider bo‘limini oching.
 3. Web Cookie toifasini va Claude Web’ni tanlang.
 4. Autentifikatsiyadan o‘tgan `claude.ai` so‘rovidan nusxalangan to‘liq Cookie sarlavhasini joylashtiring.

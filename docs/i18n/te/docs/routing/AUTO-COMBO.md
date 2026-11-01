@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (తెలుగు)
+# 67router Auto-Combo Engine (తెలుగు)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # ఒక్కో టోకెన్కు అత�
 
 **ఏం జరుగుతుంది:**
 
-1. OmniRoute `src/sse/handlers/chat.ts`లోని `auto/` ప్రిఫిక్స్ను గుర్తిస్తుంది
+1. 67router `src/sse/handlers/chat.ts`లోని `auto/` ప్రిఫిక్స్ను గుర్తిస్తుంది
 2. డేటాబేస్ నుండి అన్ని **యాక్టివ్ ప్రొవైడర్ కనెక్షన్లను** క్వెరీ చేస్తుంది
 3. చెల్లుబాటు అయ్యే క్రెడెన్షియల్స్ (API కీ లేదా OAuth టోకెన్) ఉన్న వాటిని ఫిల్టర్ చేస్తుంది
 4. ఒక్కో కనెక్షన్కు మోడల్ను నిర్ణయిస్తుంది (`connection.defaultModel` లేదా ప్రొవైడర్ యొక్క మొదటి మోడల్)
@@ -88,7 +88,7 @@ model: "auto/cheap"           # ఒక్కో టోకెన్కు అత�
 
 ప్రతి అభ్యర్థి ఈ API కీకి సంబంధించిన `excluded` ఫ్లాగ్ను కూడా కలిగి ఉంటుంది. మినహాయింపులు
 ఒక్కో API కీకి విడిగా నిల్వ చేయబడతాయి (`auto_candidate_overrides` టేబుల్, మైగ్రేషన్ `128`) —
-OmniRouteలో `users` టేబుల్ లేకుండా సింగిల్-టెనెంట్గా ఉంటుంది, కాబట్టి `apiKeyId` అనేది
+67routerలో `users` టేబుల్ లేకుండా సింగిల్-టెనెంట్గా ఉంటుంది, కాబట్టి `apiKeyId` అనేది
 వాస్తవంగా ఒక్కో కాలర్కు అత్యంత సమీపమైన ఐడెంటిటీ — మరియు అవి
 `open-sse/services/autoCombo/virtualFactory.ts`లోని అభ్యర్థి-పూల్ చోక్పాయింట్ వద్ద,
 ప్యూర్, యూనిట్-టెస్ట్ చేయబడిన `filterExcludedCandidates()`
@@ -163,7 +163,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 సాధారణంగా ఎదురయ్యే రెండు సమస్యలు:
 
 - **`auto` మీ combosను ఉపయోగించదు.** `auto`/`auto/*` తన స్వంత zero-config candidate poolను నిర్మిస్తుంది మరియు ఏదైనా comboకు అక్షరాలా `auto` అనే పేరు ఉంటే మాత్రమే persist చేసిన combosను పరిశీలిస్తుంది (ఇది సిఫార్సు చేయబడదు). Combo ద్వారా route చేయడానికి, దాని ఖచ్చితమైన పేరును పంపండి — `auto`ను కాదు.
-- **`openrouter/auto` అనేది నిజమైన paid OpenRouter product** ("Auto Best Available"), OmniRoute alias కాదు. ఇది OpenRouter registry (`open-sse/config/providers/registry/openrouter/index.ts`)లోని ఏకైక static model entry మరియు దీనికి విడిగా billing చేయబడుతుంది. దీన్ని `auto` pools నుండి మినహాయించడానికి Settings → Routing → Hide paid modelsను ఉపయోగించండి.
+- **`openrouter/auto` అనేది నిజమైన paid OpenRouter product** ("Auto Best Available"), 67router alias కాదు. ఇది OpenRouter registry (`open-sse/config/providers/registry/openrouter/index.ts`)లోని ఏకైక static model entry మరియు దీనికి విడిగా billing చేయబడుతుంది. దీన్ని `auto` pools నుండి మినహాయించడానికి Settings → Routing → Hide paid modelsను ఉపయోగించండి.
 
 ఇక్కడ డాక్యుమెంట్ చేసిన అసలు గందరగోళం గురించి తెలుసుకోవడానికి [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) మరియు [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) చూడండి.
 
@@ -260,7 +260,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## అన్ని రూటింగ్ వ్యూహాలు
 
-OmniRoute యొక్క కాంబో ఇంజిన్ **20 రూటింగ్ వ్యూహాలకు** మద్దతు ఇస్తుంది (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`లో ప్రకటించబడ్డాయి). Auto Combo ఇంజిన్ స్వయంగా `auto` వ్యూహం కింద అందుబాటులో ఉంటుంది; మిగతావి నిల్వచేసిన కాంబోల కోసం అందుబాటులో ఉంటాయి.
+67router యొక్క కాంబో ఇంజిన్ **20 రూటింగ్ వ్యూహాలకు** మద్దతు ఇస్తుంది (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`లో ప్రకటించబడ్డాయి). Auto Combo ఇంజిన్ స్వయంగా `auto` వ్యూహం కింద అందుబాటులో ఉంటుంది; మిగతావి నిల్వచేసిన కాంబోల కోసం అందుబాటులో ఉంటాయి.
 
 | వ్యూహం              | వివరణ                                                                                                                                                                                                                                                |
 | :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -308,7 +308,7 @@ OmniRoute యొక్క కాంబో ఇంజిన్ **20 రూటి�
 
 ### ఏజెంటిక్ పైప్లైన్ మోడ్
 
-కనీసం రెండు మోడల్లు ఉన్న `pipeline` కాంబో, `config.agenticOrchestration.enabled`తో ప్లానర్/ఎగ్జిక్యూటర్ రూటింగ్ను ప్రారంభించగలదు. మొదటి టార్గెట్ ప్లానింగ్ మరియు తుది సమాధానాలను నిర్వహిస్తుంది; రెండవ టార్గెట్ క్లయింట్-నేటివ్ టూల్ కాల్లను విడుదల చేస్తుంది. OmniRoute అభ్యర్థన ప్రోటోకాల్ నుండి టూల్-రిజల్ట్ కొనసాగింపులను గుర్తించి, మరొక టూల్ రౌండ్ అవసరమా అని ప్లానర్ను అడుగుతుంది, ఆపై ఎగ్జిక్యూటర్ లేదా ప్లానర్లో ఒకదాన్ని క్లయింట్కు ఎదురుగా ఉండే తుది దశగా డైనమిక్గా ఎంచుకుంటుంది.
+కనీసం రెండు మోడల్లు ఉన్న `pipeline` కాంబో, `config.agenticOrchestration.enabled`తో ప్లానర్/ఎగ్జిక్యూటర్ రూటింగ్ను ప్రారంభించగలదు. మొదటి టార్గెట్ ప్లానింగ్ మరియు తుది సమాధానాలను నిర్వహిస్తుంది; రెండవ టార్గెట్ క్లయింట్-నేటివ్ టూల్ కాల్లను విడుదల చేస్తుంది. 67router అభ్యర్థన ప్రోటోకాల్ నుండి టూల్-రిజల్ట్ కొనసాగింపులను గుర్తించి, మరొక టూల్ రౌండ్ అవసరమా అని ప్లానర్ను అడుగుతుంది, ఆపై ఎగ్జిక్యూటర్ లేదా ప్లానర్లో ఒకదాన్ని క్లయింట్కు ఎదురుగా ఉండే తుది దశగా డైనమిక్గా ఎంచుకుంటుంది.
 
 రెండవ టార్గెట్ తర్వాత ఉన్న అదనపు మోడల్లు క్రమబద్ధమైన ఎగ్జిక్యూటర్ బ్యాకప్లుగా పనిచేస్తాయి. విఫలమైన HTTP ప్రతిస్పందన లేదా ట్రాన్స్పోర్ట్ మినహాయింపు సంభవిస్తే, అదే ప్లానర్ నిర్ణయం మరియు నేటివ్ టూల్లను కొనసాగిస్తూ తదుపరి ఎగ్జిక్యూటర్కు వెళ్తుంది; అయితే ఆ ఎగ్జిక్యూటర్కు చెందిన స్వంత దశ ప్రాంప్ట్ మరియు పరిష్కరించబడిన కనెక్షన్ను ఉపయోగిస్తుంది. మొదటి విజయవంతమైన ప్రతిస్పందన SSE స్ట్రీమింగ్తో సహా ఎలాంటి మార్పులు లేకుండా తిరిగి ఇవ్వబడుతుంది; విజయవంతమైన స్ట్రీమ్ ప్రారంభమైన తర్వాత సంభవించే వైఫల్యాలను ఇక్కడ మళ్లీ ప్రయత్నించడం సాధ్యం కాదు. అన్ని ఎగ్జిక్యూటర్లు విఫలమైతే, చివరి వైఫల్యం తిరిగి ఇవ్వబడుతుంది. క్లయింట్ అబార్ట్లు డిస్పాచ్ను నిలిపివేస్తాయి.
 
@@ -822,11 +822,11 @@ Tier 1 (సబ్స్క్రిప్షన్)కు బలమైన ప్
 
 ### గేట్ చేయబడిన లైవ్ స్మోక్ (CIలో లేదు — వాస్తవ ప్రొవైడర్లు)
 
-| కమాండ్                                 | ఇది చేసే పని                                                                               |
-| :------------------------------------- | :----------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1`తో ఇన్-ప్రాసెస్ వాస్తవ రూటింగ్; లైవ్ OmniRoute DB స్నాప్షాట్ను తీస్తుంది |
-| `npm run test:combo:live:vps`          | లైవ్ OmniRoute సర్వర్కు HTTP కాల్స్ (`COMBO_LIVE_BASE_URL`ను సెట్ చేయండి)                  |
-| `npm run test:combo:live:vps:failover` | ఉద్దేశపూర్వక ఫెయిలోవర్ సందర్భాలతో ఇదే పని చేస్తుంది                                        |
+| కమాండ్                                 | ఇది చేసే పని                                                                              |
+| :------------------------------------- | :---------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1`తో ఇన్-ప్రాసెస్ వాస్తవ రూటింగ్; లైవ్ 67router DB స్నాప్షాట్ను తీస్తుంది |
+| `npm run test:combo:live:vps`          | లైవ్ 67router సర్వర్కు HTTP కాల్స్ (`COMBO_LIVE_BASE_URL`ను సెట్ చేయండి)                  |
+| `npm run test:combo:live:vps:failover` | ఉద్దేశపూర్వక ఫెయిలోవర్ సందర్భాలతో ఇదే పని చేస్తుంది                                       |
 
 ఈ స్మోక్ పరీక్షలు వాస్తవ వైర్ మార్గాన్ని (కాంబో → ప్రొవైడర్ → కంప్లీషన్) పరీక్షిస్తాయి. వీటికి
 లైవ్ క్రెడెన్షియల్స్ మరియు VPS యాక్సెస్ అవసరం కాబట్టి, ఉద్దేశపూర్వకంగా CI నుంచి మినహాయించబడ్డాయి.

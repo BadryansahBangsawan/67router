@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqacha**: OmniRoute har bir soʻrovning token sarfini kuzatadi, xarajatni hisoblaydi, har bir API kaliti uchun kvotani qoʻllaydi va tahliliy maʼlumotlarni boshqaruv panelida koʻrsatadi. Ushbu qoʻllanmada bularning barchasi qanday ishlashi tushuntiriladi.
+> **Qisqacha**: 67router har bir soʻrovning token sarfini kuzatadi, xarajatni hisoblaydi, har bir API kaliti uchun kvotani qoʻllaydi va tahliliy maʼlumotlarni boshqaruv panelida koʻrsatadi. Ushbu qoʻllanmada bularning barchasi qanday ishlashi tushuntiriladi.
 
 **Manbalar:**
 
@@ -17,7 +17,7 @@
 
 ## Umumiy koʻrinish
 
-OmniRoute orqali oʻtadigan har bir soʻrov quyidagilarni qayd etuvchi **foydalanish yozuvi**ni yaratadi:
+67router orqali oʻtadigan har bir soʻrov quyidagilarni qayd etuvchi **foydalanish yozuvi**ni yaratadi:
 
 - **Identifikatsiya**: qaysi API kaliti, provayder, model va combo
 - **Tokenlar**: prompt tokenlari, yakuniy javob tokenlari, keshlangan tokenlar, jami
@@ -75,11 +75,11 @@ const usage = response.usage || {
 };
 ```
 
-Foydalanish maʼlumotlarini qaytarmaydigan provayderlar (ayrim veb-cookie provayderlari) uchun OmniRoute tokenlarni `har bir token uchun ~4 ta belgi` evristikasi yordamida **taxmin qiladi** (`open-sse/services/autoCombo/pipelineRouter.ts` fayliga qarang).
+Foydalanish maʼlumotlarini qaytarmaydigan provayderlar (ayrim veb-cookie provayderlari) uchun 67router tokenlarni `har bir token uchun ~4 ta belgi` evristikasi yordamida **taxmin qiladi** (`open-sse/services/autoCombo/pipelineRouter.ts` fayliga qarang).
 
 ### Keshlangan tokenlar
 
-OmniRoute `cached_tokens`ni `prompt_tokens`dan alohida kuzatadi, chunki:
+67router `cached_tokens`ni `prompt_tokens`dan alohida kuzatadi, chunki:
 
 - Anthropic prompt keshlashida keshlangan tokenlar uchun kamaytirilgan tarif olinadi (odatdagi tarifning 10%i)
 - Ayrim provayderlar boshqacha narxlanishi kerak boʻlgan `cache_read_input_tokens`ni qaytaradi
@@ -118,7 +118,7 @@ Narxlash maʼlumotlari LiteLLM’dan `/api/pricing/sync` endpointi orqali avtoma
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Narxlash maʼlumotlari mavjud boʻlmagan modellar uchun OmniRoute ichki oʻrtacha stavkalar (LiteLLM’ning narxlash maʼlumotlaridan olingan) yordamida **xarajatni taxminiy hisoblash** usuliga oʻtadi.
+Narxlash maʼlumotlari mavjud boʻlmagan modellar uchun 67router ichki oʻrtacha stavkalar (LiteLLM’ning narxlash maʼlumotlaridan olingan) yordamida **xarajatni taxminiy hisoblash** usuliga oʻtadi.
 
 ---
 

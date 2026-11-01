@@ -112,7 +112,7 @@ production build மற்றும் பரந்த suites-ஐ இயக்�
 - CLI catalogs, `bin/cli/locales/`-இன் கீழ் தனியாக உள்ளன.
 - ICU placeholders மற்றும் tags-ஐ அப்படியே பாதுகாக்கவும். product/provider/model பெயர்கள்,
   protocol மற்றும் header பெயர்கள், commands, code/JSON identifiers, URLs, environment variables அல்லது
-  `OmniRoute`, `OAuth`, `MCP` மற்றும் `A2A` போன்ற பாதுகாக்கப்பட்ட சொற்களை மொழிபெயர்க்க வேண்டாம். தற்போதைய source list
+  `67router`, `OAuth`, `MCP` மற்றும் `A2A` போன்ற பாதுகாக்கப்பட்ட சொற்களை மொழிபெயர்க்க வேண்டாம். தற்போதைய source list
   `scripts/i18n/glossary/protected-terms.json` ஆகும்.
 
 **Focused loop**
@@ -247,7 +247,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # வேறெங்க�
 - **Rollback செய்யவும்.** `run`, promote செய்யப்பட்ட slot-ஐ மீண்டும் சரிபார்த்து, அந்தச் சரிபார்ப்பு தோல்வியுற்றால்
   `current` மற்றும் `previous`-ஐ மீண்டும் இடமாற்றுகிறது. முதல் validation-இல் தோல்வியுறும் candidate ஒருபோதும் promote செய்யப்படாது.
 
-அனைத்தும் gitignore செய்யப்பட்ட `_artifacts/candidate/`-இன் கீழ் எழுதப்படும்; ஏற்கனவே உள்ள OmniRoute
+அனைத்தும் gitignore செய்யப்பட்ட `_artifacts/candidate/`-இன் கீழ் எழுதப்படும்; ஏற்கனவே உள்ள 67router
 installation மற்றும் அதன் data directory ஒருபோதும் தொடப்படாது. Promote செய்யப்பட்ட CLI
 `_artifacts/candidate/current/prefix/bin/omniroute` ஆகும்; அதைப் பயன்படுத்தும்போது உங்களுடைய `DATA_DIR`-உடன் அதைத் தொடங்கவும்.
 வெளியேறும் குறியீடுகள்: வெற்றிக்கு `0`, validation அல்லது promotion தோல்விக்கு `1`, பயன்பாட்டுப் பிழை அல்லது build காணப்படாததற்கு `2`.

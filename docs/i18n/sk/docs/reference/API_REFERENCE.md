@@ -6,7 +6,7 @@
 
 🌐 **Jazyky:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Základná referenčná príručka k API OmniRoute. Zahŕňa verejné rozhranie `/v1` a najpoužívanejšie koncové body správy; vyčerpávajúcimi zdrojmi sú strojovo čitateľný súbor [`docs/openapi.yaml`](../openapi.yaml) a strom trás v `src/app/api/`.
+Základná referenčná príručka k API 67router. Zahŕňa verejné rozhranie `/v1` a najpoužívanejšie koncové body správy; vyčerpávajúcimi zdrojmi sú strojovo čitateľný súbor [`docs/openapi.yaml`](../openapi.yaml) a strom trás v `src/app/api/`.
 
 Podrobný protokol kompatibilný s OpenAI a maticu možností poskytovateľov nájdete v dokumente
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Odpoveď    | `HIT` alebo `MISS` (bez streamovania)                                                                                                                                                                                   |
 | `X-OmniRoute-Idempotent` | Odpoveď    | `true`, ak bola požiadavka deduplikovaná                                                                                                                                                                                |
 | `X-OmniRoute-Progress`   | Odpoveď    | `enabled`, ak je zapnuté sledovanie priebehu                                                                                                                                                                            |
-| `X-OmniRoute-Session-Id` | Odpoveď    | Efektívne ID relácie používané službou OmniRoute                                                                                                                                                                        |
+| `X-OmniRoute-Session-Id` | Odpoveď    | Efektívne ID relácie používané službou 67router                                                                                                                                                                         |
 | `X-OmniRoute-Request-Id` | Odpoveď    | Korelačné ID požiadavky (ak je známe)                                                                                                                                                                                   |
-| `X-OmniRoute-Version`    | Odpoveď    | Verzia zostavy OmniRoute (vždy prítomná)                                                                                                                                                                                |
+| `X-OmniRoute-Version`    | Odpoveď    | Verzia zostavy 67router (vždy prítomná)                                                                                                                                                                                 |
 | `X-OmniRoute-Cost-Saved` | Odpoveď    | Suma v USD ušetrená vďaka vyrovnávacej pamäti pri výsledku HIT (iba pri zásahoch vyrovnávacej pamäte)                                                                                                                   |
 | `X-OmniRoute-Decision`   | Odpoveď    | Záznam smerovania: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` je stratégia kombinácie alebo `single` pri požiadavke bez kombinácie) — vždy je prítomný v odpovediach po dokončení                    |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Pripnutie účtu pre jednotlivé požiadavky
 
-Keď má poskytovateľ viacero pripojení (účtov alebo kľúčov), OmniRoute zvyčajne jedno z nich vyberie
+Keď má poskytovateľ viacero pripojení (účtov alebo kľúčov), 67router zvyčajne jedno z nich vyberie
 pomocou svojej stratégie výberu účtu. Požiadavka však môže pripnúť konkrétne pripojenie
 pomocou hlavičky `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ pripnúť iný účet:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Zdroj: `src/sse/handlers/chat.ts` (čítanie hlavičky), `src/sse/services/auth.
 ## Exkluzívne spravované prenájmy relácií
 
 Exkluzívny spravovaný prenájom relácie je voliteľná smerovacia zmluva nezávislá od klienta: jeden aktívny vlastník
-drží jedno oprávnené pripojenie OmniRoute. Neprenajíma model, nevyžaduje OAuth, neidentifikuje
+drží jedno oprávnené pripojenie 67router. Neprenajíma model, nevyžaduje OAuth, neidentifikuje
 konkrétneho klienta ani nevyžaduje konkrétneho poskytovateľa.
 
 Overujúci API kľúč musí mať rozsah oprávnenia `lease:exclusive` a explicitný neprázdny
@@ -190,7 +190,7 @@ Vlastník aktívneho prenájmu si môže explicitne vyžiadať zobrazované meta
 
 Táto voliteľná akcia stavu je v rámci jednej databázovej transakcie ohraničená nepriehľadným vlastníkom, overeným spravovaným API kľúčom a presnou
 aktívnou generáciou. `displayName` obsahuje iba nakonfigurovaný názov
-pripojenia bez okolitých medzier; ak neexistuje žiadny bezpečný nakonfigurovaný názov, má hodnotu `null`. OmniRoute ho nikdy nenahrádza
+pripojenia bez okolitých medzier; ak neexistuje žiadny bezpečný nakonfigurovaný názov, má hodnotu `null`. 67router ho nikdy nenahrádza
 e-mailom ani vygenerovanou identitou účtu. Hodnota poskytovateľa je necitlivý zobrazovaný názov a nikdy
 nejde o vygenerovaný identifikátor kompatibilného poskytovateľa. Prihlasovacie údaje, tokeny, súbory cookie, nespracované ID pripojení alebo API
 kľúčov, haše vlastníkov, tajné údaje ohraničenia a interné smerovacie údaje sú vylúčené.
@@ -231,7 +231,7 @@ Dočasný konflikt vracia HTTP `429` s `Retry-After` a:
 
 Táto odpoveď znamená iba to, že bežná množina oprávnených pripojení nebola prázdna a každý voľný kandidát bol
 držaný cudzím aktívnym prenájmom. Nepodporované modely/poskytovatelia, nesúlad so zásadami, čakacia lehota, kvóta,
-stav služby a ďalšie bežné zlyhania oprávnenosti si zachovávajú svoje existujúce odpovede OmniRoute.
+stav služby a ďalšie bežné zlyhania oprávnenosti si zachovávajú svoje existujúce odpovede 67router.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request služby Jina a **bez zmeny ich preposiela** na `https://api.
 ```
 
 Natívne hodnoty `{ image | audio | video | pdf }` môžu byť verejná adresa URL HTTPS, URI `data:` alebo nespracované
-dáta base64. OmniRoute tieto objekty neprevádza na reťazce ani nenačítava natívne adresy URL obrázkov — verejné
+dáta base64. 67router tieto objekty neprevádza na reťazce ani nenačítava natívne adresy URL obrázkov — verejné
 médiá načíta samotná služba Jina. Dodatočné polia Jina (`task`, `normalized`, `truncate`, `embedding_type`) sa
 preposielajú. SKU Jina určené iba pre text naďalej odmietajú netextové dokumenty.
 
@@ -454,7 +454,7 @@ takže klientsky kód nemusí poskytovateľa spracovávať osobitne.
 
 ### Overovanie a rozpoznanie koncového bodu Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` opätovne používa rovnaké overovanie Vertex AI, ktoré OmniRoute už podporuje pre
+`vertex-deepseek-ocr` opätovne používa rovnaké overovanie Vertex AI, ktoré 67router už podporuje pre
 chatovú a obrazovú komunikáciu (`open-sse/executors/vertex.ts`): kľúč API pripojenia je buď
 poverenie Service Account JSON (vymenené za krátkodobý prístupový token OAuth prostredníctvom toku JWT bearer),
 alebo už vydaný prístupový token OAuth použitý bez zmeny. Nadradená adresa URL koncového bodu je všeobecný
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Ceny modelov (`pricing`)
 
-Položka obsahuje objekt `pricing`, keď OmniRoute pozná cenu modelu. Cena pochádza
+Položka obsahuje objekt `pricing`, keď 67router pozná cenu modelu. Cena pochádza
 z cenovej tabuľky používanej na účtovanie nákladov: vstavané predvolené hodnoty, synchronizované ceny a
 prepísania nastavené prostredníctvom `/api/pricing`. Ide o cenníkové ceny, takže poskytovatelia predplatného tiež
 zobrazujú cenu za token.
@@ -641,8 +641,8 @@ Tento koncový bod použite, keď sidecar beží mimo procesu a nemôže priamo 
 
 ## Generovanie zvuku pomocou ElevenLabs
 
-Nakonfigurujte v OmniRoute pripojenie poskytovateľa `elevenlabs` pomocou svojho kľúča API ElevenLabs.
-Klienti sa autentifikujú pomocou svojho kľúča **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Nakonfigurujte v 67router pripojenie poskytovateľa `elevenlabs` pomocou svojho kľúča API ElevenLabs.
+Klienti sa autentifikujú pomocou svojho kľúča **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 brána poskytne uložený kľúč poskytovateľa ako `xi-api-key`. Nikdy neposielajte kľúč ElevenLabs
 ako bearer token brány.
 
@@ -707,7 +707,7 @@ trasy vracajú stavové kódy a telá chýb nadradenej služby bez zmien vrátan
 plánu a `429` pri prekročení kvóty. Hlavičky `character-cost`, `song-id`, `request-id` a `retry-after`
 sa zachovajú, ak sú prítomné. Bezplatný zostatok kreditu nezaručuje prístup ku každému
 hudobnému modelu, výstupnému formátu ani funkcii API: o oprávnení pre každú požiadavku rozhoduje ElevenLabs.
-Zjednotený koncový bod zachováva stavové kódy chýb v normalizovanej chybovej obálke OmniRoute.
+Zjednotený koncový bod zachováva stavové kódy chýb v normalizovanej chybovej obálke 67router.
 
 Zmluvy nadradenej služby: [zvukové efekty](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [kompozícia hudby](https://elevenlabs.io/docs/api-reference/music/compose) a
@@ -748,7 +748,7 @@ Zmluvy nadradenej služby: [zvukové efekty](https://elevenlabs.io/docs/api-refe
 
 Všetky trasy POST majú rovnakú štruktúru: `Bearer your-api-key` + telo JSON overené pomocou Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` atď.; pozrite si `src/shared/validation/schemas.ts`). Pri zlyhaní overenia schémy sa vráti stavový kód 4xx.
 
-Klientom, ktoré nedokážu pripojiť `Authorization: Bearer ...`, umožňuje OmniRoute odovzdať kľúče API aj v adrese URL, a to buď prostredníctvom kompatibilných parametrov reťazca dopytu (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), alebo cez vyhradené koncové body `/api/v1/vscode/{token}/...` zdokumentované nižšie.
+Klientom, ktoré nedokážu pripojiť `Authorization: Bearer ...`, umožňuje 67router odovzdať kľúče API aj v adrese URL, a to buď prostredníctvom kompatibilných parametrov reťazca dopytu (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), alebo cez vyhradené koncové body `/api/v1/vscode/{token}/...` zdokumentované nižšie.
 
 ```bash
 # Preusporiadanie výsledkov (poskytovateľ z cloudového registra alebo uzol poskytovateľa kompatibilného s OpenAI vo forme "<prefix>/<model>")
@@ -910,7 +910,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, rovnaký kľúč API ako Parallel Search) vracia iba Markdown
 — akýkoľvek iný `format` vedie k odpovedi `400` — a obmedzuje obsah na 100 000 znakov. Keď
 samotnú cieľovú stránku nemožno extrahovať, nadradená služba to oznámi v rámci HTTP 200;
-OmniRoute to sprístupní ako `422` s pevne stanovenou správou.
+67router to sprístupní ako `422` s pevne stanovenou správou.
 
 | Metóda | Cesta           | Opis                                                           |
 | ------ | --------------- | -------------------------------------------------------------- |
@@ -973,14 +973,14 @@ musí byť aktívnym vstupným bodom (predvolene ním je, keď existuje `app/ser
 OpenAI **Codex CLI** overuje názov modelu na strane klienta, keď je
 `supports_websockets = true`, a **odmieta ID s predponou poskytovateľa**, ako je
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Odošlite **základné** ID (napr. `gpt-5.5`). Most OmniRoute je
+a ChatGPT account`). Odošlite **základné** ID (napr. `gpt-5.5`). Most 67router je
 určený iba pre codex, preto pred vytvorením tunela k nadradenej službe znova vyhodnotí základné ID ako model codex
 (`resolveCodexWsModelInfo`) — aj keď by sa základné
 `gpt-5.5` cez HTTP inak smerovalo k inému poskytovateľovi.
 
 #### Konfigurácia OpenAI Codex CLI
 
-Nasmerujte Codex CLI na OmniRoute pridaním vlastného poskytovateľa s podporou WebSocket
+Nasmerujte Codex CLI na 67router pridaním vlastného poskytovateľa s podporou WebSocket
 do `~/.codex/config.toml` (použite samostatný `CODEX_HOME`, aby ste neovplyvnili
 existujúcu konfiguráciu):
 
@@ -993,15 +993,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # bez koncovej lomky; URL WS sa odvodí (v produkcii použite https/wss)
 wire_api = "responses"                    # jediná podporovaná hodnota od februára 2026
 supports_websockets = true                # povoľuje transport Responses cez WS
-env_key = "OMNIROUTE_API_KEY"             # obsahuje kľúč API OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # obsahuje kľúč API 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # kľúč API OmniRoute (ľubovoľný kľúč, ak REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # kľúč API 67router (ľubovoľný kľúč, ak REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI prepne `base_url + /responses` na WebSocket a OmniRoute ho tuneluje
+CLI prepne `base_url + /responses` na WebSocket a 67router ho tuneluje
 k vybranému pripojeniu codex OAuth. Overené komplexne voči lokálnemu
 serveru: ChatGPT vráti `codex.rate_limits` + `response.created` a streamuje
 dokončenie.
@@ -1085,7 +1085,7 @@ percentami uvádzanými vo **výstupe obyčajného textu** a štruktúrovanom **
 
 #### Vzorec úpravy podľa hraničnej hodnoty
 
-OmniRoute podporuje proaktívne hraničné hodnoty kvót, ktoré zabraňujú vyčerpaniu upstreamových zdrojov (konfigurované prostredníctvom
+67router podporuje proaktívne hraničné hodnoty kvót, ktoré zabraňujú vyčerpaniu upstreamových zdrojov (konfigurované prostredníctvom
 `quotaWindowThresholds` pripojenia, predvolených hodnôt poskytovateľa alebo globálnych nastavení odolnosti). Keď je v intervale kvóty aktívny hraničný prah
 (napr. `cutoff = 25%`), textový renderer vypočíta zostávajúcu kapacitu takto:
 
@@ -1444,9 +1444,8 @@ Odpoveď GET obsahuje `agents[]` (id, name, binary, version, installed, protocol
 
 ### Vyhodnotenia
 
-| Koncový bod  | Metóda   | Popis                                           |
-| ------------ | -------- | ----------------------------------------------- |
-| `/api/evals` | GET/POST | Zoznam sád vyhodnotení / spustenie vyhodnotenia |
+| Koncový bod | Metóda | Popis |
+| ----------- | ------ | ----- |
 
 ### Zásady
 
@@ -1628,7 +1627,7 @@ Poznámky:
 
 - Aliasové adresy s tokenom opätovne používajú rovnaké obslužné rutiny ako `/v1/*` a `/api/tags`; štruktúry odpovedí zostávajú identické.
 - Vždy, keď klient podporuje vlastné hlavičky, uprednostnite `Authorization: Bearer ...`.
-- Tokeny v adresách URL sa môžu objaviť v protokoloch reverzného proxy servera, histórii prehliadača a telemetrii mimo OmniRoute. Považujte ich za možnosť na zaistenie kompatibility, nie za predvolený spôsob overovania.
+- Tokeny v adresách URL sa môžu objaviť v protokoloch reverzného proxy servera, histórii prehliadača a telemetrii mimo 67router. Považujte ich za možnosť na zaistenie kompatibility, nie za predvolený spôsob overovania.
 
 ---
 
@@ -1736,7 +1735,7 @@ Kombinácie smerovania vyššej úrovne (už zhrnuté v časti `/api/combos*`) m
 
 ## Webhooky
 
-Odchádzajúce odbery webhookov pre udalosti OmniRoute (dokončenie požiadavky, vyčerpanie kvóty, rotácia kľúča atď.).
+Odchádzajúce odbery webhookov pre udalosti 67router (dokončenie požiadavky, vyčerpanie kvóty, rotácia kľúča atď.).
 
 | Metóda | Cesta                     | Popis                                                                      |
 | ------ | ------------------------- | -------------------------------------------------------------------------- |
@@ -1767,31 +1766,6 @@ Používa ich subsystém automatickej správy kľúčov na vydávanie a rotáciu
 
 ---
 
-## Protokol agentov
-
-Úlohy cloudových agentov (Claude Code, Codex Cloud, OpenHands atď.) vykonávané vzdialene v mene používateľov OmniRoute.
-
-| Metóda | Cesta                         | Popis                                                                                                                                            |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Zoznam úloh — voliteľné `?provider=`, `?status=`, `?limit=` (1–500, predvolene 50)                                                               |
-| POST   | `/api/v1/agents/tasks`        | Vytvorenie úlohy — telo overené pomocou `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Vráti `201` s obálkou úlohy |
-| DELETE | `/api/v1/agents/tasks?id=...` | Odstránenie úlohy                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | Načítanie úlohy — synchrónne obnoví stav z nadradeného cloudového agenta, keď je nastavené `external_id`                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Rozlíšená akcia: `{action: "approve"}`, `{action: "message", message}` alebo `{action: "cancel"}`                                                |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Odstránenie konkrétnej úlohy podľa ID                                                                                                            |
-
-> **Autentifikácia:** pri každej metóde sa vyžaduje autentifikácia správy (`requireCloudAgentManagementAuth`). Pred verziou v3.8.0 neboli tieto metódy autentifikované — zlomovú zmenu nájdete v commite `588a0333`.
-
-```bash
-# Vytvorenie cloudovej úlohy Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy servery správy
 
 Odchádzajúce proxy servery HTTP(S)/SOCKS, ktoré možno priradiť poskytovateľom, účtom alebo globálne.
@@ -1815,7 +1789,7 @@ Odchádzajúce proxy servery HTTP(S)/SOCKS, ktoré možno priradiť poskytovate�
 
 ## Odolnosť (rozšírené)
 
-OmniRoute poskytuje tri nezávislé mechanizmy dočasného zlyhania; nižšie uvedené koncové body správy umožňujú operátorom čítať a prepisovať ich stav:
+67router poskytuje tri nezávislé mechanizmy dočasného zlyhania; nižšie uvedené koncové body správy umožňujú operátorom čítať a prepisovať ich stav:
 
 | Rozsah                  | Ukladanie stavu                                  | Čítanie                                   | Resetovanie / vymazanie                                      |
 | ----------------------- | ------------------------------------------------ | ----------------------------------------- | ------------------------------------------------------------ |
@@ -1850,7 +1824,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## Zručnosti
 
-Framework zručností na rozšírenie OmniRoute o vlastné spustiteľné obslužné programy a integrácie s trhoviskami.
+Framework zručností na rozšírenie 67router o vlastné spustiteľné obslužné programy a integrácie s trhoviskami.
 
 | Metóda | Cesta                             | Popis                                                                                                                                   |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1887,7 +1861,7 @@ Trvalé úložisko konverzačnej/faktickej pamäte s rozsahom obmedzeným na kľ
 
 ## Server MCP
 
-OmniRoute obsahuje vstavaný server Model Context Protocol s 3 transportmi (stdio, SSE, streamable-http) a nástrojmi s obmedzeným rozsahom. Nižšie uvedené koncové body ovládacieho panela načítavajú údaje o stave/audite a zastupujú transporty HTTP.
+67router obsahuje vstavaný server Model Context Protocol s 3 transportmi (stdio, SSE, streamable-http) a nástrojmi s obmedzeným rozsahom. Nižšie uvedené koncové body ovládacieho panela načítavajú údaje o stave/audite a zastupujú transporty HTTP.
 
 | Metóda | Cesta | Popis |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1909,50 +1883,12 @@ OmniRoute obsahuje vstavaný server Model Context Protocol s 3 transportmi (stdi
 
 ## Server A2A
 
-OmniRoute poskytuje koncový bod A2A (Agent-to-Agent) JSON-RPC 2.0 spolu s obalom REST na účely kontroly a použitia v ovládacom paneli.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # voliteľné, pokiaľ nie je nastavené OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Podporované metódy (všetky závisia od `settings.a2aEnabled`):
-
-| Metóda           | Popis                                                                |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | Synchrónne vykonanie zručnosti; vracia `{task, artifacts, metadata}` |
-| `message/stream` | Streamované vykonanie rovnakej množiny zručností cez SSE             |
-| `tasks/get`      | Načíta úlohu podľa `taskId`                                          |
-| `tasks/cancel`   | Zruší úlohu podľa `taskId`                                           |
-
-Vstavané zručnosti: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Karta agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Vracia verejnú kartu agenta A2A (názov, popis, možnosti, katalóg zručností, schéma autentifikácie) — verejne uloženú vo vyrovnávacej pamäti na 1 hodinu. Nevyžaduje sa autentifikácia.
+67router poskytuje koncový bod A2A (Agent-to-Agent) JSON-RPC 2.0 spolu s obalom REST na účely kontroly a použitia v ovládacom paneli.
 
 ### Pomocné rozhrania REST
 
 | Metóda | Cesta                        | Popis                                                                                                            |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Stav povolenia A2A + štatistiky úloh + súhrn karty agenta z vyrovnávacej pamäte                                  |
 | GET    | `/api/a2a/tasks`             | Zoznam úloh — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Nie je implementované ako pomocné rozhranie REST — vytvárajte prostredníctvom JSON-RPC `message/send`)          |
 | GET    | `/api/a2a/tasks/[id]`        | Načíta jednu úlohu                                                                                               |
@@ -1972,12 +1908,8 @@ Vracia verejnú kartu agenta A2A (názov, popis, možnosti, katalóg zručností
 | GET | `/api/cloud/models/alias` | Zobrazí zoznam aliasov modelov sprístupnených cloudovej synchronizácii |
 | GET | `/api/assess` | Načíta najnovšie kategorizácie hodnotení (podľa poskytovateľa/modelu) |
 | POST | `/api/assess` | Spustí hodnotenie — telo: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Zobrazí zoznam vstavaných sád evalov + najnovších behov |
-| POST | `/api/evals` | Spustí beh evalu |
-| POST | `/api/evals/suites` | Vytvorí vlastnú sadu evalov — telo overené pomocou `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Načíta vlastnú sadu evalov |
 
-**Autentifikácia:** `/api/cloud/auth` priamo overuje nosný kľúč a vracia maskovaný kľúč a `projectId` každého pripojenia iba pre kľúč s rozsahom `manage` / `admin`; ostatné trasy `/api/cloud/*`, `/api/evals/*` a `/api/assess` vyžadujú reláciu na správu/kľúč API. POST `/api/assess` používa `validateBody` so schémou rozsahu typu diskriminovaného zjednotenia.
+**Autentifikácia:** `/api/cloud/auth` priamo overuje nosný kľúč a vracia maskovaný kľúč a `projectId` každého pripojenia iba pre kľúč s rozsahom `manage` / `admin`; ostatné trasy `/api/cloud/*` a `/api/assess` vyžadujú reláciu na správu/kľúč API. POST `/api/assess` používa `validateBody` so schémou rozsahu typu diskriminovaného zjednotenia.
 
 ---
 
@@ -2135,7 +2067,7 @@ Koncové body určené iba správcom na prevádzkovú správu.
 
 ## Správa nástrojov CLI
 
-Spravujte nástroje CLI, ktoré sa integrujú so službou OmniRoute (antigravity, commandCode,
+Spravujte nástroje CLI, ktoré sa integrujú so službou 67router (antigravity, commandCode,
 devin-cli atď.). Úplný zoznam nájdete v [referenčnej dokumentácii poskytovateľov](./PROVIDER_REFERENCE.md).
 
 | Metóda | Cesta                                   | Popis                                                                                                                                                                         |
@@ -2244,26 +2176,6 @@ Spravujte Skills (framework agentických rozšírení).
 
 ---
 
-## Pluginy
-
-Spravujte pluginy OmniRoute (rozšírenia tretích strán).
-
-| Metóda | Cesta                              | Popis                             |
-| ------ | ---------------------------------- | --------------------------------- |
-| GET    | `/api/plugins`                     | Zoznam nainštalovaných pluginov   |
-| POST   | `/api/plugins/marketplace/install` | Inštalácia pluginu z marketplace  |
-| DELETE | `/api/plugins/[name]`              | Odinštalovanie pluginu            |
-| POST   | `/api/plugins/[name]/activate`     | Aktivácia pluginu                 |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivácia pluginu               |
-| GET    | `/api/plugins/[name]/config`       | Získanie konfigurácie pluginu     |
-| PUT    | `/api/plugins/[name]/config`       | Aktualizácia konfigurácie pluginu |
-
-**Autorizácia:** Vyžaduje reláciu správy.
-
-Úplné podrobnosti nájdete v dokumente [Framework pluginov](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Tieňové smerovanie
 
 Tieňové porovnávanie poskytovateľov / porovnávanie A-B **nie je samostatným rozhraním REST** — konfiguruje sa prostredníctvom kombinovaného smerovania (pozrite si [Automatické kombinácie](../routing/AUTO-COMBO.md)). Metriky porovnávania pre jednotlivé kombinácie poskytuje `GET /api/combos/metrics`.
@@ -2296,5 +2208,3 @@ Informácie o štyroch skupinách prihlasovacích údajov (relácia ovládacieho
 - Nastavenie `requireLogin` možno prepínať prostredníctvom `/api/settings/require-login`
 - Trasy `/v1/*` môžu voliteľne vyžadovať kľúč API typu Bearer, keď je `REQUIRE_API_KEY=true`
 - „token správy“ / „kľúč API s rozsahom správy“ v tejto referenčnej príručke označuje jednu zo skupín uvedených v danej príručke — nejde o nedefinovaný dodatočný typ tajného údaja
-
-> **Nekompatibilná zmena (v3.8.0)** — `/api/v1/agents/tasks/*` a koncové body správy časového obmedzenia teraz vyžadujú **autentifikáciu správy** (súbor cookie `auth_token` ovládacieho panela alebo kľúč API s rozsahom správy). Klienti, ktorí predtým volali tieto trasy bez autentifikácie, dostanú odpoveď `401 Unauthorized`. Pozrite si commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

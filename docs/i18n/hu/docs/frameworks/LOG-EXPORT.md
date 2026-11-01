@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute hívásnaplóinak folyamatos, inkrementális exportálása egy külső analitikai adattárba.
+A 67router hívásnaplóinak folyamatos, inkrementális exportálása egy külső analitikai adattárba.
 
 A Naplók irányítópultlap SQLite-ban (`call_logs`) őrzi a kérések előzményeit, amelyek méretét
 a rotáció és a megőrzési idő korlátozza. A naplóexport ugyanazt a rekordkészletet ütemezetten
@@ -290,7 +290,7 @@ Két szabály vonatkozik az új célokra:
 - A `send()` függvénynek részleges hiba esetén **kivételt kell dobnia**. A sikeres visszatérés azt jelenti, hogy „a cél rendelkezik ezekkel a sorokkal”,
   és a kurzor véglegesen túllép rajtuk.
 - A felhasználó által megadott URL-t fogadó célnak a lekérés előtt a
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) segítségével kell ellenőriznie azt,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) segítségével kell ellenőriznie azt,
   ugyanúgy, ahogy a webhookok teszik. A BigQuery esetében erre nincs szükség: a gazdagépnevei állandók.
 
 ---

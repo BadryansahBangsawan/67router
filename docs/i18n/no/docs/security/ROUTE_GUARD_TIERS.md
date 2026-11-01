@@ -6,7 +6,7 @@
 
 ## Oversikt
 
-Alle ruter i OmniRoutes administrasjons-API er klassifisert i ett av tre beskyttelsesnivåer. Klassifiseringen er statisk, definert i `src/server/authz/routeGuard.ts`, og evalueres før noen annen autentiseringsgren kjøres.
+Alle ruter i 67routers administrasjons-API er klassifisert i ett av tre beskyttelsesnivåer. Klassifiseringen er statisk, definert i `src/server/authz/routeGuard.ts`, og evalueres før noen annen autentiseringsgren kjøres.
 
 ## Nivåer
 
@@ -25,9 +25,9 @@ klasse ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)
 **Hva GHSA-fhh6-4qxv-rpqj er (angrepsklassen):** En administrasjons-/agentserver
 eksponerer et endepunkt som starter en underprosess (`npm install`, `node`, en nettleser,
 en proxy, `git`, `tar`, …). Hvis dette endepunktet kan nås utenfra verten — fordi
-operatøren plasserte OmniRoute bak en nginx-/Cloudflare-/Tailscale-tunnel og en JWT
+operatøren plasserte 67router bak en nginx-/Cloudflare-/Tailscale-tunnel og en JWT
 ble lekket, eller autentiseringen var feilkonfigurert — gjør angriperen «kall et API» om til «kjør en
-kommando på verten» (ekstern kjøring av kode). OmniRoute forhindrer dette ved ubetinget å håndheve en
+kommando på verten» (ekstern kjøring av kode). 67router forhindrer dette ved ubetinget å håndheve en
 **kontroll av loopback-vert før enhver autentiseringskontroll** på hver
 rute som kan starte prosesser: Et lekket token over en tunnel kan fortsatt ikke nå prosessoppstarten.
 
@@ -55,7 +55,6 @@ prefiksene som kan starte prosesser, og lar CI mislykkes hvis noen av dem ikke e
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxylytter + systemproxy                                                                          |
 | `/api/settings/mitm`                                                                                     | Aktiverer MITM-avskjæring (proxytilstand på systemnivå)                                                                     |
 | `/api/issue-agent/`                                                                                      | Saksagent — starter lokale verktøy mot repositoriet                                                                         |
-| `/api/plugins/`, `/api/plugins`                                                                          | Programtillegg — lastes/kjøres via `worker_threads` + `child_process`                                                       |
 | `/api/middleware/`                                                                                       | Brukermellomvare — laster/kjører operatørkode i samme prosess                                                               |
 | `/api/system/version`                                                                                    | Automatisk oppdatering (kun POST; GET/HEAD/OPTIONS er unntatt) — starter `git checkout` + `npm install`                     |
 | `/api/db-backups/exportAll`                                                                              | Starter `tar` for eksportarkivet                                                                                            |
@@ -116,7 +115,7 @@ for eksterne klienter som bare bruker MCP og ikke skal trenge bred administrasjo
 
 #### Veiledning for operatører og revisjon
 
-Hvis du kjører OmniRoute bak en omvendt proxy eller tunnel (nginx, Caddy, Cloudflare
+Hvis du kjører 67router bak en omvendt proxy eller tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), beskytter loopback-kontrollen fortsatt rutene ovenfor som
 kan starte prosesser — en forespørsel der klientadressen ikke er loopback, avvises med
 `403 LOCAL_ONLY` **før autentisering kjøres**, slik at en lekket JWT ikke kan nå en prosessoppstart. To
@@ -157,7 +156,7 @@ operatøransvar gjenstår:
   klientadresse som ikke er loopback. Ethvert slikt treff som returnerte `200` i stedet
   for `403 LOCAL_ONLY`, betyr at proxyen skjuler den virkelige klient-IP-en — rett
   proxykonfigurasjonen.
-- En `403 LOCAL_ONLY` i OmniRoutes logger for en av disse stiene betyr at
+- En `403 LOCAL_ONLY` i 67routers logger for en av disse stiene betyr at
   beskyttelsen fungerer som tiltenkt, ikke at det er en feil som skal undertrykkes.
 
 #### Eksternt tilgjengelige ruter med kontroll ved kallestedet

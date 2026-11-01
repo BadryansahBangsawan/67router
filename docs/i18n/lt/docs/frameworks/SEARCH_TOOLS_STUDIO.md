@@ -169,5 +169,4 @@ API rakto vietos rezervavimo ženklas visada yra `$OMNIROUTE_API_KEY` (D11, bend
 - Pagrindinis planas: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Funkcijos planas: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Paieškos teikėjų registras: `open-sse/config/searchRegistry.ts`
-- „Playground Studio“ (bendri `ExportCodeModal` ir `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Žiniatinklio duomenų gavimo posistemė: `src/app/api/v1/web/fetch/route.ts`

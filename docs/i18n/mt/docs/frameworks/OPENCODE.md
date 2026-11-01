@@ -5,11 +5,11 @@
 ---
 
 > **Status:** Disponibbli b’mod ġenerali.
-> **Udjenza:** Operaturi li qed jikkollegaw OpenCode ma’ installazzjoni ta’ OmniRoute.
+> **Udjenza:** Operaturi li qed jikkollegaw OpenCode ma’ installazzjoni ta’ 67router.
 > **Sors awtorevoli (skema tal-konfigurazzjoni):** `src/shared/services/opencodeConfig.ts`
 > **Sors awtorevoli (pakkett npm):** `@omniroute/opencode-provider/` (workspace li jista’ jiġi ppubblikat)
 
-[OpenCode](https://opencode.ai) huwa klijent tal-AI aġentiku għal CLI/desktop. Huwa jaqra l-katalgu tal-fornituri tiegħu minn `~/.config/opencode/opencode.json` (jew `opencode.jsonc`) u jsegwi l-iskema f’`https://opencode.ai/config.json`. OmniRoute jippreżenta ruħu lil OpenCode bħala wieħed minn dawk il-fornituri — kull talba tgħaddi mill-interfaċċa standard ta’ OmniRoute kompatibbli ma’ OpenAI, `/v1`, għalhekk OpenCode jibbenefika awtomatikament mir-routing ta’ Auto-Combo, circuit breakers, politiki taċ-ċwievet, osservabbiltà, eċċ.
+[OpenCode](https://opencode.ai) huwa klijent tal-AI aġentiku għal CLI/desktop. Huwa jaqra l-katalgu tal-fornituri tiegħu minn `~/.config/opencode/opencode.json` (jew `opencode.jsonc`) u jsegwi l-iskema f’`https://opencode.ai/config.json`. 67router jippreżenta ruħu lil OpenCode bħala wieħed minn dawk il-fornituri — kull talba tgħaddi mill-interfaċċa standard ta’ 67router kompatibbli ma’ OpenAI, `/v1`, għalhekk OpenCode jibbenefika awtomatikament mir-routing ta’ Auto-Combo, circuit breakers, politiki taċ-ċwievet, osservabbiltà, eċċ.
 
 Hemm **żewġ mogħdijiet ta’ integrazzjoni appoġġjati**. Agħżel wieħed — it-tnejn jiġġeneraw l-istess konfigurazzjoni.
 
@@ -17,16 +17,16 @@ Hemm **żewġ mogħdijiet ta’ integrazzjoni appoġġjati**. Agħżel wieħed �
 
 ## Mogħdija 1 — Ġeneratur CLI (mingħajr installazzjoni npm)
 
-Rakkomandat għall-utenti finali. Jiġi inkluż ma’ OmniRoute. Jikteb `opencode.json` direttament fil-post.
+Rakkomandat għall-utenti finali. Jiġi inkluż ma’ 67router. Jikteb `opencode.json` direttament fil-post.
 
 ```bash
-# Wara li tinstalla OmniRoute (npm i -g @omniroute/cli jew klonu lokali)
+# Wara li tinstalla 67router (npm i -g @omniroute/cli jew klonu lokali)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Minn wara l-kwinti, is-CLI jsejjaħ `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), għalhekk `opencode.json` eżistenti jżomm il-fornituri u l-kummenti l-oħra tiegħu. L-entrata ta’ OmniRoute tiżdied jew tinbidel b’mod atomiku.
+Minn wara l-kwinti, is-CLI jsejjaħ `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), għalhekk `opencode.json` eżistenti jżomm il-fornituri u l-kummenti l-oħra tiegħu. L-entrata ta’ 67router tiżdied jew tinbidel b’mod atomiku.
 
 Il-fajl li jirriżulta (katalgu predefinit tal-mudelli):
 
@@ -90,8 +90,8 @@ Iż-żewġ mogħdijiet jipproduċu l-istess `provider.omniroute.npm: "@ai-sdk/op
 ```
 UI/aġent ta’ OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (interfaċċa OpenAI ta’ OmniRoute)
-         → handler ta’ OmniRoute għal /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (interfaċċa OpenAI ta’ 67router)
+         → handler ta’ 67router għal /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → routing ikkombinat / Auto-Combo / eżekutur
                → fornitur upstream
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Tista' tissostitwixxihom permezz ta' `models: [...]`. Żidiet rakkomandati:
 
-- `"auto"` — jesponi r-router [Auto-Combo](../routing/AUTO-COMBO.md) ta' OmniRoute li ma jeħtieġ ebda konfigurazzjoni. Jippermetti lil OpenCode jagħżel "l-aħjar mudell disponibbli" mingħajr ma jkollok tikkodifika l-katalgu direttament.
-- `"<combo-name>"` — kwalunkwe combo li ddefinixxejt fid-dashboard; OmniRoute jirriżolviha b'mod trasparenti.
+- `"auto"` — jesponi r-router [Auto-Combo](../routing/AUTO-COMBO.md) ta' 67router li ma jeħtieġ ebda konfigurazzjoni. Jippermetti lil OpenCode jagħżel "l-aħjar mudell disponibbli" mingħajr ma jkollok tikkodifika l-katalgu direttament.
+- `"<combo-name>"` — kwalunkwe combo li ddefinixxejt fid-dashboard; 67router jirriżolviha b'mod trasparenti.
 
 ---
 
@@ -135,29 +135,29 @@ Din id-deduplikazzjoni hija **l-aktar kawża komuni ta' ħsarat** li tidher f'ko
 
 ## Modi ta' awtentikazzjoni
 
-| Konfigurazzjoni ta' OmniRoute                         | Valur rakkomandat ta' `apiKey`                           |
+| Konfigurazzjoni ta' 67router                          | Valur rakkomandat ta' `apiKey`                           |
 | ----------------------------------------------------- | -------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (default għal ambjent lokali) | `sk_omniroute` (placeholder litterali)                   |
 | `REQUIRE_API_KEY=true`                                | API key reali għal kull utent minn Dashboard → API Keys. |
 
-Għal klijenti bi stil Anthropic li jibagħtu `x-api-key` + `anthropic-version`, `extractApiKey` ta' OmniRoute jirrispetta wkoll iċ-ċavetta minn `x-api-key`. OpenCode juża l-interfaċċa OpenAI, għalhekk dejjem jibgħat `Authorization: Bearer ${apiKey}` — hawnhekk ma japplika ebda każ speċjali għal Anthropic.
+Għal klijenti bi stil Anthropic li jibagħtu `x-api-key` + `anthropic-version`, `extractApiKey` ta' 67router jirrispetta wkoll iċ-ċavetta minn `x-api-key`. OpenCode juża l-interfaċċa OpenAI, għalhekk dejjem jibgħat `Authorization: Bearer ${apiKey}` — hawnhekk ma japplika ebda każ speċjali għal Anthropic.
 
 ---
 
 ## Soluzzjoni tal-problemi
 
-| Sintomu                                                  | Kawża                                                                                 | Soluzzjoni                                                                                                  |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `404` fuq kull talba b'URL li fih `/v1/v1/`              | Konfigurazzjoni skaduta minn plugin ta' qabel v3.8 li żied `/v1` darbtejn.            | Iġġenera mill-ġdid permezz tal-Mogħdija 1 jew 2.                                                            |
-| `401 Invalid API key`                                    | OmniRoute għandu `REQUIRE_API_KEY=true` u ċ-ċavetta mhijiex magħrufa.                 | Oħloq iċ-ċavetta fid-dashboard, jew issettja `REQUIRE_API_KEY=false` (lokalment biss) u uża `sk_omniroute`. |
-| Il-lista tal-mudelli hija vojta fl-UI ta' OpenCode       | L-4 mudelli awtomatiċi kollha huma moħbija fil-viżibbiltà tal-fornitur ta' OmniRoute. | Għaddi `models: ["auto", ...]` biex tesponi dawk li ppermettejt.                                            |
-| Żball 500 ta' OpenCode b'`cannot read property 'models'` | Verżjonijiet eqdem ta' OpenCode (< 0.1.x) ma kinux jaċċettaw `models` inline.         | Aġġorna OpenCode għal verżjoni li ssegwi l-iskema v1 (`opencode.ai/config.json`).                           |
+| Sintomu                                                  | Kawża                                                                                | Soluzzjoni                                                                                                  |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `404` fuq kull talba b'URL li fih `/v1/v1/`              | Konfigurazzjoni skaduta minn plugin ta' qabel v3.8 li żied `/v1` darbtejn.           | Iġġenera mill-ġdid permezz tal-Mogħdija 1 jew 2.                                                            |
+| `401 Invalid API key`                                    | 67router għandu `REQUIRE_API_KEY=true` u ċ-ċavetta mhijiex magħrufa.                 | Oħloq iċ-ċavetta fid-dashboard, jew issettja `REQUIRE_API_KEY=false` (lokalment biss) u uża `sk_omniroute`. |
+| Il-lista tal-mudelli hija vojta fl-UI ta' OpenCode       | L-4 mudelli awtomatiċi kollha huma moħbija fil-viżibbiltà tal-fornitur ta' 67router. | Għaddi `models: ["auto", ...]` biex tesponi dawk li ppermettejt.                                            |
+| Żball 500 ta' OpenCode b'`cannot read property 'models'` | Verżjonijiet eqdem ta' OpenCode (< 0.1.x) ma kinux jaċċettaw `models` inline.        | Aġġorna OpenCode għal verżjoni li ssegwi l-iskema v1 (`opencode.ai/config.json`).                           |
 
 ---
 
 ## Ara wkoll
 
-- [Referenza tal-API](../reference/API_REFERENCE.md) — is-superfiċje REST sħiħa ta’ OmniRoute
+- [Referenza tal-API](../reference/API_REFERENCE.md) — is-superfiċje REST sħiħa ta’ 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — xi jfisser `model: "auto"`
 - [README ta’ `@omniroute/opencode-provider`](../../@omniroute/opencode-provider/README.md)
 - Sors: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

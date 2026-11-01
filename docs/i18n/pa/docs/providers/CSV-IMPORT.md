@@ -25,7 +25,7 @@ Dashboard → Providers → **ਫ਼ਾਈਲ ਤੋਂ ਇੰਪੋਰਟ ਕ�
 ਇੰਪੋਰਟ ਮੋਡਲ ਤੋਂ ਇੱਕ ਸ਼ੁਰੂਆਤੀ ਫ਼ਾਈਲ ਡਾਊਨਲੋਡ ਕਰੋ (**CSV ਟੈਂਪਲੇਟ ਡਾਊਨਲੋਡ ਕਰੋ**)। ਉਦਾਹਰਨ:
 
 ```csv
-# OmniRoute ਪ੍ਰੋਵਾਈਡਰ ਇੰਪੋਰਟ (ਸਥਿਤੀ-ਆਧਾਰਿਤ ਕਾਲਮ)
+# 67router ਪ੍ਰੋਵਾਈਡਰ ਇੰਪੋਰਟ (ਸਥਿਤੀ-ਆਧਾਰਿਤ ਕਾਲਮ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

@@ -6,7 +6,7 @@
 
 🌐 **اللغات:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-المرجع الأساسي لواجهة OmniRoute API. يغطي الواجهة العامة `/v1` ونقاط نهاية الإدارة الأكثر استخدامًا؛ ويُعدّ كلٌّ من [`docs/openapi.yaml`](../openapi.yaml) وشجرة المسارات ضمن `src/app/api/` المصدرين الشاملين.
+المرجع الأساسي لواجهة 67router API. يغطي الواجهة العامة `/v1` ونقاط نهاية الإدارة الأكثر استخدامًا؛ ويُعدّ كلٌّ من [`docs/openapi.yaml`](../openapi.yaml) وشجرة المسارات ضمن `src/app/api/` المصدرين الشاملين.
 
 للاطلاع على البروتوكول المتوافق مع OpenAI ومصفوفة إمكانات موفّري الخدمة بصورة مركّزة، راجع
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | الاستجابة | `HIT` أو `MISS` (من دون بث)                                                                                                                                             |
 | `X-OmniRoute-Idempotent` | الاستجابة | `true` إذا أُزيل التكرار                                                                                                                                                |
 | `X-OmniRoute-Progress`   | الاستجابة | `enabled` إذا كان تتبّع التقدم مفعّلًا                                                                                                                                  |
-| `X-OmniRoute-Session-Id` | الاستجابة | معرّف الجلسة الفعلي الذي تستخدمه OmniRoute                                                                                                                              |
+| `X-OmniRoute-Session-Id` | الاستجابة | معرّف الجلسة الفعلي الذي تستخدمه 67router                                                                                                                               |
 | `X-OmniRoute-Request-Id` | الاستجابة | معرّف ربط الطلب (عندما يكون معروفًا)                                                                                                                                    |
-| `X-OmniRoute-Version`    | الاستجابة | إصدار بناء OmniRoute (موجود دائمًا)                                                                                                                                     |
+| `X-OmniRoute-Version`    | الاستجابة | إصدار بناء 67router (موجود دائمًا)                                                                                                                                      |
 | `X-OmniRoute-Cost-Saved` | الاستجابة | المبلغ بالدولار الأمريكي الذي وفّرته ذاكرة التخزين المؤقت عند `HIT` (إصابات ذاكرة التخزين المؤقت فقط)                                                                   |
 | `X-OmniRoute-Decision`   | الاستجابة | تتبّع التوجيه: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` هي استراتيجية التركيب، أو `single` لطلب غير مركّب) — موجود دائمًا في استجابات الاكتمال     |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### تثبيت الحساب لكل طلب
 
-عندما يكون لدى موفّر عدة اتصالات (حسابات أو مفاتيح)، يختار OmniRoute عادةً أحدها
+عندما يكون لدى موفّر عدة اتصالات (حسابات أو مفاتيح)، يختار 67router عادةً أحدها
 عبر استراتيجية اختيار الحساب. ويمكن للطلب بدلًا من ذلك تثبيت اتصال محدد
 باستخدام الترويسة `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ curl http://localhost:20128/v1/chat/completions \
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ curl http://localhost:20128/v1/chat/completions \
 ## عقود إيجار الجلسات المُدارة الحصرية
 
 يُعد تأجير الجلسات المُدارة الحصرية عقد توجيه اختياريًا ومحايدًا تجاه العملاء: يحتفظ مالك نشط واحد
-باتصال OmniRoute واحد مؤهل. ولا يؤجر نموذجًا، ولا يتطلب OAuth، ولا يحدد
+باتصال 67router واحد مؤهل. ولا يؤجر نموذجًا، ولا يتطلب OAuth، ولا يحدد
 عميلاً بعينه، ولا يتطلب موفرًا بعينه.
 
 يجب أن يمتلك مفتاح API المستخدم للمصادقة النطاق `lease:exclusive` وقائمة صريحة غير فارغة
@@ -190,7 +190,7 @@ X-OmniRoute-Lease-Owner: vlo_<43-base64url-characters>
 
 يُحاط إجراء الحالة الاختياري هذا بسياج يعتمد على المالك المعتم، ومفتاح API المُدار والمصادَق عليه، وقيمة
 التوليد النشطة الدقيقة ضمن معاملة واحدة في قاعدة البيانات. لا تمثل `displayName` سوى اسم الاتصال المضبوط
-بعد إزالة المسافات الزائدة؛ وتكون `null` عند عدم وجود اسم مضبوط وآمن. لا يستبدل OmniRoute بها مطلقًا
+بعد إزالة المسافات الزائدة؛ وتكون `null` عند عدم وجود اسم مضبوط وآمن. لا يستبدل 67router بها مطلقًا
 عنوان بريد إلكتروني أو هوية حساب مُنشأة. تمثل قيمة الموفر تسمية عرض غير حساسة، وليست مطلقًا
 معرّفًا مُنشأً لموفر متوافق. وتُستبعد بيانات الاعتماد، والرموز المميزة، وملفات تعريف الارتباط، ومعرّفات الاتصال أو مفاتيح
 API الخام، وتجزيئات المالك، وأسرار السياج، وبيانات التوجيه الداخلية.
@@ -231,7 +231,7 @@ X-OmniRoute-Lease-Generation: 1
 
 تعني هذه الاستجابة فقط أن المجموعة العادية المؤهلة لم تكن فارغة وأن كل مرشح متاح
 كان مشغولاً بعقد إيجار نشط لمالك آخر. تحتفظ النماذج/الموفرون غير المدعومين، وعدم تطابق السياسة، وفترة التهدئة، والحصة،
-والحالة الصحية، وغيرها من حالات فشل الأهلية العادية باستجابات OmniRoute الحالية الخاصة بها.
+والحالة الصحية، وغيرها من حالات فشل الأهلية العادية باستجابات 67router الحالية الخاصة بها.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ Content-Type: application/json
 ```
 
 قد تكون قيم `{ image | audio | video | pdf }` الأصلية عنوان URL عامًا عبر HTTPS، أو معرّف URI من نوع `data:`، أو بيانات
-base64 أولية. لا يحوّل OmniRoute تلك الكائنات إلى سلاسل نصية ولا يجلب عناوين URL الأصلية للصور — إذ تسترجع Jina
+base64 أولية. لا يحوّل 67router تلك الكائنات إلى سلاسل نصية ولا يجلب عناوين URL الأصلية للصور — إذ تسترجع Jina
 الوسائط العامة بنفسها. تُمرَّر حقول Jina الإضافية (`task` و`normalized` و`truncate` و`embedding_type`).
 ولا تزال وحدات SKU النصية فقط من Jina ترفض المستندات غير النصية.
 
@@ -454,7 +454,7 @@ Mistral (`mistral-ocr-latest`). المزوّدات المسجّلة (`open-sse/c
 
 ### مصادقة Vertex AI DeepSeek OCR وتحديد نقطة النهاية
 
-يعيد `vertex-deepseek-ocr` استخدام مصادقة Vertex AI نفسها التي يدعمها OmniRoute بالفعل
+يعيد `vertex-deepseek-ocr` استخدام مصادقة Vertex AI نفسها التي يدعمها 67router بالفعل
 لحركة المحادثات/الصور (`open-sse/executors/vertex.ts`): يكون مفتاح API الخاص بالاتصال إما بيانات اعتماد
 Service Account بتنسيق JSON (تُستبدل برمز وصول OAuth قصير الأجل عبر تدفّق JWT-bearer)
 أو رمز وصول OAuth صادر مسبقًا يُستخدم كما هو. عنوان URL لنقطة النهاية الأصلية هو نقطة نهاية الشريك العامة
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### أسعار النماذج (`pricing`)
 
-يتضمن الإدخال كائن `pricing` عندما يعرف OmniRoute سعر النموذج. يأتي السعر من
+يتضمن الإدخال كائن `pricing` عندما يعرف 67router سعر النموذج. يأتي السعر من
 جدول التسعير الذي تستخدمه محاسبة التكاليف: القيم الافتراضية المضمّنة، والأسعار المتزامنة،
 والتجاوزات التي تُعيَّن من خلال `/api/pricing`. هذه أسعار قائمة، ولذلك يعرض موفرو الاشتراكات أيضًا
 سعرًا لكل رمز مميز.
@@ -632,8 +632,8 @@ GET /api/v1/provider-plugin-manifest
 
 ## توليد الصوت باستخدام ElevenLabs
 
-هيّئ اتصال مزوّد `elevenlabs` في OmniRoute باستخدام مفتاح ElevenLabs API الخاص بك.
-تُجري التطبيقات العميلة المصادقة باستخدام مفتاح **OmniRoute** الخاص بها (`Authorization: Bearer $OMNIROUTE_API_KEY`)؛
+هيّئ اتصال مزوّد `elevenlabs` في 67router باستخدام مفتاح ElevenLabs API الخاص بك.
+تُجري التطبيقات العميلة المصادقة باستخدام مفتاح **67router** الخاص بها (`Authorization: Bearer $OMNIROUTE_API_KEY`)؛
 وتوفر البوابة مفتاح المزوّد المخزّن بوصفه `xi-api-key`. لا ترسل أبدًا مفتاح ElevenLabs
 بصفته رمز حامل البوابة.
 
@@ -698,7 +698,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 و`429` لتجاوز حد الحصة. تُحفظ الترويسات `character-cost` و`song-id` و`request-id` و`retry-after`
 عند وجودها. لا يضمن رصيد مجاني الوصول إلى كل نموذج موسيقي
 أو تنسيق إخراج أو ميزة API؛ إذ تحدد ElevenLabs الاستحقاق لكل طلب.
-تحفظ نقطة النهاية الموحدة رموز حالة الخطأ ضمن غلاف الأخطاء الموحّد الخاص بـOmniRoute.
+تحفظ نقطة النهاية الموحدة رموز حالة الخطأ ضمن غلاف الأخطاء الموحّد الخاص بـ67router.
 
 عقود الخدمة العليا: [المؤثرات الصوتية](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert)،
 [التأليف الموسيقي](https://elevenlabs.io/docs/api-reference/music/compose) و
@@ -739,7 +739,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 
 تتبع جميع مسارات POST الصيغة نفسها: `Bearer your-api-key` + محتوى JSON تم التحقق منه باستخدام Zod (`v1RerankSchema`، و`v1ModerationSchema`، و`v1AudioSpeechSchema`، وما إلى ذلك؛ راجع `src/shared/validation/schemas.ts`). تُعاد استجابة 4xx عند فشل التحقق من المخطط.
 
-بالنسبة إلى العملاء الذين لا يمكنهم إرفاق `Authorization: Bearer ...`، يقبل OmniRoute أيضًا مفاتيح API في عنوان URL، إما عبر توافق سلسلة الاستعلام (`?token=...`، أو `?apiKey=...`، أو `?api_key=...`، أو `?key=...`) أو عبر نقاط النهاية المخصصة `/api/v1/vscode/{token}/...` الموضحة أدناه.
+بالنسبة إلى العملاء الذين لا يمكنهم إرفاق `Authorization: Bearer ...`، يقبل 67router أيضًا مفاتيح API في عنوان URL، إما عبر توافق سلسلة الاستعلام (`?token=...`، أو `?apiKey=...`، أو `?api_key=...`، أو `?key=...`) أو عبر نقاط النهاية المخصصة `/api/v1/vscode/{token}/...` الموضحة أدناه.
 
 ```bash
 # إعادة الترتيب (موفّر سجل سحابي، أو عقدة موفّر متوافق مع OpenAI بصيغة "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader أو Tavily Extract أو TinyFish Fetch أو Nimble Extract أو Parallel
 يُرجع Parallel Extract (`parallel-search`، باستخدام مفتاح API نفسه الخاص بـ Parallel Search) محتوى Markdown
 فقط — وأي `format` آخر ينتج عنه `400` — ويحدّ المحتوى عند 100,000 حرف. عندما
 يتعذر استخراج الصفحة المستهدفة نفسها، تُبلغ الخدمة المصدرية بذلك ضمن استجابة HTTP 200؛
-ويعرض OmniRoute ذلك كخطأ `422` مع رسالة ثابتة.
+ويعرض 67router ذلك كخطأ `422` مع رسالة ثابتة.
 
 | الطريقة | المسار          | الوصف                                                                    |
 | ------- | --------------- | ------------------------------------------------------------------------ |
@@ -964,14 +964,14 @@ wscat -c "ws://localhost:20128/v1/responses?api_key=<OMNIROUTE_API_KEY>"
 تتحقق **Codex CLI** من OpenAI من اسم النموذج من جانب العميل عندما تكون
 `supports_websockets = true`، و**ترفض المعرّفات المسبوقة باسم الموفّر** مثل
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). أرسل المعرّف **المجرّد** (مثل `gpt-5.5`). جسر OmniRoute
+a ChatGPT account`). أرسل المعرّف **المجرّد** (مثل `gpt-5.5`). جسر 67router
 مخصص لـ codex فقط، لذا يعيد تحليل المعرّف المجرّد باعتباره نموذج codex
 (`resolveCodexWsModelInfo`) قبل إنشاء النفق إلى المصدر — رغم أن
 `gpt-5.5` المجرّد كان سيوجَّه بخلاف ذلك إلى موفّر آخر عبر HTTP.
 
 #### تهيئة OpenAI Codex CLI
 
-وجّه Codex CLI إلى OmniRoute بإضافة موفّر مخصص يدعم WebSocket
+وجّه Codex CLI إلى 67router بإضافة موفّر مخصص يدعم WebSocket
 إلى `~/.codex/config.toml` (استخدم `CODEX_HOME` منفصلًا لتجنب تعديل
 تهيئة موجودة):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # بلا شرطة مائلة لاحقة؛ يُشتق عنوان URL الخاص بـ WS (استخدم https/wss في بيئة الإنتاج)
 wire_api = "responses"                    # القيمة الوحيدة المدعومة منذ فبراير 2026
 supports_websockets = true                # يفعّل نقل Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # يحتوي على مفتاح OmniRoute API ‏(Bearer)
+env_key = "OMNIROUTE_API_KEY"             # يحتوي على مفتاح 67router API ‏(Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # مفتاح OmniRoute API (أي مفتاح إذا كانت REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # مفتاح 67router API (أي مفتاح إذا كانت REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-ترقّي CLI العنوان `base_url + /responses` إلى WebSocket، وينشئ OmniRoute نفقًا له
+ترقّي CLI العنوان `base_url + /responses` إلى WebSocket، وينشئ 67router نفقًا له
 إلى اتصال codex OAuth المحدد. تم التحقق منه من طرف إلى طرف باستخدام الخادم
 المحلي: يُرجع ChatGPT ‏`codex.rate_limits` + `response.created` ويبث
 الإكمال.
@@ -1075,7 +1075,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### معادلة التعديل وفق حد القطع
 
-يدعم OmniRoute حدود قطع استباقية للحصص لمنع استنفاد موارد المنبع (تُضبط عبر
+يدعم 67router حدود قطع استباقية للحصص لمنع استنفاد موارد المنبع (تُضبط عبر
 `quotaWindowThresholds` الخاصة بالاتصال، أو إعدادات المزوّد الافتراضية، أو إعدادات المرونة العامة). عندما تكون عتبة قطع
 (مثلًا، `cutoff = 25%`) نشطة ضمن نافذة حصة، يحسب عارض النص المقدار المتبقي كما يلي:
 
@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### التقييمات
 
-| نقطة النهاية | الطريقة  | الوصف                           |
-| ------------ | -------- | ------------------------------- |
-| `/api/evals` | GET/POST | سرد حزم التقييم / تشغيل التقييم |
+| نقطة النهاية | الطريقة | الوصف |
+| ------------ | ------- | ----- |
 
 ### السياسات
 
@@ -1623,7 +1622,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - تعيد الأسماء البديلة ذات الرموز استخدام معالجات الطلبات نفسها المستخدمة مع `/v1/*` و`/api/tags`؛ وتظل بُنى الاستجابات متطابقة.
 - يُفضّل استخدام `Authorization: Bearer ...` متى كان العميل يدعم الترويسات المخصصة.
-- قد تظهر الرموز المضمنة في عناوين URL في سجلات الوكيل العكسي وسجل المتصفح وبيانات القياس عن بُعد خارج OmniRoute. تعامل معها كخيار للتوافق، وليس كوضع المصادقة الافتراضي.
+- قد تظهر الرموز المضمنة في عناوين URL في سجلات الوكيل العكسي وسجل المتصفح وبيانات القياس عن بُعد خارج 67router. تعامل معها كخيار للتوافق، وليس كوضع المصادقة الافتراضي.
 
 ---
 
@@ -1731,7 +1730,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## خطافات الويب
 
-اشتراكات خطافات الويب الصادرة لأحداث OmniRoute (اكتمال الطلب، استنفاد الحصة، تدوير المفتاح، وما إلى ذلك).
+اشتراكات خطافات الويب الصادرة لأحداث 67router (اكتمال الطلب، استنفاد الحصة، تدوير المفتاح، وما إلى ذلك).
 
 | الطريقة | المسار                    | الوصف                                                                 |
 | ------- | ------------------------- | --------------------------------------------------------------------- |
@@ -1762,31 +1761,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## بروتوكول الوكلاء
-
-مهام الوكلاء السحابيين (Claude Code وCodex Cloud وOpenHands وغيرها) التي تُنفَّذ عن بُعد نيابةً عن مستخدمي OmniRoute.
-
-| الطريقة | المسار                        | الوصف                                                                                                                                                       |
-| ------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | سرد المهام — مع دعم اختياري لـ `?provider=` و`?status=` و`?limit=` (من 1 إلى 500، والقيمة الافتراضية 50)                                                    |
-| POST    | `/api/v1/agents/tasks`        | إنشاء مهمة — يجري التحقق من صحة النص الأساسي بواسطة `CreateCloudAgentTaskSchema` (`providerId` و`prompt` و`source` و`options?`). يُرجع `201` مع غلاف المهمة |
-| DELETE  | `/api/v1/agents/tasks?id=...` | حذف مهمة                                                                                                                                                    |
-| GET     | `/api/v1/agents/tasks/[id]`   | قراءة مهمة — يُحدِّث الحالة بشكل متزامن من الوكيل السحابي الخارجي عند تعيين `external_id`                                                                   |
-| POST    | `/api/v1/agents/tasks/[id]`   | إجراء مميَّز: `{action: "approve"}` أو `{action: "message", message}` أو `{action: "cancel"}`                                                               |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | حذف مهمة محددة حسب المعرّف                                                                                                                                  |
-
-> **المصادقة:** يلزم إجراء مصادقة الإدارة لكل طريقة (`requireCloudAgentManagementAuth`). قبل v3.8.0، لم تكن هذه الواجهات تتطلب المصادقة — راجع الالتزام `588a0333` لمعرفة التغيير غير المتوافق.
-
-```bash
-# إنشاء مهمة سحابية لـ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## وكلاء الإدارة
 
 وكلاء HTTP(S)/SOCKS الصادرون الذين يمكن تعيينهم لمزوّدي الخدمة أو الحسابات أو على المستوى العام.
@@ -1810,7 +1784,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## المرونة (موسّع)
 
-يوفّر OmniRoute ثلاث آليات مستقلة للتعامل مع حالات الفشل المؤقت؛ وتتيح نقاط الإدارة أدناه للمشغّلين قراءتها وتجاوز إعداداتها:
+يوفّر 67router ثلاث آليات مستقلة للتعامل مع حالات الفشل المؤقت؛ وتتيح نقاط الإدارة أدناه للمشغّلين قراءتها وتجاوز إعداداتها:
 
 | النطاق             | تخزين الحالة                                 | القراءة                                   | إعادة الضبط / المسح                                           |
 | ------------------ | -------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------- |
@@ -1845,7 +1819,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## المهارات
 
-إطار عمل للمهارات يتيح توسيع OmniRoute باستخدام معالجات مخصّصة قابلة للتنفيذ، بالإضافة إلى عمليات التكامل مع الأسواق.
+إطار عمل للمهارات يتيح توسيع 67router باستخدام معالجات مخصّصة قابلة للتنفيذ، بالإضافة إلى عمليات التكامل مع الأسواق.
 
 | الطريقة | المسار                            | الوصف                                                                                                                                        |
 | ------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1882,7 +1856,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## خادم MCP
 
-يتضمن OmniRoute خادمًا مضمّنًا لبروتوكول سياق النموذج مع 3 وسائل نقل (stdio، وSSE، وstreamable-http) وأدوات محددة النطاق. تقرأ نقاط نهاية لوحة المعلومات أدناه بيانات الحالة/التدقيق وتعمل كوكيل لوسائل نقل HTTP.
+يتضمن 67router خادمًا مضمّنًا لبروتوكول سياق النموذج مع 3 وسائل نقل (stdio، وSSE، وstreamable-http) وأدوات محددة النطاق. تقرأ نقاط نهاية لوحة المعلومات أدناه بيانات الحالة/التدقيق وتعمل كوكيل لوسائل نقل HTTP.
 
 | الطريقة | المسار | الوصف |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1904,50 +1878,12 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## خادم A2A
 
-يوفّر OmniRoute نقطة نهاية A2A (من وكيل إلى وكيل) تستخدم JSON-RPC 2.0، بالإضافة إلى غلاف REST لأغراض الفحص ولوحة المعلومات.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # اختياري ما لم يكن OMNIROUTE_API_KEY معيّنًا
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-الأساليب المدعومة (جميعها خاضعة لإعداد `settings.a2aEnabled`):
-
-| الأسلوب          | الوصف                                                     |
-| ---------------- | --------------------------------------------------------- |
-| `message/send`   | تنفيذ متزامن للمهارة؛ يُرجع `{task, artifacts, metadata}` |
-| `message/stream` | تنفيذ متدفق عبر SSE لمجموعة المهارات نفسها                |
-| `tasks/get`      | جلب مهمة بواسطة `taskId`                                  |
-| `tasks/cancel`   | إلغاء مهمة بواسطة `taskId`                                |
-
-المهارات المدمجة: `smart-routing`، و`quota-management`، و`provider-discovery`، و`cost-analysis`، و`health-report`.
-
-### بطاقة الوكيل
-
-```bash
-GET /.well-known/agent.json
-```
-
-يُرجع بطاقة وكيل A2A العامة (الاسم، والوصف، والإمكانات، ودليل المهارات، ونظام المصادقة) — وتُخزّن مؤقتًا بشكل عام لمدة ساعة واحدة. لا تتطلب مصادقة.
+يوفّر 67router نقطة نهاية A2A (من وكيل إلى وكيل) تستخدم JSON-RPC 2.0، بالإضافة إلى غلاف REST لأغراض الفحص ولوحة المعلومات.
 
 ### أدوات REST المساعدة
 
 | الأسلوب | المسار                       | الوصف                                                                                                              |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| GET     | `/api/a2a/status`            | حالة تفعيل A2A + إحصاءات المهام + ملخص بطاقة الوكيل المخزّن مؤقتًا                                                 |
 | GET     | `/api/a2a/tasks`             | سرد المهام — `?state=submitted\|working\|completed\|failed\|cancelled`، و`?skill=`، و`?limit=` (≤200)، و`?offset=` |
 | POST    | `/api/a2a/tasks`             | (غير منفّذ كأداة REST مساعدة — أنشئ المهمة عبر JSON-RPC باستخدام `message/send`)                                   |
 | GET     | `/api/a2a/tasks/[id]`        | استرداد مهمة واحدة                                                                                                 |
@@ -1967,12 +1903,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | سرد الأسماء المستعارة للنماذج كما تظهر للمزامنة السحابية |
 | GET | `/api/assess` | قراءة أحدث تصنيفات التقييم (لكل مزوّد خدمة/نموذج) |
 | POST | `/api/assess` | تشغيل تقييم — المتن: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | سرد حِزم الاختبارات المدمجة + أحدث عمليات التشغيل |
-| POST | `/api/evals` | تشغيل اختبار |
-| POST | `/api/evals/suites` | إنشاء حزمة اختبارات مخصّصة — يُتحقق من المتن بواسطة `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | استرداد حزمة اختبارات مخصّصة |
 
-**المصادقة:** يتحقق `/api/cloud/auth` من مفتاح Bearer مباشرةً، ولا يُرجع المفتاح المحجوب و`projectId` لكل اتصال إلا إذا كان المفتاح يمتلك نطاق `manage` / `admin`؛ وتتطلب مسارات `/api/cloud/*` و`/api/evals/*` و`/api/assess` الأخرى جلسة إدارة/مفتاح API. يستخدم طلب POST إلى `/api/assess` الدالة `validateBody` مع مخطط نطاق اتحاد مميّز.
+**المصادقة:** يتحقق `/api/cloud/auth` من مفتاح Bearer مباشرةً، ولا يُرجع المفتاح المحجوب و`projectId` لكل اتصال إلا إذا كان المفتاح يمتلك نطاق `manage` / `admin`؛ وتتطلب مسارات `/api/cloud/*` وو`/api/assess` الأخرى جلسة إدارة/مفتاح API. يستخدم طلب POST إلى `/api/assess` الدالة `validateBody` مع مخطط نطاق اتحاد مميّز.
 
 ---
 
@@ -2133,7 +2065,7 @@ GET /.well-known/agent.json
 
 ## إدارة أدوات CLI
 
-إدارة أدوات CLI التي تتكامل مع OmniRoute‏ (antigravity وcommandCode و
+إدارة أدوات CLI التي تتكامل مع 67router‏ (antigravity وcommandCode و
 devin-cli وغيرها). راجع [مرجع المزوّدين](./PROVIDER_REFERENCE.md) للاطلاع على القائمة الكاملة.
 
 | الطريقة | المسار                                  | الوصف                                                                                                                                                         |
@@ -2242,26 +2174,6 @@ devin-cli وغيرها). راجع [مرجع المزوّدين](./PROVIDER_REFER
 
 ---
 
-## المكونات الإضافية
-
-إدارة مكونات OmniRoute الإضافية (امتدادات الجهات الخارجية).
-
-| الطريقة | المسار                             | الوصف                             |
-| ------- | ---------------------------------- | --------------------------------- |
-| GET     | `/api/plugins`                     | سرد المكونات الإضافية المثبتة     |
-| POST    | `/api/plugins/marketplace/install` | تثبيت مكون إضافي من السوق         |
-| DELETE  | `/api/plugins/[name]`              | إلغاء تثبيت مكون إضافي            |
-| POST    | `/api/plugins/[name]/activate`     | تنشيط مكون إضافي                  |
-| POST    | `/api/plugins/[name]/deactivate`   | إلغاء تنشيط مكون إضافي            |
-| GET     | `/api/plugins/[name]/config`       | الحصول على إعدادات المكون الإضافي |
-| PUT     | `/api/plugins/[name]/config`       | تحديث إعدادات المكون الإضافي      |
-
-**المصادقة:** تتطلب جلسة إدارة.
-
-راجع [إطار عمل المكونات الإضافية](../frameworks/PLUGIN_SDK.md) للاطلاع على التفاصيل الكاملة.
-
----
-
 ## التوجيه الظلي
 
 إن المقارنة الظلية / A-B بين المزوّدين **ليست واجهة REST مستقلة** — بل تُهيّأ من خلال التوجيه المركّب (راجع [الدمج التلقائي](../routing/AUTO-COMBO.md)). تُقدَّم مقاييس المقارنة لكل مجموعة مركّبة عبر `GET /api/combos/metrics`.
@@ -2296,5 +2208,3 @@ devin-cli وغيرها). راجع [مرجع المزوّدين](./PROVIDER_REFER
 - يمكن تبديل `requireLogin` عبر `/api/settings/require-login`
 - قد تتطلب مسارات `/v1/*` اختياريًا مفتاح API من نوع Bearer عندما تكون `REQUIRE_API_KEY=true`
 - يُقصد بـ «رمز الإدارة» / «مفتاح API بنطاق الإدارة» في هذا المرجع إحدى العائلات الواردة في ذلك الدليل — وليس نوعًا إضافيًا غير معرّف من الأسرار
-
-> **تغيير غير متوافق (v3.8.0)** — تتطلب الآن `/api/v1/agents/tasks/*` ونقاط نهاية إدارة فترة الانتظار **مصادقة الإدارة** (ملف تعريف الارتباط `auth_token` الخاص بلوحة المعلومات أو مفتاح API بنطاق الإدارة). ستتلقى التطبيقات العميلة التي كانت تستدعي هذه المسارات سابقًا من دون مصادقة الاستجابة `401 Unauthorized`. راجع الالتزام `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

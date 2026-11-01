@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, hangi **tarayıcı origin'lerinin** origin'ler arası yanıtları okuyabileceğini tek ve merkezi bir izin listesi üzerinden denetler. Model, **varsayılan olarak erişimi reddeder**: siz açıkça izin verene kadar hiçbir origin'e izin verilmez. Bu sayfa; izin listesinin nasıl çözümlendiğini, `CORS_ALLOW_ALL=true` ayarının gerçekte neleri erişime açtığını (ve daha da önemlisi neleri **açmadığını**), geliştirme ve üretim ortamlarının güvenli biçimde nasıl yapılandırılacağını ve wildcard etkin olduğunda dashboard'da gösterilen çalışma zamanı uyarısını açıklar.
+67router, hangi **tarayıcı origin'lerinin** origin'ler arası yanıtları okuyabileceğini tek ve merkezi bir izin listesi üzerinden denetler. Model, **varsayılan olarak erişimi reddeder**: siz açıkça izin verene kadar hiçbir origin'e izin verilmez. Bu sayfa; izin listesinin nasıl çözümlendiğini, `CORS_ALLOW_ALL=true` ayarının gerçekte neleri erişime açtığını (ve daha da önemlisi neleri **açmadığını**), geliştirme ve üretim ortamlarının güvenli biçimde nasıl yapılandırılacağını ve wildcard etkin olduğunda dashboard'da gösterilen çalışma zamanı uyarısını açıklar.
 
 **Doğruluğun kaynağı:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`, `applyCorsHeaders`, `getCorsStatus`). İzin listesi middleware'de (`src/server/authz/pipeline.ts`) yalnızca bir kez uygulanır — her route'a özgü handler'lar `Access-Control-Allow-Origin` değerini kendileri ayarlamaz.
 
@@ -26,13 +26,13 @@ Middleware, her istek için `Access-Control-Allow-Origin` değerini şu sırayla
 
 ## Tehdit modeli — `CORS_ALLOW_ALL=true` gerçekte neleri erişime açar?
 
-Genel OWASP uyarısını ("wildcard CORS = herhangi bir site API'nizi çağırabilir") ciddiye almak gerekir; ancak somut bir uygulama ayrıntısı nedeniyle OmniRoute'un maruz kaldığı risk **genel duruma göre daha sınırlıdır**:
+Genel OWASP uyarısını ("wildcard CORS = herhangi bir site API'nizi çağırabilir") ciddiye almak gerekir; ancak somut bir uygulama ayrıntısı nedeniyle 67router'un maruz kaldığı risk **genel duruma göre daha sınırlıdır**:
 
 > **Merkezi `applyCorsHeaders()` hiçbir zaman
 > `Access-Control-Allow-Credentials` göndermez.** Sunucu
 > `Access-Control-Allow-Credentials: true` göndermediği sürece tarayıcı, _kimlik
 > bilgileri içeren_ (cookie taşıyan) origin'ler arası bir yanıtı erişime açmaz.
-> OmniRoute'un paylaşılan CORS yolu bunu hiçbir zaman yapmaz.
+> 67router'un paylaşılan CORS yolu bunu hiçbir zaman yapmaz.
 
 `CORS_ALLOW_ALL=true` kullanıldığında bile bunun her yüzey için anlamı şöyledir:
 
@@ -44,10 +44,6 @@ Genel OWASP uyarısını ("wildcard CORS = herhangi bir site API'nizi çağırab
 
 Dolayısıyla `CORS_ALLOW_ALL=true` ayarından kaynaklanan **artık** risk şunlarla sınırlıdır: (a) zaten kimlik doğrulaması gerektirmeyen verilerin, kimlik bilgileri içermeyen origin'ler arası **okumaları** ve (b) yönetim route'larında CORS **preflight isteğinin geçmesine** izin verilmesi — bu route'lar yine de origin'ler arası bir sayfanın sağlayamayacağı kimlik doğrulamasını gerektirir. Paylaşılan CORS yolunda bu, bir session ele geçirme veya kimlik bilgisi çalma vektörü **değildir**.
 
-### Gerçek bir istisna — `/api/v1/agents/`
-
-Cloud-Agent route'ları (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) **kendi** CORS header'larını ayarlar (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ve `Access-Control-Allow-Origin: <origin>|*` ile birlikte `Access-Control-Allow-Credentials: true` değerini **gönderir**. Bu, origin yansıtma ile kimlik bilgilerinin bir arada bulunduğu tek yüzeydir ve **`CORS_ALLOW_ALL` ayarından bağımsızdır**. Bu route'larda yönetim kimlik doğrulaması kullanılır (`requireManagementAuth`); dashboard'u host dışından erişime açan operatörler, yanıt header'larının origin'ler arası ve kimlik bilgileri içeren bir okumaya izin verdiği tek yerin burası olduğunu bilmelidir. Bunun açık bir izin listesiyle sınırlandırılması, bu CORS kılavuzundan ayrı olarak takip edilmektedir.
-
 ## Üretim kontrol listesi
 
 - **Üretimde asla `CORS_ALLOW_ALL=true` ayarlamayın.** Ayarlanmamış olarak bırakın.
@@ -57,7 +53,7 @@ Cloud-Agent route'ları (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute bir ters proxy / tünel (nginx, Caddy, Cloudflare
+- 67router bir ters proxy / tünel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) arkasında çalışıyorsa CORS **tek** denetiminiz değildir —
   loopback rota koruması, işlem başlatabilen rotaları korumaya devam eder (bkz.
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Bir 403 hatasını "düzeltmek" için
@@ -75,7 +71,7 @@ Geliştirme ortamında bile joker karaktere nadiren ihtiyaç duyarsınız. Yaln�
 kullandığınız geliştirme sunucularına izin verin:
 
 ```bash
-# Yerel bir OmniRoute'u çağıran Vite (5173) + Next.js (3000) geliştirme sunucuları
+# Yerel bir 67router'u çağıran Vite (5173) + Next.js (3000) geliştirme sunucuları
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -97,14 +93,14 @@ ayarlanabilir.
   korunur. Yönetim/kontrol paneli origin'lerini izin verici yapılandırmalardan
   uzak tutun; bunlar kesinlikle güvenli biçimde kapalı kalmalıdır.
 
-## Örnek: OmniRoute önünde ters proxy
+## Örnek: 67router önünde ters proxy
 
-CORS, OmniRoute tarafından uygulanır; bu nedenle proxy genel olarak
+CORS, 67router tarafından uygulanır; bu nedenle proxy genel olarak
 `Access-Control-*` başlıklarını **eklememeli** veya yeniden yazmamalıdır (çift başlıklar tarayıcıları bozar). TLS'yi sonlandırın
-ve iletin — ön kontrol isteğini OmniRoute'un yanıtlamasına izin verin:
+ve iletin — ön kontrol isteğini 67router'un yanıtlamasına izin verin:
 
 ```nginx
-# nginx — OmniRoute'a iletin; burada Access-Control-* eklemeyin
+# nginx — 67router'a iletin; burada Access-Control-* eklemeyin
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -112,12 +108,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # İletme başlıklarını koruyun: aynı ana makinedeki bir proxy geri döngü adresinden bağlanır ve
-    # OmniRoute'a çağrıyı yapanın yerel operatör olmadığını bu başlıklar bildirir. Bunların hiçbirini eklemeyen bir proxy,
+    # 67router'a çağrıyı yapanın yerel operatör olmadığını bu başlıklar bildirir. Bunların hiçbirini eklemeyen bir proxy,
     # uzaktaki tüm çağrı sahiplerini yerelmiş gibi gösterir. X-Forwarded-For değerini de asla 127.0.0.1 olarak ayarlamayın.
 }
 ```
 
-İzin verilen tarayıcı kaynaklarını proxy'de değil, OmniRoute'ta (`CORS_ALLOWED_ORIGINS` veya
+İzin verilen tarayıcı kaynaklarını proxy'de değil, 67router'ta (`CORS_ALLOWED_ORIGINS` veya
 Güvenlik sekmesi) ayarlayın.
 
 ## Kaynak dosyalar
@@ -130,7 +126,6 @@ Güvenlik sekmesi) ayarlayın.
 | Kontrol paneli için çalışma zamanı durumu                   | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Kontrol paneli uyarı banner'ı                               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | İzin Verilen CORS Origin'leri alanı                         | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent rota başına CORS (istisna)                      | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Ayrıca bakınız
 

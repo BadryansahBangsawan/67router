@@ -70,7 +70,7 @@ export default function CatalogBulkActionBar({
   const t = useTranslations("modelCatalog");
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-bg-subtle px-4 py-2.5">
+    <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border bg-bg-subtle px-5 py-2.5">
       <div className="flex flex-wrap items-center gap-2">
         <Button
           variant="secondary"

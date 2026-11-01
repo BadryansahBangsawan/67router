@@ -1,12 +1,12 @@
 ---
-title: "Dokumentacja OmniRoute"
+title: "Dokumentacja 67router"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# Dokumentacja OmniRoute
+# Dokumentacja 67router
 
-Nawigowalny indeks zestawu dokumentacji OmniRoute. Tematy są pogrupowane według celu, abyś szybko znalazł to, czego potrzebujesz.
+Nawigowalny indeks zestawu dokumentacji 67router. Tematy są pogrupowane według celu, abyś szybko znalazł to, czego potrzebujesz.
 
 > Szukasz przeglądu projektu, kroków instalacji lub informacji o wydaniach? Zobacz główne pliki [README.md](../README.md), [CHANGELOG.md](../CHANGELOG.md) oraz [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -14,33 +14,33 @@ Nawigowalny indeks zestawu dokumentacji OmniRoute. Tematy są pogrupowane wedłu
 
 ## Dla użytkowników nietechnicznych
 
-Proste przewodniki po korzystaniu z OmniRoute — bez wymaganej wiedzy technicznej.
+Proste przewodniki po korzystaniu z 67router — bez wymaganej wiedzy technicznej.
 
 ### getting-started/
 
-- [QUICK-START.md](getting-started/QUICK-START.md) — zainstaluj i uruchom OmniRoute w 3 minuty.
-- [AUTO-COMBO-GUIDE.md](getting-started/AUTO-COMBO-GUIDE.md) — pozwól OmniRoute wybrać dla Ciebie najlepsze AI.
+- [QUICK-START.md](getting-started/QUICK-START.md) — zainstaluj i uruchom 67router w 3 minuty.
+- [AUTO-COMBO-GUIDE.md](getting-started/AUTO-COMBO-GUIDE.md) — pozwól 67router wybrać dla Ciebie najlepsze AI.
 - [PROVIDERS-GUIDE.md](getting-started/PROVIDERS-GUIDE.md) — jak podłączyć dostawców AI.
 - [FREE-TIERS-GUIDE.md](getting-started/FREE-TIERS-GUIDE.md) — darmowe AI bez karty kredytowej.
 - [TROUBLESHOOTING.md](getting-started/TROUBLESHOOTING.md) — rozwiązywanie typowych problemów.
 
 ### guides/
 
-- [SETUP_GUIDE.md](guides/SETUP_GUIDE.md) — pierwsza konfiguracja OmniRoute.
+- [SETUP_GUIDE.md](guides/SETUP_GUIDE.md) — pierwsza konfiguracja 67router.
 - [USER_GUIDE.md](guides/USER_GUIDE.md) — codzienne korzystanie z panelu i API.
 - [FEATURES.md](guides/FEATURES.md) — galeria funkcji panelu.
-- [TIERS.md](guides/TIERS.md) — poziomy OmniRoute wyjaśnione (przewodnik użytkownika).
+- [TIERS.md](guides/TIERS.md) — poziomy 67router wyjaśnione (przewodnik użytkownika).
 - [USAGE_QUOTA_GUIDE.md](guides/USAGE_QUOTA_GUIDE.md) — śledzenie użycia, limitów (quota) i wydatków.
 - [COST_TRACKING.md](guides/COST_TRACKING.md) — śledzenie kosztów i wydatków.
 - [FREE_PROVIDER_RANKINGS.md](guides/FREE_PROVIDER_RANKINGS.md) — rankingi darmowych dostawców (Arena ELO).
-- [DOCKER_GUIDE.md](guides/DOCKER_GUIDE.md) — uruchamianie OmniRoute w Dockerze.
+- [DOCKER_GUIDE.md](guides/DOCKER_GUIDE.md) — uruchamianie 67router w Dockerze.
 - [ELECTRON_GUIDE.md](guides/ELECTRON_GUIDE.md) — buildy desktopowe (Electron).
 - [TERMUX_GUIDE.md](guides/TERMUX_GUIDE.md) — uruchamianie na Androidzie przez Termux.
 - [PWA_GUIDE.md](guides/PWA_GUIDE.md) — instalacja panelu jako PWA.
-- [REMOTE-MODE.md](guides/REMOTE-MODE.md) — udostępnianie OmniRoute zdalnie + tokeny z zakresem (scoped tokens).
+- [REMOTE-MODE.md](guides/REMOTE-MODE.md) — udostępnianie 67router zdalnie + tokeny z zakresem (scoped tokens).
 - [CLI-INTEGRATIONS.md](guides/CLI-INTEGRATIONS.md) — główna tabela integracji CLI `setup-*`.
-- [CLAUDE-CODE-CONFIGURATION.md](guides/CLAUDE-CODE-CONFIGURATION.md) — Claude Code CLI z OmniRoute.
-- [CODEX-CLI-CONFIGURATION.md](guides/CODEX-CLI-CONFIGURATION.md) — Codex CLI z OmniRoute.
+- [CLAUDE-CODE-CONFIGURATION.md](guides/CLAUDE-CODE-CONFIGURATION.md) — Claude Code CLI z 67router.
+- [CODEX-CLI-CONFIGURATION.md](guides/CODEX-CLI-CONFIGURATION.md) — Codex CLI z 67router.
 - [KIRO_SETUP.md](guides/KIRO_SETUP.md) — konfiguracja Kiro.
 - [I18N.md](guides/I18N.md) — workflow tłumaczeń i locale.
 - [TROUBLESHOOTING.md](guides/TROUBLESHOOTING.md) — szczegółowa referencja rozwiązywania problemów.
@@ -83,28 +83,21 @@ Materiały referencyjne — powierzchnia API, zmienne środowiskowe, flagi CLI, 
 Podsystemy wtykowe udostępniane klientom, agentom i operatorom.
 
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — serwer Model Context Protocol.
-- [A2A-SERVER.md](frameworks/A2A-SERVER.md) — serwer Agent-to-Agent (A2A) JSON-RPC.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
 - [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — przegląd agentów A2A / ACP / Cloud.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — most agenta IDE.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — katalog umiejętności agentów.
-- [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — runtime i dostawcy cloud agent.
 - [SKILLS.md](frameworks/SKILLS.md) — framework Skills (piaskownicowe rozszerzenie).
 - [MEMORY.md](frameworks/MEMORY.md) — trwała pamięć (FTS5 + Qdrant).
 - [WEBHOOKS.md](frameworks/WEBHOOKS.md) — zdarzenia webhook i dyspozycja.
-- [EVALS.md](frameworks/EVALS.md) — zestawy ewaluacji.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — system grywalizacji i rankingów.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — wbudowane usługi sidecar (9Router, CLIProxyAPI).
 - [NOTION_CONTEXT.md](frameworks/NOTION_CONTEXT.md) — źródło kontekstu Notion.
 - [OBSIDIAN_CONTEXT.md](frameworks/OBSIDIAN_CONTEXT.md) — źródło kontekstu Obsidian.
 - [OPENCODE.md](frameworks/OPENCODE.md) — integracja OpenCode.
 - [OPEN_SSE_ARCHITECTURE.md](frameworks/OPEN_SSE_ARCHITECTURE.md) — wnętrze silnika streamingu open-sse.
-- [PLAYGROUND_STUDIO.md](frameworks/PLAYGROUND_STUDIO.md) — UI Playground Studio.
 - [SEARCH_TOOLS_STUDIO.md](frameworks/SEARCH_TOOLS_STUDIO.md) — UI Search Tools Studio.
 - [TRAFFIC_INSPECTOR.md](frameworks/TRAFFIC_INSPECTOR.md) — inspector ruchu (MITM).
-- [PLUGINS.md](frameworks/PLUGINS.md) — przegląd systemu wtyczek CLI.
-- [PLUGIN_SDK.md](frameworks/PLUGIN_SDK.md) — referencja SDK wtyczek.
-- [PLUGIN_MARKETPLACE.md](frameworks/PLUGIN_MARKETPLACE.md) — marketplace wtyczek.
 
 ## routing/
 
@@ -152,7 +145,7 @@ Przewodniki integracji specyficzne dla dostawców.
 
 ## comparison/
 
-- [OMNIROUTE_VS_ALTERNATIVES.md](comparison/OMNIROUTE_VS_ALTERNATIVES.md) — jak OmniRoute wypada na tle alternatyw.
+- [OMNIROUTE_VS_ALTERNATIVES.md](comparison/OMNIROUTE_VS_ALTERNATIVES.md) — jak 67router wypada na tle alternatyw.
 
 ## ops/
 

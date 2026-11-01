@@ -198,13 +198,13 @@ builder එකෙන් පසුව සිදු කරන mutation මඟි�
 3. Depth cap: levels 4 ඉක්මවන nesting, `"[truncated]"` string එකෙන් ප්රතිස්ථාපනය කරනු ලැබේ.
 4. Arrays, elements 32 කට සීමා කරනු ලැබේ.
 
-Parsed provider error body එකක් ඇති call sites පමණක් `upstreamDetails` ලබා දිය යුතුය. අභ්යන්තර OmniRoute errors (SSE parse failures, හිස් content, guardrail blocks) එය ඇතුළත් නොකළ යුතුය.
+Parsed provider error body එකක් ඇති call sites පමණක් `upstreamDetails` ලබා දිය යුතුය. අභ්යන්තර 67router errors (SSE parse failures, හිස් content, guardrail blocks) එය ඇතුළත් නොකළ යුතුය.
 
 Raw `err.stack`, `err.message`, හෝ runtime exception එකකින් ලැබෙන කිසිදු string එකක්
 `upstreamDetails` වෙත ලබා නොදෙන්න. ඒවා upstream body එකක් නොමැතිව තවමත් `errorResponse` / `buildErrorBody(code, msg)`
 හරහා යා යුතුය.
 
-තෝරාගත් upstream 4xx passthrough මඟින් client auto-recovery සඳහා අවශ්ය providerගේ ආරක්ෂිත JSON හැඩය සහ වචන භාවිතය රඳවා ගනී, නමුත් එය byte-for-byte passthrough එකක් නොවේ: serialization කිරීමට පෙර recursive sanitizer එක සෑමවිටම ධාවනය වේ. Cyclic, BigInt-bearing, හෝ hostile `toJSON()` bodies ආරක්ෂිතව අසාර්ථක වන අතර passthrough සඳහා සුදුසුකම් නොලබයි. OCR සහ moderation ද එම නීතියම යොදයි; JSON නොවන, හිස්, හෝ වැරදි ලෙස ලේබල් කළ upstream bodies, සම්මත OmniRoute JSON error envelope එකට පරිවර්තනය කරනු ලැබේ.
+තෝරාගත් upstream 4xx passthrough මඟින් client auto-recovery සඳහා අවශ්ය providerගේ ආරක්ෂිත JSON හැඩය සහ වචන භාවිතය රඳවා ගනී, නමුත් එය byte-for-byte passthrough එකක් නොවේ: serialization කිරීමට පෙර recursive sanitizer එක සෑමවිටම ධාවනය වේ. Cyclic, BigInt-bearing, හෝ hostile `toJSON()` bodies ආරක්ෂිතව අසාර්ථක වන අතර passthrough සඳහා සුදුසුකම් නොලබයි. OCR සහ moderation ද එම නීතියම යොදයි; JSON නොවන, හිස්, හෝ වැරදි ලෙස ලේබල් කළ upstream bodies, සම්මත 67router JSON error envelope එකට පරිවර්තනය කරනු ලැබේ.
 
 ## දන්නා CodeQL සීමාව: අභිරුචි සනීපාරක්ෂක හඳුනා නොගැනීම
 

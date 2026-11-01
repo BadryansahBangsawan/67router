@@ -14,7 +14,7 @@ Dois perfis opcionais do Compose (`memory`, `bifrost`) para a implementação ex
 
 ## Por que motivo esta abordagem é conservadora
 
-A topologia de implementação existente do OmniRoute já é simples e comprovada:
+A topologia de implementação existente do 67router já é simples e comprovada:
 
 - **`redis:7-alpine`** gere a carga de trabalho de limitação de taxa/cache à escala de produção.
 - **SQLite + sqlite-vec + FTS5** asseguram memória local + vetores + pesquisa de texto (consulte [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Os dois perfis aqui apresentados são **opções de expansão para implementaç�
 
 - Executa ≥3 réplicas de `omniroute` e pretende centralizar a rotação de fornecedores num único processo Go.
 - Pretende uma única interface de auditoria/registo para pedidos a fornecedores a montante em todas as réplicas.
-- Pretende escalar horizontalmente a camada de encaminhamento de Nível 1, independentemente das réplicas do OmniRoute.
+- Pretende escalar horizontalmente a camada de encaminhamento de Nível 1, independentemente das réplicas do 67router.
 
 **O que adiciona:**
 

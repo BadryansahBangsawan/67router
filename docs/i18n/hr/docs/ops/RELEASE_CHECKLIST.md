@@ -45,7 +45,7 @@ njime se vraća potpuno automatski tijek koji je projekt imao do v3.8.48, uz zad
 jamstva WS1.3 (procurjeli token ne može samostalno objavljivati — token ne postoji).
 
 **Jednokratno postavljanje (vlasnik):** npmjs.com → paket `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: vlasnik `diegosouzapw`, repozitorij `OmniRoute`, tijek rada `npm-publish.yml`
+Publisher_ → GitHub: vlasnik `diegosouzapw`, repozitorij `67router`, tijek rada `npm-publish.yml`
 (okruženje: nijedno). Dok to ne postoji, automatski korak ne uspijeva uz `ENEEDAUTH`:
 ponovno ga pokrenite s `publish_mode=staged` (u nastavku) ili `direct`.
 

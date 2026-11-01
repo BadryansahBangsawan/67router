@@ -25,10 +25,10 @@ export default function TranslatorConceptCard() {
   );
 
   return (
-    <Card className="border-primary/10 bg-primary/5">
+    <Card>
       <div className="p-4 space-y-3">
         <div className="flex items-start gap-3">
-          <Icon name="info" size={22} className="text-primary mt-0.5" />
+          <Icon name="info" size={18} className="mt-0.5 text-text-muted" />
           <div className="flex-1 min-w-0">
             <h2 className="text-sm font-semibold text-text-main mb-1">
               {tr(
@@ -53,7 +53,7 @@ export default function TranslatorConceptCard() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="translator-concept-how-it-works"
-          className="w-full justify-start text-xs font-medium text-primary"
+          className="w-full justify-start text-xs font-medium text-text-main"
         >
           <span>{tr("conceptHowItWorksToggle", "How it works")}</span>
           <Icon name={open ? "expand_less" : "expand_more"} size={16} />

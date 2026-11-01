@@ -6,7 +6,7 @@
 
 ## Přehled
 
-Příkazy OmniRoute CLI se vůči místnímu rozhraní API pro správu ověřují pomocí
+Příkazy 67router CLI se vůči místnímu rozhraní API pro správu ověřují pomocí
 tokenu `HMAC-SHA256(machine-id, salt)` odesílaného v hlavičce požadavku
 `x-omniroute-cli-token`.
 

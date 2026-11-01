@@ -4,18 +4,18 @@
 
 ---
 
-Ushbu hujjat OmniRouteʼga qoʻshilgan, qayta aloqa asosida ishlaydigan adaptiv marshrutlash poydevorini tavsiflaydi. U ataylab ixcham qilingan: hujjat tiplashtirilgan marshrutlash natijalari kanalini, mavjud auto-combo baholagichiga uzatiladigan onlayn sifat signalini, ixtiyoriy OpenTelemetry eksportchisini va tushuntirish imkoniyatini taʼminlovchi endpointni taqdim etadi. U mavjud barqarorlik stekini (avariya uzgichi, ulanishni vaqtincha toʻxtatish, modelni bloklash, holat matritsasi, avtopilot) **almashtirmaydi** — balki uni toʻldiradi.
+Ushbu hujjat 67routerʼga qoʻshilgan, qayta aloqa asosida ishlaydigan adaptiv marshrutlash poydevorini tavsiflaydi. U ataylab ixcham qilingan: hujjat tiplashtirilgan marshrutlash natijalari kanalini, mavjud auto-combo baholagichiga uzatiladigan onlayn sifat signalini, ixtiyoriy OpenTelemetry eksportchisini va tushuntirish imkoniyatini taʼminlovchi endpointni taqdim etadi. U mavjud barqarorlik stekini (avariya uzgichi, ulanishni vaqtincha toʻxtatish, modelni bloklash, holat matritsasi, avtopilot) **almashtirmaydi** — balki uni toʻldiradi.
 
 ## 1. Arxitekturaviy kontekst
 
-OmniRoute — **soʻrovlarning tezkor yoʻli** va **boshqaruv/intellekt tekisligi**ga ega maʼlumotlar tekisligidir. Tezkor yoʻl tez, xotiradan samarali foydalanuvchi, asinxron, barqaror va oldindan bashorat qilinadigan boʻlib qolishi kerak. Baholash, sifatni hisoblash, tajribalar va tarixiy tahlil boshqaruv tekisligiga tegishli.
+67router — **soʻrovlarning tezkor yoʻli** va **boshqaruv/intellekt tekisligi**ga ega maʼlumotlar tekisligidir. Tezkor yoʻl tez, xotiradan samarali foydalanuvchi, asinxron, barqaror va oldindan bashorat qilinadigan boʻlib qolishi kerak. Baholash, sifatni hisoblash, tajribalar va tarixiy tahlil boshqaruv tekisligiga tegishli.
 
 ```
 AI agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   maʼlumotlar tekisligi (tezkor, sinxron, xotirada)
+│    67router        │   maʼlumotlar tekisligi (tezkor, sinxron, xotirada)
 │  marshrutlash /     │
 │  zaxiraga oʻtish    │
 │  holat / himoya     │
@@ -36,16 +36,15 @@ AI agent / IDE
 
 ### Avvaldan mavjud boʻlgan qismlar (auditdan oʻtkazilgan, takrorlanmagan)
 
-| Tushuncha                                       | Mavjud amalga oshirish                                                                                              |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Mavjudlik (trafik yubora olamizmi?)             | Avariya uzgichi (CLOSED/DEGRADED/OPEN/HALF_OPEN, DBʼda saqlanadi), ulanishni vaqtincha toʻxtatish, modelni bloklash |
-| Holat hisobotlari                               | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
-| Soyali trafik                                   | `open-sse/services/combo/shadowRouting.ts`                                                                          |
-| Himoya mexanizmlari                             | `src/lib/guardrails/` (oldingi/keyingi hookʼlar)                                                                    |
-| Aniq kesh                                       | `src/lib/semanticCache.ts` (imzoga asoslangan)                                                                      |
-| Baholagichlar / baholash asosidagi marshrutlash | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                |
-| Combo qarorlarining tushuntirilishi             | `open-sse/services/combo/decisionTrace.ts`                                                                          |
-| Boshqaruv panelining real vaqt hodisalari       | `src/lib/events/eventBus.ts` (UI bildirishnoma kanali, `unknown` foydali yuklar, 100 ta yozuv tarixi)               |
+| Tushuncha                                 | Mavjud amalga oshirish                                                                                              |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Mavjudlik (trafik yubora olamizmi?)       | Avariya uzgichi (CLOSED/DEGRADED/OPEN/HALF_OPEN, DBʼda saqlanadi), ulanishni vaqtincha toʻxtatish, modelni bloklash |
+| Holat hisobotlari                         | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
+| Soyali trafik                             | `open-sse/services/combo/shadowRouting.ts`                                                                          |
+| Himoya mexanizmlari                       | `src/lib/guardrails/` (oldingi/keyingi hookʼlar)                                                                    |
+| Aniq kesh                                 | `src/lib/semanticCache.ts` (imzoga asoslangan)                                                                      |
+| Combo qarorlarining tushuntirilishi       | `open-sse/services/combo/decisionTrace.ts`                                                                          |
+| Boshqaruv panelining real vaqt hodisalari | `src/lib/events/eventBus.ts` (UI bildirishnoma kanali, `unknown` foydali yuklar, 100 ta yozuv tarixi)               |
 
 Marshrutlash hodisalari qatlami `eventBus`ning qayta amalga oshirilishi **emas**: bu shina boshqaruv panelining real vaqt bildirishnomalari kanali (tiplashtirilgan _hodisa nomlari_, noaniq foydali yuklar, UI isteʼmolchilari). `RoutingEvent` esa boshqaruv tekisligining qayta aloqa qabul qiluvchilari (sifat kuzatuvchisi, OTel eksportchisi, izohlar ombori) tomonidan isteʼmol qilinadigan tiplashtirilgan _natija_ tuzilmasidir (kechikish/tokenlar/xarajat/natija/yakunlanish sababi).
 
@@ -222,7 +221,7 @@ Fayllar: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK ishlatilmaydi).
 - Spanlar GenAI semantik konvensiyalariga (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) hamda OmniRoute marshrutlash
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) hamda 67router marshrutlash
   atributlariga (natija, holat, ttft, qayta urinishlar, zaxira variant) amal qiladi.
 - `record()` faqat cheklangan bufer navbatiga qo‘shadi (O(1)); fon taymeri
   `POST {endpoint}/v1/traces` orqali asinxron yuboradi. Ortiqcha yuklama paytida
@@ -246,7 +245,7 @@ Fayllar: `open-sse/services/routing/otel.ts`
 
 ## 6. Baholash qatlamini integratsiya qilish (Future AGI uchun tayyorgarlik)
 
-OmniRoute Future AGI (yoki istalgan baholovchi)ni **bog‘liqlik emas, balki
+67router Future AGI (yoki istalgan baholovchi)ni **bog‘liqlik emas, balki
 potensial intellekt/baholash bekendi** sifatida ko‘radi. Integratsiya nuqtalari:
 
 - `RoutingEventSink` hodisalarni baholovchiga asinxron yo‘naltirishi mumkin.
@@ -255,8 +254,6 @@ potensial intellekt/baholash bekendi** sifatida ko‘radi. Integratsiya nuqtalar
 - Kelajakdagi `Evaluator` (deterministik, lokal hakam, HTTP, WASM)
   hodisalar/izlarni iste’mol qilib, ayni `getQualityScore`/sifat omili yo‘liga
   uzatiladigan `QualityScore`ni qaytaradi.
-- Mavjud baholashga asoslangan marshrutlash (`open-sse/services/evalRouting.ts`)
-  yoqilganda kombinatsiya nishonlarini `eval_runs` muvaffaqiyat ko‘rsatkichlari
   bo‘yicha allaqachon qayta tartiblaydi.
 
 Hech qanday baholash so‘rov yo‘lida sinxron bajarilmaydi va shlyuz baholovchisiz

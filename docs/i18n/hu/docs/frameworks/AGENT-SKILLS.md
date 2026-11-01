@@ -1,4 +1,4 @@
-# OmniRoute Agent Skills Catalog (Magyar)
+# 67router Agent Skills Catalog (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/AGENT-SKILLS.md) · 🇪🇹 [am](../../../am/docs/frameworks/AGENT-SKILLS.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/AGENT-SKILLS.md) · 🇦🇿 [az](../../../az/docs/frameworks/AGENT-SKILLS.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/AGENT-SKILLS.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/AGENT-SKILLS.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/AGENT-SKILLS.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/AGENT-SKILLS.md) · 🇩🇰 [da](../../../da/docs/frameworks/AGENT-SKILLS.md) · 🇩🇪 [de](../../../de/docs/frameworks/AGENT-SKILLS.md) · 🇬🇷 [el](../../../el/docs/frameworks/AGENT-SKILLS.md) · 🇪🇸 [es](../../../es/docs/frameworks/AGENT-SKILLS.md) · 🇪🇪 [et](../../../et/docs/frameworks/AGENT-SKILLS.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/AGENT-SKILLS.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/AGENT-SKILLS.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/AGENT-SKILLS.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/AGENT-SKILLS.md) · 🇮🇱 [he](../../../he/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/AGENT-SKILLS.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/AGENT-SKILLS.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/AGENT-SKILLS.md) · 🇮🇩 [id](../../../id/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/AGENT-SKILLS.md) · 🇮🇹 [it](../../../it/docs/frameworks/AGENT-SKILLS.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/AGENT-SKILLS.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/AGENT-SKILLS.md) · 🇰🇭 [km](../../../km/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/AGENT-SKILLS.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/AGENT-SKILLS.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/AGENT-SKILLS.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/AGENT-SKILLS.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/AGENT-SKILLS.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/AGENT-SKILLS.md) · 🇲🇲 [my](../../../my/docs/frameworks/AGENT-SKILLS.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/AGENT-SKILLS.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/AGENT-SKILLS.md) · 🇳🇴 [no](../../../no/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [or](../../../or/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/AGENT-SKILLS.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/AGENT-SKILLS.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/AGENT-SKILLS.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/AGENT-SKILLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/AGENT-SKILLS.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/AGENT-SKILLS.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/AGENT-SKILLS.md) · 🇱🇰 [si](../../../si/docs/frameworks/AGENT-SKILLS.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/AGENT-SKILLS.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/AGENT-SKILLS.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/AGENT-SKILLS.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/AGENT-SKILLS.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/AGENT-SKILLS.md) · 🇮🇳 [te](../../../te/docs/frameworks/AGENT-SKILLS.md) · 🇹🇭 [th](../../../th/docs/frameworks/AGENT-SKILLS.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/AGENT-SKILLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/AGENT-SKILLS.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/AGENT-SKILLS.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/AGENT-SKILLS.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/AGENT-SKILLS.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/AGENT-SKILLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/AGENT-SKILLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/AGENT-SKILLS.md)
 
@@ -7,13 +7,13 @@
 > **Hiteles forrás:** `src/lib/agentSkills/` (katalógus, generátor, elemzők) + `skills/` könyvtár (SKILL.md fájlok)
 > **Utolsó frissítés:** 2026-08-02 — v3.8.50
 
-Az Agent Skills strukturált SKILL.md fájlok, amelyek megtanítják a külső ügynököknek, MCP-klienseknek és A2A-orkesztrátoroknak, hogyan használják az OmniRoute REST API-ját és CLI-jét. Az [Omni Skills](./SKILLS.md) funkciótól eltérően (amely az OmniRoute-on belül végrehajtott LLM-eszközdefiníciókat tartalmazza) az Agent Skills egy _dokumentációs katalógus_ — statikus markdown-tartalom, amely közvetlenül beilleszthető az ügynök kontextusába.
+Az Agent Skills strukturált SKILL.md fájlok, amelyek megtanítják a külső ügynököknek, MCP-klienseknek és A2A-orkesztrátoroknak, hogyan használják a 67router REST API-ját és CLI-jét. Az [Omni Skills](./SKILLS.md) funkciótól eltérően (amely a 67router-on belül végrehajtott LLM-eszközdefiníciókat tartalmazza) az Agent Skills egy _dokumentációs katalógus_ — statikus markdown-tartalom, amely közvetlenül beilleszthető az ügynök kontextusába.
 
 ---
 
 ## Áttekintés
 
-A katalógus **45 Agent Skillt** tartalmaz (23 REST API + 21 CLI + 1 konfigurációs munkafolyamat). Minden skill a következőkkel rendelkezik:
+A katalógus **43 Agent Skillt** tartalmaz (22 REST API + 20 CLI + 1 konfigurációs munkafolyamat). Minden skill a következőkkel rendelkezik:
 
 - Egy **kanonikus azonosító** (`omni-auth`, `cli-serve` stb.)
 - Egy **SKILL.md** fájl a `skills/{id}/SKILL.md` helyen, YAML frontmatterrel (`name`, `description`) és részletes markdown-törzzsel
@@ -44,7 +44,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (hitelesítés szükséges)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP-eszköz (listázás, lekérés, lefedettség)
-src/lib/a2a/skills/listCapabilities.ts        — A2A-skill: list-capabilities
 ```
 
 ---
@@ -140,8 +139,6 @@ A `list-capabilities` A2A-készség a teljes, 45 készséget tartalmazó kataló
 }
 ```
 
-A protokoll részleteit lásd az [A2A-SERVER.md](./A2A-SERVER.md) dokumentumban.
-
 ---
 
 ## Katalógus — 45 készségazonosító
@@ -175,29 +172,27 @@ A protokoll részleteit lásd az [A2A-SERVER.md](./A2A-SERVER.md) dokumentumban.
 
 ### CLI-készségek (21)
 
-| Azonosító             | Terület            | CLI-parancs gyökere     |
-| :-------------------- | :----------------- | :---------------------- |
-| `cli-serve`           | cli-serve          | `omniroute serve`       |
-| `cli-health`          | cli-health         | `omniroute health`      |
-| `cli-providers`       | cli-providers      | `omniroute providers`   |
-| `cli-keys`            | cli-keys           | `omniroute keys`        |
-| `cli-models`          | cli-models         | `omniroute models`      |
-| `cli-chat`            | cli-chat           | `omniroute chat`        |
-| `cli-routing`         | cli-routing        | `omniroute routing`     |
-| `cli-resilience`      | cli-resilience     | `omniroute resilience`  |
-| `cli-compression`     | cli-compression    | `omniroute compression` |
-| `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
-| `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
-| `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
-| `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
-| `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
-| `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
-| `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
-| `cli-setup`           | cli-setup          | `omniroute setup`       |
-| `cli-skill-collector` | cli-setup          | `omniroute skills`      |
+| Azonosító             | Terület          | CLI-parancs gyökere     |
+| :-------------------- | :--------------- | :---------------------- |
+| `cli-serve`           | cli-serve        | `omniroute serve`       |
+| `cli-health`          | cli-health       | `omniroute health`      |
+| `cli-providers`       | cli-providers    | `omniroute providers`   |
+| `cli-keys`            | cli-keys         | `omniroute keys`        |
+| `cli-models`          | cli-models       | `omniroute models`      |
+| `cli-chat`            | cli-chat         | `omniroute chat`        |
+| `cli-routing`         | cli-routing      | `omniroute routing`     |
+| `cli-resilience`      | cli-resilience   | `omniroute resilience`  |
+| `cli-compression`     | cli-compression  | `omniroute compression` |
+| `cli-contexts`        | cli-contexts     | `omniroute contexts`    |
+| `cli-cost-usage`      | cli-cost-usage   | `omniroute cost`        |
+| `cli-mcp`             | cli-mcp          | `omniroute mcp`         |
+| `cli-tunnel`          | cli-tunnel       | `omniroute tunnel`      |
+| `cli-backup-sync`     | cli-backup-sync  | `omniroute backup`      |
+| `cli-policy-audit`    | cli-policy-audit | `omniroute policy`      |
+| `cli-batches`         | cli-batches      | `omniroute batch`       |
+| `cli-eval`            | cli-eval         | `omniroute simulate`    |
+| `cli-setup`           | cli-setup        | `omniroute setup`       |
+| `cli-skill-collector` | cli-setup        | `omniroute skills`      |
 
 ### Konfigurációs munkafolyamat (1)
 
@@ -312,6 +307,5 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 - [SKILLS.md](./SKILLS.md) — Omni Skills keretrendszer (LLM-eszközinjektálás + piactér)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-eszközkatalógus (`omniroute_agent_skills_*` eszközök)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-protokoll (`list-capabilities` készség)
 - `src/lib/agentSkills/` — katalógus, generátor, elemzők
 - `skills/` — generált SKILL.md fájlok (45 bejegyzés)

@@ -5,11 +5,11 @@
 ---
 
 > **Status:** Allmänt tillgänglig.
-> **Målgrupp:** Operatörer som kopplar OpenCode till en OmniRoute-distribution.
+> **Målgrupp:** Operatörer som kopplar OpenCode till en 67router-distribution.
 > **Sanningskälla (konfigurationsschema):** `src/shared/services/opencodeConfig.ts`
 > **Sanningskälla (npm-paket):** `@omniroute/opencode-provider/` (publicerbar arbetsyta)
 
-[OpenCode](https://opencode.ai) är en agentbaserad AI-klient för CLI och skrivbord. Den läser sin leverantörskatalog från `~/.config/opencode/opencode.json` (eller `opencode.jsonc`) och följer schemat på `https://opencode.ai/config.json`. OmniRoute exponerar sig för OpenCode som en av dessa leverantörer — varje begäran går genom OmniRoutes standardiserade OpenAI-kompatibla `/v1`-gränssnitt, så OpenCode får automatiskt fördelarna med Auto-Combo-dirigering, kretsbrytare, nyckelpolicyer, observerbarhet osv.
+[OpenCode](https://opencode.ai) är en agentbaserad AI-klient för CLI och skrivbord. Den läser sin leverantörskatalog från `~/.config/opencode/opencode.json` (eller `opencode.jsonc`) och följer schemat på `https://opencode.ai/config.json`. 67router exponerar sig för OpenCode som en av dessa leverantörer — varje begäran går genom 67routers standardiserade OpenAI-kompatibla `/v1`-gränssnitt, så OpenCode får automatiskt fördelarna med Auto-Combo-dirigering, kretsbrytare, nyckelpolicyer, observerbarhet osv.
 
 Det finns **två integrationsvägar som stöds**. Välj en — de genererar samma konfiguration.
 
@@ -17,16 +17,16 @@ Det finns **två integrationsvägar som stöds**. Välj en — de genererar samm
 
 ## Väg 1 — CLI-generator (ingen npm-installation)
 
-Rekommenderas för slutanvändare. Medföljer OmniRoute. Skriver `opencode.json` direkt.
+Rekommenderas för slutanvändare. Medföljer 67router. Skriver `opencode.json` direkt.
 
 ```bash
-# Efter installation av OmniRoute (npm i -g @omniroute/cli eller lokal klon)
+# Efter installation av 67router (npm i -g @omniroute/cli eller lokal klon)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Bakom kulisserna anropar CLI:t `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), så en befintlig `opencode.json` behåller sina övriga leverantörer och kommentarer. OmniRoute-posten läggs till eller ersätts atomärt.
+Bakom kulisserna anropar CLI:t `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), så en befintlig `opencode.json` behåller sina övriga leverantörer och kommentarer. 67router-posten läggs till eller ersätts atomärt.
 
 Resulterande fil (standardkatalog för modeller):
 
@@ -90,8 +90,8 @@ Båda vägarna producerar samma `provider.omniroute.npm: "@ai-sdk/openai-compati
 ```
 OpenCode-gränssnitt/agent
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoutes OpenAI-gränssnitt)
-         → OmniRoutes hanterare för /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67routers OpenAI-gränssnitt)
+         → 67routers hanterare för /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → kombinationsdirigering / Auto-Combo / exekverare
                → uppströmsleverantör
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Du kan åsidosätta detta via `models: [...]`. Rekommenderade tillägg:
 
-- `"auto"` — gör OmniRoutes [Auto-Combo](../routing/AUTO-COMBO.md), en router utan konfiguration, tillgänglig. Låter OpenCode välja ”den bästa tillgängliga modellen” utan att du hårdkodar katalogen.
-- `"<combo-name>"` — valfri kombination som du har definierat i instrumentpanelen; OmniRoute matchar den transparent.
+- `"auto"` — gör 67routers [Auto-Combo](../routing/AUTO-COMBO.md), en router utan konfiguration, tillgänglig. Låter OpenCode välja ”den bästa tillgängliga modellen” utan att du hårdkodar katalogen.
+- `"<combo-name>"` — valfri kombination som du har definierat i instrumentpanelen; 67router matchar den transparent.
 
 ---
 
@@ -135,12 +135,12 @@ Denna deduplicering är **det vanligaste felet** i äldre konfigurationer. Om du
 
 ## Autentiseringslägen
 
-| OmniRoute-inställning                     | Rekommenderat värde för `apiKey`                              |
+| 67router-inställning                      | Rekommenderat värde för `apiKey`                              |
 | ----------------------------------------- | ------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (standard lokalt) | `sk_omniroute` (bokstavlig platshållare)                      |
 | `REQUIRE_API_KEY=true`                    | En riktig API-nyckel per användare från Dashboard → API Keys. |
 
-För klienter av Anthropic-typ som skickar `x-api-key` + `anthropic-version` godtar OmniRoutes `extractApiKey` även nyckeln från `x-api-key`. OpenCode använder OpenAI-gränssnittet, så det skickar alltid `Authorization: Bearer ${apiKey}` — inget särskilt Anthropic-fall gäller här.
+För klienter av Anthropic-typ som skickar `x-api-key` + `anthropic-version` godtar 67routers `extractApiKey` även nyckeln från `x-api-key`. OpenCode använder OpenAI-gränssnittet, så det skickar alltid `Authorization: Bearer ${apiKey}` — inget särskilt Anthropic-fall gäller här.
 
 ---
 
@@ -149,15 +149,15 @@ För klienter av Anthropic-typ som skickar `x-api-key` + `anthropic-version` god
 | Symptom                                                     | Orsak                                                                                      | Åtgärd                                                                                                          |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | `404` för varje begäran med en URL som innehåller `/v1/v1/` | Inaktuell konfiguration från ett plugin före v3.8 som lade till suffixet `/v1` två gånger. | Generera om via väg 1 eller 2.                                                                                  |
-| `401 Invalid API key`                                       | OmniRoute har `REQUIRE_API_KEY=true` och nyckeln är okänd.                                 | Skapa nyckeln i instrumentpanelen eller ange `REQUIRE_API_KEY=false` (endast lokalt) och använd `sk_omniroute`. |
-| Modellistan är tom i OpenCodes användargränssnitt           | Alla fyra standardmodeller är dolda genom OmniRoutes leverantörssynlighet.                 | Skicka `models: ["auto", ...]` för att visa de modeller du har aktiverat.                                       |
+| `401 Invalid API key`                                       | 67router har `REQUIRE_API_KEY=true` och nyckeln är okänd.                                  | Skapa nyckeln i instrumentpanelen eller ange `REQUIRE_API_KEY=false` (endast lokalt) och använd `sk_omniroute`. |
+| Modellistan är tom i OpenCodes användargränssnitt           | Alla fyra standardmodeller är dolda genom 67routers leverantörssynlighet.                  | Skicka `models: ["auto", ...]` för att visa de modeller du har aktiverat.                                       |
 | OpenCode 500 med `cannot read property 'models'`            | Äldre OpenCode (< 0.1.x) godtog inte infogade `models`.                                    | Uppgradera OpenCode till en version som följer v1-schemat (`opencode.ai/config.json`).                          |
 
 ---
 
 ## Se även
 
-- [API-referens](../reference/API_REFERENCE.md) — hela OmniRoute REST-ytan
+- [API-referens](../reference/API_REFERENCE.md) — hela 67router REST-ytan
 - [Auto-Combo](../routing/AUTO-COMBO.md) — vad `model: "auto"` betyder
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Källa: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

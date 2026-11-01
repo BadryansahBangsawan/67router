@@ -8,13 +8,9 @@ import { test } from "node:test";
 
 // Keep MCP audit attempts away from a real user database in standalone runs.
 import "../_setup/isolateDataDir.ts";
-import type { A2ATask } from "../../src/lib/a2a/taskManager.ts";
 
 const { closeAuditDb } = await import("../../open-sse/mcp-server/audit.ts");
-const { handleRouteRequest } =
-  await import("../../open-sse/mcp-server/tools/inferenceTools.ts");
-const { executeSmartRouting } =
-  await import("../../src/lib/a2a/skills/smartRouting.ts");
+const { handleRouteRequest } = await import("../../open-sse/mcp-server/tools/inferenceTools.ts");
 
 test.after(() => closeAuditDb());
 
@@ -57,21 +53,6 @@ async function withCapturedFetch<T>(
   }
 }
 
-function smartRoutingTask(metadata: Record<string, unknown>): A2ATask {
-  return {
-    id: "combo-routing-17188",
-    skill: "smart-routing",
-    state: "working",
-    input: { skill: "smart-routing", messages, metadata },
-    artifacts: [],
-    events: [],
-    metadata: {},
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-    expiresAt: new Date(Date.now() + 60_000).toISOString(),
-  };
-}
-
 test("#17188 MCP route_request dispatches requested combo as model", async () => {
   const { value, calls } = await withCapturedFetch(() =>
     handleRouteRequest({ model: "openai/gpt-6", messages, combo: "Coding Team [1m]" })
@@ -100,59 +81,4 @@ test("#17188 MCP rejects invalid combo without contacting the gateway", async ()
   );
   assert.equal("isError" in value && value.isError, true);
   assert.equal(calls.length, 0);
-});
-
-test("#17188 A2A honors metadata.combo for actual chat dispatch", async () => {
-  const response = { ...completion, combo: "Team [1m]" };
-  const { value, calls } = await withCapturedFetch(
-    () => executeSmartRouting(smartRoutingTask({ model: "auto", combo: " Team [1m] " })),
-    response
-  );
-  assert.equal(calls.length, 1);
-  assert.match(calls[0].url, /\/v1\/chat\/completions$/);
-  assert.equal(calls[0].body.model, "Team [1m]");
-  assert.equal(calls[0].body["x-combo"], undefined);
-  assert.equal(value.metadata.requested_combo, "Team [1m]");
-  assert.equal(value.metadata.confirmed_combo, "Team [1m]");
-  assert.equal(value.metadata.dispatched_model, "Team [1m]");
-  assert.equal(value.metadata.response_model, "anthropic/claude-sonnet");
-});
-
-test("#17188 A2A does not claim an unconfirmed combo in telemetry", async () => {
-  const { value, calls } = await withCapturedFetch(() =>
-    executeSmartRouting(smartRoutingTask({ combo: "My Custom Combo" }))
-  );
-  assert.equal(calls.length, 1);
-  assert.equal(calls[0].body.model, "My Custom Combo");
-  assert.equal(value.metadata.requested_combo, "My Custom Combo");
-  assert.equal(value.metadata.confirmed_combo, null);
-  assert.equal(value.metadata.dispatched_model, "My Custom Combo");
-});
-
-test("#17188 A2A without a combo preserves model selection and an empty request record", async () => {
-  const { value, calls } = await withCapturedFetch(() =>
-    executeSmartRouting(smartRoutingTask({ model: "gemini/test" }))
-  );
-  assert.equal(calls.length, 1);
-  assert.equal(calls[0].body.model, "gemini/test");
-  assert.equal(value.metadata.requested_combo, null);
-  assert.equal(value.metadata.confirmed_combo, null);
-});
-
-test("#17188 A2A rejects malformed combo before sending a request", async () => {
-  const original = globalThis.fetch;
-  let calls = 0;
-  globalThis.fetch = (async () => {
-    calls++;
-    return new Response(JSON.stringify(completion));
-  }) as typeof globalThis.fetch;
-  try {
-    await assert.rejects(
-      () => executeSmartRouting(smartRoutingTask({ model: "auto", combo: {} })),
-      /combo must be a non-empty string/
-    );
-    assert.equal(calls, 0);
-  } finally {
-    globalThis.fetch = original;
-  }
 });

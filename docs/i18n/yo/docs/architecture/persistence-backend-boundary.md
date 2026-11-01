@@ -10,7 +10,7 @@
 
 ## Àyíká
 
-Lọ́wọ́lọ́wọ́, OmniRoute ń pèsè àwọn iṣẹ́ ìtọ́jú-dátà tó dá lórí ẹ̀ka láti `src/lib/db/`, nígbà tí
+Lọ́wọ́lọ́wọ́, 67router ń pèsè àwọn iṣẹ́ ìtọ́jú-dátà tó dá lórí ẹ̀ka láti `src/lib/db/`, nígbà tí
 àsopọ̀ àjọpín tí `src/lib/db/core.ts` dá padà ń mú àdéhùn `SqliteAdapter` alámúṣiṣẹpọ̀ tó wà nínú
 `src/lib/db/adapters/types.ts` ṣẹ. Adapter náà ṣe àtìlẹ́yìn fún ọ̀pọ̀ runtime SQLite, ṣùgbọ́n ojú-ìlò
 rẹ̀ ṣì jẹ́ èyí tí a mọ̀ sí ti SQLite: àwọn gbólóhùn tí a ti pèsè sílẹ̀ tó ń ṣiṣẹ́ ní ìbámu, `pragma`,

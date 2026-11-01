@@ -28,9 +28,9 @@ Tunnelit on vaja ainult tööriistapööreteks. Iga loetletud marsruut, sealhulg
    nimi. Uued tööriistu toetavad seadistused peavad kasutama äsja loodud konnektorit täpse nimega
    `OmniRoute Codex v2`, mille Authentication on seatud väärtusele None ja Permissions väärtusele Allow all
    actions.
-3. Käivitage ühenduse kontroll. OmniRoute avab brauseripõhise ajutise vestluse Temporary Chat ja tuvastab,
+3. Käivitage ühenduse kontroll. 67router avab brauseripõhise ajutise vestluse Temporary Chat ja tuvastab,
    kas Sol ja Pro on konto jaoks saadaval.
-4. Salvestage ühendus. OmniRoute asendab kleebitud küpsise kontrollitud
+4. Salvestage ühendus. 67router asendab kleebitud küpsise kontrollitud
    Playwrighti salvestusolekuga ja talletab selle koos käitusvõtmega krüpteeritud
    mandaadiabstraktsiooni kaudu.
 
@@ -72,18 +72,18 @@ Free/Go kontod pakuvad Luna marsruute. Soli toega kontod pakuvad marsruute Insta
 
 ## Ekraanita VPS ja Docker
 
-npm-i, systemd ja PM2 paigalduste puhul tuvastab OmniRoute levinud Chrome'i ja Chromiumi asukohad.
+npm-i, systemd ja PM2 paigalduste puhul tuvastab 67router levinud Chrome'i ja Chromiumi asukohad.
 Teise võimalusena määrake `CHATGPT_WEB_CODEX_CHROME_PATH`. Käitusaja voorud kasutavad teadlikult
 graafilise kasutajaliidesega Chrome'i, sest ChatGPT lükkab tagasi tegeliku peata brauseri kuju. Seetõttu peab
-ekraanita host käitama OmniRoute'i privaatsel Xvfb-ekraanil; ainult Chrome'i asukoha määramine seda ei paku.
+ekraanita host käitama 67router'i privaatsel Xvfb-ekraanil; ainult Chrome'i asukoha määramine seda ei paku.
 
 Dockeri `web`-profiil käivitab sisemises Compose'i võrgus `chatgpt-web-codex-browser`.
 Kõrvalkonteiner käitab graafilise kasutajaliidesega Chrome'i Xvfb sees, seega pole füüsilist ekraani vaja. Selle CDP-porti
-hostis ei avaldata. Kaitstud brauseriprofiili andmeköide on OmniRoute'i
+hostis ei avaldata. Kaitstud brauseriprofiili andmeköide on 67router'i
 andmeköitest eraldi ning brauserile eraldatakse piisavalt ühismälu. Sisemine CDP-puhverserver
 kuulab ainult porti `9223` Compose'i võrgus; Chrome jääb kõrvalkonteineris seotuks tagasisideaadressiga.
 
-`DATA_DIR` all olev järelevaataja liising takistab mitmel OmniRoute'i protsessil sama tunneli ja maakleri oleku
+`DATA_DIR` all olev järelevaataja liising takistab mitmel 67router'i protsessil sama tunneli ja maakleri oleku
 ülevõtmist. Konfliktist teatab diagnostikatööriist.
 
 ## Interaktiivne taastamine

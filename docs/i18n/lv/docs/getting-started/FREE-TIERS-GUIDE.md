@@ -4,7 +4,7 @@
 
 ---
 
-> **Īsumā**: Izmantojiet savus atbilstošos pakalpojumu sniedzēju kontus. OmniRoute apvieno jūsu konfigurētos savienojumus; tas nepiešķir reklamēto kopējo marķieru budžetu. Bezmaksas piekļuvei var būt nepieciešama reģistrācija, API atslēga, apstiprinājums vai maksājuma veids. Joprojām ir spēkā pakalpojumu sniedzēju ierobežojumi, privātuma politikas un noteikumi.
+> **Īsumā**: Izmantojiet savus atbilstošos pakalpojumu sniedzēju kontus. 67router apvieno jūsu konfigurētos savienojumus; tas nepiešķir reklamēto kopējo marķieru budžetu. Bezmaksas piekļuvei var būt nepieciešama reģistrācija, API atslēga, apstiprinājums vai maksājuma veids. Joprojām ir spēkā pakalpojumu sniedzēju ierobežojumi, privātuma politikas un noteikumi.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Daudzi AI pakalpojumu sniedzēji piedāvā kādu **bezmaksas piekļuves** veidu. Atkarībā no pakalpojumu sniedzēja tas var nozīmēt galapunktu bez autentifikācijas, periodiski atjaunojamu kvotu, ātruma ierobežotu piekļuvi bez kopējā apjoma ierobežojuma, reģistrācijas bonusu, manuālu apstiprināšanu vai īslaicīgu akciju. Dažām iespējām ir nepieciešams konts, API atslēga, kredītkarte, KYC vai piekrišana pakalpojumu sniedzēja īpašajiem noteikumiem.
 
-OmniRoute **apkopo** konfigurētos savienojumus vienā galapunktā. Jums joprojām ir atsevišķi jāreģistrējas pie katra pakalpojumu sniedzēja, kas pieprasa kontu. Savienojiet šos kontus un izmantojiet `model: "auto"`, lai maršrutētu pieprasījumus starp atbilstošajiem mērķiem. Svaigā instalācijā var nebūt neviena atbilstoša mērķa, kam nav nepieciešama atslēga; tikai OmniRoute instalēšana negarantē veiksmīgas tērzēšanas atbildes saņemšanu.
+67router **apkopo** konfigurētos savienojumus vienā galapunktā. Jums joprojām ir atsevišķi jāreģistrējas pie katra pakalpojumu sniedzēja, kas pieprasa kontu. Savienojiet šos kontus un izmantojiet `model: "auto"`, lai maršrutētu pieprasījumus starp atbilstošajiem mērķiem. Svaigā instalācijā var nebūt neviena atbilstoša mērķa, kam nav nepieciešama atslēga; tikai 67router instalēšana negarantē veiksmīgas tērzēšanas atbildes saņemšanu.
 
 ---
 
@@ -57,7 +57,7 @@ OmniRoute **apkopo** konfigurētos savienojumus vienā galapunktā. Jums joproj�
 
 ## Kā apvienot bezmaksas līmeņus
 
-OmniRoute galvenā priekšrocība ir **bezmaksas līmeņu apvienošana**. Tā vietā, lai paļautos uz vienu pakalpojumu sniedzēju, jūs pievienojat vairākus bezmaksas pakalpojumu sniedzējus un ļaujat OmniRoute automātiski izvēlēties katram pieprasījumam piemērotāko.
+67router galvenā priekšrocība ir **bezmaksas līmeņu apvienošana**. Tā vietā, lai paļautos uz vienu pakalpojumu sniedzēju, jūs pievienojat vairākus bezmaksas pakalpojumu sniedzējus un ļaujat 67router automātiski izvēlēties katram pieprasījumam piemērotāko.
 
 ### Piemērs: plašāks bezmaksas līmeņu pārklājums
 
@@ -68,7 +68,7 @@ Pievienojiet vairākus pakalpojumu sniedzējus, lai mazinātu atkarību no viena
 3. **Pollinations** — piekļuve bez atslēgas ar pieprasījumu biežuma ierobežojumu
 4. **LongCat** — vienreizējs reģistrācijas kredīts (nepieciešama KYC)
 
-Pēc tam izmantojiet `model: "auto"`, un OmniRoute:
+Pēc tam izmantojiet `model: "auto"`, un 67router:
 
 - Vispirms mēģinās izmantot visaugstāk novērtēto atbilstošo savienojumu
 - Ja tā kvota ir izsmelta vai darbspējas pārbaude neizdodas → mēģinās izmantot nākamo konfigurēto pakalpojumu sniedzēju
@@ -102,7 +102,7 @@ neierobežotu piekļuvi vai piekļuvi bez atslēgas, reģistrācijas kredītus, 
 
 ### 5. darbība: noklikšķiniet uz Savienot
 
-`NOAUTH` pakalpojumu sniedzējam OmniRoute nepieprasa ārējā pakalpojuma piekļuves datus. Tas negarantē, ka ārējais pakalpojums pieņem trešo pušu klientus vai ka tam ir pieejama jauda. OAuth un API atslēgas pakalpojumu sniedzēji ir jāsavieno, izmantojot to dokumentēto konta savienošanas procesu. Ja ir iespējota maršrutētāja autentifikācija, jūsu klients joprojām izmanto OmniRoute API atslēgu, kas redzama sadaļā **Vadības panelis → Galapunkti**.
+`NOAUTH` pakalpojumu sniedzējam 67router nepieprasa ārējā pakalpojuma piekļuves datus. Tas negarantē, ka ārējais pakalpojums pieņem trešo pušu klientus vai ka tam ir pieejama jauda. OAuth un API atslēgas pakalpojumu sniedzēji ir jāsavieno, izmantojot to dokumentēto konta savienošanas procesu. Ja ir iespējota maršrutētāja autentifikācija, jūsu klients joprojām izmanto 67router API atslēgu, kas redzama sadaļā **Vadības panelis → Galapunkti**.
 
 ### 6. darbība: atkārtojiet
 
@@ -112,7 +112,7 @@ Savienojiet vairākus pakalpojumu sniedzējus, kuru noteikumi un privātuma mode
 
 ## Pareiza kataloga interpretēšana
 
-- `NOAUTH` nozīmē, ka OmniRoute nepieprasa pakalpojumu sniedzēja piekļuves datus; tas negarantē darbības nepārtrauktību, privātumu vai neierobežotu jaudu.
+- `NOAUTH` nozīmē, ka 67router nepieprasa pakalpojumu sniedzēja piekļuves datus; tas negarantē darbības nepārtrauktību, privātumu vai neierobežotu jaudu.
 - `hasFree` ir atklāšanas metadati. Tas var apzīmēt periodiski atjaunojamu kvotu, piekļuvi bez atslēgas, reģistrācijas kredītu, apstiprināšanas programmu vai akciju.
 - `recurring-uncapped` nozīmē, ka nebija pieejama publicēta tokenu augšējā robeža; joprojām ir spēkā pieprasījumu biežuma un paralēlas izpildes ierobežojumi.
 - `one-time-initial` neatjaunojas pēc reģistrācijas piešķīruma izlietošanas.
@@ -121,15 +121,15 @@ Savienojiet vairākus pakalpojumu sniedzējus, kuru noteikumi un privātuma mode
 
 ---
 
-## Kā OmniRoute uzlabo bezmaksas līmeņu izmantošanu
+## Kā 67router uzlabo bezmaksas līmeņu izmantošanu
 
 ### 1. Automātiska pārslēgšanās
 
-Ja viens bezmaksas pakalpojumu sniedzējs ir aizņemts vai nedarbojas, OmniRoute automātiski izmēģina nākamo. Jums nekas nav jādara.
+Ja viens bezmaksas pakalpojumu sniedzējs ir aizņemts vai nedarbojas, 67router automātiski izmēģina nākamo. Jums nekas nav jādara.
 
 ### 2. Viedā maršrutēšana
 
-OmniRoute katram pieprasījumam izvēlas **labāko bezmaksas pakalpojumu sniedzēju**, pamatojoties uz:
+67router katram pieprasījumam izvēlas **labāko bezmaksas pakalpojumu sniedzēju**, pamatojoties uz:
 
 - Ātrumu — kurš pakalpojumu sniedzējs pašlaik ir visātrākais?
 - Kvalitāti — kurš pakalpojumu sniedzējs ir vispiemērotākais šim uzdevumam?
@@ -137,13 +137,13 @@ OmniRoute katram pieprasījumam izvēlas **labāko bezmaksas pakalpojumu sniedz�
 
 ### 3. Marķieru ietaupījums
 
-OmniRoute saspiešanas konveijers var samazināt piemēroto uzvedņu un rīku izvades marķieru skaitu. Faktiskais
+67router saspiešanas konveijers var samazināt piemēroto uzvedņu un rīku izvades marķieru skaitu. Faktiskais
 ietaupījums ir atkarīgs no satura, atlasītajiem dzinējiem, pakalpojumu sniedzēja uzskaites un precizitātes
 iestatījumiem; saspiešana nepalielina katra pakalpojumu sniedzēja kvotu par fiksētu koeficientu.
 
 ### 4. Vairāku kontu atbalsts
 
-Ja pakalpojumu sniedzēja noteikumi atļauj vairākus kontus vai akreditācijas datus, OmniRoute var uztvert katru
+Ja pakalpojumu sniedzēja noteikumi atļauj vairākus kontus vai akreditācijas datus, 67router var uztvert katru
 savienojumu kā atsevišķu maršrutēšanas kandidātu. Neveidojiet papildu kontus, lai apietu
 pakalpojumu sniedzēja kvotas vai piekļuves politiku.
 
@@ -158,7 +158,7 @@ Aktīvajā katalogā, kurā kopīgie limiti tiek uzskaitīti bez dublēšanās, 
 | Periodiski piešķirtais apjoms                 |  **~1.62B marķieru mēnesī** | Kopīgie limiti uzskaitīti vienreiz; summā nav iekļauti pakalpojumu sniedzēji bez ierobežojuma |
 | Pirmais mēnesis ar reģistrācijas piešķīrumiem |         **~2.22B marķieru** | Periodiskā kopsumma kopā ar vienreizējiem un periodiskiem kredītiem                           |
 
-Tās ir visa kataloga aplēses atsevišķiem prasībām atbilstošiem kontiem, nevis OmniRoute nodrošināts limits vai prognoze jaunai instalācijai. Jūsu izmantojamā kapacitāte ir atkarīga no pievienotajiem pakalpojumu sniedzējiem un to pašreizējiem nosacījumiem. Vērtības tiek aprēķinātas no `open-sse/config/freeModelCatalog.ts`; informāciju par kopīgo limitu uzskaiti bez dublēšanās, pakalpojumu sniegšanas noteikumu karodziņiem, pārtrauktajiem ierakstiem un reģistrācijas kredītu metodoloģiju skatiet
+Tās ir visa kataloga aplēses atsevišķiem prasībām atbilstošiem kontiem, nevis 67router nodrošināts limits vai prognoze jaunai instalācijai. Jūsu izmantojamā kapacitāte ir atkarīga no pievienotajiem pakalpojumu sniedzējiem un to pašreizējiem nosacījumiem. Vērtības tiek aprēķinātas no `open-sse/config/freeModelCatalog.ts`; informāciju par kopīgo limitu uzskaiti bez dublēšanās, pakalpojumu sniegšanas noteikumu karodziņiem, pārtrauktajiem ierakstiem un reģistrācijas kredītu metodoloģiju skatiet
 [Bezmaksas līmeņu uzziņā](../reference/FREE_TIERS.md).
 
 ---
@@ -184,7 +184,7 @@ prasībām. Kritiski svarīgām darba slodzēm jābūt uzraudzītam un līgumisk
 
 Kompromisi var ietvert stingrus ierobežojumus, gaidīšanas sarakstus, KYC, kredītkartes verifikāciju, modeļu apmācīšanu ar
 uzvednēm, vājāku privātumu, SLA neesamību, biežu modeļu maiņu, ģeogrāfiskus ierobežojumus, maksas pārtēriņu vai
-konta politikas risku. OmniRoute parāda pieejamos metadatus; jūs izvēlaties, ko iespējot.
+konta politikas risku. 67router parāda pieejamos metadatus; jūs izvēlaties, ko iespējot.
 
 ### "Kā varu iegūt lielāku bezmaksas kvotu?"
 
@@ -203,7 +203,7 @@ bezmaksas pakalpojumu sniedzēju reitingu lapu kā kvalitātes rādītāju un p�
 
 ## Kas tālāk?
 
-- **[Automātiskās kombinēšanas ceļvedis](./AUTO-COMBO-GUIDE.md)** — Ļaujiet OmniRoute izvēlēties jums piemērotāko MI
+- **[Automātiskās kombinēšanas ceļvedis](./AUTO-COMBO-GUIDE.md)** — Ļaujiet 67router izvēlēties jums piemērotāko MI
 - **[Pakalpojumu sniedzēju ceļvedis](./PROVIDERS-GUIDE.md)** — Pievienojiet vairāk pakalpojumu sniedzēju
 - **[Problēmu novēršana](../guides/TROUBLESHOOTING.md)** — Novērsiet biežāk sastopamās problēmas
 - **[Bezmaksas līmeņu uzziņa](../reference/FREE_TIERS.md)** — Pilns bezmaksas līmeņu saraksts

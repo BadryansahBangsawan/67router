@@ -15,6 +15,7 @@ import {
 } from "@omniroute/ui-kit/table";
 // Direct module import keeps the tests' barrel stubs (Card/Badge/EmptyState) unchanged.
 import Button from "@/shared/components/Button";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { FORMAT_META } from "../exampleTemplates";
 
 interface MonitorTabProps {
@@ -44,34 +45,20 @@ interface StatCardProps {
   icon: string;
   label: string;
   value: string | number;
-  color: "blue" | "green" | "red" | "purple" | "amber" | "cyan";
 }
 
-// Stat accents on kit status/chart tokens (theme-aware).
-const COLOR_MAP: Record<StatCardProps["color"], { shell: string; icon: string }> = {
-  blue: { shell: "bg-info/10", icon: "text-info" },
-  green: { shell: "bg-success/10", icon: "text-success" },
-  red: { shell: "bg-error/10", icon: "text-error" },
-  purple: { shell: "bg-chart-3/10", icon: "text-chart-3" },
-  amber: { shell: "bg-warning/10", icon: "text-warning" },
-  cyan: { shell: "bg-chart-2/10", icon: "text-chart-2" },
-};
-
-function StatCard({ icon, label, value, color }: StatCardProps) {
-  const resolved = COLOR_MAP[color] ?? COLOR_MAP.blue;
-
+/** One cell of the monitor KPI strip (the parent grid is a <KpiStrip>). */
+function StatCard({ icon, label, value }: StatCardProps) {
   return (
-    <Card>
-      <div className="p-4 flex items-center gap-3">
-        <div className={`flex items-center justify-center w-10 h-10 rounded-lg ${resolved.shell}`}>
-          <Icon name={icon} size={22} className={resolved.icon} />
-        </div>
-        <div>
-          <p className="text-lg font-bold text-text-main">{value}</p>
-          <p className="text-[10px] text-text-muted uppercase tracking-wider">{label}</p>
-        </div>
-      </div>
-    </Card>
+    <KpiCell
+      label={
+        <span className="inline-flex items-center gap-1.5">
+          <Icon name={icon} size={14} />
+          {label}
+        </span>
+      }
+      value={value}
+    />
   );
 }
 
@@ -154,10 +141,10 @@ export default function MonitorTab({ onGoToTranslate }: MonitorTabProps) {
     <div className="space-y-5 min-w-0">
       {/* Origin hint — always visible (monitorOriginHint) */}
       <div
-        className="flex items-start gap-3 px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-sm text-text-muted"
+        className="flex items-start gap-3 px-4 py-3 rounded-control border border-border bg-bg-subtle text-sm text-text-muted"
         data-testid="monitor-origin-hint"
       >
-        <Icon name="info" size={20} className="text-primary mt-0.5" />
+        <Icon name="info" size={20} className="text-text-muted mt-0.5" />
         <p>
           {translateOrFallback(
             "monitorOriginHint",
@@ -167,34 +154,22 @@ export default function MonitorTab({ onGoToTranslate }: MonitorTabProps) {
       </div>
 
       {/* Stat Cards — 6 cards: total, success, errors, avg latency, combo-routed, unique endpoints */}
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3">
-        <StatCard
-          icon="translate"
-          label={t("totalTranslations")}
-          value={events.length}
-          color="blue"
-        />
-        <StatCard icon="check_circle" label={t("successful")} value={successCount} color="green" />
-        <StatCard icon="error" label={t("errors")} value={errorCount} color="red" />
-        <StatCard
-          icon="speed"
-          label={t("avgLatency")}
-          value={formatLatency(avgLatency)}
-          color="purple"
-        />
+      <KpiStrip columns={6}>
+        <StatCard icon="translate" label={t("totalTranslations")} value={events.length} />
+        <StatCard icon="check_circle" label={t("successful")} value={successCount} />
+        <StatCard icon="error" label={t("errors")} value={errorCount} />
+        <StatCard icon="speed" label={t("avgLatency")} value={formatLatency(avgLatency)} />
         <StatCard
           icon="hub"
           label={translateOrFallback("comboRouted", "Combo-routed")}
           value={comboCount}
-          color="amber"
         />
         <StatCard
           icon="lan"
           label={translateOrFallback("uniqueEndpoints", "Unique endpoints")}
           value={uniqueEndpoints}
-          color="cyan"
         />
-      </div>
+      </KpiStrip>
 
       {/* Memory note */}
       <div className="flex items-center gap-2 rounded-lg border border-warning/20 bg-warning-bg px-3 py-2 text-xs text-warning">

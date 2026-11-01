@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. በOmniRoute ውስጥ ወደ **Providers → Add Provider** ይሂዱ፣ **Microsoft 365 Copilot
+6. በ67router ውስጥ ወደ **Providers → Add Provider** ይሂዱ፣ **Microsoft 365 Copilot
    (BizChat)**ን ይምረጡ እና ማረጋገጫውን በሚከተለው ቅርጽ ይለጥፉ፦
 
 ```
@@ -50,9 +50,9 @@ access_token=<jwt>; chathubPath=<oid>@<tenant>
 1. **DevTools → Network**ን ይክፈቱ።
 2. የBizChat ውይይት ይጀምሩ ወይም ይቀጥሉ (ይህ የWebSocket ግንኙነቱን ያስጀምራል)።
 3. በNetwork ፓነሉ ውስጥ በቀኝ ጠቅ ያድርጉና **Save all as HAR with content**ን ይምረጡ።
-4. በOmniRoute ውስጥ፣ በአቅራቢ ግንኙነት መገናኛ ሳጥን ላይ ያለውን **Import .har file** አዝራር ይጠቀሙ።
+4. በ67router ውስጥ፣ በአቅራቢ ግንኙነት መገናኛ ሳጥን ላይ ያለውን **Import .har file** አዝራር ይጠቀሙ።
 
-OmniRoute በHAR ውስጥ የChathub WebSocket URLን ይፈልጋል፣ `access_token`ን እና `chathubPath`ን ያወጣል፣ እንዲሁም የማረጋገጫ መስኮቹን በራስ-ሰር ይሞላል። HAR ማስመጣቱ የJWT ማብቂያ ጊዜን ዲኮድ በማድረግ የቀረውን የቶከን የቆይታ ጊዜ ያሳያል።
+67router በHAR ውስጥ የChathub WebSocket URLን ይፈልጋል፣ `access_token`ን እና `chathubPath`ን ያወጣል፣ እንዲሁም የማረጋገጫ መስኮቹን በራስ-ሰር ይሞላል። HAR ማስመጣቱ የJWT ማብቂያ ጊዜን ዲኮድ በማድረግ የቀረውን የቶከን የቆይታ ጊዜ ያሳያል።
 
 > **እውነተኛ HAR ወደ ውጭ የተላከ ፋይል፣ access token ወይም refresh token በፍጹም commit አያድርጉ።** የሙከራ እና የሰነድ እሴቶች ሁልጊዜ ቦታ ያዥ መሆን አለባቸው።
 
@@ -69,7 +69,7 @@ OmniRoute በHAR ውስጥ የChathub WebSocket URLን ይፈልጋል፣ `acces
 | `refreshToken` | ለ`substrate.office.com/sydney` ወሰን የMicrosoft OAuth refresh token |
 | `tier`         | `individual` (ነባሪ)፣ `edu` ወይም `enterprise`                        |
 
-የrefresh tokenን ለ`substrate.office.com/sydney` ወሰን ከተዋቀረ የMicrosoft device-code ወይም authorization-code ፍሰት ያግኙ። `refreshToken` ከተዋቀረ፣ OmniRoute ከእያንዳንዱ ጥያቄ በፊት `access_token`ን ቅድመ-በረራ ያድሳል፤ ስለዚህ ከእያንዳንዱ ~75 ደቂቃ ማብቂያ በኋላ እንደገና መያዝ አያስፈልግዎትም።
+የrefresh tokenን ለ`substrate.office.com/sydney` ወሰን ከተዋቀረ የMicrosoft device-code ወይም authorization-code ፍሰት ያግኙ። `refreshToken` ከተዋቀረ፣ 67router ከእያንዳንዱ ጥያቄ በፊት `access_token`ን ቅድመ-በረራ ያድሳል፤ ስለዚህ ከእያንዳንዱ ~75 ደቂቃ ማብቂያ በኋላ እንደገና መያዝ አያስፈልግዎትም።
 
 `refreshToken` ካልተዋቀረ፣ ከእያንዳንዱ ማብቂያ በኋላ የWebSocket ማረጋገጫውን በእጅ እንደገና መያዝ አለብዎት።
 

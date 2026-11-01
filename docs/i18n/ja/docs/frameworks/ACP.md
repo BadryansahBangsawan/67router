@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute は、**CLI 検出**、**ネイティブ Agent Client Protocol**、および
+67router は、**CLI 検出**、**ネイティブ Agent Client Protocol**、および
 **レガシー stdio アダプター**を分離しています。インストール済みのバイナリが見つかっても、
 その認証、モデル互換性、またはプロンプトを処理する準備が整っていることを証明するものではありません。
 
@@ -120,5 +120,3 @@ SIGKILL を送信します。レガシープロンプトのタイムアウトで
 - [エージェントプロトコル](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI 起動コントラクト](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ツール](../reference/CLI-TOOLS.md)
-- [A2A サーバー](./A2A-SERVER.md)
-- [クラウドエージェント](./CLOUD_AGENT.md)

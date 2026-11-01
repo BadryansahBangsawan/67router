@@ -8,7 +8,7 @@
 
 ## အမြန်စတင်ခြင်း — မူရင်း `agentrouter` provider ကို အသုံးပြုပါ (အကြံပြုထားသည်)
 
-အသုံးပြုသူအများစုအတွက် **အထူးပြင်ဆင်သတ်မှတ်မှု မလိုအပ်ပါ**။ OmniRoute တွင် Claude Code wire image အပြည့်အစုံကို ကြိုတင်ထည့်သွင်းထားသည့် built-in `agentrouter` provider ပါဝင်ပြီးသားဖြစ်သည် (`open-sse/config/providerRegistry.ts` → `agentrouter` ကို ကြည့်ပါ)။ ၎င်းကို အသုံးပြုရန်-
+အသုံးပြုသူအများစုအတွက် **အထူးပြင်ဆင်သတ်မှတ်မှု မလိုအပ်ပါ**။ 67router တွင် Claude Code wire image အပြည့်အစုံကို ကြိုတင်ထည့်သွင်းထားသည့် built-in `agentrouter` provider ပါဝင်ပြီးသားဖြစ်သည် (`open-sse/config/providerRegistry.ts` → `agentrouter` ကို ကြည့်ပါ)။ ၎င်းကို အသုံးပြုရန်-
 
 1. **Dashboard → Providers → Add Provider** ကို ဖွင့်ပါ။
 2. စာရင်းမှ **AgentRouter** ကို ရွေးချယ်ပါ။
@@ -22,18 +22,18 @@
 
 ## အဆင့်မြင့်- Claude Code နှင့် တွဲဖက်အသုံးပြုနိုင်သော provider type မှတစ်ဆင့် ချိတ်ဆက်ခြင်း
 
-OmniRoute သည် မှန်ကန်သော wire image ဖြင့် Anthropic Messages API ကို ဆက်သွယ်အသုံးပြုသည့် **Claude Code နှင့် တွဲဖက်အသုံးပြုနိုင်သော** provider type (`anthropic-compatible-cc-*`) မှတစ်ဆင့် AgentRouter (နှင့် အလားတူ relay များ) ကိုလည်း ပံ့ပိုးပေးသည်။ `https://agentrouter.org` ကို ညွှန်ပြထားသော ယေဘုယျ `openai-compatible-chat` provider တစ်ခုသည် **အလုပ်လုပ်မည်မဟုတ်ပါ**—အထက်ပိုင်း WAF သည် Claude Code ကဲ့သို့ မမြင်ရသော request များကို ငြင်းပယ်သည်။
+67router သည် မှန်ကန်သော wire image ဖြင့် Anthropic Messages API ကို ဆက်သွယ်အသုံးပြုသည့် **Claude Code နှင့် တွဲဖက်အသုံးပြုနိုင်သော** provider type (`anthropic-compatible-cc-*`) မှတစ်ဆင့် AgentRouter (နှင့် အလားတူ relay များ) ကိုလည်း ပံ့ပိုးပေးသည်။ `https://agentrouter.org` ကို ညွှန်ပြထားသော ယေဘုယျ `openai-compatible-chat` provider တစ်ခုသည် **အလုပ်လုပ်မည်မဟုတ်ပါ**—အထက်ပိုင်း WAF သည် Claude Code ကဲ့သို့ မမြင်ရသော request များကို ငြင်းပယ်သည်။
 
 ---
 
 ## ကြိုတင်လိုအပ်ချက်များ
 
 - AgentRouter account နှင့် API key တစ်ခု။ အကောင့်အသစ်ဖွင့်သူများသည် project [README](../README.md) ရှိ affiliate link မှတစ်ဆင့် အခမဲ့ credit များ ရရှိသည်။
-- `ENABLE_CC_COMPATIBLE_PROVIDER` feature flag ကို ဖွင့်ထားပြီး OmniRoute လည်ပတ်နေခြင်း (အောက်တွင် ကြည့်ပါ)။
+- `ENABLE_CC_COMPATIBLE_PROVIDER` feature flag ကို ဖွင့်ထားပြီး 67router လည်ပတ်နေခြင်း (အောက်တွင် ကြည့်ပါ)။
 
 ## 1. CC-compatible provider type ကို ဖွင့်ပါ
 
-Claude Code နှင့် တွဲဖက်အသုံးပြုနိုင်သော provider type သည် တရားဝင် Claude Code client ကို အနီးကပ်တုပထားသော traffic ပေးပို့သောကြောင့် feature flag နောက်ကွယ်တွင် ထားရှိထားသည်။ OmniRoute ကို မစတင်မီ environment variable တစ်ခု သတ်မှတ်ခြင်းဖြင့် ၎င်းကို ဖွင့်ပါ-
+Claude Code နှင့် တွဲဖက်အသုံးပြုနိုင်သော provider type သည် တရားဝင် Claude Code client ကို အနီးကပ်တုပထားသော traffic ပေးပို့သောကြောင့် feature flag နောက်ကွယ်တွင် ထားရှိထားသည်။ 67router ကို မစတင်မီ environment variable တစ်ခု သတ်မှတ်ခြင်းဖြင့် ၎င်းကို ဖွင့်ပါ-
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

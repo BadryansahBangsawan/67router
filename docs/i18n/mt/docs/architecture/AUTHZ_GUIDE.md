@@ -7,7 +7,7 @@
 > **Sors ta' verità:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Aġġornat l-aħħar:** 2026-09-22 — in-namespaces tal-iskop jindikaw MCP-SERVER.md
 
-OmniRoute għandu pipeline ta' awtorizzazzjoni konxju mir-rotta li jikkontrolla kull talba tal-API. Il-klassifikazzjoni hija **deterministika** u **fail-closed** — kull ħaġa li ma tistax tiġi kklassifikata tispiċċa bħala `MANAGEMENT` u teħtieġ sessjoni jew token ta' grad ta' ġestjoni. Din il-paġna tispjega l-mudell għall-inġiniera li jżommu rotot jew jiddisinjaw endpoints ġodda.
+67router għandu pipeline ta' awtorizzazzjoni konxju mir-rotta li jikkontrolla kull talba tal-API. Il-klassifikazzjoni hija **deterministika** u **fail-closed** — kull ħaġa li ma tistax tiġi kklassifikata tispiċċa bħala `MANAGEMENT` u teħtieġ sessjoni jew token ta' grad ta' ġestjoni. Din il-paġna tispjega l-mudell għall-inġiniera li jżommu rotot jew jiddisinjaw endpoints ġodda.
 
 ![Pipeline ta' AuthZ (3 klassijiet ta' rotta + evalwazzjoni tal-politika)](../diagrams/exported/authz-pipeline.svg)
 
@@ -214,8 +214,6 @@ Katalogu u regoli ta' tqabbil (string identika, jew scope mogħti li jispiċċa 
 L-infurzar tač-ċavetta tal-API tal-klijent juża `isRequireApiKeyEnabled()` f'`src/shared/utils/featureFlags.ts`, mhux qari dirett ta' `process.env.REQUIRE_API_KEY`. Dan huwa importanti għal istanzi mqiegħda f'produzzjoni: it-tibdil ta' `REQUIRE_API_KEY` fid-Dashboard → Feature Flags jaħżen DB override u immedjatament jaffettwa `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*`, u l-kontrolli l-oħra tal-awtentikazzjoni tal-client-API li jaqsmu dan l-helper. Jekk il-feature flag store ma jkunx jista' jinqara, l-awtentikazzjoni tal-client API tifalli fil-mod sikur u titlob ċavetta.
 
 ## Bidla li Tkisser il-Kompatibbiltà — v3.8.0
-
-L-endpoints `/api/v1/agents/tasks/*` u `/api/resilience/model-cooldowns` **issa jeħtieġu awtentikazzjoni tal-ġestjoni** (commit `588a0333`). Klijenti li qabel kienu jibagħtu ċavetta tal-API normali mingħajr l-ambitu `manage` jirċievu `403`. Migrazzjoni: jew assenja l-ambitu `manage` liċ-ċavetta fid-dashboard API Keys, jew uża sessjoni tad-dashboard illoggjata.
 
 ## Bidla fl-Imġiba — v3.8.2
 

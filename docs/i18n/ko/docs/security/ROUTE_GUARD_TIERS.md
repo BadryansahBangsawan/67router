@@ -6,7 +6,7 @@
 
 ## 개요
 
-모든 OmniRoute 관리 API 경로는 세 가지 보호 계층 중 하나로 분류됩니다. 분류는 정적이며 `src/server/authz/routeGuard.ts`에 정의되어 있고, 다른 모든 인증 분기가 실행되기 전에 평가됩니다.
+모든 67router 관리 API 경로는 세 가지 보호 계층 중 하나로 분류됩니다. 분류는 정적이며 `src/server/authz/routeGuard.ts`에 정의되어 있고, 다른 모든 인증 분기가 실행되기 전에 평가됩니다.
 
 ## 계층
 
@@ -24,10 +24,10 @@ Cloudflared/Ngrok 터널을 통해 획득)가 프로세스 생성을 유발할 �
 
 **GHSA-fhh6-4qxv-rpqj이 나타내는 공격 유형:** 관리/에이전트 서버가
 하위 프로세스(`npm install`, `node`, 브라우저,
-프록시, `git`, `tar`, …)를 실행하는 엔드포인트를 노출합니다. 운영자가 OmniRoute를
+프록시, `git`, `tar`, …)를 실행하는 엔드포인트를 노출합니다. 운영자가 67router를
 nginx/Cloudflare/Tailscale 터널 뒤에 배치했고 JWT가 유출되었거나 인증이 잘못 구성되어
 해당 엔드포인트에 호스트 외부에서 접근할 수 있게 되면, 공격자는 "API 호출"을 "호스트에서
-명령 실행"(원격 코드 실행)으로 전환할 수 있습니다. OmniRoute는 프로세스 생성이 가능한
+명령 실행"(원격 코드 실행)으로 전환할 수 있습니다. 67router는 프로세스 생성이 가능한
 모든 라우트에서 **인증 검사 전에 항상 루프백 호스트 검사를 적용**하여 이를 차단합니다.
 따라서 터널을 통해 토큰이 유출되더라도 프로세스 생성 기능에 접근할 수 없습니다.
 
@@ -55,7 +55,6 @@ nginx/Cloudflare/Tailscale 터널 뒤에 배치했고 JWT가 유출되었거나 
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy 리스너 및 시스템 프록시                                    |
 | `/api/settings/mitm`                                                                                     | MITM 가로채기를 활성화(시스템 수준 프록시 상태)                                           |
 | `/api/issue-agent/`                                                                                      | 이슈 에이전트 — 저장소를 대상으로 로컬 도구를 생성                                        |
-| `/api/plugins/`, `/api/plugins`                                                                          | 플러그인 — `worker_threads` + `child_process`를 통해 로드/실행                            |
 | `/api/middleware/`                                                                                       | 사용자 미들웨어 — 운영자 코드를 프로세스 내에서 로드/실행                                 |
 | `/api/system/version`                                                                                    | 자동 업데이트(POST만 해당, GET/HEAD/OPTIONS는 제외) — `git checkout` + `npm install` 생성 |
 | `/api/db-backups/exportAll`                                                                              | 내보내기 아카이브를 위해 `tar` 생성                                                       |
@@ -115,7 +114,7 @@ MCP 전용 호출자를 위한 더 낮은 권한의 대안입니다.
 
 #### 운영자 지침 및 감사
 
-OmniRoute를 리버스 프록시나 터널(nginx, Caddy, Cloudflare Tunnel,
+67router를 리버스 프록시나 터널(nginx, Caddy, Cloudflare Tunnel,
 Tailscale, Ngrok) 뒤에서 실행하더라도 루프백 검사는 위의 프로세스 생성 가능
 경로를 계속 보호합니다. 클라이언트 주소가 비루프백인 요청은 **인증이
 실행되기 전에** `403 LOCAL_ONLY`로 거부되므로 유출된 JWT로도 프로세스
@@ -154,7 +153,7 @@ Tailscale, Ngrok) 뒤에서 실행하더라도 루프백 검사는 위의 프로
 - 위 접두사와 비루프백 클라이언트 주소가 함께 나타나는지 리버스 프록시/접근 로그를
   grep으로 검색하세요. 이러한 요청이 `403 LOCAL_ONLY` 대신 `200`을 반환했다면,
   프록시가 실제 클라이언트 IP를 가리고 있다는 뜻이므로 프록시를 수정하세요.
-- 이러한 경로 중 하나에 대해 OmniRoute 로그에 나타나는 `403 LOCAL_ONLY`는
+- 이러한 경로 중 하나에 대해 67router 로그에 나타나는 `403 LOCAL_ONLY`는
   가드가 의도대로 작동하고 있다는 의미이며, 억제해야 할 오류가 아닙니다.
 
 #### 호출 지점 프로브 게이트가 적용되는 원격 접근 가능 라우트

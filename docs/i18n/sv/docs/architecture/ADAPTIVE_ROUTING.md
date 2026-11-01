@@ -5,7 +5,7 @@
 ---
 
 Det här dokumentet beskriver den feedbackdrivna grunden för adaptiv routning som lagts till i
-OmniRoute. Den är avsiktligt liten: den introducerar en typad kanal för
+67router. Den är avsiktligt liten: den introducerar en typad kanal för
 routningsutfall, en kontinuerlig kvalitetssignal som matar den befintliga poängsättaren
 för automatiska kombinationer, en valfri OpenTelemetry-exportör och en slutpunkt för
 förklarbarhet. Den ersätter **inte** den befintliga resiliensstacken (circuit breaker,
@@ -13,7 +13,7 @@ anslutnings-cooldown, modellspärr, hälsomatris, autopilot) — den komplettera
 
 ## 1. Arkitektonisk kontext
 
-OmniRoute är ett dataplan med en **kritisk sökväg för begäranden** och ett **styrnings-/intelligensplan**.
+67router är ett dataplan med en **kritisk sökväg för begäranden** och ett **styrnings-/intelligensplan**.
 Den kritiska sökvägen måste förbli snabb, minneseffektiv, asynkron, resilient och
 förutsägbar. Utvärdering, kvalitetspoängsättning, experiment och historisk analys hör
 hemma i styrningsplanet.
@@ -23,7 +23,7 @@ AI-agent/IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   dataplan (snabbt, synkront, i minnet)
+│    67router        │   dataplan (snabbt, synkront, i minnet)
 │  routning/failover  │
 │  hälsa/skyddsräcke  │
 │  cache/strömning    │
@@ -42,16 +42,15 @@ AI-agent/IDE
 
 ### Det som redan fanns (granskat, inte duplicerat)
 
-| Koncept                                 | Befintlig implementation                                                                          |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Tillgänglighet (kan vi skicka trafik?)  | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, lagrad i DB), anslutnings-cooldown, modellspärr  |
-| Hälsorapportering                       | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                           |
-| Skuggtrafik                             | `open-sse/services/combo/shadowRouting.ts`                                                        |
-| Skyddsräcken                            | `src/lib/guardrails/` (för-/efter-hookar)                                                         |
-| Exakt cache                             | `src/lib/semanticCache.ts` (signaturbaserad)                                                      |
-| Utvärderare/utvärderingsdriven routning | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                              |
-| Förklarbarhet för kombinationsbeslut    | `open-sse/services/combo/decisionTrace.ts`                                                        |
-| Realtidshändelser på kontrollpanelen    | `src/lib/events/eventBus.ts` (UI-aviseringskanal, `unknown`-nyttolaster, historik med 100 poster) |
+| Koncept                                | Befintlig implementation                                                                          |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Tillgänglighet (kan vi skicka trafik?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, lagrad i DB), anslutnings-cooldown, modellspärr  |
+| Hälsorapportering                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                           |
+| Skuggtrafik                            | `open-sse/services/combo/shadowRouting.ts`                                                        |
+| Skyddsräcken                           | `src/lib/guardrails/` (för-/efter-hookar)                                                         |
+| Exakt cache                            | `src/lib/semanticCache.ts` (signaturbaserad)                                                      |
+| Förklarbarhet för kombinationsbeslut   | `open-sse/services/combo/decisionTrace.ts`                                                        |
+| Realtidshändelser på kontrollpanelen   | `src/lib/events/eventBus.ts` (UI-aviseringskanal, `unknown`-nyttolaster, historik med 100 poster) |
 
 Lagret för routningshändelser är **inte** en återimplementering av `eventBus`: den bussen är
 kontrollpanelens kanal för realtidsaviseringar (typade _händelsenamn_, ogenomskinliga
@@ -234,7 +233,7 @@ Filer: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*`-SDK).
 - Span följer GenAI:s semantiska konventioner (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) samt OmniRoutes
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) samt 67routers
   routningsattribut (utfall, status, ttft, återförsök, reservväg).
 - `record()` köar endast i en begränsad buffert (O(1)); en bakgrundstimer
   tömmer den asynkront via `POST {endpoint}/v1/traces`. Vid överbelastning
@@ -256,7 +255,7 @@ Filer: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrering av utvärderingsplanet (beredskap för framtida AGI)
 
-OmniRoute behandlar framtida AGI (eller valfri utvärderare) som en **potentiell
+67router behandlar framtida AGI (eller valfri utvärderare) som en **potentiell
 intelligens-/utvärderingsbackend, inte ett beroende**. Integreringspunkterna är:
 
 - En `RoutingEventSink` kan vidarebefordra händelser asynkront till en utvärderare.
@@ -265,8 +264,6 @@ intelligens-/utvärderingsbackend, inte ett beroende**. Integreringspunkterna ä
 - En framtida `Evaluator` (deterministisk, lokal bedömare, HTTP, WASM) skulle konsumera
   händelser/spår och returnera en `QualityScore` som matas in i samma
   `getQualityScore`-/kvalitetsfaktorväg.
-- Befintlig utvärderingsdriven routning (`open-sse/services/evalRouting.ts`)
-  ordnar redan om kombinationsmålen efter godkännandefrekvenser i `eval_runs` när den är aktiverad.
 
 Ingen utvärdering körs synkront i sökvägen för begäranden, och gatewayen fungerar
 fullständigt utan någon utvärderare.

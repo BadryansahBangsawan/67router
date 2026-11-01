@@ -4,7 +4,7 @@
 
 ---
 
-Zaženite CLI `omniroute` na svojem prenosniku, medtem ko sam OmniRoute deluje nekje drugje
+Zaženite CLI `omniroute` na svojem prenosniku, medtem ko sam 67router deluje nekje drugje
 (na VPS-u, domačem strežniku ali drugem računalniku v vašem omrežju Tailnet). Enkrat se prijavite z
 `omniroute connect`, nato pa **vsak** ukaz CLI cilja na ta oddaljeni
 strežnik — isti ukazi, isti izpis, le izvajanje poteka na oddaljenem strežniku.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← iz oddaljenega kataloga zapiše l
 ## Kako deluje
 
 ```
-vaš prenosnik                            oddaljeni OmniRoute (VPS)
+vaš prenosnik                            oddaljeni 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (geslo → žeton)            │
 │  kontekst: vps     │ ───────────────►  │ izda žeton za dostop z obsegom │
@@ -108,7 +108,7 @@ strežniku, ne na vašem računalniku, zato zaslon za soglasje **obvisi za vedno
 nikoli ne izda kode** — običajna nadomestna možnost »prilepite URL povratnega
 klica« nima ničesar, kar bi lahko prilepili. (To je omejitev na Googlovi strani:
 enako se zgodi v vsakem posredniškem strežniku, ki uporablja priloženi namizni
-odjemalec Antigravity, ne le v OmniRoute.)
+odjemalec Antigravity, ne le v 67router.)
 
 Nadzorna plošča to zazna, preden obtičite: če možnost **Ponudniki → Antigravity →
 Poveži** odprete z naslova, ki ni localhost, se splošno obvestilo »kopirajte URL
@@ -116,7 +116,7 @@ povratnega klica« nadomesti s spodnjima rešitvama, pri čemer sta vaš gostite
 vrata že izpolnjena. (Tudi naslov LAN šteje — `192.168.x.x` za ta povratni klic
 ni localhost.)
 
-Za povezavo storitve Antigravity z oddaljenim OmniRoute sta podprta dva načina.
+Za povezavo storitve Antigravity z oddaljenim 67router sta podprta dva načina.
 
 ### Možnost A — lokalni pomočnik za prijavo (priporočeno)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Nato na **oddaljeni** nadzorni plošči odprite **Ponudniki → Antigravity → Poveži**
 in prilepite blok `omniroute-cred-v1.…` v polje **2. korak** (sprejme bodisi URL
-povratnega klica bodisi blok poverilnice). OmniRoute ga dekodira, na strežniški
+povratnega klica bodisi blok poverilnice). 67router ga dekodira, na strežniški
 strani izvede uvodno nastavitev Cloud Code in trajno shrani povezavo.
 
 > Blok vsebuje žeton za osvežitev — obravnavajte ga kot geslo. Pri potisku se
@@ -196,7 +196,7 @@ plošče, zato vam ni treba tunelirati dodatnih vrat, specifičnih za ponudnika.
 ## Povezovanje Codexa / Groka pri oddaljeni namestitvi (ponudniki s fiksno povratno zanko)
 
 Codex, xAI (`xai-oauth`) in Grok CLI (`grok-cli`) pri svoji nadrejeni aplikaciji OAuth registrirajo **fiksen** naslov povratne zanke
-`redirect_uri`. OmniRoute ga ne more spremeniti — ponudnik brskalnik vedno preusmeri nazaj na isti, vnaprej določen naslov:
+`redirect_uri`. 67router ga ne more spremeniti — ponudnik brskalnik vedno preusmeri nazaj na isti, vnaprej določen naslov:
 
 | Ponudnik    | Fiksni povratni naslov, na katerega preusmeri ponudnik |
 | ----------- | ------------------------------------------------------ |
@@ -204,7 +204,7 @@ Codex, xAI (`xai-oauth`) in Grok CLI (`grok-cli`) pri svoji nadrejeni aplikaciji
 | `xai-oauth` | `http://127.0.0.1:56121/callback`                      |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                      |
 
-`localhost` tukaj pomeni **računalnik, na katerem se izvaja brskalnik**, medtem ko povratni strežnik PKCE storitve OmniRoute posluša na povratni zanki **strežnika**. Če nadzorno ploščo odprete na naslovu LAN, kot je `http://192.168.0.15:20128`, se povezavi nikoli ne srečata: avtorizacijska koda je dostavljena na `localhost:1455` vašega prenosnika, kjer nič ne posluša, zato ponudnik prijave ne izvede, ne da bi prikazal napako.
+`localhost` tukaj pomeni **računalnik, na katerem se izvaja brskalnik**, medtem ko povratni strežnik PKCE storitve 67router posluša na povratni zanki **strežnika**. Če nadzorno ploščo odprete na naslovu LAN, kot je `http://192.168.0.15:20128`, se povezavi nikoli ne srečata: avtorizacijska koda je dostavljena na `localhost:1455` vašega prenosnika, kjer nič ne posluša, zato ponudnik prijave ne izvede, ne da bi prikazal napako.
 
 Nadzorna plošča to zazna, preden odpre pojavno okno, in namesto tihega neuspeha prijave prikaže ukaz za tunel (#8046).
 
@@ -218,7 +218,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 
 Potrebni sta dve posredovanji; tudi posredovanje samo enih vrat ne deluje:
 
-- **`20128`** (vrata nadzorne plošče) zagotovi, da je izvor resnično lokalni `localhost`, zaradi česar OmniRoute sploh zažene povratni strežnik PKCE — izvor LAN nikoli ne doseže te veje.
+- **`20128`** (vrata nadzorne plošče) zagotovi, da je izvor resnično lokalni `localhost`, zaradi česar 67router sploh zažene povratni strežnik PKCE — izvor LAN nikoli ne doseže te veje.
 - **`1455`** (fiksna povratna vrata ponudnika) so vrata, na katera je brskalnik preusmerjen; prek tunela morajo biti povezana s povratno zanko strežnika.
 
 Pri povezovanju z xAI ali Grok CLI zamenjajte `1455` z `56121`/`56122`, `20128` pa z dejanskimi vrati svoje nadzorne plošče. Tunel pustite odprt, dokler povezava ni prikazana kot aktivna.
@@ -325,7 +325,7 @@ omniroute contexts current         # aktivni strežnik, status avtentikacije, ob
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

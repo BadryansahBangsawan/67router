@@ -10,7 +10,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Card, Button, Input, EmptyState, Skeleton } from "@/shared/components";
+import { Button, Input, EmptyState, Skeleton } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import { useNotificationStore } from "@/store/notificationStore";
 
@@ -136,22 +137,21 @@ export default function FallbackChainsEditor() {
 
   if (loading) {
     return (
-      <Card icon="timeline" title={t("fallbackChainsTitle")}>
+      <SettingsSection title={t("fallbackChainsTitle")}>
         <p className="sr-only" role="status">
           {t("loadingFallbackChains")}
         </p>
         <Skeleton className="h-16 w-full" />
-      </Card>
+      </SettingsSection>
     );
   }
 
   const chainEntries = Object.entries(chains);
 
   return (
-    <Card
-      icon="timeline"
+    <SettingsSection
       title={t("fallbackChainsTitle")}
-      subtitle={t("fallbackChainsDesc")}
+      description={t("fallbackChainsDesc")}
       action={
         <Button
           size="sm"
@@ -237,6 +237,6 @@ export default function FallbackChainsEditor() {
           </div>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

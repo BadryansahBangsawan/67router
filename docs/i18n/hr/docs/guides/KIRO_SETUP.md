@@ -4,7 +4,7 @@
 
 ---
 
-Ovaj vodič opisuje dodavanje računa za Kiro (AI pomoćnika za programiranje koji se izvršava na AWS-u) u OmniRoute,
+Ovaj vodič opisuje dodavanje računa za Kiro (AI pomoćnika za programiranje koji se izvršava na AWS-u) u 67router,
 s naglaskom na istodobnu upotrebu više računa bez sukoba sesija.
 
 ---
@@ -22,10 +22,10 @@ prvog računa.
 
 ---
 
-## Kako OmniRoute rješava ovaj problem (v3.8.0+)
+## Kako 67router rješava ovaj problem (v3.8.0+)
 
-Počevši od v3.8.0, OmniRoute poziva `registerClient()` (AWS SSO OIDC) tijekom svakog
-uvoza Kiro veze. Time svaka OmniRoute veza dobiva vlastitu namjensku registraciju OIDC
+Počevši od v3.8.0, 67router poziva `registerClient()` (AWS SSO OIDC) tijekom svakog
+uvoza Kiro veze. Time svaka 67router veza dobiva vlastitu namjensku registraciju OIDC
 klijenta. Budući da je svaka registracija klijenta neovisna, osvježavanje ili
 ponovna autentifikacija jednog računa ne utječe na token za osvježavanje bilo kojeg drugog računa.
 
@@ -59,7 +59,7 @@ automatski će dobiti vlastitu registraciju klijenta.
 
 ### Preduvjeti
 
-- OmniRoute v3.8.0 ili noviji.
+- 67router v3.8.0 ili noviji.
 - Aktivan Kiro račun (e-pošta + lozinka ili prijava putem Googlea ili GitHuba).
 - Po želji, drugi Kiro račun.
 
@@ -70,7 +70,7 @@ automatski će dobiti vlastitu registraciju klijenta.
    - **Uvoz tokena** — zalijepite token za osvježavanje koji počinje s `aorAAAAAG`.
    - **API ključ** — zalijepite dugotrajni Kiro / CodeWhisperer API ključ.
    - **Prijava putem Googlea / GitHuba** — dovršite OAuth tijek u pregledniku.
-   - **Automatski uvoz** — kliknite gumb; OmniRoute čita vjerodajnice iz
+   - **Automatski uvoz** — kliknite gumb; 67router čita vjerodajnice iz
      lokalne baze podataka alata kiro-cli ili iz `~/.aws/sso/cache`.
 3. Veza se sprema. Tijekovi tokena za osvježavanje automatski registriraju namjenski
    OIDC klijent. Tijekovi API ključa provjeravaju ključ putem AWS-a i ne pohranjuju token za osvježavanje.
@@ -126,7 +126,7 @@ Autentifikacija API ključem namijenjena je dugotrajnim vjerodajnicama nositelja
 2. Odaberite **API ključ**.
 3. Zalijepite API ključ i odaberite AWS regiju: **Automatsko otkrivanje** (zadano), **Istok SAD-a
    (Sjeverna Virginia)** ili **Europa (Frankfurt)**.
-4. OmniRoute provjerava ključ i sprema vezu vezanu uz regiju u kojoj ključ
+4. 67router provjerava ključ i sprema vezu vezanu uz regiju u kojoj ključ
    funkcionira.
 
 ### API
@@ -176,7 +176,7 @@ na `https://q.<region>.amazonaws.com/generateAssistantResponse` — uključujuć
 ## Istek OIDC klijenta
 
 Javni klijenti AWS SSO OIDC-a obično istječu nakon 90 dana
-(`clientSecretExpiresAt`). OmniRoute pohranjuje ovu vremensku oznaku u `providerSpecificData`
+(`clientSecretExpiresAt`). 67router pohranjuje ovu vremensku oznaku u `providerSpecificData`
 radi praćenja. Ako se veza prestane osvježavati nakon približno 90 dana, ponovno
 je uvezite kako biste dobili novu registraciju OIDC klijenta. Automatska ponovna registracija
 nakon isteka planirana je kao buduće poboljšanje.
@@ -197,7 +197,7 @@ putem AWS SSO OIDC-a.
 ### Uvoz ne uspijeva uz poruku "Provjera valjanosti tokena nije uspjela"
 
 - Provjerite počinje li token za osvježavanje s `aorAAAAAG`.
-- Provjerite može li OmniRoute pristupiti adresi `https://oidc.us-east-1.amazonaws.com` (ili konfiguriranoj
+- Provjerite može li 67router pristupiti adresi `https://oidc.us-east-1.amazonaws.com` (ili konfiguriranoj
   regiji). Ako se nalazite iza korporacijskog proxyja, postavite proxy na razini pružatelja usluga u
   odjeljku **Nadzorna ploča → Postavke → Proxyji**.
 
@@ -205,7 +205,7 @@ putem AWS SSO OIDC-a.
 
 - Potvrdite da je ključ API ključ za Kiro / CodeWhisperer, a ne token za osvježavanje.
 - Potvrdite da AWS regija odgovara ključu/računu. Zadana je vrijednost `us-east-1`.
-- Ključ mora moći pozvati `ListAvailableProfiles`; u suprotnom OmniRoute ne može
+- Ključ mora moći pozvati `ListAvailableProfiles`; u suprotnom 67router ne može
   odrediti potrebni `profileArn`.
 
 Za ostale poteškoće pogledajte glavnu datoteku [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

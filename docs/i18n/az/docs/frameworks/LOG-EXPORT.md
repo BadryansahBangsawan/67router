@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute çağırış jurnallarının xarici analitika anbarına davamlı, artımlı ixracı.
+67router çağırış jurnallarının xarici analitika anbarına davamlı, artımlı ixracı.
 
 Logs idarəetmə paneli vərəqi sorğu tarixçəsini rotasiya və saxlama müddəti ilə məhdudlaşdırılan SQLite (`call_logs`) verilənlər bazasında saxlayır. Jurnal ixracı eyni qeyd dəstini cədvəl üzrə xaricə göndərir ki, bu qeydlər yerli verilənlər bazasından daha uzun müddət saxlanılsın və digər məlumatlarla birləşdirilə bilsin. İlk təyinat BigQuery-dir; konveyer reyestr şəklindədir, buna görə əlavə təyinatlar artırıla bilər.
 
@@ -273,7 +273,7 @@ Yeni təyinat yeri üçün iki qayda:
 - Qismən nasazlıq olduqda `send()` **mütləq xəta atmalıdır**. Uğurlu tamamlanma “təyinat yerində bu sətirlər var” deməkdir
   və kursor həmişəlik onların sonrasına keçir.
 - İstifadəçinin təqdim etdiyi URL-i qəbul edən təyinat yeri sorğu göndərməzdən əvvəl onu,
-  vebhuklarda olduğu kimi, `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) vasitəsilə doğrulamalıdır.
+  vebhuklarda olduğu kimi, `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) vasitəsilə doğrulamalıdır.
   BigQuery üçün buna ehtiyac yoxdur: onun hostları sabitdir.
 
 ---

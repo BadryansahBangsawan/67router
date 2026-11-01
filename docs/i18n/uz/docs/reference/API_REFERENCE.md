@@ -6,7 +6,7 @@
 
 🌐 **Tillar:** 🇺🇸 [Inglizcha](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API uchun asosiy maʼlumotnoma. Unda ommaviy `/v1` interfeysi va eng koʻp ishlatiladigan boshqaruv endpointlari yoritilgan; mashina oʻqiy oladigan [`docs/openapi.yaml`](../openapi.yaml) fayli va `src/app/api/` ostidagi marshrutlar daraxti toʻliq manbalar hisoblanadi.
+67router API uchun asosiy maʼlumotnoma. Unda ommaviy `/v1` interfeysi va eng koʻp ishlatiladigan boshqaruv endpointlari yoritilgan; mashina oʻqiy oladigan [`docs/openapi.yaml`](../openapi.yaml) fayli va `src/app/api/` ostidagi marshrutlar daraxti toʻliq manbalar hisoblanadi.
 
 OpenAI bilan mos protokol va provayder imkoniyatlari matritsasi haqida batafsil maʼlumot olish uchun
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md) fayliga qarang.
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Javob     | `HIT` yoki `MISS` (oqimsiz)                                                                                                                                                                                                                                                  |
 | `X-OmniRoute-Idempotent` | Javob     | Takror bartaraf etilgan boʻlsa, `true`                                                                                                                                                                                                                                       |
 | `X-OmniRoute-Progress`   | Javob     | Jarayon kuzatuvi yoqilgan boʻlsa, `enabled`                                                                                                                                                                                                                                  |
-| `X-OmniRoute-Session-Id` | Javob     | OmniRoute ishlatgan amaldagi seans ID’si                                                                                                                                                                                                                                     |
+| `X-OmniRoute-Session-Id` | Javob     | 67router ishlatgan amaldagi seans ID’si                                                                                                                                                                                                                                      |
 | `X-OmniRoute-Request-Id` | Javob     | Soʻrovni oʻzaro bogʻlash identifikatori (maʼlum boʻlsa)                                                                                                                                                                                                                      |
-| `X-OmniRoute-Version`    | Javob     | OmniRoute yigʻilmasi versiyasi (har doim mavjud)                                                                                                                                                                                                                             |
+| `X-OmniRoute-Version`    | Javob     | 67router yigʻilmasi versiyasi (har doim mavjud)                                                                                                                                                                                                                              |
 | `X-OmniRoute-Cost-Saved` | Javob     | `HIT` holatida kesh tejagan USD miqdori (faqat kesh mos tushganda)                                                                                                                                                                                                           |
 | `X-OmniRoute-Decision`   | Javob     | Marshrutlash izi: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` — kombinatsiya strategiyasi yoki kombinatsiyasiz soʻrov uchun `single`) — yakuniy javoblarda har doim mavjud                                                                                 |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Har bir soʻrov uchun hisobni biriktirish
 
-Provayderda bir nechta ulanish (hisoblar yoki kalitlar) mavjud boʻlsa, OmniRoute odatda
+Provayderda bir nechta ulanish (hisoblar yoki kalitlar) mavjud boʻlsa, 67router odatda
 hisob tanlash strategiyasi orqali ulardan birini tanlaydi. Buning oʻrniga soʻrov
 `x-omniroute-connection` sarlavhasi yordamida muayyan ulanishni biriktirishi mumkin:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -124,8 +124,8 @@ biriktirish maqsadida loyiha darajasidagi `.claude/settings.json` fayliga joylas
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Manba: `src/sse/handlers/chat.ts` (sarlavhani oʻqish), `src/sse/services/auth.t
 
 ## Eksklyuziv boshqariladigan seans ijaralari
 
-Eksklyuziv boshqariladigan seans ijarasi — ixtiyoriy, mijozga bogʻliq boʻlmagan marshrutlash shartnomasi: bitta faol egasi bitta mos OmniRoute ulanishini egallaydi. U modelni ijaraga bermaydi, OAuth talab qilmaydi, muayyan mijozni identifikatsiya qilmaydi yoki muayyan provayderni talab etmaydi.
+Eksklyuziv boshqariladigan seans ijarasi — ixtiyoriy, mijozga bogʻliq boʻlmagan marshrutlash shartnomasi: bitta faol egasi bitta mos 67router ulanishini egallaydi. U modelni ijaraga bermaydi, OAuth talab qilmaydi, muayyan mijozni identifikatsiya qilmaydi yoki muayyan provayderni talab etmaydi.
 
 Autentifikatsiya qiluvchi API kaliti `lease:exclusive` vakolat doirasiga va aniq koʻrsatilgan, boʻsh boʻlmagan `allowedConnections` roʻyxatiga ega boʻlishi kerak. Maʼlumotlar bazasidagi mutatsiya chegarasi kalit yaratish va qisman yangilash vaqtida ikkala maydonning birgalikda mavjud boʻlishini taʼminlaydi.
 
@@ -183,7 +183,7 @@ Faol ijara egasi joriy bogʻlanishi uchun maxfiylikni saqlovchi koʻrsatish meta
 }
 ```
 
-Ushbu ixtiyoriy status amali bitta maʼlumotlar bazasi tranzaksiyasida noaniq egasi, autentifikatsiya qilingan boshqariladigan API kaliti va aniq faol generatsiya orqali himoyalanadi. `displayName` faqat sozlangan ulanish nomining chetlardagi boʻshliqlari olib tashlangan koʻrinishidir; xavfsiz sozlangan nom mavjud boʻlmasa, u `null` boʻladi. OmniRoute hech qachon uning oʻrniga email yoki yaratilgan hisob identifikatorini qoʻymaydi. Provayder qiymati maxfiy boʻlmagan koʻrsatish yorligʻi boʻlib, hech qachon yaratilgan mos provayder identifikatori boʻlmaydi. Hisob maʼlumotlari, tokenlar, cookie-fayllar, ulanish yoki API kalitlarining xom identifikatorlari, egasi xeshlari, himoyalash sirlari va ichki marshrutlash maʼlumotlari chiqarib tashlanadi.
+Ushbu ixtiyoriy status amali bitta maʼlumotlar bazasi tranzaksiyasida noaniq egasi, autentifikatsiya qilingan boshqariladigan API kaliti va aniq faol generatsiya orqali himoyalanadi. `displayName` faqat sozlangan ulanish nomining chetlardagi boʻshliqlari olib tashlangan koʻrinishidir; xavfsiz sozlangan nom mavjud boʻlmasa, u `null` boʻladi. 67router hech qachon uning oʻrniga email yoki yaratilgan hisob identifikatorini qoʻymaydi. Provayder qiymati maxfiy boʻlmagan koʻrsatish yorligʻi boʻlib, hech qachon yaratilgan mos provayder identifikatori boʻlmaydi. Hisob maʼlumotlari, tokenlar, cookie-fayllar, ulanish yoki API kalitlarining xom identifikatorlari, egasi xeshlari, himoyalash sirlari va ichki marshrutlash maʼlumotlari chiqarib tashlanadi.
 
 Notoʻgʻri kalit, notoʻgʻri egasi, eskirgan generatsiya, mavjud boʻlmagan, muddati tugagan, boʻshatilgan va bekor qilingan qidiruvlarning barchasi ulanish metamaʼlumotlarisiz bir xil `409 LEASE_FENCE_STALE` xatosini qaytaradi. Sigʻimni kutish javobini olgan mijozda tekshirish uchun faol bogʻlanish mavjud emas. Marshrutlash faol ijarani boshqa ulanishga oʻtkazganda, ayni generatsiya haqiqiyligicha qoladi va status eski bogʻlanishni emas, yangi bogʻlanishni atomar ravishda qaytaradi. Mavjud mijozlar oʻzgarishsiz qoladi, chunki egallash, yangilash, boʻshatish va kutish javoblari avvalgi tuzilishini saqlab qoladi.
 
@@ -209,7 +209,7 @@ Vaqtinchalik bandlik HTTP `429` javobini `Retry-After` bilan birga qaytaradi:
 }
 ```
 
-Bu javob faqat odatiy mos toʻplam boʻsh boʻlmaganini va barcha boʻsh nomzodlar boshqa faol ijaralar tomonidan egallanganini anglatadi. Qoʻllab-quvvatlanmaydigan modellar/provayderlar, siyosat nomuvofiqligi, vaqtinchalik cheklov, kvota, holat va boshqa odatiy moslik xatolari mavjud OmniRoute javoblarini saqlab qoladi.
+Bu javob faqat odatiy mos toʻplam boʻsh boʻlmaganini va barcha boʻsh nomzodlar boshqa faol ijaralar tomonidan egallanganini anglatadi. Qoʻllab-quvvatlanmaydigan modellar/provayderlar, siyosat nomuvofiqligi, vaqtinchalik cheklov, kvota, holat va boshqa odatiy moslik xatolari mavjud 67router javoblarini saqlab qoladi.
 
 ### `x-omniroute-compression`
 
@@ -281,7 +281,7 @@ EmbeddingsV5Request hujjatlarini ham qabul qiladi va ularni **o‘zgartirmasdan*
 ```
 
 Mahalliy `{ image | audio | video | pdf }` qiymatlari ochiq HTTPS URL, `data:` URI yoki xom
-base64 bo‘lishi mumkin. OmniRoute bu obyektlarni satrga aylantirmaydi va mahalliy rasm URL manzillarini yuklab olmaydi — Jina
+base64 bo‘lishi mumkin. 67router bu obyektlarni satrga aylantirmaydi va mahalliy rasm URL manzillarini yuklab olmaydi — Jina
 ochiq mediaga o‘zi murojaat qiladi. Qo‘shimcha Jina maydonlari (`task`, `normalized`, `truncate`, `embedding_type`)
 uzatiladi. Faqat matn bilan ishlaydigan Jina SKU’lari matn bo‘lmagan hujjatlarni hamon rad etadi.
 
@@ -430,7 +430,7 @@ shu sababli mijoz kodi provayder uchun alohida holatni qayta ishlashi shart emas
 
 ### Vertex AI DeepSeek OCR autentifikatsiyasi va yakuniy nuqtani aniqlash
 
-`vertex-deepseek-ocr` OmniRoute chat/tasvir trafigi uchun allaqachon qo‘llab-quvvatlaydigan xuddi shu Vertex AI autentifikatsiyasidan
+`vertex-deepseek-ocr` 67router chat/tasvir trafigi uchun allaqachon qo‘llab-quvvatlaydigan xuddi shu Vertex AI autentifikatsiyasidan
 qayta foydalanadi (`open-sse/executors/vertex.ts`): ulanishning API kaliti Service Account JSON hisob ma’lumotlari
 (JWT-bearer oqimi orqali qisqa muddatli OAuth kirish tokeniga almashtiriladi) yoki o‘z holicha ishlatiladigan, avvaldan yaratilgan OAuth kirish tokeni bo‘ladi. Yuqori darajadagi yakuniy nuqta URL manzili Vertex’ning
 umumiy `openapi/chat/completions` hamkor yakuniy nuqtasi bo‘lib, ulanish loyihasi va
@@ -453,7 +453,7 @@ Authorization: Bearer your-api-key
 
 ### Model narxlari (`pricing`)
 
-OmniRoute model narxini bilganida, yozuv `pricing` obyektini oʻz ichiga oladi. Narx xarajatlarni hisobga olish uchun ishlatiladigan narxlar jadvalidan olinadi: ichki standart qiymatlar, sinxronlangan narxlar va `/api/pricing` orqali oʻrnatilgan ustuvor qiymatlar. Bular roʻyxat narxlari boʻlgani sababli, obuna provayderlari ham har bir token uchun narxni koʻrsatadi.
+67router model narxini bilganida, yozuv `pricing` obyektini oʻz ichiga oladi. Narx xarajatlarni hisobga olish uchun ishlatiladigan narxlar jadvalidan olinadi: ichki standart qiymatlar, sinxronlangan narxlar va `/api/pricing` orqali oʻrnatilgan ustuvor qiymatlar. Bular roʻyxat narxlari boʻlgani sababli, obuna provayderlari ham har bir token uchun narxni koʻrsatadi.
 
 ```json
 "pricing": {
@@ -586,7 +586,7 @@ Sidecar jarayondan tashqarida ishlasa va `open-sse/config/providerPluginManifest
 
 ## ElevenLabs orqali audio yaratish
 
-OmniRoute ichida ElevenLabs API kalitingiz bilan `elevenlabs` provayder ulanishini sozlang. Mijozlar oʻzlarining **OmniRoute** kaliti (`Authorization: Bearer $OMNIROUTE_API_KEY`) bilan autentifikatsiyadan oʻtadi; shlyuz saqlangan provayder kalitini `xi-api-key` sifatida taqdim etadi. ElevenLabs kalitini hech qachon shlyuzning bearer tokeni sifatida yubormang.
+67router ichida ElevenLabs API kalitingiz bilan `elevenlabs` provayder ulanishini sozlang. Mijozlar oʻzlarining **67router** kaliti (`Authorization: Bearer $OMNIROUTE_API_KEY`) bilan autentifikatsiyadan oʻtadi; shlyuz saqlangan provayder kalitini `xi-api-key` sifatida taqdim etadi. ElevenLabs kalitini hech qachon shlyuzning bearer tokeni sifatida yubormang.
 
 | Usul | Yoʻl                        | Javob                                      | API kaliti endpoint toifasi |
 | ---- | --------------------------- | ------------------------------------------ | --------------------------- |
@@ -629,7 +629,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
   -d '{"model":"elevenlabs/music_v1","prompt":"Gentle instrumental piano","duration":10,"instrumental":true}'
 ```
 
-Endpoint, model, budjet va ulanish cheklovlari yuqori oqimga murojaat qilishdan oldin qoʻllanadi. Asl yoʻnalishlar yuqori oqimdagi holat kodlari va xato tanalarini oʻzgartirmasdan qaytaradi, jumladan tarif rejasi cheklovi uchun `402` va kvota chegarasi uchun `429`. Mavjud boʻlsa, `character-cost`, `song-id`, `request-id` va `retry-after` sarlavhalari saqlanadi. Bepul kredit qoldigʻi har bir musiqa modeli, chiqish formati yoki API funksiyasidan foydalanish imkoniyatini kafolatlamaydi: har bir soʻrov uchun ruxsatni ElevenLabs belgilaydi. Birlashtirilgan endpoint OmniRoute’ning meʼyorlashtirilgan xato konvertida xato holati kodlarini saqlaydi.
+Endpoint, model, budjet va ulanish cheklovlari yuqori oqimga murojaat qilishdan oldin qoʻllanadi. Asl yoʻnalishlar yuqori oqimdagi holat kodlari va xato tanalarini oʻzgartirmasdan qaytaradi, jumladan tarif rejasi cheklovi uchun `402` va kvota chegarasi uchun `429`. Mavjud boʻlsa, `character-cost`, `song-id`, `request-id` va `retry-after` sarlavhalari saqlanadi. Bepul kredit qoldigʻi har bir musiqa modeli, chiqish formati yoki API funksiyasidan foydalanish imkoniyatini kafolatlamaydi: har bir soʻrov uchun ruxsatni ElevenLabs belgilaydi. Birlashtirilgan endpoint 67router’ning meʼyorlashtirilgan xato konvertida xato holati kodlarini saqlaydi.
 
 Yuqori oqim shartnomalari: [ovoz effektlari](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [musiqa kompozitsiyasi](https://elevenlabs.io/docs/api-reference/music/compose) va
@@ -670,7 +670,7 @@ Yuqori oqim shartnomalari: [ovoz effektlari](https://elevenlabs.io/docs/api-refe
 
 Barcha POST yoʻnalishlari bir xil tuzilishga ega: `Bearer your-api-key` + Zod yordamida tekshiriladigan JSON tanasi (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` va boshqalar, `src/shared/validation/schemas.ts` fayliga qarang). Sxema tekshiruvi muvaffaqiyatsiz boʻlsa, 4xx qaytariladi.
 
-`Authorization: Bearer ...` sarlavhasini biriktira olmaydigan mijozlar uchun OmniRoute URL ichidagi API kalitlarini ham qabul qiladi: soʻrov satri bilan moslik (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) yoki quyida hujjatlashtirilgan maxsus `/api/v1/vscode/{token}/...` endpointlari orqali.
+`Authorization: Bearer ...` sarlavhasini biriktira olmaydigan mijozlar uchun 67router URL ichidagi API kalitlarini ham qabul qiladi: soʻrov satri bilan moslik (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) yoki quyida hujjatlashtirilgan maxsus `/api/v1/vscode/{token}/...` endpointlari orqali.
 
 ```bash
 # Qayta saralash (bulutli reyestr provayderi yoki "<prefix>/<model>" koʻrinishidagi OpenAI bilan mos provayder tuguni)
@@ -833,7 +833,7 @@ ammo bu farq `usage.search_cost_usd`da aks ettirilmaydi.
 
 Sozlangan veb-olish provayderi (Firecrawl, Jina Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract) orqali URL manzilidan kontent ajratib oling.
 
-Parallel Extract (`parallel-search`, Parallel Search bilan bir xil API kaliti) faqat Markdown qaytaradi — boshqa har qanday `format` uchun `400` qaytariladi — va kontent hajmini 100 000 ta belgi bilan cheklaydi. Maqsadli sahifaning o‘zini ajratib bo‘lmasa, yuqori oqimdagi xizmat bu haqda HTTP 200 javobi ichida xabar beradi; OmniRoute buni qat’iy belgilangan xabar bilan `422` sifatida taqdim etadi.
+Parallel Extract (`parallel-search`, Parallel Search bilan bir xil API kaliti) faqat Markdown qaytaradi — boshqa har qanday `format` uchun `400` qaytariladi — va kontent hajmini 100 000 ta belgi bilan cheklaydi. Maqsadli sahifaning o‘zini ajratib bo‘lmasa, yuqori oqimdagi xizmat bu haqda HTTP 200 javobi ichida xabar beradi; 67router buni qat’iy belgilangan xabar bilan `422` sifatida taqdim etadi.
 
 | Usul | Yo‘l            | Tavsif                                                                        |
 | ---- | --------------- | ----------------------------------------------------------------------------- |
@@ -894,14 +894,14 @@ faol kirish nuqtasi bo‘lishi kerak (`app/server-ws.mjs` mavjud bo‘lsa, stand
 OpenAI **Codex CLI** `supports_websockets = true` bo‘lganda model nomini mijoz tomonida tekshiradi va
 `codex/gpt-5.5` kabi **provayder prefiksli identifikatorlarni rad etadi**
 (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). **Oddiy** identifikatorni yuboring (masalan, `gpt-5.5`). OmniRoute ko‘prigi
+a ChatGPT account`). **Oddiy** identifikatorni yuboring (masalan, `gpt-5.5`). 67router ko‘prigi
 faqat codex uchun mo‘ljallangan, shu sababli yuqori oqimga tunnel yaratishdan oldin oddiy identifikatorni
 codex modeli sifatida (`resolveCodexWsModelInfo`) qayta aniqlaydi — garchi oddiy
 `gpt-5.5` aks holda HTTP orqali boshqa provayderga yo‘naltirilsa ham.
 
 #### OpenAI Codex CLI-ni sozlash
 
-`~/.codex/config.toml` fayliga WebSocket qo‘llab-quvvatlanadigan maxsus provayder qo‘shish orqali Codex CLI-ni OmniRoute-ga
+`~/.codex/config.toml` fayliga WebSocket qo‘llab-quvvatlanadigan maxsus provayder qo‘shish orqali Codex CLI-ni 67router-ga
 yo‘naltiring (mavjud konfiguratsiyaga tegmaslik uchun alohida `CODEX_HOME` dan foydalaning):
 
 ```toml
@@ -913,15 +913,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # oxirida qiya chiziq bo‘lmasin; WS URL hosil qilinadi (ishlab chiqarish muhitida https/wss dan foydalaning)
 wire_api = "responses"                    # 2026-yil fevralidan beri qo‘llab-quvvatlanadigan yagona qiymat
 supports_websockets = true                # Responses-over-WS transportini yoqadi
-env_key = "OMNIROUTE_API_KEY"             # OmniRoute API kalitini saqlaydi (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # 67router API kalitini saqlaydi (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API kaliti (REQUIRE_API_KEY=false bo‘lsa, istalgan kalit)
+export OMNIROUTE_API_KEY=sk-...           # 67router API kaliti (REQUIRE_API_KEY=false bo‘lsa, istalgan kalit)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI `base_url + /responses` manzilini WebSocket ulanishiga yangilaydi va OmniRoute uni
+CLI `base_url + /responses` manzilini WebSocket ulanishiga yangilaydi va 67router uni
 tanlangan codex OAuth ulanishiga tunnellaydi. Mahalliy serverda boshidan oxirigacha tekshirilgan:
 ChatGPT `codex.rate_limits` + `response.created` ni qaytaradi va yakuniy natijani oqimli uzatadi.
 
@@ -997,7 +997,7 @@ Rad etilganda (`401` yaroqsiz kalit / `403` ruxsat berilmagan) ayni yoʻnalish
 
 #### Chegara qiymatiga moslashtirish formulasi
 
-OmniRoute yuqori oqimdagi resurslarning tugab qolishiga yoʻl qoʻymaslik uchun proaktiv kvota chegaralarini qoʻllab-quvvatlaydi (ular ulanishning `quotaWindowThresholds` parametri, provayderning standart qiymatlari yoki global chidamlilik sozlamalari orqali belgilanadi). Kvota oynasida chegara qiymati (masalan, `cutoff = 25%`) faol boʻlsa, matn rendereri qolgan limitni quyidagicha hisoblaydi:
+67router yuqori oqimdagi resurslarning tugab qolishiga yoʻl qoʻymaslik uchun proaktiv kvota chegaralarini qoʻllab-quvvatlaydi (ular ulanishning `quotaWindowThresholds` parametri, provayderning standart qiymatlari yoki global chidamlilik sozlamalari orqali belgilanadi). Kvota oynasida chegara qiymati (masalan, `cutoff = 25%`) faol boʻlsa, matn rendereri qolgan limitni quyidagicha hisoblaydi:
 
 - Agar `remaining <= cutoff` boʻlsa: `0%` qaytaradi.
 - Agar `remaining > cutoff` boʻlsa: `((remaining - cutoff) / (100 - cutoff)) * 100` qaytaradi.
@@ -1359,9 +1359,8 @@ GET javobi `agents[]` (id, name, binary, version, installed, protocol, isCustom)
 
 ### Baholashlar
 
-| Endpoint     | Metod    | Tavsif                                                        |
-| ------------ | -------- | ------------------------------------------------------------- |
-| `/api/evals` | GET/POST | Baholash toʻplamlarini roʻyxatlash/baholashni ishga tushirish |
+| Endpoint | Metod | Tavsif |
+| -------- | ----- | ------ |
 
 ### Siyosatlar
 
@@ -1543,7 +1542,7 @@ Eslatmalar:
 
 - Tokenli aliaslar `/v1/*` va `/api/tags` bilan bir xil ishlov beruvchilardan qayta foydalanadi; javob tuzilmalari bir xil boʻlib qoladi.
 - Mijoz maxsus sarlavhalarni qoʻllab-quvvatlaganida, doimo `Authorization: Bearer ...` usulini afzal koʻring.
-- URL asosidagi tokenlar teskari proksi jurnallarida, brauzer tarixida va OmniRoute’dan tashqaridagi telemetriyada koʻrinishi mumkin. Ulardan standart autentifikatsiya rejimi sifatida emas, balki moslik varianti sifatida foydalaning.
+- URL asosidagi tokenlar teskari proksi jurnallarida, brauzer tarixida va 67router’dan tashqaridagi telemetriyada koʻrinishi mumkin. Ulardan standart autentifikatsiya rejimi sifatida emas, balki moslik varianti sifatida foydalaning.
 
 ---
 
@@ -1651,7 +1650,7 @@ Yuqori darajadagi marshrutlash kombinatsiyalari (`/api/combos*` boʻlimida allaq
 
 ## Vebhuklar
 
-OmniRoute hodisalari (soʻrov yakunlanishi, kvota tugashi, kalitni almashtirish va hokazo) uchun chiquvchi vebhuk obunalari.
+67router hodisalari (soʻrov yakunlanishi, kvota tugashi, kalitni almashtirish va hokazo) uchun chiquvchi vebhuk obunalari.
 
 | Metod  | Yoʻl                      | Tavsif                                                                              |
 | ------ | ------------------------- | ----------------------------------------------------------------------------------- |
@@ -1682,31 +1681,6 @@ Avtomatik kalit boshqaruvi quyi tizimi tomonidan asosiy provayder/hisob qaydnoma
 
 ---
 
-## Agentlar protokoli
-
-OmniRoute foydalanuvchilari nomidan masofadan bajariladigan bulut agenti vazifalari (Claude Code, Codex Cloud, OpenHands va boshqalar).
-
-| Metod  | Yoʻl                          | Tavsif                                                                                                                                                                 |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Vazifalarni roʻyxatlash — ixtiyoriy `?provider=`, `?status=`, `?limit=` (1–500, standart qiymat 50)                                                                    |
-| POST   | `/api/v1/agents/tasks`        | Vazifa yaratish — soʻrov tanasi `CreateCloudAgentTaskSchema` orqali tekshiriladi (`providerId`, `prompt`, `source`, `options?`). Vazifa konverti bilan `201` qaytaradi |
-| DELETE | `/api/v1/agents/tasks?id=...` | Vazifani oʻchirish                                                                                                                                                     |
-| GET    | `/api/v1/agents/tasks/[id]`   | Vazifani oʻqish — `external_id` oʻrnatilgan boʻlsa, yuqori oqimdagi bulut agentidan holatni sinxron ravishda yangilaydi                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Ajratilgan amal: `{action: "approve"}`, `{action: "message", message}` yoki `{action: "cancel"}`                                                                       |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Muayyan vazifani identifikatori boʻyicha oʻchirish                                                                                                                     |
-
-> **Autentifikatsiya:** har bir metod uchun boshqaruv autentifikatsiyasi talab qilinadi (`requireCloudAgentManagementAuth`). v3.8.0 dan oldin ular autentifikatsiyasiz edi — moslikni buzuvchi oʻzgarish uchun `588a0333` kommitiga qarang.
-
-```bash
-# Claude Code bulut vazifasini yaratish
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Boshqaruv proksilari
 
 Provayderlar, hisoblar yoki global miqyosda biriktirilishi mumkin boʻlgan chiquvchi HTTP(S)/SOCKS proksilari.
@@ -1730,7 +1704,7 @@ Provayderlar, hisoblar yoki global miqyosda biriktirilishi mumkin boʻlgan chiqu
 
 ## Barqarorlik (kengaytirilgan)
 
-OmniRoute vaqtinchalik nosozliklarga qarshi uchta mustaqil mexanizmni taqdim etadi; quyidagi boshqaruv endpointlari operatorlarga ularning holatini ko‘rish va sozlamalarini almashtirish imkonini beradi:
+67router vaqtinchalik nosozliklarga qarshi uchta mustaqil mexanizmni taqdim etadi; quyidagi boshqaruv endpointlari operatorlarga ularning holatini ko‘rish va sozlamalarini almashtirish imkonini beradi:
 
 | Qamrov                   | Holat saqlanadigan joy                       | Ko‘rish                                   | Qayta o‘rnatish / tozalash                                                    |
 | ------------------------ | -------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------- |
@@ -1765,7 +1739,7 @@ To‘liq konseptual ma’lumotnoma va uzgichning standart sozlamalari uchun [`CL
 
 ## Ko‘nikmalar
 
-OmniRoute imkoniyatlarini maxsus bajariladigan ishlov beruvchilar va marketplace integratsiyalari bilan kengaytirish uchun ko‘nikmalar freymvorki.
+67router imkoniyatlarini maxsus bajariladigan ishlov beruvchilar va marketplace integratsiyalari bilan kengaytirish uchun ko‘nikmalar freymvorki.
 
 | Metod  | Yo‘l                              | Tavsif                                                                                                                                  |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1802,7 +1776,7 @@ Har bir API kaliti / sessiya doirasida ajratilgan doimiy suhbatga oid/faktik xot
 
 ## MCP serveri
 
-OmniRoute 3 ta transport (stdio, SSE, streamable-http) va doirasi cheklangan vositalarga ega ichki Model Context Protocol serveri bilan taqdim etiladi. Quyidagi boshqaruv paneli endpointlari holat/audit maʼlumotlarini oʻqiydi va HTTP transportlarini proksi qiladi.
+67router 3 ta transport (stdio, SSE, streamable-http) va doirasi cheklangan vositalarga ega ichki Model Context Protocol serveri bilan taqdim etiladi. Quyidagi boshqaruv paneli endpointlari holat/audit maʼlumotlarini oʻqiydi va HTTP transportlarini proksi qiladi.
 
 | Metod | Yoʻl | Tavsif |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1824,50 +1798,12 @@ OmniRoute 3 ta transport (stdio, SSE, streamable-http) va doirasi cheklangan vos
 
 ## A2A serveri
 
-OmniRoute tekshirish/boshqaruv panelida foydalanish uchun REST o‘ramasi bilan birga A2A (agentdan agentga) JSON-RPC 2.0 yakuniy nuqtasini taqdim etadi.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # OMNIROUTE_API_KEY o‘rnatilmagan bo‘lsa, ixtiyoriy
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Qo‘llab-quvvatlanadigan metodlar (barchasi `settings.a2aEnabled` orqali boshqariladi):
-
-| Metod            | Tavsif                                                               |
-| ---------------- | -------------------------------------------------------------------- |
-| `message/send`   | Ko‘nikmani sinxron bajarish; `{task, artifacts, metadata}` qaytaradi |
-| `message/stream` | Xuddi shu ko‘nikmalar to‘plamini SSE orqali oqimli bajarish          |
-| `tasks/get`      | Vazifani `taskId` bo‘yicha olish                                     |
-| `tasks/cancel`   | Vazifani `taskId` bo‘yicha bekor qilish                              |
-
-Ichki ko‘nikmalar: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent kartasi
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ommaviy A2A agent kartasini (nomi, tavsifi, imkoniyatlari, ko‘nikmalar katalogi, autentifikatsiya sxemasi) qaytaradi — ommaviy tarzda 1 soatga keshlanadi. Autentifikatsiya talab qilinmaydi.
+67router tekshirish/boshqaruv panelida foydalanish uchun REST o‘ramasi bilan birga A2A (agentdan agentga) JSON-RPC 2.0 yakuniy nuqtasini taqdim etadi.
 
 ### REST yordamchilari
 
 | Metod | Yo‘l                         | Tavsif                                                                                                                  |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A yoqilganligi + vazifalar statistikasi + keshlangan agent kartasi xulosasi                                           |
 | GET   | `/api/a2a/tasks`             | Vazifalar ro‘yxati — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (REST yordamchisi sifatida amalga oshirilmagan — JSON-RPC `message/send` orqali yarating)                               |
 | GET   | `/api/a2a/tasks/[id]`        | Bitta vazifani olish                                                                                                    |
@@ -1887,12 +1823,8 @@ Ommaviy A2A agent kartasini (nomi, tavsifi, imkoniyatlari, ko‘nikmalar katalog
 | GET | `/api/cloud/models/alias` | Bulutli sinxronlashga taqdim etilgan model taxalluslari ro‘yxatini olish |
 | GET | `/api/assess` | Eng so‘nggi baholash toifalarini o‘qish (har bir provayder/model bo‘yicha) |
 | POST | `/api/assess` | Baholashni ishga tushirish — so‘rov tanasi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ichki sinov to‘plamlari va eng so‘nggi ishga tushirishlar ro‘yxatini olish |
-| POST | `/api/evals` | Sinovni ishga tushirish |
-| POST | `/api/evals/suites` | Maxsus sinov to‘plamini yaratish — so‘rov tanasi `evalSuiteSaveSchema` orqali tekshiriladi |
-| GET | `/api/evals/suites/[id]` | Maxsus sinov to‘plamini olish |
 
-**Autentifikatsiya:** `/api/cloud/auth` Bearer kalitini bevosita tekshiradi va faqat `manage` / `admin` vakolat doirasiga ega kalit uchun har bir ulanishning niqoblangan kaliti va `projectId` qiymatini qaytaradi; boshqa `/api/cloud/*`, `/api/evals/*` va `/api/assess` yo‘nalishlari boshqaruv sessiyasi/API kalitini talab qiladi. `/api/assess` POST diskriminatorli birlashma ko‘lam sxemasi bilan `validateBody` dan foydalanadi.
+**Autentifikatsiya:** `/api/cloud/auth` Bearer kalitini bevosita tekshiradi va faqat `manage` / `admin` vakolat doirasiga ega kalit uchun har bir ulanishning niqoblangan kaliti va `projectId` qiymatini qaytaradi; boshqa `/api/cloud/*` va `/api/assess` yo‘nalishlari boshqaruv sessiyasi/API kalitini talab qiladi. `/api/assess` POST diskriminatorli birlashma ko‘lam sxemasi bilan `validateBody` dan foydalanadi.
 
 ---
 
@@ -2053,7 +1985,7 @@ Operatsion boshqaruv uchun faqat administratorlarga moʻljallangan endpointlar.
 
 ## CLI vositalarini boshqarish
 
-OmniRoute bilan integratsiyalashadigan CLI vositalarini (antigravity, commandCode,
+67router bilan integratsiyalashadigan CLI vositalarini (antigravity, commandCode,
 devin-cli va boshqalar) boshqaring. Toʻliq roʻyxat uchun [Provayder maʼlumotnomasi](./PROVIDER_REFERENCE.md)ga qarang.
 
 | Metod | Yoʻl                                    | Tavsif                                                                                                                                                                         |
@@ -2162,26 +2094,6 @@ Toʻliq maʼlumot uchun [Koʻnikmalar freymvorki](../frameworks/SKILLS.md) bo‘
 
 ---
 
-## Plaginlar
-
-OmniRoute plaginlarini (uchinchi tomon kengaytmalarini) boshqaring.
-
-| Metod  | Yoʻl                               | Tavsif                              |
-| ------ | ---------------------------------- | ----------------------------------- |
-| GET    | `/api/plugins`                     | Oʻrnatilgan plaginlarni roʻyxatlash |
-| POST   | `/api/plugins/marketplace/install` | Marketpleysdan plaginni oʻrnatish   |
-| DELETE | `/api/plugins/[name]`              | Plaginni olib tashlash              |
-| POST   | `/api/plugins/[name]/activate`     | Plaginni faollashtirish             |
-| POST   | `/api/plugins/[name]/deactivate`   | Plaginni faolsizlantirish           |
-| GET    | `/api/plugins/[name]/config`       | Plagin konfiguratsiyasini olish     |
-| PUT    | `/api/plugins/[name]/config`       | Plagin konfiguratsiyasini yangilash |
-
-**Autentifikatsiya:** Boshqaruv seansi talab qilinadi.
-
-Toʻliq maʼlumot uchun [Plaginlar freymvorki](../frameworks/PLUGIN_SDK.md) bo‘limiga qarang.
-
----
-
 ## Soya marshrutlash
 
 Provayderlarni soya rejimida / A-B usulida taqqoslash **mustaqil REST interfeysi emas** — u kombinatsiyalangan marshrutlash orqali sozlanadi ([Avtomatik kombinatsiya](../routing/AUTO-COMBO.md) bo‘limiga qarang). Har bir kombinatsiya bo‘yicha taqqoslash ko‘rsatkichlari `GET /api/combos/metrics` orqali taqdim etiladi.
@@ -2214,5 +2126,3 @@ To‘rtta hisob ma’lumotlari oilasi (boshqaruv paneli seansi, mahalliy CLI tok
 - `requireLogin` sozlamasini `/api/settings/require-login` orqali yoqish yoki o‘chirish mumkin
 - `REQUIRE_API_KEY=true` bo‘lganda, `/v1/*` marshrutlari ixtiyoriy ravishda Bearer API kalitini talab qiladi
 - Ushbu ma’lumotnomadagi "boshqaruv tokeni" / "boshqaruv doirasidagi API kaliti" iboralari qo‘llanmada ko‘rsatilgan oilalardan birini anglatadi — alohida, ta’riflanmagan maxfiy ma’lumot turini emas
-
-> **Moslikni buzuvchi o‘zgarish (v3.8.0)** — `/api/v1/agents/tasks/*` va kutish muddatini boshqarish endpointlari endi **boshqaruv autentifikatsiyasini** (boshqaruv panelining `auth_token` cookie-fayli yoki boshqaruv doirasidagi API kaliti) talab qiladi. Ilgari ushbu marshrutlarga autentifikatsiyasiz murojaat qilgan mijozlar `401 Unauthorized` javobini oladi. `588a0333` kommitiga qarang (`fix(auth): require management auth for agent and cooldown APIs`).

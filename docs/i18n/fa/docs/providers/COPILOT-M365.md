@@ -37,7 +37,7 @@ URL کامل دارای قالب زیر است:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. در OmniRoute، به **Providers → Add Provider** بروید، **Microsoft 365 Copilot
+6. در 67router، به **Providers → Add Provider** بروید، **Microsoft 365 Copilot
    (BizChat)** را انتخاب کنید و اعتبارنامه را با قالب زیر جایگذاری کنید:
 
 ```
@@ -53,9 +53,9 @@ access_token=<jwt>; chathubPath=<oid>@<tenant>
 1. **DevTools → Network** را باز کنید.
 2. یک مکالمه BizChat را آغاز یا ادامه دهید (این کار اتصال WebSocket را فعال میکند).
 3. در پنل Network راستکلیک کنید و **Save all as HAR with content** را انتخاب کنید.
-4. در OmniRoute، از دکمه **Import .har file** در پنجره اتصال ارائهدهنده استفاده کنید.
+4. در 67router، از دکمه **Import .har file** در پنجره اتصال ارائهدهنده استفاده کنید.
 
-OmniRoute فایل HAR را برای یافتن URL مربوط به WebSocket‏ Chathub اسکن میکند، مقادیر
+67router فایل HAR را برای یافتن URL مربوط به WebSocket‏ Chathub اسکن میکند، مقادیر
 `access_token` و `chathubPath` را استخراج میکند و فیلدهای اعتبارنامه را بهصورت خودکار پر میکند. وارد کردن HAR، زمان انقضای JWT را رمزگشایی کرده و مدت اعتبار باقیمانده توکن را نمایش میدهد.
 
 > **هرگز یک فایل HAR واقعی، توکن دسترسی یا توکن نوسازی را commit نکنید.** مقادیر مورد استفاده در آزمونها و مستندات باید همیشه جاینگهدار باشند.
@@ -75,7 +75,7 @@ OmniRoute فایل HAR را برای یافتن URL مربوط به WebSocket‏
 | `tier`         | `individual` (پیشفرض)، `edu` یا `enterprise`                          |
 
 توکن نوسازی را از یک جریان device-code یا authorization-code مایکروسافت با محدوده
-`substrate.office.com/sydney` دریافت کنید. با تنظیم `refreshToken`، ‏OmniRoute پیش از هر درخواست `access_token` را از قبل نوسازی میکند؛ بنابراین لازم نیست پس از هر انقضای حدوداً ۷۵ دقیقهای، اعتبارنامه را دوباره دریافت کنید.
+`substrate.office.com/sydney` دریافت کنید. با تنظیم `refreshToken`، ‏67router پیش از هر درخواست `access_token` را از قبل نوسازی میکند؛ بنابراین لازم نیست پس از هر انقضای حدوداً ۷۵ دقیقهای، اعتبارنامه را دوباره دریافت کنید.
 
 اگر `refreshToken` تنظیم نشده باشد، باید پس از هر انقضا، اعتبارنامه WebSocket را بهصورت دستی دوباره دریافت کنید.
 

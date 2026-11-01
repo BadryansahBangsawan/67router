@@ -9,9 +9,9 @@
 > **Taighde deireanach déanta:** 2026-06-17 — taighde gréasáin de réir soláthraí (doiciméid oifigiúla + nuacht ó na 7 lá roimhe sin, babhta 50 gníomhaire le fíorú sáraíochta) inar nuashonraíodh gach cuóta sraithe saor in aisce + ToS. **Ath-iniúchadh páirteach 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — féach an nóta dátaithe thíos).
 > **Foinse údarásach (catalóg):** `open-sse/config/freeModelCatalog.ts` (buiséid in aghaidh na SAMHLA, dí-dhúblaithe de réir linne). Tagann na figiúirí maidir le buiséid chomharthaí thíos ó thaighde beo gréasáin agus is **neasluach** iad — féach [Modheolaíocht & foláirimh](#methodology--caveats).
 
-## GO HACHOMAIR — cé mhéad tátal saor in aisce a chomhiomlánaíonn OmniRoute i ndáiríre?
+## GO HACHOMAIR — cé mhéad tátal saor in aisce a chomhiomlánaíonn 67router i ndáiríre?
 
-Déanann na figiúirí seo cur síos ar chuntais tríú páirtí ar leith agus ar choinníollacha incháilitheachta ar fud na catalóige. Ní OmniRoute a dheonaíonn an buiséad seo: ní mór duit na cuntais nó na dintiúir riachtanacha a fháil, soláthraithe incháilithe a nascadh, agus cloí lena dteorainneacha. D’fhéadfadh an acmhainn iarbhír atá inúsáidte a bheith níos ísle, fiú nialasach ar shuiteáil úr nach bhfuil aon bhealach incháilithe aici. Eisiatar soláthraithe atá marcáilte `tos: avoid` ón ródú uathoibríoch de réir réamhshocraithe.
+Déanann na figiúirí seo cur síos ar chuntais tríú páirtí ar leith agus ar choinníollacha incháilitheachta ar fud na catalóige. Ní 67router a dheonaíonn an buiséad seo: ní mór duit na cuntais nó na dintiúir riachtanacha a fháil, soláthraithe incháilithe a nascadh, agus cloí lena dteorainneacha. D’fhéadfadh an acmhainn iarbhír atá inúsáidte a bheith níos ísle, fiú nialasach ar shuiteáil úr nach bhfuil aon bhealach incháilithe aici. Eisiatar soláthraithe atá marcáilte `tos: avoid` ón ródú uathoibríoch de réir réamhshocraithe.
 
 **Seiceáilte 2026-10-08:** Tairgeann [Cerebras](https://www.cerebras.ai/pricing) creidmheas bolscaireachta aonuaire $5 a éilíonn modh íocaíochta agus a théann in éag tar éis 30 lá. Foilsíonn [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) teorainneacha ráta de réir tionscadail/samhla/sraithe; tá sé fós lasmuigh den phríomhfhigiúr míosúil cainníochtaithe.
 
@@ -24,7 +24,7 @@ Déanann na figiúirí seo cur síos ar chuntais tríú páirtí ar leith agus a
 | **+ faoi réir seiceáil aitheantais réigiúnach**         | **+~6M**              | `modelscope` (ceangal le Alibaba Cloud + fíorú fíorainmne sa tSín mhórthír). Fíorchuóta athfhillteach, léirithe mar `gatedRecurringTokens` / `gatedProviders` agus ar an deais. Ní shuimítear sa phríomhfhigiúr é riamh: +~6M faoi réir fíorú aitheantais réigiúnach.                                                                         |
 | Uasteorainn theoiriciúil (gach teorainn ráta, 24/7)     | ~10B                  | Suim theorainneacha ráta gach soláthraí, eachtarshuite chuig úsáid gan stad. **Ní ráthaíocht í** — ná húsáid mar phríomhfhigiúr í.                                                                                                                                                                                                            |
 
-**Príomhfhigiúr macánta:** _Comhiomlánaíonn OmniRoute **~1.62B comhartha saor in aisce doiciméadaithe in aghaidh na míosa** (suas le ~2.22B i do chéad mhí le creidmheasanna clárúcháin) thar 34 linn sraithe saor in aisce — chomh maith le heireaball fada soláthraithe atá saor in aisce go buan agus gan uasteorainn — agus cuireann comhbhrú RTK + Caveman (coigilteas comharthaí 15–95%) leis sin tuilleadh._
+**Príomhfhigiúr macánta:** _Comhiomlánaíonn 67router **~1.62B comhartha saor in aisce doiciméadaithe in aghaidh na míosa** (suas le ~2.22B i do chéad mhí le creidmheasanna clárúcháin) thar 34 linn sraithe saor in aisce — chomh maith le heireaball fada soláthraithe atá saor in aisce go buan agus gan uasteorainn — agus cuireann comhbhrú RTK + Caveman (coigilteas comharthaí 15–95%) leis sin tuilleadh._
 
 > **Cén fáth ar thit sé seo ón ~1.94B roimhe seo.** Is ceartúchán macántachta é athnuachan 2026-06-17, ní caillteanas: tá `gemini` dí-dhúbláilte de réir linne anois (bhí sé á áibhéil trí gach leagan Flash a chomhaireamh ar leithligh, 462M → 60M), ceartaíodh `cloudflare-ai` go dtí a fhíor-theorainn 10k Néarón/lá (122M → 30M), athaicmíodh `doubao` mar chreidmheas clárúcháin aonuaire (ní creidmheas athfhillteach), agus baineadh sraitheanna a dúnadh (`chutes`/`phind`/`kluster` scortha). Déantar é seo a fhritháireamh go páirteach le `llm7` (an 5M/lá ceart → 150M) agus soláthraithe nua saor in aisce (Kilo, OpenCode Zen, Z.AI GLM-Flash).
 >
@@ -92,7 +92,7 @@ aon chreidmheas saor in aisce ann. Tugtar mionsonraí faoi na hathruithe Nous sa
 
 ## Dhá chóras — comhaireamh vs cinneadh
 
-Freagraíonn OmniRoute an cheist "an bhfuil sé saor in aisce?" trí dhá chóras a léann
+Freagraíonn 67router an cheist "an bhfuil sé saor in aisce?" trí dhá chóras a léann
 foinsí éagsúla d'aon ghnó:
 
 | Córas                        | Foinse na fírinne                                                                                                                                                                                  | Dromchlaí                                                                                                                                    |
@@ -140,7 +140,7 @@ Is suimeanna de lipéid in aghaidh na samhla iad formhór na bhfigiúirí “com
 
 ### ⚠️ Aire — clásail úsáide pearsanta / seachfhreastalaí ar fiú iad a sheiceáil (16)
 
-> Tá a rochtain saor in aisce fíor agus is féidir le OmniRoute ródú chucu; ní fiú ach bheith ar an eolas faoi na clásail thíos. Ní féidir na cinn OAuth/gan eochair a chainníochtú i gcomharthaí, mar sin níl siad san áireamh sa phríomhuimhir (ní toisc nach féidir iad a úsáid).
+> Tá a rochtain saor in aisce fíor agus is féidir le 67router ródú chucu; ní fiú ach bheith ar an eolas faoi na clásail thíos. Ní féidir na cinn OAuth/gan eochair a chainníochtú i gcomharthaí, mar sin níl siad san áireamh sa phríomhuimhir (ní toisc nach féidir iad a úsáid).
 
 | Soláthraí        | Nóta                                                                                                                                                                                                         |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -154,7 +154,7 @@ Is suimeanna de lipéid in aghaidh na samhla iad formhór na bhfigiúirí “com
 | `fireworks`      | Cuireann an ToS cosc sainráite ar úsáid mar sheachfhreastalaí/idirghabhálaí, ar eochracha API a aistriú, agus ar fhocheadúnú (Ailt 2.1 agus 2.2(i)(j)); ní… seachfhreastalaithe pearsanta féinóstáilte       |
 | `friendliai`     | Cuireann Ailt 8(e) agus 8(f) den ToS cosc sainráite ar FriendliAI a úsáid mar sheachfhreastalaí nó rochtain tríú páirtí a cheadú ar bhonn neamhspleách, agus cuireann siad cosc ar athdhíol/…                |
 | `iflytek`        | Cuireann Alt 2.4(3) de Chomhaontú Seirbhíse iFlytek Spark LLM cosc sainráite ar “aon mhodh uathoibrithe nó ríomhchláraithe a úsáid chun sonraí nó aschur a bhaint…                                           |
-| `kiro`           | Cuireann CCanna Kiro cosc sainráite ar úsáid le “OpenClaw agus uirlisí comhchosúla a bhaineann leas as úmacha tríú páirtí” — seachfhreastalaí AI féinóstáilte (amhail OmniRoute) a ró…                       |
+| `kiro`           | Cuireann CCanna Kiro cosc sainráite ar úsáid le “OpenClaw agus uirlisí comhchosúla a bhaineann leas as úmacha tríú páirtí” — seachfhreastalaí AI féinóstáilte (amhail 67router) a ró…                        |
 | `modal`          | Cuireann Alt 1.3 den ToS cosc sainráite ar “a ligean ar cíos, a athdhíol nó rochtain dhíreach ar an tSeirbhís nó úsáid na Seirbhíse a cheadú ar shlí eile d’aon tríú páirtí” — ag cruthú seirbhíse féinósta… |
 | `muse-spark-web` | Cuireann ToS Meta cosc sainráite ar rochtain uathoibrithe gan cead roimh ré, ar innealtóireacht droim ar ais gan cead i scríbhinn, agus ar dhul timpeall ar theicneolaío…                                    |
 | `nlpcloud`       | Cuireann an ToS cosc sainráite ar “sheachfhreastalaí nó gléas eile a chur ar bun a ligeann do dhaoine eile an tSeirbhís a rochtain tríd” agus ní dheonaíonn sé ach ceadúnas neamh-inaistrithe,…              |
@@ -316,7 +316,7 @@ Is suimeanna de lipéid in aghaidh na samhla iad formhór na bhfigiúirí “com
 
 - **`360ai`** — Is cosúil go bhfuil an freeNote a dáileadh, "Samhlacha Free 360 AI Brain", as dáta. Tá an rochtain reatha faoi réir iarratais agus íoctha. Seans gurbh iad na comharthaí cur chun cinn ó thráth an tseolta in 2023 (100M–250M aonuaire) ba bhunús leis…
 - **`agentrouter`** — Deir an freeNote a dáileadh againn "$200 de chreidmheasanna saor in aisce ar chlárú." Is é fírinne an scéil faoi láthair nach bhfaigheann gnáthchláruithe (gan atreorú) ach $100; d’fhéadfadh cláruithe trí atreorú $200 a fháil, ach luaigh trácht pobail ó Aibreán 2026…
-- **`agy`** — Deir an freeNote a dáileadh againn "(dada)", rud a thugann le tuiscint nach bhfuil aon tsraith in aisce ann, ach tá sraith in aisce faoi réir OAuth ag Antigravity. Mar sin féin, cuireann na ToS cosc sainráite ar an tsraith in aisce seo a úsáid trí sheachfhreastalaí amhail OmniRoute …
+- **`agy`** — Deir an freeNote a dáileadh againn "(dada)", rud a thugann le tuiscint nach bhfuil aon tsraith in aisce ann, ach tá sraith in aisce faoi réir OAuth ag Antigravity. Mar sin féin, cuireann na ToS cosc sainráite ar an tsraith in aisce seo a úsáid trí sheachfhreastalaí amhail 67router …
 - **`ai21`** — Níos srianta: giorraíodh tréimhse na trialach ó "3 mhí" go 7 lá. Tá méid an chreidmheasa, $10, mar an gcéanna fós, ach thit a bhailíocht go géar ó ~90 lá go 7 lá.
 - **`aimlapi`** — Athraithe go suntasach. D’fhógair an freeNote a dáileadh "$0.025/lá i gcreidmheasanna saor in aisce — 200+ samhail", ach tá an tsraith in aisce curtha ar sos/scortha anois. An leithdháileadh creidmheasa $0.025/lá (50,000 creidmheas/lá, 10 n-iarratas/lá…
 - **`amazon-q`** — Deir an freeNote a dáileadh againn "(dada)" — tá an fhírinne níos measa: tá an táirge scortha anois do chláruithe nua (15 Bealtaine 2026). Roimhe seo, thairg an tsraith in aisce 50 iarratas gníomhairíoch/mí + úsáid neamhtheoranta inlíne…

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute distingue la **détection des CLI**, le **protocole natif Agent Client Protocol** et
+67router distingue la **détection des CLI**, le **protocole natif Agent Client Protocol** et
 les **adaptateurs stdio hérités**. La détection d’un binaire installé ne garantit ni son
 authentification, ni la compatibilité de ses modèles, ni sa capacité à traiter une requête.
 
@@ -127,5 +127,3 @@ cible.
 - [Protocoles d’agents](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contrats de lancement des CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Outils CLI](../reference/CLI-TOOLS.md)
-- [Serveur A2A](./A2A-SERVER.md)
-- [Agents cloud](./CLOUD_AGENT.md)

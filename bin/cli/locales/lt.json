@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Klaida: {message}",
-    "serverOffline": "OmniRoute serveris nepasiekiamas. Paleiskite jį naudodami komandą: omniroute serve",
+    "serverOffline": "67router serveris nepasiekiamas. Paleiskite jį naudodami komandą: omniroute serve",
     "authRequired": "Reikalingas autentifikavimas. Nustatykite OMNIROUTE_API_KEY arba vykdykite komandą: omniroute setup",
     "rateLimited": "Viršytas užklausų dažnio limitas. Bandykite dar kartą po {seconds} sek.",
     "timeout": "Baigėsi užklausai skirtas laikas po {ms} ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Praleisti patvirtinimo užklausą"
   },
   "setup": {
-    "title": "OmniRoute sąranka",
+    "title": "67router sąranka",
     "passwordPrompt": "Administratoriaus slaptažodis",
     "providerPrompt": "Numatytasis teikėjas (palikite tuščią, kad praleistumėte)",
     "done": "Sąranka baigta",
@@ -30,7 +30,7 @@
     "opencode": "Įdiegti ir sukonfigūruoti pridėtą @omniroute/opencode-plugin, skirtą OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute diagnostika",
+    "title": "67router diagnostika",
     "dbOk": "Duomenų bazė: veikia ({path})",
     "dbMissing": "Duomenų bazė: neinicijuota — vykdykite `omniroute setup`",
     "portOk": "Prievadas {port}: pasiekiamas",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtruoti pagal teikėjo pavadinimą",
       "header": "ID         Teikėjas       Pavadinimas              Galiojimo būsena  Testo būsena  Laukimas iki",
       "noData": "Nėra teikėjų ryšių duomenų.",
-      "requiresServer": "Norint naudoti providers status, turi veikti OmniRoute serveris."
+      "requiresServer": "Norint naudoti providers status, turi veikti 67router serveris."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Pridėti arba atnaujinti teikėjo API raktą",
     "listDescription": "Rodyti visus sukonfigūruotus API raktus",
     "removeDescription": "Pašalinti teikėjo API raktą",
-    "regenerateDescription": "Iš naujo sugeneruoti OmniRoute API raktą",
-    "revokeDescription": "Atšaukti OmniRoute API raktą",
+    "regenerateDescription": "Iš naujo sugeneruoti 67router API raktą",
+    "revokeDescription": "Atšaukti 67router API raktą",
     "revealDescription": "Parodyti neužmaskuotą API rakto reikšmę",
     "usageDescription": "Rodyti naujausią API rakto naudojimo statistiką",
     "usageLimitOpt": "Naujausių užklausų skaičius",
@@ -172,13 +172,6 @@
       "period": "Laikotarpis: 1d|7d|30d|90d|ytd|all (numatytoji reikšmė: 30d)",
       "provider": "Filtruoti pagal teikėjo ID"
     },
-    "budget": {
-      "description": "Tvarkyti išlaidų biudžetus",
-      "set": {
-        "scope": "Biudžeto taikymo sritis (numatytoji reikšmė: global)",
-        "period": "Biudžeto laikotarpis: daily|weekly|monthly (numatytoji reikšmė: monthly)"
-      }
-    },
     "quota": {
       "description": "Rodyti teikėjo kvotos naudojimą",
       "provider": "Filtruoti pagal teikėjo ID",
@@ -225,7 +218,7 @@
     "noCombo": "Atitinkamas derinys nerastas. Sukonfigūruokite jį naudodami: omniroute combo create"
   },
   "chat": {
-    "description": "Siųsti vienkartinę pokalbio užklausą į OmniRoute",
+    "description": "Siųsti vienkartinę pokalbio užklausą į 67router",
     "file": "Skaityti užklausą iš failo",
     "stdin": "Skaityti užklausą iš stdin",
     "system": "Sistemos užklausa",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Paleisti OmniRoute serverį (numatytasis veiksmas)",
-    "starting": "Paleidžiamas OmniRoute serveris per prievadą {port}...",
+    "description": "Paleisti 67router serverį (numatytasis veiksmas)",
+    "starting": "Paleidžiamas 67router serveris per prievadą {port}...",
     "ready": "Pasiekiama adresu http://localhost:{port}",
     "stopping": "Stabdomas serveris (PID {pid})...",
     "stopped": "Serveris sustabdytas.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Atsarginė kopija",
-    "description": "Sukurti OmniRoute duomenų atsarginę kopiją",
+    "description": "Sukurti 67router duomenų atsarginę kopiją",
     "creating": "Kuriama atsarginė kopija...",
     "done": "Atsarginė kopija išsaugota adresu {path}",
     "noFiles": "Nėra failų, kurių atsarginę kopiją būtų galima sukurti (duomenų bazė neinicijuota)",
@@ -277,7 +270,7 @@
     "noBackups": "Atsarginių kopijų nerasta.",
     "notFound": "Atsarginė kopija nerasta: {name}",
     "confirmRestore": "Perrašyti dabartinius duomenis atsargine kopija, sukurta {ts}?",
-    "createDescription": "Sukurti OmniRoute duomenų atsarginę kopiją",
+    "createDescription": "Sukurti 67router duomenų atsarginę kopiją",
     "nameOpt": "Pasirinktinis atsarginės kopijos pavadinimas",
     "cloudOpt": "Įkelti atsarginę kopiją į debesijos saugyklą",
     "encryptOpt": "Užšifruoti atsarginę kopiją naudojant AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Nepavyko išvalyti podėlio."
   },
   "redis": {
-    "description": "Vienu spustelėjimu paleisti vietinį Redis konteinerį (Podman arba Docker), skirtą OmniRoute podėliui ir kvotų stebėjimui"
+    "description": "Vienu spustelėjimu paleisti vietinį Redis konteinerį (Podman arba Docker), skirtą 67router podėliui ir kvotų stebėjimui"
   },
   "test": {
     "description": "Išbandyti ryšį su paslaugų teikėju",
@@ -390,36 +383,8 @@
       "description": "MCP audito žurnalas (audit --source mcp pseudonimas)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Išvardyti agento kortelėje nurodytus galimus A2A įgūdžius"
-    },
-    "invoke": {
-      "description": "Iškviesti A2A įgūdį ir grąžinti užduoties ID",
-      "input": "JSON įvesties objektas",
-      "input_file": "Kelias į JSON įvesties failą",
-      "wait": "Prieš grąžinant rezultatą palaukti, kol užduotis bus baigta",
-      "timeout": "Užduoties baigimo laukimo skirtasis laikas milisekundėmis (numatytoji reikšmė: 60000)"
-    },
-    "tasks": {
-      "description": "Tvarkyti A2A užduotis",
-      "list": {
-        "status": "Filtruoti pagal būseną",
-        "skill": "Filtruoti pagal įgūdžio ID"
-      },
-      "watch": {
-        "description": "Periodiškai tikrinti užduoties būseną, kol ji bus baigta"
-      },
-      "stream": {
-        "description": "Transliuoti užduoties vykdymo įvykius per SSE"
-      },
-      "logs": {
-        "description": "Rodyti užduoties pranešimus ir artefaktus"
-      }
-    }
-  },
   "policy": {
-    "description": "Tvarkyti OmniRoute autorizavimo strategijas",
+    "description": "Tvarkyti 67router autorizavimo strategijas",
     "list": {
       "description": "Išvardyti strategijas",
       "kind": "Filtruoti pagal tipą (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Konfigūruoti ir tikrinti OmniRoute glaudinimo konvejerį",
+    "description": "Konfigūruoti ir tikrinti 67router glaudinimo konvejerį",
     "status": {
       "description": "Rodyti dabartinę glaudinimo būseną ir nuostatas"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Pakeisti tunelio {type} URL? (bus sugeneruotas naujas URL)"
   },
   "stop": {
-    "description": "Sustabdyti OmniRoute serverį",
+    "description": "Sustabdyti 67router serverį",
     "stopping": "Serveris stabdomas (PID {pid})...",
     "stopped": "Serveris sustabdytas.",
     "notRunning": "Nė vienas serveris neveikia.",
     "portFallback": "PID failas nerastas, bandoma sustabdyti pagal prievadą..."
   },
   "restart": {
-    "description": "Paleisti OmniRoute serverį iš naujo",
-    "restarting": "OmniRoute serveris paleidžiamas iš naujo..."
+    "description": "Paleisti 67router serverį iš naujo",
+    "restarting": "67router serveris paleidžiamas iš naujo..."
   },
   "dashboard": {
-    "description": "Atidaryti OmniRoute valdymo skydą naršyklėje",
+    "description": "Atidaryti 67router valdymo skydą naršyklėje",
     "opening": "Valdymo skydas atidaromas adresu {url}",
     "urlOnly": "Parodyti valdymo skydo URL neatidarant naršyklės",
     "tui": "Atidaryti interaktyvų TUI valdymo skydą (terminalo sąsaja, 7 kortelės)"
@@ -560,120 +525,6 @@
       "description": "Gauti vieną audito žurnalo įrašą pagal ID"
     }
   },
-  "skills": {
-    "description": "Tvarkyti OmniRoute įgūdžius (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Rodyti įdiegtus įgūdžius",
-      "type": "Filtruoti pagal tipą (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Rodyti tik įjungtus įgūdžius",
-      "disabled": "Rodyti tik išjungtus įgūdžius",
-      "api_key": "Filtruoti pagal API raktą"
-    },
-    "get": {
-      "description": "Gauti išsamią įgūdžio informaciją pagal ID"
-    },
-    "install": {
-      "description": "Įdiegti įgūdį iš failo arba URL",
-      "from_file": "Kelias į įgūdžio JSON aprašo failą",
-      "from_url": "Nuotolinio įgūdžio aprašo URL",
-      "type": "Įgūdžio tipas (sandbox|custom|hybrid)",
-      "enable": "Įjungti įgūdį jį įdiegus"
-    },
-    "enable": {
-      "description": "Įjungti įgūdį pagal ID"
-    },
-    "disable": {
-      "description": "Išjungti įgūdį pagal ID",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "delete": {
-      "description": "Ištrinti įgūdį pagal ID",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "execute": {
-      "description": "Vykdyti įgūdį pagal ID",
-      "input": "JSON įvesties objektas",
-      "input_file": "Kelias į JSON įvesties failą",
-      "timeout": "Vykdymo skirtasis laikas ms (numatytoji reikšmė: 30000)"
-    },
-    "executions": {
-      "description": "Rodyti įgūdžių vykdymo istoriją",
-      "skill": "Filtruoti pagal įgūdžio ID",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)",
-      "status": "Filtruoti pagal būseną (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Tvarkyti per SSH įdiegtus įgūdžius"
-    },
-    "marketplace": {
-      "description": "Naršyti ir diegti įgūdžius iš prekyvietės"
-    },
-    "mp": {
-      "search": {
-        "description": "Ieškoti prekyvietės paketų",
-        "category": "Filtruoti pagal kategoriją",
-        "tag": "Filtruoti pagal žymą",
-        "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 30)",
-        "sort": "Rikiuoti pagal: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Rodyti paketo informaciją ir README"
-      },
-      "install": {
-        "description": "Įdiegti prekyvietės paketą",
-        "version": "Paketo versija (numatytoji reikšmė: latest)",
-        "enable": "Įjungti įdiegus",
-        "yes": "Praleisti patvirtinimo užklausą"
-      },
-      "categories": {
-        "description": "Rodyti prekyvietės kategorijų sąrašą"
-      },
-      "featured": {
-        "description": "Rodyti rekomenduojamus prekyvietės paketus"
-      }
-    }
-  },
-  "memory": {
-    "description": "Tvarkyti OmniRoute pokalbių atmintį (FTS5 + vektorinė paieška)",
-    "search": {
-      "description": "Ieškoti atminties įrašų pagal semantinę užklausą",
-      "type": "Filtruoti pagal atminties tipą (user|feedback|project|reference)",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 20)",
-      "api_key": "Filtruoti pagal API raktą",
-      "token_budget": "Riboti bendrą leksemų skaičių rezultatuose"
-    },
-    "add": {
-      "description": "Pridėti naują atminties įrašą",
-      "content": "Atminties tekstinis turinys",
-      "file": "Nuskaityti turinį iš failo",
-      "type": "Atminties tipas (numatytoji reikšmė: user)",
-      "metadata": "JSON metaduomenų objektas",
-      "api_key": "Susieti su API raktu"
-    },
-    "clear": {
-      "description": "Ištrinti filtrus atitinkančius atminties įrašus",
-      "type": "Filtruoti pagal tipą",
-      "older": "Ištrinti senesnius nei nurodyta trukmė įrašus (30d, 6m, 1y)",
-      "api_key": "Filtruoti pagal API raktą",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "list": {
-      "description": "Rodyti atminties įrašus netaikant paieškos reitingavimo",
-      "type": "Filtruoti pagal tipą",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 100)",
-      "api_key": "Filtruoti pagal API raktą"
-    },
-    "get": {
-      "description": "Gauti vieną atminties įrašą pagal ID"
-    },
-    "delete": {
-      "description": "Ištrinti atminties įrašą pagal ID",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "health": {
-      "description": "Rodyti atminties posistemės būklę (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Tvarkyti OAuth teikėjų ryšius",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Praleisti patvirtinimo užklausą"
     }
   },
-  "cloud": {
-    "description": "Tvarkyti debesijos DI agentų užduotis (codex, devin, jules)",
-    "agents": {
-      "description": "Rodyti galimus debesijos agentus"
-    },
-    "agent": {
-      "description": "Tvarkyti {agent} debesijos agento užduotis",
-      "auth": {
-        "description": "Autorizuoti {agent} naudojant OAuth"
-      }
-    },
-    "task": {
-      "description": "Tvarkyti debesijos agentų užduotis",
-      "create": {
-        "description": "Sukurti naują agento užduotį",
-        "title": "Užduoties pavadinimas (numatytoji reikšmė – pirmieji 80 užklausos simbolių)",
-        "prompt": "Užklausos tekstas",
-        "prompt_file": "Skaityti užklausą iš failo",
-        "repo": "Saugyklos URL, skirtas klonuoti užduočiai",
-        "branch": "Naudotinos šakos pavadinimas",
-        "metadata": "JSON metaduomenų objektas"
-      },
-      "list": {
-        "description": "Rodyti agentų užduotis",
-        "status": "Filtruoti pagal būseną (running|completed|failed|cancelled)",
-        "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)"
-      },
-      "get": {
-        "description": "Gauti išsamią užduoties informaciją pagal ID"
-      },
-      "status": {
-        "description": "Išvesti užduoties būseną (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Atšaukti vykdomą užduotį",
-        "yes": "Praleisti patvirtinimo raginimą"
-      },
-      "approve": {
-        "description": "Patvirtinti agento planą ir pradėti vykdymą"
-      },
-      "message": {
-        "description": "Siųsti pranešimą vykdomai užduočiai"
-      }
-    },
-    "sources": {
-      "description": "Rodyti užduoties sugeneruotų šaltinio failų sąrašą"
-    }
-  },
-  "eval": {
-    "description": "Tvarkyti vertinimo rinkinius ir vykdymus",
-    "suites": {
-      "description": "Tvarkyti vertinimo rinkinius",
-      "list": {
-        "description": "Rodyti vertinimo rinkinių sąrašą"
-      },
-      "get": {
-        "description": "Gauti vertinimo rinkinio informaciją pagal ID"
-      },
-      "create": {
-        "description": "Sukurti vertinimo rinkinį iš JSON failo",
-        "file": "Kelias į rinkinio aprašo JSON failą"
-      }
-    },
-    "run": {
-      "description": "Pradėti rinkinio vertinimo vykdymą",
-      "model": "Vertintino modelio ID (numatytoji reikšmė: auto)",
-      "combo": "Priverstinai naudoti konkretų derinį pagal pavadinimą",
-      "concurrency": "Vienu metu vykdomų pavyzdžių skaičius (numatytoji reikšmė: 4)",
-      "tag": "Pažymėti šį vykdymą žyma vėlesniam filtravimui",
-      "watch": "Stebėti vykdymo eigą iki pabaigos"
-    },
-    "list": {
-      "description": "Rodyti vertinimo vykdymų sąrašą",
-      "suite": "Filtruoti pagal rinkinio ID",
-      "status": "Filtruoti pagal būseną",
-      "since": "Grąžinti vykdymus nuo šios laiko žymos",
-      "limit": "Didžiausias rezultatų skaičius (numatytoji reikšmė: 50)"
-    },
-    "get": {
-      "description": "Gauti vertinimo vykdymo informaciją pagal ID"
-    },
-    "results": {
-      "description": "Rodyti vertinimo vykdymo pavyzdžių rezultatus",
-      "failed": "Rodyti tik nesėkmingus pavyzdžius"
-    },
-    "cancel": {
-      "description": "Atšaukti vykdomą vertinimą",
-      "yes": "Praleisti patvirtinimo raginimą"
-    },
-    "scorecard": {
-      "description": "Rodyti užbaigto vertinimo vykdymo rezultatų suvestinę"
-    }
-  },
-  "webhooks": {
-    "description": "Tvarkyti OmniRoute žiniatinklio atgalinius iškvietimus",
-    "events": {
-      "description": "Rodyti visų galimų žiniatinklio atgalinių iškvietimų įvykių tipų sąrašą"
-    },
-    "list": {
-      "description": "Rodyti sukonfigūruotų žiniatinklio atgalinių iškvietimų sąrašą"
-    },
-    "get": {
-      "description": "Gauti žiniatinklio atgalinio iškvietimo informaciją pagal ID"
-    },
-    "add": {
-      "description": "Užregistruoti naują žiniatinklio atgalinį iškvietimą",
-      "url": "Paskirties URL",
-      "events": "Kableliais atskirtas įvykių tipų sąrašas",
-      "secret": "HMAC pasirašymo slaptasis raktas",
-      "header": "Papildoma antraštė key=value formatu (galima kartoti)",
-      "no_enabled": "Sukurti išjungtos būsenos žiniatinklio atgalinį iškvietimą"
-    },
-    "update": {
-      "description": "Atnaujinti esamą žiniatinklio atgalinį iškvietimą",
-      "enabled": "Nustatyti įjungimo būseną (true|false)"
-    },
-    "remove": {
-      "description": "Ištrinti žiniatinklio sąsają",
-      "yes": "Praleisti patvirtinimo užklausą"
-    },
-    "test": {
-      "description": "Siųsti bandomąjį įvykį į žiniatinklio sąsają",
-      "event": "Imituojamo įvykio tipas (numatytasis: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — išmanusis DI maršruto parinktuvas su automatiniu atsarginiu perjungimu",
+    "description": "67router — išmanusis DI maršruto parinktuvas su automatiniu atsarginiu perjungimu",
     "version": "Parodyti versiją ir išeiti",
     "output": "Išvesties formatas (table, json, jsonl, csv)",
     "quiet": "Nerodyti neesminės išvesties",
     "no_color": "Išjungti spalvotą išvestį",
     "timeout": "HTTP užklausos skirtasis laikas milisekundėmis",
-    "api_key": "OmniRoute serverio API raktas",
-    "base_url": "OmniRoute serverio bazinis URL",
+    "api_key": "67router serverio API raktas",
+    "base_url": "67router serverio bazinis URL",
     "context": "Šiai komandai naudotinas serverio kontekstas / profilis",
     "lang": "Nustatyti CLI rodymo kalbą (nepaisyti OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Tvarkyti failus (įkelti, pateikti sąrašą, gauti, atsisiųsti, ištrinti)",
-    "list": {
-      "purpose": "Filtruoti pagal paskirtį",
-      "limit": "Didžiausias rezultatų skaičius"
-    },
-    "get": {
-      "description": "Gauti failo metaduomenis"
-    },
-    "upload": {
-      "description": "Įkelti failą",
-      "purpose": "Failo paskirtis (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Atsisiųsti failo turinį",
-      "out": "Išsaugoti nurodytu keliu (numatytasis: stdout)"
-    },
-    "delete": {
-      "yes": "Praleisti patvirtinimą"
-    }
-  },
-  "batches": {
-    "description": "Tvarkyti su OpenAI suderinamas paketines užduotis",
-    "list": {
-      "status": "Filtruoti pagal būseną",
-      "limit": "Didžiausias rezultatų skaičius"
-    },
-    "create": {
-      "description": "Sukurti paketinę užduotį",
-      "inputFile": "Įvesties failo ID",
-      "endpoint": "Tikslinis galinis taškas",
-      "window": "Užbaigimo laikotarpis",
-      "metadata": "Pridėti metaduomenis key=value"
-    },
-    "submit": {
-      "description": "Įkelti JSONL failą ir sukurti paketą",
-      "jsonl": "Kelias į JSONL failą",
-      "endpoint": "Tikslinis galinis taškas",
-      "wait": "Laukti užbaigimo"
-    },
-    "cancel": {
-      "yes": "Praleisti patvirtinimą"
-    },
-    "wait": {
-      "timeout": "Skirtasis laikas, ms"
-    },
-    "output": {
-      "out": "Išsaugoti išvestį nurodytu keliu"
-    },
-    "errors": {
-      "out": "Išsaugoti klaidas nurodytu keliu"
-    }
   },
   "translator": {
     "description": "Konvertuoti užklausų turinius tarp LLM formatų",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Pasiekti ir išbandyti OmniRoute OpenAPI specifikaciją",
+    "description": "Pasiekti ir išbandyti 67router OpenAPI specifikaciją",
     "dump": {
       "description": "Išvesti OpenAPI specifikaciją į stdout arba failą",
       "format": "Išvesties formatas: yaml|json (numatyta: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Aktyvinti aukščiausiai įvertintą derinį"
     }
   },
-  "oneproxy": {
-    "description": "Valdyti OneProxy išorinį telkinį",
-    "stats": {
-      "provider": "Filtruoti pagal teikėją",
-      "period": "Laikotarpis (numatytoji reikšmė: 24h)"
-    },
-    "fetch": {
-      "description": "Gauti tarpinius serverius iš telkinio",
-      "count": "Gaunamų tarpinių serverių skaičius (numatytoji reikšmė: 1)",
-      "type": "Tarpinio serverio tipas: http|socks5 (numatytoji reikšmė: http)"
-    },
-    "rotate": {
-      "description": "Priverstinai pakeisti tarpinį serverį",
-      "provider": "Teikėjas, kuriam atliekamas pakeitimas",
-      "connectionId": "Konkretaus ryšio ID, kuriam atliekamas pakeitimas"
-    },
-    "config": {
-      "description": "Rodyti arba atnaujinti OneProxy konfigūraciją",
-      "enabled": "Įjungti tarpinių serverių telkinį (true|false)",
-      "poolSize": "Telkinio dydis",
-      "providerSource": "Tarpinių serverių teikėjo URL",
-      "rotationPolicy": "Keitimo politika: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Rodyti dabartinį tarpinių serverių telkinį su metrikomis"
-    }
-  },
   "open": {
-    "description": "Naršyklėje atidaryti konkretų OmniRoute skydelio puslapį",
+    "description": "Naršyklėje atidaryti konkretų 67router skydelio puslapį",
     "url": "Tik išvesti URL, neatidaryti naršyklės"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sinchronizuoti konfigūraciją tarp OmniRoute egzempliorių",
+    "description": "Sinchronizuoti konfigūraciją tarp 67router egzempliorių",
     "push": {
       "description": "Nusiųsti konfigūraciją į debesiją arba nuotolinį egzempliorių"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtruoti pagal lygį (error,warn,info) — reikšmės atskiriamos kableliais",
     "lines": "Gaunamų eilučių skaičius",
     "timeout": "Ryšio skirtasis laikas, ms",
-    "baseUrl": "OmniRoute API bazinis URL",
+    "baseUrl": "67router API bazinis URL",
     "requestId": "Filtruoti pagal užklausos ID",
     "apiKey": "Filtruoti pagal API raktą",
     "combo": "Filtruoti pagal derinio pavadinimą",
@@ -1244,10 +890,10 @@
     "description": "Valdyti sistemos dėklo piktogramą",
     "show": "Rodyti dėklo piktogramą (jei serveris veikia su --tray)",
     "hide": "Slėpti dėklo piktogramą",
-    "quit": "Išjungti OmniRoute per sistemos dėklą"
+    "quit": "Išjungti 67router per sistemos dėklą"
   },
   "autostart": {
-    "description": "Valdyti automatinį OmniRoute paleidimą įkrovos metu (Linux: systemd naudotojo paslauga)",
+    "description": "Valdyti automatinį 67router paleidimą įkrovos metu (Linux: systemd naudotojo paslauga)",
     "enable": "Įjungti automatinį paleidimą įkrovos metu",
     "disable": "Išjungti automatinį paleidimą įkrovos metu",
     "toggle": "Perjungti automatinį paleidimą įkrovos metu",
@@ -1268,30 +914,20 @@
     "system": "Sistemos raginimas",
     "resume": "Tęsti išsaugotą seansą pagal pavadinimą"
   },
-  "plugin": {
-    "description": "Valdyti CLI papildinius (omniroute-cmd-*)",
-    "list": "Pateikti įdiegtų papildinių sąrašą",
-    "install": "Įdiegti papildinį iš npm arba vietinio kelio",
-    "remove": "Pašalinti įdiegtą papildinį",
-    "info": "Rodyti išsamią informaciją apie įdiegtą papildinį",
-    "search": "Ieškoti galimų papildinių npm registre",
-    "update": "Atnaujinti įdiegtą (-us) papildinį (-ius)",
-    "scaffold": "Sukurti naujo papildinio pradinį šabloną"
-  },
   "launch": {
-    "description": "Paleisti Claude Code, nukreiptą į OmniRoute (vietinį arba nuotolinį, naudojant --profile)",
+    "description": "Paleisti Claude Code, nukreiptą į 67router (vietinį arba nuotolinį, naudojant --profile)",
     "token": "Atpažinimo ženklas, kurį turi siųsti Claude klientas (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute nepasiekiamas per {port}. Paleiskite jį naudodami „omniroute serve“.",
+    "notRunning": "67router nepasiekiamas per {port}. Paleiskite jį naudodami „omniroute serve“.",
     "notFound": "„claude“ CLI nerastas PATH."
   },
   "run": {
-    "description": "Paleisti palaikomą CLI taikinį per OmniRoute"
+    "description": "Paleisti palaikomą CLI taikinį per 67router"
   },
   "setupClaude": {
-    "description": "Sugeneruoti ~/.claude/profiles Claude Code profilius iš OmniRoute modelių katalogo"
+    "description": "Sugeneruoti ~/.claude/profiles Claude Code profilius iš 67router modelių katalogo"
   },
   "connect": {
-    "description": "Prisijungti prie nuotolinio OmniRoute serverio ir įjungti nuotolinį režimą"
+    "description": "Prisijungti prie nuotolinio 67router serverio ir įjungti nuotolinį režimą"
   },
   "tokens": {
     "description": "Tvarkyti ribotos apimties CLI prieigos prieigos raktus (nuotolinis režimas)"
@@ -1300,10 +936,10 @@
     "description": "Pasirinkti teikėją ir modelį iš aktyvaus serverio bei sukonfigūruoti palaikomą vietinę CLI"
   },
   "launchCodex": {
-    "description": "Paleisti Codex CLI, nukreiptą į OmniRoute (vietiniame arba nuotoliniame VPS)"
+    "description": "Paleisti Codex CLI, nukreiptą į 67router (vietiniame arba nuotoliniame VPS)"
   },
   "setupCodex": {
-    "description": "Sugeneruoti ~/.codex profilio failus iš tiesioginio OmniRoute modelių katalogo"
+    "description": "Sugeneruoti ~/.codex profilio failus iš tiesioginio 67router modelių katalogo"
   },
   "packs": {
     "description": "Tvarkyti pasirinktinius vykdymo aplinkos paketus (ML / naršyklės automatizavimas)",
@@ -1316,7 +952,7 @@
     "errUnknown": "nežinomas paketas: {name}",
     "errNoIndex": "paketų indeksas nerastas; nurodykite --source <dir>, kuriame yra paketo turinys (darbalaukio programos rinkiniuose jis pateikiamas šalia programos)",
     "installed": "paketas „{name}“ įdiegtas ir patikrintas kataloge {dir}",
-    "restartHint": "paleiskite OmniRoute serverį (arba darbalaukio programą) iš naujo, kad vykdymo aplinka aptiktų paketą",
+    "restartHint": "paleiskite 67router serverį (arba darbalaukio programą) iš naujo, kad vykdymo aplinka aptiktų paketą",
     "removed": "paketas „{name}“ pašalintas",
     "notInstalled": "paketas „{name}“ nebuvo įdiegtas",
     "verifyOk": "visi įdiegti paketai patikrinti",

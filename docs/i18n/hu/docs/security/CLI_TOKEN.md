@@ -6,7 +6,7 @@
 
 ## Áttekintés
 
-Az OmniRoute CLI parancsai a helyi felügyeleti API felé egy
+A 67router CLI parancsai a helyi felügyeleti API felé egy
 `HMAC-SHA256(machine-id, salt)` tokennel hitelesítenek, amelyet az
 `x-omniroute-cli-token` kérésfejlécben küldenek el.
 

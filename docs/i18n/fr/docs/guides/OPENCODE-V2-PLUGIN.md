@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` ajoute l’intégralité de votre catalogue OmniRoute — modèles, combos et
+`@omniroute/opencode-plugin-v2` ajoute l’intégralité de votre catalogue 67router — modèles, combos et
 auto-combos — au sélecteur de modèles d’OpenCode v2, avec les noms d’affichage, les tarifs et les
 budgets du niveau gratuit.
 
@@ -15,7 +15,7 @@ ils ne partagent rien, donc la mise à niveau de l’un n’impose jamais celle 
 ## Prérequis
 
 - OpenCode v2.
-- Une passerelle OmniRoute accessible (`http://localhost:20128` par défaut).
+- Une passerelle 67router accessible (`http://localhost:20128` par défaut).
 - Node.js 22 ou 24.
 
 ## Installation
@@ -116,7 +116,7 @@ Définissez `"geminiSanitization": false` pour désactiver ce comportement.
 
 | Symptôme                                                  | Cause                                                                                                                                          |
 | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Le sélecteur n’affiche aucun modèle OmniRoute             | Aucune clé n’a été trouvée (vérifiez l’avertissement au démarrage), ou la passerelle est inaccessible                                          |
+| Le sélecteur n’affiche aucun modèle 67router              | Aucune clé n’a été trouvée (vérifiez l’avertissement au démarrage), ou la passerelle est inaccessible                                          |
 | Identifiants de modèle bruts, sans combinaisons ni tarifs | Les points de terminaison de gestion ont refusé le jeton — définissez `managementReadToken`                                                    |
 | Catalogue `freeOnly` court ou vide                        | Aucun jeton de gestion ou jeton refusé — consultez la ligne de résumé de l’actualisation (compteur `unmatched-free`) dans le journal de l’hôte |
 | Une session épinglée à `opencode-<id>/…`                  | Le plugin v1 publiait `opencode-<id>` ; la v2 publie directement `<id>`, alors sélectionnez de nouveau le modèle sous `<id>/…`                 |

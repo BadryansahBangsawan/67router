@@ -52,7 +52,7 @@ HTTP/1.1 400 Bad Request
 לשגיאות `400 content-blocked` לסירוגין כאשר Claude Code או Codex CLI
 מבצעים כמה קריאות לשימוש בכלים / שליחת הודעות ברצף מהיר.
 
-## פתרונות שכבר יושמו ב-OmniRoute
+## פתרונות שכבר יושמו ב-67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — מנגנון הגנה מפני התפרצויות שאוכף
    מרווח מינימלי של 500 אלפיות השנייה בין בקשות יוצאות לכל כתובת URL מסוג `agentrouter:*`.

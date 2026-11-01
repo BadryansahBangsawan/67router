@@ -7,7 +7,7 @@
 > **資訊來源：** `electron/` 工作區
 > **最後更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 提供以 **Electron 41** + **electron-builder 26.10** 建構的跨平台桌面應用程式（Windows / macOS / Linux）。桌面應用程式會將 Next.js 獨立伺服器啟動為子行程、讓 `BrowserWindow` 指向該伺服器，並加入系統匣、自動更新程式、IPC 橋接器，以及零設定的密鑰啟動機制。
+67router 提供以 **Electron 41** + **electron-builder 26.10** 建構的跨平台桌面應用程式（Windows / macOS / Linux）。桌面應用程式會將 Next.js 獨立伺服器啟動為子行程、讓 `BrowserWindow` 指向該伺服器，並加入系統匣、自動更新程式、IPC 橋接器，以及零設定的密鑰啟動機制。
 
 ## 架構
 
@@ -180,7 +180,7 @@ spawn(process.execPath, [serverScript], {
 - `BrowserWindow`：1400×900（最小 1024×700），`backgroundColor: "#0a0a0a"`。
 - macOS：`titleBarStyle: "hiddenInset"`，視窗控制鈕位於 `{ x: 16, y: 16 }`。
 - Windows/Linux：原生標題列。
-- 關閉按鈕會將應用程式最小化至系統匣；系統匣選單包含 **Open OmniRoute**、**Open Dashboard**（外部瀏覽器）、**Server Port** 子選單、**Check for Updates**、**Quit**。
+- 關閉按鈕會將應用程式最小化至系統匣；系統匣選單包含 **Open 67router**、**Open Dashboard**（外部瀏覽器）、**Server Port** 子選單、**Check for Updates**、**Quit**。
 
 ## 內容安全政策
 

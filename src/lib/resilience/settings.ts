@@ -16,7 +16,6 @@ import {
   normalizeTokenRefreshBreakerSettings,
   normalizeWaitForCooldownSettings,
   normalizeComboCooldownWaitSettings,
-  normalizeQuotaShareConcurrencyLimitSettings,
   normalizeStreamStallCooldownSettings,
   normalizeProviderCooldownSettings,
   normalizeQuotaPreflightSettings,
@@ -48,7 +47,6 @@ export type {
   TokenRefreshBreakerSettings,
   WaitForCooldownSettings,
   ComboCooldownWaitSettings,
-  QuotaShareConcurrencyLimitSettings,
   ProviderCooldownSettings,
   QuotaPreflightSettings,
   StreamRecoverySettings,
@@ -147,13 +145,6 @@ export const DEFAULT_RESILIENCE_SETTINGS: ResilienceSettings = {
     maxWaitMs: 90000,
     maxAttempts: 5,
     budgetMs: 300000,
-  },
-  // FASE 2.1: serialize concurrent quota-share requests per connection when the
-  // connection sets a max_concurrent cap, so a subscription account is not
-  // flooded past its concurrency ceiling. Kill-switch only (default on); the cap
-  // comes from each connection's max_concurrent.
-  quotaShareConcurrencyLimit: {
-    enabled: true,
   },
   // A stream content stall fails one request; it does not cool the account unless
   // the operator opts in (see StreamStallCooldownSettings).
@@ -315,7 +306,6 @@ function buildLegacyFallback(settings: JsonRecord): ResilienceSettings {
       ),
     },
     comboCooldownWait: DEFAULT_RESILIENCE_SETTINGS.comboCooldownWait,
-    quotaShareConcurrencyLimit: DEFAULT_RESILIENCE_SETTINGS.quotaShareConcurrencyLimit,
     streamStallCooldown: DEFAULT_RESILIENCE_SETTINGS.streamStallCooldown,
     providerCooldown: DEFAULT_RESILIENCE_SETTINGS.providerCooldown,
     tokenRefreshBreaker: DEFAULT_RESILIENCE_SETTINGS.tokenRefreshBreaker,
@@ -394,10 +384,6 @@ export function resolveResilienceSettings(
       current.comboCooldownWait,
       fallback.comboCooldownWait
     ),
-    quotaShareConcurrencyLimit: normalizeQuotaShareConcurrencyLimitSettings(
-      current.quotaShareConcurrencyLimit,
-      fallback.quotaShareConcurrencyLimit
-    ),
     streamStallCooldown: normalizeStreamStallCooldownSettings(
       current.streamStallCooldown,
       fallback.streamStallCooldown
@@ -465,10 +451,6 @@ export function mergeResilienceSettings(
     comboCooldownWait: normalizeComboCooldownWaitSettings(
       updates.comboCooldownWait,
       current.comboCooldownWait
-    ),
-    quotaShareConcurrencyLimit: normalizeQuotaShareConcurrencyLimitSettings(
-      updates.quotaShareConcurrencyLimit,
-      current.quotaShareConcurrencyLimit
     ),
     streamStallCooldown: normalizeStreamStallCooldownSettings(
       updates.streamStallCooldown,

@@ -4,7 +4,7 @@ title: "Supply-Chain Gates"
 
 # Supply-Chain Gates (Phase 8 · Block A)
 
-OmniRoute publishes npm + Docker artifacts. These gates provide provenance,
+67router publishes npm + Docker artifacts. These gates provide provenance,
 inventory (SBOM) and CVE scanning, all OSS, plugged into release workflows.
 **Advisory-first** posture — they report now, promote to blocking after the 1st
 green release.
@@ -65,7 +65,7 @@ Per the "no upstream fix" branch of the CVE Variance remedy above, this is an
   current npm-latest (`0.1.29`) still pulls `extract-zip@2.0.1`.
 - **Unreachable from production.** `promptfoo` is devDependency-only (never listed
   under `dependencies`), and no file under `src/`, `open-sse/`, or `bin/` imports the
-  `extract-zip` npm package — OmniRoute's own `extractZip()` helper
+  `extract-zip` npm package — 67router's own `extractZip()` helper
   (`src/lib/versionManager/binaryManager.ts:93`) shells out to native `unzip`/`tar`
   and is unrelated. `@openai/codex-security` also ships its own symlink-traversal
   guard on top of extract-zip's onEntry callback.

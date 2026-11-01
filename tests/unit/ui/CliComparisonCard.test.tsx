@@ -112,10 +112,9 @@ describe("CliComparisonCard", () => {
     expect(hrefs).toContain("/dashboard/acp-agents");
   });
 
-  it("current column has primary styling class", () => {
+  it("marks the current column", () => {
     const container = renderCard("code");
-    // The current column div has bg-primary/10 class
-    const currentCol = container.querySelector('[class*="primary"]');
-    expect(currentCol).not.toBeNull();
+    const currentCols = container.querySelectorAll('[data-current="true"]');
+    expect(currentCols).toHaveLength(1);
   });
 });

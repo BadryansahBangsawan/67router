@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Poslední aktualizace:** 2026-06-28 — v3.8.40
 
-OmniRoute obsahuje gamifikační vrstvu s přístupem local-first, která odměňuje uživatele za
+67router obsahuje gamifikační vrstvu s přístupem local-first, která odměňuje uživatele za
 používání platformy — odesílání požadavků, přepínání poskytovatelů, vytváření
 kombinací, sdílení tokenů a přispívání komunitě. Veškerý stav je uložen v
 SQLite; federace s komunitními servery je volitelná a založená na odesílání dat.
@@ -36,7 +36,7 @@ tokenů, odměny za pozvání).
 | Žebříčky                | Globální, týdenní, měsíční, podle sdílení tokenů a příspěvků                    |
 | Sdílení tokenů          | Převod kreditů mezi uživateli prostřednictvím podvojné účetní knihy             |
 | Pozvání a uplatnění     | Doporučovací kódy ukládané jako hashe SHA-256                                   |
-| Komunitní servery       | Federace s externími instancemi OmniRoute                                       |
+| Komunitní servery       | Federace s externími instancemi 67router                                        |
 | Ochrana proti podvádění | Bodování na straně serveru, omezení frekvence a detekce anomálií pomocí z-skóre |
 
 ### Principy návrhu
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Databázové tabulky
 
-Všechny tabulky se nacházejí v hlavní databázi SQLite OmniRoute, vytvořené migrací
+Všechny tabulky se nacházejí v hlavní databázi SQLite 67router, vytvořené migrací
 `060_create_gamification.sql`. Žurnálování WAL se dědí ze singletonu
 `getDbInstance()` v `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Všechny tabulky se nacházejí v hlavní databázi SQLite OmniRoute, vytvořen�
 
 ### Doménový modul: `src/lib/db/gamification.ts`
 
-Dodržuje standardní vzor OmniRoute — importuje `getDbInstance()` z
+Dodržuje standardní vzor 67router — importuje `getDbInstance()` z
 `core.ts` a exportuje typované funkce CRUD. Obslužné rutiny tras neobsahují žádné přímé SQL.
 
 Klíčové funkce:
@@ -234,18 +234,18 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 ### Odměny XP
 
-| Akce              | XP  | Popis                                                      |
-| ----------------- | --- | ---------------------------------------------------------- |
-| `request`         | 1   | Za každý požadavek API směrovaný prostřednictvím OmniRoute |
-| `provider_switch` | 5   | Přepnutí na jiného poskytovatele                           |
-| `model_switch`    | 3   | Přepnutí na jiný model                                     |
-| `combo_create`    | 10  | Vytvoření nového komba                                     |
-| `combo_use`       | 2   | Použití komba pro požadavek                                |
-| `token_share`     | 1   | Za každých 1 000 tokenů sdílených s jiným uživatelem       |
-| `invite_redeem`   | 50  | Uplatnění pozvánkového kódu                                |
-| `daily_login`     | 5   | Denní aktivní používání (jednou denně)                     |
-| `streak_bonus`    | 2   | Za každý po sobě jdoucí den série (násobeno délkou série)  |
-| `badge_unlock`    | 10  | Odemknutí odznaku                                          |
+| Akce              | XP  | Popis                                                     |
+| ----------------- | --- | --------------------------------------------------------- |
+| `request`         | 1   | Za každý požadavek API směrovaný prostřednictvím 67router |
+| `provider_switch` | 5   | Přepnutí na jiného poskytovatele                          |
+| `model_switch`    | 3   | Přepnutí na jiný model                                    |
+| `combo_create`    | 10  | Vytvoření nového komba                                    |
+| `combo_use`       | 2   | Použití komba pro požadavek                               |
+| `token_share`     | 1   | Za každých 1 000 tokenů sdílených s jiným uživatelem      |
+| `invite_redeem`   | 50  | Uplatnění pozvánkového kódu                               |
+| `daily_login`     | 5   | Denní aktivní používání (jednou denně)                    |
+| `streak_bonus`    | 2   | Za každý po sobě jdoucí den série (násobeno délkou série) |
+| `badge_unlock`    | 10  | Odemknutí odznaku                                         |
 
 ### Průběh udělení
 
@@ -579,7 +579,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (jedinečný, indexovaný) |
 | `token_hash` | SHA-256(raw_token)                 |
 
-Nezpracovaný token je uživateli vrácen právě jednou při vytvoření. OmniRoute
+Nezpracovaný token je uživateli vrácen právě jednou při vytvoření. 67router
 jej už nikdy neukládá ani nezobrazuje — uchovává se pouze hash.
 
 ### Zamezení doporučení sebe sama
@@ -713,7 +713,7 @@ Správci mohou dotazovat úplnou auditní stopu prostřednictvím `GET /api/gami
 
 ## Trasy API
 
-Všechny trasy používají standardní vzor OmniRoute:
+Všechny trasy používají standardní vzor 67router:
 
 ```
 Trasa → Předběžný požadavek CORS → Ověření těla požadavku (Zod) → Autentizace (extractApiKey)

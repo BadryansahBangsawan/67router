@@ -49,7 +49,7 @@ prostřednictvím tunelu **nemůže** tuto cestu kódu spustit.
 | Linux+Firefox/Chromium | aktualizace databáze NSS pro jednotlivé profily prostřednictvím `certutil -d sql:<profile>`                       |
 
 Jde o stejné příkazy, jaké používají `mitmproxy`, Charles Proxy, Fiddler a
-Caddy. Jejich přítomnost v OmniRoute je zdokumentována v
+Caddy. Jejich přítomnost v 67router je zdokumentována v
 `docs/security/STEALTH_GUIDE.md`.
 
 **Nápravná opatření ve v3.8.6**:
@@ -106,7 +106,7 @@ z v3.8.5 pro operátory, kteří dosud neaktualizovali svou automatizaci. Bude
 odstraněna ve v3.9.
 
 **Proč tuto funkci ponecháváme**: Import ze Zedu je nejpřívětivější způsob prvotního nastavení pro uživatele,
-kteří již Zed používají a chtějí zkopírovat své klíče poskytovatelů do OmniRoute,
+kteří již Zed používají a chtějí zkopírovat své klíče poskytovatelů do 67router,
 aniž by je museli znovu vkládat.
 
 ---
@@ -118,7 +118,7 @@ aniž by je museli znovu vkládat.
 **Důvod označení**: balíček znovu exportuje `execFileWithPassword`,
 `runElevatedPowerShell` a sdílenou pomocnou funkci `quotePowerShell`. Klasifikátor
 AI služby Socket.dev je vyhodnocuje jako obecnou „sadu nástrojů pro spouštění na hostiteli a zvyšování
-oprávnění“. V rámci OmniRoute se používají pouze v cestě instalace certifikátu
+oprávnění“. V rámci 67router se používají pouze v cestě instalace certifikátu
 MITM (§1) a prostřednictvím `execFileWithPassword` ke spouštění příkazů `sudo`.
 
 **Zmírnění rizika ve v3.8.6**:
@@ -168,7 +168,7 @@ služba (podobná zásuvnému modulu pro WordPress) — aktivuje se výhradně n
 
 ---
 
-## §5 — Zpětný zápis přihlašovacích údajů OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Zpětný zápis přihlašovacích údajů 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Zdrojové soubory**:
 
@@ -201,7 +201,7 @@ rawBody)`) před zpracováním JSON. Pokud je tajný klíč nastaven, podpis je
    `rateLimitedUntil`, `updatedAt`). Jde o **zpětně nekompatibilní změnu** pro uživatele,
    kteří spoléhali na vzdálenou synchronizaci tokenů — musí ji výslovně povolit.
 
-**Proč tuto funkci zachováváme**: Cloud Sync je jediný způsob, jak může tenant OmniRoute Cloud
+**Proč tuto funkci zachováváme**: Cloud Sync je jediný způsob, jak může tenant 67router Cloud
 centralizovat týmové přihlašovací údaje. Oprava transparentně vymezuje model hrozeb:
 „server podepisuje, klient ověřuje, provozovatel se výslovně rozhoduje“.
 

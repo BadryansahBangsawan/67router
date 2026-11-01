@@ -4,7 +4,7 @@
 
 ---
 
-នៅពេល OmniRoute ដំណើរការនៅក្នុង Docker លំហូរស្តង់ដារ "នាំចូលពី Zed Keychain" នឹងបរាជ័យ
+នៅពេល 67router ដំណើរការនៅក្នុង Docker លំហូរស្តង់ដារ "នាំចូលពី Zed Keychain" នឹងបរាជ័យ
 ព្រោះ container មិនអាចចូលប្រើ daemon របស់ keychain នៃ OS ម៉ាស៊ីនមេបានទេ (`libsecret` នៅលើ Linux,
 Keychain នៅលើ macOS, Credential Manager នៅលើ Windows) ហើយថតកំណត់រចនាសម្ព័ន្ធ Zed នៅលើ
 ប្រព័ន្ធឯកសាររបស់ម៉ាស៊ីនមេ មិនអាចមើលឃើញនៅក្នុង container តាមលំនាំដើមទេ។
@@ -20,7 +20,7 @@ Keychain នៅលើ macOS, Credential Manager នៅលើ Windows) ហើយ�
    ទាក់ទងជាមួយសេវា keychain របស់ OS តាមរយៈ Unix socket ឬ D-Bus session។
    តាមលំនាំដើម គ្មានមួយណាត្រូវបានតភ្ជាប់ចូលក្នុង container ទេ ដូច្នេះការអានព័ត៌មានសម្ងាត់តែងតែបរាជ័យ។
 
-OmniRoute រកឃើញបរិស្ថាន Docker តាមរយៈវិធីសាស្ត្រសន្និដ្ឋានពីរ៖
+67router រកឃើញបរិស្ថាន Docker តាមរយៈវិធីសាស្ត្រសន្និដ្ឋានពីរ៖
 
 - វត្តមានរបស់ `/.dockerenv` (ត្រូវបានសរសេរដោយ Docker daemon នៅពេល container ចាប់ផ្ដើម)។
 - វត្តមានខ្សែអក្សរ `docker` នៅក្នុង `/proc/1/cgroup` (Linux cgroup v1)។
@@ -32,7 +32,7 @@ OmniRoute រកឃើញបរិស្ថាន Docker តាមរយៈវ�
 
 1. បើក **ផ្ទាំងគ្រប់គ្រង → អ្នកផ្តល់សេវា → Zed**។
 2. ផ្ទាំង **នាំចូល Token ដោយដៃ** បង្ហាញនៅខាងក្រោមកាតនាំចូលពី keychain។ នៅពេល
-   OmniRoute រកឃើញ Docker ផ្ទាំងនេះនឹងពង្រីកដោយស្វ័យប្រវត្តិ បន្ទាប់ពីការព្យាយាមនាំចូលពី
+   67router រកឃើញ Docker ផ្ទាំងនេះនឹងពង្រីកដោយស្វ័យប្រវត្តិ បន្ទាប់ពីការព្យាយាមនាំចូលពី
    keychain លើកដំបូងបានបរាជ័យ។
 3. ជ្រើសរើសអ្នកផ្តល់សេវាពីបញ្ជីទម្លាក់ចុះ (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter ឬ DeepSeek)។

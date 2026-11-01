@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ina mifumo mitatu tofauti lakini inayohusiana ya ustahimilivu (resilience). Kila moja ina wigo na kusudi lake. Ziweke tofauti wakati wa kufuatilia matatizo ya tabia ya uelekezaji (routing).
+67router ina mifumo mitatu tofauti lakini inayohusiana ya ustahimilivu (resilience). Kila moja ina wigo na kusudi lake. Ziweke tofauti wakati wa kufuatilia matatizo ya tabia ya uelekezaji (routing).
 
 ![3-layer resilience model](../diagrams/exported/resilience-3layers.svg)
 
@@ -158,7 +158,7 @@ Vichwa vitatu vya uambatano wa kipindi havipelekwi kamwe upstream — vitekeleza
 
 ### Leseni za kipekee za muunganisho wa kipindi kilichosimamiwa
 
-**Wigo:** mteja/kipindi kimoja hai cha HTTP kilichosimamiwa humiliki muunganisho mmoja wa OmniRoute unaostahili.
+**Wigo:** mteja/kipindi kimoja hai cha HTTP kilichosimamiwa humiliki muunganisho mmoja wa 67router unaostahili.
 
 **Lengo:** kutoa umiliki wa kudumu na wa kipekee wa muunganisho kwa wateja wanaohitaji uzio imara wa uelekezaji kati ya maombi. Hii inatofautiana na uambatano wa kipindi, ambao ni upendeleo mwepesi wa mwendelezo: leseni ya kipekee huhifadhi hali ya mzunguko wa maisha katika SQLite, hutekeleza upekee wa kimataifa wa mmiliki-hai na muunganisho-hai, na hukataa kizazi kilichopitwa na wakati kabla ya usambazaji kwa mtoa huduma.
 
@@ -172,7 +172,7 @@ cha ufunguo wa API uliothibitishwa na kitambulisho cha muunganisho amilifu. Vich
 lease huondolewa kwenye logi, picha za maombi zilizohifadhiwa, na vichwa vya utekelezaji wa upstream.
 
 Ikiwa usambazaji wa kawaida una wagombea wanaodhibitiwa wanaostahili lakini kila mgombea huru
-ameshikiliwa na lease amilifu ya kigeni, OmniRoute hurejesha HTTP `429`, msimbo wa
+ameshikiliwa na lease amilifu ya kigeni, 67router hurejesha HTTP `429`, msimbo wa
 lease-capacity-unavailable, hali ya kusubiri uwezo (waiting-for-capacity), na `Retry-After`
 yenye kikomo inayotokana na muda wa mwisho wa mapema zaidi unaohusika. Ustahili mtupu wa kawaida si
 mzozo wa lease na hudumia semantics zake zilizopo za hitilafu za usambazaji.
@@ -196,7 +196,7 @@ Mbinu zinazohusiana hubaki tofauti:
   connection), kwa provider nyingine `getQuotaScopedModelForProvider()`.
 - `404` hufunga modeli yenyewe pekee (`getModelLockKey()` hupunguza wigo wa `not_found`).
 - Hali nyingine yoyote — kushindwa kwa usafirishaji/seva wa `5xx` na `502`
-  iliyotengenezwa na OmniRoute yenyewe kutoka kwa uthibitishaji wa ubora — hufunga
+  iliyotengenezwa na 67router yenyewe kutoka kwa uthibitishaji wa ubora — hufunga
   tuple **halisi** ya provider/connection/model pekee. Mtiririko (stream) mbaya kwenye
   modeli moja si ushahidi kuhusu quota ya akaunti; kabla ya kanuni hii, jibu moja
   tupu kwenye `codex/gpt-5.6-luna` liliondoa kila modeli ya `gpt-5*` ya connection
@@ -331,7 +331,7 @@ usambamba vya kila modeli**, `model=cap` moja kwa kila mstari) au kupitia
   vya namba nzima chanya.
 - **Foleni ya ndani, hakuna ugunduzi:** miombi ya ziada huingia kwenye foleni ya ndani kwa
   semantiki zilizopo za foleni/timeout (makosa ya udahili yaliyoainishwa `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`). OmniRoute haugundui wala kuhitimisha sera ya upstream —
+  `SEMAPHORE_QUEUE_FULL`). 67router haugundui wala kuhitimisha sera ya upstream —
   hutekeleza vikomo halisi ambavyo mwendeshaji alisanidi. Lango la modeli lililojaa
   kamwe halimzuii mtoa huduma wala haliumbi kufuli ya kudumu ya modeli; tabia ya
   429/cooldown/fallback ya upstream hubaki kama kinga ya mwisho ya makosa.
@@ -440,7 +440,7 @@ Uhakiki wa upokeaji wenyewe ni kazi safi (`open-sse/services/rateLimitManager/ad
 ### Kinga ya Usalama ya Kuwasha Kiotomatiki Kikomo cha Kiwango na Ulinzi wa Muunganisho (`rateLimitProtection`)
 
 **Kinga ya usalama ya kuwasha kiotomatiki** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, chaguo-msingi `true`):
-Kwa chaguo-msingi, OmniRoute huwasha kiotomatiki ulinzi wa foleni ya kikomo cha kiwango kwa miunganisho yote inayofanya kazi ya watoa huduma wenye ufunguo wa API (`getProviderCategory(provider) === "apikey"`). Hii huhakikisha kwamba maombi yanayoingia yanayokwenda kwa funguo za API za upstream zilizo nyeti kwa kiwango huwekwa foleni na kudhibitiwa kupitia Bottleneck badala ya kulipuka na kusababisha makosa ya 429 kutoka upstream. Kinga ya usalama inaweza kubatilishwa kupitia kigeugeu cha mazingira `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` huzima, `true`/`1`/`on` hulazimisha kuwasha), ambayo ina kipaumbele juu ya mpangilio wa dashibodi uliohifadhiwa (**Mipangilio → Ustahimilivu** / `PATCH /api/resilience`).
+Kwa chaguo-msingi, 67router huwasha kiotomatiki ulinzi wa foleni ya kikomo cha kiwango kwa miunganisho yote inayofanya kazi ya watoa huduma wenye ufunguo wa API (`getProviderCategory(provider) === "apikey"`). Hii huhakikisha kwamba maombi yanayoingia yanayokwenda kwa funguo za API za upstream zilizo nyeti kwa kiwango huwekwa foleni na kudhibitiwa kupitia Bottleneck badala ya kulipuka na kusababisha makosa ya 429 kutoka upstream. Kinga ya usalama inaweza kubatilishwa kupitia kigeugeu cha mazingira `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` huzima, `true`/`1`/`on` hulazimisha kuwasha), ambayo ina kipaumbele juu ya mpangilio wa dashibodi uliohifadhiwa (**Mipangilio → Ustahimilivu** / `PATCH /api/resilience`).
 
 **Semantiki za `rateLimitProtection` ya kila muunganisho:**
 Ulinzi wa kikomo cha kiwango wa kila muunganisho hufuatiliwa kupitia uga wa boolean `rateLimitProtection` kwenye miunganisho ya watoa huduma (unaohifadhiwa kama `rate_limit_protection` katika SQLite):
@@ -764,7 +764,7 @@ ishara ileile na quota iliyokwisha. Vikwazo halisi:
 > mwongozo wa ajenti ubaki chini ya bajeti ya muktadha ya 40k. Huu ni mtazamo uliofupishwa unaolenga
 > ajenti wa sehemu zilizo hapo juu; sehemu zenye namba zinabaki kuwa marejeleo kamili.
 
-OmniRoute ina mbinu tatu zinazohusiana lakini tofauti za kushughulikia kushindwa kwa muda. Weka
+67router ina mbinu tatu zinazohusiana lakini tofauti za kushughulikia kushindwa kwa muda. Weka
 wigo wao tofauti unapotatua tabia ya uelekezaji. Angalia
 [mchoro wa tabaka 3 za ustahimilivu](../diagrams/exported/resilience-3layers.svg)
 (chimbuko: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

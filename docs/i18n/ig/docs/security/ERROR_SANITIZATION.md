@@ -214,7 +214,7 @@ Iwu nsacha ndị a na-emetụta `upstreamDetails`:
 3. Oke omimi: a na-eji string `"[truncated]"` dochie nesting gafere level 4.
 4. A na-amachi array na element 32.
 
-Naanị call site nwere body njehie provider a parse-rịrị kwesịrị inyefe `upstreamDetails`. Njehie OmniRoute
+Naanị call site nwere body njehie provider a parse-rịrị kwesịrị inyefe `upstreamDetails`. Njehie 67router
 nke ime sistemụ (ọdịda parse SSE, content efu, mgbochi guardrail) agaghị etinye ya.
 
 Ebufela `err.stack`, `err.message`, ma ọ bụ string ọ bụla sitere na runtime exception gaa na
@@ -225,7 +225,7 @@ Ibufe ụfọdụ upstream 4xx na-echekwa ọdịdị JSON na okwu provider nd�
 client auto-recovery chọrọ, mana ọ bụghị ibufe byte-for-byte: recursive sanitizer na-arụ ọrụ mgbe niile
 tupu serialization. Body nwere cycle, nke nwere BigInt, ma ọ bụ nke nwere `toJSON()` ọjọọ na-ajụ onwe ya n'ụzọ nchebe, ya mere
 ha erughị eru maka passthrough. OCR na moderation na-etinyekwa otu iwu ahụ; a na-atụgharị upstream body
-na-abụghị JSON, nke tọgbọ chakoo, ma ọ bụ nke e nyere label na-ezighi ezi gaa na canonical OmniRoute JSON error envelope.
+na-abụghị JSON, nke tọgbọ chakoo, ma ọ bụ nke e nyere label na-ezighi ezi gaa na canonical 67router JSON error envelope.
 
 ## Mmachi CodeQL a maara: anaghị amata ndị na-asachapụ omenala
 

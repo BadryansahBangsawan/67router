@@ -31,7 +31,7 @@ Fún gbogbo olùdíje tó wà nínú àkójọpọ̀ náà (`open-sse/services/a
 lẹ́sẹ̀kẹsẹ̀ lẹ́yìn `filterPaidOnlyCandidates`):
 
 1. **Kò sí nínú `FREE_MODEL_BUDGETS` rárá** → a yọ ọ́ kúrò. Èyí kan àwọn model tí a ń sanwó fún ní tòótọ́ àti
-   provider/model èyíkéyìí tí OmniRoute kò tíì pín sí ẹ̀ka kan — àwọn olùdíje tuntun máa bẹ̀rẹ̀ gẹ́gẹ́ bí
+   provider/model èyíkéyìí tí 67router kò tíì pín sí ẹ̀ka kan — àwọn olùdíje tuntun máa bẹ̀rẹ̀ gẹ́gẹ́ bí
    ẹni tí a yọ kúrò, kì í ṣe ẹni tí a fi kún un.
 2. **`freeType: "keyless"`** → ó kọjá lẹ́sẹ̀kẹsẹ̀, **ṣùgbọ́n fún olùdíje tí ó dé ní tòótọ́
    nípasẹ̀ ọ̀nà tí kò nílò ìfàṣẹsí nìkan** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -87,7 +87,7 @@ kì í ṣe àkọọ́lẹ̀ mìíràn tí a kò jẹ́rìí rẹ̀ lórí olù
 (àwọn ọ̀ràn A/B/C ti keyless-bypass, àwọn ọ̀ràn 1-5 ti ọ̀pọ̀-àkọọ́lẹ̀).
 
 `discovered automatically`: olùpèsè/àwòṣe kan tí a bá tú jáde lọ́la pẹ̀lú metadata tó péye (nínú
-kátálọ́ọ̀gù, pẹ̀lú usage adapter, `hardStopGuaranteed: true`) ṣeé lò ní kété tí OmniRoute bá mọ̀
+kátálọ́ọ̀gù, pẹ̀lú usage adapter, `hardStopGuaranteed: true`) ṣeé lò ní kété tí 67router bá mọ̀
 nípa rẹ̀ — kò nílò ìyípadà kóòdù, kò nílò àfikún sí whitelist, kò sì sí ohun tí a nílò láti ṣàtúnṣe nínú module yìí. Èyí tí a bá yọ
 kúrò nínú kátálọ́ọ̀gù yóò pòórá lọ́nà kan náà. Wo
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` fún ẹ̀rí ìdènà ìpadàsẹ́yìn (nípasẹ̀

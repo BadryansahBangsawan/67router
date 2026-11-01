@@ -62,7 +62,7 @@ test("g4f.space metadata describes conditional access and the remote data bounda
     );
     assert.match(
       metadata.notice?.text ?? "",
-      /prompts and request metadata leave OmniRoute/i,
+      /prompts and request metadata leave 67router/i,
       `${id} data-boundary notice`
     );
     assert.match(

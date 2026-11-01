@@ -9,8 +9,13 @@ import { z } from "zod";
 import { CONNECTION_TEST_PROMPT_MAX_LENGTH } from "@/shared/constants/connectionTest";
 import { COMBO_CONFIG_MODES } from "@/shared/constants/comboConfigMode";
 import { MAX_REQUEST_BODY_LIMIT_MB, MIN_REQUEST_BODY_LIMIT_MB } from "@/shared/constants/bodySize";
-import { HIDEABLE_SIDEBAR_GROUP_IDS } from "@/shared/constants/sidebarGroupVisibility";
-import { HIDEABLE_SIDEBAR_ITEM_IDS, SIDEBAR_SECTIONS } from "@/shared/constants/sidebarVisibility";
+import { normalizeHiddenSidebarGroupLabels } from "@/shared/constants/sidebarGroupVisibility";
+import {
+  HIDEABLE_SIDEBAR_ITEM_IDS,
+  persistHiddenSidebarSectionIds,
+  migrateSidebarItemOrder,
+  migrateSidebarSectionIds,
+} from "@/shared/constants/sidebarVisibility";
 import { ACCOUNT_FALLBACK_STRATEGY_VALUES } from "@/shared/constants/routingStrategies";
 import { RESPONSES_PREVIOUS_RESPONSE_ID_MODES } from "@/shared/constants/responsesPreviousResponseId";
 import {
@@ -24,6 +29,18 @@ import { isSpawnCapableBypassPrefix } from "@/shared/constants/spawnCapablePrefi
 import { isHttpUrl } from "@/shared/validation/schemas/misc";
 
 const signatureCacheModeValues = ["enabled", "bypass", "bypass-strict"] as const;
+
+function knownIdsArray<T extends string>(knownIds: readonly T[]) {
+  const known = new Set<string>(knownIds);
+  return z
+    .array(z.string().max(100))
+    .transform((ids) => ids.filter((id): id is T => known.has(id)));
+}
+
+/** Sidebar section / group id list; the migration transform maps legacy ids and drops unknowns. */
+function sidebarIdsArray() {
+  return z.array(z.string().max(100));
+}
 
 // Legacy account "weighted" always ran fill-first; accept old settings without offering it.
 const accountFallbackStrategySchema = z
@@ -225,15 +242,22 @@ export const updateSettingsSchema = z.object({
   probeCanDisable: z.boolean().optional(),
   debugMode: z.boolean().optional(),
   logToolSources: z.boolean().optional(),
-  hiddenSidebarItems: z.array(z.enum(HIDEABLE_SIDEBAR_ITEM_IDS)).optional(),
-  hiddenSidebarSections: z
-    .array(z.enum(SIDEBAR_SECTIONS.map((s) => s.id) as [string, ...string[]]))
+  // Saved settings may still name sidebar entries of removed features. Sidebar v2 (67router):
+  // pre-v2 section / group ids are migrated to the v2 ids first (sidebarVisibility/legacy.ts),
+  // so an older client or a settings export from before the regrouping still saves; any id that
+  // is still unknown after that is dropped instead of rejecting the whole update. A pre-v2
+  // section that was not the only source of its v2 section is stored as-is: readers hide just
+  // its pages (resolveHiddenSidebarItems()).
+  hiddenSidebarItems: knownIdsArray(HIDEABLE_SIDEBAR_ITEM_IDS).optional(),
+  hiddenSidebarSections: sidebarIdsArray().transform(persistHiddenSidebarSectionIds).optional(),
+  hiddenSidebarGroupLabels: sidebarIdsArray()
+    .transform(normalizeHiddenSidebarGroupLabels)
     .optional(),
-  hiddenSidebarGroupLabels: z.array(z.enum(HIDEABLE_SIDEBAR_GROUP_IDS)).optional(),
-  sidebarSectionOrder: z
-    .array(z.enum(SIDEBAR_SECTIONS.map((s) => s.id) as [string, ...string[]]))
+  sidebarSectionOrder: sidebarIdsArray().transform(migrateSidebarSectionIds).optional(),
+  sidebarItemOrder: z
+    .record(z.string(), z.array(z.string().max(100)))
+    .transform(migrateSidebarItemOrder)
     .optional(),
-  sidebarItemOrder: z.record(z.string(), z.array(z.string().max(100))).optional(),
   sidebarActivePreset: z
     .enum(["all", "essentials", "minimal", "developer", "admin"])
     .nullable()
@@ -436,9 +460,9 @@ export const updateSettingsSchema = z.object({
       })
     )
     .optional(),
-  // SkillsMP marketplace API key
+  // Legacy keys of the removed Skills marketplace: still accepted so a settings round-trip
+  // from an older install does not fail the strict schema; nothing reads them.
   skillsmpApiKey: z.string().max(200).optional(),
-  // Active skills provider (single source of truth for skills page)
   skillsProvider: z.enum(["skillsmp", "skillssh"]).optional(),
   // models.dev sync settings
   modelsDevSyncEnabled: z.boolean().optional(),

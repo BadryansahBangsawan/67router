@@ -8,7 +8,7 @@
 
 ## البدء السريع — استخدم موفّر `agentrouter` الأصلي (موصى به)
 
-بالنسبة إلى معظم المستخدمين، **لا يلزم أي إعداد خاص**. يأتي OmniRoute مزودًا بموفّر `agentrouter` مدمج يتضمن البصمة الشبكية الكاملة لـ Claude Code مسبقًا (راجع `open-sse/config/providerRegistry.ts` ← `agentrouter`). لاستخدامه:
+بالنسبة إلى معظم المستخدمين، **لا يلزم أي إعداد خاص**. يأتي 67router مزودًا بموفّر `agentrouter` مدمج يتضمن البصمة الشبكية الكاملة لـ Claude Code مسبقًا (راجع `open-sse/config/providerRegistry.ts` ← `agentrouter`). لاستخدامه:
 
 1. افتح **لوحة التحكم ← الموفّرون ← إضافة موفّر**.
 2. اختر **AgentRouter** من القائمة.
@@ -22,18 +22,18 @@
 
 ## متقدم: الاتصال عبر نوع الموفّر المتوافق مع Claude Code
 
-يدعم OmniRoute أيضًا AgentRouter (والوسطاء المشابهين) من خلال نوع الموفّر **المتوافق مع Claude Code** (`anthropic-compatible-cc-*`)، الذي يتواصل باستخدام Anthropic Messages API مع البصمة الشبكية الصحيحة. لن يعمل موفّر `openai-compatible-chat` عام يشير إلى `https://agentrouter.org` — إذ يرفض WAF في الجهة المصدر الطلبات التي لا تبدو صادرة من Claude Code.
+يدعم 67router أيضًا AgentRouter (والوسطاء المشابهين) من خلال نوع الموفّر **المتوافق مع Claude Code** (`anthropic-compatible-cc-*`)، الذي يتواصل باستخدام Anthropic Messages API مع البصمة الشبكية الصحيحة. لن يعمل موفّر `openai-compatible-chat` عام يشير إلى `https://agentrouter.org` — إذ يرفض WAF في الجهة المصدر الطلبات التي لا تبدو صادرة من Claude Code.
 
 ---
 
 ## المتطلبات الأساسية
 
 - حساب AgentRouter ومفتاح API. يحصل المسجلون الجدد على أرصدة مجانية عبر رابط الإحالة في ملف [README](../README.md) الخاص بالمشروع.
-- تشغيل OmniRoute مع تمكين علامة الميزة `ENABLE_CC_COMPATIBLE_PROVIDER` (انظر أدناه).
+- تشغيل 67router مع تمكين علامة الميزة `ENABLE_CC_COMPATIBLE_PROVIDER` (انظر أدناه).
 
 ## 1. تمكين نوع الموفّر المتوافق مع CC
 
-نوع الموفّر المتوافق مع Claude Code محمي بعلامة ميزة لأنه يرسل حركة مرور تحاكي عميل Claude Code الرسمي بدرجة كبيرة. مكّنه عن طريق تعيين متغير بيئة قبل تشغيل OmniRoute:
+نوع الموفّر المتوافق مع Claude Code محمي بعلامة ميزة لأنه يرسل حركة مرور تحاكي عميل Claude Code الرسمي بدرجة كبيرة. مكّنه عن طريق تعيين متغير بيئة قبل تشغيل 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

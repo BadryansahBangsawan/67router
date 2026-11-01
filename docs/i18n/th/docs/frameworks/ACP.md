@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute แยก **การค้นหา CLI**, **Agent Client Protocol แบบเนทีฟ** และ
+67router แยก **การค้นหา CLI**, **Agent Client Protocol แบบเนทีฟ** และ
 **อะแดปเตอร์ stdio แบบเดิม** ออกจากกัน การพบไบนารีที่ติดตั้งแล้วไม่ได้พิสูจน์ว่า
 มีการยืนยันตัวตน ความเข้ากันได้ของโมเดล หรือความพร้อมในการจัดการพรอมต์
 
@@ -119,5 +119,3 @@ try {
 - [โปรโตคอลเอเจนต์](./AGENT_PROTOCOLS_GUIDE.md)
 - [สัญญาการเรียกใช้งาน CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [เครื่องมือ CLI](../reference/CLI-TOOLS.md)
-- [เซิร์ฟเวอร์ A2A](./A2A-SERVER.md)
-- [เอเจนต์บนคลาวด์](./CLOUD_AGENT.md)

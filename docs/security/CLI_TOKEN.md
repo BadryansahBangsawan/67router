@@ -6,7 +6,7 @@ title: "CLI Machine-ID Token"
 
 ## Overview
 
-OmniRoute CLI commands authenticate against the local management API using a
+67router CLI commands authenticate against the local management API using a
 `HMAC-SHA256(machine-id, salt)` token sent via the `x-omniroute-cli-token`
 request header.
 

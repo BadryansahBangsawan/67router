@@ -8,9 +8,9 @@
 > **Ilisasishwa mwisho:** 2026-09-16
 > **Hadhira:** Wahandisi wanaoongeza, wanaodumisha, au wanaotatua hitilafu za huduma zilizopachikwa (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Huduma zilizopachikwa ni zana za michakato saidizi zinazosakinishwa ndani ya mashine ambazo OmniRoute husakinisha, husimamia na
+Huduma zilizopachikwa ni zana za michakato saidizi zinazosakinishwa ndani ya mashine ambazo 67router husakinisha, husimamia na
 huziweka wazi kama malengo kamili ya uelekezaji. Tofauti na watoa huduma wa nje (ambao hufikiwa kupitia intaneti
-kwa kutumia funguo za API), huduma zilizopachikwa huendeshwa kwenye mashine ileile kama OmniRoute na huwasiliana kupitia loopback.
+kwa kutumia funguo za API), huduma zilizopachikwa huendeshwa kwenye mashine ileile kama 67router na huwasiliana kupitia loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Huduma saba zimepachikwa:
 
 | Huduma          | Kifurushi cha npm                              | Mlango chaguo-msingi | Kusudi                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------- | ---------------------------------------------- | :------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                      |        20130         | Kipanga njia cha AI ambacho OmniRoute inaweza kutumia kama mtoa huduma mdogo. Modeli zinafichuliwa kama `9router/{sub}/{model}`                                                                                                                                                                                                                                                                           |
+| **9Router**     | `9router`                                      |        20130         | Kipanga njia cha AI ambacho 67router inaweza kutumia kama mtoa huduma mdogo. Modeli zinafichuliwa kama `9router/{sub}/{model}`                                                                                                                                                                                                                                                                            |
 | **CLIProxyAPI** | Faili tekelezi ya toleo la GitHub (`cliproxy`) |         8317         | Adapta ya proksi ya ndani kwa mitiririko ya uthibitishaji ya Anthropic CLI. Hutoa upangaji njia wa akiba tokeni za OAuth zinapoisha muda wake                                                                                                                                                                                                                                                             |
 | **Mux**         | `mux` (`mux server` isiyo na kiolesura)        |         8322         | Daemoni ya ndani ya uratibu wa mawakala (coder/mux). Inadhibitiwa tu katika mzunguko wa uhai — si lengo la upangaji njia (hakuna uelekezaji wa proksi wa LLM).                                                                                                                                                                                                                                            |
 | **Bifrost**     | `@maximhq/bifrost`                             |         8080         | Mfumo wa nyuma wa upelekaji wa lango la AI wa Go. Unapoendeshwa, huchaguliwa kiotomatiki na njia ya upelekaji (`/v1/relay/`)                                                                                                                                                                                                                                                                              |
@@ -45,21 +45,21 @@ Huduma saba zimepachikwa:
 
 Zote saba hufuata modeli sawa ya usimamizi:
 
-- OmniRoute huzisakinisha chini ya `DATA_DIR/services/{name}/` (zikiwa zimetengwa na `package.json` ya OmniRoute yenyewe)
-- OmniRoute huzianzisha na kuzifuatilia kama michakato-toto
-- OmniRoute huingiza ufunguo wa API wa muda mfupi katika mazingira ya mchakato-toto na kuuzungusha bila kusitisha huduma (inapohusika)
+- 67router huzisakinisha chini ya `DATA_DIR/services/{name}/` (zikiwa zimetengwa na `package.json` ya 67router yenyewe)
+- 67router huzianzisha na kuzifuatilia kama michakato-toto
+- 67router huingiza ufunguo wa API wa muda mfupi katika mazingira ya mchakato-toto na kuuzungusha bila kusitisha huduma (inapohusika)
 - Njia zote za usimamizi (`/api/services/*`) ni **LOCAL_ONLY** — zinaweza kufikiwa tu kutoka loopback (kanuni ngumu #17)
 
 ### Maamuzi muhimu (kutoka kwenye mpango wa usanifu)
 
-| Uamuzi                                         | Thamani                                                                                |
-| ---------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Ufikiaji wa dashibodi kwa UI asilia ya 9Router | Proksi ya kinyume katika `/dashboard/providers/services/9router/embed/*`               |
-| Utaratibu wa usakinishaji                      | `npm install {package}` kupitia `execFile` (bila uingizaji wa shell)                   |
-| Hali ya matumizi                               | Mtoa huduma amesajiliwa kama `9router/{sub}/{model}` katika injini ya upangaji njia    |
-| Usimamizi wa ufunguo wa API                    | OmniRoute huzalisha, husimba ukiwa umehifadhiwa (AES-256-GCM), na huingiza kupitia env |
-| Eneo la dashibodi                              | `/dashboard/providers/services` (vichupo vitatu)                                       |
-| Kuanzisha kiotomatiki                          | Kitufe cha kuwasha/kuzima kwa kila huduma, chaguo-msingi KIMEZIMWA                     |
+| Uamuzi                                         | Thamani                                                                               |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Ufikiaji wa dashibodi kwa UI asilia ya 9Router | Proksi ya kinyume katika `/dashboard/providers/services/9router/embed/*`              |
+| Utaratibu wa usakinishaji                      | `npm install {package}` kupitia `execFile` (bila uingizaji wa shell)                  |
+| Hali ya matumizi                               | Mtoa huduma amesajiliwa kama `9router/{sub}/{model}` katika injini ya upangaji njia   |
+| Usimamizi wa ufunguo wa API                    | 67router huzalisha, husimba ukiwa umehifadhiwa (AES-256-GCM), na huingiza kupitia env |
+| Eneo la dashibodi                              | `/dashboard/providers/services` (vichupo vitatu)                                      |
+| Kuanzisha kiotomatiki                          | Kitufe cha kuwasha/kuzima kwa kila huduma, chaguo-msingi KIMEZIMWA                    |
 
 ---
 
@@ -220,7 +220,7 @@ Maombi yasiyotoka kwenye loopback hupokea `403 LOCAL_ONLY` bila kujali tokeni ya
 #### `POST /api/services/9router/install`
 
 Sakinisha 9Router kutoka npm. Huunda `DATA_DIR/services/9router/` ikiwa na
-`package.json` na `node_modules/` zake. Haikinzani na vitegemezi vya OmniRoute.
+`package.json` na `node_modules/` zake. Haikinzani na vitegemezi vya 67router.
 
 **Mwili wa ombi** (vyote ni vya hiari):
 
@@ -381,7 +381,7 @@ Hurejesha hali iliyounganishwa ya moja kwa moja + DB, ikijumuisha metadata ya to
 #### `POST /api/services/9router/auto-start`
 
 Badilisha hali ya alama ya kuanza kiotomatiki. Wakati `enabled: true`, huduma huanza kiotomatiki
-OmniRoute inapowashwa wakati mwingine (ikiwa huduma imesakinishwa).
+67router inapowashwa wakati mwingine (ikiwa huduma imesakinishwa).
 
 **Mwili wa ombi:**
 
@@ -589,7 +589,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Proksi hii:
 
 - Huelekeza ombi kwa `http://127.0.0.1:{port}/{path}` (loopback pekee)
-- Huondoa vichwa vya `cookie` na `authorization` vinavyoingia (hakuna uvujaji wa kipindi cha OmniRoute)
+- Huondoa vichwa vya `cookie` na `authorization` vinavyoingia (hakuna uvujaji wa kipindi cha 67router)
 - Huingiza `Authorization: Bearer {apiKey}` kwa uthibitishaji wa 9Router
 - Huondoa `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` kutoka kwenye jibu
 - Huandika upya majibu ya HTML ili kuingiza `<base href>` na kusawazisha njia kamili (`/foo` → `/dashboard/.../embed/foo`)
@@ -625,7 +625,7 @@ ya viwango.
 ### Uingizaji wa ufunguo wa API
 
 9Router na Mux zinahitaji ufunguo wa API/tokeni ya bearer kwa endpoint zao za HTTP.
-OmniRoute:
+67router:
 
 1. Hutengeneza ufunguo kupitia `crypto.randomBytes(32).toString("base64url")` wenye
    kiambishi awali mahususi kwa huduma (`nr_` kwa 9Router, `mx_` kwa Mux).
@@ -805,7 +805,7 @@ Ikiwa huduma iliyopachikwa inafichua endpoint ya `/v1/chat/completions` inayooan
 
 1. Angalia `GET /api/services/{name}/logs` (au paneli ya Kumbukumbu kwenye dashibodi). Tafuta
    mistari kama `Error: ENOENT`, `address already in use`, au `Cannot find module`.
-2. Thibitisha kuwa `npm` iko katika PATH: tumia `which npm` kutoka kwenye akaunti ileile ya mtumiaji inayoendesha OmniRoute.
+2. Thibitisha kuwa `npm` iko katika PATH: tumia `which npm` kutoka kwenye akaunti ileile ya mtumiaji inayoendesha 67router.
 3. Thibitisha kuwa huduma imesakinishwa: angalia `GET /api/services/{name}/status` kwa
    `installedVersion`. Ikiwa ni `null`, endesha usakinishaji kwanza.
 4. Angalia kuwa `DATA_DIR/services/{name}/node_modules/` ipo na si tupu.
@@ -843,7 +843,7 @@ wa kuanza, ongeza `healthIntervalMs` hadi 5000 na `stopTimeoutMs` hadi 30 000.
 3. Mlango unaweza kusanidiwa kwa kila huduma katika `bootstrap.ts` kupitia uga wa `port`.
 
 **Kumbuka:** 9Router hutumia mlango 20130 kwa chaguo-msingi mahsusi ili kuepuka kugongana na
-mlango chaguo-msingi wa OmniRoute wa 20128.
+mlango chaguo-msingi wa 67router wa 20128.
 
 ---
 
@@ -853,13 +853,13 @@ mlango chaguo-msingi wa OmniRoute wa 20128.
 
 **Sababu:**
 
-- `DATA_DIR` au saraka kuu yake haiwezi kuandikwa na mchakato wa OmniRoute.
+- `DATA_DIR` au saraka kuu yake haiwezi kuandikwa na mchakato wa 67router.
 - Inaendeshwa ndani ya Docker rootless bila ruhusa ya kuandika kwenye volume iliyounganishwa.
 
 **Suluhisho:**
 
 1. Angalia `DATA_DIR` (chaguo-msingi: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Hakikisha mtumiaji wa mchakato wa OmniRoute anamiliki saraka: `chown -R $USER ~/.omniroute/`
+2. Hakikisha mtumiaji wa mchakato wa 67router anamiliki saraka: `chown -R $USER ~/.omniroute/`
 3. Katika Docker, hakikisha volume mount ina ruhusa sahihi kwa mtumiaji wa container.
 
 ---
@@ -907,16 +907,16 @@ ukaguzi wa manage-scope. Angalia `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **Swali: Je, 9Router na CLIProxyAPI zitapatikana katika upelekaji wa uzalishaji/cloud?**
 
-Ndiyo. Huduma zote mbili zinafuata muundo uleule unaotanguliza mazingira ya ndani kama OmniRoute yenyewe. Huendeshwa
+Ndiyo. Huduma zote mbili zinafuata muundo uleule unaotanguliza mazingira ya ndani kama 67router yenyewe. Huendeshwa
 kwenye mashine hiyo hiyo na kuwasiliana kupitia loopback. "Uzalishaji" hapa unamaanisha VPS
-au seva ya ndani ambako OmniRoute imepelekwa, si mtoa huduma wa cloud wa mbali.
+au seva ya ndani ambako 67router imepelekwa, si mtoa huduma wa cloud wa mbali.
 
 ---
 
 **Swali: Ninawezaje kutatua hitilafu za supervisor?**
 
 1. Fuatilia mtiririko wa logi wa SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Kagua logi zilizoundwa kwa muundo katika matokeo ya pino ya OmniRoute, yaliyochujwa kwa
+2. Kagua logi zilizoundwa kwa muundo katika matokeo ya pino ya 67router, yaliyochujwa kwa
    namespace ya `service:supervisor`.
 3. Kagua safu ya DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Tumia `GET /api/services/9router/status` kuona hali ya sasa ya moja kwa moja, PID, afya,

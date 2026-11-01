@@ -9,7 +9,7 @@
 Manifest hiyo hiyo inapatikana kupitia HTTP katika
 `GET /api/v1/provider-plugin-manifest` kwa sidecar zinazoendeshwa nje ya mchakato.
 
-OmniRoute hutangaza URL hiyo kwa Bifrost na CLIProxyAPI kupitia kichwa cha ombi cha
+67router hutangaza URL hiyo kwa Bifrost na CLIProxyAPI kupitia kichwa cha ombi cha
 `X-OmniRoute-Provider-Manifest-Url`. Weka
 `OMNIROUTE_PROVIDER_MANIFEST_URL` wakati sidecar inahitaji URL ya umma au ya mtandao wa kontena badala ya asili ya ombi la ndani.
 
@@ -24,7 +24,7 @@ sidecar lazima itume ombi lisilo na masharti badala ya kukubali `304`.
 ## Lengo
 
 Kusogeza metadata ya mtoa huduma kuelekea mkataba wa programu-jalizi ili njia ya ombi inayotumika sana
-hatimaye iweze kumilikiwa na sidecar yenye ucheleweshaji mdogo huku OmniRoute ikihifadhi
+hatimaye iweze kumilikiwa na sidecar yenye ucheleweshaji mdogo huku 67router ikihifadhi
 route ya TypeScript kama lango la sera na njia mbadala. Manifest ni nyongeza: yenyewe
 haibadilishi uelekezaji wa maombi.
 
@@ -68,7 +68,7 @@ kusoma upya vyanzo vya TypeScript.
 | `usage-fetch`        | Ina kichotaji cha matumizi au quota kilichounganishwa (`getUsageForProvider`).      |
 | `usage-supported`    | API ya matumizi humkubali mtoa huduma huyu (`isSupportedUsageConnection`).          |
 
-`usage-fetch` ni kwa ugunduzi pekee. Huripoti kwamba OmniRoute inajua jinsi ya kusoma matumizi ya
+`usage-fetch` ni kwa ugunduzi pekee. Huripoti kwamba 67router inajua jinsi ya kusoma matumizi ya
 mtoa huduma; haiwashi uchotaji, haibadilishi semantiki za quota, wala haimaanishi kwamba
 wijeti ya quota ya Dashboard imewezeshwa kwa mtoa huduma — wijeti hiyo inadhibitiwa kando na
 `USAGE_SUPPORTED_PROVIDERS`. Chanzo cha ukweli ni `USAGE_FETCHER_PROVIDERS` katika

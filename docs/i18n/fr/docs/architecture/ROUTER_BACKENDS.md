@@ -15,9 +15,9 @@ Cet ADR définit précisément les relations entre les moteurs `ts` (natif), `bi
 Le rôle d'un moteur est décrit selon **deux axes indépendants**, encodés conjointement dans le `RouterBackendDefinition` du registre :
 
 1. **Cycle de vie** (`RouterBackendLifecycle`) — _comment le moteur s'exécute_ :
-   - `in-process` — s'exécute au sein du processus Node d'OmniRoute (le pipeline TS natif).
-   - `supervised` — un processus enfant local qu'OmniRoute installe, démarre, arrête et dont il vérifie l'état via `ServiceSupervisor`, puis qu'il utilise comme connexion de fournisseur.
-   - `external` — un point de terminaison HTTP vers lequel OmniRoute distribue les requêtes, mais qu'il ne gère **pas** (configuré à l'aide d'une URL de base définie par une variable d'environnement).
+   - `in-process` — s'exécute au sein du processus Node de 67router (le pipeline TS natif).
+   - `supervised` — un processus enfant local que 67router installe, démarre, arrête et dont il vérifie l'état via `ServiceSupervisor`, puis qu'il utilise comme connexion de fournisseur.
+   - `external` — un point de terminaison HTTP vers lequel 67router distribue les requêtes, mais qu'il ne gère **pas** (configuré à l'aide d'une URL de base définie par une variable d'environnement).
    - `disabled` — enregistré, mais non sélectionnable.
 2. **Axe de sélection** (backend de routage du relais) — _si le relais lui transmet les requêtes_ :
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` dans

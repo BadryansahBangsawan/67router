@@ -4,7 +4,7 @@
 
 ---
 
-> **Kwa ufupi**: Injini ya ukandamizaji ya OmniRoute inaweza **kuongezewa vipengele** — unaweza kusajili injini maalum, kusambaza vifurushi vya lugha kwa lugha mpya, na kuunda mifumo iliyopangwa kwa safu. Mwongozo huu unaonyesha jinsi ya kufanya hivyo.
+> **Kwa ufupi**: Injini ya ukandamizaji ya 67router inaweza **kuongezewa vipengele** — unaweza kusajili injini maalum, kusambaza vifurushi vya lugha kwa lugha mpya, na kuunda mifumo iliyopangwa kwa safu. Mwongozo huu unaonyesha jinsi ya kufanya hivyo.
 
 **Miongozo inayohusiana:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Kiwango cha mradi (hupakiwa wakati wa kuanza)
 ```
 
-Au ipakie kwa utaratibu kupitia programu-jalizi:
+Or register it programmatically at startup:
 
 ```ts
-// Ndani ya programu-jalizi yako
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK ya programu-jalizi hutoa vihusishi vya onRequest / onResponse / onError. Sajili
-  // injini wakati moduli ya programu-jalizi inapopakiwa (au kwenye onRequest ya kwanza); iondoe kwenye usajili
-  // kupitia njia yako mwenyewe ya kusitisha.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Wakati wa kusitisha:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ katika kiteuzi cha mkakati kupitia `id` yake. Jaribu ujumuishaji kwa kuiunganish
 
 ## Kuunda Vifurushi vya Lugha
 
-Mfinyazo wa mtindo wa Caveman hutumia **vifurushi vya kanuni mahususi kwa kila lugha** kushughulikia maneno ya kujaza, lugha ya kusita, na mifumo yenye maneno mengi katika kila lugha asilia. OmniRoute huja na **vifurushi 6 vya lugha**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Mfinyazo wa mtindo wa Caveman hutumia **vifurushi vya kanuni mahususi kwa kila lugha** kushughulikia maneno ya kujaza, lugha ya kusita, na mifumo yenye maneno mengi katika kila lugha asilia. 67router huja na **vifurushi 6 vya lugha**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Muundo wa Kifurushi
 
@@ -388,7 +379,7 @@ Matokeo ya injini N huwa ingizo la injini N+1.
 
 ### Modi za Mfinyazo
 
-OmniRoute huchagua **modi MOJA kwa kila ombi** kulingana na usanidi, vizingiti vya uanzishaji otomatiki, na ubatilishaji wa michanganyiko.
+67router huchagua **modi MOJA kwa kila ombi** kulingana na usanidi, vizingiti vya uanzishaji otomatiki, na ubatilishaji wa michanganyiko.
 Modi zinazopatikana zimefafanuliwa katika `open-sse/services/compression/types.ts` (aina ya `CompressionMode`):
 
 | Modi         | Injini               | Matumizi                                                                                                                                                                                                                                    |
@@ -507,10 +498,10 @@ Ili kuidhibiti kupitia usanidi, weka `mode: "stacked"` na utoe safu ya hatua chi
 
 ## Sera ya Usawazishaji na Upstream
 
-Injini za ukandamizaji za OmniRoute zinazitambua miradi kadhaa ya upstream katika README
+Injini za ukandamizaji za 67router zinazitambua miradi kadhaa ya upstream katika README
 ("inspired by RTK, Caveman, LLMLingua-2, Troglodita"). Swali la kawaida kutoka kwa wachangiaji
 ni: **upstream RTK inapoongeza kichujio kipya cha zana au Caveman inapoongeza kifurushi cha
-kanuni, hilo linafikaje OmniRoute?** Sehemu hii ndiyo jibu rasmi.
+kanuni, hilo linafikaje 67router?** Sehemu hii ndiyo jibu rasmi.
 
 ### Nakala zilizojumuishwa dhidi ya utekelezaji huru
 
@@ -531,7 +522,7 @@ nakala ya upstream ya kutumia `git pull` — na hiyo ndiyo sababu hasa README in
 **Hakuna ufuatiliaji wa kiotomatiki wa matoleo ya upstream na hakuna lebo ya `compression-sync`
 ** — kwa makusudi. Kwa sababu injini hizi ni utekelezaji upya, kichujio cha upstream RTK
 au kifurushi cha kanuni cha Caveman hakiunganishwi kama msimbo; badala yake, **kinaelezwa upya kama
-kanuni/kichujio kipya katika muundo wa OmniRoute yenyewe** (tazama
+kanuni/kichujio kipya katika muundo wa 67router yenyewe** (tazama
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) na huongezwa inapohitajika kupitia
 PR ya kawaida. Sehemu za upanuzi zilizo hapo juu (injini maalum, kifurushi cha lugha, kichujio cha RTK)
 ndizo njia zilizoidhinishwa za kuchangia.
@@ -545,14 +536,14 @@ Mifano ya hivi karibuni ya mtiririko huu hasa:
 ### Headroom (proksi ya ukandamizaji wa ingizo)
 
 Headroom ni **ya ndani kikamilifu** — snapshot iliyobandikwa ya codec ya `gcf` iliyojumuishwa pamoja na
-tabaka za `smartcrusher` / `toon` / `tabular` za OmniRoute yenyewe. Hakuna upstream hai
+tabaka za `smartcrusher` / `toon` / `tabular` za 67router yenyewe. Hakuna upstream hai
 ya kufuatilia zaidi ya nakala iliyojumuishwa; masasisho ya `gcf` huonyeshwa upya
 kwa mikono codec inapobadilika na kuthibitishwa upya dhidi ya kizuizi cha bajeti ya ukandamizaji
 (`check:compression-budget`).
 
 ### Kupendekeza boresho lililohamasishwa na upstream
 
-1. **Usijumuishe msimbo wa upstream** — eleza upya kanuni/kichujio cha upstream katika muundo wa OmniRoute.
+1. **Usijumuishe msimbo wa upstream** — eleza upya kanuni/kichujio cha upstream katika muundo wa 67router.
 2. Kiongeze kupitia sehemu ya upanuzi inayolingana hapa chini (kifurushi cha lugha, kichujio cha RTK, au
    injini maalum).
 3. Rejelea mradi wa upstream katika maelezo ya PR (kwa ajili ya utambuzi), si kwa

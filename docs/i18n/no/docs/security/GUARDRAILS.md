@@ -10,7 +10,7 @@
 > for injeksjon som en obligatorisk grense (#16413), og hva som ser et svar før postCall)
 
 Guardrails håndhever sikkerhets-, retningslinje- og innholdstransformasjoner ved grensen
-mellom OmniRoute og oppstrømsleverandører. Hver guardrail kan inspisere (og
+mellom 67router og oppstrømsleverandører. Hver guardrail kan inspisere (og
 eventuelt avvise, transformere eller annotere) forespørsels-payloads (`preCall`) og
 oppstrøms svar (`postCall`).
 
@@ -110,7 +110,7 @@ Når innringerens API-nøkkel begrenser `allowedConnections`, kvotepooler
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), velger broen bare
 omdirigerings- og beskrivelsesmodeller som nøkkelen har lov til å bruke, på
 tilkoblinger nøkkelen har lov til å bruke. Beskrivelseskallet går da alltid
-gjennom OmniRoute-selvsløyfen med `x-omniroute-self-loop-key-id`-headeren, slik
+gjennom 67router-selvsløyfen med `x-omniroute-self-loop-key-id`-headeren, slik
 at den mottakende chat-forespørselen håndhever nøkkelens tilkoblings- og
 modellpolicy på nytt. `enforceApiKeyPolicy()` respekterer den headeren bare
 sammen med selvsløyfe-beareren, slik at den bare kan innsnevre tilgang, og en
@@ -141,7 +141,7 @@ OCR-nøyaktigheten for nøyaktig den teksttranskripsjonsoppgaven denne prompten
 ber om, så beskrivelseskallet selv ber alltid om høy detaljgrad uavhengig av
 hvilket detaljnivå den opprinnelige innkommende forespørselen brukte. Dette
 påvirker bare kroppen i den interne beskrivelsesforespørselen; det endrer ikke
-hvordan OmniRoute videresender innringerens egen `image_url.detail` på
+hvordan 67router videresender innringerens egen `image_url.detail` på
 primærforespørselen — den standarden brukes separat, og bare for oppdagede
 OpenCode-klienter, i `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Anthropic-wire-format-grenen av
@@ -227,7 +227,7 @@ Vision-fanen eksponerer aktivering, modus, modellvalg (inkludert det automatiske
 
 Det tidligere Vision Bridge-kortet under AI-innstillinger er en kompatibilitetslenke til den nye siden; det har ikke lenger et eget duplikat av skjemaet. Media Providers lenker også Image-to-Text- og Speech-to-Text-arbeidsflyter til de tilsvarende Modality Bridge-fanene uten å fjerne den eksisterende Speech-to-Text-lekeplassen.
 
-**Selvsløyfe-innslipps-bypass:** når beskrivelseskallet rutes gjennom OmniRoutes egen `/v1`-selvsløyfe (ikke-standard leverandørmodell), sender delforespørselen
+**Selvsløyfe-innslipps-bypass:** når beskrivelseskallet rutes gjennom 67routers egen `/v1`-selvsløyfe (ikke-standard leverandørmodell), sender delforespørselen
 `x-omniroute-admission-bypass: internal` og autentiseres med den oppløste selvsløyfe-legitimasjonen — den lokale `sk_omniroute`-sentinellen i lokal modus, eller den operatørkonfigurerte `OMNIROUTE_API_KEY` / `ROUTER_API_KEY`-miljønøkkelen (#1350), slik at
 `REQUIRE_API_KEY=true`-utrullinger fortsatt kan kjøre beskrivelseskallet. Bypasset honoreres kun for nøyaktig disse legitimasjonene, slik at eksterne klienter ikke kan bruke headeren til å hoppe over innlipp.
 
@@ -347,7 +347,7 @@ Manglende filtre, feilformatert/tom evidens, en detektorfeil eller tidsavbruddet
 
 Hver ramme er begrenset til 4 MiB, alle rårammene til sammen til 23 MiB, og den
 serialiserte broker-responsen til 32 MiB. En privat midlertidig katalog fjernes
-i `finally`. OmniRoute leveres ikke med FFmpeg og godtar ikke en egendefinert
+i `finally`. 67router leveres ikke med FFmpeg og godtar ikke en egendefinert
 kjørbar filsti. Før teksting kjører broen et konservativt visuelt
 dedupliseringspass: hver JPEG reduseres til en 16×16-gråtonebuffer og
 sammenlignes bare med den sist beholdte rammen. For et forespurt
@@ -392,7 +392,7 @@ videodel når de allerede har tidsjustert tekst. Hvert cue må inneholde `text`,
 et endelig `start`/`end`-intervall innenfor den avmålte varigheten, og en
 hvitelistet `source` (`client`, `embedded` eller `audio-bridge`); `confidence`
 har standardverdi `1` og må forbli mellom `0` og `1`. Eksakte duplikat-cues
-slås sammen. OmniRoute starter aldri transkripsjon fra disse metadataene:
+slås sammen. 67router starter aldri transkripsjon fra disse metadataene:
 validerte cues kopieres inn i det beskrevne resultatet med kilde, konfidens og
 intervall, og gjengis som upålitelige observasjoner ved siden av
 rammebildetekstene. Ugyldig tekst, tekst utenfor gyldig område eller tekst
@@ -958,7 +958,7 @@ utløsing) har to jobber:
   previous instructions…", DAN-lignende jailbreaks) påstår at svaret inneholder
   `error.code === "SECURITY_001"`, dvs. at guarden faktisk avviste forespørselen.
 - **`garak` (rådgivende)** — kjører garak `--probes promptinject,dan,leakreplay`
-  mot en lokal OmniRoute-instans (`http://localhost:20128/v1`). Betinget av en
+  mot en lokal 67router-instans (`http://localhost:20128/v1`). Betinget av en
   leverandørhemmelighet (`PROMPTFOO_PROVIDER_KEY`); hoppes elegant over og er suffikset
   med `|| true`, slik at den rapporterer uten å feile CI.
 

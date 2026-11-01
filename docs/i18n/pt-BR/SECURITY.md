@@ -6,7 +6,7 @@
 
 ## Relato de Vulnerabilidades
 
-Se você descobrir uma vulnerabilidade de segurança no OmniRoute, relate-a de forma responsável:
+Se você descobrir uma vulnerabilidade de segurança no 67router, relate-a de forma responsável:
 
 1. **NÃO** abra uma issue pública no GitHub
 2. Use os [Avisos de Segurança do GitHub](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ branch `stable/v3` (consulte [`ROADMAP.md`](ROADMAP.md) → "Fase 3 — v3.9.0 L
 
 ## Arquitetura de Segurança
 
-O OmniRoute implementa um modelo de segurança em várias camadas:
+O 67router implementa um modelo de segurança em várias camadas:
 
 ```
 Requisição → CORS → Pipeline de Authz (classificar → políticas → aplicar)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework de Proteções
 
-O OmniRoute inclui um **registro de proteções** com recarregamento dinâmico (`src/lib/guardrails/`) e 3 proteções integradas ordenadas por prioridade:
+O 67router inclui um **registro de proteções** com recarregamento dinâmico (`src/lib/guardrails/`) e 3 proteções integradas ordenadas por prioridade:
 
 | Proteção           | Prioridade | Finalidade                                                                                                      |
 | ------------------ | ---------- | --------------------------------------------------------------------------------------------------------------- |

@@ -6,7 +6,7 @@
 
 ## 概述
 
-所有 OmniRoute 管理 API 路由均被划分为三个保护层级之一。分类是静态的，定义于 `src/server/authz/routeGuard.ts` 中，并在运行任何其他身份验证分支之前进行评估。
+所有 67router 管理 API 路由均被划分为三个保护层级之一。分类是静态的，定义于 `src/server/authz/routeGuard.ts` 中，并在运行任何其他身份验证分支之前进行评估。
 
 ## 层级
 
@@ -25,9 +25,9 @@
 **GHSA-fhh6-4qxv-rpqj 的含义（攻击类型）：** 管理/代理服务器
 暴露了一个可启动子进程的端点（`npm install`、`node`、浏览器、
 代理、`git`、`tar`……）。如果该端点可从主机外部访问——例如
-运维人员将 OmniRoute 置于 nginx/Cloudflare/Tailscale 隧道之后，而 JWT
+运维人员将 67router 置于 nginx/Cloudflare/Tailscale 隧道之后，而 JWT
 发生泄露，或身份验证配置错误——攻击者便可将“调用 API”转化为“在
-主机上运行命令”（远程代码执行）。OmniRoute 通过对每个
+主机上运行命令”（远程代码执行）。67router 通过对每个
 可生成进程的路由**无条件地在任何身份验证检查之前执行环回主机检查**来阻止此类攻击：
 通过隧道泄露的令牌仍然无法触达进程生成功能。
 
@@ -55,7 +55,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector——http-proxy 监听器和系统代理                                          |
 | `/api/settings/mitm`                                                                                     | 启用 MITM 拦截（系统级代理状态）                                                        |
 | `/api/issue-agent/`                                                                                      | Issue agent——针对仓库生成本地工具进程                                                   |
-| `/api/plugins/`, `/api/plugins`                                                                          | 插件——通过 `worker_threads` 和 `child_process` 加载/执行                                |
 | `/api/middleware/`                                                                                       | 用户中间件——在进程内加载/执行运维人员代码                                               |
 | `/api/system/version`                                                                                    | 自动更新（仅 POST；GET/HEAD/OPTIONS 除外）——生成 `git checkout` 和 `npm install` 进程   |
 | `/api/db-backups/exportAll`                                                                              | 生成 `tar` 进程以创建导出归档                                                           |
@@ -115,7 +114,7 @@ CVE 类型。
 #### 运维人员指南与审计
 
 如果你在反向代理或隧道（nginx、Caddy、Cloudflare Tunnel、Tailscale、
-Ngrok）后运行 OmniRoute，环回检查仍会保护上述可启动进程的路由 — 客户端地址
+Ngrok）后运行 67router，环回检查仍会保护上述可启动进程的路由 — 客户端地址
 为非环回地址的请求会在**身份验证运行之前**被拒绝，并返回 `403 LOCAL_ONLY`，
 因此即使 JWT 泄露，也无法触发进程启动。运维人员仍需承担两项责任：
 
@@ -152,7 +151,7 @@ Ngrok）后运行 OmniRoute，环回检查仍会保护上述可启动进程的�
 - 在反向代理/访问日志中搜索上述前缀，并检查是否与非环回客户端地址同时出现。
   任何返回 `200` 而非 `403 LOCAL_ONLY` 的此类命中，都意味着代理掩盖了真实的
   客户端 IP——请修复代理。
-- OmniRoute 日志中针对这些路径之一出现的 `403 LOCAL_ONLY` 表明防护机制正在
+- 67router 日志中针对这些路径之一出现的 `403 LOCAL_ONLY` 表明防护机制正在
   按预期工作，并不是应该抑制的错误。
 
 #### 设有调用点探测门控的远程可访问路由

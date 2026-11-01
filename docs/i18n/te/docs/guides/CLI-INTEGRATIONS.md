@@ -7,9 +7,9 @@
 భాగస్వామ్య executable manifest, పరిమిత child environments మరియు నిరంతర
 Gemini సెటప్ కోసం, [CLI లాంచ్ ఒప్పందాలు](./CLI-LAUNCH-CONTRACTS.md) చూడండి.
 
-OmniRoute, ఒక కోడింగ్ CLI (Codex, Claude Code, OpenCode, Cline, …) తన backendగా OmniRouteను ఉపయోగించేలా కాన్ఫిగర్ చేసే `setup-*` కమాండ్ల సమూహంతో వస్తుంది — తద్వారా
-సాధనం **ఒకే** endpointతో కమ్యూనికేట్ చేస్తుంది మరియు OmniRoute auto-fallbackతో
-సరైన providerకు రూట్ చేస్తుంది. ప్రతి కమాండ్, నడుస్తున్న OmniRoute (స్థానిక లేదా రిమోట్) నుండి **ప్రస్తుత** model catalogను చదివి, **మీ**
+67router, ఒక కోడింగ్ CLI (Codex, Claude Code, OpenCode, Cline, …) తన backendగా 67routerను ఉపయోగించేలా కాన్ఫిగర్ చేసే `setup-*` కమాండ్ల సమూహంతో వస్తుంది — తద్వారా
+సాధనం **ఒకే** endpointతో కమ్యూనికేట్ చేస్తుంది మరియు 67router auto-fallbackతో
+సరైన providerకు రూట్ చేస్తుంది. ప్రతి కమాండ్, నడుస్తున్న 67router (స్థానిక లేదా రిమోట్) నుండి **ప్రస్తుత** model catalogను చదివి, **మీ**
 మెషీన్లో సాధనానికి సంబంధించిన config fileను రాస్తుంది. సాధనం మద్దతిచ్చే ప్రతి చోట API keyను environment variable ద్వారా సూచిస్తుంది. సాధనానికి స్థానికమైన environment fileను నిరంతరంగా భద్రపరిచే కమాండ్లు కింద పేర్కొనబడ్డాయి.
 
 ఎటువంటి configను రాయకుండానే, సరైన envను ఇంజెక్ట్ చేసి `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` లేదా `gemini`ను ప్రారంభించే సాధారణ launcher కూడా ఉంది — `omniroute run <target>`. Targets మరియు వాటి
@@ -42,7 +42,7 @@ Import, ఇప్పటికే ఉన్న provider/name జోడీని �
 
 - [Claude Code కాన్ఫిగరేషన్](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI కాన్ఫిగరేషన్](./CODEX-CLI-CONFIGURATION.md)
-- [రిమోట్ మోడ్](./REMOTE-MODE.md) — మీ laptop నుండి రిమోట్ OmniRoute (VPS / Tailnet)ను నిర్వహించండి
+- [రిమోట్ మోడ్](./REMOTE-MODE.md) — మీ laptop నుండి రిమోట్ 67router (VPS / Tailnet)ను నిర్వహించండి
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot extension; ఇది editor లోపలి నుంచే మీ కోసం ఈ
   `setup-*` కమాండ్లను కూడా అమలు చేయగలదు
 
@@ -76,7 +76,7 @@ Import, ఇప్పటికే ఉన్న provider/name జోడీని �
 
 ఫ్లాగ్లపై గమనికలు (కమాండ్ సోర్స్లో ధృవీకరించబడ్డాయి):
 
-- `--remote <url>` — రిమోట్ OmniRoute నుండి కేటలాగ్ను పొందుతుంది (`--port`
+- `--remote <url>` — రిమోట్ 67router నుండి కేటలాగ్ను పొందుతుంది (`--port`
   మరియు సక్రియ కాంటెక్స్ట్ను అధిగమిస్తుంది). `--api-key <key>` ఆ
   సర్వర్కు అవసరమైన క్రెడెన్షియల్ను అందిస్తుంది (డిఫాల్ట్గా `OMNIROUTE_API_KEY` env var లేదా సక్రియ కాంటెక్స్ట్ టోకెన్).
 - `--only <patterns>` — కామాలతో వేరు చేసిన సబ్స్ట్రింగ్లు; సరిపోలే మోడల్ IDలను
@@ -97,7 +97,7 @@ Import, ఇప్పటికే ఉన్న provider/name జోడీని �
   **codex**కు `-c model_providers.omniroute.*` args ద్వారా అందుతుంది. **`--model`ను తప్పనిసరిగా
   కోరే ఏకైక రన్ టార్గెట్ Qwen** — అది లేకుండా `omniroute run qwen` అమలు చేస్తే
   స్పష్టమైన లోపంతో `2` ఎగ్జిట్ అవుతుంది.
-- `--port <port>` — స్థానిక OmniRoute పోర్ట్ (డిఫాల్ట్ `20128`, `--remote`
+- `--port <port>` — స్థానిక 67router పోర్ట్ (డిఫాల్ట్ `20128`, `--remote`
   సెట్ చేసినప్పుడు విస్మరించబడుతుంది). అన్ని `setup-*` కమాండ్లు మరియు రెండు లాంచర్లలో ఉంటుంది.
 - `omniroute run` ఎగ్జిట్ కోడ్లు: చైల్డ్ CLI సొంత ఎగ్జిట్ కోడ్ యథాతథంగా
   పంపబడుతుంది; `2` = చెల్లని ఆర్గ్యుమెంట్లు (మద్దతు లేని టార్గెట్, అవసరమైన
@@ -142,7 +142,7 @@ MITM, మరియు గైడ్కు మాత్రమే సంబంధ�
 
 ## స్థానిక వినియోగం
 
-OmniRoute `localhost:20128`లో నడుస్తున్నప్పుడు, మీ సాధనం కోసం సెటప్ కమాండ్ను అమలు చేయండి. కేటలాగ్ స్థానిక సర్వర్ నుండి పొందబడుతుంది.
+67router `localhost:20128`లో నడుస్తున్నప్పుడు, మీ సాధనం కోసం సెటప్ కమాండ్ను అమలు చేయండి. కేటలాగ్ స్థానిక సర్వర్ నుండి పొందబడుతుంది.
 
 ```bash
 # Codex: సరిపోలిన ప్రతి మోడల్కు ఒక ప్రొఫైల్ను ~/.codex/లో వ్రాయండి
@@ -169,8 +169,8 @@ omniroute setup-continue --dry-run
 ఎటువంటి కాన్ఫిగ్ను వ్రాయకుండానే ప్రారంభించండి (env-ఇంజెక్షన్ మాత్రమే):
 
 ```bash
-omniroute launch                 # Claude Code → స్థానిక OmniRoute
-omniroute launch-codex           # Codex CLI → స్థానిక OmniRoute
+omniroute launch                 # Claude Code → స్థానిక 67router
+omniroute launch-codex           # Codex CLI → స్థానిక 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -188,7 +188,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## రిమోట్ వినియోగం
 
-`--remote` + `--api-key`తో ఏదైనా సెటప్ కమాండ్ను రిమోట్ OmniRoute వైపు మళ్లించండి. కేటలాగ్ రిమోట్ నుండి పొందబడుతుంది; కాన్ఫిగ్ మీ స్థానిక మెషీన్లో వ్రాయబడుతుంది.
+`--remote` + `--api-key`తో ఏదైనా సెటప్ కమాండ్ను రిమోట్ 67router వైపు మళ్లించండి. కేటలాగ్ రిమోట్ నుండి పొందబడుతుంది; కాన్ఫిగ్ మీ స్థానిక మెషీన్లో వ్రాయబడుతుంది.
 
 ```bash
 # రిమోట్ VPSతో OpenCodeను ఉపయోగించి, glm/kimi మోడల్లను మాత్రమే ఉంచండి
@@ -226,7 +226,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-రెండు రూపాలూ ఒక 5dive **auth profile**ను వ్రాస్తాయి, ఆ ప్రొఫైల్కు అనుసంధానించబడిన ప్రతి `claude` సీట్ ఆపై OmniRouteతో కమ్యూనికేట్ చేస్తుంది. ఈ లక్ష్యానికి ప్రత్యేకమైన మూడు అంశాలు ఉన్నాయి:
+రెండు రూపాలూ ఒక 5dive **auth profile**ను వ్రాస్తాయి, ఆ ప్రొఫైల్కు అనుసంధానించబడిన ప్రతి `claude` సీట్ ఆపై 67routerతో కమ్యూనికేట్ చేస్తుంది. ఈ లక్ష్యానికి ప్రత్యేకమైన మూడు అంశాలు ఉన్నాయి:
 
 - **ఇది ఫ్లీట్ హోస్ట్పై rootగా నడుస్తుంది.** 5dive క్రియలు స్థానిక systemd యూనిట్లు మరియు root యాజమాన్యంలోని స్టేట్ డైరెక్టరీపై పనిచేస్తాయి; రిమోట్ మోడ్ లేదు. ఇది ఇప్పటికే rootగా లేనప్పుడు, రెసిపీ `sudo` ద్వారా మళ్లీ అమలవుతుంది (`--no-sudo` దాన్ని నిలిపివేసి, బదులుగా కమాండ్ను ప్రింట్ చేస్తుంది).
 - **లూప్బ్యాక్ కానట్లయితే ఎండ్పాయింట్ తప్పనిసరిగా `https://` అయి ఉండాలి.** ప్రతి అభ్యర్థనలో ఏజెంట్ API కీ ఆ URL ద్వారా ప్రయాణిస్తుంది, అలాగే 5dive ఆఫ్-బాక్స్ ప్లెయిన్టెక్స్ట్ ఎండ్పాయింట్ను తిరస్కరిస్తుంది. ప్రైవేట్ LAN చిరునామా దీనికి మినహాయింపు కాదు.
@@ -234,13 +234,13 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 
 API కీ **stdin** (`--api-key=-`) ద్వారా 5diveకు అందించబడుతుంది, కాబట్టి అది `ps` అవుట్పుట్లో ఎప్పుడూ కనిపించదు.
 
-ప్రొఫైల్ను ఒకే మోడల్కు బదులుగా OmniRoute **combo** వైపు మళ్లించడం వల్లనే ఫ్లీట్కు ప్రొవైడర్ ఫెయిలోవర్ లభిస్తుంది: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578)లో నమోదు చేసిన రన్లో, ప్రాథమిక ఎండ్పాయింట్ టర్న్ మధ్యలో పూర్తిగా డౌన్ అయినప్పుడు, ఏజెంట్ తన మిగిలిన దశలను ఫాల్బ్యాక్పై పూర్తి చేసింది మరియు అవుటేజ్ను వినియోగదారుకు ఎప్పుడూ చూపలేదు.
+ప్రొఫైల్ను ఒకే మోడల్కు బదులుగా 67router **combo** వైపు మళ్లించడం వల్లనే ఫ్లీట్కు ప్రొవైడర్ ఫెయిలోవర్ లభిస్తుంది: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578)లో నమోదు చేసిన రన్లో, ప్రాథమిక ఎండ్పాయింట్ టర్న్ మధ్యలో పూర్తిగా డౌన్ అయినప్పుడు, ఏజెంట్ తన మిగిలిన దశలను ఫాల్బ్యాక్పై పూర్తి చేసింది మరియు అవుటేజ్ను వినియోగదారుకు ఎప్పుడూ చూపలేదు.
 
 ---
 
 ## Base URL సంప్రదాయాలు (ఏ సాధనాలకు `/v1` అవసరం)
 
-OmniRoute, OpenAI ఉపరితలాన్ని `/v1` వద్ద, Anthropic ఉపరితలాన్ని రూట్ వద్ద,
+67router, OpenAI ఉపరితలాన్ని `/v1` వద్ద, Anthropic ఉపరితలాన్ని రూట్ వద్ద,
 మరియు స్థానిక Gemini ఉపరితలాన్ని `/v1beta` వద్ద అందుబాటులో ఉంచుతుంది. ప్రతి ఇంటిగ్రేషన్ దాని
 సాధనం ఆశించే రూపానికి అనుసంధానించబడింది (కమాండ్ సోర్స్లో ధృవీకరించబడింది):
 
@@ -262,7 +262,7 @@ OmniRoute, OpenAI ఉపరితలాన్ని `/v1` వద్ద, Anthropi
 ## నవీకరణ సమయంలో స్థానిక డిపెండెన్సీలను ఉంచడం: `--include=optional`
 
 మీరు `omniroute update`తో నవీకరించినప్పుడు (ధృవీకరించిన తర్వాత లేదా `--apply`తో),
-OmniRoute అంతర్నిర్మితంగా `--include=optional`తో ఇన్స్టాల్ను అమలు చేస్తుంది:
+67router అంతర్నిర్మితంగా `--include=optional`తో ఇన్స్టాల్ను అమలు చేస్తుంది:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -291,14 +291,14 @@ omniroute update --dry-run
 `@google/gemini-cli` 0.50.0తో ఒప్పందం ధృవీకరించబడింది: CLI,
 `GOOGLE_GEMINI_BASE_URL`ను గౌరవించి, దానికి వ్యతిరేకంగా
 `POST /v1beta/models/<model>:generateContent`ను (మరియు
-`:streamGenerateContent?alt=sse`ను) జారీ చేస్తుంది — ఇది ఖచ్చితంగా OmniRoute యొక్క స్థానిక
+`:streamGenerateContent?alt=sse`ను) జారీ చేస్తుంది — ఇది ఖచ్చితంగా 67router యొక్క స్థానిక
 Gemini ఉపరితలం (`/v1beta`). `omniroute run gemini` దాన్ని స్వయంచాలకంగా అనుసంధానిస్తుంది:
 
-- `GOOGLE_GEMINI_BASE_URL` → సక్రియ OmniRoute base URL (రూట్, `/v1` లేకుండా);
-- `GEMINI_API_KEY` → పరిష్కరించబడిన OmniRoute క్రెడెన్షియల్ (ఆప్షన్/env/కాంటెక్స్ట్);
+- `GOOGLE_GEMINI_BASE_URL` → సక్రియ 67router base URL (రూట్, `/v1` లేకుండా);
+- `GEMINI_API_KEY` → పరిష్కరించబడిన 67router క్రెడెన్షియల్ (ఆప్షన్/env/కాంటెక్స్ట్);
 - `gemini-api-key` authను ఎంచుకునే `.gemini/settings.json` కలిగిన **తాత్కాలికంగా
   వేరుచేయబడిన `GEMINI_CLI_HOME`**, తద్వారా నిల్వ చేయబడిన Google OAuth సెషన్ (Code Assist)
-  OmniRouteకు మళ్లించిన ప్రారంభాన్ని ఎప్పటికీ ఓవర్రైడ్ చేయదు — నిష్క్రమణ తర్వాత తొలగించబడుతుంది;
+  67routerకు మళ్లించిన ప్రారంభాన్ని ఎప్పటికీ ఓవర్రైడ్ చేయదు — నిష్క్రమణ తర్వాత తొలగించబడుతుంది;
 - **env పరిశుభ్రత**: చైల్డ్ env నుంచి `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` మరియు `GOOGLE_GENAI_USE_GCA` తొలగించబడతాయి (ఇవి authను
   Vertex/Code Assistకు మళ్లిస్తాయి), అలాగే అదనపు భద్రతా చర్యగా
@@ -321,7 +321,7 @@ omniroute run gemini --model glm/glm-5.2 -- --skip-trust -p "hello"
 ## వాస్తవ స్మోక్ స్వీప్ (ఎంపిక చేసుకుంటే)
 
 నిర్ణీత లాంచ్-ప్లాన్ రిగ్రెషన్ CIలో అమలవుతుంది (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). వాస్తవ OmniRoute సర్వర్తో వాస్తవ బైనరీలను ధృవీకరించడానికి,
+`tests/unit/cli/run-execution.test.ts`). వాస్తవ 67router సర్వర్తో వాస్తవ బైనరీలను ధృవీకరించడానికి,
 ఎంపిక చేసుకోగల హార్నెస్ `tests/integration/upstream-cli-smoke.int.test.ts` వద్ద ఉంది.
 ఇది ఎప్పుడూ స్వయంచాలకంగా అమలు కాదు (`RUN_CLI_SMOKE=1` అయితే తప్ప ప్రతి ఉప-పరీక్ష
 దాటవేయబడుతుంది), క్రెడెన్షియల్ను env-var పేరు ద్వారా పంపుతుంది (విలువ ద్వారా ఎన్నడూ కాదు),

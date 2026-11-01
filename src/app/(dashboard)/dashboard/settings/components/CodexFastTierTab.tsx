@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Checkbox, CheckboxGroup } from "@omniroute/ui-kit/checkbox";
-import { Button, Card, Toggle, Select } from "@/shared/components";
+import { Button, Toggle, Select } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import {
   CODEX_FAST_TIER_DEFAULT_SUPPORTED_MODELS,
@@ -107,10 +108,9 @@ export default function CodexFastTierTab() {
   };
 
   return (
-    <Card
-      icon="bolt"
+    <SettingsSection
       title={t("codexFastTierTitle")}
-      subtitle={t("codexFastTierDesc")}
+      description={t("codexFastTierDesc")}
       action={
         <div className="flex items-center gap-3">
           {status === "saved" && (
@@ -183,6 +183,6 @@ export default function CodexFastTierTab() {
         <Icon name="info" size={14} className="mt-0.5" />
         <span>{t("codexFastTierHint")}</span>
       </p>
-    </Card>
+    </SettingsSection>
   );
 }

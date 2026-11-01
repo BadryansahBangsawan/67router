@@ -6,7 +6,7 @@
 
 ## Rapportering av sårbarheter
 
-Om du upptäcker en säkerhetssårbarhet i OmniRoute ska du rapportera den på ett ansvarsfullt sätt:
+Om du upptäcker en säkerhetssårbarhet i 67router ska du rapportera den på ett ansvarsfullt sätt:
 
 1. **ÖPPNA INTE** ett offentligt GitHub-ärende
 2. Använd [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ grenen `stable/v3` (se [`ROADMAP.md`](ROADMAP.md) → ”Fas 3 — v3.9.0 LTS”
 
 ## Säkerhetsarkitektur
 
-OmniRoute implementerar en säkerhetsmodell med flera lager:
+67router implementerar en säkerhetsmodell med flera lager:
 
 ```
 Begäran → CORS → Authz-pipeline (klassificera → policyer → verkställ)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Ramverk för skyddsmekanismer
 
-OmniRoute levereras med ett **register för skyddsmekanismer** (`src/lib/guardrails/`) som kan läsas in på nytt under drift och innehåller 3 inbyggda skyddsmekanismer ordnade efter prioritet:
+67router levereras med ett **register för skyddsmekanismer** (`src/lib/guardrails/`) som kan läsas in på nytt under drift och innehåller 3 inbyggda skyddsmekanismer ordnade efter prioritet:
 
 | Skyddsmekanism     | Prioritet | Syfte                                                                                            |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------ |

@@ -4,15 +4,15 @@
 
 ---
 
-**Gyaran Mahallin** da aka wakilta fasali ne na sarrafa mahalli na Claude kaɗai. Ba kamar injinan matsawa na cikin gida na OmniRoute ba (Caveman, RTK, LLMLingua, stacked pipelines) — waɗanda suke sake rubuta jikin buƙatar _kafin_ ya bar proxy — Context Editing yana buƙatar **mai bayarwa** ya share tsofaffin tubalan amfani-da-kayan-aiki / sakamakon-kayan-aiki daga taga mahallinsa mai gudana. OmniRoute yana haɗa ma'aunin jiki ne kawai (`context_management.edits[]`); Claude ne yake aiwatar da ainihin sharewar bisa ga tokenizer nasa.
+**Gyaran Mahallin** da aka wakilta fasali ne na sarrafa mahalli na Claude kaɗai. Ba kamar injinan matsawa na cikin gida na 67router ba (Caveman, RTK, LLMLingua, stacked pipelines) — waɗanda suke sake rubuta jikin buƙatar _kafin_ ya bar proxy — Context Editing yana buƙatar **mai bayarwa** ya share tsofaffin tubalan amfani-da-kayan-aiki / sakamakon-kayan-aiki daga taga mahallinsa mai gudana. 67router yana haɗa ma'aunin jiki ne kawai (`context_management.edits[]`); Claude ne yake aiwatar da ainihin sharewar bisa ga tokenizer nasa.
 
-Wannan damar wakilta ce bisa ga yanayinta: sauran masu bayarwa suna ƙin ma'aunin, don haka OmniRoute yana taƙaita shi sosai ga Claude da relays masu dacewa da Claude-Code.
+Wannan damar wakilta ce bisa ga yanayinta: sauran masu bayarwa suna ƙin ma'aunin, don haka 67router yana taƙaita shi sosai ga Claude da relays masu dacewa da Claude-Code.
 
 Tushen gaskiya: `open-sse/config/contextEditing.ts` (strategy ids, shigar da jiki, fitar da telemetry), `open-sse/executors/base.ts` (ƙofar shigarwa + fallback na 400), da `open-sse/services/compression/types.ts` (tsarin config + ƙimar tsoho).
 
 ## Abin da `clear_tool_uses` yake yi
 
-OmniRoute yana shigar da gyara guda ɗaya cikin jikin Anthropic Messages mai fita:
+67router yana shigar da gyara guda ɗaya cikin jikin Anthropic Messages mai fita:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute yana shigar da gyara guda ɗaya cikin jikin Anthropic Messages mai fit
 - `trigger.value: 100000` — da zarar input tokens na buƙatar sun wuce wannan iyaka, Claude zai fara share tsofaffin nau'i-nau'in amfani-da-kayan-aiki/sakamako (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, ƙimar tsoho ta Anthropic).
 - `keep.value: 3` — ana barin nau'i-nau'i N na baya-bayan nan na amfani-da-kayan-aiki/sakamako ba tare da an taɓa su ba (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Ana sanar da beta ta hanyar header na `anthropic-beta: context-management-2025-06-27`, wanda OmniRoute ya riga ya aika a buƙatun Claude.
+Ana sanar da beta ta hanyar header na `anthropic-beta: context-management-2025-06-27`, wanda 67router ya riga ya aika a buƙatun Claude.
 
-`applyContextEditingToBody()` ne yake aiwatar da shigarwar kuma tana da **idempotent**: idan gyaran `clear_tool_uses` ya riga ya kasance a jikin (wanda kira na baya ya ƙara ko client ya bayar), ana barin jikin yadda yake. Idan gyaran `clear_thinking_20251015` ma yana nan, OmniRoute yana yin stable-sort don kawo gyaran `clear_thinking` gaba, saboda Anthropic yana buƙatar `clear_thinking` ya zo kafin `clear_tool_uses` a cikin array na `edits[]`.
+`applyContextEditingToBody()` ne yake aiwatar da shigarwar kuma tana da **idempotent**: idan gyaran `clear_tool_uses` ya riga ya kasance a jikin (wanda kira na baya ya ƙara ko client ya bayar), ana barin jikin yadda yake. Idan gyaran `clear_thinking_20251015` ma yana nan, 67router yana yin stable-sort don kawo gyaran `clear_thinking` gaba, saboda Anthropic yana buƙatar `clear_thinking` ya zo kafin `clear_tool_uses` a cikin array na `edits[]`.
 
 ## Maɓallin kunnawa na kowane combo
 
@@ -123,7 +123,7 @@ Ingantaccen Claude yana ɗauke da beta ɗin a cikin `ANTHROPIC_BETA_BASE` kuma b
 
 ## Telemetry na `applied_edits`
 
-Bayan response na Claude, OmniRoute yana rikodin adadin mahallin da provider ɗin ya share a zahiri. Wannan
+Bayan response na Claude, 67router yana rikodin adadin mahallin da provider ɗin ya share a zahiri. Wannan
 **ba a stream ɗinsa** — ana ciro shi ne daga body na response da ba na streaming ba, bisa ƙoƙarin da ya fi dacewa, kuma ba ya taɓa
 shafar response ɗin (ana danne gazawar telemetry).
 
@@ -153,14 +153,14 @@ lakabin engine na `context-editing`, kuma ana iya bambanta shi da tanadin RTK/Ca
 
 | Bangare               | Injinan gida (Caveman / RTK / LLMLingua / stacked)       | Delegated Context Editing                                     |
 | --------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
-| Inda yake aiki        | A cikin OmniRoute, kafin buƙatar ta bar proxy            | A wurin mai samarwa (Claude), a ɓangaren uwar garke           |
+| Inda yake aiki        | A cikin 67router, kafin buƙatar ta bar proxy             | A wurin mai samarwa (Claude), a ɓangaren uwar garke           |
 | Abin da yake gyarawa  | Prompt / mahallin bayanai / rubutun sakamakon kayan aiki | Tsofaffin tubalan amfani da kayan aiki / sakamakon kayan aiki |
 | Iyakokin mai samarwa  | Duk masu samarwa                                         | `claude` + `anthropic-compatible-cc-*` kawai                  |
 | Sauya kunnawa/kashewa | Saitunan yanayin matsewa                                 | `contextEditing.enabled`                                      |
 | Yanayin gazawa        | Ci gaba idan an gaza (rubutun asali)                     | Komawa kan kuskuren 400: cire paramita, sake gwadawa sau ɗaya |
 | Bayanan auna tanadi   | `engine: <engine id>`                                    | `engine: "context-editing"`                                   |
 
-Su biyun suna taimakon juna: injinan gida suna matse bytes ɗin da OmniRoute ke aikawa; Context Editing yana ba
+Su biyun suna taimakon juna: injinan gida suna matse bytes ɗin da 67router ke aikawa; Context Editing yana ba
 Claude damar rage mahallin bayanai mai gudana a tsakanin zagayen tattaunawa. Ana iya kunna su tare.
 
 ## Duba Kuma

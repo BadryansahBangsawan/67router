@@ -14,7 +14,7 @@ kódu executorů, výchozích hodnot OAuth, hlaviček nebo stavu prostředí pro
 Stejný manifest je dostupný také přes HTTP na adrese
 `GET /api/v1/provider-plugin-manifest` pro sidecary, které běží mimo proces.
 
-OmniRoute oznamuje tuto URL systémům Bifrost a CLIProxyAPI prostřednictvím
+67router oznamuje tuto URL systémům Bifrost a CLIProxyAPI prostřednictvím
 hlavičky požadavku `X-OmniRoute-Provider-Manifest-Url`. Nastavte
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, pokud sidecar potřebuje veřejnou URL nebo URL
 kontejnerové sítě namísto místního původu požadavku.
@@ -31,7 +31,7 @@ bezpodmínečný požadavek.
 ## Cíl
 
 Posunout metadata poskytovatelů směrem ke kontraktu pluginu, aby kritickou cestu
-požadavků mohl nakonec obsluhovat sidecar s nižší latencí, zatímco OmniRoute
+požadavků mohl nakonec obsluhovat sidecar s nižší latencí, zatímco 67router
 zachová trasu v TypeScriptu jako bránu pro uplatňování zásad a záložní řešení.
 Manifest je pouze doplňkový: sám o sobě směrování požadavků nemění.
 
@@ -75,7 +75,7 @@ namísto opětovného procházení zdrojových kódů v TypeScriptu.
 | `usage-fetch`        | Má zapojený mechanismus načítání využití nebo kvóty (`getUsageForProvider`). |
 | `usage-supported`    | API pro využití přijímá tohoto poskytovatele (`isSupportedUsageConnection`). |
 
-`usage-fetch` slouží pouze ke zjišťování. Oznamuje, že OmniRoute umí načíst údaje o využití
+`usage-fetch` slouží pouze ke zjišťování. Oznamuje, že 67router umí načíst údaje o využití
 poskytovatele; neaktivuje načítání, nemění sémantiku kvót ani neznamená, že je
 widget kvóty na Dashboardu pro daného poskytovatele povolen — tento widget je samostatně řízen
 pomocí `USAGE_SUPPORTED_PROVIDERS`. Zdrojem pravdy je `USAGE_FETCHER_PROVIDERS` v

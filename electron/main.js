@@ -322,7 +322,7 @@ function setupAutoUpdater() {
 
     if (Notification.isSupported()) {
       const notification = new Notification({
-        title: "OmniRoute Update Ready",
+        title: "67router Update Ready",
         body: `Version ${info.version} is ready to install. Click to restart.`,
       });
       notification.on("click", () => {
@@ -433,7 +433,7 @@ function createWindow({ showWhenReady = true } = {}) {
     height: 900,
     minWidth: 1024,
     minHeight: 700,
-    title: "OmniRoute",
+    title: "67router",
     icon: path.join(RESOURCES_PATH, "assets", "icon.png"),
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
@@ -546,7 +546,7 @@ function createTray() {
 
   const contextMenu = Menu.buildFromTemplate([
     {
-      label: "Open OmniRoute",
+      label: "Open 67router",
       click: () => showMainWindow(),
     },
     {
@@ -613,7 +613,7 @@ function createTray() {
     },
   ]);
 
-  tray.setToolTip("OmniRoute");
+  tray.setToolTip("67router");
   tray.setContextMenu(contextMenu);
 
   tray.on("double-click", () => showMainWindow());
@@ -913,7 +913,7 @@ function startNextServer() {
         process.env.OMNIROUTE_HEADLESS === "true";
       if (isHeadless && !global.loggedHeadlessReady) {
         global.loggedHeadlessReady = true;
-        console.log("\n\x1b[32m✔ OmniRoute Headless CLI Server is ready and listening!\x1b[0m");
+        console.log("\n\x1b[32m✔ 67router Headless CLI Server is ready and listening!\x1b[0m");
         console.log(`  \x1b[1mPort:\x1b[0m       http://localhost:${serverPort}`);
         console.log(`  \x1b[1mAPI Base:\x1b[0m   http://localhost:${serverPort}/v1`);
         console.log("  \x1b[2mPress Ctrl+C to terminate the process.\x1b[0m\n");
@@ -961,8 +961,8 @@ function enableLinuxDesktopAutostart() {
       [
         "[Desktop Entry]",
         "Type=Application",
-        "Name=OmniRoute",
-        "Comment=OmniRoute Desktop Client",
+        "Name=67router",
+        "Comment=67router Desktop Client",
         `Exec="${execPath}" --hidden`,
         "Terminal=false",
         "Hidden=false",

@@ -4,7 +4,7 @@
 
 ---
 
-Når OmniRoute kører i Docker, mislykkes de ældre flows **Importér fra Cursor IDE** /
+Når 67router kører i Docker, mislykkes de ældre flows **Importér fra Cursor IDE** /
 `cursor-agent`, fordi containeren ikke kan se værtens Cursor-installation.
 Brug i stedet **Log ind med Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ Brug i stedet **Log ind med Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _inde i_ containeren.
    I Docker Desktop til macOS er værtens IDE-database ikke monteret som
    standard, og containerens operativsystem er Linux, selv når værten er Darwin.
-2. **Ingen `cursor-agent`-binærfil** — Officielle OmniRoute-images leveres ikke
+2. **Ingen `cursor-agent`-binærfil** — Officielle 67router-images leveres ikke
    med `cursor-agent`. Tilgængelige modeller kaldte tidligere
    `cursor-agent --list-models` via skallen og faldt tilbage til et statisk katalog.
 3. **Forkert binærfil** — Bind-montér **ikke** en macOS-version af
@@ -24,11 +24,11 @@ Brug i stedet **Log ind med Cursor** (deep-control PKCE).
 
 1. Åbn **Dashboard → Udbydere → Cursor**.
 2. Vælg fanen **Log ind med Cursor**.
-3. Klik på **Log ind med Cursor** — OmniRoute åbner
+3. Klik på **Log ind med Cursor** — 67router åbner
    `https://cursor.com/loginDeepControl?…` i din browser på **værten**.
 4. Godkend login i browseren, og vend derefter tilbage til dashboardet.
-   OmniRoute forespørger løbende `api2.cursor.sh/auth/poll`, indtil tokens modtages.
-5. OmniRoute gemmer **adgangs- og opdateringstokens** og opdaterer dem via
+   67router forespørger løbende `api2.cursor.sh/auth/poll`, indtil tokens modtages.
+5. 67router gemmer **adgangs- og opdateringstokens** og opdaterer dem via
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Denne metode kræver ikke Cursor IDE eller `cursor-agent` inde i containeren.
@@ -37,11 +37,11 @@ Denne metode kræver ikke Cursor IDE eller `cursor-agent` inde i containeren.
 
 Med en forbindelse, der er logget ind, foretrækker **Tilgængelige modeller /
 Automatisk synkronisering** Cursors HTTP-katalog `AiService/AvailableModels`
-ved hjælp af forbindelsens bearer-token. Hvis det mislykkes, forsøger OmniRoute
+ved hjælp af forbindelsens bearer-token. Hvis det mislykkes, forsøger 67router
 stadig at bruge værtens `cursor-agent` (når den findes) og derefter det statiske
 registergrundlag.
 
-OmniRoute viser altid **`auto`** i kataloget (vist som “Auto”) samt
+67router viser altid **`auto`** i kataloget (vist som “Auto”) samt
 OpenCodex-lignende routertilstande: **`auto-cost`**, **`auto-balance`** og
 **`auto-intelligence`**. Under overførslen knyttes disse til Cursors
 `default`-model (med en `optimization`-ModelParameter for de tre varianter).
@@ -92,7 +92,7 @@ genimportere tokens (IDE-import alene er ikke længere nødvendig).
 ## Tomme svar / opbrugt forbrug
 
 Når Cursor accepterer en kørsel, men ikke returnerer nogen assistenttekst
-(hvilket ofte sker, når premiumforbruget er opbrugt), viser OmniRoute en
+(hvilket ofte sker, når premiumforbruget er opbrugt), viser 67router en
 handlingsanvisende **429** (kvoteindikatorer) eller **502** med vejledning — ikke
 blot “Udbyderen returnerede tomt indhold”. Streamingfejl såsom
 `not_found: AI Model Not Found` (forbrugsvinduet er opbrugt) klassificeres som
@@ -103,7 +103,7 @@ fejl, der allerede er udsendt). Kontrollér Udbydergrænser, prøv modellen
 
 ## Klientversion (uden brugergrænseflade)
 
-Uden en lokal installation af `cursor-agent` finder OmniRoute værdien for
+Uden en lokal installation af `cursor-agent` finder 67router værdien for
 `x-cursor-client-version` via miljøvariablen `CURSOR_AGENT_CLI_VERSION`, derefter
 via en disk-cachet scraping af Cursor-installationsscriptet og til sidst via et
 fastlåst build-id. Tilsidesæt med `CURSOR_AGENT_CLI_VERSION`, når det er

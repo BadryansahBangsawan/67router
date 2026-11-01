@@ -91,11 +91,11 @@ export const NOAUTH_PROVIDERS = {
     serviceKinds: ["llm"],
     isLocalCli: true,
     freeNote:
-      "Local passthrough — runs the Augment CLI (`auggie`) on this machine. Auth is handled by `auggie login`, not OmniRoute.",
+      "Local passthrough — runs the Augment CLI (`auggie`) on this machine. Auth is handled by `auggie login`, not 67router.",
     authHint:
-      "No API key stored by OmniRoute. Install the Auggie CLI and run `auggie login` on this machine, then OmniRoute spawns it locally for each request.",
+      "No API key stored by 67router. Install the Auggie CLI and run `auggie login` on this machine, then 67router spawns it locally for each request.",
     notice: {
-      text: "Augment (Auggie CLI) requires the `auggie` binary installed and authenticated locally (`auggie login`). OmniRoute spawns it as a subprocess and never sees or stores your Augment credentials.",
+      text: "Augment (Auggie CLI) requires the `auggie` binary installed and authenticated locally (`auggie login`). 67router spawns it as a subprocess and never sees or stores your Augment credentials.",
     },
   },
   zcode: {
@@ -111,9 +111,9 @@ export const NOAUTH_PROVIDERS = {
     serviceKinds: ["llm"],
     isLocalCli: true,
     authHint:
-      "No API key stored by OmniRoute. The local ZCode app-server uses the existing builtin:zai-coding-plan login.",
+      "No API key stored by 67router. The local ZCode app-server uses the existing builtin:zai-coding-plan login.",
     notice: {
-      text: "ZCode runs locally through its native app-server. OmniRoute never receives or stores the Z.ai credential.",
+      text: "ZCode runs locally through its native app-server. 67router never receives or stores the Z.ai credential.",
     },
   },
   "codex-app-server": {
@@ -135,9 +135,9 @@ export const NOAUTH_PROVIDERS = {
     // `codex` session — OmniRoute never replays a token to the API — so the
     // "official session not authorized for proxy use" caveat does not apply.
     authHint:
-      "No token stored by OmniRoute. The Codex CLI app-server manages its own ChatGPT sign-in (~/.codex/auth.json, auto-refreshed). Use \u201cSign in with ChatGPT\u201d if the CLI is not yet authenticated.",
+      "No token stored by 67router. The Codex CLI app-server manages its own ChatGPT sign-in (~/.codex/auth.json, auto-refreshed). Use \u201cSign in with ChatGPT\u201d if the CLI is not yet authenticated.",
     notice: {
-      text: "OpenAI Codex (App-Server) drives the Codex CLI's local app-server (JSON-RPC over WebSocket). The CLI self-manages its OpenAI OAuth, so OmniRoute never sees or replays your token. Requires the codex CLI reachable at the configured app-server URL; sign in via the CLI or the dashboard \u201cSign in with ChatGPT\u201d action.",
+      text: "OpenAI Codex (App-Server) drives the Codex CLI's local app-server (JSON-RPC over WebSocket). The CLI self-manages its OpenAI OAuth, so 67router never sees or replays your token. Requires the codex CLI reachable at the configured app-server URL; sign in via the CLI or the dashboard \u201cSign in with ChatGPT\u201d action.",
     },
   },
   uncloseai: {

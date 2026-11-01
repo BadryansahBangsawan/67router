@@ -13,7 +13,7 @@
 
 ## 概要
 
-OmniRoute は、**Obsidian** Vault を**コンテキストソース**として接続します。これは、
+67router は、**Obsidian** Vault を**コンテキストソース**として接続します。これは、
 エージェントが組み込みの MCP サーバーを通じて読み書きするローカルの Markdown
 ナレッジベースです。この連携は、デスクトップアプリ内で動作するコミュニティプラグイン
 **Obsidian Local REST API** と通信します。これにより、エージェントはノートの検索、
@@ -79,7 +79,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV vault 同期
 
 `src/app/api/settings/obsidian/webdav/route.ts` は、オプションの WebDAV バックエンドによる
-vault 同期（`src/lib/obsidianSync.ts` によって駆動）を管理します。有効にすると、OmniRoute が
+vault 同期（`src/lib/obsidianSync.ts` によって駆動）を管理します。有効にすると、67router が
 ローカルの vault ディレクトリを参照するようになり、ランダムな WebDAV ユーザー名とパスワードのペアが生成されます。
 
 ```bash
@@ -114,7 +114,7 @@ ID を持たない呼び出し元には `Obsidian API token not configured` が�
 
 ## MCP ツール（22）
 
-`open-sse/mcp-server/tools/obsidianTools.ts` で定義されています。トークン／ベース URL は呼び出しごとに解決されます（API キー単位の設定が優先され、その後グローバル設定が使用されます）。OmniRoute **同期サーバー**を利用するツール（4 つの `obsidian_sync_*` ツール）には、追加で OmniRoute の設定に構成された同期認証トークンが必要です。
+`open-sse/mcp-server/tools/obsidianTools.ts` で定義されています。トークン／ベース URL は呼び出しごとに解決されます（API キー単位の設定が優先され、その後グローバル設定が使用されます）。67router **同期サーバー**を利用するツール（4 つの `obsidian_sync_*` ツール）には、追加で 67router の設定に構成された同期認証トークンが必要です。
 
 ### 読み取りツール（`read:obsidian`）
 
@@ -131,7 +131,7 @@ ID を持たない呼び出し元には `Obsidian API token not configured` が�
 | `obsidian_get_periodic_note` | 指定した日付の日次／週次／月次の定期ノートを取得します（省略時は今日）。                                       |
 | `obsidian_get_tags`          | 保管庫内のすべてのタグを使用頻度とともに一覧表示します。                                                       |
 | `obsidian_list_commands`     | 利用可能な Obsidian コマンド ID を一覧表示します（`obsidian_execute_command` で使用）。                        |
-| `obsidian_sync_status`       | OmniRoute 同期サーバーの状態（稼働状況、保管庫名、ポート、稼働時間、最終同期）を取得します。                   |
+| `obsidian_sync_status`       | 67router 同期サーバーの状態（稼働状況、保管庫名、ポート、稼働時間、最終同期）を取得します。                    |
 | `obsidian_sync_conflicts`    | 未解決の同期競合（パス、競合パス、検出日時）を一覧表示します。                                                 |
 
 ### 書き込みツール（`write:obsidian`）

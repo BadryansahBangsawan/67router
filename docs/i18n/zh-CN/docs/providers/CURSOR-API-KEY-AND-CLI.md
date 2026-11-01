@@ -4,10 +4,10 @@
 
 ---
 
-无需 IDE 会话，即可通过以下两种方式将 Cursor 接入 OmniRoute：
+无需 IDE 会话，即可通过以下两种方式将 Cursor 接入 67router：
 
-1. **`cursor-api` 提供者**（卡片名称为“Cursor API”，别名为 `cua`）：一种使用 API 密钥的提供者，保存 Cursor 用户 API 密钥（`crsr_…`，在 `https://cursor.com/dashboard/api` 生成）。之后，任何 OmniRoute 客户端都可以通过 `/v1/chat/completions`，使用 `cursor-api/<model>` 或 `cua/<model>` 访问 Cursor 模型，并照常应用配额、回退和日志记录层。IDE 提供者（`cursor`，OAuth/IDE 会话）保持不变。
-2. **Cursor CLI 直通**：将 Cursor CLI（`agent`）指向 OmniRoute，使 CLI 发起的每个 RPC 都使用 OmniRoute API 密钥进行身份验证，使用 `cursor-api` 连接的凭据转发到 Cursor，并记录在日志页面中。
+1. **`cursor-api` 提供者**（卡片名称为“Cursor API”，别名为 `cua`）：一种使用 API 密钥的提供者，保存 Cursor 用户 API 密钥（`crsr_…`，在 `https://cursor.com/dashboard/api` 生成）。之后，任何 67router 客户端都可以通过 `/v1/chat/completions`，使用 `cursor-api/<model>` 或 `cua/<model>` 访问 Cursor 模型，并照常应用配额、回退和日志记录层。IDE 提供者（`cursor`，OAuth/IDE 会话）保持不变。
+2. **Cursor CLI 直通**：将 Cursor CLI（`agent`）指向 67router，使 CLI 发起的每个 RPC 都使用 67router API 密钥进行身份验证，使用 `cursor-api` 连接的凭据转发到 Cursor，并记录在日志页面中。
 
 ## 为什么需要交换密钥
 
@@ -44,12 +44,12 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 注意：
 
-- `cursor-api` 的模型列表来自静态 Cursor 注册表（即 IDE 提供者回退时使用的同一列表）；无需在 OmniRoute 主机上安装 `cursor-agent`。
+- `cursor-api` 的模型列表来自静态 Cursor 注册表（即 IDE 提供者回退时使用的同一列表）；无需在 67router 主机上安装 `cursor-agent`。
 - `POST /api/providers/{id}/refresh-cursor` 仅用于 `cursor` IDE 提供者；`cursor-api` 连接没有需要续期的 IDE 会话。
 
 ## 原生模型 ID 和推理强度
 
-对于 `cursor` / `cu` 和 `cursor-api` / `cua`，共享的 Claude 推理强度规范化器会保留所请求的模型 ID 不变。Cursor 可以将 `-low` 之类的后缀作为实际模型 ID 的一部分公布，而不是将其作为 OmniRoute 推理强度别名。
+对于 `cursor` / `cu` 和 `cursor-api` / `cua`，共享的 Claude 推理强度规范化器会保留所请求的模型 ID 不变。Cursor 可以将 `-low` 之类的后缀作为实际模型 ID 的一部分公布，而不是将其作为 67router 推理强度别名。
 Cursor 执行器会保留与实时目录完全匹配的模型；如果没有匹配项，则由其现有模型解析器负责将后缀回退转换为参数。
 
 这不会改变直接 Claude、Claude 兼容或 Vertex 路由的推理强度规范化。可用性仍取决于所选 Cursor 账户的模型目录和权限。
@@ -61,16 +61,16 @@ Cursor 执行器会保留与实时目录完全匹配的模型；如果没有匹�
 `src/shared/constants/publicApiRoutes.ts` 中注册，因为该处理程序会
 自行执行身份验证：
 
-| 路径                                                                                                                       | CLI 应提供的身份验证         | OmniRoute 执行的操作                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                         | `Bearer <OmniRoute API key>` | 验证密钥，签发一个有效期为 1 小时的 HS256 JWT（使用 `JWT_SECRET` 签名）并将其返回                                               |
-| 其他所有路径（`/aiserver.v1.*`、`/agent.v1.AgentService/RunSSE`、`/aiserver.v1.BidiService/BidiAppend`、`/v1/traces`，……） | `Bearer <that JWT>`          | 验证签发者、受众和有效期，选择一个活跃的 `cursor-api` 连接，将 Authorization 标头替换为交换得到的 Cursor 令牌，并将响应流式传回 |
+| 路径                                                                                                                       | CLI 应提供的身份验证        | 67router 执行的操作                                                                                                             |
+| -------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `POST /auth/exchange_user_api_key`                                                                                         | `Bearer <67router API key>` | 验证密钥，签发一个有效期为 1 小时的 HS256 JWT（使用 `JWT_SECRET` 签名）并将其返回                                               |
+| 其他所有路径（`/aiserver.v1.*`、`/agent.v1.AgentService/RunSSE`、`/aiserver.v1.BidiService/BidiAppend`、`/v1/traces`，……） | `Bearer <that JWT>`         | 验证签发者、受众和有效期，选择一个活跃的 `cursor-api` 连接，将 Authorization 标头替换为交换得到的 Cursor 令牌，并将响应流式传回 |
 
-CLI 会从收到的任何令牌中解码 `exp`，因此，如果向其提供不透明令牌，它几乎会在每次请求前都重新执行交换；签发的 JWT 可避免这种情况。OmniRoute 返回 401 时，CLI 会再次执行交换。
+CLI 会从收到的任何令牌中解码 `exp`，因此，如果向其提供不透明令牌，它几乎会在每次请求前都重新执行交换；签发的 JWT 可避免这种情况。67router 返回 401 时，CLI 会再次执行交换。
 
 ### 设置
 
-1. 创建一个 OmniRoute API 密钥（控制面板 → API 密钥）和一个 `cursor-api`
+1. 创建一个 67router API 密钥（控制面板 → API 密钥）和一个 `cursor-api`
    连接。
 2. 指示 CLI 对 agent 流使用 HTTP/1.1。在
    `~/.cursor/cli-config.json` 中：
@@ -81,7 +81,7 @@ CLI 会从收到的任何令牌中解码 `exp`，因此，如果向其提供不�
 
    如果不这样设置，CLI 会通过 HTTP/2 向单独配置的 agent 主机发起 agent 轮次，只有控制平面 RPC 会经过该端点。
 
-3. 让 CLI 通过 OmniRoute 运行：
+3. 让 CLI 通过 67router 运行：
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -89,17 +89,17 @@ CLI 会从收到的任何令牌中解码 `exp`，因此，如果向其提供不�
    agent -p --trust "Reply with exactly OK"
    ```
 
-每一跳都会记录到日志中，其中提供者为 `cursor-api`，请求类型为 `cursor-cli`，路径为 `/api/cursor-cli/<rpc>`，并归属于对应的 OmniRoute API 密钥及处理该请求的连接。
+每一跳都会记录到日志中，其中提供者为 `cursor-api`，请求类型为 `cursor-cli`，路径为 `/api/cursor-cli/<rpc>`，并归属于对应的 67router API 密钥及处理该请求的连接。
 
 ### 故障模式
 
-| 情况                                        | 返回给 CLI 的响应                           |
-| ------------------------------------------- | ------------------------------------------- |
-| OmniRoute 密钥未知且 `REQUIRE_API_KEY=true` | 交换时返回 401 `unauthenticated`            |
-| `REQUIRE_API_KEY=false`                     | 匿名会话（与 `/v1/*` 的行为一致）           |
-| 会话 JWT 已过期、来自其他系统或被篡改       | 401，CLI 会重新执行交换                     |
-| OmniRoute API 密钥在交换后被撤销            | 下一个 RPC 返回 401                         |
-| 没有活跃的 `cursor-api` 连接                | 503 `unavailable`                           |
-| Cursor 拒绝该连接的密钥                     | 401 `unauthenticated`，已缓存的会话会被丢弃 |
-| 无法访问上游                                | 502 `unavailable`（已净化的消息）           |
-| 未设置 `JWT_SECRET`                         | 交换时返回 503                              |
+| 情况                                       | 返回给 CLI 的响应                           |
+| ------------------------------------------ | ------------------------------------------- |
+| 67router 密钥未知且 `REQUIRE_API_KEY=true` | 交换时返回 401 `unauthenticated`            |
+| `REQUIRE_API_KEY=false`                    | 匿名会话（与 `/v1/*` 的行为一致）           |
+| 会话 JWT 已过期、来自其他系统或被篡改      | 401，CLI 会重新执行交换                     |
+| 67router API 密钥在交换后被撤销            | 下一个 RPC 返回 401                         |
+| 没有活跃的 `cursor-api` 连接               | 503 `unavailable`                           |
+| Cursor 拒绝该连接的密钥                    | 401 `unauthenticated`，已缓存的会话会被丢弃 |
+| 无法访问上游                               | 502 `unavailable`（已净化的消息）           |
+| 未设置 `JWT_SECRET`                        | 交换时返回 503                              |

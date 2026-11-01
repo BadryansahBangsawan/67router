@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Foinse:** `open-sse/services/thinkingBudget.ts`
 
-Rialaíonn an Buiséad Smaointeoireachta cibé acu a **athscríobhann OmniRoute paraiméadair smaointeoireachta/réasúnaíochta an chliaint** ar an mbealach chuig soláthraithe. Ní chuireann sé comhbhrú, ródú ná taisce na leide ar siúl ná as.
+Rialaíonn an Buiséad Smaointeoireachta cibé acu a **athscríobhann 67router paraiméadair smaointeoireachta/réasúnaíochta an chliaint** ar an mbealach chuig soláthraithe. Ní chuireann sé comhbhrú, ródú ná taisce na leide ar siúl ná as.
 
 ## Móid
 
-| Mód                             | Cad a dhéanann OmniRoute                                                                                                     | Cathain ba cheart é a úsáid                                                                                                                                                                                                      |
+| Mód                             | Cad a dhéanann 67router                                                                                                      | Cathain ba cheart é a úsáid                                                                                                                                                                                                      |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (réamhshocrú) | Fágann sé réimsí an chliaint gan athrú (`reasoning`, `reasoning_effort`, `thinking` Claude, `thinking_config` Gemini, srl.). | **Codex / Desktop / aon chliant ar cheart dó an iarracht + achoimrí réasúnaíochta a rialú.** Riachtanach do phainéil smaointeoireachta infheicthe nuair a iarrann an cliant `reasoning.summary`.                                 |
 | **`auto`**                      | **Baineann sé gach** réimse smaointeoireachta/réasúnaíochta de chorp na hiarrata sula seoltar in aghaidh an tsrutha í.       | Ach amháin nuair is mian leat d’aon ghnó go gceapfadh an **soláthraí** réamhshocruithe agus nuair nach gá duit smaointeoireacht faoi rialú an chliaint. **Ní hionann é agus** “smaointeoireacht a thaispeáint go huathoibríoch”. |
@@ -38,7 +38,7 @@ Má sheol cliant (m.sh. Codex Desktop) `reasoning: { effort: "ultra", summary: "
 | **Ródú teaglama / cúltacaí**                                 | Ar leith. Ní dhéanann sé difear dó.                                                                                                                |
 | **Teorainneacha comharthaí eochrach API / buiséid chostais** | Ar leith. Ní dhéanann sé difear dóibh.                                                                                                             |
 | **Taisce athsheinnte réasúnaíochta**                         | Ath-instealladh ilseala do sholáthraithe dochta (DeepSeek, Kimi, Qwen-thinking, …). Ní hionann é agus “smaointeoireacht a thaispeáint” in Desktop. |
-| **Díchriptiú `encrypted_content`**                           | **Dodhéanta.** Tá blobaí réasúnaíochta príobháideacha OpenAI/Codex dofheicthe. Ní dhíchriptíonn OmniRoute iad riamh (#7095 / #7176 / #7304).       |
+| **Díchriptiú `encrypted_content`**                           | **Dodhéanta.** Tá blobaí réasúnaíochta príobháideacha OpenAI/Codex dofheicthe. Ní dhíchriptíonn 67router iad riamh (#7095 / #7176 / #7304).        |
 
 ## Smaointeoireacht infheicthe (cliaint Codex / Responses)
 
@@ -51,7 +51,7 @@ Chun go dtaispeánfaidh cliant téacs smaointeoireachta, teastaíonn **gach cean
 Mura bhfaigheann tú ach “réasúnaíocht phríobháideach chriptithe”, is amhlaidh:
 
 - gur **`auto`** a bhí sa mhód (baineadh iarratas an chliaint), nó
-- gur chuir an tseirbhís réamhtheachtach `encrypted_content` ar ais gan téacs achoimre (teorainn de chuid an tsoláthraí; ní féidir le OmniRoute ach ionadchoinneálaí a thaispeáint, ní gnáth-théacs).
+- gur chuir an tseirbhís réamhtheachtach `encrypted_content` ar ais gan téacs achoimre (teorainn de chuid an tsoláthraí; ní féidir le 67router ach ionadchoinneálaí a thaispeáint, ní gnáth-théacs).
 
 ## Samplaí API
 
@@ -71,7 +71,7 @@ Scéimre (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|ada
 
 ### Marthanacht / atosú
 
-Stóráiltear an luach faoin eochair socruithe `thinkingBudget` agus lódáiltear é ag tús an phróisis (`hydrateThinkingBudgetConfig`). Tar éis é a athrú tríd an mbunachar sonraí nó trí chonairí áirithe nach mbaineann leis an API, **atosaigh próiseas OmniRoute** ionas go mbeidh an t-aonán cuimhne ag teacht leis an diosca.
+Stóráiltear an luach faoin eochair socruithe `thinkingBudget` agus lódáiltear é ag tús an phróisis (`hydrateThinkingBudgetConfig`). Tar éis é a athrú tríd an mbunachar sonraí nó trí chonairí áirithe nach mbaineann leis an API, **atosaigh próiseas 67router** ionas go mbeidh an t-aonán cuimhne ag teacht leis an diosca.
 
 ## Seicliosta don oibreoir
 

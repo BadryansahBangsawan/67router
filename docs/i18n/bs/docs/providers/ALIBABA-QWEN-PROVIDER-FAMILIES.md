@@ -10,7 +10,7 @@ Ovaj dokument bilježi odluku o implementaciji za [Issue #7854](https://github.c
 
 ## Odluka
 
-| Porodica provajdera                                 | OmniRoute ID            | Globalna regija | Kineska regija |
+| Porodica provajdera                                 | 67router ID             | Globalna regija | Kineska regija |
 | --------------------------------------------------- | ----------------------- | --------------- | -------------- |
 | Alibaba Cloud Model Studio (plaćanje po korištenju) | `alibaba`               | Singapur        | Peking         |
 | Alibaba Cloud Token Plan                            | `bailian-coding-plan`   | Singapur        | Peking         |

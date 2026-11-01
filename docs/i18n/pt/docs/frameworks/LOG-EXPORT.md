@@ -4,7 +4,7 @@
 
 ---
 
-Exportação contínua e incremental dos registos de chamadas do OmniRoute para um repositório de análise externo.
+Exportação contínua e incremental dos registos de chamadas do 67router para um repositório de análise externo.
 
 O separador Logs do painel mantém o histórico de pedidos em SQLite (`call_logs`), que é limitado pela
 rotação e retenção. A exportação de registos envia periodicamente o mesmo conjunto de registos para que possa sobreviver
@@ -272,7 +272,7 @@ Duas regras para um novo destino:
 - `send()` **tem de lançar uma exceção** em caso de falha parcial. A resolução significa «o destino contém estas linhas»,
   e o cursor avança definitivamente para além delas.
 - Um destino que aceite um URL fornecido pelo utilizador tem de o validar através de
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) antes de efetuar o pedido,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) antes de efetuar o pedido,
   da mesma forma que os webhooks. O BigQuery não necessita desta validação: os respetivos anfitriões são constantes.
 
 ---

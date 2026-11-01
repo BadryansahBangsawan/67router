@@ -113,7 +113,7 @@ ma ọ bụ nyocha e ji aka mee nke edekọtara nke dabara na mgbanwe ahụ.
 - Katalọgụ CLI dị iche n'okpuru `bin/cli/locales/`.
 - Debe placeholder na tag ICU otu ha dị kpọmkwem. Atụgharịla aha product/provider/model,
   aha protocol na header, command, identifier code/JSON, URL, environment variable, ma ọ bụ
-  mkpụrụokwu echedoro dịka `OmniRoute`, `OAuth`, `MCP`, na `A2A`. Ndepụta isi mmalite ugbu a bụ
+  mkpụrụokwu echedoro dịka `67router`, `OAuth`, `MCP`, na `A2A`. Ndepụta isi mmalite ugbu a bụ
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Usoro e lekwasịrị anya na ya**
@@ -266,7 +266,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # jiri ọzọ tarball e
   `previous` mgbe nyocha ahụ dara. A naghị akwalite candidate nke dara validation mbụ.
 
 A na-ede ihe niile n'okpuru `_artifacts/candidate/` nke git na-eleghara anya; a naghị emetụ nrụnye
-OmniRoute dịbu adị na data directory ya aka. CLI e kwalitere bụ
+67router dịbu adị na data directory ya aka. CLI e kwalitere bụ
 `_artifacts/candidate/current/prefix/bin/omniroute`; jiri `DATA_DIR` nke gị malite ya mgbe ị na-eji
 ya. Koodu nkwụsị: `0` ihe ịga nke ọma, `1` validation ma ọ bụ promotion dara, `2` njehie ojiji ma ọ
 bụ build na-efu.

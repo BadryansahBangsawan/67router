@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute wordt geleverd als een volledig installeerbare Progressive Web App. Wanneer je het dashboard opent vanuit een mobiele browser — Android (Chrome) of iOS (Safari) — kun je het aan je beginscherm toevoegen en profiteren van een ervaring die aanvoelt als een native app, zonder dat een appstore nodig is.
+67router wordt geleverd als een volledig installeerbare Progressive Web App. Wanneer je het dashboard opent vanuit een mobiele browser — Android (Chrome) of iOS (Safari) — kun je het aan je beginscherm toevoegen en profiteren van een ervaring die aanvoelt als een native app, zonder dat een appstore nodig is.
 
 ## Wat is een PWA?
 
-Een Progressive Web App verandert het OmniRoute-webdashboard in iets dat eruitziet en aanvoelt als een native mobiele app. Na installatie:
+Een Progressive Web App verandert het 67router-webdashboard in iets dat eruitziet en aanvoelt als een native mobiele app. Na installatie:
 
 - Start de app vanaf je beginscherm met een eigen pictogram
 - Opent de app op volledig scherm — zonder adresbalk of tabbladinterface van de browser
@@ -20,26 +20,26 @@ Een Progressive Web App verandert het OmniRoute-webdashboard in iets dat eruitzi
 
 ### Android (Chrome)
 
-1. Open het OmniRoute-dashboard in Chrome: `http://YOUR_IP:20128`
-2. Chrome toont automatisch een banner met **"OmniRoute toevoegen aan beginscherm"**, of:
+1. Open het 67router-dashboard in Chrome: `http://YOUR_IP:20128`
+2. Chrome toont automatisch een banner met **"67router toevoegen aan beginscherm"**, of:
    - Tik op het menu **⋮** (drie puntjes) → **"Toevoegen aan beginscherm"** of **"App installeren"**
 3. Bevestig de melding
-4. OmniRoute verschijnt als zelfstandige app op je beginscherm
+4. 67router verschijnt als zelfstandige app op je beginscherm
 
 ### iOS (Safari)
 
-1. Open het OmniRoute-dashboard in Safari: `http://YOUR_IP:20128`
+1. Open het 67router-dashboard in Safari: `http://YOUR_IP:20128`
 2. Tik op de knop **Delen** (vak met pijl)
 3. Scrol omlaag en tik op **"Zet op beginscherm"**
-4. Geef de app een naam (standaard "OmniRoute") en tik op **Voeg toe**
-5. OmniRoute verschijnt met het app-pictogram op je beginscherm
+4. Geef de app een naam (standaard "67router") en tik op **Voeg toe**
+5. 67router verschijnt met het app-pictogram op je beginscherm
 
 ### Desktop (Chrome / Edge)
 
-1. Open het OmniRoute-dashboard
-2. Klik op het **installatiepictogram** in de adresbalk (of ⋮ → "OmniRoute installeren...")
+1. Open het 67router-dashboard
+2. Klik op het **installatiepictogram** in de adresbalk (of ⋮ → "67router installeren...")
 3. Bevestig de melding
-4. OmniRoute wordt geopend als een zelfstandig venster — zonder tabbladen en zonder adresbalk
+4. 67router wordt geopend als een zelfstandig venster — zonder tabbladen en zonder adresbalk
 
 ## Functies
 
@@ -49,7 +49,7 @@ Het manifest is geconfigureerd met `display: "fullscreen"`. Dit betekent dat de 
 
 ### Offlineondersteuning
 
-OmniRoute bevat een serviceworker (`sw.js`) die intelligente caching biedt:
+67router bevat een serviceworker (`sw.js`) die intelligente caching biedt:
 
 | Assettype                                                 | Strategie                            | Gedrag                                                                                                            |
 | --------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ OmniRoute bevat een serviceworker (`sw.js`) die intelligente caching biedt:
 | **Statische assets** (CSS, JS, afbeeldingen, lettertypen) | Netwerk eerst met cache als fallback | Haalt een actuele versie op via het netwerk; gebruikt bij offlinegebruik de cache als fallback                    |
 | **Next.js-bundels** (`/_next/`)                           | Netwerk eerst met cache-update       | Haalt gegevens op via het netwerk en werkt de cache bij; gebruikt bij offlinegebruik de versie in de cache        |
 | **Navigatieverzoeken**                                    | Omzeilen (nooit onderschept)         | De browser beheert de HTTP/3→HTTP/2-fallback; een inactieve QUIC-socket mag niet resulteren in `Response.error()` |
-| **API-/dashboardroutes** (`/api/`, `/a2a`, `/dashboard`)  | Omzeilen (nooit in de cache)         | Gaat altijd rechtstreeks naar de server — wordt nooit door de serviceworker onderschept                           |
+| **API-/dashboardroutes** (`/api/`, `/dashboard`)          | Omzeilen (nooit in de cache)         | Gaat altijd rechtstreeks naar de server — wordt nooit door de serviceworker onderschept                           |
 
 ### Offlinepagina
 
@@ -70,7 +70,7 @@ Wanneer het netwerk niet beschikbaar is en een gebruiker naar een nieuwe pagina 
 
 ### App-pictogrammen
 
-OmniRoute biedt pictogrammen die voor elk platform zijn geoptimaliseerd:
+67router biedt pictogrammen die voor elk platform zijn geoptimaliseerd:
 
 | Bestand                | Grootte           | Gebruikt door                             |
 | ---------------------- | ----------------- | ----------------------------------------- |
@@ -93,9 +93,9 @@ Gegenereerd door Next.js via `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Dit clientcomponent bevindt zich in `src/shared/components/PwaRegister.tsx` en:
 
 ## Gebruiken met Termux (Android)
 
-Wanneer OmniRoute via Termux op Android wordt uitgevoerd, werkt de PWA naadloos:
+Wanneer 67router via Termux op Android wordt uitgevoerd, werkt de PWA naadloos:
 
-1. Start OmniRoute in Termux: `npx omniroute`
+1. Start 67router in Termux: `npx omniroute`
 2. Open Chrome op dezelfde telefoon: `http://localhost:20128`
 3. Installeer de PWA via "Toevoegen aan startscherm"
 4. De PWA maakt verbinding met de lokale Termux-server — alles wordt op het apparaat uitgevoerd
@@ -156,7 +156,7 @@ Deze combinatie betekent dat je Android-telefoon zowel de **server** (Termux) al
 
 ## Gebruiken vanaf andere apparaten
 
-Installeer de PWA op elk apparaat dat via een browser toegang heeft tot je OmniRoute-server:
+Installeer de PWA op elk apparaat dat via een browser toegang heeft tot je 67router-server:
 
 - **Een andere telefoon/tablet**: Ga naar `http://PHONE_IP:20128` en installeer de PWA
 - **Laptop**: Open Chrome/Edge en installeer de app als desktop-PWA

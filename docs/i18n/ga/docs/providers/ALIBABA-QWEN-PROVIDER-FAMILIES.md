@@ -10,7 +10,7 @@ mar cheithre theaghlach soláthraithe. Is sonraí ceangail é an réigiún, ní 
 
 ## Cinneadh
 
-| Teaghlach soláthraithe                           | ID OmniRoute            | Réigiún domhanda | Réigiún na Síne |
+| Teaghlach soláthraithe                           | ID 67router             | Réigiún domhanda | Réigiún na Síne |
 | ------------------------------------------------ | ----------------------- | ---------------- | --------------- |
 | Alibaba Cloud Model Studio (íoc mar a úsáidtear) | `alibaba`               | Singeapór        | Béising         |
 | Alibaba Cloud Token Plan                         | `bailian-coding-plan`   | Singeapór        | Béising         |

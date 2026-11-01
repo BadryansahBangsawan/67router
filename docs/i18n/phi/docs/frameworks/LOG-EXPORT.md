@@ -4,7 +4,7 @@
 
 ---
 
-Tuloy-tuloy at inkremental na pag-export ng mga call log ng OmniRoute patungo sa isang panlabas na analytics store.
+Tuloy-tuloy at inkremental na pag-export ng mga call log ng 67router patungo sa isang panlabas na analytics store.
 
 Pinapanatili ng tab na Logs dashboard ang kasaysayan ng request sa SQLite (`call_logs`), na nililimitahan ng
 rotation at retention. Ipinapadala ng log export ang parehong hanay ng mga record ayon sa iskedyul upang manatili
@@ -273,7 +273,7 @@ Dalawang panuntunan para sa bagong destinasyon:
 - Ang `send()` ay **dapat mag-throw** kapag may bahagyang pagkabigo. Ang matagumpay na pag-resolve ay nangangahulugang "nasa destinasyon ang mga row na ito",
   at permanenteng uusad ang cursor lampas sa mga ito.
 - Ang destinasyong tumatanggap ng URL na ibinigay ng user ay dapat i-validate ito sa pamamagitan ng
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) bago mag-fetch,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) bago mag-fetch,
   tulad ng ginagawa ng mga webhook. Hindi ito kailangan ng BigQuery: hindi nagbabago ang mga host nito.
 
 ---

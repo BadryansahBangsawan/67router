@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute adskiller **CLI-registrering**, **oprindelig Agent Client Protocol** og
+67router adskiller **CLI-registrering**, **oprindelig Agent Client Protocol** og
 **ældre stdio-adaptere**. At finde en installeret binær fil beviser ikke dens
 godkendelse, modelkompatibilitet eller parathed til at håndtere en prompt.
 
@@ -128,5 +128,3 @@ separat godkendt smoke-test i målmiljøet.
 - [Agentprotokoller](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-startkontrakter](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-værktøjer](../reference/CLI-TOOLS.md)
-- [A2A-server](./A2A-SERVER.md)
-- [Cloud-agenter](./CLOUD_AGENT.md)

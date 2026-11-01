@@ -34,8 +34,7 @@ export type StrategyOrderingKind =
   | "context-optimized"
   | "cache-optimized"
   | "headroom"
-  | "quota-weighted"
-  | "quota-share";
+  | "quota-weighted";
 
 export interface StrategyTraits {
   /** Target-ordering stage run before continuity filters (applyStrategyOrdering / auto). */
@@ -65,7 +64,7 @@ export interface StrategyTraits {
   promptCacheAffinityScope: "model" | "global";
   /** Strategy-selected first target is re-pinned ahead of a cache-affinity reorder (#8370). */
   protectsFirstTargetFromAffinity: boolean;
-  /** Cache-affinity ordering outranks session stickiness / eval routing when it applied. */
+  /** Cache-affinity ordering outranks session stickiness when it applied. */
   cacheAffinityOwnsOrdering: boolean;
   /** Smart / pipeline-enabled combos may route through the multi-stage pipeline. */
   smartPipeline: boolean;
@@ -74,9 +73,7 @@ export interface StrategyTraits {
   /** Per-target quota-exhaustion cutoff gate runs before each attempt. */
   appliesQuotaCutoffGate: boolean;
   /** In-flight slot reserved at selection and transferred when [0] moves. */
-  inflightReservation: "none" | "quota-share" | "quota-weighted";
-  /** Per-connection concurrency slot acquired around the whole quota-share dispatch. */
-  quotaShareConcurrencySlot: boolean;
+  inflightReservation: "none" | "quota-weighted";
   /** Context-relay handoff config + post-success handoff generation. */
   contextRelay: boolean;
 }
@@ -104,7 +101,6 @@ export const DEFAULT_STRATEGY_TRAITS: Readonly<StrategyTraits> = Object.freeze({
   autoWeightsCacheAffinity: false,
   appliesQuotaCutoffGate: true,
   inflightReservation: "none",
-  quotaShareConcurrencySlot: false,
   contextRelay: false,
 });
 
@@ -171,13 +167,6 @@ const STRATEGY_TRAIT_OVERRIDES: Record<AnyRoutingStrategyValue, StrategyTraitOve
   "cache-optimized": { ordering: "cache-optimized", cacheAffinityOwnsOrdering: true },
   fusion: { ordering: "declared", dispatchPrelude: "fusion" },
   pipeline: { ordering: "declared", dispatchPrelude: "pipeline" },
-  "quota-share": {
-    ordering: "quota-share",
-    promptCacheAffinityScope: "model",
-    protectsFirstTargetFromAffinity: true,
-    inflightReservation: "quota-share",
-    quotaShareConcurrencySlot: true,
-  },
 };
 
 /** Fully-resolved traits for every canonical strategy (defaults + overrides). */

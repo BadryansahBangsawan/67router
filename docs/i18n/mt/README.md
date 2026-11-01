@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Dashboard ta’ OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Dashboard ta’ 67router" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Il-Gateway tal-AI Bla Ħlas
+# 🚀 67router — Il-Gateway tal-AI Bla Ħlas
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Qatt tieqaf tikkowdja. Kull għodda tal-AI → 375 fornitur — 150+ bla ħlas — permezz ta’ endpoint wieħed. Claude Code, Codex, Cursor, Cline, Copilot u Antigravity għal Claude / GPT / Gemini BLA ĦLAS b’riżerva awtomatika. Il-kompressjoni kkombinata RTK + Caveman tiffranka 15–95% tat-tokens (~89% bħala medja) — qatt ma tilħaq il-limiti. 375 fornitur tal-AI · 150+ livelli bla ħlas · ~1.62B tokens bla ħlas/xahar · 20 strateġija ta’ routing · $0 biex tibda."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Qatt tieqaf tikkowdja. Kull għodda tal-AI → 375 fornitur — 150+ bla ħlas — permezz ta’ endpoint wieħed. Claude Code, Codex, Cursor, Cline, Copilot u Antigravity għal Claude / GPT / Gemini BLA ĦLAS b’riżerva awtomatika. Il-kompressjoni kkombinata RTK + Caveman tiffranka 15–95% tat-tokens (~89% bħala medja) — qatt ma tilħaq il-limiti. 375 fornitur tal-AI · 150+ livelli bla ħlas · ~1.62B tokens bla ħlas/xahar · 20 strateġija ta’ routing · $0 biex tibda."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Uża l-kontijiet tiegħek mal-fornituri.** Din hija stima aggregata minn livelli bla ħlas ta’ partijiet terzi li għalihom tista’ tkun eliġibbli separatament, u mhux għotja ta’ tokens minn OmniRoute. Irreġistra, ikseb il-kredenzjali fejn meħtieġ, u qabbad il-fornituri li tista’ tuża; kull fornitur jikkontrolla l-limiti, id-disponibbiltà u t-termini tiegħu.
+> **Uża l-kontijiet tiegħek mal-fornituri.** Din hija stima aggregata minn livelli bla ħlas ta’ partijiet terzi li għalihom tista’ tkun eliġibbli separatament, u mhux għotja ta’ tokens minn 67router. Irreġistra, ikseb il-kredenzjali fejn meħtieġ, u qabbad il-fornituri li tista’ tuża; kull fornitur jikkontrolla l-limiti, id-disponibbiltà u t-termini tiegħu.
 >
-> Li tgħaqqad il-livelli bla ħlas manwalment huwa diffiċli — għexieren ta’ SDKs, għexieren ta’ limiti tar-rata, u ebda idea ta’ kemm għandek fil-fatt. OmniRoute jikkataloga **471 entrata ta’ livelli bla ħlas mifruxa fuq 34 ċavetta ta’ pools rikorrenti** u jikkalkula ċ-ċifra ewlenija tat-tokens mis-**17-il pool b’baġit pożittiv fix-xahar ippubblikat flimkien ma’ ħames limiti massimi ta’ Groq għal kull mudell**, bid-duplikati eliminati skont il-pool kondiviż. Il-kwoti li jinfetħu biss wara verifika reġjonali tal-identità (illum: ModelScope) jintwerew separatament, +~6M wara verifika reġjonali tal-identità, u qatt ma jingħaddu fiċ-ċifra ewlenija. Ir-riżultat jibqa’ viżibbli fid-dashboard (`/dashboard/free-tiers`).
+> Li tgħaqqad il-livelli bla ħlas manwalment huwa diffiċli — għexieren ta’ SDKs, għexieren ta’ limiti tar-rata, u ebda idea ta’ kemm għandek fil-fatt. 67router jikkataloga **471 entrata ta’ livelli bla ħlas mifruxa fuq 34 ċavetta ta’ pools rikorrenti** u jikkalkula ċ-ċifra ewlenija tat-tokens mis-**17-il pool b’baġit pożittiv fix-xahar ippubblikat flimkien ma’ ħames limiti massimi ta’ Groq għal kull mudell**, bid-duplikati eliminati skont il-pool kondiviż. Il-kwoti li jinfetħu biss wara verifika reġjonali tal-identità (illum: ModelScope) jintwerew separatament, +~6M wara verifika reġjonali tal-identità, u qatt ma jingħaddu fiċ-ċifra ewlenija. Ir-riżultat jibqa’ viżibbli fid-dashboard (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kard tal-baġit tal-livelli bla ħlas ta’ OmniRoute: ~1.62B token bla ħlas fix-xahar b’mod stabbli, sa ~2.22B fl-ewwel xahar bil-krediti tar-reġistrazzjoni, minn 34 ċavetta dokumentata ta’ pools rikorrenti li jkopru 471 entrata kkatalogata ta’ livelli bla ħlas wara endpoint wieħed. Kalkolu trasparenti bid-duplikati tal-pools eliminati — kull pool kondiviż jingħadd darba biss, inklużi 17-il pool rikorrenti b’baġit pożittiv fix-xahar ta’ tokens ippubblikat flimkien ma’ ħames limiti massimi ta’ Groq għal kull mudell; 12-il fornitur huma mmarkati avoid fil-katalgu tar-riskju tat-termini biex tiddeċiedi int. Il-linja tal-baġit tinkludi Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (ħames limiti massimi għal kull mudell) u pools iżgħar, flimkien ma’ krediti tar-reġistrazzjoni għall-ewwel xahar u fornituri li huma dejjem bla ħlas u mingħajr limitu ta’ tokens, murija separatament sabiex qatt ma jgħollu artifiċjalment iċ-ċifra ewlenija. Użu u bilanċ li jifdal f’ħin reali fuq /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kard tal-baġit tal-livelli bla ħlas ta’ 67router: ~1.62B token bla ħlas fix-xahar b’mod stabbli, sa ~2.22B fl-ewwel xahar bil-krediti tar-reġistrazzjoni, minn 34 ċavetta dokumentata ta’ pools rikorrenti li jkopru 471 entrata kkatalogata ta’ livelli bla ħlas wara endpoint wieħed. Kalkolu trasparenti bid-duplikati tal-pools eliminati — kull pool kondiviż jingħadd darba biss, inklużi 17-il pool rikorrenti b’baġit pożittiv fix-xahar ta’ tokens ippubblikat flimkien ma’ ħames limiti massimi ta’ Groq għal kull mudell; 12-il fornitur huma mmarkati avoid fil-katalgu tar-riskju tat-termini biex tiddeċiedi int. Il-linja tal-baġit tinkludi Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (ħames limiti massimi għal kull mudell) u pools iżgħar, flimkien ma’ krediti tar-reġistrazzjoni għall-ewwel xahar u fornituri li huma dejjem bla ħlas u mingħajr limitu ta’ tokens, murija separatament sabiex qatt ma jgħollu artifiċjalment iċ-ċifra ewlenija. Użu u bilanċ li jifdal f’ħin reali fuq /dashboard/free-tiers."/>
 
 > Sommarju animat tal-paġna diretta `/dashboard/free-tiers`. Metodoloġija sħiħa (eliminazzjoni tad-duplikati tal-pools, livelli tal-kreditu, termini tal-fornituri): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Tgħallem</b></td>
     <td align="center"><a href="#-the-promise">💥 Il-Wegħda</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Għaliex OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Għaliex 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 X’Jagħmlu Differenti</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tliet passi: installa u niedi OmniRoute, qabbad fornitur eliġibbli bil-kont tiegħek stess jew bl-API key tiegħek, imbagħad idderieġi l-għodda tiegħek lejn localhost:20128/v1 billi tuża API key ta' OmniRoute u l-mudell auto. L-irrottar jiddependi fuq konnessjonijiet eliġibbli disponibbli u l-limiti tal-fornituri."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Tliet passi: installa u niedi 67router, qabbad fornitur eliġibbli bil-kont tiegħek stess jew bl-API key tiegħek, imbagħad idderieġi l-għodda tiegħek lejn localhost:20128/v1 billi tuża API key ta' 67router u l-mudell auto. L-irrottar jiddependi fuq konnessjonijiet eliġibbli disponibbli u l-limiti tal-fornituri."/>
 
 ```bash
-# Wara li tkun qabbadt fornitur, ikkopja l-key ta' OmniRoute tiegħek minn Dashboard → Endpoints:
+# Wara li tkun qabbadt fornitur, ikkopja l-key ta' 67router tiegħek minn Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Għaliex OmniRoute?
+# 🤔 Għaliex 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Għaliex OmniRoute — ieqaf taqleb bejn 10 dashboards, API keys mejta u fatturi sorpriża. Għaxar uġigħ ta' kuljum kontra s-soluzzjonijiet: kwota li tiskadi mingħajr ma tintuża → massimizza l-abbonamenti; rate limits f'nofs l-ikkowdjar → auto-fallback b'4 saffi (Abonnament → API → Irħis → B'xejn); outputs tal-għodod li jħarqu tokens → kumpressjoni RTK + Caveman (15–95%); APIs għoljin → irrottar ottimizzat għall-ispiża; kull għodda bis-setup tagħha stess → endpoint wieħed, dashboard wieħed; AI imblokkat → proxy b'3 livelli + TLS stealth; keys mejta → reżiljenza b'3 saffi (circuit breakers, cooldown tal-keys, lockout tal-mudell); tim li jaqsam abbonament wieħed → pools ta' keys b'kwoti ta' qsim ġust; prompts li jgħaddu mis-sħaba ta' xi ħadd ieħor → local-first b'keys kriptati b'AES-256-GCM; l-ebda viżibilità tal-infiq → analytics live (użu, kwota, ffrankar, latenza p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Għaliex 67router — ieqaf taqleb bejn 10 dashboards, API keys mejta u fatturi sorpriża. Għaxar uġigħ ta' kuljum kontra s-soluzzjonijiet: kwota li tiskadi mingħajr ma tintuża → massimizza l-abbonamenti; rate limits f'nofs l-ikkowdjar → auto-fallback b'4 saffi (Abonnament → API → Irħis → B'xejn); outputs tal-għodod li jħarqu tokens → kumpressjoni RTK + Caveman (15–95%); APIs għoljin → irrottar ottimizzat għall-ispiża; kull għodda bis-setup tagħha stess → endpoint wieħed, dashboard wieħed; AI imblokkat → proxy b'3 livelli + TLS stealth; keys mejta → reżiljenza b'3 saffi (circuit breakers, cooldown tal-keys, lockout tal-mudell); tim li jaqsam abbonament wieħed → pools ta' keys b'kwoti ta' qsim ġust; prompts li jgħaddu mis-sħaba ta' xi ħadd ieħor → local-first b'keys kriptati b'AES-256-GCM; l-ebda viżibilità tal-infiq → analytics live (użu, kwota, ffrankar, latenza p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Il-fluss tat-talbiet ta' OmniRoute: l-IDE jew il-CLI tiegħek (Claude Code, Cursor, Cline…) iċempel endpoint lokali wieħed (http://localhost:20128/v1); l-Smart Router ta' OmniRoute (kumpressjoni RTK + Caveman, 20 strateġija ta' irrottar, circuit breakers, TLS stealth, MCP, A2A, guardrails) jista' jagħmel fallback fuq 4 saffi ta' fornituri sakemm tibqa' teżisti mira b'saħħitha u eliġibbli — Saff 1 Abonnament, Saff 2 API Key, Saff 3 Irħis u Saff 4 B'xejn."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Il-fluss tat-talbiet ta' 67router: l-IDE jew il-CLI tiegħek (Claude Code, Cursor, Cline…) iċempel endpoint lokali wieħed (http://localhost:20128/v1); l-Smart Router ta' 67router (kumpressjoni RTK + Caveman, 20 strateġija ta' irrottar, circuit breakers, TLS stealth, MCP, A2A, guardrails) jista' jagħmel fallback fuq 4 saffi ta' fornituri sakemm tibqa' teżisti mira b'saħħitha u eliġibbli — Saff 1 Abonnament, Saff 2 API Key, Saff 3 Irħis u Saff 4 B'xejn."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Trid tingħaqad bħala Ħabib tal-Open Source?** Dawn huma l-kumpaniji li jappoġġjaw l-open source u jgħinu biex OmniRoute jibqa' miexi — u aħna ngħidu pubblikament fejn imur kull token li jagħtuna. Ikkuntattjana: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Trid tingħaqad bħala Ħabib tal-Open Source?** Dawn huma l-kumpaniji li jappoġġjaw l-open source u jgħinu biex 67router jibqa' miexi — u aħna ngħidu pubblikament fejn imur kull token li jagħtuna. Ikkuntattjana: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Ħabib Fundatur tal-Open Source"/>
     </td>
     <td>
-      Grazzi lil <b>Kimi (Moonshot AI)</b>, il-Ħabib Fundatur tagħna tal-Open Source, talli appoġġja dan il-proġett! Kimi huwa l-laboratorju tal-AI wara l-familji ta' mudelli K2 u K3 b'piż miftuħ — <b>Kimi K3</b> joffri tieqa ta' kuntest ta' 1M-token, viżjoni nattiva u kodifikazzjoni ta' livell avvanzat bi frazzjoni tal-prezzijiet tal-mudelli magħluqa, u jaħdem direttament ma' Claude Code, Codex u kull għodda ta' kodifikazzjoni li OmniRoute jservi.
+      Grazzi lil <b>Kimi (Moonshot AI)</b>, il-Ħabib Fundatur tagħna tal-Open Source, talli appoġġja dan il-proġett! Kimi huwa l-laboratorju tal-AI wara l-familji ta' mudelli K2 u K3 b'piż miftuħ — <b>Kimi K3</b> joffri tieqa ta' kuntest ta' 1M-token, viżjoni nattiva u kodifikazzjoni ta' livell avvanzat bi frazzjoni tal-prezzijiet tal-mudelli magħluqa, u jaħdem direttament ma' Claude Code, Codex u kull għodda ta' kodifikazzjoni li 67router jservi.
       <br/><br/>
-      <b>X'jappoġġja l-appoġġ ta' Kimi:</b> Il-krediti tal-API ta' Kimi jappoġġjaw il-pipeline ta' rilaxx validat mill-AI ta' OmniRoute — l-istadju ta' <i>validazzjoni tal-għaqda mħaddma minn Kimi K3</i> li jirrevedi kull talba ta' pull qabel ma tiġi rilaxxata — flimkien mal-iżvilupp ta' karatteristiċi ta' kuljum. L-appoġġ ta' Kimi ta' l-ewwel klassi jintbagħat fuq iż-żewġ binarji: l-<a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API diretta ta' Kimi</a> (<code>kimi-k3</code>) u l-<a href="https://www.kimi.ai/code?aff=omniroute">pjan ta' kodifikazzjoni ta' Kimi Code</a> (OAuth u ċavetta API). OmniRoute huwa wkoll l-ewwel proġett open-source Brażiljan fil-programm ta' appoġġ ta' Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Ikseb ċavetta API ta' Kimi bi 15% krediti żejda →</b></a>
+      <b>X'jappoġġja l-appoġġ ta' Kimi:</b> Il-krediti tal-API ta' Kimi jappoġġjaw il-pipeline ta' rilaxx validat mill-AI ta' 67router — l-istadju ta' <i>validazzjoni tal-għaqda mħaddma minn Kimi K3</i> li jirrevedi kull talba ta' pull qabel ma tiġi rilaxxata — flimkien mal-iżvilupp ta' karatteristiċi ta' kuljum. L-appoġġ ta' Kimi ta' l-ewwel klassi jintbagħat fuq iż-żewġ binarji: l-<a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API diretta ta' Kimi</a> (<code>kimi-k3</code>) u l-<a href="https://www.kimi.ai/code?aff=omniroute">pjan ta' kodifikazzjoni ta' Kimi Code</a> (OAuth u ċavetta API). 67router huwa wkoll l-ewwel proġett open-source Brażiljan fil-programm ta' appoġġ ta' Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Ikseb ċavetta API ta' Kimi bi 15% krediti żejda →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Ħabib tal-Open Source"/>
     </td>
     <td>
-      Grazzi lil <b>Cheaper Inference</b>, Ħabib tal-Open Source ta' OmniRoute, talli appoġġja dan il-proġett! Cheaper Inference huwa gateway ikklassifikat skont l-ispiża li jbiegħ mill-ġdid 42 mudell avvanzat — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok u MiniMax — wara endpoint wieħed kompatibbli ma' OpenAI, li jidderieġi kull talba lill-fornitur l-irħas eliġibbli mingħajr qatt ma jitlob aktar mill-prezz tal-lista tal-manifattur tal-mudell.
+      Grazzi lil <b>Cheaper Inference</b>, Ħabib tal-Open Source ta' 67router, talli appoġġja dan il-proġett! Cheaper Inference huwa gateway ikklassifikat skont l-ispiża li jbiegħ mill-ġdid 42 mudell avvanzat — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok u MiniMax — wara endpoint wieħed kompatibbli ma' OpenAI, li jidderieġi kull talba lill-fornitur l-irħas eliġibbli mingħajr qatt ma jitlob aktar mill-prezz tal-lista tal-manifattur tal-mudell.
       <br/><br/>
-      <b>Appoġġ ta' l-ewwel klassi f'OmniRoute:</b> Chat Completions, l-endpoint nattiv <code>/v1/responses</code>, viżjoni, sejħa ta' għodda u 3 mudelli ta' immaġni (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, li jistgħu jintlaħqu bħala <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Ikseb ċavetta API →</b></a>
+      <b>Appoġġ ta' l-ewwel klassi f'67router:</b> Chat Completions, l-endpoint nattiv <code>/v1/responses</code>, viżjoni, sejħa ta' għodda u 3 mudelli ta' immaġni (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, li jistgħu jintlaħqu bħala <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Ikseb ċavetta API →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Promo tal-Affiljati</b> — kupuni ta' reġistrazzjoni b'xejn minn fornituri li ma nisponsorjawx (ikklikkja biex tespandi)</sub></summary>
 
-<sub><i>Din it-taqsima hija għal kodiċijiet ta' riferiment/kupuni biss. Sħubijiet sponsorjati jinsabu f'<b>🤝 Appoġġjati mill-Ħbieb tagħna tal-Open Source</b> hawn fuq. OmniRoute m'għandu l-ebda sponsorizzazzjoni jew sħubija mal-fornituri elenkati hawn — dawn huma kupuni pubbliċi li kulħadd jista' juża.</i></sub>
+<sub><i>Din it-taqsima hija għal kodiċijiet ta' riferiment/kupuni biss. Sħubijiet sponsorjati jinsabu f'<b>🤝 Appoġġjati mill-Ħbieb tagħna tal-Open Source</b> hawn fuq. 67router m'għandu l-ebda sponsorizzazzjoni jew sħubija mal-fornituri elenkati hawn — dawn huma kupuni pubbliċi li kulħadd jista' juża.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — reġistrazzjoni affiljata · <b>$100 krediti b'xejn</b> mar-reġistrazzjoni (server b'xejn, stenna latenza ogħla — l-aħjar għall-ittestjar, mhux għall-produzzjoni). Appoġġ ta' l-ewwel klassi f'OmniRoute minn <b>v3.8.50</b>: Chat Completions, il-format tal-wajer kompatibbli ma' Anthropic u l-path kompatibbli ma' OpenAI. Mudelli disponibbli jinkludu <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> u aktar. <b><a href="https://agentrouter.org/register?aff=70LM">Aqbad il-$100 tiegħek →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — reġistrazzjoni affiljata · <b>$100 krediti b'xejn</b> mar-reġistrazzjoni (server b'xejn, stenna latenza ogħla — l-aħjar għall-ittestjar, mhux għall-produzzjoni). Appoġġ ta' l-ewwel klassi f'67router minn <b>v3.8.50</b>: Chat Completions, il-format tal-wajer kompatibbli ma' Anthropic u l-path kompatibbli ma' OpenAI. Mudelli disponibbli jinkludu <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> u aktar. <b><a href="https://agentrouter.org/register?aff=70LM">Aqbad il-$100 tiegħek →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Link affiljata — OmniRoute m'għandu l-ebda sponsorizzazzjoni jew sħubija ma' dan il-fornitur.</i></sub>
+      <sub>⚠️ <i>Link affiljata — 67router m'għandu l-ebda sponsorizzazzjoni jew sħubija ma' dan il-fornitur.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Taf fornitur ieħor b'kupun ta' reġistrazzjoni b'xejn ġeneruż li jibbenefika lill-utenti ta' OmniRoute? Iftaħ issue u aħna nżiduh hawn.</sub>
+<sub>Taf fornitur ieħor b'kupun ta' reġistrazzjoni b'xejn ġeneruż li jibbenefika lill-utenti ta' 67router? Iftaħ issue u aħna nżiduh hawn.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Eżempji animati għal 18 mill-20 strateġija ta’ routing tal-combos — maduma waħda għal kull strateġija: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized u quota-weighted mhumiex animati; it-tabella t’hawn taħt tiddeskrivi l-20 kollha."/>
 
-> **Combo** huwa katina ta’ mudelli li OmniRoute jgħaddi bejniethom **awtomatikament**. Jekk il-kwota tispiċċa, fornitur ifalli, jew l-ispejjeż jogħlew f’daqqa, il-combo jista’ jgħaddi għall-mudell eliġibbli u operattiv li jmiss. 🛡️
+> **Combo** huwa katina ta’ mudelli li 67router jgħaddi bejniethom **awtomatikament**. Jekk il-kwota tispiċċa, fornitur ifalli, jew l-ispejjeż jogħlew f’daqqa, il-combo jista’ jgħaddi għall-mudell eliġibbli u operattiv li jmiss. 🛡️
 
 ### ⚡ Mingħajr konfigurazzjoni — uża biss `auto`
 
-M’hemmx għalfejn toħloq combo. Issettja l-mudell tiegħek għal `auto` (jew varjant) u OmniRoute jibni combo virtwali mill-fornituri konnessi tiegħek, b’punteġġ ikkalkulat f’ħin reali:
+M’hemmx għalfejn toħloq combo. Issettja l-mudell tiegħek għal `auto` (jew varjant) u 67router jibni combo virtwali mill-fornituri konnessi tiegħek, b’punteġġ ikkalkulat f’ħin reali:
 
 <table>
   <tr><th align="left">ID tal-Mudell</th><th align="left">Għal xiex jottimizza</th></tr>
@@ -496,7 +498,7 @@ L-**20** strateġija kollha — ħallat u qabbel f’kull pass tal-combo:
 
 ### 🧱 Ir-reżiljenza hija integrata (3 saffi indipendenti)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Ir-reżiljenza ta’ OmniRoute — 3 saffi indipendenti li jsewwu lilhom infushom, bis-saff it-tajjeb għall-ħsara t-tajba. Saff 1: salvavita taċ-ċirkwit tal-fornitur (il-fornitur kollu): jinqata’ biss fuq 408/5xx, limiti OAuth 8× / ċavetta API 12× / lokali 2×, jiġi ssettjat mill-ġdid wara 60s/30s/15s għal prova HALF-OPEN, irkupru għażżien; waqt li jkun OPEN, il-combo jidderieġi mill-ġdid lejn il-fornitur li jmiss. Saff 2: perjodu ta’ stennija tal-konnessjoni (ċavetta/kont wieħed): bażi ta’ 5s għal OAuth / 3s għal ċavetta API, dewmien esponenzjali ×2 bi protezzjoni kontra l-anti-thundering-herd, 429 jirrispetta Retry-After, suċċess ineħħi l-istat kollu tal-iżbalji; ċavetta waħda fil-perjodu ta’ stennija tinqabeż filwaqt li ċ-ċwievet l-oħra jibqgħu jservu. Saff 3: imblukkar tal-mudell (mudell wieħed): 429 għal kull mudell, 404 lokali jew rifjuti tal-modalità jimblukkaw biss dak il-mudell — qatt il-konnessjoni kollha. L-istati terminali (ipprojbit, skadut, krediti eżawriti) huma għall-operatur, mhux għal perjodi ta’ stennija."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Ir-reżiljenza ta’ 67router — 3 saffi indipendenti li jsewwu lilhom infushom, bis-saff it-tajjeb għall-ħsara t-tajba. Saff 1: salvavita taċ-ċirkwit tal-fornitur (il-fornitur kollu): jinqata’ biss fuq 408/5xx, limiti OAuth 8× / ċavetta API 12× / lokali 2×, jiġi ssettjat mill-ġdid wara 60s/30s/15s għal prova HALF-OPEN, irkupru għażżien; waqt li jkun OPEN, il-combo jidderieġi mill-ġdid lejn il-fornitur li jmiss. Saff 2: perjodu ta’ stennija tal-konnessjoni (ċavetta/kont wieħed): bażi ta’ 5s għal OAuth / 3s għal ċavetta API, dewmien esponenzjali ×2 bi protezzjoni kontra l-anti-thundering-herd, 429 jirrispetta Retry-After, suċċess ineħħi l-istat kollu tal-iżbalji; ċavetta waħda fil-perjodu ta’ stennija tinqabeż filwaqt li ċ-ċwievet l-oħra jibqgħu jservu. Saff 3: imblukkar tal-mudell (mudell wieħed): 429 għal kull mudell, 404 lokali jew rifjuti tal-modalità jimblukkaw biss dak il-mudell — qatt il-konnessjoni kollha. L-istati terminali (ipprojbit, skadut, krediti eżawriti) huma għall-operatur, mhux għal perjodi ta’ stennija."/>
 
 <sub>📖 [Magna Auto-Combo](docs/routing/AUTO-COMBO.md) · [Gwida għar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ L-**20** strateġija kollha — ħallat u qabbel f’kull pass tal-combo:
 
 <div align="center">
 
-## 🏆 X'Jagħmel lil OmniRoute Differenti
+## 🏆 X'Jagħmel lil 67router Differenti
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="X'jagħmel lil OmniRoute differenti — stampa puntwali datata tal-karatteristiċi mqabbla ma' 9router, OpenRouter, CLIProxyAPI u LiteLLM fuq 13-il kapaċità. OmniRoute: 375 fornitur, aktar minn 150 livell bla ħlas integrat, 20 strateġija ta' routing, kompressjoni tat-tokens bi 12-il magna, server MCP integrat b'110 għodod, protokoll tal-aġenti A2A, memorja persistenti, guardrails, aġenti tal-cloud, ħabi tal-marki tas-swaba' TLS, Desktop/Termux/PWA u 67 lokalizzazzjoni tal-UI. OmniRoute huwa liċenzjat taħt l-MIT u jista' jiġi ospitat lokalment. Il-kapaċitajiet u l-għadd tal-kompetituri jistgħu jinbidlu; ara l-metodoloġija marbuta."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="X'jagħmel lil 67router differenti — stampa puntwali datata tal-karatteristiċi mqabbla ma' 9router, OpenRouter, CLIProxyAPI u LiteLLM fuq 13-il kapaċità. 67router: 375 fornitur, aktar minn 150 livell bla ħlas integrat, 20 strateġija ta' routing, kompressjoni tat-tokens bi 12-il magna, server MCP integrat b'110 għodod, protokoll tal-aġenti A2A, memorja persistenti, guardrails, aġenti tal-cloud, ħabi tal-marki tas-swaba' TLS, Desktop/Termux/PWA u 67 lokalizzazzjoni tal-UI. 67router huwa liċenzjat taħt l-MIT u jista' jiġi ospitat lokalment. Il-kapaċitajiet u l-għadd tal-kompetituri jistgħu jinbidlu; ara l-metodoloġija marbuta."/>
 
 <sub>📊 Metodoloġija sħiħa &amp; dettalji għal kull karatteristika mqabbla ma' 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Appoġġja lil OmniRoute
+## 💚 Appoġġja lil 67router
 
-OmniRoute huwa liċenzjat taħt MIT u miżmum b’mod miftuħ. Jekk jiffrankalek il-ħin jew il-flus, hawn kif tista’ tgħinu jibqa’ indipendenti — agħżel dak li jaqbillek. L-isponsorizzazzjoni qatt ma taffettwa l-prijorità tar-routing; tixtri viżibbiltà, mhux klassifikazzjoni.
+67router huwa liċenzjat taħt MIT u miżmum b’mod miftuħ. Jekk jiffrankalek il-ħin jew il-flus, hawn kif tista’ tgħinu jibqa’ indipendenti — agħżel dak li jaqbillek. L-isponsorizzazzjoni qatt ma taffettwa l-prijorità tar-routing; tixtri viżibbiltà, mhux klassifikazzjoni.
 
 <table>
-  <tr><td nowrap>⭐ <b>Agħti stilla lir-repożitorju</b></td><td>Bla ħlas — tassew jgħin il-viżibbiltà</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Agħti stilla lil OmniRoute</a></td></tr>
+  <tr><td nowrap>⭐ <b>Agħti stilla lir-repożitorju</b></td><td>Bla ħlas — tassew jgħin il-viżibbiltà</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Agħti stilla lil 67router</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Ta’ darba jew kull xahar · ebda tariffa tal-pjattaforma</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Donazzjoni ta’ darba u malajr, mingħajr reġistrazzjoni għad-donatur</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Ġest żgħir u informali</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute huwa liċenzjat taħt MIT u miżmum b’mod miftuħ. Jekk jiffrankalek
 
 **🇧🇷 PIX** — immedjat, mingħajr tariffi (Brażil)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Kodiċi QR PIX ta’ OmniRoute"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Kodiċi QR PIX ta’ 67router"/>
 
 Ċavetta (każwali): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Pix biex tikkopja u twaħħal:
 
 <p><strong>Noti għall-iżviluppaturi:</strong> Il-proġett jista’ jiġġenera fajl lokali <code>.env</code> waqt npm install/postinstall għall-konvenjenza tal-iżviluppaturi. Dan il-fajl jiġi injorat intenzjonalment permezz ta’ <code>.gitignore</code> (ara <code>.gitignore</code>) u qatt ma għandu jiġi kkommittjat — jekk jiġi kkommittjat bi żball, dawwar kwalunkwe sigriet espost u neħħi l-fajl mill-istorja. Ara <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> għal gwida dwar il-ġestjoni tal-fajls tal-ambjent lokali u tas-sigrieti.</p>
 
-## 📡 Radar OmniRoute
+## 📡 Radar 67router
 
-Iċ-ċifra ewlenija tal-livell bla ħlas tibqa’ **~1.62B tokens/xahar** mill-katalogu dokumentat u deduplikat skont il-pool hawn fuq. Il-krediti temporanji ta’ reġistrazzjoni mingħand il-fornituri jistgħu separatament jgħollu l-ewwel xahar għal **~2.22B**. Radar huwa overlay fakultattiv u ffirmat tal-katalogu għal dawk li jixtiequ disponibbiltà aktar aġġornata ta’ mudelli bla ħlas bejn ir-rilaxxi ta’ OmniRoute; il-katalogu tal-komunità u kull karatteristika eżistenti bla ħlas jibqgħu bla ħlas.
+Iċ-ċifra ewlenija tal-livell bla ħlas tibqa’ **~1.62B tokens/xahar** mill-katalogu dokumentat u deduplikat skont il-pool hawn fuq. Il-krediti temporanji ta’ reġistrazzjoni mingħand il-fornituri jistgħu separatament jgħollu l-ewwel xahar għal **~2.22B**. Radar huwa overlay fakultattiv u ffirmat tal-katalogu għal dawk li jixtiequ disponibbiltà aktar aġġornata ta’ mudelli bla ħlas bejn ir-rilaxxi ta’ 67router; il-katalogu tal-komunità u kull karatteristika eżistenti bla ħlas jibqgħu bla ħlas.
 
 Is-sostenituri jistgħu jirċievu l-katalogu dirett u opportunitajiet addizzjonali mingħand il-fornituri. Il-limitu separat u varjabbli tiegħu huwa ta’ **madwar 3B tokens/xahar l-aktar**, skont id-disponibbiltà tal-fornituri. Dak il-limitu mhuwiex garanzija: il-fornituri jistgħu jibdlu l-kwoti, l-eliġibbiltà, il-mudelli jew ir-reġjuni fi kwalunkwe ħin.
 
-Radar huwa fakultattiv u juża GET biss. Il-klijent OmniRoute ma jtellax prompts, traffiku, konfigurazzjoni tal-fornituri, telemetrija tal-użu jew l-istat lokali tat-twarrib tal-avviżi. Sir af dwar l-eliġibbiltà u l-katalogu attwali fuq **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar huwa fakultattiv u juża GET biss. Il-klijent 67router ma jtellax prompts, traffiku, konfigurazzjoni tal-fornituri, telemetrija tal-użu jew l-istat lokali tat-twarrib tal-avviżi. Sir af dwar l-eliġibbiltà u l-katalogu attwali fuq **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -586,14 +588,14 @@ Radar huwa fakultattiv u juża GET biss. Il-klijent OmniRoute ma jtellax prompts
 - **🔑 Kontroll tar-rottar skont iċ-ċavetta** — waħħal ċavetta API ma' mudell wieħed jew combo b'`forcedModel`, u żid jew neħħi l-mudelli u l-combos ta' ċavetta b'mod atomiku (`/api/keys/{id}/access`). → [Referenza tal-API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kontrolli PII aktar raffinati** — għażla skont it-tip, sa 20-il mudell ta' masking personalizzat u validat, u kontaturi tas-sejbien skont it-tip; il-masking innifsu jibqa' opt-in. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67-il lingwa** — dashboard, mera tad-dokumentazzjoni u CLI, b'`npm run i18n:add-locale` iżżid lingwa kullimkien b'kmand wieħed. → [Gwida i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — delegazzjoni A2A inbound lejn il-flotta ta' aġenti tiegħek, ħiliet Conductor fuq l-Agent Card, u pannell tad-dashboard b'chat bil-vuċi push-to-talk ta' Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — delegazzjoni A2A inbound lejn il-flotta ta' aġenti tiegħek, ħiliet Conductor fuq l-Agent Card, u pannell tad-dashboard b'chat bil-vuċi push-to-talk ta' Faro.
 - **🛂 Ammissjoni adattiva u protezzjoni mill-tagħbija żejda** — talbiet chat tqil jidħlu fil-kju minflok ma jirċievu 503, b'leases rolling RPM atomiċi għal kull konnessjoni. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Ordni kanonika ta' `/v1/models`** — blokk wieħed kontinwu raggruppat skont il-provider għal kull provider (combos mwaħħla l-ewwel), stabbli fuq kull sors tal-katalogu. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
 - **🗜️ Irwebbit tal-kompressjoni** — gwardja kontra l-inflazzjoni mixgħula b'mod predefinit, pakketti Caveman għal DE / FR / JA + Ċiniż (wényán), filtri RTK għal Gradle & .NET. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
 - **💸 Spiża onesta b'rata fissa** — il-providers ta' abbonament / pjan ta' kodifikazzjoni jidhru **$0** fl-analitika tal-ispejjeż; il-baġit, il-kwota u r-rottar jibqgħu jistmaw. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
 - **⚖️ Rottar Quota-Share** — jaqsam il-kwota ta' kont kondiviż b'mod ġust fuq ċwievet pooled, b'konservazzjoni tax-xogħol sabiex il-porzjonijiet idle jitselfu. → [Gwida tar-Reżiljenza](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 Setup ta' CLI/aġent b'kmand wieħed** — 15-il kmand `setup-*` reġistrat; `omniroute run` jniedi 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` jappoġġa 11-il mira b'għażliet interattiva ta' provider+mudell u favoriti skont il-kuntest. → [Integrazzjonijiet CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Modalità remota** — imexxi OmniRoute remot b'tokens b'ambitu limitat (`connect` / `contexts` / `tokens`) + għajnuna OAuth `antigravity` għal installazzjonijiet fuq VPS. → [Modalità Remota](docs/guides/REMOTE-MODE.md)
+- **🛰️ Modalità remota** — imexxi 67router remot b'tokens b'ambitu limitat (`connect` / `contexts` / `tokens`) + għajnuna OAuth `antigravity` għal installazzjonijiet fuq VPS. → [Modalità Remota](docs/guides/REMOTE-MODE.md)
 - **🧭 Rottar awtomatiku aktar intelliġenti** — combos `auto/<category>:<tier>`, **Fusion** (pannell ta' mudelli + ġudikant), rottar konxju tal-kompitu, u overrides ta' mudell / modalità / baġit f'USD għal kull talba. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Kompressjoni pluggable** — 12-il magna komponibbli + Compression Studios: LLMLingua-2, Ultra b'żewġ livelli, omniglyph, gate ta' fidelity għal kull pass, GCF v3.2, u editur bi tkaxkir u rriordnar. → [Kompressjoni](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Dekriptar MITM trasparenti (TPROXY)** — aqbad CLIs li jinjuraw il-varjabbli ambjentali tal-proxy, b'CA għal kull SNI + installatur tat-trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -603,7 +605,7 @@ Radar huwa fakultattiv u juża GET biss. Il-klijent OmniRoute ma jtellax prompts
 - **🖼️ Endpoints ġodda** — `/v1/ocr` (Mistral OCR) u `/v1/audio/translations` (stil Whisper) jikkomplew il-wiċċ tal-midja. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
 - **🎨 Ġenerazzjoni ta' immaġni / vidjo / awdjo** — API waħda għall-midja: vidjo ta' xAI Grok Imagine & Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind, u providers tad-diskors bħal ElevenLabs. → [Referenza tal-API](docs/reference/API_REFERENCE.md)
 - **🌍 Użu u operazzjonijiet** — `basePath` għar-reverse-proxy, sejbien awtomatiku tal-lingwa tal-browser, intraċċar tal-apparat skont iċ-ċavetta, trust MITM mingħajr root, u lokalizzazzjoni zh-TW. → [Ambjent](docs/reference/ENVIRONMENT.md)
-- **🤝 Aktar providers u aġenti** — aġenti fil-cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) b'login mill-browser + OAuth, karta ta' klassi l-ewwel għal Ollama, Claude Opus 5 & Sonnet 5, sħubija uffiċjali ma' Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… u **katalogu aġġornat ta' 375 provider**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Aktar providers u aġenti** — aġenti fil-cloud (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) b'login mill-browser + OAuth, karta ta' klassi l-ewwel għal Ollama, Claude Opus 5 & Sonnet 5, sħubija uffiċjali ma' Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… u **katalogu aġġornat ta' 372 provider**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Trasparenza tar-rottar** — kull tweġiba ġġor header `X-OmniRoute-Decision` li jissemma l-istrateġija/provider/latenza li servieha, strateġija combo ġdida `cache-optimized` flimkien mal-fattur `cacheAffinity` ta' Auto-Combo jirrotaaw it-talbiet ripetuti lura lejn il-konnessjoni li żżomm il-prefiss fil-cache, u endpoint read-only `/v1/auto-combo/{channel}/candidates` jesponi l-pool ħaj ta' kandidati ta' kanal `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Prestazzjoni u infrastruttura lokali** — Redis lokali b'klikk waħda, deployers tar-relay Cloudflare Workers / Deno Deploy, Bifrost u Mux bħala servizzi inkorporati sorveljati. → [Servizzi Inkorporati](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Ukoll fil-kaxxa** — framework ta' plugins + marketplace, frameworks ta' skills Omni/Agent/GitHub, integrazzjoni tal-vault ta' Obsidian (22 għodda MCP), APIs Batch & Files kompatibbli ma' OpenAI, cache semantika tar-risposti, gamifikazzjoni b'leaderboards, skoperta ta' aġenti ACP (15-il aġent inkorporat), esportazzjoni skedata tal-logs lejn BigQuery, fan-out parallelu multi-mudell `auto/chaos`, pont għal bot Telegram, maniġer tal-verżjonijiet fl-app u klassifiki LMArena-ELO tal-fornituri b'xejn. → [Dokumentazzjoni](docs/README.md)
@@ -663,7 +665,7 @@ Radar huwa fakultattiv u juża GET biss. Il-klijent OmniRoute ma jtellax prompts
 
 <br/>
 
-**Ħaddem kwalunkwe CLI appoġġjata permezz ta’ OmniRoute bi kmand wieħed** — mingħajr ma jinkitbu fajls ta’ konfigurazzjoni,
+**Ħaddem kwalunkwe CLI appoġġjata permezz ta’ 67router bi kmand wieħed** — mingħajr ma jinkitbu fajls ta’ konfigurazzjoni,
 il-kredenzjali jiddaħħlu għal kull proċess, u Qwen/Gemini jingħataw direttorju home iżolat u temporanju:
 
 ```bash
@@ -756,7 +758,7 @@ mill-istorja tax-shell tiegħek. → [Integrazzjonijiet tas-CLI](docs/guides/CLI
 
 <div align="center">
 
-## 🖥️ Fejn Jaħdem OmniRoute — Kullimkien
+## 🖥️ Fejn Jaħdem 67router — Kullimkien
 
 </div>
 
@@ -772,7 +774,7 @@ mill-istorja tax-shell tiegħek. → [Integrazzjonijiet tas-CLI](docs/guides/CLI
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Jaħdem <b>fuq il-mobile tiegħek</b>, 24/7, mingħajr root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Żid mal-Iskrin Prinċipali"</td><td align="left">Skrin sħiħ, offline, jista’ jiġi installat mill-browser</td></tr>
   <tr><td align="left" nowrap>🧩 <b>Plugin ta’ OpenCode</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Integrazzjoni nattiva ma’ OpenCode</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>installa l-estensjoni <b>OmniCopilot</b></td><td align="left">Kull mudell ta’ OmniRoute fis-selettur nattiv ta’ Copilot Chat — stable u Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>installa l-estensjoni <b>OmniCopilot</b></td><td align="left">Kull mudell ta’ 67router fis-selettur nattiv ta’ Copilot Chat — stable u Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Mill-kodiċi sors</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Immodifikah, ikkontribwixxi</td></tr>
 </table>
 
@@ -782,18 +784,18 @@ mill-istorja tax-shell tiegħek. → [Integrazzjonijiet tas-CLI](docs/guides/CLI
 
 <div align="center">
 
-### 🧩 Ġdid: OmniRoute ġewwa l-Copilot Chat nattiv ta’ VS Code
+### 🧩 Ġdid: 67router ġewwa l-Copilot Chat nattiv ta’ VS Code
 
 </div>
 
-> L-ebda sidebar ġdida, l-ebda interfaċċa ġdida għaċ-chat — kull mudell li joffri OmniRoute jidher direttament
+> L-ebda sidebar ġdida, l-ebda interfaċċa ġdida għaċ-chat — kull mudell li joffri 67router jidher direttament
 > fis-**selettur tal-mudelli ta’ Copilot Chat li diġà tuża**. Minn VS Code 1.122 ’il quddiem, il-mudelli tal-providers jaħdmu
 > mingħajr sign-in ma’ GitHub jew abbonament għal Copilot — modalità ta’ aġent, sejħiet ta’ għodod u viżjoni,
 > b’xejn.
 
 Installa l-estensjoni **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, qabbadha
-mas-server OmniRoute tiegħek (b’mod awtomatiku `localhost:20128`), imbagħad iftaħ Copilot Chat → is-selettur tal-mudelli
-→ **Immaniġġja l-Mudelli…** → **OmniRoute**.
+mas-server 67router tiegħek (b’mod awtomatiku `localhost:20128`), imbagħad iftaħ Copilot Chat → is-selettur tal-mudelli
+→ **Immaniġġja l-Mudelli…** → **67router**.
 
 <table>
   <tr><th align="left">Ħanut</th><th align="left">Link</th><th align="left">Jaħdem ma’</th></tr>
@@ -801,7 +803,7 @@ mas-server OmniRoute tiegħek (b’mod awtomatiku `localhost:20128`), imbagħad 
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Installa →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Minn ġewwa l-editur: iftaħ il-veduta **Extensions**, fittex **"OmniRoute"**, ikklikkja **Install**
+Minn ġewwa l-editur: iftaħ il-veduta **Extensions**, fittex **"67router"**, ikklikkja **Install**
 — jaħdem bl-istess mod fiż-żewġ ħwienet. Il-kodiċi sors, l-issues u l-gwida għall-pubblikazzjoni jinsabu fuq
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +823,9 @@ Minn ġewwa l-editur: iftaħ il-veduta **Extensions**, fittex **"OmniRoute"**, i
 > tieqa tat-terminal li tibqa’ miftuħa, u mingħajr `npm install -g omniroute` li trid tibqa’ tieħu ħsiebu.**
 
 Mibni b’[Tauri v2](https://v2.tauri.app/) (qalba Rust żgħira daqs żball ta’ approssimazzjoni), jiġi
-bir-runtime iffirmat tiegħu stess ta’ Node 24 u jimmaniġġja installazzjoni ta’ OmniRoute proprjetà tal-app, għalhekk qatt ma jidħol f’kunflitt man-
+bir-runtime iffirmat tiegħu stess ta’ Node 24 u jimmaniġġja installazzjoni ta’ 67router proprjetà tal-app, għalhekk qatt ma jidħol f’kunflitt man-
 `node`/`bun` globali tiegħek. Huwa **jaqsam il-konfigurazzjoni u d-database eżistenti tiegħek f’`~/.omniroute/`** — għalhekk huwa
-l-istess OmniRoute li diġà tħaddem, sempliċement b’kappell. 🎩
+l-istess 67router li diġà tħaddem, sempliċement b’kappell. 🎩
 
 <table>
   <tr><th align="left">X’jagħmel</th><th align="left">Kif</th></tr>
@@ -841,7 +843,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Tippreferi tniżżel? Ikseb l-aħħar <code>.dmg</code minn
 <a href="https://github.com/zoispag/omniroute-tray/releases">Ir-Rilaxxi</a>. Il-kodiċi sors, il-kwistjonijiet u d-dokumentazzjoni tal-bini
 jinsabu fuq <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Proġett tal-komunità minn <a href="https://github.com/zoispag">@zoispag</a> — mhuwiex rilaxx uffiċjali ta’ OmniRoute.</sub>
+<br/>💛 Proġett tal-komunità minn <a href="https://github.com/zoispag">@zoispag</a> — mhuwiex rilaxx uffiċjali ta’ 67router.</sub>
 
 <br/>
 
@@ -851,7 +853,7 @@ jinsabu fuq <a href="https://github.com/zoispag/omniroute-tray">zoispag/omnirout
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privat u lokali mill-bidu — il-gateway u l-pjan ta' kontroll ta' OmniRoute jaħdmu fuq il-magna tiegħek. Il-prompts jintbagħtu lill-fornitur upstream magħżul għal kull talba; OmniRoute ma jżid l-ebda pass ospitat għall-ipproċessar tal-prompts u t-telemetrija hija diżattivata b'mod awtomatiku. Il-kredenzjali jiġu ċċifrati waqt il-ħżin b'AES-256-GCM; il-kontrolli jinkludu l-limitazzjoni tal-ambitu taċ-ċwievet API, l-iffiltrar tal-IP, limiti tar-rata, protezzjonijiet kontra l-injezzjoni tal-prompts, it-tneħħija tal-headers upstream, ir-redazzjoni fakultattiva tal-PII, żbalji sanitizzati u traċċa tal-awditjar lokali f'SQLite. OmniRoute huwa lliċenzjat taħt MIT u jista' jiġi ospitat minnek stess."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Privat u lokali mill-bidu — il-gateway u l-pjan ta' kontroll ta' 67router jaħdmu fuq il-magna tiegħek. Il-prompts jintbagħtu lill-fornitur upstream magħżul għal kull talba; 67router ma jżid l-ebda pass ospitat għall-ipproċessar tal-prompts u t-telemetrija hija diżattivata b'mod awtomatiku. Il-kredenzjali jiġu ċċifrati waqt il-ħżin b'AES-256-GCM; il-kontrolli jinkludu l-limitazzjoni tal-ambitu taċ-ċwievet API, l-iffiltrar tal-IP, limiti tar-rata, protezzjonijiet kontra l-injezzjoni tal-prompts, it-tneħħija tal-headers upstream, ir-redazzjoni fakultattiva tal-PII, żbalji sanitizzati u traċċa tal-awditjar lokali f'SQLite. 67router huwa lliċenzjat taħt MIT u jista' jiġi ospitat minnek stess."/>
 
 <sub>📖 [Awtorizzazzjoni](docs/architecture/AUTHZ_GUIDE.md) · [Miżuri ta' Protezzjoni](docs/security/GUARDRAILS.md) · [Konformità](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +865,7 @@ jinsabu fuq <a href="https://github.com/zoispag/omniroute-tray">zoispag/omnirout
 
 </div>
 
-> Lil hinn mis-server, OmniRoute huwa **ċentru ta’ kontroll sħiħ mil-linja tal-kmand** b’**aktar minn 80 kmand**, flimkien ma’ protokolli miftuħa għall-aġenti sabiex aġent tal-IA jkun jista’ jħaddmu **waħdu**.
+> Lil hinn mis-server, 67router huwa **ċentru ta’ kontroll sħiħ mil-linja tal-kmand** b’**aktar minn 80 kmand**, flimkien ma’ protokolli miftuħa għall-aġenti sabiex aġent tal-IA jkun jista’ jħaddmu **waħdu**.
 
 ### ⌨️ CLI vera (mhux biss `start`)
 
@@ -874,9 +876,9 @@ omniroute setup         # assistent iggwidat għall-ewwel tħaddim
 omniroute doctor        # iddijanjostika l-fornituri, il-ports u d-dipendenzi nattivi
 ```
 
-### 🛰️ Modalità remota — ħaddem is-CLI hawnhekk, u OmniRoute fuq VPS
+### 🛰️ Modalità remota — ħaddem is-CLI hawnhekk, u 67router fuq VPS
 
-OmniRoute fuq server? Ikkontrollah mil-laptop tiegħek bl-**istess CLI**. Idħol darba
+67router fuq server? Ikkontrollah mil-laptop tiegħek bl-**istess CLI**. Idħol darba
 b’token ta’ aċċess b’ambitu definit; wara dan, kull kmand jimmira lejn is-server remot.
 
 ```bash
@@ -892,31 +894,28 @@ It-tokens għandhom ambitu `read` / `write` / `admin`; ir-rotot li jniedu proċe
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Dimostrazzjoni animata fit-terminal tas-CLI ta’ OmniRoute — omniroute providers list, omniroute combo list u omniroute health — li ddur bejn id-89 kmand ewlenin: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Dimostrazzjoni animata fit-terminal tas-CLI ta’ 67router — omniroute providers list, omniroute combo list u omniroute health — li ddur bejn id-89 kmand ewlenin: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Qabbad aġent — u dan jikkontrolla lil OmniRoute nnifsu
+### 🤝 Qabbad aġent — u dan jikkontrolla lil 67router nnifsu
 
-Esponi lil OmniRoute permezz ta’ **MCP**, **A2A**, **REST API**, **webhooks** jew **CLI remota** — kwalunkwe aġent kapaċi (jew il-kodiċi tiegħek stess) jikseb iċ-ċwievet għall-gateway kollu: ir-rotot, il-fornituri, il-kombinazzjonijiet, il-cache, il-kompressjoni u l-memorja — b’mod awtonomu. L-endpoints HTTP ta’ hawn taħt jiġu pprovduti taħt `http://localhost:20128`.
+Esponi lil 67router permezz ta’ **MCP**, **A2A**, **REST API**, **webhooks** jew **CLI remota** — kwalunkwe aġent kapaċi (jew il-kodiċi tiegħek stess) jikseb iċ-ċwievet għall-gateway kollu: ir-rotot, il-fornituri, il-kombinazzjonijiet, il-cache, il-kompressjoni u l-memorja — b’mod awtonomu. L-endpoints HTTP ta’ hawn taħt jiġu pprovduti taħt `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Interfaċċa</th><th align="left">Endpoint / kmand</th><th align="left">Użaha għal</th></tr>
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Qabbadha ma’ Claude Desktop, Cursor jew kwalunkwe klijent MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP remot — <b>110 għodda</b>, 33 ambitu (l-infurzar jiġi attivat b’għażla), rekord sħiħ tal-awditjar</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Trasport MCP bi streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Minn aġent għal aġent, <b>JSON-RPC 2.0</b> + SSE, 6 ħiliet</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Kompatibbli ma’ OpenAI — chat, embeddings, stampi, awdjo, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Ibgħat avvenimenti ta’ talbiet / kwoti lil Slack, Discord, Telegram jew kwalunkwe URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI Remota</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Ikkontrolla istanza remota b’tokens ta’ aċċess b’ambitu definit</td></tr>
 </table>
 
 ```bash
-# Agħti lil Claude Code is-sett sħiħ ta’ għodod ta’ OmniRoute permezz ta’ MCP:
+# Agħti lil Claude Code is-sett sħiħ ta’ għodod ta’ 67router permezz ta’ MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Server MCP](docs/frameworks/MCP-SERVER.md) · [Server A2A](docs/frameworks/A2A-SERVER.md) · [Protokolli tal-Aġenti](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -928,7 +927,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Kif jaħdem — il-pipeline, l-arkitettura u l-matematika tal-iffrankar
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline tal-kompressjoni ta' OmniRoute: talba illustrattiva tal-klijent ta' 10,000 token tgħaddi minn 12-il magna komponibbli — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra u OmniGlyph — u tista' tilħaq il-fornitur b'madwar 1,080 token fl-eżempju stacked dokumentat. Il-kontenut strutturat huwa protett b'salvagwardji tal-preservazzjoni u xatbijiet ta' fidelità għal kull pass; modalitajiet lossy jew sperimentali espliċiti jistgħu trasformaw kontenut eliġibbli."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline tal-kompressjoni ta' 67router: talba illustrattiva tal-klijent ta' 10,000 token tgħaddi minn 12-il magna komponibbli — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra u OmniGlyph — u tista' tilħaq il-fornitur b'madwar 1,080 token fl-eżempju stacked dokumentat. Il-kontenut strutturat huwa protett b'salvagwardji tal-preservazzjoni u xatbijiet ta' fidelità għal kull pass; modalitajiet lossy jew sperimentali espliċiti jistgħu trasformaw kontenut eliġibbli."/>
 
 Il-kombo stacked default tmexxi `RTK → Caveman`. Meta it-tnejn jaġixxu fuq l-istess payload tal-għodda/kuntest, l-iffrankar jikber b'mod kumulattiv:
 
@@ -940,7 +939,7 @@ range    = 78.4 – 94.6%
 
 Il-blokki tal-kodiċi, l-URLs, JSON u d-data strutturata huma **dejjem protetti** mill-magna tal-preservazzjoni.
 
-> **Għaliex tuża ħafna tokens meta ftit jagħmlu x-xogħol?** Kull talba tgħaddi mill-pipeline tal-kompressjoni ta' OmniRoute **b'mod trasparenti** — mingħajr ebda bidla fil-klijent. Issa hija **stack ta' 12-il magna komponibbli** li jaħdmu skont l-ordni u jitħalltu u jitqabblu skont il-kombo tar-rottar — ibbażata fuq ideat minn [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), u [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Għaliex tuża ħafna tokens meta ftit jagħmlu x-xogħol?** Kull talba tgħaddi mill-pipeline tal-kompressjoni ta' 67router **b'mod trasparenti** — mingħajr ebda bidla fil-klijent. Issa hija **stack ta' 12-il magna komponibbli** li jaħdmu skont l-ordni u jitħalltu u jitqabblu skont il-kombo tar-rottar — ibbażata fuq ideat minn [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), u [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 L-stack tal-12-il magna
 
@@ -1025,7 +1024,7 @@ omniroute
 ```
 
 > 💡 Tara `npm warn ERESOLVE` jew twissijiet ta' peer-dep? [Huma bla ħsara](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Qed tuża npm 11 jew aktar reċenti?** npm jista' jimblokka l-iskripts taċ-ċiklu tal-ħajja tal-pakketti sakemm ma jkunux permessi. Il-`postinstall` ta' OmniRoute (`node scripts/build/postinstall.mjs`) huwa meħtieġ biex jipprepara l-fajls native tar-runtime. Ippermetti l-pakketti msemmija fit-twissija ta' npm meta tkun qed tinstalla globalment. Għas-sett ta' pakketti rrappurtat minn OmniRoute 3.8.53:
+> **Qed tuża npm 11 jew aktar reċenti?** npm jista' jimblokka l-iskripts taċ-ċiklu tal-ħajja tal-pakketti sakemm ma jkunux permessi. Il-`postinstall` ta' 67router (`node scripts/build/postinstall.mjs`) huwa meħtieġ biex jipprepara l-fajls native tar-runtime. Ippermetti l-pakketti msemmija fit-twissija ta' npm meta tkun qed tinstalla globalment. Għas-sett ta' pakketti rrappurtat minn 67router 3.8.53:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1064,9 +1063,9 @@ Model:    auto            (jagħmel ir-rottar bejn konnessjonijiet eliġibbli �
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Għandek tara l-mudelli konnessi tiegħek fil-lista. 🎉 Dak kollox — ibda kkowdja, u OmniRoute jagħmel ir-rottar awtomatiku u l-fallback għalik.
+Għandek tara l-mudelli konnessi tiegħek fil-lista. 🎉 Dak kollox — ibda kkowdja, u 67router jagħmel ir-rottar awtomatiku u l-fallback għalik.
 
-Jekk il-klijent tiegħek ma jistax jibgħat headers personalizzati, OmniRoute jesponi wkoll aliases ta' kompatibbiltà b'tokens:
+Jekk il-klijent tiegħek ma jistax jibgħat headers personalizzati, 67router jesponi wkoll aliases ta' kompatibbiltà b'tokens:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1116,7 +1115,7 @@ It-tabella sħiħa: [Gwida ta’ Docker — RAM waqt it-tħaddim](docs/guides/DO
 
 L-`bun install` standard u l-installazzjoni globali (`bun install -g omniroute`) huma appoġġjati permezz tal-identifikazzjoni tar-runtime Bun:
 
-- **`bun:sqlite` inkorporat**: OmniRoute juża d-driver `bun:sqlite` inkorporat ta’ Bun meta jitħaddem taħt Bun, u jaqleb għal `better-sqlite3` fuq Node.js jew `sql.js`.
+- **`bun:sqlite` inkorporat**: 67router juża d-driver `bun:sqlite` inkorporat ta’ Bun meta jitħaddem taħt Bun, u jaqleb għal `better-sqlite3` fuq Node.js jew `sql.js`.
 - **Għażla awtomatika tal-bundler Webpack fl-iżvilupp**: L-iżvilupp (`bun run dev`) jidentifika awtomatikament lil Bun u jiddiżattiva Turbopack favur Webpack biex jiġu evitati inkompatibbiltajiet mal-bindings nattivi ta’ V8. Il-builds tal-produzzjoni (`bun run build`) isegwu `OMNIROUTE_USE_TURBOPACK` eżattament bħal fuq Node: Turbopack b’mod default, jew `OMNIROUTE_USE_TURBOPACK=0` biex tibni b’Webpack (`Dockerfile.bun` jesponih bħala `--build-arg`).
 - **Dockerfile apposta għal Bun**: `Dockerfile.bun` b’diversi stadji għal deployments tal-produzzjoni nattivi ta’ Bun (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1200,7 +1199,7 @@ istess proċess fuq port wieħed, għalhekk bħalissa m’hemm l-ebda pakkett se
 
 <div align="center">
 
-# 🎬 OmniRoute fl-Azzjoni
+# 🎬 67router fl-Azzjoni
 
 </div>
 
@@ -1264,7 +1263,7 @@ istess proċess fuq port wieħed, għalhekk bħalissa m’hemm l-ebda pakkett se
 
 Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba magħrufa li ntwerew** (`v > 0`) · **1.210 kanali/profili għal kull netwerk**. Il-pannell mhux ipproċessat fih 1.976 ringiela (YouTube 1.352 = 740 twal + 612 Shorts · TikTok 334 · Instagram 290); ma baqa’ ebda duplikat wara n-normalizzazzjoni skont il-URL kanoniku, li żżomm l-ogħla għadd għal kull vidjo. Il-ġbir minn YouTube ilu ffriżat mill-2026-10-13 (il-kwota tal-API ntużat kollha mill-14 sat-18/10) u dak minn TikTok/Instagram ilu ffriżat mill-2026-09-02 (mingħajr krediti għall-ġbir); 76 vidjo għad m’għandhomx għadd ta’ kemm-il darba ntwerew.
 
-> 🎬 **Għamilt vidjo dwar OmniRoute?** Iftaħ [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) jew [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) bil-link — se nuruh hawnhekk.
+> 🎬 **Għamilt vidjo dwar 67router?** Iftaħ [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) jew [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) bil-link — se nuruh hawnhekk.
 
 <br/>
 
@@ -1283,7 +1282,7 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
 | 🟢 **WhatsApp — 🌍 Globali**                | [ingħaqad mal-grupp](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                         |
 | 🟢 **WhatsApp — 🇧🇷 Brażil**                 | [ingħaqad mal-grupp](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                         |
 | 🌍 **Sit web**                              | [omniroute.online](https://omniroute.online)                                                                                  |
-| 🌍 **🌍Komunità StHub OmniRoute (b’xejn)**  | [portal StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                         |
+| 🌍 **🌍Komunità StHub 67router (b’xejn)**   | [portal StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                         |
 | 📦 **Kodiċi sors**                          | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                                |
 | 🐛 **Irrapporta bug**                       | [iftaħ issue](https://github.com/diegosouzapw/OmniRoute/issues) — ehmeż l-output ta’ `npm run system-info`                    |
 | 🤝 **Ikkontribwixxi**                       | [CONTRIBUTING.md](CONTRIBUTING.md) · [Mudell tal-Fergħat u tal-Ħruġ](docs/ops/BRANCHING_MODEL.md) · agħżel `good first issue` |
@@ -1336,8 +1335,8 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Gwida għall-Utent</a></b></td><td>Fornituri, kombinazzjonijiet, integrazzjoni mas-CLI, skjerament</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Gwida għall-Konfigurazzjoni</a></b></td><td>Metodi sħaħ ta' installazzjoni, konfigurazzjonijiet tal-għodod CLI, konfigurazzjoni tal-protokolli, irfinar tal-limiti ta' żmien</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">Gwida għall-Għodod CLI</a></b></td><td>Konfigurazzjoni għal kull għodda għal Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Modalità Remota</a></b></td><td>Ikkontrolla OmniRoute remot (VPS) mis-CLI tal-laptop tiegħek permezz ta' tokens ta' aċċess b'ambitu limitat</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Konfigurazzjoni ta' Claude Code</a></b></td><td>Qabbad Claude Code ma' OmniRoute (lokali/remot) permezz ta' <code>launch</code> + profili għal kull mudell</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Modalità Remota</a></b></td><td>Ikkontrolla 67router remot (VPS) mis-CLI tal-laptop tiegħek permezz ta' tokens ta' aċċess b'ambitu limitat</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Konfigurazzjoni ta' Claude Code</a></b></td><td>Qabbad Claude Code ma' 67router (lokali/remot) permezz ta' <code>launch</code> + profili għal kull mudell</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Bidu Mgħaġġel</a></b></td><td>Installazzjoni fi 3 passi → qabbad → ikkonfigura</td></tr>
 </table>
 
@@ -1349,7 +1348,7 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
   <tr><td nowrap><b><a href="contrib/podman/README.md">Gwida għal Podman</a></b></td><td>Integrazzjoni Quadlet ma' systemd, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Skjerament fuq VM</a></b></td><td>Gwida kompluta: konfigurazzjoni ta' VM + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Skjerament fuq Fly.io</a></b></td><td>Skjera fuq Fly.io b'ħażna persistenti</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Gwida għal Termux</a></b></td><td>Ħaddem OmniRoute fuq Android permezz ta' Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Gwida għal Termux</a></b></td><td>Ħaddem 67router fuq Android permezz ta' Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">Gwida għall-PWA</a></b></td><td>Installazzjoni, caching u arkitettura tal-Progressive Web App</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Gwida għad-Diżinstallazzjoni</a></b></td><td>Tneħħija nadifa għall-metodi kollha ta' installazzjoni</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Konfigurazzjoni tal-Ambjent</a></b></td><td>Varjabbli u referenzi kompluti għal <code>.env</code></td></tr>
@@ -1382,7 +1381,6 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Server MCP</a></b></td><td>110 għodda MCP, konfigurazzjonijiet tal-IDE, klijenti Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Gwida għas-Server MCP</a></b></td><td>Installazzjoni tal-MCP, trasporti u referenza tal-għodod</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Server A2A</a></b></td><td>Protokoll JSON-RPC 2.0, ħiliet, streaming, ġestjoni tal-kompiti</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Gwida għas-Server A2A</a></b></td><td>Kard tal-aġent A2A, kompiti, ħiliet u streaming</td></tr>
 </table>
 
 ### 📋 Proġett u Kwalità
@@ -1404,7 +1402,7 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
 
 # ⭐ L-Aqwa Kontributuri
 
-> OmniRoute huwa msawwar minn komunità passjonata tas-sors miftuħ. Dawn l-individwi taw kontributi eċċezzjonali li għandhom impatt dirett fuq il-kwalità, l-istabbiltà u l-firxa tal-proġett. **Grazzi.**
+> 67router huwa msawwar minn komunità passjonata tas-sors miftuħ. Dawn l-individwi taw kontributi eċċezzjonali li għandhom impatt dirett fuq il-kwalità, l-istabbiltà u l-firxa tal-proġett. **Grazzi.**
 
 ### Kontributuri esterni skont il-pull requests magħquda
 
@@ -1522,7 +1520,7 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
 
 <sub>Iċċekkjat mill-ġdid fi 2026-10-18 14:44:45 UTC: commits attribwiti minn GitHub irrappurtati mill-API Contributors tar-repożitorju għall-fergħa predefinita <code>release/v3.8.52</code>. L-API rritornat 849 identità (429 utent, 2 bots, 418 anonimi); din it-tabella teskludi lill-manutenzjonist, lill-bots u lill-identitajiet anonimi, u żżomm ir-riżultati indaqs fil-kompetizzjoni. Hija distinta kemm mill-klassifikazzjoni tal-PRs magħquda hawn fuq kif ukoll miċ-ċensiment tal-metadejta ta’ Git hawn taħt.</sub>
 
-> 🙏 Il-karatteristiċi, it-tiswijiet tal-bugs u t-titjib fl-infrastruttura ta’ dawn il-kontributuri huma **parti ewlenija** minn dak li jagħmel lil OmniRoute affidabbli u rikk fil-karatteristiċi. Kull pull request, kull każ tat-test u kull fajl tat-traduzzjoni i18n huwa importanti. Is-sors miftuħ jinbena minn nies bħalhom.
+> 🙏 Il-karatteristiċi, it-tiswijiet tal-bugs u t-titjib fl-infrastruttura ta’ dawn il-kontributuri huma **parti ewlenija** minn dak li jagħmel lil 67router affidabbli u rikk fil-karatteristiċi. Kull pull request, kull każ tat-test u kull fajl tat-traduzzjoni i18n huwa importanti. Is-sors miftuħ jinbena minn nies bħalhom.
 
 </div>
 
@@ -1534,7 +1532,7 @@ Metriċi kanoniċi fl-2026-10-18: **1.976 vidjo uniku** · **20.220.289 darba ma
 
 <div align="center">
 
-Ringrazzjament mill-qalb lil dawk li jiffinanzjaw lil OmniRoute minn buthom stess — kull kontribuzzjoni żżomm il-proġett b'xejn, indipendenti u miexi 'l quddiem.
+Ringrazzjament mill-qalb lil dawk li jiffinanzjaw lil 67router minn buthom stess — kull kontribuzzjoni żżomm il-proġett b'xejn, indipendenti u miexi 'l quddiem.
 
 <table>
   <tr>
@@ -1624,7 +1622,7 @@ Ringrazzjament mill-qalb lil dawk li jiffinanzjaw lil OmniRoute minn buthom stes
 
 <sub>Il-GitHub Sponsors pubbliċi ġew ivvalidati mill-ġdid fit-2026-10-18 permezz tal-GitHub Sponsors GraphQL API: 11-il sponsorizzazzjoni pubblika (6 attivi, 5 preċedenti) minn total ta' 14. L-istatus <code>isActive</code> ta' GitHub jiddetermina t-tikketti attivi ta' hawn fuq; is-sostenituri pubbliċi preċedenti ta' darba jibqgħu jingħataw radd il-ħajr, filwaqt li l-isponsors privati jibqgħu anonimi. Id-donazzjonijiet permezz ta' Ko-fi, Buy Me a Coffee, Liberapay, PIX u l-kripto mhumiex elenkati għax m'għandhomx rekord pubbliku ta' sponsor.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Sir sponsor →</a></b> — kull dollaru jżomm lil OmniRoute b'xejn u indipendenti.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Sir sponsor →</a></b> — kull dollaru jżomm lil 67router b'xejn u indipendenti.
 
 </div>
 
@@ -1696,14 +1694,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](https://github.com/decolua/9router)** u port għal TypeScript tal-proġett Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — u minn hemm ’il quddiem, kull subsistema hawn taħt kienet ispirata minn proġett open-source li wasal hemm qabilna. Kull wieħed minnhom sawwar parti konkreta minn OmniRoute. Dan huwa r-ringrazzjament tagħna lilhom kollha. 🙏
+67router jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](https://github.com/decolua/9router)** u port għal TypeScript tal-proġett Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — u minn hemm ’il quddiem, kull subsistema hawn taħt kienet ispirata minn proġett open-source li wasal hemm qabilna. Kull wieħed minnhom sawwar parti konkreta minn 67router. Dan huwa r-ringrazzjament tagħna lilhom kollha. 🙏
 
 > ⭐ l-għadd ta’ stars ġie vverifikat permezz tal-API REST ta’ GitHub fit-18 ta’ Ottubru 2026 — agħtu star lil dawn il-proġetti. L-għadd huwa snapshot eżatt b’data speċifika u naturalment se jinbidel.
 
 ### 🧬 Nisel u gateway
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Il-proġett oriġinali li fuqu huwa mibni dan il-fork — estiż hawn b’APIs multimodali u kitba mill-ġdid sħiħa f’TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>L-implimentazzjoni f’Go li ispirat dan il-port għal JavaScript / TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>Il-gateway tal-AI li s-sett tad-data pubbliku tiegħu dwar il-prezzijiet jalimenta s-sinkronizzazzjoni tagħna tat-traċċar tal-ispejjeż, u li l-mudell tiegħu għan-normalizzazzjoni tal-fornituri informa r-routing tagħna.</td></tr>
@@ -1711,19 +1709,19 @@ OmniRoute jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](htt
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Mudelli trasferiti għall-irkupru tal-stream, aliases mingħajr thinking, tiftix ta’ riżerva fuq il-web, limiti b’sliding window, redazzjoni tal-logs u flussi mwebbsa għat-tnedija.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Mudelli ta’ Cursor Composer għall-għażla tal-għodod, ir-restrizzjonijiet tal-output u l-konferma tal-għodod, adattati fl-eżekutur nattiv ta’ Cursor.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Mudelli ta’ login ġdid u rotazzjoni tar-refresh tokens trasferiti fl-awtentikazzjoni mill-ġdid ta’ Codex OAuth.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Valuri predefiniti għat-trasformazzjoni kompatibbli ma’ Claude Code u mġiba tal-headers tal-kontijiet, iġġeneralizzati fil-bridge ta’ OmniRoute mmexxi mill-konfigurazzjoni.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Il-mappings tiegħu tal-mudelli Grok, il-ġeneratur Statsig b’TypeError falz, il-valuri predefiniti għat-talbiet u l-apparati, u l-proċessur tar-rispons NDJSON ġew adattati b’mod sostanzjali fl-eżekutur Grok Web ta’ OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Valuri predefiniti għat-trasformazzjoni kompatibbli ma’ Claude Code u mġiba tal-headers tal-kontijiet, iġġeneralizzati fil-bridge ta’ 67router mmexxi mill-konfigurazzjoni.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Il-mappings tiegħu tal-mudelli Grok, il-ġeneratur Statsig b’TypeError falz, il-valuri predefiniti għat-talbiet u l-apparati, u l-proċessur tar-rispons NDJSON ġew adattati b’mod sostanzjali fl-eżekutur Grok Web ta’ 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>Is-sors prinċipali tal-kodiċi tranżittiv wara grok2api-merged; l-implimentazzjonijiet tiegħu tal-mudell, tal-header, tal-payload, ta’ Statsig u tal-proċessur huma ppreservati fin-nisel ta’ Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>Is-sors MIT sottostanti għall-payload ta’ Grok u għall-valuri predefiniti tal-apparat, għall-ġeneratur Statsig, u għall-proċessur <code>result.response</code> mgħoddi permezz ta’ TQZHR u grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Sors tranżittiv ikkreditat minn grok2api-merged għas-saff tal-proxy pool tiegħu; OmniRoute jippreserva dak l-avviż dwar in-nisel, iżda ma jsostnix li ttrasferixxa proxy pool fl-eżekutur limitat tiegħu għal Grok Web.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Il-proxy Grok tiegħu awtentikat permezz tal-cookies u l-mudell ta’ streaming <code>result.response.token</code> informaw it-trasport Grok Web ta’ OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Sors tranżittiv ikkreditat minn grok2api-merged għas-saff tal-proxy pool tiegħu; 67router jippreserva dak l-avviż dwar in-nisel, iżda ma jsostnix li ttrasferixxa proxy pool fl-eżekutur limitat tiegħu għal Grok Web.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Il-proxy Grok tiegħu awtentikat permezz tal-cookies u l-mudell ta’ streaming <code>result.response.token</code> informaw it-trasport Grok Web ta’ 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>L-implimentazzjoni oriġinali ta’ Grok Web ikkonsultat id-disinn upstream tagħha għall-HTTP/browser; il-perkors HTTP dirett tagħha ġej minn GrokProxy, għalhekk ma ssir l-ebda pretensjoni ta’ port indipendenti tal-kodiċi.</td></tr>
 </table>
 
 ### 🗜️ Kompressjoni tal-kuntest u tat-tokens — magni
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Il-proġett virali "għaliex tuża ħafna tokens meta ftit tokens jagħmlu x-xogħol" — il-filosofija tiegħu ta’ diskors tal-bniedem tal-għerien tħaddem il-modalità standard tagħna ta’ kompressjoni u aktar minn 30 regola għat-tneħħija ta’ kliem żejjed u għall-kondensazzjoni.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Kompressjoni ta’ prestazzjoni għolja għall-output tal-kmandi — ispirat il-magna RTK tagħna, id-DSL tal-filtri JSON, l-irkupru tal-output mhux ipproċessat u l-pipeline f’saffi RTK → Caveman.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Kompressjoni riversibbli tal-kuntest (SmartCrusher) — ispirat il-magna <code>headroom</code> tagħna u l-mudell tal-markatur tal-irkupru <code>ccr</code>.</td></tr>
@@ -1731,15 +1729,15 @@ OmniRoute jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](htt
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>Il-port JS/ONNX (MobileBERT / XLM-RoBERTa) użat bħala l-backend tal-worker thread għall-magna LLMLingua tagħna.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>Kompressjoni tat-tokens PT-BR — tħaddem il-pakkett lingwistiku pt-BR tagħna: tnaqqis tal-pleonażmi u tneħħija tal-kliem żejjed irfinati għall-grammatika tal-Portugiż Brażiljan.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>Il-ħila virali tal-kodifikazzjoni YAGNI għall-"iżviluppatur anzjan għażżien" — ispirat l-Istil tal-Output <b>less-code</b> tagħna: gwida lejn l-iżgħar bidla li taħdem, li tnaqqas il-kodiċi _ġġenerat_ (il-kontroparti fuq l-assi tal-output tal-proża konċiża ta’ Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>L-istil tiegħu ta’ tweġibiet li jqiegħed l-azzjoni l-ewwel u li huwa adattat għall-ADHD ġie adattat fl-istil konċiż tal-output ta’ OmniRoute f’ħames lingwi.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>L-istil tiegħu ta’ tweġibiet li jqiegħed l-azzjoni l-ewwel u li huwa adattat għall-ADHD ġie adattat fl-istil konċiż tal-output ta’ 67router f’ħames lingwi.</td></tr>
 </table>
 
 ### 🧩 Formati kompatti, riċerka dwar it-tokens u għodod konxji mill-kodiċi
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Notazzjoni tal-Oġġetti Orjentata lejn it-Tokens — il-mudell kolonnari tiegħu, b’intestatura u ringieli, sawwar l-istadju tagħna ta’ kompattazzjoni tabulari.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Il-format kompatt tal-graffs u d-disinn tal-profil ġeneriku tiegħu influwenzaw il-kompattazzjoni tabulari ta’ OmniRoute u l-format tal-codec Headroom.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Il-format kompatt tal-graffs u d-disinn tal-profil ġeneriku tiegħu influwenzaw il-kompattazzjoni tabulari ta’ 67router u l-format tal-codec Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>L-implimentazzjoni MIT TypeScript inkorporata direttament u estiża bħala l-codec tal-profil ġeneriku ta’ Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Cache Brotli/SQLite + differenza fil-kuntest għal kull sessjoni — ispirat il-magna <code>session-dedup</code> tagħna.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Kompattazzjoni tal-output ta’ Bash + profili MCP — ispirat id-dixxiplina tagħna biex nabbandunaw il-kompressjoni meta ma tkunx ta’ benefiċċju u t-tnaqqis tal-manifest tal-għodod MCP.</td></tr>
@@ -1756,7 +1754,7 @@ OmniRoute jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](htt
 ### 🧠 Memorja u RAG
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Saff universali tal-memorja — il-mudell tiegħu ta’ proxy bħala l-konfini tal-kitba/qari sawwar l-arkitettura tal-memorja tagħna.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Aġenti li jżommu l-istat b’memorja f’livelli — ispiraw il-mudell f’livelli tagħna għall-Kontroll u l-Irkupru tal-Kuntest (CCR).</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>It-tassonomija ProblemMap ta’ 16-il modalità rikorrenti ta’ falliment ta’ RAG/LLM — il-vokabularju kondiviż fil-gwida tagħna għas-soluzzjoni tal-problemi.</td></tr>
@@ -1765,15 +1763,15 @@ OmniRoute jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](htt
 ### 🛰️ Spezzjoni tat-traffiku, MITM u proxy trasparenti
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>L-interċettazzjoni/analiżi MITM tat-traffiku bejn l-assistent tal-ipprogrammar ↔ LLM għenet biex jiġu definiti r-rekwiżiti bikrija tat-Traffic Inspector. Erba’ moduli derivati qabel — l-għaqda ta’ SSE, in-normalizzazzjoni tal-konverżazzjonijiet, il-ħabi tas-sigrieti u s-sanitizzazzjoni tal-headers — ġew sostitwiti b’implimentazzjonijiet clean-room indipendenti bbażati fuq standards pubbliċi tal-protokolli. Iż-żewġ superfiċji host-passthrough (<code>passthrough.ts</code> u <code>_internal/bypass.cjs</code>) jibqgħu implimentazzjonijiet interni ta’ OmniRoute kklassifikati b’mod indipendenti; ma ġewx miktuba mill-ġdid bħala parti minn dik is-sostituzzjoni.</td></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>L-interċettazzjoni/analiżi MITM tat-traffiku bejn l-assistent tal-ipprogrammar ↔ LLM għenet biex jiġu definiti r-rekwiżiti bikrija tat-Traffic Inspector. Erba’ moduli derivati qabel — l-għaqda ta’ SSE, in-normalizzazzjoni tal-konverżazzjonijiet, il-ħabi tas-sigrieti u s-sanitizzazzjoni tal-headers — ġew sostitwiti b’implimentazzjonijiet clean-room indipendenti bbażati fuq standards pubbliċi tal-protokolli. Iż-żewġ superfiċji host-passthrough (<code>passthrough.ts</code> u <code>_internal/bypass.cjs</code>) jibqgħu implimentazzjonijiet interni ta’ 67router kklassifikati b’mod indipendenti; ma ġewx miktuba mill-ġdid bħala parti minn dik is-sostituzzjoni.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Ir-routing trasparenti tal-proxy għal kull proċess — ispira t-tneħħija MITM tagħna reżistenti għall-kraxxijiet, it-timeouts tal-inattività tas-sockets, l-attribuzzjoni tal-proċessi permezz ta’ <code>/proc</code> u l-qbid TPROXY.</td></tr>
 </table>
 
 ### 📚 Data tal-mudelli, osservabbiltà u UI
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Bażi tad-data miftuħa tal-ispeċifikazzjonijiet, l-ipprezzar u l-kapaċitajiet tal-mudelli tal-IA — sinkronizzata b’mod nattiv fil-katalgu tal-mudelli tagħna.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>Il-librerija tal-graffs ibbażata fuq nodi li tħaddem il-Compression Studio u l-Combo/Routing Studio tagħna f’ħin reali.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>Il-viżwalizzazzjoni diretta tal-graff tal-fluss tax-xogħol ta’ LangGraph Studio ispirat il-veduta kaskata f’ħin reali tal-Studios tagħna.</td></tr>
@@ -1786,19 +1784,19 @@ OmniRoute jinsab fuq spallejn il-ġganti. Beda bħala fork ta’ **[9router](htt
 ### 🛡️ Sigurtà
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Lista kkurata ta’ libreriji siguri b’mod awtomatiku li tiggwida l-għażliet tas-sigurtà tagħna (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Għodod komplementari
 
 <table>
-  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil OmniRoute</th></tr>
+  <tr><th align="left">Proġett</th><th align="center">⭐</th><th align="left">Kif ispira lil 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Ispira d-deduplikazzjoni tat-talbiet, fallback ta’ emerġenza mingħajr spejjeż, strateġiji Auto-Combo li jistgħu jiġu pplaggjati u l-klassifikazzjoni multilingwi tal-intenzjonijiet.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Ir-rimmappjar tal-mudelli tiegħu konxju mill-kont, il-validazzjoni tal-path tal-eżekutibbli u l-imġiba tat-tikketti tal-pjan għenu biex jiġi definit ir-runtime Antigravity ta’ OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Il-format kompatt tiegħu għall-countdown tar-reset tal-kwota ispira l-wiri korrispondenti tal-limitu tal-fornitur f’OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>L-integrazzjonijiet ACP tiegħu ispiraw l-iskoperta awtomatika minn OmniRoute tal-aġenti CLI installati.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identifika s-superfiċje tal-kwota Grok Build; OmniRoute mbagħad ivverifika u kkoreġa b’mod indipendenti l-format wire attiv.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Ir-rimmappjar tal-mudelli tiegħu konxju mill-kont, il-validazzjoni tal-path tal-eżekutibbli u l-imġiba tat-tikketti tal-pjan għenu biex jiġi definit ir-runtime Antigravity ta’ 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Il-format kompatt tiegħu għall-countdown tar-reset tal-kwota ispira l-wiri korrispondenti tal-limitu tal-fornitur f’67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>L-integrazzjonijiet ACP tiegħu ispiraw l-iskoperta awtomatika minn 67router tal-aġenti CLI installati.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Identifika s-superfiċje tal-kwota Grok Build; 67router mbagħad ivverifika u kkoreġa b’mod indipendenti l-format wire attiv.</td></tr>
 </table>
 
 ## 📄 Liċenzja
@@ -1811,7 +1809,7 @@ Liċenzja MIT - ara [LICENSE](LICENSE) għad-dettalji.
 
 **[⬆ Lura fil-quċċata](#-omniroute)** · Mibni b'❤️ għall-komunità open-source tal-IA.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Liċenzja MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · Liċenzja MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions attivati għall-mistoqsijiet u tweġibiet tal-komunità -->

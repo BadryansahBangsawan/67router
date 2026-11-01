@@ -13,7 +13,7 @@
 ## Mis see on
 
 Local Corpus võimaldab operaatoril teha ühe sõnaselgelt heaks kiidetud tekstifailide kataloogi
-OmniRoute'i MCP-serverile kättesaadavaks. Failid jäävad oma algsesse kataloogi: OmniRoute salvestab
+67router'i MCP-serverile kättesaadavaks. Failid jäävad oma algsesse kataloogi: 67router salvestab
 SQLite'i ainult kanoonilise juurtee ja hoiab mälus otsinguindeksit. See ei
 kopeeri korpuse sisu hoidlasse ega andmebaasi.
 

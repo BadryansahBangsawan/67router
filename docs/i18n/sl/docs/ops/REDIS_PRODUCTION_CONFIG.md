@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Redis je v OmniRoute **neobvezna, šibka odvisnost** — ko Redis ni na voljo, aplikacija še naprej deluje z zmanjšano zmogljivostjo (z nadomestnimi rešitvami v pomnilniku). V produkciji prilagoditev nastavitev Redis zmanjša zakasnitev pri štirih ločenih delovnih obremenitvah:
+Redis je v 67router **neobvezna, šibka odvisnost** — ko Redis ni na voljo, aplikacija še naprej deluje z zmanjšano zmogljivostjo (z nadomestnimi rešitvami v pomnilniku). V produkciji prilagoditev nastavitev Redis zmanjša zakasnitev pri štirih ločenih delovnih obremenitvah:
 
 | Delovna obremenitev            | Gonilnik                      | Tovarna odjemalcev                                       | Vzorec ključev                                              |
 | ------------------------------ | ----------------------------- | -------------------------------------------------------- | ----------------------------------------------------------- |
@@ -15,7 +15,7 @@ Redis je v OmniRoute **neobvezna, šibka odvisnost** — ko Redis ni na voljo, a
 | Shramba kvot                   | `redisQuotaStore.ts`          | Ločen edinec `getRedisClient(url)`                       | `<prefix>quota:*`, nastavljivo za posamezen primerek        |
 | Odklopnik za ogrevanje         | `redisCircuitBreakerStore.ts` | Ločen odjemalec v `circuitBreakerFactory.ts`             | `<prefix>warmup:cb:<connectionId>`                          |
 
-Vse štiri delovne obremenitve uporabljajo skupno predpono imenskega prostora, zato lahko OmniRoute sobiva z drugimi aplikacijami v enem primerku Redis (npr. `127.0.0.1:6379`). Glejte [Imenski prostori ključev](#imenski-prostori-ključev).
+Vse štiri delovne obremenitve uporabljajo skupno predpono imenskega prostora, zato lahko 67router sobiva z drugimi aplikacijami v enem primerku Redis (npr. `127.0.0.1:6379`). Glejte [Imenski prostori ključev](#imenski-prostori-ključev).
 
 ---
 
@@ -38,12 +38,12 @@ Vse štiri delovne obremenitve uporabljajo skupno predpono imenskega prostora, z
 
 ## Imenski prostori ključev
 
-OmniRoute si primerek Redis deli z vsem drugim, kar se izvaja na gostitelju. Brez imenskega prostora bi lahko ključi, kot sta `auth:api_key:<sha256>` ali `rl:*`, prišli v navzkrižje s ključi drugih aplikacij, ki uporabljajo isti Redis (ta primerek izvaja Redis na `127.0.0.1:6379` skupaj z drugimi storitvami).
+67router si primerek Redis deli z vsem drugim, kar se izvaja na gostitelju. Brez imenskega prostora bi lahko ključi, kot sta `auth:api_key:<sha256>` ali `rl:*`, prišli v navzkrižje s ključi drugih aplikacij, ki uporabljajo isti Redis (ta primerek izvaja Redis na `127.0.0.1:6379` skupaj z drugimi storitvami).
 
-Nastavite `REDIS_KEY_PREFIX` na neprazen niz, da dodate predpono **vsakemu** ključu OmniRoute:
+Nastavite `REDIS_KEY_PREFIX` na neprazen niz, da dodate predpono **vsakemu** ključu 67router:
 
 ```bash
-# .env — vsi ključi OmniRoute postanejo omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — vsi ključi 67router postanejo omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -92,7 +92,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # pustite prostor za predpomnilnik strani operacijskega sistema
 maxmemory-policy allkeys-lru         # ob obremenitvi odstrani zastarele vnose avtentikacijskega predpomnilnika
 
-# Trajnost podatkov (izbirno — OmniRoute je varen ob sesutju tudi brez nje)
+# Trajnost podatkov (izbirno — 67router je varen ob sesutju tudi brez nje)
 save 300 1                           # posnetek najmanj vsakih 5 min, če se je spremenil ≥1 ključ
 appendonly no                        # AOF ni potreben; podatke je mogoče ponovno ustvariti
 appendfsync no                       # brez režije fsync (RDB zadostuje)

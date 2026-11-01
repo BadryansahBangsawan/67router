@@ -22,15 +22,15 @@ An engine's role is described by **two independent axes**, encoded together in t
 registry's `RouterBackendDefinition`:
 
 1. **Lifecycle** (`RouterBackendLifecycle`) — _how the engine runs_:
-   - `in-process` — runs inside the OmniRoute Node process (the native TS pipeline).
-   - `supervised` — a local child process OmniRoute installs/starts/stops/health-checks
+   - `in-process` — runs inside the 67router Node process (the native TS pipeline).
+   - `supervised` — a local child process 67router installs/starts/stops/health-checks
      via `ServiceSupervisor`, then consumes as a provider connection.
-   - `external` — an HTTP endpoint OmniRoute dispatches to but does **not** manage
+   - `external` — an HTTP endpoint 67router dispatches to but does **not** manage
      (configured by an env base URL).
    - `disabled` — registered but not selectable.
-2. **Selection axis** (relay routing backend) — _whether the relay dispatches to it_:
-   `RelayRoutingBackend = "ts" | "bifrost" | "auto"` in
-   `src/app/api/v1/relay/chat/completions/routingBackend.ts`.
+2. **Selection axis** (relay routing backend) — _whether the relay dispatches to it_.
+   67router removed the relay proxy route and its `ts` / `bifrost` / `auto` selection,
+   so this axis has no consumer today (see Axis B below).
 
 The mistake to avoid: treating "embedded service" and "routing backend" as one
 list. They are not. A `supervised` engine (9router/cliproxy) is a **provider
@@ -58,7 +58,7 @@ special-casing each sidecar.
 ¹ Bifrost's promotion to a `supervised` embedded service (installable/startable
 from `/api/services/bifrost/`) is tracked in
 [#5817](https://github.com/diegosouzapw/OmniRoute/pull/5817); until it merges,
-Bifrost is `external`-only (reachable solely via `BIFROST_BASE_URL`).
+Bifrost was `external`-only, reachable through the relay route that 67router removed.
 
 `capabilities` (`chat`, `responses`, `streaming`, `tools`, `vision`,
 `oauth-backed`, `dashboard-embed`, `model-sync`, `native-hot-path`) let callers
@@ -107,27 +107,12 @@ the machine-actionable discriminator. Messages are pre-sanitized
 caller **before auth**, because these routes spawn child processes (Hard Rules 15
 and 17). Reaching them through a public tunnel is `403` by design.
 
-## Axis B — relay routing backend (dispatch side)
+## Axis B — relay routing backend (removed)
 
-Only the relay proxy path `/api/v1/relay/chat/completions` selects a dispatch
-backend; the main `/api/v1/chat/completions` surface never consults
-`routingBackend.ts`.
-
-- **Selection** (`resolveRelayRoutingBackend`): a single global env toggle —
-  `OMNIROUTE_RELAY_BACKEND` / `RELAY_ROUTING_BACKEND` ∈ {`ts`, `bifrost`, `auto`}.
-  If unset, `auto` when Bifrost is configured+enabled, else `ts`.
-- **Behavior:**
-  - `bifrost` (forced): Bifrost failure → hard `502`, no fallback.
-  - `auto`: try Bifrost, on failure/cooldown silently fall through to native.
-  - `ts` / post-fallback: the native `open-sse` translator/executor pipeline.
-- **Cooldown:** per-`baseUrl` failure cooldown in `bifrostCooldown.ts`.
-
-Selection is **all-or-nothing at the relay level today** — there is no per-provider
-or per-request engine swap on `release/v3.8.43`. The per-request gate is being added
-by the sidecar-manifest work
-([#5869](https://github.com/diegosouzapw/OmniRoute/pull/5869) manifest +
-[#5870](https://github.com/diegosouzapw/OmniRoute/pull/5870) `shouldTryBifrostForRequest`),
-which lets `auto` route only manifest-eligible providers through Bifrost.
+The relay proxy path (`/api/v1/relay/chat/completions`, its Bifrost sidecar route and
+its backend toggle) was removed from 67router. The main
+`/api/v1/chat/completions` surface never used it. Bifrost remains available only as an
+embedded service on axis A.
 
 ## Dashboard integration
 

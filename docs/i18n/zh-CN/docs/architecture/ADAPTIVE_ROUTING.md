@@ -4,18 +4,18 @@
 
 ---
 
-本文档介绍了为 OmniRoute 新增的反馈驱动型自适应路由基础。其设计刻意保持精简：引入类型化的路由结果通道、用于现有自动组合评分器的在线质量信号、可选的 OpenTelemetry 导出器，以及可解释性端点。它**不会**取代现有的韧性技术栈（断路器、连接冷却、模型锁定、健康矩阵、自动驾驶）——而是对其进行补充。
+本文档介绍了为 67router 新增的反馈驱动型自适应路由基础。其设计刻意保持精简：引入类型化的路由结果通道、用于现有自动组合评分器的在线质量信号、可选的 OpenTelemetry 导出器，以及可解释性端点。它**不会**取代现有的韧性技术栈（断路器、连接冷却、模型锁定、健康矩阵、自动驾驶）——而是对其进行补充。
 
 ## 1. 架构上下文
 
-OmniRoute 是一个数据平面，包含**请求热路径**和**控制/智能平面**。热路径必须保持快速、内存高效、异步、具备韧性且行为可预测。评估、质量评分、实验和历史分析则属于控制平面。
+67router 是一个数据平面，包含**请求热路径**和**控制/智能平面**。热路径必须保持快速、内存高效、异步、具备韧性且行为可预测。评估、质量评分、实验和历史分析则属于控制平面。
 
 ```
 AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   数据平面（快速、同步、内存中）
+│    67router        │   数据平面（快速、同步、内存中）
 │  路由 / 故障转移    │
 │  健康检查 / 防护机制│
 │  缓存 / 流式传输    │
@@ -41,7 +41,6 @@ AI Agent / IDE
 | 影子流量                 | `open-sse/services/combo/shadowRouting.ts`                                   |
 | 防护机制                 | `src/lib/guardrails/`（前置/后置钩子）                                       |
 | 精确缓存                 | `src/lib/semanticCache.ts`（基于签名）                                       |
-| 评估器 / 评估驱动路由    | `src/lib/evals/`、`open-sse/services/evalRouting.ts`                         |
 | 组合决策可解释性         | `open-sse/services/combo/decisionTrace.ts`                                   |
 | 仪表板实时事件           | `src/lib/events/eventBus.ts`（UI 通知通道、`unknown` 载荷、100 条历史记录）  |
 
@@ -214,7 +213,7 @@ TTFT/ITL/中断状态会进入 `RoutingEvent`（`ttftMs`、`itlMs`），并由 O
   `@opentelemetry/*` SDK）。
 - span 遵循 GenAI 语义约定（`gen_ai.provider.name`、
   `gen_ai.request.model`、`gen_ai.usage.input_tokens/output_tokens`、
-  `gen_ai.completion.finish_reason`、`gen_ai.system`），并包含 OmniRoute 路由
+  `gen_ai.completion.finish_reason`、`gen_ai.system`），并包含 67router 路由
   属性（结果、状态、TTFT、重试、回退）。
 - `record()` 只会将事件加入有界缓冲区（O(1)）；后台定时器通过
   `POST {endpoint}/v1/traces` 异步刷新。在过载情况下，会丢弃最旧的事件
@@ -235,15 +234,13 @@ TTFT/ITL/中断状态会进入 `RoutingEvent`（`ttftMs`、`itlMs`），并由 O
 
 ## 6. 评估平面集成（面向 Future AGI）
 
-OmniRoute 将 Future AGI（或任何评估器）视为**潜在的智能/评估后端，而非依赖项**。接入点包括：
+67router 将 Future AGI（或任何评估器）视为**潜在的智能/评估后端，而非依赖项**。接入点包括：
 
 - `RoutingEventSink` 可以将事件异步转发给评估器。
 - `MemoryRoutingEventStore` + 质量快照为评估器提供原始决策流。
 - 未来的 `Evaluator`（确定性评估器、本地判定器、HTTP、WASM）将消费
   事件/追踪并返回 `QualityScore`，该分数会进入相同的
   `getQualityScore`/质量因子路径。
-- 现有的评估驱动路由（`open-sse/services/evalRouting.ts`）在启用时已根据
-  `eval_runs` 通过率对组合目标重新排序。
 
 请求路径上不会同步运行任何评估，并且在没有评估器的情况下，网关仍可完整运行。
 

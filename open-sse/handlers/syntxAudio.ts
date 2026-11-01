@@ -1,10 +1,9 @@
 /**
- * SYNTX.ai audio: TTS (/v1/audio/speech), music (/v1/music/generations),
- * and transcription (/v1/audio/transcriptions).
+ * SYNTX.ai audio: music (/v1/music/generations) and transcription
+ * (/v1/audio/transcriptions).
  */
 import { CORS_HEADERS } from "../utils/cors.ts";
 import { errorResponse, sanitizeErrorMessage } from "../utils/error.ts";
-import { audioStreamResponse } from "../utils/audioResponse.ts";
 import { saveCallLog } from "@/lib/usageDb";
 import {
   SyntxMediaError,
@@ -30,51 +29,6 @@ function tokenFrom(credentials: Creds | null | undefined): string {
     accessToken: credentials?.accessToken,
     providerSpecificData: credentials?.providerSpecificData,
   });
-}
-
-export async function handleSyntxSpeech({
-  model,
-  body,
-  credentials,
-  fetchImpl = fetch,
-}: {
-  model: string;
-  body: Record<string, unknown>;
-  credentials: Creds | null | undefined;
-  fetchImpl?: typeof fetch;
-}): Promise<Response> {
-  const input = typeof body.input === "string" ? body.input.trim() : "";
-  if (!input) return errorResponse(400, "input is required");
-  const token = tokenFrom(credentials);
-  if (!looksLikeJwt(token)) {
-    return errorResponse(
-      401,
-      "Missing SYNTX JWT — paste the Authorization Bearer token from syntx.ai"
-    );
-  }
-
-  try {
-    const { aiName, modelType } = resolveSyntxMediaTarget(model, "speech");
-    const settings = mapSyntxAudioRequestSettings(aiName, modelType, body);
-    const result = await runSyntxAudioGeneration({
-      token,
-      model,
-      prompt: input,
-      kind: "speech",
-      settings,
-      fetchImpl,
-    });
-    const url = firstMediaUrl(result, "audio") || result.media[0]?.url;
-    if (!url) return errorResponse(502, "SYNTX speech completed without an audio URL");
-    const audioRes = await fetchImpl(url);
-    return audioStreamResponse(audioRes);
-  } catch (error) {
-    const status = error instanceof SyntxMediaError ? error.status : 502;
-    return errorResponse(
-      status,
-      sanitizeErrorMessage(error instanceof Error ? error.message : error) || "SYNTX speech failed"
-    );
-  }
 }
 
 export async function handleSyntxTranscription({

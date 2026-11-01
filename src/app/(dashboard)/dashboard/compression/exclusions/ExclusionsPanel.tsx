@@ -88,6 +88,7 @@ export default function ExclusionsPanel() {
         )}
         <Textarea
           rows={8}
+          className="font-mono text-xs"
           value={raw}
           disabled={locked}
           placeholder={t("compressionExclusionsPlaceholder")}

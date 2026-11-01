@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute cung cấp **hai** cách để sử dụng OpenAI Codex:
+67router cung cấp **hai** cách để sử dụng OpenAI Codex:
 
 | Nhà cung cấp           | Cách giao tiếp với OpenAI                                                                                                                                                          | Lưu ý về việc sử dụng                                                      |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | **`codex`**            | Phát lại trực tiếp token OAuth ChatGPT/OpenAI của bạn tới Responses API                                                                                                            | **Có** — phiên chính thức không được cấp quyền để sử dụng qua proxy/router |
-| **`codex-app-server`** | Điều khiển **`codex app-server` của chính Codex CLI** qua JSON-RPC/WebSocket; CLI sở hữu và tự làm mới OAuth của mình (`~/.codex/auth.json`) giống hệt một phiên `codex` tương tác | **Không** — OmniRoute không bao giờ phát lại token tới API                 |
+| **`codex-app-server`** | Điều khiển **`codex app-server` của chính Codex CLI** qua JSON-RPC/WebSocket; CLI sở hữu và tự làm mới OAuth của mình (`~/.codex/auth.json`) giống hệt một phiên `codex` tương tác | **Không** — 67router không bao giờ phát lại token tới API                  |
 
 Vì `codex-app-server` không bao giờ phát lại token nên không có lưu ý hạn chế
 sử dụng liên quan đến việc phát lại phiên. Tuy nhiên, nó yêu cầu phải có **Codex CLI
@@ -20,7 +20,7 @@ có thể truy cập được tại URL app-server đã cấu hình**, và CLI �
 ## 1. Kiến trúc
 
 ```
-┌─ Ứng dụng OmniRoute ─────────────┐        ┌─ Sidecar codex-app-server ──────────┐
+┌─ Ứng dụng 67router ─────────────┐        ┌─ Sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token khả năng truy cập)      │  JSON  │  --ws-auth capability-token         │
@@ -73,7 +73,7 @@ khi tệp không tồn tại hoặc token đã cũ (luôn tạo bản sao lưu).
   `~/.codex` trên host của bạn vào sidecar (`codex-appserver-home`) và bỏ qua bước đăng nhập.
 - **Người dùng công khai, không cài codex cục bộ** — không thành vấn đề: sidecar đã có
   CLI. Người dùng chỉ cần xác thực thông qua dashboard.
-- **OmniRoute trên máy vật lý (không có sidecar, dùng codex trên host)** — trỏ
+- **67router trên máy vật lý (không có sidecar, dùng codex trên host)** — trỏ
   `OMNIROUTE_CODEX_APPSERVER_WS` tới `codex app-server` của riêng bạn và đảm bảo
   codex trên host đã được đăng nhập; gợi ý "codex chưa được cài đặt" sẽ xuất hiện nếu thiếu
   tệp nhị phân.

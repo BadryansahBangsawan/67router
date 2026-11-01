@@ -13,7 +13,7 @@
 
 ## 這是什麼
 
-OmniRoute 將 **Obsidian** 儲存庫連接為**上下文來源**——這是一個本機 Markdown
+67router 將 **Obsidian** 儲存庫連接為**上下文來源**——這是一個本機 Markdown
 知識庫，代理程式可透過內建的 MCP 伺服器讀取及寫入內容。此整合會與桌面
 應用程式中執行的 **Obsidian Local REST API** 社群外掛程式通訊，讓代理程式能夠
 搜尋筆記、讀取/寫入/修補檔案、列出儲存庫內容、處理每日/每週週期性筆記、
@@ -74,7 +74,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV vault 同步
 
 `src/app/api/settings/obsidian/webdav/route.ts` 管理選用的 WebDAV 後端
-vault 同步（由 `src/lib/obsidianSync.ts` 驅動）。啟用後，會將 OmniRoute 指向
+vault 同步（由 `src/lib/obsidianSync.ts` 驅動）。啟用後，會將 67router 指向
 本機 vault 目錄，並產生一組隨機的 WebDAV 使用者名稱與密碼：
 
 ```bash
@@ -108,25 +108,25 @@ Obsidian 設定可透過 `api_key_context_sources` 資料表，將範圍限定�
 
 ## MCP 工具（22 個）
 
-定義於 `open-sse/mcp-server/tools/obsidianTools.ts`。權杖／基底 URL 會在每次呼叫時解析（優先使用各 API 金鑰的設定，接著使用全域設定）。存取 OmniRoute **同步伺服器**的工具（四個 `obsidian_sync_*` 工具）還需要在 OmniRoute 設定中配置同步驗證權杖。
+定義於 `open-sse/mcp-server/tools/obsidianTools.ts`。權杖／基底 URL 會在每次呼叫時解析（優先使用各 API 金鑰的設定，接著使用全域設定）。存取 67router **同步伺服器**的工具（四個 `obsidian_sync_*` 工具）還需要在 67router 設定中配置同步驗證權杖。
 
 ### 讀取工具（`read:obsidian`）
 
-| 工具                         | 說明                                                                             |
-| ---------------------------- | -------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | 檢查 Local REST API 是否可連線且已通過驗證。                                     |
-| `obsidian_search_simple`     | 對筆記內容進行全文搜尋；傳回包含檔案路徑的片段。                                 |
-| `obsidian_search_structured` | 使用 JSON Logic 運算式（and/or/regex/path 篩選器）進行搜尋。                     |
-| `obsidian_read_note`         | 依相對於儲存庫的路徑讀取筆記；可選擇特定標題／區塊／frontmatter。                |
-| `obsidian_list_vault`        | 列出儲存庫中的檔案與目錄（項目樹狀結構）。                                       |
-| `obsidian_get_document_map`  | 取得筆記的標題結構，以標題 → 行號的對應表呈現。                                  |
-| `obsidian_get_note_metadata` | 取得 frontmatter、標籤、連結、字元數／字數，而不包含完整內容。                   |
-| `obsidian_get_active_file`   | 取得 Obsidian 中目前作用中檔案的路徑與內容。                                     |
-| `obsidian_get_periodic_note` | 取得指定日期的每日／每週／每月週期筆記（若省略則為今天）。                       |
-| `obsidian_get_tags`          | 列出儲存庫中的所有標籤及其出現頻率。                                             |
-| `obsidian_list_commands`     | 列出可用的 Obsidian 命令 ID（搭配 `obsidian_execute_command` 使用）。            |
-| `obsidian_sync_status`       | OmniRoute 同步伺服器狀態：執行狀態、儲存庫名稱、連接埠、執行時間、上次同步時間。 |
-| `obsidian_sync_conflicts`    | 列出尚未解決的同步衝突（路徑、衝突路徑、偵測時間）。                             |
+| 工具                         | 說明                                                                            |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | 檢查 Local REST API 是否可連線且已通過驗證。                                    |
+| `obsidian_search_simple`     | 對筆記內容進行全文搜尋；傳回包含檔案路徑的片段。                                |
+| `obsidian_search_structured` | 使用 JSON Logic 運算式（and/or/regex/path 篩選器）進行搜尋。                    |
+| `obsidian_read_note`         | 依相對於儲存庫的路徑讀取筆記；可選擇特定標題／區塊／frontmatter。               |
+| `obsidian_list_vault`        | 列出儲存庫中的檔案與目錄（項目樹狀結構）。                                      |
+| `obsidian_get_document_map`  | 取得筆記的標題結構，以標題 → 行號的對應表呈現。                                 |
+| `obsidian_get_note_metadata` | 取得 frontmatter、標籤、連結、字元數／字數，而不包含完整內容。                  |
+| `obsidian_get_active_file`   | 取得 Obsidian 中目前作用中檔案的路徑與內容。                                    |
+| `obsidian_get_periodic_note` | 取得指定日期的每日／每週／每月週期筆記（若省略則為今天）。                      |
+| `obsidian_get_tags`          | 列出儲存庫中的所有標籤及其出現頻率。                                            |
+| `obsidian_list_commands`     | 列出可用的 Obsidian 命令 ID（搭配 `obsidian_execute_command` 使用）。           |
+| `obsidian_sync_status`       | 67router 同步伺服器狀態：執行狀態、儲存庫名稱、連接埠、執行時間、上次同步時間。 |
+| `obsidian_sync_conflicts`    | 列出尚未解決的同步衝突（路徑、衝突路徑、偵測時間）。                            |
 
 ### 寫入工具（`write:obsidian`）
 

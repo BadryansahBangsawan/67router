@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (Igbo)
+# Codex CLI — Configuration with 67router (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-Ntụziaka zuru ezu maka iji Codex CLI nke ahaziri ka ọ jiri OmniRoute dịka backend dakọtara na OpenAI.
+Ntụziaka zuru ezu maka iji Codex CLI nke ahaziri ka ọ jiri 67router dịka backend dakọtara na OpenAI.
 
 ---
 
@@ -62,17 +62,17 @@ command -v codex
 codex --version
 ```
 
-### OmniRoute mpaghara na-enweghị authentication: placeholder key ezuru
+### 67router mpaghara na-enweghị authentication: placeholder key ezuru
 
 Codex na-enyocha na environment variable nke `env_key` kpọrọ aha dị
-**tupu** arịrịọ mbụ apụ na CLI. Ọ bụrụ na instance OmniRoute **mpaghara** gị
+**tupu** arịrịọ mbụ apụ na CLI. Ọ bụrụ na instance 67router **mpaghara** gị
 achọghị auth, placeholder ọ bụla na-abụghị ihe efu ga-arụ ọrụ:
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-Jiri ezigbo key kama nke ahụ mgbe e chebere server OmniRoute gị ma ọ bụ mgbe ọ dị n’ebe dị anya.
+Jiri ezigbo key kama nke ahụ mgbe e chebere server 67router gị ma ọ bụ mgbe ọ dị n’ebe dị anya.
 
 > **Nhọrọ host ndị a na-ejikarị**
 >
@@ -88,19 +88,19 @@ Jiri ezigbo key kama nke ahụ mgbe e chebere server OmniRoute gị ma ọ bụ 
 
 Codex CLI kwụsịrị ịkwado `wire_api = "chat"` (Chat Completions) na Febrụwarị 2026 ma ugbu a **na-achọ** `wire_api = "responses"` (OpenAI Responses API). Ịtọ `wire_api = "chat"` na-eme ka mmalite daa ozugbo kemgbe v0.138.
 
-Ọtụtụ providers, gụnyere GLM na Kimi, ka na-enye naanị Chat Completions endpoint. DeepSeek V4 na-enyezi Responses API nke ya yana endpoint dakọtara na Anthropic; OmniRoute na-eji Responses dịka ndabara ma na-enye connection DeepSeek ọ bụla ohere ịhọrọ ndakọrịta Anthropic.
+Ọtụtụ providers, gụnyere GLM na Kimi, ka na-enye naanị Chat Completions endpoint. DeepSeek V4 na-enyezi Responses API nke ya yana endpoint dakọtara na Anthropic; 67router na-eji Responses dịka ndabara ma na-enye connection DeepSeek ọ bụla ohere ịhọrọ ndakọrịta Anthropic.
 
-**OmniRoute na-edozi nke a n’ụzọ doro onye ọrụ anya:**
+**67router na-edozi nke a n’ụzọ doro onye ọrụ anya:**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → OmniRoute na-ahọrọ protocol nke provider ahụ ma na-atụgharị ya mgbe ọ dị mkpa
+  → POST /v1/responses (67router)
+    → 67router na-ahọrọ protocol nke provider ahụ ma na-atụgharị ya mgbe ọ dị mkpa
     → POST /responses (DeepSeek V4) ma ọ bụ /chat/completions (Mistral / GLM / Kimi / ndị ọzọ)
 ```
 
-Ọ dịghị mgbe ị ga-achọ translation proxy dị iche mgbe ị na-eji OmniRoute. **Models niile na-eji `wire_api = "responses"`** — OmniRoute na-ahụ maka ihe ndị ọzọ.
+Ọ dịghị mgbe ị ga-achọ translation proxy dị iche mgbe ị na-eji 67router. **Models niile na-eji `wire_api = "responses"`** — 67router na-ahụ maka ihe ndị ọzọ.
 
 > **`wire_api` bụ ndabara** — field ahụ na-eji `"responses"` dịka ndabara, a pụkwara iwepụ ya kpamkpam na `config.toml`. Tọọ ya kpọmkwem naanị ma ọ bụrụ na ị na-edekọ ebumnuche ahụ.
 
@@ -121,7 +121,7 @@ Codex CLI
 
 ### Windo ọnọdụ dịka model si dị
 
-| Model                                | OmniRoute ID                         | Windo ọnọdụ                             | `auto_compact` | `tool_output_limit` |
+| Model                                | 67router ID                          | Windo ọnọdụ                             | `auto_compact` | `tool_output_limit` |
 | ------------------------------------ | ------------------------------------ | --------------------------------------- | -------------- | ------------------- |
 | GPT-5.5                              | `cx/gpt-5.5`                         | 400k a pụrụ ịtụkwasị obi (1M kacha elu) | 350,000        | 32,768              |
 | Kimi K2.7 (na-eche echiche)          | `kmc/kimi-k2.7`                      | 131,072                                 | 112,000        | 32,768              |
@@ -149,16 +149,16 @@ Codex CLI
 
 ## Prefix ụdịdị: `cx/`
 
-Ụdịdị Codex niile dị na OmniRoute na-eji prefix `cx/`:
+Ụdịdị Codex niile dị na 67router na-eji prefix `cx/`:
 
-| Aha Codex CLI           | Ụdịdị OmniRoute    |
+| Aha Codex CLI           | Ụdịdị 67router     |
 | ----------------------- | ------------------ |
 | `cx/gpt-5.5`            | GPT-5.5 ọkọlọtọ    |
 | `cx/gpt-5.4`            | GPT-5.4 ọkọlọtọ    |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini       |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini |
 
-Ndị na-eweta ọrụ ndị ọzọ na-eji prefix nke ha (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — prefix ahụ kwekọrọ na aha nnọchi onye na-eweta ọrụ na OmniRoute.
+Ndị na-eweta ọrụ ndị ọzọ na-eji prefix nke ha (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — prefix ahụ kwekọrọ na aha nnọchi onye na-eweta ọrụ na 67router.
 
 ---
 
@@ -188,9 +188,9 @@ model_reasoning_effort = "xhigh"   # ma ọ bụ ultra mgbe a na-akwado ya
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### Oke Echiche OmniRoute (ntọala sava)
+### Oke Echiche 67router (ntọala sava)
 
-N’elu igwe nnabata OmniRoute, **Settings → AI → Thinking Budget** ga-abụrịrị **`passthrough`** ka mgbalị/nchịkọta Codex ruo n’ọrụ dị n’elu. Ọnọdụ **`auto` strips** na-ewepụ oghere `reasoning` / `reasoning_effort` niile nke klayenti ma mee ka panel echiche tọgbọ chakoo ọbụna mgbe ahaziri Codex nke ọma.
+N’elu igwe nnabata 67router, **Settings → AI → Thinking Budget** ga-abụrịrị **`passthrough`** ka mgbalị/nchịkọta Codex ruo n’ọrụ dị n’elu. Ọnọdụ **`auto` strips** na-ewepụ oghere `reasoning` / `reasoning_effort` niile nke klayenti ma mee ka panel echiche tọgbọ chakoo ọbụna mgbe ahaziri Codex nke ọma.
 
 Ntuziaka zuru ezu: [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -276,10 +276,10 @@ codex -p chat     # cx/gpt-5.5, atọrọghị mgbalị (ndabara sava)
 
 ## Iji `omniroute setup-codex` mepụta profaịlụ na-akpaghị aka
 
-Ọ bụrụ na ị na-agba OmniRoute na VPS, ị nwere ike imepụta faịlụ profaịlụ na-akpaghị aka site na katalọgụ model dị ugbu a:
+Ọ bụrụ na ị na-agba 67router na VPS, ị nwere ike imepụta faịlụ profaịlụ na-akpaghị aka site na katalọgụ model dị ugbu a:
 
 ```bash
-# Site na VPS (na-eji OmniRoute mpaghara na port 20128)
+# Site na VPS (na-eji 67router mpaghara na port 20128)
 omniroute setup-codex
 
 # Site na igwe ọ bụla — tụọ ya aka na VPS gị
@@ -306,7 +306,7 @@ ga-akwụsị mmepụta tupu e dee profaịlụ.
 Mgbe ị nyere `--api-key` ma ọ bụ `OMNIROUTE_API_KEY`, provider akọwapụtara ọhụrụ ga-arụtụ aka na
 `env_key = "OMNIROUTE_API_KEY"`; a naghị echekwa key ahụ n'onwe ya ma ọ bụ bipụta ya na
 nlele tupu ide. Tọọ variable ahụ na environment ebe ị na-ebido Codex. Ọ bụrụ na enyeghị
-key, nkọwa ọhụrụ ahụ agaghị achọ key, maka instance OmniRoute
+key, nkọwa ọhụrụ ahụ agaghị achọ key, maka instance 67router
 ahaziri ịnakwere arịrịọ na-enweghị authentication.
 
 Auto-sync katalọgụ a na-ahọrọ isonye na ya nke akọwara n'okpuru na-echekwa nkọwa provider ndị dịlarị
@@ -314,16 +314,16 @@ n'ime overlay mana ọ naghị ebido ntọala provider ọhụrụ; buru ụzọ
 site na setup kpọmkwem ma ọ bụ dashboard. A naghị egosi ntọala provider ndị dị adị
 na nlele dry-run n'ihi na ha nwere ike ịnwe credentials ndị operator na-elekọta.
 
-OmniRoute nwekwara ike ime **auto-sync** nke otu faịlụ profaịlụ ndị a mgbe nchọpụta/mbubata model provider gara nke ọma gbanwere katalọgụ dị ugbu a. Nke a bụ **ihe a ga-ahọrọ isonye na ya ma agbanyụghị ya na ndabara**: gbanye ya site na **CLI Code dashboard** ("CLI profile auto-sync" → Codex), ma ọ bụ tọọ `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (ọ na-asọpụrụkwa `CLI_ALLOW_CONFIG_WRITES`, nke agbanyere na ndabara). Mgbe agbanyere ya, ọ na-ede naanị faịlụ profaịlụ `~/.codex/*.config.toml` dị iche iche; ọ dịghị mgbe ọ na-agbanwe `~/.codex/config.toml` nke na-arụ ọrụ/ndabara, ntọala Codex-lb, auth, ma ọ bụ nhọrọ provider.
+67router nwekwara ike ime **auto-sync** nke otu faịlụ profaịlụ ndị a mgbe nchọpụta/mbubata model provider gara nke ọma gbanwere katalọgụ dị ugbu a. Nke a bụ **ihe a ga-ahọrọ isonye na ya ma agbanyụghị ya na ndabara**: gbanye ya site na **CLI Code dashboard** ("CLI profile auto-sync" → Codex), ma ọ bụ tọọ `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (ọ na-asọpụrụkwa `CLI_ALLOW_CONFIG_WRITES`, nke agbanyere na ndabara). Mgbe agbanyere ya, ọ na-ede naanị faịlụ profaịlụ `~/.codex/*.config.toml` dị iche iche; ọ dịghị mgbe ọ na-agbanwe `~/.codex/config.toml` nke na-arụ ọrụ/ndabara, ntọala Codex-lb, auth, ma ọ bụ nhọrọ provider.
 
 ---
 
 ## Iji `omniroute launch-codex` malite Codex
 
-Ọ na-enyocha ahụike instance OmniRoute gị tupu ọ malite Codex:
+Ọ na-enyocha ahụike instance 67router gị tupu ọ malite Codex:
 
 ```bash
-# Malite site na OmniRoute mpaghara (ọdụ ụgbọ mmiri ndabara bụ 20128)
+# Malite site na 67router mpaghara (ọdụ ụgbọ mmiri ndabara bụ 20128)
 omniroute launch-codex
 
 # Jiri otu profaịlụ akọwapụtara malite
@@ -473,7 +473,7 @@ N'ime session mmekọrịta:
 
 ## Ọrụ ndị na-ewe ogologo oge
 
-Ndabara OmniRoute abụọ nwere ike imebi session Codex CLI na-ewe ọtụtụ awa n'enweghị ọkwa. Ọ dịghị nke ọ bụla n'ime ha bụ ntọala Codex CLI — ha abụọ dị n'akụkụ OmniRoute. Ndị ọrụ na-ebufe nhazi site na proxy upstream ndị na-ejikọ account n'otu ebe ma gbanyụọ nkwụsị n'ihi ịnọ nkịtị na-ezutekarị ha abụọ, wee kwubie na OmniRoute “enweghị ike idobe session ogologo oge.”
+Ndabara 67router abụọ nwere ike imebi session Codex CLI na-ewe ọtụtụ awa n'enweghị ọkwa. Ọ dịghị nke ọ bụla n'ime ha bụ ntọala Codex CLI — ha abụọ dị n'akụkụ 67router. Ndị ọrụ na-ebufe nhazi site na proxy upstream ndị na-ejikọ account n'otu ebe ma gbanyụọ nkwụsị n'ihi ịnọ nkịtị na-ezutekarị ha abụọ, wee kwubie na 67router “enweghị ike idobe session ogologo oge.”
 
 | Mgbaàmà                                                                              | Ihe nwere ike ịkpata ya                                                      | Ihe njikwa               |
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | ------------------------ |
@@ -495,7 +495,7 @@ Mkparịta ụka ndị metụtara ya: [#7126](https://github.com/diegosouzapw/Om
 
 **Ihe na-emebi mgbe ọ nọgidere na 0**
 
-A na-eme routing nke turn ọ bụla n'ime mkparịta ụka Codex nwere ọtụtụ turn n'onwe ya site na combo strategy na-arụ ọrụ, ọ nwekwara ike ịbanye na **account dị iche n'oge turn ọ bụla**. Nke ahụ na-emebi ịdịgide session / prompt-cache upstream. OmniRoute na-enyocha naanị header session Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) na field body dịka `prompt_cache_key` / `session_id` mgbe TTL karịrị `0` (`extractSessionAffinityKey` n'ime `src/sse/services/auth.ts`).
+A na-eme routing nke turn ọ bụla n'ime mkparịta ụka Codex nwere ọtụtụ turn n'onwe ya site na combo strategy na-arụ ọrụ, ọ nwekwara ike ịbanye na **account dị iche n'oge turn ọ bụla**. Nke ahụ na-emebi ịdịgide session / prompt-cache upstream. 67router na-enyocha naanị header session Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) na field body dịka `prompt_cache_key` / `session_id` mgbe TTL karịrị `0` (`extractSessionAffinityKey` n'ime `src/sse/services/auth.ts`).
 
 **Ihe akwadoro maka otu ọrụ na-ewe ọtụtụ awa**
 
@@ -517,13 +517,13 @@ Tọọ TTL ka ọ dị **elu karịa ogologo oge wall-clock a tụrụ anya na 
 
 Ntugharị echiche / ngwá ọrụ Codex nke gbara nkịtị ihe karịrị nkeji 10 na-enweghị **ezigbo iberibe data si upstream** ga-emechi n’ike site na SSE idle watchdog (`open-sse/utils/stream.ts`). Onye ahịa na-ahụkarị naanị njikọ dara na-enweghị ozi ọ bụla — nke dabara na “kwụsịrị n’onwe ya na-enweghị ọkwa ọ bụla.”
 
-Nkọwa dị oke mkpa: SSE **heartbeat** nke OmniRoute mepụtara anaghị eme ka elekere idle malitegharịa. Ọ bụ naanị ezigbo iberibe body si upstream na-emelite `lastChunkTime`. N’anya watchdog ahụ, model dị jụụ nke ka “na-eche echiche” yiri nnọọ upstream kwụsịrị ịzaghachi.
+Nkọwa dị oke mkpa: SSE **heartbeat** nke 67router mepụtara anaghị eme ka elekere idle malitegharịa. Ọ bụ naanị ezigbo iberibe body si upstream na-emelite `lastChunkTime`. N’anya watchdog ahụ, model dị jụụ nke ka “na-eche echiche” yiri nnọọ upstream kwụsịrị ịzaghachi.
 
 Oge enweghị ọrụ body nke Undici metụtara nke a: `FETCH_BODY_TIMEOUT_MS` (ọ na-eji otu ntọala mbụ nke nkeji 10; `0` na-agbanyụ ya). Maka streaming, `FETCH_TIMEOUT_MS` na-emetụta naanị nhazi njikọ / headers mbụ — ozugbo stream malitere ịrụ ọrụ, `STREAM_IDLE_TIMEOUT_MS` na `FETCH_BODY_TIMEOUT_MS` na-achịkwa nkwụsị.
 
 **Ihe akwadoro maka otu task na-ewe ọtụtụ awa**
 
-N’ime environment nke process OmniRoute (`.env` / compose / systemd):
+N’ime environment nke process 67router (`.env` / compose / systemd):
 
 ```bash
 # Gbanyụọ oke nkwụsị n'ihi stream idle na body inactivity maka ntụgharị echiche dị ogologo
@@ -539,12 +539,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-Malitegharịa OmniRoute mgbe ị gbanwechara env vars ndị a.
+Malitegharịa 67router mgbe ị gbanwechara env vars ndị a.
 
 ### Usoro doro anya — task Codex na-ewe ọtụtụ awa
 
 1. **Kpọgide account ahụ:** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200` (12h) ma ọ bụ `86400` (24h kachasị).
-2. **Bulie / gbanyụọ oke idle** n’ime environment OmniRoute:
+2. **Bulie / gbanyụọ oke idle** n’ime environment 67router:
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -552,7 +552,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. Debe `config.toml` Codex a na-ejikarị (`wire_api = "responses"`, `base_url` ziri ezi, `OMNIROUTE_API_KEY`) — enweghị nhazi affinity/idle n’akụkụ Codex maka omume abụọ a.
-4. Malitegharịa OmniRoute, wee malite task Codex ahụ dị ogologo.
+4. Malitegharịa 67router, wee malite task Codex ahụ dị ogologo.
 
 ### Mkpebi maka ndabara (#7287)
 
@@ -565,13 +565,13 @@ FETCH_BODY_TIMEOUT_MS=0
 
 ### Ịchọpụta nkwụsị idle
 
-Mgbe idle watchdog rụrụ ọrụ, OmniRoute na-edekọ ahịrị yiri nke a:
+Mgbe idle watchdog rụrụ ọrụ, 67router na-edekọ ahịrị yiri nke a:
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-Jiri grep chọọ `Idle timeout: no data from` (ma ọ bụ code `stream_idle_timeout` / aha error `StreamIdleTimeoutError`). Akụkụ provider ahụ bụ ihe ọ bụla OmniRoute jiri maka request ahụ (`codex`, id provider ọzọ, ma ọ bụ `provider` ma ọ bụrụ na amaghị ya) — ọ bụghị mgbe niile ka ọ bụ kpọmkwem eriri `codex`.
+Jiri grep chọọ `Idle timeout: no data from` (ma ọ bụ code `stream_idle_timeout` / aha error `StreamIdleTimeoutError`). Akụkụ provider ahụ bụ ihe ọ bụla 67router jiri maka request ahụ (`codex`, id provider ọzọ, ma ọ bụ `provider` ma ọ bụrụ na amaghị ya) — ọ bụghị mgbe niile ka ọ bụ kpọmkwem eriri `codex`.
 
 ---
 
@@ -581,7 +581,7 @@ Jiri grep chọọ `Idle timeout: no data from` (ma ọ bụ code `stream_idle_t
 Wepụ `wire_api = "chat"` na nhazi gị. Tọọ `wire_api = "responses"` ma ọ bụ hapụ oghere ahụ (ọ na-eji `"responses"` na ndabara kemgbe v0.138).
 
 **`Error: model not found`**
-Nyochaa na model ahụ dị na OmniRoute ma nwee prefix ziri ezi. Jiri `omniroute models list` ma ọ bụ mepee `/dashboard/providers/<provider>`.
+Nyochaa na model ahụ dị na 67router ma nwee prefix ziri ezi. Jiri `omniroute models list` ma ọ bụ mepee `/dashboard/providers/<provider>`.
 
 **`Authentication error`**
 Kwenye na ebupụla `OMNIROUTE_API_KEY`: `echo $OMNIROUTE_API_KEY`.
@@ -589,11 +589,11 @@ Kwenye na ebupụla `OMNIROUTE_API_KEY`: `echo $OMNIROUTE_API_KEY`.
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
 Codex na-enyocha na env var ahụ dị tupu o zipụ arịrịọ mbụ. Bupụ
 igodo n'ezie maka sava e chebere, ma ọ bụ placeholder na-abụghị ihe tọgbọ chakoo dịka
-`OMNIROUTE_API_KEY=local` mgbe instance OmniRoute **local** gị anaghị
+`OMNIROUTE_API_KEY=local` mgbe instance 67router **local** gị anaghị
 achọ nkwenye njirimara. Malitegharịa shell ma ọ bụrụ na ị gbakwunyere ya na `~/.bashrc` ma ọ bụ `~/.zshrc`.
 
 **`Connection refused`**
-Nyochaa na OmniRoute na-arụ ọrụ nakwa na host/port nke `base_url` ziri ezi maka netwọkụ gị (local vs Tailscale vs VPS).
+Nyochaa na 67router na-arụ ọrụ nakwa na host/port nke `base_url` ziri ezi maka netwọkụ gị (local vs Tailscale vs VPS).
 
 **Session na-akwụsị na mberede mgbe ọ rutere nso oke context**
 Tọọ `model_context_window` na `model_auto_compact_token_limit` kpọmkwem. Lee tebụl context window dị n'elu.
@@ -605,4 +605,4 @@ Belata `model_auto_compact_token_limit` ruo 80–85% nke window ahụ. Etinyekwa
 Kwenye na faịlụ ahụ dị na `~/.codex/<name>.config.toml` (enweghị prefix `profile-`). Gbaa `ls ~/.codex/*.config.toml`.
 
 **Ọrụ Codex toro ogologo na-akwụsị n'etiti ya / na-agbanwe akaụntụ n'etiti turns**
-Lee [Ọrụ na-ewe ogologo oge](#long-running-tasks). Kwado session affinity (TTL karịrị ogologo oge ọrụ ahụ) ma bulie ma ọ bụ gbanyụọ `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Jiri grep chọọ `Idle timeout: no data from` n'ime log OmniRoute.
+Lee [Ọrụ na-ewe ogologo oge](#long-running-tasks). Kwado session affinity (TTL karịrị ogologo oge ọrụ ahụ) ma bulie ma ọ bụ gbanyụọ `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Jiri grep chọọ `Idle timeout: no data from` n'ime log 67router.

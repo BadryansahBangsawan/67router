@@ -25,7 +25,7 @@ A máa fo ìlà àkọ́kọ́ tí column àkọ́kọ́ rẹ̀ jẹ́ ọ̀rọ
 Ṣe ìgbàsílẹ̀ fáìlì ìbẹ̀rẹ̀ láti inú modal ìgbéwọlé (**Ṣe ìgbàsílẹ̀ àdàkọ CSV**). Àpẹẹrẹ:
 
 ```csv
-# Ìgbéwọlé olùpèsè OmniRoute (àwọn column ní ìtẹ̀lé ipò)
+# Ìgbéwọlé olùpèsè 67router (àwọn column ní ìtẹ̀lé ipò)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

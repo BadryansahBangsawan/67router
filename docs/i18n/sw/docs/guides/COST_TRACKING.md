@@ -4,7 +4,7 @@
 
 ---
 
-Jinsi OmniRoute inavyokadiria, kurekodi, na kuripoti gharama ya kila ombi — na kwa nini
+Jinsi 67router inavyokadiria, kurekodi, na kuripoti gharama ya kila ombi — na kwa nini
 nambari ya dashibodi ni **kifuatiliaji cha akiba**, si bili.
 
 Tazama pia: [Mwongozo wa Mtumiaji](./USER_GUIDE.md) · [Matunzio ya Vipengele](./FEATURES.md)
@@ -13,11 +13,11 @@ Tazama pia: [Mwongozo wa Mtumiaji](./USER_GUIDE.md) · [Matunzio ya Vipengele](.
 
 ## Ni nini (na si nini)
 
-OmniRoute huhusisha gharama ya USD kwa kila ombi na kila ukamilishaji kwa kuzidisha idadi
+67router huhusisha gharama ya USD kwa kila ombi na kila ukamilishaji kwa kuzidisha idadi
 ya tokeni kwa viwango vya bei vya modeli. Nambari hizi huendesha dashibodi ya **Gharama**,
 CLI ya `omniroute cost` / `omniroute usage`, uhamishaji wa CSV/JSON, na bajeti za kila ufunguo wa API.
 
-> **"Gharama" ya dashibodi ni kifuatiliaji cha akiba, si bili.** OmniRoute haikutozi kamwe
+> **"Gharama" ya dashibodi ni kifuatiliaji cha akiba, si bili.** 67router haikutozi kamwe
 > — inaelekeza maombi yako kwa watoa huduma ambao tayari umeunganisha (usajili wako
 > mwenyewe, viwango vya matumizi bila malipo, na funguo za API). "$290 ya jumla ya gharama"
 > iliyokusanywa kikamilifu kwenye modeli zisizolipishwa inamaanisha takriban **$290 ambazo
@@ -30,7 +30,7 @@ ya dashibodi ni kifuatiliaji cha akiba, si bili").
 
 Kwa sababu nambari hiyo ni makadirio:
 
-- Inategemea jedwali la bei ambalo OmniRoute inalo kwa kila modeli. Modeli isiyo na ingizo
+- Inategemea jedwali la bei ambalo 67router inalo kwa kila modeli. Modeli isiyo na ingizo
   la bei huchangia gharama ya `0` (huonekana kama safu mlalo ya "Ya Zamani / Bila Malipo" katika kichunguzi).
 - Trafiki ya kiwango cha matumizi bila malipo na ya usajili bado hukusanya gharama
   _iliyokadiriwa_ — hicho ndicho kiasi unachookoa, si kiasi unachodaiwa.
@@ -48,7 +48,7 @@ Gharama hutoka kwenye jedwali la bei linalotatuliwa kwa mpangilio huu wa kipaumb
 2. **Bei za nje zilizosawazishwa** — zinazopakuliwa kutoka kwenye
    `model_prices_and_context_window.json` ya umma ya LiteLLM wakati usawazishaji umewashwa
    (huhifadhiwa katika nafasi tofauti ya majina ya `pricing_synced` ili zisibadilishe kamwe mabadiliko yako).
-3. **Chaguo-msingi zilizowekwa moja kwa moja kwenye msimbo** — husambazwa pamoja na OmniRoute.
+3. **Chaguo-msingi zilizowekwa moja kwa moja kwenye msimbo** — husambazwa pamoja na 67router.
 
 Usawazishaji wa bei za nje ni wa **kujiunga kwa hiari**, na umezimwa kwa chaguo-msingi. Vigeu husika vya mazingira
 (tazama [`.env.example`](../../.env.example)):
@@ -193,7 +193,7 @@ ilipobainishwa vinginevyo.
 
 ## CLI
 
-CLI ya OmniRoute hutoa amri za gharama, matumizi na bei (zilizosajiliwa katika
+CLI ya 67router hutoa amri za gharama, matumizi na bei (zilizosajiliwa katika
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

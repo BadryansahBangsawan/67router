@@ -4,7 +4,7 @@
 
 ---
 
-„OmniRoute“ glaudinimas grindžiamas variklių kontraktais. Režimas gali tiesiogiai vykdyti vieną variklį
+„67router“ glaudinimas grindžiamas variklių kontraktais. Režimas gali tiesiogiai vykdyti vieną variklį
 (`caveman` arba `rtk`) arba deterministinę sudėtinę grandinę, kuri paeiliui vykdo kelis variklius.
 
 ## Režimai
@@ -44,9 +44,9 @@ sesija, kuri dar nesukaupė istorijos, sustoja ties `below_min_chars` ir varikli
 netransformuoja. Štai kodėl numatytasis yra `aggressive`, o ne saugiausias profilis.
 
 Paketas išsprendžia savo modelio apimtį ir profilį iš savo aplinkos konfigūracijos.
-OmniRoute niekada nedeleguoja sprendimo: adapteris priskiria modelio vartus prie paketo
+67router niekada nedeleguoja sprendimo: adapteris priskiria modelio vartus prie paketo
 griežčiausios apimties, todėl pagrindinės aplinkos nustatymai gali tik susiaurinti
-leidžiamųjų sąrašą, bet niekada jo neišplėsti už OmniRoute išmatuotų kvitų ribų.
+leidžiamųjų sąrašą, bet niekada jo neišplėsti už 67router išmatuotų kvitų ribų.
 
 ## Variklių registras
 
@@ -109,7 +109,7 @@ Caveman režimas skirtas semantiniam įprasto teksto glaudinimui:
 
 Valdymo skydelyje ši funkcija pasiekiama per `Dashboard -> Context & Cache -> Caveman`.
 
-Caveman pirminio projekto duomenimis, išvesties žetonų skaičius sumažėja `~75%`, etalonuose vidutiniškai sutaupoma `65%` išvesties, o diapazonas siekia `22-87%`; įvesties glaudinimo priemonė sutaupo `~46%`. Dokumentuodama sudėtines užklausų ir konteksto santaupas, OmniRoute naudoja Caveman įvesties glaudinimo rodiklį; Caveman išvesties režimas išlieka atskira atsakymo elgsenos funkcija.
+Caveman pirminio projekto duomenimis, išvesties žetonų skaičius sumažėja `~75%`, etalonuose vidutiniškai sutaupoma `65%` išvesties, o diapazonas siekia `22-87%`; įvesties glaudinimo priemonė sutaupo `~46%`. Dokumentuodama sudėtines užklausų ir konteksto santaupas, 67router naudoja Caveman įvesties glaudinimo rodiklį; Caveman išvesties režimas išlieka atskira atsakymo elgsenos funkcija.
 
 ## RTK
 

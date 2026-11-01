@@ -27,7 +27,6 @@ const stats = Object.fromEntries(
     "audio",
     "local",
     "upstreamproxy",
-    "cloudagent",
     "ide",
     "webfetch",
   ].map((k) => [k, stat])

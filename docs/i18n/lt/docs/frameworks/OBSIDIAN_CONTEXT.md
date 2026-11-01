@@ -13,7 +13,7 @@
 
 ## Kas tai yra
 
-OmniRoute prisijungia prie **Obsidian** saugyklos kaip prie **konteksto šaltinio** — vietinės Markdown
+67router prisijungia prie **Obsidian** saugyklos kaip prie **konteksto šaltinio** — vietinės Markdown
 žinių bazės, kurią agentai skaito ir keičia naudodami integruotą MCP serverį.
 Integracija komunikuoja su **Obsidian Local REST API** bendruomenės papildiniu, veikiančiu
 darbalaukio programoje, todėl agentai gali ieškoti užrašų, skaityti / rašyti / dalinai keisti failus, peržiūrėti
@@ -77,7 +77,7 @@ iškviesdamas Local REST API būsenos galinį tašką.
 ### Saugyklos sinchronizavimas per WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` valdo pasirinktinį WebDAV pagrįstą
-saugyklos sinchronizavimą (kurį vykdo `src/lib/obsidianSync.ts`). Jį įjungus, OmniRoute
+saugyklos sinchronizavimą (kurį vykdo `src/lib/obsidianSync.ts`). Jį įjungus, 67router
 nurodomas vietinis saugyklos katalogas ir sugeneruojama atsitiktinė WebDAV naudotojo
 vardo bei slaptažodžio pora:
 
@@ -118,27 +118,27 @@ sinchronizavimo prieigos rakto veikseną.
 ## MCP įrankiai (22)
 
 Apibrėžti faile `open-sse/mcp-server/tools/obsidianTools.ts`. Prieigos raktas / bazinis URL nustatomi
-kiekvienam iškvietimui (pirmiausia pagal API raktą, tada visuotiniai). Įrankiams, kurie kreipiasi į OmniRoute **sinchronizavimo serverį**
+kiekvienam iškvietimui (pirmiausia pagal API raktą, tada visuotiniai). Įrankiams, kurie kreipiasi į 67router **sinchronizavimo serverį**
 (keturiems `obsidian_sync_*` įrankiams), papildomai reikalingas sinchronizavimo autentifikavimo prieigos raktas, sukonfigūruotas
-OmniRoute nustatymuose.
+67router nustatymuose.
 
 ### Skaitymo įrankiai (`read:obsidian`)
 
-| Įrankis                      | Aprašymas                                                                                                                            |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `obsidian_check_status`      | Patikrinti, ar vietinė REST API yra pasiekiama ir autentifikuota.                                                                    |
-| `obsidian_search_simple`     | Viso teksto paieška užrašų turinyje; grąžina fragmentus su failų keliais.                                                            |
-| `obsidian_search_structured` | Paieška naudojant JSON Logic išraišką (and/or/regex/path filtrus).                                                                   |
-| `obsidian_read_note`         | Skaityti užrašą pagal saugyklos atžvilgiu nurodytą kelią; pasirinktinai konkrečią antraštę / bloką / metaduomenis.                   |
-| `obsidian_list_vault`        | Išvardyti saugyklos failus ir katalogus (įrašų medį).                                                                                |
-| `obsidian_get_document_map`  | Gauti užrašo antraščių struktūrą kaip antraščių → eilučių numerių žemėlapį.                                                          |
-| `obsidian_get_note_metadata` | Gauti metaduomenis, žymas, nuorodas ir simbolių / žodžių skaičių be viso turinio.                                                    |
-| `obsidian_get_active_file`   | Gauti šiuo metu aktyvaus Obsidian failo kelią ir turinį.                                                                             |
-| `obsidian_get_periodic_note` | Gauti nurodytos datos dienos / savaitės / mėnesio periodinį užrašą (jei praleista – šiandienos).                                     |
-| `obsidian_get_tags`          | Išvardyti visas saugyklos žymas ir jų dažnius.                                                                                       |
-| `obsidian_list_commands`     | Išvardyti galimus Obsidian komandų ID (naudoti su `obsidian_execute_command`).                                                       |
-| `obsidian_sync_status`       | OmniRoute sinchronizavimo serverio būsena: ar veikia, saugyklos pavadinimas, prievadas, veikimo trukmė, paskutinis sinchronizavimas. |
-| `obsidian_sync_conflicts`    | Išvardyti neišspręstus sinchronizavimo konfliktus (kelias, konflikto kelias, aptikimo laikas).                                       |
+| Įrankis                      | Aprašymas                                                                                                                           |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Patikrinti, ar vietinė REST API yra pasiekiama ir autentifikuota.                                                                   |
+| `obsidian_search_simple`     | Viso teksto paieška užrašų turinyje; grąžina fragmentus su failų keliais.                                                           |
+| `obsidian_search_structured` | Paieška naudojant JSON Logic išraišką (and/or/regex/path filtrus).                                                                  |
+| `obsidian_read_note`         | Skaityti užrašą pagal saugyklos atžvilgiu nurodytą kelią; pasirinktinai konkrečią antraštę / bloką / metaduomenis.                  |
+| `obsidian_list_vault`        | Išvardyti saugyklos failus ir katalogus (įrašų medį).                                                                               |
+| `obsidian_get_document_map`  | Gauti užrašo antraščių struktūrą kaip antraščių → eilučių numerių žemėlapį.                                                         |
+| `obsidian_get_note_metadata` | Gauti metaduomenis, žymas, nuorodas ir simbolių / žodžių skaičių be viso turinio.                                                   |
+| `obsidian_get_active_file`   | Gauti šiuo metu aktyvaus Obsidian failo kelią ir turinį.                                                                            |
+| `obsidian_get_periodic_note` | Gauti nurodytos datos dienos / savaitės / mėnesio periodinį užrašą (jei praleista – šiandienos).                                    |
+| `obsidian_get_tags`          | Išvardyti visas saugyklos žymas ir jų dažnius.                                                                                      |
+| `obsidian_list_commands`     | Išvardyti galimus Obsidian komandų ID (naudoti su `obsidian_execute_command`).                                                      |
+| `obsidian_sync_status`       | 67router sinchronizavimo serverio būsena: ar veikia, saugyklos pavadinimas, prievadas, veikimo trukmė, paskutinis sinchronizavimas. |
+| `obsidian_sync_conflicts`    | Išvardyti neišspręstus sinchronizavimo konfliktus (kelias, konflikto kelias, aptikimo laikas).                                      |
 
 ### Rašymo įrankiai (`write:obsidian`)
 

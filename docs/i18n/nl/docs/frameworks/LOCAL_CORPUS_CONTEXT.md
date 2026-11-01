@@ -12,7 +12,7 @@
 
 ## Wat het is
 
-Met Local Corpus kan een beheerder één expliciet goedgekeurde map met tekstbestanden beschikbaar stellen aan de MCP-server van OmniRoute. Bestanden blijven in hun oorspronkelijke map: OmniRoute slaat alleen het canonieke hoofdpad op in SQLite en houdt een zoekindex in het geheugen bij. Corpusinhoud wordt niet naar de repository of database gekopieerd.
+Met Local Corpus kan een beheerder één expliciet goedgekeurde map met tekstbestanden beschikbaar stellen aan de MCP-server van 67router. Bestanden blijven in hun oorspronkelijke map: 67router slaat alleen het canonieke hoofdpad op in SQLite en houdt een zoekindex in het geheugen bij. Corpusinhoud wordt niet naar de repository of database gekopieerd.
 
 De index wordt incrementeel vernieuwd. Ongewijzigde bestanden worden hergebruikt op basis van grootte en wijzigingstijd, gewijzigde bestanden worden opnieuw gelezen en gehasht met SHA-256 en verwijderde bestanden worden uit de index verwijderd. Bij een zoekopdracht wordt een index vernieuwd die ouder is dan 30 seconden; aanroepers kunnen ook om een onmiddellijke vernieuwing vragen.
 

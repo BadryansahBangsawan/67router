@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-فراہم کنندگان کو ترتیب دینے، کومبوز بنانے، CLI ٹولز کو مربوط کرنے، اور OmniRoute کو تعینات کرنے کے لیے مکمل رہنما۔
+فراہم کنندگان کو ترتیب دینے، کومبوز بنانے، CLI ٹولز کو مربوط کرنے، اور 67router کو تعینات کرنے کے لیے مکمل رہنما۔
 
 ---
 
@@ -24,7 +24,6 @@
 - [مہارتوں کا نظام](#-skills-system)
 - [میموری سسٹم](#-memory-system)
 - [ویب ہُکس](#-webhooks)
-- [کلاؤڈ ایجنٹس](#-cloud-agents)
 - [پروگرامی انتظام](#-programmatic-management)
 - [اندرونی CLI](#-internal-cli)
 - [ڈیسک ٹاپ ایپلیکیشن (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@ Dashboard → Providers → Connect Claude Code
   cc/claude-haiku-4-5-20251001
 ```
 
-**ماہرانہ مشورہ:** پیچیدہ کاموں کے لیے Opus اور رفتار کے لیے Sonnet استعمال کریں۔ OmniRoute ہر ماڈل کے کوٹے کو ٹریک کرتا ہے!
+**ماہرانہ مشورہ:** پیچیدہ کاموں کے لیے Opus اور رفتار کے لیے Sonnet استعمال کریں۔ 67router ہر ماڈل کے کوٹے کو ٹریک کرتا ہے!
 
-OmniRoute ہوسٹ پر براؤزر نہیں ہے؟ جہاں بھی Claude Code میں لاگ اِن ہوں وہاں `claude setup-token` چلائیں اور ایک سالہ ٹوکن کو **Setup Token** ٹیب میں پیسٹ کریں۔ [سیٹ اپ ٹوکن کے ساتھ Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md) ملاحظہ کریں۔
+67router ہوسٹ پر براؤزر نہیں ہے؟ جہاں بھی Claude Code میں لاگ اِن ہوں وہاں `claude setup-token` چلائیں اور ایک سالہ ٹوکن کو **Setup Token** ٹیب میں پیسٹ کریں۔ [سیٹ اپ ٹوکن کے ساتھ Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md) ملاحظہ کریں۔
 
-Claude اور Claude Code سے ہم آہنگ روٹس، Opus اور Sonnet ماڈلز کے لیے `max` سوچنے کی کوشش کو برقرار رکھتے ہیں۔ Haiku ماڈلز `max` کوشش کی سطح قبول نہیں کرتے، اس لیے OmniRoute اس درخواست کو اپ اسٹریم بھیجنے سے پہلے اسے زیادہ سوچنے کے بجٹ میں تبدیل کر دیتا ہے۔
+Claude اور Claude Code سے ہم آہنگ روٹس، Opus اور Sonnet ماڈلز کے لیے `max` سوچنے کی کوشش کو برقرار رکھتے ہیں۔ Haiku ماڈلز `max` کوشش کی سطح قبول نہیں کرتے، اس لیے 67router اس درخواست کو اپ اسٹریم بھیجنے سے پہلے اسے زیادہ سوچنے کے بجٹ میں تبدیل کر دیتا ہے۔
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,7 +261,7 @@ CLI میں استعمال کریں: premium-coding
 
 ### Cursor IDE
 
-**Cursor کو OmniRoute کلائنٹ کے طور پر استعمال کرنا** (Cursor چیٹ کو OmniRoute کے ذریعے روٹ کریں):
+**Cursor کو 67router کلائنٹ کے طور پر استعمال کرنا** (Cursor چیٹ کو 67router کے ذریعے روٹ کریں):
 
 ```
 ترتیبات → ماڈلز → اعلیٰ:
@@ -271,7 +270,7 @@ CLI میں استعمال کریں: premium-coding
   ماڈل: cc/claude-opus-4-7
 ```
 
-**OmniRoute کو Cursor فراہم کنندہ کے طور پر استعمال کرنا** (OmniRoute اپ اسٹریم Cursor کو کال کرتا ہے): ترجیحاً
+**67router کو Cursor فراہم کنندہ کے طور پر استعمال کرنا** (67router اپ اسٹریم Cursor کو کال کرتا ہے): ترجیحاً
 **ڈیش بورڈ → فراہم کنندگان → Cursor → Cursor کے ساتھ لاگ اِن** استعمال کریں۔ Docker میں،
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md) دیکھیں۔
 
@@ -358,7 +357,7 @@ CLI خودکار طور پر `~/.omniroute/.env` یا `./.env` سے `.env` لو�
 
 ### ٹرے موڈ
 
-OmniRoute کو سسٹم ٹرے میں شروع کریں:
+67router کو سسٹم ٹرے میں شروع کریں:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +374,7 @@ omniroute serve --tray
 - ڈیش بورڈ کھولیں۔
 - `/dashboard/logs` کھولیں۔
 - خودکار آغاز تبدیل کریں۔
-- OmniRoute روکیں۔
+- 67router روکیں۔
 
 `--tray` کو ان اختیارات کے ساتھ یکجا نہ کریں:
 
@@ -401,14 +400,14 @@ omniroute autostart disable
 
 ### ان انسٹال کرنا
 
-جب آپ کو مزید OmniRoute کی ضرورت نہ رہے تو مکمل طور پر ہٹانے کے لیے ہم دو فوری اسکرپٹس فراہم کرتے ہیں:
+جب آپ کو مزید 67router کی ضرورت نہ رہے تو مکمل طور پر ہٹانے کے لیے ہم دو فوری اسکرپٹس فراہم کرتے ہیں:
 
 | کمانڈ                    | کارروائی                                                                                |
 | ------------------------ | --------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | سسٹم ایپ ہٹاتی ہے، لیکن `~/.omniroute` میں **آپ کا DB اور کنفیگریشنز برقرار رکھتی ہے**۔ |
 | `npm run uninstall:full` | ایپ ہٹاتی ہے اور **تمام کنفیگریشنز، کلیدیں اور ڈیٹابیسز مستقل طور پر مٹا دیتی ہے**۔     |
 
-> نوٹ: یہ کمانڈز چلانے کے لیے OmniRoute پروجیکٹ فولڈر پر جائیں (اگر آپ نے اسے کلون کیا ہے) اور انہیں چلائیں۔ متبادل طور پر، اگر اسے عالمی طور پر انسٹال کیا گیا ہے تو آپ صرف `npm uninstall -g omniroute` چلا سکتے ہیں۔
+> نوٹ: یہ کمانڈز چلانے کے لیے 67router پروجیکٹ فولڈر پر جائیں (اگر آپ نے اسے کلون کیا ہے) اور انہیں چلائیں۔ متبادل طور پر، اگر اسے عالمی طور پر انسٹال کیا گیا ہے تو آپ صرف `npm uninstall -g omniroute` چلا سکتے ہیں۔
 
 ### VPS تعیناتی
 
@@ -480,7 +479,7 @@ CLI بائنریز کے ساتھ ہوسٹ سے مربوط موڈ کے لیے م�
 
 ### Void Linux (xbps-src)
 
-Void Linux کے صارفین `xbps-src` کراس کمپائلیشن فریم ورک استعمال کرتے ہوئے OmniRoute کو مقامی طور پر پیکیج اور انسٹال کر سکتے ہیں۔ یہ مطلوبہ `better-sqlite3` مقامی بائنڈنگز کے ساتھ Node.js کی اسٹینڈ الون بِلڈ کو خودکار بناتا ہے۔
+Void Linux کے صارفین `xbps-src` کراس کمپائلیشن فریم ورک استعمال کرتے ہوئے 67router کو مقامی طور پر پیکیج اور انسٹال کر سکتے ہیں۔ یہ مطلوبہ `better-sqlite3` مقامی بائنڈنگز کے ساتھ Node.js کی اسٹینڈ الون بِلڈ کو خودکار بناتا ہے۔
 
 <details>
 <summary><b>xbps-src ٹیمپلیٹ دیکھیں</b></summary>
@@ -660,7 +659,7 @@ post_install() {
 
 **دیگر ہم آہنگ فراہم کنندگان** (منتخب): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (`aws-bedrock` کے ذریعے)، `azure-ai`, `openrouter` (پاس تھرو کیٹلاگ)، `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`۔ ہر ایک `providerRegistry.ts` میں اپنی ماڈل فہرست برقرار رکھتا ہے اور جب فراہم کنندہ `/models` اینڈ پوائنٹ پیش کرے تو اسے خودکار طور پر ہم وقت کیا جا سکتا ہے۔
 
-**ماڈل IDs کے بارے میں نوٹ:** OmniRoute فراہم کنندہ کے مقامی IDs استعمال کرتا ہے (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`)۔ بعض IDs میں نقطوں والے ورژن شامل ہوتے ہیں کیونکہ اپ اسٹریم API انہیں اسی طرح قبول کرتا ہے۔ اگر کوئی ماڈل اوپر درج نہ ہو، تو دستیابی کی تصدیق کے لیے `omniroute models --search <term>` چلائیں یا `GET /api/models/catalog` استعمال کریں۔
+**ماڈل IDs کے بارے میں نوٹ:** 67router فراہم کنندہ کے مقامی IDs استعمال کرتا ہے (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`)۔ بعض IDs میں نقطوں والے ورژن شامل ہوتے ہیں کیونکہ اپ اسٹریم API انہیں اسی طرح قبول کرتا ہے۔ اگر کوئی ماڈل اوپر درج نہ ہو، تو دستیابی کی تصدیق کے لیے `omniroute models --search <term>` چلائیں یا `GET /api/models/catalog` استعمال کریں۔
 
 </details>
 
@@ -726,9 +725,9 @@ prefix: "<prefix>" is a reserved provider prefix — choose a different prefix (
 محفوظ ہے: اس اصول کے نفاذ سے پہلے محفوظ کیے گئے نوڈز اب بھی موجود ہیں، لیکن ان کا پریفکس ٹریفک کو
 پہلے سے موجود فراہم کنندہ کی طرف بھیجتا ہے۔ نوڈ میں ترمیم کریں اور اسے نیا پریفکس دیں۔
 
-### OmniRoute پیئرز کو زنجیر بنانا
+### 67router پیئرز کو زنجیر بنانا
 
-ایک اور OmniRoute گیٹ وے کو **Custom OpenAI-compatible** فراہم کنندہ کے طور پر شامل کیا جا سکتا ہے۔ اس
+ایک اور 67router گیٹ وے کو **Custom OpenAI-compatible** فراہم کنندہ کے طور پر شامل کیا جا سکتا ہے۔ اس
 پیئر کا `/v1` بیس URL اور اسی پیئر کی جاری کردہ مخصوص، کم از کم مراعات والی API کلید استعمال کریں۔
 
 دو طرفہ یا متعدد مراحل والی زنجیروں کے لیے، ہر گیٹ وے پر اختیاری لوپ گارڈ فعال کریں:
@@ -753,7 +752,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 
 پیئر چیننگ ڈیٹابیس ریپلیکیشن یا ہوسٹ فیل اوور نہیں ہے۔ ہر گیٹ وے اپنی الگ
 SQLite حالت، کیشز، شرح کاؤنٹرز، اور سیشنز رکھتا ہے۔ فعال/غیر فعال یا فعال/فعال دستیابی کے لیے صحت کی جانچ والا ریورس پراکسی یا کلائنٹ
-فیل اوور استعمال کریں، اور ایک SQLite ڈیٹابیس کو کبھی بھی بیک وقت چلنے والی متعدد OmniRoute انسٹینسز میں ماؤنٹ نہ کریں۔
+فیل اوور استعمال کریں، اور ایک SQLite ڈیٹابیس کو کبھی بھی بیک وقت چلنے والی متعدد 67router انسٹینسز میں ماؤنٹ نہ کریں۔
 
 ### مخصوص فراہم کنندہ روٹس
 
@@ -804,7 +803,7 @@ curl http://localhost:20128/api/models/catalog
 - Docker اور دیگر self-hosted deployments کے لیے **Dashboard → Endpoints** میں دستیاب ہے
 - ایک عارضی `https://*.trycloudflare.com` URL بناتا ہے جو آپ کے موجودہ OpenAI-compatible `/v1` endpoint کی طرف فارورڈ کرتا ہے
 - پہلی بار فعال کرنے پر صرف ضرورت کے وقت `cloudflared` انسٹال ہوتا ہے؛ بعد کے restarts اسی managed binary کو دوبارہ استعمال کرتے ہیں
-- OmniRoute یا container restart کے بعد Quick Tunnels خودکار طور پر بحال نہیں ہوتے؛ ضرورت پڑنے پر انہیں dashboard سے دوبارہ فعال کریں
+- 67router یا container restart کے بعد Quick Tunnels خودکار طور پر بحال نہیں ہوتے؛ ضرورت پڑنے پر انہیں dashboard سے دوبارہ فعال کریں
 - Tunnel URLs عارضی ہوتے ہیں اور ہر بار tunnel کو روکنے/شروع کرنے پر تبدیل ہو جاتے ہیں
 - محدود containers میں غیر ضروری QUIC UDP buffer warnings سے بچنے کے لیے managed Quick Tunnels بطور ڈیفالٹ HTTP/2 transport استعمال کرتے ہیں
 - اگر آپ managed transport کے انتخاب کو override کرنا چاہتے ہیں تو `CLOUDFLARED_PROTOCOL=quic` یا `auto` سیٹ کریں
@@ -821,7 +820,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### Translator Playground
 
-**Dashboard → Translator** کے ذریعے رسائی حاصل کریں۔ Debug کریں اور تصوراتی طور پر دیکھیں کہ OmniRoute مختلف providers کے درمیان API requests کا ترجمہ کیسے کرتا ہے۔
+**Dashboard → Translator** کے ذریعے رسائی حاصل کریں۔ Debug کریں اور تصوراتی طور پر دیکھیں کہ 67router مختلف providers کے درمیان API requests کا ترجمہ کیسے کرتا ہے۔
 
 | موڈ              | مقصد                                                                                    |
 | ---------------- | --------------------------------------------------------------------------------------- |
@@ -874,7 +873,7 @@ external session affinity کے لیے (مثلاً reverse proxies کے پیچھ�
 X-Session-Id: your-session-key
 ```
 
-OmniRoute، `x_session_id` بھی قبول کرتا ہے اور مؤثر session key کو `X-OmniRoute-Session-Id` میں واپس کرتا ہے۔
+67router، `x_session_id` بھی قبول کرتا ہے اور مؤثر session key کو `X-OmniRoute-Session-Id` میں واپس کرتا ہے۔
 
 اگر آپ Nginx استعمال کرتے ہیں اور underscore-form headers بھیجتے ہیں، تو یہ فعال کریں:
 
@@ -908,7 +907,7 @@ Chain: production-fallback
 
 ### عام Provider Combinations اور Routing Patterns
 
-OmniRoute میں متعدد providers کو یکجا کرنے اور ان کے درمیان routing کے لیے یہاں چند مثالی patterns ہیں:
+67router میں متعدد providers کو یکجا کرنے اور ان کے درمیان routing کے لیے یہاں چند مثالی patterns ہیں:
 
 #### 1. Coding Agent Combo: لاگت/رفتار کے Fallback کے ساتھ اعلیٰ درجے کی Reasoning
 
@@ -969,7 +968,7 @@ omniroute combo create free-stack \
 
 **Dashboard → Settings → Resilience** کے ذریعے ترتیب دیں۔
 
-OmniRoute پانچ اجزاء کے ساتھ فراہم کنندہ کی سطح پر لچک نافذ کرتا ہے:
+67router پانچ اجزاء کے ساتھ فراہم کنندہ کی سطح پر لچک نافذ کرتا ہے:
 
 1. **درخواستوں کی قطار اور رفتار کی تنظیم** — سسٹم کی سطح پر درخواستوں کی تشکیل:
    - **درخواستیں فی منٹ (RPM)** — فی اکاؤنٹ ایک منٹ میں درخواستوں کی زیادہ سے زیادہ تعداد
@@ -994,7 +993,7 @@ OmniRoute پانچ اجزاء کے ساتھ فراہم کنندہ کی سطح پ
 
    فراہم کنندہ بریکر کی رن ٹائم حالت صرف **Dashboard → Health** پر دکھائی جاتی ہے۔
 
-4. **کول ڈاؤن کا انتظار** — اگر ہر ممکنہ کنکشن پہلے ہی کول ڈاؤن میں ہو تو OmniRoute قریب ترین کول ڈاؤن کے اختتام کا انتظار کر کے اسی کلائنٹ درخواست کی خودکار طور پر دوبارہ کوشش کر سکتا ہے۔
+4. **کول ڈاؤن کا انتظار** — اگر ہر ممکنہ کنکشن پہلے ہی کول ڈاؤن میں ہو تو 67router قریب ترین کول ڈاؤن کے اختتام کا انتظار کر کے اسی کلائنٹ درخواست کی خودکار طور پر دوبارہ کوشش کر سکتا ہے۔
 
 5. **ریٹ لمٹ کی خودکار شناخت** — جب اپ اسٹریم فراہم کنندگان واضح انتظار کے دورانیے واپس کرتے ہیں تو ترتیب فعال ہونے کی صورت میں وہ ہنٹس مقامی کنکشن کول ڈاؤن کو اوور رائیڈ کر دیتے ہیں۔
 
@@ -1028,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **استعمال کی صورتیں:**
 
-- OmniRoute کو مشینوں کے درمیان منتقل کرنا
+- 67router کو مشینوں کے درمیان منتقل کرنا
 - آفات سے بحالی کے لیے بیرونی بیک اپس بنانا
 - ٹیم کے اراکین کے درمیان ترتیبات کا اشتراک کرنا (سب کچھ ایکسپورٹ کریں → آرکائیو شیئر کریں)
 
@@ -1080,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### آڈیو ٹرانسکرپشن
 
-OmniRoute، OpenAI سے ہم آہنگ endpoint کے ذریعے آڈیو ٹرانسکرپشن کی معاونت کرتا ہے:
+67router، OpenAI سے ہم آہنگ endpoint کے ذریعے آڈیو ٹرانسکرپشن کی معاونت کرتا ہے:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1151,7 +1150,7 @@ curl -X POST http://localhost:20128/v1/audio/transcriptions \
 اسکپس، اور پیشگی فال بیک کمپریشن، کم ٹیل
 لیٹنسی کے بدلے روٹنگ/درخواست کی اصل مطابقت میں سمجھوتا کر سکتے ہیں۔
 
-جب upstream providers کو سخت `max_tokens` / `maxOutputTokens` حدود درکار ہوں تو **Reasoning token buffer** کو غیر فعال کریں۔ فعال ہونے پر، combo routing صرف ان reasoning models کے لیے اضافی گنجائش شامل کرتی ہے جن کی output cap معلوم ہو، اور جب محفوظ buffered قدر اس cap سے تجاوز کرے تو client token limit کو تبدیل نہیں کرتی۔ اگر client limit پہلے ہی کسی معلوم cap سے زیادہ ہو، تو OmniRoute upstream request بھیجنے سے پہلے اسے کم کرکے اس cap تک محدود کر دیتا ہے۔
+جب upstream providers کو سخت `max_tokens` / `maxOutputTokens` حدود درکار ہوں تو **Reasoning token buffer** کو غیر فعال کریں۔ فعال ہونے پر، combo routing صرف ان reasoning models کے لیے اضافی گنجائش شامل کرتی ہے جن کی output cap معلوم ہو، اور جب محفوظ buffered قدر اس cap سے تجاوز کرے تو client token limit کو تبدیل نہیں کرتی۔ اگر client limit پہلے ہی کسی معلوم cap سے زیادہ ہو، تو 67router upstream request بھیجنے سے پہلے اسے کم کرکے اس cap تک محدود کر دیتا ہے۔
 
 ---
 
@@ -1174,7 +1173,7 @@ curl -X POST http://localhost:20128/v1/audio/transcriptions \
 
 ## 🤖 خودکار روٹنگ (صفر کنفیگریشن)
 
-OmniRoute ایک **اسکور پر مبنی خودکار راؤٹر** کے ساتھ آتا ہے جو تمام منسلک فراہم کنندگان میں سے ہر درخواست کے لیے بہترین ماڈل منتخب کرتا ہے — برقرار رکھنے کے لیے کسی کومبو کی ضرورت نہیں۔ بس `auto/*` سابقوں میں سے کسی ایک کے ساتھ درخواست بھیجیں، اور OmniRoute فوری طور پر ایک ورچوئل کومبو تشکیل دے گا، جس میں امیدواروں کو تاخیر، لاگت، کامیابی کی شرح، سیاق سے مطابقت، کام کے لیے ماڈل کی موزونیت، حالیہ ناکامیوں، کوٹے، اور سرکٹ بریکر کی حالت کی بنیاد پر اسکور کیا جائے گا۔
+67router ایک **اسکور پر مبنی خودکار راؤٹر** کے ساتھ آتا ہے جو تمام منسلک فراہم کنندگان میں سے ہر درخواست کے لیے بہترین ماڈل منتخب کرتا ہے — برقرار رکھنے کے لیے کسی کومبو کی ضرورت نہیں۔ بس `auto/*` سابقوں میں سے کسی ایک کے ساتھ درخواست بھیجیں، اور 67router فوری طور پر ایک ورچوئل کومبو تشکیل دے گا، جس میں امیدواروں کو تاخیر، لاگت، کامیابی کی شرح، سیاق سے مطابقت، کام کے لیے ماڈل کی موزونیت، حالیہ ناکامیوں، کوٹے، اور سرکٹ بریکر کی حالت کی بنیاد پر اسکور کیا جائے گا۔
 
 | سابقہ          | کس چیز کے لیے بہتر بناتا ہے                                                                                           |
 | -------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -1205,7 +1204,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 MCP اور A2A انضمام
 
-OmniRoute بیک وقت ایک **MCP سرور** (Model Context Protocol) اور ایک **A2A سرور** (Agent-to-Agent JSON-RPC 2.0) ہے۔ کوئی بھی MCP سے مطابقت رکھنے والا IDE یا ایجنٹ ہوسٹ براہِ راست OmniRoute ٹولز کو کال کر سکتا ہے — کسی اضافی ریپر کی ضرورت نہیں۔
+67router بیک وقت ایک **MCP سرور** (Model Context Protocol) اور ایک **A2A سرور** (Agent-to-Agent JSON-RPC 2.0) ہے۔ کوئی بھی MCP سے مطابقت رکھنے والا IDE یا ایجنٹ ہوسٹ براہِ راست 67router ٹولز کو کال کر سکتا ہے — کسی اضافی ریپر کی ضرورت نہیں۔
 
 ### MCP ٹرانسپورٹس
 
@@ -1234,17 +1233,14 @@ SSE URL `http://localhost:20128/api/mcp/sse` اور **ڈیش بورڈ → API ک
 
 ### دائرۂ کار
 
-MCP فی الحال 32 نام زدہ دائرۂ کار متعین کرتا ہے۔ ہر Bearer کلید کو مخصوص دائروں تک محدود کیا جا سکتا ہے — مستند دائروں اور ٹولز کی فہرست کے لیے [MCP-SERVER.md](../frameworks/MCP-SERVER.md) اور JSON-RPC اسکیما کے لیے [A2A-SERVER.md](../frameworks/A2A-SERVER.md) دیکھیں۔
-
 ---
 
 ## 🧠 مہارتوں کا نظام
 
-OmniRoute ایک قابلِ توسیع **مہارتوں کا فریم ورک** (`src/lib/skills/`) فراہم کرتا ہے تاکہ ایجنٹس اور A2A اینڈ پوائنٹ مخصوص شعبوں کے معمولات چلا سکیں (مثلاً `code-review`، `summarize`، `extract-facts`، `web-research`)۔
+67router ایک قابلِ توسیع **مہارتوں کا فریم ورک** (`src/lib/skills/`) فراہم کرتا ہے تاکہ ایجنٹس اور A2A اینڈ پوائنٹ مخصوص شعبوں کے معمولات چلا سکیں (مثلاً `code-review`، `summarize`، `extract-facts`، `web-research`)۔
 
 - **مارکیٹ پلیس UI** — **Dashboard → Skills** سے مہارتیں براؤز اور انسٹال کریں
 - **فی کلید اسکوپس** — محدود کریں کہ کون سی API keys کن مہارتوں کو استعمال کر سکتی ہیں
-- **حسبِ ضرورت مہارتیں** — `src/lib/a2a/skills/` میں ایک TypeScript فائل رکھیں، اسے رجسٹر کریں، اور وہ فوراً A2A کے ذریعے قابلِ استعمال ہو جائے گی
 
 مکمل حوالہ: [SKILLS.md](../frameworks/SKILLS.md)۔
 
@@ -1252,7 +1248,7 @@ OmniRoute ایک قابلِ توسیع **مہارتوں کا فریم ورک** (
 
 ## 💾 میموری سسٹم
 
-OmniRoute ہائبرڈ بازیافت کے ساتھ **طویل مدتی مکالماتی میموری** محفوظ رکھتا ہے:
+67router ہائبرڈ بازیافت کے ساتھ **طویل مدتی مکالماتی میموری** محفوظ رکھتا ہے:
 
 - گزشتہ گفتگوؤں میں کلیدی الفاظ کی تلاش کے لیے **SQLite FTS5**
 - معنوی یادآوری کے لیے **Qdrant vector store** (اختیاری)
@@ -1265,7 +1261,7 @@ OmniRoute ہائبرڈ بازیافت کے ساتھ **طویل مدتی مکال
 
 ## 🔔 Webhooks
 
-حقیقی وقت کی نگرانی اور آٹومیشن کے لیے OmniRoute ایونٹس کو سبسکرائب کریں۔
+حقیقی وقت کی نگرانی اور آٹومیشن کے لیے 67router ایونٹس کو سبسکرائب کریں۔
 
 - ہدف URL اور HMAC سائننگ سیکرٹ کے ساتھ **Dashboard → Webhooks** میں ایک webhook بنائیں
 - دستیاب ایونٹس: `request.completed`، `request.failed`، `provider.unavailable`، `budget.exceeded`، `combo.switched`، `circuit_breaker.opened`، `circuit_breaker.closed`
@@ -1276,21 +1272,9 @@ OmniRoute ہائبرڈ بازیافت کے ساتھ **طویل مدتی مکال
 
 ---
 
-## ☁️ کلاؤڈ ایجنٹس
-
-OmniRoute کلاؤڈ کوڈنگ ایجنٹس (**OpenAI Codex Cloud**، **Devin**، **Jules**، **Antigravity**) کے ساتھ ضم ہوتا ہے، تاکہ آپ اسی dashboard سے طویل دورانیے کے ٹاسکس روانہ کر سکیں جو آپ کی مقامی routing کو سنبھالتا ہے۔
-
-- **Dashboard → Cloud Agents** میں یا `POST /api/v1/agents/tasks` کے ذریعے ٹاسکس بنائیں
-- ہر ٹاسک کی حیثیت، logs اور artifacts کو ٹریک کریں
-- ہر provider کے لیے اپنی API key استعمال کریں — اسناد کبھی بھی OmniRoute instance سے باہر نہیں جاتیں
-
-مکمل حوالہ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)۔
-
----
-
 ## 🛠️ پروگراماتی نظم و نسق
 
-آپ **`manage` scope والی Bearer key** استعمال کرتے ہوئے HTTP کے ذریعے OmniRoute کے ہر resource (providers، combos، keys، settings) کو منظم کر سکتے ہیں۔
+آپ **`manage` scope والی Bearer key** استعمال کرتے ہوئے HTTP کے ذریعے 67router کے ہر resource (providers، combos، keys، settings) کو منظم کر سکتے ہیں۔
 
 کلید **Dashboard → API Keys → New Key → Scope: manage** میں بنائیں، پھر:
 
@@ -1323,7 +1307,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 داخلی CLI
 
-OmniRoute سیٹ اپ، تشخیص، اور رن ٹائم کنٹرول کے لیے ایک داخلی CLI (`omniroute …`) کے ساتھ آتا ہے۔ یہ ڈیش بورڈ میں موجود **"CLI ٹولز" صفحے سے الگ ہے**، جو فریقِ ثالث کے CLIs (Claude Code، Cursor، Codex، Cline، …) کو اس طرح ترتیب دیتا ہے کہ وہ OmniRoute سے رابطہ کر سکیں۔
+67router سیٹ اپ، تشخیص، اور رن ٹائم کنٹرول کے لیے ایک داخلی CLI (`omniroute …`) کے ساتھ آتا ہے۔ یہ ڈیش بورڈ میں موجود **"CLI ٹولز" صفحے سے الگ ہے**، جو فریقِ ثالث کے CLIs (Claude Code، Cursor، Codex، Cline، …) کو اس طرح ترتیب دیتا ہے کہ وہ 67router سے رابطہ کر سکیں۔
 
 ```bash
 omniroute setup                    # انٹرایکٹو وزارڈ (پاس ورڈ، فراہم کنندگان، کومبوز)
@@ -1341,7 +1325,6 @@ omniroute restore [<timestamp>]    # اسنیپ شاٹ سے بحال کریں
 omniroute health                   # تفصیلی صحت کی معلومات (بریکرز، کیش، میموری)
 omniroute quota                    # فراہم کنندہ کے کوٹے کا استعمال
 omniroute mcp status               # MCP سرور کی حیثیت
-omniroute a2a status               # A2A سرور کی حیثیت
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ٹنلز
 omniroute reset-password           # ایڈمن پاس ورڈ ری سیٹ کریں
 omniroute --mcp                    # stdio پر MCP سرور شروع کریں
@@ -1354,7 +1337,7 @@ omniroute --port 3000              # سرور کو حسبِ ضرورت پورٹ 
 
 ## 🖥️ ڈیسک ٹاپ ایپلیکیشن (Electron)
 
-OmniRoute، Windows، macOS، اور Linux کے لیے ایک مقامی ڈیسک ٹاپ ایپلیکیشن کے طور پر دستیاب ہے۔
+67router، Windows، macOS، اور Linux کے لیے ایک مقامی ڈیسک ٹاپ ایپلیکیشن کے طور پر دستیاب ہے۔
 
 ### تنصیب
 

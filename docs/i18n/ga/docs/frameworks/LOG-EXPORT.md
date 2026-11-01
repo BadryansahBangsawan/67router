@@ -4,7 +4,7 @@
 
 ---
 
-Easpórtáil leanúnach, incriminteach de logaí glaonna OmniRoute chuig stór anailísíochta seachtrach.
+Easpórtáil leanúnach, incriminteach de logaí glaonna 67router chuig stór anailísíochta seachtrach.
 
 Coinníonn cluaisín an deais Logs stair na n-iarratas in SQLite (`call_logs`), agus tá teorainn léi de bharr
 uainíochta agus coinneála. Seolann easpórtáil logaí an tacar céanna taifead amach de réir sceidil ionas gur féidir leis maireachtáil níos faide ná
@@ -287,7 +287,7 @@ Dhá riail do cheann scríbe nua:
 - **Ní mór do** `send()` **eisceacht a chaitheamh** má tharlaíonn teip pháirteach. Má réitítear é, ciallaíonn sé sin "tá na rónna seo ag an gceann scríbe",
   agus bogann an cúrsóir tharstu go buan.
 - Ní mór do cheann scríbe a ghlacann URL a sholáthraíonn úsáideoir é a bhailíochtú trí
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) sula ndéantar iarratas,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) sula ndéantar iarratas,
   ar an mbealach céanna a dhéanann crúcaí gréasáin é. Ní gá é seo do BigQuery: is tairisigh iad a óstaigh.
 
 ---

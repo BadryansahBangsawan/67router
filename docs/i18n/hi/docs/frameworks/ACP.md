@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI खोज**, **मूल Agent Client Protocol**, और
+67router **CLI खोज**, **मूल Agent Client Protocol**, और
 **लीगेसी stdio अडैप्टरों** को अलग रखता है। किसी इंस्टॉल किए गए बाइनरी का मिलना उसके
 प्रमाणीकरण, मॉडल संगतता, या किसी प्रॉम्प्ट को संभालने की तत्परता को सिद्ध नहीं करता।
 
@@ -119,5 +119,3 @@ try {
 - [एजेंट प्रोटोकॉल](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI लॉन्च अनुबंध](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI टूल](../reference/CLI-TOOLS.md)
-- [A2A सर्वर](./A2A-SERVER.md)
-- [क्लाउड एजेंट](./CLOUD_AGENT.md)

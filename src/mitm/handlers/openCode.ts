@@ -16,7 +16,7 @@ export class OpenCodeHandler extends MitmHandlerBase {
     req: IncomingMessage,
     res: ServerResponse,
     body: Buffer,
-    mappedModel: string,
+    mappedModel: string
   ): Promise<void> {
     const startedAt = this.now();
     const intercepted = await this.hookBufferStart(req, body, mappedModel);
@@ -30,7 +30,7 @@ export class OpenCodeHandler extends MitmHandlerBase {
 
       if (!upstream.ok) {
         const errText = await upstream.text().catch(() => "");
-        throw new Error(`OmniRoute ${upstream.status}: ${errText}`);
+        throw new Error(`67router ${upstream.status}: ${errText}`);
       }
 
       const sink = createBoundedCollector();

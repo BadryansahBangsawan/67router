@@ -15,7 +15,7 @@
 - [OAuth 2.0 natiivisovelluksille (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — Asennettujen sovellusten OAuth-arvot client_id / client_secret ovat julkisia; PKCE tarjoaa varsinaisen suojauksen.
 - [Firebase API -avaimet](https://firebase.google.com/docs/projects/api-keys) — Verkkosovellusten tunnisteet ovat tarkoituksellisesti julkisia.
 
-OmniRouten täytyy upottaa nämä arvot, jotta käyttäjät, jotka eivät määritä `.env`-tiedostoa, saavat silti käyttövalmiin OAuth-kulun ilman lisäasetuksia. Ilman upotettua vara-arvoa Gemini- ja Antigravity-palveluntarjoajat lakkaavat toimimasta kaikilla käyttäjillä, jotka noudattavat ”kloonaa ja suorita” -polkua.
+67routerin täytyy upottaa nämä arvot, jotta käyttäjät, jotka eivät määritä `.env`-tiedostoa, saavat silti käyttövalmiin OAuth-kulun ilman lisäasetuksia. Ilman upotettua vara-arvoa Gemini- ja Antigravity-palveluntarjoajat lakkaavat toimimasta kaikilla käyttäjillä, jotka noudattavat ”kloonaa ja suorita” -polkua.
 
 Literaaliarvot, kuten `AIzaSy…`, `GOCSPX-…` ja `…apps.googleusercontent.com`, kuitenkin täsmäävät **GitHub Secret Scanningin**, **Semgrepin** ja vastaavien hahmontunnistukseen perustuvien tarkistimien sääntöihin. Jokainen julkaisu tuottaa runsaasti vääriä positiivisia tuloksia, push-suojaus estää hyväksyttäviä committeja ja ylläpitäjät lakkaavat luottamasta hälytesyötteeseen.
 

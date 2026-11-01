@@ -4,7 +4,7 @@
 
 ---
 
-Pagpapatunay na E2E sa tunay na environment ng OmniRoute deploy na tumatakbo sa homologation VPS
+Pagpapatunay na E2E sa tunay na environment ng 67router deploy na tumatakbo sa homologation VPS
 (`HOMOLOG_BASE_URL`, hal. `http://192.168.0.15:20128`). Pinapalitan ng isang command ang manu-manong
 release STOP #2 checklist ng isang automated na pagtakbong gumagawa ng ebidensya.
 

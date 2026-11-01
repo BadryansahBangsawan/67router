@@ -4,7 +4,7 @@
 
 ---
 
-> **A taƙaice**: OmniRoute yana bibiyar amfani da token na kowace buƙata, yana ƙididdige kuɗi, yana tilasta iyakar amfani ta kowane API key, sannan yana nuna bayanan nazari a dashboard. Wannan jagorar tana bayyana yadda dukkan tsarin yake aiki.
+> **A taƙaice**: 67router yana bibiyar amfani da token na kowace buƙata, yana ƙididdige kuɗi, yana tilasta iyakar amfani ta kowane API key, sannan yana nuna bayanan nazari a dashboard. Wannan jagorar tana bayyana yadda dukkan tsarin yake aiki.
 
 **Tushe:**
 
@@ -17,7 +17,7 @@
 
 ## Bayani Gabaɗaya
 
-Kowace buƙata da ta ratsa cikin OmniRoute tana samar da **rikodin amfani** wanda yake ɗauke da:
+Kowace buƙata da ta ratsa cikin 67router tana samar da **rikodin amfani** wanda yake ɗauke da:
 
 - **Shaida**: wane API key, provider, model, da combo
 - **Tokens**: prompt tokens, completion tokens, cached tokens, da jimilla
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Ga providers da ba sa dawo da bayanan amfani (wasu web-cookie providers), OmniRoute yana **kimanta** tokens ta amfani da ƙa'idar `~4 chars per token` (duba `open-sse/services/autoCombo/pipelineRouter.ts`).
+Ga providers da ba sa dawo da bayanan amfani (wasu web-cookie providers), 67router yana **kimanta** tokens ta amfani da ƙa'idar `~4 chars per token` (duba `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Cached Tokens
 
-OmniRoute yana bibiyar `cached_tokens` dabam da `prompt_tokens` saboda:
+67router yana bibiyar `cached_tokens` dabam da `prompt_tokens` saboda:
 
 - Anthropic prompt caching yana cajin rahusa ga cached tokens (10% na farashin al'ada)
 - Wasu providers suna dawo da `cache_read_input_tokens` waɗanda ya kamata a ƙididdige farashinsu ta wata hanya dabam
@@ -117,7 +117,7 @@ Ana daidaita bayanan farashi ta atomatik daga LiteLLM ta wurin endpoint ɗin `/a
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Ga samfuran da ba su da bayanan farashi, OmniRoute yana koma wa **kimanta kuɗi** ta amfani da matsakaicin farashi na ciki (wanda aka samo daga bayanan farashin LiteLLM).
+Ga samfuran da ba su da bayanan farashi, 67router yana koma wa **kimanta kuɗi** ta amfani da matsakaicin farashi na ciki (wanda aka samo daga bayanan farashin LiteLLM).
 
 ---
 

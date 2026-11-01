@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Ebe mmalite:** `open-sse/services/thinkingBudget.ts`
 
-Thinking Budget na-achịkwa ma OmniRoute ọ̀ ga-**edegharị paramita echiche/ịtụgharị uche nke klayenti** ka arịrịọ na-aga na ndị na-enye ọrụ. Ọ **dịghị** agbanye ma ọ bụ gbanyụọ mkpakọ, routing, ma ọ bụ cache prompt.
+Thinking Budget na-achịkwa ma 67router ọ̀ ga-**edegharị paramita echiche/ịtụgharị uche nke klayenti** ka arịrịọ na-aga na ndị na-enye ọrụ. Ọ **dịghị** agbanye ma ọ bụ gbanyụọ mkpakọ, routing, ma ọ bụ cache prompt.
 
 ## Ụdịdị
 
-| Ụdịdị                       | Ihe OmniRoute na-eme                                                                                                     | Mgbe a ga-eji ya                                                                                                                                                         |
+| Ụdịdị                       | Ihe 67router na-eme                                                                                                      | Mgbe a ga-eji ya                                                                                                                                                         |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **`passthrough`** (ndabara) | Ọ naghị agbanwe field ndị klayenti (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config`, wdg.). | **Codex / Desktop / klayenti ọ bụla kwesịrị ịchịkwa effort + nchịkọta reasoning.** A chọrọ ya maka panel thinking a na-ahụ anya mgbe klayenti rịọrọ `reasoning.summary`. |
 | **`auto`**                  | Ọ na-**ewepụ field niile** metụtara thinking/reasoning n'ahụ arịrịọ tupu e ziga ya upstream.                             | Naanị mgbe i kpachapụrụ anya chọọ ka **onye na-enye ọrụ** chepụta ndabara, ma ị chọghị thinking nke klayenti na-achịkwa. Ọ **bụghị** “gosipụta thinking na-akpaghị aka”. |
@@ -31,14 +31,14 @@ Mgbe ụdịdị bụ `auto`, `stripThinkingConfig()` na-ehichapụ (gụnyere n
 
 ## Ihe nke a **na-abụghị**
 
-| Njirimara                                     | Mmekọrịta                                                                                                                                                        |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mkpakọ** (Caveman, RTK, stacked, …)         | Pipeline dị iche. Ọ na-arụ ọrụ n'okpuru ụdịdị thinking-budget ọ bụla.                                                                                            |
-| **Cache prompt / semantic**                   | Ọ dị iche. Ụdịdị thinking-budget anaghị emetụta ya.                                                                                                              |
-| **Combo routing / fallbacks**                 | Ọ dị iche. Ọ naghị emetụta ya.                                                                                                                                   |
-| **Oke token API-key / budget ụgwọ**           | Ọ dị iche. Ọ naghị emetụta ya.                                                                                                                                   |
-| **Cache replay reasoning**                    | Re-inject nke ọtụtụ turn maka ndị na-enye ọrụ nwere iwu siri ike (DeepSeek, Kimi, Qwen-thinking, …). Ọ bụghị otu ihe na “show thinking” nke Desktop.             |
-| **Ịtọghe izo ya ezo nke `encrypted_content`** | Ọ **gaghị ekwe omume.** Blob reasoning nzuzo nke OpenAI/Codex adịghị ekpughe ihe dị n'ime ha. OmniRoute anaghị atọghe izo ha ezo ma ọlị (#7095 / #7176 / #7304). |
+| Njirimara                                     | Mmekọrịta                                                                                                                                                       |
+| --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Mkpakọ** (Caveman, RTK, stacked, …)         | Pipeline dị iche. Ọ na-arụ ọrụ n'okpuru ụdịdị thinking-budget ọ bụla.                                                                                           |
+| **Cache prompt / semantic**                   | Ọ dị iche. Ụdịdị thinking-budget anaghị emetụta ya.                                                                                                             |
+| **Combo routing / fallbacks**                 | Ọ dị iche. Ọ naghị emetụta ya.                                                                                                                                  |
+| **Oke token API-key / budget ụgwọ**           | Ọ dị iche. Ọ naghị emetụta ya.                                                                                                                                  |
+| **Cache replay reasoning**                    | Re-inject nke ọtụtụ turn maka ndị na-enye ọrụ nwere iwu siri ike (DeepSeek, Kimi, Qwen-thinking, …). Ọ bụghị otu ihe na “show thinking” nke Desktop.            |
+| **Ịtọghe izo ya ezo nke `encrypted_content`** | Ọ **gaghị ekwe omume.** Blob reasoning nzuzo nke OpenAI/Codex adịghị ekpughe ihe dị n'ime ha. 67router anaghị atọghe izo ha ezo ma ọlị (#7095 / #7176 / #7304). |
 
 ## Echiche a na-ahụ anya (ndị ahịa Codex / Responses)
 
@@ -51,7 +51,7 @@ Ka onye ahịa nwee ike igosi ederede echiche, ịchọrọ **ihe ndị a niile*
 Ọ bụrụ naanị “encrypted private reasoning” ka ị na-enweta, ihe kpatara ya nwere ike ịbụ:
 
 - ọnọdụ ahụ bụ **`auto`** (e wepụrụ arịrịọ onye ahịa), ma ọ bụ
-- upstream weghachiri `encrypted_content` na-enweghị ederede nchịkọta (mmachi nke provider; OmniRoute nwere ike igosi naanị placeholder, ọ bụghị plaintext).
+- upstream weghachiri `encrypted_content` na-enweghị ederede nchịkọta (mmachi nke provider; 67router nwere ike igosi naanị placeholder, ọ bụghị plaintext).
 
 ## Ọmụmaatụ API
 
@@ -71,7 +71,7 @@ Schema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapt
 
 ### Nchekwa / ịmalitegharị
 
-A na-echekwa uru ahụ n'okpuru igodo ntọala `thinkingBudget`, a na-ebubata ya mgbe process malitere (`hydrateThinkingBudgetConfig`). Mgbe ị gbanwere ya site na DB ma ọ bụ ụzọ ụfọdụ na-abụghị API, **malitegharịa process OmniRoute** ka singleton dị na ebe nchekwa kwekọọ na nke dị na diski.
+A na-echekwa uru ahụ n'okpuru igodo ntọala `thinkingBudget`, a na-ebubata ya mgbe process malitere (`hydrateThinkingBudgetConfig`). Mgbe ị gbanwere ya site na DB ma ọ bụ ụzọ ụfọdụ na-abụghị API, **malitegharịa process 67router** ka singleton dị na ebe nchekwa kwekọọ na nke dị na diski.
 
 ## Ndepụta nyocha maka onye na-ahụ maka sistemụ
 

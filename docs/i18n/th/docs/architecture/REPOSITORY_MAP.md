@@ -5,7 +5,7 @@
 ---
 
 > **คำอธิบายหนึ่งบรรทัดสำหรับทุกไดเรกทอรีและไฟล์รูท**
-> อัปเดตล่าสุด: 2026-06-28 — OmniRoute v3.8.40
+> อัปเดตล่าสุด: 2026-06-28 — 67router v3.8.40
 >
 > ใช้แผนผังนี้เพื่อสำรวจโค้ดเบสอย่างรวดเร็ว หากต้องการศึกษาเชิงลึก ให้ไปตามลิงก์ไปยังเอกสารเฉพาะทาง
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # แอสเซตรูปภาพสำหรับการตลาด / README
 ├── @omniroute/           # แพ็กเกจเสริมที่เผยแพร่ได้ (opencode-plugin, opencode-provider)
 ├── skills/               # ชุดทักษะสำหรับ CLI/เอเจนต์ (cli-* + omni-* + config-codex-cli)
-├── examples/             # ปลั๊กอินตัวอย่าง + โปรเจกต์เริ่มต้น omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # ผลงานจากชุมชน (podman/)
 ├── .source/              # การกำหนดค่าแหล่งที่มาของ Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # เวิร์กโฟลว์ GitHub Actions + เทมเพลต issue + เทมเพลต PR
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `app/api/v1/`                                                                | API สาธารณะที่เข้ากันได้กับ OpenAI (ประมาณ 25 เส้นทางย่อย: แชต, การเติมข้อความ, embeddings, ไฟล์, แบตช์, เสียง, รูปภาพ, วิดีโอ, เพลง, การจัดอันดับใหม่, การกลั่นกรองเนื้อหา, การค้นหา, ws, เอเจนต์, บัญชี, ผู้ให้บริการ ฯลฯ)                                                                                          |
 | `app/api/v1beta/`                                                            | ปลายทาง API รูปแบบ Gemini                                                                                                                                                                                                                                                                                             |
-| `app/api/playground/`                                                        | เส้นทางของ Playground Studio: `improve-prompt/` (POST — ตัวเขียนพรอมต์ใหม่ด้วย LLM), `presets/` (GET รายการ / POST สร้าง), `presets/[id]/` (GET / PUT / DELETE) — ดู `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                                           |
 | `app/api/` (ไม่ใช่ v1)                                                       | เส้นทางการจัดการ/ผู้ดูแลระบบ (ประมาณ 60 ไดเรกทอรี: ผู้ให้บริการ, คอมโบ, การตั้งค่า, mcp, a2a, การประเมินผล, หน่วยความจำ, ทักษะ, เว็บฮุก, การปฏิบัติตามข้อกำหนด, ความยืดหยุ่น, การตรวจสอบ, ทันเนล, เครื่องมือ CLI ฯลฯ)                                                                                                 |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 เส้นทาง (การควบคุมเซิร์ฟเวอร์, สถานะเอเจนต์/DNS/การแมป, การข้าม, ใบรับรอง, upstream-CA) LOCAL_ONLY + SPAWN_CAPABLE ดู `docs/frameworks/AGENTBRIDGE.md §7`                                                                                                                                   |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — มากกว่า 16 เส้นทาง (คำขอ, เซสชัน, โฮสต์, โหมดการจับข้อมูล, การส่งออก, ws) LOCAL_ONLY + SPAWN_CAPABLE ดู `docs/frameworks/TRAFFIC_INSPECTOR.md §8`                                                                                                                                   |
-| `app/a2a/`                                                                   | จุดเข้าสำหรับ A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                          |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (การค้นหา)                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | หน้า UI แดชบอร์ด (มากกว่า 50 ส่วน, ไฟล์ page.tsx ประมาณ 118 ไฟล์: ผู้ให้บริการ, คอมโบ, การตั้งค่า, หน่วยความจำ, ทักษะ, เว็บฮุก, การประเมินผล, การตรวจสอบ, แบตช์, แคช, ค่าใช้จ่าย, สถานะระบบ, ระบบ, กิจกรรม ฯลฯ)                                                                                                       |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI ของ Search Tools Studio (3 แท็บ: ค้นหา/ดึงข้อมูล/เปรียบเทียบ + SearchConceptCard + ProviderCatalog) — ดู `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (แผน 21): `page.tsx` (เชลล์แบบ 3 แท็บ), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | เซสชัน, การแฮชรหัสผ่าน, การตรวจสอบความถูกต้องของโทเค็น                                                                                                                                                                                                                                                                    |
 | `batches/`                               | ตัวจัดการ OpenAI Batches API                                                                                                                                                                                                                                                                                              |
 | `catalog/`                               | การตรวจสอบความถูกต้องของแค็ตตาล็อกผู้ให้บริการด้วย Zod + การระบุความสามารถ                                                                                                                                                                                                                                                |
-| `cloudAgent/`                            | เอเจนต์คลาวด์ (Codex Cloud, Devin, Jules) — ดู `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                                           |
 | `combos/`                                | การระบุคอมโบ + ตัวช่วยจัดลำดับใหม่                                                                                                                                                                                                                                                                                        |
 | `audit/`                                 | ตัวช่วยฟีดกิจกรรม: `highLevelActions.ts` (รายการที่อนุญาต + `isHighLevelAction()`), `activityIcons.ts` (การแมปการดำเนินการ → ไอคอน/คำกริยา), `timeline.ts` (groupByDay/relativeTime) — ดู `docs/architecture/MONITORING_SECTIONS.md`                                                                                      |
 | `compliance/`                            | บันทึกการตรวจสอบ + การตรวจสอบผู้ให้บริการ — ดู `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                              |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | ตัวช่วยจัดรูปแบบ UI (ค่าใช้จ่าย, เวลาแฝง ฯลฯ)                                                                                                                                                                                                                                                                             |
 | `embeddings/`                            | ตัวช่วยสำหรับบริการ embeddings                                                                                                                                                                                                                                                                                            |
 | `env/`                                   | การแยกวิเคราะห์และตรวจสอบความถูกต้องของตัวแปรสภาพแวดล้อม                                                                                                                                                                                                                                                                  |
-| `evals/`                                 | เฟรมเวิร์กการประเมิน (ชุดทดสอบ, ตัวรัน, รันไทม์) — ดู `docs/frameworks/EVALS.md`                                                                                                                                                                                                                                          |
 | `guardrails/`                            | ตัวปกปิด PII, การป้องกัน prompt injection, บริดจ์สำหรับวิชัน — ดู `docs/security/GUARDRAILS.md`                                                                                                                                                                                                                           |
 | `jobs/`                                  | งานเบื้องหลัง (คล้าย cron)                                                                                                                                                                                                                                                                                                |
 | `memory/`                                | หน่วยความจำการสนทนา (SQLite FTS5 + RRF แบบไฮบริดด้วย sqlite-vec + Qdrant ระดับ 2) — ดู `docs/frameworks/MEMORY.md`                                                                                                                                                                                                        |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — ประมวลผลหน่วยความจำที่มี `needs_reindex=1` ในเบื้องหลัง โดยเรียกใช้ผ่าน `POST /api/memory/reindex` และเส้นทาง lazy-backfill (แผน 21)                                                                                                                                                                |
 | `monitoring/`                            | การตรวจสอบสถานะและการส่งออกเมตริก                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | โฟลว์ OAuth/การนำเข้าสำหรับโมดูลผู้ให้บริการ 22 ราย (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | รีจิสทรีปลั๊กอิน                                                                                                                                                                                                                                                                                                          |
 | `promptCache/`                           | จุดแบ่งแคชพรอมต์สไตล์ Anthropic                                                                                                                                                                                                                                                                                           |
 | `skills/`                                | เฟรมเวิร์กทักษะ (มีมาให้ในตัว + มาร์เก็ตเพลส + SkillsSH) — ดู `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                 |
-| `playground/`                            | ตัวช่วยที่ใช้ร่วมกันของ Playground Studio: `codeExport.ts` (ตัวสร้าง curl/Python/TS), `promptImprover.ts` (ตัวสร้างเมตาพรอมป์), `streamMetrics.ts` (TTFT/TPS แบบเพียว), `types.ts` (ตารางราคา) — ดู `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                |
 | `webhookDispatcher.ts`                   | การส่ง webhook ด้วย HMAC — ดู `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                               |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | ตัวจัดการ tunnel — ดู `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                         |
 | `cloudSync.ts`, `initCloudSync.ts`       | การซิงค์สถานะกับคลาวด์แบบไม่บังคับ                                                                                                                                                                                                                                                                                        |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — ฐานข้อมูล (147 โมดูล + 208 การย้ายข้อมูล)
 
-| ไดเรกทอรีย่อย             | วัตถุประสงค์                                                                                                                                                               |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | ซิงเกิลตัน `getDbInstance()` พร้อมการบันทึกแบบ WAL                                                                                                                         |
-| `db/migrations/`          | ไฟล์ SQL ที่มีการกำหนดเวอร์ชัน (ทำซ้ำได้โดยให้ผลลัพธ์เดิม, ทำงานแบบธุรกรรม) `073_memory_vec.sql` เพิ่ม `memory_vec_meta` + คอลัมน์ `needs_reindex` (แผน 21)                |
-| `db/playgroundPresets.ts` | โมดูล CRUD สำหรับพรีเซ็ต Playground Studio (`listPlaygroundPresets`, `getPlaygroundPreset`, `createPlaygroundPreset`, `updatePlaygroundPreset`, `deletePlaygroundPreset`)  |
-| `db/memoryVec.ts`         | CRUD สำหรับ `memory_vec_meta` (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue` ฯลฯ (แผน 21)                |
-| `db/<domain>.ts`          | หนึ่งโมดูลต่อหนึ่งโดเมน: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache ฯลฯ |
+| ไดเรกทอรีย่อย     | วัตถุประสงค์                                                                                                                                                               |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | ซิงเกิลตัน `getDbInstance()` พร้อมการบันทึกแบบ WAL                                                                                                                         |
+| `db/migrations/`  | ไฟล์ SQL ที่มีการกำหนดเวอร์ชัน (ทำซ้ำได้โดยให้ผลลัพธ์เดิม, ทำงานแบบธุรกรรม) `073_memory_vec.sql` เพิ่ม `memory_vec_meta` + คอลัมน์ `needs_reindex` (แผน 21)                |
+| `db/memoryVec.ts` | CRUD สำหรับ `memory_vec_meta` (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue` ฯลฯ (แผน 21)                |
+| `db/<domain>.ts`  | หนึ่งโมดูลต่อหนึ่งโดเมน: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache ฯลฯ |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | กระบวนการเผยแพร่ทั้งหมด (สกิล, husky, conventional commits, การปรับใช้)                                 |
 | `COVERAGE_PLAN.md`          | เป้าหมายความครอบคลุมและสถานะปัจจุบัน                                                                    |
 | `FREE_TIERS.md`             | ผู้ให้บริการระดับฟรีที่ผ่านการคัดสรร (ฟรี 48+ รายการ + OAuth 11 รายการ)                                 |
-| `CLI-TOOLS.md`              | การผสานรวม CLI ภายนอก + OmniRoute CLI ภายใน                                                             |
+| `CLI-TOOLS.md`              | การผสานรวม CLI ภายนอก + 67router CLI ภายใน                                                              |
 | `I18N.md`                   | สถาปัตยกรรม i18n การเพิ่มภาษา และโลแคล 67 รายการ                                                        |
 | `UNINSTALL.md`              | ขั้นตอนการถอนการติดตั้งอย่างหมดจด                                                                       |
 | `PROVIDER_REFERENCE.md`     | แค็ตตาล็อกผู้ให้บริการ 375 รายการที่**สร้างโดยอัตโนมัติ** (สร้างใหม่: `npm run gen:provider-reference`) |
@@ -403,13 +395,10 @@ open-sse/
 | เอกสาร                                       | วัตถุประสงค์                                                                               |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------ |
 | `MCP-SERVER.md`                              | เซิร์ฟเวอร์ MCP: เครื่องมือ 110 รายการ, ทรานสปอร์ต 3 แบบ, ขอบเขต 33 รายการ, REST endpoints |
-| `A2A-SERVER.md`                              | A2A v0.3: JSON-RPC, สกิล 6 รายการ, ตัวช่วย REST, agent card                                |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | คู่มือแบบรวม: A2A เทียบกับ ACP เทียบกับ Cloud Agents                                       |
-| `CLOUD_AGENT.md`                             | การประสานงาน Codex Cloud / Devin / Jules                                                   |
 | `SKILLS.md`                                  | เฟรมเวิร์กสกิล (มีมาให้ในตัว + มาร์เก็ตเพลส + SkillsSH + แซนด์บ็อกซ์)                      |
 | `RADAR.md`                                   | โอเวอร์เลย์แค็ตตาล็อกโมเดลฟรีของ Radar (`RADAR_ENABLED`, ปิดไว้โดยค่าเริ่มต้น)             |
 | `MEMORY.md`                                  | ระบบหน่วยความจำ (SQLite FTS5 + Qdrant)                                                     |
-| `EVALS.md`                                   | เฟรมเวิร์กการประเมิน (ชุดการประเมิน การรัน และเกณฑ์การให้คะแนน)                            |
 | `GUARDRAILS.md`                              | ตัวปกปิด PII, การแทรกพรอมต์, บริดจ์ด้านการมองเห็น                                          |
 | `COMPLIANCE.md`                              | บันทึกการตรวจสอบ การเก็บรักษา และตัวเลือกไม่เข้าร่วม noLog                                 |
 | `WEBHOOKS.md`                                | การส่ง webhook ที่ลงนามด้วย HMAC                                                           |
@@ -574,7 +563,6 @@ open-sse/
 - **กำลังเพิ่ม provider?** ทำตาม `docs/architecture/ARCHITECTURE.md § Adding a New Provider` และตรวจสอบเทียบกับ `docs/reference/PROVIDER_REFERENCE.md`
 - **กำลังเพิ่ม route?** ดู `docs/architecture/ARCHITECTURE.md § Adding a New API Route` และ `src/shared/validation/schemas.ts`
 - **กำลังเพิ่มเครื่องมือ MCP?** ดู `docs/frameworks/MCP-SERVER.md § Adding a Tool`
-- **กำลังเพิ่มสกิล A2A?** ดู `docs/frameworks/A2A-SERVER.md § Adding a New Skill`
 - **กำลังรันภายในเครื่อง?** ดู `docs/guides/SETUP_GUIDE.md`
 - **กำลัง deploy?** ดู `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`
 - **กำลัง release?** ดู `docs/ops/RELEASE_CHECKLIST.md` (และสกิล Claude Code `/generate-release-cc`)

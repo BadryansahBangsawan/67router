@@ -41,7 +41,7 @@ sau integrare externă este disponibilă în prezent.
 | Oferte pentru susținători                  | Implementate ca un flux separat, semnat și exclusiv live, precum și ca o pagină în panoul de control. Clientul revalidează schema închisă a beneficiilor, păstrează ultimul cache valid, filtrează intrările expirate și etichetează explicit ofertele partenerilor.               |
 | Informații și recunoașterea susținătorilor | Implementate ca un flux strict, semnat și exclusiv live, cu ELO administrat de Radar, informații factuale despre actualitatea/tendința catalogului, o insignă locală verificată de susținător, o pagină în panoul de control și comenzi CLI doar locale pentru stare/sincronizare. |
 | Plăți și e-mailuri tranzacționale          | Neimplementate în clientul OSS. Achiziția, donația, verificarea chitanțelor, recuperarea și livrarea e-mailurilor aparțin serviciului privat; disponibilitatea găzduită depinde în continuare de implementarea sa supravegheată și de configurarea furnizorului.                   |
-| Fluxul de lucru al agentului de cercetare  | Nu face parte din această versiune a clientului. Conținutul organizat al fluxului rămâne reprezentat de date de pe server; niciun agent autonom de cercetare nu rulează într-o instalare OmniRoute.                                                                                |
+| Fluxul de lucru al agentului de cercetare  | Nu face parte din această versiune a clientului. Conținutul organizat al fluxului rămâne reprezentat de date de pe server; niciun agent autonom de cercetare nu rulează într-o instalare 67router.                                                                                 |
 
 ---
 
@@ -119,7 +119,7 @@ Când ambele sunt activate, calea de sincronizare este:
    zilnică, al adresei IP pentru verificarea manuală a abuzurilor; aceste tabele nu păstrează nici cheia, nici adresa IP în formă brută.
    Jurnalele de acces ale infrastructurii și căsuța de livrare criptată reprezintă limite operaționale
    separate.
-3. OmniRoute nu trimite niciodată prompturi, răspunsuri, conversații, acreditări ale furnizorilor, trafic al modelelor,
+3. 67router nu trimite niciodată prompturi, răspunsuri, conversații, acreditări ale furnizorilor, trafic al modelelor,
    disponibilitate, latență sau configurația locală a furnizorilor către serviciul Radar.
 4. Răspunsul este verificat, validat și stocat local în cache (consultați
    [Modelul de securitate](#security-model)). Radar are exact patru căi de rețea pe partea de server:
@@ -243,11 +243,11 @@ care are deja una o activează.
 ### Activarea integrală și configurarea ghidată
 
 Serviciul privat de flux și acest client OSS au o delimitare restrânsă în mod intenționat: serviciul
-emite și validează cheia de susținător, în timp ce instalarea locală OmniRoute criptează cheia,
+emite și validează cheia de susținător, în timp ce instalarea locală 67router criptează cheia,
 sincronizează artefactele semnate pe server și ghidează configurarea furnizorului. Ordinea validării asistate este:
 
 1. Obțineți o cheie nou emisă sau recuperată din revendicarea contributorului, fluxul pentru planuri/finalizarea comenzii, procesul de recuperare sau de la un operator autorizat al unui server privat. Nu inserați cheia brută în jurnale, capturi de ecran, comentarii la probleme sau argumente în linia de comandă.
-2. Activați indicatorul de funcționalitate `RADAR_ENABLED` în instalarea locală OmniRoute. Acesta expune interfața, dar nu inițiază activitate de rețea până când opțiunea separată de participare este salvată.
+2. Activați indicatorul de funcționalitate `RADAR_ENABLED` în instalarea locală 67router. Acesta expune interfața, dar nu inițiază activitate de rețea până când opțiunea separată de participare este salvată.
 3. Deschideți `/dashboard/radar`, inserați cheia și activați. Browserul trimite local o singură solicitare `POST /api/radar/settings` cu `{ optIn: true, supporterKey }`; cheia este criptată local, iar răspunsul conține numai `omr_****<last4>`.
 4. Permiteți ecranului de activare să execute sincronizarea catalogului sau selectați **Sincronizați acum**. Confirmați că pagina raportează `live`, o versiune a fluxului și ora preluării. Pentru o diagnosticare locală autentificată, `GET /api/radar/status` raportează starea participării/prezenței cheii și cele patru stări ale memoriei cache, fără a returna cheia. `POST /api/radar/sync-all` poate reîmprospăta în mod explicit catalogul, recomandările, ofertele și Intel.
 5. Deschideți `/dashboard/radar/setup?provider=<provider>`. Accesați URL-ul pentru acreditări gestionat de furnizor, selectați **Adăugați cheia API**, salvați prin formularul real al furnizorului, reveniți la ghid și executați **Testați conexiunea**. Ghidul utilizează rutele obișnuite `/api/providers` și `/api/providers/<connection-id>/test`; acesta nu creează o acreditare Radar paralelă.
@@ -287,7 +287,7 @@ anterioară, rămân valide până la resincronizare.
 ### Suprascrieri prin variabile de mediu, adecvate pentru fork-uri
 
 Două variabile de mediu permit fork-urilor și instanțelor găzduite individual să
-direcționeze clientul către propriul flux în locul serviciului OmniRoute implicit —
+direcționeze clientul către propriul flux în locul serviciului 67router implicit —
 consultați mai jos
 [Cum să găzduiți individual un flux](#how-to-self-host-a-feed):
 
@@ -447,7 +447,7 @@ Un `enabled: false` din flux rămâne excepția de siguranță: are prioritate f
 Publicările catalogului utilizează `schemaVersion: 2`. `contextWindow` și fiecare dintre `tools`, `vision` și
 `thinking` sunt în mod independent `number | null` / `boolean | null`: `null` înseamnă necunoscut, în timp ce
 `false` înseamnă că o sursă oficială a furnizorului, confirmată conform D16, afirmă explicit că respectiva capabilitate este absentă.
-Indicatorii interni ai registrului/specificațiilor de model OmniRoute nu sunt niciodată promovați direct ca fapte în flux. Clientul
+Indicatorii interni ai registrului/specificațiilor de model 67router nu sunt niciodată promovați direct ca fapte în flux. Clientul
 acceptă în continuare instantanee v1; deoarece vechiul constructor utiliza `false` drept substituent pentru absență, valoarea v1 `false` este
 normalizată la necunoscut, în timp ce v1 `true` rămâne factuală. Versiunile necunoscute ale schemei eșuează în mod sigur, iar
 ultimul cache valid rămâne disponibil. Fiecare model v2 cu un context/o capabilitate nenul(ă) trebuie să conțină un
@@ -508,7 +508,7 @@ Familiile de rute Radar locale de mai jos susțin interfața de utilizare din `s
 | `/api/radar/local-model-state` | DELETE | Elimină câmpurile de suprascriere editabile, păstrând orice marcaj de ștergere.                                                                 |
 
 **Regulă strictă: aceste rute nu acționează niciodată ca proxy pentru serviciul de feed.** Browserul comunică întotdeauna
-doar cu serverul OmniRoute local. Cele patru module care interacționează cu serviciul Radar sunt
+doar cu serverul 67router local. Cele patru module care interacționează cu serviciul Radar sunt
 `src/lib/radar/sync.ts` (catalog), `src/lib/radar/referralsSync.ts` (recomandări) și
 `src/lib/radar/offersSync.ts` (oferte), plus `src/lib/radar/intelSync.ts` (Intel); toate rulează
 pe server, niciodată pe client. Astfel, URL-ul feedului și orice cheie de susținător
@@ -552,7 +552,7 @@ Intel este un artefact semnat disponibil la `GET /v1/intel/latest`. Schema înch
 
 `syncRadarIntel()` aplică aceleași cerințe ca ofertele: Bearer pe server, expirare după 30 de secunde, limită de flux de 10 MiB, verificare Ed25519 a octeților exacți, schemă strictă, cerința `live` pentru corp/antet, prag minim de versiune și păstrarea ultimei memorii cache valide. După ce un instantaneu live verificat este stocat persistent, clientul derivă `radar:<sha256(supporter key)>`, stochează numai acea identitate unidirecțională și emite evenimentul dedicat de recunoaștere `radar_supporter`. Insigna sa `radar-supporter` este idempotentă și acordă zero XP; nu actualizează niciodată clasamentele și nu reutilizează `token_share`. `/dashboard/radar/intel` randează insigna numai pe baza metadatelor verificate din memoria cache locală.
 
-CLI-ul expune `omniroute radar status` și `omniroute radar sync`. Ambele comunică numai cu API-ul OmniRoute local. `status` efectuează o solicitare doar pentru citire `GET /api/radar/status`; `sync` trimite o singură solicitare `POST /api/radar/sync-all` și afișează câte un rezultat pentru fiecare flux. Niciuna dintre comenzi nu citește, nu acceptă și nu afișează cheia de susținător și niciuna nu contactează direct serviciul Radar.
+CLI-ul expune `omniroute radar status` și `omniroute radar sync`. Ambele comunică numai cu API-ul 67router local. `status` efectuează o solicitare doar pentru citire `GET /api/radar/status`; `sync` trimite o singură solicitare `POST /api/radar/sync-all` și afișează câte un rezultat pentru fiecare flux. Niciuna dintre comenzi nu citește, nu acceptă și nu afișează cheia de susținător și niciuna nu contactează direct serviciul Radar.
 
 ---
 

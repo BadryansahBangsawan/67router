@@ -48,7 +48,7 @@ yang terdedah melalui terowong **tidak boleh** mencetuskan laluan kod ini.
 | Linux+Firefox/Chromium | kemas kini DB NSS bagi setiap profil melalui `certutil -d sql:<profile>`                                          |
 
 Ini ialah perintah yang sama yang digunakan oleh `mitmproxy`, Charles Proxy, Fiddler, dan
-Caddy. Hakikat bahawa perintah ini wujud dalam OmniRoute didokumenkan di
+Caddy. Hakikat bahawa perintah ini wujud dalam 67router didokumenkan di
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigasi v3.8.6**:
@@ -109,7 +109,7 @@ mereka. Bendera ini akan dialih keluar dalam v3.9.
 
 **Sebab kami mengekalkannya**: import Zed ialah laluan penerimaan awal yang
 paling mesra untuk pengguna yang sudah menggunakan Zed dan mahu mencerminkan
-kunci penyedia mereka ke dalam OmniRoute tanpa menampalnya semula.
+kunci penyedia mereka ke dalam 67router tanpa menampalnya semula.
 
 ---
 
@@ -120,7 +120,7 @@ kunci penyedia mereka ke dalam OmniRoute tanpa menampalnya semula.
 **Sebab ditandai**: cebisan tersebut mengeksport semula `execFileWithPassword`,
 `runElevatedPowerShell`, dan pembantu `quotePowerShell` yang dikongsi.
 Pengelas AI Socket.dev menganggapnya sebagai kit alat generik "pelaksanaan pada
-hos + peningkatan keistimewaan." Dalam OmniRoute, fungsi tersebut hanya
+hos + peningkatan keistimewaan." Dalam 67router, fungsi tersebut hanya
 digunakan oleh laluan pemasangan sijil MITM (§1) dan oleh
 `execFileWithPassword` untuk pelaksanaan perintah `sudo`.
 
@@ -175,7 +175,7 @@ disertakan secara nyata dan ketat.
 
 ---
 
-## §5 — Tulis balik kelayakan OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Tulis balik kelayakan 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Fail sumber**:
 
@@ -208,7 +208,7 @@ rawBody)`) sebelum menghuraikan JSON. Jika rahsia ditetapkan, tandatangan
    `rateLimitedUntil`, `updatedAt`). Ini merupakan **perubahan yang memecahkan keserasian** bagi pengguna
    yang bergantung pada penyegerakan token jauh — mereka mesti memilih untuk turut serta secara nyata.
 
-**Mengapa kami mengekalkannya**: Cloud Sync ialah satu-satunya cara untuk penyewa OmniRoute Cloud
+**Mengapa kami mengekalkannya**: Cloud Sync ialah satu-satunya cara untuk penyewa 67router Cloud
 memusatkan kelayakan pasukan. Pembaikan ini menjadikan model ancaman lebih telus:
 "pelayan menandatangani, klien mengesahkan, pengendali memilih untuk turut serta."
 

@@ -633,7 +633,7 @@ export default function ProxyRegistryManager({
       <Card className="p-6">
         <div className="mb-4 flex flex-col gap-3">
           <div className="w-full min-w-0">
-            <h3 className="text-lg font-semibold">{t("title")}</h3>
+            <h3 className="text-[15px] font-semibold tracking-[-0.01em]">{t("title")}</h3>
             <p className="text-sm text-text-muted">{t("description")}</p>
           </div>
           <div className="w-full border-t border-border" aria-hidden="true" />

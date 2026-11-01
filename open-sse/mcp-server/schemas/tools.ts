@@ -108,7 +108,7 @@ export const getHealthOutput = z.object({
 export const getHealthTool: McpToolDefinition<typeof getHealthInput, typeof getHealthOutput> = {
   name: "omniroute_get_health",
   description:
-    "Returns the current health status of OmniRoute including uptime, memory usage, circuit breaker states for all providers, rate limit status, and cache statistics. When adaptive virtual-lane admission is active, a curated `adaptiveAdmission` block reports per-lane queue pressure (top tenants by queued cost). If an underlying source (health/resilience/rate-limits) could not be reached, it is listed in `degraded` instead of being silently reported as empty/zero.",
+    "Returns the current health status of 67router including uptime, memory usage, circuit breaker states for all providers, rate limit status, and cache statistics. When adaptive virtual-lane admission is active, a curated `adaptiveAdmission` block reports per-lane queue pressure (top tenants by queued cost). If an underlying source (health/resilience/rate-limits) could not be reached, it is listed in `degraded` instead of being silently reported as empty/zero.",
   inputSchema: getHealthInput,
   outputSchema: getHealthOutput,
   scopes: ["read:health"],
@@ -372,7 +372,7 @@ export const routeRequestTool: McpToolDefinition<
 > = {
   name: "omniroute_route_request",
   description:
-    "Sends a chat completion request through OmniRoute's intelligent routing pipeline. Supports combo selection, budget limits, and task role hints for optimal provider matching.",
+    "Sends a chat completion request through 67router's intelligent routing pipeline. Supports combo selection, budget limits, and task role hints for optimal provider matching.",
   inputSchema: routeRequestInput,
   outputSchema: routeRequestOutput,
   scopes: ["execute:completions"],
@@ -427,7 +427,7 @@ export const costReportTool: McpToolDefinition<typeof costReportInput, typeof co
   scopes: ["read:usage"],
   auditLevel: "basic",
   phase: 1,
-  sourceEndpoints: ["/api/usage/analytics", "/api/usage/budget"],
+  sourceEndpoints: ["/api/usage/analytics"],
 };
 
 // --- Tool 8: omniroute_list_models_catalog ---
@@ -482,7 +482,7 @@ export const webSearchOutput = z.object({
 export const webSearchTool: McpToolDefinition<typeof webSearchInput, typeof webSearchOutput> = {
   name: "omniroute_web_search",
   description:
-    "Performs a web search using OmniRoute's search gateway. Supports multiple providers (Serper, Brave, Perplexity, Exa, Tavily, AnySearch, Google PSE, Linkup, SearchAPI, SearXNG) with automatic failover. Returns search results with titles, URLs, snippets, and position data. Not X/Twitter — use omniroute_x_search for that.",
+    "Performs a web search using 67router's search gateway. Supports multiple providers (Serper, Brave, Perplexity, Exa, Tavily, AnySearch, Google PSE, Linkup, SearchAPI, SearXNG) with automatic failover. Returns search results with titles, URLs, snippets, and position data. Not X/Twitter — use omniroute_x_search for that.",
   inputSchema: webSearchInput,
   outputSchema: webSearchOutput,
   scopes: ["execute:search"],
@@ -514,7 +514,7 @@ export const xSearchInput = z.object({
 export const xSearchTool: McpToolDefinition<typeof xSearchInput, typeof webSearchOutput> = {
   name: "omniroute_x_search",
   description:
-    "Search X (Twitter) through OmniRoute. Uses SuperGrok / xAI server-side x_search by default, or Xquik when provider is xquik-search. Requires credentials for the selected backend. This is not web search.",
+    "Search X (Twitter) through 67router. Uses SuperGrok / xAI server-side x_search by default, or Xquik when provider is xquik-search. Requires credentials for the selected backend. This is not web search.",
   inputSchema: xSearchInput,
   outputSchema: webSearchOutput,
   scopes: ["execute:search"],
@@ -586,7 +586,7 @@ export const webFetchOutput = z.object({
 export const webFetchTool: McpToolDefinition<typeof webFetchInput, typeof webFetchOutput> = {
   name: "omniroute_web_fetch",
   description:
-    "Fetches and extracts content from a URL using OmniRoute's web fetch gateway. Supports multiple providers (Firecrawl, Jina Reader, Tavily, TinyFish, Context7 library docs) with automatic failover. Returns the page content as markdown, HTML, links, or screenshot, along with metadata.",
+    "Fetches and extracts content from a URL using 67router's web fetch gateway. Supports multiple providers (Firecrawl, Jina Reader, Tavily, TinyFish, Context7 library docs) with automatic failover. Returns the page content as markdown, HTML, links, or screenshot, along with metadata.",
   inputSchema: webFetchInput,
   outputSchema: webFetchOutput,
   scopes: ["execute:search"],
@@ -669,7 +669,7 @@ export const setBudgetGuardTool: McpToolDefinition<
   scopes: ["write:budget"],
   auditLevel: "full",
   phase: 2,
-  sourceEndpoints: ["/api/usage/budget"],
+  sourceEndpoints: ["/api/usage/analytics"],
 };
 
 // --- Tool 11: omniroute_set_routing_strategy ---
@@ -995,7 +995,7 @@ export const dbHealthCheckTool: McpToolDefinition<
 > = {
   name: "omniroute_db_health_check",
   description:
-    "Diagnoses OmniRoute database drift such as orphan quota/domain rows, invalid JSON state, and broken combo references. Set autoRepair=true to repair those rows before returning the report.",
+    "Diagnoses 67router database drift such as orphan quota/domain rows, invalid JSON state, and broken combo references. Set autoRepair=true to repair those rows before returning the report.",
   inputSchema: dbHealthCheckInput,
   outputSchema: dbHealthCheckOutput,
   scopes: ["read:health", "write:resilience"],
@@ -1031,7 +1031,7 @@ export const syncPricingTool: McpToolDefinition<typeof syncPricingInput, typeof 
   {
     name: "omniroute_sync_pricing",
     description:
-      "Syncs pricing data from external sources (LiteLLM) into OmniRoute. Synced pricing fills gaps not covered by hardcoded defaults without overwriting user-set prices. Use dryRun=true to preview.",
+      "Syncs pricing data from external sources (LiteLLM) into 67router. Synced pricing fills gaps not covered by hardcoded defaults without overwriting user-set prices. Use dryRun=true to preview.",
     inputSchema: syncPricingInput,
     outputSchema: syncPricingOutput,
     scopes: ["pricing:write"],
@@ -1315,115 +1315,6 @@ export const compressionComboStatsTool: McpToolDefinition<
   sourceEndpoints: ["/api/context/analytics"],
 };
 
-// ============ 1proxy Tools ============
-
-export const oneproxyFetchInput = z.object({
-  protocol: z.string().optional().describe("Filter by protocol: http, https, socks4, socks5"),
-  countryCode: z.string().optional().describe("Filter by country code (e.g. US, DE)"),
-  minQuality: z.number().optional().describe("Minimum quality score (0-100)"),
-  limit: z.number().optional().describe("Maximum number of proxies to return"),
-});
-
-export const oneproxyFetchOutput = z.object({
-  items: z.array(
-    z.object({
-      id: z.string(),
-      host: z.string(),
-      port: z.number(),
-      type: z.string(),
-      countryCode: z.string().nullable(),
-      qualityScore: z.number().nullable(),
-      latencyMs: z.number().nullable(),
-      anonymity: z.string().nullable(),
-      googleAccess: z.boolean(),
-      status: z.string(),
-    })
-  ),
-  total: z.number(),
-});
-
-export const oneproxyFetchTool: McpToolDefinition<
-  typeof oneproxyFetchInput,
-  typeof oneproxyFetchOutput
-> = {
-  name: "omniroute_oneproxy_fetch",
-  description:
-    "Fetch free proxies from the 1proxy marketplace with optional filters for protocol, country, and quality. Returns validated proxies with quality scores.",
-  inputSchema: oneproxyFetchInput,
-  outputSchema: oneproxyFetchOutput,
-  scopes: ["read:proxies"],
-  auditLevel: "basic",
-  phase: 2,
-  sourceEndpoints: ["/api/settings/oneproxy"],
-};
-
-export const oneproxyRotateInput = z.object({
-  strategy: z
-    .enum(["random", "quality", "sequential"])
-    .optional()
-    .describe("Rotation strategy: quality (best first), random, or sequential"),
-});
-
-export const oneproxyRotateOutput = z.object({
-  id: z.string(),
-  host: z.string(),
-  port: z.number(),
-  type: z.string(),
-  countryCode: z.string().nullable(),
-  qualityScore: z.number().nullable(),
-  latencyMs: z.number().nullable(),
-});
-
-export const oneproxyRotateTool: McpToolDefinition<
-  typeof oneproxyRotateInput,
-  typeof oneproxyRotateOutput
-> = {
-  name: "omniroute_oneproxy_rotate",
-  description:
-    "Get the next available free proxy from the 1proxy pool using the specified rotation strategy.",
-  inputSchema: oneproxyRotateInput,
-  outputSchema: oneproxyRotateOutput,
-  scopes: ["read:proxies"],
-  auditLevel: "basic",
-  phase: 2,
-  sourceEndpoints: ["/api/settings/oneproxy/rotate"],
-};
-
-export const oneproxyStatsInput = z.object({}).describe("No parameters required");
-
-export const oneproxyStatsOutput = z.object({
-  stats: z.object({
-    total: z.number(),
-    active: z.number(),
-    avgQuality: z.number().nullable(),
-    lastValidated: z.string().nullable(),
-    byProtocol: z.array(z.object({ protocol: z.string(), count: z.number() })),
-    byCountry: z.array(z.object({ countryCode: z.string(), count: z.number() })),
-  }),
-  status: z.object({
-    lastSyncSuccess: z.boolean(),
-    lastSyncError: z.string().nullable(),
-    lastSyncAt: z.string().nullable(),
-    lastSyncCount: z.number(),
-    consecutiveFailures: z.number(),
-  }),
-});
-
-export const oneproxyStatsTool: McpToolDefinition<
-  typeof oneproxyStatsInput,
-  typeof oneproxyStatsOutput
-> = {
-  name: "omniroute_oneproxy_stats",
-  description:
-    "Returns 1proxy sync status and statistics: total proxies, average quality, sync history, and distribution by protocol and country.",
-  inputSchema: oneproxyStatsInput,
-  outputSchema: oneproxyStatsOutput,
-  scopes: ["read:proxies"],
-  auditLevel: "basic",
-  phase: 2,
-  sourceEndpoints: ["/api/settings/oneproxy"],
-};
-
 // --- omniroute_agent_skills_list ---
 export const agentSkillsListInput = z.object({
   category: z.enum(["api", "cli", "config"]).optional().describe("Filter: api, cli, or config"),
@@ -1449,8 +1340,8 @@ export const agentSkillsListOutput = z.object({
   ),
   count: z.number(),
   coverage: z.object({
-    api: z.object({ have: z.number(), total: z.literal(23) }),
-    cli: z.object({ have: z.number(), total: z.literal(21) }),
+    api: z.object({ have: z.number(), total: z.literal(22) }),
+    cli: z.object({ have: z.number(), total: z.literal(18) }),
     config: z.object({ have: z.number(), total: z.literal(1) }),
     totalSkills: z.number(),
     generatedAt: z.string(),
@@ -1463,7 +1354,7 @@ export const agentSkillsListTool: McpToolDefinition<
 > = {
   name: "omniroute_agent_skills_list",
   description:
-    "List OmniRoute agent skills with optional filtering by category (api/cli/config) or area. Returns skill metadata including id, name, description, endpoints/commands, and URLs.",
+    "List 67router agent skills with optional filtering by category (api/cli/config) or area. Returns skill metadata including id, name, description, endpoints/commands, and URLs.",
   inputSchema: agentSkillsListInput,
   outputSchema: agentSkillsListOutput,
   scopes: ["read:catalog"],
@@ -1517,8 +1408,8 @@ export const agentSkillsGetTool: McpToolDefinition<
 export const agentSkillsCoverageInput = z.object({}).describe("No parameters required");
 
 export const agentSkillsCoverageOutput = z.object({
-  api: z.object({ have: z.number(), total: z.literal(23) }),
-  cli: z.object({ have: z.number(), total: z.literal(21) }),
+  api: z.object({ have: z.number(), total: z.literal(22) }),
+  cli: z.object({ have: z.number(), total: z.literal(18) }),
   config: z.object({ have: z.number(), total: z.literal(1) }),
   totalSkills: z.number(),
   generatedAt: z.string(),
@@ -1575,9 +1466,6 @@ export const MCP_TOOLS = [
   listCompressionCombosTool,
   compressionComboStatsTool,
   ...CCR_MCP_TOOLS,
-  oneproxyFetchTool,
-  oneproxyRotateTool,
-  oneproxyStatsTool,
   agentSkillsListTool,
   agentSkillsGetTool,
   agentSkillsCoverageTool,

@@ -7,7 +7,7 @@
 > **Pinagmumulan ng katotohanan:** `electron/` workspace
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Naglalaman ang OmniRoute ng cross-platform na desktop app (Windows / macOS / Linux) na binuo gamit ang
+Naglalaman ang 67router ng cross-platform na desktop app (Windows / macOS / Linux) na binuo gamit ang
 **Electron 41** + **electron-builder 26.10**. Sinisimulan ng desktop app ang standalone server ng Next.js
 bilang child process, itinuturo rito ang isang `BrowserWindow`, at nagdaragdag ng
 system tray, awtomatikong updater, IPC bridge, at zero-config na paunang pagsasaayos ng secret.
@@ -196,7 +196,7 @@ mas piliing gamitin ang `.env` file, pagkatapos ay ganap na isara (tray, **Quit*
 - `BrowserWindow`: 1400×900 (min 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, traffic-light sa `{ x: 16, y: 16 }`.
 - Windows/Linux: native na title bar.
-- Ang close button ay nagmi-minimize sa tray; ang tray menu ay may **Open OmniRoute**, **Open Dashboard** (external browser), **Server Port** submenu, **Check for Updates**, **Quit**.
+- Ang close button ay nagmi-minimize sa tray; ang tray menu ay may **Open 67router**, **Open Dashboard** (external browser), **Server Port** submenu, **Check for Updates**, **Quit**.
 
 ## Patakaran sa Seguridad ng Nilalaman
 

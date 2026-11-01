@@ -6,7 +6,7 @@
 
 ## மேலோட்டம்
 
-அனைத்து OmniRoute மேலாண்மை API வழிகளும் மூன்று பாதுகாப்பு
+அனைத்து 67router மேலாண்மை API வழிகளும் மூன்று பாதுகாப்பு
 அடுக்குகளில் ஒன்றாக வகைப்படுத்தப்படுகின்றன. வகைப்பாடு நிலையானது,
 `src/server/authz/routeGuard.ts`-இல் வரையறுக்கப்பட்டு, வேறு எந்த அங்கீகாரக்
 கிளையும் இயங்குவதற்கு முன் மதிப்பீடு செய்யப்படுகிறது.
@@ -20,7 +20,7 @@
 
 இந்த வழித்தடங்கள் child process-களைத் தொடங்குகின்றன அல்லது runtime code-ஐ இயக்குகின்றன. இவற்றை loopback அல்லாத போக்குவரத்துக்கு வெளிப்படுத்துவது, செல்லுபடியாகும் JWT-ஐப் பெற்ற தாக்குநர் (எ.கா., Cloudflared/Ngrok tunnel வழியாக) process spawning-ஐத் தூண்ட அனுமதிக்கும் — இது அறியப்பட்ட ஒரு CVE வகையாகும் ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 
-**GHSA-fhh6-4qxv-rpqj என்பது என்ன (தாக்குதல் வகை):** ஒரு management/agent server, subprocess ஒன்றைத் தொடங்கும் endpoint-ஐ வெளிப்படுத்துகிறது (`npm install`, `node`, ஒரு browser, ஒரு proxy, `git`, `tar`, …). அந்த endpoint-ஐ host-க்கு வெளியில் இருந்து அணுக முடிந்தால் — operator, OmniRoute-ஐ nginx/Cloudflare/Tailscale tunnel-க்குப் பின்னால் வைத்திருப்பதாலும் JWT கசிந்திருப்பதாலும், அல்லது auth தவறாக உள்ளமைக்கப்பட்டிருப்பதாலும் — தாக்குநர் "API ஒன்றை அழைப்பதை" "host-இல் command ஒன்றை இயக்குவதாக" மாற்றுகிறார் (remote code execution). Spawn செய்யக்கூடிய ஒவ்வொரு வழித்தடத்திலும், **எந்த auth சரிபார்ப்புக்கும் முன்பாக, நிபந்தனையின்றி loopback host சரிபார்ப்பைச் செயல்படுத்துவதன் மூலம்** OmniRoute இதைத் தடுக்கிறது: tunnel வழியாக token கசிந்தாலும், அது spawn செயல்பாட்டை அடைய முடியாது.
+**GHSA-fhh6-4qxv-rpqj என்பது என்ன (தாக்குதல் வகை):** ஒரு management/agent server, subprocess ஒன்றைத் தொடங்கும் endpoint-ஐ வெளிப்படுத்துகிறது (`npm install`, `node`, ஒரு browser, ஒரு proxy, `git`, `tar`, …). அந்த endpoint-ஐ host-க்கு வெளியில் இருந்து அணுக முடிந்தால் — operator, 67router-ஐ nginx/Cloudflare/Tailscale tunnel-க்குப் பின்னால் வைத்திருப்பதாலும் JWT கசிந்திருப்பதாலும், அல்லது auth தவறாக உள்ளமைக்கப்பட்டிருப்பதாலும் — தாக்குநர் "API ஒன்றை அழைப்பதை" "host-இல் command ஒன்றை இயக்குவதாக" மாற்றுகிறார் (remote code execution). Spawn செய்யக்கூடிய ஒவ்வொரு வழித்தடத்திலும், **எந்த auth சரிபார்ப்புக்கும் முன்பாக, நிபந்தனையின்றி loopback host சரிபார்ப்பைச் செயல்படுத்துவதன் மூலம்** 67router இதைத் தடுக்கிறது: tunnel வழியாக token கசிந்தாலும், அது spawn செயல்பாட்டை அடைய முடியாது.
 
 **முழுமையான LOCAL_ONLY தொகுப்பு.** அதிகாரப்பூர்வ மூலம் `src/server/authz/routeGuard.ts`-இல் உள்ள `LOCAL_ONLY_API_PREFIXES` / `LOCAL_ONLY_API_PATTERNS` ஆகும்; கீழேயுள்ள அட்டவணை தற்போதைய நிலையைப் பிரதிபலிக்கிறது. Spawn செய்யக்கூடிய prefix-களின் கீழுள்ள ஒவ்வொரு `route.ts`-ஐயும் `check-route-guard-membership` gate கணக்கிட்டு, அவற்றில் ஏதேனும் local-only என வகைப்படுத்தப்படவில்லை என்றால் CI-ஐத் தோல்வியடையச் செய்கிறது.
 
@@ -42,7 +42,6 @@
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy கேட்பான் + கணினிப் பதிலாள்                                                                                 |
 | `/api/settings/mitm`                                                                                     | MITM இடைமறிப்பைச் செயல்படுத்துகிறது (கணினி-நிலை பதிலாள் நிலை)                                                                             |
 | `/api/issue-agent/`                                                                                      | சிக்கல் முகவர் — களஞ்சியத்திற்கு எதிராக உள்ளகக் கருவிகளைத் தொடங்குகிறது                                                                   |
-| `/api/plugins/`, `/api/plugins`                                                                          | செருகுநிரல்கள் — `worker_threads` + `child_process` வழியாக ஏற்றி/இயக்குகிறது                                                              |
 | `/api/middleware/`                                                                                       | பயனர் இடைநிலை மென்பொருள் — இயக்குநர் குறியீட்டைச் செயல்முறைக்குள்ளேயே ஏற்றி/இயக்குகிறது                                                   |
 | `/api/system/version`                                                                                    | தானியங்குப் புதுப்பிப்பு (POST மட்டும்; GET/HEAD/OPTIONS-க்கு விலக்கு) — `git checkout` + `npm install` செயல்முறைகளைத் தொடங்குகிறது       |
 | `/api/db-backups/exportAll`                                                                              | ஏற்றுமதிக் காப்பகத்திற்காக `tar` செயல்முறையைத் தொடங்குகிறது                                                                               |
@@ -104,7 +103,7 @@ loopback அல்லாத இடங்களிலிருந்தும் 
 
 #### இயக்குநர் வழிகாட்டுதலும் தணிக்கையும்
 
-OmniRoute-ஐ reverse proxy அல்லது tunnel-க்கு (nginx, Caddy, Cloudflare
+67router-ஐ reverse proxy அல்லது tunnel-க்கு (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) பின்னால் இயக்கினாலும், loopback சரிபார்ப்பு மேலே உள்ள
 உருவாக்கத் திறனுள்ள route-களைத் தொடர்ந்து பாதுகாக்கும் — client address
 loopback அல்லாத ஒரு கோரிக்கை, **auth இயங்குவதற்கு முன்பே** `403 LOCAL_ONLY`
@@ -142,7 +141,7 @@ loopback அல்லாத ஒரு கோரிக்கை, **auth இயங
 - மேலே உள்ள prefix-களுடன் non-loopback கிளையன்ட் முகவரி இணைந்துள்ளதா என்று உங்கள்
   reverse-proxy / access log-களில் grep செய்யவும். `403 LOCAL_ONLY` என்பதற்குப் பதிலாக
   `200` வழங்கிய அத்தகைய hit ஏதேனும் இருந்தால், proxy உண்மையான கிளையன்ட் IP-ஐ மறைக்கிறது என்று பொருள் — proxy-ஐச் சரிசெய்யவும்.
-- இந்தப் பாதைகளில் ஒன்றுக்காக OmniRoute-ன் log-களில் தோன்றும் `403 LOCAL_ONLY` என்பது guard
+- இந்தப் பாதைகளில் ஒன்றுக்காக 67router-ன் log-களில் தோன்றும் `403 LOCAL_ONLY` என்பது guard
   திட்டமிட்டபடி செயல்படுவதைக் குறிக்கிறது; ஒடுக்க வேண்டிய பிழை அல்ல.
 
 #### Call-site probe gate கொண்ட தொலைவிலிருந்து அணுகக்கூடிய வழித்தடங்கள்

@@ -148,7 +148,7 @@ No Playwright atkarīgie gadījumi failā `tests/unit/claude-web-auto-refresh.te
 
 ### Iestatīšana
 
-1. Palaidiet OmniRoute ar `npm run dev` vai no kompilētas instalācijas.
+1. Palaidiet 67router ar `npm run dev` vai no kompilētas instalācijas.
 2. Atveriet Informācijas panelis → Nodrošinātāji → Pievienot nodrošinātāju.
 3. Atlasiet kategoriju Tīmekļa sīkfails un Claude Web.
 4. Ielīmējiet pilno Cookie galveni, kas nokopēta no autentificēta `claude.ai` pieprasījuma.

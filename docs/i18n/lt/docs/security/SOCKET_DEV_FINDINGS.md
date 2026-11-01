@@ -49,7 +49,7 @@ atskleistas JWT **negali** suaktyvinti šio kodo kelio.
 | Linux+Firefox/Chromium | kiekvieno profilio NSS DB atnaujinimas naudojant `certutil -d sql:<profile>`                                      |
 
 Tai tos pačios komandos, kurias naudoja `mitmproxy`, Charles Proxy, Fiddler ir
-Caddy. Faktas, kad jos egzistuoja OmniRoute, dokumentuotas faile
+Caddy. Faktas, kad jos egzistuoja 67router, dokumentuotas faile
 `docs/security/STEALTH_GUIDE.md`.
 
 **v3.8.6 rizikos mažinimas**:
@@ -115,7 +115,7 @@ pašalinta v3.9 versijoje.
 
 **Kodėl tai paliekame**: Zed importavimas yra patogiausias pradinis būdas
 naudotojams, kurie jau naudoja Zed ir nori nukopijuoti savo teikėjų raktus į
-OmniRoute jų iš naujo neįklijuodami.
+67router jų iš naujo neįklijuodami.
 
 ---
 
@@ -127,7 +127,7 @@ OmniRoute jų iš naujo neįklijuodami.
 `execFileWithPassword`, `runElevatedPowerShell` ir bendrinamą pagalbinę
 funkciją `quotePowerShell`. Socket.dev DI klasifikatorius juos vertina kaip
 bendrosios paskirties „vykdymo pagrindiniame kompiuteryje ir teisių
-padidinimo įrankių rinkinį“. OmniRoute sistemoje jie naudojami tik MITM
+padidinimo įrankių rinkinį“. 67router sistemoje jie naudojami tik MITM
 sertifikato diegimo procese (§1), o `execFileWithPassword` — `sudo` komandoms
 vykdyti.
 
@@ -184,7 +184,7 @@ paslauga (panaši į WordPress papildinį), kuri naudojama tik aiškiai pasirink
 
 ---
 
-## §5 — „OmniRoute Cloud Sync“ prisijungimo duomenų atgalinis įrašymas (`api/keys/[id]/route.js`)
+## §5 — „67router Cloud Sync“ prisijungimo duomenų atgalinis įrašymas (`api/keys/[id]/route.js`)
 
 **Šaltinio failai**:
 
@@ -219,7 +219,7 @@ veikiantis MITM) galėjo nepastebimai pakeisti teikėjo OAuth prieigos raktus.
    pakeitimas** naudotojams, kurie naudojosi nuotoliniu prieigos raktų
    sinchronizavimu — jie turi aiškiai jį įjungti.
 
-**Kodėl tai paliekame**: „Cloud Sync“ yra vienintelis būdas „OmniRoute Cloud“
+**Kodėl tai paliekame**: „Cloud Sync“ yra vienintelis būdas „67router Cloud“
 nuomininkui centralizuotai valdyti komandos prisijungimo duomenis. Pataisa
 tiksliai atspindi grėsmių modelį:
 „serveris pasirašo, klientas patikrina, operatorius aiškiai sutinka“.

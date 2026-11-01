@@ -1,14 +1,14 @@
-# Quick Start: Get OmniRoute Running in 3 Minutes (العربية)
+# Quick Start: Get 67router Running in 3 Minutes (العربية)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/QUICK-START.md) · 🇪🇹 [am](../../../am/docs/getting-started/QUICK-START.md) · 🇦🇿 [az](../../../az/docs/getting-started/QUICK-START.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/QUICK-START.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/QUICK-START.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/QUICK-START.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/QUICK-START.md) · 🇩🇰 [da](../../../da/docs/getting-started/QUICK-START.md) · 🇩🇪 [de](../../../de/docs/getting-started/QUICK-START.md) · 🇬🇷 [el](../../../el/docs/getting-started/QUICK-START.md) · 🇪🇸 [es](../../../es/docs/getting-started/QUICK-START.md) · 🇪🇪 [et](../../../et/docs/getting-started/QUICK-START.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/QUICK-START.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/QUICK-START.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/QUICK-START.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/QUICK-START.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/QUICK-START.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/QUICK-START.md) · 🇮🇱 [he](../../../he/docs/getting-started/QUICK-START.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/QUICK-START.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/QUICK-START.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/QUICK-START.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/QUICK-START.md) · 🇮🇩 [id](../../../id/docs/getting-started/QUICK-START.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/QUICK-START.md) · 🇮🇹 [it](../../../it/docs/getting-started/QUICK-START.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/QUICK-START.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/QUICK-START.md) · 🇰🇭 [km](../../../km/docs/getting-started/QUICK-START.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/QUICK-START.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/QUICK-START.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/QUICK-START.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/QUICK-START.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/QUICK-START.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/QUICK-START.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/QUICK-START.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/QUICK-START.md) · 🇲🇲 [my](../../../my/docs/getting-started/QUICK-START.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/QUICK-START.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/QUICK-START.md) · 🇳🇴 [no](../../../no/docs/getting-started/QUICK-START.md) · 🇮🇳 [or](../../../or/docs/getting-started/QUICK-START.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/QUICK-START.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/QUICK-START.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/QUICK-START.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/QUICK-START.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/QUICK-START.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/QUICK-START.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/QUICK-START.md) · 🇱🇰 [si](../../../si/docs/getting-started/QUICK-START.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/QUICK-START.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/QUICK-START.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/QUICK-START.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/QUICK-START.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/QUICK-START.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/QUICK-START.md) · 🇮🇳 [te](../../../te/docs/getting-started/QUICK-START.md) · 🇹🇭 [th](../../../th/docs/getting-started/QUICK-START.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/QUICK-START.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/QUICK-START.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/QUICK-START.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/QUICK-START.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/QUICK-START.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/QUICK-START.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/QUICK-START.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/QUICK-START.md)
 
 ---
 
-> **الخلاصة**: ثبّت → اربط مزوّدًا مؤهلًا → وجّه بيئة التطوير المتكاملة (IDE) لديك إلى OmniRoute. تم.
+> **الخلاصة**: ثبّت → اربط مزوّدًا مؤهلًا → وجّه بيئة التطوير المتكاملة (IDE) لديك إلى 67router. تم.
 
 ---
 
-## الخطوة 1: تثبيت OmniRoute
+## الخطوة 1: تثبيت 67router
 
 اختر الطريقة التي تفضّلها:
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## الخطوة 2: تشغيل OmniRoute
+## الخطوة 2: تشغيل 67router
 
 ```bash
 omniroute
 ```
 
-يبدأ OmniRoute على `http://localhost:20128`. وتُفتح لوحة التحكم تلقائيًا.
+يبدأ 67router على `http://localhost:20128`. وتُفتح لوحة التحكم تلقائيًا.
 
 ---
 
@@ -57,7 +57,7 @@ omniroute
 
 ## الخطوة 4: التحقق من عمله
 
-من صفحة [مفاتيح API](http://localhost:20128/dashboard/api-manager)، أنشئ مفتاحًا جديدًا. احفظ هذا المفتاح لأنه لن يظهر مرة أخرى. لاحظ أن هذا المفتاح مخصص لوصول الأدوات إلى OmniRoute، وليس للوصول إلى المزوّدين الأساسيين.
+من صفحة [مفاتيح API](http://localhost:20128/dashboard/api-manager)، أنشئ مفتاحًا جديدًا. احفظ هذا المفتاح لأنه لن يظهر مرة أخرى. لاحظ أن هذا المفتاح مخصص لوصول الأدوات إلى 67router، وليس للوصول إلى المزوّدين الأساسيين.
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
@@ -67,7 +67,7 @@ curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 
 ---
 
-## الخطوة 5: توجيه بيئة التطوير المتكاملة أو أداة سطر الأوامر إلى OmniRoute
+## الخطوة 5: توجيه بيئة التطوير المتكاملة أو أداة سطر الأوامر إلى 67router
 
 اضبط الإعدادات التالية في بيئة التطوير المتكاملة أو أداة سطر الأوامر لديك:
 
@@ -77,7 +77,7 @@ curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 النموذج:            auto
 ```
 
-هذا كل شيء! تستخدم بيئة التطوير المتكاملة لديك الآن OmniRoute مع الاختيار التلقائي للمزوّد.
+هذا كل شيء! تستخدم بيئة التطوير المتكاملة لديك الآن 67router مع الاختيار التلقائي للمزوّد.
 
 ### مثال لبيئة تطوير متكاملة: VSCode/Continue.dev
 
@@ -92,7 +92,7 @@ curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
     apiKey: <YOUR_KEY>
 ```
 
-3. في لوحة دردشة Continue.dev، اختر `OmniRoute - Auto` وسترسل الطلبات إلى OmniRoute.
+3. في لوحة دردشة Continue.dev، اختر `OmniRoute - Auto` وسترسل الطلبات إلى 67router.
 4. (اختياري) تمرين للقارئ: اجعل بيئة التطوير المتكاملة تحدّث `config.yaml` بجميع الإعدادات الأخرى المُعدّة مسبقًا 😊
 
 ### مثال لسطر الأوامر: Codex CLI
@@ -110,19 +110,19 @@ export OMNIROUTE_API_KEY="<YOUR_KEY>"
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. لنشغّل الآن Codex، ولكن مع تهيئته لـ OmniRoute. نفّذ:
+2. لنشغّل الآن Codex، ولكن مع تهيئته لـ 67router. نفّذ:
 
 ```
 omniroute launch-codex --model auto
 ```
 
-يمكنك فعل ذلك يدويًا باستخدام `codex` ومعاملات سطر الأوامر لتحديد نقطة النهاية ومفتاح API، ولكن باستخدام الأمر أعلاه، يتولى OmniRoute كل شيء نيابةً عنك.
+يمكنك فعل ذلك يدويًا باستخدام `codex` ومعاملات سطر الأوامر لتحديد نقطة النهاية ومفتاح API، ولكن باستخدام الأمر أعلاه، يتولى 67router كل شيء نيابةً عنك.
 
 يعمل التشغيل بالأمر الواحد نفسه مع أدوات سطر الأوامر الأخرى عبر المشغّل العام — يدعم `omniroute run <target>` كلاً من `claude` و`codex` و`aider` و`goose` و`opencode` و`qwen` و`gemini` (راجع [تكاملات سطر الأوامر](../guides/CLI-INTEGRATIONS.md)).
 
-3. يُفترض أن ترسل أداة سطر الأوامر الآن الطلبات إلى OmniRoute.
+3. يُفترض أن ترسل أداة سطر الأوامر الآن الطلبات إلى 67router.
 
-### التأكد من أن أداتك توجّه الطلبات إلى OmniRoute
+### التأكد من أن أداتك توجّه الطلبات إلى 67router
 
 يمكنك الاطلاع على تفاصيل الطلب بالنقر على [المراقبة/السجلات](http://localhost:20128/dashboard/logs) من الشريط الجانبي الأيسر. ويؤدي النقر على العناصر إلى عرض مزيد من التفاصيل. وبالمناسبة، يمكنك معرفة المعلومات التي ترسلها بيئة التشغيل المفضلة لديك. وهذا مفيد من منظور تعليمي ولأغراض تصحيح الأخطاء.
 
@@ -130,7 +130,7 @@ omniroute launch-codex --model auto
 
 ## ما التالي؟
 
-- **[دليل الاختيار التلقائي](./AUTO-COMBO-GUIDE.md)** — دع OmniRoute يختار أفضل ذكاء اصطناعي لك
+- **[دليل الاختيار التلقائي](./AUTO-COMBO-GUIDE.md)** — دع 67router يختار أفضل ذكاء اصطناعي لك
 - **[دليل موفّري الخدمة](./PROVIDERS-GUIDE.md)** — اربط المزيد من موفّري الخدمة (المجانيين والمدفوعين)
 - **[دليل الخطط المجانية](./FREE-TIERS-GUIDE.md)** — راجع شروط موفّري الخدمة وحدود الخطط المجانية
 - **[استكشاف الأخطاء وإصلاحها](../guides/TROUBLESHOOTING.md)** — أصلح المشكلات الشائعة
@@ -141,23 +141,23 @@ omniroute launch-codex --model auto
 
 ### "هل أحتاج إلى مفتاح API؟"
 
-يُستخدم مفتاح OmniRoute API لمصادقة أدواتك. تعتمد بيانات اعتماد الخدمات الخارجية على المزوّد: إذ يتطلب بعضها مفتاح API أو تسجيل الدخول إلى حساب. الوصول المجاني غير مضمون.
+يُستخدم مفتاح 67router API لمصادقة أدواتك. تعتمد بيانات اعتماد الخدمات الخارجية على المزوّد: إذ يتطلب بعضها مفتاح API أو تسجيل الدخول إلى حساب. الوصول المجاني غير مضمون.
 
 ### "ما هو `auto`؟"
 
-يطلب `auto` من OmniRoute اختيار أفضل مزوّد تلقائيًا لكل طلب. ويأخذ في الاعتبار السرعة والتكلفة والجودة والتوافر. راجع [دليل Auto-Combo](./AUTO-COMBO-GUIDE.md) لمزيد من التفاصيل.
+يطلب `auto` من 67router اختيار أفضل مزوّد تلقائيًا لكل طلب. ويأخذ في الاعتبار السرعة والتكلفة والجودة والتوافر. راجع [دليل Auto-Combo](./AUTO-COMBO-GUIDE.md) لمزيد من التفاصيل.
 
 ### "كم تبلغ تكلفته؟"
 
-OmniRoute نفسه **مجاني ومفتوح المصدر**. لن تدفع إلا مقابل المزوّدين الذين تستخدمهم. يوفّر العديد من المزوّدين باقات مجانية — راجع [دليل الباقات المجانية](./FREE-TIERS-GUIDE.md).
+67router نفسه **مجاني ومفتوح المصدر**. لن تدفع إلا مقابل المزوّدين الذين تستخدمهم. يوفّر العديد من المزوّدين باقات مجانية — راجع [دليل الباقات المجانية](./FREE-TIERS-GUIDE.md).
 
 ### "هل يمكنني استخدامه مع Claude Code / Cursor / Copilot؟"
 
-**نعم!** يعمل OmniRoute مع أي أداة تدعم تنسيق OpenAI. ما عليك سوى تعيين عنوان URL الأساسي إلى `http://localhost:20128/v1`. راجع [دليل أدوات CLI](../reference/CLI-TOOLS.md) للاطلاع على تعليمات الإعداد الخاصة بكل أداة.
+**نعم!** يعمل 67router مع أي أداة تدعم تنسيق OpenAI. ما عليك سوى تعيين عنوان URL الأساسي إلى `http://localhost:20128/v1`. راجع [دليل أدوات CLI](../reference/CLI-TOOLS.md) للاطلاع على تعليمات الإعداد الخاصة بكل أداة.
 
 ### "ماذا يحدث إذا تعطّل أحد المزوّدين؟"
 
-يتجاوز OmniRoute تلقائيًا المزوّدين الذين يتعذر الاتصال بهم ويجرّب المزوّد التالي. لست بحاجة إلى فعل أي شيء. راجع [دليل Auto-Combo](./AUTO-COMBO-GUIDE.md) لمزيد من التفاصيل.
+يتجاوز 67router تلقائيًا المزوّدين الذين يتعذر الاتصال بهم ويجرّب المزوّد التالي. لست بحاجة إلى فعل أي شيء. راجع [دليل Auto-Combo](./AUTO-COMBO-GUIDE.md) لمزيد من التفاصيل.
 
 ---
 

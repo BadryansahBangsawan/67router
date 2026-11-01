@@ -4,7 +4,7 @@
 
 ---
 
-Nén RTK là công cụ nén nhận biết lệnh của OmniRoute dành cho đầu ra của terminal và công cụ. Công cụ này được
+Nén RTK là công cụ nén nhận biết lệnh của 67router dành cho đầu ra của terminal và công cụ. Công cụ này được
 thiết kế cho các phiên tác nhân lập trình, trong đó phần lớn mức tăng ngữ cảnh đến từ nhật ký kiểm thử, đầu ra bản dựng,
 nhiễu từ trình quản lý gói, bản ghi shell, đầu ra Docker, đầu ra git và dấu vết ngăn xếp.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Thứ tự đó nén đầu ra máy nhiều nhiễu trước, sau đó cho phép Caveman cô đọng phần văn xuôi còn lại.
 
 RTK thượng nguồn báo cáo mức tiết kiệm `60-90%` đối với đầu ra lệnh. Phiên mẫu trong README của nó giảm từ
-`~118,000` token tiêu chuẩn xuống còn `~23,900` token RTK, tương đương tiết kiệm `79.7%` (`~80%`). OmniRoute sử dụng
+`~118,000` token tiêu chuẩn xuống còn `~23,900` token RTK, tương đương tiết kiệm `79.7%` (`~80%`). 67router sử dụng
 mức trung bình thượng nguồn đó để tính toán mức tiết kiệm xếp chồng với tính năng nén đầu vào của Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK tải các bộ lọc theo thứ tự sau:
 2. Bộ lọc toàn cục từ `DATA_DIR/rtk/filters.toml` và `DATA_DIR/rtk/filters.json`.
 3. Bộ lọc tích hợp từ `open-sse/services/compression/engines/rtk/filters/`.
 
-Trong cùng một phạm vi, các bộ lọc RTK TOML schema v1 được ưu tiên hơn các bộ lọc JSON của OmniRoute. Các biểu thức
+Trong cùng một phạm vi, các bộ lọc RTK TOML schema v1 được ưu tiên hơn các bộ lọc JSON của 67router. Các biểu thức
 `match_command` trong TOML được kiểm tra trước việc khớp theo loại lệnh để một bộ lọc dành riêng cho lệnh đã nhập
 có thể ghi đè một bộ lọc rộng hơn trong phạm vi đó. Phạm vi dự án vẫn được ưu tiên hơn phạm vi toàn cục,
 bất kể định dạng tệp.
@@ -84,7 +84,7 @@ bị bỏ qua và được báo cáo bởi chẩn đoán `/api/context/rtk/filte
 
 ## Khả năng tương thích với RTK TOML schema v1
 
-OmniRoute có thể phân tích cú pháp, xác thực, kiểm thử và cài đặt các tệp bộ lọc khai báo sử dụng RTK TOML schema v1.
+67router có thể phân tích cú pháp, xác thực, kiểm thử và cài đặt các tệp bộ lọc khai báo sử dụng RTK TOML schema v1.
 Các trường được hỗ trợ gồm `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` và các kiểm thử nội tuyến `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Các trường không xác định, biểu thức chính quy không hợp lệ h
 xác thực để kiểm tra nhưng không thể được cài đặt hoặc tải. Lỗi tải tệp tùy chỉnh vẫn tuân theo cơ chế
 fail-open: tệp không hợp lệ bị bỏ qua và các bộ lọc còn lại tiếp tục hoạt động.
 
-OmniRoute nhận đầu ra của công cụ sau khi máy khách đã thu thập đầu ra đó, vì vậy `filter_stderr = true`
+67router nhận đầu ra của công cụ sau khi máy khách đã thu thập đầu ra đó, vì vậy `filter_stderr = true`
 không thể thay đổi quá trình thu thập của tiến trình. Trường này được chấp nhận dưới dạng thao tác không có hiệu lực và quá trình xác thực trả về một cảnh báo.
 Điều này được mô tả có chủ đích là **khả năng tương thích với RTK TOML schema v1**, chứ không phải khả năng tương thích hoàn toàn
 với tệp thực thi RTK, shell hook, các triển khai lệnh Rust hoặc bố cục kho lưu trữ tin cậy của RTK.

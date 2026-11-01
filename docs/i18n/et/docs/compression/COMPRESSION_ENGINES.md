@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'i tihendus põhineb mootorilepingutel. Režiim võib käitada otse üht mootorit
+67router'i tihendus põhineb mootorilepingutel. Režiim võib käitada otse üht mootorit
 (`caveman` või `rtk`) või deterministlikku virnastatud konveierit, mis käivitab järjest mitu mootorit.
 
 ## Režiimid
@@ -43,9 +43,9 @@ nii et seanss, mis pole veel ajalugu kogunud, peatub `below_min_chars` juures ja
 Seepärast on vaikimisi `aggressive`, mitte kõige turvalisem profiil.
 
 Pakett lahendab oma mudeli ulatuse ja profiili oma keskkonna konfiguratsioonist.
-OmniRoute ei delegeeri kunagi otsust: adapter kinnitab mudeli värava paketi
+67router ei delegeeri kunagi otsust: adapter kinnitab mudeli värava paketi
 kõige piiravamale ulatusele, nii et hostkeskkonna seaded saavad lubatud nimekirja
-ainult kitsendada, mitte kunagi laiendada seda kaugemale OmniRoute'i mõõdetud kviitungitest.
+ainult kitsendada, mitte kunagi laiendada seda kaugemale 67router'i mõõdetud kviitungitest.
 
 ## Mootoriregister
 
@@ -109,7 +109,7 @@ Cavemani režiim keskendub tavaproosa semantilisele tihendamisele:
 Juhtpaneelil asub see jaotises `Dashboard -> Context & Cache -> Caveman`.
 
 Cavemani lähteprojekt teatab `~75%` võrra väiksemast väljundtokenite arvust, võrdlustestide keskmisest
-väljundisäästust `65%` vahemikus `22-87%` ning `~46%` sisendtihendusest. OmniRoute kasutab Cavemani sisendpoole
+väljundisäästust `65%` vahemikus `22-87%` ning `~46%` sisendtihendusest. 67router kasutab Cavemani sisendpoole
 näitajat kombineeritud viiba-/kontekstisäästu dokumenteerimisel; Cavemani väljundrežiim jääb eraldiseisvaks
 vastuse käitumise funktsiooniks.
 

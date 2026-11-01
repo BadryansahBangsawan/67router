@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Errore: {message}",
-    "serverOffline": "Il server OmniRoute è offline. Avviarlo con: omniroute serve",
+    "serverOffline": "Il server 67router è offline. Avviarlo con: omniroute serve",
     "authRequired": "Autenticazione richiesta. Impostare OMNIROUTE_API_KEY o eseguire: omniroute setup",
     "rateLimited": "Limite di richieste superato. Riprovare tra {seconds}s.",
     "timeout": "La richiesta è scaduta dopo {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Salta la conferma"
   },
   "setup": {
-    "title": "Configurazione di OmniRoute",
+    "title": "Configurazione di 67router",
     "passwordPrompt": "Password amministratore",
     "providerPrompt": "Provider predefinito (lascia vuoto per ignorare)",
     "done": "Configurazione completata",
@@ -30,7 +30,7 @@
     "opencode": "Installa e configura il pacchetto @omniroute/opencode-plugin incluso per OpenCode"
   },
   "doctor": {
-    "title": "Diagnostica di OmniRoute",
+    "title": "Diagnostica di 67router",
     "dbOk": "Database: OK ({path})",
     "dbMissing": "Database: non inizializzato — esegui `omniroute setup`",
     "portOk": "Porta {port}: disponibile",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtra per nome del provider",
       "header": "ID         Provider       Nome                     Stato scadenza  Stato test  Cooldown fino a",
       "noData": "Nessun dato disponibile sulle connessioni ai provider.",
-      "requiresServer": "providers status richiede che il server OmniRoute sia in esecuzione."
+      "requiresServer": "providers status richiede che il server 67router sia in esecuzione."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Aggiungi o aggiorna una chiave API per un provider",
     "listDescription": "Elenca tutte le chiavi API configurate",
     "removeDescription": "Rimuovi una chiave API per un provider",
-    "regenerateDescription": "Rigenera una chiave API OmniRoute",
-    "revokeDescription": "Revoca una chiave API OmniRoute",
+    "regenerateDescription": "Rigenera una chiave API 67router",
+    "revokeDescription": "Revoca una chiave API 67router",
     "revealDescription": "Mostra il valore non mascherato della chiave API",
     "usageDescription": "Mostra l'utilizzo recente di una chiave API",
     "usageLimitOpt": "Numero di richieste recenti",
@@ -172,13 +172,6 @@
       "period": "Intervallo di tempo: 1d|7d|30d|90d|ytd|all (predefinito: 30d)",
       "provider": "Filtra per ID provider"
     },
-    "budget": {
-      "description": "Gestisci i budget di spesa",
-      "set": {
-        "scope": "Ambito del budget (predefinito: globale)",
-        "period": "Periodo del budget: daily|weekly|monthly (predefinito: monthly)"
-      }
-    },
     "quota": {
       "description": "Mostra l'utilizzo della quota del provider",
       "provider": "Filtra per ID provider",
@@ -225,7 +218,7 @@
     "noCombo": "Nessuna combinazione corrispondente trovata. Configurane una con: omniroute combo create"
   },
   "chat": {
-    "description": "Invia un prompt di chat singolo a OmniRoute",
+    "description": "Invia un prompt di chat singolo a 67router",
     "file": "Leggi il prompt da un file",
     "stdin": "Leggi il prompt da stdin",
     "system": "Prompt di sistema",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Avvia il server OmniRoute (azione predefinita)",
-    "starting": "Avvio del server OmniRoute sulla porta {port}...",
+    "description": "Avvia il server 67router (azione predefinita)",
+    "starting": "Avvio del server 67router sulla porta {port}...",
     "ready": "Disponibile all'indirizzo http://localhost:{port}",
     "stopping": "Arresto del server (PID {pid})...",
     "stopped": "Server arrestato.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Backup",
-    "description": "Crea un backup dei dati di OmniRoute",
+    "description": "Crea un backup dei dati di 67router",
     "creating": "Creazione del backup...",
     "done": "Backup salvato in {path}",
     "noFiles": "Nessun file di cui eseguire il backup (database non inizializzato)",
@@ -277,7 +270,7 @@
     "noBackups": "Nessun backup trovato.",
     "notFound": "Backup non trovato: {name}",
     "confirmRestore": "Sovrascrivere i dati correnti con il backup del {ts}?",
-    "createDescription": "Crea un backup dei dati di OmniRoute",
+    "createDescription": "Crea un backup dei dati di 67router",
     "nameOpt": "Nome personalizzato del backup",
     "cloudOpt": "Carica il backup nell'archiviazione cloud",
     "encryptOpt": "Crittografa il backup con AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Impossibile svuotare la cache."
   },
   "redis": {
-    "description": "Avvia un contenitore Redis locale con un clic (Podman o Docker) per la cache e il tracciamento delle quote di OmniRoute"
+    "description": "Avvia un contenitore Redis locale con un clic (Podman o Docker) per la cache e il tracciamento delle quote di 67router"
   },
   "test": {
     "description": "Testa la connessione a un provider",
@@ -390,36 +383,8 @@
       "description": "Registro di audit MCP (alias di audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Elenca le competenze A2A disponibili dalla scheda dell'agente"
-    },
-    "invoke": {
-      "description": "Invoca una competenza A2A e restituisce l'ID dell'attività",
-      "input": "Oggetto JSON di input",
-      "input_file": "Percorso del file JSON di input",
-      "wait": "Attendi il completamento dell'attività prima di restituire il risultato",
-      "timeout": "Timeout di attesa per il completamento in ms (predefinito: 60000)"
-    },
-    "tasks": {
-      "description": "Gestisci le attività A2A",
-      "list": {
-        "status": "Filtra per stato",
-        "skill": "Filtra per ID della competenza"
-      },
-      "watch": {
-        "description": "Verifica periodicamente lo stato dell'attività fino al completamento"
-      },
-      "stream": {
-        "description": "Trasmetti gli eventi di esecuzione dell'attività tramite SSE"
-      },
-      "logs": {
-        "description": "Mostra i messaggi e gli artefatti dell'attività"
-      }
-    }
-  },
   "policy": {
-    "description": "Gestisci le policy di autorizzazione di OmniRoute",
+    "description": "Gestisci le policy di autorizzazione di 67router",
     "list": {
       "description": "Elenca le policy",
       "kind": "Filtra per tipo (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Configura e ispeziona la pipeline di compressione di OmniRoute",
+    "description": "Configura e ispeziona la pipeline di compressione di 67router",
     "status": {
       "description": "Mostra lo stato e le impostazioni correnti della compressione"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Rigenerare l'URL del tunnel {type}? (verrà generato un nuovo URL)"
   },
   "stop": {
-    "description": "Arresta il server OmniRoute",
+    "description": "Arresta il server 67router",
     "stopping": "Arresto del server (PID {pid})...",
     "stopped": "Server arrestato.",
     "notRunning": "Nessun server in esecuzione.",
     "portFallback": "Nessun file PID trovato, tentativo di arresto basato sulla porta..."
   },
   "restart": {
-    "description": "Riavvia il server OmniRoute",
-    "restarting": "Riavvio del server OmniRoute..."
+    "description": "Riavvia il server 67router",
+    "restarting": "Riavvio del server 67router..."
   },
   "dashboard": {
-    "description": "Apri la dashboard di OmniRoute in un browser",
+    "description": "Apri la dashboard di 67router in un browser",
     "opening": "Apertura della dashboard all'indirizzo {url}",
     "urlOnly": "Stampa l'URL della dashboard senza aprire il browser",
     "tui": "Apri la dashboard TUI interattiva (interfaccia utente per terminale, 7 schede)"
@@ -560,120 +525,6 @@
       "description": "Ottieni una singola voce del log di audit tramite ID"
     }
   },
-  "skills": {
-    "description": "Gestisci le skill di OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Elenca le skill installate",
-      "type": "Filtra per tipo (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Mostra solo le skill abilitate",
-      "disabled": "Mostra solo le skill disabilitate",
-      "api_key": "Filtra per chiave API"
-    },
-    "get": {
-      "description": "Ottieni i dettagli di una skill tramite ID"
-    },
-    "install": {
-      "description": "Installa una skill da un file o un URL",
-      "from_file": "Percorso del file di definizione JSON della skill",
-      "from_url": "URL della definizione remota della skill",
-      "type": "Tipo di skill (sandbox|custom|hybrid)",
-      "enable": "Abilita la skill dopo l'installazione"
-    },
-    "enable": {
-      "description": "Abilita una skill tramite ID"
-    },
-    "disable": {
-      "description": "Disabilita una skill tramite ID",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "delete": {
-      "description": "Elimina una skill tramite ID",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "execute": {
-      "description": "Esegui una skill tramite ID",
-      "input": "Oggetto di input JSON",
-      "input_file": "Percorso del file di input JSON",
-      "timeout": "Timeout di esecuzione in ms (predefinito: 30000)"
-    },
-    "executions": {
-      "description": "Elenca la cronologia di esecuzione delle skill",
-      "skill": "Filtra per ID skill",
-      "limit": "Numero massimo di risultati (predefinito: 50)",
-      "status": "Filtra per stato (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Gestisci le skill installate tramite SSH"
-    },
-    "marketplace": {
-      "description": "Sfoglia e installa le skill dal marketplace"
-    },
-    "mp": {
-      "search": {
-        "description": "Cerca pacchetti nel marketplace",
-        "category": "Filtra per categoria",
-        "tag": "Filtra per tag",
-        "limit": "Numero massimo di risultati (predefinito: 30)",
-        "sort": "Ordina per: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Mostra i dettagli e il file readme del pacchetto"
-      },
-      "install": {
-        "description": "Installa un pacchetto dal marketplace",
-        "version": "Versione del pacchetto (predefinita: latest)",
-        "enable": "Abilita dopo l'installazione",
-        "yes": "Ignora la richiesta di conferma"
-      },
-      "categories": {
-        "description": "Elenca le categorie del marketplace"
-      },
-      "featured": {
-        "description": "Mostra i pacchetti in evidenza del marketplace"
-      }
-    }
-  },
-  "memory": {
-    "description": "Gestisci la memoria conversazionale di OmniRoute (FTS5 + vettoriale)",
-    "search": {
-      "description": "Cerca le voci di memoria tramite query semantica",
-      "type": "Filtra per tipo di memoria (user|feedback|project|reference)",
-      "limit": "Numero massimo di risultati (predefinito: 20)",
-      "api_key": "Filtra per chiave API",
-      "token_budget": "Limita il numero totale di token nei risultati"
-    },
-    "add": {
-      "description": "Aggiungi una nuova voce di memoria",
-      "content": "Contenuto testuale della memoria",
-      "file": "Leggi il contenuto da un file",
-      "type": "Tipo di memoria (predefinito: user)",
-      "metadata": "Oggetto di metadati JSON",
-      "api_key": "Associa a una chiave API"
-    },
-    "clear": {
-      "description": "Elimina le voci di memoria corrispondenti ai filtri",
-      "type": "Filtra per tipo",
-      "older": "Elimina le voci più vecchie della durata specificata (30d, 6m, 1y)",
-      "api_key": "Filtra per chiave API",
-      "yes": "Ignora la richiesta di conferma"
-    },
-    "list": {
-      "description": "Elenca le voci di memoria senza ordinamento per pertinenza della ricerca",
-      "type": "Filtra per tipo",
-      "limit": "Numero massimo di risultati (predefinito: 100)",
-      "api_key": "Filtra per chiave API"
-    },
-    "get": {
-      "description": "Ottieni una singola voce di memoria tramite ID"
-    },
-    "delete": {
-      "description": "Elimina una voce di memoria tramite ID",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "health": {
-      "description": "Mostra lo stato del sottosistema di memoria (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Gestisci le connessioni ai provider OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Salta la richiesta di conferma"
     }
   },
-  "cloud": {
-    "description": "Gestisci le attività degli agenti AI nel cloud (codex, devin, jules)",
-    "agents": {
-      "description": "Elenca gli agenti cloud disponibili"
-    },
-    "agent": {
-      "description": "Gestisci le attività dell'agente cloud {agent}",
-      "auth": {
-        "description": "Autorizza {agent} tramite OAuth"
-      }
-    },
-    "task": {
-      "description": "Gestisci le attività degli agenti cloud",
-      "create": {
-        "description": "Crea una nuova attività dell'agente",
-        "title": "Titolo dell'attività (per impostazione predefinita, i primi 80 caratteri del prompt)",
-        "prompt": "Testo del prompt dell'attività",
-        "prompt_file": "Leggi il prompt da un file",
-        "repo": "URL del repository da clonare per l'attività",
-        "branch": "Nome del branch da utilizzare",
-        "metadata": "Oggetto JSON con i metadati"
-      },
-      "list": {
-        "description": "Elenca le attività dell'agente",
-        "status": "Filtra per stato (running|completed|failed|cancelled)",
-        "limit": "Numero massimo di risultati (valore predefinito: 50)"
-      },
-      "get": {
-        "description": "Ottieni i dettagli dell'attività tramite ID"
-      },
-      "status": {
-        "description": "Stampa lo stato dell'attività (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Annulla un'attività in esecuzione",
-        "yes": "Salta la richiesta di conferma"
-      },
-      "approve": {
-        "description": "Approva il piano dell'agente per avviare l'esecuzione"
-      },
-      "message": {
-        "description": "Invia un messaggio a un'attività in esecuzione"
-      }
-    },
-    "sources": {
-      "description": "Elenca i file sorgente prodotti da un'attività"
-    }
-  },
-  "eval": {
-    "description": "Gestisci le suite di valutazione e le esecuzioni",
-    "suites": {
-      "description": "Gestisci le suite di valutazione",
-      "list": {
-        "description": "Elenca le suite di valutazione"
-      },
-      "get": {
-        "description": "Ottieni i dettagli della suite di valutazione in base all'ID"
-      },
-      "create": {
-        "description": "Crea una suite di valutazione da un file JSON",
-        "file": "Percorso del file JSON di definizione della suite"
-      }
-    },
-    "run": {
-      "description": "Avvia un'esecuzione di valutazione per una suite",
-      "model": "ID del modello da valutare (predefinito: auto)",
-      "combo": "Forza una combinazione specifica in base al nome",
-      "concurrency": "Numero di campioni simultanei (predefinito: 4)",
-      "tag": "Assegna un tag a questa esecuzione per filtrarla in seguito",
-      "watch": "Monitora l'avanzamento dell'esecuzione fino al completamento"
-    },
-    "list": {
-      "description": "Elenca le esecuzioni di valutazione",
-      "suite": "Filtra per ID della suite",
-      "status": "Filtra per stato",
-      "since": "Restituisci le esecuzioni successive a questo timestamp",
-      "limit": "Numero massimo di risultati (predefinito: 50)"
-    },
-    "get": {
-      "description": "Ottieni i dettagli dell'esecuzione di valutazione in base all'ID"
-    },
-    "results": {
-      "description": "Mostra i risultati dei campioni per un'esecuzione di valutazione",
-      "failed": "Mostra solo i campioni non riusciti"
-    },
-    "cancel": {
-      "description": "Annulla un'esecuzione di valutazione in corso",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "scorecard": {
-      "description": "Mostra la scheda dei punteggi per un'esecuzione di valutazione completata"
-    }
-  },
-  "webhooks": {
-    "description": "Gestisci i webhook di OmniRoute",
-    "events": {
-      "description": "Elenca tutti i tipi di evento webhook disponibili"
-    },
-    "list": {
-      "description": "Elenca i webhook configurati"
-    },
-    "get": {
-      "description": "Ottieni i dettagli del webhook in base all'ID"
-    },
-    "add": {
-      "description": "Registra un nuovo webhook",
-      "url": "URL di destinazione",
-      "events": "Elenco di tipi di evento separati da virgole",
-      "secret": "Segreto di firma HMAC",
-      "header": "Intestazione aggiuntiva nel formato key=value (ripetibile)",
-      "no_enabled": "Crea il webhook in stato disabilitato"
-    },
-    "update": {
-      "description": "Aggiorna un webhook esistente",
-      "enabled": "Imposta lo stato di abilitazione (true|false)"
-    },
-    "remove": {
-      "description": "Elimina un webhook",
-      "yes": "Salta la richiesta di conferma"
-    },
-    "test": {
-      "description": "Invia un evento di test a un webhook",
-      "event": "Tipo di evento da simulare (predefinito: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Router AI intelligente con fallback automatico",
+    "description": "67router — Router AI intelligente con fallback automatico",
     "version": "Stampa la versione ed esci",
     "output": "Formato di output (table, json, jsonl, csv)",
     "quiet": "Sopprimi l'output non essenziale",
     "no_color": "Disabilita l'output colorato",
     "timeout": "Timeout delle richieste HTTP in millisecondi",
-    "api_key": "Chiave API per il server OmniRoute",
-    "base_url": "URL base del server OmniRoute",
+    "api_key": "Chiave API per il server 67router",
+    "base_url": "URL base del server 67router",
     "context": "Contesto/profilo del server per questo comando",
     "lang": "Imposta la lingua di visualizzazione della CLI (sovrascrive OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Gestisci i file (carica, elenca, recupera, scarica, elimina)",
-    "list": {
-      "purpose": "Filtra per scopo",
-      "limit": "Numero massimo di risultati"
-    },
-    "get": {
-      "description": "Ottieni i metadati del file"
-    },
-    "upload": {
-      "description": "Carica un file",
-      "purpose": "Scopo del file (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Scarica il contenuto del file",
-      "out": "Salva nel percorso (predefinito: stdout)"
-    },
-    "delete": {
-      "yes": "Salta la conferma"
-    }
-  },
-  "batches": {
-    "description": "Gestisci i processi batch compatibili con OpenAI",
-    "list": {
-      "status": "Filtra per stato",
-      "limit": "Numero massimo di risultati"
-    },
-    "create": {
-      "description": "Crea un processo batch",
-      "inputFile": "ID del file di input",
-      "endpoint": "Endpoint di destinazione",
-      "window": "Finestra di completamento",
-      "metadata": "Aggiungi metadati chiave=valore"
-    },
-    "submit": {
-      "description": "Carica un file JSONL e crea un processo batch",
-      "jsonl": "Percorso del file JSONL",
-      "endpoint": "Endpoint di destinazione",
-      "wait": "Attendi il completamento"
-    },
-    "cancel": {
-      "yes": "Salta la conferma"
-    },
-    "wait": {
-      "timeout": "Timeout in ms"
-    },
-    "output": {
-      "out": "Salva l'output nel percorso"
-    },
-    "errors": {
-      "out": "Salva gli errori nel percorso"
-    }
   },
   "translator": {
     "description": "Traduci i corpi delle richieste tra formati LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Accedi alla specifica OpenAPI di OmniRoute ed esegui test",
+    "description": "Accedi alla specifica OpenAPI di 67router ed esegui test",
     "dump": {
       "description": "Esporta la specifica OpenAPI su stdout o in un file",
       "format": "Formato di output: yaml|json (predefinito: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Attiva la combinazione con il punteggio più alto"
     }
   },
-  "oneproxy": {
-    "description": "Gestisci il pool upstream di OneProxy",
-    "stats": {
-      "provider": "Filtra per provider",
-      "period": "Periodo di tempo (predefinito: 24h)"
-    },
-    "fetch": {
-      "description": "Recupera proxy dal pool",
-      "count": "Numero di proxy da recuperare (predefinito: 1)",
-      "type": "Tipo di proxy: http|socks5 (predefinito: http)"
-    },
-    "rotate": {
-      "description": "Forza la rotazione del proxy",
-      "provider": "Provider per cui eseguire la rotazione",
-      "connectionId": "ID specifico della connessione da ruotare"
-    },
-    "config": {
-      "description": "Mostra o aggiorna la configurazione di OneProxy",
-      "enabled": "Abilita il pool di proxy (true|false)",
-      "poolSize": "Dimensione del pool",
-      "providerSource": "URL del provider di proxy",
-      "rotationPolicy": "Criterio di rotazione: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Elenca il pool di proxy corrente con le metriche"
-    }
-  },
   "open": {
-    "description": "Apri una pagina specifica della dashboard di OmniRoute nel browser",
+    "description": "Apri una pagina specifica della dashboard di 67router nel browser",
     "url": "Stampa solo l'URL, senza aprire il browser"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sincronizza la configurazione tra le istanze di OmniRoute",
+    "description": "Sincronizza la configurazione tra le istanze di 67router",
     "push": {
       "description": "Invia la configurazione al cloud o a un'istanza remota"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtra per livello (error,warn,info) — separati da virgole",
     "lines": "Numero di righe da recuperare",
     "timeout": "Timeout di connessione in ms",
-    "baseUrl": "URL di base dell'API OmniRoute",
+    "baseUrl": "URL di base dell'API 67router",
     "requestId": "Filtra per ID richiesta",
     "apiKey": "Filtra per chiave API",
     "combo": "Filtra per nome della combinazione",
@@ -1244,10 +890,10 @@
     "description": "Controlla l'icona nell'area di notifica",
     "show": "Mostra l'icona nell'area di notifica (se il server è in esecuzione con --tray)",
     "hide": "Nascondi l'icona nell'area di notifica",
-    "quit": "Chiudi OmniRoute tramite l'area di notifica"
+    "quit": "Chiudi 67router tramite l'area di notifica"
   },
   "autostart": {
-    "description": "Gestisci l'avvio automatico di OmniRoute all'avvio del sistema (Linux: servizio utente systemd)",
+    "description": "Gestisci l'avvio automatico di 67router all'avvio del sistema (Linux: servizio utente systemd)",
     "enable": "Abilita l'avvio automatico all'avvio del sistema",
     "disable": "Disabilita l'avvio automatico all'avvio del sistema",
     "toggle": "Attiva o disattiva l'avvio automatico all'avvio del sistema",
@@ -1268,30 +914,20 @@
     "system": "Prompt di sistema",
     "resume": "Riprendi una sessione salvata specificandone il nome"
   },
-  "plugin": {
-    "description": "Gestisci i plugin della CLI (omniroute-cmd-*)",
-    "list": "Elenca i plugin installati",
-    "install": "Installa un plugin da npm o da un percorso locale",
-    "remove": "Rimuovi un plugin installato",
-    "info": "Mostra i dettagli di un plugin installato",
-    "search": "Cerca nel registro npm i plugin disponibili",
-    "update": "Aggiorna i plugin installati",
-    "scaffold": "Genera la struttura di base di un nuovo plugin"
-  },
   "launch": {
-    "description": "Avvia Claude Code configurato per OmniRoute (locale o remoto, con --profile)",
+    "description": "Avvia Claude Code configurato per 67router (locale o remoto, con --profile)",
     "token": "Token che il client Claude deve inviare (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute non è raggiungibile sulla porta {port}. Avvialo con 'omniroute serve'.",
+    "notRunning": "67router non è raggiungibile sulla porta {port}. Avvialo con 'omniroute serve'.",
     "notFound": "La CLI 'claude' non è stata trovata nel PATH."
   },
   "run": {
-    "description": "Avvia una destinazione CLI supportata tramite OmniRoute"
+    "description": "Avvia una destinazione CLI supportata tramite 67router"
   },
   "setupClaude": {
-    "description": "Genera i profili Claude Code in ~/.claude/profiles dal catalogo dei modelli di OmniRoute"
+    "description": "Genera i profili Claude Code in ~/.claude/profiles dal catalogo dei modelli di 67router"
   },
   "connect": {
-    "description": "Connettiti a un server OmniRoute remoto e accedi alla modalità remota"
+    "description": "Connettiti a un server 67router remoto e accedi alla modalità remota"
   },
   "tokens": {
     "description": "Gestisci i token di accesso con ambito per la CLI (modalità remota)"
@@ -1300,10 +936,10 @@
     "description": "Seleziona un provider e un modello dal server attivo e configura una CLI locale supportata"
   },
   "launchCodex": {
-    "description": "Avvia Codex CLI configurato per OmniRoute (locale o su VPS remoto)"
+    "description": "Avvia Codex CLI configurato per 67router (locale o su VPS remoto)"
   },
   "setupCodex": {
-    "description": "Genera i file dei profili in ~/.codex dal catalogo dei modelli live di OmniRoute"
+    "description": "Genera i file dei profili in ~/.codex dal catalogo dei modelli live di 67router"
   },
   "packs": {
     "description": "Gestisci i pacchetti runtime opzionali (ML / automazione del browser)",
@@ -1316,7 +952,7 @@
     "errUnknown": "pacchetto sconosciuto: {name}",
     "errNoIndex": "indice dei pacchetti non trovato; specifica --source <dir> contenente il payload del pacchetto (è incluso nei bundle desktop accanto all'app)",
     "installed": "pacchetto \"{name}\" installato e verificato in {dir}",
-    "restartHint": "riavvia il server OmniRoute (o l'app desktop) affinché il runtime rilevi il pacchetto",
+    "restartHint": "riavvia il server 67router (o l'app desktop) affinché il runtime rilevi il pacchetto",
     "removed": "pacchetto \"{name}\" rimosso",
     "notInstalled": "il pacchetto \"{name}\" non era installato",
     "verifyOk": "tutti i pacchetti installati sono stati verificati",

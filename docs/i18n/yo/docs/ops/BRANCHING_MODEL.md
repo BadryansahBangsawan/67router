@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ń lo àwòṣe ìtújáde **parallel-cycle**: ẹ̀ka `release/vX.Y.Z`
+67router ń lo àwòṣe ìtújáde **parallel-cycle**: ẹ̀ka `release/vX.Y.Z`
 tí a yà sọ́tọ̀ fún yípo tó ń ṣiṣẹ́ lọ́wọ́, `main` fún ìlà tí a ti tẹ̀jáde, àti táàgì
 `vX.Y.Z` tí kò ṣeé yípadà nígbà tí a bá fi yípo náà jáde. Rírí àwọn commit tí wọ́n dé sórí `release/*` _àti_ sórí
 `main` jẹ́ ohun tí a retí — kì í ṣe àṣìṣe.

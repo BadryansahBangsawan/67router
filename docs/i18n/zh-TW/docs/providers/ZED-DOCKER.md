@@ -4,7 +4,7 @@
 
 ---
 
-當 OmniRoute 在 Docker 內執行時，標準的「從 Zed 鑰匙圈匯入」流程會失敗，
+當 67router 在 Docker 內執行時，標準的「從 Zed 鑰匙圈匯入」流程會失敗，
 因為容器無法存取主機作業系統的鑰匙圈常駐程式（Linux 上的 libsecret、
 macOS 上的 Keychain、Windows 上的 Credential Manager），而且主機檔案系統上的
 Zed 設定目錄預設不會顯示在容器內。
@@ -20,7 +20,7 @@ Zed 設定目錄預設不會顯示在容器內。
    或 D-Bus 工作階段與作業系統的鑰匙圈服務通訊。預設情況下，兩者都不會橋接至
    容器中，因此讀取憑證必定會失敗。
 
-OmniRoute 會透過兩種啟發式方法偵測 Docker 環境：
+67router 會透過兩種啟發式方法偵測 Docker 環境：
 
 - 存在 `/.dockerenv`（由 Docker 常駐程式在容器啟動時寫入）。
 - `/proc/1/cgroup` 中出現字串 `docker`（Linux cgroup v1）。
@@ -32,7 +32,7 @@ OmniRoute 會透過兩種啟發式方法偵測 Docker 環境：
 
 1. 開啟 **儀表板 → 提供者 → Zed**。
 2. **手動權杖匯入**面板會顯示在鑰匙圈匯入卡片下方。當
-   OmniRoute 偵測到 Docker 時，此面板會在第一次鑰匙圈匯入嘗試失敗後自動展開。
+   67router 偵測到 Docker 時，此面板會在第一次鑰匙圈匯入嘗試失敗後自動展開。
 3. 從下拉式選單中選取提供者（OpenAI、Anthropic、Google、Mistral、xAI、
    OpenRouter 或 DeepSeek）。
 4. 將 API 金鑰貼到密碼欄位中。

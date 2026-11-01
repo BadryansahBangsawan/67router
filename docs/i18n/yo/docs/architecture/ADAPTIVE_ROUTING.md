@@ -5,14 +5,14 @@
 ---
 
 Àkọsílẹ̀ yìí ṣàpèjúwe ìpìlẹ̀ ìdarí-ọ̀nà aṣamubadọgba tí ìdáhùn ń darí, èyí tí a ṣàfikún sí
-OmniRoute. A mọ̀ọ́mọ̀ jẹ́ kó kéré: ó ṣàfikún ikanni àbájáde-ìdarí-ọ̀nà tí a ti sọ irú rẹ̀,
+67router. A mọ̀ọ́mọ̀ jẹ́ kó kéré: ó ṣàfikún ikanni àbájáde-ìdarí-ọ̀nà tí a ti sọ irú rẹ̀,
 àmì dídára lórí-ayelujara tí ń pèsè ìdáhùn fún olùṣírò auto-combo tó ti wà, olùkó-jáde
 OpenTelemetry àṣàyàn, àti endpoint ìṣàlàyé. Kò **rò** àkójọpọ̀ ìfaradà tó ti wà
 (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) — ó ń ṣe àfikún sí i.
 
 ## 1. Àyíká iṣẹ́-àwòrán
 
-OmniRoute jẹ́ pẹ̀lẹ́bẹ̀ dátà tó ní **ọ̀nà kíákíá ìbéèrè** àti **pẹ̀lẹ́bẹ̀
+67router jẹ́ pẹ̀lẹ́bẹ̀ dátà tó ní **ọ̀nà kíákíá ìbéèrè** àti **pẹ̀lẹ́bẹ̀
 ìṣàkóso/òye**. Ọ̀nà kíákíá náà gbọ́dọ̀ máa yára, lo ìrántí lọ́nà tó péye, ṣiṣẹ́ láìdúró-de,
 ní ìfaradà, kí ó sì ṣeé sọ àsọtẹ́lẹ̀. Ìṣàyẹ̀wò, fífúnni ní àmì dídára, àdánwò àti ìtúpalẹ̀ ìtàn
 jẹ́ ti pẹ̀lẹ́bẹ̀ ìṣàkóso.
@@ -22,7 +22,7 @@ Aṣojú AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   pẹ̀lẹ́bẹ̀ dátà (yára, sync, inú ìrántí)
+│    67router        │   pẹ̀lẹ́bẹ̀ dátà (yára, sync, inú ìrántí)
 │  ìdarí-ọ̀nà / failover │
 │  ìlera / guardrail  │
 │  cache / streaming  │
@@ -41,16 +41,15 @@ Aṣojú AI / IDE
 
 ### Ohun tó ti wà tẹ́lẹ̀ (tí a ti ṣàyẹ̀wò, tí a kò ṣe àdàkọ rẹ̀)
 
-| Èrò                                       | Ìmúlò tó ti wà                                                                                             |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Wíwà-lárọ̀ọ́wọ́ (ṣé a lè fi traffic ránṣẹ́?)  | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, tí a fi pamọ́ sínú DB), connection cooldown, model lockout |
-| Ìjábọ̀ ìlera                               | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                    |
-| Shadow traffic                            | `open-sse/services/combo/shadowRouting.ts`                                                                 |
-| Àwọn guardrail                            | `src/lib/guardrails/` (àwọn hook ṣáájú/lẹ́yìn)                                                              |
-| Cache gédégbé                             | `src/lib/semanticCache.ts` (tó dá lórí signature)                                                          |
-| Àwọn evaluator / ìdarí-ọ̀nà tí eval ń darí | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                       |
-| Ìṣàlàyé ìpinnu combo                      | `open-sse/services/combo/decisionTrace.ts`                                                                 |
-| Àwọn ìṣẹ̀lẹ̀ dashboard ní àkókò-gidi        | `src/lib/events/eventBus.ts` (ikanni ìfitónilétí UI, payload `unknown`, ìtàn onírẹ́kọ́ọ̀dù 100)               |
+| Èrò                                      | Ìmúlò tó ti wà                                                                                             |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Wíwà-lárọ̀ọ́wọ́ (ṣé a lè fi traffic ránṣẹ́?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, tí a fi pamọ́ sínú DB), connection cooldown, model lockout |
+| Ìjábọ̀ ìlera                              | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                    |
+| Shadow traffic                           | `open-sse/services/combo/shadowRouting.ts`                                                                 |
+| Àwọn guardrail                           | `src/lib/guardrails/` (àwọn hook ṣáájú/lẹ́yìn)                                                              |
+| Cache gédégbé                            | `src/lib/semanticCache.ts` (tó dá lórí signature)                                                          |
+| Ìṣàlàyé ìpinnu combo                     | `open-sse/services/combo/decisionTrace.ts`                                                                 |
+| Àwọn ìṣẹ̀lẹ̀ dashboard ní àkókò-gidi       | `src/lib/events/eventBus.ts` (ikanni ìfitónilétí UI, payload `unknown`, ìtàn onírẹ́kọ́ọ̀dù 100)               |
 
 Pẹlẹbẹ routing-event **kì í ṣe** àtúnṣe `eventBus`: bus yẹn ni
 ikanni ìfitónilétí àkókò-gidi ti dashboard (àwọn _orúkọ ìṣẹ̀lẹ̀_ tí a ti sọ irú wọn,
@@ -233,7 +232,7 @@ TTFT/ITL/interrupted ń wọ inú `RoutingEvent` (`ttftMs`, `itlMs`), a sì
 - Àwọn span ń tẹ̀lé àwọn àdéhùn ìtumọ̀ GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) pẹ̀lú àwọn ànímọ́ ìdarí
-  OmniRoute (àbájáde, ipò, ttft, àwọn ìgbìyànjú-àtúnṣe, fallback).
+  67router (àbájáde, ipò, ttft, àwọn ìgbìyànjú-àtúnṣe, fallback).
 - `record()` kàn ń fi ohun sínú buffer oníwọ̀n tó lopin (O(1)); timer abẹ́lẹ̀ kan
   ń flush nípasẹ̀ `POST {endpoint}/v1/traces` láìdúró. Nígbà ìrùpọ̀ iṣẹ́,
   àwọn event tó ti pẹ́ jù ni a ń yọ kúrò (`dropped` counter) — kò gbọdọ̀ fa backpressure sí data
@@ -254,7 +253,7 @@ TTFT/ITL/interrupted ń wọ inú `RoutingEvent` (`ttftMs`, `itlMs`), a sì
 
 ## 6. Ìṣọ̀kan pẹ̀lú evaluation-plane (Ìmúrasílẹ̀ fún Future AGI)
 
-OmniRoute ka Future AGI (tàbí evaluator èyíkéyìí) sí **backend
+67router ka Future AGI (tàbí evaluator èyíkéyìí) sí **backend
 ọgbọ́n/ìṣàyẹ̀wò tó ṣeé lò, kì í ṣe dependency**. Àwọn ojú-ọ̀nà náà ni:
 
 - `RoutingEventSink` kan lè fi àwọn event ránṣẹ́ sí evaluator láìdúró.
@@ -263,8 +262,6 @@ OmniRoute ka Future AGI (tàbí evaluator èyíkéyìí) sí **backend
 - `Evaluator` ọjọ́ iwájú kan (onípinnu, adájọ́ agbègbè, HTTP, WASM) yóò gba
   àwọn event/trace, yóò sì dá `QualityScore` padà tí yóò wọ inú ọ̀nà
   `getQualityScore`/quality-factor kan náà.
-- Ìdarí tí eval ń darí tó ti wà tẹ́lẹ̀ (`open-sse/services/evalRouting.ts`) ti ń
-  tún àwọn ibi-àfojúsùn combo tò nípasẹ̀ àwọn ìwọ̀n àṣeyọrí `eval_runs` nígbà tí a bá mú un ṣiṣẹ́.
 
 Kò sí ìṣàyẹ̀wò kankan tó ń ṣiṣẹ́ pẹ̀lú ìbéèrè lórí ọ̀nà ìbéèrè, gateway náà sì
 ń ṣiṣẹ́ ní kíkún láìsí evaluator.

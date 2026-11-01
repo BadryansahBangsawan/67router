@@ -4,7 +4,7 @@
 
 ---
 
-> **A taƙaice**: Yi amfani da asusun masu samar da sabis da suka cancanta da kake da su. OmniRoute yana haɗa hanyoyin sadarwar da ka saita; ba shi ne ke bayar da jimillar adadin token da aka tallata ba. Samun damar kyauta na iya buƙatar yin rajista, maɓallin API, amincewa, ko hanyar biyan kuɗi. Har yanzu iyakokin masu samar da sabis, manufofin keɓantawa, da sharuɗɗa suna aiki.
+> **A taƙaice**: Yi amfani da asusun masu samar da sabis da suka cancanta da kake da su. 67router yana haɗa hanyoyin sadarwar da ka saita; ba shi ne ke bayar da jimillar adadin token da aka tallata ba. Samun damar kyauta na iya buƙatar yin rajista, maɓallin API, amincewa, ko hanyar biyan kuɗi. Har yanzu iyakokin masu samar da sabis, manufofin keɓantawa, da sharuɗɗa suna aiki.
 
 ---
 
@@ -15,7 +15,7 @@ nufin endpoint da ba ya buƙatar tantancewa, ƙason amfani mai sabuntawa, damar 
 amincewar hannu, ko wani tayin wucin gadi. Wasu zaɓuɓɓuka suna buƙatar asusu, API key,
 katin kuɗi, KYC, ko amincewa da sharuɗɗan da suka keɓanta ga mai samarwar.
 
-OmniRoute yana **tattara** haɗin da aka saita zuwa endpoint guda ɗaya. Har yanzu dole ne ka yi rajista daban ga kowane mai samarwa da ke buƙatar asusu. Haɗa waɗannan asusun sannan ka yi amfani da `model: "auto"` don karkatar da buƙatu tsakanin wuraren da suka cancanta. Sabon girkawa na iya rasa wurin da ya cancanta wanda baya buƙatar maɓalli; girka OmniRoute kaɗai ba ya tabbatar da samun nasarar amsar taɗi.
+67router yana **tattara** haɗin da aka saita zuwa endpoint guda ɗaya. Har yanzu dole ne ka yi rajista daban ga kowane mai samarwa da ke buƙatar asusu. Haɗa waɗannan asusun sannan ka yi amfani da `model: "auto"` don karkatar da buƙatu tsakanin wuraren da suka cancanta. Sabon girkawa na iya rasa wurin da ya cancanta wanda baya buƙatar maɓalli; girka 67router kaɗai ba ya tabbatar da samun nasarar amsar taɗi.
 
 ---
 
@@ -60,7 +60,7 @@ Waɗannan masu bayarwa suna da **matakan kyauta** masu takamaiman iyakoki:
 
 ## Yadda Ake Haɗa Matakan Kyauta
 
-Sirrin OmniRoute shi ne **haɗa matakan kyauta**. Maimakon dogaro da mai samarwa guda ɗaya, kana haɗa masu samar da sabis na kyauta da yawa sannan ka bar OmniRoute ya zaɓi mafi dacewa ta atomatik ga kowace buƙata.
+Sirrin 67router shi ne **haɗa matakan kyauta**. Maimakon dogaro da mai samarwa guda ɗaya, kana haɗa masu samar da sabis na kyauta da yawa sannan ka bar 67router ya zaɓi mafi dacewa ta atomatik ga kowace buƙata.
 
 ### Misali: Faɗaɗɗen Rufin Matakin Kyauta
 
@@ -71,7 +71,7 @@ Haɗa masu samar da sabis da yawa don rage dogaro da ƙayyadadden kaso na guda �
 3. **Pollinations** — damar shiga marar maɓalli, mai iyakacin adadin amfani
 4. **LongCat** — tallafin rajista na lokaci guda (yana buƙatar KYC)
 
-Sannan yi amfani da `model: "auto"` kuma OmniRoute zai:
+Sannan yi amfani da `model: "auto"` kuma 67router zai:
 
 - Fara gwada haɗin da ya cancanta kuma yake da matsayi mafi girma
 - Idan ƙayyadadden kasonsa ya ƙare ko binciken lafiyarsa ya gaza → gwada mai samar da sabis na gaba da aka saita
@@ -105,7 +105,7 @@ damar amfani marar iyaka/marar maɓalli, kuɗaɗen rajista, bayanan da aka daina
 
 ### Mataki na 5: Danna Haɗa
 
-Ga mai bayar da sabis na `NOAUTH`, OmniRoute ba ya neman bayanan shaidar shiga na sabis na sama. Wannan ba ya tabbatar da cewa sabis na saman zai karɓi manhajojin wasu ɓangarori ko kuma yana da wadataccen ƙarfin aiki. Dole ne a haɗa masu bayar da sabis na OAuth da API-key ta hanyar tsarin asusun da aka bayyana a takardunsu. Har yanzu manhajarka za ta yi amfani da maɓallin API na OmniRoute da aka nuna a **Dashboard → Endpoints** idan an kunna tantancewar na'ura mai ba da hanya.
+Ga mai bayar da sabis na `NOAUTH`, 67router ba ya neman bayanan shaidar shiga na sabis na sama. Wannan ba ya tabbatar da cewa sabis na saman zai karɓi manhajojin wasu ɓangarori ko kuma yana da wadataccen ƙarfin aiki. Dole ne a haɗa masu bayar da sabis na OAuth da API-key ta hanyar tsarin asusun da aka bayyana a takardunsu. Har yanzu manhajarka za ta yi amfani da maɓallin API na 67router da aka nuna a **Dashboard → Endpoints** idan an kunna tantancewar na'ura mai ba da hanya.
 
 ### Mataki na 6: Maimaita
 
@@ -115,7 +115,7 @@ Haɗa masu bayar da sabis da dama waɗanda sharuɗɗansu da tsarin sirrinsu suka
 
 ## Karanta Katalojin Daidai
 
-- `NOAUTH` yana nufin OmniRoute ba ya neman shaidar mai samarwa daga gare ku; wannan ba ya
+- `NOAUTH` yana nufin 67router ba ya neman shaidar mai samarwa daga gare ku; wannan ba ya
   tabbatar da ci gaba da aiki, sirri, ko ƙarfin amfani marar iyaka.
 - `hasFree` metadata ne na ganowa. Zai iya wakiltar ƙason amfani mai maimaituwa, samun dama ba tare da maɓalli ba,
   kuɗin rajista, shirin amincewa, ko talla.
@@ -128,15 +128,15 @@ Haɗa masu bayar da sabis da dama waɗanda sharuɗɗansu da tsarin sirrinsu suka
 
 ---
 
-## Yadda OmniRoute Ke Inganta Matakan Kyauta
+## Yadda 67router Ke Inganta Matakan Kyauta
 
 ### 1. Sauyawa Zuwa Madadin Ta Atomatik
 
-Idan wani mai bayarwa kyauta yana da cunkoso ko baya aiki, OmniRoute zai gwada na gaba ta atomatik. Ba ka buƙatar yin komai.
+Idan wani mai bayarwa kyauta yana da cunkoso ko baya aiki, 67router zai gwada na gaba ta atomatik. Ba ka buƙatar yin komai.
 
 ### 2. Zaɓen Hanya Cikin Hikima
 
-OmniRoute yana zaɓar **mafi kyawun mai bayarwa kyauta** ga kowace buƙata bisa:
+67router yana zaɓar **mafi kyawun mai bayarwa kyauta** ga kowace buƙata bisa:
 
 - Sauri — Wane mai bayarwa ne ya fi sauri a yanzu?
 - Inganci — Wane mai bayarwa ne ya fi dacewa da wannan aikin?
@@ -144,13 +144,13 @@ OmniRoute yana zaɓar **mafi kyawun mai bayarwa kyauta** ga kowace buƙata bisa:
 
 ### 3. Tanadin Token
 
-Tsarin matsawa na OmniRoute zai iya rage token na umarni da na sakamakon kayan aiki da suka cancanta. Adadin
+Tsarin matsawa na 67router zai iya rage token na umarni da na sakamakon kayan aiki da suka cancanta. Adadin
 tanadi na ainihi ya dogara da abun ciki, injunan da aka zaɓa, lissafin mai bayarwa, da saitunan
 riƙe inganci; matsawa ba ya ninka ƙayyadadden kason kowane mai bayarwa da wani tsayayyen adadi.
 
 ### 4. Tallafin Asusun Da Yawa
 
-Idan sharuɗɗan mai bayarwa sun yarda da asusu ko shaidun shiga da yawa, OmniRoute zai iya ɗaukar kowane
+Idan sharuɗɗan mai bayarwa sun yarda da asusu ko shaidun shiga da yawa, 67router zai iya ɗaukar kowane
 haɗi a matsayin ɗan takarar zaɓen hanya na daban. Kada ka ƙirƙiri ƙarin asusu don kauce wa
 ƙayyadadden kaso ko manufofin damar shiga na mai bayarwa.
 
@@ -165,7 +165,7 @@ Kundin bayanan kai-tsaye da aka cire maimaituwar rukuni a cikinsa a halin yanzu 
 | Tallafin adadi mai maimaituwa        |        **~1.62B tokens/wata** | An ƙirga rukunin da aka raba sau ɗaya; ba a haɗa masu bayarwa marasa iyaka a jimillar ba |
 | Watan farko tare da tallafin rajista |             **~2.22B tokens** | Jimillar da ke maimaituwa tare da kiredit na lokaci ɗaya da masu maimaituwa              |
 
-Waɗannan ƙiyasin kundin bayanai ne gaba ɗaya daga asusu daban-daban da suka cancanta, ba wani kaso da OmniRoute ke bayarwa ba ko hasashe ga sabon girkawa. Ƙarfin da za ka iya amfani da shi ya dogara da masu bayarwar da ka haɗa da kuma sharuɗɗansu na yanzu. Ana lissafa ƙimomin daga `open-sse/config/freeModelCatalog.ts`; duba
+Waɗannan ƙiyasin kundin bayanai ne gaba ɗaya daga asusu daban-daban da suka cancanta, ba wani kaso da 67router ke bayarwa ba ko hasashe ga sabon girkawa. Ƙarfin da za ka iya amfani da shi ya dogara da masu bayarwar da ka haɗa da kuma sharuɗɗansu na yanzu. Ana lissafa ƙimomin daga `open-sse/config/freeModelCatalog.ts`; duba
 [Manazartar Matakan Kyauta](../reference/FREE_TIERS.md) don cire maimaituwar rukuni, alamomin ToS,
 shigarwar da aka dakatar, da tsarin ƙididdigar kiredit ɗin rajista.
 
@@ -192,7 +192,7 @@ buƙatun tsarin samarwarka. Muhimman ayyuka su kasance da madadin da ake sa ido 
 
 Abubuwan da za a iya sadaukarwa na iya haɗawa da tsauraran iyakoki, jerin jira, KYC, tabbatar da katin kiredit, horaswa da
 prompts, raunin sirri, rashin SLA, yawan sauyawar samfura, ƙuntatawar yanki, biyan kuɗin abin da ya wuce iyaka, ko
-haɗarin manufofin asusu. OmniRoute yana nuna metadata da ake da shi; kai ne za ka zaɓi abin da za a kunna.
+haɗarin manufofin asusu. 67router yana nuna metadata da ake da shi; kai ne za ka zaɓi abin da za a kunna.
 
 ### "Ta yaya zan sami ƙarin kaso na kyauta?"
 
@@ -211,7 +211,7 @@ shafin Matsayin Masu Samar da Kyauta a matsayin alamar inganci sannan ka tabbata
 
 ## Me ke Gaba?
 
-- **[Jagorar Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Bari OmniRoute ya zaɓa maka AI mafi dacewa
+- **[Jagorar Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Bari 67router ya zaɓa maka AI mafi dacewa
 - **[Jagorar Masu Bayar da Sabis](./PROVIDERS-GUIDE.md)** — Haɗa ƙarin masu bayar da sabis
 - **[Magance Matsaloli](../guides/TROUBLESHOOTING.md)** — Gyara matsalolin da aka fi fuskanta
 - **[Manazartar Matakan Kyauta](../reference/FREE_TIERS.md)** — Cikakken jerin matakan kyauta

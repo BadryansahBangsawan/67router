@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Deutsch)
+# 🐳 Docker Guide — 67router (Deutsch)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Mit Umgebungsdatei](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Verfügbare Profile](#available-profiles)
-- [Konfiguration von CLI-Tools auf dem Host, wenn OmniRoute in Docker ausgeführt wird](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Konfiguration von CLI-Tools auf dem Host, wenn 67router in Docker ausgeführt wird](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis-Sidecar](#redis-sidecar)
 - [Produktions-Compose](#production-compose)
 - [Dockerfile-Stufen](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Verfügbare Profile
 
-OmniRoute enthält Compose-Profile für die wichtigsten Bereitstellungsszenarien. Wählen Sie das Profil aus, das zu Ihrer Umgebung passt.
+67router enthält Compose-Profile für die wichtigsten Bereitstellungsszenarien. Wählen Sie das Profil aus, das zu Ihrer Umgebung passt.
 
 | Profil            | Dienst           | Verwendungszweck                                                                                                                                                    | Befehl                                       |
 | ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute enthält Compose-Profile für die wichtigsten Bereitstellungsszenarien
 
 > Mehrere Profile können kombiniert werden: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Konfigurieren von Host-CLI-Tools, wenn OmniRoute in Docker ausgeführt wird
+## Konfigurieren von Host-CLI-Tools, wenn 67router in Docker ausgeführt wird
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` und die Schaltfläche
 **Konfiguration speichern** im Dashboard schreiben jeweils Dateien wie `~/.codex/*.config.toml`. Diese Pfade
@@ -103,11 +103,11 @@ des Containers ausgeführt, landen die Schreibvorgänge im Home-Verzeichnis des 
 das Image wird mit `USER node` ausgeführt), wo keine Host-CLI sie jemals liest und wo sie
 verworfen werden, sobald der Container neu erstellt wird.
 
-OmniRoute erkennt dies und verweigert den Schreibvorgang mit entsprechenden Anweisungen, statt
+67router erkennt dies und verweigert den Schreibvorgang mit entsprechenden Anweisungen, statt
 einen nicht nutzbaren Erfolg zu melden: Die CLI wird mit `2` beendet und die API antwortet mit `422`
 und `containerEphemeralTarget: true`.
 
-### Empfohlen: CLI auf dem Host, OmniRoute in Docker ausführen
+### Empfohlen: CLI auf dem Host, 67router in Docker ausführen
 
 Der Container stellt die API bereit; die CLI konfiguriert Ihre Host-Tools.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Ein Bind-Mount macht den Pfad vertrauenswürdig: OmniRoute liest
+Ein Bind-Mount macht den Pfad vertrauenswürdig: 67router liest
 `/proc/self/mountinfo` und erlaubt Schreibvorgänge in eingehängte Pfade (sowie in Verzeichnisse,
 deren Unterverzeichnisse Mounts sind, was exakt der oben gezeigten Struktur von `/host-home` entspricht), während
 Schreibvorgänge in nicht eingehängte Pfade weiterhin verweigert werden.
@@ -178,7 +178,7 @@ mit einer Warnung fortgesetzt, dass die Änderungen den Container nicht überdau
 
 ## Redis-Sidecar
 
-OmniRoute verwendet Redis als Backend für den verteilten Rate-Limiter und den gemeinsam genutzten Cache. Der Dienst `redis` ist in `docker-compose.yml` **immer definiert** (er ist an kein Profil gebunden) und wird zusammen mit jedem anderen Profil gestartet.
+67router verwendet Redis als Backend für den verteilten Rate-Limiter und den gemeinsam genutzten Cache. Der Dienst `redis` ist in `docker-compose.yml` **immer definiert** (er ist an kein Profil gebunden) und wird zusammen mit jedem anderen Profil gestartet.
 
 | Detail                        | Wert                                          |
 | ----------------------------- | --------------------------------------------- |
@@ -364,7 +364,6 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 | `DASHBOARD_PORT` / `API_PORT` | Überschreibt die veröffentlichten Ports für Dashboard (20128) und API (20129)                                                                                                                                                                                                     | `20128` / `20129`                     |
 | `APP_BIND_HOST`               | Hostschnittstelle, an der docker-compose die Dashboard-/API-/Live-WS-Ports veröffentlicht. Bei `REQUIRE_API_KEY=false` (Standard) macht `0.0.0.0` den anonymen `/v1`-Proxy im LAN zugänglich — nur mit `REQUIRE_API_KEY=true` oder einem vorgeschalteten Reverse-Proxy erweitern. | `127.0.0.1`                           |
 | `CLIPROXY_BIND_HOST`          | Hostschnittstelle, an der docker-compose den Sidecar `cliproxyapi` veröffentlicht — sein Daten-Volume enthält die Anmeldedaten des Providers.                                                                                                                                     | `127.0.0.1`                           |
-| `OMNIROUTE_PLUGINS_DIR`       | Verzeichnis, das der Laufzeit-Plugin-Scanner liest und in dem er installiert. Festlegen, wenn Plugins per Bind-Mount eingebunden werden: Der Standardwert folgt `HOME`, das ein Image nicht zwingend exportiert.                                                                  | `~/.omniroute/plugins`                |
 | `OMNIROUTE_BASE_PATH`         | URL-Unterpfad, wenn die App hinter einem Reverse-Proxy veröffentlicht wird (z. B. `/omniroute`)                                                                                                                                                                                   | _(leer = Stammverzeichnis)_           |
 | `NEXT_PUBLIC_BASE_URL`        | Öffentlicher Browser-Ursprung einschließlich des Unterpfads (z. B. `https://host/omniroute`)                                                                                                                                                                                      | nicht gesetzt                         |
 | `PROD_DASHBOARD_PORT`         | Hostseitiger Dashboard-Port für `docker-compose.prod.yml`                                                                                                                                                                                                                         | `20130`                               |
@@ -372,7 +371,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## Reverse-Proxy auf einem Unterpfad (Traefik / nginx)
 
-Der Next.js-`basePath` wird in das Standalone-Bundle kompiliert. OmniRoute speichert den fest
+Der Next.js-`basePath` wird in das Standalone-Bundle kompiliert. 67router speichert den fest
 eingebetteten Wert in einer Sentinel-Datei im Stammverzeichnis der App (geschrieben während
 `npm run build`; gelesen von `scripts/docker/ensure-docker-base-path.mjs`) und vergleicht ihn
 beim Start des Containers mit `OMNIROUTE_BASE_PATH`. Wenn die Werte voneinander abweichen und
@@ -450,7 +449,7 @@ Vollständige Hinweise zu Probes:
 
 ## Docker Compose mit Caddy (automatisches HTTPS-TLS)
 
-OmniRoute kann mithilfe der automatischen SSL-Bereitstellung von Caddy sicher veröffentlicht werden. Stellen Sie sicher, dass der DNS-A-Eintrag Ihrer Domain auf die IP-Adresse Ihres Servers verweist.
+67router kann mithilfe der automatischen SSL-Bereitstellung von Caddy sicher veröffentlicht werden. Stellen Sie sicher, dass der DNS-A-Eintrag Ihrer Domain auf die IP-Adresse Ihres Servers verweist.
 
 ```yaml
 services:
@@ -481,10 +480,10 @@ volumes:
   omniroute-data:
 ```
 
-Caddy setzt die standardmäßigen Weiterleitungs-Header für den Upstream-Container. OmniRoute verwendet
+Caddy setzt die standardmäßigen Weiterleitungs-Header für den Upstream-Container. 67router verwendet
 `NEXT_PUBLIC_BASE_URL` als kanonischen öffentlichen Ursprung für OAuth-Callbacks und generierte öffentliche
 Links; authentifizierte Schreibvorgänge im Dashboard verwenden Same-Origin-Anfragen sowie sitzungsgebundenen CSRF-
-Schutz. Aktivieren Sie `OMNIROUTE_TRUST_PROXY` nur für erweiterte Bereitstellungen, bei denen OmniRoute den
+Schutz. Aktivieren Sie `OMNIROUTE_TRUST_PROXY` nur für erweiterte Bereitstellungen, bei denen 67router den
 öffentlichen Ursprung bewusst aus vertrauenswürdigen weitergeleiteten Headern statt aus einer expliziten
 Konfiguration ableiten soll.
 
@@ -497,11 +496,11 @@ Endpunkt-Tunnelbereiche (Cloudflare, Tailscale, ngrok) können unter `Settings �
 ### Hinweise zu Tunneln
 
 - Quick-Tunnel-URLs sind temporär und ändern sich nach jedem Neustart.
-- Quick Tunnels werden nach einem Neustart von OmniRoute oder des Containers nicht automatisch wiederhergestellt. Aktivieren Sie sie bei Bedarf erneut über das Dashboard.
+- Quick Tunnels werden nach einem Neustart von 67router oder des Containers nicht automatisch wiederhergestellt. Aktivieren Sie sie bei Bedarf erneut über das Dashboard.
 - Die verwaltete Installation unterstützt derzeit Linux, macOS und Windows auf `x64` / `arm64`.
 - Verwaltete Quick Tunnels verwenden standardmäßig HTTP/2 als Transportprotokoll, um störende QUIC-UDP-Pufferwarnungen in eingeschränkten Containerumgebungen zu vermeiden. Setzen Sie `CLOUDFLARED_PROTOCOL=quic` oder `auto`, wenn Sie ein anderes Transportprotokoll verwenden möchten.
 - Docker-Images enthalten die CA-Stammzertifikate des Systems und übergeben sie an das verwaltete `cloudflared`. Dadurch werden TLS-Vertrauensfehler vermieden, wenn der Tunnel innerhalb des Containers initialisiert wird.
-- Setzen Sie `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`, wenn OmniRoute eine vorhandene Binärdatei verwenden soll, anstatt eine herunterzuladen.
+- Setzen Sie `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`, wenn 67router eine vorhandene Binärdatei verwenden soll, anstatt eine herunterzuladen.
 
 ## Image-Tags
 
@@ -514,7 +513,7 @@ Plattformübergreifendes Manifest: natives `linux/amd64` + `linux/arm64` (Apple 
 
 ### Veröffentlichungskanäle
 
-OmniRoute veröffentlicht separate Docker-Kanäle für stabile Releases, Tests des aktiven Release-Branches und Entwicklungs-Builds.
+67router veröffentlicht separate Docker-Kanäle für stabile Releases, Tests des aktiven Release-Branches und Entwicklungs-Builds.
 
 | Kanal                           | Quelle                                        | Veränderbarkeit                    | Empfohlene Verwendung                                                                                                                              |
 | ------------------------------- | --------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -567,7 +566,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Sichern Sie vor dem Testen das OmniRoute-Daten-Volume oder das per Bind-Mount eingebundene Datenverzeichnis. Stellen Sie für einen Rollback die zuvor verwendete stabile Version oder den zuvor verwendeten Digest wieder her und erstellen Sie den Container neu:
+Sichern Sie vor dem Testen das 67router-Daten-Volume oder das per Bind-Mount eingebundene Datenverzeichnis. Stellen Sie für einen Rollback die zuvor verwendete stabile Version oder den zuvor verwendeten Digest wieder her und erstellen Sie den Container neu:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -587,7 +586,7 @@ Ein Build aus einem Release-Branch kann `latest` niemals verschieben; nur eine g
 
 ## Dashboard-Updates in Docker
 
-Ein Container aus einem veröffentlichten Image kann sich nicht selbst ersetzen. Wenn OmniRoute erkennt, dass es innerhalb eines Containers ausgeführt wird (kein `.git`-Checkout, keine npm-Installation), zeigt das Update-Banner des Start-Dashboards anstelle der npm-/git-Anweisungen den auszuführenden Host-Befehl mit einer Kopierschaltfläche an:
+Ein Container aus einem veröffentlichten Image kann sich nicht selbst ersetzen. Wenn 67router erkennt, dass es innerhalb eines Containers ausgeführt wird (kein `.git`-Checkout, keine npm-Installation), zeigt das Update-Banner des Start-Dashboards anstelle der npm-/git-Anweisungen den auszuführenden Host-Befehl mit einer Kopierschaltfläche an:
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -597,7 +596,7 @@ Der Dienstname stammt aus `AUTO_UPDATE_SERVICE` (Standardwert `omniroute`, der D
 
 ### Ein-Klick-Updates mit einer Host-Triggerdatei
 
-Damit **Jetzt aktualisieren** weiterhin funktioniert, ohne `/var/run/docker.sock` einzubinden (wodurch der Container Root-Zugriff auf dem Host erhält — siehe die Warnung zum `cli`-Profil oben), setzen Sie `DOCKER_UPDATE_TRIGGER_FILE` für den OmniRoute-Dienst und führen Sie einen Watcher auf dem Host aus:
+Damit **Jetzt aktualisieren** weiterhin funktioniert, ohne `/var/run/docker.sock` einzubinden (wodurch der Container Root-Zugriff auf dem Host erhält — siehe die Warnung zum `cli`-Profil oben), setzen Sie `DOCKER_UPDATE_TRIGGER_FILE` für den 67router-Dienst und führen Sie einen Watcher auf dem Host aus:
 
 ```yaml
 services:
@@ -608,14 +607,14 @@ services:
       - ./data:/app/data
 ```
 
-Der Pfad muss sich innerhalb von `DATA_DIR` befinden (relative Werte werden relativ dazu aufgelöst); alle anderen Pfade werden abgelehnt. **Jetzt aktualisieren** schreibt dann `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` in diese Datei, antwortet mit `202`, und das Dashboard fragt `/api/system/version` ab, bis die neue Version aktiv ist, und lädt anschließend neu. OmniRoute führt in diesem Modus niemals einen Shell- oder Docker-Befehl aus. Wie bei jeder Update-Aktion wird die Anfrage nur von Loopback-/LAN-Clients akzeptiert.
+Der Pfad muss sich innerhalb von `DATA_DIR` befinden (relative Werte werden relativ dazu aufgelöst); alle anderen Pfade werden abgelehnt. **Jetzt aktualisieren** schreibt dann `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` in diese Datei, antwortet mit `202`, und das Dashboard fragt `/api/system/version` ab, bis die neue Version aktiv ist, und lädt anschließend neu. 67router führt in diesem Modus niemals einen Shell- oder Docker-Befehl aus. Wie bei jeder Update-Aktion wird die Anfrage nur von Loopback-/LAN-Clients akzeptiert.
 
 Ein per Bind-Mount eingebundenes Datenverzeichnis stellt dem Host einen stabilen zu überwachenden Pfad bereit. Beispielhafte `systemd`-Units (passen Sie `/srv/omniroute` an das Verzeichnis an, das Ihre Compose-Datei und `data/` enthält):
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Auf Update-Anfragen des OmniRoute-Dashboards warten
+Description=Auf Update-Anfragen des 67router-Dashboards warten
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -627,7 +626,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=OmniRoute-Container abrufen und neu erstellen
+Description=67router-Container abrufen und neu erstellen
 
 [Service]
 Type=oneshot
@@ -646,13 +645,13 @@ Der Dienst entfernt die Anfrage vor dem Abruf, damit ein fehlgeschlagener Durchl
 
 ## Verfügbarkeit: Standard-SQLite unterstützt nur eine Replik
 
-Die standardmäßige Docker-/Kubernetes-Bereitstellung von OmniRoute besteht aus **einem Node-Prozess + einem SQLite-Schreibprozess**. Hochverfügbarkeit wird bei dieser Topologie **nicht unterstützt**.
+Die standardmäßige Docker-/Kubernetes-Bereitstellung von 67router besteht aus **einem Node-Prozess + einem SQLite-Schreibprozess**. Hochverfügbarkeit wird bei dieser Topologie **nicht unterstützt**.
 
-| Einschränkung                                  | Auswirkung                                                                                                                                                                                                                                                                                                                                                                            |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Einzelner Schreibprozess                       | Führen Sie **nicht** mehrere Repliken mit derselben SQLite-Datei aus. Dadurch wird die Datenbank beschädigt.                                                                                                                                                                                                                                                                          |
-| Neuerstellung / Neustart / HEALTHCHECK-Abbruch | **Vollständiger Ausfall** laufender SSE-Verbindungen, Dashboard-Sitzungen und des In-Memory-Zustands. Die Verbindung aller verbundenen Clients wird getrennt. Neue Anfragen während des Zeitfensters ohne Endpunkt erhalten vom Reverse-Proxy **`502 Bad Gateway: Unknown error`** statt OmniRoute-JSON — Clients können dies nicht von einem Providerausfall unterscheiden (#11015). |
-| Dieselbe Event-Loop wie `/healthz`             | Ein ausgelasteter Katalog- oder Komprimierungszyklus kann Probes verzögern; ein kurzes Timeout startet dann die **einzige** Replik neu.                                                                                                                                                                                                                                               |
+| Einschränkung                                  | Auswirkung                                                                                                                                                                                                                                                                                                                                                                           |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Einzelner Schreibprozess                       | Führen Sie **nicht** mehrere Repliken mit derselben SQLite-Datei aus. Dadurch wird die Datenbank beschädigt.                                                                                                                                                                                                                                                                         |
+| Neuerstellung / Neustart / HEALTHCHECK-Abbruch | **Vollständiger Ausfall** laufender SSE-Verbindungen, Dashboard-Sitzungen und des In-Memory-Zustands. Die Verbindung aller verbundenen Clients wird getrennt. Neue Anfragen während des Zeitfensters ohne Endpunkt erhalten vom Reverse-Proxy **`502 Bad Gateway: Unknown error`** statt 67router-JSON — Clients können dies nicht von einem Providerausfall unterscheiden (#11015). |
+| Dieselbe Event-Loop wie `/healthz`             | Ein ausgelasteter Katalog- oder Komprimierungszyklus kann Probes verzögern; ein kurzes Timeout startet dann die **einzige** Replik neu.                                                                                                                                                                                                                                              |
 
 **Probe-Matrix** (siehe auch [Empfehlungen für Kubernetes-Probes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -756,7 +755,7 @@ sowie die tatsächliche Verbindungsroute; dieser Fehler allein weist nicht auf e
 ### Verbindungsspezifischen Proxy bevorzugen
 
 Verwenden Sie die [Proxy-Konfiguration pro Verbindung](../ops/PROXY_GUIDE.md#4-level-proxy-system)
-von OmniRoute für die betroffene Gemini-Verbindung und wiederholen Sie anschließend **Verbindung testen** sowie eine kleine Anfrage
+von 67router für die betroffene Gemini-Verbindung und wiederholen Sie anschließend **Verbindung testen** sowie eine kleine Anfrage
 mit demselben Modell. Dadurch bleibt die Routing-Änderung auf diese Verbindung beschränkt. Stellen Sie sicher,
 dass der Proxy vom Container aus erreichbar ist und dass die Verbindung ihn tatsächlich auswählt.
 Eine Änderung der Route garantiert nicht, dass die regionalen Voraussetzungen des Upstream-Dienstes erfüllt sind.
@@ -825,7 +824,7 @@ kann andere damit verbundene Container unterbrechen; löschen Sie nicht das pers
 
 ## Wichtige Hinweise
 
-- **SQLite-WAL-Modus:** `docker stop` sollte vollständig ausgeführt werden, damit OmniRoute die neuesten Änderungen per Checkpoint in `storage.sqlite` zurückschreiben kann. Die mitgelieferten Compose-Dateien legen bereits eine Karenzzeit von 40 Sekunden für das Stoppen fest. Wenn Sie das Image direkt ausführen, behalten Sie `--stop-timeout 40` bei.
+- **SQLite-WAL-Modus:** `docker stop` sollte vollständig ausgeführt werden, damit 67router die neuesten Änderungen per Checkpoint in `storage.sqlite` zurückschreiben kann. Die mitgelieferten Compose-Dateien legen bereits eine Karenzzeit von 40 Sekunden für das Stoppen fest. Wenn Sie das Image direkt ausführen, behalten Sie `--stop-timeout 40` bei.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Setzen Sie die Variable auf `true`, wenn routinemäßige bzw. vor Schreibvorgängen erstellte Backups extern verwaltet werden. Migrationen bestehender Datenbanken erfordern weiterhin einen eigenen dauerhaften Sicherheits-Snapshot und einen Schutzmechanismus für Massenmigrationen.
 - **Datenpersistenz:** Binden Sie immer ein Volume unter `/app/data` ein, damit Ihre Datenbank, Schlüssel und Konfigurationen auch nach Container-Neustarts erhalten bleiben.
 - **Portkonfiguration:** Überschreiben Sie die Umgebungsvariable `PORT`, um den Standardport `20128` zu ändern.

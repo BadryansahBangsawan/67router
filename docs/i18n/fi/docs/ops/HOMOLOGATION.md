@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-julkaisun todellisen ympäristön E2E-validointi homologointi-VPS-palvelimella
+67router-julkaisun todellisen ympäristön E2E-validointi homologointi-VPS-palvelimella
 (`HOMOLOG_BASE_URL`, esim. `http://192.168.0.15:20128`). Yksi komento korvaa julkaisun
 manuaalisen STOP #2 -tarkistuslistan automatisoidulla ajolla, joka tuottaa todennusaineiston.
 

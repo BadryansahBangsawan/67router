@@ -4,7 +4,7 @@
 
 ---
 
-Dekripsi transparan TPROXY adalah **mode penangkapan ke-5** OmniRoute untuk stack MITM
+Dekripsi transparan TPROXY adalah **mode penangkapan ke-5** 67router untuk stack MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Mode ini mencegat dan **mendekripsi** lalu lintas HTTPS keluar lokal di Linux
 menggunakan TPROXY kernel + perutean berbasis kebijakan — **tanpa** memalsukan `/etc/hosts` dan
@@ -54,7 +54,7 @@ Gunakan mode ini saat Anda ingin menangkap dan mendekripsi lalu lintas dari pros
 
 Karena intersepsi terjadi di kernel, proses asal **tidak memerlukan
 perubahan konfigurasi** — tetapi proses tersebut harus memercayai CA dinamis yang dipasang
-OmniRoute (lihat [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
+67router (lihat [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
 
@@ -72,7 +72,7 @@ addon belum dibangun), loader addon (`src/mitm/tproxy/transparentSocket.ts::load
 mengembalikan `null` alih-alih melemparkan error. Status mode penangkapan kemudian melaporkan
 `available: false`, tombol pengalih dasbor **dinonaktifkan** dengan tooltip
 "Pendekripsian TPROXY memerlukan Linux + root + addon native", dan bagian lain dari
-OmniRoute tetap berfungsi.
+67router tetap berfungsi.
 
 ---
 
@@ -265,7 +265,7 @@ akhir. Jalur penerusan mencegah hal ini dengan tanda bypass pada socket
 | **Sanitasi kesalahan**                      | Respons kesalahan rute diproses melalui `sanitizeErrorMessage()` (Aturan Keras #12).                                                                                                                                                                                                                                                                                                           |
 
 **CA MITM merupakan kapabilitas yang sangat kuat.** CA yang dipercaya oleh OS dan dapat menandatangani untuk host mana pun
-berarti segala sesuatu yang dicegat OmniRoute dapat didekripsi. Penggunaannya dibatasi pada
+berarti segala sesuatu yang dicegat 67router dapat didekripsi. Penggunaannya dibatasi pada
 mode penangkapan TPROXY khusus lokal yang eksplisit, dinonaktifkan secara default, dan entri
 trust store dihapus saat Anda menghentikan mode tersebut.
 
@@ -375,7 +375,7 @@ mengembalikan `available: false` ketika addon tidak ada.
 ### Aturan firewall yang tertinggal setelah crash
 
 `revertTproxy()` adalah kebalikan persis dari penerapan dan bersifat idempoten. Menghentikan
-mode akan mengembalikan aturan; jika OmniRoute dihentikan secara paksa di tengah sesi, gunakan tindakan
+mode akan mengembalikan aturan; jika 67router dihentikan secara paksa di tengah sesi, gunakan tindakan
 **Repair** AgentBridge (`POST /api/tools/agent-bridge/repair`) untuk membatalkan status sistem
 yang tertinggal (spoof DNS, CA root, proksi sistem). Aturan `mangle` dan rute TPROXY juga
 dibersihkan secara otomatis saat reboot.

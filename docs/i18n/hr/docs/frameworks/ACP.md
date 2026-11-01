@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute razdvaja **otkrivanje CLI alata**, **izvorni Agent Client Protocol** i
+67router razdvaja **otkrivanje CLI alata**, **izvorni Agent Client Protocol** i
 **naslijeđene stdio adaptere**. Pronalaženje instalirane binarne datoteke ne potvrđuje njezinu
 autentikaciju, kompatibilnost modela ni spremnost za obradu upita.
 
@@ -119,5 +119,3 @@ test u ciljnom okruženju.
 - [Protokoli agenata](./AGENT_PROTOCOLS_GUIDE.md)
 - [Ugovori za pokretanje CLI alata](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI alati](../reference/CLI-TOOLS.md)
-- [A2A poslužitelj](./A2A-SERVER.md)
-- [Agenti u oblaku](./CLOUD_AGENT.md)

@@ -6,7 +6,7 @@
 
 ## දළ විශ්ලේෂණය
 
-Redis යනු OmniRoute හි **විකල්ප, මෘදු පරායත්තතාවකි** — Redis ලබාගත නොහැකි විට යෙදුම සුමටව ක්රියාකාරීත්වය අඩු කරමින් (මතකය තුළ ඇති
+Redis යනු 67router හි **විකල්ප, මෘදු පරායත්තතාවකි** — Redis ලබාගත නොහැකි විට යෙදුම සුමටව ක්රියාකාරීත්වය අඩු කරමින් (මතකය තුළ ඇති
 විකල්ප භාවිතයෙන්) ක්රියා කරයි. නිෂ්පාදන පරිසරයේදී, Redis සුසර කිරීමෙන් එකිනෙකට වෙනස්
 කාර්ය භාර හතරක් සඳහා ප්රමාදය අඩු වේ:
 
@@ -17,7 +17,7 @@ Redis යනු OmniRoute හි **විකල්ප, මෘදු පරාය
 | කෝටා ගබඩාව                      | `redisQuotaStore.ts`          | වෙනම `getRedisClient(url)` singleton එක                           | එක් එක් instance එක අනුව වින්යාස කළ හැකි `<prefix>quota:*` |
 | පෙර-උණුසුම් කිරීමේ පරිපථ බිඳිනය | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` තුළ වෙනම සේවාලාභියෙක්                  | `<prefix>warmup:cb:<connectionId>`                         |
 
-OmniRoute හට වෙනත් යෙදුම් සමඟ තනි Redis instance එකක (උදා. `127.0.0.1:6379`) සමගාමීව පැවතිය හැකි වන පරිදි කාර්ය භාර හතරම එකම namespace prefix එකක් බෙදා ගනී.
+67router හට වෙනත් යෙදුම් සමඟ තනි Redis instance එකක (උදා. `127.0.0.1:6379`) සමගාමීව පැවතිය හැකි වන පරිදි කාර්ය භාර හතරම එකම namespace prefix එකක් බෙදා ගනී.
 [යතුරු නාමාවකාශකරණය](#key-namespacing) බලන්න.
 
 ---
@@ -41,14 +41,14 @@ OmniRoute හට වෙනත් යෙදුම් සමඟ තනි Redis in
 
 ## යතුරු නාමාවකාශකරණය
 
-OmniRoute, ධාරකය මත ක්රියාත්මක වන අනෙකුත් ඕනෑම දෙයක් සමඟ Redis instance එකක් බෙදා ගනී. namespace එකක් නොමැතිව,
+67router, ධාරකය මත ක්රියාත්මක වන අනෙකුත් ඕනෑම දෙයක් සමඟ Redis instance එකක් බෙදා ගනී. namespace එකක් නොමැතිව,
 `auth:api_key:<sha256>` හෝ `rl:*` වැනි යතුරු, එම Redis භාවිත කරන වෙනත් යෙදුම්වල
 යතුරු සමඟ ගැටිය හැක (මෙම instance එක වෙනත් සේවා සමඟ `127.0.0.1:6379` හි Redis ධාවනය කරයි).
 
-**සෑම** OmniRoute යතුරකටම prefix එකක් එක් කිරීමට `REDIS_KEY_PREFIX` හිස් නොවන තන්තුවකට සකසන්න:
+**සෑම** 67router යතුරකටම prefix එකක් එක් කිරීමට `REDIS_KEY_PREFIX` හිස් නොවන තන්තුවකට සකසන්න:
 
 ```bash
-# .env — සියලුම OmniRoute යතුරු omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* බවට පත් වේ
+# .env — සියලුම 67router යතුරු omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* බවට පත් වේ
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # OS පිටු හැඹිලිය සඳහා ඉඩ තබන්න
 maxmemory-policy allkeys-lru         # පීඩනය යටතේ පැරණි සත්යාපන හැඹිලි ඇතුළත් කිරීම් ඉවත් කරන්න
 
-# ස්ථායී ගබඩාකරණය (විකල්පයි — එය නොමැතිවද OmniRoute බිඳවැටීම්වලින් ආරක්ෂිතයි)
+# ස්ථායී ගබඩාකරණය (විකල්පයි — එය නොමැතිවද 67router බිඳවැටීම්වලින් ආරක්ෂිතයි)
 save 300 1                           # ≥1 යතුරක් වෙනස් වී ඇත්නම් අවම වශයෙන් සෑම මිනිත්තු 5කට වරක් snapshot එකක් ගන්න
 appendonly no                        # AOF අවශ්ය නොවේ; දත්ත නැවත ජනනය කළ හැක
 appendfsync no                       # fsync අතිරේක පිරිවැයක් නැත (RDB ප්රමාණවත්ය)

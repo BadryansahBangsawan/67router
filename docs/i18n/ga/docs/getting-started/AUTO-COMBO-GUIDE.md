@@ -1,16 +1,16 @@
-# Auto-Combo: Let OmniRoute Pick the Best AI for You (Gaeilge)
+# Auto-Combo: Let 67router Pick the Best AI for You (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/AUTO-COMBO-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/AUTO-COMBO-GUIDE.md)
 
 ---
 
-> **Go hachomair**: Socraigh do mhúnla mar `auto` agus roghnóidh OmniRoute an soláthraí IS is fearr do gach iarratas go huathoibríoch. Ní gá aon chumraíocht a dhéanamh.
+> **Go hachomair**: Socraigh do mhúnla mar `auto` agus roghnóidh 67router an soláthraí IS is fearr do gach iarratas go huathoibríoch. Ní gá aon chumraíocht a dhéanamh.
 
 ---
 
 ## An Rud a Dhéanann Sé
 
-In ionad samhail shonrach IS a roghnú (amhail GPT-4o nó Claude), is féidir leat ligean do OmniRoute **an ceann is fearr a roghnú go huathoibríoch** do gach iarratas. Cuireann sé na nithe seo a leanas san áireamh:
+In ionad samhail shonrach IS a roghnú (amhail GPT-4o nó Claude), is féidir leat ligean do 67router **an ceann is fearr a roghnú go huathoibríoch** do gach iarratas. Cuireann sé na nithe seo a leanas san áireamh:
 
 - **Sláinte** — An bhfuil an soláthraí ag obair faoi láthair?
 - **Luas** — Cé chomh tapa is atá sé?
@@ -18,7 +18,7 @@ In ionad samhail shonrach IS a roghnú (amhail GPT-4o nó Claude), is féidir le
 - **Cáilíocht** — An bhfuil sé go maith don chineál seo taisc?
 - **Acmhainn** — An bhfuil cuóta fágtha aige?
 
-Tugann OmniRoute scór do gach ceann de do sholáthraithe nasctha agus roghnaíonn sé an ceann is fearr. Má theipeann air, baineann sé triail as an gcéad cheann eile go huathoibríoch.
+Tugann 67router scór do gach ceann de do sholáthraithe nasctha agus roghnaíonn sé an ceann is fearr. Má theipeann air, baineann sé triail as an gcéad cheann eile go huathoibríoch.
 
 ---
 
@@ -30,7 +30,7 @@ Tugann OmniRoute scór do gach ceann de do sholáthraithe nasctha agus roghnaío
 model: "auto"
 ```
 
-**Céim 2**: Sin é! Láimhseálann OmniRoute an chuid eile.
+**Céim 2**: Sin é! Láimhseálann 67router an chuid eile.
 
 **Céim 3** (roghnach): Úsáid malairt le haghaidh tascanna sonracha:
 
@@ -76,7 +76,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ## An Chaoi a n-Oibríonn Sé (Leagan Simplí)
 
-Nuair a sheolann tú iarratas le `model: "auto"`, déanann OmniRoute na rudaí seo a leanas:
+Nuair a sheolann tú iarratas le `model: "auto"`, déanann 67router na rudaí seo a leanas:
 
 1. **Féachann sé ar do sholáthraithe nasctha go léir** — Gach soláthraí atá curtha agat leis (OpenAI, Anthropic, Google, srl.)
 2. **Tugann sé scór do gach ceann acu**, agus na nithe seo a leanas, i measc nithe eile, á gcur san áireamh:
@@ -86,7 +86,7 @@ Nuair a sheolann tú iarratas le `model: "auto"`, déanann OmniRoute na rudaí s
    - Cé chomh tapa is atá sé? (luas)
    - An bhfuil sé go maith don tasc seo? (cáilíocht)
 3. **Roghnaíonn sé an ceann is fearr** — Faigheann an soláthraí leis an scór is airde d'iarratas
-4. **Athshlánaíonn sé go huathoibríoch** — Má theipeann air, baineann OmniRoute triail as an gcéad cheann eile go huathoibríoch
+4. **Athshlánaíonn sé go huathoibríoch** — Má theipeann air, baineann 67router triail as an gcéad cheann eile go huathoibríoch
 
 ### An Córas Scórála
 
@@ -120,11 +120,11 @@ Faigheann gach soláthraí scór ó 0 go 1. Dá airde an scór, is ea is fearr a
 
 ## An Chaoi a Láimhseálann Sé Teipeanna
 
-Tá **trí shraith chosanta** ag OmniRoute:
+Tá **trí shraith chosanta** ag 67router:
 
 ### 1. Cúltaca Uathoibríoch
 
-Má theipeann ar an soláthraí is fearr, baineann OmniRoute triail as an gcéad cheann eile go huathoibríoch. Ní gá duit aon rud a dhéanamh.
+Má theipeann ar an soláthraí is fearr, baineann 67router triail as an gcéad cheann eile go huathoibríoch. Ní gá duit aon rud a dhéanamh.
 
 ### 2. Féinleigheas
 
@@ -136,13 +136,13 @@ Má leanann soláthraí de bheith ag teip:
 
 ### 3. Cúltaca Éigeandála
 
-Má theipeann ar gach soláthraí, seolann OmniRoute iarrataí chuig soláthraithe cobhsaí saor in aisce (amhail Kiro nó Qoder) mar rogha dheiridh.
+Má theipeann ar gach soláthraí, seolann 67router iarrataí chuig soláthraithe cobhsaí saor in aisce (amhail Kiro nó Qoder) mar rogha dheiridh.
 
 ---
 
 ## Tacaíocht d’Ilchuntais
 
-Má tá roinnt cuntas agat don soláthraí céanna (m.sh., dhá eochair OpenAI), déileálann OmniRoute le gach ceann acu mar **iarrthóir ar leith**. Ciallaíonn sé seo:
+Má tá roinnt cuntas agat don soláthraí céanna (m.sh., dhá eochair OpenAI), déileálann 67router le gach ceann acu mar **iarrthóir ar leith**. Ciallaíonn sé seo:
 
 - Tá cuóta fágtha i gCuntas A → úsáid é
 - Tá teorainn ráta curtha ar Chuntas B → gabh thairis air
@@ -154,13 +154,13 @@ Scóráiltear gach cuntas go neamhspleách bunaithe ar a shláinte, a chuóta ag
 
 ## Taiscéalaíocht Bandit
 
-Déanann OmniRoute **iniúchadh** ar sholáthraithe nua ó am go chéile chun roghanna níos fearr a aimsiú:
+Déanann 67router **iniúchadh** ar sholáthraithe nua ó am go chéile chun roghanna níos fearr a aimsiú:
 
 - **Réamhshocrú**: Téann 5% d’iarratais chuig soláthraithe randamacha
 - **Auto/smart**: Ráta taiscéalaíochta 10%
 - **Díchumasaithe** nuair atá níos mó ná 50% de na soláthraithe míshláintiúil
 
-Cuidíonn sé seo le OmniRoute a fháil amach cé na soláthraithe is fearr a oibríonn do do phatrúin úsáide.
+Cuidíonn sé seo le 67router a fháil amach cé na soláthraithe is fearr a oibríonn do do phatrúin úsáide.
 
 ---
 
@@ -172,11 +172,11 @@ Cuidíonn sé seo le OmniRoute a fháil amach cé na soláthraithe is fearr a oi
 
 ### "Cad a tharlaíonn má théann soláthraí as feidhm?"
 
-Gabhann OmniRoute thairis air go huathoibríoch agus baineann sé triail as an gcéad cheann eile. Má leanann soláthraí de bheith ag teip, eisiatar go sealadach é (5-30 nóiméad). Ní gá duit aon rud a dhéanamh.
+Gabhann 67router thairis air go huathoibríoch agus baineann sé triail as an gcéad cheann eile. Má leanann soláthraí de bheith ag teip, eisiatar go sealadach é (5-30 nóiméad). Ní gá duit aon rud a dhéanamh.
 
 ### "An féidir liom a fheiceáil cén soláthraí a úsáideadh?"
 
-Seiceáil ceanntásca an fhreagra — cuireann OmniRoute an soláthraí agus an tsamhail a úsáideadh san áireamh i ngach freagra.
+Seiceáil ceanntásca an fhreagra — cuireann 67router an soláthraí agus an tsamhail a úsáideadh san áireamh i ngach freagra.
 
 ### "An bhfoghlaimíonn sé ó m’úsáid?"
 

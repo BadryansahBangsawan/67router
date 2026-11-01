@@ -45,7 +45,7 @@ mekanisme ini memulihkan alur yang sepenuhnya otomatis seperti yang dimiliki pro
 jaminan WS1.3 (token yang bocor tidak dapat melakukan publikasi sendirian — karena memang tidak ada token).
 
 **Penyiapan satu kali (pemilik):** npmjs.com → paket `omniroute` → Pengaturan → _Trusted
-Publisher_ → GitHub: pemilik `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: pemilik `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). Hingga konfigurasi tersebut tersedia, langkah otomatis akan gagal dengan `ENEEDAUTH`:
 jalankan ulang dengan `publish_mode=staged` (di bawah) atau `direct`.
 

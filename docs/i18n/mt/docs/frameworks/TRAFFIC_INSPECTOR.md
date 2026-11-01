@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector huwa d-debugger integrat tat-traffiku HTTPS ta' OmniRoute — għodda simili għal Charles Proxy / mitmweb / HTTP Toolkit li hija **konxja tal-LLM** u **konxja tal-aġenti**. Tinsab f'`/dashboard/tools/traffic-inspector` u tirċievi traffiku dirett minn sa 5 sorsi ta' qbid simultanji.
+Traffic Inspector huwa d-debugger integrat tat-traffiku HTTPS ta' 67router — għodda simili għal Charles Proxy / mitmweb / HTTP Toolkit li hija **konxja tal-LLM** u **konxja tal-aġenti**. Tinsab f'`/dashboard/tools/traffic-inspector` u tirċievi traffiku dirett minn sa 5 sorsi ta' qbid simultanji.
 
 **Post fid-dashboard:** `/dashboard/tools/traffic-inspector`
 **Grupp fil-sidebar:** Għodod (wara AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector huwa d-debugger integrat tat-traffiku HTTPS ta' OmniRoute — 
 
 ### X'jagħmel lil Traffic Inspector uniku
 
-| Karatteristika                                                                                | mitmweb  | Charles | Fiddler  | **OmniRoute Traffic Inspector** |
-| --------------------------------------------------------------------------------------------- | :------: | :-----: | :------: | :-----------------------------: |
-| Ibbażat fuq il-web                                                                            |    ✓     |    ✗    |    ✗     |                ✓                |
-| B'sors miftuħ                                                                                 |    ✓     |    ✗    | parzjali |                ✓                |
-| **Konxju tal-aġenti** (jaf jekk it-talba ġejja minn Antigravity/Copilot/eċċ.)                 |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Konxju tal-LLM** (janalizza l-istruttura, it-tokens u l-mudell ta' OpenAI/Anthropic/Gemini) |    ✗     |    ✗    |    ✗     |                ✓                |
-| **L-immappjar tal-mudelli huwa viżibbli** (gemini-3-flash → claude-sonnet-4.7)                |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Separazzjoni tal-latenza tal-proxy/u tal-upstream**                                         | parzjali |    ✗    |    ✗     |                ✓                |
-| **Integrat mar-routing, il-fallback u l-ispejjeż ta' OmniRoute**                              |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Debug tal-proxy fis-sistema kollha** (kwalunkwe app fuq il-magna)                           |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Qbid ta' host personalizzat** (ridirezzjoni DNS għal kull host)                             |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Modalità tal-varjabbli tal-ambjent HTTP_PROXY**                                             |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Dehra tal-konverżazzjoni** (bżieżaq b'diversi skambji, tool_use/tool_result)                |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Għaqda ta' streams SSE** (rikostruzzjoni minn avvenimenti delta)                            |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Reġistrazzjoni tas-sessjoni** (b'isem, esportabbli bħala .har/.jsonl)                       |    ✗     |    ✓    |    ✓     |                ✓                |
+| Karatteristika                                                                                | mitmweb  | Charles | Fiddler  | **67router Traffic Inspector** |
+| --------------------------------------------------------------------------------------------- | :------: | :-----: | :------: | :----------------------------: |
+| Ibbażat fuq il-web                                                                            |    ✓     |    ✗    |    ✗     |               ✓                |
+| B'sors miftuħ                                                                                 |    ✓     |    ✗    | parzjali |               ✓                |
+| **Konxju tal-aġenti** (jaf jekk it-talba ġejja minn Antigravity/Copilot/eċċ.)                 |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Konxju tal-LLM** (janalizza l-istruttura, it-tokens u l-mudell ta' OpenAI/Anthropic/Gemini) |    ✗     |    ✗    |    ✗     |               ✓                |
+| **L-immappjar tal-mudelli huwa viżibbli** (gemini-3-flash → claude-sonnet-4.7)                |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Separazzjoni tal-latenza tal-proxy/u tal-upstream**                                         | parzjali |    ✗    |    ✗     |               ✓                |
+| **Integrat mar-routing, il-fallback u l-ispejjeż ta' 67router**                               |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Debug tal-proxy fis-sistema kollha** (kwalunkwe app fuq il-magna)                           |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Qbid ta' host personalizzat** (ridirezzjoni DNS għal kull host)                             |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Modalità tal-varjabbli tal-ambjent HTTP_PROXY**                                             |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Dehra tal-konverżazzjoni** (bżieżaq b'diversi skambji, tool_use/tool_result)                |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Għaqda ta' streams SSE** (rikostruzzjoni minn avvenimenti delta)                            |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Reġistrazzjoni tas-sessjoni** (b'isem, esportabbli bħala .har/.jsonl)                       |    ✗     |    ✓    |    ✓     |               ✓                |
 
 ### L-arkitettura f'paragrafu wieħed
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true jekk ir-risposta tkun SSE
   mappedTo: string | null; // header x-omniroute-mapped
-  costEstimateUsd: number | null; // spiża stmata abbażi tal-ipprezzar ta’ OmniRoute
+  costEstimateUsd: number | null; // spiża stmata abbażi tal-ipprezzar ta’ 67router
 }
 ```
 
@@ -394,7 +394,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Il-proxy tas-sistema ma ġiex irriversjat
 
-Jekk OmniRoute jieqaf jaħdem waqt li l-modalità proxy tas-sistema kollha tkun attiva:
+Jekk 67router jieqaf jaħdem waqt li l-modalità proxy tas-sistema kollha tkun attiva:
 
 **macOS:**
 
@@ -439,7 +439,7 @@ Mogħdija bażi: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Elenka t-talbiet (jistgħu jiġu ffiltrati: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Dettalji ta’ talba waħda                                                                          |
 | DELETE | `/requests`                 | Battal il-buffer fil-memorja                                                                      |
-| POST   | `/requests/{id}/replay`     | Eżegwixxi mill-ġdid l-istess talba permezz tar-router OmniRoute                                   |
+| POST   | `/requests/{id}/replay`     | Eżegwixxi mill-ġdid l-istess talba permezz tar-router 67router                                    |
 | PUT    | `/requests/{id}/annotation` | Issejvja jew aġġorna nota fuq talba                                                               |
 
 ### WebSocket

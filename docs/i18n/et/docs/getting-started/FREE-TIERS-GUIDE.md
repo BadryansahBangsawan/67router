@@ -4,7 +4,7 @@
 
 ---
 
-> **Lühidalt**: Kasutage oma nõuetele vastavaid teenusepakkujate kontosid. OmniRoute ühendab teie seadistatud ühendused; see ei väljasta reklaamitud summaarset tokenieelarvet. Tasuta juurdepääs võib nõuda registreerumist, API-võtit, heakskiitu või makseviisi. Teenusepakkujate piirangud, privaatsuspoliitikad ja tingimused kehtivad endiselt.
+> **Lühidalt**: Kasutage oma nõuetele vastavaid teenusepakkujate kontosid. 67router ühendab teie seadistatud ühendused; see ei väljasta reklaamitud summaarset tokenieelarvet. Tasuta juurdepääs võib nõuda registreerumist, API-võtit, heakskiitu või makseviisi. Teenusepakkujate piirangud, privaatsuspoliitikad ja tingimused kehtivad endiselt.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Paljud AI-teenusepakkujad pakuvad mingil kujul **tasuta juurdepääsu**. Olenevalt teenusepakkujast võib see tähendada autentimiseta lõpp-punkti, perioodiliselt uuenevat kvooti, kiirusega piiratud, kuid mahupiiranguta juurdepääsu, registreerumisboonust, käsitsi kinnitamist või ajutist sooduspakkumist. Mõne valiku kasutamiseks on vaja kontot, API-võtit, krediitkaarti, KYC-protseduuri läbimist või teenusepakkuja eritingimustega nõustumist.
 
-OmniRoute **koondab** seadistatud ühendused ühte lõpp-punkti. Peate endiselt eraldi registreeruma iga teenusepakkuja juures, kes nõuab kontot. Ühendage need kontod ja kasutage sobivate sihtkohtade vahel marsruutimiseks parameetrit `model: "auto"`. Värskel installil ei pruugi olla ühtegi sobivat võtmeta sihtkohta; ainuüksi OmniRoute'i installimine ei taga vestluspäringule edukat vastust.
+67router **koondab** seadistatud ühendused ühte lõpp-punkti. Peate endiselt eraldi registreeruma iga teenusepakkuja juures, kes nõuab kontot. Ühendage need kontod ja kasutage sobivate sihtkohtade vahel marsruutimiseks parameetrit `model: "auto"`. Värskel installil ei pruugi olla ühtegi sobivat võtmeta sihtkohta; ainuüksi 67router'i installimine ei taga vestluspäringule edukat vastust.
 
 ---
 
@@ -57,7 +57,7 @@ Nendel pakkujatel on konkreetsete piirangutega **tasuta paketid**:
 
 ## Kuidas tasuta tasemeid kombineerida
 
-OmniRoute’i võlu seisneb **tasuta tasemete kombineerimises**. Selle asemel et tugineda ühele teenusepakkujale, ühendate mitu tasuta teenusepakkujat ja lasete OmniRoute’il iga päringu jaoks automaatselt parima valida.
+67router’i võlu seisneb **tasuta tasemete kombineerimises**. Selle asemel et tugineda ühele teenusepakkujale, ühendate mitu tasuta teenusepakkujat ja lasete 67router’il iga päringu jaoks automaatselt parima valida.
 
 ### Näide: tasuta tasemete laiem katvus
 
@@ -68,7 +68,7 @@ OmniRoute’i võlu seisneb **tasuta tasemete kombineerimises**. Selle asemel et
 3. **Pollinations** — võtmeta, päringusageduse piiranguga juurdepääs
 4. **LongCat** — ühekordne registreerumisboonus (nõuab KYC-d)
 
-Seejärel kasutage `model: "auto"` ja OmniRoute teeb järgmist:
+Seejärel kasutage `model: "auto"` ja 67router teeb järgmist:
 
 - Proovib esmalt kõrgeima prioriteediga sobivat ühendust
 - Kui selle kvoodi- või seisundikontroll ebaõnnestub → proovib järgmist konfigureeritud teenusepakkujat
@@ -101,7 +101,7 @@ piiramata või võtmeta juurdepääsu, registreerumiskrediiti, lõpetatud pakkum
 
 ### 5. samm: klõpsake ühendamisnuppu
 
-`NOAUTH`-teenusepakkuja puhul ei küsi OmniRoute välise teenuse identimisteavet. See ei taga, et väline teenus aktsepteerib kolmandate osapoolte kliente või et sellel on vaba läbilaskevõimsust. OAuthi ja API-võtmega teenusepakkujad tuleb ühendada nende dokumenteeritud kontoprotsessi kaudu. Kui ruuteri autentimine on lubatud, kasutab teie klient endiselt OmniRoute'i API-võtit, mis on kuvatud jaotises **Juhtpaneel → Lõpp-punktid**.
+`NOAUTH`-teenusepakkuja puhul ei küsi 67router välise teenuse identimisteavet. See ei taga, et väline teenus aktsepteerib kolmandate osapoolte kliente või et sellel on vaba läbilaskevõimsust. OAuthi ja API-võtmega teenusepakkujad tuleb ühendada nende dokumenteeritud kontoprotsessi kaudu. Kui ruuteri autentimine on lubatud, kasutab teie klient endiselt 67router'i API-võtit, mis on kuvatud jaotises **Juhtpaneel → Lõpp-punktid**.
 
 ### 6. samm: korrake toimingut
 
@@ -111,7 +111,7 @@ piiramata või võtmeta juurdepääsu, registreerumiskrediiti, lõpetatud pakkum
 
 ## Kataloogi õige lugemine
 
-- `NOAUTH` tähendab, et OmniRoute ei küsi teilt teenusepakkuja autentimisandmeid; see ei
+- `NOAUTH` tähendab, et 67router ei küsi teilt teenusepakkuja autentimisandmeid; see ei
   taga töökindlust, privaatsust ega piiramatut võimsust.
 - `hasFree` on avastamist hõlbustav metaandmestik. See võib tähistada korduvat kvooti, võtmeta juurdepääsu,
   registreerimiskrediiti, heakskiiduprogrammi või kampaaniat.
@@ -124,15 +124,15 @@ piiramata või võtmeta juurdepääsu, registreerumiskrediiti, lõpetatud pakkum
 
 ---
 
-## Kuidas OmniRoute tasuta tasemeid täiustab
+## Kuidas 67router tasuta tasemeid täiustab
 
 ### 1. Automaatne varuvariandile lülitumine
 
-Kui üks tasuta teenusepakkuja on hõivatud või ei tööta, proovib OmniRoute automaatselt järgmist. Te ei pea ise midagi tegema.
+Kui üks tasuta teenusepakkuja on hõivatud või ei tööta, proovib 67router automaatselt järgmist. Te ei pea ise midagi tegema.
 
 ### 2. Nutikas marsruutimine
 
-OmniRoute valib iga päringu jaoks **parima tasuta teenusepakkuja**, lähtudes järgmisest:
+67router valib iga päringu jaoks **parima tasuta teenusepakkuja**, lähtudes järgmisest:
 
 - Kiirus — milline teenusepakkuja on praegu kõige kiirem?
 - Kvaliteet — milline teenusepakkuja sobib selle ülesande jaoks kõige paremini?
@@ -140,13 +140,13 @@ OmniRoute valib iga päringu jaoks **parima tasuta teenusepakkuja**, lähtudes j
 
 ### 3. Tokenite säästmine
 
-OmniRoute’i tihenduskonveier võib vähendada sobivate viipade ja tööriistaväljundite tokenite hulka. Tegelik
+67router’i tihenduskonveier võib vähendada sobivate viipade ja tööriistaväljundite tokenite hulka. Tegelik
 sääst sõltub sisust, valitud mootoritest, teenusepakkuja arvestusmeetodist ja täpsuse
 seadetest; tihendamine ei korruta iga teenusepakkuja kvooti kindla arvuga.
 
 ### 4. Mitme konto tugi
 
-Kui teenusepakkuja tingimused lubavad mitut kontot või autentimisteavet, saab OmniRoute käsitleda iga
+Kui teenusepakkuja tingimused lubavad mitut kontot või autentimisteavet, saab 67router käsitleda iga
 ühendust eraldi marsruutimiskandidaadina. Ärge looge lisakontosid teenusepakkuja
 kvoodist või juurdepääsupoliitikast möödahiilimiseks.
 
@@ -161,7 +161,7 @@ Aktiivne ja jagatud kogumite dubleerimist vältiv kataloog näitab praegu järgm
 | Korduv mõõdetav limiit               |       **~1.62B tokenit kuus** | Jagatud kogumeid arvestatakse üks kord; piiramata teenusepakkujad on summast välja jäetud |
 | Esimene kuu registreerumisboonustega |            **~2.22B tokenit** | Korduv kogusumma koos ühekordsete ja korduvate krediitidega                               |
 
-Need on kogu kataloogi hõlmavad hinnangud eraldi sobilike kontode kohta, mitte OmniRoute'i pakutav limiit ega prognoos uue installatsiooni jaoks. Teie kasutatav maht sõltub ühendatud teenusepakkujatest ja nende kehtivatest tingimustest. Väärtused arvutatakse faili `open-sse/config/freeModelCatalog.ts` põhjal; jagatud kogumite dubleerimise vältimise, kasutustingimuste märgiste,
+Need on kogu kataloogi hõlmavad hinnangud eraldi sobilike kontode kohta, mitte 67router'i pakutav limiit ega prognoos uue installatsiooni jaoks. Teie kasutatav maht sõltub ühendatud teenusepakkujatest ja nende kehtivatest tingimustest. Väärtused arvutatakse faili `open-sse/config/freeModelCatalog.ts` põhjal; jagatud kogumite dubleerimise vältimise, kasutustingimuste märgiste,
 lõpetatud kirjete ja registreerumiskrediidi metoodika kohta vaadake
 [tasuta tasemete teatmikku](../reference/FREE_TIERS.md).
 
@@ -188,7 +188,7 @@ nõuetele. Kriitilistel töökoormustel peaks olema jälgitav ja lepinguliselt s
 
 Kompromisside hulka võivad kuuluda ranged piirangud, ootenimekirjad, KYC, krediitkaardi verifitseerimine, viipade kasutamine
 treenimiseks, nõrgem privaatsus, teenusetaseme leppe puudumine, mudelite sage vahetumine, geograafilised piirangud, tasuline ülekasutus või
-kontopoliitikaga seotud riskid. OmniRoute kuvab saadaolevad metaandmed; teie otsustate, mida lubada.
+kontopoliitikaga seotud riskid. 67router kuvab saadaolevad metaandmed; teie otsustate, mida lubada.
 
 ### „Kuidas saada rohkem tasuta kasutusmahtu?”
 
@@ -207,7 +207,7 @@ tasuta teenusepakkujate edetabeli lehte kvaliteedinäitajana ja kontrollige, mil
 
 ## Mis saab edasi?
 
-- **[Auto-Combo juhend](./AUTO-COMBO-GUIDE.md)** — Las OmniRoute valib sinu jaoks parima tehisintellekti
+- **[Auto-Combo juhend](./AUTO-COMBO-GUIDE.md)** — Las 67router valib sinu jaoks parima tehisintellekti
 - **[Teenusepakkujate juhend](./PROVIDERS-GUIDE.md)** — Ühenda rohkem teenusepakkujaid
 - **[Tõrkeotsing](../guides/TROUBLESHOOTING.md)** — Lahenda levinud probleemid
 - **[Tasuta pakettide teave](../reference/FREE_TIERS.md)** — Tasuta pakettide täielik loend

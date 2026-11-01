@@ -42,7 +42,7 @@ veya harici entegrasyonun şu anda kullanılabilir olduğuna dair bir taahhüt d
 | Destekçi teklifleri               | Ayrı, imzalı ve yalnızca canlı ortamda sunulan bir akış ve pano sayfası olarak uygulanmıştır. İstemci, kapalı avantaj şemasını yeniden doğrular, son geçerli önbelleği korur, süresi dolmuş girdileri filtreler ve iş ortağı tekliflerini açıkça etiketler.              |
 | İstihbarat ve destekçi tanıma     | Radar'a ait ELO, olgusal katalog güncelliği/eğilimi, doğrulanmış yerel destekçi rozeti, pano sayfası ve yalnızca yerel CLI durum/eşitleme komutları içeren, katı biçimde imzalanmış ve yalnızca canlı ortamda sunulan bir akış olarak uygulanmıştır.                     |
 | Ödemeler ve işlemsel e-posta      | OSS istemcisinde uygulanmamıştır. Satın alma, bağış, makbuz inceleme, kurtarma ve posta teslimatı özel hizmete aittir; barındırılan hizmetin kullanılabilirliği hâlâ hizmetin gözetimli dağıtımına ve sağlayıcı yapılandırmasına bağlıdır.                               |
-| Araştırma aracısı çalışma akışı   | Bu istemci sürümünün parçası değildir. Düzenlenmiş akış içerikleri sunucu tarafı verileri olarak kalır; bir OmniRoute kurulumunda hiçbir otonom araştırma aracısı çalışmaz.                                                                                              |
+| Araştırma aracısı çalışma akışı   | Bu istemci sürümünün parçası değildir. Düzenlenmiş akış içerikleri sunucu tarafı verileri olarak kalır; bir 67router kurulumunda hiçbir otonom araştırma aracısı çalışmaz.                                                                                               |
 
 ---
 
@@ -120,7 +120,7 @@ Her ikisi de açıkken eşitleme yolu şöyledir:
    IP'nin günlük olarak dönüşümlü, kısaltılmış HMAC değerini kullanır; bu tablolar ne anahtarı ne de IP'yi
    ham biçimde kalıcı olarak saklar. Altyapı erişim günlükleri ve şifrelenmiş teslimat giden kutusu
    ayrı operasyonel sınırlardır.
-3. OmniRoute; istemleri, yanıtları, konuşmaları, sağlayıcı kimlik bilgilerini, model trafiğini,
+3. 67router; istemleri, yanıtları, konuşmaları, sağlayıcı kimlik bilgilerini, model trafiğini,
    çalışma süresini, gecikmeyi veya yerel sağlayıcı yapılandırmasını Radar hizmetine hiçbir zaman göndermez.
 4. Yanıt doğrulanır, geçerliliği denetlenir ve yerel olarak önbelleğe alınır (bkz.
    [Güvenlik modeli](#security-model)). Radar'ın sunucu tarafında tam olarak dört ağ yolu vardır:
@@ -245,11 +245,11 @@ bulunan bir operatörün onu etkinleştirdiği yerdir.
 ### Uçtan uca etkinleştirme ve yönlendirmeli kurulum
 
 Özel akış hizmeti ile bu OSS istemcisi arasında kasıtlı olarak dar bir sınır vardır: hizmet
-destekçi anahtarını sağlar ve doğrular; yerel OmniRoute kurulumu ise anahtarı şifreler,
+destekçi anahtarını sağlar ve doğrular; yerel 67router kurulumu ise anahtarı şifreler,
 imzalı yapıtları sunucu tarafında eşitler ve sağlayıcı kurulumuna rehberlik eder. Destekli doğrulama sırası şöyledir:
 
 1. Katılımcı talebi, planlar/ödeme, kurtarma süreci veya yetkili bir özel sunucu operatörü üzerinden yeni düzenlenmiş ya da kurtarılmış bir anahtar edinin. Ham anahtarı günlüklere, ekran görüntülerine, sorun yorumlarına veya komut satırı bağımsız değişkenlerine yapıştırmayın.
-2. Yerel OmniRoute kurulumunda `RADAR_ENABLED` özellik bayrağını etkinleştirin. Bu işlem kullanıcı arayüzünü görünür hâle getirir ancak ayrı katılım tercihi kaydedilene kadar ağ etkinliği başlatmaz.
+2. Yerel 67router kurulumunda `RADAR_ENABLED` özellik bayrağını etkinleştirin. Bu işlem kullanıcı arayüzünü görünür hâle getirir ancak ayrı katılım tercihi kaydedilene kadar ağ etkinliği başlatmaz.
 3. `/dashboard/radar` sayfasını açın, anahtarı yapıştırın ve etkinleştirin. Tarayıcı, `{ optIn: true, supporterKey }` ile tek bir yerel `POST /api/radar/settings` isteği gönderir; anahtar yerel olarak şifrelenir ve yanıt yalnızca `omr_****<last4>` değerini içerir.
 4. Etkinleştirme ekranının katalog eşitlemesini çalıştırmasına izin verin veya **Şimdi eşitle** seçeneğini belirleyin. Sayfanın `live` durumunu, bir akış sürümünü ve bir getirme zamanını bildirdiğini doğrulayın. Kimliği doğrulanmış yerel tanılama için `GET /api/radar/status`, anahtarı döndürmeden katılım/anahtar durumunu ve dört önbellek durumunu bildirir. `POST /api/radar/sync-all`; kataloğu, yönlendirmeleri, teklifleri ve Intel'i açıkça yenileyebilir.
 5. `/dashboard/radar/setup?provider=<provider>` sayfasını açın. Sağlayıcıya ait kimlik bilgisi URL'sini izleyin, **API anahtarı ekle** seçeneğini belirleyin, gerçek sağlayıcı formu üzerinden kaydedin, rehbere dönün ve **Bağlantıyı test et** işlemini çalıştırın. Rehber, normal `/api/providers` ve `/api/providers/<connection-id>/test` rotalarını kullanır; paralel bir Radar kimlik bilgisi oluşturmaz.
@@ -289,7 +289,7 @@ anahtar, rotasyon öncesinde başa eklenebilir ve önceki anahtarla imzalanmış
 ### Çatallara uygun env geçersiz kılmaları
 
 İki env değişkeni, çatalların ve kendi barındırdığı kurulumların istemciyi varsayılan
-OmniRoute hizmeti yerine kendi akışlarına yönlendirmesine olanak tanır — aşağıdaki
+67router hizmeti yerine kendi akışlarına yönlendirmesine olanak tanır — aşağıdaki
 [Bir akış nasıl kendi sunucunuzda barındırılır](#how-to-self-host-a-feed) bölümüne bakın:
 
 | Değişken            | Amaç                                                                                                                 |
@@ -455,7 +455,7 @@ Katalog yayınları `schemaVersion: 2` kullanır. `contextWindow` ile `tools`, `
 `thinking` alanlarının her biri bağımsız olarak `number | null` / `boolean | null`
 türündedir: `null` bilinmiyor anlamına gelirken `false`, D16 tarafından doğrulanmış
 resmî bir sağlayıcı kaynağının ilgili yeteneğin bulunmadığını açıkça belirttiği
-anlamına gelir. Dahili OmniRoute kayıt/model belirtimi bayrakları hiçbir zaman doğrudan
+anlamına gelir. Dahili 67router kayıt/model belirtimi bayrakları hiçbir zaman doğrudan
 akış olgularına dönüştürülmez. İstemci hâlâ v1 anlık görüntülerini kabul eder; eski
 oluşturucu yokluğu belirtmek için `false` kullandığından, v1 `false` bilinmiyor olarak
 normalleştirilirken v1 `true` olgusal kalır. Bilinmeyen şema sürümleri güvenli biçimde
@@ -522,7 +522,7 @@ Aşağıdaki yerel Radar rota aileleri, `src/app/api/radar/` altındaki kullanı
 | `/api/radar/local-model-state` | DELETE | Mevcut mezar taşını korurken düzenlenebilir geçersiz kılma alanlarını temizler.                                                              |
 
 **Kesin kural: Bu rotalar akış hizmetine asla proxy görevi görmez.** Tarayıcı yalnızca
-yerel OmniRoute sunucusuyla iletişim kurar. Radar hizmetine erişen dört modül
+yerel 67router sunucusuyla iletişim kurar. Radar hizmetine erişen dört modül
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (yönlendirmeler),
 `src/lib/radar/offersSync.ts` (teklifler) ve `src/lib/radar/intelSync.ts` (Intel)
 olup bunların tümü istemci tarafında değil, sunucu tarafında çalışır. Bu, akış
@@ -568,7 +568,7 @@ Intel, `GET /v1/intel/latest` konumundaki imzalı bir yapıttır. Kapalı `Radar
 
 `syncRadarIntel()`, tekliflerle aynı sunucu tarafı Bearer kimlik doğrulamasını, 30 saniyelik zaman aşımını, 10 MiB'lık akış sınırını, birebir baytlar üzerinden Ed25519 doğrulamasını, katı şemayı, gövde/başlık için `live` gereksinimini, sürüm alt sınırını ve son sağlam önbelleğin korunmasını uygular. Doğrulanmış etkin bir anlık görüntü kalıcı olarak kaydedildikten sonra istemci `radar:<sha256(supporter key)>` değerini türetir, yalnızca bu tek yönlü kimliği saklar ve özel `radar_supporter` tanıma olayını yayınlar. Bunun `radar-supporter` rozeti eş etkili biçimde çalışır ve sıfır XP verir; liderlik tablolarını hiçbir zaman güncellemez veya `token_share` değerini yeniden kullanmaz. `/dashboard/radar/intel`, rozeti yalnızca doğrulanmış yerel önbellek meta verilerinden oluşturur.
 
-CLI, `omniroute radar status` ve `omniroute radar sync` komutlarını sunar. Her ikisi de yalnızca yerel OmniRoute API'siyle iletişim kurar. `status`, salt okunur bir `GET /api/radar/status` isteği gerçekleştirir; `sync`, tek bir `POST /api/radar/sync-all` isteği gönderir ve her akış için bir sonuç yazdırır. İki komut da destekçi anahtarını okumaz, kabul etmez veya yazdırmaz ve Radar hizmetiyle doğrudan iletişim kurmaz.
+CLI, `omniroute radar status` ve `omniroute radar sync` komutlarını sunar. Her ikisi de yalnızca yerel 67router API'siyle iletişim kurar. `status`, salt okunur bir `GET /api/radar/status` isteği gerçekleştirir; `sync`, tek bir `POST /api/radar/sync-all` isteği gönderir ve her akış için bir sonuç yazdırır. İki komut da destekçi anahtarını okumaz, kabul etmez veya yazdırmaz ve Radar hizmetiyle doğrudan iletişim kurmaz.
 
 ---
 

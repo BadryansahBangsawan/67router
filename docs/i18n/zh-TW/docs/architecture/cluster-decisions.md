@@ -14,7 +14,7 @@
 
 ## 為何這是保守的做法
 
-OmniRoute 現有的部署架構已經精簡且經過驗證：
+67router 現有的部署架構已經精簡且經過驗證：
 
 - **`redis:7-alpine`** 可在正式環境規模下處理速率限制／快取工作負載。
 - **SQLite + sqlite-vec + FTS5** 涵蓋本機記憶體 + 向量 + 文字搜尋（請參閱 [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)）。
@@ -49,7 +49,7 @@ OmniRoute 現有的部署架構已經精簡且經過驗證：
 
 - 執行 ≥3 個 `omniroute` 副本，且希望將提供者輪替集中於單一 Go 程序中。
 - 希望所有副本對上游提供者發出的請求都使用單一稽核／記錄介面。
-- 希望 Tier-1 路由層能獨立於 OmniRoute 副本進行橫向擴充。
+- 希望 Tier-1 路由層能獨立於 67router 副本進行橫向擴充。
 
 **新增內容：**
 

@@ -7,7 +7,7 @@
 > **සත්යයේ මූලාශ්රය:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **අවසන් වරට යාවත්කාලීන කළේ:** 2026-06-28 — v3.8.40
 
-OmniRoute හට tunnel backend තුනක් හරහා එහි දේශීය server එක (`http://localhost:20128`) පොදු
+67router හට tunnel backend තුනක් හරහා එහි දේශීය server එක (`http://localhost:20128`) පොදු
 අන්තර්ජාලයට නිරාවරණය කළ හැක. මෙය පහත අවස්ථා සඳහා ප්රයෝජනවත් වේ:
 
 - පොදුවේ ප්රවේශ විය හැකි redirect URL එකක් අවශ්ය වන cloud provider (Antigravity, Gemini, Cursor) වෙතින් ලැබෙන
@@ -15,7 +15,7 @@ OmniRoute හට tunnel backend තුනක් හරහා එහි දේශ
 - VM එකක් deploy නොකර ඔබගේ දේශීය instance එක කණ්ඩායම් සාමාජිකයන් සමඟ බෙදා ගැනීම.
 - ජංගම, දුරස්ථ, හෝ ජාල අතර පරීක්ෂණ.
 
-backend තුනම process එක තුළම කළමනාකරණය කෙරේ — OmniRoute විසින් dashboard එකෙන් හෝ REST API එකෙන් අදාළ
+backend තුනම process එක තුළම කළමනාකරණය කෙරේ — 67router විසින් dashboard එකෙන් හෝ REST API එකෙන් අදාළ
 binary එක හෝ SDK එක ආරම්භ/නවත්වයි. reverse-proxy හෝ systemd සැකසුමක්
 අවශ්ය නොවේ.
 
@@ -41,7 +41,7 @@ binary එක හෝ SDK එක ආරම්භ/නවත්වයි. reverse-p
 http://localhost:<apiPort>` ධාවනය කර stdout වෙතින් පවරන ලද `*.trycloudflare.com` URL එක parse කරයි.
   URL තාවකාලික වන අතර සෑම නැවත ආරම්භ කිරීමකදීම වෙනස් වේ.
 - **Named tunnel (විකල්පයෙන් සක්රිය කළ හැක).** `CLOUDFLARED_CONFIG` දේශීයව කළමනාකරණය කරන
-  cloudflared `config.yml` එකක් වෙත යොමු වන විට, OmniRoute විසින් `cloudflared tunnel --no-autoupdate
+  cloudflared `config.yml` එකක් වෙත යොමු වන විට, 67router විසින් `cloudflared tunnel --no-autoupdate
 --config <path> run` ධාවනය කරමින් ඔබට **ස්ථායී, නම් කළ hostname එකක්** ලබා දෙයි. config එක විසින් tunnel UUID, `credentials-file`, සහ `ingress` routing සපයන බැවින්,
   `--url` ලබා නොදෙන අතර Zero Trust dashboard token එකක්ද අවශ්ය නොවේ. `run` විසින්
   config එකේ absolute `credentials-file` path එකෙන් credentials කියවයි — `cert.pem`
@@ -49,7 +49,7 @@ http://localhost:<apiPort>` ධාවනය කර stdout වෙතින් ප
 
 ප්රධාන හැසිරීම්:
 
-- **ස්වයංක්රීය ස්ථාපනය.** පළමු භාවිතයේදී, OmniRoute විසින් නිල GitHub releases වෙතින් නවතම `cloudflared`
+- **ස්වයංක්රීය ස්ථාපනය.** පළමු භාවිතයේදී, 67router විසින් නිල GitHub releases වෙතින් නවතම `cloudflared`
   binary එක බාගනී (කළමනාකරණය කරන ස්ථාපනය
   `DATA_DIR/cloudflared/` යටතේ පවතී). ක්රියාත්මක කිරීමට පෙර බාගත් asset එකේ SHA256 අගය
   release manifest එක සමඟ සත්යාපනය කෙරේ.
@@ -66,7 +66,7 @@ http://localhost:<apiPort>` ධාවනය කර stdout වෙතින් ප
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. ඔබගේ hostname එක OmniRoute හි දේශීය
+2. ඔබගේ hostname එක 67router හි දේශීය
    API port එකට (පෙරනිමියෙන් 20128) route කරන `~/.cloudflared/config.yml` එකක් ලියන්න:
 
    ```yaml
@@ -78,11 +78,11 @@ http://localhost:<apiPort>` ධාවනය කර stdout වෙතින් ප
      - service: http_status:404
    ```
 
-3. OmniRoute config එක වෙත යොමු කර tunnel එක (නැවත) ආරම්භ කරන්න:
+3. 67router config එක වෙත යොමු කර tunnel එක (නැවත) ආරම්භ කරන්න:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # විකල්පයි — OmniRoute වාර්තා කරන hostname එක ප්රතිස්ථාපනය කරයි; එසේ නොමැතිනම් එය
+   # විකල්පයි — 67router වාර්තා කරන hostname එක ප්රතිස්ථාපනය කරයි; එසේ නොමැතිනම් එය
    # config එකේ පළමු ingress rule එකෙන් කියවනු ලැබේ:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -119,12 +119,12 @@ curl -X POST http://localhost:20128/api/tunnels/cloudflared \
 
 ### විකල්ප env vars
 
-| විචල්යය                                              | අරමුණ                                                                                                                                                                              |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | ද්විමය ගොනුවේ මාර්ගය අභිබවා සකසයි. මෙය සකසා වලංගු නම්, බාගත කිරීම වෙනුවට OmniRoute එය භාවිත කරයි.                                                                                  |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ප්රවාහන ප්රොටෝකෝලය (පෙරනිමිය `http2`; `quic`, `auto` ද සහාය දක්වයි).                                                                                                               |
-| `CLOUDFLARED_CONFIG`                                 | දේශීයව කළමනාකරණය කරන cloudflared `config.yml` වෙත මාර්ගය. මෙය සකසා ඇති විට, ඉක්මන් උමඟක් වෙනුවට OmniRoute විසින් **නම් කළ/ස්ථිර** උමඟක් (`tunnel --config <path> run`) ධාවනය කරයි. |
-| `CLOUDFLARED_HOSTNAME`                               | නම් කළ උමඟ විසින් වාර්තා කරන පොදු සත්කාරක නාමය අභිබවා සකසයි (උදා. `ai.example.com`). මෙය සකසා නොමැති විට, වින්යාසයේ පළමු `ingress` සත්කාරක නාමයෙන් කියවයි.                         |
+| විචල්යය                                              | අරමුණ                                                                                                                                                                             |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | ද්විමය ගොනුවේ මාර්ගය අභිබවා සකසයි. මෙය සකසා වලංගු නම්, බාගත කිරීම වෙනුවට 67router එය භාවිත කරයි.                                                                                  |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | ප්රවාහන ප්රොටෝකෝලය (පෙරනිමිය `http2`; `quic`, `auto` ද සහාය දක්වයි).                                                                                                              |
+| `CLOUDFLARED_CONFIG`                                 | දේශීයව කළමනාකරණය කරන cloudflared `config.yml` වෙත මාර්ගය. මෙය සකසා ඇති විට, ඉක්මන් උමඟක් වෙනුවට 67router විසින් **නම් කළ/ස්ථිර** උමඟක් (`tunnel --config <path> run`) ධාවනය කරයි. |
+| `CLOUDFLARED_HOSTNAME`                               | නම් කළ උමඟ විසින් වාර්තා කරන පොදු සත්කාරක නාමය අභිබවා සකසයි (උදා. `ai.example.com`). මෙය සකසා නොමැති විට, වින්යාසයේ පළමු `ingress` සත්කාරක නාමයෙන් කියවයි.                        |
 
 ## 2. ngrok
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 ප්රතිචාරයට පවරන ලද `publicUrl` ඇතුළත් වේ (උදා.
 `https://abcd-1234.ngrok-free.app`). අභිරුචි වසම්, කලාප සහ ප්රතිපත්ති රීති
-ngrok උපකරණ පුවරුව තුළ වින්යාස කළ යුතුය — OmniRoute මඟින්ම සිදු කරන්නේ දේශීය
+ngrok උපකරණ පුවරුව තුළ වින්යාස කළ යුතුය — 67router මඟින්ම සිදු කරන්නේ දේශීය
 ඉලක්ක URL එක SDK වෙත යොමු කිරීම පමණි.
 
 ## 3. Tailscale Funnel
@@ -186,13 +186,13 @@ ngrok උපකරණ පුවරුව තුළ වින්යාස කළ 
 
 ### පූර්ව අවශ්යතා
 
-1. Tailscale ස්ථාපනය කරන්න (නැතහොත් OmniRoute හට එය කිරීමට ඉඩ දෙන්න — පහත `install` අන්ත ලක්ෂ්යය බලන්න).
-2. පිවිසෙන්න (`tailscale login` හෝ OmniRoute හි `login` අන්ත ලක්ෂ්යය හරහා).
+1. Tailscale ස්ථාපනය කරන්න (නැතහොත් 67router හට එය කිරීමට ඉඩ දෙන්න — පහත `install` අන්ත ලක්ෂ්යය බලන්න).
+2. පිවිසෙන්න (`tailscale login` හෝ 67router හි `login` අන්ත ලක්ෂ්යය හරහා).
 3. Tailscale පරිපාලක කොන්සෝලය තුළ ඔබගේ tailnet සඳහා Funnel සබල කරන්න:
    <https://login.tailscale.com/admin/settings/features>.
 
 Linux සහ macOS මත daemon එක (`tailscaled`) පාලනය කිරීමට `sudo` අවශ්ය වේ.
-POST අන්ත ලක්ෂ්ය, කැඳවීමේ කාලය තුළ OmniRoute හි MITM මුරපද හැඹිලිය
+POST අන්ත ලක්ෂ්ය, කැඳවීමේ කාලය තුළ 67router හි MITM මුරපද හැඹිලිය
 (`getCachedPassword` / `setCachedPassword`) වෙත යොමු කෙරෙන විකල්ප `sudoPassword`
 ක්ෂේත්රයක් පිළිගනී. Windows පෙරනිමි සේවා ස්ථාපනය
 `C:\Program Files\Tailscale\tailscale.exe` හි භාවිත කරයි.
@@ -254,7 +254,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 
 ## OAuth ආපසු-ඇමතුම් සලකා බැලීම්
 
-ඔබ උමඟක් හරහා OmniRoute නිරාවරණය කරන විට, උපකරණ පුවරුව සහ OAuth ප්රවාහ
+ඔබ උමඟක් හරහා 67router නිරාවරණය කරන විට, උපකරණ පුවරුව සහ OAuth ප්රවාහ
 ආපසු-ඇමතුම් URL ගොඩනැගිය යුත්තේ `localhost` නොව **පොදු** සත්කාරක නාමය භාවිත කරමිනි.
 එසේ නොමැති නම්, OAuth සපයන්නා තම සේවාදායකවලට ළඟා විය නොහැකි URL එකක් වෙත
 පරිශීලකයා යළි යොමු කරන අතර, සම්බන්ධතා ක්රියාවලිය අසාර්ථක වේ.
@@ -271,7 +271,7 @@ curl -X POST http://localhost:20128/api/tunnels/tailscale/enable \
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-ඉන්පසු OAuth ආරම්භ කිරීමට පෙර OmniRoute නැවත ආරම්භ කරන්න. තාවකාලික Cloudflare Quick
+ඉන්පසු OAuth ආරම්භ කිරීමට පෙර 67router නැවත ආරම්භ කරන්න. තාවකාලික Cloudflare Quick
 Tunnels සඳහා සෑම නැවත ආරම්භයකින්ම URL එක වෙනස් වන බැවින්, නිෂ්පාදන OAuth භාවිතය සඳහා
 වෙන් කළ ඩොමේනයක් සහිත ngrok හෝ Tailscale Funnel වඩාත් සුදුසුය.
 
@@ -287,13 +287,13 @@ Tunnels සඳහා සෑම නැවත ආරම්භයකින්ම UR
 
 ක්රමලේඛනමය අධීක්ෂණය සඳහා, එක් එක් පසුඅන්තයට අදාළ `GET` අන්ත ලක්ෂ්ය නියමිත
 කාල පරාසවලදී විමසන්න. එකවර පසුඅන්ත එකකට වඩා ධාවනය කිරීමට අවසර ඇත;
-OmniRoute ඒ සෑම එකක්ම ස්වාධීනව නිරීක්ෂණය කරනු ඇත.
+67router ඒ සෑම එකක්ම ස්වාධීනව නිරීක්ෂණය කරනු ඇත.
 
 ## දෝෂ නිරාකරණය
 
 ### "cloudflared ද්විමය ගොනුව හමු නොවීය"
 
-OmniRoute පළමු භාවිතයේදී ස්වයංක්රීයව ස්ථාපනය කිරීමට උත්සාහ කරයි. ස්ථාපනය
+67router පළමු භාවිතයේදී ස්වයංක්රීයව ස්ථාපනය කිරීමට උත්සාහ කරයි. ස්ථාපනය
 අවහිර වී ඇත්නම් (සීමා කළ ජාලයක්, GitHub ප්රවේශය නොමැති වීම), `cloudflared`
 <https://github.com/cloudflare/cloudflared/releases> වෙතින් අතින් බාගත කර
 `CLOUDFLARED_BIN=/path/to/cloudflared` සකසන්න.

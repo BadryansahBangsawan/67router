@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (አማርኛ)
+# 67router MCP Server Documentation (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## መጫን
 
-OmniRoute MCP አብሮ የተካተተ ነው። በሚከተለው ያስጀምሩት፦
+67router MCP አብሮ የተካተተ ነው። በሚከተለው ያስጀምሩት፦
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ curl -i \
 | `omniroute_switch_combo`        | `write:combos`        | comboን ማንቃት ወይም ማቦዘን                                                                                              |
 | `omniroute_create_combo`        | `write:combos`        | ነባሩን combo API በመጠቀም የተረጋገጠ combo መፍጠር                                                                            |
 | `omniroute_check_quota`         | `read:quota`          | ጥቅም ላይ የዋለ/ጠቅላላ ኮታ፣ የቀረው መቶኛ፣ የዳግም ማስጀመሪያ ጊዜ፣ የቶከን ጤንነት                                                           |
-| `omniroute_route_request`       | `execute:completions` | የውይይት ማጠናቀቂያ ጥያቄን በOmniRoute ማዘዋወሪያ በኩል መላክ                                                                       |
+| `omniroute_route_request`       | `execute:completions` | የውይይት ማጠናቀቂያ ጥያቄን በ67router ማዘዋወሪያ በኩል መላክ                                                                        |
 | `omniroute_cost_report`         | `read:usage`          | በጊዜ ወቅት (ክፍለ ጊዜ/ቀን/ሳምንት/ወር) የተከፋፈለ የወጪ ሪፖርት                                                                       |
 | `omniroute_list_models_catalog` | `read:models`         | ችሎታዎችን፣ ሁኔታን እና ዋጋን ያካተተ ሙሉ የሞዴል ካታሎግ                                                                             |
 | `omniroute_radar_catalog`       | `read:radar`          | በአካባቢው ያለ የተፈረመ Radar ካታሎግ፤ አማራጭ የአቅራቢ/ቤተሰብ ማጣሪያዎች                                                                |
@@ -151,7 +151,7 @@ principal እስከ 16 MiB፣ እና አጠቃላይ ማከማቻው እስከ 6
 
 ### MCP የተደራሽነት ዛፍ ማጣሪያ (v3.8.0)
 
-ከላይ ካሉት የመጭመቂያ መሣሪያዎች በተለየ፣ OmniRoute የMCP አሳሽ/ተደራሽነት መሣሪያዎችን
+ከላይ ካሉት የመጭመቂያ መሣሪያዎች በተለየ፣ 67router የMCP አሳሽ/ተደራሽነት መሣሪያዎችን
 **የመሣሪያ ውጤቶች** ወደ ወኪሉ ከመመለሳቸው በፊት የሚጨምቅ ከአፈጻጸም በኋላ የሚሠራ ማጣሪያን ያካትታል።
 ይህ ማጣሪያ ራሱ መሣሪያ አይደለም — ረጅም የተደራሽነት-ዛፍ ወይም የአሳሽ-ቅጽበታዊ ገጽታ ጽሑፍ (≥2000 ቁምፊዎች)
 በያዘ በማንኛውም የመሣሪያ ውጤት ላይ በግልጽነት ሳይታይ ይሠራል።
@@ -235,7 +235,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------ |
 | `omniroute_agent_skills_list`     | `read:catalog` | ሁሉንም 45 የወኪል ክህሎቶች በአማራጭ `category` (api\|cli) እና `area` ማጣሪያዎች ይዘርዝራል፤ ሜታዳታ + ሽፋን ይመልሳል                |
 | `omniroute_agent_skills_get`      | `read:catalog` | አንድን ክህሎት በቀኖናዊ `id` በመጠቀም ሙሉ ሜታዳታውን + የSKILL.md ይዘቱን ያገኛል                                              |
-| `omniroute_agent_skills_coverage` | `read:catalog` | የሽፋን ስታቲስቲክስ፦ ከካታሎጉ ድምር ጋር ሲነጻጸር ከ23 API፣ 21 CLI እና 1 ውቅር ክህሎቶች ምን ያህሎቹ በፋይል ስርዓቱ ላይ SKILL.md ፋይሎች አሏቸው |
+| `omniroute_agent_skills_coverage` | `read:catalog` | የሽፋን ስታቲስቲክስ፦ ከካታሎጉ ድምር ጋር ሲነጻጸር ከ22 API፣ 20 CLI እና 1 ውቅር ክህሎቶች ምን ያህሎቹ በፋይል ስርዓቱ ላይ SKILL.md ፋይሎች አሏቸው |
 
 ሙሉውን ካታሎግ እና ውጫዊ ወኪሎች እንዴት እንደሚጠቀሙበት ለማየት [AGENT-SKILLS.md](./AGENT-SKILLS.md)ን ይመልከቱ።
 
@@ -244,17 +244,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ከላይ ያለው የMCP መሣሪያ ዝርዝር (110 ልዩ መሣሪያዎች፣ በ`countUniqueMcpTools()` የተሰሉ) ሆን ተብሎ
 በአሂድ ጊዜ ማስተላለፍ/መሸጎጫ/መጭመቅ/ማህደረ ትውስታ/ክህሎቶች/ወኪል አገልጋይ/የአውድ-ምንጭ ክዋኔዎች ላይ የተወሰነ ነው። ሁለት አጎራባች
 ማዕቀፎች ከMCP አገልጋዩ ጎን ለጎን በv3.8.0 ውስጥ ይቀርባሉ፣ እና ለየብቻ ተሰንደዋል፦
-
-### የደመና ወኪሎች
-
-የደመና ወኪሎች ከሂደቱ ውጭ የሚሰሩ የAI ኮድ ማዘጋጃ ወኪሎች (codex-cloud, cursor-cloud, devin, jules) ሲሆኑ፣ ለLLM አቅራቢዎች ጥቅም ላይ በሚውለው
-ተመሳሳይ የግንኙነት ሞዴል በኩል ከOmniRoute ጋር ተያይዘዋል። በራሳቸው
-የREST በይነገጽ (`/api/v1/agents/*`) በኩል ይቀርባሉ፣ እና የMCP መሣሪያ ካታሎግ አካል **አይደሉም**
-— የደመና ወኪልን መጥራት የMCP ወሰን አይጠቀምም።
-
-- አተገባበር፦ `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)።
-- የሕይወት ዑደት፦ `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`።
-- ሰነድ፦ [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)።
 
 ### መከላከያዎች
 
@@ -426,8 +415,6 @@ MCP አገልጋዩ በቅንብሮች (`mcpEnabled`) ውስጥ እስኪነቃ 
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                       |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                  |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                              |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                 |
 | `read:obsidian`       | 13 የማንበቢያ መሣሪያዎች — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 የመጻፊያ መሣሪያዎች — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                               |
@@ -479,7 +466,7 @@ Wildcard ወሰኖች ይደገፋሉ፦ `read:*` ሁሉንም የማንበብ �
 
 | ተለዋዋጭ                                   | ነባሪ                         | ዓላማ                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :-------------------------------------- | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`    | የMCP አገልጋዩ የOmniRoute ውስጣዊ APIዎችን ሲጠራ የሚጠቀምበት መሠረታዊ URL                                                                                                                                                                                                                                                                                                                                                             |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`    | የMCP አገልጋዩ የ67router ውስጣዊ APIዎችን ሲጠራ የሚጠቀምበት መሠረታዊ URL                                                                                                                                                                                                                                                                                                                                                              |
 | `OMNIROUTE_API_KEY`                     | (ባዶ)                        | ወደ ውስጣዊ API ጥሪዎች እንደ `Authorization: Bearer` የሚተላለፍ API ቁልፍ                                                                                                                                                                                                                                                                                                                                                         |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` ብቻ ያነቃዋል) | ሲነቃ፣ የጎደሉ የፈቃድ ወሰኖች የመሣሪያ ጥሪዎችን ይከለክላሉ፣ እና `scope_denied:<reason>`ን በኦዲት ምዝግብ ውስጥ ይመዘግባሉ። ሙሉ የ`manage`/`admin` ፈቃድ ወሰን ከሌለው፣ ለእያንዳንዱ ቁልፍ ከተዘጋጀ የAuthorization ራስጌ (`source === "authInfo"`) ለሚለይ ማንኛውም የHTTP/SSE ጠሪ፣ የዚህ ጠቋሚ ዋጋ ምንም ይሁን ምን ማስፈጸሙ እንዲሁ በግድ ይነቃል — ለምሳሌ፣ ጠባቡን የ`mcp:connect` ማለፊያ የፈቃድ ወሰን ብቻ የያዘ ቁልፍ — ስለዚህ ይህ ነባሪ ለአካባቢያዊ/stdio የአንድ ኦፕሬተር ፍሰት ብቻ ደህንነቱ የተጠበቀ ነው፤ ለርቀት loopback ላልሆነ መዳረሻ ፈጽሞ አይደለም |
 | `OMNIROUTE_MCP_SCOPES`                  | (ባዶ)                        | በነባሪነት «የሚገኙ» ተብለው የሚታሰቡ በኮማ የተለዩ የፈቃድ ወሰኖች ዝርዝር (ጠሪው የራሱን የፈቃድ ወሰኖች በማያቀርብበት ጊዜ ጥቅም ላይ ይውላል)                                                                                                                                                                                                                                                                                                                       |
@@ -582,7 +569,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | የክህሎት መሣሪያ ትርጓሜዎች (4 መሣሪያዎች)                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | የNotion አውድ ምንጭ መሣሪያ ትርጓሜዎች (6 መሣሪያዎች)                   |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | የጨዋታዊነት መሣሪያ ትርጓሜዎች (8 መሣሪያዎች)                           |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | የፕለጊን ምዝገባ እና አስተዳደር መሣሪያዎች (8 መሣሪያዎች)                   |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` መጨረሻ ነጥብ                               |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` መጨረሻ ነጥብ                                |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE የማጓጓዣ መስመር                            |

@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge යනු IDE AI නියෝජිතයන්ගෙන් පැමිණෙන HTTPS ගමනාගමනය හසුකරගෙන, එය OmniRoute හි ඒකාබද්ධ මාර්ගගත කිරීමේ එන්ජිම හරහා නැවත මාර්ගගත කරන OmniRoute හි MITM (Man-in-the-Middle) ප්රොක්සියයි. එය **IDE නියෝජිතයන් 10කට** සහාය දක්වයි — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, සහ Trae (විමර්ශනය කරමින් පවතී) — එමඟින් OmniRoute වෙළඳපොළේ AI කේතකරණ සහායකයන් සඳහා පුළුල්ම ආවරණයක් සහිත MITM ප්රොක්සිය බවට පත් කරයි.
+AgentBridge යනු IDE AI නියෝජිතයන්ගෙන් පැමිණෙන HTTPS ගමනාගමනය හසුකරගෙන, එය 67router හි ඒකාබද්ධ මාර්ගගත කිරීමේ එන්ජිම හරහා නැවත මාර්ගගත කරන 67router හි MITM (Man-in-the-Middle) ප්රොක්සියයි. එය **IDE නියෝජිතයන් 10කට** සහාය දක්වයි — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, සහ Trae (විමර්ශනය කරමින් පවතී) — එමඟින් 67router වෙළඳපොළේ AI කේතකරණ සහායකයන් සඳහා පුළුල්ම ආවරණයක් සහිත MITM ප්රොක්සිය බවට පත් කරයි.
 
 **උපකරණ පුවරුවේ පිහිටීම:** `/dashboard/tools/agent-bridge`
 **පැති තීරු සමූහය:** Tools (Cloud Agents පසු)
@@ -16,34 +16,34 @@ AgentBridge යනු IDE AI නියෝජිතයන්ගෙන් පැ�
 
 ### AgentBridge යනු කුමක්ද?
 
-IDE නියෝජිතයෙකු (උදා., GitHub Copilot, Cursor, Claude Code) API ඇමතුමක් කරන විට, එය සෘජුවම ඉහළ ධාරා AI සැපයුම්කරු (OpenAI, Anthropic ආදී) වෙත සම්බන්ධ වේ. AgentBridge එම සම්බන්ධතාවය TLS මට්ටමින් විනිවිද පරිදි අන්තර්ග්රහණය කර ගනියි — නියෝජිත වින්යාසයේ කිසිදු වෙනසක් අවශ්ය නොවේ — සහ ඉල්ලීම OmniRoute හරහා නැවත ලියයි.
+IDE නියෝජිතයෙකු (උදා., GitHub Copilot, Cursor, Claude Code) API ඇමතුමක් කරන විට, එය සෘජුවම ඉහළ ධාරා AI සැපයුම්කරු (OpenAI, Anthropic ආදී) වෙත සම්බන්ධ වේ. AgentBridge එම සම්බන්ධතාවය TLS මට්ටමින් විනිවිද පරිදි අන්තර්ග්රහණය කර ගනියි — නියෝජිත වින්යාසයේ කිසිදු වෙනසක් අවශ්ය නොවේ — සහ ඉල්ලීම 67router හරහා නැවත ලියයි.
 
 මෙයින් අදහස් වන්නේ ඔබට මෙසේ කළ හැකි බවයි:
 
-- **ඕනෑම නියෝජිතයෙකු ඕනෑම සැපයුම්කරුවෙකු වෙත නැවත යොමු කරන්න**: Copilot OpenAI වෙත කතා කරයිද? එය Anthropic Claude, Gemini, හෝ OmniRoute හි සැපයුම්කරුවන් 375න් ඕනෑම එකකට යළි යොමු කරන්න.
+- **ඕනෑම නියෝජිතයෙකු ඕනෑම සැපයුම්කරුවෙකු වෙත නැවත යොමු කරන්න**: Copilot OpenAI වෙත කතා කරයිද? එය Anthropic Claude, Gemini, හෝ 67router හි සැපයුම්කරුවන් 375න් ඕනෑම එකකට යළි යොමු කරන්න.
 - **ආකෘති සිතියම්ගත කිරීම් යොදන්න**: `gemini-3-flash` → `claude-sonnet-4.7` ලෙස handler මට්ටමින් විනිවිද පරිදි.
 - **සියලුම නියෝජිත ගමනාගමනය නිරීක්ෂණය කරන්න**: අන්තර්ග්රහණය කරගත් සෑම ඉල්ලීමක්ම [Traffic Inspector](./TRAFFIC_INSPECTOR.md) වෙත ප්රකාශයට පත් කෙරේ.
-- **OmniRoute ප්රත්යාස්ථතාව යොදන්න**: කොම්බෝ රවුටිං, සර්කියුට් බ්රේකර්, ෆෝල්බැක් සහ පිරිවැය ලුහුබැඳීම IDE නියෝජිත ගමනාගමනය සඳහාත් ක්රියාත්මක වේ.
+- **67router ප්රත්යාස්ථතාව යොදන්න**: කොම්බෝ රවුටිං, සර්කියුට් බ්රේකර්, ෆෝල්බැක් සහ පිරිවැය ලුහුබැඳීම IDE නියෝජිත ගමනාගමනය සඳහාත් ක්රියාත්මක වේ.
 
 ### වෙළඳපොළ සමඟ සැසඳීම
 
-| විශේෂාංගය                 | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity               |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot            |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex              |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries            |    —    |    ✓     |        —        |             ✓             |
-| Claude Code               |    —    |    —     |        ✓        |             ✓             |
-| Open Code                 |    —    |    —     |        ✓        |             ✓             |
-| Trae                      |    —    |    —     |        —        |    🔍 විමර්ශනය වෙමින්     |
-| උපකරණ පුවරු UI            |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector         |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute රවුටිං          |    ✗    |    ✗     |        ✗        |             ✓             |
-| ආකෘති සිතියම්ගත කිරීමේ UI |    ✗    |    ✗     |        ✗        |             ✓             |
-| මඟහැරීමේ ලැයිස්තුව        |    ✗    |    ✗     |        ✓        |             ✓             |
-| ඉහළ ධාරා CA සහතිකය        |    ✗    |    ✗     |        ✓        |             ✓             |
+| විශේෂාංගය                 | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity               |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot            |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex              |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries            |    —    |    ✓     |        —        |            ✓             |
+| Claude Code               |    —    |    —     |        ✓        |            ✓             |
+| Open Code                 |    —    |    —     |        ✓        |            ✓             |
+| Trae                      |    —    |    —     |        —        |    🔍 විමර්ශනය වෙමින්    |
+| උපකරණ පුවරු UI            |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector         |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router රවුටිං           |    ✗    |    ✗     |        ✗        |            ✓             |
+| ආකෘති සිතියම්ගත කිරීමේ UI |    ✗    |    ✗     |        ✗        |            ✓             |
+| මඟහැරීමේ ලැයිස්තුව        |    ✗    |    ✗     |        ✓        |            ✓             |
+| ඉහළ ධාරා CA සහතිකය        |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, CJS අනු ක්රියාවලිය)
     │  Host header SNI අනුව ඉලක්කය නිරාකරණය කරයි
     │  AgentBridge CA මඟින් අත්සන් කළ එක් එක් SNI සඳහා TLS සහතික ජනනය කරයි
     ├── මඟහැරීමේ ලැයිස්තුවට ගැළපේද? → TCP සෘජු හුවමාරුව (විකේතනය නොකරයි)
-    ├── ඉලක්කයට ගැළපේද? → fetch → OmniRoute රවුටරය (port 20128)
+    ├── ඉලක්කයට ගැළපේද? → fetch → 67router රවුටරය (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── ඉල්ලීම් body/headers මත maskSecrets()
     │               ├── TrafficBuffer.push() — Traffic Inspector වෙත ප්රකාශයට පත් කරයි
@@ -204,7 +204,7 @@ IDE මඟින් MITM සම්බන්ධතාව පිළිගැනී
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ GitHub Copilot සඳහා උදාහරණ `/etc/hosts` ඇතුළත් �
 
 මූලාශ්ර → ඉලක්ක සිතියම්ගත කිරීම් අර්ථ දැක්වීමට එක් එක් agent කාඩ්පතේ ඇති ආකෘති සිතියම්ගත කිරීමේ වගුව භාවිත කරන්න:
 
-| මූලාශ්ර ආකෘතිය (agent හි ස්වදේශීය) | ඉලක්ක ආකෘතිය (OmniRoute) |
-| ---------------------------------- | ------------------------ |
-| `gpt-4o`                           | `claude-sonnet-4.7`      |
-| `*` (wildcard)                     | `claude-haiku-4.7`       |
+| මූලාශ්ර ආකෘතිය (agent හි ස්වදේශීය) | ඉලක්ක ආකෘතිය (67router) |
+| ---------------------------------- | ----------------------- |
+| `gpt-4o`                           | `claude-sonnet-4.7`     |
+| `*` (wildcard)                     | `claude-haiku-4.7`      |
 
 Wildcard `*` මඟින් හඳුනා නොගත් ඕනෑම ආකෘතියක් නිශ්චිත ඉලක්කයට සිතියම්ගත කරයි. `agent_bridge_mappings` වගුවේ ස්ථිරව සුරකියි.
 
@@ -276,7 +276,7 @@ Wildcard `*` මඟින් හඳුනා නොගත් ඕනෑම ආක
 
 ### 3.5 අවදානම් දැනුම්දීම
 
-IDE එක ඉහළ-ධාරා සැපයුම්කරුවන් සමඟ සත්යාපනය වීමට භාවිත කරන අක්තපත්ර (OAuth ටෝකන, API යතුරු) AgentBridge මඟින් අන්තර්ග්රහණය කරයි. මේවා **ලොග් කිරීමට පෙර ආවරණය කෙරේ** (§2.7 බලන්න), නමුත් OmniRoute හි MITM ස්තරයට දෘශ්යමාන වේ. එක් එක් නියෝජිතයා පළමුව සක්රිය කිරීමේදී ඉවත් කළ හැකි අවදානම් දැනුම්දීමේ මොඩලයක් පෙන්වයි.
+IDE එක ඉහළ-ධාරා සැපයුම්කරුවන් සමඟ සත්යාපනය වීමට භාවිත කරන අක්තපත්ර (OAuth ටෝකන, API යතුරු) AgentBridge මඟින් අන්තර්ග්රහණය කරයි. මේවා **ලොග් කිරීමට පෙර ආවරණය කෙරේ** (§2.7 බලන්න), නමුත් 67router හි MITM ස්තරයට දෘශ්යමාන වේ. එක් එක් නියෝජිතයා පළමුව සක්රිය කිරීමේදී ඉවත් කළ හැකි අවදානම් දැනුම්දීමේ මොඩලයක් පෙන්වයි.
 
 ### 3.6 නඩත්තුව සහ රෝගනිර්ණය
 
@@ -396,7 +396,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### සංවේදී hosts සඳහා මඟහැරීම් ලැයිස්තුව
 
-මඟහැරීම් ලැයිස්තුව මඟින් මූල්ය ආයතන, OAuth/SSO සපයන්නන් සහ අනෙකුත් සංවේදී hosts **කිසිවිටෙකත් විකේතනය නොකරන බව** සහතික කරයි. ඒවායේ TLS traffic එක පාරදෘශ්ය TCP tunnel එකක් ලෙස හරහා ගමන් කරයි — OmniRoute කිසිවිටෙකත් plaintext නොදකී.
+මඟහැරීම් ලැයිස්තුව මඟින් මූල්ය ආයතන, OAuth/SSO සපයන්නන් සහ අනෙකුත් සංවේදී hosts **කිසිවිටෙකත් විකේතනය නොකරන බව** සහතික කරයි. ඒවායේ TLS traffic එක පාරදෘශ්ය TCP tunnel එකක් ලෙස හරහා ගමන් කරයි — 67router කිසිවිටෙකත් plaintext නොදකී.
 
 පෙරනිමි මඟහැරීම් patternsවලට ඇතුළත් වන්නේ:
 
@@ -447,7 +447,7 @@ sudo fuser -k 443/tcp  # බලයෙන් නවත්වන්න (ප්ර�
 
 AgentBridge ආරම්භ කිරීමෙන් පසු IDE එක TLS දෝෂ පෙන්වයි නම්:
 
-1. සහතිකය ස්ථාපනය කර ඇති බව තහවුරු කරන්න: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) හෝ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. සහතිකය ස්ථාපනය කර ඇති බව තහවුරු කරන්න: `security find-certificate -c "OmniRoute MITM CA"` (macOS) හෝ `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. සමහර යෙදුම් තමන්ගේම විශ්වාස ගබඩාවක් පවත්වාගෙන යයි (Firefox, Linux මත Chrome). "Trust Cert" නැවත ක්රියාත්මක කර NSS/Firefox සඳහා විශේෂිත සහතික ගබඩාව පරීක්ෂා කරන්න.
 3. විශ්වාසය ලබා දීමෙන් පසු IDE එක නැවත ආරම්භ කරන්න — දැනට ක්රියාත්මක TLS සැසි පැරණි විශ්වාස තත්ත්වය භාවිත කරයි.
 
@@ -498,7 +498,7 @@ ipconfig /flushdns
 AgentBridge ඉල්ලීම් අන්තර්ග්රහණය කළත් සියලු ඉල්ලීම් අසාර්ථක වේ නම්:
 
 1. අවම වශයෙන් එක් සැපයුම්කරුවෙකු හෝ `/dashboard/providers` හි සම්බන්ධ කර ඇති බව තහවුරු කරන්න
-2. OmniRoute සේවාදායක ලොග පරීක්ෂා කරන්න: `.env` හි `APP_LOG_LEVEL=debug`
+2. 67router සේවාදායක ලොග පරීක්ෂා කරන්න: `.env` හි `APP_LOG_LEVEL=debug`
 3. `OMNIROUTE_BASE_URL` නිවැරදි router අන්ත ලක්ෂ්යය වෙත යොමු වන බව තහවුරු කරන්න (පෙරනිමිය: `http://127.0.0.1:20128`)
 
 ---

@@ -4,7 +4,7 @@
 
 ---
 
-Matsawar RTK ita ce injin matsewa na OmniRoute mai fahimtar umarni don fitarwar terminal da kayan aiki. An
+Matsawar RTK ita ce injin matsewa na 67router mai fahimtar umarni don fitarwar terminal da kayan aiki. An
 ƙera ta ne don zaman wakilan coding inda mafi yawan ƙaruwar mahallin ke fitowa daga rajistan gwaji, fitarwar build,
 hayaniyar package manager, rubutattun bayanan shell, fitarwar Docker, fitarwar git, da stack traces.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Wannan tsari yana fara matse fitarwar na'ura mai hayaniya, sannan ya bar Caveman ya taƙaita sauran rubutun bayani.
 
 RTK na asali yana bayar da rahoton adana `60-90%` na fitarwar umarni. Misalin zaman da ke cikin README ɗinsa ya sauka daga
-daidaitattun tokens `~118,000` zuwa tokens na RTK `~23,900`, wanda ke nufin an adana `79.7%` (`~80%`). OmniRoute yana amfani da
+daidaitattun tokens `~118,000` zuwa tokens na RTK `~23,900`, wanda ke nufin an adana `79.7%` (`~80%`). 67router yana amfani da
 wannan matsakaicin na asali don lissafin adanawar matsewa mai jerin matakai tare da matse shigarwar Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK tana loda filters a wannan tsari:
 2. Filters na global daga `DATA_DIR/rtk/filters.toml` da `DATA_DIR/rtk/filters.json`.
 3. Filters da aka gina a ciki daga `open-sse/services/compression/engines/rtk/filters/`.
 
-A cikin scope ɗaya, filters na RTK TOML schema v1 suna da fifiko a kan filters na OmniRoute JSON. Ana duba
+A cikin scope ɗaya, filters na RTK TOML schema v1 suna da fifiko a kan filters na 67router JSON. Ana duba
 furucin TOML `match_command` kafin daidaitawa da nau'in umarni domin filter da aka shigo da shi na takamaiman umarni
 ya iya maye gurbin filter mai faɗi a cikin wannan scope. Scope na project har yanzu yana da fifiko a kan scope na global,
 ba tare da la'akari da tsarin fayil ba.
@@ -84,7 +84,7 @@ marasa inganci kuma diagnostics na `/api/context/rtk/filters` yana bayar da raho
 
 ## Daidaituwar RTK TOML schema v1
 
-OmniRoute na iya tantancewa, ingantawa, gwadawa, da shigar da fayilolin tacewa na bayani ta amfani da RTK TOML schema v1.
+67router na iya tantancewa, ingantawa, gwadawa, da shigar da fayilolin tacewa na bayani ta amfani da RTK TOML schema v1.
 Filayen da ake tallafawa su ne `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty`, da gwaje-gwajen cikin layi na `[[tests.<filter>]]`.
@@ -92,7 +92,7 @@ Ana ƙin filayen da ba a sani ba, regular expressions marasa inganci ko haɗari,
 1 MiB, da manazarta zuwa matatan da ba a sani ba. Ana iya inganta fayil ɗin da gwaje-gwajensa na cikin layi suka gaza domin dubawa, amma ba za a iya shigar ko loda shi ba. Gazawar loda fayil na musamman tana ci gaba da
 barin tsarin a buɗe: ana tsallake fayil ɗin da ba shi da inganci, sannan sauran matatan su ci gaba da aiki.
 
-OmniRoute yana karɓar fitarwar kayan aiki bayan abokin ciniki ya riga ya kama ta, don haka `filter_stderr = true`
+67router yana karɓar fitarwar kayan aiki bayan abokin ciniki ya riga ya kama ta, don haka `filter_stderr = true`
 ba zai iya canza yadda ake kama aikin ba. Ana karɓar filin a matsayin aikin da ba ya yin komai, kuma ingantawa tana dawo da gargadi.
 Da gangan aka bayyana wannan a matsayin **daidaituwar RTK TOML schema v1**, ba cikakkiyar daidaituwa
 da RTK executable, shell hooks, aiwatar da umarnin Rust, ko tsarin trust-store nasa ba.

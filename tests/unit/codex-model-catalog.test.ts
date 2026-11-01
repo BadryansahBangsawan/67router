@@ -83,7 +83,7 @@ describe("buildCodexModelCatalog", () => {
     assert.equal(terra.base_instructions, "instructions for gpt-5.6-terra");
     assert.deepEqual(terra.model_messages, { instructions_template: "template for gpt-5.6-terra" });
     assert.equal(terra.display_name, "mirbud/gpt-5.6-terra");
-    assert.equal(terra.description, "mirbud/gpt-5.6-terra via OmniRoute");
+    assert.equal(terra.description, "mirbud/gpt-5.6-terra via 67router");
     assert.equal(terra.visibility, "list");
     // Matched templates keep Codex's own tiers and window for that model
     assert.deepEqual(terra.service_tiers, [{ id: "priority", name: "Fast" }]);
@@ -101,7 +101,7 @@ describe("buildCodexModelCatalog", () => {
       assert.equal(clone.base_instructions, "instructions for gpt-5.5");
       assert.deepEqual(clone.service_tiers, []);
       assert.deepEqual(clone.additional_speed_tiers, []);
-      assert.match(String(clone.description), /via OmniRoute \(Codex profile: gpt-5\.5\)$/);
+      assert.match(String(clone.description), /via 67router \(Codex profile: gpt-5\.5\)$/);
     }
   });
 

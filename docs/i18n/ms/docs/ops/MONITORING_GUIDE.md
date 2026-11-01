@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute dilengkapi dengan pemantauan kesihatan terbina dalam, autopilot penyedia, penjejakan kuota dan cangkuk kebolehcerapan. Panduan ini merangkumi papan pemuka, amaran dan penyelesaian masalah.
+> **TL;DR**: 67router dilengkapi dengan pemantauan kesihatan terbina dalam, autopilot penyedia, penjejakan kuota dan cangkuk kebolehcerapan. Panduan ini merangkumi papan pemuka, amaran dan penyelesaian masalah.
 
 **Sumber:**
 
@@ -20,7 +20,7 @@
 
 ## Gambaran Keseluruhan
 
-OmniRoute mempunyai **3 lapisan pemantauan**:
+67router mempunyai **3 lapisan pemantauan**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Bagi setiap kombo:
 
 ## API Pemeriksaan Kesihatan
 
-OmniRoute menyediakan **dua** permukaan kesihatan HTTP. Kedua-duanya tidak boleh digunakan secara saling ganti untuk pengorkestra.
+67router menyediakan **dua** permukaan kesihatan HTTP. Kedua-duanya tidak boleh digunakan secara saling ganti untuk pengorkestra.
 
 | Laluan                       | Tujuan                                                                  | Beban                                 | Gunakan untuk                                                                           |
 | ---------------------------- | ----------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ titik akhir ini. Gunakan `failed` + `failedConnections` untuk kegagalan prob lan
 
 ### Cadangan prob Kubernetes
 
-OmniRoute ialah **satu proses Node** (satu gelung peristiwa). `HEALTHCHECK` Docker lalai menyasarkan `/healthz` yang ringan. `/api/monitoring/health` adalah **terlalu berat** untuk selang keaktifan kubelet.
+67router ialah **satu proses Node** (satu gelung peristiwa). `HEALTHCHECK` Docker lalai menyasarkan `/healthz` yang ringan. `/api/monitoring/health` adalah **terlalu berat** untuk selang keaktifan kubelet.
 
 | Prob                   | Sasaran yang disyorkan                                                                     | Catatan                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Berkaitan: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (pro
 
 ### watchdog systemd (gelung peristiwa beku)
 
-Pada hos systemd, OmniRoute memberitahu pengurus perkhidmatan apabila ia sudah bersedia dan terus menghantar ping kepadanya, supaya pelayan yang gelung peristiwanya tersekat akan dimatikan dan dimulakan semula dan bukannya terus berjalan tanpa memberikan respons. Ping datang daripada gelung peristiwa pelayan itu sendiri: apabila gelung itu disekat, ping berhenti dan systemd memulakan semula perkhidmatan selepas tempoh `WatchdogSec` berlalu tanpa menerima sebarang ping.
+Pada hos systemd, 67router memberitahu pengurus perkhidmatan apabila ia sudah bersedia dan terus menghantar ping kepadanya, supaya pelayan yang gelung peristiwanya tersekat akan dimatikan dan dimulakan semula dan bukannya terus berjalan tanpa memberikan respons. Ping datang daripada gelung peristiwa pelayan itu sendiri: apabila gelung itu disekat, ping berhenti dan systemd memulakan semula perkhidmatan selepas tempoh `WatchdogSec` berlalu tanpa menerima sebarang ping.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) sudah menulis unit pengguna yang menyertakan konfigurasi ini. Unit yang anda tulis sendiri (`Type=simple` secara lalai) tidak mempunyai watchdog, jadi tambahkan baris berikut pada bahagian `[Service]`:
 
@@ -443,7 +443,7 @@ Konfigurasi semakan kesihatan token dikendalikan secara dalaman oleh `tokenHealt
 
 ### Saluran Terbina Dalam
 
-OmniRoute menyokong **3 saluran amaran**:
+67router menyokong **3 saluran amaran**:
 
 | Saluran               | Persediaan         | Kes penggunaan                 |
 | --------------------- | ------------------ | ------------------------------ |
@@ -559,7 +559,7 @@ Cipta `~/.omniroute/dashboard.json`:
 ### "Kuota menyatakan sihat tetapi saya melihat 429"
 
 - 429 bermaksud penyedia menyatakan bahawa anda telah menggunakan kuota anda
-- Penjejakan kuota OmniRoute mungkin **lapuk** — maklumat yang tepat berada di huluan penyedia
+- Penjejakan kuota 67router mungkin **lapuk** — maklumat yang tepat berada di huluan penyedia
 - Data kuota disegar semula secara automatik melalui pemantau kuota dalaman
 
 ### "Gabungan gagal tetapi semua sasaran kelihatan sihat"
@@ -572,7 +572,7 @@ Cipta `~/.omniroute/dashboard.json`:
 
 - Jalankan `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Jika "ok" — penggera palsu, semakan kesihatan terlalu ketat
-- Jika selainnya — **hentikan OmniRoute** dan ikuti [panduan pemulihan bencana](./DATABASE_GUIDE.md#disaster-recovery)
+- Jika selainnya — **hentikan 67router** dan ikuti [panduan pemulihan bencana](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Tekanan heap memori berada pada tahap kritikal"
 

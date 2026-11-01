@@ -206,14 +206,14 @@ field នីមួយៗត្រូវបានបម្លែងទៅជា�
 3. កម្រិតជម្រៅ៖ nesting លើសពី 4 កម្រិត ត្រូវបានជំនួសដោយ string `"[truncated]"`។
 4. Array ត្រូវបានកំណត់ត្រឹម 32 element។
 
-មានតែ call site ដែលមាន provider error body ដែលបាន parse ប៉ុណ្ណោះដែលគួរបញ្ជូន `upstreamDetails`។ error ផ្ទៃក្នុងរបស់ OmniRoute
+មានតែ call site ដែលមាន provider error body ដែលបាន parse ប៉ុណ្ណោះដែលគួរបញ្ជូន `upstreamDetails`។ error ផ្ទៃក្នុងរបស់ 67router
 (SSE parse failure, content ទទេ, guardrail block) មិនត្រូវបញ្ចូលវាឡើយ។
 
 កុំបញ្ជូន `err.stack`, `err.message` ដើម ឬ string ណាមួយពី runtime exception ទៅ
 `upstreamDetails`។ ទាំងនោះនៅតែត្រូវឆ្លងកាត់ `errorResponse` / `buildErrorBody(code, msg)`
 ដោយគ្មាន upstream body។
 
-ការបញ្ជូនបន្ត upstream 4xx ដោយជ្រើសរើស រក្សាទុក safe JSON shape និងពាក្យពេចន៍របស់ provider ដែលត្រូវការសម្រាប់ client auto-recovery ប៉ុន្តែវាមិនមែនជាការបញ្ជូនបន្តដូចគ្នាបេះបិទតាម byte ទេ៖ recursive sanitizer តែងតែដំណើរការមុន serialization។ body ដែលមាន cyclic, មាន BigInt ឬមាន `toJSON()` ដែលព្យាបាទ នឹងបរាជ័យបែបបិទសុវត្ថិភាព ហើយមិនមានសិទ្ធិសម្រាប់ passthrough ទេ។ OCR និង moderation អនុវត្តច្បាប់ដូចគ្នា; upstream body ដែលមិនមែនជា JSON, ទទេ ឬដាក់ស្លាកខុស ត្រូវបានបម្លែងទៅជា canonical OmniRoute JSON error envelope។
+ការបញ្ជូនបន្ត upstream 4xx ដោយជ្រើសរើស រក្សាទុក safe JSON shape និងពាក្យពេចន៍របស់ provider ដែលត្រូវការសម្រាប់ client auto-recovery ប៉ុន្តែវាមិនមែនជាការបញ្ជូនបន្តដូចគ្នាបេះបិទតាម byte ទេ៖ recursive sanitizer តែងតែដំណើរការមុន serialization។ body ដែលមាន cyclic, មាន BigInt ឬមាន `toJSON()` ដែលព្យាបាទ នឹងបរាជ័យបែបបិទសុវត្ថិភាព ហើយមិនមានសិទ្ធិសម្រាប់ passthrough ទេ។ OCR និង moderation អនុវត្តច្បាប់ដូចគ្នា; upstream body ដែលមិនមែនជា JSON, ទទេ ឬដាក់ស្លាកខុស ត្រូវបានបម្លែងទៅជា canonical 67router JSON error envelope។
 
 ## ដែនកំណត់ដែលគេស្គាល់របស់ CodeQL៖ មិនស្គាល់កម្មវិធីសម្អាតទិន្នន័យផ្ទាល់ខ្លួន
 

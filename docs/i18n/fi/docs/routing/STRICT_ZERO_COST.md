@@ -31,7 +31,7 @@ Jokaiselle joukon ehdokkaalle (`open-sse/services/autoCombo/virtualFactory.ts::b
 heti `filterPaidOnlyCandidates`-kutsun jälkeen):
 
 1. **Ei lainkaan `FREE_MODEL_BUDGETS`-luettelossa** → suljetaan pois. Tämä kattaa aidosti maksulliset mallit sekä kaikki
-   palveluntarjoajat/mallit, joita OmniRoute ei ole vielä luokitellut — uudet ehdokkaat ovat aluksi poissuljettuja, eivät mukana.
+   palveluntarjoajat/mallit, joita 67router ei ole vielä luokitellut — uudet ehdokkaat ovat aluksi poissuljettuja, eivät mukana.
 2. **`freeType: "keyless"`** → hyväksytään välittömästi, **mutta vain, jos ehdokas on aidosti
    saapunut ilman tunnistautumista käytettävää reittiä pitkin** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Kyseisellä ehdokkaalla ei ole tunnistetietoja,
@@ -86,7 +86,7 @@ ei koskaan saman ehdokkaan jokin toinen, varmentamaton tili. Katso regressiotodi
 (avaimettoman ohituksen tapaukset A/B/C, usean tilin tapaukset 1–5).
 
 `löydetään automaattisesti`: huomenna julkaistu palveluntarjoaja/malli, jolla on oikeat metatiedot
-(luettelossa, käyttösovittimen kanssa, `hardStopGuaranteed: true`), on käytettävissä heti, kun OmniRoute
+(luettelossa, käyttösovittimen kanssa, `hardStopGuaranteed: true`), on käytettävissä heti, kun 67router
 tietää siitä — ei koodimuutosta, ei sallittujen luettelon merkintää eikä mitään muokattavaa tässä moduulissa.
 Luettelosta poistettu palveluntarjoaja/malli katoaa samalla tavalla. Katso regressiotodistus tiedostosta
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (injektoitavien testiaineistojen kautta,

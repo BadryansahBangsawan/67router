@@ -162,17 +162,6 @@ const EXPLORER_GROUP_OPTIONS: Array<{
   { value: "serviceTier", labelKey: "groupServiceTier" },
 ];
 
-const CHART_COLORS = [
-  "#10b981",
-  "#06b6d4",
-  "#f59e0b",
-  "#8b5cf6",
-  "#ef4444",
-  "#14b8a6",
-  "#6366f1",
-  "#ec4899",
-];
-
 const SHORT_WEEKDAY_INDEX: Record<string, number> = {
   Sun: 0,
   Mon: 1,
@@ -239,7 +228,7 @@ function generateCSV(analytics: UsageAnalyticsPayload, locale: string): string {
   // billed-cost, which is what the API itself does with the query parameter.
   const includesEstimates = analytics.includesFlatRateEstimates === true;
 
-  lines.push("# OmniRoute Cost Report");
+  lines.push("# 67router Cost Report");
   lines.push(`# Generated: ${new Date().toISOString()}`);
   if (includesEstimates) {
     lines.push(`# ${FLAT_RATE_ESTIMATE_CSV_NOTE}`);

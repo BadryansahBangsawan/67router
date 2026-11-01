@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute phân giải trình điều khiển SQLite khi khởi động thông qua chuỗi dự phòng gồm 5 bước:
+67router phân giải trình điều khiển SQLite khi khởi động thông qua chuỗi dự phòng gồm 5 bước:
 
 1. **`better-sqlite3` đi kèm** (thông qua `dependencies` trong `package.json`)
    — nhanh nhất, sử dụng tệp nhị phân gốc, được cài đặt bởi `npm install` khi có sẵn các công cụ dựng.
@@ -28,13 +28,13 @@ OmniRoute phân giải trình điều khiển SQLite khi khởi động thông q
 - **Không có công cụ dựng**: Một số môi trường (Windows doanh nghiệp không có VS Build
   Tools, các image Docker tối giản) không thể biên dịch `better-sqlite3`. Trình cài đặt trong thời gian chạy
   phân giải một tệp nhị phân dựng sẵn từ registry npm; các trình điều khiển dự phòng
-  đảm bảo OmniRoute vẫn có thể khởi động ngay cả khi việc đó thất bại.
+  đảm bảo 67router vẫn có thể khởi động ngay cả khi việc đó thất bại.
 - **Hệ thống cách ly mạng**: Nếu không thể truy cập registry npm, `node:sqlite`
   hoặc `sql.js` đảm bảo chức năng cơ bản.
 
 ## Xác thực byte magic
 
-Trước khi tải tệp `.node` được cài đặt trong thời gian chạy, OmniRoute đọc 8
+Trước khi tải tệp `.node` được cài đặt trong thời gian chạy, 67router đọc 8
 byte đầu tiên và đối chiếu với các giá trị magic đã biết của nền tảng:
 
 | Nền tảng              | Byte (hex)    | Nhãn        |
@@ -104,9 +104,9 @@ Phần triển khai:
 ## Mô hình một trình ghi (không hỗ trợ HA)
 
 Chuỗi dự phòng trình điều khiển ở trên vẫn chạy trong **một tiến trình**. Theo mặc định, SQLite
-của OmniRoute là hệ thống **một trình ghi**:
+của 67router là hệ thống **một trình ghi**:
 
-- Không gắn hai replica OmniRoute vào cùng một tệp `storage.sqlite`.
+- Không gắn hai replica 67router vào cùng một tệp `storage.sqlite`.
 - Việc khởi động lại container, triển khai Recreate, OOM kill hoặc khởi động lại do HEALTHCHECK sẽ ngắt
   mọi phiên SSE đang xử lý. Luồng mặc định không có cơ chế rút cạn phiên.
 - Kiểm tra liveness của trình điều phối coi `/healthz` chậm là đã chết sẽ hủy replica

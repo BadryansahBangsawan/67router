@@ -250,7 +250,7 @@ describe("ConnectionQuotaPanel", () => {
                 resetAt: futureReset(72),
               },
             },
-            plan: "Xiaomi MiMo Token Plan (OmniRoute-tracked)",
+            plan: "Xiaomi MiMo Token Plan (67router-tracked)",
             message: "MiMo console cookie missing or expired — set the cookie to read live quota.",
             fetchedAt: new Date().toISOString(),
           },

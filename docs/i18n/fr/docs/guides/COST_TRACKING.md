@@ -4,7 +4,7 @@
 
 ---
 
-Comment OmniRoute estime, enregistre et présente le coût de chaque requête — et pourquoi le
+Comment 67router estime, enregistre et présente le coût de chaque requête — et pourquoi le
 chiffre du tableau de bord est un **indicateur d’économies**, et non une facture.
 
 Voir aussi : [Guide de l’utilisateur](./USER_GUIDE.md) · [Galerie des fonctionnalités](./FEATURES.md)
@@ -13,12 +13,12 @@ Voir aussi : [Guide de l’utilisateur](./USER_GUIDE.md) · [Galerie des fonctio
 
 ## Ce que c’est (et ce que ce n’est pas)
 
-OmniRoute attribue un coût en USD à chaque requête de complétion en multipliant le nombre
+67router attribue un coût en USD à chaque requête de complétion en multipliant le nombre
 de jetons par les tarifs du modèle. Ces chiffres alimentent le tableau de bord **Coûts**,
 les commandes CLI `omniroute cost` / `omniroute usage`, les exportations CSV/JSON et les
 budgets par clé API.
 
-> **Le « coût » du tableau de bord est un indicateur d’économies, pas une facture.** OmniRoute
+> **Le « coût » du tableau de bord est un indicateur d’économies, pas une facture.** 67router
 > ne vous facture jamais — il achemine vos requêtes vers des fournisseurs que vous avez
 > déjà connectés (vos propres abonnements, offres gratuites et clés API). Un « coût total
 > de 290 $ » entièrement cumulé sur des modèles gratuits signifie qu’environ **290 $ n’ont
@@ -32,7 +32,7 @@ projet (« le “coût” du tableau de bord est un indicateur d’économies, p
 
 Comme ce chiffre est une estimation :
 
-- Il dépend de la grille tarifaire dont OmniRoute dispose pour chaque modèle. Un modèle
+- Il dépend de la grille tarifaire dont 67router dispose pour chaque modèle. Un modèle
   sans entrée tarifaire contribue un coût de `0` (il apparaît comme une ligne
   « Ancien / Gratuit » dans l’explorateur).
 - Le trafic relevant d’une offre gratuite ou d’un abonnement cumule tout de même un coût
@@ -52,7 +52,7 @@ Les coûts proviennent d’une grille tarifaire déterminée selon l’ordre de 
    `model_prices_and_context_window.json` de LiteLLM lorsque la synchronisation est activée
    (stockés dans un espace de noms `pricing_synced` distinct afin de ne jamais écraser vos
    remplacements).
-3. **Valeurs par défaut codées en dur** — fournies avec OmniRoute.
+3. **Valeurs par défaut codées en dur** — fournies avec 67router.
 
 La synchronisation des tarifs externes est **facultative** et désactivée par défaut. Variables
 d’environnement concernées (voir [`.env.example`](../../.env.example)) :
@@ -206,7 +206,7 @@ Tous nécessitent une authentification de gestion (boucle locale/JWT, via
 
 ## CLI
 
-La CLI d’OmniRoute fournit des commandes relatives aux coûts, à l’utilisation et à la tarification (enregistrées dans
+La CLI de 67router fournit des commandes relatives aux coûts, à l’utilisation et à la tarification (enregistrées dans
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

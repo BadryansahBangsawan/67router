@@ -4,7 +4,7 @@
 
 ---
 
-> **A Taƙaice**: OmniRoute yana jera masu samar da sabis na **kyauta** bisa ingancin samfuri ta amfani da **maki na ELO na Arena AI
+> **A Taƙaice**: 67router yana jera masu samar da sabis na **kyauta** bisa ingancin samfuri ta amfani da **maki na ELO na Arena AI
 > (irin na LMArena)**. Buɗe shafin **Jerin Matsayin Masu Samar da Sabis na Kyauta** a cikin
 > dashboard domin ganin waɗanne masu samar da sabis na kyauta ne ke bayar da samfura mafi ƙarfi don aikinka —
 > gaba ɗaya, ko bayan tacewa bisa rukuni (rubuta lamba, bita, rubutun bayani, gyaran kurakurai).
@@ -13,7 +13,7 @@
 
 ## Abin Da Yake
 
-OmniRoute tana rajistar masu samarwa 375, ciki har da shigarwar catalog 155 da aka yi musu alamar **free/no-auth**
+67router tana rajistar masu samarwa 375, ciki har da shigarwar catalog 155 da aka yi musu alamar **free/no-auth**
 (no-auth,
 OAuth na free-tier, ko API key na free-tier — duba
 [Jagoran Free Tiers](../getting-started/FREE-TIERS-GUIDE.md) da kuma cikakken
@@ -129,9 +129,9 @@ da `code` — daga API na jadawalin shugabannin Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Kowace shigarwa a jadawalin
 shugabannin tana ɗauke da sunan samfur, mai samarwa, `score` na ELO, tazarar amincewa, da yawan ƙuri'u.
 
-Rukunonin jadawalin shugabanni suna daidaituwa da rukunonin ayyukan OmniRoute:
+Rukunonin jadawalin shugabanni suna daidaituwa da rukunonin ayyukan 67router:
 
-| Jadawalin shugabannin Arena | Rukunonin ayyukan OmniRoute                       |
+| Jadawalin shugabannin Arena | Rukunonin ayyukan 67router                        |
 | --------------------------- | ------------------------------------------------- |
 | `text`                      | `default`, `review`, `documentation`, `debugging` |
 | `code`                      | `coding`                                          |
@@ -168,7 +168,7 @@ Daidaitawar tana aiki **ta tsohuwa**:
 
 - Tana gudana sau ɗaya lokacin fara uwar garke, sannan tana ci gaba bisa agogon lokaci-lokaci
   (`src/lib/arenaEloSync.ts`, an haɗa ta daga `src/instrumentation-node.ts`).
-- Ba ta **tare aiki kuma ba ta taɓa haddasa gazawar tsarin** — idan ɗauko bayanai daga tushen waje ya gaza, OmniRoute zai ci gaba da
+- Ba ta **tare aiki kuma ba ta taɓa haddasa gazawar tsarin** — idan ɗauko bayanai daga tushen waje ya gaza, 67router zai ci gaba da
   aiki, kuma jerin matsayi kawai za su nuna ingantattun bayanai na ƙarshe (ko yanayin da babu komai).
 
 Sauye-sauyen muhalli guda biyu ne ke sarrafa ta (an rubuta bayaninsu a
@@ -203,7 +203,7 @@ daidaitawa mai sassauci (`findMatchingIntelligence` a cikin `src/lib/freeProvide
 3. Daidaituwar farkon suna (sunan samfur a jadawalin shugabanni shi ne farkon ID na rajista).
 
 A ɓangaren daidaitawa, ana cire sanannun farkon sunayen masu samarwa (`anthropic/`, `openai/`, `google/`, …),
-kuma ƙaramin taswirar laƙabi yana faɗaɗa sanannun sunaye zuwa nau'ikan da OmniRoute ke amfani da su
+kuma ƙaramin taswirar laƙabi yana faɗaɗa sanannun sunaye zuwa nau'ikan da 67router ke amfani da su
 a ciki, don haka ana iya samun samfuran da kowane suna.
 
 ### Yadda ake jera mai samarwa

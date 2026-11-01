@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` sprístupňuje celý váš katalóg OmniRoute — modely, kombinácie a
+`@omniroute/opencode-plugin-v2` sprístupňuje celý váš katalóg 67router — modely, kombinácie a
 automatické kombinácie — vo výbere modelov OpenCode v2 spolu so zobrazovanými názvami, cenami a
 limitmi bezplatnej úrovne.
 
@@ -15,7 +15,7 @@ nič medzi nimi nie je zdieľané, takže aktualizácia jedného nikdy nevynúti
 ## Požiadavky
 
 - OpenCode v2.
-- Dostupná brána OmniRoute (predvolene `http://localhost:20128`).
+- Dostupná brána 67router (predvolene `http://localhost:20128`).
 - Node.js 22 alebo 24.
 
 ## Inštalácia
@@ -128,7 +128,7 @@ Ak to chcete vypnúť, nastavte `"geminiSanitization": false`.
 
 | Príznak                                             | Príčina                                                                                                                      |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Výber nezobrazuje žiadny model OmniRoute            | Nepodarilo sa nájsť žiadny kľúč (skontrolujte upozornenie pri spustení) alebo je brána nedostupná                            |
+| Výber nezobrazuje žiadny model 67router             | Nepodarilo sa nájsť žiadny kľúč (skontrolujte upozornenie pri spustení) alebo je brána nedostupná                            |
 | Nespracované ID modelov, žiadne kombinácie ani ceny | Koncové body správy odmietli token — nastavte `managementReadToken`                                                          |
 | Krátky alebo prázdny katalóg `freeOnly`             | Chýba token správy alebo bol odmietnutý — v protokole hostiteľa si pozrite súhrnný riadok obnovenia (počet `unmatched-free`) |
 | Relácia pripnutá k `opencode-<id>/…`                | Doplnok v1 zverejnil `opencode-<id>`; v2 zverejňuje iba `<id>`, preto znova vyberte model v rámci `<id>/…`                   |

@@ -6,7 +6,7 @@
 
 ## Översikt
 
-OmniRoute CLI-kommandon autentiseras mot det lokala hanterings-API:t med en
+67router CLI-kommandon autentiseras mot det lokala hanterings-API:t med en
 `HMAC-SHA256(machine-id, salt)`-token som skickas via begärandehuvudet
 `x-omniroute-cli-token`.
 

@@ -13,7 +13,7 @@
 manifest เดียวกันนี้พร้อมใช้งานผ่าน HTTP ที่
 `GET /api/v1/provider-plugin-manifest` สำหรับ sidecar ที่ทำงานแยก process
 
-OmniRoute แจ้ง URL ดังกล่าวแก่ Bifrost และ CLIProxyAPI ผ่าน request header
+67router แจ้ง URL ดังกล่าวแก่ Bifrost และ CLIProxyAPI ผ่าน request header
 `X-OmniRoute-Provider-Manifest-Url` ให้ตั้งค่า
 `OMNIROUTE_PROVIDER_MANIFEST_URL` เมื่อ sidecar ต้องใช้ URL สาธารณะหรือ URL บนเครือข่าย
 container แทน origin ของ request ภายในเครื่อง
@@ -29,7 +29,7 @@ sidecar ต้องส่ง request แบบไม่มีเงื่อน
 ## เป้าหมาย
 
 ย้าย metadata ของผู้ให้บริการไปสู่สัญญาปลั๊กอิน เพื่อให้เส้นทาง request ที่มีการใช้งานสูง
-สามารถอยู่ภายใต้การดูแลของ sidecar ที่มี latency ต่ำกว่าได้ในอนาคต ขณะที่ OmniRoute ยังคงใช้
+สามารถอยู่ภายใต้การดูแลของ sidecar ที่มี latency ต่ำกว่าได้ในอนาคต ขณะที่ 67router ยังคงใช้
 route ของ TypeScript เป็นด่านบังคับใช้นโยบายและ fallback โดย manifest เป็นเพียงส่วนเสริม:
 ตัวมันเองไม่ได้เปลี่ยนแปลงการกำหนดเส้นทาง request
 
@@ -73,7 +73,7 @@ manifest ตั้งใจไม่รวมสิ่งต่อไปนี�
 | `usage-fetch`        | มีตัวดึงข้อมูลการใช้งานหรือโควตาที่เชื่อมต่อไว้แล้ว (`getUsageForProvider`) |
 | `usage-supported`    | usage API ยอมรับผู้ให้บริการนี้ (`isSupportedUsageConnection`)              |
 
-`usage-fetch` ใช้สำหรับการค้นพบเท่านั้น โดยรายงานว่า OmniRoute รู้วิธีอ่านข้อมูลการใช้งานของ
+`usage-fetch` ใช้สำหรับการค้นพบเท่านั้น โดยรายงานว่า 67router รู้วิธีอ่านข้อมูลการใช้งานของ
 ผู้ให้บริการ แต่ไม่ได้เปิดใช้งานการดึงข้อมูล เปลี่ยน semantics ของโควตา หรือบ่งชี้ว่า widget
 โควตาใน Dashboard เปิดใช้งานสำหรับผู้ให้บริการ — widget ดังกล่าวถูกควบคุมแยกต่างหากด้วย
 `USAGE_SUPPORTED_PROVIDERS` แหล่งข้อมูลหลักคือ `USAGE_FETCHER_PROVIDERS` ใน

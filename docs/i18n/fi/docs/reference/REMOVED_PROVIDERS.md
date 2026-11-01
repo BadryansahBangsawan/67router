@@ -4,7 +4,7 @@
 
 ---
 
-Joitakin palveluita integroitiin OmniRouteen ja poistettiin myöhemmin, koska niitä ylläpitävät
+Joitakin palveluita integroitiin 67routeriin ja poistettiin myöhemmin, koska niitä ylläpitävät
 henkilöt pyysivät sitä. Tämä sivu on pysyvä tietue näistä poistoista. Sen ainoa tarkoitus on
 estää niiden palautuminen vahingossa: vanhan haaran, välimuistiin tallennetun npm-tarballin,
 arkistoidun ongelman tai ”palauta palveluntarjoaja X” -pyynnön löytävä osallistuja tarvitsee
@@ -17,10 +17,10 @@ operaattorin kirjallisella luvalla, ja kyseiseen lupaan on lisättävä linkki k
 
 ## Käytäntö
 
-1. **Palvelun operaattorin poistopyyntöä noudatetaan, siitä ei neuvotella.** OmniRoute ei ole
+1. **Palvelun operaattorin poistopyyntöä noudatetaan, siitä ei neuvotella.** 67router ei ole
    sidoksissa mihinkään ulkopuoliseen palveluun. Kun palvelun operaattori pyytää integraation
    poistamista, se poistetaan riippumatta siitä, käyttikö integraatio virallista APIa vai ei.
-2. **”Poistettu” tarkoittaa kaikkia OmniRouten hallitsemia pintoja.** Suorittaja, rekisterimerkintä,
+2. **”Poistettu” tarkoittaa kaikkia 67routerin hallitsemia pintoja.** Suorittaja, rekisterimerkintä,
    palveluntarjoajan tunniste ja alias, malliluettelo, päätepisteet, ympäristömuuttujat, kuvake,
    hallintapaneelin kortit, generoitu palveluntarjoajaviite, `FREE_TIERS.md`, ympäristöviite,
    README-tiedoston lukumäärät, `llm.txt`-peilit, erilliset testit ja golden snapshot -vedokset,
@@ -32,7 +32,7 @@ operaattorin kirjallisella luvalla, ja kyseiseen lupaan on lisättävä linkki k
 3. **Älä koskaan palauta tällä sivulla olevaa kohdetta ilman kirjallista lupaa.** Tämä kattaa
    tunnisteen tai aliaksen lisäämisen takaisin mihin tahansa palveluntarjoajaluetteloon,
    verkkotunnusten lisäämisen suorittajaan, sen ”palauttavan” osallistujan PR:n hyväksymisen,
-   sen lisäämisen ilmaisten mallien luetteloon tai manuaalisen OmniRouten kautta käyttämisen
+   sen lisäämisen ilmaisten mallien luetteloon tai manuaalisen 67routerin kautta käyttämisen
    dokumentoinnin. Sulje tällaiset PR:t ja ongelmat ja lisää linkki tälle sivulle.
 4. **Pidä merkintä mahdollisimman suppeana.** Kirjaa vain tiedot, joita tarkastaja tarvitsee
    palautuksen tunnistamiseen: tunnisteet, verkkotunnukset, päivämäärät ja poiston toteuttanut
@@ -49,7 +49,7 @@ operaattorin kirjallisella luvalla, ja kyseiseen lupaan on lisättävä linkki k
 | 2026-08-12 | `puter`                  | `pu`     | `puter.com`                                                                | Puterin omistaja (Nariman Jelveh)                                                                                                                                  | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | API-avainta käyttävä palveluntarjoaja. Migraatio `152_remove_puter_provider.sql` poistaa tallennetut määritykset.                                                                                                                                                                                                                                                                                                                                                                                |
 | 2026-09-02 | `theoldllm`              | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                    | Palvelun ylläpitäjä (tukisähköposti)                                                                                                                               | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Avaimeton palveluntarjoaja. Kirjallinen pyyntö vastaanotettiin 2026-08-30. Asiaan liittyvät ongelmat ja keskustelu poistettiin, ja PR:t nimettiin uudelleen.                                                                                                                                                                                                                                                                                                                                     |
 | 2026-09-21 | `gemini-business`        | `gembiz` | `business.gemini.google`                                                   | Projektin omistajan päätös (ongelma [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                              | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Evästeisiin perustuva verkkopalveluntarjoaja. Google poisti käytöstä suorittajan käyttämän `BardFrontendService/StreamGenerate`-päätepisteen. Korvaavaa ratkaisua (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer JWT alustettuna arvoista `__Secure-C_SES`/`csesidx`) ei voida toteuttaa tai validoida ilman aktiivista Gemini Enterprise/Workspace -tiliä, jota projektilla ei ole. Poistettiin käytöstä sen sijaan, että se olisi kirjoitettu uudelleen ilman varmennusta. |
-| 2026-09-21 | `suno`                   | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                           | Projektin omistajan päätös (`#14224`)                                                                                                                              | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Evästetodennusta käyttävä palveluntarjoaja, ei ylläpitäjän vaatima poisto. `studio-api.suno.ai` oli poistettu käytöstä (503); toimiva palvelin edellyttää Clerk JWT -vaihtoa sekä maksullista hCaptcha-ratkaisuriippuvuutta, jota OmniRoute päätti olla lisäämättä yhtä musiikkipalveluntarjoajaa varten. `kie/suno-v4.0` ja `kie/suno-v3.5` (kie.ai:n ylläpitämät) eivät muutu, ja niitä tuetaan edelleen.                                                                                      |
+| 2026-09-21 | `suno`                   | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                           | Projektin omistajan päätös (`#14224`)                                                                                                                              | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Evästetodennusta käyttävä palveluntarjoaja, ei ylläpitäjän vaatima poisto. `studio-api.suno.ai` oli poistettu käytöstä (503); toimiva palvelin edellyttää Clerk JWT -vaihtoa sekä maksullista hCaptcha-ratkaisuriippuvuutta, jota 67router päätti olla lisäämättä yhtä musiikkipalveluntarjoajaa varten. `kie/suno-v4.0` ja `kie/suno-v3.5` (kie.ai:n ylläpitämät) eivät muutu, ja niitä tuetaan edelleen.                                                                                       |
 | 2026-10-10 | `opencode`               | `oc`     | `opencode.ai/zen/v1` (ilmaistaso; palvelin jaettu `opencode-zen`in kanssa) | Ennaltaehkäisevä poisto (projektin omistajan päätös), jolla noudatetaan OpenCode-ylläpitäjän julkista poistopyyntöä ylemmän tason 9router-projektille (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Vain avaimeton OpenCode Free -palveluntarjoaja poistetaan. Todennetut `opencode-zen` ja `opencode-go`, kaikki Zen-luettelon mallit ja niiden pyyntösopimukset, OpenCode-asiakasintegraatiot sekä `@omniroute/opencode-plugin*` säilyvät. Migraatio `207_remove_opencode_free_provider.sql` siirtää API-avaimen sisältävät vanhat yhteydet Zeniin ja poistaa avaimettomat määritykset.                                                                                                            |
 
 ## Merkinnän lisääminen
@@ -64,5 +64,5 @@ Kun uusi poistopyyntö saapuu:
    API-avainpalveluntarjoajalle, jolla on tallennettuja yhteyksiä (lisää migraatio).
 3. Lisää yksi rivi yllä olevaan taulukkoon ja tunnisteet tiedostoon
    `tests/unit/removed-providers-blocklist.test.ts` samassa PR:ssä.
-4. Vastaa operaattorille, kun PR on yhdistetty, ja luettele, mitä poistettiin ja mitä OmniRoute
+4. Vastaa operaattorille, kun PR on yhdistetty, ja luettele, mitä poistettiin ja mitä 67router
    ei voi muuttaa (jo julkaistut npm- ja Docker-versiot, git-historia, kolmansien osapuolten haarat).

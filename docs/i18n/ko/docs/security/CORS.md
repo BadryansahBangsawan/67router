@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute는 중앙에서 관리되는 단일 허용 목록을 통해 어떤 **브라우저 출처(origin)**가 교차 출처 응답을 읽을 수 있는지 제어합니다. 이 모델은 **기본적으로 차단(fail-closed)**됩니다. 명시적으로 허용하기 전까지는 어떤 출처도 허용되지 않습니다. 이 페이지에서는 허용 목록이 결정되는 방식, `CORS_ALLOW_ALL=true`가 실제로 노출하는 범위와 (중요하게도) **노출하지 않는 범위**, 개발 환경과 프로덕션 환경을 안전하게 구성하는 방법, 그리고 와일드카드가 활성화되었을 때 대시보드에 표시되는 런타임 경고를 설명합니다.
+67router는 중앙에서 관리되는 단일 허용 목록을 통해 어떤 **브라우저 출처(origin)**가 교차 출처 응답을 읽을 수 있는지 제어합니다. 이 모델은 **기본적으로 차단(fail-closed)**됩니다. 명시적으로 허용하기 전까지는 어떤 출처도 허용되지 않습니다. 이 페이지에서는 허용 목록이 결정되는 방식, `CORS_ALLOW_ALL=true`가 실제로 노출하는 범위와 (중요하게도) **노출하지 않는 범위**, 개발 환경과 프로덕션 환경을 안전하게 구성하는 방법, 그리고 와일드카드가 활성화되었을 때 대시보드에 표시되는 런타임 경고를 설명합니다.
 
 **신뢰할 수 있는 원본:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
 `applyCorsHeaders`, `getCorsStatus`). 허용 목록은 미들웨어
@@ -37,12 +37,12 @@ OmniRoute는 중앙에서 관리되는 단일 허용 목록을 통해 어떤 **�
 
 ## 위협 모델 — `CORS_ALLOW_ALL=true`가 실제로 노출하는 범위
 
-OWASP의 일반적인 경고("와일드카드 CORS = 모든 사이트가 API를 호출할 수 있음")는 진지하게 받아들일 가치가 있습니다. 하지만 OmniRoute의 노출 범위는 **일반적인 경우보다 좁습니다**. 이는 다음과 같은 구체적인 구현 특성 때문입니다.
+OWASP의 일반적인 경고("와일드카드 CORS = 모든 사이트가 API를 호출할 수 있음")는 진지하게 받아들일 가치가 있습니다. 하지만 67router의 노출 범위는 **일반적인 경우보다 좁습니다**. 이는 다음과 같은 구체적인 구현 특성 때문입니다.
 
 > **중앙의 `applyCorsHeaders()`는 절대로
 > `Access-Control-Allow-Credentials`를 전송하지 않습니다.** 서버가
 > `Access-Control-Allow-Credentials: true`를 전송하지 않는 한 브라우저는 _자격 증명이 포함된_
-> (쿠키를 포함한) 교차 출처 응답을 노출하지 않습니다. OmniRoute의 공유 CORS 경로는 이 헤더를
+> (쿠키를 포함한) 교차 출처 응답을 노출하지 않습니다. 67router의 공유 CORS 경로는 이 헤더를
 > 절대로 전송하지 않습니다.
 
 따라서 `CORS_ALLOW_ALL=true`인 경우에도 각 영역에는 다음과 같은 의미가 있습니다.
@@ -55,16 +55,6 @@ OWASP의 일반적인 경고("와일드카드 CORS = 모든 사이트가 API를 
 
 따라서 `CORS_ALLOW_ALL=true`의 **잔여** 노출은 다음으로 제한됩니다. (a) 이미 인증 없이 접근할 수 있는 데이터에 대한 자격 증명 없는 교차 출처 **읽기**, (b) 관리 라우트에서 CORS **프리플라이트를 통과**시키는 것. 단, 이러한 라우트에는 여전히 교차 출처 페이지가 제공할 수 없는 인증이 필요합니다. 공유 CORS 경로에서 이는 세션 탈취나 자격 증명 탈취 벡터가 **아닙니다**.
 
-### 실제 예외 한 가지 — `/api/v1/agents/`
-
-Cloud-Agent 라우트(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)는
-**자체** CORS 헤더
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`)를 설정하며,
-`Access-Control-Allow-Origin: <origin>|*`와
-`Access-Control-Allow-Credentials: true`를 함께 전송합니다. 이는 출처 반환과 자격 증명이 공존하는 유일한 영역이며,
-`CORS_ALLOW_ALL`과 **무관합니다**. 이러한 라우트에는 관리 인증이 적용됩니다
-(`requireManagementAuth`). 대시보드를 호스트 외부에 노출하는 운영자는 응답 헤더가 교차 출처 자격 증명 포함 읽기를 허용하는 유일한 위치가 이곳이라는 점을 인지해야 합니다. 이를 명시적인 허용 목록으로 제한하는 작업은 이 CORS 지침과 별도로 추적됩니다.
-
 ## 프로덕션 체크리스트
 
 - **프로덕션에서는 절대로 `CORS_ALLOW_ALL=true`로 설정하지 마세요.** 설정하지 않은 상태로 두세요.
@@ -74,7 +64,7 @@ Cloud-Agent 라우트(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)는
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute가 리버스 프록시/터널(nginx, Caddy, Cloudflare
+- 67router가 리버스 프록시/터널(nginx, Caddy, Cloudflare
   Tunnel, Tailscale) 뒤에서 실행되는 경우 CORS만이 유일한 제어 수단은
   **아닙니다**. 루프백 경로 가드는 여전히 프로세스를 생성할 수 있는 경로를
   보호합니다([ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md) 참조). 403 오류를
@@ -90,7 +80,7 @@ Cloud-Agent 라우트(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)는
 개발 환경에서도 와일드카드는 거의 필요하지 않습니다. 사용하는 개발 서버만 허용하세요.
 
 ```bash
-# 로컬 OmniRoute를 호출하는 Vite(5173) + Next.js(3000) 개발 서버
+# 로컬 67router를 호출하는 Vite(5173) + Next.js(3000) 개발 서버
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -110,14 +100,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   출처를 허용 범위가 넓은 구성에 포함하지 마세요. 해당 출처는 반드시 기본적으로
   접근이 차단되는 상태를 그대로 유지해야 합니다.
 
-## 예시: OmniRoute 앞단의 리버스 프록시
+## 예시: 67router 앞단의 리버스 프록시
 
-CORS는 OmniRoute 자체에서 적용되므로, 일반적으로 프록시는 `Access-Control-*`
+CORS는 67router 자체에서 적용되므로, 일반적으로 프록시는 `Access-Control-*`
 헤더를 추가하거나 다시 작성해서는 **안 됩니다**(헤더가 중복되면 브라우저가 정상적으로 작동하지 않습니다). TLS를
-종료하고 전달만 하여, 프리플라이트 요청에 OmniRoute가 응답하도록 하세요.
+종료하고 전달만 하여, 프리플라이트 요청에 67router가 응답하도록 하세요.
 
 ```nginx
-# nginx — OmniRoute로 전달합니다. 여기에는 Access-Control-*를 삽입하지 마세요
+# nginx — 67router로 전달합니다. 여기에는 Access-Control-*를 삽입하지 마세요
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -125,12 +115,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # 전달 헤더를 유지하세요. 동일한 호스트의 프록시는 루프백에서 연결하며, 이 헤더는
-    # 호출자가 로컬 운영자가 아님을 OmniRoute에 알려 줍니다. 이러한 헤더를 전혀 추가하지 않는 프록시는
+    # 호출자가 로컬 운영자가 아님을 67router에 알려 줍니다. 이러한 헤더를 전혀 추가하지 않는 프록시는
     # 모든 원격 호출자를 로컬 호출자로 보이게 합니다. 또한 X-Forwarded-For를 127.0.0.1로 설정하지 마세요.
 }
 ```
 
-허용할 브라우저 오리진은 프록시가 아니라 OmniRoute(`CORS_ALLOWED_ORIGINS` 또는
+허용할 브라우저 오리진은 프록시가 아니라 67router(`CORS_ALLOWED_ORIGINS` 또는
 보안 탭)에서 설정하세요.
 
 ## 소스 파일
@@ -143,7 +133,6 @@ location / {
 | 대시보드용 런타임 상태             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | 대시보드 경고 배너                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS 허용 출처 필드                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent 경로별 CORS(예외)      | `src/lib/cloudAgent/api.ts`                                          |
 
 ## 참고 항목
 

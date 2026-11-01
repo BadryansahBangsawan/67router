@@ -7,7 +7,7 @@
 > **Sumber kebenaran:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Terakhir dikemas kini:** 2026-09-22 — ruang lingkup nama ruang merujuk kepada MCP-SERVER.md
 
-OmniRoute mempunyai saluran paip kebenaran yang peka laluan yang mengawal setiap permintaan API. Pengelasan adalah **deterministik** dan **gagal-tertutup** — apa-apa yang tidak dapat dikelaskan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token gred pengurusan. Halaman ini menerangkan model untuk jurutera yang menyelenggara laluan atau mereka bentuk titik akhir baharu.
+67router mempunyai saluran paip kebenaran yang peka laluan yang mengawal setiap permintaan API. Pengelasan adalah **deterministik** dan **gagal-tertutup** — apa-apa yang tidak dapat dikelaskan akan berakhir sebagai `MANAGEMENT` dan memerlukan sesi atau token gred pengurusan. Halaman ini menerangkan model untuk jurutera yang menyelenggara laluan atau mereka bentuk titik akhir baharu.
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 
@@ -235,8 +235,6 @@ kelayakan token akses. Lihat [Pengesahan Pengurusan](../guides/MANAGEMENT-AUTH.m
 Penguatkuasaan kunci API klien menggunakan `isRequireApiKeyEnabled()` dalam `src/shared/utils/featureFlags.ts`, bukan bacaan langsung `process.env.REQUIRE_API_KEY`. Ini penting bagi contoh yang dideploy: menukar `REQUIRE_API_KEY` dalam Papan Pemuka → Feature Flags menyimpan override DB dan segera memberi kesan kepada `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` dan semakan pengesahan API klien lain yang berkongsi pembantu ini. Jika stor feature flag tidak dapat dibaca, pengesahan API klien gagal tertutup dan memerlukan kunci.
 
 ## Perubahan Pecah Keserasian — v3.8.0
-
-Titik akhir `/api/v1/agents/tasks/*` dan `/api/resilience/model-cooldowns` **kini memerlukan pengesahan pengurusan** (komit `588a0333`). Klien yang sebelum ini menghantar kunci API biasa tanpa skop `manage` akan menerima `403`. Migrasi: sama ada berikan skop `manage` kepada kunci dalam papan pemuka API Keys, atau gunakan sesi papan pemuka yang telah dilog masuk.
 
 ## Perubahan Tingkah Laku — v3.8.2
 

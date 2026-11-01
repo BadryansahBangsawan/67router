@@ -7,7 +7,7 @@
 > **የእውነት ምንጭ:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **መጨረሻ የተዘመነው:** 2026-09-22 — የወሰን ስም-ክልሎች ወደ MCP-SERVER.md ያመለክታሉ
 
-OmniRoute እያንዳንዱን የAPI ጥያቄ የሚቆጣጠር፣ መንገድን የሚያውቅ የፈቃድ መስጫ ሂደት አለው። ምደባው **ቁርጥ ያለ** እና **ሲሳነው-ዝግ** ነው — ሊመደብ የማይችል ማንኛውም ነገር `MANAGEMENT` ሆኖ ይመደባል፣ እንዲሁም ክፍለ-ጊዜ ወይም የአስተዳደር-ደረጃ ቶከን ይጠይቃል። ይህ ገጽ መንገዶችን ለሚንከባከቡ ወይም አዳዲስ የመዳረሻ ነጥቦችን ለሚነድፉ መሐንዲሶች ሞዴሉን ያብራራል።
+67router እያንዳንዱን የAPI ጥያቄ የሚቆጣጠር፣ መንገድን የሚያውቅ የፈቃድ መስጫ ሂደት አለው። ምደባው **ቁርጥ ያለ** እና **ሲሳነው-ዝግ** ነው — ሊመደብ የማይችል ማንኛውም ነገር `MANAGEMENT` ሆኖ ይመደባል፣ እንዲሁም ክፍለ-ጊዜ ወይም የአስተዳደር-ደረጃ ቶከን ይጠይቃል። ይህ ገጽ መንገዶችን ለሚንከባከቡ ወይም አዳዲስ የመዳረሻ ነጥቦችን ለሚነድፉ መሐንዲሶች ሞዴሉን ያብራራል።
 
 ![የAuthZ ሂደት (3 የመንገድ ምድቦች + የፖሊሲ ግምገማ)](../diagrams/exported/authz-pipeline.svg)
 
@@ -225,8 +225,6 @@ credential ብቻ ነው። [የአስተዳደር ማረጋገጫ](../guides/MA
 የደንበኛ API ቁልፍ ማስገደድ `src/shared/utils/featureFlags.ts` ውስጥ ያለውን `isRequireApiKeyEnabled()` ይጠቀማል፣ በቀጥታ `process.env.REQUIRE_API_KEY` ን ከማንበብ ይልቅ። ይህ ለተሰማሩ ምሳሌዎች ይጠቅማል፦ `REQUIRE_API_KEY`ን በዳሽቦርድ → Feature Flags ውስጥ መቀያየር DB መሻሪያ ያስቀምጣል እና ይህንን ረዳት የሚጋሩ `/v1/*`፣ `/v1beta/*`፣ `/models`፣ `/responses`፣ `/chat/completions`፣ `/codex/*` እና ሌሎች የደንበኛ-API ማረጋገጫ ፍተሻዎችን ወዲያውኑ ይነካል። የባንዲራ ማከማቻው ማንበብ ካልተቻለ የደንበኛ-API ማረጋገጫ ዝግ ይሆናል እና ቁልፍ ይፈልጋል።
 
 ## ተኳሃኝነትን የሚያፈርስ ለውጥ — v3.8.0
-
-የ`/api/v1/agents/tasks/*` እና `/api/resilience/model-cooldowns` መጨረሻ ነጥቦች **አሁን የአስተዳደር ማረጋገጫ ይፈልጋሉ** (commit `588a0333`)። ከዚህ በፊት የ`manage` ወሰን የሌለውን መደበኛ API ቁልፍ ይልኩ የነበሩ ደንበኞች `403` ይቀበላሉ። ፍልሰት፦ በAPI Keys dashboard ውስጥ ለቁልፉ የ`manage` ወሰንን ይስጡ፣ ወይም የገቡበትን dashboard ክፍለ ጊዜ ይጠቀሙ።
 
 ## የባህሪ ለውጥ — v3.8.2
 

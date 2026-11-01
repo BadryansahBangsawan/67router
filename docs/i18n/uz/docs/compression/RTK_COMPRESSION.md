@@ -4,7 +4,7 @@
 
 ---
 
-RTK siqish — OmniRoute’ning terminal va vosita chiqishlari uchun buyruqlardan xabardor siqish mexanizmi. U
+RTK siqish — 67router’ning terminal va vosita chiqishlari uchun buyruqlardan xabardor siqish mexanizmi. U
 kontekstning asosiy o‘sishi test jurnallari, build chiqishi, paket menejeri shovqini, shell transkriptlari,
 Docker chiqishi, git chiqishi va stack trace’lardan kelib chiqadigan kod yozuvchi agent seanslari uchun
 mo‘ljallangan.
@@ -18,7 +18,7 @@ rtk -> caveman
 Bu tartib avval shovqinli mashina chiqishini siqadi, so‘ng Caveman’ga qolgan nasriy matnni ixchamlashtirish imkonini beradi.
 
 Yuqori oqimdagi RTK buyruq chiqishida `60-90%` tejalish haqida xabar beradi. Uning README faylidagi namunaviy seans
-`~118,000` ta standart tokendan `~23,900` ta RTK tokeniga tushadi, bu `79.7%` tejalish (`~80%`) demakdir. OmniRoute
+`~118,000` ta standart tokendan `~23,900` ta RTK tokeniga tushadi, bu `79.7%` tejalish (`~80%`) demakdir. 67router
 Caveman kirish siqishi bilan ketma-ket qo‘llangandagi tejalishni hisoblash uchun yuqori oqimdagi shu o‘rtacha qiymatdan foydalanadi:
 
 ```txt
@@ -55,7 +55,7 @@ RTK filtrlarni quyidagi tartibda yuklaydi:
 2. `DATA_DIR/rtk/filters.toml` va `DATA_DIR/rtk/filters.json` fayllaridagi global filtrlar.
 3. `open-sse/services/compression/engines/rtk/filters/` ichidagi ichki filtrlar.
 
-Bir xil qamrov doirasida RTK TOML schema v1 filtrlari OmniRoute JSON filtrlaridan ustun turadi. Import qilingan muayyan buyruqqa
+Bir xil qamrov doirasida RTK TOML schema v1 filtrlari 67router JSON filtrlaridan ustun turadi. Import qilingan muayyan buyruqqa
 xos filtr shu qamrovdagi kengroq filtrni almashtira olishi uchun TOML `match_command` ifodalari buyruq turi bo‘yicha
 moslikdan oldin tekshiriladi. Fayl formatidan qat’i nazar, loyiha qamrovi hali ham global
 qamrovdan ustun turadi.
@@ -85,7 +85,7 @@ o‘tkazib yuboriladi va `/api/context/rtk/filters` diagnostikasi orqali xabar q
 
 ## RTK TOML sxemasi v1 bilan muvofiqlik
 
-OmniRoute RTK TOML sxemasi v1 dan foydalangan holda deklarativ filtr fayllarini tahlil qilishi, tekshirishi, sinovdan oʻtkazishi va oʻrnatishi mumkin.
+67router RTK TOML sxemasi v1 dan foydalangan holda deklarativ filtr fayllarini tahlil qilishi, tekshirishi, sinovdan oʻtkazishi va oʻrnatishi mumkin.
 Qoʻllab-quvvatlanadigan maydonlar: `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` va `[[tests.<filter>]]` ichki testlari.
@@ -94,7 +94,7 @@ Nomaʼlum maydonlar, notoʻgʻri yoki xavfsiz boʻlmagan muntazam ifodalar, bir 
 koʻrib chiqish uchun tekshirish mumkin, ammo uni oʻrnatish yoki yuklash mumkin emas. Maxsus faylni yuklashdagi xatolar
 ochiq ishlash tamoyiliga amal qiladi: yaroqsiz fayl oʻtkazib yuboriladi va qolgan filtrlar ishlashda davom etadi.
 
-OmniRoute vosita chiqishini mijoz uni allaqachon yozib olganidan keyin qabul qiladi, shu sababli `filter_stderr = true`
+67router vosita chiqishini mijoz uni allaqachon yozib olganidan keyin qabul qiladi, shu sababli `filter_stderr = true`
 jarayon chiqishini yozib olish usulini oʻzgartira olmaydi. Bu maydon hech qanday amal bajarmaydigan parametr sifatida qabul qilinadi va tekshiruv ogohlantirish qaytaradi.
 Bu ataylab RTK bajariluvchi fayli, qobiq ilgaklari, Rust buyruq implementatsiyalari yoki uning ishonchli saqlash tuzilmasi bilan
 toʻliq muvofiqlik emas, balki **RTK TOML sxemasi v1 bilan muvofiqlik** deb taʼriflanadi.

@@ -169,5 +169,4 @@ Une seule modification du backend a été nécessaire pour cette fonctionnalité
 - Plan directeur : `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Plan de la fonctionnalité : `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Registre des fournisseurs de recherche : `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` partagés) : `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend de récupération Web : `src/app/api/v1/web/fetch/route.ts`

@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute tam quraşdırıla bilən Proqressiv Veb Tətbiq kimi təqdim olunur. İdarəetmə panelinə istənilən mobil brauzerdən — Android (Chrome) və ya iOS (Safari) — daxil olduqda, **"Əsas ekrana əlavə et"** seçimi ilə heç bir tətbiq mağazasına ehtiyac olmadan yerli tətbiqə bənzər təcrübə əldə edə bilərsiniz.
+67router tam quraşdırıla bilən Proqressiv Veb Tətbiq kimi təqdim olunur. İdarəetmə panelinə istənilən mobil brauzerdən — Android (Chrome) və ya iOS (Safari) — daxil olduqda, **"Əsas ekrana əlavə et"** seçimi ilə heç bir tətbiq mağazasına ehtiyac olmadan yerli tətbiqə bənzər təcrübə əldə edə bilərsiniz.
 
 ## PWA nədir?
 
-Proqressiv Veb Tətbiq OmniRoute veb idarəetmə panelini görünüş və istifadə baxımından yerli mobil tətbiqə bənzər həllə çevirir. Quraşdırıldıqdan sonra o:
+Proqressiv Veb Tətbiq 67router veb idarəetmə panelini görünüş və istifadə baxımından yerli mobil tətbiqə bənzər həllə çevirir. Quraşdırıldıqdan sonra o:
 
 - Öz ikonası ilə əsas ekranınızdan başladılır
 - Tam ekran rejimində açılır — brauzerin ünvan sətri və ya tab interfeysi olmur
@@ -20,26 +20,26 @@ Proqressiv Veb Tətbiq OmniRoute veb idarəetmə panelini görünüş və istifa
 
 ### Android (Chrome)
 
-1. OmniRoute idarəetmə panelini Chrome-da açın: `http://YOUR_IP:20128`
-2. Chrome avtomatik olaraq **"OmniRoute-u əsas ekrana əlavə et"** bannerini göstərəcək. Alternativ olaraq:
+1. 67router idarəetmə panelini Chrome-da açın: `http://YOUR_IP:20128`
+2. Chrome avtomatik olaraq **"67router-u əsas ekrana əlavə et"** bannerini göstərəcək. Alternativ olaraq:
    - **⋮** menyusuna (üç nöqtə) toxunun → **"Əsas ekrana əlavə et"** və ya **"Tətbiqi quraşdır"**
 3. Sorğunu təsdiqləyin
-4. OmniRoute əsas ekranınızda müstəqil tətbiq kimi görünəcək
+4. 67router əsas ekranınızda müstəqil tətbiq kimi görünəcək
 
 ### iOS (Safari)
 
-1. OmniRoute idarəetmə panelini Safari-də açın: `http://YOUR_IP:20128`
+1. 67router idarəetmə panelini Safari-də açın: `http://YOUR_IP:20128`
 2. **Paylaş** düyməsinə (oxlu qutu) toxunun
 3. Aşağı sürüşdürün və **"Əsas ekrana əlavə et"** seçiminə toxunun
-4. Ona ad verin (standart olaraq "OmniRoute") və **Əlavə et** seçiminə toxunun
-5. OmniRoute tətbiq ikonası ilə əsas ekranınızda görünəcək
+4. Ona ad verin (standart olaraq "67router") və **Əlavə et** seçiminə toxunun
+5. 67router tətbiq ikonası ilə əsas ekranınızda görünəcək
 
 ### Masaüstü (Chrome / Edge)
 
-1. OmniRoute idarəetmə panelini açın
-2. Ünvan sətrindəki **quraşdırma ikonasına** klikləyin (və ya ⋮ → "OmniRoute-u quraşdır...")
+1. 67router idarəetmə panelini açın
+2. Ünvan sətrindəki **quraşdırma ikonasına** klikləyin (və ya ⋮ → "67router-u quraşdır...")
 3. Sorğunu təsdiqləyin
-4. OmniRoute müstəqil pəncərə kimi açılacaq — tablar və ünvan sətri olmadan
+4. 67router müstəqil pəncərə kimi açılacaq — tablar və ünvan sətri olmadan
 
 ## Xüsusiyyətlər
 
@@ -49,15 +49,15 @@ Manifest `display: "fullscreen"` ilə konfiqurasiya edilib. Bu, quraşdırılmı
 
 ### Oflayn dəstəyi
 
-OmniRoute ağıllı keşləməni təmin edən xidmət işçisini (`sw.js`) ehtiva edir:
+67router ağıllı keşləməni təmin edən xidmət işçisini (`sw.js`) ehtiva edir:
 
-| Resurs növü                                                            | Strategiya                        | Davranış                                                                                                               |
-| ---------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Tətbiq qabığı**                                                      | Əvvəlcə keş                       | `/`, `/offline`, manifest və ikonalar quraşdırma zamanı əvvəlcədən keşlənir                                            |
-| **Statik resurslar** (CSS, JS, şəkillər, şriftlər)                     | Keş ehtiyatı ilə əvvəlcə şəbəkə   | Şəbəkədən yenilənmiş versiyanı əldə edir; oflayn olduqda keşə müraciət edir                                            |
-| **Next.js paketləri** (`/_next/`)                                      | Keş yeniləməsi ilə əvvəlcə şəbəkə | Şəbəkədən əldə edir və keşi yeniləyir; oflayn olduqda keşlənmiş versiyanı təqdim edir                                  |
-| **Naviqasiya sorğuları**                                               | Yan keçid (heç vaxt tutulmur)     | HTTP/3→HTTP/2 ehtiyat keçidini brauzer idarə edir; işləməyən QUIC soketi `Response.error()` nəticəsinə çevrilməməlidir |
-| **API / idarəetmə paneli marşrutları** (`/api/`, `/a2a`, `/dashboard`) | Yan keçid (heç vaxt keşlənmir)    | Həmişə birbaşa serverə yönləndirilir — xidmət işçisi tərəfindən heç vaxt tutulmur                                      |
+| Resurs növü                                                    | Strategiya                        | Davranış                                                                                                               |
+| -------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Tətbiq qabığı**                                              | Əvvəlcə keş                       | `/`, `/offline`, manifest və ikonalar quraşdırma zamanı əvvəlcədən keşlənir                                            |
+| **Statik resurslar** (CSS, JS, şəkillər, şriftlər)             | Keş ehtiyatı ilə əvvəlcə şəbəkə   | Şəbəkədən yenilənmiş versiyanı əldə edir; oflayn olduqda keşə müraciət edir                                            |
+| **Next.js paketləri** (`/_next/`)                              | Keş yeniləməsi ilə əvvəlcə şəbəkə | Şəbəkədən əldə edir və keşi yeniləyir; oflayn olduqda keşlənmiş versiyanı təqdim edir                                  |
+| **Naviqasiya sorğuları**                                       | Yan keçid (heç vaxt tutulmur)     | HTTP/3→HTTP/2 ehtiyat keçidini brauzer idarə edir; işləməyən QUIC soketi `Response.error()` nəticəsinə çevrilməməlidir |
+| **API / idarəetmə paneli marşrutları** (`/api/`, `/dashboard`) | Yan keçid (heç vaxt keşlənmir)    | Həmişə birbaşa serverə yönləndirilir — xidmət işçisi tərəfindən heç vaxt tutulmur                                      |
 
 ### Oflayn səhifəsi
 
@@ -70,7 +70,7 @@ OmniRoute ağıllı keşləməni təmin edən xidmət işçisini (`sw.js`) ehtiv
 
 ### Tətbiq ikonaları
 
-OmniRoute hər platforma üçün optimallaşdırılmış ikonalar təqdim edir:
+67router hər platforma üçün optimallaşdırılmış ikonalar təqdim edir:
 
 | Fayl                   | Ölçü             | İstifadə yeri                                |
 | ---------------------- | ---------------- | -------------------------------------------- |
@@ -93,9 +93,9 @@ Next.js tərəfindən `src/app/manifest.ts` vasitəsilə yaradılır:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Kök maket PWA tələblərinə uyğunluq üçün tələb olunan bütün meta teq
 
 ## Termux ilə İstifadə (Android)
 
-OmniRoute Android-də Termux vasitəsilə işə salındıqda PWA problemsiz işləyir:
+67router Android-də Termux vasitəsilə işə salındıqda PWA problemsiz işləyir:
 
-1. OmniRoute-u Termux-da başladın: `npx omniroute`
+1. 67router-u Termux-da başladın: `npx omniroute`
 2. Eyni telefonda Chrome-u açın: `http://localhost:20128`
 3. PWA-nı «Əsas ekrana əlavə et» vasitəsilə quraşdırın
 4. PWA yerli Termux serverinə qoşulur — hər şey birbaşa cihazda işləyir
@@ -156,7 +156,7 @@ Bu kombinasiya Android telefonunuzun həm **server** (Termux), həm də **klient
 
 ## Digər Cihazlardan İstifadə
 
-PWA-nı OmniRoute serverinizə brauzer vasitəsilə çıxışı olan istənilən cihazda quraşdırın:
+PWA-nı 67router serverinizə brauzer vasitəsilə çıxışı olan istənilən cihazda quraşdırın:
 
 - **Başqa telefon/planşet**: `http://PHONE_IP:20128` ünvanına keçin və PWA-nı quraşdırın
 - **Noutbuk**: Chrome/Edge-i açın və onu masaüstü PWA kimi quraşdırın

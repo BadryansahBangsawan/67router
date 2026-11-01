@@ -6,7 +6,7 @@
 
 🌐 **Valodas:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API pamata uzziņu materiāls. Tajā aprakstīta publiskā `/v1` saskarne un visbiežāk izmantotie pārvaldības galapunkti; pilnīgi informācijas avoti ir mašīnlasāmais fails [`docs/openapi.yaml`](../openapi.yaml) un maršrutu koks direktorijā `src/app/api/`.
+67router API pamata uzziņu materiāls. Tajā aprakstīta publiskā `/v1` saskarne un visbiežāk izmantotie pārvaldības galapunkti; pilnīgi informācijas avoti ir mašīnlasāmais fails [`docs/openapi.yaml`](../openapi.yaml) un maršrutu koks direktorijā `src/app/api/`.
 
 Detalizētu informāciju par ar OpenAI saderīgo protokolu un pakalpojumu sniedzēju iespēju matricu skatiet
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Atbilde      | `HIT` vai `MISS` (bez straumēšanas)                                                                                                                                                                                                                    |
 | `X-OmniRoute-Idempotent` | Atbilde      | `true`, ja dublikāts ir novērsts                                                                                                                                                                                                                       |
 | `X-OmniRoute-Progress`   | Atbilde      | `enabled`, ja ir ieslēgta progresa izsekošana                                                                                                                                                                                                          |
-| `X-OmniRoute-Session-Id` | Atbilde      | Faktiskais sesijas ID, ko izmanto OmniRoute                                                                                                                                                                                                            |
+| `X-OmniRoute-Session-Id` | Atbilde      | Faktiskais sesijas ID, ko izmanto 67router                                                                                                                                                                                                             |
 | `X-OmniRoute-Request-Id` | Atbilde      | Pieprasījuma korelācijas ID (ja zināms)                                                                                                                                                                                                                |
-| `X-OmniRoute-Version`    | Atbilde      | OmniRoute būvējuma versija (vienmēr norādīta)                                                                                                                                                                                                          |
+| `X-OmniRoute-Version`    | Atbilde      | 67router būvējuma versija (vienmēr norādīta)                                                                                                                                                                                                           |
 | `X-OmniRoute-Cost-Saved` | Atbilde      | USD summa, ko kešatmiņa ļāva ietaupīt `HIT` gadījumā (tikai kešatmiņas trāpījumiem)                                                                                                                                                                    |
 | `X-OmniRoute-Decision`   | Atbilde      | Maršrutēšanas izsekojums: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` ir kombinācijas stratēģija vai `single` pieprasījumam bez kombinācijas) — vienmēr norādīts pabeigšanas atbildēs                                                |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Konta piesaiste katram pieprasījumam
 
-Ja pakalpojumu sniedzējam ir vairāki savienojumi (konti vai atslēgas), OmniRoute parasti izvēlas vienu,
+Ja pakalpojumu sniedzējam ir vairāki savienojumi (konti vai atslēgas), 67router parasti izvēlas vienu,
 izmantojot savu kontu atlases stratēģiju. Tā vietā pieprasījumu var piesaistīt vienam konkrētam savienojumam,
 izmantojot galveni `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ piesaistītu citu kontu:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Avots: `src/sse/handlers/chat.ts` (galvenes nolasīšana), `src/sse/services/aut
 ## Ekskluzīvas pārvaldīto sesiju nomas
 
 Ekskluzīva pārvaldīto sesiju noma ir izvēles, no klienta neatkarīgs maršrutēšanas līgums: viens aktīvs īpašnieks
-tur vienu piemērotu OmniRoute savienojumu. Tā nenomā modeli, nepieprasa OAuth, neidentificē
+tur vienu piemērotu 67router savienojumu. Tā nenomā modeli, nepieprasa OAuth, neidentificē
 konkrētu klientu un nepieprasa konkrētu pakalpojumu sniedzēju.
 
 Autentificējošajai API atslēgai ir jābūt tvērumam `lease:exclusive` un skaidri norādītam netukšam
@@ -190,7 +190,7 @@ Aktīvas nomas īpašnieks var nepārprotami pieprasīt privātumu aizsargājoš
 
 Šo izvēles statusa darbību vienā datubāzes transakcijā ierobežo necaurredzamais īpašnieks, autentificētā pārvaldītā API atslēga un precīza
 aktīvā paaudze. `displayName` ir tikai apgriezts konfigurētais
-savienojuma nosaukums; tas ir `null`, ja nav droša konfigurēta nosaukuma. OmniRoute nekad neaizstāj to ar
+savienojuma nosaukums; tas ir `null`, ja nav droša konfigurēta nosaukuma. 67router nekad neaizstāj to ar
 e-pasta adresi vai ģenerētu konta identitāti. Pakalpojumu sniedzēja vērtība ir nekonfidenciāla attēlojuma etiķete un nekad nav
 ģenerēts saderīga pakalpojumu sniedzēja identifikators. Akreditācijas dati, pilnvaras, sīkfaili, neapstrādāti savienojumu vai API
 atslēgu ID, īpašnieku jaucējvērtības, ierobežošanas noslēpumi un iekšējie maršrutēšanas dati netiek iekļauti.
@@ -231,7 +231,7 @@ pieprasījuma momentuzņēmumā vai pārsūtīti augšupstraumē.
 
 Šī atbilde nozīmē tikai to, ka parastā piemēroto savienojumu kopa nebija tukša un visus brīvos kandidātus
 turēja ārēja aktīva noma. Neatbalstīti modeļi/pakalpojumu sniedzēji, neatbilstība politikai, atdzišanas periods, kvota,
-veselības stāvoklis un citas parastās piemērotības kļūmes saglabā esošās OmniRoute atbildes.
+veselības stāvoklis un citas parastās piemērotības kļūmes saglabā esošās 67router atbildes.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request formāta dokumentus un **pārsūta tos nemainītus** uz `htt
 ```
 
 Vietējā formāta `{ image | audio | video | pdf }` vērtības var būt publisks HTTPS URL, `data:` URI vai neapstrādāti
-base64 dati. OmniRoute nepārvērš šos objektus virknēs un neielādē vietējā formāta attēlu URL — Jina pati izgūst
+base64 dati. 67router nepārvērš šos objektus virknēs un neielādē vietējā formāta attēlu URL — Jina pati izgūst
 publisko multividi. Papildu Jina lauki (`task`, `normalized`, `truncate`, `embedding_type`) tiek
 pārsūtīti. Tikai tekstam paredzētie Jina SKU joprojām noraida dokumentus, kas nav teksts.
 
@@ -454,7 +454,7 @@ tādēļ klienta kodam nav nepieciešams atsevišķi apstrādāt katru nodrošin
 
 ### Vertex AI DeepSeek OCR autentifikācija un galapunkta noteikšana
 
-`vertex-deepseek-ocr` atkārtoti izmanto to pašu Vertex AI autentifikāciju, ko OmniRoute jau atbalsta
+`vertex-deepseek-ocr` atkārtoti izmanto to pašu Vertex AI autentifikāciju, ko 67router jau atbalsta
 tērzēšanas/attēlu datplūsmai (`open-sse/executors/vertex.ts`): savienojuma API atslēga ir vai nu
 pakalpojuma konta JSON akreditācijas dati (kas JWT nesēja
 plūsmā tiek apmainīti pret īslaicīgu OAuth piekļuves pilnvaru), vai jau izveidota OAuth piekļuves pilnvara, kas tiek izmantota bez izmaiņām. Augšupējā galapunkta URL ir Vertex
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Modeļu cenas (`pricing`)
 
-Ierakstā ir objekts `pricing`, ja OmniRoute zina modeļa cenu. Cena tiek iegūta
+Ierakstā ir objekts `pricing`, ja 67router zina modeļa cenu. Cena tiek iegūta
 no cenu tabulas, ko izmanto izmaksu uzskaitei: iebūvētās noklusējuma vērtības, sinhronizētās cenas un
 ignorēšanas vērtības, kas iestatītas, izmantojot `/api/pricing`. Tās ir cenrāža cenas, tāpēc arī abonementu nodrošinātāji
 rāda cenu par marķieri.
@@ -632,8 +632,8 @@ Izmantojiet šo galapunktu, ja blakusprocess darbojas ārpus procesa un nevar ti
 
 ## ElevenLabs audio ģenerēšana
 
-Konfigurējiet `elevenlabs` pakalpojumu sniedzēja savienojumu OmniRoute, izmantojot savu ElevenLabs API atslēgu.
-Klienti autentificējas ar savu **OmniRoute** atslēgu (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Konfigurējiet `elevenlabs` pakalpojumu sniedzēja savienojumu 67router, izmantojot savu ElevenLabs API atslēgu.
+Klienti autentificējas ar savu **67router** atslēgu (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 vārteja nodod saglabāto pakalpojumu sniedzēja atslēgu kā `xi-api-key`. Nekad nesūtiet ElevenLabs atslēgu
 kā vārtejas nesēja pilnvaru.
 
@@ -698,7 +698,7 @@ maršruti atgriež ārējā pakalpojuma statusa kodus un kļūdu pamattekstus be
 ierobežojuma gadījumā un `429` kvotas ierobežojuma gadījumā. Galvenes `character-cost`, `song-id`, `request-id` un `retry-after`
 tiek saglabātas, ja tās ir pieejamas. Bezmaksas kredīta atlikums negarantē piekļuvi ikvienam
 mūzikas modelim, izvades formātam vai API funkcijai: ElevenLabs nosaka tiesības katram pieprasījumam.
-Vienotais galapunkts saglabā kļūdu statusa kodus OmniRoute normalizētajā kļūdu aploksnē.
+Vienotais galapunkts saglabā kļūdu statusa kodus 67router normalizētajā kļūdu aploksnē.
 
 Ārējā pakalpojuma līgumi: [skaņas efekti](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [mūzikas kompozīcija](https://elevenlabs.io/docs/api-reference/music/compose) un
@@ -739,7 +739,7 @@ Vienotais galapunkts saglabā kļūdu statusa kodus OmniRoute normalizētajā k�
 
 Visiem POST maršrutiem ir vienāda struktūra: `Bearer your-api-key` + ar Zod validēts JSON ķermenis (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` utt.; skatiet `src/shared/validation/schemas.ts`). Shēmas validācijas kļūmes gadījumā tiek atgriezts 4xx.
 
-Klientiem, kuri nevar pievienot `Authorization: Bearer ...`, OmniRoute pieņem API atslēgas arī vietrādī URL, izmantojot vai nu saderību ar vaicājuma virkni (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), vai tālāk dokumentētos īpašos `/api/v1/vscode/{token}/...` galapunktus.
+Klientiem, kuri nevar pievienot `Authorization: Bearer ...`, 67router pieņem API atslēgas arī vietrādī URL, izmantojot vai nu saderību ar vaicājuma virkni (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`), vai tālāk dokumentētos īpašos `/api/v1/vscode/{token}/...` galapunktus.
 
 ```bash
 # Pārkārtošana (mākoņa reģistra nodrošinātājs vai ar OpenAI saderīga nodrošinātāja mezgls formā "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, tā pati API atslēga, kas Parallel Search) atgriež tikai Markdown
 — jebkurš cits `format` izraisa `400` — un ierobežo saturu līdz 100 000 rakstzīmēm. Ja
 pašu mērķa lapu nevar izgūt, augšupējais pakalpojums par to ziņo HTTP 200 atbildē;
-OmniRoute to atgriež kā `422` ar fiksētu ziņojumu.
+67router to atgriež kā `422` ar fiksētu ziņojumu.
 
 | Metode | Ceļš            | Apraksts                                                         |
 | ------ | --------------- | ---------------------------------------------------------------- |
@@ -964,14 +964,14 @@ jābūt aktīvajam ieejas punktam (tas tāds ir pēc noklusējuma, ja pastāv `a
 OpenAI **Codex CLI** validē modeļa nosaukumu klienta pusē, ja
 `supports_websockets = true`, un **noraida ar nodrošinātāja prefiksu papildinātus ID**, piemēram,
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Nosūtiet **vienkāršo** ID (piemēram, `gpt-5.5`). OmniRoute tilts ir
+a ChatGPT account`). Nosūtiet **vienkāršo** ID (piemēram, `gpt-5.5`). 67router tilts ir
 paredzēts tikai codex, tāpēc pirms tunelēšanas uz augšupējo pakalpojumu tas atkārtoti nosaka vienkāršo ID kā codex modeli
 (`resolveCodexWsModelInfo`) — kaut gan vienkāršs
 `gpt-5.5`, izmantojot HTTP, citādi tiktu maršrutēts uz citu nodrošinātāju.
 
 #### OpenAI Codex CLI konfigurēšana
 
-Novirziet Codex CLI uz OmniRoute, pievienojot pielāgotu nodrošinātāju ar WebSocket
+Novirziet Codex CLI uz 67router, pievienojot pielāgotu nodrošinātāju ar WebSocket
 atbalstu failā `~/.codex/config.toml` (izmantojiet atsevišķu `CODEX_HOME`, lai nemainītu
 esošo konfigurāciju):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # bez beigu slīpsvītras; WS URL tiek atvasināts (produkcijā izmantojiet https/wss)
 wire_api = "responses"                    # vienīgā atbalstītā vērtība kopš 2026. gada februāra
 supports_websockets = true                # iespējo Responses-over-WS transportu
-env_key = "OMNIROUTE_API_KEY"             # satur OmniRoute API atslēgu (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # satur 67router API atslēgu (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API atslēga (jebkura atslēga, ja REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router API atslēga (jebkura atslēga, ja REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI jaunina `base_url + /responses` uz WebSocket, un OmniRoute to tunelē
+CLI jaunina `base_url + /responses` uz WebSocket, un 67router to tunelē
 uz atlasīto codex OAuth savienojumu. Pilnībā validēts, izmantojot lokālo
 serveri: ChatGPT atgriež `codex.rate_limits` + `response.created` un straumē
 pabeigto atbildi.
@@ -1076,7 +1076,7 @@ Izmantojot `/api/usage/om-usage`, izsaucējiem jāņem vērā atšķirība starp
 
 #### Robežvērtības korekcijas formula
 
-OmniRoute atbalsta proaktīvas kvotu robežvērtības, lai novērstu augšupējo resursu izsmelšanu (konfigurētas, izmantojot savienojuma
+67router atbalsta proaktīvas kvotu robežvērtības, lai novērstu augšupējo resursu izsmelšanu (konfigurētas, izmantojot savienojuma
 `quotaWindowThresholds`, nodrošinātāja noklusējuma vērtības vai globālos noturības iestatījumus). Kad kvotas logam ir aktīva robežvērtība
 (piemēram, `cutoff = 25%`), teksta renderētājs aprēķina atlikušo pieejamo apjomu šādi:
 
@@ -1438,9 +1438,8 @@ GET atbildē ir iekļauti `agents[]` (id, name, binary, version, installed, prot
 
 ### Novērtējumi
 
-| Galapunkts   | Metode   | Apraksts                                             |
-| ------------ | -------- | ---------------------------------------------------- |
-| `/api/evals` | GET/POST | Uzskaitīt novērtējumu komplektus / veikt novērtēšanu |
+| Galapunkts | Metode | Apraksts |
+| ---------- | ------ | -------- |
 
 ### Politikas
 
@@ -1624,7 +1623,7 @@ Piezīmes:
 
 - Tokenizētie aizstājvārdi atkārtoti izmanto tos pašus apstrādātājus kā `/v1/*` un `/api/tags`; atbilžu struktūras paliek identiskas.
 - Dodiet priekšroku `Authorization: Bearer ...`, ja klients atbalsta pielāgotas galvenes.
-- URL ietvertie marķieri var parādīties reversā starpniekservera žurnālos, pārlūkprogrammas vēsturē un telemetrijā ārpus OmniRoute. Uzskatiet tos par saderības opciju, nevis noklusējuma autentifikācijas režīmu.
+- URL ietvertie marķieri var parādīties reversā starpniekservera žurnālos, pārlūkprogrammas vēsturē un telemetrijā ārpus 67router. Uzskatiet tos par saderības opciju, nevis noklusējuma autentifikācijas režīmu.
 
 ---
 
@@ -1732,7 +1731,7 @@ Augstāka līmeņa maršrutēšanas kombinācijas (kas jau apkopotas sadaļā `/
 
 ## Tīmekļa aizķeres
 
-Izejošo tīmekļa aizķeru abonementi OmniRoute notikumiem (pieprasījuma pabeigšana, kvotas izsmelšana, atslēgas rotācija u.c.).
+Izejošo tīmekļa aizķeru abonementi 67router notikumiem (pieprasījuma pabeigšana, kvotas izsmelšana, atslēgas rotācija u.c.).
 
 | Metode | Ceļš                      | Apraksts                                                                               |
 | ------ | ------------------------- | -------------------------------------------------------------------------------------- |
@@ -1763,31 +1762,6 @@ Izmanto automātiskās atslēgu pārvaldības apakšsistēma, lai izsniegtu un r
 
 ---
 
-## Aģentu protokols
-
-Mākoņa aģentu uzdevumi (Claude Code, Codex Cloud, OpenHands u.c.), kas tiek attālināti izpildīti OmniRoute lietotāju vārdā.
-
-| Metode | Ceļš                          | Apraksts                                                                                                                                          |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Uzdevumu saraksts — neobligāti `?provider=`, `?status=`, `?limit=` (1–500, pēc noklusējuma 50)                                                    |
-| POST   | `/api/v1/agents/tasks`        | Izveido uzdevumu — ķermeni validē `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Atgriež `201` ar uzdevuma aploksni |
-| DELETE | `/api/v1/agents/tasks?id=...` | Dzēš uzdevumu                                                                                                                                     |
-| GET    | `/api/v1/agents/tasks/[id]`   | Nolasa uzdevumu — sinhroni atsvaidzina statusu no ārējā mākoņa aģenta, ja ir iestatīts `external_id`                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminēta darbība: `{action: "approve"}`, `{action: "message", message}` vai `{action: "cancel"}`                                              |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Dzēš konkrētu uzdevumu pēc identifikatora                                                                                                         |
-
-> **Autentifikācija:** katrai metodei ir nepieciešama pārvaldības autentifikācija (`requireCloudAgentManagementAuth`). Pirms v3.8.0 šie galapunkti nebija autentificēti — par nesavietojamajām izmaiņām skatiet komitu `588a0333`.
-
-```bash
-# Izveido Claude Code mākoņa uzdevumu
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Pārvaldības starpniekserveri
 
 Izejošie HTTP(S)/SOCKS starpniekserveri, kurus var piešķirt nodrošinātājiem, kontiem vai globāli.
@@ -1811,7 +1785,7 @@ Izejošie HTTP(S)/SOCKS starpniekserveri, kurus var piešķirt nodrošinātājie
 
 ## Noturība (paplašināti)
 
-OmniRoute nodrošina trīs neatkarīgus īslaicīgu kļūmju apstrādes mehānismus; tālāk norādītie pārvaldības galapunkti ļauj operatoriem nolasīt un pārrakstīt to iestatījumus:
+67router nodrošina trīs neatkarīgus īslaicīgu kļūmju apstrādes mehānismus; tālāk norādītie pārvaldības galapunkti ļauj operatoriem nolasīt un pārrakstīt to iestatījumus:
 
 | Tvērums                                 | Stāvokļa glabāšana                                    | Nolasīšana                                | Atiestatīšana / notīrīšana                                                  |
 | --------------------------------------- | ----------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------- |
@@ -1846,7 +1820,7 @@ Pilnu konceptuālo atsauci un ķēdes pārtraucēja noklusējuma iestatījumus s
 
 ## Prasmes
 
-Prasmju ietvars OmniRoute paplašināšanai ar pielāgotiem izpildāmiem apstrādātājiem, kā arī integrācijām ar prasmju katalogiem.
+Prasmju ietvars 67router paplašināšanai ar pielāgotiem izpildāmiem apstrādātājiem, kā arī integrācijām ar prasmju katalogiem.
 
 | Metode | Ceļš                              | Apraksts                                                                                                                                |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1883,7 +1857,7 @@ Pastāvīga sarunu un faktu atmiņas krātuve, kuras tvērums ir noteikts katrai
 
 ## MCP serveris
 
-OmniRoute ietver iegultu Model Context Protocol serveri ar 3 transportiem (stdio, SSE, streamable-http) un rīkiem ar noteiktiem tvērumiem. Tālāk norādītie informācijas paneļa galapunkti nolasa statusa/audita datus un darbojas kā HTTP transportu starpnieki.
+67router ietver iegultu Model Context Protocol serveri ar 3 transportiem (stdio, SSE, streamable-http) un rīkiem ar noteiktiem tvērumiem. Tālāk norādītie informācijas paneļa galapunkti nolasa statusa/audita datus un darbojas kā HTTP transportu starpnieki.
 
 | Metode | Ceļš | Apraksts |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1905,50 +1879,12 @@ OmniRoute ietver iegultu Model Context Protocol serveri ar 3 transportiem (stdio
 
 ## A2A serveris
 
-OmniRoute nodrošina A2A (aģents–aģents) JSON-RPC 2.0 galapunktu, kā arī REST ietvaru pārbaudes un informācijas paneļa vajadzībām.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # neobligāts, ja vien nav iestatīts OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Atbalstītās metodes (visas ir atkarīgas no `settings.a2aEnabled`):
-
-| Metode           | Apraksts                                                        |
-| ---------------- | --------------------------------------------------------------- |
-| `message/send`   | Sinhrona prasmes izpilde; atgriež `{task, artifacts, metadata}` |
-| `message/stream` | Tās pašas prasmju kopas straumēta SSE izpilde                   |
-| `tasks/get`      | Iegūst uzdevumu pēc `taskId`                                    |
-| `tasks/cancel`   | Atceļ uzdevumu pēc `taskId`                                     |
-
-Iebūvētās prasmes: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Aģenta karte
-
-```bash
-GET /.well-known/agent.json
-```
-
-Atgriež publisko A2A aģenta karti (nosaukumu, aprakstu, iespējas, prasmju katalogu, autentifikācijas shēmu) — publiski kešota 1 stundu. Autentifikācija nav nepieciešama.
+67router nodrošina A2A (aģents–aģents) JSON-RPC 2.0 galapunktu, kā arī REST ietvaru pārbaudes un informācijas paneļa vajadzībām.
 
 ### REST palīgfunkcijas
 
 | Metode | Ceļš                         | Apraksts                                                                                                               |
 | ------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A iespējots statuss + uzdevumu statistika + kešotās aģenta kartes kopsavilkums                                       |
 | GET    | `/api/a2a/tasks`             | Uzdevumu saraksts — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Nav ieviests kā REST palīgfunkcija — izveidojiet, izmantojot JSON-RPC `message/send`)                                 |
 | GET    | `/api/a2a/tasks/[id]`        | Iegūst vienu uzdevumu                                                                                                  |
@@ -1968,12 +1904,8 @@ Atgriež publisko A2A aģenta karti (nosaukumu, aprakstu, iespējas, prasmju kat
 | GET | `/api/cloud/models/alias` | Uzskaita modeļu aizstājvārdus, kas pieejami mākoņa sinhronizācijai |
 | GET | `/api/assess` | Nolasa jaunākās izvērtējuma kategorizācijas (katram pakalpojumu sniedzējam/modelim) |
 | POST | `/api/assess` | Izpilda izvērtējumu — pamatteksts: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Uzskaita iebūvētos novērtēšanas testu komplektus un jaunākās izpildes |
-| POST | `/api/evals` | Aktivizē novērtēšanas testa izpildi |
-| POST | `/api/evals/suites` | Izveido pielāgotu novērtēšanas testu komplektu — pamattekstu validē `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Iegūst pielāgotu novērtēšanas testu komplektu |
 
-**Autentifikācija:** `/api/cloud/auth` tieši validē Bearer atslēgu un atgriež katra savienojuma maskēto atslēgu un `projectId` tikai tad, ja atslēgai ir tvērums `manage` / `admin`; pārējiem `/api/cloud/*`, `/api/evals/*` un `/api/assess` maršrutiem ir nepieciešama pārvaldības sesija/API atslēga. `/api/assess` POST izmanto `validateBody` ar diskriminētas apvienības tvēruma shēmu.
+**Autentifikācija:** `/api/cloud/auth` tieši validē Bearer atslēgu un atgriež katra savienojuma maskēto atslēgu un `projectId` tikai tad, ja atslēgai ir tvērums `manage` / `admin`; pārējiem `/api/cloud/*` un `/api/assess` maršrutiem ir nepieciešama pārvaldības sesija/API atslēga. `/api/assess` POST izmanto `validateBody` ar diskriminētas apvienības tvēruma shēmu.
 
 ---
 
@@ -2134,7 +2066,7 @@ Tikai administratoriem paredzēti galapunkti operatīvajai pārvaldībai.
 
 ## CLI rīku pārvaldība
 
-Pārvaldiet CLI rīkus, kas integrējas ar OmniRoute (antigravity, commandCode,
+Pārvaldiet CLI rīkus, kas integrējas ar 67router (antigravity, commandCode,
 devin-cli u.c.). Pilnu sarakstu skatiet [nodrošinātāju atsaucē](./PROVIDER_REFERENCE.md).
 
 | Metode | Ceļš                                    | Apraksts                                                                                                                                                                         |
@@ -2243,26 +2175,6 @@ Pilnu informāciju skatiet sadaļā [Prasmju ietvars](../frameworks/SKILLS.md).
 
 ---
 
-## Spraudņi
-
-Pārvaldiet OmniRoute spraudņus (trešo pušu paplašinājumus).
-
-| Metode | Ceļš                               | Apraksts                              |
-| ------ | ---------------------------------- | ------------------------------------- |
-| GET    | `/api/plugins`                     | Uzskaitīt instalētos spraudņus        |
-| POST   | `/api/plugins/marketplace/install` | Instalēt spraudni no spraudņu veikala |
-| DELETE | `/api/plugins/[name]`              | Atinstalēt spraudni                   |
-| POST   | `/api/plugins/[name]/activate`     | Aktivizēt spraudni                    |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivizēt spraudni                  |
-| GET    | `/api/plugins/[name]/config`       | Iegūt spraudņa konfigurāciju          |
-| PUT    | `/api/plugins/[name]/config`       | Atjaunināt spraudņa konfigurāciju     |
-
-**Autentifikācija:** Nepieciešama pārvaldības sesija.
-
-Pilnu informāciju skatiet sadaļā [Spraudņu ietvars](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Ēnu maršrutēšana
 
 Pakalpojumu sniedzēju ēnu/A-B salīdzināšana **nav atsevišķa REST saskarne** — tā tiek konfigurēta, izmantojot kombinēto maršrutēšanu (skatiet [Automātiskā kombinēšana](../routing/AUTO-COMBO.md)). Katras kombinācijas salīdzināšanas metriku nodrošina `GET /api/combos/metrics`.
@@ -2297,5 +2209,3 @@ pilnvaru, API atslēgu ar pārvaldības tvērumu) un to atšķirībām no infere
 - `requireLogin` var ieslēgt vai izslēgt, izmantojot `/api/settings/require-login`
 - `/v1/*` maršruti var pieprasīt Bearer API atslēgu, ja `REQUIRE_API_KEY=true`
 - Šajā atsaucē „pārvaldības pilnvara” / „API atslēga ar pārvaldības tvērumu” nozīmē kādu no šajā ceļvedī aprakstītajām saimēm, nevis kādu nedefinētu papildu slepenā noslēpuma veidu
-
-> **Nesaderīga izmaiņa (v3.8.0)** — `/api/v1/agents/tasks/*` un atdzišanas perioda pārvaldības galapunktiem tagad ir nepieciešama **pārvaldības autentifikācija** (informācijas paneļa `auth_token` sīkfails vai API atslēga ar pārvaldības tvērumu). Klienti, kuri iepriekš izsauca šos maršrutus bez autentifikācijas, saņems `401 Unauthorized`. Skatiet komitu `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

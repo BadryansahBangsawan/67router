@@ -4,7 +4,7 @@
 
 ---
 
-> **Ukratko**: Koristite vlastite odgovarajuće račune kod pružalaca usluga. OmniRoute objedinjuje veze koje konfigurirate; ne dodjeljuje oglašeni zbirni budžet tokena. Besplatan pristup može zahtijevati registraciju, API ključ, odobrenje ili način plaćanja. Ograničenja pružalaca usluga, pravila privatnosti i uslovi korištenja i dalje se primjenjuju.
+> **Ukratko**: Koristite vlastite odgovarajuće račune kod pružalaca usluga. 67router objedinjuje veze koje konfigurirate; ne dodjeljuje oglašeni zbirni budžet tokena. Besplatan pristup može zahtijevati registraciju, API ključ, odobrenje ili način plaćanja. Ograničenja pružalaca usluga, pravila privatnosti i uslovi korištenja i dalje se primjenjuju.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Mnogi pružaoci AI usluga nude neki oblik **besplatnog pristupa**. U zavisnosti od pružaoca, to može podrazumijevati krajnju tačku bez autentifikacije, periodično obnavljanu kvotu, neograničen pristup uz ograničenje brzine, početni kredit nakon registracije, ručno odobrenje ili privremenu promociju. Neke opcije zahtijevaju račun, API ključ, kreditnu karticu, KYC ili prihvatanje uslova specifičnih za pružaoca.
 
-OmniRoute **objedinjuje** konfigurirane veze u jednu krajnju tačku. I dalje se morate zasebno registrovati kod svakog pružaoca koji zahtijeva račun. Povežite te račune i koristite `model: "auto"` za usmjeravanje između dostupnih odredišta. Nova instalacija možda neće imati nijedno dostupno odredište bez ključa; sama instalacija OmniRoutea ne garantuje uspješan odgovor chata.
+67router **objedinjuje** konfigurirane veze u jednu krajnju tačku. I dalje se morate zasebno registrovati kod svakog pružaoca koji zahtijeva račun. Povežite te račune i koristite `model: "auto"` za usmjeravanje između dostupnih odredišta. Nova instalacija možda neće imati nijedno dostupno odredište bez ključa; sama instalacija 67routera ne garantuje uspješan odgovor chata.
 
 ---
 
@@ -57,7 +57,7 @@ Ovi pružaoci imaju **besplatne nivoe** s određenim ograničenjima:
 
 ## Kako kombinovati besplatne nivoe
 
-Čarolija OmniRoutea je u **kombinovanju besplatnih nivoa**. Umjesto da se oslanjate na jednog pružaoca usluga, povežete više besplatnih pružalaca i omogućite OmniRouteu da automatski odabere najboljeg za svaki zahtjev.
+Čarolija 67routera je u **kombinovanju besplatnih nivoa**. Umjesto da se oslanjate na jednog pružaoca usluga, povežete više besplatnih pružalaca i omogućite 67routeru da automatski odabere najboljeg za svaki zahtjev.
 
 ### Primjer: Šira pokrivenost besplatnim nivoima
 
@@ -68,7 +68,7 @@ Povežite nekoliko pružalaca kako biste smanjili zavisnost od bilo koje pojedin
 3. **Pollinations** — pristup bez ključa, uz ograničenje broja zahtjeva
 4. **LongCat** — jednokratni kredit pri registraciji (zahtijeva KYC)
 
-Zatim koristite `model: "auto"` i OmniRoute će:
+Zatim koristite `model: "auto"` i 67router će:
 
 - Prvo pokušati s najbolje rangiranom prihvatljivom vezom
 - Ako provjera njene kvote ili dostupnosti ne uspije → pokušati sa sljedećim konfiguriranim pružaocem
@@ -102,7 +102,7 @@ neograničeni pristup/pristup bez ključa, početne kredite, ukinute stavke i iz
 
 ### Korak 5: Kliknite na Poveži
 
-Za pružaoca usluga tipa `NOAUTH`, OmniRoute ne traži pristupne podatke za vanjsku uslugu. To ne garantuje da vanjska usluga prihvata klijente trećih strana ili da ima raspoloživ kapacitet. Pružaoci usluga koji koriste OAuth i API ključ moraju se povezati putem njihovog dokumentovanog postupka za korisnički račun. Vaš klijent i dalje koristi OmniRoute API ključ prikazan u odjeljku **Kontrolna ploča → Krajnje tačke** kada je autentifikacija usmjerivača omogućena.
+Za pružaoca usluga tipa `NOAUTH`, 67router ne traži pristupne podatke za vanjsku uslugu. To ne garantuje da vanjska usluga prihvata klijente trećih strana ili da ima raspoloživ kapacitet. Pružaoci usluga koji koriste OAuth i API ključ moraju se povezati putem njihovog dokumentovanog postupka za korisnički račun. Vaš klijent i dalje koristi 67router API ključ prikazan u odjeljku **Kontrolna ploča → Krajnje tačke** kada je autentifikacija usmjerivača omogućena.
 
 ### Korak 6: Ponovite
 
@@ -112,7 +112,7 @@ Povežite nekoliko pružalaca usluga čiji uslovi i model privatnosti odgovaraju
 
 ## Ispravno čitanje kataloga
 
-- `NOAUTH` znači da OmniRoute od vas ne traži pristupne podatke pružatelja usluge; to ne
+- `NOAUTH` znači da 67router od vas ne traži pristupne podatke pružatelja usluge; to ne
   garantuje dostupnost, privatnost niti neograničen kapacitet.
 - `hasFree` je metapodatak za otkrivanje. Može predstavljati periodično obnavljajuću kvotu, pristup bez ključa,
   kredit za registraciju, program odobrenja ili promociju.
@@ -125,15 +125,15 @@ Povežite nekoliko pružalaca usluga čiji uslovi i model privatnosti odgovaraju
 
 ---
 
-## Kako OmniRoute čini besplatne nivoe boljim
+## Kako 67router čini besplatne nivoe boljim
 
 ### 1. Automatska rezervna opcija
 
-Ako je jedan besplatni provajder zauzet ili nedostupan, OmniRoute automatski pokušava sa sljedećim. Ne morate ništa da radite.
+Ako je jedan besplatni provajder zauzet ili nedostupan, 67router automatski pokušava sa sljedećim. Ne morate ništa da radite.
 
 ### 2. Pametno rutiranje
 
-OmniRoute bira **najboljeg besplatnog provajdera** za svaki zahtjev na osnovu:
+67router bira **najboljeg besplatnog provajdera** za svaki zahtjev na osnovu:
 
 - Brzine — Koji provajder je trenutno najbrži?
 - Kvaliteta — Koji provajder je najbolji za ovaj zadatak?
@@ -141,11 +141,11 @@ OmniRoute bira **najboljeg besplatnog provajdera** za svaki zahtjev na osnovu:
 
 ### 3. Ušteda tokena
 
-OmniRoute-ov pipeline za kompresiju može smanjiti kvalifikovane tokene prompta i izlaza alata. Stvarne uštede zavise od sadržaja, odabranih mašina, obračuna provajdera i postavki vjernosti (fidelity); kompresija ne množi svaku kvotu provajdera fiksnim iznosom.
+67router-ov pipeline za kompresiju može smanjiti kvalifikovane tokene prompta i izlaza alata. Stvarne uštede zavise od sadržaja, odabranih mašina, obračuna provajdera i postavki vjernosti (fidelity); kompresija ne množi svaku kvotu provajdera fiksnim iznosom.
 
 ### 4. Podrška za više naloga
 
-Ako uslovi provajdera dozvoljavaju više naloga ili akreditiva, OmniRoute može tretirati svaku konekciju kao posebnog kandidata za rutiranje. Nemojte kreirati dodatne naloge da biste izbjegli kvotu ili politiku pristupa provajdera.
+Ako uslovi provajdera dozvoljavaju više naloga ili akreditiva, 67router može tretirati svaku konekciju kao posebnog kandidata za rutiranje. Nemojte kreirati dodatne naloge da biste izbjegli kvotu ili politiku pristupa provajdera.
 
 ## Izračun besplatnog nivoa
 
@@ -156,7 +156,7 @@ Aktuelni katalog, s uklonjenim duplikatima zajedničkih kvota, trenutno prikazuj
 | Ponavljajuća kvantificirana kvota     |       **~1.62B tokena/mjesec** | Zajedničke kvote računaju se jednom; iz zbroja su isključeni pružaoci bez ograničenja |
 | Prvi mjesec s kvotama za registraciju |              **~2.22B tokena** | Ponavljajući ukupni iznos plus jednokratni i ponavljajući krediti                     |
 
-Ovo su procjene za cijeli katalog, raspoređene na zasebne račune koji ispunjavaju uslove, a ne kvota koju pruža OmniRoute niti predviđanje za novu instalaciju. Kapacitet koji možete koristiti zavisi od pružalaca koje povežete i njihovih trenutnih uslova. Vrijednosti se izračunavaju iz `open-sse/config/freeModelCatalog.ts`; pogledajte
+Ovo su procjene za cijeli katalog, raspoređene na zasebne račune koji ispunjavaju uslove, a ne kvota koju pruža 67router niti predviđanje za novu instalaciju. Kapacitet koji možete koristiti zavisi od pružalaca koje povežete i njihovih trenutnih uslova. Vrijednosti se izračunavaju iz `open-sse/config/freeModelCatalog.ts`; pogledajte
 [Referentni pregled besplatnih nivoa](../reference/FREE_TIERS.md) za uklanjanje duplikata zajedničkih kvota, oznake uslova korištenja,
 ukinute stavke i metodologiju kredita za registraciju.
 
@@ -183,7 +183,7 @@ Kritična radna opterećenja trebaju imati nadgledanu, ugovorno prikladnu rezerv
 
 Kompromisi mogu uključivati stroga ograničenja, liste čekanja, KYC, verifikaciju kreditne kartice, obuku na
 upitima, slabiju privatnost, nepostojanje SLA, promjene modela, geografska ograničenja, plaćeni višak ili
-rizik od politike naloga. OmniRoute prikazuje dostupne metapodatke; vi birate šta ćete omogućiti.
+rizik od politike naloga. 67router prikazuje dostupne metapodatke; vi birate šta ćete omogućiti.
 
 ### "Kako da dobijem više besplatne kvote?"
 
@@ -202,7 +202,7 @@ Rangiranje besplatnih provajdera kao signal kvaliteta i provjerite stvarni model
 
 ## Šta dalje?
 
-- **[Vodič za Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Neka OmniRoute odabere najbolji AI za vas
+- **[Vodič za Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Neka 67router odabere najbolji AI za vas
 - **[Vodič za provajdere](./PROVIDERS-GUIDE.md)** — Povežite više provajdera
 - **[Rješavanje problema](../guides/TROUBLESHOOTING.md)** — Riješite uobičajene probleme
 - **[Referenca za besplatne pakete](../reference/FREE_TIERS.md)** — Potpuna lista besplatnih paketa

@@ -195,21 +195,6 @@ describe("AgentSkillsPageClient", () => {
     expect(cards.length).toBe(42);
   });
 
-  it("renders SkillsConceptCard variant=agent at the top", async () => {
-    vi.stubGlobal("fetch", mockFetch(make42Skills(), FULL_COVERAGE));
-
-    const { AgentSkillsPageClient } =
-      await import("../../src/app/(dashboard)/dashboard/agent-skills/AgentSkillsPageClient");
-    const container = makeContainer();
-    root = createRoot(container);
-    await act(async () => {
-      root?.render(<AgentSkillsPageClient />);
-    });
-
-    // SkillsConceptCard uses i18n key conceptCard.agent.title
-    expect(container.textContent).toContain("conceptCard.agent.title");
-  });
-
   it("filter API shows only api-category cards", async () => {
     const skills = make42Skills();
     vi.stubGlobal("fetch", mockFetch(skills, FULL_COVERAGE));

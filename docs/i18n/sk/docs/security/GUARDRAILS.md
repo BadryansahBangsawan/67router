@@ -10,7 +10,7 @@
 > režim injekcie ako povinná hranica (#16413) a čo vidí odpoveď pred post-call)
 
 Guardrails vynucujú bezpečnosť, zásady a transformácie obsahu na hranici
-medzi OmniRoute a upstream poskytovateľmi. Každý guardrail môže kontrolovať
+medzi 67router a upstream poskytovateľmi. Každý guardrail môže kontrolovať
 (a voliteľne zamietnuť, transformovať alebo anotovať) payloady požiadaviek
 (`preCall`) a odpovede z upstream (`postCall`).
 
@@ -112,7 +112,7 @@ Keď API kľúč volajúceho obmedzuje `allowedConnections`, fondy kvót
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), most vyberá iba
 také modely pre reroute a describe, ktoré kľúč smie použiť, a iba na
 pripojeniach, ktoré kľúč smie použiť. Volanie describe potom vždy prechádza cez
-OmniRoute self-loop s hlavičkou `x-omniroute-self-loop-key-id`, takže
+67router self-loop s hlavičkou `x-omniroute-self-loop-key-id`, takže
 prijímajúca chat požiadavka znova vynucuje politiku pripojení a modelov tohto
 kľúča. `enforceApiKeyPolicy()` rešpektuje túto hlavičku iba spolu so self-loop
 bearer tokenom, takže môže prístup iba zužovať, a id, ktoré sa nedá rozpoznať,
@@ -141,7 +141,7 @@ nie je podmienená žiadnym klientským signálom. Vzorkovanie s nízkym detailo
 zhoršuje presnosť OCR práve pri úlohe prepisu textu, o ktorú tento prompt žiada,
 takže samotné volanie describe vždy žiada vysoký detail bez ohľadu na to, akú
 úroveň detailu použila pôvodná prichádzajúca požiadavka. Toto ovplyvňuje iba
-telo internej požiadavky describe; nemení to, ako OmniRoute preposiela vlastný
+telo internej požiadavky describe; nemení to, ako 67router preposiela vlastný
 `image_url.detail` volajúceho na primárnej požiadavke — táto predvolená hodnota
 sa aplikuje samostatne, a iba pre detegovaných klientov OpenCode, vo
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). Vetva
@@ -206,7 +206,7 @@ Vyhradená stránka dashboardu je `/dashboard/settings/modality-bridge`. Jej cez
 
 Pôvodná karta Vision Bridge v nastaveniach AI je kompatibilný odkaz na novú stránku; už nevlastní druhú kópiu formulára. Media Providers tiež prepája workflow Image-to-Text a Speech-to-Text so zodpovedajúcimi kartami Modality Bridge bez odstránenia existujúceho Speech-to-Text playgroundu.
 
-**Obídenie admission pri self-loop:** keď describe volanie smeruje cez vlastný self-loop `/v1` OmniRoute (neštandardný model poskytovateľa), podpožiadavka posiela `x-omniroute-admission-bypass: internal` a autentifikuje sa vyriešeným self-loop poverením — lokálnym sentinelom `sk_omniroute` v lokálnom režime, alebo operátorom nastaveným env kľúčom `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` (#1350), aby nasadenia s `REQUIRE_API_KEY=true` mohli stále spúšťať describe volanie. Bypass sa uznáva len pre tieto presné poverenia, takže externí klienti nemôžu použiť hlavičku na obídenie admission.
+**Obídenie admission pri self-loop:** keď describe volanie smeruje cez vlastný self-loop `/v1` 67router (neštandardný model poskytovateľa), podpožiadavka posiela `x-omniroute-admission-bypass: internal` a autentifikuje sa vyriešeným self-loop poverením — lokálnym sentinelom `sk_omniroute` v lokálnom režime, alebo operátorom nastaveným env kľúčom `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` (#1350), aby nasadenia s `REQUIRE_API_KEY=true` mohli stále spúšťať describe volanie. Bypass sa uznáva len pre tieto presné poverenia, takže externí klienti nemôžu použiť hlavičku na obídenie admission.
 
 Predvolené hodnoty legacy sa nachádzajú v `src/shared/constants/visionBridgeDefaults.ts`; nové predvolené hodnoty pre režim/task-aware/cache a resolver nastavení sa nachádzajú v `src/shared/constants/modalityBridgeDefaults.ts`. Guardrail sprístupňuje voľbu konštruktora `deps`, aby testy mohli vložiť náhradné (fake) implementácie `getSettings` a `callVisionModel`.
 
@@ -389,13 +389,13 @@ koncový bod ani nemenného hodnotiteľa. Peňažné úspory tiež zostávajú `
 pokiaľ `--caption-cost-per-call-usd` neposkytne explicitný kladný odhad nákladov
 na jedno volanie; skript nikdy nevytvára ani jeden z týchto výsledkov umelo.
 
-Každý snímok je obmedzený na 4 MiB, všetky surové snímky spolu na 23 MiB a serializovaná odpoveď brokera na 32 MiB. Súkromný dočasný adresár sa odstráni vo `finally`. OmniRoute neobsahuje FFmpeg a neprijíma vlastnú cestu k spustiteľnému súboru. Pred popisovaním bridge vykoná konzervatívny priechod vizuálnej deduplikácie: každý JPEG sa zredukuje na 16×16 šedotónový buffer a porovná sa iba s posledným zachovaným snímkom. Pri požadovanom rozpočte popisov nad jeden snímok extrakcia poskytne ohraničenú množinu kandidátov až do dvojnásobku tohto rozpočtu a nikdy viac ako 16 snímkov. Požadovaný strop sa uplatní až po deduplikácii, pričom počas finálneho riedenia sa zachovajú prvý a posledný vybraný kandidát, ak je rozpočet aspoň dva. Verzovaná politika `grayscale-16x16-mean-cells-v2` používa väčšiu z hodnôt: priemernú deltu jasu a podiel buniek miniatúry, ktorých normalizovaná delta je aspoň 0.05. Prah duplicity je konštanta 0.04, zvolená pre predvídateľnosť a nie vystavená ako nastavenie za behu. Tento sekundárny vysokokontrastný signál zachováva malé pohyby a zmeny viditeľného textu, ktoré môže porovnanie iba na základe priemeru skryť. Chyby komparátora alebo dekodéra zlyhajú otvorene (fail open) a zachovajú pokrytie. Výstupné metadáta oddeľujú extrahovaných kandidátov, úspešne použité snímky a vyradené vizuálne duplikáty.
+Každý snímok je obmedzený na 4 MiB, všetky surové snímky spolu na 23 MiB a serializovaná odpoveď brokera na 32 MiB. Súkromný dočasný adresár sa odstráni vo `finally`. 67router neobsahuje FFmpeg a neprijíma vlastnú cestu k spustiteľnému súboru. Pred popisovaním bridge vykoná konzervatívny priechod vizuálnej deduplikácie: každý JPEG sa zredukuje na 16×16 šedotónový buffer a porovná sa iba s posledným zachovaným snímkom. Pri požadovanom rozpočte popisov nad jeden snímok extrakcia poskytne ohraničenú množinu kandidátov až do dvojnásobku tohto rozpočtu a nikdy viac ako 16 snímkov. Požadovaný strop sa uplatní až po deduplikácii, pričom počas finálneho riedenia sa zachovajú prvý a posledný vybraný kandidát, ak je rozpočet aspoň dva. Verzovaná politika `grayscale-16x16-mean-cells-v2` používa väčšiu z hodnôt: priemernú deltu jasu a podiel buniek miniatúry, ktorých normalizovaná delta je aspoň 0.05. Prah duplicity je konštanta 0.04, zvolená pre predvídateľnosť a nie vystavená ako nastavenie za behu. Tento sekundárny vysokokontrastný signál zachováva malé pohyby a zmeny viditeľného textu, ktoré môže porovnanie iba na základe priemeru skryť. Chyby komparátora alebo dekodéra zlyhajú otvorene (fail open) a zachovajú pokrytie. Výstupné metadáta oddeľujú extrahovaných kandidátov, úspešne použité snímky a vyradené vizuálne duplikáty.
 
 Explicitne označená video časť môže požiadať o kontaktnú tabuľku s časovými pečiatkami. Bridge zostaví maximálne 4-stĺpcovú, 16-snímkovú JPEG mriežku. Každá 512-pixelová bunka vypáli svoju zdrojovú časovú pečiatku do vysokokontrastného spodného pásu, zatiaľ čo rovnaké časové pečiatky zostávajú v textových metadátach pre následné priradenie a audit. Kompletný JPEG zostáva obmedzený na 32 MiB. Ak `sharp` nedokáže dekódovať alebo zložiť mriežku, bridge sa vráti k jednotlivým JPEG snímkam; prerušenie klienta sa stále šíri cez operáciu tabuľky.
 
 Dôkaz o promócii je zámerne oddelený od syntetického mikrobenchmarku kompozície. `scripts/perf/video-bridge-contact-sheet-eval.ts` definuje schémou verzovaný A/B testovací rámec pre reálne OpenAI-kompatibilné zrakové modely. Meria tokeny hlásené poskytovateľom, celkovú reálnu (wall) latenciu end-to-end (vrátane kompozície tabuľky), počet volaní modelu a zachovanie faktov definované manifestom. Surové odpovede modelov sa do reportu nezapisujú; zachovávajú sa len SHA-256 digesty a priradené ID faktov. Testovací rámec nevykoná žiadne sieťové ani platené volanie modelu, pokiaľ nie je zadaný `--execute-real` a nakonfigurované `--model`, `OMNIROUTE_BASE_URL` a `OMNIROUTE_API_KEY`. Bez tohto explicitného reálneho spustenia zostáva jeho strojovo čitateľný verdikt `HOLD`; samotné syntetické merania payloadu a počtu volaní nie sú dôkazom o promócii.
 
-Volajúci môže k podporovanej video časti pripojiť voliteľné pole `transcript.cues`, ak už disponuje zarovnaným textom. Každý cue musí obsahovať `text`, konečný interval `start`/`end` v rámci zisťovanej dĺžky a `source` z povoleného zoznamu (`client`, `embedded` alebo `audio-bridge`); `confidence` má predvolene hodnotu `1` a musí ostať medzi `0` a `1`. Presné duplicitné cues sa zlúčia. OmniRoute z týchto metadát nikdy nespúšťa transkripciu: validované cues sa skopírujú do popísaného výsledku so zdrojom, confidence a intervalom a vykreslia sa ako nedôveryhodné pozorovania vedľa popisov snímkov. Neplatný text, text mimo rozsah alebo text bez uvedenia pôvodu sa odmietne namiesto zmiešania do prúdu popisov. Oba kanály transcriptu v tele požiadavky normalizujú dodaný pôvod na `client`, vrátane samodeklarovaných štítkov `embedded` alebo `audio-bridge`. Iba serverom vlastnený adaptér môže priradiť tieto dôveryhodné štítky prostredníctvom code-only argumentu `trustedSource`; pole JSON v požiadavke sa k tomuto argumentu nedostane. Text transcriptu zostáva nedôveryhodným obsahom odvodeným z médií bez ohľadu na jeho pôvod a nikdy nesmie určovať autorizáciu.
+Volajúci môže k podporovanej video časti pripojiť voliteľné pole `transcript.cues`, ak už disponuje zarovnaným textom. Každý cue musí obsahovať `text`, konečný interval `start`/`end` v rámci zisťovanej dĺžky a `source` z povoleného zoznamu (`client`, `embedded` alebo `audio-bridge`); `confidence` má predvolene hodnotu `1` a musí ostať medzi `0` a `1`. Presné duplicitné cues sa zlúčia. 67router z týchto metadát nikdy nespúšťa transkripciu: validované cues sa skopírujú do popísaného výsledku so zdrojom, confidence a intervalom a vykreslia sa ako nedôveryhodné pozorovania vedľa popisov snímkov. Neplatný text, text mimo rozsah alebo text bez uvedenia pôvodu sa odmietne namiesto zmiešania do prúdu popisov. Oba kanály transcriptu v tele požiadavky normalizujú dodaný pôvod na `client`, vrátane samodeklarovaných štítkov `embedded` alebo `audio-bridge`. Iba serverom vlastnený adaptér môže priradiť tieto dôveryhodné štítky prostredníctvom code-only argumentu `trustedSource`; pole JSON v požiadavke sa k tomuto argumentu nedostane. Text transcriptu zostáva nedôveryhodným obsahom odvodeným z médií bez ohľadu na jeho pôvod a nikdy nesmie určovať autorizáciu.
 
 Pokročilý volajúci môže poskytnúť stopu `audioTranscript` pre to isté video; považuje sa za text poskytnutý klientom, nie za dôkaz serverovej transkripcie. Fúzne rozhranie spúšťa vizuálne a audio pozorovania pod jedným časovým limitom a signálom prerušenia, zoradí ich na spoločnej časovej osi, zlúči presné duplikáty a nahlási čiastočný výsledok, keď uspeje len jedna strana. Neplatný `audioTranscript` degraduje na tento čiastočný výsledok — vizuálny popis sa zachová a audio vetva zaznamená sanitizovaný kód zlyhania — namiesto zlyhania celého videa. Dostupnosť jednotlivých vetiev, príznak čiastočného výsledku a sanitizované kódy zlyhaní sa zachovávajú v popísanom výsledku, v metadátach guardrail (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), v metadátach cache výsledkov a vo fúznych počítadlách bridge. Predvolená cesta Video Bridge nevyvoláva prevod reči na text ani nesťahuje druhú kópiu médií; bez tejto explicitnej stopy zostáva iba video.
 
@@ -920,7 +920,7 @@ spustenie) má dva joby:
   predchádzajúce inštrukcie…", DAN-style jailbreaky) overuje, že odpoveď nesie
   `error.code === "SECURITY_001"`, t. j. že guard skutočne zamietol požiadavku.
 - **`garak` (poradný)** — spúšťa garak `--probes promptinject,dan,leakreplay`
-  proti lokálnej inštancii OmniRoute (`http://localhost:20128/v1`). Podmienený
+  proti lokálnej inštancii 67router (`http://localhost:20128/v1`). Podmienený
   tajomstvom poskytovateľa (`PROMPTFOO_PROVIDER_KEY`); pri jeho absencii sa elegantne
   preskočí a má príponu `|| true`, takže reportuje bez zlyhania CI.
 

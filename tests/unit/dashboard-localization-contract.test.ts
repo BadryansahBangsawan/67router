@@ -58,22 +58,6 @@ test("compression engine pages localize API-driven labels and normalize icon ids
   assert.equal(source.includes("Turn this layer on/off"), false);
 });
 
-test("budget management does not expose deferred English-only states", () => {
-  const source = readSource("src/app/(dashboard)/dashboard/usage/components/BudgetTab.tsx");
-  for (const rawText of [
-    ">Budget<",
-    ">Templates:<",
-    ">Projection<",
-    ">Cost breakdown (30d)<",
-    ">Limits<",
-    ">Daily<",
-    "No keys selected",
-    "Failed to apply template",
-  ]) {
-    assert.equal(source.includes(rawText), false, `raw budget copy: ${rawText}`);
-  }
-});
-
 test("feature-flag descriptions are localized without changing flag values", () => {
   const card = readSource("src/app/(dashboard)/dashboard/settings/components/FeatureFlagCard.tsx");
   const messages = JSON.parse(readSource("src/i18n/messages/vi.json"));

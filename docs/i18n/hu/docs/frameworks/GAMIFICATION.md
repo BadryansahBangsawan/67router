@@ -7,7 +7,7 @@
 > **Hiteles forrás:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Legutóbb frissítve:** 2026-06-28 — v3.8.40
 
-Az OmniRoute egy helyi működést előnyben részesítő gamifikációs réteget tartalmaz, amely
+A 67router egy helyi működést előnyben részesítő gamifikációs réteget tartalmaz, amely
 a platform használatáért jutalmazza a felhasználókat — kérések indításáért, szolgáltatóváltásért,
 kombinációk létrehozásáért, tokenek megosztásáért és a közösség támogatásáért. Minden állapot
 SQLite-adatbázisban található; a közösségi szerverekkel való föderáció opcionális és push-alapú.
@@ -36,7 +36,7 @@ szintek, jelvények), társadalmi megerősítés (ranglisták) és gazdasági ö
 | Ranglisták           | Globális, heti, havi, tokenmegosztási és hozzájárulási hatókörök          |
 | Tokenmegosztás       | Kreditek átvitele felhasználók között kettős könyvelésű főkönyvvel        |
 | Meghívás és beváltás | Ajánlói kódok SHA-256-kivonattal történő tárolással                       |
-| Közösségi szerverek  | Föderáció külső OmniRoute-példányokkal                                    |
+| Közösségi szerverek  | Föderáció külső 67router-példányokkal                                     |
 | Csalásvédelem        | Szerveroldali pontozás, sebességkorlátozás, z-pontszámos anomáliaészlelés |
 
 ### Tervezési alapelvek
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Adatbázistáblák
 
-Minden tábla a fő OmniRoute SQLite-adatbázisban található, amelyet a
+Minden tábla a fő 67router SQLite-adatbázisban található, amelyet a
 `060_create_gamification.sql` migráció hoz létre. A WAL-naplózás a
 `src/lib/db/core.ts` fájlban található egyke `getDbInstance()` példánytól öröklődik.
 
@@ -173,7 +173,7 @@ Minden tábla a fő OmniRoute SQLite-adatbázisban található, amelyet a
 
 ### Tartománymodul: `src/lib/db/gamification.ts`
 
-A szabványos OmniRoute-mintát követi — importálja a `getDbInstance()` függvényt a
+A szabványos 67router-mintát követi — importálja a `getDbInstance()` függvényt a
 `core.ts` fájlból, és típusos CRUD-függvényeket exportál. Az útvonalkezelőkben nincs nyers SQL.
 
 Főbb függvények:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Művelet           | XP  | Leírás                                                               |
 | ----------------- | --- | -------------------------------------------------------------------- |
-| `request`         | 1   | Minden, az OmniRoute-on keresztül irányított API-kérés után          |
+| `request`         | 1   | Minden, a 67router-on keresztül irányított API-kérés után            |
 | `provider_switch` | 5   | Másik szolgáltatóra váltás                                           |
 | `model_switch`    | 3   | Másik modellre váltás                                                |
 | `combo_create`    | 10  | Új kombináció létrehozása                                            |
@@ -582,7 +582,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (egyedi, indexelt) |
 | `token_hash` | SHA-256(raw_token)            |
 
-A nyers tokent a rendszer pontosan egyszer, a létrehozáskor adja vissza a felhasználónak. Az OmniRoute
+A nyers tokent a rendszer pontosan egyszer, a létrehozáskor adja vissza a felhasználónak. A 67router
 soha többé nem tárolja és nem jeleníti meg — kizárólag a kivonat marad meg.
 
 ### Az önajánlás megakadályozása
@@ -720,7 +720,7 @@ Az adminisztrátorok a teljes auditnaplót a
 
 ## API-útvonalak
 
-Minden útvonal a szabványos OmniRoute mintát követi:
+Minden útvonal a szabványos 67router mintát követi:
 
 ```
 Útvonal → CORS előzetes kérés → Törzs ellenőrzése (Zod) → Hitelesítés (extractApiKey)

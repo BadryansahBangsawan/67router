@@ -4,7 +4,7 @@
 
 ---
 
-> **Özet**: `open-sse/`, OmniRoute'taki her LLM isteğine güç veren temel akış motorudur. İstek işlem hattını, yürütücüleri, servisleri, MCP sunucusunu ve çeviri katmanını uygulayan yaklaşık 1.400 dosya içerir. Bu kılavuz, parçaların nasıl bir araya geldiğini açıklar.
+> **Özet**: `open-sse/`, 67router'taki her LLM isteğine güç veren temel akış motorudur. İstek işlem hattını, yürütücüleri, servisleri, MCP sunucusunu ve çeviri katmanını uygulayan yaklaşık 1.400 dosya içerir. Bu kılavuz, parçaların nasıl bir araya geldiğini açıklar.
 
 **Kaynak:** `open-sse/` (çalışma alanı paketi, yaklaşık 1.440 test dışı `.ts` dosyası)
 
@@ -12,10 +12,10 @@
 
 ## Neden Ayrı Bir Çalışma Alanı Paketi?
 
-`open-sse/`, çeşitli nedenlerle OmniRoute monorepo'sunda **bağımsız bir çalışma alanıdır**:
+`open-sse/`, çeşitli nedenlerle 67router monorepo'sunda **bağımsız bir çalışma alanıdır**:
 
 1. **Yeniden kullanılabilirlik** — `open-sse`, npm üzerinde `@omniroute/open-sse` olarak yayımlanır; böylece diğer projeler onu bağımsız olarak kullanabilir
-2. **Net sınırlar** — akış motoru, OmniRoute'a özgü UI/DB katmanından ayrıştırılmıştır
+2. **Net sınırlar** — akış motoru, 67router'a özgü UI/DB katmanından ayrıştırılmıştır
 3. **Performans** — motorun Next.js bağımlılığı yoktur; bu da CLI/sunucusuz bağlamlarda daha hızlı soğuk başlatmalar sağlar
 4. **Sürümleme** — `open-sse` kendi yayın takvimine göre sürüm çıkarabilir
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Neden Ayrı Bir Dönüştürücü Var?
 
-Responses API, OpenAI'ın **durum bilgisi tutan konuşmalar** (`previous_response_id`) içeren yeni formatıdır. Bir istemci Responses isteği gönderdiğinde OmniRoute:
+Responses API, OpenAI'ın **durum bilgisi tutan konuşmalar** (`previous_response_id`) içeren yeni formatıdır. Bir istemci Responses isteği gönderdiğinde 67router:
 
 1. Responses formatını dahili olarak Chat Completions formatına dönüştürür
 2. İsteği sağlayıcıya gönderir (Chat Completions destekleyen herhangi bir sağlayıcı)
@@ -573,5 +573,4 @@ Yönlendirme motorunun katı performans bütçeleri vardır:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — dizin bazında açıklamalar
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 faktörlü puanlama
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP sunucusu
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A sunucusu
 - Kaynak: `open-sse/` (400+ dosya, ~143K LOC)

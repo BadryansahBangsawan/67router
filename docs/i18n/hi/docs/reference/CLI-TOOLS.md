@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (हिन्दी)
+# CLI Tools — 67router (हिन्दी)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 अंतिम अपडेट: 2026-08-23
 
-OmniRoute तीन समर्पित डैशबोर्ड पेजों पर उपलब्ध CLI टूल्स की तीन श्रेणियों के साथ एकीकृत होता है:
+67router तीन समर्पित डैशबोर्ड पेजों पर उपलब्ध CLI टूल्स की तीन श्रेणियों के साथ एकीकृत होता है:
 
-| पेज            | रूट                     | अवधारणा                                                                                        | संख्या          |
-| -------------- | ----------------------- | ---------------------------------------------------------------------------------------------- | --------------- |
-| **CLI Code's** | `/dashboard/cli-code`   | कोडिंग टूल्स जिन्हें आप OmniRoute की ओर इंगित करते हैं (क्लाइंट → CLI → OmniRoute → प्रदाता)   | 26              |
-| **CLI Agents** | `/dashboard/cli-agents` | स्वायत्त एजेंट जिन्हें आप OmniRoute की ओर इंगित करते हैं (समान प्रवाह, व्यापक दायरा)           | 10              |
-| **ACP Agents** | `/dashboard/acp-agents` | वे CLI जिन्हें OmniRoute stdio/ACP के माध्यम से बैकएंड के रूप में शुरू करता है (विपरीत प्रवाह) | रजिस्ट्री देखें |
+| पेज            | रूट                     | अवधारणा                                                                                       | संख्या          |
+| -------------- | ----------------------- | --------------------------------------------------------------------------------------------- | --------------- |
+| **CLI Code's** | `/dashboard/cli-code`   | कोडिंग टूल्स जिन्हें आप 67router की ओर इंगित करते हैं (क्लाइंट → CLI → 67router → प्रदाता)    | 26              |
+| **CLI Agents** | `/dashboard/cli-agents` | स्वायत्त एजेंट जिन्हें आप 67router की ओर इंगित करते हैं (समान प्रवाह, व्यापक दायरा)           | 10              |
+| **ACP Agents** | `/dashboard/acp-agents` | वे CLI जिन्हें 67router stdio/ACP के माध्यम से बैकएंड के रूप में शुरू करता है (विपरीत प्रवाह) | रजिस्ट्री देखें |
 
 पुराने रूट 308 के माध्यम से रीडायरेक्ट होते हैं: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`।
 
@@ -24,14 +24,14 @@ OmniRoute तीन समर्पित डैशबोर्ड पेजो�
 CLI Code's / CLI Agents (उपभोग प्रवाह):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (सभी OmniRoute की ओर इंगित करते हैं)
+           ▼  (सभी 67router की ओर इंगित करते हैं)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute सही प्रदाता तक रूट करता है)
+           ▼  (67router सही प्रदाता तक रूट करता है)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (विपरीत स्पॉन प्रवाह):
-    क्लाइंट अनुरोध → OmniRoute → stdio/ACP के माध्यम से CLI शुरू करता है → प्रतिक्रिया
+    क्लाइंट अनुरोध → 67router → stdio/ACP के माध्यम से CLI शुरू करता है → प्रतिक्रिया
 ```
 
 **लाभ:**
@@ -45,8 +45,8 @@ ACP Agents (विपरीत स्पॉन प्रवाह):
 
 ## `setup-*` के साथ स्वतः कॉन्फ़िगर करें
 
-आपको प्रत्येक टूल का कॉन्फ़िगरेशन हाथ से लिखने की आवश्यकता नहीं है। OmniRoute प्रत्येक समर्थित CLI के लिए एक `setup-*`
-कमांड प्रदान करता है, जो चल रहे OmniRoute (स्थानीय या रिमोट) से **लाइव** मॉडल कैटलॉग पढ़ता है
+आपको प्रत्येक टूल का कॉन्फ़िगरेशन हाथ से लिखने की आवश्यकता नहीं है। 67router प्रत्येक समर्थित CLI के लिए एक `setup-*`
+कमांड प्रदान करता है, जो चल रहे 67router (स्थानीय या रिमोट) से **लाइव** मॉडल कैटलॉग पढ़ता है
 और आपकी मशीन पर उस टूल का अपना कॉन्फ़िगरेशन लिखता है:
 
 ```bash
@@ -57,7 +57,7 @@ omniroute setup-goose        omniroute setup-qwen         omniroute setup-aider
 omniroute setup-5dive        omniroute setup-zed
 ```
 
-प्रत्येक कमांड `--remote <url> --api-key <key>` (किसी स्थानीय टूल को रिमोट OmniRoute के लिए कॉन्फ़िगर करें), `--dry-run` (बिना लिखे पूर्वावलोकन करें), और `--port` स्वीकार करता है। जिन टूल में मॉडल का स्वतः पता लगाने की सुविधा नहीं है (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive), वे
+प्रत्येक कमांड `--remote <url> --api-key <key>` (किसी स्थानीय टूल को रिमोट 67router के लिए कॉन्फ़िगर करें), `--dry-run` (बिना लिखे पूर्वावलोकन करें), और `--port` स्वीकार करता है। जिन टूल में मॉडल का स्वतः पता लगाने की सुविधा नहीं है (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive), वे
 `--model <id>` (और गैर-इंटरैक्टिव रन के लिए `--yes`) लेते हैं। `setup-5dive` एकमात्र
 रेसिपी है जो `$HOME` के अंतर्गत नहीं लिखती: यह फ़्लीट होस्ट पर root के स्वामित्व वाली ऑथ प्रोफ़ाइल लिखकर
 5dive एजेंट फ़्लीट को कॉन्फ़िगर करती है, इसलिए यह `sudo` के माध्यम से स्वयं को फिर से निष्पादित करती है
@@ -74,9 +74,9 @@ gemini — टार्गेट और उपनाम `bin/cli/cli-manifest.mj
 
 ### इन्हें कंटेनर के अंदर चलाना
 
-OmniRoute कंटेनर के अंदर निष्पादित किया गया `setup-*` कमांड कंटेनर के अपने होम में लिखता है,
+67router कंटेनर के अंदर निष्पादित किया गया `setup-*` कमांड कंटेनर के अपने होम में लिखता है,
 जिसे कोई होस्ट CLI नहीं पढ़ता और जो कंटेनर के साथ गायब हो जाता है।
-OmniRoute इसका पता लगाता है और लिखने के बजाय निर्देशों के साथ `2` पर बाहर निकल जाता है।
+67router इसका पता लगाता है और लिखने के बजाय निर्देशों के साथ `2` पर बाहर निकल जाता है।
 आगे बढ़ने के दो समर्थित तरीके हैं — होस्ट पर CLI इंस्टॉल करें और कंटेनर से
 `omniroute connect` करें, या कॉन्फ़िगरेशन डायरेक्टरियों को bind-mount करें और
 `CLI_CONFIG_HOME` (`host` compose प्रोफ़ाइल) सेट करें। प्रत्येक `setup-*` कमांड के साथ-साथ
@@ -198,7 +198,7 @@ OmniRoute इसका पता लगाता है और लिखने �
 
 ## 3. ACP एजेंट (/dashboard/acp-agents)
 
-यह पृष्ठ (जिसका नाम `/dashboard/agents` से बदला गया है) उन CLI को दिखाता है जिन्हें OmniRoute stdio/ACP प्रोटोकॉल के माध्यम से बैकएंड निष्पादन इंजन के रूप में **स्पॉन** कर सकता है। कैटलॉग को `src/lib/acp/registry.ts` में अलग से बनाए रखा जाता है और यह `CLI_TOOLS` के समान **नहीं** है।
+यह पृष्ठ (जिसका नाम `/dashboard/agents` से बदला गया है) उन CLI को दिखाता है जिन्हें 67router stdio/ACP प्रोटोकॉल के माध्यम से बैकएंड निष्पादन इंजन के रूप में **स्पॉन** कर सकता है। कैटलॉग को `src/lib/acp/registry.ts` में अलग से बनाए रखा जाता है और यह `CLI_TOOLS` के समान **नहीं** है।
 
 ---
 
@@ -325,7 +325,7 @@ interface ToolBatchStatus {
 
 ## 9. त्वरित शुरुआत
 
-### चरण 1 — OmniRoute API कुंजी प्राप्त करें
+### चरण 1 — 67router API कुंजी प्राप्त करें
 
 1. `/dashboard/api-manager` खोलें → **API कुंजी बनाएँ**
 2. इसे एक नाम दें (उदा. `cli-tools`) और सभी अनुमतियाँ चुनें
@@ -389,7 +389,7 @@ cargo install smelt  # Rust-आधारित
 ### चरण 4 — वैश्विक एनवायरनमेंट वेरिएबल सेट करें
 
 ```bash
-# OmniRoute यूनिवर्सल एंडपॉइंट
+# 67router यूनिवर्सल एंडपॉइंट
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -501,7 +501,7 @@ EOF
 **VS Code मोड:**
 Cline एक्सटेंशन सेटिंग्स → API प्रदाता: `OpenAI Compatible` → बेस URL: `http://localhost:20128/v1`
 
-या OmniRoute डैशबोर्ड → **CLI टूल्स → Cline → कॉन्फ़िग लागू करें** का उपयोग करें।
+या 67router डैशबोर्ड → **CLI टूल्स → Cline → कॉन्फ़िग लागू करें** का उपयोग करें।
 
 ---
 
@@ -522,7 +522,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-या OmniRoute डैशबोर्ड → **CLI टूल्स → KiloCode → कॉन्फ़िग लागू करें** का उपयोग करें।
+या 67router डैशबोर्ड → **CLI टूल्स → KiloCode → कॉन्फ़िग लागू करें** का उपयोग करें।
 
 ---
 
@@ -546,14 +546,14 @@ models:
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-इसका उपयोग तब करें जब VS Code Insiders को कस्टम एंडपॉइंट मॉडल के लिए कॉन्फ़िगर किया गया हो और आप चाहते हों कि OmniRoute कस्टम हेडर फ़ील्ड के बिना काम करे।
+इसका उपयोग तब करें जब VS Code Insiders को कस्टम एंडपॉइंट मॉडल के लिए कॉन्फ़िगर किया गया हो और आप चाहते हों कि 67router कस्टम हेडर फ़ील्ड के बिना काम करे।
 
 **अनुशंसित स्थान:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**टोकनयुक्त OmniRoute उपनाम का उपयोग करने वाला उदाहरण:**
+**टोकनयुक्त 67router उपनाम का उपयोग करने वाला उदाहरण:**
 
 ```json
 [
@@ -577,7 +577,7 @@ models:
 
 **टिप्पणियाँ:**
 
-- `sk-your-omniroute-key` को OmniRoute में बनाई गई API कुंजी से बदलें।
+- `sk-your-omniroute-key` को 67router में बनाई गई API कुंजी से बदलें।
 - `url` फ़ील्ड को `/api/v1/vscode/{token}/chat/completions` की ओर इंगित करना चाहिए।
 - `modelsUrl` फ़ील्ड को `/api/v1/vscode/{token}/models` की ओर इंगित करना चाहिए।
 - जब क्लाइंट कस्टम हेडर का समर्थन करता हो, तो सामान्य `/v1` + Bearer हेडर प्रवाह को प्राथमिकता दें।
@@ -591,17 +591,17 @@ models:
 # अपने AWS/Kiro खाते में लॉग इन करें:
 kiro-cli login
 
-# CLI अपने स्वयं के प्रमाणीकरण का उपयोग करता है—स्वयं Kiro CLI के बैकएंड के रूप में OmniRoute की आवश्यकता नहीं है।
-# अन्य टूल के लिए OmniRoute के साथ kiro-cli का उपयोग करें।
+# CLI अपने स्वयं के प्रमाणीकरण का उपयोग करता है—स्वयं Kiro CLI के बैकएंड के रूप में 67router की आवश्यकता नहीं है।
+# अन्य टूल के लिए 67router के साथ kiro-cli का उपयोग करें।
 kiro-cli status
 ```
 
-**Kiro IDE** डेस्कटॉप ऐप के लिए, OmniRoute द्वारा प्रदर्शित MITM एंडपॉइंट का उपयोग करें, जो
+**Kiro IDE** डेस्कटॉप ऐप के लिए, 67router द्वारा प्रदर्शित MITM एंडपॉइंट का उपयोग करें, जो
 `/dashboard/cli-tools → Kiro` के अंतर्गत उपलब्ध है।
 
 ---
 
-## 10. आंतरिक OmniRoute CLI
+## 10. आंतरिक 67router CLI
 
 `omniroute` बाइनरी सर्वर जीवनचक्र, सेटअप, निदान और प्रदाता प्रबंधन के लिए कमांड प्रदान करती है। प्रवेश बिंदु: `bin/omniroute.mjs`।
 
@@ -635,7 +635,7 @@ omniroute setup --add-provider \
 | चर                  | उद्देश्य                                                                  |
 | ------------------- | ------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | प्रदाता API कुंजी (Commander `.env()` के माध्यम से `--api-key` से संबद्ध) |
-| `DATA_DIR`          | OmniRoute डेटा डायरेक्टरी को ओवरराइड करें                                 |
+| `DATA_DIR`          | 67router डेटा डायरेक्टरी को ओवरराइड करें                                  |
 
 अन्य सभी गैर-इंटरैक्टिव इनपुट पर्यावरण चर के बजाय फ़्लैग के रूप में दिए जाते हैं:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -658,7 +658,7 @@ omniroute doctor --liveness-url <url>  # पूर्ण स्वास्थ�
 ### प्रदाता प्रबंधन
 
 ```bash
-omniroute providers available                       # OmniRoute प्रदाता कैटलॉग
+omniroute providers available                       # 67router प्रदाता कैटलॉग
 omniroute providers available --search openai       # id/name/alias/category के आधार पर कैटलॉग फ़िल्टर करें
 omniroute providers available --category api-key    # श्रेणी के आधार पर फ़िल्टर करें (api-key, oauth, free, ...)
 omniroute providers available --json                # मशीन-पठनीय JSON
@@ -678,7 +678,7 @@ omniroute providers remove <id|name> --yes
 
 `providers add/import/auth/edit/remove` API-प्रथम हैं और इसलिए सक्रिय स्थानीय या दूरस्थ संदर्भ के विरुद्ध काम करते हैं। क्रेडेंशियल इनपुट के लिए
 `--credential-stdin` या `--credential-env` का उपयोग करना चाहिए; `--dry-run --json` केवल
-संशोधित उपस्थिति/संरचना की रिपोर्ट देता है। `providers available`, OmniRoute कैटलॉग को पढ़ता है;
+संशोधित उपस्थिति/संरचना की रिपोर्ट देता है। `providers available`, 67router कैटलॉग को पढ़ता है;
 `providers list/test/test-all/validate` अपने स्थानीय SQLite व्यवहार को बनाए रखते हैं और
 इनके लिए सर्वर का चलना आवश्यक नहीं है।
 
@@ -722,7 +722,7 @@ omniroute auth export --force --out creds.json           # फ़ाइल म�
 
 ### अन्य सबकमांड
 
-जब तक अन्यथा उल्लेख न किया गया हो, इनके लिए चालू OmniRoute सर्वर आवश्यक है:
+जब तक अन्यथा उल्लेख न किया गया हो, इनके लिए चालू 67router सर्वर आवश्यक है:
 
 ```bash
 omniroute status                       # रनटाइम की व्यापक स्थिति
@@ -730,7 +730,7 @@ omniroute logs                         # अनुरोध लॉग स्ट�
 omniroute config list                  # कॉन्फ़िगर किए गए CLI टूल दिखाएँ
 
 omniroute provider list                # उपलब्ध प्रोवाइडर सूचीबद्ध करें (providers list का उपनाम)
-omniroute provider add                 # किसी टूल पर OmniRoute को प्रोवाइडर के रूप में पंजीकृत करें
+omniroute provider add                 # किसी टूल पर 67router को प्रोवाइडर के रूप में पंजीकृत करें
 omniroute keys add | list | remove     # API कुंजियाँ प्रबंधित करें
 omniroute models [provider]            # मॉडल सूचीबद्ध करें (--json, --search)
 omniroute combo list | switch | create | delete
@@ -744,7 +744,6 @@ omniroute cache                        # कैश स्थिति
 omniroute cache clear                  # सिमैंटिक + सिग्नेचर कैश साफ़ करें
 
 omniroute mcp status | restart         # MCP सर्वर की स्थिति / पुनः आरंभ
-omniroute a2a status | card            # A2A सर्वर की स्थिति / एजेंट कार्ड
 
 omniroute tunnel list | create | stop  # टनल प्रबंधित करें (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # env वेरिएबल जाँचें / सेट करें (अस्थायी)
@@ -780,7 +779,7 @@ omniroute completion                   # शेल कम्प्लीशन �
 | `/v1/audio/speech`         | टेक्स्ट-टू-स्पीच               | ElevenLabs, OpenAI TTS                  |
 | `/v1/audio/transcriptions` | स्पीच-टू-टेक्स्ट               | Deepgram, AssemblyAI                    |
 
-टोकनयुक्त OmniRoute URL के साथ सीधे पेस्ट करने योग्य उदाहरण:
+टोकनयुक्त 67router URL के साथ सीधे पेस्ट करने योग्य उदाहरण:
 
 ```txt
 टोकन उदाहरण: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -799,7 +798,7 @@ Ollama चैट: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a
 
 | त्रुटि                                                        | कारण                          | समाधान                                                     |
 | ------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------------- |
-| `Connection refused`                                          | OmniRoute नहीं चल रहा है      | `omniroute serve`                                          |
+| `Connection refused`                                          | 67router नहीं चल रहा है       | `omniroute serve`                                          |
 | `401 Unauthorized`                                            | गलत API कुंजी                 | `/dashboard/api-manager` में जाँचें                        |
 | `No combo configured`                                         | कोई सक्रिय रूटिंग कॉम्बो नहीं | `/dashboard/combos` में सेट अप करें                        |
 | CLI में "not installed" दिखाई देता है                         | बाइनरी PATH में नहीं है       | `which <command>` से जाँचें                                |
@@ -807,7 +806,7 @@ Ollama चैट: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a
 | पुराना लिंक `/dashboard/cli-tools`                            | Pre-v3.8.6 बुकमार्क           | `/dashboard/cli-code` (308) पर स्वतः रीडायरेक्ट किया गया   |
 | पुराना लिंक `/dashboard/agents`                               | Pre-v3.8.6 बुकमार्क           | `/dashboard/acp-agents` (308) पर स्वतः रीडायरेक्ट किया गया |
 
-## OmniRoute CLI के साथ इन्फ़रेंस-कुंजी नीति प्रबंधित करें
+## 67router CLI के साथ इन्फ़रेंस-कुंजी नीति प्रबंधित करें
 
 किसी मौजूदा इन्फ़रेंस कुंजी को उसकी ID द्वारा देखने या अपडेट करने के लिए प्रमाणीकृत प्रबंधन संदर्भ का उपयोग करें ([रिमोट मोड](../guides/REMOTE-MODE.md) देखें):
 

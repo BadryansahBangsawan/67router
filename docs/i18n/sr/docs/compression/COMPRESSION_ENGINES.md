@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute компресија је изграђена око уговора механизама. Режим може директно да покрене један механизам
+67router компресија је изграђена око уговора механизама. Режим може директно да покрене један механизам
 (`caveman` или `rtk`) или детерминистички сложени ток који редом извршава више механизама.
 
 ## Režimi
@@ -35,7 +35,7 @@ Profil je **plafon, a ne pod**: `mergeCompressionProfileOptions` u paketu odbija
 
 Mereno na ovoj bazi koda: `coding-safe` i `balanced` podižu `minCompressChars` na svoj maksimum i čuvaju sistem, šeme alata i rezultate alata nativnim, tako da sesija koja još nije akumulirala istoriju staje na `below_min_chars` i mehanizam ne transformiše ništa. Zato je podrazumevani profil `aggressive`, a ne najsigurniji.
 
-Paket rešava sopstveni opseg modela i profil iz svoje konfiguracije okruženja. OmniRoute nikada ne delegira odluku: adapter fiksira model gate na najrestriktivniji opseg paketa, tako da podešavanja host okruženja mogu samo suziti listu dozvoljenih, nikada je ne proširiti izvan OmniRoute-ovih izmerenih računa.
+Paket rešava sopstveni opseg modela i profil iz svoje konfiguracije okruženja. 67router nikada ne delegira odluku: adapter fiksira model gate na najrestriktivniji opseg paketa, tako da podešavanja host okruženja mogu samo suziti listu dozvoljenih, nikada je ne proširiti izvan 67router-ovih izmerenih računa.
 
 ## Регистар механизама
 
@@ -99,7 +99,7 @@ Caveman режим се фокусира на семантичко сажима�
 Ова опција се на контролној табли налази под `Dashboard -> Context & Cache -> Caveman`.
 
 Узводни Caveman пројекат наводи `~75%` мање излазних токена, просечну уштеду излаза од `65%` у тестовима
-са опсегом од `22-87%`, као и алатку за компресију улаза од `~46%`. OmniRoute користи Caveman број за
+са опсегом од `22-87%`, као и алатку за компресију улаза од `~46%`. 67router користи Caveman број за
 улазну страну приликом документовања комбинованих уштеда упита/контекста; Caveman излазни режим остаје
 засебна функција понашања одговора.
 

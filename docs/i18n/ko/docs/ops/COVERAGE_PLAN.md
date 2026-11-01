@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          | 13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` | 13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  | 13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         | 13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      | 14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             | 14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              | 15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         | 15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          | 16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                | 16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**`은 낮은 커버리지 파일이 가장 밀집된 영역이며, 남아 있는 격차의 대부분을 차지합니다.
 - 배치 및 재순위 API 라우트(`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`)에는 핸들러 수준 테스트가 필요합니다.
-- 클라우드 에이전트 어댑터(`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`)와 `tierResolver.ts`에는 시나리오 테스트가 필요합니다.
 - 문서 UI 컴포넌트와 `src/mitm/systemCommands.ts`는 우선순위가 낮지만, 적은 비용으로 브랜치 커버리지를 높일 수 있습니다.
 
 ## 실행 체크리스트

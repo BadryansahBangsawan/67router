@@ -4,15 +4,15 @@
 
 ---
 
-Delegatsiya qilingan **Context Editing** — faqat Claude uchun moʻljallangan kontekstni boshqarish xususiyati. Soʻrov proksidan chiqishidan _oldin_ uning tanasini qayta yozadigan OmniRoute’ning mahalliy siqish mexanizmlaridan (Caveman, RTK, LLMLingua, stacked pipelines) farqli ravishda, Context Editing **provayderdan** eskirgan tool-use / tool-result bloklarini oʻzining joriy kontekst oynasidan tozalashni soʻraydi. OmniRoute faqat tana parametrini (`context_management.edits[]`) qoʻshadi; haqiqiy tozalashni Claude oʻz tokenizeriga muvofiq amalga oshiradi.
+Delegatsiya qilingan **Context Editing** — faqat Claude uchun moʻljallangan kontekstni boshqarish xususiyati. Soʻrov proksidan chiqishidan _oldin_ uning tanasini qayta yozadigan 67router’ning mahalliy siqish mexanizmlaridan (Caveman, RTK, LLMLingua, stacked pipelines) farqli ravishda, Context Editing **provayderdan** eskirgan tool-use / tool-result bloklarini oʻzining joriy kontekst oynasidan tozalashni soʻraydi. 67router faqat tana parametrini (`context_management.edits[]`) qoʻshadi; haqiqiy tozalashni Claude oʻz tokenizeriga muvofiq amalga oshiradi.
 
-Bu tabiatan delegatsiya qilingan imkoniyatdir: boshqa provayderlar bu parametrni rad etadi, shuning uchun OmniRoute uni qatʼiy ravishda Claude va Claude-Code bilan mos keluvchi relelar doirasida qoʻllaydi.
+Bu tabiatan delegatsiya qilingan imkoniyatdir: boshqa provayderlar bu parametrni rad etadi, shuning uchun 67router uni qatʼiy ravishda Claude va Claude-Code bilan mos keluvchi relelar doirasida qoʻllaydi.
 
 Asosiy manbalar: `open-sse/config/contextEditing.ts` (strategiya identifikatorlari, tana parametrini kiritish, telemetriyani ajratib olish), `open-sse/executors/base.ts` (kiritish sharti + 400 holatidagi zaxira mexanizmi) va `open-sse/services/compression/types.ts` (konfiguratsiya shakli + standart qiymat).
 
 ## `clear_tool_uses` nima qiladi
 
-OmniRoute Anthropic Messages’ning chiquvchi tanasiga bitta tahrirni kiritadi:
+67router Anthropic Messages’ning chiquvchi tanasiga bitta tahrirni kiritadi:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute Anthropic Messages’ning chiquvchi tanasiga bitta tahrirni kiritadi:
 - `trigger.value: 100000` — soʻrovning kirish tokenlari ushbu chegaradan oshgach, Claude eski tool-use/result juftliklarini tozalashni boshlaydi (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, Anthropic’ning standart qiymati).
 - `keep.value: 3` — eng oxirgi N ta tool-use/result juftligi oʻzgartirilmasdan saqlanadi (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Beta imkoniyati `anthropic-beta: context-management-2025-06-27` sarlavhasi orqali eʼlon qilinadi; OmniRoute uni Claude soʻrovlarida allaqachon yuboradi.
+Beta imkoniyati `anthropic-beta: context-management-2025-06-27` sarlavhasi orqali eʼlon qilinadi; 67router uni Claude soʻrovlarida allaqachon yuboradi.
 
-Kiritish `applyContextEditingToBody()` orqali amalga oshiriladi va **idempotent** hisoblanadi: agar tanada `clear_tool_uses` tahriri allaqachon mavjud boʻlsa (oldingi chaqiruv tomonidan qoʻshilgan yoki mijoz tomonidan taqdim etilgan), tana oʻzgarishsiz qoldiriladi. Agar `clear_thinking_20251015` tahriri ham mavjud boʻlsa, OmniRoute `clear_thinking` tahririni barqaror saralash orqali oldinga oʻtkazadi, chunki Anthropic `edits[]` massivida `clear_thinking` elementi `clear_tool_uses` elementidan oldin kelishini talab qiladi.
+Kiritish `applyContextEditingToBody()` orqali amalga oshiriladi va **idempotent** hisoblanadi: agar tanada `clear_tool_uses` tahriri allaqachon mavjud boʻlsa (oldingi chaqiruv tomonidan qoʻshilgan yoki mijoz tomonidan taqdim etilgan), tana oʻzgarishsiz qoldiriladi. Agar `clear_thinking_20251015` tahriri ham mavjud boʻlsa, 67router `clear_thinking` tahririni barqaror saralash orqali oldinga oʻtkazadi, chunki Anthropic `edits[]` massivida `clear_thinking` elementi `clear_tool_uses` elementidan oldin kelishini talab qiladi.
 
 ## Har bir kombinatsiya uchun yoqish/oʻchirish tugmasi
 
@@ -111,7 +111,7 @@ Haqiqiy Claude beta imkoniyatini `ANTHROPIC_BETA_BASE` ichida olib yuradi va bu 
 
 ## `applied_edits` telemetriyasi
 
-Claude javobidan so‘ng OmniRoute provayder amalda qancha kontekstni tozalaganini qayd etadi. Bu **oqim orqali uzatilmaydi** — u oqimsiz javob tanasidan imkon qadar ajratib olinadi va javobga hech qachon taʼsir qilmaydi (telemetriya xatolari eʼtiborsiz qoldiriladi).
+Claude javobidan so‘ng 67router provayder amalda qancha kontekstni tozalaganini qayd etadi. Bu **oqim orqali uzatilmaydi** — u oqimsiz javob tanasidan imkon qadar ajratib olinadi va javobga hech qachon taʼsir qilmaydi (telemetriya xatolari eʼtiborsiz qoldiriladi).
 
 - Ajratib olish: `open-sse/config/contextEditing.ts` ichidagi `extractContextEditingTelemetry(responseBody)`.
   U javob shakliga nisbatan ehtiyot chorasi sifatida uchta joydan `applied_edits` maydonini qidiradi:
@@ -136,14 +136,14 @@ Shunday qilib, provayderga topshirilgan tozalash natijalari mahalliy mexanizmlar
 
 | Jihat                | Mahalliy mexanizmlar (Caveman / RTK / LLMLingua / stacked) | Delegatsiya qilingan kontekstni tahrirlash                          |
 | -------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------- |
-| Qayerda ishlaydi     | OmniRoute ichida, soʻrov proksidan chiqishidan oldin       | Provayderda (Claude), server tomonida                               |
+| Qayerda ishlaydi     | 67router ichida, soʻrov proksidan chiqishidan oldin        | Provayderda (Claude), server tomonida                               |
 | Nimani tahrirlaydi   | Prompt / kontekst / vosita natijasi matni                  | Eski vositadan foydalanish / vosita natijasi bloklari               |
 | Provayder qamrovi    | Barcha provayderlar                                        | Faqat `claude` + `anthropic-compatible-cc-*`                        |
 | Almashtirish         | Siqish rejimi sozlamalari                                  | `contextEditing.enabled`                                            |
 | Xatolik rejimi       | Ochiq davom etish (asl matn)                               | 400 uchun zaxira: parametrni olib tashlash, bir marta qayta urinish |
 | Tejash telemetriyasi | `engine: <engine id>`                                      | `engine: "context-editing"`                                         |
 
-Bu ikkalasi bir-birini toʻldiradi: mahalliy mexanizmlar OmniRoute yuboradigan baytlarni siqadi; kontekstni tahrirlash esa
+Bu ikkalasi bir-birini toʻldiradi: mahalliy mexanizmlar 67router yuboradigan baytlarni siqadi; kontekstni tahrirlash esa
 Claude’ga davom etayotgan kontekstni navbatlar davomida qisqartirish imkonini beradi. Ularni birgalikda yoqish mumkin.
 
 ## Shuningdek qarang

@@ -46,7 +46,7 @@ aylanib oʻtish yoʻli shu; bu WS1.3 kafolatini saqlagan holda loyiha v3.8.48 ga
 toʻliq avtomatik jarayonni tiklaydi (sizib chiqqan tokenning oʻzi nashr qila olmaydi — tokenning oʻzi yoʻq).
 
 **Bir martalik sozlash (egasi):** npmjs.com → `omniroute` paketi → Settings → _Trusted
-Publisher_ → GitHub: egasi `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: egasi `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). Bu sozlama yaratilmaguncha avtomatik qadam `ENEEDAUTH` xatosi bilan
 muvaffaqiyatsiz tugaydi: `publish_mode=staged` (quyida) yoki `direct` bilan qayta ishga tushiring.
 

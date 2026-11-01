@@ -4,7 +4,7 @@
 
 ---
 
-릴레이(Vercel, Deno, Cloudflare)는 서버리스 백엔드에서 업스트림 연결을 종료하므로, OmniRoute는 제공업체 API 키를 서버 측에 유지하면서 안정적인 리전에서 외부로 연결할 수 있습니다. 이 문서에서는 운영자가 프로덕션 환경에서 겪는 두 가지 장애 모드와 각 장애에 대해 OmniRoute가 제공하는 복구 경로를 설명합니다.
+릴레이(Vercel, Deno, Cloudflare)는 서버리스 백엔드에서 업스트림 연결을 종료하므로, 67router는 제공업체 API 키를 서버 측에 유지하면서 안정적인 리전에서 외부로 연결할 수 있습니다. 이 문서에서는 운영자가 프로덕션 환경에서 겪는 두 가지 장애 모드와 각 장애에 대해 67router가 제공하는 복구 경로를 설명합니다.
 
 ## 릴레이 인증 정보 저장 방식
 
@@ -26,7 +26,7 @@
 1. **Settings → Proxy Pool**을 엽니다.
 2. 인증 정보가 없는 릴레이 행에는 노란색 `auth missing` 배지와
    **Repair** 버튼이 표시됩니다.
-3. **Repair**를 클릭합니다. OmniRoute는
+3. **Repair**를 클릭합니다. 67router는
    `POST /api/settings/proxies/[id]/repair-relay`를 호출하며, 이 API는 다음 작업을 수행합니다.
    - **현재** 키로 `relayAuthEnc`를 복호화합니다.
    - 평문 `relayAuth`를 `notes`에 다시 기록합니다.
@@ -51,7 +51,7 @@ UI에서는 토큰을 복구할 수 없는 경우 **Repair** 버튼 자체가 �
 
 **증상:** 프록시 테스트(`speed` 버튼)에서는 릴레이가 작동 중인 것으로 표시되지만 요청이 여전히 간헐적으로 실패합니다.
 
-OmniRoute의 자동 테스트 프로브가 반환하는 릴레이 인식 헤더를 확인하세요
+67router의 자동 테스트 프로브가 반환하는 릴레이 인식 헤더를 확인하세요
 (**Settings → Proxy Pool** 및 `relayTested` / `relayAlive` 카운터 참조).
 
 - `x-relay-url` — 응답한 릴레이 백엔드입니다.

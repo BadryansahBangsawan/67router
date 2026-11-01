@@ -63,7 +63,7 @@ async function resolveCatalogVariantAuthorizer(
 
   const { getApiKeyMetadata, isModelAllowedForKey } = await import("@/lib/db/apiKeys");
   const keyMeta = await getApiKeyMetadata(apiKey);
-  if (!keyMeta || keyMeta.id === "env-key" || keyMeta.allowedQuotas?.length) return null;
+  if (!keyMeta || keyMeta.id === "env-key") return null;
 
   const hasModelRestrictions =
     keyMeta.modelAccessMode === "restricted" ||
@@ -344,7 +344,7 @@ export async function finalizeCatalogResponse(
   if (apiKey) {
     const { getApiKeyMetadata, isModelAllowedForKey } = await import("@/lib/db/apiKeys");
     const keyMeta = await getApiKeyMetadata(apiKey);
-    if (keyMeta && keyMeta.id !== "env-key" && !keyMeta.allowedQuotas?.length) {
+    if (keyMeta && keyMeta.id !== "env-key") {
       finalModels = await filterUnauthorizedFunctionalGatewayMirrors(
         finalModels,
         apiKey,

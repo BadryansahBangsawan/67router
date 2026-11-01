@@ -169,5 +169,4 @@ API કીનું પ્લેસહોલ્ડર હંમેશાં `$OM
 - મુખ્ય યોજના: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ફીચર યોજના: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - સર્ચ પ્રદાતા રજિસ્ટ્રી: `open-sse/config/searchRegistry.ts`
-- Playground Studio (શેર કરેલ `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - વેબ ફેચ બૅકએન્ડ: `src/app/api/v1/web/fetch/route.ts`

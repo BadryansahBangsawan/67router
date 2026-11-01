@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 透過單一且集中管理的允許清單，控制哪些**瀏覽器來源**可以讀取跨來源回應。此模型**預設為封閉式（fail-closed）**：在您明確允許某個來源之前，任何來源都不會獲准。本頁說明允許清單的解析方式、`CORS_ALLOW_ALL=true` 實際上會暴露哪些內容（以及更重要的是，**不會**暴露哪些內容）、如何安全地設定開發與正式環境，以及萬用字元生效時儀表板顯示的執行階段警告。
+67router 透過單一且集中管理的允許清單，控制哪些**瀏覽器來源**可以讀取跨來源回應。此模型**預設為封閉式（fail-closed）**：在您明確允許某個來源之前，任何來源都不會獲准。本頁說明允許清單的解析方式、`CORS_ALLOW_ALL=true` 實際上會暴露哪些內容（以及更重要的是，**不會**暴露哪些內容）、如何安全地設定開發與正式環境，以及萬用字元生效時儀表板顯示的執行階段警告。
 
 **權威來源：** `src/server/cors/origins.ts`（`resolveAllowedOrigin`、`applyCorsHeaders`、`getCorsStatus`）。允許清單只會在中介軟體（`src/server/authz/pipeline.ts`）中套用一次——各路由處理常式本身不會設定 `Access-Control-Allow-Origin`。
 
@@ -26,12 +26,12 @@ OmniRoute 透過單一且集中管理的允許清單，控制哪些**瀏覽器�
 
 ## 威脅模型——`CORS_ALLOW_ALL=true` 實際上會暴露什麼
 
-一般性的 OWASP 警告（「萬用字元 CORS = 任何網站都能呼叫您的 API」）值得嚴肅看待，但 OmniRoute 的暴露範圍**比一般情況更窄**，原因在於一項具體的實作事實：
+一般性的 OWASP 警告（「萬用字元 CORS = 任何網站都能呼叫您的 API」）值得嚴肅看待，但 67router 的暴露範圍**比一般情況更窄**，原因在於一項具體的實作事實：
 
 > **中央 `applyCorsHeaders()` 絕不會發出
 > `Access-Control-Allow-Credentials`。** 除非伺服器傳送
 > `Access-Control-Allow-Credentials: true`，否則瀏覽器不會向跨來源網站提供
-> _包含認證資訊_（帶有 Cookie）的跨來源回應。OmniRoute 的共用 CORS 路徑絕不會
+> _包含認證資訊_（帶有 Cookie）的跨來源回應。67router 的共用 CORS 路徑絕不會
 > 這麼做。
 
 即使設定了 `CORS_ALLOW_ALL=true`，這對各介面的影響如下：
@@ -44,10 +44,6 @@ OmniRoute 透過單一且集中管理的允許清單，控制哪些**瀏覽器�
 
 因此，`CORS_ALLOW_ALL=true` 的**剩餘**暴露範圍僅限於：(a) 對原本就不需要驗證的資料進行未攜帶認證資訊的跨來源**讀取**，以及 (b) 讓管理路由的 CORS **預檢請求通過**——但這些路由仍需要跨來源頁面無法提供的驗證資訊。在共用 CORS 路徑上，這**並非**工作階段劫持或認證資訊竊取的攻擊向量。
 
-### 一個真正的例外——`/api/v1/agents/`
-
-Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）會設定其**自己的** CORS 標頭（`src/lib/cloudAgent/api.ts`、`getCloudAgentCorsHeaders`），而且**確實會**同時發出 `Access-Control-Allow-Origin: <origin>|*` 與 `Access-Control-Allow-Credentials: true`。這是唯一同時存在來源回傳與認證資訊的介面，而且它**獨立於 `CORS_ALLOW_ALL`**。這些路由採用管理驗證（`requireManagementAuth`）；若操作人員將儀表板開放給主機以外的存取，應注意這是唯一允許跨來源讀取含認證資訊回應的地方。將其限縮為明確的允許清單，會與本 CORS 指引分開追蹤。
-
 ## 正式環境檢查清單
 
 - **切勿在正式環境中設定 `CORS_ALLOW_ALL=true`。** 請維持未設定狀態。
@@ -57,7 +53,7 @@ Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- 如果 OmniRoute 在反向代理／通道（nginx、Caddy、Cloudflare
+- 如果 67router 在反向代理／通道（nginx、Caddy、Cloudflare
   Tunnel、Tailscale）後方執行，CORS **並非**唯一的控制措施——回送位址路由
   防護仍會保護可啟動程序的路由（請參閱
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)）。請勿偽造
@@ -73,7 +69,7 @@ Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）�
 即使在開發環境中，通常也不需要萬用字元。只允許實際使用的開發伺服器：
 
 ```bash
-# 呼叫本機 OmniRoute 的 Vite (5173) + Next.js (3000) 開發伺服器
+# 呼叫本機 67router 的 Vite (5173) + Next.js (3000) 開發伺服器
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -92,14 +88,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   共用路徑上不存在 `Access-Control-Allow-Credentials` 的雙重保護。請勿將
   管理／儀表板來源加入任何寬鬆設定中；它們必須嚴格維持預設封閉。
 
-## 範例：OmniRoute 前方的反向代理
+## 範例：67router 前方的反向代理
 
-CORS 由 OmniRoute 本身強制執行，因此代理通常**不應**新增或
+CORS 由 67router 本身強制執行，因此代理通常**不應**新增或
 重寫 `Access-Control-*` 標頭（重複的標頭會導致瀏覽器無法正常運作）。終止 TLS
-並進行轉送——讓 OmniRoute 回應預檢請求：
+並進行轉送——讓 67router 回應預檢請求：
 
 ```nginx
-# nginx — 轉送至 OmniRoute；請勿在此注入 Access-Control-*
+# nginx — 轉送至 67router；請勿在此注入 Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -107,12 +103,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # 保留轉送標頭：同一主機上的代理會從迴路位址連線，而這些標頭
-    # 會告知 OmniRoute 呼叫者並非本機操作員。若代理未新增任何這類標頭，
+    # 會告知 67router 呼叫者並非本機操作員。若代理未新增任何這類標頭，
     # 每個遠端呼叫者看起來都會像本機呼叫者。也絕不可將 X-Forwarded-For 設為 127.0.0.1。
 }
 ```
 
-請在 OmniRoute 中（透過 `CORS_ALLOWED_ORIGINS` 或「安全性」分頁）設定允許的瀏覽器來源，而不是在代理中設定。
+請在 67router 中（透過 `CORS_ALLOWED_ORIGINS` 或「安全性」分頁）設定允許的瀏覽器來源，而不是在代理中設定。
 
 ## 原始碼檔案
 
@@ -124,7 +120,6 @@ location / {
 | 儀表板的執行階段狀態             | `src/app/api/settings/authz-inventory/route.ts`                      |
 | 儀表板警告橫幅                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins 欄位        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent 每路由 CORS（例外）  | `src/lib/cloudAgent/api.ts`                                          |
 
 ## 另請參閱
 

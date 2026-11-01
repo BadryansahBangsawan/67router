@@ -5,7 +5,7 @@
 ---
 
 A saját üzemeltetésű pool a **.113** gépen (`tomni-proxmox-113`) fut. 2026-10-18 óta minden
-OmniRoute-runnernek **egyetlen szerepe**, egy címkéje, valamint a munkaterhelés mért igényeihez
+67router-runnernek **egyetlen szerepe**, egy címkéje, valamint a munkaterhelés mért igényeihez
 méretezett memória- és CPU-kerete van. A Turbopack-hely annyi erőforrást kap, amennyire a buildnek
 szüksége van; a többi hely a mért csúcsterheléséhez van méretezve. A gépen csak akkor történik
 túlfoglalás, amikor egy Turbopack-build egy Release-Green webpack-builddel és egy lintfeladattal
@@ -28,7 +28,7 @@ Mérés időpontja: 2026-10-18:
 | swap      | 16 GB                   | az `omniroute-113-5` kikapcsolt swappal (`MemorySwapMax=0`) fut, így egy elszabadult buildet a korlátjánál leállít a rendszer ahelyett, hogy a gépet swapelésre kényszerítené                                                                                                                                                                                                                                       |
 | `/tmp`    | **12 GB tmpfs = RAM**   | minden, amit itt tárolunk, memóriát foglal; a maradványokat 3 óra után eltávolítja a rendszer                                                                                                                                                                                                                                                                                                                       |
 | CPU       | 60-as terhelés 32 magon | a kvóták előtt egy Turbopack-build (~1166 % CPU) és az ugyanazon a gépen futó coverage tesztcsomag együtt kiéheztette a többi listener heartbeatjeit (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                                          |
-| runnerek  | **6 listener**          | 4 OmniRoute + OmniHeuris + OmniMind; az `omniroute-113-3/-4/-7/-8` le van tiltva (a `systemctl enable --now` paranccsal bármelyik újra bekapcsolható)                                                                                                                                                                                                                                                               |
+| runnerek  | **6 listener**          | 4 67router + OmniHeuris + OmniMind; az `omniroute-113-3/-4/-7/-8` le van tiltva (a `systemctl enable --now` paranccsal bármelyik újra bekapcsolható)                                                                                                                                                                                                                                                                |
 
 A korlátok az egyes unitok `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 fájljában találhatók (a korábbi értékeket az `override.conf.bak-20261018` őrzi), és futás közben,
@@ -81,7 +81,7 @@ jelenti a feladatot, a listener pedig magától újra online állapotba kerül.
 A futtató alapértelmezett `KillMode=process` beállítása életben hagyja a
 `Runner.Worker → npm → next-build` folyamatláncot az egység leállításakor vagy
 újraindításakor — egy árva build hozzárendelt feladat nélkül tovább fogyasztja a
-RAM-ot és a CPU-t. Minden OmniRoute-egységhez tartozik egy felülbíráló konfiguráció
+RAM-ot és a CPU-t. Minden 67router-egységhez tartozik egy felülbíráló konfiguráció
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 `KillMode=mixed` beállítással: először SIGTERM jelzést küld a listenernek, majd a
 `TimeoutStop` elérésekor SIGKILL jelzést küld a teljes cgroupnak. A beállítás az
@@ -132,7 +132,7 @@ egység következő újraindításakor lép életbe — egyszerre **csak egy fut
   (~5–6 GB; webpack), valamint a `quality.yml` `lint-guard` feladatát. Az `omniroute-113`
   `MemoryHigh=4G` beállítással rendelkezett 2026-10-18-ig — a promptfoo-build ott 54 percen át
   memóriavisszanyeréssel küszködött; a 8 GB megszünteti a fojtást.
-- **Szándékosan kevesebb listener.** Négy OmniRoute-egységet letiltottunk 2026-08-29-én — minden
+- **Szándékosan kevesebb listener.** Négy 67router-egységet letiltottunk 2026-08-29-én — minden
   további listener egy újabb fogyasztója a fenti memóriakeretnek. A janitor felső korlátja 6
   (`MAX_ACTIVE_RUNNERS=6` a cronban): a gépen lévő összes `Runner.Listener` példányt számolja,
   az OmniHeuris és az OmniMind pedig további kettőt ad a mi négy példányunkhoz.

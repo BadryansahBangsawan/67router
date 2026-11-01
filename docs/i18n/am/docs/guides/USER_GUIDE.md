@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-አቅራቢዎችን ለማዋቀር፣ ጥምረቶችን ለመፍጠር፣ የCLI መሣሪያዎችን ለማቀናጀት እና OmniRouteን ለማሰማራት የተሟላ መመሪያ።
+አቅራቢዎችን ለማዋቀር፣ ጥምረቶችን ለመፍጠር፣ የCLI መሣሪያዎችን ለማቀናጀት እና 67routerን ለማሰማራት የተሟላ መመሪያ።
 
 ---
 
@@ -24,7 +24,6 @@
 - [የክህሎቶች ሥርዓት](#-skills-system)
 - [የማስታወሻ ሥርዓት](#-memory-system)
 - [Webhooks](#-webhooks)
-- [የደመና ወኪሎች](#-cloud-agents)
 - [ፕሮግራማዊ አስተዳደር](#-programmatic-management)
 - [ውስጣዊ CLI](#-internal-cli)
 - [የዴስክቶፕ መተግበሪያ (Electron)](#-desktop-application-electron)
@@ -137,12 +136,12 @@ Dashboard → Providers → Claude Codeን ያገናኙ
   cc/claude-haiku-4-5-20251001
 ```
 
-**የባለሙያ ምክር:** ለውስብስብ ተግባራት Opusን፣ ለፍጥነት Sonnetን ይጠቀሙ። OmniRoute ኮታውን በየሞዴሉ ይከታተላል!
+**የባለሙያ ምክር:** ለውስብስብ ተግባራት Opusን፣ ለፍጥነት Sonnetን ይጠቀሙ። 67router ኮታውን በየሞዴሉ ይከታተላል!
 
-በOmniRoute ሆስት ላይ ብራውዘር የለም? Claude Code በገባበት በማንኛውም ቦታ `claude setup-token`ን ያስኪዱና የአንድ ዓመቱን ቶከን በ**Setup Token** ትር ውስጥ ይለጥፉ። [Claude Codeን በsetup token መጠቀም](../providers/CLAUDE_CODE_SETUP_TOKEN.md)ን ይመልከቱ።
+በ67router ሆስት ላይ ብራውዘር የለም? Claude Code በገባበት በማንኛውም ቦታ `claude setup-token`ን ያስኪዱና የአንድ ዓመቱን ቶከን በ**Setup Token** ትር ውስጥ ይለጥፉ። [Claude Codeን በsetup token መጠቀም](../providers/CLAUDE_CODE_SETUP_TOKEN.md)ን ይመልከቱ።
 
 ከClaude እና Claude Code ጋር ተኳሃኝ የሆኑ መስመሮች ለOpus እና Sonnet
-ሞዴሎች የ`max` የማሰብ ጥረትን እንዳለ ያቆያሉ። Haiku ሞዴሎች የ`max` ጥረት ደረጃን አይቀበሉም፤ ስለዚህ OmniRoute
+ሞዴሎች የ`max` የማሰብ ጥረትን እንዳለ ያቆያሉ። Haiku ሞዴሎች የ`max` ጥረት ደረጃን አይቀበሉም፤ ስለዚህ 67router
 ጥያቄውን ወደ ላይኛው አቅራቢ ከመላኩ በፊት ወደ ከፍተኛ የማሰብ በጀት ዝቅ ያደርገዋል።
 
 #### OpenAI Codex (Plus/Pro)
@@ -264,7 +263,7 @@ Dashboard → Kiroን ያገናኙ → AWS Builder ID ወይም Google/GitHub �
 
 ### Cursor IDE
 
-**Cursorን እንደ OmniRoute ደንበኛ መጠቀም** (የCursor ውይይትን በOmniRoute በኩል ማስተላለፍ)፦
+**Cursorን እንደ 67router ደንበኛ መጠቀም** (የCursor ውይይትን በ67router በኩል ማስተላለፍ)፦
 
 ```
 ቅንብሮች → ሞዴሎች → የላቀ፦
@@ -273,7 +272,7 @@ Dashboard → Kiroን ያገናኙ → AWS Builder ID ወይም Google/GitHub �
   ሞዴል፦ cc/claude-opus-4-7
 ```
 
-**OmniRouteን እንደ Cursor አቅራቢ መጠቀም** (OmniRoute ወደላይ ያለውን Cursor ይጠራል)፦
+**67routerን እንደ Cursor አቅራቢ መጠቀም** (67router ወደላይ ያለውን Cursor ይጠራል)፦
 **ዳሽቦርድ → አቅራቢዎች → Cursor → በCursor ግባ** የሚለው ይመረጣል። በDocker ውስጥ
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md)ን ይመልከቱ።
 
@@ -360,7 +359,7 @@ CLIው `.env`ን ከ`~/.omniroute/.env` ወይም `./.env` በራስ-ሰር ይ�
 
 ### የማሳወቂያ ሳጥን ሁነታ
 
-OmniRouteን በስርዓቱ የማሳወቂያ ሳጥን ውስጥ ያስጀምሩ፦
+67routerን በስርዓቱ የማሳወቂያ ሳጥን ውስጥ ያስጀምሩ፦
 
 ```bash
 omniroute serve --tray
@@ -377,7 +376,7 @@ omniroute serve --tray
 - ዳሽቦርዱን ይክፈቱ።
 - `/dashboard/logs`ን ይክፈቱ።
 - ራስ-ሰር ማስጀመርን ይቀይሩ።
-- OmniRouteን ያቁሙ።
+- 67routerን ያቁሙ።
 
 `--tray`ን ከእነዚህ አማራጮች ጋር አያጣምሩ፦
 
@@ -403,14 +402,14 @@ omniroute autostart disable
 
 ### ማራገፍ
 
-ከአሁን በኋላ OmniRoute በማያስፈልግዎት ጊዜ፣ ሙሉ በሙሉ ለማስወገድ ሁለት ፈጣን ስክሪፕቶችን አቅርበናል፦
+ከአሁን በኋላ 67router በማያስፈልግዎት ጊዜ፣ ሙሉ በሙሉ ለማስወገድ ሁለት ፈጣን ስክሪፕቶችን አቅርበናል፦
 
 | ትዕዛዝ                     | ድርጊት                                                                          |
 | ------------------------ | ----------------------------------------------------------------------------- |
 | `npm run uninstall`      | የስርዓት መተግበሪያውን ያስወግዳል፣ ነገር ግን በ`~/.omniroute` ውስጥ **የውሂብ ጎታዎንና ውቅሮችዎን ያቆያል**። |
 | `npm run uninstall:full` | መተግበሪያውን ያስወግዳል፣ እንዲሁም **ሁሉንም ውቅሮች፣ ቁልፎች እና የውሂብ ጎታዎች እስከመጨረሻው ይሰርዛል**።       |
 
-> ማስታወሻ፦ እነዚህን ትዕዛዞች ለማስኬድ፣ ወደ OmniRoute ፕሮጀክት አቃፊ ይሂዱ (clone ካደረጉት) እና ያስኪዷቸው። እንደ አማራጭ፣ በአጠቃላይ የተጫነ ከሆነ፣ `npm uninstall -g omniroute`ን ብቻ ማስኬድ ይችላሉ።
+> ማስታወሻ፦ እነዚህን ትዕዛዞች ለማስኬድ፣ ወደ 67router ፕሮጀክት አቃፊ ይሂዱ (clone ካደረጉት) እና ያስኪዷቸው። እንደ አማራጭ፣ በአጠቃላይ የተጫነ ከሆነ፣ `npm uninstall -g omniroute`ን ብቻ ማስኬድ ይችላሉ።
 
 ### በVPS ላይ ማሰማራት
 
@@ -482,7 +481,7 @@ docker run -d --name omniroute -p 20128:20128 --env-file ./.env -v omniroute-dat
 
 ### Void Linux (xbps-src)
 
-Void Linux ተጠቃሚዎች `xbps-src` የመስቀለኛ-ማጠናቀር ማዕቀፍን በመጠቀም OmniRouteን በስርዓቱ ቤተኛ መንገድ ማሸግ እና መጫን ይችላሉ። ይህም የNode.js ራሱን የቻለ ግንባታን ከሚያስፈልጉት `better-sqlite3` ቤተኛ bindings ጋር በራስ-ሰር ያከናውናል።
+Void Linux ተጠቃሚዎች `xbps-src` የመስቀለኛ-ማጠናቀር ማዕቀፍን በመጠቀም 67routerን በስርዓቱ ቤተኛ መንገድ ማሸግ እና መጫን ይችላሉ። ይህም የNode.js ራሱን የቻለ ግንባታን ከሚያስፈልጉት `better-sqlite3` ቤተኛ bindings ጋር በራስ-ሰር ያከናውናል።
 
 <details>
 <summary><b>የxbps-src አብነትን ይመልከቱ</b></summary>
@@ -662,7 +661,7 @@ post_install() {
 
 **ሌሎች ተኳኋኝ አቅራቢዎች** (የተመረጡ)፦ `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (በ`aws-bedrock` በኩል), `azure-ai`, `openrouter` (የማለፊያ ካታሎግ), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`። እያንዳንዱ በ`providerRegistry.ts` ውስጥ የራሱን የሞዴል ዝርዝር ይይዛል፣ እና አቅራቢው `/models` የመዳረሻ ነጥብ ሲያቀርብ በራስ-ሰር ሊመሳሰል ይችላል።
 
-**ስለ ሞዴል መለያዎች ማስታወሻ፦** OmniRoute የአቅራቢውን ቤተኛ መለያዎች (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) ይጠቀማል። የላይኛው ምንጭ API የሚጠብቃቸው በዚህ መልኩ ስለሆነ፣ አንዳንድ መለያዎች ነጥብ ያላቸውን ስሪቶች ያካትታሉ። አንድ ሞዴል ከላይ ካልተዘረዘረ፣ ተገኝነቱን ለማረጋገጥ `omniroute models --search <term>`ን ያሂዱ ወይም `GET /api/models/catalog`ን ይጠቀሙ።
+**ስለ ሞዴል መለያዎች ማስታወሻ፦** 67router የአቅራቢውን ቤተኛ መለያዎች (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`) ይጠቀማል። የላይኛው ምንጭ API የሚጠብቃቸው በዚህ መልኩ ስለሆነ፣ አንዳንድ መለያዎች ነጥብ ያላቸውን ስሪቶች ያካትታሉ። አንድ ሞዴል ከላይ ካልተዘረዘረ፣ ተገኝነቱን ለማረጋገጥ `omniroute models --search <term>`ን ያሂዱ ወይም `GET /api/models/catalog`ን ይጠቀሙ።
 
 </details>
 
@@ -729,9 +728,9 @@ prefix: "<prefix>" የተያዘ የአቅራቢ ቅድመ ቅጥያ ነው — �
 የተያዘ መሆኑን ያረጋግጡ፦ ይህ ደንብ ከመኖሩ በፊት የተቀመጡ ኖዶች አሁንም ተከማችተዋል፣
 ነገር ግን ቅድመ ቅጥያቸው ወደ አብሮ የተሰራው አቅራቢ ይዞራል። ኖዱን ያርትዑ እና አዲስ ቅድመ ቅጥያ ይስጡት።
 
-### የOmniRoute አቻዎችን ማገናኘት
+### የ67router አቻዎችን ማገናኘት
 
-ሌላ OmniRoute ጌትዌይ እንደ **ብጁ ከ-OpenAI ጋር ተኳሃኝ** አቅራቢ ሊታከል ይችላል። የአቻውን
+ሌላ 67router ጌትዌይ እንደ **ብጁ ከ-OpenAI ጋር ተኳሃኝ** አቅራቢ ሊታከል ይችላል። የአቻውን
 የ`/v1` መሠረታዊ URL እና በዚያ አቻ የተሰጠ የተለየ፣ አነስተኛ ፈቃድ ያለው የ-API ቁልፍ ይጠቀሙ።
 
 ለተደጋጋሚ ወይም ባለብዙ-ደረጃ ሰንሰለቶች፣ በእያንዳንዱ ጌትዌይ ላይ በምርጫ የሚነቃውን የዙር መከላከያ ያንቁ፦
@@ -757,7 +756,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 የአቻ ማገናኘት የውሂብ ጎታ ማባዛት ወይም የአስተናጋጅ ውድቀት መተካት አይደለም። እያንዳንዱ ጌትዌይ የራሱን
 SQLite ሁኔታ፣ መሸጎጫዎች፣ የፍጥነት ቆጣሪዎች እና ክፍለ ጊዜዎች ለብቻው ይይዛል። ለንቁ/ተጠባባቂ ወይም ንቁ/ንቁ
 ተገኝነት ጤናው የሚፈተሽ ተገላቢጦሽ ፕሮክሲ ወይም የደንበኛ ውድቀት መተካትን ይጠቀሙ፣ እና አንድ SQLite የውሂብ ጎታ
-በበርካታ እየሰሩ ያሉ OmniRoute instances ላይ በፍጹም አይጫኑ።
+በበርካታ እየሰሩ ያሉ 67router instances ላይ በፍጹም አይጫኑ።
 
 ### የተወሰኑ የአቅራቢ መስመሮች
 
@@ -808,7 +807,7 @@ curl http://localhost:20128/api/models/catalog
 - ለDocker እና ሌሎች በራስ የሚስተናገዱ ማሰማራቶች በ**Dashboard → Endpoints** ውስጥ ይገኛል
 - ወደ አሁናዊው OpenAI-ተኳሃኝ `/v1` endpointዎ የሚያስተላልፍ ጊዜያዊ `https://*.trycloudflare.com` URL ይፈጥራል
 - በመጀመሪያ ማንቃት `cloudflared`ን የሚጭነው ሲያስፈልግ ብቻ ነው፤ ቀጣይ ዳግም ማስጀመሮች ያንኑ የሚተዳደር binary እንደገና ይጠቀማሉ
-- OmniRoute ወይም container ዳግም ከተጀመረ በኋላ Quick Tunnels በራስ-ሰር አይመለሱም፤ በሚያስፈልግበት ጊዜ ከdashboard እንደገና ያንቋቸው
+- 67router ወይም container ዳግም ከተጀመረ በኋላ Quick Tunnels በራስ-ሰር አይመለሱም፤ በሚያስፈልግበት ጊዜ ከdashboard እንደገና ያንቋቸው
 - Tunnel URLዎች ጊዜያዊ ሲሆኑ፣ tunnelን ባቆሙ/ባስጀመሩ ቁጥር ይቀየራሉ
 - በተገደቡ containerዎች ውስጥ የሚረብሹ የQUIC UDP buffer ማስጠንቀቂያዎችን ለማስወገድ፣ የሚተዳደሩ Quick Tunnels በነባሪ HTTP/2 transport ይጠቀማሉ
 - የሚተዳደረውን transport ምርጫ መቀየር ከፈለጉ `CLOUDFLARED_PROTOCOL=quic` ወይም `auto` ያዘጋጁ
@@ -825,7 +824,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### የተርጓሚ መሞከሪያ
 
-በ**Dashboard → Translator** በኩል ይድረሱበት። OmniRoute በአቅራቢዎች መካከል የAPI ጥያቄዎችን እንዴት እንደሚተረጉም ስህተት ይፈልጉበት እና በእይታ ይመልከቱ።
+በ**Dashboard → Translator** በኩል ይድረሱበት። 67router በአቅራቢዎች መካከል የAPI ጥያቄዎችን እንዴት እንደሚተረጉም ስህተት ይፈልጉበት እና በእይታ ይመልከቱ።
 
 | ሁነታ           | ዓላማ                                                          |
 | ------------- | ------------------------------------------------------------ |
@@ -878,7 +877,7 @@ curl http://localhost:20128/api/models/catalog
 X-Session-Id: your-session-key
 ```
 
-OmniRoute `x_session_id`ንም ይቀበላል እና ውጤታማውን session key በ`X-OmniRoute-Session-Id` ይመልሳል።
+67router `x_session_id`ንም ይቀበላል እና ውጤታማውን session key በ`X-OmniRoute-Session-Id` ይመልሳል።
 
 Nginxን ከተጠቀሙ እና underscore-ቅርጽ ያላቸውን headerዎች ከላኩ፣ የሚከተለውን ያንቁ፦
 
@@ -912,7 +911,7 @@ Chain: production-fallback
 
 ### የተለመዱ የአቅራቢ ጥምረቶች እና የማዞሪያ ንድፎች
 
-በOmniRoute ውስጥ በርካታ አቅራቢዎችን ለማጣመር እና በመካከላቸው ለማዞር የሚያገለግሉ ምሳሌ ንድፎች እነሆ፦
+በ67router ውስጥ በርካታ አቅራቢዎችን ለማጣመር እና በመካከላቸው ለማዞር የሚያገለግሉ ምሳሌ ንድፎች እነሆ፦
 
 #### 1. የCoding Agent Combo፦ ከወጪ/ፍጥነት Fallback ጋር የላቀ አመክንዮ
 
@@ -973,7 +972,7 @@ omniroute combo create free-stack \
 
 በ**Dashboard → Settings → Resilience** በኩል ያዋቅሩ።
 
-OmniRoute በአቅራቢ ደረጃ የመቋቋም ችሎታን በአምስት ክፍሎች ይተገብራል፦
+67router በአቅራቢ ደረጃ የመቋቋም ችሎታን በአምስት ክፍሎች ይተገብራል፦
 
 1. **የጥያቄ ወረፋ እና ፍጥነት ቁጥጥር** — በስርዓት ደረጃ የጥያቄ ፍሰትን መቅረጽ፦
    - **ጥያቄዎች በደቂቃ (RPM)** — ለእያንዳንዱ መለያ በደቂቃ የሚፈቀደው ከፍተኛው የጥያቄ ብዛት
@@ -998,7 +997,7 @@ OmniRoute በአቅራቢ ደረጃ የመቋቋም ችሎታን በአምስት
 
    የአቅራቢው ብሬከር የአሂድ ጊዜ ሁኔታ በ**Dashboard → Health** ላይ ብቻ ይታያል።
 
-4. **የማቀዝቀዣ ጊዜን ጠብቅ** — ሁሉም እጩ ግንኙነቶች በማቀዝቀዝ ላይ ከሆኑ፣ OmniRoute ቀድሞ የሚያበቃውን የማቀዝቀዣ ጊዜ ጠብቆ ያንኑ የደንበኛ ጥያቄ በራስ-ሰር እንደገና ሊሞክር ይችላል።
+4. **የማቀዝቀዣ ጊዜን ጠብቅ** — ሁሉም እጩ ግንኙነቶች በማቀዝቀዝ ላይ ከሆኑ፣ 67router ቀድሞ የሚያበቃውን የማቀዝቀዣ ጊዜ ጠብቆ ያንኑ የደንበኛ ጥያቄ በራስ-ሰር እንደገና ሊሞክር ይችላል።
 
 5. **የፍጥነት ገደብ ራስ-ሰር ማወቂያ** — የላይኛው ስርዓት አቅራቢዎች ግልጽ የመጠበቂያ ጊዜ መስኮቶችን ሲመልሱ፣ ቅንብሩ ከነቃ እነዚያ ፍንጮች ከአካባቢያዊው የግንኙነት ማቀዝቀዣ ጊዜ ቅድሚያ ያገኛሉ።
 
@@ -1032,7 +1031,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **የአጠቃቀም ሁኔታዎች፦**
 
-- OmniRouteን በማሽኖች መካከል ማዛወር
+- 67routerን በማሽኖች መካከል ማዛወር
 - ከአደጋ በኋላ መልሶ ለማግኘት ውጫዊ ምትኬዎችን መፍጠር
 - ቅንብሮችን በቡድን አባላት መካከል ማጋራት (ሁሉንም ወደ ውጭ ላክ → ማህደሩን አጋራ)
 
@@ -1084,7 +1083,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### የድምፅ ቅጂ ወደ ጽሑፍ መቀየር
 
-OmniRoute ከOpenAI ጋር በሚጣጣም endpoint በኩል የድምፅ ቅጂን ወደ ጽሑፍ መቀየርን ይደግፋል፦
+67router ከOpenAI ጋር በሚጣጣም endpoint በኩል የድምፅ ቅጂን ወደ ጽሑፍ መቀየርን ይደግፋል፦
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1155,7 +1154,7 @@ OpenRouter ብቻ ከተዋቀረ `openrouter/deepgram/nova-3`ን ይጠቀሙ�
 እሱን ማንቃት የተዋቀረ hedging፣ ትንበያዊ የTTFT መዝለሎች እና ቅድመ-እርምጃ የመጠባበቂያ መጭመቅ፣ የማዘዋወር/የጥያቄ ትክክለኛነትን
 በዝቅተኛ የጭራ መዘግየት እንዲለውጡ ያስችላቸዋል።
 
-የላይኛ አቅራቢዎች ጥብቅ የ`max_tokens` / `maxOutputTokens` ገደቦችን ሲጠይቁ **Reasoning token buffer**ን ያሰናክሉ። ሲነቃ፣ ጥምር ማዘዋወር የሚታወቅ የውጤት ገደብ ላላቸው ሞዴሎች ብቻ ለ reasoning-model ተጨማሪ ክፍተት ይጨምራል፤ ደህንነቱ የተጠበቀው የቋት እሴት ከዚያ ገደብ በላይ ከሆነም የደንበኛውን የቶከን ገደብ ሳይቀይር ይተወዋል። የደንበኛው ገደብ አስቀድሞ ከሚታወቅ ገደብ በላይ ከሆነ፣ OmniRoute ጥያቄውን ወደ ላይኛው አቅራቢ ከመላኩ በፊት ወደዚያ ገደብ ዝቅ አድርጎ ይወስነዋል።
+የላይኛ አቅራቢዎች ጥብቅ የ`max_tokens` / `maxOutputTokens` ገደቦችን ሲጠይቁ **Reasoning token buffer**ን ያሰናክሉ። ሲነቃ፣ ጥምር ማዘዋወር የሚታወቅ የውጤት ገደብ ላላቸው ሞዴሎች ብቻ ለ reasoning-model ተጨማሪ ክፍተት ይጨምራል፤ ደህንነቱ የተጠበቀው የቋት እሴት ከዚያ ገደብ በላይ ከሆነም የደንበኛውን የቶከን ገደብ ሳይቀይር ይተወዋል። የደንበኛው ገደብ አስቀድሞ ከሚታወቅ ገደብ በላይ ከሆነ፣ 67router ጥያቄውን ወደ ላይኛው አቅራቢ ከመላኩ በፊት ወደዚያ ገደብ ዝቅ አድርጎ ይወስነዋል።
 
 ---
 
@@ -1178,7 +1177,7 @@ OpenRouter ብቻ ከተዋቀረ `openrouter/deepgram/nova-3`ን ይጠቀሙ�
 
 ## 🤖 ራስ-ሰር ማዘዋወር (ያለ ውቅር)
 
-OmniRoute በሁሉም የተገናኙ አቅራቢዎች ውስጥ ለእያንዳንዱ ጥያቄ ምርጡን ሞዴል የሚመርጥ **በውጤት-ነጥብ የሚመራ ራስ-ሰር ማዘዋወሪያ** ይዞ ይመጣል — የሚንከባከቡት ጥምረት የለም። ጥያቄውን ከ`auto/*` ቅድመ-ቅጥያዎች በአንዱ ብቻ ይላኩ፤ OmniRoute በቅጽበት ምናባዊ ጥምረት ይገነባል፣ እጩዎችንም በመዘግየት፣ ወጪ፣ የስኬት መጠን፣ ከዐውዱ ጋር መጣጣም፣ ሞዴሉ ለተግባሩ ያለው ብቃት፣ የቅርብ ጊዜ ውድቀቶች፣ ኮታ እና የወረዳ-ቆራጭ ሁኔታ መሠረት ይመዝናል።
+67router በሁሉም የተገናኙ አቅራቢዎች ውስጥ ለእያንዳንዱ ጥያቄ ምርጡን ሞዴል የሚመርጥ **በውጤት-ነጥብ የሚመራ ራስ-ሰር ማዘዋወሪያ** ይዞ ይመጣል — የሚንከባከቡት ጥምረት የለም። ጥያቄውን ከ`auto/*` ቅድመ-ቅጥያዎች በአንዱ ብቻ ይላኩ፤ 67router በቅጽበት ምናባዊ ጥምረት ይገነባል፣ እጩዎችንም በመዘግየት፣ ወጪ፣ የስኬት መጠን፣ ከዐውዱ ጋር መጣጣም፣ ሞዴሉ ለተግባሩ ያለው ብቃት፣ የቅርብ ጊዜ ውድቀቶች፣ ኮታ እና የወረዳ-ቆራጭ ሁኔታ መሠረት ይመዝናል።
 
 | ቅድመ-ቅጥያ        | የሚያመቻቸው                                                                    |
 | -------------- | -------------------------------------------------------------------------- |
@@ -1209,7 +1208,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 የMCP & A2A ውህደት
 
-OmniRoute **የMCP አገልጋይ** (Model Context Protocol) እና **የA2A አገልጋይ** (Agent-to-Agent JSON-RPC 2.0) ነው። ማንኛውም ከMCP ጋር ተኳኋኝ የሆነ IDE ወይም የወኪል አስተናጋጅ የOmniRoute መሣሪያዎችን በቀጥታ ሊጠራ ይችላል — ተጨማሪ መጠቅለያ አያስፈልግም።
+67router **የMCP አገልጋይ** (Model Context Protocol) እና **የA2A አገልጋይ** (Agent-to-Agent JSON-RPC 2.0) ነው። ማንኛውም ከMCP ጋር ተኳኋኝ የሆነ IDE ወይም የወኪል አስተናጋጅ የ67router መሣሪያዎችን በቀጥታ ሊጠራ ይችላል — ተጨማሪ መጠቅለያ አያስፈልግም።
 
 ### የMCP ማጓጓዣዎች
 
@@ -1238,17 +1237,14 @@ OmniRoute **የMCP አገልጋይ** (Model Context Protocol) እና **የA2A �
 
 ### የፈቃድ ወሰኖች
 
-MCP በአሁኑ ጊዜ 32 ስያሜ ያላቸው የፈቃድ ወሰኖችን ይገልጻል። እያንዳንዱ Bearer ቁልፍ ለተወሰኑ የፈቃድ ወሰኖች ብቻ ሊገደብ ይችላል — ለዋናው የፈቃድ ወሰንና የመሣሪያ ዝርዝር [MCP-SERVER.md](../frameworks/MCP-SERVER.md)ን፣ ለJSON-RPC መርሐግብር ደግሞ [A2A-SERVER.md](../frameworks/A2A-SERVER.md)ን ይመልከቱ።
-
 ---
 
 ## 🧠 የክህሎት ስርዓት
 
-OmniRoute ኤጀንቶች እና የA2A መገናኛ ነጥብ ለተወሰኑ ዘርፎች የተዘጋጁ ሂደቶችን (ለምሳሌ፦ `code-review`፣ `summarize`፣ `extract-facts`፣ `web-research`) ማስኬድ እንዲችሉ ሊስፋፋ የሚችል **የክህሎት ማዕቀፍ** (`src/lib/skills/`) ያቀርባል።
+67router ኤጀንቶች እና የA2A መገናኛ ነጥብ ለተወሰኑ ዘርፎች የተዘጋጁ ሂደቶችን (ለምሳሌ፦ `code-review`፣ `summarize`፣ `extract-facts`፣ `web-research`) ማስኬድ እንዲችሉ ሊስፋፋ የሚችል **የክህሎት ማዕቀፍ** (`src/lib/skills/`) ያቀርባል።
 
 - **የገበያ ቦታ በይነገጽ** — ክህሎቶችን ከ**Dashboard → Skills** ያስሱ እና ይጫኑ
 - **የየቁልፍ ወሰኖች** — የትኞቹ API ቁልፎች የትኞቹን ክህሎቶች መጥራት እንደሚችሉ ይገድቡ
-- **ብጁ ክህሎቶች** — የTypeScript ፋይልን በ`src/lib/a2a/skills/` ውስጥ ያስቀምጡ፣ ይመዝግቡት፣ ከዚያም ወዲያውኑ በA2A በኩል ሊጠራ ይችላል
 
 ሙሉ ማጣቀሻ፦ [SKILLS.md](../frameworks/SKILLS.md)።
 
@@ -1256,7 +1252,7 @@ OmniRoute ኤጀንቶች እና የA2A መገናኛ ነጥብ ለተወሰኑ �
 
 ## 💾 የማስታወሻ ስርዓት
 
-OmniRoute በድብልቅ ሰርስሮ ማውጣት አማካኝነት **የረጅም ጊዜ የውይይት ማስታወሻን** በቋሚነት ያከማቻል፦
+67router በድብልቅ ሰርስሮ ማውጣት አማካኝነት **የረጅም ጊዜ የውይይት ማስታወሻን** በቋሚነት ያከማቻል፦
 
 - **SQLite FTS5** ባለፉ የውይይት ተራዎች ውስጥ በቁልፍ ቃል ለመፈለግ
 - **Qdrant vector store** (አማራጭ) ለትርጉማዊ ማስታወስ
@@ -1269,7 +1265,7 @@ OmniRoute በድብልቅ ሰርስሮ ማውጣት አማካኝነት **የረ�
 
 ## 🔔 Webhooks
 
-ለቅጽበታዊ ክትትል እና ራስ-ሰር አሰራር የOmniRoute ክስተቶችን ይመዝገቡ።
+ለቅጽበታዊ ክትትል እና ራስ-ሰር አሰራር የ67router ክስተቶችን ይመዝገቡ።
 
 - በ**Dashboard → Webhooks** ውስጥ የመድረሻ URL እና የHMAC ፊርማ ሚስጥር በመጠቀም webhook ይፍጠሩ
 - የሚገኙ ክስተቶች፦ `request.completed`፣ `request.failed`፣ `provider.unavailable`፣ `budget.exceeded`፣ `combo.switched`፣ `circuit_breaker.opened`፣ `circuit_breaker.closed`
@@ -1280,21 +1276,9 @@ OmniRoute በድብልቅ ሰርስሮ ማውጣት አማካኝነት **የረ�
 
 ---
 
-## ☁️ የደመና ኤጀንቶች
-
-OmniRoute ረጅም ጊዜ የሚወስዱ ተግባራትን የአካባቢዎን ማስተላለፊያ ከሚያስተዳድረው ተመሳሳይ ዳሽቦርድ ለመላክ እንዲችሉ ከደመና የኮድ ኤጀንቶች (**OpenAI Codex Cloud**፣ **Devin**፣ **Jules**፣ **Antigravity**) ጋር ይዋሃዳል።
-
-- ተግባራትን በ**Dashboard → Cloud Agents** ውስጥ ወይም በ`POST /api/v1/agents/tasks` በኩል ይፍጠሩ
-- የእያንዳንዱን ተግባር ሁኔታ፣ ምዝግቦች እና ውጤቶች ይከታተሉ
-- ለእያንዳንዱ አቅራቢ የራስዎን API ቁልፍ ይጠቀሙ — የመግቢያ ማስረጃዎች ከOmniRoute አብነት ፈጽሞ አይወጡም
-
-ሙሉ ማጣቀሻ፦ [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)።
-
----
-
 ## 🛠️ ፕሮግራማዊ አስተዳደር
 
-**የ`manage` scope ያለውን Bearer key** በመጠቀም እያንዳንዱን የOmniRoute ሀብት (providers፣ combos፣ keys፣ settings) በHTTP ማስተዳደር ይችላሉ።
+**የ`manage` scope ያለውን Bearer key** በመጠቀም እያንዳንዱን የ67router ሀብት (providers፣ combos፣ keys፣ settings) በHTTP ማስተዳደር ይችላሉ።
 
 Keyውን በ**Dashboard → API Keys → New Key → Scope: manage** ውስጥ ይፍጠሩ፣ ከዚያ፦
 
@@ -1327,7 +1311,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 ውስጣዊ CLI
 
-OmniRoute ለማዋቀር፣ ለምርመራ እና ለሂደት ጊዜ ቁጥጥር የውስጥ CLI (`omniroute …`) ይዞ ይመጣል። ይህ የሶስተኛ ወገን CLIዎችን (Claude Code, Cursor, Codex, Cline, …) ከOmniRoute ጋር እንዲገናኙ ከሚያዋቅረው **በዳሽቦርዱ ውስጥ ካለው "CLI መሣሪያዎች" ገጽ የተለየ ነው**።
+67router ለማዋቀር፣ ለምርመራ እና ለሂደት ጊዜ ቁጥጥር የውስጥ CLI (`omniroute …`) ይዞ ይመጣል። ይህ የሶስተኛ ወገን CLIዎችን (Claude Code, Cursor, Codex, Cline, …) ከ67router ጋር እንዲገናኙ ከሚያዋቅረው **በዳሽቦርዱ ውስጥ ካለው "CLI መሣሪያዎች" ገጽ የተለየ ነው**።
 
 ```bash
 omniroute setup                    # መስተጋብራዊ ማዋቀሪያ (የይለፍ ቃል፣ አቅራቢዎች፣ ጥምረቶች)
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # ከቅጽበታዊ ቅጂ መልስ
 omniroute health                   # ዝርዝር የጤና ሁኔታ (ሰባሪዎች፣ መሸጎጫ፣ ማህደረ ትውስታ)
 omniroute quota                    # የአቅራቢ ኮታ አጠቃቀም
 omniroute mcp status               # የMCP አገልጋይ ሁኔታ
-omniroute a2a status               # የA2A አገልጋይ ሁኔታ
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok ዋሻዎች
 omniroute reset-password           # የአስተዳዳሪውን የይለፍ ቃል ዳግም አስጀምር
 omniroute --mcp                    # የMCP አገልጋይን በstdio ላይ አስጀምር
@@ -1358,7 +1341,7 @@ omniroute --port 3000              # አገልጋዩን በብጁ ወደብ ላ�
 
 ## 🖥️ የዴስክቶፕ መተግበሪያ (Electron)
 
-OmniRoute ለWindows፣ macOS እና Linux እንደ ቤተኛ የዴስክቶፕ መተግበሪያ ይገኛል።
+67router ለWindows፣ macOS እና Linux እንደ ቤተኛ የዴስክቶፕ መተግበሪያ ይገኛል።
 
 ### መጫን
 

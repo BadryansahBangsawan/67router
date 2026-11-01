@@ -4,11 +4,11 @@
 
 ---
 
-„OmniRoute“ platinama kaip visiškai įdiegiama progresyvioji žiniatinklio programa. Atidarę valdymo skydą bet kurioje mobiliojoje naršyklėje — „Android“ („Chrome“) arba „iOS“ („Safari“) — galite pasirinkti „Pridėti prie pradžios ekrano“ ir naudotis į savąją programėlę panašia patirtimi be programėlių parduotuvės.
+„67router“ platinama kaip visiškai įdiegiama progresyvioji žiniatinklio programa. Atidarę valdymo skydą bet kurioje mobiliojoje naršyklėje — „Android“ („Chrome“) arba „iOS“ („Safari“) — galite pasirinkti „Pridėti prie pradžios ekrano“ ir naudotis į savąją programėlę panašia patirtimi be programėlių parduotuvės.
 
 ## Kas yra PWA?
 
-Progresyvioji žiniatinklio programa „OmniRoute“ žiniatinklio valdymo skydą paverčia priemone, kuri atrodo ir veikia kaip savoji mobilioji programėlė. Įdiegta ji:
+Progresyvioji žiniatinklio programa „67router“ žiniatinklio valdymo skydą paverčia priemone, kuri atrodo ir veikia kaip savoji mobilioji programėlė. Įdiegta ji:
 
 - Paleidžiama iš pradžios ekrano naudojant atskirą piktogramą
 - Atidaroma visame ekrane — be naršyklės adreso juostos ar kortelių sąsajos
@@ -20,26 +20,26 @@ Progresyvioji žiniatinklio programa „OmniRoute“ žiniatinklio valdymo skyd�
 
 ### Android (Chrome)
 
-1. Atidarykite „OmniRoute“ valdymo skydą naršyklėje „Chrome“: `http://YOUR_IP:20128`
-2. „Chrome“ automatiškai parodys reklamjuostę **„Pridėti „OmniRoute“ prie pradžios ekrano“**, arba:
+1. Atidarykite „67router“ valdymo skydą naršyklėje „Chrome“: `http://YOUR_IP:20128`
+2. „Chrome“ automatiškai parodys reklamjuostę **„Pridėti „67router“ prie pradžios ekrano“**, arba:
    - Bakstelėkite meniu **⋮** (tris taškus) → **„Pridėti prie pradžios ekrano“** arba **„Įdiegti programėlę“**
 3. Patvirtinkite raginimą
-4. „OmniRoute“ pradžios ekrane rodoma kaip atskira programėlė
+4. „67router“ pradžios ekrane rodoma kaip atskira programėlė
 
 ### iOS (Safari)
 
-1. Atidarykite „OmniRoute“ valdymo skydą naršyklėje „Safari“: `http://YOUR_IP:20128`
+1. Atidarykite „67router“ valdymo skydą naršyklėje „Safari“: `http://YOUR_IP:20128`
 2. Bakstelėkite mygtuką **Bendrinti** (langelį su rodykle)
 3. Slinkite žemyn ir bakstelėkite **„Pridėti prie pradžios ekrano“**
-4. Suteikite pavadinimą (numatytasis — „OmniRoute“) ir bakstelėkite **Pridėti**
-5. „OmniRoute“ su programėlės piktograma rodoma pradžios ekrane
+4. Suteikite pavadinimą (numatytasis — „67router“) ir bakstelėkite **Pridėti**
+5. „67router“ su programėlės piktograma rodoma pradžios ekrane
 
 ### Kompiuteris (Chrome / Edge)
 
-1. Atidarykite „OmniRoute“ valdymo skydą
-2. Adreso juostoje spustelėkite **diegimo piktogramą** (arba ⋮ → „Įdiegti „OmniRoute“...“)
+1. Atidarykite „67router“ valdymo skydą
+2. Adreso juostoje spustelėkite **diegimo piktogramą** (arba ⋮ → „Įdiegti „67router“...“)
 3. Patvirtinkite raginimą
-4. „OmniRoute“ atidaroma kaip atskiras langas — be kortelių ir adreso juostos
+4. „67router“ atidaroma kaip atskiras langas — be kortelių ir adreso juostos
 
 ## Funkcijos
 
@@ -49,15 +49,15 @@ Manifestas sukonfigūruotas naudojant `display: "fullscreen"`, todėl įdiegta p
 
 ### Veikimas neprisijungus
 
-„OmniRoute“ turi tarnybinę programą (`sw.js`), kuri išmaniai valdo podėlį:
+„67router“ turi tarnybinę programą (`sw.js`), kuri išmaniai valdo podėlį:
 
-| Ištekliaus tipas                                                  | Strategija                             | Veikimas                                                                                                               |
-| ----------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Programėlės karkasas**                                          | Pirmiausia podėlis                     | `/`, `/offline`, manifestas ir piktogramos iš anksto įrašomi į podėlį diegiant                                         |
-| **Statiniai ištekliai** (CSS, JS, vaizdai, šriftai)               | Pirmiausia tinklas, atsarginis podėlis | Iš tinklo gaunama naujausia versija; neprisijungus naudojamas podėlis                                                  |
-| **Next.js paketai** (`/_next/`)                                   | Pirmiausia tinklas, atnaujinant podėlį | Gaunama iš tinklo ir atnaujinamas podėlis; neprisijungus pateikiama podėlyje esanti versija                            |
-| **Naršymo užklausos**                                             | Apeinama (niekada neperimama)          | Naršyklė valdo HTTP/3→HTTP/2 atsarginį perjungimą; dėl neveikiančio QUIC lizdo neturi būti grąžinta `Response.error()` |
-| **API / valdymo skydo maršrutai** (`/api/`, `/a2a`, `/dashboard`) | Apeinama (niekada nelaikoma podėlyje)  | Visada siunčiama tiesiai į serverį — tarnybinė programa niekada neperima                                               |
+| Ištekliaus tipas                                          | Strategija                             | Veikimas                                                                                                               |
+| --------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Programėlės karkasas**                                  | Pirmiausia podėlis                     | `/`, `/offline`, manifestas ir piktogramos iš anksto įrašomi į podėlį diegiant                                         |
+| **Statiniai ištekliai** (CSS, JS, vaizdai, šriftai)       | Pirmiausia tinklas, atsarginis podėlis | Iš tinklo gaunama naujausia versija; neprisijungus naudojamas podėlis                                                  |
+| **Next.js paketai** (`/_next/`)                           | Pirmiausia tinklas, atnaujinant podėlį | Gaunama iš tinklo ir atnaujinamas podėlis; neprisijungus pateikiama podėlyje esanti versija                            |
+| **Naršymo užklausos**                                     | Apeinama (niekada neperimama)          | Naršyklė valdo HTTP/3→HTTP/2 atsarginį perjungimą; dėl neveikiančio QUIC lizdo neturi būti grąžinta `Response.error()` |
+| **API / valdymo skydo maršrutai** (`/api/`, `/dashboard`) | Apeinama (niekada nelaikoma podėlyje)  | Visada siunčiama tiesiai į serverį — tarnybinė programa niekada neperima                                               |
 
 ### Neprisijungimo puslapis
 
@@ -70,7 +70,7 @@ Kai tinklas nepasiekiamas ir naudotojas pereina į naują puslapį, tarnybinė p
 
 ### Programėlės piktogramos
 
-„OmniRoute“ pateikia kiekvienai platformai optimizuotas piktogramas:
+„67router“ pateikia kiekvienai platformai optimizuotas piktogramas:
 
 | Failas                 | Dydis                | Naudojama                                    |
 | ---------------------- | -------------------- | -------------------------------------------- |
@@ -93,9 +93,9 @@ Sugeneruojamas „Next.js“ naudojant `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Standartinis paslaugų darbininkas (be priklausomybių nuo karkasų), turintis:
 
 ## Naudojimas su „Termux“ („Android“)
 
-Kai „OmniRoute“ paleidžiama „Android“ sistemoje per „Termux“, PWA veikia sklandžiai:
+Kai „67router“ paleidžiama „Android“ sistemoje per „Termux“, PWA veikia sklandžiai:
 
-1. Paleiskite „OmniRoute“ programoje „Termux“: `npx omniroute`
+1. Paleiskite „67router“ programoje „Termux“: `npx omniroute`
 2. Tame pačiame telefone atidarykite „Chrome“: `http://localhost:20128`
 3. Įdiekite PWA naudodami parinktį „Pridėti prie pradžios ekrano“
 4. PWA prisijungia prie vietinio „Termux“ serverio — viskas veikia pačiame įrenginyje
@@ -156,7 +156,7 @@ Kai „OmniRoute“ paleidžiama „Android“ sistemoje per „Termux“, PWA v
 
 ## Naudojimas iš kitų įrenginių
 
-Įdiekite PWA bet kuriame įrenginyje, kurio naršyklė gali pasiekti jūsų „OmniRoute“ serverį:
+Įdiekite PWA bet kuriame įrenginyje, kurio naršyklė gali pasiekti jūsų „67router“ serverį:
 
 - **Kitame telefone ar planšetiniame kompiuteryje**: eikite į `http://PHONE_IP:20128` ir įdiekite PWA
 - **Nešiojamajame kompiuteryje**: atidarykite „Chrome“ arba „Edge“ ir įdiekite ją kaip darbalaukio PWA

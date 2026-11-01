@@ -4,7 +4,7 @@
 
 ---
 
-> **Kwa ufupi**: OmniRoute hufuatilia matumizi ya tokeni ya kila ombi, huhesabu gharama, hutekeleza kikomo cha matumizi kwa kila ufunguo wa API, na huonyesha takwimu kwenye dashibodi. Mwongozo huu unaeleza jinsi yote yanavyofanya kazi.
+> **Kwa ufupi**: 67router hufuatilia matumizi ya tokeni ya kila ombi, huhesabu gharama, hutekeleza kikomo cha matumizi kwa kila ufunguo wa API, na huonyesha takwimu kwenye dashibodi. Mwongozo huu unaeleza jinsi yote yanavyofanya kazi.
 
 **Vyanzo:**
 
@@ -17,7 +17,7 @@
 
 ## Muhtasari
 
-Kila ombi linalopita kwenye OmniRoute huzalisha **rekodi ya matumizi** inayohifadhi:
+Kila ombi linalopita kwenye 67router huzalisha **rekodi ya matumizi** inayohifadhi:
 
 - **Utambulisho**: ufunguo gani wa API, mtoa huduma, modeli, mseto
 - **Tokeni**: tokeni za kidokezo, tokeni za ukamilishaji, tokeni zilizohifadhiwa kwenye kache, jumla
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Kwa watoa huduma ambao hawarudishi taarifa za matumizi (baadhi ya watoa huduma wanaotumia vidakuzi vya wavuti), OmniRoute **hukadiria** tokeni kwa kutumia kanuni ya makadirio ya `~herufi 4 kwa kila tokeni` (tazama `open-sse/services/autoCombo/pipelineRouter.ts`).
+Kwa watoa huduma ambao hawarudishi taarifa za matumizi (baadhi ya watoa huduma wanaotumia vidakuzi vya wavuti), 67router **hukadiria** tokeni kwa kutumia kanuni ya makadirio ya `~herufi 4 kwa kila tokeni` (tazama `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokeni Zilizohifadhiwa Kwenye Kache
 
-OmniRoute hufuatilia `cached_tokens` kando na `prompt_tokens` kwa sababu:
+67router hufuatilia `cached_tokens` kando na `prompt_tokens` kwa sababu:
 
 - Uhifadhi wa vidokezo wa Anthropic hutoza kiwango kilichopunguzwa kwa tokeni zilizohifadhiwa kwenye kache (10% ya kiwango cha kawaida)
 - Baadhi ya watoa huduma hurudisha `cache_read_input_tokens` ambazo zinapaswa kutozwa bei tofauti
@@ -117,7 +117,7 @@ Data ya bei husawazishwa kiotomatiki kutoka LiteLLM kupitia endpoint ya `/api/pr
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Kwa modeli zisizo na data ya bei, OmniRoute hutumia **makadirio ya gharama** kwa kutumia viwango vya wastani vya ndani (vinavyotokana na data ya bei ya LiteLLM).
+Kwa modeli zisizo na data ya bei, 67router hutumia **makadirio ya gharama** kwa kutumia viwango vya wastani vya ndani (vinavyotokana na data ya bei ya LiteLLM).
 
 ---
 

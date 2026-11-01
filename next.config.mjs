@@ -207,9 +207,9 @@ const nextConfig = {
     webpackMemoryOptimizations: true,
     // Run webpack in a separate Node worker, lowering main-process memory.
     webpackBuildWorker: true,
-    // Next.js proxy (middleware) has a default 10MB body clone limit. File
-    // uploads (OpenAI-compatible /v1/files) routinely exceed this. Match the
-    // 512 MB server-side cap; tune via env if needed.
+    // Next.js proxy (middleware) has a default 10MB body clone limit. The
+    // 512 MB value is kept pending review of large chat/image payloads before
+    // it is lowered; tune via env if needed.
     proxyClientMaxBodySize: process.env.NEXT_PROXY_BODY_LIMIT || "512mb",
     // Next's internal router proxy defaults to 30s when this is unset. OmniRoute
     // can legitimately hold non-streaming chat requests open for minutes while an
@@ -514,11 +514,6 @@ const nextConfig = {
     return [
       // Dashboard routes
       {
-        source: "/dashboard/skills",
-        destination: "/dashboard/omni-skills",
-        permanent: true,
-      },
-      {
         source: "/dashboard/providers/freepik",
         destination: "/dashboard/providers/magnific",
         permanent: true,
@@ -584,14 +579,11 @@ const nextConfig = {
         permanent: true,
       },
       // Frameworks
-      { source: "/docs/a2a-server", destination: "/docs/frameworks/a2a-server", permanent: true },
       {
         source: "/docs/agent-protocols-guide",
         destination: "/docs/frameworks/agent-protocols-guide",
         permanent: true,
       },
-      { source: "/docs/cloud-agent", destination: "/docs/frameworks/cloud-agent", permanent: true },
-      { source: "/docs/evals", destination: "/docs/frameworks/evals", permanent: true },
       {
         source: "/docs/gamification",
         destination: "/docs/frameworks/gamification",
@@ -601,7 +593,6 @@ const nextConfig = {
       { source: "/docs/memory", destination: "/docs/frameworks/memory", permanent: true },
       { source: "/docs/opencode", destination: "/docs/frameworks/opencode", permanent: true },
       { source: "/docs/skills", destination: "/docs/frameworks/skills", permanent: true },
-      { source: "/docs/webhooks", destination: "/docs/frameworks/webhooks", permanent: true },
       // Routing
       { source: "/docs/auto-combo", destination: "/docs/routing/auto-combo", permanent: true },
       {

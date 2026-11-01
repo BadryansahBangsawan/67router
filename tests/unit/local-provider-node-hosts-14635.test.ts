@@ -1,7 +1,7 @@
 // Regression tests for #14635: operator-listed provider-node hosts (Docker/Compose service
 // names) are treated like loopback nodes.
 //
-// A rerank/audio sidecar on the same Docker network is naturally addressed by its service
+// An audio (or other) sidecar on the same Docker network is naturally addressed by its service
 // name (`http://reranker:8080/v1`). The loopback class only knew `localhost`, `127.0.0.1`
 // and 172.16.0.0/12 literals, so operators had to hard-code a container IP — one that
 // Docker's IPAM can hand to a different container after a host reboot — and a service
@@ -17,20 +17,13 @@ import path from "node:path";
 
 const TEST_DATA_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "omniroute-local-node-hosts-test-"));
 process.env.DATA_DIR = TEST_DATA_DIR;
+test.after(() => fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true }));
 
 const { LOCAL_PROVIDER_NODE_HOSTS_ENV, getConfiguredLocalNodeHosts, isLocalProviderNodeHost } =
   await import("../../src/shared/network/localNodeHosts.ts");
-const { isEligibleProviderNodeHost } = await import("../../src/shared/network/providerNodeHost.ts");
-const { RERANK_REMOTE_NODES_FLAG, selectRerankProviderNodes } =
-  await import("../../src/app/api/v1/_shared/rerankProviderNodes.ts");
 const { selectAudioProviderNodes } =
   await import("../../src/app/api/v1/_shared/audioProviderNodes.ts");
 const { resolveProxyForRequest } = await import("../../open-sse/utils/proxyFetch.ts");
-const core = await import("../../src/lib/db/core.ts");
-const { invalidateDbCache } = await import("../../src/lib/db/readCache.ts");
-const { createProviderNode, createProviderConnection } =
-  await import("../../src/lib/db/providers.ts");
-const { POST } = await import("../../src/app/api/v1/rerank/route.ts");
 
 const SERVICE_NODE = {
   id: "openai-compatible-chat-reranker-svc",
@@ -53,7 +46,6 @@ const LOOPBACK_NODE = {
 
 const ENV_KEYS = [
   LOCAL_PROVIDER_NODE_HOSTS_ENV,
-  RERANK_REMOTE_NODES_FLAG,
   "HTTP_PROXY",
   "HTTPS_PROXY",
   "http_proxy",
@@ -99,10 +91,6 @@ test.describe("OMNIROUTE_LOCAL_PROVIDER_NODE_HOSTS parsing", () => {
       "tei.internal",
     ]);
     assert.equal(isLocalProviderNodeHost("https://foo.example.com/v1"), false);
-    assert.equal(
-      isEligibleProviderNodeHost("https://foo.example.com/v1", { allowRemote: false }),
-      false
-    );
     process.env.HTTPS_PROXY = "http://egress-proxy:7890";
     delete process.env.NO_PROXY;
     delete process.env.no_proxy;
@@ -150,7 +138,6 @@ test.describe("isLocalProviderNodeHost", () => {
     delete process.env[LOCAL_PROVIDER_NODE_HOSTS_ENV];
     assert.equal(isLocalProviderNodeHost(SERVICE_NODE.baseUrl), false);
     assert.equal(isLocalProviderNodeHost(LOOPBACK_NODE.baseUrl), true);
-    assert.equal(isEligibleProviderNodeHost(SERVICE_NODE.baseUrl, { allowRemote: false }), false);
   });
 
   test("a listed service name is local; unlisted and userinfo URLs are not", () => {
@@ -159,32 +146,11 @@ test.describe("isLocalProviderNodeHost", () => {
     assert.equal(isLocalProviderNodeHost("http://RERANKER:8080/v1"), true);
     assert.equal(isLocalProviderNodeHost(OTHER_SERVICE_NODE.baseUrl), false);
     assert.equal(isLocalProviderNodeHost("http://user:pw@reranker:8080/v1"), false);
-    assert.equal(isEligibleProviderNodeHost(SERVICE_NODE.baseUrl, { allowRemote: false }), true);
   });
 });
 
 test.describe("provider-node selection honors listed hosts", () => {
   test.afterEach(() => resetEnv());
-
-  test("rerank: listed service node joins with the remote flag off", () => {
-    delete process.env[LOCAL_PROVIDER_NODE_HOSTS_ENV];
-    assert.deepEqual(
-      selectRerankProviderNodes([LOOPBACK_NODE, SERVICE_NODE, OTHER_SERVICE_NODE], {
-        allowRemote: false,
-      }).map((p) => p.id),
-      ["loop"]
-    );
-
-    process.env[LOCAL_PROVIDER_NODE_HOSTS_ENV] = "reranker";
-    const selected = selectRerankProviderNodes([LOOPBACK_NODE, SERVICE_NODE, OTHER_SERVICE_NODE], {
-      allowRemote: false,
-    });
-    assert.deepEqual(
-      selected.map((p) => p.id),
-      ["loop", "sidecar"]
-    );
-    assert.equal(selected[1].baseUrl, "http://reranker:8080/v1/rerank");
-  });
 
   test("audio: listed service node joins with the remote flag off and keeps its credential", () => {
     const node = { ...SERVICE_NODE, name: "sidecar", apiType: "audio-transcriptions" };
@@ -227,100 +193,5 @@ test.describe("environment proxy bypass for listed hosts", () => {
       proxyUrl: null,
     });
     assert.equal(resolveProxyForRequest("http://tei:8080/v1/rerank").source, "env");
-  });
-});
-
-test.describe("POST /v1/rerank reaches a listed service-name node", () => {
-  const originalFetch = globalThis.fetch;
-
-  test.before(async () => {
-    const now = new Date().toISOString();
-    await createProviderNode({
-      id: SERVICE_NODE.id,
-      name: "sidecar",
-      type: "openai-compatible",
-      prefix: SERVICE_NODE.prefix,
-      baseUrl: SERVICE_NODE.baseUrl,
-      apiType: SERVICE_NODE.apiType,
-      createdAt: now,
-      updatedAt: now,
-    });
-    await createProviderConnection({
-      id: "conn-sidecar-1",
-      provider: SERVICE_NODE.id,
-      authType: "apikey",
-      name: "sidecar",
-      apiKey: "sidecar-token",
-      createdAt: now,
-      updatedAt: now,
-    });
-    invalidateDbCache("nodes");
-    invalidateDbCache("connections");
-  });
-
-  test.afterEach(() => {
-    globalThis.fetch = originalFetch;
-    resetEnv();
-  });
-
-  test.after(() => {
-    core.resetDbInstance();
-    try {
-      fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
-    } catch {
-      // ignore
-    }
-  });
-
-  function rerankRequest() {
-    return new Request("http://localhost/v1/rerank", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        model: "sidecar/bge-reranker-v2-m3",
-        query: "what is a cat",
-        documents: ["a cat is a small animal", "the stock market fell"],
-      }),
-    });
-  }
-
-  test("unlisted: the node is invisible and the request fails as an invalid model", async () => {
-    delete process.env[LOCAL_PROVIDER_NODE_HOSTS_ENV];
-    delete process.env[RERANK_REMOTE_NODES_FLAG];
-    let upstreamCalled = false;
-    globalThis.fetch = async () => {
-      upstreamCalled = true;
-      return new Response("{}", { status: 200 });
-    };
-
-    const res = await POST(rerankRequest(), {});
-    assert.equal(res.status, 400);
-    const body = await res.json();
-    assert.match(String(body?.error?.message ?? ""), /Invalid rerank model/);
-    assert.equal(upstreamCalled, false);
-  });
-
-  test("listed: forwarded to the service name with the node credential, remote flag off", async () => {
-    process.env[LOCAL_PROVIDER_NODE_HOSTS_ENV] = "reranker";
-    delete process.env[RERANK_REMOTE_NODES_FLAG];
-    const calls: Array<{ url: string; auth: string | null }> = [];
-    globalThis.fetch = async (url: string | URL | Request, init?: RequestInit) => {
-      calls.push({ url: String(url), auth: new Headers(init?.headers).get("authorization") });
-      return new Response(
-        JSON.stringify({
-          results: [
-            { index: 0, relevance_score: 0.97 },
-            { index: 1, relevance_score: 0.02 },
-          ],
-        }),
-        { status: 200, headers: { "content-type": "application/json" } }
-      );
-    };
-
-    const res = await POST(rerankRequest(), {});
-    assert.equal(res.status, 200);
-    assert.equal(calls.length, 1);
-    assert.equal(calls[0].url, "http://reranker:8080/v1/rerank");
-    assert.equal(calls[0].auth, "Bearer sidecar-token");
   });
 });

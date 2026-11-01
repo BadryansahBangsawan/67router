@@ -8,11 +8,11 @@
 > **Terakhir diperbarui:** 2026-09-02 — v3.8.51
 > **Audiens:** Engineer yang memelihara integrasi tersamar khusus penyedia.
 
-OmniRoute terintegrasi dengan penyedia yang sistem edge-nya secara aktif mengidentifikasi sidik jari klien tidak resmi (TLS JA3/JA4, urutan header, struktur body JSON, token integritas). Halaman ini mendokumentasikan permukaan penyamaran yang disediakan OmniRoute dan lokasi implementasinya.
+67router terintegrasi dengan penyedia yang sistem edge-nya secara aktif mengidentifikasi sidik jari klien tidak resmi (TLS JA3/JA4, urutan header, struktur body JSON, token integritas). Halaman ini mendokumentasikan permukaan penyamaran yang disediakan 67router dan lokasi implementasinya.
 
 ## Pemberitahuan Hukum dan Etika
 
-Fitur penyamaran tersedia agar OmniRoute dapat bertindak sebagai lapisan kompatibilitas antara akun resmi milik pengguna (Claude Code CLI, Codex, Antigravity, Cursor, dll.) dan API terpadu OmniRoute. Fitur ini **bukan** untuk menghindari deteksi penipuan, membagikan kredensial, atau melanggar Ketentuan Layanan penyedia. Pengelola mengharapkan operator mematuhi ToS upstream yang mereka setujui saat membuat akun.
+Fitur penyamaran tersedia agar 67router dapat bertindak sebagai lapisan kompatibilitas antara akun resmi milik pengguna (Claude Code CLI, Codex, Antigravity, Cursor, dll.) dan API terpadu 67router. Fitur ini **bukan** untuk menghindari deteksi penipuan, membagikan kredensial, atau melanggar Ketentuan Layanan penyedia. Pengelola mengharapkan operator mematuhi ToS upstream yang mereka setujui saat membuat akun.
 
 ---
 
@@ -76,7 +76,7 @@ sebelum mengeklaim kesetaraan dengan browser upstream.
 
 ## Paket Tersamar Claude Code
 
-Saat `cliCompatMode` aktif, OmniRoute membentuk ulang permintaan Claude keluar agar tidak dapat dibedakan dari lalu lintas `claude-cli`. Tiga modul bekerja sama:
+Saat `cliCompatMode` aktif, 67router membentuk ulang permintaan Claude keluar agar tidak dapat dibedakan dari lalu lintas `claude-cli`. Tiga modul bekerja sama:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -92,7 +92,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Hash Konten Klien)
 
-Pemeriksaan integritas sisi server yang dihitung oleh Claude Code CLI resmi melalui Bun/Zig. OmniRoute mengimplementasikannya ulang dengan `xxhash-wasm`:
+Pemeriksaan integritas sisi server yang dihitung oleh Claude Code CLI resmi melalui Bun/Zig. 67router mengimplementasikannya ulang dengan `xxhash-wasm`:
 
 1. Serialisasikan isi dengan placeholder `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -138,7 +138,7 @@ Modul terkait dalam paket yang sama:
 
 ## Penyamaran Antigravity
 
-Permintaan Antigravity mempertahankan teks pemanggil byte demi byte. OmniRoute tidak menyisipkan karakter zero-width ke dalam prompt atau mengganti nama/menyuntikkan alat untuk meniru klien IDE.
+Permintaan Antigravity mempertahankan teks pemanggil byte demi byte. 67router tidak menyisipkan karakter zero-width ke dalam prompt atau mengganti nama/menyuntikkan alat untuk meniru klien IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -148,13 +148,13 @@ Menghapus penanda SDK Stainless (`x-stainless-lang`, `x-stainless-package-versio
 
 `ANTIGRAVITY_CREDITS=always` (digunakan oleh `open-sse/executors/antigravity.ts`) mengarahkan **setiap** permintaan melalui Antigravity AI Credit Overages (kredit Google berbayar), alih-alih membiarkan kuota tingkat gratis Google membatasi penggunaan. Ini didokumentasikan sebagai fitur, tetapi merupakan **laporan pelanggaran ToS paling umum yang kami terima** — beberapa akun Google Ultra telah diblokir dengan `403 / "service disabled for ToS violation" / insufficient_quota` setelah berjalan selama beberapa jam dengan `=always`.
 
-Penegakan upstream dilakukan di **pihak Google**, bukan sesuatu yang dapat dicegah oleh OmniRoute. Nama variabel lingkungan dan dokumentasi yang ada membuatnya terdengar seperti opsi yang aman untuk diaktifkan; kenyataannya tidak demikian.
+Penegakan upstream dilakukan di **pihak Google**, bukan sesuatu yang dapat dicegah oleh 67router. Nama variabel lingkungan dan dokumentasi yang ada membuatnya terdengar seperti opsi yang aman untuk diaktifkan; kenyataannya tidak demikian.
 
 **Mengapa hal ini memicu deteksi penyalahgunaan lebih agresif daripada penggunaan tingkat gratis saja:**
 
 - Pengeluaran otomatis yang berkelanjutan pada satu akun Google ditandai secara berbeda dibandingkan penggunaan tingkat gratis yang mencapai kuota lalu berhenti.
 - Kelebihan penggunaan kredit tidak memiliki batas laju, sehingga klien yang salah konfigurasi dapat menghabiskan beberapa ratus USD dalam hitungan menit dan terlihat seperti penjualan kembali API key atau lalu lintas bot.
-- Beberapa pengguna OmniRoute yang menggunakan kredit kelebihan secara paralel dari IP eksternal yang sama memperkuat sinyal tersebut.
+- Beberapa pengguna 67router yang menggunakan kredit kelebihan secara paralel dari IP eksternal yang sama memperkuat sinyal tersebut.
 
 **Sikap yang direkomendasikan:**
 
@@ -193,7 +193,7 @@ Aktifkan atau nonaktifkan per penyedia melalui env (lihat di bawah). Saat dinona
 
 ## Proksi MITM (Antigravity, Linux/macOS/Windows)
 
-Untuk CLI yang binernya tidak dapat dialihkan melalui `OPENAI_BASE_URL`, OmniRoute menjalankan proksi lokal yang mengakhiri TLS. Endpoint berada di bawah `src/app/api/cli-tools/antigravity-mitm/`.
+Untuk CLI yang binernya tidak dapat dialihkan melalui `OPENAI_BASE_URL`, 67router menjalankan proksi lokal yang mengakhiri TLS. Endpoint berada di bawah `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metode | Endpoint                                | Tujuan                                            |
 | ------ | --------------------------------------- | ------------------------------------------------- |
@@ -272,7 +272,7 @@ IP penyedia **selalu dipertahankan** — sakelar ini hanya membentuk ulang citra
 
 ## Sanitasi Header Masuk
 
-OmniRoute membersihkan header klien yang masuk sebelum meneruskannya, sehingga permintaan yang berasal dari Cursor tidak membocorkan `User-Agent: Cursor/X.Y.Z` ke upstream Claude. Lihat `src/shared/constants/upstreamHeaders.ts` untuk daftar penolakan yang dijaga tetap selaras dengan skema Zod dan pengujian unit.
+67router membersihkan header klien yang masuk sebelum meneruskannya, sehingga permintaan yang berasal dari Cursor tidak membocorkan `User-Agent: Cursor/X.Y.Z` ke upstream Claude. Lihat `src/shared/constants/upstreamHeaders.ts` untuk daftar penolakan yang dijaga tetap selaras dengan skema Zod dan pengujian unit.
 
 ---
 

@@ -71,11 +71,9 @@ Bu dosyalar bugün en düşük satır kapsamına (< %60) sahip ve 6-7. Aşamalar
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |     %13.26 |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |     %13.43 |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |     %13.51 |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |     %13.52 |
 | 15  | `open-sse/services/compression/lite.ts`                      |     %14.46 |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |     %14.94 |
 | 17  | `open-sse/services/compression/preservation.ts`              |     %15.07 |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |     %15.54 |
 | 19  | `open-sse/services/tierResolver.ts`                          |     %16.66 |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |     %16.66 |
 
@@ -83,7 +81,6 @@ Bu dosyalar bugün en düşük satır kapsamına (< %60) sahip ve 6-7. Aşamalar
 
 - `open-sse/services/compression/**`, düşük kapsamın en yoğun olduğu kümedir ve kalan açığın büyük bölümünü oluşturur.
 - Toplu işlem ve yeniden sıralama API rotaları (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) işleyici düzeyinde testlere ihtiyaç duyuyor.
-- Bulut ajanı adaptörleri (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) ve `tierResolver.ts` senaryo testlerine ihtiyaç duyuyor.
 - Dokümantasyon kullanıcı arayüzü bileşenleri ve `src/mitm/systemCommands.ts` daha düşük önceliklidir, ancak kolay dal kapsamı kazanımları sağlar.
 
 ## Yürütme kontrol listesi

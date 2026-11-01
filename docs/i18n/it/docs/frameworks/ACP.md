@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute separa **rilevamento delle CLI**, **Agent Client Protocol nativo** e
+67router separa **rilevamento delle CLI**, **Agent Client Protocol nativo** e
 **adattatori stdio legacy**. Il rilevamento di un binario installato non ne dimostra
 l'autenticazione, la compatibilità con i modelli o la capacità di gestire un prompt.
 
@@ -127,5 +127,3 @@ nell'ambiente di destinazione.
 - [Protocolli degli agenti](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contratti di avvio delle CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Strumenti CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)
-- [Agenti cloud](./CLOUD_AGENT.md)

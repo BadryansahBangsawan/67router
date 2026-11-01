@@ -113,7 +113,7 @@ hoặc bước kiểm tra thủ công được ghi lại phù hợp với thay �
 - Các danh mục CLI được lưu riêng trong `bin/cli/locales/`.
 - Giữ nguyên chính xác các placeholder và tag ICU. Không dịch tên sản phẩm/provider/model,
   tên giao thức và header, lệnh, định danh code/JSON, URL, biến môi trường hoặc
-  các thuật ngữ được bảo vệ như `OmniRoute`, `OAuth`, `MCP` và `A2A`. Danh sách nguồn hiện tại là
+  các thuật ngữ được bảo vệ như `67router`, `OAuth`, `MCP` và `A2A`. Danh sách nguồn hiện tại là
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Vòng lặp trọng tâm**
@@ -264,7 +264,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # tái sử dụng tarba
   lần kiểm tra đó thất bại. Candidate không vượt qua lần xác thực đầu tiên sẽ không bao giờ được
   promote.
 
-Mọi thứ được ghi bên dưới `_artifacts/candidate/` đã bị gitignore; bản cài đặt OmniRoute hiện có
+Mọi thứ được ghi bên dưới `_artifacts/candidate/` đã bị gitignore; bản cài đặt 67router hiện có
 và thư mục dữ liệu của nó không bao giờ bị tác động. CLI đã promote nằm tại
 `_artifacts/candidate/current/prefix/bin/omniroute`; hãy khởi động CLI này với `DATA_DIR` của riêng
 bạn khi sử dụng. Mã thoát: `0` thành công, `1` xác thực hoặc promote thất bại, `2` lỗi sử dụng hoặc

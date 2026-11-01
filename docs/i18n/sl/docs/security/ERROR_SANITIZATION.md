@@ -206,13 +206,13 @@ Pravila prečiščevanja, uporabljena za `upstreamDetails`:
 3. Omejitev globine: gnezdenje prek 4 ravni se nadomesti z nizom `"[truncated]"`.
 4. Polja so omejena na 32 elementov.
 
-Samo mesta klica z razčlenjenim telesom napake ponudnika naj podajo `upstreamDetails`. Notranje napake OmniRoute
+Samo mesta klica z razčlenjenim telesom napake ponudnika naj podajo `upstreamDetails`. Notranje napake 67router
 (neuspešno razčlenjevanje SSE, prazna vsebina, blokade varovalnih mehanizmov) ga ne smejo vključevati.
 
 V `upstreamDetails` NE podajajte neobdelanega `err.stack`, `err.message` ali katerega koli niza iz izvajalne izjeme. Ti morajo še vedno iti skozi `errorResponse` / `buildErrorBody(code, msg)`
 brez telesa nadrejenega ponudnika.
 
-Selektivno posredovanje odgovorov 4xx nadrejenega ponudnika ohrani varno obliko JSON in besedilo ponudnika, ki sta potrebna za samodejno obnovitev odjemalca, vendar ne gre za bajtno natančno posredovanje: rekurzivni prečiščevalnik se vedno izvede pred serializacijo. Ciklična telesa, telesa z vrednostmi BigInt ali telesa s sovražnim `toJSON()` se varno zavrnejo in niso primerna za posredovanje. OCR in moderiranje uporabljata isto pravilo; telesa nadrejenega ponudnika, ki niso JSON, so prazna ali napačno označena, se pretvorijo v kanonično ovojnico napake JSON sistema OmniRoute.
+Selektivno posredovanje odgovorov 4xx nadrejenega ponudnika ohrani varno obliko JSON in besedilo ponudnika, ki sta potrebna za samodejno obnovitev odjemalca, vendar ne gre za bajtno natančno posredovanje: rekurzivni prečiščevalnik se vedno izvede pred serializacijo. Ciklična telesa, telesa z vrednostmi BigInt ali telesa s sovražnim `toJSON()` se varno zavrnejo in niso primerna za posredovanje. OCR in moderiranje uporabljata isto pravilo; telesa nadrejenega ponudnika, ki niso JSON, so prazna ali napačno označena, se pretvorijo v kanonično ovojnico napake JSON sistema 67router.
 
 ## Znana omejitev CodeQL: lastni čistilniki niso prepoznani
 

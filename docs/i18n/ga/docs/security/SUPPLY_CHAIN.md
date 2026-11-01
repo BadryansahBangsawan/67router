@@ -4,7 +4,7 @@
 
 ---
 
-Foilsíonn OmniRoute airteagail npm + Docker. Soláthraíonn na geataí seo bunús, fardal (SBOM) agus scanadh CVE, iad uile OSS, ceangailte le sreafaí oibre scaoilte. Dearcadh 'comhairleach ar dtús' — tuairiscíonn siad anois, agus ardaíonn siad go bacadh tar éis an chéad scaoileadh glas.
+Foilsíonn 67router airteagail npm + Docker. Soláthraíonn na geataí seo bunús, fardal (SBOM) agus scanadh CVE, iad uile OSS, ceangailte le sreafaí oibre scaoilte. Dearcadh 'comhairleach ar dtús' — tuairiscíonn siad anois, agus ardaíonn siad go bacadh tar éis an chéad scaoileadh glas.
 
 | Geata                  | Uirlis                                         | Cá háit                       | An gcuireann sé bac?                 | Aschur                                      |
 | ---------------------- | ---------------------------------------------- | ----------------------------- | ------------------------------------ | ------------------------------------------- |
@@ -39,7 +39,7 @@ Déanann an dá gheata SCIORADH go galánta (exit 0) nuair a bhíonn an uirlis i
 
 - **Slabhra:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. Deimhnithe trí `package-lock.json` — ní dhearbhaíonn ach pacáiste amháin sa chrann spleáchais iomlán (`@openai/codex-security`) `extract-zip`, agus ní dhearbhaíonn ach pacáiste amháin (`promptfoo`) `@openai/codex-security`.
 - **Níl aon scaoileadh seasta ann in áit ar bith sa slabhra.** Is é `extract-zip@2.0.1` (foilsithe 2020) an scaoileadh deiridh den phacáiste — níl sé á chothabháil. Tarraingíonn an npm-latest reatha de `@openai/codex-security` (`0.1.29`) `extract-zip@2.0.1` fós.
-- **Neamh-inrochtana ó tháirgeadh.** Níl `promptfoo` ach mar devDependency (ní liostaítear é faoi `dependencies` riamh), agus ní allmhairíonn aon chomhad faoi `src/`, `open-sse/`, nó `bin/` an pacáiste npm `extract-zip` — déanann cúntóir `extractZip()` OmniRoute féin (`src/lib/versionManager/binaryManager.ts:93`) feidhmeanna `unzip`/`tar` dúchasacha a ghlaoch agus níl baint aige leis. Seolann `@openai/codex-security` a gharda trasnaithe siombalach féin freisin ar bharr an ghlao ar ais onEntry de extract-zip.
+- **Neamh-inrochtana ó tháirgeadh.** Níl `promptfoo` ach mar devDependency (ní liostaítear é faoi `dependencies` riamh), agus ní allmhairíonn aon chomhad faoi `src/`, `open-sse/`, nó `bin/` an pacáiste npm `extract-zip` — déanann cúntóir `extractZip()` 67router féin (`src/lib/versionManager/binaryManager.ts:93`) feidhmeanna `unzip`/`tar` dúchasacha a ghlaoch agus níl baint aige leis. Seolann `@openai/codex-security` a gharda trasnaithe siombalach féin freisin ar bharr an ghlao ar ais onEntry de extract-zip.
 - **Ná** déan ailiasú ar `extract-zip` trí `overrides` i `package.json` — is é an t-aon ionadach inmharthana atá ar fáil ná Electron-org-internal agus tá sé neamh-chomhoiriúnach le API le seiceálacha onEntry/defaultDirMode/defaultFileMode `@openai/codex-security` féin; bhrisfeadh sé go ciúin seiceálacha slándála an phacáiste sin dá ndéanfaí é a shárú.
 - **Bunlíne:** tá an `vulnCount` (3) osv tomhaiste i bhfad faoi bhun an bhunlíne reoite `config/quality/quality-baseline.json` (27) cheana féin — níl aon athrú ratchet ag teastáil.
 - **Cosaint ar aisghabháil:** dearbhaíonn `tests/unit/extract-zip-14482-exposure.test.ts` an slabhra agus an t-athraitheach gan allmhairiú táirgeachta thuas; teipeann ar CI má bhriseann ceachtar acu riamh (m.sh. má dhéanann PR sa todhchaí `extract-zip` inrochtana ó tháirgeadh).

@@ -113,7 +113,7 @@ build محیط production و suiteهای گستردهتر را اجرا میکن
 - کاتالوگهای CLI بهصورت جداگانه در `bin/cli/locales/` قرار دارند.
 - placeholderها و tagهای ICU را دقیقاً حفظ کنید. نام محصولات/Providerها/مدلها،
   نام protocolها و headerها، فرمانها، شناسههای code/JSON، URLها، environment variableها یا
-  اصطلاحات محافظتشدهای مانند `OmniRoute`، `OAuth`، `MCP` و `A2A` را ترجمه نکنید. فهرست مبدأ فعلی
+  اصطلاحات محافظتشدهای مانند `67router`، `OAuth`، `MCP` و `A2A` را ترجمه نکنید. فهرست مبدأ فعلی
   `scripts/i18n/glossary/protected-terms.json` است.
 
 **چرخهٔ متمرکز**
@@ -268,7 +268,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # استفادهٔ مج�
   باشد، `current` و `previous` را دوباره جابهجا میکند. candidateای که در اعتبارسنجی اول ناموفق
   باشد، هرگز promote نمیشود.
 
-همهچیز در مسیر gitignored یعنی `_artifacts/candidate/` نوشته میشود؛ نصب موجود OmniRoute و
+همهچیز در مسیر gitignored یعنی `_artifacts/candidate/` نوشته میشود؛ نصب موجود 67router و
 directory دادهٔ آن هرگز تغییر نمیکنند. CLI promoteشده در
 `_artifacts/candidate/current/prefix/bin/omniroute` قرار دارد؛ هنگام استفاده، آن را با
 `DATA_DIR` خودتان راهاندازی کنید. کدهای خروج: `0` برای موفقیت، `1` برای اعتبارسنجی یا promotion

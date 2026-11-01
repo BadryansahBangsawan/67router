@@ -6,7 +6,7 @@
 
 ## Àkótán
 
-Gbogbo àwọn ipa-ọ̀nà API ìṣàkóso OmniRoute ni a pín sí ọ̀kan nínú àwọn ìpele ààbò mẹ́ta. Ìpínsọ̀rí náà jẹ́ àìyípadà, a ṣàlàyé rẹ̀ nínú `src/server/authz/routeGuard.ts`, a sì máa ṣe àyẹ̀wò rẹ̀ kí ẹ̀ka ìfàṣẹsí míì èyíkéyìí tó ṣiṣẹ́.
+Gbogbo àwọn ipa-ọ̀nà API ìṣàkóso 67router ni a pín sí ọ̀kan nínú àwọn ìpele ààbò mẹ́ta. Ìpínsọ̀rí náà jẹ́ àìyípadà, a ṣàlàyé rẹ̀ nínú `src/server/authz/routeGuard.ts`, a sì máa ṣe àyẹ̀wò rẹ̀ kí ẹ̀ka ìfàṣẹsí míì èyíkéyìí tó ṣiṣẹ́.
 
 ## Àwọn Ìpele
 
@@ -25,9 +25,9 @@ nípasẹ̀ tunnel Cloudflared/Ngrok) lè fa ìdásílẹ̀ process — ẹ̀ka 
 **Ohun tí GHSA-fhh6-4qxv-rpqj jẹ́ (ẹ̀ka ìkọlù náà):** server ìṣàkóso/agent kan
 ṣí endpoint kan tí ń ṣe ìfilọ́lẹ̀ subprocess (`npm install`, `node`, browser kan,
 proxy kan, `git`, `tar`, …). Bí endpoint yẹn bá ṣeé dé láti ẹ̀rọ mìíràn — nítorí
-olùṣiṣẹ́ fi OmniRoute sí ẹ̀yìn tunnel nginx/Cloudflare/Tailscale tí JWT sì
+olùṣiṣẹ́ fi 67router sí ẹ̀yìn tunnel nginx/Cloudflare/Tailscale tí JWT sì
 ti tú, tàbí a ṣàtòpọ̀ auth lọ́nà tí kò tọ́ — olùkọlù náà yí “pe API kan” padà sí “ṣiṣẹ́
-command kan lórí host náà” (ṣiṣẹ́ kóòdù láti ọ̀nà jíjìn). OmniRoute dí èyí nípa fífi
+command kan lórí host náà” (ṣiṣẹ́ kóòdù láti ọ̀nà jíjìn). 67router dí èyí nípa fífi
 **àyẹ̀wò host loopback múlẹ̀ láìsí àdéhùn, ṣáájú àyẹ̀wò auth èyíkéyìí**, lórí gbogbo
 route tó lè dá process sílẹ̀: token tó tú lórí tunnel kò ṣì lè dé ibi ìdásílẹ̀ process náà.
 
@@ -55,7 +55,6 @@ prefix tó lè dá process sílẹ̀, ó sì mú kí CI kùnà bí èyíkéyìí
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — olùgbọ́ http-proxy + aṣojú ètò                                                              |
 | `/api/settings/mitm`                                                                                     | Ń mú ìdádúró MITM ṣiṣẹ́ (ipò aṣojú ní ìpele ètò)                                                                |
 | `/api/issue-agent/`                                                                                      | Aṣojú ìṣòro — ń ṣe ìpilẹ̀ṣẹ̀ irinṣẹ́ agbègbè lòdì sí repo náà                                                     |
-| `/api/plugins/`, `/api/plugins`                                                                          | Àwọn plugin — ń kó/ń ṣiṣẹ́ nípasẹ̀ `worker_threads` + `child_process`                                            |
 | `/api/middleware/`                                                                                       | Middleware olumulo — ń kó/ń ṣiṣẹ́ kóòdù olùdarí nínú process náà                                                |
 | `/api/system/version`                                                                                    | Ìmúdójúìwọ̀n aládàáṣiṣẹ́ (POST nìkan; GET/HEAD/OPTIONS jẹ́ ìyọkúrò) — ń ṣe ìpilẹ̀ṣẹ̀ `git checkout` + `npm install` |
 | `/api/db-backups/exportAll`                                                                              | Ń ṣe ìpilẹ̀ṣẹ̀ `tar` fún àpò ìkójáde náà                                                                         |
@@ -116,7 +115,7 @@ fún àwọn olùpè MCP-nìkan láti ọ̀nà jíjìn tí kò yẹ kí wọ́n 
 
 #### Ìtọ́sọ́nà olùṣàkóso & àyẹ̀wò
 
-Bí o bá ń ṣiṣẹ́ OmniRoute lẹ́yìn reverse proxy tàbí tunnel (nginx, Caddy, Cloudflare
+Bí o bá ń ṣiṣẹ́ 67router lẹ́yìn reverse proxy tàbí tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), àyẹ̀wò loopback náà ṣì ń dáàbò bo àwọn ọ̀nà tó lè dá
 nǹkan sílẹ̀ lókè — ìbéèrè tí àdírẹ́sì client rẹ̀ kì í ṣe loopback ni a máa kọ̀ pẹ̀lú
 `403 LOCAL_ONLY` **kí auth tó ṣiṣẹ́**, nítorí náà JWT tó ti tú jáde kò lè dé ibi ìdásílẹ̀. Ojúṣe
@@ -154,7 +153,7 @@ méjì ṣì wà fún olùṣàkóso:
 - Lo grep láti wá àwọn prefix tó wà lókè nínú reverse-proxy / access logs rẹ tí wọ́n
   so mọ́ àdírẹ́sì oníbàárà tí kì í ṣe loopback. Ìbẹ̀wò bẹ́ẹ̀ èyíkéyìí tó dá `200` padà dípò
   `403 LOCAL_ONLY` túmọ̀ sí pé proxy ń bo IP oníbàárà gidi mọ́lẹ̀ — ṣàtúnṣe proxy náà.
-- `403 LOCAL_ONLY` nínú logs OmniRoute fún ọ̀kan nínú àwọn path wọ̀nyí jẹ́ àmì pé guard
+- `403 LOCAL_ONLY` nínú logs 67router fún ọ̀kan nínú àwọn path wọ̀nyí jẹ́ àmì pé guard
   ń ṣiṣẹ́ bí a ṣe pinnu, kì í ṣe àṣìṣe tí a gbọ́dọ̀ pa mọ́.
 
 #### Àwọn ipa-ọ̀nà tí a lè dé láti ọ̀nà jíjìn pẹ̀lú ẹnu-ọ̀nà àyẹ̀wò call-site

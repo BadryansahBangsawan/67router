@@ -5,13 +5,13 @@
 ---
 
 Ang Delegated **Context Editing** ay isang feature sa pamamahala ng context na para lamang sa Claude. Hindi tulad ng mga lokal na
-compression engine ng OmniRoute (Caveman, RTK, LLMLingua, mga stacked pipeline) — na muling isinusulat ang request body
+compression engine ng 67router (Caveman, RTK, LLMLingua, mga stacked pipeline) — na muling isinusulat ang request body
 _bago_ ito umalis sa proxy — hinihiling ng Context Editing sa **provider** na alisin ang mga lipas na
-tool-use / tool-result block mula sa sarili nitong aktibong context window. Naglalakip lamang ang OmniRoute ng body
+tool-use / tool-result block mula sa sarili nitong aktibong context window. Naglalakip lamang ang 67router ng body
 parameter (`context_management.edits[]`); si Claude ang aktuwal na nagsasagawa ng pag-aalis batay sa sarili nitong tokenizer.
 
 Likas itong isang delegated capability: tinatanggihan ng ibang mga provider ang parameter, kaya mahigpit itong
-nililimitahan ng OmniRoute sa Claude at sa mga relay na compatible sa Claude Code.
+nililimitahan ng 67router sa Claude at sa mga relay na compatible sa Claude Code.
 
 Pinagmumulan ng katotohanan: `open-sse/config/contextEditing.ts` (mga strategy id, body injection, telemetry
 extraction), `open-sse/executors/base.ts` (injection gate + 400-fallback), at
@@ -19,7 +19,7 @@ extraction), `open-sse/executors/base.ts` (injection gate + 400-fallback), at
 
 ## Ano ang ginagawa ng `clear_tool_uses`
 
-Nag-i-inject ang OmniRoute ng iisang edit sa papalabas na Anthropic Messages body:
+Nag-i-inject ang 67router ng iisang edit sa papalabas na Anthropic Messages body:
 
 ```json
 {
@@ -42,11 +42,11 @@ Nag-i-inject ang OmniRoute ng iisang edit sa papalabas na Anthropic Messages bod
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Ipinahahayag ang beta sa pamamagitan ng `anthropic-beta: context-management-2025-06-27` header, na
-ipinapadala na ng OmniRoute sa mga request kay Claude.
+ipinapadala na ng 67router sa mga request kay Claude.
 
 Isinasagawa ang injection ng `applyContextEditingToBody()` at ito ay **idempotent**: kung mayroon nang `clear_tool_uses`
 edit sa body (idinagdag ng nakaraang call o ibinigay ng client), hindi na babaguhin ang body. Kung mayroon ding
-`clear_thinking_20251015` edit, nagsasagawa ang OmniRoute ng stable sort upang ilagay ang
+`clear_thinking_20251015` edit, nagsasagawa ang 67router ng stable sort upang ilagay ang
 `clear_thinking` edit sa unahan, dahil iniaatas ng Anthropic na mauna ang `clear_thinking` sa
 `clear_tool_uses` sa `edits[]` array.
 
@@ -145,7 +145,7 @@ Kasama sa tunay na Claude ang beta sa `ANTHROPIC_BETA_BASE` at hindi ito dumadaa
 
 ## Telemetry ng `applied_edits`
 
-Pagkatapos ng isang response mula sa Claude, itinatala ng OmniRoute kung gaano karaming context ang aktuwal na na-clear ng provider. Ito ay
+Pagkatapos ng isang response mula sa Claude, itinatala ng 67router kung gaano karaming context ang aktuwal na na-clear ng provider. Ito ay
 **hindi** naka-stream — kinukuha ito mula sa non-streaming response body sa best-effort na paraan, at hindi kailanman
 nakaaapekto sa response (hindi pinapansin ang mga pagkabigo sa telemetry).
 
@@ -175,14 +175,14 @@ label ng engine na `context-editing`, at naihihiwalay ito sa mga natipid ng RTK/
 
 | Aspeto                | Mga lokal na engine (Caveman / RTK / LLMLingua / stacked) | Delegated Context Editing                                      |
 | --------------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
-| Saan ito tumatakbo    | Sa OmniRoute, bago umalis sa proxy ang request            | Sa provider (Claude), sa panig ng server                       |
+| Saan ito tumatakbo    | Sa 67router, bago umalis sa proxy ang request             | Sa provider (Claude), sa panig ng server                       |
 | Ano ang ine-edit nito | Prompt / context / text ng resulta ng tool                | Mga lumang block ng paggamit ng tool / resulta ng tool         |
 | Saklaw ng provider    | Lahat ng provider                                         | `claude` + `anthropic-compatible-cc-*` lamang                  |
 | Toggle                | Mga setting ng compression mode                           | `contextEditing.enabled`                                       |
 | Failure mode          | Fail-open (orihinal na text)                              | 400-fallback: alisin ang param, subukang muli nang isang beses |
 | Telemetry ng natipid  | `engine: <engine id>`                                     | `engine: "context-editing"`                                    |
 
-Magkatuwang ang dalawa: kino-compress ng mga lokal na engine ang mga byte na ipinapadala ng OmniRoute; binibigyang-daan ng Context Editing ang
+Magkatuwang ang dalawa: kino-compress ng mga lokal na engine ang mga byte na ipinapadala ng 67router; binibigyang-daan ng Context Editing ang
 Claude na bawasan ang kasalukuyang context sa bawat turn. Maaaring paganahin ang mga ito nang sabay.
 
 ## Tingnan Din

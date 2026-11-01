@@ -4,7 +4,7 @@
 
 ---
 
-Når OmniRoute kjører i Docker, mislykkes standardflyten «Importer fra Zed-nøkkelringen»
+Når 67router kjører i Docker, mislykkes standardflyten «Importer fra Zed-nøkkelringen»
 fordi containeren ikke får tilgang til nøkkelringtjenesten i vertsoperativsystemet (`libsecret` på Linux,
 Keychain på macOS og Credential Manager på Windows), og Zed-konfigurasjonskatalogene på
 vertens filsystem er som standard ikke synlige inne i containeren.
@@ -20,7 +20,7 @@ To blokkerende problemer oppstår inne i en container:
    plattformspesifikke `keytar`-modulen med operativsystemets nøkkelringtjeneste via en Unix-socket eller D-Bus-økt.
    Ingen av delene videresendes som standard til containeren, så lesing av legitimasjon mislykkes alltid.
 
-OmniRoute oppdager Docker-miljøet ved hjelp av to heuristikker:
+67router oppdager Docker-miljøet ved hjelp av to heuristikker:
 
 - Tilstedeværelsen av `/.dockerenv` (skrevet av Docker-tjenesten når containeren starter).
 - Strengen `docker` i `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Når én av heuristikkene slår til, returnerer importruten HTTP 422 med
 
 1. Åpne **Kontrollpanel → Leverandører → Zed**.
 2. Panelet **Manuell tokenimport** vises under kortet for nøkkelringimport. Når
-   OmniRoute oppdager Docker, utvides dette panelet automatisk etter det første mislykkede
+   67router oppdager Docker, utvides dette panelet automatisk etter det første mislykkede
    forsøket på å importere fra nøkkelringen.
 3. Velg leverandøren fra rullegardinlisten (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter eller DeepSeek).

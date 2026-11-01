@@ -124,7 +124,7 @@ test("live version candidates keep their warning when the GitHub catalog is unav
     body.models.map((model) => model.id),
     [compatible.slug]
   );
-  assert.match(body.warning || "", /future-model.*OmniRoute reports 0\.160\.1.*0\.200\.0/);
+  assert.match(body.warning || "", /future-model.*67router reports 0\.160\.1.*0\.200\.0/);
   assert.equal(body.candidateModels?.[0]?.compatibilityReason, "requires-newer-client");
 });
 
@@ -227,7 +227,7 @@ test("route discovery refreshes the client version before classifying and warnin
   const body = await get(id);
   assert.equal(registryRequests, 1);
   assert.equal(body.source, "api");
-  assert.match(body.warning || "", /OmniRoute reports 0\.999\.0.*0\.999\.1/);
+  assert.match(body.warning || "", /67router reports 0\.999\.0.*0\.999\.1/);
 });
 
 test("warning uses the highest numeric version and bounds the displayed model list", () => {

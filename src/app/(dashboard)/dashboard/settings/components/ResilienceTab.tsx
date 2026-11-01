@@ -9,6 +9,7 @@ import AutoDisableCard from "./AutoDisableCard";
 import ModelLockoutCard from "./ModelLockoutCard";
 import TokenRefreshBreakerCard, { type TokenRefreshBreakerValue } from "./TokenRefreshBreakerCard";
 import { NumberField, BooleanField } from "./ResilienceFields";
+import { SettingsSection } from "./SettingsSection";
 import { throwIfResilienceSaveFailed } from "./resilienceSaveError";
 
 type RequestQueueSettings = {
@@ -53,10 +54,6 @@ type ComboCooldownWaitSettings = {
   budgetMs: number;
 };
 
-type QuotaShareConcurrencyLimitSettings = {
-  enabled: boolean;
-};
-
 export type ProviderCooldownSettings = {
   enabled: boolean;
   minRetryCooldownMs: number;
@@ -75,7 +72,6 @@ type ResilienceResponse = {
   };
   waitForCooldown: WaitForCooldownSettings;
   comboCooldownWait: ComboCooldownWaitSettings;
-  quotaShareConcurrencyLimit: QuotaShareConcurrencyLimitSettings;
   providerCooldown: ProviderCooldownSettings;
   credentialHealthCheck?: CredentialHealthCheckSettings;
   tokenRefreshBreaker?: TokenRefreshBreakerValue;
@@ -88,7 +84,6 @@ function toResilienceResponse(json: ResilienceResponse): ResilienceResponse {
     providerBreaker: json.providerBreaker,
     waitForCooldown: json.waitForCooldown,
     comboCooldownWait: json.comboCooldownWait,
-    quotaShareConcurrencyLimit: json.quotaShareConcurrencyLimit,
     providerCooldown: json.providerCooldown,
     // Older servers do not send the token-refresh section; keep undefined
     // so the card can hide itself instead of showing a bogus default.
@@ -203,19 +198,16 @@ function RequestQueueCard({
   }
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="speed" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("resilienceRequestQueueTitle")}</h2>
-          </div>
-          <SectionDescription
-            scope={t("resilienceRequestQueueScope")}
-            trigger={t("resilienceRequestQueueTrigger")}
-            effect={t("resilienceRequestQueueEffect")}
-          />
-        </div>
+    <SettingsSection
+      title={t("resilienceRequestQueueTitle")}
+      description={
+        <SectionDescription
+          scope={t("resilienceRequestQueueScope")}
+          trigger={t("resilienceRequestQueueTrigger")}
+          effect={t("resilienceRequestQueueEffect")}
+        />
+      }
+      action={
         <ActionRow
           editing={editing}
           saving={saving}
@@ -229,8 +221,8 @@ function RequestQueueCard({
             setEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{t("resilienceRequestQueueDesc")}</p>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -344,7 +336,7 @@ function RequestQueueCard({
           </>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -471,19 +463,16 @@ function ConnectionCooldownCard({
   };
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="timer_off" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("resilienceConnectionCooldownTitle")}</h2>
-          </div>
-          <SectionDescription
-            scope={t("resilienceConnectionCooldownScope")}
-            trigger={t("resilienceConnectionCooldownTrigger")}
-            effect={t("resilienceConnectionCooldownEffect")}
-          />
-        </div>
+    <SettingsSection
+      title={t("resilienceConnectionCooldownTitle")}
+      description={
+        <SectionDescription
+          scope={t("resilienceConnectionCooldownScope")}
+          trigger={t("resilienceConnectionCooldownTrigger")}
+          effect={t("resilienceConnectionCooldownEffect")}
+        />
+      }
+      action={
         <ActionRow
           editing={editing}
           saving={saving}
@@ -516,15 +505,15 @@ function ConnectionCooldownCard({
             setEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{t("resilienceConnectionCooldownDesc")}</p>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {renderProfile("oauth", "OAuth Providers", "lock")}
         {renderProfile("apikey", "API Key Providers", "key")}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -600,19 +589,16 @@ function ProviderBreakerCard({
   };
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="electrical_services" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("resilienceProviderBreakerTitle")}</h2>
-          </div>
-          <SectionDescription
-            scope={t("resilienceProviderBreakerScope")}
-            trigger={t("resilienceProviderBreakerTrigger")}
-            effect={t("resilienceProviderBreakerEffect")}
-          />
-        </div>
+    <SettingsSection
+      title={t("resilienceProviderBreakerTitle")}
+      description={
+        <SectionDescription
+          scope={t("resilienceProviderBreakerScope")}
+          trigger={t("resilienceProviderBreakerTrigger")}
+          effect={t("resilienceProviderBreakerEffect")}
+        />
+      }
+      action={
         <ActionRow
           editing={editing}
           saving={saving}
@@ -626,15 +612,15 @@ function ProviderBreakerCard({
             setEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{t("resilienceProviderBreakerDesc")}</p>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {renderProfile("oauth", "OAuth Providers", "lock")}
         {renderProfile("apikey", "API Key Providers", "key")}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -658,19 +644,16 @@ function WaitForCooldownCard({
   }
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="hourglass_top" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("resilienceWaitForCooldownTitle")}</h2>
-          </div>
-          <SectionDescription
-            scope={t("resilienceWaitForCooldownScope")}
-            trigger={t("resilienceWaitForCooldownTrigger")}
-            effect={t("resilienceWaitForCooldownEffect")}
-          />
-        </div>
+    <SettingsSection
+      title={t("resilienceWaitForCooldownTitle")}
+      description={
+        <SectionDescription
+          scope={t("resilienceWaitForCooldownScope")}
+          trigger={t("resilienceWaitForCooldownTrigger")}
+          effect={t("resilienceWaitForCooldownEffect")}
+        />
+      }
+      action={
         <ActionRow
           editing={editing}
           saving={saving}
@@ -684,8 +667,8 @@ function WaitForCooldownCard({
             setEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{t("resilienceWaitForCooldownDesc")}</p>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -732,7 +715,7 @@ function WaitForCooldownCard({
           </>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -761,12 +744,9 @@ function ComboCooldownWaitCard({
     "For all combo strategies: wait out a short transient cooldown and re-dispatch instead of returning a 429 immediately. Never waits on quota_exhausted.";
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <Icon name="timer" size={20} className="text-primary" />
-          <h2 className="text-lg font-bold">{title}</h2>
-        </div>
+    <SettingsSection
+      title={title}
+      action={
         <ActionRow
           editing={editing}
           saving={saving}
@@ -780,8 +760,8 @@ function ComboCooldownWaitCard({
             setEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{desc}</p>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -844,79 +824,7 @@ function ComboCooldownWaitCard({
           </>
         )}
       </div>
-    </Card>
-  );
-}
-
-function QuotaShareConcurrencyLimitCard({
-  value,
-  onSave,
-  saving,
-}: {
-  value: QuotaShareConcurrencyLimitSettings;
-  onSave: (next: QuotaShareConcurrencyLimitSettings) => Promise<void>;
-  saving: boolean;
-}) {
-  const t = useTranslations("settings");
-  const [editing, setEditing] = useState(false);
-  const [draft, setDraft] = useState(value);
-  const [prevValue, setPrevValue] = useState(value);
-
-  if (prevValue !== value) {
-    setPrevValue(value);
-    setDraft(value);
-  }
-
-  const title = t("resilienceQuotaShareConcurrencyTitle");
-  const desc =
-    t("resilienceQuotaShareConcurrencyDesc") ||
-    "For quota-share combos only: when a connection sets a Max Concurrent cap, serialize concurrent requests to that subscription account so it is never flooded past its ceiling — excess requests wait in the queue instead of getting a 429. The cap comes from each connection's Max Concurrent field; this switch only enables/disables honoring it.";
-
-  return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <Icon name="filter_list" size={20} className="text-primary" />
-          <h2 className="text-lg font-bold">{title}</h2>
-        </div>
-        <ActionRow
-          editing={editing}
-          saving={saving}
-          onEdit={() => setEditing(true)}
-          onCancel={() => {
-            setDraft(value);
-            setEditing(false);
-          }}
-          onSave={async () => {
-            await onSave(draft);
-            setEditing(false);
-          }}
-        />
-      </div>
-
-      <p className="mb-4 text-sm text-text-muted">{desc}</p>
-
-      <div className="grid grid-cols-1 gap-3">
-        {editing ? (
-          <BooleanField
-            label={t("resilienceEnableServerWait")}
-            description={
-              t("resilienceQuotaShareConcurrencyToggleDesc") ||
-              "Quota-share combos only; honors each connection's Max Concurrent cap."
-            }
-            checked={draft.enabled}
-            onChange={(enabled) => setDraft((prev) => ({ ...prev, enabled }))}
-          />
-        ) : (
-          <div className="rounded-xl border border-border bg-bg-subtle p-4">
-            <div className="text-xs text-text-muted">{t("resilienceEnableServerWait")}</div>
-            <div className="mt-1 text-sm font-semibold text-text-main">
-              {value.enabled ? t("statusEnabled") : t("statusDisabled")}
-            </div>
-          </div>
-        )}
-      </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -940,19 +848,16 @@ export function ProviderCooldownCard({
   }
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="timer" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("resilienceProviderCooldownTitle")}</h2>
-          </div>
-          <SectionDescription
-            scope={t("resilienceProviderCooldownScope")}
-            trigger={t("resilienceProviderCooldownTrigger")}
-            effect={t("resilienceProviderCooldownEffect")}
-          />
-        </div>
+    <SettingsSection
+      title={t("resilienceProviderCooldownTitle")}
+      description={
+        <SectionDescription
+          scope={t("resilienceProviderCooldownScope")}
+          trigger={t("resilienceProviderCooldownTrigger")}
+          effect={t("resilienceProviderCooldownEffect")}
+        />
+      }
+      action={
         <ActionRow
           editing={isEditing}
           saving={saving}
@@ -966,8 +871,8 @@ export function ProviderCooldownCard({
             setIsEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{t("resilienceProviderCooldownDesc")}</p>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -1025,7 +930,7 @@ export function ProviderCooldownCard({
           </>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -1051,19 +956,16 @@ function CredentialHealthCheckCard({
   const disabled = editing.intervalMinutes <= 0;
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="health_and_safety" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("resilienceCredentialHealthTitle")}</h2>
-          </div>
-          <SectionDescription
-            scope={t("resilienceCredentialHealthScope")}
-            trigger={t("resilienceCredentialHealthTrigger")}
-            effect={t("resilienceCredentialHealthEffect")}
-          />
-        </div>
+    <SettingsSection
+      title={t("resilienceCredentialHealthTitle")}
+      description={
+        <SectionDescription
+          scope={t("resilienceCredentialHealthScope")}
+          trigger={t("resilienceCredentialHealthTrigger")}
+          effect={t("resilienceCredentialHealthEffect")}
+        />
+      }
+      action={
         <ActionRow
           editing={isEditing}
           saving={saving}
@@ -1077,8 +979,8 @@ function CredentialHealthCheckCard({
             setIsEditing(false);
           }}
         />
-      </div>
-
+      }
+    >
       <p className="mb-4 text-sm text-text-muted">{t("resilienceCredentialHealthDesc")}</p>
 
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
@@ -1116,7 +1018,7 @@ function CredentialHealthCheckCard({
           </>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 
@@ -1238,13 +1140,6 @@ export default function ResilienceTab() {
         value={data.comboCooldownWait}
         saving={savingSection === "comboCooldownWait"}
         onSave={(comboCooldownWait) => savePatch("comboCooldownWait", { comboCooldownWait })}
-      />
-      <QuotaShareConcurrencyLimitCard
-        value={data.quotaShareConcurrencyLimit}
-        saving={savingSection === "quotaShareConcurrencyLimit"}
-        onSave={(quotaShareConcurrencyLimit) =>
-          savePatch("quotaShareConcurrencyLimit", { quotaShareConcurrencyLimit })
-        }
       />
       <ProviderCooldownCard
         value={data.providerCooldown}

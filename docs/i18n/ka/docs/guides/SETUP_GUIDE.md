@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (ქართული)
+# 📖 Setup Guide — 67router (ქართული)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute-ის სრული დაყენების ცნობარი. მოკლე ვერსიისთვის იხილეთ [სწრაფი დაწყება README-ში](../README.md#-quick-start).
+> 67router-ის სრული დაყენების ცნობარი. მოკლე ვერსიისთვის იხილეთ [სწრაფი დაწყება README-ში](../README.md#-quick-start).
 
 ## სარჩევი
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR პაკეტი](https://aur.archlinux.org/packages/omniroute-bin) აინსტალირებს OmniRoute-ს და უზრუნველყოფს systemd-ის მომხმარებლის სერვისს.
+[AUR პაკეტი](https://aur.archlinux.org/packages/omniroute-bin) აინსტალირებს 67router-ს და უზრუნველყოფს systemd-ის მომხმარებლის სერვისს.
 
 ### საწყისი კოდიდან
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **შენიშვნა Windows-ისთვის:** ნაგულისხმევად, OmniRoute იყენებს `%APPDATA%\omniroute`-ს, როდესაც ძველი `%USERPROFILE%\.omniroute` დირექტორია არ არსებობს. მონაცემთა დირექტორიის სხვა მდებარეობის ასარჩევად დააყენეთ `DATA_DIR`.
+> **შენიშვნა Windows-ისთვის:** ნაგულისხმევად, 67router იყენებს `%APPDATA%\omniroute`-ს, როდესაც ძველი `%USERPROFILE%\.omniroute` დირექტორია არ არსებობს. მონაცემთა დირექტორიის სხვა მდებარეობის ასარჩევად დააყენეთ `DATA_DIR`.
 
 > **შენიშვნა:** პირველი გაშვებისას `npm install` ავტომატურად ქმნის `.env`-ს `.env.example`-ის საფუძველზე. შემდგომი ინსტალაციები არსებულ `.env`-ს არ გადაწერს, ამიტომ მორგებული პარამეტრები შენარჩუნდება. ხელახლა შესაქმნელად განმეორებით გაშვებამდე წაშალეთ `.env`.
 
@@ -64,7 +64,7 @@ Docker-ის სრული დაყენებისთვის, Compose �
 
 ### დესკტოპის აპლიკაცია (Electron)
 
-OmniRoute-ს მოჰყვება Electron 41-სა და electron-builder 26.10-ზე აგებული დესკტოპის გარსი. ხელმისაწვდომი სკრიპტები (სამუშაო სივრცის ძირეული დირექტორია):
+67router-ს მოჰყვება Electron 41-სა და electron-builder 26.10-ზე აგებული დესკტოპის გარსი. ხელმისაწვდომი სკრიპტები (სამუშაო სივრცის ძირეული დირექტორია):
 
 ```bash
 npm run electron:dev          # დესკტოპის გაშვება ავტომატური გადატვირთვით
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-გარემოს ცვლადებთან (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` და სხვ.) ერთად ეს საშუალებას გაძლევთ, სრულად სკრიპტირებადი გზით გაუშვათ OmniRoute-ის ეგზემპლარი.
+გარემოს ცვლადებთან (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` და სხვ.) ერთად ეს საშუალებას გაძლევთ, სრულად სკრიპტირებადი გზით გაუშვათ 67router-ის ეგზემპლარი.
 
 ### CLI პარამეტრები
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI ხელსაწყოს კონფიგურაცია — კონფიგურაციების ჩამოთვლა, მიღება, დაყენება და ვალიდაცია            |
 | `omniroute status`      | ოფლაინ მდგომარეობის პანელი — ვერსია, DB, ხელსაწყოები, კონფიგურაცია                              |
 | `omniroute logs`        | API-დან გამოყენების ჟურნალების ნაკადის მიღება (`--follow`-ის მხარდაჭერით)                       |
-| `omniroute update`      | OmniRoute-ის განახლებების შემოწმება ან გამოყენება                                               |
+| `omniroute update`      | 67router-ის განახლებების შემოწმება ან გამოყენება                                                |
 | `omniroute provider`    | პროვაიდერებთან კავშირების მართვა — დამატება, ჩამოთვლა, წაშლა, ტესტირება, ნაგულისხმევად დაყენება |
 | `omniroute --port 3000` | კანონიკური/API პორტის 3000-ზე დაყენება                                                          |
 | `omniroute --mcp`       | MCP სერვერის გაშვება (stdio ტრანსპორტი)                                                         |
@@ -165,7 +165,7 @@ Ollama Tags-ის URL: http://localhost:20128/api/v1/vscode/YOUR_KEY/api/tags
 
 #### ავტომატური კონფიგურაცია `setup-*`-ის გამოყენებით
 
-საბაზისო URL-ისა და გასაღების ხელით ჩასმის ნაცვლად, მიეცით OmniRoute-ს საშუალება, მოდელების აქტიური კატალოგიდან თითოეული ხელსაწყოს
+საბაზისო URL-ისა და გასაღების ხელით ჩასმის ნაცვლად, მიეცით 67router-ს საშუალება, მოდელების აქტიური კატალოგიდან თითოეული ხელსაწყოს
 საკუთარი კონფიგურაცია ჩაწეროს. თითო ხელსაწყოზე ერთი ბრძანება:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 თითოეული მათგანი იღებს `--remote <url> --api-key <key>` პარამეტრებს, რათა ლოკალური ხელსაწყო
-**დისტანციურ** OmniRoute-ზე სამუშაოდ დააკონფიგურიროს, ასევე `--dry-run`-ს წინასწარი დათვალიერებისთვის. CLI-ის სწორი
+**დისტანციურ** 67router-ზე სამუშაოდ დააკონფიგურიროს, ასევე `--dry-run`-ს წინასწარი დათვალიერებისთვის. CLI-ის სწორი
 გარემოს ცვლადებით გასაშვებად, კონფიგურაციის საერთოდ ჩაწერის გარეშე, გამოიყენეთ ზოგადი გამშვები
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 ძველი, კონკრეტული ხელსაწყოებისთვის განკუთვნილი გამშვებები `omniroute launch` (Claude Code) და
@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **MCP-ის სრული დოკუმენტაცია:** [MCP სერვერის README](../../open-sse/mcp-server/README.md) — 110 ინსტრუმენტი, IDE კონფიგურაციები, Python/TS/Go კლიენტები.
 
-### A2A-ის დაყენება (Agent-to-Agent Protocol)
-
-შეამოწმეთ Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-გაგზავნეთ დავალება:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**A2A-ის სრული დოკუმენტაცია:** [A2A სერვერის README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, უნარები, ნაკადური გადაცემა, დავალების სასიცოცხლო ციკლი.
-
----
-
 ## ტაიმაუტის კონფიგურაცია
 
 ### ძირითადი ტაიმაუტები
@@ -277,15 +257,15 @@ curl -X POST http://localhost:20128/a2a \
 | ცვლადი                   | ნაგულისხმევი მნიშვნელობა                   | დანიშნულება                                                                                                                                                                                 |
 | ------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                                   | საერთო საბაზისო მნიშვნელობა ზედა დონის სერვერის პასუხის დაწყების ტაიმაუტისთვის, Undici-ის ფარული ტაიმაუტებისთვის, TLS-ანაბეჭდის მოთხოვნებისა და API-ხიდის მოთხოვნის/პროქსის ტაიმაუტებისთვის |
-| `STREAM_IDLE_TIMEOUT_MS` | მემკვიდრეობით იღებს `REQUEST_TIMEOUT_MS`-ს | ნაკადურ ფრაგმენტებს შორის მაქსიმალური ინტერვალი, რომლის შემდეგაც OmniRoute წყვეტს SSE ნაკადს                                                                                                |
+| `STREAM_IDLE_TIMEOUT_MS` | მემკვიდრეობით იღებს `REQUEST_TIMEOUT_MS`-ს | ნაკადურ ფრაგმენტებს შორის მაქსიმალური ინტერვალი, რომლის შემდეგაც 67router წყვეტს SSE ნაკადს                                                                                                 |
 
 უკუთავსებადობა შენარჩუნებულია: არსებული `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` და სხვა, ცალკეული ფენებისთვის განკუთვნილი ტაიმაუტის ცვლადები კვლავ მუშაობს და საერთო საბაზისო მნიშვნელობას ანაცვლებს.
 
 ### პროვაიდერისთვის სპეციფიკური შენიშვნები
 
-Claude Code-თან თავსებადი ზედა დონის სერვერებისთვის (`anthropic-compatible-cc-*`) OmniRoute გამომავალი `X-Stainless-Timeout` სათაურის მნიშვნელობას განსაზღვრული fetch-ტაიმაუტიდან იღებს, რათა პროვაიდერის მხარეს წაკითხვის ტაიმაუტები თქვენს გარემოს კონფიგურაციასთან შესაბამისობაში დარჩეს.
+Claude Code-თან თავსებადი ზედა დონის სერვერებისთვის (`anthropic-compatible-cc-*`) 67router გამომავალი `X-Stainless-Timeout` სათაურის მნიშვნელობას განსაზღვრული fetch-ტაიმაუტიდან იღებს, რათა პროვაიდერის მხარეს წაკითხვის ტაიმაუტები თქვენს გარემოს კონფიგურაციასთან შესაბამისობაში დარჩეს.
 
-მესამე მხარის Claude Code-თან თავსებადი უკუპროქსიებისთვის OmniRoute ნაგულისხმევ `anthropic-beta` ნაკრებს კონსერვატიულად ინარჩუნებს და, როდესაც `Client Cache Control` დაყენებულია მნიშვნელობაზე `Auto`, მხოლოდ კლიენტის მიერ მოწოდებულ `cache_control` მარკერებს გადაამისამართებს. ცალკეული კავშირისთვის გადამრთველი „Enable redact-thinking beta“ ჩართეთ მხოლოდ მაშინ, როდესაც ზედა დონის სერვერი კონკრეტულად მოითხოვს Claude-ის რედაქტირებული აზროვნების ნაკადებს.
+მესამე მხარის Claude Code-თან თავსებადი უკუპროქსიებისთვის 67router ნაგულისხმევ `anthropic-beta` ნაკრებს კონსერვატიულად ინარჩუნებს და, როდესაც `Client Cache Control` დაყენებულია მნიშვნელობაზე `Auto`, მხოლოდ კლიენტის მიერ მოწოდებულ `cache_control` მარკერებს გადაამისამართებს. ცალკეული კავშირისთვის გადამრთველი „Enable redact-thinking beta“ ჩართეთ მხოლოდ მაშინ, როდესაც ზედა დონის სერვერი კონკრეტულად მოითხოვს Claude-ის რედაქტირებული აზროვნების ნაკადებს.
 
 ### ტაიმაუტების გაფართოებული ჩანაცვლებები
 
@@ -303,11 +283,11 @@ Claude Code-თან თავსებადი ზედა დონის �
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                                 | keep-alive ტაიმაუტი API-ხიდის სერვერზე                                                          |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                    | სოკეტის უმოქმედობის ტაიმაუტი API-ხიდის სერვერზე (`0` თიშავს მას)                                |
 
-> **შენიშვნა:** ნაკადური მოთხოვნებისთვის `FETCH_TIMEOUT_MS` მოიცავს მხოლოდ კავშირის დამყარებას / ზედა დონის სერვერის პირველი პასუხის მოლოდინს. ნაკადის გააქტიურების შემდეგ OmniRoute მას მხოლოდ რეალური შეფერხების (`STREAM_IDLE_TIMEOUT_MS`) ან Undici-ის პასუხის სხეულის უმოქმედობის (`FETCH_BODY_TIMEOUT_MS`) შემთხვევაში შეწყვეტს.
+> **შენიშვნა:** ნაკადური მოთხოვნებისთვის `FETCH_TIMEOUT_MS` მოიცავს მხოლოდ კავშირის დამყარებას / ზედა დონის სერვერის პირველი პასუხის მოლოდინს. ნაკადის გააქტიურების შემდეგ 67router მას მხოლოდ რეალური შეფერხების (`STREAM_IDLE_TIMEOUT_MS`) ან Undici-ის პასუხის სხეულის უმოქმედობის (`FETCH_BODY_TIMEOUT_MS`) შემთხვევაში შეწყვეტს.
 
 ### უკუპროქსის თავსებადობა
 
-თუ OmniRoute-ს Nginx-ის, Caddy-ის, Cloudflare-ის ან სხვა უკუპროქსის უკან უშვებთ, დარწმუნდით, რომ პროქსის ტაიმაუტებიც OmniRoute-ის ნაკადის/fetch-ის ტაიმაუტებზე მეტია.
+თუ 67router-ს Nginx-ის, Caddy-ის, Cloudflare-ის ან სხვა უკუპროქსის უკან უშვებთ, დარწმუნდით, რომ პროქსის ტაიმაუტებიც 67router-ის ნაკადის/fetch-ის ტაიმაუტებზე მეტია.
 
 ---
 

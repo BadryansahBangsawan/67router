@@ -4,7 +4,7 @@
 
 ---
 
-A descriptografia transparente TPROXY é o **5º modo de captura** do OmniRoute para a pilha MITM do
+A descriptografia transparente TPROXY é o **5º modo de captura** do 67router para a pilha MITM do
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Ela intercepta e **descriptografa** o tráfego HTTPS local de saída no Linux
 usando TPROXY do kernel + roteamento baseado em políticas — **sem** falsificar o `/etc/hosts` e
@@ -53,7 +53,7 @@ Use-a quando quiser capturar e descriptografar o tráfego de um processo que:
 - você não quer afetar com uma alteração de proxy para todo o sistema.
 
 Como a interceptação ocorre no kernel, o processo de origem **não precisa de nenhuma
-alteração de configuração** — mas deve confiar na CA dinâmica instalada pelo OmniRoute
+alteração de configuração** — mas deve confiar na CA dinâmica instalada pelo 67router
 (consulte [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ addon não compilado), o carregador do addon (`src/mitm/tproxy/transparentSocket
 retornará `null` em vez de lançar uma exceção. O status do modo de captura então informa
 `available: false`, a opção no painel fica **desabilitada** com a dica
 "A descriptografia TPROXY requer Linux + root + o addon nativo", e o restante do
-OmniRoute continua funcionando.
+67router continua funcionando.
 
 ---
 
@@ -258,7 +258,7 @@ no socket (**SO_MARK**):
 | **Sanitização de erros**                | As respostas de erro da rota passam por `sanitizeErrorMessage()` (Regra Rígida nº 12).                                                                                                                                                                                                                                                                                                                                              |
 
 **A CA de MITM é um recurso poderoso.** Uma CA considerada confiável pelo sistema operacional e capaz de assinar qualquer
-host significa que tudo o que o OmniRoute interceptar pode ser descriptografado. Ela é protegida pelo
+host significa que tudo o que o 67router interceptar pode ser descriptografado. Ela é protegida pelo
 modo explícito de captura TPROXY, disponível somente localmente, desativado por padrão, e a entrada
 do repositório de confiança é removida quando você interrompe o modo.
 
@@ -368,7 +368,7 @@ retorna `available: false` quando o addon está ausente.
 ### Regras de firewall obsoletas após uma falha
 
 `revertTproxy()` é o inverso exato da aplicação e é idempotente. A interrupção do
-modo reverte as regras; se o OmniRoute tiver sido encerrado durante uma sessão, use a ação
+modo reverte as regras; se o 67router tiver sido encerrado durante uma sessão, use a ação
 **Reparar** do AgentBridge (`POST /api/tools/agent-bridge/repair`) para desfazer estados órfãos do
 sistema (falsificação de DNS, CA raiz, proxy do sistema). As regras `mangle` e a rota do TPROXY também
 são limpas automaticamente na reinicialização.

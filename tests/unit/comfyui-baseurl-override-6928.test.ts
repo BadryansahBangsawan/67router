@@ -1,6 +1,6 @@
 // Unit tests for #6928: expose an editable base-URL field on the ComfyUI
 // provider connection + wire the per-connection override through the shared
-// resolveComfyUiBaseUrl helper (used by image/video/music generation handlers).
+// resolveComfyUiBaseUrl helper (used by the video/music generation handlers).
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync } from "node:fs";
@@ -10,7 +10,6 @@ import { join } from "node:path";
 process.env.DATA_DIR = mkdtempSync(join(tmpdir(), "omniroute-comfyui-baseurl-"));
 
 import { resolveComfyUiBaseUrl } from "../../open-sse/utils/comfyuiClient.ts";
-const { handleImageGeneration } = await import("../../open-sse/handlers/imageGeneration.ts");
 const { handleVideoGeneration } = await import("../../open-sse/handlers/videoGeneration.ts");
 const { handleMusicGeneration } = await import("../../open-sse/handlers/musicGeneration.ts");
 
@@ -51,53 +50,6 @@ function mockComfyFetch(promptId: string, seenUrls: string[]) {
     throw new Error(`Unexpected URL: ${stringUrl}`);
   };
 }
-
-test("handleImageGeneration uses the connection's providerSpecificData.baseUrl override for ComfyUI", async () => {
-  const originalFetch = globalThis.fetch;
-  const originalSetTimeout = globalThis.setTimeout;
-  const seenUrls: string[] = [];
-  globalThis.setTimeout = immediateTimeout;
-  globalThis.fetch = mockComfyFetch("img-override", seenUrls);
-
-  try {
-    const result = await handleImageGeneration({
-      body: { model: "comfyui/flux-dev", prompt: "override test" },
-      credentials: { providerSpecificData: { baseUrl: OVERRIDE } },
-      log: null,
-    });
-
-    assert.equal(result.success, true);
-    assert.ok(
-      seenUrls.every((u) => u.startsWith(OVERRIDE)),
-      `expected all requests to use ${OVERRIDE}, got ${seenUrls.join(", ")}`
-    );
-  } finally {
-    globalThis.fetch = originalFetch;
-    globalThis.setTimeout = originalSetTimeout;
-  }
-});
-
-test("handleImageGeneration falls back to localhost:8188 for ComfyUI when credentials is null (no regression)", async () => {
-  const originalFetch = globalThis.fetch;
-  const originalSetTimeout = globalThis.setTimeout;
-  const seenUrls: string[] = [];
-  globalThis.setTimeout = immediateTimeout;
-  globalThis.fetch = mockComfyFetch("img-default", seenUrls);
-
-  try {
-    const result = await handleImageGeneration({
-      body: { model: "comfyui/flux-dev", prompt: "default test" },
-      credentials: null,
-      log: null,
-    });
-
-    assert.equal(result.success, true);
-    assert.ok(seenUrls.every((u) => u.startsWith(FALLBACK)));
-  } finally {
-    globalThis.fetch = originalFetch;
-    globalThis.setTimeout = originalSetTimeout;
-  }
-});
 
 test("handleVideoGeneration uses the connection's providerSpecificData.baseUrl override for ComfyUI", async () => {
   const originalFetch = globalThis.fetch;
@@ -156,17 +108,11 @@ test("resolveComfyUiBaseUrl returns the fallback when providerSpecificData is ab
 });
 
 test("resolveComfyUiBaseUrl returns the fallback when providerSpecificData is null", () => {
-  assert.equal(
-    resolveComfyUiBaseUrl({ providerSpecificData: null }, FALLBACK),
-    FALLBACK
-  );
+  assert.equal(resolveComfyUiBaseUrl({ providerSpecificData: null }, FALLBACK), FALLBACK);
 });
 
 test("resolveComfyUiBaseUrl returns the fallback when baseUrl is absent", () => {
-  assert.equal(
-    resolveComfyUiBaseUrl({ providerSpecificData: {} }, FALLBACK),
-    FALLBACK
-  );
+  assert.equal(resolveComfyUiBaseUrl({ providerSpecificData: {} }, FALLBACK), FALLBACK);
 });
 
 test("resolveComfyUiBaseUrl returns the fallback when baseUrl is not a string", () => {

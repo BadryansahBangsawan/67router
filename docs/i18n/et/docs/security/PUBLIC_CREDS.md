@@ -15,7 +15,7 @@
 - [OAuth 2.0 omarakendustele (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — installitud rakenduste OAuthi client_id / client_secret on avalikud; tegeliku turvalisuse tagab PKCE.
 - [Firebase API võtmed](https://firebase.google.com/docs/projects/api-keys) — veebikliendi identifikaatorid on kavandatud avalikuks.
 
-OmniRoute peab need väärtused manustama, et kasutajad, kes `.env` faili ei seadista, saaksid kohe toimiva OAuthi voo. Ilma manustatud varuväärtuseta lakkavad Gemini / Antigravity teenusepakkujad töötamast kõigil kasutajatel, kes järgivad lähenemist „lihtsalt klooni ja käivita“.
+67router peab need väärtused manustama, et kasutajad, kes `.env` faili ei seadista, saaksid kohe toimiva OAuthi voo. Ilma manustatud varuväärtuseta lakkavad Gemini / Antigravity teenusepakkujad töötamast kõigil kasutajatel, kes järgivad lähenemist „lihtsalt klooni ja käivita“.
 
 Samas tuvastavad **GitHub Secret Scanning**, **Semgrep** ja sarnased mustripõhised skannerid literaalväärtusi nagu `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com`. Iga väljalase tekitab mürarikka valepositiivsete hoiatuste voo, saatmiskaitse blokeerib õiguspäraseid commit'e ja haldajad lakkavad hoiatuste voogu usaldamast.
 

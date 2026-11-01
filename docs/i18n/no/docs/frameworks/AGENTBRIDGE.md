@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge er OmniRoutes MITM-proxy (Man-in-the-Middle), som fanger opp HTTPS-trafikk fra AI-agenter i IDE-er og omdirigerer den gjennom OmniRoutes enhetlige rutingmotor. Den støtter **10 IDE-agenter** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code og Trae (under utredning) — noe som gjør OmniRoute til MITM-proxyen med markedets bredeste dekning for AI-baserte kodeassistenter.
+AgentBridge er 67routers MITM-proxy (Man-in-the-Middle), som fanger opp HTTPS-trafikk fra AI-agenter i IDE-er og omdirigerer den gjennom 67routers enhetlige rutingmotor. Den støtter **10 IDE-agenter** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code og Trae (under utredning) — noe som gjør 67router til MITM-proxyen med markedets bredeste dekning for AI-baserte kodeassistenter.
 
 **Plassering i kontrollpanelet:** `/dashboard/tools/agent-bridge`
 **Sidepanelgruppe:** Verktøy (etter Cloud Agents)
@@ -16,34 +16,34 @@ AgentBridge er OmniRoutes MITM-proxy (Man-in-the-Middle), som fanger opp HTTPS-t
 
 ### Hva er AgentBridge?
 
-Når en IDE-agent (f.eks. GitHub Copilot, Cursor, Claude Code) gjør et API-kall, kobler den seg direkte til den oppstrøms AI-leverandøren (OpenAI, Anthropic osv.). AgentBridge fanger opp denne tilkoblingen transparent på TLS-nivå — uten at det kreves noen endring i agentkonfigurasjonen — og skriver om forespørselen gjennom OmniRoute.
+Når en IDE-agent (f.eks. GitHub Copilot, Cursor, Claude Code) gjør et API-kall, kobler den seg direkte til den oppstrøms AI-leverandøren (OpenAI, Anthropic osv.). AgentBridge fanger opp denne tilkoblingen transparent på TLS-nivå — uten at det kreves noen endring i agentkonfigurasjonen — og skriver om forespørselen gjennom 67router.
 
 Dette betyr at du kan:
 
-- **Omdirigere enhver agent til enhver leverandør**: Copilot som snakker med OpenAI? Omdiriger den til Anthropic Claude, Gemini eller en hvilken som helst av OmniRoutes 375 leverandører.
+- **Omdirigere enhver agent til enhver leverandør**: Copilot som snakker med OpenAI? Omdiriger den til Anthropic Claude, Gemini eller en hvilken som helst av 67routers 375 leverandører.
 - **Bruke modelltilordninger**: `gemini-3-flash` → `claude-sonnet-4.7` transparent på handlernivået.
 - **Observere all agenttrafikk**: hver avskjærte forespørsel publiseres til [Traffic Inspector](./TRAFFIC_INSPECTOR.md).
-- **Dra nytte av OmniRoutes robusthet**: combo-ruting, circuit breakers, fallback-mekanismer og kostnadssporing fungerer også for IDE-agenttrafikk.
+- **Dra nytte av 67routers robusthet**: combo-ruting, circuit breakers, fallback-mekanismer og kostnadssporing fungerer også for IDE-agenttrafikk.
 
 ### Posisjonering i markedet
 
-| Funksjon                | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| ----------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity             |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot          |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)              |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex            |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE              |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries          |    —    |    ✓     |        —        |             ✓             |
-| Claude Code             |    —    |    —     |        ✓        |             ✓             |
-| Open Code               |    —    |    —     |        ✓        |             ✓             |
-| Trae                    |    —    |    —     |        —        |       🔍 Undersøkes       |
-| Dashbord-UI             |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector       |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute-ruting        |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI for modelltilordning |    ✗    |    ✗     |        ✗        |             ✓             |
-| Bypass-liste            |    ✗    |    ✗     |        ✓        |             ✓             |
-| Oppstrøms CA-sertifikat |    ✗    |    ✗     |        ✓        |             ✓             |
+| Funksjon                | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| ----------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity             |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot          |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)              |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex            |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE              |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries          |    —    |    ✓     |        —        |            ✓             |
+| Claude Code             |    —    |    —     |        ✓        |            ✓             |
+| Open Code               |    —    |    —     |        ✓        |            ✓             |
+| Trae                    |    —    |    —     |        —        |      🔍 Undersøkes       |
+| Dashbord-UI             |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector       |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router-ruting         |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI for modelltilordning |    ✗    |    ✗     |        ✗        |            ✓             |
+| Bypass-liste            |    ✗    |    ✗     |        ✓        |            ✓             |
+| Oppstrøms CA-sertifikat |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, CJS-underprosess)
     │  løser mål basert på Host-headerens SNI
     │  genererer TLS-sertifikat per SNI signert av AgentBridge-CA-en
     ├── Treff i omgåelseslisten? → TCP-videresending (ingen dekryptering)
-    ├── Mål treffes? → fetch → OmniRoute-ruter (port 20128)
+    ├── Mål treffes? → fetch → 67router-ruter (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() på forespørselens innhold/headere
     │               ├── TrafficBuffer.push() — publiserer til Traffic Inspector
@@ -205,7 +205,7 @@ AgentBridge-CA-sertifikatet må være klarert av operativsystemet før IDE-er go
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Nøkkelring):**
@@ -261,10 +261,10 @@ Eksempel på oppføringer i `/etc/hosts` for GitHub Copilot:
 
 Bruk modelltilordningstabellen på hvert agentkort for å definere tilordninger fra kilde → mål:
 
-| Kildemodell (agentens egen) | Målmodell (OmniRoute) |
-| --------------------------- | --------------------- |
-| `gpt-4o`                    | `claude-sonnet-4.7`   |
-| `*` (jokertegn)             | `claude-haiku-4.7`    |
+| Kildemodell (agentens egen) | Målmodell (67router) |
+| --------------------------- | -------------------- |
+| `gpt-4o`                    | `claude-sonnet-4.7`  |
+| `*` (jokertegn)             | `claude-haiku-4.7`   |
 
 Jokertegnet `*` tilordner enhver ukjent modell til det angitte målet. Lagres i tabellen `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Jokertegnet `*` tilordner enhver ukjent modell til det angitte målet. Lagres i 
 
 ### 3.5 Risikomerknad
 
-AgentBridge fanger opp legitimasjon (OAuth-tokener, API-nøkler) som IDE-et bruker til å autentisere seg hos oppstrømsleverandører. Disse blir **maskert før logging** (se §2.7), men er synlige for OmniRoutes MITM-lag. Ved første aktivering av hver agent vises et risikovarsel i et modalt vindu som kan lukkes.
+AgentBridge fanger opp legitimasjon (OAuth-tokener, API-nøkler) som IDE-et bruker til å autentisere seg hos oppstrømsleverandører. Disse blir **maskert før logging** (se §2.7), men er synlige for 67routers MITM-lag. Ved første aktivering av hver agent vises et risikovarsel i et modalt vindu som kan lukkes.
 
 ### 3.6 Vedlikehold og diagnostikk
 
@@ -397,7 +397,7 @@ Oppdagelsen bruker operativsystemspesifikke baner og binærkontroller (f.eks. `c
 
 ### Omgåelsesliste for sensitive verter
 
-Omgåelseslisten sikrer at finansinstitusjoner, OAuth-/SSO-leverandører og andre sensitive verter **aldri dekrypteres**. TLS-trafikken deres passerer gjennom som en transparent TCP-tunnel — OmniRoute ser aldri klarteksten.
+Omgåelseslisten sikrer at finansinstitusjoner, OAuth-/SSO-leverandører og andre sensitive verter **aldri dekrypteres**. TLS-trafikken deres passerer gjennom som en transparent TCP-tunnel — 67router ser aldri klarteksten.
 
 Standardmønstrene for omgåelse inkluderer:
 
@@ -448,7 +448,7 @@ Alternativt kan du konfigurere en ikke-privilegert port i AgentBridge-innstillin
 
 Hvis IDE-en viser TLS-feil etter at AgentBridge er startet:
 
-1. Kontroller at sertifikatet ble installert: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) eller `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Kontroller at sertifikatet ble installert: `security find-certificate -c "OmniRoute MITM CA"` (macOS) eller `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Enkelte apper har sitt eget klareringslager (Firefox, Chrome på Linux). Kjør «Klarer sertifikat» på nytt, og kontroller det NSS-/Firefox-spesifikke sertifikatlageret.
 3. Start IDE-en på nytt etter klareringen — aktive TLS-økter bruker den gamle klareringstilstanden.
 
@@ -499,7 +499,7 @@ Automatisk oppdagelse bruker vanlige installasjonsbaner. Hvis oppdagelsen mislyk
 Hvis AgentBridge avskjærer forespørsler, men alle forespørsler mislykkes:
 
 1. Kontroller at minst én leverandør er tilkoblet på `/dashboard/providers`
-2. Kontroller OmniRoute-serverloggene: `APP_LOG_LEVEL=debug` i `.env`
+2. Kontroller 67router-serverloggene: `APP_LOG_LEVEL=debug` i `.env`
 3. Kontroller at `OMNIROUTE_BASE_URL` peker til riktig ruterendepunkt (standard: `http://127.0.0.1:20128`)
 
 ---

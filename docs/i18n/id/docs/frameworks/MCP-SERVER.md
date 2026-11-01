@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Bahasa Indonesia)
+# 67router MCP Server Documentation (Bahasa Indonesia)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Instalasi
 
-OmniRoute MCP sudah tersedia secara bawaan. Jalankan dengan:
+67router MCP sudah tersedia secara bawaan. Jalankan dengan:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline, dan klien MCP yang kompatibel.
 | `omniroute_switch_combo`        | `write:combos`        | Mengaktifkan atau menonaktifkan kombo                                                                                                    |
 | `omniroute_create_combo`        | `write:combos`        | Membuat kombo tervalidasi melalui API kombo yang ada                                                                                     |
 | `omniroute_check_quota`         | `read:quota`          | Kuota terpakai/total, persentase tersisa, waktu pengaturan ulang, kondisi token                                                          |
-| `omniroute_route_request`       | `execute:completions` | Mengirim penyelesaian percakapan melalui perutean OmniRoute                                                                              |
+| `omniroute_route_request`       | `execute:completions` | Mengirim penyelesaian percakapan melalui perutean 67router                                                                               |
 | `omniroute_cost_report`         | `read:usage`          | Laporan biaya berdasarkan periode (sesi/hari/minggu/bulan)                                                                               |
 | `omniroute_list_models_catalog` | `read:models`         | Katalog model lengkap beserta kemampuan, status, dan harga                                                                               |
 | `omniroute_radar_catalog`       | `read:radar`          | Katalog Radar lokal yang ditandatangani; filter penyedia/keluarga opsional                                                               |
@@ -152,7 +152,7 @@ penyedia dan ditandai dengan `source: "mcp_metadata_estimate"`.
 
 ### Filter Pohon Aksesibilitas MCP (v3.8.0)
 
-Terpisah dari alat kompresi di atas, OmniRoute menyertakan filter pascaeksekusi yang
+Terpisah dari alat kompresi di atas, 67router menyertakan filter pascaeksekusi yang
 mengompresi **hasil alat** dari alat peramban/aksesibilitas MCP sebelum dikembalikan ke
 agen. Filter ini bukan merupakan alat — filter ini berjalan secara transparan pada setiap hasil alat yang berisi
 teks pohon aksesibilitas atau snapshot peramban yang panjang (≥2000 karakter).
@@ -236,7 +236,7 @@ Didefinisikan dalam `open-sse/mcp-server/tools/agentSkillTools.ts`. Didukung ole
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Mencantumkan seluruh 45 keterampilan agen dengan filter opsional `category` (api\|cli) dan `area`; mengembalikan metadata + cakupan                   |
 | `omniroute_agent_skills_get`      | `read:catalog` | Mendapatkan metadata lengkap + konten SKILL.md untuk satu keterampilan berdasarkan `id` kanonis                                                       |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistik cakupan: jumlah dari 23 keterampilan API, 21 CLI, dan 1 konfigurasi yang memiliki file SKILL.md di sistem berkas dibandingkan total katalog |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistik cakupan: jumlah dari 22 keterampilan API, 20 CLI, dan 1 konfigurasi yang memiliki file SKILL.md di sistem berkas dibandingkan total katalog |
 
 Lihat [AGENT-SKILLS.md](./AGENT-SKILLS.md) untuk katalog lengkap dan cara agen eksternal menggunakannya.
 
@@ -245,17 +245,6 @@ Lihat [AGENT-SKILLS.md](./AGENT-SKILLS.md) untuk katalog lengkap dan cara agen e
 Inventaris alat MCP di atas (110 alat unik, dihitung oleh `countUniqueMcpTools()`) sengaja
 dibatasi pada operasi perutean/cache/kompresi/memori/keterampilan/proxy/sumber-konteks saat runtime. Dua
 kerangka kerja terkait disertakan bersama server MCP dalam v3.8.0 dan didokumentasikan secara terpisah:
-
-### Agen Cloud
-
-Agen Cloud adalah agen pengodean AI di luar proses (codex-cloud, cursor-cloud, devin, jules) yang terhubung ke
-OmniRoute melalui model koneksi yang sama dengan yang digunakan untuk penyedia LLM. Agen-agen ini diekspos melalui
-antarmuka REST tersendiri (`/api/v1/agents/*`) dan **bukan** bagian dari katalog alat MCP
-— memanggil Agen Cloud tidak menggunakan cakupan MCP.
-
-- Implementasi: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Siklus hidup: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentasi: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Guardrail
 
@@ -402,8 +391,6 @@ Setiap alat memerlukan cakupan tertentu:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                   |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                            |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                              |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                          |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                             |
 | `read:obsidian`       | 13 alat baca — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 alat tulis — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                           |
@@ -456,7 +443,7 @@ mempertahankan perilaku yang dikendalikan oleh `OMNIROUTE_MCP_ENFORCE_SCOPES` ta
 
 | Variabel                                | Default                                       | Tujuan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | :-------------------------------------- | :-------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                      | URL dasar yang digunakan server MCP saat memanggil API internal OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                      | URL dasar yang digunakan server MCP saat memanggil API internal 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `OMNIROUTE_API_KEY`                     | (kosong)                                      | Kunci API yang diteruskan sebagai `Authorization: Bearer` ke panggilan API internal                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (hanya `"true"` yang mengaktifkannya) | Jika diaktifkan, cakupan yang tidak tersedia akan menolak panggilan alat dan mencatat `scope_denied:<reason>` dalam log audit. Penerapan ini JUGA dipaksakan terlepas dari flag ini untuk setiap pemanggil HTTP/SSE yang diidentifikasi dari header Authorization per kunci (`source === "authInfo"`) yang tidak memiliki cakupan penuh `manage`/`admin` — misalnya, kunci yang hanya memiliki cakupan bypass terbatas `mcp:connect` — sehingga default ini hanya aman untuk alur operator tunggal lokal/stdio, tidak pernah untuk akses jarak jauh non-loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (kosong)                                      | Daftar cakupan yang diizinkan, dipisahkan koma, dan dianggap "tersedia" secara default (digunakan ketika pemanggil tidak menyediakan cakupannya sendiri)                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -559,7 +546,6 @@ Gunakan dasbor atau endpoint REST `/api/mcp/audit` dan `/api/mcp/audit/stats` un
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definisi alat keterampilan (4 alat)                                         |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definisi alat sumber konteks Notion (6 alat)                                |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definisi alat gamifikasi (8 alat)                                           |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Alat pendaftaran dan pengelolaan plugin (8 alat)                            |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                                  |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                                   |
 | `src/app/api/mcp/sse/route.ts`                                           | Rute transport SSE `/api/mcp/sse`                                           |

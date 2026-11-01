@@ -1,18 +1,18 @@
-# Providers Guide: Connect AI Models to OmniRoute (Bosanski)
+# Providers Guide: Connect AI Models to 67router (Bosanski)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-# Vodič za provajdere: Povežite AI modele sa OmniRoute
+# Vodič za provajdere: Povežite AI modele sa 67router
 
-> **TL;DR**: Provajder je veza sa AI servisom (kao što su OpenAI, Anthropic, Google). Potreban vam je barem jedan provajder da biste koristili OmniRoute.
+> **TL;DR**: Provajder je veza sa AI servisom (kao što su OpenAI, Anthropic, Google). Potreban vam je barem jedan provajder da biste koristili 67router.
 
 ---
 
 ## Šta je pružalac usluga?
 
-Zamislite pružaoca usluga kao **mobilnog operatera**. Baš kao što vam je za upućivanje poziva potreban mobilni operater, za korištenje AI modela potreban vam je pružalac AI usluga. OmniRoute je poput telefona koji radi sa **svim operaterima** — možete se automatski prebacivati između njih.
+Zamislite pružaoca usluga kao **mobilnog operatera**. Baš kao što vam je za upućivanje poziva potreban mobilni operater, za korištenje AI modela potreban vam je pružalac AI usluga. 67router je poput telefona koji radi sa **svim operaterima** — možete se automatski prebacivati između njih.
 
 ### Vrste pružalaca usluga
 
@@ -33,8 +33,8 @@ Pogledajte **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** za opće upute za po
 ### Opcionalno početno postavljanje besplatnih pružalaca usluga
 
 Čarobnjak za prvo pokretanje nudi posebnu karticu **Postavi besplatne pružaoce usluga**. On izvodi trenutnu
-listu dostupnih pružalaca usluga iz OmniRoute registra pružalaca koji ne zahtijevaju autentifikaciju, a zatim vam omogućava da pregledate i poništite odabir svakog
-pružaoca prije potvrde. OmniRoute prikazuje upozorenje pružaoca usluga i poveznicu do njegove stranice
+listu dostupnih pružalaca usluga iz 67router registra pružalaca koji ne zahtijevaju autentifikaciju, a zatim vam omogućava da pregledate i poništite odabir svakog
+pružaoca prije potvrde. 67router prikazuje upozorenje pružaoca usluga i poveznicu do njegove stranice
 kako biste prvo mogli pregledati uslove treće strane, pravila privatnosti, dostupnost i ograničenja brzine.
 
 Ova radnja je opcionalna: dovršavanje čarobnjaka nikada ne stvara veze s besplatnim pružaocima usluga bez vašeg znanja.
@@ -82,7 +82,7 @@ sigurno ponovo pokušati uspostaviti samo neuspjele veze.
 
 ### Opcija D: Lokalni MLX modeli (Apple Silicon)
 
-Za Apple Silicon Mac računare s objedinjenom memorijom, OmniRoute podržava povezivanje s lokalnim MLX modelima koji se pokreću putem `mlx-lm.server` kao uobičajeni lokalni pružaoci kompatibilni s OpenAI-jem.
+Za Apple Silicon Mac računare s objedinjenom memorijom, 67router podržava povezivanje s lokalnim MLX modelima koji se pokreću putem `mlx-lm.server` kao uobičajeni lokalni pružaoci kompatibilni s OpenAI-jem.
 
 #### Preduslovi
 
@@ -112,14 +112,14 @@ Za Apple Silicon Mac računare s objedinjenom memorijom, OmniRoute podržava pov
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Povežite se putem OmniRoute kontrolne ploče**:
+3. **Povežite se putem 67router kontrolne ploče**:
    - Idite na **Pružaoci usluga** → **Dodaj pružaoca usluga**
    - Odaberite **MLX Gemma 26B** ili **MLX Qwen 3.8 27B**
    - Kliknite **Poveži** (API ključ nije potreban)
 
 4. **Koristite s OpenCodeom**:
    ```bash
-   # Konfigurirajte OpenCode da koristi OmniRoute
+   # Konfigurirajte OpenCode da koristi 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -141,7 +141,7 @@ Ovim morate upravljati ručno:
 - Pokrenite ih na odvojenim računarima ili
 - Zaustavite jedan prije pokretanja drugog
 
-OmniRoute ne upravlja automatski procesima MLX servera — on samo usmjerava zahtjeve prema krajnjim tačkama kompatibilnim s OpenAI-jem koje konfigurirate.
+67router ne upravlja automatski procesima MLX servera — on samo usmjerava zahtjeve prema krajnjim tačkama kompatibilnim s OpenAI-jem koje konfigurirate.
 
 #### Podrška za pozivanje alata
 
@@ -166,7 +166,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Nedovoljno memorije         | Osigurajte da je pokrenut samo jedan model; zatvorite druge aplikacije; provjerite Activity Monitor |
 | Veza je odbijena            | Provjerite je li server pokrenut na odgovarajućem portu (11435/11436)                               |
 | Spori odgovori              | Prvi zahtjev učitava model u memoriju (~30-60s); naredni zahtjevi su brzi                           |
-| Pozivanje alata ne uspijeva | Provjerite podržava li model alate; provjerite OmniRoute zapise radi grešaka u prevođenju           |
+| Pozivanje alata ne uspijeva | Provjerite podržava li model alate; provjerite 67router zapise radi grešaka u prevođenju            |
 
 ---
 
@@ -238,12 +238,12 @@ Vaš provajder je sada povezan. Možete ga koristiti sa `model: "auto"` ili dire
 
 ## Korištenje više pružatelja usluga
 
-OmniRoute najbolje radi s **više pružatelja usluga**. To vam omogućava:
+67router najbolje radi s **više pružatelja usluga**. To vam omogućava:
 
-- **Automatski prelazak na rezervnog pružatelja** — Ako jedan pružatelj ne uspije, OmniRoute pokušava sa sljedećim
-- **Optimizaciju troškova** — OmniRoute bira najjeftinijeg pružatelja za svaki zahtjev
-- **Optimizaciju brzine** — OmniRoute bira najbržeg pružatelja za svaki zahtjev
-- **Optimizaciju kvaliteta** — OmniRoute bira najboljeg pružatelja za svaki zadatak
+- **Automatski prelazak na rezervnog pružatelja** — Ako jedan pružatelj ne uspije, 67router pokušava sa sljedećim
+- **Optimizaciju troškova** — 67router bira najjeftinijeg pružatelja za svaki zahtjev
+- **Optimizaciju brzine** — 67router bira najbržeg pružatelja za svaki zahtjev
+- **Optimizaciju kvaliteta** — 67router bira najboljeg pružatelja za svaki zadatak
 
 ### Preporučena postavka
 
@@ -253,7 +253,7 @@ Povežite najmanje **3 pružatelja usluga** za najbolje iskustvo:
 2. **Jedan brzi pružatelj** (Groq, Cerebras) — Za brze odgovore
 3. **Jedan kvalitetni pružatelj** (OpenAI, Anthropic, Google) — Za složene zadatke
 
-Zatim koristite `model: "auto"` i OmniRoute će automatski odabrati najboljeg za svaki zahtjev.
+Zatim koristite `model: "auto"` i 67router će automatski odabrati najboljeg za svaki zahtjev.
 
 ---
 
@@ -262,25 +262,25 @@ Zatim koristite `model: "auto"` i OmniRoute će automatski odabrati najboljeg za
 ### OpenAI
 
 1. Nabavite API ključ: https://platform.openai.com/api-keys
-2. U OmniRouteu: Pružatelji usluga → Dodaj pružatelja usluga → OpenAI
+2. U 67routeru: Pružatelji usluga → Dodaj pružatelja usluga → OpenAI
 3. Zalijepite API ključ → Poveži
 
 ### Anthropic
 
 1. Nabavite API ključ: https://console.anthropic.com/
-2. U OmniRouteu: Pružatelji usluga → Dodaj pružatelja usluga → Anthropic
+2. U 67routeru: Pružatelji usluga → Dodaj pružatelja usluga → Anthropic
 3. Zalijepite API ključ → Poveži
 
 ### Google (Gemini)
 
 1. Nabavite API ključ: https://aistudio.google.com/apikey
-2. U OmniRouteu: Pružatelji usluga → Dodaj pružatelja usluga → Gemini
+2. U 67routeru: Pružatelji usluga → Dodaj pružatelja usluga → Gemini
 3. Zalijepite API ključ → Poveži
 
 ### DeepSeek
 
 1. Nabavite API ključ: https://platform.deepseek.com/
-2. U OmniRouteu: Pružatelji usluga → Dodaj pružatelja usluga → DeepSeek
+2. U 67routeru: Pružatelji usluga → Dodaj pružatelja usluga → DeepSeek
 3. Zalijepite API ključ → Poveži
 
 ### Qoder: odaberite način prijenosa vjerodajnica
@@ -288,12 +288,12 @@ Zatim koristite `model: "auto"` i OmniRoute će automatski odabrati najboljeg za
 Qoder zahtijeva vjerodajnice. Njegova dva načina prijenosa imaju različite mogućnosti; sam naziv modela
 ne određuje šta određena veza može raditi.
 
-| Vjerodajnica                                | OmniRoute način prijenosa                             | Pozivanje alata od strane pozivaoca               | Streaming                                                       |
+| Vjerodajnica                                | 67router način prijenosa                              | Pozivanje alata od strane pozivaoca               | Streaming                                                       |
 | ------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------- |
-| PAT koji počinje s `pt-`                    | Lokalni `qodercli` proces na OmniRoute hostu          | Nije podržano                                     | Baferovano: SSE se šalje tek nakon što CLI vrati cijeli odgovor |
+| PAT koji počinje s `pt-`                    | Lokalni `qodercli` proces na 67router hostu           | Nije podržano                                     | Baferovano: SSE se šalje tek nakon što CLI vrati cijeli odgovor |
 | Pristupni token koji nije PAT ili API ključ | DashScope HTTP endpoint kompatibilan s OpenAI API-jem | Prosljeđuje se, zavisno od izvornog modela/ključa | Izvorna HTTP/SSE putanja                                        |
 
-Za PAT instalirajte Qoder CLI na istom hostu ili u istom kontejneru kao OmniRoute. Izvršna datoteka
+Za PAT instalirajte Qoder CLI na istom hostu ili u istom kontejneru kao 67router. Izvršna datoteka
 mora biti dostupna kao `qodercli` ili postavite `CLI_QODER_BIN` na putanju do izvršne datoteke. CLI
 instaliran samo na Docker hostu nije automatski prisutan u kontejneru. Nedostajuće
 binarne datoteke uzrokuju eksplicitnu grešku koja vas upućuje na instalaciju ili postavljanje putanje.
@@ -326,16 +326,16 @@ i podesivo vremensko ograničenje zasebna su poboljšanja; ovo ponašanje ih ne 
 ### Groq
 
 1. Nabavite API ključ: https://console.groq.com/
-2. U OmniRouteu: Pružatelji usluga → Dodaj pružatelja usluga → Groq
+2. U 67routeru: Pružatelji usluga → Dodaj pružatelja usluga → Groq
 3. Zalijepite API ključ → Poveži
 
 ---
 
 ## Česta pitanja
 
-### "Moram li platiti korištenje OmniRoutea?"
+### "Moram li platiti korištenje 67routera?"
 
-**Ne!** OmniRoute je besplatan i otvorenog koda. Možete koristiti besplatne pružaoce usluga (Kiro, Pollinations) bez ikakvog plaćanja. Plaćate samo ako odlučite koristiti pružaoce usluga koji se plaćaju.
+**Ne!** 67router je besplatan i otvorenog koda. Možete koristiti besplatne pružaoce usluga (Kiro, Pollinations) bez ikakvog plaćanja. Plaćate samo ako odlučite koristiti pružaoce usluga koji se plaćaju.
 
 ### "S kojim pružaocem usluga trebam početi?"
 
@@ -343,11 +343,11 @@ Počnite s **Kiro AI** — besplatan je, ne zahtijeva API ključ i omogućava va
 
 ### "Mogu li istovremeno koristiti više pružalaca usluga?"
 
-**Da!** To je glavna svrha OmniRoutea. Povežite više pružalaca usluga i koristite `model: "auto"` kako bi OmniRoute odabrao najboljeg za svaki zahtjev.
+**Da!** To je glavna svrha 67routera. Povežite više pružalaca usluga i koristite `model: "auto"` kako bi 67router odabrao najboljeg za svaki zahtjev.
 
 ### "Šta ako pružalac usluga prestane raditi?"
 
-OmniRoute automatski preskače pružaoce usluga koji ne rade i pokušava sa sljedećim. Ne morate ništa poduzimati.
+67router automatski preskače pružaoce usluga koji ne rade i pokušava sa sljedećim. Ne morate ništa poduzimati.
 
 ### "Kako mogu prekinuti vezu s pružaocem usluga?"
 
@@ -355,17 +355,13 @@ Idite na Providers → kliknite na pružaoca usluga → kliknite **Disconnect**.
 
 ### "Mogu li koristiti svoje postojeće API ključeve?"
 
-**Da!** Ako već imate API ključeve za OpenAI, Anthropic, Google itd., možete ih koristiti u OmniRouteu. Samo ih zalijepite prilikom povezivanja pružaoca usluga.
+**Da!** Ako već imate API ključeve za OpenAI, Anthropic, Google itd., možete ih koristiti u 67routeru. Samo ih zalijepite prilikom povezivanja pružaoca usluga.
 
 ---
 
 ## Šta dalje?
 
-- **[Vodič za Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Dopustite OmniRoute-u da odabere najbolji AI za vas
+- **[Vodič za Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Dopustite 67router-u da odabere najbolji AI za vas
 - **[Vodič za besplatne pakete](./FREE-TIERS-GUIDE.md)** — Dobijte besplatan AI bez kreditne kartice
 - **[Rješavanje problema](../guides/TROUBLESHOOTING.md)** — Popravite uobičajene probleme
 - **[Referenca provajdera](../reference/PROVIDER_REFERENCE.md)** — Kompletna lista od 226 provajdera
-
-## Cursor slike
-
-Slike Cursor plana koriste `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Pogledajte [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

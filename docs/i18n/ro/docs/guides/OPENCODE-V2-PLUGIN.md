@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` adaugă întregul catalog OmniRoute — modele, combinații și
+`@omniroute/opencode-plugin-v2` adaugă întregul catalog 67router — modele, combinații și
 combinații automate — în selectorul de modele din OpenCode v2, împreună cu denumirile afișate,
 prețurile și limitele nivelului gratuit.
 
@@ -16,7 +16,7 @@ celuilalt.
 ## Cerințe
 
 - OpenCode v2.
-- Un gateway OmniRoute accesibil (`http://localhost:20128` în mod implicit).
+- Un gateway 67router accesibil (`http://localhost:20128` în mod implicit).
 - Node.js 22 sau 24.
 
 ## Instalare
@@ -117,7 +117,7 @@ Setați `"geminiSanitization": false` pentru a dezactiva această funcționalita
 
 | Simptom                                                   | Cauză                                                                                                                                                            |
 | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Selectorul nu afișează niciun model OmniRoute             | Nu a fost identificată nicio cheie (verificați avertismentul de la pornire) sau gateway-ul nu este accesibil                                                     |
+| Selectorul nu afișează niciun model 67router              | Nu a fost identificată nicio cheie (verificați avertismentul de la pornire) sau gateway-ul nu este accesibil                                                     |
 | ID-uri brute ale modelelor, fără combinații, fără prețuri | Endpoint-urile de administrare au refuzat tokenul — setați `managementReadToken`                                                                                 |
 | Catalog `freeOnly` scurt sau gol                          | Nu există niciun token de administrare sau tokenul a fost refuzat — consultați linia cu rezumatul reîmprospătării (numărul `unmatched-free`) din jurnalul gazdei |
 | O sesiune fixată la `opencode-<id>/…`                     | Pluginul v1 a publicat `opencode-<id>`; v2 publică doar `<id>`, așadar selectați din nou modelul din `<id>/…`                                                    |

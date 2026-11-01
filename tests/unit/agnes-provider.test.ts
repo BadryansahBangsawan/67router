@@ -21,7 +21,6 @@ const { sanitizeReasoningEffortForProvider } =
   await import("../../open-sse/executors/base/reasoningEffort.ts");
 const { getThinkingCapabilityFields } =
   await import("../../src/app/api/v1/models/catalogHelpers.ts");
-const { handleImageGeneration } = await import("../../open-sse/handlers/imageGeneration.ts");
 const { handleVideoGeneration } = await import("../../open-sse/handlers/videoGeneration.ts");
 const { resolveChatCoreTargetFormat } =
   await import("../../open-sse/handlers/chatCore/targetFormat.ts");
@@ -255,77 +254,6 @@ test("agnes registers Image 2.x Flash models on the current image-generation con
   );
   assert.ok(getAllImageModels().some((model) => model.id === "agnes/agnes-image-2.1-flash"));
   assert.ok(getAllImageModels().some((model) => model.id === "agnes/agnes-image-2.5-flash"));
-});
-
-test("agnes Image 2.1 maps standard image inputs into extra_body", async () => {
-  const originalFetch = globalThis.fetch;
-  let captured:
-    { url: string; headers: Record<string, string>; body: Record<string, unknown> } | undefined;
-
-  globalThis.fetch = (async (url: string | URL | Request, init?: RequestInit) => {
-    captured = {
-      url: String(url),
-      headers: init?.headers as Record<string, string>,
-      body: JSON.parse(String(init?.body)) as Record<string, unknown>,
-    };
-    return new Response(
-      JSON.stringify({
-        created: 123,
-        data: [{ b64_json: "generated-image", revised_prompt: "combined references" }],
-      }),
-      { status: 200, headers: { "content-type": "application/json" } }
-    );
-  }) as typeof fetch;
-
-  try {
-    const result = await handleImageGeneration({
-      body: {
-        model: "agnes/agnes-image-2.1-flash",
-        prompt: "Combine both references into one cinematic poster",
-        size: "2K",
-        aspect_ratio: "16:9",
-        image_urls: ["https://example.com/one.png", "data:image/png;base64,dHdv"],
-        response_format: "b64_json",
-        extra_body: { workflow_hint: "preserve-composition" },
-      },
-      credentials: { apiKey: "agnes-key" },
-      log: null,
-    });
-
-    assert.equal(result.success, true);
-    assert.ok(captured, "Agnes image request must be sent upstream");
-    assert.equal(captured.url, "https://apihub.agnes-ai.com/v1/images/generations");
-    assert.equal(captured.headers.Authorization, "Bearer agnes-key");
-    assert.deepEqual(captured.body, {
-      model: "agnes-image-2.1-flash",
-      prompt: "Combine both references into one cinematic poster",
-      size: "2K",
-      ratio: "16:9",
-      extra_body: {
-        workflow_hint: "preserve-composition",
-        image: ["https://example.com/one.png", "data:image/png;base64,dHdv"],
-        response_format: "b64_json",
-      },
-    });
-    assert.equal(result.data.data[0].b64_json, "generated-image");
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
-});
-
-test("agnes Image 2.1 requires the current size parameter", async () => {
-  const result = await handleImageGeneration({
-    body: {
-      model: "agnes/agnes-image-2.1-flash",
-      prompt: "A detailed cityscape",
-    },
-    credentials: { apiKey: "agnes-key" },
-    log: null,
-  });
-
-  assert.equal(result.success, false);
-  assert.equal(result.status, 400);
-  assert.equal(result.error, "Size is required for Agnes Image 2.1 Flash");
 });
 
 test("agnes registers Video V2.0 and Video 2.5 on the current job contracts", () => {

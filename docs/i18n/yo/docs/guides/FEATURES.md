@@ -1,4 +1,4 @@
-# OmniRoute — Dashboard Features Gallery (Yorùbá)
+# 67router — Dashboard Features Gallery (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇳🇬 [ig](../../../ig/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
-Ìtọ́sọ́nà àwòrán sí gbogbo abala ojú-iṣẹ́ OmniRoute.
+Ìtọ́sọ́nà àwòrán sí gbogbo abala ojú-iṣẹ́ 67router.
 
 > 📅 **Ìgbà ìkẹyìn tí a ṣàfikún:** 2026-06-28 — **v3.8.40**
 
@@ -43,15 +43,13 @@
 - 🤝 **Olùpèsè GitLab Duo OAuth** — wọlé pẹ̀lú àwọn ẹ̀rí GitLab
 - 🧠 **Reasoning Replay Cache** — ìtọ́jú àpapọ̀ inú-memory + SQLite fún àwọn ipa reasoning
 
-📚 **Àwọn ìwé tó jọmọ́:** [Skills Framework](../frameworks/SKILLS.md) · [Memory System](../frameworks/MEMORY.md) · [Cloud Agents](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Àwọn Olùpèsè
 
 Ṣàkóso àwọn ìsopọ̀ olùpèsè AI: àwọn olùpèsè OAuth (Claude Code, Codex), àwọn olùpèsè kọ́kọ́rọ́ API (Groq, DeepSeek, OpenRouter), àti àwọn olùpèsè ọ̀fẹ́ (Qoder, Kiro). Àwọn àkọọ́lẹ̀ Kiro ní ìtọ́pa iye kirẹditi — àwọn kirẹditi tó kù, àpapọ̀ iye tí a yọ̀ǹda, àti ọjọ́ ìsọdọ̀tun ni a lè rí ní Pátákó → Ìlò.
 
-Àwọn ìsopọ̀ OpenRouter lè tọ́jú `preset` kan fún ìsopọ̀ kọ̀ọ̀kan nínú Àwọn Ètò Onítẹ̀síwájú. Nígbà tí a bá ṣètò rẹ̀, OmniRoute máa ń fi í ránṣẹ́ gẹ́gẹ́ bí pápá ìbéèrè ìpele-òkè OpenRouter, fún àpẹẹrẹ `"preset": "email-copywriter"`, àyàfi tí ìbéèrè oníbàárà bá ti pèsè `preset` tirẹ̀ tẹ́lẹ̀.
+Àwọn ìsopọ̀ OpenRouter lè tọ́jú `preset` kan fún ìsopọ̀ kọ̀ọ̀kan nínú Àwọn Ètò Onítẹ̀síwájú. Nígbà tí a bá ṣètò rẹ̀, 67router máa ń fi í ránṣẹ́ gẹ́gẹ́ bí pápá ìbéèrè ìpele-òkè OpenRouter, fún àpẹẹrẹ `"preset": "email-copywriter"`, àyàfi tí ìbéèrè oníbàárà bá ti pèsè `preset` tirẹ̀ tẹ́lẹ̀.
 
 ![Pátákó Àwọn Olùpèsè](../screenshots/01-providers.png)
 
@@ -107,12 +105,6 @@
 
 ---
 
-## 🎮 Pápá Ìdánwò Módẹ́lì _(v2.0.9+)_
-
-Ṣe ìdánwò módẹ́lì èyíkéyìí ní tààrà láti ojú ìdarí. Yan olùpèsè, módẹ́lì, àti endpoint, kọ àwọn prompt pẹ̀lú Monaco Editor, gba àwọn ìdáhùn tí ń ṣàn ní àkókò gidi, dá a dúró láàárín ìṣàn, kí o sì wo àwọn ìwọ̀n àkókò.
-
----
-
 ## 🎨 Àwọn Àkòrí Àwọ̀ _(v2.0.5+)_
 
 Àwọn àkòrí àwọ̀ tí a lè ṣàtúnṣe fún gbogbo ojú ìdarí. Yan lára àwọn àwọ̀ àtòjọ 7 (Coral, Blue, Red, Green, Violet, Orange, Cyan) tàbí ṣẹ̀dá àkòrí àwọ̀ àdáni nípa yíyan àwọ̀ hex èyíkéyìí. Ó ṣe àtìlẹ́yìn fún ìpo ìmọ́lẹ̀, òkùnkùn, àti ti ẹ̀rọ.
@@ -157,7 +149,7 @@ Ojú ìdarí fún ṣíṣàwárí àti ṣíṣàkóso àwọn agent CLI. Ó �
 
 ## 🔗 Ìtẹ̀síwájú Àyíká-ọ̀rọ̀ _(v3.5.5+)_
 
-Ọgbọ́n àpapọ̀ kan tí ń pa ìtẹ̀síwájú sáẹ́ṣọ̀n mọ́ nígbà tí yíyí àkọọ́lẹ̀ bá ṣẹlẹ̀ láàárín ìjíròrò. Kí àkọọ́lẹ̀ tó ń ṣiṣẹ́ tó parí ìpín rẹ̀, OmniRoute máa ń ṣe àkótán ìfìsọ́wọ́lé tó ní ètò ní abẹ́lẹ̀. Lẹ́yìn tí ìbéèrè tó tẹ̀lé bá lo àkọọ́lẹ̀ mìíràn, a ó fi àkótán náà sínú rẹ̀ gẹ́gẹ́ bí ìfiránṣẹ́ ètò kí àkọọ́lẹ̀ tuntun lè tẹ̀síwájú pẹ̀lú gbogbo àyíká-ọ̀rọ̀.
+Ọgbọ́n àpapọ̀ kan tí ń pa ìtẹ̀síwájú sáẹ́ṣọ̀n mọ́ nígbà tí yíyí àkọọ́lẹ̀ bá ṣẹlẹ̀ láàárín ìjíròrò. Kí àkọọ́lẹ̀ tó ń ṣiṣẹ́ tó parí ìpín rẹ̀, 67router máa ń ṣe àkótán ìfìsọ́wọ́lé tó ní ètò ní abẹ́lẹ̀. Lẹ́yìn tí ìbéèrè tó tẹ̀lé bá lo àkọọ́lẹ̀ mìíràn, a ó fi àkótán náà sínú rẹ̀ gẹ́gẹ́ bí ìfiránṣẹ́ ètò kí àkọọ́lẹ̀ tuntun lè tẹ̀síwájú pẹ̀lú gbogbo àyíká-ọ̀rọ̀.
 
 A lè ṣètò rẹ̀ nípasẹ̀ àwọn ààtò ìpele àpapọ̀ tàbí ààtò àgbáyé:
 
@@ -267,7 +259,7 @@ Títọpa àwọn ìgbésẹ̀ ìṣàkóso pẹ̀lú àsẹ̀ nípasẹ̀ irú 
 
 ## 🖥️ Ìṣàfilọ́lẹ̀ Desktop
 
-Electron desktop app abinibi fún Windows, macOS, àti Linux. Ṣiṣẹ́ OmniRoute gẹ́gẹ́ bí ìṣàfilọ́lẹ̀ olómìnira pẹ̀lú ìṣọ̀kan system tray, àtìlẹ́yìn offline, àfikún-ẹ̀yà láìfọwọ́ṣe, àti ìfisórí pẹ̀lú títẹ̀ ẹ̀ẹ̀kan.
+Electron desktop app abinibi fún Windows, macOS, àti Linux. Ṣiṣẹ́ 67router gẹ́gẹ́ bí ìṣàfilọ́lẹ̀ olómìnira pẹ̀lú ìṣọ̀kan system tray, àtìlẹ́yìn offline, àfikún-ẹ̀yà láìfọwọ́ṣe, àti ìfisórí pẹ̀lú títẹ̀ ẹ̀ẹ̀kan.
 
 Àwọn ànfààní pàtàkì:
 
@@ -286,7 +278,7 @@ Electron desktop app abinibi fún Windows, macOS, àti Linux. Ṣiṣẹ́ OmniR
 
 ## 🌐 V1 WebSocket Bridge _(v3.6.6+)_
 
-OmniRoute ti ń ṣe àtìlẹ́yìn fún **àwọn WebSocket client tó bá OpenAI mu** báyìí nípasẹ̀ `/v1/ws` upgrade endpoint. Server àkànṣe `scripts/dev/v1-ws-bridge.mjs` máa ń fi Next.js ṣe àyíká, ó sì ń ṣe àfikún àwọn ìsopọ̀ WS sí àwọn session streaming oníbàárà méjèèjì kíkún. Ìfàṣẹsí ń lo API key kan náà tàbí session cookie bíi àwọn ìbéèrè HTTP.
+67router ti ń ṣe àtìlẹ́yìn fún **àwọn WebSocket client tó bá OpenAI mu** báyìí nípasẹ̀ `/v1/ws` upgrade endpoint. Server àkànṣe `scripts/dev/v1-ws-bridge.mjs` máa ń fi Next.js ṣe àyíká, ó sì ń ṣe àfikún àwọn ìsopọ̀ WS sí àwọn session streaming oníbàárà méjèèjì kíkún. Ìfàṣẹsí ń lo API key kan náà tàbí session cookie bíi àwọn ìbéèrè HTTP.
 
 Àwọn ìhùwàsí pàtàkì:
 
@@ -312,7 +304,7 @@ OmniRoute ti ń ṣe àtìlẹ́yìn fún **àwọn WebSocket client tó bá Ope
 
 **GLM Thinking (`glmt`)** ti di olupèsè ipele-àkọ́kọ́ tí a forúkọsílẹ̀ báyìí: tókìnù àbájáde tó pọ̀jù 65 536, ìpín tókìnù ìrònú 24 576, àkókò ìdúró àiyipada 900 s, ìlànà API tó bá Claude mu, àti ìṣiṣẹ́pọ̀ lílò tí a pín pẹ̀lú ẹbí GLM.
 
-**Ìṣírò tókìnù àkójọpọ̀** tún dé sínú v3.6.6: nígbà tí olupèsè tó bá Claude mu bá pèsè `/messages/count_tokens`, OmniRoute máa ń pè é ṣáájú àwọn ìbéèrè ńlá, pẹ̀lú ìṣírò àfojúsùn àfẹ́yìntì tó rọrùn.
+**Ìṣírò tókìnù àkójọpọ̀** tún dé sínú v3.6.6: nígbà tí olupèsè tó bá Claude mu bá pèsè `/messages/count_tokens`, 67router máa ń pè é ṣáájú àwọn ìbéèrè ńlá, pẹ̀lú ìṣírò àfojúsùn àfẹ́yìntì tó rọrùn.
 
 ---
 

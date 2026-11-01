@@ -1,8 +1,7 @@
 /**
  * grokCliQuotaFetcher.ts — Grok Build (`grok-cli`) Live Quota Fetcher (#6844)
  *
- * Replaces the static 864 req/day plan (`src/lib/quota/planRegistry.ts:87-98`)
- * with a live read of xAI's shared weekly credit pool. xAI's Build billing is a
+ * Replaces the former static 864 req/day plan with a live read of xAI's shared weekly credit pool. xAI's Build billing is a
  * single percent-based pool shared across Chat/Imagine/Voice/Build/API, so the
  * local request/token counter cannot see it — this fetcher polls the same
  * unauthenticated-cookie-free gRPC-web endpoint documented by steipete/CodexBar

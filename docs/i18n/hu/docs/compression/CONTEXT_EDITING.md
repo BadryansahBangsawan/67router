@@ -4,15 +4,15 @@
 
 ---
 
-A delegált **kontextusszerkesztés** egy kizárólag Claude-hoz készült kontextuskezelési funkció. Az OmniRoute helyi tömörítési motorjaival (Caveman, RTK, LLMLingua, egymásra épülő feldolgozási láncok) ellentétben — amelyek még azelőtt átírják a kérés törzsét, _hogy_ az elhagyná a proxyt — a kontextusszerkesztés arra kéri a **szolgáltatót**, hogy távolítsa el az elavult eszközhasználati / eszközeredmény-blokkokat a saját aktív kontextusablakából. Az OmniRoute csak egy törzsparamétert (`context_management.edits[]`) csatol; a tényleges törlést a Claude végzi el a saját tokenizerével.
+A delegált **kontextusszerkesztés** egy kizárólag Claude-hoz készült kontextuskezelési funkció. A 67router helyi tömörítési motorjaival (Caveman, RTK, LLMLingua, egymásra épülő feldolgozási láncok) ellentétben — amelyek még azelőtt átírják a kérés törzsét, _hogy_ az elhagyná a proxyt — a kontextusszerkesztés arra kéri a **szolgáltatót**, hogy távolítsa el az elavult eszközhasználati / eszközeredmény-blokkokat a saját aktív kontextusablakából. A 67router csak egy törzsparamétert (`context_management.edits[]`) csatol; a tényleges törlést a Claude végzi el a saját tokenizerével.
 
-Ez természeténél fogva delegált képesség: a többi szolgáltató elutasítja a paramétert, ezért az OmniRoute szigorúan a Claude-ra és a Claude Code-dal kompatibilis közvetítőkre korlátozza.
+Ez természeténél fogva delegált képesség: a többi szolgáltató elutasítja a paramétert, ezért a 67router szigorúan a Claude-ra és a Claude Code-dal kompatibilis közvetítőkre korlátozza.
 
 Hiteles forrás: `open-sse/config/contextEditing.ts` (stratégiaazonosítók, törzsbe történő beillesztés, telemetria kinyerése), `open-sse/executors/base.ts` (beillesztési kapu + 400-as hibánál alkalmazott tartalékmechanizmus), valamint `open-sse/services/compression/types.ts` (konfigurációs struktúra + alapértelmezett érték).
 
 ## Mit csinál a `clear_tool_uses`
 
-Az OmniRoute egyetlen szerkesztési műveletet illeszt a kimenő Anthropic Messages-törzsbe:
+A 67router egyetlen szerkesztési műveletet illeszt a kimenő Anthropic Messages-törzsbe:
 
 ```json
 {
@@ -32,9 +32,9 @@ Az OmniRoute egyetlen szerkesztési műveletet illeszt a kimenő Anthropic Messa
 - `trigger.value: 100000` — amint a kérés bemeneti tokenjeinek száma meghaladja ezt a küszöbértéket, a Claude elkezdi törölni a régi eszközhasználati/eredménypárokat (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, az Anthropic alapértelmezett értéke).
 - `keep.value: 3` — az N legutóbbi eszközhasználati/eredménypár érintetlen marad (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-A bétafunkciót az `anthropic-beta: context-management-2025-06-27` fejléc jelzi, amelyet az OmniRoute már eleve elküld a Claude-kérésekben.
+A bétafunkciót az `anthropic-beta: context-management-2025-06-27` fejléc jelzi, amelyet a 67router már eleve elküld a Claude-kérésekben.
 
-A beillesztést az `applyContextEditingToBody()` végzi, és a művelet **idempotens**: ha már létezik `clear_tool_uses` szerkesztési művelet a törzsben (egy korábbi hívás adta hozzá, vagy az ügyfél küldte), a törzs változatlan marad. Ha egy `clear_thinking_20251015` szerkesztési művelet is jelen van, az OmniRoute stabil rendezéssel előre helyezi a `clear_thinking` műveletet, mivel az Anthropic megköveteli, hogy a `clear_thinking` megelőzze a `clear_tool_uses` műveletet az `edits[]` tömbben.
+A beillesztést az `applyContextEditingToBody()` végzi, és a művelet **idempotens**: ha már létezik `clear_tool_uses` szerkesztési művelet a törzsben (egy korábbi hívás adta hozzá, vagy az ügyfél küldte), a törzs változatlan marad. Ha egy `clear_thinking_20251015` szerkesztési művelet is jelen van, a 67router stabil rendezéssel előre helyezi a `clear_thinking` műveletet, mivel az Anthropic megköveteli, hogy a `clear_thinking` megelőzze a `clear_tool_uses` műveletet az `edits[]` tömbben.
 
 ## A kombinációnkénti engedélyezési kapcsoló
 
@@ -131,7 +131,7 @@ tartalékútvonalra.
 
 ## `applied_edits` telemetria
 
-Egy Claude-válasz után az OmniRoute rögzíti, hogy a szolgáltató ténylegesen mennyi kontextust törölt.
+Egy Claude-válasz után a 67router rögzíti, hogy a szolgáltató ténylegesen mennyi kontextust törölt.
 Ez **nem** streamelve történik — az adatokat a nem streamelt válasz törzséből nyeri ki a rendszer
 best-effort módon, és ez soha nem befolyásolja a választ (a telemetriai hibákat figyelmen kívül
 hagyja).
@@ -167,14 +167,14 @@ megtakarításoktól.
 
 | Szempont                 | Helyi motorok (Caveman / RTK / LLMLingua / stacked) | Delegált kontextusszerkesztés                                               |
 | ------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------- |
-| Hol fut                  | Az OmniRoute-ban, mielőtt a kérés elhagyja a proxyt | A szolgáltatónál (Claude), szerveroldalon                                   |
+| Hol fut                  | A 67router-ban, mielőtt a kérés elhagyja a proxyt   | A szolgáltatónál (Claude), szerveroldalon                                   |
 | Mit szerkeszt            | Prompt-, kontextus- és eszközeredmény-szöveg        | Régi eszközhasználati és eszközeredmény-blokkok                             |
 | Szolgáltatói hatókör     | Minden szolgáltató                                  | Csak `claude` + `anthropic-compatible-cc-*`                                 |
 | Kapcsoló                 | Tömörítési mód beállításai                          | `contextEditing.enabled`                                                    |
 | Hibakezelés              | Nyitott hibakezelés (eredeti szöveg)                | 400-as tartalék eljárás: a paraméter eltávolítása, majd egy újrapróbálkozás |
 | Megtakarítási telemetria | `engine: <engine id>`                               | `engine: "context-editing"`                                                 |
 
-A kettő kiegészíti egymást: a helyi motorok az OmniRoute által küldött bájtokat tömörítik; a kontextusszerkesztés pedig lehetővé teszi,
+A kettő kiegészíti egymást: a helyi motorok a 67router által küldött bájtokat tömörítik; a kontextusszerkesztés pedig lehetővé teszi,
 hogy a Claude a fordulók során ritkítsa az aktuális kontextust. Együtt is engedélyezhetők.
 
 ## Lásd még

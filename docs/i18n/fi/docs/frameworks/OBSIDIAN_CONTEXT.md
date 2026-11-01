@@ -13,7 +13,7 @@
 
 ## Mikä se on
 
-OmniRoute yhdistää **Obsidian**-holviin **kontekstilähteenä** — paikallisena Markdown-
+67router yhdistää **Obsidian**-holviin **kontekstilähteenä** — paikallisena Markdown-
 tietämyskanta­na, jota agentit lukevat ja johon ne kirjoittavat sisäänrakennetun MCP-palvelimen
 kautta. Integraatio kommunikoi työpöytäsovelluksessa suoritettavan yhteisön
 **Obsidian Local REST API** -lisäosan kanssa, joten agentit voivat hakea muistiinpanoja,
@@ -80,7 +80,7 @@ tilapäätepistettä ennen tallentamista.
 
 `src/app/api/settings/obsidian/webdav/route.ts` hallinnoi valinnaista WebDAV-taustaista
 holvin synkronointia (jota ohjaa `src/lib/obsidianSync.ts`). Sen käyttöönotto osoittaa
-OmniRouten paikalliseen holvikansioon ja luo satunnaisen WebDAV-käyttäjänimi- ja
+67routerin paikalliseen holvikansioon ja luo satunnaisen WebDAV-käyttäjänimi- ja
 salasanaparin:
 
 ```bash
@@ -118,8 +118,8 @@ erillisen synkronointitunnustoimintansa.
 ## MCP-työkalut (22)
 
 Määritelty tiedostossa `open-sse/mcp-server/tools/obsidianTools.ts`. Tunnus/base-URL selvitetään
-kutsukohtaisesti (ensin API-avaimelle määritetty, sitten yleinen). OmniRouten **synkronointipalvelimeen**
-yhteyttä ottavat työkalut (neljä `obsidian_sync_*`-työkalua) edellyttävät lisäksi OmniRouten
+kutsukohtaisesti (ensin API-avaimelle määritetty, sitten yleinen). 67routerin **synkronointipalvelimeen**
+yhteyttä ottavat työkalut (neljä `obsidian_sync_*`-työkalua) edellyttävät lisäksi 67routerin
 asetuksissa määritettyä synkronoinnin todennustunnusta.
 
 ### Lukutyökalut (`read:obsidian`)
@@ -137,7 +137,7 @@ asetuksissa määritettyä synkronoinnin todennustunnusta.
 | `obsidian_get_periodic_note` | Hae tietyn päivämäärän päivittäinen, viikoittainen tai kuukausittainen jaksottainen muistiinpano (tänään, jos päivämäärä jätetään pois). |
 | `obsidian_get_tags`          | Listaa kaikki säilön tunnisteet esiintymismäärineen.                                                                                     |
 | `obsidian_list_commands`     | Listaa käytettävissä olevat Obsidian-komentotunnukset (käytettäväksi työkalun `obsidian_execute_command` kanssa).                        |
-| `obsidian_sync_status`       | OmniRouten synkronointipalvelimen tila: käynnissäolo, säilön nimi, portti, käyntiaika ja viimeisin synkronointi.                         |
+| `obsidian_sync_status`       | 67routerin synkronointipalvelimen tila: käynnissäolo, säilön nimi, portti, käyntiaika ja viimeisin synkronointi.                         |
 | `obsidian_sync_conflicts`    | Listaa ratkaisemattomat synkronointiristiriidat (polku, ristiriitapolku ja havaitsemisaika).                                             |
 
 ### Kirjoitustyökalut (`write:obsidian`)

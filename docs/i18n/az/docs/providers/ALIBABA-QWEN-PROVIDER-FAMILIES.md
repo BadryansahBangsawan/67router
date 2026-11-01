@@ -9,7 +9,7 @@ Bu sənəd
 
 ## Qərar
 
-| Provayder ailəsi                                    | OmniRoute ID-si         | Qlobal region | Çin regionu |
+| Provayder ailəsi                                    | 67router ID-si          | Qlobal region | Çin regionu |
 | --------------------------------------------------- | ----------------------- | ------------- | ----------- |
 | Alibaba Cloud Model Studio (istifadəyə görə ödəniş) | `alibaba`               | Sinqapur      | Pekin       |
 | Alibaba Cloud Token Plan                            | `bailian-coding-plan`   | Sinqapur      | Pekin       |

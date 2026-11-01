@@ -1,17 +1,8 @@
 /**
- * The metered dollar budget is scoped by apiKeyId and is enforced before the
- * provider is resolved, so an exhausted allowance rejects the request outright —
- * including when the provider that would have served it is a flat-rate
- * subscription the allowance does not pay for.
- *
- * These tests pin the two halves of the fix:
- *   - ELIGIBILITY: an exhausted allowance removes metered candidates and leaves
- *     flat-rate candidates eligible; an unknown provider stays metered.
- *   - ACCOUNTING: flat-rate traffic does not draw the allowance down, while
- *     metered traffic still does.
- *
- * Routing itself is unchanged and is proven end-to-end in
- * tests/integration/combo-matrix/metered-budget-eligibility.test.ts.
+ * Metered-cost accounting: flat-rate traffic records no metered spend, metered
+ * traffic records all of it. Also pins the combo classification of a
+ * BUDGET_EXCEEDED 429 body (a local key-policy breach, never an upstream rate
+ * limit), which stays in place for any producer of that code.
  */
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -31,11 +22,6 @@ const METERED_PROVIDER = "openai";
 const FLAT_RATE_PROVIDER = "opencode-go";
 const KEY = "key-under-test";
 
-function giveBudget(limitUsd: number) {
-  costRules.resetCostData();
-  costRules.setBudget(KEY, { dailyLimitUsd: limitUsd, resetInterval: "daily" });
-}
-
 function spend(usd: number) {
   costRules.recordCost(KEY, usd);
 }
@@ -43,58 +29,6 @@ function spend(usd: number) {
 test.after(() => {
   costRules.resetCostData();
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
-});
-
-// ── B1 — budget available: every economic class is eligible ────────────────
-test("B1: with allowance remaining, metered and flat-rate candidates are both eligible", () => {
-  giveBudget(10);
-  spend(1);
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER).allowed, true);
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, FLAT_RATE_PROVIDER).allowed, true);
-});
-
-// ── B2 — the defect: exhaustion must not take flat-rate down with it ───────
-test("B2: with the allowance spent, the metered candidate is ineligible and the flat-rate candidate is NOT", () => {
-  giveBudget(10);
-  spend(25);
-
-  const metered = policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER);
-  assert.equal(metered.allowed, false);
-  assert.match(String(metered.reason), /budget exceeded/i);
-
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, FLAT_RATE_PROVIDER).allowed, true);
-});
-
-// ── B9 — an unclassified provider must never become a spending bypass ──────
-test("B9: an unknown provider is metered, so exhaustion still blocks it", () => {
-  giveBudget(10);
-  spend(25);
-  for (const unknown of ["", null, undefined, "not-a-real-provider", "OPENCODE-GO-ISH"]) {
-    assert.equal(
-      policy.checkMeteredBudgetForProvider(KEY, unknown as string).allowed,
-      false,
-      `provider ${JSON.stringify(unknown)} must stay subject to the allowance`
-    );
-  }
-  // Case and surrounding space are the classification's own normalisation, not
-  // a similarity match: the real id in any casing is still flat-rate.
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, " OpenCode-Go ").allowed, true);
-});
-
-// ── B6 — the block lifts on its own when the allowance returns ─────────────
-test("B6: raising the limit makes the metered candidate eligible again, with no other state to clear", () => {
-  giveBudget(10);
-  spend(25);
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER).allowed, false);
-  costRules.setBudget(KEY, { dailyLimitUsd: 100, resetInterval: "daily" });
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER).allowed, true);
-});
-
-// ── B10 — a key with no budget configured is untouched ─────────────────────
-test("B10: a key with no budget configured is eligible for every provider", () => {
-  costRules.resetCostData();
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER).allowed, true);
-  assert.equal(policy.checkMeteredBudgetForProvider(null, METERED_PROVIDER).allowed, true);
 });
 
 // ── B7 — flat-rate usage must not consume the metered allowance ────────────
@@ -110,13 +44,13 @@ test("B7: flat-rate usage records nothing against the allowance; metered usage r
 });
 
 // ── B7 (end to end on the ledger) ─────────────────────────────────────────
-test("B7: an exhausting run of flat-rate traffic leaves the metered allowance intact", () => {
-  giveBudget(10);
+test("B7: flat-rate traffic records no spend while metered traffic is recorded", () => {
+  costRules.resetCostData();
   for (let i = 0; i < 20; i++) spend(policy.meteredBudgetCost(FLAT_RATE_PROVIDER, 3));
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER).allowed, true);
+  assert.equal(costRules.getDailyTotal(KEY), 0);
 
   for (let i = 0; i < 20; i++) spend(policy.meteredBudgetCost(METERED_PROVIDER, 3));
-  assert.equal(policy.checkMeteredBudgetForProvider(KEY, METERED_PROVIDER).allowed, false);
+  assert.equal(costRules.getDailyTotal(KEY), 60);
 });
 
 // ── Combo classification: a local budget refusal is not an upstream failure ─

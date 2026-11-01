@@ -4,7 +4,7 @@
 
 ---
 
-> **简而言之**：`open-sse/` 是为 OmniRoute 中每个 LLM 请求提供支持的核心流式处理引擎。它包含约 1,400 个文件，实现了请求管道、执行器、服务、MCP 服务器和转换层。本指南将说明这些组件如何协同工作。
+> **简而言之**：`open-sse/` 是为 67router 中每个 LLM 请求提供支持的核心流式处理引擎。它包含约 1,400 个文件，实现了请求管道、执行器、服务、MCP 服务器和转换层。本指南将说明这些组件如何协同工作。
 
 **源代码：** `open-sse/`（工作区包，约 1,440 个非测试 `.ts` 文件）
 
@@ -12,10 +12,10 @@
 
 ## 为什么使用单独的工作区包？
 
-出于以下几个原因，`open-sse/` 是 OmniRoute monorepo 中的一个**独立工作区**：
+出于以下几个原因，`open-sse/` 是 67router monorepo 中的一个**独立工作区**：
 
 1. **可复用性** — `open-sse` 以 `@omniroute/open-sse` 的名称发布到 npm，因此其他项目可以独立使用它
-2. **清晰的边界** — 流式处理引擎与 OmniRoute 特有的 UI/DB 层解耦
+2. **清晰的边界** — 流式处理引擎与 67router 特有的 UI/DB 层解耦
 3. **性能** — 该引擎不依赖 Next.js，因此在 CLI/无服务器环境中能够实现更快的冷启动
 4. **版本管理** — `open-sse` 可以按照自己的节奏发布版本
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### 为什么需要独立的转换器？
 
-Responses API 是 OpenAI 推出的新格式，支持**有状态对话**（`previous_response_id`）。当客户端发送 Responses 请求时，OmniRoute 会：
+Responses API 是 OpenAI 推出的新格式，支持**有状态对话**（`previous_response_id`）。当客户端发送 Responses 请求时，67router 会：
 
 1. 在内部将 Responses 转换为 Chat Completions
 2. 将请求发送给提供者（任何支持 Chat Completions 的提供者）
@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — 逐目录说明
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 因子评分
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP 服务器
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A 服务器
 - 源代码：`open-sse/`（400 多个文件，约 143K 行代码）

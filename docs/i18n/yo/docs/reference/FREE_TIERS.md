@@ -9,9 +9,9 @@
 > **Ìwádìí tó kẹ́yìn:** 2026-06-17 — ìwádìí wẹ́ẹ̀bù fún olùpèsè kọ̀ọ̀kan (àwọn ìwé àṣẹ ìṣiṣẹ́ + ìròyìn ọjọ́ méje tó kọjá, ìṣàyẹ̀wò aṣojú 50 pẹ̀lú ìmúdájú alátakò) láti sọ gbogbo iye ìpín ipele-ọ̀fẹ́ + ToS di ọ̀tun. **Àtúnyẹ̀wò apá kan 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — wo àkọsílẹ̀ onídéètì ní ìsàlẹ̀).
 > **Orísun òtítọ́ (àkójọ):** `open-sse/config/freeModelCatalog.ts` (àwọn ìnáwó fún MODEL kọ̀ọ̀kan, tí a ti yọ àwọn adágún àdáwòkọ kúrò). Àwọn iye ìnáwó token tó wà ní ìsàlẹ̀ wá láti inú ìwádìí wẹ́ẹ̀bù lọ́wọ́lọ́wọ́, wọ́n sì jẹ́ **ìṣírò isunmọ́** — wo [Ọ̀nà ìwádìí & àwọn àkíyèsí](#methodology--caveats).
 
-## TL;DR — iye ìṣírò AI ọ̀fẹ́ mélòó ni OmniRoute ń kó jọ ní tòótọ́?
+## TL;DR — iye ìṣírò AI ọ̀fẹ́ mélòó ni 67router ń kó jọ ní tòótọ́?
 
-Àwọn iye wọ̀nyí ṣàpèjúwe àwọn àkọọ́lẹ̀ ẹni-kẹta ọ̀tọ̀ọ̀tọ̀ àti àwọn à条件 ìyẹ́sí káàkiri àkójọ náà. OmniRoute kì í fún ọ ní ìnáwó yìí: o gbọ́dọ̀ gba àwọn àkọọ́lẹ̀ tàbí ẹ̀rí ìdánimọ̀ tí a nílò, so àwọn olùpèsè tó yẹ pọ̀, kí o sì tẹ̀lé àwọn ààlà wọn. Agbára tí o lè lò ní tòótọ́ lè dín kù, ó sì lè jẹ́ òdo lórí ìfisílẹ̀ tuntun tí kò ní ọ̀nà tó yẹ kankan. Àwọn olùpèsè tí a samisi `tos: avoid` ni a yọ kúrò nínú yíyan ọ̀nà aládàáṣiṣẹ́ ní àìyípadà.
+Àwọn iye wọ̀nyí ṣàpèjúwe àwọn àkọọ́lẹ̀ ẹni-kẹta ọ̀tọ̀ọ̀tọ̀ àti àwọn à条件 ìyẹ́sí káàkiri àkójọ náà. 67router kì í fún ọ ní ìnáwó yìí: o gbọ́dọ̀ gba àwọn àkọọ́lẹ̀ tàbí ẹ̀rí ìdánimọ̀ tí a nílò, so àwọn olùpèsè tó yẹ pọ̀, kí o sì tẹ̀lé àwọn ààlà wọn. Agbára tí o lè lò ní tòótọ́ lè dín kù, ó sì lè jẹ́ òdo lórí ìfisílẹ̀ tuntun tí kò ní ọ̀nà tó yẹ kankan. Àwọn olùpèsè tí a samisi `tos: avoid` ni a yọ kúrò nínú yíyan ọ̀nà aládàáṣiṣẹ́ ní àìyípadà.
 
 **A ṣàyẹ̀wò ní 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) ń fúnni ní kirẹditi ìpolówó $5 lẹ́ẹ̀kan ṣoṣo, tó nílò ọ̀nà ìsanwó, tí yóò sì parí lẹ́yìn ọjọ́ 30. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) ń ṣe àgbéjáde àwọn ààlà oṣùwọ̀n fún project/model/tier; kò tíì sí nínú àkọlé ìṣírò oṣooṣù.
 
@@ -79,7 +79,7 @@ credit ọ̀fẹ́ rárá. Àwọn ìyípadà Nous wà ní kúlẹ̀kúlẹ̀ n�
 
 ## Àwọn ìlànà méjì — ṣíṣírò àti ṣíṣe ìpinnu
 
-OmniRoute máa ń dáhùn ìbéèrè “ṣé ó jẹ́ ọ̀fẹ́?” nípasẹ̀ àwọn ìlànà méjì tí a mọ̀ọ́mọ̀ ṣe
+67router máa ń dáhùn ìbéèrè “ṣé ó jẹ́ ọ̀fẹ́?” nípasẹ̀ àwọn ìlànà méjì tí a mọ̀ọ́mọ̀ ṣe
 kí wọ́n ka àwọn orísun ọ̀tọ̀ọ̀tọ̀:
 
 | Ìlànà                 | Orísun òtítọ́                                                                                                                                                                          | Àwọn ibi tí ó ti hàn                                                                                                             |
@@ -126,7 +126,7 @@ tí kò bá ohun tí ó ṣẹlẹ̀ nígbà títẹ̀ mu jáde — a mọ̀ọ�
 
 ### ⚠️ Ìkìlọ̀ — àwọn gbólóhùn nípa lílò ara ẹni / proxy tí ó yẹ kí a yẹ̀ wò (16)
 
-> Wọ́n ní ààyè ọ̀fẹ́ ní ti gidi, OmniRoute sì lè darí sí wọn; àwọn gbólóhùn tó wà nísàlẹ̀ jẹ́ ohun tó yẹ kí o mọ̀ nìkan. A kò lè fi token wọn àwọn tó ń lo OAuth/tí kò nílò key, nítorí náà wọn kò sí nínú iye àkọlé (kì í ṣe nítorí pé a kò lè lò wọ́n).
+> Wọ́n ní ààyè ọ̀fẹ́ ní ti gidi, 67router sì lè darí sí wọn; àwọn gbólóhùn tó wà nísàlẹ̀ jẹ́ ohun tó yẹ kí o mọ̀ nìkan. A kò lè fi token wọn àwọn tó ń lo OAuth/tí kò nílò key, nítorí náà wọn kò sí nínú iye àkọlé (kì í ṣe nítorí pé a kò lè lò wọ́n).
 
 | Provider         | Àkíyèsí                                                                                                                                                                             |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ tí kò bá ohun tí ó ṣẹlẹ̀ nígbà títẹ̀ mu jáde — a mọ̀ọ�
 | `fireworks`      | ToS fi òfin de lílo proxy/intermediary, gbígbé API key fún ẹlòmíràn, àti fífún ẹlòmíràn ní sublicense (Sections 2.1 àti 2.2(i)(j)); àwọn personal proxy tí ẹni fúnra rẹ̀ gbàlejò kò… |
 | `friendliai`     | ToS Section 8(e) àti 8(f) fi òfin de lílo FriendliAI gẹ́gẹ́ bí proxy tàbí fífàyè gba ẹni kẹta láti wọ ọ́ lọ́tọ̀, wọ́n sì fi òfin de títún un tà/…                                         |
 | `iflytek`        | Section 2.4(3) ti iFlytek Spark LLM Service Agreement fi òfin de “using any automated or programmatic methods to extract data or output…                                            |
-| `kiro`           | Kiro FAQ fi òfin de lílò pẹ̀lú “OpenClaw and similar tools that leverage third-party harnesses” ní kedere — proxy AI tí ẹni fúnra rẹ̀ gbàlejò (bí OmniRoute) tó ń darí…               |
+| `kiro`           | Kiro FAQ fi òfin de lílò pẹ̀lú “OpenClaw and similar tools that leverage third-party harnesses” ní kedere — proxy AI tí ẹni fúnra rẹ̀ gbàlejò (bí 67router) tó ń darí…                |
 | `modal`          | ToS Section 1.3 fi òfin de “rent, resell or otherwise allow any third party direct access to or use of the Service” ní kedere — kíkọ́ ohun tí ẹni fúnra rẹ̀ gbàlejò…                  |
 | `muse-spark-web` | Meta ToS fi òfin de automated access láìgba àṣẹ ṣáájú, reverse engineering láìgba àṣẹ ní kíkọ, àti yíyẹ̀ àwọn imọ̀ ẹ̀rọ…                                                               |
 | `nlpcloud`       | ToS fi òfin de “setting up a proxy or other device that allows others to access the Service through it” ní kedere, ó sì fúnni ní ẹ̀tọ́ tí kò ṣeé gbé fún ẹlòmíràn nìkan,…             |
@@ -302,7 +302,7 @@ tí kò bá ohun tí ó ṣẹlẹ̀ nígbà títẹ̀ mu jáde — a mọ̀ọ�
 
 - **`360ai`** — freeNote tí a pèsè náà, "Àwọn módẹ́lì Free 360 AI Brain", ti di ti àtijọ́. Ìráyè lọ́wọ́lọ́wọ́ nílò ìfọwọ́sí ìbéèrè, ó sì jẹ́ sísan owó. Àwọn token ìpolówó àsìkò ìfilọ́lẹ̀ 2023 (100M–250M lẹ́ẹ̀kan ṣoṣo) lè jẹ́ ìpìlẹ̀ fún…
 - **`agentrouter`** — freeNote tí a pèsè sọ pé "$200 nínú àwọn kirẹditi ọ̀fẹ́ nígbà ìforúkọsílẹ̀." Ní òde òní, àwọn ìforúkọsílẹ̀ boṣewa (tí kì í ṣe ti ìtọ́kasí) ń gba $100 nìkan; àwọn ìforúkọsílẹ̀ nípasẹ̀ ìtọ́kasí lè gba $200, ṣùgbọ́n àlàyé kan láti ọ̀dọ̀ àwùjọ ní April 2026…
-- **`agy`** — freeNote tí a pèsè sọ pé "(kò sí)" tó ń tọ́ka sí pé kò sí ìpele ọ̀fẹ́, ṣùgbọ́n Antigravity ní ìpele ọ̀fẹ́ tí OAuth ń darí. Síbẹ̀, ToS fi ẹ̀tọ́ sọ pé kò gbọ́dọ̀ lo ìpele ọ̀fẹ́ yìí nípasẹ̀ proxy bí OmniRoute …
+- **`agy`** — freeNote tí a pèsè sọ pé "(kò sí)" tó ń tọ́ka sí pé kò sí ìpele ọ̀fẹ́, ṣùgbọ́n Antigravity ní ìpele ọ̀fẹ́ tí OAuth ń darí. Síbẹ̀, ToS fi ẹ̀tọ́ sọ pé kò gbọ́dọ̀ lo ìpele ọ̀fẹ́ yìí nípasẹ̀ proxy bí 67router …
 - **`ai21`** — Ó ti le sí i: àkókò ìdánwò dín kù láti "oṣù 3" sí ọjọ́ 7. Iye kirẹditi $10 ṣì jẹ́ bákan náà, ṣùgbọ́n àkókò ìwúlò rẹ̀ já bo gidigidi láti nǹkan bí ọjọ́ 90 sí ọjọ́ 7.
 - **`aimlapi`** — Ó yí padà gidigidi. freeNote tí a pèsè polówó "$0.025/ọjọ́ nínú àwọn kirẹditi ọ̀fẹ́ — àwọn módẹ́lì 200+" ṣùgbọ́n ìpele ọ̀fẹ́ ti dá dúró/tí fòpin sí. Ìpín kirẹditi $0.025/ọjọ́ (àwọn kirẹditi 50,000/ọjọ́, àwọn ìbéèrè 10/ọ…
 - **`amazon-q`** — freeNote tí a pèsè sọ pé "(kò sí)" — òtítọ́ burú ju bẹ́ẹ̀ lọ: a ti fòpin sí ọjà náà fún àwọn ìforúkọsílẹ̀ tuntun (May 15, 2026). Ṣáájú, ìpele ọ̀fẹ́ ń fúnni ní àwọn ìbéèrè agentic 50/oṣù + inlin…

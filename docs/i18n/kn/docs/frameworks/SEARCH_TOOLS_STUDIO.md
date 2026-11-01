@@ -168,5 +168,4 @@ API ಕೀ ಪ್ಲೇಸ್ಹೋಲ್ಡರ್ ಯಾವಾಗಲೂ `$OMNIR
 - ಪ್ರಧಾನ ಯೋಜನೆ: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ವೈಶಿಷ್ಟ್ಯ ಯೋಜನೆ: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - ಹುಡುಕಾಟ ಪೂರೈಕೆದಾರರ ರಿಜಿಸ್ಟ್ರಿ: `open-sse/config/searchRegistry.ts`
-- ಪ್ಲೇಗ್ರೌಂಡ್ ಸ್ಟುಡಿಯೋ (ಹಂಚಿಕೆಯ `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - ವೆಬ್ ಫೆಚ್ ಬ್ಯಾಕ್ಎಂಡ್: `src/app/api/v1/web/fetch/route.ts`

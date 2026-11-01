@@ -10,7 +10,7 @@
 
 ## Yanayi
 
-A halin yanzu OmniRoute yana gabatar da ayyukan adana bayanai da aka tsara bisa yanki daga `src/lib/db/`, yayin da
+A halin yanzu 67router yana gabatar da ayyukan adana bayanai da aka tsara bisa yanki daga `src/lib/db/`, yayin da
 haɗin gama-gari da `src/lib/db/core.ts` ke dawo da shi yake aiwatar da ƙa’idar `SqliteAdapter`
 mai aiki kai tsaye a `src/lib/db/adapters/types.ts`. Wannan adafta yana goyon bayan mahallai da dama na SQLite, amma
 fuskar mu’amalarsa har yanzu tana da tsarin SQLite: shirye-shiryen umarni masu aiki kai tsaye, `pragma`, ma’amalolin da aka

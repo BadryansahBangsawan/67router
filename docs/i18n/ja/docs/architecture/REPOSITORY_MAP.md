@@ -5,7 +5,7 @@
 ---
 
 > **すべてのディレクトリとルートファイルを1行で説明します。**
-> 最終更新日: 2026-06-28 — OmniRoute v3.8.40
+> 最終更新日: 2026-06-28 — 67router v3.8.40
 >
 > このマップを使用して、コードベース内をすばやく移動できます。詳細については、専用ドキュメントへのリンクを参照してください。
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # マーケティング用 / README用画像アセット
 ├── @omniroute/           # 公開可能な関連パッケージ（opencode-plugin、opencode-provider）
 ├── skills/               # CLI/エージェント用スキルパック（cli-* + omni-* + config-codex-cli）
-├── examples/             # サンプルプラグイン + omniroute-cmd-helloスターター
+├── examples/             # Quickstart client samples
 ├── contrib/              # コミュニティによるコントリビューション（podman/）
 ├── .source/              # Fumadocsソース設定（source.config.mjs + サーバー/ブラウザー/動的処理）
 ├── .github/              # GitHub Actionsワークフロー + Issueテンプレート + PRテンプレート
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `app/api/v1/`                                                                | 公開 OpenAI 互換 API（約25のサブルート：チャット、補完、埋め込み、ファイル、バッチ、音声、画像、動画、音楽、再ランキング、モデレーション、検索、ws、エージェント、アカウント、プロバイダーなど）                                                                                                                       |
 | `app/api/v1beta/`                                                            | Gemini 形式の API エンドポイント                                                                                                                                                                                                                                                                                       |
-| `app/api/playground/`                                                        | Playground Studio のルート：`improve-prompt/`（POST — LLM プロンプトリライター）、`presets/`（GET 一覧取得 / POST 作成）、`presets/[id]/`（GET / PUT / DELETE）— `docs/frameworks/PLAYGROUND_STUDIO.md` を参照                                                                                                         |
 | `app/api/`（v1 以外）                                                        | 管理者向けルート（約60ディレクトリ：プロバイダー、コンボ、設定、mcp、a2a、評価、メモリ、スキル、Webhook、コンプライアンス、レジリエンス、監視、トンネル、CLI ツールなど）                                                                                                                                              |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12ルート（サーバー制御、エージェントの状態/DNS/マッピング、バイパス、証明書、上流 CA）。LOCAL_ONLY + SPAWN_CAPABLE。`docs/frameworks/AGENTBRIDGE.md §7` を参照。                                                                                                                                |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16以上のルート（リクエスト、セッション、ホスト、キャプチャモード、エクスポート、ws）。LOCAL_ONLY + SPAWN_CAPABLE。`docs/frameworks/TRAFFIC_INSPECTOR.md §8` を参照。                                                                                                                 |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 エントリーポイント（`POST /a2a`）                                                                                                                                                                                                                                                                     |
-| `app/.well-known/agent.json/`                                                | A2A エージェントカード（ディスカバリー）                                                                                                                                                                                                                                                                               |
 | `app/(dashboard)/dashboard/`                                                 | ダッシュボード UI ページ（50以上のセクション、約118個の page.tsx ファイル：プロバイダー、コンボ、設定、メモリ、スキル、Webhook、評価、監査、バッチ、キャッシュ、コスト、ヘルス、システム、アクティビティなど）                                                                                                         |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI（3つのタブ：検索/スクレイピング/比較 + SearchConceptCard + ProviderCatalog）— `docs/frameworks/SEARCH_TOOLS_STUDIO.md` を参照                                                                                                                                                                   |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio（プラン21）：`page.tsx`（3タブ構成）、`components/`（MemoryConceptCard、MemoryEngineStatus、EmbeddingSourceSelector、EditMemoryModal、RetrievePreview、QdrantConfigCard、RerankConfigCard）、`components/tabs/`（MemoriesTab、PlaygroundTab、EngineTab）、`hooks/`（useEngineStatus、useMemorySettings） |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | セッション、パスワードハッシュ化、トークン検証                                                                                                                                                                                                                                                                                   |
 | `batches/`                               | OpenAI Batches API ハンドラー                                                                                                                                                                                                                                                                                                    |
 | `catalog/`                               | プロバイダーカタログの Zod バリデーション + 機能解決                                                                                                                                                                                                                                                                             |
-| `cloudAgent/`                            | クラウドエージェント（Codex Cloud、Devin、Jules）— `docs/frameworks/CLOUD_AGENT.md` を参照                                                                                                                                                                                                                                       |
 | `combos/`                                | コンボ解決 + 並べ替えヘルパー                                                                                                                                                                                                                                                                                                    |
 | `audit/`                                 | アクティビティフィード用ヘルパー：`highLevelActions.ts`（許可リスト + `isHighLevelAction()`）、`activityIcons.ts`（アクション → アイコン／動詞マップ）、`timeline.ts`（groupByDay/relativeTime）— `docs/architecture/MONITORING_SECTIONS.md` を参照                                                                              |
 | `compliance/`                            | 監査ログ + プロバイダー監査 — `docs/security/COMPLIANCE.md` を参照                                                                                                                                                                                                                                                               |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | UIフォーマット用ヘルパー（コスト、レイテンシなど）                                                                                                                                                                                                                                                                               |
 | `embeddings/`                            | Embeddingsサービス用ヘルパー                                                                                                                                                                                                                                                                                                     |
 | `env/`                                   | 環境変数の解析と検証                                                                                                                                                                                                                                                                                                             |
-| `evals/`                                 | 評価フレームワーク（スイート、ランナー、ランタイム）— `docs/frameworks/EVALS.md`を参照                                                                                                                                                                                                                                           |
 | `guardrails/`                            | PIIマスキング、プロンプトインジェクション対策、ビジョンブリッジ — `docs/security/GUARDRAILS.md`を参照                                                                                                                                                                                                                            |
 | `jobs/`                                  | バックグラウンドジョブ（cron形式）                                                                                                                                                                                                                                                                                               |
 | `memory/`                                | 会話メモリ（SQLite FTS5 + sqlite-vecハイブリッドRRF + Qdrant tier 2）— `docs/frameworks/MEMORY.md`を参照                                                                                                                                                                                                                         |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — バックグラウンドで`needs_reindex=1`のメモリを処理します。`POST /api/memory/reindex`および遅延バックフィルパスから呼び出されます。（plan 21）                                                                                                                                                               |
 | `monitoring/`                            | ヘルスチェック、メトリクス送信                                                                                                                                                                                                                                                                                                   |
 | `oauth/`                                 | 22個のプロバイダーモジュール向けOAuth/インポートフロー（agy、antigravity、claude、cline、codebuddy-cn、codex、cursor、devin-desktop、ghe-copilot、github、gitlab-duo、grok-cli-oauth、grok-cli、kilocode、kimi-coding、kiro、openference、qoder、trae、xai-oauth、zed-hosted、zed）                                              |
-| `plugins/`                               | プラグインレジストリ                                                                                                                                                                                                                                                                                                             |
 | `promptCache/`                           | Anthropic形式のプロンプトキャッシュブレークポイント                                                                                                                                                                                                                                                                              |
 | `skills/`                                | Skillsフレームワーク（組み込み + マーケットプレイス + SkillsSH）— `docs/frameworks/SKILLS.md`を参照                                                                                                                                                                                                                              |
-| `playground/`                            | Playground Studio の共有ヘルパー: `codeExport.ts`（curl/Python/TS ジェネレーター）、`promptImprover.ts`（メタプロンプトビルダー）、`streamMetrics.ts`（純粋な TTFT/TPS）、`types.ts`（料金表）— `docs/frameworks/PLAYGROUND_STUDIO.md` を参照                                                                                    |
 | `webhookDispatcher.ts`                   | HMAC Webhook 配信 — `docs/frameworks/WEBHOOKS.md` を参照                                                                                                                                                                                                                                                                         |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | トンネルマネージャー — `docs/ops/TUNNELS_GUIDE.md` を参照                                                                                                                                                                                                                                                                        |
 | `cloudSync.ts`, `initCloudSync.ts`       | オプションの状態クラウド同期                                                                                                                                                                                                                                                                                                     |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — データベース（147モジュール + 208マイグレーション）
 
-| サブディレクトリ          | 目的                                                                                                                                                                                |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | WAL ジャーナリングを使用する `getDbInstance()` シングルトン                                                                                                                         |
-| `db/migrations/`          | バージョン管理された SQL ファイル（冪等かつトランザクショナル）。`073_memory_vec.sql` は `memory_vec_meta` + `needs_reindex` カラムを追加（プラン21）。                             |
-| `db/playgroundPresets.ts` | Playground Studio プリセット用 CRUD モジュール（`listPlaygroundPresets`、`getPlaygroundPreset`、`createPlaygroundPreset`、`updatePlaygroundPreset`、`deletePlaygroundPreset`）      |
-| `db/memoryVec.ts`         | `memory_vec_meta`（active_dim、embedding_signature、last_reset_at、vec_loaded）用 CRUD + `markMemoryNeedsReindex`、`getMemoryReindexQueue` など（プラン21）                         |
-| `db/<domain>.ts`          | ドメインごとに1つのモジュール: providers、combos、apiKeys、users、sessions、usage、audit*log、webhooks、skills、memory_entries、cloud_agent_tasks、evals*\*、reasoning_cache など。 |
+| サブディレクトリ  | 目的                                                                                                                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | WAL ジャーナリングを使用する `getDbInstance()` シングルトン                                                                                                                         |
+| `db/migrations/`  | バージョン管理された SQL ファイル（冪等かつトランザクショナル）。`073_memory_vec.sql` は `memory_vec_meta` + `needs_reindex` カラムを追加（プラン21）。                             |
+| `db/memoryVec.ts` | `memory_vec_meta`（active_dim、embedding_signature、last_reset_at、vec_loaded）用 CRUD + `markMemoryNeedsReindex`、`getMemoryReindexQueue` など（プラン21）                         |
+| `db/<domain>.ts`  | ドメインごとに1つのモジュール: providers、combos、apiKeys、users、sessions、usage、audit*log、webhooks、skills、memory_entries、cloud_agent_tasks、evals*\*、reasoning_cache など。 |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | リリースフロー全体（スキル、husky、Conventional Commits、デプロイ）               |
 | `COVERAGE_PLAN.md`          | カバレッジ目標と現在の状況                                                        |
 | `FREE_TIERS.md`             | 厳選された無料枠プロバイダー（48以上の無料枠 + 11のOAuth）                        |
-| `CLI-TOOLS.md`              | 外部CLI統合 + 内部OmniRoute CLI                                                   |
+| `CLI-TOOLS.md`              | 外部CLI統合 + 内部67router CLI                                                    |
 | `I18N.md`                   | i18nアーキテクチャ、言語の追加方法、67ロケール                                    |
 | `UNINSTALL.md`              | クリーンアンインストール手順                                                      |
 | `PROVIDER_REFERENCE.md`     | 375プロバイダーの**自動生成**カタログ（再生成：`npm run gen:provider-reference`） |
@@ -403,13 +395,10 @@ open-sse/
 | ドキュメント                                | 目的                                                                              |
 | ------------------------------------------- | --------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCPサーバー：110ツール、3トランスポート、33スコープ、RESTエンドポイント           |
-| `A2A-SERVER.md`                             | A2A v0.3：JSON-RPC、6スキル、RESTヘルパー、エージェントカード                     |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | 統合ガイド：A2A対ACP対Cloud Agents                                                |
-| `CLOUD_AGENT.md`                            | Codex Cloud / Devin / Julesのオーケストレーション                                 |
 | `SKILLS.md`                                 | スキルフレームワーク（組み込み + マーケットプレイス + SkillsSH + サンドボックス） |
 | `RADAR.md`                                  | Radar無料モデルカタログオーバーレイ（`RADAR_ENABLED`、デフォルトでは無効）        |
 | `MEMORY.md`                                 | メモリシステム（SQLite FTS5 + Qdrant）                                            |
-| `EVALS.md`                                  | 評価フレームワーク（スイート、実行、評価基準）                                    |
 | `GUARDRAILS.md`                             | PIIマスカー、プロンプトインジェクション、ビジョンブリッジ                         |
 | `COMPLIANCE.md`                             | 監査ログ、保持、noLogオプトアウト                                                 |
 | `WEBHOOKS.md`                               | HMAC署名付きWebhook配信                                                           |
@@ -574,7 +563,6 @@ open-sse/
 - **プロバイダーを追加する場合** `docs/architecture/ARCHITECTURE.md § 新しいプロバイダーの追加` に従い、`docs/reference/PROVIDER_REFERENCE.md` と照合してください。
 - **ルートを追加する場合** `docs/architecture/ARCHITECTURE.md § 新しい API ルートの追加` と `src/shared/validation/schemas.ts` を参照してください。
 - **MCP ツールを追加する場合** `docs/frameworks/MCP-SERVER.md § ツールの追加` を参照してください。
-- **A2A スキルを追加する場合** `docs/frameworks/A2A-SERVER.md § 新しいスキルの追加` を参照してください。
 - **ローカルで実行する場合** `docs/guides/SETUP_GUIDE.md` を参照してください。
 - **デプロイする場合** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md` を参照してください。
 - **リリースする場合** `docs/ops/RELEASE_CHECKLIST.md`（および Claude Code スキル `/generate-release-cc`）を参照してください。

@@ -20,19 +20,10 @@ interface DbLike {
 }
 
 interface CostSummaryLike {
-  budget: unknown;
   totalCostMonth: number;
-  totalCostPeriod: number;
-  activeLimitUsd: number;
-  resetInterval: string | null;
-  budgetResetAt: DateLike;
-  periodStartAt: DateLike;
-  nextResetAt: DateLike;
-  warningThreshold: number | null;
 }
 
 type GetCostSummaryFn = (apiKeyId: string) => CostSummaryLike;
-type CheckBudgetFn = (apiKeyId: string) => unknown;
 type GetDbInstanceFn = () => DbLike;
 type GetProviderConnectionByIdFn = (connectionId: string) => Promise<unknown>;
 type GetProviderConnectionsFn = (filters?: Record<string, unknown>) => Promise<unknown[]>;
@@ -44,7 +35,6 @@ type FetchAndPersistProviderLimitsFn = (
 interface ApiKeySelfServiceDeps {
   now?: () => number;
   getCostSummary?: GetCostSummaryFn;
-  checkBudget?: CheckBudgetFn;
   getDbInstance?: GetDbInstanceFn;
   getProviderConnectionById?: GetProviderConnectionByIdFn;
   getProviderConnections?: GetProviderConnectionsFn;
@@ -102,10 +92,6 @@ function isoOrNull(value: DateLike): string | null {
   return timestamp === null ? null : new Date(timestamp).toISOString();
 }
 
-function withDateFallback(value: DateLike, fallback: number): DateLike {
-  return isoOrNull(value) === null ? fallback : value;
-}
-
 function getCurrentMonthWindow(now: number) {
   const date = new Date(now);
   const start = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), 1, 0, 0, 0, 0);
@@ -114,32 +100,19 @@ function getCurrentMonthWindow(now: number) {
 }
 
 function buildCostStatus(summary: CostSummaryLike, now: number) {
-  const hasBudget = !!summary.budget && toNumber(summary.activeLimitUsd) > 0;
-  const fallbackWindow = getCurrentMonthWindow(now);
-  const periodStartAt = hasBudget
-    ? withDateFallback(summary.periodStartAt, fallbackWindow.periodStartAt)
-    : fallbackWindow.periodStartAt;
-  const resetAt = hasBudget
-    ? withDateFallback(summary.nextResetAt ?? summary.budgetResetAt, fallbackWindow.resetAt)
-    : fallbackWindow.resetAt;
-  const usedUsd = hasBudget
-    ? roundNumber(toNumber(summary.totalCostPeriod))
-    : roundNumber(toNumber(summary.totalCostMonth));
-  const limitUsd = hasBudget ? roundNumber(toNumber(summary.activeLimitUsd)) : null;
-  const remainingUsd = limitUsd === null ? null : roundNumber(Math.max(limitUsd - usedUsd, 0));
-  const usedPercent =
-    limitUsd === null || limitUsd <= 0 ? null : roundNumber((usedUsd / limitUsd) * 100, 2);
-
+  const window = getCurrentMonthWindow(now);
+  // No USD limit applies to the self-service view; the limit fields stay null
+  // so the response shape is unchanged for existing clients.
   return {
-    period: (hasBudget ? summary.resetInterval : "monthly") ?? "monthly",
+    period: "monthly",
     currency: "USD",
-    usedUsd,
-    limitUsd,
-    remainingUsd,
-    usedPercent,
-    warningThreshold: hasBudget ? (summary.warningThreshold ?? null) : null,
-    resetAt: isoOrNull(resetAt),
-    periodStartAt: isoOrNull(periodStartAt),
+    usedUsd: roundNumber(toNumber(summary.totalCostMonth)),
+    limitUsd: null,
+    remainingUsd: null,
+    usedPercent: null,
+    warningThreshold: null,
+    resetAt: isoOrNull(window.resetAt),
+    periodStartAt: isoOrNull(window.periodStartAt),
   };
 }
 
@@ -211,7 +184,7 @@ function normalizePlan(value: unknown): unknown {
 
 function isSupportedProvider(
   provider: string,
-  connection?: { provider?: string; providerSpecificData?: unknown },
+  connection?: { provider?: string; providerSpecificData?: unknown }
 ): boolean {
   return supportsProviderQuota(provider, connection);
 }
@@ -362,8 +335,7 @@ async function resolveAccountQuotas(metadata: ApiKeySelfServiceMetadata, deps: R
 type RequiredDeps = Required<ApiKeySelfServiceDeps>;
 
 async function normalizeDeps(deps: ApiKeySelfServiceDeps): Promise<RequiredDeps> {
-  const costRules =
-    deps.getCostSummary && deps.checkBudget ? null : await import("@/domain/costRules");
+  const costRules = deps.getCostSummary ? null : await import("@/domain/costRules");
   const dbCore = deps.getDbInstance ? null : await import("@/lib/db/core");
   const localDb =
     deps.getProviderConnectionById && deps.getProviderConnections
@@ -376,7 +348,6 @@ async function normalizeDeps(deps: ApiKeySelfServiceDeps): Promise<RequiredDeps>
   return {
     now: deps.now ?? Date.now,
     getCostSummary: deps.getCostSummary ?? costRules!.getCostSummary,
-    checkBudget: deps.checkBudget ?? costRules!.checkBudget,
     getDbInstance: deps.getDbInstance ?? dbCore!.getDbInstance,
     getProviderConnectionById: deps.getProviderConnectionById ?? localDb!.getProviderConnectionById,
     getProviderConnections: deps.getProviderConnections ?? localDb!.getProviderConnections,
@@ -395,7 +366,6 @@ export async function buildApiKeySelfServiceStatus(
 
   const resolvedDeps = await normalizeDeps(deps);
   const summary = resolvedDeps.getCostSummary(metadata.id);
-  resolvedDeps.checkBudget(metadata.id);
 
   const cost = buildCostStatus(summary, resolvedDeps.now());
   const tokens = aggregateTokens(

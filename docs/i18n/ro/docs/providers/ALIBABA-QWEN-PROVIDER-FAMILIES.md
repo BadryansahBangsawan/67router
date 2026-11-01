@@ -10,7 +10,7 @@ reprezentate sub forma a patru familii de furnizori. Regiunea reprezintă date d
 
 ## Decizie
 
-| Familie de furnizori                            | ID OmniRoute            | Regiune globală | Regiunea China |
+| Familie de furnizori                            | ID 67router             | Regiune globală | Regiunea China |
 | ----------------------------------------------- | ----------------------- | --------------- | -------------- |
 | Alibaba Cloud Model Studio (plată la utilizare) | `alibaba`               | Singapore       | Beijing        |
 | Alibaba Cloud Token Plan                        | `bailian-coding-plan`   | Singapore       | Beijing        |

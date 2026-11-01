@@ -4,7 +4,7 @@
 
 ---
 
-> **Ano ang dokumentong ito.** Isang kritikal na pagtatasa sa quality-gate system ng OmniRoute,
+> **Ano ang dokumentong ito.** Isang kritikal na pagtatasa sa quality-gate system ng 67router,
 > kumpara sa pinakamahuhusay na kasanayan sa industriya, **kasama** ang isang komprehensibong katalogo ng lahat ng quality
 > checkpoint at isang **tool-agnostic na plano sa replikasyon** upang mailapat ang parehong sistema sa
 > anumang proyekto. Binuo noong 2026-06-16 mula sa aktuwal na estado ng repository (hindi mula sa memorya).
@@ -113,62 +113,62 @@ upang maipatupad ito sa anumang stack.
 
 ### 1. Estilo at pag-format (deterministiko, mabilis)
 
-- **OmniRoute:** Prettier + ESLint sa pamamagitan ng lint-staged (pre-commit), 2-spaces/double-quotes/100col.
+- **67router:** Prettier + ESLint sa pamamagitan ng lint-staged (pre-commit), 2-spaces/double-quotes/100col.
 - **Pangkalahatan:** isang formatter na kayang awtomatikong mag-ayos + isang linter, na tumatakbo sa pre-commit para sa mga staged file.
 
 ### 2. Mga type
 
-- **OmniRoute:** `typecheck:core` (humaharang) + `typecheck:noimplicit:core` (nagbibigay-payo) + `type-coverage` ratchet 92.17% + badyet ng any sa bawat file.
+- **67router:** `typecheck:core` (humaharang) + `typecheck:noimplicit:core` (nagbibigay-payo) + `type-coverage` ratchet 92.17% + badyet ng any sa bawat file.
 - **Pangkalahatan:** mahigpit na typecheck sa CI + ratcheted na sukatan ng type-coverage + badyet ng `any`/escape-hatch sa bawat file.
 
 ### 3. Mga test (intensidad)
 
-- **OmniRoute:** 2 hindi nagsasapawang runner (Node native + vitest), 8 shard, pandaigdigang coverage na 60/60/60/60 + ratchet na ~76% + **8 minimum na threshold sa bawat module para sa mga kritikal na module** + gabi-gabing property test + gabi-gabing **mutation testing**.
+- **67router:** 2 hindi nagsasapawang runner (Node native + vitest), 8 shard, pandaigdigang coverage na 60/60/60/60 + ratchet na ~76% + **8 minimum na threshold sa bawat module para sa mga kritikal na module** + gabi-gabing property test + gabi-gabing **mutation testing**.
 - **Pangkalahatan:** (mga) test runner + **absolutong** minimum na coverage (panlaban sa sero) + coverage **ratchet** (panlaban sa regression) + **mga minimum na threshold sa bawat module para sa code na mataas ang panganib** (panlaban sa Goodhart) + property-based testing para sa purong logic + gabi-gabing **mutation testing** bilang tunay na panukat ng kalidad ng test.
 
 ### 4. Patakaran sa test (panlaban sa pagmamanipula)
 
-- **OmniRoute:** `pr-test-policy` (nangangailangan ng test ang production code), `check-test-masking` (hinaharang ang mga pinahinang assert), `pr-evidence` (nangangailangan ng evidence block ang pahayag ng tagumpay), `test-discovery` (kinokolekta ng isang runner ang bawat test).
+- **67router:** `pr-test-policy` (nangangailangan ng test ang production code), `check-test-masking` (hinaharang ang mga pinahinang assert), `pr-evidence` (nangangailangan ng evidence block ang pahayag ng tagumpay), `test-discovery` (kinokolekta ng isang runner ang bawat test).
 - **Pangkalahatan:** gate na "bagong code ⇒ bagong test" + detector ng inalis na assert/tautology + pangangailangan sa ebidensya (TDD o buhay na test) + garantiya na walang test na naulila sa labas ng mga glob.
 
 ### 5. Pagiging kumplikado at kalusugan ng code (mga ratchet)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), laki ng file sa bawat file (nakapirmi, maaari lamang lumiit), circular-deps (custom Tarjan, humaharang).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), laki ng file sa bawat file (nakapirmi, maaari lamang lumiit), circular-deps (custom Tarjan, humaharang).
 - **Pangkalahatan:** lagyan ng ratchet ang bawat sukatan ng kalusugan (mga babala, duplikasyon, cyclomatic **at** cognitive complexity, dead code, laki ng file, mga import cycle). Laging "huwag lumala" ang direksyon.
 
 ### 6. Statikong seguridad (SAST + mga secret)
 
-- **OmniRoute:** CodeQL (ratchet ng mga alerto = 0), gitleaks (`[extend] useDefault=true` — kritikal!), SonarQube, mga custom na panuntunan sa seguridad (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet ng mga alerto = 0), gitleaks (`[extend] useDefault=true` — kritikal!), SonarQube, mga custom na panuntunan sa seguridad (public-creds, error-helper, route-guard-membership, route-validation).
 - **Pangkalahatan:** SAST (CodeQL/Sonar/semgrep) na may ratchet ng mga alerto + scanner ng mga secret na may **minanang default na ruleset** (ang custom na config na pumapalit sa default = bulag) + mga gate sa seguridad para sa Hard Rule na partikular sa proyekto.
 
 ### 7. Supply chain (mga dependency)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` na panlaban sa slopsquatting (allowlist + edad na ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` na panlaban sa slopsquatting (allowlist + edad na ≥72h).
 - **Pangkalahatan:** SCA mula sa maraming source + allowlist ng lisensya + pagsusuri sa integridad ng lockfile + allowlist ng dependency na may pagsusuri sa edad/typosquatting + bot para sa pinagsama-samang mga update.
 
 ### 8. Supply chain (build at release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (lingguhan), pagpapatibay ng workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (lingguhan), pagpapatibay ng workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Pangkalahatan:** bumuo ng SBOM kapag nag-publish + nilagdaang provenance (SLSA L2+) + nakaiskedyul na Scorecard + patibayin ang lahat ng workflow (mga token na may minimum na pribilehiyo, walang naka-persist na credential sa checkout na hindi para sa pusher, mga action na naka-pin ayon sa SHA).
 
 ### 9. Mga kontrata at API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (gabi-gabing contract fuzz), openapi-coverage (% ng mga dokumentadong route, ratchet 38.3%), openapi-security-tiers (spec laban sa route-guard).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (gabi-gabing contract fuzz), openapi-coverage (% ng mga dokumentadong route, ratchet 38.3%), openapi-security-tiers (spec laban sa route-guard).
 - **Pangkalahatan:** contract diff para sa breaking change (oasdiff/buf) + property-based fuzz laban sa spec (schemathesis) + ratcheted na coverage ng dokumentasyon + pagkakapare-pareho ng spec↔code.
 
 ### 10. Mga dokumento at i18n (panlaban sa pagkabulok)
 
-- **OmniRoute:** docs-sync (mga naka-mirror na bersyon), docs-counts-sync (mga numero sa dokumento laban sa code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (mga naka-mirror na bersyon), docs-counts-sync (mga numero sa dokumento laban sa code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Pangkalahatan:** i-sync ang mga bersyon/bilang/env-var sa pagitan ng mga dokumento at code (gate, hindi tiwala) + i-validate ang mga panloob na link + ratcheted na i18n coverage.
 
 ### 11. Panlaban sa hallucination / pagkakapare-pareho (ang bihirang kategorya)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ buhay na symbol), provider-consistency, fetch-targets (client fetch ⇒ totoong route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ buhay na symbol), provider-consistency, fetch-targets (client fetch ⇒ totoong route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Pangkalahatan:** para sa bawat "nadobleng source of truth" (registry, string dispatch, mga sangguniang tumatawid sa mga layer), isang gate na nagpapatunay na magkatugma ang magkabilang panig. Nahuhuli nito ang pagkabulok na hindi nahuhuli ng typecheck/test.
 
 ### 12. Resilience at domain (partikular sa produkto)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ang 3 batas ng resilience (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ang 3 batas ng resilience (circuit-breaker/cooldown/lockout).
 - **Pangkalahatan:** tukuyin ang mga failure mode ng **inyong** domain at magkaroon ng gate (kahit gabi-gabi lamang) para sa bawat isa. Para sa mga AI app: injection red-team. Para sa mga distributed system: chaos + leak + soak.
 
 ---

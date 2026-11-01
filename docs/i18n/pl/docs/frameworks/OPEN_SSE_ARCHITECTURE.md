@@ -11,7 +11,7 @@ lastUpdated: 2026-06-28
 
 # Architektura open-sse
 
-> **TL;DR**: `open-sse/` to rdzeń silnika strumieniowania, który obsługuje każde żądanie LLM w OmniRoute. Zawiera ~900 plików implementujących pipeline żądań, executory, serwisy, serwer MCP oraz warstwę tłumaczenia formatów. Ten przewodnik wyjaśnia, jak te elementy współgrają ze sobą.
+> **TL;DR**: `open-sse/` to rdzeń silnika strumieniowania, który obsługuje każde żądanie LLM w 67router. Zawiera ~900 plików implementujących pipeline żądań, executory, serwisy, serwer MCP oraz warstwę tłumaczenia formatów. Ten przewodnik wyjaśnia, jak te elementy współgrają ze sobą.
 
 **Źródło:** `open-sse/` (pakiet workspace, ~900 plików; 811 `.ts`)
 
@@ -19,10 +19,10 @@ lastUpdated: 2026-06-28
 
 ## Po co osobny pakiet workspace?
 
-`open-sse/` to **samodzielny workspace** w monorepo OmniRoute z kilku powodów:
+`open-sse/` to **samodzielny workspace** w monorepo 67router z kilku powodów:
 
 1. **Reużywalność** — `open-sse` jest publikowany jako `@omniroute/open-sse` na npm, więc inne projekty mogą go używać niezależnie
-2. **Czyste granice** — silnik strumieniowania jest odseparowany od warstwy UI/DB specyficznej dla OmniRoute
+2. **Czyste granice** — silnik strumieniowania jest odseparowany od warstwy UI/DB specyficznej dla 67router
 3. **Wydajność** — silnik nie ma zależności od Next.js, co umożliwia szybsze cold starty w kontekstach CLI/serverless
 4. **Wersjonowanie** — `open-sse` może wydawać releasy we własnym rytmie
 
@@ -467,7 +467,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Po co osobny transformer?
 
-Responses API to nowy format OpenAI ze **stateful conversations** (`previous_response_id`). Gdy klient wysyła żądanie Responses, OmniRoute:
+Responses API to nowy format OpenAI ze **stateful conversations** (`previous_response_id`). Gdy klient wysyła żądanie Responses, 67router:
 
 1. Konwertuje Responses → Chat Completions wewnętrznie
 2. Wysyła do providera (dowolnego wspierającego Chat Completions)
@@ -580,5 +580,4 @@ Silnik routingu ma ścisłe budżety wydajności:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — katalog po katalogu
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scoring 13-czynnikowy
 - [MCP-SERVER.md](./MCP-SERVER.md) — serwer MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — serwer A2A
 - Źródło: `open-sse/` (400+ plików, ~143K LOC)

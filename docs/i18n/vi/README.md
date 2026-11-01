@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="Bảng điều khiển OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="Bảng điều khiển 67router" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Cổng AI Miễn phí
+# 🚀 67router — Cổng AI Miễn phí
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Không bao giờ ngừng lập trình. Mọi công cụ AI → 375 nhà cung cấp — hơn 150 miễn phí — thông qua một điểm cuối duy nhất. Kết nối Claude Code, Codex, Cursor, Cline, Copilot & Antigravity với Claude / GPT / Gemini MIỄN PHÍ cùng khả năng tự động chuyển đổi dự phòng. Nén kết hợp RTK + Caveman giúp tiết kiệm 15–95% token (trung bình ~89%) — không bao giờ chạm giới hạn. 375 nhà cung cấp AI · hơn 150 gói miễn phí · ~1,62 tỷ token miễn phí/tháng · 20 chiến lược định tuyến · bắt đầu với $0."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Không bao giờ ngừng lập trình. Mọi công cụ AI → 375 nhà cung cấp — hơn 150 miễn phí — thông qua một điểm cuối duy nhất. Kết nối Claude Code, Codex, Cursor, Cline, Copilot & Antigravity với Claude / GPT / Gemini MIỄN PHÍ cùng khả năng tự động chuyển đổi dự phòng. Nén kết hợp RTK + Caveman giúp tiết kiệm 15–95% token (trung bình ~89%) — không bao giờ chạm giới hạn. 375 nhà cung cấp AI · hơn 150 gói miễn phí · ~1,62 tỷ token miễn phí/tháng · 20 chiến lược định tuyến · bắt đầu với $0."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Sử dụng tài khoản nhà cung cấp của riêng bạn.** Đây là tổng ước tính từ các gói miễn phí riêng biệt của bên thứ ba mà bạn đủ điều kiện sử dụng, không phải khoản cấp token từ OmniRoute. Hãy đăng ký, lấy thông tin xác thực khi cần và kết nối các nhà cung cấp mà bạn có thể sử dụng; mỗi nhà cung cấp tự kiểm soát giới hạn, tính khả dụng và điều khoản của mình.
+> **Sử dụng tài khoản nhà cung cấp của riêng bạn.** Đây là tổng ước tính từ các gói miễn phí riêng biệt của bên thứ ba mà bạn đủ điều kiện sử dụng, không phải khoản cấp token từ 67router. Hãy đăng ký, lấy thông tin xác thực khi cần và kết nối các nhà cung cấp mà bạn có thể sử dụng; mỗi nhà cung cấp tự kiểm soát giới hạn, tính khả dụng và điều khoản của mình.
 >
-> Việc kết hợp các gói miễn phí theo cách thủ công rất phiền phức — hàng chục SDK, hàng chục giới hạn tốc độ và không biết thực sự bạn có bao nhiêu. OmniRoute lập danh mục **471 mục gói miễn phí trên 34 khóa nhóm định kỳ** và tính toán con số token nổi bật từ **17 nhóm có ngân sách hàng tháng dương được công bố cùng năm hạn mức Groq theo từng mô hình**, sau khi loại bỏ trùng lặp theo nhóm dùng chung. Các hạn ngạch chỉ được mở sau khi xác minh danh tính theo khu vực (hiện tại: ModelScope) được hiển thị riêng, +~6M sau bước xác minh danh tính theo khu vực và không bao giờ được cộng vào con số nổi bật. Kết quả luôn hiển thị trên bảng điều khiển (`/dashboard/free-tiers`).
+> Việc kết hợp các gói miễn phí theo cách thủ công rất phiền phức — hàng chục SDK, hàng chục giới hạn tốc độ và không biết thực sự bạn có bao nhiêu. 67router lập danh mục **471 mục gói miễn phí trên 34 khóa nhóm định kỳ** và tính toán con số token nổi bật từ **17 nhóm có ngân sách hàng tháng dương được công bố cùng năm hạn mức Groq theo từng mô hình**, sau khi loại bỏ trùng lặp theo nhóm dùng chung. Các hạn ngạch chỉ được mở sau khi xác minh danh tính theo khu vực (hiện tại: ModelScope) được hiển thị riêng, +~6M sau bước xác minh danh tính theo khu vực và không bao giờ được cộng vào con số nổi bật. Kết quả luôn hiển thị trên bảng điều khiển (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Thẻ ngân sách gói miễn phí OmniRoute: duy trì ~1.62B token miễn phí mỗi tháng, lên tới ~2.22B trong tháng đầu tiên nhờ tín dụng đăng ký, từ 34 khóa nhóm định kỳ được ghi nhận, bao phủ 471 mục gói miễn phí đã lập danh mục phía sau một endpoint duy nhất. Phép tính minh bạch đã loại trùng theo nhóm — mỗi nhóm dùng chung chỉ được tính một lần, bao gồm 17 nhóm định kỳ có ngân sách token hàng tháng dương được công bố cùng năm hạn mức Groq theo từng mô hình; 12 nhà cung cấp được đánh dấu là nên tránh trong danh mục rủi ro điều khoản để bạn tự quyết định. Thanh ngân sách bao gồm Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (năm hạn mức theo từng mô hình) và các nhóm nhỏ hơn, cùng tín dụng đăng ký tháng đầu và các nhà cung cấp miễn phí vĩnh viễn không giới hạn token được hiển thị riêng để chúng không bao giờ làm tăng con số nổi bật. Mức đã dùng/còn lại trực tiếp tại /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Thẻ ngân sách gói miễn phí 67router: duy trì ~1.62B token miễn phí mỗi tháng, lên tới ~2.22B trong tháng đầu tiên nhờ tín dụng đăng ký, từ 34 khóa nhóm định kỳ được ghi nhận, bao phủ 471 mục gói miễn phí đã lập danh mục phía sau một endpoint duy nhất. Phép tính minh bạch đã loại trùng theo nhóm — mỗi nhóm dùng chung chỉ được tính một lần, bao gồm 17 nhóm định kỳ có ngân sách token hàng tháng dương được công bố cùng năm hạn mức Groq theo từng mô hình; 12 nhà cung cấp được đánh dấu là nên tránh trong danh mục rủi ro điều khoản để bạn tự quyết định. Thanh ngân sách bao gồm Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (năm hạn mức theo từng mô hình) và các nhóm nhỏ hơn, cùng tín dụng đăng ký tháng đầu và các nhà cung cấp miễn phí vĩnh viễn không giới hạn token được hiển thị riêng để chúng không bao giờ làm tăng con số nổi bật. Mức đã dùng/còn lại trực tiếp tại /dashboard/free-tiers."/>
 
 > Bản tóm tắt động của trang `/dashboard/free-tiers` trực tiếp. Phương pháp đầy đủ (loại trùng nhóm, các cấp tín dụng, điều khoản nhà cung cấp): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Tìm hiểu</b></td>
     <td align="center"><a href="#-the-promise">💥 Lời hứa</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Tại sao chọn OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Tại sao chọn 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Điểm khác biệt</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Ba bước: cài đặt và khởi động OmniRoute, kết nối một nhà cung cấp đủ điều kiện bằng tài khoản hoặc API key của riêng bạn, rồi trỏ công cụ của bạn tới localhost:20128/v1 bằng API key OmniRoute và model auto. Việc định tuyến phụ thuộc vào các kết nối đủ điều kiện hiện có và giới hạn của nhà cung cấp."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Ba bước: cài đặt và khởi động 67router, kết nối một nhà cung cấp đủ điều kiện bằng tài khoản hoặc API key của riêng bạn, rồi trỏ công cụ của bạn tới localhost:20128/v1 bằng API key 67router và model auto. Việc định tuyến phụ thuộc vào các kết nối đủ điều kiện hiện có và giới hạn của nhà cung cấp."/>
 
 ```bash
-# Sau khi kết nối một nhà cung cấp, hãy sao chép khóa OmniRoute của bạn từ Dashboard → Endpoints:
+# Sau khi kết nối một nhà cung cấp, hãy sao chép khóa 67router của bạn từ Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Vì sao chọn OmniRoute?
+# 🤔 Vì sao chọn 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Vì sao chọn OmniRoute — ngừng xoay xở với 10 dashboard, API key chết và hóa đơn bất ngờ. Mười nỗi đau hằng ngày so với giải pháp: hạn mức hết hạn mà không dùng → tối đa hóa gói đăng ký; giới hạn tốc độ giữa lúc viết code → tự động dự phòng 4 tầng (Subscription → API → Giá rẻ → Miễn phí); đầu ra của công cụ đốt token → nén RTK + Caveman (15–95%); API đắt đỏ → định tuyến tối ưu chi phí; mỗi công cụ một thiết lập riêng → một endpoint, một dashboard; AI bị chặn → proxy 3 cấp + TLS stealth; khóa chết → khả năng phục hồi 3 lớp (circuit breaker, làm nguội khóa, khóa model); nhóm chia sẻ một gói đăng ký → nhóm khóa với hạn mức chia sẻ công bằng; prompt đi qua đám mây của người khác → ưu tiên cục bộ với khóa mã hóa AES-256-GCM; không có khả năng quan sát chi tiêu → phân tích trực tiếp (sử dụng, hạn mức, tiết kiệm, độ trễ p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Vì sao chọn 67router — ngừng xoay xở với 10 dashboard, API key chết và hóa đơn bất ngờ. Mười nỗi đau hằng ngày so với giải pháp: hạn mức hết hạn mà không dùng → tối đa hóa gói đăng ký; giới hạn tốc độ giữa lúc viết code → tự động dự phòng 4 tầng (Subscription → API → Giá rẻ → Miễn phí); đầu ra của công cụ đốt token → nén RTK + Caveman (15–95%); API đắt đỏ → định tuyến tối ưu chi phí; mỗi công cụ một thiết lập riêng → một endpoint, một dashboard; AI bị chặn → proxy 3 cấp + TLS stealth; khóa chết → khả năng phục hồi 3 lớp (circuit breaker, làm nguội khóa, khóa model); nhóm chia sẻ một gói đăng ký → nhóm khóa với hạn mức chia sẻ công bằng; prompt đi qua đám mây của người khác → ưu tiên cục bộ với khóa mã hóa AES-256-GCM; không có khả năng quan sát chi tiêu → phân tích trực tiếp (sử dụng, hạn mức, tiết kiệm, độ trễ p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Luồng xử lý yêu cầu OmniRoute: IDE hoặc CLI của bạn (Claude Code, Cursor, Cline…) gọi một endpoint cục bộ (http://localhost:20128/v1); OmniRoute Smart Router (nén RTK + Caveman, 20 chiến lược định tuyến, circuit breaker, TLS stealth, MCP, A2A, guardrail) có thể dự phòng qua 4 tầng nhà cung cấp trong khi vẫn còn một mục tiêu lành mạnh đủ điều kiện — Tầng 1 Subscription, Tầng 2 API Key, Tầng 3 Giá rẻ và Tầng 4 Miễn phí."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="Luồng xử lý yêu cầu 67router: IDE hoặc CLI của bạn (Claude Code, Cursor, Cline…) gọi một endpoint cục bộ (http://localhost:20128/v1); 67router Smart Router (nén RTK + Caveman, 20 chiến lược định tuyến, circuit breaker, TLS stealth, MCP, A2A, guardrail) có thể dự phòng qua 4 tầng nhà cung cấp trong khi vẫn còn một mục tiêu lành mạnh đủ điều kiện — Tầng 1 Subscription, Tầng 2 API Key, Tầng 3 Giá rẻ và Tầng 4 Miễn phí."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Bạn muốn tham gia với tư cách là một Người bạn mã nguồn mở?** Đây là những công ty ủng hộ mã nguồn mở và giúp OmniRoute tiếp tục hoạt động — và chúng tôi công khai nơi mọi khoản đóng góp của họ được sử dụng. Liên hệ: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Bạn muốn tham gia với tư cách là một Người bạn mã nguồn mở?** Đây là những công ty ủng hộ mã nguồn mở và giúp 67router tiếp tục hoạt động — và chúng tôi công khai nơi mọi khoản đóng góp của họ được sử dụng. Liên hệ: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Founding Open Source Friend"/>
     </td>
     <td>
-      Cảm ơn <b>Kimi (Moonshot AI)</b>, Người bạn mã nguồn mở sáng lập của chúng tôi, đã ủng hộ dự án này! Kimi là phòng thí nghiệm AI đứng sau các dòng mô hình K2 và K3 có trọng lượng mở — <b>Kimi K3</b> cung cấp cửa sổ ngữ cảnh 1M-token, tầm nhìn gốc và mã hóa cấp độ tiên tiến với chi phí thấp hơn nhiều so với các mô hình đóng, và hoạt động ngay lập tức với Claude Code, Codex và mọi công cụ mã hóa mà OmniRoute phục vụ.
+      Cảm ơn <b>Kimi (Moonshot AI)</b>, Người bạn mã nguồn mở sáng lập của chúng tôi, đã ủng hộ dự án này! Kimi là phòng thí nghiệm AI đứng sau các dòng mô hình K2 và K3 có trọng lượng mở — <b>Kimi K3</b> cung cấp cửa sổ ngữ cảnh 1M-token, tầm nhìn gốc và mã hóa cấp độ tiên tiến với chi phí thấp hơn nhiều so với các mô hình đóng, và hoạt động ngay lập tức với Claude Code, Codex và mọi công cụ mã hóa mà 67router phục vụ.
       <br/><br/>
-      <b>Hỗ trợ của Kimi cung cấp:</b> Các khoản tín dụng API của Kimi cung cấp năng lượng cho quy trình phát hành được AI xác thực của OmniRoute — giai đoạn <i>xác thực hợp nhất được cung cấp bởi Kimi K3</i> xem xét mọi yêu cầu kéo trước khi nó được xuất bản — cộng với việc phát triển tính năng hàng ngày. Hỗ trợ Kimi hạng nhất được vận chuyển trên cả hai đường ray: <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API Kimi</a> trực tiếp (<code>kimi-k3</code>) và <a href="https://www.kimi.ai/code?aff=omniroute">gói mã hóa Kimi Code</a> (OAuth và khóa API). OmniRoute cũng là dự án mã nguồn mở đầu tiên của Brazil trong chương trình hỗ trợ của Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Nhận khóa API Kimi với 15% tín dụng bổ sung →</b></a>
+      <b>Hỗ trợ của Kimi cung cấp:</b> Các khoản tín dụng API của Kimi cung cấp năng lượng cho quy trình phát hành được AI xác thực của 67router — giai đoạn <i>xác thực hợp nhất được cung cấp bởi Kimi K3</i> xem xét mọi yêu cầu kéo trước khi nó được xuất bản — cộng với việc phát triển tính năng hàng ngày. Hỗ trợ Kimi hạng nhất được vận chuyển trên cả hai đường ray: <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">API Kimi</a> trực tiếp (<code>kimi-k3</code>) và <a href="https://www.kimi.ai/code?aff=omniroute">gói mã hóa Kimi Code</a> (OAuth và khóa API). 67router cũng là dự án mã nguồn mở đầu tiên của Brazil trong chương trình hỗ trợ của Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Nhận khóa API Kimi với 15% tín dụng bổ sung →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Friend"/>
     </td>
     <td>
-      Cảm ơn <b>Cheaper Inference</b>, một Người bạn mã nguồn mở của OmniRoute, đã ủng hộ dự án này! Cheaper Inference là một cổng xếp hạng chi phí bán lại 42 mô hình tiên tiến — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok và MiniMax — đằng sau một điểm cuối tương thích với OpenAI, định tuyến mỗi yêu cầu đến nhà cung cấp đủ điều kiện rẻ nhất mà không bao giờ tính phí cao hơn giá niêm yết của nhà sản xuất mô hình.
+      Cảm ơn <b>Cheaper Inference</b>, một Người bạn mã nguồn mở của 67router, đã ủng hộ dự án này! Cheaper Inference là một cổng xếp hạng chi phí bán lại 42 mô hình tiên tiến — Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok và MiniMax — đằng sau một điểm cuối tương thích với OpenAI, định tuyến mỗi yêu cầu đến nhà cung cấp đủ điều kiện rẻ nhất mà không bao giờ tính phí cao hơn giá niêm yết của nhà sản xuất mô hình.
       <br/><br/>
-      <b>Hỗ trợ hạng nhất trong OmniRoute:</b> Chat Completions, điểm cuối <code>/v1/responses</code> gốc, tầm nhìn, gọi công cụ và 3 mô hình hình ảnh (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, có thể truy cập dưới dạng <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Nhận khóa API →</b></a>
+      <b>Hỗ trợ hạng nhất trong 67router:</b> Chat Completions, điểm cuối <code>/v1/responses</code> gốc, tầm nhìn, gọi công cụ và 3 mô hình hình ảnh (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, có thể truy cập dưới dạng <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Nhận khóa API →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Khuyến mãi liên kết</b> — phiếu đăng ký miễn phí từ các nhà cung cấp mà chúng tôi không tài trợ (nhấp để mở rộng)</sub></summary>
 
-<sub><i>Phần này chỉ dành cho mã giới thiệu/phiếu giảm giá. Các đối tác tài trợ nằm trong phần <b>🤝 Được hỗ trợ bởi những người bạn mã nguồn mở của chúng tôi</b> ở trên. OmniRoute không có bất kỳ sự tài trợ hoặc hợp tác nào với các nhà cung cấp được liệt kê ở đây — đây là các phiếu giảm giá công khai mà bất kỳ ai cũng có thể sử dụng.</i></sub>
+<sub><i>Phần này chỉ dành cho mã giới thiệu/phiếu giảm giá. Các đối tác tài trợ nằm trong phần <b>🤝 Được hỗ trợ bởi những người bạn mã nguồn mở của chúng tôi</b> ở trên. 67router không có bất kỳ sự tài trợ hoặc hợp tác nào với các nhà cung cấp được liệt kê ở đây — đây là các phiếu giảm giá công khai mà bất kỳ ai cũng có thể sử dụng.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — đăng ký liên kết · <b>$100 tín dụng miễn phí</b> khi đăng ký (máy chủ miễn phí, có thể có độ trễ cao hơn — tốt nhất để thử nghiệm, không phải sản xuất). Hỗ trợ hạng nhất trong OmniRoute kể từ <b>v3.8.50</b>: Chat Completions, định dạng dây tương thích với Anthropic và đường dẫn tương thích với OpenAI. Các mô hình có sẵn bao gồm <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> và nhiều hơn nữa. <b><a href="https://agentrouter.org/register?aff=70LM">Nhận $100 của bạn →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — đăng ký liên kết · <b>$100 tín dụng miễn phí</b> khi đăng ký (máy chủ miễn phí, có thể có độ trễ cao hơn — tốt nhất để thử nghiệm, không phải sản xuất). Hỗ trợ hạng nhất trong 67router kể từ <b>v3.8.50</b>: Chat Completions, định dạng dây tương thích với Anthropic và đường dẫn tương thích với OpenAI. Các mô hình có sẵn bao gồm <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> và nhiều hơn nữa. <b><a href="https://agentrouter.org/register?aff=70LM">Nhận $100 của bạn →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Liên kết liên kết — OmniRoute không có bất kỳ sự tài trợ hoặc hợp tác nào với nhà cung cấp này.</i></sub>
+      <sub>⚠️ <i>Liên kết liên kết — 67router không có bất kỳ sự tài trợ hoặc hợp tác nào với nhà cung cấp này.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Bạn có biết nhà cung cấp nào khác có phiếu đăng ký miễn phí hào phóng mang lại lợi ích cho người dùng OmniRoute không? Mở một vấn đề và chúng tôi sẽ thêm nó vào đây.</sub>
+<sub>Bạn có biết nhà cung cấp nào khác có phiếu đăng ký miễn phí hào phóng mang lại lợi ích cho người dùng 67router không? Mở một vấn đề và chúng tôi sẽ thêm nó vào đây.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Ví dụ động cho 18 trong số 20 chiến lược định tuyến combo — mỗi ô tương ứng với một chiến lược: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. cache-optimized và quota-weighted không có hiệu ứng động; bảng bên dưới mô tả đầy đủ cả 20 chiến lược."/>
 
-> **Combo** là một chuỗi mô hình mà OmniRoute định tuyến qua **tự động**. Nếu hạn ngạch cạn, nhà cung cấp gặp sự cố hoặc chi phí tăng đột biến, combo có thể chuyển sang mô hình khả dụng và hoạt động ổn định tiếp theo. 🛡️
+> **Combo** là một chuỗi mô hình mà 67router định tuyến qua **tự động**. Nếu hạn ngạch cạn, nhà cung cấp gặp sự cố hoặc chi phí tăng đột biến, combo có thể chuyển sang mô hình khả dụng và hoạt động ổn định tiếp theo. 🛡️
 
 ### ⚡ Không cần cấu hình — chỉ cần dùng `auto`
 
-Không cần tạo combo. Đặt mô hình của bạn thành `auto` (hoặc một biến thể), OmniRoute sẽ xây dựng một combo ảo từ các nhà cung cấp đã kết nối và chấm điểm theo thời gian thực:
+Không cần tạo combo. Đặt mô hình của bạn thành `auto` (hoặc một biến thể), 67router sẽ xây dựng một combo ảo từ các nhà cung cấp đã kết nối và chấm điểm theo thời gian thực:
 
 <table>
   <tr><th align="left">ID mô hình</th><th align="left">Mục tiêu tối ưu hóa</th></tr>
@@ -496,7 +498,7 @@ Tất cả **20** chiến lược — kết hợp tùy ý theo từng bước c�
 
 ### 🧱 Khả năng phục hồi được tích hợp sẵn (3 lớp độc lập)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Khả năng phục hồi của OmniRoute — 3 lớp tự phục hồi độc lập, dùng đúng lớp cho đúng loại sự cố. Lớp 1: bộ ngắt mạch nhà cung cấp (toàn bộ nhà cung cấp): chỉ kích hoạt khi gặp lỗi 408/5xx, ngưỡng OAuth 8× / khóa API 12× / cục bộ 2×, đặt lại sau 60 giây/30 giây/15 giây để chuyển sang trạng thái thăm dò HALF-OPEN, phục hồi trì hoãn; khi ở trạng thái OPEN, combo sẽ định tuyến lại sang nhà cung cấp tiếp theo. Lớp 2: thời gian chờ kết nối (một khóa/tài khoản): thời gian cơ sở 5 giây với OAuth / 3 giây với khóa API, thời gian chờ tăng theo cấp số nhân ×2 kèm cơ chế chống quá tải đồng loạt, lỗi 429 tuân thủ Retry-After, khi thành công sẽ xóa toàn bộ trạng thái lỗi; khóa đang trong thời gian chờ sẽ bị bỏ qua trong khi các khóa cùng nhóm vẫn tiếp tục phục vụ. Lớp 3: khóa mô hình (một mô hình): lỗi 429 theo từng mô hình, lỗi 404 cục bộ hoặc việc từ chối chế độ chỉ khóa mô hình đó — không bao giờ khóa toàn bộ kết nối. Các trạng thái cuối (bị cấm, hết hạn, cạn tín dụng) cần người vận hành xử lý, không phải thời gian chờ."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="Khả năng phục hồi của 67router — 3 lớp tự phục hồi độc lập, dùng đúng lớp cho đúng loại sự cố. Lớp 1: bộ ngắt mạch nhà cung cấp (toàn bộ nhà cung cấp): chỉ kích hoạt khi gặp lỗi 408/5xx, ngưỡng OAuth 8× / khóa API 12× / cục bộ 2×, đặt lại sau 60 giây/30 giây/15 giây để chuyển sang trạng thái thăm dò HALF-OPEN, phục hồi trì hoãn; khi ở trạng thái OPEN, combo sẽ định tuyến lại sang nhà cung cấp tiếp theo. Lớp 2: thời gian chờ kết nối (một khóa/tài khoản): thời gian cơ sở 5 giây với OAuth / 3 giây với khóa API, thời gian chờ tăng theo cấp số nhân ×2 kèm cơ chế chống quá tải đồng loạt, lỗi 429 tuân thủ Retry-After, khi thành công sẽ xóa toàn bộ trạng thái lỗi; khóa đang trong thời gian chờ sẽ bị bỏ qua trong khi các khóa cùng nhóm vẫn tiếp tục phục vụ. Lớp 3: khóa mô hình (một mô hình): lỗi 429 theo từng mô hình, lỗi 404 cục bộ hoặc việc từ chối chế độ chỉ khóa mô hình đó — không bao giờ khóa toàn bộ kết nối. Các trạng thái cuối (bị cấm, hết hạn, cạn tín dụng) cần người vận hành xử lý, không phải thời gian chờ."/>
 
 <sub>📖 [Công cụ Auto-Combo](docs/routing/AUTO-COMBO.md) · [Hướng dẫn về khả năng phục hồi](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Tất cả **20** chiến lược — kết hợp tùy ý theo từng bước c�
 
 <div align="center">
 
-## 🏆 Điều gì làm nên sự khác biệt của OmniRoute
+## 🏆 Điều gì làm nên sự khác biệt của 67router
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Điều làm nên sự khác biệt của OmniRoute — bản tổng hợp tính năng tại một thời điểm so với 9router, OpenRouter, CLIProxyAPI và LiteLLM trên 13 năng lực. OmniRoute: 375 nhà cung cấp, tích hợp sẵn hơn 150 gói miễn phí, 20 chiến lược định tuyến, nén token bằng 12 công cụ, máy chủ MCP tích hợp với 110 công cụ, giao thức tác nhân A2A, bộ nhớ liên tục, các biện pháp bảo vệ, tác nhân đám mây, ẩn danh vân tay TLS, Desktop/Termux/PWA và giao diện hỗ trợ 67 ngôn ngữ i18n. OmniRoute được cấp phép theo MIT và có thể tự lưu trữ. Các năng lực và số liệu của đối thủ có thể thay đổi; hãy xem phương pháp luận được liên kết."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Điều làm nên sự khác biệt của 67router — bản tổng hợp tính năng tại một thời điểm so với 9router, OpenRouter, CLIProxyAPI và LiteLLM trên 13 năng lực. 67router: 375 nhà cung cấp, tích hợp sẵn hơn 150 gói miễn phí, 20 chiến lược định tuyến, nén token bằng 12 công cụ, máy chủ MCP tích hợp với 110 công cụ, giao thức tác nhân A2A, bộ nhớ liên tục, các biện pháp bảo vệ, tác nhân đám mây, ẩn danh vân tay TLS, Desktop/Termux/PWA và giao diện hỗ trợ 67 ngôn ngữ i18n. 67router được cấp phép theo MIT và có thể tự lưu trữ. Các năng lực và số liệu của đối thủ có thể thay đổi; hãy xem phương pháp luận được liên kết."/>
 
 <sub>📊 Phương pháp luận đầy đủ &amp; chi tiết theo từng tính năng so với 9router, OpenRouter, CLIProxyAPI &amp; LiteLLM → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Hỗ trợ OmniRoute
+## 💚 Hỗ trợ 67router
 
-OmniRoute được cấp phép theo MIT và được duy trì công khai. Nếu dự án giúp bạn tiết kiệm thời gian hoặc tiền bạc, đây là cách để giúp dự án duy trì tính độc lập — hãy chọn phương thức phù hợp với bạn. Việc tài trợ không bao giờ ảnh hưởng đến mức độ ưu tiên định tuyến; nó mang lại khả năng hiển thị, không phải thứ hạng.
+67router được cấp phép theo MIT và được duy trì công khai. Nếu dự án giúp bạn tiết kiệm thời gian hoặc tiền bạc, đây là cách để giúp dự án duy trì tính độc lập — hãy chọn phương thức phù hợp với bạn. Việc tài trợ không bao giờ ảnh hưởng đến mức độ ưu tiên định tuyến; nó mang lại khả năng hiển thị, không phải thứ hạng.
 
 <table>
-  <tr><td nowrap>⭐ <b>Gắn sao cho kho mã nguồn</b></td><td>Miễn phí — thực sự giúp tăng khả năng hiển thị</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Gắn sao cho OmniRoute</a></td></tr>
+  <tr><td nowrap>⭐ <b>Gắn sao cho kho mã nguồn</b></td><td>Miễn phí — thực sự giúp tăng khả năng hiển thị</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Gắn sao cho 67router</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Một lần hoặc hằng tháng · không mất phí nền tảng</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Ủng hộ nhanh một lần, người ủng hộ không cần đăng ký</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Một cử chỉ nhỏ, không trang trọng</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute được cấp phép theo MIT và được duy trì công khai. Nếu 
 
 **🇧🇷 PIX** — tức thì, không mất phí (Brazil)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Mã QR PIX của OmniRoute"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="Mã QR PIX của 67router"/>
 
 Khóa (ngẫu nhiên): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ Pix sao chép và dán:
 
 <p><strong>Ghi chú dành cho nhà phát triển:</strong> Dự án có thể tạo tệp <code>.env</code> cục bộ trong quá trình npm install/postinstall để thuận tiện cho nhà phát triển. Tệp này được chủ ý bỏ qua thông qua <code>.gitignore</code> (xem <code>.gitignore</code>) và tuyệt đối không được commit — nếu vô tình commit, hãy thay đổi mọi thông tin bí mật đã bị lộ và xóa tệp khỏi lịch sử. Xem <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> để biết hướng dẫn về cách quản lý các tệp môi trường cục bộ và thông tin bí mật.</p>
 
-## 📡 OmniRoute Radar
+## 📡 67router Radar
 
-Tiêu điểm chính của gói miễn phí vẫn là **~1.62B token/tháng** từ danh mục đã được lập tài liệu và loại bỏ trùng lặp theo nhóm ở trên. Khoản tín dụng đăng ký tạm thời của nhà cung cấp có thể giúp riêng tháng đầu tiên tăng lên **~2.22B**. Radar là một lớp phủ danh mục tùy chọn, có chữ ký, dành cho những người muốn cập nhật nhanh hơn về tình trạng sẵn có của các mô hình miễn phí giữa các bản phát hành OmniRoute; danh mục cộng đồng và mọi tính năng miễn phí hiện có vẫn hoàn toàn miễn phí.
+Tiêu điểm chính của gói miễn phí vẫn là **~1.62B token/tháng** từ danh mục đã được lập tài liệu và loại bỏ trùng lặp theo nhóm ở trên. Khoản tín dụng đăng ký tạm thời của nhà cung cấp có thể giúp riêng tháng đầu tiên tăng lên **~2.22B**. Radar là một lớp phủ danh mục tùy chọn, có chữ ký, dành cho những người muốn cập nhật nhanh hơn về tình trạng sẵn có của các mô hình miễn phí giữa các bản phát hành 67router; danh mục cộng đồng và mọi tính năng miễn phí hiện có vẫn hoàn toàn miễn phí.
 
 Những người ủng hộ có thể nhận danh mục trực tiếp và các cơ hội bổ sung từ nhà cung cấp. Mức trần riêng, có thể thay đổi của danh mục này là **tối đa khoảng 3B token/tháng**, tùy thuộc vào tình trạng sẵn có của nhà cung cấp. Mức trần đó không phải là sự bảo đảm: nhà cung cấp có thể thay đổi hạn ngạch, điều kiện đủ tư cách, mô hình hoặc khu vực bất cứ lúc nào.
 
-Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. Ứng dụng khách OmniRoute không tải lên prompt, lưu lượng truy cập, cấu hình nhà cung cấp, dữ liệu đo từ xa về mức sử dụng hoặc trạng thái cục bộ về việc bỏ qua thông báo. Tìm hiểu về điều kiện đủ tư cách và danh mục hiện tại tại **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. Ứng dụng khách 67router không tải lên prompt, lưu lượng truy cập, cấu hình nhà cung cấp, dữ liệu đo từ xa về mức sử dụng hoặc trạng thái cục bộ về việc bỏ qua thông báo. Tìm hiểu về điều kiện đủ tư cách và danh mục hiện tại tại **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -586,14 +588,13 @@ Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. �
 - **🔑 Điều khiển định tuyến theo từng key** — ghim một API key vào một mô hình hoặc combo bằng `forcedModel`, và thêm hoặc xóa mô hình và combo của một key một cách nguyên tử (`/api/keys/{id}/access`). → [Tham chiếu API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Kiểm soát PII tinh vi hơn** — lựa chọn theo từng loại, tối đa 20 mẫu che dữ liệu tùy chỉnh đã được xác thực và bộ đếm phát hiện theo từng loại; bản thân việc che dữ liệu vẫn là tùy chọn bật. → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 67 ngôn ngữ** — dashboard, bản sao tài liệu và CLI, với `npm run i18n:add-locale` thêm một ngôn ngữ ở mọi nơi chỉ bằng một lệnh. → [Hướng dẫn i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — ủy quyền A2A đến cho đội agent của bạn, các kỹ năng Conductor trên Agent Card và một bảng điều khiển dashboard với trò chuyện thoại nhấn-để-nói Faro. → [Máy chủ A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 Tiếp nhận thích ứng & bảo vệ quá tải** — các yêu cầu trò chuyện hạng nặng xếp hàng thay vì trả 503, với lease luân chuyển RPM nguyên tử theo từng kết nối. → [Hướng dẫn khả năng phục hồi](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Thứ tự chuẩn của `/v1/models`** — một khối liền mạch được nhóm theo provider cho mỗi provider (các combo được ghim trước), ổn định trên mọi nguồn catalog. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🗜️ Gia cố nén** — guard chống phình bật mặc định, gói Caveman cho DE / FR / JA + tiếng Trung (wényán), bộ lọc RTK cho Gradle & .NET. → [Nén](docs/compression/COMPRESSION_ENGINES.md)
 - **💸 Chi phí flat-rate trung thực** — các provider gói đăng ký / gói coding hiển thị **$0** trong phân tích chi phí; ngân sách, quota & định tuyến vẫn tiếp tục ước tính. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **⚖️ Định tuyến Quota-Share** — chia quota của tài khoản dùng chung một cách công bằng giữa các key trong pool, theo hướng tận dụng công suất nhờ đó các phần quota nhàn rỗi được cho mượn. → [Hướng dẫn khả năng phục hồi](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 Thiết lập CLI/agent bằng một lệnh** — 15 lệnh `setup-*` đã đăng ký; `omniroute run` khởi chạy 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` hỗ trợ 11 mục tiêu với bộ chọn provider+mô hình tương tác và mục yêu thích theo từng ngữ cảnh. → [Tích hợp CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Chế độ từ xa** — điều khiển OmniRoute từ xa bằng token có phạm vi (`connect` / `contexts` / `tokens`) + một helper OAuth `antigravity` cho cài đặt VPS. → [Chế độ từ xa](docs/guides/REMOTE-MODE.md)
+- **🛰️ Chế độ từ xa** — điều khiển 67router từ xa bằng token có phạm vi (`connect` / `contexts` / `tokens`) + một helper OAuth `antigravity` cho cài đặt VPS. → [Chế độ từ xa](docs/guides/REMOTE-MODE.md)
 - **🧭 Định tuyến tự động thông minh hơn** — combo `auto/<category>:<tier>`, **Fusion** (bảng mô hình + giám khảo), định tuyến nhận biết tác vụ, ghi đè mô hình / chế độ / ngân sách USD theo từng yêu cầu. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Nén cắm ghép được** — 12 engine có thể kết hợp + Compression Studios: LLMLingua-2, Ultra hai tầng, omniglyph, cổng độ trung thực theo từng bước, GCF v3.2, trình chỉnh sửa sắp xếp bằng kéo-thả. → [Nén](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Giải mã MITM minh bạch (TPROXY)** — bắt các CLI bỏ qua biến môi trường proxy, với CA theo từng SNI + trình cài đặt trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -603,7 +604,7 @@ Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. �
 - **🖼️ Endpoint mới** — `/v1/ocr` (Mistral OCR) và `/v1/audio/translations` (kiểu Whisper) hoàn thiện bề mặt media. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🎨 Tạo hình ảnh / video / âm thanh** — một API cho media: video xAI Grok Imagine & Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind và các provider giọng nói như ElevenLabs. → [Tham chiếu API](docs/reference/API_REFERENCE.md)
 - **🌍 Triển khai & vận hành** — `basePath` reverse-proxy, tự động phát hiện ngôn ngữ trình duyệt, theo dõi thiết bị theo từng key, tin cậy MITM không cần root, bản địa hóa zh-TW. → [Môi trường](docs/reference/ENVIRONMENT.md)
-- **🤝 Nhiều provider & agent hơn** — agent đám mây (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) với đăng nhập bằng trình duyệt + OAuth, card hạng nhất cho Ollama, Claude Opus 5 & Sonnet 5, quan hệ đối tác chính thức với Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… và **danh mục 375 provider** được làm mới. → [Provider](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Nhiều provider & agent hơn** — agent đám mây (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) với đăng nhập bằng trình duyệt + OAuth, card hạng nhất cho Ollama, Claude Opus 5 & Sonnet 5, quan hệ đối tác chính thức với Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… và **danh mục 372 provider** được làm mới. → [Provider](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Minh bạch định tuyến** — mọi phản hồi mang header `X-OmniRoute-Decision` nêu tên chiến lược/provider/độ trễ đã phục vụ nó, một chiến lược combo `cache-optimized` mới + yếu tố `cacheAffinity` của Auto-Combo định tuyến các yêu cầu lặp lại về kết nối đang giữ prefix đã cache, và endpoint chỉ đọc `/v1/auto-combo/{channel}/candidates` hiển thị pool ứng viên trực tiếp của kênh `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ Hiệu năng & hạ tầng cục bộ** — Redis cục bộ một cú nhấp, trình triển khai relay Cloudflare Workers / Deno Deploy, Bifrost & Mux dưới dạng dịch vụ nhúng được giám sát. → [Dịch vụ nhúng](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 Còn có trong gói** — khung plugin + marketplace, các khung kỹ năng Omni/Agent/GitHub, tích hợp Obsidian vault (22 công cụ MCP), API Batch & Files tương thích OpenAI, bộ nhớ đệm phản hồi ngữ nghĩa, trò chơi hóa với bảng xếp hạng, khám phá tác nhân ACP (15 tác nhân tích hợp sẵn), xuất log theo lịch lên BigQuery, `auto/chaos` fan-out song song đa mô hình, cầu nối bot Telegram, trình quản lý phiên bản trong ứng dụng và bảng xếp hạng nhà cung cấp miễn phí theo LMArena-ELO. → [Tài liệu](docs/README.md)
@@ -663,7 +664,7 @@ Radar hoạt động theo cơ chế chọn tham gia và chỉ sử dụng GET. �
 
 <br/>
 
-**Khởi chạy bất kỳ CLI nào được hỗ trợ thông qua OmniRoute chỉ bằng một lệnh** — không ghi tệp cấu hình,
+**Khởi chạy bất kỳ CLI nào được hỗ trợ thông qua 67router chỉ bằng một lệnh** — không ghi tệp cấu hình,
 thông tin xác thực được chèn riêng cho từng tiến trình, Qwen/Gemini sử dụng thư mục home cô lập dùng một lần:
 
 ```bash
@@ -756,7 +757,7 @@ không xuất hiện trong lịch sử shell của bạn. → [Tích hợp CLI](
 
 <div align="center">
 
-## 🖥️ OmniRoute Chạy Ở Đâu — Mọi Nơi
+## 🖥️ 67router Chạy Ở Đâu — Mọi Nơi
 
 </div>
 
@@ -772,7 +773,7 @@ không xuất hiện trong lịch sử shell của bạn. → [Tích hợp CLI](
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Chạy <b>trên điện thoại của bạn</b>, 24/7, không cần root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Thêm vào màn hình chính"</td><td align="left">Toàn màn hình, ngoại tuyến, có thể cài đặt từ trình duyệt</td></tr>
   <tr><td align="left" nowrap>🧩 <b>Plugin OpenCode</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Tích hợp OpenCode nguyên bản</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>cài đặt tiện ích mở rộng <b>OmniCopilot</b></td><td align="left">Mọi mô hình OmniRoute trong bộ chọn Copilot Chat nguyên bản — bản ổn định &amp; Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>cài đặt tiện ích mở rộng <b>OmniCopilot</b></td><td align="left">Mọi mô hình 67router trong bộ chọn Copilot Chat nguyên bản — bản ổn định &amp; Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Từ mã nguồn</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Tùy biến, đóng góp</td></tr>
 </table>
 
@@ -782,18 +783,18 @@ không xuất hiện trong lịch sử shell của bạn. → [Tích hợp CLI](
 
 <div align="center">
 
-### 🧩 Mới: OmniRoute bên trong Copilot Chat nguyên bản của VS Code
+### 🧩 Mới: 67router bên trong Copilot Chat nguyên bản của VS Code
 
 </div>
 
-> Không có thanh bên mới, không có giao diện trò chuyện mới — mọi mô hình do OmniRoute cung cấp đều xuất hiện ngay trong
+> Không có thanh bên mới, không có giao diện trò chuyện mới — mọi mô hình do 67router cung cấp đều xuất hiện ngay trong
 > **bộ chọn mô hình Copilot Chat mà bạn đã sử dụng**. Kể từ VS Code 1.122, các mô hình của nhà cung cấp hoạt động
 > mà không cần đăng nhập GitHub hoặc đăng ký Copilot — chế độ tác nhân, gọi công cụ và thị giác, hoàn toàn
 > miễn phí.
 
 Cài đặt tiện ích mở rộng **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, trỏ tiện ích
-đến máy chủ OmniRoute của bạn (mặc định là `localhost:20128`), sau đó mở Copilot Chat → bộ chọn mô hình
-→ **Quản lý mô hình…** → **OmniRoute**.
+đến máy chủ 67router của bạn (mặc định là `localhost:20128`), sau đó mở Copilot Chat → bộ chọn mô hình
+→ **Quản lý mô hình…** → **67router**.
 
 <table>
   <tr><th align="left">Cửa hàng</th><th align="left">Liên kết</th><th align="left">Hoạt động với</th></tr>
@@ -801,7 +802,7 @@ Cài đặt tiện ích mở rộng **[OmniCopilot](https://github.com/diegosouz
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Cài đặt →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Từ bên trong trình soạn thảo: mở chế độ xem **Tiện ích mở rộng**, tìm kiếm **"OmniRoute"**, nhấp vào **Cài đặt**
+Từ bên trong trình soạn thảo: mở chế độ xem **Tiện ích mở rộng**, tìm kiếm **"67router"**, nhấp vào **Cài đặt**
 — hoạt động theo cùng một cách trên cả hai cửa hàng. Mã nguồn, các vấn đề và tài liệu quy trình phát hành nằm tại
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +822,9 @@ Từ bên trong trình soạn thảo: mở chế độ xem **Tiện ích mở r�
 > cần để cửa sổ dòng lệnh mở, không cần trông chừng `npm install -g omniroute`.**
 
 Được xây dựng bằng [Tauri v2](https://v2.tauri.app/) (lõi Rust nhỏ đến mức có thể xem như sai số làm tròn), ứng dụng đi kèm
-môi trường chạy Node 24 đã được ký riêng và quản lý bản cài đặt OmniRoute thuộc sở hữu của ứng dụng, vì vậy không bao giờ xung đột với
+môi trường chạy Node 24 đã được ký riêng và quản lý bản cài đặt 67router thuộc sở hữu của ứng dụng, vì vậy không bao giờ xung đột với
 `node`/`bun` toàn cục của bạn. Ứng dụng **dùng chung cấu hình và cơ sở dữ liệu `~/.omniroute/` hiện có của bạn** — vì vậy đây vẫn là
-OmniRoute mà bạn đang chạy, chỉ là được đội thêm một chiếc mũ. 🎩
+67router mà bạn đang chạy, chỉ là được đội thêm một chiếc mũ. 🎩
 
 <table>
   <tr><th align="left">Chức năng</th><th align="left">Cách thức</th></tr>
@@ -841,7 +842,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Muốn tải xuống? Hãy lấy tệp <code>.dmg</code> mới nhất từ
 <a href="https://github.com/zoispag/omniroute-tray/releases">Bản phát hành</a>. Mã nguồn, các vấn đề và tài liệu
 hướng dẫn build có tại <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Một dự án cộng đồng của <a href="https://github.com/zoispag">@zoispag</a> — không phải là bản phát hành OmniRoute chính thức.</sub>
+<br/>💛 Một dự án cộng đồng của <a href="https://github.com/zoispag">@zoispag</a> — không phải là bản phát hành 67router chính thức.</sub>
 
 <br/>
 
@@ -851,7 +852,7 @@ hướng dẫn build có tại <a href="https://github.com/zoispag/omniroute-tra
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Riêng tư và ưu tiên cục bộ — cổng kết nối và mặt phẳng điều khiển của OmniRoute chạy trên máy của bạn. Prompt được gửi đến nhà cung cấp thượng nguồn được chọn cho từng yêu cầu; OmniRoute không thêm bất kỳ chặng xử lý prompt được lưu trữ nào và tính năng đo từ xa bị tắt theo mặc định. Thông tin xác thực được mã hóa khi lưu trữ bằng AES-256-GCM; các biện pháp kiểm soát bao gồm phân phạm vi khóa API, lọc IP, giới hạn tốc độ, cơ chế bảo vệ chống prompt injection, loại bỏ header thượng nguồn, biên tập PII theo cơ chế tùy chọn, lỗi đã được làm sạch và nhật ký kiểm tra SQLite cục bộ. OmniRoute được cấp phép theo MIT và có thể tự lưu trữ."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Riêng tư và ưu tiên cục bộ — cổng kết nối và mặt phẳng điều khiển của 67router chạy trên máy của bạn. Prompt được gửi đến nhà cung cấp thượng nguồn được chọn cho từng yêu cầu; 67router không thêm bất kỳ chặng xử lý prompt được lưu trữ nào và tính năng đo từ xa bị tắt theo mặc định. Thông tin xác thực được mã hóa khi lưu trữ bằng AES-256-GCM; các biện pháp kiểm soát bao gồm phân phạm vi khóa API, lọc IP, giới hạn tốc độ, cơ chế bảo vệ chống prompt injection, loại bỏ header thượng nguồn, biên tập PII theo cơ chế tùy chọn, lỗi đã được làm sạch và nhật ký kiểm tra SQLite cục bộ. 67router được cấp phép theo MIT và có thể tự lưu trữ."/>
 
 <sub>📖 [Ủy quyền](docs/architecture/AUTHZ_GUIDE.md) · [Cơ chế bảo vệ](docs/security/GUARDRAILS.md) · [Tuân thủ](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +864,7 @@ hướng dẫn build có tại <a href="https://github.com/zoispag/omniroute-tra
 
 </div>
 
-> Không chỉ là một máy chủ, OmniRoute còn là một **buồng điều khiển dòng lệnh đầy đủ** với **hơn 80 lệnh**, cùng các giao thức tác nhân mở để một tác nhân AI có thể **tự vận hành**.
+> Không chỉ là một máy chủ, 67router còn là một **buồng điều khiển dòng lệnh đầy đủ** với **hơn 80 lệnh**, cùng các giao thức tác nhân mở để một tác nhân AI có thể **tự vận hành**.
 
 ### ⌨️ Một CLI thực thụ (không chỉ có `start`)
 
@@ -874,9 +875,9 @@ omniroute setup         # trình hướng dẫn thiết lập cho lần chạy �
 omniroute doctor        # chẩn đoán nhà cung cấp, cổng, các phần phụ thuộc native
 ```
 
-### 🛰️ Chế độ từ xa — chạy CLI tại đây, OmniRoute trên VPS
+### 🛰️ Chế độ từ xa — chạy CLI tại đây, 67router trên VPS
 
-OmniRoute đang chạy trên máy chủ? Điều khiển nó từ laptop của bạn bằng **chính CLI đó**. Đăng nhập một lần
+67router đang chạy trên máy chủ? Điều khiển nó từ laptop của bạn bằng **chính CLI đó**. Đăng nhập một lần
 bằng token truy cập có phạm vi; sau đó mọi lệnh đều nhắm đến máy chủ từ xa.
 
 ```bash
@@ -892,31 +893,28 @@ Token có phạm vi `read` / `write` / `admin`; các route khởi tạo tiến t
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Bản minh họa terminal dạng động trình diễn OmniRoute CLI — omniroute providers list, omniroute combo list và omniroute health — luân phiên qua bề mặt cấp cao nhất gồm 89 lệnh: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Bản minh họa terminal dạng động trình diễn 67router CLI — omniroute providers list, omniroute combo list và omniroute health — luân phiên qua bề mặt cấp cao nhất gồm 89 lệnh: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Kết nối một tác nhân — và tác nhân đó sẽ tự điều khiển OmniRoute
+### 🤝 Kết nối một tác nhân — và tác nhân đó sẽ tự điều khiển 67router
 
-Cung cấp OmniRoute qua **MCP**, **A2A**, **REST API**, **webhook** hoặc **CLI từ xa** — bất kỳ tác nhân đủ năng lực nào (hoặc mã của riêng bạn) cũng có quyền điều khiển toàn bộ gateway: định tuyến, nhà cung cấp, combo, bộ nhớ đệm, nén, bộ nhớ — một cách tự động. Các endpoint HTTP bên dưới được phục vụ tại `http://localhost:20128`.
+Cung cấp 67router qua **MCP**, **A2A**, **REST API**, **webhook** hoặc **CLI từ xa** — bất kỳ tác nhân đủ năng lực nào (hoặc mã của riêng bạn) cũng có quyền điều khiển toàn bộ gateway: định tuyến, nhà cung cấp, combo, bộ nhớ đệm, nén, bộ nhớ — một cách tự động. Các endpoint HTTP bên dưới được phục vụ tại `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Giao diện</th><th align="left">Endpoint / lệnh</th><th align="left">Dùng để</th></tr>
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Tích hợp với Claude Desktop, Cursor hoặc bất kỳ máy khách MCP nào</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP từ xa — <b>110 công cụ</b>, 33 phạm vi (tùy chọn bật thực thi), nhật ký kiểm tra đầy đủ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Phương thức truyền tải MCP dạng streaming</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Tác nhân với tác nhân, <b>JSON-RPC 2.0</b> + SSE, 6 kỹ năng</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">Tương thích với OpenAI — chat, embedding, hình ảnh, âm thanh, OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhook</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Đẩy các sự kiện yêu cầu / hạn ngạch đến Slack, Discord, Telegram hoặc bất kỳ URL nào</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI từ xa</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Điều khiển một phiên bản từ xa bằng token truy cập có phạm vi</td></tr>
 </table>
 
 ```bash
-# Cung cấp cho Claude Code toàn bộ bộ công cụ OmniRoute qua MCP:
+# Cung cấp cho Claude Code toàn bộ bộ công cụ 67router qua MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [Máy chủ MCP](docs/frameworks/MCP-SERVER.md) · [Máy chủ A2A](docs/frameworks/A2A-SERVER.md) · [Giao thức tác nhân](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -928,7 +926,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Cách hoạt động — pipeline, kiến trúc & phép tính tiết kiệm
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline nén của OmniRoute: một yêu cầu minh họa 10.000 token từ client đi qua 12 engine có thể kết hợp — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra và OmniGlyph — và có thể đến nhà cung cấp ở khoảng 1.080 token trong ví dụ xếp chồng được ghi nhận. Nội dung có cấu trúc được bảo vệ bởi các guard bảo toàn và cổng độ trung thực từng bước; các chế độ mất mát hoặc thử nghiệm rõ ràng có thể biến đổi nội dung đủ điều kiện."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline nén của 67router: một yêu cầu minh họa 10.000 token từ client đi qua 12 engine có thể kết hợp — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra và OmniGlyph — và có thể đến nhà cung cấp ở khoảng 1.080 token trong ví dụ xếp chồng được ghi nhận. Nội dung có cấu trúc được bảo vệ bởi các guard bảo toàn và cổng độ trung thực từng bước; các chế độ mất mát hoặc thử nghiệm rõ ràng có thể biến đổi nội dung đủ điều kiện."/>
 
 Combo xếp chồng mặc định chạy `RTK → Caveman`. Khi cả hai cùng tác động lên một payload tool/context, mức tiết kiệm cộng dồn:
 
@@ -940,7 +938,7 @@ range    = 78.4 – 94.6%
 
 Code block, URL, JSON và dữ liệu có cấu trúc **luôn được bảo vệ** bởi engine bảo toàn.
 
-> **Vì sao phải dùng nhiều token khi chỉ vài token là đủ?** Mọi yêu cầu đều đi qua pipeline nén của OmniRoute **một cách trong suốt** — không cần thay đổi phía client. Nó giờ là **một chồng gồm 12 engine có thể kết hợp** chạy theo thứ tự và trộn lẫn tùy theo combo định tuyến — dựa trên ý tưởng từ [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), và [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Vì sao phải dùng nhiều token khi chỉ vài token là đủ?** Mọi yêu cầu đều đi qua pipeline nén của 67router **một cách trong suốt** — không cần thay đổi phía client. Nó giờ là **một chồng gồm 12 engine có thể kết hợp** chạy theo thứ tự và trộn lẫn tùy theo combo định tuyến — dựa trên ý tưởng từ [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), và [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 Chồng 12 engine
 
@@ -1025,7 +1023,7 @@ omniroute
 ```
 
 > 💡 Thấy `npm warn ERESOLVE` hoặc cảnh báo peer-dep? [Chúng vô hại](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Dùng npm 11 trở lên?** npm có thể chặn các lifecycle script của package trừ khi chúng được cho phép. `postinstall` của OmniRoute (`node scripts/build/postinstall.mjs`) là bắt buộc để chuẩn bị các file runtime gốc của nó. Hãy cho phép các package được nêu trong cảnh báo của npm khi cài đặt toàn cục. Với tập package được báo cáo bởi OmniRoute 3.8.53:
+> **Dùng npm 11 trở lên?** npm có thể chặn các lifecycle script của package trừ khi chúng được cho phép. `postinstall` của 67router (`node scripts/build/postinstall.mjs`) là bắt buộc để chuẩn bị các file runtime gốc của nó. Hãy cho phép các package được nêu trong cảnh báo của npm khi cài đặt toàn cục. Với tập package được báo cáo bởi 67router 3.8.53:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1061,9 +1059,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Bạn sẽ thấy các model đã kết nối được liệt kê. 🎉 Vậy là xong — bắt đầu code, OmniRoute sẽ tự động route & fallback cho bạn.
+Bạn sẽ thấy các model đã kết nối được liệt kê. 🎉 Vậy là xong — bắt đầu code, 67router sẽ tự động route & fallback cho bạn.
 
-Nếu client của bạn không thể gửi custom header, OmniRoute cũng cung cấp các alias tương thích dạng token:
+Nếu client của bạn không thể gửi custom header, 67router cũng cung cấp các alias tương thích dạng token:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1113,7 +1111,7 @@ Bảng đầy đủ: [Hướng dẫn Docker — RAM khi chạy](docs/guides/DOCK
 
 `bun install` tiêu chuẩn và cài đặt toàn cục (`bun install -g omniroute`) được hỗ trợ thông qua cơ chế phát hiện runtime Bun:
 
-- **`bun:sqlite` tích hợp sẵn**: OmniRoute sử dụng driver `bun:sqlite` tích hợp sẵn của Bun khi chạy trên Bun và chuyển sang `better-sqlite3` trên Node.js hoặc `sql.js` nếu cần.
+- **`bun:sqlite` tích hợp sẵn**: 67router sử dụng driver `bun:sqlite` tích hợp sẵn của Bun khi chạy trên Bun và chuyển sang `better-sqlite3` trên Node.js hoặc `sql.js` nếu cần.
 - **Tự động chọn trình đóng gói Webpack trong môi trường phát triển**: Chế độ phát triển (`bun run dev`) tự động phát hiện Bun và tắt Turbopack để chuyển sang Webpack, nhằm ngăn các vấn đề không tương thích với liên kết native V8. Các bản dựng production (`bun run build`) tuân theo `OMNIROUTE_USE_TURBOPACK` chính xác như trên Node: mặc định dùng Turbopack, đặt `OMNIROUTE_USE_TURBOPACK=0` để dựng bằng Webpack (`Dockerfile.bun` cung cấp biến này dưới dạng `--build-arg`).
 - **Dockerfile riêng cho Bun**: `Dockerfile.bun` nhiều giai đoạn dành cho các bản triển khai production Bun native (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1197,7 +1195,7 @@ tiến trình trên một cổng, vì vậy hiện chưa có package riêng ch�
 
 <div align="center">
 
-# 🎬 OmniRoute trong thực tế
+# 🎬 67router trong thực tế
 
 </div>
 
@@ -1261,7 +1259,7 @@ tiến trình trên một cổng, vì vậy hiện chưa có package riêng ch�
 
 Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 lượt xem đã biết** (`v > 0`) · **1.210 kênh/hồ sơ theo từng mạng**. Bảng điều khiển thô chứa 1.976 hàng (YouTube 1.352 = 740 video dài + 612 Shorts · TikTok 334 · Instagram 290); không còn bản trùng lặp nào sau khi chuẩn hóa theo URL chính tắc, trong đó giữ lại số lượt xem cao nhất cho mỗi video. Việc thu thập dữ liệu YouTube đã bị đóng băng từ 2026-10-13 (hạn ngạch API đã cạn từ 14 đến 18/10), còn TikTok/Instagram từ 2026-09-02 (không còn tín dụng thu thập dữ liệu); 76 video vẫn chưa có số lượt xem.
 
-> 🎬 **Bạn đã làm video về OmniRoute?** Hãy mở một [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) hoặc [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) kèm theo liên kết — chúng tôi sẽ giới thiệu video đó tại đây.
+> 🎬 **Bạn đã làm video về 67router?** Hãy mở một [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) hoặc [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) kèm theo liên kết — chúng tôi sẽ giới thiệu video đó tại đây.
 
 <br/>
 
@@ -1280,7 +1278,7 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
 | 🟢 **WhatsApp — 🌍 Toàn cầu**                     | [tham gia nhóm](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                                  |
 | 🟢 **WhatsApp — 🇧🇷 Brasil**                       | [tham gia nhóm](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                                  |
 | 🌍 **Trang web**                                  | [omniroute.online](https://omniroute.online)                                                                                      |
-| 🌍 **🌍Cộng đồng StHub OmniRoute (miễn phí)**     | [cổng thông tin StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                     |
+| 🌍 **🌍Cộng đồng StHub 67router (miễn phí)**      | [cổng thông tin StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                     |
 | 📦 **Mã nguồn**                                   | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                                    |
 | 🐛 **Báo cáo lỗi**                                | [mở một issue](https://github.com/diegosouzapw/OmniRoute/issues) — đính kèm đầu ra của `npm run system-info`                      |
 | 🤝 **Đóng góp**                                   | [CONTRIBUTING.md](CONTRIBUTING.md) · [Mô hình phân nhánh và phát hành](docs/ops/BRANCHING_MODEL.md) · chọn một `good first issue` |
@@ -1333,8 +1331,8 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Hướng dẫn người dùng</a></b></td><td>Nhà cung cấp, tổ hợp, tích hợp CLI, triển khai</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Hướng dẫn thiết lập</a></b></td><td>Các phương thức cài đặt đầy đủ, cấu hình công cụ CLI, thiết lập giao thức, tinh chỉnh thời gian chờ</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">Hướng dẫn công cụ CLI</a></b></td><td>Thiết lập riêng cho từng công cụ: Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Chế độ từ xa</a></b></td><td>Điều khiển OmniRoute từ xa (VPS) bằng CLI trên máy tính xách tay thông qua token truy cập có phạm vi</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Cấu hình Claude Code</a></b></td><td>Kết nối Claude Code với OmniRoute (cục bộ/từ xa) bằng <code>launch</code> cùng các hồ sơ riêng cho từng mô hình</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Chế độ từ xa</a></b></td><td>Điều khiển 67router từ xa (VPS) bằng CLI trên máy tính xách tay thông qua token truy cập có phạm vi</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Cấu hình Claude Code</a></b></td><td>Kết nối Claude Code với 67router (cục bộ/từ xa) bằng <code>launch</code> cùng các hồ sơ riêng cho từng mô hình</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Bắt đầu nhanh</a></b></td><td>3 bước: cài đặt → kết nối → cấu hình</td></tr>
 </table>
 
@@ -1346,7 +1344,7 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
   <tr><td nowrap><b><a href="contrib/podman/README.md">Hướng dẫn Podman</a></b></td><td>Tích hợp Quadlet systemd, podman-compose, SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Triển khai VM</a></b></td><td>Hướng dẫn đầy đủ: thiết lập VM + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Triển khai Fly.io</a></b></td><td>Triển khai lên Fly.io với bộ nhớ lưu trữ bền vững</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Hướng dẫn Termux</a></b></td><td>Chạy OmniRoute trên Android thông qua Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Hướng dẫn Termux</a></b></td><td>Chạy 67router trên Android thông qua Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">Hướng dẫn PWA</a></b></td><td>Cài đặt Progressive Web App, bộ nhớ đệm, kiến trúc</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Hướng dẫn gỡ cài đặt</a></b></td><td>Gỡ bỏ sạch sẽ cho mọi phương thức cài đặt</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Cấu hình môi trường</a></b></td><td>Toàn bộ biến <code>.env</code> và tài liệu tham khảo</td></tr>
@@ -1379,7 +1377,6 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">Máy chủ MCP</a></b></td><td>110 công cụ MCP, cấu hình IDE, client Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">Hướng dẫn máy chủ MCP</a></b></td><td>Cài đặt MCP, phương thức truyền tải và tài liệu tham khảo công cụ</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">Máy chủ A2A</a></b></td><td>Giao thức JSON-RPC 2.0, kỹ năng, truyền phát, quản lý tác vụ</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">Hướng dẫn máy chủ A2A</a></b></td><td>Thẻ tác nhân A2A, tác vụ, kỹ năng và truyền phát</td></tr>
 </table>
 
 ### 📋 Dự án & Chất lượng
@@ -1401,7 +1398,7 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
 
 # ⭐ Những người đóng góp hàng đầu
 
-> OmniRoute được định hình bởi một cộng đồng mã nguồn mở đầy nhiệt huyết. Những cá nhân này đã có các đóng góp nổi bật, tác động trực tiếp đến chất lượng, độ ổn định và phạm vi tiếp cận của dự án. **Xin cảm ơn.**
+> 67router được định hình bởi một cộng đồng mã nguồn mở đầy nhiệt huyết. Những cá nhân này đã có các đóng góp nổi bật, tác động trực tiếp đến chất lượng, độ ổn định và phạm vi tiếp cận của dự án. **Xin cảm ơn.**
 
 ### Những người đóng góp bên ngoài theo số pull request đã hợp nhất
 
@@ -1519,7 +1516,7 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
 
 <sub>Được kiểm tra lại vào 2026-10-18 14:44:45 UTC: số commit được GitHub ghi nhận do API Contributors của kho lưu trữ báo cáo cho nhánh mặc định <code>release/v3.8.52</code>. API trả về 849 danh tính (429 người dùng, 2 bot, 418 danh tính ẩn danh); bảng này loại trừ người bảo trì, bot và các danh tính ẩn danh, đồng thời giữ nguyên các trường hợp đồng hạng. Bảng này khác với cả bảng xếp hạng PR đã hợp nhất ở trên và thống kê siêu dữ liệu Git ở dưới.</sub>
 
-> 🙏 Các tính năng, bản sửa lỗi và cải tiến cơ sở hạ tầng của những người đóng góp này là một **phần cốt lõi** giúp OmniRoute trở nên đáng tin cậy và giàu tính năng. Mọi pull request, mọi trường hợp kiểm thử và mọi tệp bản dịch i18n đều quan trọng. Mã nguồn mở được xây dựng bởi những người như họ.
+> 🙏 Các tính năng, bản sửa lỗi và cải tiến cơ sở hạ tầng của những người đóng góp này là một **phần cốt lõi** giúp 67router trở nên đáng tin cậy và giàu tính năng. Mọi pull request, mọi trường hợp kiểm thử và mọi tệp bản dịch i18n đều quan trọng. Mã nguồn mở được xây dựng bởi những người như họ.
 
 </div>
 
@@ -1531,7 +1528,7 @@ Số liệu chuẩn vào 2026-10-18: **1.976 video duy nhất** · **20.220.289 
 
 <div align="center">
 
-Xin chân thành cảm ơn những người đã tự bỏ tiền túi tài trợ cho OmniRoute — mỗi khoản đóng góp đều giúp dự án luôn miễn phí, độc lập và tiếp tục phát triển.
+Xin chân thành cảm ơn những người đã tự bỏ tiền túi tài trợ cho 67router — mỗi khoản đóng góp đều giúp dự án luôn miễn phí, độc lập và tiếp tục phát triển.
 
 <table>
   <tr>
@@ -1621,7 +1618,7 @@ Xin chân thành cảm ơn những người đã tự bỏ tiền túi tài tr�
 
 <sub>Các nhà tài trợ công khai trên GitHub đã được xác thực lại vào ngày 2026-10-18 thông qua GitHub Sponsors GraphQL API: 11 khoản tài trợ công khai (6 đang hoạt động, 5 trước đây) trong tổng số 14 khoản. Trạng thái <code>isActive</code> của GitHub xác định các nhãn đang hoạt động ở trên; những người ủng hộ công khai một lần trước đây vẫn được tri ân, còn các nhà tài trợ riêng tư vẫn được ẩn danh. Các khoản quyên góp qua Ko-fi, Buy Me a Coffee, Liberapay, PIX và tiền mã hóa không được liệt kê vì không có hồ sơ nhà tài trợ công khai.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Trở thành nhà tài trợ →</a></b> — mỗi đô la đều giúp OmniRoute luôn miễn phí và độc lập.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Trở thành nhà tài trợ →</a></b> — mỗi đô la đều giúp 67router luôn miễn phí và độc lập.
 
 </div>
 
@@ -1693,14 +1690,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute được xây dựng trên nền tảng của những dự án tiên phong. Dự án khởi đầu dưới dạng một bản fork của **[9router](https://github.com/decolua/9router)** và một bản chuyển đổi sang TypeScript của dự án Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — và kể từ đó, mỗi hệ thống con bên dưới đều được truyền cảm hứng từ một dự án mã nguồn mở đi trước. Mỗi dự án đều góp phần định hình một thành phần cụ thể của OmniRoute. Đây là lời cảm ơn của chúng tôi dành cho tất cả các dự án ấy. 🙏
+67router được xây dựng trên nền tảng của những dự án tiên phong. Dự án khởi đầu dưới dạng một bản fork của **[9router](https://github.com/decolua/9router)** và một bản chuyển đổi sang TypeScript của dự án Go **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — và kể từ đó, mỗi hệ thống con bên dưới đều được truyền cảm hứng từ một dự án mã nguồn mở đi trước. Mỗi dự án đều góp phần định hình một thành phần cụ thể của 67router. Đây là lời cảm ơn của chúng tôi dành cho tất cả các dự án ấy. 🙏
 
 > ⭐ số lượt sao được xác minh qua REST API của GitHub vào ngày 18 tháng 10 năm 2026 — hãy tặng các dự án này một ngôi sao. Các con số là ảnh chụp nhanh chính xác tại thời điểm nêu trên và đương nhiên sẽ thay đổi theo thời gian.
 
 ### 🧬 Nguồn gốc & gateway
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Cách dự án truyền cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Cách dự án truyền cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Dự án gốc làm nền tảng cho bản fork này — được mở rộng tại đây với các API đa phương thức và được viết lại hoàn toàn bằng TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>Phần triển khai bằng Go đã truyền cảm hứng cho bản chuyển đổi sang JavaScript / TypeScript này.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>Gateway AI có tập dữ liệu giá công khai được dùng để đồng bộ tính năng theo dõi chi phí của chúng tôi, đồng thời mô hình chuẩn hóa nhà cung cấp của dự án đã định hướng cơ chế định tuyến của chúng tôi.</td></tr>
@@ -1708,19 +1705,19 @@ OmniRoute được xây dựng trên nền tảng của những dự án tiên p
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Các mẫu thiết kế được chuyển sang tính năng khôi phục luồng, bí danh không suy luận, tìm kiếm web dự phòng, giới hạn cửa sổ trượt, biên tập nhật ký và các luồng khởi chạy được tăng cường bảo mật.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Các mẫu lựa chọn công cụ, ràng buộc đầu ra và cam kết công cụ của Cursor Composer được điều chỉnh để tích hợp vào trình thực thi Cursor gốc.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Các mẫu đăng nhập mới và luân chuyển refresh-token được chuyển sang cơ chế xác thực lại Codex OAuth.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Các giá trị mặc định về chuyển đổi tương thích với Claude Code và hành vi của tiêu đề thanh toán được khái quát hóa vào cầu nối dựa trên cấu hình của OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Các ánh xạ mô hình Grok, trình tạo Statsig với TypeError giả, các giá trị mặc định cho yêu cầu và thiết bị, cùng trình xử lý phản hồi NDJSON của dự án đã được điều chỉnh đáng kể để tích hợp vào trình thực thi Grok Web của OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Các giá trị mặc định về chuyển đổi tương thích với Claude Code và hành vi của tiêu đề thanh toán được khái quát hóa vào cầu nối dựa trên cấu hình của 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Các ánh xạ mô hình Grok, trình tạo Statsig với TypeError giả, các giá trị mặc định cho yêu cầu và thiết bị, cùng trình xử lý phản hồi NDJSON của dự án đã được điều chỉnh đáng kể để tích hợp vào trình thực thi Grok Web của 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>Nguồn mã bắc cầu chính đứng sau grok2api-merged; các phần triển khai mô hình, tiêu đề, payload, Statsig và bộ xử lý của dự án được bảo tồn trong nguồn gốc của Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>Nguồn MIT nền tảng cho payload Grok và các giá trị mặc định của thiết bị, trình tạo Statsig và bộ xử lý <code>result.response</code> được kế thừa thông qua TQZHR và grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Một nguồn bắc cầu được grok2api-merged ghi công cho lớp nhóm proxy; OmniRoute duy trì thông báo về nguồn gốc đó nhưng không tuyên bố đã chuyển đổi nhóm proxy vào trình thực thi Grok Web có phạm vi giới hạn của mình.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Proxy Grok được xác thực bằng cookie và mẫu truyền phát trực tuyến <code>result.response.token</code> của dự án đã định hướng lớp truyền tải Grok Web của OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Một nguồn bắc cầu được grok2api-merged ghi công cho lớp nhóm proxy; 67router duy trì thông báo về nguồn gốc đó nhưng không tuyên bố đã chuyển đổi nhóm proxy vào trình thực thi Grok Web có phạm vi giới hạn của mình.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Proxy Grok được xác thực bằng cookie và mẫu truyền phát trực tuyến <code>result.response.token</code> của dự án đã định hướng lớp truyền tải Grok Web của 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Phần triển khai Grok Web ban đầu đã tham khảo thiết kế upstream HTTP/trình duyệt của dự án; đường dẫn HTTP trực tiếp của nó bắt nguồn từ GrokProxy, vì vậy không tuyên bố có bất kỳ bản chuyển đổi mã độc lập nào.</td></tr>
 </table>
 
 ### 🗜️ Nén ngữ cảnh & token — các engine
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Cách dự án truyền cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Cách dự án truyền cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Dự án lan truyền mạnh với câu "tại sao dùng nhiều token khi ít token cũng làm được" — triết lý nói kiểu người tiền sử của dự án là nền tảng cho chế độ nén tiêu chuẩn và hơn 30 quy tắc loại bỏ từ thừa/rút gọn của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Nén đầu ra lệnh hiệu năng cao — truyền cảm hứng cho công cụ RTK, DSL bộ lọc JSON, khả năng khôi phục đầu ra thô và quy trình xếp chồng RTK → Caveman của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Nén ngữ cảnh có thể đảo ngược (SmartCrusher) — truyền cảm hứng cho công cụ <code>headroom</code> và mẫu dấu truy xuất <code>ccr</code> của chúng tôi.</td></tr>
@@ -1728,15 +1725,15 @@ OmniRoute được xây dựng trên nền tảng của những dự án tiên p
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>Bản chuyển đổi JS/ONNX (MobileBERT / XLM-RoBERTa) được dùng làm backend luồng worker cho công cụ LLMLingua của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>Nén token PT-BR — là nền tảng cho gói ngôn ngữ pt-BR của chúng tôi: giảm trùng ý và loại bỏ từ thừa được tinh chỉnh cho ngữ pháp tiếng Bồ Đào Nha Brazil.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>Kỹ năng lập trình YAGNI "lập trình viên cấp cao lười biếng" từng lan truyền mạnh — truyền cảm hứng cho Kiểu đầu ra <b>less-code</b> của chúng tôi: định hướng thay đổi nhỏ nhất nhưng vẫn hoạt động, giúp giảm lượng mã _được tạo ra_ (đối trọng trên trục đầu ra với văn phong súc tích của Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Phong cách phản hồi ưu tiên hành động, thân thiện với người mắc ADHD của dự án đã được điều chỉnh thành kiểu đầu ra súc tích của OmniRoute trên năm ngôn ngữ.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Phong cách phản hồi ưu tiên hành động, thân thiện với người mắc ADHD của dự án đã được điều chỉnh thành kiểu đầu ra súc tích của 67router trên năm ngôn ngữ.</td></tr>
 </table>
 
 ### 🧩 Định dạng nhỏ gọn, nghiên cứu token & công cụ nhận biết mã
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Cách dự án truyền cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Cách dự án truyền cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Ký pháp đối tượng hướng token — mô hình dạng cột với tiêu đề và các hàng của dự án đã định hình giai đoạn thu gọn dữ liệu dạng bảng của chúng tôi.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Định dạng đồ thị nhỏ gọn và thiết kế hồ sơ chung của dự án đã cung cấp cơ sở cho tính năng thu gọn dạng bảng và định dạng codec Headroom của OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Định dạng đồ thị nhỏ gọn và thiết kế hồ sơ chung của dự án đã cung cấp cơ sở cho tính năng thu gọn dạng bảng và định dạng codec Headroom của 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>Bản triển khai TypeScript theo giấy phép MIT được tích hợp trực tiếp và mở rộng thành codec hồ sơ chung Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Bộ nhớ đệm Brotli/SQLite + chênh lệch ngữ cảnh theo từng phiên — truyền cảm hứng cho công cụ <code>session-dedup</code> của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Thu gọn đầu ra Bash + các hồ sơ MCP — truyền cảm hứng cho nguyên tắc dừng nén đúng lúc và việc rút gọn bản kê khai công cụ MCP của chúng tôi.</td></tr>
@@ -1753,7 +1750,7 @@ OmniRoute được xây dựng trên nền tảng của những dự án tiên p
 ### 🧠 Bộ nhớ & RAG
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Lớp bộ nhớ phổ quát — mô hình proxy đóng vai trò ranh giới ghi/đọc của dự án này đã định hình kiến trúc bộ nhớ của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Các tác nhân có trạng thái với bộ nhớ phân tầng — truyền cảm hứng cho mô hình Context Control & Recovery (CCR) phân tầng của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>Hệ thống phân loại ProblemMap gồm 16 chế độ lỗi RAG/LLM thường gặp — bộ thuật ngữ chung trong hướng dẫn khắc phục sự cố của chúng tôi.</td></tr>
@@ -1762,15 +1759,15 @@ OmniRoute được xây dựng trên nền tảng của những dự án tiên p
 ### 🛰️ Kiểm tra lưu lượng, MITM & proxy trong suốt
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Việc chặn/phân tích MITM đối với lưu lượng giữa trợ lý lập trình ↔ LLM đã định hình các yêu cầu ban đầu của Traffic Inspector. Bốn mô-đun được kế thừa trước đây — hợp nhất SSE, chuẩn hóa hội thoại, che giấu thông tin bí mật và làm sạch header — đã được thay thế bằng các bản triển khai clean-room độc lập dựa trên các tiêu chuẩn giao thức công khai. Hai bề mặt chuyển tiếp nguyên trạng đến máy chủ (<code>passthrough.ts</code> và <code>_internal/bypass.cjs</code>) vẫn là các bản triển khai nội bộ của OmniRoute được phân loại độc lập; chúng không được viết lại trong quá trình thay thế đó.</td></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho 67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Việc chặn/phân tích MITM đối với lưu lượng giữa trợ lý lập trình ↔ LLM đã định hình các yêu cầu ban đầu của Traffic Inspector. Bốn mô-đun được kế thừa trước đây — hợp nhất SSE, chuẩn hóa hội thoại, che giấu thông tin bí mật và làm sạch header — đã được thay thế bằng các bản triển khai clean-room độc lập dựa trên các tiêu chuẩn giao thức công khai. Hai bề mặt chuyển tiếp nguyên trạng đến máy chủ (<code>passthrough.ts</code> và <code>_internal/bypass.cjs</code>) vẫn là các bản triển khai nội bộ của 67router được phân loại độc lập; chúng không được viết lại trong quá trình thay thế đó.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Định tuyến proxy trong suốt theo từng tiến trình — truyền cảm hứng cho cơ chế tháo dỡ MITM an toàn khi gặp sự cố, thời gian chờ khi socket không hoạt động, quy kết tiến trình qua <code>/proc</code> và thu giữ lưu lượng bằng TPROXY của chúng tôi.</td></tr>
 </table>
 
 ### 📚 Dữ liệu mô hình, khả năng quan sát & giao diện người dùng
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Cơ sở dữ liệu mở về thông số kỹ thuật, giá cả và khả năng của các mô hình AI — được đồng bộ nguyên bản vào danh mục mô hình của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>Thư viện đồ thị dựa trên nút, vận hành Compression Studio và Combo/Routing Studio theo thời gian thực của chúng tôi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>Khả năng trực quan hóa đồ thị luồng công việc trực tiếp của LangGraph Studio đã truyền cảm hứng cho chế độ xem chuỗi chuyển tiếp theo thời gian thực trong các Studio của chúng tôi.</td></tr>
@@ -1783,19 +1780,19 @@ OmniRoute được xây dựng trên nền tảng của những dự án tiên p
 ### 🛡️ Bảo mật
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Danh sách tuyển chọn các thư viện an toàn theo mặc định, định hướng cho những lựa chọn bảo mật của chúng tôi (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Công cụ bổ trợ
 
 <table>
-  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho OmniRoute</th></tr>
+  <tr><th align="left">Dự án</th><th align="center">⭐</th><th align="left">Nguồn cảm hứng cho 67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Truyền cảm hứng cho việc loại bỏ yêu cầu trùng lặp, phương án dự phòng khẩn cấp không tốn chi phí, các chiến lược Auto-Combo có thể cắm ghép và khả năng phân loại ý định đa ngôn ngữ.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Khả năng ánh xạ lại mô hình theo tài khoản, xác thực đường dẫn tệp thực thi và cách xử lý nhãn gói của dự án này đã định hình runtime Antigravity của OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Định dạng đếm ngược nhỏ gọn đến thời điểm đặt lại hạn ngạch của dự án này đã truyền cảm hứng cho phần hiển thị giới hạn nhà cung cấp tương ứng trong OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Các tích hợp ACP của dự án này đã truyền cảm hứng cho khả năng tự động phát hiện các tác nhân CLI đã cài đặt của OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Đã xác định bề mặt hạn ngạch Grok Build; sau đó OmniRoute đã xác minh và hiệu chỉnh độc lập định dạng dữ liệu truyền trực tiếp.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Khả năng ánh xạ lại mô hình theo tài khoản, xác thực đường dẫn tệp thực thi và cách xử lý nhãn gói của dự án này đã định hình runtime Antigravity của 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Định dạng đếm ngược nhỏ gọn đến thời điểm đặt lại hạn ngạch của dự án này đã truyền cảm hứng cho phần hiển thị giới hạn nhà cung cấp tương ứng trong 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Các tích hợp ACP của dự án này đã truyền cảm hứng cho khả năng tự động phát hiện các tác nhân CLI đã cài đặt của 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Đã xác định bề mặt hạn ngạch Grok Build; sau đó 67router đã xác minh và hiệu chỉnh độc lập định dạng dữ liệu truyền trực tiếp.</td></tr>
 </table>
 
 ## 📄 Giấy phép
@@ -1808,7 +1805,7 @@ Giấy phép MIT - xem [LICENSE](LICENSE) để biết chi tiết.
 
 **[⬆ Về đầu trang](#-omniroute)** · Được xây dựng với ❤️ cho cộng đồng AI mã nguồn mở.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Giấy phép MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · Giấy phép MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions được bật để cộng đồng hỏi đáp -->

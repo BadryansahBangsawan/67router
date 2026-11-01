@@ -15,7 +15,7 @@
 - [Yerel uygulamalar için OAuth 2.0 (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — Yüklü uygulamalara ait OAuth client_id / client_secret değerleri herkese açıktır; gerçek güvenliği PKCE sağlar.
 - [Firebase API anahtarları](https://firebase.google.com/docs/projects/api-keys) — Web istemcisi tanımlayıcıları tasarım gereği herkese açıktır.
 
-OmniRoute, `.env` yapılandırmayan kullanıcıların da kullanıma hazır, çalışan bir OAuth akışına sahip olabilmesi için bu değerleri gömmelidir. Gömülü bir geri dönüş değeri olmadan Gemini / Antigravity sağlayıcıları, "yalnızca klonla ve çalıştır" yolunu izleyen tüm kullanıcılar için çalışmayı durdurur.
+67router, `.env` yapılandırmayan kullanıcıların da kullanıma hazır, çalışan bir OAuth akışına sahip olabilmesi için bu değerleri gömmelidir. Gömülü bir geri dönüş değeri olmadan Gemini / Antigravity sağlayıcıları, "yalnızca klonla ve çalıştır" yolunu izleyen tüm kullanıcılar için çalışmayı durdurur.
 
 Ancak `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` gibi değişmez değerler **GitHub Secret Scanning**, **Semgrep** ve benzer örüntü tarayıcıları tarafından eşleştirilir. Her sürüm, gürültülü bir yanlış pozitif akışına dönüşür; push koruması meşru commit'leri engeller ve operatörler uyarı akışına güvenmemeye başlar.
 

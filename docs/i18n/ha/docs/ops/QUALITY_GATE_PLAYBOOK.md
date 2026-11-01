@@ -4,7 +4,7 @@
 
 ---
 
-> **Abin da wannan takarda take ƙunshe da shi.** Tantancewa mai zurfi kan tsarin ƙofofin inganci na OmniRoute,
+> **Abin da wannan takarda take ƙunshe da shi.** Tantancewa mai zurfi kan tsarin ƙofofin inganci na 67router,
 > tare da kwatanta shi da mafi kyawun ayyukan masana'antu, **da kuma** cikakken kundin dukkan
 > wuraren binciken inganci da **shirin maimaitawa wanda bai dogara da wani takamaiman kayan aiki ba** domin amfani da wannan tsarin a
 > kowane aiki. An samar da shi a ranar 2026-06-16 daga ainihin halin ma'ajiyar lamba (ba daga ƙwaƙwalwa ba).
@@ -109,62 +109,62 @@ domin aiwatar da irinsa a kowane stack.
 
 ### 1. Salo da tsara rubutu (mai sakamako tabbatacce, mai sauri)
 
-- **OmniRoute:** Prettier + ESLint ta hanyar lint-staged (pre-commit), sarari-2/alamomin zance biyu/100col.
+- **67router:** Prettier + ESLint ta hanyar lint-staged (pre-commit), sarari-2/alamomin zance biyu/100col.
 - **Gaba ɗaya:** formatter guda ɗaya mai iya gyara ta atomatik + linter guda ɗaya, suna gudana a pre-commit kan fayilolin da aka yi staged.
 
 ### 2. Nau'uka
 
-- **OmniRoute:** `typecheck:core` (mai toshewa) + `typecheck:noimplicit:core` (na shawarwari) + ratchet na `type-coverage` 92.17% + kasafin any na kowane fayil.
+- **67router:** `typecheck:core` (mai toshewa) + `typecheck:noimplicit:core` (na shawarwari) + ratchet na `type-coverage` 92.17% + kasafin any na kowane fayil.
 - **Gaba ɗaya:** tsauraran typecheck a CI + ma'aunin type-coverage mai ratchet + kasafin `any`/hanyar-tserewa na kowane fayil.
 
 ### 3. Gwaje-gwaje (tsanani)
 
-- **OmniRoute:** runners 2 marasa cin karo (Node native + vitest), shards 8, ɗaukar gwaji na gaba ɗaya 60/60/60/60 + ratchet ~76% + **ƙananan iyakoki 8 na kowane module ga muhimman modules** + gwaje-gwajen property na dare + **mutation testing** na dare.
+- **67router:** runners 2 marasa cin karo (Node native + vitest), shards 8, ɗaukar gwaji na gaba ɗaya 60/60/60/60 + ratchet ~76% + **ƙananan iyakoki 8 na kowane module ga muhimman modules** + gwaje-gwajen property na dare + **mutation testing** na dare.
 - **Gaba ɗaya:** test runner(s) + **cikakkiyar** ƙaramar iyakar ɗaukar gwaji (hana-sifili) + **ratchet** na ɗaukar gwaji (hana-koma-baya) + **ƙananan iyakoki na kowane module ga lambar mai haɗari sosai** (hana-Goodhart) + gwaje-gwaje masu dogaro da property don tsantsar dabaru + **mutation testing** na dare a matsayin ainihin ma'aunin ingancin gwaji.
 
 ### 4. Manufar gwaji (hana-yaudara)
 
-- **OmniRoute:** `pr-test-policy` (lambar prod tana buƙatar gwaji), `check-test-masking` (yana toshe asserts da aka raunana), `pr-evidence` (da'awar nasara tana buƙatar evidence block), `test-discovery` (kowane gwaji runner ne yake tattara shi).
+- **67router:** `pr-test-policy` (lambar prod tana buƙatar gwaji), `check-test-masking` (yana toshe asserts da aka raunana), `pr-evidence` (da'awar nasara tana buƙatar evidence block), `test-discovery` (kowane gwaji runner ne yake tattara shi).
 - **Gaba ɗaya:** shingen "sabuwar lamba ⇒ sabon gwaji" + mai gano assert da aka cire/tautology + buƙatar shaida (TDD ko gwaji mai rai) + tabbatar da cewa babu gwajin da ya zama maraya a wajen globs.
 
 ### 5. Sarƙaƙiya da lafiyar lamba (ratchets)
 
-- **OmniRoute:** ESLint-warnings (3769↓), kwafi na jscpd (5.72%↓), sarƙaƙiyar cyclomatic+max-lines (1800↓), sarƙaƙiyar fahimta ta sonarjs (753↓), dead-code/unused-exports na knip (339↓), girman fayil na kowane fayil (an daskarar, ragewa-kawai), circular-deps (Tarjan na musamman, mai toshewa).
+- **67router:** ESLint-warnings (3769↓), kwafi na jscpd (5.72%↓), sarƙaƙiyar cyclomatic+max-lines (1800↓), sarƙaƙiyar fahimta ta sonarjs (753↓), dead-code/unused-exports na knip (339↓), girman fayil na kowane fayil (an daskarar, ragewa-kawai), circular-deps (Tarjan na musamman, mai toshewa).
 - **Gaba ɗaya:** sanya ratchet ga kowane ma'aunin lafiya (gargaɗi, kwafi, sarƙaƙiyar cyclomatic **da** ta fahimta, dead code, girman fayil, import cycles). Alkiblar ita ce koyaushe "kada a koma baya".
 
 ### 6. Tsaron tsaye (SAST + sirrika)
 
-- **OmniRoute:** CodeQL (ratchet na faɗakarwa = 0), gitleaks (`[extend] useDefault=true` — yana da matuƙar muhimmanci!), SonarQube, ƙa'idojin tsaro na musamman (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet na faɗakarwa = 0), gitleaks (`[extend] useDefault=true` — yana da matuƙar muhimmanci!), SonarQube, ƙa'idojin tsaro na musamman (public-creds, error-helper, route-guard-membership, route-validation).
 - **Gaba ɗaya:** SAST (CodeQL/Sonar/semgrep) tare da ratchet na faɗakarwa + na'urar binciken sirrika mai **gadon tsoffin ƙa'idoji** (tsarin musamman da ya maye gurbin tsoho = makanta) + shingayen tsaro na Hard Rule na musamman ga aikin.
 
 ### 7. Sarkar samarwa (dependencies)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` na hana-slopsquatting (allowlist + shekaru ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` na hana-slopsquatting (allowlist + shekaru ≥72h).
 - **Gaba ɗaya:** SCA daga tushe da yawa + allowlist na lasisi + duba ingancin lockfile + allowlist na dependency tare da duba shekaru/typosquatting + bot na sabuntawa a rukuni.
 
 ### 8. Sarkar samarwa (ginawa da fitarwa)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), asalin SLSA (`--provenance`), OpenSSF Scorecard (kowane mako), ƙarfafa workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), asalin SLSA (`--provenance`), OpenSSF Scorecard (kowane mako), ƙarfafa workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Gaba ɗaya:** samar da SBOM yayin publish + provenance mai sa hannu (SLSA L2+) + Scorecard da aka tsara lokaci-lokaci + ƙarfafa duk workflows (tokens masu mafi ƙarancin gata, babu credentials da aka adana a non-pusher checkout, actions da aka ɗaure da SHA).
 
 ### 9. Contracts da API
 
-- **OmniRoute:** oasdiff (canjin OpenAPI mai karya daidaito), schemathesis (contract fuzz na dare), openapi-coverage (% na routes da aka rubuta takardunsu, ratchet 38.3%), openapi-security-tiers (spec da route-guard).
+- **67router:** oasdiff (canjin OpenAPI mai karya daidaito), schemathesis (contract fuzz na dare), openapi-coverage (% na routes da aka rubuta takardunsu, ratchet 38.3%), openapi-security-tiers (spec da route-guard).
 - **Gaba ɗaya:** contract diff na canjin da ke karya daidaito (oasdiff/buf) + fuzz mai dogaro da property a kan spec (schemathesis) + ɗaukar takardu mai ratchet + daidaiton spec↔code.
 
 ### 10. Takardu da i18n (hana-lalacewa)
 
-- **OmniRoute:** docs-sync (sigogi masu madubi), docs-counts-sync (lambobi a takardu da lamba), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
+- **67router:** docs-sync (sigogi masu madubi), docs-counts-sync (lambobi a takardu da lamba), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet 80.1%).
 - **Gaba ɗaya:** daidaita sigogi/ƙididdiga/env-vars tsakanin takardu da lamba (shinge, ba amincewa kawai ba) + tabbatar da ingancin hanyoyin haɗin ciki + ɗaukar i18n mai ratchet.
 
 ### 11. Hana-hallucination / daidaito (rukuni da ba kasafai ake samu ba)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ real route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ real route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Gaba ɗaya:** ga kowane "tushen gaskiya da aka maimaita" (registry, string dispatch, nassoshi tsakanin layers), a sami shingen da ke tabbatar da ɓangarorin biyu sun dace. Yana gano lalacewar da typecheck/test ba sa ganowa.
 
 ### 12. Juriya da domain (na musamman ga samfur)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), dokokin juriya 3 (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), dokokin juriya 3 (circuit-breaker/cooldown/lockout).
 - **Gaba ɗaya:** gano hanyoyin gazawar **naku** domain sannan ku samar da shinge (ko da na dare ne) ga kowanne. Don manhajojin AI: injection red-team. Don distributed systems: chaos + leak + soak.
 
 ---

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menerbitkan artifak npm + Docker. Gerbang ini menyediakan provenans,
+67router menerbitkan artifak npm + Docker. Gerbang ini menyediakan provenans,
 inventori (SBOM) dan pengimbasan CVE, semuanya OSS, yang disepadukan ke dalam aliran kerja keluaran.
 Pendirian **utamakan nasihat** — gerbang ini membuat laporan buat masa ini dan akan dijadikan
 penghalang selepas keluaran hijau pertama.
@@ -65,7 +65,7 @@ Menurut cabang "tiada pembaikan huluan" bagi remedi Varians CVE di atas, ini ial
   semasa bagi `@openai/codex-security` (`0.1.29`) masih menarik `extract-zip@2.0.1`.
 - **Tidak boleh dicapai daripada pengeluaran.** `promptfoo` hanya merupakan devDependency (tidak pernah disenaraikan
   di bawah `dependencies`), dan tiada fail di bawah `src/`, `open-sse/`, atau `bin/` mengimport
-  pakej npm `extract-zip` — pembantu `extractZip()` milik OmniRoute
+  pakej npm `extract-zip` — pembantu `extractZip()` milik 67router
   (`src/lib/versionManager/binaryManager.ts:93`) menggunakan shell untuk menjalankan `unzip`/`tar` asli
   dan tidak berkaitan. `@openai/codex-security` turut menyediakan pelindung perentasan pautan simboliknya sendiri
   di atas panggil balik onEntry milik extract-zip.

@@ -1,4 +1,4 @@
-# OmniRoute Architecture (मराठी)
+# 67router Architecture (मराठी)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _शेवटचे अद्यतन: 2026-06-28_
 
 ## कार्यकारी सारांश
 
-OmniRoute हे Next.js वर तयार केलेले स्थानिक AI रूटिंग गेटवे आणि डॅशबोर्ड आहे.
+67router हे Next.js वर तयार केलेले स्थानिक AI रूटिंग गेटवे आणि डॅशबोर्ड आहे.
 ते एकच OpenAI-सुसंगत एंडपॉइंट (`/v1/*`) उपलब्ध करून देते आणि भाषांतर, फॉलबॅक, टोकन रिफ्रेश व वापर ट्रॅकिंगसह अनेक अपस्ट्रीम प्रदात्यांमध्ये ट्रॅफिक रूट करते.
 
 मुख्य क्षमता:
@@ -128,13 +128,11 @@ v3.8.0 प्लॅटफॉर्मसाठीचे अधिकृत, आ�
 - `/dashboard/limits` — कोटा/दर नियंत्रणे
 - `/dashboard/cli-tools` — CLI प्रारंभिक मार्गदर्शन, रनटाइम शोध, कॉन्फिगरेशन निर्मिती
 - `/dashboard/agents` — शोधलेले ACP एजंट + सानुकूल एजंट नोंदणी
-- `/dashboard/cloud-agents` — क्लाउडवर होस्ट केलेली एजंट कार्ये (Codex Cloud, Devin, Jules) आणि कार्य जीवनचक्र
 - `/dashboard/skills` — A2A कौशल्य नोंदणी, सँडबॉक्स अंमलबजावणी, अंगभूत कौशल्य सूची
 - `/dashboard/memory` — सातत्यपूर्ण संभाषणात्मक मेमरीची तपासणी आणि पुनर्प्राप्ती
 - `/dashboard/webhooks` — आउटबाउंड वेबहुक सदस्यत्वे, गुप्त मूल्यांचे रोटेशन, पुनर्प्रयत्न आकडेवारी
 - `/dashboard/batch` — बॅच जॉब सादरीकरण आणि प्रगती
 - `/dashboard/cache` — रीड-थ्रू आणि रिझनिंग कॅशे आकडेवारी, निष्कासन नियंत्रणे
-- `/dashboard/playground` — कॉन्फिगर केलेल्या कोणत्याही कॉम्बो/मॉडेलसाठी परस्परसंवादी चॅट प्लेग्राउंड
 - `/dashboard/changelog` — ॲपमधील बदलनोंद दर्शक (`CHANGELOG.md` रेंडर करतो)
 - `/dashboard/system` — रनटाइम निदान, आवृत्ती माहिती, पर्यावरण प्रमाणीकरण पृष्ठभाग
 - `/dashboard/onboarding` — नवीन इंस्टॉलेशनसाठी प्रथम-वापर सेटअप विझार्ड
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[ब्राउझर डॅशबोर्ड]
     end
 
-    subgraph Router[OmniRoute स्थानिक प्रक्रिया]
+    subgraph Router[67router स्थानिक प्रक्रिया]
         API[V1 सुसंगतता API\n/v1/*]
         DASH[डॅशबोर्ड + व्यवस्थापन API\n/api/*]
         CORE[SSE + भाषांतर कोअर\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - बजेट: `src/app/api/usage/budget` (GET/POST)
 - फॉलबॅक साखळ्या: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - अनुपालन ऑडिट: `src/app/api/compliance/audit-log` (GET, पृष्ठांकन + संरचित मेटाडेटासह)
-- मूल्यमापन: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - धोरणे: `src/app/api/policies` (GET/POST)
 - सिंक टोकन्स: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - कॉन्फिगरेशन बंडल: `src/app/api/sync/bundle` (GET, सेटिंग्ज/प्रदाते/कॉम्बोज/की यांचा ETag-आवृत्तीकृत स्नॅपशॉट)
@@ -316,7 +313,6 @@ flowchart LR
 - फेच टाइमआउट: `src/shared/utils/fetchTimeout.ts`
 - विनंती टेलिमेट्री: `src/shared/utils/requestTelemetry.ts`
 - अनुपालन/ऑडिट: `src/lib/compliance/index.ts`
-- मूल्यमापन रनर: `src/lib/evals/evalRunner.ts`
 - डोमेन स्थिती पर्सिस्टन्स: `src/lib/db/domainState.ts` — फॉलबॅक चेन्स, बजेट्स, खर्चाचा इतिहास, लॉकआउट स्थिती आणि सर्किट ब्रेकर्ससाठी SQLite CRUD
 
 OAuth प्रोव्हायडर मॉड्यूल्स (`src/lib/oauth/providers/` अंतर्गत 27 स्वतंत्र फाइल्स):
@@ -328,7 +324,7 @@ OAuth प्रोव्हायडर मॉड्यूल्स (`src/lib/oa
 
 ## 5) एम्बेडेड सेवा (v3.8.4)
 
-OmniRoute स्थानिकरीत्या चालणाऱ्या AI साधन प्रक्रियांना स्थापित करू शकते, त्यांचे पर्यवेक्षण करू शकते आणि त्यांच्याकडे विनंत्या रूट करू शकते; या प्रक्रियांना **एम्बेडेड सेवा** म्हटले जाते. पाच सेवा समाविष्ट आहेत: 9Router, CLIProxyAPI, Bifrost, Mux आणि Dario.
+67router स्थानिकरीत्या चालणाऱ्या AI साधन प्रक्रियांना स्थापित करू शकते, त्यांचे पर्यवेक्षण करू शकते आणि त्यांच्याकडे विनंत्या रूट करू शकते; या प्रक्रियांना **एम्बेडेड सेवा** म्हटले जाते. पाच सेवा समाविष्ट आहेत: 9Router, CLIProxyAPI, Bifrost, Mux आणि Dario.
 
 आर्किटेक्चरचे स्तर:
 
@@ -375,23 +371,6 @@ Auto Combo स्थिर combo व्याख्येवर अवलंब�
 अल्गोरिदमच्या संपूर्ण तपशीलांसाठी (factor formulas, weight tuning),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) पहा.
 
-### B. Cloud Agents
-
-Cloud Agents तृतीय-पक्षीय hosted code-agent platforms (Codex Cloud, Devin,
-Jules) ना एकसमान, DB-backed task lifecycle च्या मागे समाविष्ट करते. सर्व task creation/inspection
-endpoints साठी management authentication आवश्यक आहे.
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, तसेच `agents/` अंतर्गत प्रत्येक agent साठी स्वतंत्र subdirectories)
-- प्रत्येक agent ची अंमलबजावणी: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoints: `/api/v1/agents/tasks/*` (यादी/निर्मिती/मिळवणे/रद्द करणे)
-- Management endpoints: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-प्रत्येक agent चे provisioning आणि OAuth-संबंधित तपशील यांसाठी,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) पहा.
-
 ### C. Guardrails
 
 guardrails module हा hot-reload करता येणारा middleware layer आहे, जो PII,
@@ -427,7 +406,7 @@ lockout/budget/fallback logic स्वतः एकत्र करावी �
 - Quota cache: `src/domain/quotaCache.ts`
 - Degradation state: `src/domain/degradation.ts`
 - Configuration audit: `src/domain/configAudit.ts`
-- OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
+- 67router response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — नियतकालिक evaluation jobs
 
 ### E. Authorization Pipeline
@@ -794,7 +773,7 @@ flowchart LR
         Browser[डॅशबोर्ड ब्राउझर]
     end
 
-    subgraph ContainerOrProcess[OmniRoute रनटाइम]
+    subgraph ContainerOrProcess[67router रनटाइम]
         Next[Next.js सर्व्हर\nPORT=20128]
         Core[SSE कोअर + एक्झिक्युटर्स]
         MainDB[(storage.sqlite)]
@@ -912,7 +891,7 @@ flowchart LR
 
 ## प्रदाता सुसंगतता मॅट्रिक्स
 
-> **टीप:** खालील मॅट्रिक्स हा OmniRoute v3.8.0 मध्ये नोंदणीकृत असलेल्या 351 प्रदात्यांपैकी एक प्रातिनिधिक नमुना आहे.
+> **टीप:** खालील मॅट्रिक्स हा 67router v3.8.0 मध्ये नोंदणीकृत असलेल्या 351 प्रदात्यांपैकी एक प्रातिनिधिक नमुना आहे.
 > अधिकृत आणि सातत्याने अद्ययावत केल्या जाणाऱ्या सूचीसाठी,
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (स्वयं-निर्मित) पहा किंवा
 > `src/shared/constants/providers.ts` मधील अधिकृत स्रोत पहा (लोड करताना Zod-द्वारे सत्यापित).
@@ -1095,7 +1074,7 @@ flowchart LR
 - क्लायंटकडून प्राप्त झालेली कच्ची विनंती
 - प्रत्यक्षात अपस्ट्रीमकडे पाठवलेली भाषांतरित विनंती
 - JSON म्हणून पुनर्रचित केलेला प्रदाता प्रतिसाद; स्ट्रीम केलेले प्रतिसाद अंतिम सारांश आणि स्ट्रीम मेटाडेटामध्ये संक्षिप्त केले जातात
-- OmniRoute द्वारे परत केलेला अंतिम क्लायंट प्रतिसाद; स्ट्रीम केलेले प्रतिसाद त्याच संक्षिप्त सारांश स्वरूपात संग्रहित केले जातात
+- 67router द्वारे परत केलेला अंतिम क्लायंट प्रतिसाद; स्ट्रीम केलेले प्रतिसाद त्याच संक्षिप्त सारांश स्वरूपात संग्रहित केले जातात
 
 ## सुरक्षिततेच्या दृष्टीने संवेदनशील सीमा
 

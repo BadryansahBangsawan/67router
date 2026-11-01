@@ -45,7 +45,7 @@ npm run test:e2e           # वैकल्पिक, लेकिन अनु
 पुनर्स्थापित करता है (लीक हुआ टोकन अकेले प्रकाशित नहीं कर सकता — क्योंकि कोई टोकन है ही नहीं)।
 
 **एक बार का सेटअप (स्वामी):** npmjs.com → पैकेज `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: स्वामी `diegosouzapw`, रिपॉज़िटरी `OmniRoute`, वर्कफ़्लो `npm-publish.yml`
+Publisher_ → GitHub: स्वामी `diegosouzapw`, रिपॉज़िटरी `67router`, वर्कफ़्लो `npm-publish.yml`
 (एनवायरनमेंट: कोई नहीं)। इसके मौजूद होने तक स्वचालित चरण `ENEEDAUTH` के साथ विफल होगा:
 `publish_mode=staged` (नीचे) या `direct` के साथ फिर से डिस्पैच करें।
 

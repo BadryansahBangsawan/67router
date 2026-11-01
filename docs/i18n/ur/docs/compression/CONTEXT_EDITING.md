@@ -4,13 +4,13 @@
 
 ---
 
-تفویض شدہ **Context Editing** صرف Claude کے لیے دستیاب context-management فیچر ہے۔ OmniRoute کے مقامی
+تفویض شدہ **Context Editing** صرف Claude کے لیے دستیاب context-management فیچر ہے۔ 67router کے مقامی
 compression engines (Caveman، RTK، LLMLingua، stacked pipelines) کے برعکس — جو درخواست کے proxy سے باہر
 جانے _سے پہلے_ اس کے body کو دوبارہ لکھتے ہیں — Context Editing، **provider** سے کہتا ہے کہ وہ اپنے جاری
-context window سے پرانے tool-use / tool-result blocks صاف کرے۔ OmniRoute صرف ایک body
+context window سے پرانے tool-use / tool-result blocks صاف کرے۔ 67router صرف ایک body
 parameter (`context_management.edits[]`) منسلک کرتا ہے؛ اصل صفائی Claude اپنے tokenizer کے مطابق کرتا ہے۔
 
-یہ اپنی نوعیت کے لحاظ سے ایک تفویض شدہ صلاحیت ہے: دوسرے providers اس parameter کو مسترد کر دیتے ہیں، اس لیے OmniRoute
+یہ اپنی نوعیت کے لحاظ سے ایک تفویض شدہ صلاحیت ہے: دوسرے providers اس parameter کو مسترد کر دیتے ہیں، اس لیے 67router
 اسے سختی سے Claude اور Claude-Code-compatible relays تک محدود رکھتا ہے۔
 
 مستند ماخذ: `open-sse/config/contextEditing.ts` (strategy ids، body injection، telemetry
@@ -19,7 +19,7 @@ extraction)، `open-sse/executors/base.ts` (injection gate + 400-fallback)، ا�
 
 ## `clear_tool_uses` کیا کرتا ہے
 
-OmniRoute باہر بھیجے جانے والے Anthropic Messages body میں ایک واحد edit شامل کرتا ہے:
+67router باہر بھیجے جانے والے Anthropic Messages body میں ایک واحد edit شامل کرتا ہے:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute باہر بھیجے جانے والے Anthropic Messages body میں �
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`)۔
 
 اس beta کا اعلان `anthropic-beta: context-management-2025-06-27` header کے ذریعے کیا جاتا ہے، جسے
-OmniRoute پہلے ہی Claude کی درخواستوں پر بھیجتا ہے۔
+67router پہلے ہی Claude کی درخواستوں پر بھیجتا ہے۔
 
 Injection کا عمل `applyContextEditingToBody()` انجام دیتا ہے اور یہ **idempotent** ہے: اگر body میں
 `clear_tool_uses` edit پہلے سے موجود ہو (کسی سابقہ call کے ذریعے شامل کیا گیا ہو یا client نے فراہم کیا ہو)، تو body
-کو جوں کا توں چھوڑ دیا جاتا ہے۔ اگر `clear_thinking_20251015` edit بھی موجود ہو، تو OmniRoute
+کو جوں کا توں چھوڑ دیا جاتا ہے۔ اگر `clear_thinking_20251015` edit بھی موجود ہو، تو 67router
 `clear_thinking` edit کو stable-sort کرکے سب سے آگے لے آتا ہے، کیونکہ Anthropic کا تقاضا ہے کہ `edits[]`
 array میں `clear_thinking`، `clear_tool_uses` سے پہلے آئے۔
 
@@ -133,7 +133,7 @@ if (
 
 ## `applied_edits` ٹیلی میٹری
 
-Claude response کے بعد، OmniRoute ریکارڈ کرتا ہے کہ provider نے حقیقتاً کتنا context صاف کیا۔ یہ **stream نہیں کیا جاتا** — اسے non-streaming response body سے best-effort بنیاد پر نکالا جاتا ہے، اور یہ کبھی response کو متاثر نہیں کرتا (ٹیلی میٹری کی ناکامیاں نظرانداز کر دی جاتی ہیں)۔
+Claude response کے بعد، 67router ریکارڈ کرتا ہے کہ provider نے حقیقتاً کتنا context صاف کیا۔ یہ **stream نہیں کیا جاتا** — اسے non-streaming response body سے best-effort بنیاد پر نکالا جاتا ہے، اور یہ کبھی response کو متاثر نہیں کرتا (ٹیلی میٹری کی ناکامیاں نظرانداز کر دی جاتی ہیں)۔
 
 - اخذ کرنا: `open-sse/config/contextEditing.ts` میں `extractContextEditingTelemetry(responseBody)`۔ یہ response کی ساخت کے حوالے سے دفاعی انداز اپناتے ہوئے تین مقامات پر `applied_edits` کو تلاش کرتا ہے:
   - `context_management.applied_edits`
@@ -155,14 +155,14 @@ Claude response کے بعد، OmniRoute ریکارڈ کرتا ہے کہ provider
 
 | پہلو                     | مقامی انجنز (Caveman / RTK / LLMLingua / stacked) | تفویض شدہ Context Editing                              |
 | ------------------------ | ------------------------------------------------- | ------------------------------------------------------ |
-| کہاں چلتا ہے             | OmniRoute میں، درخواست کے پراکسی سے نکلنے سے پہلے | فراہم کنندہ (Claude) میں، سرور کی جانب                 |
+| کہاں چلتا ہے             | 67router میں، درخواست کے پراکسی سے نکلنے سے پہلے  | فراہم کنندہ (Claude) میں، سرور کی جانب                 |
 | کیا ترمیم کرتا ہے        | پرامپٹ / سیاق و سباق / ٹول کے نتیجے کا متن        | پرانے ٹول کے استعمال / ٹول کے نتیجے کے بلاکس           |
 | فراہم کنندہ کا دائرۂ کار | تمام فراہم کنندگان                                | صرف `claude` + `anthropic-compatible-cc-*`             |
 | ٹوگل                     | کمپریشن موڈ کی ترتیبات                            | `contextEditing.enabled`                               |
 | ناکامی کی صورت           | کھلی ناکامی (اصل متن)                             | 400 فال بیک: پیرامیٹر ہٹائیں، ایک بار دوبارہ کوشش کریں |
 | بچت کی ٹیلی میٹری        | `engine: <engine id>`                             | `engine: "context-editing"`                            |
 
-دونوں ایک دوسرے کی تکمیل کرتے ہیں: مقامی انجنز ان بائٹس کو کمپریس کرتے ہیں جو OmniRoute بھیجتا ہے؛ Context Editing
+دونوں ایک دوسرے کی تکمیل کرتے ہیں: مقامی انجنز ان بائٹس کو کمپریس کرتے ہیں جو 67router بھیجتا ہے؛ Context Editing
 Claude کو متعدد باریوں کے دوران جاری سیاق و سباق کی کانٹ چھانٹ کرنے دیتا ہے۔ دونوں کو ایک ساتھ فعال کیا جا سکتا ہے۔
 
 ## مزید دیکھیں

@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY transparante decryptie is OmniRoute's **5e capturemodus** voor de
+TPROXY transparante decryptie is 67router's **5e capturemodus** voor de
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM-stack. Deze onderschept en **ontsleutelt** lokaal uitgaand HTTPS-verkeer op Linux
 met behulp van kernel-TPROXY + beleidsroutering — **zonder** `/etc/hosts` te spoofen en
@@ -53,7 +53,7 @@ Gebruik deze modus wanneer u verkeer wilt vastleggen en ontsleutelen van een pro
 - u niet wilt verstoren met een systeembrede proxywijziging.
 
 Omdat de onderschepping in de kernel plaatsvindt, heeft het oorspronkelijke proces **geen
-configuratiewijziging** nodig — maar het proces moet wel de dynamische CA vertrouwen die OmniRoute
+configuratiewijziging** nodig — maar het proces moet wel de dynamische CA vertrouwen die 67router
 installeert (zie [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ addon niet gebouwd), retourneert de addon-loader (`src/mitm/tproxy/transparentSo
 `null` in plaats van een fout te genereren. De status van de capturemodus meldt dan
 `available: false`, de schakelaar op het dashboard is **uitgeschakeld** met de tooltip
 "TPROXY-ontsleuteling vereist Linux + root + de native addon", en de rest van
-OmniRoute blijft werken.
+67router blijft werken.
 
 ---
 
@@ -261,7 +261,7 @@ bypass-socketmarkering (**SO_MARK**):
 | **Sanering van fouten**                  | De foutresponsen van de route worden verwerkt via `sanitizeErrorMessage()` (harde regel #12).                                                                                                                                                                                                                                                                                                                                |
 
 **De MITM-CA is een krachtige functionaliteit.** Een door het besturingssysteem vertrouwde CA die voor elke
-host kan ondertekenen, betekent dat alles wat OmniRoute onderschept, kan worden ontsleuteld. Deze functionaliteit is alleen beschikbaar
+host kan ondertekenen, betekent dat alles wat 67router onderschept, kan worden ontsleuteld. Deze functionaliteit is alleen beschikbaar
 via de expliciete, uitsluitend lokale TPROXY-onderscheppingsmodus, is standaard uitgeschakeld en de vermelding in het vertrouwensarchief
 wordt verwijderd wanneer u de modus stopt.
 
@@ -371,7 +371,7 @@ retourneert `available: false` wanneer de add-on ontbreekt.
 ### Achtergebleven firewallregels na een crash
 
 `revertTproxy()` is exact het omgekeerde van toepassen en is idempotent. Wanneer de
-modus wordt gestopt, worden de regels teruggedraaid; als OmniRoute midden in een sessie is beëindigd,
+modus wordt gestopt, worden de regels teruggedraaid; als 67router midden in een sessie is beëindigd,
 gebruikt u de actie **Repair** van AgentBridge (`POST /api/tools/agent-bridge/repair`) om achtergebleven
 systeemstatus ongedaan te maken (DNS-spoofing, root-CA, systeemproxy). De TPROXY-`mangle`-regels
 en route worden ook automatisch gewist wanneer het systeem opnieuw wordt opgestart.

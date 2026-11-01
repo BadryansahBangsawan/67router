@@ -5,7 +5,7 @@
 ---
 
 自架集區執行於 **.113** 主機（`tomni-proxmox-113`）上。自 2026-10-18 起，每個
-OmniRoute runner 都只有**一種角色**、一個標籤，以及依其工作負載實測結果配置的記憶體／CPU
+67router runner 都只有**一種角色**、一個標籤，以及依其工作負載實測結果配置的記憶體／CPU
 預算。Turbopack 執行槽會取得建置所需的資源；其他執行槽則依其實測峰值配置。
 只有當 Turbopack 建置、Release-Green webpack 建置與 lint 工作同時執行時，該主機才會超額配置；
 主機 swap（16 GB）會吸收超出的部分，而且由於 pull request 的 Builds 在託管環境中執行，
@@ -27,7 +27,7 @@ Turbopack 執行槽大多數時間都處於閒置狀態：
 | swap      | 16 GB                     | `omniroute-113-5` 執行時停用 swap（`MemorySwapMax=0`），因此失控的建置會在達到上限時被終止，而不會因使用 swap 拖垮整台主機                                                                                                                                                                                                                    |
 | `/tmp`    | **12 GB tmpfs = RAM**     | 放在此處的任何內容都會占用記憶體；殘留內容會在 3 小時後清除                                                                                                                                                                                                                                                                                   |
 | CPU       | 在 32 核心上觀察到負載 60 | 在設定 quota 之前，一個 Turbopack 建置（約 1166 % CPU）加上同一台主機上的 coverage suite，曾導致其他 listener 的 heartbeat 無法獲得資源（`The self-hosted runner lost communication`，#16853）                                                                                                                                                |
-| runners   | **6 個 listener**         | 4 個 OmniRoute，加上 OmniHeuris 與 OmniMind；`omniroute-113-3/-4/-7/-8` 已停用（使用 `systemctl enable --now` 可重新啟用其中一個）                                                                                                                                                                                                            |
+| runners   | **6 個 listener**         | 4 個 67router，加上 OmniHeuris 與 OmniMind；`omniroute-113-3/-4/-7/-8` 已停用（使用 `systemctl enable --now` 可重新啟用其中一個）                                                                                                                                                                                                             |
 
 這些限制位於各 unit 的 `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 中（先前的值保留為 `override.conf.bak-20261018`），並已透過
@@ -73,7 +73,7 @@ worker 會將任務回報為已取消，而 listener 會自行恢復上線。
 
 Runner 的預設 `KillMode=process` 會在單元停止或重新啟動後，留下仍在執行的
 `Runner.Worker → npm → next-build`——孤立的建置程序會在未連結任何任務的情況下，
-持續消耗 RAM 與 CPU。每個 OmniRoute 單元都包含一個 drop-in
+持續消耗 RAM 與 CPU。每個 67router 單元都包含一個 drop-in
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)，
 其中設定了 `KillMode=mixed`：先向 listener 傳送 SIGTERM，並在達到
 `TimeoutStop` 時向整個 cgroup 傳送 SIGKILL。此設定會在單元下次重新啟動時生效——
@@ -117,7 +117,7 @@ Runner 的預設 `KillMode=process` 會在單元停止或重新啟動後，留�
   僅後端 `next build`（約 5–6 GB；webpack）的每夜工作，以及 `quality.yml` 的 `lint-guard`。直到
   2026-10-18，`omniroute-113` 的 `MemoryHigh=4G`——promptfoo 建置在該處歷經 54 分鐘的反覆回收才完成；
   8 GB 可消除節流。
-- **刻意減少監聽器數量。** 2026-08-29 已停用四個 OmniRoute 單元——每個額外的
+- **刻意減少監聽器數量。** 2026-08-29 已停用四個 67router 單元——每個額外的
   監聽器都是上述記憶體預算的另一個租戶。清理程式上限為 6（cron 中的 `MAX_ACTIVE_RUNNERS=6`）：它會計算
   機器上的每個 `Runner.Listener`，而 OmniHeuris + OmniMind 會在我們的四個之外再增加兩個。
 - **任何執行器忙碌時，絕不可手動清理 `/tmp` 或 `_work`。** 先檢查後刪除且兩者之間

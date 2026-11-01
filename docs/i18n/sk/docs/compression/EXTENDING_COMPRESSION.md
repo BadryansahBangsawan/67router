@@ -4,7 +4,7 @@
 
 ---
 
-> **Stručne**: Kompresný mechanizmus OmniRoute je **rozšíriteľný** — môžete registrovať vlastné mechanizmy, distribuovať jazykové balíky pre nové jazyky a skladať viacstupňové reťazce spracovania. Táto príručka ukazuje, ako na to.
+> **Stručne**: Kompresný mechanizmus 67router je **rozšíriteľný** — môžete registrovať vlastné mechanizmy, distribuovať jazykové balíky pre nové jazyky a skladať viacstupňové reťazce spracovania. Táto príručka ukazuje, ako na to.
 
 **Súvisiace príručky:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Na úrovni projektu (načíta sa pri spustení)
 ```
 
-Alebo ich načítajte programovo z pluginu:
+Or register it programmatically at startup:
 
 ```ts
-// Vo vašom plugine
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK pluginu poskytuje háky onRequest / onResponse / onError. Zaregistrujte
-  // mechanizmus pri načítaní modulu pluginu (alebo pri prvom onRequest); zrušte jeho
-  // registráciu vo vlastnom procese ukončenia.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Pri ukončení:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ vo výbere stratégie prostredníctvom svojho `id`. Integráciu otestujte jeho p
 
 ## Vytváranie jazykových balíkov
 
-Kompresia v štýle Caveman používa **pravidlá špecifické pre jednotlivé jazyky**, ktoré spracúvajú výplňové výrazy, zmierňovanie tvrdení a rozvláčne formulácie v každom prirodzenom jazyku. OmniRoute sa dodáva so **6 jazykovými balíkmi**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Kompresia v štýle Caveman používa **pravidlá špecifické pre jednotlivé jazyky**, ktoré spracúvajú výplňové výrazy, zmierňovanie tvrdení a rozvláčne formulácie v každom prirodzenom jazyku. 67router sa dodáva so **6 jazykovými balíkmi**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Štruktúra balíka
 
@@ -388,7 +379,7 @@ Výstup enginu N sa stáva vstupom enginu N+1.
 
 ### Režimy kompresie
 
-OmniRoute vyberá **JEDEN režim pre každú požiadavku** na základe konfigurácie, prahových hodnôt automatického spustenia a prepísaní kombinácie.
+67router vyberá **JEDEN režim pre každú požiadavku** na základe konfigurácie, prahových hodnôt automatického spustenia a prepísaní kombinácie.
 Dostupné režimy sú definované v `open-sse/services/compression/types.ts` (typ `CompressionMode`):
 
 | Režim        | Enginy               | Prípad použitia                                                                                                                                                                                                |
@@ -508,10 +499,10 @@ Ak ju chcete riadiť z konfigurácie, nastavte `mode: "stacked"` a zadajte pole 
 
 ## Zásady synchronizácie s upstreamom
 
-Kompresné enginy OmniRoute uvádzajú v README niekoľko upstreamových projektov
+Kompresné enginy 67router uvádzajú v README niekoľko upstreamových projektov
 („inšpirované projektmi RTK, Caveman, LLMLingua-2, Troglodita“). Častá otázka
 prispievateľov znie: **keď upstreamový projekt RTK pridá nový filter nástroja alebo Caveman pridá balík
-pravidiel, ako sa to dostane do OmniRoute?** Táto časť predstavuje smerodajnú odpoveď.
+pravidiel, ako sa to dostane do 67router?** Táto časť predstavuje smerodajnú odpoveď.
 
 ### Vendorizované kópie vs. nezávislé implementácie
 
@@ -532,7 +523,7 @@ _myšlienok_ (pravidiel filtrov, balíkov pravidiel), nie vendorizované zdrojov
 Zámerne **neexistuje žiadne automatizované sledovanie upstreamových vydaní ani označenie
 `compression-sync`**. Keďže enginy sú reimplementáciami, upstreamový filter RTK
 alebo balík pravidiel Caveman sa nezačleňuje ako kód; namiesto toho je **nanovo vyjadrený ako nové
-pravidlo/filter vo vlastnom formáte OmniRoute** (pozrite si
+pravidlo/filter vo vlastnom formáte 67router** (pozrite si
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) a príležitostne sa začlení prostredníctvom
 bežného PR. Vyššie uvedené rozširujúce body (vlastný engine, jazykový balík, filter RTK)
 predstavujú schválený spôsob, ako takýmto vylepšením prispieť.
@@ -546,14 +537,14 @@ Nedávne príklady presne tohto postupu:
 ### Headroom (proxy na kompresiu vstupu)
 
 Headroom je **úplne interný** — pripnutá vendorizovaná snímka kodeku `gcf` spolu s
-vlastnými vrstvami OmniRoute `smartcrusher` / `toon` / `tabular`. Okrem vendorizovanej kópie
+vlastnými vrstvami 67router `smartcrusher` / `toon` / `tabular`. Okrem vendorizovanej kópie
 neexistuje žiadny aktívny upstream, ktorý by bolo potrebné sledovať; aktualizácie `gcf` sa obnovujú
 manuálne pri zmene kodeku a opätovne sa overujú voči bráne rozpočtu kompresie
 (`check:compression-budget`).
 
 ### Navrhnutie vylepšenia inšpirovaného upstreamom
 
-1. **Nevendorizujte** — vyjadrite upstreamové pravidlo/filter nanovo vo formáte OmniRoute.
+1. **Nevendorizujte** — vyjadrite upstreamové pravidlo/filter nanovo vo formáte 67router.
 2. Pridajte ho prostredníctvom príslušného rozširujúceho bodu uvedeného nižšie (jazykový balík, filter RTK alebo
    vlastný engine).
 3. V opise PR uveďte upstreamový projekt (pripísanie autorstva), nekopírujte však

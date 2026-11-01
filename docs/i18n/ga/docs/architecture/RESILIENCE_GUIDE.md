@@ -4,7 +4,7 @@
 
 ---
 
-Tá trí mheicníocht athléimneachta éagsúil ach gaolmhar ag OmniRoute. Tá raon feidhme agus cuspóir difriúil ag gach ceann acu. Coinnigh scartha iad agus iompar ródaithe á dhífhabhtú agat.
+Tá trí mheicníocht athléimneachta éagsúil ach gaolmhar ag 67router. Tá raon feidhme agus cuspóir difriúil ag gach ceann acu. Coinnigh scartha iad agus iompar ródaithe á dhífhabhtú agat.
 
 ![Samhail athléimneachta 3 shraith](../diagrams/exported/resilience-3layers.svg)
 
@@ -179,7 +179,7 @@ Ní chuirtear na trí cheanntásc cleamhnais seisiúin ar aghaidh chuig an uas-s
 
 ### Léasanna eisiacha naisc seisiúin bhainistithe
 
-**Raon feidhme:** is le cliant/seisiún HTTP bainistithe gníomhach amháin nasc incháilithe OmniRoute amháin.
+**Raon feidhme:** is le cliant/seisiún HTTP bainistithe gníomhach amháin nasc incháilithe 67router amháin.
 
 **Cuspóir:** úinéireacht eisiach mharthanach naisc a sholáthar do chliaint a dteastaíonn
 teorainn dhocht ródaithe uathu thar iarratais. Ní hionann é seo agus cleamhnas seisiúin, ar rogha bhog leanúnachais é:
@@ -201,7 +201,7 @@ fíoraithe agus ID an naisc ghníomhaigh freisin. Baintear ceanntásca rialúch�
 léargais iarratais a choinnítear, agus as ceanntásca feidhmeora upstream.
 
 Má tá iarrthóirí bainistithe incháilithe ag an ngnáthródú ach go bhfuil gach iarrthóir saor á áitiú ag
-léas gníomhach eachtrach, tugann OmniRoute HTTP `429` ar ais, cód lease-capacity-unavailable, stát
+léas gníomhach eachtrach, tugann 67router HTTP `429` ar ais, cód lease-capacity-unavailable, stát
 waiting-for-capacity, agus `Retry-After` teoranta a dhíorthaítear ón éag is luaithe ábhartha. Ní
 conspóid léasa í an ghnáth-incháilitheacht fholamh agus coinníonn sí a séimeantaic earráide ródúcháin
 atá ann cheana féin.
@@ -225,7 +225,7 @@ chuici (`resolveLockoutScope()` in `open-sse/services/accountFallback/exactModel
   i gcás codex, raon iomlán `codex` / `spark` (gach samhail `gpt-5*` de chuid an
   naisc), agus i gcás soláthraithe eile `getQuotaScopedModelForProvider()`.
 - Cuireann `404` an tsamhail lom faoi ghlas (`getModelLockKey()` a chúngaíonn `not_found`).
-- Aon stádas eile — teipeanna iompair/freastalaí `5xx` agus `502` sintéisithe OmniRoute féin
+- Aon stádas eile — teipeanna iompair/freastalaí `5xx` agus `502` sintéisithe 67router féin
   ó bhailíochtú cáilíochta — ní chuireann sé faoi ghlas ach an tuple **beacht**
   soláthraí/naisc/samhla. Ní fianaise é sruth lochtach ar shamhail amháin
   faoi chuóta an chuntais; roimh an riail seo, bhain freagra folamh amháin ar
@@ -342,7 +342,7 @@ Socraigh é sa mhodail nasctha (**Sáruithe teorainne ráta → Uasteorainneacha
 
 - **Ar fud an nasctha vs sainiúil don mhúnla:** fanann `maxConcurrent` mar an uasteorainn roinnte ar fud an nasctha. Nuair is infheidhme an dá cheann, faightear an dá gheata go hatamach sa gheata cumaisc chéanna (`global → provider → account → model`); is é an t-iompar éifeachtach ná an teorainn is déine is infheidhme.
 - **Meaitseáil bheacht ar eochair an mhúnla:** is í an eochair an teaghrán múnla a thugtar don fhorghníomhaire tar éis réitigh ródúcháin — de ghnáth id lom an mhúnla suasrith (`glm-5`), ní ailias `provider/model` ar thaobh an chliaint (ní mheaitseálann `zai/glm-5` le `glm-5`). Is uasteorainneacha iarratas comhthráthach de shlánuimhreacha dearfacha iad na luachanna.
-- **Scuainiú áitiúil, gan fhionnachtain:** cuirtear iarratais bhreise ar scuaine go háitiúil leis an séimeantaic scuaine/teorainne ama atá ann cheana féin (earráidí iontrála clóscríofa `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). Ní dhéanann OmniRoute beartas suasrith a fhionnachtain ná a thuar — forchuireann sé na huasteorainneacha beachta a chumraigh an t-oibreoir. Ní dhíchumasaíonn geata múnla sáithithe an soláthraí riamh agus ní chruthaíonn sé glasáil mhunla bhuan; fanann iompar 429/fuaraithe/fallback suasrith mar chúltaca earráide.
+- **Scuainiú áitiúil, gan fhionnachtain:** cuirtear iarratais bhreise ar scuaine go háitiúil leis an séimeantaic scuaine/teorainne ama atá ann cheana féin (earráidí iontrála clóscríofa `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). Ní dhéanann 67router beartas suasrith a fhionnachtain ná a thuar — forchuireann sé na huasteorainneacha beachta a chumraigh an t-oibreoir. Ní dhíchumasaíonn geata múnla sáithithe an soláthraí riamh agus ní chruthaíonn sé glasáil mhunla bhuan; fanann iompar 429/fuaraithe/fallback suasrith mar chúltaca earráide.
 - **Scóip in aghaidh an nasctha agus in aghaidh an phróisis:** is in aghaidh nasctha sa bhunachar sonraí atá na huasteorainneacha agus coinnítear i gcuimhne iad, mar sin ní chomhordaíonn dhá nasc a athúsáideann an eochair API suasrith chéanna lena chéile.
 - **Ciallaíonn gan chumrú gan athrú:** má fhágtar an léarscáil ar lár (nó má fhágtar réimse an deais folamh) ní chuirtear aon gheata múnla leis. Cumraíocht shamplach gan aon teorainn sholáthraí uilíoch a dhearbhú:
 
@@ -478,7 +478,7 @@ gur féidir í a thástáil le tástáil aonaid gan fíortheorantóir Bottleneck
 ### Eangach Sábháilteachta Uathchumasaithe Ráta-Teorann & Cosaint Nasc (`rateLimitProtection`)
 
 **Eangach sábháilteachta uathchumasaithe** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, réamhshocrú `true`):
-De réir réamhshocraithe, cumasaíonn OmniRoute cosaint scuaine ráta-teorann go huathoibríoch do gach nasc gníomhach soláthraí eochair-API (`getProviderCategory(provider) === "apikey"`). Cinntíonn sé seo go gcuirtear iarratais isteach chuig eochracha API suasshrutha atá íogair maidir le rátaí ar scuaine agus go sriantar iad trí Bottleneck, seachas iad a phléascadh isteach in earráidí 429 suasshrutha. Is féidir an eangach sábháilteachta a shárú tríd an athróg timpeallachta `RATE_LIMIT_AUTO_ENABLE` (díchumasaíonn `false`/`0`/`off`, cuireann `true`/`1`/`on` i bhfeidhm go héigeantach), a bhfuil tosacht aige ar an socrú deais buanaithe (**Socruithe → Athléimneacht** / `PATCH /api/resilience`).
+De réir réamhshocraithe, cumasaíonn 67router cosaint scuaine ráta-teorann go huathoibríoch do gach nasc gníomhach soláthraí eochair-API (`getProviderCategory(provider) === "apikey"`). Cinntíonn sé seo go gcuirtear iarratais isteach chuig eochracha API suasshrutha atá íogair maidir le rátaí ar scuaine agus go sriantar iad trí Bottleneck, seachas iad a phléascadh isteach in earráidí 429 suasshrutha. Is féidir an eangach sábháilteachta a shárú tríd an athróg timpeallachta `RATE_LIMIT_AUTO_ENABLE` (díchumasaíonn `false`/`0`/`off`, cuireann `true`/`1`/`on` i bhfeidhm go héigeantach), a bhfuil tosacht aige ar an socrú deais buanaithe (**Socruithe → Athléimneacht** / `PATCH /api/resilience`).
 
 **Séimeantaic `rateLimitProtection` in aghaidh an nasc:**
 Rianaítear cosaint ráta-teorann in aghaidh an nasc trí réimse Búlaíne `rateLimitProtection` ar naisc sholáthraithe (buanaítear mar `rate_limit_protection` in SQLite):
@@ -847,7 +847,7 @@ buicéadaithe de réir IP agus cuóta atá ídithe. Teorainneacha macánta:
 > tuairim chomhdhlúite, dírithe ar an ngníomhaire, ar na rannóga thuas; is iad na rannóga
 > uimhrithe an tagairt iomlán fós.
 
-Tá trí mheicníocht theipeanna sealadacha ag OmniRoute atá gaolmhar ach ar leithligh ó
+Tá trí mheicníocht theipeanna sealadacha ag 67router atá gaolmhar ach ar leithligh ó
 chéile. Coinnigh a raon feidhme scartha agus iompar ródaithe á dhífhabhtú agat. Féach an
 [léaráid athléimneachta 3 chiseal](../diagrams/exported/resilience-3layers.svg)
 (foinse: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

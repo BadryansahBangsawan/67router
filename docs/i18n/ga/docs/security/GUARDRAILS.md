@@ -10,7 +10,7 @@
 > blocála insteallta mar theorainn éigeantach (#16413), agus cad a fheiceann freagra roimh an iarghlao)
 
 Cuireann guardrails sábháilteacht, polasaí, agus claochluithe ábhair i bhfeidhm ag an teorainn
-idir OmniRoute agus soláthraithe suas an tsrutha. Is féidir le gach guardrail iniúchadh a dhéanamh
+idir 67router agus soláthraithe suas an tsrutha. Is féidir le gach guardrail iniúchadh a dhéanamh
 ar ualaigh iarratais (`preCall`) agus ar fhreagraí suas an tsrutha (`postCall`) — agus iad a dhiúltú,
 a chlaochlú, nó a anótáil go roghnach.
 
@@ -111,7 +111,7 @@ Nuair a chuireann eochair API an ghláonna srianta ar `allowedConnections`, linn
 cuóta (`allowedQuotas`) nó samhlacha (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), ní roghnaíonn an
 droichead ach samhlacha athródaithe agus cur síos atá ceadaithe ag an eochair, ar
-naisc atá ceadaithe ag an eochair. Téann an glao cur síos trí féin-lúb OmniRoute
+naisc atá ceadaithe ag an eochair. Téann an glao cur síos trí féin-lúb 67router
 ansin i gcónaí leis an gceannteideal `x-omniroute-self-loop-key-id`, ionas go
 gcuireann an t-iarratas comhrá a ghlacann polasaí naisc agus samhail na heochaire
 sin i bhfeidhm arís. Ní urramaíonn `enforceApiKeyPolicy()` an ceannteideal sin ach
@@ -142,7 +142,7 @@ aon chomhartha cliant. Laghdaíonn sampláil ar mhionsonraí ísle cruinneas OCR
 tasc tras-scríofa téacs go díreach a iarrann an leid seo, mar sin iarrann an glao
 cur síos féin mionsonraí arda i gcónaí is cuma cén leibhéal mionsonraí a d'úsáid
 an t-iarratas isteach bunaidh. Ní dhéanann sé seo difear ach do chorp an iarratais
-inmheánaigh cur síos; ní athraíonn sé conas a chuireann OmniRoute `image_url.detail`
+inmheánaigh cur síos; ní athraíonn sé conas a chuireann 67router `image_url.detail`
 an ghláonna féin ar aghaidh ar an bpríomh-iarratas — cuirtear an réamhshocrú sin i
 bhfeidhm ar leithligh, agus ach amháin do chliaint OpenCode braite, i
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). Níl réimse
@@ -205,7 +205,7 @@ Is é `/dashboard/settings/modality-bridge` an leathanach deis tiomnaithe. Caomh
 
 Is nasc comhoiriúnachta chuig an leathanach nua é an tsean-chárta Vision Bridge faoi shocruithe AI; níl dara cóip den fhoirm aige a thuilleadh. Nascann Media Providers freisin sreabhadh oibre Image-to-Text agus Speech-to-Text leis na cluaisíní Modality Bridge comhfhreagracha gan an playground Speech-to-Text atá ann cheana a bhaint.
 
-**Scipeáil iontrála féin-lúibe:** nuair a rithtear an glao describe trí fhéin-lúb `/v1` OmniRoute féin (provider neamh-chaighdeánach), seolann an fo-iarratas `x-omniroute-admission-bypass: internal` agus déantar é a fhíordheimhniú leis an dintiúr féin-lúibe réitithe — an sentinel áitiúil `sk_omniroute` i mód áitiúil, nó an eochair env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` arna cumrú ag an oibreoir (#1350) ionas gur féidir le heisiúintí `REQUIRE_API_KEY=true` an glao describe a rith fós. Ní thugtar aitheantas don scipeáil ach do na dintiúir beachta sin, mar sin ní féidir le cliaint sheachtracha an ceanntásc a úsáid chun iontráil a sheachaint.
+**Scipeáil iontrála féin-lúibe:** nuair a rithtear an glao describe trí fhéin-lúb `/v1` 67router féin (provider neamh-chaighdeánach), seolann an fo-iarratas `x-omniroute-admission-bypass: internal` agus déantar é a fhíordheimhniú leis an dintiúr féin-lúibe réitithe — an sentinel áitiúil `sk_omniroute` i mód áitiúil, nó an eochair env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` arna cumrú ag an oibreoir (#1350) ionas gur féidir le heisiúintí `REQUIRE_API_KEY=true` an glao describe a rith fós. Ní thugtar aitheantas don scipeáil ach do na dintiúir beachta sin, mar sin ní féidir le cliaint sheachtracha an ceanntásc a úsáid chun iontráil a sheachaint.
 
 Tá réamhshocruithe oidhreachta in `src/shared/constants/visionBridgeDefaults.ts`; tá na réamhshocruithe nua mód/task-aware/cache agus an réiteoir socruithe in `src/shared/constants/modalityBridgeDefaults.ts`. Nochtann an guardrail rogha tógálaí `deps` ionas gur féidir le tástálacha feidhmithe bréige `getSettings` agus `callVisionModel` a instealladh.
 
@@ -328,7 +328,7 @@ Gineann `scripts/perf/video-bridge-fu07-eval.ts` daingneáin chinntitheacha fhí
 
 Tá gach fráma teoranta do 4 MiB, gach amhfhráma le chéile do 23 MiB, agus
 freagra srathaithe an bhróicéara do 32 MiB. Baintear eolaire sealadach príobháideach
-in `finally`. Ní chuireann OmniRoute FFmpeg san áireamh agus ní ghlacann sé le conair
+in `finally`. Ní chuireann 67router FFmpeg san áireamh agus ní ghlacann sé le conair
 inrite shaincheaptha. Roimh fhotheidealú, cuireann an droichead pas coimeádach
 dí-dhúblála amhairc i bhfeidhm: laghdaítear gach JPEG go maolán liathscála 16×16 agus
 ní chuirtear i gcomparáid é ach leis an bhfráma deireanach a coinníodh. I gcás buiséad
@@ -370,7 +370,7 @@ lena dtacaítear nuair atá téacs ailínithe acu cheana féin. Ní mór do gach
 críochta `start`/`end` laistigh den fhad ama braite, agus `source` ar an liosta ceadaithe
 (`client`, `embedded`, nó `audio-bridge`) a bheith inti; is é `1` an luach réamhshocraithe do `confidence`
 agus ní mór dó fanacht idir `0` agus `1`. Comhchuingítear leideanna atá díreach mar an gcéanna.
-Ní chuireann OmniRoute tús riamh le tras-scríobh ó na meiteashonraí seo: cóipeáiltear leideanna bailíochtaithe
+Ní chuireann 67router tús riamh le tras-scríobh ó na meiteashonraí seo: cóipeáiltear leideanna bailíochtaithe
 isteach sa toradh tuairiscithe in éineacht lena bhfoinse, lena muinín agus lena n-eatramh, agus
 rindreáiltear iad mar bhreathnuithe neamhiontaofa taobh le fotheidil na bhfrámaí. Diúltaítear do théacs
 neamhbhailí, as raon, nó gan bhunáitíocht seachas é a mheascadh isteach sa
@@ -982,7 +982,7 @@ cron + seoladh láimhe):
   previous instructions…", jailbreaks ar stíl DAN) go n-iompraíonn an freagra
   `error.code === "SECURITY_001"`, is é sin, gur dhiúltaigh an garda don iarratas i ndáiríre.
 - **`garak` (comhairleach)** — ritheann sé garak `--probes promptinject,dan,leakreplay`
-  i gcoinne instance áitiúil OmniRoute (`http://localhost:20128/v1`). Geataítear é ar
+  i gcoinne instance áitiúil 67router (`http://localhost:20128/v1`). Geataítear é ar
   rún soláthraí (`PROMPTFOO_PROVIDER_KEY`); scipeálann sé go séimh agus tá `|| true`
   mar iarmhír aige, mar sin tuairiscíonn sé gan teip a chur ar CI.
 

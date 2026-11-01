@@ -34,16 +34,8 @@ test("Allow Private dashboard description states what the flag turns off", () =>
 
 test("Allow Local dashboard description states the local-first default and the metadata block", () => {
   const d = byKey("OMNIROUTE_ALLOW_LOCAL_PROVIDER_URLS");
-  assert.match(d, /by default \(OmniRoute is local-first\)|On by default \(local-first\)/);
+  assert.match(d, /by default \(67router is local-first\)|On by default \(local-first\)/);
   assert.match(d, /all of 169\.254\.0\.0\/16/);
   assert.match(d, /private and loopback hosts are blocked too/);
   assert.doesNotMatch(d, /needed for local OpenAI-compatible models/);
-});
-
-test("Remote Rerank dashboard description does not claim metadata hosts are never routed to", () => {
-  const d = byKey("RERANK_REMOTE_PROVIDER_NODES");
-  assert.match(d, /must also pass the provider outbound URL policy/);
-  // Under guard mode "none" (private opt-in) the node check does not block metadata,
-  // so the absolute claim was removed with the docs correction.
-  assert.doesNotMatch(d, /never routed to/);
 });

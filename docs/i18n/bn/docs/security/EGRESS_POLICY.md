@@ -8,7 +8,7 @@
 
 > **মূল তথ্যসূত্র:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute প্রতিটি প্রক্সিতে একটি **অ্যাড্রেস-ফ্যামিলি ইগ্রেস নির্দেশনা** রাখার সুযোগ দেয়। ডিফল্টভাবে OS IPv4 বা IPv6 বেছে নেয় (ডুয়াল-স্ট্যাক, "Happy Eyeballs")। নির্দেশনাটি `ipv4` বা `ipv6`-এ সেট করলে, OmniRoute ওই প্রক্সির মধ্য দিয়ে যাওয়া প্রতিটি সংযোগকে নির্বাচিত ফ্যামিলিতে পিন করে এবং অন্য ফ্যামিলিতে ফিরে যাওয়ার পরিবর্তে **নিরাপদভাবে ব্যর্থ হয়**।
+67router প্রতিটি প্রক্সিতে একটি **অ্যাড্রেস-ফ্যামিলি ইগ্রেস নির্দেশনা** রাখার সুযোগ দেয়। ডিফল্টভাবে OS IPv4 বা IPv6 বেছে নেয় (ডুয়াল-স্ট্যাক, "Happy Eyeballs")। নির্দেশনাটি `ipv4` বা `ipv6`-এ সেট করলে, 67router ওই প্রক্সির মধ্য দিয়ে যাওয়া প্রতিটি সংযোগকে নির্বাচিত ফ্যামিলিতে পিন করে এবং অন্য ফ্যামিলিতে ফিরে যাওয়ার পরিবর্তে **নিরাপদভাবে ব্যর্থ হয়**।
 
 এই পৃষ্ঠায় নির্দেশনাটি কী, কেন এটি রয়েছে, কোথায় এটি কনফিগার করতে হয় এবং রানটাইম কীভাবে এটি সমাধান করে—তা নথিভুক্ত করা হয়েছে।
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` কীভাবে রিজলভ হয়
 
-যখন `family` হলো `auto`, OmniRoute কোনো নির্দেশনা যোগ করে **না** — প্রক্সি URL অপরিবর্তিতভাবে ব্যবহৃত হয় এবং সংযোগের ফ্যামিলি অন্তর্নিহিতভাবে নির্ধারিত হয়।
+যখন `family` হলো `auto`, 67router কোনো নির্দেশনা যোগ করে **না** — প্রক্সি URL অপরিবর্তিতভাবে ব্যবহৃত হয় এবং সংযোগের ফ্যামিলি অন্তর্নিহিতভাবে নির্ধারিত হয়।
 
 URL তৈরির সময় (`open-sse/utils/proxyDispatcher.ts`-এর `proxyConfigToUrl` / `normalizeProxyUrl`), একটি `auto` প্রক্সি কোনো মার্কার ছাড়াই একটি সাধারণ URL প্রদান করে:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 একটি non-`auto` নির্দেশনা একক synthetic query marker হিসেবে প্রবাহিত হয় — `?family=ipv4` অথবা `?family=ipv6` — যা normalized proxy URL-এর শেষে একবার যোগ করা হয়। `normalizeProxyUrl` সতর্কতার সঙ্গে এই marker-টি সরিয়ে ঠিক একবার পুনরায় যোগ করে, যাতে এটি কখনো port parsing নষ্ট না করে।
 
-dispatcher তৈরি করার সময় marker-টি পড়ে একটি নির্দিষ্ট connect family-তে রূপান্তর করা হয়। host যদি **বিপরীত** family-র IP literal হয়, তবে OmniRoute একটি exception ছোড়ে (অসামঞ্জস্যের ক্ষেত্রে fail-closed):
+dispatcher তৈরি করার সময় marker-টি পড়ে একটি নির্দিষ্ট connect family-তে রূপান্তর করা হয়। host যদি **বিপরীত** family-র IP literal হয়, তবে 67router একটি exception ছোড়ে (অসামঞ্জস্যের ক্ষেত্রে fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 সামঞ্জস্য
 
-family pin SOCKS5 proxy-র সঙ্গে কাজ করে, কিন্তু stock `fetch-socks` proxy hop-এর family pin করার জন্য প্রয়োজনীয় socket options প্রকাশ করে না। এ কারণে OmniRoute নিজস্ব connector সরবরাহ করে:
+family pin SOCKS5 proxy-র সঙ্গে কাজ করে, কিন্তু stock `fetch-socks` proxy hop-এর family pin করার জন্য প্রয়োজনীয় socket options প্রকাশ করে না। এ কারণে 67router নিজস্ব connector সরবরাহ করে:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

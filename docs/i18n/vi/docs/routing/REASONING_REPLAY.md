@@ -7,7 +7,7 @@
 > **Nguồn tham chiếu chuẩn:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute ghi lại `reasoning_content` của trợ lý do các mô hình ở chế độ suy luận tạo ra và phát lại nội dung này một cách trong suốt trong các yêu cầu nhiều lượt khi nhà cung cấp thượng nguồn yêu cầu. Điều này loại bỏ các lỗi HTTP 400 mà những nhà cung cấp nghiêm ngặt trả về khi lịch sử hội thoại của máy khách thiếu phần suy luận của lượt trước.
+67router ghi lại `reasoning_content` của trợ lý do các mô hình ở chế độ suy luận tạo ra và phát lại nội dung này một cách trong suốt trong các yêu cầu nhiều lượt khi nhà cung cấp thượng nguồn yêu cầu. Điều này loại bỏ các lỗi HTTP 400 mà những nhà cung cấp nghiêm ngặt trả về khi lịch sử hội thoại của máy khách thiếu phần suy luận của lượt trước.
 
 ## Lý Do Tính Năng Này Tồn Tại
 
@@ -17,7 +17,7 @@ Một số nhà cung cấp chế độ suy luận từ chối lượt tiếp the
 Tham số không chính xác: reasoning_content trong chế độ suy luận phải được truyền trở lại API.
 ```
 
-Tuy nhiên, các máy khách phổ biến (Cursor, Cline, Roo Code, OpenAI SDK) loại bỏ `reasoning_content` khỏi lịch sử mà chúng gửi lại. OmniRoute khôi phục nội dung này từ bộ nhớ đệm phía máy chủ để yêu cầu mà dịch vụ thượng nguồn nhận được luôn nhất quán. Issue #1628 đã giới thiệu cơ chế lưu trữ kết hợp giữa bộ nhớ và SQLite để bộ nhớ đệm vẫn tồn tại sau khi tiến trình khởi động lại.
+Tuy nhiên, các máy khách phổ biến (Cursor, Cline, Roo Code, OpenAI SDK) loại bỏ `reasoning_content` khỏi lịch sử mà chúng gửi lại. 67router khôi phục nội dung này từ bộ nhớ đệm phía máy chủ để yêu cầu mà dịch vụ thượng nguồn nhận được luôn nhất quán. Issue #1628 đã giới thiệu cơ chế lưu trữ kết hợp giữa bộ nhớ và SQLite để bộ nhớ đệm vẫn tồn tại sau khi tiến trình khởi động lại.
 
 ## Kiến trúc
 

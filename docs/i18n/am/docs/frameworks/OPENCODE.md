@@ -5,11 +5,11 @@
 ---
 
 > **ሁኔታ:** በአጠቃላይ የሚገኝ።
-> **ታዳሚዎች:** OpenCodeን ከOmniRoute ስርጭት ጋር የሚያገናኙ ኦፕሬተሮች።
+> **ታዳሚዎች:** OpenCodeን ከ67router ስርጭት ጋር የሚያገናኙ ኦፕሬተሮች።
 > **ዋና የመረጃ ምንጭ (የውቅር መርሐግብር):** `src/shared/services/opencodeConfig.ts`
 > **ዋና የመረጃ ምንጭ (npm ጥቅል):** `@omniroute/opencode-provider/` (ሊታተም የሚችል workspace)
 
-[OpenCode](https://opencode.ai) ወኪል-ተኮር CLI/ዴስክቶፕ AI ደንበኛ ነው። የአቅራቢዎች ካታሎጉን ከ`~/.config/opencode/opencode.json` (ወይም `opencode.jsonc`) ያነባል፣ እንዲሁም በ`https://opencode.ai/config.json` የሚገኘውን መርሐግብር ይከተላል። OmniRoute ራሱን ለOpenCode ከእነዚያ አቅራቢዎች እንደ አንዱ ያቀርባል — እያንዳንዱ ጥያቄ በOmniRoute መደበኛ OpenAI-ተኳኋኝ `/v1` በይነገጽ በኩል ያልፋል፤ በዚህም OpenCode ከAuto-Combo ማዞሪያ፣ circuit breakers፣ የቁልፍ ፖሊሲዎች፣ ታዛቢነት እና ሌሎችም በራስ-ሰር ተጠቃሚ ይሆናል።
+[OpenCode](https://opencode.ai) ወኪል-ተኮር CLI/ዴስክቶፕ AI ደንበኛ ነው። የአቅራቢዎች ካታሎጉን ከ`~/.config/opencode/opencode.json` (ወይም `opencode.jsonc`) ያነባል፣ እንዲሁም በ`https://opencode.ai/config.json` የሚገኘውን መርሐግብር ይከተላል። 67router ራሱን ለOpenCode ከእነዚያ አቅራቢዎች እንደ አንዱ ያቀርባል — እያንዳንዱ ጥያቄ በ67router መደበኛ OpenAI-ተኳኋኝ `/v1` በይነገጽ በኩል ያልፋል፤ በዚህም OpenCode ከAuto-Combo ማዞሪያ፣ circuit breakers፣ የቁልፍ ፖሊሲዎች፣ ታዛቢነት እና ሌሎችም በራስ-ሰር ተጠቃሚ ይሆናል።
 
 **ሁለት የሚደገፉ የውህደት መንገዶች** አሉ። አንዱን ይምረጡ — ሁለቱም ተመሳሳይ ውቅር ያመነጫሉ።
 
@@ -17,16 +17,16 @@
 
 ## መንገድ 1 — CLI አመንጪ (npm መጫን አያስፈልግም)
 
-ለዋና ተጠቃሚዎች የሚመከር። ከOmniRoute ጋር አብሮ ይቀርባል። `opencode.json`ን ባለበት ቦታ ይጽፋል።
+ለዋና ተጠቃሚዎች የሚመከር። ከ67router ጋር አብሮ ይቀርባል። `opencode.json`ን ባለበት ቦታ ይጽፋል።
 
 ```bash
-# OmniRouteን ከጫኑ በኋላ (npm i -g @omniroute/cli ወይም አካባቢያዊ clone)
+# 67routerን ከጫኑ በኋላ (npm i -g @omniroute/cli ወይም አካባቢያዊ clone)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-ከጀርባ CLIው `mergeOpenCodeConfigText()`ን (`src/shared/services/opencodeConfig.ts:104`) ይጠራል፤ ስለዚህ ቀድሞ ያለ `opencode.json` ሌሎች አቅራቢዎቹንና አስተያየቶቹን እንዳሉ ያቆያል። የOmniRoute ግቤት በአቶሚክ ሁኔታ ይጨመራል/ይተካል።
+ከጀርባ CLIው `mergeOpenCodeConfigText()`ን (`src/shared/services/opencodeConfig.ts:104`) ይጠራል፤ ስለዚህ ቀድሞ ያለ `opencode.json` ሌሎች አቅራቢዎቹንና አስተያየቶቹን እንዳሉ ያቆያል። የ67router ግቤት በአቶሚክ ሁኔታ ይጨመራል/ይተካል።
 
 የሚገኘው ፋይል (ነባሪ የሞዴል ካታሎግ):
 
@@ -90,8 +90,8 @@ writeFileSync("opencode.json", JSON.stringify(config, null, 2));
 ```
 OpenCode UI/ወኪል
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (የOmniRoute OpenAI በይነገጽ)
-         → OmniRoute /v1/chat/completions ተቆጣጣሪ     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (የ67router OpenAI በይነገጽ)
+         → 67router /v1/chat/completions ተቆጣጣሪ     (open-sse/handlers/chatCore.ts)
             → combo ማዞሪያ / Auto-Combo / executor
                → upstream አቅራቢ
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 በ`models: [...]` መተካት ይችላሉ። የሚመከሩ ተጨማሪዎች፦
 
-- `"auto"` — የOmniRouteን ያለምንም ውቅረት የሚሠራ [Auto-Combo](../routing/AUTO-COMBO.md) ራውተር ያቀርባል። ካታሎጉን በኮድዎ ውስጥ በቋሚነት ሳያስቀምጡ፣ OpenCode «ከሚገኙት ምርጡን ሞዴል» እንዲመርጥ ያስችለዋል።
-- `"<combo-name>"` — በዳሽቦርዱ ውስጥ የገለጹት ማንኛውም ጥምረት፤ OmniRoute በግልጽነት ይፈታዋል።
+- `"auto"` — የ67routerን ያለምንም ውቅረት የሚሠራ [Auto-Combo](../routing/AUTO-COMBO.md) ራውተር ያቀርባል። ካታሎጉን በኮድዎ ውስጥ በቋሚነት ሳያስቀምጡ፣ OpenCode «ከሚገኙት ምርጡን ሞዴል» እንዲመርጥ ያስችለዋል።
+- `"<combo-name>"` — በዳሽቦርዱ ውስጥ የገለጹት ማንኛውም ጥምረት፤ 67router በግልጽነት ይፈታዋል።
 
 ---
 
@@ -135,29 +135,29 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 ## የማረጋገጫ ሁነቶች
 
-| የOmniRoute ቅንብር                             | የሚመከር የ`apiKey` እሴት                                |
+| የ67router ቅንብር                              | የሚመከር የ`apiKey` እሴት                                |
 | ------------------------------------------- | -------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (ለአካባቢያዊ አጠቃቀም ነባሪ) | `sk_omniroute` (ቃል በቃል የሚጠቀም ቦታ ያዥ)                |
 | `REQUIRE_API_KEY=true`                      | ከዳሽቦርድ → API ቁልፎች የተገኘ እውነተኛ የእያንዳንዱ ተጠቃሚ API ቁልፍ። |
 
-`x-api-key` + `anthropic-version` ለሚልኩ የAnthropic-አይነት ደንበኞች፣ የOmniRoute `extractApiKey` ከ`x-api-key` የሚመጣውን ቁልፍም ይቀበላል። OpenCode የOpenAIን በይነገጽ ስለሚጠቀም ሁልጊዜ `Authorization: Bearer ${apiKey}` ይልካል—እዚህ ምንም የAnthropic ልዩ አያያዝ አይተገበርም።
+`x-api-key` + `anthropic-version` ለሚልኩ የAnthropic-አይነት ደንበኞች፣ የ67router `extractApiKey` ከ`x-api-key` የሚመጣውን ቁልፍም ይቀበላል። OpenCode የOpenAIን በይነገጽ ስለሚጠቀም ሁልጊዜ `Authorization: Bearer ${apiKey}` ይልካል—እዚህ ምንም የAnthropic ልዩ አያያዝ አይተገበርም።
 
 ---
 
 ## ችግር ፍቺ
 
-| ምልክት                                             | ምክንያት                                                       | መፍትሔ                                                                                               |
-| ------------------------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `/v1/v1/` በያዘ URL ላይ ለእያንዳንዱ ጥያቄ `404`           | ከv3.8 በፊት ያለው ፕለጊን `/v1`ን ሁለት ጊዜ በመጨመሩ የቆየ ውቅር።             | በመንገድ 1 ወይም 2 በመጠቀም እንደገና ያመንጩ።                                                                    |
-| `401 Invalid API key`                            | OmniRoute `REQUIRE_API_KEY=true` ተብሎ ተቀናብሯል፣ እና ቁልፉ አይታወቅም። | ቁልፉን በዳሽቦርዱ ውስጥ ይፍጠሩ፣ ወይም `REQUIRE_API_KEY=false` ያድርጉ (ለአካባቢያዊ አጠቃቀም ብቻ) እና `sk_omniroute`ን ይጠቀሙ። |
-| በOpenCode UI ውስጥ የሞዴል ዝርዝሩ ባዶ ነው                 | ሁሉም 4 ነባሪ ሞዴሎች በOmniRoute አቅራቢ ታይነት ውስጥ ተደብቀዋል።             | ያነቁዋቸውን ለማሳየት `models: ["auto", ...]`ን ያስተላልፉ።                                                     |
-| OpenCode 500 ከ`cannot read property 'models'` ጋር | የቆየ OpenCode (< 0.1.x) በውስጥ የተጻፈ `models`ን አይቀበልም ነበር።      | OpenCodeን የv1 ንድፍን (`opencode.ai/config.json`) ወደሚከተል ስሪት ያሻሽሉ።                                    |
+| ምልክት                                             | ምክንያት                                                      | መፍትሔ                                                                                               |
+| ------------------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `/v1/v1/` በያዘ URL ላይ ለእያንዳንዱ ጥያቄ `404`           | ከv3.8 በፊት ያለው ፕለጊን `/v1`ን ሁለት ጊዜ በመጨመሩ የቆየ ውቅር።            | በመንገድ 1 ወይም 2 በመጠቀም እንደገና ያመንጩ።                                                                    |
+| `401 Invalid API key`                            | 67router `REQUIRE_API_KEY=true` ተብሎ ተቀናብሯል፣ እና ቁልፉ አይታወቅም። | ቁልፉን በዳሽቦርዱ ውስጥ ይፍጠሩ፣ ወይም `REQUIRE_API_KEY=false` ያድርጉ (ለአካባቢያዊ አጠቃቀም ብቻ) እና `sk_omniroute`ን ይጠቀሙ። |
+| በOpenCode UI ውስጥ የሞዴል ዝርዝሩ ባዶ ነው                 | ሁሉም 4 ነባሪ ሞዴሎች በ67router አቅራቢ ታይነት ውስጥ ተደብቀዋል።             | ያነቁዋቸውን ለማሳየት `models: ["auto", ...]`ን ያስተላልፉ።                                                     |
+| OpenCode 500 ከ`cannot read property 'models'` ጋር | የቆየ OpenCode (< 0.1.x) በውስጥ የተጻፈ `models`ን አይቀበልም ነበር።     | OpenCodeን የv1 ንድፍን (`opencode.ai/config.json`) ወደሚከተል ስሪት ያሻሽሉ።                                    |
 
 ---
 
 ## በተጨማሪ ይመልከቱ
 
-- [የAPI ማጣቀሻ](../reference/API_REFERENCE.md) — ሙሉው የOmniRoute REST አገልግሎት ወሰን
+- [የAPI ማጣቀሻ](../reference/API_REFERENCE.md) — ሙሉው የ67router REST አገልግሎት ወሰን
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"` ምን ማለት እንደሆነ
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - ምንጭ፦ `src/shared/services/opencodeConfig.ts`፣ `src/lib/cli-helper/config-generator/opencode.ts`፣ `@omniroute/opencode-provider/src/index.ts`

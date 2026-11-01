@@ -4,15 +4,15 @@
 
 ---
 
-Gedelegeerde **Context Editing** is een functie voor contextbeheer die uitsluitend voor Claude beschikbaar is. In tegenstelling tot de lokale compressie-engines van OmniRoute (Caveman, RTK, LLMLingua, gestapelde pipelines) — die de requestbody herschrijven _voordat_ deze de proxy verlaat — vraagt Context Editing de **provider** om verouderde tool-use-/tool-result-blokken uit het eigen actieve contextvenster te verwijderen. OmniRoute voegt alleen een bodyparameter (`context_management.edits[]`) toe; Claude voert de daadwerkelijke verwijdering uit op basis van zijn eigen tokenizer.
+Gedelegeerde **Context Editing** is een functie voor contextbeheer die uitsluitend voor Claude beschikbaar is. In tegenstelling tot de lokale compressie-engines van 67router (Caveman, RTK, LLMLingua, gestapelde pipelines) — die de requestbody herschrijven _voordat_ deze de proxy verlaat — vraagt Context Editing de **provider** om verouderde tool-use-/tool-result-blokken uit het eigen actieve contextvenster te verwijderen. 67router voegt alleen een bodyparameter (`context_management.edits[]`) toe; Claude voert de daadwerkelijke verwijdering uit op basis van zijn eigen tokenizer.
 
-Dit is van nature een gedelegeerde mogelijkheid: andere providers weigeren de parameter, waardoor OmniRoute deze strikt beperkt tot Claude en Claude-Code-compatibele relays.
+Dit is van nature een gedelegeerde mogelijkheid: andere providers weigeren de parameter, waardoor 67router deze strikt beperkt tot Claude en Claude-Code-compatibele relays.
 
 Gezaghebbende bron: `open-sse/config/contextEditing.ts` (strategie-id's, body-injectie, extractie van telemetrie), `open-sse/executors/base.ts` (injectievoorwaarde + 400-fallback) en `open-sse/services/compression/types.ts` (configuratiestructuur + standaardwaarde).
 
 ## Wat `clear_tool_uses` doet
 
-OmniRoute injecteert één bewerking in de uitgaande body voor Anthropic Messages:
+67router injecteert één bewerking in de uitgaande body voor Anthropic Messages:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute injecteert één bewerking in de uitgaande body voor Anthropic Message
 - `trigger.value: 100000` — zodra het aantal invoertokens van de request deze drempel overschrijdt, begint Claude oude tool-use-/result-paren te verwijderen (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, de standaardwaarde van Anthropic).
 - `keep.value: 3` — de N meest recente tool-use-/result-paren blijven ongewijzigd behouden (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-De bèta wordt aangekondigd via de header `anthropic-beta: context-management-2025-06-27`, die OmniRoute al bij Claude-requests meestuurt.
+De bèta wordt aangekondigd via de header `anthropic-beta: context-management-2025-06-27`, die 67router al bij Claude-requests meestuurt.
 
-De injectie wordt uitgevoerd door `applyContextEditingToBody()` en is **idempotent**: als er al een `clear_tool_uses`-bewerking in de body aanwezig is (toegevoegd door een eerdere aanroep of aangeleverd door de client), blijft de body ongewijzigd. Als er ook een `clear_thinking_20251015`-bewerking aanwezig is, sorteert OmniRoute de `clear_thinking`-bewerking stabiel naar voren, omdat Anthropic vereist dat `clear_thinking` vóór `clear_tool_uses` staat in de array `edits[]`.
+De injectie wordt uitgevoerd door `applyContextEditingToBody()` en is **idempotent**: als er al een `clear_tool_uses`-bewerking in de body aanwezig is (toegevoegd door een eerdere aanroep of aangeleverd door de client), blijft de body ongewijzigd. Als er ook een `clear_thinking_20251015`-bewerking aanwezig is, sorteert 67router de `clear_thinking`-bewerking stabiel naar voren, omdat Anthropic vereist dat `clear_thinking` vóór `clear_tool_uses` staat in de array `edits[]`.
 
 ## De inschakeloptie per combinatie
 
@@ -126,7 +126,7 @@ Echte Claude bevat de bèta in `ANTHROPIC_BETA_BASE` en komt niet in dit fallbac
 
 ## `applied_edits`-telemetrie
 
-Na een Claude-respons registreert OmniRoute hoeveel context de provider daadwerkelijk heeft gewist.
+Na een Claude-respons registreert 67router hoeveel context de provider daadwerkelijk heeft gewist.
 Dit wordt **niet** gestreamd — het wordt naar beste vermogen uit de niet-streamende responsbody
 geëxtraheerd en heeft nooit invloed op de respons (telemetriefouten worden genegeerd).
 
@@ -160,14 +160,14 @@ RTK/Caveman/LLMLingua.
 
 | Aspect                      | Lokale engines (Caveman / RTK / LLMLingua / stacked) | Gedelegeerde contextbewerking                                 |
 | --------------------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
-| Waar het wordt uitgevoerd   | In OmniRoute, voordat het verzoek de proxy verlaat   | Bij de provider (Claude), aan de serverzijde                  |
+| Waar het wordt uitgevoerd   | In 67router, voordat het verzoek de proxy verlaat    | Bij de provider (Claude), aan de serverzijde                  |
 | Wat het bewerkt             | Prompt-/context-/toolresultaattekst                  | Oude tool-use-/tool-result-blokken                            |
 | Providerbereik              | Alle providers                                       | Alleen `claude` + `anthropic-compatible-cc-*`                 |
 | Schakeloptie                | Instellingen voor de compressiemodus                 | `contextEditing.enabled`                                      |
 | Foutafhandeling             | Fail-open (oorspronkelijke tekst)                    | 400-fallback: parameter verwijderen, eenmaal opnieuw proberen |
 | Telemetrie voor besparingen | `engine: <engine id>`                                | `engine: "context-editing"`                                   |
 
-De twee vullen elkaar aan: lokale engines comprimeren de bytes die OmniRoute verzendt; contextbewerking stelt
+De twee vullen elkaar aan: lokale engines comprimeren de bytes die 67router verzendt; contextbewerking stelt
 Claude in staat om de doorlopende context over meerdere beurten heen op te schonen. Ze kunnen samen worden ingeschakeld.
 
 ## Zie ook

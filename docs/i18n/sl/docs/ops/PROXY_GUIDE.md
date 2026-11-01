@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Slovenščina)
+# 🌐 67router Proxy Guide (Slovenščina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Obidite geografske blokade, zaščitite svojo identiteto in usmerjajte promet umetne inteligence prek poljubnega posredniškega strežnika — brez zapletenega konfiguriranja.**
 
-OmniRoute vključuje celovit sistem za upravljanje posredniških strežnikov, ki omogoča usmerjanje prometa do ponudnikov umetne inteligence prek posredniških strežnikov HTTP, HTTPS ali SOCKS5. Ne glede na to, ali ste v blokirani regiji, potrebujete rotacijo naslovov IP ali želite prikrito maskiranje prstnega odtisa — ta vodnik zajema vse.
+67router vključuje celovit sistem za upravljanje posredniških strežnikov, ki omogoča usmerjanje prometa do ponudnikov umetne inteligence prek posredniških strežnikov HTTP, HTTPS ali SOCKS5. Ne glede na to, ali ste v blokirani regiji, potrebujete rotacijo naslovov IP ali želite prikrito maskiranje prstnega odtisa — ta vodnik zajema vse.
 
 ---
 
@@ -51,7 +51,7 @@ Tudi zunaj blokiranih regij so posredniški strežniki uporabni za:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Strežnik OmniRoute                      │
+│                       Strežnik 67router                      │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Register    │    │ Razpošiljevalnik│  │ Pridobivanje    │  │
@@ -84,7 +84,7 @@ Tudi zunaj blokiranih regij so posredniški strežniki uporabni za:
 
 ## 4-stopenjski sistem posredniških strežnikov
 
-OmniRoute podpira konfiguracijo posredniških strežnikov na **štirih neodvisnih ravneh**, ki se razrešujejo po prednostnem vrstnem redu:
+67router podpira konfiguracijo posredniških strežnikov na **štirih neodvisnih ravneh**, ki se razrešujejo po prednostnem vrstnem redu:
 
 ```
 Prednostni vrstni red razreševanja (od najvišje do najnižje):
@@ -97,7 +97,7 @@ Prednostni vrstni red razreševanja (od najvišje do najnižje):
 
 ### Kako deluje razreševanje
 
-Ko OmniRoute pošlje zahtevo zunanjemu ponudniku, pokliče `resolveProxyForConnectionFromRegistry()`, ki preveri vsako raven po vrsti:
+Ko 67router pošlje zahtevo zunanjemu ponudniku, pokliče `resolveProxyForConnectionFromRegistry()`, ki preveri vsako raven po vrsti:
 
 1. **Raven računa** — Ali je tej določeni povezavi z določenim ID-jem dodeljen posredniški strežnik?
 2. **Raven ponudnika** — Ali je temu ponudniku (npr. `openai`) dodeljen posredniški strežnik?
@@ -239,7 +239,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Uvoz/izvoz
 
-Posredniški strežniki so vključeni v sistem **varnostnega kopiranja/obnovitve**. Ko izvozite konfiguracijo OmniRoute:
+Posredniški strežniki so vključeni v sistem **varnostnega kopiranja/obnovitve**. Ko izvozite konfiguracijo 67router:
 
 1. Pojdite na **Nadzorna plošča → Nastavitve → Varnostno kopiranje**
 2. Kliknite **Izvozi** — vključeni so register posredniških strežnikov in dodelitve
@@ -249,7 +249,7 @@ Register posredniških strežnikov podpira tudi **upsert po gostitelju+vratih** 
 
 ### Selitev iz starejše različice
 
-Če ste posredniške strežnike konfigurirali v starejši različici (pred uvedbo registra), jih OmniRoute samodejno preseli:
+Če ste posredniške strežnike konfigurirali v starejši različici (pred uvedbo registra), jih 67router samodejno preseli:
 
 ```
 Podedovana shramba key_value → proxy_registry + proxy_assignments
@@ -263,7 +263,7 @@ To se izvede enkrat ob prvem zagonu po nadgradnji. Za ponovni zagon uporabite `m
 
 > 🆕 **Prispeval [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (težava [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute se integrira s skupnostno platformo **[1proxy](https://1proxy-api.aitradepulse.com)** in tako omogoča dostop do **več sto brezplačnih, preverjenih posredniških strežnikov** z vsega sveta. To je popolno za uporabnike, ki nimajo lastne infrastrukture posredniških strežnikov.
+67router se integrira s skupnostno platformo **[1proxy](https://1proxy-api.aitradepulse.com)** in tako omogoča dostop do **več sto brezplačnih, preverjenih posredniških strežnikov** z vsega sveta. To je popolno za uporabnike, ki nimajo lastne infrastrukture posredniških strežnikov.
 
 ### Kako deluje
 
@@ -274,7 +274,7 @@ OmniRoute se integrira s skupnostno platformo **[1proxy](https://1proxy-api.aitr
 └─────────────┘ posred. strežnikov└─────────────────┘                └──────────┘
 ```
 
-1. **Sinhronizacija** — OmniRoute pridobi preverjene posredniške strežnike iz API-ja 1proxy
+1. **Sinhronizacija** — 67router pridobi preverjene posredniške strežnike iz API-ja 1proxy
 2. **Shranjevanje** — Posredniški strežniki se shranijo v isto tabelo `proxy_registry` z vrednostjo `source = 'oneproxy'`
 3. **Filtriranje** — Filtrirajte po protokolu, državi in oceni kakovosti
 4. **Rotacija** — Izberite najboljši posredniški strežnik s strategijo kakovosti, naključnega ali zaporednega izbora
@@ -374,7 +374,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Preprečevanje zaznavanja in prikritost
 
-OmniRoute prometa ne usmerja zgolj prek posredniškega strežnika — poskrbi tudi, da je promet videti legitimen:
+67router prometa ne usmerja zgolj prek posredniškega strežnika — poskrbi tudi, da je promet videti legitimen:
 
 ### Ponarejanje prstnega odtisa TLS
 
@@ -408,13 +408,13 @@ Značka za preverjanje prikazuje tudi razrešeni naslov IP posredniškega strež
 
 ## Načini nadrejenega posredniškega strežnika
 
-Za ponudnike, ki uporabljajo vzorec CLIProxyAPI, OmniRoute podpira tri načine nadrejenega posredniškega strežnika:
+Za ponudnike, ki uporabljajo vzorec CLIProxyAPI, 67router podpira tri načine nadrejenega posredniškega strežnika:
 
-| Način         | Opis                                                                |
-| ------------- | ------------------------------------------------------------------- |
-| `native`      | OmniRoute neposredno upravlja usmerjanje prek posrednika (privzeto) |
-| `cliproxyapi` | Upravljanje prenese na zunanji primerek CLIProxyAPI                 |
-| `fallback`    | Najprej poskusi izvorni način, nato uporabi CLIProxyAPI             |
+| Način         | Opis                                                               |
+| ------------- | ------------------------------------------------------------------ |
+| `native`      | 67router neposredno upravlja usmerjanje prek posrednika (privzeto) |
+| `cliproxyapi` | Upravljanje prenese na zunanji primerek CLIProxyAPI                |
+| `fallback`    | Najprej poskusi izvorni način, nato uporabi CLIProxyAPI            |
 
 Konfigurirajte za posameznega ponudnika:
 
@@ -477,7 +477,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API tunelov
 
-Za izpostavitev primerka OmniRoute javnemu internetu (Cloudflare/ngrok/Tailscale), namesto usmerjanja odhodnega prometa prek posredniškega strežnika, glejte [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API REST za tunele je na voljo pod `/api/tunnels/{cloudflared,ngrok,tailscale}/*` in je neodvisen od zgoraj dokumentirane verige posredniških strežnikov za odhodni promet.
+Za izpostavitev primerka 67router javnemu internetu (Cloudflare/ngrok/Tailscale), namesto usmerjanja odhodnega prometa prek posredniškega strežnika, glejte [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). API REST za tunele je na voljo pod `/api/tunnels/{cloudflared,ngrok,tailscale}/*` in je neodvisen od zgoraj dokumentirane verige posredniških strežnikov za odhodni promet.
 
 ### API 1proxy
 
@@ -517,7 +517,7 @@ V datoteki `.env` nastavite `ENABLE_SOCKS5_PROXY=true` in znova zaženite aplika
 
 ### Napake »socket hang up« pri uporabi posredniškega strežnika
 
-To je običajno pri poceni posredniških strežnikih, ki prekinjajo nedejavne povezave. OmniRoute to že obravnava tako, da:
+To je običajno pri poceni posredniških strežnikih, ki prekinjajo nedejavne povezave. 67router to že obravnava tako, da:
 
 - onemogoči ohranjanje povezave na povezavah s posredniškim strežnikom (`keepAliveTimeout: 1`)
 - onemogoči cevovodno obdelavo (`pipelining: 0`)
@@ -527,7 +527,7 @@ To je običajno pri poceni posredniških strežnikih, ki prekinjajo nedejavne po
 
 ### »unsupported_country_region_territory« med OAuth
 
-Prepričajte se, da je posredniški strežnik konfiguriran **pred** začetkom postopka OAuth. OmniRoute usmerja izmenjavo žetonov OAuth prek konfiguriranega posredniškega strežnika. Najprej nastavite globalni posredniški strežnik ali posredniški strežnik na ravni ponudnika, nato pa vzpostavite povezavo.
+Prepričajte se, da je posredniški strežnik konfiguriran **pred** začetkom postopka OAuth. 67router usmerja izmenjavo žetonov OAuth prek konfiguriranega posredniškega strežnika. Najprej nastavite globalni posredniški strežnik ali posredniški strežnik na ravni ponudnika, nato pa vzpostavite povezavo.
 
 ### Posredniški strežnik se ne uporablja
 
@@ -595,7 +595,7 @@ CREATE TABLE proxy_assignments (
 
 ## Preverjanje stanja posredniškega strežnika (v3.8.16+)
 
-Mehanizem OmniRoute za **hitro odpoved posredniškega strežnika** (`src/lib/proxyHealth.ts`) zazna nedelujoče posredniške strežnike v manj kot 2 s s hitrim preverjanjem povezave TCP, nato pa **predpomni rezultat**, da prepreči dodatno obremenitev pri vsaki zahtevi.
+Mehanizem 67router za **hitro odpoved posredniškega strežnika** (`src/lib/proxyHealth.ts`) zazna nedelujoče posredniške strežnike v manj kot 2 s s hitrim preverjanjem povezave TCP, nato pa **predpomni rezultat**, da prepreči dodatno obremenitev pri vsaki zahtevi.
 
 ### Kako deluje
 
@@ -660,11 +660,11 @@ Vrata po meri v URL-ju (`http://host:9999`) imajo vedno prednost pred privzeto v
 
 ## Analitika in opazljivost posredniških strežnikov
 
-OmniRoute spremlja uporabo posameznih posredniških strežnikov, da lahko skrbniki diagnosticirajo vzorce usmerjanja, nenadne poraste zakasnitev in ponavljajoče se napake.
+67router spremlja uporabo posameznih posredniških strežnikov, da lahko skrbniki diagnosticirajo vzorce usmerjanja, nenadne poraste zakasnitev in ponavljajoče se napake.
 
 ### Kaj se spremlja
 
-Za vsako zahtevo prek konfiguriranega posredniškega strežnika OmniRoute zabeleži:
+Za vsako zahtevo prek konfiguriranega posredniškega strežnika 67router zabeleži:
 
 | Metrika      | Opis                                                                                   |
 | ------------ | -------------------------------------------------------------------------------------- |
@@ -726,7 +726,7 @@ ORDER BY latency_ms DESC;
 
 ## Odločitveno drevo strategije rotacije
 
-Ko je obsegu dodeljenih več posredniških strežnikov, OmniRoute uporabi **strategijo rotacije**, da določi, katerega bo uporabil za posamezno zahtevo. Strategija je konfigurirana na ravni obsega (globalno, za posameznega ponudnika, za posamezen račun ali za posamezno kombinacijo).
+Ko je obsegu dodeljenih več posredniških strežnikov, 67router uporabi **strategijo rotacije**, da določi, katerega bo uporabil za posamezno zahtevo. Strategija je konfigurirana na ravni obsega (globalno, za posameznega ponudnika, za posamezen račun ali za posamezno kombinacijo).
 
 ### Razpoložljive strategije
 

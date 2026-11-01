@@ -7,7 +7,7 @@
 > **Patiesības avots:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute tver domāšanas režīma modeļu ģenerēto asistenta `reasoning_content` un nemanāmi to atkārtoti izmanto vairāku soļu pieprasījumos, ja augšupējais pakalpojumu sniedzējs to pieprasa. Tas novērš HTTP 400 kļūdas, kuras stingri pakalpojumu sniedzēji atgriež, ja klienta sarunas vēsturē trūkst iepriekšējā soļa spriešanas satura.
+67router tver domāšanas režīma modeļu ģenerēto asistenta `reasoning_content` un nemanāmi to atkārtoti izmanto vairāku soļu pieprasījumos, ja augšupējais pakalpojumu sniedzējs to pieprasa. Tas novērš HTTP 400 kļūdas, kuras stingri pakalpojumu sniedzēji atgriež, ja klienta sarunas vēsturē trūkst iepriekšējā soļa spriešanas satura.
 
 ## Kāpēc tas ir nepieciešams
 
@@ -17,7 +17,7 @@ Vairāki domāšanas režīma pakalpojumu sniedzēji noraida nākamo sarunas sol
 Nederīgs parametrs: domāšanas režīma reasoning_content ir jānosūta atpakaļ API.
 ```
 
-Taču tipiski klienti (Cursor, Cline, Roo Code, OpenAI SDK) izņem `reasoning_content` no atkārtoti nosūtāmās vēstures. OmniRoute to atjauno no servera puses kešatmiņas, lai augšupējam pakalpojumam redzamais pieprasījums būtu konsekvents. Problēmas pieteikums #1628 ieviesa hibrīdu atmiņas/SQLite persistenci, lai kešatmiņa saglabātos pēc procesa restartēšanas.
+Taču tipiski klienti (Cursor, Cline, Roo Code, OpenAI SDK) izņem `reasoning_content` no atkārtoti nosūtāmās vēstures. 67router to atjauno no servera puses kešatmiņas, lai augšupējam pakalpojumam redzamais pieprasījums būtu konsekvents. Problēmas pieteikums #1628 ieviesa hibrīdu atmiņas/SQLite persistenci, lai kešatmiņa saglabātos pēc procesa restartēšanas.
 
 ## Arhitektūra
 

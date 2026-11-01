@@ -38,7 +38,7 @@ URL kíkún náà ní ìrísí yìí:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Nínú OmniRoute, lọ sí **Providers → Add Provider**, yan **Microsoft 365 Copilot
+6. Nínú 67router, lọ sí **Providers → Add Provider**, yan **Microsoft 365 Copilot
    (BizChat)**, kí o sì lẹ ẹ̀rí ìwọlé náà mọ́ ní ìlànà yìí:
 
 ```
@@ -55,9 +55,9 @@ DevTools kan:
 1. Ṣí **DevTools → Network**.
 2. Bẹ̀rẹ̀ tàbí tẹ̀síwájú pẹ̀lú ìfọ̀rọ̀wérọ̀ BizChat kan (èyí ló ń mú àsopọ̀ WebSocket ṣiṣẹ́).
 3. Tẹ bọ́tìnì ọ̀tún nínú pánẹ́ẹ̀lì Network, kí o sì yan **Save all as HAR with content**.
-4. Nínú OmniRoute, lo bọ́tìnì **Import .har file** lórí àpótí ìbánisọ̀rọ̀ àsopọ̀ olùpèsè.
+4. Nínú 67router, lo bọ́tìnì **Import .har file** lórí àpótí ìbánisọ̀rọ̀ àsopọ̀ olùpèsè.
 
-OmniRoute máa ń ṣàyẹ̀wò HAR náà fún URL Chathub WebSocket, ó máa ń yọ
+67router máa ń ṣàyẹ̀wò HAR náà fún URL Chathub WebSocket, ó máa ń yọ
 `access_token` àti `chathubPath` jáde, ó sì máa ń fi àwọn ààyè ẹ̀rí ìwọlé kún fúnra rẹ̀. Gbígbé
 HAR wọlé máa ń tú àkókò ìparí JWT, ó sì máa ń fi iye àkókò tó kù fún token náà hàn.
 
@@ -80,7 +80,7 @@ Láti yẹra fún àtúngba ẹ̀rí ìwọlé lọ́wọ́, o lè fi Microsoft 
 | `tier`         | `individual` (àiyípadà), `edu`, tàbí `enterprise`                     |
 
 Gba refresh token náà láti inú ìṣàn device-code tàbí authorization-code Microsoft
-tó ní scope `substrate.office.com/sydney`. Nígbà tí a bá ṣètò `refreshToken`, OmniRoute
+tó ní scope `substrate.office.com/sydney`. Nígbà tí a bá ṣètò `refreshToken`, 67router
 máa ń tún `access_token` ṣe ṣáájú ìbéèrè kọ̀ọ̀kan, nítorí náà o kò nílò láti
 tún gba ẹ̀rí ìwọlé lẹ́yìn gbogbo ìparí tó tó ~75 ìṣẹ́jú.
 

@@ -4,7 +4,7 @@
 
 ---
 
-Prozirno dešifriranje pomoću TPROXY-ja OmniRouteov je **5. način presretanja** za
+Prozirno dešifriranje pomoću TPROXY-ja 67routerov je **5. način presretanja** za
 MITM sustav [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Presreće i **dešifrira** lokalni odlazni HTTPS promet na Linuxu
 pomoću TPROXY-ja jezgre i usmjeravanja na temelju pravila — **bez** lažiranja `/etc/hosts` i
@@ -53,7 +53,7 @@ Upotrebljavajte ga kada želite presresti i dešifrirati promet procesa koji:
 - ne želite ometati promjenom sistemskog proxy poslužitelja.
 
 Budući da se presretanje odvija u jezgri, izvornom procesu **nije potrebna
-nikakva promjena konfiguracije** — ali proces mora vjerovati dinamičkom CA-u koji OmniRoute
+nikakva promjena konfiguracije** — ali proces mora vjerovati dinamičkom CA-u koji 67router
 instalira (pogledajte [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ dodatak nije izgrađen), učitavač dodatka (`src/mitm/tproxy/transparentSocket.
 vraća `null` umjesto izbacivanja iznimke. Status načina hvatanja tada prikazuje
 `available: false`, prekidač na nadzornoj ploči je **onemogućen** uz opis alata
 "TPROXY dešifriranje zahtijeva Linux + root + nativni dodatak", a ostatak
-OmniRoutea nastavlja raditi.
+67routera nastavlja raditi.
 
 ---
 
@@ -270,7 +270,7 @@ za zaobilaženje (**SO_MARK**):
 | **Sanitizacija pogrešaka**                     | Odgovori rute o pogreškama prolaze kroz `sanitizeErrorMessage()` (Strogo pravilo #12).                                                                                                                                                                                                                                                                                                                                                              |
 
 **MITM CA pruža moćnu mogućnost.** CA kojem operacijski sustav vjeruje i koji može potpisati certifikat za bilo koji
-host znači da se može dešifrirati sve što OmniRoute presretne. Ta je mogućnost dostupna isključivo putem
+host znači da se može dešifrirati sve što 67router presretne. Ta je mogućnost dostupna isključivo putem
 izričito omogućenog, samo lokalnog načina TPROXY presretanja, prema zadanim je postavkama isključena, a unos iz spremišta
 pouzdanih certifikata uklanja se kada zaustavite taj način rada.
 
@@ -380,7 +380,7 @@ vraća `available: false` kada dodatak nedostaje.
 ### Zaostala pravila vatrozida nakon rušenja
 
 `revertTproxy()` je točna inverzija primjene i idempotentna je. Zaustavljanje
-načina poništava pravila; ako je OmniRoute prekinut tijekom sesije, upotrijebite AgentBridge
+načina poništava pravila; ako je 67router prekinut tijekom sesije, upotrijebite AgentBridge
 radnju **Repair** (`POST /api/tools/agent-bridge/repair`) kako biste poništili zaostalo stanje
 sustava (DNS lažiranje, korijenski CA, sistemski proxy). TPROXY `mangle` pravila i ruta također
 se automatski uklanjaju pri ponovnom pokretanju sustava.

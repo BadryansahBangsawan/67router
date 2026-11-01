@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Malti)
+# 67router Auto-Combo Engine (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # l-irħas għal kull token
 
 **X’jiġri:**
 
-1. OmniRoute jidentifika l-prefiss `auto/` f’`src/sse/handlers/chat.ts`
+1. 67router jidentifika l-prefiss `auto/` f’`src/sse/handlers/chat.ts`
 2. Jinterroga l-**konnessjonijiet attivi kollha tal-fornituri** mid-database
 3. Jiffiltra għal dawk bi kredenzjali validi (ċavetta API jew token OAuth)
 4. Jiddetermina l-mudell għal kull konnessjoni (`connection.defaultModel` jew l-ewwel mudell tal-fornitur)
@@ -88,7 +88,7 @@ billi jerġa’ juża l-qari eżistenti tar-reżiljenza (qatt l-`state` mhux ipp
 - imblukkar tal-mudell — `isModelLocked(provider, connectionId, model)`
 
 Kull kandidat ikollu wkoll il-flag `excluded` ta’ din iċ-ċavetta API. L-esklużjonijiet jinħażnu
-għal kull ċavetta API (it-tabella `auto_candidate_overrides`, migrazzjoni `128`) — OmniRoute
+għal kull ċavetta API (it-tabella `auto_candidate_overrides`, migrazzjoni `128`) — 67router
 huwa għal tenant wieħed u m’għandux tabella `users`, għalhekk `apiKeyId` huwa l-eqreb
 identità reali għal kull min jagħmel sejħa — u jiġu infurzati fil-punt ta’ kontroll tal-ġabra
 ta’ kandidati f’`open-sse/services/autoCombo/virtualFactory.ts` permezz tal-funzjoni pura
@@ -174,7 +174,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Żewġ żbalji komuni:
 
 - **`auto` ma jużax il-kombinazzjonijiet tiegħek.** `auto`/`auto/*` jibni l-ġabra tiegħu stess ta’ kandidati mingħajr konfigurazzjoni u jikkonsulta l-kombinazzjonijiet persistenti biss jekk kombinazzjoni tkun litteralment jisimha `auto` (mhux rakkomandat). Biex tidderieġi t-talbiet permezz ta’ kombinazzjoni, ibgħat l-isem eżatt tagħha — mhux `auto`.
-- **`openrouter/auto` huwa prodott reali bi ħlas ta’ OpenRouter** ("Auto Best Available"), mhux alias ta’ OmniRoute. Huwa l-unika entrata statika ta’ mudell fir-reġistru ta’ OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) u jiġi ċċarġjat separatament. Uża Settings → Routing → Hide paid models biex teskludih mill-ġabriet `auto`.
+- **`openrouter/auto` huwa prodott reali bi ħlas ta’ OpenRouter** ("Auto Best Available"), mhux alias ta’ 67router. Huwa l-unika entrata statika ta’ mudell fir-reġistru ta’ OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) u jiġi ċċarġjat separatament. Uża Settings → Routing → Hide paid models biex teskludih mill-ġabriet `auto`.
 
 Ara [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) u [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) għall-konfużjoni oriġinali li dan jiddokumenta.
 
@@ -274,7 +274,7 @@ valuri riżolti jiddaħħlu fl-inputs eżistenti `config.modePack` / `config.bud
 
 ## L-Istrateġiji Kollha tar-Rotot
 
-Il-magna tal-combos ta' OmniRoute tappoġġja **20 strateġija tar-rotot** (iddikjarati f'`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Il-magna Auto Combo nnifisha hija esposta taħt l-istrateġija `auto`; l-oħrajn huma disponibbli għal combos persistiti.
+Il-magna tal-combos ta' 67router tappoġġja **20 strateġija tar-rotot** (iddikjarati f'`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Il-magna Auto Combo nnifisha hija esposta taħt l-istrateġija `auto`; l-oħrajn huma disponibbli għal combos persistiti.
 
 | Strateġija          | Deskrizzjoni                                                                                                                                                                                                                             |
 | :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -325,7 +325,7 @@ statistiku — mhux strett.
 
 Kombinazzjoni `pipeline` b’mill-inqas żewġ mudelli tista’ tagħżel ir-routing tal-pjanifikatur/eżekutur
 permezz ta’ `config.agenticOrchestration.enabled`. L-ewwel mira tieħu ħsieb l-ippjanar u t-tweġibiet finali;
-it-tieni mira toħroġ sejħiet tal-għodod nattivi għall-klijent. OmniRoute jidentifika l-kontinwazzjonijiet
+it-tieni mira toħroġ sejħiet tal-għodod nattivi għall-klijent. 67router jidentifika l-kontinwazzjonijiet
 tar-riżultati tal-għodod mill-protokoll tat-talba, jistaqsi lill-pjanifikatur jekk hemmx bżonn ċiklu ieħor
 tal-għodod, u b’mod dinamiku jagħmel jew lill-eżekutur jew lill-pjanifikatur il-pass finali
 li jidher lill-klijent.
@@ -856,11 +856,11 @@ Din is-suite titħaddem fis-CI (il-job `test:integration`) b’`--test-concurren
 
 ### Smoke tests live ikkontrollati (MHUX fis-CI — fornituri reali)
 
-| Kmand                                  | X’jagħmel                                                                                      |
-| :------------------------------------- | :--------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Routing reali fl-istess proċess b’`RUN_COMBO_LIVE=1`; jieħu snapshot ta’ DB live ta’ OmniRoute |
-| `npm run test:combo:live:vps`          | Sejħiet HTTP lejn server OmniRoute live (issettja `COMBO_LIVE_BASE_URL`)                       |
-| `npm run test:combo:live:vps:failover` | L-istess, b’xenarji intenzjonati ta’ failover                                                  |
+| Kmand                                  | X’jagħmel                                                                                     |
+| :------------------------------------- | :-------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Routing reali fl-istess proċess b’`RUN_COMBO_LIVE=1`; jieħu snapshot ta’ DB live ta’ 67router |
+| `npm run test:combo:live:vps`          | Sejħiet HTTP lejn server 67router live (issettja `COMBO_LIVE_BASE_URL`)                       |
+| `npm run test:combo:live:vps:failover` | L-istess, b’xenarji intenzjonati ta’ failover                                                 |
 
 Dawn l-smoke tests jeżerċitaw il-mogħdija reali fuq il-wire (combo → fornitur → completion). Huma
 esklużi intenzjonalment mis-CI għax jeħtieġu kredenzjali attivi u aċċess għal VPS.

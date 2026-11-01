@@ -52,7 +52,7 @@ mirovanja. Gre za isti omejevalnik hitrosti, vezan na IP in ključ, ki povzroča
 občasne napake `400 content-blocked`, ko Claude Code ali Codex CLI
 hitro zaporedoma izvede več klicev za uporabo orodij oziroma pošiljanje sporočil.
 
-## Omilitveni ukrepi, ki so že uporabljeni v OmniRoute
+## Omilitveni ukrepi, ki so že uporabljeni v 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — zaščita pred zaporednimi zahtevami, ki uveljavlja
    najmanj 500 ms presledka med izhodnimi zahtevami na kateri koli URL

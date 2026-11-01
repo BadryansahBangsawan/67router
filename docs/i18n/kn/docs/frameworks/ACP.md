@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI ಅನ್ವೇಷಣೆ**, **ಸ್ಥಳೀಯ Agent Client Protocol**, ಮತ್ತು
+67router **CLI ಅನ್ವೇಷಣೆ**, **ಸ್ಥಳೀಯ Agent Client Protocol**, ಮತ್ತು
 **ಹಳೆಯ stdio ಅಡಾಪ್ಟರ್ಗಳನ್ನು** ಪ್ರತ್ಯೇಕಿಸುತ್ತದೆ. ಸ್ಥಾಪಿಸಲಾದ ಬೈನರಿಯನ್ನು ಪತ್ತೆಹಚ್ಚುವುದರಿಂದ ಅದರ
 ದೃಢೀಕರಣ, ಮಾದರಿ ಹೊಂದಾಣಿಕೆ ಅಥವಾ ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ನಿರ್ವಹಿಸುವ ಸಿದ್ಧತೆ ಸಾಬೀತಾಗುವುದಿಲ್ಲ.
 
@@ -121,5 +121,3 @@ try {
 - [ಏಜೆಂಟ್ ಪ್ರೋಟೋಕಾಲ್ಗಳು](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI ಪ್ರಾರಂಭಿಕ ಒಪ್ಪಂದಗಳು](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ಟೂಲ್ಗಳು](../reference/CLI-TOOLS.md)
-- [A2A ಸರ್ವರ್](./A2A-SERVER.md)
-- [ಕ್ಲೌಡ್ ಏಜೆಂಟ್ಗಳು](./CLOUD_AGENT.md)

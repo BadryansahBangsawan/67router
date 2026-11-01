@@ -4,7 +4,7 @@
 
 ---
 
-Export continuu și incremental al jurnalelor de apeluri OmniRoute către un depozit extern de date analitice.
+Export continuu și incremental al jurnalelor de apeluri 67router către un depozit extern de date analitice.
 
 Fila Logs a tabloului de bord păstrează istoricul solicitărilor în SQLite (`call_logs`), acesta fiind limitat prin rotație și retenție. Exportul jurnalelor trimite periodic același set de înregistrări, astfel încât acestea să poată exista mai mult decât baza de date locală și să poată fi corelate cu alte date. BigQuery este prima destinație; conducta folosește un registru, astfel încât pot fi adăugate și alte destinații.
 
@@ -268,7 +268,7 @@ Două reguli pentru o destinație nouă:
 - `send()` **trebuie să genereze o excepție** în cazul unui eșec parțial. Rezolvarea înseamnă „destinația conține aceste rânduri”,
   iar cursorul avansează permanent dincolo de acestea.
 - O destinație care acceptă un URL furnizat de utilizator trebuie să îl valideze prin
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) înainte de preluare,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) înainte de preluare,
   la fel ca webhook-urile. BigQuery nu necesită acest lucru: gazdele sale sunt constante.
 
 ---

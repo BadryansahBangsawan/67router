@@ -36,7 +36,7 @@ function ServiceToggle({
   const loading = enabled && status.loading;
 
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex h-9 items-center gap-3 rounded-control border border-border bg-surface px-3">
       <Badge variant={loading ? "default" : online ? "success" : "error"} dot>
         {loading ? "..." : online ? t("online") : t("offline")}
       </Badge>
@@ -90,11 +90,11 @@ function TransportSelector({
   };
 
   return (
-    <Card padding="sm" className="bg-bg-subtle">
+    <Card padding="sm">
       <RadioGroup
         label={
           <span className="flex items-center gap-2">
-            <Icon name="swap_horiz" size={16} className="text-primary" />
+            <Icon name="swap_horiz" size={16} className="text-text-muted" />
             {t("transportMode")}
           </span>
         }
@@ -114,13 +114,13 @@ function TransportSelector({
         ))}
       </RadioGroup>
 
-      <div className="mt-3 rounded-md bg-surface-2 px-3 py-2 flex items-center gap-2">
+      <div className="mt-3 rounded-control border border-border bg-bg-subtle px-3 py-2 flex items-center gap-2">
         <Icon
           name={value === "stdio" ? "terminal" : "link"}
           size={14}
           className="text-text-muted"
         />
-        <code className="text-xs break-all text-text-muted">{urlMap[value]}</code>
+        <code className="break-all font-mono text-xs text-text-muted">{urlMap[value]}</code>
         {value !== "stdio" && (
           <Button
             variant="outline"
@@ -238,9 +238,22 @@ export default function McpPage() {
   return (
     <div className="flex flex-col gap-6">
       {/* Page title (lote 7 pendência 12): the shell title hides when a PageHeader is present. */}
-      <PageHeader compact title={tSidebar("mcp")} description={tSidebar("mcpSubtitle")} />
+      <PageHeader
+        compact
+        title={tSidebar("mcp")}
+        description={tSidebar("mcpSubtitle")}
+        actions={
+          <ServiceToggle
+            label="MCP"
+            status={mcpStatus}
+            enabled={mcpEnabled}
+            onToggle={() => void toggleMcp()}
+            toggling={mcpToggling}
+          />
+        }
+      />
       <Card>
-        <div className="flex items-start justify-between gap-4">
+        <div>
           <div>
             <p className="text-sm text-text-muted">
               {t("mcpIntro", { tools: 37, scopes: 13, transports: 3 })}
@@ -249,26 +262,21 @@ export default function McpPage() {
               <li>
                 {interpolateNodes(t("mcpStep1", nodeArgs(["code"])), {
                   // `{code}` is an ICU argument, not a tag (see interpolateNodes).
-                  code: <code className="text-xs">omniroute --mcp</code>,
+                  code: <code className="font-mono text-xs text-text-main">omniroute --mcp</code>,
                 })}
               </li>
               <li>{t("mcpStep2")}</li>
               <li>
                 {interpolateNodes(t("mcpStep3", nodeArgs(["code1", "code2"])), {
-                  code1: <code className="text-xs">omniroute_get_health</code>,
-                  code2: <code className="text-xs">omniroute_list_combos</code>,
+                  code1: (
+                    <code className="font-mono text-xs text-text-main">omniroute_get_health</code>
+                  ),
+                  code2: (
+                    <code className="font-mono text-xs text-text-main">omniroute_list_combos</code>
+                  ),
                 })}
               </li>
             </ol>
-          </div>
-          <div className="shrink-0">
-            <ServiceToggle
-              label="MCP"
-              status={mcpStatus}
-              enabled={mcpEnabled}
-              onToggle={() => void toggleMcp()}
-              toggling={mcpToggling}
-            />
           </div>
         </div>
       </Card>

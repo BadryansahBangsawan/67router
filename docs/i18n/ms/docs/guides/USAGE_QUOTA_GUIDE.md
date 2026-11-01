@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute menjejaki penggunaan token bagi setiap permintaan, mengira kos, menguatkuasakan kuota bagi setiap kunci API dan memaparkan analitik dalam papan pemuka. Panduan ini menerangkan cara semuanya berfungsi.
+> **TL;DR**: 67router menjejaki penggunaan token bagi setiap permintaan, mengira kos, menguatkuasakan kuota bagi setiap kunci API dan memaparkan analitik dalam papan pemuka. Panduan ini menerangkan cara semuanya berfungsi.
 
 **Sumber:**
 
@@ -17,7 +17,7 @@
 
 ## Gambaran Keseluruhan
 
-Setiap permintaan yang melalui OmniRoute menjana **rekod penggunaan** yang merekodkan:
+Setiap permintaan yang melalui 67router menjana **rekod penggunaan** yang merekodkan:
 
 - **Identiti**: kunci API, penyedia, model dan kombo yang digunakan
 - **Token**: token gesaan, token pelengkapan, token dicache dan jumlah keseluruhan
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Bagi penyedia yang tidak mengembalikan penggunaan (sesetengah penyedia kuki web), OmniRoute **menganggarkan** token menggunakan heuristik `~4 aksara bagi setiap token` (lihat `open-sse/services/autoCombo/pipelineRouter.ts`).
+Bagi penyedia yang tidak mengembalikan penggunaan (sesetengah penyedia kuki web), 67router **menganggarkan** token menggunakan heuristik `~4 aksara bagi setiap token` (lihat `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Token Dicache
 
-OmniRoute menjejaki `cached_tokens` secara berasingan daripada `prompt_tokens` kerana:
+67router menjejaki `cached_tokens` secara berasingan daripada `prompt_tokens` kerana:
 
 - Cache gesaan Anthropic mengenakan kadar yang lebih rendah untuk token dicache (10% daripada kadar biasa)
 - Sesetengah penyedia mengembalikan `cache_read_input_tokens` yang perlu ditetapkan harga secara berbeza
@@ -117,7 +117,7 @@ Data harga disegerakkan secara automatik daripada LiteLLM melalui titik akhir `/
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Bagi model tanpa data harga, OmniRoute akan **menganggarkan kos** menggunakan kadar purata dalaman (bersumberkan data harga LiteLLM).
+Bagi model tanpa data harga, 67router akan **menganggarkan kos** menggunakan kadar purata dalaman (bersumberkan data harga LiteLLM).
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute មានយន្តការភាពធន់ (resilience) បីយ៉ាងដែលខុសគ្នា ប៉ុន្តែពាក់ព័ន្ធគ្នា។ នីមួយៗមានវិសាលភាព និងគោលបំណងផ្សេងគ្នា។ រក្សាពួកវាឱ្យដាច់ដោយឡែកពីគ្នា នៅពេល debug អាកប្បកិរិយា routing ។
+67router មានយន្តការភាពធន់ (resilience) បីយ៉ាងដែលខុសគ្នា ប៉ុន្តែពាក់ព័ន្ធគ្នា។ នីមួយៗមានវិសាលភាព និងគោលបំណងផ្សេងគ្នា។ រក្សាពួកវាឱ្យដាច់ដោយឡែកពីគ្នា នៅពេល debug អាកប្បកិរិយា routing ។
 
 ![ម៉ូដែលភាពធន់ 3 ស្រទាប់](../diagrams/exported/resilience-3layers.svg)
 
@@ -189,7 +189,7 @@ header session-affinity ទាំងបីមិនដែលត្រូវប�
 
 ### Exclusive managed session connection leases
 
-**វិសាលភាព៖** client/session HTTP ដែលគ្រប់គ្រងសកម្មមួយជាម្ចាស់ការតភ្ជាប់ OmniRoute ដែលមានសិទ្ធិមួយ។
+**វិសាលភាព៖** client/session HTTP ដែលគ្រប់គ្រងសកម្មមួយជាម្ចាស់ការតភ្ជាប់ 67router ដែលមានសិទ្ធិមួយ។
 
 **គោលបំណង៖** ផ្តល់ការកាន់កាប់ការតភ្ជាប់ដោយផ្តាច់មុខយ៉ាងធន់សម្រាប់ client ដែលត្រូវការរបាំង routing រឹងនៅទូទាំងសំណើ។ នេះខុសពី session affinity ដែលជាចំណូលចិត្តបន្តភាពបែបទន់៖ lease ផ្តាច់មុខរក្សាទុកស្ថានភាពវដ្តជីវិតនៅក្នុង SQLite អនុវត្តភាពតែមួយគត់របស់ម្ចាស់សកម្មសកល និងការតភ្ជាប់សកម្ម ហើយបដិសេធ generation ដែលហួសសម័យមុនការបញ្ជូនទៅ provider។
 
@@ -197,7 +197,7 @@ header session-affinity ទាំងបីមិនដែលត្រូវប�
 
 វដ្តជីវិត (lifecycle) គឺ `POST /api/v1/session-leases` ដែលមានសកម្មភាព JSON `acquire`, `renew` និង `release`។ សំណើ inference ដែលត្រូវបានគ្រប់គ្រង (managed) បង្ហាញតម្លៃមិនស្រដាក់ (opaque) `X-OmniRoute-Lease-Owner` និង `X-OmniRoute-Lease-Generation` ដែលត្រឹមត្រូវជាក់លាក់។ ម្ចាស់ (owner) ប្រើ `vlo_` តាមដោយតួអក្សរ base64url ចំនួន 43 តួ; មានតែ hash SHA-256 របស់វាទេដែលត្រូវបានរក្សាទុក។ រាល់ dispatch fence ចុងក្រោយទាំងអស់ក៏ចង (bind) នូវ API key ID ដែលបានផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវ និង connection ID ដែលសកម្មផងដែរ។ Header គ្រប់គ្រង lease ត្រូវបានដកចេញពី log ពី snapshot សំណើដែលត្រូវបានរក្សាទុក និង header របស់ upstream executor។
 
-បើ routing ធម្មតាមាន candidate ដែលត្រូវបានគ្រប់គ្រង និងមានសិទ្ធិ ប៉ុន្តែ candidate ទំនេរទាំងអស់ត្រូវបានកាន់កាប់ដោយ active lease របស់អ្នកដទៃ (foreign) OmniRoute ត្រឡប់ HTTP `429` កូដ lease-capacity-unavailable ស្ថានភាព waiting-for-capacity និង `Retry-After` ដែលមានព្រំដែន ដែលបានបង្កើតចេញពីការផុតកំណត់ដែលពាក់ព័ន្ធឆាប់បំផុត។ ការគ្មានសិទ្ធិជ្រើសរើសធម្មតា (empty eligibility) មិនមែនជា lease contention ទេ ហើយនៅតែរក្សាអត្ថន័យ error របស់ routing ដែលមានស្រាប់។
+បើ routing ធម្មតាមាន candidate ដែលត្រូវបានគ្រប់គ្រង និងមានសិទ្ធិ ប៉ុន្តែ candidate ទំនេរទាំងអស់ត្រូវបានកាន់កាប់ដោយ active lease របស់អ្នកដទៃ (foreign) 67router ត្រឡប់ HTTP `429` កូដ lease-capacity-unavailable ស្ថានភាព waiting-for-capacity និង `Retry-After` ដែលមានព្រំដែន ដែលបានបង្កើតចេញពីការផុតកំណត់ដែលពាក់ព័ន្ធឆាប់បំផុត។ ការគ្មានសិទ្ធិជ្រើសរើសធម្មតា (empty eligibility) មិនមែនជា lease contention ទេ ហើយនៅតែរក្សាអត្ថន័យ error របស់ routing ដែលមានស្រាប់។
 
 យន្តការពាក់ព័ន្ធនៅតែដាច់ដោយឡែកពីគ្នា៖
 
@@ -219,7 +219,7 @@ header session-affinity ទាំងបីមិនដែលត្រូវប�
   connection នោះ) ចំពោះ provider ផ្សេងទៀតប្រើ `getQuotaScopedModelForProvider()` ។
 - `404` ចាក់សោម៉ូដែលដាច់ដោយឡែក (`getModelLockKey()` បង្រួម `not_found`) ។
 - status ផ្សេងទៀតទាំងអស់ — បរាជ័យ transport/server `5xx` និង `502`
-  ដែល OmniRoute បង្កើតឡើងដោយខ្លួនឯងពី quality validation — ចាក់សោតែ
+  ដែល 67router បង្កើតឡើងដោយខ្លួនឯងពី quality validation — ចាក់សោតែ
   tuple provider/connection/model **ច្បាស់លាស់** ប៉ុណ្ណោះ។ stream មិនល្អលើម៉ូដែលមួយ
   មិនមែនជាភស្តុតាងអំពី quota របស់ account ទេ; មុនច្បាប់នេះ response ទទេមួយលើ
   `codex/gpt-5.6-luna` បានដកម៉ូដែល `gpt-5*` ទាំងអស់នៃ connection នោះចេញពី
@@ -336,7 +336,7 @@ Connection ក៏អាចប្រកាសដែនកំណត់ concurrency
 
 - **ទូទាំង connection បញ្ជៀបនឹង ជាក់លាក់តាម model:** `maxConcurrent` នៅតែជាដែនកំណត់រួមទូទាំង connection។ នៅពេលទាំងពីរមានប្រសិទ្ធភាព gate ទាំងពីរត្រូវបានចាប់យកជាមួយគ្នាបែប atomic នៅក្នុង composite gate ដូចគ្នា (`global → provider → account → model`); អាកប្បកិរិយាពិតប្រាកដគឺជាដែនកំណត់ដែលតឹងរ៉ឹងជាងគេ។
 - **ការផ្គូផ្គង model-key ច្បាស់លាស់:** key គឺជា string របស់ model ដែលត្រូវបានបញ្ជូនទៅ executor បន្ទាប់ពីការដោះស្រាយ routing — ធម្មតាជា id របស់ model upstream សុទ្ធ (`glm-5`) មិនមែនជា alias `provider/model` ពីខាង client ទេ (`zai/glm-5` មិនផ្គូផ្គងនឹង `glm-5`)។ តម្លៃគឺជាដែនកំណត់ចំនួនសំណើ concurrent ជាចំនួនគត់វិជ្ជមាន។
-- **តម្រង់ជួរនៅមូលដ្ឋាន គ្មានការស្វែងរក:** សំណើដែលលើសត្រូវបានតម្រង់ជួរនៅមូលដ្ឋាន ដោយប្រើន័យ queue/timeout ដែលមានស្រាប់ (កំហុស admission ដែលមានប្រភេទ `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`)។ OmniRoute មិនស្វែងរក ឬសន្និដ្ឋាន policy របស់ upstream ទេ — វាគ្រាន់តែអនុវត្តដែនកំណត់ច្បាស់លាស់ដែល operator បានកំណត់ប៉ុណ្ណោះ។ gate របស់ model ដែលពេញមិនដែលបិទ provider និងមិនដែលបង្កើតការចាក់សោ model ជាអចិន្ត្រៃយ៍ទេ; អាកប្បកិរិយា 429/cooldown/fallback របស់ upstream នៅតែជា error backstop។
+- **តម្រង់ជួរនៅមូលដ្ឋាន គ្មានការស្វែងរក:** សំណើដែលលើសត្រូវបានតម្រង់ជួរនៅមូលដ្ឋាន ដោយប្រើន័យ queue/timeout ដែលមានស្រាប់ (កំហុស admission ដែលមានប្រភេទ `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`)។ 67router មិនស្វែងរក ឬសន្និដ្ឋាន policy របស់ upstream ទេ — វាគ្រាន់តែអនុវត្តដែនកំណត់ច្បាស់លាស់ដែល operator បានកំណត់ប៉ុណ្ណោះ។ gate របស់ model ដែលពេញមិនដែលបិទ provider និងមិនដែលបង្កើតការចាក់សោ model ជាអចិន្ត្រៃយ៍ទេ; អាកប្បកិរិយា 429/cooldown/fallback របស់ upstream នៅតែជា error backstop។
 - **វិសាលភាពក្នុងមួយ connection ក្នុងមួយ process:** ដែនកំណត់គឺក្នុងមួយ connection របស់ database ហើយត្រូវបានរក្សាទុកក្នុង memory ដូច្នេះ connection ពីរដែលប្រើគ្លី API upstream ដូចគ្នានឹងមិនសម្របសម្រួលជាមួយគ្នាទេ។
 - **មិនបានកំណត់ មានន័យថា គ្មានការផ្លាស់ប្តូរ:** ការមិនដាក់ map (ឬទុកឲ្យវាល dashboard ទទេ) មិនបន្ថែម model gate ណាមួយទេ។ ឧទាហរណ៍ការកំណត់ដោយមិនបានប្រកាសដែនកំណត់ជាសកលរបស់ provider ណាមួយ៖
 
@@ -401,7 +401,7 @@ quota_exhausted / auth_error / not_found / not_found_local:
 ### សំណាញ់សុវត្ថិភាពបើកដោយស្វ័យប្រវត្តិនៃ Rate-Limit និងការការពារការភ្ជាប់ (`rateLimitProtection`)
 
 **សំណាញ់សុវត្ថិភាពបើកដោយស្វ័យប្រវត្តិ** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, លំនាំដើម `true`):
-តាមលំនាំដើម OmniRoute បើកការការពារ rate-limit queue ដោយស្វ័យប្រវត្តិសម្រាប់ការភ្ជាប់ API-key provider សកម្មទាំងអស់ (`getProviderCategory(provider) === "apikey"`)។ នេះធានាថាសំណើចូលទៅកាន់ upstream API keys ដែលងាយរងផលប៉ះពាល់ពី rate ត្រូវបានដាក់ជួរ និងគ្រប់គ្រងល្បឿនតាមរយៈ Bottleneck ជំនួសឱ្យការផ្ទុះចូលទៅក្នុងកំហុស upstream 429 ។ សំណាញ់សុវត្ថិភាពនេះអាចត្រូវបាន override តាមរយៈអថេរបរិស្ថាន `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` បិទ, `true`/`1`/`on` បង្ខំបើក) ដែលមានអាទិភាពលើការកំណត់ dashboard ដែលបានរក្សាទុក (**Settings → Resilience** / `PATCH /api/resilience`)។
+តាមលំនាំដើម 67router បើកការការពារ rate-limit queue ដោយស្វ័យប្រវត្តិសម្រាប់ការភ្ជាប់ API-key provider សកម្មទាំងអស់ (`getProviderCategory(provider) === "apikey"`)។ នេះធានាថាសំណើចូលទៅកាន់ upstream API keys ដែលងាយរងផលប៉ះពាល់ពី rate ត្រូវបានដាក់ជួរ និងគ្រប់គ្រងល្បឿនតាមរយៈ Bottleneck ជំនួសឱ្យការផ្ទុះចូលទៅក្នុងកំហុស upstream 429 ។ សំណាញ់សុវត្ថិភាពនេះអាចត្រូវបាន override តាមរយៈអថេរបរិស្ថាន `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` បិទ, `true`/`1`/`on` បង្ខំបើក) ដែលមានអាទិភាពលើការកំណត់ dashboard ដែលបានរក្សាទុក (**Settings → Resilience** / `PATCH /api/resilience`)។
 
 **អត្ថន័យនៃ `rateLimitProtection` ក្នុងមួយការភ្ជាប់:**
 ការការពារ rate-limit ក្នុងមួយការភ្ជាប់ត្រូវបានតាមដានតាមរយៈ field boolean `rateLimitProtection` លើការភ្ជាប់ provider (រក្សាទុកជា `rate_limit_protection` ក្នុង SQLite):
@@ -735,7 +735,7 @@ rate limit ដែល bucket តាម IP គឺជាសញ្ញាដូចគ
 > agent នៅក្រោមថវិកា context 40k។ នេះជាទិដ្ឋភាពសង្ខេបសម្រាប់ agent នៃ
 > ផ្នែកខាងលើ; ផ្នែកដែលមានលេខរៀងនៅតែជាឯកសារយោងពេញលេញ។
 
-OmniRoute មានយន្តការបរាជ័យបណ្តោះអាសន្នបី ដែលទាក់ទងគ្នាប៉ុន្តែខុសគ្នា។ រក្សា
+67router មានយន្តការបរាជ័យបណ្តោះអាសន្នបី ដែលទាក់ទងគ្នាប៉ុន្តែខុសគ្នា។ រក្សា
 scope របស់ពួកវាឱ្យដាច់ពីគ្នា នៅពេល debug អាកប្បកិរិយា routing។ សូមមើល
 [គំនូសតាង resilience 3 ជាន់](../diagrams/exported/resilience-3layers.svg)
 (ប្រភព: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

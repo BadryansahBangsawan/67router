@@ -148,20 +148,8 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "AUDIO_REMOTE_PROVIDER_NODES",
     label: "Remote Audio Provider Nodes",
     description:
-      "Allow the /v1/audio/* routes to use OpenAI-compatible provider nodes hosted outside localhost. Off by default — routing audio to a remote host changes egress identity and must be an explicit operator decision. Loopback nodes are always allowed and unaffected.",
+      "Allow the /v1/audio/transcriptions route to use OpenAI-compatible provider nodes hosted outside localhost. Off by default — routing audio to a remote host changes egress identity and must be an explicit operator decision. Loopback nodes are always allowed and unaffected.",
     descriptionI18nKey: "settings.featureFlags.audioRemoteProviderNodes",
-    category: "network",
-    defaultValue: "false",
-    type: "boolean",
-    requiresRestart: false,
-    warningLevel: "danger",
-  },
-  {
-    key: "RERANK_REMOTE_PROVIDER_NODES",
-    label: "Remote Rerank Provider Nodes",
-    description:
-      "Allow POST /v1/rerank (and the memory engine's rerank step, which calls it over loopback) to use OpenAI-compatible provider nodes hosted outside localhost — a LAN box or Tailscale peer running TEI, Infinity, vLLM, etc. Off by default — routing to a remote host changes egress identity and must be an explicit operator decision. Loopback nodes are always allowed and unaffected. Remote nodes must also pass the provider outbound URL policy.",
-    descriptionI18nKey: "settings.featureFlags.rerankRemoteProviderNodes",
     category: "network",
     defaultValue: "false",
     type: "boolean",
@@ -459,7 +447,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "OMNIROUTE_ALLOW_LOCAL_PROVIDER_URLS",
     label: "Allow Local Provider URLs",
     description:
-      "Allow provider URLs on local/private addresses (127.0.0.1, localhost, LAN). On by default (OmniRoute is local-first): the guard then blocks cloud-metadata endpoints (all of 169.254.0.0/16 plus the known metadata hostnames). Disable for strict public-only blocking: private and loopback hosts are blocked too",
+      "Allow provider URLs on local/private addresses (127.0.0.1, localhost, LAN). On by default (67router is local-first): the guard then blocks cloud-metadata endpoints (all of 169.254.0.0/16 plus the known metadata hostnames). Disable for strict public-only blocking: private and loopback hosts are blocked too",
     descriptionI18nKey: "featureFlagOmnirouteAllowLocalProviderUrlsDescription",
     category: "network",
     defaultValue: "true",
@@ -507,7 +495,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "DISABLE_CONTEXT_WINDOW_CHECKS",
     label: "Disable Context Window Checks",
     description:
-      "Skip OmniRoute's local context-window and max-input-token check for direct single-model requests. Upstream providers remain responsible for enforcing their actual limits. Off by default.",
+      "Skip 67router's local context-window and max-input-token check for direct single-model requests. Upstream providers remain responsible for enforcing their actual limits. Off by default.",
     descriptionI18nKey: "featureFlagDisableContextWindowChecksDescription",
     category: "policies",
     defaultValue: "false",
@@ -543,7 +531,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "RADAR_ENABLED",
     label: "Radar",
     description:
-      "Enable the OmniRoute Radar module (catalog feed screens and sync). Off by default; enabling only unlocks the UI — data sync remains a separate opt-in.",
+      "Enable the 67router Radar module (catalog feed screens and sync). Off by default; enabling only unlocks the UI — data sync remains a separate opt-in.",
     descriptionI18nKey: "featureFlagRadarEnabledDescription",
     category: "policies",
     defaultValue: "false",
@@ -555,7 +543,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "MODEL_ENDPOINT_CAPABILITY_GATE_ENABLED",
     label: "Model Endpoint Capability Gate",
     description:
-      "Enforce trusted model endpoint tags (declared by the provider catalog, inferred from a specialty model id, or set by the operator): reject a request sent to an endpoint the model does not serve with HTTP 400 before dispatch on /v1/chat/completions, /v1/embeddings, /v1/rerank, /v1/images/generations, /v1/videos/generations, /v1/music/generations and /v1/audio/*; hide models whose tagged endpoints have no OmniRoute adapter from /v1/models; and answer the dashboard model test with 422 for such models. Off by default: endpoint tags stay informational and requests are dispatched exactly as before.",
+      "Enforce trusted model endpoint tags (declared by the provider catalog, inferred from a specialty model id, or set by the operator): reject a request sent to an endpoint the model does not serve with HTTP 400 before dispatch on /v1/chat/completions, /v1/embeddings, /v1/rerank, /v1/videos/generations, /v1/music/generations and /v1/audio/transcriptions; hide models whose tagged endpoints have no 67router adapter from /v1/models; and answer the dashboard model test with 422 for such models. Off by default: endpoint tags stay informational and requests are dispatched exactly as before.",
     descriptionI18nKey: "featureFlagModelEndpointCapabilityGateEnabledDescription",
     category: "policies",
     defaultValue: "false",
@@ -947,18 +935,6 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     warningLevel: "caution",
   },
   {
-    key: "BATCH_AND_FILE_AUTO_CLEANUP_ENABLED",
-    label: "Batch & File Auto-Cleanup",
-    description:
-      "Let the automatic cleanup sweep delete terminal (completed/failed/cancelled/expired) Batch API jobs older than OMNIROUTE_BATCH_RETENTION_DAYS, along with their per-line checkpoints, and clear the BLOB content of uploaded files past their own expires_at. Off by default: every existing install keeps this data exactly as before until an operator opts in. The operator-triggered DELETE /api/v1/batches/delete-completed route is unaffected either way -- it is a separate, unconditional public API contract.",
-    descriptionI18nKey: "featureFlagBatchAndFileAutoCleanupEnabledDescription",
-    category: "runtime",
-    defaultValue: "false",
-    type: "boolean",
-    requiresRestart: false,
-    warningLevel: "danger",
-  },
-  {
     key: "ANTIGRAVITY_ACCOUNT_LEASE_ENABLED",
     label: "Antigravity Account Lease",
     description:
@@ -1022,7 +998,7 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     key: "LMARENA_SYNTHESIZED_CX_ENABLED",
     label: "Arena Synthesized cx Telemetry",
     description:
-      "Attach a synthesized programmatic cx client-interaction blob (the value arena.ai itself sends for a page with no recorded interaction) to every Arena (lmarena) create-evaluation request that has no operator-supplied providerSpecificData.cx. Off by default: the cx field is an Arena anti-automation signal, so OmniRoute only forwards a value the operator captured from a real browser session (providerSpecificData.cx) and otherwise sends no cx at all. Unproven upstream benefit; enable only if Arena starts rejecting requests without cx.",
+      "Attach a synthesized programmatic cx client-interaction blob (the value arena.ai itself sends for a page with no recorded interaction) to every Arena (lmarena) create-evaluation request that has no operator-supplied providerSpecificData.cx. Off by default: the cx field is an Arena anti-automation signal, so 67router only forwards a value the operator captured from a real browser session (providerSpecificData.cx) and otherwise sends no cx at all. Unproven upstream benefit; enable only if Arena starts rejecting requests without cx.",
     descriptionI18nKey: "featureFlagLmarenaSynthesizedCxEnabledDescription",
     category: "runtime",
     defaultValue: "false",
@@ -1054,24 +1030,12 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     requiresRestart: false,
     warningLevel: "caution",
   },
-  {
-    key: "IMAGE_GENERATION_LONG_JOBS",
-    label: "Image Generation: Long Jobs",
-    description:
-      "For OpenAI-compatible image generation: use the connection's timeout (providerSpecificData.timeoutMs), else the central upstream fetch timeout (FETCH_TIMEOUT_MS, then REQUEST_TIMEOUT_MS, default 600 s) instead of the fixed 120 s image budget; end a request the caller cancelled with 499; and let the Playground receive long image jobs as an SSE stream with keepalive heartbeats. Off by default: the fixed budget applies and caller cancellation is not propagated. The deadline covering the response body read is always on.",
-    descriptionI18nKey: "featureFlagImageGenerationLongJobsDescription",
-    category: "runtime",
-    defaultValue: "false",
-    type: "boolean",
-    requiresRestart: false,
-    warningLevel: "caution",
-  },
 
   {
     key: "CATALOG_MIRROR_REFINEMENTS_ENABLED",
     label: "Catalog Mirror Refinements",
     description:
-      "Refine the claude/ discovery and functional-gateway mirrors on /v1/models. Off by default: both mirror passes behave exactly as before. On: claude/ discovery mirrors also cover listed reasoning-effort variants (-low/-medium/-high/-xhigh), skip built-in auto/* ids the request path cannot materialize and skip an alias already listed; functional-gateway mirrors skip combos and OmniRoute-synthesized ids (claude/, no-think/), take the owner from owned_by, never use the owner as its own gateway, skip gateways disabled in blockedProviders and models outside a gateway's authoritative live catalog.",
+      "Refine the claude/ discovery and functional-gateway mirrors on /v1/models. Off by default: both mirror passes behave exactly as before. On: claude/ discovery mirrors also cover listed reasoning-effort variants (-low/-medium/-high/-xhigh), skip built-in auto/* ids the request path cannot materialize and skip an alias already listed; functional-gateway mirrors skip combos and 67router-synthesized ids (claude/, no-think/), take the owner from owned_by, never use the owner as its own gateway, skip gateways disabled in blockedProviders and models outside a gateway's authoritative live catalog.",
     descriptionI18nKey: "featureFlagCatalogMirrorRefinementsEnabledDescription",
     category: "runtime",
     defaultValue: "false",
@@ -1162,17 +1126,6 @@ export const FEATURE_FLAG_DEFINITIONS: FeatureFlagDefinition[] = [
     type: "boolean",
     requiresRestart: false,
     warningLevel: "info",
-  },
-  {
-    key: "SKILLS_SANDBOX_NETWORK_ENABLED",
-    label: "Skills Sandbox Network",
-    description: "Enable network access in the skills sandbox environment",
-    descriptionI18nKey: "featureFlagSkillsSandboxNetworkEnabledDescription",
-    category: "health",
-    defaultValue: "false",
-    type: "boolean",
-    requiresRestart: false,
-    warningLevel: "caution",
   },
   {
     key: "PROXY_HEALTH_BLOCKED_RESETS_STREAK",

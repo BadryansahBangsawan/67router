@@ -6,7 +6,7 @@
 
 ## Muhtasari
 
-Redis ni **tegemezi la hiari, lisilo la lazima** katika OmniRoute — programu huendelea kufanya kazi kwa utaratibu mbadala (uhifadhi wa ndani ya kumbukumbu)
+Redis ni **tegemezi la hiari, lisilo la lazima** katika 67router — programu huendelea kufanya kazi kwa utaratibu mbadala (uhifadhi wa ndani ya kumbukumbu)
 wakati Redis haipatikani. Katika mazingira ya uzalishaji, kusanidi Redis kwa ufanisi hupunguza muda wa kusubiri kwa aina nne tofauti za
 mizigo ya kazi:
 
@@ -17,7 +17,7 @@ mizigo ya kazi:
 | Hifadhi ya mgao                  | `redisQuotaStore.ts`          | Singleton tofauti ya `getRedisClient(url)`                            | `<prefix>quota:*` inayoweza kusanidiwa kwa kila instansi            |
 | Kivunja saketi cha upashaji joto | `redisCircuitBreakerStore.ts` | Kiteja tofauti katika `circuitBreakerFactory.ts`                      | `<prefix>warmup:cb:<connectionId>`                                  |
 
-Mizigo yote minne ya kazi hutumia kiambishi awali kimoja cha nafasi ya majina ili OmniRoute iweze kutumika pamoja na programu nyingine kwenye
+Mizigo yote minne ya kazi hutumia kiambishi awali kimoja cha nafasi ya majina ili 67router iweze kutumika pamoja na programu nyingine kwenye
 instansi moja ya Redis (k.m. `127.0.0.1:6379`). Tazama [Upangaji wa Nafasi za Majina za Funguo](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ instansi moja ya Redis (k.m. `127.0.0.1:6379`). Tazama [Upangaji wa Nafasi za Ma
 
 ## Upangaji wa Nafasi za Majina za Funguo
 
-OmniRoute hutumia instansi ya Redis kwa pamoja na huduma nyingine zozote zinazoendeshwa kwenye seva. Bila nafasi ya majina,
+67router hutumia instansi ya Redis kwa pamoja na huduma nyingine zozote zinazoendeshwa kwenye seva. Bila nafasi ya majina,
 funguo kama `auth:api_key:<sha256>` au `rl:*` zinaweza kugongana na funguo za programu nyingine
 zinazotumia Redis hiyo hiyo (instansi hii huendesha Redis kwenye `127.0.0.1:6379` pamoja na huduma nyingine).
 
-Weka `REDIS_KEY_PREFIX` kuwa mfuatano usio tupu ili kuweka kiambishi awali kwa **kila** ufunguo wa OmniRoute:
+Weka `REDIS_KEY_PREFIX` kuwa mfuatano usio tupu ili kuweka kiambishi awali kwa **kila** ufunguo wa 67router:
 
 ```bash
-# .env — funguo zote za OmniRoute zinakuwa omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — funguo zote za 67router zinakuwa omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # acha nafasi kwa akiba ya kurasa ya OS
 maxmemory-policy allkeys-lru         # ondoa maingizo ya zamani ya akiba ya uthibitishaji kumbukumbu inapobanwa
 
-# Uhifadhi endelevu (si lazima — OmniRoute ni salama dhidi ya hitilafu hata bila huu)
+# Uhifadhi endelevu (si lazima — 67router ni salama dhidi ya hitilafu hata bila huu)
 save 300 1                           # tengeneza snapshot angalau kila dakika 5 ikiwa ≥1 key imebadilika
 appendonly no                        # AOF haihitajiki; data inaweza kutengenezwa upya
 appendfsync no                       # hakuna gharama ya ziada ya fsync (RDB inatosha)

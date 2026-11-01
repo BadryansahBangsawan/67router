@@ -73,10 +73,10 @@ export function formatManualLaunchHint(profileDir, platform = process.platform) 
   if (platform === "win32") {
     return (
       `$env:CLAUDE_CONFIG_DIR="${profileDir}"; ` +
-      `$env:ANTHROPIC_AUTH_TOKEN="<your OmniRoute key>"; claude`
+      `$env:ANTHROPIC_AUTH_TOKEN="<your 67router key>"; claude`
     );
   }
-  return `CLAUDE_CONFIG_DIR="${profileDir}" ANTHROPIC_AUTH_TOKEN="<your OmniRoute key>" claude`;
+  return `CLAUDE_CONFIG_DIR="${profileDir}" ANTHROPIC_AUTH_TOKEN="<your 67router key>" claude`;
 }
 
 /**
@@ -94,7 +94,7 @@ export function inheritedAnthropicKeyWarning(env = process.env) {
   if (!key || !String(key).trim()) return null;
   return (
     "ANTHROPIC_API_KEY is set in this shell. Claude Code sends it as x-api-key and asks " +
-    "\"Detected a custom API key in your environment\" — if ANTHROPIC_BASE_URL is not " +
+    '"Detected a custom API key in your environment" — if ANTHROPIC_BASE_URL is not ' +
     "picked up, that key goes to api.anthropic.com and you get a real Anthropic 401. " +
     "Unset it, or use `omniroute launch --profile <name>` (it strips every inherited " +
     "ANTHROPIC_* var before spawning claude)."
@@ -254,7 +254,7 @@ export async function runSetupClaudeCommand(opts = {}) {
   const profilesRoot = join(claudeHome, "profiles");
   const dryRun = Boolean(opts.dryRun ?? opts["dry-run"]);
 
-  printHeading("OmniRoute → Claude Code profile generator");
+  printHeading("67router → Claude Code profile generator");
   printInfo(`Connecting to ${baseUrl} …`);
 
   const guard = await guardHostConfigTarget(profilesRoot, {
@@ -288,8 +288,8 @@ export async function runSetupClaudeCommand(opts = {}) {
   } catch (err) {
     printError(`Failed to fetch models: ${err.message}`);
     printInfo(
-      "Make sure OmniRoute is running and the --remote URL is correct.\n" +
-        "You may also need --api-key if OmniRoute requires authentication."
+      "Make sure 67router is running and the --remote URL is correct.\n" +
+        "You may also need --api-key if 67router requires authentication."
     );
     return 1;
   }
@@ -352,12 +352,12 @@ export function registerSetupClaude(program) {
   program
     .command("setup-claude")
     .description(
-      "Fetch the live model catalog from OmniRoute (local or remote VPS) and generate " +
+      "Fetch the live model catalog from 67router (local or remote VPS) and generate " +
         "~/.claude/profiles/<name>/ Claude Code profiles (CLAUDE_CONFIG_DIR) for each model"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key (defaults to OMNIROUTE_API_KEY env var)")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key (defaults to OMNIROUTE_API_KEY env var)")
     .option("--claude-home <dir>", "Claude home dir (default: ~/.claude)")
     .option(
       "--only <patterns>",

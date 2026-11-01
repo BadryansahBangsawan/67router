@@ -4,7 +4,7 @@
 
 ---
 
-> **Pe scurt**: `open-sse/` este motorul principal de streaming care gestionează fiecare solicitare LLM din OmniRoute. Conține aproximativ 1.400 de fișiere care implementează fluxul de procesare a solicitărilor, executorii, serviciile, serverul MCP și stratul de traducere. Acest ghid explică modul în care componentele se îmbină.
+> **Pe scurt**: `open-sse/` este motorul principal de streaming care gestionează fiecare solicitare LLM din 67router. Conține aproximativ 1.400 de fișiere care implementează fluxul de procesare a solicitărilor, executorii, serviciile, serverul MCP și stratul de traducere. Acest ghid explică modul în care componentele se îmbină.
 
 **Sursă:** `open-sse/` (pachet al spațiului de lucru, aproximativ 1.440 de fișiere `.ts` care nu sunt de test)
 
@@ -12,10 +12,10 @@
 
 ## De ce un pachet separat în spațiul de lucru?
 
-`open-sse/` este un **spațiu de lucru autonom** în monorepo-ul OmniRoute din mai multe motive:
+`open-sse/` este un **spațiu de lucru autonom** în monorepo-ul 67router din mai multe motive:
 
 1. **Reutilizare** — `open-sse` este publicat ca `@omniroute/open-sse` pe npm, astfel încât alte proiecte îl pot utiliza independent
-2. **Delimitări clare** — motorul de streaming este decuplat de stratul UI/DB specific OmniRoute
+2. **Delimitări clare** — motorul de streaming este decuplat de stratul UI/DB specific 67router
 3. **Performanță** — motorul nu are dependențe Next.js, permițând porniri la rece mai rapide în contexte CLI/serverless
 4. **Versionare** — `open-sse` poate publica versiuni în propriul ritm
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### De ce un transformator separat?
 
-Responses API este noul format OpenAI, cu **conversații cu stare** (`previous_response_id`). Când un client trimite o solicitare Responses, OmniRoute:
+Responses API este noul format OpenAI, cu **conversații cu stare** (`previous_response_id`). Când un client trimite o solicitare Responses, 67router:
 
 1. Convertește intern Responses → Chat Completions
 2. Trimite solicitarea furnizorului (oricărui furnizor care acceptă Chat Completions)
@@ -573,5 +573,4 @@ Motorul de rutare are bugete stricte de performanță:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — prezentare director cu director
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — evaluare bazată pe 16 factori
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Sursă: `open-sse/` (peste 400 de fișiere, ~143K linii de cod)

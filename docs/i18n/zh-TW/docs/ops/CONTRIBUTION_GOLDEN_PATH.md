@@ -108,7 +108,7 @@ npm run lint
 - CLI 目錄另行存放於 `bin/cli/locales/` 下。
 - 請完整保留 ICU 預留位置及標籤。請勿翻譯產品／提供者／模型名稱、
   通訊協定與標頭名稱、命令、程式碼／JSON 識別碼、URL、環境變數，或
-  `OmniRoute`、`OAuth`、`MCP` 及 `A2A` 等受保護詞彙。目前的來源清單為
+  `67router`、`OAuth`、`MCP` 及 `A2A` 等受保護詞彙。目前的來源清單為
   `scripts/i18n/glossary/protected-terms.json`。
 
 **重點迴圈**
@@ -248,7 +248,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # 重複使用在其他�
 - **回復。** `run` 會再次驗證推廣後的槽位；若該檢查失敗，便會交換 `current` 與
   `previous` 以回復原狀。未通過第一次驗證的候選版本絕不會被推廣。
 
-所有內容都會寫入已由 git 忽略的 `_artifacts/candidate/`；現有的 OmniRoute 安裝及其資料目錄
+所有內容都會寫入已由 git 忽略的 `_artifacts/candidate/`；現有的 67router 安裝及其資料目錄
 絕不會受到影響。推廣後的 CLI 位於 `_artifacts/candidate/current/prefix/bin/omniroute`；
 使用時請以您自己的 `DATA_DIR` 啟動它。結束代碼：`0` 表示成功，`1` 表示驗證或推廣失敗，
 `2` 表示用法錯誤或缺少建置成品。

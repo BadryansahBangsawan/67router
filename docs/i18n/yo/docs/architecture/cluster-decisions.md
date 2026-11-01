@@ -14,7 +14,7 @@
 
 ## Ìdí tí èyí fi jẹ́ ọ̀nà ìṣọ́ra
 
-Ìṣètò ìmúlò OmniRoute tó wà tẹ́lẹ̀ ti fẹ́rẹ̀ẹ́ tó, ó sì ti jẹ́rìí pé ó ṣiṣẹ́ dáadáa:
+Ìṣètò ìmúlò 67router tó wà tẹ́lẹ̀ ti fẹ́rẹ̀ẹ́ tó, ó sì ti jẹ́rìí pé ó ṣiṣẹ́ dáadáa:
 
 - **`redis:7-alpine`** ń bójú tó iṣẹ́ ìdíwọ̀n-oṣùwọ̀n/cache ní ìwọ̀n iṣelọpọ.
 - **SQLite + sqlite-vec + FTS5** ń bójú tó memory agbègbè + vector + ìṣàwárí ọ̀rọ̀ (wo [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@
 
 - O ń ṣiṣẹ́ àwọn replica `omniroute` ≥3, o sì fẹ́ kí a ṣe àárín gbùngbùn fún yíyí provider nínú process Go kan ṣoṣo.
 - O fẹ́ ojú-ọ̀nà audit/ìforúkọsílẹ̀ kan ṣoṣo fún àwọn ìbéèrè sí upstream-provider láti gbogbo replica.
-- O fẹ́ ìfẹ̀síwájú petele ti ipele routing Tier-1 láìdá lórí àwọn replica OmniRoute.
+- O fẹ́ ìfẹ̀síwájú petele ti ipele routing Tier-1 láìdá lórí àwọn replica 67router.
 
 **Ohun tí ó ń ṣàfikún:**
 

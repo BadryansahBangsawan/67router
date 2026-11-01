@@ -4,7 +4,7 @@
 
 ---
 
-Les fournisseurs Web Cookie permettent à OmniRoute d’utiliser un service d’IA via votre session de navigateur existante plutôt qu’avec une clé API. Ils sont utiles lorsque vous avez déjà accès à un service par l’intermédiaire de son site web et que vous souhaitez qu’OmniRoute utilise la même session authentifiée.
+Les fournisseurs Web Cookie permettent à 67router d’utiliser un service d’IA via votre session de navigateur existante plutôt qu’avec une clé API. Ils sont utiles lorsque vous avez déjà accès à un service par l’intermédiaire de son site web et que vous souhaitez que 67router utilise la même session authentifiée.
 
 Contrairement aux fournisseurs utilisant une clé API, les fournisseurs Web Cookie s’authentifient à l’aide des identifiants que votre navigateur envoie au site web.
 
@@ -49,7 +49,7 @@ Outils de développement
 
 L’en-tête de requête `Cookie` contient les informations d’authentification exactes que votre navigateur a utilisées avec succès.
 
-Pour la plupart des fournisseurs Web Cookie, il s’agit de la valeur à coller dans OmniRoute.
+Pour la plupart des fournisseurs Web Cookie, il s’agit de la valeur à coller dans 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Le processus de configuration est identique pour la plupart des fournisseurs Web
 4. Actualisez la page.
 5. Ouvrez une requête authentifiée de chat ou de conversation.
 6. Copiez les identifiants d’authentification requis.
-7. Ouvrez OmniRoute.
+7. Ouvrez 67router.
 8. Accédez à **Fournisseurs → Ajouter un fournisseur**.
 9. Sélectionnez votre fournisseur Web Cookie.
 10. Collez les identifiants.
@@ -92,17 +92,17 @@ Les différents sites web stockent les informations d’authentification de diff
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) est une plateforme gratuite de chat grand public ne nécessitant aucune inscription — la session est créée anonymement lors de la première visite et persiste grâce à trois cookies : `uid`, `si_usr_id` et `si_ses_id`. OmniRoute transmet le même point de terminaison `/api/dispatch` via un identifiant de modèle unique (`notrack-c`, alias `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) est une plateforme gratuite de chat grand public ne nécessitant aucune inscription — la session est créée anonymement lors de la première visite et persiste grâce à trois cookies : `uid`, `si_usr_id` et `si_ses_id`. 67router transmet le même point de terminaison `/api/dispatch` via un identifiant de modèle unique (`notrack-c`, alias `ntw`).
 
 ### Étapes de connexion
 
 1. Ouvrez [notrack.ai](https://notrack.ai) dans votre navigateur et laissez le cookie de session anonyme être défini.
 2. Ouvrez les **Outils de développement → Réseau**, actualisez la page et cliquez sur n’importe quelle requête `/api`.
 3. Dans les **En-têtes de requête**, copiez la valeur complète de l’en-tête `Cookie`.
-4. Dans OmniRoute, accédez à **Fournisseurs → Ajouter un fournisseur → NoTrack Web (gratuit)**.
+4. Dans 67router, accédez à **Fournisseurs → Ajouter un fournisseur → NoTrack Web (gratuit)**.
 5. Collez la chaîne de cookies dans le champ `apiKey`, puis cliquez sur **Enregistrer**.
 
-OmniRoute extrait `uid`, `si_usr_id` et `si_ses_id` de la chaîne collée, puis reconstruit un en-tête `Cookie` propre contenant uniquement ces paires — ainsi que `nt_session` (le jeton `ntk_…` défini pour les comptes connectés), le cas échéant. Si l’un des trois est manquant, la chaîne brute collée est transmise sans modification afin que les opérateurs puissent tester d’autres formats.
+67router extrait `uid`, `si_usr_id` et `si_ses_id` de la chaîne collée, puis reconstruit un en-tête `Cookie` propre contenant uniquement ces paires — ainsi que `nt_session` (le jeton `ntk_…` défini pour les comptes connectés), le cas échéant. Si l’un des trois est manquant, la chaîne brute collée est transmise sans modification afin que les opérateurs puissent tester d’autres formats.
 
 ### Identifiants de modèle
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Le cookie fonctionne dans le navigateur, mais pas dans OmniRoute
+## Le cookie fonctionne dans le navigateur, mais pas dans 67router
 
 Certains fournisseurs incluent des cookies qui ne sont envoyés que lors des requêtes authentifiées.
 

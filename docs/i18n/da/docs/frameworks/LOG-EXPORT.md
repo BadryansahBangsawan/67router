@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuerlig, trinvis eksport af OmniRoute-opkaldslogfiler til et eksternt analyselager.
+Kontinuerlig, trinvis eksport af 67router-opkaldslogfiler til et eksternt analyselager.
 
 Fanen Logs i dashboardet gemmer anmodningshistorikken i SQLite (`call_logs`), som er begrænset af
 rotation og opbevaring. Logeksport sender det samme datasæt ud efter en tidsplan, så det kan bevares
@@ -280,7 +280,7 @@ To regler for en ny destination:
 - `send()` **skal udløse en fejl** ved delvis fejl. Hvis funktionen returnerer normalt, betyder det, at "destinationen har disse rækker",
   og markøren flyttes permanent forbi dem.
 - En destination, der accepterer en brugerangivet URL, skal validere den via
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) før hentning,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) før hentning,
   på samme måde som webhooks gør. BigQuery behøver ikke dette: dens værter er konstanter.
 
 ---

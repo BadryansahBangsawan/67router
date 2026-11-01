@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Slovenščina)
+# 67router MCP Server Documentation (Slovenščina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Namestitev
 
-OmniRoute MCP je vgrajen. Zaženite ga z:
+67router MCP je vgrajen. Zaženite ga z:
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ Za nastavitev Claude Desktop, Cursor, Cline in združljivih odjemalcev MCP glejt
 | `omniroute_switch_combo`        | `write:combos`        | Aktiviranje ali deaktiviranje kombinacije                                                                                             |
 | `omniroute_create_combo`        | `write:combos`        | Ustvarjanje preverjene kombinacije prek obstoječega API-ja za kombinacije                                                             |
 | `omniroute_check_quota`         | `read:quota`          | Porabljena/skupna kvota, odstotek preostanka, čas ponastavitve, stanje žetona                                                         |
-| `omniroute_route_request`       | `execute:completions` | Pošiljanje zahteve za dokončanje klepeta prek usmerjanja OmniRoute                                                                    |
+| `omniroute_route_request`       | `execute:completions` | Pošiljanje zahteve za dokončanje klepeta prek usmerjanja 67router                                                                     |
 | `omniroute_cost_report`         | `read:usage`          | Poročilo o stroških po obdobju (seja/dan/teden/mesec)                                                                                 |
 | `omniroute_list_models_catalog` | `read:models`         | Celoten katalog modelov z zmogljivostmi, stanjem in cenami                                                                            |
 | `omniroute_radar_catalog`       | `read:radar`          | Lokalni podpisani katalog Radar; izbirni filtri po ponudniku/družini                                                                  |
@@ -151,7 +151,7 @@ in so označene z `source: "mcp_metadata_estimate"`.
 
 ### Filter drevesa dostopnosti MCP (v3.8.0)
 
-Neodvisno od zgornjih orodij za stiskanje OmniRoute vključuje filter po izvedbi, ki
+Neodvisno od zgornjih orodij za stiskanje 67router vključuje filter po izvedbi, ki
 stisne **rezultate orodij** brskalniških orodij/orodij za dostopnost MCP, preden so vrnjeni
 agentu. Ta filter sam po sebi ni orodje — pregledno se izvede nad vsakim rezultatom orodja, ki vsebuje
 obsežno besedilo drevesa dostopnosti ali posnetka brskalnika (≥2000 znakov).
@@ -243,17 +243,6 @@ Za celoten katalog in navodila, kako ga uporabljajo zunanji agenti, glejte [AGEN
 Zgornji inventar orodij MCP (110 edinstvenih orodij, izračunanih s `countUniqueMcpTools()`) je namenoma
 omejen na izvajalne operacije usmerjanja/predpomnjenja/stiskanja/pomnilnika/veščin/posredniškega strežnika/vira konteksta. Dve sosednji
 ogrodji sta v v3.8.0 dobavljeni skupaj s strežnikom MCP in dokumentirani ločeno:
-
-### Agenti v oblaku
-
-Agenti v oblaku so zunanji agenti AI za programiranje (codex-cloud, cursor-cloud, devin, jules), povezani z
-OmniRoute prek istega modela povezave, ki se uporablja za ponudnike LLM. Izpostavljeni so prek
-lastnega vmesnika REST (`/api/v1/agents/*`) in **niso** del kataloga orodij MCP
-— klic agenta v oblaku ne uporablja obsega MCP.
-
-- Implementacija: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Življenjski cikel: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentacija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Varovalni mehanizmi
 
@@ -425,8 +414,6 @@ Vsako orodje zahteva določene obsege:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | 13 orodij za branje — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 orodij za pisanje — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -480,7 +467,7 @@ lokalne klicatelje oziroma klicatelje prek stdio ostane obstoječe vedenje, omej
 
 | Spremenljivka                           | Privzeto                           | Namen                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | :-------------------------------------- | :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | Osnovni URL, ki ga strežnik MCP uporablja pri klicanju notranjih API-jev OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | Osnovni URL, ki ga strežnik MCP uporablja pri klicanju notranjih API-jev 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `OMNIROUTE_API_KEY`                     | (prazno)                           | Ključ API, posredovan notranjim klicem API kot `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (omogoči ga samo `"true"`) | Ko je omogočeno, manjkajoči obsegi zavrnejo klice orodij in v revizijski dnevnik zapišejo `scope_denied:<reason>`. Uveljavljanje je ne glede na to zastavico PRAV TAKO vedno prisilno omogočeno za vsakega klicatelja HTTP/SSE, razrešenega iz glave Authorization za posamezen ključ (`source === "authInfo"`), ki nima polnega obsega `manage`/`admin` — npr. ključ, ki ima le ozki obseg za obhod `mcp:connect` — zato je ta privzeta nastavitev varna samo za lokalni tok stdio z enim upravljavcem, nikoli pa za oddaljeni dostop zunaj povratne zanke |
 | `OMNIROUTE_MCP_SCOPES`                  | (prazno)                           | Z vejicami ločen seznam dovoljenih obsegov, ki se privzeto štejejo za »razpoložljive« (uporabi se, kadar klicatelj ne navede lastnih obsegov)                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -583,7 +570,6 @@ Za pregled nedavnih klicev uporabite nadzorno ploščo ali končni točki REST `
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definicije orodij za veščine (4 orodja)                                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definicije orodij za kontekstni vir Notion (6 orodij)                               |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definicije orodij za igrifikacijo (8 orodij)                                        |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Orodja za registracijo in upravljanje vtičnikov (8 orodij)                          |
 | `src/app/api/mcp/status/route.ts`                                        | Končna točka `/api/mcp/status`                                                      |
 | `src/app/api/mcp/tools/route.ts`                                         | Končna točka `/api/mcp/tools`                                                       |
 | `src/app/api/mcp/sse/route.ts`                                           | Pot prenosa SSE `/api/mcp/sse`                                                      |

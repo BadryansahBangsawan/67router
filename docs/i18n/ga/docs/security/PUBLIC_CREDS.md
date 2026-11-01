@@ -15,7 +15,7 @@
 - [OAuth 2.0 d'aipeanna dúchasacha (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — tá OAuth client_id / client_secret d'aipeanna suiteáilte poiblí; is é PKCE a sholáthraíonn an tslándáil iarbhír.
 - [Eochracha Firebase API](https://firebase.google.com/docs/projects/api-keys) — tá aitheantóirí cliant Gréasáin poiblí de réir dearaidh.
 
-Ní mór do OmniRoute na luachanna seo a leabú ionas go mbeidh sreabhadh OAuth oibre ar fáil láithreach d'úsáideoirí nach gcumraíonn `.env`. Gan luach leabaithe cúltaca, stopann na soláthraithe Gemini / Antigravity de bheith ag obair d'aon úsáideoir a leanann an cur chuige "déan clónáil agus rith é".
+Ní mór do 67router na luachanna seo a leabú ionas go mbeidh sreabhadh OAuth oibre ar fáil láithreach d'úsáideoirí nach gcumraíonn `.env`. Gan luach leabaithe cúltaca, stopann na soláthraithe Gemini / Antigravity de bheith ag obair d'aon úsáideoir a leanann an cur chuige "déan clónáil agus rith é".
 
 Mar sin féin, aimsíonn **GitHub Secret Scanning**, **Semgrep**, agus scanóirí patrún comhchosúla luachanna liteartha amhail `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com`. Déantar sruth callánach de dhearbhuithe bréagacha de gach eisiúint, cuireann cosaint brúite bac ar thiomantais dhlisteanacha, agus scoireann oibreoirí de mhuinín a bheith acu as an bhfotha foláireamh.
 

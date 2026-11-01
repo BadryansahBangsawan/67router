@@ -1,4 +1,5 @@
 import type {
+  LegacySidebarSectionId,
   SidebarItemDefinition,
   SidebarItemGroup,
   SidebarSectionChild,
@@ -78,13 +79,6 @@ const OMNI_PROXY_ITEMS: readonly SidebarItemDefinition[] = [
     i18nKey: "providerQuota",
     subtitleKey: "providerQuotaSubtitle",
     icon: "tune",
-  },
-  {
-    id: "costs-quota-share",
-    href: "/dashboard/costs/quota-share",
-    i18nKey: "costsQuotaShare",
-    subtitleKey: "costsQuotaShareSubtitle",
-    icon: "pie_chart",
   },
 ];
 
@@ -246,13 +240,6 @@ const TOOLS_GROUP: SidebarItemGroup = {
       icon: "device_hub",
     },
     {
-      id: "cloud-agents",
-      href: "/dashboard/cloud-agents",
-      i18nKey: "cloudAgents",
-      subtitleKey: "cloudAgentsSubtitle",
-      icon: "cloud",
-    },
-    {
       id: "conductor",
       href: "/dashboard/conductor",
       i18nKey: "conductor",
@@ -304,13 +291,6 @@ const INTEGRATIONS_GROUP: SidebarItemGroup = {
       i18nKey: "apiEndpoints",
       subtitleKey: "apiEndpointsSubtitle",
       icon: "api",
-    },
-    {
-      id: "webhooks",
-      href: "/dashboard/webhooks",
-      i18nKey: "webhooks",
-      subtitleKey: "webhooksSubtitle",
-      icon: "webhook",
     },
     {
       id: "log-export",
@@ -374,13 +354,6 @@ const ANALYTICS_ITEMS: readonly SidebarItemDefinition[] = [
     i18nKey: "analyticsSearch",
     subtitleKey: "analyticsSearchSubtitle",
     icon: "manage_search",
-  },
-  {
-    id: "analytics-evals",
-    href: "/dashboard/analytics/evals",
-    i18nKey: "analyticsEvals",
-    subtitleKey: "analyticsEvalsSubtitle",
-    icon: "labs",
   },
   {
     id: "provider-stats",
@@ -498,13 +471,6 @@ const COSTS_ITEMS: readonly SidebarItemDefinition[] = [
     icon: "price_change",
   },
   {
-    id: "costs-budget",
-    href: "/dashboard/costs/budget",
-    i18nKey: "costsBudget",
-    subtitleKey: "costsBudgetSubtitle",
-    icon: "savings",
-  },
-  {
     id: "costs-free-tiers",
     href: "/dashboard/free-tiers",
     i18nKey: "costsFreeTiers",
@@ -548,13 +514,6 @@ const AUDIT_GROUP: SidebarItemGroup = {
       subtitleKey: "auditMcpSubtitle",
       icon: "security",
     },
-    {
-      id: "audit-a2a",
-      href: "/dashboard/audit/a2a",
-      i18nKey: "auditA2a",
-      subtitleKey: "auditA2aSubtitle",
-      icon: "device_hub",
-    },
   ],
 };
 
@@ -565,13 +524,6 @@ const DEVTOOLS_ITEMS: readonly SidebarItemDefinition[] = [
     i18nKey: "translator",
     subtitleKey: "translatorSubtitle",
     icon: "translate",
-  },
-  {
-    id: "playground",
-    href: "/dashboard/playground",
-    i18nKey: "playground",
-    subtitleKey: "playgroundSubtitle",
-    icon: "science",
   },
   {
     id: "search-tools",
@@ -592,13 +544,6 @@ const MCP_ITEM: SidebarItemDefinition = {
 
 const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
   {
-    id: "memory",
-    href: "/dashboard/memory",
-    i18nKey: "memory",
-    subtitleKey: "memorySubtitle",
-    icon: "psychology",
-  },
-  {
     id: "agent-skills",
     href: "/dashboard/agent-skills",
     i18nKey: "agentSkills",
@@ -614,28 +559,7 @@ const AGENTIC_FEATURES_ITEMS: readonly SidebarSectionChild[] = [
     subtitleFallback: "Multi-model parallel execution",
     icon: "blender",
   },
-  {
-    id: "skills",
-    href: "/dashboard/omni-skills",
-    i18nKey: "omniSkills",
-    subtitleKey: "omniSkillsSubtitle",
-    icon: "auto_fix_high",
-  },
   MCP_ITEM,
-  {
-    id: "a2a",
-    href: "/dashboard/a2a",
-    i18nKey: "a2a",
-    subtitleKey: "a2aSubtitle",
-    icon: "device_hub",
-  },
-  {
-    id: "plugins",
-    href: "/dashboard/plugins",
-    i18nKey: "plugins",
-    subtitleKey: "pluginsSubtitle",
-    icon: "extension",
-  },
 ];
 
 const GAMIFICATION_GROUP: SidebarItemGroup = {
@@ -684,29 +608,6 @@ const OTHER_FEATURES_ITEMS: readonly SidebarItemDefinition[] = [
     icon: "perm_media",
   },
 ];
-
-const BATCH_GROUP: SidebarItemGroup = {
-  type: "group",
-  id: "batch",
-  titleKey: "batchGroup",
-  titleFallback: "Batch",
-  items: [
-    {
-      id: "batch",
-      href: "/dashboard/batch",
-      i18nKey: "batch",
-      subtitleKey: "batchSubtitle",
-      icon: "view_list",
-    },
-    {
-      id: "batch-files",
-      href: "/dashboard/batch/files",
-      i18nKey: "batchFiles",
-      subtitleKey: "batchFilesSubtitle",
-      icon: "folder",
-    },
-  ],
-};
 
 const CONFIGURATION_ITEMS: readonly SidebarItemDefinition[] = [
   {
@@ -822,74 +723,248 @@ const HELP_ITEMS: readonly SidebarItemDefinition[] = [
   },
 ];
 
-// ─── Sections ────────────────────────────────────────────────────────────────
+// ─── Catalog ─────────────────────────────────────────────────────────────────
+// Every item above, by id. The v2 sections below are composed from it, so an item keeps one
+// definition (id, href, i18n keys) wherever it is placed — saved hidden-item / pinned-item ids
+// and the i18n labels stay valid across the information-architecture change.
+
+const LEGACY_GROUPS: readonly SidebarItemGroup[] = [
+  COMPRESSION_CONTEXT_GROUP,
+  TOOLS_GROUP,
+  INTEGRATIONS_GROUP,
+  LOGS_GROUP,
+  SYSTEM_GROUP,
+  AUDIT_GROUP,
+  GAMIFICATION_GROUP,
+];
+
+const ITEM_CATALOG: ReadonlyMap<string, SidebarItemDefinition> = new Map(
+  [
+    ...HOME_ITEMS,
+    ...OMNI_PROXY_ITEMS,
+    PROXY_ITEM,
+    ...ANALYTICS_ITEMS,
+    ...MONITORING_ITEMS,
+    ...COSTS_ITEMS,
+    ...DEVTOOLS_ITEMS,
+    MCP_ITEM,
+    ...(AGENTIC_FEATURES_ITEMS as readonly SidebarItemDefinition[]),
+    ...OTHER_FEATURES_ITEMS,
+    ...CONFIGURATION_ITEMS,
+    ...HELP_ITEMS,
+    ...LEGACY_GROUPS.flatMap((g) => g.items),
+  ].map((item) => [item.id, item])
+);
+
+/**
+ * Which pre-v2 section held each page (the pre-v2 layout, composed from the same arrays). v2
+ * sections mix pages from several legacy sections, so a saved hidden legacy section is migrated
+ * page by page from this map (sidebarVisibility/legacy.ts).
+ */
+export const LEGACY_SIDEBAR_SECTION_ITEMS: Readonly<
+  Record<LegacySidebarSectionId, readonly string[]>
+> = {
+  home: HOME_ITEMS.map((i) => i.id),
+  "omni-proxy": [
+    ...OMNI_PROXY_ITEMS,
+    ...COMPRESSION_CONTEXT_GROUP.items,
+    ...TOOLS_GROUP.items,
+    ...INTEGRATIONS_GROUP.items,
+    PROXY_ITEM,
+  ].map((i) => i.id),
+  analytics: ANALYTICS_ITEMS.map((i) => i.id),
+  costs: COSTS_ITEMS.map((i) => i.id),
+  monitoring: [
+    ...MONITORING_ITEMS,
+    ...LOGS_GROUP.items,
+    ...AUDIT_GROUP.items,
+    ...SYSTEM_GROUP.items,
+  ].map((i) => i.id),
+  devtools: DEVTOOLS_ITEMS.map((i) => i.id),
+  "agentic-features": (AGENTIC_FEATURES_ITEMS as readonly SidebarItemDefinition[]).map((i) => i.id),
+  "other-features": [...GAMIFICATION_GROUP.items, ...OTHER_FEATURES_ITEMS].map((i) => i.id),
+  configuration: CONFIGURATION_ITEMS.map((i) => i.id),
+  help: HELP_ITEMS.map((i) => i.id),
+};
+
+/**
+ * Sidebar v2 glyphs (67router design). Only the icon changes; labels keep their i18n keys so the
+ * 66 translated catalogs keep working (copy changes belong to the rebrand pass).
+ */
+const V2_ICONS: Partial<Record<string, string>> = {
+  home: "dashboard",
+  providers: "dns",
+  combos: "network_node",
+  "model-catalog": "nav_models",
+  cache: "database",
+  translator: "translate",
+  "cli-agents": "smart_toy",
+  "api-manager": "vpn_key",
+  endpoints: "lan",
+  analytics: "monitor_heart",
+  costs: "analytics",
+  logs: "nav_request_logs",
+  health: "shield",
+  audit: "nav_audit",
+  proxy: "public",
+};
+
+function item(id: string): SidebarItemDefinition {
+  const found = ITEM_CATALOG.get(id);
+  if (!found) throw new Error(`sidebar catalog has no item "${id}"`);
+  const icon = V2_ICONS[id];
+  return icon ? { ...found, icon } : found;
+}
+
+function group(
+  id: string,
+  titleKey: string,
+  titleFallback: string,
+  ids: readonly string[]
+): SidebarItemGroup {
+  return { type: "group", id, titleKey, titleFallback, items: ids.map(item) };
+}
+
+// ─── Sections (sidebar v2) ───────────────────────────────────────────────────
+// Six groups: Routing, Optimize, Agents, Access, Observe, System. Each starts with the design's
+// headline entries as flat rows; every other existing page stays reachable from a collapsible
+// sub-group of the closest section (no route was removed). Legacy section ids are mapped onto
+// these in sidebarVisibility/legacy.ts so saved preferences keep loading.
 
 export const SIDEBAR_SECTIONS: readonly SidebarSectionDefinition[] = [
   {
-    id: "home",
-    titleKey: "home",
-    titleFallback: "Home",
-    children: HOME_ITEMS,
-    showTitle: false,
-  },
-  {
-    id: "omni-proxy",
-    titleKey: "omniProxySection",
-    titleFallback: "OmniProxy",
+    id: "routing",
+    titleKey: "routingSection",
+    titleFallback: "Routing",
+    defaultPinned: true,
     children: [
-      ...OMNI_PROXY_ITEMS,
-      COMPRESSION_CONTEXT_GROUP,
-      TOOLS_GROUP,
-      INTEGRATIONS_GROUP,
-      PROXY_ITEM,
+      item("home"),
+      item("providers"),
+      item("combos"),
+      item("model-catalog"),
+      group("routing-more", "routingMoreGroup", "More routing", [
+        "combos-live",
+        "quota",
+        "embedded-services",
+      ]),
     ],
   },
   {
-    id: "analytics",
-    titleKey: "analyticsSection",
-    titleFallback: "Analytics",
-    children: ANALYTICS_ITEMS,
+    id: "optimize",
+    titleKey: "optimizeSection",
+    titleFallback: "Optimize",
+    defaultPinned: true,
+    children: [
+      {
+        ...COMPRESSION_CONTEXT_GROUP,
+        titleKey: "contextCompressionGroup",
+        titleFallback: "Context & compression",
+      },
+      item("cache"),
+      item("translator"),
+      group("optimize-more", "optimizeMoreGroup", "More tools", [
+        "media",
+        "search-tools",
+        "chaos-config",
+      ]),
+    ],
   },
   {
-    id: "costs",
-    titleKey: "costsSection",
-    titleFallback: "Costs",
-    children: COSTS_ITEMS,
+    id: "agents",
+    titleKey: "agents",
+    titleFallback: "Agents",
+    defaultPinned: true,
+    children: [
+      item("cli-agents"),
+      group("tools", TOOLS_GROUP.titleKey, TOOLS_GROUP.titleFallback, [
+        "cli-code",
+        "acp-agents",
+        "conductor",
+        "orchestration",
+        "agent-bridge",
+        "traffic-inspector",
+        "discovery",
+      ]),
+      group("agents-more", "agentsMoreGroup", "More agent features", ["agent-skills"]),
+    ],
   },
   {
-    id: "monitoring",
-    titleKey: "monitoringSection",
-    titleFallback: "Monitoring",
-    children: [...MONITORING_ITEMS, LOGS_GROUP, AUDIT_GROUP, SYSTEM_GROUP],
+    id: "access",
+    titleKey: "accessSection",
+    titleFallback: "Access",
+    defaultPinned: true,
+    children: [
+      item("api-manager"),
+      item("endpoints"),
+      group("integrations", INTEGRATIONS_GROUP.titleKey, INTEGRATIONS_GROUP.titleFallback, [
+        "mcp",
+        "api-endpoints",
+        "log-export",
+      ]),
+    ],
   },
   {
-    id: "devtools",
-    titleKey: "devtoolsSection",
-    titleFallback: "Dev Tools",
-    children: DEVTOOLS_ITEMS,
+    id: "observe",
+    titleKey: "observeSection",
+    titleFallback: "Observe",
+    defaultPinned: true,
+    children: [
+      item("analytics"),
+      item("costs"),
+      item("logs"),
+      item("health"),
+      item("audit"),
+      group("analytics-more", "analyticsMoreGroup", "More analytics", [
+        "analytics-combo-health",
+        "analytics-utilization",
+        "analytics-compression",
+        "analytics-search",
+        "provider-stats",
+      ]),
+      group("costs-more", "costsSection", "Costs", [
+        "costs-pricing",
+        "costs-free-tiers",
+        "free-provider-rankings",
+        "radar",
+      ]),
+      // Was the "logs" group; renamed because the "logs" item now sits beside it as a flat row
+      // (a section's children share one id space for ordering). Legacy id mapped in legacy.ts.
+      group("logs-more", "moreLogsGroup", "More logs", [
+        "activity",
+        "logs-proxy",
+        "logs-console",
+        "logs-timeline",
+        "conversations",
+      ]),
+      group("system", "runtime", "Runtime", [
+        "runtime",
+        "resilience-connections",
+        "resilience-cooldowns",
+      ]),
+      // Was the "audit" group (same reason as "logs-more").
+      group("audit-more", "protocolAuditGroup", "Protocol audit", ["audit-mcp"]),
+    ],
   },
   {
-    id: "agentic-features",
-    titleKey: "agenticFeaturesSection",
-    titleFallback: "Agentic Features",
-    children: AGENTIC_FEATURES_ITEMS,
-  },
-  {
-    id: "other-features",
-    titleKey: "otherFeaturesSection",
-    titleFallback: "Other Features",
-    children: [GAMIFICATION_GROUP, ...OTHER_FEATURES_ITEMS, BATCH_GROUP],
-  },
-  {
-    id: "configuration",
-    titleKey: "configurationSection",
-    titleFallback: "Configuration",
-    children: CONFIGURATION_ITEMS,
-  },
-  {
-    id: "help",
-    titleKey: "helpSection",
-    titleFallback: "Help",
-    children: HELP_ITEMS,
+    id: "system",
+    titleKey: "systemSection",
+    titleFallback: "System",
+    defaultPinned: true,
+    children: [
+      item("proxy"),
+      group(
+        "configuration",
+        "settings",
+        "Settings",
+        CONFIGURATION_ITEMS.map((i) => i.id)
+      ),
+      group(
+        "help",
+        "helpSection",
+        "Help",
+        HELP_ITEMS.map((i) => i.id)
+      ),
+      GAMIFICATION_GROUP,
+    ],
   },
 ] as const;

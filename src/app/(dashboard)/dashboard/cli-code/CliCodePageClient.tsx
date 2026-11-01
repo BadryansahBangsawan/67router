@@ -207,7 +207,7 @@ export default function CliCodePageClient({
 
       {/* Empty state — no active providers */}
       {!providersLoading && !hasActiveProviders && (
-        <div className="rounded-lg border border-warning/40 bg-warning/10 p-4 flex items-start gap-3">
+        <div className="flex items-start gap-3 rounded-card border border-warning/40 bg-warning-bg p-4">
           <Icon name="warning" className="text-warning flex-shrink-0" />
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-warning">

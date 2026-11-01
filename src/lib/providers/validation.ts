@@ -43,8 +43,6 @@ import {
   validateCopilotM365WebProvider,
   validateCopilotWebProvider,
   validateT3WebProvider,
-  validateJulesProvider,
-  validateDevinCloudAgentProvider,
   validateInnerAiProvider,
   validateNotionWebProvider,
   validateSyntxProvider,
@@ -184,9 +182,10 @@ export async function validateProviderApiKey({
   apiKey,
   providerSpecificData = {},
   // S-01 (#15159): forwarded to specialty validators that can reach a local spawn
-  // (currently only the devin cloud-agent CLI fallback). Remote-reachable routes
+  // (none today: the only one, the Devin cloud-agent CLI fallback, was removed with
+  // Cloud Agents; the gate stays for any future one). Remote-reachable routes
   // pass `false` for non-loopback callers; direct/internal callers keep the
-  // permissive default. See validateDevinCloudAgentProvider for the rationale.
+  // permissive default.
   allowLocalSpawn = true,
 }: any) {
   provider = typeof provider === "string" ? resolveProviderId(provider) : provider;
@@ -229,14 +228,6 @@ export async function validateProviderApiKey({
   const SPECIALTY_VALIDATORS = {
     "v0-vercel": ({ apiKey, providerSpecificData }: any) =>
       validateV0VercelProvider({ apiKey, providerSpecificData, isLocal }),
-    jules: validateJulesProvider,
-    // "devin" is the Cognition cloud-agent provider (distinct from the "devin-cli"
-    // LLM/ACP provider, which is already registered in providerRegistry). Wired here
-    // for parity with the "jules" cloud-agent entry above — see #6142.
-    // S-01 (#15159): wrapped so the local CLI-spawn fallback receives allowLocalSpawn;
-    // a bare reference would silently drop the flag and let a remote caller spawn.
-    devin: ({ apiKey, allowLocalSpawn }: any) =>
-      validateDevinCloudAgentProvider({ apiKey, allowLocalSpawn }),
     auggie: validateAuggieProvider,
     "cursor-api": validateCursorApiProvider,
     aihorde: validateAiHordeProvider,

@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (አማርኛ)
+# 🌐 67router Proxy Guide (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **የጂኦግራፊያዊ እገዳዎችን ይለፉ፣ ማንነትዎን ይጠብቁ፣ እና የAI ትራፊክን በማንኛውም ፕሮክሲ በኩል ያስተላልፉ — ያለምንም የውቅረት ውስብስብነት።**
 
-OmniRoute ወደ ላይኛ ደረጃ የAI አቅራቢዎች የሚላከውን ትራፊክ በHTTP፣ HTTPS ወይም SOCKS5 ፕሮክሲዎች በኩል እንዲያስተላልፉ የሚያስችልዎትን ሙሉ ባህሪያት ያሉት የፕሮክሲ አስተዳደር ስርዓት ያካትታል። በታገደ ክልል ውስጥ ቢሆኑ፣ የIP ማዞር ቢያስፈልግዎት፣ ወይም ስውር የጣት አሻራ አጠቃቀምን ቢፈልጉ — ይህ መመሪያ ሁሉንም ይሸፍናል።
+67router ወደ ላይኛ ደረጃ የAI አቅራቢዎች የሚላከውን ትራፊክ በHTTP፣ HTTPS ወይም SOCKS5 ፕሮክሲዎች በኩል እንዲያስተላልፉ የሚያስችልዎትን ሙሉ ባህሪያት ያሉት የፕሮክሲ አስተዳደር ስርዓት ያካትታል። በታገደ ክልል ውስጥ ቢሆኑ፣ የIP ማዞር ቢያስፈልግዎት፣ ወይም ስውር የጣት አሻራ አጠቃቀምን ቢፈልጉ — ይህ መመሪያ ሁሉንም ይሸፍናል።
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute አገልጋይ                      │
+│                       67router አገልጋይ                      │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ የፕሮክሲ     │    │ የፕሮክሲ      │    │ የፕሮክሲ          │  │
@@ -83,7 +83,7 @@ unsupported_country_region_territory
 
 ## ባለ 4-ደረጃ ፕሮክሲ ስርዓት
 
-OmniRoute በቅድሚያ ቅደም ተከተል የሚወሰኑ **አራት እርስ በርስ ገለልተኛ ወሰኖች** ላይ የፕሮክሲ ውቅርን ይደግፋል፦
+67router በቅድሚያ ቅደም ተከተል የሚወሰኑ **አራት እርስ በርስ ገለልተኛ ወሰኖች** ላይ የፕሮክሲ ውቅርን ይደግፋል፦
 
 ```
 የቅድሚያ አወሳሰን ቅደም ተከተል (ከከፍተኛ → ዝቅተኛ)፦
@@ -96,7 +96,7 @@ OmniRoute በቅድሚያ ቅደም ተከተል የሚወሰኑ **አራት እ
 
 ### አወሳሰኑ እንዴት እንደሚሠራ
 
-OmniRoute ወደ ላይኛው አቅራቢ ጥያቄ ሲልክ፣ እያንዳንዱን ደረጃ በቅደም ተከተል የሚፈትሸውን `resolveProxyForConnectionFromRegistry()` ይጠራል፦
+67router ወደ ላይኛው አቅራቢ ጥያቄ ሲልክ፣ እያንዳንዱን ደረጃ በቅደም ተከተል የሚፈትሸውን `resolveProxyForConnectionFromRegistry()` ይጠራል፦
 
 1. **የመለያ ደረጃ** — ለዚህ የተወሰነ የግንኙነት ID ፕሮክሲ ተመድቧል?
 2. **የአቅራቢ ደረጃ** — ለዚህ አቅራቢ (ለምሳሌ፣ `openai`) ፕሮክሲ ተመድቧል?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ማስመጣት/ላክ
 
-ፕሮክሲዎች በ**ምትኬ/መልሶ ማግኛ** ስርዓቱ ውስጥ ተካትተዋል። የOmniRoute ውቅርዎን ሲልኩ፦
+ፕሮክሲዎች በ**ምትኬ/መልሶ ማግኛ** ስርዓቱ ውስጥ ተካትተዋል። የ67router ውቅርዎን ሲልኩ፦
 
 1. ወደ **ዳሽቦርድ → ቅንብሮች → ምትኬ** ይሂዱ
 2. **ላክ**ን ጠቅ ያድርጉ — የፕሮክሲ መዝገቡ እና ምደባዎቹ ተካትተዋል
@@ -248,7 +248,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### ከድሮ ስርዓት ማዛወር
 
-በቀድሞ ስሪት (ከregistry በፊት) proxies ካዋቀሩ፣ OmniRoute በራስ-ሰር ያዛውራቸዋል፦
+በቀድሞ ስሪት (ከregistry በፊት) proxies ካዋቀሩ፣ 67router በራስ-ሰር ያዛውራቸዋል፦
 
 ```
 የቀድሞ key_value store → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 > 🆕 **በ[@oyi77](https://github.com/oyi77) የተበረከተ** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (ጉዳይ [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute በዓለም ዙሪያ ያሉ **በመቶዎች የሚቆጠሩ ነፃና የተረጋገጡ ፕሮክሲዎችን** ለማግኘት ከ**[1proxy](https://1proxy-api.aitradepulse.com)** የማህበረሰብ መድረክ ጋር ይዋሃዳል። ይህ የራሳቸው የፕሮክሲ መሠረተ ልማት ለሌላቸው ተጠቃሚዎች እጅግ ተስማሚ ነው።
+67router በዓለም ዙሪያ ያሉ **በመቶዎች የሚቆጠሩ ነፃና የተረጋገጡ ፕሮክሲዎችን** ለማግኘት ከ**[1proxy](https://1proxy-api.aitradepulse.com)** የማህበረሰብ መድረክ ጋር ይዋሃዳል። ይህ የራሳቸው የፕሮክሲ መሠረተ ልማት ለሌላቸው ተጠቃሚዎች እጅግ ተስማሚ ነው።
 
 ### እንዴት እንደሚሠራ
 
@@ -273,7 +273,7 @@ OmniRoute በዓለም ዙሪያ ያሉ **በመቶዎች የሚቆጠሩ ነፃ
 └─────────────┘  ፕሮክሲዎች     └─────────────────┘               └──────────┘
 ```
 
-1. **ማመሳሰል** — OmniRoute ከ1proxy API የተረጋገጡ ፕሮክሲዎችን ያመጣል
+1. **ማመሳሰል** — 67router ከ1proxy API የተረጋገጡ ፕሮክሲዎችን ያመጣል
 2. **ማከማቸት** — ፕሮክሲዎች `source = 'oneproxy'` በሚል በዚያው `proxy_registry` ሰንጠረዥ ውስጥ ይቀመጣሉ
 3. **ማጣራት** — በፕሮቶኮል፣ በአገር እና በጥራት ነጥብ ያጣሩ
 4. **ማዞር** — የጥራት፣ የዘፈቀደ ወይም ተከታታይ ስልቶችን በመጠቀም ምርጡን ፕሮክሲ ይምረጡ
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## ፀረ-ማወቂያ እና ስውርነት
 
-OmniRoute ትራፊክን በፕሮክሲ በኩል ብቻ አያስተላልፍም — ትራፊኩ ሕጋዊ እንዲመስልም ያደርገዋል፦
+67router ትራፊክን በፕሮክሲ በኩል ብቻ አያስተላልፍም — ትራፊኩ ሕጋዊ እንዲመስልም ያደርገዋል፦
 
 ### የTLS አሻራ ማስመሰል
 
@@ -407,11 +407,11 @@ OmniRoute ትራፊክን በፕሮክሲ በኩል ብቻ አያስተላልፍ
 
 ## የላይኛው ዥረት ፕሮክሲ ሁነታዎች
 
-የCLIProxyAPI ንድፍን ለሚጠቀሙ አቅራቢዎች፣ OmniRoute ሦስት የላይኛው ዥረት ፕሮክሲ ሁነታዎችን ይደግፋል፦
+የCLIProxyAPI ንድፍን ለሚጠቀሙ አቅራቢዎች፣ 67router ሦስት የላይኛው ዥረት ፕሮክሲ ሁነታዎችን ይደግፋል፦
 
 | ሁነታ           | መግለጫ                                          |
 | ------------- | --------------------------------------------- |
-| `native`      | OmniRoute የፕሮክሲ ማስተላለፍን በቀጥታ ያስተናግዳል (ነባሪ)    |
+| `native`      | 67router የፕሮክሲ ማስተላለፍን በቀጥታ ያስተናግዳል (ነባሪ)     |
 | `cliproxyapi` | ወደ ውጫዊ CLIProxyAPI ኢንስታንስ ውክልና ይሰጣል           |
 | `fallback`    | መጀመሪያ ቤተኛውን ይሞክራል፣ ካልተሳካ ወደ CLIProxyAPI ይመለሳል |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### የቱነሎች API
 
-OmniRoute ኢንስታንስዎን ወጪ ትራፊክን በፕሮክሲ በኩል ከማስተላለፍ ይልቅ ለሕዝባዊ ኢንተርኔት (Cloudflare/ngrok/Tailscale) ለማጋለጥ፣ [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md)ን ይመልከቱ። የቱነሉ REST API በ`/api/tunnels/{cloudflared,ngrok,tailscale}/*` ስር ይገኛል፣ እና ከላይ ከተመዘገበው የወጪ ፕሮክሲ ሰንሰለት ነጻ ነው።
+67router ኢንስታንስዎን ወጪ ትራፊክን በፕሮክሲ በኩል ከማስተላለፍ ይልቅ ለሕዝባዊ ኢንተርኔት (Cloudflare/ngrok/Tailscale) ለማጋለጥ፣ [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md)ን ይመልከቱ። የቱነሉ REST API በ`/api/tunnels/{cloudflared,ngrok,tailscale}/*` ስር ይገኛል፣ እና ከላይ ከተመዘገበው የወጪ ፕሮክሲ ሰንሰለት ነጻ ነው።
 
 ### 1proxy API
 
@@ -516,7 +516,7 @@ OmniRoute ኢንስታንስዎን ወጪ ትራፊክን በፕሮክሲ በኩ
 
 ### በፕሮክሲ በኩል የሚከሰቱ የ"socket hang up" ስህተቶች
 
-የስራ ፈት ግንኙነቶችን በሚያቋርጡ ርካሽ ፕሮክሲዎች ላይ ይህ የተለመደ ነው። OmniRoute ይህን ቀድሞውኑ በሚከተሉት መንገዶች ይቆጣጠራል፦
+የስራ ፈት ግንኙነቶችን በሚያቋርጡ ርካሽ ፕሮክሲዎች ላይ ይህ የተለመደ ነው። 67router ይህን ቀድሞውኑ በሚከተሉት መንገዶች ይቆጣጠራል፦
 
 - በፕሮክሲ ግንኙነቶች ላይ keep-aliveን በማሰናከል (`keepAliveTimeout: 1`)
 - pipeliningን በማሰናከል (`pipelining: 0`)
@@ -526,7 +526,7 @@ OmniRoute ኢንስታንስዎን ወጪ ትራፊክን በፕሮክሲ በኩ
 
 ### በOAuth ወቅት "unsupported_country_region_territory"
 
-የOAuth ፍሰትን ከመጀመርዎ **በፊት** ፕሮክሲው መዋቀሩን ያረጋግጡ። OmniRoute የOAuth token exchangeን በተዋቀረው ፕሮክሲ በኩል ያስተላልፋል። መጀመሪያ ዓለም አቀፍ ወይም በአቅራቢ ደረጃ ያለ ፕሮክሲ ያዘጋጁ፣ ከዚያ ይገናኙ።
+የOAuth ፍሰትን ከመጀመርዎ **በፊት** ፕሮክሲው መዋቀሩን ያረጋግጡ። 67router የOAuth token exchangeን በተዋቀረው ፕሮክሲ በኩል ያስተላልፋል። መጀመሪያ ዓለም አቀፍ ወይም በአቅራቢ ደረጃ ያለ ፕሮክሲ ያዘጋጁ፣ ከዚያ ይገናኙ።
 
 ### ፕሮክሲው ጥቅም ላይ አለመዋሉ
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## የፕሮክሲ ጤንነት ማረጋገጥ (v3.8.16+)
 
-የOmniRoute **proxy fast-fail** ዘዴ (`src/lib/proxyHealth.ts`) ፈጣን የTCP ግንኙነት ማረጋገጫን በመጠቀም የማይሰሩ ፕሮክሲዎችን በ<2s ውስጥ ይለያል፤ ከዚያም በእያንዳንዱ ጥያቄ ላይ የሚፈጠረውን ተጨማሪ ወጪ ለማስወገድ **ውጤቱን ይሸጉጣል**።
+የ67router **proxy fast-fail** ዘዴ (`src/lib/proxyHealth.ts`) ፈጣን የTCP ግንኙነት ማረጋገጫን በመጠቀም የማይሰሩ ፕሮክሲዎችን በ<2s ውስጥ ይለያል፤ ከዚያም በእያንዳንዱ ጥያቄ ላይ የሚፈጠረውን ተጨማሪ ወጪ ለማስወገድ **ውጤቱን ይሸጉጣል**።
 
 ### እንዴት እንደሚሰራ
 
@@ -659,11 +659,11 @@ invalidateProxyHealth("http://user:pass@203.0.113.7:8080");
 
 ## የፕሮክሲ ትንታኔ እና ታዛቢነት
 
-OmniRoute ኦፕሬተሮች የማዘዋወር ስርዓተ ጥለቶችን፣ ድንገተኛ የመዘግየት ጭማሪዎችን እና ተደጋጋሚ ብልሽቶችን እንዲመረምሩ ለማገዝ የእያንዳንዱን ፕሮክሲ አጠቃቀም ይከታተላል።
+67router ኦፕሬተሮች የማዘዋወር ስርዓተ ጥለቶችን፣ ድንገተኛ የመዘግየት ጭማሪዎችን እና ተደጋጋሚ ብልሽቶችን እንዲመረምሩ ለማገዝ የእያንዳንዱን ፕሮክሲ አጠቃቀም ይከታተላል።
 
 ### የሚከታተሉ መረጃዎች
 
-በተዋቀረ ፕሮክሲ በኩል ለሚያልፍ እያንዳንዱ ጥያቄ፣ OmniRoute የሚከተሉትን ይመዘግባል፦
+በተዋቀረ ፕሮክሲ በኩል ለሚያልፍ እያንዳንዱ ጥያቄ፣ 67router የሚከተሉትን ይመዘግባል፦
 
 | መለኪያ         | መግለጫ                                        |
 | ------------ | ------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## የማፈራረቅ ስልት የውሳኔ ዛፍ
 
-በርካታ ፕሮክሲዎች ለአንድ ወሰን ሲመደቡ፣ OmniRoute ለእያንዳንዱ ጥያቄ የትኛውን መጠቀም እንዳለበት ለመምረጥ **የማፈራረቅ ስልት** ይጠቀማል። ስልቱ በወሰን ደረጃ ይዋቀራል (ዓለም አቀፍ፣ ለእያንዳንዱ አቅራቢ፣ ለእያንዳንዱ መለያ፣ ለእያንዳንዱ ጥምረት)።
+በርካታ ፕሮክሲዎች ለአንድ ወሰን ሲመደቡ፣ 67router ለእያንዳንዱ ጥያቄ የትኛውን መጠቀም እንዳለበት ለመምረጥ **የማፈራረቅ ስልት** ይጠቀማል። ስልቱ በወሰን ደረጃ ይዋቀራል (ዓለም አቀፍ፣ ለእያንዳንዱ አቅራቢ፣ ለእያንዳንዱ መለያ፣ ለእያንዳንዱ ጥምረት)።
 
 ### የሚገኙ ስልቶች
 

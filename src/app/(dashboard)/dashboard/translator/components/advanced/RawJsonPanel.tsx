@@ -581,7 +581,7 @@ export default function RawJsonPanel({
             <Card>
               <div className="p-4 space-y-3">
                 <div className="flex items-center gap-2">
-                  <Icon name="library_books" size={18} className="text-primary" />
+                  <Icon name="library_books" size={18} className="text-text-muted" />
                   <h3 className="text-sm font-semibold text-text-main">
                     {tr("exampleTemplates", "Example Templates")}
                   </h3>
@@ -600,8 +600,8 @@ export default function RawJsonPanel({
                         group h-auto flex-col items-center gap-1.5 p-3 rounded-lg border transition-all text-center
                         ${
                           activeTemplate === template.id
-                            ? "border-primary bg-primary/5 text-primary"
-                            : "border-border hover:border-primary/30 hover:bg-primary/5 text-text-muted hover:text-text-main"
+                            ? "border-primary bg-bg-subtle text-text-main"
+                            : "border-border hover:border-border-strong hover:bg-bg-subtle text-text-muted hover:text-text-main"
                         }
                       `}
                     >
@@ -610,8 +610,8 @@ export default function RawJsonPanel({
                         size={22}
                         className={`${
                           activeTemplate === template.id
-                            ? "text-primary"
-                            : "text-text-muted group-hover:text-primary"
+                            ? "text-text-main"
+                            : "text-text-muted group-hover:text-text-main"
                         } transition-colors`}
                       />
                       <span className="text-xs font-medium leading-tight">{template.name}</span>

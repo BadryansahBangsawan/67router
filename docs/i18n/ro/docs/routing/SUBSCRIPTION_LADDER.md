@@ -10,7 +10,7 @@
 
 ## De ce există această funcționalitate
 
-OmniRoute răspunde deja la două întrebări despre costuri, dar niciuna nu este cea pe care o pun majoritatea operatorilor.
+67router răspunde deja la două întrebări despre costuri, dar niciuna nu este cea pe care o pun majoritatea operatorilor.
 
 | Mecanism existent                                        | Răspunde la întrebarea                             |
 | -------------------------------------------------------- | -------------------------------------------------- |

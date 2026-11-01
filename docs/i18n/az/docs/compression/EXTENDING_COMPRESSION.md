@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: OmniRoute-un sıxışdırma mühərriki **genişləndirilə biləndir** — fərdi mühərrikləri qeydiyyatdan keçirə, yeni dillər üçün dil paketləri təqdim edə və ardıcıl konveyerlər qura bilərsiniz. Bu təlimat bunun necə edildiyini göstərir.
+> **Qısa xülasə**: 67router-un sıxışdırma mühərriki **genişləndirilə biləndir** — fərdi mühərrikləri qeydiyyatdan keçirə, yeni dillər üçün dil paketləri təqdim edə və ardıcıl konveyerlər qura bilərsiniz. Bu təlimat bunun necə edildiyini göstərir.
 
 **Əlaqəli təlimatlar:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Layihə səviyyəsində (işə salınarkən yüklənir)
 ```
 
-Yaxud plagindən proqram vasitəsilə yükləyin:
+Or register it programmatically at startup:
 
 ```ts
-// Plagininizdə
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Plagin SDK-sı onRequest / onResponse / onError qarmaqlarını təqdim edir. Mühərriki
-  // plagin modulu yüklənərkən (və ya ilk onRequest zamanı) qeydiyyatdan keçirin; onu
-  // öz söndürmə yolunuzdan qeydiyyatdan çıxarın.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Söndürmə zamanı:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -231,7 +222,7 @@ Mühərrikinizi plagində və ya işəsalma funksiyasında qeydiyyatdan keçirin
 
 ## Dil Paketlərinin Yaradılması
 
-Mağara adamı üslubunda sıxılma hər bir təbii dildə doldurucu ifadələri, qeyri-müəyyənliyi və uzunçuluq nümunələrini idarə etmək üçün **dilə xas qayda paketlərindən** istifadə edir. OmniRoute **6 dil paketi** ilə təqdim olunur: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Mağara adamı üslubunda sıxılma hər bir təbii dildə doldurucu ifadələri, qeyri-müəyyənliyi və uzunçuluq nümunələrini idarə etmək üçün **dilə xas qayda paketlərindən** istifadə edir. 67router **6 dil paketi** ilə təqdim olunur: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paket Strukturu
 
@@ -387,7 +378,7 @@ N nömrəli mühərrikin çıxışı N+1 nömrəli mühərrikin girişinə çevr
 
 ### Sıxışdırma Rejimləri
 
-OmniRoute konfiqurasiya, avtomatik işə salma hədləri və kombinasiya əvəzləmələri əsasında **hər sorğu üçün BİR rejim** seçir.
+67router konfiqurasiya, avtomatik işə salma hədləri və kombinasiya əvəzləmələri əsasında **hər sorğu üçün BİR rejim** seçir.
 Mövcud rejimlər `open-sse/services/compression/types.ts` faylında (`CompressionMode` tipi) müəyyən edilib:
 
 | Rejim        | Mühərriklər          | İstifadə halı                                                                                                                                                                                                        |
@@ -504,10 +495,10 @@ Onu konfiqurasiyadan idarə etmək üçün `mode: "stacked"` təyin edin və add
 
 ## Upstream Sinxronizasiya Siyasəti
 
-OmniRoute-un sıxılma mühərrikləri README-də bir neçə upstream layihəyə istinad edir
+67router-un sıxılma mühərrikləri README-də bir neçə upstream layihəyə istinad edir
 ("RTK, Caveman, LLMLingua-2, Troglodita layihələrindən ilhamlanıb"). İştirakçıların
 tez-tez verdiyi sual budur: **upstream RTK yeni alət filtri və ya Caveman yeni qayda
-paketi əlavə etdikdə, bu OmniRoute-a necə daxil olur?** Bu bölmə mötəbər cavabdır.
+paketi əlavə etdikdə, bu 67router-a necə daxil olur?** Bu bölmə mötəbər cavabdır.
 
 ### Vendored nüsxələr və müstəqil reallaşdırmalar
 
@@ -527,7 +518,7 @@ görə "bundled" deyil, "inspired by" yazılıb.
 
 Qəsdən **avtomatlaşdırılmış upstream buraxılış izləməsi və `compression-sync`
 etiketi yoxdur**. Mühərriklər yenidən reallaşdırmalar olduğuna görə upstream RTK
-filtri və ya Caveman qayda paketi kod kimi birləşdirilmir; o, **OmniRoute-un öz
+filtri və ya Caveman qayda paketi kod kimi birləşdirilmir; o, **67router-un öz
 formatında yeni qayda/filtr kimi yenidən ifadə edilir** (bax:
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) və standart PR
 vasitəsilə ad-hoc qaydada əlavə olunur. Yuxarıdakı genişləndirmə nöqtələri (fərdi
@@ -543,14 +534,14 @@ Məhz bu prosesin son nümunələri:
 ### Headroom (giriş sıxılma proksisi)
 
 Headroom **tamamilə daxilidir** — sabitlənmiş vendored `gcf` kodek snapshot-u və
-OmniRoute-un öz `smartcrusher` / `toon` / `tabular` qatları. Vendored nüsxədən
+67router-un öz `smartcrusher` / `toon` / `tabular` qatları. Vendored nüsxədən
 başqa izləniləcək aktiv upstream yoxdur; kodek dəyişdikdə `gcf` yeniləmələri əl
 ilə təzələnir və sıxılma büdcəsi yoxlamasına (`check:compression-budget`) qarşı
 yenidən təsdiqlənir.
 
 ### Upstream-dən ilhamlanan təkmilləşdirmənin təklif edilməsi
 
-1. **Vendor etməyin** — upstream qaydasını/filtrini OmniRoute formatında yenidən ifadə edin.
+1. **Vendor etməyin** — upstream qaydasını/filtrini 67router formatında yenidən ifadə edin.
 2. Onu aşağıdakı uyğun genişləndirmə nöqtəsi (dil paketi, RTK filtri və ya
    fərdi mühərrik) vasitəsilə əlavə edin.
 3. Lisenziyalı mənbə kodunu kopyalamaq əvəzinə PR təsvirində upstream layihəyə

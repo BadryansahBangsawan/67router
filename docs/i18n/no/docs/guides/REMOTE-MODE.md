@@ -4,7 +4,7 @@
 
 ---
 
-Kjør `omniroute`-CLI-en på den bærbare datamaskinen din mens OmniRoute kjører et annet sted
+Kjør `omniroute`-CLI-en på den bærbare datamaskinen din mens 67router kjører et annet sted
 (en VPS, en hjemmeserver eller en annen maskin på Tailnet-nettverket ditt). Du logger inn én gang med
 `omniroute connect`, og fra da av rettes **alle** CLI-kommandoer mot den eksterne
 serveren — samme kommandoer, samme utdata, bare kjørt mot den eksterne serveren.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← skriver en lokal Codex-profil fra
 ## Slik fungerer det
 
 ```
-den bærbare datamaskinen din             ekstern OmniRoute (VPS)
+den bærbare datamaskinen din             ekstern 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute-CLI      │  POST /api/cli/connect  (passord → token)          │
 │  kontekst: vps     │ ───────────────►  │ utsteder et omfangsbegrenset   │
@@ -108,7 +108,7 @@ seg på serveren, ikke på maskinen din, så samtykkeskjermen **henger for allti
 sender aldri ut noen kode** — den vanlige reserveløsningen med å «lime inn callback-URL-en»
 har ingenting å lime inn. (Dette er en begrensning hos Google: den samme hengingen
 oppstår i enhver proxy som bruker den medfølgende Antigravity-skrivebordsklienten,
-ikke bare OmniRoute.)
+ikke bare 67router.)
 
 Dashbordet oppdager dette før du blir sittende fast: Hvis du åpner **Providers → Antigravity →
 Connect** fra en adresse som ikke er localhost, erstattes den generelle meldingen om å
@@ -116,7 +116,7 @@ Connect** fra en adresse som ikke er localhost, erstattes den generelle meldinge
 allerede fylt ut. (En LAN-adresse teller — `192.168.x.x` er ikke localhost når det
 gjelder denne callback-en.)
 
-Det finnes to støttede måter å koble Antigravity til en ekstern OmniRoute på.
+Det finnes to støttede måter å koble Antigravity til en ekstern 67router på.
 
 ### Alternativ A — lokal påloggingshjelper (anbefalt)
 
@@ -154,7 +154,7 @@ npx omniroute login antigravity --no-push
 
 Deretter går du til det **eksterne** dashbordet: **Providers → Antigravity → Connect**, og limer
 inn `omniroute-cred-v1.…`-datablokken i feltet **Step 2** (det godtar enten en
-callback-URL eller en legitimasjonsblokk). OmniRoute dekoder den, kjører Cloud Code-
+callback-URL eller en legitimasjonsblokk). 67router dekoder den, kjører Cloud Code-
 oppsettet på serversiden og lagrer tilkoblingen.
 
 > Datablokken inneholder et oppdateringstoken — behandle den som et passord. Ved automatisk
@@ -195,7 +195,7 @@ sekundær leverandørspesifikk port som må legges i tunnel.
 ## Koble til Codex / Grok på en ekstern installasjon (leverandører med fast loopback)
 
 Codex, xAI (`xai-oauth`) og Grok CLI (`grok-cli`) registrerer en **fast** loopback-
-`redirect_uri` hos sin eksterne OAuth-app. OmniRoute kan ikke endre den —
+`redirect_uri` hos sin eksterne OAuth-app. 67router kan ikke endre den —
 leverandøren sender alltid nettleseren tilbake til den samme hardkodede adressen:
 
 | Leverandør  | Fast callback som leverandøren omdirigerer til |
@@ -204,7 +204,7 @@ leverandøren sender alltid nettleseren tilbake til den samme hardkodede adresse
 | `xai-oauth` | `http://127.0.0.1:56121/callback`              |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`              |
 
-`localhost` betyr her **maskinen som kjører nettleseren**, mens OmniRoutes PKCE-
+`localhost` betyr her **maskinen som kjører nettleseren**, mens 67routers PKCE-
 callback-server lytter på **serverens** loopback. Åpne kontrollpanelet på en LAN-
 adresse som `http://192.168.0.15:20128`, så møtes de aldri: autorisasjonskoden
 leveres til din egen bærbare maskins `localhost:1455`, der ingenting lytter,
@@ -224,7 +224,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 To videresendinger kreves, og videresending av bare én vil fortsatt mislykkes:
 
 - **`20128`** (porten til kontrollpanelet) gjør opphavet til ekte localhost, som
-  er det som får OmniRoute til å starte PKCE-callback-serveren i det hele tatt —
+  er det som får 67router til å starte PKCE-callback-serveren i det hele tatt —
   et LAN-opphav når aldri denne grenen.
 - **`1455`** (leverandørens faste callback-port) er dit nettleseren sendes
   tilbake; den må tunneleres videre til serverens loopback.
@@ -346,7 +346,7 @@ omniroute contexts current         # den aktive serveren, autentiseringsstatus, 
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

@@ -6,7 +6,7 @@ lastUpdated: 2026-09-21
 
 # ACP registry and registered CLI launchers
 
-OmniRoute separates **CLI discovery**, **native Agent Client Protocol**, and
+67router separates **CLI discovery**, **native Agent Client Protocol**, and
 **legacy stdio adapters**. Finding an installed binary does not prove its
 authentication, model compatibility, or readiness to handle a prompt.
 
@@ -121,5 +121,3 @@ test in the target environment.
 - [Agent protocols](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI launch contracts](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI tools](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)
-- [Cloud agents](./CLOUD_AGENT.md)

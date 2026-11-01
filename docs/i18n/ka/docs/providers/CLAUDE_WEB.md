@@ -122,7 +122,7 @@ Playwright-ზე დამოკიდებული შემთხვევ�
 
 ### დაყენება
 
-1. გაუშვით OmniRoute ბრძანებით `npm run dev` ან აწყობილი ინსტალაციიდან.
+1. გაუშვით 67router ბრძანებით `npm run dev` ან აწყობილი ინსტალაციიდან.
 2. გახსენით Dashboard → Providers → Add Provider.
 3. აირჩიეთ Web Cookie კატეგორია და Claude Web.
 4. ჩასვით ავტორიზებული `claude.ai` მოთხოვნიდან დაკოპირებული სრული Cookie სათაური.

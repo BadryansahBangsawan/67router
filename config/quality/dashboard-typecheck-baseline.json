@@ -47,18 +47,6 @@
   "src/app/(dashboard)/dashboard/compression/studio/EncoderComparisonTable.tsx": {
     "TS2322": 2
   },
-  "src/app/(dashboard)/dashboard/costs/quota-share/QuotaSharePageClient.tsx": {
-    "TS2551": 9,
-    "TS2322": 3,
-    "TS2719": 3,
-    "TS2739": 2
-  },
-  "src/app/(dashboard)/dashboard/costs/quota-share/components/StackedAllocationBar.tsx": {
-    "TS2503": 2
-  },
-  "src/app/(dashboard)/dashboard/costs/quota-share/components/UsageLogCard.tsx": {
-    "TS2869": 3
-  },
   "src/app/(dashboard)/dashboard/endpoint/EndpointPageClient.tsx": {
     "TS2322": 22
   },
@@ -82,12 +70,6 @@
   },
   "src/app/(dashboard)/dashboard/omni-skills/components/SkillInspectorPane.tsx": {
     "TS2503": 2
-  },
-  "src/app/(dashboard)/dashboard/playground/components/PresetPicker.tsx": {
-    "TS2352": 2
-  },
-  "src/app/(dashboard)/dashboard/playground/components/ToolsBuilder.tsx": {
-    "TS2339": 2
   },
   "src/app/(dashboard)/dashboard/providers/[id]/ProviderDetailPageClient.tsx": {
     "TS2322": 5

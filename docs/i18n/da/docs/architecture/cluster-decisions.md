@@ -14,7 +14,7 @@ To tilvalgsprofiler til Compose (`memory`, `bifrost`) for den eksisterende imple
 
 ## Hvorfor dette er en konservativ tilgang
 
-OmniRoutes eksisterende implementeringsarkitektur er allerede kompakt og gennemprøvet:
+67routers eksisterende implementeringsarkitektur er allerede kompakt og gennemprøvet:
 
 - **`redis:7-alpine`** håndterer arbejdsbelastningen fra hastighedsbegrænsning og cache i produktionsskala.
 - **SQLite + sqlite-vec + FTS5** dækker lokal hukommelse samt vektor- og tekstsøgning (se [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ De to profiler her er **muligheder for skalering af installationer, der rammer S
 
 - Du kører ≥3 `omniroute`-replikaer og ønsker providerrotation centraliseret i én Go-proces.
 - Du ønsker én samlet grænseflade til revision og logføring af forespørgsler til upstream-providere på tværs af alle replikaer.
-- Du ønsker horisontal skalering af Tier-1-routinglaget uafhængigt af OmniRoute-replikaerne.
+- Du ønsker horisontal skalering af Tier-1-routinglaget uafhængigt af 67router-replikaerne.
 
 **Hvad den tilføjer:**
 

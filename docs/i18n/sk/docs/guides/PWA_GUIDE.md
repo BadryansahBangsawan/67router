@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute sa dodáva ako plne inštalovateľná progresívna webová aplikácia. Keď otvoríte ovládací panel z ľubovoľného mobilného prehliadača — Android (Chrome) alebo iOS (Safari) — môžete použiť možnosť „Pridať na plochu“ a získať používateľský zážitok podobný natívnej aplikácii bez potreby obchodu s aplikáciami.
+67router sa dodáva ako plne inštalovateľná progresívna webová aplikácia. Keď otvoríte ovládací panel z ľubovoľného mobilného prehliadača — Android (Chrome) alebo iOS (Safari) — môžete použiť možnosť „Pridať na plochu“ a získať používateľský zážitok podobný natívnej aplikácii bez potreby obchodu s aplikáciami.
 
 ## Čo je PWA?
 
-Progresívna webová aplikácia zmení webový ovládací panel OmniRoute na aplikáciu, ktorá vyzerá a funguje ako natívna mobilná aplikácia. Po nainštalovaní:
+Progresívna webová aplikácia zmení webový ovládací panel 67router na aplikáciu, ktorá vyzerá a funguje ako natívna mobilná aplikácia. Po nainštalovaní:
 
 - Spúšťa sa z plochy pomocou vlastnej ikony
 - Otvára sa na celú obrazovku — bez panela s adresou alebo rozhrania kariet prehliadača
@@ -20,26 +20,26 @@ Progresívna webová aplikácia zmení webový ovládací panel OmniRoute na apl
 
 ### Android (Chrome)
 
-1. Otvorte ovládací panel OmniRoute v prehliadači Chrome: `http://YOUR_IP:20128`
-2. Chrome automaticky zobrazí banner **„Pridať OmniRoute na plochu“**, prípadne:
+1. Otvorte ovládací panel 67router v prehliadači Chrome: `http://YOUR_IP:20128`
+2. Chrome automaticky zobrazí banner **„Pridať 67router na plochu“**, prípadne:
    - Ťuknite na ponuku **⋮** (tri bodky) → **„Pridať na plochu“** alebo **„Nainštalovať aplikáciu“**
 3. Potvrďte výzvu
-4. OmniRoute sa zobrazí na ploche ako samostatná aplikácia
+4. 67router sa zobrazí na ploche ako samostatná aplikácia
 
 ### iOS (Safari)
 
-1. Otvorte ovládací panel OmniRoute v prehliadači Safari: `http://YOUR_IP:20128`
+1. Otvorte ovládací panel 67router v prehliadači Safari: `http://YOUR_IP:20128`
 2. Ťuknite na tlačidlo **Zdieľať** (štvorec so šípkou)
 3. Posuňte sa nadol a ťuknite na **„Pridať na plochu“**
-4. Pomenujte aplikáciu (predvolený názov je „OmniRoute“) a ťuknite na **Pridať**
-5. OmniRoute sa zobrazí na ploche s ikonou aplikácie
+4. Pomenujte aplikáciu (predvolený názov je „67router“) a ťuknite na **Pridať**
+5. 67router sa zobrazí na ploche s ikonou aplikácie
 
 ### Počítač (Chrome / Edge)
 
-1. Otvorte ovládací panel OmniRoute
-2. Kliknite na **ikonu inštalácie** v paneli s adresou (alebo ⋮ → „Nainštalovať OmniRoute...“)
+1. Otvorte ovládací panel 67router
+2. Kliknite na **ikonu inštalácie** v paneli s adresou (alebo ⋮ → „Nainštalovať 67router...“)
 3. Potvrďte výzvu
-4. OmniRoute sa otvorí ako samostatné okno — bez kariet a panela s adresou
+4. 67router sa otvorí ako samostatné okno — bez kariet a panela s adresou
 
 ## Funkcie
 
@@ -49,15 +49,15 @@ Manifest je nakonfigurovaný pomocou `display: "fullscreen"`, čo znamená, že 
 
 ### Podpora režimu offline
 
-OmniRoute obsahuje service worker (`sw.js`), ktorý poskytuje inteligentné ukladanie do vyrovnávacej pamäte:
+67router obsahuje service worker (`sw.js`), ktorý poskytuje inteligentné ukladanie do vyrovnávacej pamäte:
 
-| Typ prostriedku                                                  | Stratégia                                             | Správanie                                                                                                      |
-| ---------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| **Základ aplikácie**                                             | Najprv vyrovnávacia pamäť                             | `/`, `/offline`, manifest a ikony sa počas inštalácie vopred uložia do vyrovnávacej pamäte                     |
-| **Statické prostriedky** (CSS, JS, obrázky, písma)               | Najprv sieť, potom vyrovnávacia pamäť                 | Načíta aktuálne údaje zo siete; v režime offline použije vyrovnávaciu pamäť                                    |
-| **Balíky Next.js** (`/_next/`)                                   | Najprv sieť s aktualizáciou vyrovnávacej pamäte       | Načíta údaje zo siete a aktualizuje vyrovnávaciu pamäť; v režime offline poskytne verziu z vyrovnávacej pamäte |
-| **Požiadavky navigácie**                                         | Obídenie (nikdy sa nezachytávajú)                     | Prehliadač riadi prechod z HTTP/3 na HTTP/2; nefunkčný soket QUIC sa nesmie zmeniť na `Response.error()`       |
-| **Trasy API/ovládacieho panela** (`/api/`, `/a2a`, `/dashboard`) | Obídenie (nikdy sa neukladajú do vyrovnávacej pamäte) | Vždy smerujú priamo na server — service worker ich nikdy nezachytáva                                           |
+| Typ prostriedku                                          | Stratégia                                             | Správanie                                                                                                      |
+| -------------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Základ aplikácie**                                     | Najprv vyrovnávacia pamäť                             | `/`, `/offline`, manifest a ikony sa počas inštalácie vopred uložia do vyrovnávacej pamäte                     |
+| **Statické prostriedky** (CSS, JS, obrázky, písma)       | Najprv sieť, potom vyrovnávacia pamäť                 | Načíta aktuálne údaje zo siete; v režime offline použije vyrovnávaciu pamäť                                    |
+| **Balíky Next.js** (`/_next/`)                           | Najprv sieť s aktualizáciou vyrovnávacej pamäte       | Načíta údaje zo siete a aktualizuje vyrovnávaciu pamäť; v režime offline poskytne verziu z vyrovnávacej pamäte |
+| **Požiadavky navigácie**                                 | Obídenie (nikdy sa nezachytávajú)                     | Prehliadač riadi prechod z HTTP/3 na HTTP/2; nefunkčný soket QUIC sa nesmie zmeniť na `Response.error()`       |
+| **Trasy API/ovládacieho panela** (`/api/`, `/dashboard`) | Obídenie (nikdy sa neukladajú do vyrovnávacej pamäte) | Vždy smerujú priamo na server — service worker ich nikdy nezachytáva                                           |
 
 ### Stránka režimu offline
 
@@ -70,7 +70,7 @@ Keď sieť nie je dostupná a používateľ prejde na novú stránku, service wo
 
 ### Ikony aplikácie
 
-OmniRoute poskytuje ikony optimalizované pre jednotlivé platformy:
+67router poskytuje ikony optimalizované pre jednotlivé platformy:
 
 | Súbor                  | Veľkosť          | Použitie                                                |
 | ---------------------- | ---------------- | ------------------------------------------------------- |
@@ -93,9 +93,9 @@ Generovaný systémom Next.js prostredníctvom súboru `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Tento klientsky komponent, ktorý sa nachádza v súbore `src/shared/components/
 
 ## Použitie s Termuxom (Android)
 
-Pri spustení OmniRoute v systéme Android prostredníctvom Termuxu funguje PWA bezproblémovo:
+Pri spustení 67router v systéme Android prostredníctvom Termuxu funguje PWA bezproblémovo:
 
-1. Spustite OmniRoute v Termuxe: `npx omniroute`
+1. Spustite 67router v Termuxe: `npx omniroute`
 2. Otvorte Chrome v rovnakom telefóne: `http://localhost:20128`
 3. Nainštalujte PWA prostredníctvom možnosti „Pridať na plochu“
 4. PWA sa pripojí k lokálnemu serveru Termux — všetko sa spúšťa priamo v zariadení
@@ -156,7 +156,7 @@ Táto kombinácia znamená, že váš telefón s Androidom je zároveň **server
 
 ## Použitie z iných zariadení
 
-Nainštalujte PWA na ľubovoľnom zariadení, ktorého prehliadač má prístup k vášmu serveru OmniRoute:
+Nainštalujte PWA na ľubovoľnom zariadení, ktorého prehliadač má prístup k vášmu serveru 67router:
 
 - **Iný telefón/tablet**: Prejdite na `http://PHONE_IP:20128` a nainštalujte PWA
 - **Notebook**: Otvorte Chrome/Edge a nainštalujte ju ako desktopovú PWA

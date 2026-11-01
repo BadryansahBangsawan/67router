@@ -42,8 +42,6 @@ test("getDefaultComboConfig returns a fresh copy of the defaults", () => {
   assert.equal(first.fallbackCompressionMode, "lite");
   assert.equal(first.fallbackCompressionThreshold, 1000);
   assert.equal(first.predictiveTtftMs, 0);
-  assert.equal(first.evalRouting.enabled, false);
-  assert.equal(first.evalRouting.maxAgeHours, 720);
   assert.equal(first.quotaWeightedFloorPercent, 1);
 
   first.strategy = "weighted";
@@ -122,13 +120,11 @@ test("resolveComboConfig preserves nested routing defaults for partial overrides
     {
       config: {
         shadowRouting: { enabled: true },
-        evalRouting: { enabled: true, suiteIds: ["coding-proficiency"] },
       },
     },
     {
       comboDefaults: {
         shadowRouting: { sampleRate: 0.5 },
-        evalRouting: { maxAgeHours: 168 },
       },
     }
   );
@@ -137,11 +133,6 @@ test("resolveComboConfig preserves nested routing defaults for partial overrides
   assert.equal(result.shadowRouting.sampleRate, 0.5);
   assert.equal(result.shadowRouting.maxTargets, 2);
   assert.equal(result.shadowRouting.timeoutMs, 30000);
-  assert.equal(result.evalRouting.enabled, true);
-  assert.deepEqual(result.evalRouting.suiteIds, ["coding-proficiency"]);
-  assert.equal(result.evalRouting.maxAgeHours, 168);
-  assert.equal(result.evalRouting.minCases, 1);
-  assert.equal(result.evalRouting.cacheTtlMs, 60000);
 });
 
 test("resolveComboConfig ignores null, undefined, and legacy resilience overrides", () => {

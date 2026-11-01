@@ -13,7 +13,7 @@
 
 ## இது என்ன
 
-OmniRoute ஒரு **Obsidian** வால்ட்டுடன் **சூழல் மூலமாக** இணைகிறது — உள்ளமைக்கப்பட்ட MCP
+67router ஒரு **Obsidian** வால்ட்டுடன் **சூழல் மூலமாக** இணைகிறது — உள்ளமைக்கப்பட்ட MCP
 சர்வர் வழியாக ஏஜெண்டுகள் படித்து எழுதக்கூடிய ஓர் உள்ளூர் Markdown அறிவுத் தளம். இந்த
 ஒருங்கிணைப்பு டெஸ்க்டாப் செயலிக்குள் இயங்கும் சமூகச் செருகுநிரலான **Obsidian Local REST API**
 உடன் தொடர்புகொள்கிறது. இதனால் ஏஜெண்டுகள் குறிப்புகளைத் தேடவும், கோப்புகளைப்
@@ -84,7 +84,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 
 `src/app/api/settings/obsidian/webdav/route.ts`, விருப்பமான WebDAV ஆதரவுள்ள
 vault ஒத்திசைவை நிர்வகிக்கிறது (`src/lib/obsidianSync.ts` மூலம் இயக்கப்படுகிறது). இதை
-இயக்குவது OmniRoute-ஐ ஒரு உள்ளூர் vault கோப்பகத்திற்குச் சுட்டி, சீரற்ற WebDAV
+இயக்குவது 67router-ஐ ஒரு உள்ளூர் vault கோப்பகத்திற்குச் சுட்டி, சீரற்ற WebDAV
 பயனர்பெயர்/கடவுச்சொல் இணையை உருவாக்குகிறது:
 
 ```bash
@@ -123,7 +123,7 @@ fallback-ஐத் தொடர்ந்து பயன்படுத்து
 
 ## MCP கருவிகள் (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` இல் வரையறுக்கப்பட்டுள்ளன. token/base-URL ஒவ்வொரு அழைப்பிற்கும் தீர்மானிக்கப்படுகின்றன (முதலில் ஒவ்வொரு API key-க்குமானவை, பின்னர் global). OmniRoute **sync server**-ஐ அணுகும் கருவிகளுக்கு (நான்கு `obsidian_sync_*` கருவிகள்) கூடுதலாக OmniRoute அமைப்புகளில் உள்ளமைக்கப்பட்ட sync auth token தேவைப்படுகிறது.
+`open-sse/mcp-server/tools/obsidianTools.ts` இல் வரையறுக்கப்பட்டுள்ளன. token/base-URL ஒவ்வொரு அழைப்பிற்கும் தீர்மானிக்கப்படுகின்றன (முதலில் ஒவ்வொரு API key-க்குமானவை, பின்னர் global). 67router **sync server**-ஐ அணுகும் கருவிகளுக்கு (நான்கு `obsidian_sync_*` கருவிகள்) கூடுதலாக 67router அமைப்புகளில் உள்ளமைக்கப்பட்ட sync auth token தேவைப்படுகிறது.
 
 ### வாசிப்புக் கருவிகள் (`read:obsidian`)
 
@@ -140,7 +140,7 @@ fallback-ஐத் தொடர்ந்து பயன்படுத்து
 | `obsidian_get_periodic_note` | ஒரு தேதிக்கான daily/weekly/monthly periodic note-ஐப் பெறும் (விடுபட்டால் இன்றைய தேதி).                                |
 | `obsidian_get_tags`          | அனைத்து vault tags-ஐயும் அவற்றின் frequencies உடன் பட்டியலிடும்.                                                      |
 | `obsidian_list_commands`     | கிடைக்கக்கூடிய Obsidian command IDs-ஐப் பட்டியலிடும் (`obsidian_execute_command` உடன் பயன்படுத்தவும்).                |
-| `obsidian_sync_status`       | OmniRoute sync server நிலை: இயங்குகிறதா, vault பெயர், port, uptime, கடைசி sync.                                       |
+| `obsidian_sync_status`       | 67router sync server நிலை: இயங்குகிறதா, vault பெயர், port, uptime, கடைசி sync.                                        |
 | `obsidian_sync_conflicts`    | தீர்க்கப்படாத sync conflicts-ஐப் பட்டியலிடும் (path, conflict path, கண்டறியப்பட்ட நேரம்).                             |
 
 ### எழுதும் கருவிகள் (`write:obsidian`)

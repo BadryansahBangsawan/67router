@@ -48,7 +48,7 @@ na kufichuliwa kupitia handaki **haiwezi** kuchochea njia hii ya msimbo.
 | Linux+Firefox/Chromium | sasisho la hifadhidata ya NSS kwa kila wasifu kupitia `certutil -d sql:<profile>`                                 |
 
 Hizi ni amri zilezile zinazotumiwa na `mitmproxy`, Charles Proxy, Fiddler, na
-Caddy. Ukweli kwamba zipo katika OmniRoute umeandikwa katika
+Caddy. Ukweli kwamba zipo katika 67router umeandikwa katika
 `docs/security/STEALTH_GUIDE.md`.
 
 **Hatua ya kupunguza hatari ya v3.8.6**:
@@ -107,7 +107,7 @@ kwa waendeshaji ambao bado hawajasasisha otomatiki zao. Itaondolewa katika
 v3.9.
 
 **Kwa nini tunaihifadhi**: Uingizaji kutoka Zed ndiyo njia rahisi zaidi ya kuanza kwa watumiaji
-ambao tayari wanatumia Zed na wanataka kunakili funguo zao za watoa huduma kwenda OmniRoute
+ambao tayari wanatumia Zed na wanataka kunakili funguo zao za watoa huduma kwenda 67router
 bila kuzibandika tena.
 
 ---
@@ -119,7 +119,7 @@ bila kuzibandika tena.
 **Kwa nini iliwekewa alama**: sehemu hii husafirisha upya `execFileWithPassword`,
 `runElevatedPowerShell`, na kisaidizi cha pamoja cha `quotePowerShell`. Kiainishaji cha AI cha
 Socket.dev huzitambua kama "zana za jumla za utekelezaji kwenye hosti + uinuaji wa
-ruhusa." Ndani ya OmniRoute zinatumika tu na njia ya usakinishaji wa cheti cha MITM
+ruhusa." Ndani ya 67router zinatumika tu na njia ya usakinishaji wa cheti cha MITM
 (§1) na na `execFileWithPassword` kwa utekelezaji wa amri za `sudo`.
 
 **Hatua ya kupunguza hatari ya v3.8.6**:
@@ -169,7 +169,7 @@ njia zenye ruhusa ziondolewe kabisa kutoka kwenye kifurushi.
 
 ---
 
-## §5 — Uandikaji-nyuma wa vitambulisho vya OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Uandikaji-nyuma wa vitambulisho vya 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Faili chanzo**:
 
@@ -202,7 +202,7 @@ rawBody)`) kabla ya kuchanganua JSON. Ikiwa siri imewekwa, saini
    `rateLimitedUntil`, `updatedAt`). Hili ni **badiliko linalovunja uoanifu** kwa watumiaji
    waliotegemea usawazishaji wa tokeni za mbali — lazima wauwashe kwa hiari.
 
-**Kwa nini tunaihifadhi**: Cloud Sync ndiyo njia pekee inayomwezesha mpangaji wa OmniRoute Cloud
+**Kwa nini tunaihifadhi**: Cloud Sync ndiyo njia pekee inayomwezesha mpangaji wa 67router Cloud
 kuweka vitambulisho vya timu katika sehemu moja. Marekebisho hayo yanafanya modeli ya tishio iwe ya kweli:
 "seva husaini, mteja huthibitisha, mwendeshaji huwezesha kwa hiari."
 

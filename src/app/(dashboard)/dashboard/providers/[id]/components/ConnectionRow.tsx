@@ -323,7 +323,7 @@ export default function ConnectionRow({
 
   return (
     <div
-      className={`group flex ${isCodex ? "flex-col items-stretch gap-3" : "flex-wrap items-center justify-between gap-x-3 gap-y-2"} p-3 rounded-lg hover:bg-bg-subtle transition-colors ${connection.isActive === false ? "opacity-60" : ""}`}
+      className={`group flex ${isCodex ? "flex-col items-stretch gap-3" : "flex-wrap items-center justify-between gap-x-3 gap-y-2"} px-4 py-3 hover:bg-bg-subtle transition-colors ${connection.isActive === false ? "opacity-60" : ""}`}
     >
       {/* basis-64 lets the action bar drop to its own line on narrow screens instead of
           pushing the row past the viewport (the page clips x-overflow, so buttons vanished).
@@ -838,7 +838,7 @@ export default function ConnectionRow({
               size="icon-sm"
               icon="edit"
               onClick={onEdit}
-              className="size-7 min-h-7 rounded hover:bg-bg-subtle text-text-muted hover:text-primary"
+              className="size-7 min-h-7 rounded hover:bg-bg-subtle text-text-muted hover:text-text-main"
               title={t("edit")}
               aria-label={t("edit")}
             />
@@ -847,7 +847,7 @@ export default function ConnectionRow({
               size="icon-sm"
               icon="vpn_lock"
               onClick={onProxy}
-              className="size-7 min-h-7 rounded hover:bg-bg-subtle text-text-muted hover:text-primary"
+              className="size-7 min-h-7 rounded hover:bg-bg-subtle text-text-muted hover:text-text-main"
               title={t("proxyConfig")}
               aria-label={t("proxyConfig")}
             />

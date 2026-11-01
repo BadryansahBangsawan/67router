@@ -30,13 +30,9 @@ import {
   syncPricingInput,
   cacheStatsInput,
   cacheFlushInput,
-  oneproxyFetchInput,
-  oneproxyRotateInput,
-  oneproxyStatsInput,
 } from "./schemas/tools.ts";
 import { startMcpHeartbeat } from "./runtimeHeartbeat.ts";
 import { countUniqueMcpTools } from "./toolCount.ts";
-import { z } from "zod";
 import { closeAuditDb, logToolCall } from "./audit.ts";
 import {
   buildScopeDenialMessage,
@@ -45,7 +41,6 @@ import {
   shouldForceScopeEnforcement,
   type McpToolExtraLike,
 } from "./scopeEnforcement.ts";
-import { resolveMcpToolOwnerId } from "./mcpCallerIdentity.ts";
 import {
   handleSimulateRoute,
   handleSetBudgetGuard,
@@ -60,9 +55,6 @@ import {
   handleSyncPricing,
   handleCacheStats,
   handleCacheFlush,
-  handleOneproxyFetch,
-  handleOneproxyRotate,
-  handleOneproxyStats,
 } from "./tools/advancedTools.ts";
 import { handlePickFastestModel } from "./tools/pickFastestModel.ts";
 // #15159 M-01 — "file = register + wrap. handle* -> tools/canonical/*.ts".
@@ -86,13 +78,7 @@ import {
 } from "./tools/inferenceTools.ts";
 import { handleWebFetch, handleWebSearch, handleXSearch } from "./tools/webTools.ts";
 import { toRecord } from "./coercions.ts";
-import { memoryTools } from "./tools/memoryTools.ts";
-import { skillTools } from "./tools/skillTools.ts";
 import { agentSkillTools } from "./tools/agentSkillTools.ts";
-import { githubSkillTools } from "./tools/githubSkillTools.ts";
-import { skillRegistry } from "../../src/lib/skills/registry.ts";
-import { skillExecutor } from "../../src/lib/skills/executor.ts";
-import { pluginTools } from "./tools/pluginTools.ts";
 import { compressionTools } from "./tools/compressionTools.ts";
 import { poolTools } from "./tools/poolTools.ts";
 import { gamificationTools } from "./tools/gamificationTools.ts";
@@ -122,13 +108,9 @@ const MCP_ALLOWED_SCOPES = new Set(
 );
 const TOTAL_MCP_TOOL_COUNT = countUniqueMcpTools({
   MCP_TOOLS,
-  memoryTools,
-  skillTools,
   agentSkillTools,
-  githubSkillTools,
   poolTools,
   gamificationTools,
-  pluginTools,
   notionTools,
   obsidianTools,
   localCorpusTools,
@@ -302,24 +284,11 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     return registerResource(name, uriOrTemplate as never, metadata as never, readCallback as never);
   }) as typeof server.registerResource;
 
-  const RESERVED_MCP_NAMES = new Set([
-    ...MCP_TOOLS.map((t) => t.name),
-    ...Object.keys(memoryTools),
-    ...Object.keys(skillTools),
-    ...Object.keys(compressionTools),
-    ...Object.keys(poolTools),
-    ...pluginTools.map((t) => t.name),
-    ...gamificationTools.map((t) => t.name),
-    ...obsidianTools.map((t) => t.name),
-    ...notionTools.map((t) => t.name),
-    ...localCorpusTools.map((t) => t.name),
-  ]);
-
   server.registerTool(
     "omniroute_get_health",
     {
       description:
-        "Returns OmniRoute health status including uptime, memory, circuit breakers, rate limits, and cache stats",
+        "Returns 67router health status including uptime, memory, circuit breakers, rate limits, and cache stats",
       inputSchema: getHealthInput,
     },
     withScopeEnforcement("omniroute_get_health", async (args) => {
@@ -387,7 +356,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
   server.registerTool(
     "omniroute_route_request",
     {
-      description: "Sends a chat completion request through OmniRoute intelligent routing",
+      description: "Sends a chat completion request through 67router intelligent routing",
       inputSchema: routeRequestInput,
     },
     withScopeEnforcement("omniroute_route_request", (args) =>
@@ -542,7 +511,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_db_health_check",
     {
       description:
-        "Diagnoses or repairs OmniRoute database drift, including broken combo references and orphan quota/domain rows",
+        "Diagnoses or repairs 67router database drift, including broken combo references and orphan quota/domain rows",
       inputSchema: dbHealthCheckInput,
     },
     withScopeEnforcement("omniroute_db_health_check", (args) =>
@@ -554,7 +523,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_sync_pricing",
     {
       description:
-        "Syncs pricing data from external sources (LiteLLM) into OmniRoute without overwriting user-set prices",
+        "Syncs pricing data from external sources (LiteLLM) into 67router without overwriting user-set prices",
       inputSchema: syncPricingInput,
     },
     withScopeEnforcement("omniroute_sync_pricing", (args) =>
@@ -566,7 +535,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_web_search",
     {
       description:
-        "Performs a web search using OmniRoute's search gateway. Supports multiple providers (Serper, Brave, Perplexity, Exa, Tavily) with automatic failover. Returns search results with titles, URLs, snippets, and position data.",
+        "Performs a web search using 67router's search gateway. Supports multiple providers (Serper, Brave, Perplexity, Exa, Tavily) with automatic failover. Returns search results with titles, URLs, snippets, and position data.",
       inputSchema: dynamicWebSearchInput,
     },
     withScopeEnforcement("omniroute_web_search", (args) =>
@@ -582,7 +551,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_x_search",
     {
       description:
-        "Search X (Twitter) through OmniRoute using SuperGrok / xAI server-side x_search. Requires xai-oauth or an xAI API key. Not web search.",
+        "Search X (Twitter) through 67router using SuperGrok / xAI server-side x_search. Requires xai-oauth or an xAI API key. Not web search.",
       inputSchema: xSearchInput,
     },
     withScopeEnforcement("omniroute_x_search", (args) => handleXSearch(xSearchInput.parse(args)))
@@ -592,7 +561,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     "omniroute_web_fetch",
     {
       description:
-        "Fetches and extracts content from a URL using OmniRoute's web fetch gateway. Supports multiple providers (Firecrawl, Jina Reader, Tavily) with automatic failover. Returns the page content as markdown, HTML, links, or screenshot, along with metadata.",
+        "Fetches and extracts content from a URL using 67router's web fetch gateway. Supports multiple providers (Firecrawl, Jina Reader, Tavily) with automatic failover. Returns the page content as markdown, HTML, links, or screenshot, along with metadata.",
       inputSchema: webFetchInput,
     },
     withScopeEnforcement("omniroute_web_fetch", (args) => handleWebFetch(webFetchInput.parse(args)))
@@ -620,97 +589,7 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     )
   );
 
-  server.registerTool(
-    "omniroute_oneproxy_fetch",
-    {
-      description:
-        "Fetch free proxies from the 1proxy marketplace with optional filters for protocol, country, and quality. Returns validated proxies with quality scores.",
-      inputSchema: oneproxyFetchInput,
-    },
-    withScopeEnforcement("omniroute_oneproxy_fetch", (args) =>
-      handleOneproxyFetch(oneproxyFetchInput.parse(args))
-    )
-  );
-
-  server.registerTool(
-    "omniroute_oneproxy_rotate",
-    {
-      description:
-        "Get the next available free proxy from the 1proxy pool using the specified rotation strategy.",
-      inputSchema: oneproxyRotateInput,
-    },
-    withScopeEnforcement("omniroute_oneproxy_rotate", (args) =>
-      handleOneproxyRotate(oneproxyRotateInput.parse(args))
-    )
-  );
-
-  server.registerTool(
-    "omniroute_oneproxy_stats",
-    {
-      description:
-        "Returns 1proxy sync status and statistics: total proxies, average quality, sync history, and distribution by protocol and country.",
-      inputSchema: oneproxyStatsInput,
-    },
-    withScopeEnforcement("omniroute_oneproxy_stats", (args) =>
-      handleOneproxyStats(oneproxyStatsInput.parse(args))
-    )
-  );
-
   registerToolSearchTool(server, withScopeEnforcement);
-
-  // ── Memory Tools ──────────────────────────────
-  Object.values(memoryTools).forEach((toolDef: any) => {
-    server.registerTool(
-      toolDef.name,
-      {
-        description: toolDef.description,
-        // @ts-ignore: dynamic zod access
-        inputSchema: toolDef.inputSchema,
-      },
-      withScopeEnforcement(
-        toolDef.name,
-        async (args, extra) => {
-          try {
-            const parsedArgs = toolDef.inputSchema.parse(args ?? {});
-            // @ts-ignore - handler type lost through dynamic Object.values() access
-            const result = await toolDef.handler(parsedArgs, extra);
-            return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
-          } catch (err) {
-            const msg = toSafeMcpErrorMessage(err, "Memory tool execution failed");
-            return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
-          }
-        },
-        toolDef.scopes
-      )
-    );
-  });
-
-  // ── Skill Tools ──────────────────────────────
-  Object.values(skillTools).forEach((toolDef: any) => {
-    server.registerTool(
-      toolDef.name,
-      {
-        description: toolDef.description,
-        // @ts-ignore: dynamic zod access
-        inputSchema: toolDef.inputSchema,
-      },
-      withScopeEnforcement(
-        toolDef.name,
-        async (args, extra) => {
-          try {
-            const parsedArgs = toolDef.inputSchema.parse(args ?? {});
-            // @ts-ignore - handler type lost through dynamic Object.values() access
-            const result = await toolDef.handler(parsedArgs, extra);
-            return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
-          } catch (err) {
-            const msg = toSafeMcpErrorMessage(err, "Skill tool execution failed");
-            return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
-          }
-        },
-        toolDef.scopes
-      )
-    );
-  });
 
   // ── Agent Skill Tools ─────────────────────────
   Object.values(agentSkillTools).forEach((toolDef) => {
@@ -731,60 +610,6 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
             return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
           } catch (err) {
             const msg = toSafeMcpErrorMessage(err, "Agent skill tool execution failed");
-            return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
-          }
-        },
-        toolDef.scopes
-      )
-    );
-  });
-
-  // ── GitHub Skill Tools ──────────────────────────
-  Object.values(githubSkillTools).forEach((toolDef) => {
-    server.registerTool(
-      toolDef.name,
-      {
-        description: toolDef.description,
-        // @ts-ignore: dynamic zod access
-        inputSchema: toolDef.inputSchema,
-      },
-      withScopeEnforcement(
-        toolDef.name,
-        async (args) => {
-          try {
-            const parsedArgs = toolDef.inputSchema.parse(args ?? {});
-            // @ts-expect-error - handler type lost through dynamic Object.values() access
-            const result = await toolDef.handler(parsedArgs);
-            return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
-          } catch (err) {
-            const msg = toSafeMcpErrorMessage(err, "GitHub skill tool execution failed");
-            return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
-          }
-        },
-        toolDef.scopes
-      )
-    );
-  });
-
-  // ── Plugin Tools ──────────────────────────────
-  pluginTools.forEach((toolDef) => {
-    server.registerTool(
-      toolDef.name,
-      {
-        description: toolDef.description,
-        // @ts-ignore: dynamic zod access
-        inputSchema: toolDef.inputSchema,
-      },
-      withScopeEnforcement(
-        toolDef.name,
-        async (args, extra) => {
-          try {
-            const parsedArgs = toolDef.inputSchema.parse(args ?? {});
-            // @ts-ignore: handler expected specific object
-            const result = await toolDef.handler(parsedArgs, extra);
-            return { content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }] };
-          } catch (err) {
-            const msg = toSafeMcpErrorMessage(err, "Plugin tool execution failed");
             return { content: [{ type: "text" as const, text: `Error: ${msg}` }], isError: true };
           }
         },
@@ -969,52 +794,6 @@ export function createMcpServer(options?: CreateMcpServerOptions): McpServer {
     );
   });
 
-  // ── Dynamic Skill Tools (from skills table) ──
-  const skillToMcpToolName = (skill: { name: string }) =>
-    `skill_${skill.name.replace(/[^a-z0-9_-]/gi, "_")}`;
-  try {
-    const enabledSkills = skillRegistry.list().filter((s) => s.enabled);
-    for (const skill of enabledSkills) {
-      const toolName = skillToMcpToolName(skill);
-      if (RESERVED_MCP_NAMES.has(toolName)) continue;
-
-      server.registerTool(
-        toolName,
-        {
-          description: skill.description,
-          inputSchema: z.object({}).passthrough(),
-        },
-        withScopeEnforcement(
-          toolName,
-          async (args, extra) => {
-            const apiKeyId = (await resolveMcpToolOwnerId(extra)) ?? "mcp";
-            try {
-              const execution = await skillExecutor.execute(
-                skill.name,
-                (args ?? {}) as Record<string, unknown>,
-                { apiKeyId }
-              );
-              return {
-                content: [
-                  { type: "text" as const, text: JSON.stringify(execution.output, null, 2) },
-                ],
-              };
-            } catch (err) {
-              const msg = toSafeMcpErrorMessage(err, "Skill execution failed");
-              return {
-                content: [{ type: "text" as const, text: `Error: ${msg}` }],
-                isError: true,
-              };
-            }
-          },
-          ["execute:skills"]
-        )
-      );
-    }
-  } catch {
-    // Skills not loaded yet — skip dynamic registration until next reconnect
-  }
-
   return server;
 }
 
@@ -1045,10 +824,10 @@ export async function startMcpStdio(): Promise<void> {
   process.once("SIGINT", stopHeartbeatOnce);
   process.once("SIGTERM", stopHeartbeatOnce);
 
-  console.error("[MCP] OmniRoute MCP Server starting (stdio transport)...");
+  console.error("[MCP] 67router MCP Server starting (stdio transport)...");
   try {
     await server.connect(transport);
-    console.error("[MCP] OmniRoute MCP Server connected and ready.");
+    console.error("[MCP] 67router MCP Server connected and ready.");
   } finally {
     if (closeAuditDb()) {
       console.error("[MCP] Audit database checkpointed and closed.");

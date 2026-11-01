@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoutessa on kolme erillistä mutta toisiinsa liittyvää resilienttisyysmekanismia. Jokaisella on oma laajuus ja tarkoituksensa. Pidä ne erillään reitityskäyttäytymisen vianjäljityksessä.
+67routerissa on kolme erillistä mutta toisiinsa liittyvää resilienttisyysmekanismia. Jokaisella on oma laajuus ja tarkoituksensa. Pidä ne erillään reitityskäyttäytymisen vianjäljityksessä.
 
 ![3-kerroksinen resilienttisyysmalli](../diagrams/exported/resilience-3layers.svg)
 
@@ -185,7 +185,7 @@ Kolmea istuntoaffiniteettiotsaketta ei koskaan välitetä upstreamiin — suorit
 
 ### Yksinomaiset hallitut istuntoyhteyksien vuokraukset
 
-**Laajuus:** yksi aktiivinen hallittu HTTP-asiakas/istunto omistaa yhden kelvollisen OmniRoute-yhteyden.
+**Laajuus:** yksi aktiivinen hallittu HTTP-asiakas/istunto omistaa yhden kelvollisen 67router-yhteyden.
 
 **Tarkoitus:** tarjota kestävä yksinomainen yhteydenomistus asiakkaille, jotka tarvitsevat tiukan reititysrajan pyyntöjen yli. Tämä eroaa istuntoaffiniteetista, joka on pehmeä jatkuvuuspreferenssi: yksinomainen vuokraus tallentaa elinkaaritilan SQLiteen, valvoo globaalia aktiivisen omistajan ja aktiivisen yhteyden yksilöllisyyttä ja hylkää vanhentuneen sukupolven ennen tarjoajalle lähettämistä.
 
@@ -195,7 +195,7 @@ Elinkaari on `POST /api/v1/session-leases` JSON-toiminnoilla `acquire`, `renew` 
 Hallitut päättelypyynnöt esittävät läpinäkymättömän `X-OmniRoute-Lease-Owner`-arvon ja täsmällisen
 `X-OmniRoute-Lease-Generation`-arvon. Omistaja muodostuu etuliitteestä `vlo_`, jota seuraa 43 base64url-merkkiä; vain sen SHA-256-tiiviste tallennetaan. Jokainen lopullinen lähetysaitaus sitoo lisäksi todennetun API-avaimen tunnuksen ja aktiivisen yhteyden tunnuksen. Vuokranhallinnan otsakkeet poistetaan lokeista, säilytetyistä pyyntötilannekuvista ja upstream-suorittajan otsakkeista.
 
-Jos tavallisella reitityksellä on kelpoisia hallittuja ehdokkaita, mutta kaikki vapaat ehdokkaat ovat vieraan aktiivisen vuokran käytössä, OmniRoute palauttaa HTTP `429` -virheen, joka sisältää vuokrakapasiteetin saatavuusvirheen koodin, kapasiteettia odottavan tilan sekä rajatun `Retry-After`-arvon, joka johdetaan aikaisimmasta oleellisesta vanhentumisajankohdasta. Tavallinen tyhjä kelpoisuusjoukko ei ole vuokrakapasiteetin kiistaa, vaan sen olemassa oleva reititysvirhesmantiikka säilyy ennallaan.
+Jos tavallisella reitityksellä on kelpoisia hallittuja ehdokkaita, mutta kaikki vapaat ehdokkaat ovat vieraan aktiivisen vuokran käytössä, 67router palauttaa HTTP `429` -virheen, joka sisältää vuokrakapasiteetin saatavuusvirheen koodin, kapasiteettia odottavan tilan sekä rajatun `Retry-After`-arvon, joka johdetaan aikaisimmasta oleellisesta vanhentumisajankohdasta. Tavallinen tyhjä kelpoisuusjoukko ei ole vuokrakapasiteetin kiistaa, vaan sen olemassa oleva reititysvirhesmantiikka säilyy ennallaan.
 
 Liittyvät mekanismit pysyvät erillisinä:
 
@@ -215,7 +215,7 @@ Liittyvät mekanismit pysyvät erillisinä:
   codexin kohdalla koko `codex` / `spark` -alue (kaikki yhteyden `gpt-5*`-mallit),
   muiden palveluntarjoajien kohdalla `getQuotaScopedModelForProvider()`.
 - `404` lukitsee pelkän mallin (`getModelLockKey()` kaventaa `not_found`-tilanteen).
-- Kaikki muut statukset — `5xx`-siirto-/palvelinvirheet sekä OmniRouten oma
+- Kaikki muut statukset — `5xx`-siirto-/palvelinvirheet sekä 67routerin oma
   laadunvalidoinnin syntetisoima `502` — lukitsevat vain **tarkan**
   palveluntarjoaja/yhteys/malli-kolmikon. Yhden mallin viallinen stream ei ole
   näyttöä tilin kiintiöstä; ennen tätä sääntöä yksi tyhjä vastaus kohteessa
@@ -355,7 +355,7 @@ concurrency caps**, yksi `model=cap` per rivi) tai kutsulla
   samanaikaisten pyyntöjen ylärajoina.
 - **Paikallinen jonotus, ei selvittelyä:** ylimääräiset pyynnöt jonottavat
   paikallisesti olemassa olevilla jono-/aikakatkaisusemantiikoilla (typitetyt
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` -pääsyvirheet). OmniRoute ei selvitä
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` -pääsyvirheet). 67router ei selvitä
   tai päättele upstream-käytäntöä — se valvoo täsmälleen operaattorin
   määrittelemiä ylärajoja. Kyllästynyt malliportti ei koskaan poista provideria
   käytöstä eikä luo pysyvää mallilukitusta; upstreamin 429-/jäähdytys-/fallback-
@@ -541,7 +541,7 @@ se voidaan yksikkötestata ilman todellista Bottleneck-rajoitinta.
 ### Nopeusrajoituksen automaattisen käyttöönoton turvaverkko ja yhteyssuojaus (`rateLimitProtection`)
 
 **Automaattisen käyttöönoton turvaverkko** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, oletus `true`):
-Oletusarvoisesti OmniRoute ottaa automaattisesti käyttöön nopeusrajoituksen jonosuojauksen kaikille aktiivisille API-avaintyyppisille palveluntarjoajayhteyksille (`getProviderCategory(provider) === "apikey"`). Tämä varmistaa, että rajoitusherkkiin upstream-API-avaimiin kohdistuvat saapuvat pyynnöt jonotetaan ja kuristetaan Bottleneckin kautta sen sijaan, että ne purkautuisivat äkillisinä upstream-429-virheinä. Turvaverkko voidaan ohittaa `RATE_LIMIT_AUTO_ENABLE`-ympäristömuuttujalla (`false`/`0`/`off` poistaa käytöstä, `true`/`1`/`on` pakottaa päälle), ja se menee hallintapaneeliin tallennetun asetuksen edelle (**Asetukset → Vikasietoisuus** / `PATCH /api/resilience`).
+Oletusarvoisesti 67router ottaa automaattisesti käyttöön nopeusrajoituksen jonosuojauksen kaikille aktiivisille API-avaintyyppisille palveluntarjoajayhteyksille (`getProviderCategory(provider) === "apikey"`). Tämä varmistaa, että rajoitusherkkiin upstream-API-avaimiin kohdistuvat saapuvat pyynnöt jonotetaan ja kuristetaan Bottleneckin kautta sen sijaan, että ne purkautuisivat äkillisinä upstream-429-virheinä. Turvaverkko voidaan ohittaa `RATE_LIMIT_AUTO_ENABLE`-ympäristömuuttujalla (`false`/`0`/`off` poistaa käytöstä, `true`/`1`/`on` pakottaa päälle), ja se menee hallintapaneeliin tallennetun asetuksen edelle (**Asetukset → Vikasietoisuus** / `PATCH /api/resilience`).
 
 **Yhteyskohtaisen `rateLimitProtection`-kentän semantiikka:**
 Yhteyskohtaista nopeusrajoitussuojausta seurataan palveluntarjoajayhteyksien `rateLimitProtection`-totuusarvokentällä (tallennetaan SQLiteen kenttänä `rate_limit_protection`):
@@ -901,7 +901,7 @@ signaali kuin loppuun kulunut kiintiö. Rehelliset rajoitukset:
 > agenteille suunnattu näkymä yllä oleviin osioihin; numeroidut osiot pysyvät täydenä
 > viitteenä.
 
-OmniRoutessa on kolme toisiinsa liittyvää mutta erillistä tilapäisvirhemekanismia. Pidä
+67routerissa on kolme toisiinsa liittyvää mutta erillistä tilapäisvirhemekanismia. Pidä
 niiden vaikutusaluet erillään reitityksen käyttäytymistä virheenkorjatessasi. Katso
 [3-kerroksinen vikasietoisuuskaavio](../diagrams/exported/resilience-3layers.svg)
 (lähde: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Sumber:** `open-sse/services/thinkingBudget.ts`
 
-Bajet Pemikiran mengawal sama ada OmniRoute **menulis semula parameter pemikiran/penaakulan klien** semasa permintaan dihantar kepada penyedia. Ia **tidak** menghidupkan atau mematikan pemampatan, penghalaan atau cache gesaan.
+Bajet Pemikiran mengawal sama ada 67router **menulis semula parameter pemikiran/penaakulan klien** semasa permintaan dihantar kepada penyedia. Ia **tidak** menghidupkan atau mematikan pemampatan, penghalaan atau cache gesaan.
 
 ## Mod
 
-| Mod                       | Tindakan OmniRoute                                                                                                           | Masa untuk digunakan                                                                                                                                                                    |
+| Mod                       | Tindakan 67router                                                                                                            | Masa untuk digunakan                                                                                                                                                                    |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (lalai) | Membiarkan medan klien tanpa perubahan (`reasoning`, `reasoning_effort`, `thinking` Claude, `thinking_config` Gemini, dll.). | **Codex / Desktop / mana-mana klien yang sepatutnya mengawal usaha + ringkasan penaakulan.** Diperlukan untuk panel pemikiran yang kelihatan apabila klien meminta `reasoning.summary`. |
 | **`auto`**                | **Membuang semua** medan pemikiran/penaakulan daripada badan permintaan sebelum dihantar ke huluan.                          | Hanya apabila anda sengaja mahu **penyedia** menentukan nilai lalai dan anda **tidak** memerlukan pemikiran yang dikawal oleh klien. **Bukan** “paparkan pemikiran secara automatik”.   |
@@ -38,7 +38,7 @@ Jika klien (cth. Codex Desktop) menghantar `reasoning: { effort: "ultra", summar
 | **Penghalaan gabungan / sandaran**          | Berasingan. Tidak terjejas.                                                                                                                     |
 | **Had token kunci API / bajet kos**         | Berasingan. Tidak terjejas.                                                                                                                     |
 | **Cache main semula penaakulan**            | Suntikan semula berbilang giliran untuk penyedia yang ketat (DeepSeek, Kimi, Qwen-thinking, …). Tidak sama dengan “paparkan pemikiran” Desktop. |
-| **Menyahsulit `encrypted_content`**         | **Mustahil.** Blob penaakulan peribadi OpenAI/Codex tidak telus. OmniRoute tidak pernah menyahsulitnya (#7095 / #7176 / #7304).                 |
+| **Menyahsulit `encrypted_content`**         | **Mustahil.** Blob penaakulan peribadi OpenAI/Codex tidak telus. 67router tidak pernah menyahsulitnya (#7095 / #7176 / #7304).                  |
 
 ## Pemikiran yang kelihatan (klien Codex / Responses)
 
@@ -51,7 +51,7 @@ Untuk membolehkan klien memaparkan teks pemikiran, anda memerlukan **semua** per
 Jika anda hanya mendapat “penaakulan peribadi yang disulitkan”, sama ada:
 
 - mod ialah **`auto`** (permintaan klien telah dibuang), atau
-- penyedia huluan mengembalikan `encrypted_content` tanpa teks ringkasan (keterbatasan penyedia; OmniRoute hanya boleh memaparkan ruang letak, bukan teks biasa).
+- penyedia huluan mengembalikan `encrypted_content` tanpa teks ringkasan (keterbatasan penyedia; 67router hanya boleh memaparkan ruang letak, bukan teks biasa).
 
 ## Contoh API
 
@@ -71,7 +71,7 @@ Skema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapti
 
 ### Pengekalan / mula semula
 
-Nilai disimpan di bawah kunci tetapan `thinkingBudget` dan dimuatkan semasa proses bermula (`hydrateThinkingBudgetConfig`). Selepas membuat perubahan melalui DB atau sesetengah laluan bukan API, **mulakan semula proses OmniRoute** supaya tika tunggal dalam memori sepadan dengan cakera.
+Nilai disimpan di bawah kunci tetapan `thinkingBudget` dan dimuatkan semasa proses bermula (`hydrateThinkingBudgetConfig`). Selepas membuat perubahan melalui DB atau sesetengah laluan bukan API, **mulakan semula proses 67router** supaya tika tunggal dalam memori sepadan dengan cakera.
 
 ## Senarai semak pengendali
 

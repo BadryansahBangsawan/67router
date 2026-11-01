@@ -6,7 +6,7 @@
 
 ## Ikhtisar
 
-Semua rute API pengelolaan OmniRoute diklasifikasikan ke dalam salah satu dari tiga
+Semua rute API pengelolaan 67router diklasifikasikan ke dalam salah satu dari tiga
 tingkat perlindungan. Klasifikasi bersifat statis, ditentukan dalam `src/server/authz/routeGuard.ts`,
 dan dievaluasi sebelum cabang autentikasi lainnya dijalankan.
 
@@ -28,9 +28,9 @@ CVE yang telah diketahui
 **Apa itu GHSA-fhh6-4qxv-rpqj (kelas serangannya):** server manajemen/agen
 mengekspos endpoint yang meluncurkan subproses (`npm install`, `node`, browser,
 proxy, `git`, `tar`, …). Jika endpoint tersebut dapat dijangkau dari luar host —
-karena operator menempatkan OmniRoute di belakang tunnel nginx/Cloudflare/Tailscale
+karena operator menempatkan 67router di belakang tunnel nginx/Cloudflare/Tailscale
 dan JWT bocor, atau autentikasi salah dikonfigurasi — penyerang mengubah "memanggil
-API" menjadi "menjalankan perintah pada host" (eksekusi kode jarak jauh). OmniRoute
+API" menjadi "menjalankan perintah pada host" (eksekusi kode jarak jauh). 67router
 menutup celah ini dengan memberlakukan **pemeriksaan host loopback tanpa syarat,
 sebelum pemeriksaan autentikasi apa pun**, pada setiap rute yang mampu membuat
 proses: token yang bocor melalui tunnel tetap tidak dapat mengakses fungsi
@@ -61,7 +61,6 @@ diklasifikasikan sebagai khusus lokal.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — listener http-proxy + proksi sistem                                                                    |
 | `/api/settings/mitm`                                                                                     | Mengaktifkan intersepsi MITM (status proksi tingkat sistem)                                                                |
 | `/api/issue-agent/`                                                                                      | Agen isu — menjalankan alat lokal terhadap repositori                                                                      |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugin — dimuat/dieksekusi melalui `worker_threads` + `child_process`                                                      |
 | `/api/middleware/`                                                                                       | Middleware pengguna — memuat/mengeksekusi kode operator dalam proses                                                       |
 | `/api/system/version`                                                                                    | Pembaruan otomatis (hanya POST; GET/HEAD/OPTIONS dikecualikan) — menjalankan `git checkout` + `npm install`                |
 | `/api/db-backups/exportAll`                                                                              | Menjalankan `tar` untuk arsip ekspor                                                                                       |
@@ -122,7 +121,7 @@ bagi pemanggil jarak jauh khusus MCP yang tidak memerlukan akses pengelolaan lua
 
 #### Panduan operator & audit
 
-Jika Anda menjalankan OmniRoute di belakang proxy terbalik atau tunnel (nginx, Caddy, Cloudflare
+Jika Anda menjalankan 67router di belakang proxy terbalik atau tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), pemeriksaan loopback tetap melindungi rute yang dapat menjalankan
 proses di atas — permintaan yang alamat kliennya non-loopback ditolak dengan
 `403 LOCAL_ONLY` **sebelum autentikasi dijalankan**, sehingga JWT yang bocor tidak dapat memicu proses. Masih ada dua
@@ -160,7 +159,7 @@ tanggung jawab operator:
 - Cari prefiks di atas dalam log reverse-proxy / akses Anda yang dipasangkan dengan
   alamat klien non-loopback. Setiap akses seperti itu yang mengembalikan `200`, bukan
   `403 LOCAL_ONLY`, berarti proxy menyamarkan IP klien yang sebenarnya — perbaiki proxy tersebut.
-- Entri `403 LOCAL_ONLY` dalam log OmniRoute untuk salah satu jalur ini menunjukkan bahwa pengaman
+- Entri `403 LOCAL_ONLY` dalam log 67router untuk salah satu jalur ini menunjukkan bahwa pengaman
   bekerja sebagaimana mestinya, bukan kesalahan yang harus disembunyikan.
 
 #### Rute yang dapat dijangkau dari jarak jauh dengan gerbang pemeriksaan di lokasi pemanggilan

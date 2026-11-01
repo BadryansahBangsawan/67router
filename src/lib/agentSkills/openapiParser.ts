@@ -86,12 +86,10 @@ const PATH_AREA_MAP: Array<[string, SkillArea]> = [
   // DB backups
   ["/api/system", "db-backups"],
   ["/api/backup", "db-backups"],
-  // Webhooks
-  ["/api/webhooks", "webhooks"],
   // MCP
   ["/api/mcp", "mcp"],
-  // A2A
-  ["/a2a", "agents-a2a"],
+  // A2A task routes (the /a2a JSON-RPC surface was removed; Conductor-mirrored tasks remain)
+  ["/api/a2a", "agents-a2a"],
   // Version manager
   ["/api/services", "version-manager"],
   ["/api/version", "version-manager"],

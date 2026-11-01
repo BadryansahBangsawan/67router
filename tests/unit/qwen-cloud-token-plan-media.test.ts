@@ -9,7 +9,6 @@ process.env.DATA_DIR = mkdtempSync(join(tmpdir(), "omniroute-qwen-token-plan-med
 const { IMAGE_PROVIDERS, parseImageModel } = await import("../../open-sse/config/imageRegistry.ts");
 const { VIDEO_PROVIDERS, parseVideoModel } = await import("../../open-sse/config/videoRegistry.ts");
 const { resolveProviderServiceKinds } = await import("../../open-sse/config/mediaServiceKinds.ts");
-const { handleImageGeneration } = await import("../../open-sse/handlers/imageGeneration.ts");
 const { handleVideoGeneration } = await import("../../open-sse/handlers/videoGeneration.ts");
 const { resolveAlibabaProviderMediaBaseUrl } =
   await import("../../src/shared/constants/alibabaProviderRegions.ts");
@@ -63,65 +62,6 @@ test("Qwen Cloud Token Plan media URLs follow the saved region", () => {
     }),
     "https://token-plan.cn-beijing.maas.aliyuncs.com/api/v1"
   );
-});
-
-test("Wan image generation uses the Token Plan multimodal endpoint and normalizes URLs", async () => {
-  const originalFetch = globalThis.fetch;
-  let captured;
-
-  globalThis.fetch = async (url, options = {}) => {
-    captured = {
-      url: String(url),
-      headers: options.headers,
-      body: JSON.parse(String(options.body || "{}")),
-    };
-    return jsonResponse({
-      output: {
-        choices: [
-          {
-            message: {
-              content: [
-                { image: "https://cdn.example.com/wan-1.png" },
-                { image: "https://cdn.example.com/wan-2.png" },
-              ],
-            },
-          },
-        ],
-      },
-    });
-  };
-
-  try {
-    const result = await handleImageGeneration({
-      body: {
-        model: "qwen-cloud-token-plan/wan2.7-image-pro",
-        prompt: "A watercolor horse",
-        size: "2048x2048",
-        n: 2,
-      },
-      credentials: {
-        apiKey: "token-plan-key",
-        providerSpecificData: { region: "china-beijing" },
-      },
-      log: null,
-    });
-
-    assert.equal(
-      captured.url,
-      "https://token-plan.cn-beijing.maas.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
-    );
-    assert.equal(captured.headers.Authorization, "Bearer token-plan-key");
-    assert.equal(captured.body.model, "wan2.7-image-pro");
-    assert.deepEqual(captured.body.input.messages[0].content, [{ text: "A watercolor horse" }]);
-    assert.deepEqual(captured.body.parameters, { size: "2048*2048", n: 2 });
-    assert.equal(result.success, true);
-    assert.deepEqual(
-      result.data.data.map((item) => item.url),
-      ["https://cdn.example.com/wan-1.png", "https://cdn.example.com/wan-2.png"]
-    );
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
 });
 
 async function captureHappyHorseRequest(body) {

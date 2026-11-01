@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Latviešu)
+# 📖 Setup Guide — 67router (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Pilnīga OmniRoute iestatīšanas uzziņa. Īsajai versijai skatiet [ātro sākšanu README failā](../README.md#-quick-start).
+> Pilnīga 67router iestatīšanas uzziņa. Īsajai versijai skatiet [ātro sākšanu README failā](../README.md#-quick-start).
 
 ## Satura rādītājs
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR pakotne](https://aur.archlinux.org/packages/omniroute-bin) instalē OmniRoute un nodrošina systemd lietotāja servisu.
+[AUR pakotne](https://aur.archlinux.org/packages/omniroute-bin) instalē 67router un nodrošina systemd lietotāja servisu.
 
 ### No pirmkoda
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Piezīme Windows lietotājiem:** pēc noklusējuma OmniRoute izmanto `%APPDATA%\omniroute`, ja mantotais direktorijs `%USERPROFILE%\.omniroute` nepastāv. Iestatiet `DATA_DIR`, lai izvēlētos citu datu direktorija atrašanās vietu.
+> **Piezīme Windows lietotājiem:** pēc noklusējuma 67router izmanto `%APPDATA%\omniroute`, ja mantotais direktorijs `%USERPROFILE%\.omniroute` nepastāv. Iestatiet `DATA_DIR`, lai izvēlētos citu datu direktorija atrašanās vietu.
 
 > **Piezīme:** pirmajā palaišanas reizē `npm install` automātiski ģenerē `.env` no `.env.example`. Turpmākās instalēšanas nepārrakstīs esošu `.env`, tāpēc pielāgojumi tiks saglabāti. Lai to ģenerētu no jauna, pirms atkārtotas palaišanas izdzēsiet `.env`.
 
@@ -64,7 +64,7 @@ Pilnīgu Docker iestatīšanas aprakstu, tostarp Compose profilus un Caddy HTTPS
 
 ### Darbvirsmas lietotne (Electron)
 
-OmniRoute ietver darbvirsmas ietvarprogrammu, kas veidota ar Electron 41 + electron-builder 26.10. Pieejamie skripti (darbvietas saknē):
+67router ietver darbvirsmas ietvarprogrammu, kas veidota ar Electron 41 + electron-builder 26.10. Pieejamie skripti (darbvietas saknē):
 
 ```bash
 npm run electron:dev          # Palaist darbvirsmas lietotni ar automātisku pārlādi
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Apvienojot to ar vides mainīgajiem (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` u.c.), varat palaist pilnībā skriptējamu OmniRoute instanci.
+Apvienojot to ar vides mainīgajiem (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` u.c.), varat palaist pilnībā skriptējamu 67router instanci.
 
 ### CLI opcijas
 
@@ -99,7 +99,7 @@ Apvienojot to ar vides mainīgajiem (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SE
 | `omniroute config`      | CLI rīka konfigurācija — uzskaitīt, iegūt, iestatīt un validēt konfigurācijas                       |
 | `omniroute status`      | Bezsaistes statusa panelis — versija, DB, rīki un konfigurācija                                     |
 | `omniroute logs`        | Straumēt lietojuma žurnālus no API (atbalsta `--follow`)                                            |
-| `omniroute update`      | Pārbaudīt vai lietot OmniRoute atjauninājumus                                                       |
+| `omniroute update`      | Pārbaudīt vai lietot 67router atjauninājumus                                                        |
 | `omniroute provider`    | Pārvaldīt nodrošinātāju savienojumus — pievienot, uzskaitīt, noņemt, testēt un iestatīt noklusējumu |
 | `omniroute --port 3000` | Iestatīt kanonisko/API portu uz 3000                                                                |
 | `omniroute --mcp`       | Palaist MCP serveri (stdio transports)                                                              |
@@ -165,7 +165,7 @@ Darbojas ar Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode un ar Open
 
 #### Automātiska konfigurēšana ar `setup-*`
 
-Tā vietā, lai manuāli ievadītu bāzes URL un atslēgu, ļaujiet OmniRoute izveidot katra rīka
+Tā vietā, lai manuāli ievadītu bāzes URL un atslēgu, ļaujiet 67router izveidot katra rīka
 konfigurāciju no aktuālā modeļu kataloga. Katram rīkam viena komanda:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Katra komanda pieņem `--remote <url> --api-key <key>`, lai konfigurētu lokālu rīku darbam ar
-**attālu** OmniRoute, kā arī `--dry-run` priekšskatīšanai. Lai palaistu CLI ar ievadītu pareizo
+**attālu** 67router, kā arī `--dry-run` priekšskatīšanai. Lai palaistu CLI ar ievadītu pareizo
 vidi, vispār neizveidojot konfigurāciju, izmantojiet vispārīgo palaidēju
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 joprojām ir pieejami mantotie katram rīkam paredzētie palaidēji `omniroute launch` (Claude Code) un
@@ -248,26 +248,6 @@ Pievienojiet saviem MCP iestatījumiem:
 
 **Pilna MCP dokumentācija:** [MCP servera README](../../open-sse/mcp-server/README.md) — 110 rīki, IDE konfigurācijas, Python/TS/Go klienti.
 
-### A2A iestatīšana (Aģentu savstarpējās saziņas protokols)
-
-Pārbaudiet aģenta karti:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Nosūtiet uzdevumu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Pilna A2A dokumentācija:** [A2A servera README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, prasmes, straumēšana, uzdevuma dzīves cikls.
-
----
-
 ## Taimauta konfigurācija
 
 ### Pamata taimauti
@@ -277,15 +257,15 @@ Vairumam izvietojumu ir nepieciešami tikai šie divi mainīgie:
 | Mainīgais                | Noklusējums                | Mērķis                                                                                                                                                                                |
 | ------------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                   | Kopīga bāzes vērtība augšupstraumes atbildes sākuma taimautam, slēptajiem Undici taimautiem, TLS ciparnospieduma pieprasījumiem un API tilta pieprasījumu/starpniekservera taimautiem |
-| `STREAM_IDLE_TIMEOUT_MS` | manto `REQUEST_TIMEOUT_MS` | Maksimālais intervāls starp straumēšanas fragmentiem, pirms OmniRoute pārtrauc SSE straumi                                                                                            |
+| `STREAM_IDLE_TIMEOUT_MS` | manto `REQUEST_TIMEOUT_MS` | Maksimālais intervāls starp straumēšanas fragmentiem, pirms 67router pārtrauc SSE straumi                                                                                             |
 
 Atpakaļsaderība tiek saglabāta: esošie `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` un citi katram slānim paredzētie taimauta mainīgie joprojām darbojas un pārraksta kopīgo bāzes vērtību.
 
 ### Piezīmes par konkrētiem pakalpojumu sniedzējiem
 
-Ar Claude Code saderīgām augšupstraumēm (`anthropic-compatible-cc-*`) OmniRoute atvasina izejošo `X-Stainless-Timeout` galveni no noteiktā ielādes taimauta, lai pakalpojumu sniedzēja puses lasīšanas taimauti būtu saskaņoti ar jūsu vides konfigurāciju.
+Ar Claude Code saderīgām augšupstraumēm (`anthropic-compatible-cc-*`) 67router atvasina izejošo `X-Stainless-Timeout` galveni no noteiktā ielādes taimauta, lai pakalpojumu sniedzēja puses lasīšanas taimauti būtu saskaņoti ar jūsu vides konfigurāciju.
 
-Trešo pušu ar Claude Code saderīgiem reversajiem starpniekserveriem OmniRoute saglabā konservatīvu noklusējuma `anthropic-beta` kopu un, ja `Client Cache Control` ir atstāts iestatījumā `Auto`, pārsūta tikai klienta nodrošinātos `cache_control` marķierus. Iespējojiet katram savienojumam paredzēto pārslēgu "Iespējot redact-thinking beta" tikai tad, ja augšupstraumei ir īpaši nepieciešamas rediģētas Claude domāšanas straumes.
+Trešo pušu ar Claude Code saderīgiem reversajiem starpniekserveriem 67router saglabā konservatīvu noklusējuma `anthropic-beta` kopu un, ja `Client Cache Control` ir atstāts iestatījumā `Auto`, pārsūta tikai klienta nodrošinātos `cache_control` marķierus. Iespējojiet katram savienojumam paredzēto pārslēgu "Iespējot redact-thinking beta" tikai tad, ja augšupstraumei ir īpaši nepieciešamas rediģētas Claude domāšanas straumes.
 
 ### Papildu taimautu pārrakstīšana
 
@@ -303,11 +283,11 @@ Trešo pušu ar Claude Code saderīgiem reversajiem starpniekserveriem OmniRoute
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Keep-alive taimauts API tilta serverī                                                        |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Ligzdas neaktivitātes taimauts API tilta serverī (`0` to atspējo)                            |
 
-> **Piezīme:** Straumēšanas pieprasījumiem `FETCH_TIMEOUT_MS` attiecas tikai uz savienojuma izveidi / pirmās augšupstraumes atbildes gaidīšanu. Kad straume ir aktīva, OmniRoute to pārtrauks tikai faktiskas aiztures (`STREAM_IDLE_TIMEOUT_MS`) vai Undici pamatteksta neaktivitātes (`FETCH_BODY_TIMEOUT_MS`) gadījumā.
+> **Piezīme:** Straumēšanas pieprasījumiem `FETCH_TIMEOUT_MS` attiecas tikai uz savienojuma izveidi / pirmās augšupstraumes atbildes gaidīšanu. Kad straume ir aktīva, 67router to pārtrauks tikai faktiskas aiztures (`STREAM_IDLE_TIMEOUT_MS`) vai Undici pamatteksta neaktivitātes (`FETCH_BODY_TIMEOUT_MS`) gadījumā.
 
 ### Saderība ar reversajiem starpniekserveriem
 
-Ja izmantojat OmniRoute aiz Nginx, Caddy, Cloudflare vai cita reversā starpniekservera, pārliecinieties, ka arī starpniekservera taimauti ir lielāki par OmniRoute straumes/ielādes taimautiem.
+Ja izmantojat 67router aiz Nginx, Caddy, Cloudflare vai cita reversā starpniekservera, pārliecinieties, ka arī starpniekservera taimauti ir lielāki par 67router straumes/ielādes taimautiem.
 
 ---
 

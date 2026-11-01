@@ -4,7 +4,7 @@
 
 ---
 
-ഈ പ്രമാണം OmniRoute-ലേക്ക് ചേർത്ത feedback-driven adaptive routing അടിസ്ഥാനസൗകര്യത്തെ വിവരിക്കുന്നു.
+ഈ പ്രമാണം 67router-ലേക്ക് ചേർത്ത feedback-driven adaptive routing അടിസ്ഥാനസൗകര്യത്തെ വിവരിക്കുന്നു.
 ഇത് മനപ്പൂർവം ചെറുതായി നിലനിർത്തിയിരിക്കുന്നു: typed routing-outcome
 channel, നിലവിലുള്ള auto-combo scorer-ലേക്ക് നൽകുന്ന online quality signal,
 ഐച്ഛികമായ OpenTelemetry exporter, explainability endpoint എന്നിവയാണ് ഇത് അവതരിപ്പിക്കുന്നത്. നിലവിലുള്ള resilience stack-നെ (circuit breaker, connection cooldown,
@@ -12,7 +12,7 @@ model lockout, health matrix, autopilot) ഇത് **മാറ്റിസ്ഥ
 
 ## 1. ആർക്കിടെക്ചറൽ പശ്ചാത്തലം
 
-OmniRoute എന്നത് **request hot path**, **control/intelligence
+67router എന്നത് **request hot path**, **control/intelligence
 plane** എന്നിവയുള്ള ഒരു data plane ആണ്. hot path വേഗതയേറിയതും, മെമ്മറി കാര്യക്ഷമമായി ഉപയോഗിക്കുന്നതും, asynchronous-ഉം, പ്രതിരോധശേഷിയുള്ളതും,
 പ്രവചനീയവുമായിരിക്കണം. Evaluation, quality scoring, experiments, historical analysis എന്നിവ
 control plane-ന്റെ ഭാഗമാണ്.
@@ -22,7 +22,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (വേഗതയേറിയത്, sync, in-memory)
+│    67router        │   data plane (വേഗതയേറിയത്, sync, in-memory)
 │  routing / failover │
 │  health / guardrail │
 │  cache / streaming  │
@@ -48,7 +48,6 @@ AI Agent / IDE
 | Shadow traffic                          | `open-sse/services/combo/shadowRouting.ts`                                                             |
 | Guardrails                              | `src/lib/guardrails/` (pre/post hooks)                                                                 |
 | Exact cache                             | `src/lib/semanticCache.ts` (signature-based)                                                           |
-| Evaluators / eval-driven routing        | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                   |
 | Combo decision explainability           | `open-sse/services/combo/decisionTrace.ts`                                                             |
 | Dashboard real-time events              | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)          |
 
@@ -239,7 +238,7 @@ OTel സിങ്ക് വഴി GenAI/OmniRoute സ്പാൻ ആട്ര�
   `@opentelemetry/*` SDK ഉപയോഗിക്കുന്നില്ല).
 - സ്പാനുകൾ GenAI സെമാന്റിക് കൺവെൻഷനുകൾ (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) പാലിക്കുന്നു; കൂടാതെ OmniRoute റൂട്ടിംഗ്
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) പാലിക്കുന്നു; കൂടാതെ 67router റൂട്ടിംഗ്
   ആട്രിബ്യൂട്ടുകളും (ഫലം, സ്റ്റാറ്റസ്, ttft, റീട്രൈകൾ, ഫോൾബാക്ക്) ഉൾപ്പെടുന്നു.
 - `record()` ഒരു പരിധിയുള്ള ബഫറിലേക്ക് എൻക്യൂ ചെയ്യുക മാത്രമാണ് ചെയ്യുന്നത് (O(1)); ഒരു ബാക്ക്ഗ്രൗണ്ട് ടൈമർ
   `POST {endpoint}/v1/traces` വഴി അസിങ്ക്രണസായി ഫ്ലഷ് ചെയ്യുന്നു. ഓവർലോഡിൽ
@@ -260,7 +259,7 @@ OTel സിങ്ക് വഴി GenAI/OmniRoute സ്പാൻ ആട്ര�
 
 ## 6. ഇവാലുവേഷൻ-പ്ലെയിൻ ഇന്റഗ്രേഷൻ (Future AGI സന്നദ്ധത)
 
-OmniRoute, Future AGI-യെ (അല്ലെങ്കിൽ ഏതൊരു ഇവാലുവേറ്ററെയും) ഒരു **സാധ്യതയുള്ള
+67router, Future AGI-യെ (അല്ലെങ്കിൽ ഏതൊരു ഇവാലുവേറ്ററെയും) ഒരു **സാധ്യതയുള്ള
 ഇന്റലിജൻസ്/ഇവാലുവേഷൻ ബാക്കെൻഡായി കണക്കാക്കുന്നു, ഡിപ്പൻഡൻസിയായി അല്ല**. സീമുകൾ:
 
 - ഒരു `RoutingEventSink`-ന് ഇവന്റുകൾ അസിങ്ക്രണസായി ഒരു ഇവാലുവേറ്ററിലേക്ക് ഫോർവേഡ് ചെയ്യാനാകും.
@@ -268,8 +267,6 @@ OmniRoute, Future AGI-യെ (അല്ലെങ്കിൽ ഏതൊരു ഇ
   തീരുമാന സ്ട്രീം നൽകുന്നു.
 - ഭാവിയിലെ ഒരു `Evaluator` (ഡിറ്റർമിനിസ്റ്റിക്, ലോക്കൽ ജഡ്ജ്, HTTP, WASM) ഇവന്റുകൾ/ട്രേസുകൾ ഉപയോഗിക്കുകയും,
   അതേ `getQualityScore`/ക്വാളിറ്റി-ഫാക്ടർ പാത്തിലേക്ക് നൽകപ്പെടുന്ന ഒരു `QualityScore` തിരികെ നൽകുകയും ചെയ്യും.
-- നിലവിലുള്ള ഇവാൽ-ഡ്രിവൻ റൂട്ടിംഗ് (`open-sse/services/evalRouting.ts`) പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുമ്പോൾ
-  `eval_runs` പാസ്-റേറ്റുകൾ പ്രകാരം കോംബോ ടാർഗെറ്റുകളെ ഇതിനകം തന്നെ പുനഃക്രമീകരിക്കുന്നു.
 
 റിക്വസ്റ്റ് പാത്തിൽ ഒരു ഇവാലുവേഷനും സിങ്ക്രണസായി പ്രവർത്തിക്കുന്നില്ല; ഇവാലുവേറ്റർ ഇല്ലാതെയും ഗേറ്റ്വേ
 പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.

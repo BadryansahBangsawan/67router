@@ -12,7 +12,7 @@
 
 ## Co to je
 
-Local Corpus umožňuje operátorovi zpřístupnit serveru MCP systému OmniRoute jeden výslovně schválený adresář textových souborů. Soubory zůstávají ve svém původním adresáři: OmniRoute ukládá do SQLite pouze kanonickou kořenovou cestu a udržuje vyhledávací index v paměti. Obsah korpusu nekopíruje do repozitáře ani databáze.
+Local Corpus umožňuje operátorovi zpřístupnit serveru MCP systému 67router jeden výslovně schválený adresář textových souborů. Soubory zůstávají ve svém původním adresáři: 67router ukládá do SQLite pouze kanonickou kořenovou cestu a udržuje vyhledávací index v paměti. Obsah korpusu nekopíruje do repozitáře ani databáze.
 
 Aktualizace indexu probíhá přírůstkově. Nezměněné soubory se opětovně použijí na základě velikosti a času změny, změněné soubory se znovu načtou a vytvoří se pro ně otisk SHA-256 a odstraněné soubory se z indexu odeberou. Při vyhledávání se aktualizuje index starší než 30 sekund; volající mohou také požádat o okamžitou aktualizaci.
 

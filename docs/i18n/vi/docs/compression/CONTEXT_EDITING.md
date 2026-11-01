@@ -5,12 +5,12 @@
 ---
 
 **Chỉnh sửa ngữ cảnh** được ủy quyền là một tính năng quản lý ngữ cảnh chỉ dành cho Claude. Không giống như các
-công cụ nén cục bộ của OmniRoute (Caveman, RTK, LLMLingua, các pipeline xếp chồng) — vốn ghi lại nội dung yêu cầu
+công cụ nén cục bộ của 67router (Caveman, RTK, LLMLingua, các pipeline xếp chồng) — vốn ghi lại nội dung yêu cầu
 _trước khi_ nội dung đó rời khỏi proxy — Chỉnh sửa ngữ cảnh yêu cầu **nhà cung cấp** xóa các khối
-sử dụng công cụ / kết quả công cụ đã cũ khỏi cửa sổ ngữ cảnh đang hoạt động của chính họ. OmniRoute chỉ đính kèm một tham số
+sử dụng công cụ / kết quả công cụ đã cũ khỏi cửa sổ ngữ cảnh đang hoạt động của chính họ. 67router chỉ đính kèm một tham số
 trong phần thân (`context_management.edits[]`); Claude thực hiện việc xóa thực tế dựa trên tokenizer của chính mình.
 
-Về bản chất, đây là một khả năng được ủy quyền: các nhà cung cấp khác sẽ từ chối tham số này, vì vậy OmniRoute giới hạn
+Về bản chất, đây là một khả năng được ủy quyền: các nhà cung cấp khác sẽ từ chối tham số này, vì vậy 67router giới hạn
 nghiêm ngặt tính năng này cho Claude và các relay tương thích với Claude Code.
 
 Nguồn tham chiếu chính thức: `open-sse/config/contextEditing.ts` (ID chiến lược, chèn nội dung thân, trích xuất
@@ -19,7 +19,7 @@ dữ liệu đo từ xa), `open-sse/executors/base.ts` (cổng chèn + cơ chế
 
 ## `clear_tool_uses` làm gì
 
-OmniRoute chèn một chỉnh sửa duy nhất vào phần thân Anthropic Messages gửi đi:
+67router chèn một chỉnh sửa duy nhất vào phần thân Anthropic Messages gửi đi:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute chèn một chỉnh sửa duy nhất vào phần thân Anthropic Messa
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Bản beta được khai báo qua header `anthropic-beta: context-management-2025-06-27`, header mà
-OmniRoute đã gửi trong các yêu cầu Claude.
+67router đã gửi trong các yêu cầu Claude.
 
 Việc chèn được thực hiện bởi `applyContextEditingToBody()` và có tính **lũy đẳng**: nếu một chỉnh sửa `clear_tool_uses`
 đã tồn tại trong phần thân (được thêm bởi một lệnh gọi trước đó hoặc do máy khách cung cấp), phần thân sẽ
-được giữ nguyên. Nếu chỉnh sửa `clear_thinking_20251015` cũng xuất hiện, OmniRoute sẽ sắp xếp ổn định để đưa chỉnh sửa
+được giữ nguyên. Nếu chỉnh sửa `clear_thinking_20251015` cũng xuất hiện, 67router sẽ sắp xếp ổn định để đưa chỉnh sửa
 `clear_thinking` lên đầu, vì Anthropic yêu cầu `clear_thinking` phải đứng trước
 `clear_tool_uses` trong mảng `edits[]`.
 
@@ -145,7 +145,7 @@ Claude chính thức mang beta trong `ANTHROPIC_BETA_BASE` và không đi qua nh
 
 ## Dữ liệu đo từ xa `applied_edits`
 
-Sau một phản hồi của Claude, OmniRoute ghi lại lượng ngữ cảnh mà nhà cung cấp thực sự đã xóa. Dữ liệu này
+Sau một phản hồi của Claude, 67router ghi lại lượng ngữ cảnh mà nhà cung cấp thực sự đã xóa. Dữ liệu này
 **không** được truyền trực tuyến — nó được trích xuất từ phần thân phản hồi không truyền trực tuyến theo cơ chế nỗ lực tối đa và không bao giờ
 ảnh hưởng đến phản hồi (các lỗi đo từ xa đều bị bỏ qua).
 
@@ -175,14 +175,14 @@ Nhờ đó, hoạt động xóa được ủy quyền xuất hiện trong phần
 
 | Khía cạnh                | Công cụ cục bộ (Caveman / RTK / LLMLingua / stacked) | Chỉnh sửa ngữ cảnh được ủy quyền                           |
 | ------------------------ | ---------------------------------------------------- | ---------------------------------------------------------- |
-| Nơi chạy                 | Trong OmniRoute, trước khi yêu cầu rời khỏi proxy    | Trong nhà cung cấp (Claude), phía máy chủ                  |
+| Nơi chạy                 | Trong 67router, trước khi yêu cầu rời khỏi proxy     | Trong nhà cung cấp (Claude), phía máy chủ                  |
 | Nội dung được chỉnh sửa  | Văn bản prompt / ngữ cảnh / kết quả công cụ          | Các khối sử dụng công cụ / kết quả công cụ cũ              |
 | Phạm vi nhà cung cấp     | Tất cả nhà cung cấp                                  | Chỉ `claude` + `anthropic-compatible-cc-*`                 |
 | Chuyển đổi               | Cài đặt chế độ nén                                   | `contextEditing.enabled`                                   |
 | Chế độ khi lỗi           | Cho phép tiếp tục khi lỗi (văn bản gốc)              | Dự phòng khi gặp lỗi 400: loại bỏ tham số, thử lại một lần |
 | Dữ liệu đo mức tiết kiệm | `engine: <engine id>`                                | `engine: "context-editing"`                                |
 
-Hai cơ chế này bổ trợ cho nhau: các công cụ cục bộ nén số byte mà OmniRoute gửi đi; Chỉnh sửa ngữ cảnh cho phép
+Hai cơ chế này bổ trợ cho nhau: các công cụ cục bộ nén số byte mà 67router gửi đi; Chỉnh sửa ngữ cảnh cho phép
 Claude lược bỏ ngữ cảnh đang tích lũy qua các lượt. Có thể bật cả hai cùng lúc.
 
 ## Xem thêm

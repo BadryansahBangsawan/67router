@@ -13,9 +13,9 @@
 ## Ano ito
 
 Pinahihintulutan ng Local Corpus ang isang operator na ilantad sa MCP server ng
-OmniRoute ang isang tahasang inaprubahang direktoryo ng mga text file. Nananatili ang
+67router ang isang tahasang inaprubahang direktoryo ng mga text file. Nananatili ang
 mga file sa orihinal nilang direktoryo: ang canonical root path lamang ang iniimbak ng
-OmniRoute sa SQLite, at nagpapanatili ito ng in-memory na search index. Hindi nito
+67router sa SQLite, at nagpapanatili ito ng in-memory na search index. Hindi nito
 kinokopya ang nilalaman ng corpus sa repository o database.
 
 Incremental ang pag-refresh ng indeks. Muling ginagamit ang mga hindi nabagong file

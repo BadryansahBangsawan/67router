@@ -4,7 +4,7 @@
 
 ---
 
-> **Wat dit document is.** Een kritische beoordeling van het quality-gate-systeem van OmniRoute,
+> **Wat dit document is.** Een kritische beoordeling van het quality-gate-systeem van 67router,
 > vergeleken met best practices uit de sector, **plus** een uitgebreide catalogus van alle
 > kwaliteitscontrolepunten en een **toolonafhankelijk replicatieplan** om hetzelfde systeem op
 > elk project toe te passen. Gegenereerd op 2026-06-16 op basis van de werkelijke staat van de repository (niet uit het geheugen).
@@ -101,62 +101,62 @@ om dit op elke stack te reproduceren.
 
 ### 1. Stijl en opmaak (deterministisch, snel)
 
-- **OmniRoute:** Prettier + ESLint via lint-staged (pre-commit), 2 spaties/dubbele aanhalingstekens/100 kolommen.
+- **67router:** Prettier + ESLint via lint-staged (pre-commit), 2 spaties/dubbele aanhalingstekens/100 kolommen.
 - **Generiek:** één automatisch corrigeerbare formatter + één linter, uitgevoerd tijdens pre-commit op staged bestanden.
 
 ### 2. Typen
 
-- **OmniRoute:** `typecheck:core` (blokkerend) + `typecheck:noimplicit:core` (adviserend) + `type-coverage`-ratchet van 92.17% + `any`-budget per bestand.
+- **67router:** `typecheck:core` (blokkerend) + `typecheck:noimplicit:core` (adviserend) + `type-coverage`-ratchet van 92.17% + `any`-budget per bestand.
 - **Generiek:** strikte typecontrole in CI + stapsgewijs aangescherpte metriek voor typedekking + budget per bestand voor `any`/ontsnappingsmechanismen.
 
 ### 3. Tests (intensiteit)
 
-- **OmniRoute:** 2 niet-overlappende runners (native Node + vitest), 8 shards, globale dekking van 60/60/60/60 + ratchet van ~76% + **8 minimumdrempels per module voor kritieke modules** + nachtelijke property-tests + nachtelijke **mutatietests**.
+- **67router:** 2 niet-overlappende runners (native Node + vitest), 8 shards, globale dekking van 60/60/60/60 + ratchet van ~76% + **8 minimumdrempels per module voor kritieke modules** + nachtelijke property-tests + nachtelijke **mutatietests**.
 - **Generiek:** testrunner(s) + **absolute** minimumdrempel voor dekking (tegen nuldekking) + **ratchet** voor dekking (tegen regressie) + **minimumdrempels per module voor code met een hoog risico** (tegen Goodhart) + property-based tests voor zuivere logica + nachtelijke **mutatietests** als de werkelijke maatstaf voor testkwaliteit.
 
 ### 4. Testbeleid (tegen manipulatie)
 
-- **OmniRoute:** `pr-test-policy` (productiecode vereist een test), `check-test-masking` (blokkeert afgezwakte assertions), `pr-evidence` (succesclaim vereist een bewijsblok), `test-discovery` (elke test wordt door een runner verzameld).
+- **67router:** `pr-test-policy` (productiecode vereist een test), `check-test-masking` (blokkeert afgezwakte assertions), `pr-evidence` (succesclaim vereist een bewijsblok), `test-discovery` (elke test wordt door een runner verzameld).
 - **Generiek:** ‘nieuwe code ⇒ nieuwe test’-gate + detector voor verwijderde assertions/tautologieën + bewijsvereiste (TDD of actuele test) + garantie dat geen enkele test buiten de globs verweesd raakt.
 
 ### 5. Complexiteit en codegezondheid (ratchets)
 
-- **OmniRoute:** ESLint-waarschuwingen (3769↓), jscpd-duplicatie (5.72%↓), cyclomatische complexiteit + maximaal aantal regels (1800↓), cognitieve complexiteit met sonarjs (753↓), dode code/ongebruikte exports met knip (339↓), bestandsgrootte per bestand (bevroren, mag alleen afnemen), circulaire afhankelijkheden (aangepast Tarjan-algoritme, blokkerend).
+- **67router:** ESLint-waarschuwingen (3769↓), jscpd-duplicatie (5.72%↓), cyclomatische complexiteit + maximaal aantal regels (1800↓), cognitieve complexiteit met sonarjs (753↓), dode code/ongebruikte exports met knip (339↓), bestandsgrootte per bestand (bevroren, mag alleen afnemen), circulaire afhankelijkheden (aangepast Tarjan-algoritme, blokkerend).
 - **Generiek:** pas op elke gezondheidsmetriek een ratchet toe (waarschuwingen, duplicatie, cyclomatische **en** cognitieve complexiteit, dode code, bestandsgrootte, importcycli). De richting is altijd: ‘geen regressie’.
 
 ### 6. Statische beveiliging (SAST + geheimen)
 
-- **OmniRoute:** CodeQL (ratchet voor waarschuwingen = 0), gitleaks (`[extend] useDefault=true` — cruciaal!), SonarQube, aangepaste beveiligingsregels (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ratchet voor waarschuwingen = 0), gitleaks (`[extend] useDefault=true` — cruciaal!), SonarQube, aangepaste beveiligingsregels (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generiek:** SAST (CodeQL/Sonar/semgrep) met een ratchet voor waarschuwingen + scanner voor geheimen met **overgenomen standaardregelset** (een aangepaste configuratie die de standaard overschrijft = blind) + projectspecifieke Hard Rule-beveiligingsgates.
 
 ### 7. Softwaretoeleveringsketen (afhankelijkheden)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-toegestane lijst), lockfile-lint (HTTPS+sha512+registry), `check-deps` tegen slopsquatting (toegestane lijst + leeftijd ≥72 uur).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-toegestane lijst), lockfile-lint (HTTPS+sha512+registry), `check-deps` tegen slopsquatting (toegestane lijst + leeftijd ≥72 uur).
 - **Generiek:** SCA uit meerdere bronnen + toegestane lijst voor licenties + integriteitscontrole van het lockbestand + toegestane lijst voor afhankelijkheden met controle op leeftijd/typosquatting + updatebot met gegroepeerde updates.
 
 ### 8. Softwaretoeleveringsketen (build en release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA-herkomst (`--provenance`), OpenSSF Scorecard (wekelijks), workflowversteviging (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, tokenmachtigingen).
+- **67router:** SBOM (CycloneDX + syft), SLSA-herkomst (`--provenance`), OpenSSF Scorecard (wekelijks), workflowversteviging (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, tokenmachtigingen).
 - **Generiek:** genereer een SBOM bij publicatie + ondertekende herkomst (SLSA L2+) + geplande Scorecard + verstevig alle workflows (tokens met minimale bevoegdheden, geen opgeslagen inloggegevens bij een checkout zonder pushrechten, actions vastgezet op SHA).
 
 ### 9. Contracten en API
 
-- **OmniRoute:** oasdiff (breaking changes in OpenAPI), schemathesis (nachtelijke contractfuzzing), openapi-coverage (% gedocumenteerde routes, ratchet van 38.3%), openapi-security-tiers (specificatie versus route-guard).
+- **67router:** oasdiff (breaking changes in OpenAPI), schemathesis (nachtelijke contractfuzzing), openapi-coverage (% gedocumenteerde routes, ratchet van 38.3%), openapi-security-tiers (specificatie versus route-guard).
 - **Generiek:** contractdiff voor breaking changes (oasdiff/buf) + property-based fuzzing tegen de specificatie (schemathesis) + stapsgewijs aangescherpte documentatiedekking + consistentie tussen specificatie en code.
 
 ### 10. Documentatie en i18n (tegen veroudering)
 
-- **OmniRoute:** docs-sync (gespiegelde versies), docs-counts-sync (aantallen in documentatie versus code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet van 80.1%).
+- **67router:** docs-sync (gespiegelde versies), docs-counts-sync (aantallen in documentatie versus code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ratchet van 80.1%).
 - **Generiek:** synchroniseer versies/aantallen/omgevingsvariabelen tussen documentatie en code (gate, niet vertrouwen) + valideer interne links + stapsgewijs aangescherpte i18n-dekking.
 
 ### 11. Anti-hallucinatie/consistentie (de zeldzame categorie)
 
-- **OmniRoute:** known-symbols (stringdispatch ⇒ bestaand symbool), provider-consistency, fetch-targets (fetch vanuit client ⇒ bestaande route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (stringdispatch ⇒ bestaand symbool), provider-consistency, fetch-targets (fetch vanuit client ⇒ bestaande route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Generiek:** maak voor elke ‘gedupliceerde bron van waarheid’ (register, stringdispatch, verwijzingen tussen lagen) een gate die bewijst dat beide kanten overeenkomen. Dit detecteert het verval dat typecontrole/tests niet vinden.
 
 ### 12. Veerkracht en domein (productspecifiek)
 
-- **OmniRoute:** chaos (foutinjectie), heap-growth (lekken), k6 (duurtests), promptfoo+garak (LLM-red-teaming volgens de OWASP LLM Top 10), de 3 veerkrachtwetten (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (foutinjectie), heap-growth (lekken), k6 (duurtests), promptfoo+garak (LLM-red-teaming volgens de OWASP LLM Top 10), de 3 veerkrachtwetten (circuit-breaker/cooldown/lockout).
 - **Generiek:** identificeer de faalmodi van **jouw** domein en maak voor elke faalmodus een gate (zelfs als die alleen ’s nachts wordt uitgevoerd). Voor AI-apps: red-teaming tegen injecties. Voor gedistribueerde systemen: chaos- + lek- + duurtests.
 
 ---

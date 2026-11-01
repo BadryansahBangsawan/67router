@@ -169,5 +169,4 @@ An faɗaɗa `src/app/api/search/providers/route.ts` don:
 - Babban tsari: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - Tsarin fasali: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - Rijistar mai samar da bincike: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` na bai ɗaya): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - Backend na ɗebo bayanan yanar gizo: `src/app/api/v1/web/fetch/route.ts`

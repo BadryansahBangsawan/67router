@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR** : le moteur de compression d’OmniRoute est **extensible** — vous pouvez enregistrer des moteurs personnalisés, fournir des packs linguistiques pour de nouvelles langues et composer des pipelines empilés. Ce guide explique comment procéder.
+> **TL;DR** : le moteur de compression de 67router est **extensible** — vous pouvez enregistrer des moteurs personnalisés, fournir des packs linguistiques pour de nouvelles langues et composer des pipelines empilés. Ce guide explique comment procéder.
 
 **Guides connexes :**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Niveau projet (chargé au démarrage)
 ```
 
-Ou chargez-les par programmation depuis un plugin :
+Or register it programmatically at startup:
 
 ```ts
-// Dans votre plugin
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Le SDK du plugin expose les hooks onRequest / onResponse / onError. Enregistrer le
-  // moteur lors du chargement du module du plugin (ou au premier onRequest) ; le désenregistrer
-  // depuis votre propre procédure de nettoyage.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Lors du nettoyage :
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ dans le sélecteur de stratégie via son `id`. Testez l'intégration en l'intég
 
 ## Création de packs linguistiques
 
-La compression de style télégraphique utilise des **packs de règles propres à chaque langue** pour gérer les mots de remplissage, les formulations prudentes et les tournures verbeuses dans chaque langue naturelle. OmniRoute est fourni avec **6 packs linguistiques** : `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+La compression de style télégraphique utilise des **packs de règles propres à chaque langue** pour gérer les mots de remplissage, les formulations prudentes et les tournures verbeuses dans chaque langue naturelle. 67router est fourni avec **6 packs linguistiques** : `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Structure d’un pack
 
@@ -391,7 +382,7 @@ La sortie du moteur N devient l'entrée du moteur N+1.
 
 ### Modes de compression
 
-OmniRoute sélectionne **UN mode par requête** en fonction de la configuration, des seuils de déclenchement automatique et des substitutions propres aux combinaisons.
+67router sélectionne **UN mode par requête** en fonction de la configuration, des seuils de déclenchement automatique et des substitutions propres aux combinaisons.
 Les modes disponibles sont définis dans `open-sse/services/compression/types.ts` (type `CompressionMode`) :
 
 | Mode         | Moteurs               | Cas d'utilisation                                                                                                                                                                                                                |
@@ -508,10 +499,10 @@ Pour le piloter depuis la configuration, définissez `mode: "stacked"` et fourni
 
 ## Politique de synchronisation avec les projets en amont
 
-Les moteurs de compression d'OmniRoute mentionnent plusieurs projets en amont dans le README
+Les moteurs de compression de 67router mentionnent plusieurs projets en amont dans le README
 (« inspiré par RTK, Caveman, LLMLingua-2, Troglodita »). Une question fréquente des contributeurs
 est la suivante : **lorsque le projet RTK en amont ajoute un nouveau filtre d'outil ou que Caveman ajoute un pack
-de règles, comment cela parvient-il à OmniRoute ?** Cette section fournit la réponse de référence.
+de règles, comment cela parvient-il à 67router ?** Cette section fournit la réponse de référence.
 
 ### Copies intégrées au dépôt ou implémentations indépendantes
 
@@ -532,7 +523,7 @@ copie du projet en amont depuis laquelle effectuer un `git pull` — c'est préc
 Il n'existe **aucun suivi automatisé des versions en amont ni aucun libellé `compression-sync`**
 — et ce, délibérément. Puisque les moteurs sont des réimplémentations, un filtre RTK
 ou un pack de règles Caveman provenant du projet en amont n'est pas intégré sous forme de code ; il est **reformulé comme une nouvelle
-règle ou un nouveau filtre dans le format propre à OmniRoute** (voir
+règle ou un nouveau filtre dans le format propre à 67router** (voir
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) et ajouté au cas par cas via
 une PR ordinaire. Les points d'extension ci-dessus (moteur personnalisé, pack linguistique, filtre RTK)
 constituent les moyens approuvés pour contribuer à l'un d'entre eux.
@@ -546,14 +537,14 @@ Exemples récents suivant exactement ce processus :
 ### Headroom (proxy de compression des entrées)
 
 Headroom est **entièrement interne** — un instantané épinglé du codec `gcf` intégré au dépôt, accompagné
-des couches `smartcrusher` / `toon` / `tabular` propres à OmniRoute. Il n'existe aucun projet en amont actif
+des couches `smartcrusher` / `toon` / `tabular` propres à 67router. Il n'existe aucun projet en amont actif
 à suivre au-delà de la copie intégrée au dépôt ; les mises à jour de `gcf` sont effectuées
 manuellement lorsque le codec change, puis validées à nouveau par rapport au seuil de budget de compression
 (`check:compression-budget`).
 
 ### Proposer une amélioration inspirée d'un projet en amont
 
-1. **N'intégrez pas le code au dépôt** — reformulez la règle ou le filtre en amont dans le format d'OmniRoute.
+1. **N'intégrez pas le code au dépôt** — reformulez la règle ou le filtre en amont dans le format de 67router.
 2. Ajoutez-le via le point d'extension correspondant ci-dessous (pack linguistique, filtre RTK ou
    moteur personnalisé).
 3. Référencez le projet en amont dans la description de la PR (attribution), plutôt que de

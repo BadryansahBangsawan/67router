@@ -4,7 +4,7 @@
 
 ---
 
-Clúdaíonn an treoir seo cuntais Kiro (cúntóir códaithe AI arna óstáil ag AWS) a chur le OmniRoute,
+Clúdaíonn an treoir seo cuntais Kiro (cúntóir códaithe AI arna óstáil ag AWS) a chur le 67router,
 agus dírítear inti ar ilchuntais a rith go comhuaineach gan coinbhleachtaí seisiúin.
 
 ---
@@ -22,10 +22,10 @@ comhartha an chéad chuntais.
 
 ---
 
-## An Chaoi a Réitíonn OmniRoute É Seo (v3.8.0+)
+## An Chaoi a Réitíonn 67router É Seo (v3.8.0+)
 
-Ag tosú le v3.8.0, glaonn OmniRoute ar `registerClient()` (AWS SSO OIDC) le linn gach
-iompórtála naisc Kiro. Tugann sé seo a chlárúchán tiomnaithe cliaint OIDC féin do gach nasc OmniRoute.
+Ag tosú le v3.8.0, glaonn 67router ar `registerClient()` (AWS SSO OIDC) le linn gach
+iompórtála naisc Kiro. Tugann sé seo a chlárúchán tiomnaithe cliaint OIDC féin do gach nasc 67router.
 Toisc go bhfuil gach clárúchán cliaint neamhspleách, ní théann athnuachan ná
 athfhíordheimhniú cuntais amháin i bhfeidhm ar chomhartha athnuachana aon chuntais eile.
 
@@ -59,7 +59,7 @@ nasc nuachruthaithe a chlárúchán cliaint féin go huathoibríoch.
 
 ### Réamhriachtanais
 
-- OmniRoute v3.8.0 nó níos déanaí.
+- 67router v3.8.0 nó níos déanaí.
 - Cuntas Kiro atá ag obair (ríomhphost + pasfhocal, logáil isteach Google, nó GitHub).
 - An dara cuntas Kiro, más mian leat.
 
@@ -70,7 +70,7 @@ nasc nuachruthaithe a chlárúchán cliaint féin go huathoibríoch.
    - **Iompórtáil Comhartha** — greamaigh comhartha athnuachana a thosaíonn le `aorAAAAAG`.
    - **Eochair API** — greamaigh eochair API fhadtéarmach Kiro / CodeWhisperer.
    - **Logáil isteach Google / GitHub** — cuir sreabhadh OAuth i gcrích sa bhrabhsálaí.
-   - **Uath-Iompórtáil** — cliceáil an cnaipe; léann OmniRoute dintiúir ón
+   - **Uath-Iompórtáil** — cliceáil an cnaipe; léann 67router dintiúir ón
      mbunachar sonraí áitiúil kiro-cli nó ó `~/.aws/sso/cache`.
 3. Sábháiltear an nasc. Cláraíonn sreafaí comhartha athnuachana cliant tiomnaithe
    OIDC go huathoibríoch. Déanann sreafaí eochrach API an eochair a bhailíochtú le AWS agus ní stórálann siad comhartha athnuachana.
@@ -127,7 +127,7 @@ Tá fíordheimhniú le heochair API ann do dhintiúir iompróra fhadtéarmacha K
 2. Roghnaigh **Eochair API**.
 3. Greamaigh an eochair API agus roghnaigh réigiún AWS: **Uathbhraite** (réamhshocrú), **Oirthear SAM
    (Tuaisceart Virginia)** nó **An Eoraip (Frankfurt)**.
-4. Bailíochtaíonn OmniRoute an eochair agus sábhálann sé an nasc atá ceangailte leis an réigiún ina
+4. Bailíochtaíonn 67router an eochair agus sábhálann sé an nasc atá ceangailte leis an réigiún ina
    n-oibríonn an eochair.
 
 ### API
@@ -177,7 +177,7 @@ ndiúltaíonn `codewhisperer.us-east-1` d’ualaí pá eochrach API mar chorp ia
 ## Dul in Éag an Chliaint OIDC
 
 De ghnáth téann cliaint phoiblí AWS SSO OIDC in éag tar éis 90 lá
-(`clientSecretExpiresAt`). Stórálann OmniRoute an stampa ama seo in `providerSpecificData`
+(`clientSecretExpiresAt`). Stórálann 67router an stampa ama seo in `providerSpecificData`
 ar mhaithe le hinbhraiteacht. Má stopann nasc de bheith á athnuachan tar éis thart ar 90 lá, athiompórtáil an
 nasc chun clárúchán úr cliaint OIDC a fháil. Tá athchlárú uathoibríoch nuair a théann sé
 in éag á rianú mar fheabhsúchán amach anseo.
@@ -198,7 +198,7 @@ trí AWS SSO OIDC.
 ### Teipeann ar an iompórtáil le "Theip ar bhailíochtú an chomhartha"
 
 - Cinntigh go dtosaíonn an comhartha athnuachana le `aorAAAAAG`.
-- Cinntigh gur féidir le OmniRoute `https://oidc.us-east-1.amazonaws.com` (nó an réigiún
+- Cinntigh gur féidir le 67router `https://oidc.us-east-1.amazonaws.com` (nó an réigiún
   cumraithe) a bhaint amach. Má tá tú taobh thiar de sheachfhreastalaí corparáideach, socraigh seachfhreastalaí ar leibhéal an tsoláthraí in
   **Deais → Socruithe → Seachfhreastalaithe**.
 
@@ -206,7 +206,7 @@ trí AWS SSO OIDC.
 
 - Deimhnigh gur eochair API Kiro / CodeWhisperer í an eochair, agus nach comhartha athnuachana í.
 - Deimhnigh go meaitseálann réigiún AWS an eochair/cuntas. Is é `us-east-1` an réamhshocrú.
-- Ní mór don eochair a bheith in ann `ListAvailableProfiles` a ghlaoch; murach sin, ní féidir le OmniRoute
+- Ní mór don eochair a bheith in ann `ListAvailableProfiles` a ghlaoch; murach sin, ní féidir le 67router
   an `profileArn` riachtanach a réiteach.
 
 Le haghaidh fadhbanna eile, féach an príomhchomhad [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

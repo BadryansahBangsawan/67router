@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuierlicher, inkrementeller Export von OmniRoute-Aufrufprotokollen in einen externen Analysespeicher.
+Kontinuierlicher, inkrementeller Export von 67router-Aufrufprotokollen in einen externen Analysespeicher.
 
 Die Registerkarte „Logs“ im Dashboard speichert den Anfrageverlauf in SQLite (`call_logs`), wobei dessen Umfang durch Rotation und Aufbewahrung begrenzt ist. Der Protokollexport überträgt denselben Datensatz nach einem Zeitplan, damit er die lokale Datenbank überdauern und mit anderen Daten verknüpft werden kann. BigQuery ist das erste Ziel; die Pipeline ist als Registry aufgebaut, sodass weitere Ziele ergänzend hinzugefügt werden können.
 
@@ -284,7 +284,7 @@ Für ein neues Ziel gelten zwei Regeln:
 - `send()` **muss bei einem teilweisen Fehlschlag eine Ausnahme auslösen**. Eine erfolgreiche Rückgabe bedeutet: „Das Ziel enthält diese Zeilen“,
   und der Cursor wird dauerhaft über sie hinaus verschoben.
 - Ein Ziel, das eine vom Benutzer bereitgestellte URL akzeptiert, muss diese vor dem Abruf mit
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) validieren,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) validieren,
   genauso wie Webhooks. Für BigQuery ist dies nicht erforderlich: Dessen Hosts sind Konstanten.
 
 ---

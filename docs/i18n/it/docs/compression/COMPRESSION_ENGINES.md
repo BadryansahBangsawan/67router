@@ -4,7 +4,7 @@
 
 ---
 
-La compressione di OmniRoute è basata sui contratti dei motori. Una modalità può eseguire direttamente un motore
+La compressione di 67router è basata sui contratti dei motori. Una modalità può eseguire direttamente un motore
 (`caveman` o `rtk`) oppure una pipeline impilata deterministica che esegue più motori in sequenza.
 
 ## Modalità
@@ -41,7 +41,7 @@ Misurato su questa codebase: `coding-safe` e `balanced` aumentano `minCompressCh
 massimo e mantengono il sistema, gli schemi degli strumenti e i risultati degli strumenti nativi, quindi una sessione che non ha ancora accumulato cronologia si ferma a `below_min_chars` e il motore non trasforma nulla. Questo è il motivo per cui il default è `aggressive` piuttosto che il profilo più sicuro.
 
 Il pacchetto risolve il proprio ambito del modello e il profilo dalla sua configurazione ambientale.
-OmniRoute non delega mai la decisione: l'adattatore blocca il gate del modello all'ambito più restrittivo del pacchetto, quindi le impostazioni dell'ambiente host possono solo restringere la lista consentita, mai ampliarla oltre le ricevute misurate di OmniRoute.
+67router non delega mai la decisione: l'adattatore blocca il gate del modello all'ambito più restrittivo del pacchetto, quindi le impostazioni dell'ambiente host possono solo restringere la lista consentita, mai ampliarla oltre le ricevute misurate di 67router.
 
 ## Registro degli engine
 
@@ -106,7 +106,7 @@ La relativa sezione della dashboard è `Dashboard -> Context & Cache -> Caveman`
 
 Il progetto upstream Caveman dichiara una riduzione di circa il `~75%` dei token di output e un risparmio medio
 sull'output del `65%` nei benchmark, con un intervallo del `22-87%`, oltre a uno strumento di compressione
-dell'input del `~46%`. OmniRoute utilizza il dato di Caveman relativo all'input quando documenta i risparmi
+dell'input del `~46%`. 67router utilizza il dato di Caveman relativo all'input quando documenta i risparmi
 combinati su prompt e contesto; la modalità di output di Caveman rimane una funzionalità separata relativa
 al comportamento delle risposte.
 

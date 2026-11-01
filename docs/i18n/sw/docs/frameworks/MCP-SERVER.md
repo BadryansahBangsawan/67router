@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Kiswahili)
+# 67router MCP Server Documentation (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Usakinishaji
 
-OmniRoute MCP imejengewa ndani. Ianzishe kwa:
+67router MCP imejengewa ndani. Ianzishe kwa:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline, na viteja vinavyooana vya MCP.
 | `omniroute_switch_combo`        | `write:combos`        | Washa au zima mchanganyiko                                                                                                                     |
 | `omniroute_create_combo`        | `write:combos`        | Unda mchanganyiko uliothibitishwa kupitia API iliyopo ya michanganyiko                                                                         |
 | `omniroute_check_quota`         | `read:quota`          | Kiasi kilichotumika/jumla, asilimia iliyosalia, muda wa kuweka upya, hali ya tokeni                                                            |
-| `omniroute_route_request`       | `execute:completions` | Tuma ukamilishaji wa gumzo kupitia uelekezaji wa OmniRoute                                                                                     |
+| `omniroute_route_request`       | `execute:completions` | Tuma ukamilishaji wa gumzo kupitia uelekezaji wa 67router                                                                                      |
 | `omniroute_cost_report`         | `read:usage`          | Ripoti ya gharama kulingana na kipindi (kipindi cha matumizi/siku/wiki/mwezi)                                                                  |
 | `omniroute_list_models_catalog` | `read:models`         | Katalogi kamili ya miundo pamoja na uwezo, hali, na bei                                                                                        |
 | `omniroute_radar_catalog`       | `read:radar`          | Katalogi ya Radar ya ndani iliyotiwa saini; vichujio vya hiari vya mtoa huduma/familia                                                         |
@@ -152,7 +152,7 @@ matumizi za mtoa huduma na zimewekewa alama ya `source: "mcp_metadata_estimate"`
 
 ### Kichujio cha Mti wa Ufikivu wa MCP (v3.8.0)
 
-Kikiwa tofauti na zana za mbano zilizo hapo juu, OmniRoute inajumuisha kichujio cha baada ya utekelezaji
+Kikiwa tofauti na zana za mbano zilizo hapo juu, 67router inajumuisha kichujio cha baada ya utekelezaji
 kinachobana **matokeo ya zana** ya zana za kivinjari/ufikivu za MCP kabla hayajarejeshwa kwa
 ajenti. Kichujio hiki si zana chenyewe — huendeshwa kwa uwazi kwenye matokeo yoyote ya zana yaliyo na
 maandishi marefu ya mti wa ufikivu au picha ya hali ya kivinjari (herufi ≥2000).
@@ -245,17 +245,6 @@ Tazama [AGENT-SKILLS.md](./AGENT-SKILLS.md) kwa katalogi kamili na jinsi maajent
 Orodha ya zana za MCP iliyo hapo juu (zana 110 za kipekee, zilizohesabiwa na `countUniqueMcpTools()`) imewekewa kwa makusudi
 upeo wa shughuli za uelekezaji wakati wa utekelezaji/hifadhi-akiba/ubanaji/kumbukumbu/ujuzi/proksi/chanzo-cha-muktadha. Mifumo miwili inayohusiana
 inasambazwa pamoja na seva ya MCP katika v3.8.0 na imeandikwa kando:
-
-### Maajenti wa Wingu
-
-Maajenti wa Wingu ni maajenti wa AI wa kuandika msimbo wanaotekelezwa nje ya mchakato (codex-cloud, cursor-cloud, devin, jules) na kuunganishwa na
-OmniRoute kupitia muundo uleule wa muunganisho unaotumiwa kwa watoa huduma wa LLM. Wanapatikana kupitia
-kiolesura chao wenyewe cha REST (`/api/v1/agents/*`) na **si** sehemu ya katalogi ya zana za MCP
-— kuita Ajenti wa Wingu hakutumii upeo wa MCP.
-
-- Utekelezaji: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Mzunguko wa maisha: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Nyaraka: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Vizuizi vya Usalama
 
@@ -425,8 +414,6 @@ Kila zana inahitaji mawanda mahususi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                        |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                 |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                   |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                               |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                  |
 | `read:obsidian`       | zana 13 za kusoma — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | zana 9 za kuandika — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                |
@@ -479,7 +466,7 @@ tabia iliyopo inayodhibitiwa na `OMNIROUTE_MCP_ENFORCE_SCOPES` bila mabadiliko.
 
 | Kigeu                                   | Chaguomsingi                        | Madhumuni                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | :-------------------------------------- | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL ya msingi inayotumiwa na seva ya MCP inapopiga simu API za ndani za OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL ya msingi inayotumiwa na seva ya MCP inapopiga simu API za ndani za 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `OMNIROUTE_API_KEY`                     | (tupu)                              | Ufunguo wa API unaotumwa kama `Authorization: Bearer` kwenye miito ya API za ndani                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` pekee huiwezesha) | Inapowezeshwa, ukosefu wa mawanda hukataa miito ya zana na kurekodi `scope_denied:<reason>` katika kumbukumbu ya ukaguzi. Utekelezaji PIA hulazimishwa bila kujali alama hii kwa mpigaji yeyote wa HTTP/SSE anayetambuliwa kupitia kichwa cha Authorization cha kila ufunguo (`source === "authInfo"`) ambaye hana wigo kamili wa `manage`/`admin` — kwa mfano, ufunguo wenye wigo finyu wa `mcp:connect` pekee wa kupita ukaguzi — kwa hivyo chaguomsingi hili ni salama kwa mtiririko wa ndani/stdio wa mwendeshaji mmoja pekee, na si kamwe kwa ufikiaji wa mbali usio wa loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (tupu)                              | Orodha ya mawanda yanayoruhusiwa, yaliyotenganishwa kwa koma, yanayochukuliwa kuwa "yanapatikana" kwa chaguomsingi (hutumiwa wakati mpigaji hajatoa mawanda yake mwenyewe)                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -582,7 +569,6 @@ Tumia dashibodi au miishio ya REST ya `/api/mcp/audit` na `/api/mcp/audit/stats`
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Ufafanuzi wa zana za ujuzi (zana 4)                                                |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Ufafanuzi wa zana za chanzo cha muktadha wa Notion (zana 6)                        |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Ufafanuzi wa zana za uchezeshaji (zana 8)                                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Zana za usajili na usimamizi wa programu-jalizi (zana 8)                           |
 | `src/app/api/mcp/status/route.ts`                                        | Endpointi ya `/api/mcp/status`                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpointi ya `/api/mcp/tools`                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | Njia ya usafirishaji ya SSE ya `/api/mcp/sse`                                      |

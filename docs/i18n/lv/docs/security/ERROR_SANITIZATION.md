@@ -213,7 +213,7 @@ mutācija pēc veidotāja izpildes apiet publisko projekciju.
 3. Dziļuma ierobežojums: ligzdojums, kas pārsniedz 4 līmeņus, tiek aizstāts ar virkni `"[truncated]"`.
 4. Masīvi tiek ierobežoti līdz 32 elementiem.
 
-Tikai izsaukumu vietās, kurās ir parsēts pakalpojumu sniedzēja kļūdas ķermenis, jānodod `upstreamDetails`. Iekšējās OmniRoute
+Tikai izsaukumu vietās, kurās ir parsēts pakalpojumu sniedzēja kļūdas ķermenis, jānodod `upstreamDetails`. Iekšējās 67router
 kļūdas (SSE parsēšanas kļūmes, tukšs saturs, aizsargbarjeru bloķējumi) nedrīkst to ietvert.
 
 Nenododiet neapstrādātu `err.stack`, `err.message` vai jebkādu virkni no izpildlaika izņēmuma uz
@@ -224,7 +224,7 @@ Selektīva augšupstraumes 4xx tālāknodošana saglabā pakalpojumu sniedzēja 
 klienta automātiskajai atkopšanai, taču tā nav precīza tālāknodošana baitu līmenī: rekursīvais sanitizētājs vienmēr tiek izpildīts
 pirms serializācijas. Cikliski, BigInt saturoši vai naidīgi `toJSON()` ķermeņi tiek droši noraidīti un nav
 piemēroti tālāknodošanai. OCR un moderācijai tiek piemērots tas pats noteikums; ne-JSON, tukši vai nepareizi marķēti
-augšupstraumes ķermeņi tiek pārveidoti par kanonisko OmniRoute JSON kļūdas aploksni.
+augšupstraumes ķermeņi tiek pārveidoti par kanonisko 67router JSON kļūdas aploksni.
 
 ## Zināmais CodeQL ierobežojums: pielāgotie sanitizētāji netiek atpazīti
 

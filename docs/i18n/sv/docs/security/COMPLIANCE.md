@@ -7,7 +7,7 @@
 > **Tillförlitlig källa:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Senast uppdaterad:** 2026-06-28 — v3.8.40
 
-OmniRoute registrerar administrativa åtgärder, autentiseringshändelser, ändringar i livscykeln för leverantörsautentiseringsuppgifter och anrop av MCP-verktyg i SQLite-baserade granskningstabeller. Den här sidan beskriver vad som loggas, var det lagras, hur länge det bevaras, hur API-nycklar kan välja bort loggning och hur data kan hämtas.
+67router registrerar administrativa åtgärder, autentiseringshändelser, ändringar i livscykeln för leverantörsautentiseringsuppgifter och anrop av MCP-verktyg i SQLite-baserade granskningstabeller. Den här sidan beskriver vad som loggas, var det lagras, hur länge det bevaras, hur API-nycklar kan välja bort loggning och hur data kan hämtas.
 
 Implementationen finns i `src/lib/compliance/index.ts` (T-43 — ”Efterlevnadskontroller”) och `src/lib/compliance/providerAudit.ts`. Skrivningar till granskningsloggen genererar aldrig undantag: vid alla fel ignoreras anropet utan meddelande, så att granskningsloggningen inte kan störa huvudflödet för begäran.
 

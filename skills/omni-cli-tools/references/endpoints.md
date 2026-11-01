@@ -383,9 +383,9 @@ curl -X DELETE http://localhost:20128/api/cli-tools/openclaw-settings \
 
 ### GET /api/cli-tools/crush-settings
 
-Read Crush CLI OmniRoute config
+Read Crush CLI 67router config
 
-Local-only. Reads the OmniRoute provider block in Crush's config.
+Local-only. Reads the 67router provider block in Crush's config.
 
 ```bash
 curl http://localhost:20128/api/cli-tools/crush-settings \
@@ -394,9 +394,9 @@ curl http://localhost:20128/api/cli-tools/crush-settings \
 
 ### POST /api/cli-tools/crush-settings
 
-Write Crush CLI OmniRoute config
+Write Crush CLI 67router config
 
-Local-only. Registers OmniRoute as an `openai-compat` provider in Crush's config.
+Local-only. Registers 67router as an `openai-compat` provider in Crush's config.
 
 ```bash
 curl -X POST http://localhost:20128/api/cli-tools/crush-settings \
@@ -407,9 +407,9 @@ curl -X POST http://localhost:20128/api/cli-tools/crush-settings \
 
 ### DELETE /api/cli-tools/crush-settings
 
-Remove OmniRoute from Crush CLI config
+Remove 67router from Crush CLI config
 
-Local-only. Removes the OmniRoute provider block from Crush's config.
+Local-only. Removes the 67router provider block from Crush's config.
 
 ```bash
 curl -X DELETE http://localhost:20128/api/cli-tools/crush-settings \
@@ -418,9 +418,9 @@ curl -X DELETE http://localhost:20128/api/cli-tools/crush-settings \
 
 ### GET /api/cli-tools/codewhale-settings
 
-Read CodeWhale CLI OmniRoute config
+Read CodeWhale CLI 67router config
 
-Local-only. Reads the OmniRoute config block from `~/.codewhale/config.toml` (with `~/.deepseek/config.toml` legacy fallback).
+Local-only. Reads the 67router config block from `~/.codewhale/config.toml` (with `~/.deepseek/config.toml` legacy fallback).
 
 ```bash
 curl http://localhost:20128/api/cli-tools/codewhale-settings \
@@ -429,9 +429,9 @@ curl http://localhost:20128/api/cli-tools/codewhale-settings \
 
 ### POST /api/cli-tools/codewhale-settings
 
-Write CodeWhale CLI OmniRoute config
+Write CodeWhale CLI 67router config
 
-Local-only. Writes the OmniRoute config block in CodeWhale TOML format.
+Local-only. Writes the 67router config block in CodeWhale TOML format.
 
 ```bash
 curl -X POST http://localhost:20128/api/cli-tools/codewhale-settings \
@@ -442,9 +442,9 @@ curl -X POST http://localhost:20128/api/cli-tools/codewhale-settings \
 
 ### DELETE /api/cli-tools/codewhale-settings
 
-Remove OmniRoute from CodeWhale CLI config
+Remove 67router from CodeWhale CLI config
 
-Local-only. Removes the OmniRoute config block from CodeWhale's config.
+Local-only. Removes the 67router config block from CodeWhale's config.
 
 ```bash
 curl -X DELETE http://localhost:20128/api/cli-tools/codewhale-settings \

@@ -20,10 +20,10 @@ Ipa ẹ̀rọ kan jẹ́ àpèjúwe nípasẹ̀ **àwọn ọ̀pá méjì tí k�
 `RouterBackendDefinition` ti ìforúkọsílẹ̀ náà:
 
 1. **Ìyípo ìgbésí-ayé** (`RouterBackendLifecycle`) — _bí ẹ̀rọ náà ṣe ń ṣiṣẹ́_:
-   - `in-process` — ń ṣiṣẹ́ nínú iṣẹ́ṣe Node ti OmniRoute (ìṣàn TS abinibi).
-   - `supervised` — iṣẹ́ṣe ọmọ abẹ́lé tí OmniRoute ń fi sílẹ̀/ń bẹ̀rẹ̀/ń dá dúró/ń yẹ ìlera rẹ̀ wò
+   - `in-process` — ń ṣiṣẹ́ nínú iṣẹ́ṣe Node ti 67router (ìṣàn TS abinibi).
+   - `supervised` — iṣẹ́ṣe ọmọ abẹ́lé tí 67router ń fi sílẹ̀/ń bẹ̀rẹ̀/ń dá dúró/ń yẹ ìlera rẹ̀ wò
      nípasẹ̀ `ServiceSupervisor`, lẹ́yìn náà tí ó sì ń lò gẹ́gẹ́ bí àsopọ̀ olupèsè.
-   - `external` — ibi ìparí HTTP tí OmniRoute ń fi iṣẹ́ ránṣẹ́ sí ṣùgbọ́n tí kò **ṣàkóso**
+   - `external` — ibi ìparí HTTP tí 67router ń fi iṣẹ́ ránṣẹ́ sí ṣùgbọ́n tí kò **ṣàkóso**
      (tí a ṣètò nípasẹ̀ URL ìpìlẹ̀ env).
    - `disabled` — a forúkọ rẹ̀ sílẹ̀ ṣùgbọ́n a kò lè yàn án.
 2. **Ọ̀pá yíyàn** (ẹ̀yìn-ọ̀nà ìdarí relay) — _bóyá relay ń fi iṣẹ́ ránṣẹ́ sí i_:

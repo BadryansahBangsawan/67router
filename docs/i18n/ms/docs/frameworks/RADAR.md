@@ -41,7 +41,7 @@ atau penyepaduan luaran tersedia pada masa ini.
 | Tawaran penyokong                 | Dilaksanakan sebagai suapan bertandatangan berasingan, langsung sahaja dan halaman papan pemuka. Klien mengesahkan semula skema manfaat tertutup, mengekalkan cache baik terakhir, menapis entri yang telah tamat tempoh dan melabel tawaran rakan kongsi secara jelas. |
 | Intel dan pengiktirafan penyokong | Dilaksanakan sebagai suapan langsung sahaja bertandatangan yang ketat dengan ELO milik Radar, kesegaran/trend katalog berfakta, lencana penyokong setempat yang disahkan, halaman papan pemuka dan perintah status/penyegerakan CLI setempat sahaja.                    |
 | Pembayaran dan e-mel transaksi    | Tidak dilaksanakan dalam klien OSS. Pembelian, derma, semakan resit, pemulihan dan penghantaran mel merupakan tanggungjawab perkhidmatan persendirian; ketersediaan hos masih bergantung pada pengerahan terselia dan konfigurasi penyedianya.                          |
-| Aliran kerja ejen penyelidikan    | Bukan sebahagian daripada keluaran klien ini. Kandungan suapan terkurasi kekal sebagai data sisi pelayan; tiada ejen penyelidikan autonomi berjalan dalam pemasangan OmniRoute.                                                                                         |
+| Aliran kerja ejen penyelidikan    | Bukan sebahagian daripada keluaran klien ini. Kandungan suapan terkurasi kekal sebagai data sisi pelayan; tiada ejen penyelidikan autonomi berjalan dalam pemasangan 67router.                                                                                          |
 
 ---
 
@@ -119,7 +119,7 @@ Apabila kedua-duanya dihidupkan, laluan penyegerakan ialah:
    IP yang berputar setiap hari untuk semakan penyalahgunaan secara manual; jadual tersebut tidak menyimpan kunci mahupun IP dalam bentuk mentah.
    Log akses infrastruktur dan peti keluar penghantaran yang disulitkan merupakan sempadan operasi
    yang berasingan.
-3. OmniRoute tidak pernah menghantar gesaan, respons, perbualan, bukti kelayakan penyedia, trafik model,
+3. 67router tidak pernah menghantar gesaan, respons, perbualan, bukti kelayakan penyedia, trafik model,
    masa aktif, kependaman atau konfigurasi penyedia setempat kepada perkhidmatan Radar.
 4. Respons disahkan, divalidasi dan dicache secara setempat (lihat
    [Model keselamatan](#security-model)). Radar mempunyai tepat empat laluan rangkaian sisi pelayan:
@@ -243,13 +243,13 @@ yang sudah mempunyai kunci mengaktifkannya.
 ### Pengaktifan menyeluruh dan persediaan berpandu
 
 Perkhidmatan suapan persendirian dan klien OSS ini mempunyai sempadan yang sengaja dihadkan: perkhidmatan tersebut
-mengeluarkan dan mengesahkan kunci penyokong, manakala pemasangan OmniRoute setempat menyulitkan kunci tersebut,
+mengeluarkan dan mengesahkan kunci penyokong, manakala pemasangan 67router setempat menyulitkan kunci tersebut,
 menyegerakkan artifak yang ditandatangani pada sisi pelayan dan membimbing persediaan penyedia. Urutan pengesahan berbantu ialah:
 
 1. Dapatkan kunci yang baru dikeluarkan atau dipulihkan daripada tuntutan penyumbang, aliran
    rancangan/daftar keluar, proses pemulihan, atau pengendali pelayan persendirian yang dibenarkan.
    Jangan tampal kunci mentah ke dalam log, tangkapan skrin, komen isu, atau argumen baris perintah.
-2. Dayakan bendera ciri `RADAR_ENABLED` pada pemasangan OmniRoute setempat. Ini memaparkan UI
+2. Dayakan bendera ciri `RADAR_ENABLED` pada pemasangan 67router setempat. Ini memaparkan UI
    tetapi kekal tidak aktif pada rangkaian sehingga persetujuan berasingan disimpan.
 3. Buka `/dashboard/radar`, tampal kunci, dan aktifkan. Pelayar menghantar satu permintaan setempat
    `POST /api/radar/settings` dengan `{ optIn: true, supporterKey }`; kunci disulitkan secara setempat dan
@@ -314,7 +314,7 @@ disegerakkan semula.
 ### Penggantian env mesra fork
 
 Dua pemboleh ubah env membolehkan fork dan hos kendiri menghalakan klien kepada suapan mereka sendiri dan bukannya
-perkhidmatan OmniRoute lalai — lihat
+perkhidmatan 67router lalai — lihat
 [Cara mengehos sendiri suapan](#how-to-self-host-a-feed) di bawah:
 
 | Pemboleh ubah       | Tujuan                                                                                                                                          |
@@ -467,7 +467,7 @@ Papan pemuka menyediakan empat tindakan setempat:
 Penerbitan katalog menggunakan `schemaVersion: 2`. `contextWindow` serta setiap satu daripada `tools`, `vision`, dan
 `thinking` secara berasingan ialah `number | null` / `boolean | null`: `null` bermaksud tidak diketahui, manakala
 `false` bermaksud sumber rasmi penyedia yang disahkan D16 menyatakan secara jelas bahawa keupayaan tersebut tiada.
-Bendera pendaftaran/spesifikasi model OmniRoute dalaman tidak pernah dinaikkan secara langsung sebagai fakta suapan. Klien
+Bendera pendaftaran/spesifikasi model 67router dalaman tidak pernah dinaikkan secara langsung sebagai fakta suapan. Klien
 masih menerima syot kilat v1; kerana pembina lama menggunakan `false` sebagai pemegang tempat bagi ketiadaan, `false` v1
 dinormalkan kepada tidak diketahui manakala `true` v1 kekal sebagai fakta. Versi skema yang tidak diketahui ditolak secara selamat dan
 cache sah terakhir kekal tersedia. Setiap model v2 dengan konteks/keupayaan bukan null mesti membawa
@@ -528,7 +528,7 @@ Keluarga laluan Radar setempat di bawah menyokong UI di bawah `src/app/api/radar
 | `/api/radar/local-model-state` | DELETE | Mengosongkan medan penggantian yang boleh diedit sambil mengekalkan sebarang penanda hapus.                                                     |
 
 **Peraturan tegas: laluan ini tidak sekali-kali menjadi proksi kepada perkhidmatan suapan.** Pelayar hanya berkomunikasi
-dengan pelayan OmniRoute setempat. Empat modul yang berinteraksi dengan perkhidmatan Radar ialah
+dengan pelayan 67router setempat. Empat modul yang berinteraksi dengan perkhidmatan Radar ialah
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (rujukan), dan
 `src/lib/radar/offersSync.ts` (tawaran) serta `src/lib/radar/intelSync.ts` (Intel); semuanya dijalankan
 pada sisi pelayan, bukan pada sisi klien. Ini memastikan
@@ -571,7 +571,7 @@ Intel ialah artifak bertandatangan di `GET /v1/intel/latest`. `RadarIntelFeedSch
 
 `syncRadarIntel()` menggunakan Bearer bahagian pelayan, tamat masa 30 saat, had strim 10 MiB, pengesahan Ed25519 bait tepat, skema ketat, keperluan kandungan/pengepala `live`, tingkat minimum versi dan pengekalan cache sah terakhir yang sama seperti tawaran. Selepas petikan langsung yang disahkan disimpan, klien memperoleh `radar:<sha256(supporter key)>`, hanya menyimpan identiti sehala tersebut dan memancarkan peristiwa pengiktirafan khusus `radar_supporter`. Lencana `radar-supporter` bersifat idempoten dan memberikan sifar XP; ia tidak pernah mengemas kini papan pendahulu atau menggunakan semula `token_share`. `/dashboard/radar/intel` memaparkan lencana hanya daripada metadata cache setempat yang disahkan.
 
-CLI menyediakan `omniroute radar status` dan `omniroute radar sync`. Kedua-duanya hanya berkomunikasi dengan API OmniRoute setempat. `status` melakukan `GET /api/radar/status` baca sahaja; `sync` menghantar satu `POST /api/radar/sync-all` dan mencetak hasil bagi setiap suapan. Kedua-dua perintah tidak membaca, menerima atau mencetak kunci penyokong, dan kedua-duanya tidak menghubungi perkhidmatan Radar secara langsung.
+CLI menyediakan `omniroute radar status` dan `omniroute radar sync`. Kedua-duanya hanya berkomunikasi dengan API 67router setempat. `status` melakukan `GET /api/radar/status` baca sahaja; `sync` menghantar satu `POST /api/radar/sync-all` dan mencetak hasil bagi setiap suapan. Kedua-dua perintah tidak membaca, menerima atau mencetak kunci penyokong, dan kedua-duanya tidak menghubungi perkhidmatan Radar secara langsung.
 
 ---
 

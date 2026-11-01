@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute を Docker 内で実行すると、コンテナからホスト OS のキーチェーンデーモン（Linux の libsecret、macOS の Keychain、Windows の Credential Manager）にアクセスできず、またホストファイルシステム上の Zed 設定ディレクトリがデフォルトではコンテナ内から見えないため、標準の「Zed Keychain からインポート」フローは失敗します。
+67router を Docker 内で実行すると、コンテナからホスト OS のキーチェーンデーモン（Linux の libsecret、macOS の Keychain、Windows の Credential Manager）にアクセスできず、またホストファイルシステム上の Zed 設定ディレクトリがデフォルトではコンテナ内から見えないため、標準の「Zed Keychain からインポート」フローは失敗します。
 
 ## Docker でキーチェーンのインポートが失敗する理由
 
@@ -13,7 +13,7 @@ OmniRoute を Docker 内で実行すると、コンテナからホスト OS の�
 1. **ファイルシステムの分離** — `isZedInstalled()` は、`~/.config/zed`（Linux）、`~/Library/Application Support/Zed`（macOS）、または Windows の同等のパスを検索します。これらのパスはホスト上にあり、明示的にボリュームマウントしない限り利用できません。
 2. **IPC の分離** — 設定ディレクトリをマウントした場合でも、`keytar` ネイティブモジュールは Unix ソケットまたは D-Bus セッションを介して OS のキーチェーンサービスと通信します。どちらもデフォルトではコンテナにブリッジされないため、認証情報の読み取りは常に失敗します。
 
-OmniRoute は、次の 2 つのヒューリスティックを使用して Docker 環境を検出します。
+67router は、次の 2 つのヒューリスティックを使用して Docker 環境を検出します。
 
 - `/.dockerenv` が存在すること（コンテナ起動時に Docker デーモンによって書き込まれます）。
 - `/proc/1/cgroup` に文字列 `docker` が含まれていること（Linux cgroup v1）。
@@ -23,7 +23,7 @@ OmniRoute は、次の 2 つのヒューリスティックを使用して Docker
 ## Manual Token Import タブの使用方法
 
 1. **Dashboard → Providers → Zed** を開きます。
-2. **Manual Token Import** パネルがキーチェーンインポートカードの下に表示されます。OmniRoute が Docker を検出した場合、最初のキーチェーンインポート試行が失敗した後、このパネルは自動的に展開されます。
+2. **Manual Token Import** パネルがキーチェーンインポートカードの下に表示されます。67router が Docker を検出した場合、最初のキーチェーンインポート試行が失敗した後、このパネルは自動的に展開されます。
 3. ドロップダウンからプロバイダー（OpenAI、Anthropic、Google、Mistral、xAI、OpenRouter、または DeepSeek）を選択します。
 4. パスワードフィールドに API キーを貼り付けます。
 5. **Import** をクリックします。

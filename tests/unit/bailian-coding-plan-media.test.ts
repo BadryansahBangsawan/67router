@@ -9,7 +9,6 @@ process.env.DATA_DIR = mkdtempSync(join(tmpdir(), "omniroute-bailian-coding-plan
 const { IMAGE_PROVIDERS, parseImageModel } = await import("../../open-sse/config/imageRegistry.ts");
 const { VIDEO_PROVIDERS, parseVideoModel } = await import("../../open-sse/config/videoRegistry.ts");
 const { resolveProviderServiceKinds } = await import("../../open-sse/config/mediaServiceKinds.ts");
-const { handleImageGeneration } = await import("../../open-sse/handlers/imageGeneration.ts");
 const { handleVideoGeneration } = await import("../../open-sse/handlers/videoGeneration.ts");
 const { resolveAlibabaProviderMediaBaseUrl } =
   await import("../../src/shared/constants/alibabaProviderRegions.ts");
@@ -95,63 +94,6 @@ test("Bailian Coding Plan media URLs are isolated from both Qwen Cloud providers
   );
 });
 
-test("Bailian image models use only the Coding Plan endpoint and key", async () => {
-  const originalFetch = globalThis.fetch;
-  let captured;
-
-  globalThis.fetch = async (url, options = {}) => {
-    captured = {
-      url: String(url),
-      headers: options.headers,
-      body: JSON.parse(String(options.body || "{}")),
-    };
-    return jsonResponse({
-      output: {
-        choices: [
-          {
-            message: {
-              content: [{ image: "https://cdn.example.com/bailian-wan.png" }],
-            },
-          },
-        ],
-      },
-    });
-  };
-
-  try {
-    for (const model of [
-      "wan2.7-image",
-      "wan2.7-image-pro",
-      "qwen-image-2.0",
-      "qwen-image-2.0-pro",
-    ]) {
-      const result = await handleImageGeneration({
-        body: {
-          model: `bailian-coding-plan/${model}`,
-          prompt: "A watercolor horse",
-          size: "2048x2048",
-        },
-        credentials: {
-          apiKey: "bailian-plan-key",
-          providerSpecificData: { region: "china-beijing" },
-        },
-        log: null,
-      });
-
-      assert.equal(
-        captured.url,
-        "https://coding.dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
-      );
-      assert.equal(captured.headers.Authorization, "Bearer bailian-plan-key");
-      assert.equal(captured.body.model, model);
-      assert.deepEqual(captured.body.parameters, { size: "2048*2048" });
-      assert.equal(result.success, true);
-    }
-  } finally {
-    globalThis.fetch = originalFetch;
-  }
-});
-
 test("HappyHorse video generation uses only the Bailian Coding Plan endpoint and key", async () => {
   const originalFetch = globalThis.fetch;
   const originalSetTimeout = globalThis.setTimeout;
@@ -206,28 +148,4 @@ test("HappyHorse video generation uses only the Bailian Coding Plan endpoint and
     globalThis.fetch = originalFetch;
     globalThis.setTimeout = originalSetTimeout;
   }
-});
-
-test("Bailian Coding Plan rejects models outside its own media allowlists", async () => {
-  const imageResult = await handleImageGeneration({
-    body: {
-      model: "bailian-coding-plan/qwen-image-3.0-pro",
-      prompt: "wrong catalog",
-    },
-    credentials: { apiKey: "bailian-plan-key" },
-    log: null,
-  });
-  const videoResult = await handleVideoGeneration({
-    body: {
-      model: "bailian-coding-plan/wan2.7-videoedit",
-      prompt: "wrong catalog",
-    },
-    credentials: { apiKey: "bailian-plan-key" },
-    log: null,
-  });
-
-  assert.equal(imageResult.status, 400);
-  assert.match(imageResult.error, /unsupported bailian-coding-plan image model/i);
-  assert.equal(videoResult.status, 400);
-  assert.match(videoResult.error, /unsupported bailian-coding-plan video model/i);
 });

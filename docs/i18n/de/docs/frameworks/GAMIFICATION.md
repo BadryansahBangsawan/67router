@@ -7,7 +7,7 @@
 > **Maßgebliche Quelle:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute enthält eine Local-First-Gamification-Schicht, die Benutzer für die
+67router enthält eine Local-First-Gamification-Schicht, die Benutzer für die
 Interaktion mit der Plattform belohnt — für das Stellen von Anfragen, den
 Wechsel von Anbietern, das Erstellen von Combos, das Teilen von Tokens und
 Beiträge zur Community. Der gesamte Zustand wird in SQLite gespeichert; die
@@ -38,7 +38,7 @@ Anreize (Teilen von Tokens, Einladungsbelohnungen).
 | Bestenlisten          | Globale, wöchentliche, monatliche, Token-Sharing- und Beitragskategorien  |
 | Token-Sharing         | Übertragung von Guthaben zwischen Benutzern über ein doppisches Hauptbuch |
 | Einladen und Einlösen | Empfehlungscodes mit SHA-256-gehashtem Speicher                           |
-| Community-Server      | Föderation mit externen OmniRoute-Instanzen                               |
+| Community-Server      | Föderation mit externen 67router-Instanzen                                |
 | Betrugsschutz         | Serverseitige Punktevergabe, Ratenbegrenzung, Z-Score-Anomalieerkennung   |
 
 ### Designprinzipien
@@ -121,7 +121,7 @@ src/app/api/gamification/
 ### Datenbanktabellen
 
 Alle Tabellen befinden sich in der durch die Migration
-`060_create_gamification.sql` erstellten OmniRoute-Hauptdatenbank unter SQLite. Die WAL-Protokollierung wird von der Singleton-Instanz
+`060_create_gamification.sql` erstellten 67router-Hauptdatenbank unter SQLite. Die WAL-Protokollierung wird von der Singleton-Instanz
 `getDbInstance()` in `src/lib/db/core.ts` übernommen.
 
 ```
@@ -179,7 +179,7 @@ Alle Tabellen befinden sich in der durch die Migration
 
 ### Domänenmodul: `src/lib/db/gamification.ts`
 
-Folgt dem standardmäßigen OmniRoute-Muster — importiert `getDbInstance()` aus
+Folgt dem standardmäßigen 67router-Muster — importiert `getDbInstance()` aus
 `core.ts` und exportiert typisierte CRUD-Funktionen. Kein unformatiertes SQL in Route-Handlern.
 
 Wichtige Funktionen:
@@ -242,7 +242,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Aktion            | XP  | Beschreibung                                                             |
 | ----------------- | --- | ------------------------------------------------------------------------ |
-| `request`         | 1   | Pro über OmniRoute weitergeleiteter API-Anfrage                          |
+| `request`         | 1   | Pro über 67router weitergeleiteter API-Anfrage                           |
 | `provider_switch` | 5   | Wechsel zu einem anderen Anbieter                                        |
 | `model_switch`    | 3   | Wechsel zu einem anderen Modell                                          |
 | `combo_create`    | 10  | Erstellen einer neuen Kombination                                        |
@@ -586,7 +586,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (eindeutig, indiziert) |
 | `token_hash` | SHA-256(raw_token)                |
 
-Das Roh-Token wird dem Benutzer genau einmal bei der Erstellung zurückgegeben. OmniRoute
+Das Roh-Token wird dem Benutzer genau einmal bei der Erstellung zurückgegeben. 67router
 speichert oder zeigt es danach nie wieder an — nur der Hash bleibt erhalten.
 
 ### Verhinderung von Selbstempfehlungen
@@ -710,7 +710,7 @@ Administratoren können den vollständigen Audit-Trail über `GET /api/gamificat
 
 ## API-Routen
 
-Alle Routen folgen dem standardmäßigen OmniRoute-Muster:
+Alle Routen folgen dem standardmäßigen 67router-Muster:
 
 ```
 Route → CORS-Preflight → Body-Validierung (Zod) → Authentifizierung (extractApiKey)

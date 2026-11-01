@@ -25,7 +25,7 @@ Dashboard → Providers → **ফাইল থেকে ইমপোর্ট �
 ইমপোর্ট modal থেকে একটি প্রাথমিক ফাইল ডাউনলোড করুন (**CSV template ডাউনলোড করুন**)। উদাহরণ:
 
 ```csv
-# OmniRoute provider ইমপোর্ট (অবস্থানভিত্তিক কলাম)
+# 67router provider ইমপোর্ট (অবস্থানভিত্তিক কলাম)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

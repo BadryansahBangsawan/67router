@@ -6,7 +6,7 @@
 
 ## Báo cáo lỗ hổng
 
-Nếu phát hiện lỗ hổng bảo mật trong OmniRoute, vui lòng báo cáo một cách có trách nhiệm:
+Nếu phát hiện lỗ hổng bảo mật trong 67router, vui lòng báo cáo một cách có trách nhiệm:
 
 1. **KHÔNG** mở issue công khai trên GitHub
 2. Sử dụng [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ nhánh `stable/v3` (xem [`ROADMAP.md`](ROADMAP.md) → "Giai đoạn 3 — v3.9.
 
 ## Kiến trúc bảo mật
 
-OmniRoute triển khai mô hình bảo mật nhiều lớp:
+67router triển khai mô hình bảo mật nhiều lớp:
 
 ```
 Yêu cầu → CORS → Quy trình Authz (phân loại → chính sách → thực thi)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework lớp bảo vệ
 
-OmniRoute cung cấp một **sổ đăng ký lớp bảo vệ** có khả năng tải lại nóng (`src/lib/guardrails/`) với 3 lớp bảo vệ tích hợp sẵn được sắp xếp theo mức ưu tiên:
+67router cung cấp một **sổ đăng ký lớp bảo vệ** có khả năng tải lại nóng (`src/lib/guardrails/`) với 3 lớp bảo vệ tích hợp sẵn được sắp xếp theo mức ưu tiên:
 
 | Lớp bảo vệ         | Mức ưu tiên | Mục đích                                                                                                |
 | ------------------ | ----------- | ------------------------------------------------------------------------------------------------------- |

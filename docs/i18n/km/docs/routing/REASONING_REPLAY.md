@@ -7,7 +7,7 @@
 > **ប្រភពពិតប្រាកដ:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **បានធ្វើបច្ចុប្បន្នភាពចុងក្រោយ:** 2026-06-28 — v3.8.40
 
-OmniRoute ចាប់យក `reasoning_content` របស់ assistant ដែលបង្កើតដោយម៉ូដែលក្នុង thinking-mode ហើយចាក់វាឡើងវិញដោយតម្លាភាពលើសំណើច្រើនវេន នៅពេល upstream provider តម្រូវឱ្យមានវា។ វាលុបបំបាត់កំហុស HTTP 400 ដែល provider ដែលមានលក្ខខណ្ឌតឹងរ៉ឹងបញ្ចេញ នៅពេលប្រវត្តិសន្ទនារបស់ client បាត់ reasoning ពីវេនមុន។
+67router ចាប់យក `reasoning_content` របស់ assistant ដែលបង្កើតដោយម៉ូដែលក្នុង thinking-mode ហើយចាក់វាឡើងវិញដោយតម្លាភាពលើសំណើច្រើនវេន នៅពេល upstream provider តម្រូវឱ្យមានវា។ វាលុបបំបាត់កំហុស HTTP 400 ដែល provider ដែលមានលក្ខខណ្ឌតឹងរ៉ឹងបញ្ចេញ នៅពេលប្រវត្តិសន្ទនារបស់ client បាត់ reasoning ពីវេនមុន។
 
 ## ហេតុអ្វីបានជាវាមាន
 
@@ -17,7 +17,7 @@ thinking-mode provider មួយចំនួនបដិសេធវេនបន
 ប៉ារ៉ាម៉ែត្រមិនត្រឹមត្រូវ៖ reasoning_content ក្នុង thinking mode ត្រូវតែបញ្ជូនត្រឡប់ទៅ API។
 ```
 
-ប៉ុន្តែ client ទូទៅ (Cursor, Cline, Roo Code, OpenAI SDK) ដក `reasoning_content` ចេញពីប្រវត្តិដែលពួកវាចាក់ឡើងវិញ។ OmniRoute ស្ដារវាពី cache នៅផ្នែក server ដើម្បីឱ្យសំណើដែល upstream មើលឃើញមានភាពស៊ីសង្វាក់គ្នា។ Issue #1628 បានណែនាំការរក្សាទុកបែបកូនកាត់ memory/SQLite ដើម្បីឱ្យ cache នៅតែមានបន្ទាប់ពី process ចាប់ផ្ដើមឡើងវិញ។
+ប៉ុន្តែ client ទូទៅ (Cursor, Cline, Roo Code, OpenAI SDK) ដក `reasoning_content` ចេញពីប្រវត្តិដែលពួកវាចាក់ឡើងវិញ។ 67router ស្ដារវាពី cache នៅផ្នែក server ដើម្បីឱ្យសំណើដែល upstream មើលឃើញមានភាពស៊ីសង្វាក់គ្នា។ Issue #1628 បានណែនាំការរក្សាទុកបែបកូនកាត់ memory/SQLite ដើម្បីឱ្យ cache នៅតែមានបន្ទាប់ពី process ចាប់ផ្ដើមឡើងវិញ។
 
 ## ស្ថាបត្យកម្ម
 

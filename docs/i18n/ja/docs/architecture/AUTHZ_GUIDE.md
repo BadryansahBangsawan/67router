@@ -7,7 +7,7 @@
 > **信頼できる情報源:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **最終更新日:** 2026-09-22 — スコープの名前空間はMCP-SERVER.mdを参照
 
-OmniRouteには、すべてのAPIリクエストをゲートするルート認識型認可パイプラインがあります。分類は**決定論的**であり、**フェイルクローズ**です。分類できないものはすべて`MANAGEMENT`として扱われ、セッションまたは管理グレードのトークンを要求します。このページでは、ルートを保守するエンジニアや新しいエンドポイントを設計するエンジニア向けにモデルを説明します。
+67routerには、すべてのAPIリクエストをゲートするルート認識型認可パイプラインがあります。分類は**決定論的**であり、**フェイルクローズ**です。分類できないものはすべて`MANAGEMENT`として扱われ、セッションまたは管理グレードのトークンを要求します。このページでは、ルートを保守するエンジニアや新しいエンドポイントを設計するエンジニア向けにモデルを説明します。
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 
@@ -215,8 +215,6 @@ APIキーには`scopes`配列が含まれています（`api_keys.scopes`にJSON
 クライアント API キーの強制には、`process.env.REQUIRE_API_KEY` を直接読み取るのではなく、`src/shared/utils/featureFlags.ts` の `isRequireApiKeyEnabled()` を使用します。これは本番環境のインスタンスで重要です。ダッシュボード → Feature Flags で `REQUIRE_API_KEY` を切り替えると DB オーバーライドが保存され、即座に `/v1/*`、`/v1beta/*`、`/models`、`/responses`、`/chat/completions`、`/codex/*` および、このヘルパーを共有する他のクライアント API 認証チェックに影響します。フィーチャーフラグストアを読み取れない場合、クライアント API 認証はフェイルクローズし、キーを要求します。
 
 ## 破壊的変更 — v3.8.0
-
-`/api/v1/agents/tasks/*` および `/api/resilience/model-cooldowns` エンドポイントは、**管理認証が必須**になりました（コミット `588a0333`）。以前のように `manage` スコープを持たない通常の API キーを送信するクライアントには、`403` が返されます。移行方法：API Keys ダッシュボードでキーに `manage` スコープを付与するか、ログイン済みのダッシュボードセッションを使用してください。
 
 ## 動作変更 — v3.8.2
 

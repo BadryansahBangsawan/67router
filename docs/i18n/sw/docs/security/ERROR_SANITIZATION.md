@@ -214,7 +214,7 @@ Kanuni za usafishaji zinazotumika kwa `upstreamDetails`:
 3. Kikomo cha kina: nesting inayozidi viwango 4 hubadilishwa na string `"[truncated]"`.
 4. Array huwekewa kikomo cha element 32.
 
-Call site zilizo na body ya error ya provider iliyochanganuliwa pekee ndizo zinapaswa kupitisha `upstreamDetails`. Error za ndani za OmniRoute
+Call site zilizo na body ya error ya provider iliyochanganuliwa pekee ndizo zinapaswa kupitisha `upstreamDetails`. Error za ndani za 67router
 (kushindwa kuchanganua SSE, content tupu, vizuizi vya guardrail) hazipaswi kuijumuisha.
 
 USIPITISHE `err.stack`, `err.message` ghafi, wala string yoyote kutoka kwa runtime exception kwenda
@@ -225,7 +225,7 @@ Upitishaji teule wa upstream 4xx huhifadhi muundo salama wa JSON wa provider na 
 urejeshaji wa kiotomatiki wa client, lakini si upitishaji wa byte kwa byte: sanitizer ya kujirudia hutekelezwa kila wakati
 kabla ya serialization. Body zenye mzunguko, zenye BigInt, au zenye `toJSON()` hasidi hufeli kwa usalama na
 hazistahiki kupitishwa. OCR na moderation hutumia kanuni hiyo hiyo; body za upstream zisizo JSON, tupu, au
-zilizowekewa lebo isiyo sahihi hubadilishwa kuwa envelope rasmi ya error ya JSON ya OmniRoute.
+zilizowekewa lebo isiyo sahihi hubadilishwa kuwa envelope rasmi ya error ya JSON ya 67router.
 
 ## Kizuizi kinachojulikana cha CodeQL: visafishaji maalum havitambuliwi
 

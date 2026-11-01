@@ -4,7 +4,7 @@
 
 ---
 
-Tento dokument je autoritativním zdrojem informací o všech kontrolních branách kvality CI v OmniRoute.
+Tento dokument je autoritativním zdrojem informací o všech kontrolních branách kvality CI v 67router.
 Popisuje každou bránu, co ověřuje, ve které úloze CI se spouští, zda používá
 referenční hodnotu s ráčnovým mechanismem, nebo zásadu úspěch/neúspěch, a zda sestavení blokuje, nebo má pouze informativní charakter.
 
@@ -273,14 +273,14 @@ Spouští se po `build`. Při selhání blokuje merge.
 
 Spouštějí se podle plánu cron (a přes `workflow_dispatch`), nikdy u PR. Všechna jsou poradní.
 
-| Workflow               | Ověřuje                                                                                                                                                               | Blokující   |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `nightly-property`     | Property testy fast-check s náhodným seedem + vysokým počtem běhů                                                                                                     | **Poradní** |
-| `nightly-resilience`   | Brána růstu haldy, chaos fault-injection, zátěžové/soak testy k6                                                                                                      | **Poradní** |
-| `nightly-llm-security` | Injekční ochrana promptfoo (blokovací režim) + sondy garak (přeskočí se bez secretu poskytovatele)                                                                    | **Poradní** |
-| `nightly-schemathesis` | Fuzzing OpenAPI kontraktu (schemathesis) proti živé instanci OmniRoute pomocí `docs/openapi.yaml` — odhaluje porušení specifikace / neošetřené chyby 500 (Fáze 8 B.4) | **Poradní** |
-| `nightly-mutation`     | Skóre mutačního testování Stryker nad rychlou dráhou jednotkových testů — přežívající mutanti odhalují slabé aserce                                                   | **Poradní** |
-| `nightly-compat`       | Matice kompatibility Node enginu napříč podporovanými rozsahy `engines.node`                                                                                          | **Poradní** |
+| Workflow               | Ověřuje                                                                                                                                                              | Blokující   |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `nightly-property`     | Property testy fast-check s náhodným seedem + vysokým počtem běhů                                                                                                    | **Poradní** |
+| `nightly-resilience`   | Brána růstu haldy, chaos fault-injection, zátěžové/soak testy k6                                                                                                     | **Poradní** |
+| `nightly-llm-security` | Injekční ochrana promptfoo (blokovací režim) + sondy garak (přeskočí se bez secretu poskytovatele)                                                                   | **Poradní** |
+| `nightly-schemathesis` | Fuzzing OpenAPI kontraktu (schemathesis) proti živé instanci 67router pomocí `docs/openapi.yaml` — odhaluje porušení specifikace / neošetřené chyby 500 (Fáze 8 B.4) | **Poradní** |
+| `nightly-mutation`     | Skóre mutačního testování Stryker nad rychlou dráhou jednotkových testů — přežívající mutanti odhalují slabé aserce                                                  | **Poradní** |
+| `nightly-compat`       | Matice kompatibility Node enginu napříč podporovanými rozsahy `engines.node`                                                                                         | **Poradní** |
 
 Výkonnostní baseline (halda, TTFB, doba sestavení) se zaznamenávají, neslouží jako brána: viz [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -552,7 +552,7 @@ seznamu povolených výjimek vytváří falešný pocit kvality.
 
 ## Nástroje pro agenty: LSP-in-the-loop (volitelné)
 
-Kromě kontrol CI obsahuje OmniRoute **volitelnou** kostru `agent-lsp`
+Kromě kontrol CI obsahuje 67router **volitelnou** kostru `agent-lsp`
 (soubor `.mcp.json` na úrovni projektu, Fáze 7, Úloha 15). Vytvořením `.mcp.json`
 zpřístupníte programovacím agentům jazykový server TypeScript, aby dokázali vyhledat symboly /
 diagnostiku **před** zápisem kódu — jde o doplněk ke `typecheck:core` založený na principu „nejprve zkompilovat, potom tvrdit“,

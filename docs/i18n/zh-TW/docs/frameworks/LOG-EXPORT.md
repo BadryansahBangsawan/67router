@@ -4,7 +4,7 @@
 
 ---
 
-將 OmniRoute 呼叫日誌持續、增量匯出至外部分析儲存區。
+將 67router 呼叫日誌持續、增量匯出至外部分析儲存區。
 
 「日誌」儀表板分頁會將請求歷程記錄保存在 SQLite (`call_logs`) 中，其容量受輪替與保留政策限制。日誌匯出會依排程將相同的記錄集傳送至外部，使其保留時間能超越本機資料庫，並可與其他資料聯結。BigQuery 是第一個目的地；此管線採用登錄檔機制，因此可透過新增項目來加入更多目的地。
 
@@ -254,7 +254,7 @@ Node 來隔離事件迴圈與 OOM；此處並未將 Bun 視為僅供開發使用
 - `send()` 在部分失敗時**必須擲出例外**。成功回傳表示「目的地已擁有這些資料列」，
   且游標會永久移過這些資料列。
 - 接受使用者提供 URL 的目的地，必須在擷取前透過
-  `parseAndValidateWebhookUrl`（`src/shared/network/outboundUrlGuardPolicy.ts`）驗證該 URL，
+  `parseAndValidatePublicUrl`（`src/shared/network/outboundUrlGuard.ts`）驗證該 URL，
   與 Webhook 的處理方式相同。BigQuery 不需要這麼做：其主機為常數。
 
 ---

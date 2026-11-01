@@ -163,7 +163,7 @@ export interface CompressionStepPayload {
  * route it to the right node type.
  */
 export interface AgentTaskUpdatedPayload {
-  source: "cloud-agent" | "a2a" | "conductor";
+  source: "a2a" | "conductor";
   taskId: string;
   state: string;
   timestamp: number;

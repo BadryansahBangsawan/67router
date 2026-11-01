@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort sagt**: OmniRoute spårar tokenanvändningen för varje begäran, beräknar kostnaden, tillämpar kvoter per API-nyckel och visar analysdata i kontrollpanelen. Den här guiden förklarar hur allt fungerar.
+> **Kort sagt**: 67router spårar tokenanvändningen för varje begäran, beräknar kostnaden, tillämpar kvoter per API-nyckel och visar analysdata i kontrollpanelen. Den här guiden förklarar hur allt fungerar.
 
 **Källor:**
 
@@ -17,7 +17,7 @@
 
 ## Översikt
 
-Varje begäran som passerar genom OmniRoute genererar en **användningspost** som registrerar:
+Varje begäran som passerar genom 67router genererar en **användningspost** som registrerar:
 
 - **Identitet**: vilken API-nyckel, leverantör, modell och kombination
 - **Token**: prompttoken, slutförandetoken, cachelagrade token och totalt antal
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-För leverantörer som inte returnerar användningsdata (vissa leverantörer som använder webbkakor) **uppskattar** OmniRoute antalet token med hjälp av tumregeln `~4 tecken per token` (se `open-sse/services/autoCombo/pipelineRouter.ts`).
+För leverantörer som inte returnerar användningsdata (vissa leverantörer som använder webbkakor) **uppskattar** 67router antalet token med hjälp av tumregeln `~4 tecken per token` (se `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Cachelagrade token
 
-OmniRoute spårar `cached_tokens` separat från `prompt_tokens` eftersom:
+67router spårar `cached_tokens` separat från `prompt_tokens` eftersom:
 
 - Anthropics promptcachelagring debiterar ett lägre pris för cachelagrade token (10 % av normalpriset)
 - Vissa leverantörer returnerar `cache_read_input_tokens`, som bör prissättas annorlunda
@@ -117,7 +117,7 @@ Prisdata synkroniseras automatiskt från LiteLLM via slutpunkten `/api/pricing/s
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-För modeller utan prisdata använder OmniRoute i stället en **uppskattad kostnad** baserad på interna genomsnittspriser (hämtade från LiteLLM:s prisdata).
+För modeller utan prisdata använder 67router i stället en **uppskattad kostnad** baserad på interna genomsnittspriser (hämtade från LiteLLM:s prisdata).
 
 ---
 

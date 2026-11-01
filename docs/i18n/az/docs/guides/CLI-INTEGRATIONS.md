@@ -7,11 +7,11 @@
 Paylaşılan icra olunan fayl manifesti, məhdudlaşdırılmış alt proses mühitləri və daimi
 Gemini quraşdırması üçün [CLI işə salma müqavilələri](./CLI-LAUNCH-CONTRACTS.md) bölməsinə baxın.
 
-OmniRoute kodlaşdırma üçün CLI-ni (Codex, Claude Code, OpenCode, Cline, …)
-arxa tərəf kimi OmniRoute-dan istifadə edəcək şəkildə konfiqurasiya edən `setup-*`
+67router kodlaşdırma üçün CLI-ni (Codex, Claude Code, OpenCode, Cline, …)
+arxa tərəf kimi 67router-dan istifadə edəcək şəkildə konfiqurasiya edən `setup-*`
 əmrləri ailəsini təqdim edir — beləliklə, alət **bir** son nöqtə ilə əlaqə saxlayır,
-OmniRoute isə avtomatik ehtiyat keçidlə sorğunu düzgün provayderə yönləndirir. Hər
-əmr işləyən OmniRoute instansiyasından (lokal və ya uzaq) **canlı** model kataloqunu
+67router isə avtomatik ehtiyat keçidlə sorğunu düzgün provayderə yönləndirir. Hər
+əmr işləyən 67router instansiyasından (lokal və ya uzaq) **canlı** model kataloqunu
 oxuyur və alətin öz konfiqurasiya faylını **sizin** kompüterinizə yazır. Alət bunu
 dəstəklədiyi hallarda API açarına mühit dəyişəni vasitəsilə istinad edilir. Alətə
 məxsus daimi mühit faylı yaradan əmrlər aşağıda qeyd olunub.
@@ -58,7 +58,7 @@ hər alətə aid ətraflı təlimatlara baxın:
 
 - [Claude Code konfiqurasiyası](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI konfiqurasiyası](./CODEX-CLI-CONFIGURATION.md)
-- [Uzaq rejim](./REMOTE-MODE.md) — noutbukunuzdan uzaq OmniRoute instansiyasını (VPS / Tailnet) idarə edin
+- [Uzaq rejim](./REMOTE-MODE.md) — noutbukunuzdan uzaq 67router instansiyasını (VPS / Tailnet) idarə edin
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot genişlənməsi; o, bu
   `setup-*` əmrlərini sizin üçün redaktor daxilindən də işlədə bilər
 
@@ -93,7 +93,7 @@ Aşağıdakı "Lokal və uzaq" ifadəsi bunu bildirir: bayraqlar olmadıqda həd
 
 Bayraqlar haqqında qeydlər (əmrin mənbə kodunda yoxlanılıb):
 
-- `--remote <url>` — kataloqu uzaq OmniRoute-dan əldə edir (`--port`
+- `--remote <url>` — kataloqu uzaq 67router-dan əldə edir (`--port`
   və aktiv konteksti üstələyir). `--api-key <key>` həmin server üçün
   giriş məlumatını təqdim edir (standart olaraq `OMNIROUTE_API_KEY` mühit dəyişənindən
   və ya aktiv kontekstin tokenindən istifadə olunur).
@@ -115,7 +115,7 @@ Bayraqlar haqqında qeydlər (əmrin mənbə kodunda yoxlanılıb):
   `-c model_providers.omniroute.*` arqumentləri vasitəsilə alır. **Qwen `--model`
   bayrağını mütləq tələb edən yeganə icra hədəfidir** — bu bayraq olmadan
   `omniroute run qwen` açıq xəta ilə `2` kodu qaytararaq çıxır.
-- `--port <port>` — yerli OmniRoute portu (standart `20128`; `--remote`
+- `--port <port>` — yerli 67router portu (standart `20128`; `--remote`
   təyin edildikdə nəzərə alınmır). Bütün `setup-*` əmrlərində və hər iki başladıcıda mövcuddur.
 - `omniroute run` çıxış kodları: alt CLI-nin öz çıxış kodu olduğu kimi ötürülür;
   `2` = etibarsız arqumentlər (dəstəklənməyən hədəf, tələb olunan
@@ -160,7 +160,7 @@ işə salına bilən hədəflər kimi təqdim edilmir.
 
 ## Lokal istifadə
 
-OmniRoute `localhost:20128` ünvanında işləyərkən, sadəcə alətiniz üçün quraşdırma
+67router `localhost:20128` ünvanında işləyərkən, sadəcə alətiniz üçün quraşdırma
 əmrini icra edin. Kataloq lokal serverdən əldə edilir.
 
 ```bash
@@ -188,8 +188,8 @@ omniroute setup-continue --dry-run
 Heç bir konfiqurasiya yazmadan başladın (yalnız mühit dəyişənlərinin yeridilməsi):
 
 ```bash
-omniroute launch                 # Claude Code → lokal OmniRoute
-omniroute launch-codex           # Codex CLI → lokal OmniRoute
+omniroute launch                 # Claude Code → lokal 67router
+omniroute launch-codex           # Codex CLI → lokal 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -207,7 +207,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Uzaqdan istifadə
 
-İstənilən quraşdırma əmrini `--remote` + `--api-key` ilə uzaq OmniRoute-a
+İstənilən quraşdırma əmrini `--remote` + `--api-key` ilə uzaq 67router-a
 yönəldin. Kataloq uzaq serverdən əldə edilir; konfiqurasiya lokal maşınınıza yazılır.
 
 ```bash
@@ -251,7 +251,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Hər iki forma bir 5dive **identifikasiya profili** yazır və həmin profilə bağlanmış
-hər `claude` yeri bundan sonra OmniRoute ilə əlaqə saxlayır. Bu hədəfə xas üç məqam var:
+hər `claude` yeri bundan sonra 67router ilə əlaqə saxlayır. Bu hədəfə xas üç məqam var:
 
 - **O, donanma hostunda root kimi işləyir.** 5dive əmrləri lokal systemd vahidləri
   və root-a məxsus vəziyyət qovluğu üzərində işləyir; uzaq rejim yoxdur. Resept
@@ -269,7 +269,7 @@ hər `claude` yeri bundan sonra OmniRoute ilə əlaqə saxlayır. Bu hədəfə x
 API açarı 5dive-a **stdin** (`--api-key=-`) vasitəsilə verilir, buna görə də heç vaxt
 `ps` çıxışında görünmür.
 
-Profili tək model əvəzinə OmniRoute **kombinasiyasına** yönəltmək donanma provayderi
+Profili tək model əvəzinə 67router **kombinasiyasına** yönəltmək donanma provayderi
 üçün nasazlıq zamanı keçidi təmin edir: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578)
 üzərində qeydə alınmış icra zamanı əsas son nöqtə gedişin ortasında tamamilə sıradan
 çıxdıqda, agent qalan addımlarını ehtiyat variantda tamamladı və nasazlığı heç vaxt
@@ -279,7 +279,7 @@ istifadəçiyə göstərmədi.
 
 ## Baza URL konvensiyaları (hansı alətlərə `/v1` lazımdır)
 
-OmniRoute OpenAI interfeysini `/v1` ünvanında, Anthropic interfeysini kök ünvanda,
+67router OpenAI interfeysini `/v1` ünvanında, Anthropic interfeysini kök ünvanda,
 yerli Gemini interfeysini isə `/v1beta` ünvanında təqdim edir. Hər bir inteqrasiya
 alətin gözlədiyi formaya uyğun qurulub (əmrin mənbə kodunda yoxlanılıb):
 
@@ -301,7 +301,7 @@ alətin gözlədiyi formaya uyğun qurulub (əmrin mənbə kodunda yoxlanılıb)
 ## Yeniləmə zamanı doğma asılılıqların saxlanması: `--include=optional`
 
 `omniroute update` ilə yenilədiyiniz zaman (təsdiqdən sonra və ya `--apply` ilə)
-OmniRoute quraşdırmanı daxilində əvvəlcədən əlavə edilmiş `--include=optional` ilə işə salır:
+67router quraşdırmanı daxilində əvvəlcədən əlavə edilmiş `--include=optional` ilə işə salır:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -330,15 +330,15 @@ Digər `omniroute update` bayraqları (mənbə kodunda təsdiqlənib): `--check`
 Müqavilə `@google/gemini-cli` 0.50.0 ilə yoxlanılıb: CLI
 `GOOGLE_GEMINI_BASE_URL` dəyişənini nəzərə alır və həmin ünvana
 `POST /v1beta/models/<model>:generateContent` (və
-`:streamGenerateContent?alt=sse`) sorğusu göndərir — bu, OmniRoute-un doğma
+`:streamGenerateContent?alt=sse`) sorğusu göndərir — bu, 67router-un doğma
 Gemini interfeysinə (`/v1beta`) tam uyğundur. `omniroute run gemini` bunu
 avtomatik olaraq konfiqurasiya edir:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktiv OmniRoute baza URL-i (kök, `/v1` olmadan);
-- `GEMINI_API_KEY` → müəyyən edilmiş OmniRoute giriş məlumatı (seçim/mühit/kontekst);
+- `GOOGLE_GEMINI_BASE_URL` → aktiv 67router baza URL-i (kök, `/v1` olmadan);
+- `GEMINI_API_KEY` → müəyyən edilmiş 67router giriş məlumatı (seçim/mühit/kontekst);
 - `.gemini/settings.json` faylında `gemini-api-key` autentifikasiyasını seçən
   **müvəqqəti, təcrid olunmuş `GEMINI_CLI_HOME`**; beləliklə, saxlanılmış Google
-  OAuth sessiyası (Code Assist) OmniRoute-a yönəldilmiş işəsalmanı heç vaxt
+  OAuth sessiyası (Code Assist) 67router-a yönəldilmiş işəsalmanı heç vaxt
   üstələmir — çıxışdan sonra silinir;
 - **mühit gigiyenası**: alt prosesin mühitindən `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` və `GOOGLE_GENAI_USE_GCA` (autentifikasiyanı
@@ -362,7 +362,7 @@ qeydiyyatından** (`src/lib/acp/registry.ts`, `gemini --acp`) fərqlidir.
 ## Real tüstü sınağı (seçim əsasında)
 
 Deterministik işə salma planının reqressiya sınaqları CI-də icra olunur (`tests/unit/cli/run-command.test.ts`,
-`tests/unit/cli/run-execution.test.ts`). REAL binar faylları REAL OmniRoute serverinə qarşı yoxlamaq üçün
+`tests/unit/cli/run-execution.test.ts`). REAL binar faylları REAL 67router serverinə qarşı yoxlamaq üçün
 `tests/integration/upstream-cli-smoke.int.test.ts` ünvanında seçim əsasında aktivləşdirilən sınaq mexanizmi mövcuddur. O, heç vaxt avtomatik işə düşmür
 (`RUN_CLI_SMOKE=1` təyin edilmədikcə hər bir alt sınaq ötürülür), giriş məlumatını dəyəri ilə deyil,
 mühit dəyişəninin ADI ilə ötürür, qeydə alınmış bütün çıxışlardan açar formatlı sətirləri gizlədir,

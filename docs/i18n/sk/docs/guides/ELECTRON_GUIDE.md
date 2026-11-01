@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** pracovný priestor `electron/`
 > **Posledná aktualizácia:** 2026-06-28 — v3.8.40
 
-OmniRoute sa dodáva ako multiplatformová desktopová aplikácia (Windows / macOS / Linux) vytvorená pomocou
+67router sa dodáva ako multiplatformová desktopová aplikácia (Windows / macOS / Linux) vytvorená pomocou
 **Electron 41** + **electron-builder 26.10**. Desktopová aplikácia spúšťa samostatný server Next.js
 ako podradený proces, nasmeruje naň `BrowserWindow` a pridáva
 systémovú lištu, automatické aktualizácie, most IPC a automatickú inicializáciu tajných kľúčov bez potreby konfigurácie.
@@ -196,7 +196,7 @@ uprednostnite súbor `.env`, potom aplikáciu úplne ukončite (systémová liš
 - `BrowserWindow`: 1400×900 (min. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, tlačidlá okna na pozícii `{ x: 16, y: 16 }`.
 - Windows/Linux: natívny titulný panel.
-- Tlačidlo zatvorenia minimalizuje aplikáciu na systémovú lištu; ponuka na systémovej lište obsahuje položky **Otvoriť OmniRoute**, **Otvoriť informačný panel** (v externom prehliadači), podponuku **Port servera**, **Skontrolovať aktualizácie** a **Ukončiť**.
+- Tlačidlo zatvorenia minimalizuje aplikáciu na systémovú lištu; ponuka na systémovej lište obsahuje položky **Otvoriť 67router**, **Otvoriť informačný panel** (v externom prehliadači), podponuku **Port servera**, **Skontrolovať aktualizácie** a **Ukončiť**.
 
 ## Zásady zabezpečenia obsahu
 

@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Ελληνικά)
+# 67router Architecture (Ελληνικά)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Τελευταία ενημέρωση: 2026-06-28_
 
 ## Εκτελεστική σύνοψη
 
-Το OmniRoute είναι μια τοπική πύλη δρομολόγησης AI και ένας πίνακας ελέγχου, κατασκευασμένα με Next.js.
+Το 67router είναι μια τοπική πύλη δρομολόγησης AI και ένας πίνακας ελέγχου, κατασκευασμένα με Next.js.
 Παρέχει ένα ενιαίο τελικό σημείο συμβατό με OpenAI (`/v1/*`) και δρομολογεί την κίνηση σε πολλαπλούς παρόχους ανωτέρου επιπέδου, με μετάφραση, εναλλακτική δρομολόγηση, ανανέωση διακριτικών και παρακολούθηση χρήσης.
 
 Βασικές δυνατότητες:
@@ -128,13 +128,11 @@ _Τελευταία ενημέρωση: 2026-06-28_
 - `/dashboard/limits` — έλεγχοι ποσόστωσης/ρυθμού
 - `/dashboard/cli-tools` — εισαγωγή CLI, ανίχνευση runtime, δημιουργία ρυθμίσεων
 - `/dashboard/agents` — ανιχνευμένοι ACP agents + εγγραφή προσαρμοσμένου agent
-- `/dashboard/cloud-agents` — εργασίες agent φιλοξενούμενες στο cloud (Codex Cloud, Devin, Jules) και κύκλος ζωής εργασίας
 - `/dashboard/skills` — μητρώο A2A skill, εκτέλεση σε sandbox, ενσωματωμένος κατάλογος skill
 - `/dashboard/memory` — επισκόπηση και ανάκτηση επίμονης συνομιλιακής μνήμης
 - `/dashboard/webhooks` — εξερχόμενες συνδρομές webhook, εναλλαγή secret, στατιστικά επανάληψης
 - `/dashboard/batch` — υποβολή μαζικής εργασίας και πρόοδος
 - `/dashboard/cache` — στατιστικά read-through και cache συλλογισμού, έλεγχοι εκκαθάρισης
-- `/dashboard/playground` — διαδραστικό playground συνομιλίας έναντι οποιουδήποτε διαμορφωμένου combo/μοντέλου
 - `/dashboard/changelog` — πρόγραμμα προβολής changelog εντός εφαρμογής (αποδίδει το `CHANGELOG.md`)
 - `/dashboard/system` — διαγνωστικά runtime, πληροφορίες έκδοσης, επιφάνεια επαλήθευσης περιβάλλοντος
 - `/dashboard/onboarding` — οδηγός πρώτης εγκατάστασης για νέες εγκαταστάσεις
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Πίνακας Ελέγχου Browser]
     end
 
-    subgraph Router[Τοπική Διεργασία OmniRoute]
+    subgraph Router[Τοπική Διεργασία 67router]
         API[API Συμβατότητας V1\n/v1/*]
         DASH[Πίνακας Ελέγχου + API Διαχείρισης\n/api/*]
         CORE[SSE + Πυρήνας Μετάφρασης\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - Προϋπολογισμός: `src/app/api/usage/budget` (GET/POST)
 - Αλυσίδες εφεδρικής υποστήριξης: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ελεγκτικό αρχείο συμμόρφωσης: `src/app/api/compliance/audit-log` (GET, με σελιδοποίηση + δομημένα μεταδεδομένα)
-- Αξιολογήσεις: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Πολιτικές: `src/app/api/policies` (GET/POST)
 - Διακριτικά συγχρονισμού: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Πακέτο ρυθμίσεων: `src/app/api/sync/bundle` (GET, στιγμιότυπο ρυθμίσεων/παρόχων/συνδυασμών/κλειδιών με έκδοση ETag)
@@ -316,7 +313,6 @@ flowchart LR
 - Χρονικό όριο ανάκτησης: `src/shared/utils/fetchTimeout.ts`
 - Τηλεμετρία αιτημάτων: `src/shared/utils/requestTelemetry.ts`
 - Συμμόρφωση/έλεγχος: `src/lib/compliance/index.ts`
-- Εκτελεστής αξιολογήσεων: `src/lib/evals/evalRunner.ts`
 - Μόνιμη αποθήκευση κατάστασης τομέα: `src/lib/db/domainState.ts` — λειτουργίες CRUD SQLite για αλυσίδες εναλλακτικής χρήσης, προϋπολογισμούς, ιστορικό κόστους, κατάσταση αποκλεισμού και διακόπτες κυκλώματος
 
 Μονάδες παρόχων OAuth (27 μεμονωμένα αρχεία στον κατάλογο `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ flowchart LR
 
 ## 5) Ενσωματωμένες Υπηρεσίες (v3.8.4)
 
-Το OmniRoute μπορεί να εγκαθιστά, να εποπτεύει και να δρομολογεί αιτήματα προς τοπικά εκτελούμενες διεργασίες εργαλείων ΑΙ
+Το 67router μπορεί να εγκαθιστά, να εποπτεύει και να δρομολογεί αιτήματα προς τοπικά εκτελούμενες διεργασίες εργαλείων ΑΙ
 που ονομάζονται **ενσωματωμένες υπηρεσίες**. Παρέχονται πέντε: 9Router, CLIProxyAPI, Bifrost, Mux και Dario.
 
 Επίπεδα αρχιτεκτονικής:
@@ -386,23 +382,6 @@ flowchart LR
 Για πλήρεις αλγοριθμικές λεπτομέρειες (τύποι παραγόντων, ρύθμιση βαρών), ανατρέξτε στο
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Cloud Agents
-
-Το Cloud Agents ενσωματώνει πλατφόρμες φιλοξενούμενων πρακτόρων κώδικα τρίτων (Codex Cloud, Devin,
-Jules) πίσω από έναν ενιαίο κύκλο ζωής εργασιών που υποστηρίζεται από βάση δεδομένων. Όλα τα τελικά σημεία δημιουργίας/επιθεώρησης
-εργασιών απαιτούν έλεγχο ταυτότητας διαχείρισης.
-
-- Ρίζα λειτουργικής μονάδας: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, καθώς και υποκατάλογοι ανά πράκτορα κάτω από το `agents/`)
-- Υλοποιήσεις ανά πράκτορα: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Δημόσια τελικά σημεία: `/api/v1/agents/tasks/*` (παράθεση/δημιουργία/ανάκτηση/ακύρωση)
-- Τελικά σημεία διαχείρισης: `/api/cloud/*` (παροχή, κατάσταση, μαζική επεξεργασία)
-- Πίνακας ελέγχου: `/dashboard/cloud-agents`
-- Αποθήκευση: πίνακας `cloud_agent_tasks`
-
-Για λεπτομέρειες σχετικά με την παροχή και το OAuth ανά πράκτορα, ανατρέξτε στο
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Μηχανισμοί Προστασίας
 
 Η λειτουργική μονάδα μηχανισμών προστασίας είναι ένα επίπεδο ενδιάμεσου λογισμικού με δυνατότητα επαναφόρτωσης χωρίς διακοπή, το οποίο επιθεωρεί αιτήματα
@@ -438,7 +417,7 @@ Jules) πίσω από έναν ενιαίο κύκλο ζωής εργασιώ�
 - Κρυφή μνήμη ορίων χρήσης: `src/domain/quotaCache.ts`
 - Κατάσταση υποβάθμισης: `src/domain/degradation.ts`
 - Έλεγχος διαμόρφωσης: `src/domain/configAudit.ts`
-- Δομητής μεταδεδομένων απόκρισης OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Δομητής μεταδεδομένων απόκρισης 67router: `src/domain/omnirouteResponseMeta.ts`
 - Υποσύστημα αξιολόγησης: `src/domain/assessment/` — περιοδικές εργασίες αξιολόγησης
 
 ### E. Διοχέτευση Εξουσιοδότησης
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Πρόγραμμα Περιήγησης Dashboard]
     end
 
-    subgraph ContainerOrProcess[Χρόνος Εκτέλεσης OmniRoute]
+    subgraph ContainerOrProcess[Χρόνος Εκτέλεσης 67router]
         Next[Next.js Server\nPORT=20128]
         Core[SSE Core + Executors]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ flowchart LR
 ## Πίνακας Συμβατότητας Παρόχων
 
 > **Σημείωση:** Ο παρακάτω πίνακας αποτελεί αντιπροσωπευτικό δείγμα από τους 351 καταχωρημένους παρόχους στο
-> OmniRoute v3.8.0. Για την κανονική και συνεχώς ενημερωμένη λίστα, ανατρέξτε στο
+> 67router v3.8.0. Για την κανονική και συνεχώς ενημερωμένη λίστα, ανατρέξτε στο
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (αυτόματα παραγόμενο) ή στην πηγή αλήθειας
 > στο `src/shared/constants/providers.ts` (επαληθευμένο με Zod κατά τη φόρτωση).
 
@@ -1116,7 +1095,7 @@ Source Format → OpenAI (hub) → Target Format
 - ακατέργαστο αίτημα που λαμβάνεται από τον πελάτη
 - μεταφρασμένο αίτημα που αποστέλλεται πραγματικά upstream
 - απόκριση παρόχου που ανακατασκευάζεται ως JSON· οι ροϊκές αποκρίσεις συμπυκνώνονται στην τελική σύνοψη μαζί με τα μεταδεδομένα ροής
-- τελική απόκριση πελάτη που επιστρέφεται από το OmniRoute· οι ροϊκές αποκρίσεις αποθηκεύονται στην ίδια συμπυκνωμένη μορφή σύνοψης
+- τελική απόκριση πελάτη που επιστρέφεται από το 67router· οι ροϊκές αποκρίσεις αποθηκεύονται στην ίδια συμπυκνωμένη μορφή σύνοψης
 
 ## Όρια Ευαίσθητα σε Θέματα Ασφαλείας
 

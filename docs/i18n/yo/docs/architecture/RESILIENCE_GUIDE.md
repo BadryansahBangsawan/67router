@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ní àwọn ètò ìfaradà mẹ́ta tí ó yàtọ̀ sí ara wọn ṣùgbọ́n tí wọ́n ní í ṣe pẹ̀lú ara wọn. Ọ̀kọ̀ọ̀kan wọn ní àyíká àti ète rẹ̀ pàtò. Máa ya wọn sọ́tọ̀ nígbà tí o bá ń ṣe ìtúpalẹ̀ àṣìṣe lórí ìwà routing.
+67router ní àwọn ètò ìfaradà mẹ́ta tí ó yàtọ̀ sí ara wọn ṣùgbọ́n tí wọ́n ní í ṣe pẹ̀lú ara wọn. Ọ̀kọ̀ọ̀kan wọn ní àyíká àti ète rẹ̀ pàtò. Máa ya wọn sọ́tọ̀ nígbà tí o bá ń ṣe ìtúpalẹ̀ àṣìṣe lórí ìwà routing.
 
 ![àpẹẹrẹ ìfaradà ipele mẹ́ta](../diagrams/exported/resilience-3layers.svg)
 
@@ -189,7 +189,7 @@ A kò rán àwọn àkòrí ìfẹ́sowọ́pọ̀-ìjòkóó mẹ́ta wọ̀ny�
 
 ### Àwọn àdéhùn-ìlò ìsopọ̀ ìjòkóó aláṣàkóso pàtọ̀
 
-**Àyíká:** aláàbàáṣiṣẹ́/ìjòkóó HTTP aláṣàkóso kan ṣóṣó tó ń ṣiṣẹ́ ni ó ní ìsopọ̀ OmniRoute kan ṣóṣó tó yẹ.
+**Àyíká:** aláàbàáṣiṣẹ́/ìjòkóó HTTP aláṣàkóso kan ṣóṣó tó ń ṣiṣẹ́ ni ó ní ìsopọ̀ 67router kan ṣóṣó tó yẹ.
 
 **Ète:** láti pèsè ìní ìsopọ̀ pàtọ̀ tó lágbára fún àwọn aláàbàáṣiṣẹ́ tí wọ́n nílò ọ̀gbà ìtọ́sọ́nà lile
 kọjá àwọn ìbéèrè. Èyí yàtọ̀ sí ìfẹ́sowọ́pọ̀ ìjòkóó, tó jẹ́ àyàn ìtẹ̀síwájú rọ̀rọ̀:
@@ -210,7 +210,7 @@ ID ìsopọ̀ tó ń ṣiṣẹ́ pọ̀. A yọ àwọn àkọlé ìṣàkóso 
 àwọn àkọlé executor òdò ìwájú.
 
 Tí ìtọ́nisònà déédéé bá ní àwọn olùdíje managed tí ó yẹ, ṣùgbọ́n gbogbo olùdíje òfìn bá wà lábẹ́
-lease àjèjì tó ń ṣiṣẹ́, OmniRoute máa dá HTTP `429` padà, kóòdù lease-capacity-unavailable,
+lease àjèjì tó ń ṣiṣẹ́, 67router máa dá HTTP `429` padà, kóòdù lease-capacity-unavailable,
 ipò waiting-for-capacity, àti `Retry-After` tó ní ààlà tí wọ́n gba láti ìparí tó jọ́kọ́tọ́ síwájú.
 Ìkòdúró olùdíje déédéé kì í ṣe ariyanjiyan lease, ó sì tẹ̀síwájú pẹ̀lú ìtumọ̀ àṣìṣe ìtọ́nisònà tó ti wà tẹ́lẹ̀.
 
@@ -233,7 +233,7 @@ ipò waiting-for-capacity, àti `Retry-After` tó ní ààlà tí wọ́n gba l�
   fún codex, gbogbo ìbúgbòòrò `codex` / `spark` (gbogbo àwòṣe `gpt-5*` ti
   ìsopọ̀ náà), fún àwọn olùpèsè míì `getQuotaScopedModelForProvider()`.
 - `404` máa ń dí àwòṣe náà nìkan (`getModelLockKey()` dín `not_found` kù).
-- Ipò míì èyíkéyìí — àwọn ìkùnà ìgbékarí/olùpèsè `5xx` àti `502` tí OmniRoute
+- Ipò míì èyíkéyìí — àwọn ìkùnà ìgbékarí/olùpèsè `5xx` àti `502` tí 67router
   fúnra rẹ̀ ṣẹ̀dá láti inú ìmúdájú dídára — máa ń dí ìṣùpọ̀
   olùpèsè/ìsopọ̀/àwòṣe **gẹ́lẹ́** nìkan. Ìṣàn búburú lórí àwòṣe kan kì í ṣe ẹ̀rí
   nípa ìpín àkọọ́lẹ̀ náà; ṣáájú òfin yìí, ìdáhùn òfo kan lórí
@@ -372,7 +372,7 @@ nínú máàpù `rateLimitOverrides` rẹ̀:
 - **Ìtòlẹ́sẹẹsẹ agbègbè, kò sí ìṣàwárí:** àwọn ìbéèrè tó kọjá ààlà máa dúró
   nínú ìtòlẹ́sẹẹsẹ agbègbè pẹ̀lú ìlànà ìtòlẹ́sẹẹsẹ/àkókò-ìparí tó ti wà
   (àwọn àṣìṣe ìgbàwọlé onírúurú `SEMAPHORE_TIMEOUT` /
-  `SEMAPHORE_QUEUE_FULL`). OmniRoute kì í ṣàwárí tàbí fojú díwọ̀n ìlànà
+  `SEMAPHORE_QUEUE_FULL`). 67router kì í ṣàwárí tàbí fojú díwọ̀n ìlànà
   iṣẹ́ òkè — ó ń fi àwọn ààlà pàtó tí olùdarí ṣètò múlẹ̀. Ẹnu-ọ̀nà awoṣe
   tó ti kún kì í pa olùpèsè, bẹ́ẹ̀ ni kì í dá ìdènà awoṣe títí láé sílẹ̀;
   ìhùwàsí 429/àkókò ìdádúró/ìyípadà sí omiì ti iṣẹ́ òkè ṣì jẹ́ ààbò ìkẹyìn
@@ -535,7 +535,7 @@ láìsí limiter Bottleneck gidi kan.
 ### Nẹ́tì Ààbò Auto-Enable Rate-Limit & Ààbò Ìsopọ̀ (`rateLimitProtection`)
 
 **Nẹ́tì ààbò auto-enable** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, àtọ́kànwá `true`):
-Ní àtọ́kànwá, OmniRoute máa ń ṣí ààbò ìlànilẹnu rate-limit fún gbogbo àwọn ìsopọ̀ olùpèsè API-key tó ń ṣiṣẹ́ (`getProviderCategory(provider) === "apikey"`). Èyí jẹ́ àìdíí pé àwọn ìbéèrè tó ń wọlé sórí àwọn kìí API upstream tó ní ìfura sí rate ni wọ́n yóò wà nínú ìlànilẹnu, a sì yóò dín wọ́n ku nípasẹ̀ Bottleneck dípò kí wọ́n má bà a já sí àwọn àṣìṣe 429 upstream lójijì. A lè ṣe àtẹ̀yínwá nẹ́tì ààbò náà nípasẹ̀ oníyípadà àyíká `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` máa pa á, `true`/`1`/`on` máa fipá mú ọn ṣiṣẹ́), èyí sì ní agbára jù ìtò Dashboard tó wà nínú ìpamọ́ lọ (**Ìṣètò → Ìfaradà** / `PATCH /api/resilience`).
+Ní àtọ́kànwá, 67router máa ń ṣí ààbò ìlànilẹnu rate-limit fún gbogbo àwọn ìsopọ̀ olùpèsè API-key tó ń ṣiṣẹ́ (`getProviderCategory(provider) === "apikey"`). Èyí jẹ́ àìdíí pé àwọn ìbéèrè tó ń wọlé sórí àwọn kìí API upstream tó ní ìfura sí rate ni wọ́n yóò wà nínú ìlànilẹnu, a sì yóò dín wọ́n ku nípasẹ̀ Bottleneck dípò kí wọ́n má bà a já sí àwọn àṣìṣe 429 upstream lójijì. A lè ṣe àtẹ̀yínwá nẹ́tì ààbò náà nípasẹ̀ oníyípadà àyíká `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` máa pa á, `true`/`1`/`on` máa fipá mú ọn ṣiṣẹ́), èyí sì ní agbára jù ìtò Dashboard tó wà nínú ìpamọ́ lọ (**Ìṣètò → Ìfaradà** / `PATCH /api/resilience`).
 
 **Ìtumọ̀ `rateLimitProtection` ti ìsopọ̀-kúlẹ̀kúlẹ̀:**
 Ìtẹ̀lé ààbò rate-limit ti ìsopọ̀-kúlẹ̀kúlẹ̀ ni wọ́n ń ṣe nípasẹ̀ ààyè boolean `rateLimitProtection` lórí àwọn ìsopọ̀ olùpèsè (tí a fi pamọ́ sínú SQLite gẹ́gẹ́ bí `rate_limit_protection`):
@@ -881,7 +881,7 @@ allowlist, rate limit tí wọ́n ṣọ́ ní ìpín-IP jẹ́ àmì kannáà b
 > ìtọ́nisọ́nà agent lè wà lábẹ́ ìwọ̀n context 40k. Ìwòye kíkéékeré tó kan agent ni ẹ̀yí jẹ́ fún
 > àwọn abala tó wà lókè; àwọn abala onínọ́ńbà ṣì dúró gẹ́gẹ́ bí ìtọ́kasí kíkún.
 
-OmniRoute ní ọ̀nà mẹ́ta fún àṣìṣe-ìgbàdíẹ̀ tó jọ ara wọn ṣùgbọ́n tó yàtọ̀. Pa àyíká wọn
+67router ní ọ̀nà mẹ́ta fún àṣìṣe-ìgbàdíẹ̀ tó jọ ara wọn ṣùgbọ́n tó yàtọ̀. Pa àyíká wọn
 lọ́tọ̀ nígbà tí o bá ń ṣe ìwádìí àṣìṣe ìwà ìtọ́sọ́nà. Wo
 [àwòrán ìfaradà ipele mẹ́ta](../diagrams/exported/resilience-3layers.svg)
 (orísun: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

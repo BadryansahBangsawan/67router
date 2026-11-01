@@ -8,7 +8,7 @@
 
 > **የእውነት ምንጭ፦** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute እያንዳንዱ proxy **የአድራሻ-family egress መመሪያ** እንዲኖረው ያስችላል። በነባሪነት OS IPv4 ወይም IPv6ን (dual-stack፣ "Happy Eyeballs") ይመርጣል። መመሪያውን ወደ `ipv4` ወይም `ipv6` ሲያዘጋጁ፣ OmniRoute በዚያ proxy በኩል የሚደረጉ ሁሉንም ግንኙነቶች በተመረጠው family ላይ ይወስናል፤ ወደ ሌላኛው family ከመመለስ ይልቅ **በተዘጋ ሁኔታ ይከሽፋል**።
+67router እያንዳንዱ proxy **የአድራሻ-family egress መመሪያ** እንዲኖረው ያስችላል። በነባሪነት OS IPv4 ወይም IPv6ን (dual-stack፣ "Happy Eyeballs") ይመርጣል። መመሪያውን ወደ `ipv4` ወይም `ipv6` ሲያዘጋጁ፣ 67router በዚያ proxy በኩል የሚደረጉ ሁሉንም ግንኙነቶች በተመረጠው family ላይ ይወስናል፤ ወደ ሌላኛው family ከመመለስ ይልቅ **በተዘጋ ሁኔታ ይከሽፋል**።
 
 ይህ ገጽ መመሪያው ምን እንደሆነ፣ ለምን እንደሚያስፈልግ፣ የት እንደሚዋቀር እና runtime እንዴት እንደሚፈታው ይገልጻል።
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` እንዴት እንደሚፈታ
 
-`family` `auto` ሲሆን፣ OmniRoute ምንም መመሪያ **አይጨምርም** — የፕሮክሲ URL እንዳለ ጥቅም ላይ ይውላል፣ የግንኙነቱ ቤተሰብም በተፈጥሮ ይወሰናል።
+`family` `auto` ሲሆን፣ 67router ምንም መመሪያ **አይጨምርም** — የፕሮክሲ URL እንዳለ ጥቅም ላይ ይውላል፣ የግንኙነቱ ቤተሰብም በተፈጥሮ ይወሰናል።
 
 URL በሚገነባበት ጊዜ (`proxyConfigToUrl` / `normalizeProxyUrl` በ`open-sse/utils/proxyDispatcher.ts` ውስጥ)፣ `auto` ፕሮክሲ ምንም ምልክት የሌለው ቀላል URL ያስገኛል፦
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 `auto` ያልሆነ መመሪያ እንደ አንድ ሰው-ሠራሽ የጥያቄ ምልክት — `?family=ipv4` ወይም `?family=ipv6` — ይተላለፋል፤ ይህም ወደ መደበኛ ቅርጽ በተቀየረው የፕሮክሲ URL ላይ አንድ ጊዜ ይጨመራል። `normalizeProxyUrl` ይህን ምልክት በትክክል አንድ ጊዜ ለማስወገድና እንደገና ለመጨመር ጥንቃቄ ያደርጋል፤ በዚህም የፖርት ትንተናን በፍጹም አያበላሽም።
 
-dispatcher ሲገነባ፣ ምልክቱ ተነቦ ወደ ተጨባጭ የግንኙነት family ይቀየራል። host ከ**ተቃራኒው** family የሆነ IP literal ከሆነ፣ OmniRoute ስህተት ይጥላል (ተቃርኖው fail-closed ነው)፦
+dispatcher ሲገነባ፣ ምልክቱ ተነቦ ወደ ተጨባጭ የግንኙነት family ይቀየራል። host ከ**ተቃራኒው** family የሆነ IP literal ከሆነ፣ 67router ስህተት ይጥላል (ተቃርኖው fail-closed ነው)፦
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## የSOCKS5 ተኳኋኝነት
 
-የfamily ቋሚ ምርጫው ከSOCKS5 ፕሮክሲዎች ጋር ይሰራል፤ ነገር ግን መደበኛው `fetch-socks` የፕሮክሲውን hop family በቋሚነት ለመወሰን የሚያስፈልጉትን socket options አያቀርብም። OmniRoute ለዚህ የራሱን connector ያቀርባል፦
+የfamily ቋሚ ምርጫው ከSOCKS5 ፕሮክሲዎች ጋር ይሰራል፤ ነገር ግን መደበኛው `fetch-socks` የፕሮክሲውን hop family በቋሚነት ለመወሰን የሚያስፈልጉትን socket options አያቀርብም። 67router ለዚህ የራሱን connector ያቀርባል፦
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

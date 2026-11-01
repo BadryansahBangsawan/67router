@@ -5,7 +5,7 @@
 ---
 
 स्वतः होस्ट केलेला पूल **.113** मशीनवर (`tomni-proxmox-113`) चालतो. 2026-10-18 पासून प्रत्येक
-OmniRoute रनरकडे **एक भूमिका**, एक लेबल आणि त्याच्या वर्कलोडच्या मोजलेल्या गरजेनुसार ठरवलेले मेमरी/CPU बजेट
+67router रनरकडे **एक भूमिका**, एक लेबल आणि त्याच्या वर्कलोडच्या मोजलेल्या गरजेनुसार ठरवलेले मेमरी/CPU बजेट
 आहे. Turbopack स्लॉटला बिल्डसाठी आवश्यक संसाधने मिळतात; इतर स्लॉट त्यांच्या
 मोजलेल्या कमाल वापरानुसार आकारलेले आहेत. Turbopack बिल्ड, Release-Green
 webpack बिल्ड आणि lint जॉब एकाच वेळी चालतात तेव्हाच मशीन क्षमतेपेक्षा जास्त संसाधने वाटप करते; होस्ट स्वॅप (16 GB)
@@ -27,7 +27,7 @@ webpack बिल्ड आणि lint जॉब एकाच वेळी च�
 | स्वॅप     | 16 GB                     | `omniroute-113-5` स्वॅप बंद ठेवून (`MemorySwapMax=0`) चालतो, त्यामुळे नियंत्रणाबाहेर गेलेला बिल्ड संपूर्ण मशीनला स्वॅपमध्ये ढकलण्याऐवजी त्याच्या मर्यादेवर थांबवला जातो                                                                                                                                                                                                                        |
 | `/tmp`    | **12 GB tmpfs = RAM**     | तेथे ठेवलेली कोणतीही गोष्ट मेमरी वापरते; उरलेल्या फाइल्स 3 तासांनंतर काढून टाकल्या जातात                                                                                                                                                                                                                                                                                                       |
 | CPU       | 32 कोअर्सवर load 60 आढळला | कोटा लागू करण्यापूर्वी, त्याच मशीनवरील एक Turbopack बिल्ड (~1166 % CPU) आणि coverage suite यांनी इतर listeners च्या heartbeats साठी संसाधने अपुरी पाडली (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                  |
-| रनर्स     | **6 listeners**           | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` अक्षम आहेत (`systemctl enable --now` वापरून त्यांपैकी एक पुन्हा सुरू करता येतो)                                                                                                                                                                                                                                                |
+| रनर्स     | **6 listeners**           | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` अक्षम आहेत (`systemctl enable --now` वापरून त्यांपैकी एक पुन्हा सुरू करता येतो)                                                                                                                                                                                                                                                 |
 
 मर्यादा प्रत्येक unit च्या `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` मध्ये आहेत
 (मागील मूल्ये `override.conf.bak-20261018` म्हणून ठेवली आहेत) आणि
@@ -74,7 +74,7 @@ ssh root@192.168.0.113 'chmod +x /opt/omniroute-ops/runner-janitor.sh; apt-get i
 
 रनरचा डीफॉल्ट `KillMode=process`, युनिट थांबवले किंवा रीस्टार्ट केले असता
 `Runner.Worker → npm → next-build` चालूच ठेवतो — कोणताही जॉब जोडलेला नसताना अनाथ बिल्ड
-RAM आणि CPU वापरत राहतो. प्रत्येक OmniRoute युनिटमध्ये
+RAM आणि CPU वापरत राहतो. प्रत्येक 67router युनिटमध्ये
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 येथे `KillMode=mixed` असलेला drop-in आहे: प्रथम listener ला SIGTERM, त्यानंतर
 `TimeoutStop` वेळी संपूर्ण cgroup ला SIGKILL. युनिटच्या पुढील रीस्टार्टवेळी तो लागू होतो —
@@ -118,7 +118,7 @@ RAM आणि CPU वापरत राहतो. प्रत्येक Omni
   केवळ backend साठी `next build` (~5–6 GB; webpack) आणि `quality.yml` मधील `lint-guard` आवश्यक असतात. `omniroute-113`
   वर 2026-10-18 पर्यंत `MemoryHigh=4G` होते — तेथे promptfoo बिल्डने memory reclaim करत 54 मिनिटांत कशीबशी वाट काढली;
   8 GB मुळे throttling दूर होते.
-- **जाणीवपूर्वक कमी listeners.** 2026-08-29 रोजी चार OmniRoute units निष्क्रिय करण्यात आले — प्रत्येक अतिरिक्त
+- **जाणीवपूर्वक कमी listeners.** 2026-08-29 रोजी चार 67router units निष्क्रिय करण्यात आले — प्रत्येक अतिरिक्त
   listener हा वरील memory budget चा आणखी एक tenant असतो. janitor ची कमाल मर्यादा 6 आहे (cron मधील `MAX_ACTIVE_RUNNERS=6`): तो बॉक्सवरील
   प्रत्येक `Runner.Listener` मोजतो आणि आमच्या चारमध्ये OmniHeuris + OmniMind आणखी दोन जोडतात.
 - **कोणताही runner व्यस्त असताना `/tmp` किंवा `_work` कधीही हाताने स्वच्छ करू नका.** तपासणी आणि deletion

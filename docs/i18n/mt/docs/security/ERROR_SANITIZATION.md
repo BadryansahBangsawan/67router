@@ -206,7 +206,7 @@ Regoli ta’ sanitizzazzjoni applikati għal `upstreamDetails`:
 3. Limitu tal-fond: nesting lil hinn minn 4 livelli jiġi sostitwit bl-string `"[truncated]"`.
 4. Arrays huma limitati għal 32 element.
 
-Call sites b’body ta’ żball tal-provider ipparsjat biss għandhom jgħaddu `upstreamDetails`. Żbalji interni ta’ OmniRoute
+Call sites b’body ta’ żball tal-provider ipparsjat biss għandhom jgħaddu `upstreamDetails`. Żbalji interni ta’ 67router
 (fallimenti tal-parsing SSE, kontenut vojt, imblukkar mill-guardrails) ma għandhomx jinkluduh.
 
 Tgħaddix `err.stack`, `err.message` mhux ipproċessati, jew kwalunkwe string minn runtime exception lil
@@ -217,7 +217,7 @@ Il-passaġġ selettiv ta’ 4xx upstream jippreserva l-forma JSON sikura u l-kli
 għall-irkupru awtomatiku tal-client, iżda mhuwiex passaġġ byte-for-byte: is-sanitizer rikursiv dejjem jitħaddem
 qabel is-serialization. Bodies ċikliċi, li fihom BigInt, jew li għandhom `toJSON()` ostili jingħalqu b’mod sikur u ma jkunux
 eliġibbli għall-passaġġ. OCR u moderation japplikaw l-istess regola; bodies upstream li mhumiex JSON, huma vojta, jew
-għandhom tikketta skorretta jiġu kkonvertiti għall-envelope tal-iżball JSON kanoniku ta’ OmniRoute.
+għandhom tikketta skorretta jiġu kkonvertiti għall-envelope tal-iżball JSON kanoniku ta’ 67router.
 
 ## Limitazzjoni magħrufa ta’ CodeQL: sanitizzaturi personalizzati ma jiġux rikonoxxuti
 

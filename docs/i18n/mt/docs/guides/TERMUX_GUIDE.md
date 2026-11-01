@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jista’ jitħaddem bħala server mingħajr interfaċċa grafika fuq Android permezz ta’ Termux. L-applikazzjoni tad-desktop Electron mhijiex appoġġjata f’Termux, iżda d-dashboard tal-web u l-API kompatibbli ma’ OpenAI jaħdmu mill-brawżer lokali jew minn apparati oħra fuq l-istess netwerk.
+67router jista’ jitħaddem bħala server mingħajr interfaċċa grafika fuq Android permezz ta’ Termux. L-applikazzjoni tad-desktop Electron mhijiex appoġġjata f’Termux, iżda d-dashboard tal-web u l-API kompatibbli ma’ OpenAI jaħdmu mill-brawżer lokali jew minn apparati oħra fuq l-istess netwerk.
 
 ## Prerekwiżiti
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Verżjoni ta’ Node.js:** OmniRoute jeħtieġ Node `>=22.22.2 <23 || >=24.0.0 <27` (jaqbel ma’ `engines` f’`package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` ta’ Termux normalment jinkludi Node 20 LTS, li **m’għadux appoġġjat** — minflok installa `pkg install nodejs` (il-verżjoni attwali) u vverifika li `node --version` jirrapporta verżjoni mil-linja 22.x/24.x+.
+> **Verżjoni ta’ Node.js:** 67router jeħtieġ Node `>=22.22.2 <23 || >=24.0.0 <27` (jaqbel ma’ `engines` f’`package.json` / `SUPPORTED_NODE_RANGE`). `nodejs-lts` ta’ Termux normalment jinkludi Node 20 LTS, li **m’għadux appoġġjat** — minflok installa `pkg install nodejs` (il-verżjoni attwali) u vverifika li `node --version` jirrapporta verżjoni mil-linja 22.x/24.x+.
 
-Jekk il-kompilazzjoni ta’ pakkett nattiv tfalli, erġa’ ħaddem il-kmand `pkg install` t’hawn fuq u mbagħad erġa’ pprova l-installazzjoni ta’ OmniRoute.
+Jekk il-kompilazzjoni ta’ pakkett nattiv tfalli, erġa’ ħaddem il-kmand `pkg install` t’hawn fuq u mbagħad erġa’ pprova l-installazzjoni ta’ 67router.
 
 ## Installazzjoni
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Tħaddim
 
-Ibda OmniRoute fil-modalità ta’ server mingħajr interfaċċa grafika:
+Ibda 67router fil-modalità ta’ server mingħajr interfaċċa grafika:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Pereżempju:
 http://192.168.1.50:20128
 ```
 
-Żomm it-telefon u l-klijent fuq l-istess netwerk fdat. Jekk tesponi OmniRoute barra mit-telefon, attiva ċ-ċwievet tal-API u l-awtentikazzjoni tad-dashboard.
+Żomm it-telefon u l-klijent fuq l-istess netwerk fdat. Jekk tesponi 67router barra mit-telefon, attiva ċ-ċwievet tal-API u l-awtentikazzjoni tad-dashboard.
 
 ## Direttorju tad-Data
 
-B’mod awtomatiku OmniRoute jaħżen id-data taħt id-direttorju tad-dar ta’ Termux, skont l-istess imġiba tal-perkors tad-data fuq in-naħa tas-server użata fuq Linux. Biex tqiegħed id-database f’post speċifiku:
+B’mod awtomatiku 67router jaħżen id-data taħt id-direttorju tad-dar ta’ Termux, skont l-istess imġiba tal-perkors tad-data fuq in-naħa tas-server użata fuq Linux. Biex tqiegħed id-database f’post speċifiku:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Pjattaforma mhux appoġġjata: android (kull talba tirritorna HTTP 500)
 
-**Sintomu:** `omniroute` / `omniroute serve` jistampa `✔ OmniRoute is running!`, iżda kull talba lid-dashboard jew lill-API tirritorna `500 Internal Server Error` mingħajr dettalji. `~/.omniroute/logs/application/app.log` jibqa’ vojt, `APP_LOG_LEVEL=debug` ma jistampa xejn utli, u l-korp tar-rispons ikun test sempliċi (`Internal Server Error`) mingħajr dettalji JSON.
+**Sintomu:** `omniroute` / `omniroute serve` jistampa `✔ 67router is running!`, iżda kull talba lid-dashboard jew lill-API tirritorna `500 Internal Server Error` mingħajr dettalji. `~/.omniroute/logs/application/app.log` jibqa’ vojt, `APP_LOG_LEVEL=debug` ma jistampa xejn utli, u l-korp tar-rispons ikun test sempliċi (`Internal Server Error`) mingħajr dettalji JSON.
 
 **Kawża:** Xi builds ta’ Termux/Node jirrapportaw `process.platform === "android"`. `getCacheDirectory()` ta’ Next.js ma jittrattax dik il-pjattaforma: jeħtieġ li `~/.cache` (jew direttorju tmp ġeneriku) ikun _diġà_ jeżisti, inkella jfalli waqt it-tagħbija tal-hook tal-istrumentazzjoni b’dan:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Minħabba li l-hook qatt ma jitgħabba, il-logging qatt ma jibda — il-500 jidher impossibbli li jiġi dijanjostikat. OmniRoute joħloq `~/.cache` (u jistabbilixxi `XDG_CACHE_HOME` meta ma jkunx issettjat) fil-punt tad-dħul tas-CLI qabel ma jibda Next.js sabiex dan il-kontroll jirnexxi fuq Android/Termux.
+Minħabba li l-hook qatt ma jitgħabba, il-logging qatt ma jibda — il-500 jidher impossibbli li jiġi dijanjostikat. 67router joħloq `~/.cache` (u jistabbilixxi `XDG_CACHE_HOME` meta ma jkunx issettjat) fil-punt tad-dħul tas-CLI qabel ma jibda Next.js sabiex dan il-kontroll jirnexxi fuq Android/Termux.
 
 **Soluzzjoni appoġġjata (mingħajr modifika tal-pakkett):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Fil-builds attwali ta’ OmniRoute, is-CLI jagħmel dan awtomatikament fuq Android/Termux — installazzjoni ġdida b’`npx -y omniroute@latest` / installazzjoni globali m’għandhiex teħtieġ il-pass manwali. Jekk xorta tara l-iżball wara l-aġġornament, oħloq `~/.cache` darba kif muri hawn fuq u erġa’ ibda.
+Fil-builds attwali ta’ 67router, is-CLI jagħmel dan awtomatikament fuq Android/Termux — installazzjoni ġdida b’`npx -y omniroute@latest` / installazzjoni globali m’għandhiex teħtieġ il-pass manwali. Jekk xorta tara l-iżball wara l-aġġornament, oħloq `~/.cache` darba kif muri hawn fuq u erġa’ ibda.
 
 **Timmodifikax** `dist/server.js` biex tisforza `process.platform = "linux"`. Din it-tip ta’ modifika tal-pakkett tinkiteb fuqha mill-ġdid ma’ kull installazzjoni/aġġornament u mhijiex meħtieġa ladarba d-direttorju tal-cache jkun jeżisti.
 

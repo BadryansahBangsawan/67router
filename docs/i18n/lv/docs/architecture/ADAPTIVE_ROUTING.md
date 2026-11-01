@@ -5,7 +5,7 @@
 ---
 
 Šajā dokumentā ir aprakstīts uz atgriezenisko saiti balstītas adaptīvās maršrutēšanas pamats, kas pievienots
-OmniRoute. Tas ir apzināti neliels: tas ievieš tipizētu maršrutēšanas iznākumu
+67router. Tas ir apzināti neliels: tas ievieš tipizētu maršrutēšanas iznākumu
 kanālu, tiešsaistes kvalitātes signālu, kas papildina esošo automātisko kombināciju vērtētāju,
 neobligātu OpenTelemetry eksportētāju un izskaidrojamības galapunktu. Tas **neaizstāj**
 esošo noturības steku (ķēdes pārtraucēju, savienojuma atdzišanas periodu,
@@ -13,7 +13,7 @@ modeļa bloķēšanu, veselības stāvokļa matricu, autopilotu) — tas to papi
 
 ## 1. Arhitektūras konteksts
 
-OmniRoute ir datu plakne ar **pieprasījumu kritisko izpildes ceļu** un **vadības/intelekta
+67router ir datu plakne ar **pieprasījumu kritisko izpildes ceļu** un **vadības/intelekta
 plakni**. Kritiskajam izpildes ceļam jāpaliek ātram, atmiņu efektīvi izmantojošam, asinhronam, noturīgam un
 paredzamam. Novērtēšana, kvalitātes vērtēšana, eksperimenti un vēsturiskā analīze pieder
 vadības plaknei.
@@ -23,7 +23,7 @@ MI aģents / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   datu plakne (ātra, sinhrona, atmiņā)
+│    67router        │   datu plakne (ātra, sinhrona, atmiņā)
 │ maršrutēšana/kļūmjpārlēce │
 │ veselība / aizsargmehānismi │
 │ kešatmiņa / straumēšana │
@@ -42,16 +42,15 @@ MI aģents / IDE
 
 ### Kas jau bija pieejams (auditēts, nedublēts)
 
-| Koncepcija                                         | Esošā implementācija                                                                                               |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Pieejamība (vai varam sūtīt datplūsmu?)            | Ķēdes pārtraucējs (CLOSED/DEGRADED/OPEN/HALF_OPEN, saglabāts DB), savienojuma atdzišanas periods, modeļa bloķēšana |
-| Veselības stāvokļa pārskati                        | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                            |
-| Ēnu datplūsma                                      | `open-sse/services/combo/shadowRouting.ts`                                                                         |
-| Aizsargmehānismi                                   | `src/lib/guardrails/` (pirms/pēc apstrādes āķi)                                                                    |
-| Precīzo atbilstību kešatmiņa                       | `src/lib/semanticCache.ts` (balstīta uz parakstiem)                                                                |
-| Vērtētāji / uz novērtējumiem balstīta maršrutēšana | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                               |
-| Kombināciju lēmumu izskaidrojamība                 | `open-sse/services/combo/decisionTrace.ts`                                                                         |
-| Informācijas paneļa reāllaika notikumi             | `src/lib/events/eventBus.ts` (UI paziņojumu kanāls, `unknown` derīgās slodzes, 100 ierakstu vēsture)               |
+| Koncepcija                              | Esošā implementācija                                                                                               |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Pieejamība (vai varam sūtīt datplūsmu?) | Ķēdes pārtraucējs (CLOSED/DEGRADED/OPEN/HALF_OPEN, saglabāts DB), savienojuma atdzišanas periods, modeļa bloķēšana |
+| Veselības stāvokļa pārskati             | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                            |
+| Ēnu datplūsma                           | `open-sse/services/combo/shadowRouting.ts`                                                                         |
+| Aizsargmehānismi                        | `src/lib/guardrails/` (pirms/pēc apstrādes āķi)                                                                    |
+| Precīzo atbilstību kešatmiņa            | `src/lib/semanticCache.ts` (balstīta uz parakstiem)                                                                |
+| Kombināciju lēmumu izskaidrojamība      | `open-sse/services/combo/decisionTrace.ts`                                                                         |
+| Informācijas paneļa reāllaika notikumi  | `src/lib/events/eventBus.ts` (UI paziņojumu kanāls, `unknown` derīgās slodzes, 100 ierakstu vēsture)               |
 
 Maršrutēšanas notikumu slānis **nav** `eventBus` atkārtota implementācija: šī kopne ir
 informācijas paneļa reāllaika paziņojumu kanāls (tipizēti _notikumu nosaukumi_, necaurredzamas
@@ -233,7 +232,7 @@ Faili: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK).
 - Laidumi atbilst GenAI semantiskajām konvencijām (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`), kā arī ietver OmniRoute maršrutēšanas
+  `gen_ai.completion.finish_reason`, `gen_ai.system`), kā arī ietver 67router maršrutēšanas
   atribūtus (iznākums, statuss, ttft, atkārtotie mēģinājumi, rezerves variants).
 - `record()` tikai ievieto datus ierobežotā buferī (O(1)); fona taimeris
   asinhroni iztukšo buferi, izmantojot `POST {endpoint}/v1/traces`. Pārslodzes gadījumā
@@ -255,7 +254,7 @@ Faili: `open-sse/services/routing/otel.ts`
 
 ## 6. Novērtēšanas plaknes integrācija (gatavība Future AGI)
 
-OmniRoute uzskata Future AGI (vai jebkuru vērtētāju) par **potenciālu
+67router uzskata Future AGI (vai jebkuru vērtētāju) par **potenciālu
 intelekta/novērtēšanas aizmugursistēmu, nevis atkarību**. Integrācijas punkti:
 
 - `RoutingEventSink` var asinhroni pārsūtīt notikumus vērtētājam.
@@ -264,8 +263,6 @@ intelekta/novērtēšanas aizmugursistēmu, nevis atkarību**. Integrācijas pun
 - Nākotnes `Evaluator` (deterministisks, lokāls vērtētājs, HTTP, WASM) patērētu
   notikumus/trasējumus un atgrieztu `QualityScore`, kas nonāktu tajā pašā
   `getQualityScore`/kvalitātes faktora ceļā.
-- Esošā, uz novērtējumiem balstītā maršrutēšana (`open-sse/services/evalRouting.ts`) jau
-  maina kombināciju mērķu secību pēc `eval_runs` sekmīgo izpildžu īpatsvara, ja tā ir iespējota.
 
 Pieprasījuma ceļā sinhroni netiek izpildīta neviena novērtēšana, un vārteja darbojas
 pilnvērtīgi arī bez vērtētāja.

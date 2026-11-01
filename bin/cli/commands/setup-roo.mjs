@@ -115,7 +115,7 @@ export async function runSetupRooCommand(opts = {}) {
     opts["vscode-settings"] ??
     join(os.homedir(), ".config", "Code", "User", "settings.json");
 
-  printHeading("OmniRoute → Roo Code (OpenAI-compatible)");
+  printHeading("67router → Roo Code (OpenAI-compatible)");
   printInfo(`Server: ${baseUrl}`);
 
   let model = opts.model;
@@ -186,11 +186,11 @@ export function registerSetupRoo(program) {
   program
     .command("setup-roo")
     .description(
-      "Configure Roo Code for OmniRoute: write a Roo import JSON + autoImport pointer + print UI steps"
+      "Configure Roo Code for 67router: write a Roo import JSON + autoImport pointer + print UI steps"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key (defaults to OMNIROUTE_API_KEY env var)")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key (defaults to OMNIROUTE_API_KEY env var)")
     .option("--model <id>", "Model id for Roo (required unless picked interactively)")
     .option(
       "--import-path <path>",

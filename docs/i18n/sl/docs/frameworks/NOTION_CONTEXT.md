@@ -11,12 +11,12 @@
 
 ## Kaj je to
 
-OmniRoute se lahko poveže z delovnim prostorom **Notion** kot **virom konteksta** — zbirko
+67router se lahko poveže z delovnim prostorom **Notion** kot **virom konteksta** — zbirko
 znanja za branje in pisanje, do katere agenti dostopajo prek vgrajenega strežnika MCP.
 Ko je integracijski žeton za Notion konfiguriran, lahko LLM z orodji MCP išče po straneh
 in podatkovnih zbirkah, bere vsebino strani in drevesa blokov, poizveduje po podatkovnih
 zbirkah s filtri/razvrščanjem ter dodaja nove bloke — vse prek posredniškega strežnika
-OmniRoute (s ponovnimi poskusi, časovno omejitvijo in razvrščanjem napak), tako da model
+67router (s ponovnimi poskusi, časovno omejitvijo in razvrščanjem napak), tako da model
 nikoli ne dostopa neposredno do API-ja Notion.
 
 Integracija je tanek, utrjen ovoj okoli uradnega API-ja REST za Notion
@@ -42,7 +42,7 @@ nadzorni plošči končne točke (sorodna komponenta `NotionSourceCard` komponen
 > [!NOTE]
 > Žeton je **žeton interne integracije Notion**. Ustvarite integracijo na
 > <https://www.notion.com/my-integrations>, nato pa s to integracijo delite strani/podatkovne
-> zbirke, do katerih želite OmniRoute omogočiti dostop (Notionov model dovoljenj temelji
+> zbirke, do katerih želite 67router omogočiti dostop (Notionov model dovoljenj temelji
 > na deljenju in ne velja za celoten delovni prostor).
 
 ### Konfiguracija prek REST
@@ -61,7 +61,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Vsi trije načini zahtevajo preverjanje pristnosti na nadzorni plošči (`isAuthenticated`).
-Pri `POST` OmniRoute shrani žeton in takoj izvede preizkusno iskanje z enim rezultatom;
+Pri `POST` 67router shrani žeton in takoj izvede preizkusno iskanje z enim rezultatom;
 če Notion vrne objekt napake, se žeton izbriše, klic pa ne uspe s kodo `400`.
 
 ## Orodja MCP (6)

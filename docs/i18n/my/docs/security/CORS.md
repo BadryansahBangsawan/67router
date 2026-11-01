@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute သည် ဗဟိုချုပ်ကိုင်ထားသော allowlist တစ်ခုတည်းမှတစ်ဆင့် မည်သည့် **browser origins** များက cross-origin response များကို ဖတ်ရှုနိုင်သည်ကို ထိန်းချုပ်ပါသည်။ ဤ model သည် **မူလအားဖြင့် fail-closed** ဖြစ်သည်။ origin တစ်ခုကို သင်ကိုယ်တိုင် ခွင့်ပြုစာရင်းထဲ ထည့်မထားမချင်း မည်သည့် origin ကိုမျှ ခွင့်မပြုပါ။ ဤစာမျက်နှာတွင် allowlist ကို ဖြေရှင်းဆုံးဖြတ်ပုံ၊ `CORS_ALLOW_ALL=true` က အမှန်တကယ် ဖော်ထုတ်ပေးသည့်အရာများ (အရေးကြီးသည်မှာ **မဖော်ထုတ်ပေးသည့်** အရာများ)၊ development နှင့် production ပတ်ဝန်းကျင်များအတွက် ဘေးကင်းစွာ စီစဉ်သတ်မှတ်ပုံနှင့် wildcard အသက်ဝင်နေချိန်တွင် dashboard က ပြသသည့် runtime သတိပေးချက်တို့ကို မှတ်တမ်းတင်ထားပါသည်။
+67router သည် ဗဟိုချုပ်ကိုင်ထားသော allowlist တစ်ခုတည်းမှတစ်ဆင့် မည်သည့် **browser origins** များက cross-origin response များကို ဖတ်ရှုနိုင်သည်ကို ထိန်းချုပ်ပါသည်။ ဤ model သည် **မူလအားဖြင့် fail-closed** ဖြစ်သည်။ origin တစ်ခုကို သင်ကိုယ်တိုင် ခွင့်ပြုစာရင်းထဲ ထည့်မထားမချင်း မည်သည့် origin ကိုမျှ ခွင့်မပြုပါ။ ဤစာမျက်နှာတွင် allowlist ကို ဖြေရှင်းဆုံးဖြတ်ပုံ၊ `CORS_ALLOW_ALL=true` က အမှန်တကယ် ဖော်ထုတ်ပေးသည့်အရာများ (အရေးကြီးသည်မှာ **မဖော်ထုတ်ပေးသည့်** အရာများ)၊ development နှင့် production ပတ်ဝန်းကျင်များအတွက် ဘေးကင်းစွာ စီစဉ်သတ်မှတ်ပုံနှင့် wildcard အသက်ဝင်နေချိန်တွင် dashboard က ပြသသည့် runtime သတိပေးချက်တို့ကို မှတ်တမ်းတင်ထားပါသည်။
 
 **အဓိကအကိုးအကား:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
 `applyCorsHeaders`, `getCorsStatus`)။ allowlist ကို middleware
@@ -40,13 +40,13 @@ Request တစ်ခုစီအတွက် middleware သည် `Access-Contro
 ## ခြိမ်းခြောက်မှု model — `CORS_ALLOW_ALL=true` က အမှန်တကယ် ဖော်ထုတ်ပေးသည့်အရာ
 
 OWASP ၏ ယေဘုယျသတိပေးချက် ("wildcard CORS = မည်သည့် site မဆို သင့် API ကို ခေါ်ဆိုနိုင်သည်") ကို
-အလေးအနက်ထားသင့်သော်လည်း OmniRoute ၏ ဖော်ထုတ်မှုသည် **ယေဘုယျအခြေအနေထက် ပိုမိုကျဉ်းမြောင်းသည်**။
+အလေးအနက်ထားသင့်သော်လည်း 67router ၏ ဖော်ထုတ်မှုသည် **ယေဘုယျအခြေအနေထက် ပိုမိုကျဉ်းမြောင်းသည်**။
 အကြောင်းမှာ တိကျသော implementation အချက်တစ်ခုကြောင့် ဖြစ်သည်။
 
 > **ဗဟို `applyCorsHeaders()` သည်
 > `Access-Control-Allow-Credentials` ကို မည်သည့်အခါမျှ မထုတ်ပေးပါ။** Server က
 > `Access-Control-Allow-Credentials: true` ကို ပေးပို့ခြင်းမရှိပါက browser သည် _credentialed_
-> (cookie ပါဝင်သော) cross-origin response ကို ဖတ်ရှုခွင့်ပြုမည် မဟုတ်ပါ။ OmniRoute ၏ မျှဝေထားသော CORS path သည်
+> (cookie ပါဝင်သော) cross-origin response ကို ဖတ်ရှုခွင့်ပြုမည် မဟုတ်ပါ။ 67router ၏ မျှဝေထားသော CORS path သည်
 > ယင်းသို့ မည်သည့်အခါမျှ မလုပ်ဆောင်ပါ။
 
 `CORS_ALLOW_ALL=true` ဖြစ်နေသည့်တိုင် မျက်နှာပြင်တစ်ခုချင်းစီအတွက် အဓိပ္ပာယ်မှာ အောက်ပါအတိုင်းဖြစ်သည်။
@@ -63,19 +63,6 @@ management route များတွင် CORS **preflight ကို ဖြတ�
 cross-origin စာမျက်နှာတစ်ခုက မပေးနိုင်သည့် auth ကို လိုအပ်နေဆဲဖြစ်သည်။ မျှဝေထားသော CORS path တွင် ၎င်းသည် session hijack သို့မဟုတ်
 credential ခိုးယူနိုင်သည့် လမ်းကြောင်း **မဟုတ်ပါ**။
 
-### အမှန်တကယ်ရှိသော ခြွင်းချက်တစ်ခု — `/api/v1/agents/`
-
-Cloud-Agent route များ (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) သည်
-၎င်းတို့၏ **ကိုယ်ပိုင်** CORS header များကို သတ်မှတ်ပြီး
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`)
-`Access-Control-Allow-Origin: <origin>|*` နှင့်အတူ
-`Access-Control-Allow-Credentials: true` ကိုလည်း **ထုတ်ပေးပါသည်**။ ဤနေရာသည် origin ပြန်လည်ဖော်ပြမှုနှင့် credential များ အတူတကွ ရှိနေသည့် တစ်ခုတည်းသော မျက်နှာပြင်ဖြစ်ပြီး
-`CORS_ALLOW_ALL` နှင့် **မသက်ဆိုင်ဘဲ သီးခြားဖြစ်သည်**။ ဤ route များကို management auth ဖြင့် အတည်ပြုထားပါသည်
-(`requireManagementAuth`)။ Dashboard ကို host ပြင်ပမှ ဝင်ရောက်နိုင်အောင် ဖွင့်ထားသည့် operator များအနေဖြင့်
-response header များက cross-origin credentialed ဖတ်ရှုမှုကို ခွင့်ပြုထားသည့် တစ်ခုတည်းသောနေရာမှာ ဤနေရာဖြစ်ကြောင်း
-သတိပြုသင့်ပါသည်။ ၎င်းကို တိကျသော allowlist တစ်ခုသို့ ကန့်သတ်တင်းကျပ်ရန်ကိစ္စကို
-ဤ CORS လမ်းညွှန်ချက်နှင့် သီးခြားစီ ခြေရာခံဆောင်ရွက်ထားပါသည်။
-
 ## Production စစ်ဆေးရန်စာရင်း
 
 - **Production တွင် `CORS_ALLOW_ALL=true` ကို မည်သည့်အခါမျှ မသတ်မှတ်ပါနှင့်။** မသတ်မှတ်ဘဲထားပါ။
@@ -85,7 +72,7 @@ response header များက cross-origin credentialed ဖတ်ရှုမ�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute ကို reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- 67router ကို reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) ၏နောက်ကွယ်တွင် လုပ်ဆောင်ထားပါက CORS သည် သင်၏တစ်ခုတည်းသော
   ထိန်းချုပ်မှု **မဟုတ်ပါ** — loopback route guard သည် spawn လုပ်နိုင်သော route များကို
   ဆက်လက်ကာကွယ်ထားသည်
@@ -104,7 +91,7 @@ Dev တွင်ပင် wildcard ကို အသုံးပြုရန် �
 များကိုသာ ခွင့်ပြုပါ-
 
 ```bash
-# Local OmniRoute ကို ခေါ်သည့် Vite (5173) + Next.js (3000) dev server များ
+# Local 67router ကို ခေါ်သည့် Vite (5173) + Next.js (3000) dev server များ
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +114,14 @@ Origin များကို စာလုံးအကြီးအသေးမခ
   တစ်ခုခုထဲ မထည့်ပါနှင့်။ ၎င်းတို့သည် fail-closed အတိုင်း တိတိကျကျ
   ဆက်ရှိနေရမည်။
 
-## ဥပမာ: OmniRoute ၏ ရှေ့တွင် reverse proxy ထားခြင်း
+## ဥပမာ: 67router ၏ ရှေ့တွင် reverse proxy ထားခြင်း
 
-CORS ကို OmniRoute ကိုယ်တိုင်က ပြဋ္ဌာန်းထားသောကြောင့် proxy သည် ပုံမှန်အားဖြင့် `Access-Control-*` header များကို **မထည့်သင့်** သို့မဟုတ်
+CORS ကို 67router ကိုယ်တိုင်က ပြဋ္ဌာန်းထားသောကြောင့် proxy သည် ပုံမှန်အားဖြင့် `Access-Control-*` header များကို **မထည့်သင့်** သို့မဟုတ်
 ပြန်လည်မရေးသင့်ပါ (header နှစ်ထပ်ဖြစ်ခြင်းက browser များကို အလုပ်မလုပ်စေပါ)။ TLS ကို အဆုံးသတ်ပြီး
-ရှေ့ဆက်ပို့ပါ — preflight ကို OmniRoute က တုံ့ပြန်ပါစေ-
+ရှေ့ဆက်ပို့ပါ — preflight ကို 67router က တုံ့ပြန်ပါစေ-
 
 ```nginx
-# nginx — OmniRoute သို့ ရှေ့ဆက်ပို့ပါ၊ ဤနေရာတွင် Access-Control-* ကို မထည့်သွင်းပါနှင့်
+# nginx — 67router သို့ ရှေ့ဆက်ပို့ပါ၊ ဤနေရာတွင် Access-Control-* ကို မထည့်သွင်းပါနှင့်
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +129,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # forwarding header များကို ဆက်လက်ထားရှိပါ- host တစ်ခုတည်းပေါ်ရှိ proxy သည် loopback မှတစ်ဆင့် ချိတ်ဆက်ပြီး ၎င်းတို့က
-    # ခေါ်ဆိုသူသည် local operator မဟုတ်ကြောင်း OmniRoute ကို အသိပေးပါသည်။ ၎င်းတို့ထဲမှ တစ်ခုမျှ မထည့်သည့် proxy ကြောင့်
+    # ခေါ်ဆိုသူသည် local operator မဟုတ်ကြောင်း 67router ကို အသိပေးပါသည်။ ၎င်းတို့ထဲမှ တစ်ခုမျှ မထည့်သည့် proxy ကြောင့်
     # အဝေးမှ ခေါ်ဆိုသူတိုင်းသည် local ဖြစ်သကဲ့သို့ မြင်ရစေပါသည်။ X-Forwarded-For ကိုလည်း 127.0.0.1 ဟု မည်သည့်အခါမျှ မသတ်မှတ်ပါနှင့်။
 }
 ```
 
-ခွင့်ပြုမည့် browser origin များကို proxy ထဲတွင်မဟုတ်ဘဲ OmniRoute (`CORS_ALLOWED_ORIGINS` သို့မဟုတ်
+ခွင့်ပြုမည့် browser origin များကို proxy ထဲတွင်မဟုတ်ဘဲ 67router (`CORS_ALLOWED_ORIGINS` သို့မဟုတ်
 Security tab) ထဲတွင် သတ်မှတ်ပါ။
 
 ## Source file များ
@@ -160,7 +147,6 @@ Security tab) ထဲတွင် သတ်မှတ်ပါ။
 | Dashboard အတွက် runtime အခြေအနေ                          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Dashboard သတိပေး banner                                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins field                               | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Route တစ်ခုချင်းစီအလိုက် Cloud-Agent CORS (ခြွင်းချက်)   | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ထပ်မံကြည့်ရှုရန်
 

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute jikkontrolla liema **oriġini tal-brawżer** jistgħu jaqraw risposti minn oriġini differenti
+67router jikkontrolla liema **oriġini tal-brawżer** jistgħu jaqraw risposti minn oriġini differenti
 permezz ta’ lista ta’ permessi waħda u ċentralizzata. Il-mudell huwa **magħluq awtomatikament f’każ ta’ falliment**:
 l-ebda oriġini ma tkun permessa sakemm ma tippermettihiex espliċitament. Din il-paġna tiddokumenta kif tiġi riżolta l-lista ta’ permessi,
 x’jesponi fil-fatt `CORS_ALLOW_ALL=true` (u, importanti, x’**ma**
@@ -45,13 +45,13 @@ f’din l-ordni:
 ## Mudell tat-theddid — x’jesponi verament `CORS_ALLOW_ALL=true`
 
 It-twissija ġenerika tal-OWASP ("wildcard CORS = kwalunkwe sit jista’ jċempel l-API tiegħek") jistħoqqilha
-tittieħed bis-serjetà, iżda l-esponiment ta’ OmniRoute huwa **aktar limitat mill-każ ġeneriku**,
+tittieħed bis-serjetà, iżda l-esponiment ta’ 67router huwa **aktar limitat mill-każ ġeneriku**,
 minħabba fatt konkret wieħed tal-implimentazzjoni:
 
 > **Il-`applyCorsHeaders()` ċentrali qatt ma jemetti
 > `Access-Control-Allow-Credentials`.** Brawżer ma jesponix risposta minn oriġini differenti _bi kredenzjali_
 > (li tinkludi cookies) sakemm is-server ma jibgħatx
-> `Access-Control-Allow-Credentials: true`. Il-passaġġ CORS kondiviż ta’ OmniRoute qatt ma
+> `Access-Control-Allow-Credentials: true`. Il-passaġġ CORS kondiviż ta’ 67router qatt ma
 > jagħmel dan.
 
 Dan huwa xi jfisser għal kull superfiċje, anke b’`CORS_ALLOW_ALL=true`:
@@ -68,20 +68,6 @@ li jippermetti li l-**preflight ta’ CORS jgħaddi** fuq ir-rotot tal-ġestjoni
 li paġna minn oriġini differenti ma tistax tipprovdi. Dan **mhuwiex** vettur għall-ħtif ta’ sessjoni jew
 is-serq ta’ kredenzjali fuq il-passaġġ CORS kondiviż.
 
-### Eċċezzjoni waħda reali — `/api/v1/agents/`
-
-Ir-rotot Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) jissettjaw
-il-headers CORS **tagħhom stess**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) u **jemettu**
-`Access-Control-Allow-Origin: <origin>|*` flimkien ma’
-`Access-Control-Allow-Credentials: true`. Din hija l-unika superfiċje fejn
-ir-ritorn tal-oriġini u l-kredenzjali jeżistu flimkien, u hija **indipendenti minn
-`CORS_ALLOW_ALL`**. Dawn ir-rotot huma awtentikati għall-ġestjoni
-(`requireManagementAuth`); l-operaturi li jesponu d-dashboard barra mill-host għandhom ikunu
-konxji li dan huwa l-uniku post fejn qari minn oriġini differenti bi kredenzjali huwa permess mill-
-headers tar-risposta. Ir-restrizzjoni tiegħu għal lista ta’ permessi espliċita qed tiġi segwita
-separatament minn din il-gwida dwar CORS.
-
 ## Lista ta’ kontroll għall-produzzjoni
 
 - **Qatt tissettja `CORS_ALLOW_ALL=true` fil-produzzjoni.** Ħallih mhux issettjat.
@@ -91,7 +77,7 @@ separatament minn din il-gwida dwar CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Jekk OmniRoute jaħdem wara reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Jekk 67router jaħdem wara reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **mhuwiex** l-uniku kontroll tiegħek — il-protezzjoni
   tar-rotot loopback xorta tipproteġi r-rotot li jistgħu jniedu proċessi (ara
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Tiffalsifikax
@@ -107,7 +93,7 @@ separatament minn din il-gwida dwar CORS.
 Rari jkollok bżonn il-wildcard anki fl-iżvilupp. Ippermetti biss is-servers tal-iżvilupp li tuża:
 
 ```bash
-# Servers tal-iżvilupp Vite (5173) + Next.js (3000) li jsejħu OmniRoute lokali
+# Servers tal-iżvilupp Vite (5173) + Next.js (3000) li jsejħu 67router lokali
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +113,14 @@ mingħajr restart.
   l-oriġini tal-ġestjoni/dashboard barra minn kwalunkwe konfigurazzjoni permissiva; dawn għandhom jibqgħu
   strettament magħluqa f’każ ta’ ħsara.
 
-## Eżempju: reverse proxy quddiem OmniRoute
+## Eżempju: reverse proxy quddiem 67router
 
-CORS jiġi infurzat minn OmniRoute stess, għalhekk ġeneralment il-proxy **m’għandux** iżid jew
+CORS jiġi infurzat minn 67router stess, għalhekk ġeneralment il-proxy **m’għandux** iżid jew
 jikteb mill-ġdid l-headers `Access-Control-*` (headers doppji jikkawżaw problemi fil-browsers). Ittermina t-TLS
-u għaddi t-traffiku — ħalli lil OmniRoute jwieġeb għall-preflight:
+u għaddi t-traffiku — ħalli lil 67router jwieġeb għall-preflight:
 
 ```nginx
-# nginx — għaddi t-traffiku lil OmniRoute; IDDAĦĦALX Access-Control-* hawnhekk
+# nginx — għaddi t-traffiku lil 67router; IDDAĦĦALX Access-Control-* hawnhekk
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +128,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Żomm l-headers tat-trażmissjoni: proxy fuq l-istess host jikkonnettja mil-loopback, u huma
-    # dawn li jgħidu lil OmniRoute li min qed jagħmel it-talba mhuwiex l-operatur lokali. Proxy li ma jżid ebda wieħed minnhom
+    # dawn li jgħidu lil 67router li min qed jagħmel it-talba mhuwiex l-operatur lokali. Proxy li ma jżid ebda wieħed minnhom
     # iġiegħel lil kull min jagħmel talba mill-bogħod jidher lokali. Lanqas qatt tissettja X-Forwarded-For għal 127.0.0.1.
 }
 ```
 
-Issettja l-oriġini permessi tal-browser f’OmniRoute (`CORS_ALLOWED_ORIGINS` jew it-tab
+Issettja l-oriġini permessi tal-browser f’67router (`CORS_ALLOWED_ORIGINS` jew it-tab
 Security), mhux fil-proxy.
 
 ## Fajls tas-sors
@@ -160,7 +146,6 @@ Security), mhux fil-proxy.
 | Status waqt it-tħaddim għad-dashboard                | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner ta’ twissija tad-dashboard                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Qasam CORS Allowed Origins                           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS għal kull rotta ta’ Cloud-Agent (l-eċċezzjoni)  | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Ara wkoll
 

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Suomi)
+# Providers Guide: Connect AI Models to 67router (Suomi)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **TL;DR**: Palveluntarjoaja on yhteys tekoälypalveluun (kuten OpenAI, Anthropic tai Google). Tarvitset vähintään yhden palveluntarjoajan käyttääksesi OmniRoutea.
+> **TL;DR**: Palveluntarjoaja on yhteys tekoälypalveluun (kuten OpenAI, Anthropic tai Google). Tarvitset vähintään yhden palveluntarjoajan käyttääksesi 67routeria.
 
 ---
 
 ## Mikä palveluntarjoaja on?
 
-Ajattele palveluntarjoajaa **puhelinoperaattorina**. Aivan kuten tarvitset puhelinoperaattorin puheluiden soittamiseen, tarvitset tekoälypalveluntarjoajan tekoälymallien käyttämiseen. OmniRoute on kuin puhelin, joka toimii **kaikkien operaattoreiden** kanssa — voit vaihtaa niiden välillä automaattisesti.
+Ajattele palveluntarjoajaa **puhelinoperaattorina**. Aivan kuten tarvitset puhelinoperaattorin puheluiden soittamiseen, tarvitset tekoälypalveluntarjoajan tekoälymallien käyttämiseen. 67router on kuin puhelin, joka toimii **kaikkien operaattoreiden** kanssa — voit vaihtaa niiden välillä automaattisesti.
 
 ### Palveluntarjoajien tyypit
 
@@ -31,8 +31,8 @@ Katso yleiset määritysohjeet, rajoitukset, vianmääritysohjeet ja palveluntar
 ### Valinnainen maksuttoman palveluntarjoajan määritys ensimmäisellä käynnistyskerralla
 
 Ensimmäisen käynnistyskerran ohjattu toiminto sisältää erillisen **Määritä maksuttomat palveluntarjoajat** -kortin. Se muodostaa nykyisen
-kelvollisten palveluntarjoajien luettelon OmniRouten tunnistautumista vaatimattomien palveluntarjoajien rekisteristä ja antaa sitten tarkistaa palveluntarjoajat sekä poistaa niiden valintoja
-ennen vahvistamista. OmniRoute näyttää palveluntarjoajan varoituksen ja linkin sen sivustolle,
+kelvollisten palveluntarjoajien luettelon 67routerin tunnistautumista vaatimattomien palveluntarjoajien rekisteristä ja antaa sitten tarkistaa palveluntarjoajat sekä poistaa niiden valintoja
+ennen vahvistamista. 67router näyttää palveluntarjoajan varoituksen ja linkin sen sivustolle,
 jotta voit ensin tarkistaa kolmannen osapuolen ehdot, tietosuojan, saatavuuden ja käyttörajoitukset.
 
 Tämä toiminto on valinnainen: ohjatun toiminnon viimeistely ei koskaan luo maksuttomien palveluntarjoajien yhteyksiä huomaamatta.
@@ -80,7 +80,7 @@ turvallisesti yrittää uudelleen vain epäonnistuneita.
 
 ### Vaihtoehto D: Paikalliset MLX-mallit (Apple Silicon)
 
-OmniRoute tukee yhtenäisellä muistilla varustetuissa Apple Silicon -Mac-tietokoneissa `mlx-lm.server`-palvelun kautta toimivien paikallisten MLX-mallien yhdistämistä tavallisina OpenAI-yhteensopivina paikallisina palveluntarjoajina.
+67router tukee yhtenäisellä muistilla varustetuissa Apple Silicon -Mac-tietokoneissa `mlx-lm.server`-palvelun kautta toimivien paikallisten MLX-mallien yhdistämistä tavallisina OpenAI-yhteensopivina paikallisina palveluntarjoajina.
 
 #### Esivaatimukset
 
@@ -110,14 +110,14 @@ OmniRoute tukee yhtenäisellä muistilla varustetuissa Apple Silicon -Mac-tietok
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Yhdistä OmniRoute-hallintapaneelissa**:
+3. **Yhdistä 67router-hallintapaneelissa**:
    - Siirry kohtaan **Palveluntarjoajat** → **Lisää palveluntarjoaja**
    - Valitse **MLX Gemma 26B** tai **MLX Qwen 3.8 27B**
    - Napsauta **Yhdistä** (API-avainta ei tarvita)
 
 4. **Käytä OpenCoden kanssa**:
    ```bash
-   # Määritä OpenCode käyttämään OmniRoutea
+   # Määritä OpenCode käyttämään 67routeria
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Tätä on hallittava manuaalisesti:
 - Käytä molempia eri koneilla tai
 - Pysäytä toinen ennen toisen käynnistämistä
 
-OmniRoute ei hallitse MLX-palvelinprosesseja automaattisesti — se vain reitittää pyynnöt määrittämiisi OpenAI-yhteensopiviin päätepisteisiin.
+67router ei hallitse MLX-palvelinprosesseja automaattisesti — se vain reitittää pyynnöt määrittämiisi OpenAI-yhteensopiviin päätepisteisiin.
 
 #### Työkalukutsujen tuki
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Muisti loppuu            | Varmista, että vain yksi malli on käynnissä; sulje muut sovellukset; tarkista Järjestelmän valvonta |
 | Yhteys evättiin          | Varmista, että palvelin toimii oikeassa portissa (11435/11436)                                      |
 | Hitaat vastaukset        | Ensimmäinen pyyntö lataa mallin muistiin (~30–60 s); myöhemmät pyynnöt ovat nopeita                 |
-| Työkalukutsu epäonnistuu | Varmista, että malli tukee työkaluja; tarkista käännösvirheet OmniRouten lokeista                   |
+| Työkalukutsu epäonnistuu | Varmista, että malli tukee työkaluja; tarkista käännösvirheet 67routerin lokeista                   |
 
 ---
 
@@ -236,12 +236,12 @@ Palveluntarjoajasi on nyt yhdistetty. Voit käyttää sitä asetuksella `model: 
 
 ## Useiden palveluntarjoajien käyttäminen
 
-OmniRoute toimii parhaiten **useiden palveluntarjoajien** kanssa. Tämä tarjoaa seuraavat edut:
+67router toimii parhaiten **useiden palveluntarjoajien** kanssa. Tämä tarjoaa seuraavat edut:
 
-- **Automaattinen varajärjestely** — Jos yksi palveluntarjoaja epäonnistuu, OmniRoute yrittää seuraavaa
-- **Kustannusten optimointi** — OmniRoute valitsee kuhunkin pyyntöön edullisimman palveluntarjoajan
-- **Nopeuden optimointi** — OmniRoute valitsee kuhunkin pyyntöön nopeimman palveluntarjoajan
-- **Laadun optimointi** — OmniRoute valitsee kuhunkin tehtävään parhaan palveluntarjoajan
+- **Automaattinen varajärjestely** — Jos yksi palveluntarjoaja epäonnistuu, 67router yrittää seuraavaa
+- **Kustannusten optimointi** — 67router valitsee kuhunkin pyyntöön edullisimman palveluntarjoajan
+- **Nopeuden optimointi** — 67router valitsee kuhunkin pyyntöön nopeimman palveluntarjoajan
+- **Laadun optimointi** — 67router valitsee kuhunkin tehtävään parhaan palveluntarjoajan
 
 ### Suositeltu määritys
 
@@ -251,7 +251,7 @@ Parhaan käyttökokemuksen saat yhdistämällä vähintään **3 palveluntarjoaj
 2. **Yksi nopea palveluntarjoaja** (Groq, Cerebras) — Nopeita vastauksia varten
 3. **Yksi laadukas palveluntarjoaja** (OpenAI, Anthropic, Google) — Monimutkaisia tehtäviä varten
 
-Käytä sitten asetusta `model: "auto"`, jolloin OmniRoute valitsee automaattisesti parhaan palveluntarjoajan kuhunkin pyyntöön.
+Käytä sitten asetusta `model: "auto"`, jolloin 67router valitsee automaattisesti parhaan palveluntarjoajan kuhunkin pyyntöön.
 
 ---
 
@@ -260,25 +260,25 @@ Käytä sitten asetusta `model: "auto"`, jolloin OmniRoute valitsee automaattise
 ### OpenAI
 
 1. Hanki API-avain: https://platform.openai.com/api-keys
-2. OmniRoutessa: Palveluntarjoajat → Lisää palveluntarjoaja → OpenAI
+2. 67routerissa: Palveluntarjoajat → Lisää palveluntarjoaja → OpenAI
 3. Liitä API-avain → Yhdistä
 
 ### Anthropic
 
 1. Hanki API-avain: https://console.anthropic.com/
-2. OmniRoutessa: Palveluntarjoajat → Lisää palveluntarjoaja → Anthropic
+2. 67routerissa: Palveluntarjoajat → Lisää palveluntarjoaja → Anthropic
 3. Liitä API-avain → Yhdistä
 
 ### Google (Gemini)
 
 1. Hanki API-avain: https://aistudio.google.com/apikey
-2. OmniRoutessa: Palveluntarjoajat → Lisää palveluntarjoaja → Gemini
+2. 67routerissa: Palveluntarjoajat → Lisää palveluntarjoaja → Gemini
 3. Liitä API-avain → Yhdistä
 
 ### DeepSeek
 
 1. Hanki API-avain: https://platform.deepseek.com/
-2. OmniRoutessa: Palveluntarjoajat → Lisää palveluntarjoaja → DeepSeek
+2. 67routerissa: Palveluntarjoajat → Lisää palveluntarjoaja → DeepSeek
 3. Liitä API-avain → Yhdistä
 
 ### Qoder: valitse tunnistetietojen siirtotapa
@@ -286,12 +286,12 @@ Käytä sitten asetusta `model: "auto"`, jolloin OmniRoute valitsee automaattise
 Qoder edellyttää tunnistetietoja. Sen kahdella siirtotavalla on erilaiset ominaisuudet; pelkkä mallin nimi
 ei kerro, mitä tietty yhteys pystyy tekemään.
 
-| Tunnistetieto                                 | OmniRouten siirtotapa                               | Kutsujan työkalukutsut                                                 | Suoratoisto                                                         |
-| --------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| Merkkijonolla `pt-` alkava PAT                | Paikallinen `qodercli`-prosessi OmniRoute-isännässä | Ei tuettu                                                              | Puskuroitu: SSE lähetetään vasta, kun CLI palauttaa koko vastauksen |
-| Muu kuin PAT-käyttöoikeustunnus tai API-avain | DashScopen OpenAI-yhteensopiva HTTP-päätepiste      | Välitetään sellaisenaan; riippuu taustalla olevasta mallista/avaimesta | Taustapalvelun HTTP/SSE-polku                                       |
+| Tunnistetieto                                 | 67routerin siirtotapa                              | Kutsujan työkalukutsut                                                 | Suoratoisto                                                         |
+| --------------------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| Merkkijonolla `pt-` alkava PAT                | Paikallinen `qodercli`-prosessi 67router-isännässä | Ei tuettu                                                              | Puskuroitu: SSE lähetetään vasta, kun CLI palauttaa koko vastauksen |
+| Muu kuin PAT-käyttöoikeustunnus tai API-avain | DashScopen OpenAI-yhteensopiva HTTP-päätepiste     | Välitetään sellaisenaan; riippuu taustalla olevasta mallista/avaimesta | Taustapalvelun HTTP/SSE-polku                                       |
 
-Asenna PAT-tunnusta varten Qoder CLI samalle isännälle tai samaan konttiin kuin OmniRoute. Suoritettavan tiedoston
+Asenna PAT-tunnusta varten Qoder CLI samalle isännälle tai samaan konttiin kuin 67router. Suoritettavan tiedoston
 on löydyttävä nimellä `qodercli`, tai määritä `CLI_QODER_BIN` osoittamaan sen suoritettavan tiedoston polkuun. Vain
 Docker-isäntään asennettu CLI ei ole automaattisesti käytettävissä kontissa. Puuttuvat
 suoritettavat tiedostot tuottavat selkeän virheen, joka ohjaa asennukseen tai polkuasetukseen.
@@ -324,16 +324,16 @@ ja määritettävä aikakatkaisu ovat erillisiä parannuksia; tämä toiminta ei
 ### Groq
 
 1. Hanki API-avain: https://console.groq.com/
-2. OmniRoutessa: Palveluntarjoajat → Lisää palveluntarjoaja → Groq
+2. 67routerissa: Palveluntarjoajat → Lisää palveluntarjoaja → Groq
 3. Liitä API-avain → Yhdistä
 
 ---
 
 ## Yleisiä kysymyksiä
 
-### "Pitääkö OmniRouten käytöstä maksaa?"
+### "Pitääkö 67routerin käytöstä maksaa?"
 
-**Ei!** OmniRoute on ilmainen ja avoimen lähdekoodin ohjelmisto. Voit käyttää ilmaisia palveluntarjoajia (Kiro, Pollinations) maksamatta mitään. Maksat vain, jos päätät käyttää maksullisia palveluntarjoajia.
+**Ei!** 67router on ilmainen ja avoimen lähdekoodin ohjelmisto. Voit käyttää ilmaisia palveluntarjoajia (Kiro, Pollinations) maksamatta mitään. Maksat vain, jos päätät käyttää maksullisia palveluntarjoajia.
 
 ### "Mistä palveluntarjoajasta minun kannattaa aloittaa?"
 
@@ -341,11 +341,11 @@ Aloita **Kiro AI:sta** — se on ilmainen, ei vaadi API-avainta ja tarjoaa käyt
 
 ### "Voinko käyttää useita palveluntarjoajia samanaikaisesti?"
 
-**Kyllä!** Juuri sitä varten OmniRoute on tehty. Yhdistä useita palveluntarjoajia ja käytä asetusta `model: "auto"`, jotta OmniRoute valitsee kuhunkin pyyntöön parhaan vaihtoehdon.
+**Kyllä!** Juuri sitä varten 67router on tehty. Yhdistä useita palveluntarjoajia ja käytä asetusta `model: "auto"`, jotta 67router valitsee kuhunkin pyyntöön parhaan vaihtoehdon.
 
 ### "Entä jos palveluntarjoajan palvelu lakkaa toimimasta?"
 
-OmniRoute ohittaa epäonnistuneet palveluntarjoajat automaattisesti ja kokeilee seuraavaa. Sinun ei tarvitse tehdä mitään.
+67router ohittaa epäonnistuneet palveluntarjoajat automaattisesti ja kokeilee seuraavaa. Sinun ei tarvitse tehdä mitään.
 
 ### "Miten katkaisen yhteyden palveluntarjoajaan?"
 
@@ -353,17 +353,13 @@ Siirry kohtaan Providers → napsauta palveluntarjoajaa → napsauta **Disconnec
 
 ### "Voinko käyttää nykyisiä API-avaimiani?"
 
-**Kyllä!** Jos sinulla on jo API-avaimia OpenAI:lle, Anthropicille, Googlelle tai muille palveluntarjoajille, voit käyttää niitä OmniRoutessa. Liitä ne vain yhdistäessäsi palveluntarjoajan.
+**Kyllä!** Jos sinulla on jo API-avaimia OpenAI:lle, Anthropicille, Googlelle tai muille palveluntarjoajille, voit käyttää niitä 67routerissa. Liitä ne vain yhdistäessäsi palveluntarjoajan.
 
 ---
 
 ## Mitä seuraavaksi?
 
-- **[Automaattisten yhdistelmien opas](./AUTO-COMBO-GUIDE.md)** — Anna OmniRouten valita sinulle paras tekoäly
+- **[Automaattisten yhdistelmien opas](./AUTO-COMBO-GUIDE.md)** — Anna 67routerin valita sinulle paras tekoäly
 - **[Ilmaistasojen opas](./FREE-TIERS-GUIDE.md)** — Käytä tekoälyä ilmaiseksi ilman luottokorttia
 - **[Vianmääritys](../guides/TROUBLESHOOTING.md)** — Korjaa yleisiä ongelmia
 - **[Palveluntarjoajien viiteopas](../reference/PROVIDER_REFERENCE.md)** — Kaikkien 226 palveluntarjoajan luettelo
-
-## Cursor-kuvat
-
-Cursor-pakettien kuvat käyttävät määritystä `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Katso [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

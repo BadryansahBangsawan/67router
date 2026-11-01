@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY transparent dekryptering är OmniRoutes **femte insamlingsläge** för
+TPROXY transparent dekryptering är 67routers **femte insamlingsläge** för
 MITM-stacken i [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Det fångar upp och **dekrypterar** lokal utgående HTTPS-trafik i Linux
 med hjälp av TPROXY i kärnan samt policybaserad routning — **utan** att förfalska `/etc/hosts` och
@@ -53,7 +53,7 @@ Använd det när du vill samla in och dekryptera trafik från en process som:
 - du inte vill störa genom en systemomfattande proxyändring.
 
 Eftersom uppfångningen sker i kärnan behöver ursprungsprocessen **ingen
-konfigurationsändring** — men processen måste lita på den dynamiska CA som OmniRoute
+konfigurationsändring** — men processen måste lita på den dynamiska CA som 67router
 installerar (se [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ tillägget inte byggt) returnerar tilläggsinläsaren (`src/mitm/tproxy/transpar
 `null` i stället för att kasta ett undantag. Statusen för infångningsläget rapporterar då
 `available: false`, växlingsknappen på instrumentpanelen är **inaktiverad** med verktygstipset
 "TPROXY-dekryptering kräver Linux + root + det interna tillägget", och resten av
-OmniRoute fortsätter att fungera.
+67router fortsätter att fungera.
 
 ---
 
@@ -265,7 +265,7 @@ Vidarebefordringsvägen skyddar mot detta med en bypass-markering på socketen
 | **Felsanering**                        | Ruttens felsvar bearbetas av `sanitizeErrorMessage()` (hård regel nr 12).                                                                                                                                                                                                                                                                                                                                    |
 
 **MITM-certifikatutfärdaren är en kraftfull funktion.** En certifikatutfärdare som operativsystemet litar på och som kan signera valfri
-värd innebär att allt som OmniRoute fångar upp kan dekrypteras. Funktionen skyddas bakom det
+värd innebär att allt som 67router fångar upp kan dekrypteras. Funktionen skyddas bakom det
 uttryckliga, lokala TPROXY-insamlingsläget, är inaktiverad som standard och posten i betroddhetsarkivet
 tas bort när du stoppar läget.
 
@@ -375,7 +375,7 @@ returnerar `available: false` när tillägget saknas.
 ### Kvarvarande brandväggsregler efter en krasch
 
 `revertTproxy()` är den exakta inversen till tillämpningen och är idempotent. När läget stoppas
-återställs reglerna; om OmniRoute avslutades mitt under en session använder du AgentBridges
+återställs reglerna; om 67router avslutades mitt under en session använder du AgentBridges
 åtgärd **Repair** (`POST /api/tools/agent-bridge/repair`) för att återställa överblivet systemtillstånd
 (DNS-förfalskning, rotcertifikatutfärdare, systemproxy). TPROXY-reglerna i `mangle` och rutten
 rensas också automatiskt vid omstart.

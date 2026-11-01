@@ -25,7 +25,7 @@ A na-amafere ahịrị mbụ ma ọ bụrụ na kọlụm mbụ ya bụ kpọmkw
 Budata faịlụ mmalite site na modal mbubata (**Budata ndebiri CSV**). Ọmụmaatụ:
 
 ```csv
-# Mbubata provider OmniRoute (kọlụm ndị dabere n’ọnọdụ)
+# Mbubata provider 67router (kọlụm ndị dabere n’ọnọdụ)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

@@ -14,7 +14,7 @@ Două profiluri Compose opționale (`memory`, `bifrost`) pentru implementarea ex
 
 ## De ce această abordare este prudentă
 
-Arhitectura existentă a implementării OmniRoute este deja simplă și validată:
+Arhitectura existentă a implementării 67router este deja simplă și validată:
 
 - **`redis:7-alpine`** gestionează volumul de lucru pentru limitarea ratei/cache la scară de producție.
 - **SQLite + sqlite-vec + FTS5** acoperă memoria locală + vectorii + căutarea în text (consultați [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Cele două profiluri de aici sunt **opțiuni de scalare pentru implementările c
 
 - Rulați ≥3 replici `omniroute` și doriți ca rotația furnizorilor să fie centralizată într-un singur proces Go.
 - Doriți un singur punct pentru auditarea/jurnalizarea solicitărilor către furnizorii upstream, pentru toate replicile.
-- Doriți scalarea orizontală a nivelului de rutare Tier-1 independent de replicile OmniRoute.
+- Doriți scalarea orizontală a nivelului de rutare Tier-1 independent de replicile 67router.
 
 **Ce adaugă:**
 

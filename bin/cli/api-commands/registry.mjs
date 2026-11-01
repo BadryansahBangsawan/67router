@@ -1,14 +1,8 @@
 // AUTO-GENERATED. Do not edit.
-import { register_playground } from "./playground.mjs";
-import { register_memory } from "./memory.mjs";
 import { register_chat } from "./chat.mjs";
 import { register_messages } from "./messages.mjs";
 import { register_responses } from "./responses.mjs";
-import { register_embeddings } from "./embeddings.mjs";
-import { register_images } from "./images.mjs";
 import { register_audio } from "./audio.mjs";
-import { register_moderations } from "./moderations.mjs";
-import { register_rerank } from "./rerank.mjs";
 import { register_system } from "./system.mjs";
 import { register_models } from "./models.mjs";
 import { register_providers } from "./providers.mjs";
@@ -26,12 +20,36 @@ import { register_oauth } from "./oauth.mjs";
 import { register_cloud } from "./cloud.mjs";
 import { register_fallback } from "./fallback.mjs";
 import { register_telemetry } from "./telemetry.mjs";
-import { register_quota } from "./quota.mjs";
 import { register_agentbridge } from "./agentbridge.mjs";
 import { register_traffic_inspector } from "./traffic-inspector.mjs";
 import { register_agent_skills } from "./agent-skills.mjs";
 
-export const API_TAGS = ["playground","memory","chat","messages","responses","embeddings","images","audio","moderations","rerank","system","models","providers","provider-nodes","api-keys","combos","settings","compression","usage","pricing","translator","cli-tools","embedded-services","oauth","cloud","fallback","telemetry","quota","agentbridge","traffic-inspector","agent-skills"];
+export const API_TAGS = [
+  "chat",
+  "messages",
+  "responses",
+  "audio",
+  "system",
+  "models",
+  "providers",
+  "provider-nodes",
+  "api-keys",
+  "combos",
+  "settings",
+  "compression",
+  "usage",
+  "pricing",
+  "translator",
+  "cli-tools",
+  "embedded-services",
+  "oauth",
+  "cloud",
+  "fallback",
+  "telemetry",
+  "agentbridge",
+  "traffic-inspector",
+  "agent-skills",
+];
 
 export function registerApiCommands(program) {
   const api = program
@@ -40,17 +58,13 @@ export function registerApiCommands(program) {
   api
     .command("tags")
     .description("List available API tag groups")
-    .action(() => { API_TAGS.forEach((t) => console.log(t)); });
-  register_playground(api);
-  register_memory(api);
+    .action(() => {
+      API_TAGS.forEach((t) => console.log(t));
+    });
   register_chat(api);
   register_messages(api);
   register_responses(api);
-  register_embeddings(api);
-  register_images(api);
   register_audio(api);
-  register_moderations(api);
-  register_rerank(api);
   register_system(api);
   register_models(api);
   register_providers(api);
@@ -68,7 +82,6 @@ export function registerApiCommands(program) {
   register_cloud(api);
   register_fallback(api);
   register_telemetry(api);
-  register_quota(api);
   register_agentbridge(api);
   register_traffic_inspector(api);
   register_agent_skills(api);

@@ -1,6 +1,7 @@
-// #6457: /v1/chat/completions must reject image-only models with a clear 400 pointing
-// callers at /v1/images/generations, instead of forwarding to a chat upstream that
-// returns a confusing raw provider 400 (HuggingFace: "not a chat model").
+// #6457: /v1/chat/completions must reject image-only models with a clear 400 instead of
+// forwarding to a chat upstream that returns a confusing raw provider 400 (HuggingFace:
+// "not a chat model"). 67router removed the image endpoints, so the message must not
+// point callers at any /v1/images route.
 //
 // Discriminator: getImageModelEntry(modelStr) — non-null only for models registered
 // in open-sse/config/imageRegistry.ts. Chat-only models (openai/gpt-4o etc.) return
@@ -28,7 +29,7 @@ test.after(() => {
   harness.cleanup?.();
 });
 
-test("POST /v1/chat/completions with a HuggingFace image model returns 400 + generations hint (#6457)", async () => {
+test("POST /v1/chat/completions with a HuggingFace image model returns 400 without naming a removed endpoint (#6457)", async () => {
   const request = buildRequest({
     body: {
       model: "huggingface/stabilityai/stable-diffusion-xl-base-1.0",
@@ -49,7 +50,8 @@ test("POST /v1/chat/completions with a HuggingFace image model returns 400 + gen
     const body = (await res.json()) as { error?: { message?: string } };
     const msg = body?.error?.message || JSON.stringify(body);
     assert.match(msg, /image-generation model/i);
-    assert.match(msg, /\/v1\/images\/generations/);
+    assert.match(msg, /not supported/i);
+    assert.doesNotMatch(msg, /\/v1\/images/, "must not point at the removed image endpoints");
     assert.equal(fetchCalls, 0, "must not dispatch upstream for an image-only model");
   } finally {
     globalThis.fetch = originalFetch;

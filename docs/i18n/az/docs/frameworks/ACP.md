@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI aşkarlanmasını**, **yerli Agent Client Protocol-u** və
+67router **CLI aşkarlanmasını**, **yerli Agent Client Protocol-u** və
 **köhnə stdio adapterlərini** bir-birindən ayırır. Quraşdırılmış icra faylının tapılması onun
 autentifikasiyasını, model uyğunluğunu və ya sorğunu emal etməyə hazır olduğunu sübut etmir.
 
@@ -122,5 +122,3 @@ ayrıca avtorizasiya edilmiş tüstü testi tələb edir.
 - [Agent protokolları](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI işəsalma müqavilələri](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI alətləri](../reference/CLI-TOOLS.md)
-- [A2A serveri](./A2A-SERVER.md)
-- [Bulud agentləri](./CLOUD_AGENT.md)

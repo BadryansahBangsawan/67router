@@ -4,7 +4,7 @@
 
 ---
 
-Kif OmniRoute jistma, jirreġistra, u jirrapporta l-ispiża ta' kull talba — u għaliex in-numru fid-dashboard huwa **traċċatur tal-iffrankar**, mhux kont.
+Kif 67router jistma, jirreġistra, u jirrapporta l-ispiża ta' kull talba — u għaliex in-numru fid-dashboard huwa **traċċatur tal-iffrankar**, mhux kont.
 
 Ara wkoll: [Gwida għall-Utent](./USER_GUIDE.md) · [Gallerija tal-Karatteristiċi](./FEATURES.md)
 
@@ -12,9 +12,9 @@ Ara wkoll: [Gwida għall-Utent](./USER_GUIDE.md) · [Gallerija tal-Karatteristi�
 
 ## X'inhu (u x'mhuwiex)
 
-OmniRoute jattribwixxi spiża f'USD għal kull talba lil kull completion billi jimmultiplika l-għadd ta' tokens bir-rati tal-ipprezzar ta' mudell. Dawn in-numri jħaddmu d-dashboard tal-**Ispejjeż**, il-CLI `omniroute cost` / `omniroute usage`, l-esportazzjonijiet CSV/JSON, u l-baġits għal kull API key.
+67router jattribwixxi spiża f'USD għal kull talba lil kull completion billi jimmultiplika l-għadd ta' tokens bir-rati tal-ipprezzar ta' mudell. Dawn in-numri jħaddmu d-dashboard tal-**Ispejjeż**, il-CLI `omniroute cost` / `omniroute usage`, l-esportazzjonijiet CSV/JSON, u l-baġits għal kull API key.
 
-> **L-"ispiża" fid-dashboard hija traċċatur tal-iffrankar, mhux kont.** OmniRoute qatt ma jiċċarġjak
+> **L-"ispiża" fid-dashboard hija traċċatur tal-iffrankar, mhux kont.** 67router qatt ma jiċċarġjak
 > — huwa jgħaddi t-talbiet tiegħek għand fornituri li diġà kkonnettjajt (l-abbonamenti,
 > il-livelli bla ħlas, u l-API keys tiegħek stess). "$290 spiża totali" akkumulata kollha fuq mudelli
 > bla ħlas tfisser bejn wieħed u ieħor **$290 li _ma ħallastx_** lil API bi ħlas. Iċ-ċifra hija _stima_
@@ -26,7 +26,7 @@ fid-dashboard hija traċċatur tal-iffrankar, mhux kont").
 
 Minħabba li n-numru huwa stima:
 
-- Jiddependi mit-tabella tal-ipprezzar li OmniRoute għandu għal kull mudell. Mudell mingħajr entrata
+- Jiddependi mit-tabella tal-ipprezzar li 67router għandu għal kull mudell. Mudell mingħajr entrata
   tal-ipprezzar jikkontribwixxi spiża ta' `0` (jidher bħala ringiela "Legacy / Free" fl-esploratur).
 - It-traffiku tal-livelli bla ħlas u tal-abbonamenti xorta jakkumula spiża _stmata_ — dak huwa
   l-ammont li qed tiffranka, mhux ammont dovut.
@@ -44,7 +44,7 @@ L-ispejjeż jiġu minn tabella tal-ipprezzar riżolta skont din l-ordni ta' pre�
 2. **Ipprezzar estern sinkronizzat** — miksub mill-
    `model_prices_and_context_window.json` pubbliku ta' LiteLLM meta s-sinkronizzazzjoni tkun attivata (maħżun fi namespace
    `pricing_synced` separat sabiex qatt ma jissostitwixxi s-sovrastrutturi tiegħek).
-3. **Valuri predefiniti hardcoded** — inklużi ma' OmniRoute.
+3. **Valuri predefiniti hardcoded** — inklużi ma' 67router.
 
 Is-sinkronizzazzjoni tal-ipprezzar estern hija **opt-in**, diżattivata b'mod predefinit. Il-varjabbli tal-ambjent rilevanti
 (ara [`.env.example`](../../.env.example)):
@@ -190,7 +190,7 @@ ma jkunx indikat mod ieħor.
 
 ## CLI
 
-Is-CLI ta’ OmniRoute jesponi kmandi għall-ispejjeż, l-użu u l-ipprezzar (irreġistrati f’
+Is-CLI ta’ 67router jesponi kmandi għall-ispejjeż, l-użu u l-ipprezzar (irreġistrati f’
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

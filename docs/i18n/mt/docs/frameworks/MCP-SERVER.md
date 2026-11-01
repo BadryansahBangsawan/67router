@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Malti)
+# 67router MCP Server Documentation (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Installazzjoni
 
-OmniRoute MCP huwa integrat. Ibdieh b’dan:
+67router MCP huwa integrat. Ibdieh b’dan:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline, u l-issettjar ta' klijenti MCP kompatibbli.
 | `omniroute_switch_combo`        | `write:combos`        | Attiva jew diżattiva kombu                                                                                                                |
 | `omniroute_create_combo`        | `write:combos`        | Ħloq kombu validat permezz tal-API tal-kombu eżistenti                                                                                    |
 | `omniroute_check_quota`         | `read:quota`          | Kwantità użata/kollha, perċentwal fadal, ħin ta' reset, saħħa tal-token                                                                   |
-| `omniroute_route_request`       | `execute:completions` | Agħti t-tlestija tal-chat permezz tal-irbit ta' OmniRoute                                                                                 |
+| `omniroute_route_request`       | `execute:completions` | Agħti t-tlestija tal-chat permezz tal-irbit ta' 67router                                                                                  |
 | `omniroute_cost_report`         | `read:usage`          | Rapport tal-ispejji skont l-iperjodu (session/jum/ġimgħa/xahar)                                                                           |
 | `omniroute_list_models_cartier` | `read:models`         | Katalogu tal-mudelli sħiħ b'kapaċitajiet, statut, prezz                                                                                   |
 | `omniroute_radar_cartier`       | `read:radar`          | Katalogu lokali iffirmat Radar; filtr tal-fornitur/familja opzjonali                                                                      |
@@ -151,7 +151,7 @@ il-prinċipal tal-API-key identifikat. Ir-rekords tal-awdit jinkludu l-ħotob u 
 
 ### Filtru tal-Arbu tal-Aċċessibbiltà MCP (v3.8.0)
 
-Skont l-għodod tal-kompressjoni ta' hawn fuq, OmniRoute jinkludi filtr wara l-eżekuzzjoni li
+Skont l-għodod tal-kompressjoni ta' hawn fuq, 67router jinkludi filtr wara l-eżekuzzjoni li
 jikkompressa ir-riżultati tal-**għodod** tal-għodod tal-aċċessibbiltà tal-browser MCP qabel ma jintbagħtu lill-
 aġent. Dan il-filtr mhuwiex għodda stess — jaħdem b'mod trasparenti fuq kwalunkwe riżultat tal-għodda li fih
 test verbose ta' arboret tal-aċċessibbiltà jew stampi tal-browser (≥2000 karattru).
@@ -235,7 +235,7 @@ Definit f'`open-sse/mcp-server/tools/agentSkillTools.ts`. Appoġġjat minn `src/
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Lista ta' l-45 ħila tal-aġenti bi filtri fakultattivi `category` (api\|cli) u `area`; jirritorna metadata + koperanza                           |
 | `omniroute_agent_skills_get`      | `read:catalog` | Ħu metadata sħiħ + kontenut SKILL.md għal ħila waħda permezz tal-`id` kanonika                                                                  |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiċi tal-koperanza: kemm mill-23 API, 21 CLI u 1 ħila tal-konfigurazzjoni għandhom fajls SKILL.md fuq il-filesystem vs totali tal-katalgu |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiċi tal-koperanza: kemm mill-22 API, 20 CLI u 1 ħila tal-konfigurazzjoni għandhom fajls SKILL.md fuq il-filesystem vs totali tal-katalgu |
 
 Ara [AGENT-SKILLS.md](./AGENT-SKILLS.md) għall-katalgu sħiħ u kif l-aġenti esterni jikkunsmawh.
 
@@ -244,17 +244,6 @@ Ara [AGENT-SKILLS.md](./AGENT-SKILLS.md) għall-katalgu sħiħ u kif l-aġenti e
 L-inventarju tal-għodod MCP iktar 'l fuq (110 għodod uniċi, ikkalkulat minn `countUniqueMcpTools()`) huwa intenzjonat li jkun
 skopjat għall-operazzjonijiet ta' routing/cache/kompressjoni/memorja/ħiliet/proxy/kontenut-sors runtime. Żewġ frawmworks
 tal-madwar jmorru flimkien mal-server MCP fil-v3.8.0 u huma dokumentati separatament:
-
-### Aġenti tal-Ħruġ (Cloud Agents)
-
-L-Aġenti tal-Ħruġ huma aġenti tal-kodiċjarja AI barra mill-proċess (codex-cloud, cursor-cloud, devin, jules) marbutin
-mal-Omniroute permezz tal-mudell ta' konnessjoni stess użat għall-fornituri LLM. Huma esposti permezz
-ta' wieqfa REST propja (`/api/v1/agents/*`) u **mhumiex** parti mill-katalgu tal-għodod MCP
-— il-ħolqien ta' Aġent tal-Ħruġ ma jikkonsmax skop MCP.
-
-- Implimentazzjoni: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ħajja: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentazzjoni: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Ħarsien (Guardrails)
 
@@ -427,8 +416,6 @@ Kull għodda teħtieġ ambiti speċifiċi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | 13-il għodda tal-qari — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 għodod tal-kitba — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                  |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -481,7 +468,7 @@ mingħajr tibdil l-imġiba eżistenti kkontrollata minn `OMNIROUTE_MCP_ENFORCE_S
 
 | Varjabbli                               | Valur Predefinit                 | Għan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :-------------------------------------- | :------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`         | Il-URL bażi li juża s-server MCP meta jsejjaħ l-APIs interni ta' OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`         | Il-URL bażi li juża s-server MCP meta jsejjaħ l-APIs interni ta' 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `OMNIROUTE_API_KEY`                     | (vojt)                           | Ċavetta tal-API mgħoddija bħala `Authorization: Bearer` lis-sejħiet interni tal-API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` biss jattivah) | Meta jkun attivat, scopes neqsin jiċħdu sejħiet tal-għodod u jirreġistraw `scope_denied:<reason>` fir-reġistru tal-awditjar. L-infurzar jiġi WKOLL impost irrispettivament minn dan il-flag għal kwalunkwe min jagħmel sejħa HTTP/SSE identifikat minn header tal-Awtorizzazzjoni għal kull ċavetta (`source === "authInfo"`) li ma jkollux scope sħiħ `manage`/`admin` — eż. ċavetta li jkollha biss l-scope limitat ta' bypass `mcp:connect` — għalhekk dan il-valur predefinit huwa sikur biss għall-fluss lokali/stdio b'operatur wieħed, u qatt għal aċċess remot mhux loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (vojt)                           | Lista ta' scopes separati b'virgoli li huma permessi u meqjusa bħala "disponibbli" b'mod predefinit (tintuża meta min jagħmel is-sejħa ma jipprovdix l-scopes tiegħu stess)                                                                                                                                                                                                                                                                                                                                                                                                          |
@@ -582,7 +569,6 @@ Uża d-dashboard jew l-endpoints REST `/api/mcp/audit` u `/api/mcp/audit/stats` 
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definizzjonijiet tal-għodda tal-ħiliet (4 għodda)                                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definizzjonijiet tal-għodda tal-isors Notion (6 għodda)                                      |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definizzjonijiet tal-għodda tal gamifikazzjoni (8 għodda)                                    |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Għodda għar-reġistrazzjoni u ġestjoni tal-plugins (8 għodda)                                 |
 | `src/app/api/mcp/status/route.ts`                                        | Tmiem ` /api/mcp/status`                                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | Tmiem ` /api/mcp/tools`                                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | Rotta tal-trasport SSE ` /api/mcp/sse`                                                       |

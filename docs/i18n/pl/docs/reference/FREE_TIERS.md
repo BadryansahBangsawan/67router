@@ -9,9 +9,9 @@
 > **Ostatnia analiza:** 2026-06-17 — badanie internetowe dla każdego dostawcy (oficjalna dokumentacja + wiadomości z ostatnich 7 dni, przegląd wykonany przez 50 agentów z weryfikacją kontradyktoryjną), aktualizujące każdy limit bezpłatnego poziomu oraz ToS. **Częściowy ponowny audyt 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — zobacz datowaną uwagę poniżej).
 > **Źródło prawdy (katalog):** `open-sse/config/freeModelCatalog.ts` (budżety dla poszczególnych MODELI, deduplikowane według pul). Poniższe wartości budżetów tokenów pochodzą z bieżących badań internetowych i są **przybliżone** — zobacz [Metodologia i zastrzeżenia](#methodology--caveats).
 
-## TL;DR — ile bezpłatnego wnioskowania faktycznie agreguje OmniRoute?
+## TL;DR — ile bezpłatnego wnioskowania faktycznie agreguje 67router?
 
-Wartości te opisują oddzielne konta zewnętrznych dostawców oraz warunki kwalifikacji w całym katalogu. OmniRoute nie przyznaje tego budżetu: musisz uzyskać wymagane konta lub dane uwierzytelniające, połączyć kwalifikujących się dostawców i przestrzegać ich limitów. Rzeczywista dostępna przepustowość może być niższa, włącznie z zerową w świeżej instalacji bez żadnej kwalifikującej się trasy. Dostawcy oznaczeni jako `tos: avoid` są domyślnie wykluczeni z automatycznego routingu.
+Wartości te opisują oddzielne konta zewnętrznych dostawców oraz warunki kwalifikacji w całym katalogu. 67router nie przyznaje tego budżetu: musisz uzyskać wymagane konta lub dane uwierzytelniające, połączyć kwalifikujących się dostawców i przestrzegać ich limitów. Rzeczywista dostępna przepustowość może być niższa, włącznie z zerową w świeżej instalacji bez żadnej kwalifikującej się trasy. Dostawcy oznaczeni jako `tos: avoid` są domyślnie wykluczeni z automatycznego routingu.
 
 **Sprawdzono 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) oferuje jednorazowy kredyt promocyjny w wysokości $5, wymagający podania metody płatności i wygasający po 30 dniach. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) publikuje limity szybkości dla projektów, modeli i poziomów; nadal nie jest uwzględniany w ilościowym miesięcznym nagłówku.
 
@@ -93,7 +93,7 @@ Nous opisano szczegółowo w uwadze o dostawcy poniżej.
 
 ## Dwa tryby — zliczanie a podejmowanie decyzji
 
-OmniRoute odpowiada na pytanie „czy to jest darmowe?” za pomocą dwóch trybów, które
+67router odpowiada na pytanie „czy to jest darmowe?” za pomocą dwóch trybów, które
 celowo korzystają z różnych źródeł:
 
 | Tryb                         | Źródło prawdy                                                                                                                                                               | Obszary zastosowania                                                                                                              |
@@ -142,7 +142,7 @@ Większość podawanych w tej branży wartości „darmowych tokenów miesięczn
 
 ### ⚠️ Ostrożność — klauzule dotyczące użytku osobistego / serwera proxy, które warto sprawdzić (16)
 
-> Ich bezpłatny dostęp jest rzeczywisty i OmniRoute może kierować do nich żądania; poniższe klauzule po prostu warto znać. Wariantów korzystających z OAuth/bez klucza nie da się określić ilościowo w tokenach, dlatego nie są uwzględnione w wartości nagłówkowej (a nie dlatego, że nie da się z nich korzystać).
+> Ich bezpłatny dostęp jest rzeczywisty i 67router może kierować do nich żądania; poniższe klauzule po prostu warto znać. Wariantów korzystających z OAuth/bez klucza nie da się określić ilościowo w tokenach, dlatego nie są uwzględnione w wartości nagłówkowej (a nie dlatego, że nie da się z nich korzystać).
 
 | Dostawca         | Uwaga                                                                                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -156,7 +156,7 @@ Większość podawanych w tej branży wartości „darmowych tokenów miesięczn
 | `fireworks`      | ToS wyraźnie zabraniają korzystania przez serwer proxy/pośrednika, przekazywania kluczy API oraz udzielania sublicencji (sekcje 2.1 i 2.2(i)(j)); samodzielnie hostowane osobiste serwery proxy nie są… |
 | `friendliai`     | Sekcje 8(e) i 8(f) ToS wyraźnie zabraniają używania FriendliAI jako serwera proxy lub umożliwiania osobom trzecim samodzielnego dostępu, a także odsprzedaży/…                                          |
 | `iflytek`        | Sekcja 2.4(3) iFlytek Spark LLM Service Agreement wyraźnie zabrania „używania jakichkolwiek zautomatyzowanych lub programistycznych metod do wyodrębniania danych lub wyników…                          |
-| `kiro`           | FAQ Kiro wyraźnie zabrania używania z „OpenClaw i podobnymi narzędziami wykorzystującymi mechanizmy innych firm” — samodzielnie hostowany serwer proxy AI (taki jak OmniRoute) kieru…                   |
+| `kiro`           | FAQ Kiro wyraźnie zabrania używania z „OpenClaw i podobnymi narzędziami wykorzystującymi mechanizmy innych firm” — samodzielnie hostowany serwer proxy AI (taki jak 67router) kieru…                    |
 | `modal`          | Sekcja 1.3 ToS wyraźnie zabrania „wynajmowania, odsprzedaży lub innego umożliwiania osobom trzecim bezpośredniego dostępu do Usługi lub korzystania z niej” — utworzenie samodzielnie hostowa…          |
 | `muse-spark-web` | ToS Meta wyraźnie zabraniają automatycznego dostępu bez uprzedniego zezwolenia, inżynierii wstecznej bez pisemnej zgody oraz obchodzenia zabezpieczeń technologi…                                       |
 | `nlpcloud`       | ToS wyraźnie zabraniają „konfigurowania serwera proxy lub innego urządzenia umożliwiającego innym osobom dostęp do Usługi za jego pośrednictwem” oraz przyznają wyłącznie niezbywalne,…                 |
@@ -318,7 +318,7 @@ Większość podawanych w tej branży wartości „darmowych tokenów miesięczn
 
 - **`360ai`** — Dołączona informacja freeNote „Darmowe modele 360 AI Brain” wydaje się nieaktualna. Obecnie dostęp wymaga złożenia wniosku i jest płatny. Podstawą tej informacji mogły być promocyjne tokeny z okresu premiery w 2023 roku (jednorazowo 100–250 mln)…
 - **`agentrouter`** — Dołączona informacja freeNote mówi „200 USD darmowych środków po rejestracji”. Obecnie standardowe rejestracje (bez polecenia) zapewniają tylko 100 USD; użytkownicy rejestrujący się z polecenia mogą otrzymać 200 USD, ale komentarz społeczności z kwietnia 2026 roku…
-- **`agy`** — Dołączona informacja freeNote mówi „(brak)”, sugerując brak bezpłatnego planu, jednak Antigravity ma bezpłatny plan wymagający uwierzytelnienia OAuth. Warunki świadczenia usług wyraźnie zabraniają jednak korzystania z tego bezpłatnego planu za pośrednictwem serwera proxy, takiego jak OmniRoute…
+- **`agy`** — Dołączona informacja freeNote mówi „(brak)”, sugerując brak bezpłatnego planu, jednak Antigravity ma bezpłatny plan wymagający uwierzytelnienia OAuth. Warunki świadczenia usług wyraźnie zabraniają jednak korzystania z tego bezpłatnego planu za pośrednictwem serwera proxy, takiego jak 67router…
 - **`ai21`** — Zaostrzenie warunków: okres próbny skrócono z „3 miesięcy” do 7 dni. Kwota środków w wysokości 10 USD pozostaje bez zmian, ale okres ważności gwałtownie skrócono z około 90 dni do 7 dni.
 - **`aimlapi`** — Znacząca zmiana. Dołączona informacja freeNote reklamowała „0,025 USD dziennie w darmowych środkach — ponad 200 modeli”, ale bezpłatny plan został obecnie wstrzymany/zakończony. Dzienny przydział środków w wysokości 0,025 USD (50 000 środków dziennie, 10 żądań/d…
 - **`amazon-q`** — Dołączona informacja freeNote mówi „(brak)” — rzeczywistość jest gorsza: produkt nie jest już dostępny dla nowych rejestracji (15 maja 2026 r.). Wcześniej bezpłatny plan oferował 50 żądań agentowych miesięcznie oraz nieograniczoną liczbę podpowiedzi wbudowanych…

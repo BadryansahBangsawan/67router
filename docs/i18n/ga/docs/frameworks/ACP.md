@@ -4,7 +4,7 @@
 
 ---
 
-Scarann OmniRoute **aimsiú CLI**, **Agent Client Protocol dúchasach**, agus
+Scarann 67router **aimsiú CLI**, **Agent Client Protocol dúchasach**, agus
 **cuibheoirí oidhreachta stdio** ó chéile. Ní chruthaíonn aimsiú dénártha suiteáilte
 go bhfuil a fhíordheimhniú, a chomhoiriúnacht samhla, ná a ullmhacht chun leid a láimhseáil bailí.
 
@@ -122,5 +122,3 @@ sprioc-thimpeallacht dóibh sin.
 - [Prótacail ghníomhairí](./AGENT_PROTOCOLS_GUIDE.md)
 - [Conarthaí seolta CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Uirlisí CLI](../reference/CLI-TOOLS.md)
-- [Freastalaí A2A](./A2A-SERVER.md)
-- [Gníomhairí néil](./CLOUD_AGENT.md)

@@ -6,7 +6,7 @@
 
 🌐 **ភាសា:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-ឯកសារយោងស្នូលសម្រាប់ OmniRoute API។ វាគ្របដណ្តប់លើផ្ទៃសាធារណៈ `/v1` និង endpoint គ្រប់គ្រងដែលត្រូវបានប្រើប្រាស់ច្រើនបំផុត។ ឯកសារដែលម៉ាស៊ីនអាចអានបាន [`docs/openapi.yaml`](../openapi.yaml) និងមែកធាង route ក្រោម `src/app/api/` គឺជាប្រភពព័ត៌មានពេញលេញ។
+ឯកសារយោងស្នូលសម្រាប់ 67router API។ វាគ្របដណ្តប់លើផ្ទៃសាធារណៈ `/v1` និង endpoint គ្រប់គ្រងដែលត្រូវបានប្រើប្រាស់ច្រើនបំផុត។ ឯកសារដែលម៉ាស៊ីនអាចអានបាន [`docs/openapi.yaml`](../openapi.yaml) និងមែកធាង route ក្រោម `src/app/api/` គឺជាប្រភពព័ត៌មានពេញលេញ។
 
 សម្រាប់ពិធីការដែលត្រូវគ្នាជាមួយ OpenAI និងម៉ាទ្រីសសមត្ថភាពរបស់ provider ដែលមានវិសាលភាពជាក់លាក់ សូមមើល
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md)។
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | ការឆ្លើយតប | `HIT` ឬ `MISS` (មិនមែនស្ទ្រីម)                                                                                                                                                                                        |
 | `X-OmniRoute-Idempotent` | ការឆ្លើយតប | `true` ប្រសិនបើត្រូវបានលុបស្ទួន                                                                                                                                                                                       |
 | `X-OmniRoute-Progress`   | ការឆ្លើយតប | `enabled` ប្រសិនបើការតាមដានវឌ្ឍនភាពត្រូវបានបើក                                                                                                                                                                        |
-| `X-OmniRoute-Session-Id` | ការឆ្លើយតប | ID សម័យជាក់ស្តែងដែល OmniRoute បានប្រើ                                                                                                                                                                                 |
+| `X-OmniRoute-Session-Id` | ការឆ្លើយតប | ID សម័យជាក់ស្តែងដែល 67router បានប្រើ                                                                                                                                                                                  |
 | `X-OmniRoute-Request-Id` | ការឆ្លើយតប | id សម្រាប់ផ្គូផ្គងសំណើ (នៅពេលស្គាល់)                                                                                                                                                                                  |
-| `X-OmniRoute-Version`    | ការឆ្លើយតប | កំណែ build របស់ OmniRoute (មានជានិច្ច)                                                                                                                                                                                |
+| `X-OmniRoute-Version`    | ការឆ្លើយតប | កំណែ build របស់ 67router (មានជានិច្ច)                                                                                                                                                                                 |
 | `X-OmniRoute-Cost-Saved` | ការឆ្លើយតប | ចំនួន USD ដែលឃ្លាំងសម្ងាត់បានជួយសន្សំលើ `HIT` (សម្រាប់តែ cache hit ប៉ុណ្ណោះ)                                                                                                                                          |
 | `X-OmniRoute-Decision`   | ការឆ្លើយតប | ដានការកំណត់ផ្លូវ៖ `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` គឺជាយុទ្ធសាស្ត្រ combo ឬ `single` សម្រាប់សំណើដែលមិនមែនជា combo) — មានជានិច្ចនៅក្នុងការឆ្លើយតបពេលបញ្ចប់                                |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### ការចងគណនីសម្រាប់សំណើនីមួយៗ
 
-នៅពេល provider មួយមាន connection ច្រើន (គណនី ឬ key) ជាធម្មតា OmniRoute ជ្រើសរើសមួយ
+នៅពេល provider មួយមាន connection ច្រើន (គណនី ឬ key) ជាធម្មតា 67router ជ្រើសរើសមួយ
 តាមយុទ្ធសាស្ត្រជ្រើសរើសគណនីរបស់វា។ ផ្ទុយទៅវិញ សំណើមួយអាចចងទៅនឹង connection ជាក់លាក់មួយ
 ដោយប្រើ header `x-omniroute-connection`៖
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ Claude Code ផ្ញើ header ផ្ទាល់ខ្លួនតាមរយ
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Claude Code ផ្ញើ header ផ្ទាល់ខ្លួនតាមរយ
 ## ការជួលសម័យដែលបានគ្រប់គ្រងផ្តាច់មុខ
 
 ការជួលសម័យដែលបានគ្រប់គ្រងផ្តាច់មុខ គឺជាកិច្ចសន្យាកំណត់ផ្លូវដែលអាចជ្រើសរើសប្រើ និងមិនអាស្រ័យលើកម្មវិធីអតិថិជន៖ ម្ចាស់សកម្មមួយ
-កាន់កាប់ការតភ្ជាប់ OmniRoute មួយដែលមានសិទ្ធិ។ វាមិនជួលម៉ូដែល មិនទាមទារ OAuth មិនកំណត់អត្តសញ្ញាណ
+កាន់កាប់ការតភ្ជាប់ 67router មួយដែលមានសិទ្ធិ។ វាមិនជួលម៉ូដែល មិនទាមទារ OAuth មិនកំណត់អត្តសញ្ញាណ
 កម្មវិធីអតិថិជនជាក់លាក់ណាមួយ និងមិនទាមទារអ្នកផ្តល់សេវាជាក់លាក់ណាមួយឡើយ។
 
 API key ដែលប្រើសម្រាប់ផ្ទៀងផ្ទាត់ត្រូវតែមានវិសាលភាព `lease:exclusive` និងបញ្ជី
@@ -190,7 +190,7 @@ generation នៅក្នុងតួ JSON៖
 
 សកម្មភាព status ដែលអាចជ្រើសរើសប្រើនេះ ត្រូវបានការពារដោយម្ចាស់ដែលមានលក្ខណៈអសកម្មចំពោះការបកស្រាយ API key ដែលបានគ្រប់គ្រង និងផ្ទៀងផ្ទាត់ត្រឹមត្រូវ ព្រមទាំង
 active generation ជាក់លាក់ នៅក្នុងប្រតិបត្តិការមូលដ្ឋានទិន្នន័យតែមួយ។ `displayName` គឺគ្រាន់តែជាឈ្មោះ
-ការតភ្ជាប់ដែលបានកំណត់រចនាសម្ព័ន្ធ និងកាត់ដកចន្លោះជុំវិញប៉ុណ្ណោះ។ វាជា `null` នៅពេលមិនមានឈ្មោះដែលបានកំណត់រចនាសម្ព័ន្ធប្រកបដោយសុវត្ថិភាព។ OmniRoute មិនដែលជំនួសវាដោយ
+ការតភ្ជាប់ដែលបានកំណត់រចនាសម្ព័ន្ធ និងកាត់ដកចន្លោះជុំវិញប៉ុណ្ណោះ។ វាជា `null` នៅពេលមិនមានឈ្មោះដែលបានកំណត់រចនាសម្ព័ន្ធប្រកបដោយសុវត្ថិភាព។ 67router មិនដែលជំនួសវាដោយ
 អ៊ីមែល ឬអត្តសញ្ញាណគណនីដែលបានបង្កើតឡើយ។ តម្លៃ provider គឺជាស្លាកបង្ហាញដែលមិនមែនជាព័ត៌មានរសើប ហើយមិនដែលជា
 អត្តសញ្ញាណអ្នកផ្តល់សេវាដែលត្រូវគ្នា និងបានបង្កើតឡើយ។ ព័ត៌មានសម្ងាត់ ថូខឹន ខូគី connection ឬ API
 key ids ដើម owner hashes fencing secrets និងទិន្នន័យកំណត់ផ្លូវខាងក្នុង ត្រូវបានដកចេញ។
@@ -231,7 +231,7 @@ snapshot នៃសំណើ ឬបញ្ជូនបន្តទៅ upstream ឡ
 
 ការឆ្លើយតបនេះមានន័យត្រឹមតែថា សំណុំដែលមានសិទ្ធិធម្មតាមិនទទេ ហើយបេក្ខភាពទំនេរទាំងអស់ត្រូវបាន
 កាន់កាប់ដោយ lease សកម្មរបស់ម្ចាស់ផ្សេង។ ម៉ូដែល/អ្នកផ្តល់សេវាដែលមិនគាំទ្រ ការមិនត្រូវគ្នានឹងគោលការណ៍ cooldown quota
-សុខភាព និងការបរាជ័យសិទ្ធិធម្មតាផ្សេងទៀត នៅតែរក្សាការឆ្លើយតប OmniRoute ដែលមានស្រាប់របស់ពួកវា។
+សុខភាព និងការបរាជ័យសិទ្ធិធម្មតាផ្សេងទៀត នៅតែរក្សាការឆ្លើយតប 67router ដែលមានស្រាប់របស់ពួកវា។
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request ដើមរបស់ Jina ហើយ **បញ្ជូនប
 ```
 
 តម្លៃដើម `{ image | audio | video | pdf }` អាចជាតំណ HTTPS សាធារណៈ, URI `data:` ឬទិន្នន័យ
-base64 ដើម។ OmniRoute មិនបម្លែងវត្ថុទាំងនោះទៅជាខ្សែអក្សរ ឬទៅទាញយកតំណរូបភាពដើមទេ — Jina ទាញយក
+base64 ដើម។ 67router មិនបម្លែងវត្ថុទាំងនោះទៅជាខ្សែអក្សរ ឬទៅទាញយកតំណរូបភាពដើមទេ — Jina ទាញយក
 មេឌៀសាធារណៈដោយខ្លួនឯង។ វាលបន្ថែមរបស់ Jina (`task`, `normalized`, `truncate`, `embedding_type`) ត្រូវបាន
 បញ្ជូនបន្ត។ SKU របស់ Jina ដែលគាំទ្រតែអត្ថបទ នៅតែបដិសេធឯកសារដែលមិនមែនជាអត្ថបទ។
 
@@ -454,7 +454,7 @@ API `analyze` របស់ Azure Document Intelligence គឺអសមកាល�
 
 ### ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ និងការកំណត់ endpoint របស់ Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` ប្រើឡើងវិញនូវការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ Vertex AI ដូចគ្នាដែល OmniRoute គាំទ្ររួចហើយសម្រាប់
+`vertex-deepseek-ocr` ប្រើឡើងវិញនូវការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ Vertex AI ដូចគ្នាដែល 67router គាំទ្ររួចហើយសម្រាប់
 ចរាចរណ៍ chat/image (`open-sse/executors/vertex.ts`)៖ API key របស់ការតភ្ជាប់គឺជាព័ត៌មានសម្ងាត់
 Service Account JSON (ដែលត្រូវបានប្តូរយក OAuth access token រយៈពេលខ្លីតាមរយៈលំហូរ JWT-bearer)
 ឬ OAuth access token ដែលបានបង្កើតរួច និងត្រូវបានប្រើដោយផ្ទាល់។ URL endpoint upstream គឺជា
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### តម្លៃម៉ូដែល (`pricing`)
 
-ធាតុមួយនឹងមានវត្ថុ `pricing` នៅពេល OmniRoute ស្គាល់តម្លៃរបស់ម៉ូដែល។ តម្លៃនេះមកពី
+ធាតុមួយនឹងមានវត្ថុ `pricing` នៅពេល 67router ស្គាល់តម្លៃរបស់ម៉ូដែល។ តម្លៃនេះមកពី
 តារាងតម្លៃដែលប្រព័ន្ធគណនាចំណាយប្រើ៖ តម្លៃលំនាំដើមដែលភ្ជាប់មកជាមួយ តម្លៃដែលបានធ្វើសមកាលកម្ម និង
 តម្លៃកំណត់ជំនួសតាមរយៈ `/api/pricing`។ ទាំងនេះជាតម្លៃរាយ ដូច្នេះអ្នកផ្តល់សេវាជាវក៏
 បង្ហាញតម្លៃក្នុងមួយ token ផងដែរ។
@@ -632,8 +632,8 @@ executor function, request header និងទិន្នន័យ account ទ�
 
 ## ការបង្កើតអូឌីយ៉ូដោយ ElevenLabs
 
-កំណត់រចនាសម្ព័ន្ធ connection របស់ provider `elevenlabs` នៅក្នុង OmniRoute ដោយប្រើ ElevenLabs API key របស់អ្នក។
-Client ធ្វើ authentication ដោយប្រើ key របស់ **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+កំណត់រចនាសម្ព័ន្ធ connection របស់ provider `elevenlabs` នៅក្នុង 67router ដោយប្រើ ElevenLabs API key របស់អ្នក។
+Client ធ្វើ authentication ដោយប្រើ key របស់ **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gateway នឹងផ្ដល់ provider key ដែលបានរក្សាទុកជា `xi-api-key`។ កុំផ្ញើ ElevenLabs key
 ជា bearer token របស់ gateway ឡើយ។
 
@@ -698,7 +698,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 plan និង `429` សម្រាប់ដែនកំណត់ quota។ Header `character-cost`, `song-id`, `request-id` និង `retry-after`
 ត្រូវបានរក្សាទុកនៅពេលមាន។ សមតុល្យ credit ឥតគិតថ្លៃមិនធានាការចូលប្រើគ្រប់
 music model, output format ឬ API feature ទាំងអស់ទេ៖ ElevenLabs កំណត់សិទ្ធិសម្រាប់ request នីមួយៗ។
-Endpoint រួមរក្សាទុក error status code នៅក្នុង error envelope ស្តង់ដាររបស់ OmniRoute។
+Endpoint រួមរក្សាទុក error status code នៅក្នុង error envelope ស្តង់ដាររបស់ 67router។
 
 កិច្ចសន្យា upstream៖ [បែបផែនសំឡេង](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [ការតែងនិពន្ធតន្ត្រី](https://elevenlabs.io/docs/api-reference/music/compose) និង
@@ -739,7 +739,7 @@ Endpoint រួមរក្សាទុក error status code នៅក្នុ�
 
 ផ្លូវ POST ទាំងអស់មានទម្រង់ដូចគ្នា៖ `Bearer your-api-key` + តួ JSON ដែលបានផ្ទៀងផ្ទាត់ដោយ Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` ជាដើម សូមមើល `src/shared/validation/schemas.ts`)។ 4xx នឹងត្រូវបានត្រឡប់នៅពេលការផ្ទៀងផ្ទាត់ schema បរាជ័យ។
 
-សម្រាប់ client ដែលមិនអាចភ្ជាប់ `Authorization: Bearer ...` បាន OmniRoute ក៏ទទួលយក API key នៅក្នុង URL តាមរយៈ query string សម្រាប់ភាពឆបគ្នា (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ឬ endpoint `/api/v1/vscode/{token}/...` ជាក់លាក់ដែលបានចងក្រងជាឯកសារខាងក្រោម។
+សម្រាប់ client ដែលមិនអាចភ្ជាប់ `Authorization: Bearer ...` បាន 67router ក៏ទទួលយក API key នៅក្នុង URL តាមរយៈ query string សម្រាប់ភាពឆបគ្នា (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ឬ endpoint `/api/v1/vscode/{token}/...` ជាក់លាក់ដែលបានចងក្រងជាឯកសារខាងក្រោម។
 
 ```bash
 # រៀបចំណាត់ថ្នាក់ឡើងវិញ (provider ពី cloud registry ឬ node របស់ provider ដែលឆបគ្នាជាមួយ OpenAI ក្នុងទម្រង់ "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract)។
 Parallel Extract (`parallel-search`, ប្រើ API key ដូចគ្នានឹង Parallel Search) ផ្ដល់តែ Markdown
 ប៉ុណ្ណោះ — `format` ផ្សេងទៀតណាមួយនឹងទទួលបាន `400` — ហើយកំណត់មាតិកាអតិបរមាត្រឹម 100,000 តួអក្សរ។ នៅពេល
 ទំព័រគោលដៅផ្ទាល់មិនអាចត្រូវបានស្រង់ចេញ អ្នកផ្តល់សេវាខាងលើរាយការណ៍វានៅក្នុង HTTP 200;
-OmniRoute បង្ហាញវាជា `422` ជាមួយសារថេរមួយ។
+67router បង្ហាញវាជា `422` ជាមួយសារថេរមួយ។
 
 | វិធីសាស្ត្រ | ផ្លូវ           | សេចក្ដីពិពណ៌នា                                                              |
 | ----------- | --------------- | --------------------------------------------------------------------------- |
@@ -963,14 +963,14 @@ wscat -c "ws://localhost:20128/v1/responses?api_key=<OMNIROUTE_API_KEY>"
 **Codex CLI** របស់ OpenAI ផ្ទៀងផ្ទាត់ឈ្មោះម៉ូដែលនៅផ្នែក client នៅពេល
 `supports_websockets = true` ហើយ **បដិសេធលេខសម្គាល់ដែលមានបុព្វបទអ្នកផ្តល់សេវា** ដូចជា
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`)។ ផ្ញើលេខសម្គាល់ **ដើម** (ឧ. `gpt-5.5`)។ bridge របស់ OmniRoute គឺ
+a ChatGPT account`)។ ផ្ញើលេខសម្គាល់ **ដើម** (ឧ. `gpt-5.5`)។ bridge របស់ 67router គឺ
 សម្រាប់តែ codex ដូច្នេះវាដោះស្រាយលេខសម្គាល់ដើមឡើងវិញជាម៉ូដែល codex
 (`resolveCodexWsModelInfo`) មុនពេលបញ្ជូន tunnel ទៅសេវាខាងលើ — ទោះបីជា
 `gpt-5.5` ដើម បើមិនដូច្នោះទេ នឹងត្រូវបានបញ្ជូនទៅអ្នកផ្តល់សេវាផ្សេងតាមរយៈ HTTP ក៏ដោយ។
 
 #### ការកំណត់រចនាសម្ព័ន្ធ OpenAI Codex CLI
 
-តម្រង់ Codex CLI ទៅ OmniRoute ដោយបន្ថែមអ្នកផ្តល់សេវាផ្ទាល់ខ្លួនដែលគាំទ្រ WebSocket
+តម្រង់ Codex CLI ទៅ 67router ដោយបន្ថែមអ្នកផ្តល់សេវាផ្ទាល់ខ្លួនដែលគាំទ្រ WebSocket
 ទៅក្នុង `~/.codex/config.toml` (ប្រើ `CODEX_HOME` ដាច់ដោយឡែក ដើម្បីជៀសវាងការប៉ះពាល់
 ដល់ការកំណត់រចនាសម្ព័ន្ធដែលមានស្រាប់)៖
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # គ្មានសញ្ញា slash នៅចុង; URL របស់ WS ត្រូវបានបង្កើតចេញពីនេះ (ប្រើ https/wss ក្នុង production)
 wire_api = "responses"                    # តម្លៃតែមួយគត់ដែលគាំទ្រ ចាប់តាំងពីខែកុម្ភៈ ឆ្នាំ 2026
 supports_websockets = true                # បើក transport Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # ផ្ទុក API key របស់ OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # ផ្ទុក API key របស់ 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # API key របស់ OmniRoute (key ណាមួយ ប្រសិនបើ REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # API key របស់ 67router (key ណាមួយ ប្រសិនបើ REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI ដំឡើងកំណែ `base_url + /responses` ទៅជា WebSocket ហើយ OmniRoute បញ្ជូន tunnel វា
+CLI ដំឡើងកំណែ `base_url + /responses` ទៅជា WebSocket ហើយ 67router បញ្ជូន tunnel វា
 ទៅការតភ្ជាប់ OAuth របស់ codex ដែលបានជ្រើសរើស។ បានផ្ទៀងផ្ទាត់ពីដើមដល់ចប់ជាមួយម៉ាស៊ីនមេ
 មូលដ្ឋាន៖ ChatGPT ត្រឡប់ `codex.rate_limits` + `response.created` ហើយស្ទ្រីម
 លទ្ធផលបំពេញ។
@@ -1075,7 +1075,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### រូបមន្តកែតម្រូវកម្រិតកាត់ផ្ដាច់
 
-OmniRoute គាំទ្រការកាត់ផ្ដាច់កូតាជាមុន ដើម្បីទប់ស្កាត់ការប្រើប្រាស់ upstream អស់ (កំណត់រចនាសម្ព័ន្ធតាម connection
+67router គាំទ្រការកាត់ផ្ដាច់កូតាជាមុន ដើម្បីទប់ស្កាត់ការប្រើប្រាស់ upstream អស់ (កំណត់រចនាសម្ព័ន្ធតាម connection
 `quotaWindowThresholds` លំនាំដើមរបស់ provider ឬការកំណត់ភាពធន់ជាសកល)។ នៅពេលកម្រិតកាត់ផ្ដាច់
 (ឧ. `cutoff = 25%`) សកម្មលើចន្លោះកូតា កម្មវិធីបង្ហាញអត្ថបទគណនាចំនួនអនុញ្ញាតដែលនៅសល់ដូចខាងក្រោម៖
 
@@ -1437,9 +1437,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### ការវាយតម្លៃ
 
-| ចំណុចបញ្ចប់  | វិធីសាស្ត្រ | ការពិពណ៌នា                                     |
-| ------------ | ----------- | ---------------------------------------------- |
-| `/api/evals` | GET/POST    | រាយបញ្ជីសំណុំការវាយតម្លៃ / ដំណើរការការវាយតម្លៃ |
+| ចំណុចបញ្ចប់ | វិធីសាស្ត្រ | ការពិពណ៌នា |
+| ----------- | ----------- | ---------- |
 
 ### គោលការណ៍
 
@@ -1620,7 +1619,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - ឈ្មោះជំនួសដែលមាន Token ប្រើ handler ដូចគ្នានឹង `/v1/*` និង `/api/tags` ឡើងវិញ ដូច្នេះទម្រង់ការឆ្លើយតបនៅតែដូចគ្នា។
 - គួរប្រើ `Authorization: Bearer ...` នៅពេលណាដែល client គាំទ្រ header ផ្ទាល់ខ្លួន។
-- Token ដែលមានមូលដ្ឋានលើ URL អាចបង្ហាញនៅក្នុងកំណត់ហេតុ reverse-proxy ប្រវត្តិកម្មវិធីរុករក និងទិន្នន័យតេឡេមេទ្រីនៅខាងក្រៅ OmniRoute។ ចាត់ទុកវាជាជម្រើសសម្រាប់ភាពឆបគ្នា មិនមែនជារបៀបផ្ទៀងផ្ទាត់អត្តសញ្ញាណលំនាំដើមទេ។
+- Token ដែលមានមូលដ្ឋានលើ URL អាចបង្ហាញនៅក្នុងកំណត់ហេតុ reverse-proxy ប្រវត្តិកម្មវិធីរុករក និងទិន្នន័យតេឡេមេទ្រីនៅខាងក្រៅ 67router។ ចាត់ទុកវាជាជម្រើសសម្រាប់ភាពឆបគ្នា មិនមែនជារបៀបផ្ទៀងផ្ទាត់អត្តសញ្ញាណលំនាំដើមទេ។
 
 ---
 
@@ -1728,7 +1727,7 @@ Routing combos កម្រិតខ្ពស់ជាង (ដែលបានស
 
 ## Webhooks
 
-ការជាវ webhook ចេញសម្រាប់ព្រឹត្តិការណ៍ OmniRoute (ការបញ្ចប់សំណើ ការប្រើប្រាស់កូតាអស់ ការប្ដូរកូនសោ។ល។)។
+ការជាវ webhook ចេញសម្រាប់ព្រឹត្តិការណ៍ 67router (ការបញ្ចប់សំណើ ការប្រើប្រាស់កូតាអស់ ការប្ដូរកូនសោ។ល។)។
 
 | វិធីសាស្ត្រ | ផ្លូវ                     | ការពិពណ៌នា                                                               |
 | ----------- | ------------------------- | ------------------------------------------------------------------------ |
@@ -1759,31 +1758,6 @@ Routing combos កម្រិតខ្ពស់ជាង (ដែលបានស
 
 ---
 
-## ពិធីការ Agents
-
-កិច្ចការរបស់ cloud agent (Claude Code, Codex Cloud, OpenHands ជាដើម) ដែលត្រូវបានប្រតិបត្តិពីចម្ងាយក្នុងនាមអ្នកប្រើប្រាស់ OmniRoute។
-
-| វិធីសាស្ត្រ | ផ្លូវ                         | សេចក្ដីពិពណ៌នា                                                                                                                                             |
-| ----------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/v1/agents/tasks`        | រាយបញ្ជីកិច្ចការ — អាចប្រើ `?provider=`, `?status=`, `?limit=` (1–500, លំនាំដើម 50)                                                                        |
-| POST        | `/api/v1/agents/tasks`        | បង្កើតកិច្ចការ — body ត្រូវបានផ្ទៀងផ្ទាត់ដោយ `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`)។ ត្រឡប់ `201` ជាមួយ task envelope |
-| DELETE      | `/api/v1/agents/tasks?id=...` | លុបកិច្ចការមួយ                                                                                                                                             |
-| GET         | `/api/v1/agents/tasks/[id]`   | អានកិច្ចការ — ធ្វើបច្ចុប្បន្នភាពស្ថានភាពដោយសមកាលកម្មពី cloud agent ខាងដើម នៅពេលបានកំណត់ `external_id`                                                      |
-| POST        | `/api/v1/agents/tasks/[id]`   | សកម្មភាពបែងចែកតាមប្រភេទ៖ `{action: "approve"}`, `{action: "message", message}` ឬ `{action: "cancel"}`                                                      |
-| DELETE      | `/api/v1/agents/tasks/[id]`   | លុបកិច្ចការជាក់លាក់មួយតាម id                                                                                                                               |
-
-> **ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ៖** តម្រូវឱ្យមានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណសម្រាប់ការគ្រប់គ្រងលើគ្រប់វិធីសាស្ត្រ (`requireCloudAgentManagementAuth`)។ មុនកំណែ v3.8.0 វិធីសាស្ត្រទាំងនេះមិនត្រូវការការផ្ទៀងផ្ទាត់អត្តសញ្ញាណទេ — សូមមើល commit `588a0333` សម្រាប់ការផ្លាស់ប្ដូរដែលមិនឆបគ្នានេះ។
-
-```bash
-# បង្កើតកិច្ចការ cloud របស់ Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## ប្រូកស៊ីសម្រាប់ការគ្រប់គ្រង
 
 ប្រូកស៊ី HTTP(S)/SOCKS សម្រាប់ចរាចរចេញ ដែលអាចកំណត់ទៅឱ្យអ្នកផ្ដល់សេវា គណនី ឬជាសកល។
@@ -1807,7 +1781,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## ភាពធន់ (បន្ថែម)
 
-OmniRoute ផ្តល់នូវយន្តការបរាជ័យបណ្តោះអាសន្នឯករាជ្យចំនួនបី; endpoint គ្រប់គ្រងខាងក្រោមអនុញ្ញាតឱ្យប្រតិបត្តិករអាន និងកំណត់វាឡើងវិញបាន៖
+67router ផ្តល់នូវយន្តការបរាជ័យបណ្តោះអាសន្នឯករាជ្យចំនួនបី; endpoint គ្រប់គ្រងខាងក្រោមអនុញ្ញាតឱ្យប្រតិបត្តិករអាន និងកំណត់វាឡើងវិញបាន៖
 
 | វិសាលភាព                        | កន្លែងផ្ទុកស្ថានភាព                                | អាន                                       | កំណត់ឡើងវិញ / សម្អាត                                    |
 | ------------------------------- | -------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------- |
@@ -1842,7 +1816,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## ជំនាញ
 
-Framework ជំនាញសម្រាប់ពង្រីក OmniRoute ដោយប្រើ handler ដែលអាចប្រតិបត្តិបានតាមតម្រូវការ ព្រមទាំងសមាហរណកម្មជាមួយ marketplace។
+Framework ជំនាញសម្រាប់ពង្រីក 67router ដោយប្រើ handler ដែលអាចប្រតិបត្តិបានតាមតម្រូវការ ព្រមទាំងសមាហរណកម្មជាមួយ marketplace។
 
 | វិធីសាស្ត្រ | Path                              | សេចក្ដីពិពណ៌នា                                                                                                            |
 | ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -1879,7 +1853,7 @@ Framework ជំនាញសម្រាប់ពង្រីក OmniRoute ដ�
 
 ## MCP Server
 
-OmniRoute ផ្ដល់មកជាមួយ Model Context Protocol server ដែលបានបង្កប់ ដោយមាន transport ចំនួន 3 (stdio, SSE, streamable-http) និងឧបករណ៍ដែលបានកំណត់វិសាលភាព។ endpoints របស់ dashboard ខាងក្រោមអានទិន្នន័យស្ថានភាព/សវនកម្ម និងធ្វើ proxy សម្រាប់ HTTP transports។
+67router ផ្ដល់មកជាមួយ Model Context Protocol server ដែលបានបង្កប់ ដោយមាន transport ចំនួន 3 (stdio, SSE, streamable-http) និងឧបករណ៍ដែលបានកំណត់វិសាលភាព។ endpoints របស់ dashboard ខាងក្រោមអានទិន្នន័យស្ថានភាព/សវនកម្ម និងធ្វើ proxy សម្រាប់ HTTP transports។
 
 | វិធីសាស្ត្រ | ផ្លូវ | សេចក្ដីពិពណ៌នា |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1901,50 +1875,12 @@ OmniRoute ផ្ដល់មកជាមួយ Model Context Protocol server ដ
 
 ## ម៉ាស៊ីនមេ A2A
 
-OmniRoute ផ្តល់ endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 រួមជាមួយ REST wrapper សម្រាប់ការត្រួតពិនិត្យ/ការប្រើប្រាស់ dashboard។
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # ជាជម្រើស លុះត្រាតែ OMNIROUTE_API_KEY ត្រូវបានកំណត់
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-វិធីសាស្ត្រដែលគាំទ្រ (ទាំងអស់ត្រូវបានគ្រប់គ្រងដោយ `settings.a2aEnabled`)៖
-
-| វិធីសាស្ត្រ      | ការពិពណ៌នា                                                        |
-| ---------------- | ----------------------------------------------------------------- |
-| `message/send`   | ប្រតិបត្តិជំនាញដោយសមកាលកម្ម; ត្រឡប់ `{task, artifacts, metadata}` |
-| `message/stream` | ប្រតិបត្តិការ SSE ជាបន្តបន្ទាប់នៃសំណុំជំនាញដូចគ្នា                |
-| `tasks/get`      | ទាញយកកិច្ចការតាម `taskId`                                         |
-| `tasks/cancel`   | បោះបង់កិច្ចការតាម `taskId`                                        |
-
-ជំនាញដែលមានស្រាប់៖ `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`។
-
-### កាត Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-ត្រឡប់កាត agent A2A សាធារណៈ (ឈ្មោះ ការពិពណ៌នា សមត្ថភាព កាតាឡុកជំនាញ គម្រោង auth) — ត្រូវបាន cache ជាសាធារណៈរយៈពេល 1h។ មិនតម្រូវឱ្យមាន auth ទេ។
+67router ផ្តល់ endpoint A2A (Agent-to-Agent) JSON-RPC 2.0 រួមជាមួយ REST wrapper សម្រាប់ការត្រួតពិនិត្យ/ការប្រើប្រាស់ dashboard។
 
 ### ឧបករណ៍ជំនួយ REST
 
 | វិធីសាស្ត្រ | Path                         | ការពិពណ៌នា                                                                                                       |
 | ----------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET         | `/api/a2a/status`            | ស្ថានភាពបើក A2A + ស្ថិតិកិច្ចការ + សេចក្ដីសង្ខេបកាត agent ដែលបាន cache                                           |
 | GET         | `/api/a2a/tasks`             | រាយកិច្ចការ — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST        | `/api/a2a/tasks`             | (មិនទាន់ត្រូវបានអនុវត្តជា REST helper ទេ — បង្កើតតាម JSON-RPC `message/send`)                                    |
 | GET         | `/api/a2a/tasks/[id]`        | ទាញយកកិច្ចការមួយ                                                                                                 |
@@ -1964,12 +1900,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | រាយឈ្មោះក្លែងក្លាយរបស់ model ដូចដែលបានបង្ហាញដល់ cloud sync |
 | GET | `/api/assess` | អានការចាត់ថ្នាក់នៃការវាយតម្លៃចុងក្រោយបំផុត (តាម provider/model នីមួយៗ) |
 | POST | `/api/assess` | ដំណើរការការវាយតម្លៃ — body៖ `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | រាយ eval suite ដែលមានស្រាប់ + ការដំណើរការថ្មីៗបំផុត |
-| POST | `/api/evals` | ចាប់ផ្ដើមការដំណើរការ eval |
-| POST | `/api/evals/suites` | បង្កើត eval suite ផ្ទាល់ខ្លួន — body ត្រូវបានផ្ទៀងផ្ទាត់ដោយ `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | ទាញយក eval suite ផ្ទាល់ខ្លួន |
 
-**Auth៖** `/api/cloud/auth` ផ្ទៀងផ្ទាត់សោ Bearer ដោយផ្ទាល់ ហើយត្រឡប់សោដែលបានបិទបាំង និង `projectId` របស់ការតភ្ជាប់នីមួយៗ សម្រាប់តែសោដែលមាន scope `manage` / `admin` ប៉ុណ្ណោះ; route `/api/cloud/*`, `/api/evals/*` និង `/api/assess` ផ្សេងទៀតតម្រូវឱ្យមាន management session/API key។ POST `/api/assess` ប្រើ `validateBody` ជាមួយ scope schema ប្រភេទ discriminated-union។
+**Auth៖** `/api/cloud/auth` ផ្ទៀងផ្ទាត់សោ Bearer ដោយផ្ទាល់ ហើយត្រឡប់សោដែលបានបិទបាំង និង `projectId` របស់ការតភ្ជាប់នីមួយៗ សម្រាប់តែសោដែលមាន scope `manage` / `admin` ប៉ុណ្ណោះ; route `/api/cloud/*` និង `/api/assess` ផ្សេងទៀតតម្រូវឱ្យមាន management session/API key។ POST `/api/assess` ប្រើ `validateBody` ជាមួយ scope schema ប្រភេទ discriminated-union។
 
 ---
 
@@ -2127,7 +2059,7 @@ Endpoint វិភាគទិន្នន័យតាមពេលវេលា�
 
 ## ការគ្រប់គ្រងឧបករណ៍ CLI
 
-គ្រប់គ្រងឧបករណ៍ CLI ដែលរួមបញ្ចូលជាមួយ OmniRoute (antigravity, commandCode,
+គ្រប់គ្រងឧបករណ៍ CLI ដែលរួមបញ្ចូលជាមួយ 67router (antigravity, commandCode,
 devin-cli ជាដើម)។ សូមមើល [ឯកសារយោងអ្នកផ្តល់សេវា](./PROVIDER_REFERENCE.md) សម្រាប់បញ្ជីពេញលេញ។
 
 | វិធីសាស្ត្រ | ផ្លូវ                                   | ការពិពណ៌នា                                                                                                                                                                              |
@@ -2236,26 +2168,6 @@ devin-cli ជាដើម)។ សូមមើល [ឯកសារយោងអ្
 
 ---
 
-## Plugins
-
-គ្រប់គ្រង Plugins របស់ OmniRoute (ផ្នែកបន្ថែមពីភាគីទីបី)។
-
-| វិធីសាស្ត្រ | Path                               | ការពិពណ៌នា                                    |
-| ----------- | ---------------------------------- | --------------------------------------------- |
-| GET         | `/api/plugins`                     | រាយ Plugins ដែលបានដំឡើង                       |
-| POST        | `/api/plugins/marketplace/install` | ដំឡើង Plugin ពី marketplace                   |
-| DELETE      | `/api/plugins/[name]`              | លុបការដំឡើង Plugin                            |
-| POST        | `/api/plugins/[name]/activate`     | ធ្វើឱ្យ Plugin សកម្ម                          |
-| POST        | `/api/plugins/[name]/deactivate`   | ធ្វើឱ្យ Plugin អសកម្ម                         |
-| GET         | `/api/plugins/[name]/config`       | ទទួលយកការកំណត់រចនាសម្ព័ន្ធ Plugin             |
-| PUT         | `/api/plugins/[name]/config`       | ធ្វើបច្ចុប្បន្នភាពការកំណត់រចនាសម្ព័ន្ធ Plugin |
-
-**ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ៖** តម្រូវឱ្យមានសម័យគ្រប់គ្រង។
-
-សូមមើល [គ្រោងការងារ Plugins](../frameworks/PLUGIN_SDK.md) សម្រាប់ព័ត៌មានលម្អិតពេញលេញ។
-
----
-
 ## Shadow Routing
 
 ការប្រៀបធៀបអ្នកផ្តល់សេវាតាមបែប Shadow / A-B **មិនមែនជា REST surface ដាច់ដោយឡែកទេ** — វាត្រូវបានកំណត់រចនាសម្ព័ន្ធតាមរយៈ combo routing (សូមមើល [Auto-Combo](../routing/AUTO-COMBO.md))។ ម៉ែត្ររង្វាស់ប្រៀបធៀបតាម combo នីមួយៗត្រូវបានផ្តល់ដោយ `GET /api/combos/metrics`។
@@ -2288,5 +2200,3 @@ devin-cli ជាដើម)។ សូមមើល [ឯកសារយោងអ្
 - `requireLogin` អាចបើក ឬបិទបានតាមរយៈ `/api/settings/require-login`
 - ផ្លូវ `/v1/*` អាចតម្រូវឱ្យមាន Bearer API key នៅពេល `REQUIRE_API_KEY=true`
 - ក្នុងឯកសារយោងនេះ "management token" / "management-scoped API key" មានន័យថាជាប្រភេទមួយក្នុងចំណោមប្រភេទដែលមានក្នុងមគ្គុទ្ទេសក៍នោះ — មិនមែនជាប្រភេទ secret បន្ថែមដែលមិនបានកំណត់នោះទេ
-
-> **ការផ្លាស់ប្ដូរដែលមិនត្រូវគ្នាជាមួយកំណែមុន (v3.8.0)** — `/api/v1/agents/tasks/*` និង endpoint សម្រាប់ការគ្រប់គ្រង cooldown ឥឡូវនេះតម្រូវឱ្យមាន **ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណសម្រាប់ការគ្រប់គ្រង** (cookie `auth_token` របស់ dashboard ឬ API key ដែលមានវិសាលភាពគ្រប់គ្រង)។ Client ដែលពីមុនបានហៅផ្លូវទាំងនេះដោយគ្មានការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ នឹងទទួលបាន `401 Unauthorized`។ សូមមើល commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`)។

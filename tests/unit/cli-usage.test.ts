@@ -19,11 +19,6 @@ const ANALYTICS_DATA = {
     },
   ],
 };
-const BUDGET_DATA = {
-  budgets: [
-    { scope: "global", period: "monthly", limit: 100, used: 42.5, remaining: 57.5, pct: 0.425 },
-  ],
-};
 const QUOTA_DATA = {
   providers: [
     { provider: "openai", limit: 1000000, used: 500000, remaining: 500000, state: "available" },
@@ -81,8 +76,6 @@ function mockFetch(overrides: Record<string, unknown> = {}) {
   return (url: string) => {
     if (url.includes("/api/usage/analytics"))
       return Promise.resolve(makeResp(overrides.analytics ?? ANALYTICS_DATA));
-    if (url.includes("/api/usage/budget"))
-      return Promise.resolve(makeResp(overrides.budget ?? BUDGET_DATA));
     if (url.includes("/api/usage/quota"))
       return Promise.resolve(makeResp(overrides.quota ?? QUOTA_DATA));
     if (url.includes("/api/usage/call-logs"))
@@ -125,21 +118,6 @@ test("runUsageAnalytics exibe providers em json", async () => {
   assert.ok(Array.isArray(parsed));
   assert.equal(parsed[0].provider, "openai");
   assert.ok(parsed[0].costUsd > 0);
-});
-
-test("runBudgetList exibe budgets", async () => {
-  const origFetch = globalThis.fetch;
-  globalThis.fetch = mockFetch() as any;
-
-  const { runBudgetList } = await import("../../bin/cli/commands/usage.mjs");
-  const cmd = { optsWithGlobals: () => ({ output: "json", quiet: true }) };
-  const out = await captureStdout(() => runBudgetList({}, cmd as any));
-
-  globalThis.fetch = origFetch;
-  const parsed = JSON.parse(out);
-  assert.ok(Array.isArray(parsed));
-  assert.equal(parsed[0].scope, "global");
-  assert.ok(parsed[0].limit > 0);
 });
 
 test("runUsageQuota exibe providers de quota", async () => {
@@ -196,24 +174,4 @@ test("runUsageHistory exibe histórico", async () => {
   const parsed = JSON.parse(out);
   assert.ok(Array.isArray(parsed));
   assert.ok(parsed.length >= 1);
-});
-
-test("runBudgetSet envia POST com amount, scope e period", async () => {
-  let capturedBody: unknown = null;
-  const origFetch = globalThis.fetch;
-  globalThis.fetch = ((url: string, init: any) => {
-    if (url.includes("/api/usage/budget") && init?.method === "POST") {
-      capturedBody = JSON.parse(init.body);
-    }
-    return Promise.resolve(makeResp({ ok: true }));
-  }) as any;
-
-  const { runBudgetSet } = await import("../../bin/cli/commands/usage.mjs");
-  const cmd = { optsWithGlobals: () => ({ output: "table", quiet: false }) };
-  await captureStdout(() => runBudgetSet("50", { scope: "global", period: "monthly" }, cmd as any));
-
-  globalThis.fetch = origFetch;
-  assert.ok(capturedBody !== null);
-  assert.equal((capturedBody as any).amount, 50);
-  assert.equal((capturedBody as any).scope, "global");
 });

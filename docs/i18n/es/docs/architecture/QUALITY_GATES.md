@@ -4,7 +4,7 @@
 
 ---
 
-Este documento es la referencia oficial para todos los controles de calidad de CI en OmniRoute.
+Este documento es la referencia oficial para todos los controles de calidad de CI en 67router.
 Describe cada control, qué valida, en qué trabajo de CI se ejecuta, si utiliza
 una línea base de ratchet o una política de aprobado/reprobado, y si bloquea la compilación o es consultivo.
 
@@ -262,14 +262,14 @@ Se ejecuta después de `build`. Bloquea la fusión si falla.
 
 Estos se ejecutan con una programación cron (y `workflow_dispatch`), nunca en PRs. Todos son consultivos.
 
-| Flujo de trabajo       | Valida                                                                                                                                                                                      | Bloqueo        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | Pruebas basadas en propiedades con fast-check, con semilla aleatoria + alto número de ejecuciones                                                                                           | **Consultivo** |
-| `nightly-resilience`   | Compuerta de crecimiento de heap, inyección de fallos de caos, carga/soak con k6                                                                                                            | **Consultivo** |
-| `nightly-llm-security` | Protección contra inyección con promptfoo (modo bloqueo) + sondas garak (omitidas sin un secreto de proveedor)                                                                              | **Consultivo** |
-| `nightly-schemathesis` | Fuzzing de contratos OpenAPI (schemathesis) contra un OmniRoute en vivo usando `docs/openapi.yaml` — saca a la luz violaciones de la especificación / errores 500 no manejados (Fase 8 B.4) | **Consultivo** |
-| `nightly-mutation`     | Puntuación de pruebas de mutación con Stryker sobre el carril rápido de pruebas unitarias — los mutantes sobrevivientes exponen aserciones débiles                                          | **Consultivo** |
-| `nightly-compat`       | Matriz de compatibilidad del motor Node en los rangos soportados de `engines.node`                                                                                                          | **Consultivo** |
+| Flujo de trabajo       | Valida                                                                                                                                                                                     | Bloqueo        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------- |
+| `nightly-property`     | Pruebas basadas en propiedades con fast-check, con semilla aleatoria + alto número de ejecuciones                                                                                          | **Consultivo** |
+| `nightly-resilience`   | Compuerta de crecimiento de heap, inyección de fallos de caos, carga/soak con k6                                                                                                           | **Consultivo** |
+| `nightly-llm-security` | Protección contra inyección con promptfoo (modo bloqueo) + sondas garak (omitidas sin un secreto de proveedor)                                                                             | **Consultivo** |
+| `nightly-schemathesis` | Fuzzing de contratos OpenAPI (schemathesis) contra un 67router en vivo usando `docs/openapi.yaml` — saca a la luz violaciones de la especificación / errores 500 no manejados (Fase 8 B.4) | **Consultivo** |
+| `nightly-mutation`     | Puntuación de pruebas de mutación con Stryker sobre el carril rápido de pruebas unitarias — los mutantes sobrevivientes exponen aserciones débiles                                         | **Consultivo** |
+| `nightly-compat`       | Matriz de compatibilidad del motor Node en los rangos soportados de `engines.node`                                                                                                         | **Consultivo** |
 
 Las líneas base de rendimiento (heap, TTFB, tiempo de compilación) se registran, no se usan como compuerta: ver [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -541,7 +541,7 @@ lista de permitidos creciente genera una falsa sensación de calidad.
 
 ## Herramientas para agentes: LSP integrado en el proceso (opcional)
 
-Además de los controles de CI, OmniRoute incluye una estructura base **opcional** de `agent-lsp`
+Además de los controles de CI, 67router incluye una estructura base **opcional** de `agent-lsp`
 (un archivo `.mcp.json` a nivel de proyecto, Fase 7 Tarea 15). Cree `.mcp.json`
 para exponer un servidor de lenguaje TypeScript a los agentes de programación, de modo que resuelvan símbolos /
 diagnósticos **antes** de escribir código: un complemento de compilación antes de afirmar que funciona para

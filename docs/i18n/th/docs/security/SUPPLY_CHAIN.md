@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute เผยแพร่ npm + Docker artifacts เกตเหล่านี้ให้ข้อมูลแหล่งที่มา (provenance), รายการส่วนประกอบซอฟต์แวร์ (SBOM) และการสแกน CVE ซึ่งทั้งหมดเป็น OSS และถูกรวมเข้ากับเวิร์กโฟลว์การเผยแพร่ ท่าทีแบบ **Advisory-first** — คือจะรายงานก่อน และจะเลื่อนระดับเป็นการบล็อกหลังจากมีการเผยแพร่ที่สำเร็จครั้งแรก
+67router เผยแพร่ npm + Docker artifacts เกตเหล่านี้ให้ข้อมูลแหล่งที่มา (provenance), รายการส่วนประกอบซอฟต์แวร์ (SBOM) และการสแกน CVE ซึ่งทั้งหมดเป็น OSS และถูกรวมเข้ากับเวิร์กโฟลว์การเผยแพร่ ท่าทีแบบ **Advisory-first** — คือจะรายงานก่อน และจะเลื่อนระดับเป็นการบล็อกหลังจากมีการเผยแพร่ที่สำเร็จครั้งแรก
 
 | เกต                   | เครื่องมือ                                     | ที่ไหน                        | บล็อกหรือไม่?               | ผลลัพธ์                                |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :-------------------------- | :------------------------------------- |
@@ -41,7 +41,7 @@ osv และ Trivy เปรียบเทียบ deps กับฐานข
 - **ห่วงโซ่:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`
   ยืนยันผ่าน `package-lock.json` — มีเพียงหนึ่งแพ็คเกจในโครงสร้างการพึ่งพาทั้งหมด (`@openai/codex-security`) ที่ประกาศ `extract-zip` และมีเพียงหนึ่งแพ็คเกจ (`promptfoo`) ที่ประกาศ `@openai/codex-security`
 - **ไม่มีรีลีสที่แก้ไขแล้วในห่วงโซ่ใดๆ เลย** `extract-zip@2.0.1` (เผยแพร่ในปี 2020) เป็นรีลีสสุดท้ายของแพ็คเกจนี้ — ไม่ได้รับการดูแลแล้ว `@openai/codex-security` เวอร์ชัน npm-latest ปัจจุบัน (`0.1.29`) ยังคงดึง `extract-zip@2.0.1`
-- **ไม่สามารถเข้าถึงได้จากเวอร์ชันที่ใช้งานจริง** `promptfoo` เป็น devDependency-only (ไม่เคยถูกระบุภายใต้ `dependencies`) และไม่มีไฟล์ใดๆ ภายใต้ `src/`, `open-sse/` หรือ `bin/` ที่นำเข้าแพ็คเกจ npm `extract-zip` — ตัวช่วย `extractZip()` ของ OmniRoute เอง (`src/lib/versionManager/binaryManager.ts:93`) เรียกใช้ `unzip`/`tar` แบบเนทีฟและไม่เกี่ยวข้อง `@openai/codex-security` ยังมาพร้อมกับตัวป้องกัน symlink-traversal ของตัวเองเพิ่มเติมจาก onEntry callback ของ extract-zip
+- **ไม่สามารถเข้าถึงได้จากเวอร์ชันที่ใช้งานจริง** `promptfoo` เป็น devDependency-only (ไม่เคยถูกระบุภายใต้ `dependencies`) และไม่มีไฟล์ใดๆ ภายใต้ `src/`, `open-sse/` หรือ `bin/` ที่นำเข้าแพ็คเกจ npm `extract-zip` — ตัวช่วย `extractZip()` ของ 67router เอง (`src/lib/versionManager/binaryManager.ts:93`) เรียกใช้ `unzip`/`tar` แบบเนทีฟและไม่เกี่ยวข้อง `@openai/codex-security` ยังมาพร้อมกับตัวป้องกัน symlink-traversal ของตัวเองเพิ่มเติมจาก onEntry callback ของ extract-zip
 - **ห้าม** ตั้งชื่อแทน `extract-zip` ผ่าน `package.json` `overrides` — การแทนที่ที่ใช้งานได้จริงเพียงอย่างเดียวคือ Electron-org-internal และไม่เข้ากันกับ API ของ `@openai/codex-security` ในการตรวจสอบ onEntry/defaultDirMode/defaultFileMode; การแทนที่ดังกล่าวจะทำให้การตรวจสอบความปลอดภัยของแพ็คเกจนั้นหยุดทำงานโดยไม่แจ้งให้ทราบ
 - **ค่าพื้นฐาน:** `vulnCount` (3) ที่วัดได้ของ osv นั้นต่ำกว่าค่าพื้นฐาน `config/quality/quality-baseline.json` (27) ที่ถูกตรึงไว้มาก — ไม่จำเป็นต้องมีการเปลี่ยนแปลง ratchet
 - **ตัวป้องกันการถดถอย:** `tests/unit/extract-zip-14482-exposure.test.ts` ยืนยันห่วงโซ่และ invariant ที่ไม่นำเข้าในเวอร์ชันที่ใช้งานจริงข้างต้น; มันจะทำให้ CI ล้มเหลวหากมีการละเมิด (เช่น PR ในอนาคตทำให้ `extract-zip` สามารถเข้าถึงได้จากเวอร์ชันที่ใช้งานจริง)

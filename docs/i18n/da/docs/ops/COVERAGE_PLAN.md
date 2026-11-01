@@ -71,11 +71,9 @@ Disse filer har i øjeblikket den laveste linjedækning (< 60 %) og giver det be
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@ Temaer for fase 6-7:
 
 - `open-sse/services/compression/**` er den tætteste klynge af lav dækning og udgør størstedelen af det resterende underskud.
 - API-ruterne til batches og rerank (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) har brug for tests på handlerniveau.
-- Cloud agent-adapterne (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) og `tierResolver.ts` har brug for scenarietests.
 - Dokumentationskomponenterne til brugergrænsefladen og `src/mitm/systemCommands.ts` har lavere prioritet, men giver lette gevinster i branch-dækningen.
 
 ## Tjekliste for udførelse

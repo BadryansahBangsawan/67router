@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Source:** `open-sse/services/thinkingBudget.ts`
 
-Kinokontrol ng Thinking Budget kung **muling isinusulat ng OmniRoute ang mga parameter ng thinking/reasoning ng client** habang ipinapadala ang mga ito sa mga provider. **Hindi** nito ino-on o ino-off ang compression, routing, o prompt cache.
+Kinokontrol ng Thinking Budget kung **muling isinusulat ng 67router ang mga parameter ng thinking/reasoning ng client** habang ipinapadala ang mga ito sa mga provider. **Hindi** nito ino-on o ino-off ang compression, routing, o prompt cache.
 
 ## Mga Mode
 
-| Mode                        | Ang ginagawa ng OmniRoute                                                                                                     | Kailan gagamitin                                                                                                                                                                                           |
+| Mode                        | Ang ginagawa ng 67router                                                                                                      | Kailan gagamitin                                                                                                                                                                                           |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (default) | Hindi binabago ang mga field ng client (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config`, atbp.). | **Codex / Desktop / anumang client na dapat kumontrol sa effort + mga buod ng reasoning.** Kinakailangan para makita ang mga thinking panel kapag humiling ang client ng `reasoning.summary`.              |
 | **`auto`**                  | **Inaalis ang lahat** ng thinking/reasoning field mula sa request body bago ipadala sa upstream.                              | Kapag sadya mo lamang gustong ang **provider** ang bumuo ng mga default at **hindi** mo kailangan ng thinking na kontrolado ng client. **Hindi** ito nangangahulugang “awtomatikong ipakita ang thinking”. |
@@ -38,7 +38,7 @@ Kung nagpadala ang isang client (hal. Codex Desktop) ng `reasoning: { effort: "u
 | **Combo routing / fallbacks**                | Hiwalay. Hindi naaapektuhan.                                                                                                                           |
 | **Mga token limit / cost budget ng API key** | Hiwalay. Hindi naaapektuhan.                                                                                                                           |
 | **Reasoning replay cache**                   | Multi-turn na muling pag-inject para sa mga mahigpit na provider (DeepSeek, Kimi, Qwen-thinking, …). Hindi ito kapareho ng “show thinking” ng Desktop. |
-| **Pag-decrypt ng `encrypted_content`**       | **Imposible.** Opaque ang mga pribadong reasoning blob ng OpenAI/Codex. Hindi kailanman dine-decrypt ng OmniRoute ang mga ito (#7095 / #7176 / #7304). |
+| **Pag-decrypt ng `encrypted_content`**       | **Imposible.** Opaque ang mga pribadong reasoning blob ng OpenAI/Codex. Hindi kailanman dine-decrypt ng 67router ang mga ito (#7095 / #7176 / #7304).  |
 
 ## Nakikitang pag-iisip (mga Codex / Responses client)
 
@@ -51,7 +51,7 @@ Para maipakita ng isang client ang teksto ng pag-iisip, kailangan mo ang **lahat
 Kung “encrypted private reasoning” lang ang nakukuha mo, alinman sa:
 
 - **`auto`** ang mode (inalis ang kahilingan ng client), o
-- nagbalik ang upstream ng `encrypted_content` nang walang teksto ng buod (limitasyon ng provider; placeholder lang ang maipapakita ng OmniRoute, hindi plaintext).
+- nagbalik ang upstream ng `encrypted_content` nang walang teksto ng buod (limitasyon ng provider; placeholder lang ang maipapakita ng 67router, hindi plaintext).
 
 ## Mga halimbawa ng API
 
@@ -71,7 +71,7 @@ Schema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapt
 
 ### Pagpapanatili / pag-restart
 
-Iniimbak ang value sa ilalim ng settings key na `thinkingBudget` at nilo-load sa pagsisimula ng proseso (`hydrateThinkingBudgetConfig`). Pagkatapos baguhin sa pamamagitan ng DB o ilang path na hindi API, **i-restart ang proseso ng OmniRoute** para tumugma sa disk ang singleton na nasa memory.
+Iniimbak ang value sa ilalim ng settings key na `thinkingBudget` at nilo-load sa pagsisimula ng proseso (`hydrateThinkingBudgetConfig`). Pagkatapos baguhin sa pamamagitan ng DB o ilang path na hindi API, **i-restart ang proseso ng 67router** para tumugma sa disk ang singleton na nasa memory.
 
 ## Checklist ng operator
 

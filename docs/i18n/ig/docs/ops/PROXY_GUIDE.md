@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Igbo)
+# 🌐 67router Proxy Guide (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Gafee mgbochi mpaghara, chebe njirimara gị, ma zipụ okporoụzọ AI site na proxy ọ bụla — na-enweghị mgbagwoju anya nhazi ọ bụla.**
 
-OmniRoute nwere usoro njikwa proxy zuru oke nke na-enye gị ohere izipu okporoụzọ ndị na-eweta AI dị n'elu site na proxy HTTP, HTTPS, ma ọ bụ SOCKS5. Ma ị nọ na mpaghara egbochiri, ịchọrọ ntụgharị IP, ma ọ bụ chọrọ izochi akara njirimara ngwaọrụ — ntuziaka a kpuchiri ihe niile.
+67router nwere usoro njikwa proxy zuru oke nke na-enye gị ohere izipu okporoụzọ ndị na-eweta AI dị n'elu site na proxy HTTP, HTTPS, ma ọ bụ SOCKS5. Ma ị nọ na mpaghara egbochiri, ịchọrọ ntụgharị IP, ma ọ bụ chọrọ izochi akara njirimara ngwaọrụ — ntuziaka a kpuchiri ihe niile.
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Sava OmniRoute                          │
+│                       Sava 67router                          │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Ndebanye    │    │ Onye Nkesa   │    │ Nweta            │  │
@@ -83,7 +83,7 @@ unsupported_country_region_territory
 
 ## Sistemụ Proxy Ọkwa Anọ
 
-OmniRoute na-akwado nhazi proxy n’**ókè anọ nọọrọ onwe ha**, nke a na-ekpebi dịka usoro mkpa si dị:
+67router na-akwado nhazi proxy n’**ókè anọ nọọrọ onwe ha**, nke a na-ekpebi dịka usoro mkpa si dị:
 
 ```
 Usoro Mkpebi Dịka Mkpa Si Dị (nke kachasị elu → nke kachasị ala):
@@ -96,7 +96,7 @@ Usoro Mkpebi Dịka Mkpa Si Dị (nke kachasị elu → nke kachasị ala):
 
 ### Otu Mkpebi Si Arụ Ọrụ
 
-Mgbe OmniRoute zigara onye na-eweta dị n’elu arịrịọ, ọ na-akpọ `resolveProxyForConnectionFromRegistry()` nke na-enyocha ọkwa nke ọ bụla n’usoro:
+Mgbe 67router zigara onye na-eweta dị n’elu arịrịọ, ọ na-akpọ `resolveProxyForConnectionFromRegistry()` nke na-enyocha ọkwa nke ọ bụla n’usoro:
 
 1. **Ọkwa akaụntụ** — È nwere proxy e kenyere ID njikọ a kpọmkwem?
 2. **Ọkwa onye na-eweta** — È nwere proxy e kenyere onye na-eweta a (dịka, `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Mbubata/Mbupụ
 
-A na-etinye proxy na sistemụ **Nkwado/Mweghachi**. Mgbe ị na-ebupụ nhazi OmniRoute gị:
+A na-etinye proxy na sistemụ **Nkwado/Mweghachi**. Mgbe ị na-ebupụ nhazi 67router gị:
 
 1. Gaa na **Dashboard → Settings → Backup**
 2. Pịa **Export** — a na-etinye ndebanye proxy na nkesa ya
@@ -248,7 +248,7 @@ Ndebanye proxy na-akwadokwa **upsert site na host+port** — ọ bụrụ na ibu
 
 ### Mbugharị Sistemụ Ochie
 
-Ọ bụrụ na ị haziri proxies na ụdị ochie (tupu registry), OmniRoute ga-ebufe ha na-akpaghị aka:
+Ọ bụrụ na ị haziri proxies na ụdị ochie (tupu registry), 67router ga-ebufe ha na-akpaghị aka:
 
 ```
 Ebe nchekwa key_value ochie → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Nke a na-eme naanị otu ugboro na mbido mbụ mgbe emelitechara. Jiri `migrateL
 
 > 🆕 **Onye [@oyi77](https://github.com/oyi77) nyere aka** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Nsogbu [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute na-ejikọta na nyiwe obodo **[1proxy](https://1proxy-api.aitradepulse.com)** iji nye ohere iji **ọtụtụ narị proxy efu a kwadoro** sitere n'akụkụ ụwa niile. Nke a dabara nke ọma maka ndị ọrụ na-enweghị akụrụngwa proxy nke ha.
+67router na-ejikọta na nyiwe obodo **[1proxy](https://1proxy-api.aitradepulse.com)** iji nye ohere iji **ọtụtụ narị proxy efu a kwadoro** sitere n'akụkụ ụwa niile. Nke a dabara nke ọma maka ndị ọrụ na-enweghị akụrụngwa proxy nke ha.
 
 ### Otu O Si Arụ Ọrụ
 
@@ -273,7 +273,7 @@ OmniRoute na-ejikọta na nyiwe obodo **[1proxy](https://1proxy-api.aitradepulse
 └─────────────┘              └─────────────────┘               └──────────┘
 ```
 
-1. **Mekọrịta** — OmniRoute na-ewepụta proxy ndị a kwadoro site na 1proxy API
+1. **Mekọrịta** — 67router na-ewepụta proxy ndị a kwadoro site na 1proxy API
 2. **Chekwaa** — A na-echekwa proxy ndị ahụ n'otu tebụl `proxy_registry` ahụ nwere `source = 'oneproxy'`
 3. **Nyochaa** — Jiri protocol, obodo, na akara ogo nyochaa ha
 4. **Gbanwee** — Họrọ proxy kacha mma site n'iji atụmatụ ogo, enweghị usoro, ma ọ bụ usoro n'usoro
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Mgbochi Nchọpụta & Izo Onwe
 
-OmniRoute anaghị naanị ebufe okporo data site na proxy — ọ na-emekwa ka okporo data ahụ yie nke ziri ezi:
+67router anaghị naanị ebufe okporo data site na proxy — ọ na-emekwa ka okporo data ahụ yie nke ziri ezi:
 
 ### Nṅomi Mkpịsịaka TLS
 
@@ -407,11 +407,11 @@ Baajị ahụ na-egosikwa IP proxy a chọpụtara maka nkwenye.
 
 ## Ụdị Proxy Upstream
 
-Maka ndị na-enye ọrụ na-eji ụkpụrụ CLIProxyAPI, OmniRoute na-akwado ụdị proxy upstream atọ:
+Maka ndị na-enye ọrụ na-eji ụkpụrụ CLIProxyAPI, 67router na-akwado ụdị proxy upstream atọ:
 
 | Ụdị           | Nkọwa                                                       |
 | ------------- | ----------------------------------------------------------- |
-| `native`      | OmniRoute na-ejikwa ntụgharị proxy ozugbo (ndabara)         |
+| `native`      | 67router na-ejikwa ntụgharị proxy ozugbo (ndabara)          |
 | `cliproxyapi` | Na-enyefe ya n'aka instance CLIProxyAPI mpụga               |
 | `fallback`    | Na-ebu ụzọ nwaa native, ma laghachi na CLIProxyAPI ma ọ daa |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API Tunnels
 
-Maka ime ka instance OmniRoute gị dịrị na ịntanetị ọha (Cloudflare/ngrok/Tailscale) kama iziga okporo data na-apụ apụ site na proxy, lee [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API nke tunnel dị n'okpuru `/api/tunnels/{cloudflared,ngrok,tailscale}/*`, ọ dịkwa iche na usoro proxy na-apụ apụ e depụtara n'elu.
+Maka ime ka instance 67router gị dịrị na ịntanetị ọha (Cloudflare/ngrok/Tailscale) kama iziga okporo data na-apụ apụ site na proxy, lee [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API nke tunnel dị n'okpuru `/api/tunnels/{cloudflared,ngrok,tailscale}/*`, ọ dịkwa iche na usoro proxy na-apụ apụ e depụtara n'elu.
 
 ### API 1proxy
 
@@ -516,7 +516,7 @@ Tọọ `ENABLE_SOCKS5_PROXY=true` na faịlụ `.env` gị ma malitegharịa.
 
 ### Njehie "socket hang up" site na proxy
 
-Nke a bụ ihe a na-ahụkarị na proxy ndị dị ọnụ ala nke na-akwụsị njikọ ndị na-adịghị arụ ọrụ. OmniRoute ejirila ụzọ ndị a edozi nke a:
+Nke a bụ ihe a na-ahụkarị na proxy ndị dị ọnụ ala nke na-akwụsị njikọ ndị na-adịghị arụ ọrụ. 67router ejirila ụzọ ndị a edozi nke a:
 
 - Ịgbanyụ keep-alive na njikọ proxy (`keepAliveTimeout: 1`)
 - Ịgbanyụ pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ Nke a bụ ihe a na-ahụkarị na proxy ndị dị ọnụ ala nke na-akwụs�
 
 ### "unsupported_country_region_territory" n'oge OAuth
 
-Gbaa mbọ hụ na ahaziri proxy ahụ **tupu** ịmalite usoro OAuth. OmniRoute na-ezipụ mgbanwe token OAuth site na proxy ahaziri. Buru ụzọ tọọ proxy zuru ụwa ọnụ ma ọ bụ nke ọkwa provider, wee jikọọ.
+Gbaa mbọ hụ na ahaziri proxy ahụ **tupu** ịmalite usoro OAuth. 67router na-ezipụ mgbanwe token OAuth site na proxy ahaziri. Buru ụzọ tọọ proxy zuru ụwa ọnụ ma ọ bụ nke ọkwa provider, wee jikọọ.
 
 ### Anaghị eji proxy ahụ
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Nnyocha Ahụike Proxy (v3.8.16+)
 
-Usoro **proxy fast-fail** nke OmniRoute (`src/lib/proxyHealth.ts`) na-achọpụta proxy ndị nwụrụ anwụ n'ime <2s site na nyocha njikọ TCP ngwa ngwa, wee **chekwaa nsonaazụ ahụ na cache** iji zere ibu ọrụ na arịrịọ ọ bụla.
+Usoro **proxy fast-fail** nke 67router (`src/lib/proxyHealth.ts`) na-achọpụta proxy ndị nwụrụ anwụ n'ime <2s site na nyocha njikọ TCP ngwa ngwa, wee **chekwaa nsonaazụ ahụ na cache** iji zere ibu ọrụ na arịrịọ ọ bụla.
 
 ### Otu O Si Arụ Ọrụ
 
@@ -659,11 +659,11 @@ Port ahaziri iche dị na URL (`http://host:9999`) na-ebute ụzọ mgbe niile k
 
 ## Ntụle Proxy & Nleba Anya
 
-OmniRoute na-enyocha ojiji proxy ọ bụla iji nyere ndị na-ahụ maka sistemụ aka ịchọpụta usoro ntụgharị arịrịọ, mmụba mberede nke oge nzaghachi, na ọdịda ndị na-eme ugboro ugboro.
+67router na-enyocha ojiji proxy ọ bụla iji nyere ndị na-ahụ maka sistemụ aka ịchọpụta usoro ntụgharị arịrịọ, mmụba mberede nke oge nzaghachi, na ọdịda ndị na-eme ugboro ugboro.
 
 ### Ihe A Na-enyocha
 
-Maka arịrịọ ọ bụla na-agafe na proxy ahaziri, OmniRoute na-edekọ:
+Maka arịrịọ ọ bụla na-agafe na proxy ahaziri, 67router na-edekọ:
 
 | Metrik       | Nkọwa                                                       |
 | ------------ | ----------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Osisi Mkpebi Maka Atụmatụ Mgbanwe
 
-Mgbe e kenyere ọtụtụ proxy n'otu oke, OmniRoute na-eji **atụmatụ mgbanwe** họrọ nke a ga-eji maka arịrịọ ọ bụla. A na-ahazi atụmatụ ahụ n'ọkwa oke (zuru ụwa ọnụ, maka onye na-eweta ọrụ ọ bụla, maka akaụntụ ọ bụla, maka ngwakọta ọ bụla).
+Mgbe e kenyere ọtụtụ proxy n'otu oke, 67router na-eji **atụmatụ mgbanwe** họrọ nke a ga-eji maka arịrịọ ọ bụla. A na-ahazi atụmatụ ahụ n'ọkwa oke (zuru ụwa ọnụ, maka onye na-eweta ọrụ ọ bụla, maka akaụntụ ọ bụla, maka ngwakọta ọ bụla).
 
 ### Atụmatụ Ndị Dị
 

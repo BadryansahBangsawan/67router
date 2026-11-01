@@ -11,7 +11,7 @@
 > (#16413), e o que vê uma resposta antes do pós-chamada)
 
 Os guardrails aplicam segurança, política e transformações de conteúdo na fronteira
-entre o OmniRoute e os fornecedores a montante. Cada guardrail pode inspecionar (e,
+entre o 67router e os fornecedores a montante. Cada guardrail pode inspecionar (e,
 opcionalmente, rejeitar, transformar ou anotar) os payloads de pedidos (`preCall`)
 e as respostas a montante (`postCall`).
 
@@ -115,7 +115,7 @@ Quando a chave de API do chamador restringe `allowedConnections`, pools de quota
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), a ponte só escolhe
 modelos de reencaminhamento e de descrição que a chave pode usar, em ligações
 que a chave pode usar. A chamada de descrição passa então sempre pelo self-loop
-do OmniRoute com o cabeçalho `x-omniroute-self-loop-key-id`, para que o pedido
+do 67router com o cabeçalho `x-omniroute-self-loop-key-id`, para que o pedido
 de chat recetor aplique novamente a política de ligações e de modelos dessa
 chave. O `enforceApiKeyPolicy()` respeita esse cabeçalho apenas em conjunto com
 o bearer do self-loop, pelo que só pode restringir o acesso, e um id que não
@@ -146,7 +146,7 @@ amostragem de baixo detalhe degrada a precisão do OCR precisamente na tarefa de
 transcrição de texto que este prompt solicita, pelo que a própria chamada de
 descrição pede sempre detalhe elevado, independentemente do nível de detalhe
 utilizado pelo pedido de entrada original. Isto afeta apenas o corpo do pedido
-interno de descrição; não altera a forma como o OmniRoute encaminha o
+interno de descrição; não altera a forma como o 67router encaminha o
 `image_url.detail` do chamador no pedido principal — essa predefinição é
 aplicada separadamente, e apenas para clientes OpenCode detetados, em
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). O ramo
@@ -210,7 +210,7 @@ A página dedicada do dashboard é `/dashboard/settings/modality-bridge`. Os seu
 
 O antigo cartão Vision Bridge nas definições de IA é uma ligação de compatibilidade para a nova página; já não detém uma segunda cópia do formulário. O Media Providers também liga os fluxos de trabalho Image-to-Text e Speech-to-Text aos separadores correspondentes do Modality Bridge sem remover o playground de Speech-to-Text existente.
 
-**Bypass de admissão em self-loop:** quando a chamada describe é encaminhada através do próprio self-loop `/v1` do OmniRoute (modelo de fornecedor não padrão), o sub-pedido envia `x-omniroute-admission-bypass: internal` e é autenticado com a credencial de self-loop resolvida — o valor sentinela local `sk_omniroute` em modo local, ou a chave de ambiente `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` configurada pelo operador (#1350), para que as implementações com `REQUIRE_API_KEY=true` possam continuar a executar a chamada describe. O bypass só é honrado para essas credenciais exatas, pelo que clientes externos não podem usar o cabeçalho para contornar a admissão.
+**Bypass de admissão em self-loop:** quando a chamada describe é encaminhada através do próprio self-loop `/v1` do 67router (modelo de fornecedor não padrão), o sub-pedido envia `x-omniroute-admission-bypass: internal` e é autenticado com a credencial de self-loop resolvida — o valor sentinela local `sk_omniroute` em modo local, ou a chave de ambiente `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` configurada pelo operador (#1350), para que as implementações com `REQUIRE_API_KEY=true` possam continuar a executar a chamada describe. O bypass só é honrado para essas credenciais exatas, pelo que clientes externos não podem usar o cabeçalho para contornar a admissão.
 
 As predefinições antigas residem em `src/shared/constants/visionBridgeDefaults.ts`; as novas predefinições de modo/task-aware/cache e o resolvedor de definições residem em `src/shared/constants/modalityBridgeDefaults.ts`. O guardrail expõe uma opção de construtor `deps` para que os testes possam injetar implementações falsas de `getSettings` e `callVisionModel`.
 
@@ -339,7 +339,7 @@ O `scripts/perf/video-bridge-fu07-eval.ts` gera fixtures reais e determinística
 
 Cada fotograma está limitado a 4 MiB, todos os fotogramas em bruto em conjunto a 23 MiB, e a
 resposta serializada do broker a 32 MiB. Um diretório temporário privado é removido
-no `finally`. O OmniRoute não inclui o FFmpeg e não aceita um caminho de executável
+no `finally`. O 67router não inclui o FFmpeg e não aceita um caminho de executável
 personalizado. Antes da legendagem, a bridge aplica uma passagem conservadora de
 desduplicação visual: cada JPEG é reduzido a um buffer em tons de cinzento de 16×16 e é
 comparado apenas com o último fotograma retido. Para um orçamento de legendas pedido
@@ -384,7 +384,7 @@ suportada quando já possuem texto alinhado. Cada cue tem de transportar `text`,
 intervalo finito `start`/`end` dentro da duração sondada, e uma `source` incluída na
 lista de permissões (`client`, `embedded` ou `audio-bridge`); `confidence` tem como
 predefinição `1` e tem de permanecer entre `0` e `1`. Os cues duplicados exatos são
-colapsados. O OmniRoute nunca inicia a transcrição a partir destes metadados: os cues
+colapsados. O 67router nunca inicia a transcrição a partir destes metadados: os cues
 validados são copiados para o resultado descrito com a fonte, a confiança e o intervalo,
 e são apresentados como observações não fidedignas juntamente com as legendas dos
 fotogramas. O texto inválido, fora do intervalo ou sem proveniência é rejeitado em vez
@@ -986,7 +986,7 @@ promptfooconfig.yaml` com `INJECTION_GUARD_MODE=block`. Cada caso
   DAN) verifica que a resposta contém `error.code === "SECURITY_001"`, ou
   seja, que o guard rejeitou efetivamente o pedido.
 - **`garak` (consultivo)** — executa o garak `--probes
-promptinject,dan,leakreplay` contra uma instância local do OmniRoute
+promptinject,dan,leakreplay` contra uma instância local do 67router
   (`http://localhost:20128/v1`). Condicionado a um secret do fornecedor
   (`PROMPTFOO_PROVIDER_KEY`); é ignorado graciosamente e tem o sufixo
   `|| true`, pelo que reporta sem fazer falhar o CI.

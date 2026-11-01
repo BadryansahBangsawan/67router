@@ -4,7 +4,7 @@
 
 ---
 
-> **A Taƙaice**: OmniRoute yana amfani da **SQLite tare da rubutun mujallar WAL** a matsayin ma’ajiyar sa ta farko, tare da ɓoyewar **AES-256-GCM** don muhimman filaye yayin da bayanai suke ajiye. Wannan jagorar ta ƙunshi tsarin bayanai, ƙaura, ajiyar wucin-gadi/maido da bayanai, da littattafan gudanarwa.
+> **A Taƙaice**: 67router yana amfani da **SQLite tare da rubutun mujallar WAL** a matsayin ma’ajiyar sa ta farko, tare da ɓoyewar **AES-256-GCM** don muhimman filaye yayin da bayanai suke ajiye. Wannan jagorar ta ƙunshi tsarin bayanai, ƙaura, ajiyar wucin-gadi/maido da bayanai, da littattafan gudanarwa.
 
 **Madogara:**
 
@@ -19,7 +19,7 @@
 
 ## Me Ya Sa Aka Zaɓi SQLite?
 
-OmniRoute ya zaɓi SQLite maimakon PostgreSQL/MySQL saboda dalilai da dama:
+67router ya zaɓi SQLite maimakon PostgreSQL/MySQL saboda dalilai da dama:
 
 | Abu                   | SQLite                                    | PostgreSQL                                            |
 | --------------------- | ----------------------------------------- | ----------------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute ya zaɓi SQLite maimakon PostgreSQL/MySQL saboda dalilai da dama:
 | **Ajiyar wucin-gadi** | Kwafin fayil guda ɗaya                    | `pg_dump` ko hoton tsarin fayiloli                    |
 | **Yanayin amfani**    | Shigarwa ta kowane mai amfani, a ciki     | SaaS mai masu haya da yawa                            |
 
-Ga turawa na **mai amfani guda, da tsari guda** (babban yanayin amfani da OmniRoute), SQLite ya fi sauƙi kuma ya fi sauri.
+Ga turawa na **mai amfani guda, da tsari guda** (babban yanayin amfani da 67router), SQLite ya fi sauƙi kuma ya fi sauri.
 
 ### Rubutun Mujallar WAL
 
@@ -50,7 +50,7 @@ Tsohon girman cache shi ne **65,536 KiB (64 MiB)**. SQLite yana fassara ƙimar
 `cache_size` mara kyau a matsayin kimanin iyakar sama a KiB, sannan yana ware shafuka gwargwadon buƙata.
 **Saituna > Tsari da Ma’ajiya > Girman Cache** yana karɓar cikakkun lambobi daga **1 zuwa
 1,000,000 KiB**; adana saitin yana aiwatar da shi ga haɗin ma’ajiyar bayanai mai aiki,
-kuma OmniRoute yana dawo da ƙimar da aka adana yayin farawa.
+kuma 67router yana dawo da ƙimar da aka adana yayin farawa.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Tsarin Gine-ginen Module na Domain
 
-Rumbun bayanan OmniRoute yana da **module na TypeScript guda 110 na babban mataki** a cikin `src/lib/db/`. Kowane module na domain:
+Rumbun bayanan 67router yana da **module na TypeScript guda 110 na babban mataki** a cikin `src/lib/db/`. Kowane module na domain:
 
 - Yana kula da takamaiman table guda ɗaya ko fiye
 - Yana fitar da typed CRUD functions
@@ -90,7 +90,7 @@ Rumbun bayanan OmniRoute yana da **module na TypeScript guda 110 na babban matak
 
 ### Modules na DB Guda 110 na Babban Mataki
 
-OmniRoute yana da **fayilolin TypeScript guda 110 na babban mataki** a cikin `src/lib/db/`. A ƙasa akwai wasu daga cikin muhimman modules; duba jerin directory don cikakken jeri:
+67router yana da **fayilolin TypeScript guda 110 na babban mataki** a cikin `src/lib/db/`. A ƙasa akwai wasu daga cikin muhimman modules; duba jerin directory don cikakken jeri:
 
 | Module                  | Tables                                                         | Alhaki                                                                    |
 | ----------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Cikakken jerin teburori ~30+ yana cikin `src/lib/db/migrations/`.
 
 ## Ƙaurace-ƙaurace
 
-OmniRoute yana amfani da **ƙaurace-ƙaurace masu sigogi kuma masu maimaita aiki ba tare da illa ba** a cikin `src/lib/db/migrations/`. Kowace ƙaura fayil ɗin SQL guda ɗaya ce mai suna `NNN_description.sql`.
+67router yana amfani da **ƙaurace-ƙaurace masu sigogi kuma masu maimaita aiki ba tare da illa ba** a cikin `src/lib/db/migrations/`. Kowace ƙaura fayil ɗin SQL guda ɗaya ce mai suna `NNN_description.sql`.
 
 ### Sanya Sunan Ƙaura
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Canje-canjen da ba su dace da sigogin baya ba** (misali, goge columns) suna da sarƙaƙiya. OmniRoute BA YA goyon bayan downgrade — da zarar an aiwatar da ƙaura, canjin schema ɗin zai zama na dindindin. Yi shiri bisa haka.
+> **Canje-canjen da ba su dace da sigogin baya ba** (misali, goge columns) suna da sarƙaƙiya. 67router BA YA goyon bayan downgrade — da zarar an aiwatar da ƙaura, canjin schema ɗin zai zama na dindindin. Yi shiri bisa haka.
 
 ---
 
@@ -310,7 +310,7 @@ Saboda dalilan ingantaccen aiki, ana adana abubuwa masu zuwa a matsayin plaintex
 
 ## Muhimman Bayanan Ɓoye Bayanai (v3.8.16+)
 
-OmniRoute yana amfani da **`migrateLegacyEncryptedString()`** don sarrafa tsare-tsaren ɓoye bayanai guda biyu ba tare da mai amfani ya lura ba:
+67router yana amfani da **`migrateLegacyEncryptedString()`** don sarrafa tsare-tsaren ɓoye bayanai guda biyu ba tare da mai amfani ya lura ba:
 
 - **Na tsohon tsari** (kafin v3.5.0): "ɓoye bayanai" mai amfani da XOR (ba ainihin tsarin tsaro na cryptography ba)
 - **Na yanzu**: AES-256-GCM tare da ingantaccen IV da alamar tabbatarwa
@@ -399,7 +399,7 @@ Don yin ajiyar kwafin DB mai aiki ba tare da dakatar da sabis ba:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Wannan yana amfani da API na ajiyar kwafi ta kan layi na SQLite — babu matsala a gudanar da shi yayin da OmniRoute ke aiki.
+Wannan yana amfani da API na ajiyar kwafi ta kan layi na SQLite — babu matsala a gudanar da shi yayin da 67router ke aiki.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256MB
 
 ### Matsewa
 
-OmniRoute instances da ke aiki na dogon lokaci suna amfana daga gudanar da `VACUUM` lokaci-lokaci:
+67router instances da ke aiki na dogon lokaci suna amfana daga gudanar da `VACUUM` lokaci-lokaci:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Sake Saiti (Goge) Duk Bayanai
 
 ```bash
-# Da farko dakatar da OmniRoute
+# Da farko dakatar da 67router
 omniroute stop
 
 # Goge fayil ɗin DB
@@ -613,7 +613,7 @@ Wani tsari yana riƙe da makullin rubutu. Yi ɗaya daga cikin waɗannan:
 
 - Jira ɗayan tsarin ya gama (duba `lsof | grep storage.sqlite`)
 - Kashe ɗayan tsarin
-- Idan matsalar ta ci gaba, sake kunna OmniRoute
+- Idan matsalar ta ci gaba, sake kunna 67router
 
 ### "Ƙa'idar maɓallin waje ta gaza"
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 An gudanar da ƙaurar a cikin transaction, don haka ya kamata a ce an mayar da ita baya. Idan ba haka ba:
 
-1. **Dakatar da OmniRoute** (don hana ƙarin yunƙuri)
+1. **Dakatar da 67router** (don hana ƙarin yunƙuri)
 2. **Duba yanayin DB** ta amfani da `sqlite3`
 3. **Gyara da hannu** ɓangaren ƙaurar da aka yi
-4. **Sake gudanar da** OmniRoute (za a sake gwada ƙaurar)
+4. **Sake gudanar da** 67router (za a sake gwada ƙaurar)
 
 Don hana wannan, koyaushe fara gwada ƙaura a kan kwafi.
 

@@ -34,7 +34,7 @@ Visas URL yra tokio formato:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute eikite į **Providers → Add Provider**, pasirinkite **Microsoft 365 Copilot (BizChat)** ir įklijuokite prisijungimo duomenis tokiu formatu:
+6. 67router eikite į **Providers → Add Provider**, pasirinkite **Microsoft 365 Copilot (BizChat)** ir įklijuokite prisijungimo duomenis tokiu formatu:
 
 ```
 access_token=<jwt>; chathubPath=<oid>@<tenant>
@@ -49,9 +49,9 @@ Užuot rankiniu būdu kopijavę reikšmes iš WebSocket URL, galite eksportuoti 
 1. Atidarykite **DevTools → Network**.
 2. Pradėkite arba tęskite BizChat pokalbį (tai inicijuoja WebSocket ryšį).
 3. Dešiniuoju pelės mygtuku spustelėkite Network skydelyje ir pasirinkite **Save all as HAR with content**.
-4. OmniRoute teikėjo ryšio dialogo lange naudokite mygtuką **Import .har file**.
+4. 67router teikėjo ryšio dialogo lange naudokite mygtuką **Import .har file**.
 
-OmniRoute HAR faile ieško Chathub WebSocket URL, išskiria `access_token` bei `chathubPath` ir automatiškai užpildo prisijungimo duomenų laukus. Importuojant HAR iškoduojamas JWT galiojimo laikas ir parodoma likusi prieigos rakto galiojimo trukmė.
+67router HAR faile ieško Chathub WebSocket URL, išskiria `access_token` bei `chathubPath` ir automatiškai užpildo prisijungimo duomenų laukus. Importuojant HAR iškoduojamas JWT galiojimo laikas ir parodoma likusi prieigos rakto galiojimo trukmė.
 
 > **Niekada neįtraukite tikro HAR eksporto, prieigos rakto ar atnaujinimo rakto į versijų valdymo sistemą.** Testuose ir dokumentacijoje visada turi būti naudojamos vietaženklio reikšmės.
 
@@ -68,7 +68,7 @@ Kad nereikėtų duomenų gauti iš naujo rankiniu būdu, Microsoft atnaujinimo r
 | `refreshToken` | Microsoft OAuth atnaujinimo raktas, skirtas `substrate.office.com/sydney` aprėpčiai |
 | `tier`         | `individual` (numatytasis), `edu` arba `enterprise`                                 |
 
-Gaukite atnaujinimo raktą iš Microsoft įrenginio kodo arba autorizavimo kodo srauto, kurio aprėptis nustatyta į `substrate.office.com/sydney`. Nustačius `refreshToken`, OmniRoute prieš kiekvieną užklausą iš anksto atnaujina `access_token`, todėl nereikia iš naujo gauti duomenų kaskart pasibaigus ~75 minučių galiojimo laikui.
+Gaukite atnaujinimo raktą iš Microsoft įrenginio kodo arba autorizavimo kodo srauto, kurio aprėptis nustatyta į `substrate.office.com/sydney`. Nustačius `refreshToken`, 67router prieš kiekvieną užklausą iš anksto atnaujina `access_token`, todėl nereikia iš naujo gauti duomenų kaskart pasibaigus ~75 minučių galiojimo laikui.
 
 Jei `refreshToken` nenustatytas, pasibaigus kiekvienam galiojimo laikotarpiui turite rankiniu būdu iš naujo gauti WebSocket prisijungimo duomenis.
 

@@ -14,7 +14,7 @@ Executor-Code, OAuth-Standardwerte, Header oder den Zustand der Prozessumgebung 
 Dasselbe Manifest ist für Sidecars, die außerhalb des Prozesses ausgeführt werden, über HTTP unter
 `GET /api/v1/provider-plugin-manifest` verfügbar.
 
-OmniRoute teilt Bifrost und CLIProxyAPI diese URL über den
+67router teilt Bifrost und CLIProxyAPI diese URL über den
 Request-Header `X-OmniRoute-Provider-Manifest-Url` mit. Setzen Sie
 `OMNIROUTE_PROVIDER_MANIFEST_URL`, wenn das Sidecar anstelle des lokalen Request-Ursprungs
 eine öffentliche URL oder eine URL im Container-Netzwerk benötigt.
@@ -30,7 +30,7 @@ muss das Sidecar eine unbedingte Anfrage senden, anstatt eine `304`-Antwort zu a
 ## Ziel
 
 Provider-Metadaten sollen schrittweise in einen Plugin-Vertrag überführt werden, sodass der zeitkritische Request-Pfad
-letztendlich von einem Sidecar mit geringerer Latenz übernommen werden kann, während OmniRoute die
+letztendlich von einem Sidecar mit geringerer Latenz übernommen werden kann, während 67router die
 TypeScript-Route als Richtlinien-Gate und Fallback beibehält. Das Manifest ist additiv: Es
 ändert das Request-Routing nicht eigenständig.
 
@@ -74,7 +74,7 @@ die TypeScript-Quellen erneut auszulesen.
 | `usage-fetch`        | Verfügt über eine eingebundene Nutzungs- oder Kontingent-Abruffunktion (`getUsageForProvider`).      |
 | `usage-supported`    | Die Nutzungs-API akzeptiert diesen Provider (`isSupportedUsageConnection`).                          |
 
-`usage-fetch` dient nur der Erkennung. Es gibt an, dass OmniRoute weiß, wie die Nutzung für den
+`usage-fetch` dient nur der Erkennung. Es gibt an, dass 67router weiß, wie die Nutzung für den
 Provider abgerufen werden kann; es aktiviert den Abruf nicht, ändert keine Kontingentsemantik und impliziert nicht, dass das
 Dashboard-Kontingent-Widget für den Provider aktiviert ist — dieses Widget wird separat durch
 `USAGE_SUPPORTED_PROVIDERS` gesteuert. Die maßgebliche Quelle ist `USAGE_FETCHER_PROVIDERS` in

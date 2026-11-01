@@ -45,7 +45,7 @@ npm run test:e2e           # ไม่บังคับ แต่แนะน�
 การรับประกันของ WS1.3 (โทเค็นที่รั่วไหลไม่สามารถใช้เผยแพร่ได้โดยลำพัง — เพราะไม่มีโทเค็น)
 
 **การตั้งค่าครั้งเดียว (เจ้าของ):** npmjs.com → แพ็กเกจ `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: เจ้าของ `diegosouzapw`, รีโป `OmniRoute`, เวิร์กโฟลว์ `npm-publish.yml`
+Publisher_ → GitHub: เจ้าของ `diegosouzapw`, รีโป `67router`, เวิร์กโฟลว์ `npm-publish.yml`
 (สภาพแวดล้อม: ไม่มี) จนกว่าจะตั้งค่านี้ ขั้นตอนอัตโนมัติจะล้มเหลวด้วย `ENEEDAUTH`:
 ให้สั่งทำงานใหม่ด้วย `publish_mode=staged` (ด้านล่าง) หรือ `direct`
 

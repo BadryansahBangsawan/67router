@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Docker තුළ ධාවනය වන විට, සම්මත "Zed Keychain වෙතින් ආයාත කරන්න" ක්රියාවලිය අසාර්ථක වේ.
+67router Docker තුළ ධාවනය වන විට, සම්මත "Zed Keychain වෙතින් ආයාත කරන්න" ක්රියාවලිය අසාර්ථක වේ.
 එයට හේතුව container එකට host OS keychain daemon වෙත (Linux මත libsecret,
 macOS මත Keychain, Windows මත Credential Manager) ප්රවේශ විය නොහැකි වීම සහ host
 ගොනු පද්ධතියේ ඇති Zed වින්යාස නාමාවලි පෙරනිමියෙන් container එක තුළ නොපෙනීමයි.
@@ -20,7 +20,7 @@ Container එකක් තුළ අවහිර කරන ගැටලු ද�
    module එක Unix socket එකක් හෝ D-Bus session එකක් හරහා OS keychain සේවාව සමඟ සන්නිවේදනය කරයි.
    පෙරනිමියෙන් ඒ කිසිවක් container එකට සම්බන්ධ නොකරන බැවින්, අක්තපත්ර කියවීම් සෑම විටම අසාර්ථක වේ.
 
-OmniRoute විසින් අනුමාන ක්රම දෙකක් හරහා Docker පරිසරය හඳුනාගනී:
+67router විසින් අනුමාන ක්රම දෙකක් හරහා Docker පරිසරය හඳුනාගනී:
 
 - `/.dockerenv` පැවතීම (container එක ආරම්භ වන විට Docker daemon මඟින් ලියනු ලැබේ).
 - `/proc/1/cgroup` තුළ `docker` යන පෙළ තිබීම (Linux cgroup v1).
@@ -32,7 +32,7 @@ OmniRoute විසින් අනුමාන ක්රම දෙකක් හ
 
 1. **Dashboard → Providers → Zed** විවෘත කරන්න.
 2. **Manual Token Import** පැනලය keychain ආයාත කාඩ්පතට පහළින් දිස් වේ.
-   OmniRoute විසින් Docker හඳුනාගත් විට, පළමු අසාර්ථක keychain ආයාත උත්සාහයෙන් පසු මෙම පැනලය ස්වයංක්රීයව විහිදේ.
+   67router විසින් Docker හඳුනාගත් විට, පළමු අසාර්ථක keychain ආයාත උත්සාහයෙන් පසු මෙම පැනලය ස්වයංක්රීයව විහිදේ.
 3. dropdown එකෙන් provider එක තෝරන්න (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, හෝ DeepSeek).
 4. API key එක මුරපද ක්ෂේත්රයට අලවන්න.

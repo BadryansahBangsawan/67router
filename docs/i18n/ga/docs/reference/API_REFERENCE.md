@@ -6,7 +6,7 @@
 
 🌐 **Teangacha:** 🇺🇸 [Béarla](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Croíthagairt don OmniRoute API. Clúdaítear inti an dromchla poiblí `/v1` agus na críochphointí bainistíochta is mó a úsáidtear; is iad [`docs/openapi.yaml`](../openapi.yaml), atá inléite ag meaisín, agus an crann ródúcháin faoi `src/app/api/` na foinsí uileghabhálacha.
+Croíthagairt don 67router API. Clúdaítear inti an dromchla poiblí `/v1` agus na críochphointí bainistíochta is mó a úsáidtear; is iad [`docs/openapi.yaml`](../openapi.yaml), atá inléite ag meaisín, agus an crann ródúcháin faoi `src/app/api/` na foinsí uileghabhálacha.
 
 Le haghaidh an phrótacail shonraigh atá comhoiriúnach le OpenAI agus mhaitrís chumais na soláthraithe, féach
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Freagairt | `HIT` nó `MISS` (neamhshruthaithe)                                                                                                                                                                                                                                                    |
 | `X-OmniRoute-Idempotent` | Freagairt | `true` má dí-dhúblaíodh é                                                                                                                                                                                                                                                             |
 | `X-OmniRoute-Progress`   | Freagairt | `enabled` má tá rianú dul chun cinn ar siúl                                                                                                                                                                                                                                           |
-| `X-OmniRoute-Session-Id` | Freagairt | ID éifeachtach an tseisiúin a d’úsáid OmniRoute                                                                                                                                                                                                                                       |
+| `X-OmniRoute-Session-Id` | Freagairt | ID éifeachtach an tseisiúin a d’úsáid 67router                                                                                                                                                                                                                                        |
 | `X-OmniRoute-Request-Id` | Freagairt | ID comhghaolúcháin an iarratais (nuair is eol é)                                                                                                                                                                                                                                      |
-| `X-OmniRoute-Version`    | Freagairt | Leagan tiomsaithe OmniRoute (i láthair i gcónaí)                                                                                                                                                                                                                                      |
+| `X-OmniRoute-Version`    | Freagairt | Leagan tiomsaithe 67router (i láthair i gcónaí)                                                                                                                                                                                                                                       |
 | `X-OmniRoute-Cost-Saved` | Freagairt | An méid USD a sábháladh leis an taisce ar `HIT` (amasanna taisce amháin)                                                                                                                                                                                                              |
 | `X-OmniRoute-Decision`   | Freagairt | Rian ródúcháin: `strategy=<name>; provider=<alias>; latency_ms=<n>` (is é `<name>` straitéis an teaglama, nó `single` d’iarratas nach teaglama é) — i láthair i gcónaí ar fhreagairtí críochnaithe                                                                                    |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Cuntas a phionnáil in aghaidh na hiarrata
 
-Nuair a bhíonn roinnt nasc (cuntas nó eochair) ag soláthraí, roghnaíonn OmniRoute ceann amháin de ghnáth
+Nuair a bhíonn roinnt nasc (cuntas nó eochair) ag soláthraí, roghnaíonn 67router ceann amháin de ghnáth
 trína straitéis roghnúcháin cuntais. Ina ionad sin, is féidir le hiarraidh nasc sonrach amháin a phionnáil
 leis an gceannteideal `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ a phionnáil do gach tionscadal:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Foinse: `src/sse/handlers/chat.ts` (léamh an cheanntásca), `src/sse/services/a
 ## Léasanna Eisiacha Seisiún Bainistithe
 
 Is conradh ródaithe roghnach, neodrach ó thaobh an chliaint de é léasú eisiach seisiún bainistithe: coinníonn úinéir gníomhach amháin
-nasc incháilithe amháin OmniRoute. Ní léasaíonn sé samhail, ní éilíonn sé OAuth, ní shainaithníonn sé
+nasc incháilithe amháin 67router. Ní léasaíonn sé samhail, ní éilíonn sé OAuth, ní shainaithníonn sé
 cliant ar leith, agus ní éilíonn sé soláthraí ar leith.
 
 Ní mór raon feidhme `lease:exclusive` agus liosta sainráite neamhfholamh
@@ -190,7 +190,7 @@ Is féidir le húinéir léasa ghníomhaigh meiteashonraí taispeána atá sábh
 
 Cuirtear fál timpeall ar an ngníomh stádais roghnach seo leis an úinéir teimhneach, an eochair API bhainistithe fhíordheimhnithe, agus an ghlúin ghníomhach bheacht
 in idirbheart amháin bunachair sonraí. Níl in `displayName` ach ainm cumraithe an naisc agus é bearrtha;
-is é `null` atá ann nuair nach bhfuil ainm cumraithe sábháilte ar fáil. Ní chuireann OmniRoute seoladh ríomhphoist ná
+is é `null` atá ann nuair nach bhfuil ainm cumraithe sábháilte ar fáil. Ní chuireann 67router seoladh ríomhphoist ná
 aitheantas cuntais ginte ina ionad riamh. Is lipéad taispeána neamhíogair é luach an tsoláthraí agus ní
 aitheantóir ginte soláthraí chomhoiriúnaigh é riamh. Fágtar dintiúir, comharthaí, fianáin, aitheantóirí amha naisc nó eochrach
 API, haiseanna úinéara, rúin fálaithe agus sonraí inmheánacha ródaithe ar lár.
@@ -231,7 +231,7 @@ Tugann iomaíocht shealadach HTTP `429` ar ais mar aon le `Retry-After` agus:
 
 Ní chiallaíonn an freagra seo ach nach raibh an gnáth-thacar incháilithe folamh agus go raibh gach iarrthóir saor
 á choinneáil ag léas gníomhach le húinéir eile. Coinníonn samhlacha/soláthraithe nach dtacaítear leo, neamhréir bheartais, tréimhse mhoillithe, cuóta,
-sláinte agus gnáth-theipeanna incháilitheachta eile na freagraí OmniRoute atá acu cheana.
+sláinte agus gnáth-theipeanna incháilitheachta eile na freagraí 67router atá acu cheana.
 
 ### `x-omniroute-compression`
 
@@ -300,7 +300,7 @@ EmbeddingsV5Request de chuid Jina freisin agus **cuireann sé ar aghaidh gan ath
 }
 ```
 
-Féadfaidh luachanna dúchasacha `{ image | audio | video | pdf }` a bheith ina URL poiblí HTTPS, ina URI `data:`, nó ina mbase64 amh. Ní dhéanann OmniRoute teaghránú ar na hoibiachtaí sin ná ní fhaigheann sé URLanna dúchasacha íomhánna — aisghabhann Jina na meáin phoiblí féin. Cuirtear réimsí breise Jina (`task`, `normalized`, `truncate`, `embedding_type`) ar aghaidh. Diúltaíonn SKUanna Jina téacs-amháin do dhoiciméid nach téacs iad fós.
+Féadfaidh luachanna dúchasacha `{ image | audio | video | pdf }` a bheith ina URL poiblí HTTPS, ina URI `data:`, nó ina mbase64 amh. Ní dhéanann 67router teaghránú ar na hoibiachtaí sin ná ní fhaigheann sé URLanna dúchasacha íomhánna — aisghabhann Jina na meáin phoiblí féin. Cuirtear réimsí breise Jina (`task`, `normalized`, `truncate`, `embedding_type`) ar aghaidh. Diúltaíonn SKUanna Jina téacs-amháin do dhoiciméid nach téacs iad fós.
 
 Teorainneacha slándála agus iompair:
 
@@ -436,7 +436,7 @@ nglaoiteoir é, ionas nach gá do chód an chliaint cás speisialta a dhéanamh 
 
 ### Fíordheimhniú agus réiteach críochphointe Vertex AI DeepSeek OCR
 
-Athúsáideann `vertex-deepseek-ocr` an fíordheimhniú Vertex AI céanna a dtacaíonn OmniRoute leis cheana féin le haghaidh
+Athúsáideann `vertex-deepseek-ocr` an fíordheimhniú Vertex AI céanna a dtacaíonn 67router leis cheana féin le haghaidh
 tráchta comhrá/íomhá (`open-sse/executors/vertex.ts`): is é eochair API an naisc dintiúr JSON
 Cuntais Seirbhíse (a mhalartaítear ar chomhartha rochtana OAuth gearrshaolach trí shreabhadh iompróra JWT)
 nó comhartha rochtana OAuth a eisíodh cheana agus a úsáidtear mar atá. Is é URL an chríochphointe réamhtheachtaigh
@@ -460,7 +460,7 @@ Authorization: Bearer your-api-key
 
 ### Praghsanna samhlacha (`pricing`)
 
-Bíonn oibiacht `pricing` in iontráil nuair atá praghas na samhla ar eolas ag OmniRoute. Tagann an praghas
+Bíonn oibiacht `pricing` in iontráil nuair atá praghas na samhla ar eolas ag 67router. Tagann an praghas
 ón tábla praghsála a úsáideann cuntasaíocht costas: réamhshocruithe ionsuite, praghsanna sioncronaithe, agus
 sáruithe a socraíodh trí `/api/pricing`. Is praghsanna liosta iad seo, mar sin taispeánann soláthraithe síntiúis
 praghas in aghaidh an chomhartha freisin.
@@ -614,8 +614,8 @@ feidhmeanna rite, ceanntásca iarratais, agus sonraí cuntais ar lár d’aon gh
 
 ## Giniúint fuaime ElevenLabs
 
-Cumraigh ceangal soláthraí `elevenlabs` in OmniRoute le d’eochair API ElevenLabs.
-Fíordheimhníonn cliaint lena n-eochair **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Cumraigh ceangal soláthraí `elevenlabs` in 67router le d’eochair API ElevenLabs.
+Fíordheimhníonn cliaint lena n-eochair **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 soláthraíonn an geata eochair stóráilte an tsoláthraí mar `xi-api-key`. Ná seol eochair ElevenLabs riamh
 mar chomhartha iompróra an gheata.
 
@@ -680,7 +680,7 @@ dúchasacha cóid stádais agus coirp earráide réamhtheachtacha gan athrú, le
 plean agus `429` le haghaidh teorann cuóta. Caomhnaítear na ceanntásca `character-cost`, `song-id`, `request-id` agus `retry-after`
 nuair atá siad i láthair. Ní ráthaíonn iarmhéid creidmheasa saor in aisce rochtain ar gach
 samhail cheoil, formáid aschuir ná gné API: cinneann ElevenLabs an teidlíocht do gach iarratas.
-Caomhnaíonn an críochphointe aontaithe cóid stádais earráide i gclúdach normalaithe earráide OmniRoute.
+Caomhnaíonn an críochphointe aontaithe cóid stádais earráide i gclúdach normalaithe earráide 67router.
 
 Conarthaí réamhtheachtacha: [maisíochtaí fuaime](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [cumadóireacht cheoil](https://elevenlabs.io/docs/api-reference/music/compose) agus
@@ -721,7 +721,7 @@ Conarthaí réamhtheachtacha: [maisíochtaí fuaime](https://elevenlabs.io/docs/
 
 Leanann gach bealach POST an struchtúr céanna: `Bearer your-api-key` + corp JSON bailíochtaithe le Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, srl., féach `src/shared/validation/schemas.ts`). Seoltar 4xx ar ais nuair a theipeann ar bhailíochtú na scéime.
 
-I gcás cliant nach féidir leo `Authorization: Bearer ...` a cheangal, glacann OmniRoute le heochracha API san URL freisin, trí chomhoiriúnacht teaghráin iarratais (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) nó trí na críochphointí tiomnaithe `/api/v1/vscode/{token}/...` a bhfuil doiciméadú orthu thíos.
+I gcás cliant nach féidir leo `Authorization: Bearer ...` a cheangal, glacann 67router le heochracha API san URL freisin, trí chomhoiriúnacht teaghráin iarratais (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) nó trí na críochphointí tiomnaithe `/api/v1/vscode/{token}/...` a bhfuil doiciméadú orthu thíos.
 
 ```bash
 # Athrangú (soláthraí clárlainne néil, nó nód soláthraí atá comhoiriúnach le OpenAI mar "<prefix>/<model>")
@@ -883,7 +883,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Ní thugann Parallel Extract (`parallel-search`, an eochair API chéanna le Parallel Search) ach Markdown
 ar ais — tugann aon `format` eile `400` — agus cuireann sé teorainn 100,000 carachtar ar an ábhar. Nuair
 nach féidir an spriocleathanach féin a bhaint amach, tuairiscíonn an tseirbhís réamhtheachtach é laistigh de HTTP 200;
-nochtann OmniRoute é sin mar `422` le teachtaireacht sheasta.
+nochtann 67router é sin mar `422` le teachtaireacht sheasta.
 
 | Modh | Conair          | Cur síos                                                        |
 | ---- | --------------- | --------------------------------------------------------------- |
@@ -946,13 +946,13 @@ Bailíochtaíonn **Codex CLI** OpenAI ainm na samhla ar thaobh an chliaint nuair
 `supports_websockets = true` agus **diúltaíonn sé d’IDanna a bhfuil réimír soláthraí orthu** amhail
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
 a ChatGPT account`). Seol an ID **lom** (m.sh. `gpt-5.5`). Is do codex amháin atá droichead
-OmniRoute, mar sin réitíonn sé ID lom arís mar shamhail codex
+67router, mar sin réitíonn sé ID lom arís mar shamhail codex
 (`resolveCodexWsModelInfo`) sula dtollánaíonn sé chuig an tseirbhís réamhtheachtach — cé go ndéanfaí
 `gpt-5.5` lom a ródú chuig soláthraí eile thar HTTP murach sin.
 
 #### Codex CLI OpenAI a chumrú
 
-Dírigh Codex CLI ar OmniRoute trí sholáthraí saincheaptha a bhfuil tacaíocht WebSocket
+Dírigh Codex CLI ar 67router trí sholáthraí saincheaptha a bhfuil tacaíocht WebSocket
 aige a chur le `~/.codex/config.toml` (úsáid `CODEX_HOME` ar leith chun nach n-athrófar
 cumraíocht atá ann cheana):
 
@@ -965,15 +965,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # gan slais deiridh; díorthaítear URL WS (úsáid https/wss sa táirgeadh)
 wire_api = "responses"                    # an t-aon luach a dtacaítear leis ó mhí Feabhra 2026
 supports_websockets = true                # cumasaíonn sé an t-iompar Responses-thar-WS
-env_key = "OMNIROUTE_API_KEY"             # coinníonn sé eochair API OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # coinníonn sé eochair API 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # eochair API OmniRoute (eochair ar bith má tá REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # eochair API 67router (eochair ar bith má tá REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-Uasghrádaíonn an CLI `base_url + /responses` go WebSocket agus tollánaíonn OmniRoute é
+Uasghrádaíonn an CLI `base_url + /responses` go WebSocket agus tollánaíonn 67router é
 chuig an gceangal OAuth codex roghnaithe. Bailíochtaithe ó cheann ceann i gcoinne an fhreastalaí
 áitiúil: tugann ChatGPT `codex.rate_limits` + `response.created` ar ais agus sruthaíonn sé an
 críochnú.
@@ -1057,7 +1057,7 @@ céatadáin a chuirtear i láthair san **aschur gnáth-théacs** agus san **asch
 
 #### Foirmle Coigeartaithe an Scoithphointe
 
-Tacaíonn OmniRoute le scoithphointí réamhghníomhacha cuóta chun ídiú réamhtheachtach a chosc (cumraithe trí
+Tacaíonn 67router le scoithphointí réamhghníomhacha cuóta chun ídiú réamhtheachtach a chosc (cumraithe trí
 `quotaWindowThresholds` an naisc, réamhshocruithe an tsoláthraí, nó socruithe athléimneachta domhanda). Nuair atá tairseach scoithphointe
 (m.sh., `cutoff = 25%`) gníomhach ar fhuinneog chuóta, ríomhann an rindreálaí téacs an lamháltas atá fágtha mar seo:
 
@@ -1419,9 +1419,8 @@ gach cúltaca). Coinníonn liostú (`GET`) agus cruthú cúltaca de láimh (`PUT
 
 ### Meastóireachtaí
 
-| Críochphointe | Modh     | Cur síos                                             |
-| ------------- | -------- | ---------------------------------------------------- |
-| `/api/evals`  | GET/POST | Liostaigh tacair meastóireachta / rith meastóireacht |
+| Críochphointe | Modh | Cur síos |
+| ------------- | ---- | -------- |
 
 ### Beartais
 
@@ -1602,7 +1601,7 @@ Nótaí:
 
 - Athúsáideann na hailiasanna comharthaithe na láimhseálaithe céanna le `/v1/*` agus `/api/tags`; fanann cruthanna na bhfreagraí mar an gcéanna.
 - Tabhair tús áite do `Authorization: Bearer ...` aon uair a thacaíonn an cliant le ceanntásca saincheaptha.
-- D’fhéadfadh comharthaí URL-bhunaithe a bheith le feiceáil i logaí seachfhreastalaí droim ar ais, i stair an bhrabhsálaí, agus i dteiliméadracht lasmuigh de OmniRoute. Caith leo mar rogha chomhoiriúnachta, seachas mar an modh fíordheimhnithe réamhshocraithe.
+- D’fhéadfadh comharthaí URL-bhunaithe a bheith le feiceáil i logaí seachfhreastalaí droim ar ais, i stair an bhrabhsálaí, agus i dteiliméadracht lasmuigh de 67router. Caith leo mar rogha chomhoiriúnachta, seachas mar an modh fíordheimhnithe réamhshocraithe.
 
 ---
 
@@ -1710,7 +1709,7 @@ Is féidir teaglamaí ródúcháin ardleibhéil (a bhfuil achoimre orthu cheana 
 
 ## Crúcaí Gréasáin
 
-Síntiúis crúca gréasáin amach do theagmhais OmniRoute (cur i gcrích iarratais, ídiú cuóta, rothlú eochrach, etc.).
+Síntiúis crúca gréasáin amach do theagmhais 67router (cur i gcrích iarratais, ídiú cuóta, rothlú eochrach, etc.).
 
 | Modh   | Conair                    | Cur síos                                                                               |
 | ------ | ------------------------- | -------------------------------------------------------------------------------------- |
@@ -1741,31 +1740,6 @@ Síntiúis crúca gréasáin amach do theagmhais OmniRoute (cur i gcrích iarrat
 
 ---
 
-## Prótacal Gníomhairí
-
-Tascanna gníomhairí néil (Claude Code, Codex Cloud, OpenHands, srl.) a chuirtear i gcrích go cianda thar ceann úsáideoirí OmniRoute.
-
-| Modh   | Conair                        | Cur síos                                                                                                                                                |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Liostaigh tascanna — `?provider=`, `?status=`, `?limit=` roghnach (1–500, 50 de réir réamhshocraithe)                                                   |
-| POST   | `/api/v1/agents/tasks`        | Cruthaigh tasc — corp bailíochtaithe ag `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Filleann sé `201` le clúdach taisc |
-| DELETE | `/api/v1/agents/tasks?id=...` | Scrios tasc                                                                                                                                             |
-| GET    | `/api/v1/agents/tasks/[id]`   | Léigh tasc — athnuachan sioncrónach ar an stádas ón ngníomhaire néil réamhtheachtach nuair atá `external_id` socraithe                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Gníomh idirdhealaithe: `{action: "approve"}`, `{action: "message", message}`, nó `{action: "cancel"}`                                                   |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Scrios tasc sonrach de réir id                                                                                                                          |
-
-> **Údarú:** tá údarú bainistíochta riachtanach do gach modh (`requireCloudAgentManagementAuth`). Roimh v3.8.0 ní raibh siad seo údaraithe — féach gealltanas `588a0333` don athrú bristeach.
-
-```bash
-# Cruthaigh tasc néil Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Seachfhreastalaithe Bainistíochta
 
 Seachfhreastalaithe HTTP(S)/SOCKS amach is féidir a shannadh do sholáthraithe, do chuntais, nó go domhanda.
@@ -1789,7 +1763,7 @@ Seachfhreastalaithe HTTP(S)/SOCKS amach is féidir a shannadh do sholáthraithe,
 
 ## Athléimneacht (leathnaithe)
 
-Cuireann OmniRoute trí shásra neamhspleácha teipe sealadaí ar fáil; ligeann na críochphointí bainistíochta thíos d’oibreoirí iad a léamh agus a shárú:
+Cuireann 67router trí shásra neamhspleácha teipe sealadaí ar fáil; ligeann na críochphointí bainistíochta thíos d’oibreoirí iad a léamh agus a shárú:
 
 | Raon                | Stóráil staide                                 | Léamh                                     | Athshocrú / glanadh                                      |
 | ------------------- | ---------------------------------------------- | ----------------------------------------- | -------------------------------------------------------- |
@@ -1824,7 +1798,7 @@ Le haghaidh na tagartha coincheapúla iomláine agus réamhshocruithe scoradáin
 
 ## Scileanna
 
-Creat scileanna chun OmniRoute a leathnú le láimhseálaithe inrite saincheaptha, mar aon le comhtháthuithe margaidh.
+Creat scileanna chun 67router a leathnú le láimhseálaithe inrite saincheaptha, mar aon le comhtháthuithe margaidh.
 
 | Modh   | Conair                            | Cur síos                                                                                                                                            |
 | ------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1861,7 +1835,7 @@ Stór buan cuimhne comhrá/fíricí, a bhfuil a raon feidhme socraithe de réir 
 
 ## Freastalaí MCP
 
-Tagann OmniRoute le freastalaí leabaithe Model Context Protocol ina bhfuil 3 iompar (stdio, SSE, streamable-http) agus uirlisí a bhfuil raon feidhme sainithe acu. Léann críochphointí an deais thíos sonraí stádais/iniúchta agus déanann siad seachfhreastalaíocht ar na hiompar HTTP.
+Tagann 67router le freastalaí leabaithe Model Context Protocol ina bhfuil 3 iompar (stdio, SSE, streamable-http) agus uirlisí a bhfuil raon feidhme sainithe acu. Léann críochphointí an deais thíos sonraí stádais/iniúchta agus déanann siad seachfhreastalaíocht ar na hiompar HTTP.
 
 | Modh | Conair | Cur síos |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1883,50 +1857,12 @@ Tagann OmniRoute le freastalaí leabaithe Model Context Protocol ina bhfuil 3 io
 
 ## Freastalaí A2A
 
-Cuireann OmniRoute críochphointe A2A (Gníomhaire le Gníomhaire) JSON-RPC 2.0 ar fáil, chomh maith le fillteán REST le haghaidh iniúchta agus úsáide deaise.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # roghnach mura bhfuil OMNIROUTE_API_KEY socraithe
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Modhanna a dtacaítear leo (iad uile faoi rialú `settings.a2aEnabled`):
-
-| Modh             | Cur síos                                                            |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Rith sioncrónach scile; tugtar `{task, artifacts, metadata}` ar ais |
-| `message/stream` | Rith sruthaithe SSE den tacar céanna scileanna                      |
-| `tasks/get`      | Faigh tasc de réir `taskId`                                         |
-| `tasks/cancel`   | Cealaigh tasc de réir `taskId`                                      |
-
-Scileanna ionsuite: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Cárta Gníomhaire
-
-```bash
-GET /.well-known/agent.json
-```
-
-Tugtar an cárta poiblí gníomhaire A2A ar ais (ainm, cur síos, cumais, catalóg scileanna, scéim fíordheimhnithe) — taiscthe go poiblí ar feadh 1u. Ní theastaíonn fíordheimhniú.
+Cuireann 67router críochphointe A2A (Gníomhaire le Gníomhaire) JSON-RPC 2.0 ar fáil, chomh maith le fillteán REST le haghaidh iniúchta agus úsáide deaise.
 
 ### Cúntóirí REST
 
 | Modh | Conair                       | Cur síos                                                                                                                |
 | ---- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET  | `/api/a2a/status`            | A2A cumasaithe + staitisticí tascanna + achoimre thaiscthe ar chárta an ghníomhaire                                     |
 | GET  | `/api/a2a/tasks`             | Liostaigh tascanna — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST | `/api/a2a/tasks`             | (Níl sé curtha i bhfeidhm mar chúntóir REST — cruthaigh trí JSON-RPC `message/send`)                                    |
 | GET  | `/api/a2a/tasks/[id]`        | Aisghabh tasc amháin                                                                                                    |
@@ -1946,12 +1882,8 @@ Tugtar an cárta poiblí gníomhaire A2A ar ais (ainm, cur síos, cumais, catal�
 | GET | `/api/cloud/models/alias` | Liostaigh ailiasanna samhlacha mar a nochtar iad do shioncronú néil |
 | GET | `/api/assess` | Léigh na catagóirithe measúnaithe is déanaí (de réir soláthraí/samhla) |
 | POST | `/api/assess` | Rith measúnú — corp: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Liostaigh na pacáistí meastóireachta ionsuite + na riteanna is déanaí |
-| POST | `/api/evals` | Spreag rith meastóireachta |
-| POST | `/api/evals/suites` | Cruthaigh pacáiste saincheaptha meastóireachta — corp bailíochtaithe ag `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Aisghabh pacáiste saincheaptha meastóireachta |
 
-**Fíordheimhniú:** bailíochtaíonn `/api/cloud/auth` eochair Bearer go díreach agus ní thugann sé ar ais eochair mhasctha agus `projectId` gach naisc ach amháin i gcás eochrach a bhfuil an raon feidhme `manage` / `admin` aici; teastaíonn seisiún bainistíochta/eochair API ó na conairí eile `/api/cloud/*`, `/api/evals/*`, agus `/api/assess`. Úsáideann POST `/api/assess` `validateBody` le scéim raoin feidhme d’aontas idirdhealaithe.
+**Fíordheimhniú:** bailíochtaíonn `/api/cloud/auth` eochair Bearer go díreach agus ní thugann sé ar ais eochair mhasctha agus `projectId` gach naisc ach amháin i gcás eochrach a bhfuil an raon feidhme `manage` / `admin` aici; teastaíonn seisiún bainistíochta/eochair API ó na conairí eile `/api/cloud/*`, agus `/api/assess`. Úsáideann POST `/api/assess` `validateBody` le scéim raoin feidhme d’aontas idirdhealaithe.
 
 ---
 
@@ -2112,7 +2044,7 @@ Críochphointí do riarthóirí amháin le haghaidh bainistíocht oibríochtúil
 
 ## Bainistíocht Uirlisí CLI
 
-Bainistigh uirlisí CLI a chomhtháthaíonn le OmniRoute (antigravity, commandCode,
+Bainistigh uirlisí CLI a chomhtháthaíonn le 67router (antigravity, commandCode,
 devin-cli, srl.). Féach [Tagairt do Sholáthraithe](./PROVIDER_REFERENCE.md) chun an liosta iomlán a fháil.
 
 | Modh | Conair                                  | Cur síos                                                                                                                                                                              |
@@ -2221,26 +2153,6 @@ Féach [Creat Scileanna](../frameworks/SKILLS.md) chun na sonraí iomlána a fh�
 
 ---
 
-## Breiseáin
-
-Bainistigh breiseáin OmniRoute (eisínteachtaí tríú páirtí).
-
-| Modh   | Conair                             | Cur Síos                           |
-| ------ | ---------------------------------- | ---------------------------------- |
-| GET    | `/api/plugins`                     | Liostaigh na breiseáin shuiteáilte |
-| POST   | `/api/plugins/marketplace/install` | Suiteáil breiseán ón margadh       |
-| DELETE | `/api/plugins/[name]`              | Díshuiteáil breiseán               |
-| POST   | `/api/plugins/[name]/activate`     | Gníomhachtaigh breiseán            |
-| POST   | `/api/plugins/[name]/deactivate`   | Díghníomhachtaigh breiseán         |
-| GET    | `/api/plugins/[name]/config`       | Faigh cumraíocht breiseáin         |
-| PUT    | `/api/plugins/[name]/config`       | Nuashonraigh cumraíocht breiseáin  |
-
-**Fíordheimhniú:** Teastaíonn seisiún bainistíochta.
-
-Féach [Creat Breiseán](../frameworks/PLUGIN_SDK.md) chun na sonraí iomlána a fháil.
-
----
-
 ## Ródú Scátha
 
 **Ní dromchla REST neamhspleách é** comparáid scátha / A-B idir soláthraithe — cumraítear é trí ródú teaglama (féach [Teaglama Uathoibríoch](../routing/AUTO-COMBO.md)). Soláthraíonn `GET /api/combos/metrics` méadrachtaí comparáide do gach teaglama.
@@ -2275,5 +2187,3 @@ theaghlach dintiúr (seisiún deais, comhartha CLI áitiúil, Comhartha Rochtana
 - Is féidir `requireLogin` a scoránú trí `/api/settings/require-login`
 - Féadfaidh eochair API Bearer a bheith riachtanach do bhealaí `/v1/*` nuair atá `REQUIRE_API_KEY=true`
 - Ciallaíonn "comhartha bainistíochta" / "eochair API le raon feidhme bainistíochta" sa tagairt seo ceann de na teaghlaigh sa treoir sin — ní cineál rúin bhreise neamhshainithe
-
-> **Athrú bristeach (v3.8.0)** — teastaíonn **fíordheimhniú bainistíochta** anois ó `/api/v1/agents/tasks/*` agus ó chríochphointí bainistíochta na tréimhse fuaraithe (fianán deais `auth_token` nó eochair API le raon feidhme bainistíochta). Gheobhaidh cliaint a ghlaoigh ar na bealaí seo roimhe seo gan fíordheimhniú `401 Unauthorized`. Féach gealltanas `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

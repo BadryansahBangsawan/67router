@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Українська)
+# 67router MCP Server Documentation (Українська)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Встановлення
 
-OmniRoute MCP є вбудованим. Запустіть його так:
+67router MCP є вбудованим. Запустіть його так:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline та сумісних клієнтів MCP.
 | `omniroute_switch_combo`        | `write:combos`        | Активація або деактивація комбінації                                                                                                            |
 | `omniroute_create_combo`        | `write:combos`        | Створення перевіреної комбінації через наявний API комбінацій                                                                                   |
 | `omniroute_check_quota`         | `read:quota`          | Використана/загальна квота, відсоток залишку, час скидання, стан токена                                                                         |
-| `omniroute_route_request`       | `execute:completions` | Надсилання запиту на завершення чату через маршрутизацію OmniRoute                                                                              |
+| `omniroute_route_request`       | `execute:completions` | Надсилання запиту на завершення чату через маршрутизацію 67router                                                                               |
 | `omniroute_cost_report`         | `read:usage`          | Звіт про витрати за періодами (сеанс/день/тиждень/місяць)                                                                                       |
 | `omniroute_list_models_catalog` | `read:models`         | Повний каталог моделей із можливостями, станом і цінами                                                                                         |
 | `omniroute_radar_catalog`       | `read:radar`          | Локальний підписаний каталог Radar; необов’язкові фільтри за постачальником/сімейством                                                          |
@@ -152,7 +152,7 @@ Cursor, Cline та сумісних клієнтів MCP.
 
 ### Фільтр дерева доступності MCP (v3.8.0)
 
-Окремо від наведених вище інструментів стиснення OmniRoute містить фільтр постобробки, який
+Окремо від наведених вище інструментів стиснення 67router містить фільтр постобробки, який
 стискає **результати інструментів** браузерних інструментів та інструментів доступності MCP, перш ніж вони повертаються
 агенту. Цей фільтр сам по собі не є інструментом — він прозоро обробляє будь-який результат інструмента, що містить
 деталізований текст дерева доступності або знімка браузера (≥2000 символів).
@@ -236,7 +236,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 | :-------------------------------- | :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog`  | Показує всі 45 навичок агентів із необов’язковими фільтрами `category` (api\|cli) та `area`; повертає метадані й дані про покриття                               |
 | `omniroute_agent_skills_get`      | `read:catalog`  | Отримує повні метадані та вміст SKILL.md для окремої навички за канонічним `id`                                                                                  |
-| `omniroute_agent_skills_coverage` | `read:catalog`  | Статистика покриття: скільки з 23 API-, 21 CLI- та 1 конфігураційної навички мають файли SKILL.md у файловій системі порівняно із загальною кількістю в каталозі |
+| `omniroute_agent_skills_coverage` | `read:catalog`  | Статистика покриття: скільки з 22 API-, 20 CLI- та 1 конфігураційної навички мають файли SKILL.md у файловій системі порівняно із загальною кількістю в каталозі |
 
 Повний каталог та інформацію про те, як його використовують зовнішні агенти, див. у [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -245,17 +245,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 Наведений вище перелік інструментів MCP (110 унікальних інструментів, обчислених за допомогою `countUniqueMcpTools()`) навмисно
 обмежений операціями маршрутизації, кешування, стиснення, пам’яті, навичок, проксі та джерел контексту під час виконання. Два суміжні
 фреймворки постачаються разом із сервером MCP у v3.8.0 і документуються окремо:
-
-### Хмарні агенти
-
-Хмарні агенти — це зовнішні AI-агенти для програмування (codex-cloud, cursor-cloud, devin, jules), інтегровані в
-OmniRoute через ту саму модель підключення, що використовується для постачальників LLM. Вони доступні через
-власний інтерфейс REST (`/api/v1/agents/*`) і **не** є частиною каталогу інструментів MCP
-— виклик хмарного агента не використовує область доступу MCP.
-
-- Реалізація: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Життєвий цикл: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Документація: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Захисні механізми
 
@@ -427,8 +416,6 @@ API-ключа. Ранг токена доступу не є вхідним па
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                              |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                       |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                         |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                     |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                        |
 | `read:obsidian`       | 13 інструментів читання — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 інструментів запису — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                 |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                      |
@@ -481,7 +468,7 @@ stdio/локальний клієнт зберігають без змін на�
 
 | Змінна                                  | Значення за замовчуванням                 | Призначення                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | :-------------------------------------- | :---------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                  | Базова URL-адреса, яку сервер MCP використовує під час виклику внутрішніх API OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                  | Базова URL-адреса, яку сервер MCP використовує під час виклику внутрішніх API 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `OMNIROUTE_API_KEY`                     | (порожньо)                                | Ключ API, що передається як `Authorization: Bearer` до внутрішніх викликів API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (лише `"true"` вмикає цю функцію) | Якщо ввімкнено, відсутність областей доступу призводить до відхилення викликів інструментів і запису `scope_denied:<reason>` у журнал аудиту. Застосування обмежень ТАКОЖ примусово вмикається незалежно від цього прапорця для будь-якого виклику HTTP/SSE, визначеного за окремим для кожного ключа заголовком Authorization (`source === "authInfo"`), якому бракує повної області доступу `manage`/`admin`, — наприклад, для ключа, що має лише вузьку область обходу `mcp:connect`, — тому це значення за замовчуванням безпечне лише для локального/stdio сценарію з одним оператором і ніколи не є безпечним для віддаленого доступу не через loopback-інтерфейс |
 | `OMNIROUTE_MCP_SCOPES`                  | (порожньо)                                | Розділений комами список дозволених областей доступу, які за замовчуванням вважаються «доступними» (використовується, коли виклик не надає власних областей доступу)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -584,7 +571,6 @@ MCP_TOOL_ALLOW="omniroute_route_request,omniroute_check_quota" omniroute --mcp
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Визначення інструментів навичок (4 інструменти)                                 |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Визначення інструментів джерела контексту Notion (6 інструментів)               |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Визначення інструментів гейміфікації (8 інструментів)                           |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Інструменти реєстрації та керування плагінами (8 інструментів)                  |
 | `src/app/api/mcp/status/route.ts`                                        | Кінцева точка `/api/mcp/status`                                                 |
 | `src/app/api/mcp/tools/route.ts`                                         | Кінцева точка `/api/mcp/tools`                                                  |
 | `src/app/api/mcp/sse/route.ts`                                           | Маршрут транспорту SSE `/api/mcp/sse`                                           |

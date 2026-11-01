@@ -39,7 +39,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRouteలో, **Providers → Add Provider**కు వెళ్లి, **Microsoft 365 Copilot
+6. 67routerలో, **Providers → Add Provider**కు వెళ్లి, **Microsoft 365 Copilot
    (BizChat)**ను ఎంచుకుని, క్రెడెన్షియల్ను కింది ఫార్మాట్లో అతికించండి:
 
 ```
@@ -56,9 +56,9 @@ WebSocket URL నుండి విలువలను మాన్యువల�
 1. **DevTools → Network** తెరవండి.
 2. BizChat సంభాషణను ప్రారంభించండి లేదా కొనసాగించండి (ఇది WebSocket కనెక్షన్ను ట్రిగ్గర్ చేస్తుంది).
 3. Network ప్యానెల్లో రైట్-క్లిక్ చేసి, **Save all as HAR with content** ఎంచుకోండి.
-4. OmniRouteలో, ప్రొవైడర్ కనెక్షన్ డైలాగ్లోని **Import .har file** బటన్ను ఉపయోగించండి.
+4. 67routerలో, ప్రొవైడర్ కనెక్షన్ డైలాగ్లోని **Import .har file** బటన్ను ఉపయోగించండి.
 
-OmniRoute, Chathub WebSocket URL కోసం HARను స్కాన్ చేసి,
+67router, Chathub WebSocket URL కోసం HARను స్కాన్ చేసి,
 `access_token` మరియు `chathubPath`ను వెలికితీసి, క్రెడెన్షియల్ ఫీల్డ్లను స్వయంచాలకంగా నింపుతుంది.
 HAR దిగుమతి JWT గడువు ముగింపు సమయాన్ని డీకోడ్ చేసి, మిగిలిన టోకెన్ జీవితకాలాన్ని చూపుతుంది.
 
@@ -81,7 +81,7 @@ HAR దిగుమతి JWT గడువు ముగింపు సమయా
 | `tier`         | `individual` (డిఫాల్ట్), `edu`, లేదా `enterprise`                         |
 
 `substrate.office.com/sydney`కు స్కోప్ చేయబడిన Microsoft device-code లేదా authorization-code ఫ్లో
-నుండి రిఫ్రెష్ టోకెన్ను పొందండి. `refreshToken` సెట్ చేసినప్పుడు, ప్రతి అభ్యర్థనకు ముందు OmniRoute
+నుండి రిఫ్రెష్ టోకెన్ను పొందండి. `refreshToken` సెట్ చేసినప్పుడు, ప్రతి అభ్యర్థనకు ముందు 67router
 `access_token`ను ముందస్తుగా రిఫ్రెష్ చేస్తుంది, కాబట్టి ప్రతి ~75-నిమిషాల గడువు ముగిసిన తర్వాత
 మీరు మళ్లీ సంగ్రహించాల్సిన అవసరం లేదు.
 

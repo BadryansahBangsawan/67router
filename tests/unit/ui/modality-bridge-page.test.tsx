@@ -130,7 +130,8 @@ describe("Modality Bridge settings page", () => {
   });
 
   it("registers the sidebar item and exposes it in developer/admin presets", () => {
-    const section = SIDEBAR_SECTIONS.find((candidate) => candidate.id === "configuration");
+    // Sidebar v2: Configuration is System → "Settings" sub-group.
+    const section = SIDEBAR_SECTIONS.find((candidate) => candidate.id === "system");
     expect(section).toBeTruthy();
     const item = section
       ? getSectionItems(section).find((candidate) => candidate.id === "settings-modality-bridge")

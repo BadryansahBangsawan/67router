@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 具有**四种凭证家族**，可以授权管理路由。
+67router 具有**四种凭证家族**，可以授权管理路由。
 它们不可互换。推理 API 密钥 (`sk-…`) **不**管理服务器，除非它们被明确授予 `manage` 或 `admin` 范围。
 
 规范实现：`src/lib/api/requireManagementAuth.ts`。

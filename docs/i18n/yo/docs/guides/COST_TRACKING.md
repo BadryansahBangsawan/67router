@@ -4,7 +4,7 @@
 
 ---
 
-Bí OmniRoute ṣe ń ṣírò, ṣàkọsílẹ̀, àti jabo iye owó gbogbo ìbéèrè — àti ìdí tí nọ́mbà orí
+Bí 67router ṣe ń ṣírò, ṣàkọsílẹ̀, àti jabo iye owó gbogbo ìbéèrè — àti ìdí tí nọ́mbà orí
 dásíbọ́ọ̀dù fi jẹ́ **olùtọpinpin owó tí a fipamọ́**, kì í ṣe owó tí a ń jẹ ọ́.
 
 Wo pẹ̀lú: [Ìtọ́sọ́nà Olùlò](./USER_GUIDE.md) · [Àwòrán Àkójọpọ̀ Àwọn Ẹ̀ya](./FEATURES.md)
@@ -13,11 +13,11 @@ Wo pẹ̀lú: [Ìtọ́sọ́nà Olùlò](./USER_GUIDE.md) · [Àwòrán Àkój�
 
 ## Ohun tí ó jẹ́ (àti ohun tí kì í ṣe)
 
-OmniRoute ń yan iye owó USD fún ìbéèrè kọ̀ọ̀kan sí gbogbo ìparí nípa sísọ iye àwọn token
+67router ń yan iye owó USD fún ìbéèrè kọ̀ọ̀kan sí gbogbo ìparí nípa sísọ iye àwọn token
 di púpọ̀ mọ́ iye owó awoṣe kan. Àwọn nọ́mbà wọ̀nyí ni ó ń pèsè agbára fún dásíbọ́ọ̀dù **Àwọn Iye Owó**,
 CLI `omniroute cost` / `omniroute usage`, àwọn ìkójáde CSV/JSON, àti àwọn ìnáwó tí a yàn fún kọ́kọ́rọ́ API kọ̀ọ̀kan.
 
-> **“Iye owó” orí dásíbọ́ọ̀dù jẹ́ olùtọpinpin owó tí a fipamọ́, kì í ṣe owó tí a ń jẹ ọ́.** OmniRoute kò gba owó lọ́wọ́ rẹ rí
+> **“Iye owó” orí dásíbọ́ọ̀dù jẹ́ olùtọpinpin owó tí a fipamọ́, kì í ṣe owó tí a ń jẹ ọ́.** 67router kò gba owó lọ́wọ́ rẹ rí
 > — ó ń darí àwọn ìbéèrè rẹ sí àwọn olupèsè tí o ti sopọ̀ tẹ́lẹ̀ (àwọn
 > ìforúkọsílẹ̀ tìrẹ, àwọn ìpele ọ̀fẹ́, àti àwọn kọ́kọ́rọ́ API). “Àpapọ̀ iye owó $290” tí ó kójọ lórí àwọn
 > awoṣe ọ̀fẹ́ nìkan túmọ̀ sí pé ó fẹ́rẹ̀ẹ́ jẹ́ **$290 tí o _kò_ san** fún API olówó. Iye yìí jẹ́ _ìṣírò_
@@ -29,7 +29,7 @@ jẹ́ olùtọpinpin owó tí a fipamọ́, kì í ṣe owó tí a ń jẹ ọ�
 
 Nítorí pé nọ́mbà náà jẹ́ ìṣírò:
 
-- Ó sinmi lórí tábìlì iye owó tí OmniRoute ní fún awoṣe kọ̀ọ̀kan. Awoṣe tí kò ní àkọsílẹ̀
+- Ó sinmi lórí tábìlì iye owó tí 67router ní fún awoṣe kọ̀ọ̀kan. Awoṣe tí kò ní àkọsílẹ̀
   iye owó ń ṣàfikún iye owó `0` (ó máa ń hàn gẹ́gẹ́ bí ìlà “Àtijọ́ / Ọ̀fẹ́” nínú olùṣàwárí).
 - Ìrìnàjò ìpele ọ̀fẹ́ àti ti ìforúkọsílẹ̀ ṣì ń kó iye owó _ìṣírò_ jọ — iye
   tí o ń fipamọ́ ni, kì í ṣe iye tí o jẹ.
@@ -47,7 +47,7 @@ Nítorí pé nọ́mbà náà jẹ́ ìṣírò:
 2. **Iye owó òde tí a múṣiṣẹ́pọ̀** — tí a gbà láti inú
    `model_prices_and_context_window.json` gbogbogbòò ti LiteLLM nígbà tí a bá mú ìṣiṣẹ́pọ̀ ṣiṣẹ́ (a tọ́jú rẹ̀ sínú namespace
    `pricing_synced` ọ̀tọ̀, kí ó má bàa pa àwọn àtúnṣe rẹ rẹ́).
-3. **Àwọn iye aiyípadà tí a kọ sínú kóòdù** — tí a fi ránṣẹ́ pẹ̀lú OmniRoute.
+3. **Àwọn iye aiyípadà tí a kọ sínú kóòdù** — tí a fi ránṣẹ́ pẹ̀lú 67router.
 
 Ìṣiṣẹ́pọ̀ iye owó òde jẹ́ **èyí tí o gbọ́dọ̀ yan láti mú ṣiṣẹ́**, a sì pa á nípa àiyẹsẹ̀. Àwọn env var tó yẹ
 (wo [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ bí a bá sọ ohun mìíràn.
 
 ## CLI
 
-CLI OmniRoute ń pèsè àwọn àṣẹ fún iye owó, lílò, àti ìdíyelé (tí a forúkọsílẹ̀ nínú
+CLI 67router ń pèsè àwọn àṣẹ fún iye owó, lílò, àti ìdíyelé (tí a forúkọsílẹ̀ nínú
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

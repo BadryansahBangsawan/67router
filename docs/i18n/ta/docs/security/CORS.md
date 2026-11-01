@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, ஒரே மையப்படுத்தப்பட்ட அனுமதிப் பட்டியலிலிருந்து எந்த **உலாவி origins** குறுக்கு-origin பதில்களைப் படிக்கலாம் என்பதைக் கட்டுப்படுத்துகிறது. இந்த மாதிரி **இயல்பாகவே fail-closed**:
+67router, ஒரே மையப்படுத்தப்பட்ட அனுமதிப் பட்டியலிலிருந்து எந்த **உலாவி origins** குறுக்கு-origin பதில்களைப் படிக்கலாம் என்பதைக் கட்டுப்படுத்துகிறது. இந்த மாதிரி **இயல்பாகவே fail-closed**:
 நீங்கள் வெளிப்படையாக அனுமதிக்கும் வரை எந்த origin-மும் அனுமதிக்கப்படாது. அனுமதிப் பட்டியல் எவ்வாறு
 தீர்மானிக்கப்படுகிறது, `CORS_ALLOW_ALL=true` உண்மையில் எவற்றை வெளிப்படுத்துகிறது (மேலும், முக்கியமாக, எவற்றை
 வெளிப்படுத்துவதில்லை), மேம்பாட்டு மற்றும் production சூழல்களை எவ்வாறு பாதுகாப்பாக உள்ளமைப்பது, wildcard செயல்பாட்டில்
@@ -45,13 +45,13 @@ OmniRoute, ஒரே மையப்படுத்தப்பட்ட அன�
 ## அச்சுறுத்தல் மாதிரி — `CORS_ALLOW_ALL=true` உண்மையில் எவற்றை வெளிப்படுத்துகிறது
 
 பொதுவான OWASP எச்சரிக்கையை ("wildcard CORS = எந்தத் தளமும் உங்கள் API-ஐ அழைக்கலாம்") தீவிரமாகக்
-கருதுவது அவசியம். ஆனால், ஒரு குறிப்பிட்ட செயலாக்க உண்மையின் காரணமாக OmniRoute-இன் exposure
+கருதுவது அவசியம். ஆனால், ஒரு குறிப்பிட்ட செயலாக்க உண்மையின் காரணமாக 67router-இன் exposure
 **பொதுவான சூழலைவிடக் குறுகியது**:
 
 > **மைய `applyCorsHeaders()` ஒருபோதும்
 > `Access-Control-Allow-Credentials`-ஐ அனுப்புவதில்லை.** Server
 > `Access-Control-Allow-Credentials: true`-ஐ அனுப்பாத வரை, ஒரு _credentialed_
-> (cookie கொண்ட) குறுக்கு-origin response-ஐ உலாவி வெளிப்படுத்தாது. OmniRoute-இன் பகிரப்பட்ட CORS பாதை
+> (cookie கொண்ட) குறுக்கு-origin response-ஐ உலாவி வெளிப்படுத்தாது. 67router-இன் பகிரப்பட்ட CORS பாதை
 > இதை ஒருபோதும் செய்வதில்லை.
 
 `CORS_ALLOW_ALL=true` இருந்தாலும்கூட, ஒவ்வொரு surface-க்கும் இதன் பொருள்:
@@ -68,20 +68,6 @@ management routes-இல் CORS **preflight-ஐ அனுமதித்தல�
 அதை ஒரு குறுக்கு-origin பக்கத்தால் வழங்க முடியாது. பகிரப்பட்ட CORS பாதையில் இது session-hijack அல்லது
 credential-theft vector **அல்ல**.
 
-### ஒரு உண்மையான விதிவிலக்கு — `/api/v1/agents/`
-
-Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) தங்களுக்கான
-CORS headers-ஐத் **தாங்களே** அமைக்கின்றன
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`), மேலும்
-`Access-Control-Allow-Origin: <origin>|*` உடன்
-`Access-Control-Allow-Credentials: true`-ஐயும் **அனுப்புகின்றன**. Origin-ஐத் திருப்பி அனுப்புவதும் credentials-உம்
-ஒன்றாக இருக்கும் ஒரே surface இதுதான்; மேலும் இது
-`CORS_ALLOW_ALL`-இலிருந்து **சுயாதீனமானது**. இந்த routes management அங்கீகாரத்தைக் கொண்டவை
-(`requireManagementAuth`); dashboard-ஐ host-க்கு வெளியே வெளிப்படுத்தும் operators,
-response headers மூலம் குறுக்கு-origin credentialed read அனுமதிக்கப்படும் ஒரே இடம் இதுதான் என்பதை
-அறிந்திருக்க வேண்டும். இதை வெளிப்படையான அனுமதிப் பட்டியலுக்குக் கட்டுப்படுத்துவது,
-இந்த CORS வழிகாட்டுதலிலிருந்து தனியாகக் கண்காணிக்கப்படுகிறது.
-
 ## உற்பத்திச் சரிபார்ப்புப் பட்டியல்
 
 - **உற்பத்திச் சூழலில் ஒருபோதும் `CORS_ALLOW_ALL=true` என அமைக்க வேண்டாம்.** அதை அமைக்காமல் விடவும்.
@@ -91,7 +77,7 @@ response headers மூலம் குறுக்கு-origin credentialed re
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute ஒரு reverse proxy / tunnel-க்குப் பின்னால் (nginx, Caddy, Cloudflare
+- 67router ஒரு reverse proxy / tunnel-க்குப் பின்னால் (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) இயங்கினால், CORS மட்டுமே உங்கள் ஒரே கட்டுப்பாடு **அல்ல** — loopback route
   guard, spawn செய்யக்கூடிய routes-ஐத் தொடர்ந்து பாதுகாக்கிறது ([ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)
   ஐப் பார்க்கவும்). 403 பிழையை "சரிசெய்ய" `X-Forwarded-For: 127.0.0.1` ஐப் போலியாக
@@ -106,7 +92,7 @@ response headers மூலம் குறுக்கு-origin credentialed re
 உருவாக்கச் சூழலில்கூட wildcard அரிதாகவே தேவைப்படும். நீங்கள் பயன்படுத்தும் dev servers-ஐ மட்டும் அனுமதிக்கவும்:
 
 ```bash
-# local OmniRoute-ஐ அழைக்கும் Vite (5173) + Next.js (3000) dev servers
+# local 67router-ஐ அழைக்கும் Vite (5173) + Next.js (3000) dev servers
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -126,14 +112,14 @@ restart செய்யாமல், runtime-இல் **Dashboard → Security 
   permissive config-இலும் management/dashboard origins-ஐச் சேர்க்க வேண்டாம்; அவை கண்டிப்பாக
   fail-closed ஆகவே இருக்க வேண்டும்.
 
-## எடுத்துக்காட்டு: OmniRoute-க்கு முன்னால் reverse proxy
+## எடுத்துக்காட்டு: 67router-க்கு முன்னால் reverse proxy
 
-CORS-ஐ OmniRoute தானே செயல்படுத்துகிறது, எனவே proxy பொதுவாக `Access-Control-*`
+CORS-ஐ 67router தானே செயல்படுத்துகிறது, எனவே proxy பொதுவாக `Access-Control-*`
 headers-ஐச் சேர்க்கவோ மாற்றி எழுதவோ **கூடாது** (இரட்டை headers உலாவிகளைச் செயலிழக்கச் செய்யும்). TLS-ஐ
-முடிவுறச் செய்து forward செய்யுங்கள் — preflight-க்கு OmniRoute பதிலளிக்கட்டும்:
+முடிவுறச் செய்து forward செய்யுங்கள் — preflight-க்கு 67router பதிலளிக்கட்டும்:
 
 ```nginx
-# nginx — OmniRoute-க்கு forward செய்யுங்கள்; இங்கே Access-Control-* ஐச் சேர்க்க வேண்டாம்
+# nginx — 67router-க்கு forward செய்யுங்கள்; இங்கே Access-Control-* ஐச் சேர்க்க வேண்டாம்
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -141,25 +127,24 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # forwarding headers-ஐ வைத்திருங்கள்: அதே host-இல் உள்ள proxy loopback வழியாக இணைகிறது, மேலும் அவைதான்
-    # அழைப்பவர் local operator அல்ல என்பதை OmniRoute-க்குத் தெரிவிக்கின்றன. அவற்றில் எதையும் சேர்க்காத proxy
+    # அழைப்பவர் local operator அல்ல என்பதை 67router-க்குத் தெரிவிக்கின்றன. அவற்றில் எதையும் சேர்க்காத proxy
     # ஒவ்வொரு remote caller-ஐயும் local போலத் தோன்றச் செய்கிறது. X-Forwarded-For-ஐ 127.0.0.1 ஆகவும் ஒருபோதும் அமைக்க வேண்டாம்.
 }
 ```
 
-அனுமதிக்கப்பட்ட browser origins-ஐ proxy-இல் அல்லாமல், OmniRoute-இல் (`CORS_ALLOWED_ORIGINS`
+அனுமதிக்கப்பட்ட browser origins-ஐ proxy-இல் அல்லாமல், 67router-இல் (`CORS_ALLOWED_ORIGINS`
 அல்லது Security tab) அமைக்கவும்.
 
 ## மூலக் கோப்புகள்
 
-| பொறுப்பு                                             | கோப்பு                                                               |
-| ---------------------------------------------------- | -------------------------------------------------------------------- |
-| Allowlist resolution + `getCorsStatus()`             | `src/server/cors/origins.ts`                                         |
-| Middleware பயன்பாடு (உண்மையின் ஒற்றை ஆதாரம்)         | `src/server/authz/pipeline.ts`                                       |
-| Settings → runtime origin injection                  | `src/lib/config/runtimeSettings.ts`                                  |
-| Dashboard-க்கான runtime நிலை                         | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Dashboard எச்சரிக்கை banner                          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins புலம்                           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| ஒவ்வொரு route-க்குமான Cloud-Agent CORS (விதிவிலக்கு) | `src/lib/cloudAgent/api.ts`                                          |
+| பொறுப்பு                                     | கோப்பு                                                               |
+| -------------------------------------------- | -------------------------------------------------------------------- |
+| Allowlist resolution + `getCorsStatus()`     | `src/server/cors/origins.ts`                                         |
+| Middleware பயன்பாடு (உண்மையின் ஒற்றை ஆதாரம்) | `src/server/authz/pipeline.ts`                                       |
+| Settings → runtime origin injection          | `src/lib/config/runtimeSettings.ts`                                  |
+| Dashboard-க்கான runtime நிலை                 | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Dashboard எச்சரிக்கை banner                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins புலம்                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## மேலும் காண்க
 

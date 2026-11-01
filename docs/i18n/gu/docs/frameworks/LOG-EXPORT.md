@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute કૉલ લૉગ્સનું બાહ્ય એનાલિટિક્સ સ્ટોરમાં સતત, ઇન્ક્રિમેન્ટલ નિકાસ.
+67router કૉલ લૉગ્સનું બાહ્ય એનાલિટિક્સ સ્ટોરમાં સતત, ઇન્ક્રિમેન્ટલ નિકાસ.
 
 Logs ડૅશબોર્ડ ટૅબ વિનંતી ઇતિહાસને SQLite (`call_logs`)માં રાખે છે, જે રોટેશન અને રિટેન્શન દ્વારા
 મર્યાદિત હોય છે. લૉગ નિકાસ એ જ રેકોર્ડ સેટને નિર્ધારિત સમયપત્રક મુજબ બહાર મોકલે છે, જેથી તે
@@ -280,7 +280,7 @@ dashboard form—આ બધાં registry વાંચે છે.
 - આંશિક નિષ્ફળતા પર `send()` એ **અવશ્ય throw કરવું જોઈએ**. Resolve થવાનો અર્થ છે કે "ગંતવ્ય પાસે આ rows છે",
   અને cursor કાયમ માટે તેમની આગળ વધી જાય છે.
 - User-supplied URL લેતું ગંતવ્ય fetching પહેલાં તેને
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) દ્વારા validate કરવું જ જોઈએ,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) દ્વારા validate કરવું જ જોઈએ,
   જેમ webhooks કરે છે એ જ રીતે. BigQuery માટે આ જરૂરી નથી: તેના hosts constants છે.
 
 ---

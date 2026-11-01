@@ -5,7 +5,7 @@
 ---
 
 Tài liệu này mô tả nền tảng định tuyến thích ứng dựa trên phản hồi được bổ sung vào
-OmniRoute. Nền tảng này được thiết kế có chủ đích để giữ quy mô nhỏ: giới thiệu một kênh
+67router. Nền tảng này được thiết kế có chủ đích để giữ quy mô nhỏ: giới thiệu một kênh
 kết quả định tuyến có kiểu dữ liệu, một tín hiệu chất lượng trực tuyến cung cấp dữ liệu
 cho bộ chấm điểm auto-combo hiện có, một trình xuất OpenTelemetry tùy chọn và một
 endpoint giải thích quyết định. Nền tảng này **không** thay thế ngăn xếp khả năng phục hồi
@@ -14,7 +14,7 @@ autopilot) — mà bổ trợ cho ngăn xếp đó.
 
 ## 1. Bối cảnh kiến trúc
 
-OmniRoute là một mặt phẳng dữ liệu có **đường dẫn nóng của yêu cầu** và một **mặt phẳng
+67router là một mặt phẳng dữ liệu có **đường dẫn nóng của yêu cầu** và một **mặt phẳng
 điều khiển/thông minh**. Đường dẫn nóng phải luôn nhanh, tiết kiệm bộ nhớ, bất đồng bộ,
 có khả năng phục hồi và có thể dự đoán được. Hoạt động đánh giá, chấm điểm chất lượng,
 thử nghiệm và phân tích dữ liệu lịch sử thuộc về mặt phẳng điều khiển.
@@ -24,7 +24,7 @@ Tác tử AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   mặt phẳng dữ liệu (nhanh, đồng bộ, trong bộ nhớ)
+│    67router        │   mặt phẳng dữ liệu (nhanh, đồng bộ, trong bộ nhớ)
 │  định tuyến/chuyển  │
 │  đổi dự phòng       │
 │  tình trạng/rào chắn│
@@ -44,16 +44,15 @@ Tác tử AI / IDE
 
 ### Những gì đã có sẵn (đã kiểm tra, không triển khai trùng lặp)
 
-| Khái niệm                               | Phần triển khai hiện có                                                                                  |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Tính khả dụng (có thể gửi lưu lượng?)   | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, được lưu trong DB), thời gian chờ kết nối, khóa mô hình |
-| Báo cáo tình trạng                      | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                  |
-| Lưu lượng bóng                          | `open-sse/services/combo/shadowRouting.ts`                                                               |
-| Rào chắn                                | `src/lib/guardrails/` (hook trước/sau)                                                                   |
-| Bộ nhớ đệm chính xác                    | `src/lib/semanticCache.ts` (dựa trên chữ ký)                                                             |
-| Trình đánh giá/định tuyến theo đánh giá | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                     |
-| Khả năng giải thích quyết định combo    | `open-sse/services/combo/decisionTrace.ts`                                                               |
-| Sự kiện thời gian thực của dashboard    | `src/lib/events/eventBus.ts` (kênh thông báo UI, payload `unknown`, lịch sử 100 mục)                     |
+| Khái niệm                             | Phần triển khai hiện có                                                                                  |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Tính khả dụng (có thể gửi lưu lượng?) | Circuit breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, được lưu trong DB), thời gian chờ kết nối, khóa mô hình |
+| Báo cáo tình trạng                    | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                  |
+| Lưu lượng bóng                        | `open-sse/services/combo/shadowRouting.ts`                                                               |
+| Rào chắn                              | `src/lib/guardrails/` (hook trước/sau)                                                                   |
+| Bộ nhớ đệm chính xác                  | `src/lib/semanticCache.ts` (dựa trên chữ ký)                                                             |
+| Khả năng giải thích quyết định combo  | `open-sse/services/combo/decisionTrace.ts`                                                               |
+| Sự kiện thời gian thực của dashboard  | `src/lib/events/eventBus.ts` (kênh thông báo UI, payload `unknown`, lịch sử 100 mục)                     |
 
 Lớp sự kiện định tuyến **không** phải là bản triển khai lại của `eventBus`: bus đó là
 kênh thông báo thời gian thực của dashboard (tên _sự kiện_ có kiểu dữ liệu, payload
@@ -241,7 +240,7 @@ Tệp: `open-sse/services/routing/otel.ts`
 - Các span tuân theo quy ước ngữ nghĩa GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) cùng với các thuộc tính định tuyến
-  OmniRoute (kết quả, trạng thái, TTFT, số lần thử lại, phương án dự phòng).
+  67router (kết quả, trạng thái, TTFT, số lần thử lại, phương án dự phòng).
 - `record()` chỉ thêm sự kiện vào một bộ đệm có giới hạn (O(1)); một bộ hẹn giờ chạy nền
   sẽ bất đồng bộ gửi dữ liệu qua `POST {endpoint}/v1/traces`. Khi quá tải, các sự kiện
   cũ nhất bị loại bỏ (bộ đếm `dropped`) — không bao giờ tạo backpressure lên data plane.
@@ -261,7 +260,7 @@ Tệp: `open-sse/services/routing/otel.ts`
 
 ## 6. Tích hợp evaluation plane (sẵn sàng cho Future AGI)
 
-OmniRoute xem Future AGI (hoặc bất kỳ evaluator nào) là một **backend
+67router xem Future AGI (hoặc bất kỳ evaluator nào) là một **backend
 trí tuệ/đánh giá tiềm năng, không phải dependency**. Các điểm tích hợp:
 
 - Một `RoutingEventSink` có thể chuyển tiếp bất đồng bộ các sự kiện đến evaluator.
@@ -270,8 +269,6 @@ trí tuệ/đánh giá tiềm năng, không phải dependency**. Các điểm t�
 - Một `Evaluator` trong tương lai (tất định, trình đánh giá cục bộ, HTTP, WASM) sẽ tiếp nhận
   các sự kiện/dấu vết và trả về một `QualityScore`, được đưa vào cùng đường dẫn
   `getQualityScore`/hệ số chất lượng.
-- Cơ chế định tuyến dựa trên eval hiện có (`open-sse/services/evalRouting.ts`) đã
-  sắp xếp lại các đích combo theo tỷ lệ đạt của `eval_runs` khi được bật.
 
 Không có quá trình đánh giá nào chạy đồng bộ trên đường dẫn yêu cầu, và gateway vẫn
 hoạt động đầy đủ khi không có evaluator.

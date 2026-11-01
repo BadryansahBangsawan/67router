@@ -6,7 +6,7 @@
 
 ## Genel Bakış
 
-Redis, OmniRoute'ta **isteğe bağlı, zorunlu olmayan bir bağımlılıktır** — Redis kullanılamadığında uygulama
+Redis, 67router'ta **isteğe bağlı, zorunlu olmayan bir bağımlılıktır** — Redis kullanılamadığında uygulama
 sorunsuz biçimde daha düşük kapasiteli çalışma moduna geçer (bellek içi geri dönüşler). Üretim ortamında Redis'i ayarlamak, dört farklı
 iş yükü için gecikmeyi azaltır:
 
@@ -17,7 +17,7 @@ iş yükü için gecikmeyi azaltır:
 | Kota deposu                | `redisQuotaStore.ts`          | Ayrı `getRedisClient(url)` tekil örneği                       | `<prefix>quota:*`, örnek başına yapılandırılabilir   |
 | Isınma devre kesicisi      | `redisCircuitBreakerStore.ts` | `circuitBreakerFactory.ts` içinde ayrı istemci                | `<prefix>warmup:cb:<connectionId>`                   |
 
-OmniRoute'un tek bir Redis örneğinde (ör. `127.0.0.1:6379`) diğer uygulamalarla birlikte
+67router'un tek bir Redis örneğinde (ör. `127.0.0.1:6379`) diğer uygulamalarla birlikte
 çalışabilmesi için dört iş yükünün tamamı aynı ad alanı önekini paylaşır. Bkz. [Anahtar Ad Alanları](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ OmniRoute'un tek bir Redis örneğinde (ör. `127.0.0.1:6379`) diğer uygulamala
 
 ## Anahtar Ad Alanları
 
-OmniRoute, bir Redis örneğini ana makinede çalışan diğer hizmetlerle paylaşır. Bir ad alanı olmadan
+67router, bir Redis örneğini ana makinede çalışan diğer hizmetlerle paylaşır. Bir ad alanı olmadan
 `auth:api_key:<sha256>` veya `rl:*` gibi anahtarlar, aynı Redis'i kullanan diğer uygulamaların
 anahtarlarıyla çakışabilir (bu örnek, diğer hizmetlerle birlikte `127.0.0.1:6379` üzerinde Redis çalıştırır).
 
-**Her** OmniRoute anahtarına önek eklemek için `REDIS_KEY_PREFIX` değerini boş olmayan bir dize olarak ayarlayın:
+**Her** 67router anahtarına önek eklemek için `REDIS_KEY_PREFIX` değerini boş olmayan bir dize olarak ayarlayın:
 
 ```bash
-# .env — tüm OmniRoute anahtarları omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* olur
+# .env — tüm 67router anahtarları omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:* olur
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # işletim sistemi sayfa önbelleği için yer bırak
 maxmemory-policy allkeys-lru         # baskı altında eski kimlik doğrulama önbelleği girdilerini çıkar
 
-# Kalıcılık (isteğe bağlı — OmniRoute bu olmadan da çökmelere karşı güvenlidir)
+# Kalıcılık (isteğe bağlı — 67router bu olmadan da çökmelere karşı güvenlidir)
 save 300 1                           # ≥1 anahtar değiştiyse en az her 5 dakikada bir anlık görüntü al
 appendonly no                        # AOF gerekli değil; veriler yeniden oluşturulabilir
 appendfsync no                       # fsync ek yükü yok (RDB yeterlidir)

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute eristab **CLI tuvastamist**, **natiivset Agent Client Protocoli** ja
+67router eristab **CLI tuvastamist**, **natiivset Agent Client Protocoli** ja
 **pärand-stdio-adaptereid**. Installitud binaarfaili leidmine ei tõenda selle
 autentimist, mudeliga ühilduvust ega valmisolekut viipa töötlemiseks.
 
@@ -124,5 +124,3 @@ sihtkeskkonnas eraldi autoriseeritud suitsutesti.
 - [Agendiprotokollid](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-käivituslepingud](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-tööriistad](../reference/CLI-TOOLS.md)
-- [A2A-server](./A2A-SERVER.md)
-- [Pilveagendid](./CLOUD_AGENT.md)

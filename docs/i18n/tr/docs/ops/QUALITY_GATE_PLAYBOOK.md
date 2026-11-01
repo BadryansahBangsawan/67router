@@ -4,7 +4,7 @@
 
 ---
 
-> **Bu belge nedir.** OmniRoute'un kalite geçidi sisteminin sektörün en iyi uygulamalarıyla
+> **Bu belge nedir.** 67router'un kalite geçidi sisteminin sektörün en iyi uygulamalarıyla
 > karşılaştırmalı eleştirel bir değerlendirmesi, **ayrıca** tüm kalite kontrol noktalarının kapsamlı
 > bir kataloğu ve aynı sistemi herhangi bir projeye uygulamak için **araçtan bağımsız bir çoğaltma planı**.
 > Bellekten değil, gerçek depo durumundan yararlanılarak 2026-06-16 tarihinde oluşturulmuştur.
@@ -107,62 +107,62 @@ aynısını uygulamak için **araçtan bağımsız eşdeğeri** listeler.
 
 ### 1. Stil ve biçimlendirme (deterministik, hızlı)
 
-- **OmniRoute:** lint-staged aracılığıyla Prettier + ESLint (pre-commit), 2 boşluk/çift tırnak/100 sütun.
+- **67router:** lint-staged aracılığıyla Prettier + ESLint (pre-commit), 2 boşluk/çift tırnak/100 sütun.
 - **Genel:** staged dosyalar üzerinde pre-commit aşamasında çalışan, otomatik düzeltilebilir bir biçimlendirici + bir linter.
 
 ### 2. Türler
 
-- **OmniRoute:** `typecheck:core` (engelleyici) + `typecheck:noimplicit:core` (öneri niteliğinde) + %92,17'lik `type-coverage` mandalı + dosya başına any bütçesi.
+- **67router:** `typecheck:core` (engelleyici) + `typecheck:noimplicit:core` (öneri niteliğinde) + %92,17'lik `type-coverage` mandalı + dosya başına any bütçesi.
 - **Genel:** CI'da katı tür denetimi + mandallı tür kapsamı metriği + dosya başına `any`/kaçış mekanizması bütçesi.
 
 ### 3. Testler (yoğunluk)
 
-- **OmniRoute:** Birbiriyle örtüşmeyen 2 çalıştırıcı (yerel Node + vitest), 8 parça, genel kapsam 60/60/60/60 + yaklaşık %76 mandal + **kritik modüller için modül başına 8 alt sınır** + gecelik özellik tabanlı testler + gecelik **mutasyon testi**.
+- **67router:** Birbiriyle örtüşmeyen 2 çalıştırıcı (yerel Node + vitest), 8 parça, genel kapsam 60/60/60/60 + yaklaşık %76 mandal + **kritik modüller için modül başına 8 alt sınır** + gecelik özellik tabanlı testler + gecelik **mutasyon testi**.
 - **Genel:** test çalıştırıcıları + **mutlak** kapsam alt sınırı (sıfıra karşı koruma) + kapsam **mandalı** (gerilemeye karşı koruma) + **yüksek riskli kod için modül başına alt sınırlar** (Goodhart etkisine karşı koruma) + saf mantık için özellik tabanlı testler + test kalitesinin gerçek ölçütü olarak gecelik **mutasyon testi**.
 
 ### 4. Test politikası (hileye karşı koruma)
 
-- **OmniRoute:** `pr-test-policy` (üretim kodu test gerektirir), `check-test-masking` (zayıflatılmış assert'leri engeller), `pr-evidence` (başarı iddiası kanıt bloğu gerektirir), `test-discovery` (her test bir çalıştırıcı tarafından toplanır).
+- **67router:** `pr-test-policy` (üretim kodu test gerektirir), `check-test-masking` (zayıflatılmış assert'leri engeller), `pr-evidence` (başarı iddiası kanıt bloğu gerektirir), `test-discovery` (her test bir çalıştırıcı tarafından toplanır).
 - **Genel:** "yeni kod ⇒ yeni test" kapısı + kaldırılmış assert/totoloji algılayıcısı + kanıt gereksinimi (TDD veya yaşayan test) + hiçbir testin glob'ların dışında yetim kalmamasını sağlama.
 
 ### 5. Karmaşıklık ve kod sağlığı (mandallar)
 
-- **OmniRoute:** ESLint uyarıları (3769↓), jscpd yineleme oranı (%5,72↓), döngüsel+azami satır karmaşıklığı (1800↓), sonarjs bilişsel karmaşıklığı (753↓), knip ölü kod/kullanılmayan dışa aktarımları (339↓), dosya başına dosya boyutu (dondurulmuş, yalnızca küçülebilir), döngüsel bağımlılıklar (özel Tarjan, engelleyici).
+- **67router:** ESLint uyarıları (3769↓), jscpd yineleme oranı (%5,72↓), döngüsel+azami satır karmaşıklığı (1800↓), sonarjs bilişsel karmaşıklığı (753↓), knip ölü kod/kullanılmayan dışa aktarımları (339↓), dosya başına dosya boyutu (dondurulmuş, yalnızca küçülebilir), döngüsel bağımlılıklar (özel Tarjan, engelleyici).
 - **Genel:** her sağlık metriğini mandallayın (uyarılar, yineleme, döngüsel **ve** bilişsel karmaşıklık, ölü kod, dosya boyutu, içe aktarma döngüleri). Yön her zaman "gerileme olmasın"dır.
 
 ### 6. Statik güvenlik (SAST + gizli bilgiler)
 
-- **OmniRoute:** CodeQL (uyarı mandalı = 0), gitleaks (`[extend] useDefault=true` — kritik!), SonarQube, özel güvenlik kuralları (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (uyarı mandalı = 0), gitleaks (`[extend] useDefault=true` — kritik!), SonarQube, özel güvenlik kuralları (public-creds, error-helper, route-guard-membership, route-validation).
 - **Genel:** uyarı mandallı SAST (CodeQL/Sonar/semgrep) + **devralınmış varsayılan kural kümesine** sahip gizli bilgi tarayıcısı (varsayılanı geçersiz kılan özel yapılandırma = körlük) + projeye özgü Katı Kural güvenlik kapıları.
 
 ### 7. Tedarik zinciri (bağımlılıklar)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX izin listesi), lockfile-lint (HTTPS+sha512+registry), `check-deps` ile slopsquatting'e karşı koruma (izin listesi + yaş ≥72 saat).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX izin listesi), lockfile-lint (HTTPS+sha512+registry), `check-deps` ile slopsquatting'e karşı koruma (izin listesi + yaş ≥72 saat).
 - **Genel:** çok kaynaklı SCA + lisans izin listesi + lockfile bütünlük denetimi + yaş/yazım benzerliği saldırısı denetimine sahip bağımlılık izin listesi + gruplanmış güncelleme botu.
 
 ### 8. Tedarik zinciri (derleme ve sürüm)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA köken kanıtı (`--provenance`), OpenSSF Scorecard (haftalık), iş akışı sağlamlaştırma (zizmor: artipacked→`persist-credentials:false`, önbellek zehirleme, token izinleri).
+- **67router:** SBOM (CycloneDX + syft), SLSA köken kanıtı (`--provenance`), OpenSSF Scorecard (haftalık), iş akışı sağlamlaştırma (zizmor: artipacked→`persist-credentials:false`, önbellek zehirleme, token izinleri).
 - **Genel:** yayımlama sırasında SBOM oluşturma + imzalı köken kanıtı (SLSA L2+) + zamanlanmış Scorecard + tüm iş akışlarını sağlamlaştırma (asgari ayrıcalıklı token'lar, gönderim yapmayan checkout'larda kalıcı kimlik bilgisi bulunmaması, action'ların SHA ile sabitlenmesi).
 
 ### 9. Sözleşmeler ve API
 
-- **OmniRoute:** oasdiff (geriye dönük uyumsuz OpenAPI değişikliği), schemathesis (gecelik sözleşme fuzz testi), openapi-coverage (belgelenmiş rotaların yüzdesi, %38,3 mandal), openapi-security-tiers (spesifikasyon ile rota koruması karşılaştırması).
+- **67router:** oasdiff (geriye dönük uyumsuz OpenAPI değişikliği), schemathesis (gecelik sözleşme fuzz testi), openapi-coverage (belgelenmiş rotaların yüzdesi, %38,3 mandal), openapi-security-tiers (spesifikasyon ile rota koruması karşılaştırması).
 - **Genel:** geriye dönük uyumsuz değişiklikler için sözleşme farkı (oasdiff/buf) + spesifikasyona karşı özellik tabanlı fuzz testi (schemathesis) + mandallı belgeleme kapsamı + spesifikasyon↔kod tutarlılığı.
 
 ### 10. Belgeler ve i18n (eskimeye karşı koruma)
 
-- **OmniRoute:** docs-sync (yansıtılmış sürümler), docs-counts-sync (belgelerdeki sayılar ile koddakiler), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + %80,1 mandal).
+- **67router:** docs-sync (yansıtılmış sürümler), docs-counts-sync (belgelerdeki sayılar ile koddakiler), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + %80,1 mandal).
 - **Genel:** belgeler ile kod arasında sürümleri/sayıları/ortam değişkenlerini eşitleme (güven değil, kapı) + dahili bağlantıları doğrulama + mandallı i18n kapsamı.
 
 ### 11. Halüsinasyon karşıtlığı / tutarlılık (nadir kategori)
 
-- **OmniRoute:** known-symbols (dize yönlendirmesi ⇒ yaşayan sembol), provider-consistency, fetch-targets (istemci fetch'i ⇒ gerçek rota), docs-symbols, db-rules (Katı Kurallar #2/#5), migration-numbering.
+- **67router:** known-symbols (dize yönlendirmesi ⇒ yaşayan sembol), provider-consistency, fetch-targets (istemci fetch'i ⇒ gerçek rota), docs-symbols, db-rules (Katı Kurallar #2/#5), migration-numbering.
 - **Genel:** her "yinelenmiş doğruluk kaynağı" (kayıt defteri, dize yönlendirmesi, katmanlar arası referanslar) için iki tarafın eşleştiğini kanıtlayan bir kapı. Tür denetiminin/testlerin yakalayamadığı eskimeyi yakalar.
 
 ### 12. Dayanıklılık ve alan (ürüne özgü)
 
-- **OmniRoute:** chaos (hata enjeksiyonu), heap-growth (sızıntı), k6 (uzun süreli yük), promptfoo+garak (LLM için OWASP LLM Top 10 red-team testi), 3 dayanıklılık yasası (devre kesici/bekleme süresi/kilitleme).
+- **67router:** chaos (hata enjeksiyonu), heap-growth (sızıntı), k6 (uzun süreli yük), promptfoo+garak (LLM için OWASP LLM Top 10 red-team testi), 3 dayanıklılık yasası (devre kesici/bekleme süresi/kilitleme).
 - **Genel:** **kendi** alanınızın hata modlarını belirleyin ve her biri için bir kapı oluşturun (gecelik olsa bile). Yapay zekâ uygulamaları için: enjeksiyon red-team testi. Dağıtık sistemler için: kaos + sızıntı + uzun süreli yük testi.
 
 ---

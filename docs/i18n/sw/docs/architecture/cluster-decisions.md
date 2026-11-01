@@ -14,7 +14,7 @@ Profaili mbili za hiari za compose (`memory`, `bifrost`) kwa usanidi uliopo wa h
 
 ## Kwa nini mbinu hii ni ya tahadhari
 
-Muundo uliopo wa usanidi wa OmniRoute tayari ni mwepesi na umethibitishwa:
+Muundo uliopo wa usanidi wa 67router tayari ni mwepesi na umethibitishwa:
 
 - **`redis:7-alpine`** hushughulikia mzigo wa kazi wa udhibiti wa kiwango/hifadhi muda katika kiwango cha uzalishaji.
 - **SQLite + sqlite-vec + FTS5** hushughulikia kumbukumbu ya ndani + vekta + utafutaji wa maandishi (tazama [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Profaili hizi mbili ni **chaguo za kupanua uwezo kwa usawa kwa usanidi unaofikia
 
 - Unaendesha nakala ≥3 za `omniroute` na unataka mzunguko wa watoa huduma uwe katika mchakato mmoja wa Go.
 - Unataka sehemu moja ya ukaguzi/uwekaji kumbukumbu kwa maombi kwa watoa huduma wa juu kutoka kwenye nakala zote.
-- Unataka upanuzi wa usawa wa safu ya upangaji njia ya Tier-1 bila kutegemea nakala za OmniRoute.
+- Unataka upanuzi wa usawa wa safu ya upangaji njia ya Tier-1 bila kutegemea nakala za 67router.
 
 **Inachoongeza:**
 

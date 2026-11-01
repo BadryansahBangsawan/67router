@@ -13,7 +13,7 @@
 ## Đây là gì
 
 Local Corpus cho phép người vận hành cung cấp một thư mục tệp văn bản đã được phê duyệt rõ ràng cho
-máy chủ MCP của OmniRoute. Các tệp vẫn nằm trong thư mục ban đầu: OmniRoute chỉ lưu
+máy chủ MCP của 67router. Các tệp vẫn nằm trong thư mục ban đầu: 67router chỉ lưu
 đường dẫn gốc chuẩn hóa trong SQLite và duy trì một chỉ mục tìm kiếm trong bộ nhớ. Công cụ này không
 sao chép nội dung kho ngữ liệu vào kho mã nguồn hoặc cơ sở dữ liệu.
 

@@ -6,7 +6,7 @@
 
 ## Leochaileachtaí a Thuairisciú
 
-Má aimsíonn tú leochaileacht slándála in OmniRoute, tuairiscigh í ar bhealach freagrach:
+Má aimsíonn tú leochaileacht slándála in 67router, tuairiscigh í ar bhealach freagrach:
 
 1. **NÁ HOSCAIL** saincheist phoiblí GitHub
 2. Úsáid [Comhairleoirí Slándála GitHub](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ mbrainse `stable/v3` (féach [`ROADMAP.md`](ROADMAP.md) → "Céim 3 — v3.9.0 
 
 ## Ailtireacht Slándála
 
-Cuireann OmniRoute samhail slándála ilchisealach i bhfeidhm:
+Cuireann 67router samhail slándála ilchisealach i bhfeidhm:
 
 ```
 Iarratas → CORS → Píblíne Authz (aicmiú → beartais → forfheidhmiú)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Creat Ráillí Cosanta
 
-Tagann OmniRoute le **clárlann ráillí cosanta** is féidir a athlódáil agus an córas ag feidhmiú (`src/lib/guardrails/`), ina bhfuil 3 ráille chosanta ionsuite ordaithe de réir tosaíochta:
+Tagann 67router le **clárlann ráillí cosanta** is féidir a athlódáil agus an córas ag feidhmiú (`src/lib/guardrails/`), ina bhfuil 3 ráille chosanta ionsuite ordaithe de réir tosaíochta:
 
 | Ráille Chosanta    | Tosaíocht | Cuspóir                                                                                           |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------- |

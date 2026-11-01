@@ -8,7 +8,7 @@
 
 ## నిర్ణయం
 
-| ప్రొవైడర్ కుటుంబం                                  | OmniRoute ID            | గ్లోబల్ ప్రాంతం | చైనా ప్రాంతం |
+| ప్రొవైడర్ కుటుంబం                                  | 67router ID             | గ్లోబల్ ప్రాంతం | చైనా ప్రాంతం |
 | -------------------------------------------------- | ----------------------- | --------------- | ------------ |
 | Alibaba Cloud Model Studio (వాడిన మేరకు చెల్లింపు) | `alibaba`               | Singapore       | Beijing      |
 | Alibaba Cloud Token Plan                           | `bailian-coding-plan`   | Singapore       | Beijing      |

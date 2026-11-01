@@ -9,8 +9,8 @@
 > **Audiens:** Engineer yang menambahkan, memelihara, atau men-debug layanan tersemat (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
 Layanan tersemat adalah alat sidecar proses yang diinstal secara lokal, yang diinstal, diawasi, dan
-diekspos oleh OmniRoute sebagai target perutean kelas utama. Tidak seperti penyedia eksternal (yang diakses melalui internet
-menggunakan kunci API), layanan tersemat berjalan di mesin yang sama dengan OmniRoute dan berkomunikasi melalui loopback.
+diekspos oleh 67router sebagai target perutean kelas utama. Tidak seperti penyedia eksternal (yang diakses melalui internet
+menggunakan kunci API), layanan tersemat berjalan di mesin yang sama dengan 67router dan berkomunikasi melalui loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Terdapat tujuh layanan tertanam:
 
 | Layanan         | Paket npm                       | Port default | Tujuan                                                                                                                                                                                                                                                                                                                                                      |
 | --------------- | ------------------------------- | :----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                       |    20130     | Router AI yang dapat digunakan OmniRoute sebagai subpenyedia. Model diekspos sebagai `9router/{sub}/{model}`                                                                                                                                                                                                                                                |
+| **9Router**     | `9router`                       |    20130     | Router AI yang dapat digunakan 67router sebagai subpenyedia. Model diekspos sebagai `9router/{sub}/{model}`                                                                                                                                                                                                                                                 |
 | **CLIProxyAPI** | Biner rilis GitHub (`cliproxy`) |     8317     | Adaptor proksi lokal untuk alur autentikasi Anthropic CLI. Menyediakan perutean cadangan ketika token OAuth kedaluwarsa                                                                                                                                                                                                                                     |
 | **Mux**         | `mux` (`mux server` tanpa UI)   |     8322     | Daemon orkestrasi agen lokal (coder/mux). Hanya dikelola siklus hidupnya — bukan target perutean (tanpa proksi LLM).                                                                                                                                                                                                                                        |
 | **Bifrost**     | `@maximhq/bifrost`              |     8080     | Backend relai gateway AI Go. Saat berjalan, otomatis dipilih oleh rute relai (`/v1/relay/`)                                                                                                                                                                                                                                                                 |
@@ -45,21 +45,21 @@ Terdapat tujuh layanan tertanam:
 
 Ketujuh layanan tersebut mengikuti model pengawasan yang sama:
 
-- OmniRoute menginstalnya di bawah `DATA_DIR/services/{name}/` (terisolasi dari `package.json` milik OmniRoute)
-- OmniRoute menjalankan dan memantau layanan tersebut sebagai proses anak
-- OmniRoute menyuntikkan kunci API sementara ke lingkungan proses anak dan merotasinya tanpa waktu henti (jika berlaku)
+- 67router menginstalnya di bawah `DATA_DIR/services/{name}/` (terisolasi dari `package.json` milik 67router)
+- 67router menjalankan dan memantau layanan tersebut sebagai proses anak
+- 67router menyuntikkan kunci API sementara ke lingkungan proses anak dan merotasinya tanpa waktu henti (jika berlaku)
 - Semua rute pengelolaan (`/api/services/*`) bersifat **LOCAL_ONLY** — hanya dapat diakses dari loopback (aturan wajib #17)
 
 ### Keputusan utama (dari rencana desain)
 
-| Keputusan                         | Nilai                                                                                        |
-| --------------------------------- | -------------------------------------------------------------------------------------------- |
-| Akses dasbor ke UI native 9Router | Proksi balik di `/dashboard/providers/services/9router/embed/*`                              |
-| Mekanisme instalasi               | `npm install {package}` melalui `execFile` (tanpa interpolasi shell)                         |
-| Mode penggunaan                   | Penyedia didaftarkan sebagai `9router/{sub}/{model}` dalam mesin perutean                    |
-| Pengelolaan kunci API             | OmniRoute membuat, mengenkripsi saat disimpan (AES-256-GCM), dan menyuntikkannya melalui env |
-| Lokasi dasbor                     | `/dashboard/providers/services` (tiga tab)                                                   |
-| Mulai otomatis                    | Pengalih per layanan, default NONAKTIF                                                       |
+| Keputusan                         | Nilai                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------- |
+| Akses dasbor ke UI native 9Router | Proksi balik di `/dashboard/providers/services/9router/embed/*`                             |
+| Mekanisme instalasi               | `npm install {package}` melalui `execFile` (tanpa interpolasi shell)                        |
+| Mode penggunaan                   | Penyedia didaftarkan sebagai `9router/{sub}/{model}` dalam mesin perutean                   |
+| Pengelolaan kunci API             | 67router membuat, mengenkripsi saat disimpan (AES-256-GCM), dan menyuntikkannya melalui env |
+| Lokasi dasbor                     | `/dashboard/providers/services` (tiga tab)                                                  |
+| Mulai otomatis                    | Pengalih per layanan, default NONAKTIF                                                      |
 
 ---
 
@@ -223,7 +223,7 @@ Permintaan non-loopback menerima `403 LOCAL_ONLY` tanpa mempertimbangkan token a
 #### `POST /api/services/9router/install`
 
 Instal 9Router dari npm. Membuat `DATA_DIR/services/9router/` dengan
-`package.json` dan `node_modules/` miliknya sendiri. Tidak berkonflik dengan dependensi milik OmniRoute.
+`package.json` dan `node_modules/` miliknya sendiri. Tidak berkonflik dengan dependensi milik 67router.
 
 **Isi permintaan** (semuanya opsional):
 
@@ -384,7 +384,7 @@ Mengembalikan gabungan status langsung + DB, termasuk metadata versi dan pratinj
 #### `POST /api/services/9router/auto-start`
 
 Aktifkan atau nonaktifkan tanda mulai otomatis. Saat `enabled: true`, layanan akan dimulai secara otomatis
-ketika OmniRoute melakukan boot berikutnya (jika layanan telah diinstal).
+ketika 67router melakukan boot berikutnya (jika layanan telah diinstal).
 
 **Isi permintaan:**
 
@@ -594,7 +594,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Proksi ini:
 
 - Meneruskan permintaan ke `http://127.0.0.1:{port}/{path}` (hanya loopback)
-- Menghapus header `cookie` dan `authorization` yang masuk (tidak ada kebocoran sesi OmniRoute)
+- Menghapus header `cookie` dan `authorization` yang masuk (tidak ada kebocoran sesi 67router)
 - Menyuntikkan `Authorization: Bearer {apiKey}` untuk autentikasi 9Router
 - Menghapus `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` dari respons
 - Menulis ulang respons HTML untuk menyuntikkan `<base href>` dan menormalkan jalur absolut (`/foo` → `/dashboard/.../embed/foo`)
@@ -631,7 +631,7 @@ lengkap.
 ### Injeksi kunci API
 
 9Router dan Mux memerlukan kunci API/token bearer untuk endpoint HTTP mereka sendiri.
-OmniRoute:
+67router:
 
 1. Menghasilkan kunci melalui `crypto.randomBytes(32).toString("base64url")` dengan
    prefiks khusus layanan (`nr_` untuk 9Router, `mx_` untuk Mux).
@@ -811,7 +811,7 @@ Jika layanan tersemat mengekspos endpoint `/v1/chat/completions` yang kompatibel
 
 1. Periksa `GET /api/services/{name}/logs` (atau panel Log di dasbor). Cari
    baris seperti `Error: ENOENT`, `address already in use`, atau `Cannot find module`.
-2. Pastikan `npm` berada di PATH: jalankan `which npm` dari akun pengguna yang sama dengan yang menjalankan OmniRoute.
+2. Pastikan `npm` berada di PATH: jalankan `which npm` dari akun pengguna yang sama dengan yang menjalankan 67router.
 3. Pastikan layanan telah diinstal: periksa `GET /api/services/{name}/status` untuk
    `installedVersion`. Jika `null`, jalankan instalasi terlebih dahulu.
 4. Pastikan `DATA_DIR/services/{name}/node_modules/` tersedia dan tidak kosong.
@@ -849,7 +849,7 @@ startup yang lebih lama, tingkatkan `healthIntervalMs` menjadi 5000 dan `stopTim
 3. Port dapat dikonfigurasi per layanan di `bootstrap.ts` melalui bidang `port`.
 
 **Catatan:** 9Router menggunakan port 20130 secara bawaan, khususnya untuk menghindari konflik dengan
-port bawaan OmniRoute, yaitu 20128.
+port bawaan 67router, yaitu 20128.
 
 ---
 
@@ -859,13 +859,13 @@ port bawaan OmniRoute, yaitu 20128.
 
 **Penyebab:**
 
-- `DATA_DIR` atau direktori induknya tidak dapat ditulisi oleh proses OmniRoute.
+- `DATA_DIR` atau direktori induknya tidak dapat ditulisi oleh proses 67router.
 - Berjalan di dalam Docker rootless tanpa akses tulis ke volume yang dipetakan.
 
 **Perbaikan:**
 
 1. Periksa `DATA_DIR` (bawaan: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Pastikan pengguna yang menjalankan proses OmniRoute memiliki direktori tersebut: `chown -R $USER ~/.omniroute/`
+2. Pastikan pengguna yang menjalankan proses 67router memiliki direktori tersebut: `chown -R $USER ~/.omniroute/`
 3. Di Docker, pastikan mount volume memiliki izin yang benar untuk pengguna container.
 
 ---
@@ -913,16 +913,16 @@ pengabaian cakupan manage. Lihat `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **T: Apakah 9Router dan CLIProxyAPI akan tersedia dalam deployment produksi/cloud?**
 
-Ya. Kedua layanan mengikuti model yang mengutamakan lingkungan lokal, sama seperti OmniRoute. Keduanya berjalan
+Ya. Kedua layanan mengikuti model yang mengutamakan lingkungan lokal, sama seperti 67router. Keduanya berjalan
 pada mesin yang sama dan berkomunikasi melalui loopback. "Produksi" dalam konteks ini berarti VPS
-atau server lokal tempat OmniRoute di-deploy, bukan penyedia cloud jarak jauh.
+atau server lokal tempat 67router di-deploy, bukan penyedia cloud jarak jauh.
 
 ---
 
 **T: Bagaimana cara melakukan debug pada supervisor?**
 
 1. Pantau aliran log SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Periksa log terstruktur dalam output pino OmniRoute yang difilter berdasarkan
+2. Periksa log terstruktur dalam output pino 67router yang difilter berdasarkan
    namespace `service:supervisor`.
 3. Periksa baris DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Gunakan `GET /api/services/9router/status` untuk melihat status aktif saat ini, PID, kondisi,

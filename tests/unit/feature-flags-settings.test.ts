@@ -58,7 +58,9 @@ const {
 // tool_call wrapper repair, default on) to 86.
 // OPENCODE_PUBLISHED_CATALOG_ROUTING_ENABLED (#16798, OpenCode model surface from the
 // published catalog, default off) takes it to 87.
-const EXPECTED_FEATURE_FLAG_COUNT = 111;
+// 67router PR-4 removed IMAGE_GENERATION_LONG_JOBS with the image endpoints: 109.
+// 67router PR-6 removed RERANK_REMOTE_PROVIDER_NODES and SKILLS_SANDBOX_NETWORK_ENABLED: 107.
+const EXPECTED_FEATURE_FLAG_COUNT = 107;
 // tool_call wrapper repair, default on) to 86; OPENCODE_V2_CLIENT_FINGERPRINT_ENABLED
 // (#16571, OpenCode v2 client fingerprint, default off) to 87.
 // tool_call wrapper repair, default on) to 86; CLAUDE_OAUTH_SUMMARIZED_THINKING_UNREDACTED
@@ -516,8 +518,8 @@ describe("resolveFeatureFlag", () => {
     });
 
     it("returns true for '1'", () => {
-      setFeatureFlagOverride("SKILLS_SANDBOX_NETWORK_ENABLED", "1");
-      assert.ok(isFeatureFlagEnabled("SKILLS_SANDBOX_NETWORK_ENABLED"));
+      setFeatureFlagOverride("REQUIRE_API_KEY", "1");
+      assert.ok(isFeatureFlagEnabled("REQUIRE_API_KEY"));
     });
 
     it("returns true for 'yes'", () => {

@@ -25,7 +25,7 @@ Mstari wa kwanza ambao safu yake ya kwanza ni neno halisi `provider` (bila kujal
 Pakua faili ya kuanzia kutoka kwenye dirisha la uletaji (**Pakua kiolezo cha CSV**). Mfano:
 
 ```csv
-# Uletaji wa watoa huduma wa OmniRoute (safu wima kulingana na nafasi)
+# Uletaji wa watoa huduma wa 67router (safu wima kulingana na nafasi)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

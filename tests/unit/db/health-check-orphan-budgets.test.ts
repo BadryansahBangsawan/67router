@@ -1,11 +1,11 @@
 /**
- * Regression: automatic health-check repair must not delete the live spend
- * policy of a synthetic (non-persisted) API key identity.
+ * Regression: automatic health-check repair must not delete the domain rows
+ * of a synthetic (non-persisted) API key identity.
  *
  * The deployment-time env key authenticates without an `api_keys` row, so its
  * `domain_budgets` / `domain_cost_history` rows used to look like broken
- * references and were deleted every repair cycle — silently, because
- * `checkBudget()` is fail-open when no budget row exists.
+ * references and were deleted every repair cycle. The budget feature is gone,
+ * but the tables and their orphan repair remain.
  */
 import test from "node:test";
 import assert from "node:assert/strict";

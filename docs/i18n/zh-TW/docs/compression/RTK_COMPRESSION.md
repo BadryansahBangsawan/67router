@@ -4,7 +4,7 @@
 
 ---
 
-RTK 壓縮是 OmniRoute 針對終端機與工具輸出、可感知命令的壓縮引擎。它專為程式設計代理工作階段而設計，因為其中大部分的上下文增長來自測試日誌、建置輸出、套件管理器雜訊、shell 逐字記錄、Docker 輸出、git 輸出及堆疊追蹤。
+RTK 壓縮是 67router 針對終端機與工具輸出、可感知命令的壓縮引擎。它專為程式設計代理工作階段而設計，因為其中大部分的上下文增長來自測試日誌、建置輸出、套件管理器雜訊、shell 逐字記錄、Docker 輸出、git 輸出及堆疊追蹤。
 
 RTK 可以透過 `defaultMode: "rtk"` 直接執行，也可以作為堆疊管線的第一個步驟，通常為：
 
@@ -14,7 +14,7 @@ rtk -> caveman
 
 此順序會先壓縮充滿雜訊的機器輸出，再讓 Caveman 精簡其餘文字。
 
-上游 RTK 報告可節省 `60-90%` 的命令輸出。其 README 中的範例工作階段從約 `~118,000` 個標準權杖減少至約 `~23,900` 個 RTK 權杖，節省了 `79.7%`（約 `~80%`）。OmniRoute 使用該上游平均值，搭配 Caveman 輸入壓縮來計算堆疊節省量：
+上游 RTK 報告可節省 `60-90%` 的命令輸出。其 README 中的範例工作階段從約 `~118,000` 個標準權杖減少至約 `~23,900` 個 RTK 權杖，節省了 `79.7%`（約 `~80%`）。67router 使用該上游平均值，搭配 Caveman 輸入壓縮來計算堆疊節省量：
 
 ```txt
 RTK 平均：      節省 80%
@@ -48,7 +48,7 @@ RTK 會依照以下順序載入篩選器：
 2. 來自 `DATA_DIR/rtk/filters.toml` 和 `DATA_DIR/rtk/filters.json` 的全域篩選器。
 3. 來自 `open-sse/services/compression/engines/rtk/filters/` 的內建篩選器。
 
-在相同範圍內，RTK TOML schema v1 篩選器的優先順序高於 OmniRoute JSON 篩選器。TOML `match_command` 運算式會在命令類型比對之前檢查，因此匯入的命令特定篩選器可覆寫該範圍內更廣泛的篩選器。無論檔案格式為何，專案範圍的優先順序仍高於全域範圍。
+在相同範圍內，RTK TOML schema v1 篩選器的優先順序高於 67router JSON 篩選器。TOML `match_command` 運算式會在命令類型比對之前檢查，因此匯入的命令特定篩選器可覆寫該範圍內更廣泛的篩選器。無論檔案格式為何，專案範圍的優先順序仍高於全域範圍。
 
 專案篩選器刻意受到信任機制管控，因為正規表示式篩選器可以改變工具輸出呈現給代理的方式。符合以下任一條件時，專案篩選器檔案會被接受：
 
@@ -71,7 +71,7 @@ RTK 會依照以下順序載入篩選器：
 
 ## RTK TOML schema v1 相容性
 
-OmniRoute 可以使用 RTK TOML schema v1 剖析、驗證、測試及安裝宣告式篩選器檔案。
+67router 可以使用 RTK TOML schema v1 剖析、驗證、測試及安裝宣告式篩選器檔案。
 支援的欄位包括 `description`、`match_command`、`strip_ansi`、`filter_stderr`、
 `strip_lines_matching`、`keep_lines_matching`、`replace`、`match_output`、`truncate_lines_at`、
 `head_lines`、`tail_lines`、`max_lines`、`on_empty`，以及 `[[tests.<filter>]]` 內嵌測試。
@@ -80,7 +80,7 @@ OmniRoute 可以使用 RTK TOML schema v1 剖析、驗證、測試及安裝宣�
 驗證以供檢查，但無法安裝或載入。自訂檔案載入失敗時仍採用
 失敗開放（fail-open）方式：略過無效檔案，其餘篩選器會繼續運作。
 
-OmniRoute 會在用戶端已擷取工具輸出後才收到該輸出，因此 `filter_stderr = true`
+67router 會在用戶端已擷取工具輸出後才收到該輸出，因此 `filter_stderr = true`
 無法變更程序的擷取行為。此欄位會被接受但不執行任何操作，且驗證會傳回警告。
 這刻意被描述為 **RTK TOML schema v1 相容性**，而不是與 RTK 執行檔、shell 掛鉤、
 Rust 命令實作或其信任存放區配置完全相容。

@@ -4,7 +4,7 @@
 
 ---
 
-A compressão do OmniRoute é estruturada em torno de contratos de motores. Um modo pode executar diretamente um motor
+A compressão do 67router é estruturada em torno de contratos de motores. Um modo pode executar diretamente um motor
 (`caveman` ou `rtk`) ou um pipeline empilhado determinístico que executa vários motores sequencialmente.
 
 ## Modos
@@ -44,9 +44,9 @@ acumulou histórico para em `below_min_chars` e o motor não transforma nada. É
 isso que o padrão é `aggressive` em vez do perfil mais seguro.
 
 O pacote resolve o seu próprio âmbito de modelo e perfil a partir da sua configuração de ambiente.
-O OmniRoute nunca delega a decisão: o adaptador fixa o portão do modelo ao âmbito mais restritivo do pacote,
+O 67router nunca delega a decisão: o adaptador fixa o portão do modelo ao âmbito mais restritivo do pacote,
 de modo que as configurações do ambiente do anfitrião só podem restringir a lista de permissões, nunca
-expandi-la para além dos recibos medidos do OmniRoute.
+expandi-la para além dos recibos medidos do 67router.
 
 ## Registo de Motores
 
@@ -110,7 +110,7 @@ O modo Caveman centra-se na condensação semântica de prosa normal:
 A secção correspondente no painel é `Dashboard -> Context & Cache -> Caveman`.
 
 O projeto Caveman a montante indica uma redução de `~75%` nos tokens de saída, uma poupança média de saída de `65%` em testes de desempenho,
-com um intervalo de `22-87%`, e uma ferramenta de compressão de entrada de `~46%`. O OmniRoute utiliza o valor do Caveman relativo à entrada
+com um intervalo de `22-87%`, e uma ferramenta de compressão de entrada de `~46%`. O 67router utiliza o valor do Caveman relativo à entrada
 ao documentar as poupanças combinadas de prompts/contexto; o modo de saída do Caveman continua a ser uma funcionalidade separada
 do comportamento das respostas.
 

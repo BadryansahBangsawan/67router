@@ -10,7 +10,7 @@
 
 ## Miksi tämä on olemassa
 
-OmniRoute vastaa jo kahteen kustannuksia koskevaan kysymykseen, mutta kumpikaan niistä ei ole se, jota useimmat operaattorit kysyvät.
+67router vastaa jo kahteen kustannuksia koskevaan kysymykseen, mutta kumpikaan niistä ei ole se, jota useimmat operaattorit kysyvät.
 
 | Olemassa oleva mekanismi                                 | Mihin se vastaa                                     |
 | -------------------------------------------------------- | --------------------------------------------------- |

@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Magyar)
+# 📖 Setup Guide — 67router (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Az OmniRoute teljes körű beállítási referenciája. A rövid változatért tekintse meg a [README gyorsútmutatóját](../README.md#-quick-start).
+> A 67router teljes körű beállítási referenciája. A rövid változatért tekintse meg a [README gyorsútmutatóját](../README.md#-quick-start).
 
 ## Tartalomjegyzék
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-Az [AUR-csomag](https://aur.archlinux.org/packages/omniroute-bin) telepíti az OmniRoute-ot, és egy systemd felhasználói szolgáltatást biztosít.
+Az [AUR-csomag](https://aur.archlinux.org/packages/omniroute-bin) telepíti a 67router-ot, és egy systemd felhasználói szolgáltatást biztosít.
 
 ### Forráskódból
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Megjegyzés Windows rendszerhez:** Alapértelmezés szerint az OmniRoute a `%APPDATA%\omniroute` könyvtárat használja, ha a korábbi `%USERPROFILE%\.omniroute` könyvtár nem található. Másik adatkönyvtár-hely kiválasztásához állítsa be a `DATA_DIR` értékét.
+> **Megjegyzés Windows rendszerhez:** Alapértelmezés szerint a 67router a `%APPDATA%\omniroute` könyvtárat használja, ha a korábbi `%USERPROFILE%\.omniroute` könyvtár nem található. Másik adatkönyvtár-hely kiválasztásához állítsa be a `DATA_DIR` értékét.
 
 > **Megjegyzés:** az `npm install` az első futtatáskor automatikusan létrehozza az `.env` fájlt az `.env.example` alapján. A későbbi telepítések nem írják felül a meglévő `.env` fájlt, így az egyéni beállítások megmaradnak. Az újbóli inicializáláshoz törölje az `.env` fájlt az ismételt futtatás előtt.
 
@@ -64,7 +64,7 @@ A teljes Docker-beállításhoz, beleértve a Compose-profilokat és a Caddy HTT
 
 ### Asztali alkalmazás (Electron)
 
-Az OmniRoute egy Electron 41 + electron-builder 26.10 alapú asztali csomagolóalkalmazást is tartalmaz. Elérhető szkriptek (a munkaterület gyökerében):
+A 67router egy Electron 41 + electron-builder 26.10 alapú asztali csomagolóalkalmazást is tartalmaz. Elérhető szkriptek (a munkaterület gyökerében):
 
 ```bash
 npm run electron:dev          # Az asztali alkalmazás futtatása automatikus újratöltéssel
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Környezeti változókkal (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` stb.) kombinálva ez lehetővé teszi egy teljes mértékben szkriptelhető OmniRoute-példány elindítását.
+Környezeti változókkal (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` stb.) kombinálva ez lehetővé teszi egy teljes mértékben szkriptelhető 67router-példány elindítását.
 
 ### CLI-beállítások
 
@@ -99,7 +99,7 @@ Környezeti változókkal (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` stb.
 | `omniroute config`      | CLI-eszköz konfigurálása — konfigurációk listázása, lekérése, beállítása és ellenőrzése                     |
 | `omniroute status`      | Offline állapot-vezérlőpult — verzió, adatbázis, eszközök, konfiguráció                                     |
 | `omniroute logs`        | Használati naplók folyamatos olvasása az API-ból (támogatja a `--follow` kapcsolót)                         |
-| `omniroute update`      | OmniRoute-frissítések keresése vagy alkalmazása                                                             |
+| `omniroute update`      | 67router-frissítések keresése vagy alkalmazása                                                              |
 | `omniroute provider`    | Szolgáltatói kapcsolatok kezelése — hozzáadás, listázás, eltávolítás, tesztelés, alapértelmezett beállítása |
 | `omniroute --port 3000` | A kanonikus/API-port beállítása 3000 értékre                                                                |
 | `omniroute --mcp`       | Az MCP-kiszolgáló indítása (stdio átviteli mód)                                                             |
@@ -165,7 +165,7 @@ Működik a Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode és az Ope
 
 #### Automatikus konfigurálás a `setup-*` parancsokkal
 
-Az alap-URL és a kulcs kézi beillesztése helyett hagyja, hogy az OmniRoute az élő modellkatalógus alapján létrehozza az egyes eszközök
+Az alap-URL és a kulcs kézi beillesztése helyett hagyja, hogy a 67router az élő modellkatalógus alapján létrehozza az egyes eszközök
 saját konfigurációját. Eszközönként egy parancs szükséges:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Mindegyik támogatja a `--remote <url> --api-key <key>` kapcsolókat, amelyekkel egy helyi eszköz egy
-**távoli** OmniRoute használatára konfigurálható, valamint az előnézethez a `--dry-run` kapcsolót. Ha egy CLI-t a megfelelő
+**távoli** 67router használatára konfigurálható, valamint az előnézethez a `--dry-run` kapcsolót. Ha egy CLI-t a megfelelő
 beillesztett környezeti változókkal, konfigurációs fájl írása nélkül szeretne elindítani, használja az általános
 `omniroute run <target>` indítót (claude, codex, aider, goose, opencode, qwen, gemini);
 a korábbi, eszközspecifikus `omniroute launch` (Claude Code) és
@@ -248,26 +248,6 @@ Adja hozzá az MCP-beállításokhoz:
 
 **Teljes MCP-dokumentáció:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 eszköz, IDE-konfigurációk, Python/TS/Go kliensek.
 
-### A2A beállítása (ügynökök közötti protokoll)
-
-Ellenőrizze az ügynökkártyát:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Küldjön egy feladatot:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Teljes A2A-dokumentáció:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, képességek, streamelés, feladat-életciklus.
-
----
-
 ## Időtúllépési konfiguráció
 
 ### Alapvető időtúllépések
@@ -277,15 +257,15 @@ A legtöbb telepítésnél csak erre a két változóra van szükség:
 | Változó                  | Alapértelmezett érték                 | Rendeltetés                                                                                                                                                                              |
 | ------------------------ | ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                              | Közös alapérték a külső szolgáltató válaszkezdési időtúllépéséhez, a rejtett Undici-időtúllépésekhez, a TLS-ujjlenyomat-kérésekhez, valamint az API-híd kérés- és proxy-időtúllépéseihez |
-| `STREAM_IDLE_TIMEOUT_MS` | örökli a `REQUEST_TIMEOUT_MS` értékét | A streamelési adatblokkok közötti maximális időköz, amelynek letelte után az OmniRoute megszakítja az SSE-adatfolyamot                                                                   |
+| `STREAM_IDLE_TIMEOUT_MS` | örökli a `REQUEST_TIMEOUT_MS` értékét | A streamelési adatblokkok közötti maximális időköz, amelynek letelte után a 67router megszakítja az SSE-adatfolyamot                                                                     |
 
 A visszamenőleges kompatibilitás megmarad: a meglévő `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` és más, rétegenkénti időtúllépési változók továbbra is működnek, és felülírják a közös alapértéket.
 
 ### Szolgáltatóspecifikus megjegyzések
 
-A Claude Code-kompatibilis külső szolgáltatók (`anthropic-compatible-cc-*`) esetében az OmniRoute a feloldott lekérési időtúllépésből származtatja a kimenő `X-Stainless-Timeout` fejlécet, így a szolgáltatói oldali olvasási időtúllépések összhangban maradnak a környezeti konfigurációval.
+A Claude Code-kompatibilis külső szolgáltatók (`anthropic-compatible-cc-*`) esetében a 67router a feloldott lekérési időtúllépésből származtatja a kimenő `X-Stainless-Timeout` fejlécet, így a szolgáltatói oldali olvasási időtúllépések összhangban maradnak a környezeti konfigurációval.
 
-Harmadik féltől származó, Claude Code-kompatibilis fordított proxyk esetén az OmniRoute konzervatív értéken tartja az alapértelmezett `anthropic-beta` beállítást, és ha a `Client Cache Control` értéke `Auto` marad, csak a kliens által megadott `cache_control` jelölőket továbbítja. Kapcsolatonként csak akkor engedélyezze az „Enable redact-thinking beta” kapcsolót, ha a külső szolgáltató kifejezetten megköveteli a kitakart Claude-gondolatmeneti adatfolyamokat.
+Harmadik féltől származó, Claude Code-kompatibilis fordított proxyk esetén a 67router konzervatív értéken tartja az alapértelmezett `anthropic-beta` beállítást, és ha a `Client Cache Control` értéke `Auto` marad, csak a kliens által megadott `cache_control` jelölőket továbbítja. Kapcsolatonként csak akkor engedélyezze az „Enable redact-thinking beta” kapcsolót, ha a külső szolgáltató kifejezetten megköveteli a kitakart Claude-gondolatmeneti adatfolyamokat.
 
 ### Speciális időtúllépés-felülbírálások
 
@@ -303,11 +283,11 @@ Harmadik féltől származó, Claude Code-kompatibilis fordított proxyk esetén
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                               | Keep-alive időtúllépés az API-híd kiszolgálóján                                               |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                  | A socket inaktivitási időtúllépése az API-híd kiszolgálóján (a `0` letiltja)                  |
 
-> **Megjegyzés:** Streamelési kérések esetén a `FETCH_TIMEOUT_MS` csak a kapcsolat létrehozására, illetve a külső szolgáltató első válaszára való várakozásra vonatkozik. Amint az adatfolyam aktívvá válik, az OmniRoute csak tényleges elakadás (`STREAM_IDLE_TIMEOUT_MS`) vagy az Undici törzsadat-inaktivitása (`FETCH_BODY_TIMEOUT_MS`) esetén szakítja meg.
+> **Megjegyzés:** Streamelési kérések esetén a `FETCH_TIMEOUT_MS` csak a kapcsolat létrehozására, illetve a külső szolgáltató első válaszára való várakozásra vonatkozik. Amint az adatfolyam aktívvá válik, a 67router csak tényleges elakadás (`STREAM_IDLE_TIMEOUT_MS`) vagy az Undici törzsadat-inaktivitása (`FETCH_BODY_TIMEOUT_MS`) esetén szakítja meg.
 
 ### Fordított proxykkal való kompatibilitás
 
-Ha az OmniRoute-ot Nginx, Caddy, Cloudflare vagy más fordított proxy mögött futtatja, győződjön meg arról, hogy a proxy időtúllépései is hosszabbak az OmniRoute adatfolyam-/lekérési időtúllépéseinél.
+Ha a 67router-ot Nginx, Caddy, Cloudflare vagy más fordított proxy mögött futtatja, győződjön meg arról, hogy a proxy időtúllépései is hosszabbak a 67router adatfolyam-/lekérési időtúllépéseinél.
 
 ---
 

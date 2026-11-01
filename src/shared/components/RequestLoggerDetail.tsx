@@ -271,7 +271,10 @@ function StreamSection({ title, sectionId, json, onCopy }) {
             onClick={toggleRaw}
             title={showRaw ? t("rawViewOn") : t("rawViewOff")}
             aria-label={showRaw ? t("rawViewOn") : t("rawViewOff")}
-            className={cn("size-7 min-h-7", showRaw ? "text-primary" : "text-text-muted")}
+            className={cn(
+              "size-7 min-h-7",
+              showRaw ? "bg-surface-2 text-text-main" : "text-text-muted"
+            )}
             aria-pressed={showRaw}
           >
             <Icon name="code" size={18} />
@@ -282,7 +285,10 @@ function StreamSection({ title, sectionId, json, onCopy }) {
             onClick={toggleAutoscroll}
             title={autoscroll ? t("autoscrollOn") : t("autoscrollOff")}
             aria-label={autoscroll ? t("autoscrollOn") : t("autoscrollOff")}
-            className={cn("size-7 min-h-7", autoscroll ? "text-primary" : "text-text-muted")}
+            className={cn(
+              "size-7 min-h-7",
+              autoscroll ? "bg-surface-2 text-text-main" : "text-text-muted"
+            )}
             aria-pressed={autoscroll}
           >
             <Icon name="vertical_align_bottom" size={18} />
@@ -408,8 +414,6 @@ export default function RequestLoggerDetail({
   const protocolKey = log.sourceFormat || log.provider;
   const protocol = getProtocolColor(protocolKey, log.provider);
   const providerColor = PROVIDER_COLORS[log.provider] || {
-    bg: "#374151",
-    text: "#fff",
     label: (log.provider || "-").toUpperCase(),
   };
   const providerLabel = log.providerDisplay || providerColor.label;
@@ -593,24 +597,29 @@ export default function RequestLoggerDetail({
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
                 {log.active ? (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-bold bg-warning/20 text-warning border border-warning/30">
+                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-[5px] text-xs font-medium bg-warning-bg text-warning border border-warning/30">
                     <span className="inline-block h-3 w-3 rounded-full border-2 border-current border-t-transparent animate-spin" />
                   </span>
                 ) : log.status === 0 ? (
-                  <span className="inline-block px-2.5 py-1 rounded text-xs font-bold bg-success/20 text-success border border-success/30">
+                  <span className="inline-block px-2 py-0.5 rounded-[5px] text-xs font-medium bg-success-bg text-success border border-success/30">
                     {t("completed")}
                   </span>
                 ) : (
-                  <Badge variant={httpStatusTone(log.status)} className="font-bold">
+                  <Badge
+                    variant={httpStatusTone(log.status)}
+                    className="font-mono font-medium tabular-nums"
+                  >
                     {log.status}
                   </Badge>
                 )}
                 {hasStatusDiscrepancy && (
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-bg-subtle border border-border text-text-muted">
+                  <span className="text-[11px] font-medium px-1.5 py-0.5 rounded-[5px] bg-bg-subtle border border-border text-text-muted">
                     {t("upstreamStatus", { status: providerStatus })}
                   </span>
                 )}
-                {log.method && <span className="font-bold text-lg">{log.method}</span>}
+                {log.method && (
+                  <span className="font-mono text-sm font-semibold">{log.method}</span>
+                )}
               </div>
               {hasStatusDiscrepancy && (
                 <span className="text-[10px] text-warning font-medium mt-0.5">
@@ -717,16 +726,13 @@ export default function RequestLoggerDetail({
                 <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
                   {t("model")}
                 </div>
-                <div className="text-sm font-medium text-primary font-mono">{log.model}</div>
+                <div className="text-sm font-medium text-text-main font-mono">{log.model}</div>
               </div>
               <div className="min-w-[120px] flex-1">
                 <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
                   {t("provider")}
                 </div>
-                <span
-                  className="inline-block px-2.5 py-1 rounded text-[10px] font-bold uppercase"
-                  style={{ backgroundColor: providerColor.bg, color: providerColor.text }}
-                >
+                <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11.5px] font-medium text-text-main">
                   {providerLabel}
                 </span>
               </div>
@@ -789,7 +795,7 @@ export default function RequestLoggerDetail({
                   className="flex flex-wrap items-center gap-1.5"
                   data-testid="token-group-input"
                 >
-                  <span className="px-2 py-0.5 rounded bg-primary/20 text-primary text-xs font-bold">
+                  <span className="px-1.5 py-0.5 rounded-[5px] border border-border bg-surface-2 text-text-main text-xs font-medium tabular-nums">
                     {t("totalIn", { value: formatTokenValue(tokenStats.totalIn) })}
                   </span>
                   <span className="px-2 py-0.5 rounded bg-info/20 text-info text-xs font-bold">
@@ -839,7 +845,7 @@ export default function RequestLoggerDetail({
                 <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
                   {t("model")}
                 </div>
-                <div className="text-sm font-medium text-primary font-mono">{log.model}</div>
+                <div className="text-sm font-medium text-text-main font-mono">{log.model}</div>
               </div>
               <div>
                 <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
@@ -860,10 +866,7 @@ export default function RequestLoggerDetail({
                 <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
                   {t("provider")}
                 </div>
-                <span
-                  className="inline-block px-2.5 py-1 rounded text-[10px] font-bold uppercase"
-                  style={{ backgroundColor: providerColor.bg, color: providerColor.text }}
-                >
+                <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11.5px] font-medium text-text-main">
                   {providerLabel}
                 </span>
               </div>
@@ -871,10 +874,7 @@ export default function RequestLoggerDetail({
                 <div className="text-[10px] text-text-muted uppercase tracking-wider mb-1">
                   {t("requestProtocol")}
                 </div>
-                <span
-                  className="inline-block px-2.5 py-1 rounded text-[10px] font-bold uppercase"
-                  style={{ backgroundColor: protocol.bg, color: protocol.text }}
-                >
+                <span className="inline-block rounded-[5px] border border-border bg-surface-2 px-1.5 py-0.5 text-[11.5px] font-medium text-text-main">
                   {protocol.label}
                 </span>
               </div>
@@ -883,7 +883,7 @@ export default function RequestLoggerDetail({
                   {t("cacheSource")}
                 </div>
                 <span
-                  className={`inline-block px-2.5 py-1 rounded text-[10px] font-bold border ${cacheSourceClassName}`}
+                  className={`inline-block px-1.5 py-0.5 rounded-[5px] text-[11.5px] font-medium border ${cacheSourceClassName}`}
                 >
                   {cacheSourceLabel}
                 </span>
@@ -1052,7 +1052,8 @@ export default function RequestLoggerDetail({
                         aria-current={isCurrent ? "true" : undefined}
                         className={cn(
                           "h-auto w-full justify-start gap-2 px-2 py-1.5 text-left text-xs font-normal",
-                          isCurrent && "border border-primary/30 bg-primary/10 disabled:opacity-100"
+                          isCurrent &&
+                            "border border-border-strong bg-surface-2 disabled:opacity-100"
                         )}
                       >
                         <Badge
@@ -1071,7 +1072,7 @@ export default function RequestLoggerDetail({
                           {formatDuration(r.duration)}
                         </span>
                         {isCurrent && (
-                          <span className="text-[9px] text-primary font-bold ml-1">
+                          <span className="text-[10px] text-text-main font-semibold ml-1">
                             {t("current")}
                           </span>
                         )}

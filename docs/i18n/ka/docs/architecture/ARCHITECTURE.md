@@ -1,4 +1,4 @@
-# OmniRoute Architecture (ქართული)
+# 67router Architecture (ქართული)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _ბოლოს განახლდა: 2026-06-28_
 
 ## მოკლე მიმოხილვა
 
-OmniRoute არის Next.js-ზე აგებული ლოკალური AI მარშრუტიზაციის კარიბჭე და მართვის პანელი.
+67router არის Next.js-ზე აგებული ლოკალური AI მარშრუტიზაციის კარიბჭე და მართვის პანელი.
 ის უზრუნველყოფს OpenAI-სთან თავსებად ერთიან საბოლოო წერტილს (`/v1/*`) და ტრაფიკს რამდენიმე ზედა დონის პროვაიდერს შორის ანაწილებს, ფორმატების გარდაქმნის, სარეზერვო გადართვის, ტოკენების განახლებისა და გამოყენების აღრიცხვის მხარდაჭერით.
 
 ძირითადი შესაძლებლობები:
@@ -128,13 +128,11 @@ v3.8.0 პლატფორმის კანონიკური, ვერ�
 - `/dashboard/limits` — კვოტისა და სიხშირის მართვის საშუალებები
 - `/dashboard/cli-tools` — CLI-ის საწყისი კონფიგურაცია, გაშვების გარემოს აღმოჩენა, კონფიგურაციის გენერირება
 - `/dashboard/agents` — აღმოჩენილი ACP აგენტები + მომხმარებლის აგენტების რეგისტრაცია
-- `/dashboard/cloud-agents` — ღრუბელში განთავსებული აგენტების ამოცანები (Codex Cloud, Devin, Jules) და ამოცანების სასიცოცხლო ციკლი
 - `/dashboard/skills` — A2A უნარების რეესტრი, იზოლირებულ გარემოში შესრულება, ჩაშენებული უნარების კატალოგი
 - `/dashboard/memory` — მუდმივი სასაუბრო მეხსიერების დათვალიერება და მოძიება
 - `/dashboard/webhooks` — გამავალი webhook-ების გამოწერები, საიდუმლოს როტაცია, განმეორებითი მცდელობების სტატისტიკა
 - `/dashboard/batch` — პაკეტური დავალებების გაგზავნა და მიმდინარეობა
 - `/dashboard/cache` — გამჭოლი წაკითხვისა და მსჯელობის ქეშის სტატისტიკა, გამოდევნის მართვის საშუალებები
-- `/dashboard/playground` — ინტერაქტიული სასაუბრო საცდელი გარემო ნებისმიერი კონფიგურირებული კომბინაციისთვის/მოდელისთვის
 - `/dashboard/changelog` — აპლიკაციაში ჩაშენებული ცვლილებების ჟურნალის მნახველი (არენდერებს `CHANGELOG.md`-ს)
 - `/dashboard/system` — გაშვების გარემოს დიაგნოსტიკა, ვერსიის ინფორმაცია, გარემოს ვალიდაციის ზედაპირი
 - `/dashboard/onboarding` — პირველი გაშვების კონფიგურაციის ოსტატი ახალი ინსტალაციებისთვის
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[ბრაუზერის მართვის პანელი]
     end
 
-    subgraph Router[OmniRoute-ის ლოკალური პროცესი]
+    subgraph Router[67router-ის ლოკალური პროცესი]
         API[V1 თავსებადობის API\n/v1/*]
         DASH[მართვის პანელი + მართვის API\n/api/*]
         CORE[SSE + ტრანსლაციის ბირთვი\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - ბიუჯეტი: `src/app/api/usage/budget` (GET/POST)
 - სარეზერვო ჯაჭვები: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - შესაბამისობის აუდიტი: `src/app/api/compliance/audit-log` (GET, გვერდებად დაყოფით + სტრუქტურირებული მეტამონაცემებით)
-- შეფასებები: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - პოლიტიკები: `src/app/api/policies` (GET/POST)
 - სინქრონიზაციის ტოკენები: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - კონფიგურაციის პაკეტი: `src/app/api/sync/bundle` (GET, პარამეტრების/პროვაიდერების/კომბინაციების/გასაღებების ETag-ით ვერსირებული ანაბეჭდი)
@@ -316,7 +313,6 @@ flowchart LR
 - fetch-ის დროის ამოწურვა: `src/shared/utils/fetchTimeout.ts`
 - მოთხოვნის ტელემეტრია: `src/shared/utils/requestTelemetry.ts`
 - შესაბამისობა/აუდიტი: `src/lib/compliance/index.ts`
-- შეფასებების გამშვები: `src/lib/evals/evalRunner.ts`
 - დომენის მდგომარეობის მუდმივი შენახვა: `src/lib/db/domainState.ts` — SQLite CRUD სარეზერვო გადართვის ჯაჭვებისთვის, ბიუჯეტებისთვის, ღირებულების ისტორიისთვის, ბლოკირების მდგომარეობისა და ამომრთველებისთვის
 
 OAuth პროვაიდერის მოდულები (27 ცალკეული ფაილი `src/lib/oauth/providers/`-ში):
@@ -328,7 +324,7 @@ OAuth პროვაიდერის მოდულები (27 ცალ�
 
 ## 5) ჩაშენებული სერვისები (v3.8.4)
 
-OmniRoute-ს შეუძლია დააყენოს, ზედამხედველობა გაუწიოს და მოთხოვნები გადაამისამართოს ლოკალურად გაშვებულ AI ინსტრუმენტების პროცესებზე,
+67router-ს შეუძლია დააყენოს, ზედამხედველობა გაუწიოს და მოთხოვნები გადაამისამართოს ლოკალურად გაშვებულ AI ინსტრუმენტების პროცესებზე,
 რომლებსაც **ჩაშენებული სერვისები** ეწოდება. მოყვება ხუთი სერვისი: 9Router, CLIProxyAPI, Bifrost, Mux და Dario.
 
 არქიტექტურის ფენები:
@@ -385,23 +381,6 @@ Auto Combo მოთხოვნის დამუშავებისას �
 ალგორითმის სრული დეტალებისთვის (ფაქტორების ფორმულები, წონების გამართვა) იხილეთ
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. ღრუბლოვანი აგენტები
-
-Cloud Agents მესამე მხარის ჰოსტირებულ კოდის აგენტების პლატფორმებს (Codex Cloud, Devin,
-Jules) აერთიანებს მონაცემთა ბაზაზე დაფუძნებული ამოცანების სასიცოცხლო ციკლის ერთიანი ინტერფეისის მიღმა. ამოცანების შექმნისა და დათვალიერების
-ყველა საბოლოო წერტილი საჭიროებს მართვის ავთენტიფიკაციას.
-
-- მოდულის ფესვი: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, აგრეთვე თითოეული აგენტის ქვეკატალოგები `agents/`-ის ქვეშ)
-- ცალკეული აგენტების იმპლემენტაციები: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- საჯარო საბოლოო წერტილები: `/api/v1/agents/tasks/*` (სიის მიღება/შექმნა/მიღება/გაუქმება)
-- მართვის საბოლოო წერტილები: `/api/cloud/*` (რესურსებით უზრუნველყოფა, სტატუსი, პაკეტური დამუშავება)
-- მართვის პანელი: `/dashboard/cloud-agents`
-- საცავი: `cloud_agent_tasks` ცხრილი
-
-თითოეული აგენტის რესურსებით უზრუნველყოფისა და OAuth-ის სპეციფიკისთვის იხილეთ
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. დამცავი მექანიზმები
 
 დამცავი მექანიზმების მოდული არის დინამიკურად გადატვირთვადი შუალედური პროგრამული ფენა, რომელიც მოთხოვნებსა და
@@ -437,7 +416,7 @@ Jules) აერთიანებს მონაცემთა ბაზა�
 - კვოტის კეში: `src/domain/quotaCache.ts`
 - დეგრადაციის მდგომარეობა: `src/domain/degradation.ts`
 - კონფიგურაციის აუდიტი: `src/domain/configAudit.ts`
-- OmniRoute-ის პასუხის მეტამონაცემების შემქმნელი: `src/domain/omnirouteResponseMeta.ts`
+- 67router-ის პასუხის მეტამონაცემების შემქმნელი: `src/domain/omnirouteResponseMeta.ts`
 - შეფასების ქვესისტემა: `src/domain/assessment/` — პერიოდული შეფასების დავალებები
 
 ### E. ავტორიზაციის კონვეიერი
@@ -815,7 +794,7 @@ flowchart LR
         Browser[მართვის პანელის ბრაუზერი]
     end
 
-    subgraph ContainerOrProcess[OmniRoute-ის სამუშაო გარემო]
+    subgraph ContainerOrProcess[67router-ის სამუშაო გარემო]
         Next[Next.js სერვერი\nPORT=20128]
         Core[SSE ბირთვი + შემსრულებლები]
         MainDB[(storage.sqlite)]
@@ -933,7 +912,7 @@ flowchart LR
 
 ## პროვაიდერების თავსებადობის მატრიცა
 
-> **შენიშვნა:** ქვემოთ მოცემული მატრიცა წარმოადგენს OmniRoute v3.8.0-ში რეგისტრირებული 351 პროვაიდერის
+> **შენიშვნა:** ქვემოთ მოცემული მატრიცა წარმოადგენს 67router v3.8.0-ში რეგისტრირებული 351 პროვაიდერის
 > რეპრეზენტაციულ ნიმუშს. კანონიკური და მუდმივად განახლებადი სიისთვის იხილეთ
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (ავტომატურად გენერირებული) ან ჭეშმარიტების
 > წყარო `src/shared/constants/providers.ts` (ჩატვირთვისას Zod-ის მეშვეობით ვალიდირებული).
@@ -1116,7 +1095,7 @@ flowchart LR
 - კლიენტისგან მიღებული დაუმუშავებელი მოთხოვნა
 - გარდაქმნილი მოთხოვნა, რომელიც რეალურად გაიგზავნა ზედა დონეზე
 - JSON-ის სახით აღდგენილი პროვაიდერის პასუხი; ნაკადური პასუხები იკუმშება საბოლოო შეჯამებამდე, ნაკადის მეტამონაცემებთან ერთად
-- OmniRoute-ის მიერ დაბრუნებული საბოლოო კლიენტის პასუხი; ნაკადური პასუხები იმავე შეკუმშული შეჯამების ფორმით ინახება
+- 67router-ის მიერ დაბრუნებული საბოლოო კლიენტის პასუხი; ნაკადური პასუხები იმავე შეკუმშული შეჯამების ფორმით ინახება
 
 ## უსაფრთხოებისთვის კრიტიკული საზღვრები
 

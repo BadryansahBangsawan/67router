@@ -7,7 +7,7 @@
 > **Sors tal-verità:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jaqbad ir-`reasoning_content` tal-assistent iġġenerat minn mudelli bil-modalità ta’ ħsieb u jerġa’ jdaħħlu b’mod trasparenti f’talbiet b’diversi rawnds meta l-fornitur upstream jirrikjedih. Dan jelimina l-iżbalji HTTP 400 li jqajmu l-fornituri stretti meta l-istorja tal-konverżazzjoni ta’ klijent tkun nieqsa mir-raġunament tar-rawnd preċedenti.
+67router jaqbad ir-`reasoning_content` tal-assistent iġġenerat minn mudelli bil-modalità ta’ ħsieb u jerġa’ jdaħħlu b’mod trasparenti f’talbiet b’diversi rawnds meta l-fornitur upstream jirrikjedih. Dan jelimina l-iżbalji HTTP 400 li jqajmu l-fornituri stretti meta l-istorja tal-konverżazzjoni ta’ klijent tkun nieqsa mir-raġunament tar-rawnd preċedenti.
 
 ## Għaliex Dan Jeżisti
 
@@ -17,7 +17,7 @@ Diversi fornituri bil-modalità ta’ ħsieb jirrifjutaw rawnd ta’ segwitu sak
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Iżda klijenti tipiċi (Cursor, Cline, Roo Code, OpenAI SDK) ineħħu r-`reasoning_content` mill-istorja li jerġgħu jibagħtu. OmniRoute jirrestawrah minn cache fuq in-naħa tas-server sabiex it-talba li jara l-upstream tkun konsistenti. Il-kwistjoni #1628 introduċiet il-persistenza ibrida fil-memorja/SQLite sabiex il-cache tibqa’ teżisti wara li l-proċess jerġa’ jinbeda.
+Iżda klijenti tipiċi (Cursor, Cline, Roo Code, OpenAI SDK) ineħħu r-`reasoning_content` mill-istorja li jerġgħu jibagħtu. 67router jirrestawrah minn cache fuq in-naħa tas-server sabiex it-talba li jara l-upstream tkun konsistenti. Il-kwistjoni #1628 introduċiet il-persistenza ibrida fil-memorja/SQLite sabiex il-cache tibqa’ teżisti wara li l-proċess jerġa’ jinbeda.
 
 ## Arkitettura
 

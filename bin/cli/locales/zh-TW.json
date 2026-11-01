@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "錯誤：{message}",
-    "serverOffline": "OmniRoute 伺服器已離線。請啟動：omniroute serve",
+    "serverOffline": "67router 伺服器已離線。請啟動：omniroute serve",
     "authRequired": "需要認證。請設定 OMNIROUTE_API_KEY 或執行：omniroute setup",
     "rateLimited": "請求超出限制。請在 {seconds}s 後重試。",
     "timeout": "請求在 {ms}ms 後超時。",
@@ -15,7 +15,7 @@
     "yesOpt": "跳過確認"
   },
   "setup": {
-    "title": "OmniRoute 設定",
+    "title": "67router 設定",
     "passwordPrompt": "管理員密碼",
     "providerPrompt": "預設提供者（留空跳過）",
     "done": "設定完成",
@@ -30,7 +30,7 @@
     "opencode": "安裝並配置隨附的 @omniroute/opencode-plugin 以用於 OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute 診斷",
+    "title": "67router 診斷",
     "dbOk": "資料庫：正常（{path}）",
     "dbMissing": "資料庫：未初始化 — 執行 omniroute setup",
     "portOk": "埠 {port}：可用",
@@ -82,7 +82,7 @@
       "providerOpt": "按提供者名稱篩選",
       "header": "ID         提供者       名稱                     過期狀態  測試狀態  冷卻至",
       "noData": "沒有可用的提供者連線資料。",
-      "requiresServer": "providers status 需要 OmniRoute 伺服器正在執行。"
+      "requiresServer": "providers status 需要 67router 伺服器正在執行。"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "為提供者新增或更新 API 金鑰",
     "listDescription": "列出所有已配置的 API 金鑰",
     "removeDescription": "移除提供者的 API 金鑰",
-    "regenerateDescription": "重新生成 OmniRoute API 金鑰",
-    "revokeDescription": "撤銷 OmniRoute API 金鑰",
+    "regenerateDescription": "重新生成 67router API 金鑰",
+    "revokeDescription": "撤銷 67router API 金鑰",
     "revealDescription": "顯示未掩碼的 API 金鑰值",
     "usageDescription": "顯示 API 金鑰的最近使用情況",
     "usageLimitOpt": "最近請求數",
@@ -172,13 +172,6 @@
       "period": "時間範圍：1d|7d|30d|90d|ytd|all（預設：30d）",
       "provider": "按提供者 ID 篩選"
     },
-    "budget": {
-      "description": "管理成本預算",
-      "set": {
-        "scope": "預算範圍（預設：全域性）",
-        "period": "預算週期：daily|weekly|monthly（預設：monthly）"
-      }
-    },
     "quota": {
       "description": "顯示提供者配額使用情況",
       "provider": "按提供者 ID 篩選",
@@ -225,7 +218,7 @@
     "noCombo": "未找到匹配的組合。使用以下命令配置：omniroute combo create"
   },
   "chat": {
-    "description": "向 OmniRoute 傳送一次性聊天提示",
+    "description": "向 67router 傳送一次性聊天提示",
     "file": "從檔案讀取提示",
     "stdin": "從標準輸入讀取提示",
     "system": "系統提示",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "啟動 OmniRoute 伺服器（預設操作）",
-    "starting": "正在啟動 OmniRoute 伺服器（埠 {port}）...",
+    "description": "啟動 67router 伺服器（預設操作）",
+    "starting": "正在啟動 67router 伺服器（埠 {port}）...",
     "ready": "就緒地址：http://localhost:{port}",
     "stopping": "正在停止伺服器（PID {pid}）...",
     "stopped": "伺服器已停止。",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "備份",
-    "description": "建立 OmniRoute 資料備份",
+    "description": "建立 67router 資料備份",
     "creating": "正在建立備份...",
     "done": "備份已儲存至 {path}",
     "noFiles": "沒有可備份的檔案（資料庫未初始化）",
@@ -277,7 +270,7 @@
     "noBackups": "未找到備份。",
     "notFound": "未找到備份：{name}",
     "confirmRestore": "用 {ts} 的備份覆蓋當前資料？",
-    "createDescription": "建立 OmniRoute 資料備份",
+    "createDescription": "建立 67router 資料備份",
     "nameOpt": "自定義備份名稱",
     "cloudOpt": "將備份上傳到雲端儲存",
     "encryptOpt": "使用 AES-256-GCM 加密備份",
@@ -321,7 +314,7 @@
     "clearFailed": "清除快取失敗。"
   },
   "redis": {
-    "description": "一鍵啟動本地 Redis 容器（Podman 或 Docker），用於 OmniRoute 快取和配額跟蹤"
+    "description": "一鍵啟動本地 Redis 容器（Podman 或 Docker），用於 67router 快取和配額跟蹤"
   },
   "test": {
     "description": "測試提供者連線",
@@ -390,36 +383,8 @@
       "description": "MCP 審計日誌（audit --source mcp 的別名）"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "從代理卡片列出可用的 A2A 技能"
-    },
-    "invoke": {
-      "description": "呼叫 A2A 技能並返回任務 ID",
-      "input": "JSON 輸入物件",
-      "input_file": "JSON 輸入檔案路徑",
-      "wait": "等待任務完成後返回",
-      "timeout": "等待完成的超時時間（毫秒，預設：60000）"
-    },
-    "tasks": {
-      "description": "管理 A2A 任務",
-      "list": {
-        "status": "按狀態篩選",
-        "skill": "按技能 ID 篩選"
-      },
-      "watch": {
-        "description": "輪詢任務狀態直至完成"
-      },
-      "stream": {
-        "description": "通過 SSE 流式傳輸任務執行事件"
-      },
-      "logs": {
-        "description": "顯示任務訊息和產物"
-      }
-    }
-  },
   "policy": {
-    "description": "管理 OmniRoute 授權策略",
+    "description": "管理 67router 授權策略",
     "list": {
       "description": "列出策略",
       "kind": "按型別篩選（allow|deny|rate-limit|cost-cap）",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "配置和檢查 OmniRoute 壓縮管道",
+    "description": "配置和檢查 67router 壓縮管道",
     "status": {
       "description": "顯示當前壓縮狀態和設定"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "輪換隧道 {type}？（將生成新 URL）"
   },
   "stop": {
-    "description": "停止 OmniRoute 伺服器",
+    "description": "停止 67router 伺服器",
     "stopping": "正在停止伺服器（PID {pid}）...",
     "stopped": "伺服器已停止。",
     "notRunning": "沒有伺服器在執行。",
     "portFallback": "未找到 PID 檔案，嘗試通過埠停止..."
   },
   "restart": {
-    "description": "重啟 OmniRoute 伺服器",
-    "restarting": "正在重啟 OmniRoute 伺服器..."
+    "description": "重啟 67router 伺服器",
+    "restarting": "正在重啟 67router 伺服器..."
   },
   "dashboard": {
-    "description": "在瀏覽器中開啟 OmniRoute 儀表盤",
+    "description": "在瀏覽器中開啟 67router 儀表盤",
     "opening": "正在開啟儀表盤：{url}",
     "urlOnly": "僅列印儀表盤 URL，不開啟瀏覽器",
     "tui": "開啟互動式 TUI 儀表盤（終端 UI，7 個標籤頁）"
@@ -560,120 +525,6 @@
       "description": "按 ID 獲取單個審計日誌條目"
     }
   },
-  "skills": {
-    "description": "管理 OmniRoute 技能（沙箱、內建、自定義、混合、skillssh）",
-    "list": {
-      "description": "列出已安裝的技能",
-      "type": "按型別篩選（sandbox|custom|builtin|hybrid|skillssh）",
-      "enabled": "僅顯示已啟用的技能",
-      "disabled": "僅顯示已停用的技能",
-      "api_key": "按 API 金鑰篩選"
-    },
-    "get": {
-      "description": "按 ID 獲取技能詳情"
-    },
-    "install": {
-      "description": "從檔案或 URL 安裝技能",
-      "from_file": "技能 JSON 定義檔案路徑",
-      "from_url": "遠端技能定義的 URL",
-      "type": "技能型別（sandbox|custom|hybrid）",
-      "enable": "安裝後啟用技能"
-    },
-    "enable": {
-      "description": "按 ID 啟用技能"
-    },
-    "disable": {
-      "description": "按 ID 停用技能",
-      "yes": "跳過確認提示"
-    },
-    "delete": {
-      "description": "按 ID 刪除技能",
-      "yes": "跳過確認提示"
-    },
-    "execute": {
-      "description": "按 ID 執行技能",
-      "input": "JSON 輸入物件",
-      "input_file": "JSON 輸入檔案路徑",
-      "timeout": "執行超時時間（毫秒，預設：30000）"
-    },
-    "executions": {
-      "description": "列出技能執行歷史",
-      "skill": "按技能 ID 篩選",
-      "limit": "最大結果數（預設：50）",
-      "status": "按狀態篩選（running|completed|failed）"
-    },
-    "skillssh": {
-      "description": "管理通過 SSH 安裝的技能"
-    },
-    "marketplace": {
-      "description": "瀏覽和安裝市場中的技能"
-    },
-    "mp": {
-      "search": {
-        "description": "搜尋市場包",
-        "category": "按類別篩選",
-        "tag": "按標籤篩選",
-        "limit": "最大結果數（預設：30）",
-        "sort": "排序方式：downloads|rating|recent"
-      },
-      "info": {
-        "description": "顯示包詳情和說明文件"
-      },
-      "install": {
-        "description": "安裝市場包",
-        "version": "包版本（預設：latest）",
-        "enable": "安裝後啟用",
-        "yes": "跳過確認提示"
-      },
-      "categories": {
-        "description": "列出市場類別"
-      },
-      "featured": {
-        "description": "顯示推薦市場包"
-      }
-    }
-  },
-  "memory": {
-    "description": "管理 OmniRoute 對話記憶（FTS5 + 向量）",
-    "search": {
-      "description": "按語義查詢搜尋記憶條目",
-      "type": "按記憶型別篩選（user|feedback|project|reference）",
-      "limit": "最大結果數（預設：20）",
-      "api_key": "按 API 金鑰篩選",
-      "token_budget": "限制結果中的總權杖數"
-    },
-    "add": {
-      "description": "新增新的記憶條目",
-      "content": "記憶文本內容",
-      "file": "從檔案讀取內容",
-      "type": "記憶型別（預設：user）",
-      "metadata": "JSON 後設資料物件",
-      "api_key": "關聯到 API 金鑰"
-    },
-    "clear": {
-      "description": "刪除匹配篩選條件的記憶條目",
-      "type": "按型別篩選",
-      "older": "刪除早於指定時長的條目（30d, 6m, 1y）",
-      "api_key": "按 API 金鑰篩選",
-      "yes": "跳過確認提示"
-    },
-    "list": {
-      "description": "列出記憶條目（不按搜尋排名）",
-      "type": "按型別篩選",
-      "limit": "最大結果數（預設：100）",
-      "api_key": "按 API 金鑰篩選"
-    },
-    "get": {
-      "description": "按 ID 獲取單個記憶條目"
-    },
-    "delete": {
-      "description": "按 ID 刪除記憶條目",
-      "yes": "跳過確認提示"
-    },
-    "health": {
-      "description": "顯示記憶子系統健康狀態（FTS5 + Qdrant）"
-    }
-  },
   "oauth": {
     "description": "管理 OAuth 提供者連線",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "跳過確認提示"
     }
   },
-  "cloud": {
-    "description": "管理雲 AI 代理任務（codex, devin, jules）",
-    "agents": {
-      "description": "列出可用的雲代理"
-    },
-    "agent": {
-      "description": "管理 {agent} 雲代理任務",
-      "auth": {
-        "description": "通過 OAuth 授權 {agent}"
-      }
-    },
-    "task": {
-      "description": "管理雲代理任務",
-      "create": {
-        "description": "建立新的代理任務",
-        "title": "任務標題（預設為提示的前 80 個字元）",
-        "prompt": "任務提示文本",
-        "prompt_file": "從檔案讀取提示",
-        "repo": "要克隆的任務倉庫 URL",
-        "branch": "要使用的分支名稱",
-        "metadata": "JSON 後設資料物件"
-      },
-      "list": {
-        "description": "列出代理任務",
-        "status": "按狀態篩選（running|completed|failed|cancelled）",
-        "limit": "最大結果數（預設：50）"
-      },
-      "get": {
-        "description": "按 ID 獲取任務詳情"
-      },
-      "status": {
-        "description": "列印任務狀態（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "取消執行中的任務",
-        "yes": "跳過確認提示"
-      },
-      "approve": {
-        "description": "批准代理計劃開始執行"
-      },
-      "message": {
-        "description": "向執行中的任務傳送訊息"
-      }
-    },
-    "sources": {
-      "description": "列出任務產生的原始檔"
-    }
-  },
-  "eval": {
-    "description": "管理評估套件和執行",
-    "suites": {
-      "description": "管理評估套件",
-      "list": {
-        "description": "列出評估套件"
-      },
-      "get": {
-        "description": "按 ID 獲取評估套件詳情"
-      },
-      "create": {
-        "description": "從 JSON 檔案建立評估套件",
-        "file": "套件定義 JSON 檔案路徑"
-      }
-    },
-    "run": {
-      "description": "為套件啟動評估執行",
-      "model": "要評估的模型 ID（預設：auto）",
-      "combo": "強制指定組合名稱",
-      "concurrency": "併發樣本數（預設：4）",
-      "tag": "標記此次執行以便後續篩選",
-      "watch": "觀察執行進度直至完成"
-    },
-    "list": {
-      "description": "列出評估執行",
-      "suite": "按套件 ID 篩選",
-      "status": "按狀態篩選",
-      "since": "返回自此時間戳以來的執行",
-      "limit": "最大結果數（預設：50）"
-    },
-    "get": {
-      "description": "按 ID 獲取評估執行詳情"
-    },
-    "results": {
-      "description": "顯示評估執行的樣本結果",
-      "failed": "僅顯示失敗的樣本"
-    },
-    "cancel": {
-      "description": "取消正在執行的評估",
-      "yes": "跳過確認提示"
-    },
-    "scorecard": {
-      "description": "顯示已完成評估執行的記分卡"
-    }
-  },
-  "webhooks": {
-    "description": "管理 OmniRoute Webhook",
-    "events": {
-      "description": "列出所有可用的 Webhook 事件型別"
-    },
-    "list": {
-      "description": "列出已配置的 Webhook"
-    },
-    "get": {
-      "description": "按 ID 獲取 Webhook 詳情"
-    },
-    "add": {
-      "description": "註冊新的 Webhook",
-      "url": "目標 URL",
-      "events": "逗號分隔的事件型別列表",
-      "secret": "HMAC 簽名金鑰",
-      "header": "額外的標頭（key=value 格式，可重複）",
-      "no_enabled": "以停用狀態建立 Webhook"
-    },
-    "update": {
-      "description": "更新現有 Webhook",
-      "enabled": "設定啟用狀態（true|false）"
-    },
-    "remove": {
-      "description": "刪除 Webhook",
-      "yes": "跳過確認提示"
-    },
-    "test": {
-      "description": "向 Webhook 傳送測試事件",
-      "event": "要模擬的事件型別（預設：request.completed）"
-    }
-  },
   "program": {
-    "description": "OmniRoute — 具有自動故障轉移的智慧 AI 路由器",
+    "description": "67router — 具有自動故障轉移的智慧 AI 路由器",
     "version": "列印版本並退出",
     "output": "輸出格式（table, json, jsonl, csv）",
     "quiet": "禁止非必要輸出",
     "no_color": "停用彩色輸出",
     "timeout": "HTTP 請求超時（毫秒）",
-    "api_key": "OmniRoute 伺服器的 API 金鑰",
-    "base_url": "OmniRoute 伺服器的基礎 URL",
+    "api_key": "67router 伺服器的 API 金鑰",
+    "base_url": "67router 伺服器的基礎 URL",
     "context": "此命令使用的伺服器上下文/配置檔案",
     "lang": "設定 CLI 顯示語言（覆蓋 OMNIROUTE_LANG）"
-  },
-  "files": {
-    "description": "管理檔案（上傳、列出、獲取、下載、刪除）",
-    "list": {
-      "purpose": "按用途篩選",
-      "limit": "最大結果數"
-    },
-    "get": {
-      "description": "獲取檔案後設資料"
-    },
-    "upload": {
-      "description": "上傳檔案",
-      "purpose": "檔案用途（batch, assistants, fine-tune）"
-    },
-    "content": {
-      "description": "下載檔案內容",
-      "out": "儲存到路徑（預設：stdout）"
-    },
-    "delete": {
-      "yes": "跳過確認"
-    }
-  },
-  "batches": {
-    "description": "管理相容 OpenAI 的批次作業",
-    "list": {
-      "status": "按狀態篩選",
-      "limit": "最大結果數"
-    },
-    "create": {
-      "description": "建立批次作業",
-      "inputFile": "輸入檔案 ID",
-      "endpoint": "目標端點",
-      "window": "完成視窗",
-      "metadata": "新增後設資料 key=value"
-    },
-    "submit": {
-      "description": "上傳 JSONL 檔案並建立批次作業",
-      "jsonl": "JSONL 檔案路徑",
-      "endpoint": "目標端點",
-      "wait": "等待完成"
-    },
-    "cancel": {
-      "yes": "跳過確認"
-    },
-    "wait": {
-      "timeout": "超時時間（毫秒）"
-    },
-    "output": {
-      "out": "將輸出儲存到路徑"
-    },
-    "errors": {
-      "out": "將錯誤儲存到路徑"
-    }
   },
   "translator": {
     "description": "在 LLM 格式之間轉換請求體",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "訪問和測試 OmniRoute OpenAPI 規範",
+    "description": "訪問和測試 67router OpenAPI 規範",
     "dump": {
       "description": "將 OpenAPI 規範輸出到 stdout 或檔案",
       "format": "輸出格式：yaml|json（預設：yaml）",
@@ -1124,35 +797,8 @@
       "switch": "啟用排名最高的組合"
     }
   },
-  "oneproxy": {
-    "description": "管理 OneProxy 上游代理池",
-    "stats": {
-      "provider": "按提供者篩選",
-      "period": "時間範圍（預設：24h）"
-    },
-    "fetch": {
-      "description": "從代理池獲取代理",
-      "count": "要獲取的代理數（預設：1）",
-      "type": "代理型別：http|socks5（預設：http）"
-    },
-    "rotate": {
-      "description": "強制輪換代理",
-      "provider": "要輪換的提供者",
-      "connectionId": "要輪換的特定連線 ID"
-    },
-    "config": {
-      "description": "顯示或更新 OneProxy 配置",
-      "enabled": "啟用代理池（true|false）",
-      "poolSize": "池大小",
-      "providerSource": "代理提供者的 URL",
-      "rotationPolicy": "輪換策略：sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "列出當前代理池及指標"
-    }
-  },
   "open": {
-    "description": "在瀏覽器中開啟特定的 OmniRoute 儀表盤頁面",
+    "description": "在瀏覽器中開啟特定的 67router 儀表盤頁面",
     "url": "僅列印 URL，不開啟瀏覽器"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "在 OmniRoute 例項之間同步配置",
+    "description": "在 67router 例項之間同步配置",
     "push": {
       "description": "將配置推送到雲或遠端例項"
     },
@@ -1228,7 +874,7 @@
     "filter": "按級別篩選（error,warn,info）— 逗號分隔",
     "lines": "要獲取的行數",
     "timeout": "連線超時（毫秒）",
-    "baseUrl": "OmniRoute API 基礎 URL",
+    "baseUrl": "67router API 基礎 URL",
     "requestId": "按請求 ID 篩選",
     "apiKey": "按 API 金鑰篩選",
     "combo": "按組合名稱篩選",
@@ -1244,10 +890,10 @@
     "description": "控制系統托盤圖示",
     "show": "顯示托盤圖示（如果伺服器使用 --tray 執行）",
     "hide": "隱藏托盤圖示",
-    "quit": "通過托盤退出 OmniRoute"
+    "quit": "通過托盤退出 67router"
   },
   "autostart": {
-    "description": "管理 OmniRoute 開機自啟（Linux：systemd 使用者服務）",
+    "description": "管理 67router 開機自啟（Linux：systemd 使用者服務）",
     "enable": "啟用開機自啟",
     "disable": "停用開機自啟",
     "toggle": "切換開機自啟",
@@ -1268,30 +914,20 @@
     "system": "系統提示",
     "resume": "按名稱恢復儲存的會話"
   },
-  "plugin": {
-    "description": "管理 CLI 外掛（omniroute-cmd-*）",
-    "list": "列出已安裝的外掛",
-    "install": "從 npm 或本地路徑安裝外掛",
-    "remove": "刪除已安裝的外掛",
-    "info": "顯示已安裝外掛的詳情",
-    "search": "搜尋 npm 登錄檔中的可用外掛",
-    "update": "更新已安裝的外掛",
-    "scaffold": "搭建新的外掛模板"
-  },
   "launch": {
-    "description": "啟動指向 OmniRoute 的 Claude Code（本機或遠端，使用 --profile）",
+    "description": "啟動指向 67router 的 Claude Code（本機或遠端，使用 --profile）",
     "token": "Claude 用戶端應傳送的令牌（ANTHROPIC_AUTH_TOKEN）",
-    "notRunning": "無法在 {port} 存取 OmniRoute。請使用「omniroute serve」啟動它。",
+    "notRunning": "無法在 {port} 存取 67router。請使用「omniroute serve」啟動它。",
     "notFound": "在 PATH 中找不到「claude」CLI。"
   },
   "run": {
-    "description": "透過 OmniRoute 啟動受支援的 CLI 目標"
+    "description": "透過 67router 啟動受支援的 CLI 目標"
   },
   "setupClaude": {
-    "description": "從 OmniRoute 模型目錄產生 ~/.claude/profiles 的 Claude Code 配置檔"
+    "description": "從 67router 模型目錄產生 ~/.claude/profiles 的 Claude Code 配置檔"
   },
   "connect": {
-    "description": "連線到遠端 OmniRoute 伺服器並進入遠端模式"
+    "description": "連線到遠端 67router 伺服器並進入遠端模式"
   },
   "tokens": {
     "description": "管理限定範圍的 CLI 存取令牌（遠端模式）"
@@ -1300,10 +936,10 @@
     "description": "從使用中的伺服器選擇提供者+模型並配置受支援的本機 CLI"
   },
   "launchCodex": {
-    "description": "啟動指向 OmniRoute 的 Codex CLI（本機或遠端 VPS）"
+    "description": "啟動指向 67router 的 Codex CLI（本機或遠端 VPS）"
   },
   "setupCodex": {
-    "description": "從 OmniRoute 即時模型目錄產生 ~/.codex 配置檔"
+    "description": "從 67router 即時模型目錄產生 ~/.codex 配置檔"
   },
   "packs": {
     "description": "管理可選的執行階段套件（ML / 瀏覽器自動化）",
@@ -1316,7 +952,7 @@
     "errUnknown": "未知的套件：{name}",
     "errNoIndex": "找不到套件索引；請透過 --source <dir> 傳入存放套件負載的目錄（桌面套件會將其隨附在應用程式旁）",
     "installed": "套件「{name}」已安裝並在 {dir} 驗證通過",
-    "restartHint": "請重新啟動 OmniRoute 伺服器（或桌面應用程式），以便執行階段載入該套件",
+    "restartHint": "請重新啟動 67router 伺服器（或桌面應用程式），以便執行階段載入該套件",
     "removed": "套件「{name}」已移除",
     "notInstalled": "套件「{name}」未安裝",
     "verifyOk": "所有已安裝的套件均已驗證通過",

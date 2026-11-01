@@ -1,10 +1,10 @@
-# Claude Code CLI — Configuration with OmniRoute (മലയാളം)
+# Claude Code CLI — Configuration with 67router (മലയാളം)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CLAUDE-CODE-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CLAUDE-CODE-CONFIGURATION.md)
 
 ---
 
-**Claude Code** CLI (`claude`)യെ OmniRoute-ലേക്ക് — ലോക്കലായോ റിമോട്ട് VPS-ലേക്കോ —
+**Claude Code** CLI (`claude`)യെ 67router-ലേക്ക് — ലോക്കലായോ റിമോട്ട് VPS-ലേക്കോ —
 ഓരോ മോഡലിനുമുള്ള പ്രൊഫൈലുകളോടെ, Codex സജ്ജീകരണത്തിന് സമാനമായി ബന്ധിപ്പിക്കുക.
 
 ---
@@ -12,15 +12,15 @@
 ## ദ്രുതാരംഭം
 
 ```bash
-# ലോക്കൽ OmniRoute-നെതിരെ Claude Code സമാരംഭിക്കുക (സജീവ context സ്വയമേവ കണ്ടെത്തുന്നു)
+# ലോക്കൽ 67router-നെതിരെ Claude Code സമാരംഭിക്കുക (സജീവ context സ്വയമേവ കണ്ടെത്തുന്നു)
 omniroute launch
 
-# റിമോട്ട് OmniRoute-നെതിരെ (`omniroute connect <host>`-ന് ശേഷം ഇത് സ്വയമേവ നടക്കും)
+# റിമോട്ട് 67router-നെതിരെ (`omniroute connect <host>`-ന് ശേഷം ഇത് സ്വയമേവ നടക്കും)
 omniroute launch --remote http://192.168.0.15:20128 --api-key oma_live_xxx
 
 # ഓരോ മോഡലിനുമുള്ള പ്രൊഫൈലുകൾ സൃഷ്ടിച്ച ശേഷം ഒരെണ്ണം സമാരംഭിക്കുക
 omniroute setup-claude            # ~/.claude/profiles/<name>/settings.json-ലേക്ക് എഴുതുന്നു
-omniroute launch --profile glm52  # OmniRoute വഴി glm/glm-5.2 ഉപയോഗിക്കുന്ന Claude Code
+omniroute launch --profile glm52  # 67router വഴി glm/glm-5.2 ഉപയോഗിക്കുന്ന Claude Code
 ```
 
 ---
@@ -33,7 +33,7 @@ Claude Code **Anthropic Messages API** ഉപയോഗിച്ചാണ് ആ�
 | വേരിയബിൾ                                     | ഉദ്ദേശ്യം                                                                                                               |
 | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `ANTHROPIC_BASE_URL`                         | ഗേറ്റ്വേ റൂട്ട് URL (Claude Code `/v1/messages` ചേർക്കുന്നു). **`/v1` പ്രത്യയം പാടില്ല.**                               |
-| `ANTHROPIC_AUTH_TOKEN`                       | `Authorization: Bearer …` ആയി അയയ്ക്കുന്നു — നിങ്ങളുടെ OmniRoute ആക്സസ് ടോക്കൺ / API കീ ഉപയോഗിക്കുക                     |
+| `ANTHROPIC_AUTH_TOKEN`                       | `Authorization: Bearer …` ആയി അയയ്ക്കുന്നു — നിങ്ങളുടെ 67router ആക്സസ് ടോക്കൺ / API കീ ഉപയോഗിക്കുക                      |
 | `ANTHROPIC_API_KEY`                          | മറ്റൊരു മാർഗം: `x-api-key` ആയി അയയ്ക്കുന്നു. രണ്ടും സജ്ജീകരിച്ചിട്ടുണ്ടെങ്കിൽ `ANTHROPIC_AUTH_TOKEN`-ന് മുൻഗണന ലഭിക്കും |
 | `ANTHROPIC_MODEL`                            | ഒരു നിർദ്ദിഷ്ട മോഡൽ നിർബന്ധിതമാക്കുന്നു (`/model` പിക്കറിന്റെ ഡിഫോൾട്ടിനെ മറികടക്കുന്നു)                                |
 | `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY` | `1` → നേറ്റീവ് `/model` പിക്കർ `/v1/models`-ൽ നിന്നുള്ള `claude*`/`anthropic*` മോഡലുകൾ പട്ടികപ്പെടുത്തുന്നു             |
@@ -50,9 +50,9 @@ Claude Code **Anthropic Messages API** ഉപയോഗിച്ചാണ് ആ�
 
 ## ഡിസ്കവറി അലിയസുകൾ — `/model` പിക്കറിൽ Claude-അല്ലാത്ത മോഡലുകൾ ദൃശ്യമാക്കുക
 
-Claude Code-ന്റെ ഗേറ്റ്വേ മോഡൽ ഡിസ്കവറി `claude` അല്ലെങ്കിൽ `anthropic` എന്നിവയിൽ തുടങ്ങുന്ന ഐഡികൾ മാത്രമേ ലിസ്റ്റ് ചെയ്യൂ, അതിനാൽ `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` സെറ്റ് ചെയ്തിട്ടുണ്ടെങ്കിൽ നേറ്റീവ് `/model` പിക്കർ സാധാരണയായി OmniRoute-ന്റെ Claude/Anthropic മോഡലുകൾ **മാത്രം** കാണിക്കും — ഒരു `kimi/kimi-k2.6` അല്ലെങ്കിൽ `glm/glm-5.2` ഒരിക്കലും ദൃശ്യമാകില്ല, അത് നന്നായി റൂട്ട് ചെയ്യുന്നുണ്ടെങ്കിലും.
+Claude Code-ന്റെ ഗേറ്റ്വേ മോഡൽ ഡിസ്കവറി `claude` അല്ലെങ്കിൽ `anthropic` എന്നിവയിൽ തുടങ്ങുന്ന ഐഡികൾ മാത്രമേ ലിസ്റ്റ് ചെയ്യൂ, അതിനാൽ `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` സെറ്റ് ചെയ്തിട്ടുണ്ടെങ്കിൽ നേറ്റീവ് `/model` പിക്കർ സാധാരണയായി 67router-ന്റെ Claude/Anthropic മോഡലുകൾ **മാത്രം** കാണിക്കും — ഒരു `kimi/kimi-k2.6` അല്ലെങ്കിൽ `glm/glm-5.2` ഒരിക്കലും ദൃശ്യമാകില്ല, അത് നന്നായി റൂട്ട് ചെയ്യുന്നുണ്ടെങ്കിലും.
 
-ഏത് എനേബിൾ ചെയ്ത മോഡലിനെയും (കൂടാതെ കോംബോയെയും) ഒരു `claude/…` ഐഡിയുടെ കീഴിൽ OmniRoute-ന് മിറർ ചെയ്യാൻ കഴിയും, അതുവഴി അത് ആ ഫിൽട്ടർ പാസ്സായി പിക്കറിൽ ദൃശ്യമാകും:
+ഏത് എനേബിൾ ചെയ്ത മോഡലിനെയും (കൂടാതെ കോംബോയെയും) ഒരു `claude/…` ഐഡിയുടെ കീഴിൽ 67router-ന് മിറർ ചെയ്യാൻ കഴിയും, അതുവഴി അത് ആ ഫിൽട്ടർ പാസ്സായി പിക്കറിൽ ദൃശ്യമാകും:
 
 ```
 kimi/kimi-k2.6            →  claude/kimi/kimi-k2.6      "Kimi K2.6 (OmniRoute)"
@@ -60,11 +60,11 @@ glm/glm-5.2              →  claude/glm/glm-5.2         "GLM 5.2 (OmniRoute)"
 <combo "custo-otimizado"> →  claude/combo/custo-otimizado
 ```
 
-Claude Code-ൽ ഇവയിലൊന്ന് തിരഞ്ഞെടുക്കുമ്പോൾ, റൂട്ടിംഗിന് മുമ്പ് OmniRoute `claude/` റാപ്പർ നീക്കം ചെയ്ത് യഥാർത്ഥ ഐഡിയിലേക്ക് മാറ്റുന്നു — ഒരു യഥാർത്ഥ `claude/<real-claude-model>` ഐഡി (ശരിയായ Claude OAuth പ്രൊവൈഡർ) എല്ലായ്പ്പോഴും മാറ്റമില്ലാതെ നിലനിർത്തപ്പെടുന്നു.
+Claude Code-ൽ ഇവയിലൊന്ന് തിരഞ്ഞെടുക്കുമ്പോൾ, റൂട്ടിംഗിന് മുമ്പ് 67router `claude/` റാപ്പർ നീക്കം ചെയ്ത് യഥാർത്ഥ ഐഡിയിലേക്ക് മാറ്റുന്നു — ഒരു യഥാർത്ഥ `claude/<real-claude-model>` ഐഡി (ശരിയായ Claude OAuth പ്രൊവൈഡർ) എല്ലായ്പ്പോഴും മാറ്റമില്ലാതെ നിലനിർത്തപ്പെടുന്നു.
 
 സ്ഥിരസ്ഥിതിയായി ബേസ് ഐഡികൾ മാത്രമേ മിറർ ചെയ്യപ്പെടൂ. opt-in `CATALOG_MIRROR_REFINEMENTS_ENABLED` ഫീച്ചർ ഫ്ലാഗ് ഓണാകുമ്പോൾ, കാറ്റലോഗ് ഇതിനകം ലിസ്റ്റ് ചെയ്യുന്ന റീസണിംഗ്-എഫർട്ട് വേരിയന്റുകൾ (ഉദാ. `codex/gpt-6-sol-high`) മറ്റേതൊരു ഐഡിയെയും പോലെ മിറർ ചെയ്യപ്പെടുന്നു, അതുവഴി Claude Code-ന് ഒരു സ്പഷ്ടമായ എഫർട്ട് ലെവൽ തിരഞ്ഞെടുക്കാൻ കഴിയും, കൂടാതെ റിക്വസ്റ്റ് പാത്തിന് മാറ്റീരിയലൈസ് ചെയ്യാൻ കഴിയാത്ത ബിൽറ്റ്-ഇൻ `auto/*` ഐഡികൾ മിറർ ചെയ്യപ്പെടുന്നില്ല. എഫർട്ട് വേരിയന്റുകൾ തന്നെ ലിസ്റ്റ് ചെയ്യപ്പെടുന്നുണ്ടോ എന്നത് ഇപ്പോഴും `OMNIROUTE_DISABLE_THINKING_LEVEL_VARIANTS` ആണ് നിയന്ത്രിക്കുന്നത് — ബേസ് കാറ്റലോഗിലില്ലാത്ത ഒരു വേരിയന്റ് മിറർ ഒരിക്കലും ചേർക്കുന്നില്ല.
 
-**ഇത് സ്ഥിരസ്ഥിതിയായി ഓഫാണ്**, കൂടാതെ മൂന്ന്-തല ഗേറ്റ് വഴി നിയന്ത്രിക്കപ്പെടുന്നു (ഏറ്റവും നിർദ്ദിഷ്ടമായതിന് വിജയം), അതിനാൽ Claude Code ഉപയോഗിക്കാത്ത ക്ലയന്റുകൾക്കായി ഒരു സാധാരണ OmniRoute ഒരിക്കലും അതിന്റെ കാറ്റലോഗ് ഇരട്ടിപ്പിക്കുന്നില്ല:
+**ഇത് സ്ഥിരസ്ഥിതിയായി ഓഫാണ്**, കൂടാതെ മൂന്ന്-തല ഗേറ്റ് വഴി നിയന്ത്രിക്കപ്പെടുന്നു (ഏറ്റവും നിർദ്ദിഷ്ടമായതിന് വിജയം), അതിനാൽ Claude Code ഉപയോഗിക്കാത്ത ക്ലയന്റുകൾക്കായി ഒരു സാധാരണ 67router ഒരിക്കലും അതിന്റെ കാറ്റലോഗ് ഇരട്ടിപ്പിക്കുന്നില്ല:
 
 | തലം      | എവിടെ                                                                                  |
 | -------- | -------------------------------------------------------------------------------------- |
@@ -85,8 +85,8 @@ Claude ടൂൾ കാർഡ് (**ഡാഷ്ബോർഡ് → CLI കോ�
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<നിങ്ങളുടെ OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<നിങ്ങളുടെ OmniRoute API കീ>",
+    "ANTHROPIC_BASE_URL": "http://<നിങ്ങളുടെ 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<നിങ്ങളുടെ 67router API കീ>",
     "CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY": "1",
   },
 }
@@ -142,7 +142,7 @@ Claude Code-ന് **സ്വതസിദ്ധമായ പ്രൊഫൈൽ 
 
 **മോഡൽ കണ്ടെത്തലിനുശേഷമുള്ള സ്വയമേവയുള്ള സമന്വയം (ഓപ്റ്റ്-ഇൻ).** ഒരു പ്രൊവൈഡർ മോഡൽ
 സമന്വയം സജീവ കാറ്റലോഗിൽ മാറ്റം വരുത്തുമ്പോഴെല്ലാം ഇതേ
-`~/.claude/profiles/<name>/settings.json` ഫയലുകൾ OmniRoute-ന് സ്വയമേവ പുനഃസൃഷ്ടിക്കാൻ കഴിയും — അതിനാൽ കമാൻഡ്
+`~/.claude/profiles/<name>/settings.json` ഫയലുകൾ 67router-ന് സ്വയമേവ പുനഃസൃഷ്ടിക്കാൻ കഴിയും — അതിനാൽ കമാൻഡ്
 വീണ്ടും പ്രവർത്തിപ്പിക്കാതെ തന്നെ പുതിയതോ പുനർനാമകരണം ചെയ്തതോ ആയ മോഡലുകൾക്ക് പ്രൊഫൈലുകൾ ലഭിക്കും.
 ഇത് **സ്ഥിരസ്ഥിതിയായി പ്രവർത്തനരഹിതമാണ്**: **CLI Code ഡാഷ്ബോർഡിൽ** നിന്ന് ഇത് മാറ്റുക ("CLI profile
 auto-sync" → Claude Code), അല്ലെങ്കിൽ `OMNIROUTE_AUTO_SYNC_CLAUDE_PROFILES=true` സജ്ജമാക്കുക (സ്ഥിരസ്ഥിതിയായി
@@ -153,7 +153,7 @@ auto-sync" → Claude Code), അല്ലെങ്കിൽ `OMNIROUTE_AUTO_SYNC
 ### പ്രൊഫൈലുകൾ സൃഷ്ടിക്കലും ഉപയോഗിക്കലും
 
 ```bash
-# ലോക്കൽ OmniRoute
+# ലോക്കൽ 67router
 omniroute setup-claude
 
 # റിമോട്ട് VPS (ഓരോ പ്രൊഫൈലിലും VPS URL ഉൾപ്പെടുത്തുന്നു)
@@ -178,7 +178,7 @@ omniroute launch --profile kimi-k27
 ## മോഡൽ ടിയറുകൾ (ഐച്ഛികം)
 
 Claude Code ശേഷിയുടെ ടിയറുകളിലേക്ക് റൂട്ട് ചെയ്യുന്നു. ഓരോ ടിയറിനും വ്യത്യസ്ത പ്രൊവൈഡറുകൾ വേണമെങ്കിൽ env /
-ക്രമീകരണങ്ങൾ വഴി ഓരോന്നും ഒരു OmniRoute മോഡലിലേക്ക് മാപ്പ് ചെയ്യുക:
+ക്രമീകരണങ്ങൾ വഴി ഓരോന്നും ഒരു 67router മോഡലിലേക്ക് മാപ്പ് ചെയ്യുക:
 
 ```bash
 export ANTHROPIC_DEFAULT_OPUS_MODEL="glm/glm-5.2"
@@ -214,7 +214,7 @@ v2.1.219+ ഉം `CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY=1` ഉം ആവശ
 **`400 Ambiguous model 'claude-…'`** — Claude Code എല്ലായ്പ്പോഴും **പ്രിഫിക്സ് ഇല്ലാത്ത**
 മോഡൽ ID-കളാണ് അയയ്ക്കുന്നത് (ഉദാ. `claude-opus-4-8`), അതിനാൽ Claude Code (`cc/…`),
 Claude (`claude/…`) പ്രൊവൈഡറുകൾ രണ്ടും കണക്റ്റ് ചെയ്തിരിക്കുമ്പോൾ പ്രിഫിക്സ് ഇല്ലാത്ത id രണ്ട്
-റൂട്ടുകളുമായി പൊരുത്തപ്പെടുകയും OmniRoute ഊഹിക്കാൻ വിസമ്മതിക്കുകയും ചെയ്യും. ഇത് ഏതെങ്കിലും
+റൂട്ടുകളുമായി പൊരുത്തപ്പെടുകയും 67router ഊഹിക്കാൻ വിസമ്മതിക്കുകയും ചെയ്യും. ഇത് ഏതെങ്കിലും
 രീതിയിൽ പരിഹരിക്കാം: `ANTHROPIC_MODEL=cc/claude-opus-4-8` ഉപയോഗിച്ച് പ്രിഫിക്സ് ചേർത്ത id
 പിൻ ചെയ്യുക, അല്ലെങ്കിൽ **പ്രിഫിക്സ് ഇല്ലാത്ത Claude മോഡലുകൾക്ക് Claude Code മുൻഗണന നൽകുക**
 എന്നത് പ്രവർത്തനക്ഷമമാക്കുക — Claude പ്രൊവൈഡർ പേജിലെ ടോഗിൾ, അല്ലെങ്കിൽ

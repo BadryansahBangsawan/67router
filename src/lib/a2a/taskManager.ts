@@ -23,7 +23,7 @@ const log = logger("A2A_TASKS");
  * Publish an `agent.task.updated` transition for the orchestration canvas (Fase 2, Task B2).
  * Best-effort: a listener throwing must never break the task write path that triggered it.
  */
-function emitAgentTaskUpdated(source: "cloud-agent" | "a2a", taskId: string, state: string): void {
+function emitAgentTaskUpdated(source: "a2a", taskId: string, state: string): void {
   try {
     emit("agent.task.updated", { source, taskId, state, timestamp: Date.now() });
   } catch {

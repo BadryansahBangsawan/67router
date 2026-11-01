@@ -141,7 +141,7 @@ tiempo de ejecución.
 
 ### Configuración
 
-1. Inicia OmniRoute con `npm run dev` o desde una instalación compilada.
+1. Inicia 67router con `npm run dev` o desde una instalación compilada.
 2. Abre Dashboard → Providers → Add Provider.
 3. Selecciona la categoría Web Cookie y Claude Web.
 4. Pega la cabecera Cookie completa copiada de una solicitud autenticada a `claude.ai`.

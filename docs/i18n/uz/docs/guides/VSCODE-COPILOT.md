@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** OmniRoute taqdim etadigan barcha modellarni GitHub Copilot Chat’ning _mahalliy_
+**OmniCopilot** 67router taqdim etadigan barcha modellarni GitHub Copilot Chat’ning _mahalliy_
 model tanlagichiga joylashtiradi. Ikkinchi yon panel ham, alohida chat interfeysi ham yoʻq — Copilot’ning agent rejimi, vositalarni chaqirish,
 MCP serverlari va maxsus koʻrsatmalari ishlashda davom etadi, faqat siz tanlagan modelda ishlaydi.
 
@@ -23,13 +23,13 @@ MCP serverlari va maxsus koʻrsatmalari ishlashda davom etadi, faqat siz tanlaga
 
 ## Sozlash
 
-1. **OmniRoute’ni ishga tushiring** — `npm install -g omniroute && omniroute` (boshqaruv paneli `http://localhost:20128` manzilida).
+1. **67router’ni ishga tushiring** — `npm install -g omniroute && omniroute` (boshqaruv paneli `http://localhost:20128` manzilida).
 2. **Kengaytmani oʻrnating** — Extensions koʻrinishida "OmniRoute" deb qidiring.
 3. **Modelni tanlang** — Copilot Chat → model tanlagichi → **Manage Models…** → **OmniRoute**, soʻng
    kerakli modellarni belgilang.
 
-OmniRoute standart portda ishlayotganida hech narsani sozlash shart emas. Masofaviy nusxa uchun
-**Activity Bar’dagi OmniRoute belgisini** oching (yoki `OmniRoute: Manage Connection` buyrugʻini ishga tushiring) va quyidagilarni belgilang:
+67router standart portda ishlayotganida hech narsani sozlash shart emas. Masofaviy nusxa uchun
+**Activity Bar’dagi 67router belgisini** oching (yoki `OmniRoute: Manage Connection` buyrugʻini ishga tushiring) va quyidagilarni belgilang:
 
 - **Server URL** — serverning asosiy manzili, masalan, `http://192.168.0.15:20128`. `/v1` suffiksi
   kengaytma tomonidan qoʻshiladi; uni kiritmang.
@@ -75,7 +75,7 @@ HTTP 400 — '<id>' modeli tasvir yaratish modeli boʻlib, undan
 
 shu sababli ular tanlagichga yetib borishidan oldin `type` maydoni boʻyicha filtrlanadi. **Responses-API
 modellari saqlab qolinadi** — har bir Codex / GPT-5.x yozuvi `supported_endpoints: ["responses"]` ni eʼlon qiladi
-va OmniRoute ularni `/v1/chat/completions` uchun tarjima qiladi, shu bois ulardan bemalol foydalanish mumkin.
+va 67router ularni `/v1/chat/completions` uchun tarjima qiladi, shu bois ulardan bemalol foydalanish mumkin.
 
 ### Siz hech qachon sozlamagan provayderlar
 
@@ -87,7 +87,7 @@ boshqaruv paneli sozlamalaridagi `blockedProviders` roʻyxatiga qoʻshing; kenga
 
 ## VS Code ichidagi ichki oynada boshqaruv paneli
 
-`omnicopilot.dashboardOpen: "editor"` sozlamasi OmniRoute boshqaruv panelini tashqi brauzer o‘rniga Simple Browser orqali muharrir ichki oynasida ko‘rsatadi. Ichki joylashtirish serverda **ixtiyoriy ravishda yoqiladi**: `DASHBOARD_ALLOW_EMBED=vscode` orqali HTML sahifalar standart `frame-ancestors 'none'` + `X-Frame-Options: DENY` o‘rniga `frame-ancestors 'self' vscode-webview:` bilan taqdim etiladi. API yuzasi (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) har qanday holatda ham qat’iy sarlavhalarni saqlab qoladi.
+`omnicopilot.dashboardOpen: "editor"` sozlamasi 67router boshqaruv panelini tashqi brauzer o‘rniga Simple Browser orqali muharrir ichki oynasida ko‘rsatadi. Ichki joylashtirish serverda **ixtiyoriy ravishda yoqiladi**: `DASHBOARD_ALLOW_EMBED=vscode` orqali HTML sahifalar standart `frame-ancestors 'none'` + `X-Frame-Options: DENY` o‘rniga `frame-ancestors 'self' vscode-webview:` bilan taqdim etiladi. API yuzasi (`/api`, `/v1`, `/v1beta`, `/healthz`) har qanday holatda ham qat’iy sarlavhalarni saqlab qoladi.
 
 > ⚠️ **Bu bajarilish vaqtida emas, qurish vaqtida ishlatiladigan bayroq.** Next.js `headers()` funksiyasini marshrut manifestiga kompilyatsiya qiladi, shuning uchun `next.config.mjs` o‘zgaruvchini to‘plam qurilayotgan paytda o‘qiydi
 > (`next.config.mjs` → `resolveDashboardEmbedMode`, `scripts/build/dashboardEmbed.mjs`).
@@ -122,7 +122,7 @@ Ichki joylashtirish yoqilgan qurilma bo‘lmasa, sahifa freym ichida ko‘rsatil
 
 | Alomat                                                                | Sabab / yechim                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tanlagichda OmniRoute modellari yo‘q                                  | Serverga ulanib bo‘lmaydi. Holat panelidagi nuqta kulrang tusga kiradi; `OmniRoute: Check Connection` buyrug‘ini ishga tushiring. Aniqlash jarayoni ataylab jim bajariladi va so‘rov ko‘rsatish o‘rniga hech qanday model qo‘shmaydi.                                                                                             |
+| Tanlagichda 67router modellari yo‘q                                   | Serverga ulanib bo‘lmaydi. Holat panelidagi nuqta kulrang tusga kiradi; `OmniRoute: Check Connection` buyrug‘ini ishga tushiring. Aniqlash jarayoni ataylab jim bajariladi va so‘rov ko‘rsatish o‘rniga hech qanday model qo‘shmaydi.                                                                                             |
 | Har bir model ikki marta ko‘rinadi                                    | Siz 1.0.1 dan eski OmniCopilot versiyasidan foydalanmoqdasiz — yangilang. Endi kengaytma `?prefix=alias` parametrini so‘raydi.                                                                                                                                                                                                    |
 | Oldin ko‘rsatilgan tasvir/audio modeli yo‘qolgan                      | Bu 1.0.1 versiyasidan boshlab ataylab qilingan — u hech qachon chat so‘roviga javob bera olmas edi.                                                                                                                                                                                                                               |
 | Activity Bar’da panel yo‘q                                            | VS Code ortiqcha ko‘rinish konteynerlarini Activity Bar pastidagi **"…"** to‘lib ketish menyusiga ko‘chiradi va sichqonchaning o‘ng tugmasi orqali yashirilgan konteyner yashirinligicha qoladi. Activity Bar ustida o‘ng tugmani bosing → **OmniRoute** bandini belgilang yoki uni `OmniRoute: Manage Connection` orqali oching. |
@@ -134,6 +134,6 @@ Ichki joylashtirish yoqilgan qurilma bo‘lmasa, sahifa freym ichida ko‘rsatil
 ## Shuningdek qarang
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — boshqa barcha kodlash vositalari
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — masofaviy OmniRouteʼni boshqarish
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — masofaviy 67routerʼni boshqarish
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` shartnomasi
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — kengaytmaning o‘z katalogiga oid qaydlar

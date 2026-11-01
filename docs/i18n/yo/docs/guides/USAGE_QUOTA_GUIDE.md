@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: OmniRoute ń tọpa lílo tókìnì fún gbogbo ìbéèrè, ó ń ṣírò iye owó, ó ń fi ìwọ̀n lílo múlẹ̀ fún kọ́kọ́rọ́ API kọ̀ọ̀kan, ó sì ń ṣàfihàn àtúpalẹ̀ lórí pánẹ́ẹ̀lì ìṣàkóso. Ìtọ́sọ́nà yìí ṣàlàyé bí gbogbo rẹ̀ ṣe ń ṣiṣẹ́.
+> **Ní ṣókí**: 67router ń tọpa lílo tókìnì fún gbogbo ìbéèrè, ó ń ṣírò iye owó, ó ń fi ìwọ̀n lílo múlẹ̀ fún kọ́kọ́rọ́ API kọ̀ọ̀kan, ó sì ń ṣàfihàn àtúpalẹ̀ lórí pánẹ́ẹ̀lì ìṣàkóso. Ìtọ́sọ́nà yìí ṣàlàyé bí gbogbo rẹ̀ ṣe ń ṣiṣẹ́.
 
 **Àwọn orísun:**
 
@@ -17,7 +17,7 @@
 
 ## Àkópò
 
-Gbogbo ìbéèrè tó ń gba inú OmniRoute kọjá ń ṣẹ̀dá **àkọsílẹ̀ lílo** kan tó ń ṣàkọsílẹ̀:
+Gbogbo ìbéèrè tó ń gba inú 67router kọjá ń ṣẹ̀dá **àkọsílẹ̀ lílo** kan tó ń ṣàkọsílẹ̀:
 
 - **Ìdánimọ̀**: kọ́kọ́rọ́ API, olùpèsè, àwòṣe, àti àkójọpọ̀ tí a lò
 - **Àwọn tókìnì**: àwọn tókìnì ìtọ́ni, àwọn tókìnì ìparí, àwọn tókìnì inú cache, àti àpapọ̀
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Fún àwọn olùpèsè tí kò dá dátà lílo padà (àwọn olùpèsè web-cookie kan), OmniRoute máa ń **ṣírò ìfojúsùn** iye tókìnì nípa lílo òfin àròsọ `~4 chars per token` (wo `open-sse/services/autoCombo/pipelineRouter.ts`).
+Fún àwọn olùpèsè tí kò dá dátà lílo padà (àwọn olùpèsè web-cookie kan), 67router máa ń **ṣírò ìfojúsùn** iye tókìnì nípa lílo òfin àròsọ `~4 chars per token` (wo `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Àwọn Tókìnì Inú Cache
 
-OmniRoute ń tọpa `cached_tokens` lọ́tọ̀ sí `prompt_tokens` nítorí:
+67router ń tọpa `cached_tokens` lọ́tọ̀ sí `prompt_tokens` nítorí:
 
 - Fífi ìtọ́ni Anthropic pamọ́ sínú cache ń gba owó tó dín kù fún àwọn tókìnì inú cache (10% ti iye owó déédéé)
 - Àwọn olùpèsè kan máa ń dá `cache_read_input_tokens` padà, èyí tó yẹ kí a fi iye owó tó yàtọ̀ kàn
@@ -117,7 +117,7 @@ A máa ń mú dátà ìdíyelé ṣiṣẹ́pọ̀ láìfọwọ́ṣe láti Lit
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Fún àwọn módẹ́lì tí kò ní dátà ìdíyelé, OmniRoute máa ń padà sí **ṣíṣe àfojúsùn iye owó** nípa lílo àwọn ìwọ̀n àárín inú ètò (tí a mú láti inú dátà ìdíyelé LiteLLM).
+Fún àwọn módẹ́lì tí kò ní dátà ìdíyelé, 67router máa ń padà sí **ṣíṣe àfojúsùn iye owó** nípa lílo àwọn ìwọ̀n àárín inú ètò (tí a mú láti inú dátà ìdíyelé LiteLLM).
 
 ---
 

@@ -19,9 +19,9 @@ Engine တစ်ခု၏ အခန်းကဏ္ဍကို registry ၏
 `RouterBackendDefinition` ထဲတွင် အတူတကွ encode လုပ်ထားသော **အမှီအခိုကင်းသည့် ဝင်ရိုးနှစ်ခု** ဖြင့် ဖော်ပြသည်-
 
 1. **Lifecycle** (`RouterBackendLifecycle`) — _engine ကို မည်သို့ လည်ပတ်စေသည်_:
-   - `in-process` — OmniRoute Node process အတွင်းတွင် လည်ပတ်သည် (native TS pipeline)။
-   - `supervised` — OmniRoute က `ServiceSupervisor` မှတစ်ဆင့် install/start/stop/health-check လုပ်ဆောင်ပြီးနောက် provider connection တစ်ခုအဖြစ် အသုံးပြုသည့် local child process ဖြစ်သည်။
-   - `external` — OmniRoute က request များကို dispatch လုပ်ပေးသော်လည်း **မစီမံ**သည့် HTTP endpoint ဖြစ်သည်
+   - `in-process` — 67router Node process အတွင်းတွင် လည်ပတ်သည် (native TS pipeline)။
+   - `supervised` — 67router က `ServiceSupervisor` မှတစ်ဆင့် install/start/stop/health-check လုပ်ဆောင်ပြီးနောက် provider connection တစ်ခုအဖြစ် အသုံးပြုသည့် local child process ဖြစ်သည်။
+   - `external` — 67router က request များကို dispatch လုပ်ပေးသော်လည်း **မစီမံ**သည့် HTTP endpoint ဖြစ်သည်
      (env base URL ဖြင့် configure လုပ်ထားသည်)။
    - `disabled` — စာရင်းသွင်းထားသော်လည်း ရွေးချယ်၍မရပါ။
 2. **ရွေးချယ်မှုဝင်ရိုး** (relay routing backend) — _relay က ၎င်းထံ dispatch လုပ်ခြင်း ရှိမရှိ_:

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana da tsarin layi na cikin tsari guda **biyu** masu iyakoki daban-daban. Suna
+67router yana da tsarin layi na cikin tsari guda **biyu** masu iyakoki daban-daban. Suna
 cika juna; ya kamata masu gudanarwa su san wanne ne suke dubawa.
 
 ## 1. Karɓar bayanai a matakin byte ga dukkan tsarin (`chatBodyAdmission.ts`)

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute dilengkapi dengan pemantauan kesehatan bawaan, autopilot penyedia, pelacakan kuota, dan hook observabilitas. Panduan ini membahas dasbor, peringatan, dan pemecahan masalah.
+> **TL;DR**: 67router dilengkapi dengan pemantauan kesehatan bawaan, autopilot penyedia, pelacakan kuota, dan hook observabilitas. Panduan ini membahas dasbor, peringatan, dan pemecahan masalah.
 
 **Sumber:**
 
@@ -20,7 +20,7 @@
 
 ## Ikhtisar
 
-OmniRoute memiliki **3 lapisan pemantauan**:
+67router memiliki **3 lapisan pemantauan**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Per kombo:
 
 ## API Pemeriksaan Kesehatan
 
-OmniRoute menyediakan **dua** endpoint kesehatan HTTP. Keduanya tidak dapat saling menggantikan untuk orkestrator.
+67router menyediakan **dua** endpoint kesehatan HTTP. Keduanya tidak dapat saling menggantikan untuk orkestrator.
 
 | Path                         | Tujuan                                                             | Beban                                     | Gunakan untuk                                                                 |
 | ---------------------------- | ------------------------------------------------------------------ | ----------------------------------------- | ----------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ endpoint ini. Gunakan `failed` + `failedConnections` untuk kegagalan probe langs
 
 ### Rekomendasi probe Kubernetes
 
-OmniRoute adalah **satu proses Node** (satu event loop). `HEALTHCHECK` Docker standar menargetkan `/healthz` yang ringan. `/api/monitoring/health` **terlalu berat** untuk interval liveness kubelet.
+67router adalah **satu proses Node** (satu event loop). `HEALTHCHECK` Docker standar menargetkan `/healthz` yang ringan. `/api/monitoring/health` **terlalu berat** untuk interval liveness kubelet.
 
 | Probe                    | Target yang direkomendasikan                                                               | Catatan                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------ | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Terkait: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (probe
 
 ### Watchdog systemd (event loop yang membeku)
 
-Pada host systemd, OmniRoute memberi tahu manajer layanan ketika sudah siap dan terus mengirimkan ping, sehingga server dengan event loop yang macet akan dihentikan dan dimulai ulang alih-alih tetap berjalan tetapi tidak merespons. Ping berasal dari event loop milik server sendiri: ketika event loop terblokir, ping berhenti, lalu systemd memulai ulang layanan setelah `WatchdogSec` berlalu tanpa menerima ping.
+Pada host systemd, 67router memberi tahu manajer layanan ketika sudah siap dan terus mengirimkan ping, sehingga server dengan event loop yang macet akan dihentikan dan dimulai ulang alih-alih tetap berjalan tetapi tidak merespons. Ping berasal dari event loop milik server sendiri: ketika event loop terblokir, ping berhenti, lalu systemd memulai ulang layanan setelah `WatchdogSec` berlalu tanpa menerima ping.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) sudah menulis unit pengguna dengan konfigurasi ini. Unit yang Anda tulis sendiri (`Type=simple` secara default) tidak memiliki watchdog, jadi tambahkan baris berikut ke bagian `[Service]`:
 
@@ -443,7 +443,7 @@ Konfigurasi pemeriksaan kondisi token ditangani secara internal oleh `tokenHealt
 
 ### Kanal Bawaan
 
-OmniRoute mendukung **3 kanal peringatan**:
+67router mendukung **3 kanal peringatan**:
 
 | Kanal         | Penyiapan          | Kasus penggunaan             |
 | ------------- | ------------------ | ---------------------------- |
@@ -559,7 +559,7 @@ Buat `~/.omniroute/dashboard.json`:
 ### "Kuota dinyatakan sehat, tetapi saya melihat respons 429"
 
 - 429 berarti penyedia menyatakan bahwa Anda telah menggunakan kuota Anda
-- Pelacakan kuota OmniRoute mungkin **kedaluwarsa** — sumber kebenaran penyedia berada di upstream
+- Pelacakan kuota 67router mungkin **kedaluwarsa** — sumber kebenaran penyedia berada di upstream
 - Data kuota diperbarui secara otomatis melalui pemantau kuota internal
 
 ### "Kombinasi gagal, tetapi semua target terlihat sehat"
@@ -572,7 +572,7 @@ Buat `~/.omniroute/dashboard.json`:
 
 - Jalankan `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Jika hasilnya "ok" — alarm palsu, pemeriksaan kesehatan terlalu ketat
-- Jika hasilnya berbeda — **hentikan OmniRoute** dan ikuti [panduan pemulihan bencana](./DATABASE_GUIDE.md#disaster-recovery)
+- Jika hasilnya berbeda — **hentikan 67router** dan ikuti [panduan pemulihan bencana](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Tekanan heap memori berada pada tingkat kritis"
 

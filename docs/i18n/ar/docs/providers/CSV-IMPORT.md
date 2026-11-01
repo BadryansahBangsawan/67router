@@ -25,7 +25,7 @@
 نزّل ملفًا أوليًا من نافذة الاستيراد المنبثقة (**تنزيل قالب CSV**). مثال:
 
 ```csv
-# استيراد مزوّدي OmniRoute (أعمدة موضعية)
+# استيراد مزوّدي 67router (أعمدة موضعية)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

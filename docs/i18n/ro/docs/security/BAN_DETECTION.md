@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute scanează răspunsurile de eroare din amonte pentru semnale care indică faptul că un
+67router scanează răspunsurile de eroare din amonte pentru semnale care indică faptul că un
 **cont al furnizorului este definitiv inactiv** (suspendat / dezactivat / blocat pentru încălcarea ToS) și, atunci când
 găsește o potrivire, mută conexiunea respectivă într-o **stare terminală `banned`**, astfel încât aceasta să nu mai fie
 selectată pentru cereri. Acesta este comportamentul configurat de cardul de setări **Security → Banned Keywords**

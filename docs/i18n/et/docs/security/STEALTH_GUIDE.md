@@ -8,11 +8,11 @@
 > **Viimati uuendatud:** 2026-09-02 — v3.8.51
 > **Sihtrühm:** teenusepakkujapõhiseid varjatud integratsioone hooldavad insenerid.
 
-OmniRoute integreerub teenusepakkujatega, kelle servaserverid tuvastavad aktiivselt mitteametlike klientide sõrmejälgi (TLS JA3/JA4, päiste järjestus, JSON-keha kuju, terviklustõendid). Sellel lehel kirjeldatakse OmniRoute'i pakutavaid varjatud toimimise võimalusi ja nende implementatsiooni asukohti.
+67router integreerub teenusepakkujatega, kelle servaserverid tuvastavad aktiivselt mitteametlike klientide sõrmejälgi (TLS JA3/JA4, päiste järjestus, JSON-keha kuju, terviklustõendid). Sellel lehel kirjeldatakse 67router'i pakutavaid varjatud toimimise võimalusi ja nende implementatsiooni asukohti.
 
 ## Õiguslik ja eetiline märkus
 
-Varjatud toimimise funktsioonid võimaldavad OmniRoute'il olla ühilduvuskiht kasutajale kuuluvate ametlike kontode (Claude Code CLI, Codex, Antigravity, Cursor jne) ja OmniRoute'i ühtse API vahel. Need **ei ole** mõeldud pettuste tuvastamisest kõrvalehoidmiseks, autentimisandmete jagamiseks ega teenusepakkuja kasutustingimuste rikkumiseks. Hooldajad eeldavad, et operaatorid järgivad kontode loomisel aktsepteeritud lähteteenuse kasutustingimusi.
+Varjatud toimimise funktsioonid võimaldavad 67router'il olla ühilduvuskiht kasutajale kuuluvate ametlike kontode (Claude Code CLI, Codex, Antigravity, Cursor jne) ja 67router'i ühtse API vahel. Need **ei ole** mõeldud pettuste tuvastamisest kõrvalehoidmiseks, autentimisandmete jagamiseks ega teenusepakkuja kasutustingimuste rikkumiseks. Hooldajad eeldavad, et operaatorid järgivad kontode loomisel aktsepteeritud lähteteenuse kasutustingimusi.
 
 ---
 
@@ -80,7 +80,7 @@ kontrollige sõrmejäljemuudatusi sõnaselgelt volitatud reaalse kontoga.
 
 ## Claude Code'i varjatud režiimi komplekt
 
-Kui `cliCompatMode` on sisse lülitatud, vormindab OmniRoute väljuvad Claude'i päringud ümber nii, et neid ei saaks eristada `claude-cli` liiklusest. Koostööd teevad kolm moodulit:
+Kui `cliCompatMode` on sisse lülitatud, vormindab 67router väljuvad Claude'i päringud ümber nii, et neid ei saaks eristada `claude-cli` liiklusest. Koostööd teevad kolm moodulit:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -96,7 +96,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (kliendi sisu räsi)
 
-Serveripoolne tervikluskontroll, mille ametlik Claude Code CLI arvutab Bun/Zigi abil. OmniRoute rakendab selle uuesti paketiga `xxhash-wasm`:
+Serveripoolne tervikluskontroll, mille ametlik Claude Code CLI arvutab Bun/Zigi abil. 67router rakendab selle uuesti paketiga `xxhash-wasm`:
 
 1. Serialiseerib keha kohatäitjaga `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -142,7 +142,7 @@ Sama komplekti kaasmoodulid:
 
 ## Antigravity varjatud režiim
 
-Antigravity päringud säilitavad kutsuja teksti baidi täpsusega. OmniRoute ei lisa viipadesse null-laiusega märke ega nimeta ümber või sisesta tööriistu IDE-kliendi jäljendamiseks.
+Antigravity päringud säilitavad kutsuja teksti baidi täpsusega. 67router ei lisa viipadesse null-laiusega märke ega nimeta ümber või sisesta tööriistu IDE-kliendi jäljendamiseks.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -152,13 +152,13 @@ Eemaldab enne edastamist Stainless SDK markerid (`x-stainless-lang`, `x-stainles
 
 `ANTIGRAVITY_CREDITS=always` (seda kasutab `open-sse/executors/antigravity.ts`) suunab **iga** päringu Antigravity AI Credit Overagesi kaudu (tasulised Google'i krediidid), selle asemel et lasta Google'i tasuta taseme kvoodil kasutust piirata. Seda dokumenteeritakse funktsioonina, kuid see on **kõige sagedamini teatatud kasutustingimuste rikkumine, mida näeme** — mitu Google Ultra kontot on blokeeritud veaga `403 / "service disabled for ToS violation" / insufficient_quota` pärast mõnetunnist töötamist väärtusega `=always`.
 
-Ülesvoolu jõustamine toimub **Google'i poolel** ning OmniRoute ei saa seda takistada. Keskkonnamuutuja nimi ja olemasolev dokumentatsioon jätavad mulje, et selle võib ohutult sisse lülitada; tegelikult pole see ohutu.
+Ülesvoolu jõustamine toimub **Google'i poolel** ning 67router ei saa seda takistada. Keskkonnamuutuja nimi ja olemasolev dokumentatsioon jätavad mulje, et selle võib ohutult sisse lülitada; tegelikult pole see ohutu.
 
 **Miks see käivitab väärkasutuse tuvastamise agressiivsemalt kui ainult tasuta taseme kasutamine:**
 
 - Püsiv automatiseeritud kulu ühe Google'i konto kaudu märgistatakse teisiti kui tasuta taseme kasutus, mis kvoodini jõudes peatub.
 - Krediidi ülekasutusel puudub kiiruslagi, mistõttu võib valesti seadistatud klient kulutada mõne minutiga mitusada USA dollarit ning paista API-võtmete edasimüügi või robotliiklusena.
-- Kui mitu OmniRoute'i kasutajat kasutavad sama välise IP kaudu paralleelselt ülekasutuskrediite, võimendab see signaali.
+- Kui mitu 67router'i kasutajat kasutavad sama välise IP kaudu paralleelselt ülekasutuskrediite, võimendab see signaali.
 
 **Soovitatav lähenemine:**
 
@@ -197,7 +197,7 @@ Lülitatav iga teenusepakkuja jaoks keskkonnamuutuja kaudu (vt allpool). Kui see
 
 ## MITM-puhverserver (Antigravity, Linux/macOS/Windows)
 
-CLI-de jaoks, mille binaarfaile ei saa `OPENAI_BASE_URL` kaudu ümber suunata, käitab OmniRoute kohalikku TLS-i lõpetavat puhverserverit. Lõpp-punktid asuvad kataloogis `src/app/api/cli-tools/antigravity-mitm/`.
+CLI-de jaoks, mille binaarfaile ei saa `OPENAI_BASE_URL` kaudu ümber suunata, käitab 67router kohalikku TLS-i lõpetavat puhverserverit. Lõpp-punktid asuvad kataloogis `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Meetod | Lõpp-punkt                              | Otstarve                                             |
 | ------ | --------------------------------------- | ---------------------------------------------------- |
@@ -278,7 +278,7 @@ Teenusepakkuja IP **säilitatakse alati** — lüliti muudab ainult päringu eda
 
 ## Sissetulevate päiste puhastamine
 
-OmniRoute puhastab sissetulevad kliendipäised enne edastamist, et Cursorist saabunud päring ei lekitaks Claude'i ülesvooluteenusele päist `User-Agent: Cursor/X.Y.Z`. Keeluloendi leiate failist `src/shared/constants/upstreamHeaders.ts`; seda hoitakse Zodi skeemide ja ühiktestidega sünkroonis.
+67router puhastab sissetulevad kliendipäised enne edastamist, et Cursorist saabunud päring ei lekitaks Claude'i ülesvooluteenusele päist `User-Agent: Cursor/X.Y.Z`. Keeluloendi leiate failist `src/shared/constants/upstreamHeaders.ts`; seda hoitakse Zodi skeemide ja ühiktestidega sünkroonis.
 
 ---
 

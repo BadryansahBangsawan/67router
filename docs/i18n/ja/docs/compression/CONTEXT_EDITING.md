@@ -4,15 +4,15 @@
 
 ---
 
-委譲型の**コンテキスト編集**は、Claude 専用のコンテキスト管理機能です。OmniRoute のローカル圧縮エンジン（Caveman、RTK、LLMLingua、スタックパイプライン）は、リクエスト本文がプロキシを離れる_前_にそれを書き換えますが、コンテキスト編集では、**プロバイダー**に対して、そのプロバイダー自身が保持しているコンテキストウィンドウから古いツール使用／ツール結果ブロックを削除するよう要求します。OmniRoute は本文パラメーター（`context_management.edits[]`）を付加するだけであり、実際の削除は Claude が自身のトークナイザーに基づいて実行します。
+委譲型の**コンテキスト編集**は、Claude 専用のコンテキスト管理機能です。67router のローカル圧縮エンジン（Caveman、RTK、LLMLingua、スタックパイプライン）は、リクエスト本文がプロキシを離れる_前_にそれを書き換えますが、コンテキスト編集では、**プロバイダー**に対して、そのプロバイダー自身が保持しているコンテキストウィンドウから古いツール使用／ツール結果ブロックを削除するよう要求します。67router は本文パラメーター（`context_management.edits[]`）を付加するだけであり、実際の削除は Claude が自身のトークナイザーに基づいて実行します。
 
-これは本質的に委譲型の機能です。他のプロバイダーはこのパラメーターを拒否するため、OmniRoute は適用対象を Claude および Claude Code 互換リレーに厳密に限定しています。
+これは本質的に委譲型の機能です。他のプロバイダーはこのパラメーターを拒否するため、67router は適用対象を Claude および Claude Code 互換リレーに厳密に限定しています。
 
 信頼できる情報源：`open-sse/config/contextEditing.ts`（ストラテジー ID、本文への注入、テレメトリの抽出）、`open-sse/executors/base.ts`（注入ゲートおよび 400 フォールバック）、`open-sse/services/compression/types.ts`（設定形式およびデフォルト）。
 
 ## `clear_tool_uses` の動作
 
-OmniRoute は、送信する Anthropic Messages の本文に単一の編集を注入します。
+67router は、送信する Anthropic Messages の本文に単一の編集を注入します。
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute は、送信する Anthropic Messages の本文に単一の編集を�
 - `trigger.value: 100000` — リクエストの入力トークン数がこのしきい値を超えると、Claude は古いツール使用／結果のペアの削除を開始します（`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`、Anthropic のデフォルト）。
 - `keep.value: 3` — 直近 N 個のツール使用／結果のペアは変更されずに保持されます（`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`）。
 
-このベータ機能は `anthropic-beta: context-management-2025-06-27` ヘッダーを介して通知されます。このヘッダーは OmniRoute が Claude へのリクエストですでに送信しています。
+このベータ機能は `anthropic-beta: context-management-2025-06-27` ヘッダーを介して通知されます。このヘッダーは 67router が Claude へのリクエストですでに送信しています。
 
-注入は `applyContextEditingToBody()` によって実行され、**冪等**です。`clear_tool_uses` 編集が本文にすでに存在する場合（以前の呼び出しで追加された場合、またはクライアントから指定された場合）、本文はそのまま維持されます。`clear_thinking_20251015` 編集も存在する場合、Anthropic では `edits[]` 配列内で `clear_thinking` が `clear_tool_uses` より前に配置されている必要があるため、OmniRoute は `clear_thinking` 編集が先頭に来るよう安定ソートを行います。
+注入は `applyContextEditingToBody()` によって実行され、**冪等**です。`clear_tool_uses` 編集が本文にすでに存在する場合（以前の呼び出しで追加された場合、またはクライアントから指定された場合）、本文はそのまま維持されます。`clear_thinking_20251015` 編集も存在する場合、Anthropic では `edits[]` 配列内で `clear_thinking` が `clear_tool_uses` より前に配置されている必要があるため、67router は `clear_thinking` 編集が先頭に来るよう安定ソートを行います。
 
 ## コンボごとの有効化トグル
 
@@ -111,7 +111,7 @@ if (
 
 ## `applied_edits` テレメトリ
 
-Claude のレスポンス後、OmniRoute はプロバイダーが実際にクリアしたコンテキスト量を記録します。これはストリーミング**されません**。非ストリーミングのレスポンス body からベストエフォートで抽出され、レスポンスには一切影響しません（テレメトリの失敗は無視されます）。
+Claude のレスポンス後、67router はプロバイダーが実際にクリアしたコンテキスト量を記録します。これはストリーミング**されません**。非ストリーミングのレスポンス body からベストエフォートで抽出され、レスポンスには一切影響しません（テレメトリの失敗は無視されます）。
 
 - 抽出：`open-sse/config/contextEditing.ts` の `extractContextEditingTelemetry(responseBody)`。
   レスポンス形式の違いに備え、防御的に以下の 3 箇所で `applied_edits` を確認します。
@@ -134,14 +134,14 @@ Claude のレスポンス後、OmniRoute はプロバイダーが実際にクリ
 
 | 項目             | ローカルエンジン（Caveman / RTK / LLMLingua / stacked） | 委譲型 Context Editing                               |
 | ---------------- | ------------------------------------------------------- | ---------------------------------------------------- |
-| 実行場所         | リクエストがプロキシを離れる前の OmniRoute 内           | プロバイダー（Claude）のサーバー側                   |
+| 実行場所         | リクエストがプロキシを離れる前の 67router 内            | プロバイダー（Claude）のサーバー側                   |
 | 編集対象         | プロンプト / コンテキスト / ツール結果のテキスト        | 古いツール使用 / ツール結果ブロック                  |
 | 対象プロバイダー | すべてのプロバイダー                                    | `claude` + `anthropic-compatible-cc-*` のみ          |
 | 切り替え         | 圧縮モード設定                                          | `contextEditing.enabled`                             |
 | 障害時の動作     | フェイルオープン（元のテキスト）                        | 400 フォールバック：パラメーターを削除し、1 回再試行 |
 | 削減量テレメトリ | `engine: <engine id>`                                   | `engine: "context-editing"`                          |
 
-この 2 つは相互補完的です。ローカルエンジンは OmniRoute が送信するバイト列を圧縮し、Context Editing は
+この 2 つは相互補完的です。ローカルエンジンは 67router が送信するバイト列を圧縮し、Context Editing は
 Claude がターンをまたいで進行中のコンテキストを削減できるようにします。両方を同時に有効化できます。
 
 ## 関連項目

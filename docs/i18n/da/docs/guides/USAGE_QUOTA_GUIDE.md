@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute registrerer tokenforbruget for hver anmodning, beregner omkostninger, håndhæver kvoter pr. API-nøgle og viser analyser i kontrolpanelet. Denne vejledning forklarer, hvordan det hele fungerer.
+> **TL;DR**: 67router registrerer tokenforbruget for hver anmodning, beregner omkostninger, håndhæver kvoter pr. API-nøgle og viser analyser i kontrolpanelet. Denne vejledning forklarer, hvordan det hele fungerer.
 
 **Kilder:**
 
@@ -17,7 +17,7 @@
 
 ## Oversigt
 
-Hver anmodning, der går gennem OmniRoute, genererer en **forbrugspost**, som registrerer:
+Hver anmodning, der går gennem 67router, genererer en **forbrugspost**, som registrerer:
 
 - **Identitet**: hvilken API-nøgle, udbyder, model og combo
 - **Tokens**: prompttokens, fuldførelsestokens, cachelagrede tokens og samlet antal
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-For udbydere, der ikke returnerer forbrugsdata (visse udbydere, som bruger webcookies), **estimerer** OmniRoute antallet af tokens ved hjælp af en heuristik på `~4 tegn pr. token` (se `open-sse/services/autoCombo/pipelineRouter.ts`).
+For udbydere, der ikke returnerer forbrugsdata (visse udbydere, som bruger webcookies), **estimerer** 67router antallet af tokens ved hjælp af en heuristik på `~4 tegn pr. token` (se `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Cachelagrede tokens
 
-OmniRoute registrerer `cached_tokens` separat fra `prompt_tokens`, fordi:
+67router registrerer `cached_tokens` separat fra `prompt_tokens`, fordi:
 
 - Anthropics promptcache opkræver en reduceret pris for cachelagrede tokens (10 % af normalprisen)
 - Nogle udbydere returnerer `cache_read_input_tokens`, som skal prissættes anderledes
@@ -117,7 +117,7 @@ Prisdata synkroniseres automatisk fra LiteLLM via `/api/pricing/sync`-slutpunkte
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-For modeller uden prisdata falder OmniRoute tilbage til at **estimere omkostningen** ved hjælp af interne gennemsnitspriser (baseret på LiteLLM's prisdata).
+For modeller uden prisdata falder 67router tilbage til at **estimere omkostningen** ved hjælp af interne gennemsnitspriser (baseret på LiteLLM's prisdata).
 
 ---
 

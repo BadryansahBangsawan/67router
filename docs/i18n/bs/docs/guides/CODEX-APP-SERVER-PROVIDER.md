@@ -6,12 +6,12 @@
 
 # OpenAI Codex — App-Server provajder (`codex-app-server`)
 
-OmniRoute izlaže **dva** načina za korištenje OpenAI Codex-a:
+67router izlaže **dva** načina za korištenje OpenAI Codex-a:
 
 | Provajder              | Kako komunicira sa OpenAI                                                                                                                                                                         | Ograničenje upotrebe                                                   |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | **`codex`**            | Direktno ponavlja vaš ChatGPT/OpenAI OAuth token ka Responses API-ju                                                                                                                              | **Da** — zvanična sesija nije autorizovana za upotrebu proxy-ja/rutera |
-| **`codex-app-server`** | Pokreće **sopstveni `codex app-server` od Codex CLI-ja** putem JSON-RPC/WebSocket-a; CLI posjeduje i samostalno osvježava svoj OAuth (`~/.codex/auth.json`) baš kao i interaktivna `codex` sesija | **Ne** — OmniRoute nikada ne ponavlja token ka API-ju                  |
+| **`codex-app-server`** | Pokreće **sopstveni `codex app-server` od Codex CLI-ja** putem JSON-RPC/WebSocket-a; CLI posjeduje i samostalno osvježava svoj OAuth (`~/.codex/auth.json`) baš kao i interaktivna `codex` sesija | **Ne** — 67router nikada ne ponavlja token ka API-ju                   |
 
 Budući da `codex-app-server` nikada ne ponavlja token, on ne nosi ograničenje upotrebe vezano za ponavljanje sesije (session-replay). Zahtijeva **Codex CLI dostupan na konfigurisanom URL-u aplikacijskog servera**, i taj CLI mora biti **prijavljen**.
 
@@ -20,7 +20,7 @@ Budući da `codex-app-server` nikada ne ponavlja token, on ne nosi ograničenje 
 ## 1. Arhitektura
 
 ```
-┌─ OmniRoute aplikacija ──────────┐        ┌─ codex-app-server sidecar ─────────┐
+┌─ 67router aplikacija ──────────┐        ┌─ codex-app-server sidecar ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token sposobnosti)           │  JSON  │  --ws-auth capability-token         │
@@ -58,7 +58,7 @@ Dashboard nikada ne prepisuje zdrav postojeći `~/.codex/auth.json` — upisuje 
 
 - **Operator sa već autentifikovanim Codex CLI-jem** — montirajte vaš host `~/.codex` u sidecar (`codex-appserver-home`) i preskočite korak prijave.
 - **Javni korisnik, codex nije instaliran lokalno** — irelevantno: sidecar ima CLI. Korisnik se autentifikuje samo putem dashboard-a.
-- **Bare-metal OmniRoute (bez sidecar-a, host codex)** — usmjerite `OMNIROUTE_CODEX_APPSERVER_WS` na vaš sopstveni `codex app-server` i osigurajte da je host codex prijavljen; napomena "codex not installed" se pojavljuje ako binarni fajl nedostaje.
+- **Bare-metal 67router (bez sidecar-a, host codex)** — usmjerite `OMNIROUTE_CODEX_APPSERVER_WS` na vaš sopstveni `codex app-server` i osigurajte da je host codex prijavljen; napomena "codex not installed" se pojavljuje ako binarni fajl nedostaje.
 
 ## 5. Rezidencijalni / UDP izlaz (operator dodatak, nije isporučen)
 

@@ -47,7 +47,7 @@ JWT **无法**触发此代码路径。
 | Linux+Firefox/Chromium | 通过 `certutil -d sql:<profile>` 更新各配置文件对应的 NSS 数据库                                                   |
 
 这些命令与 `mitmproxy`、Charles Proxy、Fiddler 和
-Caddy 所使用的命令相同。OmniRoute 中存在这些命令的事实记录于
+Caddy 所使用的命令相同。67router 中存在这些命令的事实记录于
 `docs/security/STEALTH_GUIDE.md`。
 
 **v3.8.6 缓解措施**：
@@ -97,7 +97,7 @@ Caddy 所使用的命令相同。OmniRoute 中存在这些命令的事实记录�
 
 环境变量标志 `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` 可为尚未更新自动化流程的操作员保留 v3.8.5 的行为。该标志将在 v3.9 中移除。
 
-**保留该功能的原因**：对于已经使用 Zed，并希望将其提供者密钥同步到 OmniRoute、同时避免重新粘贴密钥的用户，Zed 导入是最友好的上手方式。
+**保留该功能的原因**：对于已经使用 Zed，并希望将其提供者密钥同步到 67router、同时避免重新粘贴密钥的用户，Zed 导入是最友好的上手方式。
 
 ---
 
@@ -105,7 +105,7 @@ Caddy 所使用的命令相同。OmniRoute 中存在这些命令的事实记录�
 
 **源文件**：`src/mitm/systemCommands.ts`。
 
-**被标记的原因**：该代码块重新导出了 `execFileWithPassword`、`runElevatedPowerShell` 以及共享的 `quotePowerShell` 辅助函数。Socket.dev 的 AI 分类器将它们视为通用的“主机执行 + 权限提升工具包”。在 OmniRoute 中，它们仅用于 MITM 证书安装路径（§1），以及由 `execFileWithPassword` 执行 `sudo` 命令。
+**被标记的原因**：该代码块重新导出了 `execFileWithPassword`、`runElevatedPowerShell` 以及共享的 `quotePowerShell` 辅助函数。Socket.dev 的 AI 分类器将它们视为通用的“主机执行 + 权限提升工具包”。在 67router 中，它们仅用于 MITM 证书安装路径（§1），以及由 `execFileWithPassword` 执行 `sudo` 命令。
 
 **v3.8.6 缓解措施**：
 
@@ -140,7 +140,7 @@ Caddy 所使用的命令相同。OmniRoute 中存在这些命令的事实记录�
 
 ---
 
-## §5 — OmniRoute Cloud Sync 凭据回写（`api/keys/[id]/route.js`）
+## §5 — 67router Cloud Sync 凭据回写（`api/keys/[id]/route.js`）
 
 **源文件**：
 
@@ -171,7 +171,7 @@ rawBody)`）。如果已设置密钥，则必须提供签名。如果未设置�
    `rateLimitedUntil`、`updatedAt`）。对于依赖远程令牌同步的用户而言，
    这是一项**破坏性变更**——他们必须显式选择启用。
 
-**保留此功能的原因**：Cloud Sync 是 OmniRoute Cloud 租户集中管理团队凭据的
+**保留此功能的原因**：Cloud Sync 是 67router Cloud 租户集中管理团队凭据的
 唯一方式。此修复使威胁模型更加明确：
 “服务器签名，客户端验证，运维人员选择启用。”
 

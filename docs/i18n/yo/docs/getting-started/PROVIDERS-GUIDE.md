@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Yorùbá)
+# Providers Guide: Connect AI Models to 67router (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Ní ṣókí**: Olùpèsè jẹ́ ìsopọ̀ sí iṣẹ́ AI kan (bíi OpenAI, Anthropic, Google). O nílò ó kéré tán olùpèsè kan láti lo OmniRoute.
+> **Ní ṣókí**: Olùpèsè jẹ́ ìsopọ̀ sí iṣẹ́ AI kan (bíi OpenAI, Anthropic, Google). O nílò ó kéré tán olùpèsè kan láti lo 67router.
 
 ---
 
 ## Kí Ni Olùpèsè?
 
-Rò pé olùpèsè dà bí **ilé-iṣẹ́ nẹ́tíwọ́ọ̀kì fóònù**. Gẹ́gẹ́ bí o ṣe nílò ilé-iṣẹ́ nẹ́tíwọ́ọ̀kì fóònù láti ṣe ìpè, bẹ́ẹ̀ náà ni o ṣe nílò olùpèsè AI láti lo àwọn àwòṣe AI. OmniRoute dà bí fóònù tí ó ń ṣiṣẹ́ pẹ̀lú **gbogbo ilé-iṣẹ́ nẹ́tíwọ́ọ̀kì** — o lè yí padà láàárín wọn láìfọwọ́ṣe.
+Rò pé olùpèsè dà bí **ilé-iṣẹ́ nẹ́tíwọ́ọ̀kì fóònù**. Gẹ́gẹ́ bí o ṣe nílò ilé-iṣẹ́ nẹ́tíwọ́ọ̀kì fóònù láti ṣe ìpè, bẹ́ẹ̀ náà ni o ṣe nílò olùpèsè AI láti lo àwọn àwòṣe AI. 67router dà bí fóònù tí ó ń ṣiṣẹ́ pẹ̀lú **gbogbo ilé-iṣẹ́ nẹ́tíwọ́ọ̀kì** — o lè yí padà láàárín wọn láìfọwọ́ṣe.
 
 ### Àwọn Irú Olùpèsè
 
@@ -31,8 +31,8 @@ Wo **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** fún àwọn ìtọ́nisọ�
 ### Ètò olùpèsè ọ̀fẹ́ ní ìbẹ̀rẹ̀ àkọ́kọ́ tí ó jẹ́ àṣàyàn
 
 Olùrànlọ́wọ́ ìbẹ̀rẹ̀ àkọ́kọ́ ń pèsè káàdì **Ṣètò àwọn olùpèsè ọ̀fẹ́** ní kedere. Ó ń ṣe àkójọ àwọn
-tó yẹ lọ́wọ́lọ́wọ́ láti inú àkọsílẹ̀ àwọn olùpèsè OmniRoute tí kò nílò ìfàṣẹsí, lẹ́yìn náà ó máa jẹ́ kí o ṣàyẹ̀wò kí o sì yọ ọ̀kọ̀ọ̀kan
-olùpèsè tí o kò fẹ́ kí o tó fìdí rẹ̀ múlẹ̀. OmniRoute máa ń fi ìkìlọ̀ olùpèsè náà àti ọ̀nà asopọ̀ sí ojúlé rẹ̀ hàn
+tó yẹ lọ́wọ́lọ́wọ́ láti inú àkọsílẹ̀ àwọn olùpèsè 67router tí kò nílò ìfàṣẹsí, lẹ́yìn náà ó máa jẹ́ kí o ṣàyẹ̀wò kí o sì yọ ọ̀kọ̀ọ̀kan
+olùpèsè tí o kò fẹ́ kí o tó fìdí rẹ̀ múlẹ̀. 67router máa ń fi ìkìlọ̀ olùpèsè náà àti ọ̀nà asopọ̀ sí ojúlé rẹ̀ hàn
 kí o lè kọ́kọ́ ṣàyẹ̀wò àwọn òfin ẹnikẹ́ta, ìpamọ́, wíwà-lárọ̀ọ́wọ́-tó, àti àwọn ààlà ìṣélo.
 
 Ìgbésẹ̀ yìí jẹ́ àṣàyàn: píparí olùrànlọ́wọ́ náà kì í dá àwọn àsopọ̀ olùpèsè ọ̀fẹ́ sílẹ̀ ní ìkọ̀kọ̀.
@@ -80,7 +80,7 @@ gbìyànjú àwọn tí ó kùnà nìkan láìsí ewu lẹ́yìn àbájáde tí 
 
 ### Àṣàyàn D: Àwọn Àwòṣe MLX Agbègbè (Apple Silicon)
 
-Fún àwọn Mac Apple Silicon tí ó ní ìrántí àpapọ̀, OmniRoute ń ṣe àtìlẹ́yìn fún sísopọ̀ mọ́ àwọn àwòṣe MLX agbègbè tí ń ṣiṣẹ́ nípasẹ̀ `mlx-lm.server` gẹ́gẹ́ bí àwọn olùpèsè agbègbè tí ó bá OpenAI mu.
+Fún àwọn Mac Apple Silicon tí ó ní ìrántí àpapọ̀, 67router ń ṣe àtìlẹ́yìn fún sísopọ̀ mọ́ àwọn àwòṣe MLX agbègbè tí ń ṣiṣẹ́ nípasẹ̀ `mlx-lm.server` gẹ́gẹ́ bí àwọn olùpèsè agbègbè tí ó bá OpenAI mu.
 
 #### Àwọn Ohun Tí A Nílò Ṣáájú
 
@@ -110,14 +110,14 @@ Fún àwọn Mac Apple Silicon tí ó ní ìrántí àpapọ̀, OmniRoute ń ṣ
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Sopọ̀ nínú Pánẹ́ẹ̀lì Ìṣàkóso OmniRoute**:
+3. **Sopọ̀ nínú Pánẹ́ẹ̀lì Ìṣàkóso 67router**:
    - Lọ sí **Àwọn Olùpèsè** → **Fi Olùpèsè Kún**
    - Yan **MLX Gemma 26B** tàbí **MLX Qwen 3.8 27B**
    - Tẹ **Sopọ̀** (kò nílò kọ́kọ́rọ́ API)
 
 4. **Lò ó pẹ̀lú OpenCode**:
    ```bash
-   # Ṣètò OpenCode láti lo OmniRoute
+   # Ṣètò OpenCode láti lo 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ O gbọ́dọ̀ ṣàkóso èyí pẹ̀lú ọwọ́:
 - Ṣi àwọn méjèèjì lórí àwọn ẹ̀rọ ọ̀tọ̀ọ̀tọ̀, tàbí
 - Dá ọ̀kan dúró kí o tó bẹ̀rẹ̀ èkejì
 
-OmniRoute kì í ṣàkóso àwọn ìlànà server MLX fúnra rẹ̀ — ó kan ń darí àwọn ìbéèrè sí àwọn endpoint tí ó bá OpenAI mu tí o ṣètò.
+67router kì í ṣàkóso àwọn ìlànà server MLX fúnra rẹ̀ — ó kan ń darí àwọn ìbéèrè sí àwọn endpoint tí ó bá OpenAI mu tí o ṣètò.
 
 #### Àtìlẹ́yìn Fún Pípè Ohun Èlò
 
@@ -158,13 +158,13 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 #### Yíyanjú Àwọn Ìṣòro
 
-| Ìṣòro              | Ojútùú                                                                                             |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| Server kò bẹ̀rẹ̀     | Ṣàyẹ̀wò `uv run mlx_lm.server --help` kí o sì jẹ́rìí sí àwọn ID àwòṣe                                |
-| Ìrántí kò tó       | Rí i dájú pé àwòṣe kan ṣoṣo ló ń ṣiṣẹ́; ti àwọn app mìíràn; ṣàyẹ̀wò Activity Monitor                 |
-| A kọ àsopọ̀         | Jẹ́rìí pé server ń ṣiṣẹ́ lórí port tó tọ́ (11435/11436)                                               |
-| Àwọn ìdáhùn lọ́ra   | Ìbéèrè àkọ́kọ́ máa ń gbé àwòṣe sínú ìrántí (~30-60s); àwọn ìbéèrè tó tẹ̀ lé e máa ń yára              |
-| Pípè ohun èlò kùnà | Rí i dájú pé àwòṣe ń ṣe àtìlẹ́yìn fún àwọn ohun èlò; ṣàyẹ̀wò àwọn log OmniRoute fún àwọn àṣìṣe ìtumọ̀ |
+| Ìṣòro              | Ojútùú                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| Server kò bẹ̀rẹ̀     | Ṣàyẹ̀wò `uv run mlx_lm.server --help` kí o sì jẹ́rìí sí àwọn ID àwòṣe                               |
+| Ìrántí kò tó       | Rí i dájú pé àwòṣe kan ṣoṣo ló ń ṣiṣẹ́; ti àwọn app mìíràn; ṣàyẹ̀wò Activity Monitor                |
+| A kọ àsopọ̀         | Jẹ́rìí pé server ń ṣiṣẹ́ lórí port tó tọ́ (11435/11436)                                              |
+| Àwọn ìdáhùn lọ́ra   | Ìbéèrè àkọ́kọ́ máa ń gbé àwòṣe sínú ìrántí (~30-60s); àwọn ìbéèrè tó tẹ̀ lé e máa ń yára             |
+| Pípè ohun èlò kùnà | Rí i dájú pé àwòṣe ń ṣe àtìlẹ́yìn fún àwọn ohun èlò; ṣàyẹ̀wò àwọn log 67router fún àwọn àṣìṣe ìtumọ̀ |
 
 ---
 
@@ -236,12 +236,12 @@ Olùpèsè rẹ ti sopọ̀ báyìí. O lè lò ó pẹ̀lú `model: "auto"` tà
 
 ## Lílo Ọ̀pọ̀ Olùpèsè
 
-OmniRoute ń ṣiṣẹ́ dáadáa jù lọ pẹ̀lú **ọ̀pọ̀ olùpèsè**. Èyí ń fún ọ ní:
+67router ń ṣiṣẹ́ dáadáa jù lọ pẹ̀lú **ọ̀pọ̀ olùpèsè**. Èyí ń fún ọ ní:
 
-- **Ìyípadà aládàáṣiṣẹ́** — Tí olùpèsè kan bá kùnà, OmniRoute yóò gbìyànjú èyí tó tẹ̀ lé e
-- **Ìṣàmúlò owó lọ́nà tó dára jù** — OmniRoute yóò yan olùpèsè tó din owó jù fún ìbéèrè kọ̀ọ̀kan
-- **Ìṣàmúlò iyára lọ́nà tó dára jù** — OmniRoute yóò yan olùpèsè tó yára jù fún ìbéèrè kọ̀ọ̀kan
-- **Ìṣàmúlò ànímọ́ lọ́nà tó dára jù** — OmniRoute yóò yan olùpèsè tó dára jù fún iṣẹ́ kọ̀ọ̀kan
+- **Ìyípadà aládàáṣiṣẹ́** — Tí olùpèsè kan bá kùnà, 67router yóò gbìyànjú èyí tó tẹ̀ lé e
+- **Ìṣàmúlò owó lọ́nà tó dára jù** — 67router yóò yan olùpèsè tó din owó jù fún ìbéèrè kọ̀ọ̀kan
+- **Ìṣàmúlò iyára lọ́nà tó dára jù** — 67router yóò yan olùpèsè tó yára jù fún ìbéèrè kọ̀ọ̀kan
+- **Ìṣàmúlò ànímọ́ lọ́nà tó dára jù** — 67router yóò yan olùpèsè tó dára jù fún iṣẹ́ kọ̀ọ̀kan
 
 ### Ètò Tí A Dámọ̀ràn
 
@@ -251,7 +251,7 @@ So ó kéré tán **olùpèsè mẹ́ta** pọ̀ fún ìrírí tó dára jù l�
 2. **Olùpèsè tó yára kan** (Groq, Cerebras) — Fún àwọn ìdáhùn kíákíá
 3. **Olùpèsè tó ní ànímọ́ kan** (OpenAI, Anthropic, Google) — Fún àwọn iṣẹ́ tó díjú
 
-Lẹ́yìn náà, lo `model: "auto"`, OmniRoute yóò sì yan èyí tó dára jù fún ìbéèrè kọ̀ọ̀kan láìfọwọ́sí.
+Lẹ́yìn náà, lo `model: "auto"`, 67router yóò sì yan èyí tó dára jù fún ìbéèrè kọ̀ọ̀kan láìfọwọ́sí.
 
 ---
 
@@ -260,25 +260,25 @@ Lẹ́yìn náà, lo `model: "auto"`, OmniRoute yóò sì yan èyí tó dára j�
 ### OpenAI
 
 1. Gba kọ́kọ́rọ́ API: https://platform.openai.com/api-keys
-2. Nínú OmniRoute: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → OpenAI
+2. Nínú 67router: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → OpenAI
 3. Lẹ kọ́kọ́rọ́ API mọ́ ọn → Sopọ̀
 
 ### Anthropic
 
 1. Gba kọ́kọ́rọ́ API: https://console.anthropic.com/
-2. Nínú OmniRoute: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → Anthropic
+2. Nínú 67router: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → Anthropic
 3. Lẹ kọ́kọ́rọ́ API mọ́ ọn → Sopọ̀
 
 ### Google (Gemini)
 
 1. Gba kọ́kọ́rọ́ API: https://aistudio.google.com/apikey
-2. Nínú OmniRoute: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → Gemini
+2. Nínú 67router: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → Gemini
 3. Lẹ kọ́kọ́rọ́ API mọ́ ọn → Sopọ̀
 
 ### DeepSeek
 
 1. Gba kọ́kọ́rọ́ API: https://platform.deepseek.com/
-2. Nínú OmniRoute: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → DeepSeek
+2. Nínú 67router: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → DeepSeek
 3. Lẹ kọ́kọ́rọ́ API mọ́ ọn → Sopọ̀
 
 ### Qoder: yan ọ̀nà gbígbé ẹ̀rí ìdánimọ̀
@@ -286,12 +286,12 @@ Lẹ́yìn náà, lo `model: "auto"`, OmniRoute yóò sì yan èyí tó dára j�
 Qoder nílò ẹ̀rí ìdánimọ̀. Àwọn ọ̀nà gbígbé méjèèjì rẹ̀ ní agbára tó yàtọ̀; orúkọ model
 nìkan kò lè fi ohun tí àsopọ̀ kan pàtó lè ṣe hàn.
 
-| Ẹ̀rí ìdánimọ̀                                 | Ọ̀nà gbígbé OmniRoute                       | Pípè irinṣẹ́ látọ̀dọ̀ olùpè                   | Ṣíṣànwọlé                                                               |
-| ------------------------------------------- | ------------------------------------------ | ------------------------------------------ | ----------------------------------------------------------------------- |
-| PAT tó bẹ̀rẹ̀ pẹ̀lú `pt-`                      | Ìlànà `qodercli` abẹ́lé lórí host OmniRoute | Kò ní àtìlẹ́yìn                             | Ti kó jọ: SSE ni a máa ń fi ránṣẹ́ lẹ́yìn tí CLI bá dá gbogbo ìdáhùn padà |
-| Access token tí kì í ṣe PAT tàbí kọ́kọ́rọ́ API | Ojú-ọ̀nà HTTP DashScope tó bá OpenAI mu     | A máa gba kọjá, lábẹ́ model/kọ́kọ́rọ́ upstream | Ọ̀nà HTTP/SSE upstream                                                   |
+| Ẹ̀rí ìdánimọ̀                                 | Ọ̀nà gbígbé 67router                       | Pípè irinṣẹ́ látọ̀dọ̀ olùpè                   | Ṣíṣànwọlé                                                               |
+| ------------------------------------------- | ----------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------- |
+| PAT tó bẹ̀rẹ̀ pẹ̀lú `pt-`                      | Ìlànà `qodercli` abẹ́lé lórí host 67router | Kò ní àtìlẹ́yìn                             | Ti kó jọ: SSE ni a máa ń fi ránṣẹ́ lẹ́yìn tí CLI bá dá gbogbo ìdáhùn padà |
+| Access token tí kì í ṣe PAT tàbí kọ́kọ́rọ́ API | Ojú-ọ̀nà HTTP DashScope tó bá OpenAI mu    | A máa gba kọjá, lábẹ́ model/kọ́kọ́rọ́ upstream | Ọ̀nà HTTP/SSE upstream                                                   |
 
-Fún PAT, fi Qoder CLI sori host tàbí container kan náà pẹ̀lú OmniRoute. Executable náà
+Fún PAT, fi Qoder CLI sori host tàbí container kan náà pẹ̀lú 67router. Executable náà
 gbọ́dọ̀ ṣeé rí gẹ́gẹ́ bí `qodercli`, tàbí ṣètò `CLI_QODER_BIN` sí path executable rẹ̀. CLI
 tí a fi sori host Docker nìkan kò ní wà nínú container láìfọwọ́yí. Àìsí
 binaries máa ń fa àṣìṣe tó ṣe kedere, èyí tó máa darí rẹ sí fífi wọ́n sori ẹrọ tàbí ṣíṣètò path.
@@ -324,16 +324,16 @@ tí a kò tíì ṣètò yẹ kí ó lo gbígbé ẹ̀rí ìdánimọ̀ tí a �
 ### Groq
 
 1. Gba kọ́kọ́rọ́ API: https://console.groq.com/
-2. Nínú OmniRoute: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → Groq
+2. Nínú 67router: Àwọn Olùpèsè → Ṣàfikún Olùpèsè → Groq
 3. Lẹ kọ́kọ́rọ́ API mọ́ ọn → Sopọ̀
 
 ---
 
 ## Àwọn Ìbéèrè Tí A Máa Ń Béèrè
 
-### "Ṣé mo nílò láti san owó láti lo OmniRoute?"
+### "Ṣé mo nílò láti san owó láti lo 67router?"
 
-**Rárá!** OmniRoute jẹ́ ọ̀fẹ́, ó sì jẹ́ open-source. O lè lo àwọn olùpèsè ọ̀fẹ́ (Kiro, Pollinations) láìsan owó kankan. Ìwọ yóò san owó nìkan tí o bá yàn láti lo àwọn olùpèsè tí a ń sanwó fún.
+**Rárá!** 67router jẹ́ ọ̀fẹ́, ó sì jẹ́ open-source. O lè lo àwọn olùpèsè ọ̀fẹ́ (Kiro, Pollinations) láìsan owó kankan. Ìwọ yóò san owó nìkan tí o bá yàn láti lo àwọn olùpèsè tí a ń sanwó fún.
 
 ### "Olùpèsè wo ni ó yẹ kí n bẹ̀rẹ̀ pẹ̀lú?"
 
@@ -341,11 +341,11 @@ Bẹ̀rẹ̀ pẹ̀lú **Kiro AI** — ó jẹ́ ọ̀fẹ́, kò nílò API key
 
 ### "Ṣé mo lè lo ọ̀pọ̀ olùpèsè ní ẹ̀ẹ̀kan?"
 
-**Bẹ́ẹ̀ ni!** Ìdí pàtàkì tí OmniRoute fi wà nìyẹn. So ọ̀pọ̀ olùpèsè pọ̀, kí o sì lo `model: "auto"` láti jẹ́ kí OmniRoute yan èyí tó dára jù fún ìbéèrè kọ̀ọ̀kan.
+**Bẹ́ẹ̀ ni!** Ìdí pàtàkì tí 67router fi wà nìyẹn. So ọ̀pọ̀ olùpèsè pọ̀, kí o sì lo `model: "auto"` láti jẹ́ kí 67router yan èyí tó dára jù fún ìbéèrè kọ̀ọ̀kan.
 
 ### "Kí ló máa ṣẹlẹ̀ tí olùpèsè kan kò bá ṣiṣẹ́?"
 
-OmniRoute yóò fo àwọn olùpèsè tí wọ́n kùnà láìfọwọ́yí, yóò sì gbìyànjú èyí tó kàn. O kò nílò láti ṣe ohunkóhun.
+67router yóò fo àwọn olùpèsè tí wọ́n kùnà láìfọwọ́yí, yóò sì gbìyànjú èyí tó kàn. O kò nílò láti ṣe ohunkóhun.
 
 ### "Báwo ni mo ṣe lè gé àsopọ̀ olùpèsè kan?"
 
@@ -353,17 +353,13 @@ Lọ sí Providers → tẹ olùpèsè náà → tẹ **Disconnect**.
 
 ### "Ṣé mo lè lo àwọn API key tí mo ti ní tẹ́lẹ̀?"
 
-**Bẹ́ẹ̀ ni!** Tí o bá ti ní àwọn API key fún OpenAI, Anthropic, Google, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ, o lè lò wọ́n nínú OmniRoute. Kàn lẹ̀ wọ́n síbẹ̀ nígbà tí o bá ń so olùpèsè náà pọ̀.
+**Bẹ́ẹ̀ ni!** Tí o bá ti ní àwọn API key fún OpenAI, Anthropic, Google, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ, o lè lò wọ́n nínú 67router. Kàn lẹ̀ wọ́n síbẹ̀ nígbà tí o bá ń so olùpèsè náà pọ̀.
 
 ---
 
 ## Kí Ló Kàn?
 
-- **[Ìtọ́sọ́nà Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Jẹ́ kí OmniRoute yan AI tó dára jù fún ọ
+- **[Ìtọ́sọ́nà Auto-Combo](./AUTO-COMBO-GUIDE.md)** — Jẹ́ kí 67router yan AI tó dára jù fún ọ
 - **[Ìtọ́sọ́nà Àwọn Ìpele Ọ̀fẹ́](./FREE-TIERS-GUIDE.md)** — Gba AI ọ̀fẹ́ láìlo káàdì kirẹ́díìtì
 - **[Yíyanjú Ìṣòro](../guides/TROUBLESHOOTING.md)** — Ṣàtúnṣe àwọn ìṣòro tó wọ́pọ̀
 - **[Ìtọ́kasí Olùpèsè](../reference/PROVIDER_REFERENCE.md)** — Àkójọ kíkún ti àwọn olùpèsè 226
-
-## Àwọn àwòrán Cursor
-
-Àwọn àwòrán ètò Cursor máa ń lo `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Wo [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

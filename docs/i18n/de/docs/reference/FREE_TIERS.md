@@ -9,9 +9,9 @@
 > **Zuletzt recherchiert:** 2026-06-17 — Webrecherche für jeden Anbieter (offizielle Dokumentation + Nachrichten der letzten 7 Tage, Prüfung mit 50 Agenten und gegnerischer Verifizierung), bei der sämtliche Kontingente der kostenlosen Tarife und Nutzungsbedingungen aktualisiert wurden. **Teilweise erneute Prüfung am 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — siehe den datierten Hinweis unten).
 > **Verbindliche Quelle (Katalog):** `open-sse/config/freeModelCatalog.ts` (Budgets pro MODELL, nach Pools dedupliziert). Die nachstehenden Token-Budgets stammen aus aktueller Webrecherche und sind eine **Näherung** — siehe [Methodik und Einschränkungen](#methodology--caveats).
 
-## Kurzfassung — wie viel kostenlose Inferenz bündelt OmniRoute tatsächlich?
+## Kurzfassung — wie viel kostenlose Inferenz bündelt 67router tatsächlich?
 
-Diese Zahlen beziehen sich auf separate Drittanbieterkonten und unterschiedliche Voraussetzungen im gesamten Katalog. OmniRoute stellt dieses Budget nicht selbst bereit: Sie müssen die erforderlichen Konten oder Zugangsdaten beschaffen, berechtigte Anbieter verbinden und deren Limits einhalten. Die tatsächlich nutzbare Kapazität kann geringer sein, einschließlich null bei einer Neuinstallation ohne berechtigte Route. Anbieter mit der Kennzeichnung `tos: avoid` werden standardmäßig vom automatischen Routing ausgeschlossen.
+Diese Zahlen beziehen sich auf separate Drittanbieterkonten und unterschiedliche Voraussetzungen im gesamten Katalog. 67router stellt dieses Budget nicht selbst bereit: Sie müssen die erforderlichen Konten oder Zugangsdaten beschaffen, berechtigte Anbieter verbinden und deren Limits einhalten. Die tatsächlich nutzbare Kapazität kann geringer sein, einschließlich null bei einer Neuinstallation ohne berechtigte Route. Anbieter mit der Kennzeichnung `tos: avoid` werden standardmäßig vom automatischen Routing ausgeschlossen.
 
 **Geprüft am 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) bietet ein einmaliges Aktionsguthaben von 5 US-Dollar, für das eine Zahlungsmethode erforderlich ist und das nach 30 Tagen verfällt. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) veröffentlicht Ratenlimits nach Projekt, Modell und Tarifstufe; es bleibt außerhalb der quantifizierten monatlichen Hauptangabe.
 
@@ -95,7 +95,7 @@ beschrieben.
 
 ## Zwei Regelwerke — Zählen vs. Entscheiden
 
-OmniRoute beantwortet die Frage „Ist es kostenlos?“ anhand zweier Regelwerke,
+67router beantwortet die Frage „Ist es kostenlos?“ anhand zweier Regelwerke,
 die absichtlich unterschiedliche Quellen heranziehen:
 
 | Regelwerk             | Maßgebliche Quelle                                                                                                                                                                    | Anwendungsbereiche                                                                                                            |
@@ -143,7 +143,7 @@ Die meisten Angaben zu „kostenlosen Tokens pro Monat“ in diesem Bereich sind
 
 ### ⚠️ Vorsicht — Klauseln zur persönlichen Nutzung bzw. zu Proxys, die geprüft werden sollten (16)
 
-> Der kostenlose Zugang ist tatsächlich verfügbar und OmniRoute kann Anfragen an diese Anbieter weiterleiten; die nachstehenden Klauseln sollte man lediglich kennen. Die OAuth-/schlüssellosen Angebote lassen sich nicht in Tokens beziffern und sind daher nicht in der Zahl der Überschrift enthalten (nicht, weil sie unbrauchbar wären).
+> Der kostenlose Zugang ist tatsächlich verfügbar und 67router kann Anfragen an diese Anbieter weiterleiten; die nachstehenden Klauseln sollte man lediglich kennen. Die OAuth-/schlüssellosen Angebote lassen sich nicht in Tokens beziffern und sind daher nicht in der Zahl der Überschrift enthalten (nicht, weil sie unbrauchbar wären).
 
 | Anbieter         | Hinweis                                                                                                                                                                                                                                |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -157,7 +157,7 @@ Die meisten Angaben zu „kostenlosen Tokens pro Monat“ in diesem Bereich sind
 | `fireworks`      | Die Nutzungsbedingungen untersagen ausdrücklich die Nutzung als Proxy/Vermittler, die Übertragung von API-Schlüsseln und die Unterlizenzierung (Abschnitte 2.1 und 2.2(i)(j)); selbst gehostete persönliche Proxys sind n…             |
 | `friendliai`     | Abschnitt 8(e) und 8(f) der Nutzungsbedingungen untersagt ausdrücklich, FriendliAI als Proxy zu verwenden oder eigenständigen Zugriff durch Dritte zu ermöglichen, sowie den Weiterverkauf/die…                                        |
 | `iflytek`        | Abschnitt 2.4(3) des iFlytek Spark LLM Service Agreement untersagt ausdrücklich, „automatisierte oder programmatische Methoden zu verwenden, um Daten oder Ausgaben zu extrahieren…                                                    |
-| `kiro`           | Die Kiro-FAQ untersagt ausdrücklich die Nutzung mit „OpenClaw und ähnlichen Tools, die Harnesses von Drittanbietern verwenden“ — ein selbst gehosteter KI-Proxy (wie OmniRoute), der Anfragen wei…                                     |
+| `kiro`           | Die Kiro-FAQ untersagt ausdrücklich die Nutzung mit „OpenClaw und ähnlichen Tools, die Harnesses von Drittanbietern verwenden“ — ein selbst gehosteter KI-Proxy (wie 67router), der Anfragen wei…                                      |
 | `modal`          | Abschnitt 1.3 der Nutzungsbedingungen untersagt ausdrücklich, „Dritten den direkten Zugriff auf oder die Nutzung des Dienstes zu vermieten, weiterzuverkaufen oder anderweitig zu gestatten“ — die Entwicklung eines selbst gehostete… |
 | `muse-spark-web` | Die Nutzungsbedingungen von Meta untersagen ausdrücklich automatisierten Zugriff ohne vorherige Genehmigung, Reverse Engineering ohne schriftliche Genehmigung und die Umgehung technologi…                                            |
 | `nlpcloud`       | Die Nutzungsbedingungen untersagen ausdrücklich „das Einrichten eines Proxys oder eines anderen Geräts, das anderen den Zugriff auf den Dienst darüber ermöglicht“, und gewähren lediglich eine nicht übertragbare,…                   |
@@ -319,7 +319,7 @@ Die meisten Angaben zu „kostenlosen Tokens pro Monat“ in diesem Bereich sind
 
 - **`360ai`** — Der mitgelieferte freeNote „Kostenlose 360 AI Brain-Modelle“ scheint veraltet zu sein. Der aktuelle Zugang ist an eine Bewerbung gebunden und kostenpflichtig. Die einmaligen Werbetokens (100M–250M) aus der Einführungsphase 2023 könnten die Grundlage dafür gewesen sein…
 - **`agentrouter`** — Unser mitgelieferter freeNote besagt „$200 kostenloses Guthaben bei der Registrierung“. Tatsächlich erhalten reguläre Registrierungen ohne Empfehlung derzeit nur $100; Registrierungen über Empfehlungen können $200 erhalten, aber ein Community-Kommentar vom April 2026…
-- **`agy`** — Unser mitgelieferter freeNote lautet „(keine)“ und impliziert damit, dass es keine kostenlose Stufe gibt, doch Antigravity verfügt über eine kostenlose, OAuth-geschützte Stufe. Die Nutzungsbedingungen verbieten jedoch ausdrücklich, diese kostenlose Stufe über einen Proxy wie OmniRoute zu verwenden …
+- **`agy`** — Unser mitgelieferter freeNote lautet „(keine)“ und impliziert damit, dass es keine kostenlose Stufe gibt, doch Antigravity verfügt über eine kostenlose, OAuth-geschützte Stufe. Die Nutzungsbedingungen verbieten jedoch ausdrücklich, diese kostenlose Stufe über einen Proxy wie 67router zu verwenden …
 - **`ai21`** — Verschärft: Der Testzeitraum wurde von „3 Monaten“ auf 7 Tage verkürzt. Das Guthaben von $10 bleibt unverändert, seine Gültigkeit sank jedoch drastisch von etwa 90 Tagen auf 7 Tage.
 - **`aimlapi`** — Deutlich geändert. Der mitgelieferte freeNote warb mit „$0.025/Tag kostenloses Guthaben — über 200 Modelle“, aber die kostenlose Stufe ist inzwischen pausiert/eingestellt. Die tägliche Guthabenzuteilung von $0.025 (50.000 Guthaben/Tag, 10 Anfr./T…
 - **`amazon-q`** — Unser mitgelieferter freeNote lautet „(keine)“ — tatsächlich ist die Situation schlechter: Das Produkt ist seit dem 15. Mai 2026 für Neuregistrierungen eingestellt. Zuvor bot die kostenlose Stufe 50 agentische Anfragen/Monat sowie unbegrenzte Inlin…

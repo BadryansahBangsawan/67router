@@ -4,7 +4,7 @@
 
 ---
 
-A compactação do OmniRoute é estruturada em torno de contratos de mecanismos. Um modo pode executar um mecanismo diretamente
+A compactação do 67router é estruturada em torno de contratos de mecanismos. Um modo pode executar um mecanismo diretamente
 (`caveman` ou `rtk`) ou um pipeline empilhado determinístico que executa vários mecanismos em ordem.
 
 ## Modos
@@ -44,9 +44,9 @@ acumulou histórico ainda para em `below_min_chars` e o motor não transforma na
 por isso que o padrão é `aggressive` em vez do perfil mais seguro.
 
 O pacote resolve seu próprio escopo de modelo e perfil a partir de sua configuração de ambiente.
-OmniRoute nunca delega a decisão: o adaptador fixa o gate do modelo ao
+67router nunca delega a decisão: o adaptador fixa o gate do modelo ao
 escopo mais restritivo do pacote, então as configurações do ambiente host só podem
-estreitar a lista de permissões, nunca ampliá-la além dos recibos medidos do OmniRoute.
+estreitar a lista de permissões, nunca ampliá-la além dos recibos medidos do 67router.
 
 ## Registro de engines
 
@@ -110,7 +110,7 @@ O modo Caveman concentra-se na condensação semântica de prosa comum:
 A interface no painel é `Dashboard -> Context & Cache -> Caveman`.
 
 O projeto upstream do Caveman relata `~75%` menos tokens de saída, uma economia média de `65%` na saída em benchmarks,
-com uma faixa de `22-87%`, e uma ferramenta de compressão de entrada de `~46%`. O OmniRoute usa o valor de entrada
+com uma faixa de `22-87%`, e uma ferramenta de compressão de entrada de `~46%`. O 67router usa o valor de entrada
 do Caveman ao documentar economias combinadas de prompt/contexto; o modo de saída do Caveman continua sendo um recurso
 separado de comportamento da resposta.
 

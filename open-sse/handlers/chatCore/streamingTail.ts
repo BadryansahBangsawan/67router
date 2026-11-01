@@ -42,14 +42,11 @@ import { recordContextEditingTelemetryHook } from "./contextEditingTelemetry.ts"
 import { readCpaAuthIndex } from "./failureUsage.ts";
 import { emitRequestGamificationEvent } from "./gamificationEvent.ts";
 import { maybeConvertJsonBodyToSse } from "./jsonBodyToSse.ts";
-import { runMemoryExtractionGate } from "./memoryExtraction.ts";
 import { mergeResponseToolNameMap } from "./passthroughToolNames.ts";
-import { runPluginOnResponseHook, runPluginOnStreamCompleteHook } from "./pluginOnResponse.ts";
 import { routingFinishReason } from "./routingFinishReason.ts";
 import { wrapReadableStreamWithFinalize } from "./streamFinalize.ts";
 import { buildStreamLedgerDetails, recordStreamingCost } from "./streamingCost.ts";
 import { assembleStreamingPipeline } from "./streamingPipeline.ts";
-import { scheduleStreamingQuotaShareConsumption } from "./streamingQuotaShare.ts";
 import { assembleStreamingResponseHeaders } from "./streamingResponseHeaders.ts";
 import { storeStreamingSemanticCacheResponse } from "./streamingSemanticCacheStore.ts";
 import { recordFinalInputCalibration } from "./contextEstimation.ts";
@@ -57,8 +54,7 @@ import { recordStreamingUsageStats } from "./streamingUsageStats.ts";
 import { maybeSyncClaudeExtraUsageState } from "./telemetryHelpers.ts";
 import { getExecutorTimeoutMs, resolveConnectionTimeoutMs } from "./upstreamTimeouts.ts";
 import { recordCost, recordUnpricedBudgetUsage } from "@/domain/costRules";
-import { extractFacts } from "@/lib/memory/extraction";
-import { calculateCost, calculateCostDetailed } from "@/lib/usage/costCalculator";
+import { calculateCostDetailed } from "@/lib/usage/costCalculator";
 import { appendRequestLog, trackPendingRequest } from "@/lib/usageDb";
 import { isFeatureFlagEnabled } from "@/shared/utils/featureFlags.ts";
 import { isEmptyStreamSiblingRecoveryEnabled } from "../../services/streamRecovery.ts";
@@ -104,8 +100,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
     isResponsesEndpoint,
     log,
     managedLease,
-    memoryOwnerId,
-    memorySettings,
     model,
     modelInfo,
     onRequestSuccess,
@@ -114,7 +108,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
     pendingRequestId,
     persistAttemptLogs,
     persistFailureUsage,
-    pipelineSessionId,
     provider,
     providerHeaders,
     providerRequestCapture,
@@ -559,39 +552,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
       ledger: buildStreamLedgerDetails(effectiveServiceTier, normalizedStreamStatus < 400, traceId),
     });
 
-    // === Quota Share POST-hook streaming (B/F7) — fire-and-forget, fail-open ===
-    // Resolve the real per-request cost (calculateCost) so USD-unit pools accrue
-    // on streaming traffic too; this previously recorded usd:0 hardcoded, which
-    // meant DeepSeek-style `usd/monthly` shared pools never blocked on streams.
-    scheduleStreamingQuotaShareConsumption({
-      apiKeyId: apiKeyInfo?.id,
-      connectionId: credentials?.connectionId,
-      provider,
-      model,
-      streamUsage,
-      streamStatus: normalizedStreamStatus,
-      serviceTier: effectiveServiceTier,
-      calculateCost,
-      log,
-    });
-    // === /Quota Share POST-hook streaming ===
-
-    if (streamStatus === 200) {
-      // #12150 P1b surface 3 (fix round 1): see the matching non-streaming
-      // gate above — an observed request populates NO durable memory from
-      // either the request-derived text or this streamed response.
-      runMemoryExtractionGate({
-        memoryOwnerId,
-        memorySettings,
-        videoBridgeObserved,
-        pipelineSessionId,
-        requestBody: body as Record<string, unknown>,
-        responseBody: (streamResponseBody ?? null) as Record<string, unknown> | null,
-        extractFacts,
-        log,
-      });
-    }
-
     // Semantic cache: store assembled streaming response for future cache hits
     storeStreamingSemanticCacheResponse({
       enabled: semanticCacheEnabled,
@@ -605,20 +565,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
       streamUsage,
       log,
       videoTranscriptSensitive: videoBridgeObserved,
-    });
-
-    // Plugin onStreamComplete hook — fire-and-forget, fail-open (#9571)
-    // Pass traceId as requestId so plugins can correlate the stream-completion event
-    // with the originating request (the same id used for onRequest/onResponse). (#11825)
-    runPluginOnStreamCompleteHook({
-      status: normalizedStreamStatus,
-      usage: streamUsage as Record<string, unknown> | undefined,
-      ttft,
-      model,
-      provider,
-      errorCode: streamErrorCode,
-      startTime,
-      requestId: traceId,
     });
   };
 
@@ -785,17 +731,6 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
 
   // ── Gamification event (fire-and-forget) ──
   await emitRequestGamificationEvent({ apiKeyId: apiKeyInfo?.id, model, provider });
-
-  // ── Plugin onResponse hook (fire-and-forget) ──
-  await runPluginOnResponseHook({
-    requestId: traceId,
-    body,
-    model,
-    provider,
-    apiKeyInfo,
-    headers: clientRawRequest?.headers,
-    response: { status: 200, streamed: true },
-  });
 
   const response = inheritEmptyTurnPolicy(
     providerResponse,

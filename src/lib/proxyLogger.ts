@@ -263,7 +263,7 @@ export function logProxyEvent(entry: ProxyLogInput) {
     proxyLogs.length = MAX_IN_MEMORY_ENTRIES;
   }
 
-  // 2. Queue for background batch persistence (SQLite / Redis)
+  // 2. Queue for background batch persistence (SQLite)
   if (shouldPersistToDisk) {
     enqueueProxyLog(log);
   }
@@ -371,25 +371,6 @@ export function flushProxyLogsSync() {
   if (pendingLogsQueue.length === 0) return;
   const batch = pendingLogsQueue;
   pendingLogsQueue = [];
-
-  // 1. If Redis driver is active, asynchronously publish batch to Redis Stream/Channel
-  if (process.env.QUOTA_STORE_DRIVER === "redis" || process.env.QUOTA_STORE_REDIS_URL) {
-    try {
-      import("@/lib/quota/redisQuotaStore")
-        .then(({ getRedisQuotaStore }) => {
-          const store = getRedisQuotaStore(process.env.QUOTA_STORE_REDIS_URL || "");
-          const client = (store as any)?.client;
-          if (client && typeof client.publish === "function") {
-            for (const entry of batch) {
-              client.publish("omniroute:proxy_logs", JSON.stringify(entry)).catch(() => {});
-            }
-          }
-        })
-        .catch(() => {});
-    } catch {
-      /* ignore redis pub errors */
-    }
-  }
 
   // Keep the same database for both attempts; resets must not redirect old batches.
   let db: ReturnType<typeof getDbInstance> | undefined;

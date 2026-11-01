@@ -48,7 +48,7 @@ agbapụtara site na tunnel **enweghị ike** ịkpalite ụzọ koodu a.
 | Linux+Firefox/Chromium | mmelite NSS DB nke profaịlụ ọ bụla site na `certutil -d sql:<profile>`                                            |
 
 Ndị a bụ otu iwu ndị `mitmproxy`, Charles Proxy, Fiddler, na
-Caddy na-eji. E dere eziokwu na ha dị na OmniRoute na
+Caddy na-eji. E dere eziokwu na ha dị na 67router na
 `docs/security/STEALTH_GUIDE.md`.
 
 **Usoro mbelata ihe ize ndụ nke v3.8.6**:
@@ -107,7 +107,7 @@ fingerprint, naanị "achọtara token N, a bubatara ha niile."
 maka ndị nchịkwa na-emelitebeghị automation ha. A ga-ewepụ ya na v3.9.
 
 **Ihe mere anyị ji debe ya**: Mbubata Zed bụ ụzọ onboarding kacha mfe maka ndị ọrụ
-na-eji Zed ugbu a ma chọọ iṅomi igodo ndị na-eweta ọrụ ha n'ime OmniRoute
+na-eji Zed ugbu a ma chọọ iṅomi igodo ndị na-eweta ọrụ ha n'ime 67router
 na-enweghị ịtinyegharị ha.
 
 ---
@@ -119,7 +119,7 @@ na-enweghị ịtinyegharị ha.
 **Ihe mere e ji gosi ya**: chunk ahụ na-ebupụgharị `execFileWithPassword`,
 `runElevatedPowerShell`, na helper `quotePowerShell` a na-ekerịta. Classifier AI
 nke Socket.dev na-ahụ ha dịka ngwáọrụ izugbe maka "ime ihe na host + ibuli ikike."
-N'ime OmniRoute, a na-eji ha naanị n'ụzọ nrụnye asambodo MITM (§1), nakwa site na
+N'ime 67router, a na-eji ha naanị n'ụzọ nrụnye asambodo MITM (§1), nakwa site na
 `execFileWithPassword` maka ime iwu `sudo`.
 
 **Mbelata ihe ize ndụ na v3.8.6**:
@@ -169,7 +169,7 @@ n'ime dashboard mpaghara.
 
 ---
 
-## §5 — Nlaghachite nzere OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Nlaghachite nzere 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Faịlụ mmalite**:
 
@@ -202,7 +202,7 @@ rawBody)`) tupu a parse JSON. Ọ bụrụ na e setịpụla secret ahụ, mbiny
    `rateLimitedUntil`, `updatedAt`). Nke a bụ **mgbanwe na-emebi ndakọrịta** maka ndị ọrụ
    dabere na mmekọrịta token dịpụrụ adịpụ — ha ga-ekwenyerịrị ya n'ụzọ doro anya.
 
-**Ihe mere anyị ji edobe ya**: Cloud Sync bụ naanị ụzọ onye tenant OmniRoute Cloud
+**Ihe mere anyị ji edobe ya**: Cloud Sync bụ naanị ụzọ onye tenant 67router Cloud
 ga-esi chịkọta nzere otu n'otu ebe. Ndozi ahụ na-eme ka threat model doo anya:
 "server na-etinye mbinye aka, client na-enyocha, operator na-ekwenye."
 

@@ -45,7 +45,7 @@ npm run test:e2e           # ఐచ్ఛికం, కానీ సిఫార
 పూర్తిగా ఆటోమేటిక్ ప్రక్రియను పునరుద్ధరిస్తుంది (లీకైన టోకెన్ ఒంటరిగా ప్రచురించలేదు — అసలు టోకెనే లేదు).
 
 **ఒకసారి మాత్రమే చేసే సెటప్ (యజమాని):** npmjs.com → ప్యాకేజీ `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: యజమాని `diegosouzapw`, రిపో `OmniRoute`, వర్క్ఫ్లో `npm-publish.yml`
+Publisher_ → GitHub: యజమాని `diegosouzapw`, రిపో `67router`, వర్క్ఫ్లో `npm-publish.yml`
 (environment: none). ఇది ఉండే వరకు, ఆటోమేటిక్ దశ `ENEEDAUTH`తో విఫలమవుతుంది:
 `publish_mode=staged`తో (క్రింద) లేదా `direct`తో మళ్లీ డిస్పాచ్ చేయండి.
 

@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { RadioGroup, RadioGroupItem } from "@omniroute/ui-kit/radio-group";
-import { Card, Button, Input, Badge } from "@/shared/components";
+import { Button, Input, Badge } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 
 const MODES = [
@@ -81,7 +82,7 @@ export default function IPFilterSection() {
   const activeMode = !config.enabled ? "disabled" : config.mode;
 
   return (
-    <Card title={t("ipAccessControl")} subtitle={t("ipAccessControlDesc")} icon="security">
+    <SettingsSection title={t("ipAccessControl")} description={t("ipAccessControlDesc")}>
       {/* Mode selector */}
       <RadioGroup
         aria-label={t("ipAccessControl")}
@@ -147,7 +148,7 @@ export default function IPFilterSection() {
           {/* Blacklist */}
           {config.blacklist.length > 0 && (
             <div>
-              <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+              <p className="text-xs font-medium text-text-muted mb-2">
                 {t("blocked", { count: config.blacklist.length })}
               </p>
               <div className="flex flex-wrap gap-1.5">
@@ -172,7 +173,7 @@ export default function IPFilterSection() {
           {/* Whitelist */}
           {config.whitelist.length > 0 && (
             <div>
-              <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+              <p className="text-xs font-medium text-text-muted mb-2">
                 {t("allowed", { count: config.whitelist.length })}
               </p>
               <div className="flex flex-wrap gap-1.5">
@@ -197,7 +198,7 @@ export default function IPFilterSection() {
           {/* Temp Bans */}
           {config.tempBans.length > 0 && (
             <div>
-              <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">
+              <p className="text-xs font-medium text-text-muted mb-2">
                 {t("temporaryBans", { count: config.tempBans.length })}
               </p>
               <div className="flex flex-col gap-1.5">
@@ -231,6 +232,6 @@ export default function IPFilterSection() {
           )}
         </div>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Filipino)
+# 67router Architecture (Filipino)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,12 +10,12 @@ _Huling na-update: 2026-06-28_
 
 ## Ehekutibong Buod
 
-Ang OmniRoute ay isang lokal na AI routing gateway at dashboard na binuo gamit ang Next.js.
+Ang 67router ay isang lokal na AI routing gateway at dashboard na binuo gamit ang Next.js.
 Nagbibigay ito ng iisang endpoint na compatible sa OpenAI (`/v1/*`) at nagruruta ng trapiko sa maraming upstream provider na may translation, fallback, token refresh, at pagsubaybay sa paggamit.
 
 Mga pangunahing kakayahan:
 
-- API surface na compatible sa OpenAI para sa CLI/mga tool (375 provider, 156 executor module)
+- API surface na compatible sa OpenAI para sa CLI/mga tool (372 provider, 156 executor module)
 - Translation ng request/response sa iba't ibang format ng provider
 - Model combo fallback (sunod-sunod na paggamit ng maraming modelo)
 - Mga structured combo step (`provider + model + connection`) na may runtime ordering ayon sa `compositeTiers`
@@ -128,13 +128,11 @@ Mga pangunahing page sa ilalim ng `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — mga kontrol sa quota/rate
 - `/dashboard/cli-tools` — onboarding sa CLI, pagtukoy sa runtime, pagbuo ng config
 - `/dashboard/agents` — mga natukoy na ACP agent + pagpaparehistro ng custom agent
-- `/dashboard/cloud-agents` — mga task ng agent na naka-host sa cloud (Codex Cloud, Devin, Jules) at lifecycle ng task
 - `/dashboard/skills` — registry ng A2A skill, sandbox execution, built-in na catalog ng skill
 - `/dashboard/memory` — inspeksyon at retrieval ng persistent na memorya ng pag-uusap
 - `/dashboard/webhooks` — mga outbound webhook subscription, pag-rotate ng secret, mga istatistika ng retry
 - `/dashboard/batch` — pagsusumite ng batch job at progreso
 - `/dashboard/cache` — mga istatistika ng read-through at reasoning cache, mga kontrol sa eviction
-- `/dashboard/playground` — interactive na chat playground para sa anumang naka-configure na combo/modelo
 - `/dashboard/changelog` — viewer ng changelog sa loob ng app (nire-render ang `CHANGELOG.md`)
 - `/dashboard/system` — mga diagnostic ng runtime, impormasyon ng bersyon, surface para sa validation ng environment
 - `/dashboard/onboarding` — wizard para sa unang setup ng mga bagong installation
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Dashboard ng Browser]
     end
 
-    subgraph Router[Lokal na Proseso ng OmniRoute]
+    subgraph Router[Lokal na Proseso ng 67router]
         API[V1 Compatibility API\n/v1/*]
         DASH[Dashboard + Management API\n/api/*]
         CORE[SSE + Translation Core\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Mga domain ng pamamahala:
 - Badyet: `src/app/api/usage/budget` (GET/POST)
 - Mga fallback chain: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Audit ng compliance: `src/app/api/compliance/audit-log` (GET, may pagination + structured metadata)
-- Mga eval: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Mga patakaran: `src/app/api/policies` (GET/POST)
 - Mga sync token: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET, snapshot ng mga setting/provider/combo/key na may bersyon gamit ang ETag)
@@ -316,7 +313,6 @@ Mga module ng domain layer:
 - Timeout ng fetch: `src/shared/utils/fetchTimeout.ts`
 - Telemetry ng request: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Runner ng eval: `src/lib/evals/evalRunner.ts`
 - Persistence ng state ng domain: `src/lib/db/domainState.ts` — SQLite CRUD para sa mga fallback chain, budget, history ng gastos, state ng lockout, at mga circuit breaker
 
 Mga module ng OAuth provider (27 indibidwal na file sa ilalim ng `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ Mga module ng OAuth provider (27 indibidwal na file sa ilalim ng `src/lib/oauth/
 
 ## 5) Mga Naka-embed na Serbisyo (v3.8.4)
 
-Maaaring mag-install, mangasiwa, at magruta ang OmniRoute patungo sa mga lokal na tumatakbong proseso ng AI tool
+Maaaring mag-install, mangasiwa, at magruta ang 67router patungo sa mga lokal na tumatakbong proseso ng AI tool
 na tinatawag na **mga naka-embed na serbisyo**. Limang serbisyo ang kasama: 9Router, CLIProxyAPI, Bifrost, Mux at Dario.
 
 Mga layer ng arkitektura:
@@ -386,23 +382,6 @@ Mga pangunahing kakayahan:
 Para sa buong detalye ng algorithm (mga formula ng salik, pag-tune ng weight), tingnan ang
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Cloud Agents
-
-Inilalagay ng Cloud Agents ang mga third-party na naka-host na platform ng code agent (Codex Cloud, Devin,
-Jules) sa likod ng isang pare-parehong lifecycle ng task na sinusuportahan ng DB. Nangangailangan ng management authentication
-ang lahat ng endpoint para sa paggawa/pagsusuri ng task.
-
-- Root ng module: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, kasama ang mga subdirectory ng bawat agent sa ilalim ng `agents/`)
-- Mga implementation ng bawat agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Mga pampublikong endpoint: `/api/v1/agents/tasks/*` (list/create/get/cancel)
-- Mga management endpoint: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: table na `cloud_agent_tasks`
-
-Para sa mga detalye ng provisioning at OAuth ng bawat agent, tingnan ang
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Guardrails
 
 Ang module na guardrails ay isang hot-reloadable na middleware layer na nagsusuri ng mga kahilingan
@@ -438,7 +417,7 @@ kailangang buuin mismo ng mga route handler ang logic para sa lockout/budget/fal
 - Cache ng quota: `src/domain/quotaCache.ts`
 - Kalagayan ng degradation: `src/domain/degradation.ts`
 - Audit ng configuration: `src/domain/configAudit.ts`
-- Tagabuo ng metadata ng tugon ng OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Tagabuo ng metadata ng tugon ng 67router: `src/domain/omnirouteResponseMeta.ts`
 - Subsystem ng assessment: `src/domain/assessment/` — mga pana-panahong evaluation job
 
 ### E. Authorization Pipeline
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Browser ng Dashboard]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Runtime]
+    subgraph ContainerOrProcess[67router Runtime]
         Next[Next.js Server\nPORT=20128]
         Core[SSE Core + Mga Executor]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ Ginagamit ng lahat ng iba pang provider (kabilang ang mga custom na compatible n
 ## Matrix ng Compatibility ng Provider
 
 > **Tandaan:** Ang matrix sa ibaba ay isang kumakatawang sample ng 351 nakarehistrong provider sa
-> OmniRoute v3.8.0. Para sa opisyal at patuloy na ina-update na listahan, sumangguni sa
+> 67router v3.8.0. Para sa opisyal at patuloy na ina-update na listahan, sumangguni sa
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (awtomatikong binuo) o sa pinagmumulan ng
 > katotohanan sa `src/shared/constants/providers.ts` (bine-validate ng Zod sa pag-load).
 
@@ -1117,7 +1096,7 @@ Nag-iimbak ang detalyadong pagkuha ng payload ng kahilingan ng hanggang apat na 
 - hilaw na kahilingang natanggap mula sa client
 - isinaling kahilingan na aktuwal na ipinadala upstream
 - tugon ng provider na muling binuo bilang JSON; ang mga naka-stream na tugon ay kino-compact sa panghuling buod kasama ang metadata ng stream
-- panghuling tugon sa client na ibinalik ng OmniRoute; iniimbak ang mga naka-stream na tugon sa parehong compact na anyo ng buod
+- panghuling tugon sa client na ibinalik ng 67router; iniimbak ang mga naka-stream na tugon sa parehong compact na anyo ng buod
 
 ## Mga Hangganang Sensitibo sa Seguridad
 

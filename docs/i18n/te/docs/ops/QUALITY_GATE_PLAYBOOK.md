@@ -4,7 +4,7 @@
 
 ---
 
-> **ఈ పత్రం ఏమిటి.** పరిశ్రమలోని ఉత్తమ పద్ధతులతో పోల్చి, OmniRoute నాణ్యత-గేట్ వ్యవస్థపై
+> **ఈ పత్రం ఏమిటి.** పరిశ్రమలోని ఉత్తమ పద్ధతులతో పోల్చి, 67router నాణ్యత-గేట్ వ్యవస్థపై
 > ఒక విమర్శనాత్మక అంచనా, **అదనంగా** అన్ని నాణ్యత చెక్పాయింట్ల సమగ్ర జాబితా మరియు అదే వ్యవస్థను
 > ఏ ప్రాజెక్ట్కైనా వర్తింపజేయడానికి ఒక **టూల్-అజ్ఞేయ ప్రతిరూపణ ప్రణాళిక**. వాస్తవ repository స్థితి
 > ఆధారంగా 2026-06-16న రూపొందించబడింది (జ్ఞాపకం ఆధారంగా కాదు).
@@ -101,62 +101,62 @@
 
 ### 1. శైలి & ఫార్మాటింగ్ (నిర్ణయాత్మకమైనది, వేగవంతమైనది)
 
-- **OmniRoute:** lint-staged ద్వారా Prettier + ESLint (pre-commit), 2-స్పేసులు/డబుల్-కోట్లు/100col.
+- **67router:** lint-staged ద్వారా Prettier + ESLint (pre-commit), 2-స్పేసులు/డబుల్-కోట్లు/100col.
 - **సాధారణం:** staged ఫైళ్లపై pre-commit సమయంలో అమలయ్యే, స్వయంచాలకంగా సరిచేయగల ఒక formatter + ఒక linter.
 
 ### 2. టైప్లు
 
-- **OmniRoute:** `typecheck:core` (నిరోధించేది) + `typecheck:noimplicit:core` (సూచనాత్మకమైనది) + `type-coverage` రాచెట్ 92.17% + ప్రతి ఫైల్కు any-బడ్జెట్.
+- **67router:** `typecheck:core` (నిరోధించేది) + `typecheck:noimplicit:core` (సూచనాత్మకమైనది) + `type-coverage` రాచెట్ 92.17% + ప్రతి ఫైల్కు any-బడ్జెట్.
 - **సాధారణం:** CIలో strict typecheck + రాచెట్ చేయబడిన type-coverage మెట్రిక్ + ప్రతి ఫైల్కు `any`/escape-hatch బడ్జెట్.
 
 ### 3. పరీక్షలు (తీవ్రత)
 
-- **OmniRoute:** పరస్పరం అతివ్యాప్తి చెందని 2 runners (Node native + vitest), 8 shards, సమగ్ర coverage 60/60/60/60 + రాచెట్ ~76% + **కీలకమైన modules కోసం 8 ప్రతి-module కనిష్ఠ పరిమితులు** + రాత్రివేళ property tests + రాత్రివేళ **mutation testing**.
+- **67router:** పరస్పరం అతివ్యాప్తి చెందని 2 runners (Node native + vitest), 8 shards, సమగ్ర coverage 60/60/60/60 + రాచెట్ ~76% + **కీలకమైన modules కోసం 8 ప్రతి-module కనిష్ఠ పరిమితులు** + రాత్రివేళ property tests + రాత్రివేళ **mutation testing**.
 - **సాధారణం:** test runner(s) + **నిరపేక్ష** coverage కనిష్ఠ పరిమితి (సున్నాను నిరోధించేది) + coverage **రాచెట్** (తిరోగమనాన్ని నిరోధించేది) + **అధిక-ప్రమాద code కోసం ప్రతి-module కనిష్ఠ పరిమితులు** (Goodhart ప్రభావాన్ని నిరోధించేవి) + స్వచ్ఛమైన logic కోసం property-based పరీక్షలు + పరీక్ష నాణ్యతకు అసలైన కొలమానంగా రాత్రివేళ **mutation testing**.
 
 ### 4. పరీక్ష విధానం (మోసపూరిత అనుకూలీకరణ నిరోధం)
 
-- **OmniRoute:** `pr-test-policy` (ఉత్పత్తి codeకు test తప్పనిసరి), `check-test-masking` (బలహీనపరచిన assertionsను నిరోధిస్తుంది), `pr-evidence` (విజయవంతమైందనే ప్రకటనకు evidence block అవసరం), `test-discovery` (ప్రతి testను ఒక runner సేకరిస్తుంది).
+- **67router:** `pr-test-policy` (ఉత్పత్తి codeకు test తప్పనిసరి), `check-test-masking` (బలహీనపరచిన assertionsను నిరోధిస్తుంది), `pr-evidence` (విజయవంతమైందనే ప్రకటనకు evidence block అవసరం), `test-discovery` (ప్రతి testను ఒక runner సేకరిస్తుంది).
 - **సాధారణం:** "కొత్త code ⇒ కొత్త test" gate + తొలగించిన assert/tautology detector + evidence ఆవశ్యకత (TDD లేదా సజీవ test) + globs వెలుపల ఏ test అనాథగా మిగలదనే హామీ.
 
 ### 5. సంక్లిష్టత & code ఆరోగ్యం (రాచెట్లు)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ప్రతి ఫైల్కు file-size (స్థిరీకరించబడింది, తగ్గించడం మాత్రమే), circular-deps (custom Tarjan, నిరోధించేది).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), ప్రతి ఫైల్కు file-size (స్థిరీకరించబడింది, తగ్గించడం మాత్రమే), circular-deps (custom Tarjan, నిరోధించేది).
 - **సాధారణం:** ప్రతి ఆరోగ్య మెట్రిక్ను రాచెట్ చేయండి (warnings, duplication, cyclomatic **మరియు** cognitive complexity, dead code, file size, import cycles). దిశ ఎల్లప్పుడూ "తిరోగమించవద్దు".
 
 ### 6. స్థిర భద్రత (SAST + రహస్యాలు)
 
-- **OmniRoute:** CodeQL (రాచెట్ alerts = 0), gitleaks (`[extend] useDefault=true` — అత్యంత కీలకం!), SonarQube, custom security rules (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (రాచెట్ alerts = 0), gitleaks (`[extend] useDefault=true` — అత్యంత కీలకం!), SonarQube, custom security rules (public-creds, error-helper, route-guard-membership, route-validation).
 - **సాధారణం:** alert రాచెట్తో SAST (CodeQL/Sonar/semgrep) + **వారసత్వంగా పొందిన default ruleset** కలిగిన secrets scanner (defaultను override చేసే custom config = అంధత్వం) + ప్రాజెక్ట్కు నిర్దిష్టమైన Hard Rule security gates.
 
 ### 7. సరఫరా గొలుసు (dependencies)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + వయస్సు ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + వయస్సు ≥72h).
 - **సాధారణం:** బహుళ-మూలాల SCA + license allowlist + lockfile సమగ్రత తనిఖీ + వయస్సు/typosquatting తనిఖీతో dependency allowlist + సమూహీకరించిన update bot.
 
 ### 8. సరఫరా గొలుసు (build & release)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (వారానికొకసారి), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (వారానికొకసారి), workflow hardening (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **సాధారణం:** publish సమయంలో SBOMను రూపొందించండి + సంతకం చేసిన provenance (SLSA L2+) + షెడ్యూల్ చేసిన Scorecard + అన్ని workflowsను పటిష్ఠం చేయండి (కనిష్ఠ-అధికార tokens, non-pusher checkoutలో నిల్వచేసిన credentials ఉండకూడదు, actionsను SHA ద్వారా pin చేయాలి).
 
 ### 9. Contracts & API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (రాత్రివేళ contract fuzz), openapi-coverage (% నమోదు చేయబడిన routes, రాచెట్ 38.3%), openapi-security-tiers (spec vs route-guard).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (రాత్రివేళ contract fuzz), openapi-coverage (% నమోదు చేయబడిన routes, రాచెట్ 38.3%), openapi-security-tiers (spec vs route-guard).
 - **సాధారణం:** breaking-change contract diff (oasdiff/buf) + specకు వ్యతిరేకంగా property-based fuzz (schemathesis) + రాచెట్ చేయబడిన documentation coverage + spec↔code స్థిరత్వం.
 
 ### 10. Docs & i18n (క్షీణత నిరోధం)
 
-- **OmniRoute:** docs-sync (ప్రతిబింబించిన versions), docs-counts-sync (docsలోని సంఖ్యలు vs code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + రాచెట్ 80.1%).
+- **67router:** docs-sync (ప్రతిబింబించిన versions), docs-counts-sync (docsలోని సంఖ్యలు vs code), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + రాచెట్ 80.1%).
 - **సాధారణం:** docs మరియు code మధ్య versions/counts/env-varsను సమకాలీకరించండి (gate, నమ్మకం కాదు) + అంతర్గత linksను ధ్రువీకరించండి + రాచెట్ చేయబడిన i18n coverage.
 
 ### 11. భ్రమల నిరోధం / స్థిరత్వం (అరుదైన వర్గం)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ సజీవ symbol), provider-consistency, fetch-targets (client fetch ⇒ నిజమైన route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ సజీవ symbol), provider-consistency, fetch-targets (client fetch ⇒ నిజమైన route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **సాధారణం:** ప్రతి "నకలు చేయబడిన సత్య మూలం" (registry, string dispatch, cross-layer references) కోసం, రెండు వైపులూ సరిపోలుతున్నాయని నిరూపించే gate ఉండాలి. typecheck/test గుర్తించలేని క్షీణతను ఇది గుర్తిస్తుంది.
 
 ### 12. స్థితిస్థాపకత & domain (ఉత్పత్తికి నిర్దిష్టమైనది)
 
-- **OmniRoute:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 resilience laws (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (fault-injection), heap-growth (leak), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), 3 resilience laws (circuit-breaker/cooldown/lockout).
 - **సాధారణం:** **మీ** domainలోని failure modesను గుర్తించి, ప్రతిదానికీ ఒక gateను కలిగి ఉండండి (అది రాత్రివేళ మాత్రమే అమలైనా సరే). AI apps కోసం: injection red-team. distributed systems కోసం: chaos + leak + soak.
 
 ---

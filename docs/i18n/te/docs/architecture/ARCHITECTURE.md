@@ -1,4 +1,4 @@
-# OmniRoute Architecture (తెలుగు)
+# 67router Architecture (తెలుగు)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _చివరిగా నవీకరించబడింది: 2026-06-28_
 
 ## కార్యనిర్వాహక సారాంశం
 
-OmniRoute అనేది Next.jsపై నిర్మించబడిన స్థానిక AI రూటింగ్ గేట్వే మరియు డ్యాష్బోర్డ్.
+67router అనేది Next.jsపై నిర్మించబడిన స్థానిక AI రూటింగ్ గేట్వే మరియు డ్యాష్బోర్డ్.
 ఇది ఒకే OpenAI-అనుకూల ఎండ్పాయింట్ను (`/v1/*`) అందిస్తుంది మరియు అనువాదం, ఫాల్బ్యాక్, టోకెన్ రిఫ్రెష్, వినియోగ ట్రాకింగ్తో అనేక అప్స్ట్రీమ్ ప్రొవైడర్ల మధ్య ట్రాఫిక్ను రూట్ చేస్తుంది.
 
 ప్రధాన సామర్థ్యాలు:
@@ -128,13 +128,11 @@ v3.8.0 ప్లాట్ఫారమ్కు సంబంధించిన �
 - `/dashboard/limits` — కోటా/రేట్ నియంత్రణలు
 - `/dashboard/cli-tools` — CLI ఆన్బోర్డింగ్, రన్టైమ్ గుర్తింపు, కాన్ఫిగరేషన్ ఉత్పత్తి
 - `/dashboard/agents` — గుర్తించబడిన ACP ఏజెంట్లు + అనుకూల ఏజెంట్ నమోదు
-- `/dashboard/cloud-agents` — క్లౌడ్లో హోస్ట్ చేయబడిన ఏజెంట్ టాస్క్లు (Codex Cloud, Devin, Jules) మరియు టాస్క్ జీవితచక్రం
 - `/dashboard/skills` — A2A స్కిల్ రిజిస్ట్రీ, శాండ్బాక్స్ అమలు, అంతర్నిర్మిత స్కిల్ కేటలాగ్
 - `/dashboard/memory` — స్థిరమైన సంభాషణ మెమరీ పరిశీలన మరియు తిరిగి పొందడం
 - `/dashboard/webhooks` — అవుట్బౌండ్ వెబ్హుక్ సబ్స్క్రిప్షన్లు, సీక్రెట్ రొటేషన్, రీట్రై గణాంకాలు
 - `/dashboard/batch` — బ్యాచ్ జాబ్ సమర్పణ మరియు పురోగతి
 - `/dashboard/cache` — రీడ్-త్రూ మరియు రీజనింగ్ క్యాష్ గణాంకాలు, తొలగింపు నియంత్రణలు
-- `/dashboard/playground` — కాన్ఫిగర్ చేసిన ఏదైనా కాంబో/మోడల్తో ఇంటరాక్టివ్ చాట్ ప్లేగ్రౌండ్
 - `/dashboard/changelog` — యాప్లోని చేంజ్లాగ్ వ్యూయర్ (`CHANGELOG.md`ను రెండర్ చేస్తుంది)
 - `/dashboard/system` — రన్టైమ్ డయాగ్నస్టిక్స్, వెర్షన్ సమాచారం, ఎన్విరాన్మెంట్ ధ్రువీకరణ ఉపరితలం
 - `/dashboard/onboarding` — కొత్త ఇన్స్టాలేషన్ల కోసం మొదటి-అమలు సెటప్ విజార్డ్
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[బ్రౌజర్ డాష్బోర్డ్]
     end
 
-    subgraph Router[OmniRoute స్థానిక ప్రాసెస్]
+    subgraph Router[67router స్థానిక ప్రాసెస్]
         API[V1 అనుకూలత API\n/v1/*]
         DASH[డాష్బోర్డ్ + నిర్వహణ API\n/api/*]
         CORE[SSE + అనువాద కోర్\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - బడ్జెట్: `src/app/api/usage/budget` (GET/POST)
 - ఫాల్బ్యాక్ చైన్లు: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - కంప్లయన్స్ ఆడిట్: `src/app/api/compliance/audit-log` (GET, పేజినేషన్ + నిర్మిత మెటాడేటాతో)
-- మూల్యాంకనాలు: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - విధానాలు: `src/app/api/policies` (GET/POST)
 - సింక్ టోకెన్లు: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - కాన్ఫిగరేషన్ బండిల్: `src/app/api/sync/bundle` (GET, సెట్టింగ్లు/ప్రొవైడర్లు/కాంబోలు/కీల యొక్క ETag-వెర్షన్ చేయబడిన స్నాప్షాట్)
@@ -316,7 +313,6 @@ flowchart LR
 - ఫెచ్ టైమ్అవుట్: `src/shared/utils/fetchTimeout.ts`
 - అభ్యర్థన టెలిమెట్రీ: `src/shared/utils/requestTelemetry.ts`
 - అనుసరణ/ఆడిట్: `src/lib/compliance/index.ts`
-- మూల్యాంకన రన్నర్: `src/lib/evals/evalRunner.ts`
 - డొమైన్ స్థితి నిల్వ: `src/lib/db/domainState.ts` — ఫాల్బ్యాక్ చైన్లు, బడ్జెట్లు, ఖర్చు చరిత్ర, లాకౌట్ స్థితి, సర్క్యూట్ బ్రేకర్ల కోసం SQLite CRUD
 
 OAuth ప్రొవైడర్ మాడ్యూల్లు (`src/lib/oauth/providers/` కింద 27 వ్యక్తిగత ఫైల్లు):
@@ -328,7 +324,7 @@ OAuth ప్రొవైడర్ మాడ్యూల్లు (`src/lib/oauth
 
 ## 5) ఎంబెడెడ్ సేవలు (v3.8.4)
 
-OmniRoute స్థానికంగా నడుస్తున్న AI సాధన ప్రాసెస్లను ఇన్స్టాల్ చేయగలదు, పర్యవేక్షించగలదు మరియు వాటికి రూట్ చేయగలదు; వీటిని **ఎంబెడెడ్ సేవలు** అంటారు. వీటిలో ఐదు అందించబడతాయి: 9Router, CLIProxyAPI, Bifrost, Mux మరియు Dario.
+67router స్థానికంగా నడుస్తున్న AI సాధన ప్రాసెస్లను ఇన్స్టాల్ చేయగలదు, పర్యవేక్షించగలదు మరియు వాటికి రూట్ చేయగలదు; వీటిని **ఎంబెడెడ్ సేవలు** అంటారు. వీటిలో ఐదు అందించబడతాయి: 9Router, CLIProxyAPI, Bifrost, Mux మరియు Dario.
 
 ఆర్కిటెక్చర్ లేయర్లు:
 
@@ -383,23 +379,6 @@ Auto Combo స్థిరమైన కాంబో నిర్వచనంప�
 పూర్తి అల్గోరిథమిక్ వివరాల కోసం (కారకాల ఫార్ములాలు, వెయిట్ ట్యూనింగ్),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) చూడండి.
 
-### B. క్లౌడ్ ఏజెంట్లు
-
-Cloud Agents అనేది మూడవ-పక్ష హోస్ట్ చేసిన కోడ్-ఏజెంట్ ప్లాట్ఫారమ్లను (Codex Cloud, Devin,
-Jules) ఏకరీతి DB-ఆధారిత టాస్క్ లైఫ్సైకిల్ వెనుక ర్యాప్ చేస్తుంది. అన్ని టాస్క్ సృష్టి/పరిశీలన
-ఎండ్పాయింట్లకు మేనేజ్మెంట్ ఆథెంటికేషన్ అవసరం.
-
-- మాడ్యూల్ రూట్: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, అలాగే `agents/` కింద ఒక్కో ఏజెంట్కు సంబంధించిన సబ్డైరెక్టరీలు)
-- ఒక్కో ఏజెంట్కు సంబంధించిన అమలులు: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- పబ్లిక్ ఎండ్పాయింట్లు: `/api/v1/agents/tasks/*` (జాబితా/సృష్టించడం/పొందడం/రద్దు చేయడం)
-- మేనేజ్మెంట్ ఎండ్పాయింట్లు: `/api/cloud/*` (ప్రొవిజనింగ్, స్థితి, బ్యాచ్)
-- డ్యాష్బోర్డ్: `/dashboard/cloud-agents`
-- నిల్వ: `cloud_agent_tasks` పట్టిక
-
-ఒక్కో ఏజెంట్కు సంబంధించిన ప్రొవిజనింగ్ మరియు OAuth ప్రత్యేకతల కోసం,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) చూడండి.
-
 ### C. గార్డ్రైల్స్
 
 గార్డ్రైల్స్ మాడ్యూల్ అనేది PII, ప్రాంప్ట్ ఇంజెక్షన్ మరియు అసురక్షిత విజన్ కంటెంట్ కోసం అభ్యర్థనలు,
@@ -435,7 +414,7 @@ Jules) ఏకరీతి DB-ఆధారిత టాస్క్ లైఫ్�
 - కోటా క్యాష్: `src/domain/quotaCache.ts`
 - డీగ్రడేషన్ స్థితి: `src/domain/degradation.ts`
 - కాన్ఫిగరేషన్ ఆడిట్: `src/domain/configAudit.ts`
-- OmniRoute రెస్పాన్స్ మెటాడేటా బిల్డర్: `src/domain/omnirouteResponseMeta.ts`
+- 67router రెస్పాన్స్ మెటాడేటా బిల్డర్: `src/domain/omnirouteResponseMeta.ts`
 - అసెస్మెంట్ ఉపవ్యవస్థ: `src/domain/assessment/` — కాలానుగుణ మూల్యాంకన జాబ్లు
 
 ### E. ఆథరైజేషన్ పైప్లైన్
@@ -802,7 +781,7 @@ flowchart LR
         Browser[డ్యాష్బోర్డ్ బ్రౌజర్]
     end
 
-    subgraph ContainerOrProcess[OmniRoute రన్టైమ్]
+    subgraph ContainerOrProcess[67router రన్టైమ్]
         Next[Next.js సర్వర్\nPORT=20128]
         Core[SSE కోర్ + ఎగ్జిక్యూటర్లు]
         MainDB[(storage.sqlite)]
@@ -920,7 +899,7 @@ flowchart LR
 
 ## ప్రొవైడర్ అనుకూలత మ్యాట్రిక్స్
 
-> **గమనిక:** దిగువన ఉన్న మ్యాట్రిక్స్, OmniRoute v3.8.0లో నమోదైన 351 ప్రొవైడర్లకు ప్రాతినిధ్య నమూనా.
+> **గమనిక:** దిగువన ఉన్న మ్యాట్రిక్స్, 67router v3.8.0లో నమోదైన 351 ప్రొవైడర్లకు ప్రాతినిధ్య నమూనా.
 > అధికారికమైన మరియు నిరంతరం నవీకరించబడే జాబితా కోసం,
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (స్వయంచాలకంగా రూపొందించబడినది)ను లేదా
 > `src/shared/constants/providers.ts`లోని ప్రామాణిక మూలాన్ని చూడండి (లోడ్ సమయంలో Zod ద్వారా ధృవీకరించబడుతుంది).
@@ -1102,7 +1081,7 @@ flowchart LR
 - క్లయింట్ నుండి అందుకున్న ముడి అభ్యర్థన
 - వాస్తవంగా అప్స్ట్రీమ్కు పంపిన అనువదించిన అభ్యర్థన
 - JSONగా పునర్నిర్మించిన ప్రొవైడర్ ప్రతిస్పందన; స్ట్రీమ్ చేయబడిన ప్రతిస్పందనలు తుది సారాంశంతో పాటు స్ట్రీమ్ మెటాడేటాకు సంక్షిప్తీకరించబడతాయి
-- OmniRoute తిరిగి అందించిన తుది క్లయింట్ ప్రతిస్పందన; స్ట్రీమ్ చేయబడిన ప్రతిస్పందనలు అదే సంక్షిప్త సారాంశ రూపంలో నిల్వ చేయబడతాయి
+- 67router తిరిగి అందించిన తుది క్లయింట్ ప్రతిస్పందన; స్ట్రీమ్ చేయబడిన ప్రతిస్పందనలు అదే సంక్షిప్త సారాంశ రూపంలో నిల్వ చేయబడతాయి
 
 ## భద్రతా-సున్నితమైన సరిహద్దులు
 

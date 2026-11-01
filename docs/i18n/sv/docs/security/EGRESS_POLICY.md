@@ -8,7 +8,7 @@
 
 > **Sanningskälla:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute låter varje proxy ha ett **direktiv för adressfamilj för utgående trafik**. Som standard väljer operativsystemet IPv4 eller IPv6 (dual-stack, ”Happy Eyeballs”). När du ställer in direktivet på `ipv4` eller `ipv6` låser OmniRoute varje anslutning via den proxyn till den valda familjen och **stoppar anslutningen vid fel** i stället för att falla tillbaka till den andra familjen.
+67router låter varje proxy ha ett **direktiv för adressfamilj för utgående trafik**. Som standard väljer operativsystemet IPv4 eller IPv6 (dual-stack, ”Happy Eyeballs”). När du ställer in direktivet på `ipv4` eller `ipv6` låser 67router varje anslutning via den proxyn till den valda familjen och **stoppar anslutningen vid fel** i stället för att falla tillbaka till den andra familjen.
 
 Den här sidan dokumenterar vad direktivet är, varför det finns, var du konfigurerar det och hur det hanteras vid körning.
 
@@ -122,7 +122,7 @@ För resten av API:et för CRUD-åtgärder och tilldelning av proxyservrar, se [
 
 ## Så matchas `auto`
 
-När `family` är `auto` lägger OmniRoute **inte** till något direktiv — proxy-URL:en används som den är och anslutningsfamiljen bestäms inneboende.
+När `family` är `auto` lägger 67router **inte** till något direktiv — proxy-URL:en används som den är och anslutningsfamiljen bestäms inneboende.
 
 När URL:en skapas (`proxyConfigToUrl` / `normalizeProxyUrl` i `open-sse/utils/proxyDispatcher.ts`) ger en `auto`-proxy en vanlig URL utan markör:
 
@@ -158,7 +158,7 @@ Alltså:
 
 Ett direktiv som inte är `auto` överförs som en enda syntetisk frågemarkör — `?family=ipv4` eller `?family=ipv6` — som läggs till en gång i den normaliserade proxy-URL:en. `normalizeProxyUrl` ser noggrant till att ta bort och lägga till markören exakt en gång, så att den aldrig stör porttolkningen.
 
-När dispatchern skapas läses markören och konverteras till en konkret anslutningsfamilj. Om värden är en IP-literal av den **motsatta** familjen utlöser OmniRoute ett undantag (motsägelser hanteras genom att neka som standard):
+När dispatchern skapas läses markören och konverteras till en konkret anslutningsfamilj. Om värden är en IP-literal av den **motsatta** familjen utlöser 67router ett undantag (motsägelser hanteras genom att neka som standard):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Den konkreta familjen låses sedan på anslutningskomponenten:
 
 ## SOCKS5-kompatibilitet
 
-Familjelåsningen fungerar med SOCKS5-proxyservrar, men standardversionen av `fetch-socks` exponerar inte de socketalternativ som krävs för att låsa familjen för proxyhoppet. OmniRoute tillhandahåller därför en egen anslutningskomponent:
+Familjelåsningen fungerar med SOCKS5-proxyservrar, men standardversionen av `fetch-socks` exponerar inte de socketalternativ som krävs för att låsa familjen för proxyhoppet. 67router tillhandahåller därför en egen anslutningskomponent:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

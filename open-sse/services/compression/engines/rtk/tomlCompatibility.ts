@@ -260,7 +260,7 @@ export function parseRtkTomlV1(content: string): RtkTomlCompatibilityResult {
   for (const [id, filter] of Object.entries(parsed.data.filters)) {
     if (filter.filter_stderr) {
       warnings.push(
-        `Filter '${id}': filter_stderr is accepted as a no-op because OmniRoute receives already-captured tool output`
+        `Filter '${id}': filter_stderr is accepted as a no-op because 67router receives already-captured tool output`
       );
     }
   }

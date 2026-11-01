@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (中文 (繁體))
+# 67router MCP Server Documentation (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## 安裝
 
-OmniRoute MCP 已內建。請使用以下指令啟動：
+67router MCP 已內建。請使用以下指令啟動：
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ curl -i \
 | `omniroute_switch_combo`        | `write:combos`        | 啟用或停用組合                                                                               |
 | `omniroute_create_combo`        | `write:combos`        | 透過現有的組合 API 建立經過驗證的組合                                                        |
 | `omniroute_check_quota`         | `read:quota`          | 已用／總配額、剩餘百分比、重設時間、權杖健康狀態                                             |
-| `omniroute_route_request`       | `execute:completions` | 透過 OmniRoute 路由傳送聊天補全請求                                                          |
+| `omniroute_route_request`       | `execute:completions` | 透過 67router 路由傳送聊天補全請求                                                           |
 | `omniroute_cost_report`         | `read:usage`          | 依期間（工作階段／日／週／月）提供成本報告                                                   |
 | `omniroute_list_models_catalog` | `read:models`         | 完整的模型目錄，包含功能、狀態與定價                                                         |
 | `omniroute_radar_catalog`       | `read:radar`          | 本機已簽署的 Radar 目錄；可選擇依提供者／系列篩選                                            |
@@ -151,7 +151,7 @@ CCR 項目僅儲存於記憶體中，並會在重新啟動時消失。每個區�
 
 ### MCP 無障礙樹狀結構篩選器 (v3.8.0)
 
-除了上述壓縮工具之外，OmniRoute 還包含一個執行後篩選器，會在 MCP 瀏覽器／無障礙工具的
+除了上述壓縮工具之外，67router 還包含一個執行後篩選器，會在 MCP 瀏覽器／無障礙工具的
 **工具結果**傳回給代理程式之前加以壓縮。此篩選器本身並非工具，而是會透明地處理任何包含
 冗長無障礙樹狀結構或瀏覽器快照文字（≥2000 個字元）的工具結果。
 
@@ -243,17 +243,6 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 上述 MCP 工具清單（110 個不重複工具，由 `countUniqueMcpTools()` 計算）刻意
 限定於執行階段路由、快取、壓縮、記憶體、技能、代理及內容來源操作。v3.8.0 隨 MCP 伺服器
 一併提供另外兩個相鄰框架，並分別記載於獨立文件中：
-
-### 雲端代理
-
-雲端代理是程序外的 AI 程式設計代理（codex-cloud、cursor-cloud、devin、jules），透過與
-LLM 提供者相同的連線模型接入 OmniRoute。它們透過自身的 REST 介面
-（`/api/v1/agents/*`）公開，且**不**屬於 MCP 工具目錄的一部分
-——呼叫雲端代理不會耗用 MCP 範圍。
-
-- 實作：`src/lib/cloudAgent/`（`registry.ts`、`agents/codex.ts`、`agents/cursor.ts`、`agents/devin.ts`、`agents/jules.ts`）。
-- 生命週期：`createTask`、`getStatus`、`approvePlan`、`sendMessage`、`listSources`。
-- 文件：[docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)。
 
 ### 防護機制
 
@@ -418,8 +407,6 @@ HTTP 會使用 Bearer 金鑰的 `api_keys.scopes` 作為 `authInfo`
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                    |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                             |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                               |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                           |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                              |
 | `read:obsidian`       | 13 個讀取工具 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 個寫入工具 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                            |
@@ -473,7 +460,7 @@ HTTP 會使用 Bearer 金鑰的 `api_keys.scopes` 作為 `authInfo`
 
 | 變數                                    | 預設值                        | 用途                                                                                                                                                                                                                                                                                                                                                                               |
 | :-------------------------------------- | :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`      | MCP 伺服器呼叫 OmniRoute 內部 API 時使用的基底 URL                                                                                                                                                                                                                                                                                                                                 |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`      | MCP 伺服器呼叫 67router 內部 API 時使用的基底 URL                                                                                                                                                                                                                                                                                                                                  |
 | `OMNIROUTE_API_KEY`                     | （空白）                      | 以 `Authorization: Bearer` 形式轉送至內部 API 呼叫的 API 金鑰                                                                                                                                                                                                                                                                                                                      |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false`（僅 `"true"` 會啟用） | 啟用後，缺少範圍時會拒絕工具呼叫，並在稽核日誌中記錄 `scope_denied:<reason>`。此外，若任何 HTTP/SSE 呼叫端是透過個別金鑰的 Authorization 標頭解析而得（`source === "authInfo"`），且缺少完整的 `manage`/`admin` 範圍，則無論此旗標為何都會強制執行；例如，金鑰僅具有狹義的 `mcp:connect` 繞過範圍。因此，此預設值僅適用於本機/stdio 的單一操作者流程，絕不可用於遠端非迴路位址存取 |
 | `OMNIROUTE_MCP_SCOPES`                  | （空白）                      | 以逗號分隔的範圍允許清單，預設視為「可用」（在呼叫端未提供自己的範圍時使用）                                                                                                                                                                                                                                                                                                       |
@@ -576,7 +563,6 @@ stdio 傳輸層每 5 秒將存活狀態持久化到 `${DATA_DIR}/runtime/mcp-hea
 | `open-sse/mcp-server/tools/skillTools.ts`                                | 技能工具定義（4 個工具）                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion 上下文來源工具定義（6 個工具）               |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | 遊戲化工具定義（8 個工具）                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | 外掛註冊與管理工具（8 個工具）                      |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` 端點                              |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` 端點                               |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE 傳輸路由                         |

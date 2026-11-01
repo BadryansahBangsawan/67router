@@ -10,7 +10,7 @@
 
 ## Mengapa ini diwujudkan
 
-OmniRoute sudah pun menjawab dua soalan kos, tetapi kedua-duanya bukan soalan yang paling kerap ditanya oleh pengendali.
+67router sudah pun menjawab dua soalan kos, tetapi kedua-duanya bukan soalan yang paling kerap ditanya oleh pengendali.
 
 | Mekanisme sedia ada                                      | Menjawab                                                 |
 | -------------------------------------------------------- | -------------------------------------------------------- |

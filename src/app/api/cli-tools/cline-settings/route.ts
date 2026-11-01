@@ -241,7 +241,7 @@ export async function DELETE(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "OmniRoute settings removed from Cline",
+      message: "67router settings removed from Cline",
     });
   } catch (error) {
     const refusal = configClobberRefusalResponse(error);

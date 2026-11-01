@@ -4,7 +4,7 @@
 
 ---
 
-Ta vodnik opisuje dodajanje računov Kiro (pomočnika za programiranje z umetno inteligenco, ki ga gosti AWS) v OmniRoute,
+Ta vodnik opisuje dodajanje računov Kiro (pomočnika za programiranje z umetno inteligenco, ki ga gosti AWS) v 67router,
 s poudarkom na hkratni uporabi več računov brez konfliktov sej.
 
 ---
@@ -22,10 +22,10 @@ računalniku, v katerem je že prijavljen drug račun Kiro — nova prijava prek
 
 ---
 
-## Kako OmniRoute rešuje to težavo (v3.8.0+)
+## Kako 67router rešuje to težavo (v3.8.0+)
 
-Od različice v3.8.0 dalje OmniRoute med vsakim uvozom povezave Kiro pokliče `registerClient()`
-(AWS SSO OIDC). Tako vsaka povezava OmniRoute prejme lastno namensko registracijo odjemalca
+Od različice v3.8.0 dalje 67router med vsakim uvozom povezave Kiro pokliče `registerClient()`
+(AWS SSO OIDC). Tako vsaka povezava 67router prejme lastno namensko registracijo odjemalca
 OIDC. Ker je vsaka registracija odjemalca neodvisna, osveževanje ali
 ponovno overjanje enega računa ne vpliva na osvežitveni žeton nobenega drugega računa.
 
@@ -59,7 +59,7 @@ samodejno prejele lastno registracijo odjemalca.
 
 ### Predpogoji
 
-- OmniRoute v3.8.0 ali novejša različica.
+- 67router v3.8.0 ali novejša različica.
 - Delujoč račun Kiro (e-poštni naslov + geslo ali prijava z Google oziroma GitHub).
 - Po želji še drugi račun Kiro.
 
@@ -70,7 +70,7 @@ samodejno prejele lastno registracijo odjemalca.
    - **Uvoz žetona** — prilepite osvežitveni žeton, ki se začne z `aorAAAAAG`.
    - **Ključ API** — prilepite dolgotrajni ključ API za Kiro / CodeWhisperer.
    - **Prijava z Google / GitHub** — dokončajte postopek OAuth v brskalniku.
-   - **Samodejni uvoz** — kliknite gumb; OmniRoute prebere poverilnice iz
+   - **Samodejni uvoz** — kliknite gumb; 67router prebere poverilnice iz
      lokalne podatkovne zbirke kiro-cli ali `~/.aws/sso/cache`.
 3. Povezava se shrani. Postopki z osvežitvenimi žetoni samodejno registrirajo namenskega
    odjemalca OIDC. Postopki s ključi API preverijo ključ pri AWS in ne shranijo osvežitvenega žetona.
@@ -123,7 +123,7 @@ Preverjanje pristnosti s ključem API je namenjeno dolgotrajnim poverilnicam nos
 2. Izberite **Ključ API**.
 3. Prilepite ključ API in izberite regijo AWS: **Samodejno zaznavanje** (privzeto), **Vzhod ZDA
    (S. Virginija)** ali **Evropa (Frankfurt)**.
-4. OmniRoute preveri veljavnost ključa in shrani povezavo, pripeto na regijo, v kateri
+4. 67router preveri veljavnost ključa in shrani povezavo, pripeto na regijo, v kateri
    ključ deluje.
 
 ### API
@@ -172,7 +172,7 @@ zavrne koristne podatke ključa API kot neveljavno telo zahteve (HTTP 400).
 
 ## Potek veljavnosti odjemalca OIDC
 
-Javni odjemalci AWS SSO OIDC običajno potečejo po 90 dneh (`clientSecretExpiresAt`). OmniRoute ta časovni žig shrani v `providerSpecificData` zaradi opazljivosti. Če se povezava po približno 90 dneh preneha osveževati, jo znova uvozite, da pridobite novo registracijo odjemalca OIDC. Samodejna ponovna registracija ob poteku veljavnosti je načrtovana kot prihodnja izboljšava.
+Javni odjemalci AWS SSO OIDC običajno potečejo po 90 dneh (`clientSecretExpiresAt`). 67router ta časovni žig shrani v `providerSpecificData` zaradi opazljivosti. Če se povezava po približno 90 dneh preneha osveževati, jo znova uvozite, da pridobite novo registracijo odjemalca OIDC. Samodejna ponovna registracija ob poteku veljavnosti je načrtovana kot prihodnja izboljšava.
 
 Povezave z API-ključem nimajo poteka veljavnosti odjemalca OIDC, ker se ne osvežujejo prek AWS SSO OIDC.
 
@@ -187,12 +187,12 @@ Povezave z API-ključem nimajo poteka veljavnosti odjemalca OIDC, ker se ne osve
 ### Uvoz ne uspe z napako »Preverjanje veljavnosti žetona ni uspelo«
 
 - Prepričajte se, da se osvežitveni žeton začne z `aorAAAAAG`.
-- Prepričajte se, da lahko OmniRoute doseže `https://oidc.us-east-1.amazonaws.com` (ali konfigurirano regijo). Če ste za posredniškim strežnikom podjetja, nastavite posredniški strežnik na ravni ponudnika na strani **Nadzorna plošča → Nastavitve → Posredniški strežniki**.
+- Prepričajte se, da lahko 67router doseže `https://oidc.us-east-1.amazonaws.com` (ali konfigurirano regijo). Če ste za posredniškim strežnikom podjetja, nastavite posredniški strežnik na ravni ponudnika na strani **Nadzorna plošča → Nastavitve → Posredniški strežniki**.
 
 ### Uvoz API-ključa ne uspe
 
 - Preverite, ali je ključ API-ključ Kiro / CodeWhisperer in ne osvežitveni žeton.
 - Preverite, ali se AWS-regija ujema s ključem/računom. Privzeta regija je `us-east-1`.
-- Ključ mora omogočati klic `ListAvailableProfiles`; sicer OmniRoute ne more razrešiti zahtevanega `profileArn`.
+- Ključ mora omogočati klic `ListAvailableProfiles`; sicer 67router ne more razrešiti zahtevanega `profileArn`.
 
 Za druge težave glejte glavno datoteko [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

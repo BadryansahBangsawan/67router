@@ -4,7 +4,7 @@
 
 ---
 
-> **Kas ir šis dokuments.** Kritisks OmniRoute kvalitātes vārtu sistēmas novērtējums,
+> **Kas ir šis dokuments.** Kritisks 67router kvalitātes vārtu sistēmas novērtējums,
 > salīdzinot to ar nozares paraugpraksi, **kā arī** visaptverošs visu kvalitātes
 > kontrolpunktu katalogs un **no rīkiem neatkarīgs atkārtošanas plāns**, lai piemērotu to pašu sistēmu
 > jebkuram projektam. Ģenerēts 2026-06-16, balstoties uz repozitorija faktisko stāvokli (nevis no atmiņas).
@@ -101,62 +101,62 @@ lai to varētu ieviest jebkurā tehnoloģiju kopā.
 
 ### 1. Stils un formatēšana (deterministiska, ātra)
 
-- **OmniRoute:** Prettier + ESLint, izmantojot lint-staged (pirms komita), 2 atstarpes/dubultpēdiņas/100 kolonnas.
+- **67router:** Prettier + ESLint, izmantojot lint-staged (pirms komita), 2 atstarpes/dubultpēdiņas/100 kolonnas.
 - **Vispārīgi:** viens automātiski labojams formatētājs + viens linteris, kas pirms komita tiek palaisti sagatavotajiem failiem.
 
 ### 2. Tipi
 
-- **OmniRoute:** `typecheck:core` (bloķējošs) + `typecheck:noimplicit:core` (konsultatīvs) + `type-coverage` slieksnis 92.17% ar vienvirziena paaugstināšanu + katram failam noteikts any budžets.
+- **67router:** `typecheck:core` (bloķējošs) + `typecheck:noimplicit:core` (konsultatīvs) + `type-coverage` slieksnis 92.17% ar vienvirziena paaugstināšanu + katram failam noteikts any budžets.
 - **Vispārīgi:** stingra tipu pārbaude CI vidē + tipu pārklājuma metrika ar vienvirziena paaugstināšanu + katram failam noteikts `any`/apiešanas mehānismu budžets.
 
 ### 3. Testi (intensitāte)
 
-- **OmniRoute:** 2 nepārklājošies izpildītāji (Node iebūvētais + vitest), 8 segmenti, kopējais pārklājums 60/60/60/60 + vienvirziena slieksnis ~76% + **8 atsevišķu moduļu minimālie sliekšņi kritiskajiem moduļiem** + iknakts īpašību testi + iknakts **mutāciju testēšana**.
+- **67router:** 2 nepārklājošies izpildītāji (Node iebūvētais + vitest), 8 segmenti, kopējais pārklājums 60/60/60/60 + vienvirziena slieksnis ~76% + **8 atsevišķu moduļu minimālie sliekšņi kritiskajiem moduļiem** + iknakts īpašību testi + iknakts **mutāciju testēšana**.
 - **Vispārīgi:** testu izpildītājs(-i) + **absolūts** minimālais pārklājuma slieksnis (aizsardzība pret nulli) + pārklājuma **vienvirziena slieksnis** (aizsardzība pret regresiju) + **atsevišķu moduļu minimālie sliekšņi augsta riska kodam** (aizsardzība pret Gudhārta likuma efektu) + īpašībās balstīta tīrās loģikas testēšana + iknakts **mutāciju testēšana** kā patiesais testu kvalitātes mērs.
 
 ### 4. Testu politika (pret manipulēšanu)
 
-- **OmniRoute:** `pr-test-policy` (produkcijas kodam nepieciešams tests), `check-test-masking` (bloķē vājinātus apgalvojumus), `pr-evidence` (apgalvojumam par panākumiem nepieciešams pierādījumu bloks), `test-discovery` (katru testu savāc kāds izpildītājs).
+- **67router:** `pr-test-policy` (produkcijas kodam nepieciešams tests), `check-test-masking` (bloķē vājinātus apgalvojumus), `pr-evidence` (apgalvojumam par panākumiem nepieciešams pierādījumu bloks), `test-discovery` (katru testu savāc kāds izpildītājs).
 - **Vispārīgi:** vārteja „jauns kods ⇒ jauns tests” + noņemtu apgalvojumu/tautoloģiju detektors + pierādījumu prasība (TDD vai aktuāls tests) + garantija, ka neviens tests nepaliek ārpus globu tvēruma.
 
 ### 5. Sarežģītība un koda veselība (vienvirziena sliekšņi)
 
-- **OmniRoute:** ESLint brīdinājumi (3769↓), jscpd dublēšanās (5.72%↓), ciklomātiskā sarežģītība un maksimālais rindu skaits (1800↓), kognitīvā sarežģītība ar sonarjs (753↓), neizmantots kods/neizmantoti eksporti ar knip (339↓), faila lielums katram failam (fiksēts, drīkst tikai samazināties), cikliskās atkarības (pielāgots Tarjan algoritms, bloķējošs).
+- **67router:** ESLint brīdinājumi (3769↓), jscpd dublēšanās (5.72%↓), ciklomātiskā sarežģītība un maksimālais rindu skaits (1800↓), kognitīvā sarežģītība ar sonarjs (753↓), neizmantots kods/neizmantoti eksporti ar knip (339↓), faila lielums katram failam (fiksēts, drīkst tikai samazināties), cikliskās atkarības (pielāgots Tarjan algoritms, bloķējošs).
 - **Vispārīgi:** vienvirziena slieksnis katrai koda veselības metrikai (brīdinājumiem, dublēšanās apjomam, ciklomātiskajai **un** kognitīvajai sarežģītībai, neizmantotam kodam, failu lielumam, importu cikliem). Virziens vienmēr ir „nepieļaut regresiju”.
 
 ### 6. Statiskā drošība (SAST + noslēpumi)
 
-- **OmniRoute:** CodeQL (brīdinājumu vienvirziena slieksnis = 0), gitleaks (`[extend] useDefault=true` — kritiski svarīgi!), SonarQube, pielāgoti drošības noteikumi (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (brīdinājumu vienvirziena slieksnis = 0), gitleaks (`[extend] useDefault=true` — kritiski svarīgi!), SonarQube, pielāgoti drošības noteikumi (public-creds, error-helper, route-guard-membership, route-validation).
 - **Vispārīgi:** SAST (CodeQL/Sonar/semgrep) ar brīdinājumu vienvirziena slieksni + noslēpumu skeneris ar **mantotu noklusējuma noteikumu kopu** (pielāgota konfigurācija, kas pārraksta noklusējuma konfigurāciju, rada aklo zonu) + projektam specifiskas stingro noteikumu drošības vārtejas.
 
 ### 7. Piegādes ķēde (atkarības)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX atļauto vienumu saraksts), lockfile-lint (HTTPS+sha512+reģistrs), `check-deps` aizsardzībai pret slopsquatting (atļauto vienumu saraksts + vecums ≥72 h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX atļauto vienumu saraksts), lockfile-lint (HTTPS+sha512+reģistrs), `check-deps` aizsardzībai pret slopsquatting (atļauto vienumu saraksts + vecums ≥72 h).
 - **Vispārīgi:** vairāku avotu SCA + licenču atļauto vienumu saraksts + bloķēšanas faila integritātes pārbaude + atkarību atļauto vienumu saraksts ar vecuma/typosquatting pārbaudi + grupētu atjauninājumu bots.
 
 ### 8. Piegādes ķēde (būvēšana un laidieni)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA izcelsmes apliecinājums (`--provenance`), OpenSSF Scorecard (reizi nedēļā), darbplūsmu nostiprināšana (zizmor: artipacked→`persist-credentials:false`, kešatmiņas saindēšana, pilnvaru atļaujas).
+- **67router:** SBOM (CycloneDX + syft), SLSA izcelsmes apliecinājums (`--provenance`), OpenSSF Scorecard (reizi nedēļā), darbplūsmu nostiprināšana (zizmor: artipacked→`persist-credentials:false`, kešatmiņas saindēšana, pilnvaru atļaujas).
 - **Vispārīgi:** publicēšanas laikā ģenerēt SBOM + parakstīts izcelsmes apliecinājums (SLSA L2+) + plānota Scorecard pārbaude + nostiprināt visas darbplūsmas (minimālo privilēģiju pilnvaras, nesaglabāt akreditācijas datus izgūšanas darbībām, kas neveic izmaiņu nosūtīšanu, darbības piesaistīt konkrētam SHA).
 
 ### 9. Līgumi un API
 
-- **OmniRoute:** oasdiff (OpenAPI nesaderīgās izmaiņas), schemathesis (iknakts līgumu fuzz testēšana), openapi-coverage (dokumentēto maršrutu procentuālā daļa, vienvirziena slieksnis 38.3%), openapi-security-tiers (specifikācija pret maršruta aizsargu).
+- **67router:** oasdiff (OpenAPI nesaderīgās izmaiņas), schemathesis (iknakts līgumu fuzz testēšana), openapi-coverage (dokumentēto maršrutu procentuālā daļa, vienvirziena slieksnis 38.3%), openapi-security-tiers (specifikācija pret maršruta aizsargu).
 - **Vispārīgi:** nesaderīgo izmaiņu līgumu salīdzināšana (oasdiff/buf) + īpašībās balstīta fuzz testēšana pret specifikāciju (schemathesis) + dokumentācijas pārklājums ar vienvirziena slieksni + specifikācijas↔koda konsekvence.
 
 ### 10. Dokumentācija un i18n (pret novecošanu)
 
-- **OmniRoute:** docs-sync (spoguļotās versijas), docs-counts-sync (skaitļi dokumentācijā pret kodu), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + vienvirziena slieksnis 80.1%).
+- **67router:** docs-sync (spoguļotās versijas), docs-counts-sync (skaitļi dokumentācijā pret kodu), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + vienvirziena slieksnis 80.1%).
 - **Vispārīgi:** sinhronizēt versijas/skaitļus/vides mainīgos starp dokumentāciju un kodu (vārteja, nevis paļaušanās) + validēt iekšējās saites + i18n pārklājums ar vienvirziena slieksni.
 
 ### 11. Aizsardzība pret halucinācijām/konsekvence (retā kategorija)
 
-- **OmniRoute:** known-symbols (nosūtīšana pēc virknes ⇒ eksistējošs simbols), provider-consistency, fetch-targets (klienta fetch ⇒ reāls maršruts), docs-symbols, db-rules (stingrie noteikumi #2/#5), migration-numbering.
+- **67router:** known-symbols (nosūtīšana pēc virknes ⇒ eksistējošs simbols), provider-consistency, fetch-targets (klienta fetch ⇒ reāls maršruts), docs-symbols, db-rules (stingrie noteikumi #2/#5), migration-numbering.
 - **Vispārīgi:** katram „dublētam patiesības avotam” (reģistram, nosūtīšanai pēc virknes, starpslāņu atsaucēm) nepieciešama vārteja, kas pierāda abu pušu atbilstību. Tā uztver novecošanu, ko tipu pārbaudes un testi neatrod.
 
 ### 12. Noturība un domēns (produktam specifiski)
 
-- **OmniRoute:** chaos (kļūmju ievadīšana), heap-growth (noplūdes), k6 (ilgstošas slodzes pārbaude), promptfoo+garak (LLM drošības pārbaude ar uzbrukumu simulāciju atbilstoši OWASP LLM Top 10), 3 noturības likumi (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (kļūmju ievadīšana), heap-growth (noplūdes), k6 (ilgstošas slodzes pārbaude), promptfoo+garak (LLM drošības pārbaude ar uzbrukumu simulāciju atbilstoši OWASP LLM Top 10), 3 noturības likumi (circuit-breaker/cooldown/lockout).
 - **Vispārīgi:** identificējiet **sava** domēna atteices režīmus un katram izveidojiet vārteju (pat ja tā tiek palaista tikai naktī). MI lietotnēm: drošības pārbaude ar ievades injekciju uzbrukumu simulāciju. Izkliedētām sistēmām: haosa + noplūžu + ilgstošas slodzes testēšana.
 
 ---

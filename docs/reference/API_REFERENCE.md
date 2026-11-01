@@ -8,7 +8,7 @@ lastUpdated: 2026-10-05
 
 🌐 **Languages:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Core reference for the OmniRoute API. It covers the public `/v1` surface and the most-used management endpoints; the machine-readable [`docs/openapi.yaml`](../openapi.yaml) and the route tree under `src/app/api/` are the exhaustive sources.
+Core reference for the 67router API. It covers the public `/v1` surface and the most-used management endpoints; the machine-readable [`docs/openapi.yaml`](../openapi.yaml) and the route tree under `src/app/api/` are the exhaustive sources.
 
 For the focused OpenAI-compatible protocol and provider capability matrix, see
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -19,27 +19,21 @@ For the focused OpenAI-compatible protocol and provider capability matrix, see
 
 - [Chat Completions](#chat-completions)
 - [Exclusive Managed Session Leases](#exclusive-managed-session-leases)
-- [Embeddings](#embeddings)
 - [Image Generation](#image-generation)
 - [Document OCR](#document-ocr)
 - [List Models](#list-models)
 - [Provider Plugin Manifest](#provider-plugin-manifest)
 - [Compatibility Endpoints](#compatibility-endpoints)
-- [Files API](#files-api)
-- [Batches API](#batches-api)
 - [Search API](#search-api)
 - [WebSocket Streaming](#websocket-streaming)
 - [Quotas & Issues Reporting](#quotas--issues-reporting)
 - [Semantic Cache](#semantic-cache)
 - [Dashboard & Management](#dashboard--management)
 - [Combo Management](#combo-management)
-- [Webhooks](#webhooks)
 - [Registered Keys (Auto-Management)](#registered-keys-auto-management)
 - [Agents Protocol](#agents-protocol)
 - [Management Proxies](#management-proxies)
 - [Resilience (extended)](#resilience-extended)
-- [Skills](#skills)
-- [Memory](#memory)
 - [MCP Server](#mcp-server)
 - [A2A Server](#a2a-server)
 - [Cloud, Evals & Assess](#cloud-evals--assess)
@@ -80,9 +74,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Response  | `HIT` or `MISS` (non-streaming)                                                                                                                                                                    |
 | `X-OmniRoute-Idempotent` | Response  | `true` if deduplicated                                                                                                                                                                             |
 | `X-OmniRoute-Progress`   | Response  | `enabled` if progress tracking on                                                                                                                                                                  |
-| `X-OmniRoute-Session-Id` | Response  | Effective session ID used by OmniRoute                                                                                                                                                             |
+| `X-OmniRoute-Session-Id` | Response  | Effective session ID used by 67router                                                                                                                                                              |
 | `X-OmniRoute-Request-Id` | Response  | Request correlation id (when known)                                                                                                                                                                |
-| `X-OmniRoute-Version`    | Response  | OmniRoute build version (always present)                                                                                                                                                           |
+| `X-OmniRoute-Version`    | Response  | 67router build version (always present)                                                                                                                                                            |
 | `X-OmniRoute-Cost-Saved` | Response  | USD the cache avoided on a HIT (cache hits only)                                                                                                                                                   |
 | `X-OmniRoute-Decision`   | Response  | Routing trace: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` is the combo strategy, or `single` for a non-combo request) — always present on completion responses                  |
 
@@ -90,13 +84,13 @@ Content-Type: application/json
 
 #### Account pinning per request
 
-When a provider has several connections (accounts or keys), OmniRoute normally picks one
+When a provider has several connections (accounts or keys), 67router normally picks one
 through its account-selection strategy. A request can instead pin one specific connection
 with the `x-omniroute-connection` header:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -125,8 +119,8 @@ account per project:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -135,14 +129,14 @@ account per project:
 Source: `src/sse/handlers/chat.ts` (header read), `src/sse/services/auth.ts` and
 `src/sse/services/sessionAffinityPin.ts` (pin release and the missing-from-pool check).
 
-> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/embeddings`, `/v1/images/generations`, `/v1/audio/speech`, `/v1/audio/transcriptions`, `/v1/rerank`, `/v1/videos/generations`, `/v1/music/generations`, and `/v1/moderations` (always cost `0`). Media cost is computed per modality (per-image, per-second, per-character, per search-unit) when pricing is available, otherwise `0` (fail-open).
+> **Cost telemetry headers:** non-streaming success responses also carry the `X-OmniRoute-*` cost-telemetry set — `X-OmniRoute-Response-Cost` (USD, fixed 10 decimals; `0.0000000000` for free/unpriced), `X-OmniRoute-Tokens-In` / `X-OmniRoute-Tokens-Out`, `X-OmniRoute-Model`, `X-OmniRoute-Provider`, `X-OmniRoute-Latency-Ms`, `X-OmniRoute-Cache-Hit`, and `X-OmniRoute-Fallback-Attempts` (only when > 0), plus `X-OmniRoute-Request-Id` and `X-OmniRoute-Version`. These are emitted by chat completions, `/v1/responses`, `/v1/messages`, **and the media endpoints** — `/v1/audio/transcriptions`, `/v1/videos/generations`, and `/v1/music/generations`. Media cost is computed per modality (per-second) when pricing is available, otherwise `0` (fail-open).
 
 > **Cache-hit cost semantics:** on a semantic-cache HIT (`X-OmniRoute-Cache-Hit: true`) no upstream call is made, so `X-OmniRoute-Response-Cost` is `0.0000000000` (the **incremental** cost of serving the hit). The original/would-have-been cost is reported separately in `X-OmniRoute-Cost-Saved`. Billing consumers should sum `X-OmniRoute-Response-Cost` (hits cost nothing); cache analytics can aggregate `X-OmniRoute-Cost-Saved`.
 
 ## Exclusive Managed Session Leases
 
 Exclusive managed session leasing is an opt-in, client-neutral routing contract: one active owner
-holds one eligible OmniRoute connection. It does not lease a model, require OAuth, identify a
+holds one eligible 67router connection. It does not lease a model, require OAuth, identify a
 particular client, or require a particular provider.
 
 The authenticating API key must have scope `lease:exclusive` and an explicit non-empty
@@ -192,7 +186,7 @@ An active lease owner can explicitly request privacy-safe display metadata for i
 
 This opt-in status action is fenced by the opaque owner, authenticated managed API key, and exact
 active generation in one database transaction. `displayName` is only the trimmed configured
-connection name; it is `null` when no safe configured name exists. OmniRoute never substitutes an
+connection name; it is `null` when no safe configured name exists. 67router never substitutes an
 email or generated account identity. The provider value is a non-sensitive display label and never
 a generated compatible-provider identifier. Credentials, tokens, cookies, raw connection or API
 key ids, owner hashes, fencing secrets, and internal routing data are excluded.
@@ -233,7 +227,7 @@ Temporary contention returns HTTP `429` with `Retry-After` and:
 
 This response only means that the ordinary eligible set was non-empty and every free candidate was
 held by a foreign active lease. Unsupported models/providers, policy mismatch, cooldown, quota,
-health, and other ordinary eligibility failures retain their existing OmniRoute responses.
+health, and other ordinary eligibility failures retain their existing 67router responses.
 
 ### `x-omniroute-compression`
 
@@ -263,148 +257,6 @@ X-OmniRoute-Compression: <mode>; source=<source>
 ```
 
 where `<source>` is one of `request-header`, `routing-override`, `active-profile`, `auto-trigger`, `default`, or `off`.
-
----
-
-## Embeddings
-
-```bash
-POST /v1/embeddings
-Authorization: Bearer your-api-key
-Content-Type: application/json
-
-{
-  "model": "nebius/Qwen/Qwen3-Embedding-8B",
-  "input": "The food was delicious"
-}
-```
-
-Available providers: Nebius, OpenAI, Mistral, Together AI, Fireworks, NVIDIA, **OpenRouter**, Jina AI.
-
-Catalog ids are `provider/model` (example: `jina-ai/jina-embeddings-v5-omni-small`). Bare Jina model ids that appear in the registry (for example `jina-embeddings-v5-text-small`, `jina-reranker-v3.5`) also resolve. Jina embed/rerank/classify/segment use dashboard `jina-ai` credentials first; `JINA_AI_API_KEY` is a fallback only when no dashboard key exists. The `jina-reader` card is Reader / `r.jina.ai` only (`POST /v1/web/fetch`) and never serves embeddings or rerank.
-
-Registry models that advertise multimodal support also accept up to 32 provider-neutral structured
-items. Media item types are `text`, `image`, `audio`, `video`, and `document`. Their media `source`
-is either `{"type":"url","url":"https://..."}` or
-`{"type":"base64","data":"...","media_type":"..."}`.
-
-Jina v5 Omni (`jina-ai/jina-embeddings-v5-omni-small`, `jina-ai/jina-embeddings-v5-omni-nano`,
-and the family alias `jina-ai/jina-embeddings-v5-omni` → omni-small) also accepts Jina's native
-EmbeddingsV5Request docs and **forwards them intact** to `https://api.jina.ai/v1/embeddings`:
-
-```json
-{
-  "model": "jina-ai/jina-embeddings-v5-omni-small",
-  "task": "retrieval.query",
-  "normalized": true,
-  "input": [
-    { "text": "a red bicycle" },
-    { "image": "https://example.com/bike.png" },
-    { "content": [{ "text": "caption" }, { "image": "data:image/png;base64,..." }] }
-  ]
-}
-```
-
-Native `{ image | audio | video | pdf }` values may be a public HTTPS URL, a `data:` URI, or raw
-base64. OmniRoute does not stringify those objects or fetch native image URLs — Jina retrieves
-public media itself. Extra Jina fields (`task`, `normalized`, `truncate`, `embedding_type`) are
-forwarded. Text-only Jina SKUs still reject non-text docs.
-
-Security and transport bounds:
-
-- Remote media URLs must be public HTTPS. Canonical `{type,source:url}` items are fetched
-  server-side (redirect revalidation, timeout, size limits, public DNS, connection pinning) and
-  inlined before the provider call. Jina-native `{image:"https://..."}` items are forwarded as-is
-  after the same public-HTTPS check; Jina fetches the URL.
-- Inline base64 media is limited to 8 MiB decoded per item and 16 MiB decoded across the request.
-
-Provider translation (canonical items are never forwarded unchanged):
-
-- Jina multimodal models: each top-level item becomes one modality-keyed object
-  (`text` / `image` / `audio` / `video` / `pdf`) using data URIs for inline media; one vector per
-  top-level item.
-- Gemini Embedding 2 family: one top-level array becomes a single native
-  `models/{model}:embedContent` request with `content.parts` (`text` or `inline_data`).
-- llama.cpp (`llama-cpp/<model>`, any model the local server loaded): canonical `text` items
-  become plain strings, and `image` / `audio` / `video` become one
-  `{"content": [part]}` object each, using llama-server's chat content parts (`image_url`,
-  `input_audio` with format `wav` / `mp3` / `flac`, `input_video`) with inline data; one vector
-  per top-level item. The server must run with `--embedding --mmproj …`; without a projector it
-  rejects media itself. `document` is not supported.
-- Unknown/dynamic models without explicit modality metadata reject structured input with HTTP 400.
-
-```json
-{
-  "model": "jina-ai/jina-embeddings-v5-omni-small",
-  "input": [
-    { "type": "text", "text": "A red bicycle" },
-    {
-      "type": "image",
-      "source": { "type": "url", "url": "https://example.com/bicycle.png" }
-    }
-  ],
-  "dimensions": 512,
-  "encoding_format": "float"
-}
-```
-
-Unsupported model/modality combinations return HTTP 400 rather than coercing the item. Non-input
-extension fields on legacy string/token requests continue to pass through unchanged.
-
-```bash
-# List all embedding models
-GET /v1/embeddings
-```
-
----
-
-## Image Generation
-
-```bash
-POST /v1/images/generations
-Authorization: Bearer your-api-key
-Content-Type: application/json
-
-{
-  "model": "openai/gpt-image-2",
-  "prompt": "A beautiful sunset over mountains",
-  "size": "1024x1024"
-}
-```
-
-Available providers include OpenAI (GPT Image 2), xAI (Grok Image), Together AI (FLUX), Fireworks AI, Nebius (FLUX), Hyperbolic, NanoBanana, **OpenRouter**, **ZenMux**, SD WebUI (local), ComfyUI (local).
-
-`n` returns `n` images in `data[]`. Providers whose upstream API returns one image per call
-(Black Forest Labs, Stability AI, Leonardo, Ideogram, Haiper, Hyperbolic, Magnific/Freepik,
-NVIDIA NIM, Cloudflare Workers AI) get `n` separate upstream calls, at most 4 in flight. A
-fixed `seed` is offset by call index (`seed`, `seed + 1`, …), so the images differ but stay
-reproducible. `n` is capped at 10. The request fails as a whole if any call fails. The list
-of fan-out formats is `SINGLE_IMAGE_FANOUT_FORMATS` in
-`open-sse/handlers/imageGeneration/fanOut.ts`.
-
-ZenMux reuses the existing API-key connection and accepts `zenmux/` or `zm/` prefixes:
-
-- `zenmux/openai/gpt-image-2` uses ZenMux's OpenAI Images API. Options include `size`,
-  `quality`, `n`, `output_format`, `output_compression`, `background`, and `response_format`.
-- Other publishers, such as `zm/meta/muse-image-1.0`, use ZenMux's Vertex AI `:predict`
-  endpoint. `n` maps to `sampleCount`, `aspect_ratio` to `aspectRatio`, and `image_size`
-  (`1K`, `2K`, `4K`) to `sampleImageSize`. A pixel `size` supplies only an aspect ratio,
-  not guaranteed pixel dimensions. Supported ratios, resolutions, and counts vary by model.
-- `zm/inclusionai/ming-image-0.1-design` chooses its own dimensions. Omit `size`,
-  `aspect_ratio`, and `image_size`; explicit values return HTTP 400. PNG, JPEG, and WebP
-  can be requested with `output_format`.
-
-This integration supports text-to-image generation, not reference-image editing. Vertex
-output is normalized to `data[].b64_json`; `response_format: "url"` returns an upstream
-HTTPS URL or a base64 data URL when only image bytes are available. Empty/filtered outputs
-return an error rather than an empty success. Model access depends on the ZenMux account.
-See [ZenMux's Vertex API](https://docs.zenmux.ai/api/vertexai/generate-images) and
-[OpenAI Images API](https://docs.zenmux.ai/api/openai/generate-an-image).
-
-```bash
-# List all image models
-GET /v1/images/generations
-```
 
 ---
 
@@ -456,7 +308,7 @@ caller, so client code does not need to special-case the provider.
 
 ### Vertex AI DeepSeek OCR auth and endpoint resolution
 
-`vertex-deepseek-ocr` reuses the same Vertex AI authentication OmniRoute already supports for
+`vertex-deepseek-ocr` reuses the same Vertex AI authentication 67router already supports for
 chat/image traffic (`open-sse/executors/vertex.ts`): the connection's API key is either a
 Service Account JSON credential (exchanged for a short-lived OAuth access token via the JWT-bearer
 flow) or an already-minted OAuth access token used as-is. The upstream endpoint URL is Vertex's
@@ -480,7 +332,7 @@ Authorization: Bearer your-api-key
 
 ### Model prices (`pricing`)
 
-An entry carries a `pricing` object when OmniRoute knows the model's price. The price comes
+An entry carries a `pricing` object when 67router knows the model's price. The price comes
 from the pricing table that cost accounting uses: built-in defaults, synced prices, and
 overrides set through `/api/pricing`. These are list prices, so subscription providers also
 show a per-token price.
@@ -634,8 +486,8 @@ Use this endpoint when a sidecar runs out-of-process and cannot import
 
 ## ElevenLabs audio generation
 
-Configure an `elevenlabs` provider connection in OmniRoute with your ElevenLabs API key.
-Clients authenticate with their **OmniRoute** key (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Configure an `elevenlabs` provider connection in 67router with your ElevenLabs API key.
+Clients authenticate with their **67router** key (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 the gateway supplies the stored provider key as `xi-api-key`. Never send an ElevenLabs key
 as the gateway bearer token.
 
@@ -648,8 +500,7 @@ as the gateway bearer token.
 | POST   | `/v1/music/detailed/stream` | Native SSE metadata and audio chunks        | `music`                   |
 | POST   | `/v1/music/plan`            | JSON composition plan                       | `music`                   |
 
-These endpoints complement the existing `/v1/audio/speech`, `/v1/audio/transcriptions`,
-`/v1/voices`, `/v1/text-to-speech/{voiceId}` and `/v1/speech-to-text` routes. Native JSON fields
+These endpoints complement the existing `/v1/audio/transcriptions` route. Native JSON fields
 and query parameters such as `output_format` and `enable_logging` are preserved.
 `/v1/music/detailed` responses retain their multipart boundaries; parse them as multipart.
 `/v1/music/detailed/stream` returns `text/event-stream` with composition metadata and
@@ -700,7 +551,7 @@ routes return upstream status codes and error bodies unchanged, including `402` 
 restriction and `429` for a quota limit. The `character-cost`, `song-id`, `request-id` and `retry-after`
 headers are preserved when present. A free credit balance does not guarantee access to every
 music model, output format or API feature: ElevenLabs decides entitlement for each request.
-The unified endpoint preserves error status codes in OmniRoute's normalized error envelope.
+The unified endpoint preserves error status codes in 67router's normalized error envelope.
 
 Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [music composition](https://elevenlabs.io/docs/api-reference/music/compose) and
@@ -715,17 +566,11 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/v1/chat/completions`                    | OpenAI                             |
 | POST   | `/v1/messages`                            | Anthropic                          |
 | POST   | `/v1/responses`                           | OpenAI Responses                   |
-| POST   | `/v1/embeddings`                          | OpenAI                             |
-| POST   | `/v1/images/generations`                  | OpenAI Images                      |
-| POST   | `/v1/images/edits`                        | OpenAI Images (edit/inpaint)       |
 | POST   | `/v1/videos/generations`                  | OpenAI-style video generation      |
 | POST   | `/v1/music/generations`                   | OpenAI-style music generation      |
 | POST   | `/v1/audio/transcriptions`                | OpenAI Audio (STT)                 |
-| POST   | `/v1/audio/speech`                        | OpenAI TTS (returns audio body)    |
-| POST   | `/v1/rerank`                              | Cohere/Voyage-style rerank         |
 | POST   | `/v1/classify`                            | Jina classify (`api.jina.ai`)      |
 | POST   | `/v1/segment`                             | Jina segmenter (`segment.jina.ai`) |
-| POST   | `/v1/moderations`                         | OpenAI Moderations                 |
 | GET    | `/v1/models`                              | OpenAI                             |
 | POST   | `/v1/models/query`                        | Filtered model shortlist           |
 | POST   | `/v1/messages/count_tokens`               | Anthropic                          |
@@ -739,14 +584,11 @@ Upstream contracts: [sound effects](https://elevenlabs.io/docs/api-reference/tex
 | POST   | `/api/v1/vscode/{token}/api/chat`         | Ollama tokenized alias             |
 | GET    | `/api/v1/vscode/{token}/api/tags`         | Ollama tags tokenized alias        |
 
-All POST routes follow the same shape: `Bearer your-api-key` + Zod-validated JSON body (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, etc., see `src/shared/validation/schemas.ts`). 4xx is returned on schema failure.
+All POST routes follow the same shape: `Bearer your-api-key` + Zod-validated JSON body (`v1ClassifySchema`, `v1OcrSchema`, etc., see `src/shared/validation/schemas.ts`). 4xx is returned on schema failure.
 
-For clients that cannot attach `Authorization: Bearer ...`, OmniRoute also accepts API keys in the URL via either query-string compatibility (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) or the dedicated `/api/v1/vscode/{token}/...` endpoints documented below.
+For clients that cannot attach `Authorization: Bearer ...`, 67router also accepts API keys in the URL via either query-string compatibility (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) or the dedicated `/api/v1/vscode/{token}/...` endpoints documented below.
 
 ```bash
-# Rerank (cloud registry provider, or an OpenAI-compatible provider node as "<prefix>/<model>")
-POST /v1/rerank      { "model": "jina-ai/jina-reranker-v3.5", "query": "...", "documents": ["..."] }
-
 # Jina classify (Foundation API credentials)
 POST /v1/classify    { "model": "jina-embeddings-v5-text-small", "input": ["..."], "labels": ["a", "b"] }
 
@@ -756,42 +598,10 @@ POST /v1/segment     { "content": "...", "return_chunks": true }
 # Jina search (s.jina.ai; provider aliases: jina-search, jina-ai, jina)
 POST /v1/search      { "query": "...", "provider": "jina-search" }
 
-# Moderations
-POST /v1/moderations { "model": "omni-moderation-latest", "input": "..." }
-
-# TTS — returns audio/mpeg (or requested format) body
-POST /v1/audio/speech { "model": "openai/tts-1", "input": "Hello", "voice": "alloy" }
-
-# Soniox TTS requires a language and a voice: `language` defaults to "en"; a missing
-# voice or an OpenAI stock voice name (alloy, nova, …) becomes "Adrian"
-POST /v1/audio/speech { "model": "soniox/tts-rt-v1", "input": "Xin chào", "voice": "Adrian", "language": "vi" }
-
-# Image edit (multipart)
-POST /v1/images/edits  -F image=@input.png -F prompt="..." -F mask=@mask.png
-
 # Video / music generation (provider-prefixed model id)
 POST /v1/videos/generations { "model": "runway/gen-3", "prompt": "..." }
 POST /v1/music/generations  { "model": "kie/suno-v4.0",   "prompt": "..." }
 ```
-
-> **Rerank provider nodes:** `POST /v1/rerank` also routes to OpenAI-compatible provider nodes
-> (oMLX, vLLM, Infinity, TEI behind a gateway, …) addressed as `<node-prefix>/<model>`. Loopback
-> nodes (`localhost`, `127.0.0.1`, `172.16.0.0/12`) are always eligible, and so are hostnames the
-> operator lists in `OMNIROUTE_LOCAL_PROVIDER_NODE_HOSTS` (e.g. a Docker/Compose service name such
-> as `http://reranker:8080/v1`; these are called directly, never through `HTTP(S)_PROXY` or a
-> connection's pinned proxy). Nodes on any other
-> host — a LAN box or Tailscale peer — are eligible only when the operator enables the
-> `RERANK_REMOTE_PROVIDER_NODES` feature flag **and** the node's base URL passes the provider
-> outbound URL policy (`OMNIROUTE_ALLOW_LOCAL_PROVIDER_URLS` / `OMNIROUTE_ALLOW_PRIVATE_PROVIDER_URLS`).
-> The memory engine's rerank step calls this route over
-> loopback, so the same rule governs `rerankProviderModel` in the Memory settings.
->
-> **Local server shapes:** the node is called at `<base>/v1/rerank` and, on 404, at `<base>/rerank`
-> (Infinity, TEI). The upstream body carries both the Cohere/OpenAI spelling (`documents`,
-> `return_documents`) and the TEI spelling (`texts`, `return_text`), and the upstream response is
-> normalized to the Cohere envelope: TEI's bare `[{index, score, text}]`, `{results: [{index, score}]}`
-> from thin gateways, and Voyage-style `{data: [...]}` all come back to the client as
-> `{results: [{index, relevance_score, document?}]}`, sorted by score and capped at `top_n`.
 
 > **Provider-node discovery:** models on an OpenAI-compatible provider node appear in `GET /v1/models`
 > under the node prefix. Rows that carry no endpoint metadata (typical for local `/v1/models` listings)
@@ -803,51 +613,9 @@ POST /v1/music/generations  { "model": "kie/suno-v4.0",   "prompt": "..." }
 
 ```bash
 POST /v1/providers/{provider}/chat/completions
-POST /v1/providers/{provider}/embeddings
-POST /v1/providers/{provider}/images/generations
 ```
 
 The provider prefix is auto-added if missing. Mismatched models return `400`.
-
----
-
-## Files API
-
-OpenAI-compatible files endpoint for batch input/output and file-purpose uploads.
-
-| Method | Path                     | Description                                                                                                   |
-| ------ | ------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| POST   | `/v1/files`              | Upload a file (multipart: `file`, `purpose`, `expires_after[anchor]`, `expires_after[seconds]`) — 512 MiB max |
-| GET    | `/v1/files`              | List files for the authenticated API key                                                                      |
-| GET    | `/v1/files/[id]`         | Retrieve a file's metadata                                                                                    |
-| DELETE | `/v1/files/[id]`         | Delete a file                                                                                                 |
-| GET    | `/v1/files/[id]/content` | Stream the raw file body back                                                                                 |
-
-**Auth:** Bearer API key — files are scoped per-API-key via `getApiKeyRequestScope`. A key
-sees, downloads and deletes its own files only; a dashboard session without a key reads the
-whole instance; a file with no owner (anonymous or dashboard-session upload) is denied to every
-non-session caller. `GET /v1/files` rejects an anonymous caller — and a presented key that does
-not resolve — with `401` even when `REQUIRE_API_KEY=false`, instead of listing every tenant's
-files (GHSA-m3hp-hq9g-fpmv, GHSA-2jm2-mpx8-6523).
-
----
-
-## Batches API
-
-OpenAI-compatible batch processing.
-
-| Method | Path                      | Description                                                                                               |
-| ------ | ------------------------- | --------------------------------------------------------------------------------------------------------- |
-| POST   | `/v1/batches`             | Create batch — body validated by `v1BatchCreateSchema` (`input_file_id`, `endpoint`, `completion_window`) |
-| GET    | `/v1/batches`             | List batches                                                                                              |
-| GET    | `/v1/batches/[id]`        | Retrieve batch status + `request_counts`                                                                  |
-| DELETE | `/v1/batches/[id]`        | Delete a finished/failed batch                                                                            |
-| POST   | `/v1/batches/[id]/cancel` | Cancel an in-progress batch                                                                               |
-
-**Auth:** Bearer API key. Batches are scoped per-API-key under the same three-way rule as
-files: own key only, dashboard session instance-wide, null-owner records denied to every
-non-session caller (retrieve, delete, cancel, and the `input_file_id` check on create).
-`GET /v1/batches` rejects an anonymous caller with `401` even when `REQUIRE_API_KEY=false`.
 
 ---
 
@@ -903,7 +671,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, same API key as Parallel Search) returns Markdown
 only — any other `format` is a `400` — and caps content at 100,000 characters. When
 the target page itself cannot be extracted, the upstream reports it inside an HTTP 200;
-OmniRoute surfaces that as a `422` with a fixed message.
+67router surfaces that as a `422` with a fixed message.
 
 | Method | Path            | Description                                               |
 | ------ | --------------- | --------------------------------------------------------- |
@@ -955,7 +723,7 @@ backend). It listens on the same port as the API/dashboard at paths `/v1/respons
 authenticates + prepares via the internal `codex-responses-ws` bridge, selects a
 codex OAuth connection, and tunnels to `wss://chatgpt.com/backend-api/codex/responses`
 via the `wreq-js` transport. **Non-codex models are rejected** (`codex_ws_provider_required`).
-For quota-share routing use `model: "qtSd/<group>/codex/<model>"`. Implemented in
+Implemented in
 `app/server-ws.mjs` + `scripts/dev/responses-ws-proxy.mjs` + `src/app/api/internal/codex-responses-ws/route.ts`.
 
 **Auth:** Bearer API key during handshake. The bundled HTTP server (`server-ws.mjs`)
@@ -966,14 +734,14 @@ must be the active entrypoint (it is, by default, when `app/server-ws.mjs` exist
 The OpenAI **Codex CLI** validates the model name client-side when
 `supports_websockets = true` and **rejects provider-prefixed ids** like
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Send the **bare** id (e.g. `gpt-5.5`). OmniRoute's bridge is
+a ChatGPT account`). Send the **bare** id (e.g. `gpt-5.5`). 67router's bridge is
 codex-only, so it re-resolves a bare id as a codex model
 (`resolveCodexWsModelInfo`) before tunneling upstream — even though a bare
 `gpt-5.5` would otherwise route to another provider over HTTP.
 
 #### Configuring the OpenAI Codex CLI
 
-Point the Codex CLI at OmniRoute by adding a custom provider with WebSocket
+Point the Codex CLI at 67router by adding a custom provider with WebSocket
 support to `~/.codex/config.toml` (use a separate `CODEX_HOME` to avoid touching
 an existing config):
 
@@ -986,15 +754,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # no trailing slash; the WS URL is derived (use https/wss in production)
 wire_api = "responses"                    # only supported value since Feb 2026
 supports_websockets = true                # enables the Responses-over-WS transport
-env_key = "OMNIROUTE_API_KEY"             # holds the OmniRoute API key (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # holds the 67router API key (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # an OmniRoute API key (any key if REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # a 67router API key (any key if REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-The CLI upgrades `base_url + /responses` to a WebSocket and OmniRoute tunnels it
+The CLI upgrades `base_url + /responses` to a WebSocket and 67router tunnels it
 to the selected codex OAuth connection. Validated end-to-end against the local
 server: ChatGPT returns `codex.rate_limits` + `response.created` and streams the
 completion.
@@ -1078,7 +846,7 @@ percentages presented by the **plain-text output** and the structured **JSON out
 
 #### The Cutoff Adjustment Formula
 
-OmniRoute supports proactive quota cutoffs to prevent upstream exhaustion (configured via connection
+67router supports proactive quota cutoffs to prevent upstream exhaustion (configured via connection
 `quotaWindowThresholds`, provider defaults, or global resilience settings). When a cutoff threshold
 (e.g., `cutoff = 25%`) is active on a quota window, the text renderer calculates remaining allowance as:
 
@@ -1440,9 +1208,8 @@ GET response includes `agents[]` (id, name, binary, version, installed, protocol
 
 ### Evals
 
-| Endpoint     | Method   | Description                       |
-| ------------ | -------- | --------------------------------- |
-| `/api/evals` | GET/POST | List eval suites / run evaluation |
+| Endpoint | Method | Description |
+| -------- | ------ | ----------- |
 
 ### Policies
 
@@ -1626,7 +1393,7 @@ Notes:
 
 - The tokenized aliases reuse the same handlers as `/v1/*` and `/api/tags`; response shapes stay identical.
 - Prefer `Authorization: Bearer ...` whenever the client supports custom headers.
-- URL-based tokens may appear in reverse-proxy logs, browser history, and telemetry outside OmniRoute. Treat them as a compatibility option, not the default authentication mode.
+- URL-based tokens may appear in reverse-proxy logs, browser history, and telemetry outside 67router. Treat them as a compatibility option, not the default authentication mode.
 
 ---
 
@@ -1650,31 +1417,9 @@ GET /api/telemetry/summary
 
 ---
 
-## Budget
-
-```bash
-# Get budget status for all API keys
-GET /api/usage/budget
-
-# Set or update a budget
-POST /api/usage/budget
-Content-Type: application/json
-
-{
-  "apiKeyId": "key-123",
-  "dailyLimitUsd": 5.00,
-  "weeklyLimitUsd": 30.00,
-  "monthlyLimitUsd": 100.00,
-  "warningThreshold": 0.8,
-  "resetInterval": "monthly"
-}
-```
-
-> **Schema notes** (`setBudgetSchema`): `apiKeyId` is required; at least one of `dailyLimitUsd`, `weeklyLimitUsd`, or `monthlyLimitUsd` must be greater than zero. Optional fields: `warningThreshold` (0–1), `resetInterval` (`daily` | `weekly` | `monthly`), `resetTime` (`HH:MM`). The legacy `{keyId, limit, period}` shape returns `400 Bad Request`.
-
 ## Token Limits
 
-Per-API-key **token** budgets (distinct from the USD-based Budget above). Enforced inline on the request path: when a key's current window usage reaches its limit, requests are rejected with `429 Too Many Requests`. Limits can be scoped to a specific `model`, a `provider`, or applied `global`ly across the key; when several limits match a request, the most restrictive one wins.
+Per-API-key **token** budgets. Enforced inline on the request path: when a key's current window usage reaches its limit, requests are rejected with `429 Too Many Requests`. Limits can be scoped to a specific `model`, a `provider`, or applied `global`ly across the key; when several limits match a request, the most restrictive one wins.
 
 ```bash
 # List a key's token limits (includes live window usage)
@@ -1708,7 +1453,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 5. For chat: `handleChatCore` checks semantic/signature cache and resolves combo compression settings
 6. Proactive compression runs before provider translation when enabled (`lite`, Caveman, RTK, or stacked)
 7. Provider executor sends upstream request
-8. Response translated back to client format (chat) or returned as-is (embeddings/images/audio)
+8. Response translated back to client format (chat) or returned as-is (audio)
 9. Usage, compression analytics, and request logs are recorded
 10. Fallback applies on errors according to combo rules
 
@@ -1732,23 +1477,6 @@ Higher-level routing combos (already summarized under `/api/combos*`) can also b
 
 ---
 
-## Webhooks
-
-Outbound webhook subscriptions for OmniRoute events (request completion, quota exhaustion, key rotation, etc.).
-
-| Method | Path                      | Description                                                           |
-| ------ | ------------------------- | --------------------------------------------------------------------- |
-| GET    | `/api/webhooks`           | List webhooks (secrets are masked to `<prefix>...`)                   |
-| POST   | `/api/webhooks`           | Create webhook — body: `{url, events?: ["*"], secret?, description?}` |
-| GET    | `/api/webhooks/[id]`      | Retrieve a webhook                                                    |
-| PUT    | `/api/webhooks/[id]`      | Update url/events/secret/description                                  |
-| DELETE | `/api/webhooks/[id]`      | Remove a webhook                                                      |
-| POST   | `/api/webhooks/[id]/test` | Send a test payload to the webhook URL and return delivery status     |
-
-**Auth:** management session/API key (`requireManagementAuth`).
-
----
-
 ## Registered Keys (Auto-Management)
 
 Used by the auto-key management subsystem to issue and rotate API keys against a backing provider/account, with daily/hourly quotas.
@@ -1762,31 +1490,6 @@ Used by the auto-key management subsystem to issue and rotate API keys against a
 | POST   | `/api/v1/registered-keys/[id]/revoke` | Explicit revoke endpoint (same effect as DELETE)                                                                                                                                            |
 
 **Auth:** management session/API key (`requireManagementAuth`) — the same guard as `/api/keys`: a dashboard session, the local CLI token, or an API key with `manage`/`admin` scope; inference-only API keys get `403`. See also `/v1/quotas/check` and `/v1/issues/report`.
-
----
-
-## Agents Protocol
-
-Cloud agent tasks (Claude Code, Codex Cloud, OpenHands, etc.) executed remotely on behalf of OmniRoute users.
-
-| Method | Path                          | Description                                                                                                                                   |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | List tasks — optional `?provider=`, `?status=`, `?limit=` (1–500, default 50)                                                                 |
-| POST   | `/api/v1/agents/tasks`        | Create task — body validated by `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Returns `201` with task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Delete a task                                                                                                                                 |
-| GET    | `/api/v1/agents/tasks/[id]`   | Read task — synchronously refreshes status from the upstream cloud agent when an `external_id` is set                                         |
-| POST   | `/api/v1/agents/tasks/[id]`   | Discriminated action: `{action: "approve"}`, `{action: "message", message}`, or `{action: "cancel"}`                                          |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Delete a specific task by id                                                                                                                  |
-
-> **Auth:** management auth required on every method (`requireCloudAgentManagementAuth`). Prior to v3.8.0 these were unauthenticated — see commit `588a0333` for the breaking change.
-
-```bash
-# Create a Claude Code cloud task
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
 
 ---
 
@@ -1813,7 +1516,7 @@ Outbound HTTP(S)/SOCKS proxies that can be assigned to providers, accounts, or g
 
 ## Resilience (extended)
 
-OmniRoute exposes three independent temporary-failure mechanisms; the management endpoints below let operators read and override them:
+67router exposes three independent temporary-failure mechanisms; the management endpoints below let operators read and override them:
 
 | Scope               | State storage                              | Read                                      | Reset / clear                               |
 | ------------------- | ------------------------------------------ | ----------------------------------------- | ------------------------------------------- |
@@ -1846,46 +1549,9 @@ Full conceptual reference and breaker defaults: see [`CLAUDE.md`](../../CLAUDE.m
 
 ---
 
-## Skills
-
-Skill framework for extending OmniRoute with custom executable handlers, plus marketplace integrations.
-
-| Method | Path                              | Description                                                                                                                |
-| ------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/skills`                     | List installed skills — filterable by `?q=`, `?mode=on\|off\|auto`, `?source=skillsmp\|skillssh\|local`, paginated         |
-| GET    | `/api/skills/[id]`                | Retrieve one skill                                                                                                         |
-| PUT    | `/api/skills/[id]`                | Update skill (name, description, mode, schema, handler, tags)                                                              |
-| DELETE | `/api/skills/[id]`                | Uninstall a skill                                                                                                          |
-| POST   | `/api/skills/install`             | Install a skill from a raw manifest — body: `{name, version, description, schema:{input, output}, handlerCode, apiKeyId?}` |
-| GET    | `/api/skills/executions`          | List recent skill executions (audit trail with inputs/outputs/duration)                                                    |
-| GET    | `/api/skills/marketplace?q=...`   | Search/popular list from the SkillsMP marketplace (requires `skillsmpApiKey` setting)                                      |
-| POST   | `/api/skills/marketplace/install` | Install a skill by id from SkillsMP                                                                                        |
-| GET    | `/api/skills/skillssh?q=&limit=`  | Search the skills.sh registry                                                                                              |
-| POST   | `/api/skills/skillssh/install`    | Install a skill by id from skills.sh                                                                                       |
-
-**Auth:** management session/API key. Marketplace search routes accept either management auth or a Bearer API key (`isAuthenticated`).
-
----
-
-## Memory
-
-Persistent conversational/factual memory store, scoped per API key / session.
-
-| Method | Path                 | Description                                                                                                  |
-| ------ | -------------------- | ------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/memory`        | List memories — `?apiKeyId=`, `?type=`, `?sessionId=`, `?q=`, with `offset/limit` or `page/limit` pagination |
-| POST   | `/api/memory`        | Create memory — body validated by Zod: `{content, key, type?, sessionId?, apiKeyId?, metadata?, expiresAt?}` |
-| GET    | `/api/memory/[id]`   | Retrieve one memory                                                                                          |
-| DELETE | `/api/memory/[id]`   | Delete a memory                                                                                              |
-| GET    | `/api/memory/health` | Memory subsystem health (DB connectivity, embeddings backend, vector index status)                           |
-
-**Auth:** management session/API key (`requireManagementAuth`). `type` enum: `FACTUAL`, `EPISODIC`, `SEMANTIC`, `PROCEDURAL` (see `MemoryType` in `src/lib/memory/types.ts`).
-
----
-
 ## MCP Server
 
-OmniRoute ships an embedded Model Context Protocol server with 3 transports (stdio, SSE, streamable-http) and scoped tools. The dashboard endpoints below read status/audit data and proxy the HTTP transports.
+67router ships an embedded Model Context Protocol server with 3 transports (stdio, SSE, streamable-http) and scoped tools. The dashboard endpoints below read status/audit data and proxy the HTTP transports.
 
 | Method | Path | Description |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1905,58 +1571,20 @@ OmniRoute ships an embedded Model Context Protocol server with 3 transports (std
 
 ---
 
-## A2A Server
+## A2A Tasks
 
-OmniRoute exposes an A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint plus a REST wrapper for inspection/dashboard use.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # optional unless OMNIROUTE_API_KEY is set
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Supported methods (all gated on `settings.a2aEnabled`):
-
-| Method           | Description                                                        |
-| ---------------- | ------------------------------------------------------------------ |
-| `message/send`   | Synchronous skill execution; returns `{task, artifacts, metadata}` |
-| `message/stream` | Streaming SSE execution of the same skill set                      |
-| `tasks/get`      | Fetch a task by `taskId`                                           |
-| `tasks/cancel`   | Cancel a task by `taskId`                                          |
-
-Built-in skills: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-Returns the public A2A agent card (name, description, capabilities, skill catalog, auth scheme) — cached publicly for 1h. No auth required.
-
-### REST helpers
+The A2A JSON-RPC endpoint and Agent Card were removed from 67router. The task store stays: the
+Conductor fleet mirrors its runs into it, and the Orchestration dashboard reads it.
 
 | Method | Path                         | Description                                                                                                     |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A enabled + task stats + cached agent card summary                                                            |
 | GET    | `/api/a2a/tasks`             | List tasks — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
-| POST   | `/api/a2a/tasks`             | (Not implemented as a REST helper — create via JSON-RPC `message/send`)                                         |
+| POST   | `/api/a2a/tasks`             | Delegate a task to the Conductor fleet (`conductor` / `conductor-cli-<profile>` skills only)                    |
+| GET    | `/api/a2a/tasks/history`     | Persisted task history — `?from=`, `?to=`, `?limit=`                                                            |
 | GET    | `/api/a2a/tasks/[id]`        | Retrieve one task                                                                                               |
 | POST   | `/api/a2a/tasks/[id]/cancel` | Cancel a task                                                                                                   |
 
-**Auth:** the REST helpers run without management auth (dashboard-readable); the JSON-RPC `/a2a` route uses Bearer `OMNIROUTE_API_KEY` if configured.
+**Auth:** the read and cancel routes take a management session/API key, or a valid API key scoped to the tasks it owns (`src/app/api/a2a/_auth.ts`). `POST /api/a2a/tasks` checks Bearer `OMNIROUTE_API_KEY` when it is set and requires `settings.a2aEnabled`.
 
 ---
 
@@ -1970,12 +1598,8 @@ Returns the public A2A agent card (name, description, capabilities, skill catalo
 | GET | `/api/cloud/models/alias` | List model aliases as exposed to cloud sync |
 | GET | `/api/assess` | Read latest assessment categorizations (per-provider/model) |
 | POST | `/api/assess` | Run an assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | List built-in eval suites + most recent runs |
-| POST | `/api/evals` | Trigger an eval run |
-| POST | `/api/evals/suites` | Create a custom eval suite — body validated by `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Retrieve a custom eval suite |
 
-**Auth:** `/api/cloud/auth` validates a Bearer key directly and returns the masked key and `projectId` of each connection only for a key with the `manage` / `admin` scope; the other `/api/cloud/*`, `/api/evals/*`, and `/api/assess` routes require management session/API key. `/api/assess` POST uses `validateBody` with a discriminated-union scope schema.
+**Auth:** `/api/cloud/auth` validates a Bearer key directly and returns the masked key and `projectId` of each connection only for a key with the `manage` / `admin` scope; the other `/api/cloud/*` and `/api/assess` routes require management session/API key. `/api/assess` POST uses `validateBody` with a discriminated-union scope schema.
 
 ---
 
@@ -2136,7 +1760,7 @@ Admin-only endpoints for operational management.
 
 ## CLI Tools Management
 
-Manage CLI tools that integrate with OmniRoute (antigravity, commandCode,
+Manage CLI tools that integrate with 67router (antigravity, commandCode,
 devin-cli, etc.). See [Provider Reference](./PROVIDER_REFERENCE.md) for the full list.
 
 | Method | Path                                    | Description                                                                                                                                       |
@@ -2189,82 +1813,6 @@ Manage the semantic cache and reasoning cache.
 
 ---
 
-## Memory System
-
-Manage persistent memory (FTS5 + vector embeddings).
-
-| Method | Path               | Description                                                             |
-| ------ | ------------------ | ----------------------------------------------------------------------- |
-| GET    | `/api/memory`      | List memory entries (filter by scope, type, search query)               |
-| POST   | `/api/memory`      | Create a new memory entry — body: `{scope, type, content, metadata?}`   |
-| GET    | `/api/memory/[id]` | Get a specific memory entry                                             |
-| PUT    | `/api/memory/[id]` | Update a memory entry                                                   |
-| DELETE | `/api/memory/[id]` | Delete a memory entry                                                   |
-| GET    | `/api/memory?q=`   | Search memory (FTS5 + vector) — stats are included in the same response |
-
-**Auth:** Requires management session or management-scoped API key.
-
----
-
-## Webhooks
-
-Manage webhook subscriptions for events.
-
-| Method | Path                            | Description                                                               |
-| ------ | ------------------------------- | ------------------------------------------------------------------------- |
-| GET    | `/api/webhooks`                 | List all webhook subscriptions                                            |
-| POST   | `/api/webhooks`                 | Create a webhook subscription — body: `{url, events[], secret?, active?}` |
-| GET    | `/api/webhooks/[id]`            | Get a specific webhook subscription                                       |
-| PUT    | `/api/webhooks/[id]`            | Update a webhook subscription                                             |
-| DELETE | `/api/webhooks/[id]`            | Delete a webhook subscription                                             |
-| GET    | `/api/webhooks/[id]/deliveries` | List delivery history for a webhook (success/failure log)                 |
-| POST   | `/api/webhooks/[id]/test`       | Send a test event to a webhook                                            |
-
-**Auth:** Requires management session.
-
-See [Webhooks Framework](../frameworks/WEBHOOKS.md) for full event types.
-
----
-
-## Skills Framework
-
-Manage Skills (the agentic extensions framework).
-
-| Method | Path                     | Description                                                                             |
-| ------ | ------------------------ | --------------------------------------------------------------------------------------- |
-| GET    | `/api/skills`            | List all installed skills (built-in + custom)                                           |
-| POST   | `/api/skills/install`    | Install a skill from a local path or URL                                                |
-| DELETE | `/api/skills/[id]`       | Uninstall a skill                                                                       |
-| PUT    | `/api/skills/[id]`       | Enable or disable a skill — body: `{enabled?: boolean, mode?: "on" \| "off" \| "auto"}` |
-| POST   | `/api/skills/executions` | Execute a skill — body: `{skillName, apiKeyId, input?, sessionId?}`                     |
-| GET    | `/api/skills/executions` | List execution history for all skills (filter by `?apiKeyId=`)                          |
-
-**Auth:** Requires management session or management-scoped API key.
-
-See [Skills Framework](../frameworks/SKILLS.md) for full details.
-
----
-
-## Plugins
-
-Manage OmniRoute plugins (third-party extensions).
-
-| Method | Path                               | Description                           |
-| ------ | ---------------------------------- | ------------------------------------- |
-| GET    | `/api/plugins`                     | List installed plugins                |
-| POST   | `/api/plugins/marketplace/install` | Install a plugin from the marketplace |
-| DELETE | `/api/plugins/[name]`              | Uninstall a plugin                    |
-| POST   | `/api/plugins/[name]/activate`     | Activate a plugin                     |
-| POST   | `/api/plugins/[name]/deactivate`   | Deactivate a plugin                   |
-| GET    | `/api/plugins/[name]/config`       | Get plugin configuration              |
-| PUT    | `/api/plugins/[name]/config`       | Update plugin configuration           |
-
-**Auth:** Requires management session.
-
-See [Plugins Framework](../frameworks/PLUGIN_SDK.md) for full details.
-
----
-
 ## Shadow Routing
 
 Shadow / A-B comparison of providers is **not a standalone REST surface** — it is configured through combo routing (see [Auto-Combo](../routing/AUTO-COMBO.md)). Per-combo comparison metrics are served by `GET /api/combos/metrics`.
@@ -2300,4 +1848,4 @@ Token, manage-scoped API key) and how they differ from inference keys.
 - `/v1/*` routes optionally require Bearer API key when `REQUIRE_API_KEY=true`
 - "management token" / "management-scoped API key" in this reference means one of the families in that guide — not an undefined extra secret type
 
-> **Breaking change (v3.8.0)** — `/api/v1/agents/tasks/*` and the cooldown management endpoints now require **management auth** (dashboard `auth_token` cookie or a management-scoped API key). Clients that previously called these routes unauthenticated will receive `401 Unauthorized`. See commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).
+> **Breaking change (v3.8.0)** — the cooldown management endpoints now require **management auth** (dashboard `auth_token` cookie or a management-scoped API key). Clients that previously called these routes unauthenticated will receive `401 Unauthorized`. See commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

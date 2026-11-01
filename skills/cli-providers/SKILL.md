@@ -37,7 +37,7 @@ omniroute providers
 
 ### `providers available`
 
-Show available providers in the OmniRoute catalog
+Show available providers in the 67router catalog
 
 **Flags:**
 

@@ -4,7 +4,7 @@
 
 ---
 
-이 문서는 OmniRoute에 추가된 피드백 기반 적응형 라우팅 기반 구조를 설명합니다.
+이 문서는 67router에 추가된 피드백 기반 적응형 라우팅 기반 구조를 설명합니다.
 의도적으로 작은 범위로 구성되어 있으며, 타입이 지정된 라우팅 결과 채널, 기존
 auto-combo 스코어러에 반영되는 온라인 품질 신호, 선택적 OpenTelemetry 익스포터,
 그리고 설명 가능성 엔드포인트를 도입합니다. 이 기능은 기존 복원력 스택(서킷 브레이커,
@@ -13,7 +13,7 @@ auto-combo 스코어러에 반영되는 온라인 품질 신호, 선택적 OpenT
 
 ## 1. 아키텍처 컨텍스트
 
-OmniRoute는 **요청 핫 패스**와 **제어/인텔리전스 플레인**으로 구성된 데이터
+67router는 **요청 핫 패스**와 **제어/인텔리전스 플레인**으로 구성된 데이터
 플레인입니다. 핫 패스는 빠르고, 메모리 효율적이며, 비동기적이고, 복원력이 높으며,
 예측 가능한 상태를 유지해야 합니다. 평가, 품질 스코어링, 실험 및 과거 데이터 분석은
 제어 플레인에 속합니다.
@@ -23,7 +23,7 @@ AI 에이전트 / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   데이터 플레인(고속, 동기식, 인메모리)
+│    67router        │   데이터 플레인(고속, 동기식, 인메모리)
 │  라우팅 / 장애 조치 │
 │  상태 / 가드레일    │
 │  캐시 / 스트리밍    │
@@ -49,7 +49,6 @@ AI 에이전트 / IDE
 | 섀도 트래픽                        | `open-sse/services/combo/shadowRouting.ts`                                         |
 | 가드레일                           | `src/lib/guardrails/` (사전/사후 훅)                                               |
 | 정확 일치 캐시                     | `src/lib/semanticCache.ts` (시그니처 기반)                                         |
-| 평가기 / 평가 기반 라우팅          | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                               |
 | Combo 결정 설명 가능성             | `open-sse/services/combo/decisionTrace.ts`                                         |
 | 대시보드 실시간 이벤트             | `src/lib/events/eventBus.ts` (UI 알림 채널, `unknown` 페이로드, 100개 항목 기록)   |
 
@@ -235,7 +234,7 @@ OTel 싱크에서 GenAI/OmniRoute 스팬 속성으로 내보냅니다.
   `@opentelemetry/*` SDK는 사용하지 않음).
 - 스팬은 GenAI 의미 체계 규칙(`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`)과 OmniRoute 라우팅
+  `gen_ai.completion.finish_reason`, `gen_ai.system`)과 67router 라우팅
   속성(결과, 상태, TTFT, 재시도, 폴백)을 따릅니다.
 - `record()`는 제한된 버퍼에 추가하기만 합니다(O(1)). 백그라운드 타이머가
   `POST {endpoint}/v1/traces`를 통해 비동기적으로 플러시합니다. 과부하 시에는
@@ -258,7 +257,7 @@ OTel 싱크에서 GenAI/OmniRoute 스팬 속성으로 내보냅니다.
 
 ## 6. 평가 플레인 통합(Future AGI 대비)
 
-OmniRoute는 Future AGI(또는 모든 평가기)를 **의존성이 아닌 잠재적
+67router는 Future AGI(또는 모든 평가기)를 **의존성이 아닌 잠재적
 지능/평가 백엔드**로 취급합니다. 통합 지점은 다음과 같습니다.
 
 - `RoutingEventSink`는 이벤트를 평가기로 비동기적으로 전달할 수 있습니다.
@@ -267,8 +266,6 @@ OmniRoute는 Future AGI(또는 모든 평가기)를 **의존성이 아닌 잠재
 - 향후 `Evaluator`(결정론적 평가기, 로컬 판정기, HTTP, WASM)는 이벤트/추적을
   소비하고 동일한 `getQualityScore`/품질 계수 경로에 반영되는
   `QualityScore`를 반환합니다.
-- 기존 평가 기반 라우팅(`open-sse/services/evalRouting.ts`)은 활성화된 경우
-  이미 `eval_runs` 통과율에 따라 조합 대상을 재정렬합니다.
 
 요청 경로에서는 어떠한 평가도 동기적으로 실행되지 않으며, 평가기가 없어도
 게이트웨이는 완전히 작동합니다.

@@ -5,11 +5,11 @@
 ---
 
 > **အခြေအနေ:** ယေဘုယျအသုံးပြုနိုင်ပါသည်။
-> **ရည်ရွယ်ထားသော စာဖတ်သူများ:** OpenCode ကို OmniRoute deployment တစ်ခုနှင့် ချိတ်ဆက်တပ်ဆင်နေသော အော်ပရေတာများ။
+> **ရည်ရွယ်ထားသော စာဖတ်သူများ:** OpenCode ကို 67router deployment တစ်ခုနှင့် ချိတ်ဆက်တပ်ဆင်နေသော အော်ပရေတာများ။
 > **အမှန်တရား၏ မူရင်းရင်းမြစ် (config schema):** `src/shared/services/opencodeConfig.ts`
 > **အမှန်တရား၏ မူရင်းရင်းမြစ် (npm package):** `@omniroute/opencode-provider/` (ထုတ်ဝေနိုင်သော workspace)
 
-[OpenCode](https://opencode.ai) သည် agentic CLI/desktop AI client တစ်ခုဖြစ်သည်။ ၎င်းသည် provider catalog ကို `~/.config/opencode/opencode.json` (သို့မဟုတ် `opencode.jsonc`) မှ ဖတ်ရှုပြီး `https://opencode.ai/config.json` ရှိ schema ကို လိုက်နာသည်။ OmniRoute သည် မိမိကိုယ်ကို အဆိုပါ provider များအနက် တစ်ခုအဖြစ် OpenCode သို့ ဖော်ပြပေးသည် — request တိုင်းသည် OmniRoute ၏ စံ OpenAI-compatible `/v1` မျက်နှာပြင်မှတစ်ဆင့် စီးဆင်းသောကြောင့် OpenCode သည် Auto-Combo routing၊ circuit breaker များ၊ key policy များ၊ observability စသည်တို့၏ အကျိုးကျေးဇူးများကို အလိုအလျောက် ရရှိသည်။
+[OpenCode](https://opencode.ai) သည် agentic CLI/desktop AI client တစ်ခုဖြစ်သည်။ ၎င်းသည် provider catalog ကို `~/.config/opencode/opencode.json` (သို့မဟုတ် `opencode.jsonc`) မှ ဖတ်ရှုပြီး `https://opencode.ai/config.json` ရှိ schema ကို လိုက်နာသည်။ 67router သည် မိမိကိုယ်ကို အဆိုပါ provider များအနက် တစ်ခုအဖြစ် OpenCode သို့ ဖော်ပြပေးသည် — request တိုင်းသည် 67router ၏ စံ OpenAI-compatible `/v1` မျက်နှာပြင်မှတစ်ဆင့် စီးဆင်းသောကြောင့် OpenCode သည် Auto-Combo routing၊ circuit breaker များ၊ key policy များ၊ observability စသည်တို့၏ အကျိုးကျေးဇူးများကို အလိုအလျောက် ရရှိသည်။
 
 ပံ့ပိုးထားသော integration နည်းလမ်း **နှစ်မျိုး** ရှိသည်။ တစ်မျိုးကို ရွေးချယ်ပါ — နှစ်မျိုးလုံးသည် တူညီသော config ကို ထုတ်ပေးသည်။
 
@@ -17,16 +17,16 @@
 
 ## နည်းလမ်း 1 — CLI generator (npm install မလိုအပ်ပါ)
 
-နောက်ဆုံးအသုံးပြုသူများအတွက် အကြံပြုထားသည်။ OmniRoute နှင့်အတူ ပါဝင်သည်။ `opencode.json` ကို မူလနေရာ၌ပင် ရေးသားသည်။
+နောက်ဆုံးအသုံးပြုသူများအတွက် အကြံပြုထားသည်။ 67router နှင့်အတူ ပါဝင်သည်။ `opencode.json` ကို မူလနေရာ၌ပင် ရေးသားသည်။
 
 ```bash
-# OmniRoute ကို ထည့်သွင်းပြီးနောက် (npm i -g @omniroute/cli သို့မဟုတ် local clone)
+# 67router ကို ထည့်သွင်းပြီးနောက် (npm i -g @omniroute/cli သို့မဟုတ် local clone)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-နောက်ကွယ်တွင် CLI သည် `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`) ကို ခေါ်သုံးသောကြောင့် ရှိပြီးသား `opencode.json` ထဲရှိ အခြား provider များနှင့် comment များကို ဆက်လက်ထိန်းသိမ်းထားသည်။ OmniRoute entry ကို atomic နည်းဖြင့် ထည့်သွင်း/အစားထိုးသည်။
+နောက်ကွယ်တွင် CLI သည် `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`) ကို ခေါ်သုံးသောကြောင့် ရှိပြီးသား `opencode.json` ထဲရှိ အခြား provider များနှင့် comment များကို ဆက်လက်ထိန်းသိမ်းထားသည်။ 67router entry ကို atomic နည်းဖြင့် ထည့်သွင်း/အစားထိုးသည်။
 
 ရရှိလာသော file (မူလ model catalog):
 
@@ -90,8 +90,8 @@ API အပြည့်အစုံအတွက် [package README](../../@omniro
 ```
 OpenCode UI/agent
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (OmniRoute OpenAI မျက်နှာပြင်)
-         → OmniRoute /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (67router OpenAI မျက်နှာပြင်)
+         → 67router /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
             → combo routing / Auto-Combo / executor
                → upstream provider
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 `models: [...]` မှတစ်ဆင့် မူလသတ်မှတ်ချက်များကို ပြောင်းလဲနိုင်သည်။ ထပ်ထည့်ရန် အကြံပြုထားသည့်အရာများမှာ-
 
-- `"auto"` — OmniRoute ၏ အပြင်အဆင်သတ်မှတ်ရန်မလိုသော [Auto-Combo](../routing/AUTO-COMBO.md) router ကို ဖော်ပြပေးသည်။ ကတ်တလောက်ကို သင်ကိုယ်တိုင် အတိအကျ သတ်မှတ်စရာမလိုဘဲ OpenCode အနေဖြင့် "ရရှိနိုင်သည့် အကောင်းဆုံးမော်ဒယ်" ကို ရွေးချယ်နိုင်စေသည်။
-- `"<combo-name>"` — dashboard တွင် သင်သတ်မှတ်ထားသည့် မည်သည့် combo မဆိုဖြစ်ပြီး OmniRoute က ၎င်းကို နောက်ကွယ်တွင် အလိုအလျောက် ဖြေရှင်းပေးသည်။
+- `"auto"` — 67router ၏ အပြင်အဆင်သတ်မှတ်ရန်မလိုသော [Auto-Combo](../routing/AUTO-COMBO.md) router ကို ဖော်ပြပေးသည်။ ကတ်တလောက်ကို သင်ကိုယ်တိုင် အတိအကျ သတ်မှတ်စရာမလိုဘဲ OpenCode အနေဖြင့် "ရရှိနိုင်သည့် အကောင်းဆုံးမော်ဒယ်" ကို ရွေးချယ်နိုင်စေသည်။
+- `"<combo-name>"` — dashboard တွင် သင်သတ်မှတ်ထားသည့် မည်သည့် combo မဆိုဖြစ်ပြီး 67router က ၎င်းကို နောက်ကွယ်တွင် အလိုအလျောက် ဖြေရှင်းပေးသည်။
 
 ---
 
@@ -135,12 +135,12 @@ helper သည် ပုံစံနှစ်မျိုးလုံးကို
 
 ## အထောက်အထားစစ်ဆေးခြင်း နည်းလမ်းများ
 
-| OmniRoute ဆက်တင်                                     | အကြံပြုထားသည့် `apiKey` တန်ဖိုး                                          |
+| 67router ဆက်တင်                                      | အကြံပြုထားသည့် `apiKey` တန်ဖိုး                                          |
 | ---------------------------------------------------- | ------------------------------------------------------------------------ |
 | `REQUIRE_API_KEY=false` (local အတွက် မူလသတ်မှတ်ချက်) | `sk_omniroute` (ပုံသေ placeholder စာသား)                                 |
 | `REQUIRE_API_KEY=true`                               | Dashboard → API Keys မှ အသုံးပြုသူတစ်ဦးချင်းစီအတွက် တကယ့် API key တစ်ခု။ |
 
-`x-api-key` + `anthropic-version` ကို ပေးပို့သည့် Anthropic ပုံစံ client များအတွက် OmniRoute ၏ `extractApiKey` သည် `x-api-key` မှ key ကိုလည်း အသိအမှတ်ပြုသည်။ OpenCode သည် OpenAI မျက်နှာပြင်ကို အသုံးပြုသောကြောင့် `Authorization: Bearer ${apiKey}` ကို အမြဲပေးပို့မည်ဖြစ်ပြီး ဤနေရာတွင် Anthropic သီးသန့်ကိုင်တွယ်မှု မသက်ဆိုင်ပါ။
+`x-api-key` + `anthropic-version` ကို ပေးပို့သည့် Anthropic ပုံစံ client များအတွက် 67router ၏ `extractApiKey` သည် `x-api-key` မှ key ကိုလည်း အသိအမှတ်ပြုသည်။ OpenCode သည် OpenAI မျက်နှာပြင်ကို အသုံးပြုသောကြောင့် `Authorization: Bearer ${apiKey}` ကို အမြဲပေးပို့မည်ဖြစ်ပြီး ဤနေရာတွင် Anthropic သီးသန့်ကိုင်တွယ်မှု မသက်ဆိုင်ပါ။
 
 ---
 
@@ -149,15 +149,15 @@ helper သည် ပုံစံနှစ်မျိုးလုံးကို
 | လက္ခဏာ                                                              | အကြောင်းရင်း                                                                      | ဖြေရှင်းနည်း                                                                                                                     |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | `/v1/v1/` ပါဝင်သော URL ဖြင့် တောင်းဆိုမှုတိုင်းတွင် `404` ဖြစ်ခြင်း | `/v1` ကို နှစ်ကြိမ်နောက်ဆက်တွဲထည့်ထားသည့် v3.8 မတိုင်မီ plugin မှ config အဟောင်း။ | လမ်းကြောင်း 1 သို့မဟုတ် 2 မှတစ်ဆင့် ပြန်လည်ဖန်တီးပါ။                                                                             |
-| `401 Invalid API key`                                               | OmniRoute တွင် `REQUIRE_API_KEY=true` ဖြစ်ပြီး key ကို မသိရှိပါ။                  | dashboard တွင် key ကို ဖန်တီးပါ၊ သို့မဟုတ် `REQUIRE_API_KEY=false` (local အတွက်သာ) ဟု သတ်မှတ်ပြီး `sk_omniroute` ကို အသုံးပြုပါ။ |
-| OpenCode UI တွင် မော်ဒယ်စာရင်း ဗလာဖြစ်နေခြင်း                       | မူလမော်ဒယ် 4 ခုစလုံးကို OmniRoute ၏ provider visibility တွင် ဝှက်ထားသည်။          | သင်ဖွင့်ထားသည့် မော်ဒယ်များကို ဖော်ပြရန် `models: ["auto", ...]` ကို ပေးပါ။                                                      |
+| `401 Invalid API key`                                               | 67router တွင် `REQUIRE_API_KEY=true` ဖြစ်ပြီး key ကို မသိရှိပါ။                   | dashboard တွင် key ကို ဖန်တီးပါ၊ သို့မဟုတ် `REQUIRE_API_KEY=false` (local အတွက်သာ) ဟု သတ်မှတ်ပြီး `sk_omniroute` ကို အသုံးပြုပါ။ |
+| OpenCode UI တွင် မော်ဒယ်စာရင်း ဗလာဖြစ်နေခြင်း                       | မူလမော်ဒယ် 4 ခုစလုံးကို 67router ၏ provider visibility တွင် ဝှက်ထားသည်။           | သင်ဖွင့်ထားသည့် မော်ဒယ်များကို ဖော်ပြရန် `models: ["auto", ...]` ကို ပေးပါ။                                                      |
 | `cannot read property 'models'` ပါသော OpenCode 500                  | OpenCode အဟောင်း (< 0.1.x) သည် inline `models` ကို လက်မခံခဲ့ပါ။                   | v1 schema (`opencode.ai/config.json`) ကို လိုက်နာသည့် OpenCode ဗားရှင်းသို့ အဆင့်မြှင့်ပါ။                                       |
 
 ---
 
 ## ထပ်မံကြည့်ရှုရန်
 
-- [API ကိုးကားချက်](../reference/API_REFERENCE.md) — OmniRoute REST မျက်နှာပြင် အပြည့်အစုံ
+- [API ကိုးကားချက်](../reference/API_REFERENCE.md) — 67router REST မျက်နှာပြင် အပြည့်အစုံ
 - [Auto-Combo](../routing/AUTO-COMBO.md) — `model: "auto"` ၏ အဓိပ္ပာယ်
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - အရင်းအမြစ်- `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute verfügt über drei unterschiedliche, aber verwandte Resilienzmechanismen. Jeder hat einen eigenen Geltungsbereich und Zweck. Halten Sie sie beim Debuggen des Routing-Verhaltens auseinander.
+67router verfügt über drei unterschiedliche, aber verwandte Resilienzmechanismen. Jeder hat einen eigenen Geltungsbereich und Zweck. Halten Sie sie beim Debuggen des Routing-Verhaltens auseinander.
 
 ![3-Schichten-Resilienzmodell](../diagrams/exported/resilience-3layers.svg)
 
@@ -219,7 +219,7 @@ Die drei Session-Affinitäts-Header werden nie upstream weitergegeben — Execut
 
 ### Exklusive Verbindungs-Leases für verwaltete Sessions
 
-**Umfang:** ein aktiver verwalteter HTTP-Client/eine aktive verwaltete Session besitzt eine infrage kommende OmniRoute-Verbindung.
+**Umfang:** ein aktiver verwalteter HTTP-Client/eine aktive verwaltete Session besitzt eine infrage kommende 67router-Verbindung.
 
 **Zweck:** dauerhafte exklusive Verbindungsinhaberschaft für Clients bereitstellen, die über Anfragen hinweg einen harten Routing-Zaun benötigen. Dies unterscheidet sich von der Session-Affinität, einer weichen Kontinuitätspräferenz: Ein exklusives Lease persistiert Lifecycle-Zustand in SQLite, erzwingt globale Eindeutigkeit von aktivem Owner und aktiver Verbindung und weist eine veraltete Generation vor dem Provider-Dispatch zurück.
 
@@ -233,7 +233,7 @@ authentifizierte API-Key-ID und die aktive Verbindungs-ID. Lease-Steuerungs-Head
 aufbewahrten Request-Snapshots und Upstream-Executor-Headern entfernt.
 
 Wenn das normale Routing geeignete verwaltete Kandidaten hat, aber jeder freie Kandidat durch ein
-fremdes aktives Lease belegt ist, gibt OmniRoute HTTP `429` zurück, den Code
+fremdes aktives Lease belegt ist, gibt 67router HTTP `429` zurück, den Code
 lease-capacity-unavailable, den Zustand waiting-for-capacity und einen begrenzten `Retry-After`-Wert,
 der aus dem frühesten relevanten Ablaufzeitpunkt abgeleitet wird. Eine gewöhnliche leere
 Eignungsmenge ist keine Lease-Konkurrenz und behält ihre bestehende Routing-Fehlersemantik bei.
@@ -256,7 +256,7 @@ Verwandte Mechanismen bleiben getrennt:
   für codex den gesamten `codex`-/`spark`-Scope (jedes `gpt-5*`-Modell der
   Verbindung), für andere Provider `getQuotaScopedModelForProvider()`.
 - `404` sperrt das reine Modell (`getModelLockKey()` grenzt `not_found` ein).
-- Jeder andere Status — `5xx`-Transport-/Serverfehler und OmniRoutes eigener, aus
+- Jeder andere Status — `5xx`-Transport-/Serverfehler und 67routers eigener, aus
   der Qualitätsvalidierung synthetisierter `502` — sperrt nur das **exakte**
   Provider/Verbindung/Modell-Tupel. Ein fehlerhafter Stream bei einem Modell sagt
   nichts über das Kontingent des Kontos aus; vor dieser Regel entfernte eine
@@ -402,7 +402,7 @@ pro Modell**, ein `model=cap` pro Zeile) oder über
   sind positive ganzzahlige Obergrenzen für gleichzeitige Anfragen.
 - **Lokale Einreihung, keine Erkennung:** Überschüssige Anfragen reihen sich lokal
   mit der bestehenden Warteschlangen-/Timeout-Semantik ein (typisierte
-  `SEMAPHORE_TIMEOUT`- / `SEMAPHORE_QUEUE_FULL`-Zulassungsfehler). OmniRoute
+  `SEMAPHORE_TIMEOUT`- / `SEMAPHORE_QUEUE_FULL`-Zulassungsfehler). 67router
   erkennt bzw. erschließt keine Upstream-Richtlinien – es erzwingt exakt die
   Obergrenzen, die der Betreiber konfiguriert hat. Ein gesättigtes Modell-Gate
   deaktiviert den Provider niemals und erzeugt niemals eine permanente
@@ -513,7 +513,7 @@ Die Zulassungsprüfung selbst ist eine reine Funktion (`open-sse/services/rateLi
 ### Rate-Limit-Auto-Aktivierungs-Schutznetz & Verbindungsschutz (`rateLimitProtection`)
 
 **Auto-Aktivierungs-Schutznetz** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, Standard `true`):
-Standardmäßig aktiviert OmniRoute automatisch den Rate-Limit-Warteschlangenschutz für alle aktiven API-Key-Provider-Verbindungen (`getProviderCategory(provider) === "apikey"`). Dadurch wird sichergestellt, dass eingehende Anfragen an ratenempfindliche Upstream-API-Keys über Bottleneck in eine Warteschlange gestellt und gedrosselt werden, statt in Upstream-429-Fehler auszuarten. Das Schutznetz kann über die Umgebungsvariable `RATE_LIMIT_AUTO_ENABLE` überschrieben werden (`false`/`0`/`off` deaktiviert, `true`/`1`/`on` erzwingt die Aktivierung), wobei diese Vorrang vor der persistierten Dashboard-Einstellung hat (**Einstellungen → Resilience** / `PATCH /api/resilience`).
+Standardmäßig aktiviert 67router automatisch den Rate-Limit-Warteschlangenschutz für alle aktiven API-Key-Provider-Verbindungen (`getProviderCategory(provider) === "apikey"`). Dadurch wird sichergestellt, dass eingehende Anfragen an ratenempfindliche Upstream-API-Keys über Bottleneck in eine Warteschlange gestellt und gedrosselt werden, statt in Upstream-429-Fehler auszuarten. Das Schutznetz kann über die Umgebungsvariable `RATE_LIMIT_AUTO_ENABLE` überschrieben werden (`false`/`0`/`off` deaktiviert, `true`/`1`/`on` erzwingt die Aktivierung), wobei diese Vorrang vor der persistierten Dashboard-Einstellung hat (**Einstellungen → Resilience** / `PATCH /api/resilience`).
 
 **Semantik des verbindungsbezogenen `rateLimitProtection`:**
 Der verbindungsbezogene Rate-Limit-Schutz wird über das boolesche Feld `rateLimitProtection` auf Provider-Verbindungen verfolgt (persistiert als `rate_limit_protection` in SQLite):
@@ -844,7 +844,7 @@ Einschränkungen:
 > gerichtete Ansicht der obigen Abschnitte; die nummerierten Abschnitte bleiben die
 > vollständige Referenz.
 
-OmniRoute verfügt über drei verwandte, aber unterschiedliche Mechanismen für temporäre
+67router verfügt über drei verwandte, aber unterschiedliche Mechanismen für temporäre
 Fehler. Halten Sie deren Geltungsbereiche beim Debuggen des Routing-Verhaltens getrennt.
 Siehe das [3-Schichten-Resilienzdiagramm](../diagrams/exported/resilience-3layers.svg)
 (Quelle: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

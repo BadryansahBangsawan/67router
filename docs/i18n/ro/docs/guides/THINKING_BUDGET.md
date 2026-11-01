@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Sursă:** `open-sse/services/thinkingBudget.ts`
 
-Bugetul de gândire controlează dacă OmniRoute **rescrie parametrii de gândire/raționament ai clientului** în drumul către furnizori. Acesta **nu** activează sau dezactivează compresia, rutarea ori memoria cache pentru prompturi.
+Bugetul de gândire controlează dacă 67router **rescrie parametrii de gândire/raționament ai clientului** în drumul către furnizori. Acesta **nu** activează sau dezactivează compresia, rutarea ori memoria cache pentru prompturi.
 
 ## Moduri
 
-| Mod                          | Ce face OmniRoute                                                                                                                        | Când se utilizează                                                                                                                                                                                   |
+| Mod                          | Ce face 67router                                                                                                                         | Când se utilizează                                                                                                                                                                                   |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (implicit) | Lasă neschimbate câmpurile clientului (`reasoning`, `reasoning_effort`, `thinking` pentru Claude, `thinking_config` pentru Gemini etc.). | **Codex / Desktop / orice client care trebuie să controleze efortul și rezumatele raționamentului.** Necesar pentru panourile de gândire vizibile atunci când clientul solicită `reasoning.summary`. |
 | **`auto`**                   | **Elimină toate** câmpurile de gândire/raționament din corpul cererii înainte de trimiterea în amonte.                                   | Numai atunci când doriți în mod deliberat ca **furnizorul** să stabilească valorile implicite și **nu** aveți nevoie de gândire controlată de client. **Nu** înseamnă „afișează automat gândirea”.   |
@@ -38,7 +38,7 @@ Dacă un client (de exemplu, Codex Desktop) a trimis `reasoning: { effort: "ultr
 | **Rutare combinată / variante de rezervă**                | Separate. Nu sunt afectate.                                                                                                                                            |
 | **Limite de tokenuri pentru cheile API / bugete de cost** | Separate. Nu sunt afectate.                                                                                                                                            |
 | **Memorie cache pentru reluarea raționamentului**         | Reinjectare pe parcursul mai multor conversații pentru furnizori stricți (DeepSeek, Kimi, Qwen-thinking, …). Nu este același lucru cu „afișează gândirea” din Desktop. |
-| **Decriptarea `encrypted_content`**                       | **Imposibilă.** Bloburile private de raționament OpenAI/Codex sunt opace. OmniRoute nu le decriptează niciodată (#7095 / #7176 / #7304).                               |
+| **Decriptarea `encrypted_content`**                       | **Imposibilă.** Bloburile private de raționament OpenAI/Codex sunt opace. 67router nu le decriptează niciodată (#7095 / #7176 / #7304).                                |
 
 ## Raționament vizibil (clienți Codex / Responses)
 
@@ -51,7 +51,7 @@ Pentru ca un client să afișeze textul raționamentului, aveți nevoie de **toa
 Dacă primiți doar „raționament privat criptat”, atunci fie:
 
 - modul a fost **`auto`** (solicitarea clientului a fost eliminată), fie
-- serviciul din amonte a returnat `encrypted_content` fără textul rezumatului (limitare a furnizorului; OmniRoute poate afișa doar un substituent, nu textul în clar).
+- serviciul din amonte a returnat `encrypted_content` fără textul rezumatului (limitare a furnizorului; 67router poate afișa doar un substituent, nu textul în clar).
 
 ## Exemple API
 
@@ -71,7 +71,7 @@ Schemă (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adap
 
 ### Persistență / repornire
 
-Valoarea este stocată sub cheia de setări `thinkingBudget` și încărcată la pornirea procesului (`hydrateThinkingBudgetConfig`). După modificarea prin baza de date sau prin unele căi care nu utilizează API-ul, **reporniți procesul OmniRoute**, astfel încât instanța singleton din memorie să corespundă datelor de pe disc.
+Valoarea este stocată sub cheia de setări `thinkingBudget` și încărcată la pornirea procesului (`hydrateThinkingBudgetConfig`). După modificarea prin baza de date sau prin unele căi care nu utilizează API-ul, **reporniți procesul 67router**, astfel încât instanța singleton din memorie să corespundă datelor de pe disc.
 
 ## Listă de verificare pentru operator
 

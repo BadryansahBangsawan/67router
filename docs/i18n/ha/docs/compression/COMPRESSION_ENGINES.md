@@ -4,7 +4,7 @@
 
 ---
 
-Matsewar OmniRoute an gina ta ne bisa kwangilolin injuna. Wani yanayi na iya tafiyar da injin guda ɗaya kai tsaye
+Matsewar 67router an gina ta ne bisa kwangilolin injuna. Wani yanayi na iya tafiyar da injin guda ɗaya kai tsaye
 (`caveman` ko `rtk`) ko kuma tsayayyen jerin matakai da aka tara wanda ke aiwatar da injuna da yawa bisa tsari.
 
 ## Hanyoyi
@@ -42,10 +42,10 @@ kuma suna kiyaye tsarin, tsarin kayan aiki da sakamakon kayan aiki na asali, don
 tarihi ba tukuna yana tsayawa a `below_min_chars` kuma injin baya canza komai. Wannan shine dalilin
 da yasa tsoho shine `aggressive` maimakon mafi aminci fasalin.
 
-Kunshin yana warware iyakar samfurin sa da fasalin sa daga saitin muhallin sa. OmniRoute baya taɓa
+Kunshin yana warware iyakar samfurin sa da fasalin sa daga saitin muhallin sa. 67router baya taɓa
 ba da ikon yanke shawara: adaftar yana haɗa ƙofar samfurin zuwa mafi ƙuntatawar iyakar kunshin,
 don haka saitunan muhallin mai masaukin baki na iya iyakance jerin izini kawai, ba zai taɓa faɗaɗa shi
-fiye da rasit ɗin da OmniRoute ya auna ba.
+fiye da rasit ɗin da 67router ya auna ba.
 
 ## Rijistar Injin
 
@@ -108,7 +108,7 @@ Yanayin Caveman yana mai da hankali kan taƙaita ma’anar rubutu na yau da kull
 Fuskar dashboard ɗin ita ce `Dashboard -> Context & Cache -> Caveman`.
 
 Rahotannin Caveman na upstream sun nuna raguwar token ɗin fitarwa da `~75%`, matsakaicin tanadin fitarwa na `65%` a gwaje-gwajen ma’auni
-tare da kewayon `22-87%`, da kayan aikin matse shigarwa na `~46%`. OmniRoute yana amfani da adadin Caveman na ɓangaren shigarwa
+tare da kewayon `22-87%`, da kayan aikin matse shigarwa na `~46%`. 67router yana amfani da adadin Caveman na ɓangaren shigarwa
 yayin rubuta bayanin tanadin prompt/mahalli da aka jera tare; yanayin fitarwa na Caveman ya kasance wata siffa ta daban
 ta halayyar amsa.
 

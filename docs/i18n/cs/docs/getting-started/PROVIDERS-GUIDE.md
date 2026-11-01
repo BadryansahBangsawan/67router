@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Čeština)
+# Providers Guide: Connect AI Models to 67router (Čeština)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Stručně**: Poskytovatel představuje připojení ke službě AI (například OpenAI, Anthropic nebo Google). Abyste mohli používat OmniRoute, potřebujete alespoň jednoho poskytovatele.
+> **Stručně**: Poskytovatel představuje připojení ke službě AI (například OpenAI, Anthropic nebo Google). Abyste mohli používat 67router, potřebujete alespoň jednoho poskytovatele.
 
 ---
 
 ## Co je poskytovatel?
 
-Představte si poskytovatele jako **mobilního operátora**. Stejně jako k telefonování potřebujete mobilního operátora, potřebujete k používání modelů umělé inteligence poskytovatele AI. OmniRoute je jako telefon, který funguje se **všemi operátory** — můžete mezi nimi automaticky přepínat.
+Představte si poskytovatele jako **mobilního operátora**. Stejně jako k telefonování potřebujete mobilního operátora, potřebujete k používání modelů umělé inteligence poskytovatele AI. 67router je jako telefon, který funguje se **všemi operátory** — můžete mezi nimi automaticky přepínat.
 
 ### Typy poskytovatelů
 
@@ -31,8 +31,8 @@ Obecné pokyny k nastavení, omezení, řešení problémů a pokyny k ověřov�
 ### Volitelné nastavení bezplatných poskytovatelů při prvním spuštění
 
 Průvodce prvním spuštěním nabízí samostatnou kartu **Nastavit bezplatné poskytovatele**. Aktuální
-seznam dostupných poskytovatelů odvozuje z registru poskytovatelů OmniRoute, kteří nevyžadují ověření, a poté vám umožní každého
-poskytovatele před potvrzením zkontrolovat a případně zrušit jeho výběr. OmniRoute zobrazí upozornění poskytovatele a odkaz na jeho web,
+seznam dostupných poskytovatelů odvozuje z registru poskytovatelů 67router, kteří nevyžadují ověření, a poté vám umožní každého
+poskytovatele před potvrzením zkontrolovat a případně zrušit jeho výběr. 67router zobrazí upozornění poskytovatele a odkaz na jeho web,
 abyste si nejprve mohli projít podmínky třetí strany, ochranu soukromí, dostupnost a limity požadavků.
 
 Tato akce je volitelná: dokončení průvodce nikdy skrytě nevytvoří připojení k bezplatným poskytovatelům.
@@ -80,7 +80,7 @@ bezpečně zopakovat pouze neúspěšné pokusy.
 
 ### Možnost D: Lokální modely MLX (Apple Silicon)
 
-Pro počítače Mac s Apple Silicon a sjednocenou pamětí podporuje OmniRoute připojení k lokálním modelům MLX spuštěným prostřednictvím `mlx-lm.server` jako k běžným lokálním poskytovatelům kompatibilním s OpenAI.
+Pro počítače Mac s Apple Silicon a sjednocenou pamětí podporuje 67router připojení k lokálním modelům MLX spuštěným prostřednictvím `mlx-lm.server` jako k běžným lokálním poskytovatelům kompatibilním s OpenAI.
 
 #### Předpoklady
 
@@ -110,14 +110,14 @@ Pro počítače Mac s Apple Silicon a sjednocenou pamětí podporuje OmniRoute p
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Připojte se v řídicím panelu OmniRoute**:
+3. **Připojte se v řídicím panelu 67router**:
    - Přejděte na **Poskytovatelé** → **Přidat poskytovatele**
    - Vyberte **MLX Gemma 26B** nebo **MLX Qwen 3.8 27B**
    - Klikněte na **Připojit** (není potřeba klíč API)
 
 4. **Použití s OpenCode**:
    ```bash
-   # Nakonfigurujte OpenCode pro použití OmniRoute
+   # Nakonfigurujte OpenCode pro použití 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Toto musíte spravovat ručně:
 - Spusťte oba na samostatných počítačích, nebo
 - Před spuštěním jednoho zastavte druhý
 
-OmniRoute automaticky nespravuje procesy serverů MLX — pouze směruje požadavky na vámi nakonfigurované koncové body kompatibilní s OpenAI.
+67router automaticky nespravuje procesy serverů MLX — pouze směruje požadavky na vámi nakonfigurované koncové body kompatibilní s OpenAI.
 
 #### Podpora volání nástrojů
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Nedostatek paměti        | Zajistěte, aby běžel pouze jeden model; zavřete ostatní aplikace; zkontrolujte Monitor aktivity |
 | Připojení bylo odmítnuto | Ověřte, že server běží na správném portu (11435/11436)                                          |
 | Pomalé odpovědi          | První požadavek načte model do paměti (~30–60 s); následné požadavky jsou rychlé                |
-| Volání nástrojů selhává  | Ověřte, že model podporuje nástroje; zkontrolujte v protokolech OmniRoute chyby překladu        |
+| Volání nástrojů selhává  | Ověřte, že model podporuje nástroje; zkontrolujte v protokolech 67router chyby překladu         |
 
 ---
 
@@ -236,12 +236,12 @@ Váš poskytovatel je nyní připojen. Můžete jej používat s `model: "auto"`
 
 ## Používání více poskytovatelů
 
-OmniRoute funguje nejlépe s **více poskytovateli**. Získáte tak:
+67router funguje nejlépe s **více poskytovateli**. Získáte tak:
 
-- **Automatické záložní řešení** — Pokud jeden poskytovatel selže, OmniRoute vyzkouší dalšího
-- **Optimalizaci nákladů** — OmniRoute pro každý požadavek vybere nejlevnějšího poskytovatele
-- **Optimalizaci rychlosti** — OmniRoute pro každý požadavek vybere nejrychlejšího poskytovatele
-- **Optimalizaci kvality** — OmniRoute pro každou úlohu vybere nejlepšího poskytovatele
+- **Automatické záložní řešení** — Pokud jeden poskytovatel selže, 67router vyzkouší dalšího
+- **Optimalizaci nákladů** — 67router pro každý požadavek vybere nejlevnějšího poskytovatele
+- **Optimalizaci rychlosti** — 67router pro každý požadavek vybere nejrychlejšího poskytovatele
+- **Optimalizaci kvality** — 67router pro každou úlohu vybere nejlepšího poskytovatele
 
 ### Doporučené nastavení
 
@@ -251,7 +251,7 @@ Pro nejlepší používání připojte alespoň **3 poskytovatele**:
 2. **Jeden rychlý poskytovatel** (Groq, Cerebras) — Pro rychlé odpovědi
 3. **Jeden kvalitní poskytovatel** (OpenAI, Anthropic, Google) — Pro složité úlohy
 
-Poté použijte `model: "auto"` a OmniRoute automaticky vybere nejlepšího poskytovatele pro každý požadavek.
+Poté použijte `model: "auto"` a 67router automaticky vybere nejlepšího poskytovatele pro každý požadavek.
 
 ---
 
@@ -260,25 +260,25 @@ Poté použijte `model: "auto"` a OmniRoute automaticky vybere nejlepšího posk
 ### OpenAI
 
 1. Získejte klíč API: https://platform.openai.com/api-keys
-2. V OmniRoute: Poskytovatelé → Přidat poskytovatele → OpenAI
+2. V 67router: Poskytovatelé → Přidat poskytovatele → OpenAI
 3. Vložte klíč API → Připojit
 
 ### Anthropic
 
 1. Získejte klíč API: https://console.anthropic.com/
-2. V OmniRoute: Poskytovatelé → Přidat poskytovatele → Anthropic
+2. V 67router: Poskytovatelé → Přidat poskytovatele → Anthropic
 3. Vložte klíč API → Připojit
 
 ### Google (Gemini)
 
 1. Získejte klíč API: https://aistudio.google.com/apikey
-2. V OmniRoute: Poskytovatelé → Přidat poskytovatele → Gemini
+2. V 67router: Poskytovatelé → Přidat poskytovatele → Gemini
 3. Vložte klíč API → Připojit
 
 ### DeepSeek
 
 1. Získejte klíč API: https://platform.deepseek.com/
-2. V OmniRoute: Poskytovatelé → Přidat poskytovatele → DeepSeek
+2. V 67router: Poskytovatelé → Přidat poskytovatele → DeepSeek
 3. Vložte klíč API → Připojit
 
 ### Qoder: zvolte způsob přenosu přihlašovacích údajů
@@ -286,12 +286,12 @@ Poté použijte `model: "auto"` a OmniRoute automaticky vybere nejlepšího posk
 Qoder vyžaduje přihlašovací údaje. Jeho dva způsoby přenosu mají odlišné možnosti; samotný název modelu
 neurčuje, co konkrétní připojení dokáže.
 
-| Přihlašovací údaj                           | Způsob přenosu OmniRoute                        | Volání nástrojů volajícím                                     | Streamování                                                             |
-| ------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| PAT začínající na `pt-`                     | Místní proces `qodercli` na hostiteli OmniRoute | Nepodporováno                                                 | S vyrovnávací pamětí: SSE se odešle až poté, co CLI vrátí celou odpověď |
-| Přístupový token jiný než PAT nebo klíč API | HTTP endpoint DashScope kompatibilní s OpenAI   | Předává se beze změny v závislosti na nadřazeném modelu/klíči | Nadřazená cesta HTTP/SSE                                                |
+| Přihlašovací údaj                           | Způsob přenosu 67router                        | Volání nástrojů volajícím                                     | Streamování                                                             |
+| ------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| PAT začínající na `pt-`                     | Místní proces `qodercli` na hostiteli 67router | Nepodporováno                                                 | S vyrovnávací pamětí: SSE se odešle až poté, co CLI vrátí celou odpověď |
+| Přístupový token jiný než PAT nebo klíč API | HTTP endpoint DashScope kompatibilní s OpenAI  | Předává se beze změny v závislosti na nadřazeném modelu/klíči | Nadřazená cesta HTTP/SSE                                                |
 
-Pro PAT nainstalujte Qoder CLI na stejného hostitele nebo do stejného kontejneru jako OmniRoute. Spustitelný soubor
+Pro PAT nainstalujte Qoder CLI na stejného hostitele nebo do stejného kontejneru jako 67router. Spustitelný soubor
 musí být dostupný jako `qodercli`, případně nastavte `CLI_QODER_BIN` na cestu k jeho spustitelnému souboru. CLI
 nainstalované pouze na hostiteli Dockeru není automaticky dostupné v kontejneru. Chybějící
 binární soubory způsobí explicitní chybu, která vás odkáže na instalaci nebo nastavení cesty.
@@ -324,16 +324,16 @@ a konfigurovatelný časový limit jsou samostatná vylepšení; toto chování 
 ### Groq
 
 1. Získejte klíč API: https://console.groq.com/
-2. V OmniRoute: Poskytovatelé → Přidat poskytovatele → Groq
+2. V 67router: Poskytovatelé → Přidat poskytovatele → Groq
 3. Vložte klíč API → Připojit
 
 ---
 
 ## Časté dotazy
 
-### „Musím za používání OmniRoute platit?“
+### „Musím za používání 67router platit?“
 
-**Ne!** OmniRoute je bezplatný open-source nástroj. Bezplatné poskytovatele (Kiro, Pollinations) můžete používat, aniž byste cokoli platili. Platíte pouze v případě, že se rozhodnete používat placené poskytovatele.
+**Ne!** 67router je bezplatný open-source nástroj. Bezplatné poskytovatele (Kiro, Pollinations) můžete používat, aniž byste cokoli platili. Platíte pouze v případě, že se rozhodnete používat placené poskytovatele.
 
 ### „Se kterým poskytovatelem bych měl začít?“
 
@@ -341,11 +341,11 @@ Začněte s **Kiro AI** — je zdarma, nevyžaduje žádný API klíč a poskytu
 
 ### „Mohu používat více poskytovatelů současně?“
 
-**Ano!** To je hlavní smysl OmniRoute. Připojte více poskytovatelů a použijte `model: "auto"`, aby OmniRoute mohl pro každý požadavek vybrat toho nejlepšího.
+**Ano!** To je hlavní smysl 67router. Připojte více poskytovatelů a použijte `model: "auto"`, aby 67router mohl pro každý požadavek vybrat toho nejlepšího.
 
 ### „Co když dojde k výpadku poskytovatele?“
 
-OmniRoute automaticky přeskočí poskytovatele, u kterých došlo k chybě, a vyzkouší dalšího. Nemusíte nic dělat.
+67router automaticky přeskočí poskytovatele, u kterých došlo k chybě, a vyzkouší dalšího. Nemusíte nic dělat.
 
 ### „Jak odpojím poskytovatele?“
 
@@ -353,17 +353,13 @@ Přejděte na Poskytovatelé → klikněte na poskytovatele → klikněte na **O
 
 ### „Mohu použít své stávající API klíče?“
 
-**Ano!** Pokud již máte API klíče pro OpenAI, Anthropic, Google atd., můžete je v OmniRoute použít. Stačí je vložit při připojování poskytovatele.
+**Ano!** Pokud již máte API klíče pro OpenAI, Anthropic, Google atd., můžete je v 67router použít. Stačí je vložit při připojování poskytovatele.
 
 ---
 
 ## Co dál?
 
-- **[Průvodce automatickou kombinací](./AUTO-COMBO-GUIDE.md)** — Nechte OmniRoute vybrat nejlepší AI za vás
+- **[Průvodce automatickou kombinací](./AUTO-COMBO-GUIDE.md)** — Nechte 67router vybrat nejlepší AI za vás
 - **[Průvodce bezplatnými úrovněmi](./FREE-TIERS-GUIDE.md)** — Získejte bezplatnou AI bez platební karty
 - **[Řešení problémů](../guides/TROUBLESHOOTING.md)** — Vyřešte běžné problémy
 - **[Přehled poskytovatelů](../reference/PROVIDER_REFERENCE.md)** — Úplný seznam 226 poskytovatelů
-
-## Obrázky Cursor
-
-Obrázky tarifu Cursor používají `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Viz [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

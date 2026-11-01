@@ -10,7 +10,7 @@ négy szolgáltatócsalád képviseli. A régió kapcsolati adat, nem különál
 
 ## Döntés
 
-| Szolgáltatócsalád                           | OmniRoute ID            | Globális régió | Kínai régió |
+| Szolgáltatócsalád                           | 67router ID             | Globális régió | Kínai régió |
 | ------------------------------------------- | ----------------------- | -------------- | ----------- |
 | Alibaba Cloud Model Studio (használatalapú) | `alibaba`               | Szingapúr      | Peking      |
 | Alibaba Cloud Token Plan                    | `bailian-coding-plan`   | Szingapúr      | Peking      |

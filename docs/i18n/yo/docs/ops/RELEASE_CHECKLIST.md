@@ -45,7 +45,7 @@ job `stage-npm` (tí github gbàlejò) ń pààrọ̀ id-token GitHub fún crede
 ìdánilójú WS1.3 mọ́ (token tí ó tú síta kò lè tẹ̀jáde ní òun nìkan — kò sí token rárá).
 
 **Ètò ẹ̀ẹ̀kan ṣoṣo (owner):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: kò sí). Títí èyí yóò fi wà, ìgbésẹ̀ aládàáṣiṣẹ́ yóò kùnà pẹ̀lú `ENEEDAUTH`:
 tún fi ránṣẹ́ pẹ̀lú `publish_mode=staged` (ní ìsàlẹ̀) tàbí `direct`.
 

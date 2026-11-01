@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort samengevat**: OmniRoute rangschikt zijn **gratis** providers op modelkwaliteit met behulp van **Arena AI
+> **Kort samengevat**: 67router rangschikt zijn **gratis** providers op modelkwaliteit met behulp van **Arena AI
 > (LMArena-achtige) ELO-scores**. Open de pagina **Free Provider Rankings** in het
 > dashboard om te zien welke gratis providers de sterkste modellen voor jouw taak aanbieden —
 > algemeen of gefilterd op categorie (programmeren, beoordeling, documentatie, foutopsporing).
@@ -13,7 +13,7 @@
 
 ## Wat het is
 
-OmniRoute registreert 375 providers, waaronder 155 catalogusitems gemarkeerd als **free/no-auth**
+67router registreert 372 providers, waaronder 155 catalogusitems gemarkeerd als **free/no-auth**
 (no-auth,
 free-tier OAuth of free-tier API-sleutel — zie de
 [gids voor gratis tiers](../getting-started/FREE-TIERS-GUIDE.md) en de volledige
@@ -129,9 +129,9 @@ en `code` — via de Arena AI-klassement-API
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Elke vermelding in het klassement
 bevat een modelnaam, leverancier, ELO-`score`, betrouwbaarheidsinterval en aantal stemmen.
 
-Klassementscategorieën worden als volgt gekoppeld aan OmniRoute-taakcategorieën:
+Klassementscategorieën worden als volgt gekoppeld aan 67router-taakcategorieën:
 
-| Arena-klassement | OmniRoute-taakcategorieën                         |
+| Arena-klassement | 67router-taakcategorieën                          |
 | ---------------- | ------------------------------------------------- |
 | `text`           | `default`, `review`, `documentation`, `debugging` |
 | `code`           | `coding`                                          |
@@ -168,7 +168,7 @@ De synchronisatie wordt **standaard uitgevoerd**:
 
 - Deze wordt eenmaal uitgevoerd wanneer de server wordt gestart en vervolgens periodiek via een timer
   (`src/lib/arenaEloSync.ts`, gekoppeld vanuit `src/instrumentation-node.ts`).
-- Deze is **niet-blokkerend en nooit fataal** — als het ophalen bij de externe bron mislukt, blijft OmniRoute
+- Deze is **niet-blokkerend en nooit fataal** — als het ophalen bij de externe bron mislukt, blijft 67router
   actief en tonen de ranglijsten gewoon de laatst correct opgehaalde gegevens (of een lege status).
 
 Twee omgevingsvariabelen regelen dit (gedocumenteerd in
@@ -203,7 +203,7 @@ flexibele koppeling (`findMatchingIntelligence` in `src/lib/freeProviderRankings
 3. Voorvoegselovereenkomst (een modelnaam uit het klassement is een voorvoegsel van de register-ID).
 
 Aan de synchronisatiezijde worden bekende leveranciersvoorvoegsels (`anthropic/`, `openai/`, `google/`, …)
-verwijderd en breidt een kleine aliasmap canonieke namen uit naar de varianten die OmniRoute
+verwijderd en breidt een kleine aliasmap canonieke namen uit naar de varianten die 67router
 intern gebruikt, zodat modellen onder elke naam vindbaar blijven.
 
 ### Hoe een leverancier wordt gerangschikt

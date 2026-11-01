@@ -6,7 +6,7 @@
 
 ## Pregled
 
-Sve rute OmniRoute API-ja za upravljanje klasificirane su u jedan od tri nivoa
+Sve rute 67router API-ja za upravljanje klasificirane su u jedan od tri nivoa
 zaštite. Klasifikacija je statična, definirana u `src/server/authz/routeGuard.ts`
 i procjenjuje se prije izvršavanja bilo koje druge grane autentifikacije.
 
@@ -27,9 +27,9 @@ CVE ranjivosti ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4q
 **Šta je GHSA-fhh6-4qxv-rpqj (klasa napada):** server za upravljanje/agente
 izlaže krajnju tačku koja pokreće podproces (`npm install`, `node`, preglednik,
 proxy, `git`, `tar`, …). Ako je ta krajnja tačka dostupna izvan hosta — zato što
-je operater postavio OmniRoute iza nginx/Cloudflare/Tailscale tunela i JWT
+je operater postavio 67router iza nginx/Cloudflare/Tailscale tunela i JWT
 je procurio ili je autentifikacija pogrešno konfigurirana — napadač pretvara „pozivanje API-ja“ u „izvršavanje
-naredbe na hostu“ (daljinsko izvršavanje koda). OmniRoute to sprječava bezuslovnim provođenjem
+naredbe na hostu“ (daljinsko izvršavanje koda). 67router to sprječava bezuslovnim provođenjem
 **provjere loopback hosta prije bilo kakve provjere autentifikacije** na svakoj
 ruti koja može pokretati procese: token koji procuri preko tunela i dalje ne može pristupiti pokretanju procesa.
 
@@ -57,7 +57,6 @@ prefiksa koji omogućavaju pokretanje procesa i uzrokuje neuspjeh CI-ja ako bilo
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy osluškivač + sistemski proxy                                                                       |
 | `/api/settings/mitm`                                                                                     | Omogućava MITM presretanje (stanje proxyja na nivou sistema)                                                                      |
 | `/api/issue-agent/`                                                                                      | Agent za probleme — pokreće lokalne alate nad repozitorijem                                                                       |
-| `/api/plugins/`, `/api/plugins`                                                                          | Dodaci — učitavaju se/izvršavaju putem `worker_threads` + `child_process`                                                         |
 | `/api/middleware/`                                                                                       | Korisnički middleware — učitava/izvršava kod operatera unutar procesa                                                             |
 | `/api/system/version`                                                                                    | Automatsko ažuriranje (samo POST; GET/HEAD/OPTIONS su izuzeti) — pokreće `git checkout` + `npm install`                           |
 | `/api/db-backups/exportAll`                                                                              | Pokreće `tar` za izvoznu arhivu                                                                                                   |
@@ -119,7 +118,7 @@ privilegijama za udaljene pozivatelje koji koriste samo MCP i kojima ne treba
 
 #### Smjernice za operatere i revizija
 
-Ako OmniRoute pokrećete iza obrnutog proxyja ili tunela (nginx, Caddy, Cloudflare
+Ako 67router pokrećete iza obrnutog proxyja ili tunela (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), provjera povratne petlje i dalje štiti gore navedene
 rute koje mogu pokretati procese — zahtjev čija adresa klijenta nije iz povratne
 petlje odbija se s `403 LOCAL_ONLY` **prije pokretanja autentifikacije**, tako
@@ -158,7 +157,7 @@ odgovornosti operatera:
 - Pretražite zapisnike reverse proxyja / pristupa za gore navedene prefikse uparene s
   adresom klijenta koja nije adresa povratne petlje. Svaki takav pristup koji je vratio `200` umjesto
   `403 LOCAL_ONLY` znači da proxy skriva stvarnu IP adresu klijenta — popravite proxy.
-- `403 LOCAL_ONLY` u OmniRoute zapisnicima za jednu od ovih putanja znači da zaštita
+- `403 LOCAL_ONLY` u 67router zapisnicima za jednu od ovih putanja znači da zaštita
   radi kako je predviđeno, a ne grešku koju treba potisnuti.
 
 #### Rute dostupne na daljinu s kontrolom probnog poziva na mjestu poziva

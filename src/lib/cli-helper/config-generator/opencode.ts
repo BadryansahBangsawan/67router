@@ -134,7 +134,7 @@ export async function fetchOmniRouteCatalog(
       signal: controller.signal,
     });
     if (!response.ok) {
-      throw new Error(`OmniRoute /v1/models returned ${response.status} ${response.statusText}`);
+      throw new Error(`67router /v1/models returned ${response.status} ${response.statusText}`);
     }
     const body = (await response.json()) as unknown;
     const list: unknown[] = Array.isArray(body)

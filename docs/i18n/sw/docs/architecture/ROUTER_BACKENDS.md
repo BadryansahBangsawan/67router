@@ -20,10 +20,10 @@ Jukumu la injini linafafanuliwa na **mihimili miwili huru**, iliyosimbwa pamoja 
 `RouterBackendDefinition` ya rejista:
 
 1. **Mzunguko wa maisha** (`RouterBackendLifecycle`) — _jinsi injini inavyoendeshwa_:
-   - `in-process` — inaendeshwa ndani ya mchakato wa Node wa OmniRoute (mfululizo asili wa TS).
-   - `supervised` — mchakato-toto wa ndani ambao OmniRoute husakinisha/huanzisha/husimamisha/hukagua afya yake
+   - `in-process` — inaendeshwa ndani ya mchakato wa Node wa 67router (mfululizo asili wa TS).
+   - `supervised` — mchakato-toto wa ndani ambao 67router husakinisha/huanzisha/husimamisha/hukagua afya yake
      kupitia `ServiceSupervisor`, kisha huitumia kama muunganisho wa mtoa huduma.
-   - `external` — endpoint ya HTTP ambayo OmniRoute hutuma maombi kwake lakini **haisimamii**
+   - `external` — endpoint ya HTTP ambayo 67router hutuma maombi kwake lakini **haisimamii**
      (imesanidiwa kwa URL ya msingi ya env).
    - `disabled` — imesajiliwa lakini haiwezi kuchaguliwa.
 2. **Mhimili wa uteuzi** (backend ya uelekezaji wa relay) — _ikiwa relay hutuma maombi kwake_:

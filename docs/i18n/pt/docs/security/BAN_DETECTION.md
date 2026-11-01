@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute analisa as respostas de erro dos serviços a montante à procura de sinais que indiquem que uma
+O 67router analisa as respostas de erro dos serviços a montante à procura de sinais que indiquem que uma
 **conta de fornecedor está permanentemente inativa** (suspensa / desativada / banida por violação dos Termos de Serviço) e, quando
 é encontrada uma correspondência, coloca essa ligação num **estado terminal `banned`**, para que deixe de
 ser selecionada para pedidos. É isto que o cartão de definições **Segurança → Palavras-chave de banimento**

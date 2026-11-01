@@ -6,7 +6,7 @@
 
 ## Tổng quan
 
-Tất cả các route API quản lý OmniRoute đều được phân loại vào một trong ba tầng bảo vệ. Việc phân loại là tĩnh, được định nghĩa trong `src/server/authz/routeGuard.ts` và được đánh giá trước khi bất kỳ nhánh xác thực nào khác chạy.
+Tất cả các route API quản lý 67router đều được phân loại vào một trong ba tầng bảo vệ. Việc phân loại là tĩnh, được định nghĩa trong `src/server/authz/routeGuard.ts` và được đánh giá trước khi bất kỳ nhánh xác thực nào khác chạy.
 
 ## Các tầng
 
@@ -26,9 +26,9 @@ tiến trình — một nhóm CVE đã biết
 **GHSA-fhh6-4qxv-rpqj là gì (nhóm hình thức tấn công):** một máy chủ quản lý/tác tử
 cung cấp endpoint khởi chạy tiến trình con (`npm install`, `node`, trình duyệt,
 proxy, `git`, `tar`, …). Nếu endpoint đó có thể được truy cập từ bên ngoài máy chủ —
-do người vận hành đặt OmniRoute phía sau đường hầm nginx/Cloudflare/Tailscale và
+do người vận hành đặt 67router phía sau đường hầm nginx/Cloudflare/Tailscale và
 JWT bị rò rỉ, hoặc xác thực bị cấu hình sai — kẻ tấn công sẽ biến việc "gọi API"
-thành "chạy lệnh trên máy chủ" (thực thi mã từ xa). OmniRoute ngăn chặn điều này
+thành "chạy lệnh trên máy chủ" (thực thi mã từ xa). 67router ngăn chặn điều này
 bằng cách thực thi **kiểm tra máy chủ loopback vô điều kiện, trước mọi bước kiểm tra xác thực**,
 trên mọi tuyến có khả năng tạo tiến trình: token bị rò rỉ qua đường hầm vẫn không
 thể truy cập chức năng tạo tiến trình.
@@ -58,7 +58,6 @@ phân loại là chỉ dành cho máy cục bộ.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — trình lắng nghe http-proxy + proxy hệ thống                                                                        |
 | `/api/settings/mitm`                                                                                     | Bật chặn bắt MITM (trạng thái proxy cấp hệ thống)                                                                                      |
 | `/api/issue-agent/`                                                                                      | Tác tử xử lý sự cố — khởi chạy công cụ cục bộ trên kho mã                                                                              |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugin — tải/thực thi qua `worker_threads` + `child_process`                                                                           |
 | `/api/middleware/`                                                                                       | Middleware người dùng — tải/thực thi mã của người vận hành trong cùng tiến trình                                                       |
 | `/api/system/version`                                                                                    | Tự động cập nhật (chỉ POST; GET/HEAD/OPTIONS được miễn) — khởi chạy `git checkout` + `npm install`                                     |
 | `/api/db-backups/exportAll`                                                                              | Khởi chạy `tar` để tạo tệp lưu trữ xuất                                                                                                |
@@ -119,7 +118,7 @@ dành cho các trình gọi từ xa chỉ dùng MCP mà không cần quyền qu�
 
 #### Hướng dẫn dành cho người vận hành & kiểm toán
 
-Nếu bạn chạy OmniRoute phía sau proxy ngược hoặc đường hầm (nginx, Caddy, Cloudflare
+Nếu bạn chạy 67router phía sau proxy ngược hoặc đường hầm (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), kiểm tra loopback vẫn bảo vệ các
 tuyến có khả năng khởi tạo tiến trình ở trên — yêu cầu có địa chỉ máy khách không phải loopback sẽ bị từ chối với
 `403 LOCAL_ONLY` **trước khi quá trình xác thực chạy**, vì vậy JWT bị rò rỉ không thể kích hoạt việc khởi tạo tiến trình. Vẫn còn hai
@@ -157,7 +156,7 @@ trách nhiệm dành cho người vận hành:
 - Tìm kiếm trong nhật ký reverse proxy / truy cập của bạn các tiền tố nêu trên đi kèm
   địa chỉ máy khách không phải loopback. Bất kỳ lượt truy cập nào như vậy trả về `200` thay vì
   `403 LOCAL_ONLY` đều có nghĩa là proxy đang che giấu IP thực của máy khách — hãy sửa proxy.
-- Một mục `403 LOCAL_ONLY` trong nhật ký của OmniRoute đối với một trong các đường dẫn này cho thấy cơ chế bảo vệ
+- Một mục `403 LOCAL_ONLY` trong nhật ký của 67router đối với một trong các đường dẫn này cho thấy cơ chế bảo vệ
   đang hoạt động đúng như dự kiến, không phải lỗi cần bỏ qua.
 
 #### Các route có thể truy cập từ xa với cổng kiểm tra tại điểm gọi

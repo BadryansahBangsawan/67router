@@ -4,7 +4,7 @@
 
 ---
 
-Bu belge, OmniRoute'a eklenen geri bildirim odaklı uyarlanabilir yönlendirme temelini
+Bu belge, 67router'a eklenen geri bildirim odaklı uyarlanabilir yönlendirme temelini
 açıklamaktadır. Bilinçli olarak küçük tutulmuştur: tür belirtilmiş bir yönlendirme-sonucu
 kanalı, mevcut auto-combo puanlayıcısını besleyen çevrimiçi bir kalite sinyali, isteğe
 bağlı bir OpenTelemetry dışa aktarıcısı ve bir açıklanabilirlik uç noktası sunar. Mevcut
@@ -13,7 +13,7 @@ matrisi, autopilot) **değiştirmez** — onu tamamlar.
 
 ## 1. Mimari bağlam
 
-OmniRoute, bir **istek kritik yoluna** ve bir **kontrol/zeka düzlemine** sahip bir veri
+67router, bir **istek kritik yoluna** ve bir **kontrol/zeka düzlemine** sahip bir veri
 düzlemidir. Kritik yol hızlı, bellek açısından verimli, asenkron, dayanıklı ve
 öngörülebilir kalmalıdır. Değerlendirme, kalite puanlama, deneyler ve geçmişe dönük
 analiz kontrol düzlemine aittir.
@@ -23,7 +23,7 @@ AI Aracısı / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   veri düzlemi (hızlı, senkron, bellek içi)
+│    67router        │   veri düzlemi (hızlı, senkron, bellek içi)
 │ yönlendirme / yük   │
 │ devretme            │
 │ sağlık / koruma     │
@@ -44,16 +44,15 @@ AI Aracısı / IDE
 
 ### Önceden mevcut olanlar (denetlendi, yinelenmedi)
 
-| Kavram                                               | Mevcut uygulama                                                                                       |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Kullanılabilirlik (trafik gönderebilir miyiz?)       | Devre kesici (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB'de kalıcı), bağlantı bekleme süresi, model kilitleme |
-| Sağlık raporlaması                                   | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                               |
-| Gölge trafik                                         | `open-sse/services/combo/shadowRouting.ts`                                                            |
-| Korumalar                                            | `src/lib/guardrails/` (ön/son kancalar)                                                               |
-| Tam eşleşmeli önbellek                               | `src/lib/semanticCache.ts` (imza tabanlı)                                                             |
-| Değerlendiriciler / değerlendirme odaklı yönlendirme | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                  |
-| Combo kararı açıklanabilirliği                       | `open-sse/services/combo/decisionTrace.ts`                                                            |
-| Pano gerçek zamanlı olayları                         | `src/lib/events/eventBus.ts` (UI bildirim kanalı, `unknown` yükler, 100 girdilik geçmiş)              |
+| Kavram                                         | Mevcut uygulama                                                                                       |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Kullanılabilirlik (trafik gönderebilir miyiz?) | Devre kesici (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB'de kalıcı), bağlantı bekleme süresi, model kilitleme |
+| Sağlık raporlaması                             | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                               |
+| Gölge trafik                                   | `open-sse/services/combo/shadowRouting.ts`                                                            |
+| Korumalar                                      | `src/lib/guardrails/` (ön/son kancalar)                                                               |
+| Tam eşleşmeli önbellek                         | `src/lib/semanticCache.ts` (imza tabanlı)                                                             |
+| Combo kararı açıklanabilirliği                 | `open-sse/services/combo/decisionTrace.ts`                                                            |
+| Pano gerçek zamanlı olayları                   | `src/lib/events/eventBus.ts` (UI bildirim kanalı, `unknown` yükler, 100 girdilik geçmiş)              |
 
 Yönlendirme olayı katmanı, `eventBus`'ın yeniden uygulanması **değildir**: bu veri
 yolu, panonun gerçek zamanlı bildirim kanalıdır (tür belirtilmiş _olay adları_, opak
@@ -235,7 +234,7 @@ TTFT/ITL/kesintiye uğrama bilgileri `RoutingEvent` içine (`ttftMs`, `itlMs`) a
 Dosyalar: `open-sse/services/routing/otel.ts`
 
 - Bağımlılık içermeyen OTLP/HTTP JSON dışa aktarıcısı (global `fetch` kullanır, `@opentelemetry/*` SDK'sını kullanmaz).
-- Span'ler, GenAI semantik kurallarına (`gen_ai.provider.name`, `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`, `gen_ai.completion.finish_reason`, `gen_ai.system`) ve OmniRoute yönlendirme özniteliklerine (sonuç, durum, ttft, yeniden denemeler, yedek seçeneğe geçiş) uyar.
+- Span'ler, GenAI semantik kurallarına (`gen_ai.provider.name`, `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`, `gen_ai.completion.finish_reason`, `gen_ai.system`) ve 67router yönlendirme özniteliklerine (sonuç, durum, ttft, yeniden denemeler, yedek seçeneğe geçiş) uyar.
 - `record()` yalnızca sınırlı bir tampona ekleme yapar (O(1)); bir arka plan zamanlayıcısı, `POST {endpoint}/v1/traces` aracılığıyla eşzamansız olarak boşaltım yapar. Aşırı yük altında en eski olaylar düşürülür (`dropped` sayacı) — veri düzlemine hiçbir zaman geri basınç uygulanmaz.
 - **Yapılandırılmadığı sürece devre dışıdır.** `OMNIROUTE_OTEL_ENDPOINT` (veya `OTEL_EXPORTER_OTLP_ENDPOINT`) ayarlanmalıdır; aksi hâlde sink kaydedilmez ve hiçbir OTel kodu çalışmaz.
 
@@ -248,12 +247,11 @@ Dosyalar: `open-sse/services/routing/otel.ts`
 
 ## 6. Değerlendirme düzlemi entegrasyonu (Future AGI hazırlığı)
 
-OmniRoute, Future AGI'yi (veya herhangi bir değerlendiriciyi) **bir bağımlılık değil, potansiyel bir zekâ/değerlendirme arka ucu** olarak ele alır. Entegrasyon noktaları:
+67router, Future AGI'yi (veya herhangi bir değerlendiriciyi) **bir bağımlılık değil, potansiyel bir zekâ/değerlendirme arka ucu** olarak ele alır. Entegrasyon noktaları:
 
 - Bir `RoutingEventSink`, olayları eşzamansız olarak bir değerlendiriciye iletebilir.
 - `MemoryRoutingEventStore` ve kalite anlık görüntüsü, değerlendiriciye ham karar akışını sağlar.
 - Gelecekteki bir `Evaluator` (deterministik, yerel hakem, HTTP, WASM), olayları/izleri tüketip aynı `getQualityScore`/kalite faktörü yolunu besleyen bir `QualityScore` döndürebilir.
-- Mevcut değerlendirme odaklı yönlendirme (`open-sse/services/evalRouting.ts`), etkinleştirildiğinde combo hedeflerini `eval_runs` başarı oranlarına göre zaten yeniden sıralar.
 
 Hiçbir değerlendirme, istek yolunda eşzamanlı olarak çalışmaz ve ağ geçidi, değerlendirici olmadan da tamamen çalışır.
 

@@ -6,6 +6,7 @@ import { Field } from "@omniroute/ui-kit/field";
 import { Badge, Button, Card, Input, Toggle } from "@/shared/components";
 import Icon from "@/shared/components/Icon";
 import { useNotificationStore } from "@/store/notificationStore";
+import { SettingsSection } from "./SettingsSection";
 
 type ModelLockoutSettings = {
   enabled: boolean;
@@ -340,16 +341,11 @@ export default function ModelLockoutCard() {
   }
 
   return (
-    <Card className="p-6">
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <Icon name="gpp_maybe" size={20} className="text-primary" />
-            <h2 className="text-lg font-bold">{t("modelLockout")}</h2>
-          </div>
-          <p className="text-sm text-text-muted">{t("modelLockoutPageDescription")}</p>
-        </div>
-        {hasChanges ? (
+    <SettingsSection
+      title={t("modelLockout")}
+      description={t("modelLockoutPageDescription")}
+      action={
+        hasChanges ? (
           <div className="flex flex-wrap gap-2">
             <Button size="sm" variant="secondary" onClick={handleReset}>
               {tc("cancel")}
@@ -362,9 +358,9 @@ export default function ModelLockoutCard() {
           <Button size="sm" variant="secondary" onClick={handleResetDefaults}>
             {t("resetDefaults")}
           </Button>
-        )}
-      </div>
-
+        )
+      }
+    >
       <div className="space-y-5">
         {/* Master toggle */}
         <div className="rounded-lg border border-border bg-bg-subtle px-4 py-3">
@@ -517,6 +513,6 @@ export default function ModelLockoutCard() {
           </p>
         </div>
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

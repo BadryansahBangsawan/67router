@@ -45,7 +45,7 @@ npm run test:e2e           # 任意だが推奨
 v3.8.48 までプロジェクトで使用していた完全自動フローを復元します。
 
 **初回のみのセットアップ（オーナー）:** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`、repo `OmniRoute`、workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`、repo `67router`、workflow `npm-publish.yml`
 （environment: none）。これが設定されるまでは、自動ステップが `ENEEDAUTH` で失敗します。
 `publish_mode=staged`（下記）または `direct` を指定して再ディスパッチしてください。
 

@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute oferă **două** modalități de a utiliza OpenAI Codex:
+67router oferă **două** modalități de a utiliza OpenAI Codex:
 
 | Furnizor               | Cum comunică cu OpenAI                                                                                                                                                                                                 | Restricție de utilizare                                                          |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | **`codex`**            | Retransmite tokenul dvs. OAuth ChatGPT/OpenAI direct către Responses API                                                                                                                                               | **Da** — sesiunea oficială nu este autorizată pentru utilizare prin proxy/router |
-| **`codex-app-server`** | Controlează propriul **`codex app-server` al Codex CLI** prin JSON-RPC/WebSocket; CLI-ul deține și își reîmprospătează automat credențialele OAuth (`~/.codex/auth.json`), exact ca într-o sesiune interactivă `codex` | **Nu** — OmniRoute nu retransmite niciodată un token către API                   |
+| **`codex-app-server`** | Controlează propriul **`codex app-server` al Codex CLI** prin JSON-RPC/WebSocket; CLI-ul deține și își reîmprospătează automat credențialele OAuth (`~/.codex/auth.json`), exact ca într-o sesiune interactivă `codex` | **Nu** — 67router nu retransmite niciodată un token către API                    |
 
 Deoarece `codex-app-server` nu retransmite niciodată un token, acesta nu este
 supus restricției privind retransmiterea sesiunii. Totuși, necesită un **Codex CLI
@@ -21,7 +21,7 @@ accesibil la URL-ul app-server configurat**, iar acel CLI trebuie să fie
 ## 1. Arhitectură
 
 ```
-┌─ Aplicația OmniRoute ────────────┐        ┌─ Sidecar codex-app-server ──────────┐
+┌─ Aplicația 67router ────────────┐        ┌─ Sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token de capabilitate)       │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ Panoul de control nu suprascrie niciodată un fișier `~/.codex/auth.json` exist
   autentificare.
 - **Utilizator public, fără codex instalat local** — irelevant: sidecar-ul
   conține CLI-ul. Utilizatorul se autentifică doar prin panoul de control.
-- **OmniRoute instalat direct pe sistem (fără sidecar, codex pe gazdă)** —
+- **67router instalat direct pe sistem (fără sidecar, codex pe gazdă)** —
   configurați `OMNIROUTE_CODEX_APPSERVER_WS` către propriul dvs.
   `codex app-server` și asigurați-vă că instanța codex de pe gazdă este
   autentificată; sugestia „codex nu este instalat” apare dacă binarul lipsește.

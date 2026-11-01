@@ -17,9 +17,9 @@ Ovaj ADR definiše kako su `ts` (izvorni), `bifrost`, `cliproxy`, `9router` i Vi
 Uloga mehanizma (engine) opisana je **dvjema nezavisnim osama**, kodiranim zajedno u `RouterBackendDefinition` registra:
 
 1. **Životni ciklus** (`RouterBackendLifecycle`) — _kako mehanizam radi_:
-   - `in-process` — radi unutar OmniRoute Node procesa (izvorni TS cjevovod).
-   - `supervised` — lokalni podređeni proces koji OmniRoute instalira/pokreće/zaustavlja/provjerava ispravnost putem `ServiceSupervisor`-a, a zatim ga koristi kao vezu provajdera.
-   - `external` — HTTP krajnja tačka (endpoint) na koju OmniRoute šalje zahtjeve, ali kojom **ne** upravlja (konfigurisano putem env base URL-a).
+   - `in-process` — radi unutar 67router Node procesa (izvorni TS cjevovod).
+   - `supervised` — lokalni podređeni proces koji 67router instalira/pokreće/zaustavlja/provjerava ispravnost putem `ServiceSupervisor`-a, a zatim ga koristi kao vezu provajdera.
+   - `external` — HTTP krajnja tačka (endpoint) na koju 67router šalje zahtjeve, ali kojom **ne** upravlja (konfigurisano putem env base URL-a).
    - `disabled` — registrovan, ali nije moguće odabrati.
 2. **Osa odabira** (relay routing backend) — _da li relay šalje zahtjeve na njega_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` u

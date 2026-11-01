@@ -47,7 +47,7 @@ npm run test:e2e           # необязательно, но рекоменду
 токена вообще нет).
 
 **Однократная настройка (владелец):** npmjs.com → пакет `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: владелец `diegosouzapw`, репозиторий `OmniRoute`, рабочий процесс `npm-publish.yml`
+Publisher_ → GitHub: владелец `diegosouzapw`, репозиторий `67router`, рабочий процесс `npm-publish.yml`
 (окружение: отсутствует). Пока эта настройка не выполнена, автоматический шаг завершается ошибкой `ENEEDAUTH`:
 повторно запустите его с `publish_mode=staged` (см. ниже) или `direct`.
 

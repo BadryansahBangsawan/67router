@@ -4,7 +4,7 @@
 
 ---
 
-AgentBridge on OmniRouten MITM (Man-in-the-Middle) -välityspalvelin, joka sieppaa IDE-tekoälyagenttien HTTPS-liikenteen ja reitittää sen uudelleen OmniRouten yhtenäisen reititysmoottorin kautta. Se tukee **10:tä IDE-agenttia** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ja Trae (tutkittavana) — minkä ansiosta OmniRoute on markkinoiden kattavimmin tekoälyavusteisia koodausagentteja tukeva MITM-välityspalvelin.
+AgentBridge on 67routerin MITM (Man-in-the-Middle) -välityspalvelin, joka sieppaa IDE-tekoälyagenttien HTTPS-liikenteen ja reitittää sen uudelleen 67routerin yhtenäisen reititysmoottorin kautta. Se tukee **10:tä IDE-agenttia** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code ja Trae (tutkittavana) — minkä ansiosta 67router on markkinoiden kattavimmin tekoälyavusteisia koodausagentteja tukeva MITM-välityspalvelin.
 
 **Hallintapaneelin sijainti:** `/dashboard/tools/agent-bridge`
 **Sivupalkin ryhmä:** Työkalut (Cloud Agents -ryhmän jälkeen)
@@ -16,34 +16,34 @@ AgentBridge on OmniRouten MITM (Man-in-the-Middle) -välityspalvelin, joka siepp
 
 ### Mikä AgentBridge on?
 
-Kun IDE-agentti (esim. GitHub Copilot, Cursor, Claude Code) tekee API-kutsun, se muodostaa yhteyden suoraan ylävirran tekoälypalveluntarjoajaan (OpenAI, Anthropic jne.). AgentBridge sieppaa tämän yhteyden läpinäkyvästi TLS-tasolla — ilman että agentin määrityksiä tarvitsee muuttaa — ja kirjoittaa pyynnön uudelleen OmniRouten kautta.
+Kun IDE-agentti (esim. GitHub Copilot, Cursor, Claude Code) tekee API-kutsun, se muodostaa yhteyden suoraan ylävirran tekoälypalveluntarjoajaan (OpenAI, Anthropic jne.). AgentBridge sieppaa tämän yhteyden läpinäkyvästi TLS-tasolla — ilman että agentin määrityksiä tarvitsee muuttaa — ja kirjoittaa pyynnön uudelleen 67routerin kautta.
 
 Tämä tarkoittaa, että voit:
 
-- **Reitittää minkä tahansa agentin mille tahansa palveluntarjoajalle**: Copilot keskustelee OpenAI:n kanssa? Ohjaa se Anthropic Claudeen, Geminiin tai mihin tahansa OmniRouten 375 palveluntarjoajasta.
+- **Reitittää minkä tahansa agentin mille tahansa palveluntarjoajalle**: Copilot keskustelee OpenAI:n kanssa? Ohjaa se Anthropic Claudeen, Geminiin tai mihin tahansa 67routerin 375 palveluntarjoajasta.
 - **Käyttää mallikartoituksia**: `gemini-3-flash` → `claude-sonnet-4.7` läpinäkyvästi käsittelijätasolla.
 - **Tarkkailla kaikkea agenttiliikennettä**: jokainen siepattu pyyntö julkaistaan [Traffic Inspectorissa](./TRAFFIC_INSPECTOR.md).
-- **Hyödyntää OmniRouten vikasietoisuutta**: yhdistelmäreititys, circuit breaker -katkaisijat, varareititykset ja kustannusseuranta toimivat myös IDE-agenttiliikenteelle.
+- **Hyödyntää 67routerin vikasietoisuutta**: yhdistelmäreititys, circuit breaker -katkaisijat, varareititykset ja kustannusseuranta toimivat myös IDE-agenttiliikenteelle.
 
 ### Asemointi markkinoihin nähden
 
-| Ominaisuus                       | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| -------------------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity                      |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot                   |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)                       |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex                     |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE                       |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries                   |    —    |    ✓     |        —        |             ✓             |
-| Claude Code                      |    —    |    —     |        ✓        |             ✓             |
-| Open Code                        |    —    |    —     |        ✓        |             ✓             |
-| Trae                             |    —    |    —     |        —        |      🔍 Selvitetään       |
-| Hallintapaneelin käyttöliittymä  |    ✓    |    ✗     |        ✗        |             ✓             |
-| Traffic Inspector                |    ✗    |    ✗     |        ✓        |             ✓             |
-| OmniRoute-reititys               |    ✗    |    ✗     |        ✗        |             ✓             |
-| Mallikartoituksen käyttöliittymä |    ✗    |    ✗     |        ✗        |             ✓             |
-| Ohituslista                      |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ylävirran CA-varmenne            |    ✗    |    ✗     |        ✓        |             ✓             |
+| Ominaisuus                       | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| -------------------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity                      |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot                   |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)                       |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex                     |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE                       |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries                   |    —    |    ✓     |        —        |            ✓             |
+| Claude Code                      |    —    |    —     |        ✓        |            ✓             |
+| Open Code                        |    —    |    —     |        ✓        |            ✓             |
+| Trae                             |    —    |    —     |        —        |      🔍 Selvitetään      |
+| Hallintapaneelin käyttöliittymä  |    ✓    |    ✗     |        ✗        |            ✓             |
+| Traffic Inspector                |    ✗    |    ✗     |        ✓        |            ✓             |
+| 67router-reititys                |    ✗    |    ✗     |        ✗        |            ✓             |
+| Mallikartoituksen käyttöliittymä |    ✗    |    ✗     |        ✗        |            ✓             |
+| Ohituslista                      |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ylävirran CA-varmenne            |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (portti 443, CJS-aliprosessi)
     │  ratkaisee kohteen Host-otsakkeen SNI:n perusteella
     │  luo SNI-kohtaisen TLS-varmenteen, jonka AgentBridge CA on allekirjoittanut
     ├── Ohitusluettelo täsmää? → TCP-läpivienti (ei salauksen purkua)
-    ├── Kohde täsmää? → fetch → OmniRoute-reititin (portti 20128)
+    ├── Kohde täsmää? → fetch → 67router-reititin (portti 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() pyynnön rungolle/otsakkeille
     │               ├── TrafficBuffer.push() — julkaisee Traffic Inspectoriin
@@ -205,7 +205,7 @@ Käyttöjärjestelmän on luotettava AgentBridge-CA-varmenteeseen, ennen kuin ID
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Avainnippu):**
@@ -261,10 +261,10 @@ Esimerkkejä GitHub Copilotin `/etc/hosts`-merkinnöistä:
 
 Määritä lähde → kohde -määritykset kunkin agenttikortin mallimääritystaulukossa:
 
-| Lähdemalli (agentin natiivi malli) | Kohdemalli (OmniRoute) |
-| ---------------------------------- | ---------------------- |
-| `gpt-4o`                           | `claude-sonnet-4.7`    |
-| `*` (jokerimerkki)                 | `claude-haiku-4.7`     |
+| Lähdemalli (agentin natiivi malli) | Kohdemalli (67router) |
+| ---------------------------------- | --------------------- |
+| `gpt-4o`                           | `claude-sonnet-4.7`   |
+| `*` (jokerimerkki)                 | `claude-haiku-4.7`    |
 
 Jokerimerkki `*` yhdistää kaikki tunnistamattomat mallit määritettyyn kohteeseen. Määritykset tallennetaan `agent_bridge_mappings`-tauluun.
 
@@ -277,7 +277,7 @@ Jokerimerkki `*` yhdistää kaikki tunnistamattomat mallit määritettyyn kohtee
 
 ### 3.5 Riski-ilmoitus
 
-AgentBridge sieppaa tunnistetiedot (OAuth-tunnukset, API-avaimet), joita IDE käyttää todentautuessaan palveluntarjoajien taustapalveluihin. Ne **peitetään ennen lokiin kirjaamista** (katso §2.7), mutta ne näkyvät OmniRouten MITM-kerrokselle. Kunkin agentin ensimmäisen aktivoinnin yhteydessä näytetään suljettava riski-ilmoitusikkuna.
+AgentBridge sieppaa tunnistetiedot (OAuth-tunnukset, API-avaimet), joita IDE käyttää todentautuessaan palveluntarjoajien taustapalveluihin. Ne **peitetään ennen lokiin kirjaamista** (katso §2.7), mutta ne näkyvät 67routerin MITM-kerrokselle. Kunkin agentin ensimmäisen aktivoinnin yhteydessä näytetään suljettava riski-ilmoitusikkuna.
 
 ### 3.6 Ylläpito ja diagnostiikka
 
@@ -397,7 +397,7 @@ Tunnistus käyttää käyttöjärjestelmäkohtaisia polkuja ja binääritarkistu
 
 ### Ohitusluettelo arkaluonteisille isännille
 
-Ohitusluettelo varmistaa, että rahoituslaitosten, OAuth-/SSO-palveluntarjoajien ja muiden arkaluonteisten isäntien liikennettä **ei koskaan pureta**. Niiden TLS-liikenne kulkee läpinäkyvän TCP-tunnelin kautta — OmniRoute ei koskaan näe salaamatonta sisältöä.
+Ohitusluettelo varmistaa, että rahoituslaitosten, OAuth-/SSO-palveluntarjoajien ja muiden arkaluonteisten isäntien liikennettä **ei koskaan pureta**. Niiden TLS-liikenne kulkee läpinäkyvän TCP-tunnelin kautta — 67router ei koskaan näe salaamatonta sisältöä.
 
 Oletusarvoiset ohitusmallit sisältävät:
 
@@ -448,7 +448,7 @@ Vaihtoehtoisesti voit määrittää AgentBridgen asetuksissa ei-etuoikeutetun po
 
 Jos IDE näyttää TLS-virheitä AgentBridgen käynnistämisen jälkeen:
 
-1. Varmista, että varmenne on asennettu: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) tai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Varmista, että varmenne on asennettu: `security find-certificate -c "OmniRoute MITM CA"` (macOS) tai `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Jotkin sovellukset ylläpitävät omaa luottamusvarastoaan (Firefox, Chrome Linuxissa). Suorita "Luota varmenteeseen" uudelleen ja tarkista NSS-/Firefox-kohtainen varmennevarasto.
 3. Käynnistä IDE uudelleen varmenteeseen luottamisen jälkeen — käynnissä olevat TLS-istunnot käyttävät vanhaa luottamustilaa.
 
@@ -499,7 +499,7 @@ Automaattinen tunnistus käyttää yleisiä asennuspolkuja. Jos tunnistus epäon
 Jos AgentBridge sieppaa pyynnöt, mutta kaikki pyynnöt epäonnistuvat:
 
 1. Varmista, että vähintään yksi palveluntarjoaja on yhdistetty osoitteessa `/dashboard/providers`
-2. Tarkista OmniRoute-palvelimen lokit: `APP_LOG_LEVEL=debug` tiedostossa `.env`
+2. Tarkista 67router-palvelimen lokit: `APP_LOG_LEVEL=debug` tiedostossa `.env`
 3. Varmista, että `OMNIROUTE_BASE_URL` osoittaa oikeaan reitittimen päätepisteeseen (oletus: `http://127.0.0.1:20128`)
 
 ---

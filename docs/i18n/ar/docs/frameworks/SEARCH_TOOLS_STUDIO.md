@@ -169,5 +169,4 @@
 - الخطة الرئيسية: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - خطة الميزة: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - سجل مزوّدي البحث: `open-sse/config/searchRegistry.ts`
-- استوديو Playground (المكوّن المشترك `ExportCodeModal` و`codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - الواجهة الخلفية لجلب الويب: `src/app/api/v1/web/fetch/route.ts`

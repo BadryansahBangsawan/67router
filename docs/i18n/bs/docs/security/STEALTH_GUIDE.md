@@ -10,11 +10,11 @@
 > **Zadnje ažurirano:** 2026-09-02 — v3.8.51
 > **Ciljna grupa:** Inženjeri koji održavaju stealth integracije specifične za provajdere.
 
-OmniRoute se integriše sa provajderima čiji edge serveri aktivno vrše fingerprinting ne-zvaničnih klijenata (TLS JA3/JA4, redoslijed zaglavlja, oblik JSON tijela, integrity tokeni). Ova stranica dokumentuje stealth površine koje OmniRoute izlaže i gdje su one implementirane.
+67router se integriše sa provajderima čiji edge serveri aktivno vrše fingerprinting ne-zvaničnih klijenata (TLS JA3/JA4, redoslijed zaglavlja, oblik JSON tijela, integrity tokeni). Ova stranica dokumentuje stealth površine koje 67router izlaže i gdje su one implementirane.
 
 ## Pravna i etička napomena
 
-Stealth funkcionalnosti postoje kako bi OmniRoute mogao djelovati kao sloj kompatibilnosti između zvaničnih računa u vlasništvu korisnika (Claude Code CLI, Codex, Antigravity, Cursor, itd.) i OmniRoute-ovog jedinstvenog API-ja. Oni **nisu** namijenjeni za izbjegavanje detekcije prevara, dijeljenje kredencijala ili kršenje Uslova korištenja (ToS) provajdera. Održavatelji očekuju da operateri poštuju upstream ToS koji su potpisali prilikom kreiranja računa.
+Stealth funkcionalnosti postoje kako bi 67router mogao djelovati kao sloj kompatibilnosti između zvaničnih računa u vlasništvu korisnika (Claude Code CLI, Codex, Antigravity, Cursor, itd.) i 67router-ovog jedinstvenog API-ja. Oni **nisu** namijenjeni za izbjegavanje detekcije prevara, dijeljenje kredencijala ili kršenje Uslova korištenja (ToS) provajdera. Održavatelji očekuju da operateri poštuju upstream ToS koji su potpisali prilikom kreiranja računa.
 
 ---
 
@@ -75,7 +75,7 @@ prije nego što potvrdite paritet sa upstream browserom.
 
 ## Claude Code Stealth Bundle
 
-Kada je `cliCompatMode` uključen, OmniRoute preoblikuje odlazne Claude zahtjeve tako da budu neprepoznatljivi od `claude-cli` saobraćaja. Sarađuju tri modula:
+Kada je `cliCompatMode` uključen, 67router preoblikuje odlazne Claude zahtjeve tako da budu neprepoznatljivi od `claude-cli` saobraćaja. Sarađuju tri modula:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -91,7 +91,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (Client Content Hash)
 
-Provjera integriteta na strani servera koju zvanični Claude Code CLI izračunava putem Bun/Zig. OmniRoute to ponovo implementira pomoću `xxhash-wasm`:
+Provjera integriteta na strani servera koju zvanični Claude Code CLI izračunava putem Bun/Zig. 67router to ponovo implementira pomoću `xxhash-wasm`:
 
 1. Serijalizacija tijela sa `cch=00000;` placeholderom
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -137,7 +137,7 @@ Srodni moduli u istom bundle-u:
 
 ## Antigravity Stealth
 
-Antigravity zahtjevi čuvaju tekst pozivaoca bajt-po-bajt. OmniRoute ne umetne zero-width karaktere u promptove niti preimenuje/ubacuje alate kako bi imitirao IDE klijenta.
+Antigravity zahtjevi čuvaju tekst pozivaoca bajt-po-bajt. 67router ne umetne zero-width karaktere u promptove niti preimenuje/ubacuje alate kako bi imitirao IDE klijenta.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -147,13 +147,13 @@ Uklanja Stainless SDK markere (`x-stainless-lang`, `x-stainless-package-version`
 
 `ANTIGRAVITY_CREDITS=always` (koristi `open-sse/executors/antigravity.ts`) rutira **svaki** zahtjev kroz Antigravity AI Credit Overages (plaćeni Google krediti) umjesto da dopusti Google-ovom free-tier kvoti da ograničava pristup. Ovo je dokumentovano kao funkcionalnost, ali je **najčešći prijavljeni prekršaj ToS-a koji viđamo** — više Google Ultra naloga je banovano sa `403 / "service disabled for ToS violation" / insufficient_quota` nakon nekoliko sati rada sa `=always`.
 
-Upstream primjena je na **Google-ovoj strani**, ne postoji ništa što OmniRoute može spriječiti. Naziv env varijable i postojeća dokumentacija čine da zvuči kao siguran prekidač; nije.
+Upstream primjena je na **Google-ovoj strani**, ne postoji ništa što 67router može spriječiti. Naziv env varijable i postojeća dokumentacija čine da zvuči kao siguran prekidač; nije.
 
 **Zašto ovo agresivnije aktivira detekciju zloupotrebe nego samo free-tier upotreba:**
 
 - Kontinuirani automatizovani trošak na jednom Google nalogu signalizira drugačije nego kada free-tier dostigne kvotu i stane.
 - Credit overages nemaju limit brzine (rate ceiling), tako da pogrešno konfigurisan klijent može potrošiti nekoliko stotina USD u minutima i izgledati kao preprodaja API ključeva ili bot saobraćaj.
-- Više OmniRoute korisnika koji paralelno koriste overage kredite sa iste eksterne IP adrese pojačava ovaj signal.
+- Više 67router korisnika koji paralelno koriste overage kredite sa iste eksterne IP adrese pojačava ovaj signal.
 
 **Preporučeni pristup:**
 
@@ -192,7 +192,7 @@ Uključite/isključite po provajderu putem env varijabli (vidi ispod). Kada je o
 
 ## MITM Proxy (Antigravity, Linux/macOS/Windows)
 
-Za CLI alate čiji binarni fajlovi ne mogu biti preusmjereni putem `OPENAI_BASE_URL`, OmniRoute pokreće lokalni TLS-terminirajući proxy. Endpointi se nalaze pod `src/app/api/cli-tools/antigravity-mitm/`.
+Za CLI alate čiji binarni fajlovi ne mogu biti preusmjereni putem `OPENAI_BASE_URL`, 67router pokreće lokalni TLS-terminirajući proxy. Endpointi se nalaze pod `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metoda | Endpoint                                | Svrha                                              |
 | ------ | --------------------------------------- | -------------------------------------------------- |
@@ -273,7 +273,7 @@ IP adresa provajdera se **uvijek zadržava** — prekidač samo mijenja struktur
 
 ## Sanitizacija Dolaznih Zaglavlja (Inbound Header Sanitization)
 
-OmniRoute čisti dolazna zaglavlja klijenta prije prosljeđivanja, tako da zahtjev koji dolazi iz Cursora ne otkrije `User-Agent: Cursor/X.Y.Z` Claude upstream-u. Pogledajte `src/shared/constants/upstreamHeaders.ts` za denylist, koji se održava u skladu sa Zod shemama i unit testovima.
+67router čisti dolazna zaglavlja klijenta prije prosljeđivanja, tako da zahtjev koji dolazi iz Cursora ne otkrije `User-Agent: Cursor/X.Y.Z` Claude upstream-u. Pogledajte `src/shared/constants/upstreamHeaders.ts` za denylist, koji se održava u skladu sa Zod shemama i unit testovima.
 
 ---
 

@@ -7,11 +7,11 @@
 Para consultar el manifiesto compartido de ejecutables, los entornos secundarios restringidos y la configuración persistente de
 Gemini, consulta [Contratos de inicio de la CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute incluye una familia de comandos `setup-*` que configuran una CLI de
-programación (Codex, Claude Code, OpenCode, Cline, …) para usar OmniRoute como backend, de modo que
-la herramienta se comunica con **un** único endpoint y OmniRoute dirige las solicitudes al proveedor adecuado con
+67router incluye una familia de comandos `setup-*` que configuran una CLI de
+programación (Codex, Claude Code, OpenCode, Cline, …) para usar 67router como backend, de modo que
+la herramienta se comunica con **un** único endpoint y 67router dirige las solicitudes al proveedor adecuado con
 conmutación por error automática. Cada comando lee el catálogo de modelos **activo** desde una instancia de
-OmniRoute en ejecución (local o remota) y escribe el archivo de configuración propio de la herramienta en **tu**
+67router en ejecución (local o remota) y escribe el archivo de configuración propio de la herramienta en **tu**
 máquina. La clave de API se referencia mediante una variable de entorno siempre que la herramienta
 lo permite. Los comandos que guardan un archivo de entorno local de la herramienta se indican a continuación.
 
@@ -53,7 +53,7 @@ guías detalladas de cada herramienta:
 
 - [Configuración de Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Configuración de Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Modo remoto](./REMOTE-MODE.md) — controla una instancia remota de OmniRoute (VPS / Tailnet) desde tu portátil
+- [Modo remoto](./REMOTE-MODE.md) — controla una instancia remota de 67router (VPS / Tailnet) desde tu portátil
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — la extensión OmniCopilot; también puede ejecutar estos
   comandos `setup-*` por ti desde el editor
 
@@ -89,7 +89,7 @@ servidor y escribe la configuración localmente.
 
 Notas sobre los indicadores (verificadas en el código fuente de los comandos):
 
-- `--remote <url>` — obtiene el catálogo de un OmniRoute remoto (reemplaza `--port`
+- `--remote <url>` — obtiene el catálogo de un 67router remoto (reemplaza `--port`
   y el contexto activo). `--api-key <key>` proporciona la credencial para ese
   servidor (de forma predeterminada, usa la variable de entorno `OMNIROUTE_API_KEY` o el token del contexto activo).
 - `--only <patterns>` — subcadenas separadas por comas; conserva únicamente los ID de modelos que coincidan
@@ -110,7 +110,7 @@ Notas sobre los indicadores (verificadas en el código fuente de los comandos):
   **codex** mediante argumentos `-c model_providers.omniroute.*`. **Qwen es el único destino de ejecución
   que exige obligatoriamente `--model`**: `omniroute run qwen` sin este indicador termina
   con el código `2` y un error explícito.
-- `--port <port>` — puerto local de OmniRoute (valor predeterminado: `20128`; se ignora cuando se especifica `--remote`).
+- `--port <port>` — puerto local de 67router (valor predeterminado: `20128`; se ignora cuando se especifica `--remote`).
   Está presente en todos los comandos `setup-*` y en ambos iniciadores.
 - Códigos de salida de `omniroute run`: el código de salida propio de la CLI secundaria se propaga
   literalmente; `2` = argumentos no válidos (destino no compatible, falta el argumento obligatorio
@@ -155,7 +155,7 @@ no se presentan como destinos ejecutables.
 
 ## Uso local
 
-Con OmniRoute ejecutándose en `localhost:20128`, simplemente ejecuta el comando de configuración para tu
+Con 67router ejecutándose en `localhost:20128`, simplemente ejecuta el comando de configuración para tu
 herramienta. El catálogo se obtiene del servidor local.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Inicia sin escribir ninguna configuración (solo mediante inyección de variables de entorno):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute local
-omniroute launch-codex           # Codex CLI → OmniRoute local
+omniroute launch                 # Claude Code → 67router local
+omniroute launch-codex           # Codex CLI → 67router local
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Uso remoto
 
-Dirige cualquier comando de configuración a una instancia remota de OmniRoute con `--remote` + `--api-key`. El
+Dirige cualquier comando de configuración a una instancia remota de 67router con `--remote` + `--api-key`. El
 catálogo se obtiene de la instancia remota; la configuración se escribe en tu máquina local.
 
 ```bash
@@ -245,7 +245,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Ambas formas escriben un **perfil de autenticación** de 5dive, y cada puesto de `claude` vinculado a ese
-perfil se comunica entonces con OmniRoute. Hay tres aspectos específicos de este destino:
+perfil se comunica entonces con 67router. Hay tres aspectos específicos de este destino:
 
 - **Se ejecuta en el host de la flota como root.** Los verbos de 5dive actúan sobre unidades locales de systemd
   y un directorio de estado propiedad de root; no existe un modo remoto. La receta vuelve a ejecutarse mediante
@@ -263,7 +263,7 @@ perfil se comunica entonces con OmniRoute. Hay tres aspectos específicos de est
 La clave de API se entrega a 5dive mediante **stdin** (`--api-key=-`), por lo que nunca aparece en la
 salida de `ps`.
 
-Apuntar el perfil a un **combo** de OmniRoute, en lugar de a un único modelo, es lo que
+Apuntar el perfil a un **combo** de 67router, en lugar de a un único modelo, es lo que
 proporciona a la flota la conmutación por error entre proveedores: cuando el endpoint principal dejó de responder por completo a mitad de un turno
 en la ejecución registrada en
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), el agente completó
@@ -273,7 +273,7 @@ los pasos restantes con el fallback y nunca expuso la interrupción.
 
 ## Convenciones de la URL base (qué herramientas requieren `/v1`)
 
-OmniRoute expone la interfaz de OpenAI en `/v1`, la interfaz de Anthropic en la raíz
+67router expone la interfaz de OpenAI en `/v1`, la interfaz de Anthropic en la raíz
 y una interfaz nativa de Gemini en `/v1beta`. Cada integración está configurada según el formato que
 espera su herramienta (verificado en el código fuente del comando):
 
@@ -295,7 +295,7 @@ espera su herramienta (verificado en el código fuente del comando):
 ## Conservación de las dependencias nativas al actualizar: `--include=optional`
 
 Cuando actualizas con `omniroute update` (después de confirmar o con `--apply`),
-OmniRoute ejecuta la instalación con `--include=optional` incorporado:
+67router ejecuta la instalación con `--include=optional` incorporado:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -324,13 +324,13 @@ está desactualizado), `--apply` (instala sin solicitar confirmación), `--chang
 Contrato verificado con `@google/gemini-cli` 0.50.0: la CLI respeta
 `GOOGLE_GEMINI_BASE_URL` y envía `POST /v1beta/models/<model>:generateContent`
 (y `:streamGenerateContent?alt=sse`) a esa URL, exactamente la interfaz nativa
-de Gemini de OmniRoute (`/v1beta`). `omniroute run gemini` lo configura automáticamente:
+de Gemini de 67router (`/v1beta`). `omniroute run gemini` lo configura automáticamente:
 
-- `GOOGLE_GEMINI_BASE_URL` → la URL base activa de OmniRoute (raíz, sin `/v1`);
-- `GEMINI_API_KEY` → la credencial de OmniRoute resuelta (opción/entorno/contexto);
+- `GOOGLE_GEMINI_BASE_URL` → la URL base activa de 67router (raíz, sin `/v1`);
+- `GEMINI_API_KEY` → la credencial de 67router resuelta (opción/entorno/contexto);
 - un **`GEMINI_CLI_HOME` temporal y aislado**, cuyo `.gemini/settings.json`
   selecciona la autenticación `gemini-api-key`, para que una sesión OAuth de Google almacenada (Code Assist)
-  nunca reemplace el inicio dirigido a OmniRoute; se elimina después de salir;
+  nunca reemplace el inicio dirigido a 67router; se elimina después de salir;
 - **higiene del entorno**: se eliminan del entorno del proceso hijo `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` y `GOOGLE_GENAI_USE_GCA` (que redirigirían
   la autenticación a Vertex/Code Assist), y se establece
@@ -354,7 +354,7 @@ del protocolo de agentes para `/dashboard/acp-agents`.
 
 Las ejecuciones deterministas de regresión del plan de lanzamiento se realizan en CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Para validar los binarios REALES contra un servidor
-OmniRoute REAL, existe un entorno de pruebas opcional en
+67router REAL, existe un entorno de pruebas opcional en
 `tests/integration/upstream-cli-smoke.int.test.ts`. Nunca se ejecuta automáticamente
 (cada subprueba se omite salvo que `RUN_CLI_SMOKE=1`), pasa la credencial mediante el NOMBRE
 de una variable de entorno (nunca mediante su valor), censura las cadenas con formato de clave

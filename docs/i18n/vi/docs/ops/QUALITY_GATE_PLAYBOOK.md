@@ -4,7 +4,7 @@
 
 ---
 
-> **Tài liệu này là gì.** Một bản đánh giá chuyên sâu về hệ thống cổng chất lượng của OmniRoute,
+> **Tài liệu này là gì.** Một bản đánh giá chuyên sâu về hệ thống cổng chất lượng của 67router,
 > được đối chiếu với các thông lệ tốt nhất trong ngành, **đồng thời** cung cấp danh mục toàn diện về mọi
 > điểm kiểm tra chất lượng và một **kế hoạch tái triển khai không phụ thuộc công cụ** để áp dụng cùng hệ thống này cho
 > bất kỳ dự án nào. Được tạo vào ngày 2026-06-16 dựa trên trạng thái thực tế của kho lưu trữ (không dựa vào trí nhớ).
@@ -106,62 +106,62 @@ một số mẫu đã được ngành đặt tên rõ ràng — đây là tín h
 
 ### 1. Phong cách & định dạng (tất định, nhanh)
 
-- **OmniRoute:** Prettier + ESLint qua lint-staged (pre-commit), 2 khoảng trắng/dấu ngoặc kép/100 cột.
+- **67router:** Prettier + ESLint qua lint-staged (pre-commit), 2 khoảng trắng/dấu ngoặc kép/100 cột.
 - **Tổng quát:** một trình định dạng có khả năng tự động sửa lỗi + một linter, chạy trong pre-commit trên các tệp đã được staged.
 
 ### 2. Kiểu dữ liệu
 
-- **OmniRoute:** `typecheck:core` (bắt buộc) + `typecheck:noimplicit:core` (khuyến nghị) + ngưỡng tăng tiến `type-coverage` 92.17% + ngân sách any cho từng tệp.
+- **67router:** `typecheck:core` (bắt buộc) + `typecheck:noimplicit:core` (khuyến nghị) + ngưỡng tăng tiến `type-coverage` 92.17% + ngân sách any cho từng tệp.
 - **Tổng quát:** kiểm tra kiểu nghiêm ngặt trong CI + chỉ số độ bao phủ kiểu theo ngưỡng tăng tiến + ngân sách `any`/cơ chế thoát cho từng tệp.
 
 ### 3. Kiểm thử (cường độ)
 
-- **OmniRoute:** 2 trình chạy không chồng lặp (Node native + vitest), 8 shard, độ bao phủ toàn cục 60/60/60/60 + ngưỡng tăng tiến ~76% + **8 ngưỡng tối thiểu theo mô-đun cho các mô-đun trọng yếu** + kiểm thử dựa trên thuộc tính hằng đêm + **kiểm thử đột biến** hằng đêm.
+- **67router:** 2 trình chạy không chồng lặp (Node native + vitest), 8 shard, độ bao phủ toàn cục 60/60/60/60 + ngưỡng tăng tiến ~76% + **8 ngưỡng tối thiểu theo mô-đun cho các mô-đun trọng yếu** + kiểm thử dựa trên thuộc tính hằng đêm + **kiểm thử đột biến** hằng đêm.
 - **Tổng quát:** một hoặc nhiều trình chạy kiểm thử + ngưỡng bao phủ **tuyệt đối** (chống mức 0) + **ngưỡng tăng tiến** độ bao phủ (chống suy giảm) + **ngưỡng tối thiểu theo mô-đun cho mã có rủi ro cao** (chống định luật Goodhart) + kiểm thử dựa trên thuộc tính cho logic thuần túy + **kiểm thử đột biến** hằng đêm làm thước đo thực sự cho chất lượng kiểm thử.
 
 ### 4. Chính sách kiểm thử (chống lách luật)
 
-- **OmniRoute:** `pr-test-policy` (mã production bắt buộc phải có kiểm thử), `check-test-masking` (chặn các assert bị làm yếu), `pr-evidence` (tuyên bố thành công phải kèm khối bằng chứng), `test-discovery` (mọi kiểm thử đều được một trình chạy thu thập).
+- **67router:** `pr-test-policy` (mã production bắt buộc phải có kiểm thử), `check-test-masking` (chặn các assert bị làm yếu), `pr-evidence` (tuyên bố thành công phải kèm khối bằng chứng), `test-discovery` (mọi kiểm thử đều được một trình chạy thu thập).
 - **Tổng quát:** cổng kiểm soát "mã mới ⇒ kiểm thử mới" + trình phát hiện assert bị xóa hoặc mệnh đề hiển nhiên + yêu cầu bằng chứng (TDD hoặc kiểm thử còn hiệu lực) + bảo đảm không có kiểm thử nào bị bỏ sót ngoài các glob.
 
 ### 5. Độ phức tạp & tình trạng mã nguồn (các ngưỡng tăng tiến)
 
-- **OmniRoute:** cảnh báo ESLint (3769↓), mã trùng lặp jscpd (5.72%↓), độ phức tạp cyclomatic+max-lines (1800↓), độ phức tạp nhận thức sonarjs (753↓), mã chết/export không được sử dụng knip (339↓), kích thước tệp theo từng tệp (đóng băng, chỉ được giảm), phụ thuộc vòng (Tarjan tùy chỉnh, bắt buộc).
+- **67router:** cảnh báo ESLint (3769↓), mã trùng lặp jscpd (5.72%↓), độ phức tạp cyclomatic+max-lines (1800↓), độ phức tạp nhận thức sonarjs (753↓), mã chết/export không được sử dụng knip (339↓), kích thước tệp theo từng tệp (đóng băng, chỉ được giảm), phụ thuộc vòng (Tarjan tùy chỉnh, bắt buộc).
 - **Tổng quát:** áp dụng ngưỡng tăng tiến cho mọi chỉ số sức khỏe mã nguồn (cảnh báo, trùng lặp, độ phức tạp cyclomatic **và** nhận thức, mã chết, kích thước tệp, chu trình import). Định hướng luôn là "không được suy giảm".
 
 ### 6. Bảo mật tĩnh (SAST + bí mật)
 
-- **OmniRoute:** CodeQL (ngưỡng tăng tiến cảnh báo = 0), gitleaks (`[extend] useDefault=true` — cực kỳ quan trọng!), SonarQube, các quy tắc bảo mật tùy chỉnh (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ngưỡng tăng tiến cảnh báo = 0), gitleaks (`[extend] useDefault=true` — cực kỳ quan trọng!), SonarQube, các quy tắc bảo mật tùy chỉnh (public-creds, error-helper, route-guard-membership, route-validation).
 - **Tổng quát:** SAST (CodeQL/Sonar/semgrep) với ngưỡng tăng tiến cảnh báo + trình quét bí mật sử dụng **bộ quy tắc mặc định được kế thừa** (cấu hình tùy chỉnh ghi đè cấu hình mặc định = điểm mù) + các cổng bảo mật Hard Rule đặc thù cho dự án.
 
 ### 7. Chuỗi cung ứng (phần phụ thuộc)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (danh sách cho phép SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` chống slopsquatting (danh sách cho phép + tuổi ≥72 giờ).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (danh sách cho phép SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` chống slopsquatting (danh sách cho phép + tuổi ≥72 giờ).
 - **Tổng quát:** SCA đa nguồn + danh sách giấy phép được phép + kiểm tra tính toàn vẹn của lockfile + danh sách phần phụ thuộc được phép kèm kiểm tra tuổi/typosquatting + bot cập nhật theo nhóm.
 
 ### 8. Chuỗi cung ứng (build & phát hành)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), nguồn gốc SLSA (`--provenance`), OpenSSF Scorecard (hằng tuần), gia cố workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), nguồn gốc SLSA (`--provenance`), OpenSSF Scorecard (hằng tuần), gia cố workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **Tổng quát:** tạo SBOM khi phát hành + nguồn gốc được ký (SLSA L2+) + Scorecard chạy theo lịch + gia cố mọi workflow (token có đặc quyền tối thiểu, không lưu thông tin xác thực khi checkout trong workflow không đẩy mã, ghim action bằng SHA).
 
 ### 9. Hợp đồng & API
 
-- **OmniRoute:** oasdiff (thay đổi gây phá vỡ OpenAPI), schemathesis (fuzz hợp đồng hằng đêm), openapi-coverage (% route được lập tài liệu, ngưỡng tăng tiến 38.3%), openapi-security-tiers (đặc tả so với route-guard).
+- **67router:** oasdiff (thay đổi gây phá vỡ OpenAPI), schemathesis (fuzz hợp đồng hằng đêm), openapi-coverage (% route được lập tài liệu, ngưỡng tăng tiến 38.3%), openapi-security-tiers (đặc tả so với route-guard).
 - **Tổng quát:** so sánh hợp đồng để phát hiện thay đổi gây phá vỡ (oasdiff/buf) + fuzz dựa trên thuộc tính theo đặc tả (schemathesis) + độ bao phủ tài liệu theo ngưỡng tăng tiến + tính nhất quán giữa đặc tả↔mã nguồn.
 
 ### 10. Tài liệu & i18n (chống lỗi thời)
 
-- **OmniRoute:** docs-sync (các phiên bản được phản chiếu), docs-counts-sync (số liệu trong tài liệu so với mã nguồn), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ngưỡng tăng tiến 80.1%).
+- **67router:** docs-sync (các phiên bản được phản chiếu), docs-counts-sync (số liệu trong tài liệu so với mã nguồn), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + ngưỡng tăng tiến 80.1%).
 - **Tổng quát:** đồng bộ phiên bản/số liệu/biến môi trường giữa tài liệu và mã nguồn (dùng cổng kiểm soát, không chỉ dựa vào niềm tin) + xác thực liên kết nội bộ + độ bao phủ i18n theo ngưỡng tăng tiến.
 
 ### 11. Chống ảo giác / tính nhất quán (danh mục hiếm gặp)
 
-- **OmniRoute:** known-symbols (điều phối bằng chuỗi ⇒ ký hiệu còn tồn tại), provider-consistency, fetch-targets (lệnh fetch từ client ⇒ route thực sự tồn tại), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (điều phối bằng chuỗi ⇒ ký hiệu còn tồn tại), provider-consistency, fetch-targets (lệnh fetch từ client ⇒ route thực sự tồn tại), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Tổng quát:** với mọi "nguồn chân lý bị trùng lặp" (registry, điều phối bằng chuỗi, tham chiếu xuyên tầng), cần có một cổng kiểm soát chứng minh hai phía khớp nhau. Phát hiện tình trạng mục ruỗng mà kiểm tra kiểu/kiểm thử không phát hiện được.
 
 ### 12. Khả năng phục hồi & miền nghiệp vụ (đặc thù sản phẩm)
 
-- **OmniRoute:** chaos (tiêm lỗi), heap-growth (rò rỉ), k6 (kiểm thử kéo dài), promptfoo+garak (red-team LLM theo OWASP LLM Top 10), 3 định luật về khả năng phục hồi (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (tiêm lỗi), heap-growth (rò rỉ), k6 (kiểm thử kéo dài), promptfoo+garak (red-team LLM theo OWASP LLM Top 10), 3 định luật về khả năng phục hồi (circuit-breaker/cooldown/lockout).
 - **Tổng quát:** xác định các chế độ lỗi trong miền nghiệp vụ **của bạn** và thiết lập một cổng kiểm soát cho từng chế độ (ngay cả khi chỉ chạy hằng đêm). Với ứng dụng AI: red-team chống injection. Với hệ thống phân tán: chaos + kiểm thử rò rỉ + kiểm thử kéo dài.
 
 ---

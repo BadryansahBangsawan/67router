@@ -13,7 +13,7 @@ User-Agent, mga flag na `anthropic-beta`, mga header ng Stainless SDK, atbp.).
 ## Mabilisang pagsisimula — gamitin ang native na `agentrouter` provider (inirerekomenda)
 
 Para sa karamihan ng mga user, **walang kinakailangang espesyal na setup**. May kasamang built-in na
-`agentrouter` provider ang OmniRoute na naka-bake in na ang buong wire image ng Claude Code (tingnan ang
+`agentrouter` provider ang 67router na naka-bake in na ang buong wire image ng Claude Code (tingnan ang
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Upang gamitin ito:
 
 1. Buksan ang **Dashboard → Providers → Add Provider**.
@@ -34,7 +34,7 @@ base URL, chat path, o hanay ng mga header.
 
 ## Advanced: pagkonekta sa pamamagitan ng uri ng provider na compatible sa Claude Code
 
-Sinusuportahan din ng OmniRoute ang AgentRouter (at mga katulad na relay) sa pamamagitan ng uri ng provider na **compatible sa Claude Code**
+Sinusuportahan din ng 67router ang AgentRouter (at mga katulad na relay) sa pamamagitan ng uri ng provider na **compatible sa Claude Code**
 (`anthropic-compatible-cc-*`), na gumagamit ng
 Anthropic Messages API na may tamang wire image. Ang generic na
 `openai-compatible-chat` provider na nakaturo sa `https://agentrouter.org` ay
@@ -47,14 +47,14 @@ Code.
 
 - Isang AgentRouter account at API key. Makakakuha ang mga bagong nag-sign up ng mga libreng credit sa pamamagitan ng affiliate
   link sa [README](../README.md) ng proyekto.
-- Gumaganang OmniRoute na naka-enable ang feature flag na `ENABLE_CC_COMPATIBLE_PROVIDER`
+- Gumaganang 67router na naka-enable ang feature flag na `ENABLE_CC_COMPATIBLE_PROVIDER`
   (tingnan sa ibaba).
 
 ## 1. I-enable ang uri ng provider na compatible sa CC
 
 Ang uri ng provider na compatible sa Claude Code ay nasa likod ng isang feature flag dahil
 nagpapadala ito ng trapikong lubos na ginagaya ang opisyal na Claude Code client. I-enable ito sa pamamagitan ng
-pagtatakda ng environment variable bago simulan ang OmniRoute:
+pagtatakda ng environment variable bago simulan ang 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

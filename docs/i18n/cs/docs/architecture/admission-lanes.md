@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute má **dva** procesně lokální systémy drah s odlišným rozsahem působnosti. Tyto systémy se
+67router má **dva** procesně lokální systémy drah s odlišným rozsahem působnosti. Tyto systémy se
 doplňují; provozovatelé by měli vědět, na který z nich se dívají.
 
 ## 1. Přijímání na úrovni bajtů v rámci celého procesu (`chatBodyAdmission.ts`)

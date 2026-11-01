@@ -7,7 +7,7 @@
 > **Sandhedskilde:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Senest opdateret:** 2026-09-22 — scope-navnerum peger på MCP-SERVER.md
 
-OmniRoute har en rutebevidst autorisationspipeline, der beskytter hver API-anmodning. Klassificeringen er **deterministisk** og **lukket som standard** — alt, der ikke kan klassificeres, ender som `MANAGEMENT` og kræver en session eller et token på administrationsniveau. Denne side forklarer modellen for teknikere, der vedligeholder ruter eller designer nye slutpunkter.
+67router har en rutebevidst autorisationspipeline, der beskytter hver API-anmodning. Klassificeringen er **deterministisk** og **lukket som standard** — alt, der ikke kan klassificeres, ender som `MANAGEMENT` og kræver en session eller et token på administrationsniveau. Denne side forklarer modellen for teknikere, der vedligeholder ruter eller designer nye slutpunkter.
 
 ![AuthZ-pipeline (3 ruteklasser + politikevaluering)](../diagrams/exported/authz-pipeline.svg)
 
@@ -228,8 +228,6 @@ adgangstoken-legitimationsoplysningerne. Se [Administrationsgodkendelse](../guid
 Klient-API-nøglehåndhævelsen bruger `isRequireApiKeyEnabled()` i `src/shared/utils/featureFlags.ts` og ikke en direkte læsning af `process.env.REQUIRE_API_KEY`. Det har betydning for udrullede instanser: at ændre `REQUIRE_API_KEY` i Dashboard → Feature Flags gemmer en DB-overskrivning og påvirker straks `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` og andre klient-API-godkendelseskontroller, der deler denne hjælper. Hvis feature flag-lageret ikke kan læses, afviser klient-API-godkendelsen adgang og kræver en nøgle.
 
 ## Inkompatibel ændring — v3.8.0
-
-Slutpunkterne `/api/v1/agents/tasks/*` og `/api/resilience/model-cooldowns` **kræver nu administrationsgodkendelse** (commit `588a0333`). Klienter, der tidligere sendte en normal API-nøgle uden adgangsområdet `manage`, modtager `403`. Migrering: Tildel enten nøglen adgangsområdet `manage` i API Keys-dashboardet, eller brug en dashboard-session, hvor der er logget ind.
 
 ## Adfærdsændring — v3.8.2
 

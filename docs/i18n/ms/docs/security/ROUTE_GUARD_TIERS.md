@@ -6,7 +6,7 @@
 
 ## Gambaran Keseluruhan
 
-Semua laluan API pengurusan OmniRoute dikelaskan dalam salah satu daripada tiga
+Semua laluan API pengurusan 67router dikelaskan dalam salah satu daripada tiga
 peringkat perlindungan. Pengelasan ini bersifat statik, ditakrifkan dalam
 `src/server/authz/routeGuard.ts`, dan dinilai sebelum mana-mana cabang pengesahan
 lain dijalankan.
@@ -29,10 +29,10 @@ kelas CVE yang diketahui
 **Apakah itu GHSA-fhh6-4qxv-rpqj (kelas serangan):** pelayan pengurusan/ejen
 mendedahkan titik akhir yang melancarkan subproses (`npm install`, `node`, pelayar,
 proksi, `git`, `tar`, …). Jika titik akhir tersebut boleh dicapai dari luar hos —
-kerana pengendali meletakkan OmniRoute di belakang terowong nginx/Cloudflare/Tailscale
+kerana pengendali meletakkan 67router di belakang terowong nginx/Cloudflare/Tailscale
 dan JWT terdedah, atau pengesahan tersalah konfigurasi — penyerang menukar
 "panggil API" menjadi "jalankan perintah pada hos" (pelaksanaan kod jauh).
-OmniRoute mencegah perkara ini dengan menguatkuasakan **semakan hos gelung balik
+67router mencegah perkara ini dengan menguatkuasakan **semakan hos gelung balik
 tanpa syarat, sebelum sebarang semakan pengesahan**, pada setiap laluan yang
 mampu memulakan proses: token yang terdedah melalui terowong masih tidak dapat
 mencapai fungsi pemulaan proses.
@@ -62,7 +62,6 @@ daripadanya tidak diklasifikasikan sebagai setempat sahaja.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — pendengar http-proxy + proksi sistem                                                         |
 | `/api/settings/mitm`                                                                                     | Mendayakan pemintasan MITM (keadaan proksi peringkat sistem)                                                     |
 | `/api/issue-agent/`                                                                                      | Ejen isu — memulakan perkakasan setempat terhadap repositori                                                     |
-| `/api/plugins/`, `/api/plugins`                                                                          | Pemalam — memuatkan/melaksanakan melalui `worker_threads` + `child_process`                                      |
 | `/api/middleware/`                                                                                       | Perisian tengah pengguna — memuatkan/melaksanakan kod pengendali dalam proses                                    |
 | `/api/system/version`                                                                                    | Kemas kini automatik (POST sahaja; GET/HEAD/OPTIONS dikecualikan) — memulakan `git checkout` + `npm install`     |
 | `/api/db-backups/exportAll`                                                                              | Memulakan `tar` untuk arkib eksport                                                                              |
@@ -123,7 +122,7 @@ berkeistimewaan lebih rendah untuk pemanggil MCP sahaja dari jauh yang tidak sep
 
 #### Panduan pengendali & pengauditan
 
-Jika anda menjalankan OmniRoute di belakang proksi terbalik atau terowong (nginx, Caddy, Cloudflare
+Jika anda menjalankan 67router di belakang proksi terbalik atau terowong (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), semakan gelung balik masih melindungi laluan yang mampu
 melancarkan proses di atas — permintaan yang alamat kliennya bukan gelung balik akan ditolak dengan
 `403 LOCAL_ONLY` **sebelum pengesahan dijalankan**, jadi JWT yang bocor tidak boleh mencapai pelancaran proses. Dua
@@ -161,7 +160,7 @@ tanggungjawab pengendali masih kekal:
 - Cari dalam log proksi songsang / akses anda untuk awalan di atas yang dipadankan dengan
   alamat klien bukan gelung balik. Sebarang capaian sedemikian yang mengembalikan `200` dan bukannya
   `403 LOCAL_ONLY` bermakna proksi menyembunyikan IP klien sebenar — baiki proksi tersebut.
-- `403 LOCAL_ONLY` dalam log OmniRoute bagi salah satu laluan ini menandakan pelindung
+- `403 LOCAL_ONLY` dalam log 67router bagi salah satu laluan ini menandakan pelindung
   berfungsi seperti yang dimaksudkan, bukannya ralat yang perlu disembunyikan.
 
 #### Laluan yang boleh dicapai dari jauh dengan pagar semakan pada tapak panggilan

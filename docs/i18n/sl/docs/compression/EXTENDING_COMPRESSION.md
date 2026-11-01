@@ -4,7 +4,7 @@
 
 ---
 
-> **Na kratko**: Mehanizem stiskanja OmniRoute je **razširljiv** — registrirate lahko lastne mehanizme, distribuirate jezikovne pakete za nove jezike in sestavljate večstopenjske cevovode. Ta vodnik prikazuje, kako.
+> **Na kratko**: Mehanizem stiskanja 67router je **razširljiv** — registrirate lahko lastne mehanizme, distribuirate jezikovne pakete za nove jezike in sestavljate večstopenjske cevovode. Ta vodnik prikazuje, kako.
 
 **Sorodni vodniki:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Na ravni projekta (naloženo ob zagonu)
 ```
 
-Lahko pa jih programsko naložite iz vtičnika:
+Or register it programmatically at startup:
 
 ```ts
-// V vašem vtičniku
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK vtičnika izpostavlja kavlje onRequest / onResponse / onError. Registrirajte
-  // mehanizem, ko se naloži modul vtičnika (ali ob prvem onRequest); odregistrirajte ga
-  // v lastnem postopku zaustavitve.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Ob zaustavitvi:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ v izbirniku strategij prek svojega `id`. Integracijo preizkusite tako, da ga vkl
 
 ## Ustvarjanje jezikovnih paketov
 
-Stiskanje v slogu Caveman uporablja **pravila, prilagojena posameznemu jeziku**, za obravnavo mašil, omiljevanja izjav in razvlečenih vzorcev v vsakem naravnem jeziku. OmniRoute vključuje **6 jezikovnih paketov**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Stiskanje v slogu Caveman uporablja **pravila, prilagojena posameznemu jeziku**, za obravnavo mašil, omiljevanja izjav in razvlečenih vzorcev v vsakem naravnem jeziku. 67router vključuje **6 jezikovnih paketov**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struktura paketa
 
@@ -388,7 +379,7 @@ Izhod pogona N postane vhod pogona N+1.
 
 ### Načini stiskanja
 
-OmniRoute za vsako zahtevo izbere **EN način** glede na konfiguracijo, pragove samodejnega sprožanja in preglasitve kombinacij.
+67router za vsako zahtevo izbere **EN način** glede na konfiguracijo, pragove samodejnega sprožanja in preglasitve kombinacij.
 Razpoložljivi načini so opredeljeni v `open-sse/services/compression/types.ts` (tip `CompressionMode`):
 
 | Način        | Pogoni               | Primer uporabe                                                                                                                                                                                                  |
@@ -508,10 +499,10 @@ const result = applyStackedCompression(body, [
 
 ## Pravilnik sinhronizacije z izvornimi projekti
 
-OmniRoute v README navaja več izvornih projektov, ki jim pripisuje zasluge za navdih pri svojih mehanizmih stiskanja
+67router v README navaja več izvornih projektov, ki jim pripisuje zasluge za navdih pri svojih mehanizmih stiskanja
 (»navdihnjeno z RTK, Caveman, LLMLingua-2, Troglodita«). Pogosto vprašanje sodelujočih
 je: **ko izvorni RTK doda nov filter orodja ali Caveman doda paket
-pravil, kako to pride v OmniRoute?** Ta razdelek vsebuje uradni odgovor.
+pravil, kako to pride v 67router?** Ta razdelek vsebuje uradni odgovor.
 
 ### Vključene kopije v primerjavi z neodvisnimi implementacijami
 
@@ -532,7 +523,7 @@ izvorne kopije, iz katere bi lahko izvedli `git pull` — prav zato v README pi�
 **Ni samodejnega spremljanja izdaj izvornih projektov in ni oznake `compression-sync`
 ** — namerno. Ker so mehanizmi ponovne implementacije, filter izvornega RTK
 ali paket pravil Caveman ni združen kot koda, temveč je **na novo izražen kot novo
-pravilo/filter v lastnem formatu OmniRoute** (glejte
+pravilo/filter v lastnem formatu 67router** (glejte
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) in je občasno vključen prek
 običajnega PR-ja. Zgornje razširitvene točke (mehanizem po meri, jezikovni paket, filter RTK)
 so odobreni način za prispevanje take izboljšave.
@@ -546,14 +537,14 @@ Nedavni primeri prav takšnega postopka:
 ### Headroom (posredniški strežnik za stiskanje vhoda)
 
 Headroom je **v celoti interen** — pripeta vključena posnetkovna različica kodeka `gcf` skupaj z
-lastnimi plastmi `smartcrusher` / `toon` / `tabular` projekta OmniRoute. Razen vključene
+lastnimi plastmi `smartcrusher` / `toon` / `tabular` projekta 67router. Razen vključene
 kopije ni aktivnega izvornega projekta, ki bi mu bilo treba slediti; posodobitve za `gcf` se osvežujejo
 ročno, ko se kodek spremeni, in se znova preverijo glede na omejitev proračuna stiskanja
 (`check:compression-budget`).
 
 ### Predlaganje izboljšave, navdihnjene z izvornim projektom
 
-1. **Ne vključujte izvorne kode** — pravilo/filter izvornega projekta na novo izrazite v formatu OmniRoute.
+1. **Ne vključujte izvorne kode** — pravilo/filter izvornega projekta na novo izrazite v formatu 67router.
 2. Dodajte ga prek ustrezne spodnje razširitvene točke (jezikovni paket, filter RTK ali
    mehanizem po meri).
 3. V opisu PR-ja navedite izvorni projekt (pripis zaslug), vendar ne

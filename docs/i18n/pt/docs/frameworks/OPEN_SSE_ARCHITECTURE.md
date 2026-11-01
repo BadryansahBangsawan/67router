@@ -4,7 +4,7 @@
 
 ---
 
-> **Resumindo**: `open-sse/` é o motor principal de streaming que processa todos os pedidos a LLM no OmniRoute. Contém ~1.400 ficheiros que implementam o pipeline de pedidos, executores, serviços, servidor MCP e camada de tradução. Este guia explica como as diferentes partes se integram.
+> **Resumindo**: `open-sse/` é o motor principal de streaming que processa todos os pedidos a LLM no 67router. Contém ~1.400 ficheiros que implementam o pipeline de pedidos, executores, serviços, servidor MCP e camada de tradução. Este guia explica como as diferentes partes se integram.
 
 **Fonte:** `open-sse/` (pacote do workspace, ~1.440 ficheiros `.ts` que não são de teste)
 
@@ -12,10 +12,10 @@
 
 ## Porquê um Pacote de Workspace Separado?
 
-`open-sse/` é um **workspace autónomo** no monorepo do OmniRoute por vários motivos:
+`open-sse/` é um **workspace autónomo** no monorepo do 67router por vários motivos:
 
 1. **Reutilização** — `open-sse` é publicado como `@omniroute/open-sse` no npm, pelo que outros projetos podem utilizá-lo de forma independente
-2. **Limites bem definidos** — o motor de streaming está desacoplado da camada de UI/BD específica do OmniRoute
+2. **Limites bem definidos** — o motor de streaming está desacoplado da camada de UI/BD específica do 67router
 3. **Desempenho** — o motor não tem dependências do Next.js, permitindo arranques a frio mais rápidos em contextos de CLI/serverless
 4. **Controlo de versões** — `open-sse` pode publicar versões segundo o seu próprio calendário
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Porquê um transformador separado?
 
-A Responses API é o novo formato da OpenAI com **conversas com estado** (`previous_response_id`). Quando um cliente envia um pedido Responses, o OmniRoute:
+A Responses API é o novo formato da OpenAI com **conversas com estado** (`previous_response_id`). Quando um cliente envia um pedido Responses, o 67router:
 
 1. Converte internamente Responses → Chat Completions
 2. Envia para o fornecedor (qualquer fornecedor que suporte Chat Completions)
@@ -573,5 +573,4 @@ O motor de encaminhamento tem limites de desempenho rigorosos:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — descrição diretório a diretório
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — pontuação baseada em 16 fatores
 - [MCP-SERVER.md](./MCP-SERVER.md) — servidor MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — servidor A2A
 - Código-fonte: `open-sse/` (mais de 400 ficheiros, ~143 mil linhas de código)

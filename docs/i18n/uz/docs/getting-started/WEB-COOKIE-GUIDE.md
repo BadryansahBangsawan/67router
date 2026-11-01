@@ -4,7 +4,7 @@
 
 ---
 
-Web Cookie provayderlari OmniRouteʼga API kaliti o‘rniga mavjud brauzer seansingiz orqali AI xizmatidan foydalanish imkonini beradi. Ular xizmatga uning veb-sayti orqali allaqachon kirish huquqiga ega bo‘lsangiz va OmniRoute ham ayni autentifikatsiya qilingan seansdan foydalanishini istasangiz foydalidir.
+Web Cookie provayderlari 67routerʼga API kaliti o‘rniga mavjud brauzer seansingiz orqali AI xizmatidan foydalanish imkonini beradi. Ular xizmatga uning veb-sayti orqali allaqachon kirish huquqiga ega bo‘lsangiz va 67router ham ayni autentifikatsiya qilingan seansdan foydalanishini istasangiz foydalidir.
 
 API kalitli provayderlardan farqli ravishda, Web Cookie provayderlari brauzeringiz veb-saytga yuboradigan hisob maʼlumotlari yordamida autentifikatsiya qiladi.
 
@@ -51,7 +51,7 @@ DevTools
 
 `Cookie` so‘rov sarlavhasi brauzeringiz muvaffaqiyatli ishlatgan aniq autentifikatsiya maʼlumotlarini o‘z ichiga oladi.
 
-Aksariyat Web Cookie provayderlari uchun OmniRouteʼga aynan shu qiymatni joylashtirish kerak.
+Aksariyat Web Cookie provayderlari uchun 67routerʼga aynan shu qiymatni joylashtirish kerak.
 
 ---
 
@@ -65,7 +65,7 @@ Sozlash jarayoni aksariyat Web Cookie provayderlari uchun bir xil.
 4. Sahifani yangilang.
 5. Autentifikatsiya qilingan chat yoki suhbat so‘rovini oching.
 6. Kerakli autentifikatsiya hisob maʼlumotlarini nusxalang.
-7. OmniRouteʼni oching.
+7. 67routerʼni oching.
 8. **Providers → Add Provider** bo‘limiga o‘ting.
 9. Web Cookie provayderingizni tanlang.
 10. Hisob maʼlumotlarini joylashtiring.
@@ -94,17 +94,17 @@ Turli veb-saytlar autentifikatsiya maʼlumotlarini turlicha saqlaydi. Ayrimlari 
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) — roʻyxatdan oʻtishni talab qilmaydigan bepul foydalanuvchi chat platformasi. Seans saytga ilk tashrifda anonim tarzda yaratiladi va uchta cookie orqali saqlanadi: `uid`, `si_usr_id` va `si_ses_id`. OmniRoute ayni `/api/dispatch` endpointini bitta model identifikatori (`notrack-c`, taxallusi `ntw`) orqali proksi qiladi.
+NoTrack ([notrack.ai](https://notrack.ai)) — roʻyxatdan oʻtishni talab qilmaydigan bepul foydalanuvchi chat platformasi. Seans saytga ilk tashrifda anonim tarzda yaratiladi va uchta cookie orqali saqlanadi: `uid`, `si_usr_id` va `si_ses_id`. 67router ayni `/api/dispatch` endpointini bitta model identifikatori (`notrack-c`, taxallusi `ntw`) orqali proksi qiladi.
 
 ### Ulanish bosqichlari
 
 1. Brauzeringizda [notrack.ai](https://notrack.ai) saytini oching va anonim seans cookiesi oʻrnatilishiga ruxsat bering.
 2. **DevTools → Network** boʻlimini oching, sahifani yangilang va istalgan `/api` soʻrovini bosing.
 3. **Request Headers** boʻlimidan toʻliq `Cookie` sarlavhasi qiymatini nusxalang.
-4. OmniRouteʼda **Providers → Add Provider → NoTrack Web (Free)** boʻlimiga oʻting.
+4. 67routerʼda **Providers → Add Provider → NoTrack Web (Free)** boʻlimiga oʻting.
 5. Cookie satrini `apiKey` maydoniga joylashtiring va **Save** tugmasini bosing.
 
-OmniRoute joylashtirilgan satrdan `uid`, `si_usr_id` va `si_ses_id` qiymatlarini ajratib oladi hamda faqat shu juftliklardan iborat toza `Cookie` sarlavhasini qayta tuzadi — mavjud boʻlsa, tizimga kirgan hisoblar uchun oʻrnatiladigan `nt_session` (`ntk_…` tokeni) ham qoʻshiladi. Uchta qiymatdan birortasi yetishmasa, operatorlar muqobil formatlarni sinab koʻrishi uchun joylashtirilgan xom satr oʻzgartirilmasdan uzatiladi.
+67router joylashtirilgan satrdan `uid`, `si_usr_id` va `si_ses_id` qiymatlarini ajratib oladi hamda faqat shu juftliklardan iborat toza `Cookie` sarlavhasini qayta tuzadi — mavjud boʻlsa, tizimga kirgan hisoblar uchun oʻrnatiladigan `nt_session` (`ntk_…` tokeni) ham qoʻshiladi. Uchta qiymatdan birortasi yetishmasa, operatorlar muqobil formatlarni sinab koʻrishi uchun joylashtirilgan xom satr oʻzgartirilmasdan uzatiladi.
 
 ### Model identifikatorlari
 
@@ -200,7 +200,7 @@ Application
 
 ---
 
-## Cookie brauzerda ishlaydi, ammo OmniRoute’da ishlamaydi
+## Cookie brauzerda ishlaydi, ammo 67router’da ishlamaydi
 
 Baʼzi provayderlar faqat autentifikatsiya qilingan soʻrovlar vaqtida yuboriladigan cookie fayllarini oʻz ichiga oladi.
 

@@ -45,7 +45,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-auth",
     name: "Authentication",
     description:
-      "Manage API key authentication and session tokens. Start here to authenticate requests via Bearer token, obtain session cookies, and configure login requirements for the OmniRoute API.",
+      "Manage API key authentication and session tokens. Start here to authenticate requests via Bearer token, obtain session cookies, and configure login requirements for the 67router API.",
     category: "api",
     area: "auth",
     icon: "lock",
@@ -55,7 +55,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-providers",
     name: "Providers",
     description:
-      "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations across OmniRoute's 375-provider catalog.",
+      "Manage provider connections, API keys, OAuth flows, and connection tests via the REST API. List, add, update, remove, and test AI provider integrations across 67router's 372-provider catalog.",
     category: "api",
     area: "providers",
     icon: "key",
@@ -83,7 +83,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-api-keys",
     name: "API Keys",
     description:
-      "Create, list, rotate, and revoke OmniRoute API keys. Control per-key scopes, spending limits, and expiration. Keys gate access to all proxy and management endpoints.",
+      "Create, list, rotate, and revoke 67router API keys. Control per-key scopes, spending limits, and expiration. Keys gate access to all proxy and management endpoints.",
     category: "api",
     area: "api-keys",
     icon: "vpn_key",
@@ -167,7 +167,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-cli-tools",
     name: "CLI Tools",
     description:
-      "Manage CLI tool integrations exposed via the API. List, configure, and invoke CLI tool plugins that extend OmniRoute's automation surface.",
+      "Manage CLI tool integrations exposed via the API. List, configure, and invoke CLI tool plugins that extend 67router's automation surface.",
     category: "api",
     area: "cli-tools",
     icon: "terminal",
@@ -176,7 +176,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-tunnels",
     name: "Tunnels",
     description:
-      "Create and manage secure tunnels (ngrok, Cloudflare Tunnel, custom) to expose OmniRoute to the internet or share access with remote agents and CI pipelines.",
+      "Create and manage secure tunnels (ngrok, Cloudflare Tunnel, custom) to expose 67router to the internet or share access with remote agents and CI pipelines.",
     category: "api",
     area: "tunnels",
     icon: "vpn_lock",
@@ -185,7 +185,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-sync-cloud",
     name: "Cloud Sync",
     description:
-      "Synchronise OmniRoute configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets.",
+      "Synchronise 67router configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets.",
     category: "api",
     area: "sync-cloud",
     icon: "cloud_sync",
@@ -200,28 +200,19 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     icon: "backup",
   },
   {
-    id: "omni-webhooks",
-    name: "Webhooks",
-    description:
-      "Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, request.failed, quota.exceeded, etc.) and manage delivery retries.",
-    category: "api",
-    area: "webhooks",
-    icon: "webhook",
-  },
-  {
     id: "omni-mcp",
     name: "MCP Server",
     description:
-      "Connect to the OmniRoute MCP server (110 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, memory, skills, providers, and audit tools across 33 permission scopes.",
+      "Connect to the 67router MCP server (89 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, providers, and audit tools across 25 permission scopes.",
     category: "api",
     area: "mcp",
     icon: "electrical_services",
   },
   {
     id: "omni-agents-a2a",
-    name: "Agents & A2A Protocol",
+    name: "A2A Tasks",
     description:
-      "Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities.",
+      "Inspect A2A tasks (the Conductor fleet mirrors its runs into them) through the /api/a2a/tasks REST routes: list, history, detail and cancel.",
     category: "api",
     area: "agents-a2a",
     icon: "device_hub",
@@ -239,7 +230,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-inference",
     name: "Inference (OpenAI-compatible)",
     description:
-      "The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API. The primary integration surface for AI agents.",
+      "The core OpenAI-compatible inference endpoints: chat completions, audio transcription (STT), and the Responses API. The primary integration surface for AI agents.",
     category: "api",
     area: "inference",
     icon: "hub",
@@ -251,7 +242,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "cli-serve",
     name: "CLI: Serve",
     description:
-      "Start, stop, and restart the OmniRoute server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut.",
+      "Start, stop, and restart the 67router server from the CLI. Manage daemon mode, port configuration, auto-recovery, system tray integration, and the dashboard open shortcut.",
     category: "cli",
     area: "cli-serve",
     icon: "play_circle",
@@ -279,7 +270,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "cli-keys",
     name: "CLI: API Keys",
     description:
-      "Create, list, rotate, and revoke OmniRoute API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration.",
+      "Create, list, rotate, and revoke 67router API keys from the CLI. Manage OAuth flows for provider authentication and inspect key scopes and expiration.",
     category: "cli",
     area: "cli-keys",
     icon: "vpn_key",
@@ -297,7 +288,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "cli-chat",
     name: "CLI: Chat",
     description:
-      "Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all OmniRoute providers, combo routing, and system prompt configuration.",
+      "Send chat completions, stream responses, and start an interactive REPL session from the CLI. Supports all 67router providers, combo routing, and system prompt configuration.",
     category: "cli",
     area: "cli-chat",
     icon: "chat",
@@ -357,15 +348,6 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     icon: "electrical_services",
   },
   {
-    id: "cli-a2a",
-    name: "CLI: A2A Protocol",
-    description:
-      "Interact with the OmniRoute A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively.",
-    category: "cli",
-    area: "cli-a2a",
-    icon: "device_hub",
-  },
-  {
     id: "cli-tunnel",
     name: "CLI: Tunnels",
     description:
@@ -378,7 +360,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "cli-backup-sync",
     name: "CLI: Backup & Sync",
     description:
-      "Backup and restore OmniRoute data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files.",
+      "Backup and restore 67router data from the CLI. Trigger incremental snapshots, sync to cloud storage, manage backup schedules, and restore from archive files.",
     category: "cli",
     area: "cli-backup-sync",
     icon: "backup",
@@ -393,31 +375,13 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     icon: "policy",
   },
   {
-    id: "cli-batches",
-    name: "CLI: Batches & Files",
-    description:
-      "Submit and monitor batch inference jobs from the CLI. Upload and manage files for batch processing, retrieve results, and integrate batch pipelines with CI/CD workflows.",
-    category: "cli",
-    area: "cli-batches",
-    icon: "batch_prediction",
-  },
-  {
     id: "cli-eval",
-    name: "CLI: Evals",
+    name: "CLI: Simulate",
     description:
-      "Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI.",
+      "Simulate how a combo would route a request from the CLI, using live combo, health and quota data, without sending traffic upstream.",
     category: "cli",
     area: "cli-eval",
     icon: "science",
-  },
-  {
-    id: "cli-plugins-skills",
-    name: "CLI: Plugins, Skills & Memory",
-    description:
-      "Manage Omni Skills (list, install, test, remove), plugins (create, configure), and persistent memory (search, add, clear) from the CLI.",
-    category: "cli",
-    area: "cli-plugins-skills",
-    icon: "extension",
   },
   {
     id: "cli-setup",
@@ -432,7 +396,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "cli-skill-collector",
     name: "CLI: Agent Skill Collector",
     description:
-      "Detect installed CLI coding tools (Claude Code, Codex, Cursor, Copilot, Cline and more), search GitHub for matching agent skills, and install them to the detected tools via OmniRoute's built-in APIs.",
+      "Detect installed CLI coding tools (Claude Code, Codex, Cursor, Copilot, Cline and more), search GitHub for matching agent skills, and install them to the detected tools via 67router's built-in APIs.",
     category: "cli",
     area: "cli-setup",
     icon: "extension",
@@ -444,7 +408,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "config-codex-cli",
     name: "Config: Codex CLI",
     description:
-      "Step-by-step agent workflow to configure the OpenAI Codex CLI on any machine (Linux, macOS, Windows) to use OmniRoute as an OpenAI-compatible backend. Detects OS and shell, writes config.toml and 7 named profiles, sets environment variables, and verifies the setup.",
+      "Step-by-step agent workflow to configure the OpenAI Codex CLI on any machine (Linux, macOS, Windows) to use 67router as an OpenAI-compatible backend. Detects OS and shell, writes config.toml and 7 named profiles, sets environment variables, and verifies the setup.",
     category: "config",
     area: "config-codex-cli",
     icon: "terminal",

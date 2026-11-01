@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Tiếng Việt)
+# 67router MCP Server Documentation (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Cài đặt
 
-OmniRoute MCP được tích hợp sẵn. Khởi động bằng:
+67router MCP được tích hợp sẵn. Khởi động bằng:
 
 ```bash
 omniroute --mcp
@@ -83,7 +83,7 @@ Cursor, Cline và các máy khách MCP tương thích.
 | `omniroute_switch_combo`        | `write:combos`        | Kích hoạt hoặc vô hiệu hóa một combo                                                                                                           |
 | `omniroute_create_combo`        | `write:combos`        | Tạo combo đã được xác thực thông qua API combo hiện có                                                                                         |
 | `omniroute_check_quota`         | `read:quota`          | Hạn ngạch đã dùng/tổng cộng, phần trăm còn lại, thời gian đặt lại, trạng thái token                                                            |
-| `omniroute_route_request`       | `execute:completions` | Gửi yêu cầu hoàn thành hội thoại thông qua cơ chế định tuyến OmniRoute                                                                         |
+| `omniroute_route_request`       | `execute:completions` | Gửi yêu cầu hoàn thành hội thoại thông qua cơ chế định tuyến 67router                                                                          |
 | `omniroute_cost_report`         | `read:usage`          | Báo cáo chi phí theo kỳ (phiên/ngày/tuần/tháng)                                                                                                |
 | `omniroute_list_models_catalog` | `read:models`         | Danh mục mô hình đầy đủ cùng với khả năng, trạng thái và giá                                                                                   |
 | `omniroute_radar_catalog`       | `read:radar`          | Danh mục Radar cục bộ đã ký; hỗ trợ bộ lọc tùy chọn theo nhà cung cấp/họ mô hình                                                               |
@@ -146,7 +146,7 @@ của nhà cung cấp và được đánh dấu bằng `source: "mcp_metadata_es
 
 ### Bộ lọc cây khả năng truy cập MCP (v3.8.0)
 
-Tách biệt với các công cụ nén ở trên, OmniRoute bao gồm một bộ lọc hậu thực thi giúp
+Tách biệt với các công cụ nén ở trên, 67router bao gồm một bộ lọc hậu thực thi giúp
 nén **kết quả công cụ** của các công cụ trình duyệt/khả năng truy cập MCP trước khi chúng được trả về cho
 tác nhân. Bản thân bộ lọc này không phải là một công cụ — nó chạy minh bạch trên mọi kết quả công cụ có chứa
 văn bản dài dòng về cây khả năng truy cập hoặc ảnh chụp nhanh trình duyệt (≥2000 ký tự).
@@ -239,17 +239,6 @@ Xem [AGENT-SKILLS.md](./AGENT-SKILLS.md) để biết toàn bộ danh mục và 
 Danh mục công cụ MCP ở trên (110 công cụ duy nhất, được tính bởi `countUniqueMcpTools()`) được chủ ý
 giới hạn trong các hoạt động định tuyến/bộ nhớ đệm/nén/bộ nhớ/kỹ năng/proxy/nguồn ngữ cảnh khi chạy. Hai
 framework liền kề được cung cấp cùng máy chủ MCP trong v3.8.0 và được ghi lại riêng:
-
-### Cloud Agents
-
-Cloud Agents là các agent lập trình AI chạy ngoài tiến trình (codex-cloud, cursor-cloud, devin, jules), được kết nối với
-OmniRoute thông qua cùng mô hình kết nối dùng cho các nhà cung cấp LLM. Chúng được cung cấp qua
-bề mặt REST riêng (`/api/v1/agents/*`) và **không** thuộc danh mục công cụ MCP
-— việc gọi một Cloud Agent không tiêu thụ phạm vi MCP.
-
-- Triển khai: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Vòng đời: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Tài liệu: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Guardrails
 
@@ -415,8 +404,6 @@ Mỗi công cụ yêu cầu các phạm vi cụ thể:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                     |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                              |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                            |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                               |
 | `read:obsidian`       | 13 công cụ đọc — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 công cụ ghi — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                             |
@@ -469,7 +456,7 @@ hành vi hiện có được kiểm soát bởi `OMNIROUTE_MCP_ENFORCE_SCOPES`.
 
 | Biến                                    | Mặc định                       | Mục đích                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | :-------------------------------------- | :----------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | URL cơ sở mà máy chủ MCP sử dụng khi gọi các API nội bộ của OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`       | URL cơ sở mà máy chủ MCP sử dụng khi gọi các API nội bộ của 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `OMNIROUTE_API_KEY`                     | (trống)                        | Khóa API được chuyển tiếp dưới dạng `Authorization: Bearer` tới các lệnh gọi API nội bộ                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (chỉ `"true"` mới bật) | Khi được bật, việc thiếu phạm vi sẽ khiến lệnh gọi công cụ bị từ chối và ghi `scope_denied:<reason>` vào nhật ký kiểm tra. Cơ chế thực thi CŨNG luôn được bắt buộc, bất kể cờ này, đối với mọi bên gọi HTTP/SSE được xác định từ tiêu đề Authorization theo từng khóa (`source === "authInfo"`) mà không có đầy đủ phạm vi `manage`/`admin` — ví dụ: một khóa chỉ có phạm vi bỏ qua hạn chế `mcp:connect` — vì vậy giá trị mặc định này chỉ an toàn cho luồng cục bộ/stdio do một người vận hành, tuyệt đối không dành cho truy cập từ xa không qua loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (trống)                        | Danh sách phạm vi cho phép, phân tách bằng dấu phẩy, được coi là "khả dụng" theo mặc định (được dùng khi bên gọi không cung cấp các phạm vi riêng)                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -572,7 +559,6 @@ Sử dụng bảng điều khiển hoặc các endpoint REST `/api/mcp/audit` v�
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Định nghĩa công cụ kỹ năng (4 công cụ)                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Định nghĩa công cụ nguồn ngữ cảnh Notion (6 công cụ)              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Định nghĩa công cụ trò chơi hóa (8 công cụ)                       |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Công cụ đăng ký và quản lý plugin (8 công cụ)                     |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                        |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                         |
 | `src/app/api/mcp/sse/route.ts`                                           | Route giao vận SSE `/api/mcp/sse`                                 |

@@ -7,7 +7,7 @@
 > **Izvor istine:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Zadnje ažurirano:** 2026-09-22 — prostori naziva opsega upućuju na MCP-SERVER.md
 
-OmniRoute ima autorizacijski cjevovod svjestan ruta koji štiti svaki API zahtjev. Klasifikacija je **deterministička** i **zatvorena u slučaju kvara** — sve što se ne može klasificirati završava kao `MANAGEMENT` i zahtijeva sesiju ili token upravljačke razine. Ova stranica objašnjava model za inženjere koji održavaju rute ili dizajniraju nove krajnje točke.
+67router ima autorizacijski cjevovod svjestan ruta koji štiti svaki API zahtjev. Klasifikacija je **deterministička** i **zatvorena u slučaju kvara** — sve što se ne može klasificirati završava kao `MANAGEMENT` i zahtijeva sesiju ili token upravljačke razine. Ova stranica objašnjava model za inženjere koji održavaju rute ili dizajniraju nove krajnje točke.
 
 ![AuthZ cjevovod (3 klase ruta + evaluacija politike)](../diagrams/exported/authz-pipeline.svg)
 
@@ -229,8 +229,6 @@ vjerodajnicu pristupnog tokena. Pogledajte [Upravljačka autentifikacija](../gui
 Provedba API ključa klijenta koristi `isRequireApiKeyEnabled()` u `src/shared/utils/featureFlags.ts`, a ne izravno čitanje `process.env.REQUIRE_API_KEY`. To je važno za instalirane instance: prebacivanje `REQUIRE_API_KEY` u Dashboard → Feature Flags sprema nadjačavanje u bazu i odmah utječe na `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` i druge provjere autentifikacije klijentskog API-ja koje dijele ovaj pomoćnik. Ako se spremište zastavica ne može pročitati, autentifikacija klijentskog API-ja zatvara se i zahtijeva ključ.
 
 ## Nekompatibilna promjena — v3.8.0
-
-Krajnje točke `/api/v1/agents/tasks/*` i `/api/resilience/model-cooldowns` **sada zahtijevaju autentifikaciju za upravljanje** (commit `588a0333`). Klijenti koji su prethodno slali običan API ključ bez opsega `manage` primaju `403`. Migracija: ključu dodijelite opseg `manage` na nadzornoj ploči API ključeva ili upotrijebite prijavljenu sesiju nadzorne ploče.
 
 ## Promjena ponašanja — v3.8.2
 

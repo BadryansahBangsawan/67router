@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |    13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |    13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |    13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |    13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |    14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |    14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |    15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |    15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |    16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |    16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` न्यून कभरेज भएको सबैभन्दा सघन समूह हो र बाँकी अन्तरमा यसको हिस्सा सबैभन्दा ठूलो छ।
 - ब्याच र रिर्याङ्क API रुटहरू (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) लाई ह्यान्डलर-स्तरीय परीक्षणहरू आवश्यक छन्।
-- क्लाउड एजेन्ट एडाप्टरहरू (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) र `tierResolver.ts` लाई परिदृश्य परीक्षणहरू आवश्यक छन्।
 - कागजात UI कम्पोनेन्टहरू र `src/mitm/systemCommands.ts` कम प्राथमिकतामा छन्, तर शाखा कभरेजमा सजिलै लाभ दिन सक्छन्।
 
 ## कार्यान्वयन जाँचसूची

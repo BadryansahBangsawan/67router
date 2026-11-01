@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` pievieno visu jūsu OmniRoute katalogu — modeļus, kombinācijas un
+`@omniroute/opencode-plugin-v2` pievieno visu jūsu 67router katalogu — modeļus, kombinācijas un
 automātiskās kombinācijas — OpenCode v2 modeļu atlasītājam, iekļaujot attēlojamos nosaukumus, cenas un bezmaksas līmeņa
 limitus.
 
@@ -15,7 +15,7 @@ tām nekas netiek koplietots, tāpēc vienas jaunināšana nekad neietekmē otru
 ## Prasības
 
 - OpenCode v2.
-- Sasniedzama OmniRoute vārteja (pēc noklusējuma `http://localhost:20128`).
+- Sasniedzama 67router vārteja (pēc noklusējuma `http://localhost:20128`).
 - Node.js 22 vai 24.
 
 ## Instalēšana
@@ -120,7 +120,7 @@ Lai to izslēgtu, iestatiet `"geminiSanitization": false`.
 
 | Simptoms                                                     | Cēlonis                                                                                                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Atlasītājā nav redzams neviens OmniRoute modelis             | Nav atrasta neviena atslēga (pārbaudiet brīdinājumu startēšanas laikā), vai arī vārteja nav sasniedzama                                    |
+| Atlasītājā nav redzams neviens 67router modelis              | Nav atrasta neviena atslēga (pārbaudiet brīdinājumu startēšanas laikā), vai arī vārteja nav sasniedzama                                    |
 | Neapstrādāti modeļu ID, nav kombināciju un cenu informācijas | Pārvaldības galapunkti noraidīja pilnvaru — iestatiet `managementReadToken`                                                                |
 | Īss vai tukšs `freeOnly` katalogs                            | Nav pārvaldības pilnvaras vai tā ir noraidīta — resursdatora žurnālā skatiet atsvaidzināšanas kopsavilkuma rindu (`unmatched-free` skaitu) |
 | Sesija ir piesaistīta `opencode-<id>/…`                      | v1 spraudnis publicēja `opencode-<id>`; v2 publicē tikai `<id>`, tāpēc atkārtoti atlasiet modeli sadaļā `<id>/…`                           |

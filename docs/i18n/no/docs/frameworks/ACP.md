@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute skiller mellom **CLI-oppdagelse**, **opprinnelig Agent Client Protocol** og
+67router skiller mellom **CLI-oppdagelse**, **opprinnelig Agent Client Protocol** og
 **eldre stdio-adaptere**. Det å finne en installert binærfil beviser ikke at den
 er autentisert, kompatibel med modellen eller klar til å håndtere en ledetekst.
 
@@ -129,5 +129,3 @@ målmiljøet.
 - [Agentprotokoller](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-oppstartskontrakter](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-verktøy](../reference/CLI-TOOLS.md)
-- [A2A-server](./A2A-SERVER.md)
-- [Skyagenter](./CLOUD_AGENT.md)

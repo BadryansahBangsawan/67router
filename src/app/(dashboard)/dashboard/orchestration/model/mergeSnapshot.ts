@@ -165,7 +165,7 @@ function buildRootAndSourceEdges(
   edges: OrchEdge[],
   sources: SourceStatus[]
 ): NodesAndEdges {
-  const root: OrchNode = { id: "orchestrator", kind: "orchestrator", label: "OmniRoute" };
+  const root: OrchNode = { id: "orchestrator", kind: "orchestrator", label: "67router" };
   const nextNodes = [...nodes];
   const nextEdges = [...edges];
   const sourceIds = new Set(nextNodes.filter((n) => n.kind === "source").map((n) => n.id));
@@ -208,12 +208,12 @@ function buildRootAndSourceEdges(
 }
 
 export function mergeSnapshot(
-  parts: { cloudAgent: Part; a2a: Part; conductor: Part },
+  parts: { a2a: Part; conductor: Part },
   sources: SourceStatus[],
   opts: MergeOptions
 ): OrchSnapshot {
-  let nodes: OrchNode[] = [...parts.cloudAgent.nodes, ...parts.a2a.nodes, ...parts.conductor.nodes];
-  let edges: OrchEdge[] = [...parts.cloudAgent.edges, ...parts.a2a.edges, ...parts.conductor.edges];
+  let nodes: OrchNode[] = [...parts.a2a.nodes, ...parts.conductor.nodes];
+  let edges: OrchEdge[] = [...parts.a2a.edges, ...parts.conductor.edges];
 
   const dropped = new Set<string>();
   ({ nodes, edges } = dedupeConductorMirrors(nodes, edges, dropped));

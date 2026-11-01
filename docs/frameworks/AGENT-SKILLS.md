@@ -1,21 +1,21 @@
 ---
-title: "OmniRoute Agent Skills Catalog"
+title: "67router Agent Skills Catalog"
 version: 3.8.50
 lastUpdated: 2026-08-02
 ---
 
-# OmniRoute Agent Skills Catalog
+# 67router Agent Skills Catalog
 
 > **Source of truth:** `src/lib/agentSkills/` (catalog, generator, parsers) + `skills/` directory (SKILL.md files)
 > **Last updated:** 2026-08-02 — v3.8.50
 
-Agent Skills are structured SKILL.md files that teach external agents, MCP clients, and A2A orchestrators how to use OmniRoute's REST API and CLI. Unlike [Omni Skills](./SKILLS.md) (which are LLM tool definitions executed inside OmniRoute), Agent Skills are a _documentation catalog_ — static markdown that can be fed directly into agent context.
+Agent Skills are structured SKILL.md files that teach external agents and MCP clients how to use 67router's REST API and CLI. Agent Skills are a _documentation catalog_ — static markdown that can be fed directly into agent context.
 
 ---
 
 ## Overview
 
-The catalog contains **45 Agent Skills** (23 REST API + 21 CLI + 1 configuration workflow). Each skill has:
+The catalog contains **42 Agent Skills** (22 REST API + 18 CLI + 1 configuration workflow + 1 external skill). Each skill has:
 
 - A **canonical ID** (`omni-auth`, `cli-serve`, etc.)
 - A **SKILL.md** file in `skills/{id}/SKILL.md` with YAML frontmatter (`name`, `description`) + rich markdown body
@@ -27,7 +27,7 @@ The catalog contains **45 Agent Skills** (23 REST API + 21 CLI + 1 configuration
 ## Architecture
 
 ```
-src/shared/constants/agentSkills.ts    — 45-entry curated list (name/desc/category/area/icon)
+src/shared/constants/agentSkills.ts    — 42-entry curated list (name/desc/category/area/icon)
 src/lib/agentSkills/
   catalog.ts                           — getCatalog(), getSkillById(), filterCatalog(), computeCoverage()
   generator.ts                         — generateAgentSkills() writes SKILL.md to skills/{id}/
@@ -36,7 +36,7 @@ src/lib/agentSkills/
   schemas.ts                           — Zod schemas: AgentSkillSchema, SkillCoverageSchema, etc.
   types.ts                             — TypeScript interfaces: AgentSkill, SkillCoverage, etc.
 
-skills/{id}/SKILL.md                   — Generated + curated markdown files (45 total)
+skills/{id}/SKILL.md                   — Generated + curated markdown files (42 total)
 
 src/app/api/agent-skills/
   route.ts                             — GET /api/agent-skills
@@ -46,7 +46,6 @@ src/app/api/agent-skills/
   generate/route.ts                    — POST /api/agent-skills/generate (auth required)
 
 open-sse/mcp-server/tools/agentSkillTools.ts  — 3 MCP tools (list, get, coverage)
-src/lib/a2a/skills/listCapabilities.ts        — A2A skill: list-capabilities
 ```
 
 ---
@@ -126,86 +125,69 @@ See [MCP-SERVER.md](./MCP-SERVER.md) for scope wiring and authentication.
 
 ---
 
-## A2A Discovery
+## Catalog — 42 Skill IDs
 
-The A2A skill `list-capabilities` returns the full 45-skill catalog as a markdown table artifact. External orchestrators can invoke it via:
+### API Skills (22)
 
-```json
-{
-  "jsonrpc": "2.0",
-  "id": "1",
-  "method": "message/send",
-  "params": {
-    "skill": "list-capabilities",
-    "messages": [{ "role": "user", "content": "List all capabilities" }]
-  }
-}
-```
+| ID                     | Area            | Entry Point                         |
+| :--------------------- | :-------------- | :---------------------------------- |
+| `omni-auth`            | auth            | Auth + session management           |
+| `omni-providers`       | providers       | Provider connection management      |
+| `omni-models`          | models          | Model catalog and capabilities      |
+| `omni-combos-routing`  | combos-routing  | Combo routing strategies            |
+| `omni-api-keys`        | api-keys        | API key management                  |
+| `omni-usage-logs`      | usage-logs      | Usage and cost logs                 |
+| `omni-budget`          | budget          | Budget guards                       |
+| `omni-settings`        | settings        | Global settings                     |
+| `omni-proxies`         | proxies         | Proxy pool management               |
+| `omni-cache`           | cache           | Semantic + prompt cache             |
+| `omni-compression`     | compression     | Context compression engines         |
+| `omni-context-rtk`     | context-rtk     | RTK compression                     |
+| `omni-resilience`      | resilience      | Circuit breakers + cooldowns        |
+| `omni-cli-tools`       | cli-tools       | CLI tools REST proxy                |
+| `omni-tunnels`         | tunnels         | Tunnel management                   |
+| `omni-sync-cloud`      | sync-cloud      | Cloud sync                          |
+| `omni-db-backups`      | db-backups      | Database backups                    |
+| `omni-mcp`             | mcp             | MCP server (89 tools, 3 transports) |
+| `omni-agents-a2a`      | agents-a2a      | A2A task list/detail/cancel         |
+| `omni-version-manager` | version-manager | Version and update management       |
+| `omni-inference`       | inference       | Direct inference / completions      |
+| `omni-github-skills`   | github-skills   | GitHub skill discovery              |
 
-See [A2A-SERVER.md](./A2A-SERVER.md) for protocol details.
+### CLI Skills (18)
 
----
-
-## Catalog — 45 Skill IDs
-
-### API Skills (23)
-
-| ID                     | Area            | Entry Point                          |
-| :--------------------- | :-------------- | :----------------------------------- |
-| `omni-auth`            | auth            | Auth + session management            |
-| `omni-providers`       | providers       | Provider connection management       |
-| `omni-models`          | models          | Model catalog and capabilities       |
-| `omni-combos-routing`  | combos-routing  | Combo routing strategies             |
-| `omni-api-keys`        | api-keys        | API key management                   |
-| `omni-usage-logs`      | usage-logs      | Usage and cost logs                  |
-| `omni-budget`          | budget          | Budget guards                        |
-| `omni-settings`        | settings        | Global settings                      |
-| `omni-proxies`         | proxies         | Proxy pool management                |
-| `omni-cache`           | cache           | Semantic + prompt cache              |
-| `omni-compression`     | compression     | Context compression engines          |
-| `omni-context-rtk`     | context-rtk     | RTK compression                      |
-| `omni-resilience`      | resilience      | Circuit breakers + cooldowns         |
-| `omni-cli-tools`       | cli-tools       | CLI tools REST proxy                 |
-| `omni-tunnels`         | tunnels         | Tunnel management                    |
-| `omni-sync-cloud`      | sync-cloud      | Cloud sync                           |
-| `omni-db-backups`      | db-backups      | Database backups                     |
-| `omni-webhooks`        | webhooks        | Webhook event dispatcher             |
-| `omni-mcp`             | mcp             | MCP server (110 tools, 3 transports) |
-| `omni-agents-a2a`      | agents-a2a      | A2A agent protocol                   |
-| `omni-version-manager` | version-manager | Version and update management        |
-| `omni-inference`       | inference       | Direct inference / completions       |
-
-### CLI Skills (21)
-
-| ID                    | Area               | CLI Command Root        |
-| :-------------------- | :----------------- | :---------------------- |
-| `cli-serve`           | cli-serve          | `omniroute serve`       |
-| `cli-health`          | cli-health         | `omniroute health`      |
-| `cli-providers`       | cli-providers      | `omniroute providers`   |
-| `cli-keys`            | cli-keys           | `omniroute keys`        |
-| `cli-models`          | cli-models         | `omniroute models`      |
-| `cli-chat`            | cli-chat           | `omniroute chat`        |
-| `cli-routing`         | cli-routing        | `omniroute routing`     |
-| `cli-resilience`      | cli-resilience     | `omniroute resilience`  |
-| `cli-compression`     | cli-compression    | `omniroute compression` |
-| `cli-contexts`        | cli-contexts       | `omniroute contexts`    |
-| `cli-cost-usage`      | cli-cost-usage     | `omniroute cost`        |
-| `cli-mcp`             | cli-mcp            | `omniroute mcp`         |
-| `cli-a2a`             | cli-a2a            | `omniroute a2a`         |
-| `cli-tunnel`          | cli-tunnel         | `omniroute tunnel`      |
-| `cli-backup-sync`     | cli-backup-sync    | `omniroute backup`      |
-| `cli-policy-audit`    | cli-policy-audit   | `omniroute policy`      |
-| `cli-batches`         | cli-batches        | `omniroute batch`       |
-| `cli-eval`            | cli-eval           | `omniroute eval`        |
-| `cli-plugins-skills`  | cli-plugins-skills | `omniroute plugins`     |
-| `cli-setup`           | cli-setup          | `omniroute setup`       |
-| `cli-skill-collector` | cli-setup          | `omniroute skills`      |
+| ID                    | Area             | CLI Command Root        |
+| :-------------------- | :--------------- | :---------------------- |
+| `cli-serve`           | cli-serve        | `omniroute serve`       |
+| `cli-health`          | cli-health       | `omniroute health`      |
+| `cli-providers`       | cli-providers    | `omniroute providers`   |
+| `cli-keys`            | cli-keys         | `omniroute keys`        |
+| `cli-models`          | cli-models       | `omniroute models`      |
+| `cli-chat`            | cli-chat         | `omniroute chat`        |
+| `cli-routing`         | cli-routing      | `omniroute routing`     |
+| `cli-resilience`      | cli-resilience   | `omniroute resilience`  |
+| `cli-compression`     | cli-compression  | `omniroute compression` |
+| `cli-contexts`        | cli-contexts     | `omniroute contexts`    |
+| `cli-cost-usage`      | cli-cost-usage   | `omniroute cost`        |
+| `cli-mcp`             | cli-mcp          | `omniroute mcp`         |
+| `cli-tunnel`          | cli-tunnel       | `omniroute tunnel`      |
+| `cli-backup-sync`     | cli-backup-sync  | `omniroute backup`      |
+| `cli-policy-audit`    | cli-policy-audit | `omniroute policy`      |
+| `cli-eval`            | cli-eval         | `omniroute simulate`    |
+| `cli-setup`           | cli-setup        | `omniroute setup`       |
+| `cli-skill-collector` | cli-setup        | `omniroute skills`      |
 
 ### Configuration workflow (1)
 
 | ID                 | Area             | Entry Point                      |
 | :----------------- | :--------------- | :------------------------------- |
 | `config-codex-cli` | config-codex-cli | Codex CLI configuration workflow |
+
+### External (1)
+
+| ID         | Area     | Entry Point                  |
+| :--------- | :------- | :--------------------------- |
+| `ponytail` | external | Minimalism ladder (Ponytail) |
 
 ---
 
@@ -229,21 +211,7 @@ const result = await client.callTool("omniroute_agent_skills_list", { category: 
 // result.skills → array of AgentSkill with rawUrl for each
 ```
 
-### 3. Discovery via A2A
-
-```python
-import requests
-
-resp = requests.post("http://your-omniroute/a2a", json={
-    "jsonrpc": "2.0", "id": "1",
-    "method": "message/send",
-    "params": {"skill": "list-capabilities", "messages": [{"role": "user", "content": "list"}]}
-})
-table = resp.json()["result"]["artifacts"][0]["content"]
-# table is a markdown table with all 45 skill IDs + rawUrl columns
-```
-
-### 4. Direct GitHub raw fetch (no server required)
+### 3. Direct GitHub raw fetch (no server required)
 
 ```bash
 BASE="https://raw.githubusercontent.com/diegosouzapw/OmniRoute/refs/heads/main/skills"
@@ -298,10 +266,10 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 ```json
 {
-  "api": { "have": 23, "total": 23 },
-  "cli": { "have": 21, "total": 21 },
+  "api": { "have": 22, "total": 22 },
+  "cli": { "have": 18, "total": 18 },
   "config": { "have": 1, "total": 1 },
-  "totalSkills": 45,
+  "totalSkills": 41,
   "generatedAt": "2026-08-02T00:00:00.000Z"
 }
 ```
@@ -310,8 +278,6 @@ curl "http://localhost:20128/api/agent-skills/coverage"
 
 ## Related
 
-- [SKILLS.md](./SKILLS.md) — Omni Skills framework (LLM tool injection + marketplace)
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP tool catalog (`omniroute_agent_skills_*` tools)
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A protocol (`list-capabilities` skill)
 - `src/lib/agentSkills/` — catalog, generator, parsers
-- `skills/` — generated SKILL.md files (45 entries)
+- `skills/` — generated SKILL.md files (42 entries)

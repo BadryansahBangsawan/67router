@@ -4,7 +4,7 @@
 
 ---
 
-Această pagină explică comportamentul local al fișierului `.env` din proiect și modul de gestionare a fișierelor de mediu și a secretelor în timpul dezvoltării OmniRoute.
+Această pagină explică comportamentul local al fișierului `.env` din proiect și modul de gestionare a fișierelor de mediu și a secretelor în timpul dezvoltării 67router.
 
 ## Comportamentul postinstall pentru .env
 

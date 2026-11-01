@@ -6,7 +6,7 @@
 
 # CORS konfiguracija i sigurnost
 
-OmniRoute kontroliše koja **porijekla preglednika (browser origins)** mogu čitati cross-origin odgovore iz jedinstvene, centralizovane liste dozvoljenih (allowlist). Model je **podrazumijevano zatvoren (fail-closed)**: nijedno porijeklo nije dozvoljeno dok ga sami ne omogućite. Ova stranica dokumentuje kako se lista dozvoljenih razrješava, šta `CORS_ALLOW_ALL=true` zapravo izlaže (i, što je važno, šta **ne** izlaže), kako sigurno konfigurisati razvojno naspram produkcijskog okruženja, te upozorenje o runtime-u koje kontrolna tabla (dashboard) prikazuje kada je wildcard aktivan.
+67router kontroliše koja **porijekla preglednika (browser origins)** mogu čitati cross-origin odgovore iz jedinstvene, centralizovane liste dozvoljenih (allowlist). Model je **podrazumijevano zatvoren (fail-closed)**: nijedno porijeklo nije dozvoljeno dok ga sami ne omogućite. Ova stranica dokumentuje kako se lista dozvoljenih razrješava, šta `CORS_ALLOW_ALL=true` zapravo izlaže (i, što je važno, šta **ne** izlaže), kako sigurno konfigurisati razvojno naspram produkcijskog okruženja, te upozorenje o runtime-u koje kontrolna tabla (dashboard) prikazuje kada je wildcard aktivan.
 
 **Izvor istine:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`, `applyCorsHeaders`, `getCorsStatus`). Lista dozvoljenih se primjenjuje jednom, u middleware-u (`src/server/authz/pipeline.ts`) — rukovaoci po rutama (per-route handlers) ne postavljaju `Access-Control-Allow-Origin` sami.
 
@@ -28,9 +28,9 @@ Za svaki zahtjev, middleware izračunava vrijednost `Access-Control-Allow-Origin
 
 ## Model prijetnji — šta `CORS_ALLOW_ALL=true` zapravo izlaže
 
-Generičko OWASP upozorenje ("wildcard CORS = bilo koja stranica može pozvati vaš API") vrijedi shvatiti ozbiljno, ali izloženost OmniRoute-a je **uža od generičkog slučaja**, zbog jedne konkretne činjenice implementacije:
+Generičko OWASP upozorenje ("wildcard CORS = bilo koja stranica može pozvati vaš API") vrijedi shvatiti ozbiljno, ali izloženost 67router-a je **uža od generičkog slučaja**, zbog jedne konkretne činjenice implementacije:
 
-> **Centralna `applyCorsHeaders()` nikada ne emituje `Access-Control-Allow-Credentials`.** Preglednik neće izložiti _credentialed_ (koji sadrži kolačiće) cross-origin odgovor osim ako server ne pošalje `Access-Control-Allow-Credentials: true`. OmniRoute-ova dijeljena CORS putanja to nikada ne radi.
+> **Centralna `applyCorsHeaders()` nikada ne emituje `Access-Control-Allow-Credentials`.** Preglednik neće izložiti _credentialed_ (koji sadrži kolačiće) cross-origin odgovor osim ako server ne pošalje `Access-Control-Allow-Credentials: true`. 67router-ova dijeljena CORS putanja to nikada ne radi.
 
 Šta to znači po površini, čak i sa `CORS_ALLOW_ALL=true`:
 
@@ -42,10 +42,6 @@ Generičko OWASP upozorenje ("wildcard CORS = bilo koja stranica može pozvati v
 
 Dakle, **rezidualna** izloženost `CORS_ALLOW_ALL=true` je ograničena na: (a) ne-credentialed cross-origin **čitanja** već neautentifikovanih podataka, i (b) omogućavanje prolaska CORS **preflight-a** na upravljačkim rutama — koje i dalje zahtijevaju autentifikaciju koju cross-origin stranica ne može pružiti. To **nije** vektor za otmicu sesije ili krađu vjerodajnica na dijeljenoj CORS putanji.
 
-### Jedan pravi izuzetak — `/api/v1/agents/`
-
-Cloud-Agent rute (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) postavljaju svoja **vlastita** CORS zaglavlja (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) i **emituju** `Access-Control-Allow-Origin: <origin>|*` zajedno sa `Access-Control-Allow-Credentials: true`. Ovo je jedina površina gdje koegzistiraju vraćanje porijekla (origin-echo) i vjerodajnice, i to je **nezavisno od `CORS_ALLOW_ALL`**. Ove rute su autentifikovane upravljačkom autentifikacijom (`requireManagementAuth`); operateri koji izlažu kontrolnu tablu van hosta trebaju biti svjesni da je ovo jedino mjesto gdje je cross-origin credentialed čitanje dozvoljeno zaglavljima odgovora. Pooštravanje ovoga na eksplicitnu listu dozvoljenih prati se odvojeno od ovih CORS smjernica.
-
 ## Kontrolna lista za produkciju
 
 - **Nikada ne postavljajte `CORS_ALLOW_ALL=true` u produkciji.** Ostavite je nepostavljenom.
@@ -55,7 +51,7 @@ Cloud-Agent rute (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) postav
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ako se OmniRoute pokreće iza reverznog proxyja / tunela (nginx, Caddy, Cloudflare Tunnel, Tailscale), CORS **nije** vaša jedina kontrola — loopback route guard i dalje štiti rute sposobne za pokretanje (pogledajte [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nemojte krivotvoriti `X-Forwarded-For: 127.0.0.1` da biste "popravili" 403 grešku; to ponovo otvara RCE klasu koju route guard zatvara.
+- Ako se 67router pokreće iza reverznog proxyja / tunela (nginx, Caddy, Cloudflare Tunnel, Tailscale), CORS **nije** vaša jedina kontrola — loopback route guard i dalje štiti rute sposobne za pokretanje (pogledajte [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nemojte krivotvoriti `X-Forwarded-For: 127.0.0.1` da biste "popravili" 403 grešku; to ponovo otvara RCE klasu koju route guard zatvara.
 - Potvrdite stanje tokom izvršavanja (runtime state): kontrolna tabla prikazuje **trajni žuti baner** pod Dashboard → Security → Authorization Inventory kad god je `CORS_ALLOW_ALL=true` aktivan, a `/api/settings/authz-inventory` vraća `cors: { allowAll, allowedOrigins }` omotnicu koju alati za nadzor mogu ispitivati (poll).
 
 ## Pogodnost za razvoj — dozvolite specifična lokalna porijekla
@@ -63,7 +59,7 @@ Cloud-Agent rute (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) postav
 Rijetko vam je potreban wildcard čak i u razvoju. Dozvolite samo razvojne servere koje koristite:
 
 ```bash
-# Vite (5173) + Next.js (3000) razvojni serveri koji pozivaju lokalni OmniRoute
+# Vite (5173) + Next.js (3000) razvojni serveri koji pozivaju lokalni 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -74,14 +70,14 @@ Porijekla se podudaraju bez obzira na velika/mala slova, a završna kosa crta (t
 - **Bearer / `x-api-key` (površina za zaključivanje `/v1/*`):** pretraživači ih nikada ne prilažu automatski. CORS ovdje nije značajna barijera — API ključ je barijera — zbog čega je ta površina namjerno permisivna kako bi pretraživači i Electron klijenti mogli čitati odgovore na koje već imaju pravo.
 - **Sesija kolačića (kontrolna tabla):** zaštićena je podrazumijevanim "fail-closed" ponašanjem **i** odsustvom `Access-Control-Allow-Credentials` na dijeljenoj putanji. Držite porijekla za upravljanje/kontrolnu tablu izvan bilo kakve permisivne konfiguracije; ona moraju ostati strogo "fail-closed".
 
-## Primjer: obrnuti proxy ispred OmniRoutea
+## Primjer: obrnuti proxy ispred 67routera
 
-CORS provodi sam OmniRoute, pa proxy uglavnom **ne bi trebao** dodavati ili
+CORS provodi sam 67router, pa proxy uglavnom **ne bi trebao** dodavati ili
 prepisivati `Access-Control-*` zaglavlja (dvostruka zaglavlja uzrokuju probleme u preglednicima). Završite TLS
-i proslijedite zahtjev — prepustite OmniRouteu da odgovori na preflight zahtjev:
+i proslijedite zahtjev — prepustite 67routeru da odgovori na preflight zahtjev:
 
 ```nginx
-# nginx — proslijedi u OmniRoute; ovdje NE umeći Access-Control-*
+# nginx — proslijedi u 67router; ovdje NE umeći Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -89,12 +85,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Zadrži zaglavlja za prosljeđivanje: proxy na istom hostu povezuje se putem povratne petlje i ona
-    # obavještavaju OmniRoute da pozivatelj nije lokalni operater. Proxy koji ne dodaje nijedno od njih
+    # obavještavaju 67router da pozivatelj nije lokalni operater. Proxy koji ne dodaje nijedno od njih
     # čini da svaki udaljeni pozivatelj izgleda kao lokalni. Također, nikada ne postavljaj X-Forwarded-For na 127.0.0.1.
 }
 ```
 
-Postavite dozvoljena porijekla za preglednike u OmniRouteu (`CORS_ALLOWED_ORIGINS` ili na
+Postavite dozvoljena porijekla za preglednike u 67routeru (`CORS_ALLOWED_ORIGINS` ili na
 kartici Sigurnost), a ne u proxyju.
 
 ## Izvorni fajlovi
@@ -107,7 +103,6 @@ kartici Sigurnost), a ne u proxyju.
 | Status tokom izvršavanja za kontrolnu tablu       | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Baner upozorenja na kontrolnoj tabli              | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Polje CORS Allowed Origins                        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent CORS po ruti (izuzetak)               | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Vidi također
 

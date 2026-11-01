@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute are **două** sisteme de benzi locale procesului, cu domenii de aplicare diferite. Acestea sunt
+67router are **două** sisteme de benzi locale procesului, cu domenii de aplicare diferite. Acestea sunt
 complementare; operatorii trebuie să știe pe care dintre ele îl examinează.
 
 ## 1. Admitere la nivel de octeți pentru întregul proces (`chatBodyAdmission.ts`)

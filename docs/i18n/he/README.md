@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="לוח הבקרה של OmniRoute" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="לוח הבקרה של 67router" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — שער ה-AI החינמי
+# 🚀 67router — שער ה-AI החינמי
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — לעולם אל תפסיקו לכתוב קוד. כל כלי AI ← 375 ספקים — יותר מ-150 בחינם — דרך נקודת קצה אחת. Claude Code, Codex, Cursor, Cline, Copilot ו-Antigravity מתחברים בחינם ל-Claude / GPT / Gemini עם מעבר אוטומטי לחלופה. דחיסה משולבת של RTK + Caveman חוסכת 15–95% מהטוקנים (כ-89% בממוצע) — מבלי להגיע לעולם למגבלות. 375 ספקי AI · יותר מ-150 מסלולים חינמיים · כ-1.62 מיליארד טוקנים חינמיים בחודש · 20 אסטרטגיות ניתוב · מתחילים ב-$0."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — לעולם אל תפסיקו לכתוב קוד. כל כלי AI ← 375 ספקים — יותר מ-150 בחינם — דרך נקודת קצה אחת. Claude Code, Codex, Cursor, Cline, Copilot ו-Antigravity מתחברים בחינם ל-Claude / GPT / Gemini עם מעבר אוטומטי לחלופה. דחיסה משולבת של RTK + Caveman חוסכת 15–95% מהטוקנים (כ-89% בממוצע) — מבלי להגיע לעולם למגבלות. 375 ספקי AI · יותר מ-150 מסלולים חינמיים · כ-1.62 מיליארד טוקנים חינמיים בחודש · 20 אסטרטגיות ניתוב · מתחילים ב-$0."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **הביאו חשבונות ספק משלכם.** זוהי הערכה מצטברת של מסלולים חינמיים נפרדים של צדדים שלישיים, בכפוף לזכאות, ולא הקצאת אסימונים מטעם OmniRoute. הירשמו, השיגו פרטי גישה במידת הצורך וחברו את הספקים שבהם תוכלו להשתמש; כל ספק שולט במגבלות, בזמינות ובתנאים שלו.
+> **הביאו חשבונות ספק משלכם.** זוהי הערכה מצטברת של מסלולים חינמיים נפרדים של צדדים שלישיים, בכפוף לזכאות, ולא הקצאת אסימונים מטעם 67router. הירשמו, השיגו פרטי גישה במידת הצורך וחברו את הספקים שבהם תוכלו להשתמש; כל ספק שולט במגבלות, בזמינות ובתנאים שלו.
 >
-> שילוב ידני של מסלולים חינמיים הוא משימה מתישה — עשרות ערכות SDK, עשרות מגבלות קצב וללא כל מושג כמה באמת עומד לרשותכם. OmniRoute מקטלגת **471 רשומות של מסלולים חינמיים על פני 34 מפתחות של מאגרים מחזוריים**, ומחשבת את נתון האסימונים הראשי מתוך **17 המאגרים בעלי תקציב חודשי חיובי שפורסם, בתוספת חמש מכסות Groq לפי מודל**, לאחר הסרת כפילויות לפי מאגר משותף. מכסות שנפתחות רק לאחר אימות זהות אזורי (נכון להיום: ModelScope) מוצגות בנפרד, +~6M בכפוף לאימות זהות אזורי, ולעולם אינן נכללות בנתון הראשי. התוצאה נשארת גלויה בלוח הבקרה (`/dashboard/free-tiers`).
+> שילוב ידני של מסלולים חינמיים הוא משימה מתישה — עשרות ערכות SDK, עשרות מגבלות קצב וללא כל מושג כמה באמת עומד לרשותכם. 67router מקטלגת **471 רשומות של מסלולים חינמיים על פני 34 מפתחות של מאגרים מחזוריים**, ומחשבת את נתון האסימונים הראשי מתוך **17 המאגרים בעלי תקציב חודשי חיובי שפורסם, בתוספת חמש מכסות Groq לפי מודל**, לאחר הסרת כפילויות לפי מאגר משותף. מכסות שנפתחות רק לאחר אימות זהות אזורי (נכון להיום: ModelScope) מוצגות בנפרד, +~6M בכפוף לאימות זהות אזורי, ולעולם אינן נכללות בנתון הראשי. התוצאה נשארת גלויה בלוח הבקרה (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="כרטיס תקציב המסלולים החינמיים של OmniRoute: כ־1.62B אסימונים חינמיים בחודש באופן שוטף, ועד כ־2.22B בחודש הראשון עם קרדיטים להרשמה, מתוך 34 מפתחות מתועדים של מאגרים מחזוריים המכסים 471 רשומות מקוטלגות של מסלולים חינמיים מאחורי נקודת קצה אחת. חישוב אמין לאחר הסרת כפילויות של מאגרים — כל מאגר משותף נספר פעם אחת, כולל 17 מאגרים מחזוריים בעלי תקציב אסימונים חודשי חיובי שפורסם, בתוספת חמש מכסות Groq לפי מודל; 12 ספקים מסומנים כספקים שכדאי להימנע מהם בקטלוג סיכוני התנאים, כדי שאתם תחליטו. סרגל התקציב כולל Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (חמש מכסות לפי מודל) ומאגרים קטנים יותר, בתוספת קרדיטים להרשמה בחודש הראשון וספקים חינמיים לצמיתות ללא תקרת אסימונים, המוצגים בנפרד כדי שלעולם לא ינפחו את הנתון הראשי. נתוני שימוש ויתרה בזמן אמת ב־/dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="כרטיס תקציב המסלולים החינמיים של 67router: כ־1.62B אסימונים חינמיים בחודש באופן שוטף, ועד כ־2.22B בחודש הראשון עם קרדיטים להרשמה, מתוך 34 מפתחות מתועדים של מאגרים מחזוריים המכסים 471 רשומות מקוטלגות של מסלולים חינמיים מאחורי נקודת קצה אחת. חישוב אמין לאחר הסרת כפילויות של מאגרים — כל מאגר משותף נספר פעם אחת, כולל 17 מאגרים מחזוריים בעלי תקציב אסימונים חודשי חיובי שפורסם, בתוספת חמש מכסות Groq לפי מודל; 12 ספקים מסומנים כספקים שכדאי להימנע מהם בקטלוג סיכוני התנאים, כדי שאתם תחליטו. סרגל התקציב כולל Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (חמש מכסות לפי מודל) ומאגרים קטנים יותר, בתוספת קרדיטים להרשמה בחודש הראשון וספקים חינמיים לצמיתות ללא תקרת אסימונים, המוצגים בנפרד כדי שלעולם לא ינפחו את הנתון הראשי. נתוני שימוש ויתרה בזמן אמת ב־/dashboard/free-tiers."/>
 
 > סיכום מונפש של העמוד הפעיל `/dashboard/free-tiers`. המתודולוגיה המלאה (הסרת כפילויות של מאגרים, רמות קרדיט, תנאי ספקים): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,8 +108,8 @@
   <tr>
     <td align="right"><b>💡 למידה</b></td>
     <td align="center"><a href="#-the-promise">💥 ההבטחה</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 למה OmniRoute</a></td>
-    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 מה מייחד את OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 למה 67router</a></td>
+    <td align="center"><a href="#-what-sets-omniroute-apart">🏆 מה מייחד את 67router</a></td>
   </tr>
   <tr>
     <td align="right"><b>⚙️ תכונות</b></td>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="שלושה שלבים: התקנה והפעלה של OmniRoute, חיבור ספק זכאי עם החשבון או מפתח ה-API שלך, ואז הפניית הכלי שלך אל localhost:20128/v1 באמצעות מפתח API של OmniRoute ומודל auto. הניתוב תלוי בחיבורים זכאים זמינים ובמגבלות הספק."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="שלושה שלבים: התקנה והפעלה של 67router, חיבור ספק זכאי עם החשבון או מפתח ה-API שלך, ואז הפניית הכלי שלך אל localhost:20128/v1 באמצעות מפתח API של 67router ומודל auto. הניתוב תלוי בחיבורים זכאים זמינים ובמגבלות הספק."/>
 
 ```bash
-# לאחר חיבור ספק, העתק את מפתח ה-OmniRoute שלך מ-Dashboard → Endpoints:
+# לאחר חיבור ספק, העתק את מפתח ה-67router שלך מ-Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 למה OmniRoute?
+# 🤔 למה 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="למה OmniRoute — להפסיק ללהטג בין 10 לוחות בקרה, מפתחות API מתים וחשבונות מפתיעים. עשרה כאבי יומיום לעומת פתרונות: מכסה שמתבזבזת ללא שימוש → מיקסום מנויים; מגבלות קצב באמצע הקידוד → גיבוי אוטומטי ב-4 שכבות (מנוי → API → זול → חינמי); פלטי כלים ששורפים טוקנים → דחיסת RTK + Caveman (15–95%); ממשקי API יקרים → ניתוב מותאם עלות; כל כלי עם הגדרה משלו → נקודת קצה אחת, לוח בקרה אחד; AI חסום → פרוקסי תלת-שלבי + TLS stealth; מפתחות מתים → עמידות תלת-שכבתית (מפסקי מעגל, צינון מפתח, נעילת מודל); צוות שחולק מנוי אחד → מאגרי מפתחות עם מכסות חלוקה הוגנת; פרומפטים דרך הענן של מישהו אחר → מקומי-תחילה עם מפתחות מוצפנים AES-256-GCM; ללא שקיפות הוצאות → אנליטיקה חיה (שימוש, מכסה, חיסכון, השהיה p95)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="למה 67router — להפסיק ללהטג בין 10 לוחות בקרה, מפתחות API מתים וחשבונות מפתיעים. עשרה כאבי יומיום לעומת פתרונות: מכסה שמתבזבזת ללא שימוש → מיקסום מנויים; מגבלות קצב באמצע הקידוד → גיבוי אוטומטי ב-4 שכבות (מנוי → API → זול → חינמי); פלטי כלים ששורפים טוקנים → דחיסת RTK + Caveman (15–95%); ממשקי API יקרים → ניתוב מותאם עלות; כל כלי עם הגדרה משלו → נקודת קצה אחת, לוח בקרה אחד; AI חסום → פרוקסי תלת-שלבי + TLS stealth; מפתחות מתים → עמידות תלת-שכבתית (מפסקי מעגל, צינון מפתח, נעילת מודל); צוות שחולק מנוי אחד → מאגרי מפתחות עם מכסות חלוקה הוגנת; פרומפטים דרך הענן של מישהו אחר → מקומי-תחילה עם מפתחות מוצפנים AES-256-GCM; ללא שקיפות הוצאות → אנליטיקה חיה (שימוש, מכסה, חיסכון, השהיה p95)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="זרימת בקשה ב-OmniRoute: ה-IDE או ה-CLI שלך (Claude Code, Cursor, Cline…) קורא לנקודת קצה מקומית אחת (http://localhost:20128/v1); ה-Smart Router של OmniRoute (דחיסת RTK + Caveman, 20 אסטרטגיות ניתוב, מפסקי מעגל, TLS stealth, MCP, A2A, guardrails) יכול לגבות על פני 4 שכבות ספקים כל עוד יעד בריא זכאי זמין — שכבה 1 מנוי, שכבה 2 מפתח API, שכבה 3 זול ושכבה 4 חינמי."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="זרימת בקשה ב-67router: ה-IDE או ה-CLI שלך (Claude Code, Cursor, Cline…) קורא לנקודת קצה מקומית אחת (http://localhost:20128/v1); ה-Smart Router של 67router (דחיסת RTK + Caveman, 20 אסטרטגיות ניתוב, מפסקי מעגל, TLS stealth, MCP, A2A, guardrails) יכול לגבות על פני 4 שכבות ספקים כל עוד יעד בריא זכאי זמין — שכבה 1 מנוי, שכבה 2 מפתח API, שכבה 3 זול ושכבה 4 חינמי."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **רוצה להצטרף כחבר קוד פתוח?** אלו החברות שתומכות בקוד פתוח ועוזרות לשמור על OmniRoute בתנועה – ואנחנו מפרסמים בגלוי לאן הולך כל אסימון שהן נותנות לנו. צור קשר: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **רוצה להצטרף כחבר קוד פתוח?** אלו החברות שתומכות בקוד פתוח ועוזרות לשמור על 67router בתנועה – ואנחנו מפרסמים בגלוי לאן הולך כל אסימון שהן נותנות לנו. צור קשר: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Founding Open Source Friend"/>
     </td>
     <td>
-      תודה ל-<b>Kimi (Moonshot AI)</b>, חברת הקוד הפתוח המייסדת שלנו, על תמיכתה בפרויקט זה! Kimi היא מעבדת הבינה המלאכותית שמאחורי משפחות המודלים K2 ו-K3 בעלי המשקל הפתוח – <b>Kimi K3</b> מספקת חלון הקשר של מיליון אסימונים, ראייה מובנית וקידוד ברמה מתקדמת בשבריר ממחירי המודלים הסגורים, ועובדת מחוץ לקופסה עם Claude Code, Codex וכל כלי קידוד ש-OmniRoute משרתת.
+      תודה ל-<b>Kimi (Moonshot AI)</b>, חברת הקוד הפתוח המייסדת שלנו, על תמיכתה בפרויקט זה! Kimi היא מעבדת הבינה המלאכותית שמאחורי משפחות המודלים K2 ו-K3 בעלי המשקל הפתוח – <b>Kimi K3</b> מספקת חלון הקשר של מיליון אסימונים, ראייה מובנית וקידוד ברמה מתקדמת בשבריר ממחירי המודלים הסגורים, ועובדת מחוץ לקופסה עם Claude Code, Codex וכל כלי קידוד ש-67router משרתת.
       <br/><br/>
-      <b>מה תמיכת Kimi מאפשרת:</b> זיכויי ה-API של Kimi מפעילים את צינור השחרור המאושר על ידי AI של OmniRoute – שלב ה-<i>אימות מיזוג המופעל על ידי Kimi K3</i> הסוקר כל בקשת משיכה לפני שהיא נשלחת – בתוספת פיתוח תכונות יומיומי. תמיכה מהשורה הראשונה של Kimi נשלחת בשני מסלולים: ה-<a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> הישיר (<code>kimi-k3</code>) ו-<a href="https://www.kimi.ai/code?aff=omniroute">תוכנית הקידוד Kimi Code</a> (OAuth ומפתח API). OmniRoute הוא גם פרויקט הקוד הפתוח הברזילאי הראשון בתוכנית התמיכה של Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>קבל מפתח Kimi API עם 15% זיכויים נוספים ←</b></a>
+      <b>מה תמיכת Kimi מאפשרת:</b> זיכויי ה-API של Kimi מפעילים את צינור השחרור המאושר על ידי AI של 67router – שלב ה-<i>אימות מיזוג המופעל על ידי Kimi K3</i> הסוקר כל בקשת משיכה לפני שהיא נשלחת – בתוספת פיתוח תכונות יומיומי. תמיכה מהשורה הראשונה של Kimi נשלחת בשני מסלולים: ה-<a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> הישיר (<code>kimi-k3</code>) ו-<a href="https://www.kimi.ai/code?aff=omniroute">תוכנית הקידוד Kimi Code</a> (OAuth ומפתח API). 67router הוא גם פרויקט הקוד הפתוח הברזילאי הראשון בתוכנית התמיכה של Kimi. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>קבל מפתח Kimi API עם 15% זיכויים נוספים ←</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Friend"/>
     </td>
     <td>
-      תודה ל-<b>Cheaper Inference</b>, חבר קוד פתוח של OmniRoute, על תמיכתו בפרויקט זה! Cheaper Inference הוא שער מדורג על פי עלות המוכר מחדש 42 מודלים מתקדמים – Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok ו-MiniMax – מאחורי נקודת קצה אחת תואמת OpenAI, המנתב כל בקשה לספק הזול ביותר הזכאי מבלי לגבות אי פעם מעל מחיר המחירון של יצרן המודל.
+      תודה ל-<b>Cheaper Inference</b>, חבר קוד פתוח של 67router, על תמיכתו בפרויקט זה! Cheaper Inference הוא שער מדורג על פי עלות המוכר מחדש 42 מודלים מתקדמים – Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok ו-MiniMax – מאחורי נקודת קצה אחת תואמת OpenAI, המנתב כל בקשה לספק הזול ביותר הזכאי מבלי לגבות אי פעם מעל מחיר המחירון של יצרן המודל.
       <br/><br/>
-      <b>תמיכה מהשורה הראשונה ב-OmniRoute:</b> השלמות צ'אט, נקודת הקצה המובנית <code>/v1/responses</code>, ראייה, קריאת כלים ו-3 מודלי תמונה (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, נגישים כ-<code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>קבל מפתח API ←</b></a>
+      <b>תמיכה מהשורה הראשונה ב-67router:</b> השלמות צ'אט, נקודת הקצה המובנית <code>/v1/responses</code>, ראייה, קריאת כלים ו-3 מודלי תמונה (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, נגישים כ-<code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>קבל מפתח API ←</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ מבצע שותפים</b> — קופוני הרשמה חינם מספקים שאנחנו לא נותני חסות שלהם (לחץ להרחבה)</sub></summary>
 
-<sub><i>סעיף זה מיועד לקודי הפניה/קופונים בלבד. שותפויות ממומנות נמצאות ב-<b>🤝 נתמך על ידי חברי הקוד הפתוח שלנו</b> למעלה. ל-OmniRoute אין חסות או שותפות עם הספקים המפורטים כאן – אלו קופונים ציבוריים שכל אחד יכול להשתמש בהם.</i></sub>
+<sub><i>סעיף זה מיועד לקודי הפניה/קופונים בלבד. שותפויות ממומנות נמצאות ב-<b>🤝 נתמך על ידי חברי הקוד הפתוח שלנו</b> למעלה. ל-67router אין חסות או שותפות עם הספקים המפורטים כאן – אלו קופונים ציבוריים שכל אחד יכול להשתמש בהם.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — הרשמת שותפים · <b>$100 זיכויים חינם</b> בהרשמה (שרת חינם, צפה לחביון גבוה יותר – הטוב ביותר לבדיקות, לא לייצור). תמיכה מהשורה הראשונה ב-OmniRoute מאז <b>v3.8.50</b>: השלמות צ'אט, פורמט ה-wire התואם Anthropic והנתיב התואם OpenAI. מודלים זמינים כוללים <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> ועוד. <b><a href="https://agentrouter.org/register?aff=70LM">קח את ה-$100 שלך ←</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — הרשמת שותפים · <b>$100 זיכויים חינם</b> בהרשמה (שרת חינם, צפה לחביון גבוה יותר – הטוב ביותר לבדיקות, לא לייצור). תמיכה מהשורה הראשונה ב-67router מאז <b>v3.8.50</b>: השלמות צ'אט, פורמט ה-wire התואם Anthropic והנתיב התואם OpenAI. מודלים זמינים כוללים <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code> ועוד. <b><a href="https://agentrouter.org/register?aff=70LM">קח את ה-$100 שלך ←</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>קישור שותפים – ל-OmniRoute אין חסות או שותפות עם ספק זה.</i></sub>
+      <sub>⚠️ <i>קישור שותפים – ל-67router אין חסות או שותפות עם ספק זה.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>מכיר ספק אחר עם קופון הרשמה חינם נדיב המועיל למשתמשי OmniRoute? פתח גיליון ונוסיף אותו כאן.</sub>
+<sub>מכיר ספק אחר עם קופון הרשמה חינם נדיב המועיל למשתמשי 67router? פתח גיליון ונוסיף אותו כאן.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="דוגמאות מונפשות ל-18 מתוך 20 אסטרטגיות הניתוב של קומבואים — אריח אחד לכל אסטרטגיה: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. האסטרטגיות cache-optimized ו-quota-weighted אינן מונפשות; הטבלה שלהלן מתארת את כל ה-20."/>
 
-> **קומבו** הוא שרשרת של מודלים ש-OmniRoute מנתב ביניהם **באופן אוטומטי**. אם המכסה אוזלת, ספק נכשל או שהעלויות מזנקות, הקומבו יכול לעבור למודל התקין והכשיר הבא. 🛡️
+> **קומבו** הוא שרשרת של מודלים ש-67router מנתב ביניהם **באופן אוטומטי**. אם המכסה אוזלת, ספק נכשל או שהעלויות מזנקות, הקומבו יכול לעבור למודל התקין והכשיר הבא. 🛡️
 
 ### ⚡ ללא הגדרות — פשוט השתמשו ב-`auto`
 
-אין צורך ליצור קומבו. הגדירו את המודל שלכם ל-`auto` (או לגרסה אחרת שלו), ו-OmniRoute יבנה קומבו וירטואלי מהספקים המחוברים שלכם, עם ניקוד בזמן אמת:
+אין צורך ליצור קומבו. הגדירו את המודל שלכם ל-`auto` (או לגרסה אחרת שלו), ו-67router יבנה קומבו וירטואלי מהספקים המחוברים שלכם, עם ניקוד בזמן אמת:
 
 <table>
   <tr><th align="left">מזהה מודל</th><th align="left">מה הוא ממטב</th></tr>
@@ -496,7 +498,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 ### 🧱 העמידות מובנית במערכת (3 שכבות עצמאיות)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="העמידות של OmniRoute — 3 שכבות עצמאיות בעלות יכולת התאוששות עצמית, השכבה הנכונה לכשל הנכון. שכבה 1: מנתק מעגל של ספק (הספק כולו): מופעל רק בתגובות 408/5xx, עם ספים של OAuth ‏8× / מפתח API ‏12× / מקומי 2×, ומתאפס לאחר 60s/30s/15s לבדיקת HALF-OPEN, עם התאוששות עצלה; במצב OPEN, הצירוף מנתב מחדש לספק הבא. שכבה 2: תקופת צינון של חיבור (מפתח/חשבון יחיד): בסיס של 5s עבור OAuth / ‏3s עבור מפתח API, השהיה מעריכית של ×2 עם הגנה מפני עומס מתפרץ, תגובת 429 מכבדת את Retry-After, והצלחה מנקה את כל מצב השגיאה; מפתח שנמצא בתקופת צינון אינו בשימוש, בעוד שמפתחות מקבילים ממשיכים לספק שירות. שכבה 3: חסימת מודל (מודל יחיד): תגובת 429 ברמת המודל, תגובת 404 מקומית או דחיות מצב חוסמות רק את אותו מודל — ולעולם לא את החיבור כולו. מצבים סופיים (חסום, פג תוקף, האשראי אזל) מיועדים לטיפול המפעיל, ולא לתקופות צינון."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="העמידות של 67router — 3 שכבות עצמאיות בעלות יכולת התאוששות עצמית, השכבה הנכונה לכשל הנכון. שכבה 1: מנתק מעגל של ספק (הספק כולו): מופעל רק בתגובות 408/5xx, עם ספים של OAuth ‏8× / מפתח API ‏12× / מקומי 2×, ומתאפס לאחר 60s/30s/15s לבדיקת HALF-OPEN, עם התאוששות עצלה; במצב OPEN, הצירוף מנתב מחדש לספק הבא. שכבה 2: תקופת צינון של חיבור (מפתח/חשבון יחיד): בסיס של 5s עבור OAuth / ‏3s עבור מפתח API, השהיה מעריכית של ×2 עם הגנה מפני עומס מתפרץ, תגובת 429 מכבדת את Retry-After, והצלחה מנקה את כל מצב השגיאה; מפתח שנמצא בתקופת צינון אינו בשימוש, בעוד שמפתחות מקבילים ממשיכים לספק שירות. שכבה 3: חסימת מודל (מודל יחיד): תגובת 429 ברמת המודל, תגובת 404 מקומית או דחיות מצב חוסמות רק את אותו מודל — ולעולם לא את החיבור כולו. מצבים סופיים (חסום, פג תוקף, האשראי אזל) מיועדים לטיפול המפעיל, ולא לתקופות צינון."/>
 
 <sub>📖 [מנוע Auto-Combo](docs/routing/AUTO-COMBO.md) · [מדריך עמידות](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-## 🏆 מה מייחד את OmniRoute
+## 🏆 מה מייחד את 67router
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="מה מייחד את OmniRoute — תמונת מצב מתוארכת של תכונות בהשוואה ל-9router, OpenRouter, CLIProxyAPI ו-LiteLLM על פני 13 יכולות. OmniRoute:‏ 375 ספקים, יותר מ-150 מסלולים חינמיים מובנים, 20 אסטרטגיות ניתוב, דחיסת טוקנים באמצעות 12 מנועים, שרת MCP מובנה עם 110 כלים, פרוטוקול סוכנים A2A, זיכרון מתמשך, מנגנוני הגנה, סוכני ענן, הסוואת טביעת אצבע של TLS, תמיכה ב-Desktop/Termux/PWA ו-67 שפות ממשק משתמש. OmniRoute מופץ ברישיון MIT וניתן לאירוח עצמי. היכולות והכמויות של המתחרים עשויות להשתנות; ראו את המתודולוגיה המקושרת."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="מה מייחד את 67router — תמונת מצב מתוארכת של תכונות בהשוואה ל-9router, OpenRouter, CLIProxyAPI ו-LiteLLM על פני 13 יכולות. 67router:‏ 375 ספקים, יותר מ-150 מסלולים חינמיים מובנים, 20 אסטרטגיות ניתוב, דחיסת טוקנים באמצעות 12 מנועים, שרת MCP מובנה עם 110 כלים, פרוטוקול סוכנים A2A, זיכרון מתמשך, מנגנוני הגנה, סוכני ענן, הסוואת טביעת אצבע של TLS, תמיכה ב-Desktop/Termux/PWA ו-67 שפות ממשק משתמש. 67router מופץ ברישיון MIT וניתן לאירוח עצמי. היכולות והכמויות של המתחרים עשויות להשתנות; ראו את המתודולוגיה המקושרת."/>
 
 <sub>📊 המתודולוגיה המלאה ופרטים לפי תכונה בהשוואה ל-9router, OpenRouter, CLIProxyAPI ו-LiteLLM‏ → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 תמיכה ב־OmniRoute
+## 💚 תמיכה ב־67router
 
-ל־OmniRoute רישיון MIT והוא מתוחזק באופן פתוח. אם הוא חוסך לכם זמן או כסף, כך תוכלו לסייע לו להישאר עצמאי — בחרו במה שמתאים לכם. חסות לעולם אינה משפיעה על עדיפות הניתוב; היא מקנה חשיפה, לא דירוג.
+ל־67router רישיון MIT והוא מתוחזק באופן פתוח. אם הוא חוסך לכם זמן או כסף, כך תוכלו לסייע לו להישאר עצמאי — בחרו במה שמתאים לכם. חסות לעולם אינה משפיעה על עדיפות הניתוב; היא מקנה חשיפה, לא דירוג.
 
 <table>
-  <tr><td nowrap>⭐ <b>תנו כוכב למאגר</b></td><td>בחינם — באמת מסייע לחשיפה</td><td><a href="https://github.com/diegosouzapw/OmniRoute">תנו כוכב ל־OmniRoute</a></td></tr>
+  <tr><td nowrap>⭐ <b>תנו כוכב למאגר</b></td><td>בחינם — באמת מסייע לחשיפה</td><td><a href="https://github.com/diegosouzapw/OmniRoute">תנו כוכב ל־67router</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>חד־פעמי או חודשי · ללא עמלת פלטפורמה</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>טיפ חד־פעמי מהיר, ללא הרשמה מצד התורם</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>מחווה קטנה ולא רשמית</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ curl http://localhost:20128/v1/chat/completions \
 
 **🇧🇷 PIX** — מיידי, ללא עמלות (ברזיל)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="קוד QR של PIX עבור OmniRoute"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="קוד QR של PIX עבור 67router"/>
 
 מפתח (אקראי): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,13 +564,13 @@ curl http://localhost:20128/v1/chat/completions \
 
 <p><strong>הערות למפתחים:</strong> הפרויקט עשוי ליצור קובץ <code>.env</code> מקומי במהלך npm install/postinstall לנוחות המפתחים. המערכת מתעלמת מקובץ זה במכוון באמצעות <code>.gitignore</code> (ראו <code>.gitignore</code>), ולעולם אין לבצע לו commit — אם הוא בוצע בטעות, החליפו כל סוד שנחשף והסירו את הקובץ מההיסטוריה. להנחיות בנושא ניהול קובצי סביבה מקומיים וסודות, ראו <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a>.</p>
 
-## 📡 מכ"ם OmniRoute
+## 📡 מכ"ם 67router
 
-הכותרת המרכזית של המסלול החינמי נותרת **כ־1.62 מיליארד טוקנים בחודש**, בהתאם לקטלוג המתועד לעיל, לאחר הסרת כפילויות בין המאגרים. קרדיטים זמניים שמעניקים ספקים בעת ההרשמה יכולים להגדיל בנפרד את המכסה בחודש הראשון ל־**כ־2.22 מיליארד**. Radar הוא שכבת־על אופציונלית וחתומה לקטלוג, המיועדת למי שמעוניינים במידע עדכני יותר על זמינות מודלים חינמיים בין מהדורות OmniRoute; הקטלוג הקהילתי וכל התכונות החינמיות הקיימות יישארו בחינם.
+הכותרת המרכזית של המסלול החינמי נותרת **כ־1.62 מיליארד טוקנים בחודש**, בהתאם לקטלוג המתועד לעיל, לאחר הסרת כפילויות בין המאגרים. קרדיטים זמניים שמעניקים ספקים בעת ההרשמה יכולים להגדיל בנפרד את המכסה בחודש הראשון ל־**כ־2.22 מיליארד**. Radar הוא שכבת־על אופציונלית וחתומה לקטלוג, המיועדת למי שמעוניינים במידע עדכני יותר על זמינות מודלים חינמיים בין מהדורות 67router; הקטלוג הקהילתי וכל התכונות החינמיות הקיימות יישארו בחינם.
 
 תומכים יכולים לקבל את הקטלוג החי והזדמנויות נוספות מספקים. התקרה הנפרדת והמשתנה שלו היא **לכל היותר כ־3 מיליארד טוקנים בחודש**, בהתאם לזמינות אצל הספקים. תקרה זו אינה מובטחת: ספקים יכולים לשנות מכסות, תנאי זכאות, מודלים או אזורים בכל עת.
 
-Radar הוא שירות אופציונלי המבוסס על GET בלבד. לקוח OmniRoute אינו מעלה פרומפטים, תעבורה, הגדרות ספקים, נתוני טלמטריה על השימוש או את מצב הסגירה המקומי של הודעות. למידע על תנאי הזכאות ועל הקטלוג הנוכחי, בקרו ב־**[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
+Radar הוא שירות אופציונלי המבוסס על GET בלבד. לקוח 67router אינו מעלה פרומפטים, תעבורה, הגדרות ספקים, נתוני טלמטריה על השימוש או את מצב הסגירה המקומי של הודעות. למידע על תנאי הזכאות ועל הקטלוג הנוכחי, בקרו ב־**[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
 <br/>
 
@@ -586,14 +588,13 @@ Radar הוא שירות אופציונלי המבוסס על GET בלבד. לק�
 - **🔑 בקרת ניתוב לכל מפתח** — הצמידו מפתח API למודל או לשילוב יחיד באמצעות `forcedModel`, והוסיפו או הסירו מודלים ושילובים של מפתח באופן אטומי (`/api/keys/{id}/access`). → [תיעוד ה-API](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ בקרות PII מדויקות יותר** — בחירה לפי סוג, עד 20 תבניות מיסוך מותאמות אישית ומאומתות, ומוני זיהוי לפי סוג; המיסוך עצמו נשאר אופציונלי. → [אמצעי הגנה](docs/security/GUARDRAILS.md)
 - **🌍 67 שפות** — לוח הבקרה, עותקי התיעוד וה-CLI, כאשר `npm run i18n:add-locale` מוסיף שפה בכל מקום באמצעות פקודה אחת. → [מדריך i18n](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — האצלת A2A נכנסת לצי הסוכנים שלכם, מיומנויות Conductor בכרטיס הסוכן, ופאנל בלוח הבקרה עם צ'אט קולי בלחיצה-לדיבור של Faro. → [שרת A2A](docs/frameworks/A2A-SERVER.md)
 - **🛂 בקרת כניסה אדפטיבית והגנה מעומס יתר** — בקשות צ'אט כבדות נכנסות לתור במקום להחזיר 503, עם חכירות RPM מתגלגלות ואטומיות לכל חיבור. → [מדריך החוסן](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ סדר קנוני של `/v1/models`** — מקטע רציף אחד המקובץ לפי ספק עבור כל ספק (שילובים מוצמדים ראשונים), היציב בכל מקורות הקטלוג. → [תיעוד ה-API](docs/reference/API_REFERENCE.md)
 - **🗜️ הקשחת דחיסה** — הגנה מפני ניפוח המופעלת כברירת מחדל, חבילות Caveman לגרמנית / צרפתית / יפנית + סינית (wényán), ומסנני RTK עבור Gradle ו-.NET. → [דחיסה](docs/compression/COMPRESSION_ENGINES.md)
 - **💸 עלות כנה בתעריף קבוע** — ספקי מנויים / תוכניות תכנות מוצגים בעלות של **$0** בניתוח העלויות; התקציב, המכסה והניתוב ממשיכים לבצע הערכות. → [תיעוד ה-API](docs/reference/API_REFERENCE.md)
 - **⚖️ ניתוב Quota-Share** — חלוקה הוגנת של מכסת חשבון משותף בין מפתחות במאגר, תוך שימור עבודה כך שחלקים שאינם בשימוש מושאלים לאחרים. → [מדריך החוסן](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 הגדרת CLI/סוכן בפקודה אחת** — 15 פקודות `setup-*` רשומות; `omniroute run` מפעיל 7 כלי CLI‏ (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); הפקודה `omniroute configure` תומכת ב-11 יעדים, עם בורר אינטראקטיבי של ספק+מודל ומועדפים לכל הקשר. → [שילובי CLI](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ מצב מרוחק** — שליטה ב-OmniRoute מרוחק באמצעות אסימונים מוגבלי היקף (`connect` / `contexts` / `tokens`) + כלי עזר OAuth בשם `antigravity` להתקנות VPS. → [מצב מרוחק](docs/guides/REMOTE-MODE.md)
+- **🛰️ מצב מרוחק** — שליטה ב-67router מרוחק באמצעות אסימונים מוגבלי היקף (`connect` / `contexts` / `tokens`) + כלי עזר OAuth בשם `antigravity` להתקנות VPS. → [מצב מרוחק](docs/guides/REMOTE-MODE.md)
 - **🧭 ניתוב אוטומטי חכם יותר** — שילובי `auto/<category>:<tier>`, ‏**Fusion** (פאנל מודלים + שופט), ניתוב מודע-משימה ודריסות לפי בקשה עבור מודל / מצב / תקציב בדולרים. → [שילוב אוטומטי](docs/routing/AUTO-COMBO.md)
 - **🗜️ דחיסה מודולרית** — 12 מנועים הניתנים לשילוב + אולפני דחיסה: LLMLingua-2, ‏Ultra דו-שכבתי, omniglyph, שער נאמנות לכל שלב, GCF v3.2 ועורך לשינוי סדר בגרירה. → [דחיסה](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ פענוח MITM שקוף (TPROXY)** — לכידת כלי CLI שמתעלמים ממשתני סביבת Proxy, עם CA לכל SNI ומתקין למאגר האישורים המהימנים. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -663,7 +664,7 @@ Radar הוא שירות אופציונלי המבוסס על GET בלבד. לק�
 
 <br/>
 
-**הפעילו כל CLI נתמך דרך OmniRoute בפקודה אחת** — ללא כתיבת קובצי תצורה,
+**הפעילו כל CLI נתמך דרך 67router בפקודה אחת** — ללא כתיבת קובצי תצורה,
 פרטי הגישה מוזרקים לכל תהליך בנפרד, ו-Qwen/Gemini מקבלים ספריית בית מבודדת וזמנית:
 
 ```bash
@@ -756,7 +757,7 @@ omniroute configure codex          # זמינים גם: claude opencode qwen aid
 
 <div align="center">
 
-## 🖥️ היכן OmniRoute פועל — בכל מקום
+## 🖥️ היכן 67router פועל — בכל מקום
 
 </div>
 
@@ -772,7 +773,7 @@ omniroute configure codex          # זמינים גם: claude opencode qwen aid
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">פועל <b>בטלפון שלכם</b>, מסביב לשעון, ללא root</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"הוספה למסך הבית"</td><td align="left">מסך מלא, עבודה לא מקוונת והתקנה מהדפדפן</td></tr>
   <tr><td align="left" nowrap>🧩 <b>תוסף OpenCode</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">שילוב מקורי עם OpenCode</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>התקינו את התוסף <b>OmniCopilot</b></td><td align="left">כל מודל של OmniRoute בבורר המקורי של Copilot Chat — בגרסה היציבה וב-Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>התקינו את התוסף <b>OmniCopilot</b></td><td align="left">כל מודל של 67router בבורר המקורי של Copilot Chat — בגרסה היציבה וב-Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>מקוד המקור</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">שנו, שפרו ותרמו</td></tr>
 </table>
 
@@ -782,18 +783,18 @@ omniroute configure codex          # זמינים גם: claude opencode qwen aid
 
 <div align="center">
 
-### 🧩 חדש: OmniRoute בתוך Copilot Chat המקורי של VS Code
+### 🧩 חדש: 67router בתוך Copilot Chat המקורי של VS Code
 
 </div>
 
-> בלי סרגל צד חדש ובלי ממשק צ'אט חדש — כל מודל ש-OmniRoute מספק מופיע ישירות
+> בלי סרגל צד חדש ובלי ממשק צ'אט חדש — כל מודל ש-67router מספק מופיע ישירות
 > **בבורר המודלים של Copilot Chat שבו אתם כבר משתמשים**. החל מ-VS Code 1.122, מודלים של ספקים פועלים
 > ללא התחברות ל-GitHub או מינוי Copilot — מצב סוכן, קריאה לכלים וראייה ממוחשבת,
 > בחינם.
 
 התקינו את התוסף **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**, הפנו אותו
-לשרת OmniRoute שלכם (ברירת המחדל היא `localhost:20128`), ולאחר מכן פתחו את Copilot Chat ← בורר המודלים
-← **ניהול מודלים…** ← **OmniRoute**.
+לשרת 67router שלכם (ברירת המחדל היא `localhost:20128`), ולאחר מכן פתחו את Copilot Chat ← בורר המודלים
+← **ניהול מודלים…** ← **67router**.
 
 <table>
   <tr><th align="left">חנות</th><th align="left">קישור</th><th align="left">תואם ל־</th></tr>
@@ -801,7 +802,7 @@ omniroute configure codex          # זמינים גם: claude opencode qwen aid
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">התקנה ←</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-מתוך העורך: פתחו את תצוגת **ההרחבות**, חפשו **"OmniRoute"** ולחצו על **התקנה**
+מתוך העורך: פתחו את תצוגת **ההרחבות**, חפשו **"67router"** ולחצו על **התקנה**
 — הפעולה זהה בשתי החנויות. קוד המקור, הדיווחים ותהליך הפרסום נמצאים ב-
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -821,9 +822,9 @@ omniroute configure codex          # זמינים גם: claude opencode qwen aid
 > להשאיר חלון מסוף פתוח ובלי צורך לתחזק את `npm install -g omniroute`.**
 
 הוא נבנה באמצעות [Tauri v2](https://v2.tauri.app/) (ליבת Rust זעירה במיוחד), מגיע
-עם סביבת הריצה החתומה Node 24 משלו ומנהל התקנת OmniRoute בבעלות היישום, כך שלעולם אינו מתנגש עם
+עם סביבת הריצה החתומה Node 24 משלו ומנהל התקנת 67router בבעלות היישום, כך שלעולם אינו מתנגש עם
 `node`/`bun` הגלובליים שלכם. הוא **משתף את התצורה ומסד הנתונים הקיימים שלכם ב-`~/.omniroute/`** — כך שזהו
-אותו OmniRoute שאתם כבר מפעילים, רק עם כובע. 🎩
+אותו 67router שאתם כבר מפעילים, רק עם כובע. 🎩
 
 <table>
   <tr><th align="left">מה הוא עושה</th><th align="left">כיצד</th></tr>
@@ -841,7 +842,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>מעדיפים הורדה? הורידו את קובץ ה־<code>.dmg</code> העדכני ביותר מתוך
 <a href="https://github.com/zoispag/omniroute-tray/releases">הגרסאות</a>. קוד המקור, הדיווחים על בעיות ותיעוד הבנייה
 נמצאים ב־<a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 פרויקט קהילתי מאת <a href="https://github.com/zoispag">@zoispag</a> — אינו גרסה רשמית של OmniRoute.</sub>
+<br/>💛 פרויקט קהילתי מאת <a href="https://github.com/zoispag">@zoispag</a> — אינו גרסה רשמית של 67router.</sub>
 
 <br/>
 
@@ -851,7 +852,7 @@ brew install --cask zoispag/tap/omniroute-tray
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="פרטי ובגישה מקומית תחילה — השער ומישור הבקרה של OmniRoute פועלים במחשב שלכם. ההנחיות נשלחות לספק החיצוני שנבחר עבור כל בקשה; OmniRoute אינו מוסיף תחנת ביניים מתארחת לעיבוד הנחיות, והטלמטריה מושבתת כברירת מחדל. פרטי הגישה מוצפנים במנוחה באמצעות AES-256-GCM; אמצעי הבקרה כוללים הגבלת היקף של מפתחות API, סינון IP, מגבלות קצב, הגנות מפני הזרקת הנחיות, ניקוי כותרות של ספקים חיצוניים, השחרת PII לפי בחירה, שגיאות מסוננות ויומן ביקורת מקומי ב-SQLite. OmniRoute מופץ ברישיון MIT וניתן לאירוח עצמי."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="פרטי ובגישה מקומית תחילה — השער ומישור הבקרה של 67router פועלים במחשב שלכם. ההנחיות נשלחות לספק החיצוני שנבחר עבור כל בקשה; 67router אינו מוסיף תחנת ביניים מתארחת לעיבוד הנחיות, והטלמטריה מושבתת כברירת מחדל. פרטי הגישה מוצפנים במנוחה באמצעות AES-256-GCM; אמצעי הבקרה כוללים הגבלת היקף של מפתחות API, סינון IP, מגבלות קצב, הגנות מפני הזרקת הנחיות, ניקוי כותרות של ספקים חיצוניים, השחרת PII לפי בחירה, שגיאות מסוננות ויומן ביקורת מקומי ב-SQLite. 67router מופץ ברישיון MIT וניתן לאירוח עצמי."/>
 
 <sub>📖 [הרשאות](docs/architecture/AUTHZ_GUIDE.md) · [אמצעי הגנה](docs/security/GUARDRAILS.md) · [תאימות](docs/security/COMPLIANCE.md)</sub>
 
@@ -863,7 +864,7 @@ brew install --cask zoispag/tap/omniroute-tray
 
 </div>
 
-> מעבר לשרת, OmniRoute הוא **תא פיקוד מלא משורת הפקודה** עם **יותר מ-80 פקודות**, לצד פרוטוקולים פתוחים לסוכנים, כך שסוכן AI יכול להפעיל אותו **בכוחות עצמו**.
+> מעבר לשרת, 67router הוא **תא פיקוד מלא משורת הפקודה** עם **יותר מ-80 פקודות**, לצד פרוטוקולים פתוחים לסוכנים, כך שסוכן AI יכול להפעיל אותו **בכוחות עצמו**.
 
 ### ⌨️ CLI אמיתי (לא רק `start`)
 
@@ -874,9 +875,9 @@ omniroute setup         # אשף מודרך להפעלה ראשונה
 omniroute doctor        # אבחון ספקים, פורטים ותלויות מקוריות
 ```
 
-### 🛰️ מצב מרוחק — הפעילו את ה-CLI כאן ואת OmniRoute ב-VPS
+### 🛰️ מצב מרוחק — הפעילו את ה-CLI כאן ואת 67router ב-VPS
 
-OmniRoute פועל בשרת? הפעילו אותו מהמחשב הנייד שלכם באמצעות **אותו CLI**. התחברו פעם אחת
+67router פועל בשרת? הפעילו אותו מהמחשב הנייד שלכם באמצעות **אותו CLI**. התחברו פעם אחת
 באמצעות אסימון גישה מוגבל-היקף; לאחר מכן, כל פקודה תופנה לשרת המרוחק.
 
 ```bash
@@ -892,31 +893,28 @@ omniroute contexts use default            # ← חזרה לשרת המקומי
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="הדגמת מסוף מונפשת של OmniRoute CLI — omniroute providers list, omniroute combo list ו-omniroute health — עוברת במחזוריות על פני 89 הפקודות ברמה העליונה: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="הדגמת מסוף מונפשת של 67router CLI — omniroute providers list, omniroute combo list ו-omniroute health — עוברת במחזוריות על פני 89 הפקודות ברמה העליונה: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 חברו סוכן — והוא ישלוט ב-OmniRoute בעצמו
+### 🤝 חברו סוכן — והוא ישלוט ב-67router בעצמו
 
-חשפו את OmniRoute דרך **MCP**, **A2A**, **REST API**, **webhooks** או **CLI מרוחק** — כל סוכן מתאים (או הקוד שלכם) יקבל גישה לכל יכולות השער: ניתוב, ספקים, שילובים, מטמון, דחיסה וזיכרון — באופן אוטונומי. נקודות הקצה של HTTP שלהלן זמינות תחת `http://localhost:20128`.
+חשפו את 67router דרך **MCP**, **A2A**, **REST API**, **webhooks** או **CLI מרוחק** — כל סוכן מתאים (או הקוד שלכם) יקבל גישה לכל יכולות השער: ניתוב, ספקים, שילובים, מטמון, דחיסה וזיכרון — באופן אוטונומי. נקודות הקצה של HTTP שלהלן זמינות תחת `http://localhost:20128`.
 
 <table>
   <tr><th align="left">ממשק</th><th align="left">נקודת קצה / פקודה</th><th align="left">שימושים</th></tr>
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">חיבור ל-Claude Desktop, ל-Cursor או לכל לקוח MCP</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP מרוחק — <b>110 כלים</b>, 33 היקפים (האכיפה ניתנת להפעלה), יומן ביקורת מלא</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">תעבורת MCP בהזרמה</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">תקשורת בין סוכנים, <b>JSON-RPC 2.0</b> + SSE,‏ 6 מיומנויות</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">תואם OpenAI — צ'אט, הטמעות, תמונות, שמע ו-OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">דחיפת אירועי בקשות / מכסות אל Slack,‏ Discord,‏ Telegram או כל URL</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>CLI מרוחק</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">הפעלת מופע מרוחק באמצעות אסימוני גישה מוגבלי-היקף</td></tr>
 </table>
 
 ```bash
-# הענקת ערכת הכלים המלאה של OmniRoute ל-Claude Code דרך MCP:
+# הענקת ערכת הכלים המלאה של 67router ל-Claude Code דרך MCP:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [שרת MCP](docs/frameworks/MCP-SERVER.md) · [שרת A2A](docs/frameworks/A2A-SERVER.md) · [פרוטוקולים לסוכנים](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -928,7 +926,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 איך זה עובד — צינור עיבוד, ארכיטקטורה ומתמטיקת החיסכון
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="צינור הדחיסה של OmniRoute: בקשת הדגמה בת 10,000 טוקנים עוברת דרך 12 מנועים ניתנים להרכבה — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra ו-OmniGlyph — ויכולה להגיע לספק בכ-1,080 טוקנים בדוגמת הערימה המתועדת. תוכן מובנה מוגן על ידי שומרי שימור ושערי נאמנות לכל שלב; מצבים מאבדי-מידע או ניסיוניים מפורשים עשויים לשנות תוכן זכאי."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="צינור הדחיסה של 67router: בקשת הדגמה בת 10,000 טוקנים עוברת דרך 12 מנועים ניתנים להרכבה — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra ו-OmniGlyph — ויכולה להגיע לספק בכ-1,080 טוקנים בדוגמת הערימה המתועדת. תוכן מובנה מוגן על ידי שומרי שימור ושערי נאמנות לכל שלב; מצבים מאבדי-מידע או ניסיוניים מפורשים עשויים לשנות תוכן זכאי."/>
 
 קומבו מוערם כברירת מחדל מריץ `RTK → Caveman`. כאשר שניהם פועלים על אותו מטען (payload) של כלי/הקשר, החיסכון מצטבר:
 
@@ -940,7 +938,7 @@ range    = 78.4 – 94.6%
 
 בלוקי קוד, כתובות URL, JSON ונתונים מובנים **תמיד מוגנים** על ידי מנוע השימור.
 
-> **למה להשתמש בהרבה טוקנים כשמעט טוקנים עושים את העבודה?** כל בקשה עוברת דרך צינור הדחיסה של OmniRoute **באופן שקוף** — ללא שינויים בצד הלקוח. זהו כעת **מערך של 12 מנועים ניתנים להרכבה** שרצים לפי הסדר ומתמזגים ומתחלפים לפי כל קומבו ניתוב — בבנייה על רעיונות מ-[RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), ו-[Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **למה להשתמש בהרבה טוקנים כשמעט טוקנים עושים את העבודה?** כל בקשה עוברת דרך צינור הדחיסה של 67router **באופן שקוף** — ללא שינויים בצד הלקוח. זהו כעת **מערך של 12 מנועים ניתנים להרכבה** שרצים לפי הסדר ומתמזגים ומתחלפים לפי כל קומבו ניתוב — בבנייה על רעיונות מ-[RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua), ו-[Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
 ### 🧱 מערך 12 המנועים
 
@@ -1025,7 +1023,7 @@ omniroute
 ```
 
 > 💡 רואה `npm warn ERESOLVE` או אזהרות peer-dep? [הן בלתי מזיקות](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **משתמשים ב-npm 11 ואילך?** ייתכן ש-npm יחסום סקריפטים של מחזור חיים של חבילות אלא אם הם מורשים. ה-`postinstall` של OmniRoute (`node scripts/build/postinstall.mjs`) נדרש כדי להכין את קבצי ה-runtime המקוריים שלו. אפשרו את החבילות הנקובות באזהרה של npm בעת התקנה גלובלית. עבור סט החבילות שדווח על ידי OmniRoute 3.8.53:
+> **משתמשים ב-npm 11 ואילך?** ייתכן ש-npm יחסום סקריפטים של מחזור חיים של חבילות אלא אם הם מורשים. ה-`postinstall` של 67router (`node scripts/build/postinstall.mjs`) נדרש כדי להכין את קבצי ה-runtime המקוריים שלו. אפשרו את החבילות הנקובות באזהרה של npm בעת התקנה גלובלית. עבור סט החבילות שדווח על ידי 67router 3.8.53:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1061,9 +1059,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-אמורים להופיע המודלים המחוברים שלכם ברשימה. 🎉 זה הכול — התחילו לקודד, ו-OmniRoute מנתב אוטומטית ועושה fallback עבורכם.
+אמורים להופיע המודלים המחוברים שלכם ברשימה. 🎉 זה הכול — התחילו לקודד, ו-67router מנתב אוטומטית ועושה fallback עבורכם.
 
-אם הלקוח שלכם אינו יכול לשלוח כותרות מותאמות אישית, OmniRoute חושף גם כינויים לתאימות מבוססי טוקן:
+אם הלקוח שלכם אינו יכול לשלוח כותרות מותאמות אישית, 67router חושף גם כינויים לתאימות מבוססי טוקן:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1113,7 +1111,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 התקנה רגילה באמצעות `bun install` והתקנה גלובלית (`bun install -g omniroute`) נתמכות באמצעות זיהוי סביבת הריצה Bun:
 
-- **`bun:sqlite` מובנה**: בעת ריצה תחת Bun, ‏OmniRoute משתמש במנהל ההתקן `bun:sqlite` המובנה של Bun, ובמקרה הצורך חוזר ל-`better-sqlite3` ב-Node.js או ל-`sql.js`.
+- **`bun:sqlite` מובנה**: בעת ריצה תחת Bun, ‏67router משתמש במנהל ההתקן `bun:sqlite` המובנה של Bun, ובמקרה הצורך חוזר ל-`better-sqlite3` ב-Node.js או ל-`sql.js`.
 - **בחירה אוטומטית ב-Webpack לפיתוח**: סביבת הפיתוח (`bun run dev`) מזהה את Bun באופן אוטומטי ומשביתה את Turbopack לטובת Webpack, כדי למנוע אי-תאימויות עם קישורי V8 טבעיים. בניות לייצור (`bun run build`) פועלות בדיוק בהתאם ל-`OMNIROUTE_USE_TURBOPACK`, כמו ב-Node: ‏Turbopack כברירת מחדל, או `OMNIROUTE_USE_TURBOPACK=0` לבנייה באמצעות Webpack (`Dockerfile.bun` חושף אותו כ-`--build-arg`).
 - **Dockerfile ייעודי ל-Bun**: הקובץ הרב-שלבי `Dockerfile.bun` מיועד לפריסות ייצור טבעיות של Bun (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1197,7 +1195,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 
 <div align="center">
 
-# 🎬 OmniRoute בפעולה
+# 🎬 67router בפעולה
 
 </div>
 
@@ -1261,7 +1259,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 
 מדדים קנוניים נכון ל־2026-10-18: **1.976 סרטונים ייחודיים** · **20.220.289 צפיות ידועות** (`v > 0`) · **1.210 ערוצים/פרופילים לפי רשת**. לוח הבקרה הגולמי מכיל 1.976 שורות (YouTube 1.352 = 740 סרטונים ארוכים + 612 Shorts · TikTok 334 · Instagram 290); לא נותרו כפילויות לאחר הנרמול לפי כתובת ה־URL הקנונית, ששומר את מספר הצפיות הגבוה ביותר לכל סרטון. איסוף הנתונים מ־YouTube מוקפא נכון ל־2026-10-13 (מכסת ה־API נוצלה במלואה בין 14 ל־18/10), ומ־TikTok/Instagram מאז 2026-09-02 (אין קרדיטים לאיסוף); ל־76 סרטונים עדיין אין ספירת צפיות.
 
-> 🎬 **יצרתם סרטון על OmniRoute?** פתחו [בעיה](https://github.com/diegosouzapw/OmniRoute/issues/new) או [דיון](https://github.com/diegosouzapw/OmniRoute/discussions) עם הקישור — ונציג אותו כאן.
+> 🎬 **יצרתם סרטון על 67router?** פתחו [בעיה](https://github.com/diegosouzapw/OmniRoute/issues/new) או [דיון](https://github.com/diegosouzapw/OmniRoute/discussions) עם הקישור — ונציג אותו כאן.
 
 <br/>
 
@@ -1280,7 +1278,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 | 🟢 **WhatsApp — 🌍 גלובלי**               | [הצטרפו לקבוצה](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                 |
 | 🟢 **WhatsApp — 🇧🇷 ברזיל**                | [הצטרפו לקבוצה](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                 |
 | 🌍 **אתר אינטרנט**                        | [omniroute.online](https://omniroute.online)                                                                     |
-| 🌍 **🌍קהילת StHub OmniRoute (בחינם)**    | [פורטל StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)             |
+| 🌍 **🌍קהילת StHub 67router (בחינם)**     | [פורטל StHub](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)             |
 | 📦 **קוד מקור**                           | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                   |
 | 🐛 **דיווח על באג**                       | [פתחו דיווח](https://github.com/diegosouzapw/OmniRoute/issues) — צרפו את הפלט של `npm run system-info`           |
 | 🤝 **תרומה**                              | [CONTRIBUTING.md](CONTRIBUTING.md) · [מודל הסתעפות והפצה](docs/ops/BRANCHING_MODEL.md) · בחרו `good first issue` |
@@ -1333,8 +1331,8 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">מדריך למשתמש</a></b></td><td>ספקים, שילובים, אינטגרציית CLI, פריסה</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">מדריך הגדרה</a></b></td><td>כל שיטות ההתקנה, תצורות כלי CLI, הגדרת פרוטוקולים, כוונון זמני המתנה</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">מדריך כלי CLI</a></b></td><td>הגדרה ייעודית לכל כלי עבור Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo, Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">מצב מרוחק</a></b></td><td>שליטה ב-OmniRoute מרוחק (VPS) דרך ה-CLI במחשב הנייד באמצעות אסימוני גישה מוגבלי-היקף</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">תצורת Claude Code</a></b></td><td>חיבור Claude Code אל OmniRoute (מקומי/מרוחק) באמצעות <code>launch</code> ופרופילים לכל מודל</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">מצב מרוחק</a></b></td><td>שליטה ב-67router מרוחק (VPS) דרך ה-CLI במחשב הנייד באמצעות אסימוני גישה מוגבלי-היקף</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">תצורת Claude Code</a></b></td><td>חיבור Claude Code אל 67router (מקומי/מרוחק) באמצעות <code>launch</code> ופרופילים לכל מודל</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">התחלה מהירה</a></b></td><td>3 שלבים: התקנה ← חיבור ← הגדרה</td></tr>
 </table>
 
@@ -1346,7 +1344,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
   <tr><td nowrap><b><a href="contrib/podman/README.md">מדריך Podman</a></b></td><td>שילוב Quadlet עם systemd,‏ podman-compose,‏ SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">פריסה במכונה וירטואלית</a></b></td><td>מדריך מלא: הגדרת VM + nginx + Cloudflare</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">פריסה ב-Fly.io</a></b></td><td>פריסה ב-Fly.io עם אחסון מתמיד</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">מדריך Termux</a></b></td><td>הפעלת OmniRoute ב-Android באמצעות Termux</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">מדריך Termux</a></b></td><td>הפעלת 67router ב-Android באמצעות Termux</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">מדריך PWA</a></b></td><td>התקנת יישום רשת מתקדם, שמירה במטמון, ארכיטקטורה</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">מדריך הסרה</a></b></td><td>הסרה נקייה עבור כל שיטות ההתקנה</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">תצורת סביבה</a></b></td><td>כל משתני <code>.env</code> וההפניות</td></tr>
@@ -1379,7 +1377,6 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">שרת MCP</a></b></td><td>110 כלי MCP, תצורות IDE, לקוחות Python/TS/Go</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">מדריך שרת MCP</a></b></td><td>התקנת MCP, אמצעי תעבורה ומדריך עזר לכלים</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">שרת A2A</a></b></td><td>פרוטוקול JSON-RPC 2.0, מיומנויות, הזרמה, ניהול משימות</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">מדריך שרת A2A</a></b></td><td>כרטיס סוכן A2A, משימות, מיומנויות והזרמה</td></tr>
 </table>
 
 ### 📋 פרויקט ואיכות
@@ -1401,7 +1398,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 
 # ⭐ התורמים המובילים
 
-> OmniRoute מעוצב בידי קהילת קוד פתוח נלהבת. אנשים אלה תרמו תרומות יוצאות דופן שמשפיעות ישירות על האיכות, היציבות והתפוצה של הפרויקט. **תודה לכם.**
+> 67router מעוצב בידי קהילת קוד פתוח נלהבת. אנשים אלה תרמו תרומות יוצאות דופן שמשפיעות ישירות על האיכות, היציבות והתפוצה של הפרויקט. **תודה לכם.**
 
 ### תורמים חיצוניים לפי בקשות משיכה שמוזגו
 
@@ -1519,7 +1516,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 
 <sub>נבדק מחדש ב-2026-10-18 14:44:45 UTC: קומיטים המיוחסים ב-GitHub כפי שדווחו על ידי Contributors API של המאגר עבור ענף ברירת המחדל <code>release/v3.8.52</code>. ה-API החזיר 849 זהויות (429 משתמשים, 2 בוטים, 418 אנונימיות); טבלה זו אינה כוללת את מתחזק הפרויקט, בוטים וזהויות אנונימיות, ומשמרת שוויונות בדירוג. היא נפרדת הן מדירוג בקשות המשיכה שמוזגו לעיל והן ממפקד מטא-נתוני Git שלהלן.</sub>
 
-> 🙏 התכונות, תיקוני הבאגים ושיפורי התשתית של תורמים אלה הם **חלק מרכזי** במה שהופך את OmniRoute לאמין ועשיר בתכונות. כל בקשת משיכה, כל מקרה בדיקה וכל קובץ תרגום i18n חשובים. קוד פתוח נבנה על ידי אנשים כמותם.
+> 🙏 התכונות, תיקוני הבאגים ושיפורי התשתית של תורמים אלה הם **חלק מרכזי** במה שהופך את 67router לאמין ועשיר בתכונות. כל בקשת משיכה, כל מקרה בדיקה וכל קובץ תרגום i18n חשובים. קוד פתוח נבנה על ידי אנשים כמותם.
 
 </div>
 
@@ -1531,7 +1528,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 
 <div align="center">
 
-תודה מעומק הלב לאנשים שמממנים את OmniRoute מכיסם הפרטי — כל תרומה שומרת על הפרויקט חינמי, עצמאי ובתנועה.
+תודה מעומק הלב לאנשים שמממנים את 67router מכיסם הפרטי — כל תרומה שומרת על הפרויקט חינמי, עצמאי ובתנועה.
 
 <table>
   <tr>
@@ -1621,7 +1618,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # גם CI=1 מדלג ע�
 
 <sub>נותני החסות הציבוריים ב-GitHub Sponsors אומתו מחדש ב-2026-10-18 באמצעות GitHub Sponsors GraphQL API:‏ 11 חסויות ציבוריות (6 פעילות, 5 מהעבר) מתוך 14 בסך הכול. הסטטוס <code>isActive</code> של GitHub קובע את התוויות הפעילות שלעיל; תומכים ציבוריים שנתנו תמיכה חד-פעמית בעבר עדיין זוכים להוקרה, ונותני חסות פרטיים נשארים אנונימיים. תרומות דרך Ko-fi, Buy Me a Coffee, Liberapay, PIX ומטבעות קריפטוגרפיים אינן מופיעות משום שאין להן רישום ציבורי של נותן חסות.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 הצטרפו כנותני חסות ←</a></b> — כל דולר שומר על OmniRoute חינמי ועצמאי.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 הצטרפו כנותני חסות ←</a></b> — כל דולר שומר על 67router חינמי ועצמאי.
 
 </div>
 
@@ -1693,14 +1690,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצול של **[9router](https://github.com/decolua/9router)** וכהסבה ל-TypeScript של פרויקט ה-Go ‏**[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — ומשם, כל תת-מערכת המופיעה להלן נוצרה בהשראת פרויקט קוד פתוח שהגיע לשם קודם. כל אחד מהם עיצב חלק ממשי ב-OmniRoute. זוהי התודה שלנו לכולם. 🙏
+67router עומד על כתפיהם של ענקים. הוא התחיל כפיצול של **[9router](https://github.com/decolua/9router)** וכהסבה ל-TypeScript של פרויקט ה-Go ‏**[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** — ומשם, כל תת-מערכת המופיעה להלן נוצרה בהשראת פרויקט קוד פתוח שהגיע לשם קודם. כל אחד מהם עיצב חלק ממשי ב-67router. זוהי התודה שלנו לכולם. 🙏
 
 > ⭐ מספרי הכוכבים אומתו באמצעות REST API של GitHub ב-18 באוקטובר 2026 — לכו ותנו לפרויקטים האלה כוכב. המספרים הם תמונת מצב מדויקת לתאריך זה, ומטבע הדברים ישתנו.
 
 ### 🧬 שושלת ושער
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא שימש השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא שימש השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>הפרויקט המקורי שעליו מבוסס פיצול זה — והורחב כאן עם ממשקי API רב-אופניים ושכתוב מלא ב-TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>מימוש ה-Go ששימש השראה להסבה זו ל-JavaScript / TypeScript.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>שער ה-AI שמאגר נתוני התמחור הציבורי שלו מזין את סנכרון מעקב העלויות שלנו, ושמודל נרמול הספקים שלו סייע לעצב את הניתוב שלנו.</td></tr>
@@ -1708,19 +1705,19 @@ OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצ
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>דפוסים שהוסבו לשחזור זרמים, כינויים ללא חשיבה, חיפוש חלופי באינטרנט, מגבלות חלון נע, השחרת יומנים ותהליכי הפעלה מוקשחים.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>דפוסי בחירת כלים, אילוצי פלט ואישור כלים של Cursor Composer שהותאמו למבצע Cursor המקורי.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>דפוסי התחברות מחדש ורוטציית אסימוני רענון שהוסבו לאימות מחדש של Codex OAuth.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>ברירות מחדל להתמרה התואמות ל-Claude Code והתנהגות כותרות חיוב, שהוכללו בגשר מונחה-התצורה של OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>מיפויי המודלים של Grok, מחולל Statsig עם TypeError מדומה, ברירות המחדל לבקשות ולהתקנים ומעבד תגובות ה-NDJSON שלו הותאמו באופן מהותי למבצע Grok Web של OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>ברירות מחדל להתמרה התואמות ל-Claude Code והתנהגות כותרות חיוב, שהוכללו בגשר מונחה-התצורה של 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>מיפויי המודלים של Grok, מחולל Statsig עם TypeError מדומה, ברירות המחדל לבקשות ולהתקנים ומעבד תגובות ה-NDJSON שלו הותאמו באופן מהותי למבצע Grok Web של 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>מקור הקוד העקיף העיקרי שמאחורי grok2api-merged; מימושי המודל, הכותרות, המטען, Statsig והמעבד שלו נשמרים בשושלת של Grok Web.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>קוד המקור הבסיסי ברישיון MIT לברירות המחדל של המטען וההתקן של Grok, למחולל Statsig ולמעבד <code>result.response</code>, שהועבר דרך TQZHR ו-grok2api-merged.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>מקור עקיף שקיבל קרדיט מ-grok2api-merged עבור שכבת מאגר שרתי ה-proxy שלו; OmniRoute משמר את הודעת השושלת הזו, אך אינו טוען להסבת מאגר שרתי proxy במסגרת מבצע Grok Web המוגבל שלו.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>שרת ה-proxy שלו עבור Grok, המאומת באמצעות קובצי cookie, ודפוס הזרמת <code>result.response.token</code> שלו סייעו לעצב את תעבורת Grok Web של OmniRoute.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>מקור עקיף שקיבל קרדיט מ-grok2api-merged עבור שכבת מאגר שרתי ה-proxy שלו; 67router משמר את הודעת השושלת הזו, אך אינו טוען להסבת מאגר שרתי proxy במסגרת מבצע Grok Web המוגבל שלו.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>שרת ה-proxy שלו עבור Grok, המאומת באמצעות קובצי cookie, ודפוס הזרמת <code>result.response.token</code> שלו סייעו לעצב את תעבורת Grok Web של 67router.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>המימוש המקורי של Grok Web הסתמך על תכנון החיבור שלו לשירותי HTTP/דפדפן במעלה הזרם; נתיב ה-HTTP הישיר שלו נגזר מ-GrokProxy, ולכן אין טענה להסבת קוד עצמאית.</td></tr>
 </table>
 
 ### 🗜️ דחיסת הקשר ואסימונים — מנועים
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>הפרויקט הוויראלי "למה להשתמש בהרבה טוקנים כשמעט טוקנים עושים את העבודה" — פילוסופיית שפת-האדם-הקדמון שלו מניעה את מצב הדחיסה הסטנדרטי שלנו ויותר מ-30 כללי הסרת מילות מילוי ותמצות.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>דחיסת פלט פקודות בעלת ביצועים גבוהים — היוותה השראה למנוע RTK שלנו, ל-DSL לסינון JSON, לשחזור פלט גולמי ולצינור העיבוד המשולב RTK → Caveman.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>דחיסת הקשר הפיכה (SmartCrusher) — היוותה השראה למנוע <code>headroom</code> שלנו ולתבנית סמן האחזור <code>ccr</code>.</td></tr>
@@ -1728,15 +1725,15 @@ OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצ
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>ההסבה ל-JS/ONNX‏ (MobileBERT / XLM-RoBERTa), המשמשת כתשתית מבוססת תהליכון עובד עבור מנוע LLMLingua שלנו.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>דחיסת טוקנים ב-PT-BR — מניעה את חבילת השפה pt-BR שלנו: צמצום כפילויות לשוניות והסרת מילות מילוי המותאמים לדקדוק של פורטוגזית ברזילאית.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>מיומנות הקידוד הוויראלית "מפתח בכיר עצלן" בגישת YAGNI — היוותה השראה לסגנון הפלט <b>פחות קוד</b> שלנו: הכוונה לשינוי הקטן ביותר שעובד, המצמצמת את הקוד _שנוצר_ (המקבילה בציר הפלט לפרוזה התמציתית של Caveman).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>סגנון התגובה שלו, המציב פעולה תחילה ומותאם ל-ADHD, הותאם לסגנון הפלט התמציתי של OmniRoute בחמש שפות.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>סגנון התגובה שלו, המציב פעולה תחילה ומותאם ל-ADHD, הותאם לסגנון הפלט התמציתי של 67router בחמש שפות.</td></tr>
 </table>
 
 ### 🧩 פורמטים קומפקטיים, מחקר טוקנים וכלים מודעי-קוד
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>סימון אובייקטים מוכוון-טוקנים — המודל הטבלאי שלו, המבוסס על כותרת ושורות, עיצב את שלב הדחיסה הטבלאית שלנו.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>פורמט הגרף הקומפקטי שלו ותכנון הפרופיל הגנרי סייעו לעצב את הדחיסה הטבלאית של OmniRoute ואת פורמט הקודק של Headroom.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>פורמט הגרף הקומפקטי שלו ותכנון הפרופיל הגנרי סייעו לעצב את הדחיסה הטבלאית של 67router ואת פורמט הקודק של Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>מימוש ה-TypeScript ברישיון MIT, ששולב ישירות והורחב כקודק הפרופיל הגנרי של Headroom.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>מטמון Brotli/SQLite יחד עם הפרשי הקשר לכל הפעלה — היווה השראה למנוע <code>session-dedup</code> שלנו.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>דחיסת פלט Bash יחד עם פרופילי MCP — היוותה השראה למדיניות הוויתור על דחיסה שלנו ולצמצום מניפסט כלי MCP.</td></tr>
@@ -1753,7 +1750,7 @@ OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצ
 ### 🧠 זיכרון ו-RAG
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>שכבת זיכרון אוניברסלית — מודל ה-proxy שלה כגבול כתיבה/קריאה עיצב את ארכיטקטורת הזיכרון שלנו.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>סוכנים בעלי מצב עם זיכרון מדורג — היוו השראה למודל המדורג שלנו לבקרת הקשר והתאוששות (CCR).</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>הטקסונומיה ProblemMap של 16 מצבי כשל חוזרים ב-RAG/LLM — אוצר המילים המשותף במדריך פתרון הבעיות שלנו.</td></tr>
@@ -1762,15 +1759,15 @@ OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצ
 ### 🛰️ בדיקת תעבורה, MITM ו-proxy שקוף
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>יירוט/ניתוח MITM של תעבורת עוזר קידוד ↔ LLM סייעו בגיבוש הדרישות הראשוניות ל-Traffic Inspector. ארבעה מודולים שנגזרו בעבר — מיזוג SSE, נרמול שיחות, מיסוך סודות וטיהור כותרות — הוחלפו במימושי clean-room עצמאיים המבוססים על תקני פרוטוקול ציבוריים. שני ממשקי העברת המארח (<code>passthrough.ts</code> ו-<code>_internal/bypass.cjs</code>) נותרו מימושים פנימיים של OmniRoute שסווגו באופן עצמאי; הם לא נכתבו מחדש כחלק מהחלפה זו.</td></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>יירוט/ניתוח MITM של תעבורת עוזר קידוד ↔ LLM סייעו בגיבוש הדרישות הראשוניות ל-Traffic Inspector. ארבעה מודולים שנגזרו בעבר — מיזוג SSE, נרמול שיחות, מיסוך סודות וטיהור כותרות — הוחלפו במימושי clean-room עצמאיים המבוססים על תקני פרוטוקול ציבוריים. שני ממשקי העברת המארח (<code>passthrough.ts</code> ו-<code>_internal/bypass.cjs</code>) נותרו מימושים פנימיים של 67router שסווגו באופן עצמאי; הם לא נכתבו מחדש כחלק מהחלפה זו.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>ניתוב proxy שקוף לכל תהליך בנפרד — היווה השראה לפירוק MITM בטוח במקרה של קריסה, לזמני קצוב לחוסר פעילות של socket, לשיוך תהליכים באמצעות <code>/proc</code> וללכידת TPROXY.</td></tr>
 </table>
 
 ### 📚 נתוני מודלים, נִצְפּוּת וממשק משתמש
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>מסד נתונים פתוח של מפרטי מודלי AI, תמחור ויכולות — מסונכרן באופן מובנה לקטלוג המודלים שלנו.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>ספריית הגרפים מבוססי-הצמתים שמפעילה את Compression Studio ואת Combo/Routing Studio שלנו בזמן אמת.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>ההמחשה החזותית החיה של גרף תהליכי העבודה ב-LangGraph Studio היוותה השראה לתצוגת השרשרת בזמן אמת ב-Studios שלנו.</td></tr>
@@ -1783,19 +1780,19 @@ OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצ
 ### 🛡️ אבטחה
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>רשימה אוצרת של ספריות מאובטחות כברירת מחדל, המנחה את בחירות האבטחה שלנו (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 כלים משלימים
 
 <table>
-  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-OmniRoute</th></tr>
+  <tr><th align="left">פרויקט</th><th align="center">⭐</th><th align="left">כיצד הוא היווה השראה ל-67router</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>היווה השראה להסרת כפילויות בבקשות, לחלופת חירום ללא עלות, לאסטרטגיות Auto-Combo הניתנות להרחבה ולסיווג כוונות רב-לשוני.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>המיפוי מחדש של מודלים בהתאם לחשבון, אימות נתיבי קובצי הפעלה והתנהגות תוויות התוכנית שלו סייעו בעיצוב סביבת הריצה Antigravity של OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>פורמט הספירה לאחור הקומפקטי שלו לאיפוס המכסה היווה השראה לתצוגה המקבילה של מגבלות הספק ב-OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>שילובי ה-ACP שלו היוו השראה לזיהוי האוטומטי של סוכני CLI מותקנים ב-OmniRoute.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>זיהה את ממשק המכסה של Grok Build; לאחר מכן OmniRoute אימת ותיקן באופן עצמאי את פורמט התקשורת הפעיל.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>המיפוי מחדש של מודלים בהתאם לחשבון, אימות נתיבי קובצי הפעלה והתנהגות תוויות התוכנית שלו סייעו בעיצוב סביבת הריצה Antigravity של 67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>פורמט הספירה לאחור הקומפקטי שלו לאיפוס המכסה היווה השראה לתצוגה המקבילה של מגבלות הספק ב-67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>שילובי ה-ACP שלו היוו השראה לזיהוי האוטומטי של סוכני CLI מותקנים ב-67router.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>זיהה את ממשק המכסה של Grok Build; לאחר מכן 67router אימת ותיקן באופן עצמאי את פורמט התקשורת הפעיל.</td></tr>
 </table>
 
 ## 📄 רישיון
@@ -1808,7 +1805,7 @@ OmniRoute עומד על כתפיהם של ענקים. הוא התחיל כפיצ
 
 **[⬆ חזרה למעלה](#-omniroute)** · נבנה עם ❤️ עבור קהילת ה-AI בקוד פתוח.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · רישיון MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · רישיון MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions מופעל לשאלות ותשובות של הקהילה -->

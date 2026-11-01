@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute විසින් කුමන **බ්රවුසර මූලයන්ට (browser origins)** හරස්-මූල ප්රතිචාර
+67router විසින් කුමන **බ්රවුසර මූලයන්ට (browser origins)** හරස්-මූල ප්රතිචාර
 කියවිය හැකිද යන්න එක් මධ්යගත අවසර ලැයිස්තුවකින් පාලනය කරයි. මෙම ආකෘතිය
 **පෙරනිමියෙන් අසාර්ථක වුවහොත් වසා දැමේ (fail-closed)**: ඔබ පැහැදිලිව අවසර දෙන තෙක් කිසිදු මූලයකට
 අවසර නොලැබේ. අවසර ලැයිස්තුව නිරාකරණය වන ආකාරය, `CORS_ALLOW_ALL=true` මඟින් සැබවින්ම නිරාවරණය
@@ -48,12 +48,12 @@ OmniRoute විසින් කුමන **බ්රවුසර මූලය�
 
 සාමාන්ය OWASP අනතුරු ඇඟවීම ("වයිල්ඩ්කාඩ් CORS = ඕනෑම අඩවියකට ඔබේ API එක ඇමතිය හැක")
 බැරෑරුම් ලෙස සැලකීම වටී. නමුත් එක් නිශ්චිත ක්රියාත්මක කිරීමේ කරුණක් නිසා
-OmniRoute හි නිරාවරණය **සාමාන්ය අවස්ථාවට වඩා සීමිතය**:
+67router හි නිරාවරණය **සාමාන්ය අවස්ථාවට වඩා සීමිතය**:
 
 > **මධ්යගත `applyCorsHeaders()` කිසි විටෙක
 > `Access-Control-Allow-Credentials` නිකුත් නොකරයි.** සේවාදායකය
 > `Access-Control-Allow-Credentials: true` නොයවන්නේ නම්, බ්රවුසරයක් _අක්තපත්ර සහිත_
-> (කුකී අඩංගු) හරස්-මූල ප්රතිචාරයක් නිරාවරණය නොකරයි. OmniRoute හි හවුල් CORS මාර්ගය එය
+> (කුකී අඩංගු) හරස්-මූල ප්රතිචාරයක් නිරාවරණය නොකරයි. 67router හි හවුල් CORS මාර්ගය එය
 > කිසි විටෙක නොකරයි.
 
 `CORS_ALLOW_ALL=true` තිබුණද, එක් එක් පෘෂ්ඨය සඳහා මෙයින් අදහස් වන්නේ:
@@ -70,20 +70,6 @@ OmniRoute හි නිරාවරණය **සාමාන්ය අවස්�
 පිටුවකට සැපයිය නොහැකි සත්යාපනය අවශ්ය වේ. හවුල් CORS මාර්ගයේ මෙය සැසියක් පැහැරගැනීමේ හෝ
 අක්තපත්ර සොරකම් කිරීමේ මාර්ගයක් **නොවේ**.
 
-### එක් සැබෑ ව්යතිරේකයක් — `/api/v1/agents/`
-
-Cloud-Agent මාර්ග (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) තමන්ගේම
-CORS ශීර්ෂ සකසන අතර
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`),
-`Access-Control-Allow-Credentials: true` සමඟ
-`Access-Control-Allow-Origin: <origin>|*` ද **නිකුත් කරයි**. මූලය ප්රතිරාවය කිරීම සහ
-අක්තපත්ර එකට පවතින එකම පෘෂ්ඨය මෙය වන අතර, එය
-`CORS_ALLOW_ALL` වෙතින් **ස්වාධීනය**. මෙම මාර්ග කළමනාකරණ-සත්යාපිතය
-(`requireManagementAuth`); සත්කාරකයෙන් පිටත උපකරණ පුවරුව නිරාවරණය කරන ක්රියාකරුවන්,
-ප්රතිචාර ශීර්ෂ මඟින් හරස්-මූල අක්තපත්ර සහිත කියවීමකට අවසර දෙන එකම ස්ථානය මෙය බව
-දැන සිටිය යුතුය. එය පැහැදිලි අවසර ලැයිස්තුවකට සීමා කිරීම මෙම CORS මාර්ගෝපදේශයෙන්
-වෙන්ව නිරීක්ෂණය කෙරේ.
-
 ## නිෂ්පාදන පිරික්සුම් ලැයිස්තුව
 
 - **නිෂ්පාදන පරිසරයේදී කිසිවිටෙකත් `CORS_ALLOW_ALL=true` ලෙස සකසන්න එපා.** එය සකසා නොතබන්න.
@@ -93,7 +79,7 @@ CORS ශීර්ෂ සකසන අතර
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- OmniRoute reverse proxy එකක් / tunnel එකක් (nginx, Caddy, Cloudflare
+- 67router reverse proxy එකක් / tunnel එකක් (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) පිටුපස ක්රියාත්මක වන්නේ නම්, CORS ඔබේ එකම පාලනය **නොවේ** — loopback route
   guard එක තවමත් spawn කිරීමේ හැකියාව ඇති routes ආරක්ෂා කරයි ([ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)
   බලන්න). 403 දෝෂයක් "නිවැරදි" කිරීම සඳහා
@@ -109,7 +95,7 @@ CORS ශීර්ෂ සකසන අතර
 සංවර්ධන පරිසරයේදී පවා ඔබට wildcard එක අවශ්ය වන්නේ කලාතුරකිනි. ඔබ භාවිත කරන dev servers සඳහා පමණක් ඉඩ දෙන්න:
 
 ```bash
-# local OmniRoute එකක් අමතන Vite (5173) + Next.js (3000) dev servers
+# local 67router එකක් අමතන Vite (5173) + Next.js (3000) dev servers
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -129,12 +115,12 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   management/dashboard origins ඕනෑම ලිහිල් config එකකින් බැහැරව තබන්න; ඒවා නියත වශයෙන්ම
   fail-closed ලෙස පැවතිය යුතුය.
 
-## උදාහරණය: OmniRoute ඉදිරියෙන් reverse proxy එකක්
+## උදාහරණය: 67router ඉදිරියෙන් reverse proxy එකක්
 
-CORS, OmniRoute විසින්ම බලාත්මක කරන බැවින්, proxy එක සාමාන්යයෙන් `Access-Control-*` headers එක් කිරීම හෝ නැවත ලිවීම **නොකළ යුතුය** (headers දෙවරක් තිබීම browsers ක්රියා නොකරවයි). TLS අවසන් කර ඉදිරියට යොමු කරන්න — preflight ඉල්ලීමට OmniRoute හට පිළිතුරු දීමට ඉඩ දෙන්න:
+CORS, 67router විසින්ම බලාත්මක කරන බැවින්, proxy එක සාමාන්යයෙන් `Access-Control-*` headers එක් කිරීම හෝ නැවත ලිවීම **නොකළ යුතුය** (headers දෙවරක් තිබීම browsers ක්රියා නොකරවයි). TLS අවසන් කර ඉදිරියට යොමු කරන්න — preflight ඉල්ලීමට 67router හට පිළිතුරු දීමට ඉඩ දෙන්න:
 
 ```nginx
-# nginx — OmniRoute වෙත ඉදිරියට යොමු කරන්න; මෙහිදී Access-Control-* ඇතුළු නොකරන්න
+# nginx — 67router වෙත ඉදිරියට යොමු කරන්න; මෙහිදී Access-Control-* ඇතුළු නොකරන්න
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,25 +128,24 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # ඉදිරියට යැවීමේ headers තබාගන්න: එකම host එකෙහි ඇති proxy එකක් loopback වෙතින් සම්බන්ධ වන අතර,
-    # ඇමතුම්කරු local operator නොවන බව OmniRoute වෙත දන්වන්නේ ඒවාය. ඒවායින් කිසිවක් එක් නොකරන proxy එකක්
+    # ඇමතුම්කරු local operator නොවන බව 67router වෙත දන්වන්නේ ඒවාය. ඒවායින් කිසිවක් එක් නොකරන proxy එකක්
     # සෑම දුරස්ථ ඇමතුම්කරුවෙකුම local ලෙස පෙනෙන්නට සලස්වයි. එසේම X-Forwarded-For කිසිවිටෙක 127.0.0.1 ලෙස සකසන්න එපා.
 }
 ```
 
-අවසර දී ඇති browser origins, proxy එකෙහි නොව OmniRoute තුළ (`CORS_ALLOWED_ORIGINS` හෝ
+අවසර දී ඇති browser origins, proxy එකෙහි නොව 67router තුළ (`CORS_ALLOWED_ORIGINS` හෝ
 Security tab එකෙහි) සකසන්න.
 
 ## මූලාශ්ර ගොනු
 
-| අදාළ කරුණ                                       | ගොනුව                                                                |
-| ----------------------------------------------- | -------------------------------------------------------------------- |
-| Allowlist නිරාකරණය + `getCorsStatus()`          | `src/server/cors/origins.ts`                                         |
-| Middleware යෙදීම (සත්යයේ එකම මූලාශ්රය)          | `src/server/authz/pipeline.ts`                                       |
-| Settings → runtime origin ඇතුළත් කිරීම          | `src/lib/config/runtimeSettings.ts`                                  |
-| dashboard එක සඳහා runtime තත්ත්වය               | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Dashboard අනතුරු ඇඟවීමේ බැනරය                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins ක්ෂේත්රය                   | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| එක් එක් route සඳහා Cloud-Agent CORS (ව්යතිරේකය) | `src/lib/cloudAgent/api.ts`                                          |
+| අදාළ කරුණ                              | ගොනුව                                                                |
+| -------------------------------------- | -------------------------------------------------------------------- |
+| Allowlist නිරාකරණය + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| Middleware යෙදීම (සත්යයේ එකම මූලාශ්රය) | `src/server/authz/pipeline.ts`                                       |
+| Settings → runtime origin ඇතුළත් කිරීම | `src/lib/config/runtimeSettings.ts`                                  |
+| dashboard එක සඳහා runtime තත්ත්වය      | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Dashboard අනතුරු ඇඟවීමේ බැනරය          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins ක්ෂේත්රය          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## තවද බලන්න
 

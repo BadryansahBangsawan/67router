@@ -4,7 +4,7 @@
 
 ---
 
-> **本文件的內容。** 對 OmniRoute 品質閘門系統的批判性評估，
+> **本文件的內容。** 對 67router 品質閘門系統的批判性評估，
 > 並與業界最佳實務進行比較，**以及**所有品質
 > 檢查點的完整目錄，與一套可將相同系統套用至
 > 任何專案的**工具無關複製計畫**。依據 2026-06-16 的實際儲存庫狀態產生（而非憑記憶）。
@@ -98,62 +98,62 @@
 
 ### 1. 樣式與格式（確定性、快速）
 
-- **OmniRoute：**透過 lint-staged（pre-commit）執行 Prettier + ESLint，採用 2 個空格／雙引號／100 欄。
+- **67router：**透過 lint-staged（pre-commit）執行 Prettier + ESLint，採用 2 個空格／雙引號／100 欄。
 - **通用方案：**一個可自動修正的格式化工具 + 一個 linter，於 pre-commit 階段對已暫存的檔案執行。
 
 ### 2. 類型
 
-- **OmniRoute：**`typecheck:core`（阻擋式）+ `typecheck:noimplicit:core`（建議式）+ `type-coverage` 棘輪門檻 92.17% + 每個檔案的 any 預算。
+- **67router：**`typecheck:core`（阻擋式）+ `typecheck:noimplicit:core`（建議式）+ `type-coverage` 棘輪門檻 92.17% + 每個檔案的 any 預算。
 - **通用方案：**在 CI 中執行嚴格類型檢查 + 採用棘輪機制的類型覆蓋率指標 + 每個檔案的 `any`／逃生艙預算。
 
 ### 3. 測試（強度）
 
-- **OmniRoute：**2 個互不重疊的執行器（Node 原生 + vitest）、8 個分片、全域覆蓋率 60/60/60/60 + 約 76% 的棘輪門檻 + **關鍵模組的 8 個逐模組最低門檻** + 每晚屬性測試 + 每晚執行**突變測試**。
+- **67router：**2 個互不重疊的執行器（Node 原生 + vitest）、8 個分片、全域覆蓋率 60/60/60/60 + 約 76% 的棘輪門檻 + **關鍵模組的 8 個逐模組最低門檻** + 每晚屬性測試 + 每晚執行**突變測試**。
 - **通用方案：**測試執行器 + **絕對**覆蓋率最低門檻（防止歸零）+ 覆蓋率**棘輪機制**（防止退步）+ **高風險程式碼的逐模組最低門檻**（防止 Goodhart 定律效應）+ 對純邏輯進行屬性測試 + 每晚執行**突變測試**，將其作為衡量測試品質的真正指標。
 
 ### 4. 測試政策（防作弊）
 
-- **OmniRoute：**`pr-test-policy`（正式環境程式碼必須有測試）、`check-test-masking`（阻擋被弱化的斷言）、`pr-evidence`（成功宣稱必須附上證據區塊）、`test-discovery`（每個測試都必須由某個執行器收集）。
+- **67router：**`pr-test-policy`（正式環境程式碼必須有測試）、`check-test-masking`（阻擋被弱化的斷言）、`pr-evidence`（成功宣稱必須附上證據區塊）、`test-discovery`（每個測試都必須由某個執行器收集）。
 - **通用方案：**「新程式碼 ⇒ 新測試」閘門 + 移除斷言／恆真式偵測器 + 證據要求（TDD 或持續有效的測試）+ 確保沒有任何測試孤立於 glob 範圍之外。
 
 ### 5. 複雜度與程式碼健康度（棘輪機制）
 
-- **OmniRoute：**ESLint 警告（3769↓）、jscpd 重複率（5.72%↓）、循環複雜度 + 最大行數複雜度（1800↓）、sonarjs 認知複雜度（753↓）、knip 無效程式碼／未使用匯出（339↓）、逐檔案大小（凍結、只能縮減）、循環相依性（自訂 Tarjan、阻擋式）。
+- **67router：**ESLint 警告（3769↓）、jscpd 重複率（5.72%↓）、循環複雜度 + 最大行數複雜度（1800↓）、sonarjs 認知複雜度（753↓）、knip 無效程式碼／未使用匯出（339↓）、逐檔案大小（凍結、只能縮減）、循環相依性（自訂 Tarjan、阻擋式）。
 - **通用方案：**對每項健康度指標套用棘輪機制（警告、重複、循環**及**認知複雜度、無效程式碼、檔案大小、匯入循環）。方向永遠是「不得退步」。
 
 ### 6. 靜態安全性（SAST + 機密資訊）
 
-- **OmniRoute：**CodeQL（警示棘輪值 = 0）、gitleaks（`[extend] useDefault=true` — 至關重要！）、SonarQube、自訂安全規則（public-creds、error-helper、route-guard-membership、route-validation）。
+- **67router：**CodeQL（警示棘輪值 = 0）、gitleaks（`[extend] useDefault=true` — 至關重要！）、SonarQube、自訂安全規則（public-creds、error-helper、route-guard-membership、route-validation）。
 - **通用方案：**採用警示棘輪機制的 SAST（CodeQL/Sonar/semgrep）+ 具備**繼承式預設規則集**的機密資訊掃描器（覆寫預設值的自訂設定 = 形成盲區）+ 專案特定的 Hard Rule 安全閘門。
 
 ### 7. 供應鏈（相依套件）
 
-- **OmniRoute：**osv-scanner + npm-audit + Trivy + Dependabot（SCA）、license-checker（SPDX 允許清單）、lockfile-lint（HTTPS+sha512+registry）、`check-deps` 防 slopsquatting（允許清單 + 套件存在時間 ≥72h）。
+- **67router：**osv-scanner + npm-audit + Trivy + Dependabot（SCA）、license-checker（SPDX 允許清單）、lockfile-lint（HTTPS+sha512+registry）、`check-deps` 防 slopsquatting（允許清單 + 套件存在時間 ≥72h）。
 - **通用方案：**多來源 SCA + 授權條款允許清單 + lockfile 完整性檢查 + 具備套件存在時間／typosquatting 檢查的相依套件允許清單 + 分組更新機器人。
 
 ### 8. 供應鏈（建置與發布）
 
-- **OmniRoute：**SBOM（CycloneDX + syft）、SLSA 溯源證明（`--provenance`）、OpenSSF Scorecard（每週）、工作流程強化（zizmor：artipacked→`persist-credentials:false`、快取污染、權杖權限）。
+- **67router：**SBOM（CycloneDX + syft）、SLSA 溯源證明（`--provenance`）、OpenSSF Scorecard（每週）、工作流程強化（zizmor：artipacked→`persist-credentials:false`、快取污染、權杖權限）。
 - **通用方案：**發布時產生 SBOM + 經簽署的溯源證明（SLSA L2+）+ 排程執行 Scorecard + 強化所有工作流程（最小權限權杖、非推送者的 checkout 不保留憑證、actions 以 SHA 固定版本）。
 
 ### 9. 契約與 API
 
-- **OmniRoute：**oasdiff（OpenAPI 破壞性變更）、schemathesis（每晚執行契約模糊測試）、openapi-coverage（已文件化路由百分比，棘輪值 38.3%）、openapi-security-tiers（規格與路由防護）。
+- **67router：**oasdiff（OpenAPI 破壞性變更）、schemathesis（每晚執行契約模糊測試）、openapi-coverage（已文件化路由百分比，棘輪值 38.3%）、openapi-security-tiers（規格與路由防護）。
 - **通用方案：**破壞性變更契約差異比對（oasdiff/buf）+ 根據規格進行屬性式模糊測試（schemathesis）+ 採用棘輪機制的文件覆蓋率 + 規格↔程式碼一致性。
 
 ### 10. 文件與 i18n（防腐化）
 
-- **OmniRoute：**docs-sync（鏡像版本）、docs-counts-sync（文件與程式碼中的數值）、env-doc-sync、doc-links、fabricated-docs、cli-i18n、i18n-ui-coverage（`--threshold=65` + 棘輪值 80.1%）。
+- **67router：**docs-sync（鏡像版本）、docs-counts-sync（文件與程式碼中的數值）、env-doc-sync、doc-links、fabricated-docs、cli-i18n、i18n-ui-coverage（`--threshold=65` + 棘輪值 80.1%）。
 - **通用方案：**同步文件與程式碼之間的版本／數值／環境變數（以閘門驗證，而非信任）+ 驗證內部連結 + 採用棘輪機制的 i18n 覆蓋率。
 
 ### 11. 防幻覺／一致性（罕見類別）
 
-- **OmniRoute：**known-symbols（字串分派 ⇒ 實際存在的符號）、provider-consistency、fetch-targets（用戶端 fetch ⇒ 真實路由）、docs-symbols、db-rules（Hard Rules #2/#5）、migration-numbering。
+- **67router：**known-symbols（字串分派 ⇒ 實際存在的符號）、provider-consistency、fetch-targets（用戶端 fetch ⇒ 真實路由）、docs-symbols、db-rules（Hard Rules #2/#5）、migration-numbering。
 - **通用方案：**針對每個「重複的真實來源」（registry、字串分派、跨層參照），建立能證明雙方相符的閘門。藉此捕捉類型檢查／測試無法發現的腐化。
 
 ### 12. 韌性與領域（產品特定）
 
-- **OmniRoute：**chaos（故障注入）、heap-growth（記憶體洩漏）、k6（長時間負載測試）、promptfoo+garak（LLM 紅隊測試 OWASP LLM Top 10）、3 項韌性法則（斷路器／冷卻期／鎖定）。
+- **67router：**chaos（故障注入）、heap-growth（記憶體洩漏）、k6（長時間負載測試）、promptfoo+garak（LLM 紅隊測試 OWASP LLM Top 10）、3 項韌性法則（斷路器／冷卻期／鎖定）。
 - **通用方案：**找出**你的**領域所面臨的失效模式，並為每一種模式設置閘門（即使只在每晚執行）。對 AI 應用程式：執行提示注入紅隊測試。對分散式系統：執行混沌測試 + 洩漏測試 + 長時間負載測試。
 
 ---

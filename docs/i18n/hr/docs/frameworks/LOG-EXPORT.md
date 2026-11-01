@@ -4,7 +4,7 @@
 
 ---
 
-Kontinuirani, inkrementalni izvoz zapisa poziva OmniRoute u vanjsko spremište analitičkih podataka.
+Kontinuirani, inkrementalni izvoz zapisa poziva 67router u vanjsko spremište analitičkih podataka.
 
 Kartica nadzorne ploče Logs čuva povijest zahtjeva u SQLiteu (`call_logs`), čija je veličina ograničena
 rotacijom i pravilima zadržavanja. Izvoz zapisa šalje isti skup zapisa prema rasporedu kako bi se mogli
@@ -285,7 +285,7 @@ Dva pravila za novo odredište:
 - `send()` **mora baciti iznimku** u slučaju djelomičnog neuspjeha. Uspješan završetak znači „odredište sadrži ove retke”,
   a pokazivač se trajno pomiče iza njih.
 - Odredište koje prihvaća URL koji je unio korisnik mora ga prije dohvaćanja provjeriti putem
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   na isti način kao webhookovi. BigQuery to ne zahtijeva: njegovi su hostovi konstantni.
 
 ---

@@ -10,6 +10,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Alert } from "@omniroute/ui-kit/alert";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
 import Icon from "@/shared/components/Icon";
@@ -194,7 +195,7 @@ export default function CompressionHub() {
 
   if (loadFailed) {
     return (
-      <Card padding="sm" className="flex flex-col gap-5 border-primary/30">
+      <Card padding="sm" className="flex flex-col gap-5">
         <div className="flex items-center justify-between gap-4">
           <p role="alert" className="text-sm text-error">
             {tSettings("compressionTitle")}: {tCommon("failedToLoad")}
@@ -221,126 +222,128 @@ export default function CompressionHub() {
     : "";
 
   return (
-    <Card padding="sm" className="flex flex-col gap-5 border-primary/30">
+    <div className="flex flex-col gap-6">
       {/* ── Header ── */}
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <Icon name="hub" size={26} className="text-primary" />
-          <div>
-            <h1 className="text-xl font-bold text-text-main">{t("hubTitle")}</h1>
-            <p className="text-sm text-text-muted">{t("hubDescription")}</p>
-          </div>
-        </div>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setExplainerOpen((v) => !v)}
-          aria-expanded={explainerOpen}
-          className="shrink-0"
-        >
-          {explainerOpen ? t("hideExplanation") : t("howItWorks")}
-        </Button>
-      </div>
-
-      {error && (
-        <p role="alert" className="rounded border border-error/40 px-3 py-2 text-xs text-error">
-          {error}
-        </p>
-      )}
-
-      {/* ── Explainer ── */}
-      {explainerOpen && (
-        <div className="rounded-lg border border-border bg-bg p-4 text-sm text-text-muted">
-          <p className="mb-2">
-            {t.rich("explanationIntro", {
-              strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
-            })}
+      <PageHeader
+        compact
+        title={t("hubTitle")}
+        description={t("hubDescription")}
+        actions={
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setExplainerOpen((v) => !v)}
+            aria-expanded={explainerOpen}
+            className="shrink-0"
+          >
+            {explainerOpen ? t("hideExplanation") : t("howItWorks")}
+          </Button>
+        }
+      />
+      <Card padding="sm" className="flex flex-col gap-5">
+        {error && (
+          <p
+            role="alert"
+            className="rounded-control border border-error/40 bg-error-bg px-3 py-2 text-xs text-error"
+          >
+            {error}
           </p>
-          <ol className="ml-4 list-decimal space-y-1.5">
-            <li>
-              {t.rich("explanationActiveProfile", {
-                strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
-              })}
-            </li>
-            <li>
-              {t.rich("explanationDefault", {
-                strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
-              })}
-            </li>
-            <li>
-              {t.rich("explanationNamedCombos", {
-                strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
-              })}
-            </li>
-            <li>
-              {t.rich("explanationPreview", {
-                strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
-              })}
-            </li>
-          </ol>
-        </div>
-      )}
+        )}
 
-      {/* ── Active profile ── */}
-      <div className="flex flex-col gap-3 rounded-lg border border-border bg-bg p-4">
-        <Select
-          id="active-profile"
-          label={t("activeProfile")}
-          hint={t("activeProfileDescription")}
-          data-testid="active-profile-select"
-          value={settings?.activeComboId ?? ""}
-          onChange={(e) => saveSettings({ activeComboId: e.target.value || null })}
-        >
-          <option value="">{t("defaultFromPanel")}</option>
-          {combos.map((c) => (
-            <option key={c.id} value={c.id}>
-              {c.name}
-            </option>
-          ))}
-        </Select>
-        <div
-          data-testid="active-profile-preview"
-          className="rounded-lg border border-dashed border-border px-3 py-2 text-xs text-text-muted"
-        >
-          {activeCombo ? (
-            <span>
-              {t("runs")} <span className="font-mono text-text-main">{activePipelineText}</span>
-            </span>
-          ) : (
-            <span>
-              {t("defaultConfiguredPrefix")}{" "}
-              <a href="/dashboard/context/settings" className="underline hover:text-text-main">
-                {t("compressionSettings")}
-              </a>
-              .
-            </span>
-          )}
-        </div>
-      </div>
-
-      {/* ── Provider-delegated compression ── */}
-      <div className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold text-text-main">{t("providerDelegated")}</h2>
-        <div className="flex items-center gap-3 rounded-lg border border-border bg-bg p-4">
-          <div className="min-w-0 flex-1">
-            <p className="text-sm font-semibold text-text-main">{t("contextEditingClaude")}</p>
-            <p className="text-xs text-text-muted">{t("contextEditingDescription")}</p>
+        {/* ── Explainer ── */}
+        {explainerOpen && (
+          <div className="rounded-control border border-border bg-bg-subtle p-4 text-sm text-text-muted">
+            <p className="mb-2">
+              {t.rich("explanationIntro", {
+                strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
+              })}
+            </p>
+            <ol className="ml-4 list-decimal space-y-1.5">
+              <li>
+                {t.rich("explanationActiveProfile", {
+                  strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
+                })}
+              </li>
+              <li>
+                {t.rich("explanationDefault", {
+                  strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
+                })}
+              </li>
+              <li>
+                {t.rich("explanationNamedCombos", {
+                  strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
+                })}
+              </li>
+              <li>
+                {t.rich("explanationPreview", {
+                  strong: (chunks) => <strong className="text-text-main">{chunks}</strong>,
+                })}
+              </li>
+            </ol>
           </div>
-          <Toggle
-            checked={!!settings?.contextEditing?.enabled}
-            onChange={() =>
-              saveSettings({ contextEditing: { enabled: !settings?.contextEditing?.enabled } })
-            }
-            ariaLabel={t("contextEditingAria")}
+        )}
+
+        {/* ── Active profile ── */}
+        <div className="flex flex-col gap-3 rounded-control border border-border bg-bg-subtle p-4">
+          <Select
+            id="active-profile"
+            label={t("activeProfile")}
+            hint={t("activeProfileDescription")}
+            data-testid="active-profile-select"
+            value={settings?.activeComboId ?? ""}
+            onChange={(e) => saveSettings({ activeComboId: e.target.value || null })}
+          >
+            <option value="">{t("defaultFromPanel")}</option>
+            {combos.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.name}
+              </option>
+            ))}
+          </Select>
+          <div
+            data-testid="active-profile-preview"
+            className="rounded-control border border-dashed border-border px-3 py-2 text-xs text-text-muted"
+          >
+            {activeCombo ? (
+              <span>
+                {t("runs")} <span className="font-mono text-text-main">{activePipelineText}</span>
+              </span>
+            ) : (
+              <span>
+                {t("defaultConfiguredPrefix")}{" "}
+                <a href="/dashboard/context/settings" className="underline hover:text-text-main">
+                  {t("compressionSettings")}
+                </a>
+                .
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* ── Provider-delegated compression ── */}
+        <div className="flex flex-col gap-3">
+          <h2 className="text-sm font-semibold text-text-main">{t("providerDelegated")}</h2>
+          <div className="flex items-center gap-3 rounded-control border border-border bg-bg-subtle p-4">
+            <div className="min-w-0 flex-1">
+              <p className="text-sm font-semibold text-text-main">{t("contextEditingClaude")}</p>
+              <p className="text-xs text-text-muted">{t("contextEditingDescription")}</p>
+            </div>
+            <Toggle
+              checked={!!settings?.contextEditing?.enabled}
+              onChange={() =>
+                saveSettings({ contextEditing: { enabled: !settings?.contextEditing?.enabled } })
+              }
+              ariaLabel={t("contextEditingAria")}
+            />
+          </div>
+          <Alert
+            variant="warning"
+            icon={<Icon name="info" size={16} />}
+            className="[&>.ci-alert__dismiss]:hidden"
+            description={t("contextEditingNote")}
           />
         </div>
-        <Alert
-          variant="warning"
-          icon={<Icon name="info" size={16} />}
-          className="[&>.ci-alert__dismiss]:hidden"
-          description={t("contextEditingNote")}
-        />
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 }

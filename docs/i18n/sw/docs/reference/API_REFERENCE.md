@@ -6,7 +6,7 @@
 
 🌐 **Lugha:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Rejeleo kuu la API ya OmniRoute. Linahusu kiolesura cha umma cha `/v1` na vituo vya mwisho vya usimamizi vinavyotumiwa zaidi; [`docs/openapi.yaml`](../openapi.yaml) inayoweza kusomwa na mashine pamoja na mti wa njia ulio chini ya `src/app/api/` ndiyo vyanzo kamili.
+Rejeleo kuu la API ya 67router. Linahusu kiolesura cha umma cha `/v1` na vituo vya mwisho vya usimamizi vinavyotumiwa zaidi; [`docs/openapi.yaml`](../openapi.yaml) inayoweza kusomwa na mashine pamoja na mti wa njia ulio chini ya `src/app/api/` ndiyo vyanzo kamili.
 
 Kwa itifaki mahususi inayooana na OpenAI na jedwali la uwezo wa watoa huduma, angalia
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Jibu     | `HIT` au `MISS` (bila utiririshaji)                                                                                                                                                                                                                |
 | `X-OmniRoute-Idempotent` | Jibu     | `true` ikiwa nakala zimeondolewa                                                                                                                                                                                                                   |
 | `X-OmniRoute-Progress`   | Jibu     | `enabled` ikiwa ufuatiliaji wa maendeleo umewashwa                                                                                                                                                                                                 |
-| `X-OmniRoute-Session-Id` | Jibu     | Kitambulisho halisi cha kipindi kilichotumiwa na OmniRoute                                                                                                                                                                                         |
+| `X-OmniRoute-Session-Id` | Jibu     | Kitambulisho halisi cha kipindi kilichotumiwa na 67router                                                                                                                                                                                          |
 | `X-OmniRoute-Request-Id` | Jibu     | Kitambulisho cha kuoanisha ombi (kinapojulikana)                                                                                                                                                                                                   |
-| `X-OmniRoute-Version`    | Jibu     | Toleo la muundo wa OmniRoute (hupatikana kila wakati)                                                                                                                                                                                              |
+| `X-OmniRoute-Version`    | Jibu     | Toleo la muundo wa 67router (hupatikana kila wakati)                                                                                                                                                                                               |
 | `X-OmniRoute-Cost-Saved` | Jibu     | Kiasi cha USD ambacho akiba iliepusha kwenye `HIT` (miitiko ya akiba pekee)                                                                                                                                                                        |
 | `X-OmniRoute-Decision`   | Jibu     | Ufuatiliaji wa uelekezaji: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` ni mkakati wa mchanganyiko, au `single` kwa ombi lisilo la mchanganyiko) — hupatikana kila wakati kwenye majibu ya ukamilishaji                           |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Kubandika akaunti kwa kila ombi
 
-Mtoa huduma anapokuwa na miunganisho kadhaa (akaunti au funguo), kwa kawaida OmniRoute huchagua mmoja
+Mtoa huduma anapokuwa na miunganisho kadhaa (akaunti au funguo), kwa kawaida 67router huchagua mmoja
 kupitia mkakati wake wa uteuzi wa akaunti. Badala yake, ombi linaweza kubandika muunganisho mmoja mahususi
 kwa kutumia kichwa cha `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ kwa kila mradi:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Chanzo: `src/sse/handlers/chat.ts` (usomaji wa kichwa), `src/sse/services/auth.t
 ## Ukodishaji wa Kipekee wa Vipindi Vinavyodhibitiwa
 
 Ukodishaji wa kipekee wa vipindi vinavyodhibitiwa ni mkataba wa uelekezaji wa hiari usioegemea mteja: mmiliki mmoja anayefanya kazi
-anashikilia muunganisho mmoja unaostahiki wa OmniRoute. Haukodishi modeli, hauhitaji OAuth, hautambui
+anashikilia muunganisho mmoja unaostahiki wa 67router. Haukodishi modeli, hauhitaji OAuth, hautambui
 mteja mahususi, wala hauhitaji mtoa huduma mahususi.
 
 Ufunguo wa API unaothibitisha utambulisho lazima uwe na mawanda ya `lease:exclusive` na orodha bayana isiyo tupu ya
@@ -190,7 +190,7 @@ Mmiliki wa ukodishaji unaotumika anaweza kuomba kwa uwazi metadata salama kwa fa
 
 Kitendo hiki cha hiari cha hali hulindwa na mmiliki fiche, ufunguo wa API unaodhibitiwa na uliothibitishwa, pamoja na
 kizazi kamili kinachotumika, vyote ndani ya muamala mmoja wa hifadhidata. `displayName` ni jina la muunganisho lililowekwa tu
-baada ya nafasi za pembeni kuondolewa; huwa `null` wakati hakuna jina salama lililowekwa. OmniRoute haibadilishi kamwe jina hilo kwa
+baada ya nafasi za pembeni kuondolewa; huwa `null` wakati hakuna jina salama lililowekwa. 67router haibadilishi kamwe jina hilo kwa
 barua pepe au utambulisho wa akaunti uliozalishwa. Thamani ya mtoa huduma ni lebo isiyo nyeti ya kuonyesha na kamwe si
 kitambulishi kilichozalishwa cha mtoa huduma tangamanifu. Vitambulisho, tokeni, vidakuzi, vitambulishi ghafi vya muunganisho au
 ufunguo wa API, heshi za mmiliki, siri za ulinzi, na data ya ndani ya uelekezaji havijumuishwi.
@@ -231,7 +231,7 @@ Mgongano wa muda hurudisha HTTP `429` pamoja na `Retry-After` na:
 
 Jibu hili linamaanisha tu kwamba seti ya kawaida inayostahiki haikuwa tupu na kila chaguo huru
 lilishikiliwa na ukodishaji unaotumika wa mhusika mwingine. Modeli/watoa huduma wasiotumika, kutolingana kwa sera, kipindi cha kusubiri, mgawo,
-afya, na hitilafu nyingine za kawaida za ustahiki hudumisha majibu yao yaliyopo ya OmniRoute.
+afya, na hitilafu nyingine za kawaida za ustahiki hudumisha majibu yao yaliyopo ya 67router.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request za Jina na **huzituma bila kuzibadilisha** kwa `https://api.
 ```
 
 Thamani asilia za `{ image | audio | video | pdf }` zinaweza kuwa URL ya umma ya HTTPS, URI ya `data:`, au
-base64 ghafi. OmniRoute haibadilishi objekti hizo kuwa mifuatano ya maandishi wala kupakua URL asilia za picha — Jina yenyewe hupakua
+base64 ghafi. 67router haibadilishi objekti hizo kuwa mifuatano ya maandishi wala kupakua URL asilia za picha — Jina yenyewe hupakua
 midia ya umma. Sehemu za ziada za Jina (`task`, `normalized`, `truncate`, `embedding_type`)
 hutumwa kama zilivyo. SKU za Jina zinazotumia maandishi pekee bado hukataa hati zisizo za maandishi.
 
@@ -454,7 +454,7 @@ mpigaji, kwa hivyo msimbo wa mteja hauhitaji kushughulikia mtoa huduma kwa njia 
 
 ### Uthibitishaji na utambuzi wa endpoint wa Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` hutumia tena uthibitishaji uleule wa Vertex AI ambao OmniRoute tayari inauunga mkono kwa
+`vertex-deepseek-ocr` hutumia tena uthibitishaji uleule wa Vertex AI ambao 67router tayari inauunga mkono kwa
 trafiki ya gumzo/picha (`open-sse/executors/vertex.ts`): ufunguo wa API wa muunganisho huwa aidha
 kitambulisho cha JSON cha Service Account (kinachobadilishwa kuwa tokeni ya ufikiaji ya OAuth ya muda mfupi kupitia mtiririko wa
 JWT-bearer) au tokeni ya ufikiaji ya OAuth ambayo tayari imetolewa na kutumiwa jinsi ilivyo. URL ya endpoint ya juu ni endpoint
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Bei za modeli (`pricing`)
 
-Ingizo huwa na kipengee cha `pricing` wakati OmniRoute inajua bei ya modeli. Bei hutoka
+Ingizo huwa na kipengee cha `pricing` wakati 67router inajua bei ya modeli. Bei hutoka
 kwenye jedwali la bei linalotumiwa na uhasibu wa gharama: chaguomsingi zilizojengewa ndani, bei zilizosawazishwa, na
 mabadiliko yaliyowekwa kupitia `/api/pricing`. Hizi ni bei za orodha, kwa hivyo watoa huduma wa usajili pia
 huonyesha bei kwa kila tokeni.
@@ -629,8 +629,8 @@ Tumia endpoint hii wakati sidecar inaendeshwa nje ya mchakato na haiwezi kuleta
 
 ## Uzalishaji wa sauti wa ElevenLabs
 
-Sanidi muunganisho wa mtoa huduma wa `elevenlabs` katika OmniRoute kwa kutumia ufunguo wako wa API wa ElevenLabs.
-Wateja huthibitisha utambulisho kwa ufunguo wao wa **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Sanidi muunganisho wa mtoa huduma wa `elevenlabs` katika 67router kwa kutumia ufunguo wako wa API wa ElevenLabs.
+Wateja huthibitisha utambulisho kwa ufunguo wao wa **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gateway hutoa ufunguo wa mtoa huduma uliohifadhiwa kama `xi-api-key`. Kamwe usitume ufunguo wa ElevenLabs
 kama tokeni ya bearer ya gateway.
 
@@ -695,7 +695,7 @@ asilia hurejesha misimbo ya hali na miili ya hitilafu kutoka kwa mtoa huduma wa 
 kizuizi cha mpango na `429` kwa kikomo cha mgao. Vichwa vya `character-cost`, `song-id`, `request-id` na `retry-after`
 huhifadhiwa vinapokuwepo. Salio la mkopo bila malipo halihakikishi ufikiaji wa kila
 muundo wa muziki, umbizo la matokeo au kipengele cha API: ElevenLabs huamua haki ya ufikiaji kwa kila ombi.
-Endpoint iliyounganishwa huhifadhi misimbo ya hali ya hitilafu katika bahasha ya hitilafu iliyosanifishwa ya OmniRoute.
+Endpoint iliyounganishwa huhifadhi misimbo ya hali ya hitilafu katika bahasha ya hitilafu iliyosanifishwa ya 67router.
 
 Mikataba ya mtoa huduma wa juu: [athari za sauti](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [utunzi wa muziki](https://elevenlabs.io/docs/api-reference/music/compose) na
@@ -736,7 +736,7 @@ Mikataba ya mtoa huduma wa juu: [athari za sauti](https://elevenlabs.io/docs/api
 
 Njia zote za POST hufuata muundo uleule: `Bearer your-api-key` + mwili wa JSON uliothibitishwa na Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, n.k., angalia `src/shared/validation/schemas.ts`). 4xx hurejeshwa uthibitishaji wa skima unaposhindwa.
 
-Kwa wateja wasioweza kuambatisha `Authorization: Bearer ...`, OmniRoute pia hukubali funguo za API kwenye URL kupitia uoanifu wa mfuatano wa hoja (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) au vituo maalum vya `/api/v1/vscode/{token}/...` vilivyoelezwa hapa chini.
+Kwa wateja wasioweza kuambatisha `Authorization: Bearer ...`, 67router pia hukubali funguo za API kwenye URL kupitia uoanifu wa mfuatano wa hoja (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) au vituo maalum vya `/api/v1/vscode/{token}/...` vilivyoelezwa hapa chini.
 
 ```bash
 # Panga upya (mtoa huduma wa sajili ya wingu, au nodi ya mtoa huduma inayooana na OpenAI kama "<prefix>/<model>")
@@ -898,7 +898,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, ufunguo uleule wa API kama Parallel Search) hurejesha Markdown
 pekee — `format` nyingine yoyote husababisha `400` — na huweka kikomo cha maudhui kuwa herufi 100,000. Wakati
 ukurasa lengwa wenyewe hauwezi kudondolewa, huduma ya juu huripoti hilo ndani ya HTTP 200;
-OmniRoute hulionyesha kama `422` yenye ujumbe usiobadilika.
+67router hulionyesha kama `422` yenye ujumbe usiobadilika.
 
 | Mbinu | Njia            | Maelezo                                                     |
 | ----- | --------------- | ----------------------------------------------------------- |
@@ -960,14 +960,14 @@ lazima iwe entrypoint inayotumika (ndivyo ilivyo kwa chaguomsingi, wakati `app/s
 **Codex CLI** ya OpenAI huthibitisha jina la modeli upande wa mteja wakati
 `supports_websockets = true` na **hukataa vitambulisho vyenye kiambishi awali cha mtoa huduma** kama
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Tuma kitambulisho **halisi** (kwa mfano `gpt-5.5`). Daraja la OmniRoute ni
+a ChatGPT account`). Tuma kitambulisho **halisi** (kwa mfano `gpt-5.5`). Daraja la 67router ni
 la codex pekee, kwa hivyo hutatua upya kitambulisho halisi kama modeli ya codex
 (`resolveCodexWsModelInfo`) kabla ya kutengeneza handaki kwenda huduma ya juu — ingawa kitambulisho halisi cha
 `gpt-5.5` kingeelekezwa kwa mtoa huduma mwingine kupitia HTTP.
 
 #### Kusanidi OpenAI Codex CLI
 
-Elekeza Codex CLI kwa OmniRoute kwa kuongeza mtoa huduma maalum mwenye usaidizi wa WebSocket
+Elekeza Codex CLI kwa 67router kwa kuongeza mtoa huduma maalum mwenye usaidizi wa WebSocket
 kwenye `~/.codex/config.toml` (tumia `CODEX_HOME` tofauti ili kuepuka kubadilisha
 usanidi uliopo):
 
@@ -980,15 +980,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # bila slash ya mwisho; URL ya WS hutokana nayo (tumia https/wss katika mazingira ya uzalishaji)
 wire_api = "responses"                    # thamani pekee inayotumika tangu Feb 2026
 supports_websockets = true                # huwezesha usafirishaji wa Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # huhifadhi ufunguo wa API wa OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # huhifadhi ufunguo wa API wa 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # ufunguo wa API wa OmniRoute (ufunguo wowote ikiwa REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # ufunguo wa API wa 67router (ufunguo wowote ikiwa REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI huboreshwa kutoka `base_url + /responses` hadi WebSocket na OmniRoute huitengenezea handaki
+CLI huboreshwa kutoka `base_url + /responses` hadi WebSocket na 67router huitengenezea handaki
 kwenda kwenye muunganisho wa OAuth wa codex uliochaguliwa. Imethibitishwa mwanzo-hadi-mwisho dhidi ya seva ya ndani:
 ChatGPT hurejesha `codex.rate_limits` + `response.created` na kutiririsha
 ukamilishaji.
@@ -1072,7 +1072,7 @@ asilimia zinazoonyeshwa na **matokeo ya maandishi tupu** na **matokeo ya JSON** 
 
 #### Fomula ya Marekebisho ya Kikomo
 
-OmniRoute hutumia vikomo tendaji vya mgao ili kuzuia kuisha kwa rasilimali za upstream (vinavyosanidiwa kupitia
+67router hutumia vikomo tendaji vya mgao ili kuzuia kuisha kwa rasilimali za upstream (vinavyosanidiwa kupitia
 `quotaWindowThresholds` za muunganisho, chaguomsingi za mtoa huduma, au mipangilio ya jumla ya ustahimilivu). Wakati kizingiti cha kikomo
 (k.m., `cutoff = 25%`) kinatumika kwenye dirisha la mgao, kionyeshi cha maandishi hukokotoa kiasi kilichosalia kama ifuatavyo:
 
@@ -1433,9 +1433,8 @@ Jibu la GET linajumuisha `agents[]` (id, name, binary, version, installed, proto
 
 ### Tathmini
 
-| Endpoint     | Mbinu    | Maelezo                                          |
-| ------------ | -------- | ------------------------------------------------ |
-| `/api/evals` | GET/POST | Orodhesha makundi ya tathmini / endesha tathmini |
+| Endpoint | Mbinu | Maelezo |
+| -------- | ----- | ------- |
 
 ### Sera
 
@@ -1619,7 +1618,7 @@ Vidokezo:
 
 - Majina mbadala yenye tokeni hutumia tena vishughulikiaji vilevile vya `/v1/*` na `/api/tags`; miundo ya majibu hubaki sawa.
 - Pendelea `Authorization: Bearer ...` wakati wowote mteja anapotumia vichwa maalum.
-- Tokeni zinazotegemea URL zinaweza kuonekana kwenye kumbukumbu za proksi ya kinyume, historia ya kivinjari na telemetria nje ya OmniRoute. Zichukulie kama chaguo la uoanifu, si hali chaguo-msingi ya uthibitishaji.
+- Tokeni zinazotegemea URL zinaweza kuonekana kwenye kumbukumbu za proksi ya kinyume, historia ya kivinjari na telemetria nje ya 67router. Zichukulie kama chaguo la uoanifu, si hali chaguo-msingi ya uthibitishaji.
 
 ---
 
@@ -1727,7 +1726,7 @@ Michanganyiko ya uelekezaji ya kiwango cha juu (ambayo tayari imefupishwa chini 
 
 ## Webhooks
 
-Usajili wa webhook zinazotoka kwa matukio ya OmniRoute (kukamilika kwa ombi, kuisha kwa kiwango, kubadilishwa kwa ufunguo, n.k.).
+Usajili wa webhook zinazotoka kwa matukio ya 67router (kukamilika kwa ombi, kuisha kwa kiwango, kubadilishwa kwa ufunguo, n.k.).
 
 | Mbinu  | Njia                      | Maelezo                                                                       |
 | ------ | ------------------------- | ----------------------------------------------------------------------------- |
@@ -1758,31 +1757,6 @@ Hutumiwa na mfumo mdogo wa usimamizi otomatiki wa funguo kutoa na kubadilisha fu
 
 ---
 
-## Itifaki ya Ajenti
-
-Kazi za ajenti wa wingu (Claude Code, Codex Cloud, OpenHands, n.k.) zinazotekelezwa kwa mbali kwa niaba ya watumiaji wa OmniRoute.
-
-| Mbinu  | Njia                          | Maelezo                                                                                                                                                                 |
-| ------ | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Orodhesha kazi — hiari `?provider=`, `?status=`, `?limit=` (1–500, chaguo-msingi 50)                                                                                    |
-| POST   | `/api/v1/agents/tasks`        | Unda kazi — sehemu kuu ya ombi inathibitishwa na `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Hurejesha `201` pamoja na bahasha ya kazi |
-| DELETE | `/api/v1/agents/tasks?id=...` | Futa kazi                                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | Soma kazi — husasisha hali kwa wakati mmoja kutoka kwa ajenti wa wingu wa chanzo wakati `external_id` imewekwa                                                          |
-| POST   | `/api/v1/agents/tasks/[id]`   | Kitendo bainifu: `{action: "approve"}`, `{action: "message", message}`, au `{action: "cancel"}`                                                                         |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Futa kazi mahususi kwa kutumia id                                                                                                                                       |
-
-> **Uthibitishaji:** uthibitishaji wa usimamizi unahitajika kwa kila mbinu (`requireCloudAgentManagementAuth`). Kabla ya v3.8.0, hizi hazikuhitaji uthibitishaji — tazama commit `588a0333` kwa mabadiliko yanayovunja utangamano.
-
-```bash
-# Unda kazi ya wingu ya Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi za Usimamizi
 
 Proksi za HTTP(S)/SOCKS zinazotoka ambazo zinaweza kukabidhiwa kwa watoa huduma, akaunti, au kwa kiwango cha kimataifa.
@@ -1806,7 +1780,7 @@ Proksi za HTTP(S)/SOCKS zinazotoka ambazo zinaweza kukabidhiwa kwa watoa huduma,
 
 ## Ustahimilivu (uliopanuliwa)
 
-OmniRoute hutoa mbinu tatu huru za kushughulikia hitilafu za muda; endpoints za usimamizi zilizo hapa chini huwawezesha waendeshaji kuzisoma na kuzibatilisha:
+67router hutoa mbinu tatu huru za kushughulikia hitilafu za muda; endpoints za usimamizi zilizo hapa chini huwawezesha waendeshaji kuzisoma na kuzibatilisha:
 
 | Upeo                                 | Hifadhi ya hali                                       | Kusoma                                    | Kuweka upya / kufuta                                             |
 | ------------------------------------ | ----------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
@@ -1841,7 +1815,7 @@ Kwa marejeleo kamili ya dhana na chaguo-msingi za kivunja mzunguko: tazama [`CLA
 
 ## Ujuzi
 
-Mfumo wa ujuzi wa kupanua OmniRoute kwa vishughulikiaji maalum vinavyoweza kutekelezwa, pamoja na miunganisho ya soko.
+Mfumo wa ujuzi wa kupanua 67router kwa vishughulikiaji maalum vinavyoweza kutekelezwa, pamoja na miunganisho ya soko.
 
 | Mbinu  | Njia                              | Maelezo                                                                                                                                               |
 | ------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1878,7 +1852,7 @@ Hifadhi endelevu ya kumbukumbu za mazungumzo/ukweli, yenye mawanda kulingana na 
 
 ## Seva ya MCP
 
-OmniRoute huja na seva iliyopachikwa ya Model Context Protocol yenye njia 3 za usafirishaji (stdio, SSE, streamable-http) na zana zenye mawanda maalumu. Endpointi za dashibodi zilizo hapa chini husoma data ya hali/ukaguzi na kupitisha kwa niaba njia za usafirishaji za HTTP.
+67router huja na seva iliyopachikwa ya Model Context Protocol yenye njia 3 za usafirishaji (stdio, SSE, streamable-http) na zana zenye mawanda maalumu. Endpointi za dashibodi zilizo hapa chini husoma data ya hali/ukaguzi na kupitisha kwa niaba njia za usafirishaji za HTTP.
 
 | Mbinu | Njia | Maelezo |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1900,50 +1874,12 @@ OmniRoute huja na seva iliyopachikwa ya Model Context Protocol yenye njia 3 za u
 
 ## Seva ya A2A
 
-OmniRoute hutoa kituo cha mwisho cha A2A (Agent-to-Agent) cha JSON-RPC 2.0 pamoja na kifungashio cha REST kwa ajili ya ukaguzi/matumizi ya dashibodi.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # si lazima isipokuwa OMNIROUTE_API_KEY imewekwa
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Mbinu zinazotumika (zote zinategemea `settings.a2aEnabled`):
-
-| Mbinu            | Maelezo                                                             |
-| ---------------- | ------------------------------------------------------------------- |
-| `message/send`   | Utekelezaji sawia wa ujuzi; hurejesha `{task, artifacts, metadata}` |
-| `message/stream` | Utekelezaji wa utiririshaji wa SSE wa seti ileile ya ujuzi          |
-| `tasks/get`      | Leta jukumu kwa kutumia `taskId`                                    |
-| `tasks/cancel`   | Ghairi jukumu kwa kutumia `taskId`                                  |
-
-Ujuzi uliojengewa ndani: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kadi ya Agent
-
-```bash
-GET /.well-known/agent.json
-```
-
-Hurejesha kadi ya umma ya agent wa A2A (jina, maelezo, uwezo, katalogi ya ujuzi, mpango wa uthibitishaji) — imehifadhiwa kwenye akiba hadharani kwa saa 1. Uthibitishaji hauhitajiki.
+67router hutoa kituo cha mwisho cha A2A (Agent-to-Agent) cha JSON-RPC 2.0 pamoja na kifungashio cha REST kwa ajili ya ukaguzi/matumizi ya dashibodi.
 
 ### Visaidizi vya REST
 
 | Mbinu | Njia                         | Maelezo                                                                                                                 |
 | ----- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | A2A imewezeshwa + takwimu za majukumu + muhtasari wa kadi ya agent uliohifadhiwa kwenye akiba                           |
 | GET   | `/api/a2a/tasks`             | Orodhesha majukumu — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Haijatekelezwa kama kisaidizi cha REST — unda kupitia JSON-RPC `message/send`)                                         |
 | GET   | `/api/a2a/tasks/[id]`        | Rejesha jukumu moja                                                                                                     |
@@ -1963,12 +1899,8 @@ Hurejesha kadi ya umma ya agent wa A2A (jina, maelezo, uwezo, katalogi ya ujuzi,
 | GET | `/api/cloud/models/alias` | Orodhesha lakabu za modeli kama zinavyoonyeshwa kwa usawazishaji wa wingu |
 | GET | `/api/assess` | Soma uainishaji wa hivi karibuni wa ukadiriaji (kwa kila mtoa huduma/modeli) |
 | POST | `/api/assess` | Endesha ukadiriaji — mwili: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Orodhesha seti za tathmini za utendaji zilizojengewa ndani + utekelezaji wa hivi karibuni |
-| POST | `/api/evals` | Anzisha utekelezaji wa tathmini ya utendaji |
-| POST | `/api/evals/suites` | Unda seti maalum ya tathmini ya utendaji — mwili unathibitishwa na `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Rejesha seti maalum ya tathmini ya utendaji |
 
-**Uthibitishaji:** `/api/cloud/auth` huthibitisha ufunguo wa Bearer moja kwa moja na kurejesha ufunguo uliofichwa kwa sehemu na `projectId` ya kila muunganisho kwa ufunguo wenye upeo wa `manage` / `admin` pekee; njia nyingine za `/api/cloud/*`, `/api/evals/*`, na `/api/assess` zinahitaji kipindi/ufunguo wa API wa usimamizi. POST ya `/api/assess` hutumia `validateBody` pamoja na skima ya upeo ya muungano wenye kibainishi.
+**Uthibitishaji:** `/api/cloud/auth` huthibitisha ufunguo wa Bearer moja kwa moja na kurejesha ufunguo uliofichwa kwa sehemu na `projectId` ya kila muunganisho kwa ufunguo wenye upeo wa `manage` / `admin` pekee; njia nyingine za `/api/cloud/*`, na `/api/assess` zinahitaji kipindi/ufunguo wa API wa usimamizi. POST ya `/api/assess` hutumia `validateBody` pamoja na skima ya upeo ya muungano wenye kibainishi.
 
 ---
 
@@ -2126,7 +2058,7 @@ Njia za ufikiaji za msimamizi pekee kwa ajili ya usimamizi wa uendeshaji.
 
 ## Usimamizi wa Zana za CLI
 
-Dhibiti zana za CLI zinazounganishwa na OmniRoute (antigravity, commandCode,
+Dhibiti zana za CLI zinazounganishwa na 67router (antigravity, commandCode,
 devin-cli, n.k.). Tazama [Marejeleo ya Watoa Huduma](./PROVIDER_REFERENCE.md) kwa orodha kamili.
 
 | Mbinu | Njia                                    | Maelezo                                                                                                                                                                             |
@@ -2235,26 +2167,6 @@ Tazama [Mfumo wa Skills](../frameworks/SKILLS.md) kwa maelezo kamili.
 
 ---
 
-## Programu-jalizi
-
-Dhibiti programu-jalizi za OmniRoute (viendelezi vya wahusika wengine).
-
-| Mbinu  | Njia                               | Maelezo                                    |
-| ------ | ---------------------------------- | ------------------------------------------ |
-| GET    | `/api/plugins`                     | Orodhesha programu-jalizi zilizosakinishwa |
-| POST   | `/api/plugins/marketplace/install` | Sakinisha programu-jalizi kutoka sokoni    |
-| DELETE | `/api/plugins/[name]`              | Ondoa usakinishaji wa programu-jalizi      |
-| POST   | `/api/plugins/[name]/activate`     | Amilisha programu-jalizi                   |
-| POST   | `/api/plugins/[name]/deactivate`   | Lemaza programu-jalizi                     |
-| GET    | `/api/plugins/[name]/config`       | Pata usanidi wa programu-jalizi            |
-| PUT    | `/api/plugins/[name]/config`       | Sasisha usanidi wa programu-jalizi         |
-
-**Uthibitishaji:** Unahitaji kipindi cha usimamizi.
-
-Tazama [Mfumo wa Programu-jalizi](../frameworks/PLUGIN_SDK.md) kwa maelezo kamili.
-
----
-
 ## Uelekezaji Kivuli
 
 Ulinganishaji wa kivuli / A-B wa watoa huduma **si kiolesura huru cha REST** — husanidiwa kupitia uelekezaji wa mchanganyiko (tazama [Mchanganyiko Otomatiki](../routing/AUTO-COMBO.md)). Vipimo vya ulinganishaji kwa kila mchanganyiko hutolewa na `GET /api/combos/metrics`.
@@ -2289,5 +2201,3 @@ vitambulisho (kipindi cha dashibodi, tokeni ya ndani ya CLI, Tokeni ya Ufikiaji 
 - `requireLogin` inaweza kuwashwa au kuzimwa kupitia `/api/settings/require-login`
 - Njia za `/v1/*` zinaweza kuhitaji ufunguo wa API wa Bearer wakati `REQUIRE_API_KEY=true`
 - "tokeni ya usimamizi" / "ufunguo wa API wenye upeo wa usimamizi" katika rejeleo hili humaanisha mojawapo ya familia zilizo katika mwongozo huo — si aina ya ziada ya siri ambayo haijafafanuliwa
-
-> **Mabadiliko yanayovunja utangamano (v3.8.0)** — `/api/v1/agents/tasks/*` na vituo vya usimamizi wa vipindi vya kusubiri sasa vinahitaji **uthibitishaji wa usimamizi** (kidakuzi cha `auth_token` cha dashibodi au ufunguo wa API wenye upeo wa usimamizi). Wateja ambao hapo awali walitumia njia hizi bila uthibitishaji watapokea `401 Unauthorized`. Tazama commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Potpuni vodič za konfiguriranje pružatelja usluga, izradu kombinacija, integraciju CLI alata i implementaciju OmniRoutea.
+Potpuni vodič za konfiguriranje pružatelja usluga, izradu kombinacija, integraciju CLI alata i implementaciju 67routera.
 
 ---
 
@@ -24,7 +24,6 @@ Potpuni vodič za konfiguriranje pružatelja usluga, izradu kombinacija, integra
 - [Sustav vještina](#-skills-system)
 - [Sustav memorije](#-memory-system)
 - [Webhookovi](#-webhooks)
-- [Cloud agenti](#-cloud-agents)
 - [Programsko upravljanje](#-programmatic-management)
 - [Interni CLI](#-internal-cli)
 - [Desktop aplikacija (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@ Modeli:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Profesionalni savjet:** Upotrebljavajte Opus za složene zadatke, a Sonnet za brzinu. OmniRoute prati kvotu za svaki model!
+**Profesionalni savjet:** Upotrebljavajte Opus za složene zadatke, a Sonnet za brzinu. 67router prati kvotu za svaki model!
 
-Nemate preglednik na OmniRoute domaćinu? Pokrenite `claude setup-token` bilo gdje gdje ste prijavljeni u Claude Code i zalijepite jednogodišnji token u karticu **Token za postavljanje**. Pogledajte [Claude Code s tokenom za postavljanje](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Nemate preglednik na 67router domaćinu? Pokrenite `claude setup-token` bilo gdje gdje ste prijavljeni u Claude Code i zalijepite jednogodišnji token u karticu **Token za postavljanje**. Pogledajte [Claude Code s tokenom za postavljanje](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Rute kompatibilne s Claudeom i Claude Codeom zadržavaju `max` razinu intenziteta razmišljanja za modele Opus i Sonnet. Modeli Haiku ne prihvaćaju `max` razinu intenziteta, pa OmniRoute taj zahtjev prije slanja nadređenom pružatelju spušta na visok proračun za razmišljanje.
+Rute kompatibilne s Claudeom i Claude Codeom zadržavaju `max` razinu intenziteta razmišljanja za modele Opus i Sonnet. Modeli Haiku ne prihvaćaju `max` razinu intenziteta, pa 67router taj zahtjev prije slanja nadređenom pružatelju spušta na visok proračun za razmišljanje.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,7 +260,7 @@ Cost: currently listed as $0; terms and availability may change
 
 ### Cursor IDE
 
-**Korištenje Cursora kao OmniRoute klijenta** (usmjeravanje Cursor chata kroz OmniRoute):
+**Korištenje Cursora kao 67router klijenta** (usmjeravanje Cursor chata kroz 67router):
 
 ```
 Settings → Models → Advanced:
@@ -270,7 +269,7 @@ Settings → Models → Advanced:
   Model: cc/claude-opus-4-7
 ```
 
-**Korištenje OmniRoutea kao Cursor providera** (OmniRoute poziva Cursor uzvodno): preferira se
+**Korištenje 67routera kao Cursor providera** (67router poziva Cursor uzvodno): preferira se
 **Dashboard → Providers → Cursor → Login with Cursor**. U Dockeru pogledajte
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -357,7 +356,7 @@ CLI automatski učitava `.env` iz `~/.omniroute/.env` ili `./.env`.
 
 ### Tray način rada
 
-Pokrenite OmniRoute u sistemskoj traci (tray):
+Pokrenite 67router u sistemskoj traci (tray):
 
 ```bash
 omniroute serve --tray
@@ -374,7 +373,7 @@ Koristite tray izbornik za sljedeće radnje:
 - Otvorite nadzornu ploču.
 - Otvorite `/dashboard/logs`.
 - Promijenite automatsko pokretanje.
-- Zaustavite OmniRoute.
+- Zaustavite 67router.
 
 Ne kombinirajte `--tray` s ovim opcijama:
 
@@ -400,14 +399,14 @@ omniroute autostart disable
 
 ### Deinstalacija
 
-Kada vam OmniRoute više ne treba, nudimo dvije brze skripte za čisto uklanjanje:
+Kada vam 67router više ne treba, nudimo dvije brze skripte za čisto uklanjanje:
 
 | Naredba                  | Radnja                                                                                              |
 | ------------------------ | --------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Uklanja sistemsku aplikaciju, ali **zadržava vašu bazu podataka i konfiguracije** u `~/.omniroute`. |
 | `npm run uninstall:full` | Uklanja aplikaciju I trajno **briše sve konfiguracije, ključeve i baze podataka**.                  |
 
-> Napomena: Za pokretanje ovih naredbi otiđite u mapu OmniRoute projekta (ako ste ga klonirali) i pokrenite ih. Alternativno, ako je instaliran globalno, jednostavno pokrenite `npm uninstall -g omniroute`.
+> Napomena: Za pokretanje ovih naredbi otiđite u mapu 67router projekta (ako ste ga klonirali) i pokrenite ih. Alternativno, ako je instaliran globalno, jednostavno pokrenite `npm uninstall -g omniroute`.
 
 ### VPS postavljanje
 
@@ -479,7 +478,7 @@ Za način rada integriran s hostom uz CLI binarne datoteke, pogledajte odjeljak 
 
 ### Void Linux (xbps-src)
 
-Korisnici Void Linuxa mogu pakirati i instalirati OmniRoute nativno koristeći `xbps-src` framework za cross-kompilaciju. Ovo automatizira samostalnu (standalone) Node.js izgradnju zajedno s potrebnim nativnim vezama `better-sqlite3`.
+Korisnici Void Linuxa mogu pakirati i instalirati 67router nativno koristeći `xbps-src` framework za cross-kompilaciju. Ovo automatizira samostalnu (standalone) Node.js izgradnju zajedno s potrebnim nativnim vezama `better-sqlite3`.
 
 <details>
 <summary><b>Pregledajte xbps-src predložak</b></summary>
@@ -659,7 +658,7 @@ Za potpuni popis varijabli okoline pogledajte [README](../README.md).
 
 **Ostali kompatibilni pružatelji usluga** (odabrani): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (putem `aws-bedrock`), `azure-ai`, `openrouter` (proslijeđeni katalog), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Svaki od njih održava svoj vlastiti popis modela u `providerRegistry.ts` i može se automatski sinkronizirati kada pružatelj usluge izloži `/models` krajnju točku.
 
-**Napomena o ID-ovima modela:** OmniRoute koristi izvorne ID-ove pružatelja usluga (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Neki ID-ovi sadrže verzije s točkama jer je to način na koji ih izvorni API očekuje. Ako neki model nije naveden gore, pokrenite `omniroute models --search <pojam>` ili pozovite `GET /api/models/catalog` da potvrdite dostupnost.
+**Napomena o ID-ovima modela:** 67router koristi izvorne ID-ove pružatelja usluga (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Neki ID-ovi sadrže verzije s točkama jer je to način na koji ih izvorni API očekuje. Ako neki model nije naveden gore, pokrenite `omniroute models --search <pojam>` ili pozovite `GET /api/models/catalog` da potvrdite dostupnost.
 
 </details>
 
@@ -725,9 +724,9 @@ pogrešku koja navodi ugrađenog pružatelja usluga ili njegove vjerodajnice, pr
 rezerviran: čvorovi spremljeni prije uvođenja ovog pravila i dalje su pohranjeni, ali njihov prefiks usmjerava
 na ugrađenog pružatelja usluga. Uredite čvor i dodijelite mu novi prefiks.
 
-### Povezivanje OmniRoute čvorova
+### Povezivanje 67router čvorova
 
-Drugi OmniRoute pristupnik može se dodati kao **prilagođeni pružatelj kompatibilan s OpenAI-jem**. Upotrijebite
+Drugi 67router pristupnik može se dodati kao **prilagođeni pružatelj kompatibilan s OpenAI-jem**. Upotrijebite
 osnovni URL `/v1` drugog čvora i namjenski API ključ s najmanjim potrebnim ovlastima koji je izdao taj čvor.
 
 Za uzajamne ili višeskokovne lance omogućite izbornu zaštitu od petlji na svakom pristupniku:
@@ -753,7 +752,7 @@ broj skokova odgovorom HTTP `508 Loop Detected`; uobičajeni nadređeni pružate
 Povezivanje drugih čvorova nije replikacija baze podataka ni prebacivanje između hostova u slučaju kvara. Svaki pristupnik održava
 neovisno stanje SQLite-a, predmemorije, brojače ograničenja brzine i sesije. Za aktivnu/pasivnu ili aktivnu/aktivnu
 dostupnost upotrebljavajte obrnuti proxy s provjerom stanja ili klijentsko prebacivanje u slučaju kvara i nikada nemojte montirati jednu SQLite bazu podataka
-u više pokrenutih OmniRoute instanci.
+u više pokrenutih 67router instanci.
 
 ### Namjenske rute pružatelja usluga
 
@@ -804,7 +803,7 @@ Vraća modele grupirane prema pružatelju usluga s vrstama (`chat`, `embedding`,
 - Dostupno u odjeljku **Nadzorna ploča → Krajnje točke** za Docker i druge samostalno hostirane implementacije
 - Stvara privremeni URL `https://*.trycloudflare.com` koji prosljeđuje zahtjeve na vašu trenutačnu krajnju točku `/v1` kompatibilnu s OpenAI-jem
 - Pri prvom omogućavanju instalira `cloudflared` samo kada je to potrebno; pri kasnijim ponovnim pokretanjima ponovno se upotrebljava ista upravljana binarna datoteka
-- Brzi tuneli ne obnavljaju se automatski nakon ponovnog pokretanja OmniRoutea ili spremnika; po potrebi ih ponovno omogućite na nadzornoj ploči
+- Brzi tuneli ne obnavljaju se automatski nakon ponovnog pokretanja 67routera ili spremnika; po potrebi ih ponovno omogućite na nadzornoj ploči
 - URL-ovi tunela privremeni su i mijenjaju se svaki put kada zaustavite/pokrenete tunel
 - Upravljani brzi tuneli zadano upotrebljavaju HTTP/2 prijenos kako bi se izbjegla učestala QUIC upozorenja o UDP međuspremniku u spremnicima s ograničenim resursima
 - Postavite `CLOUDFLARED_PROTOCOL=quic` ili `auto` ako želite nadjačati odabrani upravljani prijenos
@@ -821,7 +820,7 @@ Vraća modele grupirane prema pružatelju usluga s vrstama (`chat`, `embedding`,
 
 ### Okruženje za isprobavanje prevoditelja
 
-Pristupite putem odjeljka **Nadzorna ploča → Prevoditelj**. Otklonite pogreške i vizualizirajte kako OmniRoute prevodi API zahtjeve između pružatelja usluga.
+Pristupite putem odjeljka **Nadzorna ploča → Prevoditelj**. Otklonite pogreške i vizualizirajte kako 67router prevodi API zahtjeve između pružatelja usluga.
 
 | Način rada                    | Namjena                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------- |
@@ -874,7 +873,7 @@ Za vanjsko zadržavanje sesije (na primjer, za agente Claude Code/Codex iza obrn
 X-Session-Id: your-session-key
 ```
 
-OmniRoute također prihvaća `x_session_id` i vraća efektivni ključ sesije u `X-OmniRoute-Session-Id`.
+67router također prihvaća `x_session_id` i vraća efektivni ključ sesije u `X-OmniRoute-Session-Id`.
 
 Ako upotrebljavate Nginx i šaljete zaglavlja s podvlakama, omogućite:
 
@@ -908,7 +907,7 @@ Lanac: production-fallback
 
 ### Uobičajene kombinacije pružatelja usluga i obrasci usmjeravanja
 
-Slijede primjeri obrazaca za kombiniranje više pružatelja usluga i usmjeravanje između njih u OmniRouteu:
+Slijede primjeri obrazaca za kombiniranje više pružatelja usluga i usmjeravanje između njih u 67routeru:
 
 #### 1. Kombinacija za agenta za programiranje: napredno zaključivanje uz zamjensku opciju optimiziranu za trošak/brzinu
 
@@ -969,7 +968,7 @@ Uparivanje specijaliziranih modela za obradu slika s brzim generiranjem teksta z
 
 Konfigurirajte putem **Nadzorna ploča → Postavke → Otpornost**.
 
-OmniRoute implementira otpornost na razini pružatelja s pomoću pet komponenti:
+67router implementira otpornost na razini pružatelja s pomoću pet komponenti:
 
 1. **Red zahtjeva i određivanje tempa** — Oblikovanje zahtjeva na razini sustava:
    - **Zahtjevi u minuti (RPM)** — Maksimalan broj zahtjeva u minuti po računu
@@ -994,7 +993,7 @@ OmniRoute implementira otpornost na razini pružatelja s pomoću pet komponenti:
 
    Stanje prekidača pružatelja tijekom izvođenja prikazuje se samo na stranici **Nadzorna ploča → Stanje**.
 
-4. **Čekanje isteka razdoblja čekanja** — Ako su sve moguće veze već u razdoblju čekanja, OmniRoute može pričekati istek najkraćeg razdoblja čekanja i automatski ponoviti isti zahtjev klijenta.
+4. **Čekanje isteka razdoblja čekanja** — Ako su sve moguće veze već u razdoblju čekanja, 67router može pričekati istek najkraćeg razdoblja čekanja i automatski ponoviti isti zahtjev klijenta.
 
 5. **Automatsko otkrivanje ograničenja brzine** — Kada uzvodni pružatelji vrate izričita razdoblja čekanja, te upute imaju prednost pred lokalnim razdobljem čekanja veze ako je postavka omogućena.
 
@@ -1028,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Slučajevi upotrebe:**
 
-- Preselite OmniRoute između računala
+- Preselite 67router između računala
 - Izradite vanjske sigurnosne kopije za oporavak od katastrofe
 - Dijelite konfiguracije među članovima tima (izvezite sve → podijelite arhivu)
 
@@ -1080,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Transkripcija zvuka
 
-OmniRoute podržava transkripciju zvuka putem krajnje točke kompatibilne s OpenAI-jem:
+67router podržava transkripciju zvuka putem krajnje točke kompatibilne s OpenAI-jem:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1156,7 +1155,7 @@ Onemogućite **međuspremnik tokena za zaključivanje** kada uzvodni pružatelji
 ograničenja `max_tokens` / `maxOutputTokens`. Kada je omogućen, kombinirano usmjeravanje dodaje dodatni
 prostor za modele zaključivanja samo za modele s poznatim ograničenjem izlaza te ostavlja ograničenje tokena klijenta nepromijenjenim kada bi
 sigurna vrijednost s međuspremnikom premašila to ograničenje. Ako je ograničenje klijenta već iznad poznatog ograničenja,
-OmniRoute ga smanjuje na to ograničenje prije slanja uzvodnog zahtjeva.
+67router ga smanjuje na to ograničenje prije slanja uzvodnog zahtjeva.
 
 ---
 
@@ -1179,7 +1178,7 @@ Pristupite putem **Nadzorna ploča → Stanje sustava**. Pregled stanja sustava 
 
 ## 🤖 Automatsko usmjeravanje (bez konfiguracije)
 
-OmniRoute dolazi s **usmjerivačem temeljenim na bodovanju** koji automatski bira najbolji model za svaki zahtjev među svim povezanim pružateljima usluga — nema potrebe za održavanjem kombinacija. Samo pošaljite zahtjev s jednim od `auto/*` prefiksa i OmniRoute će u hodu sastaviti virtualnu kombinaciju, bodujući kandidate na temelju latencije, troška, stope uspjeha, prilagodbe konteksta, prikladnosti modela za zadatak, nedavnih neuspjeha, kvote i stanja sklopke za prekid (circuit-breaker).
+67router dolazi s **usmjerivačem temeljenim na bodovanju** koji automatski bira najbolji model za svaki zahtjev među svim povezanim pružateljima usluga — nema potrebe za održavanjem kombinacija. Samo pošaljite zahtjev s jednim od `auto/*` prefiksa i 67router će u hodu sastaviti virtualnu kombinaciju, bodujući kandidate na temelju latencije, troška, stope uspjeha, prilagodbe konteksta, prikladnosti modela za zadatak, nedavnih neuspjeha, kvote i stanja sklopke za prekid (circuit-breaker).
 
 | Prefiks        | Optimizira za                                                                                         |
 | -------------- | ----------------------------------------------------------------------------------------------------- |
@@ -1210,7 +1209,7 @@ Automatski usmjerivač je detaljno opisan u [AUTO-COMBO.md](../routing/AUTO-COMB
 
 ## 🔌 Integracija s MCP i A2A
 
-OmniRoute je istovremeno **MCP poslužitelj** (Model Context Protocol) i **A2A poslužitelj** (Agent-to-Agent JSON-RPC 2.0). Svaki IDE ili agentski host kompatibilan s MCP-om može izravno pozivati OmniRoute alate — bez potrebe za dodatnim omotačem.
+67router je istovremeno **MCP poslužitelj** (Model Context Protocol) i **A2A poslužitelj** (Agent-to-Agent JSON-RPC 2.0). Svaki IDE ili agentski host kompatibilan s MCP-om može izravno pozivati 67router alate — bez potrebe za dodatnim omotačem.
 
 ### MCP prijenosi
 
@@ -1239,17 +1238,14 @@ Koristite SSE URL `http://localhost:20128/api/mcp/sse` i Bearer API ključ gener
 
 ### Opsezi (Scopes)
 
-MCP trenutno definira 32 imenovana opsega. Svaki Bearer ključ može se ograničiti na određene opsege — pogledajte [MCP-SERVER.md](../frameworks/MCP-SERVER.md) za autoritativni popis opsega i alata, te [A2A-SERVER.md](../frameworks/A2A-SERVER.md) za JSON-RPC shemu.
-
 ---
 
 ## 🧠 Sustav vještina
 
-OmniRoute izlaže proširivi **okvir vještina** (`src/lib/skills/`) tako da agenti i A2A krajnja točka mogu izvršavati domenski specifične rutine (npr. `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router izlaže proširivi **okvir vještina** (`src/lib/skills/`) tako da agenti i A2A krajnja točka mogu izvršavati domenski specifične rutine (npr. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Marketplace sučelje** — Pregledajte i instalirajte vještine putem **Dashboard → Skills**
 - **Opsezi po ključu** — Ograničite koji API ključevi mogu pozivati koje vještine
-- **Prilagođene vještine** — Dodajte TypeScript datoteku u `src/lib/a2a/skills/`, registrirajte je, i odmah postaje pozivljiva putem A2A
 
 Potpuna referenca: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1257,7 +1253,7 @@ Potpuna referenca: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Sustav memorije
 
-OmniRoute pohranjuje **dugoročnu konverzacijsku memoriju** s hibridnim dohvaćanjem:
+67router pohranjuje **dugoročnu konverzacijsku memoriju** s hibridnim dohvaćanjem:
 
 - **SQLite FTS5** za pretraživanje po ključnim riječima kroz prošle interakcije
 - **Qdrant vektorska pohrana** (opcionalno) za semantičko dosjećanje
@@ -1270,7 +1266,7 @@ Upravljajte memorijom u **Dashboard → Memory** (pretraživanje, uređivanje, i
 
 ## 🔔 Webhooks
 
-Pretplatite se na OmniRoute događaje za praćenje i automatizaciju u stvarnom vremenu.
+Pretplatite se na 67router događaje za praćenje i automatizaciju u stvarnom vremenu.
 
 - Kreirajte webhook u **Dashboard → Webhooks** s ciljnim URL-om i HMAC tajnom za potpisivanje
 - Dostupni događaji: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1281,21 +1277,9 @@ Potpuna shema u [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Cloud Agenti
-
-OmniRoute se integrira s cloud agentima za programiranje (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) tako da možete pokretati dugotrajne zadatke iz istog nadzorne ploče koja upravlja vašim lokalnim usmjeravanjem.
-
-- Kreirajte zadatke u **Dashboard → Cloud Agents** ili putem `POST /api/v1/agents/tasks`
-- Praćenje statusa, zapisa i artefakata po zadatku
-- Vlastiti API ključ za svakog davatelja usluga — vjerodajnice nikada ne izlaze iz OmniRoute instance
-
-Potpuna referenca: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Programsko upravljanje
 
-Možete upravljati svakim OmniRoute resursom (davatelji usluga, kombinacije, ključevi, postavke) putem HTTP-a koristeći **Bearer ključ s opsegom `manage`**.
+Možete upravljati svakim 67router resursom (davatelji usluga, kombinacije, ključevi, postavke) putem HTTP-a koristeći **Bearer ključ s opsegom `manage`**.
 
 Generirajte ključ u **Dashboard → API Keys → New Key → Scope: manage**, zatim:
 
@@ -1328,7 +1312,7 @@ Pogledajte [API_REFERENCE.md](../reference/API_REFERENCE.md) za potpuni katalog 
 
 ## 💻 Interni CLI
 
-OmniRoute isporučuje interni CLI (`omniroute …`) za postavljanje, dijagnostiku i kontrolu izvođenja. Ovo je **odvojeno od stranice "CLI Tools" u nadzornoj ploči**, koja konfigurira CLI alate trećih strana (Claude Code, Cursor, Codex, Cline, …) da mogu komunicirati s OmniRoute-om.
+67router isporučuje interni CLI (`omniroute …`) za postavljanje, dijagnostiku i kontrolu izvođenja. Ovo je **odvojeno od stranice "CLI Tools" u nadzornoj ploči**, koja konfigurira CLI alate trećih strana (Claude Code, Cursor, Codex, Cline, …) da mogu komunicirati s 67router-om.
 
 ```bash
 omniroute setup                    # Interaktivni čarobnjak (lozinka, dobavljači, kombinacije)
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # Vraćanje iz snimke
 omniroute health                   # Detaljno stanje (breakeri, predmemorija, memorija)
 omniroute quota                    # Iskorištenost kvote dobavljača
 omniroute mcp status                # Status MCP servera
-omniroute a2a status                # Status A2A servera
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneli
 omniroute reset-password           # Resetiranje administratorske lozinke
 omniroute --mcp                    # Pokretanje MCP servera preko stdio
@@ -1359,7 +1342,7 @@ Savjet: kombinirajte `omniroute doctor --json` s vašim alatom za nadzor za obav
 
 ## 🖥️ Desktop aplikacija (Electron)
 
-OmniRoute je dostupan kao izvorna desktop aplikacija za Windows, macOS i Linux.
+67router je dostupan kao izvorna desktop aplikacija za Windows, macOS i Linux.
 
 ### Instalacija
 

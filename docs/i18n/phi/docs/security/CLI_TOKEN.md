@@ -6,7 +6,7 @@
 
 ## Pangkalahatang-ideya
 
-Nagpapatotoo ang mga command ng OmniRoute CLI sa lokal na management API gamit ang
+Nagpapatotoo ang mga command ng 67router CLI sa lokal na management API gamit ang
 `HMAC-SHA256(machine-id, salt)` token na ipinapadala sa pamamagitan ng
 `x-omniroute-cli-token` request header.
 

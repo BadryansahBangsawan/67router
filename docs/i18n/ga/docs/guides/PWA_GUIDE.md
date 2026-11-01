@@ -4,11 +4,11 @@
 
 ---
 
-Cuirtear OmniRoute ar fáil mar Aip Ghréasáin Fhorásach atá insuiteáilte go hiomlán. Nuair a osclaíonn tú an deais ó aon bhrabhsálaí móibíleach — Android (Chrome) nó iOS (Safari) — is féidir leat "Cuir leis an Scáileán Baile" a roghnú agus eispéireas cosúil le haip dhúchasach a fháil gan aon siopa aipeanna a bheith ag teastáil.
+Cuirtear 67router ar fáil mar Aip Ghréasáin Fhorásach atá insuiteáilte go hiomlán. Nuair a osclaíonn tú an deais ó aon bhrabhsálaí móibíleach — Android (Chrome) nó iOS (Safari) — is féidir leat "Cuir leis an Scáileán Baile" a roghnú agus eispéireas cosúil le haip dhúchasach a fháil gan aon siopa aipeanna a bheith ag teastáil.
 
 ## Cad is PWA ann?
 
-Déanann Aip Ghréasáin Fhorásach aip de dheais gréasáin OmniRoute a bhfuil cuma agus mothú aip dhúchasaigh mhóibíligh uirthi. Nuair a bheidh sí suiteáilte:
+Déanann Aip Ghréasáin Fhorásach aip de dheais gréasáin 67router a bhfuil cuma agus mothú aip dhúchasaigh mhóibíligh uirthi. Nuair a bheidh sí suiteáilte:
 
 - Seoltar í ó do scáileán baile lena deilbhín féin
 - Osclaítear í ar lánscáileán — gan barra seoltaí ná comhéadan cluaisíní an bhrabhsálaí
@@ -20,26 +20,26 @@ Déanann Aip Ghréasáin Fhorásach aip de dheais gréasáin OmniRoute a bhfuil 
 
 ### Android (Chrome)
 
-1. Oscail deais OmniRoute in Chrome: `http://YOUR_IP:20128`
-2. Taispeánfaidh Chrome meirge **"Cuir OmniRoute leis an Scáileán Baile"** go huathoibríoch, nó:
+1. Oscail deais 67router in Chrome: `http://YOUR_IP:20128`
+2. Taispeánfaidh Chrome meirge **"Cuir 67router leis an Scáileán Baile"** go huathoibríoch, nó:
    - Tapáil an roghchlár **⋮** (trí phonc) → **"Cuir leis an Scáileán Baile"** nó **"Suiteáil an aip"**
 3. Deimhnigh an leid
-4. Beidh OmniRoute le feiceáil ar do scáileán baile mar aip neamhspleách
+4. Beidh 67router le feiceáil ar do scáileán baile mar aip neamhspleách
 
 ### iOS (Safari)
 
-1. Oscail deais OmniRoute in Safari: `http://YOUR_IP:20128`
+1. Oscail deais 67router in Safari: `http://YOUR_IP:20128`
 2. Tapáil an cnaipe **Comhroinn** (bosca le saighead)
 3. Scrollaigh síos agus tapáil **"Cuir leis an Scáileán Baile"**
-4. Tabhair ainm di ("OmniRoute" de réir réamhshocraithe) agus tapáil **Cuir Leis**
-5. Beidh OmniRoute le feiceáil ar do scáileán baile le deilbhín na haipe
+4. Tabhair ainm di ("67router" de réir réamhshocraithe) agus tapáil **Cuir Leis**
+5. Beidh 67router le feiceáil ar do scáileán baile le deilbhín na haipe
 
 ### Deasc (Chrome / Edge)
 
-1. Oscail deais OmniRoute
-2. Cliceáil an **deilbhín suiteála** sa bharra seoltaí (nó ⋮ → "Suiteáil OmniRoute...")
+1. Oscail deais 67router
+2. Cliceáil an **deilbhín suiteála** sa bharra seoltaí (nó ⋮ → "Suiteáil 67router...")
 3. Deimhnigh an leid
-4. Osclaítear OmniRoute mar fhuinneog neamhspleách — gan cluaisíní ná barra seoltaí
+4. Osclaítear 67router mar fhuinneog neamhspleách — gan cluaisíní ná barra seoltaí
 
 ## Gnéithe
 
@@ -49,15 +49,15 @@ Tá an lastliosta cumraithe le `display: "fullscreen"`, rud a chiallaíonn go n-
 
 ### Tacaíocht As Líne
 
-Áirítear le OmniRoute oibrí seirbhíse (`sw.js`) a sholáthraíonn taisceadh cliste:
+Áirítear le 67router oibrí seirbhíse (`sw.js`) a sholáthraíonn taisceadh cliste:
 
-| Cineál Sócmhainne                                       | Straitéis                                   | Iompar                                                                                                               |
-| ------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Blaosc na hAipe**                                     | Taisce ar dtús                              | Déantar `/`, `/offline`, an lastliosta agus na deilbhíní a réamhthaisceadh le linn na suiteála                       |
-| **Sócmhainní statacha** (CSS, JS, íomhánna, clónna)     | Líonra ar dtús, agus an taisce mar chúltaca | Faightear cóip úr ón líonra; úsáidtear an taisce mar chúltaca má táthar as líne                                      |
-| **Bearta Next.js** (`/_next/`)                          | Líonra ar dtús le nuashonrú taisce          | Faightear iad ón líonra agus nuashonraítear an taisce; soláthraítear an leagan taiscthe má táthar as líne            |
-| **Iarratais nascleanúna**                               | Seachbhóthar (ní idircheapadh riamh iad)    | Is leis an mbrabhsálaí an cúltitim HTTP/3→HTTP/2; níor cheart do shoicéad QUIC marbh a bheith ina `Response.error()` |
-| **Bealaí API / deaise** (`/api/`, `/a2a`, `/dashboard`) | Seachbhóthar (ní thaisctear riamh iad)      | Téann siad go díreach chuig an bhfreastalaí i gcónaí — ní idircheapann an t-oibrí seirbhíse iad riamh                |
+| Cineál Sócmhainne                                   | Straitéis                                   | Iompar                                                                                                               |
+| --------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Blaosc na hAipe**                                 | Taisce ar dtús                              | Déantar `/`, `/offline`, an lastliosta agus na deilbhíní a réamhthaisceadh le linn na suiteála                       |
+| **Sócmhainní statacha** (CSS, JS, íomhánna, clónna) | Líonra ar dtús, agus an taisce mar chúltaca | Faightear cóip úr ón líonra; úsáidtear an taisce mar chúltaca má táthar as líne                                      |
+| **Bearta Next.js** (`/_next/`)                      | Líonra ar dtús le nuashonrú taisce          | Faightear iad ón líonra agus nuashonraítear an taisce; soláthraítear an leagan taiscthe má táthar as líne            |
+| **Iarratais nascleanúna**                           | Seachbhóthar (ní idircheapadh riamh iad)    | Is leis an mbrabhsálaí an cúltitim HTTP/3→HTTP/2; níor cheart do shoicéad QUIC marbh a bheith ina `Response.error()` |
+| **Bealaí API / deaise** (`/api/`, `/dashboard`)     | Seachbhóthar (ní thaisctear riamh iad)      | Téann siad go díreach chuig an bhfreastalaí i gcónaí — ní idircheapann an t-oibrí seirbhíse iad riamh                |
 
 ### Leathanach As Líne
 
@@ -70,7 +70,7 @@ Nuair nach bhfuil an líonra ar fáil agus nuair a dhéanann úsáideoir nasclea
 
 ### Deilbhíní Aipe
 
-Soláthraíonn OmniRoute deilbhíní atá optamaithe do gach ardán:
+Soláthraíonn 67router deilbhíní atá optamaithe do gach ardán:
 
 | Comhad                 | Méid                | Úsáidte Ag                            |
 | ---------------------- | ------------------- | ------------------------------------- |
@@ -93,9 +93,9 @@ Ginte ag Next.js trí `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Suite ag `src/shared/components/PwaRegister.tsx`, déanann an chomhpháirt chlia
 
 ## Úsáid Le Termux (Android)
 
-Agus OmniRoute á rith ar Android trí Termux, oibríonn an PWA gan stró:
+Agus 67router á rith ar Android trí Termux, oibríonn an PWA gan stró:
 
-1. Tosaigh OmniRoute in Termux: `npx omniroute`
+1. Tosaigh 67router in Termux: `npx omniroute`
 2. Oscail Chrome ar an bhfón céanna: `http://localhost:20128`
 3. Suiteáil an PWA trí "Cuir leis an Scáileán Baile"
 4. Nascann an PWA leis an bhfreastalaí áitiúil Termux — ritheann gach rud ar an ngléas
@@ -156,7 +156,7 @@ Ciallaíonn an teaglaim seo gurb é d’fhón Android an **freastalaí** (Termux
 
 ## Úsáid Ó Ghléasanna Eile
 
-Suiteáil an PWA ar aon ghléas a bhfuil rochtain brabhsálaí aige ar do fhreastalaí OmniRoute:
+Suiteáil an PWA ar aon ghléas a bhfuil rochtain brabhsálaí aige ar do fhreastalaí 67router:
 
 - **Fón/táibléad eile**: Téigh chuig `http://PHONE_IP:20128` agus suiteáil an PWA
 - **Ríomhaire glúine**: Oscail Chrome/Edge agus suiteáil é mar PWA deisce

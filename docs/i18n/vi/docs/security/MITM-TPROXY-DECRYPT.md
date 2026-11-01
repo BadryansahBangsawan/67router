@@ -4,7 +4,7 @@
 
 ---
 
-Giải mã trong suốt bằng TPROXY là **chế độ thu thập thứ 5** của OmniRoute dành cho ngăn xếp MITM
+Giải mã trong suốt bằng TPROXY là **chế độ thu thập thứ 5** của 67router dành cho ngăn xếp MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Chế độ này chặn và **giải mã** lưu lượng HTTPS gửi đi cục bộ trên Linux
 bằng cách sử dụng TPROXY của kernel + định tuyến theo chính sách — **không** giả mạo `/etc/hosts` và
@@ -53,7 +53,7 @@ Hãy sử dụng chế độ này khi bạn muốn thu thập và giải mã lư
 - bạn không muốn làm gián đoạn tiến trình bằng thay đổi proxy trên toàn hệ thống.
 
 Vì việc chặn diễn ra trong kernel, tiến trình khởi tạo **không cần
-thay đổi cấu hình** — nhưng tiến trình phải tin cậy CA động do OmniRoute
+thay đổi cấu hình** — nhưng tiến trình phải tin cậy CA động do 67router
 cài đặt (xem [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ addon chưa được biên dịch), trình tải addon (`src/mitm/tproxy/transpa
 sẽ trả về `null` thay vì ném lỗi. Sau đó, trạng thái chế độ thu thập sẽ báo cáo
 `available: false`, nút bật/tắt trên bảng điều khiển sẽ bị **vô hiệu hóa** với chú giải
 "Giải mã TPROXY yêu cầu Linux + root + addon native", và phần còn lại của
-OmniRoute vẫn tiếp tục hoạt động.
+67router vẫn tiếp tục hoạt động.
 
 ---
 
@@ -262,7 +262,7 @@ vô hạn. Đường chuyển tiếp phòng tránh điều này bằng một d�
 | **Làm sạch lỗi**                           | Các phản hồi lỗi của route được xử lý qua `sanitizeErrorMessage()` (Quy tắc cứng #12).                                                                                                                                                                                                                                                                                                                                              |
 
 **CA MITM là một khả năng có quyền lực lớn.** Một CA được hệ điều hành tin cậy và có thể ký cho bất kỳ
-máy chủ nào đồng nghĩa với việc mọi nội dung mà OmniRoute chặn đều có thể bị giải mã. Tính năng này được bảo vệ phía sau
+máy chủ nào đồng nghĩa với việc mọi nội dung mà 67router chặn đều có thể bị giải mã. Tính năng này được bảo vệ phía sau
 chế độ thu thập TPROXY chỉ dành cho truy cập cục bộ và phải được bật rõ ràng; chế độ này mặc định bị tắt, đồng thời mục
 trong kho tin cậy sẽ bị xóa khi bạn dừng chế độ này.
 
@@ -372,7 +372,7 @@ trả về `available: false` khi thiếu addon.
 ### Các quy tắc tường lửa còn sót lại sau sự cố
 
 `revertTproxy()` là thao tác đảo ngược chính xác của việc áp dụng và có tính lũy đẳng. Việc dừng
-chế độ sẽ hoàn tác các quy tắc; nếu OmniRoute bị dừng cưỡng bức giữa phiên, hãy dùng
+chế độ sẽ hoàn tác các quy tắc; nếu 67router bị dừng cưỡng bức giữa phiên, hãy dùng
 hành động **Repair** của AgentBridge (`POST /api/tools/agent-bridge/repair`) để hoàn tác trạng thái
 hệ thống bị bỏ lại (giả mạo DNS, CA gốc, proxy hệ thống). Các quy tắc `mangle` và route
 của TPROXY cũng tự động được xóa khi khởi động lại.

@@ -8,11 +8,11 @@
 > **Ostatnia aktualizacja:** 2026-09-02 — v3.8.51
 > **Odbiorcy:** Inżynierowie utrzymujący integracje maskujące specyficzne dla dostawców.
 
-OmniRoute integruje się z dostawcami, których systemy brzegowe aktywnie identyfikują nieoficjalnych klientów na podstawie ich odcisków (TLS JA3/JA4, kolejność nagłówków, struktura treści JSON, tokeny integralności). Ta strona opisuje mechanizmy maskowania udostępniane przez OmniRoute oraz miejsca ich implementacji.
+67router integruje się z dostawcami, których systemy brzegowe aktywnie identyfikują nieoficjalnych klientów na podstawie ich odcisków (TLS JA3/JA4, kolejność nagłówków, struktura treści JSON, tokeny integralności). Ta strona opisuje mechanizmy maskowania udostępniane przez 67router oraz miejsca ich implementacji.
 
 ## Uwaga prawna i etyczna
 
-Funkcje stealth istnieją po to, by OmniRoute mógł działać jako warstwa kompatybilności między oficjalnymi kontami użytkownika (Claude Code CLI, Codex, Antigravity, Cursor itd.) a ujednoliconym API OmniRoute. **Nie** służą do omijania fraud detection, współdzielenia poświadczeń ani naruszania Terms of Service providera. Maintainerzy oczekują, że operatorzy będą przestrzegać upstream ToS, które zaakceptowali przy tworzeniu kont.
+Funkcje stealth istnieją po to, by 67router mógł działać jako warstwa kompatybilności między oficjalnymi kontami użytkownika (Claude Code CLI, Codex, Antigravity, Cursor itd.) a ujednoliconym API 67router. **Nie** służą do omijania fraud detection, współdzielenia poświadczeń ani naruszania Terms of Service providera. Maintainerzy oczekują, że operatorzy będą przestrzegać upstream ToS, które zaakceptowali przy tworzeniu kont.
 
 ---
 
@@ -87,7 +87,7 @@ aktywnego konta.
 
 ## Pakiet maskowania Claude Code
 
-Gdy opcja `cliCompatMode` jest włączona, OmniRoute przekształca wychodzące żądania Claude tak, aby były nieodróżnialne od ruchu `claude-cli`. Współpracują przy tym trzy moduły:
+Gdy opcja `cliCompatMode` jest włączona, 67router przekształca wychodzące żądania Claude tak, aby były nieodróżnialne od ruchu `claude-cli`. Współpracują przy tym trzy moduły:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -103,7 +103,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (skrót zawartości klienta)
 
-Kontrola integralności po stronie serwera, którą oficjalny interfejs CLI Claude Code oblicza za pomocą Bun/Zig. OmniRoute implementuje ją ponownie przy użyciu `xxhash-wasm`:
+Kontrola integralności po stronie serwera, którą oficjalny interfejs CLI Claude Code oblicza za pomocą Bun/Zig. 67router implementuje ją ponownie przy użyciu `xxhash-wasm`:
 
 1. Serializacja treści z symbolem zastępczym `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -149,7 +149,7 @@ Moduły towarzyszące w tym samym pakiecie:
 
 ## Stealth Antigravity
 
-Żądania Antigravity zachowują tekst wywołującego bajt po bajcie. OmniRoute nie wstawia zero-width characters do promptów ani nie zmienia nazw/nie wstrzykuje tooli, by udawać klienta IDE.
+Żądania Antigravity zachowują tekst wywołującego bajt po bajcie. 67router nie wstawia zero-width characters do promptów ani nie zmienia nazw/nie wstrzykuje tooli, by udawać klienta IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -159,13 +159,13 @@ Usuwa markery Stainless SDK (`x-stainless-lang`, `x-stainless-package-version`, 
 
 `ANTIGRAVITY_CREDITS=always` (konsumowane przez `open-sse/executors/antigravity.ts`) kieruje **każde** żądanie przez Antigravity AI Credit Overages (płatne kredyty Google) zamiast pozwolić free-tier quota Google bramkować ruch. Jest to udokumentowane jako feature, ale to **najczęstszy raport naruszenia ToS, jaki widzimy** — wiele kont Google Ultra zostało zbanowanych z `403 / "service disabled for ToS violation" / insufficient_quota` po kilku godzinach z `=always`.
 
-Egzekucja upstream jest po **stronie Google**, nie ma nic, co OmniRoute mógłby temu zapobiec. Nazwa zmiennej env i istniejąca dokumentacja sprawiają wrażenie bezpiecznego przełącznika; nim nie jest.
+Egzekucja upstream jest po **stronie Google**, nie ma nic, co 67router mógłby temu zapobiec. Nazwa zmiennej env i istniejąca dokumentacja sprawiają wrażenie bezpiecznego przełącznika; nim nie jest.
 
 **Dlaczego to silniej przyciąga abuse detection niż użycie wyłącznie free-tier:**
 
 - Utrzymany zautomatyzowany spend na jednym koncie Google flaguje się inaczej niż free-tier hits-quota-and-stops.
 - Credit overages nie mają rate ceiling, więc źle skonfigurowany klient może spalić kilkaset USD w minutach i wyglądać jak odsprzedaż API key lub bot traffic.
-- Wielu użytkowników OmniRoute uderzających w overage credits równolegle z tego samego zewnętrznego IP wzmacnia sygnał.
+- Wielu użytkowników 67router uderzających w overage credits równolegle z tego samego zewnętrznego IP wzmacnia sygnał.
 
 **Zalecana postawa:**
 
@@ -204,7 +204,7 @@ Przełączanie per provider przez env (patrz poniżej). Gdy wyłączone, nagłó
 
 ## Proxy MITM (Antigravity, Linux/macOS/Windows)
 
-Dla CLI, których binarów nie da się przekierować przez `OPENAI_BASE_URL`, OmniRoute uruchamia lokalny proxy z terminacją TLS. Endpointy są pod `src/app/api/cli-tools/antigravity-mitm/`.
+Dla CLI, których binarów nie da się przekierować przez `OPENAI_BASE_URL`, 67router uruchamia lokalny proxy z terminacją TLS. Endpointy są pod `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Method | Endpoint                                | Purpose                                          |
 | ------ | --------------------------------------- | ------------------------------------------------ |
@@ -285,7 +285,7 @@ Adres IP dostawcy jest **zawsze zachowywany** — przełącznik zmienia jedynie 
 
 ## Sanityzacja nagłówków inbound
 
-OmniRoute czyści inbound nagłówki klienta przed forwardem, by żądanie przychodzące z Cursor nie wyciekało `User-Agent: Cursor/X.Y.Z` do upstream Claude. Zobacz `src/shared/constants/upstreamHeaders.ts` — denylist utrzymywany w lockstep ze schematami Zod i testami jednostkowymi.
+67router czyści inbound nagłówki klienta przed forwardem, by żądanie przychodzące z Cursor nie wyciekało `User-Agent: Cursor/X.Y.Z` do upstream Claude. Zobacz `src/shared/constants/upstreamHeaders.ts` — denylist utrzymywany w lockstep ze schematami Zod i testami jednostkowymi.
 
 ---
 

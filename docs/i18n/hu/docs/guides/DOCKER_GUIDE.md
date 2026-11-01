@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Magyar)
+# 🐳 Docker Guide — 67router (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Környezeti fájllal](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Elérhető profilok](#available-profiles)
-- [A gazdagép CLI-eszközeinek konfigurálása, amikor az OmniRoute Dockerben fut](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [A gazdagép CLI-eszközeinek konfigurálása, amikor a 67router Dockerben fut](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis-sidecar](#redis-sidecar)
 - [Éles környezethez készült Compose](#production-compose)
 - [A Dockerfile szakaszai](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Elérhető profilok
 
-Az OmniRoute Compose-profilokat biztosít a fő telepítési kialakításokhoz. Válassza ki a környezetének megfelelőt.
+A 67router Compose-profilokat biztosít a fő telepítési kialakításokhoz. Válassza ki a környezetének megfelelőt.
 
 | Profil                   | Szolgáltatás     | Mikor használja                                                                                                                                                            | Parancs                                      |
 | ------------------------ | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ Az OmniRoute Compose-profilokat biztosít a fő telepítési kialakításokhoz. 
 
 > Több profil is kombinálható: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## A gazdagépi CLI-eszközök konfigurálása, amikor az OmniRoute Dockerben fut
+## A gazdagépi CLI-eszközök konfigurálása, amikor a 67router Dockerben fut
 
 Az `omniroute setup-codex`, a `setup-claude`, a `config set <tool>` és az irányítópult
 **Konfiguráció mentése** gombja mind olyan fájlokat írnak, mint a `~/.codex/*.config.toml`. Ezeknek az elérési utaknak
@@ -103,11 +103,11 @@ futtatja, az írás a konténer saját kezdőkönyvtárába kerül (`/home/node`
 a lemezkép `USER node` felhasználóval fut), ahonnan a gazdagépi CLI soha nem fogja beolvasni, és ahol
 a konténer újbóli létrehozásakor azonnal elvész.
 
-Az OmniRoute észleli ezt, és a nem használható sikerjelzés helyett utasításokkal
+A 67router észleli ezt, és a nem használható sikerjelzés helyett utasításokkal
 megtagadja az írást: a CLI `2` kóddal lép ki, az API pedig `422`
 választ ad `containerEphemeralTarget: true` értékkel.
 
-### Javasolt: a CLI fusson a gazdagépen, az OmniRoute pedig Dockerben
+### Javasolt: a CLI fusson a gazdagépen, a 67router pedig Dockerben
 
 A konténer szolgáltatja az API-t; a CLI a gazdagépi eszközöket konfigurálja.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-A bind csatolás teszi megbízhatóvá az elérési utat: az OmniRoute beolvassa a
+A bind csatolás teszi megbízhatóvá az elérési utat: a 67router beolvassa a
 `/proc/self/mountinfo` fájlt, és engedélyezi az írást a csatolt elérési utakra (valamint az olyan könyvtárakba,
 amelyek gyermekei csatolási pontok, ami pontosan megfelel a fenti `/host-home` struktúrának), miközben
 továbbra is megtagadja az írást a nem csatolt helyekre.
@@ -178,7 +178,7 @@ egy arra figyelmeztető üzenet mellett folytatódik, hogy az eredmény nem mara
 
 ## Redis sidecar
 
-Az OmniRoute a Redisre támaszkodik az elosztott sebességkorlátozó és a megosztott gyorsítótár működtetéséhez. A `redis` szolgáltatás **mindig definiálva van** a `docker-compose.yml` fájlban (nincs profilhoz kötve), és minden más profillal együtt elindul.
+A 67router a Redisre támaszkodik az elosztott sebességkorlátozó és a megosztott gyorsítótár működtetéséhez. A `redis` szolgáltatás **mindig definiálva van** a `docker-compose.yml` fájlban (nincs profilhoz kötve), és minden más profillal együtt elindul.
 
 | Részlet                     | Érték                                           |
 | --------------------------- | ----------------------------------------------- |
@@ -359,7 +359,6 @@ Az [ENVIRONMENT.md](../reference/ENVIRONMENT.md) fájlban dokumentált alapért�
 | `DASHBOARD_PORT` / `API_PORT` | Felülírja az irányítópult (20128) és az API (20129) közzétett portjait                                                                                                                                                                                                                                                                    | `20128` / `20129`                   |
 | `APP_BIND_HOST`               | Az a gazdagép-interfész, amelyen a docker-compose közzéteszi az irányítópult/API/élő WS portjait. `REQUIRE_API_KEY=false` esetén (ez az alapértelmezés) a `0.0.0.0` elérhetővé teszi a névtelen `/v1` proxyt a LAN számára — csak `REQUIRE_API_KEY=true` mellett vagy elé helyezett fordított proxyval tegye szélesebb körben elérhetővé. | `127.0.0.1`                         |
 | `CLIPROXY_BIND_HOST`          | Az a gazdagép-interfész, amelyen a docker-compose közzéteszi a `cliproxyapi` oldalkocsit — ennek adatkötete tárolja a szolgáltatói hitelesítő adatokat.                                                                                                                                                                                   | `127.0.0.1`                         |
-| `OMNIROUTE_PLUGINS_DIR`       | Az a könyvtár, amelyet a futásidejű bővítménykereső olvas, és amelybe telepít. Állítsa be, ha a bővítmények bind mounttal vannak csatolva: az alapértelmezés a `HOME` értékét követi, amelyet egy lemezkép nem feltétlenül exportál.                                                                                                      | `~/.omniroute/plugins`              |
 | `OMNIROUTE_BASE_PATH`         | URL-alútvonal, amikor az alkalmazást fordított proxy mögött teszik közzé (pl. `/omniroute`)                                                                                                                                                                                                                                               | _(üres = gyökér)_                   |
 | `NEXT_PUBLIC_BASE_URL`        | Nyilvános böngészőeredet az alútvonallal együtt (pl. `https://host/omniroute`)                                                                                                                                                                                                                                                            | nincs beállítva                     |
 | `PROD_DASHBOARD_PORT`         | Az irányítópult gazdagépoldali portja a `docker-compose.prod.yml` fájlhoz                                                                                                                                                                                                                                                                 | `20130`                             |
@@ -367,7 +366,7 @@ Az [ENVIRONMENT.md](../reference/ENVIRONMENT.md) fájlban dokumentált alapért�
 
 ## Fordított proxy egy alútvonalon (Traefik / nginx)
 
-A Next.js `basePath` értéke belefordul az önálló csomagba. Az OmniRoute a beégetett
+A Next.js `basePath` értéke belefordul az önálló csomagba. A 67router a beégetett
 értéket egy, az alkalmazás gyökerében található jelzőfájlban rögzíti (amelyet az
 `npm run build` ír, a `scripts/docker/ensure-docker-base-path.mjs` pedig olvas), és a
 konténer indításakor összehasonlítja az `OMNIROUTE_BASE_PATH` értékével. Ha ezek
@@ -447,7 +446,7 @@ vizsgálatok teljes útmutatója:
 
 ## Docker Compose Caddyvel (automatikus HTTPS/TLS)
 
-Az OmniRoute biztonságosan elérhetővé tehető a Caddy automatikus SSL-kiépítésével. Győződjön meg arról, hogy a domain DNS A rekordja a szerver IP-címére mutat.
+A 67router biztonságosan elérhetővé tehető a Caddy automatikus SSL-kiépítésével. Győződjön meg arról, hogy a domain DNS A rekordja a szerver IP-címére mutat.
 
 ```yaml
 services:
@@ -478,11 +477,11 @@ volumes:
   omniroute-data:
 ```
 
-A Caddy beállítja a szabványos továbbítási fejléceket az upstream tároló számára. Az OmniRoute a
+A Caddy beállítja a szabványos továbbítási fejléceket az upstream tároló számára. A 67router a
 `NEXT_PUBLIC_BASE_URL` értékét használja az OAuth-visszahívások és a generált nyilvános
 hivatkozások kanonikus nyilvános forrásaként; az irányítópult hitelesített írási műveletei azonos eredetű kéréseket és munkamenethez kötött CSRF-
 védelmet használnak. Az `OMNIROUTE_TRUST_PROXY` beállítást csak olyan speciális telepítéseknél engedélyezze, amelyeknél szándékosan
-azt szeretné, hogy az OmniRoute az explicit konfiguráció helyett megbízható továbbított fejlécekből
+azt szeretné, hogy a 67router az explicit konfiguráció helyett megbízható továbbított fejlécekből
 határozza meg a nyilvános forrást.
 
 ## Cloudflare Quick Tunnel
@@ -494,11 +493,11 @@ A végpontok alagútpaneljei (Cloudflare, Tailscale, ngrok) megjeleníthetők va
 ### Megjegyzések az alagutakhoz
 
 - A Quick Tunnel URL-ek ideiglenesek, és minden újraindítás után megváltoznak.
-- A Quick Tunnels alagutak nem állnak automatikusan helyre az OmniRoute vagy a tároló újraindítása után. Szükség esetén engedélyezze őket újra az irányítópulton.
+- A Quick Tunnels alagutak nem állnak automatikusan helyre a 67router vagy a tároló újraindítása után. Szükség esetén engedélyezze őket újra az irányítópulton.
 - A felügyelt telepítés jelenleg Linux, macOS és Windows rendszereken támogatott `x64` / `arm64` architektúrán.
 - A felügyelt Quick Tunnels alapértelmezés szerint HTTP/2 átvitelt használ, hogy elkerülje a QUIC UDP-pufferekkel kapcsolatos, nagy mennyiségű figyelmeztetést a korlátozott tárolókörnyezetekben. Ha más átvitelt szeretne, állítsa a `CLOUDFLARED_PROTOCOL=quic` vagy `auto` értéket.
 - A Docker-lemezképek tartalmazzák a rendszer legfelső szintű CA-tanúsítványait, és átadják őket a felügyelt `cloudflared` számára, így elkerülhetők a TLS-megbízhatósági hibák, amikor az alagút a tárolón belül indul el.
-- Állítsa be a `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` értéket, ha azt szeretné, hogy az OmniRoute a letöltés helyett egy meglévő bináris fájlt használjon.
+- Állítsa be a `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` értéket, ha azt szeretné, hogy a 67router a letöltés helyett egy meglévő bináris fájlt használjon.
 
 ## Lemezképcímkék
 
@@ -511,7 +510,7 @@ Többplatformos manifest: natív `linux/amd64` + `linux/arm64` (Apple Silicon, A
 
 ### Kiadási csatornák
 
-Az OmniRoute külön Docker-csatornákat tesz közzé a stabil kiadásokhoz, az aktív kiadási ág teszteléséhez és a fejlesztői buildekhez.
+A 67router külön Docker-csatornákat tesz közzé a stabil kiadásokhoz, az aktív kiadási ág teszteléséhez és a fejlesztői buildekhez.
 
 | Csatorna                        | Forrás                                   | Módosíthatóság                      | Ajánlott használat                                                                                                                                   |
 | ------------------------------- | ---------------------------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -564,7 +563,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Tesztelés előtt készítsen biztonsági másolatot az OmniRoute adatkötetről vagy a bind mounttal csatolt adatkönyvtárról. A visszaállításhoz állítsa vissza a korábban használt stabil verziót vagy kivonatot, majd hozza létre ismét a konténert:
+Tesztelés előtt készítsen biztonsági másolatot a 67router adatkötetről vagy a bind mounttal csatolt adatkönyvtárról. A visszaállításhoz állítsa vissza a korábban használt stabil verziót vagy kivonatot, majd hozza létre ismét a konténert:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -584,7 +583,7 @@ Egy kiadási ágból készült build soha nem mozdíthatja el a `latest` címké
 
 ## Irányítópult-frissítések Dockerben
 
-Egy közzétett lemezképből futó konténer nem tudja lecserélni önmagát. Amikor az OmniRoute azt észleli, hogy
+Egy közzétett lemezképből futó konténer nem tudja lecserélni önmagát. Amikor a 67router azt észleli, hogy
 konténerben fut (nincs `.git`-munkapéldány, és nem npm-telepítés), a kezdőlap irányítópultján lévő frissítési sáv
 az npm/git-utasítások helyett a gazdagépen futtatandó parancsot jeleníti meg, egy másolási gombbal:
 
@@ -600,7 +599,7 @@ A szolgáltatás neve az `AUTO_UPDATE_SERVICE` értékéből származik (alapér
 
 Annak érdekében, hogy az **Update Now** továbbra is működjön a `/var/run/docker.sock` csatolása nélkül (ami a konténernek
 root jogosultságot ad a gazdagépen — lásd a fenti `cli`-profilra vonatkozó figyelmeztetést), állítsa be a `DOCKER_UPDATE_TRIGGER_FILE` változót az
-OmniRoute szolgáltatásban, és futtasson egy figyelőt a gazdagépen:
+67router szolgáltatásban, és futtasson egy figyelőt a gazdagépen:
 
 ```yaml
 services:
@@ -614,7 +613,7 @@ services:
 Az elérési útnak a `DATA_DIR` könyvtáron belül kell lennie (a relatív értékek ehhez képest lesznek feloldva); minden más
 elutasításra kerül. Az **Update Now** ezután a `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` tartalmat írja ebbe a
 fájlba, `202` választ ad, az irányítópult pedig addig kérdezi le az `/api/system/version` végpontot, amíg az új verzió éles nem lesz,
-majd újratöltődik. Ebben a módban az OmniRoute soha nem futtat shell- vagy Docker-parancsot. Mint minden frissítési
+majd újratöltődik. Ebben a módban a 67router soha nem futtat shell- vagy Docker-parancsot. Mint minden frissítési
 műveletnél, a kérés csak loopback/LAN-kliensektől kerül elfogadásra.
 
 Egy bind-csatolással elérhetővé tett adatkönyvtár stabil elérési utat biztosít a gazdagép számára a figyeléshez. Minta `systemd`-egységek
@@ -623,7 +622,7 @@ Egy bind-csatolással elérhetővé tett adatkönyvtár stabil elérési utat bi
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Az OmniRoute irányítópult frissítési kéréseinek figyelése
+Description=A 67router irányítópult frissítési kéréseinek figyelése
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -635,7 +634,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Az OmniRoute-konténer lekérése és újbóli létrehozása
+Description=A 67router-konténer lekérése és újbóli létrehozása
 
 [Service]
 Type=oneshot
@@ -655,13 +654,13 @@ A szolgáltatás a lekérés előtt eltávolítja a kérésfájlt, így egy sike
 
 ## Rendelkezésre állás: az alapértelmezett SQLite egyetlen replikát támogat
 
-Az alapértelmezett Docker-/Kubernetes-alapú OmniRoute **egy Node-folyamatból és egy SQLite-íróból** áll. A magas rendelkezésre állás ezen a topológián **nem támogatott**.
+Az alapértelmezett Docker-/Kubernetes-alapú 67router **egy Node-folyamatból és egy SQLite-íróból** áll. A magas rendelkezésre állás ezen a topológián **nem támogatott**.
 
-| Korlátozás                                                      | Következmény                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Egyetlen író                                                    | **Ne** futtasson több replikát ugyanazzal az SQLite-fájllal. Ez sérülést okoz az adatbázisban.                                                                                                                                                                                                                                                                                                                       |
-| Újbóli létrehozás / újraindítás / leállítás a HEALTHCHECK által | A folyamatban lévő SSE-kapcsolatok, irányítópult-munkamenetek és memóriában tárolt állapot **teljes kiesése**. Minden csatlakoztatott kliens kapcsolata megszakad. Az üres végponttal rendelkező időszakban érkező új kérések OmniRoute JSON helyett fordított proxytól származó **`502 Bad Gateway: Unknown error`** választ kapnak — a kliensek ezt nem tudják megkülönböztetni egy szolgáltatói hibától (#11015). |
-| Azonos eseményhurok, mint a `/healthz` esetén                   | Egy leterhelt katalógus- vagy tömörítési ciklus késleltetheti a vizsgálatokat; rövid időtúllépés esetén ezután újraindul az **egyetlen** replika.                                                                                                                                                                                                                                                                    |
+| Korlátozás                                                      | Következmény                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Egyetlen író                                                    | **Ne** futtasson több replikát ugyanazzal az SQLite-fájllal. Ez sérülést okoz az adatbázisban.                                                                                                                                                                                                                                                                                                                      |
+| Újbóli létrehozás / újraindítás / leállítás a HEALTHCHECK által | A folyamatban lévő SSE-kapcsolatok, irányítópult-munkamenetek és memóriában tárolt állapot **teljes kiesése**. Minden csatlakoztatott kliens kapcsolata megszakad. Az üres végponttal rendelkező időszakban érkező új kérések 67router JSON helyett fordított proxytól származó **`502 Bad Gateway: Unknown error`** választ kapnak — a kliensek ezt nem tudják megkülönböztetni egy szolgáltatói hibától (#11015). |
+| Azonos eseményhurok, mint a `/healthz` esetén                   | Egy leterhelt katalógus- vagy tömörítési ciklus késleltetheti a vizsgálatokat; rövid időtúllépés esetén ezután újraindul az **egyetlen** replika.                                                                                                                                                                                                                                                                   |
 
 **Vizsgálati mátrix** (lásd még: [Kubernetes-vizsgálati javaslatok](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -763,7 +762,7 @@ valamint a tényleges kapcsolati útvonalat; ez a hiba önmagában nem jelenti a
 
 ### Részesítse előnyben a kapcsolatspecifikus proxyt
 
-Használja az OmniRoute [kapcsolatonkénti proxykonfigurációját](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+Használja a 67router [kapcsolatonkénti proxykonfigurációját](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 az érintett Gemini-kapcsolathoz, majd ismételje meg a **Kapcsolat tesztelése** műveletet és egy kisebb kérést
 ugyanazzal a modellel. Így az útválasztás módosítása az adott kapcsolatra korlátozódik. Ellenőrizze,
 hogy a proxy elérhető-e a konténerből, és hogy a kapcsolat valóban azt választja-e.
@@ -833,7 +832,7 @@ megszakíthatja a hozzá csatlakoztatott többi konténer működését; ne tör
 
 ## Fontos megjegyzések
 
-- **SQLite WAL mód:** Biztosítani kell, hogy a `docker stop` befejeződhessen, így az OmniRoute ellenőrzőpontba mentheti a legutóbbi módosításokat a `storage.sqlite` fájlba. A mellékelt Compose-fájlok már 40 másodperces türelmi időt állítanak be a leállításhoz. Ha közvetlenül futtatja a rendszerképet, tartsa meg a `--stop-timeout 40` beállítást.
+- **SQLite WAL mód:** Biztosítani kell, hogy a `docker stop` befejeződhessen, így a 67router ellenőrzőpontba mentheti a legutóbbi módosításokat a `storage.sqlite` fájlba. A mellékelt Compose-fájlok már 40 másodperces türelmi időt állítanak be a leállításhoz. Ha közvetlenül futtatja a rendszerképet, tartsa meg a `--stop-timeout 40` beállítást.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Állítsa `true` értékre, ha a rendszeres, illetve írás előtti biztonsági mentéseket külsőleg kezelik. A meglévő adatbázisok migrációjához továbbra is szükség van saját, tartós biztonsági pillanatképre és tömeges migráció elleni védelemre.
 - **Adatmegőrzés:** Mindig csatoljon kötetet az `/app/data` elérési úthoz, hogy az adatbázis, a kulcsok és a konfigurációk a konténerek újraindításai között is megmaradjanak.
 - **Portbeállítás:** Az alapértelmezett `20128` port módosításához írja felül a `PORT` környezeti változót.

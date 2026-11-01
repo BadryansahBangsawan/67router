@@ -7,7 +7,7 @@
 > **Quelle der Wahrheit:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Zuletzt aktualisiert:** 2026-06-28 — v3.8.40
 
-OmniRoute erfasst von Modellen im Denkmodus erzeugte `reasoning_content` und spielt diese bei Anfragen mit mehreren Dialogrunden transparent wieder ein, wenn der Upstream-Anbieter dies erfordert. Dadurch werden HTTP-400-Fehler vermieden, die strikte Anbieter auslösen, wenn im Konversationsverlauf eines Clients die Begründung der vorherigen Dialogrunde fehlt.
+67router erfasst von Modellen im Denkmodus erzeugte `reasoning_content` und spielt diese bei Anfragen mit mehreren Dialogrunden transparent wieder ein, wenn der Upstream-Anbieter dies erfordert. Dadurch werden HTTP-400-Fehler vermieden, die strikte Anbieter auslösen, wenn im Konversationsverlauf eines Clients die Begründung der vorherigen Dialogrunde fehlt.
 
 ## Warum dies erforderlich ist
 
@@ -17,7 +17,7 @@ Mehrere Anbieter mit Denkmodus lehnen eine nachfolgende Dialogrunde ab, sofern d
 Ungültiger Parameter: reasoning_content muss im Denkmodus erneut an die API übergeben werden.
 ```
 
-Typische Clients (Cursor, Cline, Roo Code, OpenAI SDK) entfernen jedoch `reasoning_content` aus dem von ihnen erneut übertragenen Verlauf. OmniRoute stellt es aus einem serverseitigen Cache wieder her, sodass die für den Upstream sichtbare Anfrage konsistent ist. Issue #1628 führte die hybride Speicher-/SQLite-Persistenz ein, damit der Cache Prozessneustarts übersteht.
+Typische Clients (Cursor, Cline, Roo Code, OpenAI SDK) entfernen jedoch `reasoning_content` aus dem von ihnen erneut übertragenen Verlauf. 67router stellt es aus einem serverseitigen Cache wieder her, sodass die für den Upstream sichtbare Anfrage konsistent ist. Issue #1628 führte die hybride Speicher-/SQLite-Persistenz ein, damit der Cache Prozessneustarts übersteht.
 
 ## Architektur
 

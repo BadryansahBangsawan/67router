@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Hiba: {message}",
-    "serverOffline": "Az OmniRoute szerver offline. Indítsa el: omniroute serve",
+    "serverOffline": "A 67router szerver offline. Indítsa el: omniroute serve",
     "authRequired": "Hitelesítés szükséges. Állítsa be az OMNIROUTE_API_KEY-t vagy futtassa: omniroute setup",
     "rateLimited": "Kérési korlát túllépve. Próbálja újra {seconds}s múlva.",
     "timeout": "A kérés {ms}ms után lejárt.",
@@ -15,7 +15,7 @@
     "yesOpt": "Megerősítés kihagyása"
   },
   "setup": {
-    "title": "OmniRoute beállítása",
+    "title": "67router beállítása",
     "passwordPrompt": "Rendszergazdai jelszó",
     "providerPrompt": "Alapértelmezett szolgáltató (a kihagyáshoz hagyja üresen)",
     "done": "A beállítás befejeződött",
@@ -30,7 +30,7 @@
     "opencode": "Az OpenCode csomagban található @omniroute/opencode-plugin telepítése és konfigurálása"
   },
   "doctor": {
-    "title": "OmniRoute diagnosztika",
+    "title": "67router diagnosztika",
     "dbOk": "Adatbázis: rendben ({path})",
     "dbMissing": "Adatbázis: nincs inicializálva — futtassa az `omniroute setup` parancsot",
     "portOk": "{port} port: elérhető",
@@ -82,7 +82,7 @@
       "providerOpt": "Szűrés szolgáltatónév szerint",
       "header": "Azonosító Szolgáltató    Név                      Lejárati állapot Tesztállapot Várakozás vége",
       "noData": "Nem érhetők el szolgáltatói kapcsolati adatok.",
-      "requiresServer": "A providers status parancshoz futnia kell az OmniRoute szervernek."
+      "requiresServer": "A providers status parancshoz futnia kell a 67router szervernek."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "API-kulcs hozzáadása vagy frissítése egy szolgáltatóhoz",
     "listDescription": "Az összes konfigurált API-kulcs listázása",
     "removeDescription": "Egy szolgáltató API-kulcsának eltávolítása",
-    "regenerateDescription": "OmniRoute API-kulcs újragenerálása",
-    "revokeDescription": "OmniRoute API-kulcs visszavonása",
+    "regenerateDescription": "67router API-kulcs újragenerálása",
+    "revokeDescription": "67router API-kulcs visszavonása",
     "revealDescription": "A nem maszkolt API-kulcsérték megjelenítése",
     "usageDescription": "Egy API-kulcs legutóbbi használatának megjelenítése",
     "usageLimitOpt": "Legutóbbi kérések száma",
@@ -172,13 +172,6 @@
       "period": "Időtartomány: 1d|7d|30d|90d|ytd|all (alapértelmezett: 30d)",
       "provider": "Szűrés szolgáltatóazonosító alapján"
     },
-    "budget": {
-      "description": "Költségkeretek kezelése",
-      "set": {
-        "scope": "Költségkeret hatóköre (alapértelmezett: global)",
-        "period": "Költségkeret időszaka: daily|weekly|monthly (alapértelmezett: monthly)"
-      }
-    },
     "quota": {
       "description": "Szolgáltatói kvótahasználat megjelenítése",
       "provider": "Szűrés szolgáltatóazonosító alapján",
@@ -225,7 +218,7 @@
     "noCombo": "Nem található megfelelő kombináció. Hozzon létre egyet ezzel: omniroute combo create"
   },
   "chat": {
-    "description": "Egyszeri csevegési prompt küldése az OmniRoute-nak",
+    "description": "Egyszeri csevegési prompt küldése a 67router-nak",
     "file": "Prompt beolvasása fájlból",
     "stdin": "Prompt beolvasása a szabványos bemenetről",
     "system": "Rendszerprompt",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Az OmniRoute szerver elindítása (alapértelmezett művelet)",
-    "starting": "Az OmniRoute szerver indítása a(z) {port} porton...",
+    "description": "A 67router szerver elindítása (alapértelmezett művelet)",
+    "starting": "A 67router szerver indítása a(z) {port} porton...",
     "ready": "Elérhető itt: http://localhost:{port}",
     "stopping": "Szerver leállítása (PID: {pid})...",
     "stopped": "A szerver leállt.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Biztonsági mentés",
-    "description": "Biztonsági mentés készítése az OmniRoute adatairól",
+    "description": "Biztonsági mentés készítése a 67router adatairól",
     "creating": "Biztonsági mentés készítése...",
     "done": "A biztonsági mentés ide lett mentve: {path}",
     "noFiles": "Nincsenek mentendő fájlok (az adatbázis nincs inicializálva)",
@@ -277,7 +270,7 @@
     "noBackups": "Nem találhatók biztonsági mentések.",
     "notFound": "A biztonsági mentés nem található: {name}",
     "confirmRestore": "Felülírja a jelenlegi adatokat a(z) {ts} időpontból származó biztonsági mentéssel?",
-    "createDescription": "Biztonsági mentés készítése az OmniRoute adatairól",
+    "createDescription": "Biztonsági mentés készítése a 67router adatairól",
     "nameOpt": "Egyéni név a biztonsági mentéshez",
     "cloudOpt": "Biztonsági mentés feltöltése felhőtárhelyre",
     "encryptOpt": "Biztonsági mentés titkosítása AES-256-GCM használatával",
@@ -321,7 +314,7 @@
     "clearFailed": "A gyorsítótár törlése sikertelen."
   },
   "redis": {
-    "description": "Helyi Redis-tároló indítása egyetlen kattintással (Podman vagy Docker) az OmniRoute gyorsítótárazáshoz és kvótafigyeléshez"
+    "description": "Helyi Redis-tároló indítása egyetlen kattintással (Podman vagy Docker) a 67router gyorsítótárazáshoz és kvótafigyeléshez"
   },
   "test": {
     "description": "Szolgáltatói kapcsolat tesztelése",
@@ -390,36 +383,8 @@
       "description": "MCP auditnapló (az audit --source mcp aliasa)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Az elérhető A2A-képességek listázása az ügynökkártyáról"
-    },
-    "invoke": {
-      "description": "Egy A2A-képesség meghívása és a feladatazonosító visszaadása",
-      "input": "JSON bemeneti objektum",
-      "input_file": "A JSON bemeneti fájl elérési útja",
-      "wait": "Várakozás a feladat befejezésére a visszatérés előtt",
-      "timeout": "A befejezésre való várakozás időkorlátja ms-ban (alapértelmezett: 60000)"
-    },
-    "tasks": {
-      "description": "A2A-feladatok kezelése",
-      "list": {
-        "status": "Szűrés állapot szerint",
-        "skill": "Szűrés képességazonosító szerint"
-      },
-      "watch": {
-        "description": "A feladat állapotának lekérdezése a befejezésig"
-      },
-      "stream": {
-        "description": "A feladat-végrehajtási események streamelése SSE-n keresztül"
-      },
-      "logs": {
-        "description": "Feladatüzenetek és műtermékek megjelenítése"
-      }
-    }
-  },
   "policy": {
-    "description": "Az OmniRoute engedélyezési szabályzatainak kezelése",
+    "description": "A 67router engedélyezési szabályzatainak kezelése",
     "list": {
       "description": "Szabályzatok listázása",
       "kind": "Szűrés típus szerint (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Az OmniRoute tömörítési folyamatának konfigurálása és vizsgálata",
+    "description": "A 67router tömörítési folyamatának konfigurálása és vizsgálata",
     "status": {
       "description": "A tömörítés aktuális állapotának és beállításainak megjelenítése"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Lecseréli a(z) {type} alagút URL-jét? (Új URL jön létre.)"
   },
   "stop": {
-    "description": "Az OmniRoute szerver leállítása",
+    "description": "A 67router szerver leállítása",
     "stopping": "A szerver leállítása (PID: {pid})...",
     "stopped": "A szerver leállítva.",
     "notRunning": "Nem fut szerver.",
     "portFallback": "Nem található PID-fájl, kísérlet port alapú leállításra..."
   },
   "restart": {
-    "description": "Az OmniRoute szerver újraindítása",
-    "restarting": "Az OmniRoute szerver újraindítása..."
+    "description": "A 67router szerver újraindítása",
+    "restarting": "A 67router szerver újraindítása..."
   },
   "dashboard": {
-    "description": "Az OmniRoute irányítópult megnyitása böngészőben",
+    "description": "A 67router irányítópult megnyitása böngészőben",
     "opening": "Az irányítópult megnyitása itt: {url}",
     "urlOnly": "Az irányítópult URL-jének kiírása a böngésző megnyitása nélkül",
     "tui": "Interaktív TUI irányítópult megnyitása (terminálos felhasználói felület, 7 lap)"
@@ -560,120 +525,6 @@
       "description": "Egyetlen naplóbejegyzés lekérése azonosító alapján"
     }
   },
-  "skills": {
-    "description": "OmniRoute-készségek kezelése (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Telepített készségek listázása",
-      "type": "Szűrés típus szerint (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Csak az engedélyezett készségek megjelenítése",
-      "disabled": "Csak a letiltott készségek megjelenítése",
-      "api_key": "Szűrés API-kulcs alapján"
-    },
-    "get": {
-      "description": "Készség részleteinek lekérése azonosító alapján"
-    },
-    "install": {
-      "description": "Készség telepítése fájlból vagy URL-ről",
-      "from_file": "A készség JSON-definíciós fájljának elérési útja",
-      "from_url": "Távoli készségdefiníció URL-je",
-      "type": "Készségtípus (sandbox|custom|hybrid)",
-      "enable": "Készség engedélyezése telepítés után"
-    },
-    "enable": {
-      "description": "Készség engedélyezése azonosító alapján"
-    },
-    "disable": {
-      "description": "Készség letiltása azonosító alapján",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "delete": {
-      "description": "Készség törlése azonosító alapján",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "execute": {
-      "description": "Készség végrehajtása azonosító alapján",
-      "input": "JSON bemeneti objektum",
-      "input_file": "A JSON bemeneti fájl elérési útja",
-      "timeout": "Végrehajtási időkorlát ezredmásodpercben (alapértelmezett: 30000)"
-    },
-    "executions": {
-      "description": "Készség-végrehajtási előzmények listázása",
-      "skill": "Szűrés képességazonosító alapján",
-      "limit": "Találatok maximális száma (alapértelmezett: 50)",
-      "status": "Szűrés állapot szerint (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "SSH-n keresztül telepített képességek kezelése"
-    },
-    "marketplace": {
-      "description": "Képességek böngészése és telepítése a piactérről"
-    },
-    "mp": {
-      "search": {
-        "description": "Csomagok keresése a piactéren",
-        "category": "Szűrés kategória szerint",
-        "tag": "Szűrés címke szerint",
-        "limit": "Találatok maximális száma (alapértelmezett: 30)",
-        "sort": "Rendezés: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Csomag részleteinek és readme fájljának megjelenítése"
-      },
-      "install": {
-        "description": "Piactéri csomag telepítése",
-        "version": "Csomagverzió (alapértelmezett: latest)",
-        "enable": "Engedélyezés telepítés után",
-        "yes": "Megerősítő kérdés kihagyása"
-      },
-      "categories": {
-        "description": "Piactéri kategóriák listázása"
-      },
-      "featured": {
-        "description": "Kiemelt piactéri csomagok megjelenítése"
-      }
-    }
-  },
-  "memory": {
-    "description": "Az OmniRoute társalgási memóriájának kezelése (FTS5 + vector)",
-    "search": {
-      "description": "Memóriabejegyzések keresése szemantikai lekérdezéssel",
-      "type": "Szűrés memóriatípus szerint (user|feedback|project|reference)",
-      "limit": "Találatok maximális száma (alapértelmezett: 20)",
-      "api_key": "Szűrés API-kulcs alapján",
-      "token_budget": "A találatokban szereplő tokenek teljes számának korlátozása"
-    },
-    "add": {
-      "description": "Új memóriabejegyzés hozzáadása",
-      "content": "A memória szöveges tartalma",
-      "file": "Tartalom beolvasása fájlból",
-      "type": "Memóriatípus (alapértelmezett: user)",
-      "metadata": "JSON-metaadatobjektum",
-      "api_key": "Társítás API-kulccsal"
-    },
-    "clear": {
-      "description": "A szűrőknek megfelelő memóriabejegyzések törlése",
-      "type": "Szűrés típus szerint",
-      "older": "A megadott időtartamnál régebbi bejegyzések törlése (30d, 6m, 1y)",
-      "api_key": "Szűrés API-kulcs alapján",
-      "yes": "Megerősítő kérdés kihagyása"
-    },
-    "list": {
-      "description": "Memóriabejegyzések listázása keresési rangsorolás nélkül",
-      "type": "Szűrés típus szerint",
-      "limit": "Találatok maximális száma (alapértelmezett: 100)",
-      "api_key": "Szűrés API-kulcs alapján"
-    },
-    "get": {
-      "description": "Egyetlen memóriabejegyzés lekérése azonosító alapján"
-    },
-    "delete": {
-      "description": "Memóriabejegyzés törlése azonosító alapján",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "health": {
-      "description": "A memória-alrendszer állapotának megjelenítése (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth-szolgáltatói kapcsolatok kezelése",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Megerősítési kérdés kihagyása"
     }
   },
-  "cloud": {
-    "description": "Felhőalapú AI-ügynökfeladatok kezelése (codex, devin, jules)",
-    "agents": {
-      "description": "Elérhető felhőalapú ügynökök listázása"
-    },
-    "agent": {
-      "description": "A(z) {agent} felhőalapú ügynök feladatainak kezelése",
-      "auth": {
-        "description": "A(z) {agent} engedélyezése OAuth használatával"
-      }
-    },
-    "task": {
-      "description": "Felhőalapú ügynökfeladatok kezelése",
-      "create": {
-        "description": "Új ügynökfeladat létrehozása",
-        "title": "Feladat címe (alapértelmezés szerint a prompt első 80 karaktere)",
-        "prompt": "A feladat promptjának szövege",
-        "prompt_file": "Prompt beolvasása fájlból",
-        "repo": "A feladathoz klónozandó adattár URL-je",
-        "branch": "Használandó ág neve",
-        "metadata": "JSON-metaadatobjektum"
-      },
-      "list": {
-        "description": "Ügynökfeladatok listázása",
-        "status": "Szűrés állapot szerint (running|completed|failed|cancelled)",
-        "limit": "Találatok maximális száma (alapértelmezett: 50)"
-      },
-      "get": {
-        "description": "Feladat részleteinek lekérése azonosító alapján"
-      },
-      "status": {
-        "description": "Feladat állapotának kiírása (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Futó feladat megszakítása",
-        "yes": "Megerősítési kérdés kihagyása"
-      },
-      "approve": {
-        "description": "Az ügynök tervének jóváhagyása a végrehajtás elindításához"
-      },
-      "message": {
-        "description": "Üzenet küldése egy futó feladatnak"
-      }
-    },
-    "sources": {
-      "description": "Egy feladat által létrehozott forrásfájlok listázása"
-    }
-  },
-  "eval": {
-    "description": "Kiértékelési csomagok és futtatások kezelése",
-    "suites": {
-      "description": "Kiértékelési csomagok kezelése",
-      "list": {
-        "description": "Kiértékelési csomagok listázása"
-      },
-      "get": {
-        "description": "Kiértékelési csomag részleteinek lekérése azonosító alapján"
-      },
-      "create": {
-        "description": "Kiértékelési csomag létrehozása JSON-fájlból",
-        "file": "A csomag definícióját tartalmazó JSON-fájl elérési útja"
-      }
-    },
-    "run": {
-      "description": "Kiértékelési futtatás indítása egy csomaghoz",
-      "model": "A kiértékelendő modell azonosítója (alapértelmezett: auto)",
-      "combo": "Adott kombináció kényszerítése név alapján",
-      "concurrency": "Egyidejű minták száma (alapértelmezett: 4)",
-      "tag": "A futtatás megcímkézése későbbi szűréshez",
-      "watch": "A futtatás előrehaladásának követése a befejezésig"
-    },
-    "list": {
-      "description": "Kiértékelési futtatások listázása",
-      "suite": "Szűrés csomagazonosító alapján",
-      "status": "Szűrés állapot alapján",
-      "since": "Az ezen időbélyeg óta indított futtatások visszaadása",
-      "limit": "Találatok maximális száma (alapértelmezett: 50)"
-    },
-    "get": {
-      "description": "Kiértékelési futtatás részleteinek lekérése azonosító alapján"
-    },
-    "results": {
-      "description": "Kiértékelési futtatás mintaeredményeinek megjelenítése",
-      "failed": "Csak a sikertelen minták megjelenítése"
-    },
-    "cancel": {
-      "description": "Folyamatban lévő kiértékelés megszakítása",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "scorecard": {
-      "description": "Befejezett kiértékelési futtatás eredménykártyájának megjelenítése"
-    }
-  },
-  "webhooks": {
-    "description": "OmniRoute-webhookok kezelése",
-    "events": {
-      "description": "Az összes elérhető webhook-eseménytípus listázása"
-    },
-    "list": {
-      "description": "Beállított webhookok listázása"
-    },
-    "get": {
-      "description": "Webhook részleteinek lekérése azonosító alapján"
-    },
-    "add": {
-      "description": "Új webhook regisztrálása",
-      "url": "Cél-URL",
-      "events": "Eseménytípusok vesszővel elválasztott listája",
-      "secret": "HMAC-aláírási titok",
-      "header": "További fejléc key=value formátumban (ismételhető)",
-      "no_enabled": "Webhook létrehozása letiltott állapotban"
-    },
-    "update": {
-      "description": "Meglévő webhook frissítése",
-      "enabled": "Engedélyezett állapot beállítása (true|false)"
-    },
-    "remove": {
-      "description": "Webhook törlése",
-      "yes": "Megerősítési kérdés kihagyása"
-    },
-    "test": {
-      "description": "Tesztesemény küldése egy webhooknak",
-      "event": "Szimulálandó eseménytípus (alapértelmezett: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Intelligens AI útválasztó automatikus fallbackkel",
+    "description": "67router — Intelligens AI útválasztó automatikus fallbackkel",
     "version": "Verzió kiírása és kilépés",
     "output": "Kimeneti formátum (table, json, jsonl, csv)",
     "quiet": "Nem lényeges kimenet elnyomása",
     "no_color": "Színes kimenet letiltása",
     "timeout": "HTTP kérés időtúllépése ezredmásodpercben",
-    "api_key": "API kulcs az OmniRoute szerverhez",
-    "base_url": "Az OmniRoute szerver alap URL-je",
+    "api_key": "API kulcs a 67router szerverhez",
+    "base_url": "A 67router szerver alap URL-je",
     "context": "Szerverkontextus/profil ehhez a parancshoz",
     "lang": "CLI megjelenítési nyelv beállítása (felülírja az OMNIROUTE_LANG-ot)"
-  },
-  "files": {
-    "description": "Fájlok kezelése (feltöltés, listázás, lekérés, letöltés, törlés)",
-    "list": {
-      "purpose": "Szűrés rendeltetés alapján",
-      "limit": "Találatok maximális száma"
-    },
-    "get": {
-      "description": "Fájl metaadatainak lekérése"
-    },
-    "upload": {
-      "description": "Fájl feltöltése",
-      "purpose": "Fájl célja (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Fájltartalom letöltése",
-      "out": "Mentés elérési útra (alapértelmezett: stdout)"
-    },
-    "delete": {
-      "yes": "Megerősítés kihagyása"
-    }
-  },
-  "batches": {
-    "description": "OpenAI-kompatibilis kötegelt feladatok kezelése",
-    "list": {
-      "status": "Szűrés állapot szerint",
-      "limit": "Találatok maximális száma"
-    },
-    "create": {
-      "description": "Kötegelt feladat létrehozása",
-      "inputFile": "Bemeneti fájl azonosítója",
-      "endpoint": "Célvégpont",
-      "window": "Befejezési időablak",
-      "metadata": "Metaadat hozzáadása kulcs=érték formátumban"
-    },
-    "submit": {
-      "description": "JSONL-fájl feltöltése és köteg létrehozása",
-      "jsonl": "A JSONL-fájl elérési útja",
-      "endpoint": "Célvégpont",
-      "wait": "Várakozás a befejezésre"
-    },
-    "cancel": {
-      "yes": "Megerősítés kihagyása"
-    },
-    "wait": {
-      "timeout": "Időtúllépés ezredmásodpercben"
-    },
-    "output": {
-      "out": "Kimenet mentése elérési útra"
-    },
-    "errors": {
-      "out": "Hibák mentése elérési útra"
-    }
   },
   "translator": {
     "description": "Kérés törzsének átalakítása LLM-formátumok között",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Az OmniRoute OpenAPI-specifikáció elérése és tesztelése",
+    "description": "A 67router OpenAPI-specifikáció elérése és tesztelése",
     "dump": {
       "description": "Az OpenAPI-specifikáció kiírása stdout-ra vagy fájlba",
       "format": "Kimeneti formátum: yaml|json (alapértelmezett: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "A legmagasabbra rangsorolt kombináció aktiválása"
     }
   },
-  "oneproxy": {
-    "description": "A OneProxy upstream-készlet kezelése",
-    "stats": {
-      "provider": "Szűrés szolgáltató alapján",
-      "period": "Időszak (alapértelmezett: 24h)"
-    },
-    "fetch": {
-      "description": "Proxyk lekérése a készletből",
-      "count": "A lekérendő proxyk száma (alapértelmezett: 1)",
-      "type": "Proxy típusa: http|socks5 (alapértelmezett: http)"
-    },
-    "rotate": {
-      "description": "Proxyrotáció kényszerítése",
-      "provider": "Szolgáltató, amelynél a rotáció végrehajtandó",
-      "connectionId": "A rotálandó konkrét kapcsolat azonosítója"
-    },
-    "config": {
-      "description": "A OneProxy konfigurációjának megjelenítése vagy frissítése",
-      "enabled": "Proxytár engedélyezése (true|false)",
-      "poolSize": "Tár mérete",
-      "providerSource": "A proxyszolgáltató URL-je",
-      "rotationPolicy": "Rotációs szabályzat: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Az aktuális proxytár listázása mérőszámokkal"
-    }
-  },
   "open": {
-    "description": "Egy adott OmniRoute-irányítópultoldal megnyitása a böngészőben",
+    "description": "Egy adott 67router-irányítópultoldal megnyitása a böngészőben",
     "url": "Csak az URL kiírása, a böngésző megnyitása nélkül"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Konfiguráció szinkronizálása OmniRoute-példányok között",
+    "description": "Konfiguráció szinkronizálása 67router-példányok között",
     "push": {
       "description": "Konfiguráció küldése a felhőbe vagy egy távoli példányra"
     },
@@ -1228,7 +874,7 @@
     "filter": "Szűrés szint szerint (error,warn,info) — vesszővel elválasztva",
     "lines": "Lekérendő sorok száma",
     "timeout": "Kapcsolati időtúllépés ezredmásodpercben",
-    "baseUrl": "Az OmniRoute API alap-URL-je",
+    "baseUrl": "A 67router API alap-URL-je",
     "requestId": "Szűrés kérésazonosító szerint",
     "apiKey": "Szűrés API-kulcs szerint",
     "combo": "Szűrés kombinációnév szerint",
@@ -1244,10 +890,10 @@
     "description": "A rendszertálcaikon vezérlése",
     "show": "A tálcaikon megjelenítése (ha a kiszolgáló a --tray kapcsolóval fut)",
     "hide": "A tálcaikon elrejtése",
-    "quit": "Kilépés az OmniRoute-ból a tálcaikonon keresztül"
+    "quit": "Kilépés a 67router-ból a tálcaikonon keresztül"
   },
   "autostart": {
-    "description": "Az OmniRoute rendszerindításkori automatikus indításának kezelése (Linux: systemd felhasználói szolgáltatás)",
+    "description": "A 67router rendszerindításkori automatikus indításának kezelése (Linux: systemd felhasználói szolgáltatás)",
     "enable": "Automatikus indítás engedélyezése rendszerindításkor",
     "disable": "Automatikus indítás letiltása rendszerindításkor",
     "toggle": "Automatikus indítás be- vagy kikapcsolása rendszerindításkor",
@@ -1268,30 +914,20 @@
     "system": "Rendszerüzenet",
     "resume": "Mentett munkamenet folytatása név alapján"
   },
-  "plugin": {
-    "description": "CLI-bővítmények kezelése (omniroute-cmd-*)",
-    "list": "Telepített bővítmények listázása",
-    "install": "Bővítmény telepítése npm-csomagból vagy helyi elérési útról",
-    "remove": "Telepített bővítmény eltávolítása",
-    "info": "Telepített bővítmény részleteinek megjelenítése",
-    "search": "Elérhető bővítmények keresése az npm-jegyzékben",
-    "update": "Telepített bővítmény(ek) frissítése",
-    "scaffold": "Új bővítmény sablonjának létrehozása"
-  },
   "launch": {
-    "description": "A Claude Code indítása az OmniRoute használatával (helyileg vagy távolról, --profile kapcsolóval)",
+    "description": "A Claude Code indítása a 67router használatával (helyileg vagy távolról, --profile kapcsolóval)",
     "token": "A Claude kliens által küldendő token (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Az OmniRoute nem érhető el ezen a porton: {port}. Indítsa el az 'omniroute serve' paranccsal.",
+    "notRunning": "A 67router nem érhető el ezen a porton: {port}. Indítsa el az 'omniroute serve' paranccsal.",
     "notFound": "A 'claude' CLI nem található a PATH-ban."
   },
   "run": {
-    "description": "Támogatott CLI-cél indítása az OmniRoute-on keresztül"
+    "description": "Támogatott CLI-cél indítása a 67router-on keresztül"
   },
   "setupClaude": {
-    "description": "Claude Code-profilok létrehozása a ~/.claude/profiles könyvtárban az OmniRoute modellkatalógusából"
+    "description": "Claude Code-profilok létrehozása a ~/.claude/profiles könyvtárban a 67router modellkatalógusából"
   },
   "connect": {
-    "description": "Kapcsolódás távoli OmniRoute-kiszolgálóhoz és belépés távoli módba"
+    "description": "Kapcsolódás távoli 67router-kiszolgálóhoz és belépés távoli módba"
   },
   "tokens": {
     "description": "Hatókörrel rendelkező CLI-hozzáférési tokenek kezelése (távoli mód)"
@@ -1300,10 +936,10 @@
     "description": "Szolgáltató és modell kiválasztása az aktív kiszolgálóról, valamint egy támogatott helyi CLI konfigurálása"
   },
   "launchCodex": {
-    "description": "A Codex CLI indítása az OmniRoute használatával (helyi vagy távoli VPS)"
+    "description": "A Codex CLI indítása a 67router használatával (helyi vagy távoli VPS)"
   },
   "setupCodex": {
-    "description": "~/.codex-profilfájlok létrehozása az OmniRoute élő modellkatalógusából"
+    "description": "~/.codex-profilfájlok létrehozása a 67router élő modellkatalógusából"
   },
   "packs": {
     "description": "Opcionális futtatókörnyezeti csomagok kezelése (ML / böngészőautomatizálás)",
@@ -1316,7 +952,7 @@
     "errUnknown": "ismeretlen csomag: {name}",
     "errNoIndex": "a csomagindex nem található; adja meg a csomag tartalmát tároló könyvtárat a --source <dir> kapcsolóval (az asztali alkalmazáscsomagok az alkalmazás mellett tartalmazzák)",
     "installed": "a(z) \"{name}\" csomag telepítve és ellenőrizve itt: {dir}",
-    "restartHint": "indítsa újra az OmniRoute szervert (vagy asztali alkalmazást), hogy a futtatókörnyezet betöltse a csomagot",
+    "restartHint": "indítsa újra a 67router szervert (vagy asztali alkalmazást), hogy a futtatókörnyezet betöltse a csomagot",
     "removed": "a(z) „{name}” csomag eltávolítva",
     "notInstalled": "a(z) „{name}” csomag nem volt telepítve",
     "verifyOk": "az összes telepített csomag ellenőrzése sikeres",

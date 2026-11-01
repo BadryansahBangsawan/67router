@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Malti)
+# 📖 Setup Guide — 67router (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Referenza kompleta għall-konfigurazzjoni ta’ OmniRoute. Għall-verżjoni ta’ malajr, ara l-[Bidu Rapidu fir-README](../README.md#-quick-start).
+> Referenza kompleta għall-konfigurazzjoni ta’ 67router. Għall-verżjoni ta’ malajr, ara l-[Bidu Rapidu fir-README](../README.md#-quick-start).
 
 ## Werrej
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-Il-[pakkett AUR](https://aur.archlinux.org/packages/omniroute-bin) jinstalla OmniRoute u jipprovdi servizz systemd għall-utent.
+Il-[pakkett AUR](https://aur.archlinux.org/packages/omniroute-bin) jinstalla 67router u jipprovdi servizz systemd għall-utent.
 
 ### Mill-Kodiċi Sors
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Nota għal Windows:** B’mod awtomatiku, OmniRoute juża `%APPDATA%\omniroute` meta d-direttorju antik `%USERPROFILE%\.omniroute` ma jkunx preżenti. Issettja `DATA_DIR` biex tagħżel post differenti għad-direttorju tad-data.
+> **Nota għal Windows:** B’mod awtomatiku, 67router juża `%APPDATA%\omniroute` meta d-direttorju antik `%USERPROFILE%\.omniroute` ma jkunx preżenti. Issettja `DATA_DIR` biex tagħżel post differenti għad-direttorju tad-data.
 
 > **Nota:** `npm install` jiġġenera `.env` awtomatikament minn `.env.example` mal-ewwel tħaddim. Installazzjonijiet sussegwenti ma jissostitwixxux fajl `.env` eżistenti, għalhekk il-personalizzazzjonijiet jiġu ppreservati. Biex terġa’ toħloqu mill-bidu, ħassar `.env` qabel terġa’ tħaddem il-kmand.
 
@@ -64,7 +64,7 @@ Ara l-[Gwida ta’ Docker](./DOCKER_GUIDE.md) għall-konfigurazzjoni kompleta ta
 
 ### Applikazzjoni tad-Desktop (Electron)
 
-OmniRoute jinkludi wrapper tad-desktop mibni fuq Electron 41 + electron-builder 26.10. Skripts disponibbli (fl-għerq tal-workspace):
+67router jinkludi wrapper tad-desktop mibni fuq Electron 41 + electron-builder 26.10. Skripts disponibbli (fl-għerq tal-workspace):
 
 ```bash
 npm run electron:dev          # Ħaddem id-desktop b’hot-reload
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Flimkien ma’ varjabbli tal-ambjent (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, eċċ.), dan jippermettilek tibda istanza ta’ OmniRoute li tista’ tiġi kkontrollata kompletament permezz ta’ skripts.
+Flimkien ma’ varjabbli tal-ambjent (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, eċċ.), dan jippermettilek tibda istanza ta’ 67router li tista’ tiġi kkontrollata kompletament permezz ta’ skripts.
 
 ### Għażliet tas-CLI
 
@@ -99,7 +99,7 @@ Flimkien ma’ varjabbli tal-ambjent (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_S
 | `omniroute config`      | Konfigurazzjoni tal-għodda CLI — elenka, aqra, issettja u vvalida configs                     |
 | `omniroute status`      | Dashboard tal-istatus offline — verżjoni, DB, għodod, konfigurazzjoni                         |
 | `omniroute logs`        | Uri l-logs tal-użu mill-API f’ħin reali (jappoġġja `--follow`)                                |
-| `omniroute update`      | Iċċekkja għal aġġornamenti ta’ OmniRoute jew applikahom                                       |
+| `omniroute update`      | Iċċekkja għal aġġornamenti ta’ 67router jew applikahom                                        |
 | `omniroute provider`    | Immaniġġja l-konnessjonijiet tal-fornituri — żid, elenka, neħħi, ittestja, issettja l-default |
 | `omniroute --port 3000` | Issettja l-port kanoniku/tal-API għal 3000                                                    |
 | `omniroute --mcp`       | Ibda s-server MCP (trasport stdio)                                                            |
@@ -165,7 +165,7 @@ Jaħdem ma’ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode, u SDKs 
 
 #### Ikkonfigura awtomatikament b’`setup-*`
 
-Minflok twaħħal il-URL bażi u ċ-ċavetta manwalment, ħalli lil OmniRoute jikteb il-konfigurazzjoni
+Minflok twaħħal il-URL bażi u ċ-ċavetta manwalment, ħalli lil 67router jikteb il-konfigurazzjoni
 ta’ kull għodda mill-katalgu attiv tal-mudelli. Kmand wieħed għal kull għodda:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Kull wieħed jaċċetta `--remote <url> --api-key <key>` biex jikkonfigura għodda lokali ma’
-OmniRoute **remot**, kif ukoll `--dry-run` għal previżjoni. Biex tniedi CLI bl-env
+67router **remot**, kif ukoll `--dry-run` għal previżjoni. Biex tniedi CLI bl-env
 korrett injettat mingħajr ma tinkiteb l-ebda konfigurazzjoni, uża l-launcher ġeneriku
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 il-launchers preċedenti għal kull għodda `omniroute launch` (Claude Code) u
@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **Dokumentazzjoni sħiħa tal-MCP:** [README tas-Server MCP](../../open-sse/mcp-server/README.md) — 110 għodod, konfigurazzjonijiet tal-IDE, klijenti Python/TS/Go.
 
-### Konfigurazzjoni tal-A2A (Agent-to-Agent Protocol)
-
-Ivverifika l-Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Ibgħat kompitu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Agħtini sommarju qasir tal-kwota."}]}}'
-```
-
-**Dokumentazzjoni sħiħa tal-A2A:** [README tas-Server A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, ħiliet, streaming, ċiklu tal-ħajja tal-kompiti.
-
----
-
 ## Konfigurazzjoni tat-Timeout
 
 ### Timeouts Bażiċi
@@ -277,15 +257,15 @@ Għall-biċċa l-kbira tad-deployments, għandek bżonn biss dawn iż-żewġ var
 | Varjabbli                | Valur predefinit           | Għan                                                                                                                                                                       |
 | ------------------------ | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                   | Bażi komuni għat-timeout tal-bidu tar-rispons upstream, it-timeouts moħbija ta’ Undici, it-talbiet tal-marki tas-swaba’ TLS, u t-timeouts tat-talbiet/proxy tal-API bridge |
-| `STREAM_IDLE_TIMEOUT_MS` | jiret `REQUEST_TIMEOUT_MS` | L-intervall massimu bejn biċċiet tal-istreaming qabel ma OmniRoute jwaqqaf l-istream SSE                                                                                   |
+| `STREAM_IDLE_TIMEOUT_MS` | jiret `REQUEST_TIMEOUT_MS` | L-intervall massimu bejn biċċiet tal-istreaming qabel ma 67router jwaqqaf l-istream SSE                                                                                    |
 
 Il-kompatibbiltà retroattiva tinżamm: `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS`, u varjabbli oħra tat-timeout għal kull saff li diġà jeżistu jibqgħu jaħdmu u jieħdu preċedenza fuq il-valur bażi komuni.
 
 ### Noti Speċifiċi għall-Provider
 
-Għal servizzi upstream kompatibbli ma’ Claude Code (`anthropic-compatible-cc-*`), OmniRoute joħloq l-header `X-Stainless-Timeout` tal-ħruġ mit-timeout tal-fetch riżolt sabiex it-timeouts tal-qari min-naħa tal-provider jibqgħu allinjati mal-konfigurazzjoni tal-env tiegħek.
+Għal servizzi upstream kompatibbli ma’ Claude Code (`anthropic-compatible-cc-*`), 67router joħloq l-header `X-Stainless-Timeout` tal-ħruġ mit-timeout tal-fetch riżolt sabiex it-timeouts tal-qari min-naħa tal-provider jibqgħu allinjati mal-konfigurazzjoni tal-env tiegħek.
 
-Għal reverse proxies ta’ partijiet terzi kompatibbli ma’ Claude Code, OmniRoute jżomm is-sett predefinit `anthropic-beta` konservattiv u, meta `Client Cache Control` jitħalla fuq `Auto`, jgħaddi biss il-markaturi `cache_control` ipprovduti mill-klijent. Attiva t-toggle "Enable redact-thinking beta" għal kull konnessjoni biss meta s-servizz upstream ikun jeħtieġ b’mod speċifiku streams tal-ħsieb redattati ta’ Claude.
+Għal reverse proxies ta’ partijiet terzi kompatibbli ma’ Claude Code, 67router jżomm is-sett predefinit `anthropic-beta` konservattiv u, meta `Client Cache Control` jitħalla fuq `Auto`, jgħaddi biss il-markaturi `cache_control` ipprovduti mill-klijent. Attiva t-toggle "Enable redact-thinking beta" għal kull konnessjoni biss meta s-servizz upstream ikun jeħtieġ b’mod speċifiku streams tal-ħsieb redattati ta’ Claude.
 
 ### Overrides Avvanzati tat-Timeout
 
@@ -303,11 +283,11 @@ Għal reverse proxies ta’ partijiet terzi kompatibbli ma’ Claude Code, OmniR
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Timeout tal-keep-alive fuq is-server tal-API bridge                                  |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Timeout tal-inattività tas-socket fuq is-server tal-API bridge (`0` jiddiżattivah)   |
 
-> **Nota:** Għat-talbiet ta’ streaming, `FETCH_TIMEOUT_MS` ikopri biss l-istabbiliment tal-konnessjoni / l-istennija għall-ewwel rispons upstream. Ladarba l-istream ikun attiv, OmniRoute jwaqqfu biss jekk ikun hemm waqfien reali (`STREAM_IDLE_TIMEOUT_MS`) jew inattività tal-body ta’ Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Nota:** Għat-talbiet ta’ streaming, `FETCH_TIMEOUT_MS` ikopri biss l-istabbiliment tal-konnessjoni / l-istennija għall-ewwel rispons upstream. Ladarba l-istream ikun attiv, 67router jwaqqfu biss jekk ikun hemm waqfien reali (`STREAM_IDLE_TIMEOUT_MS`) jew inattività tal-body ta’ Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Kompatibbiltà mar-Reverse Proxy
 
-Jekk tħaddem OmniRoute wara Nginx, Caddy, Cloudflare, jew reverse proxy ieħor, kun żgur li t-timeouts tal-proxy jkunu wkoll ogħla mit-timeouts tal-istream/fetch ta’ OmniRoute.
+Jekk tħaddem 67router wara Nginx, Caddy, Cloudflare, jew reverse proxy ieħor, kun żgur li t-timeouts tal-proxy jkunu wkoll ogħla mit-timeouts tal-istream/fetch ta’ 67router.
 
 ---
 

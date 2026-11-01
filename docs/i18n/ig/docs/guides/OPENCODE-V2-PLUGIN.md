@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` na-etinye katalọgụ OmniRoute gị niile — ụdị, ngwakọta na
+`@omniroute/opencode-plugin-v2` na-etinye katalọgụ 67router gị niile — ụdị, ngwakọta na
 ngwakọta-akpaka — n'ime ihe nhọpụta ụdị nke OpenCode v2, tinyere aha ngosi, ọnụahịa na oke
 ojiji nke ọkwa efu.
 
@@ -15,7 +15,7 @@ ha na-ekekọrịta, ya mere imelite otu anaghị amanye ka e melite nke ọzọ
 ## Ihe achọrọ
 
 - OpenCode v2.
-- Ọnụ ụzọ OmniRoute enwere ike iru (`http://localhost:20128` na ndabara).
+- Ọnụ ụzọ 67router enwere ike iru (`http://localhost:20128` na ndabara).
 - Node.js 22 ma ọ bụ 24.
 
 ## Nwụnye
@@ -128,7 +128,7 @@ Tọọ `"geminiSanitization": false` iji gbanyụọ ya.
 
 | Mgbaàmà                                                        | Ihe kpatara ya                                                                                                  |
 | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Onye nhọpụta anaghị egosi model OmniRoute ọ bụla               | Ọ dịghị key a chọtara (lelee ịdọ aka ná ntị mgbe mmalite), ma ọ bụ enweghị ike iru gateway ahụ                  |
+| Onye nhọpụta anaghị egosi model 67router ọ bụla                | Ọ dịghị key a chọtara (lelee ịdọ aka ná ntị mgbe mmalite), ma ọ bụ enweghị ike iru gateway ahụ                  |
 | Model ids nkịtị, enweghị combos, enweghị ọnụahịa               | Management endpoints jụrụ token ahụ — tọọ `managementReadToken`                                                 |
 | Catalog `freeOnly` dị mkpụmkpụ ma ọ bụ tọgbọ chakoo            | Enweghị management token ma ọ bụ token a jụrụ — gụọ ahịrị nchịkọta refresh (`unmatched-free` count) na host log |
 | Session etinyere n’ụzọ na-adịgide adịgide na `opencode-<id>/…` | Plugin v1 bipụtara `opencode-<id>`; v2 na-ebipụta naanị `<id>`, ya mere họrọ model ahụ ọzọ n’okpuru `<id>/…`    |

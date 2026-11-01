@@ -7,7 +7,7 @@
 > **Patiesības avots:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Pēdējoreiz atjaunināts:** 2026-06-28 — v3.8.40
 
-OmniRoute ietver lokāli orientētu gamifikācijas slāni, kas atalgo lietotājus par
+67router ietver lokāli orientētu gamifikācijas slāni, kas atalgo lietotājus par
 platformas izmantošanu — pieprasījumu veikšanu, pakalpojumu sniedzēju maiņu,
 kombināciju izveidi, žetonu kopīgošanu un ieguldījumu kopienā. Viss stāvoklis
 tiek glabāts SQLite; federācija ar kopienas serveriem ir brīvprātīga un balstīta
@@ -37,7 +37,7 @@ stimulus (žetonu kopīgošanu, atlīdzības par uzaicinājumiem).
 | Līderu tabulas              | Globāls, nedēļas, mēneša, žetonu kopīgošanas un ieguldījumu tvērums                        |
 | Žetonu kopīgošana           | Kredītpunktu pārskaitīšana starp lietotājiem, izmantojot divkāršā ieraksta virsgrāmatu     |
 | Uzaicināšana un izmantošana | Ieteikumu kodi, kas tiek glabāti SHA-256 jaucējvērtību veidā                               |
-| Kopienas serveri            | Federācija ar ārējām OmniRoute instancēm                                                   |
+| Kopienas serveri            | Federācija ar ārējām 67router instancēm                                                    |
 | Aizsardzība pret krāpšanos  | Punktu aprēķināšana servera pusē, ātruma ierobežošana un anomāliju noteikšana ar z-vērtību |
 
 ### Projektēšanas principi
@@ -117,7 +117,7 @@ src/app/api/gamification/
 
 ### Datubāzes tabulas
 
-Visas tabulas atrodas galvenajā OmniRoute SQLite datubāzē, kas izveidota ar migrāciju
+Visas tabulas atrodas galvenajā 67router SQLite datubāzē, kas izveidota ar migrāciju
 `060_create_gamification.sql`. WAL žurnalēšana tiek mantota no vienīgās
 `getDbInstance()` instances failā `src/lib/db/core.ts`.
 
@@ -176,7 +176,7 @@ Visas tabulas atrodas galvenajā OmniRoute SQLite datubāzē, kas izveidota ar m
 
 ### Domēna modulis: `src/lib/db/gamification.ts`
 
-Atbilst standarta OmniRoute paraugam — importē `getDbInstance()` no
+Atbilst standarta 67router paraugam — importē `getDbInstance()` no
 `core.ts` un eksportē tipizētas CRUD funkcijas. Maršrutu apstrādātājos netiek izmantots neapstrādāts SQL.
 
 Galvenās funkcijas:
@@ -239,7 +239,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Darbība           | XP  | Apraksts                                                     |
 | ----------------- | --- | ------------------------------------------------------------ |
-| `request`         | 1   | Par katru API pieprasījumu, kas maršrutēts caur OmniRoute    |
+| `request`         | 1   | Par katru API pieprasījumu, kas maršrutēts caur 67router     |
 | `provider_switch` | 5   | Pārslēgšanās uz citu pakalpojuma sniedzēju                   |
 | `model_switch`    | 3   | Pārslēgšanās uz citu modeli                                  |
 | `combo_create`    | 10  | Jaunas kombinācijas izveide                                  |
@@ -582,7 +582,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unikāls, indeksēts) |
 | `token_hash` | SHA-256(raw_token)              |
 
-Neapstrādātais tokens tiek atgriezts lietotājam tieši vienu reizi tā izveides laikā. OmniRoute
+Neapstrādātais tokens tiek atgriezts lietotājam tieši vienu reizi tā izveides laikā. 67router
 to vairs nekad neglabā un neparāda — tiek saglabāta tikai jaucējvērtība.
 
 ### Pašieteikšanās novēršana
@@ -705,7 +705,7 @@ Administratori var pieprasīt pilnus audita pierakstus, izmantojot `GET /api/gam
 
 ## API maršruti
 
-Visi maršruti atbilst standarta OmniRoute paraugam:
+Visi maršruti atbilst standarta 67router paraugam:
 
 ```
 Maršruts → CORS priekšpieprasījums → Pamatdaļas validācija (Zod) → Autentifikācija (extractApiKey)

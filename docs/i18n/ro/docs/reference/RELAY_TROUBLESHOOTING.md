@@ -5,9 +5,9 @@
 ---
 
 Releele (Vercel, Deno, Cloudflare) încheie conexiunea din amonte într-un
-backend serverless, astfel încât OmniRoute să poată efectua traficul de ieșire dintr-o regiune stabilă, păstrând
+backend serverless, astfel încât 67router să poată efectua traficul de ieșire dintr-o regiune stabilă, păstrând
 cheia API a furnizorului pe server. Acest document descrie cele două moduri de defectare
-întâlnite de operatori în producție și procedurile de recuperare incluse în OmniRoute pentru
+întâlnite de operatori în producție și procedurile de recuperare incluse în 67router pentru
 fiecare dintre ele.
 
 ## Cum este stocată autentificarea releului
@@ -36,7 +36,7 @@ date de autentificare.
 1. Deschideți **Setări → Grup de proxy-uri**.
 2. Rândurile releelor pentru care lipsește autentificarea afișează o insignă galbenă `autentificare lipsă` și un
    buton **Remediați**.
-3. Faceți clic pe **Remediați**. OmniRoute apelează
+3. Faceți clic pe **Remediați**. 67router apelează
    `POST /api/settings/proxies/[id]/repair-relay`, care:
    - decriptează `relayAuthEnc` folosind cheia **curentă**,
    - scrie datele `relayAuth` în text simplu înapoi în `notes`,
@@ -68,7 +68,7 @@ tokenul nu poate fi recuperat, astfel încât nu trebuie să o căutați manual.
 **Simptom:** testul proxy-ului (butonul `speed`) arată că releul este activ, dar solicitările
 continuă să eșueze intermitent.
 
-Verificați antetele de identificare a releului returnate de sonda de testare automată a OmniRoute
+Verificați antetele de identificare a releului returnate de sonda de testare automată a 67router
 (consultați **Setări → Grup de proxy-uri** și contoarele `relayTested` / `relayAlive`):
 
 - `x-relay-url` — backendul releului care a răspuns.

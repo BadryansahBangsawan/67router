@@ -45,7 +45,7 @@ WS1.3 உத்தரவாதத்தைத் தக்கவைத்து�
 தானியக்கச் செயல்முறையை இது மீட்டெடுக்கிறது (கசிந்த token மட்டும் வெளியிட முடியாது — ஏனெனில் token எதுவும் இல்லை).
 
 **ஒருமுறை மட்டும் செய்ய வேண்டிய அமைப்பு (உரிமையாளர்):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). இது உருவாக்கப்படும் வரை, தானியக்கப் படி `ENEEDAUTH` உடன் தோல்வியடையும்:
 `publish_mode=staged` (கீழே) அல்லது `direct` உடன் மீண்டும் dispatch செய்யவும்.
 

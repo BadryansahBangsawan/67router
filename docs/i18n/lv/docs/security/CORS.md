@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kontrolē, kuras **pārlūkprogrammu izcelsmes** drīkst lasīt starpizcelsmju atbildes,
+67router kontrolē, kuras **pārlūkprogrammu izcelsmes** drīkst lasīt starpizcelsmju atbildes,
 izmantojot vienu centralizētu atļauto izcelsmju sarakstu. Modelis **pēc noklusējuma visu liedz**:
 neviena izcelsme nav atļauta, kamēr to nepievienojat. Šajā lapā ir dokumentēts, kā tiek
 izvērtēts atļauto izcelsmju saraksts, ko `CORS_ALLOW_ALL=true` faktiski padara pieejamu
@@ -48,13 +48,13 @@ Katram pieprasījumam starpprogrammatūra nosaka `Access-Control-Allow-Origin` v
 ## Apdraudējumu modelis — ko `CORS_ALLOW_ALL=true` patiesībā padara pieejamu
 
 Vispārīgais OWASP brīdinājums („CORS aizstājējzīme = jebkura vietne var izsaukt jūsu API”)
-ir jāuztver nopietni, taču OmniRoute apdraudējuma tvērums ir **šaurāks nekā vispārīgajā
+ir jāuztver nopietni, taču 67router apdraudējuma tvērums ir **šaurāks nekā vispārīgajā
 gadījumā** viena konkrēta ieviešanas fakta dēļ:
 
 > **Centrālais `applyCorsHeaders()` nekad neizvada
 > `Access-Control-Allow-Credentials`.** Pārlūkprogramma nepadarīs pieejamu _ar akreditācijas
 > datiem_ (sīkdatnes saturošu) starpizcelsmju atbildi, ja vien serveris nenosūtīs
-> `Access-Control-Allow-Credentials: true`. OmniRoute koplietotais CORS ceļš to nekad
+> `Access-Control-Allow-Credentials: true`. 67router koplietotais CORS ceļš to nekad
 > nedara.
 
 Ko tas nozīmē katrai saskarnei, pat ar `CORS_ALLOW_ALL=true`:
@@ -71,20 +71,6 @@ un (b) atļauju CORS **pirmslidojuma pārbaudēm** izdoties pārvaldības maršr
 joprojām ir nepieciešama autentifikācija, ko starpizcelsmju lapa nevar nodrošināt. Tas
 koplietotajā CORS ceļā **nav** sesijas nolaupīšanas vai akreditācijas datu zādzības vektors.
 
-### Viens patiess izņēmums — `/api/v1/agents/`
-
-Cloud-Agent maršruti (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) iestata
-savas **CORS galvenes**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) un **izvada**
-`Access-Control-Allow-Origin: <origin>|*` kopā ar
-`Access-Control-Allow-Credentials: true`. Šī ir vienīgā saskarne, kurā
-izcelsmes atgriešana un akreditācijas dati pastāv vienlaikus, un tā ir **neatkarīga no
-`CORS_ALLOW_ALL`**. Šie maršruti ir autentificēti pārvaldības līmenī
-(`requireManagementAuth`); operatoriem, kuri padara informācijas paneli pieejamu ārpus
-resursdatora, jāapzinās, ka šī ir vienīgā vieta, kur atbildes galvenes atļauj starpizcelsmju
-lasīšanu ar akreditācijas datiem. Tās ierobežošana līdz precīzam atļauto izcelsmju
-sarakstam tiek izsekota atsevišķi no šiem CORS norādījumiem.
-
 ## Produkcijas kontrolsaraksts
 
 - **Nekad neiestatiet `CORS_ALLOW_ALL=true` produkcijas vidē.** Atstājiet to neiestatītu.
@@ -94,7 +80,7 @@ sarakstam tiek izsekota atsevišķi no šiem CORS norādījumiem.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ja OmniRoute darbojas aiz reversā starpniekservera/tuneļa (nginx, Caddy, Cloudflare
+- Ja 67router darbojas aiz reversā starpniekservera/tuneļa (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **nav** vienīgais aizsardzības mehānisms — lokālās atgriezeniskās saites maršrutu
   aizsargs joprojām aizsargā maršrutus, kas spēj palaist procesus (skatiet
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Neviltojiet
@@ -110,7 +96,7 @@ sarakstam tiek izsekota atsevišķi no šiem CORS norādījumiem.
 Pat izstrādes vidē aizstājējzīme ir nepieciešama reti. Atļaujiet tikai tos izstrādes serverus, kurus izmantojat:
 
 ```bash
-# Vite (5173) un Next.js (3000) izstrādes serveri, kas izsauc lokālu OmniRoute
+# Vite (5173) un Next.js (3000) izstrādes serveri, kas izsauc lokālu 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -130,14 +116,14 @@ restartēšanas.
   pārvaldības/informācijas paneļa izcelsmes vietas nevienā pielaidīgā konfigurācijā; tām jāpaliek ar precīzi
   slēgtu piekļuvi.
 
-## Piemērs: reversais starpniekserveris OmniRoute priekšā
+## Piemērs: reversais starpniekserveris 67router priekšā
 
-CORS ierobežojumus piemēro pats OmniRoute, tāpēc starpniekserverim parasti **nevajadzētu** pievienot vai
+CORS ierobežojumus piemēro pats 67router, tāpēc starpniekserverim parasti **nevajadzētu** pievienot vai
 pārrakstīt `Access-Control-*` galvenes (dublētas galvenes rada pārlūkprogrammu darbības traucējumus). Pabeidziet TLS
-savienojumu un pārsūtiet pieprasījumus — ļaujiet OmniRoute atbildēt uz priekšpārbaudes pieprasījumiem:
+savienojumu un pārsūtiet pieprasījumus — ļaujiet 67router atbildēt uz priekšpārbaudes pieprasījumiem:
 
 ```nginx
-# nginx — pārsūtiet uz OmniRoute; šeit NEIEVIETOJIET Access-Control-*
+# nginx — pārsūtiet uz 67router; šeit NEIEVIETOJIET Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -145,12 +131,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Saglabājiet pārsūtīšanas galvenes: starpniekserveris tajā pašā resursdatorā izveido savienojumu no atgriezeniskās cilpas adreses, un tieši tās
-    # norāda OmniRoute, ka izsaucējs nav lokālais operators. Ja starpniekserveris nepievieno nevienu no šīm galvenēm,
+    # norāda 67router, ka izsaucējs nav lokālais operators. Ja starpniekserveris nepievieno nevienu no šīm galvenēm,
     # visi attālinātie izsaucēji izskatās kā lokāli. Nekad arī neiestatiet X-Forwarded-For vērtību uz 127.0.0.1.
 }
 ```
 
-Iestatiet atļautās pārlūkprogrammu izcelsmes vietas OmniRoute (`CORS_ALLOWED_ORIGINS` vai
+Iestatiet atļautās pārlūkprogrammu izcelsmes vietas 67router (`CORS_ALLOWED_ORIGINS` vai
 cilnē Drošība), nevis starpniekserverī.
 
 ## Avota faili
@@ -163,7 +149,6 @@ cilnē Drošība), nevis starpniekserverī.
 | Izpildlaika statuss informācijas panelim                   | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Informācijas paneļa brīdinājuma reklāmkarogs               | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Lauks CORS Allowed Origins                                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent CORS katram maršrutam (izņēmums)               | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Skatiet arī
 

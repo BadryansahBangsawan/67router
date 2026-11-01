@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (العربية)
+# 📖 Setup Guide — 67router (العربية)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> مرجع الإعداد الكامل لـ OmniRoute. للاطلاع على النسخة السريعة، راجع [البدء السريع في README](../README.md#-quick-start).
+> مرجع الإعداد الكامل لـ 67router. للاطلاع على النسخة السريعة، راجع [البدء السريع في README](../README.md#-quick-start).
 
 ## جدول المحتويات
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-تُثبّت [حزمة AUR](https://aur.archlinux.org/packages/omniroute-bin) برنامج OmniRoute وتوفّر خدمة مستخدم systemd.
+تُثبّت [حزمة AUR](https://aur.archlinux.org/packages/omniroute-bin) برنامج 67router وتوفّر خدمة مستخدم systemd.
 
 ### من المصدر
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **ملاحظة خاصة بـ Windows:** يستخدم OmniRoute افتراضيًا `%APPDATA%\omniroute` عندما لا يكون الدليل القديم `%USERPROFILE%\.omniroute` موجودًا. عيّن `DATA_DIR` لاختيار موقع مختلف لدليل البيانات.
+> **ملاحظة خاصة بـ Windows:** يستخدم 67router افتراضيًا `%APPDATA%\omniroute` عندما لا يكون الدليل القديم `%USERPROFILE%\.omniroute` موجودًا. عيّن `DATA_DIR` لاختيار موقع مختلف لدليل البيانات.
 
 > **ملاحظة:** ينشئ `npm install` ملف `.env` تلقائيًا من `.env.example` عند التشغيل الأول. لن تستبدل عمليات التثبيت اللاحقة ملف `.env` موجودًا، ولذلك تُحفظ التخصيصات. لإعادة إنشائه من القالب، احذف `.env` قبل إعادة التشغيل.
 
@@ -64,7 +64,7 @@ PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm 
 
 ### تطبيق سطح المكتب (Electron)
 
-يتضمن OmniRoute غلافًا لسطح المكتب مبنيًا باستخدام Electron 41 وelectron-builder 26.10. النصوص البرمجية المتاحة (في جذر مساحة العمل):
+يتضمن 67router غلافًا لسطح المكتب مبنيًا باستخدام Electron 41 وelectron-builder 26.10. النصوص البرمجية المتاحة (في جذر مساحة العمل):
 
 ```bash
 npm run electron:dev          # تشغيل تطبيق سطح المكتب مع إعادة التحميل الفوري
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-عند دمج ذلك مع متغيرات البيئة (`INITIAL_PASSWORD` و`OMNIROUTE_WS_BRIDGE_SECRET` وغيرها)، يمكنك تشغيل نسخة OmniRoute قابلة للبرمجة بالكامل.
+عند دمج ذلك مع متغيرات البيئة (`INITIAL_PASSWORD` و`OMNIROUTE_WS_BRIDGE_SECRET` وغيرها)، يمكنك تشغيل نسخة 67router قابلة للبرمجة بالكامل.
 
 ### خيارات CLI
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | تهيئة أداة CLI — عرض الإعدادات والحصول عليها وتعيينها والتحقق منها             |
 | `omniroute status`      | لوحة حالة دون اتصال — الإصدار وقاعدة البيانات والأدوات والتهيئة                |
 | `omniroute logs`        | بث سجلات الاستخدام من API (يدعم `--follow`)                                    |
-| `omniroute update`      | التحقق من تحديثات OmniRoute أو تطبيقها                                         |
+| `omniroute update`      | التحقق من تحديثات 67router أو تطبيقها                                          |
 | `omniroute provider`    | إدارة اتصالات المزوّدين — الإضافة والعرض والإزالة والاختبار والتعيين الافتراضي |
 | `omniroute --port 3000` | تعيين المنفذ الأساسي/منفذ API إلى 3000                                         |
 | `omniroute --mcp`       | بدء خادم MCP ‏(نقل stdio)                                                      |
@@ -165,7 +165,7 @@ omniroute providers validate
 
 #### التهيئة التلقائية باستخدام `setup-*`
 
-بدلًا من لصق عنوان URL الأساسي والمفتاح يدويًا، دع OmniRoute يكتب ملف التهيئة الخاص بكل أداة
+بدلًا من لصق عنوان URL الأساسي والمفتاح يدويًا، دع 67router يكتب ملف التهيئة الخاص بكل أداة
 استنادًا إلى كتالوج النماذج المباشر. أمر واحد لكل أداة:
 
 ```bash
@@ -184,7 +184,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-يقبل كل أمر الخيارين `--remote <url> --api-key <key>` لتهيئة أداة محلية للعمل مع OmniRoute
+يقبل كل أمر الخيارين `--remote <url> --api-key <key>` لتهيئة أداة محلية للعمل مع 67router
 **بعيد**، بالإضافة إلى `--dry-run` للمعاينة. لتشغيل CLI مع حقن متغيرات البيئة الصحيحة
 من دون كتابة أي ملف تهيئة على الإطلاق، استخدم المشغّل العام
 `omniroute run <target>` (claude، codex، aider، goose، opencode، qwen، gemini)؛
@@ -248,26 +248,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **وثائق MCP الكاملة:** [README لخادم MCP](../../open-sse/mcp-server/README.md) — ‏110 أداة، وإعدادات IDE، وعملاء Python/TS/Go.
 
-### إعداد A2A (بروتوكول وكيل إلى وكيل)
-
-تحقق من بطاقة الوكيل:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-أرسل مهمة:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**وثائق A2A الكاملة:** [README لخادم A2A](../../src/lib/a2a/README.md) — ‏JSON-RPC 2.0، والمهارات، والبث، ودورة حياة المهمة.
-
----
-
 ## إعداد المهلات الزمنية
 
 ### المهلات الزمنية الأساسية
@@ -277,15 +257,15 @@ curl -X POST http://localhost:20128/a2a \
 | المتغير                  | القيمة الافتراضية        | الغرض                                                                                                     |
 | ------------------------ | ------------------------ | --------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                 | خط الأساس المشترك لمهلة بدء استجابة المصدر، ومهل Undici المخفية، وطلبات بصمة TLS، ومهل طلبات/وكيل جسر API |
-| `STREAM_IDLE_TIMEOUT_MS` | يرث `REQUEST_TIMEOUT_MS` | أقصى فاصل زمني بين أجزاء البث قبل أن يوقف OmniRoute بث SSE                                                |
+| `STREAM_IDLE_TIMEOUT_MS` | يرث `REQUEST_TIMEOUT_MS` | أقصى فاصل زمني بين أجزاء البث قبل أن يوقف 67router بث SSE                                                 |
 
 يظل التوافق مع الإصدارات السابقة محفوظًا: تستمر متغيرات المهلة الحالية مثل `FETCH_TIMEOUT_MS` و`API_BRIDGE_PROXY_TIMEOUT_MS` وغيرها من متغيرات المهلة الخاصة بكل طبقة في العمل، وتتجاوز خط الأساس المشترك.
 
 ### ملاحظات خاصة بموفّري الخدمة
 
-بالنسبة إلى المصادر المتوافقة مع Claude Code (`anthropic-compatible-cc-*`)، يشتق OmniRoute ترويسة `X-Stainless-Timeout` الصادرة من مهلة الجلب المحددة، بحيث تظل مهل القراءة لدى موفّر الخدمة متوافقة مع إعدادات البيئة لديك.
+بالنسبة إلى المصادر المتوافقة مع Claude Code (`anthropic-compatible-cc-*`)، يشتق 67router ترويسة `X-Stainless-Timeout` الصادرة من مهلة الجلب المحددة، بحيث تظل مهل القراءة لدى موفّر الخدمة متوافقة مع إعدادات البيئة لديك.
 
-بالنسبة إلى الوكلاء العكسيين الخارجيين المتوافقين مع Claude Code، يحافظ OmniRoute على مجموعة `anthropic-beta` الافتراضية بإعدادات متحفظة، وعند إبقاء `Client Cache Control` على `Auto`، لا يمرر سوى علامات `cache_control` المقدمة من العميل. فعّل مفتاح "Enable redact-thinking beta" الخاص بكل اتصال فقط عندما يتطلب المصدر تحديدًا تدفقات تفكير Claude المنقحة.
+بالنسبة إلى الوكلاء العكسيين الخارجيين المتوافقين مع Claude Code، يحافظ 67router على مجموعة `anthropic-beta` الافتراضية بإعدادات متحفظة، وعند إبقاء `Client Cache Control` على `Auto`، لا يمرر سوى علامات `cache_control` المقدمة من العميل. فعّل مفتاح "Enable redact-thinking beta" الخاص بكل اتصال فقط عندما يتطلب المصدر تحديدًا تدفقات تفكير Claude المنقحة.
 
 ### تجاوزات متقدمة للمهلات الزمنية
 
@@ -303,11 +283,11 @@ curl -X POST http://localhost:20128/a2a \
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | مهلة الاتصال المستمر على خادم جسر API                                    |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | مهلة خمول المقبس على خادم جسر API (`0` يعطّلها)                          |
 
-> **ملاحظة:** بالنسبة إلى طلبات البث، لا يغطي `FETCH_TIMEOUT_MS` سوى إعداد الاتصال / انتظار أول استجابة من المصدر. بعد تنشيط البث، لن يوقفه OmniRoute إلا عند حدوث توقف فعلي (`STREAM_IDLE_TIMEOUT_MS`) أو خمول نص الاستجابة في Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **ملاحظة:** بالنسبة إلى طلبات البث، لا يغطي `FETCH_TIMEOUT_MS` سوى إعداد الاتصال / انتظار أول استجابة من المصدر. بعد تنشيط البث، لن يوقفه 67router إلا عند حدوث توقف فعلي (`STREAM_IDLE_TIMEOUT_MS`) أو خمول نص الاستجابة في Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### التوافق مع الوكيل العكسي
 
-إذا كنت تشغّل OmniRoute خلف Nginx أو Caddy أو Cloudflare أو وكيل عكسي آخر، فتأكد أيضًا من أن مهل الوكيل أعلى من مهل البث/الجلب في OmniRoute.
+إذا كنت تشغّل 67router خلف Nginx أو Caddy أو Cloudflare أو وكيل عكسي آخر، فتأكد أيضًا من أن مهل الوكيل أعلى من مهل البث/الجلب في 67router.
 
 ---
 

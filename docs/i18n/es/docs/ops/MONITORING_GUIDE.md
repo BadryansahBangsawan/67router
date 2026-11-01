@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute incluye monitorización de estado integrada, piloto automático de proveedores, seguimiento de cuotas y hooks de observabilidad. Esta guía abarca el panel, las alertas y la resolución de problemas.
+> **TL;DR**: 67router incluye monitorización de estado integrada, piloto automático de proveedores, seguimiento de cuotas y hooks de observabilidad. Esta guía abarca el panel, las alertas y la resolución de problemas.
 
 **Fuentes:**
 
@@ -20,7 +20,7 @@
 
 ## Descripción general
 
-OmniRoute tiene **3 capas de monitorización**:
+67router tiene **3 capas de monitorización**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Por combo:
 
 ## API de comprobación de estado
 
-OmniRoute expone **dos** superficies HTTP de comprobación de estado. No son intercambiables para los orquestadores.
+67router expone **dos** superficies HTTP de comprobación de estado. No son intercambiables para los orquestadores.
 
 | Ruta                         | Propósito                                                                            | Carga                                        | Uso recomendado                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ endpoint. Utilice `failed` + `failedConnections` para los fallos de sondas en ti
 
 ### Recomendaciones de sondas para Kubernetes
 
-OmniRoute es un **único proceso de Node** (un bucle de eventos). El `HEALTHCHECK` predeterminado de Docker apunta al ligero `/healthz`. `/api/monitoring/health` es **demasiado pesado** para los intervalos de actividad de kubelet.
+67router es un **único proceso de Node** (un bucle de eventos). El `HEALTHCHECK` predeterminado de Docker apunta al ligero `/healthz`. `/api/monitoring/health` es **demasiado pesado** para los intervalos de actividad de kubelet.
 
 | Sonda                 | Objetivo recomendado                                                                               | Notas                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | --------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Relacionado: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (s
 
 ### Watchdog de systemd (bucle de eventos bloqueado)
 
-En un host con systemd, OmniRoute informa al gestor de servicios cuando está listo y continúa enviándole señales periódicas, de modo que un servidor cuyo bucle de eventos esté bloqueado se finalice y reinicie en lugar de permanecer activo y sin responder. Las señales se envían desde el propio bucle de eventos del servidor: cuando este se bloquea, dejan de enviarse y systemd reinicia el servicio una vez que transcurre `WatchdogSec` sin recibir ninguna.
+En un host con systemd, 67router informa al gestor de servicios cuando está listo y continúa enviándole señales periódicas, de modo que un servidor cuyo bucle de eventos esté bloqueado se finalice y reinicie en lugar de permanecer activo y sin responder. Las señales se envían desde el propio bucle de eventos del servidor: cuando este se bloquea, dejan de enviarse y systemd reinicia el servicio una vez que transcurre `WatchdogSec` sin recibir ninguna.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) ya crea una unidad de usuario con esta configuración. Una unidad que escriba usted mismo (con el valor predeterminado `Type=simple`) no tendrá watchdog, así que añada estas líneas a su sección `[Service]`:
 
@@ -443,7 +443,7 @@ La configuración de la comprobación del estado de los tokens se gestiona inter
 
 ### Canales integrados
 
-OmniRoute admite **3 canales de alerta**:
+67router admite **3 canales de alerta**:
 
 | Canal            | Configuración  | Caso de uso                             |
 | ---------------- | -------------- | --------------------------------------- |
@@ -559,7 +559,7 @@ Cree un archivo `~/.omniroute/dashboard.json`:
 ### "La cuota aparece como saludable, pero veo errores 429"
 
 - El código 429 significa que el proveedor indica que ha agotado su cuota
-- El seguimiento de cuotas de OmniRoute puede estar **desactualizado**; la información válida es la del proveedor
+- El seguimiento de cuotas de 67router puede estar **desactualizado**; la información válida es la del proveedor
 - Los datos de cuota se actualizan automáticamente mediante el monitor interno de cuotas
 
 ### "La combinación falla, pero todos los destinos parecen saludables"
@@ -572,7 +572,7 @@ Cree un archivo `~/.omniroute/dashboard.json`:
 
 - Ejecute `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Si devuelve "ok", es una falsa alarma: la comprobación de estado es demasiado estricta
-- Si devuelve cualquier otra cosa, **detenga OmniRoute** y siga la [guía de recuperación ante desastres](./DATABASE_GUIDE.md#disaster-recovery)
+- Si devuelve cualquier otra cosa, **detenga 67router** y siga la [guía de recuperación ante desastres](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "La presión de memoria del heap es crítica"
 

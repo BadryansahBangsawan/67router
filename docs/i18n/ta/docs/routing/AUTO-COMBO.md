@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (தமிழ்)
+# 67router Auto-Combo Engine (தமிழ்)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # ஒவ்வொரு டோக்கனுக�
 
 **என்ன நடக்கிறது:**
 
-1. `src/sse/handlers/chat.ts` இல் உள்ள `auto/` முன்னொட்டை OmniRoute கண்டறிகிறது
+1. `src/sse/handlers/chat.ts` இல் உள்ள `auto/` முன்னொட்டை 67router கண்டறிகிறது
 2. தரவுத்தளத்திலிருந்து அனைத்து **செயலில் உள்ள வழங்குநர் இணைப்புகளையும்** வினவுகிறது
 3. செல்லுபடியாகும் நற்சான்றுகள் (API விசை அல்லது OAuth டோக்கன்) கொண்டவற்றை மட்டும் வடிகட்டுகிறது
 4. ஒவ்வொரு இணைப்பிற்குமான மாதிரியைத் தீர்மானிக்கிறது (`connection.defaultModel` அல்லது வழங்குநரின் முதல் மாதிரி)
@@ -87,7 +87,7 @@ model: "auto/cheap"           # ஒவ்வொரு டோக்கனுக�
 - மாதிரி lockout — `isModelLocked(provider, connectionId, model)`
 
 ஒவ்வொரு வேட்பாளரும் இந்த API விசையின் `excluded` கொடியையும் கொண்டிருக்கும். விலக்கல்கள்
-ஒவ்வொரு API விசைக்கும் தனித்தனியாகச் சேமிக்கப்படுகின்றன (`auto_candidate_overrides` அட்டவணை, இடம்பெயர்வு `128`) — OmniRoute
+ஒவ்வொரு API விசைக்கும் தனித்தனியாகச் சேமிக்கப்படுகின்றன (`auto_candidate_overrides` அட்டவணை, இடம்பெயர்வு `128`) — 67router
 `users` அட்டவணை இல்லாத ஒற்றை-tenant அமைப்பு என்பதால், `apiKeyId` என்பதே உண்மையான ஒவ்வொரு அழைப்பாளருக்கும் மிக நெருக்கமான
 அடையாளமாகும் — மேலும், தூய்மையானதும் அலகு-சோதனை செய்யப்பட்டதுமான
 `filterExcludedCandidates()` (`open-sse/services/autoCombo/candidateOverrides.ts`) வழியாக
@@ -162,7 +162,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 பொதுவான இரண்டு இடர்ப்பாடுகள்:
 
 - **`auto` உங்கள் combos-ஐப் பயன்படுத்தாது.** `auto`/`auto/*` அதன் சொந்த zero-config candidate pool-ஐ உருவாக்குகிறது; மேலும் ஒரு combo-வின் பெயர் உண்மையிலேயே `auto` என இருந்தால் மட்டுமே சேமிக்கப்பட்ட combos-ஐப் பரிசீலிக்கும் (பரிந்துரைக்கப்படவில்லை). Combo வழியாக வழிமாற்ற, அதன் துல்லியமான பெயரை அனுப்பவும் — `auto`-ஐ அல்ல.
-- **`openrouter/auto` என்பது கட்டணம் வசூலிக்கப்படும் உண்மையான OpenRouter தயாரிப்பு** ("Auto Best Available"); அது OmniRoute alias அல்ல. இது OpenRouter registry-இன் (`open-sse/config/providers/registry/openrouter/index.ts`) ஒற்றை static model entry ஆகும்; இதற்குத் தனியாகக் கட்டணம் வசூலிக்கப்படும். `auto` pools-இலிருந்து இதை விலக்க, அமைப்புகள் → Routing → கட்டண model-களை மறை என்பதைப் பயன்படுத்தவும்.
+- **`openrouter/auto` என்பது கட்டணம் வசூலிக்கப்படும் உண்மையான OpenRouter தயாரிப்பு** ("Auto Best Available"); அது 67router alias அல்ல. இது OpenRouter registry-இன் (`open-sse/config/providers/registry/openrouter/index.ts`) ஒற்றை static model entry ஆகும்; இதற்குத் தனியாகக் கட்டணம் வசூலிக்கப்படும். `auto` pools-இலிருந்து இதை விலக்க, அமைப்புகள் → Routing → கட்டண model-களை மறை என்பதைப் பயன்படுத்தவும்.
 
 இங்கு ஆவணப்படுத்தப்பட்டுள்ள இந்த அசல் குழப்பம் குறித்த விவரங்களுக்கு [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) மற்றும் [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) ஆகியவற்றைப் பார்க்கவும்.
 
@@ -259,7 +259,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## அனைத்து வழிப்படுத்தல் உத்திகளும்
 
-OmniRoute-இன் combo engine **20 வழிப்படுத்தல் உத்திகளை** ஆதரிக்கிறது (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` என்பதில் அறிவிக்கப்பட்டுள்ளன). Auto Combo engine ஆனது `auto` உத்தியின் கீழ் வழங்கப்படுகிறது; மற்றவை நிலையாகச் சேமிக்கப்பட்ட combo-களுக்குக் கிடைக்கின்றன.
+67router-இன் combo engine **20 வழிப்படுத்தல் உத்திகளை** ஆதரிக்கிறது (`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES` என்பதில் அறிவிக்கப்பட்டுள்ளன). Auto Combo engine ஆனது `auto` உத்தியின் கீழ் வழங்கப்படுகிறது; மற்றவை நிலையாகச் சேமிக்கப்பட்ட combo-களுக்குக் கிடைக்கின்றன.
 
 | உத்தி               | விளக்கம்                                                                                                                                                                                                                                                      |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -303,7 +303,7 @@ OmniRoute-இன் combo engine **20 வழிப்படுத்தல் �
 
 குறைந்தது இரண்டு மாதிரிகளைக் கொண்ட ஒரு `pipeline` சேர்க்கை,
 `config.agenticOrchestration.enabled` மூலம் திட்டமிடுபவர்/செயல்படுத்துபவர் வழிப்படுத்தலைத் தேர்வுசெய்யலாம். முதல் இலக்கு திட்டமிடலையும் இறுதிப் பதில்களையும்
-நிர்வகிக்கிறது; இரண்டாவது இலக்கு கிளையன்ட்-சார்ந்த கருவி அழைப்புகளை வெளியிடுகிறது. OmniRoute கோரிக்கை நெறிமுறையிலிருந்து கருவி-முடிவு
+நிர்வகிக்கிறது; இரண்டாவது இலக்கு கிளையன்ட்-சார்ந்த கருவி அழைப்புகளை வெளியிடுகிறது. 67router கோரிக்கை நெறிமுறையிலிருந்து கருவி-முடிவு
 தொடர்ச்சிகளைக் கண்டறிந்து, மற்றொரு கருவிச் சுற்று தேவையா என்று திட்டமிடுபவரிடம் கேட்டு,
 செயல்படுத்துபவர் அல்லது திட்டமிடுபவரை கிளையன்ட்டிற்கு வெளிப்படும் இறுதிப்
 படியாக மாறும் வகையில் இயக்கநிலையில் தேர்ந்தெடுக்கிறது.
@@ -837,11 +837,11 @@ Tier 1-க்கு (சந்தா) வலுவான முன்னுர�
 
 ### நிபந்தனைக்குட்பட்ட நேரடி புகைச் சோதனை (CI-இல் இல்லை — உண்மையான வழங்குநர்கள்)
 
-| கட்டளை                                 | அது செய்வது                                                                                                   |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------------------ |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` உடன் செயல்முறைக்குள் உண்மையான வழிப்படுத்தல்; நேரடி OmniRoute DB-இன் நிலைப்பதிவை எடுக்கிறது |
-| `npm run test:combo:live:vps`          | நேரடி OmniRoute சேவையகத்திற்கான HTTP அழைப்புகள் (`COMBO_LIVE_BASE_URL`-ஐ அமைக்கவும்)                          |
-| `npm run test:combo:live:vps:failover` | அதே சோதனை, திட்டமிட்ட மாற்றுவழிச் சூழல்களுடன்                                                                 |
+| கட்டளை                                 | அது செய்வது                                                                                                  |
+| :------------------------------------- | :----------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1` உடன் செயல்முறைக்குள் உண்மையான வழிப்படுத்தல்; நேரடி 67router DB-இன் நிலைப்பதிவை எடுக்கிறது |
+| `npm run test:combo:live:vps`          | நேரடி 67router சேவையகத்திற்கான HTTP அழைப்புகள் (`COMBO_LIVE_BASE_URL`-ஐ அமைக்கவும்)                          |
+| `npm run test:combo:live:vps:failover` | அதே சோதனை, திட்டமிட்ட மாற்றுவழிச் சூழல்களுடன்                                                                |
 
 இந்தப் புகைச் சோதனைகள் உண்மையான தகவல் பரிமாற்றப் பாதையை (சேர்க்கை → வழங்குநர் → நிறைவு) சோதிக்கின்றன. இவற்றுக்கு
 நேரடி சான்றுகளும் VPS அணுகலும் தேவைப்படுவதால், இவை திட்டமிட்டே CI-இலிருந்து விலக்கப்பட்டுள்ளன.

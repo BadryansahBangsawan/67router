@@ -4,7 +4,7 @@
 
 ---
 
-> **Qisqacha**: Talablarga mos provayder hisoblaringizdan foydalaning. OmniRoute siz sozlagan ulanishlarni birlashtiradi; u eʼlon qilingan umumiy token budjetini taqdim etmaydi. Bepul foydalanish uchun roʻyxatdan oʻtish, API kaliti, tasdiqlash yoki toʻlov usuli talab qilinishi mumkin. Provayder cheklovlari, maxfiylik siyosatlari va foydalanish shartlari hamon amal qiladi.
+> **Qisqacha**: Talablarga mos provayder hisoblaringizdan foydalaning. 67router siz sozlagan ulanishlarni birlashtiradi; u eʼlon qilingan umumiy token budjetini taqdim etmaydi. Bepul foydalanish uchun roʻyxatdan oʻtish, API kaliti, tasdiqlash yoki toʻlov usuli talab qilinishi mumkin. Provayder cheklovlari, maxfiylik siyosatlari va foydalanish shartlari hamon amal qiladi.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Koʻplab AI provayderlari qandaydir shaklda **bepul foydalanish** imkoniyatini taqdim etadi. Provayderga qarab, bu autentifikatsiyasiz endpoint, davriy kvota, soʻrovlar tezligi cheklangan, ammo umumiy hajmi cheklanmagan foydalanish, roʻyxatdan oʻtish uchun beriladigan bonus, qoʻlda tasdiqlash yoki vaqtinchalik aksiya boʻlishi mumkin. Ayrim variantlar hisob, API kaliti, kredit karta, KYC yoki provayderga xos shartlarni qabul qilishni talab qiladi.
 
-OmniRoute sozlangan ulanishlarni bitta endpointda **birlashtiradi**. Hisob talab qiladigan har bir provayderda baribir alohida roʻyxatdan oʻtishingiz kerak. Ushbu hisoblarni ulang va mos maqsadlar orasida yoʻnaltirish uchun `model: "auto"` dan foydalaning. Yangi oʻrnatishda kalitsiz foydalanish mumkin boʻlgan birorta ham mos maqsad boʻlmasligi mumkin; faqat OmniRouteʼni oʻrnatishning oʻzi chatdan muvaffaqiyatli javob olinishini kafolatlamaydi.
+67router sozlangan ulanishlarni bitta endpointda **birlashtiradi**. Hisob talab qiladigan har bir provayderda baribir alohida roʻyxatdan oʻtishingiz kerak. Ushbu hisoblarni ulang va mos maqsadlar orasida yoʻnaltirish uchun `model: "auto"` dan foydalaning. Yangi oʻrnatishda kalitsiz foydalanish mumkin boʻlgan birorta ham mos maqsad boʻlmasligi mumkin; faqat 67routerʼni oʻrnatishning oʻzi chatdan muvaffaqiyatli javob olinishini kafolatlamaydi.
 
 ---
 
@@ -57,7 +57,7 @@ Ushbu provayderlarda muayyan cheklovlarga ega **bepul tariflar** mavjud:
 
 ## Bepul tariflarni qanday birlashtirish mumkin
 
-OmniRoute’ning afzalligi — **bepul tariflarni birlashtirish**. Bitta provayderga tayanish o‘rniga, bir nechta bepul provayderni ulaysiz va OmniRoute’ga har bir so‘rov uchun eng yaxshisini avtomatik ravishda tanlash imkonini berasiz.
+67router’ning afzalligi — **bepul tariflarni birlashtirish**. Bitta provayderga tayanish o‘rniga, bir nechta bepul provayderni ulaysiz va 67router’ga har bir so‘rov uchun eng yaxshisini avtomatik ravishda tanlash imkonini berasiz.
 
 ### Misol: Bepul tariflar qamrovini kengaytirish
 
@@ -68,7 +68,7 @@ Bitta kvotaga qaramlikni kamaytirish uchun bir nechta provayderni ulang:
 3. **Pollinations** — kalitsiz, so‘rovlar tezligi cheklangan kirish
 4. **LongCat** — ro‘yxatdan o‘tishda bir marta beriladigan grant (KYC talab etiladi)
 
-So‘ng `model: "auto"` parametridan foydalaning va OmniRoute:
+So‘ng `model: "auto"` parametridan foydalaning va 67router:
 
 - Avval reytingi eng yuqori bo‘lgan mos ulanishni sinab ko‘radi
 - Agar uning kvotasi tugagan yoki ishlash holati tekshiruvi muvaffaqiyatsiz bo‘lsa → keyingi sozlangan provayderni sinab ko‘radi
@@ -102,7 +102,7 @@ cheklanmagan/kalitsiz kirish, roʻyxatdan oʻtish kreditlari, toʻxtatilgan yozu
 
 ### 5-qadam: Ulanish tugmasini bosing
 
-`NOAUTH` provayderi uchun OmniRoute yuqori oqim hisob maʼlumotlarini soʻramaydi. Bu yuqori oqim provayderi uchinchi tomon mijozlarini qabul qilishi yoki unda yetarli quvvat mavjudligini kafolatlamaydi. OAuth va API kaliti talab qilinadigan provayderlar hujjatlashtirilgan hisob ulash jarayoni orqali ulanishi kerak. Router autentifikatsiyasi yoqilganida, mijozingiz **Boshqaruv paneli → Yakuniy nuqtalar** boʻlimida koʻrsatilgan OmniRoute API kalitidan foydalanishda davom etadi.
+`NOAUTH` provayderi uchun 67router yuqori oqim hisob maʼlumotlarini soʻramaydi. Bu yuqori oqim provayderi uchinchi tomon mijozlarini qabul qilishi yoki unda yetarli quvvat mavjudligini kafolatlamaydi. OAuth va API kaliti talab qilinadigan provayderlar hujjatlashtirilgan hisob ulash jarayoni orqali ulanishi kerak. Router autentifikatsiyasi yoqilganida, mijozingiz **Boshqaruv paneli → Yakuniy nuqtalar** boʻlimida koʻrsatilgan 67router API kalitidan foydalanishda davom etadi.
 
 ### 6-qadam: Takrorlang
 
@@ -112,7 +112,7 @@ Shartlari va maxfiylik modeli foydalanish holatingizga mos keladigan bir nechta 
 
 ## Katalogni toʻgʻri talqin qilish
 
-- `NOAUTH` OmniRoute sizdan provayder hisob maʼlumotlarini soʻramasligini anglatadi; bu ish vaqti, maxfiylik yoki cheklanmagan sigʻimni
+- `NOAUTH` 67router sizdan provayder hisob maʼlumotlarini soʻramasligini anglatadi; bu ish vaqti, maxfiylik yoki cheklanmagan sigʻimni
   kafolatlamaydi.
 - `hasFree` — topish uchun moʻljallangan metadata. U davriy kvota, kalitsiz kirish,
   roʻyxatdan oʻtish krediti, tasdiqlash dasturi yoki aksiyani anglatishi mumkin.
@@ -125,15 +125,15 @@ Shartlari va maxfiylik modeli foydalanish holatingizga mos keladigan bir nechta 
 
 ---
 
-## OmniRoute bepul tariflarni qanday yaxshilaydi
+## 67router bepul tariflarni qanday yaxshilaydi
 
 ### 1. Avtomatik zaxiraga o‘tish
 
-Agar bepul provayderlardan biri band yoki ishlamayotgan bo‘lsa, OmniRoute avtomatik ravishda keyingisini sinab ko‘radi. Siz hech narsa qilishingiz shart emas.
+Agar bepul provayderlardan biri band yoki ishlamayotgan bo‘lsa, 67router avtomatik ravishda keyingisini sinab ko‘radi. Siz hech narsa qilishingiz shart emas.
 
 ### 2. Aqlli yo‘naltirish
 
-OmniRoute har bir so‘rov uchun quyidagilar asosida **eng yaxshi bepul provayderni** tanlaydi:
+67router har bir so‘rov uchun quyidagilar asosida **eng yaxshi bepul provayderni** tanlaydi:
 
 - Tezlik — Ayni paytda qaysi provayder eng tezkor?
 - Sifat — Bu vazifa uchun qaysi provayder eng yaxshi?
@@ -141,13 +141,13 @@ OmniRoute har bir so‘rov uchun quyidagilar asosida **eng yaxshi bepul provayde
 
 ### 3. Tokenlarni tejash
 
-OmniRoute’ning siqish konveyeri mos keladigan so‘rov matni va vosita chiqishidagi tokenlar sonini kamaytirishi mumkin.
+67router’ning siqish konveyeri mos keladigan so‘rov matni va vosita chiqishidagi tokenlar sonini kamaytirishi mumkin.
 Amaldagi tejamkorlik kontent, tanlangan mexanizmlar, provayderning hisoblash usuli va aniqlik
 sozlamalariga bog‘liq; siqish har bir provayder kvotasini qat’iy miqdorda ko‘paytirmaydi.
 
 ### 4. Bir nechta hisobni qo‘llab-quvvatlash
 
-Agar provayder shartlari bir nechta hisob yoki hisobga olish ma’lumotlaridan foydalanishga ruxsat bersa, OmniRoute har bir
+Agar provayder shartlari bir nechta hisob yoki hisobga olish ma’lumotlaridan foydalanishga ruxsat bersa, 67router har bir
 ulanishni alohida yo‘naltirish nomzodi sifatida ko‘rib chiqishi mumkin. Provayder kvotasi yoki foydalanish siyosatini
 chetlab o‘tish uchun qo‘shimcha hisoblar yaratmang.
 
@@ -162,7 +162,7 @@ Amaldagi, umumiy havzalardagi takroriy hisoblarni chiqarib tashlagan katalog hoz
 | Davriy miqdoriy limit                         |       **~1.62B token/oy** | Umumiy havzalar bir marta hisoblangan; cheklanmagan provayderlar summaga kiritilmagan |
 | Ro‘yxatdan o‘tish grantlari bilan birinchi oy |          **~2.22B token** | Davriy jami miqdor hamda bir martalik va davriy kreditlar                             |
 
-Bular OmniRoute tomonidan taqdim etiladigan limit yoki yangi o‘rnatish uchun prognoz emas, balki alohida talablarga javob beruvchi hisoblar bo‘yicha butun katalog miqyosidagi taxminiy qiymatlardir. Foydalanishingiz mumkin bo‘lgan sig‘im siz ulagan provayderlar va ularning joriy shartlariga bog‘liq. Qiymatlar `open-sse/config/freeModelCatalog.ts` asosida hisoblanadi; havzalardagi takroriy hisoblarni chiqarib tashlash, ToS belgilari, faoliyati to‘xtatilgan yozuvlar va ro‘yxatdan o‘tish krediti metodologiyasi uchun
+Bular 67router tomonidan taqdim etiladigan limit yoki yangi o‘rnatish uchun prognoz emas, balki alohida talablarga javob beruvchi hisoblar bo‘yicha butun katalog miqyosidagi taxminiy qiymatlardir. Foydalanishingiz mumkin bo‘lgan sig‘im siz ulagan provayderlar va ularning joriy shartlariga bog‘liq. Qiymatlar `open-sse/config/freeModelCatalog.ts` asosida hisoblanadi; havzalardagi takroriy hisoblarni chiqarib tashlash, ToS belgilari, faoliyati to‘xtatilgan yozuvlar va ro‘yxatdan o‘tish krediti metodologiyasi uchun
 [Bepul tariflar ma’lumotnomasi](../reference/FREE_TIERS.md)ga qarang.
 
 ---
@@ -188,7 +188,7 @@ talablaringizga mos kelsa. Muhim ish yuklamalari kuzatuv ostidagi va shartnoma j
 
 Murosali jihatlar qatoriga qat’iy cheklovlar, kutish ro‘yxatlari, KYC, kredit kartani tasdiqlash, so‘rovlar asosida
 o‘qitish, zaifroq maxfiylik, SLA yo‘qligi, modellarning tez-tez almashishi, geografik cheklovlar, limitdan oshganda to‘lov yoki
-hisob siyosati bilan bog‘liq xavflar kirishi mumkin. OmniRoute mavjud metama’lumotlarni ko‘rsatadi; nimani yoqishni o‘zingiz tanlaysiz.
+hisob siyosati bilan bog‘liq xavflar kirishi mumkin. 67router mavjud metama’lumotlarni ko‘rsatadi; nimani yoqishni o‘zingiz tanlaysiz.
 
 ### "Qanday qilib ko‘proq bepul kvota olishim mumkin?"
 
@@ -207,7 +207,7 @@ Bepul provayderlar reytingi sahifasidan foydalaning va amalda taqdim etilayotgan
 
 ## Keyingi qadamlar
 
-- **[Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)** — OmniRoute siz uchun eng yaxshi sunʼiy intellektni tanlasin
+- **[Avtomatik kombinatsiya qoʻllanmasi](./AUTO-COMBO-GUIDE.md)** — 67router siz uchun eng yaxshi sunʼiy intellektni tanlasin
 - **[Provayderlar qoʻllanmasi](./PROVIDERS-GUIDE.md)** — Koʻproq provayderlarni ulang
 - **[Muammolarni bartaraf etish](../guides/TROUBLESHOOTING.md)** — Keng tarqalgan muammolarni hal qiling
 - **[Bepul tariflar maʼlumotnomasi](../reference/FREE_TIERS.md)** — Bepul tariflarning toʻliq roʻyxati

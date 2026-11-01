@@ -5,7 +5,7 @@
 ---
 
 ସ୍ୱୟଂ-ହୋଷ୍ଟେଡ୍ ପୁଲ୍ଟି **.113** ମେସିନ୍ରେ (`tomni-proxmox-113`) ଚାଲେ। 2026-10-18 ଠାରୁ ପ୍ରତ୍ୟେକ
-OmniRoute runner ପାଖରେ **ଗୋଟିଏ ଭୂମିକା**, ଗୋଟିଏ ଲେବଲ୍, ଏବଂ ତାହାର କାର୍ଯ୍ୟଭାରରେ ମାପାଯାଇଥିବା
+67router runner ପାଖରେ **ଗୋଟିଏ ଭୂମିକା**, ଗୋଟିଏ ଲେବଲ୍, ଏବଂ ତାହାର କାର୍ଯ୍ୟଭାରରେ ମାପାଯାଇଥିବା
 ଆବଶ୍ୟକତା ଅନୁଯାୟୀ memory/CPU ବଜେଟ୍ ରହିଛି। Turbopack ସ୍ଲଟ୍କୁ ବିଲ୍ଡ ପାଇଁ ଆବଶ୍ୟକ ସମ୍ବଳ ମିଳେ; ଅନ୍ୟ ସ୍ଲଟ୍ଗୁଡ଼ିକୁ ସେମାନଙ୍କର
 ମାପାଯାଇଥିବା ସର୍ବୋଚ୍ଚ ବ୍ୟବହାର ଅନୁଯାୟୀ ଆକାର ଦିଆଯାଇଛି। କେବଳ ଗୋଟିଏ Turbopack ବିଲ୍ଡ ସହିତ ଗୋଟିଏ Release-Green
 webpack ବିଲ୍ଡ ଏବଂ ଗୋଟିଏ lint କାର୍ଯ୍ୟ ଏକାସାଙ୍ଗରେ ଚାଲିଲେ ମେସିନ୍ଟି overcommit କରେ; host swap (16 GB) ତାହାକୁ ସମ୍ଭାଳେ, ଏବଂ pull-request ବିଲ୍ଡଗୁଡ଼ିକ
@@ -27,7 +27,7 @@ webpack ବିଲ୍ଡ ଏବଂ ଗୋଟିଏ lint କାର୍ଯ୍ୟ ଏ
 | swap      | 16 GB                         | `omniroute-113-5` swap ବନ୍ଦ ରଖି (`MemorySwapMax=0`) ଚାଲେ, ଯାହାଦ୍ୱାରା କୌଣସି ଅନିୟନ୍ତ୍ରିତ ବିଲ୍ଡ ସମଗ୍ର ମେସିନ୍କୁ swapping କରାଇବା ପରିବର୍ତ୍ତେ ନିଜ cap ରେ ବନ୍ଦ ହୋଇଯାଏ                                                                                                                                                                                                                                                           |
 | `/tmp`    | **12 GB tmpfs = RAM**         | ସେଠାରେ ରଖାଯାଇଥିବା ସବୁକିଛି memory ବ୍ୟବହାର କରେ; ଅବଶିଷ୍ଟ ଫାଇଲ୍ଗୁଡ଼ିକ 3 ଘଣ୍ଟା ପରେ ସଫା କରାଯାଏ                                                                                                                                                                                                                                                                                                                                |
 | CPU       | 32 cores ରେ load 60 ଦେଖାଯାଇଛି | quotas ଲାଗୁ ହେବା ପୂର୍ବରୁ, ଗୋଟିଏ Turbopack ବିଲ୍ଡ (~1166 % CPU) ସହିତ ସେହି ମେସିନ୍ରେ ଚାଲୁଥିବା ଗୋଟିଏ coverage suite ଅନ୍ୟ listeners ଗୁଡ଼ିକର heartbeats ପାଇଁ ସମ୍ବଳ ଅଭାବ ସୃଷ୍ଟି କରିଥିଲା (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                   |
-| runners   | **6 listeners**               | 4ଟି OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ନିଷ୍କ୍ରିୟ ଅଛନ୍ତି (`systemctl enable --now` ସେମାନଙ୍କ ମଧ୍ୟରୁ ଗୋଟିଏକୁ ପୁଣି ସକ୍ରିୟ କରେ)                                                                                                                                                                                                                                                                   |
+| runners   | **6 listeners**               | 4ଟି 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` ନିଷ୍କ୍ରିୟ ଅଛନ୍ତି (`systemctl enable --now` ସେମାନଙ୍କ ମଧ୍ୟରୁ ଗୋଟିଏକୁ ପୁଣି ସକ୍ରିୟ କରେ)                                                                                                                                                                                                                                                                    |
 
 ସୀମାଗୁଡ଼ିକ ପ୍ରତ୍ୟେକ unit ର `/etc/systemd/system/actions.runner.<…>.service.d/override.conf` ରେ ରହିଛି
 (ପୂର୍ବ ମୂଲ୍ୟଗୁଡ଼ିକ `override.conf.bak-20261018` ଭାବେ ରଖାଯାଇଛି) ଏବଂ
@@ -74,7 +74,7 @@ worker ଜବ୍କୁ ବାତିଲ୍ ହୋଇଛି ବୋଲି ରିପ
 
 Runnerର ଡିଫଲ୍ଟ `KillMode=process`, କୌଣସି unit ବନ୍ଦ କିମ୍ବା restart ହେଲେ
 `Runner.Worker → npm → next-build`କୁ ଚାଲୁ ଛାଡ଼ିଦିଏ — ସଂଲଗ୍ନ ଜବ୍ ନଥିବା ଏକ orphan build RAM ଏବଂ
-CPU ବ୍ୟବହାର କରିଚାଲେ। ପ୍ରତ୍ୟେକ OmniRoute unitରେ
+CPU ବ୍ୟବହାର କରିଚାଲେ। ପ୍ରତ୍ୟେକ 67router unitରେ
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 ପଥରେ `KillMode=mixed` ସହିତ ଗୋଟିଏ drop-in ରହେ: ପ୍ରଥମେ listenerକୁ SIGTERM, ତା’ପରେ
 `TimeoutStop`ରେ ସମ୍ପୂର୍ଣ୍ଣ cgroupକୁ SIGKILL। Unitର ପରବର୍ତ୍ତୀ restartରେ ଏହା କାର୍ଯ୍ୟକାରୀ ହୁଏ — **ଗୋଟିଏ ସମୟରେ
@@ -126,7 +126,7 @@ CPU ବ୍ୟବହାର କରିଚାଲେ। ପ୍ରତ୍ୟେକ Omni
   `quality.yml` `lint-guard` ଆବଶ୍ୟକ। 2026-10-18 ପର୍ଯ୍ୟନ୍ତ `omniroute-113`ର
   `MemoryHigh=4G` ଥିଲା — promptfoo build ସେଠାରେ 54 minutes ଧରି reclaim କରି କରି
   ଆଗକୁ ବଢ଼ିଥିଲା; 8 GB throttlingକୁ ଦୂର କରେ।
-- **ଉଦ୍ଦେଶ୍ୟମୂଳକ ଭାବେ କମ୍ listener।** 2026-08-29ରେ ଚାରିଟି OmniRoute unitକୁ disable
+- **ଉଦ୍ଦେଶ୍ୟମୂଳକ ଭାବେ କମ୍ listener।** 2026-08-29ରେ ଚାରିଟି 67router unitକୁ disable
   କରାଯାଇଥିଲା — ପ୍ରତ୍ୟେକ ଅତିରିକ୍ତ listener ଉପରୋକ୍ତ memory budgetର ଆଉ ଜଣେ tenant।
   janitorର ସର୍ବାଧିକ ସୀମା 6 (cronରେ `MAX_ACTIVE_RUNNERS=6`): ଏହା boxରେ ଥିବା ପ୍ରତ୍ୟେକ
   `Runner.Listener`କୁ ଗଣେ, ଏବଂ OmniHeuris + OmniMind ଆମର ଚାରିଟି ସହିତ ଆଉ ଦୁଇଟି

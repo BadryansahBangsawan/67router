@@ -4,7 +4,7 @@
 
 ---
 
-Kun OmniRoute toimii Dockerissa, tavallinen "Tuo Zedin avainnipusta" -toiminto epäonnistuu,
+Kun 67router toimii Dockerissa, tavallinen "Tuo Zedin avainnipusta" -toiminto epäonnistuu,
 koska säilö ei voi käyttää isäntäkäyttöjärjestelmän avainnippupalvelua (Linuxissa libsecret,
 macOS:ssä Avainnippu ja Windowsissa Tunnistetietojen hallinta), eivätkä isäntätiedostojärjestelmän
 Zed-määrityshakemistot oletusarvoisesti näy säilön sisällä.
@@ -20,7 +20,7 @@ Säilön sisällä ilmenee kaksi estävää ongelmaa:
    kommunikoi käyttöjärjestelmän avainnippupalvelun kanssa Unix-pistokkeen tai D-Bus-istunnon kautta.
    Kumpaakaan ei oletusarvoisesti välitetä säilöön, joten tunnistetietojen lukeminen epäonnistuu aina.
 
-OmniRoute tunnistaa Docker-ympäristön kahden heuristiikan avulla:
+67router tunnistaa Docker-ympäristön kahden heuristiikan avulla:
 
 - Tiedoston `/.dockerenv` olemassaolo (Docker-daemon kirjoittaa sen säilön käynnistyessä).
 - Merkkijonon `docker` esiintyminen tiedostossa `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Kun jompikumpi heuristiikka täsmää, tuontireitti palauttaa HTTP 422 -vastauks
 
 1. Avaa **Hallintapaneeli → Palveluntarjoajat → Zed**.
 2. **Manuaalinen tunnuksen tuonti** -paneeli näkyy avainnipusta tuonnin kortin alapuolella. Kun
-   OmniRoute tunnistaa Dockerin, tämä paneeli laajenee automaattisesti ensimmäisen epäonnistuneen
+   67router tunnistaa Dockerin, tämä paneeli laajenee automaattisesti ensimmäisen epäonnistuneen
    avainnipusta tuonnin jälkeen.
 3. Valitse palveluntarjoaja avattavasta valikosta (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter tai DeepSeek).

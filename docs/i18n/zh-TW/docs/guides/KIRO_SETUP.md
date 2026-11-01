@@ -4,7 +4,7 @@
 
 ---
 
-本指南說明如何將 Kiro（由 AWS 託管的 AI 程式設計助理）帳戶新增至 OmniRoute，
+本指南說明如何將 Kiro（由 AWS 託管的 AI 程式設計助理）帳戶新增至 67router，
 並著重介紹如何同時執行多個帳戶而不發生工作階段衝突。
 
 ---
@@ -21,10 +21,10 @@ Kiro 的後端使用 AWS SSO OIDC 用戶端註冊來追蹤作用中的工作階�
 
 ---
 
-## OmniRoute 如何解決此問題（v3.8.0+）
+## 67router 如何解決此問題（v3.8.0+）
 
-從 v3.8.0 開始，OmniRoute 會在每次匯入 Kiro 連線時呼叫 `registerClient()`（AWS SSO OIDC）。
-如此可讓每個 OmniRoute 連線擁有專屬的 OIDC
+從 v3.8.0 開始，67router 會在每次匯入 Kiro 連線時呼叫 `registerClient()`（AWS SSO OIDC）。
+如此可讓每個 67router 連線擁有專屬的 OIDC
 用戶端註冊。由於每個用戶端註冊彼此獨立，因此重新整理或
 重新驗證某個帳戶不會影響任何其他帳戶的重新整理權杖。
 
@@ -57,7 +57,7 @@ Kiro 的後端使用 AWS SSO OIDC 用戶端註冊來追蹤作用中的工作階�
 
 ### 先決條件
 
-- OmniRoute v3.8.0 或更新版本。
+- 67router v3.8.0 或更新版本。
 - 一個可正常使用的 Kiro 帳戶（電子郵件地址 + 密碼、Google 或 GitHub 登入）。
 - 可選擇準備第二個 Kiro 帳戶。
 
@@ -68,7 +68,7 @@ Kiro 的後端使用 AWS SSO OIDC 用戶端註冊來追蹤作用中的工作階�
    - **匯入權杖**——貼上以 `aorAAAAAG` 開頭的重新整理權杖。
    - **API 金鑰**——貼上長效的 Kiro / CodeWhisperer API 金鑰。
    - **Google / GitHub 登入**——在瀏覽器中完成 OAuth 流程。
-   - **自動匯入**——按一下按鈕；OmniRoute 會從本機 kiro-cli 資料庫或 `~/.aws/sso/cache`
+   - **自動匯入**——按一下按鈕；67router 會從本機 kiro-cli 資料庫或 `~/.aws/sso/cache`
      讀取憑證。
 3. 連線隨即儲存。重新整理權杖流程會自動註冊一個專屬的
    OIDC 用戶端。API 金鑰流程會透過 AWS 驗證金鑰，且不會儲存重新整理權杖。
@@ -122,7 +122,7 @@ API 金鑰驗證適用於長期有效的 Kiro / AWS CodeWhisperer Bearer 憑證�
 2. 選擇 **API 金鑰**。
 3. 貼上 API 金鑰並選擇 AWS 區域：**自動偵測**（預設）、**美國東部
    （維吉尼亞北部）**或**歐洲（法蘭克福）**。
-4. OmniRoute 會驗證金鑰，並儲存連線且固定至該金鑰可運作的區域。
+4. 67router 會驗證金鑰，並儲存連線且固定至該金鑰可運作的區域。
 
 ### API
 
@@ -170,7 +170,7 @@ OIDC 或社交登入存取權杖。`KiroExecutor.execute()` 僅會將 API 金鑰
 
 ## OIDC 用戶端到期
 
-AWS SSO OIDC 公開用戶端通常會在 90 天後到期（`clientSecretExpiresAt`）。OmniRoute 會將此時間戳記儲存在 `providerSpecificData` 中，以便進行可觀測性監控。若連線在約 90 天後停止重新整理，請重新匯入連線，以取得新的 OIDC 用戶端註冊。到期時自動重新註冊已列為未來的改進項目。
+AWS SSO OIDC 公開用戶端通常會在 90 天後到期（`clientSecretExpiresAt`）。67router 會將此時間戳記儲存在 `providerSpecificData` 中，以便進行可觀測性監控。若連線在約 90 天後停止重新整理，請重新匯入連線，以取得新的 OIDC 用戶端註冊。到期時自動重新註冊已列為未來的改進項目。
 
 API 金鑰連線不會有 OIDC 用戶端到期問題，因為它們不會透過 AWS SSO OIDC 進行重新整理。
 
@@ -185,12 +185,12 @@ API 金鑰連線不會有 OIDC 用戶端到期問題，因為它們不會透過 
 ### 匯入失敗並顯示「Token validation failed」
 
 - 確認重新整理權杖以 `aorAAAAAG` 開頭。
-- 確認 OmniRoute 可以連線至 `https://oidc.us-east-1.amazonaws.com`（或已設定的區域）。若您位於企業 Proxy 後方，請在 **Dashboard → Settings → Proxies** 中設定提供者層級的 Proxy。
+- 確認 67router 可以連線至 `https://oidc.us-east-1.amazonaws.com`（或已設定的區域）。若您位於企業 Proxy 後方，請在 **Dashboard → Settings → Proxies** 中設定提供者層級的 Proxy。
 
 ### API 金鑰匯入失敗
 
 - 確認該金鑰是 Kiro / CodeWhisperer API 金鑰，而不是重新整理權杖。
 - 確認 AWS 區域與金鑰/帳戶相符。預設為 `us-east-1`。
-- 該金鑰必須能夠呼叫 `ListAvailableProfiles`；否則 OmniRoute 無法解析必要的 `profileArn`。
+- 該金鑰必須能夠呼叫 `ListAvailableProfiles`；否則 67router 無法解析必要的 `profileArn`。
 
 如有其他問題，請參閱主要的 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)。

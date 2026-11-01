@@ -4,77 +4,30 @@
 
 ---
 
-> **ရင်းမြစ်:** `src/lib/{a2a,acp,cloudAgent}/`, `src/app/api/{a2a,acp,cloud}/`, `src/app/api/v1/agents/`
 > **နောက်ဆုံးမွမ်းမံထားသည်:** 2026-06-28 — v3.8.40
 
-OmniRoute သည် agent နှင့်သက်ဆိုင်သော မျက်နှာပြင် သုံးမျိုးကို ဖော်ထုတ်ပေးထားသည်။ ၎င်းတို့သည် အပေါ်ယံအားဖြင့် ဆင်တူသော်လည်း မတူညီသော ပြဿနာများကို ဖြေရှင်းပေးသည်။ သင့်လျော်သောတစ်ခုကို ရွေးချယ်ရန် ဤစာမျက်နှာကို အသုံးပြုပါ။
+67router သည် agent နှင့်သက်ဆိုင်သော မျက်နှာပြင် သုံးမျိုးကို ဖော်ထုတ်ပေးထားသည်။ ၎င်းတို့သည် အပေါ်ယံအားဖြင့် ဆင်တူသော်လည်း မတူညီသော ပြဿနာများကို ဖြေရှင်းပေးသည်။ သင့်လျော်သောတစ်ခုကို ရွေးချယ်ရန် ဤစာမျက်နှာကို အသုံးပြုပါ။
 
 ## အနှစ်ချုပ်
 
 | မျက်နှာပြင်                   | အသင့်တော်ဆုံး အသုံးပြုမှု                                                                                                                                         | ဆက်သွယ်ပို့ဆောင်မှု              | စံသတ်မှတ်ချက်             |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------- |
 | **A2A — Agent အချင်းချင်း**   | A2A protocol ကို အသုံးပြုသော အခြား peer agent များနှင့် agent အချင်းချင်း ပူးပေါင်းဆောင်ရွက်ခြင်း                                                                 | HTTP ပေါ်မှ JSON-RPC 2.0         | A2A v0.3 (အများသုံး spec) |
-| **ACP — CLI Agents Registry** | အသုံးပြုသူ၏စက်တွင် ထည့်သွင်းထားသော CLI coding agent များကို ရှာဖွေခြင်း / မှတ်ပုံတင်ခြင်း / စတင်အသုံးပြုခြင်း (Cursor, Cline, Codex CLI, Claude Code, Aider စသည်) | HTTP REST                        | OmniRoute သီးသန့်         |
-| **Cloud Agents**              | အချိန်ကြာမြင့်စွာ လုပ်ဆောင်ရသော coding task များကို ပြင်ပ cloud service များထံ ပေးပို့ခြင်း (Codex Cloud, Devin, Jules, Cursor Cloud)                             | HTTP REST + DB အခြေပြု task များ | OmniRoute သီးသန့်         |
+| **ACP — CLI Agents Registry** | အသုံးပြုသူ၏စက်တွင် ထည့်သွင်းထားသော CLI coding agent များကို ရှာဖွေခြင်း / မှတ်ပုံတင်ခြင်း / စတင်အသုံးပြုခြင်း (Cursor, Cline, Codex CLI, Claude Code, Aider စသည်) | HTTP REST                        | 67router သီးသန့်          |
+| **Cloud Agents**              | အချိန်ကြာမြင့်စွာ လုပ်ဆောင်ရသော coding task များကို ပြင်ပ cloud service များထံ ပေးပို့ခြင်း (Codex Cloud, Devin, Jules, Cursor Cloud)                             | HTTP REST + DB အခြေပြု task များ | 67router သီးသန့်          |
 
 ဤသုံးမျိုးသည် တစ်ခုနှင့်တစ်ခု သီးခြားလွတ်လပ်သည် — မည်သည့်အစုခွဲကိုမဆို ရွေးချယ်နိုင်သည်။
 
 ## ဆုံးဖြတ်ချက်ချရန် လမ်းညွှန်ပုံ
 
-```
-ဤစက်ပြင်ပတွင် အလုပ်လုပ်ဆောင်ရန် cloud service တစ်ခု (Codex Cloud / Cursor Cloud / Devin / Jules) လိုအပ်ပါသလား?
-├─ လိုအပ်သည် → Cloud Agents (POST /api/v1/agents/tasks)
-└─ မလိုအပ်ပါ → ဆက်လက်စဉ်းစားပါ
-    │
-    A2A ကို အသုံးပြုပြီး ပူးပေါင်းဆောင်ရွက်လိုသော peer agent ရှိပါသလား?
-    ├─ ရှိသည် → A2A (POST /a2a)
-    └─ မရှိပါ → ဆက်လက်စဉ်းစားပါ
-        │
-        စက်တွင် ထည့်သွင်းထားသော CLI coding agent များကို စာရင်းပြုစုရန် / စီစဉ်သတ်မှတ်ရန် လိုအပ်ပါသလား?
-        ├─ လိုအပ်သည် → ACP (GET /api/acp/agents)
-        └─ မလိုအပ်ပါ → ရိုးရိုး /v1/chat/completions ကို အသုံးပြုပါ
-```
-
-## 1. A2A — Agent အချင်းချင်း
-
-**Spec:** [A2A v0.3](https://a2a-protocol.org)
-**OmniRoute endpoint:** `POST /a2a` (JSON-RPC 2.0)
-**Agent Card:** `GET /.well-known/agent.json`
-
-### အသုံးပြုသင့်သည့်အချိန်
-
-- OmniRoute က peer များထဲမှ တစ်ခုဖြစ်သည့် multi-agent system တစ်ခုကို တည်ဆောက်သည့်အခါ
-- OmniRoute ၏ routing ဆိုင်ရာ အသိဉာဏ် (smart-routing, quota-management စသည်) ကို Google ADK ကဲ့သို့သော framework များ သို့မဟုတ် ယေဘုယျ agent mesh များရှိ agent များထံ ဖော်ထုတ်ပေးသည့်အခါ
-- OmniRoute ကို စံသတ်မှတ်ထားသော ရှာဖွေတွေ့ရှိမှု + ခေါ်ယူအသုံးပြုမှု မျက်နှာပြင်နောက်ကွယ်တွင် ထည့်သွင်းအသုံးပြုသည့်အခါ
-
-### နည်းလမ်းများ
-
-- `message/send` — message တစ်ခု ပေးပို့ပြီး synchronous တုံ့ပြန်မှုကို လက်ခံရယူသည်
-- `message/stream` — ပေးပို့ပြီး SSE ဖြင့် stream လုပ်ထားသော တိုးတက်မှု event များကို လက်ခံရယူသည်
-- `tasks/get` — ID ဖြင့် task ကို ဖတ်ရှုသည်
-- `tasks/cancel` — လုပ်ဆောင်နေသော task တစ်ခုကို ပယ်ဖျက်သည်
-
-### အသင့်ပါဝင်သော skill များ (6)
-
-- `smart-routing` — prompt တစ်ခုကို အသင့်တော်ဆုံး combo မှတစ်ဆင့် လမ်းကြောင်းသတ်မှတ်ပေးသည်
-- `quota-management` — provider တစ်ခုချင်းစီ၏ quota အခြေအနေကို အစီရင်ခံသည်
-- `provider-discovery` — ထည့်သွင်းထားသော provider များကို ၎င်းတို့၏ လုပ်ဆောင်နိုင်စွမ်းများနှင့်အတူ စာရင်းပြုစုသည်
-- `cost-analysis` — request/conversation တစ်ခု၏ ကုန်ကျစရိတ်ကို ခန့်မှန်းသည်
-- `health-report` — provider တစ်ခုချင်းစီ၏ breaker/cooldown/lockout အခြေအနေကို စုစည်းဖော်ပြသည်
-- `list-capabilities` — agent တွင် ရရှိနိုင်သော skill များနှင့် metadata ကို စာရင်းကောက်ယူဖော်ပြသည်
-
-### အသေးစိတ်လေ့လာရန်
-
-ဆက်သွယ်ပို့ဆောင်မှု အသေးစိတ်များ၊ agent card ဖွဲ့စည်းပုံ၊ task TTL စီစဉ်သတ်မှတ်မှုနှင့် skill အသစ်များ ထည့်သွင်းရန် template အတွက် [A2A-SERVER.md](./A2A-SERVER.md) ကို ကြည့်ပါ။
-
 ## 2. ACP — CLI Agent Registry
 
-**OmniRoute endpoint:** `GET /api/acp/agents`
+**67router endpoint:** `GET /api/acp/agents`
 **Source:** `src/lib/acp/{index,manager,registry}.ts`
 
 ### ၎င်းသည် ဘာလဲ
 
-ACP သည် OmniRoute ၏ **စက်တွင်း CLI agent စာရင်း** ဖြစ်သည်။ ၎င်းသည် host ပေါ်တွင် မည်သည့် coding CLI များ (Cursor၊ Cline၊ Claude Code၊ Codex CLI၊ Continue စသည်တို့) ထည့်သွင်းထားသည်ကို ရှာဖွေစစ်ဆေးပြီး ၎င်းတို့၏ version များကို သတ်မှတ်ဖော်ထုတ်ကာ CLI တစ်ခုစီအား OmniRoute သို့ ညွှန်ပြချိတ်ဆက်နိုင်စေရန် dashboard တွင် ဖော်ပြပေးသည်။
+ACP သည် 67router ၏ **စက်တွင်း CLI agent စာရင်း** ဖြစ်သည်။ ၎င်းသည် host ပေါ်တွင် မည်သည့် coding CLI များ (Cursor၊ Cline၊ Claude Code၊ Codex CLI၊ Continue စသည်တို့) ထည့်သွင်းထားသည်ကို ရှာဖွေစစ်ဆေးပြီး ၎င်းတို့၏ version များကို သတ်မှတ်ဖော်ထုတ်ကာ CLI တစ်ခုစီအား 67router သို့ ညွှန်ပြချိတ်ဆက်နိုင်စေရန် dashboard တွင် ဖော်ပြပေးသည်။
 
 HTTP မျက်နှာပြင်သည် "CLI Tools" UI နှင့်
 CLI fingerprint ခြေရာခံခြင်းကို ပံ့ပိုးပေးသော စက်တွင်းစာရင်းတစ်ခုဖြစ်သည် ([CLI-TOOLS.md](../reference/CLI-TOOLS.md) ကိုကြည့်ပါ)။ သီးခြားအနေဖြင့်၊
@@ -113,8 +66,8 @@ POST အတွက် body ပုံစံ (`src/app/api/acp/agents/route.ts` ရ
 
 ### အသုံးပြုနိုင်သည့် အခြေအနေများ
 
-- Dashboard ရှိ "CLI Tools" စာမျက်နှာသည် ထည့်သွင်းထားသည့်အရာများကို စာရင်းပြုပြီး တစ်ခုစီအား OmniRoute သို့ ညွှန်ပြချိတ်ဆက်နိုင်ရန် ကူညီပေးသည်
-- Custom agent များက အဆင့်မြင့်အသုံးပြုသူများအား OmniRoute က မူလအားဖြင့် မသိရှိထားသော စက်တွင်းသုံး/မူပိုင် CLI များကို စာရင်းသွင်းနိုင်စေသည်
+- Dashboard ရှိ "CLI Tools" စာမျက်နှာသည် ထည့်သွင်းထားသည့်အရာများကို စာရင်းပြုပြီး တစ်ခုစီအား 67router သို့ ညွှန်ပြချိတ်ဆက်နိုင်ရန် ကူညီပေးသည်
+- Custom agent များက အဆင့်မြင့်အသုံးပြုသူများအား 67router က မူလအားဖြင့် မသိရှိထားသော စက်တွင်းသုံး/မူပိုင် CLI များကို စာရင်းသွင်းနိုင်စေသည်
 - ရှာဖွေတွေ့ရှိမှုရလဒ်သည် `cli-tools` fingerprint matrix အတွက် အချက်အလက်ပံ့ပိုးပေးသည်
 
 ### ACP ကို အသုံးမပြုသင့်သည့် အခြေအနေများ
@@ -124,86 +77,7 @@ POST အတွက် body ပုံစံ (`src/app/api/acp/agents/route.ts` ရ
   fallback အဖြစ် ချိတ်ဆက်ထားခြင်းမရှိပါ။ ပုံမှန် အပြန်အလှန်အသုံးပြုမှုအတွက် ပြင်ဆင်သတ်မှတ်ထားသော CLI ကို ကိုယ်တိုင်စတင်ပါ သို့မဟုတ်
   `omniroute run` ကို အသုံးပြုပါ။
 
-## 3. Cloud Agent များ
-
-**OmniRoute endpoint များ:** `/api/v1/agents/tasks/*` (lifecycle) + `/api/cloud/*` (plumbing)
-**ရင်းမြစ်:** `src/lib/cloudAgent/`
-
-### ၎င်းက ဘာလဲ
-
-Third-party cloud coding agent များပေါ်တွင် တစ်သမတ်တည်းရှိသော interface တစ်ခုဖြစ်သည်။ သင်သည် prompt + repo URL ကို ပေးပို့ပြီး၊ OmniRoute က သင့်လျော်သည့် cloud agent ထံ လွှဲပြောင်းပေးကာ status ကို အခါအားလျော်စွာ စစ်ဆေးပြီး ရလဒ်များကို ပြန်ပေးသည်။
-
-### ပံ့ပိုးထားသော agent များ (4 ခု၊ အားလုံးကို `src/lib/cloudAgent/agents/` တွင် အတည်ပြုထားသည်)
-
-- `codex-cloud` — OpenAI Codex Cloud
-- `devin` — Cognition Devin
-- `jules` — Google Jules
-
-### Lifecycle
-
-```
-POST /api/v1/agents/tasks
-  → agent class တစ်ခုစီအတွက် BaseAgent.createTask()
-  → ပြင်ပ service က အလုပ်စတင်သည်
-  → DB တွင် task row ဖန်တီးသည် (cloud_agent_tasks)
-  ↓
-GET /api/v1/agents/tasks/[id]
-  → provider ထံမှ lazy status sync
-  → လက်ရှိ status + plan + activity log ကို ပြန်ပေးသည်
-  ↓
-POST /api/v1/agents/tasks/[id]   (action: "approve" | "message" | "cancel")
-  → provider ထံ လွှဲပို့သည် (သို့မဟုတ် စက်တွင်း၌ ပယ်ဖျက်ထားကြောင်း မှတ်သားသည်)
-  ↓
-DELETE /api/v1/agents/tasks/[id]
-  → စက်တွင်း၌ ပယ်ဖျက်သည်
-```
-
-### Auth
-
-⚠️ **`/api/v1/agents/tasks/*` endpoint အားလုံးသည် management auth လိုအပ်သည်** (commit `588a0333`)။ v3.8.0 မှစ၍ Bearer တစ်မျိုးတည်းသာ အသုံးပြုသော caller များသည် 401 ကို ရရှိမည်။
-
-### အသေးစိတ်လေ့လာရန်
-
-`CloudAgentBase` contract၊ agent တစ်ခုချင်းစီ၏ အသေးစိတ်အချက်များ၊ schema အသေးစိတ်များနှင့် credential plumbing endpoint များအတွက် [CLOUD_AGENT.md](./CLOUD_AGENT.md) ကို ကြည့်ပါ။
-
-## နှိုင်းယှဉ်ချက်: A2A နှင့် Cloud Agents
-
-နှစ်ခုစလုံးတွင် "အချိန်ကြာမြင့်စွာ လုပ်ဆောင်သည့် task များ" ရှိသော်လည်း မတူညီသော layer များတွင် လုပ်ဆောင်ပါသည်-
-
-| အချက်အလက်                     | A2A                                                                                                                    | Cloud Agents                                                     |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| စံနှုန်း                      | Open A2A v0.3                                                                                                          | OmniRoute အတွက် သီးသန့်                                          |
-| တွက်ချက်မှု လုပ်ဆောင်သည့်နေရာ | OmniRoute အတွင်း (`configured combos` များကို အသုံးပြုသည်)                                                             | ပြင်ပ (Codex / Devin / Jules ဆာဗာများ)                           |
-| Task ကြာချိန်                 | မူလ TTL 5 မိနစ် (`TaskManager` တွင် ပြင်ဆင်သတ်မှတ်နိုင်သည်)                                                            | မိနစ်များမှ နာရီများအထိ                                          |
-| Repo အကြောင်း သိရှိမှု        | မရှိ (`prompt` များကိုသာ ပေးပို့သည်)                                                                                   | ရှိ (repo URL + branch)                                          |
-| အသုံးပြုမှု                   | Agent များအကြား ပူးပေါင်းလုပ်ဆောင်ခြင်း၊ smart routing ကို service တစ်ခုအဖြစ် အသုံးပြုခြင်း                            | "repo Y တွင် feature X ကို ဖန်တီးပါ" ဟူသော အလုပ်ကို လွှဲအပ်ခြင်း |
-| စစ်မှန်ကြောင်း အတည်ပြုမှု     | `/a2a` အတွက် `OMNIROUTE_API_KEY` ကို ရွေးချယ်အသုံးပြုနိုင်သည်၊ `/api/a2a/*` REST helper များအတွက် management လိုအပ်သည် | အမြဲတမ်း management လိုအပ်သည်                                    |
-
 ## ပေါင်းစပ်အသုံးပြုမှု နမူနာများ
-
-### OmniRoute ၏ A2A စွမ်းဆောင်ရည်များကို ရှာဖွေကြည့်ရှုခြင်း
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Skill 6 ခုလုံး၊ transport များနှင့် version ပါဝင်သော Agent Card ကို ပြန်ပေးပါသည်။
-
-### OmniRoute ကို A2A agent အဖြစ် ခေါ်ယူအသုံးပြုခြင်း
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "message/send",
-    "params": {
-      "messages": [{"role": "user", "content": "Route this prompt"}],
-      "skill": "smart-routing"
-    },
-    "id": 1
-  }'
-```
 
 ### ACP မှတစ်ဆင့် ထည့်သွင်းထားသော CLI agent များကို စာရင်းပြုစုခြင်း
 
@@ -228,30 +102,6 @@ curl -X POST http://localhost:20128/api/acp/agents \
   }'
 ```
 
-### Cloud Agent task တစ်ခု ပေးပို့ခြင်း
-
-```bash
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Cookie: auth_token=..." \
-  -H "Content-Type: application/json" \
-  -d '{
-    "providerId": "devin",
-    "prompt": "Implement feature X in repo Y",
-    "source": {
-      "repoName": "user/repo",
-      "repoUrl": "https://github.com/user/repo",
-      "branch": "main"
-    }
-  }'
-```
-
-### Cloud task ၏ အခြေအနေကို အချိန်အပိုင်းအခြားအလိုက် စစ်ဆေးခြင်း
-
-```bash
-curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
-  -H "Cookie: auth_token=..."
-```
-
 ## မည်သည့်အချိန်တွင် မည်သည့်အရာကို အသုံးပြုသင့်သနည်း
 
 - **Chatbot / copilot frontend** → `/v1/chat/completions` (OpenAI နှင့် တွဲဖက်အသုံးပြုနိုင်သည် — agent protocol မဟုတ်ပါ)
@@ -263,7 +113,7 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ```
                 ┌─────────────────────┐
-                │   OmniRoute Core    │
+                │   67router Core    │
                 └─────────────────────┘
                   ↑       ↑        ↑
         ┌─────────┘       │        └─────────┐
@@ -282,8 +132,6 @@ curl http://localhost:20128/api/v1/agents/tasks/<task-id> \
 
 ## ထပ်မံကြည့်ရှုရန်
 
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A အကြောင်း အသေးစိတ်လေ့လာရန်
-- [CLOUD_AGENT.md](./CLOUD_AGENT.md) — Cloud Agents အကြောင်း အသေးစိတ်လေ့လာရန်
 - [CLI-TOOLS.md](../reference/CLI-TOOLS.md) — ပြင်ပ CLI ပေါင်းစည်းမှုများ (ACP ကို အသုံးပြုသည်)
 - [SKILLS.md](./SKILLS.md) — Skills framework (A2A skills နှင့် ကွဲပြားသည် — ဒေသတွင်း လုပ်ဆောင်မှု sandbox)
 - [API_REFERENCE.md](../reference/API_REFERENCE.md#agents-protocol) — endpoint ကိုးကားချက်

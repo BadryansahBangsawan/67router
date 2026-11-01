@@ -6,7 +6,7 @@ lastUpdated: 2026-08-10
 
 # Admission lanes (#9654) — two lane systems, what gates each, where each reports
 
-OmniRoute has **two** process-local lane systems with different scopes. They are
+67router has **two** process-local lane systems with different scopes. They are
 complementary; operators should know which one they are looking at.
 
 ## 1. Byte-level process-wide admission (`chatBodyAdmission.ts`)

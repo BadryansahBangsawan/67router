@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Português (Portugal))
+# CLI Tools — 67router (Português (Portugal))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Última atualização: 2026-08-23
 
-O OmniRoute integra-se com três categorias de ferramentas CLI distribuídas por três páginas específicas do painel:
+O 67router integra-se com três categorias de ferramentas CLI distribuídas por três páginas específicas do painel:
 
-| Página         | Rota                    | Conceito                                                                                        | Quantidade  |
-| -------------- | ----------------------- | ----------------------------------------------------------------------------------------------- | ----------- |
-| **CLI Code's** | `/dashboard/cli-code`   | Ferramentas de programação que aponta para o OmniRoute (Cliente → CLI → OmniRoute → Fornecedor) | 26          |
-| **CLI Agents** | `/dashboard/cli-agents` | Agentes autónomos que aponta para o OmniRoute (mesmo fluxo, âmbito mais abrangente)             | 10          |
-| **ACP Agents** | `/dashboard/acp-agents` | CLIs que o OmniRoute inicia como backend através de stdio/ACP (fluxo inverso)                   | ver registo |
+| Página         | Rota                    | Conceito                                                                                      | Quantidade  |
+| -------------- | ----------------------- | --------------------------------------------------------------------------------------------- | ----------- |
+| **CLI Code's** | `/dashboard/cli-code`   | Ferramentas de programação que aponta para o 67router (Cliente → CLI → 67router → Fornecedor) | 26          |
+| **CLI Agents** | `/dashboard/cli-agents` | Agentes autónomos que aponta para o 67router (mesmo fluxo, âmbito mais abrangente)            | 10          |
+| **ACP Agents** | `/dashboard/acp-agents` | CLIs que o 67router inicia como backend através de stdio/ACP (fluxo inverso)                  | ver registo |
 
 As rotas legadas redirecionam através de 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ As rotas legadas redirecionam através de 308: `/dashboard/cli-tools` → `/dash
 CLI Code's / CLI Agents (fluxo de consumo):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (todos apontam para o OmniRoute)
+           ▼  (todos apontam para o 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (o OmniRoute encaminha para o fornecedor correto)
+           ▼  (o 67router encaminha para o fornecedor correto)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (fluxo inverso de inicialização):
-    Pedido do cliente → OmniRoute → inicia a CLI através de stdio/ACP → resposta
+    Pedido do cliente → 67router → inicia a CLI através de stdio/ACP → resposta
 ```
 
 **Vantagens:**
@@ -45,9 +45,9 @@ ACP Agents (fluxo inverso de inicialização):
 
 ## Configuração automática com `setup-*`
 
-Não tem de escrever manualmente a configuração de cada ferramenta. O OmniRoute disponibiliza um comando `setup-*`
+Não tem de escrever manualmente a configuração de cada ferramenta. O 67router disponibiliza um comando `setup-*`
 por cada CLI suportada, que lê o catálogo de modelos **em tempo real** de uma instância
-do OmniRoute em execução (local ou remota) e escreve a configuração da própria ferramenta na sua máquina:
+do 67router em execução (local ou remota) e escreve a configuração da própria ferramenta na sua máquina:
 
 ```bash
 omniroute setup-codex        omniroute setup-claude       omniroute setup-opencode
@@ -58,7 +58,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Cada um aceita `--remote <url> --api-key <key>` (para configurar uma ferramenta local com uma
-instância remota do OmniRoute), `--dry-run` (para pré-visualizar sem escrever) e `--port`. As ferramentas
+instância remota do 67router), `--dry-run` (para pré-visualizar sem escrever) e `--port`. As ferramentas
 sem descoberta automática de modelos (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) aceitam
 `--model <id>` (e `--yes` para execuções não interativas). `setup-5dive` é a única
 receita que não escreve em `$HOME`: configura uma frota de agentes 5dive,
@@ -77,9 +77,9 @@ mas não tem qualquer receita `setup-*`/`configure`.
 
 ### Executar estes comandos dentro de um contentor
 
-Um comando `setup-*` executado dentro do contentor do OmniRoute escreve no diretório pessoal
+Um comando `setup-*` executado dentro do contentor do 67router escreve no diretório pessoal
 do próprio contentor, que não é lido por nenhuma CLI do anfitrião e desaparece com o
-contentor. O OmniRoute deteta esta situação e termina com o código `2`, apresentando instruções em vez de
+contentor. O 67router deteta esta situação e termina com o código `2`, apresentando instruções em vez de
 escrever. Existem duas formas suportadas de prosseguir — instalar a CLI no anfitrião e utilizar
 `omniroute connect` para ligar ao contentor, ou montar os diretórios de configuração através de bind mount e definir
 `CLI_CONFIG_HOME` (o perfil `host` do Compose). Todos os comandos `setup-*`, bem como
@@ -203,7 +203,7 @@ Agentes autónomos apresentados em `/dashboard/cli-agents`:
 
 ## 3. Agentes ACP (/dashboard/acp-agents)
 
-Esta página (anteriormente denominada `/dashboard/agents`) apresenta as CLIs que o OmniRoute pode **iniciar** como motores de execução de backend através do protocolo stdio/ACP. O catálogo é mantido separadamente em `src/lib/acp/registry.ts` e **não** é igual a `CLI_TOOLS`.
+Esta página (anteriormente denominada `/dashboard/agents`) apresenta as CLIs que o 67router pode **iniciar** como motores de execução de backend através do protocolo stdio/ACP. O catálogo é mantido separadamente em `src/lib/acp/registry.ts` e **não** é igual a `CLI_TOOLS`.
 
 ---
 
@@ -330,7 +330,7 @@ São fornecidas traduções completas para PT-BR e EN. As outras 39 regiões uti
 
 ## 9. Início Rápido
 
-### Passo 1 — Obter uma Chave de API do OmniRoute
+### Passo 1 — Obter uma Chave de API do 67router
 
 1. Abra `/dashboard/api-manager` → **Criar Chave de API**
 2. Atribua-lhe um nome (por exemplo, `cli-tools`) e selecione todas as permissões
@@ -394,7 +394,7 @@ cargo install smelt  # Baseado em Rust
 ### Passo 4 — Definir Variáveis de Ambiente Globais
 
 ```bash
-# Endpoint Universal do OmniRoute
+# Endpoint Universal do 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Modo VS Code:**
 Definições da extensão Cline → Fornecedor de API: `OpenAI Compatible` → URL base: `http://localhost:20128/v1`
 
-Em alternativa, utilize o painel do OmniRoute → **Ferramentas CLI → Cline → Aplicar Configuração**.
+Em alternativa, utilize o painel do 67router → **Ferramentas CLI → Cline → Aplicar Configuração**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Em alternativa, utilize o painel do OmniRoute → **Ferramentas CLI → KiloCode → Aplicar Configuração**.
+Em alternativa, utilize o painel do 67router → **Ferramentas CLI → KiloCode → Aplicar Configuração**.
 
 ---
 
@@ -551,14 +551,14 @@ Reinicie o VS Code após a edição.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Utilize esta opção quando o VS Code Insiders estiver configurado para modelos com endpoints personalizados e pretender que o OmniRoute funcione sem um campo de cabeçalho personalizado.
+Utilize esta opção quando o VS Code Insiders estiver configurado para modelos com endpoints personalizados e pretender que o 67router funcione sem um campo de cabeçalho personalizado.
 
 **Localização recomendada:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Exemplo utilizando o alias tokenizado do OmniRoute:**
+**Exemplo utilizando o alias tokenizado do 67router:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Utilize esta opção quando o VS Code Insiders estiver configurado para modelos 
 
 **Notas:**
 
-- Substitua `sk-your-omniroute-key` por uma chave de API criada no OmniRoute.
+- Substitua `sk-your-omniroute-key` por uma chave de API criada no 67router.
 - O campo `url` deve apontar para `/api/v1/vscode/{token}/chat/completions`.
 - O campo `modelsUrl` deve apontar para `/api/v1/vscode/{token}/models`.
 - Dê preferência ao fluxo normal `/v1` + cabeçalho Bearer quando o cliente suportar cabeçalhos personalizados.
@@ -596,17 +596,17 @@ Utilize esta opção quando o VS Code Insiders estiver configurado para modelos 
 # Inicie sessão na sua conta AWS/Kiro:
 kiro-cli login
 
-# A CLI utiliza a sua própria autenticação — o OmniRoute não é necessário como backend para a própria Kiro CLI.
-# Utilize a kiro-cli em conjunto com o OmniRoute para outras ferramentas.
+# A CLI utiliza a sua própria autenticação — o 67router não é necessário como backend para a própria Kiro CLI.
+# Utilize a kiro-cli em conjunto com o 67router para outras ferramentas.
 kiro-cli status
 ```
 
-Para a aplicação de ambiente de trabalho **Kiro IDE**, utilize o endpoint MITM disponibilizado pelo OmniRoute
+Para a aplicação de ambiente de trabalho **Kiro IDE**, utilize o endpoint MITM disponibilizado pelo 67router
 em `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. CLI interno do OmniRoute
+## 10. CLI interno do 67router
 
 O binário `omniroute` fornece comandos para o ciclo de vida do servidor, configuração, diagnóstico e gestão de fornecedores. Ponto de entrada: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Variáveis de ambiente reconhecidas para a configuração não interativa:
 | Variável            | Finalidade                                                                            |
 | ------------------- | ------------------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | Chave de API do fornecedor (associada a `--api-key` através de `.env()` do Commander) |
-| `DATA_DIR`          | Substituir o diretório de dados do OmniRoute                                          |
+| `DATA_DIR`          | Substituir o diretório de dados do 67router                                           |
 
 Todas as outras entradas não interativas são transmitidas como opções, e não como variáveis de ambiente:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ O doctor executa estas verificações: `Config`, `Database`, `Storage/encryption
 ### Gestão de fornecedores
 
 ```bash
-omniroute providers available                       # Catálogo de fornecedores do OmniRoute
+omniroute providers available                       # Catálogo de fornecedores do 67router
 omniroute providers available --search openai       # Filtrar o catálogo por ID/nome/alias/categoria
 omniroute providers available --category api-key    # Filtrar por categoria (api-key, oauth, gratuito, ...)
 omniroute providers available --json                # JSON legível por máquina
@@ -684,7 +684,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` utilizam prioritariamente a API e, por conseguinte, funcionam no
 contexto ativo, seja este local ou remoto. A introdução de credenciais deve utilizar
 `--credential-stdin` ou `--credential-env`; `--dry-run --json` comunica apenas
-a presença/estrutura com os dados ocultados. `providers available` lê o catálogo do OmniRoute;
+a presença/estrutura com os dados ocultados. `providers available` lê o catálogo do 67router;
 `providers list/test/test-all/validate` mantêm o respetivo comportamento SQLite local e
 não exigem que o servidor esteja em execução.
 
@@ -727,7 +727,7 @@ esteja definida. Um campo cuja desencriptação falhe (chave obsoleta, texto cif
 
 ### Outros subcomandos
 
-Estes pressupõem um servidor OmniRoute em execução, salvo indicação em contrário:
+Estes pressupõem um servidor 67router em execução, salvo indicação em contrário:
 
 ```bash
 omniroute status                       # Estado detalhado da execução
@@ -735,7 +735,7 @@ omniroute logs                         # Transmitir registos de pedidos (--json,
 omniroute config list                  # Apresentar ferramentas de CLI configuradas
 
 omniroute provider list                # Listar fornecedores disponíveis (alias de providers list)
-omniroute provider add                 # Registar o OmniRoute como fornecedor numa ferramenta
+omniroute provider add                 # Registar o 67router como fornecedor numa ferramenta
 omniroute keys add | list | remove     # Gerir chaves de API
 omniroute models [provider]            # Listar modelos (--json, --search)
 omniroute combo list | switch | create | delete
@@ -749,7 +749,6 @@ omniroute cache                        # Estado da cache
 omniroute cache clear                  # Limpar as caches semântica + de assinaturas
 
 omniroute mcp status | restart         # Estado / reinício do servidor MCP
-omniroute a2a status | card            # Estado do servidor A2A / cartão do agente
 
 omniroute tunnel list | create | stop  # Gerir túneis (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Consultar / definir variáveis de ambiente (temporárias)
@@ -785,7 +784,7 @@ omniroute completion                   # Gerar conclusão automática da shell
 | `/v1/audio/speech`         | Conversão de texto em voz           | ElevenLabs, OpenAI TTS                 |
 | `/v1/audio/transcriptions` | Conversão de voz em texto           | Deepgram, AssemblyAI                   |
 
-Exemplos prontos a colar com um URL OmniRoute tokenizado:
+Exemplos prontos a colar com um URL 67router tokenizado:
 
 ```txt
 Exemplo de token: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -804,7 +803,7 @@ Chat do Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-
 
 | Erro                                                | Causa                                      | Correção                                                         |
 | --------------------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------- |
-| `Connection refused`                                | O OmniRoute não está em execução           | `omniroute serve`                                                |
+| `Connection refused`                                | O 67router não está em execução            | `omniroute serve`                                                |
 | `401 Unauthorized`                                  | Chave de API incorreta                     | Verificar em `/dashboard/api-manager`                            |
 | `No combo configured`                               | Nenhuma combinação de encaminhamento ativa | Configurar em `/dashboard/combos`                                |
 | A CLI apresenta "not installed"                     | O binário não está no PATH                 | Verificar `which <command>`                                      |
@@ -812,7 +811,7 @@ Chat do Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-
 | Ligação antiga `/dashboard/cli-tools`               | Marcador anterior à v3.8.6                 | Redirecionada automaticamente para `/dashboard/cli-code` (308)   |
 | Ligação antiga `/dashboard/agents`                  | Marcador anterior à v3.8.6                 | Redirecionada automaticamente para `/dashboard/acp-agents` (308) |
 
-## Gerir a política de chaves de inferência com a CLI do OmniRoute
+## Gerir a política de chaves de inferência com a CLI do 67router
 
 Utilize um contexto de gestão autenticado (consulte [Modo remoto](../guides/REMOTE-MODE.md))
 para inspecionar ou atualizar uma chave de inferência existente através do respetivo ID:

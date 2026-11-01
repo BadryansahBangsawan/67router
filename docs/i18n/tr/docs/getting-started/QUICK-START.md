@@ -1,14 +1,14 @@
-# Quick Start: Get OmniRoute Running in 3 Minutes (Türkçe)
+# Quick Start: Get 67router Running in 3 Minutes (Türkçe)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/QUICK-START.md) · 🇪🇹 [am](../../../am/docs/getting-started/QUICK-START.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/QUICK-START.md) · 🇦🇿 [az](../../../az/docs/getting-started/QUICK-START.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/QUICK-START.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/QUICK-START.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/QUICK-START.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/QUICK-START.md) · 🇩🇰 [da](../../../da/docs/getting-started/QUICK-START.md) · 🇩🇪 [de](../../../de/docs/getting-started/QUICK-START.md) · 🇬🇷 [el](../../../el/docs/getting-started/QUICK-START.md) · 🇪🇸 [es](../../../es/docs/getting-started/QUICK-START.md) · 🇪🇪 [et](../../../et/docs/getting-started/QUICK-START.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/QUICK-START.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/QUICK-START.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/QUICK-START.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/QUICK-START.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/QUICK-START.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/QUICK-START.md) · 🇮🇱 [he](../../../he/docs/getting-started/QUICK-START.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/QUICK-START.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/QUICK-START.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/QUICK-START.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/QUICK-START.md) · 🇮🇩 [id](../../../id/docs/getting-started/QUICK-START.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/QUICK-START.md) · 🇮🇹 [it](../../../it/docs/getting-started/QUICK-START.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/QUICK-START.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/QUICK-START.md) · 🇰🇭 [km](../../../km/docs/getting-started/QUICK-START.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/QUICK-START.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/QUICK-START.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/QUICK-START.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/QUICK-START.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/QUICK-START.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/QUICK-START.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/QUICK-START.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/QUICK-START.md) · 🇲🇲 [my](../../../my/docs/getting-started/QUICK-START.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/QUICK-START.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/QUICK-START.md) · 🇳🇴 [no](../../../no/docs/getting-started/QUICK-START.md) · 🇮🇳 [or](../../../or/docs/getting-started/QUICK-START.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/QUICK-START.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/QUICK-START.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/QUICK-START.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/QUICK-START.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/QUICK-START.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/QUICK-START.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/QUICK-START.md) · 🇱🇰 [si](../../../si/docs/getting-started/QUICK-START.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/QUICK-START.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/QUICK-START.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/QUICK-START.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/QUICK-START.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/QUICK-START.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/QUICK-START.md) · 🇮🇳 [te](../../../te/docs/getting-started/QUICK-START.md) · 🇹🇭 [th](../../../th/docs/getting-started/QUICK-START.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/QUICK-START.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/QUICK-START.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/QUICK-START.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/QUICK-START.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/QUICK-START.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/QUICK-START.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/QUICK-START.md)
 
 ---
 
-> **Kısaca**: Kurun → Uygun bir sağlayıcı bağlayın → IDE'nizi OmniRoute'a yönlendirin. İşte bu kadar.
+> **Kısaca**: Kurun → Uygun bir sağlayıcı bağlayın → IDE'nizi 67router'a yönlendirin. İşte bu kadar.
 
 ---
 
-## 1. Adım: OmniRoute'u Kurun
+## 1. Adım: 67router'u Kurun
 
 Tercih ettiğiniz yöntemi seçin:
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## 2. Adım: OmniRoute'u Başlatın
+## 2. Adım: 67router'u Başlatın
 
 ```bash
 omniroute
 ```
 
-OmniRoute, `http://localhost:20128` adresinde başlatılır. Kontrol paneli otomatik olarak açılır.
+67router, `http://localhost:20128` adresinde başlatılır. Kontrol paneli otomatik olarak açılır.
 
 ---
 
@@ -57,7 +57,7 @@ Koşulları ve kotası ihtiyaçlarınıza uygun bir sağlayıcı seçin. **Dashb
 
 ## 4. Adım: Çalıştığını Doğrulayın
 
-[API Keys](http://localhost:20128/dashboard/api-manager) bölümünden yeni bir anahtar oluşturun. Bu anahtar tekrar görüntülenmeyeceği için güvenli bir yerde saklayın. Bu anahtarın üst sağlayıcılara erişmek için değil, araçların OmniRoute'a erişmesi için kullanıldığını unutmayın.
+[API Keys](http://localhost:20128/dashboard/api-manager) bölümünden yeni bir anahtar oluşturun. Bu anahtar tekrar görüntülenmeyeceği için güvenli bir yerde saklayın. Bu anahtarın üst sağlayıcılara erişmek için değil, araçların 67router'a erişmesi için kullanıldığını unutmayın.
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
@@ -67,7 +67,7 @@ Bağlı modellerinizin listelendiğini görmelisiniz.
 
 ---
 
-## 5. Adım: IDE'nizi veya CLI Aracınızı OmniRoute'a Yönlendirin
+## 5. Adım: IDE'nizi veya CLI Aracınızı 67router'a Yönlendirin
 
 IDE'nizde veya CLI aracınızda şunları ayarlayın:
 
@@ -77,7 +77,7 @@ API Anahtarı:  [Kontrol Paneli → Endpoints bölümünden kopyalayın]
 Model:      auto
 ```
 
-Hepsi bu! IDE'niz artık otomatik sağlayıcı seçimiyle OmniRoute'u kullanıyor.
+Hepsi bu! IDE'niz artık otomatik sağlayıcı seçimiyle 67router'u kullanıyor.
 
 ### IDE Örneği: VSCode/Continue.dev
 
@@ -92,7 +92,7 @@ Hepsi bu! IDE'niz artık otomatik sağlayıcı seçimiyle OmniRoute'u kullanıyo
     apiKey: <YOUR_KEY>
 ```
 
-3. Continue.dev sohbet panelinde `OmniRoute - Auto` seçeneğini belirlediğinizde istekleriniz OmniRoute'a gönderilir.
+3. Continue.dev sohbet panelinde `OmniRoute - Auto` seçeneğini belirlediğinizde istekleriniz 67router'a gönderilir.
 4. (İsteğe bağlı) Okuyucu için alıştırma: IDE'nizin `config.yaml` dosyasını diğer tüm önceden oluşturulmuş yapılandırmalarla güncellemesini sağlayın 😊
 
 ### CLI Örneği: Codex CLI
@@ -110,19 +110,19 @@ Windows için (Komut İstemi):
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. Şimdi Codex'i OmniRoute için yapılandırılmış şekilde başlatalım. Şunu çalıştırın:
+2. Şimdi Codex'i 67router için yapılandırılmış şekilde başlatalım. Şunu çalıştırın:
 
 ```
 omniroute launch-codex --model auto
 ```
 
-Uç noktayı ve API anahtarını belirtmek için bunu `codex` ve komut satırı parametreleri aracılığıyla manuel olarak yapabilirsiniz; ancak yukarıdaki komutla OmniRoute sizin için her şeyi halleder.
+Uç noktayı ve API anahtarını belirtmek için bunu `codex` ve komut satırı parametreleri aracılığıyla manuel olarak yapabilirsiniz; ancak yukarıdaki komutla 67router sizin için her şeyi halleder.
 
 Aynı tek komutla başlatma yöntemi, genel başlatıcı üzerinden diğer CLI'lar için de çalışır: `omniroute run <target>`; `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` ve `gemini` seçeneklerini destekler (bkz. [CLI Entegrasyonları](../guides/CLI-INTEGRATIONS.md)).
 
-3. CLI artık istekleri OmniRoute'a gönderiyor olmalıdır.
+3. CLI artık istekleri 67router'a gönderiyor olmalıdır.
 
-### Aracınızın OmniRoute'a yönlendirme yaptığını doğrulayın
+### Aracınızın 67router'a yönlendirme yaptığını doğrulayın
 
 Sol kenar çubuğundaki [Monitoring/Logs](http://localhost:20128/dashboard/logs) seçeneğine tıklayarak isteğin ayrıntılarını görebilirsiniz. İsteğe tıklayarak daha fazla ayrıntı görüntüleyebilirsiniz. Ayrıca, kullandığınız istemci aracından hangi bilgilerin gönderildiğini de görebilirsiniz. Bu, öğrenme ve hata ayıklama açısından faydalıdır.
 
@@ -130,7 +130,7 @@ Sol kenar çubuğundaki [Monitoring/Logs](http://localhost:20128/dashboard/logs)
 
 ## Sırada Ne Var?
 
-- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — OmniRoute'un sizin için en iyi yapay zekâyı seçmesine izin verin
+- **[Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md)** — 67router'un sizin için en iyi yapay zekâyı seçmesine izin verin
 - **[Sağlayıcılar Kılavuzu](./PROVIDERS-GUIDE.md)** — Daha fazla sağlayıcı bağlayın (ücretsiz ve ücretli)
 - **[Ücretsiz Katmanlar Kılavuzu](./FREE-TIERS-GUIDE.md)** — Sağlayıcı koşullarını ve ücretsiz katman sınırlarını inceleyin
 - **[Sorun Giderme](../guides/TROUBLESHOOTING.md)** — Yaygın sorunları düzeltin
@@ -141,23 +141,23 @@ Sol kenar çubuğundaki [Monitoring/Logs](http://localhost:20128/dashboard/logs)
 
 ### "Bir API anahtarına ihtiyacım var mı?"
 
-OmniRoute API anahtarı, araçlarınızın kimliğini doğrular. Üst sağlayıcı kimlik bilgileri sağlayıcıya göre değişir: bazıları API anahtarı veya hesapla oturum açma gerektirir. Ücretsiz erişim garanti edilmez.
+67router API anahtarı, araçlarınızın kimliğini doğrular. Üst sağlayıcı kimlik bilgileri sağlayıcıya göre değişir: bazıları API anahtarı veya hesapla oturum açma gerektirir. Ücretsiz erişim garanti edilmez.
 
 ### "`auto` nedir?"
 
-`auto`, OmniRoute'a her istek için en iyi sağlayıcıyı otomatik olarak seçmesini söyler. Hız, maliyet, kalite ve kullanılabilirliği dikkate alır. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) belgesine bakın.
+`auto`, 67router'a her istek için en iyi sağlayıcıyı otomatik olarak seçmesini söyler. Hız, maliyet, kalite ve kullanılabilirliği dikkate alır. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) belgesine bakın.
 
 ### "Maliyeti ne kadar?"
 
-OmniRoute'un kendisi **ücretsiz ve açık kaynaklıdır**. Yalnızca kullandığınız sağlayıcılar için ödeme yaparsınız. Birçok sağlayıcının ücretsiz kullanım katmanları vardır — [Ücretsiz Kullanım Katmanları Kılavuzu](./FREE-TIERS-GUIDE.md) belgesine bakın.
+67router'un kendisi **ücretsiz ve açık kaynaklıdır**. Yalnızca kullandığınız sağlayıcılar için ödeme yaparsınız. Birçok sağlayıcının ücretsiz kullanım katmanları vardır — [Ücretsiz Kullanım Katmanları Kılavuzu](./FREE-TIERS-GUIDE.md) belgesine bakın.
 
 ### "Claude Code / Cursor / Copilot ile kullanabilir miyim?"
 
-**Evet!** OmniRoute, OpenAI biçimini destekleyen tüm araçlarla çalışır. Temel URL'yi `http://localhost:20128/v1` olarak ayarlamanız yeterlidir. Kuruluma özel talimatlar için [CLI Araçları Kılavuzu](../reference/CLI-TOOLS.md) belgesine bakın.
+**Evet!** 67router, OpenAI biçimini destekleyen tüm araçlarla çalışır. Temel URL'yi `http://localhost:20128/v1` olarak ayarlamanız yeterlidir. Kuruluma özel talimatlar için [CLI Araçları Kılavuzu](../reference/CLI-TOOLS.md) belgesine bakın.
 
 ### "Bir sağlayıcı devre dışı kalırsa ne olur?"
 
-OmniRoute, başarısız olan sağlayıcıları otomatik olarak atlar ve bir sonrakini dener. Herhangi bir şey yapmanız gerekmez. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) belgesine bakın.
+67router, başarısız olan sağlayıcıları otomatik olarak atlar ve bir sonrakini dener. Herhangi bir şey yapmanız gerekmez. Ayrıntılar için [Otomatik Kombinasyon Kılavuzu](./AUTO-COMBO-GUIDE.md) belgesine bakın.
 
 ---
 

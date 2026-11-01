@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yana bincikar martanin kurakurai daga upstream domin gano alamomin da ke nuna cewa **an kashe asusun mai samarwa na dindindin** (an dakatar / an kashe / an hana shi saboda karya ToS), kuma idan aka sami daidaito, yana matsar da wannan haɗin zuwa **matsayin ƙarshe na `banned`** ta yadda ba za a ƙara zaɓarsa don buƙatu ba. Wannan shi ne abin da katin saitunan **Security → Banned Keywords** yake daidaitawa ("Ƙarin kalmomin da ke jawo gano hana asusu na dindindin. Kalmomin da aka gina a ciki suna aiki a koyaushe.").
+67router yana bincikar martanin kurakurai daga upstream domin gano alamomin da ke nuna cewa **an kashe asusun mai samarwa na dindindin** (an dakatar / an kashe / an hana shi saboda karya ToS), kuma idan aka sami daidaito, yana matsar da wannan haɗin zuwa **matsayin ƙarshe na `banned`** ta yadda ba za a ƙara zaɓarsa don buƙatu ba. Wannan shi ne abin da katin saitunan **Security → Banned Keywords** yake daidaitawa ("Ƙarin kalmomin da ke jawo gano hana asusu na dindindin. Kalmomin da aka gina a ciki suna aiki a koyaushe.").
 
 Wannan shafin yana bayyana jerin da aka gina a ciki, tsarin ganowa, iyakarsa, yadda za a ƙara kalmomi na musamman cikin aminci, da yadda za a dawo da haɗin da aka yi wa alama. Matsayin ƙarshe da kansa wani ɓangare ne na tsarin jure matsala — duba
 [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) ("Matsayai na ƙarshe").

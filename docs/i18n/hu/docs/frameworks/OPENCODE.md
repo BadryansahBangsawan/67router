@@ -5,11 +5,11 @@
 ---
 
 > **Állapot:** Általánosan elérhető.
-> **Célközönség:** Üzemeltetők, akik az OpenCode-ot egy OmniRoute-telepítéshez kapcsolják.
+> **Célközönség:** Üzemeltetők, akik az OpenCode-ot egy 67router-telepítéshez kapcsolják.
 > **Hiteles forrás (konfigurációs séma):** `src/shared/services/opencodeConfig.ts`
 > **Hiteles forrás (npm-csomag):** `@omniroute/opencode-provider/` (közzétehető munkaterület)
 
-Az [OpenCode](https://opencode.ai) egy ügynökalapú CLI-/asztali AI-kliens. A szolgáltatói katalógusát a `~/.config/opencode/opencode.json` (vagy `opencode.jsonc`) fájlból olvassa be, és a `https://opencode.ai/config.json` címen található sémát követi. Az OmniRoute ezen szolgáltatók egyikeként jelenik meg az OpenCode számára — minden kérés az OmniRoute szabványos, OpenAI-kompatibilis `/v1` felületén halad át, így az OpenCode automatikusan kihasználhatja az Auto-Combo útválasztás, az áramkör-megszakítók, a kulcsházirendek, a megfigyelhetőség stb. előnyeit.
+Az [OpenCode](https://opencode.ai) egy ügynökalapú CLI-/asztali AI-kliens. A szolgáltatói katalógusát a `~/.config/opencode/opencode.json` (vagy `opencode.jsonc`) fájlból olvassa be, és a `https://opencode.ai/config.json` címen található sémát követi. A 67router ezen szolgáltatók egyikeként jelenik meg az OpenCode számára — minden kérés a 67router szabványos, OpenAI-kompatibilis `/v1` felületén halad át, így az OpenCode automatikusan kihasználhatja az Auto-Combo útválasztás, az áramkör-megszakítók, a kulcsházirendek, a megfigyelhetőség stb. előnyeit.
 
 **Két támogatott integrációs útvonal** áll rendelkezésre. Válassza ki az egyiket — mindkettő ugyanazt a konfigurációt hozza létre.
 
@@ -17,16 +17,16 @@ Az [OpenCode](https://opencode.ai) egy ügynökalapú CLI-/asztali AI-kliens. A 
 
 ## 1. útvonal — CLI-generátor (npm-telepítés nélkül)
 
-Végfelhasználók számára ajánlott. Az OmniRoute részeként érkezik. Helyben írja az `opencode.json` fájlt.
+Végfelhasználók számára ajánlott. A 67router részeként érkezik. Helyben írja az `opencode.json` fájlt.
 
 ```bash
-# Az OmniRoute telepítése után (npm i -g @omniroute/cli vagy helyi klón)
+# A 67router telepítése után (npm i -g @omniroute/cli vagy helyi klón)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-A háttérben a CLI a `mergeOpenCodeConfigText()` függvényt hívja meg (`src/shared/services/opencodeConfig.ts:104`), így egy meglévő `opencode.json` megtartja a többi szolgáltatóját és megjegyzését. Az OmniRoute-bejegyzés hozzáadása vagy lecserélése atomi módon történik.
+A háttérben a CLI a `mergeOpenCodeConfigText()` függvényt hívja meg (`src/shared/services/opencodeConfig.ts:104`), így egy meglévő `opencode.json` megtartja a többi szolgáltatóját és megjegyzését. A 67router-bejegyzés hozzáadása vagy lecserélése atomi módon történik.
 
 Az eredményül kapott fájl (alapértelmezett modellkatalógus):
 
@@ -90,8 +90,8 @@ Mindkét útvonal ugyanazt a `provider.omniroute.npm: "@ai-sdk/openai-compatible
 ```
 OpenCode felhasználói felület/ügynök
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (az OmniRoute OpenAI-felülete)
-         → OmniRoute /v1/chat/completions kezelő      (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (a 67router OpenAI-felülete)
+         → 67router /v1/chat/completions kezelő      (open-sse/handlers/chatCore.ts)
             → kombinált útválasztás / Auto-Combo / végrehajtó
                → felsőbb szintű szolgáltató
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Felülírhatja a `models: [...]` beállítással. Ajánlott kiegészítések:
 
-- `"auto"` — elérhetővé teszi az OmniRoute [Auto-Combo](../routing/AUTO-COMBO.md) konfigurációt nem igénylő útválasztóját. Lehetővé teszi, hogy az OpenCode válassza ki „a legjobb elérhető modellt” anélkül, hogy a katalógust közvetlenül a kódba kellene írnia.
-- `"<combo-name>"` — bármely, az irányítópulton meghatározott kombináció; az OmniRoute transzparens módon feloldja.
+- `"auto"` — elérhetővé teszi a 67router [Auto-Combo](../routing/AUTO-COMBO.md) konfigurációt nem igénylő útválasztóját. Lehetővé teszi, hogy az OpenCode válassza ki „a legjobb elérhető modellt” anélkül, hogy a katalógust közvetlenül a kódba kellene írnia.
+- `"<combo-name>"` — bármely, az irányítópulton meghatározott kombináció; a 67router transzparens módon feloldja.
 
 ---
 
@@ -135,29 +135,29 @@ Ez a duplikáció megszüntetése a régebbi konfigurációknál tapasztalt **le
 
 ## Hitelesítési módok
 
-| OmniRoute-beállítás                               | Ajánlott `apiKey` érték                                                       |
+| 67router-beállítás                                | Ajánlott `apiKey` érték                                                       |
 | ------------------------------------------------- | ----------------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (helyben alapértelmezett) | `sk_omniroute` (szó szerinti helyőrző)                                        |
 | `REQUIRE_API_KEY=true`                            | Felhasználónkénti valódi API-kulcs az Irányítópult → API-kulcsok menüpontból. |
 
-Az `x-api-key` + `anthropic-version` fejléceket küldő Anthropic-stílusú kliensek esetén az OmniRoute `extractApiKey` függvénye az `x-api-key` fejlécből származó kulcsot is elfogadja. Az OpenCode az OpenAI-felületet használja, ezért mindig az `Authorization: Bearer ${apiKey}` fejlécet küldi — itt nem érvényes semmilyen speciális Anthropic-kezelés.
+Az `x-api-key` + `anthropic-version` fejléceket küldő Anthropic-stílusú kliensek esetén a 67router `extractApiKey` függvénye az `x-api-key` fejlécből származó kulcsot is elfogadja. Az OpenCode az OpenAI-felületet használja, ezért mindig az `Authorization: Bearer ${apiKey}` fejlécet küldi — itt nem érvényes semmilyen speciális Anthropic-kezelés.
 
 ---
 
 ## Hibaelhárítás
 
-| Tünet                                                                  | Ok                                                                                               | Megoldás                                                                                                                                          |
-| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `404` minden olyan kérésnél, amelynek URL-je `/v1/v1/` részt tartalmaz | Elavult konfiguráció a v3.8 előtti bővítményből, amely kétszer fűzte hozzá a `/v1` utótagot.     | Generálja újra az 1. vagy 2. eljárással.                                                                                                          |
-| `401 Invalid API key`                                                  | Az OmniRoute-ban `REQUIRE_API_KEY=true` van beállítva, és a kulcs ismeretlen.                    | Hozza létre a kulcsot az irányítópulton, vagy állítsa be a `REQUIRE_API_KEY=false` értéket (csak helyben), és használja a `sk_omniroute` értéket. |
-| A modelllista üres az OpenCode felhasználói felületén                  | Mind a 4 alapértelmezett modell rejtve van az OmniRoute szolgáltatói láthatósági beállításaiban. | Adja át a `models: ["auto", ...]` beállítást az engedélyezett modellek megjelenítéséhez.                                                          |
-| OpenCode 500 a `cannot read property 'models'` üzenettel               | A régebbi OpenCode (< 0.1.x) nem fogadta el a beágyazott `models` értéket.                       | Frissítse az OpenCode-ot egy, a v1 sémát (`opencode.ai/config.json`) követő verzióra.                                                             |
+| Tünet                                                                  | Ok                                                                                             | Megoldás                                                                                                                                          |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `404` minden olyan kérésnél, amelynek URL-je `/v1/v1/` részt tartalmaz | Elavult konfiguráció a v3.8 előtti bővítményből, amely kétszer fűzte hozzá a `/v1` utótagot.   | Generálja újra az 1. vagy 2. eljárással.                                                                                                          |
+| `401 Invalid API key`                                                  | A 67router-ban `REQUIRE_API_KEY=true` van beállítva, és a kulcs ismeretlen.                    | Hozza létre a kulcsot az irányítópulton, vagy állítsa be a `REQUIRE_API_KEY=false` értéket (csak helyben), és használja a `sk_omniroute` értéket. |
+| A modelllista üres az OpenCode felhasználói felületén                  | Mind a 4 alapértelmezett modell rejtve van a 67router szolgáltatói láthatósági beállításaiban. | Adja át a `models: ["auto", ...]` beállítást az engedélyezett modellek megjelenítéséhez.                                                          |
+| OpenCode 500 a `cannot read property 'models'` üzenettel               | A régebbi OpenCode (< 0.1.x) nem fogadta el a beágyazott `models` értéket.                     | Frissítse az OpenCode-ot egy, a v1 sémát (`opencode.ai/config.json`) követő verzióra.                                                             |
 
 ---
 
 ## Lásd még
 
-- [API-referencia](../reference/API_REFERENCE.md) — az OmniRoute REST-felület teljes leírása
+- [API-referencia](../reference/API_REFERENCE.md) — a 67router REST-felület teljes leírása
 - [Auto-Combo](../routing/AUTO-COMBO.md) — mit jelent a `model: "auto"`
 - Az [`@omniroute/opencode-provider` README-je](../../@omniroute/opencode-provider/README.md)
 - Forrás: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

@@ -14,7 +14,7 @@ Dhá phróifíl roghnacha compose (`memory`, `bifrost`) don imscaradh 8 seirbhí
 
 ## Cén fáth a bhfuil sé seo coimeádach
 
-Tá struchtúr imscartha OmniRoute atá ann cheana éadrom agus cruthaithe:
+Tá struchtúr imscartha 67router atá ann cheana éadrom agus cruthaithe:
 
 - Láimhseálann **`redis:7-alpine`** an t-ualach oibre teorannaithe ráta/taisce ar scála táirgeachta.
 - Clúdaíonn **SQLite + sqlite-vec + FTS5** cuimhne áitiúil + veicteoirí + cuardach téacs (féach [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ Is **roghanna leathnaithe iad an dá phróifíl anseo le haghaidh imscaradh a bh
 
 - Ritheann tú ≥3 mhacasamhail `omniroute` agus tá tú ag iarraidh rothlú soláthraithe a lárú i bpróiseas Go amháin.
 - Tá dromchla aonair iniúchóireachta/logála uait le haghaidh iarratais chuig soláthraithe réamhtheachtacha thar gach macasamhail.
-- Tá tú ag iarraidh ciseal ródaithe Shraith 1 a scálú go cothrománach, go neamhspleách ar mhacasamhlacha OmniRoute.
+- Tá tú ag iarraidh ciseal ródaithe Shraith 1 a scálú go cothrománach, go neamhspleách ar mhacasamhlacha 67router.
 
 **An méid a chuireann sé leis:**
 

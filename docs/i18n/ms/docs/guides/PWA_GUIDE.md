@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute diedarkan sebagai Progressive Web App yang boleh dipasang sepenuhnya. Apabila anda mengakses papan pemuka daripada mana-mana pelayar mudah alih — Android (Chrome) atau iOS (Safari) — anda boleh memilih "Tambah ke Skrin Utama" dan menikmati pengalaman seperti aplikasi natif tanpa memerlukan gedung aplikasi.
+67router diedarkan sebagai Progressive Web App yang boleh dipasang sepenuhnya. Apabila anda mengakses papan pemuka daripada mana-mana pelayar mudah alih — Android (Chrome) atau iOS (Safari) — anda boleh memilih "Tambah ke Skrin Utama" dan menikmati pengalaman seperti aplikasi natif tanpa memerlukan gedung aplikasi.
 
 ## Apakah Itu PWA?
 
-Progressive Web App mengubah papan pemuka web OmniRoute menjadi sesuatu yang kelihatan dan berfungsi seperti aplikasi mudah alih natif. Setelah dipasang, aplikasi ini:
+Progressive Web App mengubah papan pemuka web 67router menjadi sesuatu yang kelihatan dan berfungsi seperti aplikasi mudah alih natif. Setelah dipasang, aplikasi ini:
 
 - Dilancarkan daripada skrin utama anda dengan ikonnya sendiri
 - Dibuka dalam skrin penuh — tanpa bar alamat pelayar atau UI tab
@@ -20,26 +20,26 @@ Progressive Web App mengubah papan pemuka web OmniRoute menjadi sesuatu yang kel
 
 ### Android (Chrome)
 
-1. Buka papan pemuka OmniRoute dalam Chrome: `http://YOUR_IP:20128`
-2. Chrome akan memaparkan sepanduk **"Tambah OmniRoute ke Skrin utama"** secara automatik, atau:
+1. Buka papan pemuka 67router dalam Chrome: `http://YOUR_IP:20128`
+2. Chrome akan memaparkan sepanduk **"Tambah 67router ke Skrin utama"** secara automatik, atau:
    - Ketik menu **⋮** (tiga titik) → **"Tambah ke Skrin utama"** atau **"Pasang aplikasi"**
 3. Sahkan gesaan tersebut
-4. OmniRoute muncul pada skrin utama anda sebagai aplikasi kendiri
+4. 67router muncul pada skrin utama anda sebagai aplikasi kendiri
 
 ### iOS (Safari)
 
-1. Buka papan pemuka OmniRoute dalam Safari: `http://YOUR_IP:20128`
+1. Buka papan pemuka 67router dalam Safari: `http://YOUR_IP:20128`
 2. Ketik butang **Kongsi** (kotak dengan anak panah)
 3. Tatal ke bawah dan ketik **"Tambah ke Skrin Utama"**
-4. Berikan nama (lalainya ialah "OmniRoute") dan ketik **Tambah**
-5. OmniRoute muncul pada skrin utama anda dengan ikon aplikasi
+4. Berikan nama (lalainya ialah "67router") dan ketik **Tambah**
+5. 67router muncul pada skrin utama anda dengan ikon aplikasi
 
 ### Desktop (Chrome / Edge)
 
-1. Buka papan pemuka OmniRoute
-2. Klik **ikon pemasangan** dalam bar alamat (atau ⋮ → "Pasang OmniRoute...")
+1. Buka papan pemuka 67router
+2. Klik **ikon pemasangan** dalam bar alamat (atau ⋮ → "Pasang 67router...")
 3. Sahkan gesaan tersebut
-4. OmniRoute dibuka sebagai tetingkap kendiri — tanpa tab, tanpa bar alamat
+4. 67router dibuka sebagai tetingkap kendiri — tanpa tab, tanpa bar alamat
 
 ## Ciri-ciri
 
@@ -49,15 +49,15 @@ Manifes dikonfigurasikan dengan `display: "fullscreen"`, yang bermaksud aplikasi
 
 ### Sokongan Luar Talian
 
-OmniRoute menyertakan service worker (`sw.js`) yang menyediakan pengurusan cache pintar:
+67router menyertakan service worker (`sw.js`) yang menyediakan pengurusan cache pintar:
 
-| Jenis Aset                                                    | Strategi                                   | Tingkah Laku                                                                                                                |
-| ------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| **Cangkerang aplikasi**                                       | Utamakan cache                             | `/`, `/offline`, manifes dan ikon dipracache semasa pemasangan                                                              |
-| **Aset statik** (CSS, JS, imej, fon)                          | Utamakan rangkaian dengan sandaran cache   | Mengambil versi terkini daripada rangkaian; menggunakan cache jika di luar talian                                           |
-| **Himpunan Next.js** (`/_next/`)                              | Utamakan rangkaian dengan kemas kini cache | Mengambil daripada rangkaian dan mengemas kini cache; menyediakan versi cache jika di luar talian                           |
-| **Permintaan navigasi**                                       | Pintas (tidak pernah dipintas)             | Pelayar mengendalikan penggunaan sandaran HTTP/3→HTTP/2; soket QUIC yang tidak aktif tidak boleh menjadi `Response.error()` |
-| **Laluan API / papan pemuka** (`/api/`, `/a2a`, `/dashboard`) | Pintas (tidak pernah dicache)              | Sentiasa dihantar terus kepada pelayan — tidak pernah dipintas oleh service worker                                          |
+| Jenis Aset                                            | Strategi                                   | Tingkah Laku                                                                                                                |
+| ----------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| **Cangkerang aplikasi**                               | Utamakan cache                             | `/`, `/offline`, manifes dan ikon dipracache semasa pemasangan                                                              |
+| **Aset statik** (CSS, JS, imej, fon)                  | Utamakan rangkaian dengan sandaran cache   | Mengambil versi terkini daripada rangkaian; menggunakan cache jika di luar talian                                           |
+| **Himpunan Next.js** (`/_next/`)                      | Utamakan rangkaian dengan kemas kini cache | Mengambil daripada rangkaian dan mengemas kini cache; menyediakan versi cache jika di luar talian                           |
+| **Permintaan navigasi**                               | Pintas (tidak pernah dipintas)             | Pelayar mengendalikan penggunaan sandaran HTTP/3→HTTP/2; soket QUIC yang tidak aktif tidak boleh menjadi `Response.error()` |
+| **Laluan API / papan pemuka** (`/api/`, `/dashboard`) | Pintas (tidak pernah dicache)              | Sentiasa dihantar terus kepada pelayan — tidak pernah dipintas oleh service worker                                          |
 
 ### Halaman Luar Talian
 
@@ -70,7 +70,7 @@ Apabila rangkaian tidak tersedia dan pengguna menavigasi ke halaman baharu, serv
 
 ### Ikon Aplikasi
 
-OmniRoute menyediakan ikon yang dioptimumkan untuk setiap platform:
+67router menyediakan ikon yang dioptimumkan untuk setiap platform:
 
 | Fail                   | Saiz             | Digunakan Oleh                            |
 | ---------------------- | ---------------- | ----------------------------------------- |
@@ -93,9 +93,9 @@ Dijana oleh Next.js melalui `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Terletak di `src/shared/components/PwaRegister.tsx`, komponen klien ini:
 
 ## Penggunaan Dengan Termux (Android)
 
-Apabila menjalankan OmniRoute pada Android melalui Termux, PWA berfungsi dengan lancar:
+Apabila menjalankan 67router pada Android melalui Termux, PWA berfungsi dengan lancar:
 
-1. Mulakan OmniRoute dalam Termux: `npx omniroute`
+1. Mulakan 67router dalam Termux: `npx omniroute`
 2. Buka Chrome pada telefon yang sama: `http://localhost:20128`
 3. Pasang PWA melalui "Tambah pada Skrin Utama"
 4. PWA bersambung ke pelayan Termux setempat — semuanya dijalankan pada peranti
@@ -156,7 +156,7 @@ Gabungan ini bermakna telefon Android anda ialah **pelayan** (Termux) dan juga *
 
 ## Penggunaan Dari Peranti Lain
 
-Pasang PWA pada mana-mana peranti yang mempunyai akses pelayar ke pelayan OmniRoute anda:
+Pasang PWA pada mana-mana peranti yang mempunyai akses pelayar ke pelayan 67router anda:
 
 - **Telefon/tablet lain**: Navigasi ke `http://PHONE_IP:20128` dan pasang PWA
 - **Komputer riba**: Buka Chrome/Edge dan pasangkannya sebagai PWA desktop

@@ -7,7 +7,7 @@
 > **Əsas mənbə:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Son yenilənmə:** 2026-06-28 — v3.8.40
 
-OmniRoute düşünmə rejimli modellər tərəfindən yaradılan köməkçi `reasoning_content` məzmununu qeydə alır və yuxarı axın provayderi bunu tələb etdikdə çoxgedişli sorğularda şəffaf şəkildə təkrar istifadə edir. Bu, müştərinin söhbət tarixçəsində əvvəlki gedişin əsaslandırması olmadıqda sərt provayderlərin qaytardığı HTTP 400 xətalarını aradan qaldırır.
+67router düşünmə rejimli modellər tərəfindən yaradılan köməkçi `reasoning_content` məzmununu qeydə alır və yuxarı axın provayderi bunu tələb etdikdə çoxgedişli sorğularda şəffaf şəkildə təkrar istifadə edir. Bu, müştərinin söhbət tarixçəsində əvvəlki gedişin əsaslandırması olmadıqda sərt provayderlərin qaytardığı HTTP 400 xətalarını aradan qaldırır.
 
 ## Bunun mövcud olma səbəbi
 
@@ -17,7 +17,7 @@ Bir neçə düşünmə rejimli provayder **əvvəlki köməkçi mesajına orijin
 Parametr yanlışdır: Düşünmə rejimində reasoning_content API-yə geri ötürülməlidir.
 ```
 
-Lakin tipik müştərilər (Cursor, Cline, Roo Code, OpenAI SDK) təkrar göndərdikləri tarixçədən `reasoning_content` sahəsini çıxarır. OmniRoute yuxarı axının gördüyü sorğunun ardıcıl olması üçün onu server tərəfindəki keşdən bərpa edir. #1628 nömrəli məsələ, keşin proses yenidən başladıldıqdan sonra da qorunması üçün hibrid yaddaş/SQLite davamlılığını təqdim etdi.
+Lakin tipik müştərilər (Cursor, Cline, Roo Code, OpenAI SDK) təkrar göndərdikləri tarixçədən `reasoning_content` sahəsini çıxarır. 67router yuxarı axının gördüyü sorğunun ardıcıl olması üçün onu server tərəfindəki keşdən bərpa edir. #1628 nömrəli məsələ, keşin proses yenidən başladıldıqdan sonra da qorunması üçün hibrid yaddaş/SQLite davamlılığını təqdim etdi.
 
 ## Arxitektura
 

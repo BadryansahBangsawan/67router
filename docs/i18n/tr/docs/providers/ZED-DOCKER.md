@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute Docker içinde çalıştığında, standart "Zed Anahtar Zincirinden İçe Aktar" akışı başarısız olur;
+67router Docker içinde çalıştığında, standart "Zed Anahtar Zincirinden İçe Aktar" akışı başarısız olur;
 çünkü container, ana işletim sisteminin anahtar zinciri daemon'una (Linux'ta libsecret,
 macOS'ta Keychain, Windows'ta Credential Manager) erişemez ve ana dosya sistemindeki
 Zed yapılandırma dizinleri varsayılan olarak container içinde görünmez.
@@ -21,7 +21,7 @@ Bir container içinde iki engelleyici sorun oluşur:
    üzerinden iletişim kurar. Bunların hiçbiri varsayılan olarak container'a köprülenmez,
    bu nedenle kimlik bilgilerini okuma işlemleri her zaman başarısız olur.
 
-OmniRoute, Docker ortamını iki sezgisel yöntemle algılar:
+67router, Docker ortamını iki sezgisel yöntemle algılar:
 
 - `/.dockerenv` dosyasının varlığı (container başlatılırken Docker daemon'u tarafından yazılır).
 - `/proc/1/cgroup` içinde `docker` dizesinin bulunması (Linux cgroup v1).
@@ -34,7 +34,7 @@ bir mesajla birlikte HTTP 422 döndürür.
 
 1. **Dashboard → Providers → Zed** bölümünü açın.
 2. **Manuel Token İçe Aktarma** paneli, anahtar zincirinden içe aktarma kartının altında görünür.
-   OmniRoute Docker'ı algıladığında bu panel, ilk başarısız anahtar zincirinden içe aktarma
+   67router Docker'ı algıladığında bu panel, ilk başarısız anahtar zincirinden içe aktarma
    denemesinden sonra otomatik olarak genişler.
 3. Açılır menüden sağlayıcıyı seçin (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter veya DeepSeek).

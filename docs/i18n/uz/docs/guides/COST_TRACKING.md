@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har bir soʻrov narxini qanday hisoblaydi, qayd etadi va hisobot qiladi — hamda nega
+67router har bir soʻrov narxini qanday hisoblaydi, qayd etadi va hisobot qiladi — hamda nega
 boshqaruv panelidagi raqam hisob-kitob emas, balki **tejash kuzatuvchisi** hisoblanadi.
 
 Shuningdek qarang: [Foydalanuvchi qoʻllanmasi](./USER_GUIDE.md) · [Imkoniyatlar galereyasi](./FEATURES.md)
@@ -13,12 +13,12 @@ Shuningdek qarang: [Foydalanuvchi qoʻllanmasi](./USER_GUIDE.md) · [Imkoniyatla
 
 ## Bu nima (va nima emas)
 
-OmniRoute tokenlar sonini modelning narx stavkalariga koʻpaytirish orqali har bir yakunlash
+67router tokenlar sonini modelning narx stavkalariga koʻpaytirish orqali har bir yakunlash
 soʻroviga USD hisobidagi narxni belgilaydi. Bu raqamlar **Xarajatlar** boshqaruv paneli,
 `omniroute cost` / `omniroute usage` CLI buyruqlari, CSV/JSON eksportlari va har bir API kaliti
 uchun byudjetlarda ishlatiladi.
 
-> **Boshqaruv panelidagi «xarajat» hisob-kitob emas, balki tejash kuzatuvchisidir.** OmniRoute
+> **Boshqaruv panelidagi «xarajat» hisob-kitob emas, balki tejash kuzatuvchisidir.** 67router
 > sizdan hech qachon haq olmaydi — u soʻrovlaringizni siz allaqachon ulagan provayderlarga
 > (oʻzingizning obunalaringiz, bepul tariflaringiz va API kalitlaringizga) yoʻnaltiradi.
 > Toʻliq bepul modellarda yigʻilgan «$290 umumiy xarajat» pulli API xizmatiga taxminan
@@ -31,7 +31,7 @@ Bu yondashuv loyiha [README](../../README.md) faylida toʻgʻridan-toʻgʻri bay
 
 Raqam taxminiy boʻlgani sababli:
 
-- U OmniRoute har bir model uchun ega boʻlgan narxlar jadvaliga bogʻliq. Narxi
+- U 67router har bir model uchun ega boʻlgan narxlar jadvaliga bogʻliq. Narxi
   kiritilmagan model `0` xarajat qoʻshadi (u kuzatuv vositasida «Eski / Bepul» qator sifatida koʻrsatiladi).
 - Bepul tarif va obuna trafigi uchun ham _taxminiy_ xarajat hisoblanadi — bu
   qarzdorlik emas, balki siz tejayotgan summadir.
@@ -49,7 +49,7 @@ Xarajatlar quyidagi ustuvorlik tartibida aniqlanadigan narxlar jadvalidan olinad
 2. **Sinxronlangan tashqi narxlar** — sinxronlash yoqilganida LiteLLM'ning ommaviy
    `model_prices_and_context_window.json` faylidan olinadi (qiymatlaringizni hech qachon
    almashtirib yubormasligi uchun alohida `pricing_synced` nomlar makonida saqlanadi).
-3. **Kodga kiritilgan standart qiymatlar** — OmniRoute bilan birga taqdim etiladi.
+3. **Kodga kiritilgan standart qiymatlar** — 67router bilan birga taqdim etiladi.
 
 Tashqi narxlarni sinxronlash **ixtiyoriy**, standart holatda oʻchirilgan. Tegishli muhit oʻzgaruvchilari
 ([`.env.example`](../../.env.example) fayliga qarang):
@@ -201,7 +201,7 @@ Quyidagilarning barchasi, alohida qayd etilmagan bo‘lsa, boshqaruv autentifika
 
 ## CLI
 
-OmniRoute CLI interfeysi xarajatlar, foydalanish va narxlash buyruqlarini taqdim etadi (ular
+67router CLI interfeysi xarajatlar, foydalanish va narxlash buyruqlarini taqdim etadi (ular
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs) faylida roʻyxatdan oʻtkazilgan).
 
 ### `omniroute cost`

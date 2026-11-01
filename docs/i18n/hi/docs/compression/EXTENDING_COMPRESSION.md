@@ -4,7 +4,7 @@
 
 ---
 
-> **संक्षेप में**: OmniRoute का कम्प्रेशन इंजन **प्लग करने योग्य** है — आप कस्टम इंजन पंजीकृत कर सकते हैं, नई भाषाओं के लिए भाषा पैक उपलब्ध करा सकते हैं और स्टैक्ड पाइपलाइन संयोजित कर सकते हैं। यह मार्गदर्शिका बताती है कि ऐसा कैसे करें।
+> **संक्षेप में**: 67router का कम्प्रेशन इंजन **प्लग करने योग्य** है — आप कस्टम इंजन पंजीकृत कर सकते हैं, नई भाषाओं के लिए भाषा पैक उपलब्ध करा सकते हैं और स्टैक्ड पाइपलाइन संयोजित कर सकते हैं। यह मार्गदर्शिका बताती है कि ऐसा कैसे करें।
 
 **संबंधित मार्गदर्शिकाएँ:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # प्रोजेक्ट-स्तरीय (स्टार्टअप पर लोड किया जाता है)
 ```
 
-या किसी प्लगइन से प्रोग्रामेटिक रूप से लोड करें:
+Or register it programmatically at startup:
 
 ```ts
-// आपके प्लगइन में
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // प्लगइन SDK onRequest / onResponse / onError हुक उपलब्ध कराता है। इंजन को
-  // प्लगइन मॉड्यूल लोड होने पर (या पहले onRequest पर) पंजीकृत करें; इसे अपने
-  // स्वयं के टियरडाउन पथ से अपंजीकृत करें।
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// टियरडाउन पर:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ export default definePlugin({
 
 ## भाषा पैक बनाना
 
-Caveman-शैली संपीड़न प्रत्येक प्राकृतिक भाषा में भराव शब्दों, हिचकिचाहट वाले वाक्यांशों और अनावश्यक रूप से लंबे पैटर्न को संभालने के लिए **भाषा-विशिष्ट नियम पैक** का उपयोग करता है। OmniRoute में **6 भाषा पैक** शामिल हैं: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`।
+Caveman-शैली संपीड़न प्रत्येक प्राकृतिक भाषा में भराव शब्दों, हिचकिचाहट वाले वाक्यांशों और अनावश्यक रूप से लंबे पैटर्न को संभालने के लिए **भाषा-विशिष्ट नियम पैक** का उपयोग करता है। 67router में **6 भाषा पैक** शामिल हैं: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`।
 
 ### पैक संरचना
 
@@ -391,7 +382,7 @@ await loadRulePack("./my-custom-rules/hi/filler.json");
 
 ### संपीड़न मोड
 
-OmniRoute कॉन्फ़िगरेशन, स्वतः-ट्रिगर थ्रेशोल्ड और कॉम्बो ओवरराइड के आधार पर **प्रत्येक अनुरोध के लिए एक मोड** चुनता है।
+67router कॉन्फ़िगरेशन, स्वतः-ट्रिगर थ्रेशोल्ड और कॉम्बो ओवरराइड के आधार पर **प्रत्येक अनुरोध के लिए एक मोड** चुनता है।
 उपलब्ध मोड `open-sse/services/compression/types.ts` में परिभाषित हैं (`CompressionMode` प्रकार):
 
 | मोड          | इंजन                 | उपयोग का मामला                                                                                                                                                                                |
@@ -511,10 +502,10 @@ const result = applyStackedCompression(body, [
 
 ## अपस्ट्रीम सिंक नीति
 
-OmniRoute के compression engines README में कई अपस्ट्रीम प्रोजेक्ट्स को श्रेय देते हैं
+67router के compression engines README में कई अपस्ट्रीम प्रोजेक्ट्स को श्रेय देते हैं
 ("RTK, Caveman, LLMLingua-2, Troglodita से प्रेरित")। योगदानकर्ताओं का एक सामान्य
 प्रश्न है: **जब अपस्ट्रीम RTK कोई नया टूल फ़िल्टर जोड़ता है या Caveman कोई नियम
-पैक जोड़ता है, तो वह OmniRoute तक कैसे पहुँचता है?** यह अनुभाग इसका आधिकारिक उत्तर है।
+पैक जोड़ता है, तो वह 67router तक कैसे पहुँचता है?** यह अनुभाग इसका आधिकारिक उत्तर है।
 
 ### वेंडर की गई प्रतियाँ बनाम स्वतंत्र कार्यान्वयन
 
@@ -534,7 +525,7 @@ TypeScript कार्यान्वयन हैं, वेंडर कि�
 
 डिज़ाइन के अनुसार, **कोई स्वचालित अपस्ट्रीम-रिलीज़ ट्रैकिंग और कोई `compression-sync`
 लेबल नहीं है**। चूँकि engines पुनःकार्यान्वयन हैं, इसलिए किसी अपस्ट्रीम RTK
-फ़िल्टर या Caveman नियम पैक को कोड के रूप में मर्ज नहीं किया जाता; उसे **OmniRoute के
+फ़िल्टर या Caveman नियम पैक को कोड के रूप में मर्ज नहीं किया जाता; उसे **67router के
 अपने प्रारूप में एक नए नियम/फ़िल्टर के रूप में पुनः व्यक्त किया जाता है** (देखें
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) और एक सामान्य PR के
 माध्यम से आवश्यकतानुसार शामिल किया जाता है। ऊपर दिए गए extension points (custom engine,
@@ -549,14 +540,14 @@ language pack, RTK filter) इनमें से किसी का योग�
 ### Headroom (input-compression proxy)
 
 Headroom **पूरी तरह आंतरिक** है — एक pinned vendored `gcf` codec snapshot के साथ
-OmniRoute की अपनी `smartcrusher` / `toon` / `tabular` layers। वेंडर की गई प्रति से
+67router की अपनी `smartcrusher` / `toon` / `tabular` layers। वेंडर की गई प्रति से
 परे ट्रैक करने के लिए कोई सक्रिय अपस्ट्रीम नहीं है; codec बदलने पर `gcf` के अपडेट
 मैन्युअल रूप से रीफ़्रेश किए जाते हैं और compression budget gate
 (`check:compression-budget`) के विरुद्ध फिर से सत्यापित किए जाते हैं।
 
 ### अपस्ट्रीम-प्रेरित सुधार का प्रस्ताव देना
 
-1. **वेंडर न करें** — अपस्ट्रीम नियम/फ़िल्टर को OmniRoute के प्रारूप में पुनः व्यक्त करें।
+1. **वेंडर न करें** — अपस्ट्रीम नियम/फ़िल्टर को 67router के प्रारूप में पुनः व्यक्त करें।
 2. इसे नीचे दिए गए उपयुक्त extension point (language pack, RTK filter, या
    custom engine) के माध्यम से जोड़ें।
 3. PR विवरण में अपस्ट्रीम प्रोजेक्ट का संदर्भ दें (श्रेय के लिए), उसके

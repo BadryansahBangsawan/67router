@@ -1,4 +1,4 @@
-# OmniRoute Architecture (தமிழ்)
+# 67router Architecture (தமிழ்)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _கடைசியாகப் புதுப்பிக்கப்பட்
 
 ## நிர்வாகச் சுருக்கம்
 
-OmniRoute என்பது Next.js அடிப்படையில் உருவாக்கப்பட்ட உள்ளூர் AI வழித்தட நுழைவாயிலும் கட்டுப்பாட்டுப் பலகையும் ஆகும்.
+67router என்பது Next.js அடிப்படையில் உருவாக்கப்பட்ட உள்ளூர் AI வழித்தட நுழைவாயிலும் கட்டுப்பாட்டுப் பலகையும் ஆகும்.
 இது ஒற்றை OpenAI-இணக்கமான முனைப்புள்ளியை (`/v1/*`) வழங்குவதுடன், மொழிமாற்றம், மாற்று வழித்தடம், டோக்கன் புதுப்பித்தல் மற்றும் பயன்பாட்டுக் கண்காணிப்பு ஆகியவற்றுடன் பல மேல்நிலை வழங்குநர்களிடையே போக்குவரத்தை வழிநடத்துகிறது.
 
 முக்கியத் திறன்கள்:
@@ -128,13 +128,11 @@ v3.8.0 தளத்திற்கான நியமமான, பதிப்�
 - `/dashboard/limits` — ஒதுக்கீடு/விகிதக் கட்டுப்பாடுகள்
 - `/dashboard/cli-tools` — CLI அறிமுக அமைப்பு, இயக்கச் சூழல் கண்டறிதல், உள்ளமைவு உருவாக்கம்
 - `/dashboard/agents` — கண்டறியப்பட்ட ACP முகவர்கள் + தனிப்பயன் முகவர் பதிவு
-- `/dashboard/cloud-agents` — மேகத்தில் வழங்கப்படும் முகவர் பணிகள் (Codex Cloud, Devin, Jules) மற்றும் பணியின் வாழ்வுச்சுழற்சி
 - `/dashboard/skills` — A2A திறன் பதிவகம், தனிமைப்படுத்தப்பட்ட சூழல் இயக்கம், உள்ளமைந்த திறன் பட்டியல்
 - `/dashboard/memory` — நிலையான உரையாடல் நினைவக ஆய்வு மற்றும் மீட்டெடுப்பு
 - `/dashboard/webhooks` — வெளிச்செல்லும் webhook சந்தாக்கள், இரகசியச் சுழற்சி, மறுமுயற்சிப் புள்ளிவிவரங்கள்
 - `/dashboard/batch` — தொகுதிப் பணி சமர்ப்பிப்பு மற்றும் முன்னேற்றம்
 - `/dashboard/cache` — வாசிப்புவழி மற்றும் பகுத்தறிதல் இடைநினைவகப் புள்ளிவிவரங்கள், வெளியேற்றக் கட்டுப்பாடுகள்
-- `/dashboard/playground` — உள்ளமைக்கப்பட்ட எந்தவொரு சேர்க்கை/மாதிரியுடனும் ஊடாடும் அரட்டைச் சோதனைக்களம்
 - `/dashboard/changelog` — செயலிக்குள்ளான மாற்றப் பதிவுப் பார்வையாளர் (`CHANGELOG.md`-ஐக் காட்சிப்படுத்துகிறது)
 - `/dashboard/system` — இயக்கச் சூழல் கண்டறிதல்கள், பதிப்புத் தகவல், சூழல் சரிபார்ப்பு இடைமுகம்
 - `/dashboard/onboarding` — புதிய நிறுவல்களுக்கான முதல் இயக்க அமைப்பு வழிகாட்டி
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[உலாவி டாஷ்போர்டு]
     end
 
-    subgraph Router[OmniRoute உள்ளூர் செயல்முறை]
+    subgraph Router[67router உள்ளூர் செயல்முறை]
         API[V1 இணக்கத்தன்மை API\n/v1/*]
         DASH[டாஷ்போர்டு + மேலாண்மை API\n/api/*]
         CORE[SSE + மொழிபெயர்ப்பு மையம்\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - வரவுசெலவுத் திட்டம்: `src/app/api/usage/budget` (GET/POST)
 - மாற்று வழித் தொடர்கள்: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - இணக்கத் தணிக்கை: `src/app/api/compliance/audit-log` (GET, பக்கப்பிரிப்பு + கட்டமைக்கப்பட்ட மெட்டாடேட்டாவுடன்)
-- மதிப்பீடுகள்: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - கொள்கைகள்: `src/app/api/policies` (GET/POST)
 - ஒத்திசைவு டோக்கன்கள்: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - உள்ளமைவுத் தொகுப்பு: `src/app/api/sync/bundle` (GET, அமைப்புகள்/வழங்குநர்கள்/சேர்க்கைகள்/விசைகளின் ETag-பதிப்பிடப்பட்ட நிலைப்படம்)
@@ -316,7 +313,6 @@ flowchart LR
 - பெறுதல் காலக்கெடு: `src/shared/utils/fetchTimeout.ts`
 - கோரிக்கை தொலைஅளவீடு: `src/shared/utils/requestTelemetry.ts`
 - இணக்கப்பாடு/தணிக்கை: `src/lib/compliance/index.ts`
-- மதிப்பீட்டு இயக்கி: `src/lib/evals/evalRunner.ts`
 - டொமைன் நிலை நிலைநிறுத்தம்: `src/lib/db/domainState.ts` — மாற்றுவழிச் சங்கிலிகள், வரவுசெலவுத் திட்டங்கள், செலவு வரலாறு, பூட்டல் நிலை மற்றும் சர்க்யூட் பிரேக்கர்களுக்கான SQLite CRUD
 
 OAuth வழங்குநர் தொகுதிகள் (`src/lib/oauth/providers/`-இன் கீழ் 27 தனிப்பட்ட கோப்புகள்):
@@ -329,7 +325,7 @@ OAuth வழங்குநர் தொகுதிகள் (`src/lib/oauth/pr
 ## 5) உட்பொதிக்கப்பட்ட சேவைகள் (v3.8.4)
 
 **உட்பொதிக்கப்பட்ட சேவைகள்** எனப்படும், உள்ளூரில் இயங்கும் AI கருவிச் செயல்முறைகளை
-OmniRoute நிறுவவும், மேற்பார்வையிடவும், அவற்றுக்கு வழிச்செலுத்தவும் முடியும். இதில் ஐந்து வழங்கப்படுகின்றன: 9Router, CLIProxyAPI, Bifrost, Mux மற்றும் Dario.
+67router நிறுவவும், மேற்பார்வையிடவும், அவற்றுக்கு வழிச்செலுத்தவும் முடியும். இதில் ஐந்து வழங்கப்படுகின்றன: 9Router, CLIProxyAPI, Bifrost, Mux மற்றும் Dario.
 
 கட்டமைப்பு அடுக்குகள்:
 
@@ -386,23 +382,6 @@ OmniRoute நிறுவவும், மேற்பார்வையிட�
 முழுமையான வழிமுறை விவரங்களுக்கு (காரணி வாய்ப்பாடுகள், எடைச் சரிசெய்தல்),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) ஐப் பார்க்கவும்.
 
-### B. மேக முகவர்கள்
-
-மேக முகவர்கள், மூன்றாம் தரப்பு வழங்கும் ஹோஸ்ட் செய்யப்பட்ட குறியீட்டு-முகவர் தளங்களை (Codex Cloud, Devin,
-Jules), ஒரே மாதிரியான தரவுத்தள-ஆதரவுடைய பணிவாழ்க்கைச் சுழற்சிக்குப் பின்னால் பொதிகிறது. அனைத்து பணியுருவாக்கம்/ஆய்வு
-இறுதிப்புள்ளிகளுக்கும் மேலாண்மை அங்கீகரிப்பு தேவை.
-
-- தொகுதிக் மூலம்: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, மேலும் `agents/` இன் கீழுள்ள முகவர்-வாரியான துணைக்கோப்பகங்கள்)
-- முகவர்-வாரியான செயலாக்கங்கள்: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- பொது இறுதிப்புள்ளிகள்: `/api/v1/agents/tasks/*` (பட்டியலிடுதல்/உருவாக்குதல்/பெறுதல்/ரத்துசெய்தல்)
-- மேலாண்மை இறுதிப்புள்ளிகள்: `/api/cloud/*` (வழங்கல், நிலை, தொகுதி)
-- கட்டுப்பாட்டுப் பலகை: `/dashboard/cloud-agents`
-- சேமிப்பகம்: `cloud_agent_tasks` அட்டவணை
-
-முகவர்-வாரியான வழங்கல் மற்றும் OAuth விவரங்களுக்கு,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) ஐப் பார்க்கவும்.
-
 ### C. பாதுகாப்புத் தடுப்புகள்
 
 பாதுகாப்புத் தடுப்புகள் தொகுதி என்பது கோரிக்கைகள் மற்றும் பதில்களில் PII, தூண்டுரை உட்செலுத்தல் மற்றும்
@@ -438,7 +417,7 @@ Jules), ஒரே மாதிரியான தரவுத்தள-ஆதர
 - ஒதுக்கீட்டுத் தற்காலிகச் சேமிப்பு: `src/domain/quotaCache.ts`
 - தரக்குறைவு நிலை: `src/domain/degradation.ts`
 - உள்ளமைவுத் தணிக்கை: `src/domain/configAudit.ts`
-- OmniRoute பதில் மேனிலைத் தரவு உருவாக்கி: `src/domain/omnirouteResponseMeta.ts`
+- 67router பதில் மேனிலைத் தரவு உருவாக்கி: `src/domain/omnirouteResponseMeta.ts`
 - மதிப்பீட்டுத் துணைஅமைப்பு: `src/domain/assessment/` — காலமுறை மதிப்பீட்டுப் பணிகள்
 
 ### E. அங்கீகாரச் செயலாக்கத் தொடர்
@@ -810,7 +789,7 @@ flowchart LR
         Browser[டாஷ்போர்டு உலாவி]
     end
 
-    subgraph ContainerOrProcess[OmniRoute இயக்கச் சூழல்]
+    subgraph ContainerOrProcess[67router இயக்கச் சூழல்]
         Next[Next.js சேவையகம்\nPORT=20128]
         Core[SSE மையம் + செயல்படுத்திகள்]
         MainDB[(storage.sqlite)]
@@ -928,7 +907,7 @@ flowchart LR
 
 ## வழங்குநர் இணக்கத்தன்மை அட்டவணை
 
-> **குறிப்பு:** கீழே உள்ள அட்டவணை, OmniRoute v3.8.0-இல் பதிவுசெய்யப்பட்டுள்ள 351 வழங்குநர்களின் ஒரு பிரதிநிதித்துவ மாதிரியாகும்.
+> **குறிப்பு:** கீழே உள்ள அட்டவணை, 67router v3.8.0-இல் பதிவுசெய்யப்பட்டுள்ள 351 வழங்குநர்களின் ஒரு பிரதிநிதித்துவ மாதிரியாகும்.
 > அதிகாரப்பூர்வமானதும் தொடர்ச்சியாகப் புதுப்பிக்கப்படுவதுமான பட்டியலுக்கு,
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (தானாக உருவாக்கப்பட்டது) அல்லது
 > ஏற்றப்படும்போது Zod மூலம் சரிபார்க்கப்படும் அதிகாரப்பூர்வ மூலமான `src/shared/constants/providers.ts`-ஐப் பார்க்கவும்.
@@ -1110,7 +1089,7 @@ flowchart LR
 - கிளையண்டிடமிருந்து பெறப்பட்ட மூலக் கோரிக்கை
 - உண்மையில் மேல்நிலைக்கு அனுப்பப்பட்ட மொழிபெயர்க்கப்பட்ட கோரிக்கை
 - JSON ஆக மறுகட்டமைக்கப்பட்ட வழங்குநர் பதில்; ஸ்ட்ரீம் செய்யப்பட்ட பதில்கள் இறுதிச் சுருக்கம் மற்றும் ஸ்ட்ரீம் மெட்டாதரவாகச் சுருக்கப்படுகின்றன
-- OmniRoute திருப்பிய இறுதி கிளையண்ட் பதில்; ஸ்ட்ரீம் செய்யப்பட்ட பதில்கள் அதே சுருக்கமான வடிவத்தில் சேமிக்கப்படுகின்றன
+- 67router திருப்பிய இறுதி கிளையண்ட் பதில்; ஸ்ட்ரீம் செய்யப்பட்ட பதில்கள் அதே சுருக்கமான வடிவத்தில் சேமிக்கப்படுகின்றன
 
 ## பாதுகாப்பு உணர்திறன் கொண்ட எல்லைகள்
 

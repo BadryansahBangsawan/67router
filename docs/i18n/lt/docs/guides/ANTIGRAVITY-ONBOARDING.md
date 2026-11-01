@@ -1,10 +1,10 @@
-# OmniRoute Antigravity (Google One AI) Onboarding Guide (Lietuvių)
+# 67router Antigravity (Google One AI) Onboarding Guide (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇹 [am](../../../am/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇦 [ar](../../../ar/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇿 [az](../../../az/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇬 [bg](../../../bg/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇩 [bn](../../../bn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇦 [bs](../../../bs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇿 [cs](../../../cs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇰 [da](../../../da/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇪 [de](../../../de/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇷 [el](../../../el/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇸 [es](../../../es/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇪 [et](../../../et/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇷 [fa](../../../fa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇮 [fi](../../../fi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇷 [fr](../../../fr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇪 [ga](../../../ga/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [gu](../../../gu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ha](../../../ha/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇱 [he](../../../he/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [hi](../../../hi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇷 [hr](../../../hr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇺 [hu](../../../hu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇲 [hy](../../../hy/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇩 [id](../../../id/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ig](../../../ig/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇹 [it](../../../it/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇯🇵 [ja](../../../ja/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇪 [ka](../../../ka/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇭 [km](../../../km/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [kn](../../../kn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇷 [ko](../../../ko/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇻 [lv](../../../lv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ml](../../../ml/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [mr](../../../mr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇾 [ms](../../../ms/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇹 [mt](../../../mt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇲 [my](../../../my/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇵 [ne](../../../ne/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇱 [nl](../../../nl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇴 [no](../../../no/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [or](../../../or/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [pa](../../../pa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇭 [phi](../../../phi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇱 [pl](../../../pl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇹 [pt](../../../pt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇴 [ro](../../../ro/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇺 [ru](../../../ru/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇰 [si](../../../si/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇰 [sk](../../../sk/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇮 [sl](../../../sl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇸 [sr](../../../sr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇪 [sv](../../../sv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇪 [sw](../../../sw/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ta](../../../ta/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [te](../../../te/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇭 [th](../../../th/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇷 [tr](../../../tr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇰 [ur](../../../ur/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇿 [uz](../../../uz/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇻🇳 [vi](../../../vi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [yo](../../../yo/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/ANTIGRAVITY-ONBOARDING.md)
 
 ---
 
-> **Ką gaunate**: Prieigą prie Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6 ir kitų modelių per savo Google One AI Pro prenumeratą — jie pasiekiami per OmniRoute kaip vieningą sąsają.
+> **Ką gaunate**: Prieigą prie Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6 ir kitų modelių per savo Google One AI Pro prenumeratą — jie pasiekiami per 67router kaip vieningą sąsają.
 
 **Oficialūs šaltiniai**:
 
@@ -22,17 +22,17 @@ Abu teikėjai naudoja **tą pačią Google infrastruktūrą** — identišką OA
 
 > Oficialų Google palyginimą rasite [pranešime apie Antigravity CLI](https://antigravity.google/blog/introducing-google-antigravity-cli).
 
-| Aspektas                          | `antigravity` (IDE)                                          | `agy` (CLI)                                                    |
-| --------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Google produktas**              | Antigravity 2.0 / Antigravity IDE                            | Antigravity CLI                                                |
-| **Infrastruktūra**                | Ta pati Google Cloud Code API                                | Ta pati Google Cloud Code API                                  |
-| **OAuth / prieigos raktas**       | Tas pats klientas, tas pats atnaujinimas                     | Tas pats klientas, tas pats atnaujinimas                       |
-| **Modelių katalogas**             | Statiškas atrinktų modelių sąrašas (įrašytas OmniRoute kode) | Dinamiškai tikrinamas Google naudojant `:fetchAvailableModels` |
-| **Claude modeliai**               | Sonnet 4.6, Opus 4.6 (po 4 kiekvieno variantus)              | Sonnet 4.6, Opus 4.6 (po 4 kiekvieno variantus)                |
-| **Gemini pavadinimai**            | Aiškios žymos (Low/Medium/High)                              | Pirminiai ID (extra-low/low/agent)                             |
-| **Papildomi modeliai**            | `gpt-oss-120b-medium`                                        | Gali apimti papildomus Google modelius                         |
-| **Numatytasis naudojimo atvejis** | IDE integravimas (VS Code, JetBrains)                        | CLI / API prieiga                                              |
-| **Kvota**                         | Bendrinama su agy (ta pati Google paskyra)                   | Bendrinama su antigravity (ta pati Google paskyra)             |
+| Aspektas                          | `antigravity` (IDE)                                         | `agy` (CLI)                                                    |
+| --------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------- |
+| **Google produktas**              | Antigravity 2.0 / Antigravity IDE                           | Antigravity CLI                                                |
+| **Infrastruktūra**                | Ta pati Google Cloud Code API                               | Ta pati Google Cloud Code API                                  |
+| **OAuth / prieigos raktas**       | Tas pats klientas, tas pats atnaujinimas                    | Tas pats klientas, tas pats atnaujinimas                       |
+| **Modelių katalogas**             | Statiškas atrinktų modelių sąrašas (įrašytas 67router kode) | Dinamiškai tikrinamas Google naudojant `:fetchAvailableModels` |
+| **Claude modeliai**               | Sonnet 4.6, Opus 4.6 (po 4 kiekvieno variantus)             | Sonnet 4.6, Opus 4.6 (po 4 kiekvieno variantus)                |
+| **Gemini pavadinimai**            | Aiškios žymos (Low/Medium/High)                             | Pirminiai ID (extra-low/low/agent)                             |
+| **Papildomi modeliai**            | `gpt-oss-120b-medium`                                       | Gali apimti papildomus Google modelius                         |
+| **Numatytasis naudojimo atvejis** | IDE integravimas (VS Code, JetBrains)                       | CLI / API prieiga                                              |
+| **Kvota**                         | Bendrinama su agy (ta pati Google paskyra)                  | Bendrinama su antigravity (ta pati Google paskyra)             |
 
 **Pasiekiami modeliai (patikrinta eksperimentu, 2026-07-29)**:
 
@@ -89,11 +89,11 @@ Kreditai perkami atskirai ir nuskaičiuojami pagal standartinę API kainodarą.
 
 ### Svarbi informacija
 
-- Kvota yra **bendra visai paskyrai** — ta pati Google paskyra, naudojama Antigravity IDE, CLI ir OmniRoute, dalijasi vienu kvotos rezervu
+- Kvota yra **bendra visai paskyrai** — ta pati Google paskyra, naudojama Antigravity IDE, CLI ir 67router, dalijasi vienu kvotos rezervu
 - Kiekviena Google paskyra turi atskirą, nepriklausomą kvotą — kelios paskyros reiškia kelis kvotų rezervus
 - AI Pro naudotojai pranešė apie **7 dienų blokavimą** vietoje atnaujinimo po 5 valandų, kai pasiekiamas savaitinis bazinis limitas (Google patvirtino, kad esant didelei paklausai taip numatyta)
 
-**Kai jūsų paskyros kvota išnaudojama**: OmniRoute automatiškai pakartoja užklausą naudodama kitą pasiekiamą kombinuotojo maršruto paskyrą. Rankiniu būdu nieko daryti nereikia.
+**Kai jūsų paskyros kvota išnaudojama**: 67router automatiškai pakartoja užklausą naudodama kitą pasiekiamą kombinuotojo maršruto paskyrą. Rankiniu būdu nieko daryti nereikia.
 
 ---
 
@@ -103,9 +103,9 @@ Kiekvienam antigravity/agy ryšiui reikalingas Google Cloud Code `projectId`. Be
 
 ### A būdas: automatinis (rekomenduojamas)
 
-OmniRoute tai atlieka automatiškai. Kai naudodami valdymo skydelio OAuth pridedate naują Google paskyrą:
+67router tai atlieka automatiškai. Kai naudodami valdymo skydelio OAuth pridedate naują Google paskyrą:
 
-1. OmniRoute atnaujina prieigos raktą
+1. 67router atnaujina prieigos raktą
 2. Iškviečia `loadCodeAssist`, kad aptiktų projectId
 3. Jei projektas neegzistuoja, iškviečia `onboardUser`, kad jį sukurtų
 4. Dar kartą iškviečia `loadCodeAssist`, kad gautų naujai sukurtą projectId
@@ -128,14 +128,14 @@ agy login
 # Taip inicijuojama Cloud Code registracija ir priskiriamas projectId
 ```
 
-Sėkmingai įvykdę `agy login`, atnaujinkite prieigos raktą OmniRoute valdymo skydelyje. projectId bus aptiktas automatiškai.
+Sėkmingai įvykdę `agy login`, atnaujinkite prieigos raktą 67router valdymo skydelyje. projectId bus aptiktas automatiškai.
 
 ### Kaip patikrinti
 
 Patikrinkite duomenų bazę:
 
 ```bash
-# OmniRoute konteinerio viduje
+# 67router konteinerio viduje
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### Problema
 
-„Google OAuth“ reikalauja galiojančio peradresavimo URI. „OmniRoute“ pagal numatytuosius nustatymus naudoja `http://127.0.0.1:20128/callback` (grįžtamojo ryšio adresą). Tai veikia vietinėse versijose, bet **neveikia nuotoliniuose diegimuose** (pvz., serveryje, pasiekiamame per LAN IP adresą).
+„Google OAuth“ reikalauja galiojančio peradresavimo URI. „67router“ pagal numatytuosius nustatymus naudoja `http://127.0.0.1:20128/callback` (grįžtamojo ryšio adresą). Tai veikia vietinėse versijose, bet **neveikia nuotoliniuose diegimuose** (pvz., serveryje, pasiekiamame per LAN IP adresą).
 
 „Google“ atmeta peradresavimo URI, kurie:
 
@@ -165,7 +165,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 **A parinktis: naudoti integruotą OAuth procesą (numatytoji parinktis)**
 
-- Veikia, kai „OmniRoute“ pasiekiate per `localhost` arba `127.0.0.1`
+- Veikia, kai „67router“ pasiekiate per `localhost` arba `127.0.0.1`
 - Konfigūruoti nereikia
 
 **B parinktis: pasirinktiniai OAuth prisijungimo duomenys**
@@ -180,9 +180,9 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 **C parinktis: pradiniam prisijungimui naudoti agy CLI**
 
-- Kompiuteryje, kuris pasieks „OmniRoute“, paleiskite `agy login`
+- Kompiuteryje, kuris pasieks „67router“, paleiskite `agy login`
 - OAuth procesas užbaigiamas vietoje ir prieigos raktai išsaugomi
-- Importuokite ryšį į „OmniRoute“ per valdymo skydelį
+- Importuokite ryšį į „67router“ per valdymo skydelį
 
 ### Apribojimai
 
@@ -193,7 +193,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ## 5. Trikčių šalinimas: kai automatinė sąranka nepavyksta
 
-Daugumos paskyrų atveju „OmniRoute“ automatiškai aptinka projectId ir atlieka pradinę sąranką. Kai tai nepavyksta, pagrindinė priežastis paprastai būna viena iš šių:
+Daugumos paskyrų atveju „67router“ automatiškai aptinka projectId ir atlieka pradinę sąranką. Kai tai nepavyksta, pagrindinė priežastis paprastai būna viena iš šių:
 
 ### Paskyros regionas užblokuotas
 
@@ -221,7 +221,7 @@ Daugumos paskyrų atveju „OmniRoute“ automatiškai aptinka projectId ir atli
 
 **Pagrindinė priežastis**: paskyra niekada nebuvo užregistruota „Google Cloud Code“, o automatinė pradinė sąranka nepavyko.
 
-**Sprendimas**: rankiniu būdu paleiskite `agy login`, kad inicijuotumėte „Cloud Code“ registraciją, tada atnaujinkite prieigos raktą „OmniRoute“ valdymo skydelyje.
+**Sprendimas**: rankiniu būdu paleiskite `agy login`, kad inicijuotumėte „Cloud Code“ registraciją, tada atnaujinkite prieigos raktą „67router“ valdymo skydelyje.
 
 ### Prieigos rakto galiojimas baigėsi arba jis buvo atšauktas
 
@@ -273,4 +273,4 @@ Paskyra neveikia?
 
 ---
 
-_Paskutinį kartą atnaujinta: 2026-07-31. Parengta pagal OmniRoute v3.8.50._
+_Paskutinį kartą atnaujinta: 2026-07-31. Parengta pagal 67router v3.8.50._

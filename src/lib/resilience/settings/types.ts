@@ -127,21 +127,6 @@ export interface ComboCooldownWaitSettings {
 }
 
 /**
- * Per-connection concurrency limit for quota-share (`qtSd/…`) combos (FASE 2.1).
- * The quota-share gating in selectQuotaShareTarget is fail-open and cannot
- * hard-limit a single-connection pool, so concurrent requests to one
- * subscription account can still flood it (→ 429 + cooldown). When a connection
- * declares a positive `max_concurrent` ceiling, this layer serializes concurrent
- * requests to that account through a per-connection semaphore (excess requests
- * wait in the queue instead of flooding). Kill-switch only: the cap itself comes
- * from each connection's `max_concurrent`. Wiring lives in
- * open-sse/services/combo/quotaShareConcurrency.ts.
- */
-export interface QuotaShareConcurrencyLimitSettings {
-  enabled: boolean;
-}
-
-/**
  * Whether a stream content stall (the watchdog giving up on a stream that sent no
  * model output in time) cools down the account that served it. Off by default: the
  * stall is about one request — most often a long reasoning turn that had not produced
@@ -268,7 +253,6 @@ export interface ResilienceSettings {
   tokenRefreshBreaker: TokenRefreshBreakerSettings;
   waitForCooldown: WaitForCooldownSettings;
   comboCooldownWait: ComboCooldownWaitSettings;
-  quotaShareConcurrencyLimit: QuotaShareConcurrencyLimitSettings;
   streamStallCooldown: StreamStallCooldownSettings;
   providerCooldown: ProviderCooldownSettings;
   quotaPreflight: QuotaPreflightSettings;
@@ -284,7 +268,6 @@ export interface ResilienceSettingsPatch {
   tokenRefreshBreaker?: Partial<TokenRefreshBreakerSettings>;
   waitForCooldown?: Partial<WaitForCooldownSettings>;
   comboCooldownWait?: Partial<ComboCooldownWaitSettings>;
-  quotaShareConcurrencyLimit?: Partial<QuotaShareConcurrencyLimitSettings>;
   streamStallCooldown?: Partial<StreamStallCooldownSettings>;
   providerCooldown?: Partial<ProviderCooldownSettings>;
   quotaPreflight?: Partial<QuotaPreflightSettings>;

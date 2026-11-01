@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute používá jako primární úložiště **SQLite s žurnálováním WAL** a pro citlivá pole používá **AES-256-GCM** šifrování uložených dat. Tato příručka se zabývá schématem, migracemi, zálohováním/obnovou a provozními postupy.
+> **TL;DR**: 67router používá jako primární úložiště **SQLite s žurnálováním WAL** a pro citlivá pole používá **AES-256-GCM** šifrování uložených dat. Tato příručka se zabývá schématem, migracemi, zálohováním/obnovou a provozními postupy.
 
 **Zdroje:**
 
@@ -19,7 +19,7 @@
 
 ## Proč SQLite?
 
-OmniRoute zvolil SQLite namísto PostgreSQL/MySQL z několika důvodů:
+67router zvolil SQLite namísto PostgreSQL/MySQL z několika důvodů:
 
 | Faktor         | SQLite                                     | PostgreSQL                                    |
 | -------------- | ------------------------------------------ | --------------------------------------------- |
@@ -30,7 +30,7 @@ OmniRoute zvolil SQLite namísto PostgreSQL/MySQL z několika důvodů:
 | **Zálohování** | Kopie jediného souboru                     | `pg_dump` nebo snímek souborového systému     |
 | **Použití**    | Instalace pro jednoho uživatele, vestavěné | SaaS s více tenanty                           |
 
-Pro nasazení s **jedním uživatelem a jednou instancí** (primární případ použití OmniRoute) je SQLite jednodušší a rychlejší.
+Pro nasazení s **jedním uživatelem a jednou instancí** (primární případ použití 67router) je SQLite jednodušší a rychlejší.
 
 ### Žurnálování WAL
 
@@ -50,7 +50,7 @@ Výchozí velikost mezipaměti je **65 536 KiB (64 MiB)**. SQLite interpretuje z
 hodnotu `cache_size` jako přibližnou horní mez v KiB a stránky přiděluje podle potřeby.
 Nastavení **Nastavení > Systém a úložiště > Velikost mezipaměti** přijímá celočíselné hodnoty od **1 do
 1 000 000 KiB**; uložením nastavení se hodnota použije pro aktivní databázové připojení
-a OmniRoute při spuštění obnoví uloženou hodnotu.
+a 67router při spuštění obnoví uloženou hodnotu.
 
 ---
 
@@ -81,7 +81,7 @@ DATA_DIR=/custom/path omniroute
 
 ## Architektura doménových modulů
 
-Databáze OmniRoute obsahuje **110 TypeScriptových modulů nejvyšší úrovně** v `src/lib/db/`. Každý doménový modul:
+Databáze 67router obsahuje **110 TypeScriptových modulů nejvyšší úrovně** v `src/lib/db/`. Každý doménový modul:
 
 - Spravuje jednu nebo více konkrétních tabulek
 - Exportuje typované funkce CRUD
@@ -90,7 +90,7 @@ Databáze OmniRoute obsahuje **110 TypeScriptových modulů nejvyšší úrovně
 
 ### 110 databázových modulů nejvyšší úrovně
 
-OmniRoute obsahuje **110 TypeScriptových souborů nejvyšší úrovně** v `src/lib/db/`. Níže je uveden výběr základních modulů; úplný seznam najdete ve výpisu adresáře:
+67router obsahuje **110 TypeScriptových souborů nejvyšší úrovně** v `src/lib/db/`. Níže je uveden výběr základních modulů; úplný seznam najdete ve výpisu adresáře:
 
 | Modul                   | Tabulky                                                        | Odpovědnost                                                             |
 | ----------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -186,7 +186,7 @@ Následné migrace přidávají tabulky, jako jsou:
 
 ## Migrace
 
-OmniRoute používá **verzované, idempotentní migrace** v `src/lib/db/migrations/`. Každá migrace je samostatný soubor SQL pojmenovaný `NNN_description.sql`.
+67router používá **verzované, idempotentní migrace** v `src/lib/db/migrations/`. Každá migrace je samostatný soubor SQL pojmenovaný `NNN_description.sql`.
 
 ### Pojmenování migrací
 
@@ -256,7 +256,7 @@ UPDATE combos SET priority = 100 WHERE priority IS NULL;
 CREATE INDEX IF NOT EXISTS idx_combos_priority ON combos(priority);
 ```
 
-> **Zpětně nekompatibilní změny** (např. odstraňování sloupců) jsou problematické. OmniRoute NEPODPORUJE přechod na starší verzi — jakmile je migrace aplikována, změna schématu je trvalá. Plánujte s tímto omezením.
+> **Zpětně nekompatibilní změny** (např. odstraňování sloupců) jsou problematické. 67router NEPODPORUJE přechod na starší verzi — jakmile je migrace aplikována, změna schématu je trvalá. Plánujte s tímto omezením.
 
 ---
 
@@ -310,7 +310,7 @@ Z výkonnostních důvodů jsou následující údaje ukládány jako prostý te
 
 ## Omezení šifrování (v3.8.16+)
 
-OmniRoute používá **`migrateLegacyEncryptedString()`** k transparentní práci se dvěma schématy šifrování:
+67router používá **`migrateLegacyEncryptedString()`** k transparentní práci se dvěma schématy šifrování:
 
 - **Starší** (před v3.5.0): „šifrování“ založené na XOR (nejde o skutečnou kryptografii)
 - **Aktuální**: AES-256-GCM s řádným inicializačním vektorem a autentizačním tagem
@@ -399,7 +399,7 @@ Pro zálohování běžící DB bez odstávky:
 sqlite3 ~/.omniroute/storage.sqlite ".backup /backups/omniroute-hot.db"
 ```
 
-Tento příkaz používá online zálohovací API SQLite — lze jej bezpečně spustit, i když je OmniRoute v provozu.
+Tento příkaz používá online zálohovací API SQLite — lze jej bezpečně spustit, i když je 67router v provozu.
 
 ---
 
@@ -442,7 +442,7 @@ PRAGMA mmap_size = 268435456;  -- 256 MB
 
 ### Kompaktování
 
-Dlouhodobě spuštěným instancím OmniRoute prospívá příležitostné použití příkazu `VACUUM`:
+Dlouhodobě spuštěným instancím 67router prospívá příležitostné použití příkazu `VACUUM`:
 
 ```bash
 sqlite3 ~/.omniroute/storage.sqlite "VACUUM;"
@@ -575,7 +575,7 @@ EOF
 ### Resetování (vymazání) všech dat
 
 ```bash
-# Nejprve zastavte OmniRoute
+# Nejprve zastavte 67router
 omniroute stop
 
 # Odstraňte databázový soubor
@@ -613,7 +613,7 @@ Jiný proces drží zámek pro zápis. Proveďte jednu z následujících akcí:
 
 - Počkejte, až druhý proces skončí (zkontrolujte pomocí `lsof | grep storage.sqlite`)
 - Ukončete druhý proces
-- Pokud problém přetrvává, restartujte OmniRoute
+- Pokud problém přetrvává, restartujte 67router
 
 ### „Omezení cizího klíče selhalo“
 
@@ -643,10 +643,10 @@ PRAGMA mmap_size = 0;
 
 Migrace proběhla v transakci, takže by měla být vrácena zpět. Pokud se tak nestalo:
 
-1. **Zastavte OmniRoute** (zabraňte dalším pokusům)
+1. **Zastavte 67router** (zabraňte dalším pokusům)
 2. **Zkontrolujte stav databáze** pomocí `sqlite3`
 3. **Ručně opravte** částečně provedenou migraci
-4. **Znovu spusťte** OmniRoute (migrace se zopakuje)
+4. **Znovu spusťte** 67router (migrace se zopakuje)
 
 Abyste tomu předešli, vždy migrace nejprve otestujte na kopii.
 

@@ -6,7 +6,7 @@
 
 ## Visão geral
 
-Todas as rotas da API de gerenciamento do OmniRoute são classificadas em um dos três níveis de proteção. A classificação é estática, definida em `src/server/authz/routeGuard.ts`, e avaliada antes da execução de qualquer outro fluxo de autenticação.
+Todas as rotas da API de gerenciamento do 67router são classificadas em um dos três níveis de proteção. A classificação é estática, definida em `src/server/authz/routeGuard.ts`, e avaliada antes da execução de qualquer outro fluxo de autenticação.
 
 ## Níveis
 
@@ -25,9 +25,9 @@ CVE ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj)).
 **O que é a GHSA-fhh6-4qxv-rpqj (a classe de ataque):** um servidor de gerenciamento/agente
 expõe um endpoint que inicia um subprocesso (`npm install`, `node`, um navegador,
 um proxy, `git`, `tar`, …). Se esse endpoint puder ser acessado de fora do host — porque
-o operador colocou o OmniRoute atrás de um túnel nginx/Cloudflare/Tailscale e um JWT
+o operador colocou o 67router atrás de um túnel nginx/Cloudflare/Tailscale e um JWT
 vazou, ou a autenticação foi configurada incorretamente — o invasor transforma "chamar uma API" em "executar um
-comando no host" (execução remota de código). O OmniRoute impede isso impondo uma
+comando no host" (execução remota de código). O 67router impede isso impondo uma
 **verificação incondicional do host de loopback, antes de qualquer verificação de autenticação**, em todas as
 rotas capazes de iniciar processos: um token vazado por meio de um túnel ainda não consegue acessar a funcionalidade de criação de processos.
 
@@ -55,7 +55,6 @@ prefixos capazes de iniciar processos e faz com que a CI falhe se algum deles n�
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — listener http-proxy + proxy do sistema                                                     |
 | `/api/settings/mitm`                                                                                     | Habilita interceptação MITM (estado de proxy em nível de sistema)                                              |
 | `/api/issue-agent/`                                                                                      | Agente de issues — inicia ferramentas locais no repositório                                                    |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — carregam/executam via `worker_threads` + `child_process`                                             |
 | `/api/middleware/`                                                                                       | Middleware do usuário — carrega/executa código do operador no processo                                         |
 | `/api/system/version`                                                                                    | Atualização automática (somente POST; GET/HEAD/OPTIONS isentos) — inicia `git checkout` + `npm install`        |
 | `/api/db-backups/exportAll`                                                                              | Inicia `tar` para o arquivo de exportação                                                                      |
@@ -116,7 +115,7 @@ para clientes remotos exclusivos do MCP que não devem precisar de amplo acesso 
 
 #### Orientações ao operador e auditoria
 
-Se você executar o OmniRoute por trás de um proxy reverso ou túnel (nginx, Caddy, Cloudflare
+Se você executar o 67router por trás de um proxy reverso ou túnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), a verificação de loopback ainda protegerá as rotas acima
 capazes de iniciar processos — uma solicitação cujo endereço de cliente não seja de loopback será rejeitada com
 `403 LOCAL_ONLY` **antes da execução da autenticação**, portanto, um JWT vazado não poderá iniciar um processo. Ainda
@@ -155,7 +154,7 @@ restam duas responsabilidades ao operador:
   endereço de cliente que não seja loopback. Qualquer ocorrência que tenha retornado `200`
   em vez de `403 LOCAL_ONLY` significa que o proxy está mascarando o IP real do cliente —
   corrija o proxy.
-- Um `403 LOCAL_ONLY` nos logs do OmniRoute para um desses caminhos indica que a proteção
+- Um `403 LOCAL_ONLY` nos logs do 67router para um desses caminhos indica que a proteção
   está funcionando como esperado, e não um erro a ser suprimido.
 
 #### Rotas acessíveis remotamente com bloqueio de sondagem no ponto de chamada

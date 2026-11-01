@@ -7,11 +7,11 @@
 Apie bendrinamą vykdomųjų failų manifestą, apribotas antrinių procesų aplinkas ir nuolatinę
 Gemini sąranką žr. [CLI paleidimo sutartyse](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute pateikiama su `setup-*` komandų rinkiniu, sukonfigūruojančiu programavimo
-CLI (Codex, Claude Code, OpenCode, Cline, …), kad jis naudotų OmniRoute kaip savo posistemę — taip
-įrankis jungiasi prie **vieno** galinio taško, o OmniRoute nukreipia užklausas tinkamam teikėjui ir
+67router pateikiama su `setup-*` komandų rinkiniu, sukonfigūruojančiu programavimo
+CLI (Codex, Claude Code, OpenCode, Cline, …), kad jis naudotų 67router kaip savo posistemę — taip
+įrankis jungiasi prie **vieno** galinio taško, o 67router nukreipia užklausas tinkamam teikėjui ir
 automatiškai persijungia sutrikimo atveju. Kiekviena komanda nuskaito **tiesioginį** modelių katalogą iš veikiančio
-OmniRoute (vietinio arba nuotolinio) ir įrašo paties įrankio konfigūracijos failą **jūsų**
+67router (vietinio arba nuotolinio) ir įrašo paties įrankio konfigūracijos failą **jūsų**
 kompiuteryje. Kai įrankis tai palaiko, API raktas nurodomas naudojant aplinkos kintamąjį.
 Komandos, kurios išsaugo vietinį įrankio aplinkos failą, pažymėtos toliau.
 
@@ -53,7 +53,7 @@ išsamiuose kiekvienam įrankiui skirtuose aprašuose:
 
 - [Claude Code konfigūracija](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI konfigūracija](./CODEX-CLI-CONFIGURATION.md)
-- [Nuotolinis režimas](./REMOTE-MODE.md) — valdykite nuotolinį OmniRoute (VPS / Tailnet) iš savo nešiojamojo kompiuterio
+- [Nuotolinis režimas](./REMOTE-MODE.md) — valdykite nuotolinį 67router (VPS / Tailnet) iš savo nešiojamojo kompiuterio
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot plėtinys; jis taip pat gali vykdyti šias
   `setup-*` komandas už jus tiesiai redaktoriuje
 
@@ -89,7 +89,7 @@ serverio, o konfigūracija įrašoma vietoje.
 
 Pastabos apie vėliavėles (patikrinta komandų šaltinio kode):
 
-- `--remote <url>` — katalogas gaunamas iš nuotolinės OmniRoute (nepaisoma `--port`
+- `--remote <url>` — katalogas gaunamas iš nuotolinės 67router (nepaisoma `--port`
   ir aktyvaus konteksto). `--api-key <key>` pateikia to serverio prisijungimo duomenis
   (pagal numatytuosius nustatymus naudojamas `OMNIROUTE_API_KEY` aplinkos kintamasis arba aktyvaus konteksto prieigos raktas).
 - `--only <patterns>` — kableliais atskirtos poeilutės; paliekami tik sutampantys modelių ID
@@ -110,7 +110,7 @@ Pastabos apie vėliavėles (patikrinta komandų šaltinio kode):
   **codex** — per `-c model_providers.omniroute.*` argumentus. **Qwen yra vienintelis vykdymo
   tikslas, kuriam privaloma `--model`** — `omniroute run qwen` be jos baigia darbą
   kodu `2` ir pateikia aiškią klaidą.
-- `--port <port>` — vietinis OmniRoute prievadas (numatytoji reikšmė `20128`, jos nepaisoma, kai nustatyta `--remote`).
+- `--port <port>` — vietinis 67router prievadas (numatytoji reikšmė `20128`, jos nepaisoma, kai nustatyta `--remote`).
   Yra visose `setup-*` komandose ir abiejose paleidyklėse.
 - `omniroute run` išėjimo kodai: antrinės CLI išėjimo kodas perduodamas
   nepakeistas; `2` = netinkami argumentai (nepalaikomas tikslas, trūksta privalomos
@@ -155,7 +155,7 @@ nėra pateikiami kaip paleidžiami tikslai.
 
 ## Vietinis naudojimas
 
-Kai OmniRoute veikia adresu `localhost:20128`, tiesiog paleiskite savo įrankio
+Kai 67router veikia adresu `localhost:20128`, tiesiog paleiskite savo įrankio
 sąrankos komandą. Katalogas gaunamas iš vietinio serverio.
 
 ```bash
@@ -183,8 +183,8 @@ omniroute setup-continue --dry-run
 Paleidimas visiškai neįrašant jokios konfigūracijos (tik įterpiant aplinkos kintamuosius):
 
 ```bash
-omniroute launch                 # Claude Code → vietinis OmniRoute
-omniroute launch-codex           # Codex CLI → vietinis OmniRoute
+omniroute launch                 # Claude Code → vietinis 67router
+omniroute launch-codex           # Codex CLI → vietinis 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -202,7 +202,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Nuotolinis naudojimas
 
-Nukreipkite bet kurią sąrankos komandą į nuotolinį OmniRoute naudodami `--remote` + `--api-key`.
+Nukreipkite bet kurią sąrankos komandą į nuotolinį 67router naudodami `--remote` + `--api-key`.
 Katalogas gaunamas iš nuotolinio serverio, o konfigūracija įrašoma jūsų vietiniame kompiuteryje.
 
 ```bash
@@ -245,7 +245,7 @@ omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent wor
 ```
 
 Abiem būdais įrašomas vienas 5dive **autentifikavimo profilis**, o kiekvienas su tuo
-profiliu susietas `claude` egzempliorius tuomet komunikuoja su OmniRoute. Šiai paskirčiai būdingi trys dalykai:
+profiliu susietas `claude` egzempliorius tuomet komunikuoja su 67router. Šiai paskirčiai būdingi trys dalykai:
 
 - **Ji vykdoma parko pagrindiniame kompiuteryje root teisėmis.** 5dive komandos veikia vietinius systemd vienetus
   ir root priklausantį būsenos katalogą; nuotolinio režimo nėra. Jei procesas dar nevykdomas
@@ -263,7 +263,7 @@ profiliu susietas `claude` egzempliorius tuomet komunikuoja su OmniRoute. Šiai 
 API raktas 5dive perduodamas per **stdin** (`--api-key=-`), todėl jis niekada nepasirodo
 `ps` išvestyje.
 
-Profilį nukreipus į OmniRoute **kombinaciją**, o ne į vieną modelį, parkas gauna
+Profilį nukreipus į 67router **kombinaciją**, o ne į vieną modelį, parkas gauna
 teikėjo atsarginio perjungimo funkciją: kai vykdant
 [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) užfiksuotą procesą pagrindinis galinis taškas visiškai nustojo veikti veiksmo viduryje,
 agentas likusius veiksmus užbaigė naudodamas atsarginį galinį tašką ir naudotojui apie sutrikimą nepranešė.
@@ -272,7 +272,7 @@ agentas likusius veiksmus užbaigė naudodamas atsarginį galinį tašką ir nau
 
 ## Bazinio URL taisyklės (kuriems įrankiams reikia `/v1`)
 
-OmniRoute pateikia su OpenAI suderinamą sąsają adresu `/v1`, su Anthropic suderinamą sąsają šakniniame adrese,
+67router pateikia su OpenAI suderinamą sąsają adresu `/v1`, su Anthropic suderinamą sąsają šakniniame adrese,
 o savąją Gemini sąsają — adresu `/v1beta`. Kiekviena integracija sukonfigūruota naudoti jos
 įrankio reikalaujamą formatą (patikrinta komandų šaltinio kode):
 
@@ -294,7 +294,7 @@ o savąją Gemini sąsają — adresu `/v1beta`. Kiekviena integracija sukonfig�
 ## Savųjų priklausomybių išsaugojimas atnaujinant: `--include=optional`
 
 Kai atnaujinate naudodami `omniroute update` (patvirtinę arba su `--apply`),
-OmniRoute paleidžia diegimą su iš anksto įtraukta parinktimi `--include=optional`:
+67router paleidžia diegimą su iš anksto įtraukta parinktimi `--include=optional`:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -323,13 +323,13 @@ su kodu 1, jei versija pasenusi), `--apply` (diegti neprašant patvirtinimo),
 Sutartis patikrinta naudojant `@google/gemini-cli` 0.50.0: CLI atsižvelgia į
 `GOOGLE_GEMINI_BASE_URL` ir siunčia `POST /v1beta/models/<model>:generateContent`
 (ir `:streamGenerateContent?alt=sse`) užklausas šiuo adresu — būtent į savąją
-OmniRoute Gemini sąsają (`/v1beta`). `omniroute run gemini` tai sukonfigūruoja automatiškai:
+67router Gemini sąsają (`/v1beta`). `omniroute run gemini` tai sukonfigūruoja automatiškai:
 
-- `GOOGLE_GEMINI_BASE_URL` → aktyvus OmniRoute bazinis URL (šakninis, be `/v1`);
-- `GEMINI_API_KEY` → nustatyti OmniRoute prisijungimo duomenys (parinktis / aplinkos kintamasis / kontekstas);
+- `GOOGLE_GEMINI_BASE_URL` → aktyvus 67router bazinis URL (šakninis, be `/v1`);
+- `GEMINI_API_KEY` → nustatyti 67router prisijungimo duomenys (parinktis / aplinkos kintamasis / kontekstas);
 - **laikinas izoliuotas `GEMINI_CLI_HOME`**, kurio `.gemini/settings.json`
   pasirenka `gemini-api-key` autentifikavimą, todėl išsaugota Google OAuth sesija
-  (Code Assist) niekada nepakeičia į OmniRoute nukreisto paleidimo — pašalinamas
+  (Code Assist) niekada nepakeičia į 67router nukreisto paleidimo — pašalinamas
   procesui pasibaigus;
 - **aplinkos higiena**: iš antrinio proceso aplinkos pašalinami `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` ir `GOOGLE_GENAI_USE_GCA` (kurie nukreiptų
@@ -354,7 +354,7 @@ naudojama kaip agentų protokolo integracija, skirta `/dashboard/acp-agents`.
 
 Deterministinės paleidimo plano regresijos vykdomos CI aplinkoje (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Norint patikrinti TIKRUOSIUS vykdomuosius failus naudojant TIKRĄ
-„OmniRoute“ serverį, galima pasirinktinai naudoti testavimo sistemą, esančią
+„67router“ serverį, galima pasirinktinai naudoti testavimo sistemą, esančią
 `tests/integration/upstream-cli-smoke.int.test.ts`. Ji niekada nepaleidžiama automatiškai
 (kiekvienas dalinis testas praleidžiamas, nebent nustatyta `RUN_CLI_SMOKE=1`), prisijungimo duomenys perduodami
 aplinkos kintamojo PAVADINIMU (niekada ne reikšme), iš bet kokios įrašytos išvesties pašalinamos raktus

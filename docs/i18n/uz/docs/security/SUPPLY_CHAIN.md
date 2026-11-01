@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute npm + Docker artefaktlarini nashr etadi. Bu darvozalar kelib chiqishini, inventarizatsiyani (SBOM) va CVE skanerlashni ta'minlaydi, barchasi OSS bo'lib, chiqarish ish oqimlariga ulangan. **Maslahat-birinchi** yondashuv — ular hozir hisobot berishadi, birinchi muvaffaqiyatli chiqarishdan keyin bloklashga o'tkaziladi.
+67router npm + Docker artefaktlarini nashr etadi. Bu darvozalar kelib chiqishini, inventarizatsiyani (SBOM) va CVE skanerlashni ta'minlaydi, barchasi OSS bo'lib, chiqarish ish oqimlariga ulangan. **Maslahat-birinchi** yondashuv — ular hozir hisobot berishadi, birinchi muvaffaqiyatli chiqarishdan keyin bloklashga o'tkaziladi.
 
 | Darvoza               | Vosita                                         | Qayerda                       | Bloklaydimi?                              | Chiqish                                       |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :---------------------------------------- | :-------------------------------------------- |
@@ -46,7 +46,7 @@ Yuqoridagi CVE Variance tuzatishining "yuqori oqimda tuzatish yo'q" bo'limiga ko
 - **Zanjirning hech bir joyida tuzatilgan versiya mavjud emas.** `extract-zip@2.0.1` (2020 yilda nashr etilgan) paketning yakuniy versiyasi — u qo'llab-quvvatlanmaydi. `@openai/codex-security`ning
   joriy npm-latest (`0.1.29`) hali ham `extract-zip@2.0.1`ni tortadi.
 - **Ishlab chiqarishdan erishib bo'lmaydi.** `promptfoo` faqat devDependency (hech qachon `dependencies` ostida ko'rsatilmagan) va `src/`, `open-sse/` yoki `bin/` ostidagi hech qanday fayl
-  `extract-zip` npm paketini import qilmaydi — OmniRoute'ning o'z `extractZip()` yordamchisi
+  `extract-zip` npm paketini import qilmaydi — 67router'ning o'z `extractZip()` yordamchisi
   (`src/lib/versionManager/binaryManager.ts:93`) mahalliy `unzip`/`tar`ga murojaat qiladi
   va bog'liq emas. `@openai/codex-security` ham extract-zip'ning onEntry callback'i ustiga o'zining symlink-traversal himoyasini o'rnatadi.
 - **`package.json` `overrides` orqali `extract-zip`ni alias qilmang** — yagona maqbul

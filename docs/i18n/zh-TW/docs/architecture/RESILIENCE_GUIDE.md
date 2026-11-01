@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 有三個各自獨立但彼此相關的韌性機制。每個機制的範圍與用途皆不同。在除錯路由行為時,請將它們分開看待。
+67router 有三個各自獨立但彼此相關的韌性機制。每個機制的範圍與用途皆不同。在除錯路由行為時,請將它們分開看待。
 
 ![三層韌性模型](../diagrams/exported/resilience-3layers.svg)
 
@@ -189,7 +189,7 @@ Kiro 帶有非空簽章的二進位 `reasoningContentEvent` 框架,會以空的 
 
 ### 專屬受管工作階段連線租約
 
-**範圍:**一個活躍的受管 HTTP 用戶端/工作階段擁有一個符合資格的 OmniRoute 連線。
+**範圍:**一個活躍的受管 HTTP 用戶端/工作階段擁有一個符合資格的 67router 連線。
 
 **目的:**為需要跨請求硬性路由隔離的用戶端提供持久的專屬連線所有權。
 這與工作階段親和性不同,後者是一種軟性的連續性偏好:
@@ -211,7 +211,7 @@ Kiro 帶有非空簽章的二進位 `reasoningContentEvent` 框架,會以空的 
 上游執行器標頭中移除。
 
 如果一般路由有符合資格的受管理候選者,但每個空閒候選者都被
-外來的作用中租約佔用,OmniRoute 會回傳 HTTP `429`、lease-capacity-unavailable 代碼、
+外來的作用中租約佔用,67router 會回傳 HTTP `429`、lease-capacity-unavailable 代碼、
 waiting-for-capacity 狀態,以及根據最早相關到期時間推算出的有上限 `Retry-After`。
 一般的空資格情況並非租約競爭,並保留其既有的路由錯誤語意。
 
@@ -233,7 +233,7 @@ waiting-for-capacity 狀態,以及根據最早相關到期時間推算出的有�
   對 codex 而言是整個 `codex` / `spark` 範圍（該連線的每個 `gpt-5*` 模型），
   其他 provider 則由 `getQuotaScopedModelForProvider()` 決定。
 - `404` 鎖定單一模型本身（`getModelLockKey()` 會將 `not_found` 收窄範圍）。
-- 任何其他狀態 — `5xx` 傳輸/伺服器故障，以及 OmniRoute 自身從品質驗證合成的
+- 任何其他狀態 — `5xx` 傳輸/伺服器故障，以及 67router 自身從品質驗證合成的
   `502` — 僅鎖定**確切**的 provider/connection/model 組合。單一模型上的
   串流故障並不能作為帳號配額出問題的證據；在此規則之前，
   `codex/gpt-5.6-luna` 上的一次空回應，就會把該連線的所有 `gpt-5*`
@@ -345,7 +345,7 @@ _狀態_則是暫時性的。
 
 - **連線範圍 vs 模型專屬：** `maxConcurrent` 仍是整個連線共享的上限。當兩者都適用時，兩道閘門會在同一個複合閘門中以原子方式取得（`global → provider → account → model`）；實際生效的是適用限制中較嚴格者。
 - **模型鍵精確比對：** 鍵是路由解析後傳給執行器的模型字串——通常是裸上游模型 ID（`glm-5`），而非用戶端的 `provider/model` 別名（`zai/glm-5` 不會匹配 `glm-5`）。值為正整數的並行請求上限。
-- **本地排隊，不做探測：** 超出的請求會依現有的佇列/逾時語義在本地排隊（具類型的 `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` 准入錯誤）。OmniRoute 不會探測或推斷上游政策——它只強制執行維運者所設定的確切上限。飽和的模型閘門絕不會停用該提供者，也不會造成永久性的模型鎖定；上游的 429/冷卻/回退行為仍是錯誤的最終後盾。
+- **本地排隊，不做探測：** 超出的請求會依現有的佇列/逾時語義在本地排隊（具類型的 `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` 准入錯誤）。67router 不會探測或推斷上游政策——它只強制執行維運者所設定的確切上限。飽和的模型閘門絕不會停用該提供者，也不會造成永久性的模型鎖定；上游的 429/冷卻/回退行為仍是錯誤的最終後盾。
 - **每連線、每進程的作用範圍：** 上限是針對每個資料庫連線設定的，並保存在記憶體中，因此兩個使用相同上游 API 金鑰的連線彼此之間不會協調。
 - **未設定即維持原狀：** 省略該對應表（或將儀表板欄位留空）就不會加入模型閘門。以下範例設定不預設任何通用的提供者限制：
 
@@ -412,7 +412,7 @@ quota_exhausted / auth_error / not_found / not_found_local:
 ### 速率限制自動啟用安全網與連線保護（`rateLimitProtection`）
 
 **自動啟用安全網**（`resilienceSettings.requestQueue.autoEnableApiKeyProviders`，預設 `true`）：
-預設情況下，OmniRoute 會自動為所有使用中的 API 金鑰提供者連線（`getProviderCategory(provider) === "apikey"`）啟用速率限制佇列保護。這可確保送往對速率敏感的上游 API 金鑰的傳入請求會透過 Bottleneck 排隊並節流，而不是突發湧入上游而產生 429 錯誤。此安全網可透過 `RATE_LIMIT_AUTO_ENABLE` 環境變數覆寫（`false`/`0`/`off` 為停用，`true`/`1`/`on` 為強制啟用），其優先順序高於已持久化的儀表板設定（**設定 → 韌性** / `PATCH /api/resilience`）。
+預設情況下，67router 會自動為所有使用中的 API 金鑰提供者連線（`getProviderCategory(provider) === "apikey"`）啟用速率限制佇列保護。這可確保送往對速率敏感的上游 API 金鑰的傳入請求會透過 Bottleneck 排隊並節流，而不是突發湧入上游而產生 429 錯誤。此安全網可透過 `RATE_LIMIT_AUTO_ENABLE` 環境變數覆寫（`false`/`0`/`off` 為停用，`true`/`1`/`on` 為強制啟用），其優先順序高於已持久化的儀表板設定（**設定 → 韌性** / `PATCH /api/resilience`）。
 
 **各連線 `rateLimitProtection` 的語意：**
 各連線的速率限制保護是透過提供者連線上的 `rateLimitProtection` 布林欄位追蹤（在 SQLite 中持久化為 `rate_limit_protection`）：
@@ -676,7 +676,7 @@ connectionId)`)——一般的模型清單組合中,同層目標本身並未固�
 > 指南維持在 40k 上下文預算之內。此為上述章節的精簡、面向代理版本；
 > 編號章節仍是完整參考文件。
 
-OmniRoute 有三種相關但各自不同的暫時性失敗機制。除錯路由行為時，
+67router 有三種相關但各自不同的暫時性失敗機制。除錯路由行為時，
 請務必區分它們的適用範圍。請參閱
 [三層韌性架構圖](../diagrams/exported/resilience-3layers.svg)
 （來源：[diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)）

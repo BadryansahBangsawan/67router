@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-komprimering er bygget op omkring engine-kontrakter. En tilstand kan køre én engine direkte
+67router-komprimering er bygget op omkring engine-kontrakter. En tilstand kan køre én engine direkte
 (`caveman` eller `rtk`) eller en deterministisk, stakket pipeline, der kører flere engines i rækkefølge.
 
 ## Tilstande
@@ -43,9 +43,9 @@ akkumuleret historik, stopper ved `below_min_chars`, og motoren transformerer in
 er standarden `aggressive` frem for den sikreste profil.
 
 Pakken bestemmer selv sit modelomfang og sin profil ud fra sin miljøkonfiguration.
-OmniRoute uddelegerer aldrig beslutningen: adapteren fastlåser modelbegrænsningen til pakkens
+67router uddelegerer aldrig beslutningen: adapteren fastlåser modelbegrænsningen til pakkens
 mest restriktive omfang, så værtsmiljøets indstillinger kun kan indsnævre listen over tilladte modeller og aldrig
-udvide den ud over OmniRoutes dokumenterede målinger.
+udvide den ud over 67routers dokumenterede målinger.
 
 ## Engineregister
 
@@ -109,7 +109,7 @@ Caveman-tilstand fokuserer på semantisk kondensering af almindelig prosa:
 Dashboardplaceringen er `Dashboard -> Kontekst og cache -> Caveman`.
 
 Caveman-projektet rapporterer `~75%` færre outputtokens, `65%` gennemsnitlig outputbesparelse i benchmarks
-med et interval på `22-87%` samt et værktøj til inputkomprimering på `~46%`. OmniRoute bruger Cavemans tal for
+med et interval på `22-87%` samt et værktøj til inputkomprimering på `~46%`. 67router bruger Cavemans tal for
 inputkomprimering ved dokumentation af kombinerede prompt-/kontekstbesparelser; Cavemans outputtilstand er fortsat
 en separat funktion til styring af svaradfærd.
 

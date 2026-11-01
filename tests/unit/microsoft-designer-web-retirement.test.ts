@@ -25,7 +25,7 @@ test("Microsoft Designer Web runtime IDs fail closed at the executor seam", asyn
       (error: unknown) => {
         assert.ok(error instanceof Error);
         assert.equal((error as Error & { status?: number }).status, 410);
-        assert.equal(error.message, "Provider has been retired from OmniRoute runtime.");
+        assert.equal(error.message, "Provider has been retired from 67router runtime.");
         assert.equal(error.message.includes(providerId.trim()), false);
         return true;
       }
@@ -60,15 +60,13 @@ test("Microsoft Designer Web implementation and active catalog surfaces are abse
   for (const relativePath of [
     "open-sse/executors/microsoft-designer-web.ts",
     "open-sse/handlers/imageGeneration/providers/designerWeb.ts",
+    // 67router removed the whole image handler.
+    "open-sse/handlers/imageGeneration.ts",
   ]) {
     assert.equal(fs.existsSync(path.join(repoRoot, relativePath)), false, relativePath);
   }
 
   const sourceMustNotContain: Array<[string, RegExp]> = [
-    [
-      "open-sse/handlers/imageGeneration.ts",
-      /handleDesignerWebImageGeneration|providers\/designerWeb/,
-    ],
     ["open-sse/executors/index.ts", /MicrosoftDesignerWebExecutor|microsoft-designer-web\.ts/],
     ["open-sse/utils/publicCreds.ts", /microsoft_designer_client_id/],
     ["src/app/api/providers/[id]/test/webSessionTestDispatch.ts", /microsoft-designer-web/],
@@ -78,7 +76,7 @@ test("Microsoft Designer Web implementation and active catalog surfaces are abse
     assert.doesNotMatch(fs.readFileSync(path.join(repoRoot, relativePath), "utf8"), pattern);
   }
 
-  assert.ok(imageProviders.openai, "OpenAI/DALL-E image generation remains registered");
+  assert.ok(imageProviders.openai, "OpenAI/DALL-E image models remain in the registry");
   assert.ok(webCookieProviders["copilot-web"], "Copilot Web remains registered");
   assert.ok(webCookieProviders["muse-spark-web"], "MuseSpark Web remains registered");
   assert.equal(fs.existsSync(path.join(repoRoot, "open-sse/executors/azure-openai.ts")), true);

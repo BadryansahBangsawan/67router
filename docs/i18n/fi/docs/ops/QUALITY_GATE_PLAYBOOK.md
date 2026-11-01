@@ -4,7 +4,7 @@
 
 ---
 
-> **Mikä tämä asiakirja on.** Kriittinen arvio OmniRouten laadunvarmistusporttijärjestelmästä
+> **Mikä tämä asiakirja on.** Kriittinen arvio 67routerin laadunvarmistusporttijärjestelmästä
 > verrattuna alan parhaisiin käytäntöihin, **sekä** kattava luettelo kaikista laadun
 > tarkistuspisteistä ja **työkaluista riippumaton toisintamissuunnitelma**, jonka avulla samaa järjestelmää voidaan
 > soveltaa mihin tahansa projektiin. Luotu 2026-06-16 todellisen repositorion tilan perusteella (ei muistinvaraisesti).
@@ -101,62 +101,62 @@ jolla sama voidaan toteuttaa missä tahansa teknologiaympäristössä.
 
 ### 1. Tyyli ja muotoilu (deterministinen, nopea)
 
-- **OmniRoute:** Prettier + ESLint lint-staged-työkalun kautta (ennen committia), 2 välilyöntiä / lainausmerkit / 100 saraketta.
+- **67router:** Prettier + ESLint lint-staged-työkalun kautta (ennen committia), 2 välilyöntiä / lainausmerkit / 100 saraketta.
 - **Yleinen:** yksi automaattisesti korjaava muotoilutyökalu + yksi lintteri, jotka suoritetaan ennen committia valmistelluille tiedostoille.
 
 ### 2. Tyypit
 
-- **OmniRoute:** `typecheck:core` (estävä) + `typecheck:noimplicit:core` (neuvoa-antava) + `type-coverage`-räikkä 92.17 % + tiedostokohtainen any-budjetti.
+- **67router:** `typecheck:core` (estävä) + `typecheck:noimplicit:core` (neuvoa-antava) + `type-coverage`-räikkä 92.17 % + tiedostokohtainen any-budjetti.
 - **Yleinen:** tiukka tyyppitarkistus CI:ssä + räikkäperiaatteella toimiva tyyppikattavuusmittari + tiedostokohtainen `any`-/kiertotiebudjetti.
 
 ### 3. Testit (intensiteetti)
 
-- **OmniRoute:** 2 päällekkäisyydetöntä testiajoympäristöä (natiivi Node + vitest), 8 ositusta, kokonaiskattavuus 60/60/60/60 + räikkä ~76 % + **8 moduulikohtaista vähimmäisrajaa kriittisille moduuleille** + öisin ajettavat ominaisuuspohjaiset testit + öisin ajettava **mutaatiotestaus**.
+- **67router:** 2 päällekkäisyydetöntä testiajoympäristöä (natiivi Node + vitest), 8 ositusta, kokonaiskattavuus 60/60/60/60 + räikkä ~76 % + **8 moduulikohtaista vähimmäisrajaa kriittisille moduuleille** + öisin ajettavat ominaisuuspohjaiset testit + öisin ajettava **mutaatiotestaus**.
 - **Yleinen:** testiajoympäristö(t) + **absoluuttinen** kattavuuden vähimmäisraja (estää nollatason) + kattavuuden **räikkä** (estää heikentymisen) + **moduulikohtaiset vähimmäisrajat suuren riskin koodille** (Goodhartin lain vaikutusten torjumiseksi) + ominaisuuspohjainen testaus puhtaalle logiikalle + öisin ajettava **mutaatiotestaus** testien todellisena laatumittarina.
 
 ### 4. Testauskäytäntö (manipuloinnin esto)
 
-- **OmniRoute:** `pr-test-policy` (tuotantokoodi edellyttää testiä), `check-test-masking` (estää heikennetyt tarkistukset), `pr-evidence` (onnistumisväite edellyttää evidenssilohkoa), `test-discovery` (jokainen testi tulee jonkin testiajoympäristön keräämäksi).
+- **67router:** `pr-test-policy` (tuotantokoodi edellyttää testiä), `check-test-masking` (estää heikennetyt tarkistukset), `pr-evidence` (onnistumisväite edellyttää evidenssilohkoa), `test-discovery` (jokainen testi tulee jonkin testiajoympäristön keräämäksi).
 - **Yleinen:** "uusi koodi ⇒ uusi testi" -portti + poistettujen tarkistusten / tautologioiden tunnistin + näyttövaatimus (TDD tai elävä testi) + takuu siitä, ettei yksikään testi jää glob-kuvioiden ulkopuolelle orvoksi.
 
 ### 5. Monimutkaisuus ja koodin terveys (räikät)
 
-- **OmniRoute:** ESLint-varoitukset (3769↓), jscpd-päällekkäisyydet (5.72 %↓), syklomaattinen monimutkaisuus + rivien enimmäismäärä (1800↓), sonarjs:n kognitiivinen monimutkaisuus (753↓), knipin kuollut koodi / käyttämättömät viennit (339↓), tiedostokohtainen tiedostokoko (jäädytetty, saa vain pienentyä), sykliset riippuvuudet (mukautettu Tarjan, estävä).
+- **67router:** ESLint-varoitukset (3769↓), jscpd-päällekkäisyydet (5.72 %↓), syklomaattinen monimutkaisuus + rivien enimmäismäärä (1800↓), sonarjs:n kognitiivinen monimutkaisuus (753↓), knipin kuollut koodi / käyttämättömät viennit (339↓), tiedostokohtainen tiedostokoko (jäädytetty, saa vain pienentyä), sykliset riippuvuudet (mukautettu Tarjan, estävä).
 - **Yleinen:** sovella räikkää jokaiseen koodin terveysmittariin (varoitukset, päällekkäisyydet, syklomaattinen **ja** kognitiivinen monimutkaisuus, kuollut koodi, tiedostokoko, tuontisyklit). Suunta on aina "älä heikennä".
 
 ### 6. Staattinen tietoturva (SAST + salaisuudet)
 
-- **OmniRoute:** CodeQL (hälytysten räikkä = 0), gitleaks (`[extend] useDefault=true` — kriittisen tärkeä!), SonarQube, mukautetut tietoturvasäännöt (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (hälytysten räikkä = 0), gitleaks (`[extend] useDefault=true` — kriittisen tärkeä!), SonarQube, mukautetut tietoturvasäännöt (public-creds, error-helper, route-guard-membership, route-validation).
 - **Yleinen:** SAST (CodeQL/Sonar/semgrep) hälytysten räikällä + salaisuuksien skanneri, jossa on **peritty oletussäännöstö** (oletuksen ohittava mukautettu määritys = sokea piste) + projektikohtaiset Hard Rule -tietoturvaportit.
 
 ### 7. Toimitusketju (riippuvuudet)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-sallittujen luettelo), lockfile-lint (HTTPS+sha512+rekisteri), `check-deps` anti-slopsquatting-tarkistukseen (sallittujen luettelo + ikä ≥72 h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-sallittujen luettelo), lockfile-lint (HTTPS+sha512+rekisteri), `check-deps` anti-slopsquatting-tarkistukseen (sallittujen luettelo + ikä ≥72 h).
 - **Yleinen:** useisiin lähteisiin perustuva SCA + sallittujen lisenssien luettelo + lukitustiedoston eheystarkistus + sallittujen riippuvuuksien luettelo sekä ikä-/typosquatting-tarkistus + päivitykset ryhmittelevä botti.
 
 ### 8. Toimitusketju (koonti ja julkaisu)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA-alkuperätiedot (`--provenance`), OpenSSF Scorecard (viikoittain), työnkulkujen vahvistaminen (zizmor: artipacked→`persist-credentials:false`, välimuistin myrkytys, tunnisteen käyttöoikeudet).
+- **67router:** SBOM (CycloneDX + syft), SLSA-alkuperätiedot (`--provenance`), OpenSSF Scorecard (viikoittain), työnkulkujen vahvistaminen (zizmor: artipacked→`persist-credentials:false`, välimuistin myrkytys, tunnisteen käyttöoikeudet).
 - **Yleinen:** luo SBOM julkaisemisen yhteydessä + allekirjoitetut alkuperätiedot (SLSA L2+) + ajastettu Scorecard + vahvista kaikki työnkulut (vähimpien oikeuksien tunnisteet, ei säilytettyjä tunnistetietoja sellaisessa checkout-vaiheessa, josta ei työnnetä muutoksia, actionit kiinnitetty SHA-tunnisteella).
 
 ### 9. Sopimukset ja API
 
-- **OmniRoute:** oasdiff (rikkovat OpenAPI-muutokset), schemathesis (sopimusten öinen fuzz-testaus), openapi-coverage (dokumentoitu prosenttiosuus reiteistä, räikkä 38.3 %), openapi-security-tiers (määrittely vs. reittisuojaus).
+- **67router:** oasdiff (rikkovat OpenAPI-muutokset), schemathesis (sopimusten öinen fuzz-testaus), openapi-coverage (dokumentoitu prosenttiosuus reiteistä, räikkä 38.3 %), openapi-security-tiers (määrittely vs. reittisuojaus).
 - **Yleinen:** rikkovien muutosten sopimusvertailu (oasdiff/buf) + ominaisuuspohjainen fuzz-testaus määrittelyä vasten (schemathesis) + dokumentaation räikällinen kattavuus + määrittelyn ja koodin yhdenmukaisuus.
 
 ### 10. Dokumentaatio ja i18n (rapautumisen esto)
 
-- **OmniRoute:** docs-sync (peilatut versiot), docs-counts-sync (dokumentaation luvut vs. koodi), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + räikkä 80.1 %).
+- **67router:** docs-sync (peilatut versiot), docs-counts-sync (dokumentaation luvut vs. koodi), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + räikkä 80.1 %).
 - **Yleinen:** synkronoi versiot, lukumäärät ja ympäristömuuttujat dokumentaation ja koodin välillä (portti, ei luottamusta) + validoi sisäiset linkit + räikällinen i18n-kattavuus.
 
 ### 11. Hallusinaatioiden esto / yhdenmukaisuus (harvinainen luokka)
 
-- **OmniRoute:** known-symbols (merkkijonolähetys ⇒ elävä symboli), provider-consistency, fetch-targets (asiakkaan fetch ⇒ todellinen reitti), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (merkkijonolähetys ⇒ elävä symboli), provider-consistency, fetch-targets (asiakkaan fetch ⇒ todellinen reitti), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **Yleinen:** jokaiselle "monennetulle totuuden lähteelle" (rekisteri, merkkijonolähetys, kerrosten väliset viittaukset) portti, joka todistaa molempien puolien vastaavan toisiaan. Havaitsee rapautumisen, jota tyyppitarkistus ja testit eivät havaitse.
 
 ### 12. Häiriönsietokyky ja toimialue (tuotekohtainen)
 
-- **OmniRoute:** chaos (vikojen injektointi), heap-growth (vuoto), k6 (pitkäkestoinen kuormitus), promptfoo+garak (LLM-järjestelmien red team -testaus OWASP LLM Top 10 -luetteloa vasten), kolme häiriönsietolakia (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (vikojen injektointi), heap-growth (vuoto), k6 (pitkäkestoinen kuormitus), promptfoo+garak (LLM-järjestelmien red team -testaus OWASP LLM Top 10 -luetteloa vasten), kolme häiriönsietolakia (circuit-breaker/cooldown/lockout).
 - **Yleinen:** tunnista **oman** toimialueesi vikatilat ja määritä kullekin portti, vaikka se suoritettaisiin vain öisin. Tekoälysovelluksille: injektiohyökkäysten red team -testaus. Hajautetuille järjestelmille: chaos + vuoto + pitkäkestoinen kuormitus.
 
 ---

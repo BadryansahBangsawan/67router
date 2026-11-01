@@ -14,9 +14,6 @@ const { fetchSyntxMediaBytes, decodeDataUrlBounded, SyntxMediaError, SYNTX_MEDIA
   await import("../../open-sse/services/syntxMedia.ts");
 const { handleSyntxVideoGeneration } =
   await import("../../open-sse/handlers/videoGeneration/syntxHandler.ts");
-const { handleSyntxImageGeneration } =
-  await import("../../open-sse/handlers/imageGeneration/providers/syntx.ts");
-const { handleSyntxImageUpscale } = await import("../../open-sse/handlers/imageUpscale/syntx.ts");
 
 const isStatus = (status: number) => (e: unknown) =>
   e instanceof SyntxMediaError && e.status === status;
@@ -217,32 +214,6 @@ describe("syntx media size bounds", () => {
       model: "syntx/sora/gpt",
       provider: "syntx",
       body: { prompt: "hi", image_url: oversizedDataUrl },
-      credentials,
-      fetchImpl: noopFetch,
-    });
-    assert.equal(result.success, false);
-    assert.equal(result.status, 400);
-    assert.equal(result.error, oversizedMessage);
-  });
-
-  it("returns 400 from the image handler when a reference data URL exceeds the limit", async () => {
-    const result = await handleSyntxImageGeneration({
-      model: "syntx/sora-images/gpt-image-2",
-      provider: "syntx",
-      body: { prompt: "hi", image_url: oversizedDataUrl },
-      credentials,
-      fetchImpl: noopFetch,
-    });
-    assert.equal(result.success, false);
-    assert.equal(result.status, 400);
-    assert.equal(result.error, oversizedMessage);
-  });
-
-  it("returns 400 from the upscale handler when the source data URL exceeds the limit", async () => {
-    const result = await handleSyntxImageUpscale({
-      model: "syntx/magnific/magnific",
-      provider: "syntx",
-      body: { image: { b64_json: "A".repeat(150 * 1024 * 1024) } },
       credentials,
       fetchImpl: noopFetch,
     });

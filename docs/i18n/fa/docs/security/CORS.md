@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute کنترل میکند که کدام **مبدأهای مرورگر** بتوانند پاسخهای بینمبدأیی را
+67router کنترل میکند که کدام **مبدأهای مرورگر** بتوانند پاسخهای بینمبدأیی را
 بر اساس یک فهرست مجاز واحد و متمرکز بخوانند. این مدل بهطور پیشفرض **بسته و بازدارنده** است:
 تا زمانی که مبدأیی را صراحتاً مجاز نکنید، هیچ مبدأیی اجازه ندارد. این صفحه توضیح میدهد که فهرست مجاز
 چگونه ارزیابی میشود، `CORS_ALLOW_ALL=true` واقعاً چه چیزهایی را در معرض دسترسی قرار میدهد
@@ -46,13 +46,13 @@ middleware (`src/server/authz/pipeline.ts`) اعمال میشود — handlerه�
 ## مدل تهدید — `CORS_ALLOW_ALL=true` واقعاً چه چیزهایی را در معرض دسترسی قرار میدهد
 
 هشدار عمومی OWASP («CORS با wildcard یعنی هر سایتی میتواند API شما را فراخوانی کند»)
-باید جدی گرفته شود، اما دامنه مواجهه OmniRoute **محدودتر از حالت عمومی** است؛
+باید جدی گرفته شود، اما دامنه مواجهه 67router **محدودتر از حالت عمومی** است؛
 زیرا یک واقعیت مشخص در پیادهسازی وجود دارد:
 
 > **تابع مرکزی `applyCorsHeaders()` هرگز
 > `Access-Control-Allow-Credentials` را ارسال نمیکند.** مرورگر یک پاسخ بینمبدأیی
 > _دارای اعتبارنامه_ (حاوی cookie) را در اختیار صفحه قرار نمیدهد، مگر اینکه server مقدار
-> `Access-Control-Allow-Credentials: true` را ارسال کند. مسیر اشتراکی CORS در OmniRoute
+> `Access-Control-Allow-Credentials: true` را ارسال کند. مسیر اشتراکی CORS در 67router
 > هرگز این کار را انجام نمیدهد.
 
 این موضوع برای هر سطح، حتی با `CORS_ALLOW_ALL=true`، به این معناست:
@@ -69,20 +69,6 @@ middleware (`src/server/authz/pipeline.ts`) اعمال میشود — handlerه�
 نیاز دارند که یک صفحه بینمبدأیی نمیتواند فراهم کند. این وضعیت در مسیر اشتراکی CORS،
 بردار ربودن session یا سرقت اعتبارنامه **نیست**.
 
-### یک استثنای واقعی — `/api/v1/agents/`
-
-routeهای Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`)،
-headerهای CORS **مختص خودشان** را تنظیم میکنند
-(`src/lib/cloudAgent/api.ts`، `getCloudAgentCorsHeaders`) و
-`Access-Control-Allow-Origin: <origin>|*` را همراه با
-`Access-Control-Allow-Credentials: true` **ارسال میکنند**. این تنها سطحی است که در آن
-بازتاب مبدأ و اعتبارنامهها همزمان وجود دارند و این رفتار **مستقل از
-`CORS_ALLOW_ALL`** است. این routeها با احراز هویت مدیریتی محافظت میشوند
-(`requireManagementAuth`)؛ اپراتورهایی که داشبورد را خارج از host در دسترس قرار میدهند باید
-بدانند که این تنها بخشی است که headerهای پاسخ در آن اجازه خواندن بینمبدأیی دارای اعتبارنامه را
-میدهند. محدود کردن آن به یک فهرست مجاز صریح، جدا از این راهنمای CORS
-پیگیری میشود.
-
 ## چکلیست محیط عملیاتی
 
 - **هرگز در محیط عملیاتی `CORS_ALLOW_ALL=true` را تنظیم نکنید.** آن را تنظیمنشده باقی بگذارید.
@@ -92,7 +78,7 @@ headerهای CORS **مختص خودشان** را تنظیم میکنند
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- اگر OmniRoute پشت یک پراکسی معکوس / تونل (nginx، Caddy، Cloudflare
+- اگر 67router پشت یک پراکسی معکوس / تونل (nginx، Caddy، Cloudflare
   Tunnel، Tailscale) اجرا میشود، CORS **تنها** کنترل امنیتی شما نیست — محافظ مسیر loopback
   همچنان از مسیرهایی که قابلیت spawn دارند محافظت میکند (به
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md) مراجعه کنید). برای «رفع» خطای 403،
@@ -108,7 +94,7 @@ headerهای CORS **مختص خودشان** را تنظیم میکنند
 حتی در محیط توسعه نیز بهندرت به wildcard نیاز دارید. فقط به سرورهای توسعهای که استفاده میکنید اجازه دهید:
 
 ```bash
-# سرورهای توسعه Vite (5173) و Next.js (3000) که یک OmniRoute محلی را فراخوانی میکنند
+# سرورهای توسعه Vite (5173) و Next.js (3000) که یک 67router محلی را فراخوانی میکنند
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,12 +114,12 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   مدیریتی/داشبورد را از هرگونه پیکربندی سهلگیرانه خارج نگه دارید؛ آنها باید دقیقاً
   در حالت fail-closed باقی بمانند.
 
-## مثال: پراکسی معکوس در جلوی OmniRoute
+## مثال: پراکسی معکوس در جلوی 67router
 
-CORS توسط خود OmniRoute اعمال میشود، بنابراین پراکسی معمولاً **نباید** سرآیندهای `Access-Control-*` را اضافه یا بازنویسی کند (سرآیندهای تکراری باعث اختلال در مرورگرها میشوند). TLS را خاتمه دهید و درخواستها را به مقصد ارسال کنید — اجازه دهید OmniRoute به درخواستهای preflight پاسخ دهد:
+CORS توسط خود 67router اعمال میشود، بنابراین پراکسی معمولاً **نباید** سرآیندهای `Access-Control-*` را اضافه یا بازنویسی کند (سرآیندهای تکراری باعث اختلال در مرورگرها میشوند). TLS را خاتمه دهید و درخواستها را به مقصد ارسال کنید — اجازه دهید 67router به درخواستهای preflight پاسخ دهد:
 
 ```nginx
-# nginx — ارسال به OmniRoute؛ سرآیندهای Access-Control-* را اینجا تزریق نکنید
+# nginx — ارسال به 67router؛ سرآیندهای Access-Control-* را اینجا تزریق نکنید
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -141,24 +127,23 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # سرآیندهای ارسال را حفظ کنید: پراکسیای که روی همان میزبان است از طریق loopback متصل میشود و این سرآیندها
-    # به OmniRoute اعلام میکنند که فراخواننده اپراتور محلی نیست. پراکسیای که هیچکدام از آنها را اضافه نکند
+    # به 67router اعلام میکنند که فراخواننده اپراتور محلی نیست. پراکسیای که هیچکدام از آنها را اضافه نکند
     # باعث میشود همه فراخوانندگان راهدور محلی به نظر برسند. همچنین هرگز X-Forwarded-For را روی 127.0.0.1 تنظیم نکنید.
 }
 ```
 
-مبدأهای مجاز مرورگر را در OmniRoute (`CORS_ALLOWED_ORIGINS` یا زبانه Security) تنظیم کنید، نه در پراکسی.
+مبدأهای مجاز مرورگر را در 67router (`CORS_ALLOWED_ORIGINS` یا زبانه Security) تنظیم کنید، نه در پراکسی.
 
 ## فایلهای منبع
 
-| موضوع                                     | فایل                                                                 |
-| ----------------------------------------- | -------------------------------------------------------------------- |
-| حل allowlist و `getCorsStatus()`          | `src/server/cors/origins.ts`                                         |
-| اعمال middleware (منبع واحد حقیقت)        | `src/server/authz/pipeline.ts`                                       |
-| Settings → تزریق مبدأ در زمان اجرا        | `src/lib/config/runtimeSettings.ts`                                  |
-| وضعیت زمان اجرا برای داشبورد              | `src/app/api/settings/authz-inventory/route.ts`                      |
-| بنر هشدار داشبورد                         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| فیلد CORS Allowed Origins                 | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS مختص هر مسیر در Cloud-Agent (استثنا) | `src/lib/cloudAgent/api.ts`                                          |
+| موضوع                              | فایل                                                                 |
+| ---------------------------------- | -------------------------------------------------------------------- |
+| حل allowlist و `getCorsStatus()`   | `src/server/cors/origins.ts`                                         |
+| اعمال middleware (منبع واحد حقیقت) | `src/server/authz/pipeline.ts`                                       |
+| Settings → تزریق مبدأ در زمان اجرا | `src/lib/config/runtimeSettings.ts`                                  |
+| وضعیت زمان اجرا برای داشبورد       | `src/app/api/settings/authz-inventory/route.ts`                      |
+| بنر هشدار داشبورد                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| فیلد CORS Allowed Origins          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## همچنین ببینید
 

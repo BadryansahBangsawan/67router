@@ -168,5 +168,4 @@ API କୀ ପ୍ଲେସ୍ହୋଲ୍ଡର୍ ସର୍ବଦା `$OMNIROUT
 - ମାଷ୍ଟର୍ ଯୋଜନା: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ବୈଶିଷ୍ଟ୍ୟ ଯୋଜନା: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - ସନ୍ଧାନ ପ୍ରଦାନକାରୀ ରେଜିଷ୍ଟ୍ରି: `open-sse/config/searchRegistry.ts`
-- Playground Studio (ଅଂଶୀଦାର `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - ୱେବ୍ ଫେଚ୍ ବ୍ୟାକଏଣ୍ଡ୍: `src/app/api/v1/web/fetch/route.ts`

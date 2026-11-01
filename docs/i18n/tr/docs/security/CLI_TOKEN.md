@@ -6,7 +6,7 @@
 
 ## Genel Bakış
 
-OmniRoute CLI komutları, `x-omniroute-cli-token` istek üstbilgisi üzerinden
+67router CLI komutları, `x-omniroute-cli-token` istek üstbilgisi üzerinden
 gönderilen bir `HMAC-SHA256(machine-id, salt)` belirteci kullanarak yerel yönetim
 API'sinde kimlik doğrulaması yapar.
 

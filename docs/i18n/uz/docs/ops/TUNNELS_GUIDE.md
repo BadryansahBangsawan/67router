@@ -7,7 +7,7 @@
 > **Haqiqiy manba:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Oxirgi yangilangan sana:** 2026-06-28 — v3.8.40
 
-OmniRoute o‘zining lokal serverini (`http://localhost:20128`) uchta tunnel
+67router o‘zining lokal serverini (`http://localhost:20128`) uchta tunnel
 bekendi orqali ochiq internetga taqdim etishi mumkin. Bu quyidagilar uchun foydali:
 
 - Ochiq internetdan kirish mumkin bo‘lgan qayta yo‘naltirish URL manzilini talab
@@ -15,7 +15,7 @@ bekendi orqali ochiq internetga taqdim etishi mumkin. Bu quyidagilar uchun foyda
 - VM joylashtirmasdan lokal instansiyangizni jamoadoshlaringiz bilan ulashish.
 - Mobil, masofaviy yoki turli tarmoqlar orasidagi sinovlar.
 
-Har uchala bekend jarayon ichida boshqariladi — OmniRoute asosiy binar fayl yoki
+Har uchala bekend jarayon ichida boshqariladi — 67router asosiy binar fayl yoki
 SDK’ni boshqaruv paneli yoxud REST API orqali ishga tushiradi/to‘xtatadi.
 Reverse-proxy yoki systemd sozlamalari talab qilinmaydi.
 
@@ -44,7 +44,7 @@ http://localhost:<apiPort>` buyrug‘ini ishga tushiradi va tayinlangan
   `*.trycloudflare.com` URL manzilini stdout’dan ajratib oladi. URL manzillar
   vaqtinchalik bo‘lib, har bir qayta ishga tushirishda o‘zgaradi.
 - **Nomlangan tunnel (ixtiyoriy).** `CLOUDFLARED_CONFIG` lokal tarzda
-  boshqariladigan cloudflared `config.yml` fayliga ishora qilsa, OmniRoute
+  boshqariladigan cloudflared `config.yml` fayliga ishora qilsa, 67router
   `cloudflared tunnel --no-autoupdate --config <path> run` buyrug‘ini ishga
   tushiradi va sizga **barqaror, nomlangan xost nomi** beradi. Konfiguratsiya
   tunnel UUID’si, `credentials-file` va `ingress` marshrutlashini taqdim etadi,
@@ -55,7 +55,7 @@ http://localhost:<apiPort>` buyrug‘ini ishga tushiradi va tayinlangan
 
 Asosiy xatti-harakatlar:
 
-- **Avtomatik o‘rnatish.** Birinchi foydalanishda OmniRoute eng so‘nggi
+- **Avtomatik o‘rnatish.** Birinchi foydalanishda 67router eng so‘nggi
   `cloudflared` binar faylini rasmiy GitHub relizlaridan yuklab oladi
   (boshqariladigan o‘rnatish `DATA_DIR/cloudflared/` ostida joylashadi).
   Yuklab olingan artefaktning SHA256 qiymati ishga tushirishdan oldin reliz
@@ -74,7 +74,7 @@ Asosiy xatti-harakatlar:
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Xost nomingizni OmniRoute’ning lokal API portiga (standart qiymat 20128)
+2. Xost nomingizni 67router’ning lokal API portiga (standart qiymat 20128)
    yo‘naltiruvchi `~/.cloudflared/config.yml` faylini yarating:
 
    ```yaml
@@ -86,11 +86,11 @@ Asosiy xatti-harakatlar:
      - service: http_status:404
    ```
 
-3. OmniRoute’ni konfiguratsiyaga yo‘naltiring va tunnelni (qayta) ishga tushiring:
+3. 67router’ni konfiguratsiyaga yo‘naltiring va tunnelni (qayta) ishga tushiring:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # ixtiyoriy — OmniRoute xabar qiladigan xost nomini almashtiradi; aks holda
+   # ixtiyoriy — 67router xabar qiladigan xost nomini almashtiradi; aks holda
    # konfiguratsiyaning birinchi ingress qoidasidan o‘qiladi:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -130,12 +130,12 @@ Yoki boshqaruv paneli orqali: **Settings → Tunnels → Cloudflare**.
 
 ### Ixtiyoriy muhit o‘zgaruvchilari
 
-| Oʻzgaruvchi                                          | Maqsadi                                                                                                                                                                                      |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Binar fayl yoʻlini almashtiradi. Agar belgilangan va yaroqli boʻlsa, OmniRoute uni yuklab olish oʻrniga ishlatadi.                                                                           |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transport protokoli (standart qiymat: `http2`; shuningdek, `quic`, `auto`).                                                                                                                  |
-| `CLOUDFLARED_CONFIG`                                 | Mahalliy boshqariladigan cloudflared `config.yml` fayliga yoʻl. Belgilanganda, OmniRoute tezkor tunnel oʻrniga **nomlangan/doimiy** tunnelni (`tunnel --config <path> run`) ishga tushiradi. |
-| `CLOUDFLARED_HOSTNAME`                               | Nomlangan tunnel xabar qiladigan ochiq host nomini almashtiradi (masalan, `ai.example.com`). Belgilanmagan boʻlsa, konfiguratsiyadagi birinchi `ingress` host nomidan oʻqiladi.              |
+| Oʻzgaruvchi                                          | Maqsadi                                                                                                                                                                                     |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Binar fayl yoʻlini almashtiradi. Agar belgilangan va yaroqli boʻlsa, 67router uni yuklab olish oʻrniga ishlatadi.                                                                           |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Transport protokoli (standart qiymat: `http2`; shuningdek, `quic`, `auto`).                                                                                                                 |
+| `CLOUDFLARED_CONFIG`                                 | Mahalliy boshqariladigan cloudflared `config.yml` fayliga yoʻl. Belgilanganda, 67router tezkor tunnel oʻrniga **nomlangan/doimiy** tunnelni (`tunnel --config <path> run`) ishga tushiradi. |
+| `CLOUDFLARED_HOSTNAME`                               | Nomlangan tunnel xabar qiladigan ochiq host nomini almashtiradi (masalan, `ai.example.com`). Belgilanmagan boʻlsa, konfiguratsiyadagi birinchi `ingress` host nomidan oʻqiladi.             |
 
 ## 2. ngrok
 
@@ -180,7 +180,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Javob tayinlangan `publicUrl` ni oʻz ichiga oladi (masalan,
 `https://abcd-1234.ngrok-free.app`). Maxsus domenlar, hududlar va siyosat qoidalari
-ngrok boshqaruv panelida sozlanishi kerak — OmniRoute’ning oʻzi faqat mahalliy
+ngrok boshqaruv panelida sozlanishi kerak — 67router’ning oʻzi faqat mahalliy
 maqsadli URL’ni SDK’ga yoʻnaltiradi.
 
 ## 3. Tailscale Funnel
@@ -191,12 +191,12 @@ Amalga oshirish `tailscale funnel --bg <port>` buyrugʻini chaqiradi (fon rejimi
 
 ### Dastlabki talablar
 
-1. Tailscale’ni oʻrnating (yoki buni OmniRoute’ga topshiring — quyidagi `install` endpointiga qarang).
-2. Tizimga kiring (`tailscale login` yoki OmniRoute’ning `login` endpointi orqali).
+1. Tailscale’ni oʻrnating (yoki buni 67router’ga topshiring — quyidagi `install` endpointiga qarang).
+2. Tizimga kiring (`tailscale login` yoki 67router’ning `login` endpointi orqali).
 3. Tailscale administrator konsolida tailnet’ingiz uchun Funnel’ni yoqing:
    <https://login.tailscale.com/admin/settings/features>.
 
-Linux va macOS’da demonni (`tailscaled`) boshqarish uchun `sudo` talab qilinadi. POST endpointlari ixtiyoriy `sudoPassword` maydonini qabul qiladi; u soʻrov davomida OmniRoute’ning MITM parol keshiga (`getCachedPassword` / `setCachedPassword`) uzatiladi. Windows `C:\Program Files\Tailscale\tailscale.exe` manzilidagi standart xizmat oʻrnatilishidan foydalanadi.
+Linux va macOS’da demonni (`tailscaled`) boshqarish uchun `sudo` talab qilinadi. POST endpointlari ixtiyoriy `sudoPassword` maydonini qabul qiladi; u soʻrov davomida 67router’ning MITM parol keshiga (`getCachedPassword` / `setCachedPassword`) uzatiladi. Windows `C:\Program Files\Tailscale\tailscale.exe` manzilidagi standart xizmat oʻrnatilishidan foydalanadi.
 
 ### REST endpointlari
 
@@ -253,7 +253,7 @@ mustaqil ishlaydi.
 
 ## OAuth qayta chaqiruviga oid jihatlar
 
-OmniRouteʼni tunnel orqali ochganingizda, boshqaruv paneli va OAuth jarayonlari
+67routerʼni tunnel orqali ochganingizda, boshqaruv paneli va OAuth jarayonlari
 qayta chaqiruv URL manzillarini `localhost` emas, **ommaviy** host nomi asosida
 yaratishi kerak. Aks holda, OAuth provayderi foydalanuvchini o‘z serverlari
 yetib bora olmaydigan URL manziliga qayta yo‘naltiradi va ulanish jarayoni
@@ -272,7 +272,7 @@ Quyidagini o‘rnating:
 NEXT_PUBLIC_BASE_URL=https://<tunnel-hostingiz>
 ```
 
-va OAuthʼni boshlashdan oldin OmniRouteʼni qayta ishga tushiring. Vaqtinchalik
+va OAuthʼni boshlashdan oldin 67routerʼni qayta ishga tushiring. Vaqtinchalik
 Cloudflare Quick Tunnel uchun URL har bir qayta ishga tushirishdan keyin
 o‘zgaradi, shuning uchun amaliy muhitda OAuthʼdan foydalanish uchun
 rezervlangan domenga ega ngrok yoki Tailscale Funnelʼni afzal ko‘ring.
@@ -289,13 +289,13 @@ Boshqaruv panelida tunnel holati **Settings → Tunnels** bo‘limida ko‘rsati
 
 Dasturiy monitoring uchun har bir backendga tegishli `GET` endpointlarini
 muntazam so‘rab turing. Bir vaqtning o‘zida bir nechta backendni ishga
-tushirishga ruxsat beriladi; OmniRoute ularning har birini mustaqil kuzatadi.
+tushirishga ruxsat beriladi; 67router ularning har birini mustaqil kuzatadi.
 
 ## Muammolarni bartaraf etish
 
 ### "cloudflared binar fayli topilmadi"
 
-OmniRoute birinchi foydalanishda uni avtomatik o‘rnatishga urinadi. Agar
+67router birinchi foydalanishda uni avtomatik o‘rnatishga urinadi. Agar
 o‘rnatish bloklangan bo‘lsa (cheklangan tarmoq, GitHubʼga kirish imkoni yo‘q),
 `cloudflared`ni <https://github.com/cloudflare/cloudflared/releases> manzilidan
 qo‘lda yuklab oling va `CLOUDFLARED_BIN=/path/to/cloudflared` qilib belgilang.

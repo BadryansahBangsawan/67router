@@ -3,7 +3,6 @@ import assert from "node:assert/strict";
 import * as bodySizeGuard from "../../src/shared/middleware/bodySizeGuard.ts";
 import {
   MAX_BODY_BYTES_AUDIO,
-  MAX_BODY_BYTES_FILE,
   MAX_BODY_BYTES_IMAGE_EDIT,
   MAX_BODY_BYTES_MEDIA,
   MAX_BODY_BYTES_LLM_API,
@@ -46,7 +45,7 @@ test("body size guard keeps dedicated upload limits as lower bounds", () => {
     requestBodyLimitMbToBytes(200)
   );
   assert.equal(
-    getBodySizeLimit("/api/v1/images/edits", { maxBodySizeMb: 10 }),
+    getBodySizeLimit("/api/v1/videos/generations", { maxBodySizeMb: 10 }),
     MAX_BODY_BYTES_MEDIA
   );
 });
@@ -89,20 +88,8 @@ test("Video Bridge broker admission is exactly 50 MiB before policy and route ha
   assert.equal((await rejection.json()).error.code, "PAYLOAD_TOO_LARGE");
 });
 
-test("/api/v1/images/edits admits a 20 MiB image in multipart or base64 JSON envelopes", () => {
-  const multipartBytes = 20 * 1024 * 1024 + 1024 * 1024;
-  const base64JsonBytes = Math.ceil((20 * 1024 * 1024 * 4) / 3) + 1024;
-  for (const bytes of [multipartBytes, base64JsonBytes]) {
-    const request = new Request("http://localhost/api/v1/images/edits", {
-      method: "POST",
-      headers: { "content-length": String(bytes) },
-    });
-    assert.equal(checkBodySize(request, getBodySizeLimit("/api/v1/images/edits")), null);
-  }
-});
-
 test("bounded body reader enforces actual bytes when Content-Length is absent", async () => {
-  const request = new Request("http://localhost/api/v1/images/edits", {
+  const request = new Request("http://localhost/api/v1/videos/generations", {
     method: "POST",
     body: new ReadableStream({
       start(controller) {
@@ -122,7 +109,7 @@ test("bounded body reader enforces actual bytes when Content-Length is absent", 
 });
 
 test("bounded body reader rejects a dishonest small Content-Length by actual byte count", async () => {
-  const request = new Request("http://localhost/api/v1/images/edits", {
+  const request = new Request("http://localhost/api/v1/videos/generations", {
     method: "POST",
     headers: { "content-length": "1" },
     body: new Uint8Array([1, 2, 3, 4]),
@@ -173,76 +160,29 @@ test("/api/v1/responses route guard rejects payloads above the LLM API floor", a
   assert.match(body.error.message, /50 MB/);
 });
 
-test("/api/v1/files route has 512 MB dedicated limit floor", () => {
-  const limit = getBodySizeLimit("/api/v1/files", { maxBodySizeMb: 1 });
-  assert.equal(limit, MAX_BODY_BYTES_FILE);
-});
-
-test("/api/v1/files route guard allows 500 MB file upload", () => {
-  const thirtyMb = 500 * 1024 * 1024;
-  const request = new Request("http://localhost/api/v1/files", {
-    method: "POST",
-    headers: { "content-length": String(thirtyMb) },
-  });
-  assert.equal(
-    checkBodySize(request, getBodySizeLimit("/api/v1/files", { maxBodySizeMb: 10 })),
-    null
-  );
-});
-
-test("/api/v1/files route guard rejects >512 MB file upload", async () => {
-  const tooBig = 600 * 1024 * 1024;
-  const request = new Request("http://localhost/api/v1/files", {
-    method: "POST",
-    headers: { "content-length": String(tooBig) },
-  });
-  const response = checkBodySize(request, getBodySizeLimit("/api/v1/files", { maxBodySizeMb: 10 }));
-  assert.ok(response);
-  assert.equal(response.status, 413);
-  const body = await response.json();
-  assert.equal(body.error.code, "PAYLOAD_TOO_LARGE");
-});
-
-test("/api/v1/files route guard allows 15 MB (10 MB+ real-world scenario)", () => {
-  const fifteenMb = 15 * 1024 * 1024;
-  const request = new Request("http://localhost/api/v1/files", {
-    method: "POST",
-    headers: { "content-length": String(fifteenMb) },
-  });
-  assert.equal(checkBodySize(request, getBodySizeLimit("/api/v1/files")), null);
-});
-
 test("media routes bypass OmniRoute's configured body-size limit", () => {
   assert.equal(MAX_BODY_BYTES_MEDIA, Number.POSITIVE_INFINITY);
   assert.equal(MAX_BODY_BYTES_IMAGE_EDIT, MAX_BODY_BYTES_MEDIA);
   assert.equal(
-    getBodySizeLimit("/api/v1/images/generations", { maxBodySizeMb: 10 }),
-    MAX_BODY_BYTES_MEDIA
-  );
-  assert.equal(
-    getBodySizeLimit("/api/v1/images/edits", { maxBodySizeMb: 10 }),
-    MAX_BODY_BYTES_MEDIA
-  );
-  assert.equal(
-    getBodySizeLimit("/api/v1/images/upscale", { maxBodySizeMb: 10 }),
-    MAX_BODY_BYTES_MEDIA
-  );
-  assert.equal(
     getBodySizeLimit("/api/v1/videos/generations", { maxBodySizeMb: 10 }),
-    MAX_BODY_BYTES_MEDIA
-  );
-  assert.equal(
-    getBodySizeLimit("/api/v1/providers/openai/images/generations", { maxBodySizeMb: 10 }),
     MAX_BODY_BYTES_MEDIA
   );
 });
 
-test("media routes never return OmniRoute's PAYLOAD_TOO_LARGE response", () => {
+test("removed image routes no longer get the unbounded media limit", () => {
+  const configuredLimit = requestBodyLimitMbToBytes(10);
   for (const pathname of [
     "/api/v1/images/generations",
-    "/api/v1/videos/generations",
+    "/api/v1/images/edits",
+    "/api/v1/images/upscale",
     "/api/v1/providers/openai/images/generations",
   ]) {
+    assert.equal(getBodySizeLimit(pathname, { maxBodySizeMb: 10 }), configuredLimit, pathname);
+  }
+});
+
+test("media routes never return OmniRoute's PAYLOAD_TOO_LARGE response", () => {
+  for (const pathname of ["/api/v1/videos/generations"]) {
     const request = new Request(`http://localhost${pathname}`, {
       method: "POST",
       headers: { "content-length": String(Number.MAX_SAFE_INTEGER) },
@@ -256,14 +196,13 @@ test("provider media matching does not unbound adjacent provider routes", () => 
   for (const pathname of [
     "/api/v1/providers/openai/chat/completions",
     "/api/v1/providers/openai/embeddings",
-    "/api/v1/providers/openai/images/generations-extra",
   ]) {
     assert.equal(getBodySizeLimit(pathname, { maxBodySizeMb: 10 }), configuredLimit);
   }
 });
 
-test("image edit body reader does not enforce an OmniRoute media limit", async () => {
-  const request = new Request("http://localhost/api/v1/images/edits", {
+test("media body reader does not enforce an OmniRoute media limit", async () => {
+  const request = new Request("http://localhost/api/v1/videos/generations", {
     method: "POST",
     headers: { "content-length": String(Number.MAX_SAFE_INTEGER) },
     body: new Uint8Array([1, 2, 3, 4]),
@@ -271,7 +210,7 @@ test("image edit body reader does not enforce an OmniRoute media limit", async (
 
   const body = await readRequestBodyWithLimit(
     request,
-    getBodySizeLimit("/api/v1/images/edits", { maxBodySizeMb: 10 })
+    getBodySizeLimit("/api/v1/videos/generations", { maxBodySizeMb: 10 })
   );
   assert.deepEqual(body, new Uint8Array([1, 2, 3, 4]));
 });

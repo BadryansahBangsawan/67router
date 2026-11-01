@@ -10,7 +10,7 @@ representados como quatro famílias de provedores. A região é um dado de conex
 
 ## Decisão
 
-| Família de provedores                          | ID do OmniRoute         | Região global | Região da China |
+| Família de provedores                          | ID do 67router          | Região global | Região da China |
 | ---------------------------------------------- | ----------------------- | ------------- | --------------- |
 | Alibaba Cloud Model Studio (pagamento por uso) | `alibaba`               | Singapura     | Pequim          |
 | Alibaba Cloud Token Plan                       | `bailian-coding-plan`   | Singapura     | Pequim          |

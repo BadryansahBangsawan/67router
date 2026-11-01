@@ -278,7 +278,7 @@ export async function DELETE(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "OmniRoute settings removed from Kilo Code",
+      message: "67router settings removed from Kilo Code",
     });
   } catch (error) {
     console.log("Error resetting kilo settings:", error);

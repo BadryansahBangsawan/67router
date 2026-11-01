@@ -55,7 +55,7 @@ gebundenen Rate-Limiter, der zeitweise `400 content-blocked`-Fehler verursacht,
 wenn Claude Code oder Codex CLI mehrere Tool-Aufrufe bzw. Nachrichten
 schnell hintereinander sendet.
 
-## Bereits in OmniRoute umgesetzte Gegenmaßnahmen
+## Bereits in 67router umgesetzte Gegenmaßnahmen
 
 1. **`open-sse/services/wafRateLimit.ts`** — ein Burst-Schutz, der zwischen
    ausgehenden Anfragen an eine beliebige `agentrouter:*`-URL einen

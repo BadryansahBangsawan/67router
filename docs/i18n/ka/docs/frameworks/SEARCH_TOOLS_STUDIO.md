@@ -167,5 +167,4 @@ API-გასაღების ადგილმჭერი ყოველ�
 - მთავარი გეგმა: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - ფუნქციის გეგმა: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - ძიების პროვაიდერების რეესტრი: `open-sse/config/searchRegistry.ts`
-- Playground Studio (საზიარო `ExportCodeModal` + `codeExport.ts`): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - ვებ-მიღების ბეკენდი: `src/app/api/v1/web/fetch/route.ts`

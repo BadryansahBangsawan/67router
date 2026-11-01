@@ -22,3 +22,18 @@ test("GET /api/docs returns a 200 text/html Redoc shell", async () => {
 test("GET /api/docs is statically renderable (no per-request work)", () => {
   assert.equal(docsRoute.dynamic, "force-static");
 });
+
+// The Redoc shell loads /openapi.yaml, which Next serves from public/openapi.yaml. That copy
+// fell behind docs/openapi.yaml (v3.8.35, still documenting /api/memory, /v1/embeddings,
+// /v1/images/generations…), and the OpenAPI gates only read docs/openapi.yaml.
+test("public/openapi.yaml (served at /openapi.yaml) is the canonical docs/openapi.yaml", async () => {
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const root = path.resolve(import.meta.dirname, "../..");
+  const served = fs.readFileSync(path.join(root, "public/openapi.yaml"), "utf8");
+  const canonical = fs.readFileSync(path.join(root, "docs/openapi.yaml"), "utf8");
+  assert.ok(
+    served === canonical,
+    "public/openapi.yaml differs from docs/openapi.yaml — copy it over"
+  );
+});

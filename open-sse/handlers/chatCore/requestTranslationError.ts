@@ -1,10 +1,10 @@
 /**
  * chatCore request-translation failure handling (chatCore god-file decomposition, slice 2).
  *
- * Extracted byte-identically from the catch around handleChatCore's request translation: run the
- * plugin onError hook (fail-open, sanitized debug log), derive a 4xx/5xx status, message and error
- * type from the thrown value — defensively, since hostile thrown values may expose Symbols or
- * throwing accessors — build the translation-failure result (translationFailure.ts) and log it.
+ * Extracted byte-identically from the catch around handleChatCore's request translation: derive a
+ * 4xx/5xx status, message and error type from the thrown value — defensively, since hostile thrown
+ * values may expose Symbols or throwing accessors — build the translation-failure result
+ * (translationFailure.ts) and log it.
  * The handler keeps the pending-request finalization and the early return.
  */
 
@@ -19,33 +19,11 @@ type ThrownLike = { statusCode?: unknown; message?: unknown; errorType?: unknown
 
 export async function buildRequestTranslationErrorResult({
   error,
-  traceId,
-  body,
-  model,
-  provider,
-  apiKeyInfo,
   log,
 }: {
   error: unknown;
-  traceId: string;
-  body: unknown;
-  model: string;
-  provider: string;
-  apiKeyInfo: unknown;
   log?: LoggerLike;
 }): Promise<ReturnType<typeof createTranslationFailureResult>> {
-  // ── Plugin onError hook ──
-  try {
-    const { runOnError } = await import("@/lib/plugins/hooks");
-    await runOnError(
-      { requestId: traceId, body, model, provider, apiKeyInfo, metadata: {} },
-      error instanceof Error ? error : new Error(String(error))
-    );
-  } catch (pluginErr) {
-    const pluginErrorMessage = sanitizeErrorMessage(pluginErr) || "Plugin onError hook failed";
-    log?.debug?.("PLUGIN", `onError hook error (non-fatal): ${pluginErrorMessage}`);
-  }
-
   const thrown = error as ThrownLike;
   let parsedStatus = Number.NaN;
   try {

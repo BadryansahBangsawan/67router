@@ -45,7 +45,7 @@ npm run test:e2e           # اختیاری، اما توصیهشده
 (یک توکن افشاشده بهتنهایی نمیتواند منتشر کند — زیرا اصلاً توکنی وجود ندارد).
 
 **راهاندازی یکباره (مالک):** npmjs.com → بستهٔ `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: مالک `diegosouzapw`، مخزن `OmniRoute`، گردشکار `npm-publish.yml`
+Publisher_ → GitHub: مالک `diegosouzapw`، مخزن `67router`، گردشکار `npm-publish.yml`
 (محیط: هیچکدام). تا زمانی که این تنظیم وجود نداشته باشد، گام خودکار با `ENEEDAUTH` شکست میخورد:
 دوباره با `publish_mode=staged` (در ادامه) یا `direct` اجرا کنید.
 

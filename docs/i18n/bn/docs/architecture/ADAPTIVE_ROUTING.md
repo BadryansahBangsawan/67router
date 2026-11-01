@@ -4,7 +4,7 @@
 
 ---
 
-এই নথিতে OmniRoute-এ যোগ করা ফিডব্যাক-চালিত অভিযোজিত রাউটিং ভিত্তি বর্ণনা করা হয়েছে।
+এই নথিতে 67router-এ যোগ করা ফিডব্যাক-চালিত অভিযোজিত রাউটিং ভিত্তি বর্ণনা করা হয়েছে।
 এটি ইচ্ছাকৃতভাবেই ছোট: এটি একটি টাইপযুক্ত রাউটিং-ফলাফল
 চ্যানেল, বিদ্যমান auto-combo স্কোরারকে তথ্য জোগানো একটি অনলাইন গুণমান সংকেত, একটি
 ঐচ্ছিক OpenTelemetry এক্সপোর্টার এবং একটি ব্যাখ্যাযোগ্যতা এন্ডপয়েন্ট প্রবর্তন করে। এটি বিদ্যমান
@@ -13,7 +13,7 @@
 
 ## 1. স্থাপত্যগত প্রেক্ষাপট
 
-OmniRoute হলো একটি ডেটা প্লেন, যেখানে একটি **রিকোয়েস্ট হট পাথ** এবং একটি **নিয়ন্ত্রণ/বুদ্ধিমত্তা
+67router হলো একটি ডেটা প্লেন, যেখানে একটি **রিকোয়েস্ট হট পাথ** এবং একটি **নিয়ন্ত্রণ/বুদ্ধিমত্তা
 প্লেন** রয়েছে। হট পাথকে দ্রুত, মেমরি-সাশ্রয়ী, অ্যাসিঙ্ক্রোনাস, স্থিতিস্থাপক এবং
 পূর্বানুমানযোগ্য থাকতে হবে। মূল্যায়ন, গুণমান স্কোরিং, পরীক্ষা-নিরীক্ষা এবং ঐতিহাসিক বিশ্লেষণ
 নিয়ন্ত্রণ প্লেনের অন্তর্ভুক্ত।
@@ -23,7 +23,7 @@ AI এজেন্ট / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   ডেটা প্লেন (দ্রুত, সিঙ্ক, ইন-মেমরি)
+│    67router        │   ডেটা প্লেন (দ্রুত, সিঙ্ক, ইন-মেমরি)
 │  রাউটিং / ফেইলওভার │
 │  স্বাস্থ্য / গার্ডরেল │
 │  ক্যাশ / স্ট্রিমিং  │
@@ -49,7 +49,6 @@ AI এজেন্ট / IDE
 | শ্যাডো ট্রাফিক                           | `open-sse/services/combo/shadowRouting.ts`                                                  |
 | গার্ডরেল                                 | `src/lib/guardrails/` (প্রি/পোস্ট হুক)                                                      |
 | এক্স্যাক্ট ক্যাশ                         | `src/lib/semanticCache.ts` (স্বাক্ষর-ভিত্তিক)                                               |
-| মূল্যায়ক / মূল্যায়ন-চালিত রাউটিং       | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                        |
 | কম্বো সিদ্ধান্তের ব্যাখ্যাযোগ্যতা        | `open-sse/services/combo/decisionTrace.ts`                                                  |
 | ড্যাশবোর্ডের রিয়েল-টাইম ইভেন্ট          | `src/lib/events/eventBus.ts` (UI বিজ্ঞপ্তি চ্যানেল, `unknown` পেলোড, ১০০-এন্ট্রির ইতিহাস)   |
 
@@ -234,7 +233,7 @@ OTel sink দ্বারা GenAI/OmniRoute span attributes হিসেবে 
   `@opentelemetry/*` SDK নয়)।
 - Span-গুলো GenAI semantic conventions (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) এবং OmniRoute routing
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) এবং 67router routing
   attributes (ফলাফল, স্ট্যাটাস, ttft, পুনঃচেষ্টা, ফলব্যাক) অনুসরণ করে।
 - `record()` কেবল একটি সীমাবদ্ধ বাফারে এনকিউ করে (O(1)); একটি ব্যাকগ্রাউন্ড টাইমার
   অ্যাসিঙ্ক্রোনাসভাবে `POST {endpoint}/v1/traces`-এর মাধ্যমে ফ্লাশ করে। অতিরিক্ত লোডের সময়
@@ -256,7 +255,7 @@ OTel sink দ্বারা GenAI/OmniRoute span attributes হিসেবে 
 
 ## 6. ইভ্যালুয়েশন-প্লেন ইন্টিগ্রেশন (Future AGI প্রস্তুতি)
 
-OmniRoute Future AGI-কে (অথবা যেকোনো evaluator-কে) একটি **সম্ভাব্য
+67router Future AGI-কে (অথবা যেকোনো evaluator-কে) একটি **সম্ভাব্য
 বুদ্ধিমত্তা/ইভ্যালুয়েশন ব্যাকএন্ড হিসেবে বিবেচনা করে, নির্ভরতা হিসেবে নয়**। সংযোগবিন্দুগুলো:
 
 - একটি `RoutingEventSink` অ্যাসিঙ্ক্রোনাসভাবে কোনো evaluator-এর কাছে ইভেন্ট ফরওয়ার্ড করতে পারে।
@@ -265,8 +264,6 @@ OmniRoute Future AGI-কে (অথবা যেকোনো evaluator-কে) �
 - ভবিষ্যতের একটি `Evaluator` (deterministic, local judge, HTTP, WASM)
   events/traces গ্রহণ করবে এবং একটি `QualityScore` ফেরত দেবে, যা একই
   `getQualityScore`/quality-factor পাথে প্রবাহিত হবে।
-- বিদ্যমান eval-চালিত routing (`open-sse/services/evalRouting.ts`) সক্রিয় থাকলে
-  `eval_runs` pass-rate অনুযায়ী combo target-গুলো ইতিমধ্যেই পুনর্বিন্যাস করে।
 
 রিকোয়েস্ট পাথে কোনো evaluation সিঙ্ক্রোনাসভাবে চলে না, এবং evaluator অনুপস্থিত থাকলেও
 gateway সম্পূর্ণভাবে কার্যকর থাকে।

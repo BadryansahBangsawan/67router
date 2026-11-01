@@ -4,7 +4,7 @@
 
 ---
 
-Kui OmniRoute töötab Dockeris, ei toimi pärandvood **Import from Cursor IDE** /
+Kui 67router töötab Dockeris, ei toimi pärandvood **Import from Cursor IDE** /
 `cursor-agent`, sest konteiner ei pääse hosti Cursor'i installile ligi. Kasutage
 selle asemel valikut **Login with Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ selle asemel valikut **Login with Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _konteineri seest_.
    Docker Desktopis macOS-i jaoks ei haagita hosti IDE andmebaasi vaikimisi ning
    konteineri operatsioonisüsteem on Linux isegi siis, kui host kasutab Darwinit.
-2. **Binaarfail `cursor-agent` puudub** — ametlikud OmniRoute'i tõmmised ei sisalda
+2. **Binaarfail `cursor-agent` puudub** — ametlikud 67router'i tõmmised ei sisalda
    `cursor-agent`-i. Available Models käivitas varem käsurealt
    `cursor-agent --list-models` ja tõrke korral kasutas staatilist kataloogi.
 3. **Vale binaarfail** — ärge haakige macOS-i `cursor-agent`-i bind-mount-meetodil
@@ -24,11 +24,11 @@ selle asemel valikut **Login with Cursor** (deep-control PKCE).
 
 1. Avage **Dashboard → Providers → Cursor**.
 2. Valige vahekaart **Login with Cursor**.
-3. Klõpsake **Login with Cursor** — OmniRoute avab aadressi
+3. Klõpsake **Login with Cursor** — 67router avab aadressi
    `https://cursor.com/loginDeepControl?…` teie **hosti** brauseris.
-4. Kinnitage brauseris sisselogimine ja naaske seejärel juhtpaneelile. OmniRoute
+4. Kinnitage brauseris sisselogimine ja naaske seejärel juhtpaneelile. 67router
    küsitleb aadressi `api2.cursor.sh/auth/poll`, kuni saabub token.
-5. OmniRoute salvestab **juurdepääsu- ja värskendustokenid** ning värskendab neid
+5. 67router salvestab **juurdepääsu- ja värskendustokenid** ning värskendab neid
    aadressi `https://api2.cursor.sh/auth/exchange_user_api_key` kaudu.
 
 See lahendus ei nõua konteineris Cursor IDE-d ega `cursor-agent`-i.
@@ -37,10 +37,10 @@ See lahendus ei nõua konteineris Cursor IDE-d ega `cursor-agent`-i.
 
 Sisselogitud ühenduse korral eelistab **Available Models / Auto-Sync** Cursor'i
 HTTP-kataloogi `AiService/AvailableModels`, kasutades ühenduse kandjatokenit.
-Kui see ebaõnnestub, proovib OmniRoute siiski hosti `cursor-agent`-i (kui see on
+Kui see ebaõnnestub, proovib 67router siiski hosti `cursor-agent`-i (kui see on
 olemas) ja seejärel staatilise registri algandmeid.
 
-OmniRoute kuvab kataloogis alati mudeli **`auto`** (kuvatav nimi „Auto”) ning
+67router kuvab kataloogis alati mudeli **`auto`** (kuvatav nimi „Auto”) ning
 OpenCodexi-laadsed marsruutimisrežiimid **`auto-cost`**, **`auto-balance`** ja
 **`auto-intelligence`**. Andmeedastuses vastavad need Cursor'i mudelile
 `default` (kolme variandi puhul koos parameetriga `optimization`
@@ -93,7 +93,7 @@ tokenid uuesti (ainult IDE-st importimine pole enam nõutav).
 ## Tühjad vastused / kasutusmaht ammendunud
 
 Kui Cursor võtab Run-päringu vastu, kuid ei tagasta assistendi teksti (see on
-tavaline premium-kasutusmahu ammendumisel), kuvab OmniRoute selgete
+tavaline premium-kasutusmahu ammendumisel), kuvab 67router selgete
 tegutsemisjuhistega vea **429** (kvoodile viitavate tunnuste korral) või **502**
 — mitte lihtsalt teadet „Provider returned empty content”. Voogedastuse tõrked,
 nagu `not_found: AI Model Not Found` (kasutusperioodi mahu ammendumisel),
@@ -104,7 +104,7 @@ Cursor'i paketi limiite.
 
 ## Kliendiversioon (ilma kasutajaliideseta)
 
-Kui kohalikku `cursor-agent`-i installi pole, määrab OmniRoute
+Kui kohalikku `cursor-agent`-i installi pole, määrab 67router
 `x-cursor-client-version`-i esmalt keskkonnamuutuja
 `CURSOR_AGENT_CLI_VERSION` järgi, seejärel Cursor'i installiskripti kettale
 vahemällu salvestatud analüüsi põhjal ning lõpuks fikseeritud järgu-ID järgi.

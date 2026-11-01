@@ -8,7 +8,7 @@
 > **最終更新日:** 2026-09-16
 > **対象読者:** 組み込みサービス（9Router、CLIProxyAPI、Mux、Bifrost、open-wa、LLMLingua）の追加、保守、またはデバッグを行うエンジニア。
 
-組み込みサービスは、OmniRoute がインストール、監視し、第一級のルーティング先として公開する、ローカルにインストールされたプロセス・サイドカーツールです。外部プロバイダー（API キーを介してインターネット経由でアクセスするもの）とは異なり、組み込みサービスは OmniRoute と同じマシン上で実行され、ループバック経由で通信します。
+組み込みサービスは、67router がインストール、監視し、第一級のルーティング先として公開する、ローカルにインストールされたプロセス・サイドカーツールです。外部プロバイダー（API キーを介してインターネット経由でアクセスするもの）とは異なり、組み込みサービスは 67router と同じマシン上で実行され、ループバック経由で通信します。
 
 ---
 
@@ -33,7 +33,7 @@
 
 | サービス        | npmパッケージ                        | デフォルトポート | 目的                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------- | ------------------------------------ | :--------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                            |      20130       | OmniRouteがサブプロバイダーとして使用できるAIルーター。モデルは`9router/{sub}/{model}`として公開されます                                                                                                                                                                                                                                                                    |
+| **9Router**     | `9router`                            |      20130       | 67routerがサブプロバイダーとして使用できるAIルーター。モデルは`9router/{sub}/{model}`として公開されます                                                                                                                                                                                                                                                                     |
 | **CLIProxyAPI** | GitHubリリースバイナリ（`cliproxy`） |       8317       | Anthropic CLI認証フロー用のローカルプロキシアダプター。OAuthトークンの有効期限が切れた場合にフォールバックルーティングを提供します                                                                                                                                                                                                                                          |
 | **Mux**         | `mux`（ヘッドレス`mux server`）      |       8322       | ローカルのエージェントオーケストレーションデーモン（coder/mux）。ライフサイクル管理のみで、ルーティング先ではありません（LLMプロキシ機能なし）。                                                                                                                                                                                                                            |
 | **Bifrost**     | `@maximhq/bifrost`                   |       8080       | Go製AIゲートウェイのリレーバックエンド。実行中は、リレールート（`/v1/relay/`）によって自動的に選択されます                                                                                                                                                                                                                                                                  |
@@ -43,9 +43,9 @@
 
 7つすべてが同じ監視モデルに従います。
 
-- OmniRouteはこれらを`DATA_DIR/services/{name}/`配下にインストールします（OmniRoute自身の`package.json`から分離）
-- OmniRouteはこれらを子プロセスとして起動し、監視します
-- OmniRouteは一時的なAPIキーを子プロセスの環境に注入し、ダウンタイムなしでローテーションします（該当する場合）
+- 67routerはこれらを`DATA_DIR/services/{name}/`配下にインストールします（67router自身の`package.json`から分離）
+- 67routerはこれらを子プロセスとして起動し、監視します
+- 67routerは一時的なAPIキーを子プロセスの環境に注入し、ダウンタイムなしでローテーションします（該当する場合）
 - すべての管理ルート（`/api/services/*`）は**LOCAL_ONLY**であり、ループバックからのみアクセスできます（厳格ルール#17）
 
 ### 主要な決定事項（設計計画より）
@@ -55,7 +55,7 @@
 | 9RouterネイティブUIへのダッシュボードアクセス | `/dashboard/providers/services/9router/embed/*`でのリバースプロキシ       |
 | インストール方式                              | `execFile`による`npm install {package}`（シェル補間なし）                 |
 | 利用モード                                    | ルーティングエンジンに`9router/{sub}/{model}`として登録されるプロバイダー |
-| APIキー管理                                   | OmniRouteが生成し、保存時に暗号化（AES-256-GCM）して、環境変数経由で注入  |
+| APIキー管理                                   | 67routerが生成し、保存時に暗号化（AES-256-GCM）して、環境変数経由で注入   |
 | ダッシュボードの場所                          | `/dashboard/providers/services`（3つのタブ）                              |
 | 自動起動                                      | サービスごとの切り替え、デフォルトはOFF                                   |
 
@@ -218,7 +218,7 @@
 #### `POST /api/services/9router/install`
 
 npm から 9Router をインストールします。独自の `package.json` と `node_modules/` を含む
-`DATA_DIR/services/9router/` を作成します。OmniRoute 自体の依存関係とは競合しません。
+`DATA_DIR/services/9router/` を作成します。67router 自体の依存関係とは競合しません。
 
 **リクエストボディ**（すべて任意）:
 
@@ -376,7 +376,7 @@ npm install を実行して新しいバージョンをその場でインスト�
 
 #### `POST /api/services/9router/auto-start`
 
-自動起動フラグを切り替えます。`enabled: true` の場合、次回 OmniRoute が起動するときに、
+自動起動フラグを切り替えます。`enabled: true` の場合、次回 67router が起動するときに、
 サービスがインストール済みであれば自動的に起動します。
 
 **リクエストボディ:**
@@ -587,7 +587,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 このプロキシは以下を行います。
 
 - リクエストを `http://127.0.0.1:{port}/{path}` に転送します（ループバックのみ）
-- 受信した `cookie` および `authorization` ヘッダーを削除します（OmniRoute セッションの漏洩を防止）
+- 受信した `cookie` および `authorization` ヘッダーを削除します（67router セッションの漏洩を防止）
 - 9Router 認証用に `Authorization: Bearer {apiKey}` を注入します
 - レスポンスから `set-cookie`、`content-security-policy`、`x-frame-options`、`cross-origin-*` を削除します
 - HTML レスポンスを書き換えて `<base href>` を注入し、絶対パスを正規化します（`/foo` → `/dashboard/.../embed/foo`）
@@ -623,7 +623,7 @@ JWT を取得した攻撃者であっても、埋め込みサービスへプロ�
 ### API キーの注入
 
 9Router と Mux は、それぞれの HTTP エンドポイント用に API キー／Bearer トークンを必要とします。
-OmniRoute は次の処理を行います。
+67router は次の処理を行います。
 
 1. `crypto.randomBytes(32).toString("base64url")` を使用し、
    サービス固有のプレフィックス（9Router は `nr_`、Mux は `mx_`）を付けてキーを生成します。
@@ -804,7 +804,7 @@ auto-start/route.ts POST — auto_start フラグを切り替える
 **チェックリスト:**
 
 1. `GET /api/services/{name}/logs`（またはダッシュボードのLogsパネル）を確認します。`Error: ENOENT`、`address already in use`、`Cannot find module`などの行を探します。
-2. `npm`がPATHに含まれていることを確認します。OmniRouteを実行しているユーザーアカウントで`which npm`を実行してください。
+2. `npm`がPATHに含まれていることを確認します。67routerを実行しているユーザーアカウントで`which npm`を実行してください。
 3. サービスがインストールされていることを確認します。`GET /api/services/{name}/status`の`installedVersion`を確認してください。`null`の場合は、先にインストールを実行します。
 4. `DATA_DIR/services/{name}/node_modules/`が存在し、空でないことを確認します。
 5. ステータスレスポンスの`lastError`フィールドで、サニタイズされた終了理由を確認します。
@@ -836,7 +836,7 @@ auto-start/route.ts POST — auto_start フラグを切り替える
 2. 競合しているプロセスを特定して終了します: `lsof -ti :20130 | xargs kill -9`
 3. ポートは、`bootstrap.ts`の`port`フィールドを使用してサービスごとに設定できます。
 
-**注:** 9Routerは、OmniRouteのデフォルトポート20128との競合を避けるため、デフォルトでポート20130を使用します。
+**注:** 9Routerは、67routerのデフォルトポート20128との競合を避けるため、デフォルトでポート20130を使用します。
 
 ---
 
@@ -846,13 +846,13 @@ auto-start/route.ts POST — auto_start フラグを切り替える
 
 **原因:**
 
-- `DATA_DIR`またはその親ディレクトリに、OmniRouteプロセスから書き込む権限がありません。
+- `DATA_DIR`またはその親ディレクトリに、67routerプロセスから書き込む権限がありません。
 - マウントされたボリュームへの書き込み権限がない状態で、rootless Docker内で実行しています。
 
 **修正方法:**
 
 1. `DATA_DIR`（デフォルト: `~/.omniroute/`）を確認します: `ls -la ~/.omniroute/`
-2. OmniRouteプロセスの実行ユーザーがディレクトリを所有していることを確認します: `chown -R $USER ~/.omniroute/`
+2. 67routerプロセスの実行ユーザーがディレクトリを所有していることを確認します: `chown -R $USER ~/.omniroute/`
 3. Dockerでは、ボリュームマウントにコンテナユーザー用の適切な権限が設定されていることを確認します。
 
 ---
@@ -892,14 +892,14 @@ auto-start/route.ts POST — auto_start フラグを切り替える
 
 **Q: 9Router と CLIProxyAPI は、本番環境やクラウド環境へのデプロイで利用できますか？**
 
-はい。どちらのサービスも OmniRoute 自体と同じローカルファーストモデルに従います。これらは同じマシン上で実行され、ループバック経由で通信します。ここでいう「本番環境」とは、リモートのクラウドプロバイダーではなく、OmniRoute がデプロイされている VPS またはローカルサーバーを指します。
+はい。どちらのサービスも 67router 自体と同じローカルファーストモデルに従います。これらは同じマシン上で実行され、ループバック経由で通信します。ここでいう「本番環境」とは、リモートのクラウドプロバイダーではなく、67router がデプロイされている VPS またはローカルサーバーを指します。
 
 ---
 
 **Q: スーパーバイザーをデバッグするにはどうすればよいですか？**
 
 1. SSE ログストリームを追跡します：`curl -N http://localhost:20128/api/services/9router/logs`。
-2. OmniRoute の pino 出力で、`service:supervisor` 名前空間によりフィルタリングされた構造化ログを確認します。
+2. 67router の pino 出力で、`service:supervisor` 名前空間によりフィルタリングされた構造化ログを確認します。
 3. DB の行を調査します：`sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`。
 4. `GET /api/services/9router/status` を使用すると、現在のライブ状態、PID、ヘルス状態、`lastError` を1回の呼び出しで確認できます。
 

@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `electron/`-työtila
 > **Viimeksi päivitetty:** 2026-06-28 — v3.8.40
 
-OmniRoute sisältää eri alustoilla toimivan työpöytäsovelluksen (Windows / macOS / Linux), joka perustuu
+67router sisältää eri alustoilla toimivan työpöytäsovelluksen (Windows / macOS / Linux), joka perustuu
 **Electron 41**- ja **electron-builder 26.10** -tekniikoihin. Työpöytäsovellus käynnistää Next.js:n
 itsenäisen palvelimen aliprosessina, ohjaa `BrowserWindow`-ikkunan siihen ja lisää
 ilmaisinalueen kuvakkeen, automaattisen päivitystoiminnon, IPC-sillan sekä määrityksiä vaatimattoman salaisuuksien alustuksen.
@@ -191,7 +191,7 @@ kannattaa käyttää `.env`-tiedostoa ja sulkea sitten sovellus kokonaan (ilmais
 - `BrowserWindow`: 1400×900 (vähintään 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, liikennevalopainikkeet kohdassa `{ x: 16, y: 16 }`.
 - Windows/Linux: natiivi otsikkopalkki.
-- Sulkemispainike pienentää sovelluksen ilmaisinalueelle; ilmaisinalueen valikossa ovat **Avaa OmniRoute**, **Avaa hallintapaneeli** (ulkoisessa selaimessa), **Palvelimen portti** -alivalikko, **Tarkista päivitykset** ja **Lopeta**.
+- Sulkemispainike pienentää sovelluksen ilmaisinalueelle; ilmaisinalueen valikossa ovat **Avaa 67router**, **Avaa hallintapaneeli** (ulkoisessa selaimessa), **Palvelimen portti** -alivalikko, **Tarkista päivitykset** ja **Lopeta**.
 
 ## Sisällön suojauskäytäntö
 

@@ -31,7 +31,7 @@ Kiekvienam rinkinio kandidatui (`open-sse/services/autoCombo/virtualFactory.ts::
 iškart po `filterPaidOnlyCandidates`):
 
 1. **Jo išvis nėra `FREE_MODEL_BUDGETS`** → atmetamas. Tai apima iš tiesų mokamus modelius ir visus
-   paslaugų teikėjus / modelius, kurių OmniRoute dar nesuklasifikavo — nauji kandidatai iš pradžių atmetami, o ne įtraukiami.
+   paslaugų teikėjus / modelius, kurių 67router dar nesuklasifikavo — nauji kandidatai iš pradžių atmetami, o ne įtraukiami.
 2. **`freeType: "keyless"`** → iškart praleidžiamas, **bet tik jei kandidatas iš tikrųjų
    gautas per kelią be autentifikavimo** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Toks kandidatas neturi prisijungimo
@@ -87,7 +87,7 @@ o ne kita, nepatikrinta to paties kandidato paskyra. Regresijos įrodymą žr.
 (atvejai A/B/C, kai apeinama be rakto, ir kelių paskyrų atvejai 1–5).
 
 `aptinkama automatiškai`: rytoj išleistas teikėjas / modelis su tinkamais metaduomenimis (esantis
-kataloge, turintis naudojimo adapterį ir `hardStopGuaranteed: true`) gali būti naudojamas vos tik OmniRoute
+kataloge, turintis naudojimo adapterį ir `hardStopGuaranteed: true`) gali būti naudojamas vos tik 67router
 apie jį sužino — nereikia keisti kodo, įtraukti į leidžiamų elementų sąrašą ar ką nors redaguoti šiame modulyje.
 Iš katalogo pašalintas elementas tokiu pačiu būdu išnyksta. Regresijos įrodymą žr.
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (naudojant

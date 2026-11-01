@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Hausa)
+# 🌐 67router Proxy Guide (Hausa)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Ketare shingen yanki, kare ainihinka, kuma bi da zirga-zirgar AI ta kowace proxy — ba tare da rikitarwar saitawa ba.**
 
-OmniRoute ya ƙunshi cikakken tsarin sarrafa proxy wanda ke ba ka damar bi da zirga-zirgar masu samar da AI na upstream ta HTTP, HTTPS, ko SOCKS5 proxies. Ko kana yankin da aka toshe, kana buƙatar sauya IP akai-akai, ko kuma kana son ɓoye sawun gano na’ura — wannan jagorar ta ƙunshi komai.
+67router ya ƙunshi cikakken tsarin sarrafa proxy wanda ke ba ka damar bi da zirga-zirgar masu samar da AI na upstream ta HTTP, HTTPS, ko SOCKS5 proxies. Ko kana yankin da aka toshe, kana buƙatar sauya IP akai-akai, ko kuma kana son ɓoye sawun gano na’ura — wannan jagorar ta ƙunshi komai.
 
 ---
 
@@ -51,7 +51,7 @@ Ko da a wajen yankunan da aka toshe, proxies suna da amfani ga:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       Sabar OmniRoute                         │
+│                       Sabar 67router                         │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Rajistar    │    │ Mai Rarraba  │    │ Proxy            │  │
@@ -83,7 +83,7 @@ Ko da a wajen yankunan da aka toshe, proxies suna da amfani ga:
 
 ## Tsarin Proxy Mai Matakai 4
 
-OmniRoute yana goyon bayan daidaita proxy a **matakai huɗu masu zaman kansu**, waɗanda ake tantancewa bisa jerin fifiko:
+67router yana goyon bayan daidaita proxy a **matakai huɗu masu zaman kansu**, waɗanda ake tantancewa bisa jerin fifiko:
 
 ```
 Jerin Tantance Fifiko (mafi girma → mafi ƙanƙanta):
@@ -96,7 +96,7 @@ Jerin Tantance Fifiko (mafi girma → mafi ƙanƙanta):
 
 ### Yadda Tantancewa Ke Aiki
 
-Lokacin da OmniRoute ya aika buƙata zuwa wani mai bayarwa na waje, yana kiran `resolveProxyForConnectionFromRegistry()` wanda ke duba kowane mataki bisa jeri:
+Lokacin da 67router ya aika buƙata zuwa wani mai bayarwa na waje, yana kiran `resolveProxyForConnectionFromRegistry()` wanda ke duba kowane mataki bisa jeri:
 
 1. **Matakin asusu** — Shin akwai proxy da aka sanya wa wannan takamaiman ID na haɗi?
 2. **Matakin mai bayarwa** — Shin akwai proxy da aka sanya wa wannan mai bayarwa (misali, `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Shigo da/Fitar da Bayanai
 
-Ana haɗa proxy-proxies cikin tsarin **Backup/Restore**. Lokacin da ka fitar da daidaitawar OmniRoute ɗinka:
+Ana haɗa proxy-proxies cikin tsarin **Backup/Restore**. Lokacin da ka fitar da daidaitawar 67router ɗinka:
 
 1. Je zuwa **Dashboard → Settings → Backup**
 2. Danna **Export** — an haɗa rijistar proxy da abubuwan da aka sanya
@@ -248,7 +248,7 @@ Rijistar proxy kuma tana goyon bayan **upsert ta host+port** — idan ka shigo d
 
 ### Ƙaura daga Tsohon Tsari
 
-Idan ka saita proxies a tsohuwar sigar (kafin registry), OmniRoute zai ƙaura da su ta atomatik:
+Idan ka saita proxies a tsohuwar sigar (kafin registry), 67router zai ƙaura da su ta atomatik:
 
 ```
 Tsohon ma’ajin key_value → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Wannan yana faruwa sau ɗaya a fara kunnawa bayan sabuntawa. Yi amfani da `migra
 
 > 🆕 **Gudummawa daga [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Matsala [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute yana haɗuwa da dandalin al’umma na **[1proxy](https://1proxy-api.aitradepulse.com)** don samar da damar amfani da **ɗaruruwan proxy kyauta da aka tabbatar** daga ko’ina cikin duniya. Wannan ya dace sosai da masu amfani waɗanda ba su da nasu ababen more rayuwa na proxy.
+67router yana haɗuwa da dandalin al’umma na **[1proxy](https://1proxy-api.aitradepulse.com)** don samar da damar amfani da **ɗaruruwan proxy kyauta da aka tabbatar** daga ko’ina cikin duniya. Wannan ya dace sosai da masu amfani waɗanda ba su da nasu ababen more rayuwa na proxy.
 
 ### Yadda Yake Aiki
 
@@ -273,7 +273,7 @@ OmniRoute yana haɗuwa da dandalin al’umma na **[1proxy](https://1proxy-api.ai
 └─────────────┘    proxies    └─────────────────┘               └──────────┘
 ```
 
-1. **Daidaitawa** — OmniRoute yana ɗauko proxies da aka tabbatar daga 1proxy API
+1. **Daidaitawa** — 67router yana ɗauko proxies da aka tabbatar daga 1proxy API
 2. **Adanawa** — Ana adana proxies a cikin teburin `proxy_registry` ɗaya tare da `source = 'oneproxy'`
 3. **Tacewa** — Tace bisa ga protocol, ƙasa, da makin inganci
 4. **Juyawa** — Zaɓi proxy mafi kyau ta amfani da dabarun inganci, bazuwar zaɓi, ko jere
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Kauce wa Ganowa & Ɓoye Kai
 
-OmniRoute ba wai kawai yana tura zirga-zirga ta cikin proxy ba ne — yana sa zirga-zirgar ta yi kama da halastacciya:
+67router ba wai kawai yana tura zirga-zirga ta cikin proxy ba ne — yana sa zirga-zirgar ta yi kama da halastacciya:
 
 ### Kwaikwayon Sawun Yatsa na TLS
 
@@ -407,11 +407,11 @@ Alamar kuma tana nuna IP na proxy da aka tantance domin tabbatarwa.
 
 ## Yanayin Upstream Proxy
 
-Ga masu bayarwa da ke amfani da tsarin CLIProxyAPI, OmniRoute yana goyon bayan yanayin upstream proxy guda uku:
+Ga masu bayarwa da ke amfani da tsarin CLIProxyAPI, 67router yana goyon bayan yanayin upstream proxy guda uku:
 
 | Yanayi        | Bayani                                                   |
 | ------------- | -------------------------------------------------------- |
-| `native`      | OmniRoute yana sarrafa tura proxy kai tsaye (na asali)   |
+| `native`      | 67router yana sarrafa tura proxy kai tsaye (na asali)    |
 | `cliproxyapi` | Yana miƙa aikin ga wata instance ta CLIProxyAPI ta waje  |
 | `fallback`    | Yana fara gwada native, idan ya gaza ya koma CLIProxyAPI |
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### API na Tunnels
 
-Don fallasa instance ɗinka na OmniRoute ga intanet na jama'a (Cloudflare/ngrok/Tailscale) maimakon tura zirga-zirga mai fita ta cikin proxy, duba [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API na tunnel yana ƙarƙashin `/api/tunnels/{cloudflared,ngrok,tailscale}/*` kuma ya zaman kansa daga jerin proxy mai fita da aka bayyana a sama.
+Don fallasa instance ɗinka na 67router ga intanet na jama'a (Cloudflare/ngrok/Tailscale) maimakon tura zirga-zirga mai fita ta cikin proxy, duba [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). REST API na tunnel yana ƙarƙashin `/api/tunnels/{cloudflared,ngrok,tailscale}/*` kuma ya zaman kansa daga jerin proxy mai fita da aka bayyana a sama.
 
 ### API na 1proxy
 
@@ -516,7 +516,7 @@ Saita `ENABLE_SOCKS5_PROXY=true` a cikin fayil ɗin `.env` sannan ka sake farawa
 
 ### Kurakuran "socket hang up" ta hanyar proxy
 
-Wannan abu ne na yau da kullum ga proxy masu arha waɗanda ke katse haɗin da ba ya aiki. OmniRoute ya riga ya magance wannan ta hanyar:
+Wannan abu ne na yau da kullum ga proxy masu arha waɗanda ke katse haɗin da ba ya aiki. 67router ya riga ya magance wannan ta hanyar:
 
 - Kashe keep-alive a haɗin proxy (`keepAliveTimeout: 1`)
 - Kashe pipelining (`pipelining: 0`)
@@ -526,7 +526,7 @@ Idan matsalar ta ci gaba, gwada wani proxy daban ko amfani da fasalin juyawar 1p
 
 ### "unsupported_country_region_territory" yayin OAuth
 
-Tabbatar an saita proxy **kafin** fara tsarin OAuth. OmniRoute yana bi da musayar token na OAuth ta proxy da aka saita. Da farko saita proxy na gaba ɗaya ko na matakin provider, sannan ka haɗa.
+Tabbatar an saita proxy **kafin** fara tsarin OAuth. 67router yana bi da musayar token na OAuth ta proxy da aka saita. Da farko saita proxy na gaba ɗaya ko na matakin provider, sannan ka haɗa.
 
 ### Ba a amfani da proxy
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Duba Lafiyar Proxy (v3.8.16+)
 
-Tsarin **proxy fast-fail** na OmniRoute (`src/lib/proxyHealth.ts`) yana gano proxy da ba sa aiki cikin <2s ta hanyar saurin duba haɗin TCP, sannan ya **adana sakamakon a cache** don guje wa ƙarin nauyi ga kowace buƙata.
+Tsarin **proxy fast-fail** na 67router (`src/lib/proxyHealth.ts`) yana gano proxy da ba sa aiki cikin <2s ta hanyar saurin duba haɗin TCP, sannan ya **adana sakamakon a cache** don guje wa ƙarin nauyi ga kowace buƙata.
 
 ### Yadda Yake Aiki
 
@@ -659,11 +659,11 @@ Tashoshin da aka keɓance a cikin URL (`http://host:9999`) koyaushe suna da fifi
 
 ## Nazarin Proxy da Sa Ido
 
-OmniRoute yana bin diddigin amfani da kowane proxy don taimaka wa masu gudanarwa gano tsarin zaɓin hanya, hauhawar jinkiri, da matsalolin da ke maimaituwa.
+67router yana bin diddigin amfani da kowane proxy don taimaka wa masu gudanarwa gano tsarin zaɓin hanya, hauhawar jinkiri, da matsalolin da ke maimaituwa.
 
 ### Abubuwan da Ake Bibiyarsu
 
-Ga kowace buƙata da ta bi ta wani proxy da aka saita, OmniRoute yana adana:
+Ga kowace buƙata da ta bi ta wani proxy da aka saita, 67router yana adana:
 
 | Ma'auni      | Bayani                                                         |
 | ------------ | -------------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Bishiyar Yanke Shawarar Dabarar Juyawa
 
-Lokacin da aka sanya proxy da yawa ga wani fage, OmniRoute yana amfani da **dabarar juyawa** don zaɓar wanda zai yi amfani da shi ga kowace buƙata. Ana saita dabarar a matakin fage (na gaba ɗaya, na kowane mai samarwa, na kowane asusu, na kowane haɗi).
+Lokacin da aka sanya proxy da yawa ga wani fage, 67router yana amfani da **dabarar juyawa** don zaɓar wanda zai yi amfani da shi ga kowace buƙata. Ana saita dabarar a matakin fage (na gaba ɗaya, na kowane mai samarwa, na kowane asusu, na kowane haɗi).
 
 ### Dabarun da Ake Da Su
 

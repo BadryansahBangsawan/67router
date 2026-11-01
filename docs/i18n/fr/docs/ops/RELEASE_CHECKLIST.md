@@ -45,7 +45,7 @@ il restaure le processus entièrement automatique dont bénéficiait le projet j
 garantie WS1.3 (un jeton divulgué ne peut pas publier seul — puisqu’il n’existe aucun jeton).
 
 **Configuration unique (propriétaire) :** npmjs.com → paquet `omniroute` → Settings → _Trusted
-Publisher_ → GitHub : propriétaire `diegosouzapw`, dépôt `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub : propriétaire `diegosouzapw`, dépôt `67router`, workflow `npm-publish.yml`
 (environnement : aucun). Tant que cette configuration n’existe pas, l’étape automatique échoue avec `ENEEDAUTH` :
 relancez-la avec `publish_mode=staged` (ci-dessous) ou `direct`.
 

@@ -10,19 +10,14 @@ process.env.DISABLE_SQLITE_AUTO_BACKUP = "true";
 
 const core = await import("../../src/lib/db/core.ts");
 const { createCombo } = await import("../../src/lib/db/combos.ts");
-const { createProviderNode, createProviderConnection } =
-  await import("../../src/lib/db/providers.ts");
+const { createProviderNode } = await import("../../src/lib/db/providers.ts");
 const { waitForCallLogSaves } = await import("../../src/lib/usage/callLogs.ts");
-const { createEmbeddingResponse } = await import("../../src/lib/embeddings/service.ts");
-const { handleValidatedRerankRequestBody } = await import("../../src/app/api/v1/rerank/route.ts");
 const transcriptions = await import("../../src/app/api/v1/audio/transcriptions/route.ts");
-const translations = await import("../../src/app/api/v1/audio/translations/route.ts");
 const originalFetch = globalThis.fetch;
 
 test.before(async () => {
   for (const [prefix, apiType] of [
     ["scanembed", "embeddings"],
-    ["scanrank", "rerank"],
     ["scanaudio", "audio-transcriptions"],
   ]) {
     await createProviderNode({
@@ -39,12 +34,6 @@ test.before(async () => {
       models: [{ provider: prefix, model: "test-model" }],
     } as Parameters<typeof createCombo>[0]);
   }
-  await createProviderConnection({
-    provider: "openai-compatible-scanrank",
-    authType: "apikey",
-    name: "synthetic rerank",
-    apiKey: "synthetic-test-key",
-  });
 });
 
 test.after(async () => {
@@ -63,29 +52,9 @@ function audioRequest(endpoint: string): Request {
 
 const cases: Array<{ name: string; run: () => Promise<Response>; upstream: string }> = [
   {
-    name: "embeddings",
-    run: () => createEmbeddingResponse({ model: "scanembed-combo", input: "synthetic input" }),
-    upstream: "/embeddings",
-  },
-  {
-    name: "rerank",
-    run: () =>
-      handleValidatedRerankRequestBody({
-        model: "scanrank-combo",
-        query: "synthetic query",
-        documents: ["synthetic document"],
-      }),
-    upstream: "/rerank",
-  },
-  {
     name: "transcriptions",
     run: () => transcriptions.POST(audioRequest("transcriptions")),
     upstream: "/audio/transcriptions",
-  },
-  {
-    name: "translations",
-    run: () => translations.POST(audioRequest("translations")),
-    upstream: "/audio/translations",
   },
 ];
 
@@ -103,9 +72,7 @@ for (const example of cases) {
             data: [{ object: "embedding", index: 0, embedding: [0.1, 0.2] }],
             usage: { prompt_tokens: 1, total_tokens: 1 },
           }
-        : url.endsWith("/rerank")
-          ? { results: [{ index: 0, relevance_score: 0.9 }] }
-          : { text: "ok" };
+        : { text: "ok" };
       return Response.json(result);
     };
     const db = core.getDbInstance();

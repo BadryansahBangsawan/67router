@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Lietuvių)
+# 🐳 Docker Guide — 67router (Lietuvių)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Su aplinkos failu](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Galimi profiliai](#available-profiles)
-- [Pagrindinio kompiuterio CLI įrankių konfigūravimas, kai „OmniRoute“ veikia „Docker“ aplinkoje](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Pagrindinio kompiuterio CLI įrankių konfigūravimas, kai „67router“ veikia „Docker“ aplinkoje](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [„Redis“ pagalbinis konteineris](#redis-sidecar)
 - [Gamybinės aplinkos „Compose“](#production-compose)
 - [Dockerfile etapai](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Galimi profiliai
 
-„OmniRoute“ pateikia „Compose“ profilius pagrindiniams diegimo variantams. Pasirinkite jūsų aplinką atitinkantį profilį.
+„67router“ pateikia „Compose“ profilius pagrindiniams diegimo variantams. Pasirinkite jūsų aplinką atitinkantį profilį.
 
 | Profilis             | Paslauga         | Kada naudoti                                                                                                                                                                                          | Komanda                                      |
 | -------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 > Galima derinti kelis profilius: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Pagrindinio kompiuterio CLI įrankių konfigūravimas, kai OmniRoute veikia Docker aplinkoje
+## Pagrindinio kompiuterio CLI įrankių konfigūravimas, kai 67router veikia Docker aplinkoje
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` ir valdymo skydelio
 mygtukas **Išsaugoti konfigūraciją** įrašo tokius failus kaip `~/.codex/*.config.toml`. Šie keliai
@@ -103,11 +103,11 @@ konteinerio viduje, failai įrašomi į paties konteinerio namų katalogą (`/ho
 atvaizdas veikia kaip `USER node`), iš kurio pagrindinio kompiuterio CLI jų niekada neperskaitys ir
 kur jie bus pašalinti vos tik konteineris bus sukurtas iš naujo.
 
-OmniRoute tai aptinka ir, užuot pranešusi apie sėkmę, kuria negalėsite pasinaudoti,
+67router tai aptinka ir, užuot pranešusi apie sėkmę, kuria negalėsite pasinaudoti,
 atsisako rašyti bei pateikia instrukcijas: CLI baigia darbą su kodu `2`, o API atsako `422`
 su `containerEphemeralTarget: true`.
 
-### Rekomenduojama: paleiskite CLI pagrindiniame kompiuteryje, o OmniRoute – Docker aplinkoje
+### Rekomenduojama: paleiskite CLI pagrindiniame kompiuteryje, o 67router – Docker aplinkoje
 
 Konteineris teikia API, o CLI konfigūruoja jūsų pagrindinio kompiuterio įrankius.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Susietasis prijungimas suteikia keliui patikimumo: OmniRoute skaito
+Susietasis prijungimas suteikia keliui patikimumo: 67router skaito
 `/proc/self/mountinfo` ir leidžia rašyti į prijungtus kelius (taip pat į katalogus,
 kurių antriniai katalogai yra prijungimo taškai — būtent tokia yra pirmiau pateikto `/host-home` struktūra), tačiau
 vis tiek atsisako rašyti į neprijungtus kelius.
@@ -178,7 +178,7 @@ kartu pateikiant įspėjimą, kad duomenys neišliks pašalinus konteinerį.
 
 ## Redis pagalbinis konteineris
 
-„OmniRoute“ naudoja Redis paskirstytojo užklausų dažnio ribotuvo ir bendrinamos talpyklos veikimui užtikrinti. `redis` paslauga yra **visada apibrėžta** faile `docker-compose.yml` (jai netaikomas joks profilis) ir paleidžiama kartu su bet kuriuo kitu profiliu.
+„67router“ naudoja Redis paskirstytojo užklausų dažnio ribotuvo ir bendrinamos talpyklos veikimui užtikrinti. `redis` paslauga yra **visada apibrėžta** faile `docker-compose.yml` (jai netaikomas joks profilis) ir paleidžiama kartu su bet kuriuo kitu profiliu.
 
 | Išsami informacija                             | Reikšmė                                              |
 | ---------------------------------------------- | ---------------------------------------------------- |
@@ -358,7 +358,6 @@ Be numatytųjų reikšmių, aprašytų faile [ENVIRONMENT.md](../reference/ENVIR
 | `DASHBOARD_PORT` / `API_PORT` | Pakeičia atvertus prievadus, skirtus valdymo skydeliui (20128) ir API (20129)                                                                                                                                                                                                                                                                | `20128` / `20129`             |
 | `APP_BIND_HOST`               | Pagrindinio kompiuterio sąsaja, kurioje docker-compose skelbia valdymo skydelio / API / tiesioginio WS prievadus. Kai `REQUIRE_API_KEY=false` (numatytoji reikšmė), `0.0.0.0` atveria anoniminį `/v1` tarpinį serverį LAN tinkle — išplėskite prieigą tik naudodami `REQUIRE_API_KEY=true` arba priešais esantį atvirkštinį tarpinį serverį. | `127.0.0.1`                   |
 | `CLIPROXY_BIND_HOST`          | Pagrindinio kompiuterio sąsaja, kurioje docker-compose skelbia `cliproxyapi` pagalbinį konteinerį — jo duomenų tome saugomi teikėjo prisijungimo duomenys.                                                                                                                                                                                   | `127.0.0.1`                   |
-| `OMNIROUTE_PLUGINS_DIR`       | Katalogas, kurį vykdymo aplinkos papildinių skaitytuvas tikrina ir į kurį diegia papildinius. Nustatykite jį, kai papildiniai prijungiami naudojant susietąjį prijungimą: numatytoji reikšmė priklauso nuo `HOME`, kurio atvaizdas nebūtinai eksportuoja.                                                                                    | `~/.omniroute/plugins`        |
 | `OMNIROUTE_BASE_PATH`         | URL pokelis, kai programa publikuojama už atvirkštinio tarpinio serverio (pvz., `/omniroute`)                                                                                                                                                                                                                                                | _(tuščia = šaknis)_           |
 | `NEXT_PUBLIC_BASE_URL`        | Viešoji naršyklės kilmė, įskaitant pokelį (pvz., `https://host/omniroute`)                                                                                                                                                                                                                                                                   | nenustatyta                   |
 | `PROD_DASHBOARD_PORT`         | Pagrindinio kompiuterio valdymo skydelio prievadas, skirtas `docker-compose.prod.yml`                                                                                                                                                                                                                                                        | `20130`                       |
@@ -366,7 +365,7 @@ Be numatytųjų reikšmių, aprašytų faile [ENVIRONMENT.md](../reference/ENVIR
 
 ## Atvirkštinis tarpinis serveris pakelyje (Traefik / nginx)
 
-Next.js `basePath` sukompiliuojamas į autonominį paketą. OmniRoute įrašo įkompiliuotą
+Next.js `basePath` sukompiliuojamas į autonominį paketą. 67router įrašo įkompiliuotą
 reikšmę kontroliniame faile programos šakniniame kataloge (įrašoma vykdant `npm run build`;
 nuskaitoma naudojant `scripts/docker/ensure-docker-base-path.mjs`) ir paleidžiant konteinerį
 palygina ją su `OMNIROUTE_BASE_PATH`. Kai jos skiriasi, o atvaizdas buvo sukurtas domeno
@@ -443,7 +442,7 @@ patikrų gairės:
 
 ## Docker Compose su Caddy (automatinis HTTPS TLS)
 
-OmniRoute galima saugiai viešai pasiekti naudojant automatinį Caddy SSL sertifikatų parengimą. Įsitikinkite, kad jūsų domeno DNS A įrašas nurodo jūsų serverio IP adresą.
+67router galima saugiai viešai pasiekti naudojant automatinį Caddy SSL sertifikatų parengimą. Įsitikinkite, kad jūsų domeno DNS A įrašas nurodo jūsų serverio IP adresą.
 
 ```yaml
 services:
@@ -474,11 +473,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy nustato standartines persiuntimo antraštes aukštesniojo lygmens konteineriui. OmniRoute naudoja
+Caddy nustato standartines persiuntimo antraštes aukštesniojo lygmens konteineriui. 67router naudoja
 `NEXT_PUBLIC_BASE_URL` kaip kanoninę viešąją kilmę OAuth atgaliniams iškvietimams ir sugeneruotoms viešosioms
 nuorodoms; autentifikuoti valdymo skydelio rašymo veiksmai naudoja tos pačios kilmės užklausas ir su seansu susietą CSRF
 apsaugą. Įjunkite `OMNIROUTE_TRUST_PROXY` tik išplėstiniuose diegimuose, kuriuose sąmoningai
-norite, kad OmniRoute nustatytų viešąją kilmę pagal patikimas persiųstas antraštes, o ne aiškią
+norite, kad 67router nustatytų viešąją kilmę pagal patikimas persiųstas antraštes, o ne aiškią
 konfigūraciją.
 
 ## Cloudflare Quick Tunnel
@@ -490,11 +489,11 @@ Galinių taškų tunelių skydelius (Cloudflare, Tailscale, ngrok) galima rodyti
 ### Pastabos apie tunelius
 
 - Quick Tunnel URL yra laikini ir pasikeičia po kiekvieno paleidimo iš naujo.
-- Quick Tunnel nėra automatiškai atkuriami iš naujo paleidus OmniRoute arba konteinerį. Prireikus juos vėl įjunkite valdymo skydelyje.
+- Quick Tunnel nėra automatiškai atkuriami iš naujo paleidus 67router arba konteinerį. Prireikus juos vėl įjunkite valdymo skydelyje.
 - Valdomas diegimas šiuo metu palaiko Linux, macOS ir Windows `x64` / `arm64` platformose.
 - Valdomi Quick Tunnel pagal numatytuosius nustatymus naudoja HTTP/2 perdavimo protokolą, kad ribotose konteinerių aplinkose būtų išvengta triukšmingų QUIC UDP buferio įspėjimų. Jei norite naudoti kitą perdavimo protokolą, nustatykite `CLOUDFLARED_PROTOCOL=quic` arba `auto`.
 - Docker atvaizduose įtraukti sistemos šakniniai CA sertifikatai, kurie perduodami valdomam `cloudflared`, todėl išvengiama TLS pasitikėjimo klaidų, kai tunelis inicijuojamas konteineryje.
-- Jei norite, kad OmniRoute naudotų esamą vykdomąjį failą, užuot jį atsisiuntęs, nustatykite `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`.
+- Jei norite, kad 67router naudotų esamą vykdomąjį failą, užuot jį atsisiuntęs, nustatykite `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`.
 
 ## Atvaizdų žymos
 
@@ -507,7 +506,7 @@ Kelių platformų manifestas: vietinis `linux/amd64` ir `linux/arm64` palaikymas
 
 ### Leidimų kanalai
 
-OmniRoute publikuoja atskirus Docker kanalus stabiliems leidimams, aktyvios leidimo šakos testavimui ir kūrimo versijoms.
+67router publikuoja atskirus Docker kanalus stabiliems leidimams, aktyvios leidimo šakos testavimui ir kūrimo versijoms.
 
 | Kanalas                         | Šaltinis                                 | Kintamumas                          | Rekomenduojamas naudojimas                                                                                            |
 | ------------------------------- | ---------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -560,7 +559,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Prieš testuodami sukurkite atsarginę „OmniRoute“ duomenų tomo arba prijungto duomenų katalogo kopiją. Norėdami grįžti prie ankstesnės versijos, atkurkite anksčiau naudotą stabilią versiją ar maišos reikšmę ir iš naujo sukurkite konteinerį:
+Prieš testuodami sukurkite atsarginę „67router“ duomenų tomo arba prijungto duomenų katalogo kopiją. Norėdami grįžti prie ankstesnės versijos, atkurkite anksčiau naudotą stabilią versiją ar maišos reikšmę ir iš naujo sukurkite konteinerį:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -580,7 +579,7 @@ Leidimo šakos kūrinys niekada negali pakeisti `latest`; stabilų žymeklį gal
 
 ## Valdymo skydelio naujinimai Docker aplinkoje
 
-Iš publikuoto atvaizdo paleistas konteineris negali pakeisti pats savęs. Kai OmniRoute aptinka, kad veikia
+Iš publikuoto atvaizdo paleistas konteineris negali pakeisti pats savęs. Kai 67router aptinka, kad veikia
 konteineryje (nėra `.git` darbinės kopijos ir tai nėra npm diegimas), pagrindinio valdymo skydelio naujinimo juostoje vietoje npm/git instrukcijų rodomas
 pagrindiniame kompiuteryje vykdytinas nurodymas su kopijavimo mygtuku:
 
@@ -595,7 +594,7 @@ Paslaugos pavadinimas gaunamas iš `AUTO_UPDATE_SERVICE` (numatytoji reikšmė �
 ### Naujinimai vienu spustelėjimu naudojant pagrindinio kompiuterio aktyviklio failą
 
 Kad funkcija **Naujinti dabar** veiktų neprijungus `/var/run/docker.sock` (tai konteineriui suteikia
-root prieigą pagrindiniame kompiuteryje – žr. anksčiau pateiktą `cli` profilio įspėjimą), OmniRoute paslaugai nustatykite `DOCKER_UPDATE_TRIGGER_FILE`, o
+root prieigą pagrindiniame kompiuteryje – žr. anksčiau pateiktą `cli` profilio įspėjimą), 67router paslaugai nustatykite `DOCKER_UPDATE_TRIGGER_FILE`, o
 pagrindiniame kompiuteryje paleiskite stebėjimo procesą:
 
 ```yaml
@@ -610,7 +609,7 @@ services:
 Kelias turi būti `DATA_DIR` viduje (santykinės reikšmės interpretuojamos jo atžvilgiu); visi kiti keliai
 atmetami. Tuomet funkcija **Naujinti dabar** į tą failą įrašo `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`,
 grąžina `202`, o valdymo skydelis periodiškai tikrina `/api/system/version`, kol paleidžiama nauja versija,
-ir persikrauna. Šiuo režimu OmniRoute niekada nevykdo apvalkalo ar Docker komandų. Kaip ir atliekant bet kurį naujinimo
+ir persikrauna. Šiuo režimu 67router niekada nevykdo apvalkalo ar Docker komandų. Kaip ir atliekant bet kurį naujinimo
 veiksmą, užklausa priimama tik iš loopback/LAN klientų.
 
 Naudojant susietai prijungtą duomenų katalogą, pagrindiniame kompiuteryje gaunamas stabilus stebėtinas kelias. Pavyzdiniai `systemd` moduliai
@@ -619,7 +618,7 @@ Naudojant susietai prijungtą duomenų katalogą, pagrindiniame kompiuteryje gau
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Stebėti OmniRoute valdymo skydelio naujinimo užklausas
+Description=Stebėti 67router valdymo skydelio naujinimo užklausas
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -631,7 +630,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Atsisiųsti ir iš naujo sukurti OmniRoute konteinerį
+Description=Atsisiųsti ir iš naujo sukurti 67router konteinerį
 
 [Service]
 Type=oneshot
@@ -651,13 +650,13 @@ Prieš atsisiųsdama paslauga pašalina užklausą, kad nesėkmingas vykdymas ne
 
 ## Pasiekiamumas: numatytoji SQLite konfigūracija skirta vienai replikai
 
-Standartinėje Docker / Kubernetes OmniRoute konfigūracijoje veikia **vienas Node procesas ir vienas SQLite rašymo procesas**. Toks išdėstymas **nepalaiko didelio pasiekiamumo**.
+Standartinėje Docker / Kubernetes 67router konfigūracijoje veikia **vienas Node procesas ir vienas SQLite rašymo procesas**. Toks išdėstymas **nepalaiko didelio pasiekiamumo**.
 
-| Apribojimas                                                    | Pasekmė                                                                                                                                                                                                                                                                                                                                                                |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Vienas rašymo procesas                                         | **Neleiskite** kelioms replikoms naudoti to paties SQLite failo. Taip sugadinama DB.                                                                                                                                                                                                                                                                                   |
-| Perkūrimas / paleidimas iš naujo / nutraukimas dėl HEALTHCHECK | **Visiškai nutrūksta** vykdomi SSE srautai, valdymo skydelio sesijos ir atmintyje laikoma būsena. Atjungiami visi prisijungę klientai. Naujos užklausos laikotarpiu, kai nėra pasiekiamo galinio taško, iš atvirkštinio tarpinio serverio gauna **`502 Bad Gateway: Unknown error`**, o ne OmniRoute JSON – klientai negali to atskirti nuo teikėjo trikties (#11015). |
-| Ta pati įvykių kilpa kaip `/healthz`                           | Apkrautas katalogo ar glaudinimo ciklas gali uždelsti patikras; dėl trumpo skirtojo laiko tada iš naujo paleidžiama **vienintelė** replika.                                                                                                                                                                                                                            |
+| Apribojimas                                                    | Pasekmė                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vienas rašymo procesas                                         | **Neleiskite** kelioms replikoms naudoti to paties SQLite failo. Taip sugadinama DB.                                                                                                                                                                                                                                                                                  |
+| Perkūrimas / paleidimas iš naujo / nutraukimas dėl HEALTHCHECK | **Visiškai nutrūksta** vykdomi SSE srautai, valdymo skydelio sesijos ir atmintyje laikoma būsena. Atjungiami visi prisijungę klientai. Naujos užklausos laikotarpiu, kai nėra pasiekiamo galinio taško, iš atvirkštinio tarpinio serverio gauna **`502 Bad Gateway: Unknown error`**, o ne 67router JSON – klientai negali to atskirti nuo teikėjo trikties (#11015). |
+| Ta pati įvykių kilpa kaip `/healthz`                           | Apkrautas katalogo ar glaudinimo ciklas gali uždelsti patikras; dėl trumpo skirtojo laiko tada iš naujo paleidžiama **vienintelė** replika.                                                                                                                                                                                                                           |
 
 **Patikrų matrica** (taip pat žr. [Kubernetes patikrų rekomendacijas](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -760,7 +759,7 @@ ir faktinį ryšio maršrutą; vien ši klaida nereiškia, kad API raktas yra ne
 
 ### Pirmenybę teikite konkretaus ryšio tarpiniam serveriui
 
-Paveiktam „Gemini“ ryšiui naudokite „OmniRoute“
+Paveiktam „Gemini“ ryšiui naudokite „67router“
 [konkretaus ryšio tarpinio serverio konfigūraciją](../ops/PROXY_GUIDE.md#4-level-proxy-system),
 tada pakartokite **Ryšio patikrą** ir mažą užklausą
 su tuo pačiu modeliu. Taip maršruto pakeitimas taikomas tik tam ryšiui. Patikrinkite,
@@ -832,7 +831,7 @@ gali sutrikdyti kitų prie jo prijungtų konteinerių veikimą; neištrinkite nu
 
 ## Svarbios pastabos
 
-- **SQLite WAL režimas:** reikia leisti `docker stop` komandai užbaigti darbą, kad OmniRoute galėtų įrašyti naujausius pakeitimus atgal į `storage.sqlite` per kontrolinio taško operaciją. Pridėtuose Compose failuose jau nustatytas 40 s sustabdymo atidėjimo laikotarpis. Jei paleidžiate atvaizdą tiesiogiai, išlaikykite `--stop-timeout 40`.
+- **SQLite WAL režimas:** reikia leisti `docker stop` komandai užbaigti darbą, kad 67router galėtų įrašyti naujausius pakeitimus atgal į `storage.sqlite` per kontrolinio taško operaciją. Pridėtuose Compose failuose jau nustatytas 40 s sustabdymo atidėjimo laikotarpis. Jei paleidžiate atvaizdą tiesiogiai, išlaikykite `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** nustatykite į `true`, jei įprastos / prieš rašymą atliekamos atsarginės kopijos tvarkomos išoriškai. Esamos duomenų bazės perkėlimams vis tiek reikia atskiros patvarios saugos momentinės kopijos ir masinio perkėlimo apsaugos.
 - **Duomenų išlaikymas:** visada prijunkite tomą prie `/app/data`, kad duomenų bazė, raktai ir konfigūracijos išliktų konteinerį paleidus iš naujo.
 - **Prievado konfigūracija:** perrašykite aplinkos kintamąjį `PORT`, kad pakeistumėte numatytąjį `20128` prievadą.

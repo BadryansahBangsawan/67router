@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ma **dwa** lokalne dla procesu systemy ścieżek o różnych zakresach. Są one
+67router ma **dwa** lokalne dla procesu systemy ścieżek o różnych zakresach. Są one
 komplementarne; operatorzy powinni wiedzieć, na który z nich patrzą.
 
 ## 1. Ogólnoprocesowe dopuszczanie na poziomie bajtów (`chatBodyAdmission.ts`)

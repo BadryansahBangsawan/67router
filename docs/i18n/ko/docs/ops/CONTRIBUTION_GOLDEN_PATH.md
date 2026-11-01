@@ -112,7 +112,7 @@ Playwright 테스트 또는 문서화된 수동 검사가 여전히 필요합니
 - CLI 카탈로그는 `bin/cli/locales/` 아래에 별도로 있습니다.
 - ICU 자리표시자와 태그를 정확히 보존하세요. 제품/프로바이더/모델 이름,
   프로토콜 및 헤더 이름, 명령, 코드/JSON 식별자, URL, 환경 변수 또는
-  `OmniRoute`, `OAuth`, `MCP`, `A2A`와 같은 보호 용어를 번역하지 마세요. 현재 원본 목록은
+  `67router`, `OAuth`, `MCP`, `A2A`와 같은 보호 용어를 번역하지 마세요. 현재 원본 목록은
   `scripts/i18n/glossary/protected-terms.json`입니다.
 
 **집중 루프**
@@ -263,7 +263,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # 다른 곳에서 빌�
   `previous`를 원래대로 다시 교환합니다. 첫 번째 검증에 실패한 후보는 절대 승격되지
   않습니다.
 
-모든 항목은 git에서 무시되는 `_artifacts/candidate/` 아래에 기록됩니다. 기존 OmniRoute
+모든 항목은 git에서 무시되는 `_artifacts/candidate/` 아래에 기록됩니다. 기존 67router
 설치와 해당 데이터 디렉터리는 절대 변경되지 않습니다. 승격된 CLI는
 `_artifacts/candidate/current/prefix/bin/omniroute`에 있습니다. 사용할 때는 자체
 `DATA_DIR`을 지정하여 시작하세요. 종료 코드: 성공은 `0`, 검증 또는 승격 실패는 `1`,

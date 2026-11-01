@@ -6,7 +6,7 @@
 
 ## Vue d’ensemble
 
-Toutes les routes de l’API de gestion d’OmniRoute sont classées dans l’un des trois niveaux de protection. Cette classification est statique, définie dans `src/server/authz/routeGuard.ts`, et évaluée avant l’exécution de toute autre branche d’authentification.
+Toutes les routes de l’API de gestion de 67router sont classées dans l’un des trois niveaux de protection. Cette classification est statique, définie dans `src/server/authz/routeGuard.ts`, et évaluée avant l’exécution de toute autre branche d’authentification.
 
 ## Niveaux
 
@@ -27,10 +27,10 @@ de déclencher le lancement de processus — une catégorie connue de CVE
 gestion/d’agent expose un point de terminaison qui lance un sous-processus
 (`npm install`, `node`, un navigateur, un proxy, `git`, `tar`, …). Si ce point de
 terminaison est accessible depuis l’extérieur de l’hôte — parce que l’opérateur a
-placé OmniRoute derrière un tunnel nginx/Cloudflare/Tailscale et qu’un JWT a
+placé 67router derrière un tunnel nginx/Cloudflare/Tailscale et qu’un JWT a
 fuité, ou parce que l’authentification était mal configurée — l’attaquant
 transforme « appeler une API » en « exécuter une commande sur l’hôte » (exécution
-de code à distance). OmniRoute empêche cela en appliquant **sans condition une
+de code à distance). 67router empêche cela en appliquant **sans condition une
 vérification de l’hôte de bouclage, avant toute vérification d’authentification**,
 sur chaque route capable de lancer un processus : même un jeton divulgué via un
 tunnel ne permet pas d’accéder au lancement du processus.
@@ -60,7 +60,6 @@ n’est pas classé comme accessible uniquement en local.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — écouteur http-proxy et proxy système                                                                                       |
 | `/api/settings/mitm`                                                                                     | Active l’interception MITM (état du proxy au niveau système)                                                                                   |
 | `/api/issue-agent/`                                                                                      | Agent de gestion des tickets — lance des outils locaux sur le dépôt                                                                            |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plug-ins — chargés/exécutés via `worker_threads` et `child_process`                                                                            |
 | `/api/middleware/`                                                                                       | Middleware utilisateur — charge/exécute le code de l’opérateur dans le processus                                                               |
 | `/api/system/version`                                                                                    | Mise à jour automatique (POST uniquement ; GET/HEAD/OPTIONS exemptées) — lance `git checkout` et `npm install`                                 |
 | `/api/db-backups/exportAll`                                                                              | Lance `tar` pour créer l’archive d’exportation                                                                                                 |
@@ -121,7 +120,7 @@ pour les appelants MCP distants qui ne doivent pas disposer d’un accès étend
 
 #### Conseils aux opérateurs et audit
 
-Si vous exécutez OmniRoute derrière un proxy inverse ou un tunnel (nginx, Caddy, Cloudflare
+Si vous exécutez 67router derrière un proxy inverse ou un tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), la vérification de la boucle locale protège toujours les
 routes ci-dessus capables de lancer des processus — une requête dont l’adresse cliente ne correspond pas à la boucle locale est rejetée avec
 `403 LOCAL_ONLY` **avant l’exécution de l’authentification** ; ainsi, même un JWT divulgué ne peut pas déclencher un lancement. Deux
@@ -159,7 +158,7 @@ responsabilités incombent encore aux opérateurs :
 - Recherchez dans les journaux de votre proxy inverse / d’accès les préfixes ci-dessus associés à une
   adresse client autre qu’une adresse de bouclage. Toute requête de ce type ayant renvoyé `200` au lieu de
   `403 LOCAL_ONLY` signifie que le proxy masque l’adresse IP réelle du client — corrigez le proxy.
-- Une entrée `403 LOCAL_ONLY` dans les journaux d’OmniRoute pour l’un de ces chemins indique que la protection
+- Une entrée `403 LOCAL_ONLY` dans les journaux de 67router pour l’un de ces chemins indique que la protection
   fonctionne comme prévu, et non une erreur à supprimer.
 
 #### Routes accessibles à distance avec une barrière de sondage au point d’appel

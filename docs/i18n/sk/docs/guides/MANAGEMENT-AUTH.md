@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute má **štyri rodiny poverení**, ktoré môžu autorizovať manažérske trasy.
+67router má **štyri rodiny poverení**, ktoré môžu autorizovať manažérske trasy.
 Nie sú vzájomne zameniteľné. Kľúče Inference API (`sk-…`) **nespravujú**
 server, pokiaľ im nebol explicitne udelený rozsah `manage` alebo `admin`.
 

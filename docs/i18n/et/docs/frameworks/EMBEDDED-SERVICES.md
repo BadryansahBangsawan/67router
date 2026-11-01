@@ -8,9 +8,9 @@
 > **Viimati uuendatud:** 2026-09-16
 > **Sihtrühm:** Insenerid, kes lisavad, hooldavad või siluvad manustatud teenuseid (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Manustatud teenused on kohalikult installitud protsesside kaastööriistad, mida OmniRoute installib, jälgib ja
+Manustatud teenused on kohalikult installitud protsesside kaastööriistad, mida 67router installib, jälgib ja
 pakub täieõiguslike marsruutimissihtmärkidena. Erinevalt välistest teenusepakkujatest (millega luuakse interneti kaudu
-ühendus API-võtmete abil) töötavad manustatud teenused OmniRoute'iga samas masinas ja suhtlevad tagasisideahela kaudu.
+ühendus API-võtmete abil) töötavad manustatud teenused 67router'iga samas masinas ja suhtlevad tagasisideahela kaudu.
 
 ---
 
@@ -35,7 +35,7 @@ Manustatud on seitse teenust:
 
 | Teenus          | npm-pakett                            | Vaikimisi port | Otstarve                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------- | ------------------------------------- | :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                             |     20130      | AI-ruuter, mida OmniRoute saab kasutada alampakkujana. Mudelid avaldatakse kujul `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                    |
+| **9Router**     | `9router`                             |     20130      | AI-ruuter, mida 67router saab kasutada alampakkujana. Mudelid avaldatakse kujul `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                     |
 | **CLIProxyAPI** | GitHubi väljalaskebinaar (`cliproxy`) |      8317      | Kohalik puhverserveri adapter Anthropic CLI autentimisvoogude jaoks. Pakub varumarsruutimist OAuthi lubade aegumisel                                                                                                                                                                                                                                                                        |
 | **Mux**         | `mux` (taustal töötav `mux server`)   |      8322      | Kohalik agentide orkestreerimise deemon (coder/mux). Hallatakse ainult elutsüklit — see pole marsruutimise sihtmärk (LLM-i puhverserverdamine puudub).                                                                                                                                                                                                                                      |
 | **Bifrost**     | `@maximhq/bifrost`                    |      8080      | Go AI-lüüsi vahendustaustsüsteem. Töötamise ajal valitakse automaatselt vahendusmarsruudile (`/v1/relay/`)                                                                                                                                                                                                                                                                                  |
@@ -45,21 +45,21 @@ Manustatud on seitse teenust:
 
 Kõik seitse järgivad sama järelevalvemudelit:
 
-- OmniRoute installib need asukohta `DATA_DIR/services/{name}/` (OmniRoute'i enda failist `package.json` eraldatuna)
-- OmniRoute käivitab ja jälgib neid alamprotsessidena
-- OmniRoute sisestab alamprotsessi keskkonda ajutise API-võtme ja vahetab seda ilma katkestusteta (kui see on kohaldatav)
+- 67router installib need asukohta `DATA_DIR/services/{name}/` (67router'i enda failist `package.json` eraldatuna)
+- 67router käivitab ja jälgib neid alamprotsessidena
+- 67router sisestab alamprotsessi keskkonda ajutise API-võtme ja vahetab seda ilma katkestusteta (kui see on kohaldatav)
 - Kõik haldusmarsruudid (`/api/services/*`) on **LOCAL_ONLY** — ligipääsetavad ainult tagasisideaadressilt (range reegel #17)
 
 ### Põhiotsused (kujundusplaanist)
 
-| Otsus                                               | Väärtus                                                                                |
-| --------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Juurdepääs 9Routeri oma kasutajaliidesele töölaualt | Pöördpuhverserver asukohas `/dashboard/providers/services/9router/embed/*`             |
-| Installimismehhanism                                | `npm install {package}` käsu `execFile` kaudu (ilma kestainterpoleerimiseta)           |
-| Kasutusviis                                         | Pakkuja registreeritakse marsruutimismootoris kujul `9router/{sub}/{model}`            |
-| API-võtme haldus                                    | OmniRoute genereerib, krüpteerib puhkeolekus (AES-256-GCM) ja sisestab keskkonna kaudu |
-| Töölaua asukoht                                     | `/dashboard/providers/services` (kolm vahekaarti)                                      |
-| Automaatkäivitus                                    | Iga teenuse eraldi lüliti, vaikimisi VÄLJAS                                            |
+| Otsus                                               | Väärtus                                                                               |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Juurdepääs 9Routeri oma kasutajaliidesele töölaualt | Pöördpuhverserver asukohas `/dashboard/providers/services/9router/embed/*`            |
+| Installimismehhanism                                | `npm install {package}` käsu `execFile` kaudu (ilma kestainterpoleerimiseta)          |
+| Kasutusviis                                         | Pakkuja registreeritakse marsruutimismootoris kujul `9router/{sub}/{model}`           |
+| API-võtme haldus                                    | 67router genereerib, krüpteerib puhkeolekus (AES-256-GCM) ja sisestab keskkonna kaudu |
+| Töölaua asukoht                                     | `/dashboard/providers/services` (kolm vahekaarti)                                     |
+| Automaatkäivitus                                    | Iga teenuse eraldi lüliti, vaikimisi VÄLJAS                                           |
 
 ---
 
@@ -222,7 +222,7 @@ Mitte-loopback-päringud saavad vastuseks `403 LOCAL_ONLY` olenemata autentimist
 #### `POST /api/services/9router/install`
 
 Installib 9Routeri npm-ist. Loob kataloogi `DATA_DIR/services/9router/` koos eraldiseisvate
-`package.json`-i ja `node_modules/`-iga. Ei tekita konflikti OmniRoute'i enda sõltuvustega.
+`package.json`-i ja `node_modules/`-iga. Ei tekita konflikti 67router'i enda sõltuvustega.
 
 **Päringu keha** (kõik väljad on valikulised):
 
@@ -383,7 +383,7 @@ Tagastab ühendatud reaalaja- ja andmebaasioleku, mis sisaldab versiooni metaand
 #### `POST /api/services/9router/auto-start`
 
 Lülitab automaatse käivitamise lipu sisse või välja. Kui `enabled: true`, käivitub teenus automaatselt
-järgmisel OmniRoute'i käivitamisel (kui teenus on installitud).
+järgmisel 67router'i käivitamisel (kui teenus on installitud).
 
 **Päringu keha:**
 
@@ -591,7 +591,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 See proksi:
 
 - Edastab päringu aadressile `http://127.0.0.1:{port}/{path}` (ainult loopback)
-- Eemaldab sissetulevad päised `cookie` ja `authorization` (OmniRoute'i seanss ei leki)
+- Eemaldab sissetulevad päised `cookie` ja `authorization` (67router'i seanss ei leki)
 - Lisab 9Routeri autentimiseks `Authorization: Bearer {apiKey}`
 - Eemaldab vastusest `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*`
 - Kirjutab HTML-vastused ümber, et lisada `<base href>` ja normaliseerida absoluutteed (`/foo` → `/dashboard/.../embed/foo`)
@@ -627,7 +627,7 @@ protsesside loomist. Täieliku tasemete maatriksi leiate failist
 ### API-võtme sisestamine
 
 9Router ja Mux nõuavad oma HTTP-lõpp-punktide jaoks API-võtit / kandjatõendit.
-OmniRoute:
+67router:
 
 1. Genereerib võtme käsuga `crypto.randomBytes(32).toString("base64url")`, kasutades
    teenusepõhist prefiksit (`nr_` 9Routeri jaoks, `mx_` Muxi jaoks).
@@ -810,7 +810,7 @@ Kui põimitud teenus pakub OpenAI-ga ühilduvat lõpp-punkti `/v1/chat/completio
 
 1. Kontrollige päringut `GET /api/services/{name}/logs` (või juhtpaneeli logipaneeli). Otsige
    ridu, nagu `Error: ENOENT`, `address already in use` või `Cannot find module`.
-2. Veenduge, et `npm` oleks PATH-is: käivitage `which npm` sama kasutajakonto alt, mille all OmniRoute töötab.
+2. Veenduge, et `npm` oleks PATH-is: käivitage `which npm` sama kasutajakonto alt, mille all 67router töötab.
 3. Veenduge, et teenus oleks installitud: kontrollige päringust `GET /api/services/{name}/status`
    välja `installedVersion`. Kui selle väärtus on `null`, käivitage esmalt installimine.
 4. Kontrollige, et `DATA_DIR/services/{name}/node_modules/` oleks olemas ega oleks tühi.
@@ -848,7 +848,7 @@ käivitusajaga teenuste puhul suurendage `healthIntervalMs` väärtuseni 5000 ja
 3. Porti saab failis `bootstrap.ts` iga teenuse jaoks välja `port` kaudu seadistada.
 
 **Märkus:** 9Router kasutab vaikimisi porti 20130, et vältida konflikti
-OmniRoute'i vaikepordiga 20128.
+67router'i vaikepordiga 20128.
 
 ---
 
@@ -858,13 +858,13 @@ OmniRoute'i vaikepordiga 20128.
 
 **Põhjused:**
 
-- OmniRoute'i protsessil puudub kataloogi `DATA_DIR` või selle ülemkataloogi kirjutusõigus.
+- 67router'i protsessil puudub kataloogi `DATA_DIR` või selle ülemkataloogi kirjutusõigus.
 - Käitamine juurkasutajata Dockeris ilma ühendatud kettale kirjutamise õiguseta.
 
 **Lahendus:**
 
 1. Kontrollige kataloogi `DATA_DIR` (vaikimisi `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Veenduge, et kataloog kuuluks kasutajale, kelle all OmniRoute'i protsess töötab: `chown -R $USER ~/.omniroute/`
+2. Veenduge, et kataloog kuuluks kasutajale, kelle all 67router'i protsess töötab: `chown -R $USER ~/.omniroute/`
 3. Veenduge Dockeris, et andmeköite ühendusel oleksid konteineri kasutaja jaoks õiged õigused.
 
 ---
@@ -912,9 +912,9 @@ kontrollist möödumise loendist välja jäetud. Vt `docs/security/ROUTE_GUARD_T
 
 **K: Kas 9Router ja CLIProxyAPI on saadaval tootmis- või pilvekeskkondades?**
 
-Jah. Mõlemad teenused järgivad sama kohalik-kõigepealt mudelit nagu OmniRoute ise. Need
+Jah. Mõlemad teenused järgivad sama kohalik-kõigepealt mudelit nagu 67router ise. Need
 töötavad samas masinas ja suhtlevad tagasisideaadressi kaudu. „Tootmiskeskkond“ tähendab
-siin VPS-i või kohalikku serverit, kuhu OmniRoute on juurutatud, mitte kaugpilveteenuse
+siin VPS-i või kohalikku serverit, kuhu 67router on juurutatud, mitte kaugpilveteenuse
 pakkujat.
 
 ---
@@ -922,7 +922,7 @@ pakkujat.
 **K: Kuidas järelevaataja tööd siluda?**
 
 1. Jälgige SSE logivoogu: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Kontrollige OmniRoute'i pino väljundis olevaid struktureeritud logisid, filtreerides
+2. Kontrollige 67router'i pino väljundis olevaid struktureeritud logisid, filtreerides
    nimeruumi `service:supervisor` järgi.
 3. Uurige andmebaasirida: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Kasutage päringut `GET /api/services/9router/status`, et näha ühe kutsega praegust

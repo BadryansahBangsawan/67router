@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Српски)
+# 67router Architecture (Српски)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Последње ажурирање: 2026-06-28_
 
 ## Извршни резиме
 
-OmniRoute је локални мрежни пролаз за усмеравање AI саобраћаја и контролна табла, изграђен на Next.js-у.
+67router је локални мрежни пролаз за усмеравање AI саобраћаја и контролна табла, изграђен на Next.js-у.
 Пружа јединствену крајњу тачку компатибилну са OpenAI-јем (`/v1/*`) и усмерава саобраћај ка више спољних добављача, уз превођење формата, резервне опције, освежавање токена и праћење употребе.
 
 Кључне могућности:
@@ -128,13 +128,11 @@ OmniRoute је локални мрежни пролаз за усмеравањ�
 - `/dashboard/limits` — контроле квоте/rate-a
 - `/dashboard/cli-tools` — CLI онбординг, детекција runtime-а, генерисање конфигурације
 - `/dashboard/agents` — детектовани ACP агенти + регистрација прилагођених агената
-- `/dashboard/cloud-agents` — задаци агента хостовани у cloud-у (Codex Cloud, Devin, Jules) и животни циклус задатака
 - `/dashboard/skills` — A2A регистар вештина, sandbox извршавање, каталог уграђених вештина
 - `/dashboard/memory` — инспекција и претрага перзистентне conversational memory
 - `/dashboard/webhooks` — исходне webhook претплате, ротација тајних кључева, статистика поновних покушаја
 - `/dashboard/batch` — слање batch послова и праћење напретка
 - `/dashboard/cache` — статистике read-through и reasoning cache-a, контроле избацивања (eviction)
-- `/dashboard/playground` — интерактивни чет playground против било којег конфигурисаног combo/модела
 - `/dashboard/changelog` — приказивач changelog-а у апликацији (рендерује `CHANGELOG.md`)
 - `/dashboard/system` — runtime дијагностика, информације о верзији, површина за валидацију окружења
 - `/dashboard/onboarding` — чаробњак почетног подешавања за нове инсталације
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Контролна табла у прегледачу]
     end
 
-    subgraph Router[Локални процес OmniRoute]
+    subgraph Router[Локални процес 67router]
         API[API за V1 компатибилност\n/v1/*]
         DASH[Контролна табла + API за управљање\n/api/*]
         CORE[SSE + језгро за превођење\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - Буџет: `src/app/api/usage/budget` (GET/POST)
 - Резервни ланци (fallback chains): `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Ревизија усклађености (compliance audit): `src/app/api/compliance/audit-log` (GET, са пагинацијом + структурираним метаподацима)
-- Евалуације: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Политике: `src/app/api/policies` (GET/POST)
 - Синхронизациони токени: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Пакет конфигурације: `src/app/api/sync/bundle` (GET, ETag-верзионисани снимак подешавања/провајдера/комбинација/кључева)
@@ -316,7 +313,6 @@ flowchart LR
 - Временско ограничење добављања: `src/shared/utils/fetchTimeout.ts`
 - Телеметрија захтева: `src/shared/utils/requestTelemetry.ts`
 - Усклађеност/ревизија: `src/lib/compliance/index.ts`
-- Покретач евалуација: `src/lib/evals/evalRunner.ts`
 - Перзистенција стања домена: `src/lib/db/domainState.ts` — SQLite CRUD за ланце резервног избора, буџете, историју трошкова, стање блокирања и прекидаче струјног кола
 
 Модули OAuth провајдера (27 засебних датотека у `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ flowchart LR
 
 ## 5) Уграђене услуге (v3.8.4)
 
-OmniRoute може да инсталира, надгледа и рутира ка локално покренутим процесима AI алата
+67router може да инсталира, надгледа и рутира ка локално покренутим процесима AI алата
 названим **уграђене услуге**. Испоручено је пет: 9Router, CLIProxyAPI, Bifrost, Mux и Dario.
 
 Слојеви архитектуре:
@@ -386,23 +382,6 @@ Auto Combo динамички оцењује и бира циљеве рутир
 За потпуне детаље алгоритма (формуле фактора, подешавање тежина), погледајте
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Агенти у облаку
-
-Агенти у облаку обједињују платформе независних добављача за хостоване агенте за кодирање (Codex Cloud, Devin,
-Jules) иза јединственог животног циклуса задатка подржаног базом података. Све крајње тачке за креирање/проверу
-задатака захтевају управљачку аутентификацију.
-
-- Корен модула: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, као и поддиректоријуми појединачних агената унутар `agents/`)
-- Имплементације по агенту: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Јавне крајње тачке: `/api/v1/agents/tasks/*` (набрајање/креирање/добављање/отказивање)
-- Управљачке крајње тачке: `/api/cloud/*` (омогућавање ресурса, статус, групна обрада)
-- Контролна табла: `/dashboard/cloud-agents`
-- Складиште: табела `cloud_agent_tasks`
-
-За детаље о омогућавању ресурса по агенту и специфичностима OAuth-а, погледајте
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Заштитне мере
 
 Модул заштитних мера представља слој посредничког софтвера који подржава поновно учитавање без прекида и проверава захтеве
@@ -438,7 +417,7 @@ Jules) иза јединственог животног циклуса зада�
 - Кеш квота: `src/domain/quotaCache.ts`
 - Стање деградације: `src/domain/degradation.ts`
 - Ревизија конфигурације: `src/domain/configAudit.ts`
-- Градитељ метаподатака OmniRoute одговора: `src/domain/omnirouteResponseMeta.ts`
+- Градитељ метаподатака 67router одговора: `src/domain/omnirouteResponseMeta.ts`
 - Подсистем процене: `src/domain/assessment/` — периодични послови процене
 
 ### E. Ток ауторизације
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Прегледач контролне табле]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Runtime]
+    subgraph ContainerOrProcess[67router Runtime]
         Next[Next.js Server\nPORT=20128]
         Core[SSE Core + Executors]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ flowchart LR
 ## Матрица компатибилности провајдера
 
 > **Напомена:** Матрица испод представља репрезентативан узорак 351 регистрованог провајдера у
-> OmniRoute v3.8.0. За канонски и континуирано ажурирани списак, погледајте
+> 67router v3.8.0. За канонски и континуирано ажурирани списак, погледајте
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (аутоматски генерисано) или изворну
 > истину у `src/shared/constants/providers.ts` (валидирано Zod-ом при учитавању).
 
@@ -1117,7 +1096,7 @@ legacy компатибилност. Тренутни runtime уговор ко�
 - сирови захтев примљен од клијента
 - преведени захтев који је стварно послат узводно
 - одговор провајдера реконструисан као JSON; стримовани одговори се сажимају у финални резиме плус метаподатке стрима
-- финални одговор клијенту који враћа OmniRoute; стримовани одговори се чувају у истом сажетом облику резимеа
+- финални одговор клијенту који враћа 67router; стримовани одговори се чувају у истом сажетом облику резимеа
 
 ## Bezbednosno osetljive granice
 

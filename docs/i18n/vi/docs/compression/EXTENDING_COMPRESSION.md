@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: Công cụ nén của OmniRoute có khả năng **cắm ghép** — bạn có thể đăng ký các công cụ tùy chỉnh, cung cấp các gói ngôn ngữ cho ngôn ngữ mới và kết hợp các quy trình xếp chồng. Hướng dẫn này trình bày cách thực hiện.
+> **Tóm tắt**: Công cụ nén của 67router có khả năng **cắm ghép** — bạn có thể đăng ký các công cụ tùy chỉnh, cung cấp các gói ngôn ngữ cho ngôn ngữ mới và kết hợp các quy trình xếp chồng. Hướng dẫn này trình bày cách thực hiện.
 
 **Các hướng dẫn liên quan:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Cấp dự án (được tải khi khởi động)
 ```
 
-Hoặc tải theo chương trình từ một plugin:
+Or register it programmatically at startup:
 
 ```ts
-// Trong plugin của bạn
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // SDK plugin cung cấp các hook onRequest / onResponse / onError. Đăng ký
-  // engine khi mô-đun plugin được tải (hoặc trong onRequest đầu tiên); hủy đăng ký
-  // engine đó trong quy trình dọn dẹp của riêng bạn.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Khi dọn dẹp:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ trong bộ chọn chiến lược thông qua `id` của nó. Kiểm thử khả 
 
 ## Tạo Gói Ngôn ngữ
 
-Kiểu nén Caveman sử dụng **các gói quy tắc dành riêng cho từng ngôn ngữ** để xử lý từ đệm, cách diễn đạt dè dặt và các mẫu dài dòng trong mỗi ngôn ngữ tự nhiên. OmniRoute đi kèm **6 gói ngôn ngữ**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Kiểu nén Caveman sử dụng **các gói quy tắc dành riêng cho từng ngôn ngữ** để xử lý từ đệm, cách diễn đạt dè dặt và các mẫu dài dòng trong mỗi ngôn ngữ tự nhiên. 67router đi kèm **6 gói ngôn ngữ**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Cấu trúc Gói
 
@@ -388,7 +379,7 @@ Khi `mode: "stacked"` được chọn, các engine thực thi tuần tự theo t
 
 ### Các chế độ nén
 
-OmniRoute chọn **MỘT chế độ cho mỗi yêu cầu** dựa trên cấu hình, ngưỡng tự động kích hoạt và các ghi đè của combo.
+67router chọn **MỘT chế độ cho mỗi yêu cầu** dựa trên cấu hình, ngưỡng tự động kích hoạt và các ghi đè của combo.
 Các chế độ khả dụng được định nghĩa trong `open-sse/services/compression/types.ts` (kiểu `CompressionMode`):
 
 | Chế độ       | Engine               | Trường hợp sử dụng                                                                                                                                                                                                 |
@@ -505,10 +496,10 @@ Khi bạn không truyền pipeline, mặc định sẽ là `rtk(standard) → ca
 
 ## Chính sách đồng bộ với dự án thượng nguồn
 
-Các công cụ nén của OmniRoute ghi công một số dự án thượng nguồn trong README
+Các công cụ nén của 67router ghi công một số dự án thượng nguồn trong README
 ("lấy cảm hứng từ RTK, Caveman, LLMLingua-2, Troglodita"). Một câu hỏi phổ biến
 từ những người đóng góp là: **khi RTK thượng nguồn bổ sung một bộ lọc công cụ mới
-hoặc Caveman bổ sung một gói quy tắc, thay đổi đó được đưa vào OmniRoute như thế
+hoặc Caveman bổ sung một gói quy tắc, thay đổi đó được đưa vào 67router như thế
 nào?** Phần này là câu trả lời chính thức.
 
 ### Bản sao được tích hợp so với các bản triển khai độc lập
@@ -531,7 +522,7 @@ Theo thiết kế, **không có cơ chế tự động theo dõi bản phát hà
 không có nhãn `compression-sync`**. Vì các công cụ này là những bản triển khai
 lại, một bộ lọc RTK hoặc gói quy tắc Caveman từ thượng nguồn không được hợp nhất
 dưới dạng mã nguồn; thay vào đó, nó được **diễn đạt lại dưới dạng một quy tắc/bộ
-lọc mới theo định dạng riêng của OmniRoute** (xem
+lọc mới theo định dạng riêng của 67router** (xem
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) và được tích hợp
 tùy từng trường hợp thông qua một PR thông thường. Các điểm mở rộng nêu trên
 (công cụ tùy chỉnh, gói ngôn ngữ, bộ lọc RTK) là cách chính thức để đóng góp một
@@ -547,7 +538,7 @@ Một số ví dụ gần đây về chính xác quy trình này:
 
 Headroom là thành phần **hoàn toàn nội bộ** — gồm một bản chụp codec `gcf` được
 tích hợp nguyên bản và cố định phiên bản, cùng các lớp `smartcrusher` / `toon` /
-`tabular` riêng của OmniRoute. Không có dự án thượng nguồn đang hoạt động nào cần
+`tabular` riêng của 67router. Không có dự án thượng nguồn đang hoạt động nào cần
 theo dõi ngoài bản sao được tích hợp; các bản cập nhật cho `gcf` được làm mới thủ
 công khi codec thay đổi và được xác thực lại theo cổng ngân sách nén
 (`check:compression-budget`).
@@ -555,7 +546,7 @@ công khi codec thay đổi và được xác thực lại theo cổng ngân sá
 ### Đề xuất một cải tiến lấy cảm hứng từ thượng nguồn
 
 1. **Không tích hợp nguyên bản** — hãy diễn đạt lại quy tắc/bộ lọc thượng nguồn
-   theo định dạng của OmniRoute.
+   theo định dạng của 67router.
 2. Thêm nó thông qua điểm mở rộng tương ứng bên dưới (gói ngôn ngữ, bộ lọc RTK
    hoặc công cụ tùy chỉnh).
 3. Dẫn chiếu dự án thượng nguồn trong phần mô tả PR (ghi công), thay vì sao chép

@@ -4,7 +4,7 @@
 
 ---
 
-Otu OmniRoute si atụpụta, edekọ, ma kọọ ọnụ ahịa arịrịọ ọ bụla — na ihe mere ọnụọgụ dị na
+Otu 67router si atụpụta, edekọ, ma kọọ ọnụ ahịa arịrịọ ọ bụla — na ihe mere ọnụọgụ dị na
 dashboard ji bụrụ **ihe na-enyocha ego echekwara**, ọ bụghị ụgwọ.
 
 Hụkwa: [Ntuziaka Onye Ọrụ](./USER_GUIDE.md) · [Nchịkọta Njirimara](./FEATURES.md)
@@ -13,11 +13,11 @@ Hụkwa: [Ntuziaka Onye Ọrụ](./USER_GUIDE.md) · [Nchịkọta Njirimara](./
 
 ## Ihe ọ bụ (na ihe ọ na-abụghị)
 
-OmniRoute na-enye mmecha ọ bụla ọnụ ahịa USD kwa arịrịọ site n'ịmụba ọnụọgụ token
+67router na-enye mmecha ọ bụla ọnụ ahịa USD kwa arịrịọ site n'ịmụba ọnụọgụ token
 na ọnụego ọnụahịa model. Ọnụọgụ ndị a na-akwado dashboard **Ọnụ Ahịa**, CLI
 `omniroute cost` / `omniroute usage`, mbupụ CSV/JSON, na mmefu ego kwa API key.
 
-> **"Ọnụ ahịa" dị na dashboard bụ ihe na-enyocha ego echekwara, ọ bụghị ụgwọ.** OmniRoute anaghị ana gị
+> **"Ọnụ ahịa" dị na dashboard bụ ihe na-enyocha ego echekwara, ọ bụghị ụgwọ.** 67router anaghị ana gị
 > ego — ọ na-ebuga arịrịọ gị na ndị provider ị jikọrọla (subscription nke gị,
 > free tier, na API key). “Ọnụ ahịa zuru ezu nke $290” nke gbakọtara kpamkpam site na model efu
 > pụtara ihe dịka **$290 ị _na-akwụghị_ API a na-akwụ ụgwọ**. Ọnụọgụ ahụ bụ _atụmatụ_
@@ -29,7 +29,7 @@ bụ ihe na-enyocha ego echekwara, ọ bụghị ụgwọ”).
 
 N'ihi na ọnụọgụ ahụ bụ atụmatụ:
 
-- Ọ dabere na tebụl ọnụahịa OmniRoute nwere maka model ọ bụla. Model na-enweghị ndekọ ọnụahịa
+- Ọ dabere na tebụl ọnụahịa 67router nwere maka model ọ bụla. Model na-enweghị ndekọ ọnụahịa
   na-etinye ọnụ ahịa `0` (ọ na-apụta dị ka ahịrị “Legacy / Free” n'ime explorer).
 - Traffic nke free-tier na subscription ka na-agbakọta ọnụ ahịa _atụpụtara_ — nke ahụ bụ
   ego ị na-echekwa, ọ bụghị ego i ji akwụ.
@@ -47,7 +47,7 @@ N'ihi na ọnụọgụ ahụ bụ atụmatụ:
 2. **Ọnụahịa mpụga emekọrịtara** — nke a na-eweta site na LiteLLM public
    `model_prices_and_context_window.json` mgbe agbanyere mmekọrịta (a na-echekwa ya n'ime namespace
    `pricing_synced` dị iche ka ọ ghara idechi mgbanwe gị).
-3. **Ntọala etinyere kpọmkwem** — nke so OmniRoute abịa.
+3. **Ntọala etinyere kpọmkwem** — nke so 67router abịa.
 
 Mmekọrịta ọnụahịa mpụga bụ **opt-in**, a gbanyụrụ ya na ndabara. Env var ndị metụtara ya
 (hụ [`.env.example`](../../.env.example)):
@@ -191,7 +191,7 @@ ebe e kwuru ihe ọzọ.
 
 ## CLI
 
-CLI nke OmniRoute na-enye iwu maka ụgwọ, ojiji, na ọnụahịa (e debanyere ha na
+CLI nke 67router na-enye iwu maka ụgwọ, ojiji, na ọnụahịa (e debanyere ha na
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

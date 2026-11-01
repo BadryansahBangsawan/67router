@@ -41,7 +41,7 @@ ali zunanja integracija trenutno na voljo.
 | Ponudbe za podpornike                | Implementirane kot ločen, podpisan vir, ki je na voljo samo v živo, in stran nadzorne plošče. Odjemalec znova preveri zaprto shemo ugodnosti, ohrani zadnji veljavni predpomnilnik, filtrira potekle vnose in izrecno označi partnerske ponudbe.     |
 | Informacije in priznanje podpornikov | Implementirano kot strog, podpisan vir, ki je na voljo samo v živo, z ELO v lasti Radarja, dejansko svežino/trendom kataloga, preverjeno lokalno značko podpornika, stranjo nadzorne plošče ter ukazi CLI za stanje/sinhronizacijo samo lokalno.     |
 | Plačila in transakcijska e-pošta     | Niso implementirani v odjemalcu OSS. Nakup, donacija, pregled potrdil, obnovitev in dostava pošte sodijo v zasebno storitev; razpoložljivost gostovanja je še vedno odvisna od njenega nadzorovanega uvajanja in konfiguracije ponudnika.            |
-| Delovni tok raziskovalnega agenta    | Ni del te izdaje odjemalca. Skrbno izbrana vsebina virov ostaja med podatki na strani strežnika; v namestitvi OmniRoute ne deluje noben avtonomni raziskovalni agent.                                                                                |
+| Delovni tok raziskovalnega agenta    | Ni del te izdaje odjemalca. Skrbno izbrana vsebina virov ostaja med podatki na strani strežnika; v namestitvi 67router ne deluje noben avtonomni raziskovalni agent.                                                                                 |
 
 ---
 
@@ -119,7 +119,7 @@ Ko sta obe vklopljeni, je pot sinhronizacije naslednja:
    naslova IP za ročni pregled zlorab; te tabele ne hranijo niti ključa niti naslova IP v neobdelani obliki.
    Dnevniki dostopa do infrastrukture in šifrirana odhodna vrsta za dostavo so ločene operativne
    meje.
-3. OmniRoute storitvi Radar nikoli ne pošilja pozivov, odgovorov, pogovorov, poverilnic ponudnikov, prometa modelov,
+3. 67router storitvi Radar nikoli ne pošilja pozivov, odgovorov, pogovorov, poverilnic ponudnikov, prometa modelov,
    časa delovanja, zakasnitve ali lokalne konfiguracije ponudnika.
 4. Odgovor se preveri, validira in lokalno shrani v predpomnilnik (glejte
    [Varnostni model](#security-model)). Radar ima natanko štiri omrežne poti na strani strežnika:
@@ -243,11 +243,11 @@ upravljavec, ki ga že ima, aktivira.
 ### Aktivacija od začetka do konca in vodena nastavitev
 
 Zasebna storitev za vir in ta odjemalec OSS imata namerno ozko ločnico: storitev
-izda in preverja ključ podpornika, lokalna namestitev OmniRoute pa ključ šifrira,
+izda in preverja ključ podpornika, lokalna namestitev 67router pa ključ šifrira,
 na strani strežnika sinhronizira podpisane artefakte ter vodi nastavitev ponudnika. Vrstni red podprtega preverjanja je:
 
 1. Pridobite novo izdan ali obnovljen ključ prek postopka uveljavljanja pravic sodelujočega uporabnika, strani plans/checkout, postopka obnovitve ali od pooblaščenega upravljavca zasebnega strežnika. Ne lepite neobdelanega ključa v dnevnike, posnetke zaslona, komentarje težav ali argumente ukazne vrstice.
-2. Omogočite zastavico funkcije `RADAR_ENABLED` v lokalni namestitvi OmniRoute. S tem omogočite uporabniški vmesnik, vendar ta ostane omrežno nedejaven, dokler ne shranite ločene privolitve.
+2. Omogočite zastavico funkcije `RADAR_ENABLED` v lokalni namestitvi 67router. S tem omogočite uporabniški vmesnik, vendar ta ostane omrežno nedejaven, dokler ne shranite ločene privolitve.
 3. Odprite `/dashboard/radar`, prilepite ključ in ga aktivirajte. Brskalnik pošlje eno lokalno zahtevo `POST /api/radar/settings` z vsebino `{ optIn: true, supporterKey }`; ključ se lokalno šifrira, odgovor pa vsebuje samo `omr_****<last4>`.
 4. Počakajte, da zaslon za aktivacijo izvede sinhronizacijo kataloga, ali izberite **Sinhroniziraj zdaj**. Preverite, ali stran prikazuje `live`, različico vira in čas pridobitve. Za lokalno diagnostiko s preverjeno pristnostjo `GET /api/radar/status` sporoči stanje privolitve/prisotnosti ključa in štiri stanja predpomnilnika, ne da bi vrnil ključ. `POST /api/radar/sync-all` lahko izrecno osveži katalog, napotitve, ponudbe in Intel.
 5. Odprite `/dashboard/radar/setup?provider=<provider>`. Sledite URL-ju za poverilnice, ki ga upravlja ponudnik, izberite **Dodaj ključ API**, shranite prek pravega ponudnikovega obrazca, vrnite se v vodnik in zaženite **Preizkusi povezavo**. Vodnik uporablja običajne poti `/api/providers` in `/api/providers/<connection-id>/test`; ne ustvari vzporedne poverilnice Radar.
@@ -287,7 +287,7 @@ ostanejo veljavni do ponovne sinhronizacije.
 ### Okoljske preglasitve, prijazne razvejitvam
 
 Dve okoljski spremenljivki omogočata, da razvejitve in samostojno gostovane namestitve
-odjemalca usmerijo na svoj vir namesto na privzeto storitev OmniRoute — glejte
+odjemalca usmerijo na svoj vir namesto na privzeto storitev 67router — glejte
 [Kako samostojno gostiti vir](#how-to-self-host-a-feed) spodaj:
 
 | Spremenljivka       | Namen                                                                                                           |
@@ -449,7 +449,7 @@ nastavitvijo `enabled: true`, ohrani združeni vnos onemogočen in zabeleži
 Objave kataloga uporabljajo `schemaVersion: 2`. `contextWindow` ter vsako izmed polj `tools`, `vision` in
 `thinking` so neodvisno `number | null` / `boolean | null`: `null` pomeni neznano, medtem ko
 `false` pomeni, da uradni vir ponudnika, potrjen z D16, izrecno navaja, da zmožnost ni na voljo.
-Notranje zastavice registra/specifikacij modelov OmniRoute se nikoli neposredno ne pretvorijo v dejstva vira. Odjemalec
+Notranje zastavice registra/specifikacij modelov 67router se nikoli neposredno ne pretvorijo v dejstva vira. Odjemalec
 še vedno sprejema posnetke v1; ker je stari gradnik uporabljal `false` kot označevalnik odsotnosti, se vrednost v1 `false`
 normalizira v neznano, medtem ko v1 `true` ostane dejstvo. Neznane različice sheme se varno zavrnejo, zadnji
 veljavni predpomnilnik pa ostane na voljo. Vsak model v2 z neničelno vrednostjo konteksta/zmožnosti mora vsebovati
@@ -510,7 +510,7 @@ Spodnje družine lokalnih poti Radar podpirajo uporabniški vmesnik v `src/app/a
 | `/api/radar/local-model-state` | DELETE | Počisti polja preglasitve, ki jih je mogoče urejati, pri tem pa ohrani morebitni nagrobnik.                                         |
 
 **Strogo pravilo: te poti nikoli ne posredujejo zahtev storitvi za vire.** Brskalnik vedno komunicira
-samo z lokalnim strežnikom OmniRoute. Štirje moduli, ki dostopajo do storitve Radar, so
+samo z lokalnim strežnikom 67router. Štirje moduli, ki dostopajo do storitve Radar, so
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (napotitve) in
 `src/lib/radar/offersSync.ts` (ponudbe) ter `src/lib/radar/intelSync.ts` (Intel); vsi se izvajajo
 na strani strežnika, nikoli na strani odjemalca. Tako URL vira in morebitni ključ
@@ -581,7 +581,7 @@ nikoli ne posodablja lestvic najboljših ali ponovno uporabi `token_share`. `/da
 samo na podlagi preverjenih metapodatkov lokalnega predpomnilnika.
 
 CLI ponuja `omniroute radar status` in `omniroute radar sync`. Oba komunicirata samo z
-lokalnim API-jem OmniRoute. `status` izvede zahtevo samo za branje `GET /api/radar/status`; `sync` pošlje eno
+lokalnim API-jem 67router. `status` izvede zahtevo samo za branje `GET /api/radar/status`; `sync` pošlje eno
 zahtevo `POST /api/radar/sync-all` in izpiše rezultat za vsak vir. Noben ukaz ne bere, sprejema ali izpisuje
 podpornikovega ključa in noben ne vzpostavlja neposrednega stika s storitvijo Radar.
 

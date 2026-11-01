@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute utiliza un modelo de lanzamientos de **ciclos paralelos**: una rama
+67router utiliza un modelo de lanzamientos de **ciclos paralelos**: una rama
 dedicada `release/vX.Y.Z` para el ciclo activo, `main` para la línea publicada y
 una etiqueta inmutable `vX.Y.Z` cuando se publica ese ciclo. Es normal ver que los
 commits lleguen tanto a `release/*` _como_ a `main`; no se trata de una confusión.

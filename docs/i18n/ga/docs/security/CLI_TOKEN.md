@@ -6,7 +6,7 @@
 
 ## Forbhreathnú
 
-Fíordheimhníonn orduithe OmniRoute CLI i gcoinne an API bainistíochta áitiúil le
+Fíordheimhníonn orduithe 67router CLI i gcoinne an API bainistíochta áitiúil le
 comhartha `HMAC-SHA256(machine-id, salt)` a sheoltar tríd an gceanntásc iarratais
 `x-omniroute-cli-token`.
 

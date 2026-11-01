@@ -18,7 +18,7 @@ export default function DayHeader({ label, dayKey }: DayHeaderProps) {
       className="sticky top-0 z-10 flex items-center gap-3 py-2 px-4 bg-surface-2 border-b border-border"
       aria-label={displayLabel}
     >
-      <span className="text-xs font-semibold uppercase tracking-widest text-text-muted">
+      <span className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
         {displayLabel}
       </span>
       {label !== "today" && label !== "yesterday" && (

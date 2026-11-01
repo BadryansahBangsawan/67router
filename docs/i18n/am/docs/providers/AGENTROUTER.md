@@ -10,7 +10,7 @@ User-Agent፣ `anthropic-beta` ጠቋሚዎች፣ Stainless SDK ራስጌዎች�
 
 ## ፈጣን መጀመሪያ — ቤተኛውን `agentrouter` አቅራቢ ይጠቀሙ (የሚመከር)
 
-ለአብዛኛዎቹ ተጠቃሚዎች **ምንም ልዩ ቅንብር አያስፈልግም**። OmniRoute ሙሉው የClaude Code የግንኙነት ቅርጽ ቀድሞውኑ የተካተተበትን አብሮገነብ
+ለአብዛኛዎቹ ተጠቃሚዎች **ምንም ልዩ ቅንብር አያስፈልግም**። 67router ሙሉው የClaude Code የግንኙነት ቅርጽ ቀድሞውኑ የተካተተበትን አብሮገነብ
 `agentrouter` አቅራቢ ይዞ ይመጣል (`open-sse/config/providerRegistry.ts` → `agentrouter` ይመልከቱ)። እሱን ለመጠቀም፦
 
 1. **ዳሽቦርድ → አቅራቢዎች → አቅራቢ አክል**ን ይክፈቱ።
@@ -28,7 +28,7 @@ User-Agent፣ `anthropic-beta` ጠቋሚዎች፣ Stainless SDK ራስጌዎች�
 
 ## የላቀ፦ በClaude Code ተኳሃኝ የአቅራቢ ዓይነት መገናኘት
 
-OmniRoute በትክክለኛው የግንኙነት ቅርጽ Anthropic Messages APIን በሚጠቀመው **Claude Code
+67router በትክክለኛው የግንኙነት ቅርጽ Anthropic Messages APIን በሚጠቀመው **Claude Code
 ተኳሃኝ** የአቅራቢ ዓይነት (`anthropic-compatible-cc-*`) በኩል AgentRouterን (እና ተመሳሳይ የማስተላለፊያ አገልግሎቶችን) ይደግፋል። ወደ `https://agentrouter.org` የሚያመለክት አጠቃላይ
 `openai-compatible-chat` አቅራቢ **አይሠራም** — የላይኛው WAF እንደClaude
 Code የማይመስሉ ጥያቄዎችን ውድቅ ያደርጋል።
@@ -38,12 +38,12 @@ Code የማይመስሉ ጥያቄዎችን ውድቅ ያደርጋል።
 ## ቅድመ ሁኔታዎች
 
 - የAgentRouter መለያ እና API ቁልፍ። አዲስ የሚመዘገቡ ተጠቃሚዎች በፕሮጀክቱ [README](../README.md) ውስጥ ባለው የአጋርነት አገናኝ ነፃ ክሬዲት ያገኛሉ።
-- OmniRoute የ`ENABLE_CC_COMPATIBLE_PROVIDER` ባህሪ ጠቋሚ ነቅቶለት እየሠራ መሆን
+- 67router የ`ENABLE_CC_COMPATIBLE_PROVIDER` ባህሪ ጠቋሚ ነቅቶለት እየሠራ መሆን
   (ከታች ይመልከቱ)።
 
 ## 1. ከCC ጋር ተኳሃኝ የሆነውን የአቅራቢ ዓይነት ያንቁ
 
-የClaude Code ተኳሃኝ የአቅራቢ ዓይነት ከኦፊሴላዊው Claude Code ደንበኛ ጋር በእጅጉ የሚመሳሰል ትራፊክ ስለሚልክ፣ ከባህሪ ጠቋሚ ጀርባ ተደብቋል። OmniRouteን ከማስጀመርዎ በፊት የአካባቢ ተለዋዋጭ በማዋቀር ያንቁት፦
+የClaude Code ተኳሃኝ የአቅራቢ ዓይነት ከኦፊሴላዊው Claude Code ደንበኛ ጋር በእጅጉ የሚመሳሰል ትራፊክ ስለሚልክ፣ ከባህሪ ጠቋሚ ጀርባ ተደብቋል። 67routerን ከማስጀመርዎ በፊት የአካባቢ ተለዋዋጭ በማዋቀር ያንቁት፦
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

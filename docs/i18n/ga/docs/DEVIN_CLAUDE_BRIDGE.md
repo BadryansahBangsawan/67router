@@ -5,7 +5,7 @@
 ---
 
 Ligeann `devin-cli-agentic` d'fhíor-thimpeallacht rite Claude Code críochphointe áitiúil
-Anthropic Messages de chuid OmniRoute a úsáid, agus soláthraíonn Devin CLI oifigiúil freagraí
+Anthropic Messages de chuid 67router a úsáid, agus soláthraíonn Devin CLI oifigiúil freagraí
 samhla thar ACP stdio. Ní mhodhnaíonn sé na soláthraithe Anthropic, Claude OAuth, Claude Web,
 ná `devin-cli` atá ann cheana.
 
@@ -21,7 +21,7 @@ shamhla marcáilte dá réir ionas go seachnóidh ródú teaglama a éilíonn ui
 > babhtaí `Read`, `Edit`, agus `Bash` faoi úinéireacht an chliaint, torthaí rathúla `npm test`,
 > aimsiú orduithe agus scileanna tionscadail, ródú trí Devin amháin, agus gan aon trácht amach
 > chuig Claude. Ardaíodh an leagan fosaithe ansin go `2.1.258` (an ghlúin CLI a ndéanann
-> aitheantas Claude de chuid OmniRoute aithris uirthi, agus an chéad líne a sholáthraíonn
+> aitheantas Claude de chuid 67router aithris uirthi, agus an chéad líne a sholáthraíonn
 > sraith Fable 5.1 go dúchasach). Ar an leagan fosaithe nua fíoraíodh an ciseal suiteála agus
 > `claude --version` ar an íomhá bhunaidh fhosaithe, agus éiríonn le sraith aonad an droichid,
 > `compose config`, agus an cruthúnas statach leithlisithe — ach níor ritheadh an cás bréige as
@@ -55,11 +55,11 @@ babhta samhla. Seiceálann sé an t-ainm i gcoinne liosta uirlisí an iarratais,
 sé na hargóintí i gcoinne Scéimre JSON na huirlise sin, diúltaíonn sé do mheascán insinte agus
 gníomhartha, agus ceadaíonn sé aon deisiú teoranta amháin. Ansin ritheann Claude Code an
 `tool_use` Anthropic a eascraíonn as go háitiúil agus seolann sé an `tool_result` ar ais trí
-OmniRoute.
+67router.
 
 ## Uathródú
 
-Tá an soláthraí incháilithe i linnte iarrthóirí `auto/*` OmniRoute nuair nach bhfuil bac air.
+Tá an soláthraí incháilithe i linnte iarrthóirí `auto/*` 67router nuair nach bhfuil bac air.
 Ní ráthaíonn incháilitheacht iarrthóra go roghnófar é: d'fhéadfadh straitéis ródaithe an
 teaglama (mar shampla, an ceann deireanach ar eol gur éirigh leis) tús áite a thabhairt do
 sholáthraí eile. Úsáid `dva/<model>` nó teaglama a thugann tús áite do Devin nuair is gá duit
@@ -72,16 +72,16 @@ nithe toirmiscthe. Déanann na seirbhísí Compose an méid seo a leanas:
 
 - ritheann siad mar UID/GID `10001:10001`, le córas comhad fréimhe inléite amháin, cumais bainte, agus
   `no-new-privileges`;
-- úsáideann siad `/home/bridge` príobháideach, imleabhar tiomnaithe cumraíochta Claude, sonraí OmniRoute leithlisithe,
+- úsáideann siad `/home/bridge` príobháideach, imleabhar tiomnaithe cumraíochta Claude, sonraí 67router leithlisithe,
   agus imleabhar `devin-auth` ar leith;
 - ní fheistíonn siad ach spásanna oibre/fianaise `.sandbox` indiúscartha;
 - ní fheistíonn siad eolaire baile an óstaigh, Keychain, SSH, dintiúir néil ná soicéad Docker;
 - cruthaíonn siad timpeallachtaí sainráite agus baineann siad athróga API/OAuth/ródaithe Anthropic;
 - treoraíonn siad tátal Claude Code chuig `http://omniroute:20128` amháin, le heochair áitiúil amháin.
 
-Úsáideann an phróifíl as líne líonra inmheánach. Sa phróifíl bheo, ní shroicheann OmniRoute
+Úsáideann an phróifíl as líne líonra inmheánach. Sa phróifíl bheo, ní shroicheann 67router
 críochphointí oifigiúla Devin ach amháin trí `network-guard`; diúltaítear do chinn scríbe nach mbaineann leo.
-Tá garda imeachta ar leith ag Claude Code a dhiúltaíonn do gach rud agus ní féidir leis ach an tseirbhís áitiúil OmniRoute
+Tá garda imeachta ar leith ag Claude Code a dhiúltaíonn do gach rud agus ní féidir leis ach an tseirbhís áitiúil 67router
 a bhaint amach trí `NO_PROXY`. Ní fheistítear comhaid iniúchta garda ach amháin dá bpróiseas garda féin. Deimhníonn na
 scripteanna úinéireacht comhad, mód, líon nasc agus gach cinneadh sula n-easpórtálann siad
 fianaise saor ó chomharthaí.

@@ -1,10 +1,10 @@
 ---
-title: "OmniRoute Architecture"
+title: "67router Architecture"
 version: 3.8.52
 lastUpdated: 2026-10-05
 ---
 
-# OmniRoute Architecture
+# 67router Architecture
 
 🌐 **Languages:** 🇺🇸 [English](./ARCHITECTURE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/architecture/ARCHITECTURE.md) | 🇸🇦 [العربية](../i18n/ar/docs/architecture/ARCHITECTURE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/architecture/ARCHITECTURE.md) | 🇧🇬 [Български](../i18n/bg/docs/architecture/ARCHITECTURE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/architecture/ARCHITECTURE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/architecture/ARCHITECTURE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/architecture/ARCHITECTURE.md) | 🇩🇰 [Dansk](../i18n/da/docs/architecture/ARCHITECTURE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/architecture/ARCHITECTURE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/architecture/ARCHITECTURE.md) | 🇪🇸 [Español](../i18n/es/docs/architecture/ARCHITECTURE.md) | 🇪🇪 [Eesti](../i18n/et/docs/architecture/ARCHITECTURE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/architecture/ARCHITECTURE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/architecture/ARCHITECTURE.md) | 🇫🇷 [Français](../i18n/fr/docs/architecture/ARCHITECTURE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/architecture/ARCHITECTURE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/architecture/ARCHITECTURE.md) | 🇮🇱 [עברית](../i18n/he/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/architecture/ARCHITECTURE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/architecture/ARCHITECTURE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/architecture/ARCHITECTURE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/architecture/ARCHITECTURE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/architecture/ARCHITECTURE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/architecture/ARCHITECTURE.md) | 🇮🇹 [Italiano](../i18n/it/docs/architecture/ARCHITECTURE.md) | 🇯🇵 [日本語](../i18n/ja/docs/architecture/ARCHITECTURE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/architecture/ARCHITECTURE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/architecture/ARCHITECTURE.md) | 🇰🇷 [한국어](../i18n/ko/docs/architecture/ARCHITECTURE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/architecture/ARCHITECTURE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/architecture/ARCHITECTURE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/architecture/ARCHITECTURE.md) | 🇲🇹 [Malti](../i18n/mt/docs/architecture/ARCHITECTURE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/architecture/ARCHITECTURE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/architecture/ARCHITECTURE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/architecture/ARCHITECTURE.md) | 🇳🇴 [Norsk](../i18n/no/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/architecture/ARCHITECTURE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/architecture/ARCHITECTURE.md) | 🇵🇱 [Polski](../i18n/pl/docs/architecture/ARCHITECTURE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/architecture/ARCHITECTURE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/architecture/ARCHITECTURE.md) | 🇷🇴 [Română](../i18n/ro/docs/architecture/ARCHITECTURE.md) | 🇷🇺 [Русский](../i18n/ru/docs/architecture/ARCHITECTURE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/architecture/ARCHITECTURE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/architecture/ARCHITECTURE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/architecture/ARCHITECTURE.md) | 🇷🇸 [Српски](../i18n/sr/docs/architecture/ARCHITECTURE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/architecture/ARCHITECTURE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/architecture/ARCHITECTURE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/architecture/ARCHITECTURE.md) | 🇹🇭 [ไทย](../i18n/th/docs/architecture/ARCHITECTURE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/architecture/ARCHITECTURE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/architecture/ARCHITECTURE.md) | 🇵🇰 [اردو](../i18n/ur/docs/architecture/ARCHITECTURE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/architecture/ARCHITECTURE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/architecture/ARCHITECTURE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/architecture/ARCHITECTURE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/architecture/ARCHITECTURE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -12,27 +12,22 @@ _Last updated: 2026-06-28_
 
 ## Executive Summary
 
-OmniRoute is a local AI routing gateway and dashboard built on Next.js.
+67router is a local AI routing gateway and dashboard built on Next.js.
 It provides a single OpenAI-compatible endpoint (`/v1/*`) and routes traffic across multiple upstream providers with translation, fallback, token refresh, and usage tracking.
 
 Core capabilities:
 
-- OpenAI-compatible API surface for CLI/tools (375 providers, 156 executor modules)
+- OpenAI-compatible API surface for CLI/tools (372 providers, 156 executor modules)
 - Request/response translation across provider formats
 - Model combo fallback (multi-model sequence)
 - Structured combo steps (`provider + model + connection`) with runtime ordering by `compositeTiers`
 - Account-level fallback (multi-account per provider)
 - Quota preflight and quota-aware P2C account selection in the main chat path
 - OAuth + API-key provider connection management (27 OAuth provider modules)
-- Embedding generation via `/v1/embeddings` (18 providers)
-- Image generation via `/v1/images/generations` (10+ providers, 20+ models)
 - Audio transcription via `/v1/audio/transcriptions` (18 providers)
-- Text-to-speech via `/v1/audio/speech` (24 built-in providers)
 - Video generation via `/v1/videos/generations` (ComfyUI + SD WebUI)
 - Music generation via `/v1/music/generations` (ComfyUI)
 - Web search via `/v1/search` (20 providers)
-- Moderations via `/v1/moderations`
-- Reranking via `/v1/rerank`
 - Think tag parsing (`<think>...</think>`) for reasoning models
 - Response sanitization for strict OpenAI SDK compatibility
 - Role normalization (developer→system, system→user) for cross-provider compatibility
@@ -51,15 +46,15 @@ Core capabilities:
 - Domain layer: cost rules, fallback policy, lockout policy
 - Context Relay: session handoff summaries for account rotation continuity
 - Domain state persistence (SQLite write-through cache for fallbacks, budgets, lockouts, circuit breakers)
-- Policy engine for centralized request evaluation (lockout → budget → fallback)
+- Policy engine for centralized request evaluation (lockout → fallback)
 - Request telemetry with p50/p95/p99 latency aggregation
 - Combo target telemetry and historical combo target health via `combo_execution_key` / `combo_step_id`
 - Correlation ID (X-Request-Id) for end-to-end tracing
 - Compliance audit logging with opt-out per API key
 - Eval framework for LLM quality assurance
 - Health dashboard with real-time provider circuit breaker status
-- MCP Server (110 tools) with 3 transports (stdio/SSE/Streamable HTTP)
-- A2A Server (JSON-RPC 2.0 + SSE) with skills and task lifecycle
+- MCP Server (89 tools) with 3 transports (stdio/SSE/Streamable HTTP)
+- A2A task store (Conductor-mirrored tasks, `/api/a2a/tasks`)
 - Memory system (extraction, injection, retrieval, summarization)
 - Skills system (registry, executor, sandbox, built-in skills)
 - MITM proxy with certificate management and DNS handling
@@ -121,7 +116,7 @@ the rest are linked from their domain-specific guides.
 Main pages under `src/app/(dashboard)/dashboard/`:
 
 - `/dashboard` — quick start + provider overview
-- `/dashboard/endpoint` — endpoint proxy + MCP + A2A + API endpoint tabs
+- `/dashboard/endpoint` — endpoint proxy + MCP + API endpoint tabs
 - `/dashboard/providers` — provider connections and credentials
 - `/dashboard/combos` — combo strategies, templates, step-based builder, model routing rules, manual persisted ordering
 - `/dashboard/auto-combo` — Auto Combo Engine: scoring weights, mode packs, virtual factory presets, telemetry
@@ -130,13 +125,9 @@ Main pages under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — quota/rate controls
 - `/dashboard/cli-tools` — CLI onboarding, runtime detection, config generation
 - `/dashboard/agents` — detected ACP agents + custom agent registration
-- `/dashboard/cloud-agents` — cloud-hosted agent tasks (Codex Cloud, Devin, Jules) and task lifecycle
 - `/dashboard/skills` — A2A skill registry, sandbox execution, built-in skill catalog
 - `/dashboard/memory` — persistent conversational memory inspection and retrieval
-- `/dashboard/webhooks` — outbound webhook subscriptions, secret rotation, retry stats
-- `/dashboard/batch` — batch job submission and progress
 - `/dashboard/cache` — read-through and reasoning cache statistics, eviction controls
-- `/dashboard/playground` — interactive chat playground against any configured combo/model
 - `/dashboard/changelog` — in-app changelog viewer (renders `CHANGELOG.md`)
 - `/dashboard/system` — runtime diagnostics, version info, environment validation surface
 - `/dashboard/onboarding` — first-run setup wizard for new installations
@@ -156,7 +147,7 @@ Main pages under `src/app/(dashboard)/dashboard/`:
 
 UI layer: every page renders inside one shell — `src/app/(dashboard)/layout.tsx` →
 `src/shared/components/layouts/DashboardLayout.tsx` → `DashboardShell.tsx` (the kit's
-`SidebarProvider`/`SidebarInset`, OmniRoute's `Sidebar.tsx` and `Header.tsx`). Pages import their
+`SidebarProvider`/`SidebarInset`, 67router's `Sidebar.tsx` and `Header.tsx`). Pages import their
 building blocks from `@/shared/components` (adapters over the vendored Keak CI UI Kit in
 `packages/ui-kit`) or from kit component subpaths (`@omniroute/ui-kit/table`, `…/page-header`), and
 icons through `<Icon>` (`ICON_MAP` → Lucide). Theme (`system` by default, light/dark) and tokens come
@@ -174,7 +165,7 @@ flowchart LR
         BROWSER[Browser Dashboard]
     end
 
-    subgraph Router[OmniRoute Local Process]
+    subgraph Router[67router Local Process]
         API[V1 Compatibility API\n/v1/*]
         DASH[Dashboard + Management API\n/api/*]
         CORE[SSE + Translation Core\nopen-sse + src/sse]
@@ -226,11 +217,8 @@ Important compatibility routes:
 - `src/app/api/v1/messages/route.ts`
 - `src/app/api/v1/responses/route.ts`
 - `src/app/api/v1/models/route.ts` — includes custom models with `custom: true`
-- `src/app/api/v1/embeddings/route.ts` — embedding generation (6 providers)
-- `src/app/api/v1/images/generations/route.ts` — image generation (4+ providers incl. Antigravity/Nebius)
 - `src/app/api/v1/messages/count_tokens/route.ts`
 - `src/app/api/v1/providers/[provider]/chat/completions/route.ts` — dedicated per-provider chat
-- `src/app/api/v1/providers/[provider]/embeddings/route.ts` — dedicated per-provider embeddings
 - `src/app/api/v1/providers/[provider]/images/generations/route.ts` — dedicated per-provider images
 - `src/app/api/v1beta/models/route.ts`
 - `src/app/api/v1beta/models/[...path]/route.ts`
@@ -259,10 +247,8 @@ Management domains:
 - Resilience reset: `src/app/api/resilience/reset` (POST) — reset provider breakers
 - Cache stats: `src/app/api/cache/stats` (GET/DELETE)
 - Telemetry: `src/app/api/telemetry/summary` (GET)
-- Budget: `src/app/api/usage/budget` (GET/POST)
 - Fallback chains: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Compliance audit: `src/app/api/compliance/audit-log` (GET, with pagination + structured metadata)
-- Evals: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Policies: `src/app/api/policies` (GET/POST)
 - Sync tokens: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Config bundle: `src/app/api/sync/bundle` (GET, ETag-versioned snapshot of settings/providers/combos/keys)
@@ -282,10 +268,8 @@ Main flow modules:
 - Stream transformations: `open-sse/utils/stream.ts`, `open-sse/utils/streamHandler.ts`
 - Usage extraction/normalization: `open-sse/utils/usageTracking.ts`
 - Think tag parser: `open-sse/utils/thinkTagParser.ts`
-- Embedding handler: `open-sse/handlers/embeddings.ts`
 - Embedding provider registry: `open-sse/config/embeddingRegistry.ts`
-- Image generation handler: `open-sse/handlers/imageGeneration.ts`
-- Image provider registry: `open-sse/config/imageRegistry.ts`
+- Image provider registry (catalog data only; the image endpoints were removed): `open-sse/config/imageRegistry.ts`
 - Response sanitization: `open-sse/handlers/responseSanitizer.ts`
 - Role normalization: `open-sse/services/roleNormalizer.ts`
 
@@ -316,17 +300,16 @@ Services (business logic):
 
 Domain layer modules:
 
-- Cost rules/budgets: `src/domain/costRules.ts`
+- Cost rules (recorded spend, cost summaries): `src/domain/costRules.ts`
 - Fallback policy: `src/domain/fallbackPolicy.ts`
 - Combo resolver: `src/domain/comboResolver.ts`
 - Lockout policy: `src/domain/lockoutPolicy.ts`
-- Policy engine: `src/domain/policyEngine.ts` — centralized lockout → budget → fallback evaluation
+- Policy engine: `src/domain/policyEngine.ts` — centralized lockout → fallback evaluation
 - Error codes catalog: `src/shared/constants/errorCodes.ts`
 - Request ID: `src/shared/utils/requestId.ts`
 - Fetch timeout: `src/shared/utils/fetchTimeout.ts`
 - Request telemetry: `src/shared/utils/requestTelemetry.ts`
 - Compliance/audit: `src/lib/compliance/index.ts`
-- Eval runner: `src/lib/evals/evalRunner.ts`
 - Domain state persistence: `src/lib/db/domainState.ts` — SQLite CRUD for fallback chains, budgets, cost history, lockout state, circuit breakers
 
 OAuth provider modules (27 individual files under `src/lib/oauth/providers/`):
@@ -338,7 +321,7 @@ OAuth provider modules (27 individual files under `src/lib/oauth/providers/`):
 
 ## 5) Embedded Services (v3.8.4)
 
-OmniRoute can install, supervise, and route to locally-running AI tool processes
+67router can install, supervise, and route to locally-running AI tool processes
 called **embedded services**. Five are shipped: 9Router, CLIProxyAPI, Bifrost, Mux and Dario.
 
 Architecture layers:
@@ -396,23 +379,6 @@ Key capabilities:
 For full algorithmic detail (factor formulas, weight tuning), see
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Cloud Agents
-
-Cloud Agents wraps third-party hosted code-agent platforms (Codex Cloud, Devin,
-Jules) behind a uniform DB-backed task lifecycle. All task creation/inspection
-endpoints require management authentication.
-
-- Module root: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, plus per-agent subdirectories under `agents/`)
-- Per-agent implementations: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Public endpoints: `/api/v1/agents/tasks/*` (list/create/get/cancel)
-- Management endpoints: `/api/cloud/*` (provisioning, status, batch)
-- Dashboard: `/dashboard/cloud-agents`
-- Storage: `cloud_agent_tasks` table
-
-For per-agent provisioning and OAuth specifics, see
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Guardrails
 
 The guardrails module is a hot-reloadable middleware layer that inspects requests
@@ -432,10 +398,10 @@ For ruleset authoring and threshold tuning, see
 ### D. Domain Layer
 
 The `src/domain/` namespace centralizes policy decisions so route handlers do not
-have to assemble lockout/budget/fallback logic themselves.
+have to assemble lockout/fallback logic themselves.
 
 - Policy engine: `src/domain/policyEngine.ts` — single entry point for
-  pre-execution evaluation (lockout → budget → fallback ordering)
+  pre-execution evaluation (lockout → fallback ordering)
 - Cost rules: `src/domain/costRules.ts`
 - Fallback policy: `src/domain/fallbackPolicy.ts`
 - Lockout policy: `src/domain/lockoutPolicy.ts`
@@ -448,7 +414,7 @@ have to assemble lockout/budget/fallback logic themselves.
 - Quota cache: `src/domain/quotaCache.ts`
 - Degradation state: `src/domain/degradation.ts`
 - Configuration audit: `src/domain/configAudit.ts`
-- OmniRoute response metadata builder: `src/domain/omnirouteResponseMeta.ts`
+- 67router response metadata builder: `src/domain/omnirouteResponseMeta.ts`
 - Assessment subsystem: `src/domain/assessment/` — periodic evaluation jobs
 
 ### E. Authorization Pipeline
@@ -506,13 +472,8 @@ the global circuit breaker / connection cooldown / model lockout layers:
 For the full stealth playbook and operational guidance, see
 `docs/security/STEALTH_GUIDE.md` (git; not compiled into `/docs`).
 
-### H. Webhooks, Reasoning Cache, Read Cache
+### H. Reasoning Cache, Read Cache
 
-- **Webhooks** — outbound dispatch for provider/account/task events.
-  - Dispatcher: `src/lib/webhookDispatcher.ts`
-  - Storage: `webhooks` SQLite table (via `src/lib/db/webhooks.ts`)
-  - Dashboard: `/dashboard/webhooks` (subscriptions, secrets, retry history)
-  - For event taxonomy and retry semantics, see [`docs/frameworks/WEBHOOKS.md`](../frameworks/WEBHOOKS.md).
 - **Reasoning Cache** — replayable reasoning blocks for providers that emit
   thinking tokens (Claude, GLMT, etc.) so consecutive turns can skip re-thinking.
   - DB layer: `src/lib/db/reasoningCache.ts`
@@ -826,7 +787,7 @@ flowchart LR
         Browser[Dashboard Browser]
     end
 
-    subgraph ContainerOrProcess[OmniRoute Runtime]
+    subgraph ContainerOrProcess[67router Runtime]
         Next[Next.js Server\nPORT=20128]
         Core[SSE Core + Executors]
         MainDB[(storage.sqlite)]
@@ -945,7 +906,7 @@ All other providers (including custom compatible nodes) use the `DefaultExecutor
 ## Provider Compatibility Matrix
 
 > **Note:** The matrix below is a representative sample of the 351 registered providers in
-> OmniRoute v3.8.0. For the canonical and continuously-updated list, refer to
+> 67router v3.8.0. For the canonical and continuously-updated list, refer to
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (auto-generated) or the source of
 > truth at `src/shared/constants/providers.ts` (Zod-validated at load).
 
@@ -1047,10 +1008,6 @@ Additional processing layers in the translation pipeline:
 | `POST /v1/chat/completions`                        | OpenAI Chat        | `src/sse/handlers/chat.ts`                                          |
 | `POST /v1/messages`                                | Claude Messages    | Same handler (auto-detected)                                        |
 | `POST /v1/responses`                               | OpenAI Responses   | `open-sse/handlers/responsesHandler.ts`                             |
-| `POST /v1/embeddings`                              | OpenAI Embeddings  | `open-sse/handlers/embeddings.ts`                                   |
-| `GET /v1/embeddings`                               | Model listing      | API route                                                           |
-| `POST /v1/images/generations`                      | OpenAI Images      | `open-sse/handlers/imageGeneration.ts`                              |
-| `GET /v1/images/generations`                       | Model listing      | API route                                                           |
 | `POST /v1/providers/{provider}/chat/completions`   | OpenAI Chat        | Dedicated per-provider with model validation                        |
 | `POST /v1/providers/{provider}/embeddings`         | OpenAI Embeddings  | Dedicated per-provider with model validation                        |
 | `POST /v1/providers/{provider}/images/generations` | OpenAI Images      | Dedicated per-provider with model validation                        |
@@ -1127,7 +1084,7 @@ Detailed request payload capture stores up to four JSON payload stages per route
 - raw request received from the client
 - translated request actually sent upstream
 - provider response reconstructed as JSON; streamed responses are compacted to the final summary plus stream metadata
-- final client response returned by OmniRoute; streamed responses are stored in the same compact summary form
+- final client response returned by 67router; streamed responses are stored in the same compact summary form
 
 ## Security-Sensitive Boundaries
 

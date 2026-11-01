@@ -15,7 +15,7 @@
 - [Mahalliy ilovalar uchun OAuth 2.0 (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — o‘rnatilgan ilovalar uchun OAuth client_id / client_secret ochiq hisoblanadi; haqiqiy xavfsizlikni PKCE taʼminlaydi.
 - [Firebase API kalitlari](https://firebase.google.com/docs/projects/api-keys) — veb-mijoz identifikatorlari ataylab ochiq qilib yaratilgan.
 
-OmniRoute bu qiymatlarni ichiga joylashtirishi kerak, shunda `.env` faylini sozlamagan foydalanuvchilar ham hech qanday qo‘shimcha sozlashsiz ishlaydigan OAuth oqimiga ega bo‘ladi. Ichki zaxira qiymatisiz Gemini / Antigravity provayderlari “shunchaki klonlash va ishga tushirish” yo‘lidan foydalanadigan har qanday foydalanuvchi uchun ishlamay qoladi.
+67router bu qiymatlarni ichiga joylashtirishi kerak, shunda `.env` faylini sozlamagan foydalanuvchilar ham hech qanday qo‘shimcha sozlashsiz ishlaydigan OAuth oqimiga ega bo‘ladi. Ichki zaxira qiymatisiz Gemini / Antigravity provayderlari “shunchaki klonlash va ishga tushirish” yo‘lidan foydalanadigan har qanday foydalanuvchi uchun ishlamay qoladi.
 
 Biroq, `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` kabi literal qiymatlar **GitHub Secret Scanning**, **Semgrep** va shunga o‘xshash andoza skanerlari tomonidan aniqlanadi. Har bir reliz yolg‘on musbat natijalarning shovqinli oqimiga aylanadi, yuborish himoyasi qonuniy commitlarni bloklaydi va operatorlar ogohlantirishlar oqimiga ishonmay qo‘yadi.
 

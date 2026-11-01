@@ -7,7 +7,7 @@
 > **真實資料來源：** `src/lib/gamification/`、`src/lib/db/gamification.ts`、`src/app/api/gamification/`
 > **最後更新：** 2026-06-28 — v3.8.40
 
-OmniRoute 包含一個本機優先的遊戲化層，藉由鼓勵使用者與平台互動來提供獎勵——包括發出請求、切換提供者、建立組合、分享權杖，以及為社群做出貢獻。所有狀態皆儲存於 SQLite；與社群伺服器的聯邦整合採選擇加入及推送式設計。
+67router 包含一個本機優先的遊戲化層，藉由鼓勵使用者與平台互動來提供獎勵——包括發出請求、切換提供者、建立組合、分享權杖，以及為社群做出貢獻。所有狀態皆儲存於 SQLite；與社群伺服器的聯邦整合採選擇加入及推送式設計。
 
 此系統的設計目標是在**關鍵路徑上達到零延遲**——遊戲化事件會從請求管線以送出後不等待結果的方式分派，絕不會阻塞 LLM 回應。
 
@@ -29,7 +29,7 @@ OmniRoute 包含一個本機優先的遊戲化層，藉由鼓勵使用者與平�
 | 排行榜       | 全域、每週、每月、權杖分享及貢獻等範圍           |
 | 權杖分享     | 透過複式記帳分類帳在使用者之間轉移點數           |
 | 邀請與兌換   | 使用 SHA-256 雜湊儲存的推薦代碼                  |
-| 社群伺服器   | 與外部 OmniRoute 執行個體進行聯邦整合            |
+| 社群伺服器   | 與外部 67router 執行個體進行聯邦整合             |
 | 防作弊       | 伺服器端計分、速率限制及 z-score 異常偵測        |
 
 ### 設計原則
@@ -101,7 +101,7 @@ src/app/api/gamification/
 
 ### 資料庫資料表
 
-所有資料表都位於主要的 OmniRoute SQLite 資料庫中，由遷移檔案
+所有資料表都位於主要的 67router SQLite 資料庫中，由遷移檔案
 `060_create_gamification.sql` 建立。WAL 日誌模式繼承自
 `src/lib/db/core.ts` 中的單例 `getDbInstance()`。
 
@@ -160,7 +160,7 @@ src/app/api/gamification/
 
 ### 領域模組：`src/lib/db/gamification.ts`
 
-遵循標準的 OmniRoute 模式——從 `core.ts` 匯入 `getDbInstance()`，
+遵循標準的 67router 模式——從 `core.ts` 匯入 `getDbInstance()`，
 並匯出具類型的 CRUD 函式。路由處理常式中不包含原始 SQL。
 
 主要函式：
@@ -221,18 +221,18 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 ### XP 獎勵
 
-| 動作              | XP  | 說明                               |
-| ----------------- | --- | ---------------------------------- |
-| `request`         | 1   | 每個透過 OmniRoute 路由的 API 請求 |
-| `provider_switch` | 5   | 切換至不同的提供者                 |
-| `model_switch`    | 3   | 切換至不同的模型                   |
-| `combo_create`    | 10  | 建立新的組合                       |
-| `combo_use`       | 2   | 使用組合進行請求                   |
-| `token_share`     | 1   | 每與其他使用者分享 1 000 個權杖    |
-| `invite_redeem`   | 50  | 兌換邀請碼                         |
-| `daily_login`     | 5   | 每日活躍使用（每天一次）           |
-| `streak_bonus`    | 2   | 每個連續活躍日（乘以連續天數）     |
-| `badge_unlock`    | 10  | 解鎖徽章                           |
+| 動作              | XP  | 說明                              |
+| ----------------- | --- | --------------------------------- |
+| `request`         | 1   | 每個透過 67router 路由的 API 請求 |
+| `provider_switch` | 5   | 切換至不同的提供者                |
+| `model_switch`    | 3   | 切換至不同的模型                  |
+| `combo_create`    | 10  | 建立新的組合                      |
+| `combo_use`       | 2   | 使用組合進行請求                  |
+| `token_share`     | 1   | 每與其他使用者分享 1 000 個權杖   |
+| `invite_redeem`   | 50  | 兌換邀請碼                        |
+| `daily_login`     | 5   | 每日活躍使用（每天一次）          |
+| `streak_bonus`    | 2   | 每個連續活躍日（乘以連續天數）    |
+| `badge_unlock`    | 10  | 解鎖徽章                          |
 
 ### 發放流程
 
@@ -565,7 +565,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2`（唯一、有索引） |
 | `token_hash` | SHA-256(raw_token)         |
 
-原始權杖只會在建立時傳回給使用者一次。OmniRoute
+原始權杖只會在建立時傳回給使用者一次。67router
 永遠不會再次儲存或顯示該權杖——只會保留其雜湊值。
 
 ### 防止自我推薦
@@ -688,7 +688,7 @@ X-Federation-Version: 1
 
 ## API 路由
 
-所有路由皆遵循標準 OmniRoute 模式：
+所有路由皆遵循標準 67router 模式：
 
 ```
 路由 → CORS 預檢 → 請求主體驗證 (Zod) → 驗證身分 (extractApiKey)

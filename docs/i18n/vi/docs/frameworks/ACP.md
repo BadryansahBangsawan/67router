@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute phân tách **khả năng phát hiện CLI**, **Agent Client Protocol gốc** và
+67router phân tách **khả năng phát hiện CLI**, **Agent Client Protocol gốc** và
 **các bộ điều hợp stdio cũ**. Việc tìm thấy một tệp nhị phân đã cài đặt không chứng minh được
 khả năng xác thực, tính tương thích với mô hình hoặc mức độ sẵn sàng xử lý lời nhắc của nó.
 
@@ -119,5 +119,3 @@ hoặc suy luận thành công từ nhà cung cấp; những việc đó yêu c�
 - [Các giao thức tác nhân](./AGENT_PROTOCOLS_GUIDE.md)
 - [Các hợp đồng khởi chạy CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Các công cụ CLI](../reference/CLI-TOOLS.md)
-- [Máy chủ A2A](./A2A-SERVER.md)
-- [Các tác nhân đám mây](./CLOUD_AGENT.md)

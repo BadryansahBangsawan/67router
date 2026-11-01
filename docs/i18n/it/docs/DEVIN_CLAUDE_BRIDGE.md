@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` consente al runtime reale di Claude Code di utilizzare l'endpoint locale
-Anthropic Messages di OmniRoute, mentre la CLI ufficiale di Devin fornisce le risposte del modello tramite ACP stdio. Non
+Anthropic Messages di 67router, mentre la CLI ufficiale di Devin fornisce le risposte del modello tramite ACP stdio. Non
 modifica i provider Anthropic, Claude OAuth, Claude Web o `devin-cli` esistenti.
 
 Per le chiamate agli strumenti gestite dal client, instradare tramite `devin-cli-agentic` (alias `dva`), il
@@ -18,7 +18,7 @@ del modello sono contrassegnati di conseguenza, così il routing combinato che r
 > `3000.2.17` e il modello `swe-1-7-lightning`; l'esecuzione live finale ha dimostrato turni `Read`,
 > `Edit` e `Bash` gestiti dal client, risultati di `npm test` riusciti, rilevamento dei comandi e delle skill
 > del progetto, routing esclusivamente tramite Devin e nessun traffico in uscita verso Claude. Il pin è stato quindi aggiornato a `2.1.258`
-> (la generazione della CLI che l'identità Claude di OmniRoute impersona e la prima linea che include
+> (la generazione della CLI che l'identità Claude di 67router impersona e la prima linea che include
 > nativamente il livello Fable 5.1). Con il nuovo pin, il livello di installazione e `claude --version` sono stati
 > verificati sull'immagine di base fissata, e la suite di unit test del bridge, `compose config` e la
 > prova statica di isolamento vengono completate correttamente, ma lo scenario mock offline e la suite live a tre scenari
@@ -50,11 +50,11 @@ di grandi dimensioni utilizzano un indicatore visibile di troncamento.
 Il parser accetta un solo envelope `<tool>{...}</tool>` autonomo per ciascun turno del modello. Verifica
 il nome rispetto all'elenco degli strumenti della richiesta, convalida gli argomenti rispetto al JSON Schema dello strumento,
 rifiuta combinazioni di testo narrativo e azioni e consente un solo tentativo di correzione limitato. Claude Code esegue quindi
-localmente il `tool_use` Anthropic risultante e invia il `tool_result` a OmniRoute.
+localmente il `tool_use` Anthropic risultante e invia il `tool_result` a 67router.
 
 ## Routing automatico
 
-Il provider è idoneo per i pool di candidati `auto/*` di OmniRoute quando non è bloccato.
+Il provider è idoneo per i pool di candidati `auto/*` di 67router quando non è bloccato.
 L'idoneità come candidato non ne garantisce la selezione: la strategia di routing della combinazione (ad esempio,
 l'ultima configurazione nota come funzionante) potrebbe preferire un altro provider. Utilizzare `dva/<model>` o una combinazione che dia priorità a Devin quando
 è necessario che ogni richiesta venga instradata tramite Devin.
@@ -66,16 +66,16 @@ inaccessibili. I servizi Compose:
 
 - vengono eseguiti con UID/GID `10001:10001`, con un file system radice di sola lettura, capability rimosse e
   `no-new-privileges`;
-- utilizzano una directory `/home/bridge` privata, un volume dedicato per la configurazione di Claude, dati OmniRoute isolati
+- utilizzano una directory `/home/bridge` privata, un volume dedicato per la configurazione di Claude, dati 67router isolati
   e un volume `devin-auth` separato;
 - montano esclusivamente workspace/prove `.sandbox` usa e getta;
 - non montano la home dell'host, Keychain, credenziali SSH o cloud, né il socket Docker;
 - costruiscono ambienti espliciti e rimuovono le variabili API/OAuth/di routing di Anthropic;
 - indirizzano l'inferenza di Claude Code esclusivamente a `http://omniroute:20128` con una chiave solo locale.
 
-Il profilo offline utilizza una rete interna. Nel profilo live, OmniRoute raggiunge gli
+Il profilo offline utilizza una rete interna. Nel profilo live, 67router raggiunge gli
 endpoint ufficiali di Devin esclusivamente tramite `network-guard`; le destinazioni non correlate vengono bloccate.
-Claude Code dispone di una protezione in uscita separata che blocca tutto e può raggiungere esclusivamente il servizio OmniRoute
+Claude Code dispone di una protezione in uscita separata che blocca tutto e può raggiungere esclusivamente il servizio 67router
 locale tramite `NO_PROXY`. I file di audit delle protezioni vengono montati esclusivamente dal rispettivo processo di protezione. Gli
 script verificano proprietà, modalità, conteggio dei collegamenti e ogni decisione prima di esportare
 prove prive di token.

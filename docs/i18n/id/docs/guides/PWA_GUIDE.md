@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute didistribusikan sebagai Progressive Web App yang dapat diinstal sepenuhnya. Saat Anda mengakses dasbor dari browser seluler apa pun — Android (Chrome) atau iOS (Safari) — Anda dapat memilih "Tambahkan ke Layar Utama" dan mendapatkan pengalaman seperti aplikasi native tanpa memerlukan toko aplikasi.
+67router didistribusikan sebagai Progressive Web App yang dapat diinstal sepenuhnya. Saat Anda mengakses dasbor dari browser seluler apa pun — Android (Chrome) atau iOS (Safari) — Anda dapat memilih "Tambahkan ke Layar Utama" dan mendapatkan pengalaman seperti aplikasi native tanpa memerlukan toko aplikasi.
 
 ## Apa Itu PWA?
 
-Progressive Web App mengubah dasbor web OmniRoute menjadi sesuatu yang terlihat dan terasa seperti aplikasi seluler native. Setelah diinstal, aplikasi ini:
+Progressive Web App mengubah dasbor web 67router menjadi sesuatu yang terlihat dan terasa seperti aplikasi seluler native. Setelah diinstal, aplikasi ini:
 
 - Diluncurkan dari layar utama dengan ikonnya sendiri
 - Dibuka dalam layar penuh — tanpa bilah alamat browser atau antarmuka tab
@@ -20,26 +20,26 @@ Progressive Web App mengubah dasbor web OmniRoute menjadi sesuatu yang terlihat 
 
 ### Android (Chrome)
 
-1. Buka dasbor OmniRoute di Chrome: `http://YOUR_IP:20128`
-2. Chrome akan secara otomatis menampilkan banner **"Tambahkan OmniRoute ke Layar utama"**, atau:
+1. Buka dasbor 67router di Chrome: `http://YOUR_IP:20128`
+2. Chrome akan secara otomatis menampilkan banner **"Tambahkan 67router ke Layar utama"**, atau:
    - Ketuk menu **⋮** (tiga titik) → **"Tambahkan ke Layar utama"** atau **"Instal aplikasi"**
 3. Konfirmasikan perintah
-4. OmniRoute muncul di layar utama Anda sebagai aplikasi mandiri
+4. 67router muncul di layar utama Anda sebagai aplikasi mandiri
 
 ### iOS (Safari)
 
-1. Buka dasbor OmniRoute di Safari: `http://YOUR_IP:20128`
+1. Buka dasbor 67router di Safari: `http://YOUR_IP:20128`
 2. Ketuk tombol **Bagikan** (kotak dengan panah)
 3. Gulir ke bawah dan ketuk **"Tambahkan ke Layar Utama"**
-4. Beri nama (nama default-nya adalah "OmniRoute") dan ketuk **Tambah**
-5. OmniRoute muncul di layar utama Anda dengan ikon aplikasi
+4. Beri nama (nama default-nya adalah "67router") dan ketuk **Tambah**
+5. 67router muncul di layar utama Anda dengan ikon aplikasi
 
 ### Desktop (Chrome / Edge)
 
-1. Buka dasbor OmniRoute
-2. Klik **ikon instalasi** di bilah alamat (atau ⋮ → "Instal OmniRoute...")
+1. Buka dasbor 67router
+2. Klik **ikon instalasi** di bilah alamat (atau ⋮ → "Instal 67router...")
 3. Konfirmasikan perintah
-4. OmniRoute terbuka sebagai jendela mandiri — tanpa tab dan tanpa bilah alamat
+4. 67router terbuka sebagai jendela mandiri — tanpa tab dan tanpa bilah alamat
 
 ## Fitur
 
@@ -49,15 +49,15 @@ Manifest dikonfigurasi dengan `display: "fullscreen"`, yang berarti aplikasi ter
 
 ### Dukungan Offline
 
-OmniRoute menyertakan service worker (`sw.js`) yang menyediakan caching cerdas:
+67router menyertakan service worker (`sw.js`) yang menyediakan caching cerdas:
 
-| Jenis Aset                                            | Strategi                             | Perilaku                                                                                                             |
-| ----------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| **Shell Aplikasi**                                    | Cache-first                          | `/`, `/offline`, manifest, dan ikon disimpan lebih dahulu dalam cache saat instalasi                                 |
-| **Aset statis** (CSS, JS, gambar, font)               | Network-first dengan fallback cache  | Mengambil versi terbaru dari jaringan; menggunakan cache jika offline                                                |
-| **Bundle Next.js** (`/_next/`)                        | Network-first dengan pembaruan cache | Mengambil dari jaringan dan memperbarui cache; menyajikan versi cache jika offline                                   |
-| **Permintaan navigasi**                               | Bypass (tidak pernah dicegat)        | Browser menangani fallback HTTP/3→HTTP/2; soket QUIC yang tidak aktif tidak boleh berubah menjadi `Response.error()` |
-| **Rute API / dasbor** (`/api/`, `/a2a`, `/dashboard`) | Bypass (tidak pernah di-cache)       | Selalu langsung menuju server — tidak pernah dicegat oleh service worker                                             |
+| Jenis Aset                                    | Strategi                             | Perilaku                                                                                                             |
+| --------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| **Shell Aplikasi**                            | Cache-first                          | `/`, `/offline`, manifest, dan ikon disimpan lebih dahulu dalam cache saat instalasi                                 |
+| **Aset statis** (CSS, JS, gambar, font)       | Network-first dengan fallback cache  | Mengambil versi terbaru dari jaringan; menggunakan cache jika offline                                                |
+| **Bundle Next.js** (`/_next/`)                | Network-first dengan pembaruan cache | Mengambil dari jaringan dan memperbarui cache; menyajikan versi cache jika offline                                   |
+| **Permintaan navigasi**                       | Bypass (tidak pernah dicegat)        | Browser menangani fallback HTTP/3→HTTP/2; soket QUIC yang tidak aktif tidak boleh berubah menjadi `Response.error()` |
+| **Rute API / dasbor** (`/api/`, `/dashboard`) | Bypass (tidak pernah di-cache)       | Selalu langsung menuju server — tidak pernah dicegat oleh service worker                                             |
 
 ### Halaman Offline
 
@@ -70,7 +70,7 @@ Saat jaringan tidak tersedia dan pengguna membuka halaman baru, service worker m
 
 ### Ikon Aplikasi
 
-OmniRoute menyediakan ikon yang dioptimalkan untuk setiap platform:
+67router menyediakan ikon yang dioptimalkan untuk setiap platform:
 
 | File                   | Ukuran           | Digunakan Oleh                            |
 | ---------------------- | ---------------- | ----------------------------------------- |
@@ -93,9 +93,9 @@ Dihasilkan oleh Next.js melalui `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Terletak di `src/shared/components/PwaRegister.tsx`, komponen klien ini:
 
 ## Penggunaan dengan Termux (Android)
 
-Saat menjalankan OmniRoute di Android melalui Termux, PWA berfungsi dengan lancar:
+Saat menjalankan 67router di Android melalui Termux, PWA berfungsi dengan lancar:
 
-1. Jalankan OmniRoute di Termux: `npx omniroute`
+1. Jalankan 67router di Termux: `npx omniroute`
 2. Buka Chrome di ponsel yang sama: `http://localhost:20128`
 3. Instal PWA melalui "Tambahkan ke Layar Utama"
 4. PWA terhubung ke server Termux lokal — semuanya berjalan di perangkat
@@ -156,7 +156,7 @@ Kombinasi ini berarti ponsel Android Anda berfungsi sebagai **server** (Termux) 
 
 ## Penggunaan dari Perangkat Lain
 
-Instal PWA di perangkat apa pun yang memiliki akses browser ke server OmniRoute Anda:
+Instal PWA di perangkat apa pun yang memiliki akses browser ke server 67router Anda:
 
 - **Ponsel/tablet lain**: Buka `http://PHONE_IP:20128` dan instal PWA
 - **Laptop**: Buka Chrome/Edge dan instal sebagai PWA desktop

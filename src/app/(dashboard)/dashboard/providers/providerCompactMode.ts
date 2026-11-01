@@ -27,7 +27,6 @@ export interface CompactProviderEntryOptions<TProvider> {
   webFetchEntries: ProviderCategoryEntries<TProvider>;
   audioProviderEntries: ProviderCategoryEntries<TProvider>;
   localProviderEntries: ProviderCategoryEntries<TProvider>;
-  cloudAgentProviderEntries: ProviderCategoryEntries<TProvider>;
 }
 
 function getCompactProviderEntryGroups<TProvider>({
@@ -50,7 +49,6 @@ function getCompactProviderEntryGroups<TProvider>({
   webFetchEntries,
   audioProviderEntries,
   localProviderEntries,
-  cloudAgentProviderEntries,
 }: CompactProviderEntryOptions<TProvider>): ProviderEntry<TProvider>[][] {
   const oauthEntries = oauthProviderEntries.filter(
     (entry) => !IDE_PROVIDER_IDS.has(entry.providerId)
@@ -77,7 +75,6 @@ function getCompactProviderEntryGroups<TProvider>({
   if (activeCategory === "webfetch") return [webFetchEntries];
   if (activeCategory === "audio") return [audioProviderEntries];
   if (activeCategory === "local") return [localProviderEntries];
-  if (activeCategory === "cloudagent") return [cloudAgentProviderEntries];
 
   return [
     compatibleProviderEntries,
@@ -88,7 +85,6 @@ function getCompactProviderEntryGroups<TProvider>({
     upstreamProxyEntries,
     aggregatorProviderEntries,
     enterpriseProviderEntries,
-    cloudAgentProviderEntries,
     localProviderEntries,
     searchProviderEntries,
     embeddingRerankProviderEntries,
@@ -108,7 +104,6 @@ export function buildCompactProviderEntriesForPage<TProvider>(
 }
 
 const CATEGORY_AUTH_TYPES: Record<string, string> = {
-  "cloud-agent": "cloud-agent",
   "no-auth": "no-auth",
   "upstream-proxy": "upstream-proxy",
   "web-cookie": "web-cookie",

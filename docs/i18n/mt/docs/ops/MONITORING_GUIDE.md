@@ -4,7 +4,7 @@
 
 ---
 
-> **Fil-qosor**: OmniRoute jiġi b’monitoraġġ tas-saħħa integrat, pilota awtomatiku għall-fornituri, traċċar tal-kwoti, u punti ta’ integrazzjoni għall-osservabbiltà. Din il-gwida tkopri l-pannell, it-twissijiet, u s-soluzzjoni tal-problemi.
+> **Fil-qosor**: 67router jiġi b’monitoraġġ tas-saħħa integrat, pilota awtomatiku għall-fornituri, traċċar tal-kwoti, u punti ta’ integrazzjoni għall-osservabbiltà. Din il-gwida tkopri l-pannell, it-twissijiet, u s-soluzzjoni tal-problemi.
 
 **Sorsi:**
 
@@ -20,7 +20,7 @@
 
 ## Ħarsa ġenerali
 
-OmniRoute għandu **3 saffi ta’ monitoraġġ**:
+67router għandu **3 saffi ta’ monitoraġġ**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Għal kull combo:
 
 ## API tal-Kontroll tas-Saħħa
 
-OmniRoute jesponi **żewġ** endpoints HTTP tas-saħħa. Dawn ma jistgħux jintużaw b’mod interkambjabbli mill-orkestraturi.
+67router jesponi **żewġ** endpoints HTTP tas-saħħa. Dawn ma jistgħux jintużaw b’mod interkambjabbli mill-orkestraturi.
 
 | Mogħdija                     | Għan                                                                          | Piż                                                 | Uża għal                                                                    |
 | ---------------------------- | ----------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ l-endpoint. Uża `failed` + `failedConnections` għal fallimenti diretti tal-pro
 
 ### Rakkomandazzjonijiet għall-probes ta’ Kubernetes
 
-OmniRoute huwa **proċess Node wieħed** (event loop wieħed). Id-Docker `HEALTHCHECK` standard jimmira lejn `/healthz`, li huwa ħafif. `/api/monitoring/health` huwa **tqil wisq** għall-intervalli tal-liveness ta’ kubelet.
+67router huwa **proċess Node wieħed** (event loop wieħed). Id-Docker `HEALTHCHECK` standard jimmira lejn `/healthz`, li huwa ħafif. `/api/monitoring/health` huwa **tqil wisq** għall-intervalli tal-liveness ta’ kubelet.
 
 | Sonda              | Mira rakkomandata                                                                           | Noti                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------ | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Relatat: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (sondi
 
 ### watchdog ta’ systemd (event loop iffriżat)
 
-Fuq host b’systemd, OmniRoute jgħarraf lill-maniġer tas-servizz meta jkun lest u jkompli jibgħatlu sinjali, sabiex server li l-event loop tiegħu jeħel jinqatel u jerġa’ jinbeda minflok jibqa’ attiv u sieket. Is-sinjali jintbagħtu mill-event loop tas-server stess: meta dan jiġi mblukkat, is-sinjali jieqfu, u systemd jerġa’ jibda s-servizz ladarba jgħaddi `WatchdogSec` mingħajr ma jirċievi wieħed.
+Fuq host b’systemd, 67router jgħarraf lill-maniġer tas-servizz meta jkun lest u jkompli jibgħatlu sinjali, sabiex server li l-event loop tiegħu jeħel jinqatel u jerġa’ jinbeda minflok jibqa’ attiv u sieket. Is-sinjali jintbagħtu mill-event loop tas-server stess: meta dan jiġi mblukkat, is-sinjali jieqfu, u systemd jerġa’ jibda s-servizz ladarba jgħaddi `WatchdogSec` mingħajr ma jirċievi wieħed.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) diġà jikteb unit tal-utent b’dan. Unit li tikteb int stess (bil-`Type=simple` predefinit) ma jkollux watchdog, għalhekk żid dawn il-linji mat-taqsima `[Service]` tiegħu:
 
@@ -443,7 +443,7 @@ Il-konfigurazzjoni tal-kontroll tas-saħħa tat-token tiġi ġestita internament
 
 ### Kanali Integrati
 
-OmniRoute jappoġġja **3 kanali ta' twissija**:
+67router jappoġġja **3 kanali ta' twissija**:
 
 | Kanal                | Konfigurazzjoni   | Każ ta' użu                          |
 | -------------------- | ----------------- | ------------------------------------ |
@@ -559,7 +559,7 @@ Oħloq `~/.omniroute/dashboard.json`:
 ### "Il-kwota tidher f’saħħitha iżda qed nara 429s"
 
 - 429 ifisser li l-fornitur qed jgħid li użajt il-kwota tiegħek
-- It-traċċar tal-kwota ta’ OmniRoute jista’ jkun **skadut** — il-verità tal-fornitur tinsab upstream
+- It-traċċar tal-kwota ta’ 67router jista’ jkun **skadut** — il-verità tal-fornitur tinsab upstream
 - Id-data tal-kwota tiġi aġġornata awtomatikament permezz tal-moniter intern tal-kwota
 
 ### "Il-combo qed ifalli iżda l-miri kollha jidhru f’saħħithom"
@@ -572,7 +572,7 @@ Oħloq `~/.omniroute/dashboard.json`:
 
 - Ħaddem `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Jekk tirritorna "ok" — huwa allarm falz, il-verifika tas-saħħa qed tkun stretta wisq
-- Jekk tirritorna xi ħaġa oħra — **waqqaf OmniRoute** u segwi l-[gwida għall-irkupru minn diżastru](./DATABASE_GUIDE.md#disaster-recovery)
+- Jekk tirritorna xi ħaġa oħra — **waqqaf 67router** u segwi l-[gwida għall-irkupru minn diżastru](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Il-pressjoni fuq il-heap tal-memorja hija kritika"
 

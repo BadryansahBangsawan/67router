@@ -8,7 +8,7 @@
 
 > **Source de référence :** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute permet à chaque proxy de porter une **directive de famille d’adresses pour le trafic sortant**. Par défaut, le système d’exploitation choisit IPv4 ou IPv6 (double pile, « Happy Eyeballs »). Lorsque vous définissez la directive sur `ipv4` ou `ipv6`, OmniRoute épingle chaque connexion passant par ce proxy à la famille choisie et **échoue de manière fermée** au lieu de se rabattre sur l’autre famille.
+67router permet à chaque proxy de porter une **directive de famille d’adresses pour le trafic sortant**. Par défaut, le système d’exploitation choisit IPv4 ou IPv6 (double pile, « Happy Eyeballs »). Lorsque vous définissez la directive sur `ipv4` ou `ipv6`, 67router épingle chaque connexion passant par ce proxy à la famille choisie et **échoue de manière fermée** au lieu de se rabattre sur l’autre famille.
 
 Cette page décrit la directive, sa raison d’être, l’endroit où la configurer et la manière dont elle est résolue à l’exécution.
 
@@ -122,7 +122,7 @@ Pour le reste de l’API CRUD/d’affectation des proxys, consultez [PROXY_GUIDE
 
 ## Comment `auto` est résolu
 
-Lorsque `family` vaut `auto`, OmniRoute n’ajoute **aucune** directive : l’URL du proxy est utilisée telle quelle et la famille de connexion est déterminée de manière intrinsèque.
+Lorsque `family` vaut `auto`, 67router n’ajoute **aucune** directive : l’URL du proxy est utilisée telle quelle et la famille de connexion est déterminée de manière intrinsèque.
 
 Au moment de la construction de l’URL (`proxyConfigToUrl` / `normalizeProxyUrl` dans `open-sse/utils/proxyDispatcher.ts`), un proxy `auto` produit une URL simple sans marqueur :
 
@@ -158,7 +158,7 @@ Ainsi :
 
 Une directive autre que `auto` est transmise sous la forme d’un marqueur de requête synthétique unique — `?family=ipv4` ou `?family=ipv6` — ajouté une seule fois à l’URL normalisée du proxy. `normalizeProxyUrl` veille à supprimer puis à rajouter ce marqueur exactement une fois afin qu’il ne perturbe jamais l’analyse du port.
 
-Lors de la création du répartiteur, le marqueur est lu et converti en une famille de connexion concrète. Si l’hôte est une adresse IP littérale de la famille **opposée**, OmniRoute lève une exception (toute contradiction entraîne un refus par défaut) :
+Lors de la création du répartiteur, le marqueur est lu et converti en une famille de connexion concrète. Si l’hôte est une adresse IP littérale de la famille **opposée**, 67router lève une exception (toute contradiction entraîne un refus par défaut) :
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ La famille concrète est ensuite imposée au connecteur :
 
 ## Compatibilité SOCKS5
 
-L’imposition de la famille fonctionne avec les proxys SOCKS5, mais la version standard de `fetch-socks` n’expose pas les options de socket nécessaires pour imposer la famille utilisée lors de la connexion au proxy. OmniRoute fournit son propre connecteur à cet effet :
+L’imposition de la famille fonctionne avec les proxys SOCKS5, mais la version standard de `fetch-socks` n’expose pas les options de socket nécessaires pour imposer la famille utilisée lors de la connexion au proxy. 67router fournit son propre connecteur à cet effet :
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** ہر اس ماڈل کو، جسے آپ کا OmniRoute پیش کرتا ہے، _مقامی_ GitHub Copilot Chat
+**OmniCopilot** ہر اس ماڈل کو، جسے آپ کا 67router پیش کرتا ہے، _مقامی_ GitHub Copilot Chat
 ماڈل پِکر میں شامل کر دیتا ہے۔ نہ کوئی دوسری سائیڈ بار، نہ الگ چیٹ UI — Copilot کا ایجنٹ موڈ، ٹول کالنگ،
 MCP سرورز اور حسبِ ضرورت ہدایات بدستور کام کرتی رہتی ہیں، بس آپ کے منتخب کردہ ماڈل پر چلتی ہیں۔
 
@@ -23,13 +23,13 @@ MCP سرورز اور حسبِ ضرورت ہدایات بدستور کام کر�
 
 ## سیٹ اپ
 
-1. **OmniRoute چلائیں** — `npm install -g omniroute && omniroute` (ڈیش بورڈ `http://localhost:20128` پر)۔
+1. **67router چلائیں** — `npm install -g omniroute && omniroute` (ڈیش بورڈ `http://localhost:20128` پر)۔
 2. **ایکسٹینشن انسٹال کریں** — Extensions منظر میں "OmniRoute" تلاش کریں۔
 3. **ماڈل منتخب کریں** — Copilot Chat → ماڈل پِکر → **Manage Models…** → **OmniRoute**، پھر
    اپنی مطلوبہ چیزوں پر نشان لگائیں۔
 
-جب OmniRoute ڈیفالٹ پورٹ پر چل رہا ہو تو کچھ بھی کنفیگر کرنے کی ضرورت نہیں۔ ریموٹ انسٹینس کے لیے،
-**Activity Bar میں OmniRoute آئیکن** کھولیں (یا `OmniRoute: Manage Connection` چلائیں) اور یہ سیٹ کریں:
+جب 67router ڈیفالٹ پورٹ پر چل رہا ہو تو کچھ بھی کنفیگر کرنے کی ضرورت نہیں۔ ریموٹ انسٹینس کے لیے،
+**Activity Bar میں 67router آئیکن** کھولیں (یا `OmniRoute: Manage Connection` چلائیں) اور یہ سیٹ کریں:
 
 - **سرور URL** — سرور کا روٹ، مثلاً `http://192.168.0.15:20128`۔ `/v1` لاحقہ
   ایکسٹینشن خود شامل کرتی ہے؛ اسے شامل نہ کریں۔
@@ -74,7 +74,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 اس لیے پِکر تک پہنچنے سے پہلے انہیں ان کے `type` فیلڈ کے مطابق فلٹر کر دیا جاتا ہے۔ **Responses-API
 ماڈلز برقرار رکھے جاتے ہیں** — ہر Codex / GPT-5.x اندراج `supported_endpoints: ["responses"]`
-مشتہر کرتا ہے، اور OmniRoute انہیں `/v1/chat/completions` کے لیے تبدیل کرتا ہے، اس لیے وہ مکمل طور پر قابلِ استعمال ہیں۔
+مشتہر کرتا ہے، اور 67router انہیں `/v1/chat/completions` کے لیے تبدیل کرتا ہے، اس لیے وہ مکمل طور پر قابلِ استعمال ہیں۔
 
 ### وہ فراہم کنندگان جنہیں آپ نے کبھی کنفیگر نہیں کیا
 
@@ -86,7 +86,7 @@ HTTP 400 — Model '<id>' is an image-generation model and cannot be used on
 
 ## VS Code ٹیب کے اندر Dashboard
 
-`omnicopilot.dashboardOpen: "editor"` بیرونی براؤزر کے بجائے Simple Browser کے ذریعے OmniRoute dashboard کو editor ٹیب میں دکھاتا ہے۔ سرور پر embedding کو **واضح طور پر فعال کرنا ضروری ہے**، جس کے لیے `DASHBOARD_ALLOW_EMBED=vscode` استعمال ہوتا ہے۔ یہ HTML صفحات کو ڈیفالٹ `frame-ancestors 'none'` + `X-Frame-Options: DENY` کے بجائے `frame-ancestors 'self' vscode-webview:` کے ساتھ پیش کرتا ہے۔ API سطح (`/api`، `/v1`، `/v1beta`، `/a2a`، `/healthz`) دونوں صورتوں میں سخت headers برقرار رکھتی ہے۔
+`omnicopilot.dashboardOpen: "editor"` بیرونی براؤزر کے بجائے Simple Browser کے ذریعے 67router dashboard کو editor ٹیب میں دکھاتا ہے۔ سرور پر embedding کو **واضح طور پر فعال کرنا ضروری ہے**، جس کے لیے `DASHBOARD_ALLOW_EMBED=vscode` استعمال ہوتا ہے۔ یہ HTML صفحات کو ڈیفالٹ `frame-ancestors 'none'` + `X-Frame-Options: DENY` کے بجائے `frame-ancestors 'self' vscode-webview:` کے ساتھ پیش کرتا ہے۔ API سطح (`/api`، `/v1`، `/v1beta`، `/a2a`، `/healthz`) دونوں صورتوں میں سخت headers برقرار رکھتی ہے۔
 
 > ⚠️ **یہ build-time flag ہے، runtime flag نہیں۔** Next.js، `headers()` کو route
 > manifest میں compile کرتا ہے، اس لیے `next.config.mjs` متغیر کو bundle بناتے وقت پڑھتا ہے
@@ -122,7 +122,7 @@ embed-enabled build کے بغیر صفحہ frame ہونے سے انکار کر �
 
 | علامت                                                 | وجہ / حل                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| picker میں OmniRoute models موجود نہیں                | سرور تک رسائی ممکن نہیں۔ status-bar کا نقطہ سرمئی ہو جاتا ہے؛ `OmniRoute: Check Connection` چلائیں۔ Discovery کو جان بوجھ کر خاموش رکھا گیا ہے اور prompt دکھانے کے بجائے کوئی model شامل نہیں کرتی۔                                                                                          |
+| picker میں 67router models موجود نہیں                 | سرور تک رسائی ممکن نہیں۔ status-bar کا نقطہ سرمئی ہو جاتا ہے؛ `OmniRoute: Check Connection` چلائیں۔ Discovery کو جان بوجھ کر خاموش رکھا گیا ہے اور prompt دکھانے کے بجائے کوئی model شامل نہیں کرتی۔                                                                                          |
 | ہر model دو مرتبہ دکھائی دیتا ہے                      | آپ OmniCopilot کا 1.0.1 سے پرانا ورژن استعمال کر رہے ہیں — update کریں۔ extension اب `?prefix=alias` کی درخواست کرتی ہے۔                                                                                                                                                                      |
 | پہلے کوئی image/audio model فہرست میں تھا اور اب نہیں | یہ 1.0.1 سے جان بوجھ کر کیا گیا ہے — وہ کبھی بھی chat request کا جواب نہیں دے سکتا تھا۔                                                                                                                                                                                                       |
 | Activity Bar سے panel غائب ہے                         | VS Code اضافی view containers کو Activity Bar کے نچلے حصے میں موجود **"…"** overflow میں منتقل کر دیتا ہے، اور right-click کے ذریعے چھپایا گیا container چھپا رہتا ہے۔ Activity Bar پر right-click کریں → **OmniRoute** کو منتخب کریں، یا اسے `OmniRoute: Manage Connection` کے ذریعے کھولیں۔ |
@@ -134,6 +134,6 @@ embed-enabled build کے بغیر صفحہ frame ہونے سے انکار کر �
 ## مزید دیکھیں
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — دیگر تمام کوڈنگ ٹولز
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ریموٹ OmniRoute کو چلانا
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ریموٹ 67router کو چلانا
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` کا معاہدہ
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — ایکسٹینشن کے اپنے کیٹلاگ نوٹس

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Error: {message}",
-    "serverOffline": "OmniRoute server is offline. Start it with: omniroute serve",
+    "serverOffline": "67router server is offline. Start it with: omniroute serve",
     "authRequired": "Authentication required. Set OMNIROUTE_API_KEY or run: omniroute setup",
     "rateLimited": "Rate limit exceeded. Retry after {seconds}s.",
     "timeout": "Request timed out after {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Skip confirmation prompt"
   },
   "setup": {
-    "title": "OmniRoute Setup",
+    "title": "67router Setup",
     "passwordPrompt": "Admin password",
     "providerPrompt": "Default provider (leave blank to skip)",
     "done": "Setup complete",
@@ -30,7 +30,7 @@
     "opencode": "Install and configure the bundled @omniroute/opencode-plugin for OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute Doctor",
+    "title": "67router Doctor",
     "dbOk": "Database: OK ({path})",
     "dbMissing": "Database: not initialized — run `omniroute setup`",
     "portOk": "Port {port}: available",
@@ -82,7 +82,7 @@
       "providerOpt": "Filter by provider name",
       "header": "ID         Provider       Name                     Expiry Status  Test Status  Cooldown Until",
       "noData": "No provider connection data available.",
-      "requiresServer": "providers status requires the OmniRoute server to be running."
+      "requiresServer": "providers status requires the 67router server to be running."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Add or update an API key for a provider",
     "listDescription": "List all configured API keys",
     "removeDescription": "Remove an API key for a provider",
-    "regenerateDescription": "Regenerate an OmniRoute API key",
-    "revokeDescription": "Revoke an OmniRoute API key",
+    "regenerateDescription": "Regenerate a 67router API key",
+    "revokeDescription": "Revoke a 67router API key",
     "revealDescription": "Reveal the unmasked API key value",
     "usageDescription": "Show recent usage for an API key",
     "usageLimitOpt": "Number of recent requests",
@@ -172,13 +172,6 @@
       "period": "Time range: 1d|7d|30d|90d|ytd|all (default: 30d)",
       "provider": "Filter by provider ID"
     },
-    "budget": {
-      "description": "Manage cost budgets",
-      "set": {
-        "scope": "Budget scope (default: global)",
-        "period": "Budget period: daily|weekly|monthly (default: monthly)"
-      }
-    },
     "quota": {
       "description": "Show provider quota usage",
       "provider": "Filter by provider ID",
@@ -225,7 +218,7 @@
     "noCombo": "No matching combo found. Configure one with: omniroute combo create"
   },
   "chat": {
-    "description": "Send a one-shot chat prompt to OmniRoute",
+    "description": "Send a one-shot chat prompt to 67router",
     "file": "Read prompt from file",
     "stdin": "Read prompt from stdin",
     "system": "System prompt",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Start the OmniRoute server (default action)",
-    "starting": "Starting OmniRoute server on port {port}...",
+    "description": "Start the 67router server (default action)",
+    "starting": "Starting 67router server on port {port}...",
     "ready": "Ready at http://localhost:{port}",
     "stopping": "Stopping server (PID {pid})...",
     "stopped": "Server stopped.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Backup",
-    "description": "Create a backup of OmniRoute data",
+    "description": "Create a backup of 67router data",
     "creating": "Creating backup...",
     "done": "Backup saved to {path}",
     "noFiles": "No files to backup (database not initialized)",
@@ -277,7 +270,7 @@
     "noBackups": "No backups found.",
     "notFound": "Backup not found: {name}",
     "confirmRestore": "Overwrite current data with backup from {ts}?",
-    "createDescription": "Create a backup of OmniRoute data",
+    "createDescription": "Create a backup of 67router data",
     "nameOpt": "Custom backup name",
     "cloudOpt": "Upload backup to cloud storage",
     "encryptOpt": "Encrypt backup with AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Failed to clear cache."
   },
   "redis": {
-    "description": "Launch a 1-click local Redis container (Podman or Docker) for OmniRoute caching and quota tracking"
+    "description": "Launch a 1-click local Redis container (Podman or Docker) for 67router caching and quota tracking"
   },
   "test": {
     "description": "Test a provider connection",
@@ -390,36 +383,8 @@
       "description": "MCP audit log (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "List available A2A skills from the agent card"
-    },
-    "invoke": {
-      "description": "Invoke an A2A skill and return the task ID",
-      "input": "JSON input object",
-      "input_file": "Path to JSON input file",
-      "wait": "Wait for task completion before returning",
-      "timeout": "Timeout waiting for completion in ms (default: 60000)"
-    },
-    "tasks": {
-      "description": "Manage A2A tasks",
-      "list": {
-        "status": "Filter by status",
-        "skill": "Filter by skill ID"
-      },
-      "watch": {
-        "description": "Poll task status until completion"
-      },
-      "stream": {
-        "description": "Stream task execution events via SSE"
-      },
-      "logs": {
-        "description": "Show task messages and artifacts"
-      }
-    }
-  },
   "policy": {
-    "description": "Manage OmniRoute authorization policies",
+    "description": "Manage 67router authorization policies",
     "list": {
       "description": "List policies",
       "kind": "Filter by kind (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Configure and inspect the OmniRoute compression pipeline",
+    "description": "Configure and inspect the 67router compression pipeline",
     "status": {
       "description": "Show current compression status and settings"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Rotate tunnel {type}? (a new URL will be generated)"
   },
   "stop": {
-    "description": "Stop the OmniRoute server",
+    "description": "Stop the 67router server",
     "stopping": "Stopping server (PID {pid})...",
     "stopped": "Server stopped.",
     "notRunning": "No server is running.",
     "portFallback": "No PID file found, attempting port-based stop..."
   },
   "restart": {
-    "description": "Restart the OmniRoute server",
-    "restarting": "Restarting OmniRoute server..."
+    "description": "Restart the 67router server",
+    "restarting": "Restarting 67router server..."
   },
   "dashboard": {
-    "description": "Open the OmniRoute dashboard in a browser",
+    "description": "Open the 67router dashboard in a browser",
     "opening": "Opening dashboard at {url}",
     "urlOnly": "Print dashboard URL without opening browser",
     "tui": "Open interactive TUI dashboard (terminal UI, 7 tabs)"
@@ -560,120 +525,6 @@
       "description": "Get a single audit log entry by ID"
     }
   },
-  "skills": {
-    "description": "Manage OmniRoute skills (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "List installed skills",
-      "type": "Filter by type (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Show only enabled skills",
-      "disabled": "Show only disabled skills",
-      "api_key": "Filter by API key"
-    },
-    "get": {
-      "description": "Get details for a skill by ID"
-    },
-    "install": {
-      "description": "Install a skill from file or URL",
-      "from_file": "Path to skill JSON definition file",
-      "from_url": "URL of remote skill definition",
-      "type": "Skill type (sandbox|custom|hybrid)",
-      "enable": "Enable skill after install"
-    },
-    "enable": {
-      "description": "Enable a skill by ID"
-    },
-    "disable": {
-      "description": "Disable a skill by ID",
-      "yes": "Skip confirmation prompt"
-    },
-    "delete": {
-      "description": "Delete a skill by ID",
-      "yes": "Skip confirmation prompt"
-    },
-    "execute": {
-      "description": "Execute a skill by ID",
-      "input": "JSON input object",
-      "input_file": "Path to JSON input file",
-      "timeout": "Execution timeout in ms (default: 30000)"
-    },
-    "executions": {
-      "description": "List skill execution history",
-      "skill": "Filter by skill ID",
-      "limit": "Maximum results (default: 50)",
-      "status": "Filter by status (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Manage skills installed via SSH"
-    },
-    "marketplace": {
-      "description": "Browse and install skills from the marketplace"
-    },
-    "mp": {
-      "search": {
-        "description": "Search marketplace packages",
-        "category": "Filter by category",
-        "tag": "Filter by tag",
-        "limit": "Maximum results (default: 30)",
-        "sort": "Sort by: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Show package details and readme"
-      },
-      "install": {
-        "description": "Install a marketplace package",
-        "version": "Package version (default: latest)",
-        "enable": "Enable after install",
-        "yes": "Skip confirmation prompt"
-      },
-      "categories": {
-        "description": "List marketplace categories"
-      },
-      "featured": {
-        "description": "Show featured marketplace packages"
-      }
-    }
-  },
-  "memory": {
-    "description": "Manage OmniRoute conversational memory (FTS5 + vector)",
-    "search": {
-      "description": "Search memory entries by semantic query",
-      "type": "Filter by memory type (user|feedback|project|reference)",
-      "limit": "Maximum results (default: 20)",
-      "api_key": "Filter by API key",
-      "token_budget": "Limit total tokens in results"
-    },
-    "add": {
-      "description": "Add a new memory entry",
-      "content": "Memory text content",
-      "file": "Read content from file",
-      "type": "Memory type (default: user)",
-      "metadata": "JSON metadata object",
-      "api_key": "Associate with API key"
-    },
-    "clear": {
-      "description": "Delete memory entries matching filters",
-      "type": "Filter by type",
-      "older": "Delete entries older than duration (30d, 6m, 1y)",
-      "api_key": "Filter by API key",
-      "yes": "Skip confirmation prompt"
-    },
-    "list": {
-      "description": "List memory entries without search ranking",
-      "type": "Filter by type",
-      "limit": "Maximum results (default: 100)",
-      "api_key": "Filter by API key"
-    },
-    "get": {
-      "description": "Get a single memory entry by ID"
-    },
-    "delete": {
-      "description": "Delete a memory entry by ID",
-      "yes": "Skip confirmation prompt"
-    },
-    "health": {
-      "description": "Show memory subsystem health (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Manage OAuth provider connections",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Skip confirmation prompt"
     }
   },
-  "cloud": {
-    "description": "Manage cloud AI agent tasks (codex, devin, jules)",
-    "agents": {
-      "description": "List available cloud agents"
-    },
-    "agent": {
-      "description": "Manage {agent} cloud agent tasks",
-      "auth": {
-        "description": "Authorize {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Manage cloud agent tasks",
-      "create": {
-        "description": "Create a new agent task",
-        "title": "Task title (defaults to first 80 chars of prompt)",
-        "prompt": "Task prompt text",
-        "prompt_file": "Read prompt from file",
-        "repo": "Repository URL to clone for the task",
-        "branch": "Branch name to use",
-        "metadata": "JSON metadata object"
-      },
-      "list": {
-        "description": "List agent tasks",
-        "status": "Filter by status (running|completed|failed|cancelled)",
-        "limit": "Maximum results (default: 50)"
-      },
-      "get": {
-        "description": "Get task details by ID"
-      },
-      "status": {
-        "description": "Print task status (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Cancel a running task",
-        "yes": "Skip confirmation prompt"
-      },
-      "approve": {
-        "description": "Approve the agent plan to start execution"
-      },
-      "message": {
-        "description": "Send a message to a running task"
-      }
-    },
-    "sources": {
-      "description": "List source files produced by a task"
-    }
-  },
-  "eval": {
-    "description": "Manage eval suites and runs",
-    "suites": {
-      "description": "Manage eval suites",
-      "list": {
-        "description": "List eval suites"
-      },
-      "get": {
-        "description": "Get eval suite details by ID"
-      },
-      "create": {
-        "description": "Create an eval suite from a JSON file",
-        "file": "Path to suite definition JSON file"
-      }
-    },
-    "run": {
-      "description": "Start an eval run for a suite",
-      "model": "Model ID to evaluate (default: auto)",
-      "combo": "Force a specific combo by name",
-      "concurrency": "Number of concurrent samples (default: 4)",
-      "tag": "Tag this run for later filtering",
-      "watch": "Watch run progress until completion"
-    },
-    "list": {
-      "description": "List eval runs",
-      "suite": "Filter by suite ID",
-      "status": "Filter by status",
-      "since": "Return runs since this timestamp",
-      "limit": "Maximum results (default: 50)"
-    },
-    "get": {
-      "description": "Get eval run details by ID"
-    },
-    "results": {
-      "description": "Show sample results for an eval run",
-      "failed": "Show only failed samples"
-    },
-    "cancel": {
-      "description": "Cancel a running eval",
-      "yes": "Skip confirmation prompt"
-    },
-    "scorecard": {
-      "description": "Show scorecard for a completed eval run"
-    }
-  },
-  "webhooks": {
-    "description": "Manage OmniRoute webhooks",
-    "events": {
-      "description": "List all available webhook event types"
-    },
-    "list": {
-      "description": "List configured webhooks"
-    },
-    "get": {
-      "description": "Get webhook details by ID"
-    },
-    "add": {
-      "description": "Register a new webhook",
-      "url": "Destination URL",
-      "events": "Comma-separated list of event types",
-      "secret": "HMAC signing secret",
-      "header": "Extra header in key=value format (repeatable)",
-      "no_enabled": "Create webhook in disabled state"
-    },
-    "update": {
-      "description": "Update an existing webhook",
-      "enabled": "Set enabled state (true|false)"
-    },
-    "remove": {
-      "description": "Delete a webhook",
-      "yes": "Skip confirmation prompt"
-    },
-    "test": {
-      "description": "Send a test event to a webhook",
-      "event": "Event type to simulate (default: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Smart AI Router with Auto Fallback",
+    "description": "67router — Smart AI Router with Auto Fallback",
     "version": "Print version and exit",
     "output": "Output format (table, json, jsonl, csv)",
     "quiet": "Suppress non-essential output",
     "no_color": "Disable colored output",
     "timeout": "HTTP request timeout in milliseconds",
-    "api_key": "API key for OmniRoute server",
-    "base_url": "OmniRoute server base URL",
+    "api_key": "API key for 67router server",
+    "base_url": "67router server base URL",
     "context": "Server context/profile to use for this command",
     "lang": "Set CLI display language (overrides OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Manage files (upload, list, get, download, delete)",
-    "list": {
-      "purpose": "Filter by purpose",
-      "limit": "Max results"
-    },
-    "get": {
-      "description": "Get file metadata"
-    },
-    "upload": {
-      "description": "Upload a file",
-      "purpose": "File purpose (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Download file content",
-      "out": "Save to path (default: stdout)"
-    },
-    "delete": {
-      "yes": "Skip confirmation"
-    }
-  },
-  "batches": {
-    "description": "Manage OpenAI-compatible batch jobs",
-    "list": {
-      "status": "Filter by status",
-      "limit": "Max results"
-    },
-    "create": {
-      "description": "Create a batch job",
-      "inputFile": "Input file ID",
-      "endpoint": "Target endpoint",
-      "window": "Completion window",
-      "metadata": "Add metadata key=value"
-    },
-    "submit": {
-      "description": "Upload JSONL file and create batch",
-      "jsonl": "Path to JSONL file",
-      "endpoint": "Target endpoint",
-      "wait": "Wait for completion"
-    },
-    "cancel": {
-      "yes": "Skip confirmation"
-    },
-    "wait": {
-      "timeout": "Timeout in ms"
-    },
-    "output": {
-      "out": "Save output to path"
-    },
-    "errors": {
-      "out": "Save errors to path"
-    }
   },
   "translator": {
     "description": "Translate request bodies between LLM formats",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Access and test the OmniRoute OpenAPI spec",
+    "description": "Access and test the 67router OpenAPI spec",
     "dump": {
       "description": "Dump OpenAPI spec to stdout or file",
       "format": "Output format: yaml|json (default: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Activate the top-ranked combo"
     }
   },
-  "oneproxy": {
-    "description": "Manage the OneProxy upstream pool",
-    "stats": {
-      "provider": "Filter by provider",
-      "period": "Time period (default: 24h)"
-    },
-    "fetch": {
-      "description": "Fetch proxies from the pool",
-      "count": "Number of proxies to fetch (default: 1)",
-      "type": "Proxy type: http|socks5 (default: http)"
-    },
-    "rotate": {
-      "description": "Force proxy rotation",
-      "provider": "Provider to rotate for",
-      "connectionId": "Specific connection ID to rotate"
-    },
-    "config": {
-      "description": "Show or update OneProxy config",
-      "enabled": "Enable proxy pool (true|false)",
-      "poolSize": "Pool size",
-      "providerSource": "URL for proxy provider",
-      "rotationPolicy": "Rotation policy: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "List current proxy pool with metrics"
-    }
-  },
   "open": {
-    "description": "Open a specific OmniRoute dashboard page in the browser",
+    "description": "Open a specific 67router dashboard page in the browser",
     "url": "Print URL only, do not open browser"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sync configuration between OmniRoute instances",
+    "description": "Sync configuration between 67router instances",
     "push": {
       "description": "Run a cloud sync now (cloud sync must already be enabled)"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filter by level (error,warn,info) — comma-separated",
     "lines": "Number of lines to fetch",
     "timeout": "Connection timeout in ms",
-    "baseUrl": "OmniRoute API base URL",
+    "baseUrl": "67router API base URL",
     "requestId": "Filter by request ID",
     "apiKey": "Filter by API key",
     "combo": "Filter by combo name",
@@ -1244,10 +890,10 @@
     "description": "Control the system tray icon",
     "show": "Show the tray icon (if server is running with --tray)",
     "hide": "Hide the tray icon",
-    "quit": "Quit OmniRoute via tray"
+    "quit": "Quit 67router via tray"
   },
   "autostart": {
-    "description": "Manage OmniRoute autostart at boot (Linux: systemd user service)",
+    "description": "Manage 67router autostart at boot (Linux: systemd user service)",
     "enable": "Enable autostart at boot",
     "disable": "Disable autostart at boot",
     "toggle": "Toggle autostart at boot",
@@ -1268,30 +914,20 @@
     "system": "System prompt",
     "resume": "Resume a saved session by name"
   },
-  "plugin": {
-    "description": "Manage CLI plugins (omniroute-cmd-*)",
-    "list": "List installed plugins",
-    "install": "Install a plugin from npm or local path",
-    "remove": "Remove an installed plugin",
-    "info": "Show details for an installed plugin",
-    "search": "Search npm registry for available plugins",
-    "update": "Update installed plugin(s)",
-    "scaffold": "Scaffold a new plugin boilerplate"
-  },
   "launch": {
-    "description": "Launch Claude Code pointed at OmniRoute (local or remote, with --profile)",
+    "description": "Launch Claude Code pointed at 67router (local or remote, with --profile)",
     "token": "Token the Claude client should send (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute is not reachable at {port}. Start it with 'omniroute serve'.",
+    "notRunning": "67router is not reachable at {port}. Start it with 'omniroute serve'.",
     "notFound": "The 'claude' CLI was not found in PATH."
   },
   "run": {
-    "description": "Launch a supported CLI target through OmniRoute"
+    "description": "Launch a supported CLI target through 67router"
   },
   "setupClaude": {
-    "description": "Generate ~/.claude/profiles Claude Code profiles from the OmniRoute model catalog"
+    "description": "Generate ~/.claude/profiles Claude Code profiles from the 67router model catalog"
   },
   "connect": {
-    "description": "Connect to a remote OmniRoute server and enter remote mode"
+    "description": "Connect to a remote 67router server and enter remote mode"
   },
   "tokens": {
     "description": "Manage scoped CLI access tokens (remote mode)"
@@ -1300,10 +936,10 @@
     "description": "Pick a provider+model from the active server and configure a supported local CLI"
   },
   "launchCodex": {
-    "description": "Launch Codex CLI pointed at OmniRoute (local or remote VPS)"
+    "description": "Launch Codex CLI pointed at 67router (local or remote VPS)"
   },
   "setupCodex": {
-    "description": "Generate ~/.codex profile files from OmniRoute live model catalog"
+    "description": "Generate ~/.codex profile files from 67router live model catalog"
   },
   "packs": {
     "description": "Manage optional runtime packs (ML / browser automation)",
@@ -1316,7 +952,7 @@
     "errUnknown": "unknown pack: {name}",
     "errNoIndex": "pack index not found; pass --source <dir> holding the pack payload (desktop bundles ship it next to the app)",
     "installed": "pack \"{name}\" installed and verified at {dir}",
-    "restartHint": "restart the OmniRoute server (or desktop app) so the runtime picks the pack up",
+    "restartHint": "restart the 67router server (or desktop app) so the runtime picks the pack up",
     "removed": "pack \"{name}\" removed",
     "notInstalled": "pack \"{name}\" was not installed",
     "verifyOk": "all installed packs verified",

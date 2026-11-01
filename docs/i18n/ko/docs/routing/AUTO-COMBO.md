@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (한국어)
+# 67router Auto-Combo Engine (한국어)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # 토큰당 비용이 가장 저렴함
 
 **처리 과정:**
 
-1. OmniRoute가 `src/sse/handlers/chat.ts`에서 `auto/` 접두사를 감지합니다
+1. 67router가 `src/sse/handlers/chat.ts`에서 `auto/` 접두사를 감지합니다
 2. 데이터베이스에서 모든 **활성 제공자 연결**을 조회합니다
 3. 유효한 자격 증명(API 키 또는 OAuth 토큰)이 있는 연결만 필터링합니다
 4. 연결별 모델(`connection.defaultModel` 또는 제공자의 첫 번째 모델)을 결정합니다
@@ -88,7 +88,7 @@ model: "auto/cheap"           # 토큰당 비용이 가장 저렴함
 - 모델 잠금 — `isModelLocked(provider, connectionId, model)`
 
 각 후보에는 이 API 키의 `excluded` 플래그도 포함됩니다. 제외 설정은 API 키별로
-저장됩니다(`auto_candidate_overrides` 테이블, 마이그레이션 `128`). OmniRoute는
+저장됩니다(`auto_candidate_overrides` 테이블, 마이그레이션 `128`). 67router는
 `users` 테이블이 없는 단일 테넌트이므로 `apiKeyId`가 실제 호출자별 ID에 가장
 가깝습니다. 이 설정은 순수 함수이자 단위 테스트를 거친
 `filterExcludedCandidates()`(`open-sse/services/autoCombo/candidateOverrides.ts`)를
@@ -162,7 +162,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 흔히 발생하는 두 가지 문제:
 
 - **`auto`는 사용자의 콤보를 사용하지 않습니다.** `auto`/`auto/*`는 자체적인 무설정 후보 풀을 구성하며, 콤보 이름이 문자 그대로 `auto`인 경우에만 영구 저장된 콤보를 참조합니다(권장하지 않음). 콤보를 통해 라우팅하려면 `auto`가 아니라 해당 콤보의 정확한 이름을 전송하세요.
-- **`openrouter/auto`는 실제 유료 OpenRouter 제품**("Auto Best Available")이며 OmniRoute 별칭이 아닙니다. 이는 OpenRouter 레지스트리(`open-sse/config/providers/registry/openrouter/index.ts`)의 단일 정적 모델 항목이며 별도로 요금이 청구됩니다. `auto` 풀에서 제외하려면 Settings → Routing → Hide paid models를 사용하세요.
+- **`openrouter/auto`는 실제 유료 OpenRouter 제품**("Auto Best Available")이며 67router 별칭이 아닙니다. 이는 OpenRouter 레지스트리(`open-sse/config/providers/registry/openrouter/index.ts`)의 단일 정적 모델 항목이며 별도로 요금이 청구됩니다. `auto` 풀에서 제외하려면 Settings → Routing → Hide paid models를 사용하세요.
 
 이 문서에서 다루는 최초의 혼동에 대해서는 [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) 및 [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111)을 참조하세요.
 
@@ -261,7 +261,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 
 ## 모든 라우팅 전략
 
-OmniRoute의 콤보 엔진은 **20가지 라우팅 전략**을 지원합니다(`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`에 선언됨). Auto Combo 엔진 자체는 `auto` 전략으로 제공되며, 나머지는 저장된 콤보에서 사용할 수 있습니다.
+67router의 콤보 엔진은 **20가지 라우팅 전략**을 지원합니다(`src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`에 선언됨). Auto Combo 엔진 자체는 `auto` 전략으로 제공되며, 나머지는 저장된 콤보에서 사용할 수 있습니다.
 
 | 전략                | 설명                                                                                                                                                                                         |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -303,7 +303,7 @@ OmniRoute의 콤보 엔진은 **20가지 라우팅 전략**을 지원합니다(`
 
 ### 에이전트형 파이프라인 모드
 
-모델이 두 개 이상인 `pipeline` 콤보는 `config.agenticOrchestration.enabled`를 통해 플래너/실행기 라우팅을 활성화할 수 있습니다. 첫 번째 대상은 계획 수립과 최종 답변을 담당하고, 두 번째 대상은 클라이언트 네이티브 도구 호출을 생성합니다. OmniRoute는 요청 프로토콜에서 도구 결과 후속 요청을 감지하고, 플래너에게 추가 도구 라운드가 필요한지 확인한 다음, 실행기 또는 플래너를 동적으로 클라이언트 대상 최종 단계로 지정합니다.
+모델이 두 개 이상인 `pipeline` 콤보는 `config.agenticOrchestration.enabled`를 통해 플래너/실행기 라우팅을 활성화할 수 있습니다. 첫 번째 대상은 계획 수립과 최종 답변을 담당하고, 두 번째 대상은 클라이언트 네이티브 도구 호출을 생성합니다. 67router는 요청 프로토콜에서 도구 결과 후속 요청을 감지하고, 플래너에게 추가 도구 라운드가 필요한지 확인한 다음, 실행기 또는 플래너를 동적으로 클라이언트 대상 최종 단계로 지정합니다.
 
 두 번째 대상 이후의 추가 모델은 순서대로 실행기 백업이 됩니다. HTTP 응답 실패 또는 전송 예외가 발생하면 동일한 플래너 결정과 네이티브 도구를 유지하면서 다음 실행기로 넘어가되, 해당 실행기 자체의 단계 프롬프트와 확인된 연결을 사용합니다. 최초로 성공한 응답은 SSE 스트리밍을 포함하여 변경 없이 반환됩니다. 스트림이 성공적으로 시작된 후 발생한 실패는 여기서 재시도할 수 없습니다. 모든 실행기가 실패하면 마지막 실패가 반환됩니다. 클라이언트가 중단하면 디스패치도 중지됩니다.
 
@@ -807,11 +807,11 @@ Tier 1(구독)을 강하게 선호하려면 `tierPriority` 가중치를 높이�
 
 ### 조건부 실제 스모크 테스트(CI에서는 실행하지 않음 — 실제 공급자)
 
-| 명령어                                 | 수행 내용                                                                                |
-| :------------------------------------- | :--------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1`을 사용하는 프로세스 내 실제 라우팅. 실제 OmniRoute DB의 스냅샷을 생성 |
-| `npm run test:combo:live:vps`          | 실제 OmniRoute 서버에 HTTP 요청 전송(`COMBO_LIVE_BASE_URL` 설정)                         |
-| `npm run test:combo:live:vps:failover` | 의도적인 장애 조치 시나리오를 포함해 동일하게 수행                                       |
+| 명령어                                 | 수행 내용                                                                               |
+| :------------------------------------- | :-------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | `RUN_COMBO_LIVE=1`을 사용하는 프로세스 내 실제 라우팅. 실제 67router DB의 스냅샷을 생성 |
+| `npm run test:combo:live:vps`          | 실제 67router 서버에 HTTP 요청 전송(`COMBO_LIVE_BASE_URL` 설정)                         |
+| `npm run test:combo:live:vps:failover` | 의도적인 장애 조치 시나리오를 포함해 동일하게 수행                                      |
 
 이러한 스모크 테스트는 실제 통신 경로(콤보 → 공급자 → 완성)를 검증합니다. 실제 자격 증명과
 VPS 액세스가 필요하므로 의도적으로 CI에서 제외됩니다.

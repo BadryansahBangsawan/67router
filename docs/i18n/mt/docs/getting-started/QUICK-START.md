@@ -1,14 +1,14 @@
-# Quick Start: Get OmniRoute Running in 3 Minutes (Malti)
+# Quick Start: Get 67router Running in 3 Minutes (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/QUICK-START.md) · 🇪🇹 [am](../../../am/docs/getting-started/QUICK-START.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/QUICK-START.md) · 🇦🇿 [az](../../../az/docs/getting-started/QUICK-START.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/QUICK-START.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/QUICK-START.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/QUICK-START.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/QUICK-START.md) · 🇩🇰 [da](../../../da/docs/getting-started/QUICK-START.md) · 🇩🇪 [de](../../../de/docs/getting-started/QUICK-START.md) · 🇬🇷 [el](../../../el/docs/getting-started/QUICK-START.md) · 🇪🇸 [es](../../../es/docs/getting-started/QUICK-START.md) · 🇪🇪 [et](../../../et/docs/getting-started/QUICK-START.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/QUICK-START.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/QUICK-START.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/QUICK-START.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/QUICK-START.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/QUICK-START.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/QUICK-START.md) · 🇮🇱 [he](../../../he/docs/getting-started/QUICK-START.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/QUICK-START.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/QUICK-START.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/QUICK-START.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/QUICK-START.md) · 🇮🇩 [id](../../../id/docs/getting-started/QUICK-START.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/QUICK-START.md) · 🇮🇹 [it](../../../it/docs/getting-started/QUICK-START.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/QUICK-START.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/QUICK-START.md) · 🇰🇭 [km](../../../km/docs/getting-started/QUICK-START.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/QUICK-START.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/QUICK-START.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/QUICK-START.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/QUICK-START.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/QUICK-START.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/QUICK-START.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/QUICK-START.md) · 🇲🇲 [my](../../../my/docs/getting-started/QUICK-START.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/QUICK-START.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/QUICK-START.md) · 🇳🇴 [no](../../../no/docs/getting-started/QUICK-START.md) · 🇮🇳 [or](../../../or/docs/getting-started/QUICK-START.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/QUICK-START.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/QUICK-START.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/QUICK-START.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/QUICK-START.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/QUICK-START.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/QUICK-START.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/QUICK-START.md) · 🇱🇰 [si](../../../si/docs/getting-started/QUICK-START.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/QUICK-START.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/QUICK-START.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/QUICK-START.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/QUICK-START.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/QUICK-START.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/QUICK-START.md) · 🇮🇳 [te](../../../te/docs/getting-started/QUICK-START.md) · 🇹🇭 [th](../../../th/docs/getting-started/QUICK-START.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/QUICK-START.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/QUICK-START.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/QUICK-START.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/QUICK-START.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/QUICK-START.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/QUICK-START.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/QUICK-START.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/QUICK-START.md)
 
 ---
 
-> **Fil-qosor**: Installa → Qabbad fornitur eliġibbli → Orjenta l-IDE tiegħek lejn OmniRoute. Lest.
+> **Fil-qosor**: Installa → Qabbad fornitur eliġibbli → Orjenta l-IDE tiegħek lejn 67router. Lest.
 
 ---
 
-## Pass 1: Installa OmniRoute
+## Pass 1: Installa 67router
 
 Agħżel il-metodu li tippreferi:
 
@@ -37,13 +37,13 @@ npm run dev
 
 ---
 
-## Pass 2: Ibda OmniRoute
+## Pass 2: Ibda 67router
 
 ```bash
 omniroute
 ```
 
-OmniRoute jibda fuq `http://localhost:20128`. Id-dashboard jinfetaħ awtomatikament.
+67router jibda fuq `http://localhost:20128`. Id-dashboard jinfetaħ awtomatikament.
 
 ---
 
@@ -57,7 +57,7 @@ B’mod awtomatiku, `auto` jeskludi l-fornituri mmarkati `tos: avoid`, inkluż K
 
 ## Pass 4: Ivverifika li Jaħdem
 
-Minn [Ċwievet tal-API](http://localhost:20128/dashboard/api-manager), oħloq ċavetta ġdida. Żomm din iċ-ċavetta peress li mhux se terġa' tidher. Innota li din iċ-ċavetta tintuża biex l-għodod jaċċessaw OmniRoute, mhux biex jaċċessaw lill-fornituri upstream.
+Minn [Ċwievet tal-API](http://localhost:20128/dashboard/api-manager), oħloq ċavetta ġdida. Żomm din iċ-ċavetta peress li mhux se terġa' tidher. Innota li din iċ-ċavetta tintuża biex l-għodod jaċċessaw 67router, mhux biex jaċċessaw lill-fornituri upstream.
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
@@ -67,7 +67,7 @@ Għandek tara lista tal-mudelli mqabbdin tiegħek.
 
 ---
 
-## Pass 5: Orjenta l-IDE jew is-CLI Tiegħek Lejn OmniRoute
+## Pass 5: Orjenta l-IDE jew is-CLI Tiegħek Lejn 67router
 
 Fl-għodda IDE jew CLI tiegħek, issettja:
 
@@ -77,7 +77,7 @@ API Key:  [copy from Dashboard → Endpoints]
 Model:    auto
 ```
 
-Dak kollox! L-IDE tiegħek issa juża OmniRoute b'għażla awtomatika tal-fornitur.
+Dak kollox! L-IDE tiegħek issa juża 67router b'għażla awtomatika tal-fornitur.
 
 ### Eżempju ta' IDE: VSCode/Continue.dev
 
@@ -92,7 +92,7 @@ Dak kollox! L-IDE tiegħek issa juża OmniRoute b'għażla awtomatika tal-fornit
     apiKey: <YOUR_KEY>
 ```
 
-3. Fil-pannell taċ-chat ta' Continue.dev, agħżel `OmniRoute - Auto` u tibda tagħmel talbiet lil OmniRoute.
+3. Fil-pannell taċ-chat ta' Continue.dev, agħżel `OmniRoute - Auto` u tibda tagħmel talbiet lil 67router.
 4. (Fakultattiv) Eżerċizzju għall-qarrej — itlob lill-IDE tiegħek jaġġorna `config.yaml` bil-konfigurazzjonijiet l-oħra kollha mibnija minn qabel 😊
 
 ### Eżempju ta' CLI: Codex CLI
@@ -110,19 +110,19 @@ Għal Windows (Command Prompt):
 setx OMNIROUTE_API_KEY <YOUR_KEY>
 ```
 
-2. Issa ejja nniedu Codex, iżda kkonfigurat għal OmniRoute. Ħaddem:
+2. Issa ejja nniedu Codex, iżda kkonfigurat għal 67router. Ħaddem:
 
 ```
 omniroute launch-codex --model auto
 ```
 
-Tista' tagħmel dan manwalment permezz ta' `codex` u parametri tal-linja tal-kmand biex tispeċifika l-endpoint u ċ-ċavetta tal-API, iżda bil-kmand ta' hawn fuq, OmniRoute jieħu ħsieb kollox għalik.
+Tista' tagħmel dan manwalment permezz ta' `codex` u parametri tal-linja tal-kmand biex tispeċifika l-endpoint u ċ-ċavetta tal-API, iżda bil-kmand ta' hawn fuq, 67router jieħu ħsieb kollox għalik.
 
 L-istess tnedija bi kmand wieħed taħdem għal CLIs oħra permezz tal-launcher ġeneriku — `omniroute run <target>` jappoġġja `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen`, u `gemini` (ara [Integrazzjonijiet tas-CLI](../guides/CLI-INTEGRATIONS.md)).
 
-3. Is-CLI issa għandu jkun qed jibgħat it-talbiet lil OmniRoute.
+3. Is-CLI issa għandu jkun qed jibgħat it-talbiet lil 67router.
 
-### Ikkonferma li l-għodda tiegħek qed tidderieġi t-talbiet lejn OmniRoute
+### Ikkonferma li l-għodda tiegħek qed tidderieġi t-talbiet lejn 67router
 
 Tista' tara d-dettalji tat-talba billi tikklikkja [Monitoraġġ/Logs](http://localhost:20128/dashboard/logs) mill-sidebar tax-xellug. Meta tikklikkja fuqhom tara aktar dettalji. Barra minn hekk, tista' tara liema informazzjoni tintbagħat mill-harness favorit tiegħek. Dan huwa utli għal skopijiet edukattivi u ta' debugging.
 
@@ -130,7 +130,7 @@ Tista' tara d-dettalji tat-talba billi tikklikkja [Monitoraġġ/Logs](http://loc
 
 ## X'Jmiss?
 
-- **[Gwida għall-Kombinazzjoni Awtomatika](./AUTO-COMBO-GUIDE.md)** — Ħalli lil OmniRoute jagħżel l-aħjar IA għalik
+- **[Gwida għall-Kombinazzjoni Awtomatika](./AUTO-COMBO-GUIDE.md)** — Ħalli lil 67router jagħżel l-aħjar IA għalik
 - **[Gwida għall-Fornituri](./PROVIDERS-GUIDE.md)** — Qabbad aktar fornituri (b'xejn u bi ħlas)
 - **[Gwida għal-Livelli Bla Ħlas](./FREE-TIERS-GUIDE.md)** — Irrevedi t-termini tal-fornituri u l-limiti tal-livelli bla ħlas
 - **[Soluzzjoni tal-Problemi](../guides/TROUBLESHOOTING.md)** — Irranġa problemi komuni
@@ -141,23 +141,23 @@ Tista' tara d-dettalji tat-talba billi tikklikkja [Monitoraġġ/Logs](http://loc
 
 ### "Għandi bżonn API key?"
 
-L-API key ta’ OmniRoute tawtentika l-għodod tiegħek. Il-kredenzjali tas-servizzi upstream jiddependu mill-fornitur: xi wħud jeħtieġu API key jew li tidħol f’kont. L-aċċess bla ħlas mhuwiex garantit.
+L-API key ta’ 67router tawtentika l-għodod tiegħek. Il-kredenzjali tas-servizzi upstream jiddependu mill-fornitur: xi wħud jeħtieġu API key jew li tidħol f’kont. L-aċċess bla ħlas mhuwiex garantit.
 
 ### "X’inhu `auto`?"
 
-`auto` jgħid lil OmniRoute biex jagħżel awtomatikament l-aħjar fornitur għal kull talba. Huwa jqis il-veloċità, l-ispiża, il-kwalità, u d-disponibbiltà. Ara l-[Gwida Auto-Combo](./AUTO-COMBO-GUIDE.md) għad-dettalji.
+`auto` jgħid lil 67router biex jagħżel awtomatikament l-aħjar fornitur għal kull talba. Huwa jqis il-veloċità, l-ispiża, il-kwalità, u d-disponibbiltà. Ara l-[Gwida Auto-Combo](./AUTO-COMBO-GUIDE.md) għad-dettalji.
 
 ### "Kemm jiswa?"
 
-OmniRoute innifsu huwa **bla ħlas u open-source**. Tħallas biss għall-fornituri li tuża. Ħafna fornituri għandhom livelli bla ħlas — ara l-[Gwida għal-Livelli Bla Ħlas](./FREE-TIERS-GUIDE.md).
+67router innifsu huwa **bla ħlas u open-source**. Tħallas biss għall-fornituri li tuża. Ħafna fornituri għandhom livelli bla ħlas — ara l-[Gwida għal-Livelli Bla Ħlas](./FREE-TIERS-GUIDE.md).
 
 ### "Nista’ nużah ma’ Claude Code / Cursor / Copilot?"
 
-**Iva!** OmniRoute jaħdem ma’ kwalunkwe għodda li tappoġġja l-format ta’ OpenAI. Sempliċement issettja l-URL bażi għal `http://localhost:20128/v1`. Ara l-[Gwida għall-Għodod CLI](../reference/CLI-TOOLS.md) għal struzzjonijiet speċifiċi dwar il-konfigurazzjoni.
+**Iva!** 67router jaħdem ma’ kwalunkwe għodda li tappoġġja l-format ta’ OpenAI. Sempliċement issettja l-URL bażi għal `http://localhost:20128/v1`. Ara l-[Gwida għall-Għodod CLI](../reference/CLI-TOOLS.md) għal struzzjonijiet speċifiċi dwar il-konfigurazzjoni.
 
 ### "X’jiġri jekk fornitur ma jibqax disponibbli?"
 
-OmniRoute awtomatikament jaqbeż lill-fornituri li ma jaħdmux u jipprova lil dak li jkun imiss. M’għandek bżonn tagħmel xejn. Ara l-[Gwida Auto-Combo](./AUTO-COMBO-GUIDE.md) għad-dettalji.
+67router awtomatikament jaqbeż lill-fornituri li ma jaħdmux u jipprova lil dak li jkun imiss. M’għandek bżonn tagħmel xejn. Ara l-[Gwida Auto-Combo](./AUTO-COMBO-GUIDE.md) għad-dettalji.
 
 ---
 

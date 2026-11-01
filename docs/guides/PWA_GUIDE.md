@@ -6,11 +6,11 @@ lastUpdated: 2026-06-28
 
 # Progressive Web App (PWA) Guide
 
-OmniRoute ships as a fully installable Progressive Web App. When you access the dashboard from any mobile browser — Android (Chrome) or iOS (Safari) — you can "Add to Home Screen" and get a native app-like experience with no app store required.
+67router ships as a fully installable Progressive Web App. When you access the dashboard from any mobile browser — Android (Chrome) or iOS (Safari) — you can "Add to Home Screen" and get a native app-like experience with no app store required.
 
 ## What Is a PWA?
 
-A Progressive Web App turns the OmniRoute web dashboard into something that looks and feels like a native mobile app. Once installed, it:
+A Progressive Web App turns the 67router web dashboard into something that looks and feels like a native mobile app. Once installed, it:
 
 - Launches from your home screen with its own icon
 - Opens fullscreen — no browser address bar or tab UI
@@ -22,26 +22,26 @@ A Progressive Web App turns the OmniRoute web dashboard into something that look
 
 ### Android (Chrome)
 
-1. Open the OmniRoute dashboard in Chrome: `http://YOUR_IP:20128`
-2. Chrome will show an **"Add OmniRoute to Home screen"** banner automatically, or:
+1. Open the 67router dashboard in Chrome: `http://YOUR_IP:20128`
+2. Chrome will show an **"Add 67router to Home screen"** banner automatically, or:
    - Tap the **⋮** menu (three dots) → **"Add to Home screen"** or **"Install app"**
 3. Confirm the prompt
-4. OmniRoute appears on your home screen as a standalone app
+4. 67router appears on your home screen as a standalone app
 
 ### iOS (Safari)
 
-1. Open the OmniRoute dashboard in Safari: `http://YOUR_IP:20128`
+1. Open the 67router dashboard in Safari: `http://YOUR_IP:20128`
 2. Tap the **Share** button (box with arrow)
 3. Scroll down and tap **"Add to Home Screen"**
-4. Name it (defaults to "OmniRoute") and tap **Add**
-5. OmniRoute appears on your home screen with the app icon
+4. Name it (defaults to "67router") and tap **Add**
+5. 67router appears on your home screen with the app icon
 
 ### Desktop (Chrome / Edge)
 
-1. Open the OmniRoute dashboard
-2. Click the **install icon** in the address bar (or ⋮ → "Install OmniRoute...")
+1. Open the 67router dashboard
+2. Click the **install icon** in the address bar (or ⋮ → "Install 67router...")
 3. Confirm the prompt
-4. OmniRoute opens as a standalone window — no tabs, no address bar
+4. 67router opens as a standalone window — no tabs, no address bar
 
 ## Features
 
@@ -51,15 +51,15 @@ The manifest is configured with `display: "fullscreen"`, which means the install
 
 ### Offline Support
 
-OmniRoute includes a service worker (`sw.js`) that provides intelligent caching:
+67router includes a service worker (`sw.js`) that provides intelligent caching:
 
-| Asset Type                                              | Strategy                           | Behavior                                                                     |
-| ------------------------------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------- |
-| **App Shell**                                           | Cache-first                        | `/`, `/offline`, manifest, and icons are pre-cached on install               |
-| **Static assets** (CSS, JS, images, fonts)              | Network-first with cache fallback  | Fetches fresh from the network; falls back to cache if offline               |
-| **Next.js bundles** (`/_next/`)                         | Network-first with cache update    | Fetches from network and updates cache; serves cached version if offline     |
-| **Navigation requests**                                 | Bypass (never intercepted)         | Browser owns HTTP/3→HTTP/2 fallback; a dead QUIC socket must not become `Response.error()` |
-| **API / dashboard routes** (`/api/`, `/a2a`, `/dashboard`) | Bypass (never cached)           | Always goes directly to the server — never intercepted by the service worker |
+| Asset Type                                         | Strategy                          | Behavior                                                                                   |
+| -------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------ |
+| **App Shell**                                      | Cache-first                       | `/`, `/offline`, manifest, and icons are pre-cached on install                             |
+| **Static assets** (CSS, JS, images, fonts)         | Network-first with cache fallback | Fetches fresh from the network; falls back to cache if offline                             |
+| **Next.js bundles** (`/_next/`)                    | Network-first with cache update   | Fetches from network and updates cache; serves cached version if offline                   |
+| **Navigation requests**                            | Bypass (never intercepted)        | Browser owns HTTP/3→HTTP/2 fallback; a dead QUIC socket must not become `Response.error()` |
+| **API / dashboard routes** (`/api/`, `/dashboard`) | Bypass (never cached)             | Always goes directly to the server — never intercepted by the service worker               |
 
 ### Offline Page
 
@@ -72,7 +72,7 @@ When the network is unavailable and a user navigates to a new page, the service 
 
 ### App Icons
 
-OmniRoute provides icons optimized for each platform:
+67router provides icons optimized for each platform:
 
 | File                   | Size             | Used By                               |
 | ---------------------- | ---------------- | ------------------------------------- |
@@ -95,9 +95,9 @@ Generated by Next.js via `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -142,9 +142,9 @@ Located at `src/shared/components/PwaRegister.tsx`, this client component:
 
 ## Use With Termux (Android)
 
-When running OmniRoute on Android via Termux, the PWA works seamlessly:
+When running 67router on Android via Termux, the PWA works seamlessly:
 
-1. Start OmniRoute in Termux: `npx omniroute`
+1. Start 67router in Termux: `npx omniroute`
 2. Open Chrome on the same phone: `http://localhost:20128`
 3. Install the PWA via "Add to Home Screen"
 4. The PWA connects to the local Termux server — everything runs on-device
@@ -153,7 +153,7 @@ This combination means your Android phone is both the **server** (Termux) and th
 
 ## Use From Other Devices
 
-Install the PWA on any device that has browser access to your OmniRoute server:
+Install the PWA on any device that has browser access to your 67router server:
 
 - **Another phone/tablet**: Navigate to `http://PHONE_IP:20128` and install the PWA
 - **Laptop**: Open Chrome/Edge and install it as a desktop PWA

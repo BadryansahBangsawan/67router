@@ -45,7 +45,7 @@ npm run test:e2e           # اختياري، لكنه موصى به
 ضمان WS1.3 (لا يمكن لرمز مسرّب النشر بمفرده — إذ لا يوجد رمز أصلًا).
 
 **إعداد لمرة واحدة (المالك):** npmjs.com ← الحزمة `omniroute` ← Settings ← _Trusted
-Publisher_ ← GitHub: المالك `diegosouzapw`، المستودع `OmniRoute`، سير العمل `npm-publish.yml`
+Publisher_ ← GitHub: المالك `diegosouzapw`، المستودع `67router`، سير العمل `npm-publish.yml`
 (البيئة: لا شيء). إلى أن يتوفر ذلك، تفشل الخطوة التلقائية مع `ENEEDAUTH`:
 أعد التشغيل باستخدام `publish_mode=staged` (أدناه) أو `direct`.
 

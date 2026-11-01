@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Kiswahili)
+# 67router Auto-Combo Engine (Kiswahili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇮🇹 [it](../../../it/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # gharama ya chini zaidi kwa tokeni
 
 **Kinachotokea:**
 
-1. OmniRoute hutambua kiambishi awali `auto/` katika `src/sse/handlers/chat.ts`
+1. 67router hutambua kiambishi awali `auto/` katika `src/sse/handlers/chat.ts`
 2. Huuliza **miunganisho yote amilifu ya watoa huduma** kutoka kwenye kanzidata
 3. Huchuja na kubakiza ile yenye vitambulisho halali (ufunguo wa API au tokeni ya OAuth)
 4. Hubainisha modeli kwa kila muunganisho (`connection.defaultModel` au modeli ya kwanza ya mtoa huduma)
@@ -88,7 +88,7 @@ usomaji uliopo wa ustahimilivu (kamwe si `state` ghafi ya kizuia hitilafu):
 - kufungiwa kwa modeli — `isModelLocked(provider, connectionId, model)`
 
 Kila mgombea pia hubeba alama ya `excluded` ya ufunguo huu wa API. Vilivyoondolewa huhifadhiwa
-kwa kila ufunguo wa API (jedwali la `auto_candidate_overrides`, uhamishaji `128`) — OmniRoute ni
+kwa kila ufunguo wa API (jedwali la `auto_candidate_overrides`, uhamishaji `128`) — 67router ni
 ya mpangaji mmoja bila jedwali la `users`, kwa hivyo `apiKeyId` ndiyo utambulisho halisi wa karibu zaidi
 kwa kila mwitaji — na hutekelezwa kwenye sehemu finyu ya kundi la wagombea katika
 `open-sse/services/autoCombo/virtualFactory.ts` kupitia `filterExcludedCandidates()` safi iliyojaribiwa kwa vipimo vya kitengo
@@ -182,7 +182,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Mitego miwili ya kawaida:
 
 - **`auto` haitumii combo zako.** `auto`/`auto/*` huunda mkusanyiko wake wa wagombea usiohitaji usanidi na huzingatia combo zilizohifadhiwa tu ikiwa combo imepewa jina halisi la `auto` (haipendekezwi). Ili kupitisha ombi kupitia combo, tuma jina lake kamili — si `auto`.
-- **`openrouter/auto` ni bidhaa halisi ya kulipia ya OpenRouter** ("Auto Best Available"), wala si jina mbadala la OmniRoute. Ni ingizo moja tuli la modeli katika sajili ya OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) na hutozwa kando. Tumia Settings → Routing → Hide paid models ili kuiondoa kwenye mikusanyiko ya `auto`.
+- **`openrouter/auto` ni bidhaa halisi ya kulipia ya OpenRouter** ("Auto Best Available"), wala si jina mbadala la 67router. Ni ingizo moja tuli la modeli katika sajili ya OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) na hutozwa kando. Tumia Settings → Routing → Hide paid models ili kuiondoa kwenye mikusanyiko ya `auto`.
 
 Angalia [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) na [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) kuhusu mkanganyiko wa awali unaofafanuliwa hapa.
 
@@ -282,7 +282,7 @@ zilizobainishwa huingizwa katika ingizo zilizopo za injini za `config.modePack` 
 
 ## Mikakati Yote ya Uelekezaji
 
-Injini ya michanganyiko ya OmniRoute inatumia **mikakati 20 ya uelekezaji** (iliyotangazwa katika `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Injini yenyewe ya Auto Combo inapatikana chini ya mkakati wa `auto`; mingine inapatikana kwa michanganyiko iliyohifadhiwa.
+Injini ya michanganyiko ya 67router inatumia **mikakati 20 ya uelekezaji** (iliyotangazwa katika `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Injini yenyewe ya Auto Combo inapatikana chini ya mkakati wa `auto`; mingine inapatikana kwa michanganyiko iliyohifadhiwa.
 
 | Mkakati             | Maelezo                                                                                                                                                                                                                                               |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -332,7 +332,7 @@ mkali.
 
 Mchanganyiko wa `pipeline` wenye angalau modeli mbili unaweza kuwasha uelekezaji wa kipangaji/kitekelezaji kupitia
 `config.agenticOrchestration.enabled`. Lengo la kwanza linashughulikia upangaji na majibu ya mwisho;
-lengo la pili hutoa miito ya zana katika umbizo asilia la mteja. OmniRoute hutambua
+lengo la pili hutoa miito ya zana katika umbizo asilia la mteja. 67router hutambua
 mwendelezo wa matokeo ya zana kutoka kwenye itifaki ya ombi, huuliza kipangaji ikiwa duru nyingine ya zana
 inahitajika, na kwa namna inayobadilika hufanya ama kitekelezaji au kipangaji kuwa hatua ya mwisho
 inayowasilishwa kwa mteja.
@@ -858,11 +858,11 @@ Seti hii huendeshwa katika CI (kazi ya `test:integration`) ikiwa na `--test-conc
 
 ### Majaribio ya moja kwa moja yenye kizuizi (SI katika CI — watoa huduma halisi)
 
-| Amri                                   | Inachofanya                                                                                             |
-| :------------------------------------- | :------------------------------------------------------------------------------------------------------ |
-| `npm run test:combo:live`              | Uelekezaji halisi ndani ya mchakato kwa kutumia `RUN_COMBO_LIVE=1`; hunasa picha ya DB hai ya OmniRoute |
-| `npm run test:combo:live:vps`          | Miito ya HTTP dhidi ya seva hai ya OmniRoute (weka `COMBO_LIVE_BASE_URL`)                               |
-| `npm run test:combo:live:vps:failover` | Vivyo hivyo, pamoja na hali za makusudi za uhamishaji baada ya hitilafu                                 |
+| Amri                                   | Inachofanya                                                                                            |
+| :------------------------------------- | :----------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Uelekezaji halisi ndani ya mchakato kwa kutumia `RUN_COMBO_LIVE=1`; hunasa picha ya DB hai ya 67router |
+| `npm run test:combo:live:vps`          | Miito ya HTTP dhidi ya seva hai ya 67router (weka `COMBO_LIVE_BASE_URL`)                               |
+| `npm run test:combo:live:vps:failover` | Vivyo hivyo, pamoja na hali za makusudi za uhamishaji baada ya hitilafu                                |
 
 Majaribio haya ya awali hutumia njia halisi ya mawasiliano (combo → mtoa huduma → ukamilishaji). Yameondolewa
 kwa makusudi kutoka CI kwa sababu yanahitaji vitambulisho halisi vya uthibitishaji na ufikiaji wa VPS.

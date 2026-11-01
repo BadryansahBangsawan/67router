@@ -7,7 +7,7 @@
 > **ប្រភពនៃការពិត:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **បានធ្វើបច្ចុប្បន្នភាពចុងក្រោយ:** 2026-09-22 — ឈ្មោះលំហនៃវិសាលភាពចង្អុលទៅ MCP-SERVER.md
 
-OmniRoute មានបំពង់បង្ហូរការអនុញ្ញាតដែលដឹងពីផ្លូវ ដែលទប់ស្កាត់រាល់សំណើ API។ ការចាត់ថ្នាក់គឺ **កំណត់បាន** និង **បរាជ័យបិទ** — អ្វីដែលមិនអាចចាត់ថ្នាក់បាននឹងក្លាយជា `MANAGEMENT` ហើយទាមទារវគ្គ ឬថូខឹនកម្រិតគ្រប់គ្រង។ ទំព័រនេះពន្យល់ពីគំរូសម្រាប់វិស្វករដែលថែទាំផ្លូវ ឬរចនាចំណុចបញ្ចប់ថ្មី។
+67router មានបំពង់បង្ហូរការអនុញ្ញាតដែលដឹងពីផ្លូវ ដែលទប់ស្កាត់រាល់សំណើ API។ ការចាត់ថ្នាក់គឺ **កំណត់បាន** និង **បរាជ័យបិទ** — អ្វីដែលមិនអាចចាត់ថ្នាក់បាននឹងក្លាយជា `MANAGEMENT` ហើយទាមទារវគ្គ ឬថូខឹនកម្រិតគ្រប់គ្រង។ ទំព័រនេះពន្យល់ពីគំរូសម្រាប់វិស្វករដែលថែទាំផ្លូវ ឬរចនាចំណុចបញ្ចប់ថ្មី។
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 
@@ -213,8 +213,6 @@ API keys មាន array `scopes` (រក្សាទុកជា JSON ក្ន
 ការអនុវត្ត API key របស់ client ប្រើ `isRequireApiKeyEnabled()` នៅ `src/shared/utils/featureFlags.ts` មិនមែនការអាន `process.env.REQUIRE_API_KEY` ដោយផ្ទាល់ទេ។ នេះសំខាន់សម្រាប់ instance ដែលបានដាក់ពង្រាយ: ការប្ដូរ `REQUIRE_API_KEY` ក្នុង Dashboard → Feature Flags ទុក DB override ហើយមានផលភ្លាមៗលើ `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` និងការពិនិត្យ auth client-API ផ្សេងទៀតដែលចែករំលែក helper នេះ។ ប្រសិនបើមិនអាចអាន store feature flag ទេ auth client API fail closed ហើយតម្រូវឱ្យមាន key។
 
 ## ការផ្លាស់ប្តូរដែលមិនត្រូវគ្នាជាមួយកំណែមុន — v3.8.0
-
-endpoint `/api/v1/agents/tasks/*` និង `/api/resilience/model-cooldowns` **ឥឡូវនេះតម្រូវឱ្យមានការផ្ទៀងផ្ទាត់សម្រាប់ការគ្រប់គ្រង** (commit `588a0333`)។ Client ដែលពីមុនផ្ញើ API key ធម្មតាដោយគ្មានវិសាលភាព `manage` នឹងទទួលបាន `403`។ ការធ្វើ migration៖ ផ្តល់វិសាលភាព `manage` ដល់ key នៅក្នុង dashboard API Keys ឬប្រើ dashboard session ដែលបាន log in។
 
 ## ការផ្លាស់ប្តូរឥរិយាបថ — v3.8.2
 

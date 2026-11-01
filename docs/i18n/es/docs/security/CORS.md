@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute controla qué **orígenes de navegador** pueden leer respuestas entre orígenes
+67router controla qué **orígenes de navegador** pueden leer respuestas entre orígenes
 mediante una única lista de permitidos centralizada. El modelo está **cerrado de forma predeterminada**:
 ningún origen está permitido hasta que lo autorice explícitamente. Esta página documenta cómo se resuelve
 la lista de permitidos, qué expone realmente `CORS_ALLOW_ALL=true` (y, lo que es importante, qué
@@ -45,13 +45,13 @@ en este orden:
 ## Modelo de amenazas — qué expone realmente `CORS_ALLOW_ALL=true`
 
 Vale la pena tomarse en serio la advertencia genérica de OWASP («CORS con comodín = cualquier sitio puede llamar a su API»),
-pero la exposición de OmniRoute es **más limitada que en el caso genérico**,
+pero la exposición de 67router es **más limitada que en el caso genérico**,
 debido a un hecho concreto de la implementación:
 
 > **El `applyCorsHeaders()` central nunca emite
 > `Access-Control-Allow-Credentials`.** Un navegador no expondrá una respuesta entre orígenes
 > _con credenciales_ (que incluya cookies), a menos que el servidor envíe
-> `Access-Control-Allow-Credentials: true`. La ruta CORS compartida de OmniRoute nunca
+> `Access-Control-Allow-Credentials: true`. La ruta CORS compartida de 67router nunca
 > lo hace.
 
 Esto es lo que significa para cada superficie, incluso con `CORS_ALLOW_ALL=true`:
@@ -68,20 +68,6 @@ permitir que la **solicitud de comprobación previa** de CORS se complete en las
 que una página de otro origen no puede proporcionar. **No** constituye un vector de secuestro de sesión ni
 de robo de credenciales en la ruta CORS compartida.
 
-### Una excepción real — `/api/v1/agents/`
-
-Las rutas de Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) establecen
-sus **propios** encabezados CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) y **sí** emiten
-`Access-Control-Allow-Origin: <origin>|*` junto con
-`Access-Control-Allow-Credentials: true`. Esta es la única superficie en la que
-la devolución del origen y las credenciales coexisten, y es **independiente de
-`CORS_ALLOW_ALL`**. Estas rutas están autenticadas para administración
-(`requireManagementAuth`); los operadores que expongan el panel fuera del host deben
-tener en cuenta que este es el único lugar donde los encabezados de respuesta permiten una lectura entre orígenes con credenciales.
-La restricción de este comportamiento a una lista explícita de permitidos se gestiona
-por separado de estas directrices sobre CORS.
-
 ## Lista de comprobación para producción
 
 - **Nunca establezca `CORS_ALLOW_ALL=true` en producción.** Déjelo sin definir.
@@ -91,7 +77,7 @@ por separado de estas directrices sobre CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Si OmniRoute se ejecuta detrás de un proxy inverso/túnel (nginx, Caddy, Cloudflare
+- Si 67router se ejecuta detrás de un proxy inverso/túnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **no** es su único control: la protección de rutas de
   bucle local sigue protegiendo las rutas capaces de iniciar procesos (consulte
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). No falsifique
@@ -107,7 +93,7 @@ por separado de estas directrices sobre CORS.
 Rara vez se necesita el comodín, incluso durante el desarrollo. Permita únicamente los servidores de desarrollo que utilice:
 
 ```bash
-# Servidores de desarrollo Vite (5173) + Next.js (3000) que llaman a un OmniRoute local
+# Servidores de desarrollo Vite (5173) + Next.js (3000) que llaman a un 67router local
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +113,14 @@ reiniciar.
   los orígenes de administración/del panel fuera de cualquier configuración permisiva; deben permanecer
   completamente cerrados ante fallos.
 
-## Ejemplo: proxy inverso delante de OmniRoute
+## Ejemplo: proxy inverso delante de 67router
 
-CORS lo aplica el propio OmniRoute, por lo que, en general, el proxy **no** debe añadir ni
+CORS lo aplica el propio 67router, por lo que, en general, el proxy **no** debe añadir ni
 reescribir los encabezados `Access-Control-*` (los encabezados duplicados causan errores en los navegadores). Termine TLS
-y reenvíe las solicitudes; deje que OmniRoute responda a las solicitudes de comprobación previa:
+y reenvíe las solicitudes; deje que 67router responda a las solicitudes de comprobación previa:
 
 ```nginx
-# nginx — reenviar a OmniRoute; NO inyectar Access-Control-* aquí
+# nginx — reenviar a 67router; NO inyectar Access-Control-* aquí
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +128,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Conserve los encabezados de reenvío: un proxy en el mismo host se conecta desde la interfaz de bucle invertido y estos
-    # son los que indican a OmniRoute que quien realiza la llamada no es el operador local. Un proxy que no añade ninguno
+    # son los que indican a 67router que quien realiza la llamada no es el operador local. Un proxy que no añade ninguno
     # hace que todos los clientes remotos parezcan locales. Tampoco establezca nunca X-Forwarded-For en 127.0.0.1.
 }
 ```
 
-Configure los orígenes permitidos para el navegador en OmniRoute (`CORS_ALLOWED_ORIGINS` o en la
+Configure los orígenes permitidos para el navegador en 67router (`CORS_ALLOWED_ORIGINS` o en la
 pestaña Seguridad), no en el proxy.
 
 ## Archivos de origen
@@ -160,7 +146,6 @@ pestaña Seguridad), no en el proxy.
 | Estado de ejecución para el panel                          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner de advertencia del panel                            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Campo de orígenes CORS permitidos                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS por ruta de Cloud-Agent (la excepción)                | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Véase también
 

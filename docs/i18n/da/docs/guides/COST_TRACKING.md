@@ -4,7 +4,7 @@
 
 ---
 
-Sådan estimerer, registrerer og rapporterer OmniRoute omkostningerne for hver anmodning — og hvorfor tallet på
+Sådan estimerer, registrerer og rapporterer 67router omkostningerne for hver anmodning — og hvorfor tallet på
 dashboardet er en **besparelsesmåler**, ikke en regning.
 
 Se også: [Brugervejledning](./USER_GUIDE.md) · [Funktionsgalleri](./FEATURES.md)
@@ -13,11 +13,11 @@ Se også: [Brugervejledning](./USER_GUIDE.md) · [Funktionsgalleri](./FEATURES.m
 
 ## Hvad det er (og hvad det ikke er)
 
-OmniRoute tildeler hver fuldførelse en omkostning i USD pr. anmodning ved at gange antallet
+67router tildeler hver fuldførelse en omkostning i USD pr. anmodning ved at gange antallet
 af tokens med en models priser. Disse tal driver dashboardet **Omkostninger**,
 CLI-kommandoerne `omniroute cost` / `omniroute usage`, CSV/JSON-eksporter og budgetter pr. API-nøgle.
 
-> **Dashboardets "omkostning" er en besparelsesmåler, ikke en regning.** OmniRoute opkræver aldrig betaling fra dig
+> **Dashboardets "omkostning" er en besparelsesmåler, ikke en regning.** 67router opkræver aldrig betaling fra dig
 > — det videresender dine anmodninger til udbydere, som du allerede har forbundet (dine egne
 > abonnementer, gratis niveauer og API-nøgler). En "samlet omkostning på $290", der udelukkende er optjent på gratis
 > modeller, betyder, at du omtrent **ikke betalte $290** til en betalt API. Tallet er et _estimat_
@@ -29,7 +29,7 @@ Denne fortolkning fremgår direkte af projektets [README](../../README.md) ("das
 
 Da tallet er et estimat:
 
-- Det afhænger af den pristabel, OmniRoute har for hver model. En model uden en
+- Det afhænger af den pristabel, 67router har for hver model. En model uden en
   prispost bidrager med en omkostning på `0` (den vises som en række med "Ældre / Gratis" i oversigten).
 - Trafik på gratis niveauer og via abonnementer påløber stadig en _estimeret_ omkostning — det er det
   beløb, du sparer, ikke et beløb, du skylder.
@@ -47,7 +47,7 @@ Omkostninger kommer fra en pristabel, der slås op i denne prioriterede rækkef�
 2. **Synkroniserede eksterne priser** — hentes fra LiteLLM's offentlige
    `model_prices_and_context_window.json`, når synkronisering er aktiveret (gemmes i et separat
    `pricing_synced`-navneområde, så det aldrig overskriver dine tilsidesættelser).
-3. **Hardkodede standardværdier** — leveres med OmniRoute.
+3. **Hardkodede standardværdier** — leveres med 67router.
 
 Ekstern prissynkronisering er **frivillig** og deaktiveret som standard. Relevante miljøvariabler
 (se [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ andet er angivet.
 
 ## CLI
 
-OmniRoutes CLI indeholder kommandoer til omkostninger, forbrug og priser (registreret i
+67routers CLI indeholder kommandoer til omkostninger, forbrug og priser (registreret i
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

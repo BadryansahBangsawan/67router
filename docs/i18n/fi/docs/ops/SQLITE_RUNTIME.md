@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute selvittää SQLite-ajurinsa käynnistyksen yhteydessä 5-vaiheisella varaketjulla:
+67router selvittää SQLite-ajurinsa käynnistyksen yhteydessä 5-vaiheisella varaketjulla:
 
 1. **Pakettiin sisältyvä `better-sqlite3`** (`package.json`-tiedoston `dependencies`-määrityksen kautta)
    — nopein vaihtoehto, natiivibinääri, jonka `npm install` asentaa, kun koostamistyökalut ovat käytettävissä.
@@ -28,13 +28,13 @@ OmniRoute selvittää SQLite-ajurinsa käynnistyksen yhteydessä 5-vaiheisella v
 - **Ei koostamistyökaluja**: Jotkin ympäristöt (yritysten Windows-ympäristöt ilman VS Build
   Tools -työkaluja, minimaaliset Docker-levykuvat) eivät pysty koostamaan `better-sqlite3`-pakettia. Ajonaikainen
   asennusohjelma hakee valmiiksi koostetun binäärin npm-rekisteristä; vara-ajurit
-  varmistavat, että OmniRoute käynnistyy, vaikka tämä epäonnistuisi.
+  varmistavat, että 67router käynnistyy, vaikka tämä epäonnistuisi.
 - **Ulkoisista verkoista eristetyt järjestelmät**: Jos npm-rekisteriä ei voida tavoittaa, `node:sqlite`
   tai `sql.js` takaa perustoiminnallisuuden.
 
 ## Tunnistetavujen validointi
 
-Ennen ajonaikaisesti asennetun `.node`-tiedoston lataamista OmniRoute lukee ensimmäiset 8
+Ennen ajonaikaisesti asennetun `.node`-tiedoston lataamista 67router lukee ensimmäiset 8
 tavua ja vertaa niitä tunnettuihin alustakohtaisiin tunnisteisiin:
 
 | Alusta                  | Tavut (heksa) | Tunniste    |
@@ -104,9 +104,9 @@ Toteutus:
 ## Yhden kirjoittajan topologia (HA:ta ei tueta)
 
 Yllä kuvattu ajurien varaketju toimii silti **yhdessä prosessissa**. Oletusarvoista SQLiteä
-käyttävä OmniRoute on **yhden kirjoittajan** järjestelmä:
+käyttävä 67router on **yhden kirjoittajan** järjestelmä:
 
-- Älä liitä kahta OmniRoute-replikaa samaan `storage.sqlite`-tiedostoon.
+- Älä liitä kahta 67router-replikaa samaan `storage.sqlite`-tiedostoon.
 - Kontin uudelleenkäynnistys, Recreate-käyttöönotto, OOM-lopetus tai HEALTHCHECK-uudelleenkäynnistys katkaisee
   kaikki käynnissä olevat SSE-istunnot. Oletuspolku ei tyhjennä istuntoja hallitusti.
 - Orkestroijan elossaolotarkistus, joka tulkitsee hitaan `/healthz`-vastauksen kuolleeksi, lopettaa ainoan

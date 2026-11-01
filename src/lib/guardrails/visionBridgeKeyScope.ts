@@ -1,7 +1,7 @@
 /**
  * API-key scope for the Vision Bridge describe path.
  *
- * Chat enforces the caller key's `allowedConnections`, quota pools and model
+ * Chat enforces the caller key's `allowedConnections` and model
  * allow/deny lists before any upstream call. The Vision Bridge sends the image
  * to a vision model it picks itself, through an internal self-loop, so it must
  * apply the same scope: candidates are limited to models the key may use on
@@ -46,7 +46,7 @@ function stringList(value: unknown): string[] {
 /**
  * Resolve the Vision Bridge scope for the caller's key metadata
  * (`GuardrailContext.apiKeyInfo`). Returns null when there is no key or the key
- * carries no connection, quota or model restriction.
+ * carries no connection or model restriction.
  */
 export async function resolveVisionBridgeKeyScope(
   apiKeyInfo: Record<string, unknown> | null | undefined,
@@ -56,9 +56,8 @@ export async function resolveVisionBridgeKeyScope(
   if (!apiKeyInfo || !apiKeyId) return null;
 
   const allowedConnections = intersectAllowedConnectionIds(apiKeyInfo.allowedConnections, null);
-  const allowedQuotas = stringList(apiKeyInfo.allowedQuotas);
   const modelRestricted = hasApiKeyModelRestrictions(apiKeyInfo);
-  if (!allowedConnections && allowedQuotas.length === 0 && !modelRestricted) return null;
+  if (!allowedConnections && !modelRestricted) return null;
 
   const checkCreds = deps.hasUsableCredentials ?? hasUsableCredentialsForModel;
   const isAllowed = deps.isModelAllowed ?? isModelAllowedForKey;
@@ -72,9 +71,6 @@ export async function resolveVisionBridgeKeyScope(
   }
 
   const hasUsableCredentials = async (model: string): Promise<boolean | null> => {
-    // Quota-exclusive keys may only use their pool's quotaShared-* models,
-    // which are never Vision Bridge candidates.
-    if (allowedQuotas.length > 0) return false;
     if (modelRestricted) {
       // Unknown secret → the model policy cannot be proven: fail closed.
       if (!keySecret) return false;
@@ -95,7 +91,6 @@ export async function resolveVisionBridgeKeyScope(
     apiKeyId,
     cacheScope: `${apiKeyId}:${JSON.stringify([
       allowedConnections,
-      allowedQuotas,
       apiKeyInfo.modelAccessMode ?? null,
       stringList(apiKeyInfo.allowedModels),
       stringList(apiKeyInfo.blockedModels),

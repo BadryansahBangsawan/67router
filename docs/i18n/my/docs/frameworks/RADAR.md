@@ -43,7 +43,7 @@ disk ပေါ်တွင် မည်သည့်အခါမျှ ပြင�
 | Supporter offer များ                       | သီးခြားလက်မှတ်ထိုးထားသော live-only feed နှင့် dashboard စာမျက်နှာအဖြစ် အကောင်အထည်ဖော်ထားသည်။ Client သည် ကန့်သတ်ထားသော benefit schema ကို ထပ်မံစစ်ဆေးအတည်ပြုကာ နောက်ဆုံးကောင်းမွန်သည့် cache ကို ထိန်းသိမ်းထားပြီး သက်တမ်းကုန်ဆုံးသော entry များကို စစ်ထုတ်ကာ partner offer များကို အတိအလင်း label တပ်ပေးသည်။ |
 | Intel နှင့် supporter အသိအမှတ်ပြုမှု       | Radar ပိုင် ELO၊ အချက်အလက်အခြေပြု catalog freshness/trend၊ စစ်ဆေးအတည်ပြုထားသော local supporter badge၊ dashboard စာမျက်နှာနှင့် local-only CLI status/sync command များပါဝင်သည့် တင်းကျပ်သော လက်မှတ်ထိုးထားသည့် live-only feed အဖြစ် အကောင်အထည်ဖော်ထားသည်။                                                    |
 | ငွေပေးချေမှုနှင့် အရောင်းအဝယ်ဆိုင်ရာ email | OSS client တွင် အကောင်အထည်ဖော်ထားခြင်းမရှိပါ။ ဝယ်ယူမှု၊ လှူဒါန်းမှု၊ receipt စစ်ဆေးခြင်း၊ ပြန်လည်ရယူခြင်းနှင့် mail ပေးပို့ခြင်းတို့သည် private service နှင့် သက်ဆိုင်သည်။ Hosted ဝန်ဆောင်မှုရရှိနိုင်မှုသည် ၎င်း၏ ကြီးကြပ်ထားသော deploy နှင့် provider configuration ပေါ်တွင် ဆက်လက်မူတည်နေသည်။             |
-| Research-agent လုပ်ငန်းစဉ်                 | ဤ client release ၏ အစိတ်အပိုင်းမဟုတ်ပါ။ ရွေးချယ်ပြင်ဆင်ထားသော feed အကြောင်းအရာများသည် server-side data အဖြစ် ဆက်လက်တည်ရှိပြီး OmniRoute installation တစ်ခုအတွင်း မည်သည့် autonomous research agent မျှ လည်ပတ်ခြင်းမရှိပါ။                                                                                    |
+| Research-agent လုပ်ငန်းစဉ်                 | ဤ client release ၏ အစိတ်အပိုင်းမဟုတ်ပါ။ ရွေးချယ်ပြင်ဆင်ထားသော feed အကြောင်းအရာများသည် server-side data အဖြစ် ဆက်လက်တည်ရှိပြီး 67router installation တစ်ခုအတွင်း မည်သည့် autonomous research agent မျှ လည်ပတ်ခြင်းမရှိပါ။                                                                                     |
 
 ---
 
@@ -121,7 +121,7 @@ Opt-in false ဖြစ်သည်  → { status: "opt_out" }    — network cal
    နေ့စဉ်ပြောင်းလဲသော IP ၏ ဖြတ်တောက်ထားသည့် HMAC ကို အသုံးပြုသည်။ ထို table များသည် key သို့မဟုတ် IP ကို raw form ဖြင့်
    မသိမ်းဆည်းပါ။ Infrastructure access log များနှင့် encrypted delivery outbox သည် သီးခြား operational
    boundary များဖြစ်သည်။
-3. OmniRoute သည် prompt များ၊ response များ၊ conversation များ၊ provider credential များ၊ model traffic၊
+3. 67router သည် prompt များ၊ response များ၊ conversation များ၊ provider credential များ၊ model traffic၊
    uptime၊ latency သို့မဟုတ် local provider configuration တို့ကို Radar service သို့ မည်သည့်အခါမျှ မပို့ပါ။
 4. Response ကို verify လုပ်ခြင်း၊ validate လုပ်ခြင်းနှင့် local တွင် cache လုပ်ခြင်းတို့ ပြုလုပ်သည် (
    [လုံခြုံရေးပုံစံ](#security-model) ကို ကြည့်ပါ)။ Radar တွင် server-side network path လေးခုသာရှိသည်-
@@ -217,11 +217,11 @@ URL နှစ်ခုစလုံးကို server ဘက်တွင် ဖ�
 
 ### အစမှအဆုံး အသက်သွင်းခြင်းနှင့် လမ်းညွှန်ထားသော ပြင်ဆင်သတ်မှတ်မှု
 
-သီးသန့် feed ဝန်ဆောင်မှုနှင့် ဤ OSS client ကြားတွင် ရည်ရွယ်ချက်ရှိရှိ ကျဉ်းမြောင်းသော နယ်နိမိတ်တစ်ခု ရှိသည်။ ဝန်ဆောင်မှုက ထောက်ပံ့သူ key ကို ထုတ်ပေးပြီး အတည်ပြုသော်လည်း ဒေသတွင်း OmniRoute ထည့်သွင်းမှုက key ကို ကုဒ်ဝှက်ခြင်း၊ လက်မှတ်ထိုးထားသော artifact များကို server ဘက်တွင် sync လုပ်ခြင်းနှင့် provider ပြင်ဆင်သတ်မှတ်မှုကို လမ်းညွှန်ခြင်းတို့ ပြုလုပ်သည်။ အကူအညီဖြင့် အတည်ပြုသည့် အစီအစဉ်မှာ-
+သီးသန့် feed ဝန်ဆောင်မှုနှင့် ဤ OSS client ကြားတွင် ရည်ရွယ်ချက်ရှိရှိ ကျဉ်းမြောင်းသော နယ်နိမိတ်တစ်ခု ရှိသည်။ ဝန်ဆောင်မှုက ထောက်ပံ့သူ key ကို ထုတ်ပေးပြီး အတည်ပြုသော်လည်း ဒေသတွင်း 67router ထည့်သွင်းမှုက key ကို ကုဒ်ဝှက်ခြင်း၊ လက်မှတ်ထိုးထားသော artifact များကို server ဘက်တွင် sync လုပ်ခြင်းနှင့် provider ပြင်ဆင်သတ်မှတ်မှုကို လမ်းညွှန်ခြင်းတို့ ပြုလုပ်သည်။ အကူအညီဖြင့် အတည်ပြုသည့် အစီအစဉ်မှာ-
 
 1. ပံ့ပိုးသူအဖြစ် အတည်ပြုတောင်းဆိုမှု၊ အစီအစဉ်များ/ငွေရှင်းမှု၊ ပြန်လည်ရယူရေးလုပ်ငန်းစဉ် သို့မဟုတ် ခွင့်ပြုထားသော သီးသန့်ဆာဗာ အော်ပရေတာထံမှ အသစ်ထုတ်ပေးထားသော သို့မဟုတ် ပြန်လည်ရယူထားသော ကီးတစ်ခုကို ရယူပါ။ ကီးအကြမ်းကို မှတ်တမ်းများ၊
    ဖန်သားပြင်ဓာတ်ပုံများ၊ ပြဿနာမှတ်ချက်များ သို့မဟုတ် command-line argument များထဲသို့ မကူးထည့်ပါနှင့်။
-2. စက်တွင်း OmniRoute ထည့်သွင်းမှုတွင် `RADAR_ENABLED` feature flag ကို ဖွင့်ပါ။ ၎င်းသည် UI ကို
+2. စက်တွင်း 67router ထည့်သွင်းမှုတွင် `RADAR_ENABLED` feature flag ကို ဖွင့်ပါ။ ၎င်းသည် UI ကို
    အသုံးပြုနိုင်စေသော်လည်း သီးခြားခွင့်ပြုချက်ကို သိမ်းဆည်းမထားမချင်း ကွန်ရက်လုပ်ဆောင်မှု မရှိသေးပါ။
 3. `/dashboard/radar` ကိုဖွင့်၍ ကီးကိုကူးထည့်ပြီး အသက်သွင်းပါ။ ဘရောက်ဇာသည် စက်တွင်း
    `POST /api/radar/settings` တစ်ကြိမ်ကို `{ optIn: true, supporterKey }` ဖြင့် ပေးပို့သည်။ ကီးကို စက်တွင်း၌ ကုဒ်ဝှက်ထားပြီး
@@ -286,7 +286,7 @@ cache ထဲရှိ feed အဟောင်းများသည် ပြန�
 ### Fork များအတွက် အဆင်ပြေသော env override များ
 
 အောက်ပါ env var နှစ်ခုက fork ပြုလုပ်သူများနှင့် ကိုယ်တိုင် host လုပ်သူများအား client ကို
-မူလ OmniRoute ဝန်ဆောင်မှုအစား ၎င်းတို့၏ကိုယ်ပိုင် feed သို့ ညွှန်ပေးနိုင်စေသည် — အောက်ရှိ
+မူလ 67router ဝန်ဆောင်မှုအစား ၎င်းတို့၏ကိုယ်ပိုင် feed သို့ ညွှန်ပေးနိုင်စေသည် — အောက်ရှိ
 [Feed တစ်ခုကို ကိုယ်တိုင် host လုပ်နည်း](#how-to-self-host-a-feed) ကို ကြည့်ပါ-
 
 | Var                 | ရည်ရွယ်ချက်                                                                                                                                      |
@@ -452,7 +452,7 @@ Catalog publication များသည် `schemaVersion: 2` ကို အသု
 `tools`၊ `vision`၊ `thinking` တစ်ခုချင်းစီသည် သီးခြား `number | null` / `boolean | null`
 ဖြစ်သည်- `null` သည် မသိရသေးကြောင်း ဆိုလိုပြီး၊ `false` သည် capability မရှိကြောင်း
 D16 အတည်ပြုထားသည့် တရားဝင် provider source က အတိအလင်း ဖော်ပြထားခြင်းကို ဆိုလိုသည်။
-Internal OmniRoute registry/model-spec flag များကို feed fact များအဖြစ် တိုက်ရိုက်
+Internal 67router registry/model-spec flag များကို feed fact များအဖြစ် တိုက်ရိုက်
 မြှင့်တင်အသုံးမပြုပါ။ Client သည် v1 snapshot များကို ဆက်လက်လက်ခံသည်။ Builder အဟောင်းက
 `false` ကို မရှိခြင်းဆိုင်ရာ placeholder အဖြစ် အသုံးပြုခဲ့သောကြောင့် v1 `false` ကို
 မသိရသေးသောအခြေအနေအဖြစ် normalize လုပ်ပြီး v1 `true` ကိုမူ အချက်အလက်မှန်အဖြစ် ဆက်ထားသည်။
@@ -518,7 +518,7 @@ MCP client များသည် အလားတူ စက်တွင်း pro
 | `/api/radar/local-model-state` | DELETE | ရှိပြီးသား tombstone ကို ဆက်လက်ထိန်းသိမ်းထားကာ ပြင်ဆင်နိုင်သော override field များကို ရှင်းလင်းသည်။                                                |
 
 **တင်းကျပ်သော စည်းမျဉ်း- ဤ route များသည် feed service ကို မည်သည့်အခါမျှ proxy မလုပ်ပါ။** Browser သည်
-local OmniRoute server နှင့်သာ ဆက်သွယ်သည်။ Radar service ကို အသုံးပြုသော module လေးခုမှာ
+local 67router server နှင့်သာ ဆက်သွယ်သည်။ Radar service ကို အသုံးပြုသော module လေးခုမှာ
 `src/lib/radar/sync.ts` (catalog)၊ `src/lib/radar/referralsSync.ts` (referrals)၊
 `src/lib/radar/offersSync.ts` (offers) နှင့် `src/lib/radar/intelSync.ts` (Intel) တို့ဖြစ်ပြီး အားလုံးသည်
 client-side တွင် မည်သည့်အခါမျှ မလုပ်ဆောင်ဘဲ server-side တွင်သာ လုပ်ဆောင်သည်။ ဤသို့ဖြင့်
@@ -586,7 +586,7 @@ exact-byte Ed25519 verification၊ strict schema၊ body/header နှစ်ခ�
 local cache metadata မှသာ badge ကို render လုပ်ပါသည်။
 
 CLI သည် `omniroute radar status` နှင့် `omniroute radar sync` ကို ဖော်ထုတ်ပေးပါသည်။ နှစ်ခုစလုံးသည်
-local OmniRoute API နှင့်သာ ဆက်သွယ်ပါသည်။ `status` သည် read-only `GET /api/radar/status` ကို ပြုလုပ်ပြီး၊ `sync` သည်
+local 67router API နှင့်သာ ဆက်သွယ်ပါသည်။ `status` သည် read-only `GET /api/radar/status` ကို ပြုလုပ်ပြီး၊ `sync` သည်
 `POST /api/radar/sync-all` တစ်ကြိမ် ပေးပို့ကာ feed တစ်ခုစီအတွက် ရလဒ်ကို print ထုတ်ပါသည်။ Command နှစ်ခုလုံးသည်
 ပံ့ပိုးသူ key ကို ဖတ်ခြင်း၊ လက်ခံခြင်း သို့မဟုတ် print ထုတ်ခြင်း မပြုသကဲ့သို့ Radar service ကိုလည်း တိုက်ရိုက် မဆက်သွယ်ပါ။
 

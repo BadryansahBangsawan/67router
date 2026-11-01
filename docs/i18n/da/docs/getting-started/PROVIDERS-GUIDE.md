@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Dansk)
+# Providers Guide: Connect AI Models to 67router (Dansk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Kort fortalt**: En udbyder er en forbindelse til en AI-tjeneste (som OpenAI, Anthropic eller Google). Du skal have mindst én udbyder for at bruge OmniRoute.
+> **Kort fortalt**: En udbyder er en forbindelse til en AI-tjeneste (som OpenAI, Anthropic eller Google). Du skal have mindst én udbyder for at bruge 67router.
 
 ---
 
 ## Hvad er en udbyder?
 
-Tænk på en udbyder som et **teleselskab**. Ligesom du har brug for et teleselskab for at foretage opkald, har du brug for en AI-udbyder for at bruge AI-modeller. OmniRoute er som en telefon, der fungerer med **alle teleselskaber** — du kan automatisk skifte mellem dem.
+Tænk på en udbyder som et **teleselskab**. Ligesom du har brug for et teleselskab for at foretage opkald, har du brug for en AI-udbyder for at bruge AI-modeller. 67router er som en telefon, der fungerer med **alle teleselskaber** — du kan automatisk skifte mellem dem.
 
 ### Typer af udbydere
 
@@ -31,8 +31,8 @@ Se **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** for generelle opsætningsvej
 ### Valgfri opsætning af gratis udbydere ved første kørsel
 
 Guiden til første kørsel indeholder et særskilt kort til **Opsæt gratis udbydere**. Den udleder den aktuelle
-liste over kvalificerede udbydere fra OmniRoutes register over udbydere uden godkendelse og giver dig derefter mulighed for at gennemgå og fravælge hver
-udbyder, før du bekræfter. OmniRoute viser udbyderens advarsel og et link til udbyderens websted,
+liste over kvalificerede udbydere fra 67routers register over udbydere uden godkendelse og giver dig derefter mulighed for at gennemgå og fravælge hver
+udbyder, før du bekræfter. 67router viser udbyderens advarsel og et link til udbyderens websted,
 så du først kan gennemgå tredjepartens vilkår, privatlivspolitik, tilgængelighed og hastighedsgrænser.
 
 Denne handling er valgfri: Når guiden afsluttes, oprettes der aldrig forbindelser til gratis udbydere uden dit samtykke.
@@ -80,7 +80,7 @@ uden risiko prøve igen udelukkende med dem, der mislykkedes efter et delvist re
 
 ### Mulighed D: Lokale MLX-modeller (Apple Silicon)
 
-På Apple Silicon-Mac-computere med samlet hukommelse understøtter OmniRoute forbindelse til lokale MLX-modeller, der kører via `mlx-lm.server`, som almindelige OpenAI-kompatible lokale udbydere.
+På Apple Silicon-Mac-computere med samlet hukommelse understøtter 67router forbindelse til lokale MLX-modeller, der kører via `mlx-lm.server`, som almindelige OpenAI-kompatible lokale udbydere.
 
 #### Forudsætninger
 
@@ -110,14 +110,14 @@ På Apple Silicon-Mac-computere med samlet hukommelse understøtter OmniRoute fo
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Opret forbindelse i OmniRoute-kontrolpanelet**:
+3. **Opret forbindelse i 67router-kontrolpanelet**:
    - Gå til **Udbydere** → **Tilføj udbyder**
    - Vælg **MLX Gemma 26B** eller **MLX Qwen 3.8 27B**
    - Klik på **Forbind** (ingen API-nøgle nødvendig)
 
 4. **Brug med OpenCode**:
    ```bash
-   # Konfigurer OpenCode til at bruge OmniRoute
+   # Konfigurer OpenCode til at bruge 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Du skal håndtere dette manuelt:
 - Kør dem begge på separate maskiner, eller
 - Stop den ene, før du starter den anden
 
-OmniRoute administrerer ikke automatisk MLX-serverprocesser — det dirigerer kun anmodninger til de OpenAI-kompatible slutpunkter, du konfigurerer.
+67router administrerer ikke automatisk MLX-serverprocesser — det dirigerer kun anmodninger til de OpenAI-kompatible slutpunkter, du konfigurerer.
 
 #### Understøttelse af værktøjskald
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Ikke nok hukommelse    | Sørg for, at kun én model kører; luk andre apps; kontrollér Aktivitetsovervågning                    |
 | Forbindelsen afvises   | Bekræft, at serveren kører på den korrekte port (11435/11436)                                        |
 | Langsomme svar         | Den første anmodning indlæser modellen i hukommelsen (~30-60s); efterfølgende anmodninger er hurtige |
-| Værktøjskald mislykkes | Sørg for, at modellen understøtter værktøjer; kontrollér OmniRoute-logfilerne for oversættelsesfejl  |
+| Værktøjskald mislykkes | Sørg for, at modellen understøtter værktøjer; kontrollér 67router-logfilerne for oversættelsesfejl   |
 
 ---
 
@@ -236,12 +236,12 @@ Din udbyder er nu tilsluttet. Du kan bruge den med `model: "auto"` eller angive 
 
 ## Brug af flere udbydere
 
-OmniRoute fungerer bedst med **flere udbydere**. Det giver dig:
+67router fungerer bedst med **flere udbydere**. Det giver dig:
 
-- **Automatisk reservevalg** — Hvis én udbyder svigter, prøver OmniRoute den næste
-- **Omkostningsoptimering** — OmniRoute vælger den billigste udbyder til hver anmodning
-- **Hastighedsoptimering** — OmniRoute vælger den hurtigste udbyder til hver anmodning
-- **Kvalitetsoptimering** — OmniRoute vælger den bedste udbyder til hver opgave
+- **Automatisk reservevalg** — Hvis én udbyder svigter, prøver 67router den næste
+- **Omkostningsoptimering** — 67router vælger den billigste udbyder til hver anmodning
+- **Hastighedsoptimering** — 67router vælger den hurtigste udbyder til hver anmodning
+- **Kvalitetsoptimering** — 67router vælger den bedste udbyder til hver opgave
 
 ### Anbefalet opsætning
 
@@ -251,7 +251,7 @@ Forbind mindst **3 udbydere** for at få den bedste oplevelse:
 2. **Én hurtig udbyder** (Groq, Cerebras) — Til hurtige svar
 3. **Én kvalitetsudbyder** (OpenAI, Anthropic, Google) — Til komplekse opgaver
 
-Brug derefter `model: "auto"`, så vælger OmniRoute automatisk den bedste til hver anmodning.
+Brug derefter `model: "auto"`, så vælger 67router automatisk den bedste til hver anmodning.
 
 ---
 
@@ -260,25 +260,25 @@ Brug derefter `model: "auto"`, så vælger OmniRoute automatisk den bedste til h
 ### OpenAI
 
 1. Hent API-nøgle: https://platform.openai.com/api-keys
-2. I OmniRoute: Udbydere → Tilføj udbyder → OpenAI
+2. I 67router: Udbydere → Tilføj udbyder → OpenAI
 3. Indsæt API-nøglen → Opret forbindelse
 
 ### Anthropic
 
 1. Hent API-nøgle: https://console.anthropic.com/
-2. I OmniRoute: Udbydere → Tilføj udbyder → Anthropic
+2. I 67router: Udbydere → Tilføj udbyder → Anthropic
 3. Indsæt API-nøglen → Opret forbindelse
 
 ### Google (Gemini)
 
 1. Hent API-nøgle: https://aistudio.google.com/apikey
-2. I OmniRoute: Udbydere → Tilføj udbyder → Gemini
+2. I 67router: Udbydere → Tilføj udbyder → Gemini
 3. Indsæt API-nøglen → Opret forbindelse
 
 ### DeepSeek
 
 1. Hent API-nøgle: https://platform.deepseek.com/
-2. I OmniRoute: Udbydere → Tilføj udbyder → DeepSeek
+2. I 67router: Udbydere → Tilføj udbyder → DeepSeek
 3. Indsæt API-nøglen → Opret forbindelse
 
 ### Qoder: vælg transportmetode for legitimationsoplysninger
@@ -286,12 +286,12 @@ Brug derefter `model: "auto"`, så vælger OmniRoute automatisk den bedste til h
 Qoder kræver legitimationsoplysninger. De to transportmetoder har forskellige funktioner; et modelnavn
 alene identificerer ikke, hvad en bestemt forbindelse kan gøre.
 
-| Legitimationsoplysninger              | OmniRoute-transport                         | Værktøjskald fra klienten                                | Streaming                                                       |
+| Legitimationsoplysninger              | 67router-transport                          | Værktøjskald fra klienten                                | Streaming                                                       |
 | ------------------------------------- | ------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------- |
-| PAT, der begynder med `pt-`           | Lokal `qodercli`-proces på OmniRoute-værten | Understøttes ikke                                        | Bufferet: SSE udsendes først, når CLI'en returnerer hele svaret |
+| PAT, der begynder med `pt-`           | Lokal `qodercli`-proces på 67router-værten  | Understøttes ikke                                        | Bufferet: SSE udsendes først, når CLI'en returnerer hele svaret |
 | Ikke-PAT-adgangstoken eller API-nøgle | DashScope OpenAI-kompatibelt HTTP-slutpunkt | Videresendes med forbehold for upstream-modellen/-nøglen | Upstream HTTP/SSE-sti                                           |
 
-For en PAT skal Qoder CLI installeres på samme vært eller i samme container som OmniRoute. Den eksekverbare fil
+For en PAT skal Qoder CLI installeres på samme vært eller i samme container som 67router. Den eksekverbare fil
 skal kunne findes som `qodercli`, eller `CLI_QODER_BIN` skal indstilles til dens eksekverbare sti. En CLI,
 der kun er installeret på Docker-værten, er ikke automatisk tilgængelig i containeren. Manglende
 binære filer udløser en eksplicit fejl, der henviser til installationen eller stiindstillingen.
@@ -324,16 +324,16 @@ og en konfigurerbar timeout er separate forbedringer; denne adfærd lover dem ik
 ### Groq
 
 1. Hent API-nøgle: https://console.groq.com/
-2. I OmniRoute: Udbydere → Tilføj udbyder → Groq
+2. I 67router: Udbydere → Tilføj udbyder → Groq
 3. Indsæt API-nøglen → Opret forbindelse
 
 ---
 
 ## Ofte stillede spørgsmål
 
-### "Skal jeg betale for at bruge OmniRoute?"
+### "Skal jeg betale for at bruge 67router?"
 
-**Nej!** OmniRoute er gratis og open source. Du kan bruge gratis udbydere (Kiro, Pollinations) uden at betale noget. Du betaler kun, hvis du vælger at bruge betalte udbydere.
+**Nej!** 67router er gratis og open source. Du kan bruge gratis udbydere (Kiro, Pollinations) uden at betale noget. Du betaler kun, hvis du vælger at bruge betalte udbydere.
 
 ### "Hvilken udbyder skal jeg starte med?"
 
@@ -341,11 +341,11 @@ Start med **Kiro AI** — den er gratis, kræver ingen API-nøgle og giver dig a
 
 ### "Kan jeg bruge flere udbydere på samme tid?"
 
-**Ja!** Det er hele pointen med OmniRoute. Forbind flere udbydere, og brug `model: "auto"` for at lade OmniRoute vælge den bedste til hver anmodning.
+**Ja!** Det er hele pointen med 67router. Forbind flere udbydere, og brug `model: "auto"` for at lade 67router vælge den bedste til hver anmodning.
 
 ### "Hvad sker der, hvis en udbyder går ned?"
 
-OmniRoute springer automatisk udbydere med fejl over og prøver den næste. Du behøver ikke at gøre noget.
+67router springer automatisk udbydere med fejl over og prøver den næste. Du behøver ikke at gøre noget.
 
 ### "Hvordan afbryder jeg forbindelsen til en udbyder?"
 
@@ -353,17 +353,13 @@ Gå til Udbydere → klik på udbyderen → klik på **Afbryd forbindelsen**.
 
 ### "Kan jeg bruge mine eksisterende API-nøgler?"
 
-**Ja!** Hvis du allerede har API-nøgler til OpenAI, Anthropic, Google osv., kan du bruge dem i OmniRoute. Du skal blot indsætte dem, når du forbinder udbyderen.
+**Ja!** Hvis du allerede har API-nøgler til OpenAI, Anthropic, Google osv., kan du bruge dem i 67router. Du skal blot indsætte dem, når du forbinder udbyderen.
 
 ---
 
 ## Hvad er næste skridt?
 
-- **[Guide til automatisk kombination](./AUTO-COMBO-GUIDE.md)** — Lad OmniRoute vælge den bedste AI til dig
+- **[Guide til automatisk kombination](./AUTO-COMBO-GUIDE.md)** — Lad 67router vælge den bedste AI til dig
 - **[Guide til gratis niveauer](./FREE-TIERS-GUIDE.md)** — Få gratis AI uden kreditkort
 - **[Fejlfinding](../guides/TROUBLESHOOTING.md)** — Løs almindelige problemer
 - **[Udbyderreference](../reference/PROVIDER_REFERENCE.md)** — Komplet liste over 226 udbydere
-
-## Cursor-billeder
-
-Billeder fra Cursor-abonnementet bruger `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Se [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

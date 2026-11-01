@@ -4,7 +4,7 @@ import { emit } from "../output.mjs";
 export function registerAutostart(program) {
   const cmd = program
     .command("autostart")
-    .description(t("autostart.description") || "Manage OmniRoute autostart at login");
+    .description(t("autostart.description") || "Manage 67router autostart at login");
 
   // #3331 — autostart could previously only be toggled from the tray
   // (`serve --tray`) or the Electron Appearance tab; a plain `omniroute serve`

@@ -7,7 +7,7 @@
 > **신뢰할 수 있는 출처:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **최종 업데이트:** 2026-09-22 — 스코프 네임스페이스는 MCP-SERVER.md를 가리킵니다.
 
-OmniRoute는 모든 API 요청을 제어하는 경로 인식 권한 부여 파이프라인을 가지고 있습니다. 분류는 **결정론적**이며 **실패 시 닫힘(fail-closed)**입니다. 분류할 수 없는 모든 것은 `MANAGEMENT`로 처리되어 세션 또는 관리 등급 토큰을 요구합니다. 이 페이지는 경로를 유지 관리하거나 새로운 엔드포인트를 설계하는 엔지니어를 위한 모델을 설명합니다.
+67router는 모든 API 요청을 제어하는 경로 인식 권한 부여 파이프라인을 가지고 있습니다. 분류는 **결정론적**이며 **실패 시 닫힘(fail-closed)**입니다. 분류할 수 없는 모든 것은 `MANAGEMENT`로 처리되어 세션 또는 관리 등급 토큰을 요구합니다. 이 페이지는 경로를 유지 관리하거나 새로운 엔드포인트를 설계하는 엔지니어를 위한 모델을 설명합니다.
 
 ![AuthZ 파이프라인 (3가지 경로 클래스 + 정책 평가)](../diagrams/exported/authz-pipeline.svg)
 
@@ -213,8 +213,6 @@ API 키는 `scopes` 배열을 가집니다 (`api_keys.scopes`에 JSON으로 저�
 클라이언트 API 키 강제는 `process.env.REQUIRE_API_KEY`를 직접 읽는 대신 `src/shared/utils/featureFlags.ts`의 `isRequireApiKeyEnabled()`를 사용합니다. 이는 배포된 인스턴스에서 중요합니다. 대시보드 → Feature Flags에서 `REQUIRE_API_KEY`를 전환하면 DB 오버라이드가 저장되어 즉시 `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` 및 이 헬퍼를 공유하는 다른 클라이언트 API 인증 검사에 영향을 줍니다. 기능 플래그 저장소를 읽을 수 없으면 클라이언트 API 인증은 닫힘 상태가 되어 키를 요구합니다.
 
 ## 호환성을 깨는 변경 사항 — v3.8.0
-
-`/api/v1/agents/tasks/*` 및 `/api/resilience/model-cooldowns` 엔드포인트는 **이제 관리 인증이 필요합니다**(커밋 `588a0333`). 이전처럼 `manage` 범위가 없는 일반 API 키를 보내는 클라이언트는 `403`을 받습니다. 마이그레이션: API Keys 대시보드에서 해당 키에 `manage` 범위를 부여하거나, 로그인된 대시보드 세션을 사용하세요.
 
 ## 동작 변경 사항 — v3.8.2
 

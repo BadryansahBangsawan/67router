@@ -7,7 +7,7 @@
 > **Sanningskälla:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Senast uppdaterad:** 2026-09-22 — scope-namnrymder pekar på MCP-SERVER.md
 
-OmniRoute har en ruttmedveten auktoriseringspipeline som spärrar varje API-förfrågan. Klassificeringen är **deterministisk** och **fail-closed** — allt som inte kan klassificeras hamnar som `MANAGEMENT` och kräver en session eller en token av management-kvalitet. Denna sida förklarar modellen för ingenjörer som underhåller rutter eller designar nya slutpunkter.
+67router har en ruttmedveten auktoriseringspipeline som spärrar varje API-förfrågan. Klassificeringen är **deterministisk** och **fail-closed** — allt som inte kan klassificeras hamnar som `MANAGEMENT` och kräver en session eller en token av management-kvalitet. Denna sida förklarar modellen för ingenjörer som underhåller rutter eller designar nya slutpunkter.
 
 ![AuthZ-pipeline (3 ruttklasser + policyutvärdering)](../diagrams/exported/authz-pipeline.svg)
 
@@ -223,8 +223,6 @@ autentiseringsuppgiften. Se [Management Authentication](../guides/MANAGEMENT-AUT
 Klientens API-nyckelkontroll använder `isRequireApiKeyEnabled()` i `src/shared/utils/featureFlags.ts`, inte en direkt läsning av `process.env.REQUIRE_API_KEY`. Detta är viktigt för driftsatta instanser: att växla `REQUIRE_API_KEY` i Dashboard → Feature Flags sparar en DB-åsidosättning och påverkar omedelbart `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` och andra autentiseringskontroller för klient-API:et som delar denna hjälpfunktion. Om feature-flaggelagret inte kan läsas nekas klient-API-autentiseringen åtkomst och en nyckel krävs.
 
 ## Bakåtinkompatibel ändring — v3.8.0
-
-Slutpunkterna `/api/v1/agents/tasks/*` och `/api/resilience/model-cooldowns` **kräver nu hanteringsautentisering** (commit `588a0333`). Klienter som tidigare skickade en vanlig API-nyckel utan omfattningen `manage` får `403`. Migrering: tilldela antingen nyckeln omfattningen `manage` i instrumentpanelen för API-nycklar eller använd en inloggad instrumentspanelsession.
 
 ## Beteendeförändring — v3.8.2
 

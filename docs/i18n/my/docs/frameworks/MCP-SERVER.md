@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (မြန်မာ)
+# 67router MCP Server Documentation (မြန်မာ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## ထည့်သွင်းခြင်း
 
-OmniRoute MCP ကို အသင့်ထည့်သွင်းပေးထားသည်။ အောက်ပါ command ဖြင့် စတင်ပါ:
+67router MCP ကို အသင့်ထည့်သွင်းပေးထားသည်။ အောက်ပါ command ဖြင့် စတင်ပါ:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Claude Desktop၊ Cursor၊ Cline နှင့် ကိုက်ညီသော
 | `omniroute_switch_combo`        | `write:combos`        | combo တစ်ခုကို ဖွင့်ပါ သို့မဟုတ် ပိတ်ပါ                                                                                                                          |
 | `omniroute_create_combo`        | `write:combos`        | လက်ရှိ combo API မှတစ်ဆင့် စစ်ဆေးအတည်ပြုထားသော combo တစ်ခုကို ဖန်တီးပါ                                                                                           |
 | `omniroute_check_quota`         | `read:quota`          | အသုံးပြုပြီး/စုစုပေါင်း quota၊ ကျန်ရှိသည့် ရာခိုင်နှုန်း၊ ပြန်လည်သတ်မှတ်ချိန်၊ token အခြေအနေ                                                                     |
-| `omniroute_route_request`       | `execute:completions` | OmniRoute routing မှတစ်ဆင့် chat completion တစ်ခု ပေးပို့ပါ                                                                                                      |
+| `omniroute_route_request`       | `execute:completions` | 67router routing မှတစ်ဆင့် chat completion တစ်ခု ပေးပို့ပါ                                                                                                       |
 | `omniroute_cost_report`         | `read:usage`          | ကာလအလိုက် ကုန်ကျစရိတ်အစီရင်ခံစာ (session/day/week/month)                                                                                                         |
 | `omniroute_list_models_catalog` | `read:models`         | စွမ်းဆောင်နိုင်မှုများ၊ အခြေအနေနှင့် ဈေးနှုန်းများပါဝင်သော model catalog အပြည့်အစုံ                                                                              |
 | `omniroute_radar_catalog`       | `read:radar`          | စက်တွင်း၌ လက်မှတ်ရေးထိုးထားသော Radar catalog၊ provider/family filter များကို ရွေးချယ်အသုံးပြုနိုင်သည်                                                            |
@@ -152,7 +152,7 @@ principal တစ်ခုစီကို 16 MiB နှင့် global store က
 
 ### MCP လက်လှမ်းမီနိုင်မှု Tree Filter (v3.8.0)
 
-အထက်ပါ ချုံ့ရေးကိရိယာများနှင့် သီးခြားစီအဖြစ် OmniRoute တွင် MCP ဘရောက်ဇာ/လက်လှမ်းမီနိုင်မှု ကိရိယာများ၏ **ကိရိယာရလဒ်များ** ကို
+အထက်ပါ ချုံ့ရေးကိရိယာများနှင့် သီးခြားစီအဖြစ် 67router တွင် MCP ဘရောက်ဇာ/လက်လှမ်းမီနိုင်မှု ကိရိယာများ၏ **ကိရိယာရလဒ်များ** ကို
 အေးဂျင့်ထံ ပြန်မပို့မီ ချုံ့ပေးသည့် လုပ်ဆောင်ပြီးနောက် စစ်ထုတ်ကိရိယာတစ်ခု ပါဝင်ပါသည်။
 ဤစစ်ထုတ်ကိရိယာသည် ကိုယ်တိုင် ကိရိယာတစ်ခုမဟုတ်ပါ — အသေးစိတ်များလွန်းသော လက်လှမ်းမီနိုင်မှု tree သို့မဟုတ် ဘရောက်ဇာ snapshot စာသား
 (≥2000 chars) ပါရှိသည့် မည်သည့်ကိရိယာရလဒ်မဆို ၎င်းက ပွင့်လင်းမြင်သာစွာ လုပ်ဆောင်ပါသည်။
@@ -244,17 +244,6 @@ Catalog အပြည့်အစုံနှင့် ပြင်ပ agent မ�
 
 အထက်ပါ MCP ကိရိယာစာရင်း (ထပ်တူမရှိသော ကိရိယာ 110 ခု၊ `countUniqueMcpTools()` ဖြင့် တွက်ချက်ထားသည်) ကို runtime routing/cache/compression/memory/skills/proxy/context-source လုပ်ဆောင်ချက်များအတွက် ရည်ရွယ်ချက်ရှိရှိ
 ကန့်သတ်ထားသည်။ v3.8.0 တွင် MCP server နှင့်အတူ ဆက်စပ် framework နှစ်ခုပါဝင်ပြီး ၎င်းတို့ကို သီးခြားမှတ်တမ်းတင်ထားသည်။
-
-### Cloud Agent များ
-
-Cloud Agent များသည် LLM provider များအတွက် အသုံးပြုသည့် တူညီသော connection model မှတစ်ဆင့်
-OmniRoute နှင့် ချိတ်ဆက်ထားသော process ပြင်ပ AI coding agent များ (codex-cloud, cursor-cloud, devin, jules) ဖြစ်သည်။ ၎င်းတို့ကို
-သီးခြား REST မျက်နှာပြင် (`/api/v1/agents/*`) မှတစ်ဆင့် ဖော်ထုတ်ပေးထားပြီး MCP ကိရိယာ catalog ၏ အစိတ်အပိုင်း **မဟုတ်ပါ**
-— Cloud Agent တစ်ခုကို ခေါ်ယူခြင်းသည် MCP scope ကို အသုံးမပြုပါ။
-
-- အကောင်အထည်ဖော်မှု: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`)။
-- Lifecycle: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`။
-- စာရွက်စာတမ်း: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md)။
 
 ### Guardrail များ
 
@@ -421,8 +410,6 @@ Tool တစ်ခုစီသည် သီးခြား scope များက�
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | ဖတ်ရှုရေးကိရိယာ 13 ခု — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | ရေးသားရေးကိရိယာ 9 ခု — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -478,7 +465,7 @@ HTTP ပေါ်ရှိ `manage`/`admin` key အပြည့်နှင့�
 
 | ကိန်းရှင်                               | မူလတန်ဖိုး                         | ရည်ရွယ်ချက်                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-------------------------------------- | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | OmniRoute အတွင်းပိုင်း API များကို ခေါ်ဆိုသည့်အခါ MCP ဆာဗာက အသုံးပြုသော အခြေခံ URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`           | 67router အတွင်းပိုင်း API များကို ခေါ်ဆိုသည့်အခါ MCP ဆာဗာက အသုံးပြုသော အခြေခံ URL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `OMNIROUTE_API_KEY`                     | (ဗလာ)                              | အတွင်းပိုင်း API ခေါ်ဆိုမှုများသို့ `Authorization: Bearer` အဖြစ် လွှဲပို့သော API key                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` သာ ဖွင့်ပေးသည်)  | ဖွင့်ထားသည့်အခါ လိုအပ်သော scope များ မရှိပါက tool ခေါ်ဆိုမှုများကို ငြင်းပယ်ပြီး audit log တွင် `scope_denied:<reason>` ဟု မှတ်တမ်းတင်သည်။ ထို့အပြင် per-key Authorization header မှ သတ်မှတ်ဖော်ထုတ်ထားသော (`source === "authInfo"`) HTTP/SSE ခေါ်ဆိုသူတစ်ဦးတွင် အပြည့်အဝ `manage`/`admin` scope မရှိပါက ဤ flag နှင့်မသက်ဆိုင်ဘဲ စစ်ဆေးမှုကို မဖြစ်မနေ ဖွင့်ထားသည် — ဥပမာ ကျဉ်းမြောင်းသော `mcp:connect` bypass scope သာရှိသည့် key တစ်ခု — ထို့ကြောင့် ဤမူလသတ်မှတ်ချက်သည် local/stdio တစ်ဦးတည်း စီမံအသုံးပြုသည့် စီးဆင်းမှုအတွက်သာ လုံခြုံပြီး အဝေးမှ non-loopback ဝင်ရောက်မှုအတွက် လုံးဝ မလုံခြုံပါ |
 | `OMNIROUTE_MCP_SCOPES`                  | (ဗလာ)                              | မူလအားဖြင့် "ရရှိနိုင်သည်" ဟု ယူဆသည့် scope များ၏ ကော်မာဖြင့် ခွဲထားသော allowlist (ခေါ်ဆိုသူက ၎င်း၏ကိုယ်ပိုင် scope များကို မပေးသည့်အခါ အသုံးပြုသည်)                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -581,7 +568,6 @@ Tool ခေါ်ဆိုမှုတိုင်းကို `open-sse/mcp-ser
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Skill tool သတ်မှတ်ချက်များ (tool 4 ခု)                                                         |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion context source tool သတ်မှတ်ချက်များ (tool 6 ခု)                                         |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Gamification tool သတ်မှတ်ချက်များ (tool 8 ခု)                                                  |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Plugin မှတ်ပုံတင်ခြင်းနှင့် စီမံခန့်ခွဲမှု tool များ (tool 8 ခု)                               |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` endpoint                                                                     |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` endpoint                                                                      |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transport route                                                             |

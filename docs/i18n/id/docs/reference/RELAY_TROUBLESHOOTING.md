@@ -5,9 +5,9 @@
 ---
 
 Relay (Vercel, Deno, Cloudflare) mengakhiri koneksi upstream pada backend
-serverless sehingga OmniRoute dapat mengirimkan lalu lintas keluar dari wilayah yang stabil sambil menjaga
+serverless sehingga 67router dapat mengirimkan lalu lintas keluar dari wilayah yang stabil sambil menjaga
 kunci API penyedia tetap berada di sisi server. Dokumen ini membahas dua mode kegagalan
-yang ditemui operator dalam produksi serta jalur pemulihan yang disediakan OmniRoute
+yang ditemui operator dalam produksi serta jalur pemulihan yang disediakan 67router
 untuk masing-masing mode.
 
 ## Cara autentikasi relay disimpan
@@ -35,7 +35,7 @@ autentikasi.
 1. Buka **Settings → Proxy Pool**.
 2. Baris relay yang autentikasinya tidak tersedia menampilkan lencana kuning `auth missing` dan tombol
    **Repair**.
-3. Klik **Repair**. OmniRoute memanggil
+3. Klik **Repair**. 67router memanggil
    `POST /api/settings/proxies/[id]/repair-relay`, yang:
    - mendekripsi `relayAuthEnc` dengan kunci **saat ini**,
    - menulis kembali `relayAuth` dalam bentuk teks biasa ke `notes`,
@@ -67,7 +67,7 @@ tidak dapat dipulihkan, sehingga Anda tidak perlu mencarinya secara manual.
 **Gejala:** pengujian proxy (tombol `speed`) menunjukkan bahwa relay aktif, tetapi permintaan
 masih sesekali gagal.
 
-Periksa header kesadaran relay yang dikembalikan oleh probe pengujian otomatis OmniRoute
+Periksa header kesadaran relay yang dikembalikan oleh probe pengujian otomatis 67router
 (lihat **Settings → Proxy Pool** dan penghitung `relayTested` / `relayAlive`):
 
 - `x-relay-url` — backend relay yang merespons.

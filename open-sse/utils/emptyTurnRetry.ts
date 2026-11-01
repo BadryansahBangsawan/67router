@@ -405,7 +405,7 @@ type RetryCredentialSelector = (
 export type RetryRouting = {
   leased: boolean;
   forcedConnectionId: string | null;
-  apiKey: { allowedConnections?: unknown; allowedQuotas?: unknown } | null;
+  apiKey: { allowedConnections?: unknown } | null;
 };
 
 function nonEmptyIds(value: unknown): string[] | null {
@@ -432,7 +432,7 @@ export async function pickEmptyTurnRetryCredentials(
     current: Record<string, unknown>;
   }
 ): Promise<Record<string, unknown> | null> {
-  if (input.leased || input.forcedConnectionId || nonEmptyIds(input.apiKey?.allowedQuotas)) {
+  if (input.leased || input.forcedConnectionId) {
     return input.current;
   }
   const allowed = nonEmptyIds(input.apiKey?.allowedConnections);

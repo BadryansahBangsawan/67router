@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Latviešu)
+# 🐳 Docker Guide — 67router (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Ar vides failu](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Pieejamie profili](#available-profiles)
-- [Resursdatora CLI rīku konfigurēšana, kad OmniRoute darbojas Docker vidē](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Resursdatora CLI rīku konfigurēšana, kad 67router darbojas Docker vidē](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis blakuskonteiners](#redis-sidecar)
 - [Produkcijas Compose konfigurācija](#production-compose)
 - [Dockerfile posmi](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Pieejamie profili
 
-OmniRoute ietver Compose profilus galvenajiem izvietošanas variantiem. Izvēlieties savai videi atbilstošo.
+67router ietver Compose profilus galvenajiem izvietošanas variantiem. Izvēlieties savai videi atbilstošo.
 
 | Profils              | Pakalpojums      | Kad izmantot                                                                                                                                                   | Komanda                                      |
 | -------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute ietver Compose profilus galvenajiem izvietošanas variantiem. Izvēlie
 
 > Var apvienot vairākus profilus: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Resursdatora CLI rīku konfigurēšana, kad OmniRoute darbojas Docker vidē
+## Resursdatora CLI rīku konfigurēšana, kad 67router darbojas Docker vidē
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` un informācijas paneļa
 poga **Saglabāt konfigurāciju** raksta failus, piemēram, `~/.codex/*.config.toml`. Šiem ceļiem
@@ -103,11 +103,11 @@ konteinerā, rakstīšana notiek paša konteinera mājas direktorijā (`/home/no
 attēls darbojas ar `USER node`), kuru neviens resursdatora CLI nekad nelasīs un kuras saturs tiek
 atmests brīdī, kad konteiners tiek izveidots no jauna.
 
-OmniRoute to nosaka un atsakās veikt rakstīšanu, tā vietā sniedzot norādījumus,
+67router to nosaka un atsakās veikt rakstīšanu, tā vietā sniedzot norādījumus,
 nevis ziņojot par panākumiem, kurus nevar izmantot: CLI beidz darbu ar kodu `2`, un API atbild ar `422`
 un `containerEphemeralTarget: true`.
 
-### Ieteicams: palaidiet CLI resursdatorā, bet OmniRoute — Docker vidē
+### Ieteicams: palaidiet CLI resursdatorā, bet 67router — Docker vidē
 
 Konteiners nodrošina API; CLI konfigurē jūsu resursdatora rīkus.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Piesaistes montējums padara ceļu uzticamu: OmniRoute nolasa
+Piesaistes montējums padara ceļu uzticamu: 67router nolasa
 `/proc/self/mountinfo` un atļauj rakstīšanu montētos ceļos (kā arī direktorijos,
 kuru apakšdirektoriji ir montējumi, kas precīzi atbilst iepriekš redzamajai `/host-home` struktūrai), vienlaikus
 joprojām atsakot rakstīšanu nemontētos ceļos.
@@ -178,7 +178,7 @@ ar brīdinājumu, ka izmaiņas pēc konteinera darbības beigām netiks saglabā
 
 ## Redis blakusprocesa konteiners
 
-OmniRoute izmanto Redis kā izkliedētā pieprasījumu biežuma ierobežotāja un koplietotās kešatmiņas pamatu. Pakalpojums `redis` ir **vienmēr definēts** failā `docker-compose.yml` (tam nav profila ierobežojuma), un tas tiek palaists kopā ar jebkuru citu profilu.
+67router izmanto Redis kā izkliedētā pieprasījumu biežuma ierobežotāja un koplietotās kešatmiņas pamatu. Pakalpojums `redis` ir **vienmēr definēts** failā `docker-compose.yml` (tam nav profila ierobežojuma), un tas tiek palaists kopā ar jebkuru citu profilu.
 
 | Informācija                          | Vērtība                                         |
 | ------------------------------------ | ----------------------------------------------- |
@@ -358,7 +358,6 @@ Papildus noklusējuma iestatījumiem, kas dokumentēti failā [ENVIRONMENT.md](.
 | `DASHBOARD_PORT` / `API_PORT` | Pārraksta informācijas paneļa (20128) un API (20129) eksponētos portus                                                                                                                                                                                                                                       | `20128` / `20129`                 |
 | `APP_BIND_HOST`               | Resursdatora saskarne, kurā docker-compose publicē informācijas paneļa/API/tiešsaistes WS portus. Ar `REQUIRE_API_KEY=false` (noklusējums) `0.0.0.0` eksponē anonīmo `/v1` starpniekserveri LAN tīklā — paplašiniet piekļuvi tikai ar `REQUIRE_API_KEY=true` vai priekšā novietotu reverso starpniekserveri. | `127.0.0.1`                       |
 | `CLIPROXY_BIND_HOST`          | Resursdatora saskarne, kurā docker-compose publicē `cliproxyapi` blakuskonteineru — tā datu sējumā tiek glabāti pakalpojumu sniedzēju akreditācijas dati.                                                                                                                                                    | `127.0.0.1`                       |
-| `OMNIROUTE_PLUGINS_DIR`       | Direktorijs, kuru izpildlaika spraudņu skeneris nolasa un kurā instalē spraudņus. Iestatiet to, ja spraudņi ir montēti ar saistījuma montējumu: noklusējums seko `HOME`, kuru attēls var arī neeksportēt.                                                                                                    | `~/.omniroute/plugins`            |
 | `OMNIROUTE_BASE_PATH`         | URL apakšceļš, ja lietotne ir publicēta aiz reversā starpniekservera (piemēram, `/omniroute`)                                                                                                                                                                                                                | _(tukšs = sakne)_                 |
 | `NEXT_PUBLIC_BASE_URL`        | Publiskā pārlūkprogrammas izcelsme, ieskaitot apakšceļu (piemēram, `https://host/omniroute`)                                                                                                                                                                                                                 | nav iestatīts                     |
 | `PROD_DASHBOARD_PORT`         | Resursdatora puses informācijas paneļa ports failam `docker-compose.prod.yml`                                                                                                                                                                                                                                | `20130`                           |
@@ -366,7 +365,7 @@ Papildus noklusējuma iestatījumiem, kas dokumentēti failā [ENVIRONMENT.md](.
 
 ## Reversais starpniekserveris apakšceļā (Traefik / nginx)
 
-Next.js `basePath` tiek kompilēts savrupajā pakotnē. OmniRoute saglabā iekļauto
+Next.js `basePath` tiek kompilēts savrupajā pakotnē. 67router saglabā iekļauto
 vērtību kontrolfailā lietotnes saknē (tas tiek ierakstīts `npm run build` laikā un nolasīts,
 izmantojot `scripts/docker/ensure-docker-base-path.mjs`) un konteinera palaišanas laikā
 salīdzina to ar `OMNIROUTE_BASE_PATH`. Ja šīs vērtības atšķiras un attēls ir
@@ -440,7 +439,7 @@ pārbaudēm iestājas taimauts, dodiet priekšroku TCP dzīvīguma pārbaudei. P
 
 ## Docker Compose ar Caddy (HTTPS Auto-TLS)
 
-OmniRoute var droši padarīt pieejamu, izmantojot Caddy automātisko SSL nodrošināšanu. Pārliecinieties, ka jūsu domēna DNS A ieraksts norāda uz jūsu servera IP adresi.
+67router var droši padarīt pieejamu, izmantojot Caddy automātisko SSL nodrošināšanu. Pārliecinieties, ka jūsu domēna DNS A ieraksts norāda uz jūsu servera IP adresi.
 
 ```yaml
 services:
@@ -471,11 +470,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy iestata standarta pārsūtīšanas galvenes augšupstraumes konteineram. OmniRoute izmanto
+Caddy iestata standarta pārsūtīšanas galvenes augšupstraumes konteineram. 67router izmanto
 `NEXT_PUBLIC_BASE_URL` kā kanonisko publisko avotu OAuth atzvaniem un ģenerētajām publiskajām
 saitēm; autentificēta rakstīšana informācijas panelī izmanto viena avota pieprasījumus kopā ar sesijai piesaistītu CSRF
 aizsardzību. Iespējojiet `OMNIROUTE_TRUST_PROXY` tikai sarežģītākos izvietojumos, kuros apzināti
-vēlaties, lai OmniRoute noteiktu publisko avotu no uzticamām pārsūtītajām galvenēm, nevis no tiešas
+vēlaties, lai 67router noteiktu publisko avotu no uzticamām pārsūtītajām galvenēm, nevis no tiešas
 konfigurācijas.
 
 ## Cloudflare Quick Tunnel
@@ -487,11 +486,11 @@ Galapunktu tuneļu paneļus (Cloudflare, Tailscale, ngrok) var parādīt vai pas
 ### Piezīmes par tuneļiem
 
 - Quick Tunnel URL ir pagaidu adreses un mainās pēc katras restartēšanas.
-- Quick Tunnel netiek automātiski atjaunoti pēc OmniRoute vai konteinera restartēšanas. Kad nepieciešams, atkārtoti iespējojiet tos informācijas panelī.
+- Quick Tunnel netiek automātiski atjaunoti pēc 67router vai konteinera restartēšanas. Kad nepieciešams, atkārtoti iespējojiet tos informācijas panelī.
 - Pārvaldītā instalēšana pašlaik atbalsta Linux, macOS un Windows platformās `x64` / `arm64`.
 - Pārvaldītie Quick Tunnel pēc noklusējuma izmanto HTTP/2 transportu, lai ierobežotās konteineru vidēs izvairītos no traucējošiem QUIC UDP bufera brīdinājumiem. Iestatiet `CLOUDFLARED_PROTOCOL=quic` vai `auto`, ja vēlaties izmantot citu transportu.
 - Docker attēli ietver sistēmas CA saknes un nodod tās pārvaldītajam `cloudflared`, tādējādi novēršot TLS uzticamības kļūmes, kad tunelis tiek inicializēts konteinerā.
-- Iestatiet `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`, ja vēlaties, lai OmniRoute izmantotu esošu bināro failu, nevis to lejupielādētu.
+- Iestatiet `CLOUDFLARED_BIN=/absolute/path/to/cloudflared`, ja vēlaties, lai 67router izmantotu esošu bināro failu, nevis to lejupielādētu.
 
 ## Attēlu tagi
 
@@ -504,7 +503,7 @@ Vairāku platformu manifests: vietējie `linux/amd64` + `linux/arm64` (Apple Sil
 
 ### Laidienu kanāli
 
-OmniRoute publicē atsevišķus Docker kanālus stabilajiem laidieniem, aktīvā laidiena zara testēšanai un izstrādes būvējumiem.
+67router publicē atsevišķus Docker kanālus stabilajiem laidieniem, aktīvā laidiena zara testēšanai un izstrādes būvējumiem.
 
 | Kanāls                          | Avots                                         | Mainīgums                    | Ieteicamais lietojums                                                                                                        |
 | ------------------------------- | --------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -557,7 +556,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Pirms testēšanas izveidojiet OmniRoute datu sējuma vai piesaistītā datu direktorija dublējumu. Lai atgrieztos pie iepriekšējās versijas, atjaunojiet iepriekš izmantoto stabilo versiju vai jaucējkopsavilkumu un izveidojiet konteineru no jauna:
+Pirms testēšanas izveidojiet 67router datu sējuma vai piesaistītā datu direktorija dublējumu. Lai atgrieztos pie iepriekšējās versijas, atjaunojiet iepriekš izmantoto stabilo versiju vai jaucējkopsavilkumu un izveidojiet konteineru no jauna:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -577,7 +576,7 @@ Laidiena zara būvējums nekad nevar pārvietot `latest`; stabilo norādi drīks
 
 ## Informācijas paneļa atjauninājumi Docker vidē
 
-No publicēta attēla palaists konteiners nevar pats sevi aizstāt. Kad OmniRoute nosaka, ka tas darbojas
+No publicēta attēla palaists konteiners nevar pats sevi aizstāt. Kad 67router nosaka, ka tas darbojas
 konteinerā (nav `.git` darba kopijas un tā nav npm instalācija), sākuma informācijas paneļa atjauninājumu reklāmkarogs npm/git norādījumu vietā parāda
 resursdatorā izpildāmo komandu kopā ar kopēšanas pogu:
 
@@ -592,7 +591,7 @@ Pakalpojuma nosaukums tiek iegūts no `AUTO_UPDATE_SERVICE` (noklusējums ir `om
 ### Atjaunināšana ar vienu klikšķi, izmantojot resursdatora trigera failu
 
 Lai saglabātu **Atjaunināt tūlīt** darbību, nemontējot `/var/run/docker.sock` (kas konteineram piešķir
-root piekļuvi resursdatoram — skatiet iepriekš minēto `cli` profila brīdinājumu), OmniRoute pakalpojumam iestatiet `DOCKER_UPDATE_TRIGGER_FILE`
+root piekļuvi resursdatoram — skatiet iepriekš minēto `cli` profila brīdinājumu), 67router pakalpojumam iestatiet `DOCKER_UPDATE_TRIGGER_FILE`
 un resursdatorā palaidiet pārraugu:
 
 ```yaml
@@ -607,7 +606,7 @@ services:
 Ceļam jāatrodas mapē `DATA_DIR` (relatīvās vērtības tiek atrisinātas attiecībā pret to); visi pārējie ceļi tiek
 noraidīti. Pēc tam **Atjaunināt tūlīt** šajā failā ieraksta `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }`,
 atbild ar `202`, un informācijas panelis periodiski pārbauda `/api/system/version`, līdz jaunā versija sāk darboties,
-un pārlādējas. Šajā režīmā OmniRoute nekad nepalaiž čaulas vai Docker komandu. Tāpat kā ikviena atjaunināšanas
+un pārlādējas. Šajā režīmā 67router nekad nepalaiž čaulas vai Docker komandu. Tāpat kā ikviena atjaunināšanas
 darbība, pieprasījums tiek pieņemts tikai no atgriezeniskās cilpas/LAN klientiem.
 
 Ar bind montēts datu direktorijs nodrošina resursdatoram stabilu pārraugāmo ceļu. `systemd` vienību piemēri
@@ -616,7 +615,7 @@ Ar bind montēts datu direktorijs nodrošina resursdatoram stabilu pārraugāmo 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Pārraudzīt OmniRoute informācijas paneļa atjaunināšanas pieprasījumus
+Description=Pārraudzīt 67router informācijas paneļa atjaunināšanas pieprasījumus
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -628,7 +627,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Lejupielādēt un atkārtoti izveidot OmniRoute konteineru
+Description=Lejupielādēt un atkārtoti izveidot 67router konteineru
 
 [Service]
 Type=oneshot
@@ -648,13 +647,13 @@ Pakalpojums pirms attēla lejupielādes dzēš pieprasījumu, lai neveiksmīga i
 
 ## Pieejamība: noklusējuma SQLite ir paredzēts vienai replikai
 
-Standarta Docker/Kubernetes OmniRoute konfigurācija ir **viens Node process + viens SQLite rakstītājs**. Šajā topoloģijā augsta pieejamība **netiek atbalstīta**.
+Standarta Docker/Kubernetes 67router konfigurācija ir **viens Node process + viens SQLite rakstītājs**. Šajā topoloģijā augsta pieejamība **netiek atbalstīta**.
 
-| Ierobežojums                                          | Sekas                                                                                                                                                                                                                                                                                                                                                                                              |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Viens rakstītājs                                      | **Nedarbiniet** vairākas replikas ar vienu un to pašu SQLite failu. Tas sabojā datubāzi.                                                                                                                                                                                                                                                                                                           |
-| Atkārtota izveide/restartēšana/HEALTHCHECK apturēšana | **Pilnīgs darbības pārtraukums**, kas skar notiekošos SSE savienojumus, informācijas paneļa sesijas un atmiņā glabāto stāvokli. Katrs pievienotais klients tiek atvienots. Jauni pieprasījumi laikā, kad nav neviena galapunkta, no reversā starpniekservera saņem **`502 Bad Gateway: Unknown error`**, nevis OmniRoute JSON — klienti to nevar atšķirt no pakalpojuma sniedzēja kļūmes (#11015). |
-| Tā pati notikumu cilpa kā `/healthz`                  | Noslogota kataloga vai saspiešanas cikla darbība var aizkavēt pārbaudes; īss taimauts tad restartē **vienīgo** repliku.                                                                                                                                                                                                                                                                            |
+| Ierobežojums                                          | Sekas                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Viens rakstītājs                                      | **Nedarbiniet** vairākas replikas ar vienu un to pašu SQLite failu. Tas sabojā datubāzi.                                                                                                                                                                                                                                                                                                          |
+| Atkārtota izveide/restartēšana/HEALTHCHECK apturēšana | **Pilnīgs darbības pārtraukums**, kas skar notiekošos SSE savienojumus, informācijas paneļa sesijas un atmiņā glabāto stāvokli. Katrs pievienotais klients tiek atvienots. Jauni pieprasījumi laikā, kad nav neviena galapunkta, no reversā starpniekservera saņem **`502 Bad Gateway: Unknown error`**, nevis 67router JSON — klienti to nevar atšķirt no pakalpojuma sniedzēja kļūmes (#11015). |
+| Tā pati notikumu cilpa kā `/healthz`                  | Noslogota kataloga vai saspiešanas cikla darbība var aizkavēt pārbaudes; īss taimauts tad restartē **vienīgo** repliku.                                                                                                                                                                                                                                                                           |
 
 **Pārbaužu matrica** (skatiet arī [Kubernetes pārbaužu ieteikumus](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -757,7 +756,7 @@ kā arī faktisko savienojuma maršrutu; šī kļūda pati par sevi nenorāda uz
 
 ### Dodiet priekšroku konkrētam savienojumam paredzētam starpniekserverim
 
-Ietekmētajam Gemini savienojumam izmantojiet OmniRoute
+Ietekmētajam Gemini savienojumam izmantojiet 67router
 [katra savienojuma starpniekservera konfigurāciju](../ops/PROXY_GUIDE.md#4-level-proxy-system),
 pēc tam atkārtojiet **Pārbaudīt savienojumu** un nelielu pieprasījumu
 ar to pašu modeli. Tādējādi maršrutēšanas izmaiņas attiecas tikai uz konkrēto savienojumu. Pārbaudiet,
@@ -829,7 +828,7 @@ var pārtraukt citu tam pievienoto konteineru darbību; neizdzēsiet pastāvīgo
 
 ## Svarīgas piezīmes
 
-- **SQLite WAL režīms:** Komandai `docker stop` jāļauj pabeigt darbību, lai OmniRoute varētu kontrolpunktā ierakstīt jaunākās izmaiņas atpakaļ failā `storage.sqlite`. Komplektācijā iekļautajos Compose failos jau ir iestatīts 40 s apturēšanas labvēlības periods. Ja palaižat attēlu tieši, saglabājiet `--stop-timeout 40`.
+- **SQLite WAL režīms:** Komandai `docker stop` jāļauj pabeigt darbību, lai 67router varētu kontrolpunktā ierakstīt jaunākās izmaiņas atpakaļ failā `storage.sqlite`. Komplektācijā iekļautajos Compose failos jau ir iestatīts 40 s apturēšanas labvēlības periods. Ja palaižat attēlu tieši, saglabājiet `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Iestatiet uz `true`, ja regulārās/pirmsieraksta dublējumkopijas tiek pārvaldītas ārēji. Esošas datubāzes migrācijām joprojām ir nepieciešams atsevišķs ilglaicīgi glabājams drošības momentuzņēmums un masveida migrācijas aizsardzība.
 - **Datu pastāvīga glabāšana:** Vienmēr montējiet sējumu uz `/app/data`, lai saglabātu datubāzi, atslēgas un konfigurācijas arī pēc konteineru restartēšanas.
 - **Porta konfigurācija:** Pārrakstiet vides mainīgo `PORT`, lai mainītu noklusējuma portu `20128`.

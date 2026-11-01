@@ -5,11 +5,11 @@
 ---
 
 > **Status:** Tersedia secara umum.
-> **Khalayak:** Pengendali yang menghubungkan OpenCode kepada pengerahan OmniRoute.
+> **Khalayak:** Pengendali yang menghubungkan OpenCode kepada pengerahan 67router.
 > **Sumber rujukan utama (skema konfigurasi):** `src/shared/services/opencodeConfig.ts`
 > **Sumber rujukan utama (pakej npm):** `@omniroute/opencode-provider/` (ruang kerja yang boleh diterbitkan)
 
-[OpenCode](https://opencode.ai) ialah klien AI CLI/desktop berasaskan ejen. Ia membaca katalog penyedianya daripada `~/.config/opencode/opencode.json` (atau `opencode.jsonc`) dan mengikut skema di `https://opencode.ai/config.json`. OmniRoute menampilkan dirinya kepada OpenCode sebagai salah satu penyedia tersebut — setiap permintaan mengalir melalui permukaan `/v1` serasi OpenAI standard OmniRoute, jadi OpenCode mendapat manfaat secara automatik daripada penghalaan Auto-Combo, pemutus litar, dasar kunci, kebolehcerapan dan sebagainya.
+[OpenCode](https://opencode.ai) ialah klien AI CLI/desktop berasaskan ejen. Ia membaca katalog penyedianya daripada `~/.config/opencode/opencode.json` (atau `opencode.jsonc`) dan mengikut skema di `https://opencode.ai/config.json`. 67router menampilkan dirinya kepada OpenCode sebagai salah satu penyedia tersebut — setiap permintaan mengalir melalui permukaan `/v1` serasi OpenAI standard 67router, jadi OpenCode mendapat manfaat secara automatik daripada penghalaan Auto-Combo, pemutus litar, dasar kunci, kebolehcerapan dan sebagainya.
 
 Terdapat **dua laluan penyepaduan yang disokong**. Pilih satu — kedua-duanya menjana konfigurasi yang sama.
 
@@ -17,16 +17,16 @@ Terdapat **dua laluan penyepaduan yang disokong**. Pilih satu — kedua-duanya m
 
 ## Laluan 1 — Penjana CLI (tanpa pemasangan npm)
 
-Disyorkan untuk pengguna akhir. Disertakan bersama OmniRoute. Menulis `opencode.json` di lokasi sedia ada.
+Disyorkan untuk pengguna akhir. Disertakan bersama 67router. Menulis `opencode.json` di lokasi sedia ada.
 
 ```bash
-# Selepas memasang OmniRoute (npm i -g @omniroute/cli atau klon setempat)
+# Selepas memasang 67router (npm i -g @omniroute/cli atau klon setempat)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Di sebalik tabir, CLI memanggil `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), jadi `opencode.json` sedia ada mengekalkan penyedia lain dan ulasannya. Entri OmniRoute ditambah/digantikan secara atomik.
+Di sebalik tabir, CLI memanggil `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), jadi `opencode.json` sedia ada mengekalkan penyedia lain dan ulasannya. Entri 67router ditambah/digantikan secara atomik.
 
 Fail yang terhasil (katalog model lalai):
 
@@ -90,8 +90,8 @@ Kedua-dua laluan menghasilkan `provider.omniroute.npm: "@ai-sdk/openai-compatibl
 ```
 UI/ejen OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (permukaan OpenAI OmniRoute)
-         → pengendali OmniRoute /v1/chat/completions  (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (permukaan OpenAI 67router)
+         → pengendali 67router /v1/chat/completions  (open-sse/handlers/chatCore.ts)
             → penghalaan combo / Auto-Combo / pelaksana
                → penyedia huluan
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Anda boleh menulis ganti melalui `models: [...]`. Penambahan yang disyorkan:
 
-- `"auto"` — menyediakan penghala konfigurasi sifar [Auto-Combo](../routing/AUTO-COMBO.md) OmniRoute. Membolehkan OpenCode memilih "model terbaik yang tersedia" tanpa anda menetapkan katalog secara langsung dalam kod.
-- `"<combo-name>"` — sebarang kombo yang telah anda takrifkan dalam papan pemuka; OmniRoute menyelesaikannya secara telus.
+- `"auto"` — menyediakan penghala konfigurasi sifar [Auto-Combo](../routing/AUTO-COMBO.md) 67router. Membolehkan OpenCode memilih "model terbaik yang tersedia" tanpa anda menetapkan katalog secara langsung dalam kod.
+- `"<combo-name>"` — sebarang kombo yang telah anda takrifkan dalam papan pemuka; 67router menyelesaikannya secara telus.
 
 ---
 
@@ -135,12 +135,12 @@ Penyahduplikasian ini ialah **punca kerosakan paling lazim** yang dilihat dalam 
 
 ## Mod pengesahan
 
-| Tetapan OmniRoute                              | Nilai `apiKey` yang disyorkan                                             |
+| Tetapan 67router                               | Nilai `apiKey` yang disyorkan                                             |
 | ---------------------------------------------- | ------------------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (lalai untuk setempat) | `sk_omniroute` (pemegang tempat literal)                                  |
 | `REQUIRE_API_KEY=true`                         | Kunci API sebenar bagi setiap pengguna daripada Papan Pemuka → Kunci API. |
 
-Bagi klien gaya Anthropic yang menghantar `x-api-key` + `anthropic-version`, `extractApiKey` OmniRoute turut menerima kunci daripada `x-api-key`. OpenCode menggunakan antara muka OpenAI, jadi ia akan sentiasa menghantar `Authorization: Bearer ${apiKey}` — tiada kes khas Anthropic dikenakan di sini.
+Bagi klien gaya Anthropic yang menghantar `x-api-key` + `anthropic-version`, `extractApiKey` 67router turut menerima kunci daripada `x-api-key`. OpenCode menggunakan antara muka OpenAI, jadi ia akan sentiasa menghantar `Authorization: Bearer ${apiKey}` — tiada kes khas Anthropic dikenakan di sini.
 
 ---
 
@@ -149,15 +149,15 @@ Bagi klien gaya Anthropic yang menghantar `x-api-key` + `anthropic-version`, `ex
 | Gejala                                                             | Punca                                                                                    | Penyelesaian                                                                                                        |
 | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | `404` pada setiap permintaan dengan URL yang mengandungi `/v1/v1/` | Konfigurasi lapuk daripada pemalam sebelum v3.8 yang menambahkan akhiran `/v1` dua kali. | Jana semula melalui Laluan 1 atau 2.                                                                                |
-| `401 Invalid API key`                                              | OmniRoute mempunyai `REQUIRE_API_KEY=true` dan kunci tersebut tidak dikenali.            | Cipta kunci dalam papan pemuka, atau tetapkan `REQUIRE_API_KEY=false` (setempat sahaja) dan gunakan `sk_omniroute`. |
-| Senarai model kosong dalam UI OpenCode                             | Kesemua 4 model lalai disembunyikan dalam keterlihatan penyedia OmniRoute.               | Berikan `models: ["auto", ...]` untuk memaparkan model yang telah anda dayakan.                                     |
+| `401 Invalid API key`                                              | 67router mempunyai `REQUIRE_API_KEY=true` dan kunci tersebut tidak dikenali.             | Cipta kunci dalam papan pemuka, atau tetapkan `REQUIRE_API_KEY=false` (setempat sahaja) dan gunakan `sk_omniroute`. |
+| Senarai model kosong dalam UI OpenCode                             | Kesemua 4 model lalai disembunyikan dalam keterlihatan penyedia 67router.                | Berikan `models: ["auto", ...]` untuk memaparkan model yang telah anda dayakan.                                     |
 | OpenCode 500 dengan `cannot read property 'models'`                | OpenCode lama (< 0.1.x) tidak menerima `models` sebaris.                                 | Naik taraf OpenCode kepada versi yang mematuhi skema v1 (`opencode.ai/config.json`).                                |
 
 ---
 
 ## Lihat juga
 
-- [Rujukan API](../reference/API_REFERENCE.md) — keseluruhan permukaan REST OmniRoute
+- [Rujukan API](../reference/API_REFERENCE.md) — keseluruhan permukaan REST 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — maksud `model: "auto"`
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Sumber: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

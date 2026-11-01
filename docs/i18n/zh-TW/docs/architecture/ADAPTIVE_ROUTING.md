@@ -4,7 +4,7 @@
 
 ---
 
-本文說明新增至 OmniRoute、由回饋驅動的自適應路由基礎架構。
+本文說明新增至 67router、由回饋驅動的自適應路由基礎架構。
 其設計刻意保持精簡：引入類型化的路由結果通道、將線上品質訊號饋入既有的
 auto-combo 評分器、可選用的 OpenTelemetry 匯出器，以及可解釋性端點。它**不會**
 取代既有的韌性堆疊（斷路器、連線冷卻、模型鎖定、健康狀態矩陣、自動駕駛）——
@@ -12,7 +12,7 @@ auto-combo 評分器、可選用的 OpenTelemetry 匯出器，以及可解釋性
 
 ## 1. 架構背景
 
-OmniRoute 是一個資料平面，包含**請求熱路徑**與**控制／智慧
+67router 是一個資料平面，包含**請求熱路徑**與**控制／智慧
 平面**。熱路徑必須維持快速、記憶體高效、非同步、具韌性且
 可預測。評估、品質評分、實驗及歷史分析則屬於控制平面。
 
@@ -21,7 +21,7 @@ AI 代理程式／IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   資料平面（快速、同步、記憶體內）
+│    67router        │   資料平面（快速、同步、記憶體內）
 │  路由／容錯移轉     │
 │  健康狀態／防護機制 │
 │  快取／串流         │
@@ -47,7 +47,6 @@ AI 代理程式／IDE
 | 影子流量                 | `open-sse/services/combo/shadowRouting.ts`                                   |
 | 防護機制                 | `src/lib/guardrails/`（前置／後置掛鉤）                                      |
 | 精確快取                 | `src/lib/semanticCache.ts`（以簽章為基礎）                                   |
-| 評估器／評估驅動路由     | `src/lib/evals/`、`open-sse/services/evalRouting.ts`                         |
 | 組合決策可解釋性         | `open-sse/services/combo/decisionTrace.ts`                                   |
 | 儀表板即時事件           | `src/lib/events/eventBus.ts`（UI 通知通道、`unknown` 酬載、100 筆歷史記錄）  |
 
@@ -228,7 +227,7 @@ TTFT/ITL/中斷狀態會流入 `RoutingEvent`（`ttftMs`、`itlMs`），並由 O
   `@opentelemetry/*` SDK）。
 - Span 遵循 GenAI 語意慣例（`gen_ai.provider.name`、
   `gen_ai.request.model`、`gen_ai.usage.input_tokens/output_tokens`、
-  `gen_ai.completion.finish_reason`、`gen_ai.system`），並加入 OmniRoute
+  `gen_ai.completion.finish_reason`、`gen_ai.system`），並加入 67router
   路由屬性（結果、狀態、TTFT、重試、備援）。
 - `record()` 僅將資料加入有界緩衝區（O(1)）；背景計時器會透過
   `POST {endpoint}/v1/traces` 非同步排空。過載時會捨棄最舊的事件
@@ -249,15 +248,13 @@ TTFT/ITL/中斷狀態會流入 `RoutingEvent`（`ttftMs`、`itlMs`），並由 O
 
 ## 6. 評估平面整合（為 Future AGI 做好準備）
 
-OmniRoute 將 Future AGI（或任何評估器）視為**潛在的智慧／評估後端，而非相依項目**。
+67router 將 Future AGI（或任何評估器）視為**潛在的智慧／評估後端，而非相依項目**。
 整合接點如下：
 
 - `RoutingEventSink` 可將事件非同步轉送至評估器。
 - `MemoryRoutingEventStore` 與品質快照可向評估器提供原始決策串流。
 - 未來的 `Evaluator`（確定性、本機評審、HTTP、WASM）可取用事件／追蹤，
   並傳回 `QualityScore`，以饋入同一條 `getQualityScore`／品質因子路徑。
-- 現有的評估驅動路由（`open-sse/services/evalRouting.ts`）啟用後，已會依據
-  `eval_runs` 通過率重新排序組合目標。
 
 請求路徑上不會同步執行任何評估；即使沒有評估器，閘道仍可完整運作。
 

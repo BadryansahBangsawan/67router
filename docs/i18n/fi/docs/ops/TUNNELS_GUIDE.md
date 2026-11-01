@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Viimeksi päivitetty:** 2026-06-28 — v3.8.40
 
-OmniRoute voi julkaista paikallisen palvelimensa (`http://localhost:20128`) julkiseen
+67router voi julkaista paikallisen palvelimensa (`http://localhost:20128`) julkiseen
 internetiin kolmen tunnelitaustajärjestelmän kautta. Tästä on hyötyä seuraavissa tilanteissa:
 
 - Pilvipalveluntarjoajien (Antigravity, Gemini, Cursor) OAuth-takaisinkutsut, jotka tarvitsevat
@@ -15,7 +15,7 @@ internetiin kolmen tunnelitaustajärjestelmän kautta. Tästä on hyötyä seura
 - Paikallisen instanssin jakaminen tiimin jäsenille ilman virtuaalikoneen käyttöönottoa.
 - Mobiili-, etä- tai verkkojen välinen testaus.
 
-Kaikkia kolmea taustajärjestelmää hallitaan prosessin sisällä — OmniRoute käynnistää ja pysäyttää
+Kaikkia kolmea taustajärjestelmää hallitaan prosessin sisällä — 67router käynnistää ja pysäyttää
 taustalla olevan binääritiedoston tai SDK:n hallintapaneelista tai REST API:n kautta. Käänteisen välityspalvelimen tai systemd:n
 määritystä ei tarvita.
 
@@ -41,7 +41,7 @@ kahta tilaa, jotka valitaan sen perusteella, onko nimetyn tunnelin määritys an
 http://localhost:<apiPort>` ja jäsentää määritetyn `*.trycloudflare.com`-URL-osoitteen
   vakiotulosteesta. URL-osoitteet ovat tilapäisiä ja muuttuvat jokaisella uudelleenkäynnistyksellä.
 - **Nimetty tunneli (valinnainen).** Kun `CLOUDFLARED_CONFIG` osoittaa paikallisesti hallittuun
-  cloudflared-ohjelman `config.yml`-tiedostoon, OmniRoute suorittaa komennon `cloudflared tunnel --no-autoupdate
+  cloudflared-ohjelman `config.yml`-tiedostoon, 67router suorittaa komennon `cloudflared tunnel --no-autoupdate
 --config <path> run`, jolloin saat **vakaan, nimetyn isäntänimen**. Määritys
   sisältää tunnelin UUID:n, `credentials-file`-tiedoston ja `ingress`-reitityksen, joten
   `--url`-valitsinta ei välitetä eikä Zero Trust -hallintapaneelin tunnusta tarvita. `run` lukee
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` ja jäsentää määritetyn `*.trycloudflare.com`-UR
 
 Keskeiset toimintatavat:
 
-- **Automaattinen asennus.** Ensimmäisellä käyttökerralla OmniRoute lataa uusimman `cloudflared`-
+- **Automaattinen asennus.** Ensimmäisellä käyttökerralla 67router lataa uusimman `cloudflared`-
   binääritiedoston virallisista GitHub-julkaisuista (hallittu asennus sijaitsee hakemistossa
   `DATA_DIR/cloudflared/`). Ladatun resurssin SHA256-tarkistussumma vahvistetaan
   julkaisuluetteloa vasten ennen suorittamista.
@@ -67,7 +67,7 @@ Keskeiset toimintatavat:
    cloudflared tunnel route dns omniroute ai.example.com
    ```
 
-2. Luo `~/.cloudflared/config.yml`, joka reitittää isäntänimesi OmniRouten paikalliseen
+2. Luo `~/.cloudflared/config.yml`, joka reitittää isäntänimesi 67routerin paikalliseen
    API-porttiin (oletusarvoisesti 20128):
 
    ```yaml
@@ -79,11 +79,11 @@ Keskeiset toimintatavat:
      - service: http_status:404
    ```
 
-3. Osoita OmniRoute käyttämään määritystä ja käynnistä tunneli (uudelleen):
+3. Osoita 67router käyttämään määritystä ja käynnistä tunneli (uudelleen):
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # valinnainen — korvaa OmniRouten ilmoittaman isäntänimen; muutoin se luetaan
+   # valinnainen — korvaa 67routerin ilmoittaman isäntänimen; muutoin se luetaan
    # määrityksen ensimmäisestä ingress-säännöstä:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -121,12 +121,12 @@ Tai hallintapaneelin kautta: **Asetukset → Tunnelit → Cloudflare**.
 
 ### Valinnaiset ympäristömuuttujat
 
-| Muuttuja                                             | Tarkoitus                                                                                                                                                                                   |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Ohittaa binäärin polun. Jos se on asetettu ja kelvollinen, OmniRoute käyttää sitä lataamisen sijaan.                                                                                        |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Siirtoprotokolla (oletus `http2`; myös `quic`, `auto`).                                                                                                                                     |
-| `CLOUDFLARED_CONFIG`                                 | Paikallisesti hallitun cloudflared-`config.yml`-tiedoston polku. Kun tämä on asetettu, OmniRoute suorittaa pikatunnelin sijaan **nimetyn/pysyvän** tunnelin (`tunnel --config <path> run`). |
-| `CLOUDFLARED_HOSTNAME`                               | Ohittaa nimetyn tunnelin ilmoittaman julkisen isäntänimen (esim. `ai.example.com`). Jos arvoa ei ole asetettu, se luetaan määrityksen ensimmäisestä `ingress`-isäntänimestä.                |
+| Muuttuja                                             | Tarkoitus                                                                                                                                                                                  |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `CLOUDFLARED_BIN`                                    | Ohittaa binäärin polun. Jos se on asetettu ja kelvollinen, 67router käyttää sitä lataamisen sijaan.                                                                                        |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Siirtoprotokolla (oletus `http2`; myös `quic`, `auto`).                                                                                                                                    |
+| `CLOUDFLARED_CONFIG`                                 | Paikallisesti hallitun cloudflared-`config.yml`-tiedoston polku. Kun tämä on asetettu, 67router suorittaa pikatunnelin sijaan **nimetyn/pysyvän** tunnelin (`tunnel --config <path> run`). |
+| `CLOUDFLARED_HOSTNAME`                               | Ohittaa nimetyn tunnelin ilmoittaman julkisen isäntänimen (esim. `ai.example.com`). Jos arvoa ei ole asetettu, se luetaan määrityksen ensimmäisestä `ingress`-isäntänimestä.               |
 
 ## 2. ngrok
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Vastaus sisältää määritetyn `publicUrl`-osoitteen (esim.
 `https://abcd-1234.ngrok-free.app`). Mukautetut verkkotunnukset, alueet ja käytäntösäännöt
-on määritettävä ngrok-hallintapaneelissa — OmniRoute välittää itse vain
+on määritettävä ngrok-hallintapaneelissa — 67router välittää itse vain
 paikallisen kohde-URL-osoitteen SDK:lle.
 
 ## 3. Tailscale Funnel
@@ -185,14 +185,14 @@ URL-osoitteen muoto on `https://<machine>.<tailnet>.ts.net/`.
 
 ### Edellytykset
 
-1. Asenna Tailscale (tai anna OmniRouten tehdä se — katso alla oleva `install`-päätepiste).
-2. Kirjaudu sisään (`tailscale login` tai OmniRouten `login`-päätepisteen kautta).
+1. Asenna Tailscale (tai anna 67routerin tehdä se — katso alla oleva `install`-päätepiste).
+2. Kirjaudu sisään (`tailscale login` tai 67routerin `login`-päätepisteen kautta).
 3. Ota Funnel käyttöön tailnet-verkollesi Tailscalen hallintakonsolissa:
    <https://login.tailscale.com/admin/settings/features>.
 
 Linuxissa ja macOS:ssä taustapalvelun (`tailscaled`) hallinta vaatii `sudo`-oikeudet.
 POST-päätepisteet hyväksyvät valinnaisen `sudoPassword`-kentän, joka välitetään
-OmniRouten MITM-salasanavälimuistiin (`getCachedPassword` / `setCachedPassword`)
+67routerin MITM-salasanavälimuistiin (`getCachedPassword` / `setCachedPassword`)
 kutsun ajaksi. Windows käyttää oletusarvoista palveluasennusta polussa
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -253,7 +253,7 @@ itsenäinen.
 
 ## OAuth-takaisinkutsuihin liittyvät huomioitavat asiat
 
-Kun julkaiset OmniRouten tunnelin kautta, hallintapaneelin ja OAuth-kulkujen on
+Kun julkaiset 67routerin tunnelin kautta, hallintapaneelin ja OAuth-kulkujen on
 muodostettava takaisinkutsu-URL-osoitteet **julkisen** isäntänimen eikä `localhost`-osoitteen
 perusteella. Muussa tapauksessa OAuth-palveluntarjoaja ohjaa käyttäjän takaisin URL-osoitteeseen,
 jota sen palvelimet eivät voi tavoittaa, jolloin kättely epäonnistuu.
@@ -270,7 +270,7 @@ Aseta:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-ja käynnistä OmniRoute uudelleen ennen OAuth-prosessin aloittamista. Lyhytikäisten
+ja käynnistä 67router uudelleen ennen OAuth-prosessin aloittamista. Lyhytikäisten
 Cloudflare Quick Tunnel -tunneleiden URL-osoite muuttuu jokaisen uudelleenkäynnistyksen
 jälkeen, joten tuotantoympäristön OAuth-käytössä kannattaa suosia ngrokia varatulla
 verkkotunnuksella tai Tailscale Funnelia.
@@ -287,13 +287,13 @@ Hallintapaneeli näyttää tunnelin tilan kohdassa **Asetukset → Tunnelit**:
 
 Ohjelmallista valvontaa varten kysy taustajärjestelmäkohtaisia `GET`-päätepisteitä
 säännöllisesti. Useiden taustajärjestelmien käyttäminen samanaikaisesti on sallittua;
-OmniRoute seuraa kutakin niistä itsenäisesti.
+67router seuraa kutakin niistä itsenäisesti.
 
 ## Vianmääritys
 
 ### "cloudflared-binääritiedostoa ei löytynyt"
 
-OmniRoute yrittää asentaa sen automaattisesti ensimmäisellä käyttökerralla. Jos asennus
+67router yrittää asentaa sen automaattisesti ensimmäisellä käyttökerralla. Jos asennus
 on estetty (rajoitettu verkko, ei pääsyä GitHubiin), lataa `cloudflared` manuaalisesti
 osoitteesta <https://github.com/cloudflare/cloudflared/releases> ja aseta
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

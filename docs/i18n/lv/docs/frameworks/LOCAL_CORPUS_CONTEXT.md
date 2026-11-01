@@ -12,7 +12,7 @@
 
 ## Kas tas ir
 
-Local Corpus ļauj operatoram OmniRoute MCP serverim darīt pieejamu vienu skaidri apstiprinātu teksta failu direktoriju. Faili paliek to sākotnējā direktorijā: OmniRoute saglabā SQLite datubāzē tikai kanonisko saknes ceļu un uztur meklēšanas indeksu atmiņā. Korpusa saturs netiek kopēts repozitorijā vai datubāzē.
+Local Corpus ļauj operatoram 67router MCP serverim darīt pieejamu vienu skaidri apstiprinātu teksta failu direktoriju. Faili paliek to sākotnējā direktorijā: 67router saglabā SQLite datubāzē tikai kanonisko saknes ceļu un uztur meklēšanas indeksu atmiņā. Korpusa saturs netiek kopēts repozitorijā vai datubāzē.
 
 Indeksa atsvaidzināšana notiek inkrementāli. Nemainīti faili tiek izmantoti atkārtoti, pamatojoties uz to lielumu un modificēšanas laiku, savukārt mainītie faili tiek nolasīti atkārtoti, un tiem tiek aprēķināta SHA-256 jaukšanas vērtība; izdzēstie faili tiek noņemti. Meklēšana atsvaidzina indeksu, kas ir vecāks par 30 sekundēm; izsaucēji var arī pieprasīt tūlītēju atsvaidzināšanu.
 

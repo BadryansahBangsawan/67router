@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI ਖੋਜ**, **ਮੂਲ Agent Client Protocol**, ਅਤੇ
+67router **CLI ਖੋਜ**, **ਮੂਲ Agent Client Protocol**, ਅਤੇ
 **ਪੁਰਾਣੇ stdio ਅਡੈਪਟਰਾਂ** ਨੂੰ ਵੱਖ ਕਰਦਾ ਹੈ। ਕਿਸੇ ਇੰਸਟਾਲ ਕੀਤੀ ਬਾਈਨਰੀ ਦਾ ਮਿਲਣਾ ਉਸਦੀ
 ਪ੍ਰਮਾਣਿਕਤਾ, ਮਾਡਲ ਅਨੁਕੂਲਤਾ, ਜਾਂ ਪ੍ਰੌਂਪਟ ਸੰਭਾਲਣ ਦੀ ਤਿਆਰੀ ਨੂੰ ਸਾਬਤ ਨਹੀਂ ਕਰਦਾ।
 
@@ -123,5 +123,3 @@ try {
 - [ਏਜੰਟ ਪ੍ਰੋਟੋਕੋਲ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI ਲਾਂਚ ਇਕਰਾਰਨਾਮੇ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI ਟੂਲ](../reference/CLI-TOOLS.md)
-- [A2A ਸਰਵਰ](./A2A-SERVER.md)
-- [ਕਲਾਉਡ ਏਜੰਟ](./CLOUD_AGENT.md)

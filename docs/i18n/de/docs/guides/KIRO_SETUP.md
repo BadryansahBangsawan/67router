@@ -4,7 +4,7 @@
 
 ---
 
-Dieser Leitfaden beschreibt, wie Kiro-Konten (ein von AWS gehosteter KI-Programmierassistent) zu OmniRoute hinzugefügt werden,
+Dieser Leitfaden beschreibt, wie Kiro-Konten (ein von AWS gehosteter KI-Programmierassistent) zu 67router hinzugefügt werden,
 wobei der Schwerpunkt auf dem gleichzeitigen Betrieb mehrerer Konten ohne Sitzungskonflikte liegt.
 
 ---
@@ -22,10 +22,10 @@ Token des ersten Kontos.
 
 ---
 
-## Wie OmniRoute dieses Problem löst (v3.8.0+)
+## Wie 67router dieses Problem löst (v3.8.0+)
 
-Seit v3.8.0 ruft OmniRoute bei jedem
-Import einer Kiro-Verbindung `registerClient()` (AWS SSO OIDC) auf. Dadurch erhält jede OmniRoute-Verbindung ihre eigene dedizierte OIDC-Clientregistrierung. Da jede Clientregistrierung unabhängig ist, wirkt sich die Aktualisierung oder
+Seit v3.8.0 ruft 67router bei jedem
+Import einer Kiro-Verbindung `registerClient()` (AWS SSO OIDC) auf. Dadurch erhält jede 67router-Verbindung ihre eigene dedizierte OIDC-Clientregistrierung. Da jede Clientregistrierung unabhängig ist, wirkt sich die Aktualisierung oder
 erneute Authentifizierung eines Kontos nicht auf das Aktualisierungstoken eines anderen Kontos aus.
 
 Die Isolierung gilt für die Importmethoden mit Aktualisierungstoken, während die Authentifizierung per API-Schlüssel
@@ -58,7 +58,7 @@ erhalten automatisch eine eigene Clientregistrierung.
 
 ### Voraussetzungen
 
-- OmniRoute v3.8.0 oder höher.
+- 67router v3.8.0 oder höher.
 - Ein funktionsfähiges Kiro-Konto (E-Mail-Adresse + Passwort oder Anmeldung über Google oder GitHub).
 - Optional ein zweites Kiro-Konto.
 
@@ -69,7 +69,7 @@ erhalten automatisch eine eigene Clientregistrierung.
    - **Token importieren** — fügen Sie ein Aktualisierungstoken ein, das mit `aorAAAAAG` beginnt.
    - **API-Schlüssel** — fügen Sie einen langlebigen Kiro-/CodeWhisperer-API-Schlüssel ein.
    - **Anmeldung über Google/GitHub** — schließen Sie den OAuth-Ablauf im Browser ab.
-   - **Automatischer Import** — klicken Sie auf die Schaltfläche; OmniRoute liest die Anmeldedaten aus der
+   - **Automatischer Import** — klicken Sie auf die Schaltfläche; 67router liest die Anmeldedaten aus der
      lokalen kiro-cli-Datenbank oder aus `~/.aws/sso/cache`.
 3. Die Verbindung wird gespeichert. Bei Abläufen mit Aktualisierungstoken wird automatisch ein dedizierter
    OIDC-Client registriert. Bei Abläufen mit API-Schlüssel wird der Schlüssel von AWS validiert und kein Aktualisierungstoken gespeichert.
@@ -126,7 +126,7 @@ keine OAuth-Aktualisierung und vermeidet dadurch die Invalidierung gemeinsam gen
 2. Wählen Sie **API-Schlüssel**.
 3. Fügen Sie den API-Schlüssel ein und wählen Sie die AWS-Region: **Automatisch erkennen** (Standard), **USA Ost
    (Nord-Virginia)** oder **Europa (Frankfurt)**.
-4. OmniRoute validiert den Schlüssel und speichert die Verbindung fest für die Region, in der der
+4. 67router validiert den Schlüssel und speichert die Verbindung fest für die Region, in der der
    Schlüssel funktioniert.
 
 ### API
@@ -176,7 +176,7 @@ an `https://q.<region>.amazonaws.com/generateAssistantResponse` — einschließl
 ## Ablauf des OIDC-Clients
 
 Öffentliche AWS-SSO-OIDC-Clients laufen üblicherweise nach 90 Tagen ab
-(`clientSecretExpiresAt`). OmniRoute speichert diesen Zeitstempel zur Beobachtbarkeit in `providerSpecificData`.
+(`clientSecretExpiresAt`). 67router speichert diesen Zeitstempel zur Beobachtbarkeit in `providerSpecificData`.
 Wenn die Aktualisierung einer Verbindung nach etwa 90 Tagen nicht mehr funktioniert, importieren Sie die
 Verbindung erneut, um eine neue OIDC-Client-Registrierung zu erhalten. Die automatische Neuregistrierung bei
 Ablauf ist als zukünftige Verbesserung vorgesehen.
@@ -197,7 +197,7 @@ API-Schlüssel-Verbindungen haben kein OIDC-Client-Ablaufdatum, da sie nicht
 ### Import schlägt mit „Tokenvalidierung fehlgeschlagen“ fehl
 
 - Stellen Sie sicher, dass das Aktualisierungstoken mit `aorAAAAAG` beginnt.
-- Stellen Sie sicher, dass OmniRoute `https://oidc.us-east-1.amazonaws.com` (oder die konfigurierte
+- Stellen Sie sicher, dass 67router `https://oidc.us-east-1.amazonaws.com` (oder die konfigurierte
   Region) erreichen kann. Wenn Sie sich hinter einem Unternehmensproxy befinden, legen Sie unter
   **Dashboard → Einstellungen → Proxys** einen Proxy auf Anbieterebene fest.
 
@@ -205,7 +205,7 @@ API-Schlüssel-Verbindungen haben kein OIDC-Client-Ablaufdatum, da sie nicht
 
 - Vergewissern Sie sich, dass der Schlüssel ein Kiro-/CodeWhisperer-API-Schlüssel und kein Aktualisierungstoken ist.
 - Vergewissern Sie sich, dass die AWS-Region zum Schlüssel/Konto passt. `us-east-1` ist die Standardeinstellung.
-- Der Schlüssel muss `ListAvailableProfiles` aufrufen können; andernfalls kann OmniRoute das erforderliche
+- Der Schlüssel muss `ListAvailableProfiles` aufrufen können; andernfalls kann 67router das erforderliche
   `profileArn` nicht auflösen.
 
 Informationen zu weiteren Problemen finden Sie in der zentralen Datei [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

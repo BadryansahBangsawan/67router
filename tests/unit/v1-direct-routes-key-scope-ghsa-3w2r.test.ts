@@ -34,32 +34,18 @@ useDecollidedMigrationsDir();
 const core = await import("../../src/lib/db/core.ts");
 const providersDb = await import("../../src/lib/db/providers.ts");
 const apiKeysDb = await import("../../src/lib/db/apiKeys.ts");
-const combosDb = await import("../../src/lib/db/combos.ts");
 const { selectProvider } = await import("../../open-sse/config/searchRegistry.ts");
 
-const translationsRoute = await import("../../src/app/api/v1/audio/translations/route.ts");
-const speechRoute = await import("../../src/app/api/v1/audio/speech/route.ts");
-const imagesRoute = await import("../../src/app/api/v1/images/generations/route.ts");
 const videosRoute = await import("../../src/app/api/v1/videos/generations/route.ts");
-const embeddingsRoute = await import("../../src/app/api/v1/embeddings/route.ts");
-const rerankRoute = await import("../../src/app/api/v1/rerank/route.ts");
 const segmentRoute = await import("../../src/app/api/v1/segment/route.ts");
 const classifyRoute = await import("../../src/app/api/v1/classify/route.ts");
 const alphaSearchRoute = await import("../../src/app/api/v1/alpha/search/route.ts");
 const searchRoute = await import("../../src/app/api/v1/search/route.ts");
-const moderationsRoute = await import("../../src/app/api/v1/moderations/route.ts");
 const ocrRoute = await import("../../src/app/api/v1/ocr/route.ts");
 const musicRoute = await import("../../src/app/api/v1/music/generations/route.ts");
-const providerEmbeddingsRoute =
-  await import("../../src/app/api/v1/providers/[provider]/embeddings/route.ts");
-const providerImagesRoute =
-  await import("../../src/app/api/v1/providers/[provider]/images/generations/route.ts");
 const webFetchRoute = await import("../../src/app/api/v1/web/fetch/route.ts");
 const webMapRoute = await import("../../src/app/api/v1/web/map/route.ts");
-const voicesRoute = await import("../../src/app/api/v1/voices/route.ts");
 const { nativeGenerationRoutes } = await import("./helpers/elevenLabsGenerationRoutes.ts");
-const providerVoicesRoute =
-  await import("../../src/app/api/v1/providers/[provider]/voices/route.ts");
 
 test.after(async () => {
   core.resetDbInstance();
@@ -105,7 +91,6 @@ async function makeKey(
   options: {
     allowedConnections?: string[];
     blockedModels?: string[];
-    allowedQuotas?: string[];
   } = {}
 ): Promise<string> {
   keyCounter += 1;
@@ -115,11 +100,8 @@ async function makeKey(
     [],
     { allowedConnections: options.allowedConnections }
   );
-  if (options.blockedModels || options.allowedQuotas) {
-    await apiKeysDb.updateApiKeyPermissions(key.id, {
-      ...(options.blockedModels ? { blockedModels: options.blockedModels } : {}),
-      ...(options.allowedQuotas ? { allowedQuotas: options.allowedQuotas } : {}),
-    });
+  if (options.blockedModels) {
+    await apiKeysDb.updateApiKeyPermissions(key.id, { blockedModels: options.blockedModels });
   }
   return key.key as string;
 }
@@ -161,26 +143,6 @@ function jsonRequest(url: string, bearer: string, body: unknown, method = "POST"
   });
 }
 
-function wavBlob(): Blob {
-  const dataLen = 320;
-  const b = Buffer.alloc(44 + dataLen);
-  b.write("RIFF", 0, "ascii");
-  b.writeUInt32LE(36 + dataLen, 4);
-  b.write("WAVE", 8, "ascii");
-  b.write("fmt ", 12, "ascii");
-  b.writeUInt32LE(16, 16);
-  b.writeUInt16LE(1, 20);
-  b.writeUInt16LE(1, 22);
-  b.writeUInt32LE(16000, 24);
-  b.writeUInt32LE(32000, 28);
-  b.writeUInt16LE(2, 32);
-  b.writeUInt16LE(16, 34);
-  b.write("data", 36, "ascii");
-  b.writeUInt32LE(dataLen, 40);
-  return new Blob([b], { type: "audio/wav" });
-}
-
-const params = (provider: string) => ({ params: Promise.resolve({ provider }) });
 const noContext = {} as never;
 
 type RouteCase = {
@@ -192,47 +154,6 @@ type RouteCase = {
 
 const ROUTE_CASES: RouteCase[] = [
   {
-    name: "POST /v1/audio/translations",
-    provider: "openai",
-    call: (bearer) => {
-      const fd = new FormData();
-      fd.set("model", "openai/whisper-1");
-      fd.set("file", wavBlob(), "clip.wav");
-      return translationsRoute.POST(
-        new Request("http://localhost/v1/audio/translations", {
-          method: "POST",
-          headers: { Authorization: `Bearer ${bearer}` },
-          body: fd,
-        })
-      );
-    },
-  },
-  {
-    name: "POST /v1/audio/speech",
-    provider: "openai",
-    call: (bearer) =>
-      speechRoute.POST(
-        jsonRequest("/v1/audio/speech", bearer, {
-          model: "openai/tts-1",
-          input: "hello",
-          voice: "alloy",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/images/generations",
-    provider: "openai",
-    call: (bearer) =>
-      imagesRoute.POST(
-        jsonRequest("/v1/images/generations", bearer, {
-          model: "openai/dall-e-3",
-          prompt: "a lighthouse",
-        }),
-        noContext
-      ),
-  },
-  {
     name: "POST /v1/videos/generations",
     provider: "fal-ai",
     call: (bearer) =>
@@ -240,31 +161,6 @@ const ROUTE_CASES: RouteCase[] = [
         jsonRequest("/v1/videos/generations", bearer, {
           model: "fal-ai/veo3.1/lite",
           prompt: "a lighthouse at dusk",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/embeddings",
-    provider: "openai",
-    call: (bearer) =>
-      embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", bearer, {
-          model: "openai/text-embedding-3-small",
-          input: "hello",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/rerank",
-    provider: "cohere",
-    call: (bearer) =>
-      rerankRoute.POST(
-        jsonRequest("/v1/rerank", bearer, {
-          model: "cohere/rerank-v3.5",
-          query: "lighthouse",
-          documents: ["a lighthouse", "a tree"],
         }),
         noContext
       ),
@@ -302,12 +198,6 @@ const ROUTE_CASES: RouteCase[] = [
       searchRoute.POST(jsonRequest("/v1/search", bearer, { query: "lighthouse" }), noContext),
   },
   {
-    name: "POST /v1/moderations",
-    provider: "openai",
-    call: (bearer) =>
-      moderationsRoute.POST(jsonRequest("/v1/moderations", bearer, { input: "hello" }), noContext),
-  },
-  {
     name: "POST /v1/ocr",
     provider: "mistral",
     call: (bearer) =>
@@ -329,30 +219,6 @@ const ROUTE_CASES: RouteCase[] = [
           prompt: "calm piano",
         }),
         noContext
-      ),
-  },
-  {
-    name: "POST /v1/providers/{provider}/embeddings",
-    provider: "openai",
-    call: (bearer) =>
-      providerEmbeddingsRoute.POST(
-        jsonRequest("/v1/providers/openai/embeddings", bearer, {
-          model: "text-embedding-3-small",
-          input: "hello",
-        }),
-        params("openai")
-      ),
-  },
-  {
-    name: "POST /v1/providers/{provider}/images/generations",
-    provider: "openai",
-    call: (bearer) =>
-      providerImagesRoute.POST(
-        jsonRequest("/v1/providers/openai/images/generations", bearer, {
-          model: "openai/dall-e-3",
-          prompt: "a lighthouse",
-        }),
-        params("openai")
       ),
   },
   {
@@ -387,20 +253,6 @@ const ROUTE_CASES: RouteCase[] = [
           prompt: "calm piano",
         }),
         noContext
-      ),
-  },
-  {
-    name: "GET /v1/voices (ElevenLabs proxy)",
-    provider: "elevenlabs",
-    call: (bearer) => voicesRoute.GET(jsonRequest("/v1/voices", bearer, null, "GET")),
-  },
-  {
-    name: "GET /v1/providers/fishaudio/voices (Fish Audio proxy)",
-    provider: "fishaudio",
-    call: (bearer) =>
-      providerVoicesRoute.GET(
-        jsonRequest("/v1/providers/fishaudio/voices", bearer, null, "GET"),
-        params("fishaudio")
       ),
   },
 ];
@@ -470,60 +322,6 @@ for (const routeCase of ROUTE_CASES) {
 
 // ── combo fan-out ───────────────────────────────────────────────────────────
 
-test("GHSA-3w2r combos: embedding / speech / rerank combo targets stay inside the key's scope", async () => {
-  const openai = await seedPair("openai");
-  const cohere = await seedPair("cohere");
-  await combosDb.createCombo({
-    name: "ghsa3w2r-embed-combo",
-    strategy: "priority",
-    models: ["openai/text-embedding-3-small"],
-  });
-  await combosDb.createCombo({
-    name: "ghsa3w2r-speech-combo",
-    strategy: "priority",
-    models: ["openai/tts-1"],
-  });
-  await combosDb.createCombo({
-    name: "ghsa3w2r-rerank-combo",
-    strategy: "priority",
-    models: ["cohere/rerank-v3.5"],
-  });
-  const scopedKey = await makeKey({ allowedConnections: [openai.aId, cohere.aId] });
-
-  const upstream = stubUpstream();
-  try {
-    await (
-      await embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", scopedKey, { model: "ghsa3w2r-embed-combo", input: "x" }),
-        noContext
-      )
-    ).text();
-    await (
-      await speechRoute.POST(
-        jsonRequest("/v1/audio/speech", scopedKey, {
-          model: "ghsa3w2r-speech-combo",
-          input: "x",
-          voice: "alloy",
-        }),
-        noContext
-      )
-    ).text();
-    await (
-      await rerankRoute.POST(
-        jsonRequest("/v1/rerank", scopedKey, {
-          model: "ghsa3w2r-rerank-combo",
-          query: "x",
-          documents: ["a", "b"],
-        }),
-        noContext
-      )
-    ).text();
-    assert.deepEqual(upstream.secretsSeen().sort(), [openai.aSecret, cohere.aSecret].sort());
-  } finally {
-    upstream.restore();
-  }
-});
-
 test("GHSA-3w2r combos: the per-target model gate follows chat's combo policy", async () => {
   const { createComboTargetKeyGate } = await import("../../src/sse/services/keyConnectionScope.ts");
   const target = "openai/text-embedding-3-small";
@@ -558,17 +356,6 @@ type KeylessCase = { name: string; call: (bearer: string) => Promise<Response> }
 
 const KEYLESS_CASES: KeylessCase[] = [
   {
-    name: "POST /v1/images/generations (sdwebui)",
-    call: (bearer) =>
-      imagesRoute.POST(
-        jsonRequest("/v1/images/generations", bearer, {
-          model: "sdwebui/sdxl-base-1.0",
-          prompt: "a lighthouse",
-        }),
-        noContext
-      ),
-  },
-  {
     name: "POST /v1/videos/generations (comfyui)",
     call: (bearer) =>
       videosRoute.POST(
@@ -586,29 +373,6 @@ const KEYLESS_CASES: KeylessCase[] = [
         jsonRequest("/v1/music/generations", bearer, {
           model: "comfyui/musicgen-medium",
           prompt: "calm piano",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/audio/speech (coqui)",
-    call: (bearer) =>
-      speechRoute.POST(
-        jsonRequest("/v1/audio/speech", bearer, {
-          model: "coqui/tts_models/en/ljspeech/tacotron2-DDC",
-          input: "hello",
-          voice: "default",
-        }),
-        noContext
-      ),
-  },
-  {
-    name: "POST /v1/embeddings (ollama-local)",
-    call: (bearer) =>
-      embeddingsRoute.POST(
-        jsonRequest("/v1/embeddings", bearer, {
-          model: "ollama-local/nomic-embed-text",
-          input: "hello",
         }),
         noContext
       ),
@@ -676,7 +440,7 @@ test("GHSA-3w2r keyless: chat's answer when no connection serves a scoped key", 
   const response = await KEYLESS_CASES[0].call(scopedKey);
   assert.equal(response.status, 404);
   const body = (await response.json()) as { error?: { message?: string } };
-  assert.match(body.error?.message ?? "", /No active credentials for provider: sdwebui/);
+  assert.match(body.error?.message ?? "", /No active credentials for provider: comfyui/);
 });
 
 // ── /v1/search cache partitioned by the key's connection scope ──────────────
@@ -742,17 +506,6 @@ test("GHSA-3w2r scope helper: unscoped keys stay unfiltered, scoped keys keep th
     allowedConnections: ["conn-a"],
     rejection: null,
   });
-});
-
-test("GHSA-3w2r scope helper: a quota key whose pools resolve to nothing is refused like chat", async () => {
-  const { resolveKeyConnectionScope } =
-    await import("../../src/sse/services/keyConnectionScope.ts");
-  const scope = await resolveKeyConnectionScope({ allowedQuotas: ["ghsa3w2r-missing-pool"] });
-  assert.equal(scope.allowedConnections, null);
-  assert.ok(scope.rejection, "an empty quota scope admits no connection");
-  assert.equal(scope.rejection.status, 503);
-  const body = await scope.rejection.text();
-  assert.ok(!body.includes("at /"), "no stack trace leaks");
 });
 
 test("GHSA-3w2r scope helper: narrowing never widens a disjoint pair into 'unfiltered'", async () => {

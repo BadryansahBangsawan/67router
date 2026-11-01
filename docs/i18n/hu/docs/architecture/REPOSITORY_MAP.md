@@ -5,7 +5,7 @@
 ---
 
 > **Egysoros leírás minden könyvtárhoz és gyökérszintű fájlhoz.**
-> Utolsó frissítés: 2026-06-28 — OmniRoute v3.8.40
+> Utolsó frissítés: 2026-06-28 — 67router v3.8.40
 >
 > Ezzel a térképpel gyorsan eligazodhatsz a kódbázisban. A részletesebb ismertetőkért kövesd a kapcsolódó dokumentációra mutató hivatkozásokat.
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Marketing- és README-képfájlok
 ├── @omniroute/           # Közzétehető kiegészítő csomagok (opencode-plugin, opencode-provider)
 ├── skills/               # CLI-/ügynökképesség-csomagok (cli-* + omni-* + config-codex-cli)
-├── examples/             # Példabővítmények + omniroute-cmd-hello kezdősablon
+├── examples/             # Quickstart client samples
 ├── contrib/              # Közösségi hozzájárulások (podman/)
 ├── .source/              # Fumadocs-forráskonfiguráció (source.config.mjs + szerver/böngésző/dinamikus)
 ├── .github/              # GitHub Actions-munkafolyamatok + hibajegysablonok + PR-sablon
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `app/api/v1/`                                                                | Nyilvános, OpenAI-kompatibilis API (~25 alútvonal: chat, completions, embeddings, files, batches, audio, images, videos, music, rerank, moderations, search, ws, agents, accounts, providers stb.)                                                                                                                  |
 | `app/api/v1beta/`                                                            | Gemini-stílusú API-végpontok                                                                                                                                                                                                                                                                                        |
-| `app/api/playground/`                                                        | A Playground Studio útvonalai: `improve-prompt/` (POST — LLM-prompt-átfogalmazó), `presets/` (GET lista / POST létrehozás), `presets/[id]/` (GET / PUT / DELETE) — lásd: `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                                     |
 | `app/api/` (nem v1)                                                          | Felügyeleti/adminisztrációs útvonalak (~60 könyvtár: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools stb.)                                                                                                                           |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 útvonal (szervervezérlés, ügynökállapot/DNS/leképezések, megkerülés, tanúsítvány, upstream CA). LOCAL_ONLY + SPAWN_CAPABLE. Lásd: `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                    |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — több mint 16 útvonal (kérelmek, munkamenetek, gazdagépek, rögzítési módok, exportálás, ws). LOCAL_ONLY + SPAWN_CAPABLE. Lásd: `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                          |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 belépési pont (`POST /a2a`)                                                                                                                                                                                                                                                                        |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (felderítés)                                                                                                                                                                                                                                                                                         |
 | `app/(dashboard)/dashboard/`                                                 | A vezérlőpult felhasználói felületének oldalai (több mint 50 szakasz, ~118 page.tsx fájl: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity stb.)                                                                                                  |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio felhasználói felület (3 lap: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — lásd: `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                      |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (21. terv): `page.tsx` (3 lapos váz), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | Munkamenet, jelszóhashelés, tokenvalidáció                                                                                                                                                                                                                                                                                   |
 | `batches/`                               | OpenAI Batches API-kezelők                                                                                                                                                                                                                                                                                                   |
 | `catalog/`                               | A szolgáltatói katalógus Zod-validációja + képességfeloldás                                                                                                                                                                                                                                                                  |
-| `cloudAgent/`                            | Felhőügynökök (Codex Cloud, Devin, Jules) — lásd: `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                                           |
 | `combos/`                                | Kombinációfeloldó és átrendező segédfüggvények                                                                                                                                                                                                                                                                               |
 | `audit/`                                 | Tevékenységfolyam-segédfüggvények: `highLevelActions.ts` (engedélyezési lista + `isHighLevelAction()`), `activityIcons.ts` (művelet → ikon/ige leképezés), `timeline.ts` (groupByDay/relativeTime) — lásd: `docs/architecture/MONITORING_SECTIONS.md`                                                                        |
 | `compliance/`                            | Auditnapló + szolgáltatói audit — lásd: `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                                        |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | Felhasználóifelület-formázási segédeszközök (költség, késleltetés stb.)                                                                                                                                                                                                                                                      |
 | `embeddings/`                            | Beágyazási szolgáltatás segédeszközei                                                                                                                                                                                                                                                                                        |
 | `env/`                                   | Környezeti változók feldolgozása és ellenőrzése                                                                                                                                                                                                                                                                              |
-| `evals/`                                 | Kiértékelési keretrendszer (tesztcsomagok, futtató, futtatókörnyezet) — lásd: `docs/frameworks/EVALS.md`                                                                                                                                                                                                                     |
 | `guardrails/`                            | Személyazonosításra alkalmas adatok maszkolója, promptinjektálás elleni védelem, képfeldolgozási híd — lásd: `docs/security/GUARDRAILS.md`                                                                                                                                                                                   |
 | `jobs/`                                  | Háttérfeladatok (cron-szerű)                                                                                                                                                                                                                                                                                                 |
 | `memory/`                                | Társalgási memória (SQLite FTS5 + sqlite-vec hibrid RRF + Qdrant 2. szint) — lásd: `docs/frameworks/MEMORY.md`                                                                                                                                                                                                               |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — a háttérben dolgozza fel a `needs_reindex=1` értékű memóriákat; a `POST /api/memory/reindex` és a lusta utólagos feltöltési útvonal hívja meg. (21. terv)                                                                                                                                              |
 | `monitoring/`                            | Állapotellenőrzések, metrikák kibocsátása                                                                                                                                                                                                                                                                                    |
 | `oauth/`                                 | OAuth-/importálási folyamatok 22 szolgáltatói modulhoz (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                           |
-| `plugins/`                               | Bővítmény-nyilvántartás                                                                                                                                                                                                                                                                                                      |
 | `promptCache/`                           | Anthropic-stílusú promptgyorsítótár töréspontjai                                                                                                                                                                                                                                                                             |
 | `skills/`                                | Készségkeretrendszer (beépített + piactér + SkillsSH) — lásd: `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                    |
-| `playground/`                            | A Playground Studio megosztott segédprogramjai: `codeExport.ts` (curl/Python/TS-generátor), `promptImprover.ts` (metaprompt-összeállító), `streamMetrics.ts` (tiszta TTFT/TPS), `types.ts` (árképzési táblázat) — lásd: `docs/frameworks/PLAYGROUND_STUDIO.md`                                                               |
 | `webhookDispatcher.ts`                   | HMAC-webhookok kézbesítése — lásd: `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                             |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | Alagútkezelők — lásd: `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                            |
 | `cloudSync.ts`, `initCloudSync.ts`       | Az állapot opcionális felhőszinkronizálása                                                                                                                                                                                                                                                                                   |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — Adatbázis (147 modul + 208 migráció)
 
-| Alkönyvtár                | Rendeltetés                                                                                                                                                                     |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | `getDbInstance()` egykezelős példány WAL-naplózással                                                                                                                            |
-| `db/migrations/`          | Verziózott SQL-fájlok (idempotensek, tranzakciósak). A `073_memory_vec.sql` hozzáadja a `memory_vec_meta` táblát és a `needs_reindex` oszlopot (21. terv).                      |
-| `db/playgroundPresets.ts` | CRUD-modul a Playground Studio előbeállításaihoz (`listPlaygroundPresets`, `getPlaygroundPreset`, `createPlaygroundPreset`, `updatePlaygroundPreset`, `deletePlaygroundPreset`) |
-| `db/memoryVec.ts`         | CRUD a `memory_vec_meta` számára (active_dim, embedding_signature, last_reset_at, vec_loaded), továbbá `markMemoryNeedsReindex`, `getMemoryReindexQueue` stb. (21. terv)        |
-| `db/<domain>.ts`          | Tartományonként egy modul: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache stb.   |
+| Alkönyvtár        | Rendeltetés                                                                                                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | `getDbInstance()` egykezelős példány WAL-naplózással                                                                                                                          |
+| `db/migrations/`  | Verziózott SQL-fájlok (idempotensek, tranzakciósak). A `073_memory_vec.sql` hozzáadja a `memory_vec_meta` táblát és a `needs_reindex` oszlopot (21. terv).                    |
+| `db/memoryVec.ts` | CRUD a `memory_vec_meta` számára (active_dim, embedding_signature, last_reset_at, vec_loaded), továbbá `markMemoryNeedsReindex`, `getMemoryReindexQueue` stb. (21. terv)      |
+| `db/<domain>.ts`  | Tartományonként egy modul: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache stb. |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Teljes kiadási folyamat (készségek, husky, conventional commits, telepítés)                               |
 | `COVERAGE_PLAN.md`          | Lefedettségi célok és jelenlegi állapot                                                                   |
 | `FREE_TIERS.md`             | Válogatott ingyenes csomagot kínáló szolgáltatók (48+ ingyenes + 11 OAuth)                                |
-| `CLI-TOOLS.md`              | Külső CLI-integrációk + belső OmniRoute CLI                                                               |
+| `CLI-TOOLS.md`              | Külső CLI-integrációk + belső 67router CLI                                                                |
 | `I18N.md`                   | i18n-architektúra, nyelv hozzáadása, 67 területi beállítás                                                |
 | `UNINSTALL.md`              | A tiszta eltávolítás lépései                                                                              |
 | `PROVIDER_REFERENCE.md`     | **Automatikusan generált** katalógus 375 szolgáltatóról (újragenerálás: `npm run gen:provider-reference`) |
@@ -403,13 +395,10 @@ open-sse/
 | Dokumentum                                  | Cél                                                                                    |
 | ------------------------------------------- | -------------------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                             | MCP-kiszolgáló: 110 eszköz, 3 átvitel, 33 hatókör, REST-végpontok                      |
-| `A2A-SERVER.md`                             | A2A v0.3: JSON-RPC, 6 készség, REST-segédek, ügynökkártya                              |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | Egységes útmutató: A2A kontra ACP kontra Cloud Agents                                  |
-| `CLOUD_AGENT.md`                            | Codex Cloud / Devin / Jules vezénylése                                                 |
 | `SKILLS.md`                                 | Készségkeretrendszer (beépített + piactér + SkillsSH + izolált környezet)              |
 | `RADAR.md`                                  | Radar ingyenesmodell-katalógusfedvény (`RADAR_ENABLED`, alapértelmezetten kikapcsolva) |
 | `MEMORY.md`                                 | Memóriarendszer (SQLite FTS5 + Qdrant)                                                 |
-| `EVALS.md`                                  | Kiértékelési keretrendszer (csomagok, futtatások, szempontrendszerek)                  |
 | `GUARDRAILS.md`                             | Személyesadat-maszkoló, promptinjektálás, képfeldolgozási híd                          |
 | `COMPLIANCE.md`                             | Naplózási nyomvonal, megőrzés, `noLog` letiltási lehetőség                             |
 | `WEBHOOKS.md`                               | HMAC-aláírással ellátott webhook-kézbesítés                                            |
@@ -574,7 +563,6 @@ Nem szerepelnek az `npm pack` kimenetében. Lásd: `.npmignore`.
 - **Szolgáltatót adsz hozzá?** Kövesd a `docs/architecture/ARCHITECTURE.md § Adding a New Provider` szakaszt, és vesd össze a `docs/reference/PROVIDER_REFERENCE.md` dokumentummal.
 - **Útvonalat adsz hozzá?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **MCP-eszközt adsz hozzá?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **A2A-képességet adsz hozzá?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **Helyileg futtatnád?** `docs/guides/SETUP_GUIDE.md`.
 - **Üzembe helyeznéd?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Kiadást készítesz?** `docs/ops/RELEASE_CHECKLIST.md` (valamint a `/generate-release-cc` Claude Code-képesség).

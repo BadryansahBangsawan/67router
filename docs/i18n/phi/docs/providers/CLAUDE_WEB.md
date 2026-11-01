@@ -124,7 +124,7 @@ Tahasang nilalaktawan ang mga case na nakadepende sa Playwright sa `tests/unit/c
 
 ### Pag-setup
 
-1. Simulan ang OmniRoute gamit ang `npm run dev` o isang built na installation.
+1. Simulan ang 67router gamit ang `npm run dev` o isang built na installation.
 2. Buksan ang Dashboard → Providers → Add Provider.
 3. Piliin ang kategoryang Web Cookie at Claude Web.
 4. I-paste ang buong Cookie header na kinopya mula sa isang authenticated na request sa `claude.ai`.

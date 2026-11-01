@@ -4,7 +4,7 @@
 
 ---
 
-Kad OmniRoute darbojas Docker vidē, mantotās **Importēt no Cursor IDE** /
+Kad 67router darbojas Docker vidē, mantotās **Importēt no Cursor IDE** /
 `cursor-agent` plūsmas nedarbojas, jo konteiners nevar piekļūt resursdatorā
 instalētajam Cursor. Tā vietā izmantojiet **Pieteikties ar Cursor** (dziļās vadības PKCE).
 
@@ -14,7 +14,7 @@ instalētajam Cursor. Tā vietā izmantojiet **Pieteikties ar Cursor** (dziļās
    `~/.config/Cursor/User/globalStorage/state.vscdb`, _konteinera iekšienē_.
    Docker Desktop vidē operētājsistēmai macOS resursdatora IDE datubāze pēc noklusējuma
    nav montēta, un konteinera operētājsistēma ir Linux pat tad, ja resursdators izmanto Darwin.
-2. **Nav `cursor-agent` binārā faila** — oficiālajos OmniRoute attēlos nav iekļauts
+2. **Nav `cursor-agent` binārā faila** — oficiālajos 67router attēlos nav iekļauts
    `cursor-agent`. Iepriekš pieejamo modeļu iegūšanai tika izpildīts
    `cursor-agent --list-models`, bet kļūmes gadījumā tika izmantots statisks katalogs.
 3. **Nepareizs binārais fails** — **nemontējiet** macOS `cursor-agent` Linux
@@ -24,11 +24,11 @@ instalētajam Cursor. Tā vietā izmantojiet **Pieteikties ar Cursor** (dziļās
 
 1. Atveriet **Informācijas panelis → Nodrošinātāji → Cursor**.
 2. Izvēlieties cilni **Pieteikties ar Cursor**.
-3. Noklikšķiniet uz **Pieteikties ar Cursor** — OmniRoute jūsu **resursdatora**
+3. Noklikšķiniet uz **Pieteikties ar Cursor** — 67router jūsu **resursdatora**
    pārlūkprogrammā atvērs `https://cursor.com/loginDeepControl?…`.
-4. Apstipriniet pieteikšanos pārlūkprogrammā un pēc tam atgriezieties informācijas panelī. OmniRoute
+4. Apstipriniet pieteikšanos pārlūkprogrammā un pēc tam atgriezieties informācijas panelī. 67router
    aptaujās `api2.cursor.sh/auth/poll`, līdz tiks saņemti pilnvarojuma marķieri.
-5. OmniRoute saglabā **piekļuves un atsvaidzināšanas** marķierus un atsvaidzina tos, izmantojot
+5. 67router saglabā **piekļuves un atsvaidzināšanas** marķierus un atsvaidzina tos, izmantojot
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Šim ceļam konteinera iekšienē nav nepieciešams Cursor IDE vai `cursor-agent`.
@@ -37,10 +37,10 @@ instalētajam Cursor. Tā vietā izmantojiet **Pieteikties ar Cursor** (dziļās
 
 Ja savienojumā ir veikta pieteikšanās, **Pieejamie modeļi / Automātiskā sinhronizācija** dod priekšroku Cursor
 HTTP `AiService/AvailableModels` katalogam, izmantojot savienojuma nesēja marķieri.
-Ja tas neizdodas, OmniRoute joprojām mēģina izmantot resursdatora `cursor-agent` (ja tas ir pieejams) un pēc tam
+Ja tas neizdodas, 67router joprojām mēģina izmantot resursdatora `cursor-agent` (ja tas ir pieejams) un pēc tam
 statiskā reģistra sākotnējos datus.
 
-OmniRoute katalogā vienmēr nodrošina **`auto`** (attēlojamais nosaukums “Automātiski”), kā arī
+67router katalogā vienmēr nodrošina **`auto`** (attēlojamais nosaukums “Automātiski”), kā arī
 OpenCodex stila maršrutētāja režīmus **`auto-cost`**, **`auto-balance`** un
 **`auto-intelligence`**. Pārsūtīšanas laikā tie tiek kartēti uz Cursor `default` modeli
 (ar `optimization` ModelParameter trim variantiem). Dodiet priekšroku
@@ -88,7 +88,7 @@ tikai no IDE vairs nav nepieciešama).
 ## Tukšas atbildes / izsmelts lietojuma limits
 
 Kad Cursor pieņem izpildes pieprasījumu, bet neatgriež asistenta tekstu (tas bieži notiek, kad ir izsmelts
-premium lietojuma limits), OmniRoute parāda noderīgu **429** kļūdu (ar kvotas norādēm) vai
+premium lietojuma limits), 67router parāda noderīgu **429** kļūdu (ar kvotas norādēm) vai
 **502** kļūdu ar ieteikumiem, nevis tikai “Nodrošinātājs atgrieza tukšu saturu”. Straumēšanas
 kļūmes, piemēram, `not_found: AI Model Not Found` (lietojuma logs ir izsmelts), tiek
 klasificētas kā **pārsniegts Cursor ātruma / lietojuma limits**, un šis ziņojums tiek saglabāts
@@ -98,7 +98,7 @@ Cursor plāna limitus.
 
 ## Klienta versija (bez grafiskās saskarnes)
 
-Ja nav lokāli instalēta `cursor-agent`, OmniRoute nosaka
+Ja nav lokāli instalēta `cursor-agent`, 67router nosaka
 `x-cursor-client-version`, vispirms izmantojot vides mainīgo `CURSOR_AGENT_CLI_VERSION`, pēc tam diskā kešotu
 Cursor instalēšanas skripta izgūšanu un visbeidzot fiksētu būvējuma ID. Ja nepieciešams,
 norādiet citu vērtību ar `CURSOR_AGENT_CLI_VERSION`.

@@ -4,7 +4,7 @@
 
 ---
 
-> **Ukratko**: OmniRoute rangira svoje **besplatne** pružatelje prema kvaliteti modela koristeći **Arena AI
+> **Ukratko**: 67router rangira svoje **besplatne** pružatelje prema kvaliteti modela koristeći **Arena AI
 > ELO rezultate (u stilu LMArene)**. Otvorite stranicu **Rangiranje besplatnih pružatelja** na
 > nadzornoj ploči kako biste vidjeli koji besplatni pružatelji nude najbolje modele za vaš zadatak —
 > ukupno ili filtrirano prema kategoriji (programiranje, pregled, dokumentacija, otklanjanje pogrešaka).
@@ -13,7 +13,7 @@
 
 ## Što je to
 
-OmniRoute registrira 375 pružatelja, uključujući 155 zapisa u katalogu označenih kao **besplatno/bez autentifikacije**
+67router registrira 375 pružatelja, uključujući 155 zapisa u katalogu označenih kao **besplatno/bez autentifikacije**
 (bez autentifikacije, OAuth s besplatnim slojem ili API ključ s besplatnim slojem — pogledajte
 [Vodič za besplatne slojeve](../getting-started/FREE-TIERS-GUIDE.md) i cjeloviti
 [direktorij besplatnih slojeva](../reference/FREE_TIERS.md)). Kvaka: besplatni se pružatelji
@@ -129,9 +129,9 @@ i `code` — iz API-ja ljestvice Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Svaki unos na ljestvici
 sadrži naziv modela, dobavljača, ELO `score`, interval pouzdanosti i broj glasova.
 
-Kategorije ljestvice preslikavaju se u kategorije zadataka OmniRoutea:
+Kategorije ljestvice preslikavaju se u kategorije zadataka 67routera:
 
-| Ljestvica Arena | Kategorije zadataka OmniRoutea                    |
+| Ljestvica Arena | Kategorije zadataka 67routera                     |
 | --------------- | ------------------------------------------------- |
 | `text`          | `default`, `review`, `documentation`, `debugging` |
 | `code`          | `coding`                                          |
@@ -168,7 +168,7 @@ Sinkronizacija je **uključena prema zadanim postavkama**:
 
 - Pokreće se jednom pri pokretanju poslužitelja, a zatim periodično prema vremenskom rasporedu
   (`src/lib/arenaEloSync.ts`, povezano iz `src/instrumentation-node.ts`).
-- **Ne blokira rad i nikada nije kobna** — ako dohvaćanje iz vanjskog izvora ne uspije, OmniRoute nastavlja
+- **Ne blokira rad i nikada nije kobna** — ako dohvaćanje iz vanjskog izvora ne uspije, 67router nastavlja
   raditi, a ljestvice jednostavno prikazuju posljednje valjane podatke (ili prazno stanje).
 
 Njome upravljaju dvije varijable okruženja (dokumentirane u
@@ -203,7 +203,7 @@ fleksibilno usklađivanje (`findMatchingIntelligence` u `src/lib/freeProviderRan
 3. Podudaranje prefiksa (naziv modela na ljestvici prefiks je ID-ja u registru).
 
 Tijekom sinkronizacije uklanjaju se poznati prefiksi dobavljača (`anthropic/`, `openai/`, `google/`, …),
-a mala mapa pseudonima proširuje kanonske nazive na varijante koje OmniRoute koristi
+a mala mapa pseudonima proširuje kanonske nazive na varijante koje 67router koristi
 interno, tako da modele ostaje moguće pronaći pod bilo kojim nazivom.
 
 ### Kako se dobavljač rangira

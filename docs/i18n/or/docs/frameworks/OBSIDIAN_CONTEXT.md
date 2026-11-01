@@ -13,7 +13,7 @@
 
 ## ଏହା କ’ଣ
 
-OmniRoute ଏକ **Obsidian** ଭଲ୍ଟ ସହିତ **ପ୍ରସଙ୍ଗ ଉତ୍ସ** ଭାବରେ ସଂଯୋଗ କରେ — ଏହା ଏକ ସ୍ଥାନୀୟ Markdown
+67router ଏକ **Obsidian** ଭଲ୍ଟ ସହିତ **ପ୍ରସଙ୍ଗ ଉତ୍ସ** ଭାବରେ ସଂଯୋଗ କରେ — ଏହା ଏକ ସ୍ଥାନୀୟ Markdown
 ଜ୍ଞାନ ଭଣ୍ଡାର, ଯାହାକୁ ଏଜେଣ୍ଟମାନେ ବିଲ୍ଟ-ଇନ୍ MCP ସର୍ଭର୍ ମାଧ୍ୟମରେ ପଢ଼ନ୍ତି ଏବଂ ଲେଖନ୍ତି। ଏହି
 ଇଣ୍ଟିଗ୍ରେସନ୍ ଡେସ୍କଟପ୍ ଆପ୍ ଭିତରେ ଚାଲୁଥିବା **Obsidian Local REST API** କମ୍ୟୁନିଟି ପ୍ଲଗ୍ଇନ୍
 ସହିତ ଯୋଗାଯୋଗ କରେ, ଯାହାଦ୍ୱାରା ଏଜେଣ୍ଟମାନେ ନୋଟ୍ ସନ୍ଧାନ କରିପାରନ୍ତି, ଫାଇଲ୍
@@ -76,7 +76,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 ### WebDAV vault sync
 
 `src/app/api/settings/obsidian/webdav/route.ts` ଏକ ଇଚ୍ଛାଧୀନ WebDAV-backed
-vault sync ପରିଚାଳନା କରେ (`src/lib/obsidianSync.ts` ଦ୍ୱାରା ଚାଳିତ)। ଏହାକୁ ସକ୍ଷମ କଲେ OmniRouteକୁ ଏକ
+vault sync ପରିଚାଳନା କରେ (`src/lib/obsidianSync.ts` ଦ୍ୱାରା ଚାଳିତ)। ଏହାକୁ ସକ୍ଷମ କଲେ 67routerକୁ ଏକ
 ସ୍ଥାନୀୟ vault ଡିରେକ୍ଟୋରୀ ଦିଗରେ ନିର୍ଦ୍ଦେଶ କରାଯାଏ ଏବଂ ଏକ ଯାଦୃଚ୍ଛିକ WebDAV username/password ଯୁଗଳ ସୃଷ୍ଟି ହୁଏ:
 
 ```bash
@@ -111,8 +111,8 @@ request ପଠାଯାଏ ନାହିଁ। HTTP callerମାନଙ୍କର �
 ## MCP ଟୁଲ୍ଗୁଡ଼ିକ (22)
 
 `open-sse/mcp-server/tools/obsidianTools.ts`ରେ ପରିଭାଷିତ। ଟୋକନ୍/base-URL ପ୍ରତ୍ୟେକ
-କଲ୍ ପାଇଁ ସମାଧାନ କରାଯାଏ (ପ୍ରଥମେ ପ୍ରତି-API-key, ତା’ପରେ ଗ୍ଲୋବାଲ୍)। OmniRoute **ସିଙ୍କ୍ ସର୍ଭର୍**କୁ
-ଆକ୍ସେସ୍ କରୁଥିବା ଟୁଲ୍ଗୁଡ଼ିକ (ଚାରୋଟି `obsidian_sync_*` ଟୁଲ୍) ପାଇଁ ଅତିରିକ୍ତ ଭାବରେ OmniRoute
+କଲ୍ ପାଇଁ ସମାଧାନ କରାଯାଏ (ପ୍ରଥମେ ପ୍ରତି-API-key, ତା’ପରେ ଗ୍ଲୋବାଲ୍)। 67router **ସିଙ୍କ୍ ସର୍ଭର୍**କୁ
+ଆକ୍ସେସ୍ କରୁଥିବା ଟୁଲ୍ଗୁଡ଼ିକ (ଚାରୋଟି `obsidian_sync_*` ଟୁଲ୍) ପାଇଁ ଅତିରିକ୍ତ ଭାବରେ 67router
 ସେଟିଂସ୍ରେ କନଫିଗର୍ କରାଯାଇଥିବା ସିଙ୍କ୍ ପ୍ରମାଣୀକରଣ ଟୋକନ୍ ଆବଶ୍ୟକ।
 
 ### ପଠନ ଟୁଲ୍ଗୁଡ଼ିକ (`read:obsidian`)
@@ -130,7 +130,7 @@ request ପଠାଯାଏ ନାହିଁ। HTTP callerମାନଙ୍କର �
 | `obsidian_get_periodic_note` | ଏକ ତାରିଖ ପାଇଁ ଦୈନିକ/ସାପ୍ତାହିକ/ମାସିକ ପର୍ଯ୍ୟାୟିକ ନୋଟ୍ ପ୍ରାପ୍ତ କରେ (ଛାଡ଼ିଦେଲେ ଆଜିର)।             |
 | `obsidian_get_tags`          | ସମସ୍ତ vault ଟ୍ୟାଗ୍କୁ ସେମାନଙ୍କର ଆବୃତ୍ତି ସହିତ ତାଲିକାଭୁକ୍ତ କରେ।                                  |
 | `obsidian_list_commands`     | ଉପଲବ୍ଧ Obsidian କମାଣ୍ଡ IDଗୁଡ଼ିକର ତାଲିକା ଦିଏ (`obsidian_execute_command` ସହିତ ବ୍ୟବହାର କରନ୍ତୁ)। |
-| `obsidian_sync_status`       | OmniRoute ସିଙ୍କ୍ ସର୍ଭର୍ ସ୍ଥିତି: ଚାଲୁ ଅଛି କି ନାହିଁ, vault ନାମ, ପୋର୍ଟ୍, ଅପ୍ଟାଇମ୍, ଶେଷ ସିଙ୍କ୍।   |
+| `obsidian_sync_status`       | 67router ସିଙ୍କ୍ ସର୍ଭର୍ ସ୍ଥିତି: ଚାଲୁ ଅଛି କି ନାହିଁ, vault ନାମ, ପୋର୍ଟ୍, ଅପ୍ଟାଇମ୍, ଶେଷ ସିଙ୍କ୍।    |
 | `obsidian_sync_conflicts`    | ଅସମାଧିତ ସିଙ୍କ୍ ଦ୍ୱନ୍ଦ୍ୱଗୁଡ଼ିକର ତାଲିକା ଦିଏ (ପଥ, ଦ୍ୱନ୍ଦ୍ୱ ପଥ, ଚିହ୍ନଟ ସମୟ)।                      |
 
 ### ଲେଖନ ଟୁଲ୍ଗୁଡ଼ିକ (`write:obsidian`)

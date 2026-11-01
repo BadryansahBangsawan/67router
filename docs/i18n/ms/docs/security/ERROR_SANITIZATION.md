@@ -204,11 +204,11 @@ Peraturan sanitasi yang digunakan pada `upstreamDetails`:
 3. Had kedalaman: penyarangan melebihi 4 aras digantikan dengan rentetan `"[truncated]"`.
 4. Tatasusunan dihadkan kepada 32 elemen.
 
-Hanya tapak panggilan dengan kandungan ralat penyedia yang telah dihuraikan patut menghantar `upstreamDetails`. Ralat dalaman OmniRoute (kegagalan penghuraian SSE, kandungan kosong, sekatan pengadang) tidak boleh menyertakannya.
+Hanya tapak panggilan dengan kandungan ralat penyedia yang telah dihuraikan patut menghantar `upstreamDetails`. Ralat dalaman 67router (kegagalan penghuraian SSE, kandungan kosong, sekatan pengadang) tidak boleh menyertakannya.
 
 JANGAN hantar `err.stack`, `err.message`, atau sebarang rentetan daripada pengecualian masa jalan yang mentah kepada `upstreamDetails`. Semua itu masih perlu melalui `errorResponse` / `buildErrorBody(code, msg)` tanpa kandungan huluan.
 
-Penerusan terpilih 4xx huluan mengekalkan bentuk dan susunan kata JSON selamat penyedia yang diperlukan oleh pemulihan automatik klien, tetapi ia bukan penerusan bait demi bait: pensanitasi rekursif sentiasa dijalankan sebelum pensirian. Kandungan berkitar, mengandungi BigInt, atau mempunyai `toJSON()` yang berniat jahat akan gagal secara tertutup dan tidak layak untuk penerusan. OCR dan penyederhanaan menggunakan peraturan yang sama; kandungan huluan bukan JSON, kosong, atau tersalah label ditukar kepada sampul ralat JSON OmniRoute kanonik.
+Penerusan terpilih 4xx huluan mengekalkan bentuk dan susunan kata JSON selamat penyedia yang diperlukan oleh pemulihan automatik klien, tetapi ia bukan penerusan bait demi bait: pensanitasi rekursif sentiasa dijalankan sebelum pensirian. Kandungan berkitar, mengandungi BigInt, atau mempunyai `toJSON()` yang berniat jahat akan gagal secara tertutup dan tidak layak untuk penerusan. OCR dan penyederhanaan menggunakan peraturan yang sama; kandungan huluan bukan JSON, kosong, atau tersalah label ditukar kepada sampul ralat JSON 67router kanonik.
 
 ## Pengehadan CodeQL yang diketahui: pensanitasi tersuai tidak dikenali
 

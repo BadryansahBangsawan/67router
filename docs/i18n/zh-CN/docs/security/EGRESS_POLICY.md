@@ -8,7 +8,7 @@
 
 > **事实来源：** `open-sse/utils/proxyFamily.ts`、`open-sse/utils/proxyDispatcher.ts`、`open-sse/utils/proxyFetch.ts`、`open-sse/utils/socksConnectorWithFamily.ts`、`open-sse/utils/proxyFamilyResolve.ts`、`src/shared/validation/schemas.ts`、`src/lib/db/proxies.ts`、`src/lib/db/upstreamProxy.ts`、`src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute 允许每个代理携带一条**地址族出口指令**。默认情况下，由操作系统选择 IPv4 或 IPv6（双栈，“Happy Eyeballs”）。当你将该指令设置为 `ipv4` 或 `ipv6` 时，OmniRoute 会将通过该代理建立的每个连接固定到所选地址族，并且会**以关闭方式失败**，而不是回退到另一个地址族。
+67router 允许每个代理携带一条**地址族出口指令**。默认情况下，由操作系统选择 IPv4 或 IPv6（双栈，“Happy Eyeballs”）。当你将该指令设置为 `ipv4` 或 `ipv6` 时，67router 会将通过该代理建立的每个连接固定到所选地址族，并且会**以关闭方式失败**，而不是回退到另一个地址族。
 
 本页介绍该指令是什么、为什么需要它、在哪里配置它，以及运行时如何解析它。
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## `auto` 的解析方式
 
-当 `family` 为 `auto` 时，OmniRoute **不会**附加任何指令——代理 URL 会按原样使用，而连接地址族则根据其固有属性确定。
+当 `family` 为 `auto` 时，67router **不会**附加任何指令——代理 URL 会按原样使用，而连接地址族则根据其固有属性确定。
 
 在构建 URL 时（`open-sse/utils/proxyDispatcher.ts` 中的 `proxyConfigToUrl` / `normalizeProxyUrl`），`auto` 代理会生成一个不带任何标记的普通 URL：
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 非 `auto` 指令会作为单个合成查询标记传递——`?family=ipv4` 或 `?family=ipv6`——并且仅追加一次到规范化后的代理 URL。`normalizeProxyUrl` 会谨慎地移除并重新追加此标记，且仅操作一次，因此绝不会破坏端口解析。
 
-构建调度器时，会读取该标记并将其转换为具体的连接协议族。如果主机是与指定协议族**相反**的 IP 字面量，OmniRoute 将抛出异常（发生冲突时按失败关闭原则处理）：
+构建调度器时，会读取该标记并将其转换为具体的连接协议族。如果主机是与指定协议族**相反**的 IP 字面量，67router 将抛出异常（发生冲突时按失败关闭原则处理）：
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## SOCKS5 兼容性
 
-协议族固定适用于 SOCKS5 代理，但原版 `fetch-socks` 并未公开固定代理跃点协议族所需的套接字选项。因此，OmniRoute 自带了专用连接器：
+协议族固定适用于 SOCKS5 代理，但原版 `fetch-socks` 并未公开固定代理跃点协议族所需的套接字选项。因此，67router 自带了专用连接器：
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

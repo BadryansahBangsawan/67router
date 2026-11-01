@@ -118,7 +118,7 @@ export async function runSetupKiloCommand(opts = {}) {
     opts["vscode-settings"] ??
     join(os.homedir(), ".config", "Code", "User", "settings.json");
 
-  printHeading("OmniRoute → Kilo Code (OpenAI-compatible)");
+  printHeading("67router → Kilo Code (OpenAI-compatible)");
   printInfo(`Server: ${baseUrl}`);
 
   let model = opts.model;
@@ -188,11 +188,11 @@ export function registerSetupKilo(program) {
   program
     .command("setup-kilo")
     .description(
-      "Configure Kilo Code for OmniRoute: write ~/.local/share/kilo/auth.json (CLI) + VS Code kilocode.* settings"
+      "Configure Kilo Code for 67router: write ~/.local/share/kilo/auth.json (CLI) + VS Code kilocode.* settings"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
-    .option("--remote <url>", "Remote OmniRoute URL, e.g. http://192.168.0.15:20128")
-    .option("--api-key <key>", "OmniRoute API key (defaults to OMNIROUTE_API_KEY env var)")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
+    .option("--remote <url>", "Remote 67router URL, e.g. http://192.168.0.15:20128")
+    .option("--api-key <key>", "67router API key (defaults to OMNIROUTE_API_KEY env var)")
     .option("--model <id>", "Model id for Kilo (required unless picked interactively)")
     .option(
       "--auth-path <path>",

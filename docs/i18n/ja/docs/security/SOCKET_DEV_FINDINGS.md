@@ -49,7 +49,7 @@ v3.8.6 の緩和策がリリースされた後、以下のいずれかの呼び�
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>` を介したプロファイルごとのNSS DB更新                                                   |
 
 これらは、`mitmproxy`、Charles Proxy、Fiddler、および
-Caddyで使用されているものと同じコマンドです。これらがOmniRouteに存在することは、
+Caddyで使用されているものと同じコマンドです。これらが67routerに存在することは、
 `docs/security/STEALTH_GUIDE.md` に記載されています。
 
 **v3.8.6 の緩和策**:
@@ -95,7 +95,7 @@ Caddyで使用されているものと同じコマンドです。これらがOmn
 
 `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` 環境変数フラグにより、まだ自動化を更新していないオペレーター向けに v3.8.5 の動作が維持されます。このフラグは v3.9 で削除される予定です。
 
-**維持する理由**: Zed をすでに使用しており、プロバイダーキーを再度貼り付けることなく OmniRoute に複製したいユーザーにとって、Zed インポートは最も使いやすいオンボーディング手段です。
+**維持する理由**: Zed をすでに使用しており、プロバイダーキーを再度貼り付けることなく 67router に複製したいユーザーにとって、Zed インポートは最も使いやすいオンボーディング手段です。
 
 ---
 
@@ -103,7 +103,7 @@ Caddyで使用されているものと同じコマンドです。これらがOmn
 
 **ソースファイル**: `src/mitm/systemCommands.ts`。
 
-**指摘された理由**: このチャンクは `execFileWithPassword`、`runElevatedPowerShell`、および共有の `quotePowerShell` ヘルパーを再エクスポートします。Socket.dev の AI 分類器は、これらを汎用的な「ホスト上での実行 + 権限昇格ツールキット」と見なします。OmniRoute 内では、これらは MITM 証明書のインストール処理（§1）と、`sudo` コマンド実行用の `execFileWithPassword` でのみ使用されます。
+**指摘された理由**: このチャンクは `execFileWithPassword`、`runElevatedPowerShell`、および共有の `quotePowerShell` ヘルパーを再エクスポートします。Socket.dev の AI 分類器は、これらを汎用的な「ホスト上での実行 + 権限昇格ツールキット」と見なします。67router 内では、これらは MITM 証明書のインストール処理（§1）と、`sudo` コマンド実行用の `execFileWithPassword` でのみ使用されます。
 
 **v3.8.6 の緩和策**:
 
@@ -136,7 +136,7 @@ Caddyで使用されているものと同じコマンドです。これらがOmn
 
 ---
 
-## §5 — OmniRoute Cloud Sync 認証情報の書き戻し（`api/keys/[id]/route.js`）
+## §5 — 67router Cloud Sync 認証情報の書き戻し（`api/keys/[id]/route.js`）
 
 **ソースファイル**:
 
@@ -169,7 +169,7 @@ rawBody)`）を検証します。シークレットが設定されている場�
    これは、リモートトークン同期に依存していたユーザーにとっては**破壊的変更**です。
    そのようなユーザーは明示的にオプトインする必要があります。
 
-**これを維持する理由**: Cloud Sync は、OmniRoute Cloud テナントがチームの認証情報を
+**これを維持する理由**: Cloud Sync は、67router Cloud テナントがチームの認証情報を
 一元管理するための唯一の方法です。この修正により、脅威モデルが実態に即したものになります:
 「サーバーが署名し、クライアントが検証し、運用者がオプトインする。」
 

@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute se distribuye como una aplicación web progresiva completamente instalable. Cuando accedes al panel desde cualquier navegador móvil — Android (Chrome) o iOS (Safari) — puedes seleccionar **"Añadir a la pantalla de inicio"** y disfrutar de una experiencia similar a la de una aplicación nativa sin necesidad de usar una tienda de aplicaciones.
+67router se distribuye como una aplicación web progresiva completamente instalable. Cuando accedes al panel desde cualquier navegador móvil — Android (Chrome) o iOS (Safari) — puedes seleccionar **"Añadir a la pantalla de inicio"** y disfrutar de una experiencia similar a la de una aplicación nativa sin necesidad de usar una tienda de aplicaciones.
 
 ## ¿Qué es una PWA?
 
-Una aplicación web progresiva convierte el panel web de OmniRoute en algo que se ve y se comporta como una aplicación móvil nativa. Una vez instalada:
+Una aplicación web progresiva convierte el panel web de 67router en algo que se ve y se comporta como una aplicación móvil nativa. Una vez instalada:
 
 - Se inicia desde la pantalla de inicio con su propio icono
 - Se abre en pantalla completa, sin barra de direcciones ni interfaz de pestañas del navegador
@@ -20,26 +20,26 @@ Una aplicación web progresiva convierte el panel web de OmniRoute en algo que s
 
 ### Android (Chrome)
 
-1. Abre el panel de OmniRoute en Chrome: `http://YOUR_IP:20128`
-2. Chrome mostrará automáticamente un banner con el texto **"Añadir OmniRoute a la pantalla de inicio"**, o bien:
+1. Abre el panel de 67router en Chrome: `http://YOUR_IP:20128`
+2. Chrome mostrará automáticamente un banner con el texto **"Añadir 67router a la pantalla de inicio"**, o bien:
    - Toca el menú **⋮** (tres puntos) → **"Añadir a la pantalla de inicio"** o **"Instalar aplicación"**
 3. Confirma la solicitud
-4. OmniRoute aparecerá en tu pantalla de inicio como una aplicación independiente
+4. 67router aparecerá en tu pantalla de inicio como una aplicación independiente
 
 ### iOS (Safari)
 
-1. Abre el panel de OmniRoute en Safari: `http://YOUR_IP:20128`
+1. Abre el panel de 67router en Safari: `http://YOUR_IP:20128`
 2. Toca el botón **Compartir** (cuadro con una flecha)
 3. Desplázate hacia abajo y toca **"Añadir a la pantalla de inicio"**
-4. Asígnale un nombre (el valor predeterminado es "OmniRoute") y toca **Añadir**
-5. OmniRoute aparecerá en tu pantalla de inicio con el icono de la aplicación
+4. Asígnale un nombre (el valor predeterminado es "67router") y toca **Añadir**
+5. 67router aparecerá en tu pantalla de inicio con el icono de la aplicación
 
 ### Escritorio (Chrome / Edge)
 
-1. Abre el panel de OmniRoute
-2. Haz clic en el **icono de instalación** de la barra de direcciones (o ⋮ → "Instalar OmniRoute...")
+1. Abre el panel de 67router
+2. Haz clic en el **icono de instalación** de la barra de direcciones (o ⋮ → "Instalar 67router...")
 3. Confirma la solicitud
-4. OmniRoute se abrirá como una ventana independiente, sin pestañas ni barra de direcciones
+4. 67router se abrirá como una ventana independiente, sin pestañas ni barra de direcciones
 
 ## Funciones
 
@@ -49,15 +49,15 @@ El manifiesto está configurado con `display: "fullscreen"`, lo que significa qu
 
 ### Compatibilidad sin conexión
 
-OmniRoute incluye un service worker (`sw.js`) que proporciona almacenamiento inteligente en caché:
+67router incluye un service worker (`sw.js`) que proporciona almacenamiento inteligente en caché:
 
-| Tipo de recurso                                          | Estrategia                                  | Comportamiento                                                                                                           |
-| -------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Shell de la aplicación**                               | Prioridad de caché                          | `/`, `/offline`, el manifiesto y los iconos se almacenan previamente en caché durante la instalación                     |
-| **Recursos estáticos** (CSS, JS, imágenes, fuentes)      | Prioridad de red con respaldo de caché      | Obtiene contenido actualizado de la red; recurre a la caché si no hay conexión                                           |
-| **Paquetes de Next.js** (`/_next/`)                      | Prioridad de red con actualización de caché | Obtiene el contenido de la red y actualiza la caché; sirve la versión almacenada si no hay conexión                      |
-| **Solicitudes de navegación**                            | Omisión (nunca se interceptan)              | El navegador gestiona la conmutación de HTTP/3→HTTP/2; un socket QUIC inactivo no debe convertirse en `Response.error()` |
-| **Rutas de API / panel** (`/api/`, `/a2a`, `/dashboard`) | Omisión (nunca se almacenan en caché)       | Siempre van directamente al servidor; el service worker nunca las intercepta                                             |
+| Tipo de recurso                                     | Estrategia                                  | Comportamiento                                                                                                           |
+| --------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Shell de la aplicación**                          | Prioridad de caché                          | `/`, `/offline`, el manifiesto y los iconos se almacenan previamente en caché durante la instalación                     |
+| **Recursos estáticos** (CSS, JS, imágenes, fuentes) | Prioridad de red con respaldo de caché      | Obtiene contenido actualizado de la red; recurre a la caché si no hay conexión                                           |
+| **Paquetes de Next.js** (`/_next/`)                 | Prioridad de red con actualización de caché | Obtiene el contenido de la red y actualiza la caché; sirve la versión almacenada si no hay conexión                      |
+| **Solicitudes de navegación**                       | Omisión (nunca se interceptan)              | El navegador gestiona la conmutación de HTTP/3→HTTP/2; un socket QUIC inactivo no debe convertirse en `Response.error()` |
+| **Rutas de API / panel** (`/api/`, `/dashboard`)    | Omisión (nunca se almacenan en caché)       | Siempre van directamente al servidor; el service worker nunca las intercepta                                             |
 
 ### Página sin conexión
 
@@ -70,7 +70,7 @@ Cuando la red no está disponible y un usuario navega a una página nueva, el se
 
 ### Iconos de la aplicación
 
-OmniRoute proporciona iconos optimizados para cada plataforma:
+67router proporciona iconos optimizados para cada plataforma:
 
 | Archivo                | Tamaño           | Utilizado por                                                 |
 | ---------------------- | ---------------- | ------------------------------------------------------------- |
@@ -93,9 +93,9 @@ Generado por Next.js mediante `src/app/manifest.ts`:
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Ubicado en `src/shared/components/PwaRegister.tsx`, este componente de cliente:
 
 ## Uso con Termux (Android)
 
-Al ejecutar OmniRoute en Android mediante Termux, la PWA funciona sin inconvenientes:
+Al ejecutar 67router en Android mediante Termux, la PWA funciona sin inconvenientes:
 
-1. Inicia OmniRoute en Termux: `npx omniroute`
+1. Inicia 67router en Termux: `npx omniroute`
 2. Abre Chrome en el mismo teléfono: `http://localhost:20128`
 3. Instala la PWA mediante "Añadir a la pantalla de inicio"
 4. La PWA se conecta al servidor local de Termux — todo se ejecuta en el dispositivo
@@ -156,7 +156,7 @@ Esta combinación significa que tu teléfono Android es tanto el **servidor** (T
 
 ## Uso desde otros dispositivos
 
-Instala la PWA en cualquier dispositivo cuyo navegador pueda acceder a tu servidor de OmniRoute:
+Instala la PWA en cualquier dispositivo cuyo navegador pueda acceder a tu servidor de 67router:
 
 - **Otro teléfono/tableta**: Navega a `http://PHONE_IP:20128` e instala la PWA
 - **Portátil**: Abre Chrome/Edge e instálala como una PWA de escritorio

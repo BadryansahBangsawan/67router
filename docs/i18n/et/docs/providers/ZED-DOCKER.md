@@ -4,7 +4,7 @@
 
 ---
 
-Kui OmniRoute töötab Dockeris, nurjub tavapärane „Impordi Zedi võtmehoidlast” protsess,
+Kui 67router töötab Dockeris, nurjub tavapärane „Impordi Zedi võtmehoidlast” protsess,
 sest konteiner ei pääse ligi hosti operatsioonisüsteemi võtmehoidla deemonile (`libsecret` Linuxis,
 Keychain macOS-is, Credential Manager Windowsis) ning hosti failisüsteemis asuvad Zedi
 konfiguratsioonikataloogid ei ole konteineris vaikimisi nähtavad.
@@ -20,7 +20,7 @@ Konteineris tekib kaks blokeerivat probleemi:
    moodul `keytar` operatsioonisüsteemi võtmehoidlateenusega Unixi sokli või D-Busi seansi kaudu.
    Kumbagi ei sillata vaikimisi konteinerisse, mistõttu mandaatide lugemine nurjub alati.
 
-OmniRoute tuvastab Dockeri keskkonna kahe heuristika abil:
+67router tuvastab Dockeri keskkonna kahe heuristika abil:
 
 - `/.dockerenv` olemasolu (selle kirjutab Dockeri deemon konteineri käivitamisel).
 - Stringi `docker` esinemine failis `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ väärtusega `zedDockerEnvironment: true` ja teatega, mis suunab teid käsitsi t
 
 1. Avage **Töölaud → Pakkujad → Zed**.
 2. Paneel **Käsitsi tokeni importimine** kuvatakse võtmehoidlast importimise kaardi all. Kui
-   OmniRoute tuvastab Dockeri, laiendatakse see paneel automaatselt pärast esimest nurjunud
+   67router tuvastab Dockeri, laiendatakse see paneel automaatselt pärast esimest nurjunud
    võtmehoidlast importimise katset.
 3. Valige rippmenüüst pakkuja (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter või DeepSeek).

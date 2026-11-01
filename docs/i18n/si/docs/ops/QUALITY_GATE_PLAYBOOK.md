@@ -4,7 +4,7 @@
 
 ---
 
-> **මෙම ලේඛනය කුමක්ද.** OmniRoute හි තත්ත්ව-ද්වාර පද්ධතිය පිළිබඳ විවේචනාත්මක තක්සේරුවක්,
+> **මෙම ලේඛනය කුමක්ද.** 67router හි තත්ත්ව-ද්වාර පද්ධතිය පිළිබඳ විවේචනාත්මක තක්සේරුවක්,
 > කර්මාන්තයේ හොඳම භාවිතයන් සමඟ සැසඳීමක්, **එමෙන්ම** සියලු තත්ත්ව
 > පරීක්ෂණ ස්ථාන පිළිබඳ පුළුල් නාමාවලියක් සහ එම පද්ධතිය ඕනෑම ව්යාපෘතියකට යෙදීම සඳහා
 > **මෙවලම්-ස්වායත්ත ප්රතිනිර්මාණ සැලැස්මක්**. මතකයෙන් නොව, සත්ය repository තත්ත්වයෙන් 2026-06-16 දින ජනනය කරන ලදී.
@@ -101,62 +101,62 @@
 
 ### 1. ශෛලිය සහ හැඩතල ගැන්වීම (නිර්ණායක, වේගවත්)
 
-- **OmniRoute:** lint-staged හරහා Prettier + ESLint (pre-commit), හිස්තැන් 2ක්/ද්විත්ව උද්ධෘත/තීරු 100ක්.
+- **67router:** lint-staged හරහා Prettier + ESLint (pre-commit), හිස්තැන් 2ක්/ද්විත්ව උද්ධෘත/තීරු 100ක්.
 - **සාමාන්ය:** ස්වයංක්රීයව නිවැරදි කළ හැකි එක් formatter එකක් + එක් linter එකක්, staged ගොනු මත pre-commit අවස්ථාවේ ධාවනය වීම.
 
 ### 2. වර්ග
 
-- **OmniRoute:** `typecheck:core` (අවහිර කරන) + `typecheck:noimplicit:core` (උපදේශාත්මක) + `type-coverage` රැචට් 92.17% + එක් ගොනුවකට any-budget.
+- **67router:** `typecheck:core` (අවහිර කරන) + `typecheck:noimplicit:core` (උපදේශාත්මක) + `type-coverage` රැචට් 92.17% + එක් ගොනුවකට any-budget.
 - **සාමාන්ය:** CI තුළ දැඩි typecheck එකක් + රැචට් කළ type-coverage මිනුමක් + එක් ගොනුවකට `any`/escape-hatch සීමාවක්.
 
 ### 3. පරීක්ෂණ (තීව්රතාව)
 
-- **OmniRoute:** එකිනෙක නොඅතිච්ඡාදනය වන runners 2ක් (Node native + vitest), shards 8ක්, සමස්ත coverage 60/60/60/60 + රැචට් ~76% + **තීරණාත්මක modules සඳහා එක්-module අවම සීමා 8ක්** + රාත්රී property tests + රාත්රී **mutation testing**.
+- **67router:** එකිනෙක නොඅතිච්ඡාදනය වන runners 2ක් (Node native + vitest), shards 8ක්, සමස්ත coverage 60/60/60/60 + රැචට් ~76% + **තීරණාත්මක modules සඳහා එක්-module අවම සීමා 8ක්** + රාත්රී property tests + රාත්රී **mutation testing**.
 - **සාමාන්ය:** test runner(s) + **නිරපේක්ෂ** coverage අවම සීමාවක් (ශූන්ය වීම වැළැක්වීමට) + coverage **රැචට්** එකක් (පසුබැසීම වැළැක්වීමට) + **ඉහළ අවදානම් කේත සඳහා එක්-module අවම සීමා** (Goodhart බලපෑම වැළැක්වීමට) + ශුද්ධ තර්කනය සඳහා property-based පරීක්ෂණ + පරීක්ෂණවල සැබෑ ගුණාත්මකභාවය මැනීමට රාත්රී **mutation testing**.
 
 ### 4. පරීක්ෂණ ප්රතිපත්තිය (අයුතු ලෙස ප්රතිඵල හැසිරවීම වැළැක්වීම)
 
-- **OmniRoute:** `pr-test-policy` (නිෂ්පාදන කේතයට පරීක්ෂණයක් අවශ්ය වේ), `check-test-masking` (දුර්වල කළ asserts අවහිර කරයි), `pr-evidence` (සාර්ථකත්ව ප්රකාශයකට සාක්ෂි කොටසක් අවශ්ය වේ), `test-discovery` (සෑම පරීක්ෂණයක්ම runner එකක් මඟින් රැස් කරයි).
+- **67router:** `pr-test-policy` (නිෂ්පාදන කේතයට පරීක්ෂණයක් අවශ්ය වේ), `check-test-masking` (දුර්වල කළ asserts අවහිර කරයි), `pr-evidence` (සාර්ථකත්ව ප්රකාශයකට සාක්ෂි කොටසක් අවශ්ය වේ), `test-discovery` (සෑම පරීක්ෂණයක්ම runner එකක් මඟින් රැස් කරයි).
 - **සාමාන්ය:** "නව කේතය ⇒ නව පරීක්ෂණයක්" ද්වාරය + ඉවත් කළ assert/tautology අනාවරකය + සාක්ෂි අවශ්යතාව (TDD හෝ සජීවී පරීක්ෂණයක්) + globs වලින් පිටත කිසිදු පරීක්ෂණයක් අනාථ නොවන බවට සහතිකයක්.
 
 ### 5. සංකීර්ණත්වය සහ කේත සෞඛ්යය (රැචට්)
 
-- **OmniRoute:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), එක් ගොනුවකට file-size (ස්ථාවර කර, අඩු කිරීම පමණි), circular-deps (අභිරුචි Tarjan, අවහිර කරන).
+- **67router:** ESLint-warnings (3769↓), jscpd duplication (5.72%↓), cyclomatic+max-lines complexity (1800↓), cognitive complexity sonarjs (753↓), dead-code/unused-exports knip (339↓), එක් ගොනුවකට file-size (ස්ථාවර කර, අඩු කිරීම පමණි), circular-deps (අභිරුචි Tarjan, අවහිර කරන).
 - **සාමාන්ය:** සෑම සෞඛ්ය මිනුමක්ම රැචට් කරන්න (අනතුරු ඇඟවීම්, අනුපිටපත්කරණය, cyclomatic **සහ** cognitive complexity, dead code, file size, import cycles). දිශාව සැමවිටම "පසුබසින්න එපා" යන්නයි.
 
 ### 6. ස්ථිතික ආරක්ෂාව (SAST + රහස්)
 
-- **OmniRoute:** CodeQL (ඇඟවීම් රැචට් = 0), gitleaks (`[extend] useDefault=true` — තීරණාත්මකයි!), SonarQube, අභිරුචි ආරක්ෂක නීති (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (ඇඟවීම් රැචට් = 0), gitleaks (`[extend] useDefault=true` — තීරණාත්මකයි!), SonarQube, අභිරුචි ආරක්ෂක නීති (public-creds, error-helper, route-guard-membership, route-validation).
 - **සාමාන්ය:** ඇඟවීම් රැචට් එකක් සහිත SAST (CodeQL/Sonar/semgrep) + **උරුම වූ පෙරනිමි ruleset** එකක් සහිත secrets scanner එකක් (පෙරනිමිය අභිබවන අභිරුචි වින්යාසයක් = නොපෙනෙන කලාපයක්) + ව්යාපෘතියට විශේෂිත Hard Rule ආරක්ෂක ද්වාර.
 
 ### 7. සැපයුම් දාමය (පරායත්තතා)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + වයස ≥72h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX allowlist), lockfile-lint (HTTPS+sha512+registry), `check-deps` anti-slopsquatting (allowlist + වයස ≥72h).
 - **සාමාන්ය:** බහු-මූලාශ්ර SCA + බලපත්ර allowlist එකක් + lockfile අඛණ්ඩතා පරීක්ෂාවක් + වයස/typosquatting පරීක්ෂාවක් සහිත පරායත්තතා allowlist එකක් + සමූහගත update bot එකක්.
 
 ### 8. සැපයුම් දාමය (ගොඩනැගීම සහ නිකුතුව)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (සතිපතා), workflow දැඩි කිරීම (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (සතිපතා), workflow දැඩි කිරීම (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions).
 - **සාමාන්ය:** පළ කිරීමේදී SBOM ජනනය කිරීම + අත්සන් කළ provenance (SLSA L2+) + කාලසටහන්ගත Scorecard + සියලු workflows දැඩි කිරීම (අවම-වරප්රසාද tokens, non-pusher checkout තුළ රඳවාගත් credentials නොමැති වීම, actions SHA මඟින් pin කිරීම).
 
 ### 9. ගිවිසුම් සහ API
 
-- **OmniRoute:** oasdiff (breaking-change OpenAPI), schemathesis (රාත්රී contract fuzz), openapi-coverage (% ලේඛනගත routes, රැචට් 38.3%), openapi-security-tiers (spec එදිරිව route-guard).
+- **67router:** oasdiff (breaking-change OpenAPI), schemathesis (රාත්රී contract fuzz), openapi-coverage (% ලේඛනගත routes, රැචට් 38.3%), openapi-security-tiers (spec එදිරිව route-guard).
 - **සාමාන්ය:** breaking-change contract diff (oasdiff/buf) + spec එකට එරෙහි property-based fuzz (schemathesis) + රැචට් කළ ලේඛන coverage + spec↔code අනුකූලතාව.
 
 ### 10. ලේඛන සහ i18n (කල් ඉකුත් වීම වැළැක්වීම)
 
-- **OmniRoute:** docs-sync (පිළිබිඹු කළ versions), docs-counts-sync (ලේඛනවල එදිරිව කේතයේ සංඛ්යා), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + රැචට් 80.1%).
+- **67router:** docs-sync (පිළිබිඹු කළ versions), docs-counts-sync (ලේඛනවල එදිරිව කේතයේ සංඛ්යා), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + රැචට් 80.1%).
 - **සාමාන්ය:** ලේඛන සහ කේත අතර versions/counts/env-vars සමමුහුර්ත කිරීම (විශ්වාසය නොව, ද්වාරයක්) + අභ්යන්තර links වලංගු කිරීම + රැචට් කළ i18n coverage.
 
 ### 11. භ්රාන්ත ජනනය වැළැක්වීම / අනුකූලතාව (දුර්ලභ කාණ්ඩය)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ සජීවී symbol), provider-consistency, fetch-targets (client fetch ⇒ සැබෑ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
+- **67router:** known-symbols (string dispatch ⇒ සජීවී symbol), provider-consistency, fetch-targets (client fetch ⇒ සැබෑ route), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering.
 - **සාමාන්ය:** සෑම "අනුපිටපත් වූ සත්ය මූලාශ්රයක්" සඳහාම (registry, string dispatch, cross-layer references), දෙපාර්ශ්වයම ගැළපෙන බව සනාථ කරන ද්වාරයක්. typecheck/test වලට හසු නොවන කල් ඉකුත් වීම මෙය හඳුනා ගනී.
 
 ### 12. ප්රත්යස්ථතාව සහ වසම (නිෂ්පාදනයට විශේෂිත)
 
-- **OmniRoute:** chaos (දෝෂ ඇතුළු කිරීම), heap-growth (කාන්දුව), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ප්රත්යස්ථතා නීති 3 (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (දෝෂ ඇතුළු කිරීම), heap-growth (කාන්දුව), k6 (soak), promptfoo+garak (LLM red-team OWASP LLM Top 10), ප්රත්යස්ථතා නීති 3 (circuit-breaker/cooldown/lockout).
 - **සාමාන්ය:** **ඔබේ** වසමේ අසාර්ථක වීමේ ආකාර හඳුනාගෙන, එක් එක් ආකාරය සඳහා ද්වාරයක් (එය රාත්රී පමණක් වුවත්) තබා ගන්න. AI යෙදුම් සඳහා: injection red-team. බෙදාහැරුණු පද්ධති සඳහා: chaos + leak + soak.
 
 ---

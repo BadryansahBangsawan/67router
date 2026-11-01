@@ -6,7 +6,7 @@
 
 ## Rapportering af sårbarheder
 
-Hvis du opdager en sikkerhedssårbarhed i OmniRoute, bedes du rapportere den ansvarligt:
+Hvis du opdager en sikkerhedssårbarhed i 67router, bedes du rapportere den ansvarligt:
 
 1. **UNDLAD** at oprette en offentlig GitHub-issue
 2. Brug [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new)
@@ -53,7 +53,7 @@ Efter 3.8.59 er den næste version **3.9.0**, som åbner linjen for langsigtet s
 
 ## Sikkerhedsarkitektur
 
-OmniRoute implementerer en sikkerhedsmodel med flere lag:
+67router implementerer en sikkerhedsmodel med flere lag:
 
 ```
 Anmodning → CORS → Authz-pipeline (klassificer → politikker → håndhæv)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Framework til sikkerhedsforanstaltninger
 
-OmniRoute leveres med et **register over sikkerhedsforanstaltninger**, der understøtter hot reload (`src/lib/guardrails/`), med 3 indbyggede sikkerhedsforanstaltninger sorteret efter prioritet:
+67router leveres med et **register over sikkerhedsforanstaltninger**, der understøtter hot reload (`src/lib/guardrails/`), med 3 indbyggede sikkerhedsforanstaltninger sorteret efter prioritet:
 
 | Sikkerhedsforanstaltning | Prioritet | Formål                                                                                                          |
 | ------------------------ | --------- | --------------------------------------------------------------------------------------------------------------- |

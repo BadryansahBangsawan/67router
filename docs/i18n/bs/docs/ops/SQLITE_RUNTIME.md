@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute određuje svoj SQLite upravljački program pri pokretanju putem lanca od 5 rezervnih koraka:
+67router određuje svoj SQLite upravljački program pri pokretanju putem lanca od 5 rezervnih koraka:
 
 1. **Ugrađeni `better-sqlite3`** (putem `dependencies` u `package.json`)
    — najbrži, nativna binarna datoteka, instalira se pomoću `npm install` kada su dostupni alati za izgradnju.
@@ -28,13 +28,13 @@ OmniRoute određuje svoj SQLite upravljački program pri pokretanju putem lanca 
 - **Nema alata za izgradnju**: Neka okruženja (poslovni Windows bez VS Build
   Tools, minimalne Docker slike) ne mogu kompajlirati `better-sqlite3`. Instalacijski program tokom izvršavanja
   preuzima unaprijed izgrađenu binarnu datoteku iz npm registra; rezervni upravljački
-  programi osiguravaju da se OmniRoute ipak pokrene čak i ako to ne uspije.
+  programi osiguravaju da se 67router ipak pokrene čak i ako to ne uspije.
 - **Sistemi bez pristupa mreži**: Ako npm registar nije dostupan, `node:sqlite`
   ili `sql.js` garantuju osnovnu funkcionalnost.
 
 ## Provjera magičnih bajtova
 
-Prije učitavanja `.node` datoteke instalirane tokom izvršavanja, OmniRoute čita prvih 8
+Prije učitavanja `.node` datoteke instalirane tokom izvršavanja, 67router čita prvih 8
 bajtova i upoređuje ih s poznatim magičnim vrijednostima platformi:
 
 | Platforma               | Bajtovi (hex) | Oznaka      |
@@ -104,9 +104,9 @@ Implementacija:
 ## Topologija s jednim zapisivačem (HA nije podržan)
 
 Gornji lanac rezervnih upravljačkih programa i dalje se izvršava u **jednom procesu**. Podrazumijevani SQLite
-u OmniRouteu koristi **jedan zapisivač**:
+u 67routeru koristi **jedan zapisivač**:
 
-- Nemojte povezivati dvije OmniRoute replike s istom datotekom `storage.sqlite`.
+- Nemojte povezivati dvije 67router replike s istom datotekom `storage.sqlite`.
 - Ponovno pokretanje kontejnera, Recreate implementacija, OOM prekid ili HEALTHCHECK ponovno pokretanje prekida
   svaku aktivnu SSE sesiju. Standardni postupak ne omogućava kontrolirano pražnjenje sesija.
 - Provjera aktivnosti orkestratora koja spor odgovor `/healthz` tumači kao neaktivan prekinut će jedinu

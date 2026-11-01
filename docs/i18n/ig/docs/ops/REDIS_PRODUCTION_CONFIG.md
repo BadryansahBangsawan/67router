@@ -6,7 +6,7 @@
 
 ## Nchịkọta
 
-Redis bụ **dependency dị nro, nke a na-eji ma ọ bụrụ na achọrọ** na OmniRoute — ngwa ahụ na-aga n'ihu ịrụ ọrụ nke ọma site n'iji usoro ndị nọ na ebe nchekwa
+Redis bụ **dependency dị nro, nke a na-eji ma ọ bụrụ na achọrọ** na 67router — ngwa ahụ na-aga n'ihu ịrụ ọrụ nke ọma site n'iji usoro ndị nọ na ebe nchekwa
 dị ka ndabere mgbe Redis adịghị. Na production, ịhazi Redis nke ọma na-ebelata latency maka ụdị ọrụ anọ
 dị iche iche:
 
@@ -17,7 +17,7 @@ dị iche iche:
 | Ebe nchekwa quota      | `redisQuotaStore.ts`          | Singleton `getRedisClient(url)` dị iche                                      | `<prefix>quota:*` nke a pụrụ ịhazi maka instance ọ bụla |
 | Circuit breaker warmup | `redisCircuitBreakerStore.ts` | Client dị iche na `circuitBreakerFactory.ts`                                 | `<prefix>warmup:cb:<connectionId>`                      |
 
-Ụdị ọrụ anọ ahụ niile na-ekekọrịta otu prefix namespace ka OmniRoute nwee ike ibikọ na ngwa ndị ọzọ n'otu
+Ụdị ọrụ anọ ahụ niile na-ekekọrịta otu prefix namespace ka 67router nwee ike ibikọ na ngwa ndị ọzọ n'otu
 instance Redis (dịka `127.0.0.1:6379`). Lee [Nhazi Namespace nke Key](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ instance Redis (dịka `127.0.0.1:6379`). Lee [Nhazi Namespace nke Key](#key-nam
 
 ## Nhazi Namespace nke Key
 
-OmniRoute na ihe ọ bụla ọzọ na-arụ ọrụ na host na-ekekọrịta otu instance Redis. Na-enweghị namespace,
+67router na ihe ọ bụla ọzọ na-arụ ọrụ na host na-ekekọrịta otu instance Redis. Na-enweghị namespace,
 key ndị dịka `auth:api_key:<sha256>` ma ọ bụ `rl:*` nwere ike ịdakọta na key sitere na ngwa ndị ọzọ
 na-eji otu Redis ahụ (instance a na-agba Redis na `127.0.0.1:6379` n'akụkụ service ndị ọzọ).
 
-Tọọ `REDIS_KEY_PREFIX` ka ọ bụrụ string na-adịghị efu iji tinye prefix n'ihu key OmniRoute **ọ bụla**:
+Tọọ `REDIS_KEY_PREFIX` ka ọ bụrụ string na-adịghị efu iji tinye prefix n'ihu key 67router **ọ bụla**:
 
 ```bash
-# .env — key OmniRoute niile ga-abụ omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — key 67router niile ga-abụ omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # hapụ ohere maka OS page cache
 maxmemory-policy allkeys-lru         # wepụ auth cache entry ochie mgbe nrụgide dị
 
-# Nchekwa na-adịgide adịgide (nhọrọ — OmniRoute na-anọgide na nchekwa mgbe crash mere na-enweghị ya)
+# Nchekwa na-adịgide adịgide (nhọrọ — 67router na-anọgide na nchekwa mgbe crash mere na-enweghị ya)
 save 300 1                           # mee snapshot opekata mpe kwa nkeji 5 ma ọ bụrụ na ≥1 key gbanwere
 appendonly no                        # AOF adịghị mkpa; enwere ike imepụta data ọzọ
 appendfsync no                       # enweghị ibu fsync (RDB zuru oke)

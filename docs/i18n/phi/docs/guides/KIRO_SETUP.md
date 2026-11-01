@@ -4,7 +4,7 @@
 
 ---
 
-Sinasaklaw ng gabay na ito ang pagdaragdag ng mga Kiro account (AI coding assistant na hino-host ng AWS) sa OmniRoute,
+Sinasaklaw ng gabay na ito ang pagdaragdag ng mga Kiro account (AI coding assistant na hino-host ng AWS) sa 67router,
 na nakatuon sa sabay-sabay na pagpapatakbo ng maraming account nang walang mga salungatan sa session.
 
 ---
@@ -22,10 +22,10 @@ token ng unang account.
 
 ---
 
-## Paano Ito Nilulutas ng OmniRoute (v3.8.0+)
+## Paano Ito Nilulutas ng 67router (v3.8.0+)
 
-Simula sa v3.8.0, tinatawag ng OmniRoute ang `registerClient()` (AWS SSO OIDC) sa bawat
-pag-import ng Kiro connection. Binibigyan nito ang bawat OmniRoute connection ng sarili nitong nakalaang pagpaparehistro ng OIDC
+Simula sa v3.8.0, tinatawag ng 67router ang `registerClient()` (AWS SSO OIDC) sa bawat
+pag-import ng Kiro connection. Binibigyan nito ang bawat 67router connection ng sarili nitong nakalaang pagpaparehistro ng OIDC
 client. Dahil magkakahiwalay ang bawat pagpaparehistro ng client, ang pag-refresh o
 muling pag-authenticate ng isang account ay hindi nakaaapekto sa refresh token ng iba pang account.
 
@@ -59,7 +59,7 @@ ang lahat ng bagong connection ng sarili nilang pagpaparehistro ng client.
 
 ### Mga Kinakailangan
 
-- OmniRoute v3.8.0 o mas bago.
+- 67router v3.8.0 o mas bago.
 - Isang gumaganang Kiro account (email + password, Google, o GitHub login).
 - Opsyonal na pangalawang Kiro account.
 
@@ -70,7 +70,7 @@ ang lahat ng bagong connection ng sarili nilang pagpaparehistro ng client.
    - **Import Token** — mag-paste ng refresh token na nagsisimula sa `aorAAAAAG`.
    - **API Key** — mag-paste ng pangmatagalang Kiro / CodeWhisperer API key.
    - **Google / GitHub login** — kumpletuhin ang OAuth flow sa browser.
-   - **Auto-Import** — i-click ang button; binabasa ng OmniRoute ang mga credential mula sa
+   - **Auto-Import** — i-click ang button; binabasa ng 67router ang mga credential mula sa
      lokal na kiro-cli database o `~/.aws/sso/cache`.
 3. Sine-save ang connection. Awtomatikong nagrerehistro ang mga refresh-token flow ng nakalaang
    OIDC client. Bina-validate ng mga API-key flow ang key sa AWS at hindi nag-iimbak ng refresh token.
@@ -127,7 +127,7 @@ gumagamit ng OAuth refresh, kaya naiiwasan nito ang pagpapawalang-bisa sa nakaba
 2. Piliin ang **API Key**.
 3. I-paste ang API key at piliin ang rehiyon ng AWS: **Auto-detect** (default), **US East
    (N. Virginia)** o **Europe (Frankfurt)**.
-4. Bine-validate ng OmniRoute ang key at sine-save ang koneksyon na nakapirmi sa rehiyon kung saan
+4. Bine-validate ng 67router ang key at sine-save ang koneksyon na nakapirmi sa rehiyon kung saan
    gumagana ang key.
 
 ### API
@@ -177,7 +177,7 @@ tinatanggihan ng `codewhisperer.us-east-1` ang mga API-key payload bilang invali
 ## Pag-expire ng OIDC Client
 
 Karaniwang nag-e-expire ang mga AWS SSO OIDC public client pagkalipas ng 90 araw
-(`clientSecretExpiresAt`). Iniimbak ng OmniRoute ang timestamp na ito sa `providerSpecificData`
+(`clientSecretExpiresAt`). Iniimbak ng 67router ang timestamp na ito sa `providerSpecificData`
 para sa observability. Kung huminto sa pag-refresh ang isang koneksyon pagkalipas ng humigit-kumulang 90 araw, muling i-import ang
 koneksyon upang makakuha ng bagong OIDC client registration. Ang awtomatikong muling pagpaparehistro kapag
 nag-expire ay sinusubaybayan bilang pagpapahusay sa hinaharap.
@@ -198,7 +198,7 @@ sa pamamagitan ng AWS SSO OIDC.
 ### Nabigo ang pag-import dahil sa "Token validation failed"
 
 - Tiyaking nagsisimula sa `aorAAAAAG` ang refresh token.
-- Tiyaking maaabot ng OmniRoute ang `https://oidc.us-east-1.amazonaws.com` (o ang naka-configure na
+- Tiyaking maaabot ng 67router ang `https://oidc.us-east-1.amazonaws.com` (o ang naka-configure na
   region). Kung nasa likod ka ng corporate proxy, magtakda ng provider-level proxy sa
   **Dashboard → Settings → Proxies**.
 
@@ -207,6 +207,6 @@ sa pamamagitan ng AWS SSO OIDC.
 - Kumpirmahing ang key ay isang Kiro / CodeWhisperer API key, at hindi isang refresh token.
 - Kumpirmahing tumutugma ang AWS region sa key/account. `us-east-1` ang default.
 - Dapat na matawag ng key ang `ListAvailableProfiles`; kung hindi, hindi
-  matutukoy ng OmniRoute ang kinakailangang `profileArn`.
+  matutukoy ng 67router ang kinakailangang `profileArn`.
 
 Para sa iba pang isyu, tingnan ang pangunahing [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

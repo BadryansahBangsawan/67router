@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 有三个不同但相互关联的弹性机制。它们各自的作用范围和用途不同。在调试路由行为时，请将它们区分开来。
+67router 有三个不同但相互关联的弹性机制。它们各自的作用范围和用途不同。在调试路由行为时，请将它们区分开来。
 
 ![3-layer resilience model](../diagrams/exported/resilience-3layers.svg)
 
@@ -165,7 +165,7 @@ Kiro 的二进制 `reasoningContentEvent` 帧若携带非空签名，会经由�
 
 ### 独占式托管会话连接租约
 
-**范围：** 一个活跃的托管 HTTP 客户端/会话拥有一个符合条件的 OmniRoute 连接。
+**范围：** 一个活跃的托管 HTTP 客户端/会话拥有一个符合条件的 67router 连接。
 
 **目的：** 为需要跨请求硬路由屏障的客户端提供持久的独占连接所有权。这不同于会话亲和性——后者只是一种软连续性偏好：独占租约在 SQLite 中持久化生命周期状态，强制执行全局活跃所有者与活跃连接的唯一性，并在提供者分发之前拒绝过期的代次（generation）。
 
@@ -179,7 +179,7 @@ Kiro 的二进制 `reasoningContentEvent` 帧若携带非空签名，会经由�
 上游执行器头中移除。
 
 如果普通路由存在符合条件的托管候选，但每个空闲候选都被
-外部活跃租约占用，OmniRoute 将返回 HTTP `429`、lease-capacity-unavailable 错误码、
+外部活跃租约占用，67router 将返回 HTTP `429`、lease-capacity-unavailable 错误码、
 waiting-for-capacity 状态，以及根据最早相关过期时间推导出的有界 `Retry-After`。
 普通的空资格情况不属于租约争用，仍保留其现有的路由错误语义。
 
@@ -200,7 +200,7 @@ waiting-for-capacity 状态，以及根据最早相关过期时间推导出的�
 - `429` / `403` / `402` —— 配额或授权（entitlement）信号 —— 锁定**配额族**：
   对 codex 锁定整个 `codex` / `spark` 作用域（该连接的每一个 `gpt-5*` 模型），对其他提供者则使用 `getQuotaScopedModelForProvider()`。
 - `404` 锁定裸模型（`getModelLockKey()` 会将 `not_found` 缩小范围）。
-- 其他所有状态码 —— `5xx` 传输/服务器故障，以及 OmniRoute 自身由质量校验合成的 `502` —— 只锁定**精确的**提供者/连接/模型元组。某个模型上的一次坏流并不能证明该账户的配额有问题；在此规则之前，`codex/gpt-5.6-luna` 上的一个空响应会把该连接的每一个 `gpt-5*` 模型从路由中移除 2–30 分钟（逐级升级），而其配额根本没有受影响。
+- 其他所有状态码 —— `5xx` 传输/服务器故障，以及 67router 自身由质量校验合成的 `502` —— 只锁定**精确的**提供者/连接/模型元组。某个模型上的一次坏流并不能证明该账户的配额有问题；在此规则之前，`codex/gpt-5.6-luna` 上的一个空响应会把该连接的每一个 `gpt-5*` 模型从路由中移除 2–30 分钟（逐级升级），而其配额根本没有受影响。
 - 调用方显式传入的 `scope` 选项始终优先（Antigravity 传入 `"exact"`）。
 
 **目的：** 当只有一个模型不可用或受配额限制时，避免禁用整个连接。
@@ -293,7 +293,7 @@ UI：监控 → 冷却管理器（`src/app/(dashboard)/dashboard/resilience/cool
 
 - **连接级与模型级：** `maxConcurrent` 仍是共享的连接级上限。当两者都适用时，两个门控会在同一个复合门控（`global → provider → account → model`）中以原子方式获取；实际行为取决于更严格的那个适用限制。
 - **精确匹配模型键：** 键是路由解析后传递给执行器的模型字符串——通常是裸的上游模型 id（`glm-5`），而不是客户端的 `provider/model` 别名（`zai/glm-5` 不会匹配 `glm-5`）。值为正整数并发请求上限。
-- **本地排队，不做发现：** 超出的请求会按照现有的队列/超时语义在本地排队（类型化的 `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` 准入错误）。OmniRoute 不会发现或推断上游策略——它只执行运维人员配置的精确上限。饱和的模型门控绝不会禁用提供者，也绝不会造成永久性的模型锁定；上游 429/冷却/回退行为仍然是错误兜底。
+- **本地排队，不做发现：** 超出的请求会按照现有的队列/超时语义在本地排队（类型化的 `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL` 准入错误）。67router 不会发现或推断上游策略——它只执行运维人员配置的精确上限。饱和的模型门控绝不会禁用提供者，也绝不会造成永久性的模型锁定；上游 429/冷却/回退行为仍然是错误兜底。
 - **每连接、每进程作用域：** 上限按数据库连接划分并保存在内存中，因此复用同一上游 API 密钥的两个连接不会相互协调。
 - **未配置即保持不变：** 省略该映射（或将仪表盘字段留空）不会添加任何模型门控。以下示例配置未断言任何通用提供者限制：
 
@@ -359,7 +359,7 @@ quota_exhausted / auth_error / not_found / not_found_local:
 ### 速率限制自动启用安全网与连接保护 (`rateLimitProtection`)
 
 **自动启用安全网**（`resilienceSettings.requestQueue.autoEnableApiKeyProviders`，默认 `true`）：
-默认情况下，OmniRoute 会为所有活动的 API 密钥提供者连接（`getProviderCategory(provider) === "apikey"`）自动启用速率限制队列保护。这可确保发往对速率敏感的上游 API 密钥的传入请求会通过 Bottleneck 排队并限流，而不是突发为上游 429 错误。该安全网可通过 `RATE_LIMIT_AUTO_ENABLE` 环境变量覆盖（`false`/`0`/`off` 禁用，`true`/`1`/`on` 强制开启），其优先级高于持久化的仪表盘设置（**设置 → 弹性** / `PATCH /api/resilience`）。
+默认情况下，67router 会为所有活动的 API 密钥提供者连接（`getProviderCategory(provider) === "apikey"`）自动启用速率限制队列保护。这可确保发往对速率敏感的上游 API 密钥的传入请求会通过 Bottleneck 排队并限流，而不是突发为上游 429 错误。该安全网可通过 `RATE_LIMIT_AUTO_ENABLE` 环境变量覆盖（`false`/`0`/`off` 禁用，`true`/`1`/`on` 强制开启），其优先级高于持久化的仪表盘设置（**设置 → 弹性** / `PATCH /api/resilience`）。
 
 **每个连接的 `rateLimitProtection` 语义：**
 每个连接的速率限制保护通过提供者连接上的 `rateLimitProtection` 布尔字段进行跟踪（在 SQLite 中持久化为 `rate_limit_protection`）：
@@ -593,7 +593,7 @@ reached"）的 429 会在 `status_429` 规则被触及之前，就被配额文�
 > 以使代理指南保持在 40k 上下文预算之内。这是上述各节的精简、面向代理的视图；
 > 编号章节仍是完整参考。
 
-OmniRoute 有三种相关但不同的临时故障机制。在调试路由行为时，请保持它们的
+67router 有三种相关但不同的临时故障机制。在调试路由行为时，请保持它们的
 作用域清晰区分。参见
 [3 层弹性架构图](../diagrams/exported/resilience-3layers.svg)
 （源文件：[diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd)）

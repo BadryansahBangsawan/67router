@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 将 **CLI 发现**、**原生 Agent Client Protocol** 和
+67router 将 **CLI 发现**、**原生 Agent Client Protocol** 和
 **旧版 stdio 适配器**区分开来。发现已安装的二进制文件并不能证明其
 身份验证、模型兼容性或处理提示词的就绪状态。
 
@@ -111,5 +111,3 @@ try {
 - [智能体协议](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI 启动契约](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI 工具](../reference/CLI-TOOLS.md)
-- [A2A 服务器](./A2A-SERVER.md)
-- [云端智能体](./CLOUD_AGENT.md)

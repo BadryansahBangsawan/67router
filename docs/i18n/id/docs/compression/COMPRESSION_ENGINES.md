@@ -4,7 +4,7 @@
 
 ---
 
-Kompresi OmniRoute dibangun berdasarkan kontrak mesin. Sebuah mode dapat menjalankan satu mesin secara langsung
+Kompresi 67router dibangun berdasarkan kontrak mesin. Sebuah mode dapat menjalankan satu mesin secara langsung
 (`caveman` atau `rtk`) atau pipeline bertumpuk deterministik yang mengeksekusi beberapa mesin secara berurutan.
 
 ## Mode
@@ -43,9 +43,9 @@ belum mengumpulkan riwayat berhenti pada `below_min_chars` dan mesin tidak mengu
 Itulah mengapa defaultnya adalah `aggressive` daripada profil teraman.
 
 Paket menyelesaikan cakupan model dan profilnya sendiri dari konfigurasi lingkungannya.
-OmniRoute tidak pernah mendelegasikan keputusan: adaptor mengunci gerbang model ke cakupan
+67router tidak pernah mendelegasikan keputusan: adaptor mengunci gerbang model ke cakupan
 paket yang paling ketat, sehingga pengaturan lingkungan host hanya dapat mempersempit daftar
-izin, tidak pernah memperluasnya melewati tanda terima yang diukur OmniRoute.
+izin, tidak pernah memperluasnya melewati tanda terima yang diukur 67router.
 
 ## Registri Engine
 
@@ -109,7 +109,7 @@ Mode Caveman berfokus pada pemadatan semantik prosa normal:
 Tampilan dasbornya berada di `Dashboard -> Context & Cache -> Caveman`.
 
 Proyek hulu Caveman melaporkan token keluaran `~75%` lebih sedikit, penghematan keluaran rata-rata `65%` dalam tolok ukur
-dengan rentang `22-87%`, serta alat kompresi masukan sebesar `~46%`. OmniRoute menggunakan angka sisi masukan Caveman
+dengan rentang `22-87%`, serta alat kompresi masukan sebesar `~46%`. 67router menggunakan angka sisi masukan Caveman
 saat mendokumentasikan penghematan prompt/konteks bertumpuk; mode keluaran Caveman tetap merupakan fitur
 perilaku respons yang terpisah.
 

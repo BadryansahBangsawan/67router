@@ -13,7 +13,7 @@
 
 ## ምንድን ነው
 
-OmniRoute ከ**Obsidian** vault ጋር እንደ **የአውድ ምንጭ** ይገናኛል — ወኪሎች
+67router ከ**Obsidian** vault ጋር እንደ **የአውድ ምንጭ** ይገናኛል — ወኪሎች
 አብሮ በተሰራው MCP አገልጋይ አማካይነት የሚያነቡትና የሚጽፉበት አካባቢያዊ Markdown
 የእውቀት ማከማቻ ነው። ውህደቱ በዴስክቶፕ መተግበሪያው ውስጥ ከሚሰራው
 የማህበረሰብ **Obsidian Local REST API** plugin ጋር ይገናኛል፤ በዚህም ወኪሎች
@@ -80,7 +80,7 @@ status endpointን በመጥራት ያረጋግጣል።
 ### WebDAV vault sync
 
 `src/app/api/settings/obsidian/webdav/route.ts` አማራጭ WebDAV-backed
-vault syncን (በ`src/lib/obsidianSync.ts` የሚንቀሳቀስ) ያስተዳድራል። እሱን ማንቃት OmniRouteን
+vault syncን (በ`src/lib/obsidianSync.ts` የሚንቀሳቀስ) ያስተዳድራል። እሱን ማንቃት 67routerን
 ወደlocal vault directory ያመለክታል፣ እንዲሁም የዘፈቀደ WebDAV username/password ጥንድ
 ይፈጥራል፦
 
@@ -117,8 +117,8 @@ environment identity ሊወርስ አይችልም። Placeholder IDs ብቻቸ�
 
 ## MCP መሣሪያዎች (22)
 
-በ`open-sse/mcp-server/tools/obsidianTools.ts` ውስጥ ተገልጸዋል። token/base-URL ለእያንዳንዱ ጥሪ ይወሰናሉ (መጀመሪያ የየ-API-key፣ ከዚያም ዓለም አቀፍ)። የOmniRoute **sync server**ን የሚጠቀሙ መሣሪያዎች
-(አራቱ `obsidian_sync_*` መሣሪያዎች) በተጨማሪ በOmniRoute ቅንብሮች ውስጥ የተዋቀረውን የsync ማረጋገጫ token ይፈልጋሉ።
+በ`open-sse/mcp-server/tools/obsidianTools.ts` ውስጥ ተገልጸዋል። token/base-URL ለእያንዳንዱ ጥሪ ይወሰናሉ (መጀመሪያ የየ-API-key፣ ከዚያም ዓለም አቀፍ)። የ67router **sync server**ን የሚጠቀሙ መሣሪያዎች
+(አራቱ `obsidian_sync_*` መሣሪያዎች) በተጨማሪ በ67router ቅንብሮች ውስጥ የተዋቀረውን የsync ማረጋገጫ token ይፈልጋሉ።
 
 ### የማንበቢያ መሣሪያዎች (`read:obsidian`)
 
@@ -135,7 +135,7 @@ environment identity ሊወርስ አይችልም። Placeholder IDs ብቻቸ�
 | `obsidian_get_periodic_note` | ለአንድ ቀን ዕለታዊ/ሳምንታዊ/ወርሃዊ ወቅታዊ ማስታወሻን ያገኛል (ካልተገለጸ ዛሬ)።                             |
 | `obsidian_get_tags`          | ሁሉንም የvault tags ከድግግሞሻቸው ጋር ይዘረዝራል።                                              |
 | `obsidian_list_commands`     | የሚገኙ የObsidian command IDsን ይዘረዝራል (ከ`obsidian_execute_command` ጋር ይጠቀሙ)።         |
-| `obsidian_sync_status`       | የOmniRoute sync server ሁኔታ፦ እየሄደ መሆኑ፣ የvault ስም፣ port፣ uptime፣ የመጨረሻ sync።        |
+| `obsidian_sync_status`       | የ67router sync server ሁኔታ፦ እየሄደ መሆኑ፣ የvault ስም፣ port፣ uptime፣ የመጨረሻ sync።         |
 | `obsidian_sync_conflicts`    | ያልተፈቱ sync ግጭቶችን (path፣ conflict path፣ detected-at) ይዘረዝራል።                       |
 
 ### የመጻፊያ መሣሪያዎች (`write:obsidian`)

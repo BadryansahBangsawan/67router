@@ -11,9 +11,9 @@
 
 ## ၎င်းသည် ဘာလဲ
 
-OmniRoute သည် **Notion** workspace တစ်ခုကို **အကြောင်းအရာရင်းမြစ်** အဖြစ် ချိတ်ဆက်နိုင်သည် — ၎င်းသည် agent များက ပါဝင်ပြီးသား MCP server မှတစ်ဆင့် ဝင်ရောက်အသုံးပြုနိုင်သည့် ဖတ်နိုင်/ရေးနိုင်သော
+67router သည် **Notion** workspace တစ်ခုကို **အကြောင်းအရာရင်းမြစ်** အဖြစ် ချိတ်ဆက်နိုင်သည် — ၎င်းသည် agent များက ပါဝင်ပြီးသား MCP server မှတစ်ဆင့် ဝင်ရောက်အသုံးပြုနိုင်သည့် ဖတ်နိုင်/ရေးနိုင်သော
 အသိပညာအခြေခံတစ်ခု ဖြစ်သည်။ Notion integration token ကို စီစဉ်သတ်မှတ်ပြီးသည်နှင့် MCP tool များက LLM တစ်ခုအား page များနှင့် database များကို ရှာဖွေခြင်း၊
-page အကြောင်းအရာနှင့် block tree များကို ဖတ်ခြင်း၊ filter/sort များဖြင့် database များကို query လုပ်ခြင်းနှင့် block အသစ်များ ထပ်ဖြည့်ခြင်းတို့ ပြုလုပ်နိုင်စေသည် — အားလုံးကို OmniRoute မှတစ်ဆင့် proxy လုပ်ထားပြီး (ပြန်လည်ကြိုးစားမှု၊ အချိန်ကုန်ဆုံးမှုနှင့် error အမျိုးအစားခွဲခြားမှုတို့ ပါဝင်သည်)
+page အကြောင်းအရာနှင့် block tree များကို ဖတ်ခြင်း၊ filter/sort များဖြင့် database များကို query လုပ်ခြင်းနှင့် block အသစ်များ ထပ်ဖြည့်ခြင်းတို့ ပြုလုပ်နိုင်စေသည် — အားလုံးကို 67router မှတစ်ဆင့် proxy လုပ်ထားပြီး (ပြန်လည်ကြိုးစားမှု၊ အချိန်ကုန်ဆုံးမှုနှင့် error အမျိုးအစားခွဲခြားမှုတို့ ပါဝင်သည်)
 ဖြစ်သောကြောင့် model သည် Notion API ကို တိုက်ရိုက် ထိတွေ့အသုံးပြုခြင်း မရှိပါ။
 
 ဤ integration သည် တရားဝင် Notion REST API
@@ -36,7 +36,7 @@ dashboard ၏ **Context Sources** tab (`ObsidianSourceCard` နှင့် အ�
 
 > [!NOTE]
 > Token သည် **Notion internal integration token** တစ်ခု ဖြစ်သည်။ Integration တစ်ခုကို
-> <https://www.notion.com/my-integrations> တွင် ဖန်တီးပြီးနောက် OmniRoute က ဝင်ရောက်အသုံးပြုစေလိုသော page/database များကို
+> <https://www.notion.com/my-integrations> တွင် ဖန်တီးပြီးနောက် 67router က ဝင်ရောက်အသုံးပြုစေလိုသော page/database များကို
 > ထို integration နှင့် မျှဝေပါ (Notion ၏ permission model သည် workspace တစ်ခုလုံးအပေါ် အခြေခံခြင်းမဟုတ်ဘဲ
 > မျှဝေမှုအပေါ် အခြေခံသည်)။
 
@@ -56,7 +56,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Method သုံးခုစလုံးသည် dashboard authentication (`isAuthenticated`) လိုအပ်သည်။ `POST` ပြုလုပ်ချိန်တွင်
-OmniRoute သည် token ကို သိမ်းဆည်းပြီး ရလဒ် ၁ ခုပါ စမ်းသပ်ရှာဖွေမှုကို ချက်ချင်း လုပ်ဆောင်သည်။ Notion က error object တစ်ခု ပြန်ပေးပါက token ကို ရှင်းလင်းပြီး call သည် `400` ဖြင့် မအောင်မြင်ပါ။
+67router သည် token ကို သိမ်းဆည်းပြီး ရလဒ် ၁ ခုပါ စမ်းသပ်ရှာဖွေမှုကို ချက်ချင်း လုပ်ဆောင်သည်။ Notion က error object တစ်ခု ပြန်ပေးပါက token ကို ရှင်းလင်းပြီး call သည် `400` ဖြင့် မအောင်မြင်ပါ။
 
 ## MCP tool များ (၆ ခု)
 

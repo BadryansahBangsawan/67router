@@ -5,12 +5,12 @@
 ---
 
 Deleguotasis **konteksto redagavimas** yra tik Claude skirta konteksto valdymo funkcija. Kitaip nei vietiniai
-OmniRoute glaudinimo varikliai (Caveman, RTK, LLMLingua, sudėtinės grandinės), kurie perrašo užklausos turinį
+67router glaudinimo varikliai (Caveman, RTK, LLMLingua, sudėtinės grandinės), kurie perrašo užklausos turinį
 _prieš_ jam paliekant tarpinį serverį, konteksto redagavimas prašo **teikėjo** pašalinti pasenusius
-įrankių naudojimo / įrankių rezultatų blokus iš jo paties aktyvaus konteksto lango. OmniRoute tik prideda turinio
+įrankių naudojimo / įrankių rezultatų blokus iš jo paties aktyvaus konteksto lango. 67router tik prideda turinio
 parametrą (`context_management.edits[]`); faktinį valymą pagal savo tokenizatorių atlieka Claude.
 
-Tai iš esmės yra deleguota galimybė: kiti teikėjai šį parametrą atmeta, todėl OmniRoute griežtai apriboja
+Tai iš esmės yra deleguota galimybė: kiti teikėjai šį parametrą atmeta, todėl 67router griežtai apriboja
 jo naudojimą Claude ir su Claude Code suderinamomis tarpinėmis paslaugomis.
 
 Pirminiai šaltiniai: `open-sse/config/contextEditing.ts` (strategijų ID, įterpimas į turinį, telemetrijos
@@ -19,7 +19,7 @@ išgavimas), `open-sse/executors/base.ts` (įterpimo patikra ir atsarginis veiki
 
 ## Ką daro `clear_tool_uses`
 
-OmniRoute į siunčiamą Anthropic Messages turinį įterpia vieną redagavimo operaciją:
+67router į siunčiamą Anthropic Messages turinį įterpia vieną redagavimo operaciją:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute į siunčiamą Anthropic Messages turinį įterpia vieną redagavimo o
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Beta funkcija nurodoma antrašte `anthropic-beta: context-management-2025-06-27`, kurią
-OmniRoute jau siunčia Claude užklausose.
+67router jau siunčia Claude užklausose.
 
 Įterpimą atlieka `applyContextEditingToBody()`, ir ši operacija yra **idempotentinė**: jei `clear_tool_uses`
 redagavimo operacija turinyje jau yra (pridėta ankstesnio iškvietimo arba pateikta kliento), turinys
-paliekamas nepakeistas. Jei taip pat yra `clear_thinking_20251015` redagavimo operacija, OmniRoute stabiliai surikiuoja
+paliekamas nepakeistas. Jei taip pat yra `clear_thinking_20251015` redagavimo operacija, 67router stabiliai surikiuoja
 `clear_thinking` operaciją į pradžią, nes Anthropic reikalauja, kad `clear_thinking` būtų pateikta prieš
 `clear_tool_uses` masyve `edits[]`.
 
@@ -147,7 +147,7 @@ mechanizmas nesuaktyvinamas.
 
 ## `applied_edits` telemetrija
 
-Gavusi „Claude“ atsakymą, „OmniRoute“ užregistruoja, kiek konteksto teikėjas iš tikrųjų pašalino. Šie
+Gavusi „Claude“ atsakymą, „67router“ užregistruoja, kiek konteksto teikėjas iš tikrųjų pašalino. Šie
 duomenys **nesiunčiami srautu** — jie dedant visas pastangas išgaunami iš ne srautiniu būdu perduodamo
 atsakymo turinio ir niekada nepaveikia atsakymo (telemetrijos klaidos ignoruojamos).
 
@@ -177,16 +177,16 @@ Taigi deleguotas šalinimas rodomas glaudinimo analizėje kartu su vietiniais va
 
 ## Ryšys su vietiniais glaudinimo varikliais
 
-| Aspektas              | Vietiniai varikliai (Caveman / RTK / LLMLingua / stacked)   | Deleguotasis konteksto redagavimas                                      |
-| --------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------- |
-| Kur vykdoma           | OmniRoute viduje, prieš užklausai paliekant tarpinį serverį | Teikėjo pusėje (Claude), serveryje                                      |
-| Kas redaguojama       | Užklausos / konteksto / įrankio rezultato tekstas           | Seni įrankio naudojimo / įrankio rezultato blokai                       |
-| Teikėjų aprėptis      | Visi teikėjai                                               | Tik `claude` + `anthropic-compatible-cc-*`                              |
-| Perjungiklis          | Glaudinimo režimo nustatymai                                | `contextEditing.enabled`                                                |
-| Trikties režimas      | Trikties atveju naudojamas originalus tekstas               | 400 atsarginis scenarijus: pašalinti parametrą ir vieną kartą pakartoti |
-| Sutaupymo telemetrija | `engine: <engine id>`                                       | `engine: "context-editing"`                                             |
+| Aspektas              | Vietiniai varikliai (Caveman / RTK / LLMLingua / stacked)  | Deleguotasis konteksto redagavimas                                      |
+| --------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Kur vykdoma           | 67router viduje, prieš užklausai paliekant tarpinį serverį | Teikėjo pusėje (Claude), serveryje                                      |
+| Kas redaguojama       | Užklausos / konteksto / įrankio rezultato tekstas          | Seni įrankio naudojimo / įrankio rezultato blokai                       |
+| Teikėjų aprėptis      | Visi teikėjai                                              | Tik `claude` + `anthropic-compatible-cc-*`                              |
+| Perjungiklis          | Glaudinimo režimo nustatymai                               | `contextEditing.enabled`                                                |
+| Trikties režimas      | Trikties atveju naudojamas originalus tekstas              | 400 atsarginis scenarijus: pašalinti parametrą ir vieną kartą pakartoti |
+| Sutaupymo telemetrija | `engine: <engine id>`                                      | `engine: "context-editing"`                                             |
 
-Šie du būdai papildo vienas kitą: vietiniai varikliai suglaudina baitus, kuriuos siunčia OmniRoute; konteksto redagavimas leidžia
+Šie du būdai papildo vienas kitą: vietiniai varikliai suglaudina baitus, kuriuos siunčia 67router; konteksto redagavimas leidžia
 Claude mažinti kaupiamą kontekstą tarp užklausų. Abu gali būti įjungti kartu.
 
 ## Taip pat žr.

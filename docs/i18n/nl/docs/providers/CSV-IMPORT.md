@@ -25,7 +25,7 @@ Een eerste regel waarvan de eerste kolom het letterlijke woord `provider` bevat 
 Download een startbestand vanuit het importdialoogvenster (**CSV-sjabloon downloaden**). Voorbeeld:
 
 ```csv
-# OmniRoute-providerimport (positionele kolommen)
+# 67router-providerimport (positionele kolommen)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

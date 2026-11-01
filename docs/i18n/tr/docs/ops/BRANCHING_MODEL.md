@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, **paralel döngü** yayın modelini kullanır: etkin döngü için özel bir `release/vX.Y.Z`
+67router, **paralel döngü** yayın modelini kullanır: etkin döngü için özel bir `release/vX.Y.Z`
 dalı, yayımlanmış hat için `main` ve döngü yayınlandığında değiştirilemez bir
 `vX.Y.Z` etiketi. Commit'lerin hem `release/*` dallarına _hem de_
 `main` dalına gelmesi beklenen bir durumdur — bir karışıklık değildir.

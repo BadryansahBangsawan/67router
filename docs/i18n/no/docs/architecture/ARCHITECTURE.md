@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Norsk)
+# 67router Architecture (Norsk)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Sist oppdatert: 2026-06-28_
 
 ## Sammendrag
 
-OmniRoute er en lokal gateway og et kontrollpanel for AI-ruting, bygget på Next.js.
+67router er en lokal gateway og et kontrollpanel for AI-ruting, bygget på Next.js.
 Den tilbyr ett enkelt OpenAI-kompatibelt endepunkt (`/v1/*`) og ruter trafikk på tvers av flere oppstrømsleverandører med oversettelse, reservebytte, tokenfornyelse og bruksregistrering.
 
 Kjernefunksjoner:
@@ -128,13 +128,11 @@ Hovedsider under `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kvote- og hastighetskontroller
 - `/dashboard/cli-tools` — CLI-oppsett, kjøretidsdeteksjon og konfigurasjonsgenerering
 - `/dashboard/agents` — oppdagede ACP-agenter og registrering av egendefinerte agenter
-- `/dashboard/cloud-agents` — oppgaver for skybaserte agenter (Codex Cloud, Devin, Jules) og oppgavenes livssyklus
 - `/dashboard/skills` — A2A-ferdighetsregister, sandkassekjøring og innebygd ferdighetskatalog
 - `/dashboard/memory` — inspeksjon og henting av varig samtaleminne
 - `/dashboard/webhooks` — utgående webhook-abonnementer, rotering av hemmeligheter og statistikk for nye forsøk
 - `/dashboard/batch` — innsending av jobbgrupper og fremdrift
 - `/dashboard/cache` — statistikk for gjennomlesings- og resonneringsbuffer samt tømmekontroller
-- `/dashboard/playground` — interaktivt chatmiljø mot enhver konfigurert kombinasjon/modell
 - `/dashboard/changelog` — endringsloggvisning i appen (gjengir `CHANGELOG.md`)
 - `/dashboard/system` — kjøretidsdiagnostikk, versjonsinformasjon og grensesnitt for miljøvalidering
 - `/dashboard/onboarding` — veiviser for førstegangsoppsett av nye installasjoner
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Nettleserbasert kontrollpanel]
     end
 
-    subgraph Router[OmniRoute lokal prosess]
+    subgraph Router[67router lokal prosess]
         API[V1-kompatibilitets-API\n/v1/*]
         DASH[Kontrollpanel + administrasjons-API\n/api/*]
         CORE[SSE + oversettelseskjerne\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Administrasjonsområder:
 - Budsjett: `src/app/api/usage/budget` (GET/POST)
 - Reservekjeder: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Samsvarsrevisjon: `src/app/api/compliance/audit-log` (GET, med paginering + strukturerte metadata)
-- Evalueringer: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Retningslinjer: `src/app/api/policies` (GET/POST)
 - Synkroniseringstokener: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Konfigurasjonspakke: `src/app/api/sync/bundle` (GET, ETag-versjonert øyeblikksbilde av innstillinger/leverandører/kombinasjoner/nøkler)
@@ -316,7 +313,6 @@ Moduler i domenelaget:
 - Tidsavbrudd for henting: `src/shared/utils/fetchTimeout.ts`
 - Telemetri for forespørsler: `src/shared/utils/requestTelemetry.ts`
 - Samsvar/revisjon: `src/lib/compliance/index.ts`
-- Evalueringskjører: `src/lib/evals/evalRunner.ts`
 - Persistens av domenetilstand: `src/lib/db/domainState.ts` — SQLite-CRUD for reservekjeder, budsjetter, kostnadshistorikk, utestengingstilstand og kretsbrytere
 
 OAuth-leverandørmoduler (27 individuelle filer under `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ OAuth-leverandørmoduler (27 individuelle filer under `src/lib/oauth/providers/`
 
 ## 5) Innebygde tjenester (v3.8.4)
 
-OmniRoute kan installere, overvåke og rute til lokalt kjørende AI-verktøyprosesser
+67router kan installere, overvåke og rute til lokalt kjørende AI-verktøyprosesser
 kalt **innebygde tjenester**. Fem følger med: 9Router, CLIProxyAPI, Bifrost, Mux og Dario.
 
 Arkitekturlag:
@@ -386,23 +382,6 @@ Viktige funksjoner:
 For fullstendige algoritmiske detaljer (faktorformler, vektjustering), se
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Skyagenter
-
-Skyagenter pakker inn tredjeparts vertsbaserte kodeagentplattformer (Codex Cloud, Devin,
-Jules) bak en enhetlig, databasestøttet livssyklus for oppgaver. Alle endepunkter for opprettelse/inspeksjon
-av oppgaver krever administrasjonsautentisering.
-
-- Modulrot: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, pluss underkataloger per agent under `agents/`)
-- Implementasjoner per agent: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Offentlige endepunkter: `/api/v1/agents/tasks/*` (liste/opprett/hent/avbryt)
-- Administrasjonsendepunkter: `/api/cloud/*` (klargjøring, status, masseoperasjoner)
-- Kontrollpanel: `/dashboard/cloud-agents`
-- Lagring: tabellen `cloud_agent_tasks`
-
-For detaljer om klargjøring og OAuth per agent, se
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Sikkerhetsmekanismer
 
 Sikkerhetsmekanismemodulen er et mellomvarelag som kan lastes inn på nytt under kjøring, og som inspiserer forespørsler
@@ -438,7 +417,7 @@ må sette sammen logikk for sperring/budsjett/reserveløsning selv.
 - Kvotehurtigbuffer: `src/domain/quotaCache.ts`
 - Degraderingstilstand: `src/domain/degradation.ts`
 - Konfigurasjonsrevisjon: `src/domain/configAudit.ts`
-- Bygger for OmniRoute-svarmetadata: `src/domain/omnirouteResponseMeta.ts`
+- Bygger for 67router-svarmetadata: `src/domain/omnirouteResponseMeta.ts`
 - Vurderingsdelsystem: `src/domain/assessment/` — periodiske evalueringsjobber
 
 ### E. Autorisasjonspipeline
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Nettleser for kontrollpanelet]
     end
 
-    subgraph ContainerOrProcess[OmniRoute-kjøremiljø]
+    subgraph ContainerOrProcess[67router-kjøremiljø]
         Next[Next.js-server\nPORT=20128]
         Core[SSE-kjerne + eksekveringskomponenter]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ Alle andre leverandører (inkludert egendefinerte kompatible noder) bruker `Defa
 ## Kompatibilitetsmatrise for leverandører
 
 > **Merk:** Matrisen nedenfor er et representativt utvalg av de 351 registrerte leverandørene i
-> OmniRoute v3.8.0. Du finner den autoritative og kontinuerlig oppdaterte listen i
+> 67router v3.8.0. Du finner den autoritative og kontinuerlig oppdaterte listen i
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (automatisk generert), eller se den definitive
 > kilden i `src/shared/constants/providers.ts` (Zod-validert ved innlasting).
 
@@ -1117,7 +1096,7 @@ Detaljert registrering av forespørselsnyttelast lagrer opptil fire JSON-nyttela
 - råforespørselen som mottas fra klienten
 - den oversatte forespørselen som faktisk sendes oppstrøms
 - leverandørsvaret rekonstruert som JSON; strømmede svar komprimeres til det endelige sammendraget pluss strømmetadata
-- det endelige klientsvaret som returneres av OmniRoute; strømmede svar lagres i samme komprimerte sammendragsformat
+- det endelige klientsvaret som returneres av 67router; strømmede svar lagres i samme komprimerte sammendragsformat
 
 ## Sikkerhetskritiske grenser
 

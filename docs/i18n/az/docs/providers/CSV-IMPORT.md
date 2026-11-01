@@ -25,7 +25,7 @@ Birinci sütununda hərfi olaraq `provider` sözü (registrdən asılı olmayara
 İdxal modal pəncərəsindən başlanğıc faylını endirin (**Download CSV template**). Nümunə:
 
 ```csv
-# OmniRoute provayder idxalı (mövqeyə əsaslanan sütunlar)
+# 67router provayder idxalı (mövqeyə əsaslanan sütunlar)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

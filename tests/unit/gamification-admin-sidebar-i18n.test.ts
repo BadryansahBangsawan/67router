@@ -27,8 +27,9 @@ const SIDEBAR_KEYS = ["sidebar.gamificationAdmin", "sidebar.gamificationAdminSub
 const NEW_KEYS = ["common.suspicious", ...SIDEBAR_KEYS];
 
 test("gamification anomalies page is reachable from the Gamification sidebar group", () => {
-  const section = SIDEBAR_SECTIONS.find((s) => s.id === "other-features");
-  assert.ok(section, "other-features section must exist");
+  // Sidebar v2: the Gamification group moved from "Other features" to System.
+  const section = SIDEBAR_SECTIONS.find((s) => s.id === "system");
+  assert.ok(section, "system section must exist");
 
   const group = section.children.find((child) => "type" in child && child.id === "gamification");
   assert.ok(group && "items" in group, "gamification group must exist");

@@ -209,7 +209,7 @@ export async function runLaunchCodexCommand(opts = {}, codexArgs = []) {
     console.error(
       (
         t("launch.notRunning") ||
-        "OmniRoute is not reachable at {port}. Start it with 'omniroute serve'."
+        "67router is not reachable at {port}. Start it with 'omniroute serve'."
       ).replace("{port}", baseUrl)
     );
     return 1;
@@ -297,18 +297,18 @@ export function registerLaunchCodex(program) {
   program
     .command("launch-codex")
     .description(
-      t("launchCodex.description") || "Launch Codex CLI pointed at OmniRoute (local or remote VPS)"
+      t("launchCodex.description") || "Launch Codex CLI pointed at 67router (local or remote VPS)"
     )
-    .option("--port <port>", "Local OmniRoute port (ignored when --remote is set)", "20128")
+    .option("--port <port>", "Local 67router port (ignored when --remote is set)", "20128")
     .option(
       "--remote <url>",
-      "Remote OmniRoute base URL, e.g. http://192.168.0.15:20128 (overrides --port + context)"
+      "Remote 67router base URL, e.g. http://192.168.0.15:20128 (overrides --port + context)"
     )
     .option("--profile <name>", "Codex profile to activate (passed as --profile <name>)")
     .option("-p, --p <name>", "Alias for --profile")
     .option(
       "--api-key <key>",
-      "OmniRoute API key (overrides OMNIROUTE_API_KEY env var for this invocation)"
+      "67router API key (overrides OMNIROUTE_API_KEY env var for this invocation)"
     )
     .option(
       "--inherit-env",

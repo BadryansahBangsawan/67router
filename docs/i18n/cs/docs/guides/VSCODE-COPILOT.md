@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** přidává každý model poskytovaný službou OmniRoute do _nativního_ výběru modelů v GitHub Copilot Chat. Žádný druhý postranní panel, žádné samostatné chatovací rozhraní — režim agenta Copilotu, volání nástrojů, servery MCP i vlastní instrukce nadále fungují, pouze běží na modelu, který si vyberete.
+**OmniCopilot** přidává každý model poskytovaný službou 67router do _nativního_ výběru modelů v GitHub Copilot Chat. Žádný druhý postranní panel, žádné samostatné chatovací rozhraní — režim agenta Copilotu, volání nástrojů, servery MCP i vlastní instrukce nadále fungují, pouze běží na modelu, který si vyberete.
 
 |                             |                                                                                                                                                 |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,13 +21,13 @@
 
 ## Nastavení
 
-1. **Spusťte OmniRoute** — `npm install -g omniroute && omniroute` (dashboard na adrese `http://localhost:20128`).
-2. **Nainstalujte rozšíření** — ve zobrazení Rozšíření vyhledejte „OmniRoute“.
+1. **Spusťte 67router** — `npm install -g omniroute && omniroute` (dashboard na adrese `http://localhost:20128`).
+2. **Nainstalujte rozšíření** — ve zobrazení Rozšíření vyhledejte „67router“.
 3. **Vyberte model** — Copilot Chat → výběr modelu → **Manage Models…** → **OmniRoute** a poté zaškrtněte
    požadované modely.
 
-Pokud OmniRoute běží na výchozím portu, není třeba nic nastavovat. Pro vzdálenou instanci otevřete
-**ikonu OmniRoute na panelu aktivit** (nebo spusťte `OmniRoute: Manage Connection`) a nastavte:
+Pokud 67router běží na výchozím portu, není třeba nic nastavovat. Pro vzdálenou instanci otevřete
+**ikonu 67router na panelu aktivit** (nebo spusťte `OmniRoute: Manage Connection`) a nastavte:
 
 - **Adresa URL serveru** — kořenová adresa serveru, např. `http://192.168.0.15:20128`. Příponu `/v1`
   přidá rozšíření; neuvádějte ji.
@@ -73,7 +73,7 @@ HTTP 400 — Model '<id>' je model pro generování obrázků a nelze jej použ�
 
 proto jsou před zobrazením ve výběru odfiltrovány podle svého pole `type`. **Modely Responses API
 zůstávají zachovány** — každá položka Codex / GPT-5.x uvádí `supported_endpoints: ["responses"]`
-a OmniRoute je překládá pro `/v1/chat/completions`, takže jsou plně použitelné.
+a 67router je překládá pro `/v1/chat/completions`, takže jsou plně použitelné.
 
 ### Poskytovatelé, které jste nikdy nenakonfigurovali
 
@@ -86,11 +86,11 @@ nic měnit.
 
 ## Řídicí panel na kartě VS Code
 
-`omnicopilot.dashboardOpen: "editor"` vykreslí řídicí panel OmniRoute na kartě editoru prostřednictvím
+`omnicopilot.dashboardOpen: "editor"` vykreslí řídicí panel 67router na kartě editoru prostřednictvím
 Simple Browser namísto externího prohlížeče. Vkládání je **nutné výslovně povolit na serveru** pomocí
 `DASHBOARD_ALLOW_EMBED=vscode`, což zajistí, že se HTML stránky budou poskytovat s
 `frame-ancestors 'self' vscode-webview:` namísto výchozího `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Rozhraní API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) si v obou
+`X-Frame-Options: DENY`. Rozhraní API (`/api`, `/v1`, `/v1beta`, `/healthz`) si v obou
 případech zachovává striktní hlavičky.
 
 > ⚠️ **Jde o příznak při sestavení, nikoli za běhu.** Next.js zkompiluje `headers()` do manifestu
@@ -131,7 +131,7 @@ proměnné prostředí `OMNIROUTE_API_KEY`, nikdy na příkazovém řádku.
 
 | Příznak                                                      | Příčina / řešení                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ve výběru nejsou žádné modely OmniRoute                      | Server je nedostupný. Tečka na stavovém řádku zešedne; spusťte `OmniRoute: Check Connection`. Zjišťování je záměrně tiché a namísto zobrazování výzvy neposkytne žádné modely.                                                                                                           |
+| Ve výběru nejsou žádné modely 67router                       | Server je nedostupný. Tečka na stavovém řádku zešedne; spusťte `OmniRoute: Check Connection`. Zjišťování je záměrně tiché a namísto zobrazování výzvy neposkytne žádné modely.                                                                                                           |
 | Každý model se zobrazuje dvakrát                             | Používáte OmniCopilot starší než 1.0.1 — aktualizujte jej. Rozšíření nyní požaduje `?prefix=alias`.                                                                                                                                                                                      |
 | Dříve zobrazený model pro obrázky/zvuk zmizel                | Od verze 1.0.1 je to záměrné — takový model nikdy nedokázal odpovědět na požadavek chatu.                                                                                                                                                                                                |
 | Na panelu aktivit chybí panel                                | VS Code přesouvá další kontejnery zobrazení do nabídky **„…“** v dolní části panelu aktivit a kontejner skrytý kliknutím pravým tlačítkem zůstane skrytý. Klikněte pravým tlačítkem na panel aktivit → zaškrtněte **OmniRoute** nebo jej otevřete pomocí `OmniRoute: Manage Connection`. |
@@ -143,6 +143,6 @@ proměnné prostředí `OMNIROUTE_API_KEY`, nikdy na příkazovém řádku.
 ## Viz také
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — všechny ostatní nástroje pro programování
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ovládání vzdáleného OmniRoute
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — ovládání vzdáleného 67router
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — kontrakt `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — vlastní poznámky rozšíření ke katalogu

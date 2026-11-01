@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (தமிழ்)
+# 📖 Setup Guide — 67router (தமிழ்)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute-க்கான முழுமையான அமைப்புக் குறிப்பு. விரைவான பதிப்புக்கு, [README-இல் உள்ள விரைவுத் தொடக்கம்](../README.md#-quick-start) என்பதைப் பார்க்கவும்.
+> 67router-க்கான முழுமையான அமைப்புக் குறிப்பு. விரைவான பதிப்புக்கு, [README-இல் உள்ள விரைவுத் தொடக்கம்](../README.md#-quick-start) என்பதைப் பார்க்கவும்.
 
 ## உள்ளடக்க அட்டவணை
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR தொகுப்பு](https://aur.archlinux.org/packages/omniroute-bin) OmniRoute-ஐ நிறுவி, systemd பயனர் சேவையையும் வழங்குகிறது.
+[AUR தொகுப்பு](https://aur.archlinux.org/packages/omniroute-bin) 67router-ஐ நிறுவி, systemd பயனர் சேவையையும் வழங்குகிறது.
 
 ### மூலத்திலிருந்து
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows குறிப்பு:** இயல்பாக, பழைய `%USERPROFILE%\.omniroute` கோப்பகம் இல்லாதபோது OmniRoute `%APPDATA%\omniroute`-ஐப் பயன்படுத்துகிறது. வேறொரு தரவுக் கோப்பக இருப்பிடத்தைத் தேர்ந்தெடுக்க `DATA_DIR`-ஐ அமைக்கவும்.
+> **Windows குறிப்பு:** இயல்பாக, பழைய `%USERPROFILE%\.omniroute` கோப்பகம் இல்லாதபோது 67router `%APPDATA%\omniroute`-ஐப் பயன்படுத்துகிறது. வேறொரு தரவுக் கோப்பக இருப்பிடத்தைத் தேர்ந்தெடுக்க `DATA_DIR`-ஐ அமைக்கவும்.
 
 > **குறிப்பு:** முதல் இயக்கத்தின்போது `npm install`, `.env.example` இலிருந்து `.env`-ஐத் தானாக உருவாக்குகிறது. அடுத்தடுத்த நிறுவல்கள் ஏற்கெனவே உள்ள `.env`-ஐ மேலெழுதாது; எனவே தனிப்பயனாக்கங்கள் பாதுகாக்கப்படும். மீண்டும் தொடக்க மதிப்புகளை நிரப்ப, மறுபடியும் இயக்குவதற்கு முன் `.env`-ஐ நீக்கவும்.
 
@@ -64,7 +64,7 @@ Compose சுயவிவரங்கள் மற்றும் Caddy HTTPS �
 
 ### டெஸ்க்டாப் செயலி (Electron)
 
-Electron 41 + electron-builder 26.10 அடிப்படையில் உருவாக்கப்பட்ட டெஸ்க்டாப் உறையுடன் OmniRoute வழங்கப்படுகிறது. கிடைக்கக்கூடிய ஸ்கிரிப்ட்கள் (பணியிட மூலக் கோப்பகம்):
+Electron 41 + electron-builder 26.10 அடிப்படையில் உருவாக்கப்பட்ட டெஸ்க்டாப் உறையுடன் 67router வழங்கப்படுகிறது. கிடைக்கக்கூடிய ஸ்கிரிப்ட்கள் (பணியிட மூலக் கோப்பகம்):
 
 ```bash
 npm run electron:dev          # உடனடி மறுஏற்றத்துடன் டெஸ்க்டாப்பை இயக்கவும்
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-சூழல் மாறிகளுடன் (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` போன்றவை) இணைத்துப் பயன்படுத்தும்போது, முழுமையாக ஸ்கிரிப்ட் செய்யக்கூடிய OmniRoute நிகழ்வைத் தொடங்க இது உங்களை அனுமதிக்கிறது.
+சூழல் மாறிகளுடன் (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` போன்றவை) இணைத்துப் பயன்படுத்தும்போது, முழுமையாக ஸ்கிரிப்ட் செய்யக்கூடிய 67router நிகழ்வைத் தொடங்க இது உங்களை அனுமதிக்கிறது.
 
 ### CLI விருப்பங்கள்
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI கருவி உள்ளமைவு — உள்ளமைவுகளைப் பட்டியலிடுதல், பெறுதல், அமைத்தல், சரிபார்த்தல்                           |
 | `omniroute status`      | இணைப்பில்லா நிலை டாஷ்போர்டு — பதிப்பு, DB, கருவிகள், உள்ளமைவு                                               |
 | `omniroute logs`        | API-இலிருந்து பயன்பாட்டுப் பதிவுகளைத் தொடர்ச்சியாகக் காட்டும் (`--follow` ஆதரிக்கப்படுகிறது)                |
-| `omniroute update`      | OmniRoute புதுப்பிப்புகளைச் சரிபார்க்கும் அல்லது செயல்படுத்தும்                                             |
+| `omniroute update`      | 67router புதுப்பிப்புகளைச் சரிபார்க்கும் அல்லது செயல்படுத்தும்                                              |
 | `omniroute provider`    | வழங்குநர் இணைப்புகளை நிர்வகிக்கும் — சேர்த்தல், பட்டியலிடுதல், நீக்குதல், சோதித்தல், இயல்புநிலையாக அமைத்தல் |
 | `omniroute --port 3000` | முதன்மை/API போர்ட்டை 3000 ஆக அமைக்கும்                                                                      |
 | `omniroute --mcp`       | MCP சேவையகத்தைத் தொடங்கும் (stdio போக்குவரத்து)                                                             |
@@ -165,7 +165,7 @@ Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode மற்றும் 
 
 #### `setup-*` மூலம் தானாக உள்ளமைத்தல்
 
-அடிப்படை URL மற்றும் விசையை கைமுறையாக ஒட்டுவதற்குப் பதிலாக, நேரடி மாதிரிப் பட்டியலிலிருந்து ஒவ்வொரு கருவிக்கும் உரிய உள்ளமைவை OmniRoute எழுத அனுமதிக்கவும். ஒவ்வொரு கருவிக்கும் ஒரு கட்டளை:
+அடிப்படை URL மற்றும் விசையை கைமுறையாக ஒட்டுவதற்குப் பதிலாக, நேரடி மாதிரிப் பட்டியலிலிருந்து ஒவ்வொரு கருவிக்கும் உரிய உள்ளமைவை 67router எழுத அனுமதிக்கவும். ஒவ்வொரு கருவிக்கும் ஒரு கட்டளை:
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml சுயவிவரங்கள்
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-ஒரு உள்ளூர் கருவியை **தொலைநிலை** OmniRoute-க்கு எதிராக உள்ளமைக்க, ஒவ்வொன்றும் `--remote <url> --api-key <key>` என்பதை ஏற்கின்றன; முன்னோட்டமிட `--dry-run` என்பதையும் ஏற்கின்றன. சரியான env செலுத்தப்பட்ட நிலையில், எந்த உள்ளமைவையும் எழுதாமல் ஒரு CLI-ஐத் தொடங்க, பொதுவான தொடக்கியைப் பயன்படுத்தவும்: `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); முந்தைய ஒவ்வொரு கருவிக்குமான தொடக்கிகளான `omniroute launch` (Claude Code) மற்றும் `omniroute launch-codex` (Codex) ஆகியவையும் தொடர்ந்து கிடைக்கின்றன.
+ஒரு உள்ளூர் கருவியை **தொலைநிலை** 67router-க்கு எதிராக உள்ளமைக்க, ஒவ்வொன்றும் `--remote <url> --api-key <key>` என்பதை ஏற்கின்றன; முன்னோட்டமிட `--dry-run` என்பதையும் ஏற்கின்றன. சரியான env செலுத்தப்பட்ட நிலையில், எந்த உள்ளமைவையும் எழுதாமல் ஒரு CLI-ஐத் தொடங்க, பொதுவான தொடக்கியைப் பயன்படுத்தவும்: `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); முந்தைய ஒவ்வொரு கருவிக்குமான தொடக்கிகளான `omniroute launch` (Claude Code) மற்றும் `omniroute launch-codex` (Codex) ஆகியவையும் தொடர்ந்து கிடைக்கின்றன.
 
 முழுமையான அட்டவணைக்கு (ஒவ்வொரு கட்டளையும் எதை எழுதுகிறது, அனைத்து கொடிகள், உள்ளூர் மற்றும் தொலைநிலை, அடிப்படை-URL `/v1` மரபுகள்), **[CLI ஒருங்கிணைப்புகள்](./CLI-INTEGRATIONS.md)** என்பதைப் பார்க்கவும்.
 
@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **முழுமையான MCP ஆவணம்:** [MCP Server README](../../open-sse/mcp-server/README.md) — 110 கருவிகள், IDE உள்ளமைவுகள், Python/TS/Go கிளையண்டுகள்.
 
-### A2A அமைப்பு (Agent-to-Agent Protocol)
-
-Agent Card-ஐச் சரிபார்க்கவும்:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ஒரு பணியை அனுப்பவும்:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**முழுமையான A2A ஆவணம்:** [A2A Server README](../../src/lib/a2a/README.md) — JSON-RPC 2.0, திறன்கள், ஸ்ட்ரீமிங், பணி வாழ்க்கைச் சுழற்சி.
-
----
-
 ## காலக்கெடு உள்ளமைவு
 
 ### அடிப்படை காலக்கெடுக்கள்
@@ -270,15 +250,15 @@ curl -X POST http://localhost:20128/a2a \
 | மாறி                     | இயல்புநிலை                         | நோக்கம்                                                                                                                                                                           |
 | ------------------------ | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                           | அப்ஸ்ட்ரீம் பதில் தொடக்கக் காலக்கெடு, மறைக்கப்பட்ட Undici காலக்கெடுக்கள், TLS கைரேகைக் கோரிக்கைகள் மற்றும் API பிரிட்ஜ் கோரிக்கை/ப்ராக்ஸி காலக்கெடுக்களுக்கான பகிரப்பட்ட அடிப்படை |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS`-ஐப் பெறுகிறது | OmniRoute, SSE ஸ்ட்ரீமை நிறுத்துவதற்கு முன் ஸ்ட்ரீமிங் துண்டுகளுக்கு இடையிலான அதிகபட்ச இடைவெளி                                                                                    |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS`-ஐப் பெறுகிறது | 67router, SSE ஸ்ட்ரீமை நிறுத்துவதற்கு முன் ஸ்ட்ரீமிங் துண்டுகளுக்கு இடையிலான அதிகபட்ச இடைவெளி                                                                                     |
 
 பின்னோக்கிய இணக்கத்தன்மை பாதுகாக்கப்படுகிறது: ஏற்கெனவே உள்ள `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` மற்றும் பிற அடுக்கு-வாரியான காலக்கெடு மாறிகள் தொடர்ந்து செயல்பட்டு, பகிரப்பட்ட அடிப்படையை மீறி முன்னுரிமை பெறும்.
 
 ### வழங்குநர் சார்ந்த குறிப்புகள்
 
-Claude Code-இணக்கமான அப்ஸ்ட்ரீம்களுக்கு (`anthropic-compatible-cc-*`), வழங்குநர்-தரப்பு வாசிப்புக் காலக்கெடுக்கள் உங்கள் சூழல் உள்ளமைவுடன் ஒத்திசைவாக இருக்கும்படி, தீர்மானிக்கப்பட்ட fetch காலக்கெடுவிலிருந்து வெளிச்செல்லும் `X-Stainless-Timeout` தலைப்பை OmniRoute பெறுகிறது.
+Claude Code-இணக்கமான அப்ஸ்ட்ரீம்களுக்கு (`anthropic-compatible-cc-*`), வழங்குநர்-தரப்பு வாசிப்புக் காலக்கெடுக்கள் உங்கள் சூழல் உள்ளமைவுடன் ஒத்திசைவாக இருக்கும்படி, தீர்மானிக்கப்பட்ட fetch காலக்கெடுவிலிருந்து வெளிச்செல்லும் `X-Stainless-Timeout` தலைப்பை 67router பெறுகிறது.
 
-மூன்றாம் தரப்பு Claude Code-இணக்கமான ரிவர்ஸ் ப்ராக்ஸிகளுக்கு, OmniRoute இயல்புநிலை `anthropic-beta` தொகுப்பை கட்டுப்பாடுடையதாக வைத்திருக்கும். மேலும், `Client Cache Control` என்பது `Auto` நிலையில் விடப்பட்டிருக்கும்போது, கிளையன்ட் வழங்கிய `cache_control` குறியீடுகளை மட்டுமே முன்னனுப்பும். அப்ஸ்ட்ரீமுக்கு மறைக்கப்பட்ட Claude சிந்தனை ஸ்ட்ரீம்கள் குறிப்பாகத் தேவைப்படும்போது மட்டும், ஒவ்வொரு இணைப்புக்குமான "Enable redact-thinking beta" நிலைமாற்றியை இயக்கவும்.
+மூன்றாம் தரப்பு Claude Code-இணக்கமான ரிவர்ஸ் ப்ராக்ஸிகளுக்கு, 67router இயல்புநிலை `anthropic-beta` தொகுப்பை கட்டுப்பாடுடையதாக வைத்திருக்கும். மேலும், `Client Cache Control` என்பது `Auto` நிலையில் விடப்பட்டிருக்கும்போது, கிளையன்ட் வழங்கிய `cache_control` குறியீடுகளை மட்டுமே முன்னனுப்பும். அப்ஸ்ட்ரீமுக்கு மறைக்கப்பட்ட Claude சிந்தனை ஸ்ட்ரீம்கள் குறிப்பாகத் தேவைப்படும்போது மட்டும், ஒவ்வொரு இணைப்புக்குமான "Enable redact-thinking beta" நிலைமாற்றியை இயக்கவும்.
 
 ### மேம்பட்ட காலக்கெடு மேலெழுதல்கள்
 
@@ -296,11 +276,11 @@ Claude Code-இணக்கமான அப்ஸ்ட்ரீம்களு�
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                             | API பிரிட்ஜ் சேவையகத்தின் keep-alive காலக்கெடு                                          |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                | API பிரிட்ஜ் சேவையகத்தின் சாக்கெட் செயலற்றநிலைக் காலக்கெடு (`0` இதை முடக்கும்)          |
 
-> **குறிப்பு:** ஸ்ட்ரீமிங் கோரிக்கைகளுக்கு, `FETCH_TIMEOUT_MS` என்பது இணைப்பு அமைத்தல் / முதல் அப்ஸ்ட்ரீம் பதிலுக்காகக் காத்திருத்தல் ஆகியவற்றை மட்டுமே உள்ளடக்கும். ஸ்ட்ரீம் செயல்பாட்டுக்கு வந்த பிறகு, உண்மையான தடை (`STREAM_IDLE_TIMEOUT_MS`) அல்லது Undici உடல் செயலற்றநிலை (`FETCH_BODY_TIMEOUT_MS`) ஏற்பட்டால் மட்டுமே OmniRoute அதை நிறுத்தும்.
+> **குறிப்பு:** ஸ்ட்ரீமிங் கோரிக்கைகளுக்கு, `FETCH_TIMEOUT_MS` என்பது இணைப்பு அமைத்தல் / முதல் அப்ஸ்ட்ரீம் பதிலுக்காகக் காத்திருத்தல் ஆகியவற்றை மட்டுமே உள்ளடக்கும். ஸ்ட்ரீம் செயல்பாட்டுக்கு வந்த பிறகு, உண்மையான தடை (`STREAM_IDLE_TIMEOUT_MS`) அல்லது Undici உடல் செயலற்றநிலை (`FETCH_BODY_TIMEOUT_MS`) ஏற்பட்டால் மட்டுமே 67router அதை நிறுத்தும்.
 
 ### ரிவர்ஸ் ப்ராக்ஸி இணக்கத்தன்மை
 
-Nginx, Caddy, Cloudflare அல்லது வேறொரு ரிவர்ஸ் ப்ராக்ஸிக்குப் பின்னால் OmniRoute-ஐ இயக்கினால், ப்ராக்ஸி காலக்கெடுக்களும் உங்கள் OmniRoute ஸ்ட்ரீம்/fetch காலக்கெடுக்களை விட அதிகமாக இருப்பதை உறுதிசெய்யவும்.
+Nginx, Caddy, Cloudflare அல்லது வேறொரு ரிவர்ஸ் ப்ராக்ஸிக்குப் பின்னால் 67router-ஐ இயக்கினால், ப்ராக்ஸி காலக்கெடுக்களும் உங்கள் 67router ஸ்ட்ரீம்/fetch காலக்கெடுக்களை விட அதிகமாக இருப்பதை உறுதிசெய்யவும்.
 
 ---
 

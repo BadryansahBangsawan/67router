@@ -7,7 +7,7 @@
 > **Źródło prawdy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Ostatnia aktualizacja:** 2026-09-22 — przestrzenie nazw zakresu wskazują na MCP-SERVER.md
 
-OmniRoute posiada potok autoryzacji świadomy tras, który kontroluje każde żądanie API. Klasyfikacja jest **deterministyczna** i **zamknięta w przypadku awarii** — wszystko, co nie może zostać sklasyfikowane, trafia jako `MANAGEMENT` i wymaga sesji lub tokenu o uprawnieniach zarządzania. Ta strona wyjaśnia model dla inżynierów utrzymujących trasy lub projektujących nowe punkty końcowe.
+67router posiada potok autoryzacji świadomy tras, który kontroluje każde żądanie API. Klasyfikacja jest **deterministyczna** i **zamknięta w przypadku awarii** — wszystko, co nie może zostać sklasyfikowane, trafia jako `MANAGEMENT` i wymaga sesji lub tokenu o uprawnieniach zarządzania. Ta strona wyjaśnia model dla inżynierów utrzymujących trasy lub projektujących nowe punkty końcowe.
 
 ![Potok AuthZ (3 klasy tras + ocena polityki)](../diagrams/exported/authz-pipeline.svg)
 
@@ -191,8 +191,6 @@ Katalog i reguły dopasowania (identyczny ciąg znaków lub przyznany zakres ko�
 Egzekwowanie klucza API klienta korzysta z `isRequireApiKeyEnabled()` w `src/shared/utils/featureFlags.ts`, a nie z bezpośredniego odczytu `process.env.REQUIRE_API_KEY`. Ma to znaczenie dla wdrożonych instancji: przełączenie `REQUIRE_API_KEY` w Dashboard → Feature Flags zapisuje nadpisanie w bazie i natychmiast wpływa na `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` oraz inne sprawdzenia uwierzytelnienia API klienta, które współdzielą tę funkcję. Jeśli magazynu flag nie da się odczytać, uwierzytelnianie API klienta odmawia dostępu i wymaga klucza.
 
 ## Breaking Change — v3.8.0
-
-Endpointy `/api/v1/agents/tasks/*` oraz `/api/resilience/model-cooldowns` **wymagają teraz management auth** (commit `588a0333`). Klienci, którzy wcześniej wysyłali zwykły klucz API bez scope `manage`, otrzymują `403`. Migracja: nadaj kluczowi scope `manage` w dashboardzie API Keys albo użyj zalogowanej sesji dashboardu.
 
 ## Zmiana zachowania — v3.8.2
 

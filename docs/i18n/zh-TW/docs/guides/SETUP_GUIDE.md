@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (中文 (繁體))
+# 📖 Setup Guide — 67router (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> OmniRoute 的完整設定參考。如需快速版本，請參閱 [README 中的快速入門](../README.md#-quick-start)。
+> 67router 的完整設定參考。如需快速版本，請參閱 [README 中的快速入門](../README.md#-quick-start)。
 
 ## 目錄
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[AUR 套件](https://aur.archlinux.org/packages/omniroute-bin)會安裝 OmniRoute，並提供 systemd 使用者服務。
+[AUR 套件](https://aur.archlinux.org/packages/omniroute-bin)會安裝 67router，並提供 systemd 使用者服務。
 
 ### 從原始碼安裝
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Windows 注意事項：**根據預設，若舊版 `%USERPROFILE%\.omniroute` 目錄不存在，OmniRoute 會使用 `%APPDATA%\omniroute`。設定 `DATA_DIR` 即可選擇不同的資料目錄位置。
+> **Windows 注意事項：**根據預設，若舊版 `%USERPROFILE%\.omniroute` 目錄不存在，67router 會使用 `%APPDATA%\omniroute`。設定 `DATA_DIR` 即可選擇不同的資料目錄位置。
 
 > **注意：**首次執行時，`npm install` 會從 `.env.example` 自動產生 `.env`。後續安裝不會覆寫現有的 `.env`，因此自訂設定會獲得保留。如需重新建立，請先刪除 `.env`，再重新執行。
 
@@ -64,7 +64,7 @@ PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm 
 
 ### 桌面應用程式（Electron）
 
-OmniRoute 隨附以 Electron 41 + electron-builder 26.10 建置的桌面包裝程式。可用的指令碼（工作區根目錄）：
+67router 隨附以 Electron 41 + electron-builder 26.10 建置的桌面包裝程式。可用的指令碼（工作區根目錄）：
 
 ```bash
 npm run electron:dev          # 使用熱重新載入執行桌面應用程式
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-搭配環境變數（`INITIAL_PASSWORD`、`OMNIROUTE_WS_BRIDGE_SECRET` 等），即可完全透過指令碼啟動 OmniRoute 執行個體。
+搭配環境變數（`INITIAL_PASSWORD`、`OMNIROUTE_WS_BRIDGE_SECRET` 等），即可完全透過指令碼啟動 67router 執行個體。
 
 ### CLI 選項
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | CLI 工具設定——列出、取得、設定及驗證組態               |
 | `omniroute status`      | 離線狀態儀表板——版本、DB、工具及組態                   |
 | `omniroute logs`        | 從 API 串流使用情況記錄（支援 `--follow`）             |
-| `omniroute update`      | 檢查或套用 OmniRoute 更新                              |
+| `omniroute update`      | 檢查或套用 67router 更新                               |
 | `omniroute provider`    | 管理提供者連線——新增、列出、移除、測試及設為預設值     |
 | `omniroute --port 3000` | 將標準／API 連接埠設為 3000                            |
 | `omniroute --mcp`       | 啟動 MCP 伺服器（stdio 傳輸）                          |
@@ -144,7 +144,7 @@ omniroute providers validate
 2. 開啟儀表板 → `Endpoints`，並建立一組 API 金鑰。
 3. （選用）開啟儀表板 → `Combos`，並設定備援鏈。
 
-### 2) 將程式開發工具指向 OmniRoute
+### 2) 將程式開發工具指向 67router
 
 ```txt
 基礎 URL：http://localhost:20128/v1
@@ -165,7 +165,7 @@ Ollama 標籤 URL：http://localhost:20128/api/v1/vscode/YOUR_KEY/api/tags
 
 #### 使用 `setup-*` 自動設定
 
-無需手動貼上基礎 URL 和金鑰，讓 OmniRoute 根據即時模型目錄，為每個工具寫入各自的設定。每個工具使用一個命令：
+無需手動貼上基礎 URL 和金鑰，讓 67router 根據即時模型目錄，為每個工具寫入各自的設定。每個工具使用一個命令：
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml 設定檔
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-每個命令都接受 `--remote <url> --api-key <key>`，以便將本機工具設定為連接至**遠端** OmniRoute，並可使用 `--dry-run` 預覽。若要注入正確的環境變數來啟動 CLI，且完全不寫入任何設定，請使用通用啟動器 `omniroute run <target>`（claude、codex、aider、goose、opencode、qwen、gemini）；舊版的各工具啟動器 `omniroute launch`（Claude Code）和 `omniroute launch-codex`（Codex）仍然可用。
+每個命令都接受 `--remote <url> --api-key <key>`，以便將本機工具設定為連接至**遠端** 67router，並可使用 `--dry-run` 預覽。若要注入正確的環境變數來啟動 CLI，且完全不寫入任何設定，請使用通用啟動器 `omniroute run <target>`（claude、codex、aider、goose、opencode、qwen、gemini）；舊版的各工具啟動器 `omniroute launch`（Claude Code）和 `omniroute launch-codex`（Codex）仍然可用。
 
 如需完整表格（每個命令會寫入的內容、所有旗標、本機與遠端的差異，以及基礎 URL 的 `/v1` 慣例），請參閱 **[CLI 整合](./CLI-INTEGRATIONS.md)**。
 
@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **完整 MCP 文件：** [MCP 伺服器 README](../../open-sse/mcp-server/README.md) — 110 個工具、IDE 設定，以及 Python/TS/Go 用戶端。
 
-### A2A 設定（代理程式對代理程式通訊協定）
-
-驗證 Agent Card：
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-傳送工作：
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"請提供簡短的配額摘要。"}]}}'
-```
-
-**完整 A2A 文件：** [A2A 伺服器 README](../../src/lib/a2a/README.md) — JSON-RPC 2.0、技能、串流，以及工作生命週期。
-
----
-
 ## 逾時設定
 
 ### 基本逾時
@@ -270,15 +250,15 @@ curl -X POST http://localhost:20128/a2a \
 | 變數                     | 預設值                    | 用途                                                                                          |
 | ------------------------ | ------------------------- | --------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                  | 上游開始回應逾時、隱藏的 Undici 逾時、TLS 指紋請求，以及 API 橋接請求／代理逾時所共用的基準值 |
-| `STREAM_IDLE_TIMEOUT_MS` | 繼承 `REQUEST_TIMEOUT_MS` | 串流區塊之間允許的最大間隔；超過後 OmniRoute 將中止 SSE 串流                                  |
+| `STREAM_IDLE_TIMEOUT_MS` | 繼承 `REQUEST_TIMEOUT_MS` | 串流區塊之間允許的最大間隔；超過後 67router 將中止 SSE 串流                                   |
 
 系統會維持向後相容性：現有的 `FETCH_TIMEOUT_MS`、`API_BRIDGE_PROXY_TIMEOUT_MS` 及其他各層級的逾時變數仍然有效，並會覆寫共用基準值。
 
 ### 提供者特定注意事項
 
-對於與 Claude Code 相容的上游（`anthropic-compatible-cc-*`），OmniRoute 會根據解析後的擷取逾時推導出站的 `X-Stainless-Timeout` 標頭，讓提供者端的讀取逾時與您的環境設定保持一致。
+對於與 Claude Code 相容的上游（`anthropic-compatible-cc-*`），67router 會根據解析後的擷取逾時推導出站的 `X-Stainless-Timeout` 標頭，讓提供者端的讀取逾時與您的環境設定保持一致。
 
-對於第三方、與 Claude Code 相容的反向代理，OmniRoute 會維持較保守的預設 `anthropic-beta` 設定；當「用戶端快取控制」保留為「自動」時，只會轉送用戶端提供的 `cache_control` 標記。僅當上游明確要求經過遮蔽的 Claude 思考串流時，才啟用每個連線的「啟用 redact-thinking beta」切換選項。
+對於第三方、與 Claude Code 相容的反向代理，67router 會維持較保守的預設 `anthropic-beta` 設定；當「用戶端快取控制」保留為「自動」時，只會轉送用戶端提供的 `cache_control` 標記。僅當上游明確要求經過遮蔽的 Claude 思考串流時，才啟用每個連線的「啟用 redact-thinking beta」切換選項。
 
 ### 進階逾時覆寫
 
@@ -296,11 +276,11 @@ curl -X POST http://localhost:20128/a2a \
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | API 橋接伺服器上的持續連線逾時                        |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | API 橋接伺服器上的通訊端非活動逾時（`0` 表示停用）    |
 
-> **注意：** 對於串流請求，`FETCH_TIMEOUT_MS` 僅涵蓋連線設定／等待第一個上游回應的時間。串流啟用後，OmniRoute 只會在實際停滯（`STREAM_IDLE_TIMEOUT_MS`）或 Undici 本文非活動（`FETCH_BODY_TIMEOUT_MS`）時中止串流。
+> **注意：** 對於串流請求，`FETCH_TIMEOUT_MS` 僅涵蓋連線設定／等待第一個上游回應的時間。串流啟用後，67router 只會在實際停滯（`STREAM_IDLE_TIMEOUT_MS`）或 Undici 本文非活動（`FETCH_BODY_TIMEOUT_MS`）時中止串流。
 
 ### 反向代理相容性
 
-如果您在 Nginx、Caddy、Cloudflare 或其他反向代理後方執行 OmniRoute，請確保代理逾時也高於 OmniRoute 的串流／擷取逾時。
+如果您在 Nginx、Caddy、Cloudflare 或其他反向代理後方執行 67router，請確保代理逾時也高於 67router 的串流／擷取逾時。
 
 ---
 

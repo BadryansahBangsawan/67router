@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute yuqori oqimdagi xato javoblarini provayder **hisobi butunlay yaroqsiz holga kelganini** (toʻxtatilgan / faolsizlantirilgan / xizmat shartlarini buzganligi uchun bloklangan) bildiruvchi signallar uchun tekshiradi va moslik aniqlanganda, ushbu ulanishni **terminal `banned` holatiga** oʻtkazadi, natijada u boshqa soʻrovlar uchun tanlanmaydi. **Security → Banned Keywords** sozlamalar kartasi aynan shuni sozlaydi ("Hisobni doimiy bloklashni aniqlashni ishga tushiradigan qoʻshimcha kalit soʻzlar. Ichki kalit soʻzlar har doim qoʻllanadi.").
+67router yuqori oqimdagi xato javoblarini provayder **hisobi butunlay yaroqsiz holga kelganini** (toʻxtatilgan / faolsizlantirilgan / xizmat shartlarini buzganligi uchun bloklangan) bildiruvchi signallar uchun tekshiradi va moslik aniqlanganda, ushbu ulanishni **terminal `banned` holatiga** oʻtkazadi, natijada u boshqa soʻrovlar uchun tanlanmaydi. **Security → Banned Keywords** sozlamalar kartasi aynan shuni sozlaydi ("Hisobni doimiy bloklashni aniqlashni ishga tushiradigan qoʻshimcha kalit soʻzlar. Ichki kalit soʻzlar har doim qoʻllanadi.").
 
 Ushbu sahifada ichki roʻyxat, aniqlash jarayoni, uning qoʻllanish doirasi, maxsus kalit soʻzlarni xavfsiz qoʻshish usuli va belgilangan ulanishni qayta tiklash tartibi hujjatlashtirilgan. Terminal holatning oʻzi barqarorlik modelining bir qismidir — [RESILIENCE_GUIDE](../architecture/RESILIENCE_GUIDE.md) ("Terminal holatlar") boʻlimiga qarang.
 

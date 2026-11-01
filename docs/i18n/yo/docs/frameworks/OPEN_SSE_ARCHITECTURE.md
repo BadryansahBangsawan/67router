@@ -4,7 +4,7 @@
 
 ---
 
-> **Ní ṣókí**: `open-sse/` ni ẹ̀rọ ìṣànwọlé pàtàkì tó ń fún gbogbo ìbéèrè LLM ní OmniRoute lágbára. Ó ní nǹkan bí fáìlì 1,400 tó ń ṣe ìmúṣẹ ọ̀nà ìṣàn ìbéèrè, àwọn olùṣiṣẹ́, àwọn iṣẹ́, olupin MCP, àti fẹ́lẹ́fẹ́lẹ́ ìtumọ̀. Ìtọ́sọ́nà yìí ṣàlàyé bí àwọn apá náà ṣe ń ṣiṣẹ́ pọ̀.
+> **Ní ṣókí**: `open-sse/` ni ẹ̀rọ ìṣànwọlé pàtàkì tó ń fún gbogbo ìbéèrè LLM ní 67router lágbára. Ó ní nǹkan bí fáìlì 1,400 tó ń ṣe ìmúṣẹ ọ̀nà ìṣàn ìbéèrè, àwọn olùṣiṣẹ́, àwọn iṣẹ́, olupin MCP, àti fẹ́lẹ́fẹ́lẹ́ ìtumọ̀. Ìtọ́sọ́nà yìí ṣàlàyé bí àwọn apá náà ṣe ń ṣiṣẹ́ pọ̀.
 
 **Orísun:** `open-sse/` (package workspace, nǹkan bí fáìlì `.ts` 1,440 tí kì í ṣe ti ìdánwò)
 
@@ -12,10 +12,10 @@
 
 ## Kí Nìdí Tí Package Workspace Ọ̀tọ̀ Fi Wà?
 
-`open-sse/` jẹ́ **workspace adádúró** nínú monorepo OmniRoute fún ọ̀pọ̀ ìdí:
+`open-sse/` jẹ́ **workspace adádúró** nínú monorepo 67router fún ọ̀pọ̀ ìdí:
 
 1. **Àtúnlò** — a ṣe àtẹ̀jáde `open-sse` gẹ́gẹ́ bí `@omniroute/open-sse` lórí npm, nítorí náà àwọn iṣẹ́-àkànṣe mìíràn lè lò ó lọ́tọ̀
-2. **Àwọn ààlà tó ṣe kedere** — a ya ẹ̀rọ ìṣànwọlé sọ́tọ̀ kúrò ní fẹ́lẹ́fẹ́lẹ́ UI/DB tó jẹ́ ti OmniRoute
+2. **Àwọn ààlà tó ṣe kedere** — a ya ẹ̀rọ ìṣànwọlé sọ́tọ̀ kúrò ní fẹ́lẹ́fẹ́lẹ́ UI/DB tó jẹ́ ti 67router
 3. **Ìṣiṣẹ́** — ẹ̀rọ náà kò ní àwọn ìgbẹ́kẹ̀lé Next.js, èyí tó ń mú kí ìbẹ̀rẹ̀ láti ipò tútù yára sí i nínú àwọn àyíká CLI/serverless
 4. **Ìṣàkóso ẹ̀yà** — `open-sse` lè ṣe ìtújáde ní ìgbà tirẹ̀
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Kí Nìdí Tí Olùyípadà Ọ̀tọ̀ Fi Ṣe Pàtàkì?
 
-Responses API jẹ́ ọ̀nà kika tuntun ti OpenAI pẹ̀lú **àwọn ìjíròrò tí ó ní ipò** (`previous_response_id`). Nígbà tí client kan bá fi ìbéèrè Responses ránṣẹ́, OmniRoute:
+Responses API jẹ́ ọ̀nà kika tuntun ti OpenAI pẹ̀lú **àwọn ìjíròrò tí ó ní ipò** (`previous_response_id`). Nígbà tí client kan bá fi ìbéèrè Responses ránṣẹ́, 67router:
 
 1. Ń yí Responses → Chat Completions padà ní inú
 2. Ń fi ránṣẹ́ sí olùpèsè (olùpèsè èyíkéyìí tí ó ṣe àtìlẹ́yìn fún Chat Completions)
@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — àlàyé directory kọ̀ọ̀kan
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ìfúnni-ní-ààmì oní-factor 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — server MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — server A2A
 - Orísun: `open-sse/` (fáìlì 400+, ~143K LOC)

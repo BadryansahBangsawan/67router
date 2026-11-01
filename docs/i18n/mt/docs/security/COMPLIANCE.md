@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jirreġistra azzjonijiet amministrattivi, avvenimenti ta’ awtentikazzjoni, bidliet fiċ-ċiklu tal-ħajja tal-kredenzjali tal-fornituri, u invokazzjonijiet tal-għodod MCP f’tabelli tal-awditjar appoġġjati minn SQLite. Din il-paġna tkopri x’jiġi rreġistrat, fejn jinżamm, għal kemm żmien jinżamm, kif iċ-ċwievet tal-API jistgħu jagħżlu li ma jipparteċipawx, u kif tikkonsulta d-data.
+67router jirreġistra azzjonijiet amministrattivi, avvenimenti ta’ awtentikazzjoni, bidliet fiċ-ċiklu tal-ħajja tal-kredenzjali tal-fornituri, u invokazzjonijiet tal-għodod MCP f’tabelli tal-awditjar appoġġjati minn SQLite. Din il-paġna tkopri x’jiġi rreġistrat, fejn jinżamm, għal kemm żmien jinżamm, kif iċ-ċwievet tal-API jistgħu jagħżlu li ma jipparteċipawx, u kif tikkonsulta d-data.
 
 L-implimentazzjoni tinsab f’`src/lib/compliance/index.ts` (T-43 — "Kontrolli tal-Konformità") u `src/lib/compliance/providerAudit.ts`. Il-kitbiet tal-awditjar qatt ma jiġġeneraw eċċezzjoni: jekk iseħħ xi falliment, is-sejħa tiġi injorata fis-skiet sabiex ir-reġistrazzjoni tal-awditjar ma tkunx tista’ tfixkel il-fluss ewlieni tat-talba.
 

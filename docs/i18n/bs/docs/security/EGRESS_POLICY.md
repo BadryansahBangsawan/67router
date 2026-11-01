@@ -10,7 +10,7 @@
 
 > **Izvor istine:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute omogućava svakom proksiju da nosi **direktivu za izlaznu porodicu adresa**. Po defaultu, OS bira IPv4 ili IPv6 (dual-stack, "Happy Eyeballs"). Kada postavite direktivu na `ipv4` ili `ipv6`, OmniRoute fiksira svaku konekciju kroz taj proksi na odabranu porodicu i **zatvara se u slučaju greške (fails closed)** umjesto da se vraća na drugu porodicu.
+67router omogućava svakom proksiju da nosi **direktivu za izlaznu porodicu adresa**. Po defaultu, OS bira IPv4 ili IPv6 (dual-stack, "Happy Eyeballs"). Kada postavite direktivu na `ipv4` ili `ipv6`, 67router fiksira svaku konekciju kroz taj proksi na odabranu porodicu i **zatvara se u slučaju greške (fails closed)** umjesto da se vraća na drugu porodicu.
 
 Ova stranica dokumentuje šta je direktiva, zašto postoji, gdje je konfigurišete i kako je runtime razrješava.
 
@@ -124,7 +124,7 @@ Za ostatak proxy CRUD/assignment API-ja, pogledajte [PROXY_GUIDE.md](../ops/PROX
 
 ## Kako se `auto` razrješava
 
-Kada je `family` postavljen na `auto`, OmniRoute ne dodaje nikakvu direktivu — proxy URL se koristi takav kakav jeste, a porodica povezivanja se određuje intrinzično.
+Kada je `family` postavljen na `auto`, 67router ne dodaje nikakvu direktivu — proxy URL se koristi takav kakav jeste, a porodica povezivanja se određuje intrinzično.
 
 U vrijeme izgradnje URL-a (`proxyConfigToUrl` / `normalizeProxyUrl` u `open-sse/utils/proxyDispatcher.ts`), `auto` proxy daje običan URL bez markera:
 
@@ -158,7 +158,7 @@ Dakle:
 
 Direktiva koja nije `auto` putuje kao jedinstvena sintetička oznaka upita — `?family=ipv4` ili `?family=ipv6` — dodata jednom na normalizovani proxy URL. `normalizeProxyUrl` pažljivo uklanja i ponovo dodaje ovu oznaku tačno jednom kako nikada ne bi oštetila parsiranje porta.
 
-Kada se dispatcher izgradi, oznaka se čita i pretvara u konkretnu porodicu povezivanja. Ako je host IP literal **suprotne** porodice, OmniRoute izbacuje grešku (kontradikcija znači fail-closed):
+Kada se dispatcher izgradi, oznaka se čita i pretvara u konkretnu porodicu povezivanja. Ako je host IP literal **suprotne** porodice, 67router izbacuje grešku (kontradikcija znači fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Konkretna porodica se zatim fiksira na konektoru:
 
 ## SOCKS5 kompatibilnost
 
-Fiksiranje porodice radi sa SOCKS5 proxyjima, ali standardni `fetch-socks` ne izlaže opcije socket-a potrebne za fiksiranje porodice proxy skoka. OmniRoute za to isporučuje sopstveni konektor:
+Fiksiranje porodice radi sa SOCKS5 proxyjima, ali standardni `fetch-socks` ne izlaže opcije socket-a potrebne za fiksiranje porodice proxy skoka. 67router za to isporučuje sopstveni konektor:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

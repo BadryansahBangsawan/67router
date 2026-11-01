@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` disponibiliza todo o seu catálogo OmniRoute — modelos, combos e
+`@omniroute/opencode-plugin-v2` disponibiliza todo o seu catálogo 67router — modelos, combos e
 auto-combos — no seletor de modelos do OpenCode v2, com nomes de apresentação, preços e limites
 do nível gratuito.
 
@@ -15,7 +15,7 @@ OpenCode; nada é partilhado entre ambos, pelo que atualizar um nunca obriga a a
 ## Requisitos
 
 - OpenCode v2.
-- Um gateway OmniRoute acessível (`http://localhost:20128` por predefinição).
+- Um gateway 67router acessível (`http://localhost:20128` por predefinição).
 - Node.js 22 ou 24.
 
 ## Instalação
@@ -128,7 +128,7 @@ Defina `"geminiSanitization": false` para desativar esta funcionalidade.
 
 | Sintoma                                            | Causa                                                                                                                                   |
 | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| O seletor não apresenta nenhum modelo OmniRoute    | Não foi encontrada nenhuma chave (verifique o aviso de arranque) ou o gateway está inacessível                                          |
+| O seletor não apresenta nenhum modelo 67router     | Não foi encontrada nenhuma chave (verifique o aviso de arranque) ou o gateway está inacessível                                          |
 | IDs de modelo em bruto, sem combinações nem preços | Os endpoints de gestão recusaram o token — defina `managementReadToken`                                                                 |
 | Catálogo `freeOnly` curto ou vazio                 | Token de gestão inexistente ou recusado — consulte a linha de resumo da atualização (contagem `unmatched-free`) no registo do anfitrião |
 | Uma sessão associada a `opencode-<id>/…`           | O plugin v1 publicou `opencode-<id>`; a v2 publica apenas `<id>`, por isso volte a selecionar o modelo em `<id>/…`                      |

@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute-hallintapaneeli" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="67router-hallintapaneeli" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — Ilmainen tekoäly-yhdyskäytävä
+# 🚀 67router — Ilmainen tekoäly-yhdyskäytävä
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — Älä koskaan lopeta koodaamista. Kaikki tekoälytyökalut → 375 palveluntarjoajaa — yli 150 ilmaista — yhden päätepisteen kautta. Claude Code, Codex, Cursor, Cline, Copilot ja Antigravity ILMAISIIN Claude-, GPT- ja Gemini-palveluihin automaattisella varajärjestelmään siirtymisellä. Yhdistetty RTK- ja Caveman-pakkaus säästää 15–95 % tokeneista (keskimäärin ~89 %) — et enää koskaan saavuta rajoja. 375 tekoälypalveluntarjoajaa · yli 150 ilmaistasoa · ~1,62 mrd. ilmaista tokenia/kk · 20 reititysstrategiaa · alkuun pääsee 0 dollarilla."/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — Älä koskaan lopeta koodaamista. Kaikki tekoälytyökalut → 375 palveluntarjoajaa — yli 150 ilmaista — yhden päätepisteen kautta. Claude Code, Codex, Cursor, Cline, Copilot ja Antigravity ILMAISIIN Claude-, GPT- ja Gemini-palveluihin automaattisella varajärjestelmään siirtymisellä. Yhdistetty RTK- ja Caveman-pakkaus säästää 15–95 % tokeneista (keskimäärin ~89 %) — et enää koskaan saavuta rajoja. 375 tekoälypalveluntarjoajaa · yli 150 ilmaistasoa · ~1,62 mrd. ilmaista tokenia/kk · 20 reititysstrategiaa · alkuun pääsee 0 dollarilla."/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **Käytä omia palveluntarjoajatilejäsi.** Tämä on arvioitu yhteismäärä erikseen saatavilla olevista kolmansien osapuolten maksuttomista käyttöoikeustasoista, ei OmniRouten myöntämä token-kiintiö. Rekisteröidy, hanki tarvittavat tunnistetiedot ja yhdistä palveluntarjoajat, joita voit käyttää. Kukin palveluntarjoaja määrittää omat rajoituksensa, saatavuutensa ja ehtonsa.
+> **Käytä omia palveluntarjoajatilejäsi.** Tämä on arvioitu yhteismäärä erikseen saatavilla olevista kolmansien osapuolten maksuttomista käyttöoikeustasoista, ei 67routerin myöntämä token-kiintiö. Rekisteröidy, hanki tarvittavat tunnistetiedot ja yhdistä palveluntarjoajat, joita voit käyttää. Kukin palveluntarjoaja määrittää omat rajoituksensa, saatavuutensa ja ehtonsa.
 >
-> Maksuttomien käyttöoikeustasojen yhdistäminen käsin on työlästä — kymmeniä SDK:ita, kymmeniä nopeusrajoituksia eikä mitään käsitystä siitä, kuinka paljon kapasiteettia sinulla todellisuudessa on. OmniRoute luetteloi **471 maksuttoman käyttöoikeustason kohdetta 34 toistuvan pooliavaimen kautta** ja laskee tokenien otsikkoluvun **17 poolista, joilla on julkaistu positiivinen kuukausibudjetti, sekä viidestä mallikohtaisesta Groq-rajasta** siten, että jaetut poolit poistetaan kaksoislaskennasta. Kiintiöt, jotka avautuvat vasta alueellisen henkilöllisyystarkistuksen jälkeen (tällä hetkellä ModelScope), näytetään erikseen: +~6M alueellisen henkilöllisyyden vahvistamisen takana, eikä niitä koskaan lasketa mukaan otsikkolukuun. Tulos pysyy näkyvissä hallintapaneelissa (`/dashboard/free-tiers`).
+> Maksuttomien käyttöoikeustasojen yhdistäminen käsin on työlästä — kymmeniä SDK:ita, kymmeniä nopeusrajoituksia eikä mitään käsitystä siitä, kuinka paljon kapasiteettia sinulla todellisuudessa on. 67router luetteloi **471 maksuttoman käyttöoikeustason kohdetta 34 toistuvan pooliavaimen kautta** ja laskee tokenien otsikkoluvun **17 poolista, joilla on julkaistu positiivinen kuukausibudjetti, sekä viidestä mallikohtaisesta Groq-rajasta** siten, että jaetut poolit poistetaan kaksoislaskennasta. Kiintiöt, jotka avautuvat vasta alueellisen henkilöllisyystarkistuksen jälkeen (tällä hetkellä ModelScope), näytetään erikseen: +~6M alueellisen henkilöllisyyden vahvistamisen takana, eikä niitä koskaan lasketa mukaan otsikkolukuun. Tulos pysyy näkyvissä hallintapaneelissa (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRouten maksuttoman käyttöoikeustason budjettikortti: tasaisesti ~1.62B maksutonta tokenia kuukaudessa ja rekisteröitymiskrediittien ansiosta ensimmäisen kuukauden aikana jopa ~2.22B, 34 dokumentoidusta toistuvasta pooliavaimesta, jotka kattavat 471 luetteloitua maksuttoman käyttöoikeustason kohdetta yhden päätepisteen takana. Rehellinen, poolien kaksoislaskennan poistava laskenta — kukin jaettu pooli lasketaan kerran, mukaan lukien 17 toistuvaa poolia, joilla on julkaistu positiivinen kuukausittainen token-budjetti, sekä viisi mallikohtaista Groq-rajaa; 12 palveluntarjoajaa on merkitty vältettäviksi ehtoriskiluettelossa, jotta voit päättää itse. Budjettipalkki sisältää Mistral 1B:n, Nara 210M:n, LLM7 150M:n, xKiro 150M:n, Groq 30M:n (viisi mallikohtaista rajaa) ja pienempiä pooleja sekä ensimmäisen kuukauden rekisteröitymiskrediitit. Pysyvästi maksuttomat palveluntarjoajat, joilla ei ole token-rajaa, esitetään erikseen, jotta ne eivät koskaan kasvata otsikkolukua keinotekoisesti. Ajantasainen käytetty ja jäljellä oleva määrä osoitteessa /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="67routerin maksuttoman käyttöoikeustason budjettikortti: tasaisesti ~1.62B maksutonta tokenia kuukaudessa ja rekisteröitymiskrediittien ansiosta ensimmäisen kuukauden aikana jopa ~2.22B, 34 dokumentoidusta toistuvasta pooliavaimesta, jotka kattavat 471 luetteloitua maksuttoman käyttöoikeustason kohdetta yhden päätepisteen takana. Rehellinen, poolien kaksoislaskennan poistava laskenta — kukin jaettu pooli lasketaan kerran, mukaan lukien 17 toistuvaa poolia, joilla on julkaistu positiivinen kuukausittainen token-budjetti, sekä viisi mallikohtaista Groq-rajaa; 12 palveluntarjoajaa on merkitty vältettäviksi ehtoriskiluettelossa, jotta voit päättää itse. Budjettipalkki sisältää Mistral 1B:n, Nara 210M:n, LLM7 150M:n, xKiro 150M:n, Groq 30M:n (viisi mallikohtaista rajaa) ja pienempiä pooleja sekä ensimmäisen kuukauden rekisteröitymiskrediitit. Pysyvästi maksuttomat palveluntarjoajat, joilla ei ole token-rajaa, esitetään erikseen, jotta ne eivät koskaan kasvata otsikkolukua keinotekoisesti. Ajantasainen käytetty ja jäljellä oleva määrä osoitteessa /dashboard/free-tiers."/>
 
 > Animoitu yhteenveto reaaliaikaisesta `/dashboard/free-tiers`-sivusta. Täydellinen menetelmäkuvaus (poolien kaksoislaskennan poisto, krediittitasot, palveluntarjoajien ehdot): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 Opi</b></td>
     <td align="center"><a href="#-the-promise">💥 Lupaus</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 Miksi OmniRoute</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 Miksi 67router</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 Mikä erottaa sen muista</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Kolme vaihetta: asenna ja käynnistä OmniRoute, yhdistä kelvollinen palveluntarjoaja omalla tililläsi tai API-avaimellasi ja määritä sitten työkalusi käyttämään osoitetta localhost:20128/v1 OmniRoute-API-avaimella ja auto-mallilla. Reititys riippuu käytettävissä olevista kelvollisista yhteyksistä ja palveluntarjoajien rajoituksista."/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="Kolme vaihetta: asenna ja käynnistä 67router, yhdistä kelvollinen palveluntarjoaja omalla tililläsi tai API-avaimellasi ja määritä sitten työkalusi käyttämään osoitetta localhost:20128/v1 67router-API-avaimella ja auto-mallilla. Reititys riippuu käytettävissä olevista kelvollisista yhteyksistä ja palveluntarjoajien rajoituksista."/>
 
 ```bash
-# Kun olet yhdistänyt palveluntarjoajan, kopioi OmniRoute-avaimesi kohdasta Dashboard → Endpoints:
+# Kun olet yhdistänyt palveluntarjoajan, kopioi 67router-avaimesi kohdasta Dashboard → Endpoints:
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 Miksi OmniRoute?
+# 🤔 Miksi 67router?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Miksi OmniRoute — lopeta 10 hallintapaneelin, toimimattomien API-avainten ja yllättävien laskujen kanssa tasapainoilu. Kymmenen päivittäistä ongelmaa ja niiden ratkaisut: käyttämätön kiintiö vanhenee → hyödynnä tilaukset mahdollisimman tehokkaasti; nopeusrajoitukset kesken ohjelmoinnin → 4-tasoinen automaattinen varareititys (tilaus → API → edullinen → ilmainen); työkalujen tulosteet kuluttavat tokeneita → RTK + Caveman-pakkaus (15–95 %); kalliit API:t → kustannusoptimoitu reititys; jokainen työkalu vaatii oman määrityksensä → yksi päätepiste, yksi hallintapaneeli; tekoäly on estetty → 3-tasoinen välityspalvelin + TLS-häivytys; toimimattomat avaimet → 3-kerroksinen vikasietoisuus (katkaisijat, avainten jäähdytys, mallin lukitus); tiimi jakaa yhden tilauksen → avainpoolit oikeudenmukaisesti jaetuilla kiintiöillä; kehotteet kulkevat jonkun muun pilvipalvelun kautta → ensisijaisesti paikallinen toteutus ja AES-256-GCM-salatut avaimet; kulutuksesta ei ole näkyvyyttä → reaaliaikainen analytiikka (käyttö, kiintiö, säästöt, p95-viive)."/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="Miksi 67router — lopeta 10 hallintapaneelin, toimimattomien API-avainten ja yllättävien laskujen kanssa tasapainoilu. Kymmenen päivittäistä ongelmaa ja niiden ratkaisut: käyttämätön kiintiö vanhenee → hyödynnä tilaukset mahdollisimman tehokkaasti; nopeusrajoitukset kesken ohjelmoinnin → 4-tasoinen automaattinen varareititys (tilaus → API → edullinen → ilmainen); työkalujen tulosteet kuluttavat tokeneita → RTK + Caveman-pakkaus (15–95 %); kalliit API:t → kustannusoptimoitu reititys; jokainen työkalu vaatii oman määrityksensä → yksi päätepiste, yksi hallintapaneeli; tekoäly on estetty → 3-tasoinen välityspalvelin + TLS-häivytys; toimimattomat avaimet → 3-kerroksinen vikasietoisuus (katkaisijat, avainten jäähdytys, mallin lukitus); tiimi jakaa yhden tilauksen → avainpoolit oikeudenmukaisesti jaetuilla kiintiöillä; kehotteet kulkevat jonkun muun pilvipalvelun kautta → ensisijaisesti paikallinen toteutus ja AES-256-GCM-salatut avaimet; kulutuksesta ei ole näkyvyyttä → reaaliaikainen analytiikka (käyttö, kiintiö, säästöt, p95-viive)."/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute-pyyntövirta: IDE:si tai CLI:si (Claude Code, Cursor, Cline…) kutsuu yhtä paikallista päätepistettä (http://localhost:20128/v1); OmniRoute Smart Router (RTK + Caveman-pakkaus, 20 reititysstrategiaa, katkaisijat, TLS-häivytys, MCP, A2A, suojaukset) voi käyttää varareititystä neljän palveluntarjoajatason välillä niin kauan kuin kelvollinen ja toimintakuntoinen kohde on käytettävissä — taso 1: tilaus, taso 2: API-avain, taso 3: edullinen ja taso 4: ilmainen."/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router-pyyntövirta: IDE:si tai CLI:si (Claude Code, Cursor, Cline…) kutsuu yhtä paikallista päätepistettä (http://localhost:20128/v1); 67router Smart Router (RTK + Caveman-pakkaus, 20 reititysstrategiaa, katkaisijat, TLS-häivytys, MCP, A2A, suojaukset) voi käyttää varareititystä neljän palveluntarjoajatason välillä niin kauan kuin kelvollinen ja toimintakuntoinen kohde on käytettävissä — taso 1: tilaus, taso 2: API-avain, taso 3: edullinen ja taso 4: ilmainen."/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Haluatko liittyä avoimen lähdekoodin ystäväksi?** Nämä ovat yrityksiä, jotka tukevat avointa lähdekoodia ja auttavat pitämään OmniRouten toiminnassa – ja me kerromme julkisesti, mihin jokainen heidän meille antamansa token menee. Ota yhteyttä: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Haluatko liittyä avoimen lähdekoodin ystäväksi?** Nämä ovat yrityksiä, jotka tukevat avointa lähdekoodia ja auttavat pitämään 67routerin toiminnassa – ja me kerromme julkisesti, mihin jokainen heidän meille antamansa token menee. Ota yhteyttä: [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Perustajajäsen avoimen lähdekoodin ystävä"/>
     </td>
     <td>
-      Kiitos <b>Kimille (Moonshot AI)</b>, perustajajäsenellemme avoimen lähdekoodin ystävälle, tämän projektin tukemisesta! Kimi on tekoälylaboratorio avoimen painon K2- ja K3-malliperheiden takana – <b>Kimi K3</b> tarjoaa 1M-tokenin konteksti-ikkunan, natiivin näön ja huipputason koodauksen murto-osalla suljettujen mallien hinnoista, ja toimii suoraan Claude Coden, Codexistin ja kaikkien OmniRouten tukemien koodaustyökalujen kanssa.
+      Kiitos <b>Kimille (Moonshot AI)</b>, perustajajäsenellemme avoimen lähdekoodin ystävälle, tämän projektin tukemisesta! Kimi on tekoälylaboratorio avoimen painon K2- ja K3-malliperheiden takana – <b>Kimi K3</b> tarjoaa 1M-tokenin konteksti-ikkunan, natiivin näön ja huipputason koodauksen murto-osalla suljettujen mallien hinnoista, ja toimii suoraan Claude Coden, Codexistin ja kaikkien 67routerin tukemien koodaustyökalujen kanssa.
       <br/><br/>
-      <b>Mitä Kimin tuki mahdollistaa:</b> Kimin API-krediitit mahdollistavat OmniRouten tekoälyllä validoidun julkaisuputken – *Kimi K3:n tehostaman yhdistämisvalidoinnin* vaiheen, joka tarkistaa jokaisen pull-pyynnön ennen sen julkaisua – sekä päivittäisen ominaisuuskehityksen. Ensiluokkainen Kimi-tuki toimitetaan molemmilla tavoilla: suora [Kimi API](https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute) (<code>kimi-k3</code>) ja [Kimi Code -koodaussuunnitelma](https://www.kimi.ai/code?aff=omniroute) (OAuth ja API-avain). OmniRoute on myös ensimmäinen brasilialainen avoimen lähdekoodin projekti Kimin tukiohjelmassa. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Hanki Kimi API-avain 15 % lisäkrediiteillä →</b></a>
+      <b>Mitä Kimin tuki mahdollistaa:</b> Kimin API-krediitit mahdollistavat 67routerin tekoälyllä validoidun julkaisuputken – *Kimi K3:n tehostaman yhdistämisvalidoinnin* vaiheen, joka tarkistaa jokaisen pull-pyynnön ennen sen julkaisua – sekä päivittäisen ominaisuuskehityksen. Ensiluokkainen Kimi-tuki toimitetaan molemmilla tavoilla: suora [Kimi API](https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute) (<code>kimi-k3</code>) ja [Kimi Code -koodaussuunnitelma](https://www.kimi.ai/code?aff=omniroute) (OAuth ja API-avain). 67router on myös ensimmäinen brasilialainen avoimen lähdekoodin projekti Kimin tukiohjelmassa. <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>Hanki Kimi API-avain 15 % lisäkrediiteillä →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Avoimen lähdekoodin ystävä"/>
     </td>
     <td>
-      Kiitos <b>Cheaper Inferencelle</b>, OmniRouten avoimen lähdekoodin ystävälle, tämän projektin tukemisesta! Cheaper Inference on kustannusten mukaan järjestetty yhdyskäytävä, joka jälleenmyy 42 huippumallia – Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok ja MiniMax – yhden OpenAI-yhteensopivan päätepisteen takana, reitittäen jokaisen pyynnön edullisimmalle kelvolliselle palveluntarjoajalle veloittamatta koskaan yli mallinvalmistajan listahinnan.
+      Kiitos <b>Cheaper Inferencelle</b>, 67routerin avoimen lähdekoodin ystävälle, tämän projektin tukemisesta! Cheaper Inference on kustannusten mukaan järjestetty yhdyskäytävä, joka jälleenmyy 42 huippumallia – Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok ja MiniMax – yhden OpenAI-yhteensopivan päätepisteen takana, reitittäen jokaisen pyynnön edullisimmalle kelvolliselle palveluntarjoajalle veloittamatta koskaan yli mallinvalmistajan listahinnan.
       <br/><br/>
-      <b>Ensiluokkainen tuki OmniRoutessa:</b> Chat Completions, natiivi <code>/v1/responses</code>-päätepiste, näkö, työkalukutsut ja 3 kuvamallia (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, saatavilla nimellä <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Hanki API-avain →</b></a>
+      <b>Ensiluokkainen tuki 67routerissa:</b> Chat Completions, natiivi <code>/v1/responses</code>-päätepiste, näkö, työkalukutsut ja 3 kuvamallia (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, saatavilla nimellä <code>cheaperinference/&lt;model&gt;</code>). <a href="https://cheaperinference.com/?utm_source=omniroute"><b>Hanki API-avain →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Kumppanitarjoukset</b> — ilmaisia rekisteröitymiskuponkeja palveluntarjoajilta, joita emme sponsoroi (napsauta laajentaaksesi)</sub></summary>
 
-<sub><i>Tämä osio on tarkoitettu vain viittaus-/kuponkikoodeille. Sponsoroidut kumppanuudet löytyvät yllä olevasta osiosta **🤝 Avointen lähdekoodin ystäviemme tukema**. OmniRoutella ei ole sponsorointia tai kumppanuutta tässä lueteltujen palveluntarjoajien kanssa – nämä ovat julkisia kuponkeja, joita kuka tahansa voi käyttää.</i></sub>
+<sub><i>Tämä osio on tarkoitettu vain viittaus-/kuponkikoodeille. Sponsoroidut kumppanuudet löytyvät yllä olevasta osiosta **🤝 Avointen lähdekoodin ystäviemme tukema**. 67routerilla ei ole sponsorointia tai kumppanuutta tässä lueteltujen palveluntarjoajien kanssa – nämä ovat julkisia kuponkeja, joita kuka tahansa voi käyttää.</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — kumppanirekisteröityminen · <b>$100 ilmaista krediittiä</b> rekisteröitymisen yhteydessä (ilmainen palvelin, odotettavissa korkeampi viive – paras testaukseen, ei tuotantoon). Ensiluokkainen tuki OmniRoutessa versiosta <b>v3.8.50</b> alkaen: Chat Completions, Anthropic-yhteensopiva tiedostomuoto ja OpenAI-yhteensopiva polku. Saatavilla olevia malleja ovat muun muassa <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code>. <b><a href="https://agentrouter.org/register?aff=70LM">Hanki 100 $ →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — kumppanirekisteröityminen · <b>$100 ilmaista krediittiä</b> rekisteröitymisen yhteydessä (ilmainen palvelin, odotettavissa korkeampi viive – paras testaukseen, ei tuotantoon). Ensiluokkainen tuki 67routerissa versiosta <b>v3.8.50</b> alkaen: Chat Completions, Anthropic-yhteensopiva tiedostomuoto ja OpenAI-yhteensopiva polku. Saatavilla olevia malleja ovat muun muassa <code>claude-opus-4-8</code>, <code>claude-opus-5</code>, <code>gpt-5.6-sol</code>. <b><a href="https://agentrouter.org/register?aff=70LM">Hanki 100 $ →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Kumppanilinkki – OmniRoutella ei ole sponsorointia tai kumppanuutta tämän palveluntarjoajan kanssa.</i></sub>
+      <sub>⚠️ <i>Kumppanilinkki – 67routerilla ei ole sponsorointia tai kumppanuutta tämän palveluntarjoajan kanssa.</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>Tiedätkö toisen palveluntarjoajan, jolla on antelias ilmainen rekisteröitymiskuponki, joka hyödyttää OmniRouten käyttäjiä? Avaa ongelma, niin lisäämme sen tänne.</sub>
+<sub>Tiedätkö toisen palveluntarjoajan, jolla on antelias ilmainen rekisteröitymiskuponki, joka hyödyttää 67routerin käyttäjiä? Avaa ongelma, niin lisäämme sen tänne.</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="Animoidut esimerkit 18:sta kaikkiaan 20 yhdistelmän reititysstrategiasta — yksi ruutu strategiaa kohden: priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline. Strategioita cache-optimized ja quota-weighted ei ole animoitu; alla oleva taulukko kuvaa kaikki 20."/>
 
-> **Yhdistelmä** on malliketju, jonka kautta OmniRoute reitittää **automaattisesti**. Jos kiintiö loppuu, palveluntarjoaja vikaantuu tai kustannukset nousevat äkillisesti, yhdistelmä voi siirtyä seuraavaan soveltuvaan ja toimintakuntoiseen malliin. 🛡️
+> **Yhdistelmä** on malliketju, jonka kautta 67router reitittää **automaattisesti**. Jos kiintiö loppuu, palveluntarjoaja vikaantuu tai kustannukset nousevat äkillisesti, yhdistelmä voi siirtyä seuraavaan soveltuvaan ja toimintakuntoiseen malliin. 🛡️
 
 ### ⚡ Ei määrityksiä — käytä vain mallia `auto`
 
-Yhdistelmää ei tarvitse luoda. Aseta malliksi `auto` (tai jokin sen muunnelma), niin OmniRoute rakentaa yhdistetyistä palveluntarjoajistasi virtuaalisen yhdistelmän, joka pisteytetään reaaliaikaisesti:
+Yhdistelmää ei tarvitse luoda. Aseta malliksi `auto` (tai jokin sen muunnelma), niin 67router rakentaa yhdistetyistä palveluntarjoajistasi virtuaalisen yhdistelmän, joka pisteytetään reaaliaikaisesti:
 
 <table>
   <tr><th align="left">Mallitunnus</th><th align="left">Mitä se optimoi</th></tr>
@@ -496,7 +498,7 @@ Kaikki **20** strategiaa — yhdistele vapaasti yhdistelmän jokaisessa vaiheess
 
 ### 🧱 Vikasietoisuus on sisäänrakennettu (3 itsenäistä kerrosta)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="OmniRouten vikasietoisuus — 3 itsenäistä, itsekorjautuvaa kerrosta, oikea kerros oikealle vialle. Kerros 1: palveluntarjoajan katkaisija (koko palveluntarjoaja): laukeaa vain 408/5xx-virheistä, raja-arvot OAuth 8× / API-avain 12× / paikallinen 2×, palautuu 60s/30s/15s kuluttua HALF-OPEN-koetilaan, laiska palautuminen; OPEN-tilassa yhdistelmä reitittää liikenteen seuraavalle palveluntarjoajalle. Kerros 2: yhteyden jäähdytys (yksi avain/tili): perusaika 5s OAuth / 3s API-avain, eksponentiaalinen ×2-viive ukkoslaumalta suojaavalla mekanismilla, 429 noudattaa Retry-After-arvoa, onnistuminen tyhjentää koko virhetilan; yksi jäähdytettävä avain ohitetaan muiden avainten jatkaessa palvelua. Kerros 3: mallin lukitus (yksi malli): mallikohtainen 429, paikallinen 404 tai tilan estot lukitsevat vain kyseisen mallin — eivät koskaan koko yhteyttä. Lopulliset tilat (estetty, vanhentunut, krediitit loppuneet) vaativat ylläpitäjän toimia, eivät jäähdytystä."/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="67routerin vikasietoisuus — 3 itsenäistä, itsekorjautuvaa kerrosta, oikea kerros oikealle vialle. Kerros 1: palveluntarjoajan katkaisija (koko palveluntarjoaja): laukeaa vain 408/5xx-virheistä, raja-arvot OAuth 8× / API-avain 12× / paikallinen 2×, palautuu 60s/30s/15s kuluttua HALF-OPEN-koetilaan, laiska palautuminen; OPEN-tilassa yhdistelmä reitittää liikenteen seuraavalle palveluntarjoajalle. Kerros 2: yhteyden jäähdytys (yksi avain/tili): perusaika 5s OAuth / 3s API-avain, eksponentiaalinen ×2-viive ukkoslaumalta suojaavalla mekanismilla, 429 noudattaa Retry-After-arvoa, onnistuminen tyhjentää koko virhetilan; yksi jäähdytettävä avain ohitetaan muiden avainten jatkaessa palvelua. Kerros 3: mallin lukitus (yksi malli): mallikohtainen 429, paikallinen 404 tai tilan estot lukitsevat vain kyseisen mallin — eivät koskaan koko yhteyttä. Lopulliset tilat (estetty, vanhentunut, krediitit loppuneet) vaativat ylläpitäjän toimia, eivät jäähdytystä."/>
 
 <sub>📖 [Auto-Combo-moottori](docs/routing/AUTO-COMBO.md) · [Vikasietoisuusopas](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ Kaikki **20** strategiaa — yhdistele vapaasti yhdistelmän jokaisessa vaiheess
 
 <div align="center">
 
-## 🏆 Mikä erottaa OmniRouten muista
+## 🏆 Mikä erottaa 67routerin muista
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Mikä erottaa OmniRouten muista — ajankohtaan sidottu ominaisuusvertailu 9routeriin, OpenRouteriin, CLIProxyAPI:in ja LiteLLM:ään 13 ominaisuuden osalta. OmniRoute: 375 palveluntarjoajaa, yli 150 sisäänrakennettua ilmaistasoa, 20 reititysstrategiaa, 12 moottorin token-pakkaus, sisäänrakennettu MCP-palvelin 110 työkalulla, A2A-agenttiprotokolla, pysyvä muisti, suojakaiteet, pilviagentit, TLS-sormenjälkien häivytys, Desktop/Termux/PWA sekä 67 kansainvälistettyä käyttöliittymän kielialuetta. OmniRoute on MIT-lisensoitu ja itse ylläpidettävissä. Kilpailijoiden ominaisuudet ja lukumäärät voivat muuttua; katso linkitetty menetelmäkuvaus."/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="Mikä erottaa 67routerin muista — ajankohtaan sidottu ominaisuusvertailu 9routeriin, OpenRouteriin, CLIProxyAPI:in ja LiteLLM:ään 13 ominaisuuden osalta. 67router: 375 palveluntarjoajaa, yli 150 sisäänrakennettua ilmaistasoa, 20 reititysstrategiaa, 12 moottorin token-pakkaus, sisäänrakennettu MCP-palvelin 110 työkalulla, A2A-agenttiprotokolla, pysyvä muisti, suojakaiteet, pilviagentit, TLS-sormenjälkien häivytys, Desktop/Termux/PWA sekä 67 kansainvälistettyä käyttöliittymän kielialuetta. 67router on MIT-lisensoitu ja itse ylläpidettävissä. Kilpailijoiden ominaisuudet ja lukumäärät voivat muuttua; katso linkitetty menetelmäkuvaus."/>
 
 <sub>📊 Täydellinen menetelmäkuvaus &amp; ominaisuuskohtaiset tiedot verrattuna 9routeriin, OpenRouteriin, CLIProxyAPI:in &amp; LiteLLM:ään → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 Tue OmniRoutea
+## 💚 Tue 67routeria
 
-OmniRoute on MIT-lisensoitu, ja sitä ylläpidetään avoimesti. Jos se säästää aikaasi tai rahaasi, voit auttaa pitämään sen riippumattomana valitsemalla sinulle sopivan tavan. Sponsorointi ei koskaan vaikuta reitityksen prioriteettiin; sillä saa näkyvyyttä, ei parempaa sijoitusta.
+67router on MIT-lisensoitu, ja sitä ylläpidetään avoimesti. Jos se säästää aikaasi tai rahaasi, voit auttaa pitämään sen riippumattomana valitsemalla sinulle sopivan tavan. Sponsorointi ei koskaan vaikuta reitityksen prioriteettiin; sillä saa näkyvyyttä, ei parempaa sijoitusta.
 
 <table>
-  <tr><td nowrap>⭐ <b>Anna repositoriolle tähti</b></td><td>Ilmaista — auttaa aidosti näkyvyydessä</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Anna OmniRoutelle tähti</a></td></tr>
+  <tr><td nowrap>⭐ <b>Anna repositoriolle tähti</b></td><td>Ilmaista — auttaa aidosti näkyvyydessä</td><td><a href="https://github.com/diegosouzapw/OmniRoute">Anna 67routerille tähti</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>Kertaluonteinen tai kuukausittainen · ei alustamaksua</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>Nopea kertalahjoitus, lahjoittajan ei tarvitse rekisteröityä</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>Pieni, epämuodollinen ele</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute on MIT-lisensoitu, ja sitä ylläpidetään avoimesti. Jos se sääst�
 
 **🇧🇷 PIX** — välitön, ei maksuja (Brasilia)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="OmniRouten PIX-QR-koodi"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="67routerin PIX-QR-koodi"/>
 
 Avain (satunnainen): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,12 +564,12 @@ Pix copia-e-cola:
 
 <p><strong>Kehittäjän huomautukset:</strong> Projekti saattaa kehittäjien käytännön työn helpottamiseksi luoda paikallisen <code>.env</code>-tiedoston npm install/postinstall -vaiheessa. Tämä tiedosto ohitetaan tarkoituksella <code>.gitignore</code>-tiedoston avulla (katso <code>.gitignore</code>), eikä sitä saa koskaan commitoida — jos se commitoidaan vahingossa, vaihda kaikki paljastuneet salaisuudet ja poista tiedosto historiasta. Ohjeita paikallisten ympäristötiedostojen ja salaisuuksien hallintaan on tiedostossa <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a>.</p>
 
-## 📡 OmniRoute Radar
+## 📡 67router Radar
 
 Ilmaistason tärkein luku on edelleen **~1,62 mrd. tokenia/kuukausi** yllä kuvatusta
 resurssivarantojen päällekkäisyydet poistavasta luettelosta. Palveluntarjoajien tilapäiset rekisteröitymishyvitykset voivat erikseen nostaa ensimmäisen
 kuukauden määrän **~2,22 miljardiin**. Radar on valinnainen, allekirjoitettu luetteloa täydentävä taso käyttäjille, jotka haluavat ajantasaisempaa
-tietoa ilmaismallien saatavuudesta OmniRoute-julkaisujen välillä; yhteisöluettelo ja kaikki nykyiset ilmaiset
+tietoa ilmaismallien saatavuudesta 67router-julkaisujen välillä; yhteisöluettelo ja kaikki nykyiset ilmaiset
 ominaisuudet säilyvät maksuttomina.
 
 Tukijat voivat saada reaaliaikaisen luettelon ja tietoa palveluntarjoajien lisämahdollisuuksista. Sen erillinen,
@@ -575,7 +577,7 @@ muuttuva enimmäismäärä on **enintään noin 3 mrd. tokenia/kuukausi** palvel
 Tämä enimmäismäärä ei ole tae: palveluntarjoajat voivat muuttaa kiintiöitä, kelpoisuusehtoja, malleja tai alueita
 milloin tahansa.
 
-Radar on valinnainen ja käyttää vain GET-pyyntöjä. OmniRoute-asiakasohjelma ei lähetä kehotteita, liikennetietoja, palveluntarjoajien
+Radar on valinnainen ja käyttää vain GET-pyyntöjä. 67router-asiakasohjelma ei lähetä kehotteita, liikennetietoja, palveluntarjoajien
 määrityksiä, käyttötelemetriaa tai ilmoitusten ohittamista koskevaa paikallista tilaa. Lisätietoja kelpoisuudesta ja
 nykyisestä luettelosta on osoitteessa **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)**.
 
@@ -595,14 +597,13 @@ nykyisestä luettelosta on osoitteessa **[radar.omniroute.online/planos](https:/
 - **🔑 Avainkohtainen reitityksen hallinta** — kiinnitä API-avain yhteen malliin tai yhdistelmään asetuksella `forcedModel` ja lisää tai poista avaimen malleja ja yhdistelmiä atomisesti (`/api/keys/{id}/access`). → [API-viite](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ Tarkemmat henkilötietojen hallintatoiminnot** — tyyppikohtainen valinta, jopa 20 validoitua mukautettua peittokuviota ja tyyppikohtaiset tunnistuslaskurit; itse peittäminen on edelleen erikseen käyttöönotettava ominaisuus. → [Suojaukset](docs/security/GUARDRAILS.md)
 - **🌍 67 kieltä** — hallintapaneeli, dokumentaation peilisivustot ja CLI; `npm run i18n:add-locale` lisää kielen kaikkialle yhdellä komennolla. → [i18n-opas](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — saapuvan A2A-liikenteen delegointi agenttijoukollesi, Conductor-taidot Agent Cardissa sekä hallintapaneeli Faro-pikapuheäänikeskustelulla. → [A2A-palvelin](docs/frameworks/A2A-SERVER.md)
 - **🛂 Mukautuva hyväksyntä ja ylikuormitussuojaus** — raskaat keskustelupyynnöt asetetaan jonoon 503-virheen palauttamisen sijaan, ja käytössä ovat yhteyskohtaiset atomiset RPM-liukuvat vuokraukset. → [Vikasietoisuusopas](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Kanoninen `/v1/models`-järjestys** — yksi yhtenäinen palveluntarjoajan mukaan ryhmitelty lohko kutakin palveluntarjoajaa kohden (yhdistelmät kiinnitettyinä ensin), yhdenmukaisena kaikissa luettelolähteissä. → [API-viite](docs/reference/API_REFERENCE.md)
 - **🗜️ Pakkauksen vahvistaminen** — oletusarvoisesti käytössä oleva purkamissuojus, Caveman-paketit kielille DE / FR / JA + kiina (wényán) sekä RTK-suodattimet Gradlelle ja .NETille. → [Pakkaus](docs/compression/COMPRESSION_ENGINES.md)
 - **💸 Rehelliset kiinteähintaiset kustannukset** — tilaus- ja ohjelmointipakettien palveluntarjoajien kustannusanalytiikka näyttää **$0**; budjetin, kiintiön ja reitityksen arviointi jatkuu. → [API-viite](docs/reference/API_REFERENCE.md)
 - **⚖️ Quota-Share-reititys** — jaa yhteisen tilin kiintiö oikeudenmukaisesti yhdistettyjen avainten kesken ja lainaa käyttämättömät osuudet muille työn säilyttämiseksi. → [Vikasietoisuusopas](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 CLI:n/agentin määritys yhdellä komennolla** — 15 rekisteröityä `setup-*`-komentoa; `omniroute run` käynnistää 7 CLI:tä (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` tukee 11 kohdetta sekä interaktiivista palveluntarjoajan ja mallin valitsinta ja kontekstikohtaisia suosikkeja. → [CLI-integraatiot](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Etätila** — ohjaa OmniRoute-etäinstanssia rajatuilla tunnisteilla (`connect` / `contexts` / `tokens`) sekä VPS-asennuksiin tarkoitetulla `antigravity`-OAuth-apuohjelmalla. → [Etätila](docs/guides/REMOTE-MODE.md)
+- **🛰️ Etätila** — ohjaa 67router-etäinstanssia rajatuilla tunnisteilla (`connect` / `contexts` / `tokens`) sekä VPS-asennuksiin tarkoitetulla `antigravity`-OAuth-apuohjelmalla. → [Etätila](docs/guides/REMOTE-MODE.md)
 - **🧭 Älykkäämpi automaattinen reititys** — `auto/<category>:<tier>`-yhdistelmät, **Fusion** (mallipaneeli + arvioija), tehtävät huomioiva reititys sekä pyyntökohtaiset mallin, tilan ja USD-budjetin ohitukset. → [Automaattinen yhdistelmä](docs/routing/AUTO-COMBO.md)
 - **🗜️ Laajennettava pakkaus** — 12 yhdisteltävää moottoria + Compression Studios: LLMLingua-2, kaksitasoinen Ultra, omniglyph, vaihekohtainen uskollisuusportti, GCF v3.2 ja vetämällä järjesteltävä editori. → [Pakkaus](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Läpinäkyvä MITM-salauksen purku (TPROXY)** — sieppaa välityspalvelimen ympäristömuuttujat ohittavat CLI:t SNI-kohtaisen CA:n ja luottamussäilön asennusohjelman avulla. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -672,7 +673,7 @@ nykyisestä luettelosta on osoitteessa **[radar.omniroute.online/planos](https:/
 
 <br/>
 
-**Käynnistä mikä tahansa tuettu CLI OmniRouten kautta yhdellä komennolla** — määritystiedostoja ei kirjoiteta,
+**Käynnistä mikä tahansa tuettu CLI 67routerin kautta yhdellä komennolla** — määritystiedostoja ei kirjoiteta,
 tunnistetiedot lisätään prosessikohtaisesti, ja Qwen/Gemini saavat väliaikaisen eristetyn kotihakemiston:
 
 ```bash
@@ -765,7 +766,7 @@ komentotulkkisi historiasta. → [CLI-integraatiot](docs/guides/CLI-INTEGRATIONS
 
 <div align="center">
 
-## 🖥️ Missä OmniRoute toimii — kaikkialla
+## 🖥️ Missä 67router toimii — kaikkialla
 
 </div>
 
@@ -781,7 +782,7 @@ komentotulkkisi historiasta. → [CLI-integraatiot](docs/guides/CLI-INTEGRATIONS
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left">Toimii <b>puhelimessasi</b> ympäri vuorokauden ilman root-oikeuksia</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"Lisää aloitusnäyttöön"</td><td align="left">Koko näytön tila, offline-käyttö, asennettavissa selaimesta</td></tr>
   <tr><td align="left" nowrap>🧩 <b>OpenCode-lisäosa</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">Natiivi OpenCode-integraatio</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>asenna <b>OmniCopilot</b>-laajennus</td><td align="left">Kaikki OmniRoute-mallit natiivissa Copilot Chatin mallivalitsimessa — vakaa versio ja Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap>asenna <b>OmniCopilot</b>-laajennus</td><td align="left">Kaikki 67router-mallit natiivissa Copilot Chatin mallivalitsimessa — vakaa versio ja Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>Lähdekoodista</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">Muokkaa ja osallistu kehitykseen</td></tr>
 </table>
 
@@ -791,18 +792,18 @@ komentotulkkisi historiasta. → [CLI-integraatiot](docs/guides/CLI-INTEGRATIONS
 
 <div align="center">
 
-### 🧩 Uutta: OmniRoute VS Coden natiivissa Copilot Chatissa
+### 🧩 Uutta: 67router VS Coden natiivissa Copilot Chatissa
 
 </div>
 
-> Ei uutta sivupalkkia eikä uutta keskustelukäyttöliittymää — kaikki OmniRouten tarjoamat mallit näkyvät suoraan
+> Ei uutta sivupalkkia eikä uutta keskustelukäyttöliittymää — kaikki 67routerin tarjoamat mallit näkyvät suoraan
 > **jo käyttämässäsi Copilot Chatin mallivalitsimessa**. VS Code 1.122:sta alkaen palveluntarjoajien mallit toimivat
 > ilman GitHub-kirjautumista tai Copilot-tilausta — agenttitila, työkalukutsut ja konenäkö
 > ilmaiseksi.
 
 Asenna **[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)**-laajennus, määritä se käyttämään
-OmniRoute-palvelintasi (oletuksena `localhost:20128`) ja avaa sitten Copilot Chat → mallivalitsin
-→ **Hallitse malleja…** → **OmniRoute**.
+67router-palvelintasi (oletuksena `localhost:20128`) ja avaa sitten Copilot Chat → mallivalitsin
+→ **Hallitse malleja…** → **67router**.
 
 <table>
   <tr><th align="left">Kauppa</th><th align="left">Linkki</th><th align="left">Yhteensopivuus</th></tr>
@@ -810,7 +811,7 @@ OmniRoute-palvelintasi (oletuksena `localhost:20128`) ja avaa sitten Copilot Cha
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">Asenna →</a></td><td align="left">Cursor, Windsurf, VSCodium, Theia, code-server, Gitpod, Antigravity, Kiro…</td></tr>
 </table>
 
-Editorissa: avaa **Laajennukset**-näkymä, etsi **"OmniRoute"** ja napsauta **Asenna**
+Editorissa: avaa **Laajennukset**-näkymä, etsi **"67router"** ja napsauta **Asenna**
 — toimii samalla tavalla kummassakin kaupassa. Lähdekoodi, ongelmat ja julkaisuohjeet löytyvät osoitteesta
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot).
 
@@ -830,9 +831,9 @@ Editorissa: avaa **Laajennukset**-näkymä, etsi **"OmniRoute"** ja napsauta **A
 > avoimeksi jätettävää pääteikkunaa tai jatkuvasti huollettavaa `npm install -g omniroute` -asennusta.**
 
 Se on rakennettu [Tauri v2:lla](https://v2.tauri.app/) (Rust-ydin on pyöristysvirheen kokoinen), ja se sisältää
-oman allekirjoitetun Node 24 -suoritusympäristönsä sekä hallinnoi sovelluksen omistamaa OmniRoute-asennusta, joten se ei koskaan kilpaile
+oman allekirjoitetun Node 24 -suoritusympäristönsä sekä hallinnoi sovelluksen omistamaa 67router-asennusta, joten se ei koskaan kilpaile
 globaalin `node`/`bun`-asennuksesi kanssa. Se **jakaa nykyiset `~/.omniroute/`-määrityksesi ja tietokantasi** — joten kyseessä on
-sama jo käyttämäsi OmniRoute, nyt vain hattu päässään. 🎩
+sama jo käyttämäsi 67router, nyt vain hattu päässään. 🎩
 
 <table>
   <tr><th align="left">Mitä se tekee</th><th align="left">Miten</th></tr>
@@ -850,7 +851,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>Lataatko mieluummin? Hae uusin <code>.dmg</code>
 <a href="https://github.com/zoispag/omniroute-tray/releases">julkaisuista</a>. Lähdekoodi, ongelmat ja koontiohjeet
 löytyvät osoitteesta <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a>.
-<br/>💛 Yhteisöprojekti, jonka tekijä on <a href="https://github.com/zoispag">@zoispag</a> — ei virallinen OmniRoute-julkaisu.</sub>
+<br/>💛 Yhteisöprojekti, jonka tekijä on <a href="https://github.com/zoispag">@zoispag</a> — ei virallinen 67router-julkaisu.</sub>
 
 <br/>
 
@@ -860,7 +861,7 @@ löytyvät osoitteesta <a href="https://github.com/zoispag/omniroute-tray">zoisp
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Yksityinen ja paikallisuus edellä — OmniRouten yhdyskäytävä ja hallintataso toimivat omalla koneellasi. Kehotteet lähetetään kullekin pyynnölle valitulle ulkoiselle palveluntarjoajalle; OmniRoute ei lisää väliin omaa isännöityä kehotteiden käsittelyvaihetta, ja telemetria on oletusarvoisesti poistettu käytöstä. Tunnistetiedot salataan levossa AES-256-GCM-salauksella; suojauskeinoihin kuuluvat API-avainten käyttöalueiden rajaus, IP-suodatus, nopeusrajoitukset, kehotesyötteiden manipuloinnin estot, ulkoisten palveluntarjoajien otsakkeiden puhdistus, valinnainen henkilötietojen peittäminen, puhdistetut virheilmoitukset ja paikallinen SQLite-tarkastusloki. OmniRoute käyttää MIT-lisenssiä, ja sitä voi ylläpitää itse."/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="Yksityinen ja paikallisuus edellä — 67routerin yhdyskäytävä ja hallintataso toimivat omalla koneellasi. Kehotteet lähetetään kullekin pyynnölle valitulle ulkoiselle palveluntarjoajalle; 67router ei lisää väliin omaa isännöityä kehotteiden käsittelyvaihetta, ja telemetria on oletusarvoisesti poistettu käytöstä. Tunnistetiedot salataan levossa AES-256-GCM-salauksella; suojauskeinoihin kuuluvat API-avainten käyttöalueiden rajaus, IP-suodatus, nopeusrajoitukset, kehotesyötteiden manipuloinnin estot, ulkoisten palveluntarjoajien otsakkeiden puhdistus, valinnainen henkilötietojen peittäminen, puhdistetut virheilmoitukset ja paikallinen SQLite-tarkastusloki. 67router käyttää MIT-lisenssiä, ja sitä voi ylläpitää itse."/>
 
 <sub>📖 [Valtuutus](docs/architecture/AUTHZ_GUIDE.md) · [Suojaukset](docs/security/GUARDRAILS.md) · [Vaatimustenmukaisuus](docs/security/COMPLIANCE.md)</sub>
 
@@ -872,7 +873,7 @@ löytyvät osoitteesta <a href="https://github.com/zoispag/omniroute-tray">zoisp
 
 </div>
 
-> Palvelimen lisäksi OmniRoute on **täydellinen komentoriviohjaamo**, jossa on **yli 80 komentoa** sekä avoimet agenttiprotokollat, joiden avulla tekoälyagentti voi hallita sitä **itsenäisesti**.
+> Palvelimen lisäksi 67router on **täydellinen komentoriviohjaamo**, jossa on **yli 80 komentoa** sekä avoimet agenttiprotokollat, joiden avulla tekoälyagentti voi hallita sitä **itsenäisesti**.
 
 ### ⌨️ Todellinen CLI (ei pelkkä `start`)
 
@@ -883,9 +884,9 @@ omniroute setup         # ohjattu ensikäynnistyksen määritys
 omniroute doctor        # diagnosoi palveluntarjoajat, portit ja natiiviriippuvuudet
 ```
 
-### 🛰️ Etätila — suorita CLI täällä ja OmniRoute VPS-palvelimella
+### 🛰️ Etätila — suorita CLI täällä ja 67router VPS-palvelimella
 
-Onko OmniRoute palvelimella? Hallitse sitä kannettavaltasi **samalla CLI:llä**. Kirjaudu kerran
+Onko 67router palvelimella? Hallitse sitä kannettavaltasi **samalla CLI:llä**. Kirjaudu kerran
 käyttöoikeuksiltaan rajatulla tunnuksella, minkä jälkeen jokainen komento kohdistuu etäpalvelimeen.
 
 ```bash
@@ -901,31 +902,28 @@ Tunnusten käyttöoikeustasot ovat `read` / `write` / `admin`; prosesseja käynn
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Animoitu pääte-esittely OmniRoute CLI:stä — omniroute providers list, omniroute combo list ja omniroute health — kiertäen ylimmän tason 89 komennon valikoimaa: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="Animoitu pääte-esittely 67router CLI:stä — omniroute providers list, omniroute combo list ja omniroute health — kiertäen ylimmän tason 89 komennon valikoimaa: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Yhdistä agentti — ja se hallitsee OmniRoutea itse
+### 🤝 Yhdistä agentti — ja se hallitsee 67routeria itse
 
-Aseta OmniRoute käytettäväksi **MCP:n**, **A2A:n**, **REST API:n**, **webhookien** tai **etä-CLI:n** kautta — mikä tahansa kykenevä agentti (tai oma koodisi) saa koko yhdyskäytävän hallintaansa: reitityksen, palveluntarjoajat, yhdistelmät, välimuistin, pakkauksen ja muistin — itsenäisesti. Alla olevat HTTP-päätepisteet ovat käytettävissä osoitteessa `http://localhost:20128`.
+Aseta 67router käytettäväksi **MCP:n**, **A2A:n**, **REST API:n**, **webhookien** tai **etä-CLI:n** kautta — mikä tahansa kykenevä agentti (tai oma koodisi) saa koko yhdyskäytävän hallintaansa: reitityksen, palveluntarjoajat, yhdistelmät, välimuistin, pakkauksen ja muistin — itsenäisesti. Alla olevat HTTP-päätepisteet ovat käytettävissä osoitteessa `http://localhost:20128`.
 
 <table>
   <tr><th align="left">Rajapinta</th><th align="left">Päätepiste / komento</th><th align="left">Käyttötarkoitus</th></tr>
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Liitä Claude Desktopiin, Cursoriin tai mihin tahansa MCP-asiakasohjelmaan</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">MCP-etäyhteys — <b>110 työkalua</b>, 33 käyttöoikeusaluetta (valinnainen valvonta), täydellinen kirjausketju</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Suoratoistava MCP-siirtotapa</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agenttien välinen viestintä, <b>JSON-RPC 2.0</b> + SSE, 6 taitoa</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI-yhteensopiva — keskustelut, upotukset, kuvat, ääni ja OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhookit</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Lähetä pyyntö- ja kiintiötapahtumat Slackiin, Discordiin, Telegramiin tai mihin tahansa URL-osoitteeseen</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Etä-CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Hallitse etäinstanssia käyttöoikeuksiltaan rajatuilla tunnuksilla</td></tr>
 </table>
 
 ```bash
-# Anna Claude Codelle kaikki OmniRoute-työkalut MCP:n kautta:
+# Anna Claude Codelle kaikki 67router-työkalut MCP:n kautta:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
-
-<sub>📖 [MCP-palvelin](docs/frameworks/MCP-SERVER.md) · [A2A-palvelin](docs/frameworks/A2A-SERVER.md) · [Agenttiprotokollat](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -937,7 +935,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 Miten se toimii — putki, arkkitehtuuri ja säästölaskenta
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute-pakkausputki: havainnollistava 10 000 tokenin asiakaspyyntö kulkee 12 yhdisteltävän moottorin läpi — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra ja OmniGlyph — ja voi saavuttaa tarjoajan noin 1 080 tokenilla dokumentoidussa pinotussa esimerkissä. Jäsennetty sisältö on suojattu säilytysvahdeilla ja vaihekohtaisilla uskollisuusporteilla; eksplisiittiset häviölliset tai kokeelliset tilat voivat muuntaa kelvollista sisältöä."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="67router-pakkausputki: havainnollistava 10 000 tokenin asiakaspyyntö kulkee 12 yhdisteltävän moottorin läpi — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra ja OmniGlyph — ja voi saavuttaa tarjoajan noin 1 080 tokenilla dokumentoidussa pinotussa esimerkissä. Jäsennetty sisältö on suojattu säilytysvahdeilla ja vaihekohtaisilla uskollisuusporteilla; eksplisiittiset häviölliset tai kokeelliset tilat voivat muuntaa kelvollista sisältöä."/>
 
 Oletusarvoinen pinottu yhdistelmä ajaa `RTK → Caveman`. Kun molemmat vaikuttavat samaan työkalu-/kontekstidataan, säästöt kertautuvat:
 
@@ -949,7 +947,7 @@ range    = 78.4 – 94.6%
 
 Koodilohkot, URL-osoitteet, JSON ja jäsennetty data ovat **aina suojattuja** säilytysmoottorin toimesta.
 
-> **Miksi käyttää monta tokenia, kun harva token riittää?** Jokainen pyyntö kulkee OmniRoute'n pakkausputken läpi **läpinäkyvästi** — ilman muutoksia asiakaspäässä. Se on nyt **12 yhdisteltävän moottorin pino**, jotka ajetaan järjestyksessä ja yhdistellään reititysyhdistelmäkohtaisesti — rakentuen ideoille [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) ja [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) pohjalta.
+> **Miksi käyttää monta tokenia, kun harva token riittää?** Jokainen pyyntö kulkee 67router'n pakkausputken läpi **läpinäkyvästi** — ilman muutoksia asiakaspäässä. Se on nyt **12 yhdisteltävän moottorin pino**, jotka ajetaan järjestyksessä ja yhdistellään reititysyhdistelmäkohtaisesti — rakentuen ideoille [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) ja [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) pohjalta.
 
 ### 🧱 12 moottorin pino
 
@@ -1034,7 +1032,7 @@ omniroute
 ```
 
 > 💡 Näetkö `npm warn ERESOLVE`- tai peer-dep-varoituksia? [Ne ovat vaarattomia](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Käytätkö npm 11:tä tai uudempaa?** npm voi estää paketin elinkaariskriptit, ellei niitä sallita. OmniRouten `postinstall` (`node scripts/build/postinstall.mjs`) tarvitaan valmistelemaan sen natiivit ajonaikaiset tiedostot. Salli npm:n varoituksessa nimetyt paketit asennettaessa globaalisti. OmniRouten 3.8.53 raportoimalle pakettijoukolle:
+> **Käytätkö npm 11:tä tai uudempaa?** npm voi estää paketin elinkaariskriptit, ellei niitä sallita. 67routerin `postinstall` (`node scripts/build/postinstall.mjs`) tarvitaan valmistelemaan sen natiivit ajonaikaiset tiedostot. Salli npm:n varoituksessa nimetyt paketit asennettaessa globaalisti. 67routerin 3.8.53 raportoimalle pakettijoukolle:
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1070,9 +1068,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Sinun pitäisi nähdä yhdistetyt mallisi listattuna. 🎉 Siinä kaikki — aloita koodaaminen, ja OmniRoute reitittää automaattisesti ja vaihtaa varamalliin puolestasi.
+Sinun pitäisi nähdä yhdistetyt mallisi listattuna. 🎉 Siinä kaikki — aloita koodaaminen, ja 67router reitittää automaattisesti ja vaihtaa varamalliin puolestasi.
 
-Jos asiakasohjelmasi ei voi lähettää mukautettuja otsakkeita, OmniRoute tarjoaa myös tokenisoidut yhteensopivuusalakset:
+Jos asiakasohjelmasi ei voi lähettää mukautettuja otsakkeita, 67router tarjoaa myös tokenisoidut yhteensopivuusalakset:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1122,7 +1120,7 @@ Koko taulukko: [Docker-opas — käytönaikainen RAM](docs/guides/DOCKER_GUIDE.m
 
 Tavallista `bun install` -asennusta ja yleistä asennusta (`bun install -g omniroute`) tuetaan Bun-ympäristön automaattisen tunnistuksen avulla:
 
-- **Sisäänrakennettu `bun:sqlite`**: OmniRoute käyttää Bunin sisäänrakennettua `bun:sqlite`-ajuria Bun-ympäristössä ja käyttää varajärjestelmänä `better-sqlite3`:a Node.js-ympäristössä tai `sql.js`:ää.
+- **Sisäänrakennettu `bun:sqlite`**: 67router käyttää Bunin sisäänrakennettua `bun:sqlite`-ajuria Bun-ympäristössä ja käyttää varajärjestelmänä `better-sqlite3`:a Node.js-ympäristössä tai `sql.js`:ää.
 - **Webpack-paketoijan automaattinen valinta kehityksessä**: Kehitysympäristö (`bun run dev`) tunnistaa Bunin automaattisesti ja poistaa Turbopackin käytöstä Webpackin hyväksi natiivien V8-sidosten yhteensopimattomuuksien estämiseksi. Tuotantokoontiversiot (`bun run build`) noudattavat muuttujaa `OMNIROUTE_USE_TURBOPACK` täsmälleen samoin kuin Nodessa: oletuksena käytetään Turbopackia ja arvolla `OMNIROUTE_USE_TURBOPACK=0` koonti tehdään Webpackilla (`Dockerfile.bun` tuo sen saataville `--build-arg`-argumenttina).
 - **Erillinen Bun-Dockerfile**: Monivaiheinen `Dockerfile.bun` natiiveihin Bun-tuotantokäyttöönottoihin (`docker build -f Dockerfile.bun -t omniroute:bun .`).
 
@@ -1206,7 +1204,7 @@ prosessin kautta yhdessä portissa, joten erillistä vain CLI:n sisältävää p
 
 <div align="center">
 
-# 🎬 OmniRoute toiminnassa
+# 🎬 67router toiminnassa
 
 </div>
 
@@ -1270,7 +1268,7 @@ prosessin kautta yhdessä portissa, joten erillistä vain CLI:n sisältävää p
 
 Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 tunnettua katselukertaa** (`v > 0`) · **1.210 kanavaa/profiilia verkostoittain**. Raakahallintapaneelissa on 1.976 riviä (YouTube 1.352 = 740 pitkää videota + 612 Shorts-videota · TikTok 334 · Instagram 290); kanonisen URL-osoitteen perusteella tehdyn normalisoinnin jälkeen yhtään kaksoiskappaletta ei jäänyt, ja kustakin videosta säilytetään suurin katselumäärä. YouTube-tietojen keruu on jäädytetty päivämäärään 2026-10-13 (API-kiintiö loppui ajanjaksolla 14.–18.10.) ja TikTok-/Instagram-tietojen keruu päivämäärään 2026-09-02 (keräyssaldoa ei ole); 76 videolta puuttuu edelleen katselumäärä.
 
-> 🎬 **Teitkö videon OmniRoutesta?** Avaa [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) tai [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) ja lisää siihen linkki — nostamme videon esiin täällä.
+> 🎬 **Teitkö videon 67routerista?** Avaa [issue](https://github.com/diegosouzapw/OmniRoute/issues/new) tai [discussion](https://github.com/diegosouzapw/OmniRoute/discussions) ja lisää siihen linkki — nostamme videon esiin täällä.
 
 <br/>
 
@@ -1289,7 +1287,7 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
 | 🟢 **WhatsApp — 🌍 Maailmanlaajuinen**        | [liity ryhmään](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                                |
 | 🟢 **WhatsApp — 🇧🇷 Brasilia**                 | [liity ryhmään](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                                |
 | 🌍 **Verkkosivusto**                          | [omniroute.online](https://omniroute.online)                                                                                    |
-| 🌍 **🌍StHub OmniRoute -yhteisö (maksuton)**  | [StHub-portaali](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                         |
+| 🌍 **🌍StHub 67router -yhteisö (maksuton)**   | [StHub-portaali](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                         |
 | 📦 **Lähdekoodi**                             | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                                  |
 | 🐛 **Ilmoita virheestä**                      | [avaa ongelmailmoitus](https://github.com/diegosouzapw/OmniRoute/issues) — liitä mukaan `npm run system-info` -komennon tuloste |
 | 🤝 **Osallistu kehitykseen**                  | [CONTRIBUTING.md](CONTRIBUTING.md) · [Haarautumis- ja julkaisumalli](docs/ops/BRANCHING_MODEL.md) · valitse `good first issue`  |
@@ -1342,8 +1340,8 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">Käyttöopas</a></b></td><td>Palveluntarjoajat, yhdistelmät, CLI-integraatio ja käyttöönotto</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">Asennusopas</a></b></td><td>Kaikki asennustavat, CLI-työkalujen määritykset, protokollien käyttöönotto ja aikakatkaisujen säätäminen</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">CLI-työkalujen opas</a></b></td><td>Työkalukohtaiset määritykset: Claude Code, Codex, Cursor, Cline, OpenClaw, Kilo ja Copilot</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Etätila</a></b></td><td>Ohjaa etäpalvelimella (VPS) toimivaa OmniRoutea kannettavan tietokoneesi CLI:stä rajatuilla käyttöoikeustunnuksilla</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code -määritys</a></b></td><td>Yhdistä Claude Code OmniRouteen (paikallinen/etäpalvelin) käyttämällä <code>launch</code>-toimintoa ja mallikohtaisia profiileja</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">Etätila</a></b></td><td>Ohjaa etäpalvelimella (VPS) toimivaa 67routeria kannettavan tietokoneesi CLI:stä rajatuilla käyttöoikeustunnuksilla</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code -määritys</a></b></td><td>Yhdistä Claude Code 67routeriin (paikallinen/etäpalvelin) käyttämällä <code>launch</code>-toimintoa ja mallikohtaisia profiileja</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">Pika-aloitus</a></b></td><td>Kolme vaihetta: asenna → yhdistä → määritä</td></tr>
 </table>
 
@@ -1355,7 +1353,7 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
   <tr><td nowrap><b><a href="contrib/podman/README.md">Podman-opas</a></b></td><td>Quadlet systemd -integraatio, podman-compose ja SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">Virtuaalikonekäyttöönotto</a></b></td><td>Kattava opas: virtuaalikoneen, nginxin ja Cloudflaren määritys</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Fly.io-käyttöönotto</a></b></td><td>Ota käyttöön Fly.io-palvelussa pysyvän tallennustilan kanssa</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux-opas</a></b></td><td>Suorita OmniRoute Androidissa Termuxin kautta</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux-opas</a></b></td><td>Suorita 67router Androidissa Termuxin kautta</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">PWA-opas</a></b></td><td>Progressiivisen verkkosovelluksen asennus, välimuisti ja arkkitehtuuri</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">Poisto-opas</a></b></td><td>Kaikkien asennustapojen siisti poistaminen</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Ympäristömääritykset</a></b></td><td>Kaikki <code>.env</code>-muuttujat ja viitteet</td></tr>
@@ -1388,7 +1386,6 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP-palvelin</a></b></td><td>110 MCP-työkalua, IDE-määritykset sekä Python-, TS- ja Go-asiakasohjelmat</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP-palvelinopas</a></b></td><td>MCP:n asennus, siirtotavat ja työkaluviite</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A-palvelin</a></b></td><td>JSON-RPC 2.0 -protokolla, taidot, suoratoisto ja tehtävien hallinta</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A-palvelinopas</a></b></td><td>A2A-agenttikortti, tehtävät, taidot ja suoratoisto</td></tr>
 </table>
 
 ### 📋 Projekti ja laatu
@@ -1410,7 +1407,7 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
 
 # ⭐ Parhaat osallistujat
 
-> Intohimoinen avoimen lähdekoodin yhteisö muovaa OmniRoutea. Nämä henkilöt ovat tehneet poikkeuksellisen merkittäviä panoksia, jotka vaikuttavat suoraan projektin laatuun, vakauteen ja tavoittavuuteen. **Kiitos.**
+> Intohimoinen avoimen lähdekoodin yhteisö muovaa 67routeria. Nämä henkilöt ovat tehneet poikkeuksellisen merkittäviä panoksia, jotka vaikuttavat suoraan projektin laatuun, vakauteen ja tavoittavuuteen. **Kiitos.**
 
 ### Ulkopuoliset osallistujat yhdistettyjen pull requestien määrän mukaan
 
@@ -1528,7 +1525,7 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
 
 <sub>Tarkistettu uudelleen 2026-10-18 14:44:45 UTC: repositorion Contributors API:n ilmoittamat GitHubiin liitetyt commitit oletushaaralle <code>release/v3.8.52</code>. API palautti 849 identiteettiä (429 käyttäjää, 2 bottia, 418 anonyymiä); tästä taulukosta on jätetty pois ylläpitäjä, botit ja anonyymit identiteetit, ja tasatilanteet on säilytetty. Se eroaa sekä yllä olevasta yhdistettyjen PR:ien sijoituksesta että alla olevasta Git-metatietojen kartoituksesta.</sub>
 
-> 🙏 Näiden osallistujien ominaisuudet, virheenkorjaukset ja infrastruktuuriparannukset ovat **keskeinen osa** sitä, mikä tekee OmniRoutesta luotettavan ja monipuolisen. Jokaisella pull requestilla, testitapauksella ja i18n-käännöstiedostolla on merkitystä. Avoimen lähdekoodin rakentavat heidän kaltaisensa ihmiset.
+> 🙏 Näiden osallistujien ominaisuudet, virheenkorjaukset ja infrastruktuuriparannukset ovat **keskeinen osa** sitä, mikä tekee 67routerista luotettavan ja monipuolisen. Jokaisella pull requestilla, testitapauksella ja i18n-käännöstiedostolla on merkitystä. Avoimen lähdekoodin rakentavat heidän kaltaisensa ihmiset.
 
 </div>
 
@@ -1540,7 +1537,7 @@ Kanoniset mittarit 2026-10-18: **1.976 yksilöllistä videota** · **20.220.289 
 
 <div align="center">
 
-Sydämellinen kiitos kaikille, jotka rahoittavat OmniRoutea omasta pussistaan — jokainen lahjoitus auttaa pitämään projektin ilmaisena, riippumattomana ja kehityksessä.
+Sydämellinen kiitos kaikille, jotka rahoittavat 67routeria omasta pussistaan — jokainen lahjoitus auttaa pitämään projektin ilmaisena, riippumattomana ja kehityksessä.
 
 <table>
   <tr>
@@ -1630,7 +1627,7 @@ Sydämellinen kiitos kaikille, jotka rahoittavat OmniRoutea omasta pussistaan �
 
 <sub>Julkiset GitHub Sponsors -sponsoroinnit tarkistettiin uudelleen 2026-10-18 GitHub Sponsors GraphQL API:n kautta: yhteensä 14 sponsoroinnista 11 on julkisia (6 aktiivista ja 5 aiempaa). GitHubin <code>isActive</code>-tila määrittää yllä olevat aktiivisuusmerkinnät; aiempia julkisia kertaluonteisia tukijoita kiitetään edelleen, ja yksityiset sponsorit pysyvät nimettöminä. Ko-fi-, Buy Me a Coffee-, Liberapay-, PIX- ja kryptolahjoituksia ei ole lueteltu, koska niistä ei ole julkista sponsoritietuetta.</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 Ryhdy sponsoriksi →</a></b> — jokainen dollari auttaa pitämään OmniRouten ilmaisena ja riippumattomana.
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 Ryhdy sponsoriksi →</a></b> — jokainen dollari auttaa pitämään 67routerin ilmaisena ja riippumattomana.
 
 </div>
 
@@ -1702,14 +1699,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://github.com/decolua/9router)**-projektin haarana ja Go-projektin **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** TypeScript-porttauksena — ja siitä eteenpäin jokainen alla mainittu alijärjestelmä on saanut inspiraationsa avoimen lähdekoodin projektista, joka toteutti sen ensin. Jokainen niistä muovasi jotakin konkreettista OmniRouten osaa. Tämä on kiitoksemme niille kaikille. 🙏
+67router seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://github.com/decolua/9router)**-projektin haarana ja Go-projektin **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** TypeScript-porttauksena — ja siitä eteenpäin jokainen alla mainittu alijärjestelmä on saanut inspiraationsa avoimen lähdekoodin projektista, joka toteutti sen ensin. Jokainen niistä muovasi jotakin konkreettista 67routerin osaa. Tämä on kiitoksemme niille kaikille. 🙏
 
 > ⭐ tähtimäärät tarkistettiin GitHubin REST APIsta 18. lokakuuta 2026 — käy antamassa näille projekteille tähti. Määrät ovat tarkka, tiettynä päivänä otettu tilannekuva, joten ne muuttuvat luonnollisesti.
 
 ### 🧬 Alkuperä & yhdyskäytävä
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>Alkuperäinen projekti, johon tämä haara perustuu — sitä on laajennettu tässä multimodaalisilla rajapinnoilla ja toteuttamalla koodi kokonaan uudelleen TypeScriptillä.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>Go-toteutus, joka inspiroi tätä JavaScript- / TypeScript-porttausta.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>AI-yhdyskäytävä, jonka julkinen hintatietoaineisto syöttää kustannusseurantamme synkronointia ja jonka palveluntarjoajien normalisointimalli vaikutti reititykseemme.</td></tr>
@@ -1717,19 +1714,19 @@ OmniRoute seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://gi
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>Malleja portattiin suoratoiston palautukseen, ilman päättelyä toimiviin aliaksiin, varaverkkohakuun, liukuvan ikkunan rajoituksiin, lokien peittämiseen ja vahvistettuihin käynnistysprosesseihin.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Cursor Composerin työkalun valinnan, tulosrajoitteiden ja työkalujen vahvistamisen malleja mukautettiin natiiviin Cursor-suorittimeen.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>Uuden kirjautumisen ja päivitystunnusten kierrätyksen malleja portattiin Codex OAuth -uudelleentodennukseen.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Claude Code -yhteensopivat muunnosten oletusarvot ja laskutusotsakkeiden toiminta yleistettiin OmniRouten määritysohjatuksi sillaksi.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Sen Grok-mallimäärityksiä, väärennettyyn TypeError-virheeseen perustuvaa Statsig-generaattoria, pyyntöjen ja laitteiden oletusarvoja sekä NDJSON-vastausprosessoria mukautettiin merkittävästi OmniRouten Grok Web -suorittimeen.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Claude Code -yhteensopivat muunnosten oletusarvot ja laskutusotsakkeiden toiminta yleistettiin 67routerin määritysohjatuksi sillaksi.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>Sen Grok-mallimäärityksiä, väärennettyyn TypeError-virheeseen perustuvaa Statsig-generaattoria, pyyntöjen ja laitteiden oletusarvoja sekä NDJSON-vastausprosessoria mukautettiin merkittävästi 67routerin Grok Web -suorittimeen.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>grok2api-merged-projektin pääasiallinen välillinen koodilähde; sen malli-, otsake-, hyötykuorma-, Statsig- ja prosessoritoteutukset on säilytetty osana Grok Webin alkuperäketjua.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>Taustalla oleva MIT-lisensoitu lähdekoodi Grokin hyötykuorman ja laitteen oletusarvoille, Statsig-generaattorille sekä <code>result.response</code>-prosessorille, jotka välittyivät TQZHR:n ja grok2api-merged-projektin kautta.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Välillinen lähde, jonka grok2api-merged mainitsee välityspalvelinvarantokerroksensa lähteenä; OmniRoute säilyttää tämän alkuperämaininnan, mutta ei väitä portanneensa välityspalvelinvarantoa rajattuun Grok Web -suorittimeensa.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Sen evästetodennusta käyttävä Grok-välityspalvelin ja <code>result.response.token</code>-suoratoistomalli vaikuttivat OmniRouten Grok Web -siirtokerrokseen.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>Välillinen lähde, jonka grok2api-merged mainitsee välityspalvelinvarantokerroksensa lähteenä; 67router säilyttää tämän alkuperämaininnan, mutta ei väitä portanneensa välityspalvelinvarantoa rajattuun Grok Web -suorittimeensa.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>Sen evästetodennusta käyttävä Grok-välityspalvelin ja <code>result.response.token</code>-suoratoistomalli vaikuttivat 67routerin Grok Web -siirtokerrokseen.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>Alkuperäistä Grok Web -toteutusta varten perehdyttiin sen HTTP-/selainpohjaiseen vastapalvelinrakenteeseen; sen suora HTTP-polku perustuu GrokProxyyn, joten erillistä koodiporttausta ei väitetä tehdyn.</td></tr>
 </table>
 
 ### 🗜️ Kontekstin ja tokenien pakkaus — moottorit
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>Viraaliksi noussut "miksi käyttää monta tokenia, kun muutama token riittää" -projekti — sen luolamiespuheen filosofia toimii vakiopakkaustilamme sekä yli 30 täytesanojen poisto- ja tiivistyssäännön perustana.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>Tehokas komentotulosteiden pakkaus — inspiroi RTK-moottoriamme, JSON-suodattimien DSL:ää, raakatulosteen palautusta sekä pinottua RTK → Caveman -putkea.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>Palautettava kontekstin pakkaus (SmartCrusher) — inspiroi <code>headroom</code>-moottoriamme ja <code>ccr</code>-hakumerkintämallia.</td></tr>
@@ -1737,15 +1734,15 @@ OmniRoute seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://gi
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>JS/ONNX-porttaus (MobileBERT / XLM-RoBERTa), jota käytetään LLMLingua-moottorimme työntekijäsäietaustajärjestelmänä.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>Brasilianportugalin token-pakkaus — toimii pt-BR-kielipakettimme perustana: pleonasmien vähentäminen ja Brasilian portugalin kielioppiin mukautettu täytesanojen poisto.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>Viraaliksi noussut "laiska vanhempi kehittäjä" -YAGNI-koodaustaito — inspiroi <b>less-code</b>-tulostetyyliämme: ohjausta pienimpään toimivaan muutokseen, mikä vähentää _luodun_ koodin määrää (Cavemanin niukan proosan tulostopuolen sisarmalli).</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Sen toiminta ensin -periaatteeseen perustuva, ADHD-ystävällinen vastaustyyli mukautettiin OmniRouten ytimekkääksi tulostetyyliksi viidellä kielellä.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>Sen toiminta ensin -periaatteeseen perustuva, ADHD-ystävällinen vastaustyyli mukautettiin 67routerin ytimekkääksi tulostetyyliksi viidellä kielellä.</td></tr>
 </table>
 
 ### 🧩 Kompaktit muodot, token-tutkimus ja kooditietoiset työkalut
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Token-suuntautunut objektinotaatio — sen sarakkeinen, otsikosta ja riveistä koostuva malli muovasi taulukkomuotoisen tiivistämisen vaihettamme.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Sen kompakti graafimuoto ja yleisprofiilien rakenne vaikuttivat OmniRouten taulukkomuotoiseen tiivistämiseen ja Headroom-koodekkimuotoon.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>Sen kompakti graafimuoto ja yleisprofiilien rakenne vaikuttivat 67routerin taulukkomuotoiseen tiivistämiseen ja Headroom-koodekkimuotoon.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>MIT-lisensoitu TypeScript-toteutus, joka sisällytettiin suoraan lähdekoodiin ja jota laajennettiin Headroomin yleisprofiilikoodekiksi.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Brotli/SQLite-välimuisti + istuntokohtainen kontekstiero — inspiroi <code>session-dedup</code>-moottoriamme.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Bash-tulosteen tiivistäminen + MCP-profiilit — inspiroi pakkaamisen keskeytysperiaatteitamme ja MCP-työkaluluetteloiden supistamista.</td></tr>
@@ -1762,7 +1759,7 @@ OmniRoute seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://gi
 ### 🧠 Muisti ja RAG
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>Yleiskäyttöinen muistikerros — sen malli, jossa välityspalvelin toimii kirjoitus- ja lukurajana, muovasi muistiarkkitehtuuriamme.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>Tilalliset agentit ja kerrostettu muisti — innoitti kerrostettua Context Control & Recovery (CCR) -malliamme.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>ProblemMap-luokittelu 16 toistuvasta RAG-/LLM-virhetilasta — vianmääritysoppaamme yhteinen sanasto.</td></tr>
@@ -1771,15 +1768,15 @@ OmniRoute seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://gi
 ### 🛰️ Liikenteen tarkastus, MITM ja läpinäkyvä välityspalvelin
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Ohjelmointiavustajan ↔ LLM:n välisen liikenteen MITM-sieppaus ja -analyysi vaikuttivat Traffic Inspectorin alkuvaiheen vaatimuksiin. Neljä aiemmin johdettua moduulia — SSE-yhdistäminen, keskustelujen normalisointi, salaisuuksien peittäminen ja otsaketietojen puhdistaminen — on korvattu riippumattomilla puhtaalta pöydältä toteutetuilla ratkaisuilla, jotka perustuvat julkisiin protokollastandardeihin. Kaksi isäntäjärjestelmän läpivientipintaa (<code>passthrough.ts</code> ja <code>_internal/bypass.cjs</code>) ovat edelleen itsenäisesti luokiteltuja OmniRouten sisäisiä toteutuksia; niitä ei kirjoitettu uudelleen kyseisen korvaamisen yhteydessä.</td></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>Ohjelmointiavustajan ↔ LLM:n välisen liikenteen MITM-sieppaus ja -analyysi vaikuttivat Traffic Inspectorin alkuvaiheen vaatimuksiin. Neljä aiemmin johdettua moduulia — SSE-yhdistäminen, keskustelujen normalisointi, salaisuuksien peittäminen ja otsaketietojen puhdistaminen — on korvattu riippumattomilla puhtaalta pöydältä toteutetuilla ratkaisuilla, jotka perustuvat julkisiin protokollastandardeihin. Kaksi isäntäjärjestelmän läpivientipintaa (<code>passthrough.ts</code> ja <code>_internal/bypass.cjs</code>) ovat edelleen itsenäisesti luokiteltuja 67routerin sisäisiä toteutuksia; niitä ei kirjoitettu uudelleen kyseisen korvaamisen yhteydessä.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>Läpinäkyvä prosessikohtainen välityspalvelinreititys — innoitti kaatumisilta suojattua MITM-purkua, yhteyksien joutokäyntiaikakatkaisuja, <code>/proc</code>-prosessikohdistusta ja TPROXY-kaappausta.</td></tr>
 </table>
 
 ### 📚 Mallitiedot, havainnoitavuus ja käyttöliittymä
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>Avoin tietokanta tekoälymallien määrityksistä, hinnoittelusta ja ominaisuuksista — synkronoidaan natiivisti malliluetteloomme.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>Solmupohjainen graafikirjasto, joka toimii reaaliaikaisten Compression Studion ja Combo/Routing Studion perustana.</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>LangGraph Studion reaaliaikainen työnkulkugraafin visualisointi innoitti Studioidemme reaaliaikaista kaskadinäkymää.</td></tr>
@@ -1792,19 +1789,19 @@ OmniRoute seisoo jättiläisten harteilla. Se sai alkunsa **[9router](https://gi
 ### 🛡️ Tietoturva
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>Kuratoitu luettelo oletusarvoisesti turvallisista kirjastoista, joka ohjaa tietoturvavalintojamme (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink).</td></tr>
 </table>
 
 ### 🧭 Täydentävät työkalut
 
 <table>
-  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi OmniRoutea</th></tr>
+  <tr><th align="left">Projekti</th><th align="center">⭐</th><th align="left">Miten se inspiroi 67routeria</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>Innoitti pyyntöjen kaksoiskappaleiden poistamista, hätätapauksissa käytettävää maksutonta vararatkaisua, liitettäviä Auto-Combo-strategioita ja monikielistä aikomusten luokittelua.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Sen tilit huomioiva mallien uudelleenkohdistus, suoritettavan tiedoston polun validointi ja pakettitunnisteiden toiminta vaikuttivat OmniRouten Antigravity-ajoympäristöön.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Sen kompakti kiintiön nollautumiseen jäljellä olevan ajan esitysmuoto innoitti vastaavaa palveluntarjoajarajoituksen näyttöä OmniRoutessa.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Sen ACP-integraatiot innoittivat OmniRouten asennettujen CLI-agenttien automaattista tunnistusta.</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Tunnisti Grok Build -kiintiöpinnan; OmniRoute varmisti ja korjasi tämän jälkeen käytössä olevan siirtomuodon itsenäisesti.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>Sen tilit huomioiva mallien uudelleenkohdistus, suoritettavan tiedoston polun validointi ja pakettitunnisteiden toiminta vaikuttivat 67routerin Antigravity-ajoympäristöön.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>Sen kompakti kiintiön nollautumiseen jäljellä olevan ajan esitysmuoto innoitti vastaavaa palveluntarjoajarajoituksen näyttöä 67routerissa.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>Sen ACP-integraatiot innoittivat 67routerin asennettujen CLI-agenttien automaattista tunnistusta.</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Tunnisti Grok Build -kiintiöpinnan; 67router varmisti ja korjasi tämän jälkeen käytössä olevan siirtomuodon itsenäisesti.</td></tr>
 </table>
 
 ## 📄 Lisenssi
@@ -1817,7 +1814,7 @@ MIT-lisenssi – katso lisätiedot tiedostosta [LICENSE](LICENSE).
 
 **[⬆ Takaisin alkuun](#-omniroute)** · Rakennettu ❤️ avoimen lähdekoodin AI-yhteisölle.
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT-lisenssi · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · MIT-lisenssi · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions käytössä yhteisön kysymyksiin ja vastauksiin -->

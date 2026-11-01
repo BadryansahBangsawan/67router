@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kontroluje chybové odpovědi upstream poskytovatelů a hledá signály, které naznačují, že
+67router kontroluje chybové odpovědi upstream poskytovatelů a hledá signály, které naznačují, že
 **účet je trvale nefunkční** (pozastavený / deaktivovaný / zablokovaný kvůli porušení podmínek použití), a pokud
 najde shodu, přesune toto připojení do **koncového stavu `banned`**, takže již
 nebude vybíráno pro požadavky. Toto chování se konfiguruje na kartě nastavení

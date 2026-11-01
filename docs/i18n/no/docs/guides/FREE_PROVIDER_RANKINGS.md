@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: OmniRoute rangerer sine **gratis** leverandører etter modellkvalitet ved hjelp av **Arena AI-
+> **Kort fortalt**: 67router rangerer sine **gratis** leverandører etter modellkvalitet ved hjelp av **Arena AI-
 > ELO-poengsummer (i LMArena-stil)**. Åpne siden **Rangering av gratisleverandører** i
 > kontrollpanelet for å se hvilke gratisleverandører som tilbyr de beste modellene for oppgaven din —
 > samlet eller filtrert etter kategori (koding, gjennomgang, dokumentasjon, feilsøking).
@@ -13,7 +13,7 @@
 
 ## Hva det er
 
-OmniRoute registrerer 375 leverandører, inkludert 155 katalogoppføringer merket **gratis/uten autentisering**
+67router registrerer 375 leverandører, inkludert 155 katalogoppføringer merket **gratis/uten autentisering**
 (uten autentisering, OAuth med gratisnivå, eller API-nøkkel med gratisnivå — se
 [guiden for gratisnivåer](../getting-started/FREE-TIERS-GUIDE.md) og hele
 [katalogen over gratisnivåer](../reference/FREE_TIERS.md)). Haken er at gratisleverandører varierer
@@ -128,9 +128,9 @@ og `code` — fra API-et for Arena AI-resultatlisten
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Hver oppføring i resultatlisten
 inneholder modellnavn, leverandør, ELO-`score`, konfidensintervall og antall stemmer.
 
-Kategoriene i resultatlisten tilordnes OmniRoute-oppgavekategorier:
+Kategoriene i resultatlisten tilordnes 67router-oppgavekategorier:
 
-| Arena-resultatliste | OmniRoute-oppgavekategorier                       |
+| Arena-resultatliste | 67router-oppgavekategorier                        |
 | ------------------- | ------------------------------------------------- |
 | `text`              | `default`, `review`, `documentation`, `debugging` |
 | `code`              | `coding`                                          |
@@ -167,7 +167,7 @@ Synkroniseringen kjører **som standard**:
 
 - Den kjører én gang ved serveroppstart og deretter med et periodisk tidsur
   (`src/lib/arenaEloSync.ts`, koblet fra `src/instrumentation-node.ts`).
-- Den er **ikke-blokkerende og aldri fatal** — hvis hentingen fra oppstrømskilden mislykkes, fortsetter OmniRoute
+- Den er **ikke-blokkerende og aldri fatal** — hvis hentingen fra oppstrømskilden mislykkes, fortsetter 67router
   å kjøre, og rangeringene viser ganske enkelt de siste gyldige dataene (eller en tom tilstand).
 
 To miljøvariabler styrer den (dokumentert i
@@ -202,7 +202,7 @@ fleksibel samsvarskontroll (`findMatchingIntelligence` i `src/lib/freeProviderRa
 3. Prefikssamsvar (et modellnavn i resultatlisten er et prefiks i register-ID-en).
 
 På synkroniseringssiden fjernes kjente leverandørprefikser (`anthropic/`, `openai/`, `google/`, …),
-og et lite aliaskart utvider kanoniske navn til variantene OmniRoute bruker internt,
+og et lite aliaskart utvider kanoniske navn til variantene 67router bruker internt,
 slik at modellene kan finnes under alle navn.
 
 ### Slik rangeres en leverandør

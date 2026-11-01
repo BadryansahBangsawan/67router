@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute، **CLI دریافت**، **مقامی Agent Client Protocol**، اور
+67router، **CLI دریافت**، **مقامی Agent Client Protocol**، اور
 **قدیمی stdio adapters** کو الگ رکھتا ہے۔ کسی نصب شدہ binary کا مل جانا اس کی
 authentication، model compatibility، یا prompt سنبھالنے کی تیاری کو ثابت نہیں کرتا۔
 
@@ -120,5 +120,3 @@ cancellation، concurrent prompts، ناکام initialization، process exit، o
 - [Agent protocols](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI launch contracts](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI tools](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)
-- [Cloud agents](./CLOUD_AGENT.md)

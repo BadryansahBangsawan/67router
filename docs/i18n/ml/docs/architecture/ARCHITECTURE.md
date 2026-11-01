@@ -1,4 +1,4 @@
-# OmniRoute Architecture (മലയാളം)
+# 67router Architecture (മലയാളം)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _അവസാനം പുതുക്കിയത്: 2026-06-28_
 
 ## എക്സിക്യൂട്ടീവ് സംഗ്രഹം
 
-Next.js അടിസ്ഥാനമാക്കി നിർമ്മിച്ച ഒരു ലോക്കൽ AI റൂട്ടിംഗ് ഗേറ്റ്വേയും ഡാഷ്ബോർഡുമാണ് OmniRoute.
+Next.js അടിസ്ഥാനമാക്കി നിർമ്മിച്ച ഒരു ലോക്കൽ AI റൂട്ടിംഗ് ഗേറ്റ്വേയും ഡാഷ്ബോർഡുമാണ് 67router.
 ഇത് ഒരൊറ്റ OpenAI-അനുയോജ്യമായ എൻഡ്പോയിന്റ് (`/v1/*`) നൽകുകയും വിവർത്തനം, ഫാൾബാക്ക്, ടോക്കൺ പുതുക്കൽ, ഉപയോഗ ട്രാക്കിംഗ് എന്നിവയോടെ ഒന്നിലധികം അപ്സ്ട്രീം പ്രൊവൈഡറുകളിലൂടെ ട്രാഫിക് റൂട്ട് ചെയ്യുകയും ചെയ്യുന്നു.
 
 പ്രധാന ശേഷികൾ:
@@ -128,13 +128,11 @@ v3.8.0 പ്ലാറ്റ്ഫോമിനായുള്ള കാനോന
 - `/dashboard/limits` — ക്വോട്ട/നിരക്ക് നിയന്ത്രണങ്ങൾ
 - `/dashboard/cli-tools` — CLI ഓൺബോർഡിംഗ്, റൺടൈം കണ്ടെത്തൽ, കോൺഫിഗറേഷൻ സൃഷ്ടിക്കൽ
 - `/dashboard/agents` — കണ്ടെത്തിയ ACP ഏജന്റുകൾ + ഇഷ്ടാനുസൃത ഏജന്റ് രജിസ്ട്രേഷൻ
-- `/dashboard/cloud-agents` — ക്ലൗഡ്-ഹോസ്റ്റഡ് ഏജന്റ് ടാസ്കുകളും (Codex Cloud, Devin, Jules) ടാസ്ക് ലൈഫ്സൈക്കിളും
 - `/dashboard/skills` — A2A സ്കിൽ രജിസ്ട്രി, സാൻഡ്ബോക്സ് എക്സിക്യൂഷൻ, ബിൽറ്റ്-ഇൻ സ്കിൽ കാറ്റലോഗ്
 - `/dashboard/memory` — സ്ഥിരമായ സംഭാഷണ മെമ്മറിയുടെ പരിശോധനയും വീണ്ടെടുക്കലും
 - `/dashboard/webhooks` — ഔട്ട്ബൗണ്ട് വെബ്ഹുക്ക് സബ്സ്ക്രിപ്ഷനുകൾ, സീക്രട്ട് റൊട്ടേഷൻ, റീട്രൈ സ്ഥിതിവിവരക്കണക്കുകൾ
 - `/dashboard/batch` — ബാച്ച് ജോബ് സമർപ്പണവും പുരോഗതിയും
 - `/dashboard/cache` — റീഡ്-ത്രൂ, റീസണിംഗ് കാഷ് സ്ഥിതിവിവരക്കണക്കുകൾ, ഇവിക്ഷൻ നിയന്ത്രണങ്ങൾ
-- `/dashboard/playground` — കോൺഫിഗർ ചെയ്തിട്ടുള്ള ഏത് കോംബോ/മോഡലുമായും സംവദിക്കാവുന്ന ഇന്ററാക്ടീവ് ചാറ്റ് പ്ലേഗ്രൗണ്ട്
 - `/dashboard/changelog` — ആപ്പിനുള്ളിലെ ചേഞ്ച്ലോഗ് വ്യൂവർ (`CHANGELOG.md` റെൻഡർ ചെയ്യുന്നു)
 - `/dashboard/system` — റൺടൈം ഡയഗ്നോസ്റ്റിക്സ്, പതിപ്പ് വിവരങ്ങൾ, എൻവയോൺമെന്റ് വാലിഡേഷൻ പ്രതലം
 - `/dashboard/onboarding` — പുതിയ ഇൻസ്റ്റാളേഷനുകൾക്കായുള്ള ആദ്യ-റൺ സജ്ജീകരണ വിസാർഡ്
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[ബ്രൗസർ ഡാഷ്ബോർഡ്]
     end
 
-    subgraph Router[OmniRoute ലോക്കൽ പ്രോസസ്]
+    subgraph Router[67router ലോക്കൽ പ്രോസസ്]
         API[V1 അനുയോജ്യതാ API\n/v1/*]
         DASH[ഡാഷ്ബോർഡ് + മാനേജ്മെന്റ് API\n/api/*]
         CORE[SSE + പരിഭാഷാ കോർ\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - ബജറ്റ്: `src/app/api/usage/budget` (GET/POST)
 - ഫാൾബാക്ക് ശൃംഖലകൾ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - പാലന ഓഡിറ്റ്: `src/app/api/compliance/audit-log` (GET, പേജിനേഷനും ഘടനാബദ്ധമായ മെറ്റാഡാറ്റയും സഹിതം)
-- മൂല്യനിർണ്ണയങ്ങൾ: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - നയങ്ങൾ: `src/app/api/policies` (GET/POST)
 - സമന്വയ ടോക്കണുകൾ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - കോൺഫിഗറേഷൻ ബണ്ടിൽ: `src/app/api/sync/bundle` (GET, ക്രമീകരണങ്ങൾ/പ്രൊവൈഡറുകൾ/കോംബോകൾ/കീകൾ എന്നിവയുടെ ETag-പതിപ്പിട്ട സ്നാപ്പ്ഷോട്ട്)
@@ -316,7 +313,6 @@ flowchart LR
 - ഫെച്ച് ടൈംഔട്ട്: `src/shared/utils/fetchTimeout.ts`
 - റിക്വസ്റ്റ് ടെലിമെട്രി: `src/shared/utils/requestTelemetry.ts`
 - കംപ്ലയൻസ്/ഓഡിറ്റ്: `src/lib/compliance/index.ts`
-- ഇവാൽ റണ്ണർ: `src/lib/evals/evalRunner.ts`
 - ഡൊമെയ്ൻ സ്റ്റേറ്റ് പെർസിസ്റ്റൻസ്: `src/lib/db/domainState.ts` — ഫാൾബാക്ക് ചെയിനുകൾ, ബജറ്റുകൾ, ചെലവ് ചരിത്രം, ലോക്ക്ഔട്ട് സ്റ്റേറ്റ്, സർക്യൂട്ട് ബ്രേക്കറുകൾ എന്നിവയ്ക്കായുള്ള SQLite CRUD
 
 OAuth പ്രൊവൈഡർ മൊഡ്യൂളുകൾ (`src/lib/oauth/providers/` എന്നതിനു കീഴിലുള്ള 27 വ്യക്തിഗത ഫയലുകൾ):
@@ -328,7 +324,7 @@ OAuth പ്രൊവൈഡർ മൊഡ്യൂളുകൾ (`src/lib/oauth/pr
 
 ## 5) ഉൾച്ചേർത്ത സേവനങ്ങൾ (v3.8.4)
 
-പ്രാദേശികമായി പ്രവർത്തിക്കുന്ന AI ടൂൾ പ്രോസസ്സുകളെ ഇൻസ്റ്റാൾ ചെയ്യാനും മേൽനോട്ടം വഹിക്കാനും അവയിലേക്ക് റൂട്ട് ചെയ്യാനും OmniRoute-ന് കഴിയും. ഇവയെ **ഉൾച്ചേർത്ത സേവനങ്ങൾ** എന്ന് വിളിക്കുന്നു. അഞ്ചെണ്ണം ഇതോടൊപ്പം ലഭ്യമാണ്: 9Router, CLIProxyAPI, Bifrost, Mux, Dario.
+പ്രാദേശികമായി പ്രവർത്തിക്കുന്ന AI ടൂൾ പ്രോസസ്സുകളെ ഇൻസ്റ്റാൾ ചെയ്യാനും മേൽനോട്ടം വഹിക്കാനും അവയിലേക്ക് റൂട്ട് ചെയ്യാനും 67router-ന് കഴിയും. ഇവയെ **ഉൾച്ചേർത്ത സേവനങ്ങൾ** എന്ന് വിളിക്കുന്നു. അഞ്ചെണ്ണം ഇതോടൊപ്പം ലഭ്യമാണ്: 9Router, CLIProxyAPI, Bifrost, Mux, Dario.
 
 ആർക്കിടെക്ചർ പാളികൾ:
 
@@ -383,23 +379,6 @@ OAuth പ്രൊവൈഡർ മൊഡ്യൂളുകൾ (`src/lib/oauth/pr
 അൽഗോരിതവുമായി ബന്ധപ്പെട്ട പൂർണ്ണ വിശദാംശങ്ങൾക്ക് (ഘടക ഫോർമുലകൾ, വെയിറ്റ് ട്യൂണിംഗ്),
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) കാണുക.
 
-### B. Cloud Agents
-
-മൂന്നാം കക്ഷി ഹോസ്റ്റ് ചെയ്ത കോഡ്-ഏജന്റ് പ്ലാറ്റ്ഫോമുകളെ (Codex Cloud, Devin,
-Jules) ഏകീകൃതവും DB പിന്തുണയുള്ളതുമായ ടാസ്ക് ലൈഫ്സൈക്കിളിന് പിന്നിൽ Cloud Agents പൊതിയുന്നു. എല്ലാ ടാസ്ക് സൃഷ്ടിക്കൽ/പരിശോധന
-എൻഡ്പോയിന്റുകൾക്കും മാനേജ്മെന്റ് ഓതന്റിക്കേഷൻ ആവശ്യമാണ്.
-
-- മൊഡ്യൂൾ റൂട്ട്: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, കൂടാതെ `agents/`-ന് കീഴിലുള്ള ഓരോ ഏജന്റിനുമുള്ള ഉപഡയറക്ടറികൾ)
-- ഓരോ ഏജന്റിനുമുള്ള ഇംപ്ലിമെന്റേഷനുകൾ: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- പൊതു എൻഡ്പോയിന്റുകൾ: `/api/v1/agents/tasks/*` (പട്ടികപ്പെടുത്തൽ/സൃഷ്ടിക്കൽ/ലഭ്യമാക്കൽ/റദ്ദാക്കൽ)
-- മാനേജ്മെന്റ് എൻഡ്പോയിന്റുകൾ: `/api/cloud/*` (പ്രൊവിഷനിംഗ്, നില, ബാച്ച്)
-- ഡാഷ്ബോർഡ്: `/dashboard/cloud-agents`
-- സംഭരണം: `cloud_agent_tasks` പട്ടിക
-
-ഓരോ ഏജന്റിനുമുള്ള പ്രൊവിഷനിംഗിന്റെയും OAuth-ന്റെയും വിശദാംശങ്ങൾക്ക്,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) കാണുക.
-
 ### C. Guardrails
 
 PII, പ്രോംപ്റ്റ് ഇൻജക്ഷൻ, സുരക്ഷിതമല്ലാത്ത വിഷ്വൽ ഉള്ളടക്കം എന്നിവയ്ക്കായി അഭ്യർത്ഥനകളും
@@ -435,7 +414,7 @@ PII, പ്രോംപ്റ്റ് ഇൻജക്ഷൻ, സുരക്ഷ
 - ക്വോട്ട കാഷെ: `src/domain/quotaCache.ts`
 - ഡീഗ്രഡേഷൻ നില: `src/domain/degradation.ts`
 - കോൺഫിഗറേഷൻ ഓഡിറ്റ്: `src/domain/configAudit.ts`
-- OmniRoute റെസ്പോൺസ് മെറ്റാഡാറ്റ ബിൽഡർ: `src/domain/omnirouteResponseMeta.ts`
+- 67router റെസ്പോൺസ് മെറ്റാഡാറ്റ ബിൽഡർ: `src/domain/omnirouteResponseMeta.ts`
 - അസസ്മെന്റ് ഉപസിസ്റ്റം: `src/domain/assessment/` — ആനുകാലിക വിലയിരുത്തൽ ജോലികൾ
 
 ### E. ഓതറൈസേഷൻ പൈപ്പ്ലൈൻ
@@ -802,7 +781,7 @@ flowchart LR
         Browser[ഡാഷ്ബോർഡ് ബ്രൗസർ]
     end
 
-    subgraph ContainerOrProcess[OmniRoute റൺടൈം]
+    subgraph ContainerOrProcess[67router റൺടൈം]
         Next[Next.js സെർവർ\nPORT=20128]
         Core[SSE കോർ + എക്സിക്യൂട്ടറുകൾ]
         MainDB[(storage.sqlite)]
@@ -920,7 +899,7 @@ flowchart LR
 
 ## പ്രൊവൈഡർ അനുയോജ്യതാ മാട്രിക്സ്
 
-> **കുറിപ്പ്:** താഴെയുള്ള മാട്രിക്സ് OmniRoute v3.8.0-ൽ രജിസ്റ്റർ ചെയ്തിട്ടുള്ള 351 പ്രൊവൈഡറുകളുടെ ഒരു പ്രാതിനിധ്യ സാമ്പിളാണ്.
+> **കുറിപ്പ്:** താഴെയുള്ള മാട്രിക്സ് 67router v3.8.0-ൽ രജിസ്റ്റർ ചെയ്തിട്ടുള്ള 351 പ്രൊവൈഡറുകളുടെ ഒരു പ്രാതിനിധ്യ സാമ്പിളാണ്.
 > ആധികാരികവും തുടർച്ചയായി പുതുക്കപ്പെടുന്നതുമായ പട്ടികയ്ക്കായി,
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (സ്വയമേവ സൃഷ്ടിച്ചത്) കാണുക, അല്ലെങ്കിൽ
 > ലോഡ് ചെയ്യുമ്പോൾ Zod ഉപയോഗിച്ച് സാധുത പരിശോധിക്കുന്ന `src/shared/constants/providers.ts` എന്ന യഥാർത്ഥ ഉറവിടം കാണുക.
@@ -1102,7 +1081,7 @@ flowchart LR
 - ക്ലയന്റിൽ നിന്ന് ലഭിച്ച അസംസ്കൃത അഭ്യർത്ഥന
 - യഥാർത്ഥത്തിൽ അപ്സ്ട്രീമിലേക്ക് അയച്ച പരിഭാഷപ്പെടുത്തിയ അഭ്യർത്ഥന
 - JSON ആയി പുനർനിർമ്മിച്ച പ്രൊവൈഡർ പ്രതികരണം; സ്ട്രീം ചെയ്ത പ്രതികരണങ്ങൾ അന്തിമ സംഗ്രഹവും സ്ട്രീം മെറ്റാഡാറ്റയും ഉൾക്കൊള്ളുന്ന രൂപത്തിലേക്ക് ചുരുക്കുന്നു
-- OmniRoute തിരികെ നൽകിയ അന്തിമ ക്ലയന്റ് പ്രതികരണം; സ്ട്രീം ചെയ്ത പ്രതികരണങ്ങൾ അതേ ചുരുക്കിയ സംഗ്രഹ രൂപത്തിൽ സംഭരിക്കുന്നു
+- 67router തിരികെ നൽകിയ അന്തിമ ക്ലയന്റ് പ്രതികരണം; സ്ട്രീം ചെയ്ത പ്രതികരണങ്ങൾ അതേ ചുരുക്കിയ സംഗ്രഹ രൂപത്തിൽ സംഭരിക്കുന്നു
 
 ## സുരക്ഷാ-സെൻസിറ്റീവ് അതിരുകൾ
 

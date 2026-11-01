@@ -10,7 +10,7 @@
 
 ## Kontekst
 
-OmniRoute trenutno ponuja domensko usmerjene funkcije trajnega shranjevanja iz `src/lib/db/`, medtem ko
+67router trenutno ponuja domensko usmerjene funkcije trajnega shranjevanja iz `src/lib/db/`, medtem ko
 skupna povezava, ki jo vrne `src/lib/db/core.ts`, implementira sinhrono pogodbo `SqliteAdapter`
 iz `src/lib/db/adapters/types.ts`. Ta vmesnik podpira več izvajalnih okolij SQLite, vendar njegova
 površina ostaja oblikovana po SQLite: sinhroni pripravljeni stavki, `pragma`, odložene in takojšnje

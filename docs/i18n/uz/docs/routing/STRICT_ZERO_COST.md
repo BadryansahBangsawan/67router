@@ -35,7 +35,7 @@ To‘plamdagi har bir nomzod uchun (`open-sse/services/autoCombo/virtualFactory.
 `filterPaidOnlyCandidates`dan keyin):
 
 1. **`FREE_MODEL_BUDGETS` ichida umuman mavjud emas** → chiqarib tashlanadi. Bu haqiqatan ham
-   pulli modellarni va OmniRoute hali tasniflamagan har qanday provayder/modelni qamrab oladi —
+   pulli modellarni va 67router hali tasniflamagan har qanday provayder/modelni qamrab oladi —
    yangi nomzodlar avvalboshdan kiritilmaydi, balki chiqarib tashlanadi.
 2. **`freeType: "keyless"`** → darhol o‘tadi, **ammo faqat autentifikatsiyasiz yo‘l orqali
    haqiqatda kelgan nomzod uchun** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -98,7 +98,7 @@ Regressiya isboti uchun `tests/unit/autoCombo/strict-zero-cost-connection-safety
 (kalitsiz chetlab o‘tish holatlari A/B/C, ko‘p hisobli 1–5-holatlar).
 
 `avtomatik aniqlangan`: ertaga tegishli metama’lumotlar bilan taqdim etiladigan provayder/model
-(katalogda mavjud, foydalanish adapteriga ega, `hardStopGuaranteed: true`) OmniRoute u haqda
+(katalogda mavjud, foydalanish adapteriga ega, `hardStopGuaranteed: true`) 67router u haqda
 bilishi bilanoq ishlatilishi mumkin — kodni o‘zgartirish, ruxsat etilganlar ro‘yxatiga yozuv qo‘shish
 yoki ushbu modulda biror narsani tahrirlash talab qilinmaydi. Katalogdan olib tashlangan provayder/model
 ham xuddi shu tarzda yo‘qoladi. Regressiya isboti uchun

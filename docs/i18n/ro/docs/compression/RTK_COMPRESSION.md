@@ -4,7 +4,7 @@
 
 ---
 
-Compresia RTK este motorul OmniRoute de compresie adaptată comenzilor pentru ieșirea terminalului și a instrumentelor. Este
+Compresia RTK este motorul 67router de compresie adaptată comenzilor pentru ieșirea terminalului și a instrumentelor. Este
 concepută pentru sesiuni cu agenți de programare, în care cea mai mare parte a creșterii contextului provine din jurnalele testelor, ieșirea proceselor de compilare,
 mesajele redundante ale managerelor de pachete, transcrierile shell, ieșirea Docker, ieșirea git și urmele de stivă.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Această ordine comprimă mai întâi ieșirea automată redundantă, apoi permite Caveman să condenseze textul rămas.
 
 Proiectul RTK din amonte raportează economii de `60-90%` pentru ieșirea comenzilor. Sesiunea demonstrativă din README-ul său scade de la
-`~118,000` de tokenuri standard la `~23,900` de tokenuri RTK, ceea ce înseamnă o economie de `79.7%` (`~80%`). OmniRoute folosește
+`~118,000` de tokenuri standard la `~23,900` de tokenuri RTK, ceea ce înseamnă o economie de `79.7%` (`~80%`). 67router folosește
 această medie din amonte pentru calcularea economiilor compuse împreună cu compresia intrării Caveman:
 
 ```txt
@@ -54,7 +54,7 @@ RTK încarcă filtrele în această ordine:
 2. Filtrele globale din `DATA_DIR/rtk/filters.toml` și `DATA_DIR/rtk/filters.json`.
 3. Filtrele încorporate din `open-sse/services/compression/engines/rtk/filters/`.
 
-În cadrul aceluiași domeniu, filtrele RTK cu schema TOML v1 au prioritate față de filtrele JSON OmniRoute. Expresiile TOML
+În cadrul aceluiași domeniu, filtrele RTK cu schema TOML v1 au prioritate față de filtrele JSON 67router. Expresiile TOML
 `match_command` sunt verificate înaintea potrivirii după tipul comenzii, astfel încât un filtru importat, specific unei comenzi,
 să poată suprascrie un filtru mai general din domeniul respectiv. Domeniul proiectului are în continuare prioritate față de domeniul global,
 indiferent de formatul fișierului.
@@ -84,7 +84,7 @@ omise și raportate de diagnosticele `/api/context/rtk/filters`. Filtrele încor
 
 ## Compatibilitate cu schema RTK TOML v1
 
-OmniRoute poate analiza, valida, testa și instala fișiere de filtre declarative utilizând schema RTK TOML v1.
+67router poate analiza, valida, testa și instala fișiere de filtre declarative utilizând schema RTK TOML v1.
 Câmpurile acceptate sunt `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` și testele inline `[[tests.<filter>]]`.
@@ -93,7 +93,7 @@ Câmpurile necunoscute, expresiile regulate nevalide sau nesigure, regulile simu
 validat pentru examinare, dar nu poate fi instalat sau încărcat. Erorile la încărcarea fișierelor personalizate rămân
 de tip fail-open: fișierul nevalid este omis, iar filtrele rămase continuă să funcționeze.
 
-OmniRoute primește rezultatul instrumentului după ce clientul l-a capturat deja, astfel încât `filter_stderr = true`
+67router primește rezultatul instrumentului după ce clientul l-a capturat deja, astfel încât `filter_stderr = true`
 nu poate modifica procesul de capturare. Câmpul este acceptat ca operație fără efect, iar validarea returnează un avertisment.
 Acest lucru este descris în mod intenționat drept **compatibilitate cu schema RTK TOML v1**, nu compatibilitate deplină
 cu executabilul RTK, hook-urile shell, implementările comenzilor Rust sau structura depozitului său de încredere.

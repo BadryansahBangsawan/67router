@@ -1,10 +1,10 @@
-# OmniRoute Antigravity (Google One AI) Onboarding Guide (Malti)
+# 67router Antigravity (Google One AI) Onboarding Guide (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇹 [am](../../../am/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇦 [ar](../../../ar/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇿 [az](../../../az/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇬 [bg](../../../bg/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇩 [bn](../../../bn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇦 [bs](../../../bs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇿 [cs](../../../cs/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇰 [da](../../../da/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇩🇪 [de](../../../de/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇷 [el](../../../el/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇸 [es](../../../es/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇪🇪 [et](../../../et/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇷 [fa](../../../fa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇮 [fi](../../../fi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇫🇷 [fr](../../../fr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇪 [ga](../../../ga/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [gu](../../../gu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ha](../../../ha/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇱 [he](../../../he/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [hi](../../../hi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇷 [hr](../../../hr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇭🇺 [hu](../../../hu/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇦🇲 [hy](../../../hy/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇩 [id](../../../id/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [ig](../../../ig/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇹 [it](../../../it/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇯🇵 [ja](../../../ja/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇬🇪 [ka](../../../ka/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇭 [km](../../../km/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [kn](../../../kn/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇷 [ko](../../../ko/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇹 [lt](../../../lt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇻 [lv](../../../lv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ml](../../../ml/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [mr](../../../mr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇾 [ms](../../../ms/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇲🇲 [my](../../../my/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇵 [ne](../../../ne/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇱 [nl](../../../nl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇴 [no](../../../no/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [or](../../../or/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [pa](../../../pa/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇭 [phi](../../../phi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇱 [pl](../../../pl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇹 [pt](../../../pt/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇴 [ro](../../../ro/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇺 [ru](../../../ru/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇱🇰 [si](../../../si/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇰 [sk](../../../sk/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇮 [sl](../../../sl/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇷🇸 [sr](../../../sr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇸🇪 [sv](../../../sv/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇰🇪 [sw](../../../sw/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [ta](../../../ta/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇮🇳 [te](../../../te/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇭 [th](../../../th/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇷 [tr](../../../tr/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇵🇰 [ur](../../../ur/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇺🇿 [uz](../../../uz/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇻🇳 [vi](../../../vi/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇳🇬 [yo](../../../yo/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/ANTIGRAVITY-ONBOARDING.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/ANTIGRAVITY-ONBOARDING.md)
 
 ---
 
-> **Dak li tikseb**: Aċċess għal Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6, u mudelli oħra permezz tal-abbonament tiegħek ta’ Google One AI Pro — kollha mgħoddija minn OmniRoute bħala gateway unifikat.
+> **Dak li tikseb**: Aċċess għal Gemini 3.1 Pro, Gemini 3.7 Flash, Claude Sonnet 4.6, u mudelli oħra permezz tal-abbonament tiegħek ta’ Google One AI Pro — kollha mgħoddija minn 67router bħala gateway unifikat.
 
 **Referenzi uffiċjali**:
 
@@ -22,17 +22,17 @@ Iż-żewġ fornituri jużaw l-**istess backend ta’ Google** — klijent OAuth 
 
 > Ara l-[avviż dwar l-Antigravity CLI](https://antigravity.google/blog/introducing-google-antigravity-cli) għat-tqabbil uffiċjali ta’ Google.
 
-| Aspett                     | `antigravity` (IDE)                                         | `agy` (CLI)                                                           |
-| -------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------- |
-| **Prodott ta’ Google**     | Antigravity 2.0 / Antigravity IDE                           | Antigravity CLI                                                       |
-| **Backend**                | L-istess Google Cloud Code API                              | L-istess Google Cloud Code API                                        |
-| **OAuth / Token**          | L-istess klijent, l-istess aġġornament                      | L-istess klijent, l-istess aġġornament                                |
-| **Katalgu tal-mudelli**    | Lista statika kkurata (inkorporata direttament f’OmniRoute) | Eżaminata direttament minn Google permezz ta’ `:fetchAvailableModels` |
-| **Mudelli Claude**         | Sonnet 4.6, Opus 4.6 (4 varjanti kull wieħed)               | Sonnet 4.6, Opus 4.6 (4 varjanti kull wieħed)                         |
-| **Ismijiet ta’ Gemini**    | Tikketti ċari (Baxx/Medju/Għoli)                            | IDs upstream (extra-low/low/agent)                                    |
-| **Mudelli addizzjonali**   | `gpt-oss-120b-medium`                                       | Jista’ jinkludi mudelli addizzjonali minn Google                      |
-| **Każ ta’ użu predefinit** | Integrazzjoni mal-IDE (VS Code, JetBrains)                  | Aċċess permezz tas-CLI / API                                          |
-| **Kwota**                  | Kondiviża ma’ agy (l-istess kont ta’ Google)                | Kondiviża ma’ antigravity (l-istess kont ta’ Google)                  |
+| Aspett                     | `antigravity` (IDE)                                        | `agy` (CLI)                                                           |
+| -------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Prodott ta’ Google**     | Antigravity 2.0 / Antigravity IDE                          | Antigravity CLI                                                       |
+| **Backend**                | L-istess Google Cloud Code API                             | L-istess Google Cloud Code API                                        |
+| **OAuth / Token**          | L-istess klijent, l-istess aġġornament                     | L-istess klijent, l-istess aġġornament                                |
+| **Katalgu tal-mudelli**    | Lista statika kkurata (inkorporata direttament f’67router) | Eżaminata direttament minn Google permezz ta’ `:fetchAvailableModels` |
+| **Mudelli Claude**         | Sonnet 4.6, Opus 4.6 (4 varjanti kull wieħed)              | Sonnet 4.6, Opus 4.6 (4 varjanti kull wieħed)                         |
+| **Ismijiet ta’ Gemini**    | Tikketti ċari (Baxx/Medju/Għoli)                           | IDs upstream (extra-low/low/agent)                                    |
+| **Mudelli addizzjonali**   | `gpt-oss-120b-medium`                                      | Jista’ jinkludi mudelli addizzjonali minn Google                      |
+| **Każ ta’ użu predefinit** | Integrazzjoni mal-IDE (VS Code, JetBrains)                 | Aċċess permezz tas-CLI / API                                          |
+| **Kwota**                  | Kondiviża ma’ agy (l-istess kont ta’ Google)               | Kondiviża ma’ antigravity (l-istess kont ta’ Google)                  |
 
 **Mudelli disponibbli (ivverifikati permezz ta’ esperiment, 2026-07-29)**:
 
@@ -89,11 +89,11 @@ Il-krediti jinxtraw separatament u jitnaqqsu skont l-ipprezzar standard tal-API.
 
 ### Dettalji Ewlenin
 
-- Il-kwota hija **kondiviża fil-livell tal-kont** — l-istess kont ta’ Google f’Antigravity IDE, CLI, u OmniRoute jikkondividi ġabra waħda ta’ kwota
+- Il-kwota hija **kondiviża fil-livell tal-kont** — l-istess kont ta’ Google f’Antigravity IDE, CLI, u 67router jikkondividi ġabra waħda ta’ kwota
 - Kull kont ta’ Google għandu l-kwota indipendenti tiegħu — diversi kontijiet = diversi ġabriet ta’ kwota
 - Utenti ta’ AI Pro rrappurtaw **imblukkar ta’ 7 ijiem** minflok issettjar mill-ġdid wara 5 sigħat meta tintlaħaq il-linja bażi ta’ kull ġimgħa (Google kkonfermat li dan huwa intenzjonat għal perjodi ta’ domanda għolja)
 
-**Meta l-kont tiegħek jiġi eżawrit**: OmniRoute jerġa’ jipprova awtomatikament bil-kont disponibbli li jmiss fir-rotta kkombinata. Ma huwa meħtieġ l-ebda intervent manwali.
+**Meta l-kont tiegħek jiġi eżawrit**: 67router jerġa’ jipprova awtomatikament bil-kont disponibbli li jmiss fir-rotta kkombinata. Ma huwa meħtieġ l-ebda intervent manwali.
 
 ---
 
@@ -103,9 +103,9 @@ Kull konnessjoni antigravity/agy teħtieġ `projectId` ta’ Google Cloud Code. 
 
 ### Metodu A: Awtomatiku (Rakkomandat)
 
-OmniRoute jieħu ħsieb dan awtomatikament. Meta żżid kont ġdid ta’ Google permezz ta’ Dashboard OAuth:
+67router jieħu ħsieb dan awtomatikament. Meta żżid kont ġdid ta’ Google permezz ta’ Dashboard OAuth:
 
-1. OmniRoute jġedded it-token
+1. 67router jġedded it-token
 2. Isejjaħ `loadCodeAssist` biex jiskopri l-projectId
 3. Jekk ma jeżisti l-ebda proġett, isejjaħ `onboardUser` biex joħloq wieħed
 4. Jerġa’ jipprova `loadCodeAssist` biex jikseb il-projectId li jkun għadu kif inħoloq
@@ -128,14 +128,14 @@ agy login
 # Dan jattiva r-reġistrazzjoni ta’ Cloud Code u jassenja projectId
 ```
 
-Wara li `agy login` jirnexxi, ġedded it-token fid-Dashboard ta’ OmniRoute. Il-projectId jiġi skopert awtomatikament.
+Wara li `agy login` jirnexxi, ġedded it-token fid-Dashboard ta’ 67router. Il-projectId jiġi skopert awtomatikament.
 
 ### Kif tivverifika
 
 Iċċekkja d-database:
 
 ```bash
-# Ġewwa l-container ta’ OmniRoute
+# Ġewwa l-container ta’ 67router
 node -e "const db=require('better-sqlite3')('/app/data/storage.sqlite'); \
   console.log(JSON.stringify(db.prepare(\
     'SELECT email,project_id FROM provider_connections WHERE provider=\"agy\"'\
@@ -154,7 +154,7 @@ podman logs omniroute 2>&1 | grep "projectId discovered"
 
 ### Il-Problema
 
-Google OAuth jirrikjedi URI ta' ridirezzjoni validu. Il-valur predefinit ta' OmniRoute juża `http://127.0.0.1:20128/callback` (loopback). Dan jaħdem għal builds lokali iżda **ma jaħdimx għal deployments remoti** (eż., server aċċessat permezz ta' indirizz IP tal-LAN).
+Google OAuth jirrikjedi URI ta' ridirezzjoni validu. Il-valur predefinit ta' 67router juża `http://127.0.0.1:20128/callback` (loopback). Dan jaħdem għal builds lokali iżda **ma jaħdimx għal deployments remoti** (eż., server aċċessat permezz ta' indirizz IP tal-LAN).
 
 Google jirrifjuta URIs ta' ridirezzjoni li:
 
@@ -165,7 +165,7 @@ Google jirrifjuta URIs ta' ridirezzjoni li:
 
 **Għażla A: Uża l-fluss OAuth inkorporat (predefinit)**
 
-- Jaħdem meta taċċessa OmniRoute minn `localhost` jew `127.0.0.1`
+- Jaħdem meta taċċessa 67router minn `localhost` jew `127.0.0.1`
 - Ma hija meħtieġa l-ebda konfigurazzjoni
 
 **Għażla B: Kredenzjali OAuth personalizzati**
@@ -180,9 +180,9 @@ Google jirrifjuta URIs ta' ridirezzjoni li:
 
 **Għażla C: Uża agy CLI għall-ewwel login**
 
-- Ħaddem `agy login` fuq il-magna li se taċċessa OmniRoute
+- Ħaddem `agy login` fuq il-magna li se taċċessa 67router
 - Il-fluss OAuth jitlesta lokalment u t-tokens jinħażnu
-- Importa l-konnessjoni f'OmniRoute permezz tad-Dashboard
+- Importa l-konnessjoni f'67router permezz tad-Dashboard
 
 ### Limitazzjonijiet
 
@@ -193,7 +193,7 @@ Google jirrifjuta URIs ta' ridirezzjoni li:
 
 ## 5. Soluzzjoni tal-Problemi: Meta l-Konfigurazzjoni Awtomatika Tfalli
 
-OmniRoute jieħu ħsieb awtomatikament l-iskoperta ta' projectId u l-onboarding għall-biċċa l-kbira tal-kontijiet. Meta dan ifalli, il-kawża ewlenija normalment tkun waħda minn dawn:
+67router jieħu ħsieb awtomatikament l-iskoperta ta' projectId u l-onboarding għall-biċċa l-kbira tal-kontijiet. Meta dan ifalli, il-kawża ewlenija normalment tkun waħda minn dawn:
 
 ### Ir-reġjun tal-kont huwa mblukkat
 
@@ -221,7 +221,7 @@ OmniRoute jieħu ħsieb awtomatikament l-iskoperta ta' projectId u l-onboarding 
 
 **Kawża ewlenija**: Il-kont qatt ma ġie rreġistrat ma' Google Cloud Code, u l-onboarding awtomatiku falla.
 
-**Soluzzjoni**: Ħaddem `agy login` manwalment biex tiskatta r-reġistrazzjoni ta' Cloud Code, imbagħad aġġorna t-token fid-Dashboard ta' OmniRoute.
+**Soluzzjoni**: Ħaddem `agy login` manwalment biex tiskatta r-reġistrazzjoni ta' Cloud Code, imbagħad aġġorna t-token fid-Dashboard ta' 67router.
 
 ### It-token skada jew ġie revokat
 
@@ -273,4 +273,4 @@ Il-kont mhux qed jaħdem?
 
 ---
 
-_Aġġornat l-aħħar: 2026-07-31. Ibbażat fuq OmniRoute v3.8.50._
+_Aġġornat l-aħħar: 2026-07-31. Ibbażat fuq 67router v3.8.50._

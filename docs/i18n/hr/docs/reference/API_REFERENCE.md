@@ -6,7 +6,7 @@
 
 🌐 **Jezici:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Temeljna referenca za OmniRoute API. Obuhvaća javno sučelje `/v1` i najčešće korištene krajnje točke za upravljanje; strojno čitljiva datoteka [`docs/openapi.yaml`](../openapi.yaml) i stablo ruta u `src/app/api/` iscrpni su izvori.
+Temeljna referenca za 67router API. Obuhvaća javno sučelje `/v1` i najčešće korištene krajnje točke za upravljanje; strojno čitljiva datoteka [`docs/openapi.yaml`](../openapi.yaml) i stablo ruta u `src/app/api/` iscrpni su izvori.
 
 Za detaljan pregled protokola kompatibilnog s OpenAI-jem i matricu mogućnosti pružatelja pogledajte
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Odgovor | `HIT` ili `MISS` (bez strujanja)                                                                                                                                                                                                         |
 | `X-OmniRoute-Idempotent` | Odgovor | `true` ako su duplikati uklonjeni                                                                                                                                                                                                        |
 | `X-OmniRoute-Progress`   | Odgovor | `enabled` ako je praćenje napretka uključeno                                                                                                                                                                                             |
-| `X-OmniRoute-Session-Id` | Odgovor | Efektivni ID sesije koji upotrebljava OmniRoute                                                                                                                                                                                          |
+| `X-OmniRoute-Session-Id` | Odgovor | Efektivni ID sesije koji upotrebljava 67router                                                                                                                                                                                           |
 | `X-OmniRoute-Request-Id` | Odgovor | Korelacijski ID zahtjeva (kada je poznat)                                                                                                                                                                                                |
-| `X-OmniRoute-Version`    | Odgovor | Verzija međuverzije OmniRoutea (uvijek prisutna)                                                                                                                                                                                         |
+| `X-OmniRoute-Version`    | Odgovor | Verzija međuverzije 67routera (uvijek prisutna)                                                                                                                                                                                          |
 | `X-OmniRoute-Cost-Saved` | Odgovor | Iznos u USD-u ušteđen zahvaljujući predmemoriji pri rezultatu HIT (samo pogoci u predmemoriji)                                                                                                                                           |
 | `X-OmniRoute-Decision`   | Odgovor | Trag usmjeravanja: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` je strategija kombinacije ili `single` za zahtjev koji nije kombiniran) — uvijek prisutan u odgovorima nakon dovršetka                                  |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Prikvačivanje računa po zahtjevu
 
-Kada pružatelj ima nekoliko veza (računa ili ključeva), OmniRoute obično odabire jednu
+Kada pružatelj ima nekoliko veza (računa ili ključeva), 67router obično odabire jednu
 putem svoje strategije odabira računa. Umjesto toga, zahtjev može prikvačiti određenu vezu
 pomoću zaglavlja `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ svaki projekt prikvačili drugi račun:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Izvor: `src/sse/handlers/chat.ts` (čitanje zaglavlja), `src/sse/services/auth.t
 ## Isključivi zakupi upravljanih sesija
 
 Isključivi zakup upravljanih sesija opcionalni je ugovor usmjeravanja neovisan o klijentu: jedan aktivni vlasnik
-drži jednu prihvatljivu OmniRoute vezu. Njime se ne zakupljuje model, ne zahtijeva OAuth, ne identificira
+drži jednu prihvatljivu 67router vezu. Njime se ne zakupljuje model, ne zahtijeva OAuth, ne identificira
 određeni klijent niti se zahtijeva određeni pružatelj usluge.
 
 API ključ kojim se provodi autentifikacija mora imati opseg `lease:exclusive` i izričit popis
@@ -190,7 +190,7 @@ Vlasnik aktivnog zakupa može izričito zatražiti metapodatke za prikaz koji š
 
 Ova opcionalna radnja dohvaćanja statusa ograđena je neprozirnim vlasnikom, autentificiranim upravljanim API ključem i točnom
 aktivnom generacijom unutar jedne transakcije baze podataka. `displayName` je samo obrezani konfigurirani
-naziv veze; ima vrijednost `null` kada ne postoji siguran konfigurirani naziv. OmniRoute nikada ne koristi
+naziv veze; ima vrijednost `null` kada ne postoji siguran konfigurirani naziv. 67router nikada ne koristi
 adresu e-pošte ili generirani identitet računa kao zamjenu. Vrijednost pružatelja neosjetljiva je oznaka za prikaz i nikada
 nije generirani identifikator kompatibilnog pružatelja. Vjerodajnice, tokeni, kolačići, neobrađeni identifikatori veze ili API
 ključa, sažeci vlasnika, tajne za ograđivanje i interni podaci usmjeravanja isključeni su.
@@ -231,7 +231,7 @@ Privremeno nadmetanje za resurse vraća HTTP `429` uz `Retry-After` i:
 
 Ovaj odgovor znači samo da obični skup prihvatljivih veza nije bio prazan i da je svaki slobodni kandidat
 bio zauzet tuđim aktivnim zakupom. Nepodržani modeli/pružatelji, nepodudaranje pravila, razdoblje mirovanja, kvota,
-stanje sustava i drugi uobičajeni neuspjesi prihvatljivosti zadržavaju svoje postojeće OmniRoute odgovore.
+stanje sustava i drugi uobičajeni neuspjesi prihvatljivosti zadržavaju svoje postojeće 67router odgovore.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ dokumente EmbeddingsV5Request i **prosljeđuje ih neizmijenjene** na `https://ap
 ```
 
 Izvorne vrijednosti `{ image | audio | video | pdf }` mogu biti javni HTTPS URL, `data:` URI ili sirovi
-base64. OmniRoute ne pretvara te objekte u nizove niti dohvaća izvorne URL-ove slika — Jina sama dohvaća
+base64. 67router ne pretvara te objekte u nizove niti dohvaća izvorne URL-ove slika — Jina sama dohvaća
 javno dostupne medije. Dodatna polja Jina (`task`, `normalized`, `truncate`, `embedding_type`) se
 prosljeđuju. Jina SKU-ovi koji podržavaju samo tekst i dalje odbijaju netekstualne dokumente.
 
@@ -454,7 +454,7 @@ pozivatelju, tako da klijentski kôd ne mora posebno obrađivati pružatelja.
 
 ### Autentifikacija i razrješavanje krajnje točke za Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` ponovno koristi istu autentifikaciju za Vertex AI koju OmniRoute već podržava za
+`vertex-deepseek-ocr` ponovno koristi istu autentifikaciju za Vertex AI koju 67router već podržava za
 promet razgovora/slika (`open-sse/executors/vertex.ts`): API ključ veze predstavlja ili
 JSON vjerodajnicu servisnog računa (koja se putem toka JWT bearer razmjenjuje za kratkotrajni OAuth pristupni token)
 ili već izdani OAuth pristupni token koji se koristi bez izmjena. URL nadređene krajnje točke Vertexova je
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Cijene modela (`pricing`)
 
-Stavka sadrži objekt `pricing` kada OmniRoute zna cijenu modela. Cijena dolazi
+Stavka sadrži objekt `pricing` kada 67router zna cijenu modela. Cijena dolazi
 iz tablice cijena koja se koristi za obračun troškova: ugrađenih zadanih vrijednosti, sinkroniziranih cijena i
 nadjačavanja postavljenih putem `/api/pricing`. To su kataloške cijene, pa pružatelji pretplate također
 prikazuju cijenu po tokenu.
@@ -632,8 +632,8 @@ izravno uvesti `open-sse/config/providerPluginManifestRegistry.ts`.
 
 ## Generiranje zvuka putem ElevenLabsa
 
-Konfigurirajte vezu s pružateljem usluge `elevenlabs` u OmniRouteu svojim ElevenLabs API ključem.
-Klijenti se autentificiraju svojim ključem za **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Konfigurirajte vezu s pružateljem usluge `elevenlabs` u 67routeru svojim ElevenLabs API ključem.
+Klijenti se autentificiraju svojim ključem za **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 pristupnik prosljeđuje pohranjeni ključ pružatelja kao `xi-api-key`. Nikada nemojte slati ElevenLabs ključ
 kao nositeljski token pristupnika.
 
@@ -698,7 +698,7 @@ rute vraćaju nepromijenjene statusne kodove i tijela pogrešaka nadređene uslu
 ograničenje paketa i `429` za ograničenje kvote. Zaglavlja `character-cost`, `song-id`, `request-id` i `retry-after`
 zadržavaju se kada su prisutna. Besplatni saldo kredita ne jamči pristup svakom
 glazbenom modelu, izlaznom formatu ili API značajci: ElevenLabs odlučuje o pravu pristupa za svaki zahtjev.
-Objedinjena krajnja točka zadržava statusne kodove pogrešaka u normaliziranoj ovojnici pogreške OmniRoutea.
+Objedinjena krajnja točka zadržava statusne kodove pogrešaka u normaliziranoj ovojnici pogreške 67routera.
 
 Ugovori nadređene usluge: [zvučni efekti](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [glazbena kompozicija](https://elevenlabs.io/docs/api-reference/music/compose) i
@@ -739,7 +739,7 @@ Ugovori nadređene usluge: [zvučni efekti](https://elevenlabs.io/docs/api-refer
 
 Sve POST rute imaju isti oblik: `Bearer your-api-key` + JSON tijelo provjereno pomoću Zoda (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` itd.; pogledajte `src/shared/validation/schemas.ts`). U slučaju neuspješne provjere sheme vraća se 4xx.
 
-Za klijente koji ne mogu priložiti `Authorization: Bearer ...`, OmniRoute također prihvaća API ključeve u URL-u putem kompatibilnih parametara upita (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ili namjenskih krajnjih točaka `/api/v1/vscode/{token}/...` dokumentiranih u nastavku.
+Za klijente koji ne mogu priložiti `Authorization: Bearer ...`, 67router također prihvaća API ključeve u URL-u putem kompatibilnih parametara upita (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ili namjenskih krajnjih točaka `/api/v1/vscode/{token}/...` dokumentiranih u nastavku.
 
 ```bash
 # Ponovno rangiranje (pružatelj iz registra u oblaku ili čvor pružatelja kompatibilan s OpenAI-jem kao "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, isti API ključ kao za Parallel Search) vraća isključivo Markdown
 — bilo koji drugi `format` rezultira odgovorom `400` — i ograničava sadržaj na 100.000 znakova. Kada
 se sama ciljna stranica ne može izdvojiti, nadređeni servis to prijavljuje unutar odgovora HTTP 200;
-OmniRoute to prikazuje kao `422` s fiksnom porukom.
+67router to prikazuje kao `422` s fiksnom porukom.
 
 | Metoda | Putanja         | Opis                                                                   |
 | ------ | --------------- | ---------------------------------------------------------------------- |
@@ -964,14 +964,14 @@ mora biti aktivna ulazna točka (što prema zadanim postavkama jest kada postoji
 OpenAI **Codex CLI** provjerava naziv modela na strani klijenta kada je
 `supports_websockets = true` i **odbija ID-ove s prefiksom pružatelja** poput
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Pošaljite **osnovni** ID (npr. `gpt-5.5`). OmniRouteov most
+a ChatGPT account`). Pošaljite **osnovni** ID (npr. `gpt-5.5`). 67routerov most
 namijenjen je samo za codex, stoga ponovno razrješava osnovni ID kao codex model
 (`resolveCodexWsModelInfo`) prije tuneliranja prema nadređenom servisu — iako bi se osnovni
 `gpt-5.5` inače putem HTTP-a usmjerio drugom pružatelju.
 
 #### Konfiguriranje OpenAI Codex CLI-ja
 
-Usmjerite Codex CLI prema OmniRouteu dodavanjem prilagođenog pružatelja s podrškom za WebSocket
+Usmjerite Codex CLI prema 67routeru dodavanjem prilagođenog pružatelja s podrškom za WebSocket
 u `~/.codex/config.toml` (upotrijebite zaseban `CODEX_HOME` kako ne biste mijenjali
 postojeću konfiguraciju):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # bez završne kose crte; WS URL se izvodi automatski (u produkciji upotrijebite https/wss)
 wire_api = "responses"                    # jedina podržana vrijednost od veljače 2026.
 supports_websockets = true                # omogućuje transport Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # sadržava OmniRoute API ključ (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # sadržava 67router API ključ (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute API ključ (bilo koji ključ ako je REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router API ključ (bilo koji ključ ako je REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI nadograđuje `base_url + /responses` na WebSocket, a OmniRoute ga tunelira
+CLI nadograđuje `base_url + /responses` na WebSocket, a 67router ga tunelira
 prema odabranoj codex OAuth vezi. Provjereno od početka do kraja na lokalnom
 poslužitelju: ChatGPT vraća `codex.rate_limits` + `response.created` i struji
 dovršetak.
@@ -1076,7 +1076,7 @@ postotaka prikazanih u **običnom tekstnom izlazu** i strukturiranom **JSON izla
 
 #### Formula prilagodbe pragu
 
-OmniRoute podržava proaktivne pragove kvota radi sprječavanja iscrpljivanja resursa izvornog pružatelja (konfigurirano putem
+67router podržava proaktivne pragove kvota radi sprječavanja iscrpljivanja resursa izvornog pružatelja (konfigurirano putem
 `quotaWindowThresholds` veze, zadanih vrijednosti pružatelja ili globalnih postavki otpornosti). Kada je granični prag
 (npr. `cutoff = 25%`) aktivan za prozor kvote, prikazivač teksta izračunava preostalo dopuštenje na sljedeći način:
 
@@ -1440,9 +1440,8 @@ GET odgovor uključuje `agents[]` (id, name, binary, version, installed, protoco
 
 ### Evaluacije
 
-| Krajnja točka | Metoda   | Opis                                               |
-| ------------- | -------- | -------------------------------------------------- |
-| `/api/evals`  | GET/POST | Popis evaluacijskih paketa / pokretanje evaluacije |
+| Krajnja točka | Metoda | Opis |
+| ------------- | ------ | ---- |
 
 ### Pravila
 
@@ -1620,7 +1619,7 @@ Napomene:
 
 - Tokenizirani aliasi ponovno koriste iste obrađivače kao `/v1/*` i `/api/tags`; strukture odgovora ostaju jednake.
 - Dajte prednost zaglavlju `Authorization: Bearer ...` kad god klijent podržava prilagođena zaglavlja.
-- Tokeni u URL-u mogu se pojaviti u zapisnicima obrnutog proxyja, povijesti preglednika i telemetriji izvan OmniRoutea. Tretirajte ih kao mogućnost za kompatibilnost, a ne kao zadani način autentifikacije.
+- Tokeni u URL-u mogu se pojaviti u zapisnicima obrnutog proxyja, povijesti preglednika i telemetriji izvan 67routera. Tretirajte ih kao mogućnost za kompatibilnost, a ne kao zadani način autentifikacije.
 
 ---
 
@@ -1728,7 +1727,7 @@ Kombinacije usmjeravanja više razine (već sažete pod `/api/combos*`) mogu se 
 
 ## Webhookovi
 
-Pretplate na izlazne webhookove za OmniRoute događaje (dovršetak zahtjeva, iscrpljenje kvote, rotacija ključa itd.).
+Pretplate na izlazne webhookove za 67router događaje (dovršetak zahtjeva, iscrpljenje kvote, rotacija ključa itd.).
 
 | Metoda | Putanja                   | Opis                                                                     |
 | ------ | ------------------------- | ------------------------------------------------------------------------ |
@@ -1759,31 +1758,6 @@ Podsustav za automatsko upravljanje ključevima upotrebljava ih za izdavanje i r
 
 ---
 
-## Protokol agenata
-
-Zadaci agenata u oblaku (Claude Code, Codex Cloud, OpenHands itd.) koji se izvršavaju udaljeno u ime korisnika OmniRoutea.
-
-| Metoda | Putanja                       | Opis                                                                                                                                                      |
-| ------ | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Prikazuje zadatke — opcionalno `?provider=`, `?status=`, `?limit=` (1–500, zadano 50)                                                                     |
-| POST   | `/api/v1/agents/tasks`        | Stvara zadatak — tijelo se provjerava pomoću `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Vraća `201` s omotnicom zadatka |
-| DELETE | `/api/v1/agents/tasks?id=...` | Briše zadatak                                                                                                                                             |
-| GET    | `/api/v1/agents/tasks/[id]`   | Dohvaća zadatak — sinkrono osvježava status od nadređenog agenta u oblaku kada je postavljen `external_id`                                                |
-| POST   | `/api/v1/agents/tasks/[id]`   | Diskriminirana radnja: `{action: "approve"}`, `{action: "message", message}` ili `{action: "cancel"}`                                                     |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Briše određeni zadatak prema ID-u                                                                                                                         |
-
-> **Autorizacija:** autorizacija za upravljanje obavezna je za svaku metodu (`requireCloudAgentManagementAuth`). Prije verzije v3.8.0 ove metode nisu zahtijevale autorizaciju — pogledajte commit `588a0333` za informacije o promjeni koja narušava kompatibilnost.
-
-```bash
-# Stvorite zadatak u oblaku za Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proxy poslužitelji za upravljanje
 
 Izlazni HTTP(S)/SOCKS proxy poslužitelji koji se mogu dodijeliti pružateljima usluga, računima ili globalno.
@@ -1807,7 +1781,7 @@ Izlazni HTTP(S)/SOCKS proxy poslužitelji koji se mogu dodijeliti pružateljima 
 
 ## Otpornost (prošireno)
 
-OmniRoute nudi tri neovisna mehanizma za privremene kvarove; krajnje točke za upravljanje u nastavku omogućuju operatorima njihov pregled i nadjačavanje:
+67router nudi tri neovisna mehanizma za privremene kvarove; krajnje točke za upravljanje u nastavku omogućuju operatorima njihov pregled i nadjačavanje:
 
 | Opseg                    | Pohrana stanja                          | Čitanje                                   | Ponovno postavljanje / brisanje                                  |
 | ------------------------ | --------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
@@ -1842,7 +1816,7 @@ Potpunu konceptualnu referencu i zadane vrijednosti osigurača potražite u [`CL
 
 ## Vještine
 
-Okvir za vještine koji omogućuje proširenje sustava OmniRoute prilagođenim izvršnim rukovateljima te integracijama s tržištima.
+Okvir za vještine koji omogućuje proširenje sustava 67router prilagođenim izvršnim rukovateljima te integracijama s tržištima.
 
 | Metoda | Put                               | Opis                                                                                                                                     |
 | ------ | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1879,7 +1853,7 @@ Trajna pohrana razgovorne/činjenične memorije, ograničena na pojedini API klj
 
 ## MCP poslužitelj
 
-OmniRoute uključuje ugrađeni poslužitelj protokola Model Context Protocol s 3 prijenosa (stdio, SSE, streamable-http) i alatima ograničenog opsega. Krajnje točke nadzorne ploče u nastavku čitaju podatke o stanju/reviziji i posreduju HTTP prijenose.
+67router uključuje ugrađeni poslužitelj protokola Model Context Protocol s 3 prijenosa (stdio, SSE, streamable-http) i alatima ograničenog opsega. Krajnje točke nadzorne ploče u nastavku čitaju podatke o stanju/reviziji i posreduju HTTP prijenose.
 
 | Metoda | Putanja | Opis |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1901,50 +1875,12 @@ OmniRoute uključuje ugrađeni poslužitelj protokola Model Context Protocol s 3
 
 ## A2A poslužitelj
 
-OmniRoute pruža A2A (agent-agent) krajnju točku JSON-RPC 2.0 te REST omotač za pregled i upotrebu na nadzornoj ploči.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # neobavezno, osim ako je postavljen OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Podržane metode (sve ovise o `settings.a2aEnabled`):
-
-| Metoda           | Opis                                                               |
-| ---------------- | ------------------------------------------------------------------ |
-| `message/send`   | Sinkrono izvršavanje vještine; vraća `{task, artifacts, metadata}` |
-| `message/stream` | SSE izvođenje istog skupa vještina putem strujanja                 |
-| `tasks/get`      | Dohvaćanje zadatka prema `taskId`                                  |
-| `tasks/cancel`   | Otkazivanje zadatka prema `taskId`                                 |
-
-Ugrađene vještine: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kartica agenta
-
-```bash
-GET /.well-known/agent.json
-```
-
-Vraća javnu karticu A2A agenta (naziv, opis, mogućnosti, katalog vještina, shemu autentikacije) — javno se predmemorira 1 h. Autentikacija nije potrebna.
+67router pruža A2A (agent-agent) krajnju točku JSON-RPC 2.0 te REST omotač za pregled i upotrebu na nadzornoj ploči.
 
 ### REST pomoćne krajnje točke
 
 | Metoda | Putanja                      | Opis                                                                                                                |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | Status omogućenosti A2A-a + statistika zadataka + sažetak predmemorirane kartice agenta                             |
 | GET    | `/api/a2a/tasks`             | Popis zadataka — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Nije implementirano kao REST pomoćna krajnja točka — izradite putem JSON-RPC metode `message/send`)                |
 | GET    | `/api/a2a/tasks/[id]`        | Dohvaćanje jednog zadatka                                                                                           |
@@ -1964,12 +1900,8 @@ Vraća javnu karticu A2A agenta (naziv, opis, mogućnosti, katalog vještina, sh
 | GET | `/api/cloud/models/alias` | Popis pseudonima modela izloženih sinkronizaciji s oblakom |
 | GET | `/api/assess` | Čitanje najnovijih kategorizacija procjene (po pružatelju/modelu) |
 | POST | `/api/assess` | Pokretanje procjene — tijelo: `{scope: {type:"all"}                                                      | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Popis ugrađenih paketa evaluacija + najnovijih izvođenja |
-| POST | `/api/evals` | Pokretanje izvođenja evaluacije |
-| POST | `/api/evals/suites` | Izrada prilagođenog paketa evaluacija — tijelo se provjerava pomoću `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Dohvaćanje prilagođenog paketa evaluacija |
 
-**Autentikacija:** `/api/cloud/auth` izravno provjerava Bearer ključ i vraća maskirani ključ i `projectId` svake veze samo za ključ s opsegom `manage` / `admin`; ostale rute `/api/cloud/*`, `/api/evals/*` i `/api/assess` zahtijevaju upravljačku sesiju/API ključ. POST za `/api/assess` upotrebljava `validateBody` sa shemom opsega koja je diskriminirana unija.
+**Autentikacija:** `/api/cloud/auth` izravno provjerava Bearer ključ i vraća maskirani ključ i `projectId` svake veze samo za ključ s opsegom `manage` / `admin`; ostale rute `/api/cloud/*` i `/api/assess` zahtijevaju upravljačku sesiju/API ključ. POST za `/api/assess` upotrebljava `validateBody` sa shemom opsega koja je diskriminirana unija.
 
 ---
 
@@ -2127,7 +2059,7 @@ Krajnje točke namijenjene isključivo administratorima za operativno upravljanj
 
 ## Upravljanje CLI alatima
 
-Upravljajte CLI alatima koji se integriraju s OmniRouteom (antigravity, commandCode,
+Upravljajte CLI alatima koji se integriraju s 67routerom (antigravity, commandCode,
 devin-cli itd.). Potpuni popis potražite u [Referenci pružatelja usluga](./PROVIDER_REFERENCE.md).
 
 | Metoda | Putanja                                 | Opis                                                                                                                                                                                 |
@@ -2236,26 +2168,6 @@ Sve pojedinosti potražite u dokumentu [Okvir vještina](../frameworks/SKILLS.md
 
 ---
 
-## Dodaci
-
-Upravljajte dodacima za OmniRoute (proširenjima trećih strana).
-
-| Metoda | Putanja                            | Opis                             |
-| ------ | ---------------------------------- | -------------------------------- |
-| GET    | `/api/plugins`                     | Popis instaliranih dodataka      |
-| POST   | `/api/plugins/marketplace/install` | Instalacija dodatka s tržnice    |
-| DELETE | `/api/plugins/[name]`              | Deinstalacija dodatka            |
-| POST   | `/api/plugins/[name]/activate`     | Aktivacija dodatka               |
-| POST   | `/api/plugins/[name]/deactivate`   | Deaktivacija dodatka             |
-| GET    | `/api/plugins/[name]/config`       | Dohvaćanje konfiguracije dodatka |
-| PUT    | `/api/plugins/[name]/config`       | Ažuriranje konfiguracije dodatka |
-
-**Autentifikacija:** Zahtijeva sesiju za upravljanje.
-
-Sve pojedinosti potražite u dokumentu [Okvir za dodatke](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Usmjeravanje u sjeni
 
 Usporedba pružatelja u sjeni / A-B usporedba **nije zasebno REST sučelje** — konfigurira se putem kombiniranog usmjeravanja (pogledajte [Automatske kombinacije](../routing/AUTO-COMBO.md)). Metrike usporedbe za pojedinačne kombinacije dostupne su putem `GET /api/combos/metrics`.
@@ -2290,5 +2202,3 @@ token, API ključ s opsegom za upravljanje) i objašnjenje kako se razlikuju od 
 - `requireLogin` se može uključiti ili isključiti putem `/api/settings/require-login`
 - Rute `/v1/*` opcionalno zahtijevaju Bearer API ključ kada je `REQUIRE_API_KEY=true`
 - „token za upravljanje” / „API ključ s opsegom za upravljanje” u ovoj referenci označava jednu od skupina iz tog vodiča — a ne nedefiniranu dodatnu vrstu tajne
-
-> **Prijelomna promjena (v3.8.0)** — `/api/v1/agents/tasks/*` i krajnje točke za upravljanje razdobljem hlađenja sada zahtijevaju **autentikaciju za upravljanje** (kolačić nadzorne ploče `auth_token` ili API ključ s opsegom za upravljanje). Klijenti koji su prethodno pozivali te rute bez autentikacije primit će `401 Unauthorized`. Pogledajte commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

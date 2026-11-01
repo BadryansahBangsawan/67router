@@ -4,7 +4,7 @@
 
 ---
 
-Decriptarea transparentă TPROXY este **al 5-lea mod de capturare** OmniRoute pentru stiva MITM
+Decriptarea transparentă TPROXY este **al 5-lea mod de capturare** 67router pentru stiva MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Aceasta interceptează și **decriptează** traficul HTTPS local de ieșire pe Linux
 folosind TPROXY din kernel + rutare bazată pe politici — **fără** falsificarea `/etc/hosts` și
@@ -53,7 +53,7 @@ Utilizați acest mod atunci când doriți să capturați și să decriptați tra
 - nu doriți să îl perturbați printr-o modificare a proxy-ului la nivel de sistem.
 
 Deoarece interceptarea are loc în kernel, procesul sursă nu necesită **nicio
-modificare de configurare** — însă procesul trebuie să acorde încredere CA-ului dinamic instalat de OmniRoute
+modificare de configurare** — însă procesul trebuie să acorde încredere CA-ului dinamic instalat de 67router
 (consultați [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -72,7 +72,7 @@ addon necompilat), încărcătorul addonului (`src/mitm/tproxy/transparentSocket
 returnează `null` în loc să genereze o excepție. Starea modului de captură raportează apoi
 `available: false`, comutatorul din panoul de control este **dezactivat**, cu textul explicativ
 „Decriptarea TPROXY necesită Linux + root + addonul nativ”, iar restul
-OmniRoute continuă să funcționeze.
+67router continuă să funcționeze.
 
 ---
 
@@ -259,7 +259,7 @@ ocolire al socketului (**SO_MARK**):
 | **Igienizarea erorilor**                  | Răspunsurile de eroare ale rutei sunt procesate prin `sanitizeErrorMessage()` (Regula strictă #12).                                                                                                                                                                                                                                                                                                                    |
 
 **CA-ul MITM oferă o capabilitate puternică.** O CA considerată de încredere de sistemul de operare și care poate semna pentru orice
-gazdă înseamnă că orice interceptează OmniRoute poate fi decriptat. Aceasta este disponibilă numai prin
+gazdă înseamnă că orice interceptează 67router poate fi decriptat. Aceasta este disponibilă numai prin
 modul explicit de capturare TPROXY, disponibil doar local, dezactivat implicit, iar intrarea din depozitul de încredere
 este eliminată atunci când opriți modul.
 
@@ -369,7 +369,7 @@ returnează `available: false` când modulul suplimentar lipsește.
 ### Reguli de firewall rămase după o blocare
 
 `revertTproxy()` este inversul exact al operației de aplicare și este idempotent. Oprirea
-modului revine asupra regulilor; dacă OmniRoute a fost închis forțat în timpul unei sesiuni, utilizați acțiunea
+modului revine asupra regulilor; dacă 67router a fost închis forțat în timpul unei sesiuni, utilizați acțiunea
 **Reparare** AgentBridge (`POST /api/tools/agent-bridge/repair`) pentru a anula starea de sistem
 rămasă neeliminată (falsificare DNS, CA rădăcină, proxy de sistem). Regulile TPROXY `mangle` și ruta sunt, de asemenea,
 eliminate automat la repornire.

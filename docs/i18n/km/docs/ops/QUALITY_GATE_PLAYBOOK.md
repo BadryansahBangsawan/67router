@@ -4,7 +4,7 @@
 
 ---
 
-> **ឯកសារនេះជាអ្វី។** ការវាយតម្លៃយ៉ាងម៉ត់ចត់លើប្រព័ន្ធច្រកត្រួតពិនិត្យគុណភាពរបស់ OmniRoute
+> **ឯកសារនេះជាអ្វី។** ការវាយតម្លៃយ៉ាងម៉ត់ចត់លើប្រព័ន្ធច្រកត្រួតពិនិត្យគុណភាពរបស់ 67router
 > ដោយប្រៀបធៀបទៅនឹងឧត្តមានុវត្តន៍ក្នុងឧស្សាហកម្ម **ព្រមទាំង** បញ្ជីពេញលេញនៃចំណុចត្រួតពិនិត្យ
 > គុណភាពទាំងអស់ និង **ផែនការចម្លងដែលមិនអាស្រ័យលើឧបករណ៍ជាក់លាក់** ដើម្បីអនុវត្តប្រព័ន្ធដូចគ្នានេះទៅលើ
 > គម្រោងណាមួយ។ បានបង្កើតនៅថ្ងៃទី 2026-06-16 ដោយផ្អែកលើស្ថានភាពពិតនៃ repository (មិនមែនពីការចងចាំទេ)។
@@ -101,62 +101,62 @@
 
 ### 1. រចនាប័ទ្ម និងការធ្វើទ្រង់ទ្រាយ (មានលទ្ធផលកំណត់ច្បាស់លាស់ និងលឿន)
 
-- **OmniRoute:** Prettier + ESLint តាមរយៈ lint-staged (pre-commit), 2-spaces/double-quotes/100col។
+- **67router:** Prettier + ESLint តាមរយៈ lint-staged (pre-commit), 2-spaces/double-quotes/100col។
 - **ទូទៅ:** formatter មួយដែលអាចកែតម្រូវដោយស្វ័យប្រវត្តិបាន + linter មួយ ដែលដំណើរការនៅក្នុង pre-commit លើឯកសារដែលបាន staged។
 
 ### 2. ប្រភេទទិន្នន័យ
 
-- **OmniRoute:** `typecheck:core` (រារាំង) + `typecheck:noimplicit:core` (ផ្តល់អនុសាសន៍) + រង្វាស់ `type-coverage` ដែលមានកម្រិត ratchet 92.17% + ថវិកា any សម្រាប់ឯកសារនីមួយៗ។
+- **67router:** `typecheck:core` (រារាំង) + `typecheck:noimplicit:core` (ផ្តល់អនុសាសន៍) + រង្វាស់ `type-coverage` ដែលមានកម្រិត ratchet 92.17% + ថវិកា any សម្រាប់ឯកសារនីមួយៗ។
 - **ទូទៅ:** ការត្រួតពិនិត្យប្រភេទយ៉ាងតឹងរ៉ឹងក្នុង CI + រង្វាស់ type-coverage ដែលមានកម្រិត ratchet + ថវិកា `any`/ច្រកគេចវេះសម្រាប់ឯកសារនីមួយៗ។
 
 ### 3. ការធ្វើតេស្ត (កម្រិតខ្លាំង)
 
-- **OmniRoute:** កម្មវិធីដំណើរការតេស្ត 2 ដែលមិនត្រួតស៊ីគ្នា (Node native + vitest), 8 shards, កម្រិតអប្បបរមានៃ coverage សកល 60/60/60/60 + កម្រិត ratchet ~76% + **កម្រិតអប្បបរមាតាមម៉ូឌុលចំនួន 8 សម្រាប់ម៉ូឌុលសំខាន់ៗ** + ការធ្វើ property tests រៀងរាល់យប់ + **ការធ្វើ mutation testing** រៀងរាល់យប់។
+- **67router:** កម្មវិធីដំណើរការតេស្ត 2 ដែលមិនត្រួតស៊ីគ្នា (Node native + vitest), 8 shards, កម្រិតអប្បបរមានៃ coverage សកល 60/60/60/60 + កម្រិត ratchet ~76% + **កម្រិតអប្បបរមាតាមម៉ូឌុលចំនួន 8 សម្រាប់ម៉ូឌុលសំខាន់ៗ** + ការធ្វើ property tests រៀងរាល់យប់ + **ការធ្វើ mutation testing** រៀងរាល់យប់។
 - **ទូទៅ:** កម្មវិធីដំណើរការតេស្ត + កម្រិតអប្បបរមានៃ coverage បែប **ដាច់ខាត** (ទប់ស្កាត់ការធ្លាក់ដល់សូន្យ) + កម្រិត **ratchet** នៃ coverage (ទប់ស្កាត់ការថយក្រោយ) + **កម្រិតអប្បបរមាតាមម៉ូឌុលសម្រាប់កូដដែលមានហានិភ័យខ្ពស់** (ទប់ស្កាត់ Goodhart) + ការធ្វើតេស្តផ្អែកលើ property សម្រាប់ logic សុទ្ធ + **ការធ្វើ mutation testing** រៀងរាល់យប់ ជារង្វាស់ពិតប្រាកដនៃគុណភាពតេស្ត។
 
 ### 4. គោលការណ៍តេស្ត (ទប់ស្កាត់ការបន្លំ)
 
-- **OmniRoute:** `pr-test-policy` (កូដ production តម្រូវឱ្យមានតេស្ត), `check-test-masking` (រារាំង assert ដែលត្រូវបានធ្វើឱ្យខ្សោយ), `pr-evidence` (ការអះអាងថាជោគជ័យតម្រូវឱ្យមានប្លុកភស្តុតាង), `test-discovery` (តេស្តនីមួយៗត្រូវបានប្រមូលដោយកម្មវិធីដំណើរការតេស្ត)។
+- **67router:** `pr-test-policy` (កូដ production តម្រូវឱ្យមានតេស្ត), `check-test-masking` (រារាំង assert ដែលត្រូវបានធ្វើឱ្យខ្សោយ), `pr-evidence` (ការអះអាងថាជោគជ័យតម្រូវឱ្យមានប្លុកភស្តុតាង), `test-discovery` (តេស្តនីមួយៗត្រូវបានប្រមូលដោយកម្មវិធីដំណើរការតេស្ត)។
 - **ទូទៅ:** ច្រកត្រួតពិនិត្យ "កូដថ្មី ⇒ តេស្តថ្មី" + ឧបករណ៍រកឃើញ assert ដែលត្រូវបានដកចេញ/តក្កវិជ្ជាដែលតែងតែពិត + តម្រូវការភស្តុតាង (TDD ឬ living test) + ការធានាថាគ្មានតេស្តណាមួយត្រូវបានទុកឯកោនៅខាងក្រៅ globs។
 
 ### 5. ភាពស្មុគស្មាញ និងសុខភាពកូដ (ratchets)
 
-- **OmniRoute:** ការព្រមាន ESLint (3769↓), កូដស្ទួន jscpd (5.72%↓), ភាពស្មុគស្មាញ cyclomatic+max-lines (1800↓), ភាពស្មុគស្មាញផ្នែកការគិត sonarjs (753↓), កូដដែលមិនប្រើ/exports ដែលមិនប្រើ knip (339↓), ទំហំឯកសារតាមឯកសារនីមួយៗ (បង្កក ហើយអាចតែបង្រួម), ភាពអាស្រ័យជារង្វង់ (Tarjan ផ្ទាល់ខ្លួន, រារាំង)។
+- **67router:** ការព្រមាន ESLint (3769↓), កូដស្ទួន jscpd (5.72%↓), ភាពស្មុគស្មាញ cyclomatic+max-lines (1800↓), ភាពស្មុគស្មាញផ្នែកការគិត sonarjs (753↓), កូដដែលមិនប្រើ/exports ដែលមិនប្រើ knip (339↓), ទំហំឯកសារតាមឯកសារនីមួយៗ (បង្កក ហើយអាចតែបង្រួម), ភាពអាស្រ័យជារង្វង់ (Tarjan ផ្ទាល់ខ្លួន, រារាំង)។
 - **ទូទៅ:** អនុវត្ត ratchet លើរង្វាស់សុខភាពទាំងអស់ (ការព្រមាន, កូដស្ទួន, ភាពស្មុគស្មាញ cyclomatic **និង** cognitive, កូដដែលមិនប្រើ, ទំហំឯកសារ, វដ្ត import)។ ទិសដៅតែងតែជា "កុំឱ្យថយក្រោយ"។
 
 ### 6. សុវត្ថិភាពស្ថិតិ (SAST + ទិន្នន័យសម្ងាត់)
 
-- **OmniRoute:** CodeQL (កម្រិត ratchet នៃការជូនដំណឹង = 0), gitleaks (`[extend] useDefault=true` — សំខាន់បំផុត!), SonarQube, ច្បាប់សុវត្ថិភាពផ្ទាល់ខ្លួន (public-creds, error-helper, route-guard-membership, route-validation)។
+- **67router:** CodeQL (កម្រិត ratchet នៃការជូនដំណឹង = 0), gitleaks (`[extend] useDefault=true` — សំខាន់បំផុត!), SonarQube, ច្បាប់សុវត្ថិភាពផ្ទាល់ខ្លួន (public-creds, error-helper, route-guard-membership, route-validation)។
 - **ទូទៅ:** SAST (CodeQL/Sonar/semgrep) ដែលមានកម្រិត ratchet សម្រាប់ការជូនដំណឹង + កម្មវិធីស្កេនទិន្នន័យសម្ងាត់ដែលមាន **សំណុំច្បាប់លំនាំដើមដែលទទួលមរតក** (ការកំណត់រចនាសម្ព័ន្ធផ្ទាល់ខ្លួនដែលសរសេរជាន់លើលំនាំដើម = ចំណុចខ្វាក់) + ច្រកត្រួតពិនិត្យសុវត្ថិភាព Hard Rule ជាក់លាក់សម្រាប់គម្រោង។
 
 ### 7. ខ្សែសង្វាក់ផ្គត់ផ្គង់ (ភាពអាស្រ័យ)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (បញ្ជីអនុញ្ញាត SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` ទប់ស្កាត់ slopsquatting (បញ្ជីអនុញ្ញាត + អាយុ ≥72h)។
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (បញ្ជីអនុញ្ញាត SPDX), lockfile-lint (HTTPS+sha512+registry), `check-deps` ទប់ស្កាត់ slopsquatting (បញ្ជីអនុញ្ញាត + អាយុ ≥72h)។
 - **ទូទៅ:** SCA ពីប្រភពច្រើន + បញ្ជីអនុញ្ញាតអាជ្ញាបណ្ណ + ការត្រួតពិនិត្យសុចរិតភាព lockfile + បញ្ជីអនុញ្ញាតភាពអាស្រ័យដែលមានការត្រួតពិនិត្យអាយុ/typosquatting + bot ធ្វើបច្ចុប្បន្នភាពជាក្រុម។
 
 ### 8. ខ្សែសង្វាក់ផ្គត់ផ្គង់ (ការបង្កើត និងការចេញផ្សាយ)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ប្រចាំសប្តាហ៍), ការពង្រឹង workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)។
+- **67router:** SBOM (CycloneDX + syft), SLSA provenance (`--provenance`), OpenSSF Scorecard (ប្រចាំសប្តាហ៍), ការពង្រឹង workflow (zizmor: artipacked→`persist-credentials:false`, cache-poisoning, token-permissions)។
 - **ទូទៅ:** បង្កើត SBOM នៅពេល publish + provenance ដែលបានចុះហត្ថលេខា (SLSA L2+) + Scorecard តាមកាលវិភាគ + ពង្រឹង workflow ទាំងអស់ (token ដែលមានសិទ្ធិអប្បបរមា, មិនរក្សាទុក credentials សម្រាប់ checkout ដែលមិនមែនជា pusher, actions ត្រូវបានចាក់សោដោយ SHA)។
 
 ### 9. កិច្ចសន្យា និង API
 
-- **OmniRoute:** oasdiff (ការផ្លាស់ប្តូរ OpenAPI ដែលបំបែកភាពឆបគ្នា), schemathesis (contract fuzz រៀងរាល់យប់), openapi-coverage (% នៃ routes ដែលមានឯកសារ, កម្រិត ratchet 38.3%), openapi-security-tiers (spec ទល់នឹង route-guard)។
+- **67router:** oasdiff (ការផ្លាស់ប្តូរ OpenAPI ដែលបំបែកភាពឆបគ្នា), schemathesis (contract fuzz រៀងរាល់យប់), openapi-coverage (% នៃ routes ដែលមានឯកសារ, កម្រិត ratchet 38.3%), openapi-security-tiers (spec ទល់នឹង route-guard)។
 - **ទូទៅ:** contract diff សម្រាប់ការផ្លាស់ប្តូរដែលបំបែកភាពឆបគ្នា (oasdiff/buf) + property-based fuzz ធៀបនឹង spec (schemathesis) + coverage ឯកសារដែលមានកម្រិត ratchet + ភាពស្របគ្នារវាង spec↔code។
 
 ### 10. ឯកសារ និង i18n (ទប់ស្កាត់ការចាស់ខូច)
 
-- **OmniRoute:** docs-sync (កំណែដែលបានឆ្លុះគ្នា), docs-counts-sync (លេខក្នុងឯកសារធៀបនឹងកូដ), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + កម្រិត ratchet 80.1%)។
+- **67router:** docs-sync (កំណែដែលបានឆ្លុះគ្នា), docs-counts-sync (លេខក្នុងឯកសារធៀបនឹងកូដ), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + កម្រិត ratchet 80.1%)។
 - **ទូទៅ:** ធ្វើសមកាលកម្មកំណែ/ចំនួន/env-vars រវាងឯកសារ និងកូដ (ប្រើជាច្រកត្រួតពិនិត្យ មិនមែនគ្រាន់តែជឿទុកចិត្ត) + ផ្ទៀងផ្ទាត់តំណខាងក្នុង + coverage នៃ i18n ដែលមានកម្រិត ratchet។
 
 ### 11. ការទប់ស្កាត់ការប្រឌិតព័ត៌មាន / ភាពស្របគ្នា (ប្រភេទដែលកម្រមាន)
 
-- **OmniRoute:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ route ពិតប្រាកដ), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering។
+- **67router:** known-symbols (string dispatch ⇒ living symbol), provider-consistency, fetch-targets (client fetch ⇒ route ពិតប្រាកដ), docs-symbols, db-rules (Hard Rules #2/#5), migration-numbering។
 - **ទូទៅ:** សម្រាប់រាល់ "ប្រភពនៃការពិតដែលបានចម្លងស្ទួន" (registry, string dispatch, ឯកសារយោងឆ្លង layer) ត្រូវមានច្រកត្រួតពិនិត្យដែលបញ្ជាក់ថាភាគីទាំងពីរត្រូវគ្នា។ វារកឃើញការចាស់ខូចដែល typecheck/test មិនអាចរកឃើញ។
 
 ### 12. ភាពធន់ និង domain (ជាក់លាក់ចំពោះផលិតផល)
 
-- **OmniRoute:** chaos (ការបញ្ចូលកំហុសដោយចេតនា), heap-growth (ការលេចធ្លាយ), k6 (soak), promptfoo+garak (ការធ្វើ red-team លើ LLM តាម OWASP LLM Top 10), ច្បាប់ភាពធន់ទាំង 3 (circuit-breaker/cooldown/lockout)។
+- **67router:** chaos (ការបញ្ចូលកំហុសដោយចេតនា), heap-growth (ការលេចធ្លាយ), k6 (soak), promptfoo+garak (ការធ្វើ red-team លើ LLM តាម OWASP LLM Top 10), ច្បាប់ភាពធន់ទាំង 3 (circuit-breaker/cooldown/lockout)។
 - **ទូទៅ:** កំណត់អត្តសញ្ញាណរបៀបបរាជ័យនៃ domain **របស់អ្នក** ហើយមានច្រកត្រួតពិនិត្យមួយ (ទោះបីធ្វើតែរៀងរាល់យប់ក៏ដោយ) សម្រាប់របៀបនីមួយៗ។ សម្រាប់កម្មវិធី AI៖ ការធ្វើ red-team លើ injection។ សម្រាប់ប្រព័ន្ធចែកចាយ៖ chaos + leak + soak។
 
 ---

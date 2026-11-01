@@ -4,7 +4,7 @@
 
 ---
 
-เมื่อ OmniRoute ทำงานภายใน Docker ขั้นตอนแบบเดิมอย่าง **Import from Cursor IDE** /
+เมื่อ 67router ทำงานภายใน Docker ขั้นตอนแบบเดิมอย่าง **Import from Cursor IDE** /
 `cursor-agent` จะล้มเหลว เนื่องจากคอนเทนเนอร์ไม่สามารถมองเห็นการติดตั้ง Cursor
 บนโฮสต์ได้ ให้ใช้ **Login with Cursor** (deep-control PKCE) แทน
 
@@ -14,7 +14,7 @@
    `~/.config/Cursor/User/globalStorage/state.vscdb` _ภายใน_ คอนเทนเนอร์
    สำหรับ Docker Desktop บน macOS ฐานข้อมูล IDE ของโฮสต์จะไม่ถูกเมานต์โดยค่าเริ่มต้น และ
    OS ของคอนเทนเนอร์คือ Linux แม้ว่าโฮสต์จะเป็น Darwin ก็ตาม
-2. **ไม่มีไบนารี `cursor-agent`** — อิมเมจ OmniRoute อย่างเป็นทางการไม่มี
+2. **ไม่มีไบนารี `cursor-agent`** — อิมเมจ 67router อย่างเป็นทางการไม่มี
    `cursor-agent` ก่อนหน้านี้ Available Models จะเรียกใช้
    `cursor-agent --list-models` ผ่านเชลล์ และย้อนกลับไปใช้แค็ตตาล็อกแบบคงที่
 3. **ไบนารีไม่ถูกต้อง** — **อย่า** bind-mount `cursor-agent` สำหรับ macOS เข้าไปในคอนเทนเนอร์
@@ -24,11 +24,11 @@
 
 1. เปิด **Dashboard → Providers → Cursor**
 2. เลือกแท็บ **Login with Cursor**
-3. คลิก **Login with Cursor** — OmniRoute จะเปิด
+3. คลิก **Login with Cursor** — 67router จะเปิด
    `https://cursor.com/loginDeepControl?…` ในเบราว์เซอร์บน **โฮสต์** ของคุณ
-4. อนุมัติการเข้าสู่ระบบในเบราว์เซอร์ แล้วกลับไปยังแดชบอร์ด OmniRoute
+4. อนุมัติการเข้าสู่ระบบในเบราว์เซอร์ แล้วกลับไปยังแดชบอร์ด 67router
    จะสำรวจ `api2.cursor.sh/auth/poll` จนกว่าจะได้รับโทเค็น
-5. OmniRoute จะจัดเก็บทั้งโทเค็น **access + refresh** และรีเฟรชโทเค็นผ่าน
+5. 67router จะจัดเก็บทั้งโทเค็น **access + refresh** และรีเฟรชโทเค็นผ่าน
    `https://api2.cursor.sh/auth/exchange_user_api_key`
 
 วิธีนี้ไม่จำเป็นต้องมี Cursor IDE หรือ `cursor-agent` ภายในคอนเทนเนอร์
@@ -37,10 +37,10 @@
 
 เมื่อมีการเชื่อมต่อที่เข้าสู่ระบบแล้ว **Available Models / Auto-Sync** จะเลือกใช้
 แค็ตตาล็อก HTTP `AiService/AvailableModels` ของ Cursor ก่อน โดยใช้ bearer token
-ของการเชื่อมต่อ หากไม่สำเร็จ OmniRoute จะยังคงลองใช้ `cursor-agent` ของโฮสต์
+ของการเชื่อมต่อ หากไม่สำเร็จ 67router จะยังคงลองใช้ `cursor-agent` ของโฮสต์
 (หากมี) แล้วจึงใช้ข้อมูลเริ่มต้นจากรีจิสทรีแบบคงที่
 
-OmniRoute จะแสดง **`auto`** ในแค็ตตาล็อกเสมอ (ชื่อที่แสดงคือ “Auto”) รวมถึง
+67router จะแสดง **`auto`** ในแค็ตตาล็อกเสมอ (ชื่อที่แสดงคือ “Auto”) รวมถึง
 โหมดเราเตอร์แบบ OpenCodex ได้แก่ **`auto-cost`**, **`auto-balance`** และ
 **`auto-intelligence`** เมื่อส่งผ่านระบบ โหมดเหล่านี้จะแมปไปยังโมเดล `default`
 ของ Cursor (พร้อม `optimization` ModelParameter สำหรับทั้งสามรูปแบบ) ควรเลือกใช้
@@ -87,7 +87,7 @@ ID ที่มีคำต่อท้ายระบุระดับ effort 
 ## เทิร์นว่างเปล่า / โควตาการใช้งานหมด
 
 เมื่อ Cursor ยอมรับ Run แต่ไม่ส่งข้อความของผู้ช่วยกลับมา (มักเกิดขึ้นเมื่อ
-โควตาการใช้งานพรีเมียมหมด) OmniRoute จะแสดงข้อผิดพลาด **429** ที่นำไปแก้ไขได้
+โควตาการใช้งานพรีเมียมหมด) 67router จะแสดงข้อผิดพลาด **429** ที่นำไปแก้ไขได้
 (พร้อมข้อมูลบ่งชี้เกี่ยวกับโควตา) หรือ **502** พร้อมคำแนะนำ — แทนที่จะเป็นเพียงข้อความ
 “Provider returned empty content” ความล้มเหลวในการสตรีม เช่น
 `not_found: AI Model Not Found` (ช่วงโควตาการใช้งานหมดลง) จะถูกจัดประเภทเป็น
@@ -97,7 +97,7 @@ ID ที่มีคำต่อท้ายระบุระดับ effort 
 
 ## เวอร์ชันไคลเอนต์ (headless)
 
-หากไม่มีการติดตั้ง `cursor-agent` ในเครื่อง OmniRoute จะระบุ
+หากไม่มีการติดตั้ง `cursor-agent` ในเครื่อง 67router จะระบุ
 `x-cursor-client-version` ผ่าน env `CURSOR_AGENT_CLI_VERSION` จากนั้นใช้ข้อมูลที่แคชไว้บนดิสก์
 ซึ่งดึงมาจากสคริปต์ติดตั้ง Cursor แล้วจึงใช้ build id ที่ตรึงไว้ กำหนดค่าแทนด้วย
 `CURSOR_AGENT_CLI_VERSION` เมื่อจำเป็น

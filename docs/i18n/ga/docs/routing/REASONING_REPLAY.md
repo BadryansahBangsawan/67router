@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Nuashonraithe go deireanach:** 2026-06-28 — v3.8.40
 
-Gabhann OmniRoute `reasoning_content` an chúntóra a tháirgeann samhlacha mód smaointeoireachta agus athsheinneann sé go trédhearcach é ar iarratais ilseala nuair a éilíonn an soláthraí réamhtheachtach é. Cuireann sé seo deireadh leis na hearráidí HTTP 400 a ghineann soláthraithe dochta nuair atá réasúnaíocht na seal roimhe sin ar iarraidh ó stair chomhrá an chliaint.
+Gabhann 67router `reasoning_content` an chúntóra a tháirgeann samhlacha mód smaointeoireachta agus athsheinneann sé go trédhearcach é ar iarratais ilseala nuair a éilíonn an soláthraí réamhtheachtach é. Cuireann sé seo deireadh leis na hearráidí HTTP 400 a ghineann soláthraithe dochta nuair atá réasúnaíocht na seal roimhe sin ar iarraidh ó stair chomhrá an chliaint.
 
 ## Cén Fáth a bhfuil Seo Ann
 
@@ -17,7 +17,7 @@ Diúltaíonn roinnt soláthraithe mód smaointeoireachta do sheal leantach mura 
 Paraiméadar Mícheart: Ní mór an reasoning_content sa mhód smaointeoireachta a chur ar ais chuig an API.
 ```
 
-Ach baineann gnáthchliaint (Cursor, Cline, Roo Code, OpenAI SDK) `reasoning_content` den stair a athsheinneann siad. Aischuireann OmniRoute é ó thaisce ar thaobh an fhreastalaí ionas go mbeidh an t-iarratas a fheiceann an córas réamhtheachtach comhsheasmhach. Tugadh isteach mar chuid d'eagrán #1628 an mharthanacht hibrideach cuimhne/SQLite ionas go mairfidh an taisce i ndiaidh atosuithe próisis.
+Ach baineann gnáthchliaint (Cursor, Cline, Roo Code, OpenAI SDK) `reasoning_content` den stair a athsheinneann siad. Aischuireann 67router é ó thaisce ar thaobh an fhreastalaí ionas go mbeidh an t-iarratas a fheiceann an córas réamhtheachtach comhsheasmhach. Tugadh isteach mar chuid d'eagrán #1628 an mharthanacht hibrideach cuimhne/SQLite ionas go mairfidh an taisce i ndiaidh atosuithe próisis.
 
 ## Ailtireacht
 

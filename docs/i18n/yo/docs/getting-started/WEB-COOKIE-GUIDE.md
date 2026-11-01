@@ -4,7 +4,7 @@
 
 ---
 
-Àwọn olupèsè Web Cookie ń jẹ́ kí OmniRoute lo iṣẹ́ AI nípasẹ̀ ìgbà aṣàwákiri rẹ tó ti wà tẹ́lẹ̀ dípò kọ́kọ́rọ́ API. Wọ́n wúlò nígbà tí o bá ti ní ààyè sí iṣẹ́ kan nípasẹ̀ ojúlé wẹ́ẹ̀bù rẹ̀, tí o sì fẹ́ kí OmniRoute lo ìgbà ìfàṣẹ̀sí kan náà.
+Àwọn olupèsè Web Cookie ń jẹ́ kí 67router lo iṣẹ́ AI nípasẹ̀ ìgbà aṣàwákiri rẹ tó ti wà tẹ́lẹ̀ dípò kọ́kọ́rọ́ API. Wọ́n wúlò nígbà tí o bá ti ní ààyè sí iṣẹ́ kan nípasẹ̀ ojúlé wẹ́ẹ̀bù rẹ̀, tí o sì fẹ́ kí 67router lo ìgbà ìfàṣẹ̀sí kan náà.
 
 Ní ìyàtọ̀ sí àwọn olupèsè kọ́kọ́rọ́ API, àwọn olupèsè Web Cookie máa ń ṣe ìfàṣẹ̀sí nípa lílo àwọn ẹ̀rí ìdánimọ̀ tí aṣàwákiri rẹ fi ránṣẹ́ sí ojúlé wẹ́ẹ̀bù náà.
 
@@ -49,7 +49,7 @@ DevTools
 
 Àkọlé ìbéèrè `Cookie` ní àlàyé ìfàṣẹ̀sí gangan tí aṣàwákiri rẹ lò ní àṣeyọrí.
 
-Fún ọ̀pọ̀lọpọ̀ àwọn olupèsè Web Cookie, èyí ni iye tí ó yẹ kí a lẹ̀ mọ́ inú OmniRoute.
+Fún ọ̀pọ̀lọpọ̀ àwọn olupèsè Web Cookie, èyí ni iye tí ó yẹ kí a lẹ̀ mọ́ inú 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Fún ọ̀pọ̀lọpọ̀ àwọn olupèsè Web Cookie, èyí ni iye tí ó y�
 4. Tún ojú-ìwé náà ṣe.
 5. Ṣí ìbéèrè ìfọ̀rọ̀wérọ̀ tàbí ìjíròrò kan tí a ti fìdí rẹ̀ múlẹ̀.
 6. Da àwọn ẹ̀rí ìfàṣẹ̀sí tí a nílò kọ.
-7. Ṣí OmniRoute.
+7. Ṣí 67router.
 8. Lọ sí **Providers → Add Provider**.
 9. Yan olupèsè Web Cookie rẹ.
 10. Lẹ àwọn ẹ̀rí ìdánimọ̀ náà mọ́.
@@ -92,17 +92,17 @@ Oríṣiríṣi ojúlé wẹ́ẹ̀bù máa ń tọ́jú ìfàṣẹ̀sí ní �
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) jẹ́ pẹpẹ ìfọ̀rọ̀wérọ̀ ọ̀fẹ́ fún àwọn oníbàárà tí kò nílò ìforúkọsílẹ̀ — a máa dá sáẹ́ṣọ̀nù náà sílẹ̀ láìfi ìdánimọ̀ hàn ní ìbẹ̀wò àkọ́kọ́, ó sì máa ń tẹ̀síwájú nípasẹ̀ kúkì mẹ́ta: `uid`, `si_usr_id`, àti `si_ses_id`. OmniRoute ń ṣe aṣojú ẹnu-ọ̀nà `/api/dispatch` kan náà nípasẹ̀ id awoṣe kan ṣoṣo (`notrack-c`, orúkọ àfikún `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) jẹ́ pẹpẹ ìfọ̀rọ̀wérọ̀ ọ̀fẹ́ fún àwọn oníbàárà tí kò nílò ìforúkọsílẹ̀ — a máa dá sáẹ́ṣọ̀nù náà sílẹ̀ láìfi ìdánimọ̀ hàn ní ìbẹ̀wò àkọ́kọ́, ó sì máa ń tẹ̀síwájú nípasẹ̀ kúkì mẹ́ta: `uid`, `si_usr_id`, àti `si_ses_id`. 67router ń ṣe aṣojú ẹnu-ọ̀nà `/api/dispatch` kan náà nípasẹ̀ id awoṣe kan ṣoṣo (`notrack-c`, orúkọ àfikún `ntw`).
 
 ### Àwọn ìgbésẹ̀ láti sopọ̀
 
 1. Ṣí [notrack.ai](https://notrack.ai) nínú aṣàwákiri rẹ, kí o sì jẹ́ kí a ṣètò kúkì sáẹ́ṣọ̀nù aláìlórúkọ.
 2. Ṣí **DevTools → Network**, tún ojú-ewé náà ṣe, kí o sì tẹ èyíkéyìí nínú àwọn ìbéèrè `/api`.
 3. Nínú **Request Headers**, ṣe àdàkọ gbogbo iye àkọlé `Cookie`.
-4. Nínú OmniRoute, lọ sí **Providers → Add Provider → NoTrack Web (Free)**.
+4. Nínú 67router, lọ sí **Providers → Add Provider → NoTrack Web (Free)**.
 5. Lẹ okun kúkì náà sínú ààyè `apiKey`, kí o sì tẹ **Save**.
 
-OmniRoute máa ń yọ `uid`, `si_usr_id`, àti `si_ses_id` jáde láti inú okun tí a lẹ̀, ó sì tún àkọlé `Cookie` mímọ́ kan kọ́ pẹ̀lú àwọn méjì-méjì wọ̀nyẹn nìkan — pẹ̀lú `nt_session` (àmì `ntk_…` tí a ṣètò fún àwọn àkọọ́lẹ̀ tí wọ́n ti wọlé) nígbà tí ó bá wà. Bí ọ̀kan nínú àwọn mẹ́tẹ̀ẹ̀ta bá sọnù, a máa fi okun àìyípadà tí a lẹ̀ náà ránṣẹ́ síwájú kí àwọn olùṣàkóso lè ṣàyẹ̀wò àwọn ìrísí mìíràn.
+67router máa ń yọ `uid`, `si_usr_id`, àti `si_ses_id` jáde láti inú okun tí a lẹ̀, ó sì tún àkọlé `Cookie` mímọ́ kan kọ́ pẹ̀lú àwọn méjì-méjì wọ̀nyẹn nìkan — pẹ̀lú `nt_session` (àmì `ntk_…` tí a ṣètò fún àwọn àkọọ́lẹ̀ tí wọ́n ti wọlé) nígbà tí ó bá wà. Bí ọ̀kan nínú àwọn mẹ́tẹ̀ẹ̀ta bá sọnù, a máa fi okun àìyípadà tí a lẹ̀ náà ránṣẹ́ síwájú kí àwọn olùṣàkóso lè ṣàyẹ̀wò àwọn ìrísí mìíràn.
 
 ### Àwọn id awoṣe
 
@@ -198,7 +198,7 @@ kì í sì í ṣe láti:
 
 ---
 
-## Kúkì Ṣiṣẹ́ Nínú Aṣàwákiri Ṣùgbọ́n Kò Ṣiṣẹ́ Nínú OmniRoute
+## Kúkì Ṣiṣẹ́ Nínú Aṣàwákiri Ṣùgbọ́n Kò Ṣiṣẹ́ Nínú 67router
 
 Àwọn olùpèsè kan máa ń fi àwọn kúkì tí a máa ń rán nígbà àwọn ìbéèrè tí a ti fọwọ́sí nìkan kún un.
 

@@ -42,7 +42,7 @@ Build dependencies behind this expression are ignored and might cause incorrect 
 **Upstream `fumadocs-mdx`, not actionable.** The package emits a dynamic `import()` of a
 generated module that webpack's `FileSystemInfo` pass cannot statically follow. The only
 consequence is that webpack may invalidate its build cache more often for that dependency;
-the **emitted output is unaffected**. OmniRoute suppresses the known benign form in
+the **emitted output is unaffected**. 67router suppresses the known benign form in
 `next.config.mjs` via `scripts/build/knownBuildWarnings.mjs`, which allow-lists the whole
 `node_modules/fumadocs-mdx/dist/` directory (both the `load-from-file-*.js` and
 `eval-*.js` bundles).
@@ -52,12 +52,12 @@ the **emitted output is unaffected**. OmniRoute suppresses the known benign form
 `next build` imports application modules while collecting page data, so a few
 runtime-oriented log lines appear during the build as well. They are **not** build errors.
 
-| Message                                                                                       | Owner                                 | Meaning                                                                                                                                          |
-| --------------------------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `[DB] Build phase detected — using no-op SQLite stub (never queried)`                         | `src/lib/db/core.ts`                  | The build never opens the real database. Expected.                                                                                               |
-| `[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting.`                  | `src/shared/utils/rateLimiter.ts`     | Redis is optional; without it rate limiting falls back to memory. Set it only if you run Redis in production — see `REDIS_PRODUCTION_CONFIG.md`. |
-| `[CREDENTIALS] No external credentials file found, using defaults.`                           | `open-sse/config/credentialLoader.ts` | Expected unless you ship an external credentials file.                                                                                           |
-| `[INFO] [PLUGIN_SCANNER] scanner.dir_resolved` / `[INFO] [MEMORY_MANAGER] Registered backend` | plugin + memory registries            | Informational.                                                                                                                                   |
+| Message                                                                      | Owner                                 | Meaning                                                                                                                                          |
+| ---------------------------------------------------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `[DB] Build phase detected — using no-op SQLite stub (never queried)`        | `src/lib/db/core.ts`                  | The build never opens the real database. Expected.                                                                                               |
+| `[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting.` | `src/shared/utils/rateLimiter.ts`     | Redis is optional; without it rate limiting falls back to memory. Set it only if you run Redis in production — see `REDIS_PRODUCTION_CONFIG.md`. |
+| `[CREDENTIALS] No external credentials file found, using defaults.`          | `open-sse/config/credentialLoader.ts` | Expected unless you ship an external credentials file.                                                                                           |
+| `[INFO] [MEMORY_MANAGER] Registered backend`                                 | memory registry                       | Informational.                                                                                                                                   |
 
 ### `[SECURITY] FATAL: JWT_SECRET is not set`
 
@@ -75,7 +75,7 @@ failure. That message is now skipped during the build phase: the module-level wa
 
 ## Bun and dependency installation
 
-OmniRoute is built and run with **Node.js** (`engines.node` in `package.json`). Install
+67router is built and run with **Node.js** (`engines.node` in `package.json`). Install
 dependencies with `npm ci` (or `npm install`):
 
 ```bash
@@ -83,7 +83,7 @@ npm ci
 npm run build:release
 ```
 
-**`bun install` is not a supported way to install OmniRoute's dependencies** for this
+**`bun install` is not a supported way to install 67router's dependencies** for this
 branch. Bun `1.4.2` is pinned as a devDependency and is used only to run a small,
 allow-listed set of gate/generator scripts. If you install with Bun you may see:
 

@@ -3,8 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Field } from "@omniroute/ui-kit/field";
-import { Card, Textarea, Toggle } from "@/shared/components";
+import { Textarea, Toggle } from "@/shared/components";
 import Icon from "@/shared/components/Icon";
+import { SettingsSection } from "./SettingsSection";
 
 export default function SystemPromptTab() {
   const [config, setConfig] = useState({ enabled: false, prefixPrompt: "", suffixPrompt: "" });
@@ -61,14 +62,9 @@ export default function SystemPromptTab() {
   };
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-5">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted">
-          <Icon name="edit_note" size={20} />
-        </div>
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold">{t("globalSystemPrompt")}</h3>
-        </div>
+    <SettingsSection
+      title={t("globalSystemPrompt")}
+      action={
         <div className="flex items-center gap-3">
           {status === "saved" && (
             <span className="text-xs font-medium text-success flex items-center gap-1">
@@ -82,8 +78,8 @@ export default function SystemPromptTab() {
             ariaLabel={t("globalSystemPrompt")}
           />
         </div>
-      </div>
-
+      }
+    >
       {config.enabled && (
         <div className="flex flex-col gap-5">
           {/* Before Prompt — injected BEFORE agent/provider instructions */}
@@ -141,6 +137,6 @@ export default function SystemPromptTab() {
           </Field>
         </div>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

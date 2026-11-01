@@ -4,7 +4,7 @@
 
 ---
 
-Conas a dhéanann OmniRoute costas gach iarratais a mheas, a thaifeadadh agus a thuairisciú — agus cén fáth gur
+Conas a dhéanann 67router costas gach iarratais a mheas, a thaifeadadh agus a thuairisciú — agus cén fáth gur
 **rianaitheoir coigilteas** í an uimhir ar an deais, seachas bille.
 
 Féach freisin: [Treoir Úsáideora](./USER_GUIDE.md) · [Gailearaí Gnéithe](./FEATURES.md)
@@ -13,11 +13,11 @@ Féach freisin: [Treoir Úsáideora](./USER_GUIDE.md) · [Gailearaí Gnéithe](.
 
 ## Cad atá ann (agus cad nach bhfuil ann)
 
-Cuireann OmniRoute costas USD in aghaidh an iarratais i leith gach comhlánaithe trí líon na
+Cuireann 67router costas USD in aghaidh an iarratais i leith gach comhlánaithe trí líon na
 dticeáilíní a iolrú faoi rátaí praghsála samhla. Cumhachtaíonn na huimhreacha seo an deais
 **Costais**, CLI `omniroute cost` / `omniroute usage`, easpórtálacha CSV/JSON, agus buiséid de réir eochair API.
 
-> **Rianaitheoir coigilteas is ea "costas" na deaise, ní bille.** Ní ghearrann OmniRoute táille ort riamh
+> **Rianaitheoir coigilteas is ea "costas" na deaise, ní bille.** Ní ghearrann 67router táille ort riamh
 > — stiúrann sé d'iarratais chuig soláthraithe atá nasctha agat cheana féin (do chuid
 > síntiús féin, sraitheanna saor in aisce agus eochracha API). Má tá "$290 de chostas iomlán" fabhraithe go hiomlán ar shamhlacha
 > saor in aisce, ciallaíonn sé sin gur thart ar **$290 nár íoc tú** le API íoctha. Is _meastachán_ í an fhigiúr
@@ -29,7 +29,7 @@ coigilteas is ea 'costas' na deaise, ní bille").
 
 Ós rud é gur meastachán í an uimhir:
 
-- Braitheann sí ar an tábla praghsála atá ag OmniRoute do gach samhail. Ní chuireann samhail nach bhfuil aon iontráil
+- Braitheann sí ar an tábla praghsála atá ag 67router do gach samhail. Ní chuireann samhail nach bhfuil aon iontráil
   phraghsála aici ach costas `0` leis (taispeántar í mar ró "Oidhreachta / Saor in Aisce" sa taiscéalaí).
 - Fabhraítear costas _measta_ fós do thrácht sraithe saor in aisce agus síntiúis — sin é an
   méid atá á shábháil agat, ní méid atá le híoc.
@@ -47,7 +47,7 @@ Tagann costais ó thábla praghsála a réitítear san ord tosaíochta seo
 2. **Praghsáil sheachtrach shioncronaithe** — faighte ó
    `model_prices_and_context_window.json` poiblí LiteLLM nuair atá sioncronú cumasaithe (stóráilte in ainmspás
    `pricing_synced` ar leith ionas nach bhforscríobhann sé do chuid sáruithe choíche).
-3. **Luachanna réamhshocraithe crua-chódaithe** — a sheoltar le OmniRoute.
+3. **Luachanna réamhshocraithe crua-chódaithe** — a sheoltar le 67router.
 
 Is gá **rogha a dhéanamh go sainráite** chun sioncronú praghsála seachtraí a úsáid; tá sé díchumasaithe de réir réamhshocraithe. Athróga timpeallachta ábhartha
 (féach [`.env.example`](../../.env.example)):
@@ -192,7 +192,7 @@ luaitear a mhalairt.
 
 ## CLI
 
-Cuireann CLI OmniRoute orduithe costais, úsáide agus praghsála ar fáil (cláraithe in
+Cuireann CLI 67router orduithe costais, úsáide agus praghsála ar fáil (cláraithe in
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

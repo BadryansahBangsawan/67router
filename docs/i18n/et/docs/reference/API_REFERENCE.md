@@ -6,7 +6,7 @@
 
 🌐 **Keeled:** 🇺🇸 [Inglise](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-OmniRoute API põhiviide. See hõlmab avalikku `/v1` liidest ja enim kasutatavaid halduse lõpp-punkte; masinloetav [`docs/openapi.yaml`](../openapi.yaml) ning marsruudipuu asukohas `src/app/api/` on ammendavad allikad.
+67router API põhiviide. See hõlmab avalikku `/v1` liidest ja enim kasutatavaid halduse lõpp-punkte; masinloetav [`docs/openapi.yaml`](../openapi.yaml) ning marsruudipuu asukohas `src/app/api/` on ammendavad allikad.
 
 OpenAI-ga ühilduva protokolli ja teenusepakkujate võimaluste maatriksi üksikasjaliku kirjelduse leiate failist
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Vastus | `HIT` või `MISS` (mittevoogedastus)                                                                                                                                                                                                |
 | `X-OmniRoute-Idempotent` | Vastus | `true`, kui duplikaat eemaldati                                                                                                                                                                                                    |
 | `X-OmniRoute-Progress`   | Vastus | `enabled`, kui edenemise jälgimine on sisse lülitatud                                                                                                                                                                              |
-| `X-OmniRoute-Session-Id` | Vastus | OmniRoute'i kasutatav tegelik seansi ID                                                                                                                                                                                            |
+| `X-OmniRoute-Session-Id` | Vastus | 67router'i kasutatav tegelik seansi ID                                                                                                                                                                                             |
 | `X-OmniRoute-Request-Id` | Vastus | Päringu korrelatsiooni-ID (kui see on teada)                                                                                                                                                                                       |
-| `X-OmniRoute-Version`    | Vastus | OmniRoute'i järgu versioon (alati olemas)                                                                                                                                                                                          |
+| `X-OmniRoute-Version`    | Vastus | 67router'i järgu versioon (alati olemas)                                                                                                                                                                                           |
 | `X-OmniRoute-Cost-Saved` | Vastus | Vahemälu abil säästetud summa USA dollarites HIT-i korral (ainult vahemälu tabamused)                                                                                                                                              |
 | `X-OmniRoute-Decision`   | Vastus | Marsruutimise jälg: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` on kombinatsioonistrateegia või mittekombineeritud päringu korral `single`) — lõpetamisvastustes alati olemas                                    |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Konto sidumine päringu kaupa
 
-Kui teenusepakkujal on mitu ühendust (kontot või võtit), valib OmniRoute tavaliselt ühe
+Kui teenusepakkujal on mitu ühendust (kontot või võtit), valib 67router tavaliselt ühe
 oma kontovaliku strateegia abil. Selle asemel saab päringu siduda ühe kindla ühendusega
 päise `x-omniroute-connection` abil:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ iga projekt erineva kontoga:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Allikas: `src/sse/handlers/chat.ts` (päise lugemine), `src/sse/services/auth.ts
 ## Eksklusiivsed hallatud seansirendid
 
 Eksklusiivne hallatud seansirent on valikuline ja kliendist sõltumatu marsruutimisleping: üks aktiivne omanik
-hoiab enda valduses üht sobilikku OmniRoute’i ühendust. See ei rendi mudelit, ei nõua OAuthi, ei tuvasta
+hoiab enda valduses üht sobilikku 67router’i ühendust. See ei rendi mudelit, ei nõua OAuthi, ei tuvasta
 konkreetset klienti ega nõua kindlat teenusepakkujat.
 
 Autentimiseks kasutataval API-võtmel peab olema ulatus `lease:exclusive` ja selgelt määratud mittetühi
@@ -190,7 +190,7 @@ Aktiivse rendi omanik saab selgesõnaliselt taotleda oma praeguse seose privaats
 
 See valikuline olekutoiming on ühes andmebaasitehingus kaitstud läbipaistmatu omaniku, autenditud hallatud API-võtme ja täpse
 aktiivse põlvkonnaga. `displayName` on ainult konfigureeritud ühenduse kärbitud
-nimi; kui turvalist konfigureeritud nime pole, on selle väärtus `null`. OmniRoute ei asenda seda kunagi
+nimi; kui turvalist konfigureeritud nime pole, on selle väärtus `null`. 67router ei asenda seda kunagi
 e-posti aadressi ega genereeritud kontoidentiteediga. Teenusepakkuja väärtus on mittetundlik kuvasilt, mitte kunagi
 genereeritud ühilduva teenusepakkuja identifikaator. Identimisteave, tõendid, küpsised, ühenduse või API-võtme töötlemata
 ID-d, omaniku räsid, tõkestussaladused ja sisemised marsruutimisandmed jäetakse välja.
@@ -231,7 +231,7 @@ Ajutine konkurents ressursile tagastab HTTP `429` koos päisega `Retry-After` ja
 
 See vastus tähendab ainult seda, et tavapärane sobilike ühenduste kogum polnud tühi ja iga vaba kandidaat oli
 võõra aktiivse rendi valduses. Toetamata mudelid/teenusepakkujad, poliitikate mittevastavus, ooteaeg, kvoot,
-seisund ja muud tavapärased sobivustõrked säilitavad oma olemasolevad OmniRoute’i vastused.
+seisund ja muud tavapärased sobivustõrked säilitavad oma olemasolevad 67router’i vastused.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Requesti dokumente ning **edastab need muutmata kujul** aadressile `
 ```
 
 Omavormingus `{ image | audio | video | pdf }` väärtused võivad olla avalik HTTPS-i URL, `data:` URI või töötlemata
-base64. OmniRoute ei teisenda neid objekte stringideks ega hangi omavormingus piltide URL-e — Jina hangib
+base64. 67router ei teisenda neid objekte stringideks ega hangi omavormingus piltide URL-e — Jina hangib
 avaliku meediumi ise. Jina lisaväljad (`task`, `normalized`, `truncate`, `embedding_type`) edastatakse.
 Ainult teksti toetavad Jina SKU-d lükkavad endiselt tagasi muud kui tekstidokumendid.
 
@@ -454,7 +454,7 @@ mistõttu kliendikood ei pea pakkujat eraldi käsitlema.
 
 ### Vertex AI DeepSeek OCR-i autentimine ja lõpp-punkti tuvastamine
 
-`vertex-deepseek-ocr` kasutab uuesti sama Vertex AI autentimist, mida OmniRoute juba
+`vertex-deepseek-ocr` kasutab uuesti sama Vertex AI autentimist, mida 67router juba
 vestlus- ja pildiliikluse jaoks toetab (`open-sse/executors/vertex.ts`): ühenduse API-võti on kas
 teenusekonto JSON-mandaat (mis vahetatakse JWT esitaja voo kaudu lühiajalise OAuthi juurdepääsutõendi
 vastu) või juba väljastatud OAuthi juurdepääsutõend, mida kasutatakse muutmata kujul. Ülesvoolu lõpp-punkti URL on Vertexi
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Mudelite hinnad (`pricing`)
 
-Kirje sisaldab objekti `pricing`, kui OmniRoute teab mudeli hinda. Hind pärineb
+Kirje sisaldab objekti `pricing`, kui 67router teab mudeli hinda. Hind pärineb
 hinnatabelist, mida kasutab kuluarvestus: sisseehitatud vaikehinnad, sünkroonitud hinnad ja
 `/api/pricing` kaudu määratud ülekirjutused. Need on hinnakirjahinnad, seega kuvatakse ka tellimuspõhiste pakkujate puhul
 tokenipõhine hind.
@@ -632,8 +632,8 @@ Kasutage seda lõpp-punkti, kui sidecar töötab protsessiväliselt ega saa fail
 
 ## ElevenLabsi heli genereerimine
 
-Konfigureerige OmniRoute'is `elevenlabs` pakkuja ühendus oma ElevenLabsi API-võtmega.
-Kliendid autendivad oma **OmniRoute'i** võtmega (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Konfigureerige 67router'is `elevenlabs` pakkuja ühendus oma ElevenLabsi API-võtmega.
+Kliendid autendivad oma **67router'i** võtmega (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 lüüs edastab salvestatud pakkuja võtme päisena `xi-api-key`. Ärge kunagi saatke ElevenLabsi
 võtit lüüsi kandjalubana.
 
@@ -698,7 +698,7 @@ marsruudid tagastavad ülesvoolu olekukoodid ja veakehad muutmata kujul, sealhul
 piirangu ning `429` kvoodipiirangu korral. Päised `character-cost`, `song-id`, `request-id` ja `retry-after`
 säilitatakse, kui need on olemas. Tasuta krediidijääk ei taga juurdepääsu kõigile
 muusikamudelitele, väljundvormingutele ega API funktsioonidele: ElevenLabs otsustab iga päringu õigused.
-Ühtne lõpp-punkt säilitab vea olekukoodid OmniRoute'i normaliseeritud veaümbrises.
+Ühtne lõpp-punkt säilitab vea olekukoodid 67router'i normaliseeritud veaümbrises.
 
 Ülesvoolu lepingud: [heliefektid](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [muusika komponeerimine](https://elevenlabs.io/docs/api-reference/music/compose) ja
@@ -739,7 +739,7 @@ muusikamudelitele, väljundvormingutele ega API funktsioonidele: ElevenLabs otsu
 
 Kõik POST-marsruudid järgivad sama kuju: `Bearer your-api-key` + Zodiga valideeritud JSON-sisu (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` jne; vt `src/shared/validation/schemas.ts`). Skeemi valideerimise nurjumisel tagastatakse 4xx.
 
-Klientide jaoks, mis ei saa lisada päist `Authorization: Bearer ...`, aktsepteerib OmniRoute API võtmeid ka URL-is kas päringustringi ühilduvusparameetrite (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) või allpool dokumenteeritud spetsiaalsete `/api/v1/vscode/{token}/...` lõpp-punktide kaudu.
+Klientide jaoks, mis ei saa lisada päist `Authorization: Bearer ...`, aktsepteerib 67router API võtmeid ka URL-is kas päringustringi ühilduvusparameetrite (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) või allpool dokumenteeritud spetsiaalsete `/api/v1/vscode/{token}/...` lõpp-punktide kaudu.
 
 ```bash
 # Ümberjärjestamine (pilveregistri pakkuja või OpenAI-ga ühilduv pakkujasõlm kujul "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, sama API-võti nagu Parallel Searchil) tagastab ainult
 Markdowni — mis tahes muu `format` annab vastuseks `400` — ja piirab sisu 100 000 tähemärgini. Kui
 sihtlehte ennast ei saa ekstraktida, edastab ülesvooluteenus selle HTTP 200 vastuse sees;
-OmniRoute esitab selle fikseeritud sõnumiga vastusena `422`.
+67router esitab selle fikseeritud sõnumiga vastusena `422`.
 
 | Meetod | Tee             | Kirjeldus                                                       |
 | ------ | --------------- | --------------------------------------------------------------- |
@@ -962,14 +962,14 @@ peab olema aktiivne käivituspunkt (vaikimisi see nii on, kui `app/server-ws.mjs
 OpenAI **Codex CLI** valideerib mudeli nime kliendi poolel, kui
 `supports_websockets = true`, ja **lükkab tagasi teenusepakkuja eesliitega ID-d**, näiteks
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Saatke **eesliiteta** ID (nt `gpt-5.5`). OmniRoute'i sild on
+a ChatGPT account`). Saatke **eesliiteta** ID (nt `gpt-5.5`). 67router'i sild on
 mõeldud ainult codexile, seega lahendab see eesliiteta ID enne ülesvoolutunneli loomist uuesti codexi mudelina
 (`resolveCodexWsModelInfo`) — isegi kui eesliiteta
 `gpt-5.5` marsruuditaks HTTP kaudu muidu teise teenusepakkuja juurde.
 
 #### OpenAI Codex CLI konfigureerimine
 
-Suunake Codex CLI OmniRoute'i juurde, lisades WebSocketi toega kohandatud teenusepakkuja
+Suunake Codex CLI 67router'i juurde, lisades WebSocketi toega kohandatud teenusepakkuja
 faili `~/.codex/config.toml` (kasutage eraldi `CODEX_HOME` väärtust, et vältida
 olemasoleva konfiguratsiooni muutmist):
 
@@ -982,15 +982,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # lõpus pole kaldkriipsu; WS-i URL tuletatakse sellest (tootmiskeskkonnas kasutage https/wss-i)
 wire_api = "responses"                    # ainus toetatud väärtus alates 2026. aasta veebruarist
 supports_websockets = true                # lubab Responses-over-WS-i transpordi
-env_key = "OMNIROUTE_API_KEY"             # sisaldab OmniRoute'i API-võtit (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # sisaldab 67router'i API-võtit (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # OmniRoute'i API-võti (mis tahes võti, kui REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # 67router'i API-võti (mis tahes võti, kui REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI täiendab `base_url + /responses` WebSocketi ühenduseks ja OmniRoute loob selle kaudu tunneli
+CLI täiendab `base_url + /responses` WebSocketi ühenduseks ja 67router loob selle kaudu tunneli
 valitud codexi OAuth-ühenduseni. Täielik töövoog valideeriti kohaliku
 serveri suhtes: ChatGPT tagastab `codex.rate_limits` + `response.created` ja voogedastab
 lõpetuse.
@@ -1074,7 +1074,7 @@ ja struktureeritud **JSON-väljundis** esitatud protsentide erinevusega:
 
 #### Katkestusläve järgi korrigeerimise valem
 
-OmniRoute toetab ennetavaid kvoodi katkestuslävesid, et vältida ülesvooluressursside ammendumist (seadistatavad ühenduse
+67router toetab ennetavaid kvoodi katkestuslävesid, et vältida ülesvooluressursside ammendumist (seadistatavad ühenduse
 `quotaWindowThresholds`, teenusepakkuja vaikeväärtuste või globaalsete vastupidavussätete kaudu). Kui kvoodiaknas on aktiivne katkestuslävi
 (nt `cutoff = 25%`), arvutab tekstirenderdaja allesjäänud mahu järgmiselt:
 
@@ -1438,9 +1438,8 @@ GET-vastus sisaldab `agents[]` (id, name, binary, version, installed, protocol, 
 
 ### Hindamised
 
-| Lõpp-punkt   | Meetod   | Kirjeldus                                  |
-| ------------ | -------- | ------------------------------------------ |
-| `/api/evals` | GET/POST | Hindamiskomplektide loetlemine / hindamine |
+| Lõpp-punkt | Meetod | Kirjeldus |
+| ---------- | ------ | --------- |
 
 ### Reeglid
 
@@ -1624,7 +1623,7 @@ Märkused:
 
 - Tokeniseeritud aliased kasutavad samu töötlejaid nagu `/v1/*` ja `/api/tags`; vastuste struktuur jääb samaks.
 - Eelistage `Authorization: Bearer ...`, kui klient toetab kohandatud päiseid.
-- URL-il põhinevad tokenid võivad ilmuda pöördpuhverserveri logides, brauseri ajaloos ja väljaspool OmniRoute'i kogutavas telemeetrias. Käsitlege neid ühilduvusvalikuna, mitte vaikimisi autentimisviisina.
+- URL-il põhinevad tokenid võivad ilmuda pöördpuhverserveri logides, brauseri ajaloos ja väljaspool 67router'i kogutavas telemeetrias. Käsitlege neid ühilduvusvalikuna, mitte vaikimisi autentimisviisina.
 
 ---
 
@@ -1732,7 +1731,7 @@ Kõrgema taseme marsruutimiskombinatsioone (mida on juba kokkuvõtlikult kirjeld
 
 ## Veebihaagid
 
-OmniRoute'i sündmuste (päringu lõpetamine, kvoodi ammendumine, võtme roteerimine jne) väljaminevate veebihaakide tellimused.
+67router'i sündmuste (päringu lõpetamine, kvoodi ammendumine, võtme roteerimine jne) väljaminevate veebihaakide tellimused.
 
 | Meetod | Tee                       | Kirjeldus                                                                 |
 | ------ | ------------------------- | ------------------------------------------------------------------------- |
@@ -1763,31 +1762,6 @@ Automaatse võtmehalduse alamsüsteem kasutab neid API-võtmete väljastamiseks 
 
 ---
 
-## Agentide protokoll
-
-Pilveagentide ülesanded (Claude Code, Codex Cloud, OpenHands jne), mida täidetakse eemalt OmniRoute’i kasutajate nimel.
-
-| Meetod | Tee                           | Kirjeldus                                                                                                                                              |
-| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/v1/agents/tasks`        | Ülesannete loend — valikulised `?provider=`, `?status=`, `?limit=` (1–500, vaikimisi 50)                                                               |
-| POST   | `/api/v1/agents/tasks`        | Ülesande loomine — keha valideerib `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Tagastab `201` koos ülesande ümbrikuga |
-| DELETE | `/api/v1/agents/tasks?id=...` | Ülesande kustutamine                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Ülesande lugemine — kui `external_id` on määratud, värskendab sünkroonselt olekut ülesvoolu pilveagendilt                                              |
-| POST   | `/api/v1/agents/tasks/[id]`   | Eristatud toiming: `{action: "approve"}`, `{action: "message", message}` või `{action: "cancel"}`                                                      |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Konkreetse ülesande kustutamine ID alusel                                                                                                              |
-
-> **Autentimine:** igal meetodil on nõutav halduse autentimine (`requireCloudAgentManagementAuth`). Enne versiooni v3.8.0 ei nõudnud need autentimist — murrangulise muudatuse kohta vt commit’i `588a0333`.
-
-```bash
-# Claude Code'i pilveülesande loomine
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Halduse puhverserverid
 
 Väljamineva HTTP(S)-/SOCKS-liikluse puhverserverid, mida saab määrata teenusepakkujatele, kontodele või globaalselt.
@@ -1811,7 +1785,7 @@ Väljamineva HTTP(S)-/SOCKS-liikluse puhverserverid, mida saab määrata teenuse
 
 ## Tõrkekindlus (laiendatud)
 
-OmniRoute pakub kolme sõltumatut ajutiste tõrgete käsitlemise mehhanismi; alltoodud halduse lõpp-punktid võimaldavad operaatoritel nende olekut lugeda ja alistada:
+67router pakub kolme sõltumatut ajutiste tõrgete käsitlemise mehhanismi; alltoodud halduse lõpp-punktid võimaldavad operaatoritel nende olekut lugeda ja alistada:
 
 | Ulatus                      | Oleku talletamine                            | Lugemine                                  | Lähtestamine / tühjendamine                                             |
 | --------------------------- | -------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------- |
@@ -1846,7 +1820,7 @@ Täieliku kontseptuaalse ülevaate ja kaitselüliti vaikeväärtuste kohta vaada
 
 ## Oskused
 
-Oskuste raamistik OmniRoute'i laiendamiseks kohandatud käivitatavate töötlejatega ning integratsioonid kauplemiskohtadega.
+Oskuste raamistik 67router'i laiendamiseks kohandatud käivitatavate töötlejatega ning integratsioonid kauplemiskohtadega.
 
 | Meetod | Tee                               | Kirjeldus                                                                                                                                         |
 | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1883,7 +1857,7 @@ Püsiv vestlusliku/faktilise mälu hoidla, mille ulatus määratakse API-võtme/
 
 ## MCP-server
 
-OmniRoute sisaldab sisseehitatud Model Context Protocoli serverit, millel on 3 transporti (stdio, SSE, streamable-http) ja piiratud ulatusega tööriistad. Allolevad töölaua lõpp-punktid loevad oleku-/auditandmeid ja vahendavad HTTP-transporte.
+67router sisaldab sisseehitatud Model Context Protocoli serverit, millel on 3 transporti (stdio, SSE, streamable-http) ja piiratud ulatusega tööriistad. Allolevad töölaua lõpp-punktid loevad oleku-/auditandmeid ja vahendavad HTTP-transporte.
 
 | Meetod | Tee | Kirjeldus |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1905,50 +1879,12 @@ OmniRoute sisaldab sisseehitatud Model Context Protocoli serverit, millel on 3 t
 
 ## A2A-server
 
-OmniRoute pakub A2A (agendilt agendile) JSON-RPC 2.0 lõpp-punkti ning REST-ümbrist kontrollimiseks ja töölaual kasutamiseks.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # valikuline, kui OMNIROUTE_API_KEY pole määratud
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Toetatud meetodid (kõik sõltuvad sättest `settings.a2aEnabled`):
-
-| Meetod           | Kirjeldus                                                             |
-| ---------------- | --------------------------------------------------------------------- |
-| `message/send`   | Oskuse sünkroonne käivitamine; tagastab `{task, artifacts, metadata}` |
-| `message/stream` | Sama oskustekomplekti voogedastusega SSE-käivitus                     |
-| `tasks/get`      | Toimingu hankimine `taskId` järgi                                     |
-| `tasks/cancel`   | Toimingu tühistamine `taskId` järgi                                   |
-
-Sisseehitatud oskused: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agendikaart
-
-```bash
-GET /.well-known/agent.json
-```
-
-Tagastab avaliku A2A-agendikaardi (nimi, kirjeldus, võimekused, oskuste kataloog, autentimisskeem) — avalikult vahemällu salvestatud 1 tunniks. Autentimine pole nõutav.
+67router pakub A2A (agendilt agendile) JSON-RPC 2.0 lõpp-punkti ning REST-ümbrist kontrollimiseks ja töölaual kasutamiseks.
 
 ### REST-abimeetodid
 
 | Meetod | Tee                          | Kirjeldus                                                                                                             |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A lubatud olek + toimingute statistika + vahemällu salvestatud agendikaardi kokkuvõte                               |
 | GET    | `/api/a2a/tasks`             | Toimingute loend — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Pole REST-abimeetodina rakendatud — looge JSON-RPC `message/send` kaudu)                                             |
 | GET    | `/api/a2a/tasks/[id]`        | Ühe toimingu hankimine                                                                                                |
@@ -1968,12 +1904,8 @@ Tagastab avaliku A2A-agendikaardi (nimi, kirjeldus, võimekused, oskuste kataloo
 | GET | `/api/cloud/models/alias` | Loetleb pilvesünkroonimisele avaldatud mudelialiased |
 | GET | `/api/assess` | Loeb uusimad hindamiskategooriad (teenusepakkuja/mudeli kaupa) |
 | POST | `/api/assess` | Käivitab hindamise — keha: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Loetleb sisseehitatud evalveerimiskomplektid ja viimatised käivitused |
-| POST | `/api/evals` | Käivitab evalveerimise |
-| POST | `/api/evals/suites` | Loob kohandatud evalveerimiskomplekti — keha valideeritakse skeemiga `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Hangib kohandatud evalveerimiskomplekti |
 
-**Autentimine:** `/api/cloud/auth` valideerib Bearer-võtme otse ning tagastab iga ühenduse maskeeritud võtme ja `projectId` ainult võtme puhul, millel on ulatus `manage` / `admin`; teised marsruudid `/api/cloud/*`, `/api/evals/*` ja `/api/assess` nõuavad haldusseanssi/API-võtit. `/api/assess` POST kasutab diskrimineeritud ühendi ulatuseskeemiga funktsiooni `validateBody`.
+**Autentimine:** `/api/cloud/auth` valideerib Bearer-võtme otse ning tagastab iga ühenduse maskeeritud võtme ja `projectId` ainult võtme puhul, millel on ulatus `manage` / `admin`; teised marsruudid `/api/cloud/*` ja `/api/assess` nõuavad haldusseanssi/API-võtit. `/api/assess` POST kasutab diskrimineeritud ühendi ulatuseskeemiga funktsiooni `validateBody`.
 
 ---
 
@@ -2134,7 +2066,7 @@ Ainult administraatorile mõeldud lõpp-punktid operatiivseks halduseks.
 
 ## CLI-tööriistade haldus
 
-OmniRoute’iga integreeruvate CLI-tööriistade (antigravity, commandCode,
+67router’iga integreeruvate CLI-tööriistade (antigravity, commandCode,
 devin-cli jne) haldamine. Täielikku loendit vaadake jaotisest [Teenusepakkujate teatmik](./PROVIDER_REFERENCE.md).
 
 | Meetod | Tee                                     | Kirjeldus                                                                                                                                                                         |
@@ -2243,26 +2175,6 @@ Täieliku teabe leiate jaotisest [Oskuste raamistik](../frameworks/SKILLS.md).
 
 ---
 
-## Pluginad
-
-Hallake OmniRoute'i pluginaid (kolmandate osapoolte laiendusi).
-
-| Meetod | Tee                                | Kirjeldus                              |
-| ------ | ---------------------------------- | -------------------------------------- |
-| GET    | `/api/plugins`                     | Installitud pluginate loend            |
-| POST   | `/api/plugins/marketplace/install` | Plugina installimine turuplatsilt      |
-| DELETE | `/api/plugins/[name]`              | Plugina desinstallimine                |
-| POST   | `/api/plugins/[name]/activate`     | Plugina aktiveerimine                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Plugina inaktiveerimine                |
-| GET    | `/api/plugins/[name]/config`       | Plugina konfiguratsiooni hankimine     |
-| PUT    | `/api/plugins/[name]/config`       | Plugina konfiguratsiooni värskendamine |
-
-**Autentimine:** Nõuab haldusseanssi.
-
-Täieliku teabe leiate jaotisest [Pluginate raamistik](../frameworks/PLUGIN_SDK.md).
-
----
-
 ## Varimarsruutimine
 
 Pakkujate vari-/A-B-võrdlus **ei ole eraldiseisev REST-liides** — see konfigureeritakse kombineeritud marsruutimise kaudu (vt [Automaatne kombinatsioon](../routing/AUTO-COMBO.md)). Kombinatsioonipõhised võrdlusmõõdikud tagastab `GET /api/combos/metrics`.
@@ -2297,5 +2209,3 @@ haldusulatusega API-võti) ja nende erinevuste kohta inferentsivõtmetest vaadak
 - Seadet `requireLogin` saab muuta marsruudi `/api/settings/require-login` kaudu
 - Marsruudid `/v1/*` võivad nõuda Bearer API-võtit, kui `REQUIRE_API_KEY=true`
 - „Haldusluba” / „haldusulatusega API-võti” tähendab selles viites üht vastavas juhendis kirjeldatud perekonda, mitte määratlemata täiendavat saladuse tüüpi
-
-> **Ühilduvust katkestav muudatus (v3.8.0)** — `/api/v1/agents/tasks/*` ja ooteaja halduse lõpp-punktid nõuavad nüüd **haldusautentimist** (juhtpaneeli küpsis `auth_token` või haldusulatusega API-võti). Kliendid, mis varem kutsusid neid marsruute autentimata, saavad vastuseks `401 Unauthorized`. Vaadake muudatust `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

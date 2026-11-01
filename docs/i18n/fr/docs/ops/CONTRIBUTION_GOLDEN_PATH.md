@@ -113,7 +113,7 @@ ou une vérification manuelle documentée adaptée à la modification.
 - Les catalogues de la CLI sont conservés séparément sous `bin/cli/locales/`.
 - Préservez exactement les placeholders et balises ICU. Ne traduisez pas les noms de produits/fournisseurs/modèles,
   les noms de protocoles et d’en-têtes, les commandes, les identifiants de code/JSON, les URL, les variables d’environnement ou
-  les termes protégés tels que `OmniRoute`, `OAuth`, `MCP` et `A2A`. La liste source actuelle est
+  les termes protégés tels que `67router`, `OAuth`, `MCP` et `A2A`. La liste source actuelle est
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Boucle ciblée**
@@ -260,7 +260,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # réutiliser une archiv
 - **Revenir à la version précédente.** `run` valide à nouveau l’emplacement promu et permute à nouveau `current` et `previous` lorsque
   ce contrôle échoue. Un candidat qui échoue à la première validation n’est jamais promu.
 
-Tout est écrit sous le répertoire ignoré par git `_artifacts/candidate/` ; une installation OmniRoute
+Tout est écrit sous le répertoire ignoré par git `_artifacts/candidate/` ; une installation 67router
 existante et son répertoire de données ne sont jamais modifiés. La CLI promue est
 `_artifacts/candidate/current/prefix/bin/omniroute` ; démarrez-la avec votre propre `DATA_DIR` lorsque vous
 l’utilisez. Codes de sortie : `0` réussite, `1` échec de la validation ou de la promotion, `2` erreur d’utilisation ou build manquant.

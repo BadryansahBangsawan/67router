@@ -79,17 +79,6 @@ export {
 
 // ──────────────── Custom Models ────────────────
 
-function notifyQuotaCombosForProvider(providerId: string): void {
-  void (async () => {
-    try {
-      const { syncQuotaCombosForProvider } = await import("./quotaPools");
-      await syncQuotaCombosForProvider(providerId);
-    } catch {
-      // Non-fatal: quota combo sync errors should not break model operations
-    }
-  })();
-}
-
 export async function getCustomModels(providerId?: string) {
   const db = getDbInstance();
   if (providerId) {
@@ -203,7 +192,6 @@ export async function addCustomModel(
     "INSERT OR REPLACE INTO key_value (namespace, key, value) VALUES ('customModels', ?, ?)"
   ).run(providerId, JSON.stringify(models));
   finishModelCatalogWriteWithBackup();
-  notifyQuotaCombosForProvider(providerId);
   return model;
 }
 
@@ -333,7 +321,6 @@ export async function replaceCustomModels(
   }
 
   finishModelCatalogWriteWithBackup();
-  notifyQuotaCombosForProvider(providerId);
   return merged;
 }
 
@@ -377,7 +364,6 @@ export async function deleteImportedCustomModels(providerId: string): Promise<st
   );
   for (const modelId of removedIds) removeModelCompatOverride(providerId, modelId);
   finishModelCatalogWriteWithBackup();
-  notifyQuotaCombosForProvider(providerId);
   return removedIds;
 }
 
@@ -409,7 +395,6 @@ export async function removeCustomModel(providerId: string, modelId: string) {
 
   removeModelCompatOverride(providerId, modelId);
   finishModelCatalogWriteWithBackup();
-  notifyQuotaCombosForProvider(providerId);
   return true;
 }
 
@@ -613,7 +598,6 @@ export async function replaceSyncedAvailableModelsForConnection(
   const key = `${providerId}:${connectionId}`;
   const normalizedModels = normalizeSyncedAvailableModels(models, providerId);
   persistCanonicalSyncedAvailableModels(key, normalizedModels, normalizeSyncedAvailableModels);
-  notifyQuotaCombosForProvider(providerId);
   // #12849: stamp the sync time on every successful sync — even a re-sync that
   // returns an unchanged list proves the catalog is still current, so staleness
   // gating in getActiveSyncedCatalog must not treat it as aging regardless.
@@ -672,7 +656,6 @@ export async function removeSyncedAvailableModel(
   removeModel();
   if (removedAny) {
     finishSyncedAvailableModelsWrite();
-    notifyQuotaCombosForProvider(providerId);
   }
   return removedAny;
 }
@@ -688,7 +671,6 @@ export async function deleteSyncedAvailableModelsForConnection(
     .run(key);
   if (result.changes > 0) {
     finishSyncedAvailableModelsWrite();
-    notifyQuotaCombosForProvider(providerId);
   }
   return getSyncedAvailableModels(providerId);
 }
@@ -718,7 +700,6 @@ export async function cleanupProviderModelsAfterConnectionDelete(
 
 export async function deleteSyncedAvailableModelsForProvider(providerId: string): Promise<number> {
   const changes = await deleteSyncedAvailableModelsForProviderInternal(providerId);
-  if (changes > 0) notifyQuotaCombosForProvider(providerId);
   return changes;
 }
 
@@ -742,7 +723,6 @@ export async function pruneStaleSyncedAvailableModelsForProvider(
   const changes = Number(result.changes || 0);
   if (changes > 0) {
     finishSyncedAvailableModelsWrite();
-    notifyQuotaCombosForProvider(providerId);
   }
   return changes;
 }
@@ -927,7 +907,6 @@ export async function resetModelEndpointOverride(
     ).run(providerId, JSON.stringify(rows));
   }
   finishModelCatalogWriteWithBackup();
-  notifyQuotaCombosForProvider(providerId);
   return true;
 }
 

@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (አማርኛ)
+# 🐳 Docker Guide — 67router (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [ከአካባቢ ፋይል ጋር](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [የሚገኙ መገለጫዎች](#available-profiles)
-- [OmniRoute በDocker ውስጥ ሲሰራ የአስተናጋጁን CLI መሣሪያዎች ማዋቀር](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [67router በDocker ውስጥ ሲሰራ የአስተናጋጁን CLI መሣሪያዎች ማዋቀር](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [የምርት Compose](#production-compose)
 - [የDockerfile ደረጃዎች](#dockerfile-stages)
@@ -83,7 +83,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## የሚገኙ መገለጫዎች
 
-OmniRoute ለዋና ዋና የማሰማሪያ ቅርጾች የCompose መገለጫዎችን ይዞ ይመጣል። ከአካባቢዎ ጋር የሚዛመደውን ይምረጡ።
+67router ለዋና ዋና የማሰማሪያ ቅርጾች የCompose መገለጫዎችን ይዞ ይመጣል። ከአካባቢዎ ጋር የሚዛመደውን ይምረጡ።
 
 | መገለጫ          | አገልግሎት           | መቼ መጠቀም እንዳለብዎ                                                                                                              | ትዕዛዝ                                         |
 | ------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -95,7 +95,7 @@ OmniRoute ለዋና ዋና የማሰማሪያ ቅርጾች የCompose መገለ�
 
 > በርካታ መገለጫዎችን ማጣመር ይቻላል፦ `docker compose --profile cli --profile cliproxyapi up -d`።
 
-## OmniRoute በDocker ውስጥ ሲሰራ የአስተናጋጁን CLI መሣሪያዎች ማዋቀር
+## 67router በDocker ውስጥ ሲሰራ የአስተናጋጁን CLI መሣሪያዎች ማዋቀር
 
 `omniroute setup-codex`፣ `setup-claude`፣ `config set <tool>` እና የዳሽቦርዱ
 **ውቅርን አስቀምጥ** አዝራር ሁሉም እንደ `~/.codex/*.config.toml` ያሉ ፋይሎችን ይጽፋሉ። እነዚያ ዱካዎች
@@ -104,11 +104,11 @@ OmniRoute ለዋና ዋና የማሰማሪያ ቅርጾች የCompose መገለ�
 ምስሉ `USER node` በመጠቀም ይሰራል) ይገባል፤ ምንም የአስተናጋጅ CLI ከዚያ አያነበውም፣ እንዲሁም
 ኮንቴይነሩ እንደገና በተፈጠረበት ቅጽበት ይጠፋል።
 
-OmniRoute ይህንን ፈልጎ ያገኛል እና ሊጠቀሙበት የማይችሉትን ስኬት
+67router ይህንን ፈልጎ ያገኛል እና ሊጠቀሙበት የማይችሉትን ስኬት
 ከመዘገብ ይልቅ መመሪያዎችን በመስጠት ጽሑፉን አይፈቅድም፦ CLIው በ`2` ይወጣል፣ እና APIው
 `containerEphemeralTarget: true` ጋር `422` ይመልሳል።
 
-### የሚመከረው፦ CLIውን በአስተናጋጁ ላይ፣ OmniRouteን በDocker ውስጥ ያስኪዱ
+### የሚመከረው፦ CLIውን በአስተናጋጁ ላይ፣ 67routerን በDocker ውስጥ ያስኪዱ
 
 ኮንቴይነሩ APIውን ያቀርባል፤ CLIው ደግሞ የአስተናጋጅ መሣሪያዎችዎን ያዋቅራል።
 
@@ -138,7 +138,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-ዱካውን አስተማማኝ የሚያደርገው bind mount ነው፦ OmniRoute
+ዱካውን አስተማማኝ የሚያደርገው bind mount ነው፦ 67router
 `/proc/self/mountinfo`ን ያነባል እና ወደ mounted ዱካዎች (እንዲሁም ልጅ ማውጫዎቻቸው mounts
 ወደሆኑ ማውጫዎች፣ ይህም በትክክል ከላይ ያለው የ`/host-home` ቅርጽ ነው) መጻፍን ይፈቅዳል፤
 ነገር ግን mounted ያልሆኑትን አሁንም አይፈቅድም።
@@ -179,7 +179,7 @@ CLIs በእውነት በኮንቴይነሩ ውስጥ ሲኖሩ (የ`cli` መገ�
 
 ## Redis Sidecar
 
-OmniRoute የተሰራጨውን የፍጥነት ገዳቢ እና የጋራ መሸጎጫ ለመደገፍ Redis ላይ ይመረኮዛል። የ`redis` አገልግሎት በ`docker-compose.yml` ውስጥ **ሁልጊዜ ይገለጻል** (የመገለጫ ገደብ የለውም)፣ እና ከማንኛውም ሌላ መገለጫ ጋር አብሮ ይጀምራል።
+67router የተሰራጨውን የፍጥነት ገዳቢ እና የጋራ መሸጎጫ ለመደገፍ Redis ላይ ይመረኮዛል። የ`redis` አገልግሎት በ`docker-compose.yml` ውስጥ **ሁልጊዜ ይገለጻል** (የመገለጫ ገደብ የለውም)፣ እና ከማንኛውም ሌላ መገለጫ ጋር አብሮ ይጀምራል።
 
 | ዝርዝር                    | እሴት                                  |
 | ----------------------- | ------------------------------------ |
@@ -348,26 +348,25 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 በ[ENVIRONMENT.md](../reference/ENVIRONMENT.md) ውስጥ ከተመዘገቡት ነባሪዎች በተጨማሪ፣ በDocker ስር ሲሰሩ የሚከተሉት ተለዋዋጮች ከሁሉም የበለጠ አስፈላጊ ናቸው፦
 
-| ተለዋዋጭ                         | ዓላማ                                                                                                                                                                                                                                | ነባሪ                    |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
-| `OMNIROUTE_WS_BRIDGE_SECRET`  | ለWebSocket bridge የሚያገለግል የጋራ ሚስጥር። **በproduction ውስጥ ያስፈልጋል** — ወደ ጠንካራ የዘፈቀደ ሕብረቁምፊ ያዘጋጁት።                                                                                                                                       | አልተዘጋጀም (መቅረብ አለበት)    |
-| `REDIS_URL`                   | ለrate limiter / cache backend የግንኙነት ሕብረቁምፊ                                                                                                                                                                                        | `redis://redis:6379`   |
-| `REDIS_PORT`                  | ለተካተተው Redis container የhost-side port                                                                                                                                                                                             | `6379`                 |
-| `REDIS_BIND_HOST`             | የተካተተው Redis port የሚታተምበት host interface (AUTH ካላከሉ በስተቀር loopback)                                                                                                                                                                | `127.0.0.1`            |
-| `AUTO_UPDATE_HOST_REPO_DIR`   | ለself-update workflows በ`cli` profile ውስጥ በ`/workspace/omniroute` ላይ የሚሰቀል host path                                                                                                                                               | `.` (የአሁኑ directory)   |
-| `OMNIROUTE_MEMORY_MB`         | ለDocker standalone server የruntime Node heap ከፍተኛ ገደብ፤ ከላይ ያለውን የimage ነባሪ ይተካል። ለcoding agents፦ `8192`+ ([runtime RAM](#runtime-ram-for-coding-agents)ን ይመልከቱ)።                                                                   | `1024`                 |
-| `DASHBOARD_PORT` / `API_PORT` | ለdashboard (20128) እና API (20129) የተጋለጡ portsን ይተኩ                                                                                                                                                                                 | `20128` / `20129`      |
-| `APP_BIND_HOST`               | docker-compose የdashboard/API/live-WS portsን የሚያትምበት host interface። `REQUIRE_API_KEY=false` (ነባሪው) ሲሆን፣ `0.0.0.0` ማንነት ማረጋገጫ የሌለውን `/v1` proxy ለLAN ያጋልጣል — `REQUIRE_API_KEY=true` ሲሆን ወይም ከፊት ለፊት reverse proxy ሲኖር ብቻ ወሰኑን ያስፉ። | `127.0.0.1`            |
-| `CLIPROXY_BIND_HOST`          | docker-compose የ`cliproxyapi` sidecarን የሚያትምበት host interface — የውሂብ volumeው የprovider ማረጋገጫ መረጃዎችን ይይዛል።                                                                                                                          | `127.0.0.1`            |
-| `OMNIROUTE_PLUGINS_DIR`       | የruntime plugin scanner የሚያነብበትና የሚጭንበት directory። plugins በbind mount ሲደረጉ ያዘጋጁት፦ ነባሪው `HOME`ን ይከተላል፣ image ደግሞ ይህን ወደ ውጭ ላይልክ ይችላል።                                                                                              | `~/.omniroute/plugins` |
-| `OMNIROUTE_BASE_PATH`         | appው ከreverse proxy በስተጀርባ ሲታተም የURL subpath (ለምሳሌ፣ `/omniroute`)                                                                                                                                                                  | _(ባዶ = root)_          |
-| `NEXT_PUBLIC_BASE_URL`        | subpathን ጨምሮ የይፋ browser origin (ለምሳሌ፣ `https://host/omniroute`)                                                                                                                                                                   | አልተዘጋጀም                |
-| `PROD_DASHBOARD_PORT`         | ለ`docker-compose.prod.yml` የhost-side dashboard port                                                                                                                                                                               | `20130`                |
-| `CLIPROXYAPI_PORT`            | ለ`cliproxyapi` sidecar የhost-side port                                                                                                                                                                                             | `8317`                 |
+| ተለዋዋጭ                         | ዓላማ                                                                                                                                                                                                                                | ነባሪ                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `OMNIROUTE_WS_BRIDGE_SECRET`  | ለWebSocket bridge የሚያገለግል የጋራ ሚስጥር። **በproduction ውስጥ ያስፈልጋል** — ወደ ጠንካራ የዘፈቀደ ሕብረቁምፊ ያዘጋጁት።                                                                                                                                       | አልተዘጋጀም (መቅረብ አለበት)  |
+| `REDIS_URL`                   | ለrate limiter / cache backend የግንኙነት ሕብረቁምፊ                                                                                                                                                                                        | `redis://redis:6379` |
+| `REDIS_PORT`                  | ለተካተተው Redis container የhost-side port                                                                                                                                                                                             | `6379`               |
+| `REDIS_BIND_HOST`             | የተካተተው Redis port የሚታተምበት host interface (AUTH ካላከሉ በስተቀር loopback)                                                                                                                                                                | `127.0.0.1`          |
+| `AUTO_UPDATE_HOST_REPO_DIR`   | ለself-update workflows በ`cli` profile ውስጥ በ`/workspace/omniroute` ላይ የሚሰቀል host path                                                                                                                                               | `.` (የአሁኑ directory) |
+| `OMNIROUTE_MEMORY_MB`         | ለDocker standalone server የruntime Node heap ከፍተኛ ገደብ፤ ከላይ ያለውን የimage ነባሪ ይተካል። ለcoding agents፦ `8192`+ ([runtime RAM](#runtime-ram-for-coding-agents)ን ይመልከቱ)።                                                                   | `1024`               |
+| `DASHBOARD_PORT` / `API_PORT` | ለdashboard (20128) እና API (20129) የተጋለጡ portsን ይተኩ                                                                                                                                                                                 | `20128` / `20129`    |
+| `APP_BIND_HOST`               | docker-compose የdashboard/API/live-WS portsን የሚያትምበት host interface። `REQUIRE_API_KEY=false` (ነባሪው) ሲሆን፣ `0.0.0.0` ማንነት ማረጋገጫ የሌለውን `/v1` proxy ለLAN ያጋልጣል — `REQUIRE_API_KEY=true` ሲሆን ወይም ከፊት ለፊት reverse proxy ሲኖር ብቻ ወሰኑን ያስፉ። | `127.0.0.1`          |
+| `CLIPROXY_BIND_HOST`          | docker-compose የ`cliproxyapi` sidecarን የሚያትምበት host interface — የውሂብ volumeው የprovider ማረጋገጫ መረጃዎችን ይይዛል።                                                                                                                          | `127.0.0.1`          |
+| `OMNIROUTE_BASE_PATH`         | appው ከreverse proxy በስተጀርባ ሲታተም የURL subpath (ለምሳሌ፣ `/omniroute`)                                                                                                                                                                  | _(ባዶ = root)_        |
+| `NEXT_PUBLIC_BASE_URL`        | subpathን ጨምሮ የይፋ browser origin (ለምሳሌ፣ `https://host/omniroute`)                                                                                                                                                                   | አልተዘጋጀም              |
+| `PROD_DASHBOARD_PORT`         | ለ`docker-compose.prod.yml` የhost-side dashboard port                                                                                                                                                                               | `20130`              |
+| `CLIPROXYAPI_PORT`            | ለ`cliproxyapi` sidecar የhost-side port                                                                                                                                                                                             | `8317`               |
 
 ## በንዑስ ዱካ ላይ Reverse Proxy (Traefik / nginx)
 
-የNext.js `basePath` በstandalone bundle ውስጥ ይቀናበራል። OmniRoute በተተገበረው
+የNext.js `basePath` በstandalone bundle ውስጥ ይቀናበራል። 67router በተተገበረው
 የመተግበሪያው ሥር ያለ የምልክት ፋይል ውስጥ ዋጋውን ይመዘግባል (በ`npm run build` ጊዜ ይጻፋል፤
 በ`scripts/docker/ensure-docker-base-path.mjs` ይነበባል) እና ኮንቴይነሩ ሲጀምር ከ
 `OMNIROUTE_BASE_PATH` ጋር ያነጻጽረዋል። እሴቶቹ ሲለያዩ እና imageው
@@ -440,7 +439,7 @@ CPU-bound የcatalog ወይም compression ሥራ ሊያዘገያቸው ይች�
 
 ## Docker Compose ከCaddy ጋር (HTTPS Auto-TLS)
 
-OmniRoute የCaddyን ራስ-ሰር SSL አቅርቦት በመጠቀም በደህንነት ለውጭ ሊቀርብ ይችላል። የዶሜንዎ DNS A መዝገብ ወደ አገልጋይዎ IP እንደሚያመለክት ያረጋግጡ።
+67router የCaddyን ራስ-ሰር SSL አቅርቦት በመጠቀም በደህንነት ለውጭ ሊቀርብ ይችላል። የዶሜንዎ DNS A መዝገብ ወደ አገልጋይዎ IP እንደሚያመለክት ያረጋግጡ።
 
 ```yaml
 services:
@@ -471,10 +470,10 @@ volumes:
   omniroute-data:
 ```
 
-Caddy ለወደላይኛው ኮንቴይነር መደበኛ የማስተላለፊያ ራስጌዎችን ያዘጋጃል። OmniRoute
+Caddy ለወደላይኛው ኮንቴይነር መደበኛ የማስተላለፊያ ራስጌዎችን ያዘጋጃል። 67router
 `NEXT_PUBLIC_BASE_URL`ን ለOAuth መልሶ ጥሪዎች እና ለሚፈጠሩ ይፋዊ
 አገናኞች ቀኖናዊ ይፋዊ መነሻ አድርጎ ይጠቀማል፤ ማረጋገጫ የተደረገባቸው የዳሽቦርድ የመጻፍ ጥያቄዎች የተመሳሳይ-መነሻ ጥያቄዎችን ከክፍለ-ጊዜ ጋር ከተሳሰረ CSRF
-ጥበቃ ጋር ይጠቀማሉ። OmniRoute ይፋዊውን መነሻ ከግልጽ
+ጥበቃ ጋር ይጠቀማሉ። 67router ይፋዊውን መነሻ ከግልጽ
 ውቅር ይልቅ ከታመኑ የተላለፉ ራስጌዎች እንዲያወጣ ሆን ብለው ለሚፈልጉባቸው የላቁ ስምሪቶች ብቻ `OMNIROUTE_TRUST_PROXY`ን ያንቁ።
 
 ## Cloudflare Quick Tunnel
@@ -486,11 +485,11 @@ Caddy ለወደላይኛው ኮንቴይነር መደበኛ የማስተላለ�
 ### የዋሻ ማስታወሻዎች
 
 - Quick Tunnel URLs ጊዜያዊ ሲሆኑ ከእያንዳንዱ ዳግም ማስጀመር በኋላ ይቀየራሉ።
-- Quick Tunnels ከOmniRoute ወይም ከኮንቴይነር ዳግም ማስጀመር በኋላ በራስ-ሰር አይመለሱም። ሲያስፈልግ ከዳሽቦርዱ ዳግም ያንቋቸው።
+- Quick Tunnels ከ67router ወይም ከኮንቴይነር ዳግም ማስጀመር በኋላ በራስ-ሰር አይመለሱም። ሲያስፈልግ ከዳሽቦርዱ ዳግም ያንቋቸው።
 - የሚተዳደረው ጭነት በአሁኑ ጊዜ Linux፣ macOS እና Windowsን በ`x64` / `arm64` ይደግፋል።
 - የሚተዳደሩ Quick Tunnels በተገደቡ የኮንቴይነር አካባቢዎች ውስጥ ጫጫታ ያላቸውን የQUIC UDP ቋት ማስጠንቀቂያዎች ለማስወገድ በነባሪ HTTP/2 ማጓጓዣን ይጠቀማሉ። የተለየ ማጓጓዣ ከፈለጉ `CLOUDFLARED_PROTOCOL=quic` ወይም `auto` ያዘጋጁ።
 - Docker ምስሎች የስርዓት CA ስሮችን ያካትታሉ እና ወደሚተዳደረው `cloudflared` ያስተላልፏቸዋል፤ ይህም ዋሻው በኮንቴይነሩ ውስጥ ሲነሳ የTLS እምነት ውድቀቶችን ያስወግዳል።
-- OmniRoute አዲስ ፋይል ከማውረድ ይልቅ አስቀድሞ ያለ binaryን እንዲጠቀም ከፈለጉ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ያዘጋጁ።
+- 67router አዲስ ፋይል ከማውረድ ይልቅ አስቀድሞ ያለ binaryን እንዲጠቀም ከፈለጉ `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ያዘጋጁ።
 
 ## የምስል መለያዎች
 
@@ -503,7 +502,7 @@ Caddy ለወደላይኛው ኮንቴይነር መደበኛ የማስተላለ�
 
 ### የልቀት ቻናሎች
 
-OmniRoute ለተረጋጉ ልቀቶች፣ ለንቁ የልቀት-ቅርንጫፍ ሙከራ እና ለልማት ግንባታዎች የተለያዩ Docker ቻናሎችን ያትማል።
+67router ለተረጋጉ ልቀቶች፣ ለንቁ የልቀት-ቅርንጫፍ ሙከራ እና ለልማት ግንባታዎች የተለያዩ Docker ቻናሎችን ያትማል።
 
 | ቻናል                             | ምንጭ                         | የመለወጥ ችሎታ         | የሚመከር አጠቃቀም                                                                                       |
 | ------------------------------- | --------------------------- | ----------------- | ------------------------------------------------------------------------------------------------- |
@@ -556,7 +555,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-ከሙከራው በፊት የOmniRoute data volume ወይም bind-mounted data directory ምትኬ ይያዙ። ወደ ቀዳሚው ስሪት ለመመለስ፣ ቀደም ሲል ጥቅም ላይ የነበረውን የተረጋጋ ስሪት ወይም digest ወደነበረበት ይመልሱ እና container-ውን እንደገና ይፍጠሩ፦
+ከሙከራው በፊት የ67router data volume ወይም bind-mounted data directory ምትኬ ይያዙ። ወደ ቀዳሚው ስሪት ለመመለስ፣ ቀደም ሲል ጥቅም ላይ የነበረውን የተረጋጋ ስሪት ወይም digest ወደነበረበት ይመልሱ እና container-ውን እንደገና ይፍጠሩ፦
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -576,7 +575,7 @@ docker compose up -d
 
 ## በDocker ውስጥ የዳሽቦርድ ዝማኔዎች
 
-ከታተመ image የተፈጠረ container ራሱን መተካት አይችልም። OmniRoute በcontainer ውስጥ እየሰራ መሆኑን (`.git` checkout የሌለውና npm install ያልሆነ) ሲያውቅ፣ በመነሻ ዳሽቦርድ ላይ ያለው የዝማኔ ማስታወቂያ ከnpm/git መመሪያዎች ይልቅ በhost ላይ መስራት ያለበትን ትዕዛዝ ከቅጂ አዝራር ጋር ያሳያል፦
+ከታተመ image የተፈጠረ container ራሱን መተካት አይችልም። 67router በcontainer ውስጥ እየሰራ መሆኑን (`.git` checkout የሌለውና npm install ያልሆነ) ሲያውቅ፣ በመነሻ ዳሽቦርድ ላይ ያለው የዝማኔ ማስታወቂያ ከnpm/git መመሪያዎች ይልቅ በhost ላይ መስራት ያለበትን ትዕዛዝ ከቅጂ አዝራር ጋር ያሳያል፦
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -586,7 +585,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 
 ### በhost trigger file አማካኝነት የአንድ-ጠቅታ ዝማኔዎች
 
-`/var/run/docker.sock`ን mount ሳያደርጉ **Update Now** እንዲሰራ ለማድረግ (ይህም container-ው በhost ላይ root ሥልጣን እንዲኖረው ያደርጋል — ከላይ ያለውን የ`cli` profile ማስጠንቀቂያ ይመልከቱ)፣ በOmniRoute service ላይ `DOCKER_UPDATE_TRIGGER_FILE`ን ያቀናብሩና በhost ላይ watcher ያስኪዱ፦
+`/var/run/docker.sock`ን mount ሳያደርጉ **Update Now** እንዲሰራ ለማድረግ (ይህም container-ው በhost ላይ root ሥልጣን እንዲኖረው ያደርጋል — ከላይ ያለውን የ`cli` profile ማስጠንቀቂያ ይመልከቱ)፣ በ67router service ላይ `DOCKER_UPDATE_TRIGGER_FILE`ን ያቀናብሩና በhost ላይ watcher ያስኪዱ፦
 
 ```yaml
 services:
@@ -597,14 +596,14 @@ services:
       - ./data:/app/data
 ```
 
-path-ው በ`DATA_DIR` ውስጥ መሆን አለበት (አንጻራዊ እሴቶች ከዚሁ አንጻር ይፈታሉ)፤ ሌላ ማንኛውም ቦታ ውድቅ ይደረጋል። ከዚያ **Update Now** ወደዚያ file `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` ይጽፋል፣ `202` ምላሽ ይሰጣል፣ እና ዳሽቦርዱ አዲሱ version እስኪሰራ ድረስ `/api/system/version`ን በተደጋጋሚ ይፈትሻል፤ ከዚያም እንደገና ይጫናል። በዚህ mode ውስጥ OmniRoute ፈጽሞ shell ወይም Docker ትዕዛዝ አያስኬድም። እንደማንኛውም የዝማኔ እርምጃ፣ ጥያቄው ተቀባይነት የሚያገኘው ከloopback/LAN clients ብቻ ነው።
+path-ው በ`DATA_DIR` ውስጥ መሆን አለበት (አንጻራዊ እሴቶች ከዚሁ አንጻር ይፈታሉ)፤ ሌላ ማንኛውም ቦታ ውድቅ ይደረጋል። ከዚያ **Update Now** ወደዚያ file `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` ይጽፋል፣ `202` ምላሽ ይሰጣል፣ እና ዳሽቦርዱ አዲሱ version እስኪሰራ ድረስ `/api/system/version`ን በተደጋጋሚ ይፈትሻል፤ ከዚያም እንደገና ይጫናል። በዚህ mode ውስጥ 67router ፈጽሞ shell ወይም Docker ትዕዛዝ አያስኬድም። እንደማንኛውም የዝማኔ እርምጃ፣ ጥያቄው ተቀባይነት የሚያገኘው ከloopback/LAN clients ብቻ ነው።
 
 በbind mount የተደረገ data directory host-ው የሚከታተለው የተረጋጋ path ይሰጠዋል። የ`systemd` units ምሳሌዎች (`/srv/omniroute`ን compose file-ዎን እና `data/`ን ወደያዘው directory ያስተካክሉ)፦
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=የOmniRoute ዳሽቦርድ የዝማኔ ጥያቄዎችን ተከታተል
+Description=የ67router ዳሽቦርድ የዝማኔ ጥያቄዎችን ተከታተል
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -616,7 +615,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=የOmniRoute containerን pull አድርግና እንደገና ፍጠር
+Description=የ67router containerን pull አድርግና እንደገና ፍጠር
 
 [Service]
 Type=oneshot
@@ -635,13 +634,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## ተገኝነት፦ ነባሪው SQLite አንድ replica ብቻ ነው
 
-መደበኛው Docker / Kubernetes OmniRoute **አንድ Node process + አንድ SQLite writer** ነው። በዚህ topology ላይ ከፍተኛ ተገኝነት **አይደገፍም**።
+መደበኛው Docker / Kubernetes 67router **አንድ Node process + አንድ SQLite writer** ነው። በዚህ topology ላይ ከፍተኛ ተገኝነት **አይደገፍም**።
 
-| ገደብ                                          | ውጤት                                                                                                                                                                                                                                                                      |
-| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| አንድ writer                                   | በአንድ SQLite file ላይ ብዙ replicas **አታስኪዱ**። ይህ DB-ውን ያበላሻል።                                                                                                                                                                                                               |
-| እንደገና መፍጠር / እንደገና ማስጀመር / የHEALTHCHECK kill | በሂደት ላይ ያሉ SSE፣ የዳሽቦርድ sessions እና በmemory ውስጥ ያለ state **ሙሉ በሙሉ ይቋረጣሉ**። እያንዳንዱ የተገናኘ client ይቋረጣል። endpoint በሌለበት ጊዜ የሚመጡ አዳዲስ ጥያቄዎች ከOmniRoute JSON ይልቅ የreverse-proxy **`502 Bad Gateway: Unknown error`** ያገኛሉ — clients ይህን ከprovider failure (#11015) መለየት አይችሉም። |
-| ከ`/healthz` ጋር ተመሳሳይ event loop              | የተጨናነቀ catalog ወይም compression tick probes-ን ሊያዘገይ ይችላል፤ አጭር timeout ከዚያ **ብቸኛውን** replica እንደገና ያስጀምራል።                                                                                                                                                                 |
+| ገደብ                                          | ውጤት                                                                                                                                                                                                                                                                     |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| አንድ writer                                   | በአንድ SQLite file ላይ ብዙ replicas **አታስኪዱ**። ይህ DB-ውን ያበላሻል።                                                                                                                                                                                                              |
+| እንደገና መፍጠር / እንደገና ማስጀመር / የHEALTHCHECK kill | በሂደት ላይ ያሉ SSE፣ የዳሽቦርድ sessions እና በmemory ውስጥ ያለ state **ሙሉ በሙሉ ይቋረጣሉ**። እያንዳንዱ የተገናኘ client ይቋረጣል። endpoint በሌለበት ጊዜ የሚመጡ አዳዲስ ጥያቄዎች ከ67router JSON ይልቅ የreverse-proxy **`502 Bad Gateway: Unknown error`** ያገኛሉ — clients ይህን ከprovider failure (#11015) መለየት አይችሉም። |
+| ከ`/healthz` ጋር ተመሳሳይ event loop              | የተጨናነቀ catalog ወይም compression tick probes-ን ሊያዘገይ ይችላል፤ አጭር timeout ከዚያ **ብቸኛውን** replica እንደገና ያስጀምራል።                                                                                                                                                                |
 
 **የProbe ሰንጠረዥ** ([የKubernetes probe ምክሮችን](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations) ደግሞ ይመልከቱ)፦
 
@@ -744,7 +743,7 @@ container-ው ተመሳሳይ የወጪ መስመርን እንደሚጠቀም �
 
 ### ለየግንኙነቱ የተወሰነ proxy ይምረጡ
 
-ለተጎዳው Gemini ግንኙነት የOmniRouteን
+ለተጎዳው Gemini ግንኙነት የ67routerን
 [ለየግንኙነቱ የproxy ውቅር](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 ይጠቀሙ፤ ከዚያም **ግንኙነትን ሞክር** እና በተመሳሳይ model አነስተኛ ጥያቄን እንደገና ያስኪዱ።
 ይህ የማስተላለፊያ ለውጡን በዚያ ግንኙነት ብቻ እንዲወሰን ያደርገዋል። proxy-ው ከcontainer-ው
@@ -817,7 +816,7 @@ entries ያቆዩ፤ `label` ወይም `precedence` entry መጨመር ያንን
 
 ## ጠቃሚ ማስታወሻዎች
 
-- **SQLite WAL ሁነታ፦** OmniRoute የቅርብ ጊዜ ለውጦችን ወደ `storage.sqlite` መልሶ checkpoint ማድረግ እንዲችል `docker stop` እስኪጠናቀቅ መፍቀድ አለብዎት። አብረው የቀረቡት Compose ፋይሎች የ40s የማቆሚያ የእፎይታ ጊዜን አስቀድመው አዘጋጅተዋል። image-ውን በቀጥታ የሚያስኬዱ ከሆነ `--stop-timeout 40`ን ይጠቀሙ።
+- **SQLite WAL ሁነታ፦** 67router የቅርብ ጊዜ ለውጦችን ወደ `storage.sqlite` መልሶ checkpoint ማድረግ እንዲችል `docker stop` እስኪጠናቀቅ መፍቀድ አለብዎት። አብረው የቀረቡት Compose ፋይሎች የ40s የማቆሚያ የእፎይታ ጊዜን አስቀድመው አዘጋጅተዋል። image-ውን በቀጥታ የሚያስኬዱ ከሆነ `--stop-timeout 40`ን ይጠቀሙ።
 - **`DISABLE_SQLITE_AUTO_BACKUP`፦** መደበኛ/ከመጻፍ በፊት የሚደረጉ backup-ዎች በውጫዊ መንገድ የሚተዳደሩ ከሆነ ወደ `true` ያዘጋጁት። የነባር database ሽግግሮች አሁንም የራሳቸውን ዘላቂ የደህንነት snapshot እና የጅምላ ሽግግር መከላከያ ይፈልጋሉ።
 - **የውሂብ ቋሚነት፦** በcontainer ዳግም ማስጀመሮች መካከል database-ዎን፣ ቁልፎችዎን እና ውቅሮችዎን ለማቆየት ሁልጊዜ volumeን ወደ `/app/data` mount ያድርጉ።
 - **የPort ውቅር፦** ነባሪውን `20128` port ለመቀየር `PORT` environment variableን override ያድርጉ።

@@ -14,7 +14,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const pkg = JSON.parse(readFileSync(path.join(ROOT, "package.json"), "utf8"));
 const scripts: Record<string, string> = pkg.scripts;
 
-const SERIAL_GLOB = 'tests/unit/serial/**/*.test.ts';
+const SERIAL_GLOB = "tests/unit/serial/**/*.test.ts";
 
 test("test:unit:serial existe e roda o diretório de quarentena com concurrency=1", () => {
   const s = scripts["test:unit:serial"];
@@ -24,7 +24,13 @@ test("test:unit:serial existe e roda o diretório de quarentena com concurrency=
 });
 
 test("todos os runners paralelos terminam com o passo serial", () => {
-  for (const key of ["test", "test:unit", "test:unit:ci", "test:unit:fast", "test:coverage:runner"]) {
+  for (const key of [
+    "test",
+    "test:unit",
+    "test:unit:ci",
+    "test:unit:fast",
+    "test:coverage:runner",
+  ]) {
     assert.ok(
       scripts[key].endsWith("&& npm run test:unit:serial"),
       `${key} deve encadear o passo serial no fim`
@@ -59,7 +65,7 @@ test("a quarentena contém os 3 flakes conhecidos e os gates de discovery/TIA a 
   const files = readdirSync(path.join(ROOT, "tests/unit/serial"));
   for (const f of [
     "glm-coding-plan-monthly-3580.test.ts",
-    "quota-division-blocks.test.ts",
+    // quota-division-blocks.test.ts left with Quota Share (67router PR-5).
     "provider-health-autopilot.test.ts",
     "combo-health-autopilot.test.ts",
   ]) {

@@ -6,7 +6,7 @@ lastUpdated: 2026-07-02
 
 # Extending the Compression Pipeline
 
-> **TL;DR**: OmniRoute's compression engine is **pluggable** — you can register custom engines, ship language packs for new languages, and compose stacked pipelines. This guide shows how.
+> **TL;DR**: 67router's compression engine is **pluggable** — you can register custom engines, ship language packs for new languages, and compose stacked pipelines. This guide shows how.
 
 **Related guides:**
 
@@ -201,25 +201,16 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Project-level (loaded on startup)
 ```
 
-Or load programmatically from a plugin:
+Or register it programmatically at startup:
 
 ```ts
-// In your plugin
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // The plugin SDK exposes onRequest / onResponse / onError hooks. Register the
-  // engine when the plugin module loads (or on first onRequest); unregister it
-  // from your own teardown path.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
 // On teardown:
 // unregisterCompressionEngine("my-engine");
@@ -227,14 +218,14 @@ export default definePlugin({
 
 ### Testing Your Engine
 
-Register your engine in a plugin or startup function. Once registered, the engine will be available
+Register your engine in a startup function. Once registered, the engine will be available
 in the strategy selector via its `id`. Test integration by composing it in a stacked pipeline:
 
 ---
 
 ## Creating Language Packs
 
-Caveman-style compression uses **language-specific rule packs** to handle fillers, hedging, and verbose patterns in each natural language. OmniRoute ships with **6 language packs**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Caveman-style compression uses **language-specific rule packs** to handle fillers, hedging, and verbose patterns in each natural language. 67router ships with **6 language packs**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Pack Structure
 
@@ -393,7 +384,7 @@ The output of engine N becomes the input of engine N+1.
 
 ### Compression Modes
 
-OmniRoute selects **ONE mode per request** based on configuration, auto-trigger thresholds, and combo overrides.
+67router selects **ONE mode per request** based on configuration, auto-trigger thresholds, and combo overrides.
 The available modes are defined in `open-sse/services/compression/types.ts` (type `CompressionMode`):
 
 | Mode         | Engines              | Use case                                                                                                                                                                                            |
@@ -513,10 +504,10 @@ To drive it from config, set `mode: "stacked"` and provide the step array under
 
 ## Upstream Sync Policy
 
-OmniRoute's compression engines credit several upstream projects in the README
+67router's compression engines credit several upstream projects in the README
 ("inspired by RTK, Caveman, LLMLingua-2, Troglodita"). A common contributor
 question is: **when upstream RTK adds a new tool filter or Caveman adds a rule
-pack, how does that reach OmniRoute?** This section is the authoritative answer.
+pack, how does that reach 67router?** This section is the authoritative answer.
 
 ### Vendored copies vs. independent implementations
 
@@ -537,7 +528,7 @@ upstream copy to `git pull` from — which is exactly why the README says
 There is **no automated upstream-release tracking and no `compression-sync`
 label** — by design. Because the engines are reimplementations, an upstream RTK
 filter or Caveman rule pack is not merged as code; it is **re-expressed as a new
-rule/filter in OmniRoute's own format** (see
+rule/filter in 67router's own format** (see
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) and lands ad-hoc via
 a normal PR. The extension points above (custom engine, language pack, RTK filter)
 are the sanctioned way to contribute one.
@@ -551,14 +542,14 @@ Recent examples of exactly this flow:
 ### Headroom (input-compression proxy)
 
 Headroom is **fully internal** — a pinned vendored `gcf` codec snapshot plus
-OmniRoute's own `smartcrusher` / `toon` / `tabular` layers. There is no live
+67router's own `smartcrusher` / `toon` / `tabular` layers. There is no live
 upstream to track beyond the vendored copy; updates to `gcf` are refreshed
 manually when the codec changes and re-validated against the compression budget
 gate (`check:compression-budget`).
 
 ### Proposing an upstream-inspired improvement
 
-1. **Don't vendor** — re-express the upstream rule/filter in OmniRoute's format.
+1. **Don't vendor** — re-express the upstream rule/filter in 67router's format.
 2. Add it via the matching extension point below (language pack, RTK filter, or
    custom engine).
 3. Reference the upstream project in the PR description (attribution), not by

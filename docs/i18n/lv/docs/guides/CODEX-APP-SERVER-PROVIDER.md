@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute piedāvā **divus** veidus, kā izmantot OpenAI Codex:
+67router piedāvā **divus** veidus, kā izmantot OpenAI Codex:
 
 | Nodrošinātājs          | Kā tas sazinās ar OpenAI                                                                                                                                                                       | Lietošanas atruna                                                                     |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | **`codex`**            | Tieši atkārtoti izmanto jūsu ChatGPT/OpenAI OAuth pilnvaru ar Responses API                                                                                                                    | **Jā** — oficiālā sesija nav pilnvarota izmantošanai ar starpniekserveri/maršrutētāju |
-| **`codex-app-server`** | Vada **Codex CLI paša `codex app-server`**, izmantojot JSON-RPC/WebSocket; CLI pārvalda un automātiski atsvaidzina savu OAuth (`~/.codex/auth.json`) tieši tāpat kā interaktīvā `codex` sesijā | **Nē** — OmniRoute nekad atkārtoti neizmanto pilnvaru ar API                          |
+| **`codex-app-server`** | Vada **Codex CLI paša `codex app-server`**, izmantojot JSON-RPC/WebSocket; CLI pārvalda un automātiski atsvaidzina savu OAuth (`~/.codex/auth.json`) tieši tāpat kā interaktīvā `codex` sesijā | **Nē** — 67router nekad atkārtoti neizmanto pilnvaru ar API                           |
 
 Tā kā `codex-app-server` nekad atkārtoti neizmanto pilnvaru, uz to neattiecas
 sesijas atkārtotas izmantošanas atruna. Tam ir nepieciešams **Codex CLI, kas
@@ -21,7 +21,7 @@ pierakstīšanai**.
 ## 1. Arhitektūra
 
 ```
-┌─ OmniRoute lietotne ─────────────┐        ┌─ codex-app-server blakusprocess ────┐
+┌─ 67router lietotne ─────────────┐        ┌─ codex-app-server blakusprocess ────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ iespēju pilnvara)             │  JSON  │  --ws-auth iespēju-pilnvara         │
@@ -80,7 +80,7 @@ novecojusi (vienmēr tiek izveidota dublējumkopija).
   darbību.
 - **Publisks lietotājs, kam codex nav instalēts lokāli** — tam nav nozīmes:
   blakusprocess ietver CLI. Lietotājs autentificējas tikai informācijas panelī.
-- **OmniRoute tieši serverī (bez blakusprocesa, ar resursdatora codex)** —
+- **67router tieši serverī (bez blakusprocesa, ar resursdatora codex)** —
   norādiet `OMNIROUTE_CODEX_APPSERVER_WS` uz savu `codex app-server` un
   pārliecinieties, ka resursdatora codex ir pierakstīts; ja binārā faila nav,
   tiek parādīta norāde "codex nav instalēts".

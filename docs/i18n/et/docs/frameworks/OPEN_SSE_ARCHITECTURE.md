@@ -4,7 +4,7 @@
 
 ---
 
-> **Lühidalt**: `open-sse/` on keskne voogedastusmootor, mis käitab OmniRoute'is iga LLM-päringut. See sisaldab ligikaudu 1400 faili, mis teostavad päringukonveieri, täiturid, teenused, MCP-serveri ja tõlkekihi. See juhend selgitab, kuidas osad omavahel kokku sobituvad.
+> **Lühidalt**: `open-sse/` on keskne voogedastusmootor, mis käitab 67router'is iga LLM-päringut. See sisaldab ligikaudu 1400 faili, mis teostavad päringukonveieri, täiturid, teenused, MCP-serveri ja tõlkekihi. See juhend selgitab, kuidas osad omavahel kokku sobituvad.
 
 **Lähtekood:** `open-sse/` (tööruumipakett, ligikaudu 1440 testivälist `.ts`-faili)
 
@@ -12,10 +12,10 @@
 
 ## Miks eraldi tööruumipakett?
 
-`open-sse/` on OmniRoute'i monorepos **iseseisev tööruum** mitmel põhjusel:
+`open-sse/` on 67router'i monorepos **iseseisev tööruum** mitmel põhjusel:
 
 1. **Taaskasutatavus** — `open-sse` avaldatakse npm-is paketina `@omniroute/open-sse`, seega saavad teised projektid seda iseseisvalt kasutada
-2. **Selged piirid** — voogedastusmootor on OmniRoute'i-spetsiifilisest kasutajaliidese/andmebaasi kihist lahutatud
+2. **Selged piirid** — voogedastusmootor on 67router'i-spetsiifilisest kasutajaliidese/andmebaasi kihist lahutatud
 3. **Jõudlus** — mootoril puuduvad Next.js-i sõltuvused, mis võimaldab CLI- ja serverivabades keskkondades kiiremat külmkäivitust
 4. **Versioonihaldus** — `open-sse` saab versioone avaldada oma ajakava järgi
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Miks eraldi teisendaja?
 
-Responses API on OpenAI uus vorming, mis toetab **olekuga vestlusi** (`previous_response_id`). Kui klient saadab Responses-päringu, teeb OmniRoute järgmist:
+Responses API on OpenAI uus vorming, mis toetab **olekuga vestlusi** (`previous_response_id`). Kui klient saadab Responses-päringu, teeb 67router järgmist:
 
 1. Teisendab Responses-vormingu sisemiselt Chat Completionsi vorminguks
 2. Saadab selle teenusepakkujale (mis tahes teenusepakkujale, kes toetab Chat Completionsi)
@@ -573,5 +573,4 @@ Marsruutimismootoril on ranged jõudluspiirid:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — kataloogide kaupa ülevaade
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 teguriga hindamine
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Lähtekood: `open-sse/` (üle 400 faili, ~143K koodirida)

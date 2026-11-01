@@ -7,11 +7,11 @@
 Umumiy bajariluvchi fayl manifesti, cheklangan ichki jarayon muhitlari va doimiy
 Gemini sozlamalari haqida [CLI ishga tushirish shartnomalari](./CLI-LAUNCH-CONTRACTS.md) sahifasiga qarang.
 
-OmniRoute kod yozish CLI vositasini (Codex, Claude Code, OpenCode, Cline, …)
-OmniRouteʼdan backend sifatida foydalanishga sozlaydigan `setup-*` buyruqlari
+67router kod yozish CLI vositasini (Codex, Claude Code, OpenCode, Cline, …)
+67routerʼdan backend sifatida foydalanishga sozlaydigan `setup-*` buyruqlari
 toʻplamini taqdim etadi — natijada vosita **bitta** soʻnggi nuqta bilan bogʻlanadi,
-OmniRoute esa avtomatik zaxira mexanizmi yordamida soʻrovlarni tegishli provayderga
-yoʻnaltiradi. Har bir buyruq ishlayotgan OmniRouteʼdan (mahalliy yoki masofaviy)
+67router esa avtomatik zaxira mexanizmi yordamida soʻrovlarni tegishli provayderga
+yoʻnaltiradi. Har bir buyruq ishlayotgan 67routerʼdan (mahalliy yoki masofaviy)
 **joriy** modellar katalogini oʻqiydi va vositaning oʻz konfiguratsiya faylini
 **sizning** kompyuteringizga yozadi. Vosita qoʻllab-quvvatlagan barcha holatlarda
 API kalitiga muhit oʻzgaruvchisi orqali murojaat qilinadi. Vositaning mahalliy
@@ -61,7 +61,7 @@ qoʻllanmalarga qarang:
 
 - [Claude Code konfiguratsiyasi](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI konfiguratsiyasi](./CODEX-CLI-CONFIGURATION.md)
-- [Masofaviy rejim](./REMOTE-MODE.md) — noutbukingizdan masofaviy OmniRouteʼni (VPS / Tailnet) boshqaring
+- [Masofaviy rejim](./REMOTE-MODE.md) — noutbukingizdan masofaviy 67routerʼni (VPS / Tailnet) boshqaring
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot kengaytmasi; u ushbu
   `setup-*` buyruqlarini siz uchun bevosita muharrir ichidan ham ishga tushira oladi
 
@@ -96,7 +96,7 @@ Quyidagi “Mahalliy va masofaviy” iborasi shuni anglatadi: bayroqlarsiz u `ht
 
 Bayroqlar bo‘yicha izohlar (buyruq manbasida tekshirilgan):
 
-- `--remote <url>` — katalogni masofaviy OmniRoute’dan oladi (`--port`
+- `--remote <url>` — katalogni masofaviy 67router’dan oladi (`--port`
   va faol kontekstni bekor qiladi). `--api-key <key>` o‘sha server uchun
   hisob ma’lumotini taqdim etadi (standart qiymat — `OMNIROUTE_API_KEY` muhit
   o‘zgaruvchisi yoki faol kontekst tokeni).
@@ -122,7 +122,7 @@ Bayroqlar bo‘yicha izohlar (buyruq manbasida tekshirilgan):
   `-c model_providers.omniroute.*` argumentlari orqali oladi. **Qwen — `--model`
   qat’iy talab qilinadigan yagona ishga tushirish nishoni** — usiz
   `omniroute run qwen` aniq xato bilan `2` kodini qaytarib tugaydi.
-- `--port <port>` — mahalliy OmniRoute porti (standart qiymat `20128`,
+- `--port <port>` — mahalliy 67router porti (standart qiymat `20128`,
   `--remote` o‘rnatilganda e’tiborga olinmaydi). Barcha `setup-*` buyruqlarida
   va ikkala ishga tushirgichda mavjud.
 - `omniroute run` chiqish kodlari: ichki CLI’ning o‘z chiqish kodi
@@ -170,7 +170,7 @@ qoladi hamda ishga tushiriladigan nishonlar sifatida taqdim etilmaydi.
 
 ## Mahalliy foydalanish
 
-OmniRoute `localhost:20128` manzilida ishlayotganida, vositangizingiz uchun sozlash buyrugʻini ishga tushirish kifoya. Katalog mahalliy serverdan olinadi.
+67router `localhost:20128` manzilida ishlayotganida, vositangizingiz uchun sozlash buyrugʻini ishga tushirish kifoya. Katalog mahalliy serverdan olinadi.
 
 ```bash
 # Codex: har bir mos model uchun profilni ~/.codex/ ichiga yozish
@@ -197,8 +197,8 @@ omniroute setup-continue --dry-run
 Hech qanday konfiguratsiyani yozmasdan ishga tushirish (faqat muhit orqali kiritish):
 
 ```bash
-omniroute launch                 # Claude Code → mahalliy OmniRoute
-omniroute launch-codex           # Codex CLI → mahalliy OmniRoute
+omniroute launch                 # Claude Code → mahalliy 67router
+omniroute launch-codex           # Codex CLI → mahalliy 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -216,7 +216,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Masofadan foydalanish
 
-Istalgan sozlash buyrugʻini `--remote` + `--api-key` orqali masofaviy OmniRoute serveriga yoʻnaltiring. Katalog masofaviy serverdan olinadi; konfiguratsiya mahalliy kompyuteringizga yoziladi.
+Istalgan sozlash buyrugʻini `--remote` + `--api-key` orqali masofaviy 67router serveriga yoʻnaltiring. Katalog masofaviy serverdan olinadi; konfiguratsiya mahalliy kompyuteringizga yoziladi.
 
 ```bash
 # Masofaviy VPS dagi OpenCode, faqat glm/kimi modellarini saqlab qolish
@@ -254,7 +254,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Har ikkala shakl ham bitta 5dive **autentifikatsiya profilini** yozadi va ushbu profilga bogʻlangan har bir `claude` oʻrni keyin OmniRoute bilan ishlaydi. Ushbu nishonga xos uchta jihat mavjud:
+Har ikkala shakl ham bitta 5dive **autentifikatsiya profilini** yozadi va ushbu profilga bogʻlangan har bir `claude` oʻrni keyin 67router bilan ishlaydi. Ushbu nishonga xos uchta jihat mavjud:
 
 - **U park xostida root nomidan ishlaydi.** 5dive buyruqlari mahalliy systemd xizmat birliklari va root egasidagi holat katalogi bilan ishlaydi; masofaviy rejim mavjud emas. Retsept hali root sifatida ishlamayotgan boʻlsa, `sudo` orqali oʻzini qayta ishga tushiradi (`--no-sudo` buni oʻchiradi va uning oʻrniga buyruqni chiqaradi).
 - **Loopback manzili boʻlmasa, endpoint `https://` boʻlishi shart.** Agentning API kaliti har bir soʻrovda shu URL orqali uzatiladi va 5dive kompyuterdan tashqaridagi shifrlanmagan endpointni rad etadi. Xususiy LAN manzili ham bundan mustasno emas.
@@ -262,13 +262,13 @@ Har ikkala shakl ham bitta 5dive **autentifikatsiya profilini** yozadi va ushbu 
 
 API kaliti 5dive vositasiga **stdin** orqali (`--api-key=-`) beriladi, shu sababli u hech qachon `ps` chiqishida koʻrinmaydi.
 
-Profilni bitta modelga emas, OmniRoute **kombinatsiyasiga** yoʻnaltirish parkka provayderlar oʻrtasida avtomatik almashish imkonini beradi: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) da qayd etilgan ishga tushirish jarayonida asosiy endpoint vazifa oʻrtasida butunlay ishdan chiqqanida, agent qolgan bosqichlarni zaxira endpointda yakunladi va uzilishni foydalanuvchiga koʻrsatmadi.
+Profilni bitta modelga emas, 67router **kombinatsiyasiga** yoʻnaltirish parkka provayderlar oʻrtasida avtomatik almashish imkonini beradi: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) da qayd etilgan ishga tushirish jarayonida asosiy endpoint vazifa oʻrtasida butunlay ishdan chiqqanida, agent qolgan bosqichlarni zaxira endpointda yakunladi va uzilishni foydalanuvchiga koʻrsatmadi.
 
 ---
 
 ## Asosiy URL qoidalari (qaysi vositalarga `/v1` kerak)
 
-OmniRoute OpenAI interfeysini `/v1` manzilida, Anthropic interfeysini ildiz manzilida,
+67router OpenAI interfeysini `/v1` manzilida, Anthropic interfeysini ildiz manzilida,
 mahalliy Gemini interfeysini esa `/v1beta` manzilida taqdim etadi. Har bir integratsiya
 oʻz vositasi kutadigan shaklga sozlangan (buyruq manba kodida tasdiqlangan):
 
@@ -290,7 +290,7 @@ oʻz vositasi kutadigan shaklga sozlangan (buyruq manba kodida tasdiqlangan):
 ## Yangilashda mahalliy bog‘liqliklarni saqlash: `--include=optional`
 
 `omniroute update` orqali yangilaganingizda (tasdiqlagandan keyin yoki `--apply` bilan),
-OmniRoute o‘rnatishni ichiga kiritilgan `--include=optional` bilan ishga tushiradi:
+67router o‘rnatishni ichiga kiritilgan `--include=optional` bilan ishga tushiradi:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -319,15 +319,15 @@ Boshqa `omniroute update` bayroqlari (manba kodida tasdiqlangan): `--check`
 Shartnoma `@google/gemini-cli` 0.50.0 bilan tekshirilgan: CLI
 `GOOGLE_GEMINI_BASE_URL` ni hisobga oladi va unga nisbatan
 `POST /v1beta/models/<model>:generateContent` (hamda
-`:streamGenerateContent?alt=sse`) so‘rovlarini yuboradi — bu OmniRoute’ning mahalliy
+`:streamGenerateContent?alt=sse`) so‘rovlarini yuboradi — bu 67router’ning mahalliy
 Gemini interfeysiga (`/v1beta`) aynan mos keladi. `omniroute run gemini` buni
 avtomatik sozlaydi:
 
-- `GOOGLE_GEMINI_BASE_URL` → faol OmniRoute asosiy URL manzili (ildiz, `/v1` siz);
-- `GEMINI_API_KEY` → aniqlangan OmniRoute hisob ma’lumoti (parametr/muhit/kontekst);
+- `GOOGLE_GEMINI_BASE_URL` → faol 67router asosiy URL manzili (ildiz, `/v1` siz);
+- `GEMINI_API_KEY` → aniqlangan 67router hisob ma’lumoti (parametr/muhit/kontekst);
 - `.gemini/settings.json` fayli `gemini-api-key` autentifikatsiyasini tanlaydigan
   **vaqtinchalik, izolyatsiya qilingan `GEMINI_CLI_HOME`**, shu sababli saqlangan
-  Google OAuth seansi (Code Assist) OmniRoute’ga yo‘naltirilgan ishga tushirishni
+  Google OAuth seansi (Code Assist) 67router’ga yo‘naltirilgan ishga tushirishni
   hech qachon almashtirmaydi — chiqishdan keyin olib tashlanadi;
 - **muhit gigiyenasi**: voris jarayon muhiti `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` va `GOOGLE_GENAI_USE_GCA` dan tozalanadi (ular
@@ -354,7 +354,7 @@ integratsiyasi bo‘lib qoladi.
 
 Deterministik ishga tushirish rejasi regressiya sinovlari CI muhitida bajariladi (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). HAQIQIY bajariluvchi fayllarni HAQIQIY
-OmniRoute serverida tekshirish uchun `tests/integration/upstream-cli-smoke.int.test.ts`
+67router serverida tekshirish uchun `tests/integration/upstream-cli-smoke.int.test.ts`
 manzilida ixtiyoriy sinov vositasi mavjud. U hech qachon avtomatik ravishda ishga tushmaydi
 (`RUN_CLI_SMOKE=1` o‘rnatilmasa, har bir quyi sinov o‘tkazib yuboriladi), hisob ma’lumotini
 qiymati orqali emas, env-var NOMI orqali uzatadi, yozib olingan har qanday chiqishdan

@@ -6,7 +6,7 @@
 
 🌐 **Mga Wika:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Pangunahing sanggunian para sa OmniRoute API. Sinasaklaw nito ang pampublikong `/v1` surface at ang mga pinakaginagamit na endpoint sa pamamahala; ang machine-readable na [`docs/openapi.yaml`](../openapi.yaml) at ang route tree sa ilalim ng `src/app/api/` ang mga kumpletong sanggunian.
+Pangunahing sanggunian para sa 67router API. Sinasaklaw nito ang pampublikong `/v1` surface at ang mga pinakaginagamit na endpoint sa pamamahala; ang machine-readable na [`docs/openapi.yaml`](../openapi.yaml) at ang route tree sa ilalim ng `src/app/api/` ang mga kumpletong sanggunian.
 
 Para sa nakatuong protocol na compatible sa OpenAI at matrix ng kakayahan ng provider, tingnan ang
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Response  | `HIT` o `MISS` (hindi streaming)                                                                                                                                                                                                         |
 | `X-OmniRoute-Idempotent` | Response  | `true` kung na-deduplicate                                                                                                                                                                                                               |
 | `X-OmniRoute-Progress`   | Response  | `enabled` kung naka-on ang pagsubaybay sa progreso                                                                                                                                                                                       |
-| `X-OmniRoute-Session-Id` | Response  | Epektibong session ID na ginamit ng OmniRoute                                                                                                                                                                                            |
+| `X-OmniRoute-Session-Id` | Response  | Epektibong session ID na ginamit ng 67router                                                                                                                                                                                             |
 | `X-OmniRoute-Request-Id` | Response  | ID ng ugnayan ng request (kapag alam)                                                                                                                                                                                                    |
-| `X-OmniRoute-Version`    | Response  | Bersyon ng build ng OmniRoute (laging naroroon)                                                                                                                                                                                          |
+| `X-OmniRoute-Version`    | Response  | Bersyon ng build ng 67router (laging naroroon)                                                                                                                                                                                           |
 | `X-OmniRoute-Cost-Saved` | Response  | Halaga sa USD na naiwasan dahil sa cache sa isang HIT (para lamang sa mga cache hit)                                                                                                                                                     |
 | `X-OmniRoute-Decision`   | Response  | Trace ng routing: `strategy=<name>; provider=<alias>; latency_ms=<n>` (ang `<name>` ay ang strategy ng combo, o `single` para sa request na hindi combo) — laging naroroon sa mga response sa pagkumpleto                                |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Pag-pin ng account sa bawat request
 
-Kapag maraming koneksyon (mga account o key) ang isang provider, karaniwang pumipili ang OmniRoute ng isa
+Kapag maraming koneksyon (mga account o key) ang isang provider, karaniwang pumipili ang 67router ng isa
 gamit ang diskarte nito sa pagpili ng account. Sa halip, maaaring i-pin ng isang request ang isang partikular na koneksyon
 gamit ang header na `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ account para sa bawat proyekto:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Pinagmulan: `src/sse/handlers/chat.ts` (pagbasa ng header), `src/sse/services/au
 ## Mga Eksklusibong Lease ng Pinamamahalaang Session
 
 Ang eksklusibong pag-lease ng pinamamahalaang session ay isang opsyonal at client-neutral na kontrata sa pagruruta: isang aktibong may-ari
-ang humahawak sa isang karapat-dapat na koneksyon ng OmniRoute. Hindi ito nagle-lease ng modelo, nangangailangan ng OAuth, kumikilala ng
+ang humahawak sa isang karapat-dapat na koneksyon ng 67router. Hindi ito nagle-lease ng modelo, nangangailangan ng OAuth, kumikilala ng
 partikular na client, o nangangailangan ng partikular na provider.
 
 Ang API key na ginagamit sa pagpapatotoo ay dapat magkaroon ng scope na `lease:exclusive` at tahasang hindi bakanteng
@@ -190,7 +190,7 @@ Maaaring tahasang humiling ang aktibong may-ari ng lease ng display metadata na 
 
 Ang opsyonal na status action na ito ay nililimitahan ng opaque na may-ari, napatotohanang pinamamahalaang API key, at eksaktong
 aktibong generation sa iisang transaksyon sa database. Ang `displayName` ay ang na-trim na naka-configure na
-pangalan lamang ng koneksyon; ito ay `null` kapag walang ligtas na naka-configure na pangalan. Hindi kailanman nagpapalit ang OmniRoute ng
+pangalan lamang ng koneksyon; ito ay `null` kapag walang ligtas na naka-configure na pangalan. Hindi kailanman nagpapalit ang 67router ng
 email o nabuong pagkakakilanlan ng account. Ang value ng provider ay isang hindi sensitibong display label at hindi kailanman
 isang nabuong identifier ng compatible provider. Hindi isinasama ang mga kredensyal, token, cookie, raw na koneksyon o mga API
 key id, owner hash, fencing secret, at panloob na data sa pagruruta.
@@ -231,7 +231,7 @@ Ang pansamantalang kompetisyon ay nagbabalik ng HTTP `429` na may `Retry-After` 
 
 Ang ibig sabihin lamang ng tugon na ito ay hindi bakante ang karaniwang hanay ng mga karapat-dapat na koneksyon at bawat libreng kandidato ay
 hawak ng aktibong lease ng ibang may-ari. Pinapanatili ng mga hindi sinusuportahang modelo/provider, hindi pagtugma sa policy, cooldown, quota,
-health, at iba pang karaniwang pagkabigo sa eligibility ang kanilang mga kasalukuyang tugon ng OmniRoute.
+health, at iba pang karaniwang pagkabigo sa eligibility ang kanilang mga kasalukuyang tugon ng 67router.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request doc ng Jina at **ipinapasa ang mga ito nang buo** sa `https:
 ```
 
 Ang mga native na value na `{ image | audio | video | pdf }` ay maaaring pampublikong HTTPS URL, `data:` URI, o raw
-base64. Hindi ginagawang string ng OmniRoute ang mga object na iyon o kinukuha ang mga native image URL — ang Jina mismo ang kumukuha
+base64. Hindi ginagawang string ng 67router ang mga object na iyon o kinukuha ang mga native image URL — ang Jina mismo ang kumukuha
 ng pampublikong media. Ipinapasa ang mga karagdagang field ng Jina (`task`, `normalized`, `truncate`, `embedding_type`).
 Tinatanggihan pa rin ng mga text-only na Jina SKU ang mga doc na hindi text.
 
@@ -454,7 +454,7 @@ tumatawag, kaya hindi kailangang gumawa ng client code ng espesyal na paghawak p
 
 ### Auth at resolution ng endpoint para sa Vertex AI DeepSeek OCR
 
-Muling ginagamit ng `vertex-deepseek-ocr` ang parehong authentication ng Vertex AI na sinusuportahan na ng OmniRoute para sa
+Muling ginagamit ng `vertex-deepseek-ocr` ang parehong authentication ng Vertex AI na sinusuportahan na ng 67router para sa
 trapiko ng chat/larawan (`open-sse/executors/vertex.ts`): ang API key ng koneksyon ay alinman sa
 Service Account JSON credential (ipinagpapalit para sa panandaliang OAuth access token sa pamamagitan ng JWT-bearer
 flow) o isa nang nagawang OAuth access token na ginagamit nang walang pagbabago. Ang upstream endpoint URL ay ang generic na
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Mga presyo ng modelo (`pricing`)
 
-Ang isang entry ay may `pricing` object kapag alam ng OmniRoute ang presyo ng modelo. Ang presyo ay
+Ang isang entry ay may `pricing` object kapag alam ng 67router ang presyo ng modelo. Ang presyo ay
 nagmumula sa talahanayan ng pagpepresyo na ginagamit ng cost accounting: mga built-in na default, naka-sync na presyo, at
 mga override na itinakda sa pamamagitan ng `/api/pricing`. Mga list price ang mga ito, kaya nagpapakita rin ang mga subscription provider
 ng presyo sa bawat token.
@@ -632,8 +632,8 @@ Gamitin ang endpoint na ito kapag tumatakbo ang isang sidecar sa labas ng proses
 
 ## Pagbuo ng audio gamit ang ElevenLabs
 
-Mag-configure ng koneksyon sa provider na `elevenlabs` sa OmniRoute gamit ang iyong ElevenLabs API key.
-Nagpapatotoo ang mga client gamit ang kanilang **OmniRoute** key (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Mag-configure ng koneksyon sa provider na `elevenlabs` sa 67router gamit ang iyong ElevenLabs API key.
+Nagpapatotoo ang mga client gamit ang kanilang **67router** key (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 ibinibigay ng gateway ang nakaimbak na provider key bilang `xi-api-key`. Huwag kailanman magpadala ng ElevenLabs key
 bilang gateway bearer token.
 
@@ -698,7 +698,7 @@ route ang mga upstream status code at error body nang walang pagbabago, kabilang
 at `429` para sa limitasyon ng quota. Pinapanatili ang mga header na `character-cost`, `song-id`, `request-id` at `retry-after`
 kapag naroroon. Hindi ginagarantiya ng libreng balanse ng credit ang access sa bawat
 music model, output format, o feature ng API: ang ElevenLabs ang nagpapasya sa karapatan sa access para sa bawat request.
-Pinapanatili ng pinag-isang endpoint ang mga error status code sa normalized error envelope ng OmniRoute.
+Pinapanatili ng pinag-isang endpoint ang mga error status code sa normalized error envelope ng 67router.
 
 Mga upstream contract: [mga sound effect](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [komposisyon ng musika](https://elevenlabs.io/docs/api-reference/music/compose) at
@@ -739,7 +739,7 @@ Mga upstream contract: [mga sound effect](https://elevenlabs.io/docs/api-referen
 
 Pare-pareho ang anyo ng lahat ng POST route: `Bearer your-api-key` + JSON body na bina-validate ng Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, atbp., tingnan ang `src/shared/validation/schemas.ts`). Ibinabalik ang 4xx kapag nabigo ang schema validation.
 
-Para sa mga client na hindi makapaglakip ng `Authorization: Bearer ...`, tumatanggap din ang OmniRoute ng mga API key sa URL sa pamamagitan ng query-string compatibility (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) o ng mga nakalaang `/api/v1/vscode/{token}/...` endpoint na nakadokumento sa ibaba.
+Para sa mga client na hindi makapaglakip ng `Authorization: Bearer ...`, tumatanggap din ang 67router ng mga API key sa URL sa pamamagitan ng query-string compatibility (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) o ng mga nakalaang `/api/v1/vscode/{token}/...` endpoint na nakadokumento sa ibaba.
 
 ```bash
 # Rerank (provider ng cloud registry, o isang provider node na compatible sa OpenAI bilang "<prefix>/<model>")
@@ -900,7 +900,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Markdown lang ang ibinabalik ng Parallel Extract (`parallel-search`, kaparehong API key ng Parallel Search)
 — anumang ibang `format` ay magreresulta sa `400` — at nililimitahan nito ang content sa 100,000 character. Kapag
 hindi makuha ang mismong target na page, iuulat ito ng upstream sa loob ng HTTP 200;
-ilalabas iyon ng OmniRoute bilang `422` na may nakapirming mensahe.
+ilalabas iyon ng 67router bilang `422` na may nakapirming mensahe.
 
 | Paraan | Path            | Paglalarawan                                                               |
 | ------ | --------------- | -------------------------------------------------------------------------- |
@@ -964,13 +964,13 @@ Bina-validate ng OpenAI **Codex CLI** ang pangalan ng model sa client side kapag
 `supports_websockets = true` at **tinatanggihan ang mga id na may provider prefix** gaya ng
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
 a ChatGPT account`). Ipadala ang **payak** na id (hal. `gpt-5.5`). Codex-only ang bridge ng
-OmniRoute, kaya muli nitong nire-resolve ang payak na id bilang codex model
+67router, kaya muli nitong nire-resolve ang payak na id bilang codex model
 (`resolveCodexWsModelInfo`) bago gumawa ng tunnel patungo sa upstream — kahit na ang payak na
 `gpt-5.5` ay karaniwang iru-route sa ibang provider sa HTTP.
 
 #### Pag-configure sa OpenAI Codex CLI
 
-Ituro ang Codex CLI sa OmniRoute sa pamamagitan ng pagdaragdag ng custom provider na may WebSocket
+Ituro ang Codex CLI sa 67router sa pamamagitan ng pagdaragdag ng custom provider na may WebSocket
 support sa `~/.codex/config.toml` (gumamit ng hiwalay na `CODEX_HOME` upang maiwasang baguhin
 ang kasalukuyang config):
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # walang trailing slash; awtomatikong binubuo ang WS URL (gumamit ng https/wss sa production)
 wire_api = "responses"                    # tanging suportadong value mula noong Peb 2026
 supports_websockets = true                # ine-enable ang Responses-over-WS transport
-env_key = "OMNIROUTE_API_KEY"             # naglalaman ng OmniRoute API key (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # naglalaman ng 67router API key (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # isang OmniRoute API key (anumang key kung REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # isang 67router API key (anumang key kung REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-Ina-upgrade ng CLI ang `base_url + /responses` sa isang WebSocket at ginagawa itong tunnel ng OmniRoute
+Ina-upgrade ng CLI ang `base_url + /responses` sa isang WebSocket at ginagawa itong tunnel ng 67router
 patungo sa napiling codex OAuth connection. Na-validate nang end-to-end laban sa lokal na
 server: ibinabalik ng ChatGPT ang `codex.rate_limits` + `response.created` at sini-stream ang
 completion.
@@ -1075,7 +1075,7 @@ mga porsiyentong ipinapakita ng **plain-text output** at ng nakaayos na **JSON o
 
 #### Ang Formula sa Pag-adjust ng Cutoff
 
-Sinusuportahan ng OmniRoute ang mga proactive quota cutoff upang maiwasang maubos ang upstream (kino-configure sa pamamagitan ng
+Sinusuportahan ng 67router ang mga proactive quota cutoff upang maiwasang maubos ang upstream (kino-configure sa pamamagitan ng
 `quotaWindowThresholds` ng koneksyon, mga default ng provider, o mga global resilience setting). Kapag may aktibong cutoff threshold
 (hal., `cutoff = 25%`) sa isang quota window, kinakalkula ng text renderer ang natitirang allowance bilang:
 
@@ -1437,9 +1437,8 @@ Kasama sa tugon ng GET ang `agents[]` (id, name, binary, version, installed, pro
 
 ### Mga Eval
 
-| Endpoint     | Paraan   | Paglalarawan                                        |
-| ------------ | -------- | --------------------------------------------------- |
-| `/api/evals` | GET/POST | Ilista ang mga eval suite / magsagawa ng evaluation |
+| Endpoint | Paraan | Paglalarawan |
+| -------- | ------ | ------------ |
 
 ### Mga Patakaran
 
@@ -1618,7 +1617,7 @@ Mga tala:
 
 - Muling ginagamit ng mga tokenized na alias ang parehong mga handler gaya ng `/v1/*` at `/api/tags`; nananatiling pareho ang mga anyo ng tugon.
 - Mas piliing gamitin ang `Authorization: Bearer ...` kapag sinusuportahan ng client ang mga custom na header.
-- Maaaring lumitaw ang mga token na nakabatay sa URL sa mga log ng reverse proxy, kasaysayan ng browser, at telemetry sa labas ng OmniRoute. Ituring ang mga ito bilang opsyon para sa compatibility, hindi bilang default na paraan ng authentication.
+- Maaaring lumitaw ang mga token na nakabatay sa URL sa mga log ng reverse proxy, kasaysayan ng browser, at telemetry sa labas ng 67router. Ituring ang mga ito bilang opsyon para sa compatibility, hindi bilang default na paraan ng authentication.
 
 ---
 
@@ -1726,7 +1725,7 @@ Ang mga mas mataas na antas na routing combo (naibuod na sa ilalim ng `/api/comb
 
 ## Mga Webhook
 
-Mga outbound na subscription sa webhook para sa mga event ng OmniRoute (pagkumpleto ng request, pagkaubos ng quota, pag-rotate ng key, atbp.).
+Mga outbound na subscription sa webhook para sa mga event ng 67router (pagkumpleto ng request, pagkaubos ng quota, pag-rotate ng key, atbp.).
 
 | Method | Path                      | Paglalarawan                                                                          |
 | ------ | ------------------------- | ------------------------------------------------------------------------------------- |
@@ -1757,31 +1756,6 @@ Ginagamit ng subsystem para sa awtomatikong pamamahala ng key upang mag-isyu at 
 
 ---
 
-## Protocol ng mga Agent
-
-Mga gawain ng cloud agent (Claude Code, Codex Cloud, OpenHands, atbp.) na isinasagawa nang malayuan para sa mga user ng OmniRoute.
-
-| Paraan | Path                          | Paglalarawan                                                                                                                                                           |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Ilista ang mga gawain — opsyonal ang `?provider=`, `?status=`, `?limit=` (1–500, default na 50)                                                                        |
-| POST   | `/api/v1/agents/tasks`        | Gumawa ng gawain — bina-validate ang body ng `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Nagbabalik ng `201` kasama ang task envelope |
-| DELETE | `/api/v1/agents/tasks?id=...` | Magtanggal ng gawain                                                                                                                                                   |
-| GET    | `/api/v1/agents/tasks/[id]`   | Basahin ang gawain — sabayang nire-refresh ang status mula sa upstream cloud agent kapag nakatakda ang `external_id`                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | Discriminated action: `{action: "approve"}`, `{action: "message", message}`, o `{action: "cancel"}`                                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Magtanggal ng partikular na gawain ayon sa id                                                                                                                          |
-
-> **Auth:** kinakailangan ang management auth sa bawat paraan (`requireCloudAgentManagementAuth`). Bago ang v3.8.0, walang authentication ang mga ito — tingnan ang commit `588a0333` para sa breaking change.
-
-```bash
-# Gumawa ng Claude Code cloud task
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Mga Management Proxy
 
 Mga outbound HTTP(S)/SOCKS proxy na maaaring italaga sa mga provider, account, o sa buong sistema.
@@ -1805,7 +1779,7 @@ Mga outbound HTTP(S)/SOCKS proxy na maaaring italaga sa mga provider, account, o
 
 ## Katatagan (pinalawak)
 
-Nagbibigay ang OmniRoute ng tatlong magkakahiwalay na mekanismo para sa pansamantalang pagkabigo; hinahayaan ng mga management endpoint sa ibaba ang mga operator na basahin at i-override ang mga ito:
+Nagbibigay ang 67router ng tatlong magkakahiwalay na mekanismo para sa pansamantalang pagkabigo; hinahayaan ng mga management endpoint sa ibaba ang mga operator na basahin at i-override ang mga ito:
 
 | Saklaw                | Imbakan ng estado                                 | Pagbasa                                   | Pag-reset / pag-clear                                                 |
 | --------------------- | ------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- |
@@ -1840,7 +1814,7 @@ Para sa kumpletong konseptuwal na sanggunian at mga default ng breaker: tingnan 
 
 ## Mga Skill
 
-Framework ng skill para palawakin ang OmniRoute gamit ang mga custom na executable handler, kasama ang mga integration sa marketplace.
+Framework ng skill para palawakin ang 67router gamit ang mga custom na executable handler, kasama ang mga integration sa marketplace.
 
 | Paraan | Path                              | Paglalarawan                                                                                                                                            |
 | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1877,7 +1851,7 @@ Persistenteng imbakan ng memoryang pang-usapan/paktuwal, na nakasasaklaw sa bawa
 
 ## Server ng MCP
 
-May kasamang naka-embed na server ng Model Context Protocol ang OmniRoute na may 3 transport (stdio, SSE, streamable-http) at mga tool na may saklaw. Binabasa ng mga dashboard endpoint sa ibaba ang data ng katayuan/pag-audit at ipinapasa bilang proxy ang mga HTTP transport.
+May kasamang naka-embed na server ng Model Context Protocol ang 67router na may 3 transport (stdio, SSE, streamable-http) at mga tool na may saklaw. Binabasa ng mga dashboard endpoint sa ibaba ang data ng katayuan/pag-audit at ipinapasa bilang proxy ang mga HTTP transport.
 
 | Pamamaraan | Path | Paglalarawan |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1899,50 +1873,12 @@ May kasamang naka-embed na server ng Model Context Protocol ang OmniRoute na may
 
 ## A2A Server
 
-Naglalantad ang OmniRoute ng A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint at isang REST wrapper para sa inspeksiyon/paggamit ng dashboard.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # opsyonal maliban kung nakatakda ang OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Mga sinusuportahang method (lahat ay nakadepende sa `settings.a2aEnabled`):
-
-| Method           | Paglalarawan                                                                |
-| ---------------- | --------------------------------------------------------------------------- |
-| `message/send`   | Sabayang pagpapatupad ng skill; nagbabalik ng `{task, artifacts, metadata}` |
-| `message/stream` | Pagpapatupad gamit ang streaming SSE para sa parehong hanay ng mga skill    |
-| `tasks/get`      | Kunin ang isang task gamit ang `taskId`                                     |
-| `tasks/cancel`   | Kanselahin ang isang task gamit ang `taskId`                                |
-
-Mga built-in na skill: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agent Card
-
-```bash
-GET /.well-known/agent.json
-```
-
-Ibinabalik ang pampublikong A2A agent card (pangalan, paglalarawan, mga kakayahan, katalogo ng skill, auth scheme) — pampublikong naka-cache nang 1 oras. Hindi kailangan ang auth.
+Naglalantad ang 67router ng A2A (Agent-to-Agent) JSON-RPC 2.0 endpoint at isang REST wrapper para sa inspeksiyon/paggamit ng dashboard.
 
 ### Mga REST helper
 
 | Method | Path                         | Paglalarawan                                                                                                             |
 | ------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| GET    | `/api/a2a/status`            | Naka-enable ang A2A + mga istatistika ng task + buod ng naka-cache na agent card                                         |
 | GET    | `/api/a2a/tasks`             | Ilista ang mga task — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Hindi ipinatupad bilang REST helper — gumawa gamit ang JSON-RPC `message/send`)                                         |
 | GET    | `/api/a2a/tasks/[id]`        | Kunin ang isang task                                                                                                     |
@@ -1962,12 +1898,8 @@ Ibinabalik ang pampublikong A2A agent card (pangalan, paglalarawan, mga kakayaha
 | GET | `/api/cloud/models/alias` | Ilista ang mga model alias gaya ng inilalantad sa cloud sync |
 | GET | `/api/assess` | Basahin ang mga pinakabagong pagkakategorya ng assessment (bawat provider/model) |
 | POST | `/api/assess` | Magpatakbo ng assessment — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Ilista ang mga built-in na eval suite + mga pinakabagong run |
-| POST | `/api/evals` | Mag-trigger ng isang eval run |
-| POST | `/api/evals/suites` | Gumawa ng custom na eval suite — bina-validate ang body ng `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Kunin ang isang custom na eval suite |
 
-**Auth:** direktang bina-validate ng `/api/cloud/auth` ang isang Bearer key at ibinabalik lamang ang naka-mask na key at `projectId` ng bawat koneksiyon para sa key na may saklaw na `manage` / `admin`; nangangailangan ang iba pang `/api/cloud/*`, `/api/evals/*`, at `/api/assess` route ng management session/API key. Ginagamit ng `/api/assess` POST ang `validateBody` na may discriminated-union scope schema.
+**Auth:** direktang bina-validate ng `/api/cloud/auth` ang isang Bearer key at ibinabalik lamang ang naka-mask na key at `projectId` ng bawat koneksiyon para sa key na may saklaw na `manage` / `admin`; nangangailangan ang iba pang `/api/cloud/*`, at `/api/assess` route ng management session/API key. Ginagamit ng `/api/assess` POST ang `validateBody` na may discriminated-union scope schema.
 
 ---
 
@@ -2125,7 +2057,7 @@ Mga endpoint na para lamang sa admin para sa pamamahala ng mga operasyon.
 
 ## Pamamahala ng mga CLI Tool
 
-Pamahalaan ang mga CLI tool na isinasama sa OmniRoute (antigravity, commandCode,
+Pamahalaan ang mga CLI tool na isinasama sa 67router (antigravity, commandCode,
 devin-cli, atbp.). Tingnan ang [Sanggunian ng Provider](./PROVIDER_REFERENCE.md) para sa kumpletong listahan.
 
 | Paraan | Path                                    | Paglalarawan                                                                                                                                                                                   |
@@ -2234,26 +2166,6 @@ Tingnan ang [Framework ng Skills](../frameworks/SKILLS.md) para sa kumpletong de
 
 ---
 
-## Mga Plugin
-
-Pamahalaan ang mga plugin ng OmniRoute (mga third-party extension).
-
-| Pamamaraan | Path                               | Paglalarawan                              |
-| ---------- | ---------------------------------- | ----------------------------------------- |
-| GET        | `/api/plugins`                     | Ilista ang mga naka-install na plugin     |
-| POST       | `/api/plugins/marketplace/install` | Mag-install ng plugin mula sa marketplace |
-| DELETE     | `/api/plugins/[name]`              | Mag-uninstall ng plugin                   |
-| POST       | `/api/plugins/[name]/activate`     | I-activate ang plugin                     |
-| POST       | `/api/plugins/[name]/deactivate`   | I-deactivate ang plugin                   |
-| GET        | `/api/plugins/[name]/config`       | Kunin ang configuration ng plugin         |
-| PUT        | `/api/plugins/[name]/config`       | I-update ang configuration ng plugin      |
-
-**Auth:** Nangangailangan ng management session.
-
-Tingnan ang [Framework ng Mga Plugin](../frameworks/PLUGIN_SDK.md) para sa kumpletong detalye.
-
----
-
 ## Shadow Routing
 
 Ang shadow / A-B comparison ng mga provider ay **hindi isang standalone REST surface** — kino-configure ito sa pamamagitan ng combo routing (tingnan ang [Auto-Combo](../routing/AUTO-COMBO.md)). Ang mga comparison metric para sa bawat combo ay ibinibigay ng `GET /api/combos/metrics`.
@@ -2288,5 +2200,3 @@ Token, API key na may saklaw na manage) at kung paano naiiba ang mga ito sa mga 
 - Maaaring i-toggle ang `requireLogin` sa pamamagitan ng `/api/settings/require-login`
 - Opsyonal na nangangailangan ang mga rutang `/v1/*` ng Bearer API key kapag `REQUIRE_API_KEY=true`
 - Ang "token sa pamamahala" / "API key na may saklaw sa pamamahala" sa sangguniang ito ay tumutukoy sa isa sa mga pamilya sa gabay na iyon — hindi sa isang hindi tinukoy na karagdagang uri ng lihim
-
-> **Pagbabagong hindi backward-compatible (v3.8.0)** — Nangangailangan na ngayon ang `/api/v1/agents/tasks/*` at ang mga endpoint sa pamamahala ng cooldown ng **pagpapatunay sa pamamahala** (cookie na `auth_token` ng dashboard o API key na may saklaw sa pamamahala). Makakatanggap ang mga client na dating tumatawag sa mga rutang ito nang walang pagpapatunay ng `401 Unauthorized`. Tingnan ang commit na `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

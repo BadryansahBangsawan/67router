@@ -4,7 +4,7 @@
 
 ---
 
-A relayek (Vercel, Deno, Cloudflare) egy serverless háttérrendszeren lezárják a külső szolgáltató felé irányuló kapcsolatot, így az OmniRoute stabil régióból indíthat kimenő kapcsolatokat, miközben a szolgáltató API-kulcsa a szerveroldalon marad. Ez a dokumentum a két olyan hibamódot, valamint az egyes hibákhoz az OmniRoute által biztosított helyreállítási eljárásokat ismerteti, amelyekkel az üzemeltetők éles környezetben találkozhatnak.
+A relayek (Vercel, Deno, Cloudflare) egy serverless háttérrendszeren lezárják a külső szolgáltató felé irányuló kapcsolatot, így a 67router stabil régióból indíthat kimenő kapcsolatokat, miközben a szolgáltató API-kulcsa a szerveroldalon marad. Ez a dokumentum a két olyan hibamódot, valamint az egyes hibákhoz a 67router által biztosított helyreállítási eljárásokat ismerteti, amelyekkel az üzemeltetők éles környezetben találkozhatnak.
 
 ## A relay-hitelesítés tárolása
 
@@ -24,7 +24,7 @@ A kérések feldolgozásakor az `extractRelayAuth(notes)` a jelen lévő formát
 
 1. Nyissa meg a **Beállítások → Proxykészlet** oldalt.
 2. Azoknál a relaysoroknál, amelyekből hiányzik a hitelesítés, egy sárga `hitelesítés hiányzik` jelvény és egy **Javítás** gomb jelenik meg.
-3. Kattintson a **Javítás** gombra. Az OmniRoute meghívja a
+3. Kattintson a **Javítás** gombra. A 67router meghívja a
    `POST /api/settings/proxies/[id]/repair-relay` végpontot, amely:
    - az **aktuális** kulccsal visszafejti a `relayAuthEnc` értékét,
    - visszaírja az egyszerű szöveges `relayAuth` értéket a `notes` mezőbe,
@@ -49,7 +49,7 @@ A felhasználói felületen a **Javítás** gomb maga nyitja meg az újbóli tel
 
 **Tünet:** a proxyteszt (`sebesség` gomb) szerint a relay elérhető, de a kérések továbbra is időszakosan meghiúsulnak.
 
-Ellenőrizze az OmniRoute automatikus tesztelési próbája által visszaadott relay-állapotjelző fejléceket (lásd: **Beállítások → Proxykészlet**, valamint a `relayTested` / `relayAlive` számlálók):
+Ellenőrizze a 67router automatikus tesztelési próbája által visszaadott relay-állapotjelző fejléceket (lásd: **Beállítások → Proxykészlet**, valamint a `relayTested` / `relayAlive` számlálók):
 
 - `x-relay-url` — melyik relay-háttérrendszer válaszolt.
 - `x-relay-mode` — az adott kéréshez tartozó `ts` | `bifrost` | `auto` mód.

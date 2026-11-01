@@ -4,7 +4,7 @@
 
 ---
 
-Bu təlimatda Kiro (AWS-də yerləşdirilən AI kodlaşdırma köməkçisi) hesablarının OmniRoute-a əlavə edilməsi, xüsusilə də sessiya konfliktləri olmadan birdən çox hesabın eyni vaxtda işlədilməsi izah olunur.
+Bu təlimatda Kiro (AWS-də yerləşdirilən AI kodlaşdırma köməkçisi) hesablarının 67router-a əlavə edilməsi, xüsusilə də sessiya konfliktləri olmadan birdən çox hesabın eyni vaxtda işlədilməsi izah olunur.
 
 ---
 
@@ -21,10 +21,10 @@ hesabın tokenini ləğv edir.
 
 ---
 
-## OmniRoute bunu necə həll edir (v3.8.0+)
+## 67router bunu necə həll edir (v3.8.0+)
 
-v3.8.0 versiyasından başlayaraq OmniRoute hər Kiro bağlantısının idxalı zamanı
-`registerClient()` (AWS SSO OIDC) çağırır. Bu, hər OmniRoute bağlantısına ayrıca OIDC
+v3.8.0 versiyasından başlayaraq 67router hər Kiro bağlantısının idxalı zamanı
+`registerClient()` (AWS SSO OIDC) çağırır. Bu, hər 67router bağlantısına ayrıca OIDC
 müştəri qeydiyyatı verir. Hər müştəri qeydiyyatı müstəqil olduğuna görə bir hesabın
 yenilənməsi və ya təkrar autentifikasiya edilməsi digər hesabların yeniləmə tokeninə təsir etmir.
 
@@ -58,7 +58,7 @@ avtomatik olaraq öz müştəri qeydiyyatını əldə edəcək.
 
 ### İlkin tələblər
 
-- OmniRoute v3.8.0 və ya daha yeni versiya.
+- 67router v3.8.0 və ya daha yeni versiya.
 - İşlək Kiro hesabı (e-poçt + parol, Google və ya GitHub girişi).
 - İstəyə bağlı olaraq ikinci Kiro hesabı.
 
@@ -69,7 +69,7 @@ avtomatik olaraq öz müştəri qeydiyyatını əldə edəcək.
    - **Tokeni İdxal Et** — `aorAAAAAG` ilə başlayan yeniləmə tokenini daxil edin.
    - **API Açarı** — uzunmüddətli Kiro / CodeWhisperer API açarını daxil edin.
    - **Google / GitHub girişi** — brauzerdə OAuth axınını tamamlayın.
-   - **Avtomatik İdxal** — düyməyə klikləyin; OmniRoute giriş məlumatlarını
+   - **Avtomatik İdxal** — düyməyə klikləyin; 67router giriş məlumatlarını
      yerli kiro-cli verilənlər bazasından və ya `~/.aws/sso/cache` yolundan oxuyur.
 3. Bağlantı saxlanılır. Yeniləmə tokeni axınları avtomatik olaraq ayrıca
    OIDC müştərisini qeydiyyatdan keçirir. API açarı axınları açarı AWS ilə yoxlayır və yeniləmə tokenini saxlamır.
@@ -126,7 +126,7 @@ OAuth yeniləməsindən istifadə etmir və beləliklə, paylaşılan OIDC sessi
 2. **API Açarı** seçin.
 3. API açarını daxil edin və AWS regionunu seçin: **Avtomatik aşkarlama** (standart), **ABŞ Şərqi
    (Şimali Virciniya)** və ya **Avropa (Frankfurt)**.
-4. OmniRoute açarı yoxlayır və bağlantını açarın işlədiyi regiona bağlayaraq yadda saxlayır.
+4. 67router açarı yoxlayır və bağlantını açarın işlədiyi regiona bağlayaraq yadda saxlayır.
 
 ### API
 
@@ -175,7 +175,7 @@ daxil olmaqla — göndərir, çünki Kiro IDE şlüzü `TokenType=API_KEY` dəy
 ## OIDC Müştərisinin İstifadə Müddətinin Bitməsi
 
 AWS SSO OIDC ictimai müştərilərinin istifadə müddəti adətən 90 gündən sonra bitir
-(`clientSecretExpiresAt`). OmniRoute müşahidə edilə bilməsi üçün bu zaman nişanını `providerSpecificData`
+(`clientSecretExpiresAt`). 67router müşahidə edilə bilməsi üçün bu zaman nişanını `providerSpecificData`
 daxilində saxlayır. Bağlantı təxminən 90 gündən sonra yenilənməyi dayandırarsa, yeni OIDC müştəri
 qeydiyyatı əldə etmək üçün bağlantını yenidən idxal edin. İstifadə müddəti bitdikdə avtomatik yenidən qeydiyyat
 gələcək təkmilləşdirmə kimi izlənilir.
@@ -196,7 +196,7 @@ AWS SSO OIDC vasitəsilə yenilənmir.
 ### İdxal "Token validation failed" xətası ilə uğursuz olur
 
 - Yeniləmə tokeninin `aorAAAAAG` ilə başladığına əmin olun.
-- OmniRoute-un `https://oidc.us-east-1.amazonaws.com` ünvanına (və ya konfiqurasiya edilmiş
+- 67router-un `https://oidc.us-east-1.amazonaws.com` ünvanına (və ya konfiqurasiya edilmiş
   regiona) çata bildiyinə əmin olun. Korporativ proksinin arxasındasınızsa,
   **İdarəetmə paneli → Parametrlər → Proksilər** bölməsində provayder səviyyəli proksi təyin edin.
 
@@ -204,7 +204,7 @@ AWS SSO OIDC vasitəsilə yenilənmir.
 
 - Açarın yeniləmə tokeni deyil, Kiro / CodeWhisperer API açarı olduğunu təsdiqləyin.
 - AWS regionunun açara/hesaba uyğun olduğunu təsdiqləyin. Standart dəyər `us-east-1`-dir.
-- Açar `ListAvailableProfiles` çağırışını edə bilməlidir; əks halda OmniRoute tələb olunan
+- Açar `ListAvailableProfiles` çağırışını edə bilməlidir; əks halda 67router tələb olunan
   `profileArn` dəyərini müəyyənləşdirə bilməz.
 
 Digər problemlər üçün əsas [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) faylına baxın.

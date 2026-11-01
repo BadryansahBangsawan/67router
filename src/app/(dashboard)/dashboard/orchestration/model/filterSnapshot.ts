@@ -33,9 +33,6 @@ export function isEmptyFilter(f: OrchFilter): boolean {
  * (a2a, routing) or the raw payload doesn't carry one.
  */
 export function nodeProviderKey(node: OrchNode): string | null {
-  if (node.source === "cloud-agent") {
-    return (node.raw as { providerId?: string } | undefined)?.providerId ?? null;
-  }
   if (node.source === "conductor") {
     return (node.raw as { runner?: string | null } | undefined)?.runner ?? null;
   }

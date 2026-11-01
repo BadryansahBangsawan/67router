@@ -10,7 +10,7 @@ toʻrtta provayder oilasi sifatida taqdim etiladi. Mintaqa alohida mahsulot emas
 
 ## Qaror
 
-| Provayder oilasi                                         | OmniRoute ID            | Global mintaqa | Xitoy mintaqasi |
+| Provayder oilasi                                         | 67router ID             | Global mintaqa | Xitoy mintaqasi |
 | -------------------------------------------------------- | ----------------------- | -------------- | --------------- |
 | Alibaba Cloud Model Studio (foydalanish boʻyicha toʻlov) | `alibaba`               | Singapur       | Pekin           |
 | Alibaba Cloud Token Plan                                 | `bailian-coding-plan`   | Singapur       | Pekin           |

@@ -7,7 +7,7 @@
 > **Tiesos šaltinis:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Paskutinį kartą atnaujinta:** 2026-09-22 — aprėpties vardų sritys nurodo į MCP-SERVER.md
 
-OmniRoute turi maršrutą atpažįstančią autorizacijos sistemą, kuri kontroliuoja kiekvieną API užklausą. Klasifikacija yra **deterministinė** ir **uždaroma gedimo atveju** — viskas, kas negali būti klasifikuota, tampa `MANAGEMENT` ir reikalauja sesijos arba valdymo lygio prieigos rakto. Šiame puslapyje paaiškinamas modelis inžinieriams, prižiūrintiems maršrutus arba kuriantiems naujus galinius taškus.
+67router turi maršrutą atpažįstančią autorizacijos sistemą, kuri kontroliuoja kiekvieną API užklausą. Klasifikacija yra **deterministinė** ir **uždaroma gedimo atveju** — viskas, kas negali būti klasifikuota, tampa `MANAGEMENT` ir reikalauja sesijos arba valdymo lygio prieigos rakto. Šiame puslapyje paaiškinamas modelis inžinieriams, prižiūrintiems maršrutus arba kuriantiems naujus galinius taškus.
 
 ![Autorizacijos sistema (3 maršrutų klasės + politikos vertinimas)](../diagrams/exported/authz-pipeline.svg)
 
@@ -226,8 +226,6 @@ kredencialui. Žr. [Valdymo autentifikavimas](../guides/MANAGEMENT-AUTH.md).
 Kliento API raktų vykdymui naudojama `isRequireApiKeyEnabled()` iš `src/shared/utils/featureFlags.ts`, o ne tiesioginis `process.env.REQUIRE_API_KEY` nuskaitymas. Tai svarbu įdiegtiems egzemplioriams: `REQUIRE_API_KEY` perjungimas Dashboard → Feature Flags išsaugo DB perrašymą ir iš karto veikia `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` ir kitus kliento API autentifikavimo patikrinimus, kurie naudoja šią pagalbinę funkciją. Jei funkcijų vėliavų saugyklos nepavyksta perskaityti, kliento API autentifikavimas uždaro prieigą ir reikalauja rakto.
 
 ## Nesuderinamas pakeitimas — v3.8.0
-
-Galiniams taškams `/api/v1/agents/tasks/*` ir `/api/resilience/model-cooldowns` **dabar reikalingas valdymo autentifikavimas** (įsipareigojimas `588a0333`). Klientai, anksčiau siuntę įprastą API raktą be `manage` aprėpties, gauna `403`. Migravimas: API Keys valdymo skydelyje suteikite raktui `manage` aprėptį arba naudokite prisijungto valdymo skydelio seansą.
 
 ## Veikimo pakeitimas — v3.8.2
 

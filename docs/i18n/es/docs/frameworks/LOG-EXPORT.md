@@ -4,7 +4,7 @@
 
 ---
 
-Exportación continua e incremental de los registros de llamadas de OmniRoute a un almacén de analítica externo.
+Exportación continua e incremental de los registros de llamadas de 67router a un almacén de analítica externo.
 
 La pestaña Logs del panel conserva el historial de solicitudes en SQLite (`call_logs`), cuyo tamaño está limitado por la rotación y la retención. La exportación de registros envía el mismo conjunto de registros de forma programada para que pueda conservarse más allá de la base de datos local y combinarse con otros datos. BigQuery es el primer destino; la canalización funciona como un registro, por lo que se pueden añadir más destinos.
 
@@ -285,7 +285,7 @@ Dos reglas para un destino nuevo:
 - `send()` **debe lanzar una excepción** ante un fallo parcial. Que se resuelva significa que «el destino tiene estas filas»,
   y el cursor avanza más allá de ellas permanentemente.
 - Un destino que acepte una URL proporcionada por el usuario debe validarla mediante
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) antes de realizar la solicitud,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) antes de realizar la solicitud,
   del mismo modo que lo hacen los webhooks. BigQuery no lo necesita: sus hosts son constantes.
 
 ---

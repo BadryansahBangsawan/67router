@@ -5,7 +5,7 @@
 ---
 
 > **每個目錄與根目錄檔案的一行說明。**
-> 最後更新：2026-06-28 — OmniRoute v3.8.40
+> 最後更新：2026-06-28 — 67router v3.8.40
 >
 > 使用此導覽圖快速瀏覽程式碼庫。如需深入瞭解，請前往對應的專屬文件連結。
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # 行銷／README 圖片資源
 ├── @omniroute/           # 可發布的配套套件（opencode-plugin、opencode-provider）
 ├── skills/               # CLI／代理技能套件（cli-* + omni-* + config-codex-cli）
-├── examples/             # 範例外掛程式 + omniroute-cmd-hello 入門範本
+├── examples/             # Quickstart client samples
 ├── contrib/              # 社群貢獻內容（podman/）
 ├── .source/              # Fumadocs 來源設定（source.config.mjs + 伺服器／瀏覽器／動態）
 ├── .github/              # GitHub Actions 工作流程 + 議題範本 + PR 範本
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `app/api/v1/`                                                                | 公開的 OpenAI 相容 API（約 25 個子路由：聊天、補全、嵌入、檔案、批次、音訊、圖片、影片、音樂、重新排序、內容審核、搜尋、ws、代理程式、帳戶、提供者等）                                                                                                                                                                 |
 | `app/api/v1beta/`                                                            | Gemini 風格的 API 端點                                                                                                                                                                                                                                                                                                 |
-| `app/api/playground/`                                                        | Playground Studio 路由：`improve-prompt/`（POST — LLM 提示詞重寫器）、`presets/`（GET 列表／POST 建立）、`presets/[id]/`（GET／PUT／DELETE）— 請參閱 `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                                                            |
 | `app/api/`（非 v1）                                                          | 管理／系統管理員路由（約 60 個目錄：提供者、組合、設定、mcp、a2a、評估、記憶、技能、webhook、合規、韌性、監控、通道、CLI 工具等）                                                                                                                                                                                      |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 個路由（伺服器控制、代理程式狀態／DNS／對應、繞過、憑證、上游 CA）。LOCAL_ONLY + SPAWN_CAPABLE。請參閱 `docs/frameworks/AGENTBRIDGE.md §7`。                                                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16 個以上的路由（請求、工作階段、主機、擷取模式、匯出、ws）。LOCAL_ONLY + SPAWN_CAPABLE。請參閱 `docs/frameworks/TRAFFIC_INSPECTOR.md §8`。                                                                                                                                          |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 進入點（`POST /a2a`）                                                                                                                                                                                                                                                                                 |
-| `app/.well-known/agent.json/`                                                | A2A 代理程式卡片（探索）                                                                                                                                                                                                                                                                                               |
 | `app/(dashboard)/dashboard/`                                                 | 儀表板 UI 頁面（50 多個區段、約 118 個 page.tsx 檔案：提供者、組合、設定、記憶、技能、webhook、評估、稽核、批次、快取、成本、健康狀態、系統、活動等）                                                                                                                                                                  |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI（3 個分頁：搜尋／擷取／比較 + SearchConceptCard + ProviderCatalog）— 請參閱 `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                            |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio（計畫 21）：`page.tsx`（3 分頁外殼）、`components/`（MemoryConceptCard、MemoryEngineStatus、EmbeddingSourceSelector、EditMemoryModal、RetrievePreview、QdrantConfigCard、RerankConfigCard）、`components/tabs/`（MemoriesTab、PlaygroundTab、EngineTab）、`hooks/`（useEngineStatus、useMemorySettings） |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | 工作階段、密碼雜湊、權杖驗證                                                                                                                                                                                                                                                                                   |
 | `batches/`                               | OpenAI Batches API 處理常式                                                                                                                                                                                                                                                                                    |
 | `catalog/`                               | Provider 目錄的 Zod 驗證 + 能力解析                                                                                                                                                                                                                                                                            |
-| `cloudAgent/`                            | Cloud Agents（Codex Cloud、Devin、Jules）——請參閱 `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                             |
 | `combos/`                                | Combo 解析 + 重新排序輔助工具                                                                                                                                                                                                                                                                                  |
 | `audit/`                                 | 活動摘要輔助工具：`highLevelActions.ts`（允許清單 + `isHighLevelAction()`）、`activityIcons.ts`（動作 → 圖示／動詞對應表）、`timeline.ts`（groupByDay/relativeTime）——請參閱 `docs/architecture/MONITORING_SECTIONS.md`                                                                                        |
 | `compliance/`                            | 稽核記錄 + Provider 稽核——請參閱 `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                                 |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | UI 格式化輔助工具（成本、延遲等）                                                                                                                                                                                                                                                                              |
 | `embeddings/`                            | 嵌入服務輔助工具                                                                                                                                                                                                                                                                                               |
 | `env/`                                   | 環境變數解析與驗證                                                                                                                                                                                                                                                                                             |
-| `evals/`                                 | 評估框架（套件、執行器、執行階段）— 請參閱 `docs/frameworks/EVALS.md`                                                                                                                                                                                                                                          |
 | `guardrails/`                            | PII 遮罩器、提示詞注入防護、視覺橋接器 — 請參閱 `docs/security/GUARDRAILS.md`                                                                                                                                                                                                                                  |
 | `jobs/`                                  | 背景工作（類似 cron）                                                                                                                                                                                                                                                                                          |
 | `memory/`                                | 對話記憶（SQLite FTS5 + sqlite-vec 混合式 RRF + Qdrant 第 2 層）— 請參閱 `docs/frameworks/MEMORY.md`                                                                                                                                                                                                           |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — 在背景處理 `needs_reindex=1` 的記憶；由 `POST /api/memory/reindex` 與延遲回填路徑呼叫。（計畫 21）                                                                                                                                                                                       |
 | `monitoring/`                            | 健康狀態檢查、指標發送                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | 22 個提供者模組的 OAuth／匯入流程（agy、antigravity、claude、cline、codebuddy-cn、codex、cursor、devin-desktop、ghe-copilot、github、gitlab-duo、grok-cli-oauth、grok-cli、kilocode、kimi-coding、kiro、openference、qoder、trae、xai-oauth、zed-hosted、zed）                                                 |
-| `plugins/`                               | 外掛登錄檔                                                                                                                                                                                                                                                                                                     |
 | `promptCache/`                           | Anthropic 風格的提示詞快取中斷點                                                                                                                                                                                                                                                                               |
 | `skills/`                                | 技能框架（內建 + 市集 + SkillsSH）— 請參閱 `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                                         |
-| `playground/`                            | Playground Studio 共用輔助工具：`codeExport.ts`（curl/Python/TS 產生器）、`promptImprover.ts`（中繼提示詞建構器）、`streamMetrics.ts`（純 TTFT/TPS）、`types.ts`（定價表）— 請參閱 `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                      |
 | `webhookDispatcher.ts`                   | HMAC Webhook 傳送 — 請參閱 `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                       |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | 通道管理器 — 請參閱 `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                |
 | `cloudSync.ts`, `initCloudSync.ts`       | 選用的狀態雲端同步                                                                                                                                                                                                                                                                                             |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — 資料庫（147 個模組 + 208 個遷移）
 
-| 子目錄                    | 用途                                                                                                                                                                     |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `db/core.ts`              | 使用 WAL 日誌記錄的 `getDbInstance()` 單例                                                                                                                               |
-| `db/migrations/`          | 具版本控制的 SQL 檔案（冪等、交易式）。`073_memory_vec.sql` 會新增 `memory_vec_meta` + `needs_reindex` 欄位（計畫 21）。                                                 |
-| `db/playgroundPresets.ts` | Playground Studio 預設集的 CRUD 模組（`listPlaygroundPresets`、`getPlaygroundPreset`、`createPlaygroundPreset`、`updatePlaygroundPreset`、`deletePlaygroundPreset`）     |
-| `db/memoryVec.ts`         | `memory_vec_meta` 的 CRUD（active_dim、embedding_signature、last_reset_at、vec_loaded）+ `markMemoryNeedsReindex`、`getMemoryReindexQueue` 等（計畫 21）                 |
-| `db/<domain>.ts`          | 每個領域各有一個模組：providers、combos、apiKeys、users、sessions、usage、audit*log、webhooks、skills、memory_entries、cloud_agent_tasks、evals*\*、reasoning_cache 等。 |
+| 子目錄            | 用途                                                                                                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `db/core.ts`      | 使用 WAL 日誌記錄的 `getDbInstance()` 單例                                                                                                                               |
+| `db/migrations/`  | 具版本控制的 SQL 檔案（冪等、交易式）。`073_memory_vec.sql` 會新增 `memory_vec_meta` + `needs_reindex` 欄位（計畫 21）。                                                 |
+| `db/memoryVec.ts` | `memory_vec_meta` 的 CRUD（active_dim、embedding_signature、last_reset_at、vec_loaded）+ `markMemoryNeedsReindex`、`getMemoryReindexQueue` 等（計畫 21）                 |
+| `db/<domain>.ts`  | 每個領域各有一個模組：providers、combos、apiKeys、users、sessions、usage、audit*log、webhooks、skills、memory_entries、cloud_agent_tasks、evals*\*、reasoning_cache 等。 |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | 完整發布流程（技能、husky、conventional commits、部署）                      |
 | `COVERAGE_PLAN.md`          | 覆蓋率目標與目前狀態                                                         |
 | `FREE_TIERS.md`             | 精選免費方案提供者（48+ 個免費方案 + 11 個 OAuth）                           |
-| `CLI-TOOLS.md`              | 外部 CLI 整合 + 內部 OmniRoute CLI                                           |
+| `CLI-TOOLS.md`              | 外部 CLI 整合 + 內部 67router CLI                                            |
 | `I18N.md`                   | i18n 架構、新增語言、67 個語系                                               |
 | `UNINSTALL.md`              | 完整解除安裝步驟                                                             |
 | `PROVIDER_REFERENCE.md`     | 375 個提供者的**自動產生**目錄（重新產生：`npm run gen:provider-reference`） |
@@ -403,13 +395,10 @@ open-sse/
 | 文件                                         | 用途                                                       |
 | -------------------------------------------- | ---------------------------------------------------------- |
 | `MCP-SERVER.md`                              | MCP 伺服器：110 個工具、3 種傳輸方式、33 個範圍、REST 端點 |
-| `A2A-SERVER.md`                              | A2A v0.3：JSON-RPC、6 項技能、REST 輔助工具、代理卡片      |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | 統一指南：A2A、ACP 與 Cloud Agents 的比較                  |
-| `CLOUD_AGENT.md`                             | Codex Cloud / Devin / Jules 協調管理                       |
 | `SKILLS.md`                                  | 技能框架（內建 + 市集 + SkillsSH + 沙箱）                  |
 | `RADAR.md`                                   | Radar 免費模型目錄覆蓋層（`RADAR_ENABLED`，預設關閉）      |
 | `MEMORY.md`                                  | 記憶系統（SQLite FTS5 + Qdrant）                           |
-| `EVALS.md`                                   | 評估框架（套件、執行、評分準則）                           |
 | `GUARDRAILS.md`                              | PII 遮罩器、提示詞注入防護、視覺橋接                       |
 | `COMPLIANCE.md`                              | 稽核日誌、保留政策、`noLog` 選擇退出                       |
 | `WEBHOOKS.md`                                | HMAC 簽署的 webhook 傳遞                                   |
@@ -574,7 +563,6 @@ open-sse/
 - **新增 provider？** 遵循 `docs/architecture/ARCHITECTURE.md § Adding a New Provider`，並交叉核對 `docs/reference/PROVIDER_REFERENCE.md`。
 - **新增路由？** 請參閱 `docs/architecture/ARCHITECTURE.md § Adding a New API Route` 與 `src/shared/validation/schemas.ts`。
 - **新增 MCP 工具？** 請參閱 `docs/frameworks/MCP-SERVER.md § Adding a Tool`。
-- **新增 A2A skill？** 請參閱 `docs/frameworks/A2A-SERVER.md § Adding a New Skill`。
 - **在本機執行？** 請參閱 `docs/guides/SETUP_GUIDE.md`。
 - **部署？** 請參閱 `docs/guides/DOCKER_GUIDE.md`／`docs/ops/VM_DEPLOYMENT_GUIDE.md`／`docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`。
 - **發布版本？** 請參閱 `docs/ops/RELEASE_CHECKLIST.md`（以及 `/generate-release-cc` Claude Code skill）。

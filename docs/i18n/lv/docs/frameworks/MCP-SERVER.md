@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Latviešu)
+# 67router MCP Server Documentation (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Instalēšana
 
-OmniRoute MCP ir iebūvēts. Palaidiet to ar:
+67router MCP ir iebūvēts. Palaidiet to ar:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline un saderīgu MCP klientu iestatīšanu.
 | `omniroute_switch_combo`        | `write:combos`        | Aktivizēt vai deaktivizēt kombināciju                                                                                                                           |
 | `omniroute_create_combo`        | `write:combos`        | Izveidot validētu kombināciju, izmantojot esošo kombināciju API                                                                                                 |
 | `omniroute_check_quota`         | `read:quota`          | Izmantotā/kopējā kvota, atlikušais procentuālais daudzums, atiestatīšanas laiks, tokenu stāvoklis                                                               |
-| `omniroute_route_request`       | `execute:completions` | Nosūtīt tērzēšanas pabeigšanas pieprasījumu, izmantojot OmniRoute maršrutēšanu                                                                                  |
+| `omniroute_route_request`       | `execute:completions` | Nosūtīt tērzēšanas pabeigšanas pieprasījumu, izmantojot 67router maršrutēšanu                                                                                   |
 | `omniroute_cost_report`         | `read:usage`          | Izmaksu pārskats pēc perioda (sesija/diena/nedēļa/mēnesis)                                                                                                      |
 | `omniroute_list_models_catalog` | `read:models`         | Pilns modeļu katalogs ar iespējām, statusu un cenām                                                                                                             |
 | `omniroute_radar_catalog`       | `read:radar`          | Lokāls parakstīts Radar katalogs; neobligāti pakalpojumu sniedzēju/saimes filtri                                                                                |
@@ -153,7 +153,7 @@ nodrošinātāja lietojuma uzskaites dati, un tās ir marķētas ar `source: "mc
 
 ### MCP pieejamības koka filtrs (v3.8.0)
 
-Atsevišķi no iepriekš minētajiem saspiešanas rīkiem OmniRoute ietver pēciekses filtru, kas saspiež
+Atsevišķi no iepriekš minētajiem saspiešanas rīkiem 67router ietver pēciekses filtru, kas saspiež
 MCP pārlūkprogrammas/pieejamības rīku **rīku rezultātus**, pirms tie tiek atgriezti aģentam. Šis
 filtrs pats par sevi nav rīks — tas darbojas caurspīdīgi ar jebkuru rīka rezultātu, kas satur
 detalizētu pieejamības koka vai pārlūkprogrammas momentuzņēmuma tekstu (≥2000 rakstzīmju).
@@ -237,21 +237,13 @@ Definēti failā `open-sse/mcp-server/tools/agentSkillTools.ts`. Nodrošināti a
 | :-------------------------------- | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Uzskaitīt visas 45 aģentu prasmes ar neobligātiem `category` (api\|cli) un `area` filtriem; atgriež metadatus + pārklājumu                     |
 | `omniroute_agent_skills_get`      | `read:catalog` | Iegūt pilnus metadatus + `SKILL.md` saturu vienai prasmei pēc kanoniskā `id`                                                                   |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Pārklājuma statistika: cik no 23 API, 21 CLI un 1 konfigurācijas prasmes failu sistēmā ir `SKILL.md` faili salīdzinājumā ar kataloga kopsummām |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Pārklājuma statistika: cik no 22 API, 20 CLI un 1 konfigurācijas prasmes failu sistēmā ir `SKILL.md` faili salīdzinājumā ar kataloga kopsummām |
 
 Pilnu katalogu un informāciju par to, kā ārējie aģenti to izmanto, skatiet [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
 ## Saistītie ietvari (v3.8.0)
 
 Iepriekš minētais MCP rīku inventārs (110 unikāli rīki, aprēķināts ar `countUniqueMcpTools()`) ir apzināti ierobežots līdz izpildlaika maršrutēšanas/kešatmiņas/saspiešanas/atmiņas/prasmju/starpniekservera/konteksta avota darbībām. Divi blakus ietvari tiek piegādāti kopā ar MCP serveri v3.8.0 versijā un ir dokumentēti atsevišķi:
-
-### Mākoņa aģenti
-
-Mākoņa aģenti ir ārpusprocesa AI programmēšanas aģenti (codex-cloud, cursor-cloud, devin, jules), kas ir savienoti ar OmniRoute, izmantojot to pašu savienojuma modeli, ko izmanto LLM nodrošinātāji. Tie ir pieejami, izmantojot savu REST saskarni (`/api/v1/agents/*`), un **nav** MCP rīku kataloga daļa — mākoņa aģenta izsaukšana nepatērē MCP tvērumu.
-
-- Implementācija: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Dzīves cikls: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentācija: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Aizsargmehānismi
 
@@ -419,8 +411,6 @@ Katram rīkam ir nepieciešami konkrēti tvērumi:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                        |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                 |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                   |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                               |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                  |
 | `read:obsidian`       | 13 lasīšanas rīki — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 rakstīšanas rīki — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …              |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                |
@@ -473,7 +463,7 @@ esošo, ar `OMNIROUTE_MCP_ENFORCE_SCOPES` kontrolēto darbību bez izmaiņām.
 
 | Mainīgais                               | Noklusējuma vērtība                 | Nolūks                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | :-------------------------------------- | :---------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | Bāzes URL, ko MCP serveris izmanto, izsaucot OmniRoute iekšējās API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | Bāzes URL, ko MCP serveris izmanto, izsaucot 67router iekšējās API                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `OMNIROUTE_API_KEY`                     | (tukšs)                             | API atslēga, kas iekšējiem API izsaukumiem tiek pārsūtīta kā `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (to iespējo tikai `"true"`) | Ja iespējots, trūkstošas tvēruma atļaujas liedz rīku izsaukumus un audita žurnālā reģistrē `scope_denied:<reason>`. Izpilde tiek piespiedu kārtā iespējota ARĪ neatkarīgi no šī karoga jebkuram HTTP/SSE izsaucējam, kas noteikts no katrai atslēgai atsevišķas Authorization galvenes (`source === "authInfo"`) un kam nav pilna `manage`/`admin` tvēruma, — piemēram, atslēgai, kurai ir tikai šaurā `mcp:connect` apiešanas tvēruma atļauja, — tādēļ šī noklusējuma vērtība ir droša tikai lokālai/stdio viena operatora plūsmai, nevis attālai piekļuvei ārpus lokālās atgriezeniskās saites |
 | `OMNIROUTE_MCP_SCOPES`                  | (tukšs)                             | Ar komatiem atdalīts to tvērumu atļauto vērtību saraksts, kas pēc noklusējuma tiek uzskatīti par „pieejamiem” (tiek izmantots, ja izsaucējs nenorāda savus tvērumus)                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -574,7 +564,6 @@ Izmantojiet informācijas paneli vai REST galapunktus `/api/mcp/audit` un `/api/
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Prasmju rīku definīcijas (4 rīki)                                             |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notion konteksta avota rīku definīcijas (6 rīki)                              |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Spēļošanas rīku definīcijas (8 rīki)                                          |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Spraudņu reģistrēšanas un pārvaldības rīki (8 rīki)                           |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` galapunkts                                                  |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` galapunkts                                                   |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transporta maršruts                                        |

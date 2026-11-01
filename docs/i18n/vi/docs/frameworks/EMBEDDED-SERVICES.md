@@ -8,9 +8,9 @@
 > **Cập nhật lần cuối:** 2026-09-16
 > **Đối tượng:** Các kỹ sư bổ sung, bảo trì hoặc gỡ lỗi các dịch vụ nhúng (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Dịch vụ nhúng là các công cụ sidecar tiến trình được cài đặt cục bộ mà OmniRoute cài đặt, giám sát và
+Dịch vụ nhúng là các công cụ sidecar tiến trình được cài đặt cục bộ mà 67router cài đặt, giám sát và
 cung cấp dưới dạng các đích định tuyến hạng nhất. Không giống các nhà cung cấp bên ngoài (được truy cập qua internet
-bằng khóa API), dịch vụ nhúng chạy trên cùng máy với OmniRoute và giao tiếp qua giao diện loopback.
+bằng khóa API), dịch vụ nhúng chạy trên cùng máy với 67router và giao tiếp qua giao diện loopback.
 
 ---
 
@@ -35,7 +35,7 @@ Bảy dịch vụ được nhúng:
 
 | Dịch vụ         | Gói npm                                           | Cổng mặc định | Mục đích                                                                                                                                                                                                                                                                                                                                              |
 | --------------- | ------------------------------------------------- | :-----------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                         |     20130     | Bộ định tuyến AI mà OmniRoute có thể sử dụng như một nhà cung cấp phụ. Các mô hình được cung cấp dưới dạng `9router/{sub}/{model}`                                                                                                                                                                                                                    |
+| **9Router**     | `9router`                                         |     20130     | Bộ định tuyến AI mà 67router có thể sử dụng như một nhà cung cấp phụ. Các mô hình được cung cấp dưới dạng `9router/{sub}/{model}`                                                                                                                                                                                                                     |
 | **CLIProxyAPI** | Tệp nhị phân từ bản phát hành GitHub (`cliproxy`) |     8317      | Bộ điều hợp proxy cục bộ cho các luồng xác thực Anthropic CLI. Cung cấp định tuyến dự phòng khi token OAuth hết hạn                                                                                                                                                                                                                                   |
 | **Mux**         | `mux` (`mux server` không giao diện)              |     8322      | Trình nền điều phối tác nhân cục bộ (coder/mux). Chỉ được quản lý vòng đời — không phải mục tiêu định tuyến (không proxy LLM).                                                                                                                                                                                                                        |
 | **Bifrost**     | `@maximhq/bifrost`                                |     8080      | Backend chuyển tiếp cổng AI viết bằng Go. Khi đang chạy, được tuyến chuyển tiếp (`/v1/relay/`) tự động chọn                                                                                                                                                                                                                                           |
@@ -45,9 +45,9 @@ Bảy dịch vụ được nhúng:
 
 Cả bảy dịch vụ đều tuân theo cùng một mô hình giám sát:
 
-- OmniRoute cài đặt chúng trong `DATA_DIR/services/{name}/` (cách ly với `package.json` của chính OmniRoute)
-- OmniRoute khởi chạy và giám sát chúng dưới dạng tiến trình con
-- OmniRoute chèn một khóa API tạm thời vào môi trường của tiến trình con và luân chuyển khóa mà không gây gián đoạn (nếu áp dụng)
+- 67router cài đặt chúng trong `DATA_DIR/services/{name}/` (cách ly với `package.json` của chính 67router)
+- 67router khởi chạy và giám sát chúng dưới dạng tiến trình con
+- 67router chèn một khóa API tạm thời vào môi trường của tiến trình con và luân chuyển khóa mà không gây gián đoạn (nếu áp dụng)
 - Tất cả các tuyến quản lý (`/api/services/*`) đều là **LOCAL_ONLY** — chỉ có thể truy cập từ loopback (quy tắc cứng #17)
 
 ### Các quyết định chính (từ kế hoạch thiết kế)
@@ -57,7 +57,7 @@ Cả bảy dịch vụ đều tuân theo cùng một mô hình giám sát:
 | Quyền truy cập của dashboard vào giao diện gốc của 9Router | Reverse proxy tại `/dashboard/providers/services/9router/embed/*`                    |
 | Cơ chế cài đặt                                             | `npm install {package}` qua `execFile` (không nội suy shell)                         |
 | Chế độ sử dụng                                             | Nhà cung cấp được đăng ký dưới dạng `9router/{sub}/{model}` trong công cụ định tuyến |
-| Quản lý khóa API                                           | OmniRoute tạo, mã hóa khi lưu trữ (AES-256-GCM) và chèn qua biến môi trường          |
+| Quản lý khóa API                                           | 67router tạo, mã hóa khi lưu trữ (AES-256-GCM) và chèn qua biến môi trường           |
 | Vị trí dashboard                                           | `/dashboard/providers/services` (ba tab)                                             |
 | Tự động khởi động                                          | Nút bật/tắt cho từng dịch vụ, mặc định TẮT                                           |
 
@@ -221,7 +221,7 @@ Các yêu cầu không phải loopback sẽ nhận `403 LOCAL_ONLY` bất kể t
 #### `POST /api/services/9router/install`
 
 Cài đặt 9Router từ npm. Tạo `DATA_DIR/services/9router/` với `package.json`
-và `node_modules/` riêng. Không xung đột với các dependency của OmniRoute.
+và `node_modules/` riêng. Không xung đột với các dependency của 67router.
 
 **Nội dung yêu cầu** (tất cả đều không bắt buộc):
 
@@ -382,7 +382,7 @@ Trả về trạng thái kết hợp từ dữ liệu trực tiếp + DB, bao g�
 #### `POST /api/services/9router/auto-start`
 
 Bật/tắt cờ tự động khởi động. Khi `enabled: true`, dịch vụ sẽ tự động khởi động
-vào lần tiếp theo OmniRoute khởi chạy (nếu dịch vụ đã được cài đặt).
+vào lần tiếp theo 67router khởi chạy (nếu dịch vụ đã được cài đặt).
 
 **Nội dung yêu cầu:**
 
@@ -591,7 +591,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Proxy này:
 
 - Chuyển tiếp yêu cầu tới `http://127.0.0.1:{port}/{path}` (chỉ loopback)
-- Loại bỏ các header `cookie` và `authorization` đến (không làm rò rỉ phiên OmniRoute)
+- Loại bỏ các header `cookie` và `authorization` đến (không làm rò rỉ phiên 67router)
 - Chèn `Authorization: Bearer {apiKey}` để xác thực 9Router
 - Loại bỏ `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` khỏi phản hồi
 - Ghi lại các phản hồi HTML để chèn `<base href>` và chuẩn hóa các đường dẫn tuyệt đối (`/foo` → `/dashboard/.../embed/foo`)
@@ -627,7 +627,7 @@ tầng đầy đủ.
 ### Chèn API key
 
 9Router và Mux yêu cầu API key/bearer token cho các endpoint HTTP riêng của chúng.
-OmniRoute:
+67router:
 
 1. Tạo một khóa qua `crypto.randomBytes(32).toString("base64url")` với tiền tố
    dành riêng cho từng dịch vụ (`nr_` cho 9Router, `mx_` cho Mux).
@@ -808,7 +808,7 @@ Nếu dịch vụ nhúng cung cấp endpoint `/v1/chat/completions` tương thí
 
 1. Kiểm tra `GET /api/services/{name}/logs` (hoặc bảng Logs trong dashboard). Tìm
    các dòng như `Error: ENOENT`, `address already in use` hoặc `Cannot find module`.
-2. Xác minh `npm` có trong PATH: chạy `which npm` từ cùng tài khoản người dùng đang chạy OmniRoute.
+2. Xác minh `npm` có trong PATH: chạy `which npm` từ cùng tài khoản người dùng đang chạy 67router.
 3. Xác minh dịch vụ đã được cài đặt: kiểm tra `GET /api/services/{name}/status` để tìm
    `installedVersion`. Nếu là `null`, hãy chạy cài đặt trước.
 4. Kiểm tra `DATA_DIR/services/{name}/node_modules/` có tồn tại và không trống.
@@ -846,7 +846,7 @@ khởi động lâu hơn, hãy tăng `healthIntervalMs` lên 5000 và `stopTimeo
 3. Có thể cấu hình cổng cho từng dịch vụ trong `bootstrap.ts` thông qua trường `port`.
 
 **Lưu ý:** 9Router mặc định sử dụng cổng 20130 nhằm tránh xung đột với
-cổng mặc định 20128 của OmniRoute.
+cổng mặc định 20128 của 67router.
 
 ---
 
@@ -856,13 +856,13 @@ cổng mặc định 20128 của OmniRoute.
 
 **Nguyên nhân:**
 
-- Tiến trình OmniRoute không có quyền ghi vào `DATA_DIR` hoặc thư mục cha của nó.
+- Tiến trình 67router không có quyền ghi vào `DATA_DIR` hoặc thư mục cha của nó.
 - Chạy bên trong Docker rootless mà không có quyền ghi vào volume được ánh xạ.
 
 **Cách khắc phục:**
 
 1. Kiểm tra `DATA_DIR` (mặc định: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Đảm bảo người dùng chạy tiến trình OmniRoute sở hữu thư mục: `chown -R $USER ~/.omniroute/`
+2. Đảm bảo người dùng chạy tiến trình 67router sở hữu thư mục: `chown -R $USER ~/.omniroute/`
 3. Trong Docker, đảm bảo volume được gắn có quyền phù hợp cho người dùng trong container.
 
 ---
@@ -910,16 +910,16 @@ manage-scope. Xem `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **H: 9Router và CLIProxyAPI có khả dụng trong các bản triển khai production/cloud không?**
 
-Có. Cả hai dịch vụ đều tuân theo mô hình ưu tiên cục bộ giống như chính OmniRoute. Chúng chạy
+Có. Cả hai dịch vụ đều tuân theo mô hình ưu tiên cục bộ giống như chính 67router. Chúng chạy
 trên cùng một máy và giao tiếp qua loopback. "Production" ở đây có nghĩa là VPS
-hoặc máy chủ cục bộ nơi OmniRoute được triển khai, chứ không phải một nhà cung cấp đám mây từ xa.
+hoặc máy chủ cục bộ nơi 67router được triển khai, chứ không phải một nhà cung cấp đám mây từ xa.
 
 ---
 
 **H: Làm cách nào để gỡ lỗi supervisor?**
 
 1. Theo dõi liên tục luồng nhật ký SSE: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Kiểm tra nhật ký có cấu trúc trong đầu ra pino của OmniRoute, được lọc theo
+2. Kiểm tra nhật ký có cấu trúc trong đầu ra pino của 67router, được lọc theo
    namespace `service:supervisor`.
 3. Kiểm tra hàng trong DB: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Sử dụng `GET /api/services/9router/status` để xem trạng thái trực tiếp hiện tại, PID, tình trạng hoạt động

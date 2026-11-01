@@ -7,7 +7,7 @@
 > **Haqiqiy manba:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Oxirgi yangilanish:** 2026-06-28 — v3.8.40
 
-OmniRoute fikrlash rejimidagi modellar yaratgan yordamchi `reasoning_content` maʼlumotini yozib oladi va yuqori oqim provayderi talab qilganda uni ko‘p bosqichli so‘rovlarda shaffof tarzda qayta uzatadi. Bu mijozning suhbat tarixida oldingi bosqichga tegishli mulohaza mavjud bo‘lmaganda qatʼiy provayderlar qaytaradigan HTTP 400 xatolarini bartaraf etadi.
+67router fikrlash rejimidagi modellar yaratgan yordamchi `reasoning_content` maʼlumotini yozib oladi va yuqori oqim provayderi talab qilganda uni ko‘p bosqichli so‘rovlarda shaffof tarzda qayta uzatadi. Bu mijozning suhbat tarixida oldingi bosqichga tegishli mulohaza mavjud bo‘lmaganda qatʼiy provayderlar qaytaradigan HTTP 400 xatolarini bartaraf etadi.
 
 ## Bu nima uchun mavjud
 
@@ -17,7 +17,7 @@ Fikrlash rejimidagi ayrim provayderlar **oldingi yordamchi xabarida asl `reasoni
 Param Incorrect: The reasoning_content in the thinking mode must be passed back to the API.
 ```
 
-Ammo odatiy mijozlar (Cursor, Cline, Roo Code, OpenAI SDK) qayta uzatadigan tarixdan `reasoning_content` maʼlumotini olib tashlaydi. OmniRoute yuqori oqim ko‘radigan so‘rov izchil bo‘lishi uchun uni server tomonidagi keshdan tiklaydi. Issue #1628 kesh jarayon qayta ishga tushirilganda ham saqlanib qolishi uchun gibrid xotira/SQLite doimiy saqlash mexanizmini joriy etdi.
+Ammo odatiy mijozlar (Cursor, Cline, Roo Code, OpenAI SDK) qayta uzatadigan tarixdan `reasoning_content` maʼlumotini olib tashlaydi. 67router yuqori oqim ko‘radigan so‘rov izchil bo‘lishi uchun uni server tomonidagi keshdan tiklaydi. Issue #1628 kesh jarayon qayta ishga tushirilganda ham saqlanib qolishi uchun gibrid xotira/SQLite doimiy saqlash mexanizmini joriy etdi.
 
 ## Arxitektura
 

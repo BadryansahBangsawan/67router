@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Gaeilge)
+# 📖 Setup Guide — 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Tagairt iomlán socraithe do OmniRoute. Chun an leagan tapa a fháil, féach ar an [Tús Tapa sa README](../README.md#-quick-start).
+> Tagairt iomlán socraithe do 67router. Chun an leagan tapa a fháil, féach ar an [Tús Tapa sa README](../README.md#-quick-start).
 
 ## Clár na nÁbhar
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-Suiteálann an [pacáiste AUR](https://aur.archlinux.org/packages/omniroute-bin) OmniRoute agus soláthraíonn sé seirbhís úsáideora systemd.
+Suiteálann an [pacáiste AUR](https://aur.archlinux.org/packages/omniroute-bin) 67router agus soláthraíonn sé seirbhís úsáideora systemd.
 
 ### Ón bhFoinse
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Nóta maidir le Windows:** De réir réamhshocraithe, úsáideann OmniRoute `%APPDATA%\omniroute` nuair nach bhfuil an t-eolaire oidhreachta `%USERPROFILE%\.omniroute` ann. Socraigh `DATA_DIR` chun suíomh eile a roghnú don eolaire sonraí.
+> **Nóta maidir le Windows:** De réir réamhshocraithe, úsáideann 67router `%APPDATA%\omniroute` nuair nach bhfuil an t-eolaire oidhreachta `%USERPROFILE%\.omniroute` ann. Socraigh `DATA_DIR` chun suíomh eile a roghnú don eolaire sonraí.
 
 > **Nóta:** Gineann `npm install` `.env` go huathoibríoch ó `.env.example` ar an gcéad rith. Ní fhorscríobhfaidh suiteálacha ina dhiaidh sin `.env` atá ann cheana, agus mar sin caomhnaítear saincheapuithe. Chun é a athshíolú, scrios `.env` sula ritear arís é.
 
@@ -64,7 +64,7 @@ Féach ar an [Treoir Docker](./DOCKER_GUIDE.md) chun socrú iomlán Docker a fh�
 
 ### Aip Deisce (Electron)
 
-Tagann OmniRoute le fillteán deisce atá tógtha ar Electron 41 + electron-builder 26.10. Na scripteanna atá ar fáil (fréamh an spáis oibre):
+Tagann 67router le fillteán deisce atá tógtha ar Electron 41 + electron-builder 26.10. Na scripteanna atá ar fáil (fréamh an spáis oibre):
 
 ```bash
 npm run electron:dev          # Rith an deasc le hathlódáil the
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-In éineacht le hathróga timpeallachta (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, srl.), ligeann sé seo duit ásc OmniRoute atá inscriptithe go hiomlán a chur ar bun.
+In éineacht le hathróga timpeallachta (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, srl.), ligeann sé seo duit ásc 67router atá inscriptithe go hiomlán a chur ar bun.
 
 ### Roghanna CLI
 
@@ -99,7 +99,7 @@ In éineacht le hathróga timpeallachta (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDG
 | `omniroute config`      | Cumraíocht uirlis CLI — liostaigh, faigh, socraigh agus bailíochtaigh cumraíochtaí |
 | `omniroute status`      | Painéal stádais as líne — leagan, DB, uirlisí, cumraíocht                          |
 | `omniroute logs`        | Sruthaigh logaí úsáide ón API (tacaíonn sé le `--follow`)                          |
-| `omniroute update`      | Seiceáil le haghaidh nuashonruithe OmniRoute nó cuir i bhfeidhm iad                |
+| `omniroute update`      | Seiceáil le haghaidh nuashonruithe 67router nó cuir i bhfeidhm iad                 |
 | `omniroute provider`    | Bainistigh naisc soláthraithe — cuir leis, liostaigh, bain, tástáil, réamhshocrú   |
 | `omniroute --port 3000` | Socraigh an port canónach/API go 3000                                              |
 | `omniroute --mcp`       | Tosaigh freastalaí MCP (iompar stdio)                                              |
@@ -165,7 +165,7 @@ Oibríonn sé le Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode, agus
 
 #### Uathchumraigh le `setup-*`
 
-In ionad an bun-URL agus an eochair a ghreamú de láimh, lig do OmniRoute cumraíocht
+In ionad an bun-URL agus an eochair a ghreamú de láimh, lig do 67router cumraíocht
 gach uirlise a scríobh ón gcatalóg bheo samhlacha. Ordú amháin in aghaidh na huirlise:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Glacann gach ceann acu le `--remote <url> --api-key <key>` chun uirlis áitiúil a chumrú i gcoinne
-OmniRoute **cianda**, chomh maith le `--dry-run` chun réamhamharc a dhéanamh. Chun CLI a thosú leis an
+67router **cianda**, chomh maith le `--dry-run` chun réamhamharc a dhéanamh. Chun CLI a thosú leis an
 timpeallacht cheart insteallta agus gan aon chumraíocht a scríobh ar chor ar bith, úsáid an tosaitheoir ginearálta
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 tá na tosaitheoirí oidhreachta in aghaidh na huirlise `omniroute launch` (Claude Code) agus
@@ -248,26 +248,6 @@ Cuir le do shocruithe MCP é:
 
 **Doiciméadacht iomlán MCP:** [README Fhreastalaí MCP](../../open-sse/mcp-server/README.md) — 110 uirlis, cumraíochtaí IDE, cliaint Python/TS/Go.
 
-### Socrú A2A (Prótacal Gníomhaire-go-Gníomhaire)
-
-Fíoraigh Cárta an Ghníomhaire:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Seol tasc:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Doiciméadacht iomlán A2A:** [README Fhreastalaí A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, scileanna, sruthú, saolré tascanna.
-
----
-
 ## Cumraíocht Teorainneacha Ama
 
 ### Teorainneacha Ama Bunúsacha
@@ -277,15 +257,15 @@ I gcás fhormhór na n-imscaradh, níl uait ach an dá athróg seo:
 | Athróg                   | Réamhshocrú                                      | Cuspóir                                                                                                                                                                                                                                 |
 | ------------------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                                         | Bonnlíne chomhroinnte don teorainn ama chun tús freagartha ón bhfoinse réamhtheachtach a fháil, do theorainneacha ama folaithe Undici, d’iarratais méarloirg TLS, agus do theorainneacha ama iarratais/seachfhreastalaí an droichid API |
-| `STREAM_IDLE_TIMEOUT_MS` | faigheann sé `REQUEST_TIMEOUT_MS` le hoidhreacht | An bhearna uasta idir smutáin sruthaithe sula gcuireann OmniRoute deireadh leis an sruth SSE                                                                                                                                            |
+| `STREAM_IDLE_TIMEOUT_MS` | faigheann sé `REQUEST_TIMEOUT_MS` le hoidhreacht | An bhearna uasta idir smutáin sruthaithe sula gcuireann 67router deireadh leis an sruth SSE                                                                                                                                             |
 
 Caomhnaítear comhoiriúnacht siarghabhálach: oibríonn `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS`, agus athróga eile teorann ama de réir sraithe atá ann cheana fós agus sáraíonn siad an bhonnlíne chomhroinnte.
 
 ### Nótaí a Bhaineann go Sonrach le Soláthraithe
 
-I gcás foinsí réamhtheachtacha atá comhoiriúnach le Claude Code (`anthropic-compatible-cc-*`), díorthaíonn OmniRoute an ceanntásc amach `X-Stainless-Timeout` ón teorainn ama réitithe fetch ionas go bhfanfaidh teorainneacha ama léite ar thaobh an tsoláthraí ailínithe le cumraíocht d’imshaoil.
+I gcás foinsí réamhtheachtacha atá comhoiriúnach le Claude Code (`anthropic-compatible-cc-*`), díorthaíonn 67router an ceanntásc amach `X-Stainless-Timeout` ón teorainn ama réitithe fetch ionas go bhfanfaidh teorainneacha ama léite ar thaobh an tsoláthraí ailínithe le cumraíocht d’imshaoil.
 
-I gcás seachfhreastalaithe droim ar ais tríú páirtí atá comhoiriúnach le Claude Code, coinníonn OmniRoute an tacar réamhshocraithe `anthropic-beta` coimeádach agus, nuair a fhágtar `Client Cache Control` ar `Auto`, ní chuireann sé ar aghaidh ach marcóirí `cache_control` arna soláthar ag an gcliant. Cumasaigh an scorán "Cumasaigh béite redact-thinking" in aghaidh an naisc nuair a éilíonn an fhoinse réamhtheachtach sruthanna smaointeoireachta folaithe Claude go sonrach, agus sa chás sin amháin.
+I gcás seachfhreastalaithe droim ar ais tríú páirtí atá comhoiriúnach le Claude Code, coinníonn 67router an tacar réamhshocraithe `anthropic-beta` coimeádach agus, nuair a fhágtar `Client Cache Control` ar `Auto`, ní chuireann sé ar aghaidh ach marcóirí `cache_control` arna soláthar ag an gcliant. Cumasaigh an scorán "Cumasaigh béite redact-thinking" in aghaidh an naisc nuair a éilíonn an fhoinse réamhtheachtach sruthanna smaointeoireachta folaithe Claude go sonrach, agus sa chás sin amháin.
 
 ### Sáruithe Ardleibhéil ar Theorainneacha Ama
 
@@ -303,11 +283,11 @@ I gcás seachfhreastalaithe droim ar ais tríú páirtí atá comhoiriúnach le 
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                                       | Teorainn ama coinneála beo ar fhreastalaí an droichid API                                                                  |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                                          | Teorainn ama neamhghníomhaíochta soicéid ar fhreastalaí an droichid API (díchumasaíonn `0` í)                              |
 
-> **Nóta:** I gcás iarratais sruthaithe, ní chumhdaíonn `FETCH_TIMEOUT_MS` ach socrú an naisc / fanacht leis an gcéad fhreagra ón bhfoinse réamhtheachtach. Nuair a bhíonn an sruth gníomhach, ní chuirfidh OmniRoute deireadh leis ach amháin i gcás marbhántacht iarbhír (`STREAM_IDLE_TIMEOUT_MS`) nó neamhghníomhaíocht choirp Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Nóta:** I gcás iarratais sruthaithe, ní chumhdaíonn `FETCH_TIMEOUT_MS` ach socrú an naisc / fanacht leis an gcéad fhreagra ón bhfoinse réamhtheachtach. Nuair a bhíonn an sruth gníomhach, ní chuirfidh 67router deireadh leis ach amháin i gcás marbhántacht iarbhír (`STREAM_IDLE_TIMEOUT_MS`) nó neamhghníomhaíocht choirp Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Comhoiriúnacht Seachfhreastalaí Droim ar Ais
 
-Má ritheann tú OmniRoute taobh thiar de Nginx, Caddy, Cloudflare, nó seachfhreastalaí droim ar ais eile, cinntigh go bhfuil teorainneacha ama an tseachfhreastalaí níos airde freisin ná teorainneacha ama srutha/fetch OmniRoute.
+Má ritheann tú 67router taobh thiar de Nginx, Caddy, Cloudflare, nó seachfhreastalaí droim ar ais eile, cinntigh go bhfuil teorainneacha ama an tseachfhreastalaí níos airde freisin ná teorainneacha ama srutha/fetch 67router.
 
 ---
 

@@ -25,9 +25,6 @@ export const MAX_BODY_BYTES_IMPORT = 100 * 1024 * 1024;
 /** Larger limit for audio transcription uploads: 100 MB */
 export const MAX_BODY_BYTES_AUDIO = 100 * 1024 * 1024;
 
-/** Larger limit for file uploads: 500 MB */
-export const MAX_BODY_BYTES_FILE = 500 * 1024 * 1024;
-
 /** Larger limit for LLM request payloads: 50 MB */
 export const MAX_BODY_BYTES_LLM_API = 50 * 1024 * 1024;
 
@@ -64,13 +61,9 @@ const ROUTE_LIMITS: BodySizeRule[] = [
   { prefix: "/api/db-backups/import", limit: MAX_BODY_BYTES_IMPORT },
   { prefix: "/api/v1/chat/completions", limit: MAX_BODY_BYTES_LLM_API },
   { prefix: "/api/v1/responses", limit: MAX_BODY_BYTES_LLM_API },
-  { prefix: "/api/v1/images", limit: MAX_BODY_BYTES_MEDIA },
   { prefix: "/api/v1/videos", limit: MAX_BODY_BYTES_MEDIA },
   { prefix: "/api/v1/audio/transcriptions", limit: MAX_BODY_BYTES_AUDIO },
-  { prefix: "/api/v1/files", limit: MAX_BODY_BYTES_FILE },
 ];
-
-const PROVIDER_IMAGE_GENERATION_ROUTE = /^\/api\/v1\/providers\/[^/]+\/images\/generations(?:\/|$)/;
 
 export function getConfiguredBodySizeLimitBytes(settings?: Record<string, unknown>): number {
   const configuredMb = normalizeRequestBodyLimitMb(settings?.maxBodySizeMb);
@@ -82,7 +75,6 @@ export function getConfiguredBodySizeLimitBytes(settings?: Record<string, unknow
  */
 export function getBodySizeLimit(pathname: string, settings?: Record<string, unknown>): number {
   const configuredLimit = getConfiguredBodySizeLimitBytes(settings);
-  if (PROVIDER_IMAGE_GENERATION_ROUTE.test(pathname)) return MAX_BODY_BYTES_MEDIA;
   const customRule = ROUTE_LIMITS.find((rule) =>
     rule.exactPath ? pathname === rule.prefix : pathname.startsWith(rule.prefix)
   );

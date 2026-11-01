@@ -93,25 +93,6 @@ async function fulfillText(route: Route, body: string, status = 200) {
 test.describe("Agent Skills page", () => {
   test.setTimeout(600_000);
 
-  test("renders SkillsConceptCard with data-testid skills-concept-card-agent", async ({ page }) => {
-    const skills = makeAgentSkills();
-
-    await page.route(/\/api\/agent-skills(?:\?.*)?$/, async (route) => {
-      if (route.request().method() === "GET") {
-        await fulfillJson(route, { skills, coverage: FULL_COVERAGE });
-      } else {
-        await route.continue();
-      }
-    });
-
-    await gotoDashboardRoute(page, "/dashboard/agent-skills", {
-      timeoutMs: NAVIGATION_TIMEOUT_MS,
-    });
-
-    const conceptCard = page.locator("[data-testid='skills-concept-card-agent']");
-    await expect(conceptCard).toBeVisible({ timeout: 15_000 });
-  });
-
   test("grid shows 45 skill cards when filter is 'all'", async ({ page }) => {
     const skills = makeAgentSkills();
 
@@ -166,49 +147,5 @@ test.describe("Agent Skills page", () => {
     await expect(previewPane).toBeVisible({ timeout: 15_000 });
     const previewText = await previewPane.textContent();
     expect(previewText?.trim().length).toBeGreaterThan(0);
-  });
-
-  test("cross-link 'Understand the difference' navigates to /dashboard/omni-skills", async ({
-    page,
-  }) => {
-    const skills = makeAgentSkills();
-
-    await page.route(/\/api\/agent-skills(?:\?.*)?$/, async (route) => {
-      if (route.request().method() === "GET") {
-        await fulfillJson(route, { skills, coverage: FULL_COVERAGE });
-      } else {
-        await route.continue();
-      }
-    });
-
-    await gotoDashboardRoute(page, "/dashboard/agent-skills", {
-      timeoutMs: NAVIGATION_TIMEOUT_MS,
-    });
-
-    const conceptCard = page.locator("[data-testid='skills-concept-card-agent']");
-    await expect(conceptCard).toBeVisible({ timeout: 15_000 });
-
-    // Find the cross-link inside the concept card
-    const crossLink = conceptCard.locator("a");
-    await expect(crossLink).toBeVisible({ timeout: 5_000 });
-
-    await crossLink.click();
-    await page.waitForURL(/\/dashboard\/omni-skills/, { timeout: 15_000 });
-    expect(page.url()).toContain("/dashboard/omni-skills");
-  });
-
-  test("/dashboard/skills redirects to /dashboard/omni-skills", async ({ page }) => {
-    await page.goto("/dashboard/skills", { waitUntil: "commit", timeout: NAVIGATION_TIMEOUT_MS });
-    // Next.js redirects /dashboard/skills → /dashboard/omni-skills (next.config.mjs).
-    // If auth is required the app then client-redirects to /login (bare path, no /dashboard/ prefix).
-    await page.waitForURL(/\/(login|onboarding|dashboard\/(omni-skills|onboarding))/, {
-      timeout: 15_000,
-    });
-    const finalUrl = page.url();
-    expect(
-      finalUrl.includes("/dashboard/omni-skills") ||
-        finalUrl.includes("/login") ||
-        finalUrl.includes("/onboarding")
-    ).toBe(true);
   });
 });

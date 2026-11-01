@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` jippermetti lir-runtime reali ta’ Claude Code juża l-endpoint lokali ta’
-Anthropic Messages ta’ OmniRoute filwaqt li l-CLI uffiċjali ta’ Devin jipprovdi t-tweġibiet
+Anthropic Messages ta’ 67router filwaqt li l-CLI uffiċjali ta’ Devin jipprovdi t-tweġibiet
 tal-mudell permezz ta’ ACP stdio. Dan ma jimmodifikax il-fornituri eżistenti Anthropic,
 Claude OAuth, Claude Web, jew `devin-cli`.
 
@@ -22,7 +22,7 @@ tiegħu hija mmarkata skont dan sabiex id-direzzjonament ikkombinat li jeħtieġ
 > riżultati ta’ `npm test` li rnexxew, is-sejbien tal-kmandi u l-ħiliet tal-proġett,
 > direzzjonament permezz ta’ Devin biss, u ebda traffiku ħiereġ lejn Claude. Imbagħad
 > il-verżjoni ffissata żdiedet għal `2.1.258` (il-ġenerazzjoni tal-CLI li tissimula l-identità
-> Claude ta’ OmniRoute, u l-ewwel linja li tinkludi b’mod nattiv il-livell Fable 5.1). Fuq
+> Claude ta’ 67router, u l-ewwel linja li tinkludi b’mod nattiv il-livell Fable 5.1). Fuq
 > il-verżjoni l-ġdida ġew ivverifikati s-saff tal-installazzjoni u `claude --version` fuq
 > l-immaġni bażi ffissata, u jgħaddu s-sett ta’ testijiet unitarji tal-bridge, `compose config`
 > u l-prova statika tal-iżolament — iżda x-xenarju mock offline u s-sett live ta’ tliet
@@ -56,11 +56,11 @@ Il-parser jaċċetta invilopp wieħed indipendenti `<tool>{...}</tool>` għal ku
 tal-mudell. Huwa jqabbel l-isem mal-lista tal-għodod tat-talba, jivvalida l-argumenti
 mal-JSON Schema ta’ dik l-għodda, jirrifjuta taħlit ta’ narrattiva u azzjonijiet, u
 jippermetti tentattiv wieħed limitat ta’ tiswija. Imbagħad Claude Code jeżegwixxi lokalment
-it-`tool_use` Anthropic li jirriżulta u jibgħat it-`tool_result` lura permezz ta’ OmniRoute.
+it-`tool_use` Anthropic li jirriżulta u jibgħat it-`tool_result` lura permezz ta’ 67router.
 
 ## Direzzjonament awtomatiku
 
-Il-fornitur huwa eliġibbli fil-gruppi ta’ kandidati `auto/*` ta’ OmniRoute meta ma jkunx
+Il-fornitur huwa eliġibbli fil-gruppi ta’ kandidati `auto/*` ta’ 67router meta ma jkunx
 imblukkat. L-eliġibbiltà bħala kandidat ma tiggarantix l-għażla: l-istrateġija ta’
 direzzjonament tal-kombinazzjoni (pereżempju, l-aħħar waħda magħrufa li taħdem) tista’
 tippreferi fornitur ieħor. Uża `dva/<model>` jew kombinazzjoni li tagħti prijorità lil Devin
@@ -73,17 +73,17 @@ pprojbiti. Is-servizzi Compose:
 
 - jaħdmu bħala UID/GID `10001:10001`, b’sistema tal-fajls root għall-qari biss, kapaċitajiet
   imneħħija, u `no-new-privileges`;
-- jużaw `/home/bridge` privat, volum iddedikat għall-konfigurazzjoni ta’ Claude, data OmniRoute iżolata,
+- jużaw `/home/bridge` privat, volum iddedikat għall-konfigurazzjoni ta’ Claude, data 67router iżolata,
   u volum `devin-auth` separat;
 - jimmontaw biss spazji tax-xogħol/evidenza `.sandbox` li jistgħu jintremew;
 - ma jimmontawx id-direttorju home tal-host, Keychain, kredenzjali SSH jew tal-cloud, jew is-socket ta’ Docker;
 - jibnu ambjenti espliċiti u jneħħu l-varjabbli tal-API/OAuth/routing ta’ Anthropic;
 - jidderieġu l-inferenza ta’ Claude Code biss lejn `http://omniroute:20128` b’ċavetta lokali biss.
 
-Il-profil offline juża network intern. Fil-profil live, OmniRoute jilħaq l-endpoints
+Il-profil offline juża network intern. Fil-profil live, 67router jilħaq l-endpoints
 uffiċjali ta’ Devin biss permezz ta’ `network-guard`; destinazzjonijiet mhux relatati jiġu miċħuda.
 Claude Code għandu gwardja tal-egress separata li tiċħad kollox u jista’ jilħaq biss is-servizz
-OmniRoute lokali permezz ta’ `NO_PROXY`. Il-fajls tal-awditjar tal-gwardji jiġu mmontati biss
+67router lokali permezz ta’ `NO_PROXY`. Il-fajls tal-awditjar tal-gwardji jiġu mmontati biss
 mill-proċess tal-gwardja rispettiv tagħhom. L-iskripts jivverifikaw is-sjieda tal-fajls, il-modalità,
 l-għadd tal-links, u kull deċiżjoni qabel jesportaw evidenza mingħajr tokens.
 

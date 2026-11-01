@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Tiếng Việt)
+# 🐳 Docker Guide — 67router (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Sử dụng tệp môi trường](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Các profile có sẵn](#available-profiles)
-- [Cấu hình các công cụ CLI trên máy chủ khi OmniRoute chạy trong Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Cấu hình các công cụ CLI trên máy chủ khi 67router chạy trong Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [Compose cho môi trường production](#production-compose)
 - [Các stage của Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Các profile có sẵn
 
-OmniRoute cung cấp các profile Compose cho những mô hình triển khai chính. Hãy chọn profile phù hợp với môi trường của bạn.
+67router cung cấp các profile Compose cho những mô hình triển khai chính. Hãy chọn profile phù hợp với môi trường của bạn.
 
 | Profile           | Dịch vụ          | Khi nào nên sử dụng                                                                                                                                                | Lệnh                                         |
 | ----------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute cung cấp các profile Compose cho những mô hình triển khai ch�
 
 > Có thể kết hợp nhiều profile: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Cấu hình các công cụ CLI trên máy chủ khi OmniRoute chạy trong Docker
+## Cấu hình các công cụ CLI trên máy chủ khi 67router chạy trong Docker
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` và nút
 **Lưu cấu hình** trên bảng điều khiển đều ghi các tệp như `~/.codex/*.config.toml`. Những đường dẫn này
@@ -103,11 +103,11 @@ container, dữ liệu sẽ được ghi vào thư mục home riêng của conta
 image chạy với `USER node`), nơi không có CLI nào trên máy chủ đọc được và dữ liệu sẽ bị
 xóa ngay khi container được tạo lại.
 
-OmniRoute phát hiện trường hợp này và từ chối ghi, đồng thời đưa ra hướng dẫn thay vì
+67router phát hiện trường hợp này và từ chối ghi, đồng thời đưa ra hướng dẫn thay vì
 báo thành công nhưng không thể sử dụng: CLI thoát với mã `2`, còn API phản hồi `422`
 với `containerEphemeralTarget: true`.
 
-### Khuyến nghị: chạy CLI trên máy chủ, OmniRoute trong Docker
+### Khuyến nghị: chạy CLI trên máy chủ, 67router trong Docker
 
 Container cung cấp API; CLI cấu hình các công cụ trên máy chủ của bạn.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind mount là cơ chế giúp đường dẫn trở nên đáng tin cậy: OmniRoute đọc
+Bind mount là cơ chế giúp đường dẫn trở nên đáng tin cậy: 67router đọc
 `/proc/self/mountinfo` và cho phép ghi vào các đường dẫn đã được mount (cũng như các thư mục
 có thư mục con là mount, đúng với cấu trúc `/host-home` ở trên), trong khi
 vẫn từ chối các đường dẫn chưa được mount.
@@ -178,7 +178,7 @@ kèm theo cảnh báo rằng dữ liệu sẽ không tồn tại sau khi contain
 
 ## Redis Sidecar
 
-OmniRoute sử dụng Redis để hỗ trợ bộ giới hạn tốc độ phân tán và bộ nhớ đệm dùng chung. Dịch vụ `redis` **luôn được định nghĩa** trong `docker-compose.yml` (không bị giới hạn bởi profile) và khởi động cùng với bất kỳ profile nào khác.
+67router sử dụng Redis để hỗ trợ bộ giới hạn tốc độ phân tán và bộ nhớ đệm dùng chung. Dịch vụ `redis` **luôn được định nghĩa** trong `docker-compose.yml` (không bị giới hạn bởi profile) và khởi động cùng với bất kỳ profile nào khác.
 
 | Chi tiết                   | Giá trị                                     |
 | -------------------------- | ------------------------------------------- |
@@ -361,7 +361,6 @@ Ngoài các giá trị mặc định được ghi lại trong [ENVIRONMENT.md](.
 | `DASHBOARD_PORT` / `API_PORT` | Ghi đè các cổng được công bố cho dashboard (20128) và API (20129)                                                                                                                                                                                                                 | `20128` / `20129`             |
 | `APP_BIND_HOST`               | Giao diện mạng của host mà docker-compose công bố các cổng dashboard/API/live-WS trên đó. Với `REQUIRE_API_KEY=false` (mặc định), `0.0.0.0` sẽ mở proxy `/v1` ẩn danh cho mạng LAN — chỉ mở rộng phạm vi khi dùng `REQUIRE_API_KEY=true` hoặc đặt một reverse proxy ở phía trước. | `127.0.0.1`                   |
 | `CLIPROXY_BIND_HOST`          | Giao diện mạng của host mà docker-compose công bố sidecar `cliproxyapi` trên đó — volume dữ liệu của nó chứa thông tin xác thực của nhà cung cấp.                                                                                                                                 | `127.0.0.1`                   |
-| `OMNIROUTE_PLUGINS_DIR`       | Thư mục mà trình quét plugin trong runtime đọc và cài đặt vào. Hãy thiết lập biến này khi các plugin được bind-mount: giá trị mặc định phụ thuộc vào `HOME`, nhưng image không nhất thiết phải export biến này.                                                                   | `~/.omniroute/plugins`        |
 | `OMNIROUTE_BASE_PATH`         | Đường dẫn con URL khi ứng dụng được công bố phía sau reverse proxy (ví dụ: `/omniroute`)                                                                                                                                                                                          | _(trống = thư mục gốc)_       |
 | `NEXT_PUBLIC_BASE_URL`        | Origin công khai trên trình duyệt, bao gồm cả đường dẫn con (ví dụ: `https://host/omniroute`)                                                                                                                                                                                     | chưa đặt                      |
 | `PROD_DASHBOARD_PORT`         | Cổng dashboard phía host cho `docker-compose.prod.yml`                                                                                                                                                                                                                            | `20130`                       |
@@ -369,7 +368,7 @@ Ngoài các giá trị mặc định được ghi lại trong [ENVIRONMENT.md](.
 
 ## Reverse Proxy trên đường dẫn con (Traefik / nginx)
 
-`basePath` của Next.js được biên dịch vào bundle standalone. OmniRoute ghi lại giá trị
+`basePath` của Next.js được biên dịch vào bundle standalone. 67router ghi lại giá trị
 đã được nhúng trong một tệp sentinel tại thư mục gốc của ứng dụng (được ghi trong quá
 trình `npm run build`; được đọc bởi `scripts/docker/ensure-docker-base-path.mjs`) và so
 sánh giá trị đó với `OMNIROUTE_BASE_PATH` khi container khởi động. Khi các giá trị khác
@@ -444,7 +443,7 @@ dẫn đầy đủ về probe:
 
 ## Docker Compose với Caddy (HTTPS Auto-TLS)
 
-OmniRoute có thể được cung cấp an toàn bằng khả năng tự động cấp chứng chỉ SSL của Caddy. Hãy đảm bảo bản ghi DNS A của tên miền trỏ đến địa chỉ IP máy chủ của bạn.
+67router có thể được cung cấp an toàn bằng khả năng tự động cấp chứng chỉ SSL của Caddy. Hãy đảm bảo bản ghi DNS A của tên miền trỏ đến địa chỉ IP máy chủ của bạn.
 
 ```yaml
 services:
@@ -475,11 +474,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy thiết lập các header chuyển tiếp tiêu chuẩn cho container thượng nguồn. OmniRoute sử dụng
+Caddy thiết lập các header chuyển tiếp tiêu chuẩn cho container thượng nguồn. 67router sử dụng
 `NEXT_PUBLIC_BASE_URL` làm origin công khai chuẩn cho callback OAuth và các liên kết công khai
 được tạo; các thao tác ghi đã xác thực trên bảng điều khiển sử dụng yêu cầu cùng origin cùng với cơ chế bảo vệ CSRF
 gắn với phiên. Chỉ bật `OMNIROUTE_TRUST_PROXY` cho các triển khai nâng cao khi bạn chủ động
-muốn OmniRoute suy ra origin công khai từ các header chuyển tiếp đáng tin cậy thay vì cấu hình
+muốn 67router suy ra origin công khai từ các header chuyển tiếp đáng tin cậy thay vì cấu hình
 tường minh.
 
 ## Cloudflare Quick Tunnel
@@ -491,11 +490,11 @@ Các bảng tunnel endpoint (Cloudflare, Tailscale, ngrok) có thể được hi
 ### Lưu ý về tunnel
 
 - URL Quick Tunnel chỉ là tạm thời và thay đổi sau mỗi lần khởi động lại.
-- Quick Tunnel không được tự động khôi phục sau khi OmniRoute hoặc container khởi động lại. Hãy bật lại từ bảng điều khiển khi cần.
+- Quick Tunnel không được tự động khôi phục sau khi 67router hoặc container khởi động lại. Hãy bật lại từ bảng điều khiển khi cần.
 - Trình cài đặt được quản lý hiện hỗ trợ Linux, macOS và Windows trên `x64` / `arm64`.
 - Quick Tunnel được quản lý mặc định sử dụng phương thức truyền tải HTTP/2 để tránh các cảnh báo ồn ào về bộ đệm UDP của QUIC trong môi trường container bị giới hạn. Đặt `CLOUDFLARED_PROTOCOL=quic` hoặc `auto` nếu bạn muốn sử dụng phương thức truyền tải khác.
 - Các image Docker tích hợp sẵn chứng chỉ CA gốc của hệ thống và chuyển chúng đến `cloudflared` được quản lý, giúp tránh lỗi tin cậy TLS khi tunnel khởi tạo bên trong container.
-- Đặt `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` nếu bạn muốn OmniRoute sử dụng tệp nhị phân hiện có thay vì tải xuống.
+- Đặt `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` nếu bạn muốn 67router sử dụng tệp nhị phân hiện có thay vì tải xuống.
 
 ## Thẻ image
 
@@ -508,7 +507,7 @@ Manifest đa nền tảng: `linux/amd64` + `linux/arm64` nguyên bản (Apple Si
 
 ### Các kênh phát hành
 
-OmniRoute phát hành các kênh Docker riêng biệt cho bản phát hành ổn định, hoạt động kiểm thử trên nhánh phát hành và bản dựng phát triển.
+67router phát hành các kênh Docker riêng biệt cho bản phát hành ổn định, hoạt động kiểm thử trên nhánh phát hành và bản dựng phát triển.
 
 | Kênh                            | Nguồn                                    | Khả năng thay đổi                      | Mục đích sử dụng được khuyến nghị                                                                                                                   |
 | ------------------------------- | ---------------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -561,7 +560,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Trước khi kiểm thử, hãy sao lưu volume dữ liệu OmniRoute hoặc thư mục dữ liệu được bind mount. Để khôi phục phiên bản, hãy khôi phục phiên bản ổn định hoặc digest đã dùng trước đó và tạo lại container:
+Trước khi kiểm thử, hãy sao lưu volume dữ liệu 67router hoặc thư mục dữ liệu được bind mount. Để khôi phục phiên bản, hãy khôi phục phiên bản ổn định hoặc digest đã dùng trước đó và tạo lại container:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -581,7 +580,7 @@ Một bản dựng từ nhánh phát hành không bao giờ có thể thay đổ
 
 ## Cập nhật dashboard trong Docker
 
-Một container từ image đã phát hành không thể tự thay thế chính nó. Khi OmniRoute phát hiện rằng nó đang chạy bên trong một container (không có bản checkout `.git`, không phải bản cài đặt npm), biểu ngữ cập nhật trên dashboard chính sẽ hiển thị lệnh cần chạy trên máy chủ thay vì hướng dẫn npm/git, kèm theo nút sao chép:
+Một container từ image đã phát hành không thể tự thay thế chính nó. Khi 67router phát hiện rằng nó đang chạy bên trong một container (không có bản checkout `.git`, không phải bản cài đặt npm), biểu ngữ cập nhật trên dashboard chính sẽ hiển thị lệnh cần chạy trên máy chủ thay vì hướng dẫn npm/git, kèm theo nút sao chép:
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -593,7 +592,7 @@ Tên dịch vụ được lấy từ `AUTO_UPDATE_SERVICE` (mặc định là `o
 
 ### Cập nhật bằng một cú nhấp chuột với tệp kích hoạt trên máy chủ
 
-Để tiếp tục sử dụng được **Update Now** mà không cần gắn kết `/var/run/docker.sock` (việc này cấp cho container quyền root trên máy chủ — xem cảnh báo về profile `cli` ở trên), hãy đặt `DOCKER_UPDATE_TRIGGER_FILE` trên dịch vụ OmniRoute và chạy một trình theo dõi trên máy chủ:
+Để tiếp tục sử dụng được **Update Now** mà không cần gắn kết `/var/run/docker.sock` (việc này cấp cho container quyền root trên máy chủ — xem cảnh báo về profile `cli` ở trên), hãy đặt `DOCKER_UPDATE_TRIGGER_FILE` trên dịch vụ 67router và chạy một trình theo dõi trên máy chủ:
 
 ```yaml
 services:
@@ -604,14 +603,14 @@ services:
       - ./data:/app/data
 ```
 
-Đường dẫn phải nằm bên trong `DATA_DIR` (các giá trị tương đối được phân giải dựa trên thư mục này); mọi đường dẫn khác đều bị từ chối. Sau đó, **Update Now** sẽ ghi `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` vào tệp đó, trả về `202`, và dashboard sẽ thăm dò `/api/system/version` cho đến khi phiên bản mới hoạt động rồi tải lại. OmniRoute không bao giờ chạy lệnh shell hoặc Docker trong chế độ này. Giống như mọi thao tác cập nhật, yêu cầu chỉ được chấp nhận từ các máy khách loopback/LAN.
+Đường dẫn phải nằm bên trong `DATA_DIR` (các giá trị tương đối được phân giải dựa trên thư mục này); mọi đường dẫn khác đều bị từ chối. Sau đó, **Update Now** sẽ ghi `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` vào tệp đó, trả về `202`, và dashboard sẽ thăm dò `/api/system/version` cho đến khi phiên bản mới hoạt động rồi tải lại. 67router không bao giờ chạy lệnh shell hoặc Docker trong chế độ này. Giống như mọi thao tác cập nhật, yêu cầu chỉ được chấp nhận từ các máy khách loopback/LAN.
 
 Một thư mục dữ liệu được bind mount cung cấp cho máy chủ một đường dẫn ổn định để theo dõi. Các unit `systemd` mẫu (hãy điều chỉnh `/srv/omniroute` thành thư mục chứa tệp compose và `data/` của bạn):
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Theo dõi các yêu cầu cập nhật từ dashboard OmniRoute
+Description=Theo dõi các yêu cầu cập nhật từ dashboard 67router
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -623,7 +622,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Kéo image và tạo lại container OmniRoute
+Description=Kéo image và tạo lại container 67router
 
 [Service]
 Type=oneshot
@@ -642,13 +641,13 @@ Dịch vụ xóa yêu cầu trước khi kéo image để một lần chạy th�
 
 ## Khả năng sẵn sàng: SQLite mặc định chỉ hỗ trợ một replica
 
-Cấu hình Docker / Kubernetes OmniRoute tiêu chuẩn là **một tiến trình Node + một trình ghi SQLite**. Khả năng sẵn sàng cao **không được hỗ trợ** trên cấu trúc này.
+Cấu hình Docker / Kubernetes 67router tiêu chuẩn là **một tiến trình Node + một trình ghi SQLite**. Khả năng sẵn sàng cao **không được hỗ trợ** trên cấu trúc này.
 
-| Ràng buộc                                     | Hệ quả                                                                                                                                                                                                                                                                                                                                                                                       |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Một trình ghi                                 | **Không** chạy nhiều replica dùng chung một tệp SQLite. Việc đó sẽ làm hỏng DB.                                                                                                                                                                                                                                                                                                              |
-| Tạo lại / khởi động lại / bị HEALTHCHECK dừng | **Gián đoạn hoàn toàn** đối với các kết nối SSE đang hoạt động, phiên dashboard và trạng thái trong bộ nhớ. Mọi máy khách đang kết nối đều bị ngắt. Các yêu cầu mới trong khoảng thời gian không có endpoint sẽ nhận được lỗi **`502 Bad Gateway: Unknown error`** từ reverse proxy, không phải JSON của OmniRoute — máy khách không thể phân biệt lỗi này với lỗi từ nhà cung cấp (#11015). |
-| Cùng event loop với `/healthz`                | Một lượt xử lý catalog hoặc nén bận có thể làm chậm các probe; timeout ngắn sau đó sẽ khởi động lại replica **duy nhất**.                                                                                                                                                                                                                                                                    |
+| Ràng buộc                                     | Hệ quả                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Một trình ghi                                 | **Không** chạy nhiều replica dùng chung một tệp SQLite. Việc đó sẽ làm hỏng DB.                                                                                                                                                                                                                                                                                                             |
+| Tạo lại / khởi động lại / bị HEALTHCHECK dừng | **Gián đoạn hoàn toàn** đối với các kết nối SSE đang hoạt động, phiên dashboard và trạng thái trong bộ nhớ. Mọi máy khách đang kết nối đều bị ngắt. Các yêu cầu mới trong khoảng thời gian không có endpoint sẽ nhận được lỗi **`502 Bad Gateway: Unknown error`** từ reverse proxy, không phải JSON của 67router — máy khách không thể phân biệt lỗi này với lỗi từ nhà cung cấp (#11015). |
+| Cùng event loop với `/healthz`                | Một lượt xử lý catalog hoặc nén bận có thể làm chậm các probe; timeout ngắn sau đó sẽ khởi động lại replica **duy nhất**.                                                                                                                                                                                                                                                                   |
 
 **Ma trận probe** (xem thêm [khuyến nghị về probe Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -751,7 +750,7 @@ cũng như tuyến kết nối thực tế; chỉ riêng lỗi này không cho t
 
 ### Ưu tiên proxy dành riêng cho kết nối
 
-Sử dụng [cấu hình proxy theo từng kết nối](../ops/PROXY_GUIDE.md#4-level-proxy-system) của OmniRoute
+Sử dụng [cấu hình proxy theo từng kết nối](../ops/PROXY_GUIDE.md#4-level-proxy-system) của 67router
 cho kết nối Gemini bị ảnh hưởng, sau đó lặp lại **Kiểm tra kết nối** và một yêu cầu nhỏ
 với cùng model. Điều này giới hạn thay đổi định tuyến trong phạm vi kết nối đó. Hãy xác minh
 rằng container có thể truy cập proxy và kết nối thực sự chọn
@@ -821,7 +820,7 @@ có thể làm gián đoạn các container khác đang kết nối với mạng
 
 ## Lưu ý quan trọng
 
-- **Chế độ WAL của SQLite:** Cần cho phép `docker stop` hoàn tất để OmniRoute có thể checkpoint các thay đổi mới nhất trở lại `storage.sqlite`. Các tệp Compose đi kèm đã đặt thời gian chờ dừng là 40 giây. Nếu chạy image trực tiếp, hãy giữ `--stop-timeout 40`.
+- **Chế độ WAL của SQLite:** Cần cho phép `docker stop` hoàn tất để 67router có thể checkpoint các thay đổi mới nhất trở lại `storage.sqlite`. Các tệp Compose đi kèm đã đặt thời gian chờ dừng là 40 giây. Nếu chạy image trực tiếp, hãy giữ `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Đặt thành `true` nếu các bản sao lưu định kỳ/trước khi ghi được quản lý bên ngoài. Việc di chuyển cơ sở dữ liệu hiện có vẫn yêu cầu một snapshot an toàn, bền vững riêng và cơ chế bảo vệ khi di chuyển hàng loạt.
 - **Lưu trữ dữ liệu bền vững:** Luôn mount một volume vào `/app/data` để duy trì cơ sở dữ liệu, khóa và cấu hình qua các lần khởi động lại container.
 - **Cấu hình cổng:** Ghi đè biến môi trường `PORT` để thay đổi cổng mặc định `20128`.

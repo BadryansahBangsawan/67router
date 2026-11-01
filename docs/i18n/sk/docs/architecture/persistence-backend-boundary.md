@@ -10,7 +10,7 @@
 
 ## Kontext
 
-OmniRoute v súčasnosti poskytuje doménovo orientované funkcie perzistencie z `src/lib/db/`, zatiaľ čo
+67router v súčasnosti poskytuje doménovo orientované funkcie perzistencie z `src/lib/db/`, zatiaľ čo
 zdieľané pripojenie vrátené z `src/lib/db/core.ts` implementuje synchrónny kontrakt `SqliteAdapter`
 v `src/lib/db/adapters/types.ts`. Tento adaptér podporuje viacero runtime prostredí SQLite, jeho
 rozhranie však naďalej zodpovedá SQLite: synchrónne pripravené príkazy, `pragma`, odložené a okamžité

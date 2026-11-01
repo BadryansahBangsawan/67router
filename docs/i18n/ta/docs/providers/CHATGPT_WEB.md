@@ -28,9 +28,9 @@
    பெயரை ஒட்டவும். கருவிகளைப் பயன்படுத்தக்கூடிய புதிய அமைப்புகள், சரியாக
    `OmniRoute Codex v2` எனப் பெயரிடப்பட்ட புதிதாக உருவாக்கப்பட்ட connector-ஐப் பயன்படுத்த வேண்டும்; அதில் Authentication என்பது None எனவும் Permissions என்பது Allow all
    actions எனவும் அமைக்கப்பட்டிருக்க வேண்டும்.
-3. இணைப்புச் சரிபார்ப்பை இயக்கவும். OmniRoute, உலாவி ஆதரவிலான Temporary Chat-ஐத் திறந்து,
+3. இணைப்புச் சரிபார்ப்பை இயக்கவும். 67router, உலாவி ஆதரவிலான Temporary Chat-ஐத் திறந்து,
    அந்தக் கணக்கிற்கு Sol மற்றும் Pro கிடைக்கின்றனவா என்பதைக் கண்டறியும்.
-4. இணைப்பைச் சேமிக்கவும். OmniRoute, ஒட்டப்பட்ட cookie-ஐச் சரிபார்க்கப்பட்ட
+4. இணைப்பைச் சேமிக்கவும். 67router, ஒட்டப்பட்ட cookie-ஐச் சரிபார்க்கப்பட்ட
    Playwright storage state-ஆல் மாற்றி, மறையாக்கப்பட்ட
    credential abstraction மூலம் runtime key உடன் அதைச் சேமிக்கும்.
 
@@ -79,19 +79,19 @@ Free/Go கணக்குகள் Luna route-களை வழங்குக�
 
 ## காட்சித்திரையற்ற VPS மற்றும் Docker
 
-npm, systemd மற்றும் PM2 நிறுவல்களுக்கு, பொதுவான Chrome மற்றும் Chromium பாதைகளை OmniRoute கண்டறிகிறது.
+npm, systemd மற்றும் PM2 நிறுவல்களுக்கு, பொதுவான Chrome மற்றும் Chromium பாதைகளை 67router கண்டறிகிறது.
 மாற்றாக, `CHATGPT_WEB_CODEX_CHROME_PATH` என்பதை அமைக்கவும். ChatGPT உண்மையான headless browser வடிவத்தை
 நிராகரிப்பதால், runtime turn-கள் திட்டமிட்டே UI-உடன் கூடிய Chrome-ஐப் பயன்படுத்துகின்றன. எனவே காட்சித்திரையற்ற host ஒன்று
-தனிப்பட்ட Xvfb display-உடன் OmniRoute-ஐ இயக்க வேண்டும்; Chrome பாதையை மட்டும் அமைப்பது display-ஐ வழங்காது.
+தனிப்பட்ட Xvfb display-உடன் 67router-ஐ இயக்க வேண்டும்; Chrome பாதையை மட்டும் அமைப்பது display-ஐ வழங்காது.
 
 Docker `web` profile, உள் Compose network-இல் `chatgpt-web-codex-browser`-ஐத்
 தொடங்குகிறது. Sidecar, Xvfb-க்குள் UI-உடன் கூடிய Chrome-ஐ இயக்குவதால், இயற்பியல் display தேவையில்லை. அதன் CDP
 port host-இல் வெளியிடப்படாது. பாதுகாக்கப்பட்ட browser profile volume,
-OmniRoute data volume-இலிருந்து தனியாக உள்ளது; மேலும் browser-க்குப் போதுமான shared memory வழங்கப்படுகிறது. உள் CDP proxy,
+67router data volume-இலிருந்து தனியாக உள்ளது; மேலும் browser-க்குப் போதுமான shared memory வழங்கப்படுகிறது. உள் CDP proxy,
 Compose network-க்குள் உள்ள port `9223`-இல் மட்டுமே கேட்கிறது; sidecar-இல் Chrome தொடர்ந்து loopback-உடன்
 பிணைக்கப்பட்டிருக்கும்.
 
-`DATA_DIR`-இன் கீழுள்ள supervisor lease, பல OmniRoute செயல்முறைகள் ஒரே tunnel மற்றும்
+`DATA_DIR`-இன் கீழுள்ள supervisor lease, பல 67router செயல்முறைகள் ஒரே tunnel மற்றும்
 broker state-ஐ உரிமையாக்குவதைத் தடுக்கிறது. முரண்பாடு ஒன்று doctor மூலம் அறிவிக்கப்படுகிறது.
 
 ## ஊடாடும் மீட்பு

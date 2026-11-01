@@ -1,14 +1,14 @@
 ---
-title: "🌐 OmniRoute Proxy Guide"
+title: "🌐 67router Proxy Guide"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# 🌐 OmniRoute Proxy Guide
+# 🌐 67router Proxy Guide
 
 > **Bypass geographic blocks, protect your identity, and route AI traffic through any proxy — with zero configuration complexity.**
 
-OmniRoute includes a full-featured proxy management system that lets you route upstream AI provider traffic through HTTP, HTTPS, or SOCKS5 proxies. Whether you're in a blocked region, need IP rotation, or want stealth fingerprinting — this guide covers everything.
+67router includes a full-featured proxy management system that lets you route upstream AI provider traffic through HTTP, HTTPS, or SOCKS5 proxies. Whether you're in a blocked region, need IP rotation, or want stealth fingerprinting — this guide covers everything.
 
 ---
 
@@ -18,7 +18,6 @@ OmniRoute includes a full-featured proxy management system that lets you route u
 - [Architecture Overview](#architecture-overview)
 - [4-Level Proxy System](#4-level-proxy-system)
 - [Proxy Registry (CRUD)](#proxy-registry-crud)
-- [1proxy Free Marketplace](#1proxy-free-proxy-marketplace)
 - [Proxy Rotation](#proxy-rotation)
 - [Anti-Detection & Stealth](#anti-detection--stealth)
 - [Upstream Proxy Modes](#upstream-proxy-modes)
@@ -53,7 +52,7 @@ Even outside blocked regions, proxies are useful for:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute Server                        │
+│                       67router Server                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proxy       │    │ Proxy        │    │ Proxy            │  │
@@ -63,8 +62,8 @@ Even outside blocked regions, proxies are useful for:
 │         ▲                                        │            │
 │         │                                        ▼            │
 │  ┌──────┴──────┐                        ┌──────────────────┐  │
-│  │ 1proxy Sync │                        │ Upstream         │  │
-│  │ (free pool) │                        │ Provider API     │  │
+│  │ Dashboard / │                        │ Upstream         │  │
+│  │ API CRUD    │                        │ Provider API     │  │
 │  └─────────────┘                        └──────────────────┘  │
 └───────────────────────────────────────────────────────────────┘
 ```
@@ -78,13 +77,12 @@ Even outside blocked regions, proxies are useful for:
 | **Proxy Fetch**      | `open-sse/utils/proxyFetch.ts`               | Wraps `fetch()` with proxy dispatcher injection            |
 | **Settings Route**   | `src/app/api/settings/proxy/route.ts`        | Legacy proxy config API (GET/PUT/DELETE)                   |
 | **Management Route** | `src/app/api/v1/management/proxies/route.ts` | Registry CRUD API (GET/POST/PATCH/DELETE)                  |
-| **1proxy DB**        | `src/lib/db/oneproxy.ts`                     | Free proxy marketplace persistence                         |
 
 ---
 
 ## 4-Level Proxy System
 
-OmniRoute supports proxy configuration at **four independent scopes**, resolved in priority order:
+67router supports proxy configuration at **four independent scopes**, resolved in priority order:
 
 ```
 Priority Resolution Order (highest → lowest):
@@ -97,7 +95,7 @@ Priority Resolution Order (highest → lowest):
 
 ### How Resolution Works
 
-When OmniRoute sends a request to an upstream provider, it calls `resolveProxyForConnectionFromRegistry()` which checks each level in order:
+When 67router sends a request to an upstream provider, it calls `resolveProxyForConnectionFromRegistry()` which checks each level in order:
 
 1. **Account-level** — Is there a proxy assigned to this specific connection ID?
 2. **Provider-level** — Is there a proxy assigned to this provider (e.g., `openai`)?
@@ -111,9 +109,7 @@ The first match wins. This means you can set a global proxy as a fallback but ov
 | Traffic Type         | Proxied? | Notes                                         |
 | -------------------- | -------- | --------------------------------------------- |
 | Chat completions     | ✅       | All `/v1/chat/completions` requests           |
-| Embeddings           | ✅       | `/v1/embeddings`                              |
-| Image generation     | ✅       | `/v1/images/generations`                      |
-| Audio (TTS/STT)      | ✅       | `/v1/audio/*`                                 |
+| Audio (STT)          | ✅       | `/v1/audio/transcriptions`                    |
 | OAuth token exchange | ✅       | Solves `unsupported_country_region_territory` |
 | Connection tests     | ✅       | "Test Connection" button uses proxy           |
 | Token refresh        | ✅       | Background OAuth renewal                      |
@@ -239,7 +235,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Import/Export
 
-Proxies are included in the **Backup/Restore** system. When you export your OmniRoute configuration:
+Proxies are included in the **Backup/Restore** system. When you export your 67router configuration:
 
 1. Go to **Dashboard → Settings → Backup**
 2. Click **Export** — proxy registry and assignments are included
@@ -249,7 +245,7 @@ The proxy registry also supports **upsert by host+port** — if you import a pro
 
 ### Legacy Migration
 
-If you configured proxies in an older version (pre-registry), OmniRoute automatically migrates them:
+If you configured proxies in an older version (pre-registry), 67router automatically migrates them:
 
 ```
 Legacy key_value store → proxy_registry + proxy_assignments
@@ -259,122 +255,9 @@ This happens once on first startup after upgrade. Use `migrateLegacyProxyConfigT
 
 ---
 
-## 1proxy Free Proxy Marketplace
-
-> 🆕 **Contributed by [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Issue [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
-
-OmniRoute integrates with the **[1proxy](https://1proxy-api.aitradepulse.com)** community platform to provide access to **hundreds of free, validated proxies** from around the world. This is perfect for users who don't have their own proxy infrastructure.
-
-### How It Works
-
-```
-┌─────────────┐     Sync      ┌─────────────────┐    Rotate     ┌──────────┐
-│  1proxy API │ ────────────▶ │  proxy_registry  │ ────────────▶ │ Provider │
-│  (external) │   up to 500   │  source=oneproxy │  by quality   │   API    │
-└─────────────┘    proxies    └─────────────────┘               └──────────┘
-```
-
-1. **Sync** — OmniRoute fetches validated proxies from the 1proxy API
-2. **Store** — Proxies are saved in the same `proxy_registry` table with `source = 'oneproxy'`
-3. **Filter** — Filter by protocol, country, quality score
-4. **Rotate** — Pick the best proxy using quality, random, or sequential strategies
-5. **Auto-degrade** — Failed proxies get their quality score reduced; below threshold → marked inactive
-
-### Syncing Proxies
-
-**Via Dashboard:**
-
-1. Go to **Settings → 1proxy** tab
-2. Click **"Sync Now"**
-3. View stats: total proxies, active count, average quality, by-country breakdown
-
-**Via API:**
-
-```bash
-# Trigger sync
-curl -X POST http://localhost:20128/api/settings/oneproxy \
-  -H "Content-Type: application/json" \
-  -d '{}'
-
-# Response:
-# { "success": true, "added": 127, "updated": 45, "failed": 2, "total": 172 }
-```
-
-### Filtering Proxies
-
-```bash
-# Filter by protocol
-curl "http://localhost:20128/api/settings/oneproxy?protocol=socks5"
-
-# Filter by country
-curl "http://localhost:20128/api/settings/oneproxy?countryCode=US"
-
-# Filter by minimum quality score
-curl "http://localhost:20128/api/settings/oneproxy?minQuality=80"
-
-# Combine filters
-curl "http://localhost:20128/api/settings/oneproxy?protocol=http&countryCode=DE&minQuality=70"
-```
-
-### Proxy Quality Scores
-
-Each 1proxy proxy comes with metadata:
-
-| Field           | Description                                  |
-| --------------- | -------------------------------------------- |
-| `qualityScore`  | 0-100 rating from 1proxy validation          |
-| `latencyMs`     | Measured network latency                     |
-| `anonymity`     | `transparent`, `anonymous`, or `elite`       |
-| `googleAccess`  | Whether the proxy can access Google services |
-| `countryCode`   | Two-letter ISO country code                  |
-| `lastValidated` | Timestamp of last validation                 |
-
-Quality scores are dynamically adjusted:
-
-- **Failed requests** reduce the score by 10 points
-- **Score drops to ≤10** → proxy is marked `inactive`
-- Inactive proxies are excluded from rotation
-
-### Rotation Strategies
-
-```bash
-# Rotate by quality (best proxy first) — default
-curl -X POST http://localhost:20128/api/settings/oneproxy/rotate \
-  -H "Content-Type: application/json" \
-  -d '{"strategy": "quality"}'
-
-# Random rotation
-curl -X POST http://localhost:20128/api/settings/oneproxy/rotate \
-  -d '{"strategy": "random"}'
-
-# Sequential (least recently validated first)
-curl -X POST http://localhost:20128/api/settings/oneproxy/rotate \
-  -d '{"strategy": "sequential"}'
-```
-
-### Circuit Breaker
-
-The 1proxy sync has a built-in circuit breaker:
-
-- After **5 consecutive sync failures**, further sync attempts are blocked
-- Reset with: `resetOneproxyCircuitBreaker()` or restart the server
-- Sync status is available at `GET /api/settings/oneproxy?action=status`
-
-### Clearing 1proxy Proxies
-
-```bash
-# Delete a single 1proxy proxy
-curl -X DELETE "http://localhost:20128/api/settings/oneproxy?id=proxy-uuid"
-
-# Clear ALL 1proxy proxies (manual proxies are untouched)
-curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
-```
-
----
-
 ## Anti-Detection & Stealth
 
-OmniRoute doesn't just route traffic through a proxy — it makes the traffic look legitimate:
+67router doesn't just route traffic through a proxy — it makes the traffic look legitimate:
 
 ### TLS Fingerprint Spoofing
 
@@ -408,13 +291,13 @@ The badge also shows the resolved proxy IP for verification.
 
 ## Upstream Proxy Modes
 
-For providers that use the CLIProxyAPI pattern, OmniRoute supports three upstream proxy modes:
+For providers that use the CLIProxyAPI pattern, 67router supports three upstream proxy modes:
 
-| Mode          | Description                                        |
-| ------------- | -------------------------------------------------- |
-| `native`      | OmniRoute handles proxy routing directly (default) |
-| `cliproxyapi` | Delegates to an external CLIProxyAPI instance      |
-| `fallback`    | Tries native first, falls back to CLIProxyAPI      |
+| Mode          | Description                                       |
+| ------------- | ------------------------------------------------- |
+| `native`      | 67router handles proxy routing directly (default) |
+| `cliproxyapi` | Delegates to an external CLIProxyAPI instance     |
+| `fallback`    | Tries native first, falls back to CLIProxyAPI     |
 
 Configure per-provider:
 
@@ -435,15 +318,6 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 - **Per-connection proxy** assignments
 - **Connection test** through configured proxy
 - **Color-coded badges** showing active proxy level
-
-### Settings → 1proxy Tab
-
-- **Sync Now** button to fetch free proxies
-- **Stats cards**: Total, Active, Avg Quality, Last Sync
-- **Filters**: Protocol, Country Code, Min Quality
-- **Proxy table** with host, protocol, country, quality score, latency, anonymity, Google access
-- **Sync status** panel with success/failure tracking and consecutive failure count
-- **Clear All** to remove all 1proxy entries
 
 ---
 
@@ -477,19 +351,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tunnels API
 
-For exposing your OmniRoute instance to the public internet (Cloudflare/ngrok/Tailscale) instead of routing outbound through a proxy, see [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). The tunnel REST API lives under `/api/tunnels/{cloudflared,ngrok,tailscale}/*` and is orthogonal to the outbound proxy chain documented above.
-
-### 1proxy API
-
-| Method   | Endpoint                               | Description             |
-| -------- | -------------------------------------- | ----------------------- |
-| `GET`    | `/api/settings/oneproxy`               | List 1proxy proxies     |
-| `GET`    | `/api/settings/oneproxy?action=stats`  | Get stats + sync status |
-| `GET`    | `/api/settings/oneproxy?action=status` | Get sync status only    |
-| `POST`   | `/api/settings/oneproxy`               | Trigger sync            |
-| `POST`   | `/api/settings/oneproxy/rotate`        | Rotate to next proxy    |
-| `DELETE` | `/api/settings/oneproxy?id=uuid`       | Delete one              |
-| `DELETE` | `/api/settings/oneproxy?clearAll=1`    | Clear all               |
+For exposing your 67router instance to the public internet (Cloudflare/ngrok/Tailscale) instead of routing outbound through a proxy, see [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). The tunnel REST API lives under `/api/tunnels/{cloudflared,ngrok,tailscale}/*` and is orthogonal to the outbound proxy chain documented above.
 
 ### Upstream Proxy API
 
@@ -517,17 +379,17 @@ Set `ENABLE_SOCKS5_PROXY=true` in your `.env` file and restart.
 
 ### "socket hang up" errors through proxy
 
-This is normal with cheap proxies that drop idle connections. OmniRoute already handles this by:
+This is normal with cheap proxies that drop idle connections. 67router already handles this by:
 
 - Disabling keep-alive on proxy connections (`keepAliveTimeout: 1`)
 - Disabling pipelining (`pipelining: 0`)
 - Caching dispatchers to avoid repeated handshakes
 
-If it persists, try a different proxy or use the 1proxy rotation feature.
+If it persists, try a different proxy.
 
 ### "unsupported_country_region_territory" during OAuth
 
-Make sure the proxy is configured **before** starting the OAuth flow. OmniRoute routes OAuth token exchange through the configured proxy. Set a global or provider-level proxy first, then connect.
+Make sure the proxy is configured **before** starting the OAuth flow. 67router routes OAuth token exchange through the configured proxy. Set a global or provider-level proxy first, then connect.
 
 ### Proxy not being used
 
@@ -536,16 +398,6 @@ Check the resolution order:
 1. Verify with `GET /api/settings/proxy?resolve=your-connection-id`
 2. Check if the proxy `status` is `active` (not `inactive`)
 3. Ensure the proxy assignment scope matches your connection
-
-### 1proxy sync failing
-
-Check the sync status:
-
-```bash
-curl "http://localhost:20128/api/settings/oneproxy?action=status"
-```
-
-If `consecutiveFailures >= 5`, the circuit breaker has tripped. Restart the server to reset, or wait for manual reset.
 
 ---
 
@@ -595,7 +447,7 @@ CREATE TABLE proxy_assignments (
 
 ## Proxy Health Checking (v3.8.16+)
 
-OmniRoute's **proxy fast-fail** mechanism (`src/lib/proxyHealth.ts`) detects dead proxies in <2s via a quick TCP connection check, then **caches the result** to avoid per-request overhead.
+67router's **proxy fast-fail** mechanism (`src/lib/proxyHealth.ts`) detects dead proxies in <2s via a quick TCP connection check, then **caches the result** to avoid per-request overhead.
 
 ### How It Works
 
@@ -660,11 +512,11 @@ Custom ports in the URL (`http://host:9999`) always take precedence over the sch
 
 ## Proxy Analytics & Observability
 
-OmniRoute tracks per-proxy usage to help operators diagnose routing patterns, latency spikes, and recurring failures.
+67router tracks per-proxy usage to help operators diagnose routing patterns, latency spikes, and recurring failures.
 
 ### What's Tracked
 
-For every request through a configured proxy, OmniRoute records:
+For every request through a configured proxy, 67router records:
 
 | Metric       | Description                                     |
 | ------------ | ----------------------------------------------- |
@@ -726,7 +578,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotation Strategy Decision Tree
 
-When multiple proxies are assigned to a scope, OmniRoute uses a **rotation strategy** to pick which one to use for each request. The strategy is configured at the scope level (global, per-provider, per-account, per-combo).
+When multiple proxies are assigned to a scope, 67router uses a **rotation strategy** to pick which one to use for each request. The strategy is configured at the scope level (global, per-provider, per-account, per-combo).
 
 ### Available Strategies
 
@@ -768,9 +620,7 @@ evenly)
 
 ## Automatic Failure Exclusion for Your Own Proxies
 
-The 1proxy marketplace pool already auto-degrades failed proxies on its own (see
-[Proxy Quality Scores](#proxy-quality-scores)). For
-proxies **you** added to the registry, the background health scheduler
+For proxies **you** added to the registry, the background health scheduler
 (`src/lib/proxyHealth/scheduler.ts`) provides the same "exclude a dead member from
 the chain automatically" behavior, without deleting anything:
 

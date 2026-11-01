@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: OmniRoute xếp hạng các nhà cung cấp **miễn phí** theo chất lượng mô hình bằng cách sử dụng **điểm ELO của Arena AI
+> **Tóm tắt**: 67router xếp hạng các nhà cung cấp **miễn phí** theo chất lượng mô hình bằng cách sử dụng **điểm ELO của Arena AI
 > (theo phong cách LMArena)**. Mở trang **Xếp hạng Nhà cung cấp Miễn phí** trong
 > bảng điều khiển để xem nhà cung cấp miễn phí nào cung cấp các mô hình mạnh nhất cho tác vụ của bạn —
 > xét tổng thể hoặc lọc theo danh mục (lập trình, đánh giá, tài liệu, gỡ lỗi).
@@ -13,7 +13,7 @@
 
 ## Giới thiệu
 
-OmniRoute đăng ký 375 nhà cung cấp, trong đó có 155 mục danh mục được đánh dấu **free/no-auth**
+67router đăng ký 375 nhà cung cấp, trong đó có 155 mục danh mục được đánh dấu **free/no-auth**
 (no-auth,
 OAuth có tầng miễn phí, hoặc API key có tầng miễn phí — xem
 [Hướng dẫn về các tầng miễn phí](../getting-started/FREE-TIERS-GUIDE.md) và toàn bộ
@@ -129,9 +129,9 @@ và `code` — từ API bảng xếp hạng Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Mỗi mục trong bảng xếp hạng
 bao gồm tên mô hình, nhà cung cấp, `score` ELO, khoảng tin cậy và số lượt bình chọn.
 
-Các danh mục trong bảng xếp hạng được ánh xạ tới các danh mục tác vụ của OmniRoute:
+Các danh mục trong bảng xếp hạng được ánh xạ tới các danh mục tác vụ của 67router:
 
-| Bảng xếp hạng Arena | Danh mục tác vụ OmniRoute                         |
+| Bảng xếp hạng Arena | Danh mục tác vụ 67router                          |
 | ------------------- | ------------------------------------------------- |
 | `text`              | `default`, `review`, `documentation`, `debugging` |
 | `code`              | `coding`                                          |
@@ -168,7 +168,7 @@ Quá trình đồng bộ **được bật theo mặc định**:
 
 - Quá trình này chạy một lần khi máy chủ khởi động, sau đó chạy định kỳ theo bộ hẹn giờ
   (`src/lib/arenaEloSync.ts`, được kết nối từ `src/instrumentation-node.ts`).
-- Quá trình này **không chặn và không bao giờ gây lỗi nghiêm trọng** — nếu việc lấy dữ liệu từ nguồn bên ngoài thất bại, OmniRoute vẫn tiếp tục
+- Quá trình này **không chặn và không bao giờ gây lỗi nghiêm trọng** — nếu việc lấy dữ liệu từ nguồn bên ngoài thất bại, 67router vẫn tiếp tục
   chạy và bảng xếp hạng chỉ hiển thị dữ liệu hợp lệ gần nhất (hoặc trạng thái trống).
 
 Hai biến môi trường kiểm soát quá trình này (được mô tả trong
@@ -203,7 +203,7 @@ cơ chế khớp linh hoạt (`findMatchingIntelligence` trong `src/lib/freeProv
 3. Khớp theo tiền tố (tên mô hình trong bảng xếp hạng là tiền tố của ID trong registry).
 
 Ở phía đồng bộ, các tiền tố nhà cung cấp đã biết (`anthropic/`, `openai/`, `google/`, …) được
-loại bỏ và một bản đồ bí danh nhỏ mở rộng các tên chuẩn thành những biến thể mà OmniRoute sử dụng
+loại bỏ và một bản đồ bí danh nhỏ mở rộng các tên chuẩn thành những biến thể mà 67router sử dụng
 nội bộ, nhờ đó các mô hình vẫn có thể được tìm thấy dưới bất kỳ tên nào.
 
 ### Cách xếp hạng một nhà cung cấp

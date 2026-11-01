@@ -6,7 +6,7 @@
 
 ## Zəifliklərin Bildirilməsi
 
-OmniRoute-da təhlükəsizlik zəifliyi aşkar etsəniz, lütfən, onu məsuliyyətli şəkildə bildirin:
+67router-da təhlükəsizlik zəifliyi aşkar etsəniz, lütfən, onu məsuliyyətli şəkildə bildirin:
 
 1. İctimai GitHub problemi **AÇMAYIN**
 2. [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new) xidmətindən istifadə edin
@@ -42,7 +42,7 @@ OmniRoute-da təhlükəsizlik zəifliyi aşkar etsəniz, lütfən, onu məsuliyy
 
 ## Təhlükəsizlik Arxitekturası
 
-OmniRoute çoxqatlı təhlükəsizlik modelini tətbiq edir:
+67router çoxqatlı təhlükəsizlik modelini tətbiq edir:
 
 ```
 Sorğu → CORS → Authz konveyeri (təsnif et → siyasətlər → tətbiq et)
@@ -79,7 +79,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Qoruyucu Mexanizmlər Çərçivəsi
 
-OmniRoute prioritetə görə sıralanmış 3 daxili qoruyucu mexanizmi olan, işləmə zamanı yenidən yüklənə bilən **qoruyucu mexanizmlər reyestri** (`src/lib/guardrails/`) təqdim edir:
+67router prioritetə görə sıralanmış 3 daxili qoruyucu mexanizmi olan, işləmə zamanı yenidən yüklənə bilən **qoruyucu mexanizmlər reyestri** (`src/lib/guardrails/`) təqdim edir:
 
 | Qoruyucu Mexanizm  | Prioritet | Məqsəd                                                                                                               |
 | ------------------ | --------- | -------------------------------------------------------------------------------------------------------------------- |

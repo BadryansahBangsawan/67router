@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Tiếng Việt)
+# 📖 Setup Guide — 67router (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Tài liệu tham khảo thiết lập đầy đủ cho OmniRoute. Để xem phiên bản nhanh, hãy tham khảo [Khởi động nhanh trong README](../README.md#-quick-start).
+> Tài liệu tham khảo thiết lập đầy đủ cho 67router. Để xem phiên bản nhanh, hãy tham khảo [Khởi động nhanh trong README](../README.md#-quick-start).
 
 ## Mục lục
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Gói AUR](https://aur.archlinux.org/packages/omniroute-bin) cài đặt OmniRoute và cung cấp một dịch vụ người dùng systemd.
+[Gói AUR](https://aur.archlinux.org/packages/omniroute-bin) cài đặt 67router và cung cấp một dịch vụ người dùng systemd.
 
 ### Từ mã nguồn
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Lưu ý dành cho Windows:** Theo mặc định, OmniRoute sử dụng `%APPDATA%\omniroute` khi thư mục cũ `%USERPROFILE%\.omniroute` không tồn tại. Đặt `DATA_DIR` để chọn một vị trí thư mục dữ liệu khác.
+> **Lưu ý dành cho Windows:** Theo mặc định, 67router sử dụng `%APPDATA%\omniroute` khi thư mục cũ `%USERPROFILE%\.omniroute` không tồn tại. Đặt `DATA_DIR` để chọn một vị trí thư mục dữ liệu khác.
 
 > **Lưu ý:** `npm install` tự động tạo `.env` từ `.env.example` trong lần chạy đầu tiên. Các lần cài đặt tiếp theo sẽ không ghi đè lên `.env` hiện có, vì vậy các tùy chỉnh sẽ được giữ nguyên. Để khởi tạo lại, hãy xóa `.env` trước khi chạy lại.
 
@@ -64,7 +64,7 @@ Xem [Hướng dẫn Docker](./DOCKER_GUIDE.md) để biết cách thiết lập 
 
 ### Ứng dụng máy tính (Electron)
 
-OmniRoute đi kèm một trình bao ứng dụng máy tính được xây dựng trên Electron 41 + electron-builder 26.10. Các tập lệnh khả dụng (thư mục gốc của workspace):
+67router đi kèm một trình bao ứng dụng máy tính được xây dựng trên Electron 41 + electron-builder 26.10. Các tập lệnh khả dụng (thư mục gốc của workspace):
 
 ```bash
 npm run electron:dev          # Chạy ứng dụng máy tính với tính năng tải lại nóng
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-Kết hợp với các biến môi trường (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, v.v.), cách này cho phép bạn khởi chạy một phiên bản OmniRoute có thể được tự động hóa hoàn toàn bằng tập lệnh.
+Kết hợp với các biến môi trường (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET`, v.v.), cách này cho phép bạn khởi chạy một phiên bản 67router có thể được tự động hóa hoàn toàn bằng tập lệnh.
 
 ### Tùy chọn CLI
 
@@ -99,7 +99,7 @@ Kết hợp với các biến môi trường (`INITIAL_PASSWORD`, `OMNIROUTE_WS_
 | `omniroute config`      | Cấu hình công cụ CLI — liệt kê, lấy, đặt và xác thực cấu hình             |
 | `omniroute status`      | Bảng điều khiển trạng thái ngoại tuyến — phiên bản, DB, công cụ, cấu hình |
 | `omniroute logs`        | Truyền phát nhật ký sử dụng từ API (hỗ trợ `--follow`)                    |
-| `omniroute update`      | Kiểm tra hoặc áp dụng các bản cập nhật OmniRoute                          |
+| `omniroute update`      | Kiểm tra hoặc áp dụng các bản cập nhật 67router                           |
 | `omniroute provider`    | Quản lý kết nối nhà cung cấp — thêm, liệt kê, xóa, kiểm thử, đặt mặc định |
 | `omniroute --port 3000` | Đặt cổng chuẩn/API thành 3000                                             |
 | `omniroute --mcp`       | Khởi động máy chủ MCP (giao thức truyền tải stdio)                        |
@@ -165,7 +165,7 @@ Hoạt động với Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode v
 
 #### Tự động cấu hình bằng `setup-*`
 
-Thay vì dán URL cơ sở và khóa theo cách thủ công, hãy để OmniRoute ghi cấu hình riêng của từng công cụ từ danh mục mô hình đang hoạt động. Mỗi công cụ dùng một lệnh:
+Thay vì dán URL cơ sở và khóa theo cách thủ công, hãy để 67router ghi cấu hình riêng của từng công cụ từ danh mục mô hình đang hoạt động. Mỗi công cụ dùng một lệnh:
 
 ```bash
 omniroute setup-codex        # các hồ sơ ~/.codex/<name>.config.toml
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-Mỗi lệnh đều chấp nhận `--remote <url> --api-key <key>` để cấu hình một công cụ cục bộ kết nối với OmniRoute **từ xa**, cùng với `--dry-run` để xem trước. Để khởi chạy CLI với các biến môi trường phù hợp được chèn vào mà hoàn toàn không ghi cấu hình, hãy sử dụng trình khởi chạy chung `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); các trình khởi chạy riêng cho từng công cụ cũ là `omniroute launch` (Claude Code) và `omniroute launch-codex` (Codex) vẫn khả dụng.
+Mỗi lệnh đều chấp nhận `--remote <url> --api-key <key>` để cấu hình một công cụ cục bộ kết nối với 67router **từ xa**, cùng với `--dry-run` để xem trước. Để khởi chạy CLI với các biến môi trường phù hợp được chèn vào mà hoàn toàn không ghi cấu hình, hãy sử dụng trình khởi chạy chung `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini); các trình khởi chạy riêng cho từng công cụ cũ là `omniroute launch` (Claude Code) và `omniroute launch-codex` (Codex) vẫn khả dụng.
 
 Để xem bảng đầy đủ (nội dung mỗi lệnh ghi, tất cả cờ, cục bộ so với từ xa, quy ước `/v1` cho URL cơ sở), hãy xem **[Tích hợp CLI](./CLI-INTEGRATIONS.md)**.
 
@@ -241,26 +241,6 @@ Thêm vào phần cài đặt MCP của bạn:
 
 **Tài liệu MCP đầy đủ:** [README máy chủ MCP](../../open-sse/mcp-server/README.md) — 110 công cụ, cấu hình IDE, máy khách Python/TS/Go.
 
-### Thiết lập A2A (Agent-to-Agent Protocol)
-
-Xác minh Agent Card:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Gửi một tác vụ:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Tài liệu A2A đầy đủ:** [README máy chủ A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, kỹ năng, truyền trực tuyến, vòng đời tác vụ.
-
----
-
 ## Cấu hình thời gian chờ
 
 ### Thời gian chờ cơ bản
@@ -270,15 +250,15 @@ curl -X POST http://localhost:20128/a2a \
 | Biến                     | Mặc định                     | Mục đích                                                                                                                                                                         |
 | ------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                     | Mốc cơ sở dùng chung cho thời gian chờ bắt đầu phản hồi từ upstream, các thời gian chờ ẩn của Undici, yêu cầu lấy dấu vân tay TLS và thời gian chờ yêu cầu/proxy của cầu nối API |
-| `STREAM_IDLE_TIMEOUT_MS` | kế thừa `REQUEST_TIMEOUT_MS` | Khoảng thời gian tối đa giữa các khối dữ liệu truyền phát trước khi OmniRoute hủy luồng SSE                                                                                      |
+| `STREAM_IDLE_TIMEOUT_MS` | kế thừa `REQUEST_TIMEOUT_MS` | Khoảng thời gian tối đa giữa các khối dữ liệu truyền phát trước khi 67router hủy luồng SSE                                                                                       |
 
 Khả năng tương thích ngược vẫn được duy trì: các biến `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` hiện có và các biến thời gian chờ khác theo từng lớp vẫn hoạt động và ghi đè mốc cơ sở dùng chung.
 
 ### Lưu ý dành riêng cho nhà cung cấp
 
-Đối với các upstream tương thích với Claude Code (`anthropic-compatible-cc-*`), OmniRoute suy ra header `X-Stainless-Timeout` gửi đi từ thời gian chờ fetch đã được phân giải để thời gian chờ đọc phía nhà cung cấp luôn đồng bộ với cấu hình môi trường của bạn.
+Đối với các upstream tương thích với Claude Code (`anthropic-compatible-cc-*`), 67router suy ra header `X-Stainless-Timeout` gửi đi từ thời gian chờ fetch đã được phân giải để thời gian chờ đọc phía nhà cung cấp luôn đồng bộ với cấu hình môi trường của bạn.
 
-Đối với các reverse proxy tương thích với Claude Code của bên thứ ba, OmniRoute duy trì tập `anthropic-beta` mặc định ở mức thận trọng và khi `Client Cache Control` được để ở chế độ `Auto`, chỉ chuyển tiếp các dấu `cache_control` do client cung cấp. Chỉ bật tùy chọn "Enable redact-thinking beta" cho từng kết nối khi upstream yêu cầu cụ thể các luồng suy luận Claude đã được ẩn.
+Đối với các reverse proxy tương thích với Claude Code của bên thứ ba, 67router duy trì tập `anthropic-beta` mặc định ở mức thận trọng và khi `Client Cache Control` được để ở chế độ `Auto`, chỉ chuyển tiếp các dấu `cache_control` do client cung cấp. Chỉ bật tùy chọn "Enable redact-thinking beta" cho từng kết nối khi upstream yêu cầu cụ thể các luồng suy luận Claude đã được ẩn.
 
 ### Ghi đè thời gian chờ nâng cao
 
@@ -296,11 +276,11 @@ Khả năng tương thích ngược vẫn được duy trì: các biến `FETCH_
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Thời gian chờ keep-alive trên máy chủ cầu nối API                                           |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Thời gian chờ khi socket không hoạt động trên máy chủ cầu nối API (`0` sẽ vô hiệu hóa)      |
 
-> **Lưu ý:** Đối với các yêu cầu truyền phát, `FETCH_TIMEOUT_MS` chỉ bao gồm quá trình thiết lập kết nối / chờ phản hồi đầu tiên từ upstream. Sau khi luồng hoạt động, OmniRoute sẽ chỉ hủy khi thực sự bị đình trệ (`STREAM_IDLE_TIMEOUT_MS`) hoặc khi nội dung Undici không hoạt động (`FETCH_BODY_TIMEOUT_MS`).
+> **Lưu ý:** Đối với các yêu cầu truyền phát, `FETCH_TIMEOUT_MS` chỉ bao gồm quá trình thiết lập kết nối / chờ phản hồi đầu tiên từ upstream. Sau khi luồng hoạt động, 67router sẽ chỉ hủy khi thực sự bị đình trệ (`STREAM_IDLE_TIMEOUT_MS`) hoặc khi nội dung Undici không hoạt động (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Khả năng tương thích với reverse proxy
 
-Nếu bạn chạy OmniRoute phía sau Nginx, Caddy, Cloudflare hoặc một reverse proxy khác, hãy đảm bảo thời gian chờ của proxy cũng cao hơn thời gian chờ luồng/fetch của OmniRoute.
+Nếu bạn chạy 67router phía sau Nginx, Caddy, Cloudflare hoặc một reverse proxy khác, hãy đảm bảo thời gian chờ của proxy cũng cao hơn thời gian chờ luồng/fetch của 67router.
 
 ---
 

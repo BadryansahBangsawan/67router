@@ -4,7 +4,7 @@
 
 ---
 
-> **Tóm tắt**: `open-sse/` là công cụ xử lý luồng cốt lõi, vận hành mọi yêu cầu LLM trong OmniRoute. Nó chứa khoảng 1.400 tệp triển khai quy trình xử lý yêu cầu, các executor, service, máy chủ MCP và tầng chuyển đổi định dạng. Hướng dẫn này giải thích cách các thành phần phối hợp với nhau.
+> **Tóm tắt**: `open-sse/` là công cụ xử lý luồng cốt lõi, vận hành mọi yêu cầu LLM trong 67router. Nó chứa khoảng 1.400 tệp triển khai quy trình xử lý yêu cầu, các executor, service, máy chủ MCP và tầng chuyển đổi định dạng. Hướng dẫn này giải thích cách các thành phần phối hợp với nhau.
 
 **Nguồn:** `open-sse/` (gói workspace, khoảng 1.440 tệp `.ts` không phải tệp kiểm thử)
 
@@ -12,10 +12,10 @@
 
 ## Tại sao cần một gói workspace riêng biệt?
 
-`open-sse/` là một **workspace độc lập** trong monorepo OmniRoute vì một số lý do:
+`open-sse/` là một **workspace độc lập** trong monorepo 67router vì một số lý do:
 
 1. **Khả năng tái sử dụng** — `open-sse` được phát hành dưới dạng `@omniroute/open-sse` trên npm, vì vậy các dự án khác có thể sử dụng nó độc lập
-2. **Ranh giới rõ ràng** — công cụ xử lý luồng được tách biệt khỏi tầng UI/DB dành riêng cho OmniRoute
+2. **Ranh giới rõ ràng** — công cụ xử lý luồng được tách biệt khỏi tầng UI/DB dành riêng cho 67router
 3. **Hiệu năng** — công cụ này không có dependency Next.js, giúp khởi động nguội nhanh hơn trong các môi trường CLI/serverless
 4. **Quản lý phiên bản** — `open-sse` có thể phát hành theo lịch trình riêng
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Tại sao cần một bộ biến đổi riêng?
 
-Responses API là định dạng mới của OpenAI với **các cuộc hội thoại có trạng thái** (`previous_response_id`). Khi máy khách gửi một yêu cầu Responses, OmniRoute:
+Responses API là định dạng mới của OpenAI với **các cuộc hội thoại có trạng thái** (`previous_response_id`). Khi máy khách gửi một yêu cầu Responses, 67router:
 
 1. Chuyển đổi nội bộ từ Responses → Chat Completions
 2. Gửi đến nhà cung cấp (bất kỳ nhà cung cấp nào hỗ trợ Chat Completions)
@@ -488,7 +488,7 @@ Bộ biến đổi này xử lý:
 
 | Tệp                              | Mục đích                                             |
 | -------------------------------- | ---------------------------------------------------- |
-| `providerRegistry.ts`            | Registry mô hình chat dựa trên danh mục 375 provider |
+| `providerRegistry.ts`            | Registry mô hình chat dựa trên danh mục 372 provider |
 | `providerModels.ts`              | Bí danh mô hình, ánh xạ định dạng                    |
 | `constants.ts`                   | Timeout, giới hạn, mã trạng thái                     |
 | `defaultThinkingSignature.ts`    | Chữ ký thinking mặc định của Claude                  |
@@ -573,5 +573,4 @@ Công cụ định tuyến có ngân sách hiệu năng nghiêm ngặt:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — mô tả theo từng thư mục
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — chấm điểm theo 16 yếu tố
 - [MCP-SERVER.md](./MCP-SERVER.md) — máy chủ MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — máy chủ A2A
 - Mã nguồn: `open-sse/` (hơn 400 tệp, khoảng 143K dòng mã)

@@ -4,7 +4,7 @@
 
 ---
 
-কিছু পরিষেবা OmniRoute-এ ইন্টিগ্রেট করা হয়েছিল এবং পরে সেগুলোর পরিচালনাকারীদের
+কিছু পরিষেবা 67router-এ ইন্টিগ্রেট করা হয়েছিল এবং পরে সেগুলোর পরিচালনাকারীদের
 অনুরোধে সরিয়ে ফেলা হয়েছিল। এই পৃষ্ঠাটি সেই অপসারণগুলোর স্থায়ী রেকর্ড। এর একমাত্র উদ্দেশ্য
 হলো সেগুলোকে ভুলবশত ফিরে আসা থেকে রক্ষা করা: কোনো অবদানকারী পুরোনো কোনো fork, cache-করা npm
 tarball, আর্কাইভ করা কোনো issue বা "প্রোভাইডার X পুনরুদ্ধার করুন" অনুরোধ খুঁজে পেলে, তাঁর এমন একটি জায়গা প্রয়োজন যা বলে **পুনরায়
@@ -17,10 +17,10 @@ tarball, আর্কাইভ করা কোনো issue বা "প্রো
 
 ## নীতি
 
-1. **কোনো পরিষেবা অপারেটরের অপসারণের অনুরোধ মেনে নেওয়া হয়, তা নিয়ে আলোচনা করা হয় না।** OmniRoute
+1. **কোনো পরিষেবা অপারেটরের অপসারণের অনুরোধ মেনে নেওয়া হয়, তা নিয়ে আলোচনা করা হয় না।** 67router
    কোনো upstream পরিষেবার সঙ্গে সম্পর্কিত নয়। কোনো পরিষেবার অপারেটর যখন
    ইন্টিগ্রেশনটি সরিয়ে ফেলতে বলেন, তখন সেটি সরিয়ে ফেলা হয়—ইন্টিগ্রেশনটি কোনো আনুষ্ঠানিক API ব্যবহার করুক বা না-ই করুক।
-2. **"সরানো হয়েছে" বলতে OmniRoute-এর নিয়ন্ত্রণাধীন প্রতিটি ক্ষেত্রকে বোঝায়।** Executor, registry entry, provider
+2. **"সরানো হয়েছে" বলতে 67router-এর নিয়ন্ত্রণাধীন প্রতিটি ক্ষেত্রকে বোঝায়।** Executor, registry entry, provider
    id এবং alias, model list, endpoints, environment variables, icon, dashboard cards,
    তৈরি করা provider reference, `FREE_TIERS.md`, environment reference, README counts,
    `llm.txt` mirrors, dedicated tests এবং golden snapshots, code comments, CHANGELOG bullets
@@ -31,7 +31,7 @@ tarball, আর্কাইভ করা কোনো issue বা "প্রো
 3. **লিখিত অনুমতি ছাড়া এই পৃষ্ঠার কোনো এন্ট্রি কখনো পুনরায় অন্তর্ভুক্ত করবেন না।** এর মধ্যে রয়েছে
    যেকোনো provider catalog-এ id বা alias পুনরায় যোগ করা, executor-এ domains যোগ করা,
    সেটি "পুনরুদ্ধার" করে এমন কোনো অবদানকারীর PR গ্রহণ করা, free-model catalog-এ সেটি যোগ করা অথবা
-   OmniRoute-এর মাধ্যমে সেটিতে পৌঁছানোর কোনো manual পদ্ধতি নথিভুক্ত করা। এমন PR এবং issues এই
+   67router-এর মাধ্যমে সেটিতে পৌঁছানোর কোনো manual পদ্ধতি নথিভুক্ত করা। এমন PR এবং issues এই
    পৃষ্ঠার লিংক দিয়ে বন্ধ করুন।
 4. **এন্ট্রিটি সংক্ষিপ্ত রাখুন।** পুনরায় অন্তর্ভুক্তি শনাক্ত করতে কোনো reviewer-এর যা প্রয়োজন শুধু সেটিই
    রেকর্ড করুন: identifiers, domains, dates এবং যে pull request-এ অপসারণটি করা হয়েছে।
@@ -47,7 +47,7 @@ tarball, আর্কাইভ করা কোনো issue বা "প্রো
 | 2026-08-12     | `puter`           | `pu`     | `puter.com`                                                                         | Puter-এর মালিক (Nariman Jelveh)                                                                                                                                 | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | API-key প্রদানকারী। মাইগ্রেশন `152_remove_puter_provider.sql` সংরক্ষিত কনফিগারেশন পরিষ্কার করে।                                                                                                                                                                                                                                                                                                                                                |
 | 2026-09-02     | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                             | পরিষেবা পরিচালনাকারী (সহায়তা ইমেইল)                                                                                                                            | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | কী-বিহীন প্রদানকারী। লিখিত অনুরোধ 2026-08-30 তারিখে গৃহীত হয়েছে। সংশ্লিষ্ট ইস্যু ও আলোচনা মুছে ফেলা হয়েছে এবং PR-গুলোর শিরোনাম পরিবর্তন করা হয়েছে।                                                                                                                                                                                                                                                                                          |
 | 2026-09-21     | `gemini-business` | `gembiz` | `business.gemini.google`                                                            | প্রকল্পের মালিকের সিদ্ধান্ত (ইস্যু [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                            | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Cookie-ভিত্তিক ওয়েব প্রদানকারী। Google এক্সিকিউটরটির লক্ষ্য করা `BardFrontendService/StreamGenerate` এন্ডপয়েন্টটি অবসরে পাঠিয়েছে; এর বিকল্পটি (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, `__Secure-C_SES`/`csesidx` থেকে বুটস্ট্র্যাপ করা Bearer JWT) একটি সক্রিয় Gemini Enterprise/Workspace অ্যাকাউন্ট ছাড়া তৈরি বা যাচাই করা সম্ভব নয়, যা প্রকল্পটির নেই। যাচাই না করে পুনর্লিখনের পরিবর্তে এটি অবসরে পাঠানো হয়েছে। |
-| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                    | প্রকল্পের মালিকের সিদ্ধান্ত (`#14224`)                                                                                                                          | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Cookie-auth প্রদানকারী; এটি পরিচালনাকারীর অপসারণ-অনুরোধ নয়। `studio-api.suno.ai` স্থগিত করা হয়েছিল (503); সক্রিয় হোস্টটির জন্য একটি Clerk JWT বিনিময় এবং hCaptcha সমাধানের একটি অর্থপ্রদত্ত নির্ভরতা প্রয়োজন, যা শুধু একটি সংগীত প্রদানকারীর জন্য OmniRoute যোগ না করার সিদ্ধান্ত নিয়েছে। `kie/suno-v4.0` এবং `kie/suno-v3.5` (kie.ai-এ হোস্ট করা) প্রভাবিত হয়নি এবং সমর্থিত থাকবে।                                                     |
+| 2026-09-21     | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                                    | প্রকল্পের মালিকের সিদ্ধান্ত (`#14224`)                                                                                                                          | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Cookie-auth প্রদানকারী; এটি পরিচালনাকারীর অপসারণ-অনুরোধ নয়। `studio-api.suno.ai` স্থগিত করা হয়েছিল (503); সক্রিয় হোস্টটির জন্য একটি Clerk JWT বিনিময় এবং hCaptcha সমাধানের একটি অর্থপ্রদত্ত নির্ভরতা প্রয়োজন, যা শুধু একটি সংগীত প্রদানকারীর জন্য 67router যোগ না করার সিদ্ধান্ত নিয়েছে। `kie/suno-v4.0` এবং `kie/suno-v3.5` (kie.ai-এ হোস্ট করা) প্রভাবিত হয়নি এবং সমর্থিত থাকবে।                                                      |
 | 2026-10-10     | `opencode`        | `oc`     | `opencode.ai/zen/v1` (বিনামূল্যের স্তর; হোস্টটি `opencode-zen`-এর সঙ্গে শেয়ার করা) | প্রতিরোধমূলক অপসারণ (প্রকল্পের মালিকের সিদ্ধান্ত), আপস্ট্রিম 9router প্রকল্পের কাছে OpenCode পরিচালনাকারীর প্রকাশ্য অপসারণ-অনুরোধকে সম্মান জানিয়ে (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | শুধু কী-বিহীন "OpenCode Free" প্রদানকারীটি অপসারণ করা হয়েছে। প্রমাণীকৃত `opencode-zen` ও `opencode-go`, Zen ক্যাটালগের সব মডেল ও সেগুলোর অনুরোধ-চুক্তি, OpenCode ক্লায়েন্ট ইন্টিগ্রেশন এবং `@omniroute/opencode-plugin*` বহাল রয়েছে। মাইগ্রেশন `207_remove_opencode_free_provider.sql` API key বহনকারী লিগ্যাসি সংযোগগুলোকে Zen-এ স্থানান্তর করে এবং কী-বিহীন কনফিগারেশন পরিষ্কার করে।                                                      |
 
 ## একটি এন্ট্রি যোগ করা
@@ -62,5 +62,5 @@ tarball, আর্কাইভ করা কোনো issue বা "প্রো
    ব্যবহার করুন (একটি migration যোগ করুন)।
 3. একই PR-এ উপরের table-এ একটি row এবং
    `tests/unit/removed-providers-blocklist.test.ts`-এ identifiers যোগ করুন।
-4. PR merge হয়ে গেলে অপারেটরকে উত্তর দিন, কী কী সরানো হয়েছে এবং OmniRoute কী কী
+4. PR merge হয়ে গেলে অপারেটরকে উত্তর দিন, কী কী সরানো হয়েছে এবং 67router কী কী
    পরিবর্তন করতে পারে না (ইতোমধ্যে প্রকাশিত npm ও Docker versions, git history, third-party forks) তার তালিকা দিন।

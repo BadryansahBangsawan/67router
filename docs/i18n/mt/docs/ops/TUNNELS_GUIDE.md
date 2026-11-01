@@ -7,7 +7,7 @@
 > **Sors awtorevoli:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Aġġornat l-aħħar:** 2026-06-28 — v3.8.40
 
-OmniRoute jista’ jesponi s-server lokali tiegħu (`http://localhost:20128`) għall-internet
+67router jista’ jesponi s-server lokali tiegħu (`http://localhost:20128`) għall-internet
 pubbliku permezz ta’ tliet backends ta’ tunnel. Dan huwa utli għal:
 
 - Callbacks ta’ OAuth minn fornituri tal-cloud (Antigravity, Gemini, Cursor) li jeħtieġu
@@ -15,7 +15,7 @@ pubbliku permezz ta’ tliet backends ta’ tunnel. Dan huwa utli għal:
 - Il-kondiviżjoni tal-istanza lokali tiegħek ma’ membri tat-tim mingħajr ma tiskjera VM.
 - Ittestjar minn apparat mobbli, mill-bogħod, jew bejn networks differenti.
 
-It-tliet backends kollha huma ġestiti fl-istess proċess — OmniRoute jibda/jwaqqaf il-binary
+It-tliet backends kollha huma ġestiti fl-istess proċess — 67router jibda/jwaqqaf il-binary
 jew l-SDK sottostanti mid-dashboard jew mir-REST API. Mhu meħtieġ l-ebda setup
 ta’ reverse proxy jew systemd.
 
@@ -41,7 +41,7 @@ oġġett `status` bl-istess struttura bil-fields `phase`, `running`, `publicUrl`
 http://localhost:<apiPort>` u janalizza l-URL `*.trycloudflare.com` assenjat
   mill-output standard. Il-URLs huma temporanji u jinbidlu ma’ kull startjar mill-ġdid.
 - **Named tunnel (mhux obbligatorju).** Meta `CLOUDFLARED_CONFIG` jindika lejn
-  `config.yml` ta’ cloudflared ġestit lokalment, OmniRoute jħaddem `cloudflared tunnel --no-autoupdate
+  `config.yml` ta’ cloudflared ġestit lokalment, 67router jħaddem `cloudflared tunnel --no-autoupdate
 --config <path> run`, u b’hekk jagħtik **hostname stabbli u msemmi**. Il-konfigurazzjoni
   tipprovdi l-UUID tat-tunnel, `credentials-file`, u r-routing ta’ `ingress`, għalhekk ma
   jiġi mgħoddi l-ebda `--url` u ma jkun meħtieġ l-ebda token tad-dashboard ta’ Zero Trust. `run` jaqra
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` u janalizza l-URL `*.trycloudflare.com` assenjat
 
 Imġibiet ewlenin:
 
-- **Installazzjoni awtomatika.** Mal-ewwel użu, OmniRoute jniżżel l-aħħar binary ta’ `cloudflared`
+- **Installazzjoni awtomatika.** Mal-ewwel użu, 67router jniżżel l-aħħar binary ta’ `cloudflared`
   mir-rilaxxi uffiċjali ta’ GitHub (l-installazzjoni ġestita tinsab taħt
   `DATA_DIR/cloudflared/`). Is-SHA256 tal-asset imniżżel jiġi vverifikat mal-manifest
   tar-rilaxx qabel l-eżekuzzjoni.
@@ -68,7 +68,7 @@ Imġibiet ewlenin:
    ```
 
 2. Ikteb `~/.cloudflared/config.yml` li jirrotja l-hostname tiegħek lejn il-port lokali
-   tal-API ta’ OmniRoute (il-valur predefinit huwa 20128):
+   tal-API ta’ 67router (il-valur predefinit huwa 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Imġibiet ewlenin:
      - service: http_status:404
    ```
 
-3. Ipponta OmniRoute lejn il-konfigurazzjoni u erġa’ ibda t-tunnel:
+3. Ipponta 67router lejn il-konfigurazzjoni u erġa’ ibda t-tunnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # mhux obbligatorju — jissostitwixxi l-hostname li jirrapporta OmniRoute; inkella jinqara mill-ewwel
+   # mhux obbligatorju — jissostitwixxi l-hostname li jirrapporta 67router; inkella jinqara mill-ewwel
    # regola ta’ ingress tal-konfigurazzjoni:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -122,9 +122,9 @@ Jew permezz tad-dashboard: **Settings → Tunnels → Cloudflare**.
 
 | Varjabbli                                            | Għan                                                                                                                                                                                      |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Jissostitwixxi l-mogħdija tal-fajl binarju. Jekk ikun issettjat u validu, OmniRoute jużah minflok iniżżlu.                                                                                |
+| `CLOUDFLARED_BIN`                                    | Jissostitwixxi l-mogħdija tal-fajl binarju. Jekk ikun issettjat u validu, 67router jużah minflok iniżżlu.                                                                                 |
 | `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protokoll tat-trasport (predefinit `http2`; ukoll `quic`, `auto`).                                                                                                                        |
-| `CLOUDFLARED_CONFIG`                                 | Mogħdija għal `config.yml` ta’ cloudflared ġestit lokalment. Meta jkun issettjat, OmniRoute jħaddem mina **imsemmija/persistenti** (`tunnel --config <path> run`) minflok mina rapida.    |
+| `CLOUDFLARED_CONFIG`                                 | Mogħdija għal `config.yml` ta’ cloudflared ġestit lokalment. Meta jkun issettjat, 67router jħaddem mina **imsemmija/persistenti** (`tunnel --config <path> run`) minflok mina rapida.     |
 | `CLOUDFLARED_HOSTNAME`                               | Jissostitwixxi l-isem tal-host pubbliku rrappurtat tal-mina msemmija (eż. `ai.example.com`). Meta ma jkunx issettjat, jinqara mill-ewwel isem tal-host ta’ `ingress` fil-konfigurazzjoni. |
 
 ## 2. ngrok
@@ -169,7 +169,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 Ir-rispons jinkludi l-`publicUrl` assenjat (eż.
-`https://abcd-1234.ngrok-free.app`). Dominji personalizzati, reġjuni, u regoli tal-politika jridu jiġu kkonfigurati fid-dashboard ta' ngrok — OmniRoute innifsu jgħaddi biss il-URL tal-mira lokali lill-SDK.
+`https://abcd-1234.ngrok-free.app`). Dominji personalizzati, reġjuni, u regoli tal-politika jridu jiġu kkonfigurati fid-dashboard ta' ngrok — 67router innifsu jgħaddi biss il-URL tal-mira lokali lill-SDK.
 
 ## 3. Tailscale Funnel
 
@@ -179,12 +179,12 @@ L-implimentazzjoni tħaddem `tailscale funnel --bg <port>` (modalità fl-isfond)
 
 ### Prerekwiżiti
 
-1. Installa Tailscale (jew ħalli lil OmniRoute jagħmel dan — ara l-endpoint `install` hawn taħt).
-2. Idħol (`tailscale login` jew permezz tal-endpoint `login` ta' OmniRoute).
+1. Installa Tailscale (jew ħalli lil 67router jagħmel dan — ara l-endpoint `install` hawn taħt).
+2. Idħol (`tailscale login` jew permezz tal-endpoint `login` ta' 67router).
 3. Attiva Funnel għat-tailnet tiegħek fil-console tal-amministrazzjoni ta' Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
-Fuq Linux u macOS id-daemon (`tailscaled`) jeħtieġ `sudo` biex jiġi kkontrollat. L-endpoints POST jaċċettaw field fakultattiv `sudoPassword` li jiġi mgħoddi lill-cache tal-passwords MITM ta' OmniRoute (`getCachedPassword` / `setCachedPassword`) għat-tul tas-sejħa. Windows juża l-installazzjoni awtomatika tas-servizz f'
+Fuq Linux u macOS id-daemon (`tailscaled`) jeħtieġ `sudo` biex jiġi kkontrollat. L-endpoints POST jaċċettaw field fakultattiv `sudoPassword` li jiġi mgħoddi lill-cache tal-passwords MITM ta' 67router (`getCachedPassword` / `setCachedPassword`) għat-tul tas-sejħa. Windows juża l-installazzjoni awtomatika tas-servizz f'
 `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### Endpoints REST
@@ -243,7 +243,7 @@ indipendenti.
 
 ## Konsiderazzjonijiet dwar il-callback ta' OAuth
 
-Meta tesponi OmniRoute permezz ta' mina, id-dashboard u l-flussi ta' OAuth iridu
+Meta tesponi 67router permezz ta' mina, id-dashboard u l-flussi ta' OAuth iridu
 jibnu l-URLs tal-callback abbażi tal-isem tal-host **pubbliku**, mhux `localhost`.
 Inkella, il-fornitur ta' OAuth jirridirezzjona lill-utent lura lejn URL li
 s-servers tiegħu ma jistgħux jilħqu, u l-handshake ifalli.
@@ -260,7 +260,7 @@ Issettja:
 NEXT_PUBLIC_BASE_URL=https://<il-host-tal-mina-tiegħek>
 ```
 
-u erġa' ibda OmniRoute qabel tibda OAuth. Għal Cloudflare Quick Tunnels
+u erġa' ibda 67router qabel tibda OAuth. Għal Cloudflare Quick Tunnels
 temporanji, il-URL jinbidel wara kull restart, għalhekk għall-użu ta' OAuth
 fil-produzzjoni agħżel ngrok b'dominju riżervat jew Tailscale Funnel.
 
@@ -276,13 +276,13 @@ Id-dashboard juri l-istat tal-mina taħt **Settings → Tunnels**:
 
 Għal monitoraġġ programmatiku, ivverifika perjodikament l-endpoints `GET` ta'
 kull backend. Huwa permess li tħaddem aktar minn backend wieħed fl-istess ħin;
-OmniRoute se jsegwi lil kull wieħed minnhom b'mod indipendenti.
+67router se jsegwi lil kull wieħed minnhom b'mod indipendenti.
 
 ## Soluzzjoni tal-problemi
 
 ### "il-binary cloudflared ma nstabx"
 
-OmniRoute jipprova jinstallah awtomatikament mal-ewwel użu. Jekk l-installazzjoni
+67router jipprova jinstallah awtomatikament mal-ewwel użu. Jekk l-installazzjoni
 tkun imblukkata (network ristrett, ebda aċċess għal GitHub), niżżel
 `cloudflared` manwalment minn
 <https://github.com/cloudflare/cloudflared/releases> u ssettja

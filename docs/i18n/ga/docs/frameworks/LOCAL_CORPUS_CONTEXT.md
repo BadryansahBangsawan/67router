@@ -13,7 +13,7 @@
 ## Cad é atá ann
 
 Cuireann Local Corpus ar chumas oibreora eolaire amháin de chomhaid téacs atá faofa go sainráite a nochtadh do
-fhreastalaí MCP OmniRoute. Fanann na comhaid ina n-eolaire bunaidh: ní stórálann OmniRoute ach
+fhreastalaí MCP 67router. Fanann na comhaid ina n-eolaire bunaidh: ní stórálann 67router ach
 an chonair fhréimhe chanónach in SQLite agus coinníonn sé innéacs cuardaigh sa chuimhne. Ní
 chóipeálann sé ábhar an chorpais isteach sa stór ná sa bhunachar sonraí.
 

@@ -13,7 +13,7 @@
 
 ## Ihe ọ bụ
 
-OmniRoute na-ejikọta na vault **Obsidian** dịka **isi iyi ọnọdụ** — ebe nchekwa ihe ọmụma
+67router na-ejikọta na vault **Obsidian** dịka **isi iyi ọnọdụ** — ebe nchekwa ihe ọmụma
 Markdown nke dị na kọmputa, nke ndị agent na-agụ ma na-ede site na sava MCP e wuru n'ime ya.
 Njikọ ahụ na-akparịta ụka na plugin obodo **Obsidian Local REST API** nke na-agba n'ime
 ngwa desktọpụ ahụ, ka ndị agent nwee ike ịchọ ndetu, ịgụ/ide/mezie faịlụ, depụta ihe dị na
@@ -75,7 +75,7 @@ ma na-enyocha token ahụ site n'ịkpọ status endpoint nke Local REST API tup
 ### Sync vault WebDAV
 
 `src/app/api/settings/obsidian/webdav/route.ts` na-achịkwa sync vault nhọrọ nke
-WebDAV na-akwado (nke `src/lib/obsidianSync.ts` na-eme ka ọ rụọ ọrụ). Ịgbanye ya na-atụ OmniRoute aka na
+WebDAV na-akwado (nke `src/lib/obsidianSync.ts` na-eme ka ọ rụọ ọrụ). Ịgbanye ya na-atụ 67router aka na
 ndekọ vault mpaghara ma mepụta ụzọ aha njirimara/okwuntughe WebDAV na-enweghị usoro:
 
 ```bash
@@ -111,8 +111,8 @@ Ngwaọrụ anọ `obsidian_sync_*` na-edobe akparamàgwà sync-token ha dị ic
 
 A kọwara ha na `open-sse/mcp-server/tools/obsidianTools.ts`. A na-ekpebi token/base-URL
 maka oku ọ bụla (nke API-key buru ụzọ, emesịa nke zuru ụwa ọnụ). Ngwaọrụ ndị na-akpọ sava **sync**
-nke OmniRoute (ngwaọrụ `obsidian_sync_*` anọ ahụ) chọkwara token nkwenye sync ahaziri
-na ntọala OmniRoute.
+nke 67router (ngwaọrụ `obsidian_sync_*` anọ ahụ) chọkwara token nkwenye sync ahaziri
+na ntọala 67router.
 
 ### Ngwaọrụ ọgụgụ (`read:obsidian`)
 
@@ -129,7 +129,7 @@ na ntọala OmniRoute.
 | `obsidian_get_periodic_note` | Nweta ndetu oge niile nke ụbọchị/izu/ọnwa maka otu ụbọchị (taa ma ọ bụrụ na akọwaghị ya).                 |
 | `obsidian_get_tags`          | Depụta tags niile dị na vault tinyere ugboro ole ha pụtara.                                               |
 | `obsidian_list_commands`     | Depụta ID iwu Obsidian ndị dị (jiri ya na `obsidian_execute_command`).                                    |
-| `obsidian_sync_status`       | Ọnọdụ sava sync OmniRoute: ma ọ na-arụ ọrụ, aha vault, port, uptime, na sync ikpeazụ.                     |
+| `obsidian_sync_status`       | Ọnọdụ sava sync 67router: ma ọ na-arụ ọrụ, aha vault, port, uptime, na sync ikpeazụ.                      |
 | `obsidian_sync_conflicts`    | Depụta esemokwu sync ndị a na-edozibeghị (ụzọ, ụzọ esemokwu, oge-achọpụtara).                             |
 
 ### Ngwaọrụ odide (`write:obsidian`)

@@ -123,7 +123,7 @@ export default function ConnectionsHeaderToolbar({
               "Route bare claude-* model IDs from Claude Code clients through the Claude Code account instead of asking for a provider prefix."
             )}
           >
-            <Icon name="alt_route" size={14} className="text-primary" />
+            <Icon name="alt_route" size={14} className="text-text-muted" />
             <span>
               {providerText(
                 t,

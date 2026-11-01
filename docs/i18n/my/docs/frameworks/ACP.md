@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute သည် **CLI ရှာဖွေတွေ့ရှိမှု**၊ **မူရင်း Agent Client Protocol** နှင့်
+67router သည် **CLI ရှာဖွေတွေ့ရှိမှု**၊ **မူရင်း Agent Client Protocol** နှင့်
 **အမွေအနှစ် stdio adapter များ** ကို သီးခြားခွဲထားသည်။ ထည့်သွင်းထားသည့် binary တစ်ခုကို ရှာတွေ့ခြင်းသည် ၎င်း၏
 စစ်မှန်ကြောင်းအတည်ပြုမှု၊ model ကိုက်ညီမှု သို့မဟုတ် prompt တစ်ခုကို ကိုင်တွယ်ရန် အသင့်ဖြစ်မှုကို သက်သေမပြနိုင်ပါ။
 
@@ -119,5 +119,3 @@ test တစ်ခု လိုအပ်သည်။
 - [Agent protocol များ](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI launch contract များ](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI tool များ](../reference/CLI-TOOLS.md)
-- [A2A server](./A2A-SERVER.md)
-- [Cloud agent များ](./CLOUD_AGENT.md)

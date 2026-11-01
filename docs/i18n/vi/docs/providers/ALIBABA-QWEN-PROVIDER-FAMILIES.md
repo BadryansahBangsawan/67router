@@ -10,7 +10,7 @@ biểu diễn dưới dạng bốn nhóm nhà cung cấp. Khu vực là dữ li�
 
 ## Quyết định
 
-| Nhóm nhà cung cấp                              | ID OmniRoute            | Khu vực toàn cầu | Khu vực Trung Quốc |
+| Nhóm nhà cung cấp                              | ID 67router             | Khu vực toàn cầu | Khu vực Trung Quốc |
 | ---------------------------------------------- | ----------------------- | ---------------- | ------------------ |
 | Alibaba Cloud Model Studio (trả theo mức dùng) | `alibaba`               | Singapore        | Bắc Kinh           |
 | Alibaba Cloud Token Plan                       | `bailian-coding-plan`   | Singapore        | Bắc Kinh           |

@@ -52,7 +52,7 @@ Det er den samme IP- og nøglebundne hastighedsbegrænser, der forårsager
 periodiske `400 content-blocked`-fejl, når Claude Code eller Codex CLI
 foretager flere værktøjsbrug-/beskedafsendelseskald hurtigt efter hinanden.
 
-## Afhjælpninger, der allerede er implementeret i OmniRoute
+## Afhjælpninger, der allerede er implementeret i 67router
 
 1. **`open-sse/services/wafRateLimit.ts`** — beskyttelse mod trafikspidser, der håndhæver et
    minimumsinterval på 500 ms mellem udgående forespørgsler til enhver `agentrouter:*`-

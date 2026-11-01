@@ -4,15 +4,15 @@
 
 ---
 
-Devredilen **Bağlam Düzenleme**, yalnızca Claude'a özgü bir bağlam yönetimi özelliğidir. OmniRoute'un yerel sıkıştırma motorlarının (Caveman, RTK, LLMLingua, yığınlanmış işlem hatları) aksine — bunlar istek gövdesini proxy'den ayrılmadan _önce_ yeniden yazar — Bağlam Düzenleme, **sağlayıcıdan** kendi çalışan bağlam penceresindeki eski araç kullanımı / araç sonucu bloklarını temizlemesini ister. OmniRoute yalnızca bir gövde parametresi (`context_management.edits[]`) ekler; asıl temizleme işlemini Claude kendi tokenizer'ına göre gerçekleştirir.
+Devredilen **Bağlam Düzenleme**, yalnızca Claude'a özgü bir bağlam yönetimi özelliğidir. 67router'un yerel sıkıştırma motorlarının (Caveman, RTK, LLMLingua, yığınlanmış işlem hatları) aksine — bunlar istek gövdesini proxy'den ayrılmadan _önce_ yeniden yazar — Bağlam Düzenleme, **sağlayıcıdan** kendi çalışan bağlam penceresindeki eski araç kullanımı / araç sonucu bloklarını temizlemesini ister. 67router yalnızca bir gövde parametresi (`context_management.edits[]`) ekler; asıl temizleme işlemini Claude kendi tokenizer'ına göre gerçekleştirir.
 
-Bu, doğası gereği devredilmiş bir yetenektir: diğer sağlayıcılar bu parametreyi reddettiği için OmniRoute bunu kesin olarak Claude ve Claude-Code uyumlu aktarıcılarla sınırlar.
+Bu, doğası gereği devredilmiş bir yetenektir: diğer sağlayıcılar bu parametreyi reddettiği için 67router bunu kesin olarak Claude ve Claude-Code uyumlu aktarıcılarla sınırlar.
 
 Doğruluk kaynağı: `open-sse/config/contextEditing.ts` (strateji kimlikleri, gövdeye ekleme, telemetri çıkarımı), `open-sse/executors/base.ts` (ekleme geçidi + 400 geri dönüşü) ve `open-sse/services/compression/types.ts` (yapılandırma biçimi + varsayılan).
 
 ## `clear_tool_uses` ne yapar?
 
-OmniRoute, giden Anthropic Messages gövdesine tek bir düzenleme ekler:
+67router, giden Anthropic Messages gövdesine tek bir düzenleme ekler:
 
 ```json
 {
@@ -32,9 +32,9 @@ OmniRoute, giden Anthropic Messages gövdesine tek bir düzenleme ekler:
 - `trigger.value: 100000` — isteğin girdi token'ları bu eşiği aştığında Claude, eski araç kullanımı/sonucu çiftlerini temizlemeye başlar (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, Anthropic'in varsayılanı).
 - `keep.value: 3` — en son N araç kullanımı/sonucu çifti değiştirilmeden tutulur (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Beta, OmniRoute'un Claude isteklerinde zaten gönderdiği `anthropic-beta: context-management-2025-06-27` üstbilgisi aracılığıyla bildirilir.
+Beta, 67router'un Claude isteklerinde zaten gönderdiği `anthropic-beta: context-management-2025-06-27` üstbilgisi aracılığıyla bildirilir.
 
-Ekleme işlemi `applyContextEditingToBody()` tarafından gerçekleştirilir ve **idempotenttir**: gövdede zaten bir `clear_tool_uses` düzenlemesi varsa (önceki bir çağrı tarafından eklenmiş veya istemci tarafından sağlanmış), gövde olduğu gibi bırakılır. Bir `clear_thinking_20251015` düzenlemesi de mevcutsa OmniRoute, `clear_thinking` düzenlemesini kararlı sıralamayla başa taşır; çünkü Anthropic, `edits[]` dizisinde `clear_thinking` öğesinin `clear_tool_uses` öğesinden önce gelmesini gerektirir.
+Ekleme işlemi `applyContextEditingToBody()` tarafından gerçekleştirilir ve **idempotenttir**: gövdede zaten bir `clear_tool_uses` düzenlemesi varsa (önceki bir çağrı tarafından eklenmiş veya istemci tarafından sağlanmış), gövde olduğu gibi bırakılır. Bir `clear_thinking_20251015` düzenlemesi de mevcutsa 67router, `clear_thinking` düzenlemesini kararlı sıralamayla başa taşır; çünkü Anthropic, `edits[]` dizisinde `clear_thinking` öğesinin `clear_tool_uses` öğesinden önce gelmesini gerektirir.
 
 ## Kombinasyon başına etkinleştirme anahtarı
 
@@ -111,7 +111,7 @@ Gerçek Claude, beta özelliğini `ANTHROPIC_BETA_BASE` içinde taşır ve bu ge
 
 ## `applied_edits` telemetrisi
 
-OmniRoute, bir Claude yanıtından sonra sağlayıcının gerçekte ne kadar bağlam temizlediğini kaydeder. Bu veri **akışla gönderilmez** — akışsız yanıt gövdesinden en iyi çaba yaklaşımıyla çıkarılır ve yanıtı hiçbir zaman etkilemez (telemetri hataları yok sayılır).
+67router, bir Claude yanıtından sonra sağlayıcının gerçekte ne kadar bağlam temizlediğini kaydeder. Bu veri **akışla gönderilmez** — akışsız yanıt gövdesinden en iyi çaba yaklaşımıyla çıkarılır ve yanıtı hiçbir zaman etkilemez (telemetri hataları yok sayılır).
 
 - Çıkarma: `open-sse/config/contextEditing.ts` içindeki `extractContextEditingTelemetry(responseBody)`.
   Yanıt biçimine karşı dayanıklılık sağlamak amacıyla üç konumda `applied_edits` alanını arar:
@@ -134,14 +134,14 @@ Böylece devredilen temizleme işlemleri, yerel motorlarla birlikte sıkıştır
 
 | Konu                 | Yerel motorlar (Caveman / RTK / LLMLingua / stacked) | Yetkilendirilmiş Bağlam Düzenleme                         |
 | -------------------- | ---------------------------------------------------- | --------------------------------------------------------- |
-| Çalıştığı yer        | OmniRoute içinde, istek proxy'den ayrılmadan önce    | Sağlayıcıda (Claude), sunucu tarafında                    |
+| Çalıştığı yer        | 67router içinde, istek proxy'den ayrılmadan önce     | Sağlayıcıda (Claude), sunucu tarafında                    |
 | Düzenlediği içerik   | İstem / bağlam / araç sonucu metni                   | Eski araç kullanımı / araç sonucu blokları                |
 | Sağlayıcı kapsamı    | Tüm sağlayıcılar                                     | Yalnızca `claude` + `anthropic-compatible-cc-*`           |
 | Açma/kapatma         | Sıkıştırma modu ayarları                             | `contextEditing.enabled`                                  |
 | Hata modu            | Hata durumunda devam (orijinal metin)                | 400 geri dönüşü: parametreyi kaldır, bir kez yeniden dene |
 | Tasarruf telemetrisi | `engine: <engine id>`                                | `engine: "context-editing"`                               |
 
-İkisi birbirini tamamlar: yerel motorlar OmniRoute'un gönderdiği baytları sıkıştırır; Bağlam Düzenleme ise
+İkisi birbirini tamamlar: yerel motorlar 67router'un gönderdiği baytları sıkıştırır; Bağlam Düzenleme ise
 Claude'un turlar boyunca biriken bağlamı budamasına olanak tanır. Birlikte etkinleştirilebilirler.
 
 ## Ayrıca Bakınız

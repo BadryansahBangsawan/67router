@@ -1,4 +1,4 @@
-# OmniRoute Auto-Combo Engine (Italiano)
+# 67router Auto-Combo Engine (Italiano)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../routing/AUTO-COMBO.md) · 🇪🇹 [am](../../../am/docs/routing/AUTO-COMBO.md) · 🇸🇦 [ar](../../../ar/docs/routing/AUTO-COMBO.md) · 🇦🇿 [az](../../../az/docs/routing/AUTO-COMBO.md) · 🇧🇬 [bg](../../../bg/docs/routing/AUTO-COMBO.md) · 🇧🇩 [bn](../../../bn/docs/routing/AUTO-COMBO.md) · 🇧🇦 [bs](../../../bs/docs/routing/AUTO-COMBO.md) · 🇨🇿 [cs](../../../cs/docs/routing/AUTO-COMBO.md) · 🇩🇰 [da](../../../da/docs/routing/AUTO-COMBO.md) · 🇩🇪 [de](../../../de/docs/routing/AUTO-COMBO.md) · 🇬🇷 [el](../../../el/docs/routing/AUTO-COMBO.md) · 🇪🇸 [es](../../../es/docs/routing/AUTO-COMBO.md) · 🇪🇪 [et](../../../et/docs/routing/AUTO-COMBO.md) · 🇮🇷 [fa](../../../fa/docs/routing/AUTO-COMBO.md) · 🇫🇮 [fi](../../../fi/docs/routing/AUTO-COMBO.md) · 🇫🇷 [fr](../../../fr/docs/routing/AUTO-COMBO.md) · 🇮🇪 [ga](../../../ga/docs/routing/AUTO-COMBO.md) · 🇮🇳 [gu](../../../gu/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ha](../../../ha/docs/routing/AUTO-COMBO.md) · 🇮🇱 [he](../../../he/docs/routing/AUTO-COMBO.md) · 🇮🇳 [hi](../../../hi/docs/routing/AUTO-COMBO.md) · 🇭🇷 [hr](../../../hr/docs/routing/AUTO-COMBO.md) · 🇭🇺 [hu](../../../hu/docs/routing/AUTO-COMBO.md) · 🇦🇲 [hy](../../../hy/docs/routing/AUTO-COMBO.md) · 🇮🇩 [id](../../../id/docs/routing/AUTO-COMBO.md) · 🇳🇬 [ig](../../../ig/docs/routing/AUTO-COMBO.md) · 🇯🇵 [ja](../../../ja/docs/routing/AUTO-COMBO.md) · 🇬🇪 [ka](../../../ka/docs/routing/AUTO-COMBO.md) · 🇰🇭 [km](../../../km/docs/routing/AUTO-COMBO.md) · 🇮🇳 [kn](../../../kn/docs/routing/AUTO-COMBO.md) · 🇰🇷 [ko](../../../ko/docs/routing/AUTO-COMBO.md) · 🇱🇹 [lt](../../../lt/docs/routing/AUTO-COMBO.md) · 🇱🇻 [lv](../../../lv/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ml](../../../ml/docs/routing/AUTO-COMBO.md) · 🇮🇳 [mr](../../../mr/docs/routing/AUTO-COMBO.md) · 🇲🇾 [ms](../../../ms/docs/routing/AUTO-COMBO.md) · 🇲🇹 [mt](../../../mt/docs/routing/AUTO-COMBO.md) · 🇲🇲 [my](../../../my/docs/routing/AUTO-COMBO.md) · 🇳🇵 [ne](../../../ne/docs/routing/AUTO-COMBO.md) · 🇳🇱 [nl](../../../nl/docs/routing/AUTO-COMBO.md) · 🇳🇴 [no](../../../no/docs/routing/AUTO-COMBO.md) · 🇮🇳 [or](../../../or/docs/routing/AUTO-COMBO.md) · 🇮🇳 [pa](../../../pa/docs/routing/AUTO-COMBO.md) · 🇵🇭 [phi](../../../phi/docs/routing/AUTO-COMBO.md) · 🇵🇱 [pl](../../../pl/docs/routing/AUTO-COMBO.md) · 🇵🇹 [pt](../../../pt/docs/routing/AUTO-COMBO.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/routing/AUTO-COMBO.md) · 🇷🇴 [ro](../../../ro/docs/routing/AUTO-COMBO.md) · 🇷🇺 [ru](../../../ru/docs/routing/AUTO-COMBO.md) · 🇱🇰 [si](../../../si/docs/routing/AUTO-COMBO.md) · 🇸🇰 [sk](../../../sk/docs/routing/AUTO-COMBO.md) · 🇸🇮 [sl](../../../sl/docs/routing/AUTO-COMBO.md) · 🇷🇸 [sr](../../../sr/docs/routing/AUTO-COMBO.md) · 🇸🇪 [sv](../../../sv/docs/routing/AUTO-COMBO.md) · 🇰🇪 [sw](../../../sw/docs/routing/AUTO-COMBO.md) · 🇮🇳 [ta](../../../ta/docs/routing/AUTO-COMBO.md) · 🇮🇳 [te](../../../te/docs/routing/AUTO-COMBO.md) · 🇹🇭 [th](../../../th/docs/routing/AUTO-COMBO.md) · 🇹🇷 [tr](../../../tr/docs/routing/AUTO-COMBO.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/routing/AUTO-COMBO.md) · 🇵🇰 [ur](../../../ur/docs/routing/AUTO-COMBO.md) · 🇺🇿 [uz](../../../uz/docs/routing/AUTO-COMBO.md) · 🇻🇳 [vi](../../../vi/docs/routing/AUTO-COMBO.md) · 🇳🇬 [yo](../../../yo/docs/routing/AUTO-COMBO.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/routing/AUTO-COMBO.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/routing/AUTO-COMBO.md)
 
@@ -60,7 +60,7 @@ model: "auto/cheap"           # il meno costoso per token
 
 **Cosa accade:**
 
-1. OmniRoute rileva il prefisso `auto/` in `src/sse/handlers/chat.ts`
+1. 67router rileva il prefisso `auto/` in `src/sse/handlers/chat.ts`
 2. Interroga tutte le **connessioni attive ai provider** nel database
 3. Filtra quelle con credenziali valide (chiave API o token OAuth)
 4. Determina il modello per ciascuna connessione (`connection.defaultModel` oppure il primo modello del provider)
@@ -88,7 +88,7 @@ le letture di resilienza esistenti (mai il valore grezzo `state` del breaker):
 - blocco del modello — `isModelLocked(provider, connectionId, model)`
 
 Ogni candidato include anche il flag `excluded` di questa chiave API. Le esclusioni vengono archiviate
-per ciascuna chiave API (tabella `auto_candidate_overrides`, migrazione `128`): OmniRoute è
+per ciascuna chiave API (tabella `auto_candidate_overrides`, migrazione `128`): 67router è
 single-tenant e non dispone di una tabella `users`, quindi `apiKeyId` è l'identità reale per chiamante
 più prossima disponibile. Le esclusioni vengono applicate nel punto di controllo del pool di candidati in
 `open-sse/services/autoCombo/virtualFactory.ts` tramite la funzione pura e sottoposta a unit test
@@ -163,7 +163,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 Due errori comuni:
 
 - **`auto` non utilizza le tue combo.** `auto`/`auto/*` crea il proprio insieme di candidati senza configurazione e consulta le combo persistenti solo se una combo è denominata letteralmente `auto` (scelta sconsigliata). Per instradare tramite una combo, invia il suo nome esatto, non `auto`.
-- **`openrouter/auto` è un vero prodotto OpenRouter a pagamento** ("Auto Best Available"), non un alias di OmniRoute. È l'unica voce di modello statica del registro OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) e viene fatturato separatamente. Usa Impostazioni → Instradamento → Nascondi modelli a pagamento per escluderlo dagli insiemi `auto`.
+- **`openrouter/auto` è un vero prodotto OpenRouter a pagamento** ("Auto Best Available"), non un alias di 67router. È l'unica voce di modello statica del registro OpenRouter (`open-sse/config/providers/registry/openrouter/index.ts`) e viene fatturato separatamente. Usa Impostazioni → Instradamento → Nascondi modelli a pagamento per escluderlo dagli insiemi `auto`.
 
 Consulta [#7992](https://github.com/diegosouzapw/OmniRoute/issues/7992) e [#7111](https://github.com/diegosouzapw/OmniRoute/issues/7111) per il fraintendimento originale qui documentato.
 
@@ -260,7 +260,7 @@ valori risolti alimentano gli input esistenti `config.modePack` / `config.budget
 
 ## Tutte le strategie di routing
 
-Il motore di combinazione di OmniRoute supporta **20 strategie di routing** (dichiarate in `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Il motore Auto Combo è esposto tramite la strategia `auto`; le altre sono disponibili per le combinazioni persistenti.
+Il motore di combinazione di 67router supporta **20 strategie di routing** (dichiarate in `src/shared/constants/routingStrategies.ts` → `ROUTING_STRATEGY_VALUES`). Il motore Auto Combo è esposto tramite la strategia `auto`; le altre sono disponibili per le combinazioni persistenti.
 
 | Strategia           | Descrizione                                                                                                                                                                                                                                                         |
 | :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -308,7 +308,7 @@ Per una rotazione rigorosa usa `round-robin`; pesi uguali con `weighted` produco
 
 ### Modalità pipeline agentica
 
-Una combinazione `pipeline` con almeno due modelli può abilitare il routing pianificatore/esecutore tramite `config.agenticOrchestration.enabled`. Il primo target gestisce la pianificazione e le risposte finali; il secondo target emette chiamate agli strumenti native del client. OmniRoute rileva dal protocollo della richiesta le continuazioni con i risultati degli strumenti, chiede al pianificatore se sia necessario un altro ciclo di utilizzo degli strumenti e sceglie dinamicamente l'esecutore o il pianificatore come passaggio finale rivolto al client.
+Una combinazione `pipeline` con almeno due modelli può abilitare il routing pianificatore/esecutore tramite `config.agenticOrchestration.enabled`. Il primo target gestisce la pianificazione e le risposte finali; il secondo target emette chiamate agli strumenti native del client. 67router rileva dal protocollo della richiesta le continuazioni con i risultati degli strumenti, chiede al pianificatore se sia necessario un altro ciclo di utilizzo degli strumenti e sceglie dinamicamente l'esecutore o il pianificatore come passaggio finale rivolto al client.
 
 Gli eventuali modelli aggiuntivi dopo il secondo target vengono ordinati come esecutori di riserva. Una risposta HTTP non riuscita o un'eccezione di trasporto fa passare all'esecutore successivo, mantenendo la stessa decisione del pianificatore e gli strumenti nativi, ma usando il prompt specifico del passaggio e la connessione risolta di quell'esecutore. La prima risposta riuscita viene restituita senza modifiche, incluso lo streaming SSE; gli errori che si verificano dopo l'avvio di uno stream riuscito non possono essere riprovati qui. Se tutti gli esecutori falliscono, viene restituito l'ultimo errore. Le interruzioni da parte del client arrestano l'invio.
 
@@ -804,11 +804,11 @@ Questa suite viene eseguita nella CI (job `test:integration`) con `--test-concur
 
 ### Smoke test live soggetti ad abilitazione (NON nella CI — provider reali)
 
-| Comando                                | Funzione                                                                                                    |
-| :------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| `npm run test:combo:live`              | Routing reale nello stesso processo con `RUN_COMBO_LIVE=1`; acquisisce uno snapshot di un DB OmniRoute live |
-| `npm run test:combo:live:vps`          | Chiamate HTTP verso un server OmniRoute live (impostare `COMBO_LIVE_BASE_URL`)                              |
-| `npm run test:combo:live:vps:failover` | Come sopra, con scenari di failover intenzionali                                                            |
+| Comando                                | Funzione                                                                                                   |
+| :------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `npm run test:combo:live`              | Routing reale nello stesso processo con `RUN_COMBO_LIVE=1`; acquisisce uno snapshot di un DB 67router live |
+| `npm run test:combo:live:vps`          | Chiamate HTTP verso un server 67router live (impostare `COMBO_LIVE_BASE_URL`)                              |
+| `npm run test:combo:live:vps:failover` | Come sopra, con scenari di failover intenzionali                                                           |
 
 Questi smoke test verificano il percorso di comunicazione reale (combo → provider → completamento). Sono intenzionalmente esclusi dalla CI perché richiedono credenziali reali e l'accesso a un VPS.
 

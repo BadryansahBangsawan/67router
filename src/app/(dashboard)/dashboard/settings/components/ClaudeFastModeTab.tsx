@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Checkbox, CheckboxGroup } from "@omniroute/ui-kit/checkbox";
-import { Card, Collapsible, Toggle } from "@/shared/components";
+import { Collapsible, Toggle } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import {
   CLAUDE_FAST_MODE_DEFAULT_MODELS,
@@ -93,10 +94,9 @@ export default function ClaudeFastModeTab() {
   };
 
   return (
-    <Card
-      icon="bolt"
+    <SettingsSection
       title={t("claudeFastModeTitle")}
-      subtitle={t("claudeFastModeDesc")}
+      description={t("claudeFastModeDesc")}
       action={
         <div className="flex items-center gap-3">
           {status === "saved" && (
@@ -149,6 +149,6 @@ export default function ClaudeFastModeTab() {
         <Icon name="info" size={14} className="mt-0.5" />
         <span>{t("claudeFastModeHint")}</span>
       </p>
-    </Card>
+    </SettingsSection>
   );
 }

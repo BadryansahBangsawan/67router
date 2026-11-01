@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute hudhibiti ni **asili zipi za kivinjari** zinazoweza kusoma majibu kutoka asili tofauti
+67router hudhibiti ni **asili zipi za kivinjari** zinazoweza kusoma majibu kutoka asili tofauti
 kutoka kwenye orodha moja ya ruhusa inayosimamiwa kwa pamoja. Muundo huu **huzuia kila kitu kwa chaguo-msingi**:
 hakuna asili inayoruhusiwa hadi uiongeze mwenyewe. Ukurasa huu unaeleza jinsi orodha ya ruhusa
 inavyotatuliwa, kile ambacho `CORS_ALLOW_ALL=true` hufichua kwa hakika (na, muhimu zaidi, kile ambacho
@@ -46,13 +46,13 @@ kwa mpangilio huu:
 ## Muundo wa vitisho — kile ambacho `CORS_ALLOW_ALL=true` hufichua kwa hakika
 
 Onyo la jumla la OWASP ("wildcard CORS = tovuti yoyote inaweza kuita API yako") linastahili
-kuchukuliwa kwa uzito, lakini ufichuzi wa OmniRoute ni **finyu zaidi kuliko hali ya jumla**,
+kuchukuliwa kwa uzito, lakini ufichuzi wa 67router ni **finyu zaidi kuliko hali ya jumla**,
 kwa sababu ya ukweli mmoja mahususi wa utekelezaji:
 
 > **`applyCorsHeaders()` ya kati haitoi kamwe
 > `Access-Control-Allow-Credentials`.** Kivinjari hakitafichua jibu la asili tofauti
 > _lenye vitambulisho_ (lenye cookie) isipokuwa seva itume
-> `Access-Control-Allow-Credentials: true`. Njia ya pamoja ya CORS ya OmniRoute haifanyi
+> `Access-Control-Allow-Credentials: true`. Njia ya pamoja ya CORS ya 67router haifanyi
 > hivyo kamwe.
 
 Hivi ndivyo inavyomaanisha kwa kila sehemu, hata ikiwa `CORS_ALLOW_ALL=true`:
@@ -69,20 +69,6 @@ kuruhusu **preflight ya CORS ipite** kwenye route za usimamizi — ambazo bado z
 ambao ukurasa wa asili tofauti hauwezi kutoa. Hii **si** njia ya kuteka kipindi au
 kuiba vitambulisho kwenye njia ya pamoja ya CORS.
 
-### Isipokuwa moja halisi — `/api/v1/agents/`
-
-Route za Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) huweka
-header zao **wenyewe** za CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) na **hutoa**
-`Access-Control-Allow-Origin: <origin>|*` pamoja na
-`Access-Control-Allow-Credentials: true`. Hii ndiyo sehemu pekee ambapo
-kurudisha asili na vitambulisho hutokea pamoja, na **haitegemei
-`CORS_ALLOW_ALL`**. Route hizi zimethibitishwa kwa usimamizi
-(`requireManagementAuth`); waendeshaji wanaofichua dashibodi nje ya host wanapaswa
-kufahamu kuwa hapa ndipo mahali pekee ambapo usomaji wa asili tofauti wenye vitambulisho unaruhusiwa na
-header za jibu. Kuibana kwa kutumia orodha dhahiri ya ruhusa kunafuatiliwa
-kando na mwongozo huu wa CORS.
-
 ## Orodha ya ukaguzi wa uzalishaji
 
 - **Kamwe usiweke `CORS_ALLOW_ALL=true` katika mazingira ya uzalishaji.** Iache bila kuwekwa.
@@ -92,7 +78,7 @@ kando na mwongozo huu wa CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ikiwa OmniRoute inaendeshwa nyuma ya reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- Ikiwa 67router inaendeshwa nyuma ya reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **si** udhibiti wako pekee — kilinzi cha route ya loopback
   bado hulinda route zenye uwezo wa kuanzisha michakato (angalia
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Usighushi
@@ -108,7 +94,7 @@ kando na mwongozo huu wa CORS.
 Huhitaji wildcard mara nyingi hata katika mazingira ya usanidi. Ruhusu seva za usanidi unazotumia pekee:
 
 ```bash
-# Seva za usanidi za Vite (5173) + Next.js (3000) zinazowasiliana na OmniRoute ya ndani
+# Seva za usanidi za Vite (5173) + Next.js (3000) zinazowasiliana na 67router ya ndani
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +114,14 @@ kuanzisha upya.
   vyanzo vya usimamizi/dashibodi katika usanidi wowote unaoruhusu kwa upana; ni lazima viendelee
   kukataa ufikiaji kikamilifu.
 
-## Mfano: proksi ya kinyume mbele ya OmniRoute
+## Mfano: proksi ya kinyume mbele ya 67router
 
-CORS inatekelezwa na OmniRoute yenyewe, kwa hivyo kwa ujumla proksi **haipaswi** kuongeza au
+CORS inatekelezwa na 67router yenyewe, kwa hivyo kwa ujumla proksi **haipaswi** kuongeza au
 kuandika upya vichwa vya `Access-Control-*` (vichwa maradufu huvuruga vivinjari). Sitisha TLS
-na usambaze maombi — acha OmniRoute ijibu ombi la awali:
+na usambaze maombi — acha 67router ijibu ombi la awali:
 
 ```nginx
-# nginx — sambaza kwa OmniRoute; USIWEKE Access-Control-* hapa
+# nginx — sambaza kwa 67router; USIWEKE Access-Control-* hapa
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +129,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Dumisha vichwa vya usambazaji: proksi kwenye seva hiyo hiyo huunganisha kupitia loopback, navyo
-    # ndivyo vinavyojulisha OmniRoute kwamba mpigaji si mwendeshaji wa ndani. Proksi isiyoongeza hata kimoja
+    # ndivyo vinavyojulisha 67router kwamba mpigaji si mwendeshaji wa ndani. Proksi isiyoongeza hata kimoja
     # humfanya kila mpigaji wa mbali aonekane kuwa wa ndani. Pia, usiwahi kuweka X-Forwarded-For kuwa 127.0.0.1.
 }
 ```
 
-Weka asili za vivinjari zinazoruhusiwa katika OmniRoute (`CORS_ALLOWED_ORIGINS` au kichupo cha
+Weka asili za vivinjari zinazoruhusiwa katika 67router (`CORS_ALLOWED_ORIGINS` au kichupo cha
 Security), si katika proksi.
 
 ## Faili za chanzo
@@ -161,7 +147,6 @@ Security), si katika proksi.
 | Hali ya wakati wa utekelezaji kwa dashibodi          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Bango la onyo la dashibodi                           | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Sehemu ya CORS Allowed Origins                       | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS ya Cloud-Agent kwa kila route (hali ya kipekee) | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Tazama pia
 

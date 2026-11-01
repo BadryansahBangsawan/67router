@@ -4,7 +4,7 @@
 
 ---
 
-Hướng dẫn này trình bày cách thêm các tài khoản Kiro (trợ lý lập trình AI do AWS lưu trữ) vào OmniRoute,
+Hướng dẫn này trình bày cách thêm các tài khoản Kiro (trợ lý lập trình AI do AWS lưu trữ) vào 67router,
 tập trung vào việc chạy đồng thời nhiều tài khoản mà không xảy ra xung đột phiên.
 
 ---
@@ -22,10 +22,10 @@ tài khoản đầu tiên.
 
 ---
 
-## Cách OmniRoute giải quyết vấn đề này (v3.8.0+)
+## Cách 67router giải quyết vấn đề này (v3.8.0+)
 
-Kể từ v3.8.0, OmniRoute gọi `registerClient()` (AWS SSO OIDC) trong mỗi lần
-nhập kết nối Kiro. Điều này cung cấp cho mỗi kết nối OmniRoute một đăng ký ứng dụng khách OIDC
+Kể từ v3.8.0, 67router gọi `registerClient()` (AWS SSO OIDC) trong mỗi lần
+nhập kết nối Kiro. Điều này cung cấp cho mỗi kết nối 67router một đăng ký ứng dụng khách OIDC
 riêng biệt. Vì mỗi đăng ký ứng dụng khách hoạt động độc lập, việc làm mới hoặc
 xác thực lại một tài khoản sẽ không ảnh hưởng đến refresh token của bất kỳ tài khoản nào khác.
 
@@ -59,7 +59,7 @@ tự động nhận đăng ký ứng dụng khách riêng.
 
 ### Điều kiện tiên quyết
 
-- OmniRoute v3.8.0 trở lên.
+- 67router v3.8.0 trở lên.
 - Một tài khoản Kiro đang hoạt động (email + mật khẩu, đăng nhập bằng Google hoặc GitHub).
 - Có thể có thêm tài khoản Kiro thứ hai.
 
@@ -70,7 +70,7 @@ tự động nhận đăng ký ứng dụng khách riêng.
    - **Nhập Token** — dán refresh token bắt đầu bằng `aorAAAAAG`.
    - **API Key** — dán API key Kiro / CodeWhisperer dài hạn.
    - **Đăng nhập bằng Google / GitHub** — hoàn tất luồng OAuth trong trình duyệt.
-   - **Tự động nhập** — nhấp vào nút; OmniRoute đọc thông tin xác thực từ cơ sở dữ liệu
+   - **Tự động nhập** — nhấp vào nút; 67router đọc thông tin xác thực từ cơ sở dữ liệu
      kiro-cli cục bộ hoặc `~/.aws/sso/cache`.
 3. Kết nối được lưu. Các luồng refresh token tự động đăng ký một ứng dụng khách
    OIDC riêng. Các luồng API key xác thực khóa với AWS và không lưu refresh token.
@@ -127,7 +127,7 @@ không sử dụng tính năng làm mới OAuth, vì vậy tránh làm mất hi�
 2. Chọn **API Key**.
 3. Dán API key và chọn vùng AWS: **Tự động phát hiện** (mặc định), **Miền Đông Hoa Kỳ
    (Bắc Virginia)** hoặc **Châu Âu (Frankfurt)**.
-4. OmniRoute xác thực khóa và lưu kết nối được cố định vào vùng mà tại đó
+4. 67router xác thực khóa và lưu kết nối được cố định vào vùng mà tại đó
    khóa hoạt động.
 
 ### API
@@ -177,7 +177,7 @@ tới `https://q.<region>.amazonaws.com/generateAssistantResponse` — bao gồm
 ## Thời hạn của máy khách OIDC
 
 Các máy khách công khai AWS SSO OIDC thường hết hạn sau 90 ngày
-(`clientSecretExpiresAt`). OmniRoute lưu dấu thời gian này trong `providerSpecificData`
+(`clientSecretExpiresAt`). 67router lưu dấu thời gian này trong `providerSpecificData`
 để phục vụ khả năng quan sát. Nếu kết nối ngừng làm mới sau khoảng 90 ngày, hãy nhập lại
 kết nối để có được đăng ký máy khách OIDC mới. Việc tự động đăng ký lại khi
 hết hạn được theo dõi như một cải tiến trong tương lai.
@@ -198,7 +198,7 @@ thông qua AWS SSO OIDC.
 ### Nhập thất bại với thông báo "Token validation failed"
 
 - Đảm bảo mã làm mới bắt đầu bằng `aorAAAAAG`.
-- Đảm bảo OmniRoute có thể truy cập `https://oidc.us-east-1.amazonaws.com` (hoặc khu vực
+- Đảm bảo 67router có thể truy cập `https://oidc.us-east-1.amazonaws.com` (hoặc khu vực
   đã cấu hình). Nếu bạn đang sử dụng proxy doanh nghiệp, hãy thiết lập proxy ở cấp nhà cung cấp trong
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ thông qua AWS SSO OIDC.
 
 - Xác nhận khóa là khóa API Kiro / CodeWhisperer, không phải mã làm mới.
 - Xác nhận khu vực AWS khớp với khóa/tài khoản. `us-east-1` là giá trị mặc định.
-- Khóa phải có khả năng gọi `ListAvailableProfiles`; nếu không, OmniRoute không thể
+- Khóa phải có khả năng gọi `ListAvailableProfiles`; nếu không, 67router không thể
   phân giải `profileArn` bắt buộc.
 
 Đối với các sự cố khác, hãy xem tài liệu chính [TROUBLESHOOTING.md](./TROUBLESHOOTING.md).

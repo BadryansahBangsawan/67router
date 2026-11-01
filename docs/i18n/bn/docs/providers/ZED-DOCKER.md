@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute যখন Docker-এর ভিতরে চলে, তখন প্রচলিত "Zed Keychain থেকে ইমপোর্ট করুন" প্রক্রিয়াটি ব্যর্থ হয়,
+67router যখন Docker-এর ভিতরে চলে, তখন প্রচলিত "Zed Keychain থেকে ইমপোর্ট করুন" প্রক্রিয়াটি ব্যর্থ হয়,
 কারণ কনটেইনারটি হোস্ট OS-এর keychain daemon-এ (Linux-এ libsecret,
 macOS-এ Keychain, Windows-এ Credential Manager) পৌঁছাতে পারে না এবং হোস্ট ফাইলসিস্টেমের
 Zed কনফিগ ডিরেক্টরিগুলো ডিফল্টভাবে কনটেইনারের ভিতরে দৃশ্যমান থাকে না।
@@ -20,7 +20,7 @@ Zed কনফিগ ডিরেক্টরিগুলো ডিফল্ট�
    মডিউলটি একটি Unix socket বা D-Bus session-এর মাধ্যমে OS keychain পরিষেবার সঙ্গে যোগাযোগ করে।
    কোনোটিই ডিফল্টভাবে কনটেইনারে ব্রিজ করা হয় না, তাই ক্রেডেনশিয়াল পড়ার প্রচেষ্টা সবসময় ব্যর্থ হয়।
 
-OmniRoute দুটি হিউরিস্টিকের মাধ্যমে Docker পরিবেশ শনাক্ত করে:
+67router দুটি হিউরিস্টিকের মাধ্যমে Docker পরিবেশ শনাক্ত করে:
 
 - `/.dockerenv`-এর উপস্থিতি (কনটেইনার চালুর সময় Docker daemon এটি লেখে)।
 - `/proc/1/cgroup`-এ `docker` স্ট্রিংটির উপস্থিতি (Linux cgroup v1)।
@@ -31,7 +31,7 @@ OmniRoute দুটি হিউরিস্টিকের মাধ্যম�
 ## Manual Token Import ট্যাব ব্যবহার করা
 
 1. **Dashboard → Providers → Zed** খুলুন।
-2. Keychain ইমপোর্ট কার্ডের নিচে **Manual Token Import** প্যানেলটি দেখা যায়। OmniRoute
+2. Keychain ইমপোর্ট কার্ডের নিচে **Manual Token Import** প্যানেলটি দেখা যায়। 67router
    Docker শনাক্ত করলে, প্রথম ব্যর্থ keychain ইমপোর্ট প্রচেষ্টার পরে এই প্যানেলটি স্বয়ংক্রিয়ভাবে
    প্রসারিত হয়।
 3. ড্রপডাউন থেকে প্রোভাইডার নির্বাচন করুন (OpenAI, Anthropic, Google, Mistral, xAI,

@@ -9,9 +9,9 @@
 > **Nnyocha ikpeazụ:** 2026-06-17 — nnyocha webụ nke onye na-enye ọrụ ọ bụla (akwụkwọ gọọmentị + akụkọ ụbọchị asaa gara aga, ngafe ndị nnọchi anya 50 nwere nkwenye mmegide) nke na-emelite oke ọkwa n'efu ọ bụla + ToS. **Nnyocha akụkụ ọzọ 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — hụ ndetu nwere ụbọchị dị n'okpuru).
 > **Isi iyi eziokwu (katalọgụ):** `open-sse/config/freeModelCatalog.ts` (mmefu kwa MODEL, ewepụla nkwughachi n'etiti nchịkọta). Ọnụọgụ mmefu token ndị dị n'okpuru sitere na nnyocha webụ ozugbo ma bụrụ **atụmatụ** — hụ [Usoro & ịdọ aka ná ntị](#methodology--caveats).
 
-## TL;DR — ole inference n'efu ka OmniRoute na-achịkọta n'ezie?
+## TL;DR — ole inference n'efu ka 67router na-achịkọta n'ezie?
 
-Ọnụọgụ ndị a na-akọwa akaụntụ ndị ọzọ dị iche iche na ọnọdụ ntozu n'ofe katalọgụ ahụ. OmniRoute anaghị enye mmefu a: ị ga-enwerịrị akaụntụ ma ọ bụ nzere achọrọ, jikọọ ndị na-enye ọrụ tozuru etozu, ma rube isi n'oke ha. Ikike a pụrụ iji n'ezie nwere ike ịdị ala, gụnyere ịbụ efu na nrụnye ọhụrụ na-enweghị ụzọ tozuru etozu. A na-ewepụ ndị na-enye ọrụ akara `tos: avoid` na nhazi ụzọ akpaka na ndabara.
+Ọnụọgụ ndị a na-akọwa akaụntụ ndị ọzọ dị iche iche na ọnọdụ ntozu n'ofe katalọgụ ahụ. 67router anaghị enye mmefu a: ị ga-enwerịrị akaụntụ ma ọ bụ nzere achọrọ, jikọọ ndị na-enye ọrụ tozuru etozu, ma rube isi n'oke ha. Ikike a pụrụ iji n'ezie nwere ike ịdị ala, gụnyere ịbụ efu na nrụnye ọhụrụ na-enweghị ụzọ tozuru etozu. A na-ewepụ ndị na-enye ọrụ akara `tos: avoid` na nhazi ụzọ akpaka na ndabara.
 
 **Enyochara 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) na-enye kredit nkwalite $5 otu ugboro nke chọrọ usoro ịkwụ ụgwọ, ma na-agwụ mgbe ụbọchị 30 gasịrị. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) na-ebipụta oke ọsọ nke project/model/tier; ọ ka nọghị n'ime isi ọnụọgụ kwa ọnwa a tụrụ.
 
@@ -80,7 +80,7 @@ efu adịghị. A kọwara mgbanwe Nous n'ụzọ zuru ezu na ndetu provider d�
 
 ## Usoro abụọ — ịgụ ọnụ na ime mkpebi
 
-OmniRoute na-aza ajụjụ "ọ bụ n'efu?" site na usoro abụọ nke na-ama ụma agụ
+67router na-aza ajụjụ "ọ bụ n'efu?" site na usoro abụọ nke na-ama ụma agụ
 isi iyi dị iche iche:
 
 | Usoro                   | Isi iyi nke eziokwu                                                                                                                                                            | Ebe ọ na-apụta                                                                                                                 |
@@ -128,7 +128,7 @@ n'ebumnuche.
 
 ### ⚠️ Nlezianya — nkebi gbasara ojiji nkeonwe / proxị ndị kwesịrị ka a nyochaa (16)
 
-> Ohere efu ha dị adị, OmniRoute nwekwara ike iziga arịrịọ na ha; nkebi ndị dị n’okpuru bụ naanị ihe kwesịrị ịma. Enweghị ike ịtụ ndị na-eji OAuth/enweghị igodo n’ụdị token, ya mere ha adịghị n’ọnụ ọgụgụ isiokwu ahụ (ọ bụghị n’ihi na enweghị ike iji ha).
+> Ohere efu ha dị adị, 67router nwekwara ike iziga arịrịọ na ha; nkebi ndị dị n’okpuru bụ naanị ihe kwesịrị ịma. Enweghị ike ịtụ ndị na-eji OAuth/enweghị igodo n’ụdị token, ya mere ha adịghị n’ọnụ ọgụgụ isiokwu ahụ (ọ bụghị n’ihi na enweghị ike iji ha).
 
 | Onye na-eweta ọrụ | Nkọwa                                                                                                                                                                                     |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ n'ebumnuche.
 | `fireworks`       | ToS machibidoro kpọmkwem ojiji proxị/onye nnọchi anya, nnyefe igodo API, na inye ikikere n’okpuru ikikere (Nkebi 2.1 na 2.2(i)(j)); proxị nkeonwe a na-akwado n’onwe ya abụghị…           |
 | `friendliai`      | Nkebi 8(e) na 8(f) nke ToS machibidoro kpọmkwem iji FriendliAI dịka proxị ma ọ bụ ikwe ka ndị ọzọ nweta ya n’onwe ya, ma machibido iregharị/…                                             |
 | `iflytek`         | Nkebi 2.4(3) nke iFlytek Spark LLM Service Agreement machibidoro kpọmkwem “iji usoro ọ bụla na-akpaghị aka ma ọ bụ nke mmemme iji wepụta data ma ọ bụ nsonaazụ…                           |
-| `kiro`            | FAQ Kiro machibidoro kpọmkwem iji ya na “OpenClaw na ngwa ndị yiri ya nke na-eji usoro njikwa ndị ọzọ” — proxị AI a na-akwado n’onwe ya (dịka OmniRoute) nke na-eziga…                    |
+| `kiro`            | FAQ Kiro machibidoro kpọmkwem iji ya na “OpenClaw na ngwa ndị yiri ya nke na-eji usoro njikwa ndị ọzọ” — proxị AI a na-akwado n’onwe ya (dịka 67router) nke na-eziga…                     |
 | `modal`           | Nkebi 1.3 nke ToS machibidoro kpọmkwem “ịgbazite, iregharị, ma ọ bụ ikwe n’ụzọ ọzọ ka onye ọzọ nweta ma ọ bụ jiri Ọrụ ahụ ozugbo” — iwulite nke a na-akwado n’onwe ya…                    |
 | `muse-spark-web`  | ToS Meta machibidoro kpọmkwem ohere akpaghị aka na-enweghị ikike e nyere tupu oge eruo, nyocha azụ nke teknụzụ na-enweghị ikike e dere ede, na ịgafe usoro teknụzụ…                       |
 | `nlpcloud`        | ToS machibidoro kpọmkwem “ịtọlite proxị ma ọ bụ ngwaọrụ ọzọ nke na-enye ndị ọzọ ohere ịnweta Ọrụ ahụ site na ya” ma na-enye naanị ikike a na-apụghị ibufe,…                               |
@@ -304,7 +304,7 @@ n'ebumnuche.
 
 - **`360ai`** — freeNote e wepụtara, "Ụdị Free 360 AI Brain efu", adịkwaghị ọhụrụ. Ugbu a, a ga-etinyerịrị akwụkwọ anamachọihe ma kwụọ ụgwọ tupu enweta ohere. Tọken nkwado e nyere n’oge mmalite na 2023 (100M–250M otu ugboro) nwere ike ịbụ ihe ndabere maka…
 - **`agentrouter`** — freeNote anyị wepụtara na-ekwu, "kredịt efu $200 mgbe e debanyere aha." Ọnọdụ dị ugbu a na-egosi na ndị debanyere aha n’ụzọ nkịtị (na-enweghị ntụnye) na-enweta naanị $100; ndị ji ntụnye debanye aha nwere ike nweta $200, mana otu okwu sitere n’aka obodo ahụ na Eprel 2026…
-- **`agy`** — freeNote anyị wepụtara na-ekwu "(ọ dịghị)", nke na-egosi na ọ nweghị ọkwa efu, mana Antigravity nwere ọkwa efu nke OAuth na-achịkwa. Agbanyeghị, ToS machibidoro iji ọkwa efu a site na proxy dịka OmniRoute …
+- **`agy`** — freeNote anyị wepụtara na-ekwu "(ọ dịghị)", nke na-egosi na ọ nweghị ọkwa efu, mana Antigravity nwere ọkwa efu nke OAuth na-achịkwa. Agbanyeghị, ToS machibidoro iji ọkwa efu a site na proxy dịka 67router …
 - **`ai21`** — E mere ka ọ sie ike: oge nnwale belatara site na "ọnwa 3" ruo ụbọchị 7. Ọnụ ego kredịt $10 ka bụ otu ihe ahụ, mana oge ndaba ya dara nke ukwuu site na ihe dịka ụbọchị 90 ruo ụbọchị 7.
 - **`aimlapi`** — Ọ gbanwere nke ukwuu. freeNote e wepụtara kpọsara "kredịt efu $0.025/ụbọchị — ụdị 200+" mana a kwụsịtụla/akwụsịla ọkwa efu ahụ ugbu a. Nkesa kredịt $0.025/ụbọchị (kredịt 50,000/ụbọchị, arịrịọ 10/ụ…
 - **`amazon-q`** — freeNote anyị wepụtara na-ekwu "(ọ dịghị)" — ọnọdụ dị ugbu a ka njọ: a kwụsịla ngwaahịa a maka ndebanye aha ọhụrụ (Mee 15, 2026). Na mbụ, ọkwa efu na-enye arịrịọ agentic 50/ọnwa + inline na-enweghị oke…

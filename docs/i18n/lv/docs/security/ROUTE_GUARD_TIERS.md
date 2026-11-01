@@ -6,7 +6,7 @@
 
 ## Pārskats
 
-Visi OmniRoute pārvaldības API maršruti tiek klasificēti vienā no trim aizsardzības
+Visi 67router pārvaldības API maršruti tiek klasificēti vienā no trim aizsardzības
 līmeņiem. Klasifikācija ir statiska, definēta failā `src/server/authz/routeGuard.ts`
 un tiek izvērtēta pirms jebkura cita autentifikācijas atzara izpildes.
 
@@ -28,10 +28,10 @@ procesu palaišanu — tā ir zināma CVE klase
 **Kas ir GHSA-fhh6-4qxv-rpqj (uzbrukuma klase):** pārvaldības/aģenta serveris
 nodrošina galapunktu, kas palaiž apakšprocesu (`npm install`, `node`, pārlūkprogrammu,
 starpniekserveri, `git`, `tar`, …). Ja šis galapunkts ir sasniedzams ārpus
-resursdatora — jo operators novietojis OmniRoute aiz nginx/Cloudflare/Tailscale
+resursdatora — jo operators novietojis 67router aiz nginx/Cloudflare/Tailscale
 tuneļa un JWT ir noplūdis vai autentifikācija ir konfigurēta nepareizi — uzbrucējs
 pārvērš „izsaukt API” par „izpildīt komandu resursdatorā” (attālināta koda
-izpilde). OmniRoute to novērš, katrā maršrutā, kas spēj palaist procesus,
+izpilde). 67router to novērš, katrā maršrutā, kas spēj palaist procesus,
 **bez nosacījumiem veicot atgriezeniskās cilpas resursdatora pārbaudi pirms
 jebkuras autentifikācijas pārbaudes**: ar tunelī noplūdušu pilnvaru joprojām
 nevar piekļūt procesu palaišanas funkcionalitātei.
@@ -61,7 +61,6 @@ no tiem nav klasificēts kā tikai lokāli pieejams.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy klausītājs un sistēmas starpniekserveris                                                              |
 | `/api/settings/mitm`                                                                                     | Iespējo MITM pārtveršanu (sistēmas līmeņa starpniekservera stāvokli)                                                                 |
 | `/api/issue-agent/`                                                                                      | Problēmu aģents — repozitorijā palaiž lokālos rīkus                                                                                  |
-| `/api/plugins/`, `/api/plugins`                                                                          | Spraudņi — ielādē/izpilda, izmantojot `worker_threads` + `child_process`                                                             |
 | `/api/middleware/`                                                                                       | Lietotāja starpprogrammatūra — ielādē/izpilda operatora kodu procesa ietvaros                                                        |
 | `/api/system/version`                                                                                    | Automātiskā atjaunināšana (tikai POST; GET/HEAD/OPTIONS ir izņēmumi) — palaiž `git checkout` + `npm install`                         |
 | `/api/db-backups/exportAll`                                                                              | Palaiž `tar`, lai izveidotu eksportēšanas arhīvu                                                                                     |
@@ -122,7 +121,7 @@ attāliem klientiem, kas izmanto tikai MCP un kam nav nepieciešama plaša pārv
 
 #### Norādījumi operatoriem un auditēšana
 
-Ja darbināt OmniRoute aiz reversā starpniekservera vai tuneļa (nginx, Caddy, Cloudflare
+Ja darbināt 67router aiz reversā starpniekservera vai tuneļa (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), atgriezeniskās cilpas pārbaude joprojām aizsargā iepriekš minētos maršrutus,
 kas spēj palaist procesus — pieprasījums, kura klienta adrese nav atgriezeniskās cilpas adrese, tiek noraidīts ar
 `403 LOCAL_ONLY` **pirms autentifikācijas izpildes**, tādēļ nopludināts JWT nevar izraisīt procesa palaišanu. Joprojām ir divi
@@ -160,7 +159,7 @@ operatora pienākumi:
 - Meklējiet savos reversā starpniekservera / piekļuves žurnālos iepriekš minētos prefiksus kopā ar
   klienta adresi, kas nav atgriezeniskās cilpas adrese. Jebkurš šāds pieprasījums, kas atgrieza `200`, nevis
   `403 LOCAL_ONLY`, nozīmē, ka starpniekserveris maskē īsto klienta IP adresi — izlabojiet starpniekservera konfigurāciju.
-- `403 LOCAL_ONLY` OmniRoute žurnālos vienam no šiem ceļiem nozīmē, ka aizsardzība
+- `403 LOCAL_ONLY` 67router žurnālos vienam no šiem ceļiem nozīmē, ka aizsardzība
   darbojas, kā paredzēts, nevis kļūdu, kas jāapslāpē.
 
 #### Attāli sasniedzami maršruti ar izsaukuma vietas zondēšanas vārteju

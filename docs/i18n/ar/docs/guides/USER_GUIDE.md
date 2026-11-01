@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-دليل شامل لتكوين موفري الخدمات، وإنشاء التركيبات، ودمج أدوات واجهة سطر الأوامر، ونشر OmniRoute.
+دليل شامل لتكوين موفري الخدمات، وإنشاء التركيبات، ودمج أدوات واجهة سطر الأوامر، ونشر 67router.
 
 ---
 
@@ -24,7 +24,6 @@
 - [نظام المهارات](#-skills-system)
 - [نظام الذاكرة](#-memory-system)
 - [خطافات الويب](#-webhooks)
-- [الوكلاء السحابيون](#-cloud-agents)
 - [الإدارة البرمجية](#-programmatic-management)
 - [واجهة سطر الأوامر الداخلية](#-internal-cli)
 - [تطبيق سطح المكتب (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@
   cc/claude-haiku-4-5-20251001
 ```
 
-**نصيحة احترافية:** استخدم Opus للمهام المعقدة وSonnet للسرعة. يتتبّع OmniRoute الحصة لكل نموذج!
+**نصيحة احترافية:** استخدم Opus للمهام المعقدة وSonnet للسرعة. يتتبّع 67router الحصة لكل نموذج!
 
-لا يوجد متصفح على مضيف OmniRoute؟ شغّل `claude setup-token` في أي مكان تم فيه تسجيل الدخول إلى Claude Code، والصق الرمز المميز الصالح لمدة عام في علامة التبويب **رمز الإعداد**. راجع [استخدام Claude Code مع رمز إعداد](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+لا يوجد متصفح على مضيف 67router؟ شغّل `claude setup-token` في أي مكان تم فيه تسجيل الدخول إلى Claude Code، والصق الرمز المميز الصالح لمدة عام في علامة التبويب **رمز الإعداد**. راجع [استخدام Claude Code مع رمز إعداد](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-تحافظ مسارات Claude والمسارات المتوافقة مع Claude Code على مستوى جهد التفكير `max` لنماذج Opus وSonnet. لا تقبل نماذج Haiku مستوى الجهد `max`، لذا يخفض OmniRoute ذلك الطلب إلى ميزانية تفكير مرتفعة قبل إرساله إلى المزوّد الأساسي.
+تحافظ مسارات Claude والمسارات المتوافقة مع Claude Code على مستوى جهد التفكير `max` لنماذج Opus وSonnet. لا تقبل نماذج Haiku مستوى الجهد `max`، لذا يخفض 67router ذلك الطلب إلى ميزانية تفكير مرتفعة قبل إرساله إلى المزوّد الأساسي.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,7 +260,7 @@
 
 ### Cursor IDE
 
-**استخدام Cursor كعميل OmniRoute** (توجيه دردشة Cursor عبر OmniRoute):
+**استخدام Cursor كعميل 67router** (توجيه دردشة Cursor عبر 67router):
 
 ```
 الإعدادات → النماذج → متقدم:
@@ -270,7 +269,7 @@
   النموذج: cc/claude-opus-4-7
 ```
 
-**استخدام OmniRoute كمزوّد لـ Cursor** (يستدعي OmniRoute خدمة Cursor المصدرية): يُفضَّل استخدام
+**استخدام 67router كمزوّد لـ Cursor** (يستدعي 67router خدمة Cursor المصدرية): يُفضَّل استخدام
 **لوحة التحكم → المزوّدون → Cursor → تسجيل الدخول باستخدام Cursor**. في Docker، راجع
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -357,7 +356,7 @@ omniroute --port 3000
 
 ### وضع صينية النظام
 
-شغّل OmniRoute في صينية النظام:
+شغّل 67router في صينية النظام:
 
 ```bash
 omniroute serve --tray
@@ -374,7 +373,7 @@ omniroute serve --tray
 - فتح لوحة التحكم.
 - فتح `/dashboard/logs`.
 - تغيير إعداد التشغيل التلقائي.
-- إيقاف OmniRoute.
+- إيقاف 67router.
 
 لا تستخدم `--tray` مع الخيارات التالية:
 
@@ -400,14 +399,14 @@ omniroute autostart disable
 
 ### إلغاء التثبيت
 
-عندما لا تعود بحاجة إلى OmniRoute، نوفر نصَّيْن برمجيَّيْن سريعين للإزالة النظيفة:
+عندما لا تعود بحاجة إلى 67router، نوفر نصَّيْن برمجيَّيْن سريعين للإزالة النظيفة:
 
 | الأمر                    | الإجراء                                                                       |
 | ------------------------ | ----------------------------------------------------------------------------- |
 | `npm run uninstall`      | يزيل تطبيق النظام، لكنه **يحتفظ بقاعدة بياناتك وإعداداتك** في `~/.omniroute`. |
 | `npm run uninstall:full` | يزيل التطبيق **ويمحو نهائيًا جميع الإعدادات والمفاتيح وقواعد البيانات**.      |
 
-> ملاحظة: لتشغيل هذه الأوامر، انتقل إلى مجلد مشروع OmniRoute (إذا كنت قد استنسخته) ثم شغّلها. بدلاً من ذلك، إذا كان مثبتًا بشكل عام، فيمكنك ببساطة تشغيل `npm uninstall -g omniroute`.
+> ملاحظة: لتشغيل هذه الأوامر، انتقل إلى مجلد مشروع 67router (إذا كنت قد استنسخته) ثم شغّلها. بدلاً من ذلك، إذا كان مثبتًا بشكل عام، فيمكنك ببساطة تشغيل `npm uninstall -g omniroute`.
 
 ### النشر على VPS
 
@@ -479,7 +478,7 @@ docker run -d --name omniroute -p 20128:20128 --env-file ./.env -v omniroute-dat
 
 ### Void Linux (xbps-src)
 
-يمكن لمستخدمي Void Linux تحزيم OmniRoute وتثبيته بشكل أصلي باستخدام إطار عمل الترجمة المتقاطعة `xbps-src`. يؤدي ذلك إلى أتمتة بناء الإصدار المستقل من Node.js إلى جانب روابط `better-sqlite3` الأصلية المطلوبة.
+يمكن لمستخدمي Void Linux تحزيم 67router وتثبيته بشكل أصلي باستخدام إطار عمل الترجمة المتقاطعة `xbps-src`. يؤدي ذلك إلى أتمتة بناء الإصدار المستقل من Node.js إلى جانب روابط `better-sqlite3` الأصلية المطلوبة.
 
 <details>
 <summary><b>عرض قالب xbps-src</b></summary>
@@ -659,7 +658,7 @@ post_install() {
 
 **مزوّدون متوافقون آخرون** (مختارون): `cohere`، `databricks`، `snowflake`، `together`، `vertex`، `alibaba`، `alibaba-cn`، `bedrock` (عبر `aws-bedrock`)، `azure-ai`، `openrouter` (كتالوج بالتمرير المباشر)، `siliconflow`، `hyperbolic`، `huggingface`، `featherless-ai`، `cloudflare-ai`، `scaleway`، `deepinfra`، `vercel-ai-gateway`، `bazaarlink`، `friendliai`، `nous-research`، `reka`، `volcengine`، `ai21`، `gigachat`. يحتفظ كل مزوّد بقائمة نماذجه الخاصة في `providerRegistry.ts`، ويمكن مزامنتها تلقائيًا عندما يوفّر المزوّد نقطة نهاية `/models`.
 
-**ملاحظة حول معرّفات النماذج:** يستخدم OmniRoute المعرّفات الأصلية الخاصة بالمزوّد (`claude-opus-4-8`، `gpt-5.5`، `glm-5.1`، `MiniMax-M2.7`، `kimi-k2.5`، `grok-4.20-0309-reasoning`). تتضمن بعض المعرّفات إصدارات منقّطة لأن واجهة API في المصدر تتوقعها بهذه الصيغة. إذا لم يكن أحد النماذج مدرجًا أعلاه، فشغّل `omniroute models --search <term>` أو استدعِ `GET /api/models/catalog` للتأكد من توفره.
+**ملاحظة حول معرّفات النماذج:** يستخدم 67router المعرّفات الأصلية الخاصة بالمزوّد (`claude-opus-4-8`، `gpt-5.5`، `glm-5.1`، `MiniMax-M2.7`، `kimi-k2.5`، `grok-4.20-0309-reasoning`). تتضمن بعض المعرّفات إصدارات منقّطة لأن واجهة API في المصدر تتوقعها بهذه الصيغة. إذا لم يكن أحد النماذج مدرجًا أعلاه، فشغّل `omniroute models --search <term>` أو استدعِ `GET /api/models/catalog` للتأكد من توفره.
 
 </details>
 
@@ -725,9 +724,9 @@ prefix: "<prefix>" هي بادئة مزوّد محجوزة — اختر بادئ
 محجوزة: تظل العقد المحفوظة قبل وجود هذه القاعدة مخزنة، لكن بادئتها توجّه الطلبات إلى
 المزوّد المضمّن. عدّل العقدة وامنحها بادئة جديدة.
 
-### ربط بوابات OmniRoute النظيرة تسلسليًا
+### ربط بوابات 67router النظيرة تسلسليًا
 
-يمكن إضافة بوابة OmniRoute أخرى كمزوّد **مخصص متوافق مع OpenAI**. استخدم
+يمكن إضافة بوابة 67router أخرى كمزوّد **مخصص متوافق مع OpenAI**. استخدم
 عنوان URL الأساسي `/v1` للبوابة النظيرة ومفتاح API مخصصًا بأقل قدر من الصلاحيات، صادرًا عن تلك البوابة النظيرة.
 
 بالنسبة إلى السلاسل المتبادلة أو متعددة القفزات، فعّل آلية الحماية الاختيارية من الحلقات على كل بوابة:
@@ -753,7 +752,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 ربط النظراء تسلسليًا ليس تكرارًا لقاعدة البيانات ولا تجاوزًا تلقائيًا لأعطال المضيف. تحتفظ كل بوابة
 بحالة SQLite وذاكرات تخزين مؤقت وعدادات معدلات وجلسات مستقلة. استخدم وكيلًا عكسيًا مع فحوصات سلامة أو
 تجاوز الأعطال من جانب العميل لتوفير الإتاحة النشطة/الخاملة أو النشطة/النشطة، ولا تقم مطلقًا بتركيب قاعدة بيانات SQLite واحدة
-في عدة مثيلات OmniRoute قيد التشغيل.
+في عدة مثيلات 67router قيد التشغيل.
 
 ### مسارات المزوّد المخصصة
 
@@ -804,7 +803,7 @@ curl http://localhost:20128/api/models/catalog
 - متاح في **لوحة التحكم → نقاط النهاية** لعمليات النشر باستخدام Docker وغيرها من عمليات النشر ذاتية الاستضافة
 - ينشئ عنوان URL مؤقتًا بصيغة `https://*.trycloudflare.com` يعيد التوجيه إلى نقطة النهاية الحالية المتوافقة مع OpenAI على المسار `/v1`
 - عند التفعيل لأول مرة، يُثبَّت `cloudflared` عند الحاجة فقط؛ وتعيد عمليات التشغيل اللاحقة استخدام الملف الثنائي المُدار نفسه
-- لا تتم استعادة الأنفاق السريعة تلقائيًا بعد إعادة تشغيل OmniRoute أو الحاوية؛ أعد تفعيلها من لوحة التحكم عند الحاجة
+- لا تتم استعادة الأنفاق السريعة تلقائيًا بعد إعادة تشغيل 67router أو الحاوية؛ أعد تفعيلها من لوحة التحكم عند الحاجة
 - عناوين URL الخاصة بالأنفاق مؤقتة وتتغير في كل مرة توقف فيها النفق أو تشغّله
 - تستخدم الأنفاق السريعة المُدارة نقل HTTP/2 افتراضيًا لتجنب تحذيرات مخزن UDP المؤقت المزعجة الخاصة بـ QUIC في الحاويات محدودة الموارد
 - عيّن `CLOUDFLARED_PROTOCOL=quic` أو `auto` إذا أردت تجاوز خيار النقل المُدار
@@ -821,7 +820,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### ساحة اختبار المُترجم
 
-يمكن الوصول إليها عبر **لوحة التحكم → المُترجم**. استخدمها لتصحيح الأخطاء وعرض كيفية ترجمة OmniRoute لطلبات API بين موفري الخدمة.
+يمكن الوصول إليها عبر **لوحة التحكم → المُترجم**. استخدمها لتصحيح الأخطاء وعرض كيفية ترجمة 67router لطلبات API بين موفري الخدمة.
 
 | الوضع                 | الغرض                                                                     |
 | --------------------- | ------------------------------------------------------------------------- |
@@ -874,7 +873,7 @@ curl http://localhost:20128/api/models/catalog
 X-Session-Id: your-session-key
 ```
 
-يقبل OmniRoute أيضًا `x_session_id` ويعيد مفتاح الجلسة الفعلي في `X-OmniRoute-Session-Id`.
+يقبل 67router أيضًا `x_session_id` ويعيد مفتاح الجلسة الفعلي في `X-OmniRoute-Session-Id`.
 
 إذا كنت تستخدم Nginx وترسل ترويسات تتضمن شرطات سفلية، ففعّل:
 
@@ -908,7 +907,7 @@ underscores_in_headers on;
 
 ### التركيبات الشائعة لموفري الخدمة وأنماط التوجيه
 
-فيما يلي أنماط نموذجية لدمج عدة موفري خدمة والتوجيه بينهم في OmniRoute:
+فيما يلي أنماط نموذجية لدمج عدة موفري خدمة والتوجيه بينهم في 67router:
 
 #### 1. تركيبة وكيل البرمجة: استدلال متقدم مع رجوع احتياطي يراعي التكلفة والسرعة
 
@@ -969,7 +968,7 @@ omniroute combo create free-stack \
 
 يمكنك التهيئة عبر **لوحة المعلومات → الإعدادات → المرونة**.
 
-ينفّذ OmniRoute المرونة على مستوى المزوّد من خلال خمسة مكوّنات:
+ينفّذ 67router المرونة على مستوى المزوّد من خلال خمسة مكوّنات:
 
 1. **قائمة انتظار الطلبات وتنظيم وتيرتها** — تشكيل الطلبات على مستوى النظام:
    - **الطلبات في الدقيقة (RPM)** — الحد الأقصى للطلبات في الدقيقة لكل حساب
@@ -994,7 +993,7 @@ omniroute combo create free-stack \
 
    لا تظهر حالة وقت التشغيل لقاطع المزوّد إلا في **لوحة المعلومات → الصحة**.
 
-4. **انتظار انتهاء فترة التهدئة** — إذا كانت جميع الاتصالات المرشحة في فترة تهدئة بالفعل، فيمكن لـ OmniRoute انتظار أقرب انتهاء لفترة تهدئة وإعادة محاولة طلب العميل نفسه تلقائيًا.
+4. **انتظار انتهاء فترة التهدئة** — إذا كانت جميع الاتصالات المرشحة في فترة تهدئة بالفعل، فيمكن لـ 67router انتظار أقرب انتهاء لفترة تهدئة وإعادة محاولة طلب العميل نفسه تلقائيًا.
 
 5. **الاكتشاف التلقائي لحد المعدل** — عندما يعيد مزوّدو المصدر العلوي نوافذ انتظار صريحة، تتجاوز هذه التلميحات فترة تهدئة الاتصال المحلية عند تمكين الإعداد.
 
@@ -1028,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **حالات الاستخدام:**
 
-- ترحيل OmniRoute بين الأجهزة
+- ترحيل 67router بين الأجهزة
 - إنشاء نسخ احتياطية خارجية للتعافي من الكوارث
 - مشاركة التهيئات بين أعضاء الفريق (تصدير الكل → مشاركة الأرشيف)
 
@@ -1080,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### النسخ الصوتي
 
-يدعم OmniRoute النسخ الصوتي عبر نقطة النهاية المتوافقة مع OpenAI:
+يدعم 67router النسخ الصوتي عبر نقطة النهاية المتوافقة مع OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1156,7 +1155,7 @@ curl -X POST http://localhost:20128/v1/audio/transcriptions \
 `max_tokens` / `maxOutputTokens`. عند تمكينه، لا يضيف توجيه المجموعة هامشًا إضافيًا لنماذج
 الاستدلال إلا للنماذج ذات حد إخراج معروف، ويُبقي حد الرموز الخاص بالعميل دون تغيير عندما
 تتجاوز القيمة الآمنة بعد إضافة المخزن المؤقت ذلك الحد. إذا كان حد العميل أعلى بالفعل من حد معروف،
-فإن OmniRoute يخفضه إلى ذلك الحد قبل إرسال الطلب إلى المنبع.
+فإن 67router يخفضه إلى ذلك الحد قبل إرسال الطلب إلى المنبع.
 
 ---
 
@@ -1179,7 +1178,7 @@ curl -X POST http://localhost:20128/v1/audio/transcriptions \
 
 ## 🤖 التوجيه التلقائي (دون إعداد)
 
-يأتي OmniRoute مزودًا **بموجّه تلقائي قائم على الدرجات** يختار أفضل نموذج لكل طلب عبر جميع المزوّدين المتصلين — دون الحاجة إلى صيانة أي تركيبة. ما عليك سوى إرسال الطلب باستخدام إحدى بادئات `auto/*`، وسيُنشئ OmniRoute تركيبة افتراضية ديناميكيًا، مع تقييم المرشحين بناءً على زمن الاستجابة والتكلفة ومعدل النجاح وملاءمة السياق ومدى ملاءمة النموذج للمهمة والإخفاقات الأخيرة والحصة وحالة قاطع الدائرة.
+يأتي 67router مزودًا **بموجّه تلقائي قائم على الدرجات** يختار أفضل نموذج لكل طلب عبر جميع المزوّدين المتصلين — دون الحاجة إلى صيانة أي تركيبة. ما عليك سوى إرسال الطلب باستخدام إحدى بادئات `auto/*`، وسيُنشئ 67router تركيبة افتراضية ديناميكيًا، مع تقييم المرشحين بناءً على زمن الاستجابة والتكلفة ومعدل النجاح وملاءمة السياق ومدى ملاءمة النموذج للمهمة والإخفاقات الأخيرة والحصة وحالة قاطع الدائرة.
 
 | البادئة        | ما تعمل على تحسينه                                                                       |
 | -------------- | ---------------------------------------------------------------------------------------- |
@@ -1210,7 +1209,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 تكامل MCP وA2A
 
-يعمل OmniRoute بوصفه **خادم MCP** (بروتوكول سياق النموذج) و**خادم A2A** (اتصال وكيل إلى وكيل باستخدام JSON-RPC 2.0). يمكن لأي بيئة تطوير متكاملة أو مضيف وكيل متوافق مع MCP استدعاء أدوات OmniRoute مباشرةً — دون الحاجة إلى غلاف إضافي.
+يعمل 67router بوصفه **خادم MCP** (بروتوكول سياق النموذج) و**خادم A2A** (اتصال وكيل إلى وكيل باستخدام JSON-RPC 2.0). يمكن لأي بيئة تطوير متكاملة أو مضيف وكيل متوافق مع MCP استدعاء أدوات 67router مباشرةً — دون الحاجة إلى غلاف إضافي.
 
 ### وسائل نقل MCP
 
@@ -1239,17 +1238,14 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ### النطاقات
 
-يعرّف MCP حاليًا 32 نطاقًا مسمّى. يمكن تقييد كل مفتاح Bearer بنطاقات محددة — راجع [MCP-SERVER.md](../frameworks/MCP-SERVER.md) للاطلاع على القائمة المرجعية للنطاقات والأدوات، و[A2A-SERVER.md](../frameworks/A2A-SERVER.md) للاطلاع على مخطط JSON-RPC.
-
 ---
 
 ## 🧠 نظام المهارات
 
-يوفّر OmniRoute **إطار عمل قابلًا للتوسعة للمهارات** (`src/lib/skills/`) كي تتمكن الوكلاء ونقطة نهاية A2A من تشغيل إجراءات خاصة بمجالات محددة (مثل `code-review` و`summarize` و`extract-facts` و`web-research`).
+يوفّر 67router **إطار عمل قابلًا للتوسعة للمهارات** (`src/lib/skills/`) كي تتمكن الوكلاء ونقطة نهاية A2A من تشغيل إجراءات خاصة بمجالات محددة (مثل `code-review` و`summarize` و`extract-facts` و`web-research`).
 
 - **واجهة سوق المهارات** — تصفّح المهارات وثبّتها من **لوحة التحكم → المهارات**
 - **نطاقات مخصّصة لكل مفتاح** — قيّد المهارات التي يمكن لكل مفتاح API استدعاؤها
-- **مهارات مخصّصة** — ضع ملف TypeScript في `src/lib/a2a/skills/`، وسجّله، وسيصبح قابلًا للاستدعاء فورًا عبر A2A
 
 المرجع الكامل: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1257,7 +1253,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 💾 نظام الذاكرة
 
-يحتفظ OmniRoute **بذاكرة محادثات طويلة الأمد** باستخدام استرجاع هجين:
+يحتفظ 67router **بذاكرة محادثات طويلة الأمد** باستخدام استرجاع هجين:
 
 - **SQLite FTS5** للبحث بالكلمات المفتاحية في التفاعلات السابقة
 - **مخزن Qdrant للمتجهات** (اختياري) للاسترجاع الدلالي
@@ -1270,7 +1266,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔔 خطافات الويب
 
-اشترك في أحداث OmniRoute للمراقبة والأتمتة في الوقت الفعلي.
+اشترك في أحداث 67router للمراقبة والأتمتة في الوقت الفعلي.
 
 - أنشئ خطاف ويب في **لوحة التحكم → خطافات الويب** مع عنوان URL المستهدف وسر توقيع HMAC
 - الأحداث المتاحة: `request.completed` و`request.failed` و`provider.unavailable` و`budget.exceeded` و`combo.switched` و`circuit_breaker.opened` و`circuit_breaker.closed`
@@ -1281,21 +1277,9 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ---
 
-## ☁️ الوكلاء السحابيون
-
-يتكامل OmniRoute مع وكلاء البرمجة السحابيين (**OpenAI Codex Cloud** و**Devin** و**Jules** و**Antigravity**) بحيث يمكنك إرسال المهام طويلة الأمد من لوحة التحكم نفسها التي تدير التوجيه المحلي.
-
-- أنشئ المهام في **لوحة التحكم → الوكلاء السحابيون** أو عبر `POST /api/v1/agents/tasks`
-- تتبّع الحالة والسجلات والمخرجات لكل مهمة
-- استخدم مفتاح API خاصًا بك لكل مزوّد — لا تغادر بيانات الاعتماد مثيل OmniRoute أبدًا
-
-المرجع الكامل: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ الإدارة البرمجية
 
-يمكنك إدارة كل مورد في OmniRoute (المزوّدون والمجموعات والمفاتيح والإعدادات) عبر HTTP باستخدام **مفتاح Bearer ذي النطاق `manage`**.
+يمكنك إدارة كل مورد في 67router (المزوّدون والمجموعات والمفاتيح والإعدادات) عبر HTTP باستخدام **مفتاح Bearer ذي النطاق `manage`**.
 
 أنشئ المفتاح في **لوحة التحكم → مفاتيح API → مفتاح جديد → النطاق: manage**، ثم:
 
@@ -1328,7 +1312,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 واجهة سطر الأوامر الداخلية
 
-يتضمن OmniRoute واجهة سطر أوامر داخلية (`omniroute …`) للإعداد والتشخيص والتحكم في وقت التشغيل. وهي **منفصلة عن صفحة "أدوات سطر الأوامر" في لوحة التحكم**، التي تهيئ أدوات سطر أوامر تابعة لجهات خارجية (Claude Code وCursor وCodex وCline و…) لكي تتمكن من الاتصال بـ OmniRoute.
+يتضمن 67router واجهة سطر أوامر داخلية (`omniroute …`) للإعداد والتشخيص والتحكم في وقت التشغيل. وهي **منفصلة عن صفحة "أدوات سطر الأوامر" في لوحة التحكم**، التي تهيئ أدوات سطر أوامر تابعة لجهات خارجية (Claude Code وCursor وCodex وCline و…) لكي تتمكن من الاتصال بـ 67router.
 
 ```bash
 omniroute setup                    # معالج تفاعلي (كلمة المرور، والموفرون، والتركيبات)
@@ -1346,7 +1330,6 @@ omniroute restore [<timestamp>]    # الاستعادة من لقطة
 omniroute health                   # تفاصيل السلامة (قواطع الدارة، وذاكرة التخزين المؤقت، والذاكرة)
 omniroute quota                    # استخدام حصة الموفر
 omniroute mcp status               # حالة خادم MCP
-omniroute a2a status               # حالة خادم A2A
 omniroute tunnel list|create|stop  # أنفاق Cloudflare/Tailscale/ngrok
 omniroute reset-password           # إعادة تعيين كلمة مرور المسؤول
 omniroute --mcp                    # تشغيل خادم MCP عبر stdio
@@ -1359,7 +1342,7 @@ omniroute --port 3000              # تشغيل الخادم على منفذ م�
 
 ## 🖥️ تطبيق سطح المكتب (Electron)
 
-يتوفر OmniRoute كتطبيق أصلي لسطح المكتب لأنظمة Windows وmacOS وLinux.
+يتوفر 67router كتطبيق أصلي لسطح المكتب لأنظمة Windows وmacOS وLinux.
 
 ### التثبيت
 

@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot**은 OmniRoute가 제공하는 모든 모델을 _네이티브_ GitHub Copilot Chat
+**OmniCopilot**은 67router가 제공하는 모든 모델을 _네이티브_ GitHub Copilot Chat
 모델 선택기에 표시합니다. 두 번째 사이드바나 별도의 채팅 UI가 필요하지 않습니다. Copilot의 에이전트 모드, 도구 호출,
 MCP 서버 및 사용자 지정 지침이 모두 그대로 작동하며, 선택한 모델에서 실행됩니다.
 
@@ -23,13 +23,13 @@ MCP 서버 및 사용자 지정 지침이 모두 그대로 작동하며, 선택�
 
 ## 설정
 
-1. **OmniRoute 실행** — `npm install -g omniroute && omniroute`(대시보드는 `http://localhost:20128`에서 실행).
+1. **67router 실행** — `npm install -g omniroute && omniroute`(대시보드는 `http://localhost:20128`에서 실행).
 2. **확장 프로그램 설치** — 확장 보기에서 "OmniRoute"를 검색합니다.
 3. **모델 선택** — Copilot Chat → 모델 선택기 → **Manage Models…** → **OmniRoute**로 이동한 다음
    원하는 항목을 선택합니다.
 
-OmniRoute가 기본 포트에서 실행되는 경우 구성할 항목이 없습니다. 원격 인스턴스의 경우
-**활동 표시줄에서 OmniRoute 아이콘**을 열거나 `OmniRoute: Manage Connection`을 실행하고 다음을 설정합니다.
+67router가 기본 포트에서 실행되는 경우 구성할 항목이 없습니다. 원격 인스턴스의 경우
+**활동 표시줄에서 67router 아이콘**을 열거나 `OmniRoute: Manage Connection`을 실행하고 다음을 설정합니다.
 
 - **서버 URL** — 서버 루트입니다(예: `http://192.168.0.15:20128`). `/v1` 접미사는
   확장 프로그램에서 추가하므로 포함하지 마세요.
@@ -74,7 +74,7 @@ HTTP 400 — 모델 '<id>'은(는) 이미지 생성 모델이므로
 
 따라서 선택기에 도달하기 전에 `type` 필드를 기준으로 필터링됩니다. **Responses-API
 모델은 유지됩니다.** 모든 Codex / GPT-5.x 항목은 `supported_endpoints: ["responses"]`를 제공하며,
-OmniRoute가 이를 `/v1/chat/completions`용으로 변환하므로 문제없이 사용할 수 있습니다.
+67router가 이를 `/v1/chat/completions`용으로 변환하므로 문제없이 사용할 수 있습니다.
 
 ### 구성하지 않은 공급자
 
@@ -86,7 +86,7 @@ OmniRoute가 이를 `/v1/chat/completions`용으로 변환하므로 문제없이
 
 ## VS Code 탭 내부의 대시보드
 
-`omnicopilot.dashboardOpen: "editor"`는 외부 브라우저 대신 Simple Browser를 통해 OmniRoute 대시보드를 편집기 탭에 렌더링합니다. 임베딩은 서버에서 `DASHBOARD_ALLOW_EMBED=vscode`를 통해 **명시적으로 활성화**해야 합니다. 이 설정은 기본값인 `frame-ancestors 'none'` + `X-Frame-Options: DENY` 대신 `frame-ancestors 'self' vscode-webview:`가 포함된 HTML 페이지를 제공합니다. API 표면(`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`)에는 어느 경우든 엄격한 헤더가 유지됩니다.
+`omnicopilot.dashboardOpen: "editor"`는 외부 브라우저 대신 Simple Browser를 통해 67router 대시보드를 편집기 탭에 렌더링합니다. 임베딩은 서버에서 `DASHBOARD_ALLOW_EMBED=vscode`를 통해 **명시적으로 활성화**해야 합니다. 이 설정은 기본값인 `frame-ancestors 'none'` + `X-Frame-Options: DENY` 대신 `frame-ancestors 'self' vscode-webview:`가 포함된 HTML 페이지를 제공합니다. API 표면(`/api`, `/v1`, `/v1beta`, `/healthz`)에는 어느 경우든 엄격한 헤더가 유지됩니다.
 
 > ⚠️ **이는 런타임 플래그가 아니라 빌드 타임 플래그입니다.** Next.js는 `headers()`를 라우트
 > 매니페스트에 컴파일하므로, 번들을 빌드할 때 `next.config.mjs`가 변수를 읽습니다
@@ -122,7 +122,7 @@ npm start
 
 | 증상                                             | 원인 / 해결 방법                                                                                                                                                                                                                                                            |
 | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 선택기에 OmniRoute 모델이 없음                   | 서버에 연결할 수 없습니다. 상태 표시줄의 점이 회색으로 바뀝니다. `OmniRoute: Check Connection`을 실행하세요. 모델 검색은 의도적으로 아무 메시지도 표시하지 않으며, 사용자에게 묻는 대신 모델을 추가하지 않습니다.                                                           |
+| 선택기에 67router 모델이 없음                    | 서버에 연결할 수 없습니다. 상태 표시줄의 점이 회색으로 바뀝니다. `OmniRoute: Check Connection`을 실행하세요. 모델 검색은 의도적으로 아무 메시지도 표시하지 않으며, 사용자에게 묻는 대신 모델을 추가하지 않습니다.                                                           |
 | 모든 모델이 두 번씩 표시됨                       | 1.0.1 이전 버전의 OmniCopilot을 사용하고 있습니다. 업데이트하세요. 이제 확장 프로그램은 `?prefix=alias`를 요청합니다.                                                                                                                                                       |
 | 이전에 표시되던 이미지/오디오 모델이 사라짐      | 1.0.1부터 의도적으로 적용된 변경입니다. 이러한 모델은 원래 채팅 요청에 응답할 수 없었습니다.                                                                                                                                                                                |
 | Activity Bar에서 패널이 보이지 않음              | VS Code는 추가 뷰 컨테이너를 Activity Bar 하단의 **"…"** 오버플로로 이동하며, 마우스 오른쪽 버튼 클릭으로 숨긴 컨테이너는 계속 숨겨진 상태로 유지됩니다. Activity Bar를 마우스 오른쪽 버튼으로 클릭 → **OmniRoute**를 선택하거나 `OmniRoute: Manage Connection`으로 여세요. |
@@ -134,6 +134,6 @@ npm start
 ## 참고 항목
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — 기타 모든 코딩 도구
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — 원격 OmniRoute 제어
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — 원격 67router 제어
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` 계약
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — 확장 프로그램 자체 카탈로그 참고 사항

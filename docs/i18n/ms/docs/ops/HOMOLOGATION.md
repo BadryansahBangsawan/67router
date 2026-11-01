@@ -4,7 +4,7 @@
 
 ---
 
-Pengesahan E2E persekitaran sebenar bagi pelaksanaan OmniRoute yang berjalan pada VPS homologasi
+Pengesahan E2E persekitaran sebenar bagi pelaksanaan 67router yang berjalan pada VPS homologasi
 (`HOMOLOG_BASE_URL`, cth. `http://192.168.0.15:20128`). Satu perintah menggantikan senarai semak
 manual STOP #2 keluaran dengan pelaksanaan automatik yang menghasilkan bukti.
 

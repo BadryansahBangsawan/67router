@@ -7,7 +7,7 @@
 > **Chanzo rasmi:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Ilisasishwa mwisho:** 2026-06-28 — v3.8.40
 
-OmniRoute inaweza kuweka seva yake ya ndani (`http://localhost:20128`) kwenye
+67router inaweza kuweka seva yake ya ndani (`http://localhost:20128`) kwenye
 intaneti ya umma kupitia mifumo mitatu ya tunnel. Hii ni muhimu kwa:
 
 - Miito ya kurudi ya OAuth kutoka kwa watoa huduma za cloud (Antigravity, Gemini, Cursor) inayohitaji
@@ -15,7 +15,7 @@ intaneti ya umma kupitia mifumo mitatu ya tunnel. Hii ni muhimu kwa:
 - Kushiriki instance yako ya ndani na wenzako bila kupeleka VM.
 - Majaribio kupitia simu, kwa mbali, au kati ya mitandao tofauti.
 
-Mifumo yote mitatu inadhibitiwa ndani ya mchakato — OmniRoute huanzisha/husimamisha
+Mifumo yote mitatu inadhibitiwa ndani ya mchakato — 67router huanzisha/husimamisha
 binary au SDK inayohusika kutoka kwenye dashboard au REST API. Hakuna usanidi wa
 reverse-proxy au systemd unaohitajika.
 
@@ -41,7 +41,7 @@ hali mbili, zinazochaguliwa kulingana na kama config ya named tunnel imetolewa:
 http://localhost:<apiPort>` na kuchanganua URL ya `*.trycloudflare.com` iliyotolewa
   kutoka stdout. URL ni za muda mfupi na hubadilika kila inapoanzishwa upya.
 - **Named tunnel (ya hiari).** Wakati `CLOUDFLARED_CONFIG` inaelekeza kwenye
-  `config.yml` ya cloudflared inayodhibitiwa ndani ya mashine, OmniRoute huendesha `cloudflared tunnel --no-autoupdate
+  `config.yml` ya cloudflared inayodhibitiwa ndani ya mashine, 67router huendesha `cloudflared tunnel --no-autoupdate
 --config <path> run`, na kukupa **hostname thabiti yenye jina**. Config
   hutoa UUID ya tunnel, `credentials-file`, na uelekezaji wa `ingress`, kwa hivyo
   `--url` haitumiki na token ya dashboard ya Zero Trust haihitajiki. `run` husoma
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` na kuchanganua URL ya `*.trycloudflare.com` iliyotol
 
 Tabia muhimu:
 
-- **Usakinishaji wa kiotomatiki.** Inapotumiwa kwa mara ya kwanza, OmniRoute hupakua binary ya hivi karibuni ya `cloudflared`
+- **Usakinishaji wa kiotomatiki.** Inapotumiwa kwa mara ya kwanza, 67router hupakua binary ya hivi karibuni ya `cloudflared`
   kutoka matoleo rasmi ya GitHub (usakinishaji unaodhibitiwa huhifadhiwa chini ya
   `DATA_DIR/cloudflared/`). SHA256 ya asset iliyopakuliwa huthibitishwa dhidi ya
   manifest ya toleo kabla ya kutekelezwa.
@@ -68,7 +68,7 @@ Tabia muhimu:
    ```
 
 2. Andika `~/.cloudflared/config.yml` inayoelekeza hostname yako kwenye port ya ndani ya
-   API ya OmniRoute (chaguo-msingi ni 20128):
+   API ya 67router (chaguo-msingi ni 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Tabia muhimu:
      - service: http_status:404
    ```
 
-3. Elekeza OmniRoute kwenye config na uanzishe (upya) tunnel:
+3. Elekeza 67router kwenye config na uanzishe (upya) tunnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # si lazima — hubatilisha hostname ambayo OmniRoute huripoti; vinginevyo husomwa kutoka
+   # si lazima — hubatilisha hostname ambayo 67router huripoti; vinginevyo husomwa kutoka
    # kwenye kanuni ya kwanza ya ingress ya config:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -121,12 +121,12 @@ Au kupitia dashboard: **Settings → Tunnels → Cloudflare**.
 
 ### Env vars za hiari
 
-| Kigeu                                                | Kusudi                                                                                                                                                                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Hubatilisha njia ya faili tekelezi. Ikiwa imewekwa na ni halali, OmniRoute huitumia badala ya kuipakua.                                                                                                       |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Itifaki ya usafirishaji (chaguo-msingi `http2`; pia `quic`, `auto`).                                                                                                                                          |
-| `CLOUDFLARED_CONFIG`                                 | Njia ya kuelekea kwenye `config.yml` ya cloudflared inayodhibitiwa ndani ya mfumo. Ikiwekwa, OmniRoute huendesha handaki **lenye jina/la kudumu** (`tunnel --config <path> run`) badala ya handaki la haraka. |
-| `CLOUDFLARED_HOSTNAME`                               | Hubatilisha jina la mpangishi wa umma linaloripotiwa la handaki lenye jina (k.m. `ai.example.com`). Ikiwa halijawekwa, husomwa kutoka kwenye jina la mpangishi la kwanza la `ingress` katika usanidi.         |
+| Kigeu                                                | Kusudi                                                                                                                                                                                                       |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `CLOUDFLARED_BIN`                                    | Hubatilisha njia ya faili tekelezi. Ikiwa imewekwa na ni halali, 67router huitumia badala ya kuipakua.                                                                                                       |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Itifaki ya usafirishaji (chaguo-msingi `http2`; pia `quic`, `auto`).                                                                                                                                         |
+| `CLOUDFLARED_CONFIG`                                 | Njia ya kuelekea kwenye `config.yml` ya cloudflared inayodhibitiwa ndani ya mfumo. Ikiwekwa, 67router huendesha handaki **lenye jina/la kudumu** (`tunnel --config <path> run`) badala ya handaki la haraka. |
+| `CLOUDFLARED_HOSTNAME`                               | Hubatilisha jina la mpangishi wa umma linaloripotiwa la handaki lenye jina (k.m. `ai.example.com`). Ikiwa halijawekwa, husomwa kutoka kwenye jina la mpangishi la kwanza la `ingress` katika usanidi.        |
 
 ## 2. ngrok
 
@@ -171,7 +171,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Jibu linajumuisha `publicUrl` iliyotolewa (k.m.
 `https://abcd-1234.ngrok-free.app`). Vikoa maalum, maeneo, na kanuni za sera
-lazima zisanidiwe kwenye dashibodi ya ngrok — OmniRoute yenyewe hupeleka tu URL
+lazima zisanidiwe kwenye dashibodi ya ngrok — 67router yenyewe hupeleka tu URL
 lengwa ya ndani kwenye SDK.
 
 ## 3. Tailscale Funnel
@@ -186,14 +186,14 @@ ya umma huwa na muundo `https://<machine>.<tailnet>.ts.net/`.
 
 ### Mahitaji ya awali
 
-1. Sakinisha Tailscale (au iruhusu OmniRoute ifanye hivyo — tazama endpoint ya `install` hapa chini).
-2. Ingia (`tailscale login` au kupitia endpoint ya `login` ya OmniRoute).
+1. Sakinisha Tailscale (au iruhusu 67router ifanye hivyo — tazama endpoint ya `install` hapa chini).
+2. Ingia (`tailscale login` au kupitia endpoint ya `login` ya 67router).
 3. Washa Funnel kwa ajili ya tailnet yako katika dashibodi ya msimamizi wa Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 Kwenye Linux na macOS, daemoni (`tailscaled`) huhitaji `sudo` ili kudhibitiwa.
 Endpoint za POST zinakubali uga wa hiari wa `sudoPassword`, ambao hupelekwa
-kwenye akiba ya nenosiri ya MITM ya OmniRoute (`getCachedPassword` /
+kwenye akiba ya nenosiri ya MITM ya 67router (`getCachedPassword` /
 `setCachedPassword`) kwa muda wa ombi. Windows hutumia usakinishaji chaguo-msingi
 wa huduma katika `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -253,7 +253,7 @@ Hakuna endpoint kuu ya `/api/settings/tunnels` — kila backend inajitegemea.
 
 ## Mambo ya kuzingatia kuhusu callback ya OAuth
 
-Unapoweka OmniRoute ipatikane kupitia tunnel, dashibodi na mitiririko ya OAuth lazima
+Unapoweka 67router ipatikane kupitia tunnel, dashibodi na mitiririko ya OAuth lazima
 iunde URL za callback kwa kutumia hostname ya **umma**, si `localhost`. Vinginevyo,
 mtoa huduma wa OAuth humwelekeza mtumiaji kwenye URL ambayo seva zake haziwezi kufikia,
 na mchakato wa kuanzisha muunganisho hushindwa.
@@ -270,7 +270,7 @@ Weka:
 NEXT_PUBLIC_BASE_URL=https://<your-tunnel-host>
 ```
 
-na uanzishe upya OmniRoute kabla ya kuanzisha OAuth. Kwa Cloudflare Quick
+na uanzishe upya 67router kabla ya kuanzisha OAuth. Kwa Cloudflare Quick
 Tunnels za muda mfupi, URL hubadilika baada ya kila uanzishaji upya, kwa hivyo kwa matumizi
 ya OAuth katika uzalishaji, pendelea ngrok yenye domain iliyohifadhiwa au Tailscale Funnel.
 
@@ -285,14 +285,14 @@ Dashibodi huonyesha hali ya tunnel chini ya **Mipangilio → Tunnel**:
 - Ujumbe wa mwisho wa hitilafu, ikiwa upo.
 
 Kwa ufuatiliaji wa kiprogramu, fanya polling ya endpoint za `GET` za kila backend.
-Kuendesha zaidi ya backend moja kwa wakati mmoja kunaruhusiwa; OmniRoute itafuatilia kila
+Kuendesha zaidi ya backend moja kwa wakati mmoja kunaruhusiwa; 67router itafuatilia kila
 moja kivyake.
 
 ## Utatuzi wa matatizo
 
 ### "cloudflared binary not found"
 
-OmniRoute hujaribu kusakinisha kiotomatiki inapotumiwa kwa mara ya kwanza. Ikiwa usakinishaji
+67router hujaribu kusakinisha kiotomatiki inapotumiwa kwa mara ya kwanza. Ikiwa usakinishaji
 umezuiwa (mtandao wenye vikwazo, hakuna ufikiaji wa GitHub), pakua `cloudflared` mwenyewe kutoka
 <https://github.com/cloudflare/cloudflared/releases> na uweke
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

@@ -11,7 +11,7 @@
 
 ## Bu nima
 
-OmniRoute **Notion** ish maydoniga **kontekst manbasi** sifatida ulanishi mumkin — bu agentlar ichki MCP serveri orqali foydalanadigan, oʻqish va yozish mumkin boʻlgan bilimlar bazasidir. Notion integratsiya tokeni sozlangach, MCP vositalari LLM modeliga sahifalar va maʼlumotlar bazalarini qidirish, sahifa tarkibi va bloklar daraxtlarini oʻqish, filtrlar/saralashlar yordamida maʼlumotlar bazalariga soʻrov yuborish hamda yangi bloklarni qoʻshish imkonini beradi — bularning barchasi OmniRoute orqali proksi qilinadi (qayta urinish, vaqt chegarasi va xatolarni tasniflash bilan), shuning uchun model hech qachon Notion API bilan bevosita ishlamaydi.
+67router **Notion** ish maydoniga **kontekst manbasi** sifatida ulanishi mumkin — bu agentlar ichki MCP serveri orqali foydalanadigan, oʻqish va yozish mumkin boʻlgan bilimlar bazasidir. Notion integratsiya tokeni sozlangach, MCP vositalari LLM modeliga sahifalar va maʼlumotlar bazalarini qidirish, sahifa tarkibi va bloklar daraxtlarini oʻqish, filtrlar/saralashlar yordamida maʼlumotlar bazalariga soʻrov yuborish hamda yangi bloklarni qoʻshish imkonini beradi — bularning barchasi 67router orqali proksi qilinadi (qayta urinish, vaqt chegarasi va xatolarni tasniflash bilan), shuning uchun model hech qachon Notion API bilan bevosita ishlamaydi.
 
 Integratsiya rasmiy Notion REST API
 (`https://api.notion.com/v1`, `Notion-Version: 2026-03-11`) ustidagi ixcham va mustahkamlangan qobiqdir. Mijoz
@@ -34,7 +34,7 @@ saqlanadi. Uni Endpoint boshqaruv panelidagi **Context Sources** yorligʻidan
 
 > [!NOTE]
 > Token — bu **Notion ichki integratsiya tokeni**. Integratsiyani
-> <https://www.notion.com/my-integrations> manzilida yarating, soʻng OmniRoute foydalanishi kerak boʻlgan
+> <https://www.notion.com/my-integrations> manzilida yarating, soʻng 67router foydalanishi kerak boʻlgan
 > sahifalar/maʼlumotlar bazalarini shu integratsiya bilan ulashing (Notion ruxsat modeli butun ish maydoni
 > miqyosida emas, ulashishga asoslangan).
 
@@ -54,7 +54,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Har uchala metod ham boshqaruv paneli autentifikatsiyasini (`isAuthenticated`) talab qiladi. `POST` soʻrovida
-OmniRoute tokenni saqlaydi va darhol 1 ta natijali sinov qidiruvini bajaradi; agar Notion
+67router tokenni saqlaydi va darhol 1 ta natijali sinov qidiruvini bajaradi; agar Notion
 xato obyektini qaytarsa, token tozalanadi va chaqiruv `400` bilan muvaffaqiyatsiz tugaydi.
 
 ## MCP vositalari (6)

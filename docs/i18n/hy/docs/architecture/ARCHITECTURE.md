@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Հայերեն)
+# 67router Architecture (Հայերեն)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Վերջին թարմացումը՝ 2026-06-28_
 
 ## Գործադիր ամփոփագիր
 
-OmniRoute-ը Next.js-ի հիման վրա կառուցված տեղային AI երթուղման դարպաս և կառավարման վահանակ է։
+67router-ը Next.js-ի հիման վրա կառուցված տեղային AI երթուղման դարպաս և կառավարման վահանակ է։
 Այն տրամադրում է OpenAI-ի հետ համատեղելի մեկ վերջնակետ (`/v1/*`) և երթուղում է թրաֆիկը մի քանի վերին մակարդակի մատակարարների միջև՝ ապահովելով փոխակերպում, պահուստային անցում, տոկենների թարմացում և օգտագործման հետևում։
 
 Հիմնական հնարավորությունները՝
@@ -128,13 +128,11 @@ v3.8.0 հարթակի կանոնական, տարբերակների վերահս�
 - `/dashboard/limits` — քվոտաների և հաճախականության կառավարում
 - `/dashboard/cli-tools` — CLI-ի մեկնարկային կարգավորում, գործարկման միջավայրի հայտնաբերում և կազմաձևման ստեղծում
 - `/dashboard/agents` — հայտնաբերված ACP գործակալներ և հատուկ գործակալների գրանցում
-- `/dashboard/cloud-agents` — cloud-ում տեղակայված գործակալների առաջադրանքներ (Codex Cloud, Devin, Jules) և առաջադրանքների կենսացիկլ
 - `/dashboard/skills` — A2A հմտությունների գրանցամատյան, sandbox-ում կատարում և ներկառուցված հմտությունների կատալոգ
 - `/dashboard/memory` — խոսակցական մշտական հիշողության դիտարկում և առբերում
 - `/dashboard/webhooks` — ելքային webhook բաժանորդագրություններ, գաղտնիքների ռոտացիա և կրկնափորձերի վիճակագրություն
 - `/dashboard/batch` — փաթեթային առաջադրանքների ուղարկում և առաջընթաց
 - `/dashboard/cache` — read-through և reasoning cache-ի վիճակագրություն ու արտամղման կառավարում
-- `/dashboard/playground` — ինտերակտիվ զրույցի փորձադաշտ՝ կազմաձևված ցանկացած combo-ի կամ մոդելի հետ
 - `/dashboard/changelog` — հավելվածի ներսում փոփոխությունների մատյանի դիտարկիչ (արտապատկերում է `CHANGELOG.md`-ը)
 - `/dashboard/system` — գործարկման միջավայրի ախտորոշում, տարբերակի տեղեկություններ և միջավայրի վավերացման միջերես
 - `/dashboard/onboarding` — նոր տեղադրումների առաջին գործարկման կարգավորման օգնական
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Բրաուզերի կառավարման վահանակ]
     end
 
-    subgraph Router[OmniRoute-ի տեղային գործընթաց]
+    subgraph Router[67router-ի տեղային գործընթաց]
         API[V1 համատեղելիության API\n/v1/*]
         DASH[Կառավարման վահանակ + կառավարման API\n/api/*]
         CORE[SSE + փոխակերպման միջուկ\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - Բյուջե՝ `src/app/api/usage/budget` (GET/POST)
 - Պահուստային անցման շղթաներ՝ `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Համապատասխանության աուդիտ՝ `src/app/api/compliance/audit-log` (GET՝ էջավորումով + կառուցվածքային մետատվյալներով)
-- Գնահատումներ՝ `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Քաղաքականություններ՝ `src/app/api/policies` (GET/POST)
 - Համաժամացման թոքեններ՝ `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Կազմաձևման փաթեթ՝ `src/app/api/sync/bundle` (GET՝ կարգավորումների/մատակարարների/համակցությունների/բանալիների ETag-ով տարբերակավորված ակնթարթային պատկեր)
@@ -316,7 +313,6 @@ flowchart LR
 - Հարցման ժամանակային սահմանափակում՝ `src/shared/utils/fetchTimeout.ts`
 - Հարցման հեռաչափություն՝ `src/shared/utils/requestTelemetry.ts`
 - Համապատասխանություն/աուդիտ՝ `src/lib/compliance/index.ts`
-- Գնահատումների գործարկիչ՝ `src/lib/evals/evalRunner.ts`
 - Տիրույթի վիճակի պահպանում՝ `src/lib/db/domainState.ts` — SQLite CRUD՝ պահուստային անցման շղթաների, բյուջեների, ծախսերի պատմության, արգելափակման վիճակի և շղթայի անջատիչների համար
 
 OAuth մատակարարների մոդուլներ (27 առանձին ֆայլ `src/lib/oauth/providers/`-ի ներքո)․
@@ -328,7 +324,7 @@ OAuth մատակարարների մոդուլներ (27 առանձին ֆայլ 
 
 ## 5) Ներդրված ծառայություններ (v3.8.4)
 
-OmniRoute-ը կարող է տեղադրել, վերահսկել և հարցումներն ուղղորդել դեպի տեղային աշխատող AI գործիքային գործընթացներ, որոնք կոչվում են **ներդրված ծառայություններ**։ Մատակարարվում են հինգը՝ 9Router, CLIProxyAPI, Bifrost, Mux և Dario։
+67router-ը կարող է տեղադրել, վերահսկել և հարցումներն ուղղորդել դեպի տեղային աշխատող AI գործիքային գործընթացներ, որոնք կոչվում են **ներդրված ծառայություններ**։ Մատակարարվում են հինգը՝ 9Router, CLIProxyAPI, Bifrost, Mux և Dario։
 
 Ճարտարապետական շերտերը՝
 
@@ -385,23 +381,6 @@ Auto Combo-ն հարցման պահին դինամիկորեն գնահատու�
 Ալգորիթմական ամբողջական մանրամասների համար (գործոնների բանաձևեր, կշիռների ճշգրտում) տե՛ս
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)։
 
-### B. Ամպային գործակալներ
-
-Cloud Agents-ը երրորդ կողմերի հոսթինգով տրամադրվող կոդային գործակալների հարթակները (Codex Cloud, Devin,
-Jules) միավորում է տվյալների բազայի վրա հիմնված առաջադրանքների միասնական կենսացիկլի հետևում։ Առաջադրանքների ստեղծման/ստուգման
-բոլոր վերջնակետերը պահանջում են կառավարման նույնականացում։
-
-- Մոդուլի արմատ՝ `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, ինչպես նաև յուրաքանչյուր գործակալի ենթապանակները `agents/`-ի տակ)
-- Յուրաքանչյուր գործակալի իրականացումներ՝ `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Հանրային վերջնակետեր՝ `/api/v1/agents/tasks/*` (ցուցակագրում/ստեղծում/ստացում/չեղարկում)
-- Կառավարման վերջնակետեր՝ `/api/cloud/*` (տրամադրում, կարգավիճակ, խմբաքանակ)
-- Կառավարման վահանակ՝ `/dashboard/cloud-agents`
-- Պահոց՝ `cloud_agent_tasks` աղյուսակ
-
-Յուրաքանչյուր գործակալի տրամադրման և OAuth-ի առանձնահատկությունների համար տե՛ս
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)։
-
 ### C. Պաշտպանիչ սահմանափակումներ
 
 Պաշտպանիչ սահմանափակումների մոդուլը թեժ վերալիցքավորվող միջնաշերտ է, որը ստուգում է հարցումներն
@@ -437,7 +416,7 @@ Jules) միավորում է տվյալների բազայի վրա հիմնվա
 - Քվոտայի քեշ՝ `src/domain/quotaCache.ts`
 - Դեգրադացման վիճակ՝ `src/domain/degradation.ts`
 - Կազմաձևման աուդիտ՝ `src/domain/configAudit.ts`
-- OmniRoute պատասխանի մետատվյալների կառուցիչ՝ `src/domain/omnirouteResponseMeta.ts`
+- 67router պատասխանի մետատվյալների կառուցիչ՝ `src/domain/omnirouteResponseMeta.ts`
 - Գնահատման ենթահամակարգ՝ `src/domain/assessment/` — պարբերական գնահատման առաջադրանքներ
 
 ### E. Լիազորման կոնվեյեր
@@ -812,7 +791,7 @@ flowchart LR
         Browser[Կառավարման վահանակի դիտարկիչ]
     end
 
-    subgraph ContainerOrProcess[OmniRoute գործարկման միջավայր]
+    subgraph ContainerOrProcess[67router գործարկման միջավայր]
         Next[Next.js սերվեր\nPORT=20128]
         Core[SSE միջուկ + կատարիչներ]
         MainDB[(storage.sqlite)]
@@ -930,7 +909,7 @@ flowchart LR
 
 ## Պրովայդերների համատեղելիության մատրիցա
 
-> **Նշում․** Ստորև ներկայացված մատրիցան OmniRoute v3.8.0-ում գրանցված 351 պրովայդերների ներկայացուցչական նմուշ է։
+> **Նշում․** Ստորև ներկայացված մատրիցան 67router v3.8.0-ում գրանցված 351 պրովայդերների ներկայացուցչական նմուշ է։
 > Կանոնական և շարունակաբար թարմացվող ցանկի համար տե՛ս
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (ավտոմատ գեներացված) կամ տվյալների հավաստի սկզբյուրը՝
 > `src/shared/constants/providers.ts` (բեռնման ժամանակ վավերացվում է Zod-ի միջոցով)։
@@ -1113,7 +1092,7 @@ flowchart LR
 - հաճախորդից ստացված սկզբնական հարցումը
 - թարգմանված հարցումը, որն իրականում ուղարկվել է վերին մակարդակ
 - մատակարարի պատասխանը՝ վերակառուցված որպես JSON․ հոսքային պատասխանները սեղմվում են մինչև վերջնական ամփոփումը՝ հոսքի մետատվյալների հետ միասին
-- OmniRoute-ի կողմից վերադարձված վերջնական հաճախորդի պատասխանը․ հոսքային պատասխանները պահվում են նույն սեղմ ամփոփման ձևաչափով
+- 67router-ի կողմից վերադարձված վերջնական հաճախորդի պատասխանը․ հոսքային պատասխանները պահվում են նույն սեղմ ամփոփման ձևաչափով
 
 ## Անվտանգության տեսանկյունից զգայուն սահմաններ
 

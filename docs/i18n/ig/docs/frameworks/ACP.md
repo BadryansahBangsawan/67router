@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-ekewa **nchọpụta CLI**, **Agent Client Protocol nke e wuru n'ime ya**, na
+67router na-ekewa **nchọpụta CLI**, **Agent Client Protocol nke e wuru n'ime ya**, na
 **ihe nkwụnye stdio ochie**. Ịchọta binary arụnyere anaghị egosi na
 ntọala njirimara ya, ndakọrịta model ya, ma ọ bụ njikere ya ijikwa prompt dị mma.
 
@@ -120,5 +120,3 @@ e nyere authorization iche na target environment.
 - [Protocol agent](./AGENT_PROTOCOLS_GUIDE.md)
 - [Nkwekọrịta mmalite CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Tool CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)
-- [Agent cloud](./CLOUD_AGENT.md)

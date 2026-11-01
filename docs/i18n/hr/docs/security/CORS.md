@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute kontrolira koja **izvorišta preglednika** smiju čitati odgovore iz drugih izvorišta
+67router kontrolira koja **izvorišta preglednika** smiju čitati odgovore iz drugih izvorišta
 putem jednog centraliziranog popisa dopuštenih izvorišta. Model je **prema zadanim postavkama zatvoren**:
 nijedno izvorište nije dopušteno dok ga izričito ne omogućite. Ova stranica opisuje kako se popis dopuštenih
 izvorišta razrješava, što `CORS_ALLOW_ALL=true` zapravo izlaže (i, što je važno, što
@@ -46,13 +46,13 @@ sljedećim redoslijedom:
 ## Model prijetnji — što `CORS_ALLOW_ALL=true` zapravo izlaže
 
 Generičko upozorenje OWASP-a („CORS sa zamjenskim znakom = bilo koja web-lokacija može pozvati vaš API”) vrijedi
-shvatiti ozbiljno, ali izloženost OmniRoutea **uža je od generičkog slučaja**
+shvatiti ozbiljno, ali izloženost 67routera **uža je od generičkog slučaja**
 zbog jedne konkretne implementacijske činjenice:
 
 > **Središnji `applyCorsHeaders()` nikada ne emitira
 > `Access-Control-Allow-Credentials`.** Preglednik neće izložiti _autentificirani_
 > odgovor iz drugog izvorišta (koji sadrži kolačić) osim ako poslužitelj pošalje
-> `Access-Control-Allow-Credentials: true`. OmniRouteov zajednički CORS put to nikada
+> `Access-Control-Allow-Credentials: true`. 67routerov zajednički CORS put to nikada
 > ne čini.
 
 To za svaku površinu znači sljedeće, čak i uz `CORS_ALLOW_ALL=true`:
@@ -69,20 +69,6 @@ omogućavanje prolaska CORS **predzahtjeva** na upravljačkim rutama — koje i 
 koju stranica iz drugog izvorišta ne može pružiti. To **nije** vektor za otmicu sesije ili
 krađu vjerodajnica na zajedničkom CORS putu.
 
-### Jedna stvarna iznimka — `/api/v1/agents/`
-
-Rute Cloud-Agenta (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) postavljaju
-vlastita CORS zaglavlja
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) i **emitiraju**
-`Access-Control-Allow-Origin: <origin>|*` zajedno s
-`Access-Control-Allow-Credentials: true`. To je jedina površina na kojoj
-vraćanje izvorišta i vjerodajnice postoje zajedno te je **neovisna o
-`CORS_ALLOW_ALL`**. Te su rute autentificirane za upravljanje
-(`requireManagementAuth`); operateri koji izlažu nadzornu ploču izvan lokalnog računala trebaju biti
-svjesni da je to jedino mjesto na kojem zaglavlja odgovora dopuštaju autentificirano čitanje iz
-drugog izvorišta. Ograničavanje na izričit popis dopuštenih izvorišta prati se
-odvojeno od ovih CORS smjernica.
-
 ## Kontrolni popis za produkciju
 
 - **Nikada ne postavljajte `CORS_ALLOW_ALL=true` u produkciji.** Ostavite tu varijablu nepostavljenom.
@@ -92,7 +78,7 @@ odvojeno od ovih CORS smjernica.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ako se OmniRoute izvodi iza obrnutog proxyja / tunela (nginx, Caddy, Cloudflare
+- Ako se 67router izvodi iza obrnutog proxyja / tunela (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), CORS **nije** jedina kontrola — zaštita ruta za povratnu petlju
   i dalje štiti rute koje mogu pokretati procese (pogledajte
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Nemojte krivotvoriti
@@ -108,7 +94,7 @@ odvojeno od ovih CORS smjernica.
 Čak vam je i tijekom razvoja zamjenski znak rijetko potreban. Dopustite samo razvojne poslužitelje koje upotrebljavate:
 
 ```bash
-# Razvojni poslužitelji Vite (5173) + Next.js (3000) koji pozivaju lokalni OmniRoute
+# Razvojni poslužitelji Vite (5173) + Next.js (3000) koji pozivaju lokalni 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +114,14 @@ ponovnog pokretanja.
   izvore za upravljanje/nadzornu ploču ni u jednu permisivnu konfiguraciju; za njih se mora i dalje
   strogo primjenjivati odbijanje pristupa u slučaju pogreške.
 
-## Primjer: obrnuti proxy ispred OmniRoutea
+## Primjer: obrnuti proxy ispred 67routera
 
-CORS provodi sam OmniRoute, pa proxy u pravilu **ne bi trebao** dodavati ni
+CORS provodi sam 67router, pa proxy u pravilu **ne bi trebao** dodavati ni
 prepisivati zaglavlja `Access-Control-*` (dvostruka zaglavlja uzrokuju probleme u preglednicima). Završite TLS
-i proslijedite promet — prepustite OmniRouteu da odgovori na predzahtjev:
+i proslijedite promet — prepustite 67routeru da odgovori na predzahtjev:
 
 ```nginx
-# nginx — proslijedi u OmniRoute; ovdje NEMOJ umetati Access-Control-*
+# nginx — proslijedi u 67router; ovdje NEMOJ umetati Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +129,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Zadržite zaglavlja za prosljeđivanje: proxy na istom računalu povezuje se s adrese povratne petlje, a upravo
-    # ona govore OmniRouteu da pozivatelj nije lokalni operater. Proxy koji ne dodaje nijedno od njih
+    # ona govore 67routeru da pozivatelj nije lokalni operater. Proxy koji ne dodaje nijedno od njih
     # čini da svaki udaljeni pozivatelj izgleda kao lokalni. Također nikada ne postavljajte X-Forwarded-For na 127.0.0.1.
 }
 ```
 
-Dopuštena izvorišta preglednika postavite u OmniRouteu (`CORS_ALLOWED_ORIGINS` ili na
+Dopuštena izvorišta preglednika postavite u 67routeru (`CORS_ALLOWED_ORIGINS` ili na
 kartici Security), a ne u proxyju.
 
 ## Izvorne datoteke
@@ -161,7 +147,6 @@ kartici Security), a ne u proxyju.
 | Stanje tijekom izvođenja za nadzornu ploču           | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Natpis upozorenja na nadzornoj ploči                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Polje Dopušteni CORS izvori                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS po ruti za Cloud-Agent (iznimka)                | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Vidi također
 

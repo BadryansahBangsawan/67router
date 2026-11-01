@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Chyba: {message}",
-    "serverOffline": "Server OmniRoute je offline. Spustite: omniroute serve",
+    "serverOffline": "Server 67router je offline. Spustite: omniroute serve",
     "authRequired": "Vyžaduje sa overenie. Nastavte OMNIROUTE_API_KEY alebo spustite: omniroute setup",
     "rateLimited": "Prekročený limit požiadaviek. Skúste za {seconds}s.",
     "timeout": "Požiadavka vypršala po {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Preskočiť potvrdenie"
   },
   "setup": {
-    "title": "Nastavenie OmniRoute",
+    "title": "Nastavenie 67router",
     "passwordPrompt": "Heslo správcu",
     "providerPrompt": "Predvolený poskytovateľ (ak chcete preskočiť, nechajte prázdne)",
     "done": "Nastavenie dokončené",
@@ -30,7 +30,7 @@
     "opencode": "Nainštalovať a nakonfigurovať pribalený doplnok @omniroute/opencode-plugin pre OpenCode"
   },
   "doctor": {
-    "title": "Diagnostika OmniRoute",
+    "title": "Diagnostika 67router",
     "dbOk": "Databáza: OK ({path})",
     "dbMissing": "Databáza: nie je inicializovaná — spustite `omniroute setup`",
     "portOk": "Port {port}: dostupný",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrovať podľa názvu poskytovateľa",
       "header": "ID         Poskytovateľ  Názov                    Stav platnosti  Stav testu  Pozastavené do",
       "noData": "Nie sú k dispozícii žiadne údaje o pripojeniach poskytovateľov.",
-      "requiresServer": "Príkaz providers status vyžaduje, aby bol server OmniRoute spustený."
+      "requiresServer": "Príkaz providers status vyžaduje, aby bol server 67router spustený."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Pridať alebo aktualizovať API kľúč pre poskytovateľa",
     "listDescription": "Zobraziť všetky nakonfigurované API kľúče",
     "removeDescription": "Odstrániť API kľúč poskytovateľa",
-    "regenerateDescription": "Opätovne vygenerovať API kľúč OmniRoute",
-    "revokeDescription": "Zrušiť API kľúč OmniRoute",
+    "regenerateDescription": "Opätovne vygenerovať API kľúč 67router",
+    "revokeDescription": "Zrušiť API kľúč 67router",
     "revealDescription": "Odkryť nezamaskovanú hodnotu API kľúča",
     "usageDescription": "Zobraziť nedávne použitie API kľúča",
     "usageLimitOpt": "Počet nedávnych požiadaviek",
@@ -172,13 +172,6 @@
       "period": "Časový rozsah: 1d|7d|30d|90d|ytd|all (predvolené: 30d)",
       "provider": "Filtrovať podľa ID poskytovateľa"
     },
-    "budget": {
-      "description": "Spravovať rozpočty nákladov",
-      "set": {
-        "scope": "Rozsah rozpočtu (predvolené: global)",
-        "period": "Obdobie rozpočtu: daily|weekly|monthly (predvolené: monthly)"
-      }
-    },
     "quota": {
       "description": "Zobraziť využitie kvóty poskytovateľa",
       "provider": "Filtrovať podľa ID poskytovateľa",
@@ -225,7 +218,7 @@
     "noCombo": "Nenašla sa žiadna zodpovedajúca kombinácia. Nakonfigurujte ju pomocou: omniroute combo create"
   },
   "chat": {
-    "description": "Odoslať jednorazovú chatovú výzvu do OmniRoute",
+    "description": "Odoslať jednorazovú chatovú výzvu do 67router",
     "file": "Načítať výzvu zo súboru",
     "stdin": "Načítať výzvu zo štandardného vstupu",
     "system": "Systémová výzva",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Spustiť server OmniRoute (predvolená akcia)",
-    "starting": "Spúšťa sa server OmniRoute na porte {port}...",
+    "description": "Spustiť server 67router (predvolená akcia)",
+    "starting": "Spúšťa sa server 67router na porte {port}...",
     "ready": "Pripravené na http://localhost:{port}",
     "stopping": "Zastavuje sa server (PID {pid})...",
     "stopped": "Server bol zastavený.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Záloha",
-    "description": "Vytvoriť zálohu údajov OmniRoute",
+    "description": "Vytvoriť zálohu údajov 67router",
     "creating": "Vytvára sa záloha...",
     "done": "Záloha bola uložená do {path}",
     "noFiles": "Žiadne súbory na zálohovanie (databáza nebola inicializovaná)",
@@ -277,7 +270,7 @@
     "noBackups": "Nenašli sa žiadne zálohy.",
     "notFound": "Záloha sa nenašla: {name}",
     "confirmRestore": "Prepísať aktuálne údaje zálohou z {ts}?",
-    "createDescription": "Vytvoriť zálohu údajov OmniRoute",
+    "createDescription": "Vytvoriť zálohu údajov 67router",
     "nameOpt": "Vlastný názov zálohy",
     "cloudOpt": "Nahrať zálohu do cloudového úložiska",
     "encryptOpt": "Zašifrovať zálohu pomocou AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Vymazanie vyrovnávacej pamäte zlyhalo."
   },
   "redis": {
-    "description": "Spustiť miestny kontajner Redis jedným kliknutím (Podman alebo Docker) na ukladanie do vyrovnávacej pamäte a sledovanie kvót OmniRoute"
+    "description": "Spustiť miestny kontajner Redis jedným kliknutím (Podman alebo Docker) na ukladanie do vyrovnávacej pamäte a sledovanie kvót 67router"
   },
   "test": {
     "description": "Otestovať pripojenie k poskytovateľovi",
@@ -390,36 +383,8 @@
       "description": "Protokol auditu MCP (alias pre audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Zobraziť zoznam dostupných zručností A2A z karty agenta"
-    },
-    "invoke": {
-      "description": "Vyvolať zručnosť A2A a vrátiť ID úlohy",
-      "input": "Vstupný objekt JSON",
-      "input_file": "Cesta k vstupnému súboru JSON",
-      "wait": "Pred návratom počkať na dokončenie úlohy",
-      "timeout": "Časový limit čakania na dokončenie v ms (predvolené: 60000)"
-    },
-    "tasks": {
-      "description": "Spravovať úlohy A2A",
-      "list": {
-        "status": "Filtrovať podľa stavu",
-        "skill": "Filtrovať podľa ID zručnosti"
-      },
-      "watch": {
-        "description": "Opakovane kontrolovať stav úlohy až do dokončenia"
-      },
-      "stream": {
-        "description": "Streamovať udalosti vykonávania úlohy prostredníctvom SSE"
-      },
-      "logs": {
-        "description": "Zobraziť správy a artefakty úlohy"
-      }
-    }
-  },
   "policy": {
-    "description": "Spravovať autorizačné politiky OmniRoute",
+    "description": "Spravovať autorizačné politiky 67router",
     "list": {
       "description": "Zobraziť zoznam politík",
       "kind": "Filtrovať podľa typu (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurovať a kontrolovať kompresný proces OmniRoute",
+    "description": "Konfigurovať a kontrolovať kompresný proces 67router",
     "status": {
       "description": "Zobraziť aktuálny stav a nastavenia kompresie"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Zmeniť adresu URL tunela {type}? (vygeneruje sa nová adresa URL)"
   },
   "stop": {
-    "description": "Zastaviť server OmniRoute",
+    "description": "Zastaviť server 67router",
     "stopping": "Server sa zastavuje (PID {pid})...",
     "stopped": "Server bol zastavený.",
     "notRunning": "Nie je spustený žiadny server.",
     "portFallback": "Nenašiel sa žiadny súbor PID, skúša sa zastavenie podľa portu..."
   },
   "restart": {
-    "description": "Reštartovať server OmniRoute",
-    "restarting": "Server OmniRoute sa reštartuje..."
+    "description": "Reštartovať server 67router",
+    "restarting": "Server 67router sa reštartuje..."
   },
   "dashboard": {
-    "description": "Otvoriť ovládací panel OmniRoute v prehliadači",
+    "description": "Otvoriť ovládací panel 67router v prehliadači",
     "opening": "Otvára sa ovládací panel na adrese {url}",
     "urlOnly": "Vypísať adresu URL ovládacieho panela bez otvorenia prehliadača",
     "tui": "Otvoriť interaktívny ovládací panel TUI (terminálové používateľské rozhranie, 7 kariet)"
@@ -560,120 +525,6 @@
       "description": "Získať jednu položku auditného protokolu podľa ID"
     }
   },
-  "skills": {
-    "description": "Spravovať zručnosti OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Zobraziť zoznam nainštalovaných zručností",
-      "type": "Filtrovať podľa typu (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Zobraziť iba povolené zručnosti",
-      "disabled": "Zobraziť iba zakázané zručnosti",
-      "api_key": "Filtrovať podľa kľúča API"
-    },
-    "get": {
-      "description": "Získať podrobnosti o zručnosti podľa ID"
-    },
-    "install": {
-      "description": "Nainštalovať zručnosť zo súboru alebo URL",
-      "from_file": "Cesta k súboru s definíciou zručnosti vo formáte JSON",
-      "from_url": "URL vzdialenej definície zručnosti",
-      "type": "Typ zručnosti (sandbox|custom|hybrid)",
-      "enable": "Povoliť zručnosť po inštalácii"
-    },
-    "enable": {
-      "description": "Povoliť zručnosť podľa ID"
-    },
-    "disable": {
-      "description": "Zakázať zručnosť podľa ID",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "delete": {
-      "description": "Odstrániť zručnosť podľa ID",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "execute": {
-      "description": "Spustiť zručnosť podľa ID",
-      "input": "Vstupný objekt JSON",
-      "input_file": "Cesta k vstupnému súboru JSON",
-      "timeout": "Časový limit vykonania v ms (predvolené: 30000)"
-    },
-    "executions": {
-      "description": "Zobraziť históriu spustení zručností",
-      "skill": "Filtrovať podľa ID zručnosti",
-      "limit": "Maximálny počet výsledkov (predvolené: 50)",
-      "status": "Filtrovať podľa stavu (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Spravovať zručnosti nainštalované cez SSH"
-    },
-    "marketplace": {
-      "description": "Prehliadať a inštalovať zručnosti z marketplace"
-    },
-    "mp": {
-      "search": {
-        "description": "Vyhľadávať balíky na marketplace",
-        "category": "Filtrovať podľa kategórie",
-        "tag": "Filtrovať podľa značky",
-        "limit": "Maximálny počet výsledkov (predvolené: 30)",
-        "sort": "Zoradiť podľa: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Zobraziť podrobnosti o balíku a súbor readme"
-      },
-      "install": {
-        "description": "Nainštalovať balík z marketplace",
-        "version": "Verzia balíka (predvolené: latest)",
-        "enable": "Povoliť po inštalácii",
-        "yes": "Preskočiť výzvu na potvrdenie"
-      },
-      "categories": {
-        "description": "Zobraziť zoznam kategórií marketplace"
-      },
-      "featured": {
-        "description": "Zobraziť odporúčané balíky na marketplace"
-      }
-    }
-  },
-  "memory": {
-    "description": "Spravovať konverzačnú pamäť OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Vyhľadávať záznamy v pamäti pomocou sémantického dopytu",
-      "type": "Filtrovať podľa typu pamäte (user|feedback|project|reference)",
-      "limit": "Maximálny počet výsledkov (predvolené: 20)",
-      "api_key": "Filtrovať podľa API kľúča",
-      "token_budget": "Obmedziť celkový počet tokenov vo výsledkoch"
-    },
-    "add": {
-      "description": "Pridať nový záznam do pamäte",
-      "content": "Textový obsah pamäte",
-      "file": "Načítať obsah zo súboru",
-      "type": "Typ pamäte (predvolené: user)",
-      "metadata": "Objekt metadát JSON",
-      "api_key": "Priradiť k API kľúču"
-    },
-    "clear": {
-      "description": "Odstrániť záznamy pamäte zodpovedajúce filtrom",
-      "type": "Filtrovať podľa typu",
-      "older": "Odstrániť záznamy staršie než zadané trvanie (30d, 6m, 1y)",
-      "api_key": "Filtrovať podľa API kľúča",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "list": {
-      "description": "Zobraziť zoznam záznamov pamäte bez zoradenia podľa relevancie vyhľadávania",
-      "type": "Filtrovať podľa typu",
-      "limit": "Maximálny počet výsledkov (predvolené: 100)",
-      "api_key": "Filtrovať podľa API kľúča"
-    },
-    "get": {
-      "description": "Získať jeden záznam pamäte podľa ID"
-    },
-    "delete": {
-      "description": "Odstrániť záznam pamäte podľa ID",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "health": {
-      "description": "Zobraziť stav pamäťového subsystému (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Spravovať pripojenia poskytovateľov OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Preskočiť výzvu na potvrdenie"
     }
   },
-  "cloud": {
-    "description": "Spravovať úlohy cloudových agentov AI (codex, devin, jules)",
-    "agents": {
-      "description": "Zobraziť zoznam dostupných cloudových agentov"
-    },
-    "agent": {
-      "description": "Spravovať úlohy cloudového agenta {agent}",
-      "auth": {
-        "description": "Autorizovať agenta {agent} prostredníctvom OAuth"
-      }
-    },
-    "task": {
-      "description": "Spravovať úlohy cloudových agentov",
-      "create": {
-        "description": "Vytvoriť novú úlohu agenta",
-        "title": "Názov úlohy (predvolene prvých 80 znakov zadania)",
-        "prompt": "Text zadania úlohy",
-        "prompt_file": "Načítať zadanie zo súboru",
-        "repo": "URL repozitára, ktorý sa má naklonovať pre úlohu",
-        "branch": "Názov vetvy, ktorá sa má použiť",
-        "metadata": "Objekt metadát JSON"
-      },
-      "list": {
-        "description": "Zobraziť zoznam úloh agenta",
-        "status": "Filtrovať podľa stavu (running|completed|failed|cancelled)",
-        "limit": "Maximálny počet výsledkov (predvolené: 50)"
-      },
-      "get": {
-        "description": "Získať podrobnosti úlohy podľa ID"
-      },
-      "status": {
-        "description": "Vypísať stav úlohy (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Zrušiť spustenú úlohu",
-        "yes": "Preskočiť výzvu na potvrdenie"
-      },
-      "approve": {
-        "description": "Schváliť plán agenta a spustiť vykonávanie"
-      },
-      "message": {
-        "description": "Odoslať správu spustenej úlohe"
-      }
-    },
-    "sources": {
-      "description": "Zobraziť zoznam zdrojových súborov vytvorených úlohou"
-    }
-  },
-  "eval": {
-    "description": "Spravovať sady a spustenia vyhodnotení",
-    "suites": {
-      "description": "Spravovať sady vyhodnotení",
-      "list": {
-        "description": "Zobraziť zoznam evaluačných súprav"
-      },
-      "get": {
-        "description": "Získať podrobnosti evaluačnej súpravy podľa ID"
-      },
-      "create": {
-        "description": "Vytvoriť evaluačnú súpravu zo súboru JSON",
-        "file": "Cesta k súboru JSON s definíciou súpravy"
-      }
-    },
-    "run": {
-      "description": "Spustiť evaluačný beh pre súpravu",
-      "model": "ID modelu na vyhodnotenie (predvolené: auto)",
-      "combo": "Vynútiť konkrétnu kombináciu podľa názvu",
-      "concurrency": "Počet súbežných vzoriek (predvolené: 4)",
-      "tag": "Označiť tento beh značkou na neskoršie filtrovanie",
-      "watch": "Sledovať priebeh behu až do dokončenia"
-    },
-    "list": {
-      "description": "Zobraziť zoznam evaluačných behov",
-      "suite": "Filtrovať podľa ID súpravy",
-      "status": "Filtrovať podľa stavu",
-      "since": "Vrátiť behy od tejto časovej pečiatky",
-      "limit": "Maximálny počet výsledkov (predvolené: 50)"
-    },
-    "get": {
-      "description": "Získať podrobnosti evaluačného behu podľa ID"
-    },
-    "results": {
-      "description": "Zobraziť výsledky vzoriek evaluačného behu",
-      "failed": "Zobraziť iba neúspešné vzorky"
-    },
-    "cancel": {
-      "description": "Zrušiť prebiehajúci evaluačný beh",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "scorecard": {
-      "description": "Zobraziť kartu skóre dokončeného evaluačného behu"
-    }
-  },
-  "webhooks": {
-    "description": "Spravovať webhooky OmniRoute",
-    "events": {
-      "description": "Zobraziť zoznam všetkých dostupných typov udalostí webhookov"
-    },
-    "list": {
-      "description": "Zobraziť zoznam nakonfigurovaných webhookov"
-    },
-    "get": {
-      "description": "Získať podrobnosti webhooku podľa ID"
-    },
-    "add": {
-      "description": "Zaregistrovať nový webhook",
-      "url": "Cieľová URL",
-      "events": "Čiarkami oddelený zoznam typov udalostí",
-      "secret": "Tajný kľúč na podpisovanie HMAC",
-      "header": "Dodatočná hlavička vo formáte key=value (možno opakovať)",
-      "no_enabled": "Vytvoriť webhook v zakázanom stave"
-    },
-    "update": {
-      "description": "Aktualizovať existujúci webhook",
-      "enabled": "Nastaviť stav povolenia (true|false)"
-    },
-    "remove": {
-      "description": "Odstrániť webhook",
-      "yes": "Preskočiť výzvu na potvrdenie"
-    },
-    "test": {
-      "description": "Odoslať testovaciu udalosť do webhooku",
-      "event": "Typ udalosti na simuláciu (predvolené: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Inteligentný AI router s automatickým prepínaním",
+    "description": "67router — Inteligentný AI router s automatickým prepínaním",
     "version": "Vypísať verziu a skončiť",
     "output": "Formát výstupu (table, json, jsonl, csv)",
     "quiet": "Potlačiť nepodstatný výstup",
     "no_color": "Zakázať farebný výstup",
     "timeout": "Časový limit HTTP požiadaviek v milisekundách",
-    "api_key": "API kľúč pre server OmniRoute",
-    "base_url": "Základná URL servera OmniRoute",
+    "api_key": "API kľúč pre server 67router",
+    "base_url": "Základná URL servera 67router",
     "context": "Kontext/profil servera pre tento príkaz",
     "lang": "Nastaviť jazyk zobrazenia CLI (prepíše OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Spravovať súbory (nahrať, zobraziť zoznam, získať, stiahnuť, odstrániť)",
-    "list": {
-      "purpose": "Filtrovať podľa účelu",
-      "limit": "Maximálny počet výsledkov"
-    },
-    "get": {
-      "description": "Získať metadáta súboru"
-    },
-    "upload": {
-      "description": "Nahrať súbor",
-      "purpose": "Účel súboru (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Stiahnuť obsah súboru",
-      "out": "Uložiť do cesty (predvolené: stdout)"
-    },
-    "delete": {
-      "yes": "Preskočiť potvrdenie"
-    }
-  },
-  "batches": {
-    "description": "Spravovať dávkové úlohy kompatibilné s OpenAI",
-    "list": {
-      "status": "Filtrovať podľa stavu",
-      "limit": "Maximálny počet výsledkov"
-    },
-    "create": {
-      "description": "Vytvoriť dávkovú úlohu",
-      "inputFile": "ID vstupného súboru",
-      "endpoint": "Cieľový koncový bod",
-      "window": "Časové okno dokončenia",
-      "metadata": "Pridať metadáta kľúč=hodnota"
-    },
-    "submit": {
-      "description": "Nahrať súbor JSONL a vytvoriť dávku",
-      "jsonl": "Cesta k súboru JSONL",
-      "endpoint": "Cieľový koncový bod",
-      "wait": "Počkať na dokončenie"
-    },
-    "cancel": {
-      "yes": "Preskočiť potvrdenie"
-    },
-    "wait": {
-      "timeout": "Časový limit v ms"
-    },
-    "output": {
-      "out": "Uložiť výstup do cesty"
-    },
-    "errors": {
-      "out": "Uložiť chyby do cesty"
-    }
   },
   "translator": {
     "description": "Prekladať telá požiadaviek medzi formátmi LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Prístup k špecifikácii OmniRoute OpenAPI a jej testovanie",
+    "description": "Prístup k špecifikácii 67router OpenAPI a jej testovanie",
     "dump": {
       "description": "Vypísať špecifikáciu OpenAPI na štandardný výstup alebo do súboru",
       "format": "Výstupný formát: yaml|json (predvolené: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Aktivovať najvyššie hodnotenú kombináciu"
     }
   },
-  "oneproxy": {
-    "description": "Spravovať nadradený fond OneProxy",
-    "stats": {
-      "provider": "Filtrovať podľa poskytovateľa",
-      "period": "Časové obdobie (predvolené: 24h)"
-    },
-    "fetch": {
-      "description": "Načítať proxy servery z fondu",
-      "count": "Počet proxy serverov na načítanie (predvolené: 1)",
-      "type": "Typ proxy servera: http|socks5 (predvolené: http)"
-    },
-    "rotate": {
-      "description": "Vynútiť rotáciu proxy servera",
-      "provider": "Poskytovateľ, pre ktorého sa má vykonať rotácia",
-      "connectionId": "Konkrétne ID pripojenia na rotáciu"
-    },
-    "config": {
-      "description": "Zobraziť alebo aktualizovať konfiguráciu OneProxy",
-      "enabled": "Povoliť fond proxy serverov (true|false)",
-      "poolSize": "Veľkosť fondu",
-      "providerSource": "URL poskytovateľa proxy",
-      "rotationPolicy": "Politika rotácie: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Zobraziť aktuálny fond proxy serverov s metrikami"
-    }
-  },
   "open": {
-    "description": "Otvoriť konkrétnu stránku ovládacieho panela OmniRoute v prehliadači",
+    "description": "Otvoriť konkrétnu stránku ovládacieho panela 67router v prehliadači",
     "url": "Vypísať iba URL, neotvárať prehliadač"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Synchronizovať konfiguráciu medzi inštanciami OmniRoute",
+    "description": "Synchronizovať konfiguráciu medzi inštanciami 67router",
     "push": {
       "description": "Odoslať konfiguráciu do cloudu alebo vzdialenej inštancie"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtrovať podľa úrovne (error,warn,info) — hodnoty oddelené čiarkami",
     "lines": "Počet riadkov na načítanie",
     "timeout": "Časový limit pripojenia v ms",
-    "baseUrl": "Základná URL adresa API OmniRoute",
+    "baseUrl": "Základná URL adresa API 67router",
     "requestId": "Filtrovať podľa ID požiadavky",
     "apiKey": "Filtrovať podľa kľúča API",
     "combo": "Filtrovať podľa názvu kombinácie",
@@ -1244,10 +890,10 @@
     "description": "Ovládať ikonu v systémovej lište",
     "show": "Zobraziť ikonu v systémovej lište (ak je server spustený s --tray)",
     "hide": "Skryť ikonu v systémovej lište",
-    "quit": "Ukončiť OmniRoute prostredníctvom systémovej lišty"
+    "quit": "Ukončiť 67router prostredníctvom systémovej lišty"
   },
   "autostart": {
-    "description": "Spravovať automatické spustenie OmniRoute pri štarte systému (Linux: používateľská služba systemd)",
+    "description": "Spravovať automatické spustenie 67router pri štarte systému (Linux: používateľská služba systemd)",
     "enable": "Povoliť automatické spustenie pri štarte systému",
     "disable": "Zakázať automatické spustenie pri štarte systému",
     "toggle": "Prepnúť automatické spustenie pri štarte systému",
@@ -1268,30 +914,20 @@
     "system": "Systémová výzva",
     "resume": "Pokračovať v uloženej relácii podľa názvu"
   },
-  "plugin": {
-    "description": "Spravovať doplnky CLI (omniroute-cmd-*)",
-    "list": "Zobraziť nainštalované doplnky",
-    "install": "Nainštalovať doplnok z npm alebo lokálnej cesty",
-    "remove": "Odstrániť nainštalovaný doplnok",
-    "info": "Zobraziť podrobnosti o nainštalovanom doplnku",
-    "search": "Vyhľadať dostupné doplnky v registri npm",
-    "update": "Aktualizovať nainštalované doplnky",
-    "scaffold": "Vytvoriť základnú štruktúru nového doplnku"
-  },
   "launch": {
-    "description": "Spustiť Claude Code nasmerovaný na OmniRoute (lokálne alebo vzdialene, s --profile)",
+    "description": "Spustiť Claude Code nasmerovaný na 67router (lokálne alebo vzdialene, s --profile)",
     "token": "Token, ktorý má klient Claude odosielať (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute nie je dostupný na porte {port}. Spustite ho pomocou príkazu 'omniroute serve'.",
+    "notRunning": "67router nie je dostupný na porte {port}. Spustite ho pomocou príkazu 'omniroute serve'.",
     "notFound": "CLI 'claude' sa nenašlo v PATH."
   },
   "run": {
-    "description": "Spustiť podporovaný cieľ CLI prostredníctvom OmniRoute"
+    "description": "Spustiť podporovaný cieľ CLI prostredníctvom 67router"
   },
   "setupClaude": {
-    "description": "Vygenerovať profily Claude Code v ~/.claude/profiles z katalógu modelov OmniRoute"
+    "description": "Vygenerovať profily Claude Code v ~/.claude/profiles z katalógu modelov 67router"
   },
   "connect": {
-    "description": "Pripojiť sa k vzdialenému serveru OmniRoute a prejsť do vzdialeného režimu"
+    "description": "Pripojiť sa k vzdialenému serveru 67router a prejsť do vzdialeného režimu"
   },
   "tokens": {
     "description": "Spravovať tokeny prístupu CLI s obmedzeným rozsahom (vzdialený režim)"
@@ -1300,10 +936,10 @@
     "description": "Vybrať poskytovateľa a model z aktívneho servera a nakonfigurovať podporované lokálne CLI"
   },
   "launchCodex": {
-    "description": "Spustiť Codex CLI nasmerovaný na OmniRoute (lokálne alebo na vzdialenom VPS)"
+    "description": "Spustiť Codex CLI nasmerovaný na 67router (lokálne alebo na vzdialenom VPS)"
   },
   "setupCodex": {
-    "description": "Vygenerovať súbory profilov v ~/.codex zo živého katalógu modelov OmniRoute"
+    "description": "Vygenerovať súbory profilov v ~/.codex zo živého katalógu modelov 67router"
   },
   "packs": {
     "description": "Spravovať voliteľné balíky behového prostredia (ML / automatizácia prehliadača)",
@@ -1316,7 +952,7 @@
     "errUnknown": "neznámy balík: {name}",
     "errNoIndex": "index balíkov sa nenašiel; zadajte --source <dir> odkazujúci na adresár s dátami balíka (balíky pre desktop ho obsahujú vedľa aplikácie)",
     "installed": "balík „{name}“ bol nainštalovaný a overený v adresári {dir}",
-    "restartHint": "reštartujte server OmniRoute (alebo desktopovú aplikáciu), aby modul runtime načítal balík",
+    "restartHint": "reštartujte server 67router (alebo desktopovú aplikáciu), aby modul runtime načítal balík",
     "removed": "balík „{name}“ bol odstránený",
     "notInstalled": "balík „{name}“ nebol nainštalovaný",
     "verifyOk": "všetky nainštalované balíky boli overené",

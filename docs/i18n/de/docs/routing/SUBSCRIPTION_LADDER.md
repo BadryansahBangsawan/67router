@@ -10,7 +10,7 @@
 
 ## Warum dies existiert
 
-OmniRoute beantwortet bereits zwei Kostenfragen, doch keine davon ist die, die sich die meisten Betreiber stellen.
+67router beantwortet bereits zwei Kostenfragen, doch keine davon ist die, die sich die meisten Betreiber stellen.
 
 | Bestehender Mechanismus                                  | Beantwortet                                                  |
 | -------------------------------------------------------- | ------------------------------------------------------------ |

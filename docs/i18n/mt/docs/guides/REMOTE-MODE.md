@@ -4,7 +4,7 @@
 
 ---
 
-Ħaddem is-CLI `omniroute` fuq il-laptop tiegħek waqt li OmniRoute nnifsu jkun qed jaħdem xi mkien ieħor
+Ħaddem is-CLI `omniroute` fuq il-laptop tiegħek waqt li 67router nnifsu jkun qed jaħdem xi mkien ieħor
 (VPS, server tad-dar, magna oħra fuq it-Tailnet tiegħek). Tidħol darba permezz ta'
 `omniroute connect`, u minn hemm ’il quddiem **kull** kmand tas-CLI jimmira lejn dak is-server
 remot — l-istess kmandi, l-istess output, iżda eżegwiti fuq is-server remot.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← jikteb profil lokali ta’ Codex 
 ## Kif jaħdem
 
 ```
-il-laptop tiegħek                        OmniRoute remot (VPS)
+il-laptop tiegħek                        67router remot (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (password → token)         │
 │  kuntest: vps      │ ───────────────►  │ joħloq token ta’ aċċess       │
@@ -108,7 +108,7 @@ is-server, mhux fuq il-magna tiegħek, għalhekk l-iskrin tal-kunsens **jeħel g
 dejjem u qatt ma joħroġ kodiċi** — il-metodu alternattiv normali ta’ “waħħal il-URL
 tal-callback” ma jkollu xejn x’jitwaħħal. (Din hija restrizzjoni min-naħa ta’
 Google: l-istess imblukkar iseħħ fi kwalunkwe proxy li juża l-klijent desktop
-inkluż ma’ Antigravity, mhux f’OmniRoute biss.)
+inkluż ma’ Antigravity, mhux f’67router biss.)
 
 Id-dashboard jinduna b’dan qabel ma teħel: meta tiftaħ **Providers → Antigravity →
 Connect** minn indirizz li mhuwiex localhost, l-avviż ġeneriku “ikkopja l-URL
@@ -116,7 +116,7 @@ tal-callback” jinbidel biż-żewġ soluzzjonijiet t’hawn taħt, kull waħda 
 l-port tiegħek diġà mimlija. (Indirizz LAN jgħodd ukoll — `192.168.x.x` mhuwiex
 localhost għal dak li għandu x’jaqsam ma’ dan il-callback.)
 
-Hemm żewġ modi appoġġjati biex tikkonnettja Antigravity ma’ OmniRoute remot.
+Hemm żewġ modi appoġġjati biex tikkonnettja Antigravity ma’ 67router remot.
 
 ### Għażla A — għodda lokali ta’ għajnuna għad-dħul (rakkomandata)
 
@@ -155,7 +155,7 @@ npx omniroute login antigravity --no-push
 
 Imbagħad, fid-dashboard **remot**: **Providers → Antigravity → Connect**, u waħħal
 il-blob `omniroute-cred-v1.…` fil-kaxxa tal-**Pass 2** (taċċetta kemm URL
-tal-callback kif ukoll blob tal-kredenzjali). OmniRoute jiddekowdjah, iħaddem
+tal-callback kif ukoll blob tal-kredenzjali). 67router jiddekowdjah, iħaddem
 l-onboarding ta’ Cloud Code min-naħa tas-server, u jaħżen il-konnessjoni.
 
 > Il-blob fih refresh token — ittrattah bħal password. Bil-metodu push jintbagħat
@@ -198,7 +198,7 @@ stess, għalhekk m’hemmx port ieħor speċifiku għall-provider li jeħtieġ m
 ## Konnessjoni ta’ Codex / Grok fuq installazzjoni remota (fornituri b’loopback fiss)
 
 Codex, xAI (`xai-oauth`) u Grok CLI (`grok-cli`) jirreġistraw `redirect_uri`
-**fiss** mal-applikazzjoni OAuth upstream tagħhom. OmniRoute ma jistax jibdlu —
+**fiss** mal-applikazzjoni OAuth upstream tagħhom. 67router ma jistax jibdlu —
 il-fornitur dejjem jibgħat il-browser lura lejn l-istess indirizz kodifikat b’mod fiss:
 
 | Fornitur    | Callback fiss li lejh jirridirezzjona l-fornitur |
@@ -208,7 +208,7 @@ il-fornitur dejjem jibgħat il-browser lura lejn l-istess indirizz kodifikat b�
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                |
 
 `localhost` hawnhekk ifisser **il-magna li qed tħaddem il-browser**, filwaqt li
-s-server tal-callback PKCE ta’ OmniRoute jisma’ fuq il-loopback tas-**server**.
+s-server tal-callback PKCE ta’ 67router jisma’ fuq il-loopback tas-**server**.
 Iftaħ id-dashboard f’indirizz LAN bħal `http://192.168.0.15:20128` u t-tnejn
 qatt ma jiltaqgħu: il-kodiċi tal-awtorizzazzjoni jintbagħat lil
 `localhost:1455` tal-laptop tiegħek stess, fejn xejn mhu qed jisma’, u
@@ -228,7 +228,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Huma meħtieġa żewġ forwards, u jekk tgħaddi wieħed biss xorta ma jaħdimx:
 
 - **`20128`** (il-port tad-dashboard) jagħmel l-origin tassew localhost, li huwa
-  dak li jġiegħel lil OmniRoute jibda s-server tal-callback PKCE — origin LAN
+  dak li jġiegħel lil 67router jibda s-server tal-callback PKCE — origin LAN
   qatt ma jasal għal dik il-fergħa.
 - **`1455`** (il-port fiss tal-callback tal-fornitur) huwa fejn jintbagħat lura
   l-browser; irid jgħaddi mit-tunnel sal-loopback tas-server.
@@ -345,7 +345,7 @@ omniroute contexts current         # is-server attiv, l-istatus tal-awtentikazzj
 
 ```text
   | Isem    | URL Bażi                  | Awtentikazzjoni | Skop  | Deskrizzjoni
-● | vps     | http://100.67.86.91:20128 | token           | admin | OmniRoute Remot (…)
+● | vps     | http://100.67.86.91:20128 | token           | admin | 67router Remot (…)
   | default | http://localhost:20128    | ✗               |       |
 ```
 

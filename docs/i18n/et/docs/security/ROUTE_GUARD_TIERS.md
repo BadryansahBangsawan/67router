@@ -6,7 +6,7 @@
 
 ## Ülevaade
 
-Kõik OmniRoute'i haldus-API marsruudid liigitatakse ühte kolmest kaitsetasemest. Liigitus on staatiline, määratletud failis `src/server/authz/routeGuard.ts`, ning seda hinnatakse enne mis tahes muu autentimisharu käivitamist.
+Kõik 67router'i haldus-API marsruudid liigitatakse ühte kolmest kaitsetasemest. Liigitus on staatiline, määratletud failis `src/server/authz/routeGuard.ts`, ning seda hinnatakse enne mis tahes muu autentimisharu käivitamist.
 
 ## Tasemed
 
@@ -26,9 +26,9 @@ kehtiva JWT (nt Cloudflaredi/Ngroki tunneli kaudu), käivitada protsesside loomi
 **Mis on GHSA-fhh6-4qxv-rpqj (ründeklass):** haldus-/agendiserver avaldab
 lõpp-punkti, mis käivitab alamprotsessi (`npm install`, `node`, brauseri,
 puhverserveri, `git`, `tar`, …). Kui sellele lõpp-punktile pääseb ligi väljastpoolt
-hosti — sest operaator paigutas OmniRoute'i nginxi/Cloudflare'i/Tailscale'i tunneli
+hosti — sest operaator paigutas 67router'i nginxi/Cloudflare'i/Tailscale'i tunneli
 taha ja JWT lekkis või autentimine oli valesti seadistatud — muudab ründaja
-„API kutsumise” „hostis käsu käivitamiseks” (kaugkoodikäivitus). OmniRoute
+„API kutsumise” „hostis käsu käivitamiseks” (kaugkoodikäivitus). 67router
 tõkestab selle, jõustades igal protsesside käivitamist võimaldaval marsruudil
 **tingimusteta loopback-hosti kontrolli enne mis tahes autentimiskontrolli**:
 tunneli kaudu lekkinud luba ei pääse ikkagi protsesside käivitamiseni.
@@ -58,7 +58,6 @@ pole liigitatud ainult lokaalselt kasutatavaks.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy kuulaja ja süsteemipuhverserver                                                |
 | `/api/settings/mitm`                                                                                     | Lubab MITM-pealtkuulamise (süsteemitaseme puhverserveri olek)                                                 |
 | `/api/issue-agent/`                                                                                      | Probleemiagent — käivitab repositooriumi suhtes kohalikke tööriistu                                           |
-| `/api/plugins/`, `/api/plugins`                                                                          | Pistikprogrammid — laaditakse/käivitatakse `worker_threads` + `child_process` kaudu                           |
 | `/api/middleware/`                                                                                       | Kasutaja vahevara — laadib/käivitab operaatori koodi protsessi sees                                           |
 | `/api/system/version`                                                                                    | Automaatvärskendus (ainult POST; GET/HEAD/OPTIONS on erandiks) — käivitab `git checkout` + `npm install`      |
 | `/api/db-backups/exportAll`                                                                              | Käivitab ekspordiarhiivi loomiseks `tar`                                                                      |
@@ -119,7 +118,7 @@ MCP-d kasutavatele kaugklientidele, kes ei peaks vajama laialdast haldusjuurdep�
 
 #### Juhised operaatorile ja auditeerimine
 
-Kui käitate OmniRoute’i pöördpuhverserveri või tunneli (nginx, Caddy, Cloudflare
+Kui käitate 67router’i pöördpuhverserveri või tunneli (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) taga, kaitseb tagasisideaadressi kontroll endiselt ülaltoodud
 käivitamisvõimelisi teid — päring, mille kliendiaadress ei ole tagasisideaadress,
 lükatakse vastusega `403 LOCAL_ONLY` tagasi **enne autentimise käivitamist**, mistõttu
@@ -157,7 +156,7 @@ lekkinud JWT ei pääse käivitamiseni. Operaatorile jääb kaks kohustust:
 - Otsige oma pöördpuhverserveri/juurdepääsulogidest eespool nimetatud prefikseid koos
   kliendi mitte-loopback-aadressiga. Iga selline päring, mis tagastas `403 LOCAL_ONLY` asemel
   `200`, tähendab, et puhverserver varjab kliendi tegelikku IP-aadressi — parandage puhverserveri seadistus.
-- `403 LOCAL_ONLY` OmniRoute'i logides ühe sellise tee puhul tähendab, et kaitse
+- `403 LOCAL_ONLY` 67router'i logides ühe sellise tee puhul tähendab, et kaitse
   töötab ettenähtult, mitte viga, mida tuleks eirata.
 
 #### Kaugelt kättesaadavad marsruudid väljakutsukoha kontrollväravaga

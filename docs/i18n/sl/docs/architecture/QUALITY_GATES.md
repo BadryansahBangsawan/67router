@@ -4,7 +4,7 @@
 
 ---
 
-Ta dokument je avtoritativna referenca za vsa kakovostna preverjanja CI v projektu OmniRoute.
+Ta dokument je avtoritativna referenca za vsa kakovostna preverjanja CI v projektu 67router.
 Opisuje vsako preverjanje, kaj preverja, v katerem opravilu CI se izvaja, ali uporablja
 referenčno osnovo z ragljo ali pravilnik uspeh/neuspeh ter ali blokira gradnjo ali je zgolj svetovalno.
 
@@ -258,14 +258,14 @@ Izvaja se po `build`. Ob neuspehu blokira združitev.
 
 Ti se izvajajo po urniku cron (in `workflow_dispatch`), nikoli ob PR-jih. Vsi so svetovalni.
 
-| Potek dela             | Preverja                                                                                                                                                             | Blokirajoče    |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `nightly-property`     | fast-check testi lastnosti z naključnim semenom + velikim številom izvajanj                                                                                          | **Svetovalno** |
-| `nightly-resilience`   | preverjanje rasti kopice, vbrizgavanje kaotičnih napak, k6 obremenitev/vzdržljivost                                                                                  | **Svetovalno** |
-| `nightly-llm-security` | promptfoo zaščita pred vbrizgavanjem (način blokiranja) + garak sonde (preskočene brez skrivnosti ponudnika)                                                         | **Svetovalno** |
-| `nightly-schemathesis` | Fuzziranje pogodbe OpenAPI (schemathesis) proti delujočemu OmniRoute z uporabo `docs/openapi.yaml` — razkrije kršitve specifikacije / neobravnavane 500 (Faza 8 B.4) | **Svetovalno** |
-| `nightly-mutation`     | Ocena mutacijskega testiranja Stryker na hitri enotni progi — preživeli mutanti razkrijejo šibke trditve                                                             | **Svetovalno** |
-| `nightly-compat`       | Matrika združljivosti motorja Node po podprtih razponih `engines.node`                                                                                               | **Svetovalno** |
+| Potek dela             | Preverja                                                                                                                                                            | Blokirajoče    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `nightly-property`     | fast-check testi lastnosti z naključnim semenom + velikim številom izvajanj                                                                                         | **Svetovalno** |
+| `nightly-resilience`   | preverjanje rasti kopice, vbrizgavanje kaotičnih napak, k6 obremenitev/vzdržljivost                                                                                 | **Svetovalno** |
+| `nightly-llm-security` | promptfoo zaščita pred vbrizgavanjem (način blokiranja) + garak sonde (preskočene brez skrivnosti ponudnika)                                                        | **Svetovalno** |
+| `nightly-schemathesis` | Fuzziranje pogodbe OpenAPI (schemathesis) proti delujočemu 67router z uporabo `docs/openapi.yaml` — razkrije kršitve specifikacije / neobravnavane 500 (Faza 8 B.4) | **Svetovalno** |
+| `nightly-mutation`     | Ocena mutacijskega testiranja Stryker na hitri enotni progi — preživeli mutanti razkrijejo šibke trditve                                                            | **Svetovalno** |
+| `nightly-compat`       | Matrika združljivosti motorja Node po podprtih razponih `engines.node`                                                                                              | **Svetovalno** |
 
 Izhodišča zmogljivosti (kopica, TTFB, čas gradnje) se beležijo, ne preverjajo: glejte [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -536,7 +536,7 @@ seznamu dovoljenih izjem daje lažen občutek kakovosti.
 
 ## Orodja za agente: LSP v zanki (izbirno)
 
-Poleg preverjanj CI OmniRoute vključuje **izbirno** ogrodje `agent-lsp`
+Poleg preverjanj CI 67router vključuje **izbirno** ogrodje `agent-lsp`
 (datoteka `.mcp.json` na ravni projekta, Faza 7, naloga 15). Ustvarite `.mcp.json`,
 da programerskim agentom omogočite dostop do jezikovnega strežnika TypeScript, tako da razrešijo simbole /
 diagnostiko **pred** pisanjem kode — kot dopolnilo preverjanju `typecheck:core` po načelu prevajanja pred zatrjevanjem,

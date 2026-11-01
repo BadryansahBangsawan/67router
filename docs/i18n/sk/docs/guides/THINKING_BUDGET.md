@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Zdroj:** `open-sse/services/thinkingBudget.ts`
 
-Rozpočet na premýšľanie určuje, či OmniRoute **prepisuje klientske parametre premýšľania/uvažovania** pri odosielaní poskytovateľom. **Nezapína ani nevypína** kompresiu, smerovanie ani vyrovnávaciu pamäť promptov.
+Rozpočet na premýšľanie určuje, či 67router **prepisuje klientske parametre premýšľania/uvažovania** pri odosielaní poskytovateľom. **Nezapína ani nevypína** kompresiu, smerovanie ani vyrovnávaciu pamäť promptov.
 
 ## Režimy
 
-| Režim                          | Čo robí OmniRoute                                                                                                      | Kedy ho použiť                                                                                                                                                                     |
+| Režim                          | Čo robí 67router                                                                                                       | Kedy ho použiť                                                                                                                                                                     |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (predvolené) | Ponechá klientske polia bez zmeny (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` atď.). | **Codex / Desktop / akýkoľvek klient, ktorý má riadiť úsilie a súhrny uvažovania.** Vyžaduje sa pre viditeľné panely premýšľania, keď klient požaduje `reasoning.summary`.         |
 | **`auto`**                     | Pred odoslaním nadradenému poskytovateľovi **odstráni všetky** polia premýšľania/uvažovania z tela požiadavky.         | Iba vtedy, keď zámerne chcete, aby **poskytovateľ** určil predvolené hodnoty, a nepotrebujete premýšľanie riadené klientom. **Neznamená to** „automaticky zobrazovať premýšľanie“. |
@@ -38,7 +38,7 @@ Ak klient (napr. Codex Desktop) odoslal `reasoning: { effort: "ultra", summary: 
 | **Kombinované smerovanie / záložné trasy**                      | Samostatná funkcia. Nie je ovplyvnená.                                                                                                                                    |
 | **Limity tokenov kľúča API / rozpočty nákladov**                | Samostatná funkcia. Nie je ovplyvnená.                                                                                                                                    |
 | **Vyrovnávacia pamäť opakovaného prehrávania uvažovania**       | Opätovné vloženie vo viacerých kolách pre striktných poskytovateľov (DeepSeek, Kimi, Qwen-thinking, …). Nie je to to isté ako „zobraziť premýšľanie“ v aplikácii Desktop. |
-| **Dešifrovanie `encrypted_content`**                            | **Nie je možné.** Súkromné bloky uvažovania OpenAI/Codex sú nepriehľadné. OmniRoute ich nikdy nedešifruje (#7095 / #7176 / #7304).                                        |
+| **Dešifrovanie `encrypted_content`**                            | **Nie je možné.** Súkromné bloky uvažovania OpenAI/Codex sú nepriehľadné. 67router ich nikdy nedešifruje (#7095 / #7176 / #7304).                                         |
 
 ## Viditeľné uvažovanie (klienti Codex / Responses)
 
@@ -51,7 +51,7 @@ Aby klient zobrazil text uvažovania, potrebujete **všetko** z nasledujúceho:
 Ak dostávate iba „zašifrované súkromné uvažovanie“, platí jedno z nasledujúceho:
 
 - režim bol **`auto`** (požiadavka klienta bola odstránená), alebo
-- upstream vrátil `encrypted_content` bez textu súhrnu (obmedzenie poskytovateľa; OmniRoute môže zobraziť iba zástupný text, nie otvorený text).
+- upstream vrátil `encrypted_content` bez textu súhrnu (obmedzenie poskytovateľa; 67router môže zobraziť iba zástupný text, nie otvorený text).
 
 ## Príklady API
 
@@ -71,7 +71,7 @@ Schéma (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adap
 
 ### Perzistencia / reštart
 
-Hodnota je uložená pod kľúčom nastavení `thinkingBudget` a načítaná pri spustení procesu (`hydrateThinkingBudgetConfig`). Po zmene prostredníctvom databázy alebo niektorých ciest mimo API **reštartujte proces OmniRoute**, aby singleton v pamäti zodpovedal údajom na disku.
+Hodnota je uložená pod kľúčom nastavení `thinkingBudget` a načítaná pri spustení procesu (`hydrateThinkingBudgetConfig`). Po zmene prostredníctvom databázy alebo niektorých ciest mimo API **reštartujte proces 67router**, aby singleton v pamäti zodpovedal údajom na disku.
 
 ## Kontrolný zoznam operátora
 

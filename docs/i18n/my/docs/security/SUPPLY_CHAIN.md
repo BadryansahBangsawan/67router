@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute သည် npm + Docker artifacts များကို ထုတ်ဝေပါသည်။ ဤ gates များသည် provenance, inventory (SBOM) နှင့် CVE scanning တို့ကို ပံ့ပိုးပေးပြီး၊ ၎င်းတို့အားလုံးသည် OSS ဖြစ်ကာ release workflows များတွင် ပေါင်းစပ်ထားပါသည်။ **Advisory-first** ချဉ်းကပ်ပုံ — ၎င်းတို့သည် ယခုပင် အစီရင်ခံပြီး ပထမဆုံး green release ပြီးနောက် ပိတ်ဆို့ရန် မြှင့်တင်ပါသည်။
+67router သည် npm + Docker artifacts များကို ထုတ်ဝေပါသည်။ ဤ gates များသည် provenance, inventory (SBOM) နှင့် CVE scanning တို့ကို ပံ့ပိုးပေးပြီး၊ ၎င်းတို့အားလုံးသည် OSS ဖြစ်ကာ release workflows များတွင် ပေါင်းစပ်ထားပါသည်။ **Advisory-first** ချဉ်းကပ်ပုံ — ၎င်းတို့သည် ယခုပင် အစီရင်ခံပြီး ပထမဆုံး green release ပြီးနောက် ပိတ်ဆို့ရန် မြှင့်တင်ပါသည်။
 
 | Gate                  | Tool                                           | Where                         | Blocks?                    | Output                                          |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :------------------------- | :---------------------------------------------- |
@@ -42,7 +42,7 @@ gates နှစ်ခုလုံးသည် tool မရှိခြင်း �
   `package-lock.json` မှတစ်ဆင့် အတည်ပြုပြီးဖြစ်သည် — dependency tree တစ်ခုလုံးတွင် `extract-zip` ကို ကြေညာထားသည့် package တစ်ခုတည်းသာ (`@openai/codex-security`) ရှိပြီး၊ `@openai/codex-security` ကို ကြေညာထားသည့် package တစ်ခုတည်းသာ (`promptfoo`) ရှိသည်။
 - **ကွင်းဆက်တစ်ခုလုံးတွင် ပြင်ဆင်ပြီးသား ထုတ်ဝေမှု မရှိပါ။** `extract-zip@2.0.1` (2020 တွင် ထုတ်ဝေခဲ့သည်) သည် package ၏ နောက်ဆုံးထုတ်ဝေမှုဖြစ်သည် — ၎င်းကို ထိန်းသိမ်းထားခြင်း မရှိပါ။ `@openai/codex-security` ၏
   လက်ရှိ npm-latest (`0.1.29`) သည် `extract-zip@2.0.1` ကို ဆက်လက်အသုံးပြုနေဆဲဖြစ်သည်။
-- **ထုတ်လုပ်မှုမှ လက်လှမ်းမမီနိုင်ပါ။** `promptfoo` သည် devDependency-only ဖြစ်သည် (`dependencies` အောက်တွင် ဘယ်တော့မှ စာရင်းမသွင်းပါ)၊ `src/`၊ `open-sse/` သို့မဟုတ် `bin/` အောက်ရှိ မည်သည့်ဖိုင်မှ `extract-zip` npm package ကို import မလုပ်ပါ။ OmniRoute ၏ ကိုယ်ပိုင် `extractZip()` helper
+- **ထုတ်လုပ်မှုမှ လက်လှမ်းမမီနိုင်ပါ။** `promptfoo` သည် devDependency-only ဖြစ်သည် (`dependencies` အောက်တွင် ဘယ်တော့မှ စာရင်းမသွင်းပါ)၊ `src/`၊ `open-sse/` သို့မဟုတ် `bin/` အောက်ရှိ မည်သည့်ဖိုင်မှ `extract-zip` npm package ကို import မလုပ်ပါ။ 67router ၏ ကိုယ်ပိုင် `extractZip()` helper
   (`src/lib/versionManager/binaryManager.ts:93`) သည် native `unzip`/`tar` ကို အသုံးပြုပြီး ဆက်စပ်မှုမရှိပါ။ `@openai/codex-security` သည်လည်း extract-zip ၏ onEntry callback အပေါ်တွင် ၎င်း၏ကိုယ်ပိုင် symlink-traversal guard ကို ထည့်သွင်းထားသည်။
 - `package.json` `overrides` မှတစ်ဆင့် `extract-zip` ကို alias **မလုပ်ပါနှင့်** — တစ်ခုတည်းသော အသုံးပြုနိုင်သည့် drop-in အစားထိုးသည် Electron-org-internal ဖြစ်ပြီး `@openai/codex-security` ၏ ကိုယ်ပိုင် onEntry/defaultDirMode/defaultFileMode စစ်ဆေးမှုများနှင့် API-မကိုက်ညီပါ။ ၎င်းကို override လုပ်ပါက ထို package ၏ လုံခြုံရေးစစ်ဆေးမှုများကို တိတ်တဆိတ် ပျက်စီးစေမည်ဖြစ်သည်။
 - **အခြေခံ:** တိုင်းတာထားသော osv `vulnCount` (3) သည် အေးခဲထားသော `config/quality/quality-baseline.json` အခြေခံ (27) အောက်တွင် ကောင်းစွာရှိနေပြီးဖြစ်သည် — ratchet ပြောင်းလဲမှု မလိုအပ်ပါ။

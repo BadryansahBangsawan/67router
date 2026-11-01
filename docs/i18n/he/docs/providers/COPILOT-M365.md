@@ -38,7 +38,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. ב-OmniRoute, עברו אל **Providers → Add Provider**, בחרו באפשרות **Microsoft 365 Copilot
+6. ב-67router, עברו אל **Providers → Add Provider**, בחרו באפשרות **Microsoft 365 Copilot
    (BizChat)** והדביקו את פרטי ההתחברות בפורמט הבא:
 
 ```
@@ -55,9 +55,9 @@ access_token=<jwt>; chathubPath=<oid>@<tenant>
 1. פתחו את **DevTools → Network**.
 2. התחילו שיחת BizChat או המשיכו שיחה קיימת (פעולה זו מפעילה את חיבור ה-WebSocket).
 3. לחצו לחיצה ימנית בחלונית Network ובחרו באפשרות **Save all as HAR with content**.
-4. ב-OmniRoute, השתמשו בלחצן **Import .har file** בתיבת הדו-שיח של חיבור הספק.
+4. ב-67router, השתמשו בלחצן **Import .har file** בתיבת הדו-שיח של חיבור הספק.
 
-OmniRoute סורק את ה-HAR כדי לאתר את כתובת ה-URL של Chathub WebSocket, מחלץ את
+67router סורק את ה-HAR כדי לאתר את כתובת ה-URL של Chathub WebSocket, מחלץ את
 `access_token` ואת `chathubPath`, וממלא אוטומטית את שדות פרטי ההתחברות. ייבוא
 ה-HAR מפענח את מועד התפוגה של ה-JWT ומציג את הזמן שנותר עד לתפוגת האסימון.
 
@@ -80,7 +80,7 @@ OmniRoute סורק את ה-HAR כדי לאתר את כתובת ה-URL של Chath
 | `tier`         | `individual` (ברירת מחדל), `edu` או `enterprise`                         |
 
 השיגו את אסימון הרענון מתהליך קוד מכשיר או קוד הרשאה של Microsoft
-שהיקפו `substrate.office.com/sydney`. כאשר `refreshToken` מוגדר, OmniRoute
+שהיקפו `substrate.office.com/sydney`. כאשר `refreshToken` מוגדר, 67router
 מרענן מראש את `access_token` לפני כל בקשה, כך שאין צורך
 ללכוד אותו מחדש לאחר כל תפוגה של כ-75 דקות.
 

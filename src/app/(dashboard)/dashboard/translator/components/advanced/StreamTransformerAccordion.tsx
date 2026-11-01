@@ -19,12 +19,13 @@ import {
   TableRow,
 } from "@omniroute/ui-kit/table";
 import Textarea from "@/shared/components/Textarea";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 // ─── Sample payloads ──────────────────────────────────────────────────────────
 
 const SAMPLE_TEXT = `data: {"id":"chatcmpl_demo","object":"chat.completion.chunk","created":1745366400,"model":"gpt-4o-mini","choices":[{"index":0,"delta":{"role":"assistant","content":"Hello"},"finish_reason":null}]}
 
-data: {"id":"chatcmpl_demo","object":"chat.completion.chunk","created":1745366400,"model":"gpt-4o-mini","choices":[{"index":0,"delta":{"content":" from OmniRoute"},"finish_reason":null}]}
+data: {"id":"chatcmpl_demo","object":"chat.completion.chunk","created":1745366400,"model":"gpt-4o-mini","choices":[{"index":0,"delta":{"content":" from 67router"},"finish_reason":null}]}
 
 data: {"id":"chatcmpl_demo","object":"chat.completion.chunk","created":1745366400,"model":"gpt-4o-mini","choices":[{"index":0,"delta":{},"finish_reason":"stop"}],"usage":{"prompt_tokens":12,"completion_tokens":4,"total_tokens":16}}
 
@@ -103,15 +104,9 @@ function parseSseFrames(rawSse: string): Array<{ event: string; preview: string 
 
 // ─── MiniStat ────────────────────────────────────────────────────────────────
 
+/** One cell of the stats KPI strip (the parent grid is a <KpiStrip>). */
 function MiniStat({ label, value }: { label: string; value: number }) {
-  return (
-    <Card>
-      <div className="p-4">
-        <p className="text-lg font-bold text-text-main">{value}</p>
-        <p className="text-[10px] uppercase tracking-wider text-text-muted">{label}</p>
-      </div>
-    </Card>
-  );
+  return <KpiCell label={label} value={value} />;
 }
 
 // ─── Props ───────────────────────────────────────────────────────────────────
@@ -274,8 +269,8 @@ export default function StreamTransformerAccordion({
         <div className={cn("p-4", !open && "hidden")}>
           <div className="space-y-5 min-w-0">
             {/* Info banner */}
-            <div className="flex items-start gap-3 px-4 py-3 rounded-lg bg-primary/5 border border-primary/10 text-sm text-text-muted">
-              <Icon name="swap_horiz" size={20} className="text-primary mt-0.5" />
+            <div className="flex items-start gap-3 px-4 py-3 rounded-control border border-border bg-bg-subtle text-sm text-text-muted">
+              <Icon name="swap_horiz" size={20} className="text-text-muted mt-0.5" />
               <div>
                 <p className="font-medium text-text-main mb-0.5">
                   {translateOrFallback("streamTransformerTitle", "Responses Stream Transformer")}
@@ -283,7 +278,7 @@ export default function StreamTransformerAccordion({
                 <p>
                   {translateOrFallback(
                     "streamTransformerDescription",
-                    "Paste a chat completions SSE stream, run it through OmniRoute's Responses transformer, and inspect the emitted response.* events before wiring a client."
+                    "Paste a chat completions SSE stream, run it through 67router's Responses transformer, and inspect the emitted response.* events before wiring a client."
                   )}
                 </p>
               </div>
@@ -398,7 +393,7 @@ export default function StreamTransformerAccordion({
             </Card>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <KpiStrip columns={4}>
               <MiniStat
                 label={translateOrFallback("transformedEvents", "Transformed events")}
                 value={eventCount}
@@ -415,7 +410,7 @@ export default function StreamTransformerAccordion({
                 label={translateOrFallback("outputLines", "Output lines")}
                 value={transformedSse ? transformedSse.split("\n").length : 0}
               />
-            </div>
+            </KpiStrip>
 
             {/* Event timeline */}
             <Card>

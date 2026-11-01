@@ -48,7 +48,7 @@ permezz ta’ mina **ma jistax** jattiva din il-mogħdija tal-kodiċi.
 | Linux+Firefox/Chromium | aġġornament tad-DB NSS għal kull profil permezz ta’ `certutil -d sql:<profile>`                                   |
 
 Dawn huma l-istess kmandi użati minn `mitmproxy`, Charles Proxy, Fiddler, u
-Caddy. Il-fatt li jeżistu f’OmniRoute huwa ddokumentat f’
+Caddy. Il-fatt li jeżistu f’67router huwa ddokumentat f’
 `docs/security/STEALTH_GUIDE.md`.
 
 **Mitigazzjoni ta’ v3.8.6**:
@@ -96,7 +96,7 @@ tiegħu tkisser is-sett ta’ funzjonalitajiet tal-agent bridge.
 
 Flag tal-ambjent `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` iżomm l-imġiba ta’ v3.8.5 għall-operaturi li għadhom ma aġġornawx l-awtomazzjoni tagħhom. Dan se jitneħħa f’v3.9.
 
-**Għaliex inżommuh**: l-importazzjoni minn Zed hija l-aktar rotta faċli ta’ onboarding għall-utenti li diġà jużaw Zed u jridu jirriflettu ċ-ċwievet tal-fornituri tagħhom f’OmniRoute mingħajr ma jerġgħu jwaħħluhom.
+**Għaliex inżommuh**: l-importazzjoni minn Zed hija l-aktar rotta faċli ta’ onboarding għall-utenti li diġà jużaw Zed u jridu jirriflettu ċ-ċwievet tal-fornituri tagħhom f’67router mingħajr ma jerġgħu jwaħħluhom.
 
 ---
 
@@ -105,7 +105,7 @@ Flag tal-ambjent `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` iżomm l-imġiba ta
 **Fajls tas-sors**: `src/mitm/systemCommands.ts`.
 
 **Għaliex ġie mmarkat**: iċ-chunk jerġa’ jesporta `execFileWithPassword`,
-`runElevatedPowerShell`, u l-helper kondiviż `quotePowerShell`. Il-klassifikatur tal-IA ta’ Socket.dev jarahom bħala "sett ġeneriku ta’ għodod għall-eżekuzzjoni fuq il-host u l-elevazzjoni tal-privileġġi." Fi ħdan OmniRoute dawn jintużaw biss mir-rotta tal-installazzjoni taċ-ċertifikat MITM
+`runElevatedPowerShell`, u l-helper kondiviż `quotePowerShell`. Il-klassifikatur tal-IA ta’ Socket.dev jarahom bħala "sett ġeneriku ta’ għodod għall-eżekuzzjoni fuq il-host u l-elevazzjoni tal-privileġġi." Fi ħdan 67router dawn jintużaw biss mir-rotta tal-installazzjoni taċ-ċertifikat MITM
 (§1) u minn `execFileWithPassword` għall-eżekuzzjoni ta’ kmandi `sudo`.
 
 **Mitigazzjoni f’v3.8.6**:
@@ -146,7 +146,7 @@ Flag tal-ambjent `OMNIROUTE_ZED_IMPORT_LEGACY_ONE_STEP=true` iżomm l-imġiba ta
 
 ---
 
-## §5 — Kitba lura tal-kredenzjali ta’ OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Kitba lura tal-kredenzjali ta’ 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Fajls tas-sors**:
 
@@ -180,7 +180,7 @@ rawBody)`) qabel ma jipproċessa l-JSON. Jekk is-secret ikun issettjat, il-firma
    li kienu jiddependu fuq is-sinkronizzazzjoni remota tat-tokens — iridu jagħmlu
    opt-in b’mod espliċitu.
 
-**Għaliex inżommuha**: Cloud Sync huwa l-uniku mod kif tenant ta’ OmniRoute Cloud
+**Għaliex inżommuha**: Cloud Sync huwa l-uniku mod kif tenant ta’ 67router Cloud
 jista’ jiċċentralizza l-kredenzjali tat-tim. Is-soluzzjoni tagħmel il-mudell
 tat-theddid ċar:
 "is-server jiffirma, il-klijent jivverifika, l-operatur jagħmel opt-in."

@@ -6,7 +6,7 @@
 
 🌐 **Talen:** 🇺🇸 [English](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Kernreferentie voor de OmniRoute-API. Deze behandelt het openbare `/v1`-oppervlak en de meestgebruikte beheerendpoints; de machineleesbare [`docs/openapi.yaml`](../openapi.yaml) en de routestructuur onder `src/app/api/` zijn de volledige bronnen.
+Kernreferentie voor de 67router-API. Deze behandelt het openbare `/v1`-oppervlak en de meestgebruikte beheerendpoints; de machineleesbare [`docs/openapi.yaml`](../openapi.yaml) en de routestructuur onder `src/app/api/` zijn de volledige bronnen.
 
 Raadpleeg voor het specifieke OpenAI-compatibele protocol en de matrix met providermogelijkheden
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Antwoord | `HIT` of `MISS` (zonder streaming)                                                                                                                                                                                                                                 |
 | `X-OmniRoute-Idempotent` | Antwoord | `true` indien gededupliceerd                                                                                                                                                                                                                                       |
 | `X-OmniRoute-Progress`   | Antwoord | `enabled` als voortgangsregistratie is ingeschakeld                                                                                                                                                                                                                |
-| `X-OmniRoute-Session-Id` | Antwoord | Effectieve sessie-ID die door OmniRoute wordt gebruikt                                                                                                                                                                                                             |
+| `X-OmniRoute-Session-Id` | Antwoord | Effectieve sessie-ID die door 67router wordt gebruikt                                                                                                                                                                                                              |
 | `X-OmniRoute-Request-Id` | Antwoord | Correlatie-ID van de aanvraag (indien bekend)                                                                                                                                                                                                                      |
-| `X-OmniRoute-Version`    | Antwoord | Buildversie van OmniRoute (altijd aanwezig)                                                                                                                                                                                                                        |
+| `X-OmniRoute-Version`    | Antwoord | Buildversie van 67router (altijd aanwezig)                                                                                                                                                                                                                         |
 | `X-OmniRoute-Cost-Saved` | Antwoord | Het bedrag in USD dat dankzij de cache bij een HIT is bespaard (alleen cachehits)                                                                                                                                                                                  |
 | `X-OmniRoute-Decision`   | Antwoord | Routeringstrace: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` is de combostrategie, of `single` voor een aanvraag zonder combo) — altijd aanwezig in voltooiingsantwoorden                                                                        |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Account per verzoek vastzetten
 
-Wanneer een provider meerdere verbindingen (accounts of sleutels) heeft, kiest OmniRoute er normaal gesproken één
+Wanneer een provider meerdere verbindingen (accounts of sleutels) heeft, kiest 67router er normaal gesproken één
 via de strategie voor accountselectie. Een verzoek kan in plaats daarvan één specifieke verbinding
 vastzetten met de header `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ account vast te zetten:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Bron: `src/sse/handlers/chat.ts` (header uitlezen), `src/sse/services/auth.ts` e
 ## Exclusieve beheerde sessieleases
 
 Exclusieve leasing van beheerde sessies is een optioneel, clientneutraal routeringscontract: één actieve eigenaar
-beheert één in aanmerking komende OmniRoute-verbinding. Hiermee wordt geen model geleased, OAuth is niet vereist, er wordt geen
+beheert één in aanmerking komende 67router-verbinding. Hiermee wordt geen model geleased, OAuth is niet vereist, er wordt geen
 specifieke client geïdentificeerd en er is geen specifieke provider vereist.
 
 De API-sleutel waarmee wordt geauthenticeerd, moet het bereik `lease:exclusive` en een expliciete, niet-lege
@@ -190,7 +190,7 @@ Een actieve lease-eigenaar kan expliciet privacyveilige weergavemetadata voor de
 
 Deze optionele statusactie wordt binnen één databasetransactie afgeschermd door de niet-transparante eigenaar, de geauthenticeerde beheerde API-sleutel en de exacte
 actieve generatie. `displayName` is uitsluitend de geconfigureerde verbindingsnaam, zonder omringende witruimte;
-de waarde is `null` wanneer er geen veilige geconfigureerde naam bestaat. OmniRoute gebruikt nooit een
+de waarde is `null` wanneer er geen veilige geconfigureerde naam bestaat. 67router gebruikt nooit een
 e-mailadres of gegenereerde accountidentiteit als vervanging. De providerwaarde is een niet-gevoelig weergavelabel en nooit
 een gegenereerde identificatie voor een compatibele provider. Referenties, tokens, cookies, onbewerkte ID's van verbindingen of API-sleutels,
 eigenaarshashes, afschermingsgeheimen en interne routeringsgegevens worden uitgesloten.
@@ -231,7 +231,7 @@ Tijdelijke capaciteitsconcurrentie retourneert HTTP `429` met `Retry-After` en:
 
 Dit antwoord betekent uitsluitend dat de gewone verzameling in aanmerking komende verbindingen niet leeg was en elke vrije kandidaat
 bezet was door een actieve lease van een andere eigenaar. Niet-ondersteunde modellen/providers, niet-overeenkomend beleid, afkoelperiode, quotum,
-statusproblemen en andere gewone geschiktheidsfouten behouden hun bestaande OmniRoute-antwoorden.
+statusproblemen en andere gewone geschiktheidsfouten behouden hun bestaande 67router-antwoorden.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request-documenten en **stuurt deze intact door** naar `https://api.
 ```
 
 Native `{ image | audio | video | pdf }`-waarden kunnen een openbare HTTPS-URL, een `data:`-URI of onbewerkte
-base64 zijn. OmniRoute zet deze objecten niet om in tekenreeksen en haalt native afbeeldings-URL's niet op — Jina haalt
+base64 zijn. 67router zet deze objecten niet om in tekenreeksen en haalt native afbeeldings-URL's niet op — Jina haalt
 openbare media zelf op. Extra Jina-velden (`task`, `normalized`, `truncate`, `embedding_type`) worden
 doorgestuurd. Jina-SKU's die alleen tekst ondersteunen, blijven niet-tekstdocumenten weigeren.
 
@@ -454,7 +454,7 @@ aanroeper wordt geretourneerd, zodat clientcode geen speciale verwerking per pro
 
 ### Authenticatie en endpointomzetting voor Vertex AI DeepSeek OCR
 
-`vertex-deepseek-ocr` hergebruikt dezelfde Vertex AI-authenticatie die OmniRoute al ondersteunt voor
+`vertex-deepseek-ocr` hergebruikt dezelfde Vertex AI-authenticatie die 67router al ondersteunt voor
 chat-/afbeeldingsverkeer (`open-sse/executors/vertex.ts`): de API-sleutel van de verbinding is ofwel een
 Service Account JSON-referentie (die via de JWT-bearer-flow wordt ingewisseld voor een kortstondig OAuth-toegangstoken)
 of een reeds uitgegeven OAuth-toegangstoken dat ongewijzigd wordt gebruikt. De URL van het upstream-endpoint is het algemene
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Modelprijzen (`pricing`)
 
-Een item bevat een `pricing`-object wanneer OmniRoute de prijs van het model kent. De prijs is
+Een item bevat een `pricing`-object wanneer 67router de prijs van het model kent. De prijs is
 afkomstig uit de prijstabel die voor kostenberekening wordt gebruikt: ingebouwde standaardwaarden, gesynchroniseerde prijzen en
 overschrijvingen die via `/api/pricing` zijn ingesteld. Dit zijn catalogusprijzen, dus aanbieders met een abonnement tonen ook
 een prijs per token.
@@ -632,8 +632,8 @@ Gebruik dit endpoint wanneer een sidecar buiten het proces wordt uitgevoerd en
 
 ## Audiogeneratie met ElevenLabs
 
-Configureer in OmniRoute een `elevenlabs`-providerverbinding met je ElevenLabs-API-sleutel.
-Clients authenticeren met hun **OmniRoute**-sleutel (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Configureer in 67router een `elevenlabs`-providerverbinding met je ElevenLabs-API-sleutel.
+Clients authenticeren met hun **67router**-sleutel (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 de gateway levert de opgeslagen providersleutel als `xi-api-key`. Stuur nooit een ElevenLabs-sleutel
 als bearer-token van de gateway.
 
@@ -698,7 +698,7 @@ routes retourneren upstream-statuscodes en foutbody's ongewijzigd, waaronder `40
 abonnementsbeperking en `429` voor een quotalimiet. De headers `character-cost`, `song-id`, `request-id` en `retry-after`
 blijven behouden wanneer ze aanwezig zijn. Een gratis creditsaldo garandeert geen toegang tot elk
 muziekmodel, uitvoerformaat of elke API-functie: ElevenLabs bepaalt voor elk request de toegangsrechten.
-Het uniforme endpoint behoudt foutstatuscodes in de genormaliseerde foutenvelop van OmniRoute.
+Het uniforme endpoint behoudt foutstatuscodes in de genormaliseerde foutenvelop van 67router.
 
 Upstream-contracten: [geluidseffecten](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [muziekcompositie](https://elevenlabs.io/docs/api-reference/music/compose) en
@@ -739,7 +739,7 @@ Upstream-contracten: [geluidseffecten](https://elevenlabs.io/docs/api-reference/
 
 Alle POST-routes volgen dezelfde structuur: `Bearer your-api-key` + een door Zod gevalideerde JSON-body (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, enzovoort; zie `src/shared/validation/schemas.ts`). Bij een schemafout wordt 4xx geretourneerd.
 
-Voor clients die `Authorization: Bearer ...` niet kunnen toevoegen, accepteert OmniRoute ook API-sleutels in de URL via compatibiliteit met querystrings (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) of via de speciale `/api/v1/vscode/{token}/...`-eindpunten die hieronder worden beschreven.
+Voor clients die `Authorization: Bearer ...` niet kunnen toevoegen, accepteert 67router ook API-sleutels in de URL via compatibiliteit met querystrings (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) of via de speciale `/api/v1/vscode/{token}/...`-eindpunten die hieronder worden beschreven.
 
 ```bash
 # Herrangschikking (provider uit het cloudregister, of een OpenAI-compatibele providernode als "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, dezelfde API-sleutel als Parallel Search) retourneert uitsluitend Markdown
 — elke andere `format` resulteert in een `400` — en beperkt de inhoud tot 100.000 tekens. Wanneer
 de doelpagina zelf niet kan worden geëxtraheerd, rapporteert de upstream dit binnen een HTTP 200;
-OmniRoute geeft dit door als een `422` met een vaste melding.
+67router geeft dit door als een `422` met een vaste melding.
 
 | Methode | Pad             | Beschrijving                                                       |
 | ------- | --------------- | ------------------------------------------------------------------ |
@@ -963,14 +963,14 @@ moet het actieve toegangspunt zijn (dit is standaard het geval wanneer `app/serv
 De OpenAI **Codex CLI** valideert de modelnaam aan de clientzijde wanneer
 `supports_websockets = true` en **weigert id's met een providervoorvoegsel** zoals
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Verzend de **kale** id (bijvoorbeeld `gpt-5.5`). De bridge van OmniRoute is
+a ChatGPT account`). Verzend de **kale** id (bijvoorbeeld `gpt-5.5`). De bridge van 67router is
 uitsluitend voor codex, dus deze zet een kale id opnieuw om naar een codex-model
 (`resolveCodexWsModelInfo`) voordat de upstream-tunnel wordt opgezet — ook al zou een kale
 `gpt-5.5` anders via HTTP naar een andere provider worden gerouteerd.
 
 #### De OpenAI Codex CLI configureren
 
-Laat de Codex CLI naar OmniRoute verwijzen door een aangepaste provider met WebSocket-
+Laat de Codex CLI naar 67router verwijzen door een aangepaste provider met WebSocket-
 ondersteuning toe te voegen aan `~/.codex/config.toml` (gebruik een afzonderlijke `CODEX_HOME` om te voorkomen dat
 een bestaande configuratie wordt gewijzigd):
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # geen afsluitende slash; de WS-URL wordt afgeleid (gebruik https/wss in productie)
 wire_api = "responses"                    # enige ondersteunde waarde sinds februari 2026
 supports_websockets = true                # schakelt het Responses-via-WS-transport in
-env_key = "OMNIROUTE_API_KEY"             # bevat de OmniRoute-API-sleutel (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # bevat de 67router-API-sleutel (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # een OmniRoute-API-sleutel (elke sleutel als REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # een 67router-API-sleutel (elke sleutel als REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-De CLI upgradet `base_url + /responses` naar een WebSocket en OmniRoute maakt een tunnel naar
+De CLI upgradet `base_url + /responses` naar een WebSocket en 67router maakt een tunnel naar
 de geselecteerde codex OAuth-verbinding. End-to-end gevalideerd met de lokale
 server: ChatGPT retourneert `codex.rate_limits` + `response.created` en streamt de
 voltooiing.
@@ -1075,7 +1075,7 @@ percentages in de **platte-tekstuitvoer** en de gestructureerde **JSON-uitvoer**
 
 #### De formule voor aanpassing aan de afkapwaarde
 
-OmniRoute ondersteunt proactieve quotumafkapwaarden om uitputting bij de upstreamprovider te voorkomen (geconfigureerd via
+67router ondersteunt proactieve quotumafkapwaarden om uitputting bij de upstreamprovider te voorkomen (geconfigureerd via
 `quotaWindowThresholds` van de verbinding, providerstandaarden of algemene weerbaarheidsinstellingen). Wanneer een afkapdrempel
 (bijv. `cutoff = 25%`) actief is voor een quotumvenster, berekent de tekstweergave de resterende ruimte als volgt:
 
@@ -1438,9 +1438,8 @@ De GET-respons bevat `agents[]` (id, name, binary, version, installed, protocol,
 
 ### Evaluaties
 
-| Endpoint     | Methode  | Beschrijving                                    |
-| ------------ | -------- | ----------------------------------------------- |
-| `/api/evals` | GET/POST | Evaluatiesuites weergeven / evaluatie uitvoeren |
+| Endpoint | Methode | Beschrijving |
+| -------- | ------- | ------------ |
 
 ### Beleidsregels
 
@@ -1624,7 +1623,7 @@ Opmerkingen:
 
 - De getokeniseerde aliassen gebruiken dezelfde handlers als `/v1/*` en `/api/tags`; de antwoordstructuren blijven identiek.
 - Geef waar mogelijk de voorkeur aan `Authorization: Bearer ...` wanneer de client aangepaste headers ondersteunt.
-- URL-gebaseerde tokens kunnen voorkomen in logs van reverse proxy's, browsergeschiedenis en telemetrie buiten OmniRoute. Beschouw ze als een compatibiliteitsoptie, niet als de standaardverificatiemethode.
+- URL-gebaseerde tokens kunnen voorkomen in logs van reverse proxy's, browsergeschiedenis en telemetrie buiten 67router. Beschouw ze als een compatibiliteitsoptie, niet als de standaardverificatiemethode.
 
 ---
 
@@ -1732,7 +1731,7 @@ Routeringscombo's op een hoger niveau (reeds samengevat onder `/api/combos*`) ku
 
 ## Webhooks
 
-Uitgaande webhookabonnementen voor OmniRoute-gebeurtenissen (voltooiing van verzoeken, uitputting van quota, sleutelrotatie, enz.).
+Uitgaande webhookabonnementen voor 67router-gebeurtenissen (voltooiing van verzoeken, uitputting van quota, sleutelrotatie, enz.).
 
 | Methode | Pad                       | Beschrijving                                                                   |
 | ------- | ------------------------- | ------------------------------------------------------------------------------ |
@@ -1763,31 +1762,6 @@ Wordt gebruikt door het subsysteem voor automatisch sleutelbeheer om API-sleutel
 
 ---
 
-## Agents-protocol
-
-Cloudagenttaken (Claude Code, Codex Cloud, OpenHands enz.) die op afstand worden uitgevoerd namens OmniRoute-gebruikers.
-
-| Methode | Pad                           | Beschrijving                                                                                                                                         |
-| ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Taken weergeven — optioneel `?provider=`, `?status=`, `?limit=` (1–500, standaard 50)                                                                |
-| POST    | `/api/v1/agents/tasks`        | Taak aanmaken — body gevalideerd door `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Retourneert `201` met taakenvelop |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Een taak verwijderen                                                                                                                                 |
-| GET     | `/api/v1/agents/tasks/[id]`   | Taak lezen — vernieuwt de status synchroon vanuit de upstream-cloudagent wanneer een `external_id` is ingesteld                                      |
-| POST    | `/api/v1/agents/tasks/[id]`   | Gediscrimineerde actie: `{action: "approve"}`, `{action: "message", message}` of `{action: "cancel"}`                                                |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Een specifieke taak op id verwijderen                                                                                                                |
-
-> **Authenticatie:** beheerauthenticatie is vereist voor elke methode (`requireCloudAgentManagementAuth`). Vóór v3.8.0 waren deze niet geauthenticeerd — zie commit `588a0333` voor de incompatibele wijziging.
-
-```bash
-# Een Claude Code-cloudtaak aanmaken
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Beheerproxy's
 
 Uitgaande HTTP(S)/SOCKS-proxy's die aan providers, accounts of globaal kunnen worden toegewezen.
@@ -1811,7 +1785,7 @@ Uitgaande HTTP(S)/SOCKS-proxy's die aan providers, accounts of globaal kunnen wo
 
 ## Veerkracht (uitgebreid)
 
-OmniRoute biedt drie onafhankelijke mechanismen voor tijdelijke fouten; via de onderstaande beheerendpoints kunnen operators deze uitlezen en overschrijven:
+67router biedt drie onafhankelijke mechanismen voor tijdelijke fouten; via de onderstaande beheerendpoints kunnen operators deze uitlezen en overschrijven:
 
 | Bereik                  | Statusopslag                                  | Uitlezen                                  | Resetten / wissen                                                 |
 | ----------------------- | --------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------- |
@@ -1846,7 +1820,7 @@ Zie voor de volledige conceptuele referentie en de standaardwaarden van de circu
 
 ## Vaardigheden
 
-Framework voor vaardigheden waarmee OmniRoute kan worden uitgebreid met aangepaste uitvoerbare handlers, plus marketplace-integraties.
+Framework voor vaardigheden waarmee 67router kan worden uitgebreid met aangepaste uitvoerbare handlers, plus marketplace-integraties.
 
 | Methode | Pad                               | Beschrijving                                                                                                                                     |
 | ------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1883,7 +1857,7 @@ Persistente opslag voor conversationeel/feitelijk geheugen, afgebakend per API-s
 
 ## MCP-server
 
-OmniRoute wordt geleverd met een ingebouwde Model Context Protocol-server met 3 transporten (stdio, SSE, streamable-http) en tools met afgebakende rechten. De onderstaande dashboardeindpunten lezen status-/auditgegevens en fungeren als proxy voor de HTTP-transporten.
+67router wordt geleverd met een ingebouwde Model Context Protocol-server met 3 transporten (stdio, SSE, streamable-http) en tools met afgebakende rechten. De onderstaande dashboardeindpunten lezen status-/auditgegevens en fungeren als proxy voor de HTTP-transporten.
 
 | Methode | Pad | Beschrijving |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1905,50 +1879,12 @@ OmniRoute wordt geleverd met een ingebouwde Model Context Protocol-server met 3 
 
 ## A2A-server
 
-OmniRoute biedt een A2A-eindpunt (Agent-to-Agent) voor JSON-RPC 2.0 plus een REST-wrapper voor inspectie- en dashboardgebruik.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # optioneel, tenzij OMNIROUTE_API_KEY is ingesteld
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Ondersteunde methoden (allemaal afhankelijk van `settings.a2aEnabled`):
-
-| Methode          | Beschrijving                                                                  |
-| ---------------- | ----------------------------------------------------------------------------- |
-| `message/send`   | Synchrone uitvoering van een skill; retourneert `{task, artifacts, metadata}` |
-| `message/stream` | Streaming SSE-uitvoering van dezelfde verzameling skills                      |
-| `tasks/get`      | Haal een taak op via `taskId`                                                 |
-| `tasks/cancel`   | Annuleer een taak via `taskId`                                                |
-
-Ingebouwde skills: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Agentkaart
-
-```bash
-GET /.well-known/agent.json
-```
-
-Retourneert de openbare A2A-agentkaart (naam, beschrijving, mogelijkheden, skillcatalogus, authenticatieschema) — openbaar gecachet gedurende 1 uur. Geen authenticatie vereist.
+67router biedt een A2A-eindpunt (Agent-to-Agent) voor JSON-RPC 2.0 plus een REST-wrapper voor inspectie- en dashboardgebruik.
 
 ### REST-hulproutes
 
 | Methode | Pad                          | Beschrijving                                                                                                         |
 | ------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | A2A ingeschakeld + taakstatistieken + samenvatting van de gecachete agentkaart                                       |
 | GET     | `/api/a2a/tasks`             | Taken weergeven — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Niet geïmplementeerd als REST-hulproute — maak aan via JSON-RPC `message/send`)                                     |
 | GET     | `/api/a2a/tasks/[id]`        | Eén taak ophalen                                                                                                     |
@@ -1968,12 +1904,8 @@ Retourneert de openbare A2A-agentkaart (naam, beschrijving, mogelijkheden, skill
 | GET | `/api/cloud/models/alias` | Geef modelaliassen weer zoals beschikbaar gesteld aan cloudsynchronisatie |
 | GET | `/api/assess` | Lees de nieuwste beoordelingscategorisaties (per provider/model) |
 | POST | `/api/assess` | Voer een beoordeling uit — body: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Geef ingebouwde evaluatiesuites + de meest recente uitvoeringen weer |
-| POST | `/api/evals` | Start een evaluatie-uitvoering |
-| POST | `/api/evals/suites` | Maak een aangepaste evaluatiesuite aan — body gevalideerd door `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Haal een aangepaste evaluatiesuite op |
 
-**Authenticatie:** `/api/cloud/auth` valideert rechtstreeks een Bearer-sleutel en retourneert de gemaskeerde sleutel en `projectId` van elke verbinding alleen voor een sleutel met het bereik `manage` / `admin`; de overige routes `/api/cloud/*`, `/api/evals/*` en `/api/assess` vereisen een beheersessie/API-sleutel. POST voor `/api/assess` gebruikt `validateBody` met een scopeschema op basis van een gediscrimineerde union.
+**Authenticatie:** `/api/cloud/auth` valideert rechtstreeks een Bearer-sleutel en retourneert de gemaskeerde sleutel en `projectId` van elke verbinding alleen voor een sleutel met het bereik `manage` / `admin`; de overige routes `/api/cloud/*` en `/api/assess` vereisen een beheersessie/API-sleutel. POST voor `/api/assess` gebruikt `validateBody` met een scopeschema op basis van een gediscrimineerde union.
 
 ---
 
@@ -2131,7 +2063,7 @@ Endpoints die uitsluitend toegankelijk zijn voor beheerders voor operationeel be
 
 ## Beheer van CLI-tools
 
-Beheer CLI-tools die met OmniRoute integreren (antigravity, commandCode,
+Beheer CLI-tools die met 67router integreren (antigravity, commandCode,
 devin-cli enz.). Zie [Providerreferentie](./PROVIDER_REFERENCE.md) voor de volledige lijst.
 
 | Methode | Pad                                     | Beschrijving                                                                                                                                                                                   |
@@ -2240,26 +2172,6 @@ Zie [Skills-framework](../frameworks/SKILLS.md) voor alle details.
 
 ---
 
-## Plugins
-
-Beheer OmniRoute-plugins (extensies van derden).
-
-| Methode | Pad                                | Beschrijving                                 |
-| ------- | ---------------------------------- | -------------------------------------------- |
-| GET     | `/api/plugins`                     | Geïnstalleerde plugins weergeven             |
-| POST    | `/api/plugins/marketplace/install` | Een plugin installeren vanuit de marketplace |
-| DELETE  | `/api/plugins/[name]`              | Een plugin verwijderen                       |
-| POST    | `/api/plugins/[name]/activate`     | Een plugin activeren                         |
-| POST    | `/api/plugins/[name]/deactivate`   | Een plugin deactiveren                       |
-| GET     | `/api/plugins/[name]/config`       | De pluginconfiguratie ophalen                |
-| PUT     | `/api/plugins/[name]/config`       | De pluginconfiguratie bijwerken              |
-
-**Authenticatie:** Vereist een beheersessie.
-
-Zie [Pluginframework](../frameworks/PLUGIN_SDK.md) voor alle details.
-
----
-
 ## Shadow-routing
 
 Shadow-/A-B-vergelijking van providers is **geen zelfstandig REST-oppervlak** — dit wordt geconfigureerd via combo-routing (zie [Auto-Combo](../routing/AUTO-COMBO.md)). Vergelijkingsmetriek per combo is beschikbaar via `GET /api/combos/metrics`.
@@ -2294,5 +2206,3 @@ API-sleutel met beheerbereik) en hoe deze verschillen van inferentiesleutels.
 - `requireLogin` kan worden in- en uitgeschakeld via `/api/settings/require-login`
 - Routes onder `/v1/*` vereisen optioneel een Bearer-API-sleutel wanneer `REQUIRE_API_KEY=true`
 - Met "beheertoken" / "API-sleutel met beheerbereik" wordt in deze referentie een van de families uit die handleiding bedoeld — niet een ongedefinieerd extra geheimtype
-
-> **Incompatibele wijziging (v3.8.0)** — `/api/v1/agents/tasks/*` en de eindpunten voor cooldownbeheer vereisen nu **beheerauthenticatie** (de dashboardcookie `auth_token` of een API-sleutel met beheerbereik). Clients die deze routes eerder zonder authenticatie aanriepen, ontvangen nu `401 Unauthorized`. Zie commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

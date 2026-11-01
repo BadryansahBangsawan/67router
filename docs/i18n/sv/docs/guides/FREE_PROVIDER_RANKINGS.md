@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort sagt**: OmniRoute rankar sina **kostnadsfria** leverantörer efter modellkvalitet med hjälp av **ELO-poäng från
+> **Kort sagt**: 67router rankar sina **kostnadsfria** leverantörer efter modellkvalitet med hjälp av **ELO-poäng från
 > Arena AI (i LMArena-stil)**. Öppna sidan **Rankning av kostnadsfria leverantörer** i
 > kontrollpanelen för att se vilka kostnadsfria leverantörer som erbjuder de starkaste modellerna för din uppgift —
 > totalt sett eller filtrerat efter kategori (kodning, granskning, dokumentation, felsökning).
@@ -13,7 +13,7 @@
 
 ## Vad det är
 
-OmniRoute registrerar 375 leverantörer, varav 155 katalogposter markerade som **kostnadsfria/no-auth**
+67router registrerar 375 leverantörer, varav 155 katalogposter markerade som **kostnadsfria/no-auth**
 (no-auth, OAuth med kostnadsfri nivå eller API-nyckel med kostnadsfri nivå — se
 [guiden till kostnadsfria nivåer](../getting-started/FREE-TIERS-GUIDE.md) och den fullständiga
 [katalogen över kostnadsfria nivåer](../reference/FREE_TIERS.md)). Haken: kostnadsfria leverantörer
@@ -128,9 +128,9 @@ och `code` — från Arena AI:s API för topplistor
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Varje post i topplistan
 innehåller ett modellnamn, en leverantör, ELO-`score`, ett konfidensintervall och antal röster.
 
-Topplistans kategorier mappas till OmniRoutes uppgiftskategorier:
+Topplistans kategorier mappas till 67routers uppgiftskategorier:
 
-| Arena-topplista | OmniRoutes uppgiftskategorier                     |
+| Arena-topplista | 67routers uppgiftskategorier                      |
 | --------------- | ------------------------------------------------- |
 | `text`          | `default`, `review`, `documentation`, `debugging` |
 | `code`          | `coding`                                          |
@@ -167,7 +167,7 @@ Synkroniseringen körs **som standard**:
 
 - Den körs en gång vid serverstart och därefter med ett periodiskt tidsintervall
   (`src/lib/arenaEloSync.ts`, inkopplad från `src/instrumentation-node.ts`).
-- Den är **icke-blockerande och aldrig fatal** — om hämtningen från den externa källan misslyckas fortsätter OmniRoute
+- Den är **icke-blockerande och aldrig fatal** — om hämtningen från den externa källan misslyckas fortsätter 67router
   att köras, och rankningarna visar helt enkelt de senast fungerande uppgifterna (eller ett tomt tillstånd).
 
 Två miljövariabler styr den (dokumenterade i
@@ -202,7 +202,7 @@ flexibel matchning (`findMatchingIntelligence` i `src/lib/freeProviderRankings.t
 3. Prefixmatchning (ett modellnamn i topplistan är ett prefix till registrets ID).
 
 På synkroniseringssidan tas kända leverantörsprefix (`anthropic/`, `openai/`, `google/`, …)
-bort, och en liten aliasmappning utökar kanoniska namn till de varianter som OmniRoute använder
+bort, och en liten aliasmappning utökar kanoniska namn till de varianter som 67router använder
 internt, så att modeller kan hittas oavsett namn.
 
 ### Så rankas en leverantör

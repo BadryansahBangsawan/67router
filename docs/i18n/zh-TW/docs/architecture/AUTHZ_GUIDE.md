@@ -7,7 +7,7 @@
 > **真實來源：** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **上次更新：** 2026-09-22 — 範圍命名空間指向 MCP-SERVER.md
 
-OmniRoute 具有一個路由感知授權管道，用於把關每個 API 請求。分類是**確定性**且**故障關閉**的 — 任何無法分類的內容最終都會歸類為 `MANAGEMENT`，並要求會話或管理級別的令牌。本頁解釋了供維護路由或設計新端點的工程師使用的模型。
+67router 具有一個路由感知授權管道，用於把關每個 API 請求。分類是**確定性**且**故障關閉**的 — 任何無法分類的內容最終都會歸類為 `MANAGEMENT`，並要求會話或管理級別的令牌。本頁解釋了供維護路由或設計新端點的工程師使用的模型。
 
 ![授權管道（3 種路由類別 + 策略評估）](../diagrams/exported/authz-pipeline.svg)
 
@@ -250,8 +250,6 @@ API 金鑰帶有一個 `scopes` 陣列（以 JSON 格式儲存在 `api_keys.scop
 用戶端 API 金鑰的強制執行使用 `src/shared/utils/featureFlags.ts` 中的 `isRequireApiKeyEnabled()`，而非直接讀取 `process.env.REQUIRE_API_KEY`。這對已部署的執行個體很重要：在儀表板 → 功能旗標中切換 `REQUIRE_API_KEY` 會儲存一個資料庫覆寫值，並立即影響 `/v1/*`、`/v1beta/*`、`/models`、`/responses`、`/chat/completions`、`/codex/*` 以及其他共用此輔助函式的用戶端 API 認證檢查。若無法讀取功能旗標儲存區，用戶端 API 認證會失敗時預設拒絕，並要求提供金鑰。
 
 ## 破壞性變更 — v3.8.0
-
-`/api/v1/agents/tasks/*` 與 `/api/resilience/model-cooldowns` 端點**現在需要管理驗證**（提交 `588a0333`）。先前傳送不含 `manage` 範圍之一般 API 金鑰的用戶端會收到 `403`。遷移方式：在 API Keys 儀表板中將 `manage` 範圍授予該金鑰，或使用已登入的儀表板工作階段。
 
 ## 行為變更 — v3.8.2
 

@@ -14,7 +14,7 @@
 
 ## Šta je to
 
-Lokalni korpus (Local Corpus) omogućava operateru da izloži jedan eksplicitno odobreni direktorij tekstualnih datoteka OmniRoute MCP serveru. Datoteke ostaju u svom originalnom direktoriju: OmniRoute pohranjuje samo kanonsku korijensku putanju u SQLite i održava indeks pretraživanja u memoriji. Ne kopira sadržaj korpusa u repozitorij ili bazu podataka.
+Lokalni korpus (Local Corpus) omogućava operateru da izloži jedan eksplicitno odobreni direktorij tekstualnih datoteka 67router MCP serveru. Datoteke ostaju u svom originalnom direktoriju: 67router pohranjuje samo kanonsku korijensku putanju u SQLite i održava indeks pretraživanja u memoriji. Ne kopira sadržaj korpusa u repozitorij ili bazu podataka.
 
 Osvježavanje indeksa je inkrementalno. Nepromijenjene datoteke se ponovo koriste na osnovu veličine i vremena izmjene, promijenjene datoteke se ponovo čitaju i heširaju pomoću SHA-256, a izbrisane datoteke se uklanjaju. Pretraga osvježava indeks stariji od 30 sekundi; pozivaoci također mogu zatražiti trenutno osvježavanje.
 

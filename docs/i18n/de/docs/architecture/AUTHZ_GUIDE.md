@@ -7,7 +7,7 @@
 > **Maßgebliche Quelle:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Zuletzt aktualisiert:** 2026-09-22 — Scope-Namespaces verweisen auf MCP-SERVER.md
 
-OmniRoute verfügt über eine routenabhängige Autorisierungspipeline, die jede API-Anfrage absichert. Die Klassifizierung ist **deterministisch** und erfolgt nach dem **Fail-Closed-Prinzip** — alles, was nicht klassifiziert werden kann, wird als `MANAGEMENT` eingestuft und erfordert eine Sitzung oder ein Token mit Berechtigungen auf Management-Ebene. Diese Seite erläutert das Modell für Entwickler, die Routen verwalten oder neue Endpunkte entwerfen.
+67router verfügt über eine routenabhängige Autorisierungspipeline, die jede API-Anfrage absichert. Die Klassifizierung ist **deterministisch** und erfolgt nach dem **Fail-Closed-Prinzip** — alles, was nicht klassifiziert werden kann, wird als `MANAGEMENT` eingestuft und erfordert eine Sitzung oder ein Token mit Berechtigungen auf Management-Ebene. Diese Seite erläutert das Modell für Entwickler, die Routen verwalten oder neue Endpunkte entwerfen.
 
 ![Autorisierungspipeline (3 Routenklassen + Richtlinienauswertung)](../diagrams/exported/authz-pipeline.svg)
 
@@ -269,8 +269,6 @@ Anmeldeinformationen. Siehe [Verwaltungsauthentifizierung](../guides/MANAGEMENT-
 Die Durchsetzung der Client-API-Schlüssel verwendet `isRequireApiKeyEnabled()` in `src/shared/utils/featureFlags.ts` und nicht einen direkten Lesezugriff auf `process.env.REQUIRE_API_KEY`. Das ist für produktive Instanzen wichtig: Wird `REQUIRE_API_KEY` unter Dashboard → Feature-Flags umgeschaltet, speichert das eine Überschreibung in der Datenbank und wirkt sofort auf `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` und die übrigen Client-API-Prüfungen, die diesen Helper teilen. Kann der Speicher der Feature-Flags nicht gelesen werden, schlägt die Client-API-Authentifizierung fehl und verlangt einen Schlüssel.
 
 ## Inkompatible Änderung — v3.8.0
-
-Die Endpunkte `/api/v1/agents/tasks/*` und `/api/resilience/model-cooldowns` **erfordern jetzt eine Management-Authentifizierung** (Commit `588a0333`). Clients, die bisher einen normalen API-Schlüssel ohne den Scope `manage` gesendet haben, erhalten `403`. Migration: Weisen Sie dem Schlüssel entweder im API Keys Dashboard den Scope `manage` zu oder verwenden Sie eine angemeldete Dashboard-Sitzung.
 
 ## Verhaltensänderung — v3.8.2
 

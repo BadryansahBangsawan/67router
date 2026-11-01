@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute memeringkat penyedia **gratis** berdasarkan kualitas model menggunakan **skor ELO Arena AI
+> **TL;DR**: 67router memeringkat penyedia **gratis** berdasarkan kualitas model menggunakan **skor ELO Arena AI
 > (bergaya LMArena)**. Buka halaman **Peringkat Penyedia Gratis** di
 > dasbor untuk melihat penyedia gratis mana yang menyediakan model terkuat untuk tugas Anda —
 > secara keseluruhan, atau difilter berdasarkan kategori (coding, peninjauan, dokumentasi, debugging).
@@ -13,7 +13,7 @@
 
 ## Apa Itu
 
-OmniRoute mendaftarkan 375 penyedia, termasuk 155 entri katalog yang ditandai **gratis/no-auth**
+67router mendaftarkan 375 penyedia, termasuk 155 entri katalog yang ditandai **gratis/no-auth**
 (no-auth,
 OAuth tingkat gratis, atau API key tingkat gratis — lihat
 [Panduan Free Tiers](../getting-started/FREE-TIERS-GUIDE.md) dan
@@ -130,9 +130,9 @@ dan `code` — dari API papan peringkat Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Setiap entri papan peringkat
 memuat nama model, vendor, `score` ELO, interval kepercayaan, dan jumlah suara.
 
-Kategori papan peringkat dipetakan ke kategori tugas OmniRoute:
+Kategori papan peringkat dipetakan ke kategori tugas 67router:
 
-| Papan peringkat Arena | Kategori tugas OmniRoute                          |
+| Papan peringkat Arena | Kategori tugas 67router                           |
 | --------------------- | ------------------------------------------------- |
 | `text`                | `default`, `review`, `documentation`, `debugging` |
 | `code`                | `coding`                                          |
@@ -169,7 +169,7 @@ Sinkronisasi **aktif secara default**:
 
 - Sinkronisasi dijalankan sekali saat server dimulai, lalu secara berkala berdasarkan pengatur waktu
   (`src/lib/arenaEloSync.ts`, dihubungkan dari `src/instrumentation-node.ts`).
-- Sinkronisasi ini **tidak memblokir dan tidak pernah menyebabkan kegagalan fatal** — jika pengambilan data dari sumber hulu gagal, OmniRoute tetap
+- Sinkronisasi ini **tidak memblokir dan tidak pernah menyebabkan kegagalan fatal** — jika pengambilan data dari sumber hulu gagal, 67router tetap
   berjalan dan peringkat hanya menampilkan data valid terakhir (atau status kosong).
 
 Dua variabel lingkungan mengontrolnya (didokumentasikan dalam
@@ -204,7 +204,7 @@ pencocokan fleksibel (`findMatchingIntelligence` dalam `src/lib/freeProviderRank
 3. Kecocokan prefiks (nama model papan peringkat merupakan prefiks dari ID registri).
 
 Di sisi sinkronisasi, prefiks vendor yang dikenal (`anthropic/`, `openai/`, `google/`, …)
-dihapus dan peta alias kecil memperluas nama kanonis menjadi varian yang digunakan OmniRoute
+dihapus dan peta alias kecil memperluas nama kanonis menjadi varian yang digunakan 67router
 secara internal, sehingga model tetap dapat ditemukan dengan nama apa pun.
 
 ### Cara penyedia diberi peringkat

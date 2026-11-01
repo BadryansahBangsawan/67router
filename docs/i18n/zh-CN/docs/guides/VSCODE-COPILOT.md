@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** 会将 OmniRoute 提供的每个模型都添加到 _原生_ GitHub Copilot Chat
+**OmniCopilot** 会将 67router 提供的每个模型都添加到 _原生_ GitHub Copilot Chat
 模型选择器中。无需第二个侧边栏，也无需单独的聊天 UI——Copilot 的代理模式、工具调用、
 MCP 服务器和自定义指令均可继续正常工作，只是改为在你选择的模型上运行。
 
@@ -23,13 +23,13 @@ MCP 服务器和自定义指令均可继续正常工作，只是改为在你选�
 
 ## 设置
 
-1. **运行 OmniRoute** — `npm install -g omniroute && omniroute`（控制面板位于 `http://localhost:20128`）。
+1. **运行 67router** — `npm install -g omniroute && omniroute`（控制面板位于 `http://localhost:20128`）。
 2. **安装扩展** — 在扩展视图中搜索“OmniRoute”。
 3. **选择模型** — Copilot Chat → 模型选择器 → **管理模型…** → **OmniRoute**，然后勾选
    所需模型。
 
-当 OmniRoute 在默认端口上运行时，无需进行任何配置。对于远程实例，请打开
-**活动栏中的 OmniRoute 图标**（或运行 `OmniRoute: Manage Connection`），然后设置：
+当 67router 在默认端口上运行时，无需进行任何配置。对于远程实例，请打开
+**活动栏中的 67router 图标**（或运行 `OmniRoute: Manage Connection`），然后设置：
 
 - **服务器 URL** — 服务器根地址，例如 `http://192.168.0.15:20128`。扩展会自动附加
   `/v1` 后缀；请勿自行添加。
@@ -73,7 +73,7 @@ HTTP 400 — 模型 '<id>' 是图像生成模型，不能用于
 
 因此，在这些模型进入选择器之前，会根据其 `type` 字段将其过滤掉。**Responses-API
 模型会予以保留**——每个 Codex / GPT-5.x 条目都会声明 `supported_endpoints: ["responses"]`，
-而 OmniRoute 会为 `/v1/chat/completions` 转换这些请求，因此它们完全可用。
+而 67router 会为 `/v1/chat/completions` 转换这些请求，因此它们完全可用。
 
 ### 你从未配置过的提供程序
 
@@ -85,7 +85,7 @@ HTTP 400 — 模型 '<id>' 是图像生成模型，不能用于
 
 ## VS Code 标签页中的仪表板
 
-`omnicopilot.dashboardOpen: "editor"` 会通过 Simple Browser 在编辑器标签页中呈现 OmniRoute 仪表板，而不是在外部浏览器中打开。嵌入功能需要**在服务器端主动启用**，方法是设置 `DASHBOARD_ALLOW_EMBED=vscode`。这样提供 HTML 页面时将使用 `frame-ancestors 'self' vscode-webview:`，而不是默认的 `frame-ancestors 'none'` + `X-Frame-Options: DENY`。无论采用哪种方式，API 接口（`/api`、`/v1`、`/v1beta`、`/a2a`、`/healthz`）始终保留严格的响应头。
+`omnicopilot.dashboardOpen: "editor"` 会通过 Simple Browser 在编辑器标签页中呈现 67router 仪表板，而不是在外部浏览器中打开。嵌入功能需要**在服务器端主动启用**，方法是设置 `DASHBOARD_ALLOW_EMBED=vscode`。这样提供 HTML 页面时将使用 `frame-ancestors 'self' vscode-webview:`，而不是默认的 `frame-ancestors 'none'` + `X-Frame-Options: DENY`。无论采用哪种方式，API 接口（`/api`、`/v1`、`/v1beta`、`/a2a`、`/healthz`）始终保留严格的响应头。
 
 > ⚠️ **这是构建时标志，而不是运行时标志。** Next.js 会将 `headers()` 编译到路由清单中，因此 `next.config.mjs` 会在构建软件包时读取该变量
 > （`next.config.mjs` → `resolveDashboardEmbedMode`、`scripts/build/dashboardEmbed.mjs`）。
@@ -117,7 +117,7 @@ npm start
 
 | 症状                                             | 原因 / 解决方法                                                                                                                                                                                               |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 选择器中没有 OmniRoute 模型                      | 无法连接服务器。状态栏圆点会变为灰色；请运行 `OmniRoute: Check Connection`。模型发现功能按设计不会显示提示，并且在连接失败时不会提供任何模型。                                                                |
+| 选择器中没有 67router 模型                       | 无法连接服务器。状态栏圆点会变为灰色；请运行 `OmniRoute: Check Connection`。模型发现功能按设计不会显示提示，并且在连接失败时不会提供任何模型。                                                                |
 | 每个模型都出现两次                               | 你使用的 OmniCopilot 版本低于 1.0.1——请更新。扩展现在会请求 `?prefix=alias`。                                                                                                                                 |
 | 之前列出的图像/音频模型消失了                    | 从 1.0.1 起有意如此——这些模型本来就无法响应聊天请求。                                                                                                                                                         |
 | Activity Bar 中缺少面板                          | VS Code 会将额外的视图容器移至 Activity Bar 底部的 **“…”** 溢出菜单中，而通过右键菜单隐藏的容器会一直保持隐藏状态。右键单击 Activity Bar → 勾选 **OmniRoute**，或通过 `OmniRoute: Manage Connection` 打开它。 |
@@ -129,6 +129,6 @@ npm start
 ## 另请参阅
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — 所有其他编码工具
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — 操作远程 OmniRoute
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — 操作远程 67router
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` 契约
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — 该扩展自身的目录说明

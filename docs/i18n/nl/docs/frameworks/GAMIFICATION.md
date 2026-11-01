@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Laatst bijgewerkt:** 2026-06-28 — v3.8.40
 
-OmniRoute bevat een local-first-gamificatielaag die gebruikers beloont voor
+67router bevat een local-first-gamificatielaag die gebruikers beloont voor
 interactie met het platform — door aanvragen te doen, van provider te wisselen,
 combo's te maken, tokens te delen en bij te dragen aan de community. Alle status
 wordt opgeslagen in SQLite; federatie met communityservers is optioneel en
@@ -37,7 +37,7 @@ prikkels (tokens delen, uitnodigingsbeloningen) te bieden.
 | Klassementen             | Globale, wekelijkse, maandelijkse, tokendeel- en bijdragescopes               |
 | Tokens delen             | Draag tegoeden over tussen gebruikers via een dubbel boekhoudkundig grootboek |
 | Uitnodigen en inwisselen | Verwijzingscodes met via SHA-256 gehashte opslag                              |
-| Communityservers         | Federeer met externe OmniRoute-instanties                                     |
+| Communityservers         | Federeer met externe 67router-instanties                                      |
 | Anticheat                | Scores aan serverzijde, snelheidsbeperking en anomaliedetectie met z-scores   |
 
 ### Ontwerpprincipes
@@ -117,7 +117,7 @@ src/app/api/gamification/
 
 ### Databasetabellen
 
-Alle tabellen bevinden zich in de centrale OmniRoute SQLite-database, aangemaakt door migratie
+Alle tabellen bevinden zich in de centrale 67router SQLite-database, aangemaakt door migratie
 `060_create_gamification.sql`. WAL-journaling wordt overgenomen van de singleton
 `getDbInstance()` in `src/lib/db/core.ts`.
 
@@ -176,7 +176,7 @@ Alle tabellen bevinden zich in de centrale OmniRoute SQLite-database, aangemaakt
 
 ### Domeinmodule: `src/lib/db/gamification.ts`
 
-Volgt het standaard OmniRoute-patroon — importeert `getDbInstance()` uit
+Volgt het standaard 67router-patroon — importeert `getDbInstance()` uit
 `core.ts` en exporteert getypeerde CRUD-functies. Geen onbewerkte SQL in routehandlers.
 
 Belangrijkste functies:
@@ -239,7 +239,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Actie             | XP  | Beschrijving                                                              |
 | ----------------- | --- | ------------------------------------------------------------------------- |
-| `request`         | 1   | Per API-verzoek dat via OmniRoute wordt gerouteerd                        |
+| `request`         | 1   | Per API-verzoek dat via 67router wordt gerouteerd                         |
 | `provider_switch` | 5   | Overschakelen naar een andere provider                                    |
 | `model_switch`    | 3   | Overschakelen naar een ander model                                        |
 | `combo_create`    | 10  | Een nieuwe combo maken                                                    |
@@ -585,7 +585,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (uniek, geïndexeerd) |
 | `token_hash` | SHA-256(raw_token)              |
 
-Het onbewerkte token wordt bij het aanmaken exact één keer aan de gebruiker geretourneerd. OmniRoute
+Het onbewerkte token wordt bij het aanmaken exact één keer aan de gebruiker geretourneerd. 67router
 slaat het daarna nooit meer op en geeft het ook nooit meer weer — alleen de hash blijft behouden.
 
 ### Preventie van zelfverwijzing
@@ -708,7 +708,7 @@ Beheerders kunnen de volledige audittrail opvragen via `GET /api/gamification/an
 
 ## API-routes
 
-Alle routes volgen het standaard OmniRoute-patroon:
+Alle routes volgen het standaard 67router-patroon:
 
 ```
 Route → CORS-preflight → Validatie van body (Zod) → Authenticatie (extractApiKey)

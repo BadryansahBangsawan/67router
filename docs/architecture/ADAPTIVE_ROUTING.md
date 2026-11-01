@@ -7,7 +7,7 @@ lastUpdated: 2026-08-20
 # Adaptive Routing: Routing Events, Quality Feedback & Explainability
 
 This document describes the feedback-driven adaptive routing foundation added to
-OmniRoute. It is deliberately small: it introduces a typed routing-outcome
+67router. It is deliberately small: it introduces a typed routing-outcome
 channel, an online quality signal that feeds the existing auto-combo scorer, an
 optional OpenTelemetry exporter, and an explainability endpoint. It does **not**
 replace the existing resilience stack (circuit breaker, connection cooldown,
@@ -15,7 +15,7 @@ model lockout, health matrix, autopilot) — it complements it.
 
 ## 1. Architectural context
 
-OmniRoute is a data plane with a **request hot path** and a **control/intelligence
+67router is a data plane with a **request hot path** and a **control/intelligence
 plane**. The hot path must stay fast, memory-efficient, asynchronous, resilient and
 predictable. Evaluation, quality scoring, experiments and historical analysis belong
 to the control plane.
@@ -25,7 +25,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (fast, sync, in-memory)
+│    67router        │   data plane (fast, sync, in-memory)
 │  routing / failover │
 │  health / guardrail │
 │  cache / streaming  │
@@ -51,7 +51,6 @@ AI Agent / IDE
 | Shadow traffic                      | `open-sse/services/combo/shadowRouting.ts`                                                         |
 | Guardrails                          | `src/lib/guardrails/` (pre/post hooks)                                                             |
 | Exact cache                         | `src/lib/semanticCache.ts` (signature-based)                                                       |
-| Evaluators / eval-driven routing    | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                               |
 | Combo decision explainability       | `open-sse/services/combo/decisionTrace.ts`                                                         |
 | Dashboard real-time events          | `src/lib/events/eventBus.ts` (UI notification channel, `unknown` payloads, 100-entry history)      |
 
@@ -235,7 +234,7 @@ Files: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK).
 - Spans follow GenAI semantic conventions (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) plus OmniRoute routing
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) plus 67router routing
   attributes (outcome, status, ttft, retries, fallback).
 - `record()` only enqueues into a bounded buffer (O(1)); a background timer
   flushes via `POST {endpoint}/v1/traces` asynchronously. Under overload the
@@ -257,7 +256,7 @@ Files: `open-sse/services/routing/otel.ts`
 
 ## 6. Evaluation-plane integration (Future AGI readiness)
 
-OmniRoute treats Future AGI (or any evaluator) as a **potential
+67router treats Future AGI (or any evaluator) as a **potential
 intelligence/evaluation backend, not a dependency**. The seams:
 
 - A `RoutingEventSink` can forward events to an evaluator asynchronously.
@@ -266,8 +265,6 @@ intelligence/evaluation backend, not a dependency**. The seams:
 - A future `Evaluator` (deterministic, local judge, HTTP, WASM) would consume
   events/traces and return a `QualityScore` that feeds the same
   `getQualityScore`/quality-factor path.
-- Existing eval-driven routing (`open-sse/services/evalRouting.ts`) already
-  re-orders combo targets by `eval_runs` pass-rates when enabled.
 
 No evaluation runs synchronously on the request path, and the gateway operates
 fully with the evaluator absent.

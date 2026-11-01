@@ -4,7 +4,7 @@
 
 ---
 
-Validasi E2E di lingkungan nyata untuk deployment OmniRoute yang berjalan pada VPS homologasi
+Validasi E2E di lingkungan nyata untuk deployment 67router yang berjalan pada VPS homologasi
 (`HOMOLOG_BASE_URL`, misalnya `http://192.168.0.15:20128`). Satu perintah menggantikan checklist
 STOP #2 rilis manual dengan proses otomatis yang menghasilkan bukti.
 

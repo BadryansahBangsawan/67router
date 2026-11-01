@@ -4,7 +4,7 @@
 
 ---
 
-> **በአጭሩ**: `open-sse/` በOmniRoute ውስጥ ያሉ ሁሉንም የLLM ጥያቄዎች የሚያንቀሳቅሰው ዋናው የዥረት ሞተር ነው። የጥያቄ ማስኬጃ ቅደም ተከተሉን፣ executors፣ services፣ MCP server እና የትርጉም ንብርብሩን የሚተገብሩ ~1,400 ፋይሎችን ይዟል። ይህ መመሪያ ክፍሎቹ እንዴት አብረው እንደሚሠሩ ያብራራል።
+> **በአጭሩ**: `open-sse/` በ67router ውስጥ ያሉ ሁሉንም የLLM ጥያቄዎች የሚያንቀሳቅሰው ዋናው የዥረት ሞተር ነው። የጥያቄ ማስኬጃ ቅደም ተከተሉን፣ executors፣ services፣ MCP server እና የትርጉም ንብርብሩን የሚተገብሩ ~1,400 ፋይሎችን ይዟል። ይህ መመሪያ ክፍሎቹ እንዴት አብረው እንደሚሠሩ ያብራራል።
 
 **ምንጭ:** `open-sse/` (የworkspace package፣ ~1,440 የሙከራ ያልሆኑ `.ts` ፋይሎች)
 
@@ -12,10 +12,10 @@
 
 ## ለምን የተለየ Workspace Package ያስፈልጋል?
 
-`open-sse/` በOmniRoute monorepo ውስጥ **ራሱን የቻለ workspace** የሆነው በበርካታ ምክንያቶች ነው፦
+`open-sse/` በ67router monorepo ውስጥ **ራሱን የቻለ workspace** የሆነው በበርካታ ምክንያቶች ነው፦
 
 1. **እንደገና መጠቀም** — `open-sse` በnpm ላይ እንደ `@omniroute/open-sse` ይታተማል፣ ስለዚህ ሌሎች ፕሮጀክቶች በተናጥል ሊጠቀሙበት ይችላሉ
-2. **ግልጽ ድንበሮች** — የዥረት ሞተሩ ከOmniRoute-ተኮር UI/DB ንብርብር ተነጥሏል
+2. **ግልጽ ድንበሮች** — የዥረት ሞተሩ ከ67router-ተኮር UI/DB ንብርብር ተነጥሏል
 3. **አፈጻጸም** — ሞተሩ የNext.js ጥገኞች የሉትም፣ ይህም በCLI/serverless አውዶች ፈጣን የመጀመሪያ ማስነሳትን ያስችላል
 4. **የስሪት አስተዳደር** — `open-sse` በራሱ የጊዜ ሰሌዳ ልቀት ማድረግ ይችላል
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### የተለየ ቀያሪ ለምን ያስፈልጋል?
 
-Responses API **ሁኔታን የሚይዙ ውይይቶች** (`previous_response_id`) ያሉት የOpenAI አዲስ ቅርጸት ነው። ደንበኛ የResponses ጥያቄ ሲልክ፣ OmniRoute፦
+Responses API **ሁኔታን የሚይዙ ውይይቶች** (`previous_response_id`) ያሉት የOpenAI አዲስ ቅርጸት ነው። ደንበኛ የResponses ጥያቄ ሲልክ፣ 67router፦
 
 1. Responses → Chat Completions በውስጣዊ መንገድ ይቀይራል
 2. ወደ አቅራቢው ይልካል (Chat Completionsን የሚደግፍ ማንኛውም አቅራቢ)
@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — በማውጫ የተከፋፈለ መግለጫ
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — ባለ16-ንጥረ ነገር ነጥብ አሰጣጥ
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP አገልጋይ
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A አገልጋይ
 - ምንጭ፦ `open-sse/` (400+ ፋይሎች፣ ~143K LOC)

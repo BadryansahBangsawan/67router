@@ -14,7 +14,7 @@ vəziyyətini idxal etmədən manifestdən istifadə edə bilər.
 Eyni manifest prosesdən kənar işləyən sidecar-lar üçün HTTP üzərindən
 `GET /api/v1/provider-plugin-manifest` ünvanında əlçatandır.
 
-OmniRoute həmin URL-i `X-OmniRoute-Provider-Manifest-Url` sorğu başlığı vasitəsilə
+67router həmin URL-i `X-OmniRoute-Provider-Manifest-Url` sorğu başlığı vasitəsilə
 Bifrost və CLIProxyAPI-yə bildirir. Sidecar yerli sorğu mənbəyi əvəzinə ictimai və ya
 konteyner şəbəkəsi URL-inə ehtiyac duyduqda `OMNIROUTE_PROVIDER_MANIFEST_URL` təyin edin.
 
@@ -29,7 +29,7 @@ deyilsə, sidecar `304` cavabını qəbul etmək əvəzinə şərtsiz sorğu gö
 ## Məqsəd
 
 Provayder metadatasını plagin müqaviləsinə doğru yönəltməkdir ki, nəticədə aşağı
-gecikməli sidecar operativ sorğu yolunu idarə edə bilsin, OmniRoute isə TypeScript
+gecikməli sidecar operativ sorğu yolunu idarə edə bilsin, 67router isə TypeScript
 marşrutunu siyasət qapısı və ehtiyat variant kimi saxlasın. Manifest əlavəlidir: o,
 öz-özlüyündə sorğuların marşrutlaşdırılmasını dəyişmir.
 
@@ -72,7 +72,7 @@ maşın tərəfindən oxuna bilən cavab kimi qəbul etməlidirlər.
 | `usage-fetch`        | Qoşulmuş istifadə və ya kvota əldəedicisinə (`getUsageForProvider`) malikdir.                   |
 | `usage-supported`    | İstifadə API-si bu provayderi qəbul edir (`isSupportedUsageConnection`).                        |
 
-`usage-fetch` yalnız aşkarlama üçündür. Bu, OmniRoute-un provayder üçün istifadə məlumatlarını
+`usage-fetch` yalnız aşkarlama üçündür. Bu, 67router-un provayder üçün istifadə məlumatlarını
 necə oxumağı bildiyini göstərir; məlumatların əldə edilməsini aktivləşdirmir, kvota semantikasını
 dəyişmir və ya İdarəetmə panelindəki kvota vidcetinin provayder üçün aktiv olduğunu nəzərdə tutmur —
 həmin vidcet ayrıca `USAGE_SUPPORTED_PROVIDERS` ilə idarə olunur. Əsas həqiqət mənbəyi

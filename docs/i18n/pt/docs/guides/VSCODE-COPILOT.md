@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** coloca todos os modelos disponibilizados pelo OmniRoute no seletor de modelos
+**OmniCopilot** coloca todos os modelos disponibilizados pelo 67router no seletor de modelos
 _nativo_ do GitHub Copilot Chat. Sem uma segunda barra lateral, sem uma interface de chat separada — o modo de agente do Copilot, a invocação de ferramentas,
 os servidores MCP e as instruções personalizadas continuam a funcionar, simplesmente utilizando o modelo que escolher.
 
@@ -23,13 +23,13 @@ os servidores MCP e as instruções personalizadas continuam a funcionar, simple
 
 ## Configuração
 
-1. **Execute o OmniRoute** — `npm install -g omniroute && omniroute` (painel em `http://localhost:20128`).
+1. **Execute o 67router** — `npm install -g omniroute && omniroute` (painel em `http://localhost:20128`).
 2. **Instale a extensão** — pesquise "OmniRoute" na vista Extensões.
 3. **Escolha um modelo** — Copilot Chat → seletor de modelos → **Gerir Modelos…** → **OmniRoute** e, em seguida, selecione
    o que pretende.
 
-Não é necessário configurar nada quando o OmniRoute é executado na porta predefinida. Para uma instância remota, abra o
-**ícone do OmniRoute na Barra de Atividade** (ou execute `OmniRoute: Manage Connection`) e defina:
+Não é necessário configurar nada quando o 67router é executado na porta predefinida. Para uma instância remota, abra o
+**ícone do 67router na Barra de Atividade** (ou execute `OmniRoute: Manage Connection`) e defina:
 
 - **URL do servidor** — a raiz do servidor, por exemplo, `http://192.168.0.15:20128`. O sufixo `/v1` é
   acrescentado pela extensão; não o inclua.
@@ -75,7 +75,7 @@ HTTP 400 — O modelo '<id>' é um modelo de geração de imagens e não pode se
 
 por isso, são filtrados pelo respetivo campo `type` antes de chegarem ao seletor. **Os modelos da Responses API
 são mantidos** — todas as entradas Codex / GPT-5.x anunciam `supported_endpoints: ["responses"]`,
-e o OmniRoute converte-as para `/v1/chat/completions`, pelo que são perfeitamente utilizáveis.
+e o 67router converte-as para `/v1/chat/completions`, pelo que são perfeitamente utilizáveis.
 
 ### Fornecedores que nunca configurou
 
@@ -88,11 +88,11 @@ extensão.
 
 ## Dashboard num interior de um separador do VS Code
 
-`omnicopilot.dashboardOpen: "editor"` apresenta o dashboard do OmniRoute num separador do editor através do
+`omnicopilot.dashboardOpen: "editor"` apresenta o dashboard do 67router num separador do editor através do
 Simple Browser, em vez de utilizar um browser externo. A incorporação é **opcional no servidor** através de
 `DASHBOARD_ALLOW_EMBED=vscode`, que disponibiliza as páginas HTML com
 `frame-ancestors 'self' vscode-webview:` em vez da predefinição `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. A superfície da API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mantém os
+`X-Frame-Options: DENY`. A superfície da API (`/api`, `/v1`, `/v1beta`, `/healthz`) mantém os
 cabeçalhos estritos em qualquer dos casos.
 
 > ⚠️ **É um sinalizador de compilação, não de execução.** O Next.js compila `headers()` no manifesto
@@ -133,7 +133,7 @@ variável de ambiente `OMNIROUTE_API_KEY`, nunca na linha de comandos.
 
 | Sintoma                                                            | Causa / solução                                                                                                                                                                                                                                                                                                                  |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Não aparecem modelos OmniRoute no seletor                          | Não é possível aceder ao servidor. O ponto da barra de estado fica cinzento; execute `OmniRoute: Check Connection`. A deteção é silenciosa por predefinição e não disponibiliza modelos em vez de apresentar uma solicitação.                                                                                                    |
+| Não aparecem modelos 67router no seletor                           | Não é possível aceder ao servidor. O ponto da barra de estado fica cinzento; execute `OmniRoute: Check Connection`. A deteção é silenciosa por predefinição e não disponibiliza modelos em vez de apresentar uma solicitação.                                                                                                    |
 | Todos os modelos aparecem duas vezes                               | Está a utilizar uma versão do OmniCopilot anterior à 1.0.1 — atualize-a. A extensão agora solicita `?prefix=alias`.                                                                                                                                                                                                              |
 | Um modelo de imagem/áudio estava listado e desapareceu             | Intencional desde a versão 1.0.1 — nunca conseguiria responder a um pedido de chat.                                                                                                                                                                                                                                              |
 | O painel não aparece na Barra de Atividades                        | O VS Code move os contentores de vistas adicionais para o menu excedente **"…"** na parte inferior da Barra de Atividades, e um contentor ocultado através do botão direito do rato permanece oculto. Clique com o botão direito na Barra de Atividades → selecione **OmniRoute**, ou abra-o com `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ variável de ambiente `OMNIROUTE_API_KEY`, nunca na linha de comandos.
 ## Ver também
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — todas as outras ferramentas de programação
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — controlar um OmniRoute remoto
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — controlar um 67router remoto
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — o contrato de `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — as notas do catálogo da própria extensão

@@ -4,7 +4,7 @@
 
 ---
 
-Khi OmniRoute chạy bên trong Docker, quy trình tiêu chuẩn "Nhập từ Zed Keychain" sẽ thất bại
+Khi 67router chạy bên trong Docker, quy trình tiêu chuẩn "Nhập từ Zed Keychain" sẽ thất bại
 vì container không thể truy cập daemon keychain của hệ điều hành máy chủ (`libsecret` trên Linux,
 Keychain trên macOS, Credential Manager trên Windows), đồng thời các thư mục cấu hình Zed trên
 hệ thống tệp của máy chủ không hiển thị bên trong container theo mặc định.
@@ -20,7 +20,7 @@ Hai vấn đề gây cản trở xảy ra bên trong container:
    vẫn giao tiếp với dịch vụ keychain của hệ điều hành qua Unix socket hoặc phiên D-Bus.
    Theo mặc định, cả hai đều không được kết nối vào container, vì vậy việc đọc thông tin xác thực luôn thất bại.
 
-OmniRoute phát hiện môi trường Docker bằng hai phương pháp:
+67router phát hiện môi trường Docker bằng hai phương pháp:
 
 - Sự hiện diện của `/.dockerenv` (được Docker daemon tạo khi container khởi động).
 - Chuỗi `docker` xuất hiện trong `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Khi một trong hai phương pháp phát hiện Docker, route nhập sẽ trả 
 
 1. Mở **Dashboard → Providers → Zed**.
 2. Bảng **Manual Token Import** xuất hiện bên dưới thẻ nhập từ keychain. Khi
-   OmniRoute phát hiện Docker, bảng này sẽ tự động mở rộng sau lần thử nhập từ
+   67router phát hiện Docker, bảng này sẽ tự động mở rộng sau lần thử nhập từ
    keychain thất bại đầu tiên.
 3. Chọn nhà cung cấp từ danh sách thả xuống (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter hoặc DeepSeek).

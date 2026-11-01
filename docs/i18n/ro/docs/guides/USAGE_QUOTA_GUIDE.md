@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute urmărește utilizarea tokenurilor pentru fiecare solicitare, calculează costul, aplică o cotă per cheie API și afișează analizele în panoul de control. Acest ghid explică modul în care funcționează toate acestea.
+> **TL;DR**: 67router urmărește utilizarea tokenurilor pentru fiecare solicitare, calculează costul, aplică o cotă per cheie API și afișează analizele în panoul de control. Acest ghid explică modul în care funcționează toate acestea.
 
 **Surse:**
 
@@ -17,7 +17,7 @@
 
 ## Prezentare generală
 
-Fiecare solicitare care trece prin OmniRoute generează o **înregistrare de utilizare** care conține:
+Fiecare solicitare care trece prin 67router generează o **înregistrare de utilizare** care conține:
 
 - **Identitate**: cheia API, furnizorul, modelul și combinația
 - **Tokenuri**: tokenuri de prompt, tokenuri de completare, tokenuri din cache, total
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Pentru furnizorii care nu returnează date de utilizare (unii furnizori bazați pe cookie-uri web), OmniRoute **estimează** tokenurile folosind euristica `~4 chars per token` (consultați `open-sse/services/autoCombo/pipelineRouter.ts`).
+Pentru furnizorii care nu returnează date de utilizare (unii furnizori bazați pe cookie-uri web), 67router **estimează** tokenurile folosind euristica `~4 chars per token` (consultați `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Tokenuri din cache
 
-OmniRoute urmărește `cached_tokens` separat de `prompt_tokens` deoarece:
+67router urmărește `cached_tokens` separat de `prompt_tokens` deoarece:
 
 - Cache-ul pentru prompturi Anthropic taxează un tarif redus pentru tokenurile din cache (10% din tariful normal)
 - Unii furnizori returnează `cache_read_input_tokens`, care trebuie tarifate diferit
@@ -117,7 +117,7 @@ Datele de tarifare sunt sincronizate automat din LiteLLM prin endpointul `/api/p
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Pentru modelele fără date de tarifare, OmniRoute recurge la **estimarea costului** folosind tarife medii interne (provenite din datele de tarifare LiteLLM).
+Pentru modelele fără date de tarifare, 67router recurge la **estimarea costului** folosind tarife medii interne (provenite din datele de tarifare LiteLLM).
 
 ---
 

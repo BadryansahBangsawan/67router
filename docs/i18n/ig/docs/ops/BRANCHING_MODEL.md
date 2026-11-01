@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute na-eji usoro mwepụta **parallel-cycle**: alaka `release/vX.Y.Z`
+67router na-eji usoro mwepụta **parallel-cycle**: alaka `release/vX.Y.Z`
 pụtara iche maka okirikiri na-arụ ọrụ, `main` maka ahịrị e bipụtarala, yana mkpado
 `vX.Y.Z` a na-apụghị ịgbanwe mgbe e wepụtara okirikiri ahụ. Ịhụ ka commit na-abata na `release/*` _yana_ na
 `main` bụ ihe a tụrụ anya ya — ọ bụghị mgbagwoju anya.

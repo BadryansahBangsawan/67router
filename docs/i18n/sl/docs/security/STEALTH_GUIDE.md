@@ -8,11 +8,11 @@
 > **Nazadnje posodobljeno:** 2026-09-02 — v3.8.51
 > **Ciljno občinstvo:** Inženirji, ki vzdržujejo prikrite integracije, prilagojene posameznim ponudnikom.
 
-OmniRoute se integrira s ponudniki, katerih robni sistemi aktivno prepoznavajo neuradne odjemalce po njihovih prstnih odtisih (TLS JA3/JA4, vrstni red glav, oblika telesa JSON, žetoni celovitosti). Ta stran dokumentira prikrite površine, ki jih izpostavlja OmniRoute, in mesta njihove implementacije.
+67router se integrira s ponudniki, katerih robni sistemi aktivno prepoznavajo neuradne odjemalce po njihovih prstnih odtisih (TLS JA3/JA4, vrstni red glav, oblika telesa JSON, žetoni celovitosti). Ta stran dokumentira prikrite površine, ki jih izpostavlja 67router, in mesta njihove implementacije.
 
 ## Pravno in etično obvestilo
 
-Prikrite funkcije obstajajo zato, da lahko OmniRoute deluje kot združljivostna plast med uradnimi računi v lasti uporabnikov (Claude Code CLI, Codex, Antigravity, Cursor itd.) in poenotenim API-jem OmniRoute. **Niso** namenjene izogibanju odkrivanju goljufij, deljenju poverilnic ali kršenju pogojev uporabe ponudnikov. Vzdrževalci pričakujejo, da bodo upravljavci spoštovali pogoje uporabe nadrejenih ponudnikov, ki so jih sprejeli ob ustvarjanju računov.
+Prikrite funkcije obstajajo zato, da lahko 67router deluje kot združljivostna plast med uradnimi računi v lasti uporabnikov (Claude Code CLI, Codex, Antigravity, Cursor itd.) in poenotenim API-jem 67router. **Niso** namenjene izogibanju odkrivanju goljufij, deljenju poverilnic ali kršenju pogojev uporabe ponudnikov. Vzdrževalci pričakujejo, da bodo upravljavci spoštovali pogoje uporabe nadrejenih ponudnikov, ki so jih sprejeli ob ustvarjanju računov.
 
 ---
 
@@ -79,7 +79,7 @@ preden trdite, da je dosežena enakovrednost z nadrejenim brskalnikom.
 
 ## Prikriti paket Claude Code
 
-Ko je `cliCompatMode` vklopljen, OmniRoute preoblikuje odhodne zahteve Claude tako, da jih ni mogoče razlikovati od prometa `claude-cli`. Pri tem sodelujejo trije moduli:
+Ko je `cliCompatMode` vklopljen, 67router preoblikuje odhodne zahteve Claude tako, da jih ni mogoče razlikovati od prometa `claude-cli`. Pri tem sodelujejo trije moduli:
 
 ### `claudeCodeFingerprint.ts`
 
@@ -95,7 +95,7 @@ SHA256(SALT + msg[4] + msg[7] + msg[20] + version)[:3]
 
 ### `claudeCodeCCH.ts` (zgoščena vrednost vsebine odjemalca)
 
-Strežniško preverjanje celovitosti, ki ga uradni CLI Claude Code izračuna prek Bun/Zig. OmniRoute ga ponovno implementira z `xxhash-wasm`:
+Strežniško preverjanje celovitosti, ki ga uradni CLI Claude Code izračuna prek Bun/Zig. 67router ga ponovno implementira z `xxhash-wasm`:
 
 1. Serializirajte telo z označbo mesta `cch=00000;`
 2. `xxhash64(bytes, seed) & 0xFFFFF`
@@ -141,7 +141,7 @@ Sorodni moduli v istem paketu:
 
 ## Prikriti način Antigravity
 
-Zahteve Antigravity ohranijo besedilo klicatelja nespremenjeno do zadnjega bajta. OmniRoute v pozive ne vstavi znakov ničelne širine in ne preimenuje ali vstavlja orodij, da bi posnemal odjemalca IDE.
+Zahteve Antigravity ohranijo besedilo klicatelja nespremenjeno do zadnjega bajta. 67router v pozive ne vstavi znakov ničelne širine in ne preimenuje ali vstavlja orodij, da bi posnemal odjemalca IDE.
 
 ### `antigravityHeaderScrub.ts`
 
@@ -151,13 +151,13 @@ Pred posredovanjem odstrani označevalce SDK-ja Stainless (`x-stainless-lang`, `
 
 `ANTIGRAVITY_CREDITS=always` (uporablja ga `open-sse/executors/antigravity.ts`) usmeri **vsako** zahtevo prek prekoračitev dobroimetja Antigravity AI Credit Overages (plačljivo Googlovo dobroimetje), namesto da bi prepustil Googlovi kvoti brezplačne ravni omejevanje uporabe. To je dokumentirano kot funkcija, vendar gre za **daleč najpogostejšo prijavljeno kršitev pogojev uporabe, ki jo opažamo** — več računov Google Ultra je bilo po nekaj urah delovanja z `=always` blokiranih z napako `403 / "service disabled for ToS violation" / insufficient_quota`.
 
-Uveljavljanje omejitev poteka na **Googlovi strani** in ga OmniRoute ne more preprečiti. Zaradi imena okoljske spremenljivke in obstoječe dokumentacije se zdi, da je ta možnost varno vklopiti, vendar ni.
+Uveljavljanje omejitev poteka na **Googlovi strani** in ga 67router ne more preprečiti. Zaradi imena okoljske spremenljivke in obstoječe dokumentacije se zdi, da je ta možnost varno vklopiti, vendar ni.
 
 **Zakaj to sproži zaznavanje zlorabe bolj agresivno kot uporaba izključno brezplačne ravni:**
 
 - Trajna avtomatizirana poraba v enem Googlovem računu je označena drugače kot brezplačna uporaba, ki doseže kvoto in se ustavi.
 - Prekoračitve dobroimetja nimajo zgornje omejitve hitrosti, zato lahko napačno konfiguriran odjemalec v nekaj minutah porabi več sto USD in je videti kot preprodaja ključev API ali promet botov.
-- Če več uporabnikov OmniRoute vzporedno uporablja dobroimetje za prekoračitve z istega zunanjega naslova IP, se signal še okrepi.
+- Če več uporabnikov 67router vzporedno uporablja dobroimetje za prekoračitve z istega zunanjega naslova IP, se signal še okrepi.
 
 **Priporočena usmeritev:**
 
@@ -196,7 +196,7 @@ Preklop za posameznega ponudnika prek okoljskih spremenljivk (glejte spodaj). Ko
 
 ## Posredniški strežnik MITM (Antigravity, Linux/macOS/Windows)
 
-Za orodja CLI, katerih binarnih datotek ni mogoče preusmeriti prek `OPENAI_BASE_URL`, OmniRoute zažene lokalni posredniški strežnik, ki zaključuje TLS. Končne točke so v `src/app/api/cli-tools/antigravity-mitm/`.
+Za orodja CLI, katerih binarnih datotek ni mogoče preusmeriti prek `OPENAI_BASE_URL`, 67router zažene lokalni posredniški strežnik, ki zaključuje TLS. Končne točke so v `src/app/api/cli-tools/antigravity-mitm/`.
 
 | Metoda | Končna točka                            | Namen                                            |
 | ------ | --------------------------------------- | ------------------------------------------------ |
@@ -275,7 +275,7 @@ Naslov IP ponudnika se **vedno ohrani** — preklopnik zgolj preoblikuje podobo 
 
 ## Čiščenje vhodnih glav
 
-OmniRoute pred posredovanjem očisti vhodne glave odjemalca, tako da zahteva, ki prispe iz Cursorja, nadrejenemu strežniku Claude ne razkrije `User-Agent: Cursor/X.Y.Z`. Seznam prepovedanih glav je v `src/shared/constants/upstreamHeaders.ts` ter se vzdržuje usklajeno s shemami Zod in testi enot.
+67router pred posredovanjem očisti vhodne glave odjemalca, tako da zahteva, ki prispe iz Cursorja, nadrejenemu strežniku Claude ne razkrije `User-Agent: Cursor/X.Y.Z`. Seznam prepovedanih glav je v `src/shared/constants/upstreamHeaders.ts` ter se vzdržuje usklajeno s shemami Zod in testi enot.
 
 ---
 

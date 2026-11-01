@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR** : `open-sse/` est le moteur de streaming central qui alimente chaque requête LLM dans OmniRoute. Il contient environ 1 400 fichiers implémentant le pipeline de requêtes, les exécuteurs, les services, le serveur MCP et la couche de traduction. Ce guide explique comment ces éléments s’articulent.
+> **TL;DR** : `open-sse/` est le moteur de streaming central qui alimente chaque requête LLM dans 67router. Il contient environ 1 400 fichiers implémentant le pipeline de requêtes, les exécuteurs, les services, le serveur MCP et la couche de traduction. Ce guide explique comment ces éléments s’articulent.
 
 **Source :** `open-sse/` (package de l’espace de travail, environ 1 440 fichiers `.ts` hors tests)
 
@@ -12,10 +12,10 @@
 
 ## Pourquoi un package d’espace de travail distinct ?
 
-`open-sse/` est un **espace de travail autonome** dans le monorepo OmniRoute pour plusieurs raisons :
+`open-sse/` est un **espace de travail autonome** dans le monorepo 67router pour plusieurs raisons :
 
 1. **Réutilisabilité** — `open-sse` est publié sous le nom `@omniroute/open-sse` sur npm, afin que d’autres projets puissent l’utiliser indépendamment
-2. **Séparation claire** — le moteur de streaming est découplé de la couche UI/BDD propre à OmniRoute
+2. **Séparation claire** — le moteur de streaming est découplé de la couche UI/BDD propre à 67router
 3. **Performances** — le moteur ne dépend pas de Next.js, ce qui permet des démarrages à froid plus rapides dans les contextes CLI/serverless
 4. **Gestion des versions** — `open-sse` peut publier ses versions selon son propre calendrier
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Pourquoi un transformateur distinct ?
 
-Responses API est le nouveau format d’OpenAI avec des **conversations avec état** (`previous_response_id`). Lorsqu’un client envoie une requête Responses, OmniRoute :
+Responses API est le nouveau format d’OpenAI avec des **conversations avec état** (`previous_response_id`). Lorsqu’un client envoie une requête Responses, 67router :
 
 1. Convertit en interne Responses → Chat Completions
 2. Envoie la requête au fournisseur (tout fournisseur prenant en charge Chat Completions)
@@ -573,5 +573,4 @@ Le moteur de routage est soumis à des budgets de performance stricts :
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — description répertoire par répertoire
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — notation à 16 facteurs
 - [MCP-SERVER.md](./MCP-SERVER.md) — serveur MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — serveur A2A
 - Source : `open-sse/` (plus de 400 fichiers, environ 143 000 lignes de code)

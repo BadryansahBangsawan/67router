@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "エラー: {message}",
-    "serverOffline": "OmniRouteサーバーはオフラインです。起動: omniroute serve",
+    "serverOffline": "67routerサーバーはオフラインです。起動: omniroute serve",
     "authRequired": "認証が必要です。OMNIROUTE_API_KEYを設定するか実行してください: omniroute setup",
     "rateLimited": "リクエスト制限を超えました。{seconds}秒後に再試行してください。",
     "timeout": "{ms}ms後にリクエストがタイムアウトしました。",
@@ -15,7 +15,7 @@
     "yesOpt": "確認をスキップ"
   },
   "setup": {
-    "title": "OmniRoute セットアップ",
+    "title": "67router セットアップ",
     "passwordPrompt": "管理者パスワード",
     "providerPrompt": "デフォルトプロバイダー（スキップする場合は空欄）",
     "done": "セットアップが完了しました",
@@ -30,7 +30,7 @@
     "opencode": "OpenCode 用の同梱 @omniroute/opencode-plugin をインストールして設定"
   },
   "doctor": {
-    "title": "OmniRoute 診断",
+    "title": "67router 診断",
     "dbOk": "データベース: 正常（{path}）",
     "dbMissing": "データベース: 初期化されていません — `omniroute setup` を実行してください",
     "portOk": "ポート {port}: 使用可能",
@@ -82,7 +82,7 @@
       "providerOpt": "プロバイダー名で絞り込む",
       "header": "ID         プロバイダー   名前                     有効期限の状態  テスト状態  クールダウン期限",
       "noData": "利用可能なプロバイダー接続データがありません。",
-      "requiresServer": "providers status を実行するには、OmniRoute サーバーが稼働している必要があります。"
+      "requiresServer": "providers status を実行するには、67router サーバーが稼働している必要があります。"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "プロバイダーの API キーを追加または更新する",
     "listDescription": "設定済みのすべての API キーを一覧表示する",
     "removeDescription": "プロバイダーの API キーを削除する",
-    "regenerateDescription": "OmniRoute API キーを再生成する",
-    "revokeDescription": "OmniRoute API キーを失効させる",
+    "regenerateDescription": "67router API キーを再生成する",
+    "revokeDescription": "67router API キーを失効させる",
     "revealDescription": "マスクされていない API キーの値を表示する",
     "usageDescription": "API キーの最近の使用状況を表示する",
     "usageLimitOpt": "最近のリクエスト数",
@@ -172,13 +172,6 @@
       "period": "期間: 1d|7d|30d|90d|ytd|all（デフォルト: 30d）",
       "provider": "プロバイダーIDで絞り込み"
     },
-    "budget": {
-      "description": "コスト予算を管理",
-      "set": {
-        "scope": "予算の適用範囲（デフォルト: global）",
-        "period": "予算期間: daily|weekly|monthly（デフォルト: monthly）"
-      }
-    },
     "quota": {
       "description": "プロバイダーのクォータ使用状況を表示",
       "provider": "プロバイダーIDで絞り込み",
@@ -225,7 +218,7 @@
     "noCombo": "一致するコンボが見つかりません。次のコマンドで設定してください: omniroute combo create"
   },
   "chat": {
-    "description": "OmniRoute に単発のチャットプロンプトを送信",
+    "description": "67router に単発のチャットプロンプトを送信",
     "file": "ファイルからプロンプトを読み込む",
     "stdin": "標準入力からプロンプトを読み込む",
     "system": "システムプロンプト",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "OmniRoute サーバーを起動（デフォルトのアクション）",
-    "starting": "ポート {port} で OmniRoute サーバーを起動しています...",
+    "description": "67router サーバーを起動（デフォルトのアクション）",
+    "starting": "ポート {port} で 67router サーバーを起動しています...",
     "ready": "http://localhost:{port} で準備完了",
     "stopping": "サーバーを停止しています（PID {pid}）...",
     "stopped": "サーバーを停止しました。",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "バックアップ",
-    "description": "OmniRoute データのバックアップを作成",
+    "description": "67router データのバックアップを作成",
     "creating": "バックアップを作成しています...",
     "done": "バックアップを {path} に保存しました",
     "noFiles": "バックアップするファイルがありません（データベースが初期化されていません）",
@@ -277,7 +270,7 @@
     "noBackups": "バックアップが見つかりません。",
     "notFound": "バックアップが見つかりません: {name}",
     "confirmRestore": "現在のデータを {ts} のバックアップで上書きしますか？",
-    "createDescription": "OmniRoute データのバックアップを作成",
+    "createDescription": "67router データのバックアップを作成",
     "nameOpt": "カスタムバックアップ名",
     "cloudOpt": "バックアップをクラウドストレージにアップロード",
     "encryptOpt": "AES-256-GCM でバックアップを暗号化",
@@ -321,7 +314,7 @@
     "clearFailed": "キャッシュのクリアに失敗しました。"
   },
   "redis": {
-    "description": "OmniRouteのキャッシュとクォータ追跡用に、ローカルRedisコンテナー（PodmanまたはDocker）をワンクリックで起動"
+    "description": "67routerのキャッシュとクォータ追跡用に、ローカルRedisコンテナー（PodmanまたはDocker）をワンクリックで起動"
   },
   "test": {
     "description": "プロバイダー接続をテスト",
@@ -390,36 +383,8 @@
       "description": "MCP監査ログ（audit --source mcpのエイリアス）"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "エージェントカードから利用可能なA2Aスキルを一覧表示"
-    },
-    "invoke": {
-      "description": "A2Aスキルを呼び出し、タスクIDを返す",
-      "input": "JSON入力オブジェクト",
-      "input_file": "JSON入力ファイルへのパス",
-      "wait": "タスクが完了するまで待機してから返す",
-      "timeout": "完了待機のタイムアウト（ミリ秒、デフォルト: 60000）"
-    },
-    "tasks": {
-      "description": "A2Aタスクを管理",
-      "list": {
-        "status": "ステータスでフィルタリング",
-        "skill": "スキルIDでフィルタリング"
-      },
-      "watch": {
-        "description": "完了するまでタスクのステータスをポーリング"
-      },
-      "stream": {
-        "description": "SSE経由でタスク実行イベントをストリーミング"
-      },
-      "logs": {
-        "description": "タスクのメッセージと成果物を表示"
-      }
-    }
-  },
   "policy": {
-    "description": "OmniRouteの認可ポリシーを管理",
+    "description": "67routerの認可ポリシーを管理",
     "list": {
       "description": "ポリシーを一覧表示",
       "kind": "種別（allow|deny|rate-limit|cost-cap）でフィルタリング",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "OmniRouteの圧縮パイプラインを設定および確認",
+    "description": "67routerの圧縮パイプラインを設定および確認",
     "status": {
       "description": "現在の圧縮ステータスと設定を表示"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "トンネル {type} のURLを更新しますか？（新しいURLが生成されます）"
   },
   "stop": {
-    "description": "OmniRouteサーバーを停止",
+    "description": "67routerサーバーを停止",
     "stopping": "サーバーを停止しています（PID {pid}）...",
     "stopped": "サーバーを停止しました。",
     "notRunning": "実行中のサーバーはありません。",
     "portFallback": "PIDファイルが見つからないため、ポートベースでの停止を試行しています..."
   },
   "restart": {
-    "description": "OmniRouteサーバーを再起動",
-    "restarting": "OmniRouteサーバーを再起動しています..."
+    "description": "67routerサーバーを再起動",
+    "restarting": "67routerサーバーを再起動しています..."
   },
   "dashboard": {
-    "description": "ブラウザーでOmniRouteダッシュボードを開く",
+    "description": "ブラウザーで67routerダッシュボードを開く",
     "opening": "{url} でダッシュボードを開いています",
     "urlOnly": "ブラウザーを開かずにダッシュボードURLを出力",
     "tui": "対話型TUIダッシュボードを開く（ターミナルUI、7タブ）"
@@ -560,120 +525,6 @@
       "description": "IDを指定して単一の監査ログエントリを取得"
     }
   },
-  "skills": {
-    "description": "OmniRouteスキルを管理（sandbox、builtin、custom、hybrid、skillssh）",
-    "list": {
-      "description": "インストール済みのスキルを一覧表示",
-      "type": "タイプで絞り込む（sandbox|custom|builtin|hybrid|skillssh）",
-      "enabled": "有効なスキルのみ表示",
-      "disabled": "無効なスキルのみ表示",
-      "api_key": "APIキーで絞り込む"
-    },
-    "get": {
-      "description": "IDを指定してスキルの詳細を取得"
-    },
-    "install": {
-      "description": "ファイルまたはURLからスキルをインストール",
-      "from_file": "スキルのJSON定義ファイルへのパス",
-      "from_url": "リモートのスキル定義のURL",
-      "type": "スキルタイプ（sandbox|custom|hybrid）",
-      "enable": "インストール後にスキルを有効化"
-    },
-    "enable": {
-      "description": "IDを指定してスキルを有効化"
-    },
-    "disable": {
-      "description": "IDを指定してスキルを無効化",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "delete": {
-      "description": "IDを指定してスキルを削除",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "execute": {
-      "description": "IDを指定してスキルを実行",
-      "input": "JSON入力オブジェクト",
-      "input_file": "JSON入力ファイルへのパス",
-      "timeout": "実行タイムアウト（ミリ秒、デフォルト: 30000）"
-    },
-    "executions": {
-      "description": "スキルの実行履歴を一覧表示",
-      "skill": "スキルIDでフィルタリング",
-      "limit": "最大結果数（デフォルト: 50）",
-      "status": "ステータスでフィルタリング（running|completed|failed）"
-    },
-    "skillssh": {
-      "description": "SSH経由でインストールされたスキルを管理"
-    },
-    "marketplace": {
-      "description": "マーケットプレイスからスキルを参照してインストール"
-    },
-    "mp": {
-      "search": {
-        "description": "マーケットプレイスのパッケージを検索",
-        "category": "カテゴリーでフィルタリング",
-        "tag": "タグでフィルタリング",
-        "limit": "最大結果数（デフォルト: 30）",
-        "sort": "並べ替え: downloads|rating|recent"
-      },
-      "info": {
-        "description": "パッケージの詳細とREADMEを表示"
-      },
-      "install": {
-        "description": "マーケットプレイスのパッケージをインストール",
-        "version": "パッケージのバージョン（デフォルト: latest）",
-        "enable": "インストール後に有効化",
-        "yes": "確認プロンプトをスキップ"
-      },
-      "categories": {
-        "description": "マーケットプレイスのカテゴリー一覧を表示"
-      },
-      "featured": {
-        "description": "マーケットプレイスの注目パッケージを表示"
-      }
-    }
-  },
-  "memory": {
-    "description": "OmniRouteの会話メモリ（FTS5 + vector）を管理",
-    "search": {
-      "description": "セマンティッククエリでメモリエントリを検索",
-      "type": "メモリタイプでフィルタリング（user|feedback|project|reference）",
-      "limit": "最大結果数（デフォルト: 20）",
-      "api_key": "APIキーでフィルタリング",
-      "token_budget": "結果内の合計トークン数を制限"
-    },
-    "add": {
-      "description": "新しいメモリエントリを追加",
-      "content": "メモリのテキストコンテンツ",
-      "file": "ファイルからコンテンツを読み込む",
-      "type": "メモリタイプ（デフォルト: user）",
-      "metadata": "JSONメタデータオブジェクト",
-      "api_key": "APIキーに関連付ける"
-    },
-    "clear": {
-      "description": "フィルターに一致するメモリエントリを削除",
-      "type": "タイプでフィルタリング",
-      "older": "指定期間（30d, 6m, 1y）より古いエントリを削除",
-      "api_key": "APIキーでフィルタリング",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "list": {
-      "description": "検索ランキングなしでメモリエントリの一覧を表示",
-      "type": "タイプでフィルタリング",
-      "limit": "最大結果数（デフォルト: 100）",
-      "api_key": "APIキーでフィルタリング"
-    },
-    "get": {
-      "description": "IDを指定して単一のメモリエントリを取得"
-    },
-    "delete": {
-      "description": "IDを指定してメモリエントリを削除",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "health": {
-      "description": "メモリサブシステムの稼働状態を表示（FTS5 + Qdrant）"
-    }
-  },
   "oauth": {
     "description": "OAuthプロバイダー接続を管理",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "確認プロンプトをスキップ"
     }
   },
-  "cloud": {
-    "description": "クラウドAIエージェントのタスクを管理（codex、devin、jules）",
-    "agents": {
-      "description": "利用可能なクラウドエージェントを一覧表示"
-    },
-    "agent": {
-      "description": "{agent}クラウドエージェントのタスクを管理",
-      "auth": {
-        "description": "OAuth経由で{agent}を認可"
-      }
-    },
-    "task": {
-      "description": "クラウドエージェントのタスクを管理",
-      "create": {
-        "description": "新しいエージェントタスクを作成",
-        "title": "タスクのタイトル（デフォルトはプロンプトの先頭80文字）",
-        "prompt": "タスクのプロンプトテキスト",
-        "prompt_file": "ファイルからプロンプトを読み込む",
-        "repo": "タスク用にクローンするリポジトリURL",
-        "branch": "使用するブランチ名",
-        "metadata": "JSONメタデータオブジェクト"
-      },
-      "list": {
-        "description": "エージェントタスクを一覧表示",
-        "status": "ステータスで絞り込み（running|completed|failed|cancelled）",
-        "limit": "最大結果数（デフォルト：50）"
-      },
-      "get": {
-        "description": "IDを指定してタスクの詳細を取得"
-      },
-      "status": {
-        "description": "タスクのステータスを出力（running|completed|failed|cancelled）"
-      },
-      "cancel": {
-        "description": "実行中のタスクをキャンセル",
-        "yes": "確認プロンプトをスキップ"
-      },
-      "approve": {
-        "description": "エージェントのプランを承認して実行を開始"
-      },
-      "message": {
-        "description": "実行中のタスクにメッセージを送信"
-      }
-    },
-    "sources": {
-      "description": "タスクによって生成されたソースファイルを一覧表示"
-    }
-  },
-  "eval": {
-    "description": "評価スイートと実行を管理",
-    "suites": {
-      "description": "評価スイートを管理",
-      "list": {
-        "description": "評価スイートを一覧表示"
-      },
-      "get": {
-        "description": "IDで評価スイートの詳細を取得"
-      },
-      "create": {
-        "description": "JSONファイルから評価スイートを作成",
-        "file": "スイート定義JSONファイルのパス"
-      }
-    },
-    "run": {
-      "description": "スイートの評価実行を開始",
-      "model": "評価するモデルID（デフォルト: auto）",
-      "combo": "名前で特定のコンボを強制指定",
-      "concurrency": "同時実行サンプル数（デフォルト: 4）",
-      "tag": "後でフィルタリングできるようにこの実行にタグを付ける",
-      "watch": "完了するまで実行の進捗を監視"
-    },
-    "list": {
-      "description": "評価実行を一覧表示",
-      "suite": "スイートIDでフィルタリング",
-      "status": "ステータスでフィルタリング",
-      "since": "このタイムスタンプ以降の実行を返す",
-      "limit": "最大結果数（デフォルト: 50）"
-    },
-    "get": {
-      "description": "IDで評価実行の詳細を取得"
-    },
-    "results": {
-      "description": "評価実行のサンプル結果を表示",
-      "failed": "失敗したサンプルのみ表示"
-    },
-    "cancel": {
-      "description": "実行中の評価をキャンセル",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "scorecard": {
-      "description": "完了した評価実行のスコアカードを表示"
-    }
-  },
-  "webhooks": {
-    "description": "OmniRouteのWebhookを管理",
-    "events": {
-      "description": "利用可能なすべてのWebhookイベントタイプを一覧表示"
-    },
-    "list": {
-      "description": "設定済みのWebhookを一覧表示"
-    },
-    "get": {
-      "description": "IDでWebhookの詳細を取得"
-    },
-    "add": {
-      "description": "新しいWebhookを登録",
-      "url": "送信先URL",
-      "events": "イベントタイプのカンマ区切りリスト",
-      "secret": "HMAC署名シークレット",
-      "header": "key=value形式の追加ヘッダー（複数指定可）",
-      "no_enabled": "無効状態でWebhookを作成"
-    },
-    "update": {
-      "description": "既存のWebhookを更新",
-      "enabled": "有効状態を設定（true|false）"
-    },
-    "remove": {
-      "description": "Webhookを削除",
-      "yes": "確認プロンプトをスキップ"
-    },
-    "test": {
-      "description": "Webhookにテストイベントを送信",
-      "event": "シミュレートするイベントタイプ（デフォルト: request.completed）"
-    }
-  },
   "program": {
-    "description": "OmniRoute — 自動フォールバック付きスマートAIルーター",
+    "description": "67router — 自動フォールバック付きスマートAIルーター",
     "version": "バージョンを表示して終了",
     "output": "出力形式 (table, json, jsonl, csv)",
     "quiet": "重要でない出力を抑制",
     "no_color": "カラー出力を無効化",
     "timeout": "HTTPリクエストタイムアウト（ミリ秒）",
-    "api_key": "OmniRouteサーバーのAPIキー",
-    "base_url": "OmniRouteサーバーのベースURL",
+    "api_key": "67routerサーバーのAPIキー",
+    "base_url": "67routerサーバーのベースURL",
     "context": "このコマンドで使用するサーバーコンテキスト/プロファイル",
     "lang": "CLI表示言語を設定（OMNIROUTE_LANGを上書き）"
-  },
-  "files": {
-    "description": "ファイルを管理（アップロード、一覧表示、取得、ダウンロード、削除）",
-    "list": {
-      "purpose": "用途でフィルタリング",
-      "limit": "最大結果数"
-    },
-    "get": {
-      "description": "ファイルのメタデータを取得"
-    },
-    "upload": {
-      "description": "ファイルをアップロード",
-      "purpose": "ファイルの用途（batch、assistants、fine-tune）"
-    },
-    "content": {
-      "description": "ファイルの内容をダウンロード",
-      "out": "保存先のパス（デフォルト: stdout）"
-    },
-    "delete": {
-      "yes": "確認をスキップ"
-    }
-  },
-  "batches": {
-    "description": "OpenAI互換のバッチジョブを管理",
-    "list": {
-      "status": "ステータスで絞り込む",
-      "limit": "最大結果数"
-    },
-    "create": {
-      "description": "バッチジョブを作成",
-      "inputFile": "入力ファイルID",
-      "endpoint": "ターゲットエンドポイント",
-      "window": "完了までの時間枠",
-      "metadata": "メタデータをkey=value形式で追加"
-    },
-    "submit": {
-      "description": "JSONLファイルをアップロードしてバッチを作成",
-      "jsonl": "JSONLファイルへのパス",
-      "endpoint": "ターゲットエンドポイント",
-      "wait": "完了まで待機"
-    },
-    "cancel": {
-      "yes": "確認をスキップ"
-    },
-    "wait": {
-      "timeout": "タイムアウト（ミリ秒）"
-    },
-    "output": {
-      "out": "出力の保存先パス"
-    },
-    "errors": {
-      "out": "エラーの保存先パス"
-    }
   },
   "translator": {
     "description": "LLM形式間でリクエストボディを変換",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI 仕様にアクセスしてテスト",
+    "description": "67router OpenAPI 仕様にアクセスしてテスト",
     "dump": {
       "description": "OpenAPI 仕様を stdout またはファイルに出力",
       "format": "出力形式: yaml|json（デフォルト: yaml）",
@@ -1124,35 +797,8 @@
       "switch": "最上位のコンボを有効化"
     }
   },
-  "oneproxy": {
-    "description": "OneProxy アップストリームプールを管理",
-    "stats": {
-      "provider": "プロバイダーで絞り込み",
-      "period": "期間（デフォルト: 24h）"
-    },
-    "fetch": {
-      "description": "プールからプロキシを取得",
-      "count": "取得するプロキシ数（デフォルト: 1）",
-      "type": "プロキシタイプ: http|socks5（デフォルト: http）"
-    },
-    "rotate": {
-      "description": "プロキシを強制的にローテーション",
-      "provider": "ローテーション対象のプロバイダー",
-      "connectionId": "ローテーション対象の特定の接続 ID"
-    },
-    "config": {
-      "description": "OneProxy の設定を表示または更新",
-      "enabled": "プロキシプールを有効化 (true|false)",
-      "poolSize": "プールサイズ",
-      "providerSource": "プロキシプロバイダーのURL",
-      "rotationPolicy": "ローテーションポリシー: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "現在のプロキシプールをメトリクス付きで一覧表示"
-    }
-  },
   "open": {
-    "description": "特定のOmniRouteダッシュボードページをブラウザーで開く",
+    "description": "特定の67routerダッシュボードページをブラウザーで開く",
     "url": "URLのみを表示し、ブラウザーは開かない"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "OmniRouteインスタンス間で設定を同期",
+    "description": "67routerインスタンス間で設定を同期",
     "push": {
       "description": "設定をクラウドまたはリモートインスタンスにプッシュ"
     },
@@ -1228,7 +874,7 @@
     "filter": "レベル（error,warn,info）でフィルタリング — カンマ区切り",
     "lines": "取得する行数",
     "timeout": "接続タイムアウト（ミリ秒）",
-    "baseUrl": "OmniRoute API のベース URL",
+    "baseUrl": "67router API のベース URL",
     "requestId": "リクエスト ID でフィルタリング",
     "apiKey": "API キーでフィルタリング",
     "combo": "コンボ名でフィルタリング",
@@ -1244,10 +890,10 @@
     "description": "システムトレイアイコンを制御します",
     "show": "トレイアイコンを表示します（サーバーが --tray オプション付きで実行されている場合）",
     "hide": "トレイアイコンを非表示にします",
-    "quit": "トレイから OmniRoute を終了します"
+    "quit": "トレイから 67router を終了します"
   },
   "autostart": {
-    "description": "起動時の OmniRoute の自動起動を管理します（Linux: systemd ユーザーサービス）",
+    "description": "起動時の 67router の自動起動を管理します（Linux: systemd ユーザーサービス）",
     "enable": "起動時の自動起動を有効にします",
     "disable": "起動時の自動起動を無効にします",
     "toggle": "起動時の自動起動を切り替えます",
@@ -1268,30 +914,20 @@
     "system": "システムプロンプト",
     "resume": "名前を指定して保存済みセッションを再開"
   },
-  "plugin": {
-    "description": "CLIプラグイン（omniroute-cmd-*）を管理",
-    "list": "インストール済みプラグインを一覧表示",
-    "install": "npmまたはローカルパスからプラグインをインストール",
-    "remove": "インストール済みプラグインを削除",
-    "info": "インストール済みプラグインの詳細を表示",
-    "search": "利用可能なプラグインをnpmレジストリで検索",
-    "update": "インストール済みプラグインを更新",
-    "scaffold": "新しいプラグインのボイラープレートを生成"
-  },
   "launch": {
-    "description": "OmniRouteを参照するClaude Codeを起動（ローカルまたはリモート、--profile対応）",
+    "description": "67routerを参照するClaude Codeを起動（ローカルまたはリモート、--profile対応）",
     "token": "Claudeクライアントが送信するトークン（ANTHROPIC_AUTH_TOKEN）",
-    "notRunning": "ポート{port}でOmniRouteに接続できません。'omniroute serve'で起動してください。",
+    "notRunning": "ポート{port}で67routerに接続できません。'omniroute serve'で起動してください。",
     "notFound": "'claude' CLIがPATHに見つかりません。"
   },
   "run": {
-    "description": "OmniRoute経由でサポート対象のCLIを起動"
+    "description": "67router経由でサポート対象のCLIを起動"
   },
   "setupClaude": {
-    "description": "OmniRouteモデルカタログから~/.claude/profiles用のClaude Codeプロファイルを生成"
+    "description": "67routerモデルカタログから~/.claude/profiles用のClaude Codeプロファイルを生成"
   },
   "connect": {
-    "description": "リモートOmniRouteサーバーに接続してリモートモードに移行"
+    "description": "リモート67routerサーバーに接続してリモートモードに移行"
   },
   "tokens": {
     "description": "スコープ付きCLIアクセストークンを管理（リモートモード）"
@@ -1300,10 +936,10 @@
     "description": "アクティブなサーバーからプロバイダーとモデルを選択し、サポート対象のローカルCLIを設定"
   },
   "launchCodex": {
-    "description": "OmniRouteを参照するCodex CLIを起動（ローカルまたはリモートVPS）"
+    "description": "67routerを参照するCodex CLIを起動（ローカルまたはリモートVPS）"
   },
   "setupCodex": {
-    "description": "OmniRouteのライブモデルカタログから~/.codexプロファイルファイルを生成"
+    "description": "67routerのライブモデルカタログから~/.codexプロファイルファイルを生成"
   },
   "packs": {
     "description": "オプションのランタイムパック（ML／ブラウザー自動化）を管理",
@@ -1316,7 +952,7 @@
     "errUnknown": "不明なパック：{name}",
     "errNoIndex": "パックインデックスが見つかりません。パックのペイロードを格納したディレクトリを--source <dir>で指定してください（デスクトップバンドルではアプリの隣に同梱されています）",
     "installed": "パック「{name}」を{dir}にインストールし、検証しました",
-    "restartHint": "ランタイムがパックを認識するように、OmniRouteサーバー（またはデスクトップアプリ）を再起動してください",
+    "restartHint": "ランタイムがパックを認識するように、67routerサーバー（またはデスクトップアプリ）を再起動してください",
     "removed": "パック「{name}」を削除しました",
     "notInstalled": "パック「{name}」はインストールされていません",
     "verifyOk": "インストール済みのすべてのパックを検証しました",

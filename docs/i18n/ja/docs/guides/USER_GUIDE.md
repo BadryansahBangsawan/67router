@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-プロバイダーの設定、コンボの作成、CLI ツールの統合、OmniRoute のデプロイに関する完全ガイドです。
+プロバイダーの設定、コンボの作成、CLI ツールの統合、67router のデプロイに関する完全ガイドです。
 
 ---
 
@@ -24,7 +24,6 @@
 - [スキルシステム](#-skills-system)
 - [メモリシステム](#-memory-system)
 - [Webhook](#-webhooks)
-- [クラウドエージェント](#-cloud-agents)
 - [プログラムによる管理](#-programmatic-management)
 - [内部 CLI](#-internal-cli)
 - [デスクトップアプリケーション（Electron）](#-desktop-application-electron)
@@ -137,11 +136,11 @@ CSV または JSON ファイルから API キー接続を一括追加するに�
   cc/claude-haiku-4-5-20251001
 ```
 
-**ヒント:** 複雑なタスクには Opus、速度を重視する場合は Sonnet を使用してください。OmniRoute はモデルごとにクォータを追跡します！
+**ヒント:** 複雑なタスクには Opus、速度を重視する場合は Sonnet を使用してください。67router はモデルごとにクォータを追跡します！
 
-OmniRoute ホストにブラウザーがありませんか？Claude Code にログインしている任意の環境で `claude setup-token` を実行し、1年間有効なトークンを **Setup Token** タブに貼り付けてください。[セットアップトークンを使用する Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md)を参照してください。
+67router ホストにブラウザーがありませんか？Claude Code にログインしている任意の環境で `claude setup-token` を実行し、1年間有効なトークンを **Setup Token** タブに貼り付けてください。[セットアップトークンを使用する Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md)を参照してください。
 
-Claude および Claude Code 互換ルートでは、Opus および Sonnet モデルの `max` 思考強度が維持されます。Haiku モデルは `max` 強度レベルを受け付けないため、OmniRoute はそのリクエストをアップストリームに送信する前に、高い思考バジェットへダウングレードします。
+Claude および Claude Code 互換ルートでは、Opus および Sonnet モデルの `max` 思考強度が維持されます。Haiku モデルは `max` 強度レベルを受け付けないため、67router はそのリクエストをアップストリームに送信する前に、高い思考バジェットへダウングレードします。
 
 #### OpenAI Codex（Plus/Pro）
 
@@ -260,16 +259,16 @@ CLI で使用: premium-coding
 
 ### Cursor IDE
 
-**OmniRoute クライアントとして Cursor を使用する場合**（Cursor のチャットを OmniRoute 経由でルーティング）:
+**67router クライアントとして Cursor を使用する場合**（Cursor のチャットを 67router 経由でルーティング）:
 
 ```
 Settings → Models → Advanced:
   OpenAI API Base URL: http://localhost:20128/v1
-  OpenAI API Key: [OmniRoute ダッシュボードから取得]
+  OpenAI API Key: [67router ダッシュボードから取得]
   Model: cc/claude-opus-4-7
 ```
 
-**Cursor プロバイダーとして OmniRoute を使用する場合**（OmniRoute がアップストリームの Cursor を呼び出す）:
+**Cursor プロバイダーとして 67router を使用する場合**（67router がアップストリームの Cursor を呼び出す）:
 **Dashboard → Providers → Cursor → Login with Cursor** を推奨します。Docker では、
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md)を参照してください。
 
@@ -356,7 +355,7 @@ CLI は `~/.omniroute/.env` または `./.env` から `.env` を自動的に読�
 
 ### トレイモード
 
-OmniRoute をシステムトレイで起動します:
+67router をシステムトレイで起動します:
 
 ```bash
 omniroute serve --tray
@@ -373,7 +372,7 @@ omniroute serve --tray
 - ダッシュボードを開く。
 - `/dashboard/logs` を開く。
 - 自動起動の設定を変更する。
-- OmniRoute を停止する。
+- 67router を停止する。
 
 `--tray` を次のオプションと併用しないでください:
 
@@ -399,14 +398,14 @@ omniroute autostart disable
 
 ### アンインストール
 
-OmniRoute が不要になった場合、クリーンに削除するための簡単なスクリプトを 2 つ用意しています:
+67router が不要になった場合、クリーンに削除するための簡単なスクリプトを 2 つ用意しています:
 
 | コマンド                 | 操作                                                                                  |
 | ------------------------ | ------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | システムアプリを削除しますが、`~/.omniroute` 内の**データベースと設定は保持します**。 |
 | `npm run uninstall:full` | アプリを削除し、さらに**すべての設定、キー、データベースを完全に消去します**。        |
 
-> 注: これらのコマンドを実行するには、OmniRoute プロジェクトフォルダー（クローンした場合）に移動してから実行してください。または、グローバルにインストールした場合は、`npm uninstall -g omniroute` を実行するだけです。
+> 注: これらのコマンドを実行するには、67router プロジェクトフォルダー（クローンした場合）に移動してから実行してください。または、グローバルにインストールした場合は、`npm uninstall -g omniroute` を実行するだけです。
 
 ### VPS デプロイ
 
@@ -478,7 +477,7 @@ CLI バイナリを使用するホスト統合モードについては、メイ�
 
 ### Void Linux (xbps-src)
 
-Void Linux ユーザーは、`xbps-src` クロスコンパイルフレームワークを使用して、OmniRoute をネイティブにパッケージ化してインストールできます。これにより、Node.js のスタンドアロンビルドと、必要な `better-sqlite3` ネイティブバインディングが自動的に処理されます。
+Void Linux ユーザーは、`xbps-src` クロスコンパイルフレームワークを使用して、67router をネイティブにパッケージ化してインストールできます。これにより、Node.js のスタンドアロンビルドと、必要な `better-sqlite3` ネイティブバインディングが自動的に処理されます。
 
 <details>
 <summary><b>xbps-src テンプレートを表示</b></summary>
@@ -658,7 +657,7 @@ post_install() {
 
 **その他の互換プロバイダー**（一部）：`cohere`、`databricks`、`snowflake`、`together`、`vertex`、`alibaba`、`alibaba-cn`、`bedrock`（`aws-bedrock` 経由）、`azure-ai`、`openrouter`（パススルーカタログ）、`siliconflow`、`hyperbolic`、`huggingface`、`featherless-ai`、`cloudflare-ai`、`scaleway`、`deepinfra`、`vercel-ai-gateway`、`bazaarlink`、`friendliai`、`nous-research`、`reka`、`volcengine`、`ai21`、`gigachat`。各プロバイダーは `providerRegistry.ts` 内で独自のモデルリストを管理しており、プロバイダーが `/models` エンドポイントを公開している場合は自動同期できます。
 
-**モデル ID に関する注意：** OmniRoute はプロバイダーネイティブの ID（`claude-opus-4-8`、`gpt-5.5`、`glm-5.1`、`MiniMax-M2.7`、`kimi-k2.5`、`grok-4.20-0309-reasoning`）を使用します。一部の ID にドット区切りのバージョンが含まれているのは、アップストリーム API がその形式を要求しているためです。モデルが上記に記載されていない場合は、`omniroute models --search <term>` を実行するか、`GET /api/models/catalog` にアクセスして利用可否を確認してください。
+**モデル ID に関する注意：** 67router はプロバイダーネイティブの ID（`claude-opus-4-8`、`gpt-5.5`、`glm-5.1`、`MiniMax-M2.7`、`kimi-k2.5`、`grok-4.20-0309-reasoning`）を使用します。一部の ID にドット区切りのバージョンが含まれているのは、アップストリーム API がその形式を要求しているためです。モデルが上記に記載されていない場合は、`omniroute models --search <term>` を実行するか、`GET /api/models/catalog` にアクセスして利用可否を確認してください。
 
 </details>
 
@@ -710,9 +709,9 @@ prefix: "<prefix>" は予約済みのプロバイダープレフィックスで�
 
 重複しないプレフィックス（`mygw`、`acme-proxy`）を選択してください。カスタムノードへのリクエストが、組み込みプロバイダーまたはその認証情報を示すエラーで失敗する場合は、ノードのプレフィックスが予約済みでないか確認してください。このルールが導入される前に保存されたノードは引き続き保存されていますが、そのプレフィックスは組み込みプロバイダーへルーティングされます。ノードを編集し、新しいプレフィックスを設定してください。
 
-### OmniRoute ピアのチェーン化
+### 67router ピアのチェーン化
 
-別の OmniRoute ゲートウェイを **Custom OpenAI-compatible** プロバイダーとして追加できます。そのピアの `/v1` ベース URL と、ピアによって発行された専用の最小権限 API キーを使用してください。
+別の 67router ゲートウェイを **Custom OpenAI-compatible** プロバイダーとして追加できます。そのピアの `/v1` ベース URL と、ピアによって発行された専用の最小権限 API キーを使用してください。
 
 相互チェーンまたはマルチホップチェーンの場合は、すべてのゲートウェイでオプトイン方式のループガードを有効にします。
 
@@ -732,7 +731,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 
 明示的に許可リストへ登録されたピア URL に送信されるリクエストにのみ、`X-OmniRoute-Peer-Trace` ヘッダーが付与されます。ゲートウェイは、インスタンス ID の重複またはホップ上限の超過を検出すると、HTTP `508 Loop Detected` で拒否します。通常のアップストリームプロバイダーにはピアメタデータは送信されません。
 
-ピアチェーンは、データベースのレプリケーションやホストのフェイルオーバーではありません。各ゲートウェイは、独立した SQLite の状態、キャッシュ、レートカウンター、セッションを保持します。アクティブ／パッシブまたはアクティブ／アクティブ構成で可用性を確保するには、ヘルスチェック対応のリバースプロキシまたはクライアント側フェイルオーバーを使用してください。また、1 つの SQLite データベースを、実行中の複数の OmniRoute インスタンスへマウントしないでください。
+ピアチェーンは、データベースのレプリケーションやホストのフェイルオーバーではありません。各ゲートウェイは、独立した SQLite の状態、キャッシュ、レートカウンター、セッションを保持します。アクティブ／パッシブまたはアクティブ／アクティブ構成で可用性を確保するには、ヘルスチェック対応のリバースプロキシまたはクライアント側フェイルオーバーを使用してください。また、1 つの SQLite データベースを、実行中の複数の 67router インスタンスへマウントしないでください。
 
 ### プロバイダー専用ルート
 
@@ -783,7 +782,7 @@ curl http://localhost:20128/api/models/catalog
 - Docker およびその他のセルフホスト型デプロイでは **Dashboard → Endpoints** から利用可能
 - 現在の OpenAI 互換 `/v1` エンドポイントに転送する一時的な `https://*.trycloudflare.com` URL を作成
 - 初回の有効化時に、必要な場合のみ `cloudflared` をインストール。それ以降の再起動では、同じ管理対象バイナリを再利用
-- Quick Tunnel は、OmniRoute またはコンテナの再起動後に自動復元されません。必要に応じてダッシュボードから再度有効にしてください
+- Quick Tunnel は、67router またはコンテナの再起動後に自動復元されません。必要に応じてダッシュボードから再度有効にしてください
 - Tunnel URL は一時的なもので、トンネルを停止・起動するたびに変更されます
 - 管理対象の Quick Tunnel では、リソースが制限されたコンテナ内で大量の QUIC UDP バッファ警告が発生するのを避けるため、デフォルトで HTTP/2 トランスポートを使用
 - 管理対象トランスポートの選択を上書きする場合は、`CLOUDFLARED_PROTOCOL=quic` または `auto` を設定
@@ -800,7 +799,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### Translator プレイグラウンド
 
-**Dashboard → Translator** からアクセスできます。OmniRoute がプロバイダー間で API リクエストを変換する方法をデバッグし、可視化します。
+**Dashboard → Translator** からアクセスできます。67router がプロバイダー間で API リクエストを変換する方法をデバッグし、可視化します。
 
 | モード           | 目的                                                                                       |
 | ---------------- | ------------------------------------------------------------------------------------------ |
@@ -853,7 +852,7 @@ curl http://localhost:20128/api/models/catalog
 X-Session-Id: your-session-key
 ```
 
-OmniRoute は `x_session_id` も受け付け、有効なセッションキーを `X-OmniRoute-Session-Id` で返します。
+67router は `x_session_id` も受け付け、有効なセッションキーを `X-OmniRoute-Session-Id` で返します。
 
 Nginx を使用し、アンダースコア形式のヘッダーを送信する場合は、次を有効にします:
 
@@ -887,7 +886,7 @@ underscores_in_headers on;
 
 ### 一般的なプロバイダーの組み合わせとルーティングパターン
 
-OmniRoute で複数のプロバイダーを組み合わせ、それらの間でルーティングするためのパターン例を次に示します:
+67router で複数のプロバイダーを組み合わせ、それらの間でルーティングするためのパターン例を次に示します:
 
 #### 1. コーディングエージェントコンボ: 高度な推論とコスト・速度重視のフォールバック
 
@@ -948,7 +947,7 @@ omniroute combo create free-stack \
 
 **ダッシュボード → 設定 → レジリエンス**から設定します。
 
-OmniRouteは、5つのコンポーネントでプロバイダーレベルのレジリエンスを実現します。
+67routerは、5つのコンポーネントでプロバイダーレベルのレジリエンスを実現します。
 
 1. **リクエストキューとペーシング** — システムレベルのリクエスト制御:
    - **1分あたりのリクエスト数（RPM）** — アカウントごとの1分あたりの最大リクエスト数
@@ -973,7 +972,7 @@ OmniRouteは、5つのコンポーネントでプロバイダーレベルのレ�
 
    プロバイダーブレーカーのランタイム状態は、**ダッシュボード → ヘルス**にのみ表示されます。
 
-4. **クールダウンを待機** — 候補となるすべての接続がすでにクールダウン中の場合、OmniRouteは最も早く終了するクールダウンを待ち、同じクライアントリクエストを自動的に再試行できます。
+4. **クールダウンを待機** — 候補となるすべての接続がすでにクールダウン中の場合、67routerは最も早く終了するクールダウンを待ち、同じクライアントリクエストを自動的に再試行できます。
 
 5. **レート制限の自動検出** — アップストリームプロバイダーが明示的な待機時間を返した場合、この設定が有効であれば、それらのヒントがローカル接続のクールダウンより優先されます。
 
@@ -1007,7 +1006,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **ユースケース:**
 
-- OmniRouteを別のマシンに移行する
+- 67routerを別のマシンに移行する
 - ディザスタリカバリ用の外部バックアップを作成する
 - チームメンバー間で設定を共有する（すべてエクスポート → アーカイブを共有）
 
@@ -1059,7 +1058,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### 音声文字起こし
 
-OmniRoute は、OpenAI 互換エンドポイントを介した音声文字起こしをサポートしています。
+67router は、OpenAI 互換エンドポイントを介した音声文字起こしをサポートしています。
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1130,7 +1129,7 @@ OpenRouter のみが設定されている場合は、`openrouter/deepgram/nova-3
 無効のままにしてください。有効にすると、設定済みのヘッジング、予測的な TTFT スキップ、プロアクティブなフォールバック圧縮を使用し、
 ルーティング／リクエストの忠実性と引き換えにテールレイテンシーを低減できます。
 
-アップストリームプロバイダーで厳密な `max_tokens` / `maxOutputTokens` 制限が必要な場合は、**推論トークンバッファ**を無効にしてください。有効にすると、コンボルーティングでは、既知の出力上限があるモデルにのみ推論モデル用の余裕が追加され、安全なバッファ適用後の値がその上限を超える場合、クライアントのトークン制限は変更されません。クライアントの制限が既知の上限をすでに超えている場合、OmniRoute はアップストリームリクエストを送信する前に、その上限まで制限値を引き下げます。
+アップストリームプロバイダーで厳密な `max_tokens` / `maxOutputTokens` 制限が必要な場合は、**推論トークンバッファ**を無効にしてください。有効にすると、コンボルーティングでは、既知の出力上限があるモデルにのみ推論モデル用の余裕が追加され、安全なバッファ適用後の値がその上限を超える場合、クライアントのトークン制限は変更されません。クライアントの制限が既知の上限をすでに超えている場合、67router はアップストリームリクエストを送信する前に、その上限まで制限値を引き下げます。
 
 ---
 
@@ -1153,7 +1152,7 @@ OpenRouter のみが設定されている場合は、`openrouter/deepgram/nova-3
 
 ## 🤖 自動ルーティング（設定不要）
 
-OmniRoute には、接続されたすべてのプロバイダーから各リクエストに最適なモデルを選択する、**スコア駆動型の自動ルーター**が搭載されています。管理が必要なコンボはありません。`auto/*` プレフィックスのいずれかを指定してリクエストを送信するだけで、OmniRoute がその場で仮想コンボを構築し、レイテンシ、コスト、成功率、コンテキスト適合度、タスクに対するモデルの適性、直近の失敗、クォータ、サーキットブレーカーの状態に基づいて候補をスコアリングします。
+67router には、接続されたすべてのプロバイダーから各リクエストに最適なモデルを選択する、**スコア駆動型の自動ルーター**が搭載されています。管理が必要なコンボはありません。`auto/*` プレフィックスのいずれかを指定してリクエストを送信するだけで、67router がその場で仮想コンボを構築し、レイテンシ、コスト、成功率、コンテキスト適合度、タスクに対するモデルの適性、直近の失敗、クォータ、サーキットブレーカーの状態に基づいて候補をスコアリングします。
 
 | プレフィックス | 最適化対象                                                                                           |
 | -------------- | ---------------------------------------------------------------------------------------------------- |
@@ -1184,7 +1183,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 MCP と A2A の統合
 
-OmniRoute は、**MCP サーバー**（Model Context Protocol）であると同時に、**A2A サーバー**（Agent-to-Agent JSON-RPC 2.0）でもあります。MCP 互換の IDE またはエージェントホストから OmniRoute のツールを直接呼び出せます。追加のラッパーは必要ありません。
+67router は、**MCP サーバー**（Model Context Protocol）であると同時に、**A2A サーバー**（Agent-to-Agent JSON-RPC 2.0）でもあります。MCP 互換の IDE またはエージェントホストから 67router のツールを直接呼び出せます。追加のラッパーは必要ありません。
 
 ### MCP トランスポート
 
@@ -1213,17 +1212,14 @@ SSE URL `http://localhost:20128/api/mcp/sse` と、**ダッシュボード → A
 
 ### スコープ
 
-MCP では現在、名前付きスコープが 32 個定義されています。各 Bearer キーは特定のスコープのみに制限できます。正式なスコープとツールの一覧については [MCP-SERVER.md](../frameworks/MCP-SERVER.md) を、JSON-RPC スキーマについては [A2A-SERVER.md](../frameworks/A2A-SERVER.md) を参照してください。
-
 ---
 
 ## 🧠 スキルシステム
 
-OmniRoute は拡張可能な**スキルフレームワーク**（`src/lib/skills/`）を公開しており、エージェントや A2A エンドポイントがドメイン固有のルーチン（例：`code-review`、`summarize`、`extract-facts`、`web-research`）を実行できます。
+67router は拡張可能な**スキルフレームワーク**（`src/lib/skills/`）を公開しており、エージェントや A2A エンドポイントがドメイン固有のルーチン（例：`code-review`、`summarize`、`extract-facts`、`web-research`）を実行できます。
 
 - **マーケットプレイス UI** — **ダッシュボード → スキル**からスキルを参照してインストール
 - **キーごとのスコープ** — 各 API キーが呼び出せるスキルを制限
-- **カスタムスキル** — TypeScript ファイルを `src/lib/a2a/skills/` に配置して登録すると、A2A 経由ですぐに呼び出し可能
 
 完全なリファレンス：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1231,7 +1227,7 @@ OmniRoute は拡張可能な**スキルフレームワーク**（`src/lib/skills
 
 ## 💾 メモリシステム
 
-OmniRoute は、ハイブリッド検索を使用して**長期的な会話メモリ**を永続化します。
+67router は、ハイブリッド検索を使用して**長期的な会話メモリ**を永続化します。
 
 - 過去のターンを対象としたキーワード検索には **SQLite FTS5**
 - 意味検索には **Qdrant vector store**（オプション）
@@ -1244,7 +1240,7 @@ OmniRoute は、ハイブリッド検索を使用して**長期的な会話メ�
 
 ## 🔔 Webhook
 
-リアルタイムの監視と自動化のために、OmniRoute イベントを購読できます。
+リアルタイムの監視と自動化のために、67router イベントを購読できます。
 
 - **ダッシュボード → Webhook**で、ターゲット URL と HMAC 署名シークレットを指定して Webhook を作成
 - 利用可能なイベント：`request.completed`、`request.failed`、`provider.unavailable`、`budget.exceeded`、`combo.switched`、`circuit_breaker.opened`、`circuit_breaker.closed`
@@ -1255,21 +1251,9 @@ OmniRoute は、ハイブリッド検索を使用して**長期的な会話メ�
 
 ---
 
-## ☁️ クラウドエージェント
-
-OmniRoute はクラウドコーディングエージェント（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**）と統合されており、ローカルルーティングを管理するものと同じダッシュボードから、長時間実行タスクを送信できます。
-
-- **ダッシュボード → クラウドエージェント**、または `POST /api/v1/agents/tasks` を使用してタスクを作成
-- タスクごとにステータス、ログ、アーティファクトを追跡
-- プロバイダーごとに独自の API キーを使用可能 — 認証情報が OmniRoute インスタンスの外部に送信されることはありません
-
-完全なリファレンス：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
-
----
-
 ## 🛠️ プログラムによる管理
 
-**`manage` スコープを持つBearerキー**を使用して、すべてのOmniRouteリソース（プロバイダー、コンボ、キー、設定）をHTTP経由で管理できます。
+**`manage` スコープを持つBearerキー**を使用して、すべての67routerリソース（プロバイダー、コンボ、キー、設定）をHTTP経由で管理できます。
 
 **Dashboard → API Keys → New Key → Scope: manage**でキーを生成してから、次を実行します。
 
@@ -1302,7 +1286,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 内部 CLI
 
-OmniRoute には、セットアップ、診断、ランタイム制御用の内部 CLI（`omniroute …`）が付属しています。これは、サードパーティー製 CLI（Claude Code、Cursor、Codex、Cline など）が OmniRoute と通信できるように設定する、ダッシュボードの「CLI ツール」ページとは**別のものです**。
+67router には、セットアップ、診断、ランタイム制御用の内部 CLI（`omniroute …`）が付属しています。これは、サードパーティー製 CLI（Claude Code、Cursor、Codex、Cline など）が 67router と通信できるように設定する、ダッシュボードの「CLI ツール」ページとは**別のものです**。
 
 ```bash
 omniroute setup                    # 対話形式のウィザード（パスワード、プロバイダー、コンボ）
@@ -1320,7 +1304,6 @@ omniroute restore [<timestamp>]    # スナップショットから復元
 omniroute health                   # 詳細なヘルス情報（ブレーカー、キャッシュ、メモリ）
 omniroute quota                    # プロバイダーのクォータ使用量
 omniroute mcp status               # MCP サーバーのステータス
-omniroute a2a status               # A2A サーバーのステータス
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok トンネル
 omniroute reset-password           # 管理者パスワードをリセット
 omniroute --mcp                    # stdio 経由で MCP サーバーを起動
@@ -1333,7 +1316,7 @@ omniroute --port 3000              # カスタムポートでサーバーを起�
 
 ## 🖥️ デスクトップアプリケーション（Electron）
 
-OmniRoute は、Windows、macOS、Linux 向けのネイティブデスクトップアプリケーションとして利用できます。
+67router は、Windows、macOS、Linux 向けのネイティブデスクトップアプリケーションとして利用できます。
 
 ### インストール
 

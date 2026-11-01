@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (Français)
+# Codex CLI — Configuration with 67router (Français)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇹 [mt](../../../mt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-Guide complet pour utiliser Codex CLI avec OmniRoute comme backend compatible avec OpenAI.
+Guide complet pour utiliser Codex CLI avec 67router comme backend compatible avec OpenAI.
 
 ---
 
@@ -60,17 +60,17 @@ command -v codex
 codex --version
 ```
 
-### OmniRoute local sans authentification : une clé factice suffit
+### 67router local sans authentification : une clé factice suffit
 
 Codex vérifie que la variable d’environnement désignée par `env_key` existe
-**avant** que la première requête ne quitte la CLI. Si votre instance OmniRoute
+**avant** que la première requête ne quitte la CLI. Si votre instance 67router
 **locale** ne nécessite pas d’authentification, n’importe quelle valeur factice non vide convient :
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-Utilisez plutôt une véritable clé lorsque votre serveur OmniRoute est protégé ou distant.
+Utilisez plutôt une véritable clé lorsque votre serveur 67router est protégé ou distant.
 
 > **Options d’hôte courantes**
 >
@@ -86,19 +86,19 @@ Utilisez plutôt une véritable clé lorsque votre serveur OmniRoute est protég
 
 Codex CLI a rendu obsolète `wire_api = "chat"` (Chat Completions) en février 2026 et **exige** désormais `wire_api = "responses"` (API Responses d’OpenAI). Définir `wire_api = "chat"` provoque un plantage immédiat au démarrage depuis la v0.138.
 
-De nombreux fournisseurs, notamment GLM et Kimi, n’exposent encore qu’un point de terminaison Chat Completions. DeepSeek V4 expose désormais une API Responses native ainsi qu’un point de terminaison compatible avec Anthropic ; OmniRoute utilise Responses par défaut et permet à chaque connexion DeepSeek de sélectionner la compatibilité Anthropic.
+De nombreux fournisseurs, notamment GLM et Kimi, n’exposent encore qu’un point de terminaison Chat Completions. DeepSeek V4 expose désormais une API Responses native ainsi qu’un point de terminaison compatible avec Anthropic ; 67router utilise Responses par défaut et permet à chaque connexion DeepSeek de sélectionner la compatibilité Anthropic.
 
-**OmniRoute résout cela de manière transparente :**
+**67router résout cela de manière transparente :**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → OmniRoute sélectionne le protocole natif du fournisseur et effectue la traduction si nécessaire
+  → POST /v1/responses (67router)
+    → 67router sélectionne le protocole natif du fournisseur et effectue la traduction si nécessaire
     → POST /responses (DeepSeek V4) ou /chat/completions (Mistral / GLM / Kimi / autres)
 ```
 
-Vous n’avez jamais besoin d’un proxy de traduction distinct lorsque vous utilisez OmniRoute. **Tous les modèles utilisent `wire_api = "responses"`** — OmniRoute s’occupe du reste.
+Vous n’avez jamais besoin d’un proxy de traduction distinct lorsque vous utilisez 67router. **Tous les modèles utilisent `wire_api = "responses"`** — 67router s’occupe du reste.
 
 > **`wire_api` est la valeur par défaut** — ce champ utilise `"responses"` par défaut et peut être entièrement omis de `config.toml`. Ne le définissez explicitement que pour documenter l’intention.
 
@@ -119,7 +119,7 @@ Vous n’avez jamais besoin d’un proxy de traduction distinct lorsque vous uti
 
 ### Fenêtres de contexte par modèle
 
-| Modèle                               | ID OmniRoute                         | Fenêtre de contexte          | `auto_compact` | `tool_output_limit` |
+| Modèle                               | ID 67router                          | Fenêtre de contexte          | `auto_compact` | `tool_output_limit` |
 | ------------------------------------ | ------------------------------------ | ---------------------------- | -------------- | ------------------- |
 | GPT-5.5                              | `cx/gpt-5.5`                         | 400k fiables (1M au maximum) | 350,000        | 32,768              |
 | Kimi K2.7 (raisonnement)             | `kmc/kimi-k2.7`                      | 131,072                      | 112,000        | 32,768              |
@@ -147,16 +147,16 @@ Vous n’avez jamais besoin d’un proxy de traduction distinct lorsque vous uti
 
 ## Préfixe de modèle : `cx/`
 
-Tous les modèles Codex dans OmniRoute utilisent le préfixe `cx/` :
+Tous les modèles Codex dans 67router utilisent le préfixe `cx/` :
 
-| Nom dans Codex CLI      | Modèle OmniRoute   |
+| Nom dans Codex CLI      | Modèle 67router    |
 | ----------------------- | ------------------ |
 | `cx/gpt-5.5`            | GPT-5.5 standard   |
 | `cx/gpt-5.4`            | GPT-5.4 standard   |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini       |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini |
 
-Les autres fournisseurs utilisent leur propre préfixe (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — le préfixe correspond à l'alias du fournisseur OmniRoute.
+Les autres fournisseurs utilisent leur propre préfixe (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — le préfixe correspond à l'alias du fournisseur 67router.
 
 ---
 
@@ -186,9 +186,9 @@ model_reasoning_effort = "xhigh"   # ou ultra lorsque pris en charge
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### Budget de réflexion d'OmniRoute (paramètre du serveur)
+### Budget de réflexion de 67router (paramètre du serveur)
 
-Sur l'hôte OmniRoute, **Settings → AI → Thinking Budget** doit être défini sur **`passthrough`** afin que l'effort/le résumé de Codex parvienne au fournisseur en amont. Le mode **`auto` supprime** tous les champs `reasoning` / `reasoning_effort` du client et laisse les panneaux de réflexion vides, même lorsque Codex est correctement configuré.
+Sur l'hôte 67router, **Settings → AI → Thinking Budget** doit être défini sur **`passthrough`** afin que l'effort/le résumé de Codex parvienne au fournisseur en amont. Le mode **`auto` supprime** tous les champs `reasoning` / `reasoning_effort` du client et laisse les panneaux de réflexion vides, même lorsque Codex est correctement configuré.
 
 Guide complet : [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -274,10 +274,10 @@ codex -p chat     # cx/gpt-5.5, aucun effort défini (valeur par défaut du serv
 
 ## Génération automatique de profils avec `omniroute setup-codex`
 
-Si vous exécutez OmniRoute sur un VPS, vous pouvez générer automatiquement des fichiers de profil à partir du catalogue de modèles actif :
+Si vous exécutez 67router sur un VPS, vous pouvez générer automatiquement des fichiers de profil à partir du catalogue de modèles actif :
 
 ```bash
-# Depuis un VPS (utilise l’instance OmniRoute locale sur le port 20128)
+# Depuis un VPS (utilise l’instance 67router locale sur le port 20128)
 omniroute setup-codex
 
 # Depuis n’importe quelle machine — pointez vers votre VPS
@@ -304,7 +304,7 @@ de base non valide interrompt la génération avant l’écriture des profils.
 Lorsque vous fournissez `--api-key` ou `OMNIROUTE_API_KEY`, un fournisseur nouvellement défini fait référence à
 `env_key = "OMNIROUTE_API_KEY"` ; la clé elle-même n’est jamais enregistrée ni affichée dans la
 prévisualisation. Définissez cette variable dans l’environnement depuis lequel vous lancez Codex. Si aucune
-clé n’est fournie, la nouvelle définition n’impose aucune clé, pour une instance OmniRoute
+clé n’est fournie, la nouvelle définition n’impose aucune clé, pour une instance 67router
 configurée pour accepter les requêtes non authentifiées.
 
 La synchronisation automatique facultative du catalogue décrite ci-dessous conserve les définitions de fournisseur déjà
@@ -312,16 +312,16 @@ présentes dans une surcouche, mais n’amorce pas de nouveaux paramètres de fo
 via une configuration explicite ou le tableau de bord. Les paramètres de fournisseur existants sont omis
 des prévisualisations avec `--dry-run`, car ils peuvent contenir des identifiants gérés par l’opérateur.
 
-OmniRoute peut également **synchroniser automatiquement** ces mêmes fichiers de profil après qu’une découverte/importation réussie des modèles d’un fournisseur a modifié le catalogue actif. Cette fonctionnalité est **facultative et désactivée par défaut** : activez-la depuis le **tableau de bord CLI Code** (« Synchronisation automatique des profils CLI » → Codex), ou définissez `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (elle respecte également `CLI_ALLOW_CONFIG_WRITES`, activé par défaut). Lorsqu’elle est activée, elle écrit uniquement des fichiers de profil `~/.codex/*.config.toml` distincts ; elle ne modifie jamais le fichier actif/par défaut `~/.codex/config.toml`, les paramètres de Codex-lb, l’authentification ou la sélection du fournisseur.
+67router peut également **synchroniser automatiquement** ces mêmes fichiers de profil après qu’une découverte/importation réussie des modèles d’un fournisseur a modifié le catalogue actif. Cette fonctionnalité est **facultative et désactivée par défaut** : activez-la depuis le **tableau de bord CLI Code** (« Synchronisation automatique des profils CLI » → Codex), ou définissez `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (elle respecte également `CLI_ALLOW_CONFIG_WRITES`, activé par défaut). Lorsqu’elle est activée, elle écrit uniquement des fichiers de profil `~/.codex/*.config.toml` distincts ; elle ne modifie jamais le fichier actif/par défaut `~/.codex/config.toml`, les paramètres de Codex-lb, l’authentification ou la sélection du fournisseur.
 
 ---
 
 ## Lancement de Codex avec `omniroute launch-codex`
 
-Vérifie l’état de votre instance OmniRoute avant de lancer Codex :
+Vérifie l’état de votre instance 67router avant de lancer Codex :
 
 ```bash
-# Lancer avec OmniRoute local (port 20128 par défaut)
+# Lancer avec 67router local (port 20128 par défaut)
 omniroute launch-codex
 
 # Lancer avec un profil spécifique
@@ -471,7 +471,7 @@ Dans une session interactive :
 
 ## Tâches de longue durée
 
-Deux paramètres par défaut d’OmniRoute peuvent compromettre silencieusement les sessions Codex CLI de plusieurs heures. Aucun des deux n’est un paramètre de Codex CLI — ils se trouvent tous deux côté OmniRoute. Les utilisateurs qui migrent une configuration depuis des proxys en amont qui épinglent les comptes et désactivent les délais d’inactivité rencontrent souvent ces deux problèmes et concluent qu’OmniRoute « ne peut pas maintenir une longue session ».
+Deux paramètres par défaut de 67router peuvent compromettre silencieusement les sessions Codex CLI de plusieurs heures. Aucun des deux n’est un paramètre de Codex CLI — ils se trouvent tous deux côté 67router. Les utilisateurs qui migrent une configuration depuis des proxys en amont qui épinglent les comptes et désactivent les délais d’inactivité rencontrent souvent ces deux problèmes et concluent que 67router « ne peut pas maintenir une longue session ».
 
 | Symptôme                                                                                                | Cause probable                                                                                                    | Paramètre                |
 | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------ |
@@ -493,7 +493,7 @@ Discussions connexes : [#7126](https://github.com/diegosouzapw/OmniRoute/discuss
 
 **Ce qui ne fonctionne plus lorsqu’il reste à 0**
 
-Chaque tour d’une conversation Codex à plusieurs tours est routé indépendamment selon la stratégie de combinaison active et peut aboutir sur un **compte différent à chaque tour**. Cela rompt la continuité de la session en amont et du cache des prompts. OmniRoute ne consulte les en-têtes de session Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) et les champs du corps tels que `prompt_cache_key` / `session_id` que lorsque le TTL est supérieur à `0` (`extractSessionAffinityKey` dans `src/sse/services/auth.ts`).
+Chaque tour d’une conversation Codex à plusieurs tours est routé indépendamment selon la stratégie de combinaison active et peut aboutir sur un **compte différent à chaque tour**. Cela rompt la continuité de la session en amont et du cache des prompts. 67router ne consulte les en-têtes de session Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) et les champs du corps tels que `prompt_cache_key` / `session_id` que lorsque le TTL est supérieur à `0` (`extractSessionAffinityKey` dans `src/sse/services/auth.ts`).
 
 **Recommandation pour une tâche unique de plusieurs heures**
 
@@ -515,13 +515,13 @@ L’activation explicite est intentionnelle : la désactivation de l’affinité
 
 Un tour de raisonnement / d’outil Codex qui reste silencieux pendant plus de 10 minutes sans **aucun véritable fragment en amont** est interrompu de force par le mécanisme de surveillance d’inactivité SSE (`open-sse/utils/stream.ts`). Le client constate souvent une simple coupure de connexion — ce qui correspond à « arrêté automatiquement sans aucune notification ».
 
-Détail essentiel : le **signal de maintien de connexion** SSE synthétique d’OmniRoute ne réinitialise pas le délai d’inactivité. Seul un véritable fragment du corps reçu en amont met à jour `lastChunkTime`. Du point de vue du mécanisme de surveillance, un modèle silencieux qui est toujours en train de « réfléchir » est indiscernable d’un service en amont bloqué.
+Détail essentiel : le **signal de maintien de connexion** SSE synthétique de 67router ne réinitialise pas le délai d’inactivité. Seul un véritable fragment du corps reçu en amont met à jour `lastChunkTime`. Du point de vue du mécanisme de surveillance, un modèle silencieux qui est toujours en train de « réfléchir » est indiscernable d’un service en amont bloqué.
 
 Inactivité associée du corps Undici : `FETCH_BODY_TIMEOUT_MS` (utilise également par défaut la même valeur de référence de 10 minutes ; `0` le désactive). Pour le streaming, `FETCH_TIMEOUT_MS` couvre uniquement l’établissement de la connexion / les premiers en-têtes — une fois le flux actif, les blocages sont régis par `STREAM_IDLE_TIMEOUT_MS` et `FETCH_BODY_TIMEOUT_MS`.
 
 **Recommandation pour une tâche unique de plusieurs heures**
 
-Dans l’environnement du processus OmniRoute (`.env` / compose / systemd) :
+Dans l’environnement du processus 67router (`.env` / compose / systemd) :
 
 ```bash
 # Désactiver les délais d’inactivité du flux et du corps pour les longs tours de raisonnement
@@ -537,12 +537,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-Redémarrez OmniRoute après avoir modifié ces variables d’environnement.
+Redémarrez 67router après avoir modifié ces variables d’environnement.
 
 ### Procédure concrète — tâche Codex de plusieurs heures
 
 1. **Épinglez le compte :** Tableau de bord → Paramètres → Routage → Affinité de session → TTL d’affinité = `43200` (12 h) ou `86400` (24 h maximum).
-2. **Augmentez / désactivez les délais d’inactivité** dans l’environnement d’OmniRoute :
+2. **Augmentez / désactivez les délais d’inactivité** dans l’environnement de 67router :
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -550,7 +550,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. Conservez le fichier `config.toml` Codex habituel (`wire_api = "responses"`, `base_url` correct, `OMNIROUTE_API_KEY`) — aucun réglage d’affinité ou d’inactivité côté Codex n’existe pour ces deux comportements.
-4. Redémarrez OmniRoute, puis lancez la tâche Codex de longue durée.
+4. Redémarrez 67router, puis lancez la tâche Codex de longue durée.
 
 ### Décision concernant les valeurs par défaut (#7287)
 
@@ -563,13 +563,13 @@ Modifier globalement l’une ou l’autre de ces valeurs par défaut changerait 
 
 ### Diagnostic des interruptions pour inactivité
 
-Lorsque le mécanisme de surveillance d’inactivité se déclenche, OmniRoute journalise une ligne de la forme suivante :
+Lorsque le mécanisme de surveillance d’inactivité se déclenche, 67router journalise une ligne de la forme suivante :
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-Recherchez `Idle timeout: no data from` avec grep (ou le code `stream_idle_timeout` / le nom d’erreur `StreamIdleTimeoutError`). Le segment du fournisseur correspond à celui qu’OmniRoute a utilisé pour cette requête (`codex`, l’identifiant d’un autre fournisseur ou `provider` s’il est inconnu) — il ne s’agit pas toujours de la chaîne littérale `codex`.
+Recherchez `Idle timeout: no data from` avec grep (ou le code `stream_idle_timeout` / le nom d’erreur `StreamIdleTimeoutError`). Le segment du fournisseur correspond à celui que 67router a utilisé pour cette requête (`codex`, l’identifiant d’un autre fournisseur ou `provider` s’il est inconnu) — il ne s’agit pas toujours de la chaîne littérale `codex`.
 
 ---
 
@@ -579,16 +579,16 @@ Recherchez `Idle timeout: no data from` avec grep (ou le code `stream_idle_timeo
 Supprimez `wire_api = "chat"` de votre configuration. Définissez `wire_api = "responses"` ou omettez ce champ (la valeur par défaut est `"responses"` depuis la v0.138).
 
 **`Error: model not found`**
-Vérifiez que le modèle existe dans OmniRoute avec le préfixe approprié. Utilisez `omniroute models list` ou ouvrez `/dashboard/providers/<provider>`.
+Vérifiez que le modèle existe dans 67router avec le préfixe approprié. Utilisez `omniroute models list` ou ouvrez `/dashboard/providers/<provider>`.
 
 **`Authentication error`**
 Vérifiez que `OMNIROUTE_API_KEY` est exportée : `echo $OMNIROUTE_API_KEY`.
 
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
-Codex vérifie que la variable d’environnement existe avant d’effectuer la première requête. Exportez une vraie clé pour les serveurs protégés, ou une valeur fictive non vide telle que `OMNIROUTE_API_KEY=local` lorsque votre instance OmniRoute **locale** ne nécessite pas d’authentification. Redémarrez le shell si vous l’avez ajoutée à `~/.bashrc` ou `~/.zshrc`.
+Codex vérifie que la variable d’environnement existe avant d’effectuer la première requête. Exportez une vraie clé pour les serveurs protégés, ou une valeur fictive non vide telle que `OMNIROUTE_API_KEY=local` lorsque votre instance 67router **locale** ne nécessite pas d’authentification. Redémarrez le shell si vous l’avez ajoutée à `~/.bashrc` ou `~/.zshrc`.
 
 **`Connection refused`**
-Vérifiez qu’OmniRoute est en cours d’exécution et que l’hôte/le port de `base_url` est correct pour votre réseau (local, Tailscale ou VPS).
+Vérifiez que 67router est en cours d’exécution et que l’hôte/le port de `base_url` est correct pour votre réseau (local, Tailscale ou VPS).
 
 **La session plante à l’approche de la limite de contexte**
 Définissez explicitement `model_context_window` et `model_auto_compact_token_limit`. Consultez le tableau de la fenêtre de contexte ci-dessus.
@@ -600,4 +600,4 @@ Réduisez `model_auto_compact_token_limit` à 80–85 % de la fenêtre. Ne la d�
 Vérifiez que le fichier existe à l’emplacement `~/.codex/<name>.config.toml` (sans préfixe `profile-`). Exécutez `ls ~/.codex/*.config.toml`.
 
 **Une tâche Codex de longue durée s’interrompt en cours d’exécution / change de compte entre les échanges**
-Consultez [Tâches de longue durée](#long-running-tasks). Activez l’affinité de session (avec un TTL supérieur à la durée de la tâche) et augmentez ou désactivez `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Recherchez `Idle timeout: no data from` dans les journaux d’OmniRoute avec grep.
+Consultez [Tâches de longue durée](#long-running-tasks). Activez l’affinité de session (avec un TTL supérieur à la durée de la tâche) et augmentez ou désactivez `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Recherchez `Idle timeout: no data from` dans les journaux de 67router avec grep.

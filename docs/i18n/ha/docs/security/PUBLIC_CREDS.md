@@ -15,7 +15,7 @@
 - [OAuth 2.0 don native apps (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret na installed apps na jama'a ne; PKCE ne ke samar da ainihin tsaro.
 - [Firebase API keys](https://firebase.google.com/docs/projects/api-keys) — Web client identifiers na jama'a ne bisa ƙira.
 
-Dole ne OmniRoute ya saka waɗannan ƙimomin domin masu amfani waɗanda ba su saita `.env` ba su ci gaba da samun OAuth flow mai aiki kai tsaye. Idan babu embedded fallback, masu samar da Gemini / Antigravity za su daina aiki ga duk mai amfani da ya bi hanyar "kawai yi clone sannan ka gudanar".
+Dole ne 67router ya saka waɗannan ƙimomin domin masu amfani waɗanda ba su saita `.env` ba su ci gaba da samun OAuth flow mai aiki kai tsaye. Idan babu embedded fallback, masu samar da Gemini / Antigravity za su daina aiki ga duk mai amfani da ya bi hanyar "kawai yi clone sannan ka gudanar".
 
 Duk da haka, **GitHub Secret Scanning**, **Semgrep**, da makamantan pattern scanners suna gano literal values kamar `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com`. Kowace release tana zama cike da false positives masu hayaniya, push protection yana toshe halastattun commits, sannan operators su daina amincewa da alert feed.
 

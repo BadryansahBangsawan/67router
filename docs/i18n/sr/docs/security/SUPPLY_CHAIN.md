@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute objavljuje npm + Docker artefakte. Ovi gejtovi obezbeđuju poreklo, inventar (SBOM) i skeniranje CVE-a, sve OSS, integrisano u tokove rada izdavanja.
+67router objavljuje npm + Docker artefakte. Ovi gejtovi obezbeđuju poreklo, inventar (SBOM) i skeniranje CVE-a, sve OSS, integrisano u tokove rada izdavanja.
 **Prvo savetodavni** pristup — oni sada prijavljuju, a promovišu u blokirajući nakon prvog uspešnog izdavanja.
 
 | Gejt                  | Alat                                           | Gde                           | Blokira?                       | Izlaz                                    |
@@ -48,7 +48,7 @@ Prema grani "nema uzvodne popravke" iz gore navedenog rešenja za CVE varijansu,
   trenutni npm-latest (`0.1.29`) i dalje povlači `extract-zip@2.0.1`.
 - **Nedostupan iz produkcije.** `promptfoo` je samo devDependency (nikada nije naveden
   pod `dependencies`), i nijedan fajl pod `src/`, `open-sse/`, ili `bin/` ne uvozi
-  `extract-zip` npm paket — OmniRoute-ov sopstveni `extractZip()` pomoćnik
+  `extract-zip` npm paket — 67router-ov sopstveni `extractZip()` pomoćnik
   (`src/lib/versionManager/binaryManager.ts:93`) koristi native `unzip`/`tar`
   i nije povezan. `@openai/codex-security` takođe isporučuje sopstvenu zaštitu od symlink-traversal-a
   povrh extract-zip-ovog onEntry callback-a.

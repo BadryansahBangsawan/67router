@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute styrer, hvilke **browseroprindelser** der må læse svar på tværs af oprindelser,
+67router styrer, hvilke **browseroprindelser** der må læse svar på tværs af oprindelser,
 fra en enkelt, centraliseret tilladelsesliste. Modellen er **lukket som standard**:
 Ingen oprindelse er tilladt, før du udtrykkeligt tillader den. Denne side dokumenterer, hvordan tilladelseslisten
 fortolkes, hvad `CORS_ALLOW_ALL=true` faktisk eksponerer (og, vigtigt, hvad den
@@ -46,13 +46,13 @@ i denne rækkefølge:
 ## Trusselsmodel — hvad `CORS_ALLOW_ALL=true` reelt eksponerer
 
 Den generelle OWASP-advarsel ("CORS med jokertegn = ethvert websted kan kalde dit API") bør
-tages alvorligt, men OmniRoutes eksponering er **mere begrænset end i det generelle tilfælde**
+tages alvorligt, men 67routers eksponering er **mere begrænset end i det generelle tilfælde**
 på grund af én konkret implementeringsdetalje:
 
 > **Det centrale `applyCorsHeaders()` udsender aldrig
 > `Access-Control-Allow-Credentials`.** En browser vil ikke eksponere et _legitimationsoplysningsbaseret_
 > svar på tværs af oprindelser (med cookies), medmindre serveren sender
-> `Access-Control-Allow-Credentials: true`. Det gør OmniRoutes fælles CORS-kode aldrig.
+> `Access-Control-Allow-Credentials: true`. Det gør 67routers fælles CORS-kode aldrig.
 
 Det betyder følgende for hver flade, selv med `CORS_ALLOW_ALL=true`:
 
@@ -68,20 +68,6 @@ at lade CORS-**preflight lykkes** på administrationsroutes — som stadig kræv
 der ikke kan leveres af en side fra en anden oprindelse. Det er **ikke** en vektor til sessionskapring eller
 tyveri af legitimationsoplysninger i den fælles CORS-kode.
 
-### Én reel undtagelse — `/api/v1/agents/`
-
-Cloud-Agent-routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) angiver
-deres **egne** CORS-headere
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) og udsender **faktisk**
-`Access-Control-Allow-Origin: <origin>|*` sammen med
-`Access-Control-Allow-Credentials: true`. Dette er den eneste flade, hvor
-returnering af oprindelsen og legitimationsoplysninger eksisterer samtidigt, og den er **uafhængig af
-`CORS_ALLOW_ALL`**. Disse routes er administrationsgodkendte
-(`requireManagementAuth`); operatører, der eksponerer dashboardet uden for værtsmaskinen, bør være
-opmærksomme på, at dette er det eneste sted, hvor en legitimationsoplysningsbaseret læsning på tværs af oprindelser tillades af
-svarheaderne. En stramning til en eksplicit tilladelsesliste spores
-separat fra denne CORS-vejledning.
-
 ## Tjekliste til produktion
 
 - **Indstil aldrig `CORS_ALLOW_ALL=true` i produktion.** Lad den være udefineret.
@@ -91,7 +77,7 @@ separat fra denne CORS-vejledning.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Hvis OmniRoute kører bag en reverse proxy/tunnel (nginx, Caddy, Cloudflare
+- Hvis 67router kører bag en reverse proxy/tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), er CORS **ikke** din eneste kontrolmekanisme — loopback-rute-
   beskyttelsen beskytter stadig ruter, der kan starte processer (se
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Forfalsk ikke
@@ -107,7 +93,7 @@ separat fra denne CORS-vejledning.
 Selv under udvikling har du sjældent brug for wildcard. Tillad kun de udviklingsservere, du bruger:
 
 ```bash
-# Vite- (5173) og Next.js-udviklingsservere (3000), der kalder en lokal OmniRoute
+# Vite- (5173) og Next.js-udviklingsservere (3000), der kalder en lokal 67router
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +113,14 @@ uden genstart.
   inkludere administrations-/dashboard-origins i tilladende konfigurationer; de skal
   forblive fail-closed uden undtagelser.
 
-## Eksempel: reverse proxy foran OmniRoute
+## Eksempel: reverse proxy foran 67router
 
-CORS håndhæves af OmniRoute selv, så proxyen bør generelt **ikke** tilføje eller
+CORS håndhæves af 67router selv, så proxyen bør generelt **ikke** tilføje eller
 omskrive `Access-Control-*`-headers (dobbelte headers får browsere til at fejle). Afslut TLS,
-og videresend — lad OmniRoute besvare preflight-anmodningen:
+og videresend — lad 67router besvare preflight-anmodningen:
 
 ```nginx
-# nginx — videresend til OmniRoute; tilføj IKKE Access-Control-* her
+# nginx — videresend til 67router; tilføj IKKE Access-Control-* her
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +128,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Behold videresendelsesheaderne: En proxy på samme vært opretter forbindelse fra loopback, og det er
-    # dem, der fortæller OmniRoute, at klienten ikke er den lokale operatør. En proxy, der ikke tilføjer nogen af dem,
+    # dem, der fortæller 67router, at klienten ikke er den lokale operatør. En proxy, der ikke tilføjer nogen af dem,
     # får alle eksterne klienter til at se lokale ud. Sæt heller aldrig X-Forwarded-For til 127.0.0.1.
 }
 ```
 
-Angiv de tilladte browseroprindelser i OmniRoute (`CORS_ALLOWED_ORIGINS` eller fanen
+Angiv de tilladte browseroprindelser i 67router (`CORS_ALLOWED_ORIGINS` eller fanen
 Security), ikke i proxyen.
 
 ## Kildefiler
@@ -160,7 +146,6 @@ Security), ikke i proxyen.
 | Runtime-status for dashboardet                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Advarselsbanner på dashboardet                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Feltet Tilladte CORS-origins                    | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agents CORS pr. rute (undtagelsen)        | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Se også
 

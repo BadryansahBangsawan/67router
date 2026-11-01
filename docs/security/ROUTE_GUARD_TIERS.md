@@ -6,7 +6,7 @@ title: "Route Guard Tiers"
 
 ## Overview
 
-All OmniRoute management API routes are classified into one of three protection
+All 67router management API routes are classified into one of three protection
 tiers. Classification is static, defined in `src/server/authz/routeGuard.ts`,
 and evaluated before any other auth branch runs.
 
@@ -27,9 +27,9 @@ class ([GHSA-fhh6-4qxv-rpqj](https://github.com/advisories/GHSA-fhh6-4qxv-rpqj))
 **What GHSA-fhh6-4qxv-rpqj is (the attack class):** a management/agent server
 exposes an endpoint that launches a subprocess (`npm install`, `node`, a browser,
 a proxy, `git`, `tar`, …). If that endpoint is reachable from off-host — because
-the operator put OmniRoute behind an nginx/Cloudflare/Tailscale tunnel and a JWT
+the operator put 67router behind an nginx/Cloudflare/Tailscale tunnel and a JWT
 leaked, or auth was misconfigured — the attacker turns "call an API" into "run a
-command on the host" (remote code execution). OmniRoute closes this by enforcing a
+command on the host" (remote code execution). 67router closes this by enforcing a
 **loopback host check unconditionally, before any auth check**, on every
 spawn-capable route: a leaked token over a tunnel still can't reach the spawn.
 
@@ -57,8 +57,6 @@ spawn-capable prefixes and fails CI if any is not classified local-only.
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy listener + system proxy                                          |
 | `/api/settings/mitm`                                                                                     | Enables MITM interception (system-level proxy state)                                            |
 | `/api/issue-agent/`                                                                                      | Issue agent — spawns local tooling against the repo                                             |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — load/execute via `worker_threads` + `child_process`                                   |
-| `/api/middleware/`                                                                                       | User middleware — loads/executes operator code in-process                                       |
 | `/api/system/version`                                                                                    | Auto-update (POST only; GET/HEAD/OPTIONS exempt) — spawns `git checkout` + `npm install`        |
 | `/api/db-backups/exportAll`                                                                              | Spawns `tar` for the export archive                                                             |
 | `/api/local/`                                                                                            | 1-click local launchers (Redis today) — spawns podman/docker                                    |
@@ -66,8 +64,8 @@ spawn-capable prefixes and fails CI if any is not classified local-only.
 | `/api/jobs`, `/api/jobs/`                                                                                | Job runner control — executes scheduled host-side work                                          |
 | `/api/oauth/cursor/auto-import`                                                                          | `execFile("which", ["cursor"])` before importing creds                                          |
 | `/api/oauth/kiro/auto-import`                                                                            | Reads Kiro CLI credential files from the host                                                   |
-| `/api/skills/collect/`                                                                                   | Skill collection — detects/installs local tooling                                               |
-| `/api/skills/install`, `/api/skills/executions`                                                          | Skill handler registration + execution — reach the sandbox container spawn (GHSA-jx89)          |
+| `/api/skills/collect/`                                                                                   | Skill Collector (removed in 67router; prefix kept loopback-only)                                |
+| `/api/skills/install`, `/api/skills/executions`                                                          | Skills framework (removed in 67router; prefixes kept loopback-only, GHSA-jx89)                  |
 | `/api/discovery/`                                                                                        | Local network/provider discovery probes                                                         |
 | `/api/vnc-session` (`VNC_ROUTE_PREFIX`)                                                                  | Spawns a headful browser + VNC session for interactive logins                                   |
 | `/api/acp/agents`                                                                                        | ACP — discovers and spawns local CLI agent binaries                                             |
@@ -118,7 +116,7 @@ for remote MCP-only callers who should not need broad management access.
 
 #### Operator guidance & auditing
 
-If you run OmniRoute behind a reverse proxy or tunnel (nginx, Caddy, Cloudflare
+If you run 67router behind a reverse proxy or tunnel (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok), the loopback check still protects the spawn-capable
 routes above — a request whose client address is non-loopback is rejected with
 `403 LOCAL_ONLY` **before auth runs**, so a leaked JWT can't reach a spawn. Two
@@ -156,7 +154,7 @@ operator responsibilities remain:
 - Grep your reverse-proxy / access logs for the prefixes above paired with a
   non-loopback client address. Any such hit that returned `200` instead of
   `403 LOCAL_ONLY` means the proxy is masking the real client IP — fix the proxy.
-- A `403 LOCAL_ONLY` in OmniRoute's logs for one of these paths is the guard
+- A `403 LOCAL_ONLY` in 67router's logs for one of these paths is the guard
   working as intended, not an error to suppress.
 
 #### Remote-reachable routes with a call-site probe gate
@@ -196,7 +194,6 @@ server process.
 | `/api/settings/import-json`               | Replaces the full settings blob                |
 | `/api/providers/health-autopilot/actions` | Executes autopilot remediation actions         |
 | `/api/settings/obsidian`                  | Mints reusable WebDAV creds for any vault root |
-| `/api/relay/tokens`                       | Mints, lists, edits and revokes relay tokens   |
 
 **Response on violation:** `401 Authentication required`
 

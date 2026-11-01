@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute na-enye ụzọ **abụọ** iji OpenAI Codex:
+67router na-enye ụzọ **abụọ** iji OpenAI Codex:
 
 | Onye na-eweta ọrụ      | Otu o si agwa OpenAI okwu                                                                                                                                                                          | Ịdọ aka ná ntị gbasara ojiji                                  |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | **`codex`**            | Na-ezigara Responses API token OAuth ChatGPT/OpenAI gị ozugbo                                                                                                                                      | **Ee** — enyeghị nnọkọ gọọmentị ikike maka ojiji proxy/router |
-| **`codex-app-server`** | Na-achịkwa **`codex app-server` nke Codex CLI n'onwe ya** site na JSON-RPC/WebSocket; CLI na-ejikwa ma na-emegharị OAuth ya n'onwe ya (`~/.codex/auth.json`) kpọmkwem dịka nnọkọ `codex` mmekọrịta | **Mba** — OmniRoute anaghị ezigharị token na API              |
+| **`codex-app-server`** | Na-achịkwa **`codex app-server` nke Codex CLI n'onwe ya** site na JSON-RPC/WebSocket; CLI na-ejikwa ma na-emegharị OAuth ya n'onwe ya (`~/.codex/auth.json`) kpọmkwem dịka nnọkọ `codex` mmekọrịta | **Mba** — 67router anaghị ezigharị token na API               |
 
 Ebe ọ bụ na `codex-app-server` anaghị ezigharị token, ịdọ aka ná ntị
 gbasara ojiji nke izigharị nnọkọ anaghị emetụta ya. Ọ chọrọ ka **Codex CLI dị
@@ -20,7 +20,7 @@ na URL app-server ahaziri**, ma CLI ahụ ga-abụrịrị na **abanyela na aka�
 ## 1. Nhazi usoro
 
 ```
-┌─ Ngwa OmniRoute ────────────────┐        ┌─ sidecar codex-app-server ──────────┐
+┌─ Ngwa 67router ────────────────┐        ┌─ sidecar codex-app-server ──────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ token ikike)                 │  JSON  │  --ws-auth capability-token         │
@@ -73,7 +73,7 @@ naanị mgbe faịlụ ahụ adịghị ma ọ bụ mgbe token ya ochie (a na-em
   `~/.codex` nke host gị n'ime sidecar (`codex-appserver-home`) ma hapụ usoro nbanye.
 - **Onye ọrụ ọha, codex adịghị na kọmputa ya** — nke a adịghị mkpa: sidecar nwere
   CLI. Onye ọrụ na-enyocha njirimara naanị site na dashboard.
-- **OmniRoute bare-metal (enweghị sidecar, codex dị na host)** — mee ka
+- **67router bare-metal (enweghị sidecar, codex dị na host)** — mee ka
   `OMNIROUTE_CODEX_APPSERVER_WS` rụtụ aka na `codex app-server` nke gị ma hụ na
   codex nke host abanyela na akaụntụ; ntụnye "codex adịghị awụnye" ga-apụta ma ọ bụrụ na binary
   ahụ adịghị.

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "خطأ: {message}",
-    "serverOffline": "خادم OmniRoute غير متصل. ابدأ بالأمر: omniroute serve",
+    "serverOffline": "خادم 67router غير متصل. ابدأ بالأمر: omniroute serve",
     "authRequired": "المصادقة مطلوبة. عيّن OMNIROUTE_API_KEY أو شغّل: omniroute setup",
     "rateLimited": "تم تجاوز حد الطلبات. أعد المحاولة بعد {seconds} ثانية.",
     "timeout": "انتهت مهلة الطلب بعد {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "تخطي رسالة التأكيد"
   },
   "setup": {
-    "title": "إعداد OmniRoute",
+    "title": "إعداد 67router",
     "passwordPrompt": "كلمة مرور المسؤول",
     "providerPrompt": "المزوّد الافتراضي (اتركه فارغًا للتخطي)",
     "done": "اكتمل الإعداد",
@@ -30,7 +30,7 @@
     "opencode": "ثبّت وعيّن إعدادات @omniroute/opencode-plugin المضمّنة لـ OpenCode"
   },
   "doctor": {
-    "title": "أداة تشخيص OmniRoute",
+    "title": "أداة تشخيص 67router",
     "dbOk": "قاعدة البيانات: سليمة ({path})",
     "dbMissing": "قاعدة البيانات: غير مهيأة — شغّل `omniroute setup`",
     "portOk": "المنفذ {port}: متاح",
@@ -82,7 +82,7 @@
       "providerOpt": "التصفية حسب اسم موفّر الخدمة",
       "header": "المعرّف     موفّر الخدمة   الاسم                     حالة الانتهاء  حالة الاختبار  انتهاء فترة الانتظار",
       "noData": "لا تتوفر بيانات لاتصالات موفّري الخدمة.",
-      "requiresServer": "يتطلب providers status أن يكون خادم OmniRoute قيد التشغيل."
+      "requiresServer": "يتطلب providers status أن يكون خادم 67router قيد التشغيل."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "إضافة مفتاح API لموفّر خدمة أو تحديثه",
     "listDescription": "عرض جميع مفاتيح API المهيّأة",
     "removeDescription": "إزالة مفتاح API لموفّر خدمة",
-    "regenerateDescription": "إعادة إنشاء مفتاح API خاص بـ OmniRoute",
-    "revokeDescription": "إلغاء مفتاح API خاص بـ OmniRoute",
+    "regenerateDescription": "إعادة إنشاء مفتاح API خاص بـ 67router",
+    "revokeDescription": "إلغاء مفتاح API خاص بـ 67router",
     "revealDescription": "إظهار قيمة مفتاح API غير المحجوبة",
     "usageDescription": "عرض الاستخدام الأخير لمفتاح API",
     "usageLimitOpt": "عدد الطلبات الأخيرة",
@@ -172,13 +172,6 @@
       "period": "النطاق الزمني: 1d|7d|30d|90d|ytd|all (الافتراضي: 30d)",
       "provider": "التصفية حسب معرّف المزوّد"
     },
-    "budget": {
-      "description": "إدارة ميزانيات التكلفة",
-      "set": {
-        "scope": "نطاق الميزانية (الافتراضي: global)",
-        "period": "فترة الميزانية: daily|weekly|monthly (الافتراضي: monthly)"
-      }
-    },
     "quota": {
       "description": "عرض استخدام حصة المزوّد",
       "provider": "التصفية حسب معرّف المزوّد",
@@ -225,7 +218,7 @@
     "noCombo": "لم يتم العثور على تركيبة مطابقة. اضبط واحدة باستخدام: omniroute combo create"
   },
   "chat": {
-    "description": "أرسل مطالبة دردشة لمرة واحدة إلى OmniRoute",
+    "description": "أرسل مطالبة دردشة لمرة واحدة إلى 67router",
     "file": "اقرأ المطالبة من ملف",
     "stdin": "اقرأ المطالبة من stdin",
     "system": "مطالبة النظام",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "بدء تشغيل خادم OmniRoute (الإجراء الافتراضي)",
-    "starting": "جارٍ بدء تشغيل خادم OmniRoute على المنفذ {port}...",
+    "description": "بدء تشغيل خادم 67router (الإجراء الافتراضي)",
+    "starting": "جارٍ بدء تشغيل خادم 67router على المنفذ {port}...",
     "ready": "جاهز على http://localhost:{port}",
     "stopping": "جارٍ إيقاف الخادم (PID {pid})...",
     "stopped": "تم إيقاف الخادم.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "نسخة احتياطية",
-    "description": "إنشاء نسخة احتياطية من بيانات OmniRoute",
+    "description": "إنشاء نسخة احتياطية من بيانات 67router",
     "creating": "جارٍ إنشاء النسخة الاحتياطية...",
     "done": "حُفظت النسخة الاحتياطية في {path}",
     "noFiles": "لا توجد ملفات لنسخها احتياطيًا (لم تتم تهيئة قاعدة البيانات)",
@@ -277,7 +270,7 @@
     "noBackups": "لم يتم العثور على نسخ احتياطية.",
     "notFound": "لم يتم العثور على النسخة الاحتياطية: {name}",
     "confirmRestore": "هل تريد استبدال البيانات الحالية بالنسخة الاحتياطية المنشأة في {ts}؟",
-    "createDescription": "إنشاء نسخة احتياطية من بيانات OmniRoute",
+    "createDescription": "إنشاء نسخة احتياطية من بيانات 67router",
     "nameOpt": "اسم مخصص للنسخة الاحتياطية",
     "cloudOpt": "رفع النسخة الاحتياطية إلى التخزين السحابي",
     "encryptOpt": "تشفير النسخة الاحتياطية باستخدام AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "فشل مسح ذاكرة التخزين المؤقت."
   },
   "redis": {
-    "description": "تشغيل حاوية Redis محلية بضغطة واحدة (Podman أو Docker) لتخزين التخزين المؤقت وتتبع الحصة في OmniRoute"
+    "description": "تشغيل حاوية Redis محلية بضغطة واحدة (Podman أو Docker) لتخزين التخزين المؤقت وتتبع الحصة في 67router"
   },
   "test": {
     "description": "اختبار الاتصال بمزود الخدمة",
@@ -390,36 +383,8 @@
       "description": "سجل تدقيق MCP (اسم مستعار لـ audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "عرض مهارات A2A المتاحة من بطاقة الوكيل"
-    },
-    "invoke": {
-      "description": "استدعاء مهارة A2A وإرجاع معرّف المهمة",
-      "input": "كائن إدخال JSON",
-      "input_file": "المسار إلى ملف إدخال JSON",
-      "wait": "انتظار اكتمال المهمة قبل الإرجاع",
-      "timeout": "مهلة انتظار الاكتمال بالمللي ثانية (الافتراضي: 60000)"
-    },
-    "tasks": {
-      "description": "إدارة مهام A2A",
-      "list": {
-        "status": "التصفية حسب الحالة",
-        "skill": "التصفية حسب معرّف المهارة"
-      },
-      "watch": {
-        "description": "استطلاع حالة المهمة حتى اكتمالها"
-      },
-      "stream": {
-        "description": "بث أحداث تنفيذ المهمة عبر SSE"
-      },
-      "logs": {
-        "description": "عرض رسائل المهمة والعناصر الناتجة"
-      }
-    }
-  },
   "policy": {
-    "description": "إدارة سياسات التخويل في OmniRoute",
+    "description": "إدارة سياسات التخويل في 67router",
     "list": {
       "description": "عرض السياسات",
       "kind": "التصفية حسب النوع (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "تهيئة مسار الضغط في OmniRoute وفحصه",
+    "description": "تهيئة مسار الضغط في 67router وفحصه",
     "status": {
       "description": "عرض حالة الضغط وإعداداته الحالية"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "هل تريد تبديل عنوان URL للنفق {type}؟ (سيتم إنشاء عنوان URL جديد)"
   },
   "stop": {
-    "description": "إيقاف خادم OmniRoute",
+    "description": "إيقاف خادم 67router",
     "stopping": "جارٍ إيقاف الخادم (PID {pid})...",
     "stopped": "تم إيقاف الخادم.",
     "notRunning": "لا يوجد خادم قيد التشغيل.",
     "portFallback": "لم يتم العثور على ملف PID، جارٍ محاولة الإيقاف استنادًا إلى المنفذ..."
   },
   "restart": {
-    "description": "إعادة تشغيل خادم OmniRoute",
-    "restarting": "جارٍ إعادة تشغيل خادم OmniRoute..."
+    "description": "إعادة تشغيل خادم 67router",
+    "restarting": "جارٍ إعادة تشغيل خادم 67router..."
   },
   "dashboard": {
-    "description": "فتح لوحة معلومات OmniRoute في متصفح",
+    "description": "فتح لوحة معلومات 67router في متصفح",
     "opening": "جارٍ فتح لوحة المعلومات على {url}",
     "urlOnly": "طباعة عنوان URL للوحة المعلومات دون فتح المتصفح",
     "tui": "فتح لوحة معلومات TUI التفاعلية (واجهة طرفية، 7 علامات تبويب)"
@@ -560,120 +525,6 @@
       "description": "الحصول على إدخال واحد من سجل التدقيق حسب المعرّف"
     }
   },
-  "skills": {
-    "description": "إدارة مهارات OmniRoute (sandbox، builtin، custom، hybrid، skillssh)",
-    "list": {
-      "description": "عرض قائمة المهارات المثبّتة",
-      "type": "التصفية حسب النوع (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "عرض المهارات المفعّلة فقط",
-      "disabled": "عرض المهارات المعطّلة فقط",
-      "api_key": "التصفية حسب مفتاح API"
-    },
-    "get": {
-      "description": "الحصول على تفاصيل مهارة حسب المعرّف"
-    },
-    "install": {
-      "description": "تثبيت مهارة من ملف أو URL",
-      "from_file": "مسار ملف تعريف المهارة بصيغة JSON",
-      "from_url": "URL لتعريف المهارة البعيدة",
-      "type": "نوع المهارة (sandbox|custom|hybrid)",
-      "enable": "تفعيل المهارة بعد التثبيت"
-    },
-    "enable": {
-      "description": "تفعيل مهارة حسب المعرّف"
-    },
-    "disable": {
-      "description": "تعطيل مهارة حسب المعرّف",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "delete": {
-      "description": "حذف مهارة حسب المعرّف",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "execute": {
-      "description": "تنفيذ مهارة حسب المعرّف",
-      "input": "كائن إدخال JSON",
-      "input_file": "مسار ملف إدخال JSON",
-      "timeout": "مهلة التنفيذ بالمللي ثانية (الافتراضي: 30000)"
-    },
-    "executions": {
-      "description": "عرض سجل تنفيذ المهارات",
-      "skill": "تصفية حسب معرّف المهارة",
-      "limit": "الحد الأقصى للنتائج (الافتراضي: 50)",
-      "status": "تصفية حسب الحالة (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "إدارة المهارات المثبّتة عبر SSH"
-    },
-    "marketplace": {
-      "description": "تصفّح المهارات وتثبيتها من السوق"
-    },
-    "mp": {
-      "search": {
-        "description": "البحث في حزم السوق",
-        "category": "تصفية حسب الفئة",
-        "tag": "تصفية حسب الوسم",
-        "limit": "الحد الأقصى للنتائج (الافتراضي: 30)",
-        "sort": "الترتيب حسب: downloads|rating|recent"
-      },
-      "info": {
-        "description": "عرض تفاصيل الحزمة وملف readme"
-      },
-      "install": {
-        "description": "تثبيت حزمة من السوق",
-        "version": "إصدار الحزمة (الافتراضي: latest)",
-        "enable": "التفعيل بعد التثبيت",
-        "yes": "تخطي مطالبة التأكيد"
-      },
-      "categories": {
-        "description": "عرض فئات السوق"
-      },
-      "featured": {
-        "description": "عرض حزم السوق المميزة"
-      }
-    }
-  },
-  "memory": {
-    "description": "إدارة الذاكرة الحوارية في OmniRoute ‏(FTS5 + vector)",
-    "search": {
-      "description": "البحث في إدخالات الذاكرة باستخدام استعلام دلالي",
-      "type": "تصفية حسب نوع الذاكرة (user|feedback|project|reference)",
-      "limit": "الحد الأقصى للنتائج (الافتراضي: 20)",
-      "api_key": "تصفية حسب مفتاح API",
-      "token_budget": "تقييد إجمالي الرموز المميزة في النتائج"
-    },
-    "add": {
-      "description": "إضافة إدخال جديد إلى الذاكرة",
-      "content": "المحتوى النصي للذاكرة",
-      "file": "قراءة المحتوى من ملف",
-      "type": "نوع الذاكرة (الافتراضي: user)",
-      "metadata": "كائن بيانات وصفية بتنسيق JSON",
-      "api_key": "ربطه بمفتاح API"
-    },
-    "clear": {
-      "description": "حذف إدخالات الذاكرة المطابقة لعوامل التصفية",
-      "type": "تصفية حسب النوع",
-      "older": "حذف الإدخالات الأقدم من المدة المحددة (30d, 6m, 1y)",
-      "api_key": "تصفية حسب مفتاح API",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "list": {
-      "description": "عرض إدخالات الذاكرة دون ترتيب حسب صلة البحث",
-      "type": "تصفية حسب النوع",
-      "limit": "الحد الأقصى للنتائج (الافتراضي: 100)",
-      "api_key": "تصفية حسب مفتاح API"
-    },
-    "get": {
-      "description": "الحصول على إدخال ذاكرة واحد حسب المعرّف"
-    },
-    "delete": {
-      "description": "حذف إدخال ذاكرة حسب المعرّف",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "health": {
-      "description": "عرض حالة النظام الفرعي للذاكرة (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "إدارة اتصالات موفّري OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "تخطي مطالبة التأكيد"
     }
   },
-  "cloud": {
-    "description": "إدارة مهام وكلاء الذكاء الاصطناعي السحابيين (codex, devin, jules)",
-    "agents": {
-      "description": "سرد الوكلاء السحابيين المتاحين"
-    },
-    "agent": {
-      "description": "إدارة مهام الوكيل السحابي {agent}",
-      "auth": {
-        "description": "تفويض {agent} عبر OAuth"
-      }
-    },
-    "task": {
-      "description": "إدارة مهام الوكلاء السحابيين",
-      "create": {
-        "description": "إنشاء مهمة وكيل جديدة",
-        "title": "عنوان المهمة (يُضبط افتراضيًا على أول 80 حرفًا من المطالبة)",
-        "prompt": "نص مطالبة المهمة",
-        "prompt_file": "قراءة المطالبة من ملف",
-        "repo": "عنوان URL للمستودع المراد استنساخه للمهمة",
-        "branch": "اسم الفرع المراد استخدامه",
-        "metadata": "كائن بيانات وصفية بتنسيق JSON"
-      },
-      "list": {
-        "description": "سرد مهام الوكيل",
-        "status": "التصفية حسب الحالة (running|completed|failed|cancelled)",
-        "limit": "الحد الأقصى للنتائج (الافتراضي: 50)"
-      },
-      "get": {
-        "description": "الحصول على تفاصيل المهمة حسب المعرّف"
-      },
-      "status": {
-        "description": "طباعة حالة المهمة (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "إلغاء مهمة قيد التشغيل",
-        "yes": "تخطي مطالبة التأكيد"
-      },
-      "approve": {
-        "description": "الموافقة على خطة الوكيل لبدء التنفيذ"
-      },
-      "message": {
-        "description": "إرسال رسالة إلى مهمة قيد التشغيل"
-      }
-    },
-    "sources": {
-      "description": "سرد ملفات المصدر التي أنشأتها مهمة"
-    }
-  },
-  "eval": {
-    "description": "إدارة حزم التقييم وعمليات تشغيلها",
-    "suites": {
-      "description": "إدارة حزم التقييم",
-      "list": {
-        "description": "عرض مجموعات التقييم"
-      },
-      "get": {
-        "description": "الحصول على تفاصيل مجموعة التقييم حسب المعرّف"
-      },
-      "create": {
-        "description": "إنشاء مجموعة تقييم من ملف JSON",
-        "file": "مسار ملف JSON لتعريف المجموعة"
-      }
-    },
-    "run": {
-      "description": "بدء تشغيل تقييم لمجموعة",
-      "model": "معرّف النموذج المراد تقييمه (الافتراضي: auto)",
-      "combo": "فرض تركيبة محددة بالاسم",
-      "concurrency": "عدد العينات المتزامنة (الافتراضي: 4)",
-      "tag": "إضافة وسم إلى هذا التشغيل لتصفيته لاحقًا",
-      "watch": "مراقبة تقدم التشغيل حتى اكتماله"
-    },
-    "list": {
-      "description": "عرض عمليات تشغيل التقييم",
-      "suite": "التصفية حسب معرّف المجموعة",
-      "status": "التصفية حسب الحالة",
-      "since": "إرجاع عمليات التشغيل منذ هذا الطابع الزمني",
-      "limit": "الحد الأقصى للنتائج (الافتراضي: 50)"
-    },
-    "get": {
-      "description": "الحصول على تفاصيل تشغيل التقييم حسب المعرّف"
-    },
-    "results": {
-      "description": "عرض نتائج العينات لتشغيل تقييم",
-      "failed": "عرض العينات الفاشلة فقط"
-    },
-    "cancel": {
-      "description": "إلغاء تشغيل تقييم قيد التنفيذ",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "scorecard": {
-      "description": "عرض بطاقة النتائج لتشغيل تقييم مكتمل"
-    }
-  },
-  "webhooks": {
-    "description": "إدارة خطافات الويب في OmniRoute",
-    "events": {
-      "description": "عرض جميع أنواع أحداث خطافات الويب المتاحة"
-    },
-    "list": {
-      "description": "عرض خطافات الويب المُعدّة"
-    },
-    "get": {
-      "description": "الحصول على تفاصيل خطاف الويب حسب المعرّف"
-    },
-    "add": {
-      "description": "تسجيل خطاف ويب جديد",
-      "url": "عنوان URL للوجهة",
-      "events": "قائمة أنواع الأحداث مفصولة بفواصل",
-      "secret": "سر توقيع HMAC",
-      "header": "ترويسة إضافية بتنسيق key=value (قابلة للتكرار)",
-      "no_enabled": "إنشاء خطاف الويب في حالة معطّلة"
-    },
-    "update": {
-      "description": "تحديث خطاف ويب موجود",
-      "enabled": "تعيين حالة التمكين (true|false)"
-    },
-    "remove": {
-      "description": "حذف خطاف ويب",
-      "yes": "تخطي مطالبة التأكيد"
-    },
-    "test": {
-      "description": "إرسال حدث اختباري إلى خطاف ويب",
-      "event": "نوع الحدث المراد محاكاته (الافتراضي: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — جهاز توجيه الذكاء الاصطناعي مع التبديل التلقائي",
+    "description": "67router — جهاز توجيه الذكاء الاصطناعي مع التبديل التلقائي",
     "version": "عرض الإصدار والخروج",
     "output": "تنسيق الإخراج (table, json, jsonl, csv)",
     "quiet": "إخفاء المخرجات غير الأساسية",
     "no_color": "تعطيل الإخراج الملوّن",
     "timeout": "مهلة طلب HTTP بالميلي ثانية",
-    "api_key": "مفتاح API لخادم OmniRoute",
-    "base_url": "عنوان URL الأساسي لخادم OmniRoute",
+    "api_key": "مفتاح API لخادم 67router",
+    "base_url": "عنوان URL الأساسي لخادم 67router",
     "context": "سياق/ملف تعريف الخادم المستخدم في هذا الأمر",
     "lang": "تعيين لغة عرض CLI (يتجاوز OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "إدارة الملفات (رفع، عرض، الحصول، تنزيل، حذف)",
-    "list": {
-      "purpose": "التصفية حسب الغرض",
-      "limit": "الحد الأقصى للنتائج"
-    },
-    "get": {
-      "description": "الحصول على بيانات الملف الوصفية"
-    },
-    "upload": {
-      "description": "رفع ملف",
-      "purpose": "الغرض من الملف (batch، assistants، fine-tune)"
-    },
-    "content": {
-      "description": "تنزيل محتوى الملف",
-      "out": "الحفظ في مسار (الافتراضي: stdout)"
-    },
-    "delete": {
-      "yes": "تخطي التأكيد"
-    }
-  },
-  "batches": {
-    "description": "إدارة مهام الدُفعات المتوافقة مع OpenAI",
-    "list": {
-      "status": "التصفية حسب الحالة",
-      "limit": "الحد الأقصى للنتائج"
-    },
-    "create": {
-      "description": "إنشاء مهمة دُفعة",
-      "inputFile": "معرّف ملف الإدخال",
-      "endpoint": "نقطة النهاية المستهدفة",
-      "window": "مهلة الإكمال",
-      "metadata": "إضافة بيانات وصفية key=value"
-    },
-    "submit": {
-      "description": "رفع ملف JSONL وإنشاء دُفعة",
-      "jsonl": "مسار ملف JSONL",
-      "endpoint": "نقطة النهاية المستهدفة",
-      "wait": "انتظار الإكمال"
-    },
-    "cancel": {
-      "yes": "تخطي التأكيد"
-    },
-    "wait": {
-      "timeout": "المهلة بالمللي ثانية"
-    },
-    "output": {
-      "out": "حفظ المخرجات في مسار"
-    },
-    "errors": {
-      "out": "حفظ الأخطاء في مسار"
-    }
   },
   "translator": {
     "description": "ترجمة نصوص الطلبات بين تنسيقات LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "الوصول إلى مواصفات OmniRoute OpenAPI واختبارها",
+    "description": "الوصول إلى مواصفات 67router OpenAPI واختبارها",
     "dump": {
       "description": "تفريغ مواصفات OpenAPI إلى stdout أو ملف",
       "format": "تنسيق الإخراج: yaml|json (الافتراضي: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "تفعيل التركيبة الأعلى تصنيفًا"
     }
   },
-  "oneproxy": {
-    "description": "إدارة مجموعة المصادر العليا في OneProxy",
-    "stats": {
-      "provider": "التصفية حسب المزوّد",
-      "period": "الفترة الزمنية (الافتراضية: 24h)"
-    },
-    "fetch": {
-      "description": "جلب الوكلاء من المجموعة",
-      "count": "عدد الوكلاء المراد جلبهم (الافتراضي: 1)",
-      "type": "نوع الوكيل: http|socks5 (الافتراضي: http)"
-    },
-    "rotate": {
-      "description": "فرض تدوير الوكيل",
-      "provider": "المزوّد المراد إجراء التدوير له",
-      "connectionId": "معرّف الاتصال المحدد المراد تدويره"
-    },
-    "config": {
-      "description": "عرض إعدادات OneProxy أو تحديثها",
-      "enabled": "تمكين تجمّع الوكلاء (true|false)",
-      "poolSize": "حجم التجمّع",
-      "providerSource": "عنوان URL لمزوّد الوكيل",
-      "rotationPolicy": "سياسة التدوير: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "عرض تجمّع الوكلاء الحالي مع المقاييس"
-    }
-  },
   "open": {
-    "description": "فتح صفحة محددة من لوحة معلومات OmniRoute في المتصفح",
+    "description": "فتح صفحة محددة من لوحة معلومات 67router في المتصفح",
     "url": "طباعة عنوان URL فقط، دون فتح المتصفح"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "مزامنة الإعدادات بين مثيلات OmniRoute",
+    "description": "مزامنة الإعدادات بين مثيلات 67router",
     "push": {
       "description": "دفع الإعدادات إلى السحابة أو إلى مثيل بعيد"
     },
@@ -1228,7 +874,7 @@
     "filter": "التصفية حسب المستوى (error,warn,info) — مفصولة بفواصل",
     "lines": "عدد الأسطر المطلوب جلبها",
     "timeout": "مهلة الاتصال بالمللي ثانية",
-    "baseUrl": "عنوان URL الأساسي لواجهة OmniRoute API",
+    "baseUrl": "عنوان URL الأساسي لواجهة 67router API",
     "requestId": "التصفية حسب معرّف الطلب",
     "apiKey": "التصفية حسب مفتاح API",
     "combo": "التصفية حسب اسم التركيبة",
@@ -1244,10 +890,10 @@
     "description": "التحكم في أيقونة علبة النظام",
     "show": "إظهار أيقونة علبة النظام (إذا كان الخادم يعمل مع --tray)",
     "hide": "إخفاء أيقونة علبة النظام",
-    "quit": "إنهاء OmniRoute عبر علبة النظام"
+    "quit": "إنهاء 67router عبر علبة النظام"
   },
   "autostart": {
-    "description": "إدارة التشغيل التلقائي لـ OmniRoute عند الإقلاع (Linux: خدمة مستخدم systemd)",
+    "description": "إدارة التشغيل التلقائي لـ 67router عند الإقلاع (Linux: خدمة مستخدم systemd)",
     "enable": "تمكين التشغيل التلقائي عند الإقلاع",
     "disable": "تعطيل التشغيل التلقائي عند الإقلاع",
     "toggle": "تبديل حالة التشغيل التلقائي عند الإقلاع",
@@ -1268,30 +914,20 @@
     "system": "موجّه النظام",
     "resume": "استئناف جلسة محفوظة حسب الاسم"
   },
-  "plugin": {
-    "description": "إدارة إضافات CLI ‏(omniroute-cmd-*)",
-    "list": "عرض الإضافات المثبتة",
-    "install": "تثبيت إضافة من npm أو من مسار محلي",
-    "remove": "إزالة إضافة مثبتة",
-    "info": "عرض تفاصيل إضافة مثبتة",
-    "search": "البحث في سجل npm عن الإضافات المتاحة",
-    "update": "تحديث الإضافات المثبتة",
-    "scaffold": "إنشاء هيكل أولي لإضافة جديدة"
-  },
   "launch": {
-    "description": "تشغيل Claude Code موجّهًا إلى OmniRoute (محليًا أو عن بُعد، باستخدام --profile)",
+    "description": "تشغيل Claude Code موجّهًا إلى 67router (محليًا أو عن بُعد، باستخدام --profile)",
     "token": "الرمز المميز الذي يجب أن يرسله عميل Claude ‏(ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "يتعذر الوصول إلى OmniRoute على {port}. شغّله باستخدام 'omniroute serve'.",
+    "notRunning": "يتعذر الوصول إلى 67router على {port}. شغّله باستخدام 'omniroute serve'.",
     "notFound": "لم يتم العثور على واجهة CLI المسماة 'claude' في PATH."
   },
   "run": {
-    "description": "تشغيل هدف CLI مدعوم عبر OmniRoute"
+    "description": "تشغيل هدف CLI مدعوم عبر 67router"
   },
   "setupClaude": {
-    "description": "إنشاء ملفات تعريف Claude Code في ~/.claude/profiles من كتالوج نماذج OmniRoute"
+    "description": "إنشاء ملفات تعريف Claude Code في ~/.claude/profiles من كتالوج نماذج 67router"
   },
   "connect": {
-    "description": "الاتصال بخادم OmniRoute بعيد والدخول إلى الوضع البعيد"
+    "description": "الاتصال بخادم 67router بعيد والدخول إلى الوضع البعيد"
   },
   "tokens": {
     "description": "إدارة رموز وصول CLI محددة النطاق (الوضع البعيد)"
@@ -1300,10 +936,10 @@
     "description": "اختيار موفّر ونموذج من الخادم النشط وتهيئة CLI محلية مدعومة"
   },
   "launchCodex": {
-    "description": "تشغيل Codex CLI موجّهًا إلى OmniRoute (محليًا أو على VPS بعيد)"
+    "description": "تشغيل Codex CLI موجّهًا إلى 67router (محليًا أو على VPS بعيد)"
   },
   "setupCodex": {
-    "description": "إنشاء ملفات تعريف في ~/.codex من كتالوج نماذج OmniRoute المباشر"
+    "description": "إنشاء ملفات تعريف في ~/.codex من كتالوج نماذج 67router المباشر"
   },
   "packs": {
     "description": "إدارة حزم وقت التشغيل الاختيارية (ML / أتمتة المتصفح)",
@@ -1316,7 +952,7 @@
     "errUnknown": "حزمة غير معروفة: {name}",
     "errNoIndex": "لم يتم العثور على فهرس الحزم؛ مرّر --source <dir> الذي يحتوي على محتويات الحزمة (تتضمنه حزم سطح المكتب بجوار التطبيق)",
     "installed": "تم تثبيت الحزمة \"{name}\" والتحقق منها في {dir}",
-    "restartHint": "أعد تشغيل خادم OmniRoute (أو تطبيق سطح المكتب) ليتمكن وقت التشغيل من التعرّف على الحزمة",
+    "restartHint": "أعد تشغيل خادم 67router (أو تطبيق سطح المكتب) ليتمكن وقت التشغيل من التعرّف على الحزمة",
     "removed": "تمت إزالة الحزمة \"{name}\"",
     "notInstalled": "لم تكن الحزمة \"{name}\" مثبّتة",
     "verifyOk": "تم التحقق من جميع الحزم المثبّتة",

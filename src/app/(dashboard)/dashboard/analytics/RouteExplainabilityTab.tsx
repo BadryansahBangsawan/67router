@@ -266,7 +266,7 @@ function TargetTimeline({ targets }: { targets: ExplainTarget[] }) {
           className={cn(
             "rounded-lg border p-4",
             target.outcome === "selected"
-              ? "border-primary/30 bg-primary/5"
+              ? "border-primary bg-surface"
               : "border-border bg-surface-2"
           )}
         >
@@ -327,7 +327,7 @@ function WhyThisTargetCard({ replay }: { replay: DecisionReplay | undefined }) {
   return (
     <Card title={t("routeWhyTarget")} subtitle={t("routeWhyTargetSubtitle")} icon="psychology">
       <div className="flex flex-col gap-4">
-        <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+        <div className="rounded-lg border border-border bg-bg-subtle p-4">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div className="min-w-0">
               <div className="text-sm font-semibold text-text-main">
@@ -404,9 +404,7 @@ function WhyThisTargetCard({ replay }: { replay: DecisionReplay | undefined }) {
                 key={candidate.executionKey}
                 className={cn(
                   "rounded-lg border p-3",
-                  candidate.isRuntimeSelected
-                    ? "border-primary/30 bg-primary/5"
-                    : "border-border bg-bg"
+                  candidate.isRuntimeSelected ? "border-primary bg-surface" : "border-border bg-bg"
                 )}
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
@@ -744,7 +742,7 @@ export default function RouteExplainabilityTab({
                 <ul className="flex flex-col gap-2 text-sm text-text-muted">
                   {explanation.recommendations.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <Icon name="check_circle" size={16} className="mt-0.5 text-primary" />
+                      <Icon name="check_circle" size={16} className="mt-0.5 text-text-muted" />
                       <span>{item}</span>
                     </li>
                   ))}

@@ -4,7 +4,7 @@
 
 ---
 
-Is é AgentBridge seachfhreastalaí MITM (Man-in-the-Middle) OmniRoute a idircheapann trácht HTTPS ó ghníomhairí AI in IDEanna agus a athródálann é trí inneall ródaithe aontaithe OmniRoute. Tacaíonn sé le **10 ngníomhaire IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, agus Trae (faoi fhiosrú) — rud a fhágann gurb é OmniRoute an seachfhreastalaí MITM don réimse is leithne cúntóirí códaithe AI ar an margadh.
+Is é AgentBridge seachfhreastalaí MITM (Man-in-the-Middle) 67router a idircheapann trácht HTTPS ó ghníomhairí AI in IDEanna agus a athródálann é trí inneall ródaithe aontaithe 67router. Tacaíonn sé le **10 ngníomhaire IDE** — Antigravity, Kiro, GitHub Copilot, GHE Copilot, OpenAI Codex, Cursor, Zed, Claude Code, Open Code, agus Trae (faoi fhiosrú) — rud a fhágann gurb é 67router an seachfhreastalaí MITM don réimse is leithne cúntóirí códaithe AI ar an margadh.
 
 **Suíomh an deais:** `/dashboard/tools/agent-bridge`
 **Grúpa sa bharra taoibh:** Uirlisí (i ndiaidh Cloud Agents)
@@ -16,34 +16,34 @@ Is é AgentBridge seachfhreastalaí MITM (Man-in-the-Middle) OmniRoute a idirche
 
 ### Cad é AgentBridge?
 
-Nuair a dhéanann gníomhaire IDE (m.sh., GitHub Copilot, Cursor, Claude Code) glao API, nascann sé go díreach leis an soláthraí AI uas-abhann (OpenAI, Anthropic, srl.). Idircheapann AgentBridge an nasc sin go trédhearcach ag leibhéal TLS — gan aon athrú ar chumraíocht an ghníomhaire a éileamh — agus athscríobhann sé an t-iarratas trí OmniRoute.
+Nuair a dhéanann gníomhaire IDE (m.sh., GitHub Copilot, Cursor, Claude Code) glao API, nascann sé go díreach leis an soláthraí AI uas-abhann (OpenAI, Anthropic, srl.). Idircheapann AgentBridge an nasc sin go trédhearcach ag leibhéal TLS — gan aon athrú ar chumraíocht an ghníomhaire a éileamh — agus athscríobhann sé an t-iarratas trí 67router.
 
 Ciallaíonn sé seo gur féidir leat:
 
-- **Aon ghníomhaire a athródú chuig aon soláthraí**: Copilot ag caint le OpenAI? Atreoraigh é chuig Anthropic Claude, Gemini, nó aon cheann de 375 soláthraí OmniRoute.
+- **Aon ghníomhaire a athródú chuig aon soláthraí**: Copilot ag caint le OpenAI? Atreoraigh é chuig Anthropic Claude, Gemini, nó aon cheann de 375 soláthraí 67router.
 - **Mapálacha samhlacha a chur i bhfeidhm**: `gemini-3-flash` → `claude-sonnet-4.7` go trédhearcach ag leibhéal an láimhseálaí.
 - **Gach trácht gníomhaire a bhreathnú**: foilsítear gach iarratas idircheaptha chuig an [Cigire Tráchta](./TRAFFIC_INSPECTOR.md).
-- **Athléimneacht OmniRoute a chur i bhfeidhm**: oibríonn ródú teaglama, briseoirí ciorcaid, cúláiseanna, agus rianú costais do thrácht gníomhaire IDE chomh maith.
+- **Athléimneacht 67router a chur i bhfeidhm**: oibríonn ródú teaglama, briseoirí ciorcaid, cúláiseanna, agus rianú costais do thrácht gníomhaire IDE chomh maith.
 
 ### Suíomh i gcomparáid leis an margadh
 
-| Gné                   | 9router | anti-api | llm-interceptor | **OmniRoute AgentBridge** |
-| --------------------- | :-----: | :------: | :-------------: | :-----------------------: |
-| Antigravity           |    ✓    |    ✓     |        —        |             ✓             |
-| GitHub Copilot        |    ✓    |    ✓     |        —        |             ✓             |
-| Kiro (AWS)            |    ✓    |    ✓     |        —        |             ✓             |
-| OpenAI Codex          |    —    |    ✓     |        —        |             ✓             |
-| Cursor IDE            |    ✓    |    ✓     |        —        |             ✓             |
-| Zed Industries        |    —    |    ✓     |        —        |             ✓             |
-| Claude Code           |    —    |    —     |        ✓        |             ✓             |
-| Open Code             |    —    |    —     |        ✓        |             ✓             |
-| Trae                  |    —    |    —     |        —        |       🔍 Á imscrúdú       |
-| Comhéadan Painéil     |    ✓    |    ✗     |        ✗        |             ✓             |
-| Cigire Tráchta        |    ✗    |    ✗     |        ✓        |             ✓             |
-| Ródú OmniRoute        |    ✗    |    ✗     |        ✗        |             ✓             |
-| UI mapála samhlacha   |    ✗    |    ✗     |        ✗        |             ✓             |
-| Liosta seachána       |    ✗    |    ✗     |        ✓        |             ✓             |
-| Teastas CA uas-abhann |    ✗    |    ✗     |        ✓        |             ✓             |
+| Gné                   | 9router | anti-api | llm-interceptor | **67router AgentBridge** |
+| --------------------- | :-----: | :------: | :-------------: | :----------------------: |
+| Antigravity           |    ✓    |    ✓     |        —        |            ✓             |
+| GitHub Copilot        |    ✓    |    ✓     |        —        |            ✓             |
+| Kiro (AWS)            |    ✓    |    ✓     |        —        |            ✓             |
+| OpenAI Codex          |    —    |    ✓     |        —        |            ✓             |
+| Cursor IDE            |    ✓    |    ✓     |        —        |            ✓             |
+| Zed Industries        |    —    |    ✓     |        —        |            ✓             |
+| Claude Code           |    —    |    —     |        ✓        |            ✓             |
+| Open Code             |    —    |    —     |        ✓        |            ✓             |
+| Trae                  |    —    |    —     |        —        |      🔍 Á imscrúdú       |
+| Comhéadan Painéil     |    ✓    |    ✗     |        ✗        |            ✓             |
+| Cigire Tráchta        |    ✗    |    ✗     |        ✓        |            ✓             |
+| Ródú 67router         |    ✗    |    ✗     |        ✗        |            ✓             |
+| UI mapála samhlacha   |    ✗    |    ✗     |        ✗        |            ✓             |
+| Liosta seachána       |    ✗    |    ✗     |        ✓        |            ✓             |
+| Teastas CA uas-abhann |    ✗    |    ✗     |        ✓        |            ✓             |
 
 ---
 
@@ -62,7 +62,7 @@ src/mitm/server.cjs  (port 443, próiseas mac CJS)
     │  réitíonn sé an sprioc de réir SNI an cheanntáisc Host
     │  gineann sé teastas TLS in aghaidh an SNI sínithe ag CA AgentBridge
     ├── Meaitseáil sa liosta seachanta? → TCP passthrough (gan díchriptiú)
-    ├── Meaitseáil sprice? → fetch → ródaire OmniRoute (port 20128)
+    ├── Meaitseáil sprice? → fetch → ródaire 67router (port 20128)
     │       └── handler.intercept() — TypeScript
     │               ├── maskSecrets() ar chorp/ceanntásca an iarratais
     │               ├── TrafficBuffer.push() — foilsíonn sé chuig an gCigire Tráchta
@@ -205,7 +205,7 @@ Ní mór don OS muinín a bheith aige i dteastas CA AgentBridge sula nglacfaidh 
 **Linux (NSS — Chrome/Firefox):**
 
 ```bash
-certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute AgentBridge" -t CT,, -i ~/.omniroute/mitm/ca.crt
+certutil -A -d sql:$HOME/.pki/nssdb -n "OmniRoute MITM Root CA" -t CT,, -i ~/.omniroute/mitm/ca.crt
 ```
 
 **macOS (Keychain):**
@@ -261,10 +261,10 @@ Sampla d’iontrálacha `/etc/hosts` do GitHub Copilot:
 
 Úsáid an Tábla Mapála Samhlacha i ngach cárta gníomhaire chun mapálacha foinse → sprioc a shainiú:
 
-| Samhail foinseach (dúchasach don ghníomhaire) | Samhail sprice (OmniRoute) |
-| --------------------------------------------- | -------------------------- |
-| `gpt-4o`                                      | `claude-sonnet-4.7`        |
-| `*` (saoróg)                                  | `claude-haiku-4.7`         |
+| Samhail foinseach (dúchasach don ghníomhaire) | Samhail sprice (67router) |
+| --------------------------------------------- | ------------------------- |
+| `gpt-4o`                                      | `claude-sonnet-4.7`       |
+| `*` (saoróg)                                  | `claude-haiku-4.7`        |
 
 Mapálann an tsaoróg `*` aon samhail neamhaitheanta chuig an sprioc shonraithe. Coinnítear í sa tábla `agent_bridge_mappings`.
 
@@ -277,7 +277,7 @@ Mapálann an tsaoróg `*` aon samhail neamhaitheanta chuig an sprioc shonraithe.
 
 ### 3.5 Fógra riosca
 
-Idircheapann AgentBridge dintiúir (comharthaí OAuth, eochracha API) a úsáideann an IDE chun fíordheimhniú a dhéanamh le soláthraithe réamhtheachtacha. Déantar iad seo a **mhascadh roimh logáil** (féach §2.7), ach tá siad infheicthe ag ciseal MITM OmniRoute. Nuair a ghníomhachtaítear gach gníomhaire den chéad uair, taispeántar módúil fógra riosca is féidir a dhúnadh.
+Idircheapann AgentBridge dintiúir (comharthaí OAuth, eochracha API) a úsáideann an IDE chun fíordheimhniú a dhéanamh le soláthraithe réamhtheachtacha. Déantar iad seo a **mhascadh roimh logáil** (féach §2.7), ach tá siad infheicthe ag ciseal MITM 67router. Nuair a ghníomhachtaítear gach gníomhaire den chéad uair, taispeántar módúil fógra riosca is féidir a dhúnadh.
 
 ### 3.6 Cothabháil & Diagnóisic
 
@@ -397,7 +397,7 @@ export async function detectAgent(agentId: AgentId): Promise<DetectionResult>;
 
 ### Liosta seachanta d'óstaigh íogaire
 
-Cinntíonn an liosta seachanta nach ndéantar trácht ó institiúidí airgeadais, ó sholáthraithe OAuth/SSO ná ó óstaigh íogaire eile a **dhíchriptiú choíche**. Gabhann a dtrácht TLS tríd mar thollán trédhearcach TCP — ní fheiceann OmniRoute an gnáth-théacs choíche.
+Cinntíonn an liosta seachanta nach ndéantar trácht ó institiúidí airgeadais, ó sholáthraithe OAuth/SSO ná ó óstaigh íogaire eile a **dhíchriptiú choíche**. Gabhann a dtrácht TLS tríd mar thollán trédhearcach TCP — ní fheiceann 67router an gnáth-théacs choíche.
 
 Áirítear iad seo a leanas leis na patrúin seachanta réamhshocraithe:
 
@@ -448,7 +448,7 @@ Mar rogha eile, cumraigh port neamhphribhléideach i socruithe AgentBridge agus 
 
 Má thaispeánann an IDE earráidí TLS tar éis AgentBridge a thosú:
 
-1. Deimhnigh gur suiteáladh an teastas: `security find-certificate -c "OmniRoute AgentBridge"` (macOS) nó `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
+1. Deimhnigh gur suiteáladh an teastas: `security find-certificate -c "OmniRoute MITM CA"` (macOS) nó `certutil -L -d sql:$HOME/.pki/nssdb` (Linux/NSS)
 2. Coinníonn roinnt aipeanna a stór muiníne féin (Firefox, Chrome ar Linux). Rith "Trust Cert" arís agus seiceáil an stór teastas a bhaineann go sonrach le NSS/Firefox.
 3. Atosaigh an IDE tar éis muinín a chur sa teastas — úsáideann seisiúin TLS atá ar bun cheana féin an seanstádas muiníne.
 
@@ -499,7 +499,7 @@ ipconfig /flushdns
 Má dhéanann AgentBridge idircheapadh ach má theipeann ar gach iarratas:
 
 1. Deimhnigh go bhfuil soláthraí amháin ar a laghad ceangailte ag `/dashboard/providers`
-2. Seiceáil logaí freastalaí OmniRoute: `APP_LOG_LEVEL=debug` in `.env`
+2. Seiceáil logaí freastalaí 67router: `APP_LOG_LEVEL=debug` in `.env`
 3. Deimhnigh go ndíríonn `OMNIROUTE_BASE_URL` ar chríochphointe ceart an ródaire (réamhshocrú: `http://127.0.0.1:20128`)
 
 ---

@@ -7,7 +7,7 @@
 > **Isi mmalite nke eziokwu:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Emelitere ikpeazụ:** 2026-06-28 — v3.8.40
 
-OmniRoute nwere oyi akwa gamification nke na-ebute nchekwa mpaghara ụzọ nke mbụ, nke na-enye ndị ọrụ ụgwọ maka
+67router nwere oyi akwa gamification nke na-ebute nchekwa mpaghara ụzọ nke mbụ, nke na-enye ndị ọrụ ụgwọ maka
 iji ikpo okwu ahụ emekọrịta ihe — ime arịrịọ, ịgbanwe ndị na-eweta ọrụ, imepụta
 ngwakọta, ịkekọrịta token, na itinye aka na obodo. Steeti niile dị na
 SQLite; ijikọ ya na sava obodo bụ nhọrọ nke onye ọrụ ma dabere n'ịkwaga data gaa na sava ndị ahụ.
@@ -36,7 +36,7 @@ nzaghachi LLM.
 | Bọọdụ ndị ndu       | Oke zuru ụwa ọnụ, kwa izu, kwa ọnwa, ịkekọrịta token, na ntinye aka                                 |
 | Ịkekọrịta Token     | Nyefee kredit n'etiti ndị ọrụ site na ndekọ nwere ntinye abụọ                                       |
 | Ịkpọbata & Ịgbapụta | Koodu ntụaka nwere nchekwa e ji SHA-256 mee hash                                                    |
-| Sava Obodo          | Jikọọ na instance OmniRoute ndị dị n'èzí                                                            |
+| Sava Obodo          | Jikọọ na instance 67router ndị dị n'èzí                                                             |
 | Mgbochi Aghụghọ     | Ịgbakọ akara n'akụkụ sava, ịmachibido ugboro arịrịọ, nchọpụta ihe na-adịghị adịkarị site na z-score |
 
 ### Ụkpụrụ Nhazi
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tebụl Ebe Nchekwa Data
 
-Tebụl niile dị na ebe nchekwa data SQLite bụ isi nke OmniRoute, nke migration
+Tebụl niile dị na ebe nchekwa data SQLite bụ isi nke 67router, nke migration
 `060_create_gamification.sql` mepụtara. A na-eketa ndekọ WAL site na singleton
 `getDbInstance()` dị na `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Tebụl niile dị na ebe nchekwa data SQLite bụ isi nke OmniRoute, nke migrat
 
 ### Modul Ngalaba: `src/lib/db/gamification.ts`
 
-Ọ na-agbaso usoro ọkọlọtọ OmniRoute — ọ na-ebubata `getDbInstance()` site na
+Ọ na-agbaso usoro ọkọlọtọ 67router — ọ na-ebubata `getDbInstance()` site na
 `core.ts`, ma na-ebupụ ọrụ CRUD nwere ụdị akọwapụtara. Enweghị SQL a na-ede ozugbo n'ime ndị njikwa route.
 
 Ọrụ ndị bụ isi:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Omume             | XP  | Nkọwa                                                                            |
 | ----------------- | --- | -------------------------------------------------------------------------------- |
-| `request`         | 1   | Maka arịrịọ API ọ bụla e zigara site na OmniRoute                                |
+| `request`         | 1   | Maka arịrịọ API ọ bụla e zigara site na 67router                                 |
 | `provider_switch` | 5   | Ịgbanwe gaa na provider ọzọ                                                      |
 | `model_switch`    | 3   | Ịgbanwe gaa na model ọzọ                                                         |
 | `combo_create`    | 10  | Ịmepụta combo ọhụrụ                                                              |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (pụrụ iche, e tinyere index) |
 | `token_hash` | SHA-256(raw_token)                      |
 
-A na-eweghachiri onye ọrụ raw token naanị otu ugboro kpọmkwem n'oge e kere ya. OmniRoute
+A na-eweghachiri onye ọrụ raw token naanị otu ugboro kpọmkwem n'oge e kere ya. 67router
 anaghị echekwa ma ọ bụ gosi ya ọzọ — ọ bụ naanị hash ka na-adịgide.
 
 ### Mgbochi Ịkpọ Onwe Onye Òkù
@@ -715,7 +715,7 @@ Ndị admin nwere ike ịjụ ndekọ nyocha zuru ezu site na
 
 ## Ụzọ API
 
-Ụzọ niile na-agbaso ụkpụrụ OmniRoute ọkọlọtọ:
+Ụzọ niile na-agbaso ụkpụrụ 67router ọkọlọtọ:
 
 ```
 Ụzọ → Nnyocha mbido CORS → Nnyocha ahụ arịrịọ (Zod) → Nyocha ikike (extractApiKey)

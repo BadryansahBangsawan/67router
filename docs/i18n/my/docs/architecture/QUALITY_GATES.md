@@ -4,7 +4,7 @@
 
 ---
 
-ဤစာတမ်းသည် OmniRoute ရှိ CI အရည်အသွေးဂိတ်အားလုံးအတွက် အတည်ပြုကိုးကားရမည့် မူရင်းရင်းမြစ်ဖြစ်သည်။
+ဤစာတမ်းသည် 67router ရှိ CI အရည်အသွေးဂိတ်အားလုံးအတွက် အတည်ပြုကိုးကားရမည့် မူရင်းရင်းမြစ်ဖြစ်သည်။
 ၎င်းတွင် ဂိတ်တစ်ခုချင်းစီ၊ စစ်ဆေးအတည်ပြုသည့်အရာ၊ လုပ်ဆောင်သည့် CI job၊
 ratchet baseline သို့မဟုတ် pass/fail policy ကို အသုံးပြုခြင်းရှိမရှိနှင့် build ကို ပိတ်ဆို့ခြင်းရှိမရှိ သို့မဟုတ် အကြံပြုချက်အဖြစ်သာ ရှိမရှိတို့ကို ဖော်ပြထားသည်။
 
@@ -218,14 +218,14 @@ pull request များတွင်သာ run လုပ်သည်။
 
 ဤအရာများကို cron schedule (နှင့် `workflow_dispatch`) အတိုင်း run လုပ်ပြီး၊ PR များပေါ်တွင် ဘယ်သောအခါမျှ run မလုပ်ပါ။ အားလုံးသည် အကြံပေးအဆင့်ဖြစ်သည်။
 
-| Workflow               | Validates                                                                                                                                                                                                    | Blocking         |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
-| `nightly-property`     | random seed နှင့် run count မြင့်မားစွာဖြင့် fast-check property test များ                                                                                                                                   | **အကြံပေးအဆင့်** |
-| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                                                                        | **အကြံပေးအဆင့်** |
-| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probe များ (provider secret မပါရှိပါက ကျွတ်သွားမည်)                                                                                                           | **အကြံပေးအဆင့်** |
-| `nightly-schemathesis` | `docs/openapi.yaml` ကို အသုံးပြု၍ အသက်ဝင်နေသော (live) OmniRoute တစ်ခုအပေါ် OpenAPI contract fuzzing (schemathesis) — spec ချိုးဖောက်မှုများ / ကိုင်တွယ်ဖြေရှင်း၍မရသော 500 များကို ပေါ်လွင်စေသည် (Fase 8 B.4) | **အကြံပေးအဆင့်** |
-| `nightly-mutation`     | fast unit lane ပေါ်ရှိ Stryker mutation-testing score — ရှင်သန်ကျန်ရှိနေသော mutant များသည် အားနည်းသော assert များကို ဖော်ထုတ်ပြသည်                                                                           | **အကြံပေးအဆင့်** |
-| `nightly-compat`       | ပံ့ပိုးထားသော `engines.node` range များအလိုက် Node engine compatibility matrix                                                                                                                               | **အကြံပေးအဆင့်** |
+| Workflow               | Validates                                                                                                                                                                                                   | Blocking         |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `nightly-property`     | random seed နှင့် run count မြင့်မားစွာဖြင့် fast-check property test များ                                                                                                                                  | **အကြံပေးအဆင့်** |
+| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                                                                       | **အကြံပေးအဆင့်** |
+| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probe များ (provider secret မပါရှိပါက ကျွတ်သွားမည်)                                                                                                          | **အကြံပေးအဆင့်** |
+| `nightly-schemathesis` | `docs/openapi.yaml` ကို အသုံးပြု၍ အသက်ဝင်နေသော (live) 67router တစ်ခုအပေါ် OpenAPI contract fuzzing (schemathesis) — spec ချိုးဖောက်မှုများ / ကိုင်တွယ်ဖြေရှင်း၍မရသော 500 များကို ပေါ်လွင်စေသည် (Fase 8 B.4) | **အကြံပေးအဆင့်** |
+| `nightly-mutation`     | fast unit lane ပေါ်ရှိ Stryker mutation-testing score — ရှင်သန်ကျန်ရှိနေသော mutant များသည် အားနည်းသော assert များကို ဖော်ထုတ်ပြသည်                                                                          | **အကြံပေးအဆင့်** |
+| `nightly-compat`       | ပံ့ပိုးထားသော `engines.node` range များအလိုက် Node engine compatibility matrix                                                                                                                              | **အကြံပေးအဆင့်** |
 
 Performance baseline များ (heap, TTFB, build time) ကို gate လုပ်ခြင်း မဟုတ်ဘဲ မှတ်တမ်းတင်ထားခြင်း ဖြစ်သည်— [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`) ကို ကြည့်ပါ။
 
@@ -506,7 +506,7 @@ job သည် `release/*` သို့ မည်သည့်အခါမျှ p
 
 ## Agent ကိရိယာများ- LSP-in-the-loop (ရွေးချယ်အသုံးပြုနိုင်)
 
-CI gate များအပြင် OmniRoute တွင် **ရွေးချယ်အသုံးပြုနိုင်သော** `agent-lsp` scaffold
+CI gate များအပြင် 67router တွင် **ရွေးချယ်အသုံးပြုနိုင်သော** `agent-lsp` scaffold
 (project အဆင့် `.mcp.json`၊ Fase 7 Task 15) ပါရှိသည်။ coding agent များအတွက် TypeScript language server ကို ဖော်ထုတ်ပေးရန် `.mcp.json`
 ကို ဖန်တီးပါ။ ထိုသို့ဖြင့် ၎င်းတို့သည် code မရေးမီ symbol များ /
 diagnostic များကို ဖြေရှင်းနိုင်မည်ဖြစ်သည် — ၎င်းသည် မရှိသည့် symbol များကို ဖန်တီးမိခြင်းကြောင့် ဖြစ်သော error များကို အရင်းအမြစ်မှ လျှော့ချပေးသည့်

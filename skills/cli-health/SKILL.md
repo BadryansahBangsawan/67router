@@ -75,7 +75,7 @@ omniroute health watch
 
 ### `status`
 
-Show OmniRoute status dashboard
+Show 67router status dashboard
 
 **Flags:**
 

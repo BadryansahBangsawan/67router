@@ -4,6 +4,7 @@ import Icon from "@/shared/components/Icon";
 
 import { useEffect, useId, useMemo, useState } from "react";
 import Link from "next/link";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
@@ -123,15 +124,16 @@ function StepPill({ active, done, label }: { active: boolean; done: boolean; lab
     <div
       className={`flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium ${
         active
-          ? "border-primary/50 bg-primary/10 text-primary"
+          ? "border-border-strong bg-surface text-text-main"
           : done
-            ? "border-success/30 bg-success/10 text-success"
+            ? "border-border bg-surface text-text-main"
             : "border-border bg-bg-subtle text-text-muted"
       }`}
     >
       <Icon
         name={done ? "check" : active ? "radio_button_checked" : "radio_button_unchecked"}
-        size={16}
+        size={14}
+        className={done ? "text-success" : undefined}
       />
       {label}
     </div>
@@ -161,7 +163,7 @@ function ProviderOptionCard({
       onClick={onSelect}
       aria-pressed={selected}
       className={`h-full w-full flex-col items-stretch justify-start gap-3 whitespace-normal rounded-xl p-4 text-left font-normal ${
-        selected ? "border-primary/60 bg-primary/10" : "hover:border-primary/40"
+        selected ? "border-text-main bg-bg-subtle" : "hover:border-border-strong"
       }`}
     >
       <div className="flex items-start justify-between gap-3">
@@ -222,7 +224,7 @@ function ResultSummary({
                 ? "bg-success/10 text-success"
                 : failed
                   ? "bg-error/10 text-error"
-                  : "bg-primary/10 text-primary"
+                  : "border border-border bg-bg-subtle text-text-main"
             }`}
           >
             <Icon name={valid ? "check_circle" : failed ? "error" : "dns"} size={28} />
@@ -293,12 +295,6 @@ function ResultSummary({
             className="inline-flex items-center justify-center rounded-lg border border-border bg-bg-subtle px-4 py-2 text-sm font-medium text-text-main transition-colors hover:bg-bg-card"
           >
             {providerText(t, "backToProviders", "Back to providers")}
-          </Link>
-          <Link
-            href="/dashboard/playground"
-            className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-text-muted transition-colors hover:bg-bg-subtle hover:text-text-main"
-          >
-            {providerText(t, "onboardingTryInPlayground", "Try in playground")}
           </Link>
         </div>
       </div>
@@ -532,28 +528,26 @@ export default function ProviderOnboardingWizard() {
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-6">
-      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-        <div>
+      <PageHeader
+        breadcrumbs={
           <Link
             href="/dashboard/providers"
-            className="text-sm text-text-muted hover:text-text-main"
+            className="text-[13px] text-text-muted hover:text-text-main"
           >
             ← {text("backToProviders", "Back to providers")}
           </Link>
-          <h1 className="mt-2 text-3xl font-bold text-text-main">
-            {text("onboardingWizard", "Provider Onboarding Wizard")}
-          </h1>
-          <p className="mt-2 max-w-2xl text-sm text-text-muted">
-            {text(
-              "onboardingWizardDescription",
-              "Connect API-key, custom compatible, and OAuth providers with validation, persistence, and an immediate connection test."
-            )}
-          </p>
-        </div>
-        <Button variant="ghost" onClick={() => router.push("/dashboard/providers")}>
-          {text("close", "Close")}
-        </Button>
-      </div>
+        }
+        title={text("onboardingWizard", "Provider Onboarding Wizard")}
+        description={text(
+          "onboardingWizardDescription",
+          "Connect API-key, custom compatible, and OAuth providers with validation, persistence, and an immediate connection test."
+        )}
+        actions={
+          <Button variant="secondary" size="sm" onClick={() => router.push("/dashboard/providers")}>
+            {text("close", "Close")}
+          </Button>
+        }
+      />
 
       <div className="flex flex-wrap gap-2">
         <StepPill
@@ -579,7 +573,7 @@ export default function ProviderOnboardingWizard() {
       </div>
 
       {status && (
-        <div className="rounded-lg border border-primary/25 bg-primary/10 p-3 text-sm text-primary">
+        <div className="rounded-lg border border-border bg-bg-subtle p-3 text-[13px] text-text-main">
           {status}
         </div>
       )}
@@ -624,7 +618,7 @@ export default function ProviderOnboardingWizard() {
                 key={item.id}
                 variant="outline"
                 onClick={() => resetProviderSelection(item.id)}
-                className="h-auto w-full flex-col items-start justify-start gap-0 whitespace-normal rounded-xl p-5 text-left font-normal hover:border-primary/50"
+                className="h-auto w-full flex-col items-start justify-start gap-0 whitespace-normal rounded-xl p-5 text-left font-normal hover:border-border-strong"
               >
                 {/* Wrapped: the kit sizes direct svg children of .ci-button to the icon token. */}
                 <span aria-hidden className="text-primary">
@@ -899,7 +893,7 @@ export default function ProviderOnboardingWizard() {
             <div className="rounded-lg border border-border bg-bg-subtle p-4 text-sm text-text-muted">
               {text(
                 "onboardingOAuthFlowDescription",
-                "OmniRoute will open the existing OAuth flow for this provider. After login, the wizard reloads the saved connection and runs the same connection test as the provider page."
+                "67router will open the existing OAuth flow for this provider. After login, the wizard reloads the saved connection and runs the same connection test as the provider page."
               )}
             </div>
             <div className="flex flex-wrap gap-2">

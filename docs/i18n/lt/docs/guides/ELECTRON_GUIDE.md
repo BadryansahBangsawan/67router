@@ -7,7 +7,7 @@
 > **Pirminis tiesos šaltinis:** `electron/` darbo sritis
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-OmniRoute pateikiama su kelių platformų darbalaukio programa (Windows / macOS / Linux), sukurta naudojant
+67router pateikiama su kelių platformų darbalaukio programa (Windows / macOS / Linux), sukurta naudojant
 **Electron 41** ir **electron-builder 26.10**. Darbalaukio programa paleidžia autonominį Next.js
 serverį kaip antrinį procesą, nukreipia į jį `BrowserWindow` ir prideda
 sistemos dėklą, automatinį naujinimą, IPC sąsają bei nulinės konfigūracijos paslapčių inicijavimą.
@@ -196,7 +196,7 @@ geriau naudoti `.env` failą, tada visiškai uždaryti programą (sistemos dėkl
 - `BrowserWindow`: 1400×900 (mažiausias dydis 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, lango valdikliai ties `{ x: 16, y: 16 }`.
 - Windows/Linux: įprasta sistemos antraštės juosta.
-- Uždarymo mygtukas sumažina programą į sistemos dėklą; dėklo meniu yra **Atverti OmniRoute**, **Atverti valdymo skydą** (išorinėje naršyklėje), pomeniu **Serverio prievadas**, **Ieškoti naujinimų**, **Uždaryti**.
+- Uždarymo mygtukas sumažina programą į sistemos dėklą; dėklo meniu yra **Atverti 67router**, **Atverti valdymo skydą** (išorinėje naršyklėje), pomeniu **Serverio prievadas**, **Ieškoti naujinimų**, **Uždaryti**.
 
 ## Turinio saugumo politika
 

@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **Mənbə:** `open-sse/services/thinkingBudget.ts`
 
-Düşünmə büdcəsi OmniRoute-un provayderlərə göndərilən sorğularda **müştərinin düşünmə/mühakimə parametrlərini yenidən yazıb-yazmamasını** idarə edir. Bu parametr sıxılmanı, marşrutlaşdırmanı və ya sorğu keşini aktivləşdirmir və ya deaktivləşdirmir.
+Düşünmə büdcəsi 67router-un provayderlərə göndərilən sorğularda **müştərinin düşünmə/mühakimə parametrlərini yenidən yazıb-yazmamasını** idarə edir. Bu parametr sıxılmanı, marşrutlaşdırmanı və ya sorğu keşini aktivləşdirmir və ya deaktivləşdirmir.
 
 ## Rejimlər
 
-| Rejim                        | OmniRoute nə edir                                                                                                            | Nə zaman istifadə edilməlidir                                                                                                                                                                         |
+| Rejim                        | 67router nə edir                                                                                                             | Nə zaman istifadə edilməlidir                                                                                                                                                                         |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (standart) | Müştəri sahələrini dəyişmədən saxlayır (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` və s.). | **Codex / Desktop / səy səviyyəsini və mühakimə xülasələrini idarə etməli olan istənilən müştəri.** Müştəri `reasoning.summary` tələb etdikdə görünən düşünmə panelləri üçün zəruridir.               |
 | **`auto`**                   | Yuxarı axına göndərməzdən əvvəl sorğu gövdəsindən bütün düşünmə/mühakimə sahələrini **silir**.                               | Yalnız **provayderin** standart dəyərləri özü təyin etməsini qəsdən istədiyiniz və müştərinin idarə etdiyi düşünməyə ehtiyacınız olmadığı hallarda. Bu, “düşünməni avtomatik göstər” demək **deyil**. |
@@ -38,7 +38,7 @@ Müştəri (məsələn, Codex Desktop) `reasoning: { effort: "ultra", summary: "
 | **Kombinə edilmiş marşrutlaşdırma / ehtiyat keçidlər** | Ayrıdır. Təsirlənmir.                                                                                                                                           |
 | **API açarı üzrə token limitləri / xərc büdcələri**    | Ayrıdır. Təsirlənmir.                                                                                                                                           |
 | **Mühakimənin təkrar oxudulması keşi**                 | Sərt provayderlər (DeepSeek, Kimi, Qwen-thinking, …) üçün çoxgedişli yenidən əlavəetmə mexanizmidir. Desktop-dakı “düşünməni göstər” funksiyası ilə eyni deyil. |
-| **`encrypted_content` şifrəsinin açılması**            | **Mümkün deyil.** OpenAI/Codex-in özəl mühakimə məlumat blokları qeyri-şəffafdır. OmniRoute onları heç vaxt deşifrə etmir (#7095 / #7176 / #7304).              |
+| **`encrypted_content` şifrəsinin açılması**            | **Mümkün deyil.** OpenAI/Codex-in özəl mühakimə məlumat blokları qeyri-şəffafdır. 67router onları heç vaxt deşifrə etmir (#7095 / #7176 / #7304).               |
 
 ## Görünən düşünmə mətni (Codex / Responses klientləri)
 
@@ -51,7 +51,7 @@ Klientin düşünmə mətnini göstərməsi üçün aşağıdakıların **hamıs
 Yalnız “şifrələnmiş gizli düşünmə” əldə edirsinizsə, səbəb bunlardan biridir:
 
 - rejim **`auto`** olub (klient sorğusu silinib) və ya
-- yuxarı axın xülasə mətni olmadan `encrypted_content` qaytarıb (provayder məhdudiyyəti; OmniRoute yalnız yer tutucu göstərə bilər, açıq mətni deyil).
+- yuxarı axın xülasə mətni olmadan `encrypted_content` qaytarıb (provayder məhdudiyyəti; 67router yalnız yer tutucu göstərə bilər, açıq mətni deyil).
 
 ## API nümunələri
 
@@ -71,7 +71,7 @@ Sxem (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adaptiv
 
 ### Saxlanma / yenidən başlatma
 
-Dəyər parametrlərin `thinkingBudget` açarı altında saxlanılır və proses başladıqda yüklənir (`hydrateThinkingBudgetConfig`). DB və ya bəzi qeyri-API yolları vasitəsilə dəyişiklik etdikdən sonra yaddaşdakı singleton-un diskdəki dəyərlə uyğunlaşması üçün **OmniRoute prosesini yenidən başladın**.
+Dəyər parametrlərin `thinkingBudget` açarı altında saxlanılır və proses başladıqda yüklənir (`hydrateThinkingBudgetConfig`). DB və ya bəzi qeyri-API yolları vasitəsilə dəyişiklik etdikdən sonra yaddaşdakı singleton-un diskdəki dəyərlə uyğunlaşması üçün **67router prosesini yenidən başladın**.
 
 ## Operator üçün yoxlama siyahısı
 

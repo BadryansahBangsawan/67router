@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector הוא מנפה תעבורת HTTPS מובנה של OmniRoute — כלי דמוי Charles Proxy / mitmweb / HTTP Toolkit שהוא **מודע ל-LLM** ו**מודע לסוכנים**. הוא נמצא ב-`/dashboard/tools/traffic-inspector` ומקבל תעבורה בזמן אמת מעד 5 מקורות לכידה בו-זמנית.
+Traffic Inspector הוא מנפה תעבורת HTTPS מובנה של 67router — כלי דמוי Charles Proxy / mitmweb / HTTP Toolkit שהוא **מודע ל-LLM** ו**מודע לסוכנים**. הוא נמצא ב-`/dashboard/tools/traffic-inspector` ומקבל תעבורה בזמן אמת מעד 5 מקורות לכידה בו-זמנית.
 
 **מיקום בלוח הבקרה:** `/dashboard/tools/traffic-inspector`
 **קבוצה בסרגל הצד:** כלים (אחרי AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector הוא מנפה תעבורת HTTPS מובנה של OmniRoute �
 
 ### מה מייחד את Traffic Inspector
 
-| תכונה                                                             | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| מבוסס-דפדפן                                                       |    ✓    |    ✗    |    ✗    |                ✓                |
-| קוד פתוח                                                          |    ✓    |    ✗    |  חלקי   |                ✓                |
-| **מודע לסוכנים** (יודע אם הבקשה מגיעה מ-Antigravity/Copilot/וכו׳) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **מודע ל-LLM** (מנתח מבנה OpenAI/Anthropic/Gemini, טוקנים ומודל)  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **מיפוי מודלים גלוי** (gemini-3-flash → claude-sonnet-4.7)        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **פיצול זמן השהיה של ה-proxy ושל השירות במעלה הזרם**              |  חלקי   |    ✗    |    ✗    |                ✓                |
-| **משולב עם הניתוב, מנגנון הגיבוי והעלות של OmniRoute**            |    ✗    |    ✗    |    ✗    |                ✓                |
-| **ניפוי proxy כלל-מערכתי** (כל יישום במחשב)                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **לכידת מארח מותאם אישית** (הפניית DNS לפי מארח)                  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **מצב משתנה הסביבה HTTP_PROXY**                                   |    ✓    |    ✓    |    ✓    |                ✓                |
-| **תצוגת שיחה** (בועות מרובות תורות, tool_use/tool_result)         |    ✗    |    ✗    |    ✗    |                ✓                |
-| **מיזוג זרמי SSE** (שחזור מאירועי delta)                          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **הקלטת הפעלה** (בעלת שם, ניתנת לייצוא כ-.har/.jsonl)             |    ✗    |    ✓    |    ✓    |                ✓                |
+| תכונה                                                             | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ----------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| מבוסס-דפדפן                                                       |    ✓    |    ✗    |    ✗    |               ✓                |
+| קוד פתוח                                                          |    ✓    |    ✗    |  חלקי   |               ✓                |
+| **מודע לסוכנים** (יודע אם הבקשה מגיעה מ-Antigravity/Copilot/וכו׳) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **מודע ל-LLM** (מנתח מבנה OpenAI/Anthropic/Gemini, טוקנים ומודל)  |    ✗    |    ✗    |    ✗    |               ✓                |
+| **מיפוי מודלים גלוי** (gemini-3-flash → claude-sonnet-4.7)        |    ✗    |    ✗    |    ✗    |               ✓                |
+| **פיצול זמן השהיה של ה-proxy ושל השירות במעלה הזרם**              |  חלקי   |    ✗    |    ✗    |               ✓                |
+| **משולב עם הניתוב, מנגנון הגיבוי והעלות של 67router**             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **ניפוי proxy כלל-מערכתי** (כל יישום במחשב)                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **לכידת מארח מותאם אישית** (הפניית DNS לפי מארח)                  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **מצב משתנה הסביבה HTTP_PROXY**                                   |    ✓    |    ✓    |    ✓    |               ✓                |
+| **תצוגת שיחה** (בועות מרובות תורות, tool_use/tool_result)         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **מיזוג זרמי SSE** (שחזור מאירועי delta)                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **הקלטת הפעלה** (בעלת שם, ניתנת לייצוא כ-.har/.jsonl)             |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### הארכיטקטורה בפסקה אחת
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true אם זו תגובת SSE
   mappedTo: string | null; // כותרת x-omniroute-mapped
-  costEstimateUsd: number | null; // עלות משוערת לפי התמחור של OmniRoute
+  costEstimateUsd: number | null; // עלות משוערת לפי התמחור של 67router
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### ה-proxy של המערכת לא הוחזר למצבו הקודם
 
-אם OmniRoute קורס בזמן שמצב ה-proxy הכלל-מערכתי פעיל:
+אם 67router קורס בזמן שמצב ה-proxy הכלל-מערכתי פעיל:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ netsh winhttp reset proxy
 | GET    | `/requests`                 | הצגת רשימת בקשות (ניתן לסינון: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | פרטים של בקשה יחידה                                                                    |
 | DELETE | `/requests`                 | ניקוי המאגר שבזיכרון                                                                   |
-| POST   | `/requests/{id}/replay`     | ביצוע מחדש של אותה בקשה דרך הנתב של OmniRoute                                          |
+| POST   | `/requests/{id}/replay`     | ביצוע מחדש של אותה בקשה דרך הנתב של 67router                                           |
 | PUT    | `/requests/{id}/annotation` | שמירה או עדכון של הערה לבקשה                                                           |
 
 ### WebSocket

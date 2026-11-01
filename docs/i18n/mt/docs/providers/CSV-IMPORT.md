@@ -25,7 +25,7 @@ L-ewwel linja li l-ewwel kolonna tagħha tkun il-kelma litterali `provider` (bi 
 Niżżel fajl inizjali mit-tieqa modali tal-importazzjoni (**Niżżel il-mudell CSV**). Eżempju:
 
 ```csv
-# Importazzjoni tal-fornituri ta’ OmniRoute (kolonni pożizzjonali)
+# Importazzjoni tal-fornituri ta’ 67router (kolonni pożizzjonali)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

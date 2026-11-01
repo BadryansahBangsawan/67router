@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Komplett guide för att konfigurera leverantörer, skapa kombinationer, integrera CLI-verktyg och distribuera OmniRoute.
+Komplett guide för att konfigurera leverantörer, skapa kombinationer, integrera CLI-verktyg och distribuera 67router.
 
 ---
 
@@ -24,7 +24,6 @@ Komplett guide för att konfigurera leverantörer, skapa kombinationer, integrer
 - [Kompetenssystem](#-skills-system)
 - [Minnessystem](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Molnagenter](#-cloud-agents)
 - [Programmatisk hantering](#-programmatic-management)
 - [Internt CLI](#-internal-cli)
 - [Skrivbordsapplikation (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@ Modeller:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Proffstips:** Använd Opus för komplexa uppgifter och Sonnet för snabbhet. OmniRoute spårar kvoten per modell!
+**Proffstips:** Använd Opus för komplexa uppgifter och Sonnet för snabbhet. 67router spårar kvoten per modell!
 
-Ingen webbläsare på OmniRoute-värden? Kör `claude setup-token` var som helst där Claude Code är inloggat och klistra in den ettåriga token på fliken **Setup Token**. Se [Claude Code med en setup-token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Ingen webbläsare på 67router-värden? Kör `claude setup-token` var som helst där Claude Code är inloggat och klistra in den ettåriga token på fliken **Setup Token**. Se [Claude Code med en setup-token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Claude- och Claude Code-kompatibla rutter bevarar tankeansträngningen `max` för Opus- och Sonnet-modeller. Haiku-modeller stöder inte ansträngningsnivån `max`, så OmniRoute nedgraderar den begäran till en hög tankebudget innan den skickas vidare uppströms.
+Claude- och Claude Code-kompatibla rutter bevarar tankeansträngningen `max` för Opus- och Sonnet-modeller. Haiku-modeller stöder inte ansträngningsnivån `max`, så 67router nedgraderar den begäran till en hög tankebudget innan den skickas vidare uppströms.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,16 +261,16 @@ Kostnad: anges för närvarande som $0; villkor och tillgänglighet kan ändras
 
 ### Cursor IDE
 
-**Använda Cursor som en OmniRoute-klient** (dirigera Cursor-chatten genom OmniRoute):
+**Använda Cursor som en 67router-klient** (dirigera Cursor-chatten genom 67router):
 
 ```
 Inställningar → Modeller → Avancerat:
   OpenAI API-bas-URL: http://localhost:20128/v1
-  OpenAI API-nyckel: [från OmniRoute-kontrollpanelen]
+  OpenAI API-nyckel: [från 67router-kontrollpanelen]
   Modell: cc/claude-opus-4-7
 ```
 
-**Använda OmniRoute som en Cursor-leverantör** (OmniRoute anropar Cursor uppströms): använd helst
+**Använda 67router som en Cursor-leverantör** (67router anropar Cursor uppströms): använd helst
 **Kontrollpanel → Leverantörer → Cursor → Logga in med Cursor**. För Docker, se
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -358,7 +357,7 @@ CLI:n läser automatiskt in `.env` från `~/.omniroute/.env` eller `./.env`.
 
 ### Systemfältsläge
 
-Starta OmniRoute i systemfältet:
+Starta 67router i systemfältet:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +374,7 @@ Använd systemfältsmenyn för följande åtgärder:
 - Öppna kontrollpanelen.
 - Öppna `/dashboard/logs`.
 - Ändra automatisk start.
-- Stoppa OmniRoute.
+- Stoppa 67router.
 
 Kombinera inte `--tray` med följande alternativ:
 
@@ -401,14 +400,14 @@ omniroute autostart disable
 
 ### Avinstallation
 
-När du inte längre behöver OmniRoute tillhandahåller vi två snabba skript för en ren borttagning:
+När du inte längre behöver 67router tillhandahåller vi två snabba skript för en ren borttagning:
 
 | Kommando                 | Åtgärd                                                                                       |
 | ------------------------ | -------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Tar bort systemappen men **behåller din databas och dina konfigurationer** i `~/.omniroute`. |
 | `npm run uninstall:full` | Tar bort appen OCH **raderar permanent alla konfigurationer, nycklar och databaser**.        |
 
-> Obs! För att köra dessa kommandon går du till OmniRoute-projektmappen (om du klonade den) och kör dem där. Om OmniRoute installerades globalt kan du alternativt köra `npm uninstall -g omniroute`.
+> Obs! För att köra dessa kommandon går du till 67router-projektmappen (om du klonade den) och kör dem där. Om 67router installerades globalt kan du alternativt köra `npm uninstall -g omniroute`.
 
 ### VPS-driftsättning
 
@@ -480,7 +479,7 @@ För värdintegrerat läge med CLI-binärfiler, se Docker-avsnittet i huvuddokum
 
 ### Void Linux (xbps-src)
 
-Void Linux-användare kan paketera och installera OmniRoute direkt med hjälp av ramverket `xbps-src` för korskompilering. Detta automatiserar den fristående Node.js-versionen tillsammans med de nödvändiga systemspecifika bindningarna för `better-sqlite3`.
+Void Linux-användare kan paketera och installera 67router direkt med hjälp av ramverket `xbps-src` för korskompilering. Detta automatiserar den fristående Node.js-versionen tillsammans med de nödvändiga systemspecifika bindningarna för `better-sqlite3`.
 
 <details>
 <summary><b>Visa xbps-src-mallen</b></summary>
@@ -660,7 +659,7 @@ Fullständig referens för miljövariabler finns i [README](../README.md).
 
 **Andra kompatibla leverantörer** (urval): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (via `aws-bedrock`), `azure-ai`, `openrouter` (vidarebefordrad katalog), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Var och en underhåller sin egen modellista i `providerRegistry.ts` och kan synkroniseras automatiskt när leverantören exponerar en `/models`-slutpunkt.
 
-**Anmärkning om modell-ID:n:** OmniRoute använder leverantörens egna ID:n (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Vissa ID:n innehåller punktavgränsade versioner eftersom det är så uppströms-API:et förväntar sig dem. Om en modell inte finns med ovan kör du `omniroute models --search <term>` eller anropar `GET /api/models/catalog` för att bekräfta tillgängligheten.
+**Anmärkning om modell-ID:n:** 67router använder leverantörens egna ID:n (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Vissa ID:n innehåller punktavgränsade versioner eftersom det är så uppströms-API:et förväntar sig dem. Om en modell inte finns med ovan kör du `omniroute models --search <term>` eller anropar `GET /api/models/catalog` för att bekräfta tillgängligheten.
 
 </details>
 
@@ -726,9 +725,9 @@ fel som nämner en inbyggd leverantör eller dess autentiseringsuppgifter bör d
 reserverat: noder som sparades innan den här regeln infördes finns fortfarande kvar, men deras prefix dirigerar till
 den inbyggda leverantören. Redigera noden och ge den ett nytt prefix.
 
-### Kedjekoppling av OmniRoute-noder
+### Kedjekoppling av 67router-noder
 
-En annan OmniRoute-gateway kan läggas till som en **anpassad OpenAI-kompatibel** leverantör. Använd
+En annan 67router-gateway kan läggas till som en **anpassad OpenAI-kompatibel** leverantör. Använd
 motpartens `/v1`-bas-URL och en särskild API-nyckel med minsta möjliga behörighet som har utfärdats av den motparten.
 
 För ömsesidiga kedjor eller kedjor med flera hopp aktiverar du det valfria loopskyddet på varje gateway:
@@ -754,7 +753,7 @@ hoppbudget med HTTP `508 Loop Detected`; vanliga uppströmsleverantörer får in
 Kedjekoppling av motparter är inte databasreplikering eller redundansväxling mellan värdar. Varje gateway har separat
 SQLite-tillstånd, cacheminnen, hastighetsräknare och sessioner. Använd en hälsokontrollerad omvänd proxy eller
 redundansväxling på klientsidan för aktiv/passiv eller aktiv/aktiv tillgänglighet, och montera aldrig en SQLite-databas
-i flera OmniRoute-instanser som körs samtidigt.
+i flera 67router-instanser som körs samtidigt.
 
 ### Dedikerade leverantörsrutter
 
@@ -805,7 +804,7 @@ Returnerar modeller grupperade efter leverantör med typer (`chat`, `embedding`,
 - Tillgängligt under **Instrumentpanel → Slutpunkter** för Docker och andra egenhostade distributioner
 - Skapar en tillfällig `https://*.trycloudflare.com`-URL som vidarebefordrar till din aktuella OpenAI-kompatibla `/v1`-slutpunkt
 - Vid den första aktiveringen installeras `cloudflared` endast vid behov; efterföljande omstarter återanvänder samma hanterade binärfil
-- Quick Tunnels återställs inte automatiskt efter en omstart av OmniRoute eller containern; återaktivera dem från instrumentpanelen vid behov
+- Quick Tunnels återställs inte automatiskt efter en omstart av 67router eller containern; återaktivera dem från instrumentpanelen vid behov
 - Tunnel-URL:er är tillfälliga och ändras varje gång du stoppar/startar tunneln
 - Hanterade Quick Tunnels använder HTTP/2-transport som standard för att undvika störande varningar om QUIC:s UDP-buffert i resursbegränsade containrar
 - Ange `CLOUDFLARED_PROTOCOL=quic` eller `auto` om du vill åsidosätta det hanterade transportvalet
@@ -822,7 +821,7 @@ Returnerar modeller grupperade efter leverantör med typer (`chat`, `embedding`,
 
 ### Översättningsverktyg
 
-Öppna via **Instrumentpanel → Översättare**. Felsök och visualisera hur OmniRoute översätter API-begäranden mellan leverantörer.
+Öppna via **Instrumentpanel → Översättare**. Felsök och visualisera hur 67router översätter API-begäranden mellan leverantörer.
 
 | Läge                | Syfte                                                                                 |
 | ------------------- | ------------------------------------------------------------------------------------- |
@@ -875,7 +874,7 @@ För extern sessionsaffinitet (till exempel Claude Code-/Codex-agenter bakom omv
 X-Session-Id: your-session-key
 ```
 
-OmniRoute accepterar även `x_session_id` och returnerar den effektiva sessionsnyckeln i `X-OmniRoute-Session-Id`.
+67router accepterar även `x_session_id` och returnerar den effektiva sessionsnyckeln i `X-OmniRoute-Session-Id`.
 
 Om du använder Nginx och skickar headers med understreck, aktivera:
 
@@ -909,7 +908,7 @@ Chain: production-fallback
 
 ### Vanliga leverantörskombinationer och routningsmönster
 
-Här är exempelmönster för hur du kombinerar flera leverantörer och routar mellan dem i OmniRoute:
+Här är exempelmönster för hur du kombinerar flera leverantörer och routar mellan dem i 67router:
 
 #### 1. Kombination för kodningsagenter: avancerat resonemang med kostnads-/hastighetsbaserad reservlösning
 
@@ -970,7 +969,7 @@ Kombinerar specialiserade bildmodeller med snabb textgenerering för arbetsflöd
 
 Konfigurera via **Instrumentpanel → Inställningar → Feltålighet**.
 
-OmniRoute implementerar feltålighet på leverantörsnivå med fem komponenter:
+67router implementerar feltålighet på leverantörsnivå med fem komponenter:
 
 1. **Begärandekö och takthållning** — Systemövergripande styrning av begäranden:
    - **Begäranden per minut (RPM)** — Maximalt antal begäranden per minut och konto
@@ -995,7 +994,7 @@ OmniRoute implementerar feltålighet på leverantörsnivå med fem komponenter:
 
    Kretsbrytarens körtidstillstånd visas endast under **Instrumentpanel → Hälsa**.
 
-4. **Vänta på att karantäntiden löper ut** — Om alla möjliga anslutningar redan befinner sig i karantän kan OmniRoute vänta tills den tidigaste karantäntiden löper ut och automatiskt försöka utföra samma klientbegäran igen.
+4. **Vänta på att karantäntiden löper ut** — Om alla möjliga anslutningar redan befinner sig i karantän kan 67router vänta tills den tidigaste karantäntiden löper ut och automatiskt försöka utföra samma klientbegäran igen.
 
 5. **Automatisk identifiering av hastighetsbegränsning** — När uppströmsleverantörer returnerar uttryckliga väntetider åsidosätter dessa anvisningar den lokala karantäntiden för anslutningen när inställningen är aktiverad.
 
@@ -1029,7 +1028,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Användningsfall:**
 
-- Migrera OmniRoute mellan datorer
+- Migrera 67router mellan datorer
 - Skapa externa säkerhetskopior för katastrofåterställning
 - Dela konfigurationer mellan teammedlemmar (exportera allt → dela arkivet)
 
@@ -1081,7 +1080,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Ljudtranskribering
 
-OmniRoute stöder ljudtranskribering via den OpenAI-kompatibla endpointen:
+67router stöder ljudtranskribering via den OpenAI-kompatibla endpointen:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1157,7 +1156,7 @@ Inaktivera **buffert för resonemangstoken** när uppströmsleverantörer kräve
 `max_tokens` / `maxOutputTokens`. När funktionen är aktiverad lägger kombinerad dirigering endast till
 extra utrymme för resonemangsmodeller med en känd utdatakapacitet och lämnar klientens tokengräns oförändrad när det
 säkra buffrade värdet skulle överskrida denna kapacitet. Om klientens gräns redan överstiger en känd kapacitet
-begränsar OmniRoute den till denna kapacitet innan begäran skickas uppströms.
+begränsar 67router den till denna kapacitet innan begäran skickas uppströms.
 
 ---
 
@@ -1180,7 +1179,7 @@ begränsar OmniRoute den till denna kapacitet innan begäran skickas uppströms.
 
 ## 🤖 Automatisk dirigering (nollkonfiguration)
 
-OmniRoute levereras med en **poängstyrd automatisk router** som väljer den bästa modellen för varje begäran bland alla anslutna leverantörer — ingen kombination behöver underhållas. Skicka bara begäran med ett av prefixen `auto/*`, så skapar OmniRoute en virtuell kombination dynamiskt och poängsätter kandidater utifrån latens, kostnad, lyckandefrekvens, kontextpassning, modellens lämplighet för uppgiften, senaste fel, kvot och kretsbrytarens tillstånd.
+67router levereras med en **poängstyrd automatisk router** som väljer den bästa modellen för varje begäran bland alla anslutna leverantörer — ingen kombination behöver underhållas. Skicka bara begäran med ett av prefixen `auto/*`, så skapar 67router en virtuell kombination dynamiskt och poängsätter kandidater utifrån latens, kostnad, lyckandefrekvens, kontextpassning, modellens lämplighet för uppgiften, senaste fel, kvot och kretsbrytarens tillstånd.
 
 | Prefix         | Optimerar för                                                                                                             |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -1211,7 +1210,7 @@ Den automatiska routern beskrivs i sin helhet i [AUTO-COMBO.md](../routing/AUTO-
 
 ## 🔌 MCP- och A2A-integration
 
-OmniRoute är både en **MCP-server** (Model Context Protocol) och en **A2A-server** (Agent-to-Agent JSON-RPC 2.0). Alla MCP-kompatibla IDE:er och agentvärdar kan anropa OmniRoute-verktyg direkt — inget extra omslag krävs.
+67router är både en **MCP-server** (Model Context Protocol) och en **A2A-server** (Agent-to-Agent JSON-RPC 2.0). Alla MCP-kompatibla IDE:er och agentvärdar kan anropa 67router-verktyg direkt — inget extra omslag krävs.
 
 ### MCP-transporter
 
@@ -1240,17 +1239,14 @@ Använd SSE-URL:en `http://localhost:20128/api/mcp/sse` och en Bearer-API-nyckel
 
 ### Omfattningar
 
-MCP definierar för närvarande 32 namngivna omfattningar. Varje Bearer-nyckel kan begränsas till specifika omfattningar — se [MCP-SERVER.md](../frameworks/MCP-SERVER.md) för den auktoritativa förteckningen över omfattningar och verktyg samt [A2A-SERVER.md](../frameworks/A2A-SERVER.md) för JSON-RPC-schemat.
-
 ---
 
 ## 🧠 Färdighetssystem
 
-OmniRoute erbjuder ett utökningsbart **ramverk för färdigheter** (`src/lib/skills/`) så att agenter och A2A-slutpunkten kan köra domänspecifika rutiner (t.ex. `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router erbjuder ett utökningsbart **ramverk för färdigheter** (`src/lib/skills/`) så att agenter och A2A-slutpunkten kan köra domänspecifika rutiner (t.ex. `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Marknadsplatsgränssnitt** — Bläddra bland och installera färdigheter via **Instrumentpanel → Färdigheter**
 - **Omfattningar per nyckel** — Begränsa vilka API-nycklar som kan anropa vilka färdigheter
-- **Anpassade färdigheter** — Lägg en TypeScript-fil i `src/lib/a2a/skills/`, registrera den, så kan den omedelbart anropas via A2A
 
 Fullständig referens: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1258,7 +1254,7 @@ Fullständig referens: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Minnessystem
 
-OmniRoute lagrar **långsiktigt konversationsminne** med hybridsökning:
+67router lagrar **långsiktigt konversationsminne** med hybridsökning:
 
 - **SQLite FTS5** för nyckelordssökning i tidigare konversationsturer
 - **Qdrant-vektorlager** (valfritt) för semantisk återkallning
@@ -1271,7 +1267,7 @@ Hantera minnen via **Instrumentpanel → Minne** (sök, redigera, exportera, ren
 
 ## 🔔 Webhooks
 
-Prenumerera på OmniRoute-händelser för övervakning och automatisering i realtid.
+Prenumerera på 67router-händelser för övervakning och automatisering i realtid.
 
 - Skapa en webhook via **Instrumentpanel → Webhooks** med mål-URL och en HMAC-signeringshemlighet
 - Tillgängliga händelser: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1282,21 +1278,9 @@ Fullständigt schema finns i [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Molnagenter
-
-OmniRoute integreras med molnbaserade kodningsagenter (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) så att du kan skicka långvariga uppgifter från samma instrumentpanel som hanterar din lokala routning.
-
-- Skapa uppgifter via **Instrumentpanel → Molnagenter** eller `POST /api/v1/agents/tasks`
-- Följ status, loggar och artefakter för varje uppgift
-- Använd en egen API-nyckel per leverantör — autentiseringsuppgifterna lämnar aldrig OmniRoute-instansen
-
-Fullständig referens: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Programmatisk hantering
 
-Du kan hantera alla OmniRoute-resurser (leverantörer, kombinationer, nycklar, inställningar) via HTTP med en **Bearer-nyckel som har omfattningen `manage`**.
+Du kan hantera alla 67router-resurser (leverantörer, kombinationer, nycklar, inställningar) via HTTP med en **Bearer-nyckel som har omfattningen `manage`**.
 
 Generera nyckeln via **Instrumentpanel → API-nycklar → Ny nyckel → Omfattning: manage** och kör sedan:
 
@@ -1329,7 +1313,7 @@ Se [API_REFERENCE.md](../reference/API_REFERENCE.md) för den fullständiga kata
 
 ## 💻 Internt CLI
 
-OmniRoute levereras med ett internt CLI (`omniroute …`) för konfiguration, diagnostik och körningskontroll. Detta är **separat från sidan "CLI-verktyg" i kontrollpanelen**, där CLI-verktyg från tredje part (Claude Code, Cursor, Codex, Cline, …) konfigureras så att de kan kommunicera med OmniRoute.
+67router levereras med ett internt CLI (`omniroute …`) för konfiguration, diagnostik och körningskontroll. Detta är **separat från sidan "CLI-verktyg" i kontrollpanelen**, där CLI-verktyg från tredje part (Claude Code, Cursor, Codex, Cline, …) konfigureras så att de kan kommunicera med 67router.
 
 ```bash
 omniroute setup                    # Interaktiv guide (lösenord, leverantörer, kombinationer)
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Återställ från en ögonblicksbild
 omniroute health                   # Detaljerad hälsa (brytare, cache, minne)
 omniroute quota                    # Leverantörernas kvotanvändning
 omniroute mcp status               # MCP-serverns status
-omniroute a2a status               # A2A-serverns status
 omniroute tunnel list|create|stop  # Cloudflare-/Tailscale-/ngrok-tunnlar
 omniroute reset-password           # Återställ administratörslösenordet
 omniroute --mcp                    # Starta MCP-servern via stdio
@@ -1360,7 +1343,7 @@ Tips: kombinera `omniroute doctor --json` med ditt övervakningsverktyg för att
 
 ## 🖥️ Skrivbordsapplikation (Electron)
 
-OmniRoute finns som en inbyggd skrivbordsapplikation för Windows, macOS och Linux.
+67router finns som en inbyggd skrivbordsapplikation för Windows, macOS och Linux.
 
 ### Installation
 

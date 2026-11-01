@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (नेपाली)
+# 🐳 Docker Guide — 67router (नेपाली)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [Environment फाइलसहित](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [उपलब्ध प्रोफाइलहरू](#available-profiles)
-- [OmniRoute Docker मा चल्दा होस्ट CLI उपकरणहरू कन्फिगर गर्ने](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [67router Docker मा चल्दा होस्ट CLI उपकरणहरू कन्फिगर गर्ने](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis Sidecar](#redis-sidecar)
 - [उत्पादन Compose](#production-compose)
 - [Dockerfile चरणहरू](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## उपलब्ध प्रोफाइलहरू
 
-OmniRoute मुख्य परिनियोजन संरचनाहरूका लागि Compose प्रोफाइलहरूसहित आउँछ। आफ्नो वातावरणसँग मेल खाने प्रोफाइल छान्नुहोस्।
+67router मुख्य परिनियोजन संरचनाहरूका लागि Compose प्रोफाइलहरूसहित आउँछ। आफ्नो वातावरणसँग मेल खाने प्रोफाइल छान्नुहोस्।
 
 | प्रोफाइल                | सेवा             | कहिले प्रयोग गर्ने                                                                                                                     | कमाण्ड                                       |
 | ----------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute मुख्य परिनियोजन संरचनाहर�
 
 > धेरै प्रोफाइलहरू संयोजन गर्न सकिन्छ: `docker compose --profile cli --profile cliproxyapi up -d`।
 
-## OmniRoute Docker मा चल्दा होस्ट CLI उपकरणहरू कन्फिगर गर्ने
+## 67router Docker मा चल्दा होस्ट CLI उपकरणहरू कन्फिगर गर्ने
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` र ड्यासबोर्डको
 **कन्फिग सुरक्षित गर्नुहोस्** बटनले `~/.codex/*.config.toml` जस्ता फाइलहरू लेख्छन्। ती पथहरू
@@ -103,11 +103,11 @@ CLI वास्तवमै चल्ने मेसिनमा मात्�
 इमेज `USER node` का रूपमा चल्छ) मा पुग्छ, जहाँ कुनै पनि होस्ट CLI ले त्यसलाई कहिल्यै पढ्दैन र कन्टेनर
 पुनः सिर्जना हुनेबित्तिकै त्यो हट्छ।
 
-OmniRoute ले यो अवस्था पत्ता लगाउँछ र तपाईंले प्रयोग गर्न नसक्ने सफलता रिपोर्ट गर्नुको सट्टा
+67router ले यो अवस्था पत्ता लगाउँछ र तपाईंले प्रयोग गर्न नसक्ने सफलता रिपोर्ट गर्नुको सट्टा
 निर्देशनसहित लेख्न अस्वीकार गर्छ: CLI `2` कोडसहित बन्द हुन्छ, र API ले
 `containerEphemeralTarget: true` सहित `422` जवाफ दिन्छ।
 
-### सिफारिस गरिएको: CLI होस्टमा र OmniRoute Docker मा चलाउनुहोस्
+### सिफारिस गरिएको: CLI होस्टमा र 67router Docker मा चलाउनुहोस्
 
 कन्टेनरले API उपलब्ध गराउँछ; CLI ले तपाईंका होस्ट उपकरणहरू कन्फिगर गर्छ।
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-bind mount ले नै पथलाई विश्वसनीय बनाउँछ: OmniRoute ले
+bind mount ले नै पथलाई विश्वसनीय बनाउँछ: 67router ले
 `/proc/self/mountinfo` पढ्छ र माउन्ट गरिएका पथहरूमा (र माथि देखाइएको `/host-home` को संरचनाजस्तै,
 जसका चाइल्ड डाइरेक्टरीहरू माउन्ट गरिएका हुन्छन्, त्यस्ता डाइरेक्टरीहरूमा पनि) लेख्न अनुमति दिन्छ,
 तर माउन्ट नगरिएका पथहरूमा भने अझै लेख्न अस्वीकार गर्छ।
@@ -178,7 +178,7 @@ CLI हरू वास्तवमै कन्टेनरभित्रै �
 
 ## Redis साइडकार
 
-OmniRoute ले वितरित दर सीमक र साझा क्यासलाई समर्थन गर्न Redis मा निर्भर गर्छ। `redis` सेवा `docker-compose.yml` मा **सधैँ परिभाषित हुन्छ** (यसमा कुनै प्रोफाइल गेट छैन) र अन्य कुनै पनि प्रोफाइलसँगै सुरु हुन्छ।
+67router ले वितरित दर सीमक र साझा क्यासलाई समर्थन गर्न Redis मा निर्भर गर्छ। `redis` सेवा `docker-compose.yml` मा **सधैँ परिभाषित हुन्छ** (यसमा कुनै प्रोफाइल गेट छैन) र अन्य कुनै पनि प्रोफाइलसँगै सुरु हुन्छ।
 
 | विवरण                  | मान                                            |
 | ---------------------- | ---------------------------------------------- |
@@ -358,7 +358,6 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 | `DASHBOARD_PORT` / `API_PORT` | ड्यासबोर्ड (20128) र API (20129) का लागि एक्सपोज गरिएका पोर्टहरू ओभरराइड गर्छ                                                                                                                                                                                                                   | `20128` / `20129`      |
 | `APP_BIND_HOST`               | docker-compose ले ड्यासबोर्ड/API/live-WS पोर्टहरू प्रकाशित गर्ने होस्ट इन्टरफेस। `REQUIRE_API_KEY=false` (पूर्वनिर्धारित) हुँदा, `0.0.0.0` ले अज्ञात पहुँचको `/v1` प्रोक्सीलाई LAN मा एक्सपोज गर्छ — `REQUIRE_API_KEY=true` हुँदा वा अगाडि रिभर्स प्रोक्सी राखेर मात्र पहुँच विस्तार गर्नुहोस्। | `127.0.0.1`            |
 | `CLIPROXY_BIND_HOST`          | docker-compose ले `cliproxyapi` साइडकार प्रकाशित गर्ने होस्ट इन्टरफेस — यसको डेटा भोल्युममा प्रदायकका प्रमाणहरू राखिन्छन्।                                                                                                                                                                      | `127.0.0.1`            |
-| `OMNIROUTE_PLUGINS_DIR`       | रनटाइम प्लगइन स्क्यानरले पढ्ने र प्लगइनहरू स्थापना गर्ने डाइरेक्टरी। प्लगइनहरू बाइन्ड-माउन्ट गरिएका बेला यसलाई सेट गर्नुहोस्: पूर्वनिर्धारित मानले `HOME` पछ्याउँछ, जुन इमेजले एक्सपोर्ट नगर्न सक्छ।                                                                                            | `~/.omniroute/plugins` |
 | `OMNIROUTE_BASE_PATH`         | एप रिभर्स प्रोक्सी पछाडि प्रकाशित हुँदा प्रयोग हुने URL उपपथ (जस्तै `/omniroute`)                                                                                                                                                                                                               | _(खाली = रुट)_         |
 | `NEXT_PUBLIC_BASE_URL`        | उपपथसहितको सार्वजनिक ब्राउजर मूल ठेगाना (जस्तै `https://host/omniroute`)                                                                                                                                                                                                                        | सेट नगरिएको            |
 | `PROD_DASHBOARD_PORT`         | `docker-compose.prod.yml` का लागि होस्ट-साइड ड्यासबोर्ड पोर्ट                                                                                                                                                                                                                                   | `20130`                |
@@ -366,7 +365,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ## उपपथमा रिभर्स प्रोक्सी (Traefik / nginx)
 
-Next.js `basePath` लाई स्ट्यान्डअलोन बन्डलमा कम्पाइल गरिन्छ। OmniRoute ले एपको मूलमा रहेको एउटा सेन्टिनल फाइलमा बिल्ड गरिएको मान अभिलेख गर्छ (`npm run build` का क्रममा लेखिन्छ; `scripts/docker/ensure-docker-base-path.mjs` द्वारा पढिन्छ) र कन्टेनर सुरु हुँदा त्यसलाई `OMNIROUTE_BASE_PATH` सँग तुलना गर्छ। तिनीहरू फरक हुँदा र इमेज डोमेनको मूलका लागि बिल्ड गरिएको हुँदा, `node dev/run-standalone.mjs` चल्नुअघि एन्ट्रीपोइन्टले स्ट्यान्डअलोन म्यानिफेस्टहरू, इम्बेड गरिएका `basePath`/`assetPrefix` लिटरलहरू (Next 16 ले SSR एसेट URL हरू `assetPrefix` बाट मात्र रेन्डर गर्छ — प्याचरले उपपथलाई यसमा पनि प्रतिबिम्बित गर्छ), बिल्ड गरिएका `/_next/static` एसेट URL हरू (क्लाइन्ट-रेफरेन्स म्यानिफेस्टहरू, मिडिया इम्पोर्टहरू, पहिले नै रेन्डर गरिएका त्रुटि पृष्ठहरू) र क्लाइन्ट `process.env` शिमलाई पुनर्लेखन गर्छ।
+Next.js `basePath` लाई स्ट्यान्डअलोन बन्डलमा कम्पाइल गरिन्छ। 67router ले एपको मूलमा रहेको एउटा सेन्टिनल फाइलमा बिल्ड गरिएको मान अभिलेख गर्छ (`npm run build` का क्रममा लेखिन्छ; `scripts/docker/ensure-docker-base-path.mjs` द्वारा पढिन्छ) र कन्टेनर सुरु हुँदा त्यसलाई `OMNIROUTE_BASE_PATH` सँग तुलना गर्छ। तिनीहरू फरक हुँदा र इमेज डोमेनको मूलका लागि बिल्ड गरिएको हुँदा, `node dev/run-standalone.mjs` चल्नुअघि एन्ट्रीपोइन्टले स्ट्यान्डअलोन म्यानिफेस्टहरू, इम्बेड गरिएका `basePath`/`assetPrefix` लिटरलहरू (Next 16 ले SSR एसेट URL हरू `assetPrefix` बाट मात्र रेन्डर गर्छ — प्याचरले उपपथलाई यसमा पनि प्रतिबिम्बित गर्छ), बिल्ड गरिएका `/_next/static` एसेट URL हरू (क्लाइन्ट-रेफरेन्स म्यानिफेस्टहरू, मिडिया इम्पोर्टहरू, पहिले नै रेन्डर गरिएका त्रुटि पृष्ठहरू) र क्लाइन्ट `process.env` शिमलाई पुनर्लेखन गर्छ।
 
 ### Compose बिल्ड (सिफारिस गरिएको)
 
@@ -414,7 +413,7 @@ Docker हेल्थचेकले सक्रिय `OMNIROUTE_BASE_PATH` �
 
 ## Caddy सहित Docker Compose (HTTPS Auto-TLS)
 
-Caddy को स्वचालित SSL प्रावधान प्रयोग गरेर OmniRoute लाई सुरक्षित रूपमा सार्वजनिक गर्न सकिन्छ। तपाईंको डोमेनको DNS A रेकर्डले तपाईंको सर्भरको IP तर्फ सङ्केत गरेको सुनिश्चित गर्नुहोस्।
+Caddy को स्वचालित SSL प्रावधान प्रयोग गरेर 67router लाई सुरक्षित रूपमा सार्वजनिक गर्न सकिन्छ। तपाईंको डोमेनको DNS A रेकर्डले तपाईंको सर्भरको IP तर्फ सङ्केत गरेको सुनिश्चित गर्नुहोस्।
 
 ```yaml
 services:
@@ -445,11 +444,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy ले अपस्ट्रिम कन्टेनरका लागि मानक फर्वार्डिङ हेडरहरू सेट गर्छ। OmniRoute ले
+Caddy ले अपस्ट्रिम कन्टेनरका लागि मानक फर्वार्डिङ हेडरहरू सेट गर्छ। 67router ले
 OAuth कलब्याक र उत्पन्न गरिएका सार्वजनिक लिङ्कहरूका लागि `NEXT_PUBLIC_BASE_URL` लाई क्यानोनिकल सार्वजनिक ओरिजिनको रूपमा प्रयोग गर्छ;
 प्रमाणीकरण गरिएका ड्यासबोर्ड राइटहरूले सेसनसँग आबद्ध CSRF सुरक्षासहित समान-ओरिजिन अनुरोधहरू प्रयोग गर्छन्।
 तपाईंले स्पष्ट कन्फिगरेसनको सट्टा विश्वसनीय फर्वार्ड गरिएका हेडरहरूबाट सार्वजनिक ओरिजिन निर्धारण गर्न
-OmniRoute लाई जानाजानी लगाउन चाहनुहुने उन्नत डिप्लोयमेन्टहरूका लागि मात्र `OMNIROUTE_TRUST_PROXY` सक्षम गर्नुहोस्।
+67router लाई जानाजानी लगाउन चाहनुहुने उन्नत डिप्लोयमेन्टहरूका लागि मात्र `OMNIROUTE_TRUST_PROXY` सक्षम गर्नुहोस्।
 
 ## Cloudflare Quick Tunnel
 
@@ -460,11 +459,11 @@ Docker डिप्लोयमेन्टका लागि ड्यास�
 ### टनेलसम्बन्धी टिप्पणीहरू
 
 - Quick Tunnel URL हरू अस्थायी हुन्छन् र प्रत्येक पुनःसुरुआतपछि परिवर्तन हुन्छन्।
-- OmniRoute वा कन्टेनर पुनःसुरुआत भएपछि Quick Tunnels स्वतः पुनर्स्थापित हुँदैनन्। आवश्यक पर्दा तिनलाई ड्यासबोर्डबाट पुनः सक्षम गर्नुहोस्।
+- 67router वा कन्टेनर पुनःसुरुआत भएपछि Quick Tunnels स्वतः पुनर्स्थापित हुँदैनन्। आवश्यक पर्दा तिनलाई ड्यासबोर्डबाट पुनः सक्षम गर्नुहोस्।
 - व्यवस्थित इन्स्टलले हाल `x64` / `arm64` मा Linux, macOS र Windows समर्थन गर्छ।
 - सीमित कन्टेनर वातावरणहरूमा बढी आवाजयुक्त QUIC UDP बफर चेतावनीहरूबाट बच्न व्यवस्थित Quick Tunnels ले पूर्वनिर्धारित रूपमा HTTP/2 ट्रान्सपोर्ट प्रयोग गर्छन्। फरक ट्रान्सपोर्ट चाहनुहुन्छ भने `CLOUDFLARED_PROTOCOL=quic` वा `auto` सेट गर्नुहोस्।
 - Docker इमेजहरूले प्रणालीका CA रुटहरू समावेश गर्छन् र तिनलाई व्यवस्थित `cloudflared` मा पठाउँछन्, जसले कन्टेनरभित्र टनेल बुटस्ट्र्याप हुँदा TLS विश्वास विफलताहरूबाट जोगाउँछ।
-- OmniRoute ले डाउनलोड गर्नुको सट्टा पहिले नै रहेको बाइनरी प्रयोग गरोस् भन्ने चाहनुहुन्छ भने `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` सेट गर्नुहोस्।
+- 67router ले डाउनलोड गर्नुको सट्टा पहिले नै रहेको बाइनरी प्रयोग गरोस् भन्ने चाहनुहुन्छ भने `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` सेट गर्नुहोस्।
 
 ## इमेज ट्यागहरू
 
@@ -477,7 +476,7 @@ Docker डिप्लोयमेन्टका लागि ड्यास�
 
 ### रिलिज च्यानलहरू
 
-OmniRoute ले स्थिर रिलिजहरू, सक्रिय रिलिज-ब्रान्च परीक्षण र विकास बिल्डहरूका लागि छुट्टाछुट्टै Docker च्यानलहरू प्रकाशित गर्छ।
+67router ले स्थिर रिलिजहरू, सक्रिय रिलिज-ब्रान्च परीक्षण र विकास बिल्डहरूका लागि छुट्टाछुट्टै Docker च्यानलहरू प्रकाशित गर्छ।
 
 | च्यानल                          | स्रोत                                     | परिवर्तनशीलता                  | सिफारिस गरिएको प्रयोग                                                                                 |
 | ------------------------------- | ----------------------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
@@ -530,7 +529,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-परीक्षण गर्नुअघि OmniRoute data volume वा bind-mounted data directory को backup लिनुहोस्। रोलब्याक गर्न, पहिले प्रयोग गरिएको स्थिर version वा digest पुनर्स्थापना गर्नुहोस् र container पुनः सिर्जना गर्नुहोस्:
+परीक्षण गर्नुअघि 67router data volume वा bind-mounted data directory को backup लिनुहोस्। रोलब्याक गर्न, पहिले प्रयोग गरिएको स्थिर version वा digest पुनर्स्थापना गर्नुहोस् र container पुनः सिर्जना गर्नुहोस्:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -550,7 +549,7 @@ release-branch build ले कहिल्यै `latest` सार्न स�
 
 ## Docker मा ड्यासबोर्ड अद्यावधिकहरू
 
-प्रकाशित इमेजको कन्टेनरले आफैँलाई प्रतिस्थापन गर्न सक्दैन। OmniRoute ले आफू कन्टेनरभित्र चलिरहेको पत्ता लगाउँदा (`.git` checkout नभएको र npm install नभएको अवस्थामा), गृह ड्यासबोर्डको अद्यावधिक ब्यानरले npm/git निर्देशनहरूको सट्टा चलाउनुपर्ने होस्ट कमाण्डलाई प्रतिलिपि बटनसहित देखाउँछ:
+प्रकाशित इमेजको कन्टेनरले आफैँलाई प्रतिस्थापन गर्न सक्दैन। 67router ले आफू कन्टेनरभित्र चलिरहेको पत्ता लगाउँदा (`.git` checkout नभएको र npm install नभएको अवस्थामा), गृह ड्यासबोर्डको अद्यावधिक ब्यानरले npm/git निर्देशनहरूको सट्टा चलाउनुपर्ने होस्ट कमाण्डलाई प्रतिलिपि बटनसहित देखाउँछ:
 
 ```bash
 docker compose pull omniroute && docker compose up -d --force-recreate omniroute
@@ -560,7 +559,7 @@ docker compose pull omniroute && docker compose up -d --force-recreate omniroute
 
 ### होस्ट ट्रिगर फाइलमार्फत एक-क्लिक अद्यावधिकहरू
 
-`/var/run/docker.sock` माउन्ट नगरी **अहिले अद्यावधिक गर्नुहोस्** लाई काम गराइराख्न (यसले कन्टेनरलाई होस्टमा root पहुँच दिन्छ — माथिको `cli` प्रोफाइल चेतावनी हेर्नुहोस्), OmniRoute सेवामा `DOCKER_UPDATE_TRIGGER_FILE` सेट गर्नुहोस् र होस्टमा वाचर चलाउनुहोस्:
+`/var/run/docker.sock` माउन्ट नगरी **अहिले अद्यावधिक गर्नुहोस्** लाई काम गराइराख्न (यसले कन्टेनरलाई होस्टमा root पहुँच दिन्छ — माथिको `cli` प्रोफाइल चेतावनी हेर्नुहोस्), 67router सेवामा `DOCKER_UPDATE_TRIGGER_FILE` सेट गर्नुहोस् र होस्टमा वाचर चलाउनुहोस्:
 
 ```yaml
 services:
@@ -571,14 +570,14 @@ services:
       - ./data:/app/data
 ```
 
-पथ `DATA_DIR` भित्र हुनुपर्छ (सापेक्ष मानहरू त्यसैको आधारमा समाधान हुन्छन्); अन्य कुनै पनि पथ अस्वीकार गरिन्छ। त्यसपछि **अहिले अद्यावधिक गर्नुहोस्** ले उक्त फाइलमा `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` लेख्छ, `202` जवाफ दिन्छ, र नयाँ संस्करण लाइभ भएर पुनः लोड नभएसम्म ड्यासबोर्डले `/api/system/version` पोल गर्छ। यस मोडमा OmniRoute ले कहिल्यै shell वा Docker कमाण्ड चलाउँदैन। प्रत्येक अद्यावधिक कार्यजस्तै, अनुरोध loopback/LAN क्लाइन्टहरूबाट मात्र स्वीकार गरिन्छ।
+पथ `DATA_DIR` भित्र हुनुपर्छ (सापेक्ष मानहरू त्यसैको आधारमा समाधान हुन्छन्); अन्य कुनै पनि पथ अस्वीकार गरिन्छ। त्यसपछि **अहिले अद्यावधिक गर्नुहोस्** ले उक्त फाइलमा `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` लेख्छ, `202` जवाफ दिन्छ, र नयाँ संस्करण लाइभ भएर पुनः लोड नभएसम्म ड्यासबोर्डले `/api/system/version` पोल गर्छ। यस मोडमा 67router ले कहिल्यै shell वा Docker कमाण्ड चलाउँदैन। प्रत्येक अद्यावधिक कार्यजस्तै, अनुरोध loopback/LAN क्लाइन्टहरूबाट मात्र स्वीकार गरिन्छ।
 
 bind-mounted डेटा डाइरेक्टरीले होस्टलाई निगरानी गर्न स्थिर पथ दिन्छ। नमुना `systemd` युनिटहरू (`/srv/omniroute` लाई तपाईंको compose फाइल र `data/` भएको डाइरेक्टरीअनुसार समायोजन गर्नुहोस्):
 
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=OmniRoute ड्यासबोर्डका अद्यावधिक अनुरोधहरूको निगरानी गर्नुहोस्
+Description=67router ड्यासबोर्डका अद्यावधिक अनुरोधहरूको निगरानी गर्नुहोस्
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -590,7 +589,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=OmniRoute कन्टेनर पुल गरेर पुनः सिर्जना गर्नुहोस्
+Description=67router कन्टेनर पुल गरेर पुनः सिर्जना गर्नुहोस्
 
 [Service]
 Type=oneshot
@@ -609,13 +608,13 @@ sudo systemctl enable --now omniroute-update.path
 
 ## उपलब्धता: पूर्वनिर्धारित SQLite एकल-रेप्लिका हो
 
-मानक Docker / Kubernetes OmniRoute मा **एउटा Node प्रक्रिया + एउटा SQLite लेखक** हुन्छ। यस टोपोलोजीमा उच्च उपलब्धता **समर्थित छैन**।
+मानक Docker / Kubernetes 67router मा **एउटा Node प्रक्रिया + एउटा SQLite लेखक** हुन्छ। यस टोपोलोजीमा उच्च उपलब्धता **समर्थित छैन**।
 
-| सीमितता                                     | परिणाम                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| एकल लेखक                                    | एउटै SQLite फाइलसँग धेरै रेप्लिका **नचलाउनुहोस्**। त्यसले DB बिगार्छ।                                                                                                                                                                                                                                                    |
-| पुनः सिर्जना / पुनः सुरु / HEALTHCHECK kill | चलिरहेका SSE, ड्यासबोर्ड सत्रहरू र इन-मेमोरी अवस्थाको **पूर्ण अवरोध**। जडान भएका प्रत्येक क्लाइन्टको जडान टुट्छ। endpoint खाली भएको अवधिमा नयाँ अनुरोधहरूले OmniRoute JSON होइन, reverse-proxy **`502 Bad Gateway: Unknown error`** प्राप्त गर्छन् — क्लाइन्टहरूले यसलाई प्रदायकको विफलताबाट छुट्याउन सक्दैनन् (#11015)। |
-| `/healthz` कै event loop                    | व्यस्त catalog वा compression tick ले probe हरू ढिलाइ गराउन सक्छ; त्यसपछि छोटो timeout ले **एकमात्र** रेप्लिका पुनः सुरु गर्छ।                                                                                                                                                                                           |
+| सीमितता                                     | परिणाम                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| एकल लेखक                                    | एउटै SQLite फाइलसँग धेरै रेप्लिका **नचलाउनुहोस्**। त्यसले DB बिगार्छ।                                                                                                                                                                                                                                                   |
+| पुनः सिर्जना / पुनः सुरु / HEALTHCHECK kill | चलिरहेका SSE, ड्यासबोर्ड सत्रहरू र इन-मेमोरी अवस्थाको **पूर्ण अवरोध**। जडान भएका प्रत्येक क्लाइन्टको जडान टुट्छ। endpoint खाली भएको अवधिमा नयाँ अनुरोधहरूले 67router JSON होइन, reverse-proxy **`502 Bad Gateway: Unknown error`** प्राप्त गर्छन् — क्लाइन्टहरूले यसलाई प्रदायकको विफलताबाट छुट्याउन सक्दैनन् (#11015)। |
+| `/healthz` कै event loop                    | व्यस्त catalog वा compression tick ले probe हरू ढिलाइ गराउन सक्छ; त्यसपछि छोटो timeout ले **एकमात्र** रेप्लिका पुनः सुरु गर्छ।                                                                                                                                                                                          |
 
 **Probe म्याट्रिक्स** ([Kubernetes probe सिफारिसहरू](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations) पनि हेर्नुहोस्):
 
@@ -718,7 +717,7 @@ IPv4/IPv6 कनेक्टिभिटी, VPN राउटिङ र कन�
 
 ### जडान-विशिष्ट प्रोक्सीलाई प्राथमिकता दिनुहोस्
 
-प्रभावित Gemini जडानका लागि OmniRoute को [प्रति-जडान प्रोक्सी कन्फिगरेसन](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+प्रभावित Gemini जडानका लागि 67router को [प्रति-जडान प्रोक्सी कन्फिगरेसन](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 प्रयोग गर्नुहोस्, त्यसपछि उही मोडेल प्रयोग गरेर **जडान परीक्षण गर्नुहोस्** र एउटा सानो अनुरोध
 दोहोर्याउनुहोस्। यसले राउटिङ परिवर्तनलाई त्यही जडानमा सीमित राख्छ। प्रोक्सीमा
 कन्टेनरबाट पहुँच पुग्छ र जडानले वास्तवमै त्यसैलाई चयन गर्छ भन्ने पुष्टि गर्नुहोस्।
@@ -792,7 +791,7 @@ persistent data volume नमेटाउनुहोस्।
 
 ## महत्त्वपूर्ण टिप्पणीहरू
 
-- **SQLite WAL मोड:** OmniRoute ले नवीनतम परिवर्तनहरूलाई `storage.sqlite` मा पुनः चेकपोइन्ट गर्न सकोस् भनेर `docker stop` लाई पूरा हुन दिनुपर्छ। समावेश गरिएका Compose फाइलहरूले पहिले नै 40s को स्टप ग्रेस अवधि सेट गरेका छन्। यदि तपाईंले इमेजलाई सिधै चलाउनुहुन्छ भने, `--stop-timeout 40` कायम राख्नुहोस्।
+- **SQLite WAL मोड:** 67router ले नवीनतम परिवर्तनहरूलाई `storage.sqlite` मा पुनः चेकपोइन्ट गर्न सकोस् भनेर `docker stop` लाई पूरा हुन दिनुपर्छ। समावेश गरिएका Compose फाइलहरूले पहिले नै 40s को स्टप ग्रेस अवधि सेट गरेका छन्। यदि तपाईंले इमेजलाई सिधै चलाउनुहुन्छ भने, `--stop-timeout 40` कायम राख्नुहोस्।
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** नियमित/लेखन-पूर्व ब्याकअपहरू बाह्य रूपमा व्यवस्थापन गरिएका छन् भने यसलाई `true` मा सेट गर्नुहोस्। अवस्थित-डेटाबेस माइग्रेसनहरूका लागि अझै पनि तिनको आफ्नै टिकाउ सुरक्षा स्न्यापसट र सामूहिक-माइग्रेसन सुरक्षा संयन्त्र आवश्यक हुन्छ।
 - **डेटा स्थायित्व:** कन्टेनर पुनः सुरु हुँदा पनि तपाईंको डेटाबेस, कुञ्जीहरू र कन्फिगरेसनहरू कायम राख्न सधैँ `/app/data` मा भोल्युम माउन्ट गर्नुहोस्।
 - **पोर्ट कन्फिगरेसन:** पूर्वनिर्धारित `20128` पोर्ट परिवर्तन गर्न `PORT` वातावरण चरलाई ओभरराइड गर्नुहोस्।

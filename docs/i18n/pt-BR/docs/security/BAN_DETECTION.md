@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute verifica as respostas de erro dos provedores upstream em busca de sinais que indiquem que uma
+O 67router verifica as respostas de erro dos provedores upstream em busca de sinais que indiquem que uma
 **conta está permanentemente inutilizada** (suspensa / desativada / banida por violação dos Termos de Serviço) e, quando
 há uma correspondência, move essa conexão para um **estado terminal `banned`**, de modo que ela não
 seja mais selecionada para solicitações. É isso que o cartão de configurações **Segurança → Palavras-chave de banimento**

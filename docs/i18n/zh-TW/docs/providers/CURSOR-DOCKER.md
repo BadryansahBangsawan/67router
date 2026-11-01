@@ -4,7 +4,7 @@
 
 ---
 
-當 OmniRoute 在 Docker 內執行時，舊版的 **從 Cursor IDE 匯入** /
+當 67router 在 Docker 內執行時，舊版的 **從 Cursor IDE 匯入** /
 `cursor-agent` 流程會失敗，因為容器無法看到主機上的 Cursor
 安裝。請改用 **使用 Cursor 登入**（deep-control PKCE）。
 
@@ -14,7 +14,7 @@
    `~/.config/Cursor/User/globalStorage/state.vscdb`。
    在 macOS 的 Docker Desktop 上，預設不會掛載主機的 IDE DB，而且
    即使主機是 Darwin，容器作業系統仍是 Linux。
-2. **沒有 `cursor-agent` 二進位檔** — 官方 OmniRoute 映像檔不包含
+2. **沒有 `cursor-agent` 二進位檔** — 官方 67router 映像檔不包含
    `cursor-agent`。先前「可用模型」會在 shell 中執行
    `cursor-agent --list-models`，失敗時則退回靜態目錄。
 3. **錯誤的二進位檔** — **不要**將 macOS 的 `cursor-agent` 繫結掛載至 Linux
@@ -24,11 +24,11 @@
 
 1. 開啟 **儀表板 → 提供者 → Cursor**。
 2. 選擇 **使用 Cursor 登入**分頁。
-3. 按一下 **使用 Cursor 登入** — OmniRoute 會在您的**主機**瀏覽器中開啟
+3. 按一下 **使用 Cursor 登入** — 67router 會在您的**主機**瀏覽器中開啟
    `https://cursor.com/loginDeepControl?…`。
-4. 在瀏覽器中核准登入，然後返回儀表板。OmniRoute
+4. 在瀏覽器中核准登入，然後返回儀表板。67router
    會輪詢 `api2.cursor.sh/auth/poll`，直到取得權杖。
-5. OmniRoute 會儲存**存取權杖與重新整理權杖**，並透過
+5. 67router 會儲存**存取權杖與重新整理權杖**，並透過
    `https://api2.cursor.sh/auth/exchange_user_api_key` 重新整理它們。
 
 此方式不需要容器內安裝 Cursor IDE 或 `cursor-agent`。
@@ -37,10 +37,10 @@
 
 使用已登入的連線時，**可用模型 / 自動同步**會優先使用連線的 bearer 權杖，
 從 Cursor 的 HTTP `AiService/AvailableModels` 目錄取得模型。
-如果失敗，OmniRoute 仍會嘗試使用主機上的 `cursor-agent`（若存在），接著
+如果失敗，67router 仍會嘗試使用主機上的 `cursor-agent`（若存在），接著
 使用靜態登錄檔種子。
 
-OmniRoute 一律會在目錄中公開 **`auto`**（顯示為「自動」），以及
+67router 一律會在目錄中公開 **`auto`**（顯示為「自動」），以及
 OpenCodex 風格的路由模式 **`auto-cost`**、**`auto-balance`** 和
 **`auto-intelligence`**。在線路傳輸中，這些模式會對應到 Cursor 的 `default` 模型
 （三個變體會附帶 `optimization` ModelParameter）。當進階模型用量耗盡時，請優先使用
@@ -86,7 +86,7 @@ IDE 匯入工作階段的最後備援。
 ## 空白輪次 / 用量耗盡
 
 當 Cursor 接受 Run 卻未傳回任何助理文字時（進階用量耗盡時很常見），
-OmniRoute 會顯示可採取行動的 **429**（配額提示）或附帶指引的
+67router 會顯示可採取行動的 **429**（配額提示）或附帶指引的
 **502**，而不是只顯示「提供者傳回空白內容」。例如
 `not_found: AI Model Not Found`（用量時段額度耗盡）等串流失敗會被分類為
 **Cursor 速率限制 / 用量已超出**，並在 SSE 管線中保留該訊息
@@ -95,7 +95,7 @@ OmniRoute 會顯示可採取行動的 **429**（配額提示）或附帶指引�
 
 ## 用戶端版本（無頭模式）
 
-若本機未安裝 `cursor-agent`，OmniRoute 會依序透過環境變數
+若本機未安裝 `cursor-agent`，67router 會依序透過環境變數
 `CURSOR_AGENT_CLI_VERSION`、磁碟快取的 Cursor 安裝程式指令碼抓取結果，
 最後是固定的建置 ID，解析 `x-cursor-client-version`。需要時可使用
 `CURSOR_AGENT_CLI_VERSION` 覆寫。

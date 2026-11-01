@@ -3,7 +3,6 @@ import {
   ACCOUNT_FALLBACK_STRATEGY_VALUES,
   ROUTING_STRATEGY_VALUES,
 } from "@/shared/constants/routingStrategies";
-import { SUPPORTED_BATCH_ENDPOINTS } from "@/shared/constants/batchEndpoints";
 import { MAX_REQUEST_BODY_LIMIT_MB, MIN_REQUEST_BODY_LIMIT_MB } from "@/shared/constants/bodySize";
 import { COMBO_CONFIG_MODES } from "@/shared/constants/comboConfigMode";
 import { providerAllowsOptionalApiKey } from "@/shared/constants/providers";
@@ -59,18 +58,6 @@ export const shadowRoutingSchema = z
     sampleRate: z.coerce.number().min(0).max(1).optional(),
     maxTargets: z.coerce.number().int().min(1).max(10).optional(),
     timeoutMs: z.coerce.number().int().min(1000).max(120000).optional(),
-  })
-  .strict();
-
-export const evalRoutingSchema = z
-  .object({
-    enabled: z.boolean().optional(),
-    suiteIds: z.array(z.string().trim().min(1).max(200)).max(50).optional(),
-    maxAgeHours: z.coerce.number().min(1).max(8760).optional(),
-    minCases: z.coerce.number().int().min(1).max(100000).optional(),
-    qualityWeight: z.coerce.number().min(0).max(1).optional(),
-    latencyWeight: z.coerce.number().min(0).max(1).optional(),
-    cacheTtlMs: z.coerce.number().int().min(1000).max(300000).optional(),
   })
   .strict();
 
@@ -260,7 +247,6 @@ export const comboRuntimeConfigSchema = z
     connectionAwareExpansion: z.boolean().optional(),
     connectionAwareExpansionMaxPerTarget: z.coerce.number().int().min(1).max(64).optional(),
     shadowRouting: shadowRoutingSchema.optional(),
-    evalRouting: evalRoutingSchema.optional(),
     // Fusion strategy (open-sse/services/fusion.ts): the panel is the combo's
     // targets; `judgeModel` synthesizes the final answer (defaults to the first
     // panel model when unset); `fusionTuning` controls quorum-grace collection.

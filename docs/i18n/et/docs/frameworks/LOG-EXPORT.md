@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'i kõnelogide pidev, inkrementaalne eksport välisesse analüütikaandmehoidlasse.
+67router'i kõnelogide pidev, inkrementaalne eksport välisesse analüütikaandmehoidlasse.
 
 Logide töölaua vahekaart säilitab päringute ajaloo SQLite'is (`call_logs`), mille mahtu piiravad
 rotatsioon ja säilitusperiood. Logide eksport saadab sama kirjete kogumi ajakava alusel välja, et see säiliks
@@ -283,7 +283,7 @@ Kaks reeglit uue sihtkoha jaoks:
 - `send()` **peab osalise nurjumise korral erindi viskama**. Edukas lõpulejõudmine tähendab, et „sihtkohas on need read olemas”,
   ning kursor liigub neist jäädavalt edasi.
 - Kasutaja antud URL-i kasutav sihtkoht peab selle enne päringu tegemist valideerima funktsiooniga
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   samamoodi nagu veebihaagid. BigQuery puhul pole see vajalik: selle hostid on konstantsed.
 
 ---

@@ -5,10 +5,10 @@
 ---
 
 Releji (Vercel, Deno, Cloudflare) pārtrauc augšupstraumes savienojumu
-bezserveru aizmugursistēmā, lai OmniRoute varētu nodrošināt izejošo savienojumu
+bezserveru aizmugursistēmā, lai 67router varētu nodrošināt izejošo savienojumu
 no stabila reģiona, vienlaikus glabājot pakalpojuma sniedzēja API atslēgu servera
 pusē. Šajā dokumentā aprakstīti divi kļūmju režīmi, ar kuriem operatori saskaras
-produkcijas vidē, un OmniRoute nodrošinātie atkopšanas ceļi katram no tiem.
+produkcijas vidē, un 67router nodrošinātie atkopšanas ceļi katram no tiem.
 
 ## Kā tiek glabāta releja autentifikācija
 
@@ -36,7 +36,7 @@ datus.
 1. Atveriet **Iestatījumi → Starpniekserveru pūls**.
 2. Releju rindās, kurām trūkst autentifikācijas datu, tiek rādīta dzeltena
    emblēma `auth missing` un poga **Labot**.
-3. Noklikšķiniet uz **Labot**. OmniRoute izsauc
+3. Noklikšķiniet uz **Labot**. 67router izsauc
    `POST /api/settings/proxies/[id]/repair-relay`, kas:
    - atšifrē `relayAuthEnc` ar **pašreizējo** atslēgu;
    - ieraksta nešifrēto `relayAuth` atpakaļ laukā `notes`;
@@ -69,7 +69,7 @@ ja pilnvara nav atkopjama, tāpēc tas nav jāmeklē manuāli.
 **Pazīme:** starpniekservera tests (poga `speed`) rāda, ka relejs darbojas, taču
 pieprasījumi joprojām periodiski neizdodas.
 
-Pārbaudiet releja informācijas galvenes, ko atgriež OmniRoute automātiskās
+Pārbaudiet releja informācijas galvenes, ko atgriež 67router automātiskās
 pārbaudes zonde (skatiet **Iestatījumi → Starpniekserveru pūls** un skaitītājus
 `relayTested` / `relayAlive`):
 

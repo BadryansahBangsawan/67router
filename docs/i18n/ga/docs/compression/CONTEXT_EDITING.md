@@ -5,12 +5,12 @@
 ---
 
 Is gné bainistíochta comhthéacs do Claude amháin í **Eagarthóireacht Chomhthéacs** tharmligthe. Murab ionann agus innill áitiúla
-comhbhrúite OmniRoute (Caveman, RTK, LLMLingua, píblínte cruachta) — a athscríobhann corp na hiarrata
+comhbhrúite 67router (Caveman, RTK, LLMLingua, píblínte cruachta) — a athscríobhann corp na hiarrata
 _sula_ bhfágann sé an seachfhreastalaí — iarrann Eagarthóireacht Chomhthéacs ar an **soláthraí** bloic as dáta
-úsáide uirlisí / torthaí uirlisí a ghlanadh óna fhuinneog chomhthéacs reatha féin. Ní dhéanann OmniRoute ach paraiméadar coirp
+úsáide uirlisí / torthaí uirlisí a ghlanadh óna fhuinneog chomhthéacs reatha féin. Ní dhéanann 67router ach paraiméadar coirp
 a cheangal (`context_management.edits[]`); déanann Claude an glanadh iarbhír i gcoinne a chomharthóra féin.
 
-Is cumas tarmligthe é seo ó nádúr: diúltaíonn soláthraithe eile don pharaiméadar, mar sin cuireann OmniRoute a raon feidhme
+Is cumas tarmligthe é seo ó nádúr: diúltaíonn soláthraithe eile don pharaiméadar, mar sin cuireann 67router a raon feidhme
 go docht le Claude agus le hathsheachadáin atá comhoiriúnach le Claude Code.
 
 Foinse na fírinne: `open-sse/config/contextEditing.ts` (aitheantais straitéise, instealladh coirp, asbhaint
@@ -19,7 +19,7 @@ teiliméadrachta), `open-sse/executors/base.ts` (geata insteallta + cúltiomáin
 
 ## Cad a dhéanann `clear_tool_uses`
 
-Insteallann OmniRoute eagarthóireacht amháin isteach i gcorp teachtaireachtaí Anthropic atá ag dul amach:
+Insteallann 67router eagarthóireacht amháin isteach i gcorp teachtaireachtaí Anthropic atá ag dul amach:
 
 ```json
 {
@@ -42,11 +42,11 @@ Insteallann OmniRoute eagarthóireacht amháin isteach i gcorp teachtaireachtaí
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Fógraítear an béite tríd an gceanntásc `anthropic-beta: context-management-2025-06-27`, a
-astaíonn OmniRoute cheana féin ar iarrataí Claude.
+astaíonn 67router cheana féin ar iarrataí Claude.
 
 Is é `applyContextEditingToBody()` a dhéanann an t-instealladh agus tá sé **idéimpitéinseach**: má tá eagarthóireacht `clear_tool_uses`
 ar an gcorp cheana féin (curtha leis ag glao roimhe seo nó curtha ar fáil ag an gcliant), fágtar an corp
-mar atá. Má tá eagarthóireacht `clear_thinking_20251015` ann freisin, déanann OmniRoute sórtáil chobhsaí ar an
+mar atá. Má tá eagarthóireacht `clear_thinking_20251015` ann freisin, déanann 67router sórtáil chobhsaí ar an
 eagarthóireacht `clear_thinking` chun í a chur chun tosaigh, toisc go n-éilíonn Anthropic go dtagann `clear_thinking` roimh
 `clear_tool_uses` san eagar `edits[]`.
 
@@ -144,7 +144,7 @@ Iompraíonn fíor-Claude an béite in `ANTHROPIC_BETA_BASE` agus ní théann sé
 
 ## Teiliméadracht `applied_edits`
 
-Tar éis freagra Claude, taifeadann OmniRoute an méid comhthéacs a ghlan an soláthraí i ndáiríre. **Ní**
+Tar éis freagra Claude, taifeadann 67router an méid comhthéacs a ghlan an soláthraí i ndáiríre. **Ní**
 shruthaítear é seo — baintear as corp an fhreagra neamhshruthaithe é, ar bhonn na hiarrachta is fearr, agus ní
 imríonn sé tionchar ar an bhfreagra riamh (slogtar teipeanna teiliméadrachta).
 
@@ -172,16 +172,16 @@ lipéad innill `context-editing`, agus is féidir é a idirdhealú ó choigiltea
 
 ## An gaol leis na hinnill chomhbhrúite áitiúla
 
-| Gné                         | Innill áitiúla (Caveman / RTK / LLMLingua / cruachta)         | Eagarthóireacht Chomhthéacsach Tharmligthe            |
-| --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------- |
-| Cá ritheann sé              | In OmniRoute, sula bhfágann an t-iarratas an seachfhreastalaí | Sa soláthraí (Claude), ar thaobh an fhreastalaí       |
-| Cad a chuireann sé in eagar | Téacs leid / comhthéacs / toradh uirlise                      | Seanbhloic úsáide uirlise / torthaí uirlise           |
-| Raon feidhme soláthraithe   | Gach soláthraí                                                | `claude` + `anthropic-compatible-cc-*` amháin         |
-| Scorán                      | Socruithe mód comhbhrúite                                     | `contextEditing.enabled`                              |
-| Mód teipe                   | Leanúint ar aghaidh ar theip (an buntéacs)                    | Cúltaca 400: bain an paraiméadar, atriail uair amháin |
-| Teiliméadracht choigiltis   | `engine: <engine id>`                                         | `engine: "context-editing"`                           |
+| Gné                         | Innill áitiúla (Caveman / RTK / LLMLingua / cruachta)        | Eagarthóireacht Chomhthéacsach Tharmligthe            |
+| --------------------------- | ------------------------------------------------------------ | ----------------------------------------------------- |
+| Cá ritheann sé              | In 67router, sula bhfágann an t-iarratas an seachfhreastalaí | Sa soláthraí (Claude), ar thaobh an fhreastalaí       |
+| Cad a chuireann sé in eagar | Téacs leid / comhthéacs / toradh uirlise                     | Seanbhloic úsáide uirlise / torthaí uirlise           |
+| Raon feidhme soláthraithe   | Gach soláthraí                                               | `claude` + `anthropic-compatible-cc-*` amháin         |
+| Scorán                      | Socruithe mód comhbhrúite                                    | `contextEditing.enabled`                              |
+| Mód teipe                   | Leanúint ar aghaidh ar theip (an buntéacs)                   | Cúltaca 400: bain an paraiméadar, atriail uair amháin |
+| Teiliméadracht choigiltis   | `engine: <engine id>`                                        | `engine: "context-editing"`                           |
 
-Comhlánaíonn an dá cheann a chéile: comhbhrúnn na hinnill áitiúla na bearta a sheolann OmniRoute; ligeann Eagarthóireacht Chomhthéacsach do
+Comhlánaíonn an dá cheann a chéile: comhbhrúnn na hinnill áitiúla na bearta a sheolann 67router; ligeann Eagarthóireacht Chomhthéacsach do
 Claude an comhthéacs reatha a bhearradh thar sealanna. Is féidir iad a chumasú le chéile.
 
 ## Féach Freisin

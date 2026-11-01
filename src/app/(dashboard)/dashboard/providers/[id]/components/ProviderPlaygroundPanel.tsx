@@ -9,9 +9,6 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { LlmChatCard } from "@/app/(dashboard)/dashboard/media-providers/components/LlmChatCard";
 import { ServiceKindTabs } from "@/app/(dashboard)/dashboard/media-providers/components/ServiceKindTabs";
-import { EmbeddingExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/EmbeddingExampleCard";
-import { ImageExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/ImageExampleCard";
-import { TtsExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/TtsExampleCard";
 import { SttExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/SttExampleCard";
 import { WebSearchExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/WebSearchExampleCard";
 import { WebFetchExampleCard } from "@/app/(dashboard)/dashboard/media-providers/components/WebFetchExampleCard";
@@ -23,8 +20,6 @@ import { providerText } from "../providerPageHelpers";
 
 export const MEDIA_SERVICE_KINDS: ServiceKind[] = [
   "embedding",
-  "image",
-  "tts",
   "stt",
   "webSearch",
   "webFetch",
@@ -36,12 +31,6 @@ export function renderKindPanel(kind: ServiceKind, providerId: string): JSX.Elem
   switch (kind) {
     case "llm":
       return <LlmChatCard providerId={providerId} />;
-    case "embedding":
-      return <EmbeddingExampleCard providerId={providerId} />;
-    case "image":
-      return <ImageExampleCard providerId={providerId} />;
-    case "tts":
-      return <TtsExampleCard providerId={providerId} />;
     case "stt":
       return <SttExampleCard providerId={providerId} />;
     case "webSearch":
@@ -70,9 +59,7 @@ export default function ProviderPlaygroundPanel({ providerId }: { providerId: st
   const ALL_VALID_KINDS = [
     "llm",
     "embedding",
-    "image",
     "imageToText",
-    "tts",
     "stt",
     "webSearch",
     "webFetch",

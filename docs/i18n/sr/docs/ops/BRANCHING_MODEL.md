@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute koristi model izdanja sa **paralelnim ciklusima**: namensku granu `release/vX.Y.Z`
+67router koristi model izdanja sa **paralelnim ciklusima**: namensku granu `release/vX.Y.Z`
 za aktivni ciklus, `main` za objavljenu liniju i nepromenljivu oznaku
 `vX.Y.Z` kada se taj ciklus isporuči. Očekivano je da se commit-i pojavljuju i na `release/*` _i_ na
 `main` — nije u pitanju zabuna.

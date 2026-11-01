@@ -4,7 +4,7 @@
 
 ---
 
-Fitar da rajistan kiran OmniRoute zuwa ma'ajiyar nazari ta waje secara ci gaba kuma a matakai.
+Fitar da rajistan kiran 67router zuwa ma'ajiyar nazari ta waje secara ci gaba kuma a matakai.
 
 Shafin dashboard na Logs yana adana tarihin buƙatu a SQLite (`call_logs`), wanda ake iyakancewa ta hanyar
 juyawa da tsare bayanai. Fitar da rajista tana aika wannan tarin bayanan a kan jadawali domin ya daɗe fiye da
@@ -273,7 +273,7 @@ Ka'idoji biyu don sabon wurin aikawa:
 - `send()` **dole ne ya jefa kuskure** idan an samu gazawar wani ɓangare. Idan ya kammala cikin nasara, hakan yana nufin "wurin aikawa yana da waɗannan layukan",
   kuma siginar matsayi za ta wuce su har abada.
 - Wurin aikawa da yake karɓar URL da mai amfani ya bayar dole ne ya tabbatar da ingancinsa ta
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) kafin ɗauko bayanai,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) kafin ɗauko bayanai,
   kamar yadda webhooks suke yi. BigQuery ba ya buƙatar wannan: rundunoninsa tabbatattu ne.
 
 ---

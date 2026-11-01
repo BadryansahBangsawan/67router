@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector yra „OmniRoute“ integruota HTTPS srauto derinimo priemonė — į „Charles Proxy“ / „mitmweb“ / „HTTP Toolkit“ panašus įrankis, kuris **atpažįsta LLM** ir **agentus**. Jis pasiekiamas adresu `/dashboard/tools/traffic-inspector` ir realiuoju laiku gauna srautą iš iki 5 vienu metu veikiančių fiksavimo šaltinių.
+Traffic Inspector yra „67router“ integruota HTTPS srauto derinimo priemonė — į „Charles Proxy“ / „mitmweb“ / „HTTP Toolkit“ panašus įrankis, kuris **atpažįsta LLM** ir **agentus**. Jis pasiekiamas adresu `/dashboard/tools/traffic-inspector` ir realiuoju laiku gauna srautą iš iki 5 vienu metu veikiančių fiksavimo šaltinių.
 
 **Vieta valdymo skydelyje:** `/dashboard/tools/traffic-inspector`
 **Šoninės juostos grupė:** Įrankiai (po AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector yra „OmniRoute“ integruota HTTPS srauto derinimo priemonė
 
 ### Kuo Traffic Inspector išskirtinis
 
-| Funkcija                                                                                                                    |  mitmweb  | Charles |  Fiddler  | **OmniRoute Traffic Inspector** |
-| --------------------------------------------------------------------------------------------------------------------------- | :-------: | :-----: | :-------: | :-----------------------------: |
-| Veikia žiniatinklyje                                                                                                        |     ✓     |    ✗    |     ✗     |                ✓                |
-| Atvirojo kodo                                                                                                               |     ✓     |    ✗    | iš dalies |                ✓                |
-| **Atpažįsta agentus** (žino, ar užklausa gauta iš Antigravity/Copilot/kt.)                                                  |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Atpažįsta LLM** (analizuoja OpenAI/Anthropic/Gemini formatą, leksemas, modelį)                                            |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Matomas modelių susiejimas** (gemini-3-flash → claude-sonnet-4.7)                                                         |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Atskira tarpinio serverio / pirminio serverio delsa**                                                                     | iš dalies |    ✗    |     ✗     |                ✓                |
-| **Integruota su „OmniRoute“** maršruto parinkimu, atsarginiu perjungimu ir sąnaudomis                                       |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Visos sistemos tarpinio serverio derinimas** (bet kuri įrenginyje veikianti programa)                                     |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Pasirinktinių pagrindinių kompiuterių srauto fiksavimas** (atskiras kiekvieno pagrindinio kompiuterio DNS peradresavimas) |     ✓     |    ✓    |     ✓     |                ✓                |
-| **HTTP_PROXY aplinkos režimas**                                                                                             |     ✓     |    ✓    |     ✓     |                ✓                |
-| **Pokalbio rodinys** (kelių etapų burbulai, tool_use/tool_result)                                                           |     ✗     |    ✗    |     ✗     |                ✓                |
-| **SSE srautų sujungimas** (atkūrimas iš delta įvykių)                                                                       |     ✗     |    ✗    |     ✗     |                ✓                |
-| **Seanso įrašymas** (pavadinamas, eksportuojamas .har/.jsonl formatu)                                                       |     ✗     |    ✓    |     ✓     |                ✓                |
+| Funkcija                                                                                                                    |  mitmweb  | Charles |  Fiddler  | **67router Traffic Inspector** |
+| --------------------------------------------------------------------------------------------------------------------------- | :-------: | :-----: | :-------: | :----------------------------: |
+| Veikia žiniatinklyje                                                                                                        |     ✓     |    ✗    |     ✗     |               ✓                |
+| Atvirojo kodo                                                                                                               |     ✓     |    ✗    | iš dalies |               ✓                |
+| **Atpažįsta agentus** (žino, ar užklausa gauta iš Antigravity/Copilot/kt.)                                                  |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Atpažįsta LLM** (analizuoja OpenAI/Anthropic/Gemini formatą, leksemas, modelį)                                            |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Matomas modelių susiejimas** (gemini-3-flash → claude-sonnet-4.7)                                                         |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Atskira tarpinio serverio / pirminio serverio delsa**                                                                     | iš dalies |    ✗    |     ✗     |               ✓                |
+| **Integruota su „67router“** maršruto parinkimu, atsarginiu perjungimu ir sąnaudomis                                        |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Visos sistemos tarpinio serverio derinimas** (bet kuri įrenginyje veikianti programa)                                     |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Pasirinktinių pagrindinių kompiuterių srauto fiksavimas** (atskiras kiekvieno pagrindinio kompiuterio DNS peradresavimas) |     ✓     |    ✓    |     ✓     |               ✓                |
+| **HTTP_PROXY aplinkos režimas**                                                                                             |     ✓     |    ✓    |     ✓     |               ✓                |
+| **Pokalbio rodinys** (kelių etapų burbulai, tool_use/tool_result)                                                           |     ✗     |    ✗    |     ✗     |               ✓                |
+| **SSE srautų sujungimas** (atkūrimas iš delta įvykių)                                                                       |     ✗     |    ✗    |     ✗     |               ✓                |
+| **Seanso įrašymas** (pavadinamas, eksportuojamas .har/.jsonl formatu)                                                       |     ✗     |    ✓    |     ✓     |               ✓                |
 
 ### Architektūra vienoje pastraipoje
 
@@ -265,7 +265,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, jei tai SSE atsakymas
   mappedTo: string | null; // x-omniroute-mapped antraštė
-  costEstimateUsd: number | null; // numatomos išlaidos pagal OmniRoute kainodarą
+  costEstimateUsd: number | null; // numatomos išlaidos pagal 67router kainodarą
 }
 ```
 
@@ -396,7 +396,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Sistemos tarpinio serverio nuostatos neatkurtos
 
-Jei OmniRoute užstringa, kai aktyvus visos sistemos tarpinio serverio režimas:
+Jei 67router užstringa, kai aktyvus visos sistemos tarpinio serverio režimas:
 
 **macOS:**
 
@@ -441,7 +441,7 @@ Bazinis kelias: `/api/tools/traffic-inspector/`
 | GET     | `/requests`                 | Pateikia užklausų sąrašą (galima filtruoti: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET     | `/requests/{id}`            | Vienos užklausos informacija                                                                        |
 | DELETE  | `/requests`                 | Išvalo atmintyje esantį buferį                                                                      |
-| POST    | `/requests/{id}/replay`     | Iš naujo įvykdo tą pačią užklausą per OmniRoute maršruto parinktuvą                                 |
+| POST    | `/requests/{id}/replay`     | Iš naujo įvykdo tą pačią užklausą per 67router maršruto parinktuvą                                  |
 | PUT     | `/requests/{id}/annotation` | Išsaugo arba atnaujina užklausos pastabą                                                            |
 
 ### WebSocket

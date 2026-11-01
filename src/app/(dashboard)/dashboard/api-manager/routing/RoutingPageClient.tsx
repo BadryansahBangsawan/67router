@@ -14,7 +14,10 @@ export default function RoutingPageClient() {
       <PageHeader
         compact
         breadcrumbs={
-          <Link href="/dashboard/api-manager" className="text-sm text-primary hover:underline">
+          <Link
+            href="/dashboard/api-manager"
+            className="text-[13px] text-text-muted hover:text-text-main"
+          >
             ← {t("backToKeys")}
           </Link>
         }

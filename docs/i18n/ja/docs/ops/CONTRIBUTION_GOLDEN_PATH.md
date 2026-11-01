@@ -112,7 +112,7 @@ npm run lint
 - CLI カタログは `bin/cli/locales/` 配下に別途配置されています。
 - ICU プレースホルダーとタグは正確に保持してください。製品名／プロバイダー名／モデル名、
   プロトコル名とヘッダー名、コマンド、コード／JSON 識別子、URL、環境変数、または
-  `OmniRoute`、`OAuth`、`MCP`、`A2A` などの保護用語は翻訳しないでください。現在のソースリストは
+  `67router`、`OAuth`、`MCP`、`A2A` などの保護用語は翻訳しないでください。現在のソースリストは
   `scripts/i18n/glossary/protected-terms.json` です。
 
 **重点ループ**
@@ -230,7 +230,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # 別の場所（CI）�
 - **同じ成果物を昇格させます。** `promote` は、現在の tarball ハッシュに対する検証に合格していない候補版の昇格を拒否します。デフォルトのアクティブスロットは `_artifacts/candidate/current` です。`--target <dir>` を指定すると同じファイルシステム上の別のディレクトリが選択され、その previous スロットは `<dir>.previous` になります。各名前変更はアトミックに行われ、途中で失敗した場合は、それまでに実行済みの名前変更を元に戻します。
 - **ロールバックします。** `run` は昇格後のスロットを再度検証し、そのチェックが失敗した場合は `current` と `previous` を元に戻します。最初の検証に失敗した候補版が昇格されることはありません。
 
-すべてのファイルは gitignore 対象の `_artifacts/candidate/` 配下に書き込まれます。既存の OmniRoute インストールとそのデータディレクトリには一切触れません。昇格された CLI は `_artifacts/candidate/current/prefix/bin/omniroute` にあります。使用する際は、独自の `DATA_DIR` を指定して起動してください。終了コード：成功は `0`、検証または昇格の失敗は `1`、使用方法の誤りまたはビルドの欠落は `2` です。
+すべてのファイルは gitignore 対象の `_artifacts/candidate/` 配下に書き込まれます。既存の 67router インストールとそのデータディレクトリには一切触れません。昇格された CLI は `_artifacts/candidate/current/prefix/bin/omniroute` にあります。使用する際は、独自の `DATA_DIR` を指定して起動してください。終了コード：成功は `0`、検証または昇格の失敗は `1`、使用方法の誤りまたはビルドの欠落は `2` です。
 
 ## ローカルループと CI の比較
 

@@ -11,7 +11,7 @@ User-Agent、`anthropic-beta` 标志、Stainless SDK 请求头等）。
 
 ## 快速开始 — 使用原生 `agentrouter` 提供者（推荐）
 
-对于大多数用户，**无需特殊设置**。OmniRoute 内置了一个
+对于大多数用户，**无需特殊设置**。67router 内置了一个
 `agentrouter` 提供者，其中已完整包含 Claude Code 请求特征（参见
 `open-sse/config/providerRegistry.ts` → `agentrouter`）。使用方法：
 
@@ -32,7 +32,7 @@ User-Agent、`anthropic-beta` 标志、Stainless SDK 请求头等）。
 
 ## 高级：通过 Claude Code 兼容提供者类型连接
 
-OmniRoute 还通过 **Claude Code
+67router 还通过 **Claude Code
 兼容**提供者类型（`anthropic-compatible-cc-*`）支持 AgentRouter（以及类似的中继服务），该类型使用具有正确请求特征的
 Anthropic Messages API。将通用
 `openai-compatible-chat` 提供者指向 `https://agentrouter.org` 将
@@ -45,13 +45,13 @@ Code 的请求。
 
 - 一个 AgentRouter 账户和 API 密钥。新注册用户可通过项目 [README](../README.md) 中的推广
   链接获得免费额度。
-- 运行 OmniRoute 时已启用 `ENABLE_CC_COMPATIBLE_PROVIDER` 功能标志
+- 运行 67router 时已启用 `ENABLE_CC_COMPATIBLE_PROVIDER` 功能标志
   （见下文）。
 
 ## 1. 启用 CC 兼容提供者类型
 
 Claude Code 兼容提供者类型受功能标志控制，因为它发送的流量会高度模拟官方 Claude Code 客户端。请在
-启动 OmniRoute 前设置以下环境变量来启用它：
+启动 67router 前设置以下环境变量来启用它：
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

@@ -4,7 +4,7 @@
 
 ---
 
-Cuireann `@omniroute/opencode-plugin-v2` do chatalóg OmniRoute ar fad — samhlacha, teaglamaí agus
+Cuireann `@omniroute/opencode-plugin-v2` do chatalóg 67router ar fad — samhlacha, teaglamaí agus
 uath-theaglamaí — i roghnóir samhlacha OpenCode v2, mar aon le hainmneacha taispeána, praghsáil agus
 buiséid sraithe saor in aisce.
 
@@ -15,7 +15,7 @@ roinntear aon rud eatarthu, mar sin ní chuireann uasghrádú ceann amháin iall
 ## Riachtanais
 
 - OpenCode v2.
-- Geata OmniRoute atá inrochtana (`http://localhost:20128` de réir réamhshocraithe).
+- Geata 67router atá inrochtana (`http://localhost:20128` de réir réamhshocraithe).
 - Node.js 22 nó 24.
 
 ## Suiteáil
@@ -116,7 +116,7 @@ Socraigh `"geminiSanitization": false` chun é a mhúchadh.
 
 | Siomptóm                                                 | Cúis                                                                                                                                            |
 | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ní thaispeánann an roghnóir aon samhail OmniRoute        | Níor réitíodh aon eochair (seiceáil an rabhadh tosaithe), nó ní féidir an geata a bhaint amach                                                  |
+| Ní thaispeánann an roghnóir aon samhail 67router         | Níor réitíodh aon eochair (seiceáil an rabhadh tosaithe), nó ní féidir an geata a bhaint amach                                                  |
 | Aitheantais amh samhlacha, gan teaglamaí, gan phraghsáil | Dhiúltaigh na críochphointí bainistíochta don chomhartha — socraigh `managementReadToken`                                                       |
 | Catalóg `freeOnly` ghearr nó fholamh                     | Gan chomhartha bainistíochta nó diúltaíodh don chomhartha — léigh an líne achoimre athnuachana (comhaireamh `unmatched-free`) i loga an óstaigh |
 | Seisiún pionnáilte le `opencode-<id>/…`                  | D’fhoilsigh an breiseán v1 `opencode-<id>`; foilsíonn v2 `<id>` lom, mar sin roghnaigh an tsamhail arís faoi `<id>/…`                           |

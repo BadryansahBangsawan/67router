@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute menentukan driver SQLite saat startup melalui rantai fallback 5 langkah:
+67router menentukan driver SQLite saat startup melalui rantai fallback 5 langkah:
 
 1. **`better-sqlite3` bawaan** (melalui `dependencies` di `package.json`)
    — paling cepat, berupa biner native, diinstal oleh `npm install` saat alat build tersedia.
@@ -27,14 +27,14 @@ OmniRoute menentukan driver SQLite saat startup melalui rantai fallback 5 langka
   runtime di `~/.omniroute/runtime/` menghindari cache npm global.
 - **Tidak ada alat build**: Beberapa lingkungan (Windows perusahaan tanpa VS Build
   Tools, image Docker minimal) tidak dapat mengompilasi `better-sqlite3`. Installer runtime
-  mengambil biner siap pakai dari registry npm; driver fallback memastikan OmniRoute
+  mengambil biner siap pakai dari registry npm; driver fallback memastikan 67router
   tetap dapat dimulai meskipun proses tersebut gagal.
 - **Sistem air-gapped**: Jika registry npm tidak dapat dijangkau, `node:sqlite`
   atau `sql.js` menjamin fungsionalitas dasar.
 
 ## Validasi magic byte
 
-Sebelum memuat file `.node` yang diinstal saat runtime, OmniRoute membaca 8 byte
+Sebelum memuat file `.node` yang diinstal saat runtime, 67router membaca 8 byte
 pertama dan mencocokkannya dengan magic platform yang diketahui:
 
 | Platform              | Byte (hex)    | Label       |
@@ -104,9 +104,9 @@ Implementasi:
 ## Topologi penulis tunggal (HA tidak didukung)
 
 Rantai fallback driver di atas tetap berjalan dalam **satu proses**. SQLite default
-OmniRoute menggunakan **satu penulis**:
+67router menggunakan **satu penulis**:
 
-- Jangan hubungkan dua replika OmniRoute ke file `storage.sqlite` yang sama.
+- Jangan hubungkan dua replika 67router ke file `storage.sqlite` yang sama.
 - Restart container, deployment Recreate, OOM kill, atau restart HEALTHCHECK akan memutus
   setiap sesi SSE yang sedang berlangsung. Tidak ada pengosongan sesi pada alur bawaan.
 - Liveness orkestrator yang menganggap `/healthz` lambat sebagai kondisi mati akan menghentikan satu-satunya

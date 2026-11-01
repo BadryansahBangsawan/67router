@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Malti)
+# 🐳 Docker Guide — 67router (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [B’Fajl tal-Varjabbli tal-Ambjent](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Profili Disponibbli](#available-profiles)
-- [Konfigurazzjoni tal-għodod CLI tal-host meta OmniRoute jitħaddem f’Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Konfigurazzjoni tal-għodod CLI tal-host meta 67router jitħaddem f’Docker](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Sidecar ta’ Redis](#redis-sidecar)
 - [Compose għall-Produzzjoni](#production-compose)
 - [Stadji tad-Dockerfile](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Profili Disponibbli
 
-OmniRoute jinkludi profili Compose għall-konfigurazzjonijiet ewlenin tal-iskjerament. Agħżel dak li jaqbel mal-ambjent tiegħek.
+67router jinkludi profili Compose għall-konfigurazzjonijiet ewlenin tal-iskjerament. Agħżel dak li jaqbel mal-ambjent tiegħek.
 
 | Profil              | Servizz          | Meta tużah                                                                                                                                                     | Kmand                                        |
 | ------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute jinkludi profili Compose għall-konfigurazzjonijiet ewlenin tal-iskjer
 
 > Jistgħu jingħaqdu diversi profili: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Konfigurazzjoni tal-għodod CLI tal-host meta OmniRoute jaħdem f'Docker
+## Konfigurazzjoni tal-għodod CLI tal-host meta 67router jaħdem f'Docker
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` u l-buttuna
 **Issejvja l-konfigurazzjoni** tad-dashboard kollha jiktbu fajls bħal `~/.codex/*.config.toml`. Dawk il-mogħdijiet
@@ -103,11 +103,11 @@ l-container, il-kitba tispiċċa fid-direttorju home tal-container stess (`/home
 l-image taħdem b'`USER node`), fejn l-ebda CLI tal-host qatt mhu se jaqraha u fejn
 titħassar mal-ewwel rikreazzjoni tal-container.
 
-OmniRoute jinduna b'dan u jirrifjuta l-kitba filwaqt li jipprovdi struzzjonijiet minflok
+67router jinduna b'dan u jirrifjuta l-kitba filwaqt li jipprovdi struzzjonijiet minflok
 jirrapporta suċċess li ma tistax tuża: is-CLI joħroġ b'`2`, u l-API twieġeb b'`422`
 bi `containerEphemeralTarget: true`.
 
-### Rakkomandat: ħaddem is-CLI fuq il-host, u OmniRoute f'Docker
+### Rakkomandat: ħaddem is-CLI fuq il-host, u 67router f'Docker
 
 Il-container jipprovdi l-API; is-CLI jikkonfigura l-għodod tal-host tiegħek.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind mount huwa dak li jagħmel il-mogħdija affidabbli: OmniRoute jaqra
+Bind mount huwa dak li jagħmel il-mogħdija affidabbli: 67router jaqra
 `/proc/self/mountinfo` u jippermetti kitbiet f'mogħdijiet immuntati (u f'direttorji
 li t-tfal tagħhom huma mounts, li hija eżattament l-istruttura ta' `/host-home` hawn fuq) filwaqt li
 xorta jirrifjuta dawk mhux immuntati.
@@ -178,7 +178,7 @@ bi twissija li mhix se tibqa' teżisti wara l-container.
 
 ## Sidecar ta’ Redis
 
-OmniRoute jiddependi fuq Redis biex jappoġġja l-limitatur distribwit tar-rata u l-cache kondiviża. Is-servizz `redis` huwa **dejjem definit** f’`docker-compose.yml` (m’għandu ebda restrizzjoni ta’ profil) u jibda flimkien ma’ kwalunkwe profil ieħor.
+67router jiddependi fuq Redis biex jappoġġja l-limitatur distribwit tar-rata u l-cache kondiviża. Is-servizz `redis` huwa **dejjem definit** f’`docker-compose.yml` (m’għandu ebda restrizzjoni ta’ profil) u jibda flimkien ma’ kwalunkwe profil ieħor.
 
 | Dettall                  | Valur                                                    |
 | ------------------------ | -------------------------------------------------------- |
@@ -358,7 +358,6 @@ Lil hinn mill-valuri awtomatiċi ddokumentati f’[ENVIRONMENT.md](../reference/
 | `DASHBOARD_PORT` / `API_PORT` | Jissostitwixxu l-ports esposti għad-dashboard (20128) u għall-API (20129)                                                                                                                                                                                                  | `20128` / `20129`                   |
 | `APP_BIND_HOST`               | Interfaċċa tal-host li fuqha docker-compose jippubblika l-ports tad-dashboard/API/live-WS. B’`REQUIRE_API_KEY=false` (il-valur awtomatiku), `0.0.0.0` jesponi l-proxy anonimu `/v1` għal-LAN — wessa’ l-aċċess biss b’`REQUIRE_API_KEY=true` jew b’reverse proxy quddiemu. | `127.0.0.1`                         |
 | `CLIPROXY_BIND_HOST`          | Interfaċċa tal-host li fuqha docker-compose jippubblika s-sidecar `cliproxyapi` — il-volum tad-data tiegħu jżomm il-kredenzjali tal-fornitur.                                                                                                                              | `127.0.0.1`                         |
-| `OMNIROUTE_PLUGINS_DIR`       | Direttorju li l-iskaner tal-plugins waqt it-tħaddim jaqra minnu u jinstalla fih. Issettjah meta l-plugins ikunu bind-mounted: il-valur awtomatiku jsegwi `HOME`, li image mhux bilfors tesporta.                                                                           | `~/.omniroute/plugins`              |
 | `OMNIROUTE_BASE_PATH`         | Subpath tal-URL meta l-app tiġi ppubblikata wara reverse proxy (eż. `/omniroute`)                                                                                                                                                                                          | _(vojt = root)_                     |
 | `NEXT_PUBLIC_BASE_URL`        | Oriġini pubblika tal-browser inkluż is-subpath (eż. `https://host/omniroute`)                                                                                                                                                                                              | mhux issettjat                      |
 | `PROD_DASHBOARD_PORT`         | Port tad-dashboard fuq in-naħa tal-host għal `docker-compose.prod.yml`                                                                                                                                                                                                     | `20130`                             |
@@ -366,7 +365,7 @@ Lil hinn mill-valuri awtomatiċi ddokumentati f’[ENVIRONMENT.md](../reference/
 
 ## Reverse Proxy fuq Subpath (Traefik / nginx)
 
-Il-`basePath` ta’ Next.js jiġi kkompilat fil-bundle standalone. OmniRoute jirreġistra l-valur integrat
+Il-`basePath` ta’ Next.js jiġi kkompilat fil-bundle standalone. 67router jirreġistra l-valur integrat
 f’fajl sentinel fl-għerq tal-app (miktub waqt `npm run build`; jinqara minn
 `scripts/docker/ensure-docker-base-path.mjs`) u jqabblu ma’
 `OMNIROUTE_BASE_PATH` meta jibda l-container. Meta jkunu differenti u l-image tkun
@@ -439,7 +438,7 @@ liveness permezz ta’ TCP jekk il-probes HTTP jilħqu t-timeout. Gwida sħiħa 
 
 ## Docker Compose ma’ Caddy (HTTPS Auto-TLS)
 
-OmniRoute jista’ jiġi espost b’mod sigur permezz tal-forniment awtomatiku tal-SSL ta’ Caddy. Kun żgur li r-rekord DNS A tad-dominju tiegħek jipponta lejn l-IP tas-server tiegħek.
+67router jista’ jiġi espost b’mod sigur permezz tal-forniment awtomatiku tal-SSL ta’ Caddy. Kun żgur li r-rekord DNS A tad-dominju tiegħek jipponta lejn l-IP tas-server tiegħek.
 
 ```yaml
 services:
@@ -470,11 +469,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy jistabbilixxi l-headers standard tat-trażmissjoni għall-container upstream. OmniRoute juża
+Caddy jistabbilixxi l-headers standard tat-trażmissjoni għall-container upstream. 67router juża
 `NEXT_PUBLIC_BASE_URL` bħala l-oriġini pubblika kanonika għall-callbacks tal-OAuth u l-links pubbliċi
 ġġenerati; l-operazzjonijiet ta’ kitba awtentikati tad-dashboard jużaw talbiet mill-istess oriġini flimkien ma’
 protezzjoni CSRF marbuta mas-sessjoni. Ippermetti `OMNIROUTE_TRUST_PROXY` biss għal deployments avvanzati fejn intenzjonalment
-trid li OmniRoute jidderiva l-oriġini pubblika minn headers trażmessi fdati minflok minn konfigurazzjoni
+trid li 67router jidderiva l-oriġini pubblika minn headers trażmessi fdati minflok minn konfigurazzjoni
 espliċita.
 
 ## Cloudflare Quick Tunnel
@@ -486,11 +485,11 @@ Il-pannelli tat-tunnels tal-endpoints (Cloudflare, Tailscale, ngrok) jistgħu ji
 ### Noti dwar it-Tunnel
 
 - L-URLs tal-Quick Tunnel huma temporanji u jinbidlu wara kull ristartjar.
-- Il-Quick Tunnels ma jiġux irrestawrati awtomatikament wara ristartjar ta’ OmniRoute jew tal-container. Erġa’ attivahom mid-dashboard meta jkun meħtieġ.
+- Il-Quick Tunnels ma jiġux irrestawrati awtomatikament wara ristartjar ta’ 67router jew tal-container. Erġa’ attivahom mid-dashboard meta jkun meħtieġ.
 - L-installazzjoni ġestita bħalissa tappoġġja Linux, macOS, u Windows fuq `x64` / `arm64`.
 - Il-Quick Tunnels ġestiti jużaw it-trasport HTTP/2 b’mod awtomatiku biex jevitaw twissijiet storbjużi dwar il-buffer UDP ta’ QUIC f’ambjenti ta’ containers b’riżorsi limitati. Issettja `CLOUDFLARED_PROTOCOL=quic` jew `auto` jekk trid trasport differenti.
 - L-images ta’ Docker jinkludu l-għeruq CA tas-sistema u jgħadduhom lil `cloudflared` ġestit, u b’hekk jiġu evitati fallimenti ta’ fiduċja TLS meta t-tunnel jinbeda minn ġewwa l-container.
-- Issettja `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` jekk trid li OmniRoute juża binarju eżistenti minflok iniżżel wieħed.
+- Issettja `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` jekk trid li 67router juża binarju eżistenti minflok iniżżel wieħed.
 
 ## Tags tal-Images
 
@@ -503,7 +502,7 @@ Manifest għal diversi pjattaformi: `linux/amd64` + `linux/arm64` nattivi (Apple
 
 ### Kanali tar-Rilaxxi
 
-OmniRoute jippubblika kanali Docker separati għal rilaxxi stabbli, ittestjar tal-fergħa attiva tar-rilaxx, u builds tal-iżvilupp.
+67router jippubblika kanali Docker separati għal rilaxxi stabbli, ittestjar tal-fergħa attiva tar-rilaxx, u builds tal-iżvilupp.
 
 | Kanal                           | Sors                                       | Mutabbiltà                            | Użu rakkomandat                                                                                                                       |
 | ------------------------------- | ------------------------------------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -556,7 +555,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Qabel l-ittestjar, agħmel backup tal-volum tad-data ta’ OmniRoute jew tad-direttorju tad-data mmuntat permezz ta’ bind mount. Biex treġġa’ lura, irrestawra l-verżjoni stabbli jew id-diġest użat qabel u erġa’ oħloq il-container:
+Qabel l-ittestjar, agħmel backup tal-volum tad-data ta’ 67router jew tad-direttorju tad-data mmuntat permezz ta’ bind mount. Biex treġġa’ lura, irrestawra l-verżjoni stabbli jew id-diġest użat qabel u erġa’ oħloq il-container:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -576,7 +575,7 @@ Build minn fergħa tar-rilaxx qatt ma tista’ tmexxi `latest`; verżjoni semant
 
 ## Aġġornamenti tad-dashboard f'Docker
 
-Container minn image ppubblikata ma jistax jissostitwixxi lilu nnifsu. Meta OmniRoute jinduna li qed jaħdem ġewwa
+Container minn image ppubblikata ma jistax jissostitwixxi lilu nnifsu. Meta 67router jinduna li qed jaħdem ġewwa
 container (mingħajr checkout ta' `.git`, u mhux installazzjoni npm), il-banner tal-aġġornament fid-dashboard prinċipali juri
 l-kmand tal-host li għandu jitħaddem minflok l-istruzzjonijiet npm/git, flimkien ma' buttuna biex tikkopjah:
 
@@ -592,7 +591,7 @@ L-isem tas-servizz jiġi minn `AUTO_UPDATE_SERVICE` (il-valur predefinit huwa `o
 
 Biex **Aġġorna Issa** jibqa' jaħdem mingħajr ma timmonta `/var/run/docker.sock` (li jagħti lill-container
 aċċess root fuq il-host — ara t-twissija dwar il-profil `cli` aktar 'il fuq), issettja `DOCKER_UPDATE_TRIGGER_FILE` fuq is-servizz
-OmniRoute u ħaddem watcher fuq il-host:
+67router u ħaddem watcher fuq il-host:
 
 ```yaml
 services:
@@ -606,7 +605,7 @@ services:
 Il-path irid ikun ġewwa `DATA_DIR` (il-valuri relattivi jiġu riżolti fir-rigward tiegħu); kull ħaġa oħra tiġi
 miċħuda. Imbagħad **Aġġorna Issa** jikteb `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` f'dak
 il-fajl, iwieġeb b'`202`, u d-dashboard jiċċekkja ripetutament `/api/system/version` sakemm il-verżjoni l-ġdida tkun attiva
-u jerġa' jitgħabba. OmniRoute qatt ma jħaddem shell jew kmand Docker f'dan il-modalità. Bħal kull azzjoni ta'
+u jerġa' jitgħabba. 67router qatt ma jħaddem shell jew kmand Docker f'dan il-modalità. Bħal kull azzjoni ta'
 aġġornament, it-talba tiġi aċċettata biss minn klijenti loopback/LAN.
 
 Direttorju tad-data mmuntat b'bind jagħti lill-host path stabbli biex jimmonitorja. Unitajiet `systemd` ta' eżempju
@@ -615,7 +614,7 @@ Direttorju tad-data mmuntat b'bind jagħti lill-host path stabbli biex jimmonito
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Watch for OmniRoute dashboard update requests
+Description=Watch for 67router dashboard update requests
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -627,7 +626,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Pull and recreate the OmniRoute container
+Description=Pull and recreate the 67router container
 
 [Service]
 Type=oneshot
@@ -647,13 +646,13 @@ Is-servizz ineħħi t-talba qabel ma jagħmel pull sabiex eżekuzzjoni falluta m
 
 ## Disponibbiltà: SQLite predefinit għandu replika waħda
 
-OmniRoute standard fuq Docker / Kubernetes huwa **proċess Node wieħed + writer SQLite wieħed**. Id-disponibbiltà għolja **mhijiex appoġġjata** b'din it-topoloġija.
+67router standard fuq Docker / Kubernetes huwa **proċess Node wieħed + writer SQLite wieħed**. Id-disponibbiltà għolja **mhijiex appoġġjata** b'din it-topoloġija.
 
-| Restrizzjoni                                                    | Konsegwenza                                                                                                                                                                                                                                                                                                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Writer wieħed                                                   | **Tħaddimx** diversi repliki mal-istess fajl SQLite. Dan jikkorrompi d-DB.                                                                                                                                                                                                                                                                              |
-| Ħolqien mill-ġdid / ristartjar / terminazzjoni minn HEALTHCHECK | **Qtugħ totali** ta' SSE li jkunu għaddejjin, sessjonijiet tad-dashboard u state fil-memorja. Kull klijent konness jinqata'. Talbiet ġodda matul il-perjodu mingħajr endpoint jirċievu **`502 Bad Gateway: Unknown error`** mir-reverse proxy, mhux JSON ta' OmniRoute — il-klijenti ma jistgħux jiddistingwu dan minn falliment tal-fornitur (#11015). |
-| L-istess event loop bħal `/healthz`                             | Ċiklu impenjattiv tal-katalgu jew tal-kompressjoni jista' jdewwem il-probes; timeout qasir imbagħad jerġa' jibda l-**unika** replika.                                                                                                                                                                                                                   |
+| Restrizzjoni                                                    | Konsegwenza                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Writer wieħed                                                   | **Tħaddimx** diversi repliki mal-istess fajl SQLite. Dan jikkorrompi d-DB.                                                                                                                                                                                                                                                                             |
+| Ħolqien mill-ġdid / ristartjar / terminazzjoni minn HEALTHCHECK | **Qtugħ totali** ta' SSE li jkunu għaddejjin, sessjonijiet tad-dashboard u state fil-memorja. Kull klijent konness jinqata'. Talbiet ġodda matul il-perjodu mingħajr endpoint jirċievu **`502 Bad Gateway: Unknown error`** mir-reverse proxy, mhux JSON ta' 67router — il-klijenti ma jistgħux jiddistingwu dan minn falliment tal-fornitur (#11015). |
+| L-istess event loop bħal `/healthz`                             | Ċiklu impenjattiv tal-katalgu jew tal-kompressjoni jista' jdewwem il-probes; timeout qasir imbagħad jerġa' jibda l-**unika** replika.                                                                                                                                                                                                                  |
 
 **Matriċi tal-probes** (ara wkoll [ir-rakkomandazzjonijiet għall-probes ta' Kubernetes](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -757,7 +756,7 @@ kif ukoll ir-rotta effettiva tal-konnessjoni; dan l-iżball waħdu ma jindikax A
 ### Ippreferi proxy speċifiku għall-konnessjoni
 
 Uża l-[konfigurazzjoni tal-proxy għal kull konnessjoni](../ops/PROXY_GUIDE.md#4-level-proxy-system)
-ta' OmniRoute għall-konnessjoni Gemini affettwata, imbagħad erġa' wettaq **Test Connection** u talba żgħira
+ta' 67router għall-konnessjoni Gemini affettwata, imbagħad erġa' wettaq **Test Connection** u talba żgħira
 bl-istess mudell. Dan iżomm il-bidla fir-routing limitata għal dik il-konnessjoni. Ivverifika
 li l-proxy jista' jintlaħaq mill-container, u li l-konnessjoni tassew tagħżlu.
 Il-bidla tar-rotta ma tiggarantix l-eliġibbiltà reġjonali tas-servizz upstream.
@@ -826,7 +825,7 @@ jista' jinterrompi containers oħra konnessi miegħu; tħassarx il-volume tad-da
 
 ## Noti Importanti
 
-- **Modalità WAL ta’ SQLite:** `docker stop` għandu jitħalla jitlesta sabiex OmniRoute jkun jista’ jwettaq checkpoint tal-aħħar bidliet lura f’`storage.sqlite`. Il-fajls Compose inklużi diġà jistabbilixxu perjodu ta’ grazzja ta’ 40s għall-waqfien. Jekk tħaddem l-image direttament, żomm `--stop-timeout 40`.
+- **Modalità WAL ta’ SQLite:** `docker stop` għandu jitħalla jitlesta sabiex 67router jkun jista’ jwettaq checkpoint tal-aħħar bidliet lura f’`storage.sqlite`. Il-fajls Compose inklużi diġà jistabbilixxu perjodu ta’ grazzja ta’ 40s għall-waqfien. Jekk tħaddem l-image direttament, żomm `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Issettjah għal `true` jekk il-backups ta’ rutina/qabel il-kitba jkunu ġestiti esternament. Il-migrazzjonijiet ta’ databases eżistenti xorta jeħtieġu snapshot tas-sikurezza durabbli tagħhom stess u protezzjoni kontra migrazzjonijiet tal-massa.
 - **Persistenza tad-Data:** Dejjem immonta volum ma’ `/app/data` biex tippreserva d-database, iċ-ċwievet u l-konfigurazzjonijiet tiegħek bejn ir-restarts tal-container.
 - **Konfigurazzjoni tal-Port:** Ibdel il-varjabbli tal-ambjent `PORT` biex tibdel il-port predefinit `20128`.

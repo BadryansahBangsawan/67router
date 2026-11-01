@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, farklı kapsamlara sahip, süreç içinde yerel **iki** şerit sistemine sahiptir. Bunlar
+67router, farklı kapsamlara sahip, süreç içinde yerel **iki** şerit sistemine sahiptir. Bunlar
 birbirini tamamlar; operatörler hangisine baktıklarını bilmelidir.
 
 ## 1. Bayt düzeyinde süreç genelinde kabul (`chatBodyAdmission.ts`)

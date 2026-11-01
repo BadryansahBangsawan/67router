@@ -4,7 +4,7 @@
 
 ---
 
-> **Trumpai**: „OmniRoute“ glaudinimo variklis yra **išplečiamas** — galite registruoti pasirinktinius variklius, pateikti naujų kalbų kalbinius paketus ir sudaryti daugiasluoksnius konvejerius. Šiame vadove parodyta, kaip tai padaryti.
+> **Trumpai**: „67router“ glaudinimo variklis yra **išplečiamas** — galite registruoti pasirinktinius variklius, pateikti naujų kalbų kalbinius paketus ir sudaryti daugiasluoksnius konvejerius. Šiame vadove parodyta, kaip tai padaryti.
 
 **Susiję vadovai:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Projekto lygmuo (įkeliama paleidžiant)
 ```
 
-Arba įkelkite programiškai iš papildinio:
+Or register it programmatically at startup:
 
 ```ts
-// Jūsų papildinyje
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // Papildinio SDK pateikia onRequest / onResponse / onError kablius. Užregistruokite
-  // variklį, kai įkeliamas papildinio modulis (arba per pirmąjį onRequest); išregistruokite jį
-  // naudodami savo užbaigimo procedūrą.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Užbaigiant:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ pasirinkti strategijos parinkiklyje pagal jo `id`. Patikrinkite integraciją įt
 
 ## Kalbos paketų kūrimas
 
-„Caveman“ stiliaus glaudinimas naudoja **konkrečioms kalboms skirtus taisyklių paketus**, kad kiekvienoje natūraliojoje kalboje apdorotų užpildančias frazes, neužtikrintumą išreiškiančias konstrukcijas ir daugiažodžius šablonus. „OmniRoute“ pateikiamas su **6 kalbų paketais**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+„Caveman“ stiliaus glaudinimas naudoja **konkrečioms kalboms skirtus taisyklių paketus**, kad kiekvienoje natūraliojoje kalboje apdorotų užpildančias frazes, neužtikrintumą išreiškiančias konstrukcijas ir daugiažodžius šablonus. „67router“ pateikiamas su **6 kalbų paketais**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Paketo struktūra
 
@@ -391,7 +382,7 @@ N-ojo variklio išvestis tampa N+1-ojo variklio įvestimi.
 
 ### Glaudinimo režimai
 
-OmniRoute kiekvienai užklausai parenka **VIENĄ režimą**, atsižvelgdama į konfigūraciją, automatinio suaktyvinimo slenksčius ir derinių perrašymus.
+67router kiekvienai užklausai parenka **VIENĄ režimą**, atsižvelgdama į konfigūraciją, automatinio suaktyvinimo slenksčius ir derinių perrašymus.
 Galimi režimai apibrėžti faile `open-sse/services/compression/types.ts` (tipas `CompressionMode`):
 
 | Režimas      | Varikliai                | Naudojimo atvejis                                                                                                                                                                                                                             |
@@ -508,10 +499,10 @@ Norėdami jį valdyti per konfigūraciją, nustatykite `mode: "stacked"` ir pate
 
 ## Pirminių projektų sinchronizavimo politika
 
-OmniRoute README faile nurodo kelis pirminius projektus, kuriais remiasi glaudinimo
+67router README faile nurodo kelis pirminius projektus, kuriais remiasi glaudinimo
 moduliai („įkvėpta RTK, Caveman, LLMLingua-2, Troglodita“). Dažnas pagalbininkų
 klausimas: **kai pirminiame RTK projekte pridedamas naujas įrankio filtras arba Caveman prideda
-taisyklių rinkinį, kaip tai patenka į OmniRoute?** Šiame skyriuje pateikiamas oficialus atsakymas.
+taisyklių rinkinį, kaip tai patenka į 67router?** Šiame skyriuje pateikiamas oficialus atsakymas.
 
 ### Įtrauktos kopijos ir nepriklausomi įgyvendinimai
 
@@ -532,7 +523,7 @@ pirminės kopijos, iš kurios būtų galima vykdyti `git pull` — būtent todė
 **Nėra automatinio pirminių projektų leidimų stebėjimo ir nėra `compression-sync`
 žymos** — taip numatyta. Kadangi moduliai yra pakartotiniai įgyvendinimai, pirminio RTK
 filtras ar Caveman taisyklių rinkinys nėra integruojamas kaip kodas; jis **iš naujo išreiškiamas kaip nauja
-taisyklė ar filtras OmniRoute formatu** (žr.
+taisyklė ar filtras 67router formatu** (žr.
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) ir pridedamas pagal poreikį per
 įprastą PR. Pirmiau nurodyti plėtimo taškai (pasirinktinis modulis, kalbos paketas, RTK filtras)
 yra patvirtintas būdas tokiam patobulinimui pateikti.
@@ -546,14 +537,14 @@ Naujausi būtent tokio proceso pavyzdžiai:
 ### Headroom (įvesties glaudinimo tarpinis serveris)
 
 Headroom yra **visiškai vidinis** — fiksuota įtraukta `gcf` kodeko momentinė kopija ir
-OmniRoute nuosavi `smartcrusher` / `toon` / `tabular` sluoksniai. Nėra aktyviai
+67router nuosavi `smartcrusher` / `toon` / `tabular` sluoksniai. Nėra aktyviai
 stebimo pirminio projekto, išskyrus įtrauktą kopiją; `gcf` naujinamas
 rankiniu būdu, kai pasikeičia kodekas, ir pakartotinai patikrinamas pagal glaudinimo biudžeto
 patikrą (`check:compression-budget`).
 
 ### Pirminio projekto įkvėpto patobulinimo siūlymas
 
-1. **Neįtraukite kopijos** — iš naujo išreikškite pirminio projekto taisyklę ar filtrą OmniRoute formatu.
+1. **Neįtraukite kopijos** — iš naujo išreikškite pirminio projekto taisyklę ar filtrą 67router formatu.
 2. Pridėkite jį per atitinkamą toliau nurodytą plėtimo tašką (kalbos paketą, RTK filtrą arba
    pasirinktinį modulį).
 3. PR apraše nurodykite pirminį projektą (autorystės pripažinimui), o ne

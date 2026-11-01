@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Suomi)
+# 67router Architecture (Suomi)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Päivitetty viimeksi: 2026-06-28_
 
 ## Tiivistelmä
 
-OmniRoute on Next.js:n päälle rakennettu paikallinen tekoälyliikenteen reititysyhdyskäytävä ja hallintapaneeli.
+67router on Next.js:n päälle rakennettu paikallinen tekoälyliikenteen reititysyhdyskäytävä ja hallintapaneeli.
 Se tarjoaa yhden OpenAI-yhteensopivan päätepisteen (`/v1/*`) ja reitittää liikenteen useille ulkoisille palveluntarjoajille tukien muunnoksia, varajärjestelyjä, tunnisteiden uusimista ja käytön seurantaa.
 
 Keskeiset ominaisuudet:
@@ -128,13 +128,11 @@ Pääsivut hakemistossa `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kiintiö- ja nopeusrajoitukset
 - `/dashboard/cli-tools` — CLI-käyttöönotto, suoritusympäristön tunnistus ja määritysten luonti
 - `/dashboard/agents` — tunnistetut ACP-agentit ja mukautettujen agenttien rekisteröinti
-- `/dashboard/cloud-agents` — pilvipalvelussa isännöidyt agenttitehtävät (Codex Cloud, Devin, Jules) ja tehtävien elinkaari
 - `/dashboard/skills` — A2A-taitorekisteri, hiekkalaatikkosuoritus ja sisäänrakennettujen taitojen luettelo
 - `/dashboard/memory` — pysyvän keskustelumuistin tarkastelu ja haku
 - `/dashboard/webhooks` — lähtevien webhook-kutsujen tilaukset, salaisuuksien kierrätys ja uudelleenyritystilastot
 - `/dashboard/batch` — eräajojen lähetys ja edistyminen
 - `/dashboard/cache` — läpilukevan välimuistin ja päättelyvälimuistin tilastot sekä poistamistoiminnot
-- `/dashboard/playground` — vuorovaikutteinen keskustelukokeiluympäristö mille tahansa määritetylle yhdistelmälle tai mallille
 - `/dashboard/changelog` — sovelluksen sisäinen muutoslokin katseluohjelma (hahmontaa tiedoston `CHANGELOG.md`)
 - `/dashboard/system` — suoritusympäristön diagnostiikka, versiotiedot ja ympäristön validointinäkymä
 - `/dashboard/onboarding` — ensimmäisen käyttökerran ohjattu määritys uusille asennuksille
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Selaimen hallintapaneeli]
     end
 
-    subgraph Router[Paikallinen OmniRoute-prosessi]
+    subgraph Router[Paikallinen 67router-prosessi]
         API[V1-yhteensopivuusrajapinta\n/v1/*]
         DASH[Hallintapaneeli + hallintarajapinta\n/api/*]
         CORE[SSE + muunnosydin\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Hallinta-alueet:
 - Budjetti: `src/app/api/usage/budget` (GET/POST)
 - Varaketjut: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Vaatimustenmukaisuuden tarkastus: `src/app/api/compliance/audit-log` (GET, sivutuksella + rakenteisilla metatiedoilla)
-- Arvioinnit: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Käytännöt: `src/app/api/policies` (GET/POST)
 - Synkronointitunnukset: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Määrityspaketti: `src/app/api/sync/bundle` (GET, ETag-versioitu tilannevedos asetuksista, palveluntarjoajista, yhdistelmistä ja avaimista)
@@ -316,7 +313,6 @@ Toimialokerroksen moduulit:
 - Noudon aikakatkaisu: `src/shared/utils/fetchTimeout.ts`
 - Pyyntötelemetria: `src/shared/utils/requestTelemetry.ts`
 - Vaatimustenmukaisuus / auditointi: `src/lib/compliance/index.ts`
-- Arviointien suorittaja: `src/lib/evals/evalRunner.ts`
 - Toimialan tilan pysyväistallennus: `src/lib/db/domainState.ts` — SQLite CRUD varajärjestelyketjuille, budjeteille, kustannushistorialle, lukitustilalle ja katkaisijoille
 
 OAuth-palveluntarjoajamoduulit (27 erillistä tiedostoa hakemistossa `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ OAuth-palveluntarjoajamoduulit (27 erillistä tiedostoa hakemistossa `src/lib/oa
 
 ## 5) Upotetut palvelut (v3.8.4)
 
-OmniRoute voi asentaa ja valvoa paikallisesti suoritettavia tekoälytyökaluprosesseja sekä reitittää niihin.
+67router voi asentaa ja valvoa paikallisesti suoritettavia tekoälytyökaluprosesseja sekä reitittää niihin.
 Näitä prosesseja kutsutaan **upotetuiksi palveluiksi**. Mukana toimitetaan viisi palvelua: 9Router, CLIProxyAPI, Bifrost, Mux ja Dario.
 
 Arkkitehtuurikerrokset:
@@ -386,23 +382,6 @@ Keskeiset ominaisuudet:
 Täydelliset algoritmiset tiedot (tekijöiden kaavat, painojen hienosäätö) ovat tiedostossa
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Pilviagentit
-
-Pilviagentit käärivät kolmansien osapuolten isännöidyt koodiagenttialustat (Codex Cloud, Devin,
-Jules) yhtenäisen, tietokantapohjaisen tehtävän elinkaaren taakse. Kaikki tehtävien luonti- ja tarkastuspäätepisteet
-edellyttävät hallinnan todennusta.
-
-- Moduulin juurihakemisto: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` sekä agenttikohtaiset alihakemistot hakemistossa `agents/`)
-- Agenttikohtaiset toteutukset: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Julkiset päätepisteet: `/api/v1/agents/tasks/*` (luettelointi/luonti/haku/peruutus)
-- Hallintapäätepisteet: `/api/cloud/*` (käyttöönotto, tila, eräkäsittely)
-- Hallintapaneeli: `/dashboard/cloud-agents`
-- Tallennus: taulu `cloud_agent_tasks`
-
-Agenttikohtaiset käyttöönotto- ja OAuth-tiedot ovat tiedostossa
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Suojaukset
 
 Suojausmoduuli on ajonaikaisesti uudelleenladattava väliohjelmistokerros, joka tarkastaa pyynnöt
@@ -438,7 +417,7 @@ tarvitse koostaa lukitus-, budjetti- ja varamenettelylogiikkaa itse.
 - Kiintiövälimuisti: `src/domain/quotaCache.ts`
 - Heikentymistila: `src/domain/degradation.ts`
 - Määritysten auditointi: `src/domain/configAudit.ts`
-- OmniRoute-vastauksen metatietojen muodostin: `src/domain/omnirouteResponseMeta.ts`
+- 67router-vastauksen metatietojen muodostin: `src/domain/omnirouteResponseMeta.ts`
 - Arviointialijärjestelmä: `src/domain/assessment/` — säännölliset arviointityöt
 
 ### E. Valtuutusputki
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Hallintapaneelin selain]
     end
 
-    subgraph ContainerOrProcess[OmniRoute-ajoympäristö]
+    subgraph ContainerOrProcess[67router-ajoympäristö]
         Next[Next.js-palvelin\nPORT=20128]
         Core[SSE-ydin + suorittajat]
         MainDB[(storage.sqlite)]
@@ -934,7 +913,7 @@ Kaikki muut palveluntarjoajat (mukaan lukien mukautetut yhteensopivat solmut) k�
 
 ## Palveluntarjoajien yhteensopivuusmatriisi
 
-> **Huomautus:** Alla oleva matriisi on edustava otos OmniRoute v3.8.0:n 351 rekisteröidystä palveluntarjoajasta.
+> **Huomautus:** Alla oleva matriisi on edustava otos 67router v3.8.0:n 351 rekisteröidystä palveluntarjoajasta.
 > Kanoninen ja jatkuvasti päivitettävä luettelo on saatavilla
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md)-tiedostossa (luodaan automaattisesti) tai ensisijaisesta
 > lähteestä `src/shared/constants/providers.ts` (Zod-validoidaan ladattaessa).
@@ -1117,7 +1096,7 @@ Yksityiskohtainen pyyntöjen hyötykuvien tallennus säilyttää enintään nelj
 - asiakkaalta vastaanotettu raakamuotoinen pyyntö
 - käännetty pyyntö, joka tosiasiallisesti lähetettiin ylemmälle tasolle
 - JSON-muotoon rekonstruoitu palveluntarjoajan vastaus; suoratoistetut vastaukset tiivistetään lopulliseksi yhteenvedoksi ja suoratoiston metatiedoiksi
-- OmniRouten palauttama lopullinen asiakasvastaus; suoratoistetut vastaukset tallennetaan samassa tiivistetyssä yhteenvetomuodossa
+- 67routerin palauttama lopullinen asiakasvastaus; suoratoistetut vastaukset tallennetaan samassa tiivistetyssä yhteenvetomuodossa
 
 ## Tietoturvakriittiset rajapinnat
 

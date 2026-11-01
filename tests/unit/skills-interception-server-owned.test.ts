@@ -33,8 +33,7 @@ process.env.DATA_DIR = TEST_DATA_DIR;
 process.env.OMNIROUTE_PLUGINS_DIR = TEST_PLUGINS_DIR;
 
 const coreDb = await import("../../src/lib/db/core.ts");
-const { skillRegistry } = await import("../../src/lib/skills/registry.ts");
-const { skillExecutor } = await import("../../src/lib/skills/executor.ts");
+const { builtinSkills } = await import("../../src/lib/skills/builtins.ts");
 const {
   classifyServerOwnedCalls,
   formatEscapeHatchResponse,
@@ -42,57 +41,28 @@ const {
   ServerOwnedExecutionError,
 } = await import("../../src/lib/skills/interception.ts");
 
-function resetRuntime() {
-  skillRegistry["registeredSkills"].clear();
-  skillRegistry["versionCache"].clear();
-  skillExecutor["handlers"].clear();
-  skillExecutor.setTimeout(50);
-}
+type BuiltinHandler = (
+  input: Record<string, unknown>,
+  context: Record<string, unknown>
+) => Promise<Record<string, unknown>>;
+const mutableBuiltins = builtinSkills as unknown as Record<string, BuiltinHandler>;
+const originalWebFetch = mutableBuiltins.web_fetch;
 
-async function resetStorage() {
-  resetRuntime();
+function resetStorage() {
   coreDb.resetDbInstance();
   fs.rmSync(TEST_DATA_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
   fs.mkdirSync(TEST_DATA_DIR, { recursive: true });
 }
 
-async function registerRuntimeSkills() {
-  await skillRegistry.register({
-    name: "lookup",
-    version: "1.0.0",
-    description: "lookup records",
-    schema: { input: { id: "string" }, output: { record: "string" } },
-    handler: "lookup-handler",
-    enabled: true,
-    apiKeyId: "key-a",
-  });
-  await skillRegistry.register({
-    name: "broken",
-    version: "1.0.0",
-    description: "always fails",
-    schema: { input: {}, output: {} },
-    handler: "broken-handler",
-    enabled: true,
-    apiKeyId: "key-a",
-  });
-
-  skillExecutor.registerHandler("lookup-handler", async (input) => ({
-    record: `resolved:${input.id}`,
-  }));
-  skillExecutor.registerHandler("broken-handler", async () => {
-    throw new Error("skill failure");
-  });
-}
-
-test.beforeEach(async () => {
+test.beforeEach(() => {
   process.env.DATA_DIR = TEST_DATA_DIR;
   process.env.OMNIROUTE_PLUGINS_DIR = TEST_PLUGINS_DIR;
-  await resetStorage();
-  await registerRuntimeSkills();
+  resetStorage();
+  mutableBuiltins.web_fetch = async (input) => ({ success: true, url: String(input.url ?? "") });
 });
 
 test.after(() => {
-  resetRuntime();
+  mutableBuiltins.web_fetch = originalWebFetch;
   coreDb.resetDbInstance();
   if (ORIGINAL_DATA_DIR === undefined) delete process.env.DATA_DIR;
   else process.env.DATA_DIR = ORIGINAL_DATA_DIR;
@@ -103,9 +73,9 @@ test.after(() => {
 
 // ─── Task 3: classifyServerOwnedCalls + formatEscapeHatchResponse RED tests ──
 
-test("classifyServerOwnedCalls: owner set builtin/custom → serverOwned; registry-registered but not in owner set → clientNative", async () => {
+test("classifyServerOwnedCalls: only owner-set builtins are server-owned; former custom skills stay client-native", async () => {
   const calls = [
-    { id: "c1", name: "http_request", arguments: {} },
+    { id: "c1", name: "web_fetch", arguments: {} },
     { id: "c2", name: "lookup@1.0.0", arguments: {} },
     { id: "c3", name: "Bash", arguments: {} },
   ];
@@ -114,29 +84,32 @@ test("classifyServerOwnedCalls: owner set builtin/custom → serverOwned; regist
     apiKeyId: "key-a",
     sessionId: "s1",
     requestId: "r1",
-    builtinToolNames: ["http_request"],
+    builtinToolNames: ["web_fetch"],
     injectedCustomSkillNames: ["lookup@1.0.0"],
     customSkillExecutionEnabled: true,
   });
 
-  assert.equal(result.serverOwned.length, 2);
-  assert.equal(result.serverOwned[0].id, "c1");
-  assert.equal(result.serverOwned[1].id, "c2");
-  assert.equal(result.clientNative.length, 1);
-  assert.equal(result.clientNative[0].id, "c3");
+  assert.deepEqual(
+    result.serverOwned.map((c) => c.id),
+    ["c1"]
+  );
+  assert.deepEqual(
+    result.clientNative.map((c) => c.id),
+    ["c2", "c3"]
+  );
 });
 
 test("classifyServerOwnedCalls: client same-name memory_search → not server-owned", async () => {
   const calls = [
     { id: "c1", name: "memory_search", arguments: {} },
-    { id: "c2", name: "http_request", arguments: {} },
+    { id: "c2", name: "web_fetch", arguments: {} },
   ];
 
   const result = await classifyServerOwnedCalls(calls, {
     apiKeyId: "key-a",
     sessionId: "s1",
     requestId: "r1",
-    builtinToolNames: ["http_request"],
+    builtinToolNames: ["web_fetch"],
     // memory_search NOT in builtinToolNames (client owns it)
     injectedCustomSkillNames: [],
     customSkillExecutionEnabled: true,
@@ -149,49 +122,6 @@ test("classifyServerOwnedCalls: client same-name memory_search → not server-ow
   assert.equal(result.serverOwned[0].id, "c2");
 });
 
-test("classifyServerOwnedCalls: registered skill with client same-name → client-native (not server-owned)", async () => {
-  // Register a skill that the client also declares with the same encoded name.
-  await skillRegistry.register({
-    name: "collision-check",
-    version: "1.0.0",
-    description: "collision test",
-    schema: { input: {}, output: {} },
-    handler: "collision-handler",
-    enabled: true,
-    apiKeyId: "key-a",
-    mode: "on",
-  });
-
-  const encodedName = (await import("../../src/lib/skills/injection.ts")).encodeSkillToolName(
-    "collision-check",
-    "1.0.0"
-  );
-
-  // Client declares a tool with the same encoded name.
-  const calls = [
-    { id: "c1", name: encodedName, arguments: {} },
-    { id: "c2", name: "http_request", arguments: {} },
-  ];
-
-  const result = await classifyServerOwnedCalls(calls, {
-    apiKeyId: "key-a",
-    sessionId: "s1",
-    requestId: "r1",
-    builtinToolNames: ["http_request"],
-    injectedCustomSkillNames: [], // empty: client collision prevented injection
-    customSkillExecutionEnabled: true,
-  });
-
-  // The registered skill with client same-name must be client-native.
-  assert.equal(result.clientNative.length, 1);
-  assert.equal(result.clientNative[0].id, "c1");
-  assert.equal(result.serverOwned.length, 1);
-  assert.equal(result.serverOwned[0].id, "c2");
-
-  skillRegistry["registeredSkills"].clear();
-  skillRegistry["versionCache"].clear();
-});
-
 test("formatEscapeHatchResponse: mixed OpenAI — strip server calls, append results to content, keep client calls, finish_reason:tool_calls", async () => {
   const response = {
     choices: [
@@ -199,7 +129,7 @@ test("formatEscapeHatchResponse: mixed OpenAI — strip server calls, append res
         message: {
           content: null,
           tool_calls: [
-            { id: "srv1", function: { name: "http_request", arguments: "{}" } },
+            { id: "srv1", function: { name: "web_fetch", arguments: "{}" } },
             { id: "cli1", function: { name: "Bash", arguments: '{"cmd":"ls"}' } },
           ],
         },
@@ -208,9 +138,9 @@ test("formatEscapeHatchResponse: mixed OpenAI — strip server calls, append res
     ],
   };
 
-  const serverCalls = [{ id: "srv1", name: "http_request", arguments: {} }];
+  const serverCalls = [{ id: "srv1", name: "web_fetch", arguments: {} }];
   const clientCalls = [{ id: "cli1", name: "Bash", arguments: { cmd: "ls" } }];
-  const results = [{ id: "srv1", name: "http_request", result: { status: 200 }, replayed: false }];
+  const results = [{ id: "srv1", name: "web_fetch", result: { status: 200 }, replayed: false }];
 
   const formatted = formatEscapeHatchResponse(
     response,
@@ -237,15 +167,15 @@ test("formatEscapeHatchResponse: all-server OpenAI — strip tool calls, append 
       {
         message: {
           content: null,
-          tool_calls: [{ id: "srv1", function: { name: "http_request", arguments: "{}" } }],
+          tool_calls: [{ id: "srv1", function: { name: "web_fetch", arguments: "{}" } }],
         },
         finish_reason: "tool_calls",
       },
     ],
   };
 
-  const serverCalls = [{ id: "srv1", name: "http_request", arguments: {} }];
-  const results = [{ id: "srv1", name: "http_request", result: { ok: true }, replayed: false }];
+  const serverCalls = [{ id: "srv1", name: "web_fetch", arguments: {} }];
+  const results = [{ id: "srv1", name: "web_fetch", result: { ok: true }, replayed: false }];
 
   const formatted = formatEscapeHatchResponse(response, serverCalls, results, [], "openai");
 
@@ -262,15 +192,15 @@ test("formatEscapeHatchResponse: all-server OpenAI — strip tool calls, append 
 test("formatEscapeHatchResponse: Claude mixed — strip server tool_use, keep client tool_use, end_turn stays", async () => {
   const response = {
     content: [
-      { type: "tool_use", id: "srv1", name: "http_request", input: {} },
+      { type: "tool_use", id: "srv1", name: "web_fetch", input: {} },
       { type: "tool_use", id: "cli1", name: "Bash", input: { cmd: "ls" } },
     ],
     stop_reason: "tool_use",
   };
 
-  const serverCalls = [{ id: "srv1", name: "http_request", arguments: {} }];
+  const serverCalls = [{ id: "srv1", name: "web_fetch", arguments: {} }];
   const clientCalls = [{ id: "cli1", name: "Bash", arguments: { cmd: "ls" } }];
-  const results = [{ id: "srv1", name: "http_request", result: { ok: true }, replayed: false }];
+  const results = [{ id: "srv1", name: "web_fetch", result: { ok: true }, replayed: false }];
 
   const formatted = formatEscapeHatchResponse(
     response,
@@ -291,12 +221,12 @@ test("formatEscapeHatchResponse: Claude mixed — strip server tool_use, keep cl
 
 test("formatEscapeHatchResponse: Claude all-server — strip tool_use, append text, end_turn", async () => {
   const response = {
-    content: [{ type: "tool_use", id: "srv1", name: "http_request", input: {} }],
+    content: [{ type: "tool_use", id: "srv1", name: "web_fetch", input: {} }],
     stop_reason: "tool_use",
   };
 
-  const serverCalls = [{ id: "srv1", name: "http_request", arguments: {} }];
-  const results = [{ id: "srv1", name: "http_request", result: { ok: true }, replayed: false }];
+  const serverCalls = [{ id: "srv1", name: "web_fetch", arguments: {} }];
+  const results = [{ id: "srv1", name: "web_fetch", result: { ok: true }, replayed: false }];
 
   const formatted = formatEscapeHatchResponse(response, serverCalls, results, [], "claude");
 
@@ -328,7 +258,7 @@ test("formatEscapeHatchResponse: formatter does not call interceptToolCalls or a
       {
         message: {
           content: null,
-          tool_calls: [{ id: "srv1", function: { name: "http_request", arguments: "{}" } }],
+          tool_calls: [{ id: "srv1", function: { name: "web_fetch", arguments: "{}" } }],
         },
         finish_reason: "tool_calls",
       },
@@ -337,8 +267,8 @@ test("formatEscapeHatchResponse: formatter does not call interceptToolCalls or a
 
   const result = formatEscapeHatchResponse(
     response,
-    [{ id: "srv1", name: "http_request", arguments: {} }],
-    [{ id: "srv1", name: "http_request", result: { ok: true }, replayed: false }],
+    [{ id: "srv1", name: "web_fetch", arguments: {} }],
+    [{ id: "srv1", name: "web_fetch", result: { ok: true }, replayed: false }],
     [],
     "openai"
   );
@@ -404,12 +334,12 @@ test("formatEscapeHatchResponse: nested {response:{output}} appends function_cal
 // ─── F1: executeServerOwned RED tests ───────────────────────────────────────
 
 test("executeServerOwned: requires requestIdentity when executionFenceEnabled", async () => {
-  const calls = [{ id: "c1", name: "http_request", arguments: { url: "https://example.com" } }];
+  const calls = [{ id: "c1", name: "web_fetch", arguments: { url: "https://example.com" } }];
   const context = {
     apiKeyId: "key-fence",
     sessionId: "s1",
     requestId: "r1",
-    builtinToolNames: ["http_request"],
+    builtinToolNames: ["web_fetch"],
     executionFenceEnabled: true,
     // requestIdentity is deliberately missing
   };
@@ -421,7 +351,7 @@ test("executeServerOwned: requires requestIdentity when executionFenceEnabled", 
   );
 });
 
-test("executeServerOwned: dispatches memory builtin and returns ExecutedToolResult", async () => {
+test("executeServerOwned: memory_search is no longer a builtin and is never dispatched", async () => {
   const calls = [{ id: "c1", name: "memory_search", arguments: { query: "test" } }];
   const context = {
     apiKeyId: "key-mem",
@@ -433,26 +363,24 @@ test("executeServerOwned: dispatches memory builtin and returns ExecutedToolResu
 
   const results = await executeServerOwned(calls, context);
   assert.equal(results.length, 1);
-  assert.equal(results[0].id, "c1");
-  assert.equal(results[0].name, "memory_search");
   assert.equal(results[0].replayed, false);
-  assert.ok(results[0].result !== undefined, "result must be present");
+  assert.match(JSON.stringify(results[0].result), /No handler for tool/);
 });
 
-test("executeServerOwned: dispatches ordinary builtin (http_request)", async () => {
-  const calls = [{ id: "c1", name: "http_request", arguments: { url: "https://example.com" } }];
+test("executeServerOwned: dispatches the web_fetch builtin", async () => {
+  const calls = [{ id: "c1", name: "web_fetch", arguments: { url: "https://example.com" } }];
   const context = {
     apiKeyId: "key-builtin",
     sessionId: "s1",
     requestId: "r1",
-    builtinToolNames: ["http_request"],
+    builtinToolNames: ["web_fetch"],
     executionFenceEnabled: false,
   };
 
   const results = await executeServerOwned(calls, context);
   assert.equal(results.length, 1);
   assert.equal(results[0].id, "c1");
-  assert.equal(results[0].name, "http_request");
+  assert.equal(results[0].name, "web_fetch");
   assert.equal(results[0].replayed, false);
 });
 
@@ -496,12 +424,12 @@ test("executeServerOwned: in_progress fence state → throws ServerOwnedExecutio
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -525,12 +453,12 @@ test("executeServerOwned: unknown fence state → throws ServerOwnedExecutionErr
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -554,12 +482,12 @@ test("executeServerOwned: identity_conflict fence state → throws ServerOwnedEx
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -590,12 +518,12 @@ test("executeServerOwned: error replay → throws ServerOwnedExecutionError with
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -625,12 +553,12 @@ test("executeServerOwned: timeout replay → throws ServerOwnedExecutionError wi
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -660,12 +588,12 @@ test("executeServerOwned: success replay → returns ExecutedToolResult with rep
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -691,12 +619,12 @@ test("executeServerOwned: error replay with null errorMessage → uses default m
   setFenceFnForTesting(mockFence);
 
   try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
+    const calls = [{ id: "c1", name: "web_fetch", arguments: {} }];
     const context = {
       apiKeyId: "key-fence",
       sessionId: "s1",
       requestId: "r1",
-      builtinToolNames: ["http_request"],
+      builtinToolNames: ["web_fetch"],
       executionFenceEnabled: true,
       requestIdentity: "identity-1",
     };
@@ -716,39 +644,6 @@ test("executeServerOwned: error replay with null errorMessage → uses default m
 
 // ─── Fix Round 2: Defect 2 — executeClaimed non-success throws ──────────────
 
-test("executeClaimed: custom skill handler returns non-success status → executeClaimed throws safe error", async () => {
-  // Register a custom skill whose handler returns a failure output
-  await skillRegistry.register({
-    name: "fail-skill",
-    version: "1.0.0",
-    description: "always returns failure status",
-    schema: { input: {}, output: {} },
-    handler: "fail-handler",
-    enabled: true,
-    apiKeyId: "key-a",
-  });
-
-  skillExecutor.registerHandler("fail-handler", async () => ({
-    status: "failed",
-    message: "something went wrong",
-  }));
-
-  await assert.rejects(
-    () =>
-      skillExecutor.executeClaimed(
-        "fail-skill",
-        {},
-        { apiKeyId: "key-a", sessionId: "s1" },
-        "exec-fail"
-      ),
-    /Skill execution failed/,
-    "executeClaimed must throw when handler returns non-success status"
-  );
-
-  skillRegistry["registeredSkills"].clear();
-  skillRegistry["versionCache"].clear();
-});
-
 // ─── Fix Round 2: Defect 3 — LEASE_DURATION_MS = 120000 ─────────────────────
 
 test("LEASE_DURATION_MS is 120000 to match loop wall-clock upper bound", async () => {
@@ -761,35 +656,4 @@ test("LEASE_DURATION_MS is 120000 to match loop wall-clock upper bound", async (
   assert.ok(match, "LEASE_DURATION_MS must be defined in interception.ts");
   const value = Number(match[1].replace(/_/g, ""));
   assert.equal(value, 120_000, "LEASE_DURATION_MS must be 120000 (not 30000)");
-});
-
-// ─── Fix Round 2: Defect 4 — classifyServerOwnedCalls no DB load ─────────────
-
-test("classifyServerOwnedCalls does not call skillRegistry.loadFromDatabase (ownership from owner sets only)", async () => {
-  let loadFromDatabaseCalled = false;
-  const origLoad = skillRegistry.loadFromDatabase.bind(skillRegistry);
-  skillRegistry.loadFromDatabase = async (..._args: unknown[]) => {
-    loadFromDatabaseCalled = true;
-    return origLoad(...(_args as [string]));
-  };
-
-  try {
-    const calls = [{ id: "c1", name: "http_request", arguments: {} }];
-    await classifyServerOwnedCalls(calls, {
-      apiKeyId: "key-a",
-      sessionId: "s1",
-      requestId: "r1",
-      builtinToolNames: ["http_request"],
-      injectedCustomSkillNames: [],
-      customSkillExecutionEnabled: false,
-    });
-
-    assert.equal(
-      loadFromDatabaseCalled,
-      false,
-      "classifyServerOwnedCalls must NOT call loadFromDatabase — owner sets are sufficient"
-    );
-  } finally {
-    skillRegistry.loadFromDatabase = origLoad;
-  }
 });

@@ -4,7 +4,7 @@
 
 ---
 
-Nepārtraukta, inkrementāla OmniRoute zvanu žurnālu eksportēšana uz ārēju analītikas datu krātuvi.
+Nepārtraukta, inkrementāla 67router zvanu žurnālu eksportēšana uz ārēju analītikas datu krātuvi.
 
 Žurnālu informācijas paneļa cilne saglabā pieprasījumu vēsturi SQLite (`call_logs`), un tās apjomu
 ierobežo rotācija un saglabāšanas termiņš. Žurnālu eksportēšana pēc grafika nosūta to pašu ierakstu
@@ -271,7 +271,7 @@ Divi noteikumi jaunam galamērķim:
 - `send()` **obligāti jāizmet izņēmums** daļējas kļūmes gadījumā. Sekmīga izpilde nozīmē: „galamērķī ir šīs rindas”,
   un kursors neatgriezeniski tiek pārvietots aiz tām.
 - Galamērķim, kas pieņem lietotāja norādītu URL, tas pirms pieprasījuma veikšanas ir jāpārbauda ar
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) tāpat, kā tas tiek darīts tīmekļa aizķerēm.
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) tāpat, kā tas tiek darīts tīmekļa aizķerēm.
   BigQuery tas nav nepieciešams: tā resursdatoru nosaukumi ir konstantes.
 
 ---

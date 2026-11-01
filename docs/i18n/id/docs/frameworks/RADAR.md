@@ -41,7 +41,7 @@ atau integrasi eksternal saat ini tersedia.
 | Penawaran pendukung                | Diimplementasikan sebagai umpan terpisah, bertanda tangan, dan khusus live serta halaman dasbor. Klien memvalidasi ulang skema manfaat tertutup, mempertahankan cache baik terakhir, memfilter entri kedaluwarsa, dan secara eksplisit memberi label pada penawaran mitra. |
 | Intel dan pengakuan pendukung      | Diimplementasikan sebagai umpan khusus live yang ketat dan bertanda tangan, dengan ELO milik Radar, informasi faktual mengenai kebaruan/tren katalog, lencana pendukung lokal yang terverifikasi, halaman dasbor, serta perintah status/sinkronisasi CLI khusus lokal.     |
 | Pembayaran dan email transaksional | Tidak diimplementasikan dalam klien OSS. Pembelian, donasi, peninjauan tanda terima, pemulihan, dan pengiriman email merupakan bagian dari layanan privat; ketersediaan layanan terkelola tetap bergantung pada deployment yang diawasi serta konfigurasi penyedianya.     |
-| Alur kerja agen riset              | Bukan bagian dari rilis klien ini. Isi umpan yang dikurasi tetap merupakan data sisi server; tidak ada agen riset otonom yang berjalan dalam instalasi OmniRoute.                                                                                                          |
+| Alur kerja agen riset              | Bukan bagian dari rilis klien ini. Isi umpan yang dikurasi tetap merupakan data sisi server; tidak ada agen riset otonom yang berjalan dalam instalasi 67router.                                                                                                           |
 
 ---
 
@@ -119,7 +119,7 @@ Saat keduanya aktif, alur sinkronisasinya adalah:
    yang dirotasi setiap hari untuk peninjauan penyalahgunaan secara manual; tabel tersebut tidak menyimpan key maupun IP dalam bentuk mentah.
    Log akses infrastruktur dan outbox pengiriman terenkripsi merupakan batas operasional
    yang terpisah.
-3. OmniRoute tidak pernah mengirim prompt, respons, percakapan, kredensial penyedia, traffic model,
+3. 67router tidak pernah mengirim prompt, respons, percakapan, kredensial penyedia, traffic model,
    uptime, latensi, atau konfigurasi penyedia lokal ke layanan Radar.
 4. Respons diverifikasi, divalidasi, dan di-cache secara lokal (lihat
    [Model keamanan](#security-model)). Radar memiliki tepat empat jalur jaringan sisi server:
@@ -243,13 +243,13 @@ yang sudah memiliki kunci mengaktifkannya.
 ### Aktivasi menyeluruh dan penyiapan terpandu
 
 Layanan feed privat dan klien OSS ini memiliki batasan yang sengaja dibuat sempit: layanan
-menerbitkan dan memvalidasi kunci pendukung, sedangkan instalasi OmniRoute lokal mengenkripsi kunci,
+menerbitkan dan memvalidasi kunci pendukung, sedangkan instalasi 67router lokal mengenkripsi kunci,
 menyinkronkan artefak yang ditandatangani di sisi server, dan memandu penyiapan penyedia. Urutan validasi terbantu adalah:
 
 1. Dapatkan kunci yang baru diterbitkan atau dipulihkan melalui klaim kontributor, proses plans/checkout, alur
    pemulihan, atau operator server privat yang berwenang. Jangan tempelkan kunci mentah ke dalam log,
    tangkapan layar, komentar issue, atau argumen baris perintah.
-2. Aktifkan feature flag `RADAR_ENABLED` pada instalasi OmniRoute lokal. Ini menampilkan UI,
+2. Aktifkan feature flag `RADAR_ENABLED` pada instalasi 67router lokal. Ini menampilkan UI,
    tetapi tetap tidak melakukan aktivitas jaringan sampai persetujuan terpisah disimpan.
 3. Buka `/dashboard/radar`, tempelkan kunci, lalu aktifkan. Browser mengirim satu permintaan lokal
    `POST /api/radar/settings` dengan `{ optIn: true, supporterKey }`; kunci dienkripsi secara lokal dan
@@ -314,7 +314,7 @@ disinkronkan ulang.
 ### Penggantian melalui variabel lingkungan yang ramah fork
 
 Dua variabel lingkungan memungkinkan fork dan pengelola hosting mandiri mengarahkan klien ke feed mereka sendiri sebagai pengganti
-layanan OmniRoute bawaan — lihat
+layanan 67router bawaan — lihat
 [Cara menghosting feed secara mandiri](#how-to-self-host-a-feed) di bawah ini:
 
 | Variabel            | Tujuan                                                                                                                                 |
@@ -469,7 +469,7 @@ Dasbor menyediakan empat tindakan lokal:
 Publikasi katalog menggunakan `schemaVersion: 2`. `contextWindow` serta masing-masing dari `tools`, `vision`, dan
 `thinking` secara independen bertipe `number | null` / `boolean | null`: `null` berarti tidak diketahui, sedangkan
 `false` berarti sumber resmi penyedia yang dikonfirmasi D16 secara eksplisit menyatakan bahwa kapabilitas tersebut tidak ada.
-Flag spesifikasi model/registri internal OmniRoute tidak pernah dipromosikan secara langsung menjadi fakta feed. Klien
+Flag spesifikasi model/registri internal 67router tidak pernah dipromosikan secara langsung menjadi fakta feed. Klien
 tetap menerima snapshot v1; karena builder lama menggunakan `false` sebagai placeholder untuk ketidakadaan, `false` pada v1
 dinormalisasi menjadi tidak diketahui, sedangkan `true` pada v1 tetap dianggap faktual. Versi skema yang tidak dikenal ditolak secara aman dan
 cache valid terakhir tetap tersedia. Setiap model v2 dengan konteks/kapabilitas non-null harus memiliki
@@ -530,7 +530,7 @@ Kelompok rute Radar lokal di bawah ini mendukung UI pada `src/app/api/radar/`:
 | `/api/radar/local-model-state` | DELETE | Menghapus kolom override yang dapat diedit sembari mempertahankan tombstone apa pun.                                              |
 
 **Aturan tegas: rute-rute ini tidak pernah memproksikan layanan feed.** Browser hanya
-berkomunikasi dengan server OmniRoute lokal. Empat modul yang berinteraksi dengan layanan Radar adalah
+berkomunikasi dengan server 67router lokal. Empat modul yang berinteraksi dengan layanan Radar adalah
 `src/lib/radar/sync.ts` (katalog), `src/lib/radar/referralsSync.ts` (referral), serta
 `src/lib/radar/offersSync.ts` (penawaran) dan `src/lib/radar/intelSync.ts` (Intel); semuanya berjalan
 di sisi server, tidak pernah di sisi klien. Hal ini memastikan
@@ -572,7 +572,7 @@ Intel adalah artefak bertanda tangan di `GET /v1/intel/latest`. `RadarIntelFeedS
 
 `syncRadarIntel()` menerapkan Bearer sisi server, batas waktu 30 detik, batas stream 10 MiB, verifikasi Ed25519 terhadap byte yang persis sama, skema ketat, persyaratan isi/header `live`, batas bawah versi, dan pemeliharaan cache valid terakhir yang sama seperti pada penawaran. Setelah snapshot live yang terverifikasi disimpan, klien menghasilkan `radar:<sha256(supporter key)>`, hanya menyimpan identitas satu arah tersebut, dan memancarkan peristiwa pengakuan khusus `radar_supporter`. Lencana `radar-supporter` bersifat idempoten dan memberikan nol XP; lencana tersebut tidak pernah memperbarui papan peringkat atau menggunakan kembali `token_share`. `/dashboard/radar/intel` merender lencana hanya berdasarkan metadata cache lokal yang terverifikasi.
 
-CLI menyediakan `omniroute radar status` dan `omniroute radar sync`. Keduanya hanya berkomunikasi dengan API OmniRoute lokal. `status` melakukan `GET /api/radar/status` hanya-baca; `sync` mengirim satu `POST /api/radar/sync-all` dan mencetak hasil untuk setiap feed. Tidak satu pun dari kedua perintah tersebut membaca, menerima, atau mencetak kunci supporter, dan keduanya tidak menghubungi layanan Radar secara langsung.
+CLI menyediakan `omniroute radar status` dan `omniroute radar sync`. Keduanya hanya berkomunikasi dengan API 67router lokal. `status` melakukan `GET /api/radar/status` hanya-baca; `sync` mengirim satu `POST /api/radar/sync-all` dan mencetak hasil untuk setiap feed. Tidak satu pun dari kedua perintah tersebut membaca, menerima, atau mencetak kunci supporter, dan keduanya tidak menghubungi layanan Radar secara langsung.
 
 ---
 

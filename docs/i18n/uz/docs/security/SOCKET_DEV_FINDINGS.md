@@ -48,7 +48,7 @@ qarang. Tunnel orqali oshkor bo‘lgan JWT bu kod yo‘lini ishga tushira
 | Linux+Firefox/Chromium | `certutil -d sql:<profile>` orqali har bir profil uchun NSS DB yangilanishi                                       |
 
 Bular `mitmproxy`, Charles Proxy, Fiddler va Caddy ishlatadigan buyruqlarning
-o‘zidir. Ularning OmniRoute tarkibida mavjudligi
+o‘zidir. Ularning 67router tarkibida mavjudligi
 `docs/security/STEALTH_GUIDE.md` da hujjatlashtirilgan.
 
 **v3.8.6 yumshatish chorasi**:
@@ -108,7 +108,7 @@ jarayonlarini hali yangilamagan operatorlar uchun v3.8.5 dagi xatti-harakatni
 saqlab qoladi. U v3.9 da olib tashlanadi.
 
 **Nega uni saqlab qolamiz**: Zed importi Zed’dan allaqachon foydalanadigan va
-provayder kalitlarini qayta kiritmasdan OmniRoute’ga ko‘chirmoqchi bo‘lgan
+provayder kalitlarini qayta kiritmasdan 67router’ga ko‘chirmoqchi bo‘lgan
 foydalanuvchilar uchun eng qulay boshlang‘ich sozlash usulidir.
 
 ---
@@ -121,7 +121,7 @@ foydalanuvchilar uchun eng qulay boshlang‘ich sozlash usulidir.
 `runElevatedPowerShell` va umumiy `quotePowerShell` yordamchi funksiyasini qayta
 eksport qiladi. Socket.dev’ning sun’iy intellekt klassifikatori ularni umumiy
 «xostda bajarish + imtiyozlarni oshirish vositalari to‘plami» sifatida ko‘radi.
-OmniRoute ichida ular faqat MITM sertifikatini o‘rnatish yo‘lida (§1) hamda
+67router ichida ular faqat MITM sertifikatini o‘rnatish yo‘lida (§1) hamda
 `sudo` buyruqlarini bajarish uchun `execFileWithPassword` tomonidan ishlatiladi.
 
 **v3.8.6 dagi xavfni kamaytirish choralari**:
@@ -175,7 +175,7 @@ qat’iy ravishda aniq rozilik talab etiladi.
 
 ---
 
-## §5 — OmniRoute Cloud Sync hisob maʼlumotlarini qayta yozish (`api/keys/[id]/route.js`)
+## §5 — 67router Cloud Sync hisob maʼlumotlarini qayta yozish (`api/keys/[id]/route.js`)
 
 **Manba fayllar**:
 
@@ -211,7 +211,7 @@ almashtirishi mumkin edi.
    Bu masofaviy token sinxronlashiga tayangan foydalanuvchilar uchun
    **moslikni buzuvchi o‘zgarish** — ular bu imkoniyatni aniq yoqishlari kerak.
 
-**Nega uni saqlab qolamiz**: Cloud Sync — OmniRoute Cloud ijarachisi uchun
+**Nega uni saqlab qolamiz**: Cloud Sync — 67router Cloud ijarachisi uchun
 jamoa hisob maʼlumotlarini markazlashtirishning yagona usuli. Tuzatish
 tahdid modelini aniq qiladi: «server imzolaydi, mijoz tekshiradi, operator
 ixtiyoriy ravishda yoqadi».

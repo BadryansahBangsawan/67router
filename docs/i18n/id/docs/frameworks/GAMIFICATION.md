@@ -7,7 +7,7 @@
 > **Sumber acuan:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute menyertakan lapisan gamifikasi yang mengutamakan penyimpanan lokal dan memberikan penghargaan kepada pengguna karena
+67router menyertakan lapisan gamifikasi yang mengutamakan penyimpanan lokal dan memberikan penghargaan kepada pengguna karena
 berinteraksi dengan platform — membuat permintaan, beralih penyedia, membuat
 kombo, membagikan token, dan berkontribusi kepada komunitas. Seluruh status disimpan di
 SQLite; federasi dengan server komunitas bersifat opsional dan berbasis push.
@@ -36,7 +36,7 @@ token, hadiah undangan).
 | Papan Peringkat   | Cakupan global, mingguan, bulanan, berbagi token, dan kontribusi      |
 | Berbagi Token     | Transfer kredit antar pengguna melalui buku besar berpasangan         |
 | Undang & Tukarkan | Kode referal dengan penyimpanan hash SHA-256                          |
-| Server Komunitas  | Berfederasi dengan instans OmniRoute eksternal                        |
+| Server Komunitas  | Berfederasi dengan instans 67router eksternal                         |
 | Antikecurangan    | Penilaian sisi server, pembatasan laju, deteksi anomali z-score       |
 
 ### Prinsip Desain
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tabel Database
 
-Semua tabel berada di database SQLite utama OmniRoute, yang dibuat oleh migrasi
+Semua tabel berada di database SQLite utama 67router, yang dibuat oleh migrasi
 `060_create_gamification.sql`. Jurnaling WAL diwarisi dari singleton
 `getDbInstance()` di `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Semua tabel berada di database SQLite utama OmniRoute, yang dibuat oleh migrasi
 
 ### Modul Domain: `src/lib/db/gamification.ts`
 
-Mengikuti pola standar OmniRoute — mengimpor `getDbInstance()` dari
+Mengikuti pola standar 67router — mengimpor `getDbInstance()` dari
 `core.ts` dan mengekspor fungsi CRUD bertipe. Tidak ada SQL mentah di dalam penangan rute.
 
 Fungsi utama:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Tindakan          | XP  | Deskripsi                                                     |
 | ----------------- | --- | ------------------------------------------------------------- |
-| `request`         | 1   | Per permintaan API yang dirutekan melalui OmniRoute           |
+| `request`         | 1   | Per permintaan API yang dirutekan melalui 67router            |
 | `provider_switch` | 5   | Beralih ke penyedia lain                                      |
 | `model_switch`    | 3   | Beralih ke model lain                                         |
 | `combo_create`    | 10  | Membuat kombo baru                                            |
@@ -581,7 +581,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unik, diindeks) |
 | `token_hash` | SHA-256(raw_token)          |
 
-Token mentah dikembalikan kepada pengguna tepat satu kali saat dibuat. OmniRoute
+Token mentah dikembalikan kepada pengguna tepat satu kali saat dibuat. 67router
 tidak pernah menyimpan atau menampilkannya lagi — hanya hash yang dipertahankan.
 
 ### Pencegahan Rujukan Diri
@@ -704,7 +704,7 @@ Admin dapat membuat kueri terhadap jejak audit lengkap melalui `GET /api/gamific
 
 ## Rute API
 
-Semua rute mengikuti pola standar OmniRoute:
+Semua rute mengikuti pola standar 67router:
 
 ```
 Route → CORS preflight → Body validation (Zod) → Auth (extractApiKey)

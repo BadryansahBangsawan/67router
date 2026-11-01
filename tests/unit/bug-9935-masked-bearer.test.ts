@@ -8,12 +8,9 @@ const COMPONENT_DIR = resolve("src/app/(dashboard)/dashboard/media-providers/com
 const EXAMPLE_CARDS = [
   "WebSearchExampleCard.tsx",
   "WebFetchExampleCard.tsx",
-  "ImageExampleCard.tsx",
-  "TtsExampleCard.tsx",
   "SttExampleCard.tsx",
   "OcrExampleCard.tsx",
   "MusicExampleCard.tsx",
-  "EmbeddingExampleCard.tsx",
   "VideoExampleCard.tsx",
 ];
 const FIXED_REFERENCE = "LlmChatCard.tsx";

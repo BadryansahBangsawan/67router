@@ -15,7 +15,7 @@
 - [OAuth 2.0 for native apper (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret for installerte apper er offentlige; PKCE sørger for den faktiske sikkerheten.
 - [Firebase API-nøkler](https://firebase.google.com/docs/projects/api-keys) — Webklientidentifikatorer er offentlige med hensikt.
 
-OmniRoute må bygge inn disse verdiene slik at brukere som ikke konfigurerer `.env`, likevel får en fungerende OAuth-flyt rett ut av boksen. Uten en innebygd reserveverdi slutter Gemini-/Antigravity-leverandørene å fungere for alle brukere som følger «bare klon og kjør»-fremgangsmåten.
+67router må bygge inn disse verdiene slik at brukere som ikke konfigurerer `.env`, likevel får en fungerende OAuth-flyt rett ut av boksen. Uten en innebygd reserveverdi slutter Gemini-/Antigravity-leverandørene å fungere for alle brukere som følger «bare klon og kjør»-fremgangsmåten.
 
 Bokstavelige verdier som `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` oppdages imidlertid av **GitHub Secret Scanning**, **Semgrep** og lignende mønsterskannere. Hver utgivelse blir en støyende strøm av falske positiver, push-beskyttelsen blokkerer legitime commits, og operatørene slutter å stole på varslingsstrømmen.
 

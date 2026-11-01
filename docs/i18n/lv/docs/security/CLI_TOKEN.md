@@ -6,7 +6,7 @@
 
 ## Pārskats
 
-OmniRoute CLI komandas autentificējas lokālajā pārvaldības API, izmantojot
+67router CLI komandas autentificējas lokālajā pārvaldības API, izmantojot
 `HMAC-SHA256(machine-id, salt)` pilnvaru, kas tiek nosūtīta `x-omniroute-cli-token`
 pieprasījuma galvenē.
 

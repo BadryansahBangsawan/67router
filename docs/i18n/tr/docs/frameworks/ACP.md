@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute, **CLI keşfini**, **yerel Agent Client Protocol'ünü** ve
+67router, **CLI keşfini**, **yerel Agent Client Protocol'ünü** ve
 **eski stdio adaptörlerini** birbirinden ayırır. Yüklü bir ikili dosyanın bulunması;
 kimlik doğrulamasının, model uyumluluğunun veya bir istemi işlemeye hazır olduğunun
 kanıtı değildir.
@@ -131,5 +131,3 @@ bunlar hedef ortamda ayrıca yetkilendirilmiş bir duman testi gerektirir.
 - [Ajan protokolleri](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI başlatma sözleşmeleri](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI araçları](../reference/CLI-TOOLS.md)
-- [A2A sunucusu](./A2A-SERVER.md)
-- [Bulut ajanları](./CLOUD_AGENT.md)

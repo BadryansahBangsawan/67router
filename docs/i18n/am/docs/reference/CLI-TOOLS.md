@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (አማርኛ)
+# CLI Tools — 67router (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇪 [ga](../../../ga/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 መጨረሻ የተዘመነው፦ 2026-08-23
 
-OmniRoute በሦስት ልዩ የዳሽቦርድ ገጾች ላይ ከተከፋፈሉ ሦስት የCLI መሣሪያዎች ምድቦች ጋር ይዋሃዳል፦
+67router በሦስት ልዩ የዳሽቦርድ ገጾች ላይ ከተከፋፈሉ ሦስት የCLI መሣሪያዎች ምድቦች ጋር ይዋሃዳል፦
 
-| ገጽ             | መስመር                    | ጽንሰ-ሐሳብ                                                                      | ብዛት             |
-| -------------- | ----------------------- | ---------------------------------------------------------------------------- | --------------- |
-| **CLI Code's** | `/dashboard/cli-code`   | ወደ OmniRoute የሚያመለክቷቸው የኮድ መጻፊያ መሣሪያዎች (Client → CLI → OmniRoute → Provider) | 26              |
-| **CLI Agents** | `/dashboard/cli-agents` | ወደ OmniRoute የሚያመለክቷቸው ራስ-ገዝ ወኪሎች (ተመሳሳይ ፍሰት፣ ሰፋ ያለ ወሰን)                     | 10              |
-| **ACP Agents** | `/dashboard/acp-agents` | OmniRoute በstdio/ACP በኩል እንደ backend የሚያስነሳቸው CLIs (ተቃራኒ ፍሰት)                | registryን ይመልከቱ |
+| ገጽ             | መስመር                    | ጽንሰ-ሐሳብ                                                                    | ብዛት             |
+| -------------- | ----------------------- | -------------------------------------------------------------------------- | --------------- |
+| **CLI Code's** | `/dashboard/cli-code`   | ወደ 67router የሚያመለክቷቸው የኮድ መጻፊያ መሣሪያዎች (Client → CLI → 67router → Provider) | 26              |
+| **CLI Agents** | `/dashboard/cli-agents` | ወደ 67router የሚያመለክቷቸው ራስ-ገዝ ወኪሎች (ተመሳሳይ ፍሰት፣ ሰፋ ያለ ወሰን)                    | 10              |
+| **ACP Agents** | `/dashboard/acp-agents` | 67router በstdio/ACP በኩል እንደ backend የሚያስነሳቸው CLIs (ተቃራኒ ፍሰት)               | registryን ይመልከቱ |
 
 የቆዩ መስመሮች በ308 ይዛወራሉ፦ `/dashboard/cli-tools` → `/dashboard/cli-code`፣ `/dashboard/agents` → `/dashboard/acp-agents`።
 
@@ -24,14 +24,14 @@ OmniRoute በሦስት ልዩ የዳሽቦርድ ገጾች ላይ ከተከፋ�
 CLI Code's / CLI Agents (የፍጆታ ፍሰት):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (ሁሉም ወደ OmniRoute ያመለክታሉ)
+           ▼  (ሁሉም ወደ 67router ያመለክታሉ)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (OmniRoute ወደ ትክክለኛው provider ይመራል)
+           ▼  (67router ወደ ትክክለኛው provider ይመራል)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (ተቃራኒ የማስነሳት ፍሰት):
-    የClient ጥያቄ → OmniRoute → CLIን በstdio/ACP በኩል ያስነሳል → ምላሽ
+    የClient ጥያቄ → 67router → CLIን በstdio/ACP በኩል ያስነሳል → ምላሽ
 ```
 
 **ጥቅሞች፦**
@@ -45,8 +45,8 @@ ACP Agents (ተቃራኒ የማስነሳት ፍሰት):
 
 ## `setup-*`ን በመጠቀም በራስ-ሰር ማዋቀር
 
-የእያንዳንዱን መሣሪያ ውቅር በእጅ መጻፍ አያስፈልግዎትም። OmniRoute ለእያንዳንዱ የሚደገፍ CLI የ`setup-*`
-ትዕዛዝ ያቀርባል፤ ይህም እየሰራ ካለ OmniRoute (አካባቢያዊ ወይም የርቀት) የ**ቀጥታ** ሞዴል ካታሎግን በማንበብ
+የእያንዳንዱን መሣሪያ ውቅር በእጅ መጻፍ አያስፈልግዎትም። 67router ለእያንዳንዱ የሚደገፍ CLI የ`setup-*`
+ትዕዛዝ ያቀርባል፤ ይህም እየሰራ ካለ 67router (አካባቢያዊ ወይም የርቀት) የ**ቀጥታ** ሞዴል ካታሎግን በማንበብ
 የመሣሪያውን የራሱን ውቅር በማሽንዎ ላይ ይጽፋል፦
 
 ```bash
@@ -57,7 +57,7 @@ omniroute setup-goose        omniroute setup-qwen         omniroute setup-aider
 omniroute setup-5dive        omniroute setup-zed
 ```
 
-እያንዳንዱ `--remote <url> --api-key <key>` (አካባቢያዊ መሣሪያን ከርቀት OmniRoute ጋር ማዋቀር)፣ `--dry-run` (ሳይጽፉ ቅድመ-ዕይታ ማየት) እና `--port`ን ይቀበላል። ራስ-ሰር የሞዴል ማግኘት ባህሪ የሌላቸው መሣሪያዎች (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive)
+እያንዳንዱ `--remote <url> --api-key <key>` (አካባቢያዊ መሣሪያን ከርቀት 67router ጋር ማዋቀር)፣ `--dry-run` (ሳይጽፉ ቅድመ-ዕይታ ማየት) እና `--port`ን ይቀበላል። ራስ-ሰር የሞዴል ማግኘት ባህሪ የሌላቸው መሣሪያዎች (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive)
 `--model <id>`ን (እንዲሁም መስተጋብራዊ ላልሆኑ አሂዶች `--yes`ን) ይቀበላሉ። `setup-5dive` በ`$HOME` ስር የማይጽፍ ብቸኛው የማዋቀሪያ ዘዴ ነው፦ በፍሊቱ አስተናጋጅ ላይ በroot ባለቤትነት የሚያዝ የማረጋገጫ መገለጫ በመጻፍ የ5dive ወኪሎች ፍሊትን ያዋቅራል፤ ስለዚህ ራሱን በ`sudo` በኩል እንደገና ያስፈጽማል እና የራሱ የርቀት ሁነታ የለውም። ትክክለኛው env ተጨምሮለት እና ምንም ውቅር ሳይጻፍ CLIን ለማስጀመር፣ አጠቃላዩን
 `omniroute run <target>` ማስጀመሪያ ይጠቀሙ (claude, codex, aider, goose, opencode, qwen,
 gemini — ዒላማዎች እና ተለዋጭ ስሞች ከ`bin/cli/cli-manifest.mjs` ይመጣሉ)፤ ነባሮቹ
@@ -71,7 +71,7 @@ gemini — ዒላማዎች እና ተለዋጭ ስሞች ከ`bin/cli/cli-manifes
 
 ### እነዚህን በኮንቴይነር ውስጥ ማስኬድ
 
-በOmniRoute ኮንቴይነር ውስጥ የሚፈጸም የ`setup-*` ትዕዛዝ ወደኮንቴይነሩ የራሱ home ይጽፋል፤ ይህንን ምንም የአስተናጋጅ CLI አያነብም፣ እንዲሁም ከኮንቴይነሩ ጋር አብሮ ይጠፋል። OmniRoute ይህን ፈልጎ በማግኘት ከመጻፍ ይልቅ መመሪያዎችን አሳይቶ በ`2` ይወጣል። ወደፊት ለመቀጠል ሁለት የሚደገፉ መንገዶች አሉ — CLIን በአስተናጋጁ ላይ ጭነው
+በ67router ኮንቴይነር ውስጥ የሚፈጸም የ`setup-*` ትዕዛዝ ወደኮንቴይነሩ የራሱ home ይጽፋል፤ ይህንን ምንም የአስተናጋጅ CLI አያነብም፣ እንዲሁም ከኮንቴይነሩ ጋር አብሮ ይጠፋል። 67router ይህን ፈልጎ በማግኘት ከመጻፍ ይልቅ መመሪያዎችን አሳይቶ በ`2` ይወጣል። ወደፊት ለመቀጠል ሁለት የሚደገፉ መንገዶች አሉ — CLIን በአስተናጋጁ ላይ ጭነው
 `omniroute connect`ን ወደኮንቴይነሩ መጠቀም፣ ወይም የውቅር ማውጫዎቹን bind-mount አድርጎ
 `CLI_CONFIG_HOME`ን ማዘጋጀት (የcompose `host` መገለጫ)። እያንዳንዱ የ`setup-*` ትዕዛዝ፣ እንዲሁም
 `omniroute configure` እና `omniroute config set`፣ በእርግጥ የኮንቴይነሩን የራሱን CLIዎች ማዋቀር ካሰቡ
@@ -175,7 +175,7 @@ kilo, continue) — በምትኩ በአስተናጋጁ ላይ የሚሰራ `host
 
 ## 3. ACP ኤጀንቶች (/dashboard/acp-agents)
 
-ይህ ገጽ (ከ`/dashboard/agents` የተሰየመው አዲስ ስም) OmniRoute በstdio/ACP ፕሮቶኮል በኩል እንደ የጀርባ አፈጻጸም ሞተሮች **ሊያስጀምራቸው** የሚችላቸውን CLIዎች ያሳያል። ካታሎጉ በ`src/lib/acp/registry.ts` ውስጥ በተናጠል የሚተዳደር ሲሆን ከ`CLI_TOOLS` ጋር **ተመሳሳይ አይደለም**።
+ይህ ገጽ (ከ`/dashboard/agents` የተሰየመው አዲስ ስም) 67router በstdio/ACP ፕሮቶኮል በኩል እንደ የጀርባ አፈጻጸም ሞተሮች **ሊያስጀምራቸው** የሚችላቸውን CLIዎች ያሳያል። ካታሎጉ በ`src/lib/acp/registry.ts` ውስጥ በተናጠል የሚተዳደር ሲሆን ከ`CLI_TOOLS` ጋር **ተመሳሳይ አይደለም**።
 
 ---
 
@@ -300,7 +300,7 @@ interface ToolBatchStatus {
 
 ## 9. ፈጣን አጀማመር
 
-### ደረጃ 1 — የOmniRoute API Key ያግኙ
+### ደረጃ 1 — የ67router API Key ያግኙ
 
 1. `/dashboard/api-manager` ይክፈቱ → **API Key ይፍጠሩ**
 2. ስም ይስጡት (ለምሳሌ `cli-tools`) እና ሁሉንም ፈቃዶች ይምረጡ
@@ -364,7 +364,7 @@ cargo install smelt  # Rust-ተኮር
 ### ደረጃ 4 — ዓለም-አቀፍ Environment Variables ያዘጋጁ
 
 ```bash
-# OmniRoute ሁለንተናዊ Endpoint
+# 67router ሁለንተናዊ Endpoint
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -476,7 +476,7 @@ EOF
 **VS Code mode፦**
 የCline extension settings → API Provider፦ `OpenAI Compatible` → Base URL፦ `http://localhost:20128/v1`
 
-ወይም OmniRoute dashboardን ይጠቀሙ → **CLI Tools → Cline → Config ተግብር**።
+ወይም 67router dashboardን ይጠቀሙ → **CLI Tools → Cline → Config ተግብር**።
 
 ---
 
@@ -497,7 +497,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-ወይም OmniRoute dashboardን ይጠቀሙ → **CLI Tools → KiloCode → Config ተግብር**።
+ወይም 67router dashboardን ይጠቀሙ → **CLI Tools → KiloCode → Config ተግብር**።
 
 ---
 
@@ -521,14 +521,14 @@ models:
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-VS Code Insiders ለcustom endpoint models ሲዋቀር እና OmniRoute ያለcustom header field እንዲሠራ ሲፈልጉ ይህን ይጠቀሙ።
+VS Code Insiders ለcustom endpoint models ሲዋቀር እና 67router ያለcustom header field እንዲሠራ ሲፈልጉ ይህን ይጠቀሙ።
 
 **የሚመከር ቦታ፦**
 
 - Linux፦ `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows፦ `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**ቶከን የተካተተበትን የOmniRoute ተለዋጭ ስም የመጠቀም ምሳሌ፦**
+**ቶከን የተካተተበትን የ67router ተለዋጭ ስም የመጠቀም ምሳሌ፦**
 
 ```json
 [
@@ -552,7 +552,7 @@ VS Code Insiders ለcustom endpoint models ሲዋቀር እና OmniRoute ያለc
 
 **ማስታወሻዎች፦**
 
-- `sk-your-omniroute-key`ን በOmniRoute ውስጥ በተፈጠረ API ቁልፍ ይተኩ።
+- `sk-your-omniroute-key`ን በ67router ውስጥ በተፈጠረ API ቁልፍ ይተኩ።
 - የ`url` መስክ ወደ `/api/v1/vscode/{token}/chat/completions` መጠቆም አለበት።
 - የ`modelsUrl` መስክ ወደ `/api/v1/vscode/{token}/models` መጠቆም አለበት።
 - ደንበኛው ብጁ ራስጌዎችን የሚደግፍ ከሆነ፣ መደበኛውን `/v1` + Bearer ራስጌ ፍሰት ይምረጡ።
@@ -566,17 +566,17 @@ VS Code Insiders ለcustom endpoint models ሲዋቀር እና OmniRoute ያለc
 # ወደ AWS/Kiro መለያዎ ይግቡ፦
 kiro-cli login
 
-# CLIው የራሱን ማረጋገጫ ይጠቀማል — ለKiro CLI ራሱ OmniRoute እንደ ባክኤንድ አያስፈልግም።
-# ለሌሎች መሣሪያዎች kiro-cliን ከOmniRoute ጎን ለጎን ይጠቀሙ።
+# CLIው የራሱን ማረጋገጫ ይጠቀማል — ለKiro CLI ራሱ 67router እንደ ባክኤንድ አያስፈልግም።
+# ለሌሎች መሣሪያዎች kiro-cliን ከ67router ጎን ለጎን ይጠቀሙ።
 kiro-cli status
 ```
 
-ለ**Kiro IDE** ዴስክቶፕ መተግበሪያ፣ በOmniRoute
+ለ**Kiro IDE** ዴስክቶፕ መተግበሪያ፣ በ67router
 ስር `/dashboard/cli-tools → Kiro` የቀረበውን MITM መዳረሻ ይጠቀሙ።
 
 ---
 
-## 10. ውስጣዊ OmniRoute CLI
+## 10. ውስጣዊ 67router CLI
 
 የ`omniroute` ባይነሪ ለሰርቨር የሕይወት ዑደት፣ ማዋቀር፣ ምርመራዎች እና የአቅራቢ አስተዳደር ትዕዛዞችን ይሰጣል። መግቢያ ነጥብ፦ `bin/omniroute.mjs`።
 
@@ -610,7 +610,7 @@ omniroute setup --add-provider \
 | ተለዋዋጭ               | ዓላማ                                                           |
 | ------------------- | ------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | የአቅራቢ API ቁልፍ (በCommander `.env()` በኩል ከ`--api-key` ጋር የተያያዘ) |
-| `DATA_DIR`          | የOmniRoute ውሂብ ማውጫን ተካ                                        |
+| `DATA_DIR`          | የ67router ውሂብ ማውጫን ተካ                                         |
 
 ሁሉም ሌሎች መስተጋብራዊ ያልሆኑ ግብዓቶች እንደ flags ይተላለፋሉ፣ እንደ የአካባቢ ተለዋዋጮች አይደለም፦
 `--password`፣ `--provider`፣ `--provider-name`፣ `--provider-base-url`፣ `--default-model`
@@ -633,7 +633,7 @@ doctor እነዚህን ፍተሻዎች ያካሂዳል፦ `Config`፣ `Database`
 ### የአቅራቢ አስተዳደር
 
 ```bash
-omniroute providers available                       # የOmniRoute አቅራቢ ካታሎግ
+omniroute providers available                       # የ67router አቅራቢ ካታሎግ
 omniroute providers available --search openai       # ካታሎጉን በid/name/alias/category አጣራ
 omniroute providers available --category api-key    # በምድብ አጣራ (api-key፣ oauth፣ free፣ ...)
 omniroute providers available --json                # በማሽን ሊነበብ የሚችል JSON
@@ -654,7 +654,7 @@ omniroute providers remove <id|name> --yes
 `providers add/import/auth/edit/remove` API-ቀዳሚ ናቸው፤ ስለዚህም
 በንቁው አካባቢያዊ ወይም የርቀት context ላይ ይሰራሉ። የማረጋገጫ መረጃ ግብዓት
 `--credential-stdin` ወይም `--credential-env`ን መጠቀም አለበት፤ `--dry-run --json`
-የተደበቀ መኖር/ቅርጽን ብቻ ሪፖርት ያደርጋል። `providers available` የOmniRoute ካታሎግን ያነባል፤
+የተደበቀ መኖር/ቅርጽን ብቻ ሪፖርት ያደርጋል። `providers available` የ67router ካታሎግን ያነባል፤
 `providers list/test/test-all/validate` አካባቢያዊ የSQLite ባህሪያቸውን ይዘው ይቆያሉ እና
 ሰርቨሩ እየሰራ እንዲሆን አይጠይቁም።
 
@@ -697,7 +697,7 @@ omniroute auth export --force --out creds.json           # ወደ ፋይል ጻ�
 
 ### ሌሎች ንዑስ ትዕዛዞች
 
-በተለየ ሁኔታ ካልተገለጸ በስተቀር፣ እነዚህ እየሰራ ያለ OmniRoute አገልጋይ እንዳለ ይገምታሉ፦
+በተለየ ሁኔታ ካልተገለጸ በስተቀር፣ እነዚህ እየሰራ ያለ 67router አገልጋይ እንዳለ ይገምታሉ፦
 
 ```bash
 omniroute status                       # አጠቃላይ የአሂድ ጊዜ ሁኔታ
@@ -705,7 +705,7 @@ omniroute logs                         # የጥያቄ ምዝግቦችን በቀ�
 omniroute config list                  # የተዋቀሩ CLI መሣሪያዎችን ያሳዩ
 
 omniroute provider list                # የሚገኙ አቅራቢዎችን ይዘርዝሩ (የ providers list ተለዋጭ ስም)
-omniroute provider add                 # OmniRouteን በአንድ መሣሪያ ላይ እንደ አቅራቢ ይመዝግቡ
+omniroute provider add                 # 67routerን በአንድ መሣሪያ ላይ እንደ አቅራቢ ይመዝግቡ
 omniroute keys add | list | remove     # የAPI ቁልፎችን ያስተዳድሩ
 omniroute models [provider]            # ሞዴሎችን ይዘርዝሩ (--json, --search)
 omniroute combo list | switch | create | delete
@@ -719,7 +719,6 @@ omniroute cache                        # የcache ሁኔታ
 omniroute cache clear                  # semantic + signature cachesን ያጽዱ
 
 omniroute mcp status | restart         # የMCP አገልጋይ ሁኔታ / ዳግም ማስጀመር
-omniroute a2a status | card            # የA2A አገልጋይ ሁኔታ / የወኪል ካርድ
 
 omniroute tunnel list | create | stop  # tunnelsን ያስተዳድሩ (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # የአካባቢ ተለዋዋጮችን ይመርምሩ / ያዋቅሩ (ጊዜያዊ)
@@ -755,7 +754,7 @@ omniroute completion                   # የshell completionን ያመንጩ
 | `/v1/audio/speech`         | ጽሑፍን ወደ ንግግር መቀየር           | ElevenLabs፣ OpenAI TTS     |
 | `/v1/audio/transcriptions` | ንግግርን ወደ ጽሑፍ መቀየር           | Deepgram፣ AssemblyAI       |
 
-ቶከን የተካተተበት OmniRoute URL ያላቸው፣ በቀጥታ ለመለጠፍ ዝግጁ የሆኑ ምሳሌዎች፦
+ቶከን የተካተተበት 67router URL ያላቸው፣ በቀጥታ ለመለጠፍ ዝግጁ የሆኑ ምሳሌዎች፦
 
 ```txt
 የቶከን ምሳሌ፦ sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -774,7 +773,7 @@ omniroute completion                   # የshell completionን ያመንጩ
 
 | ስህተት                                         | ምክንያት                  | መፍትሔ                                           |
 | -------------------------------------------- | ---------------------- | ---------------------------------------------- |
-| `Connection refused`                         | OmniRoute እየሰራ አይደለም   | `omniroute serve`                              |
+| `Connection refused`                         | 67router እየሰራ አይደለም    | `omniroute serve`                              |
 | `401 Unauthorized`                           | የተሳሳተ API ቁልፍ          | በ`/dashboard/api-manager` ውስጥ ያረጋግጡ            |
 | `No combo configured`                        | ንቁ የማዘዋወሪያ ጥምረት የለም    | በ`/dashboard/combos` ውስጥ ያዋቅሩ                  |
 | CLI shows "not installed"                    | ባይነሪው በPATH ውስጥ የለም    | `which <command>` ያረጋግጡ                        |
@@ -782,7 +781,7 @@ omniroute completion                   # የshell completionን ያመንጩ
 | Old link `/dashboard/cli-tools`              | ከv3.8.6 በፊት የተቀመጠ ዕልባት | በራስ-ሰር ወደ `/dashboard/cli-code` ይዘዋወራል (308)   |
 | Old link `/dashboard/agents`                 | ከv3.8.6 በፊት የተቀመጠ ዕልባት | በራስ-ሰር ወደ `/dashboard/acp-agents` ይዘዋወራል (308) |
 
-## የinference-key መመሪያን በOmniRoute CLI ያስተዳድሩ
+## የinference-key መመሪያን በ67router CLI ያስተዳድሩ
 
 ነባር inference keyን በIDው ለመመርመር ወይም ለማዘመን፣ ማንነቱ የተረጋገጠ የአስተዳደር አውድ ይጠቀሙ ([የርቀት ሁነታ](../guides/REMOTE-MODE.md)ን ይመልከቱ)፦
 

@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute OpenAI Codex-dən istifadə etmək üçün **iki** üsul təqdim edir:
+67router OpenAI Codex-dən istifadə etmək üçün **iki** üsul təqdim edir:
 
 | Provayder              | OpenAI ilə necə əlaqə qurur                                                                                                                                                                                                 | İstifadə ilə bağlı qeyd                                                  |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | **`codex`**            | ChatGPT/OpenAI OAuth tokeninizi birbaşa Responses API-yə təkrar ötürür                                                                                                                                                      | **Bəli** — rəsmi sessiyanın proksi/router istifadəsi üçün icazəsi yoxdur |
-| **`codex-app-server`** | **Codex CLI-nin öz `codex app-server` xidmətini** JSON-RPC/WebSocket üzərindən idarə edir; CLI öz OAuth məlumatlarına (`~/.codex/auth.json`) interaktiv `codex` sessiyasında olduğu kimi sahib olur və onları özü yeniləyir | **Xeyr** — OmniRoute heç vaxt tokeni API-yə təkrar ötürmür               |
+| **`codex-app-server`** | **Codex CLI-nin öz `codex app-server` xidmətini** JSON-RPC/WebSocket üzərindən idarə edir; CLI öz OAuth məlumatlarına (`~/.codex/auth.json`) interaktiv `codex` sessiyasında olduğu kimi sahib olur və onları özü yeniləyir | **Xeyr** — 67router heç vaxt tokeni API-yə təkrar ötürmür                |
 
 `codex-app-server` heç vaxt tokeni təkrar ötürmədiyi üçün ona
 sessiyanın təkrar ötürülməsi ilə bağlı istifadə qeydi şamil edilmir. Bunun üçün
@@ -21,7 +21,7 @@ həmin CLI-də **sessiya açılmış** olmalıdır.
 ## 1. Arxitektura
 
 ```
-┌─ OmniRoute tətbiqi ──────────────┐        ┌─ codex-app-server köməkçi konteyneri ─┐
+┌─ 67router tətbiqi ──────────────┐        ┌─ codex-app-server köməkçi konteyneri ─┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                      │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456            │
 │  (+ imkan tokeni)                │  JSON  │  --ws-auth capability-token            │
@@ -82,7 +82,7 @@ yazmır — yalnız fayl mövcud olmadıqda və ya onun tokeni köhnəldikdə ya
 - **İctimai istifadəçi, lokalda codex quraşdırılmayıb** — bunun əhəmiyyəti yoxdur:
   köməkçi konteynerdə CLI mövcuddur. İstifadəçi yalnız idarəetmə paneli vasitəsilə
   autentifikasiya olunur.
-- **Bare-metal OmniRoute (köməkçi konteyner yoxdur, hostda codex var)** —
+- **Bare-metal 67router (köməkçi konteyner yoxdur, hostda codex var)** —
   `OMNIROUTE_CODEX_APPSERVER_WS` dəyişənini öz `codex app-server` xidmətinizə
   yönəldin və hostdakı codex sessiyasının açıq olduğuna əmin olun; binar fayl
   mövcud deyilsə, "codex quraşdırılmayıb" ipucu göstərilir.

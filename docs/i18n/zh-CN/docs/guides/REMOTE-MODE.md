@@ -4,7 +4,7 @@
 
 ---
 
-在你的笔记本电脑上运行 `omniroute` CLI，而 OmniRoute 本身则运行在其他位置
+在你的笔记本电脑上运行 `omniroute` CLI，而 67router 本身则运行在其他位置
 （VPS、家庭服务器或 Tailnet 中的另一台机器）。你只需使用
 `omniroute connect` 登录一次，此后**每个** CLI 命令都会以该远程
 服务器为目标——命令相同、输出相同，只是在远程服务器上执行。
@@ -24,7 +24,7 @@ omniroute configure codex                # ← 根据远程目录写入本地 Co
 ## 工作原理
 
 ```
-你的笔记本电脑                          远程 OmniRoute（VPS）
+你的笔记本电脑                          远程 67router（VPS）
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  （密码 → 令牌）            │
 │  上下文：vps        │ ───────────────►  │ 签发具有作用域的访问令牌        │
@@ -100,11 +100,11 @@ CLI 会通过 `GET /api/cli/whoami` 验证令牌，并将其保存为活动上�
 
 ## 在远程安装中连接 Antigravity
 
-Antigravity 使用 Google 的第一方/原生应用同意屏幕。只有当**批准登录的浏览器能够访问环回重定向地址**（`http://127.0.0.1:<port>/callback`）时，Google 才会返回授权码。在远程 VPS 安装中，该环回地址位于服务器上，而不是你的计算机上，因此同意屏幕会**一直卡住，且永远不会生成授权码**——常规的“粘贴回调 URL”备用方案也没有任何内容可粘贴。（这是 Google 端的限制：任何使用内置 Antigravity 桌面客户端的代理都会出现同样的卡住问题，并非 OmniRoute 独有。）
+Antigravity 使用 Google 的第一方/原生应用同意屏幕。只有当**批准登录的浏览器能够访问环回重定向地址**（`http://127.0.0.1:<port>/callback`）时，Google 才会返回授权码。在远程 VPS 安装中，该环回地址位于服务器上，而不是你的计算机上，因此同意屏幕会**一直卡住，且永远不会生成授权码**——常规的“粘贴回调 URL”备用方案也没有任何内容可粘贴。（这是 Google 端的限制：任何使用内置 Antigravity 桌面客户端的代理都会出现同样的卡住问题，并非 67router 独有。）
 
 仪表板会提前检测到这一情况，避免你被卡住：从非 localhost 地址打开 **Providers → Antigravity → Connect** 时，通用的“复制回调 URL”提示会替换为下面两种解决方案，并且每种方案都已自动填入你的主机和端口。（局域网地址也算——对于此回调而言，`192.168.x.x` 并不是 localhost。）
 
-支持通过以下两种方式将 Antigravity 连接到远程 OmniRoute。
+支持通过以下两种方式将 Antigravity 连接到远程 67router。
 
 ### 选项 A — 本地登录辅助工具（推荐）
 
@@ -132,7 +132,7 @@ npx omniroute login antigravity --no-push
 #   omniroute-cred-v1.eyJ2IjoxLCJ...
 ```
 
-然后，在**远程**仪表板中打开 **Providers → Antigravity → Connect**，并将 `omniroute-cred-v1.…` 数据粘贴到 **Step 2** 字段中（该字段既接受回调 URL，也接受凭据数据）。OmniRoute 会将其解码，在服务器端运行 Cloud Code 引导流程，并持久保存连接。
+然后，在**远程**仪表板中打开 **Providers → Antigravity → Connect**，并将 `omniroute-cred-v1.…` 数据粘贴到 **Step 2** 字段中（该字段既接受回调 URL，也接受凭据数据）。67router 会将其解码，在服务器端运行 Cloud Code 引导流程，并持久保存连接。
 
 > 该数据包含刷新令牌——请像对待密码一样保护它。使用推送方式时，它会通过上下文中经过身份验证的连接发送一次；使用粘贴方式时，则会通过仪表板连接发送。无论使用哪种方式，它都会以加密形式静态存储，并且成功推送后绝不会将其输出到终端。
 
@@ -160,7 +160,7 @@ ssh -L 20128:127.0.0.1:20128 user@your-vps
 ## 在远程安装中连接 Codex / Grok（固定回环地址提供者）
 
 Codex、xAI（`xai-oauth`）和 Grok CLI（`grok-cli`）会在其上游 OAuth 应用中注册一个**固定的**回环
-`redirect_uri`。OmniRoute 无法更改它——提供者始终会将浏览器重定向到同一个硬编码地址：
+`redirect_uri`。67router 无法更改它——提供者始终会将浏览器重定向到同一个硬编码地址：
 
 | 提供者      | 提供者重定向到的固定回调地址          |
 | ----------- | ------------------------------------- |
@@ -168,7 +168,7 @@ Codex、xAI（`xai-oauth`）和 Grok CLI（`grok-cli`）会在其上游 OAuth �
 | `xai-oauth` | `http://127.0.0.1:56121/callback`     |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`     |
 
-这里的 `localhost` 指的是**运行浏览器的机器**，而 OmniRoute 的 PKCE
+这里的 `localhost` 指的是**运行浏览器的机器**，而 67router 的 PKCE
 回调服务器监听的是**服务器的**回环地址。如果通过类似
 `http://192.168.0.15:20128` 的 LAN 地址打开仪表板，两者就无法相遇：授权
 代码会被发送到您自己笔记本电脑的 `localhost:1455`，但那里没有任何程序监听，
@@ -188,7 +188,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 必须配置两个转发，仅转发其中一个仍然会失败：
 
 - **`20128`**（仪表板端口）使来源成为真正的本机 localhost，而这正是
-  让 OmniRoute 启动 PKCE 回调服务器的条件——LAN 来源永远
+  让 67router 启动 PKCE 回调服务器的条件——LAN 来源永远
   不会进入该分支。
 - **`1455`**（提供者的固定回调端口）是浏览器被重定向回来的位置；
   它必须通过隧道连接到服务器的回环地址。
@@ -303,7 +303,7 @@ omniroute contexts current         # 活动服务器、认证状态、范围
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

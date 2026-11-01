@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "خطا: {message}",
-    "serverOffline": "سرور OmniRoute آفلاین است. با این دستور راه‌اندازی کنید: omniroute serve",
+    "serverOffline": "سرور 67router آفلاین است. با این دستور راه‌اندازی کنید: omniroute serve",
     "authRequired": "احراز هویت لازم است. OMNIROUTE_API_KEY را تنظیم کنید یا اجرا کنید: omniroute setup",
     "rateLimited": "محدودیت درخواست رسیده است. پس از {seconds} ثانیه دوباره تلاش کنید.",
     "timeout": "درخواست پس از {ms}ms منقضی شد.",
@@ -15,7 +15,7 @@
     "yesOpt": "رد کردن تأیید"
   },
   "setup": {
-    "title": "راهاندازی OmniRoute",
+    "title": "راهاندازی 67router",
     "passwordPrompt": "رمز عبور مدیر",
     "providerPrompt": "ارائهدهنده پیشفرض (برای رد کردن خالی بگذارید)",
     "done": "راهاندازی کامل شد",
@@ -30,7 +30,7 @@
     "opencode": "نصب و پیکربندی @omniroute/opencode-plugin همراه برای OpenCode"
   },
   "doctor": {
-    "title": "عیبیاب OmniRoute",
+    "title": "عیبیاب 67router",
     "dbOk": "پایگاه داده: سالم ({path})",
     "dbMissing": "پایگاه داده: مقداردهی اولیه نشده است — `omniroute setup` را اجرا کنید",
     "portOk": "درگاه {port}: در دسترس",
@@ -82,7 +82,7 @@
       "providerOpt": "فیلتر بر اساس نام ارائهدهنده",
       "header": "شناسه     ارائهدهنده    نام                      وضعیت انقضا  وضعیت آزمون  پایان دورهٔ انتظار",
       "noData": "هیچ دادهای برای اتصال ارائهدهنده موجود نیست.",
-      "requiresServer": "برای providers status، سرور OmniRoute باید در حال اجرا باشد."
+      "requiresServer": "برای providers status، سرور 67router باید در حال اجرا باشد."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "افزودن یا بهروزرسانی یک کلید API برای ارائهدهنده",
     "listDescription": "فهرست همهٔ کلیدهای API پیکربندیشده",
     "removeDescription": "حذف کلید API یک ارائهدهنده",
-    "regenerateDescription": "تولید مجدد یک کلید API متعلق به OmniRoute",
-    "revokeDescription": "لغو یک کلید API متعلق به OmniRoute",
+    "regenerateDescription": "تولید مجدد یک کلید API متعلق به 67router",
+    "revokeDescription": "لغو یک کلید API متعلق به 67router",
     "revealDescription": "نمایش مقدار پنهاننشدهٔ کلید API",
     "usageDescription": "نمایش استفادههای اخیر از یک کلید API",
     "usageLimitOpt": "تعداد درخواستهای اخیر",
@@ -172,13 +172,6 @@
       "period": "بازه زمانی: 1d|7d|30d|90d|ytd|all (پیشفرض: 30d)",
       "provider": "فیلتر بر اساس شناسه ارائهدهنده"
     },
-    "budget": {
-      "description": "مدیریت بودجههای هزینه",
-      "set": {
-        "scope": "دامنه بودجه (پیشفرض: global)",
-        "period": "دوره بودجه: daily|weekly|monthly (پیشفرض: monthly)"
-      }
-    },
     "quota": {
       "description": "میزان استفاده از سهمیه ارائهدهنده را نمایش بده",
       "provider": "فیلتر بر اساس شناسه ارائهدهنده",
@@ -225,7 +218,7 @@
     "noCombo": "هیچ ترکیب منطبقی پیدا نشد. یکی را با این دستور پیکربندی کن: omniroute combo create"
   },
   "chat": {
-    "description": "ارسال یک پرامپت گفتوگوی یکباره به OmniRoute",
+    "description": "ارسال یک پرامپت گفتوگوی یکباره به 67router",
     "file": "خواندن پرامپت از فایل",
     "stdin": "خواندن پرامپت از stdin",
     "system": "پرامپت سیستم",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "راهاندازی سرور OmniRoute (عمل پیشفرض)",
-    "starting": "در حال راهاندازی سرور OmniRoute روی پورت {port}...",
+    "description": "راهاندازی سرور 67router (عمل پیشفرض)",
+    "starting": "در حال راهاندازی سرور 67router روی پورت {port}...",
     "ready": "در http://localhost:{port} آماده است",
     "stopping": "در حال توقف سرور (PID {pid})...",
     "stopped": "سرور متوقف شد.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "پشتیبانگیری",
-    "description": "ایجاد نسخه پشتیبان از دادههای OmniRoute",
+    "description": "ایجاد نسخه پشتیبان از دادههای 67router",
     "creating": "در حال ایجاد نسخه پشتیبان...",
     "done": "نسخه پشتیبان در {path} ذخیره شد",
     "noFiles": "فایلی برای پشتیبانگیری وجود ندارد (پایگاه داده راهاندازی نشده است)",
@@ -277,7 +270,7 @@
     "noBackups": "هیچ نسخهٔ پشتیبانی یافت نشد.",
     "notFound": "نسخهٔ پشتیبان یافت نشد: {name}",
     "confirmRestore": "دادههای فعلی با نسخهٔ پشتیبان مربوط به {ts} بازنویسی شوند؟",
-    "createDescription": "ایجاد نسخهٔ پشتیبان از دادههای OmniRoute",
+    "createDescription": "ایجاد نسخهٔ پشتیبان از دادههای 67router",
     "nameOpt": "نام سفارشی نسخهٔ پشتیبان",
     "cloudOpt": "بارگذاری نسخهٔ پشتیبان در فضای ذخیرهسازی ابری",
     "encryptOpt": "رمزگذاری نسخهٔ پشتیبان با AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "پاکسازی حافظهٔ نهان ناموفق بود."
   },
   "redis": {
-    "description": "راه‌اندازی کانتینر Redis محلی با یک کلیک (Podman یا Docker) برای حافظه پنهان و ردیابی سهمیه OmniRoute"
+    "description": "راه‌اندازی کانتینر Redis محلی با یک کلیک (Podman یا Docker) برای حافظه پنهان و ردیابی سهمیه 67router"
   },
   "test": {
     "description": "آزمایش اتصال به یک ارائهدهنده",
@@ -390,36 +383,8 @@
       "description": "گزارش ممیزی MCP (نام مستعار برای audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "فهرستکردن مهارتهای A2A موجود از کارت عامل"
-    },
-    "invoke": {
-      "description": "فراخوانی یک مهارت A2A و بازگرداندن شناسه وظیفه",
-      "input": "شیء ورودی JSON",
-      "input_file": "مسیر فایل ورودی JSON",
-      "wait": "انتظار برای تکمیل وظیفه پیش از بازگشت",
-      "timeout": "مهلت انتظار برای تکمیل بر حسب ms (پیشفرض: 60000)"
-    },
-    "tasks": {
-      "description": "مدیریت وظایف A2A",
-      "list": {
-        "status": "فیلتر بر اساس وضعیت",
-        "skill": "فیلتر بر اساس شناسه مهارت"
-      },
-      "watch": {
-        "description": "بررسی دورهای وضعیت وظیفه تا زمان تکمیل"
-      },
-      "stream": {
-        "description": "پخش رویدادهای اجرای وظیفه از طریق SSE"
-      },
-      "logs": {
-        "description": "نمایش پیامها و مصنوعات وظیفه"
-      }
-    }
-  },
   "policy": {
-    "description": "مدیریت سیاستهای مجوزدهی OmniRoute",
+    "description": "مدیریت سیاستهای مجوزدهی 67router",
     "list": {
       "description": "فهرستکردن سیاستها",
       "kind": "فیلتر بر اساس نوع (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "پیکربندی و بررسی خط لوله فشردهسازی OmniRoute",
+    "description": "پیکربندی و بررسی خط لوله فشردهسازی 67router",
     "status": {
       "description": "نمایش وضعیت و تنظیمات فعلی فشردهسازی"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "URL تونل {type} تغییر کند؟ (یک URL جدید ایجاد خواهد شد)"
   },
   "stop": {
-    "description": "توقف سرور OmniRoute",
+    "description": "توقف سرور 67router",
     "stopping": "در حال توقف سرور (PID {pid})...",
     "stopped": "سرور متوقف شد.",
     "notRunning": "هیچ سروری در حال اجرا نیست.",
     "portFallback": "هیچ فایل PID یافت نشد؛ تلاش برای توقف بر اساس پورت..."
   },
   "restart": {
-    "description": "راهاندازی مجدد سرور OmniRoute",
-    "restarting": "در حال راهاندازی مجدد سرور OmniRoute..."
+    "description": "راهاندازی مجدد سرور 67router",
+    "restarting": "در حال راهاندازی مجدد سرور 67router..."
   },
   "dashboard": {
-    "description": "باز کردن داشبورد OmniRoute در مرورگر",
+    "description": "باز کردن داشبورد 67router در مرورگر",
     "opening": "در حال باز کردن داشبورد در {url}",
     "urlOnly": "چاپ URL داشبورد بدون باز کردن مرورگر",
     "tui": "باز کردن داشبورد تعاملی TUI (رابط کاربری ترمینال، ۷ زبانه)"
@@ -560,120 +525,6 @@
       "description": "دریافت یک ورودی گزارش ممیزی بر اساس شناسه"
     }
   },
-  "skills": {
-    "description": "مدیریت مهارتهای OmniRoute (sandbox، builtin، custom، hybrid، skillssh)",
-    "list": {
-      "description": "فهرست مهارتهای نصبشده",
-      "type": "فیلتر بر اساس نوع (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "نمایش فقط مهارتهای فعال",
-      "disabled": "نمایش فقط مهارتهای غیرفعال",
-      "api_key": "فیلتر بر اساس کلید API"
-    },
-    "get": {
-      "description": "دریافت جزئیات یک مهارت بر اساس شناسه"
-    },
-    "install": {
-      "description": "نصب یک مهارت از فایل یا URL",
-      "from_file": "مسیر فایل تعریف JSON مهارت",
-      "from_url": "URL تعریف مهارت راهدور",
-      "type": "نوع مهارت (sandbox|custom|hybrid)",
-      "enable": "فعالکردن مهارت پس از نصب"
-    },
-    "enable": {
-      "description": "فعالکردن یک مهارت بر اساس شناسه"
-    },
-    "disable": {
-      "description": "غیرفعالکردن یک مهارت بر اساس شناسه",
-      "yes": "رد کردن درخواست تأیید"
-    },
-    "delete": {
-      "description": "حذف یک مهارت بر اساس شناسه",
-      "yes": "رد کردن درخواست تأیید"
-    },
-    "execute": {
-      "description": "اجرای یک مهارت بر اساس شناسه",
-      "input": "شیء ورودی JSON",
-      "input_file": "مسیر فایل ورودی JSON",
-      "timeout": "مهلت اجرای عملیات بر حسب میلیثانیه (پیشفرض: 30000)"
-    },
-    "executions": {
-      "description": "فهرست تاریخچه اجرای مهارت",
-      "skill": "فیلتر بر اساس شناسه مهارت",
-      "limit": "حداکثر نتایج (پیشفرض: 50)",
-      "status": "فیلتر بر اساس وضعیت (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "مدیریت مهارتهای نصبشده از طریق SSH"
-    },
-    "marketplace": {
-      "description": "مرور و نصب مهارتها از بازارچه"
-    },
-    "mp": {
-      "search": {
-        "description": "جستوجوی بستههای بازارچه",
-        "category": "فیلتر بر اساس دستهبندی",
-        "tag": "فیلتر بر اساس برچسب",
-        "limit": "حداکثر نتایج (پیشفرض: 30)",
-        "sort": "مرتبسازی بر اساس: downloads|rating|recent"
-      },
-      "info": {
-        "description": "نمایش جزئیات بسته و readme"
-      },
-      "install": {
-        "description": "نصب یک بسته از بازارچه",
-        "version": "نسخه بسته (پیشفرض: latest)",
-        "enable": "فعالسازی پس از نصب",
-        "yes": "رد کردن درخواست تأیید"
-      },
-      "categories": {
-        "description": "فهرست دستهبندیهای بازارچه"
-      },
-      "featured": {
-        "description": "نمایش بستههای برگزیده بازارچه"
-      }
-    }
-  },
-  "memory": {
-    "description": "مدیریت حافظه مکالمهای OmniRoute ‏(FTS5 + vector)",
-    "search": {
-      "description": "جستوجوی ورودیهای حافظه با پرسوجوی معنایی",
-      "type": "فیلتر بر اساس نوع حافظه (user|feedback|project|reference)",
-      "limit": "حداکثر نتایج (پیشفرض: 20)",
-      "api_key": "فیلتر بر اساس کلید API",
-      "token_budget": "محدود کردن مجموع توکنها در نتایج"
-    },
-    "add": {
-      "description": "افزودن ورودی جدید به حافظه",
-      "content": "محتوای متنی حافظه",
-      "file": "خواندن محتوا از فایل",
-      "type": "نوع حافظه (پیشفرض: user)",
-      "metadata": "شیء فراداده JSON",
-      "api_key": "مرتبطسازی با کلید API"
-    },
-    "clear": {
-      "description": "حذف ورودیهای حافظه مطابق با فیلترها",
-      "type": "فیلتر بر اساس نوع",
-      "older": "حذف ورودیهای قدیمیتر از مدتزمان مشخص (30d, 6m, 1y)",
-      "api_key": "فیلتر بر اساس کلید API",
-      "yes": "رد کردن درخواست تأیید"
-    },
-    "list": {
-      "description": "فهرست کردن ورودیهای حافظه بدون رتبهبندی جستوجو",
-      "type": "فیلتر بر اساس نوع",
-      "limit": "حداکثر نتایج (پیشفرض: 100)",
-      "api_key": "فیلتر بر اساس کلید API"
-    },
-    "get": {
-      "description": "دریافت یک ورودی حافظه بر اساس شناسه"
-    },
-    "delete": {
-      "description": "حذف یک ورودی حافظه بر اساس شناسه",
-      "yes": "رد کردن درخواست تأیید"
-    },
-    "health": {
-      "description": "نمایش سلامت زیرسامانه حافظه (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "مدیریت اتصالهای ارائهدهندگان OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "رد کردن درخواست تأیید"
     }
   },
-  "cloud": {
-    "description": "مدیریت وظایف عامل هوش مصنوعی ابری (codex, devin, jules)",
-    "agents": {
-      "description": "فهرست عاملهای ابری موجود"
-    },
-    "agent": {
-      "description": "مدیریت وظایف عامل ابری {agent}",
-      "auth": {
-        "description": "اعطای مجوز به {agent} از طریق OAuth"
-      }
-    },
-    "task": {
-      "description": "مدیریت وظایف عامل ابری",
-      "create": {
-        "description": "ایجاد وظیفه جدید برای عامل",
-        "title": "عنوان وظیفه (پیشفرض: ۸۰ نویسه نخست درخواست)",
-        "prompt": "متن درخواست وظیفه",
-        "prompt_file": "خواندن درخواست از فایل",
-        "repo": "URL مخزن برای همسانهسازی جهت انجام وظیفه",
-        "branch": "نام شاخه مورد استفاده",
-        "metadata": "شیء فراداده JSON"
-      },
-      "list": {
-        "description": "فهرست وظایف عامل",
-        "status": "فیلتر بر اساس وضعیت (running|completed|failed|cancelled)",
-        "limit": "حداکثر نتایج (پیشفرض: 50)"
-      },
-      "get": {
-        "description": "دریافت جزئیات وظیفه بر اساس شناسه"
-      },
-      "status": {
-        "description": "چاپ وضعیت وظیفه (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "لغو وظیفه در حال اجرا",
-        "yes": "رد کردن درخواست تأیید"
-      },
-      "approve": {
-        "description": "تأیید برنامه عامل برای شروع اجرا"
-      },
-      "message": {
-        "description": "ارسال پیام به یک وظیفه در حال اجرا"
-      }
-    },
-    "sources": {
-      "description": "فهرست فایلهای منبع تولیدشده توسط یک وظیفه"
-    }
-  },
-  "eval": {
-    "description": "مدیریت مجموعهها و اجراهای ارزیابی",
-    "suites": {
-      "description": "مدیریت مجموعههای ارزیابی",
-      "list": {
-        "description": "فهرست مجموعههای ارزیابی"
-      },
-      "get": {
-        "description": "دریافت جزئیات مجموعه ارزیابی بر اساس ID"
-      },
-      "create": {
-        "description": "ایجاد یک مجموعه ارزیابی از فایل JSON",
-        "file": "مسیر فایل JSON تعریف مجموعه"
-      }
-    },
-    "run": {
-      "description": "شروع اجرای ارزیابی برای یک مجموعه",
-      "model": "ID مدل برای ارزیابی (پیشفرض: auto)",
-      "combo": "اجبار به استفاده از یک ترکیب مشخص بر اساس نام",
-      "concurrency": "تعداد نمونههای همزمان (پیشفرض: 4)",
-      "tag": "برچسبگذاری این اجرا برای فیلترکردن در آینده",
-      "watch": "مشاهده پیشرفت اجرا تا زمان تکمیل"
-    },
-    "list": {
-      "description": "فهرست اجراهای ارزیابی",
-      "suite": "فیلتر بر اساس ID مجموعه",
-      "status": "فیلتر بر اساس وضعیت",
-      "since": "بازگرداندن اجراها از این برچسب زمانی به بعد",
-      "limit": "حداکثر نتایج (پیشفرض: 50)"
-    },
-    "get": {
-      "description": "دریافت جزئیات اجرای ارزیابی بر اساس ID"
-    },
-    "results": {
-      "description": "نمایش نتایج نمونهها برای یک اجرای ارزیابی",
-      "failed": "نمایش فقط نمونههای ناموفق"
-    },
-    "cancel": {
-      "description": "لغو یک ارزیابی در حال اجرا",
-      "yes": "ردکردن درخواست تأیید"
-    },
-    "scorecard": {
-      "description": "نمایش کارت امتیاز یک اجرای ارزیابی تکمیلشده"
-    }
-  },
-  "webhooks": {
-    "description": "مدیریت وبهوکهای OmniRoute",
-    "events": {
-      "description": "فهرست همه انواع رویداد وبهوک موجود"
-    },
-    "list": {
-      "description": "فهرست وبهوکهای پیکربندیشده"
-    },
-    "get": {
-      "description": "دریافت جزئیات وبهوک بر اساس ID"
-    },
-    "add": {
-      "description": "ثبت یک وبهوک جدید",
-      "url": "URL مقصد",
-      "events": "فهرست انواع رویداد با جداکننده ویرگول",
-      "secret": "رمز امضای HMAC",
-      "header": "هدر اضافی با قالب key=value (قابل تکرار)",
-      "no_enabled": "ایجاد وبهوک در حالت غیرفعال"
-    },
-    "update": {
-      "description": "بهروزرسانی یک وبهوک موجود",
-      "enabled": "تنظیم وضعیت فعالبودن (true|false)"
-    },
-    "remove": {
-      "description": "حذف یک وبهوک",
-      "yes": "ردکردن درخواست تأیید"
-    },
-    "test": {
-      "description": "ارسال یک رویداد آزمایشی به وبهوک",
-      "event": "نوع رویداد برای شبیهسازی (پیشفرض: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — روتر هوشمند هوش مصنوعی با fallback خودکار",
+    "description": "67router — روتر هوشمند هوش مصنوعی با fallback خودکار",
     "version": "نمایش نسخه و خروج",
     "output": "فرمت خروجی (table, json, jsonl, csv)",
     "quiet": "حذف خروجی غیر ضروری",
     "no_color": "غیرفعال کردن خروجی رنگی",
     "timeout": "تایم‌اوت درخواست HTTP به میلی‌ثانیه",
-    "api_key": "کلید API برای سرور OmniRoute",
-    "base_url": "URL پایه سرور OmniRoute",
+    "api_key": "کلید API برای سرور 67router",
+    "base_url": "URL پایه سرور 67router",
     "context": "زمینه/پروفایل سرور برای این دستور",
     "lang": "تنظیم زبان نمایش CLI (OMNIROUTE_LANG را نادیده می‌گیرد)"
-  },
-  "files": {
-    "description": "مدیریت فایلها (بارگذاری، فهرستکردن، دریافت، دانلود، حذف)",
-    "list": {
-      "purpose": "فیلتر بر اساس کاربرد",
-      "limit": "حداکثر نتایج"
-    },
-    "get": {
-      "description": "دریافت فرادادهٔ فایل"
-    },
-    "upload": {
-      "description": "بارگذاری فایل",
-      "purpose": "هدف فایل (batch، assistants، fine-tune)"
-    },
-    "content": {
-      "description": "دانلود محتوای فایل",
-      "out": "ذخیره در مسیر (پیشفرض: stdout)"
-    },
-    "delete": {
-      "yes": "رد کردن تأیید"
-    }
-  },
-  "batches": {
-    "description": "مدیریت کارهای دستهای سازگار با OpenAI",
-    "list": {
-      "status": "فیلتر بر اساس وضعیت",
-      "limit": "حداکثر نتایج"
-    },
-    "create": {
-      "description": "ایجاد کار دستهای",
-      "inputFile": "شناسهٔ فایل ورودی",
-      "endpoint": "نقطهٔ پایانی مقصد",
-      "window": "بازهٔ تکمیل",
-      "metadata": "افزودن فراداده بهصورت key=value"
-    },
-    "submit": {
-      "description": "بارگذاری فایل JSONL و ایجاد کار دستهای",
-      "jsonl": "مسیر فایل JSONL",
-      "endpoint": "نقطهٔ پایانی مقصد",
-      "wait": "انتظار تا تکمیل"
-    },
-    "cancel": {
-      "yes": "رد کردن تأیید"
-    },
-    "wait": {
-      "timeout": "مهلت زمانی بر حسب ms"
-    },
-    "output": {
-      "out": "ذخیرهٔ خروجی در مسیر"
-    },
-    "errors": {
-      "out": "ذخیرهٔ خطاها در مسیر"
-    }
   },
   "translator": {
     "description": "ترجمهٔ بدنهٔ درخواستها بین قالبهای LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "دسترسی و آزمایش مشخصات OpenAPI مربوط به OmniRoute",
+    "description": "دسترسی و آزمایش مشخصات OpenAPI مربوط به 67router",
     "dump": {
       "description": "تخلیه مشخصات OpenAPI در stdout یا فایل",
       "format": "قالب خروجی: yaml|json (پیشفرض: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "فعالکردن ترکیب دارای بالاترین رتبه"
     }
   },
-  "oneproxy": {
-    "description": "مدیریت مخزن بالادستی OneProxy",
-    "stats": {
-      "provider": "فیلتر بر اساس ارائهدهنده",
-      "period": "بازه زمانی (پیشفرض: 24h)"
-    },
-    "fetch": {
-      "description": "دریافت پروکسیها از مخزن",
-      "count": "تعداد پروکسیهای قابل دریافت (پیشفرض: 1)",
-      "type": "نوع پروکسی: http|socks5 (پیشفرض: http)"
-    },
-    "rotate": {
-      "description": "اجبار به چرخش پروکسی",
-      "provider": "ارائهدهندهای که چرخش برای آن انجام میشود",
-      "connectionId": "شناسه اتصال مشخص برای چرخش"
-    },
-    "config": {
-      "description": "نمایش یا بهروزرسانی پیکربندی OneProxy",
-      "enabled": "فعالسازی مخزن پراکسی (true|false)",
-      "poolSize": "اندازه مخزن",
-      "providerSource": "URL ارائهدهنده پراکسی",
-      "rotationPolicy": "سیاست چرخش: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "فهرست مخزن فعلی پراکسی همراه با معیارها"
-    }
-  },
   "open": {
-    "description": "باز کردن یک صفحه مشخص از داشبورد OmniRoute در مرورگر",
+    "description": "باز کردن یک صفحه مشخص از داشبورد 67router در مرورگر",
     "url": "فقط URL را نمایش بده، مرورگر را باز نکن"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "همگامسازی پیکربندی بین نمونههای OmniRoute",
+    "description": "همگامسازی پیکربندی بین نمونههای 67router",
     "push": {
       "description": "ارسال پیکربندی به فضای ابری یا نمونه راهدور"
     },
@@ -1228,7 +874,7 @@
     "filter": "فیلتر بر اساس سطح (error,warn,info) — با جداکننده ویرگول",
     "lines": "تعداد خطوط برای دریافت",
     "timeout": "مهلت اتصال برحسب میلیثانیه",
-    "baseUrl": "نشانی پایه API OmniRoute",
+    "baseUrl": "نشانی پایه API 67router",
     "requestId": "فیلتر بر اساس شناسه درخواست",
     "apiKey": "فیلتر بر اساس کلید API",
     "combo": "فیلتر بر اساس نام ترکیب",
@@ -1244,10 +890,10 @@
     "description": "کنترل نماد سینی سیستم",
     "show": "نمایش نماد سینی (اگر سرور با --tray در حال اجرا است)",
     "hide": "پنهان کردن نماد سینی",
-    "quit": "خروج از OmniRoute از طریق سینی"
+    "quit": "خروج از 67router از طریق سینی"
   },
   "autostart": {
-    "description": "مدیریت اجرای خودکار OmniRoute هنگام راهاندازی سیستم (Linux: سرویس کاربر systemd)",
+    "description": "مدیریت اجرای خودکار 67router هنگام راهاندازی سیستم (Linux: سرویس کاربر systemd)",
     "enable": "فعالسازی اجرای خودکار هنگام راهاندازی سیستم",
     "disable": "غیرفعالسازی اجرای خودکار هنگام راهاندازی سیستم",
     "toggle": "تغییر وضعیت اجرای خودکار هنگام راهاندازی سیستم",
@@ -1268,30 +914,20 @@
     "system": "پرامپت سیستمی",
     "resume": "ازسرگیری یک نشست ذخیرهشده بر اساس نام"
   },
-  "plugin": {
-    "description": "مدیریت افزونههای CLI ‏(omniroute-cmd-*)",
-    "list": "فهرست افزونههای نصبشده",
-    "install": "نصب افزونه از npm یا مسیر محلی",
-    "remove": "حذف افزونه نصبشده",
-    "info": "نمایش جزئیات افزونه نصبشده",
-    "search": "جستوجوی رجیستری npm برای افزونههای موجود",
-    "update": "بهروزرسانی افزونههای نصبشده",
-    "scaffold": "ایجاد ساختار اولیه یک افزونه جدید"
-  },
   "launch": {
-    "description": "اجرای Claude Code با اتصال به OmniRoute (محلی یا راه دور، با --profile)",
+    "description": "اجرای Claude Code با اتصال به 67router (محلی یا راه دور، با --profile)",
     "token": "توکنی که کلاینت Claude باید ارسال کند (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute در {port} در دسترس نیست. آن را با 'omniroute serve' راهاندازی کنید.",
+    "notRunning": "67router در {port} در دسترس نیست. آن را با 'omniroute serve' راهاندازی کنید.",
     "notFound": "CLI مربوط به 'claude' در PATH یافت نشد."
   },
   "run": {
-    "description": "اجرای یک مقصد CLI پشتیبانیشده از طریق OmniRoute"
+    "description": "اجرای یک مقصد CLI پشتیبانیشده از طریق 67router"
   },
   "setupClaude": {
-    "description": "ایجاد پروفایلهای Claude Code در ~/.claude/profiles از کاتالوگ مدل OmniRoute"
+    "description": "ایجاد پروفایلهای Claude Code در ~/.claude/profiles از کاتالوگ مدل 67router"
   },
   "connect": {
-    "description": "اتصال به یک سرور راه دور OmniRoute و ورود به حالت راه دور"
+    "description": "اتصال به یک سرور راه دور 67router و ورود به حالت راه دور"
   },
   "tokens": {
     "description": "مدیریت توکنهای دسترسی CLI با دامنه مشخص (حالت راه دور)"
@@ -1300,10 +936,10 @@
     "description": "انتخاب یک ارائهدهنده+مدل از سرور فعال و پیکربندی یک CLI محلی پشتیبانیشده"
   },
   "launchCodex": {
-    "description": "اجرای Codex CLI با اتصال به OmniRoute (محلی یا VPS راه دور)"
+    "description": "اجرای Codex CLI با اتصال به 67router (محلی یا VPS راه دور)"
   },
   "setupCodex": {
-    "description": "ایجاد فایلهای پروفایل ~/.codex از کاتالوگ زنده مدل OmniRoute"
+    "description": "ایجاد فایلهای پروفایل ~/.codex از کاتالوگ زنده مدل 67router"
   },
   "packs": {
     "description": "مدیریت بستههای اختیاری زمان اجرا (ML / خودکارسازی مرورگر)",
@@ -1316,7 +952,7 @@
     "errUnknown": "بسته ناشناخته: {name}",
     "errNoIndex": "فهرست بستهها یافت نشد؛ --source <dir> را با پوشه حاوی محتوای بسته وارد کنید (بستههای دسکتاپ آن را در کنار برنامه شامل میشوند)",
     "installed": "بسته «{name}» در {dir} نصب و اعتبارسنجی شد",
-    "restartHint": "سرور OmniRoute (یا برنامه دسکتاپ) را دوباره راهاندازی کنید تا محیط اجرا بسته را شناسایی کند",
+    "restartHint": "سرور 67router (یا برنامه دسکتاپ) را دوباره راهاندازی کنید تا محیط اجرا بسته را شناسایی کند",
     "removed": "بسته «{name}» حذف شد",
     "notInstalled": "بسته «{name}» نصب نشده بود",
     "verifyOk": "همه بستههای نصبشده تأیید شدند",

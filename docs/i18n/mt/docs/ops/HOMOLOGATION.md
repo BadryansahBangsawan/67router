@@ -4,7 +4,7 @@
 
 ---
 
-Validazzjoni E2E f'ambjent reali tad-deploy ta' OmniRoute li qed jaħdem fuq il-VPS ta' omologazzjoni
+Validazzjoni E2E f'ambjent reali tad-deploy ta' 67router li qed jaħdem fuq il-VPS ta' omologazzjoni
 (`HOMOLOG_BASE_URL`, eż. `http://192.168.0.15:20128`). Kmand wieħed jissostitwixxi l-lista ta' kontroll
 manwali STOP #2 tar-rilaxx b'eżekuzzjoni awtomatizzata li tipproduċi l-evidenza.
 

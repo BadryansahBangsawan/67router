@@ -4,16 +4,16 @@
 
 ---
 
-Dua cara untuk meletakkan Cursor di belakang OmniRoute tanpa sesi IDE:
+Dua cara untuk meletakkan Cursor di belakang 67router tanpa sesi IDE:
 
 1. **Penyedia `cursor-api`** (kad "Cursor API", alias `cua`): penyedia kunci API
    yang menyimpan kunci API pengguna Cursor (`crsr_…`, dijana di
-   `https://cursor.com/dashboard/api`). Mana-mana klien OmniRoute kemudiannya boleh mengakses
+   `https://cursor.com/dashboard/api`). Mana-mana klien 67router kemudiannya boleh mengakses
    model Cursor melalui `/v1/chat/completions` sebagai `cursor-api/<model>` atau
    `cua/<model>`, dengan lapisan kuota, sandaran dan pengelogan yang biasa. Penyedia IDE
    (`cursor`, sesi OAuth/IDE) tidak berubah.
-2. **Laluan terus Cursor CLI**: halakan Cursor CLI (`agent`) ke OmniRoute supaya
-   setiap RPC yang dibuat oleh CLI disahkan dengan kunci API OmniRoute, dimajukan
+2. **Laluan terus Cursor CLI**: halakan Cursor CLI (`agent`) ke 67router supaya
+   setiap RPC yang dibuat oleh CLI disahkan dengan kunci API 67router, dimajukan
    kepada Cursor menggunakan kelayakan sambungan `cursor-api`, dan direkodkan pada
    halaman Log.
 
@@ -60,7 +60,7 @@ Catatan:
 
 - Penyenaraian model untuk `cursor-api` berasal daripada daftar statik Cursor (senarai
   yang sama yang digunakan sebagai sandaran oleh penyedia IDE); pemasangan `cursor-agent` tidak
-  diperlukan pada hos OmniRoute.
+  diperlukan pada hos 67router.
 - `POST /api/providers/{id}/refresh-cursor` adalah untuk penyedia IDE `cursor`
   sahaja; sambungan `cursor-api` tidak mempunyai sesi IDE untuk diperbaharui.
 
@@ -68,7 +68,7 @@ Catatan:
 
 Untuk `cursor` / `cu` dan `cursor-api` / `cua`, penormal tahap usaha Claude yang dikongsi
 mengekalkan ID model yang diminta. Cursor boleh mengiklankan akhiran seperti
-`-low` sebagai sebahagian daripada ID model sebenar dan bukannya sebagai alias tahap usaha OmniRoute.
+`-low` sebagai sebahagian daripada ID model sebenar dan bukannya sebagai alias tahap usaha 67router.
 Pelaksana Cursor mengekalkan padanan tepat dalam katalog langsung; apabila tiada
 padanan, penyelesai model sedia adanya mengendalikan sandaran akhiran kepada parameter.
 
@@ -83,19 +83,19 @@ Laluan: `src/app/api/cursor-cli/[...path]/route.ts` →
 didaftarkan dalam `src/shared/constants/publicApiRoutes.ts` kerana pengendali
 melaksanakan pengesahannya sendiri:
 
-| Laluan                                                                                                                         | Pengesahan yang dijangkakan daripada CLI | Tindakan OmniRoute                                                                                                                                                                            |
+| Laluan                                                                                                                         | Pengesahan yang dijangkakan daripada CLI | Tindakan 67router                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <kunci API OmniRoute>`           | Mengesahkan kunci, menjana JWT HS256 selama 1 jam (ditandatangani dengan `JWT_SECRET`) dan mengembalikannya                                                                                   |
+| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <kunci API 67router>`            | Mengesahkan kunci, menjana JWT HS256 selama 1 jam (ditandatangani dengan `JWT_SECRET`) dan mengembalikannya                                                                                   |
 | setiap laluan lain (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <JWT tersebut>`                  | Mengesahkan pengeluar/khalayak/tempoh luput, memilih sambungan `cursor-api` yang aktif, menggantikan pengepala Authorization dengan token Cursor yang ditukar dan menstrimkan respons kembali |
 
 CLI menyahkod `exp` daripada apa-apa token yang diterimanya, jadi pemberian token
 legap menyebabkannya membuat pertukaran semula sebelum hampir setiap permintaan;
-JWT yang dijana mengelakkan perkara tersebut. Respons 401 daripada OmniRoute
+JWT yang dijana mengelakkan perkara tersebut. Respons 401 daripada 67router
 menyebabkan CLI membuat pertukaran semula.
 
 ### Persediaan
 
-1. Cipta kunci API OmniRoute (Dashboard → API keys) dan sambungan `cursor-api`.
+1. Cipta kunci API 67router (Dashboard → API keys) dan sambungan `cursor-api`.
 2. Tetapkan CLI supaya menggunakan HTTP/1.1 untuk strim ejen. Dalam
    `~/.cursor/cli-config.json`:
 
@@ -107,7 +107,7 @@ menyebabkan CLI membuat pertukaran semula.
    yang dikonfigurasikan secara berasingan dan hanya RPC satah kawalan melalui
    titik akhir tersebut.
 
-3. Jalankan CLI dengan OmniRoute:
+3. Jalankan CLI dengan 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -117,17 +117,17 @@ menyebabkan CLI membuat pertukaran semula.
 
 Setiap hop direkodkan dalam Logs dengan penyedia `cursor-api`, jenis permintaan
 `cursor-cli`, laluan `/api/cursor-cli/<rpc>`, dan dikaitkan dengan kunci API
-OmniRoute serta sambungan yang mengendalikannya.
+67router serta sambungan yang mengendalikannya.
 
 ### Mod kegagalan
 
-| Situasi                                                    | Respons kepada CLI                                  |
-| ---------------------------------------------------------- | --------------------------------------------------- |
-| Kunci OmniRoute tidak diketahui dan `REQUIRE_API_KEY=true` | 401 `unauthenticated` semasa pertukaran             |
-| `REQUIRE_API_KEY=false`                                    | sesi tanpa nama (mencerminkan tingkah laku `/v1/*`) |
-| JWT sesi luput / asing / diusik                            | 401, CLI membuat pertukaran semula                  |
-| Kunci API OmniRoute dibatalkan selepas pertukaran          | 401 pada RPC seterusnya                             |
-| Tiada sambungan `cursor-api` yang aktif                    | 503 `unavailable`                                   |
-| Cursor menolak kunci sambungan                             | 401 `unauthenticated`, sesi cache digugurkan        |
-| Huluan tidak dapat dicapai                                 | 502 `unavailable` (mesej dinyahpekakan)             |
-| `JWT_SECRET` tidak ditetapkan                              | 503 semasa pertukaran                               |
+| Situasi                                                   | Respons kepada CLI                                  |
+| --------------------------------------------------------- | --------------------------------------------------- |
+| Kunci 67router tidak diketahui dan `REQUIRE_API_KEY=true` | 401 `unauthenticated` semasa pertukaran             |
+| `REQUIRE_API_KEY=false`                                   | sesi tanpa nama (mencerminkan tingkah laku `/v1/*`) |
+| JWT sesi luput / asing / diusik                           | 401, CLI membuat pertukaran semula                  |
+| Kunci API 67router dibatalkan selepas pertukaran          | 401 pada RPC seterusnya                             |
+| Tiada sambungan `cursor-api` yang aktif                   | 503 `unavailable`                                   |
+| Cursor menolak kunci sambungan                            | 401 `unauthenticated`, sesi cache digugurkan        |
+| Huluan tidak dapat dicapai                                | 502 `unavailable` (mesej dinyahpekakan)             |
+| `JWT_SECRET` tidak ditetapkan                             | 503 semasa pertukaran                               |

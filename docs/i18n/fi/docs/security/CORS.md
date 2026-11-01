@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute hallitsee keskitetyn sallittujen luettelon avulla, mitkä **selainalkuperät** saavat lukea eri alkuperästä tulevia vastauksia. Malli on **oletusarvoisesti estävä**:
+67router hallitsee keskitetyn sallittujen luettelon avulla, mitkä **selainalkuperät** saavat lukea eri alkuperästä tulevia vastauksia. Malli on **oletusarvoisesti estävä**:
 mitään alkuperää ei sallita, ennen kuin lisäät sen sallittujen joukkoon. Tällä sivulla kuvataan, miten sallittujen luettelo
 ratkaistaan, mitä `CORS_ALLOW_ALL=true` todella tuo saataville (ja ennen kaikkea, mitä se
 **ei** tuo), miten kehitys- ja tuotantoympäristöt määritetään turvallisesti sekä ajonaikainen varoitus,
@@ -45,13 +45,13 @@ seuraavassa järjestyksessä:
 ## Uhkakuva — mitä `CORS_ALLOW_ALL=true` todella tuo saataville
 
 OWASP:n yleinen varoitus ("yleismerkillä määritetty CORS = mikä tahansa sivusto voi kutsua rajapintaasi") on syytä
-ottaa vakavasti, mutta OmniRouten altistuminen on **yleistä tapausta suppeampi**
+ottaa vakavasti, mutta 67routerin altistuminen on **yleistä tapausta suppeampi**
 yhden konkreettisen toteutusseikan vuoksi:
 
 > **Keskitetty `applyCorsHeaders()` ei koskaan lähetä
 > `Access-Control-Allow-Credentials`-otsaketta.** Selain ei anna eri alkuperän sivulle _tunnistetietoja sisältävää_
 > (evästeen sisältävää) vastausta, ellei palvelin lähetä
-> `Access-Control-Allow-Credentials: true` -otsaketta. OmniRouten yhteinen CORS-polku ei koskaan
+> `Access-Control-Allow-Credentials: true` -otsaketta. 67routerin yhteinen CORS-polku ei koskaan
 > tee näin.
 
 Tämä tarkoittaa seuraavaa kullekin rajapinnalle, vaikka `CORS_ALLOW_ALL=true`:
@@ -68,20 +68,6 @@ CORS-**esitarkistuspyyntöjen läpäiseminen** hallintareiteillä — jotka edel
 jota eri alkuperässä oleva sivu ei voi toimittaa. Tämä **ei** muodosta istunnon kaappaus- tai
 tunnistetietojen varastamisriskiä yhteisellä CORS-polulla.
 
-### Yksi todellinen poikkeus — `/api/v1/agents/`
-
-Cloud-Agent-reitit (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) asettavat
-**omat** CORS-otsakkeensa
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) ja **lähettävät**
-`Access-Control-Allow-Origin: <origin>|*`-otsakkeen yhdessä
-`Access-Control-Allow-Credentials: true` -otsakkeen kanssa. Tämä on ainoa rajapinta, jossa
-alkuperän palauttaminen ja tunnistetiedot esiintyvät yhdessä, ja se on **riippumaton
-`CORS_ALLOW_ALL`**-asetuksesta. Nämä reitit todennetaan hallintatunnuksilla
-(`requireManagementAuth`); hallintapaneelin isäntäkoneen ulkopuolelle tuovien ylläpitäjien tulisi
-tiedostaa, että tämä on ainoa kohta, jossa vastausotsakkeet sallivat tunnistetietoja sisältävän
-vastauksen lukemisen eri alkuperästä. Sen rajaamista nimenomaiseen sallittujen luetteloon seurataan
-erillään tästä CORS-ohjeistuksesta.
-
 ## Tuotantoympäristön tarkistuslista
 
 - **Älä koskaan aseta tuotantoympäristössä arvoa `CORS_ALLOW_ALL=true`.** Jätä se määrittämättä.
@@ -91,7 +77,7 @@ erillään tästä CORS-ohjeistuksesta.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Jos OmniRoute toimii käänteisen välityspalvelimen / tunnelin (nginx, Caddy, Cloudflare
+- Jos 67router toimii käänteisen välityspalvelimen / tunnelin (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) takana, CORS **ei** ole ainoa suojauksesi — loopback-reittisuojaus
   suojaa edelleen prosessien käynnistämiseen kykeneviä reittejä (katso
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Älä väärennä
@@ -107,7 +93,7 @@ erillään tästä CORS-ohjeistuksesta.
 Jokerimerkkiä tarvitaan harvoin edes kehitysympäristössä. Salli vain käyttämäsi kehityspalvelimet:
 
 ```bash
-# Vite- (5173) ja Next.js-kehityspalvelimet (3000), jotka kutsuvat paikallista OmniRoutea
+# Vite- (5173) ja Next.js-kehityspalvelimet (3000), jotka kutsuvat paikallista 67routeria
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +113,14 @@ uudelleenkäynnistystä.
   jaetulta polulta. Älä sisällytä hallinta- tai hallintapaneelialkuperiä mihinkään
   sallivaan määritykseen; niiden on pysyttävä täysin oletusarvoisesti estettyinä.
 
-## Esimerkki: käänteinen välityspalvelin OmniRouten edessä
+## Esimerkki: käänteinen välityspalvelin 67routerin edessä
 
-OmniRoute valvoo CORS-käytäntöä itse, joten välityspalvelimen ei yleensä pidä **lisätä** tai
+67router valvoo CORS-käytäntöä itse, joten välityspalvelimen ei yleensä pidä **lisätä** tai
 muuttaa `Access-Control-*`-otsakkeita (päällekkäiset otsakkeet aiheuttavat ongelmia selaimissa). Päätä TLS-yhteys
-ja välitä liikenne eteenpäin — anna OmniRouten vastata ennakkotarkistuspyyntöön:
+ja välitä liikenne eteenpäin — anna 67routerin vastata ennakkotarkistuspyyntöön:
 
 ```nginx
-# nginx — välitä OmniRoutelle; ÄLÄ lisää Access-Control-* -otsakkeita tässä
+# nginx — välitä 67routerille; ÄLÄ lisää Access-Control-* -otsakkeita tässä
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +128,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Säilytä edelleenlähetysotsakkeet: samalla isäntäkoneella oleva välityspalvelin muodostaa yhteyden loopback-osoitteesta,
-    # ja nämä otsakkeet kertovat OmniRoutelle, ettei kutsuja ole paikallinen ylläpitäjä. Jos välityspalvelin ei lisää niistä mitään,
+    # ja nämä otsakkeet kertovat 67routerille, ettei kutsuja ole paikallinen ylläpitäjä. Jos välityspalvelin ei lisää niistä mitään,
     # kaikki etäkutsujat näyttävät paikallisilta. Älä myöskään koskaan aseta X-Forwarded-For-otsakkeen arvoksi 127.0.0.1.
 }
 ```
 
-Määritä selaimille sallitut alkuperät OmniRoutessa (`CORS_ALLOWED_ORIGINS` tai
+Määritä selaimille sallitut alkuperät 67routerissa (`CORS_ALLOWED_ORIGINS` tai
 Security-välilehti), älä välityspalvelimessa.
 
 ## Lähdetiedostot
@@ -160,7 +146,6 @@ Security-välilehti), älä välityspalvelimessa.
 | Hallintapaneelin ajonaikainen tila                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Hallintapaneelin varoitusbanneri                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins -kenttä                        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agentin reittikohtainen CORS (poikkeus)       | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Katso myös
 

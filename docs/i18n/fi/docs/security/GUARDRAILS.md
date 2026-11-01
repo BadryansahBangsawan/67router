@@ -9,7 +9,7 @@
 > mitkä reitit ja vastauspolut hookit saavuttavat, yhdistetyt käytöstäpoisto-otsakkeet (#16412),
 > injektion estotila pakollisena rajana (#16413) ja mikä näkee vastauksen ennen post-call-vaihetta)
 
-Guardrailit toteuttavat turvallisuus-, käytäntö- ja sisältömuunnoksia OmniRouten
+Guardrailit toteuttavat turvallisuus-, käytäntö- ja sisältömuunnoksia 67routerin
 ja ylävirran palveluntarjoajien välisellä rajalla. Jokainen guardrail voi
 tarkastaa (ja halutessaan hylätä, muuntaa tai merkitä) pyyntöjen hyötykuormia
 (`preCall`) ja ylävirran vastauksia (`postCall`).
@@ -117,7 +117,7 @@ Kun kutsujan API-avain rajoittaa yhteyksiä (`allowedConnections`), kiintiöpool
 (`allowedQuotas`) tai malleja (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), silta valitsee vain
 sellaiset uudelleenohjaus- ja kuvausmallit, joita avain saa käyttää, ja sellaisilla
-yhteyksillä, joita avain saa käyttää. Kuvauskutsu kulkee sitten aina OmniRouten
+yhteyksillä, joita avain saa käyttää. Kuvauskutsu kulkee sitten aina 67routerin
 itse-silmukan kautta `x-omniroute-self-loop-key-id`-otsakkeen kanssa, joten
 vastaanottava chat-pyyntö valvoo kyseisen avaimen yhteys- ja mallikäytäntöä
 uudelleen. `enforceApiKeyPolicy()` kunnioittaa tuota otsaketta vain yhdessä
@@ -148,7 +148,7 @@ mihinkään asiakassignaaliin. Matalan tarkkuuden näytteistys heikentää
 OCR-tarkkuutta juuri tässä kehoitteen pyytämässä tekstin litterointitehtävässä,
 joten kuvauskutsu itsessään pyytää aina korkeaa tarkkuutta riippumatta siitä, mitä
 tarkkuustasoa alkuperäinen saapuva pyyntö käytti. Tämä vaikuttaa vain sisäisen
-kuvauspyynnön runkoon; se ei muuta sitä, miten OmniRoute välittää kutsujan oman
+kuvauspyynnön runkoon; se ei muuta sitä, miten 67router välittää kutsujan oman
 `image_url.detail`-arvon ensisijaisessa pyynnössä — kyseinen oletus otetaan
 käyttöön erikseen, ja vain havaituille OpenCode-asiakkaille, funktiossa
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`).
@@ -211,7 +211,7 @@ Oma koontinäyttösivu on `/dashboard/settings/modality-bridge`. Sen URL-osoitet
 
 AI-asetusten alla oleva entinen Vision Bridge -kortti on yhteensopivuuslinkki uudelle sivulle; se ei enää omista lomakkeen toista kopiota. Media Providers linkittää myös Image-to-Text- ja Speech-to-Text-työnkulut vastaaviin Modality Bridge -välilehtiin poistamatta olemassa olevaa Speech-to-Text-leikkikenttää.
 
-**Self-loop-sisäänpääsyn ohitus:** kun describe-kutsu reitittyy OmniRouten oman `/v1`-self-loopin kautta (ei-standardi palveluntarjoajamalli), alipyyntö lähettää `x-omniroute-admission-bypass: internal` -otsikon ja todennetaan ratkaistulla self-loop-tunnisteella — paikallisella `sk_omniroute`-sentinelillä paikallistilassa tai operaattorin määrittämällä `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` -ympäristöavaimella (#1350), jotta `REQUIRE_API_KEY=true`-käyttöönotot voivat edelleen ajaa describe-kutsun. Ohitus hyväksytään vain näille tarkoille tunnisteille, joten ulkoiset asiakkaat eivät voi käyttää otsikkoa sisäänpääsyn ohittamiseen.
+**Self-loop-sisäänpääsyn ohitus:** kun describe-kutsu reitittyy 67routerin oman `/v1`-self-loopin kautta (ei-standardi palveluntarjoajamalli), alipyyntö lähettää `x-omniroute-admission-bypass: internal` -otsikon ja todennetaan ratkaistulla self-loop-tunnisteella — paikallisella `sk_omniroute`-sentinelillä paikallistilassa tai operaattorin määrittämällä `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` -ympäristöavaimella (#1350), jotta `REQUIRE_API_KEY=true`-käyttöönotot voivat edelleen ajaa describe-kutsun. Ohitus hyväksytään vain näille tarkoille tunnisteille, joten ulkoiset asiakkaat eivät voi käyttää otsikkoa sisäänpääsyn ohittamiseen.
 
 Vanhat oletukset sijaitsevat tiedostossa `src/shared/constants/visionBridgeDefaults.ts`; uudet tila-/tehtävätietoisuus-/välimuistioletukset ja asetusten ratkaisija sijaitsevat tiedostossa `src/shared/constants/modalityBridgeDefaults.ts`. Guardrail tarjoaa `deps`-konstruktorioption, jotta testit voivat injektoida valeset `getSettings`- ja `callVisionModel`-toteutukset.
 
@@ -322,7 +322,7 @@ Puuttuvat suodattimet, virheellinen tai tyhjä näyttö, tunnistusvirhe tai raja
 
 Kunkin kehyksen koko on rajoitettu 4 MiB:iin, kaikkien raakamuotoisten kehysten
 yhteiskoko 23 MiB:iin ja serialisoidun välittäjän vastauksen koko 32 MiB:iin.
-Yksityinen tilapäishakemisto poistetaan `finally`-lohkossa. OmniRoute ei sisällä
+Yksityinen tilapäishakemisto poistetaan `finally`-lohkossa. 67router ei sisällä
 FFmpeg:iä eikä hyväksy mukautettua suoritettavan tiedoston polkua. Ennen
 kuvatekstien muodostamista silta suorittaa varovaisen visuaalisen
 duplikaattien poistovaiheen: kukin JPEG pienennetään 16×16-kokoiseksi
@@ -370,7 +370,7 @@ video-osaan, jos niillä on jo ajallisesti kohdistettu teksti. Jokaisessa vihjee
 on oltava `text`, äärellinen `start`/`end`-aikaväli tarkistetun keston sisällä
 sekä sallittujen arvojen luetteloon kuuluva `source` (`client`, `embedded` tai
 `audio-bridge`); `confidence`-arvon oletus on `1`, ja sen on pysyttävä välillä
-`0`–`1`. Täsmälleen samat vihjeet yhdistetään. OmniRoute ei koskaan käynnistä
+`0`–`1`. Täsmälleen samat vihjeet yhdistetään. 67router ei koskaan käynnistä
 litterointia tämän metadatan perusteella: validoidut vihjeet kopioidaan kuvattuun
 tulokseen yhdessä lähteen, luottamustason ja aikavälin kanssa, ja ne esitetään
 epäluotettuina havaintoina kehysten kuvatekstien rinnalla. Virheellinen,
@@ -923,7 +923,7 @@ manuaalinen käynnistys) on kaksi työtä:
   previous instructions…", DAN-tyyliset jailbreakit) varmistaa, että vastauksessa on
   `error.code === "SECURITY_001"`, eli suojaus todella hylkäsi pyynnön.
 - **`garak` (neuvoa-antava)** — ajaa garak-työkalun `--probes promptinject,dan,leakreplay`
-  paikallista OmniRoute-instanssia vastaan (`http://localhost:20128/v1`). Ehdollinen
+  paikallista 67router-instanssia vastaan (`http://localhost:20128/v1`). Ehdollinen
   palveluntarjoajan salaisuuteen (`PROMPTFOO_PROVIDER_KEY`); ohittuu hallitusti ja sen
   perässä on `|| true`, joten se raportoi kaatamatta CI:tä.
 

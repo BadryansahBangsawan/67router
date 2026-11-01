@@ -1,4 +1,4 @@
-# 🐳 Docker Guide — OmniRoute (Hrvatski)
+# 🐳 Docker Guide — 67router (Hrvatski)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/DOCKER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/DOCKER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/DOCKER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/DOCKER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/DOCKER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/DOCKER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/DOCKER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/DOCKER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/DOCKER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/DOCKER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/DOCKER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/DOCKER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/DOCKER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/DOCKER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/DOCKER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/DOCKER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/DOCKER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/DOCKER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/DOCKER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/DOCKER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/DOCKER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/DOCKER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/DOCKER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/DOCKER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/DOCKER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/DOCKER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/DOCKER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/DOCKER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/DOCKER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/DOCKER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/DOCKER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/DOCKER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/DOCKER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/DOCKER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/DOCKER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/DOCKER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/DOCKER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/DOCKER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/DOCKER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/DOCKER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/DOCKER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/DOCKER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/DOCKER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/DOCKER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/DOCKER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/DOCKER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/DOCKER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/DOCKER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/DOCKER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/DOCKER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/DOCKER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/DOCKER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/DOCKER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/DOCKER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/DOCKER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/DOCKER_GUIDE.md)
 
@@ -12,7 +12,7 @@
 - [S datotekom okruženja](#with-environment-file)
 - [Docker Compose](#docker-compose)
 - [Dostupni profili](#available-profiles)
-- [Konfiguriranje CLI alata na glavnom računalu kada se OmniRoute izvodi u Dockeru](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
+- [Konfiguriranje CLI alata na glavnom računalu kada se 67router izvodi u Dockeru](#configuring-host-cli-tools-when-omniroute-runs-in-docker)
 - [Redis kao pomoćni spremnik](#redis-sidecar)
 - [Compose za produkciju](#production-compose)
 - [Faze Dockerfilea](#dockerfile-stages)
@@ -82,7 +82,7 @@ docker compose --profile cli --profile cliproxyapi up -d
 
 ## Dostupni profili
 
-OmniRoute isporučuje Compose profile za glavne načine implementacije. Odaberite onaj koji odgovara vašem okruženju.
+67router isporučuje Compose profile za glavne načine implementacije. Odaberite onaj koji odgovara vašem okruženju.
 
 | Profil          | Usluga           | Kada upotrebljavati                                                                                                                                                                  | Naredba                                      |
 | --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- |
@@ -94,7 +94,7 @@ OmniRoute isporučuje Compose profile za glavne načine implementacije. Odaberit
 
 > Moguće je kombinirati više profila: `docker compose --profile cli --profile cliproxyapi up -d`.
 
-## Konfiguriranje CLI alata glavnog računala kada se OmniRoute izvodi u Dockeru
+## Konfiguriranje CLI alata glavnog računala kada se 67router izvodi u Dockeru
 
 `omniroute setup-codex`, `setup-claude`, `config set <tool>` i gumb
 **Spremi konfiguraciju** na nadzornoj ploči zapisuju datoteke poput `~/.codex/*.config.toml`. Te putanje
@@ -103,11 +103,11 @@ spremnika, zapis završava u vlastitom matičnom direktoriju spremnika (`/home/n
 slika se izvodi kao `USER node`), gdje ga nijedan CLI glavnog računala nikada neće pročitati i odakle se
 odbacuje čim se spremnik ponovno izradi.
 
-OmniRoute to otkriva i odbija zapis uz prikaz uputa umjesto
+67router to otkriva i odbija zapis uz prikaz uputa umjesto
 prijavljivanja uspjeha koje ne možete iskoristiti: CLI završava s kodom `2`, a API odgovara statusom `422`
 uz `containerEphemeralTarget: true`.
 
-### Preporučeno: pokrenite CLI na glavnom računalu, a OmniRoute u Dockeru
+### Preporučeno: pokrenite CLI na glavnom računalu, a 67router u Dockeru
 
 Spremnik poslužuje API; CLI konfigurira alate na vašem glavnom računalu.
 
@@ -137,7 +137,7 @@ volumes:
   - ~/.claude:/host-home/.claude:rw
 ```
 
-Bind-montiranje čini putanju pouzdanom: OmniRoute čita
+Bind-montiranje čini putanju pouzdanom: 67router čita
 `/proc/self/mountinfo` i dopušta zapisivanje u montirane putanje (kao i u direktorije
 čiji su poddirektoriji točke montiranja, što je upravo gore prikazana struktura `/host-home`), dok
 i dalje odbija nemontirane putanje.
@@ -178,7 +178,7 @@ uz upozorenje da neće preživjeti ponovno stvaranje spremnika.
 
 ## Redis Sidecar
 
-OmniRoute se oslanja na Redis kao podršku za distribuirano ograničavanje brzine i dijeljenu predmemoriju. Usluga `redis` **uvijek je definirana** u datoteci `docker-compose.yml` (nije ograničena profilom) i pokreće se zajedno s bilo kojim drugim profilom.
+67router se oslanja na Redis kao podršku za distribuirano ograničavanje brzine i dijeljenu predmemoriju. Usluga `redis` **uvijek je definirana** u datoteci `docker-compose.yml` (nije ograničena profilom) i pokreće se zajedno s bilo kojim drugim profilom.
 
 | Pojedinost                    | Vrijednost                             |
 | ----------------------------- | -------------------------------------- |
@@ -358,7 +358,6 @@ Osim zadanih vrijednosti dokumentiranih u [ENVIRONMENT.md](../reference/ENVIRONM
 | `DASHBOARD_PORT` / `API_PORT` | Nadjačava izložene portove za nadzornu ploču (20128) i API (20129)                                                                                                                                                                                                                | `20128` / `20129`                  |
 | `APP_BIND_HOST`               | Mrežno sučelje hosta na kojem docker-compose objavljuje portove nadzorne ploče/API-ja/WS-a uživo. Uz `REQUIRE_API_KEY=false` (zadano), `0.0.0.0` izlaže anonimni proxy `/v1` lokalnoj mreži — proširite dostupnost samo uz `REQUIRE_API_KEY=true` ili obrnuti proxy ispred njega. | `127.0.0.1`                        |
 | `CLIPROXY_BIND_HOST`          | Mrežno sučelje hosta na kojem docker-compose objavljuje pomoćni spremnik `cliproxyapi` — njegov podatkovni volumen sadrži vjerodajnice pružatelja usluga.                                                                                                                         | `127.0.0.1`                        |
-| `OMNIROUTE_PLUGINS_DIR`       | Direktorij koji skener dodataka tijekom izvođenja čita i u koji instalira dodatke. Postavite ga kada su dodaci montirani povezivanjem: zadana vrijednost slijedi `HOME`, koji slika ne mora izvoziti.                                                                             | `~/.omniroute/plugins`             |
 | `OMNIROUTE_BASE_PATH`         | URL podputanja kada je aplikacija objavljena iza obrnutog proxyja (npr. `/omniroute`)                                                                                                                                                                                             | _(prazno = korijen)_               |
 | `NEXT_PUBLIC_BASE_URL`        | Javno ishodište preglednika, uključujući podputanju (npr. `https://host/omniroute`)                                                                                                                                                                                               | nije postavljeno                   |
 | `PROD_DASHBOARD_PORT`         | Port nadzorne ploče na strani hosta za `docker-compose.prod.yml`                                                                                                                                                                                                                  | `20130`                            |
@@ -366,7 +365,7 @@ Osim zadanih vrijednosti dokumentiranih u [ENVIRONMENT.md](../reference/ENVIRONM
 
 ## Obrnuti proxy na podputanji (Traefik / nginx)
 
-Next.js `basePath` kompilira se u samostalni paket. OmniRoute bilježi ugrađenu
+Next.js `basePath` kompilira se u samostalni paket. 67router bilježi ugrađenu
 vrijednost u kontrolnu datoteku u korijenu aplikacije (zapisuje se tijekom `npm run build`; čita je
 `scripts/docker/ensure-docker-base-path.mjs`) i uspoređuje je s
 `OMNIROUTE_BASE_PATH` pri pokretanju spremnika. Kada se razlikuju, a slika je
@@ -439,7 +438,7 @@ provjere isteknu, prednost dajte TCP provjeri aktivnosti. Potpune smjernice za p
 
 ## Docker Compose s Caddyjem (HTTPS Auto-TLS)
 
-OmniRoute se može sigurno izložiti pomoću Caddyjeva automatskog postavljanja SSL-a. Provjerite pokazuje li DNS A zapis vaše domene na IP adresu vašeg poslužitelja.
+67router se može sigurno izložiti pomoću Caddyjeva automatskog postavljanja SSL-a. Provjerite pokazuje li DNS A zapis vaše domene na IP adresu vašeg poslužitelja.
 
 ```yaml
 services:
@@ -470,11 +469,11 @@ volumes:
   omniroute-data:
 ```
 
-Caddy postavlja standardna zaglavlja za prosljeđivanje prema nadređenom spremniku. OmniRoute koristi
+Caddy postavlja standardna zaglavlja za prosljeđivanje prema nadređenom spremniku. 67router koristi
 `NEXT_PUBLIC_BASE_URL` kao kanonsko javno izvorište za OAuth povratne pozive i generirane javne
 poveznice; autentificirani zahtjevi za zapisivanje s nadzorne ploče upotrebljavaju zahtjeve istog izvorišta uz CSRF
 zaštitu povezanu sa sesijom. Omogućite `OMNIROUTE_TRUST_PROXY` samo za napredne implementacije u kojima namjerno
-želite da OmniRoute određuje javno izvorište iz pouzdanih proslijeđenih zaglavlja umjesto izričite
+želite da 67router određuje javno izvorište iz pouzdanih proslijeđenih zaglavlja umjesto izričite
 konfiguracije.
 
 ## Cloudflare Quick Tunnel
@@ -486,11 +485,11 @@ Paneli tunela krajnjih točaka (Cloudflare, Tailscale, ngrok) mogu se prikazati 
 ### Napomene o tunelima
 
 - URL-ovi Quick Tunnela privremeni su i mijenjaju se nakon svakog ponovnog pokretanja.
-- Quick Tunneli ne obnavljaju se automatski nakon ponovnog pokretanja OmniRoutea ili spremnika. Po potrebi ih ponovno omogućite putem nadzorne ploče.
+- Quick Tunneli ne obnavljaju se automatski nakon ponovnog pokretanja 67routera ili spremnika. Po potrebi ih ponovno omogućite putem nadzorne ploče.
 - Upravljana instalacija trenutačno podržava Linux, macOS i Windows na arhitekturama `x64` / `arm64`.
 - Upravljani Quick Tunneli prema zadanim postavkama koriste HTTP/2 prijenos kako bi se izbjegla bučna upozorenja o QUIC UDP međuspremniku u ograničenim okruženjima spremnika. Postavite `CLOUDFLARED_PROTOCOL=quic` ili `auto` ako želite drukčiji prijenos.
 - Docker slike uključuju sistemske korijenske CA certifikate i prosljeđuju ih upravljanom programu `cloudflared`, čime se izbjegavaju pogreške pouzdanosti TLS-a prilikom pokretanja tunela unutar spremnika.
-- Postavite `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ako želite da OmniRoute koristi postojeću binarnu datoteku umjesto preuzimanja nove.
+- Postavite `CLOUDFLARED_BIN=/absolute/path/to/cloudflared` ako želite da 67router koristi postojeću binarnu datoteku umjesto preuzimanja nove.
 
 ## Oznake slika
 
@@ -503,7 +502,7 @@ Višeplatformski manifest: izvorni `linux/amd64` + `linux/arm64` (Apple Silicon,
 
 ### Kanali izdanja
 
-OmniRoute objavljuje zasebne Docker kanale za stabilna izdanja, testiranje aktivne grane izdanja i razvojne međuverzije.
+67router objavljuje zasebne Docker kanale za stabilna izdanja, testiranje aktivne grane izdanja i razvojne međuverzije.
 
 | Kanal                           | Izvor                                  | Promjenjivost                    | Preporučena upotreba                                                                                                          |
 | ------------------------------- | -------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -556,7 +555,7 @@ docker pull diegosouzapw/omniroute:next
 docker image inspect diegosouzapw/omniroute:next --format '{{index .RepoDigests 0}}'
 ```
 
-Prije testiranja izradite sigurnosnu kopiju podatkovnog volumena OmniRoutea ili podatkovnog direktorija montiranog povezivanjem. Za vraćanje na prethodno stanje obnovite prethodno korištenu stabilnu verziju ili sažetak te ponovno stvorite spremnik:
+Prije testiranja izradite sigurnosnu kopiju podatkovnog volumena 67routera ili podatkovnog direktorija montiranog povezivanjem. Za vraćanje na prethodno stanje obnovite prethodno korištenu stabilnu verziju ili sažetak te ponovno stvorite spremnik:
 
 ```bash
 docker pull diegosouzapw/omniroute:<stable-version>
@@ -576,7 +575,7 @@ Međuverzija grane izdanja nikada ne može pomaknuti `latest`; stabilni pokaziva
 
 ## Ažuriranja nadzorne ploče u Dockeru
 
-Spremnik iz objavljene slike ne može zamijeniti sam sebe. Kada OmniRoute otkrije da se izvodi unutar
+Spremnik iz objavljene slike ne može zamijeniti sam sebe. Kada 67router otkrije da se izvodi unutar
 spremnika (nema `.git` radnog stabla i nije npm instalacija), natpis za ažuriranje na početnoj nadzornoj ploči prikazuje
 naredbu koju treba pokrenuti na glavnom računalu umjesto npm/git uputa, uz gumb za kopiranje:
 
@@ -592,7 +591,7 @@ oznake `:X.Y.Z` najprije uredite oznaku.
 
 Kako bi **Ažuriraj sada** nastavio raditi bez montiranja `/var/run/docker.sock` (što spremniku daje
 root pristup glavnom računalu — pogledajte upozorenje za profil `cli` iznad), postavite `DOCKER_UPDATE_TRIGGER_FILE` na
-usluzi OmniRoute i pokrenite nadzornik na glavnom računalu:
+usluzi 67router i pokrenite nadzornik na glavnom računalu:
 
 ```yaml
 services:
@@ -606,7 +605,7 @@ services:
 Putanja mora biti unutar `DATA_DIR` (relativne vrijednosti razrješavaju se u odnosu na njega); sve ostalo se
 odbija. **Ažuriraj sada** zatim zapisuje `{ "requestedAt": "...", "targetVersion": "X.Y.Z" }` u tu
 datoteku, odgovara statusom `202`, a nadzorna ploča ispituje `/api/system/version` sve dok nova verzija ne postane aktivna
-te se potom ponovno učitava. OmniRoute u ovom načinu rada nikada ne pokreće ljusku ni Docker naredbu. Kao i kod svake radnje
+te se potom ponovno učitava. 67router u ovom načinu rada nikada ne pokreće ljusku ni Docker naredbu. Kao i kod svake radnje
 ažuriranja, zahtjev se prihvaća samo od klijenata na povratnoj petlji/LAN-u.
 
 Direktorij podataka montiran povezivanjem daje glavnom računalu stabilnu putanju za nadzor. Primjeri `systemd` jedinica
@@ -615,7 +614,7 @@ Direktorij podataka montiran povezivanjem daje glavnom računalu stabilnu putanj
 ```ini
 # /etc/systemd/system/omniroute-update.path
 [Unit]
-Description=Nadzor zahtjeva za ažuriranje s nadzorne ploče OmniRoutea
+Description=Nadzor zahtjeva za ažuriranje s nadzorne ploče 67routera
 
 [Path]
 PathExists=/srv/omniroute/data/update/docker-update.request
@@ -627,7 +626,7 @@ WantedBy=multi-user.target
 ```ini
 # /etc/systemd/system/omniroute-update.service
 [Unit]
-Description=Preuzimanje i ponovno stvaranje spremnika OmniRoute
+Description=Preuzimanje i ponovno stvaranje spremnika 67router
 
 [Service]
 Type=oneshot
@@ -647,13 +646,13 @@ Usluga uklanja zahtjev prije preuzimanja kako se neuspjelo izvođenje ne bi pona
 
 ## Dostupnost: zadani SQLite podržava jednu repliku
 
-Standardni Docker / Kubernetes OmniRoute sastoji se od **jednog Node procesa + jednog SQLite zapisivača**. Visoka dostupnost **nije podržana** na toj topologiji.
+Standardni Docker / Kubernetes 67router sastoji se od **jednog Node procesa + jednog SQLite zapisivača**. Visoka dostupnost **nije podržana** na toj topologiji.
 
-| Ograničenje                                                         | Posljedica                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Jedan zapisivač                                                     | **Nemojte** pokretati više replika nad istom SQLite datotekom. To oštećuje bazu podataka.                                                                                                                                                                                                                                                                 |
-| Ponovno stvaranje / ponovno pokretanje / prekid putem HEALTHCHECK-a | **Potpuni prekid rada** aktivnih SSE veza, sesija nadzorne ploče i stanja u memoriji. Prekida se veza svakog povezanog klijenta. Novi zahtjevi tijekom razdoblja bez dostupne krajnje točke od obrnutog proxyja dobivaju **`502 Bad Gateway: Unknown error`**, a ne OmniRoute JSON — klijenti to ne mogu razlikovati od kvara pružatelja usluge (#11015). |
-| Ista petlja događaja kao `/healthz`                                 | Opterežena obrada kataloga ili kompresije može odgoditi provjere; kratko vremensko ograničenje tada ponovno pokreće **jedinu** repliku.                                                                                                                                                                                                                   |
+| Ograničenje                                                         | Posljedica                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Jedan zapisivač                                                     | **Nemojte** pokretati više replika nad istom SQLite datotekom. To oštećuje bazu podataka.                                                                                                                                                                                                                                                                |
+| Ponovno stvaranje / ponovno pokretanje / prekid putem HEALTHCHECK-a | **Potpuni prekid rada** aktivnih SSE veza, sesija nadzorne ploče i stanja u memoriji. Prekida se veza svakog povezanog klijenta. Novi zahtjevi tijekom razdoblja bez dostupne krajnje točke od obrnutog proxyja dobivaju **`502 Bad Gateway: Unknown error`**, a ne 67router JSON — klijenti to ne mogu razlikovati od kvara pružatelja usluge (#11015). |
+| Ista petlja događaja kao `/healthz`                                 | Opterežena obrada kataloga ili kompresije može odgoditi provjere; kratko vremensko ograničenje tada ponovno pokreće **jedinu** repliku.                                                                                                                                                                                                                  |
 
 **Matrica provjera** (pogledajte i [preporuke za Kubernetes provjere](../ops/MONITORING_GUIDE.md#kubernetes-probe-recommendations)):
 
@@ -756,7 +755,7 @@ kao i stvarnu rutu veze; sama ova pogreška ne ukazuje na neispravan API ključ.
 
 ### Dajte prednost proxyju specifičnom za vezu
 
-Upotrijebite OmniRouteovu [konfiguraciju proxyja za pojedinačnu vezu](../ops/PROXY_GUIDE.md#4-level-proxy-system)
+Upotrijebite 67routerovu [konfiguraciju proxyja za pojedinačnu vezu](../ops/PROXY_GUIDE.md#4-level-proxy-system)
 za zahvaćenu Gemini vezu, a zatim ponovite **Testiranje veze** i mali zahtjev
 s istim modelom. Time promjena usmjeravanja ostaje ograničena na tu vezu. Provjerite
 je li proxy dostupan iz spremnika i odabire li ga veza doista.
@@ -826,7 +825,7 @@ može prekinuti rad drugih spremnika povezanih s njom; nemojte brisati trajni po
 
 ## Važne napomene
 
-- **SQLite WAL način rada:** Naredbi `docker stop` treba omogućiti da se dovrši kako bi OmniRoute mogao zapisati najnovije promjene natrag u `storage.sqlite` putem kontrolne točke. Priložene Compose datoteke već postavljaju razdoblje odgode zaustavljanja na 40 s. Ako izravno pokrećete sliku, zadržite `--stop-timeout 40`.
+- **SQLite WAL način rada:** Naredbi `docker stop` treba omogućiti da se dovrši kako bi 67router mogao zapisati najnovije promjene natrag u `storage.sqlite` putem kontrolne točke. Priložene Compose datoteke već postavljaju razdoblje odgode zaustavljanja na 40 s. Ako izravno pokrećete sliku, zadržite `--stop-timeout 40`.
 - **`DISABLE_SQLITE_AUTO_BACKUP`:** Postavite na `true` ako se rutinskim sigurnosnim kopijama i sigurnosnim kopijama prije zapisivanja upravlja izvana. Migracije postojećih baza podataka i dalje zahtijevaju vlastitu trajnu sigurnosnu snimku i zaštitu od masovne migracije.
 - **Postojanost podataka:** Uvijek montirajte volumen na `/app/data` kako biste sačuvali bazu podataka, ključeve i konfiguracije nakon ponovnog pokretanja spremnika.
 - **Konfiguracija priključka:** Nadjačajte varijablu okruženja `PORT` kako biste promijenili zadani priključak `20128`.

@@ -86,11 +86,10 @@ describe("CliConceptCard", () => {
     }
   );
 
-  it("for currentType=code, card has primary bg class", () => {
+  it("for currentType=code, the card is marked with the current type", () => {
     const container = renderCard("code");
-    // The root card div should have primary/5 styling
     const card = container.firstElementChild as HTMLElement;
-    expect(card?.className ?? "").toContain("primary");
+    expect(card?.getAttribute("data-current-type")).toBe("code");
   });
 
   it("for currentType=code, renders chips for agent and acp (not code)", () => {

@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Latviešu)
+# 🌐 67router Proxy Guide (Latviešu)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Apejiet ģeogrāfiskos ierobežojumus, aizsargājiet savu identitāti un maršrutējiet AI datplūsmu caur jebkuru starpniekserveri — bez sarežģītas konfigurēšanas.**
 
-OmniRoute ietver pilnvērtīgu starpniekserveru pārvaldības sistēmu, kas ļauj maršrutēt datplūsmu uz ārējiem AI pakalpojumu sniedzējiem caur HTTP, HTTPS vai SOCKS5 starpniekserveriem. Neatkarīgi no tā, vai atrodaties bloķētā reģionā, jums nepieciešama IP adrešu rotācija vai vēlaties izmantot maskētu digitālo nospiedumu — šajā rokasgrāmatā ir aprakstīts viss nepieciešamais.
+67router ietver pilnvērtīgu starpniekserveru pārvaldības sistēmu, kas ļauj maršrutēt datplūsmu uz ārējiem AI pakalpojumu sniedzējiem caur HTTP, HTTPS vai SOCKS5 starpniekserveriem. Neatkarīgi no tā, vai atrodaties bloķētā reģionā, jums nepieciešama IP adrešu rotācija vai vēlaties izmantot maskētu digitālo nospiedumu — šajā rokasgrāmatā ir aprakstīts viss nepieciešamais.
 
 ---
 
@@ -51,7 +51,7 @@ Arī ārpus bloķētajiem reģioniem starpniekserveri ir noderīgi:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute serveris                       │
+│                       67router serveris                       │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Starpniek-  │    │ Starpniek-   │    │ Starpniekservera│  │
@@ -84,7 +84,7 @@ Arī ārpus bloķētajiem reģioniem starpniekserveri ir noderīgi:
 
 ## 4 līmeņu starpniekserveru sistēma
 
-OmniRoute atbalsta starpniekserveru konfigurāciju **četros neatkarīgos tvērumos**, kas tiek izvērtēti prioritārā secībā:
+67router atbalsta starpniekserveru konfigurāciju **četros neatkarīgos tvērumos**, kas tiek izvērtēti prioritārā secībā:
 
 ```
 Prioritāšu izvērtēšanas secība (no augstākās → līdz zemākajai):
@@ -97,7 +97,7 @@ Prioritāšu izvērtēšanas secība (no augstākās → līdz zemākajai):
 
 ### Kā darbojas izvērtēšana
 
-Kad OmniRoute nosūta pieprasījumu augšupējam pakalpojumu sniedzējam, tas izsauc `resolveProxyForConnectionFromRegistry()`, kas secīgi pārbauda katru līmeni:
+Kad 67router nosūta pieprasījumu augšupējam pakalpojumu sniedzējam, tas izsauc `resolveProxyForConnectionFromRegistry()`, kas secīgi pārbauda katru līmeni:
 
 1. **Konta līmenis** — vai šim konkrētajam savienojuma ID ir piešķirts starpniekserveris?
 2. **Pakalpojumu sniedzēja līmenis** — vai šim pakalpojumu sniedzējam (piem., `openai`) ir piešķirts starpniekserveris?
@@ -239,7 +239,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Importēšana/eksportēšana
 
-Starpniekserveri ir iekļauti **dublēšanas/atjaunošanas** sistēmā. Eksportējot OmniRoute konfigurāciju:
+Starpniekserveri ir iekļauti **dublēšanas/atjaunošanas** sistēmā. Eksportējot 67router konfigurāciju:
 
 1. Dodieties uz **Informācijas panelis → Iestatījumi → Dublēšana**
 2. Noklikšķiniet uz **Eksportēt** — tiks iekļauts starpniekserveru reģistrs un piešķīrumi
@@ -249,7 +249,7 @@ Starpniekserveru reģistrs atbalsta arī **ievietošanu vai atjaunināšanu pēc
 
 ### Mantotās konfigurācijas migrācija
 
-Ja konfigurējāt starpniekserverus vecākā versijā (pirms reģistra ieviešanas), OmniRoute tos automātiski migrē:
+Ja konfigurējāt starpniekserverus vecākā versijā (pirms reģistra ieviešanas), 67router tos automātiski migrē:
 
 ```
 Mantotā key_value krātuve → proxy_registry + proxy_assignments
@@ -263,7 +263,7 @@ Tas notiek vienreiz, veicot pirmo palaišanu pēc jaunināšanas. Lai migrāciju
 
 > 🆕 **Pievienoja [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (problēma [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-OmniRoute integrējas ar **[1proxy](https://1proxy-api.aitradepulse.com)** kopienas platformu, lai nodrošinātu piekļuvi **simtiem bezmaksas, pārbaudītu starpniekserveru** no visas pasaules. Tas ir lieliski piemērots lietotājiem, kuriem nav savas starpniekserveru infrastruktūras.
+67router integrējas ar **[1proxy](https://1proxy-api.aitradepulse.com)** kopienas platformu, lai nodrošinātu piekļuvi **simtiem bezmaksas, pārbaudītu starpniekserveru** no visas pasaules. Tas ir lieliski piemērots lietotājiem, kuriem nav savas starpniekserveru infrastruktūras.
 
 ### Kā tas darbojas
 
@@ -274,7 +274,7 @@ OmniRoute integrējas ar **[1proxy](https://1proxy-api.aitradepulse.com)** kopie
 └─────────────┘ starpniekserveru └─────────────────┘               └──────────────────────┘
 ```
 
-1. **Sinhronizācija** — OmniRoute iegūst pārbaudītus starpniekserverus no 1proxy API
+1. **Sinhronizācija** — 67router iegūst pārbaudītus starpniekserverus no 1proxy API
 2. **Saglabāšana** — starpniekserveri tiek saglabāti tajā pašā `proxy_registry` tabulā ar `source = 'oneproxy'`
 3. **Filtrēšana** — filtrējiet pēc protokola, valsts un kvalitātes vērtējuma
 4. **Rotācija** — izvēlieties labāko starpniekserveri, izmantojot kvalitātes, nejaušas vai secīgas izvēles stratēģiju
@@ -374,7 +374,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Aizsardzība pret noteikšanu un maskēšanās
 
-OmniRoute ne tikai maršrutē datplūsmu caur starpniekserveri — tas liek datplūsmai izskatīties leģitīmai:
+67router ne tikai maršrutē datplūsmu caur starpniekserveri — tas liek datplūsmai izskatīties leģitīmai:
 
 ### TLS digitālā nospieduma imitēšana
 
@@ -408,13 +408,13 @@ Emblēma verifikācijai parāda arī atrisināto starpniekservera IP.
 
 ## Augšupstraumes starpniekservera režīmi
 
-Pakalpojumu sniedzējiem, kas izmanto CLIProxyAPI modeli, OmniRoute atbalsta trīs augšupstraumes starpniekservera režīmus:
+Pakalpojumu sniedzējiem, kas izmanto CLIProxyAPI modeli, 67router atbalsta trīs augšupstraumes starpniekservera režīmus:
 
-| Režīms        | Apraksts                                                             |
-| ------------- | -------------------------------------------------------------------- |
-| `native`      | OmniRoute tieši apstrādā starpniekservera maršrutēšanu (noklusējums) |
-| `cliproxyapi` | Deleģē ārējai CLIProxyAPI instancei                                  |
-| `fallback`    | Vispirms mēģina vietējo režīmu, pēc tam pārslēdzas uz CLIProxyAPI    |
+| Režīms        | Apraksts                                                            |
+| ------------- | ------------------------------------------------------------------- |
+| `native`      | 67router tieši apstrādā starpniekservera maršrutēšanu (noklusējums) |
+| `cliproxyapi` | Deleģē ārējai CLIProxyAPI instancei                                 |
+| `fallback`    | Vispirms mēģina vietējo režīmu, pēc tam pārslēdzas uz CLIProxyAPI   |
 
 Konfigurējiet katram pakalpojumu sniedzējam atsevišķi:
 
@@ -477,7 +477,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Tuneļu API
 
-Lai padarītu savu OmniRoute instanci pieejamu publiskajā internetā (Cloudflare/ngrok/Tailscale), nevis maršrutētu izejošo datplūsmu caur starpniekserveri, skatiet [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tuneļa REST API atrodas zem `/api/tunnels/{cloudflared,ngrok,tailscale}/*` un nav atkarīga no iepriekš dokumentētās izejošā starpniekservera ķēdes.
+Lai padarītu savu 67router instanci pieejamu publiskajā internetā (Cloudflare/ngrok/Tailscale), nevis maršrutētu izejošo datplūsmu caur starpniekserveri, skatiet [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md). Tuneļa REST API atrodas zem `/api/tunnels/{cloudflared,ngrok,tailscale}/*` un nav atkarīga no iepriekš dokumentētās izejošā starpniekservera ķēdes.
 
 ### 1proxy API
 
@@ -517,7 +517,7 @@ Iestatiet `ENABLE_SOCKS5_PROXY=true` savā `.env` failā un restartējiet.
 
 ### "socket hang up" kļūdas, izmantojot starpniekserveri
 
-Tas ir normāli lētiem starpniekserveriem, kuri pārtrauc neaktīvus savienojumus. OmniRoute to jau apstrādā šādi:
+Tas ir normāli lētiem starpniekserveriem, kuri pārtrauc neaktīvus savienojumus. 67router to jau apstrādā šādi:
 
 - Atspējo savienojuma uzturēšanu starpniekservera savienojumiem (`keepAliveTimeout: 1`)
 - Atspējo konveijerizāciju (`pipelining: 0`)
@@ -527,7 +527,7 @@ Ja problēma joprojām pastāv, izmēģiniet citu starpniekserveri vai izmantoji
 
 ### "unsupported_country_region_territory" OAuth laikā
 
-Pārliecinieties, ka starpniekserveris ir konfigurēts **pirms** OAuth plūsmas sākšanas. OmniRoute maršrutē OAuth pilnvaras apmaiņu caur konfigurēto starpniekserveri. Vispirms iestatiet globālu vai nodrošinātāja līmeņa starpniekserveri un pēc tam izveidojiet savienojumu.
+Pārliecinieties, ka starpniekserveris ir konfigurēts **pirms** OAuth plūsmas sākšanas. 67router maršrutē OAuth pilnvaras apmaiņu caur konfigurēto starpniekserveri. Vispirms iestatiet globālu vai nodrošinātāja līmeņa starpniekserveri un pēc tam izveidojiet savienojumu.
 
 ### Starpniekserveris netiek izmantots
 
@@ -595,7 +595,7 @@ CREATE TABLE proxy_assignments (
 
 ## Starpniekservera darbspējas pārbaude (v3.8.16+)
 
-OmniRoute **starpniekservera ātrās atteices** mehānisms (`src/lib/proxyHealth.ts`) nosaka nedarbojošos starpniekserverus mazāk nekā 2 sekundēs, izmantojot ātru TCP savienojuma pārbaudi, un pēc tam **saglabā rezultātu kešatmiņā**, lai izvairītos no papildu slodzes katram pieprasījumam.
+67router **starpniekservera ātrās atteices** mehānisms (`src/lib/proxyHealth.ts`) nosaka nedarbojošos starpniekserverus mazāk nekā 2 sekundēs, izmantojot ātru TCP savienojuma pārbaudi, un pēc tam **saglabā rezultātu kešatmiņā**, lai izvairītos no papildu slodzes katram pieprasījumam.
 
 ### Darbības princips
 
@@ -660,11 +660,11 @@ Pielāgotiem portiem URL adresē (`http://host:9999`) vienmēr ir prioritāte p�
 
 ## Starpniekserveru analītika un novērojamība
 
-OmniRoute uzskaita katra starpniekservera lietojumu, lai palīdzētu operatoriem diagnosticēt maršrutēšanas modeļus, latentuma lēcienus un atkārtotas kļūmes.
+67router uzskaita katra starpniekservera lietojumu, lai palīdzētu operatoriem diagnosticēt maršrutēšanas modeļus, latentuma lēcienus un atkārtotas kļūmes.
 
 ### Kas tiek uzskaitīts
 
-Katram pieprasījumam, kas tiek nosūtīts caur konfigurētu starpniekserveri, OmniRoute reģistrē:
+Katram pieprasījumam, kas tiek nosūtīts caur konfigurētu starpniekserveri, 67router reģistrē:
 
 | Metrika      | Apraksts                                                             |
 | ------------ | -------------------------------------------------------------------- |
@@ -726,7 +726,7 @@ ORDER BY latency_ms DESC;
 
 ## Rotācijas stratēģijas lēmumu koks
 
-Ja vienam tvērumam ir piešķirti vairāki starpniekserveri, OmniRoute izmanto **rotācijas stratēģiju**, lai izvēlētos, kuru no tiem izmantot katram pieprasījumam. Stratēģija tiek konfigurēta tvēruma līmenī (globāli, katram nodrošinātājam, katram kontam vai katrai kombinācijai).
+Ja vienam tvērumam ir piešķirti vairāki starpniekserveri, 67router izmanto **rotācijas stratēģiju**, lai izvēlētos, kuru no tiem izmantot katram pieprasījumam. Stratēģija tiek konfigurēta tvēruma līmenī (globāli, katram nodrošinātājam, katram kontam vai katrai kombinācijai).
 
 ### Pieejamās stratēģijas
 

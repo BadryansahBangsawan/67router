@@ -45,7 +45,7 @@ npm run test:e2e           # አማራጭ ቢሆንም ይመከራል
 ፕሮጀክቱ እስከ v3.8.48 ድረስ የነበረውን ሙሉ በሙሉ ራስ-ሰር ፍሰት ይመልሳል።
 
 **የአንድ ጊዜ ቅንብር (ባለቤት):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`፣ repo `OmniRoute`፣ workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`፣ repo `67router`፣ workflow `npm-publish.yml`
 (environment: none)። ይህ እስኪኖር ድረስ ራስ-ሰር ደረጃው በ`ENEEDAUTH` ይወድቃል፦
 በ`publish_mode=staged` (ከታች) ወይም `direct` እንደገና ይላኩት።
 

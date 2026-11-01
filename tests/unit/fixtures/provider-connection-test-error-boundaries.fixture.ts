@@ -38,18 +38,20 @@ process.execArgv = [];
 process.env.NODE_ENV = "development";
 delete process.env.VITEST;
 
+// 67router removed the Jules cloud agent this fixture used to validate against; the Hugging Face
+// whoami probe is a kept apikey validator that reports a transport failure's message the same way.
 const hostileValidationMessage =
-  "Jules failed access_token=jules-boundary-secret at /srv/private/validator.ts\n" +
+  "Validator failed access_token=validator-boundary-secret at /srv/private/validator.ts\n" +
   "    at probe (/srv/private/validator.ts:42:7)";
-const julesValidationUrl = "https://jules.googleapis.com/v1alpha/sources";
+const validationUrl = "https://huggingface.co/api/whoami-v2";
 const originalFetch = globalThis.fetch;
 let validationFetchCalls = 0;
 const boundaryFetch = (async (input: string | URL | Request) => {
   const url =
     typeof input === "string" ? input : input instanceof Request ? input.url : input.toString();
-  assert.equal(url, julesValidationUrl, `unexpected outbound request: ${url}`);
+  assert.equal(url, validationUrl, `unexpected outbound request: ${url}`);
   validationFetchCalls += 1;
-  return new Response(hostileValidationMessage, { status: 500 });
+  throw new Error(hostileValidationMessage);
 }) as typeof fetch;
 globalThis.fetch = boundaryFetch;
 
@@ -62,7 +64,7 @@ const { projectProviderRuntimeForPublicResponse, testSingleConnection } =
   await import("../../../src/app/api/providers/[id]/test/route.ts");
 // proxyFetch installs its global dispatcher while the imports above load. Put
 // the deterministic stub back at the final fetch seam so this test can never
-// reach Jules over the network.
+// reach Hugging Face over the network.
 globalThis.fetch = boundaryFetch;
 
 type ArtifactRow = { artifact_relpath: string | null; error_summary: string | null };
@@ -131,10 +133,10 @@ test("public runtime projection omits host paths and internal error envelopes", 
 
 test("connection validation projects hostile errors before public and persistent boundaries", async () => {
   const connection = await providersDb.createProviderConnection({
-    provider: "jules",
+    provider: "huggingface",
     authType: "apikey",
-    name: "Jules Error Boundary",
-    apiKey: "jules-test-key",
+    name: "Validator Error Boundary",
+    apiKey: "hf-test-key",
     isActive: true,
     testStatus: "active",
   });
@@ -142,8 +144,8 @@ test("connection validation projects hostile errors before public and persistent
 
   const result = await testSingleConnection(connection.id);
   assert.equal(result.valid, false);
-  assert.ok(validationFetchCalls > 0, "the deterministic Jules stub must handle the probe");
-  assert.match(String(result.error), /Jules failed/i);
+  assert.ok(validationFetchCalls > 0, "the deterministic validator stub must handle the probe");
+  assert.match(String(result.error), /Validator failed/i);
   assert.equal(await waitForCallLogSaves(10_000), true, "call-log write must drain");
   flushProxyLogsSync();
 
@@ -163,8 +165,8 @@ test("connection validation projects hostile errors before public and persistent
     .prepare(
       `SELECT error
        FROM proxy_logs
-       WHERE connection_id = ? AND provider = 'jules'
-         AND target_url = 'jules/connection-test'
+       WHERE connection_id = ? AND provider = 'huggingface'
+         AND target_url = 'huggingface/connection-test'
        ORDER BY rowid DESC LIMIT 1`
     )
     .get(connection.id) as { error: string | null };
@@ -179,7 +181,7 @@ test("connection validation projects hostile errors before public and persistent
     callLogArtifactError: artifact.error,
     proxyLogError: proxyLogRow.error,
   };
-  const leakPattern = /jules-boundary-secret|srv\/private|validator\.ts|\bat probe\b/i;
+  const leakPattern = /validator-boundary-secret|srv\/private|validator\.ts|\bat probe\b/i;
   const leakingBoundaries = Object.entries(boundaries)
     .filter(([, value]) => leakPattern.test(JSON.stringify(value)))
     .map(([name]) => name);

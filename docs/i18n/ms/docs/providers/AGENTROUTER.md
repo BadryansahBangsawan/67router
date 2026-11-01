@@ -12,7 +12,7 @@ tertentu, bendera `anthropic-beta`, pengepala Stainless SDK, dan sebagainya).
 
 ## Mula pantas — gunakan penyedia `agentrouter` natif (disyorkan)
 
-Bagi kebanyakan pengguna, **tiada persediaan khas diperlukan**. OmniRoute disertakan dengan
+Bagi kebanyakan pengguna, **tiada persediaan khas diperlukan**. 67router disertakan dengan
 penyedia `agentrouter` terbina dalam yang sudah mengandungi format rangkaian Claude Code sepenuhnya (lihat
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Untuk menggunakannya:
 
@@ -34,7 +34,7 @@ asas, laluan sembang, atau set pengepala.
 
 ## Lanjutan: menyambung melalui jenis penyedia serasi Claude Code
 
-OmniRoute turut menyokong AgentRouter (dan geganti yang serupa) melalui jenis penyedia
+67router turut menyokong AgentRouter (dan geganti yang serupa) melalui jenis penyedia
 **serasi Claude Code** (`anthropic-compatible-cc-*`), yang berkomunikasi menggunakan
 Anthropic Messages API dengan format rangkaian yang betul. Penyedia generik
 `openai-compatible-chat` yang menghala ke `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Akaun dan kunci API AgentRouter. Pendaftaran baharu menerima kredit percuma melalui pautan ahli gabungan
   dalam [README](../README.md) projek.
-- OmniRoute berjalan dengan bendera ciri `ENABLE_CC_COMPATIBLE_PROVIDER` didayakan
+- 67router berjalan dengan bendera ciri `ENABLE_CC_COMPATIBLE_PROVIDER` didayakan
   (lihat di bawah).
 
 ## 1. Dayakan jenis penyedia serasi CC
 
 Jenis penyedia serasi Claude Code dikawal oleh bendera ciri kerana ia
 menghantar trafik yang hampir menyerupai klien rasmi Claude Code. Dayakannya dengan
-menetapkan pemboleh ubah persekitaran sebelum memulakan OmniRoute:
+menetapkan pemboleh ubah persekitaran sebelum memulakan 67router:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

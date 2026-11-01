@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** は、OmniRoute が提供するすべてのモデルを、_ネイティブの_ GitHub Copilot Chat
+**OmniCopilot** は、67router が提供するすべてのモデルを、_ネイティブの_ GitHub Copilot Chat
 モデルピッカーに追加します。2つ目のサイドバーも、別個のチャット UI も不要です。Copilot のエージェントモード、ツール呼び出し、
 MCP サーバー、カスタム指示はすべてそのまま機能し、選択したモデル上で実行されます。
 
@@ -23,13 +23,13 @@ MCP サーバー、カスタム指示はすべてそのまま機能し、選択�
 
 ## セットアップ
 
-1. **OmniRoute を実行** — `npm install -g omniroute && omniroute`（ダッシュボードは `http://localhost:20128`）。
+1. **67router を実行** — `npm install -g omniroute && omniroute`（ダッシュボードは `http://localhost:20128`）。
 2. **拡張機能をインストール** — 拡張機能ビューで「OmniRoute」を検索します。
 3. **モデルを選択** — Copilot Chat → モデルピッカー → **Manage Models…** → **OmniRoute** の順に進み、使用するモデルに
    チェックを入れます。
 
-OmniRoute がデフォルトポートで実行されている場合、設定は不要です。リモートインスタンスの場合は、
-**アクティビティバーの OmniRoute アイコン**を開く（または `OmniRoute: Manage Connection` を実行する）ことで、次を設定します。
+67router がデフォルトポートで実行されている場合、設定は不要です。リモートインスタンスの場合は、
+**アクティビティバーの 67router アイコン**を開く（または `OmniRoute: Manage Connection` を実行する）ことで、次を設定します。
 
 - **サーバー URL** — サーバーのルート URL（例：`http://192.168.0.15:20128`）。`/v1` サフィックスは
   拡張機能によって追加されるため、含めないでください。
@@ -74,7 +74,7 @@ HTTP 400 — モデル '<id>' は画像生成モデルのため、
 
 そのため、ピッカーに到達する前に `type` フィールドに基づいて除外されます。**Responses API
 モデルは保持されます**。すべての Codex / GPT-5.x エントリは `supported_endpoints: ["responses"]` を公開しており、
-OmniRoute がそれらを `/v1/chat/completions` 用に変換するため、問題なく使用できます。
+67router がそれらを `/v1/chat/completions` 用に変換するため、問題なく使用できます。
 
 ### 一度も設定していないプロバイダー
 
@@ -86,7 +86,7 @@ OmniRoute がそれらを `/v1/chat/completions` 用に変換するため、問�
 
 ## VS Code タブ内のダッシュボード
 
-`omnicopilot.dashboardOpen: "editor"` を設定すると、OmniRoute ダッシュボードが外部ブラウザーではなく、Simple Browser を介してエディタータブに表示されます。埋め込みは、サーバー側で `DASHBOARD_ALLOW_EMBED=vscode` を設定して**明示的に有効化**する必要があります。この設定により、HTML ページはデフォルトの `frame-ancestors 'none'` + `X-Frame-Options: DENY` の代わりに、`frame-ancestors 'self' vscode-webview:` を指定して配信されます。API サーフェス（`/api`、`/v1`、`/v1beta`、`/a2a`、`/healthz`）では、どちらの場合も厳格なヘッダーが維持されます。
+`omnicopilot.dashboardOpen: "editor"` を設定すると、67router ダッシュボードが外部ブラウザーではなく、Simple Browser を介してエディタータブに表示されます。埋め込みは、サーバー側で `DASHBOARD_ALLOW_EMBED=vscode` を設定して**明示的に有効化**する必要があります。この設定により、HTML ページはデフォルトの `frame-ancestors 'none'` + `X-Frame-Options: DENY` の代わりに、`frame-ancestors 'self' vscode-webview:` を指定して配信されます。API サーフェス（`/api`、`/v1`、`/v1beta`、`/a2a`、`/healthz`）では、どちらの場合も厳格なヘッダーが維持されます。
 
 > ⚠️ **これは実行時ではなく、ビルド時のフラグです。** Next.js は `headers()` をルートマニフェストにコンパイルするため、`next.config.mjs` はバンドルのビルド時にこの変数を読み取ります
 > （`next.config.mjs` → `resolveDashboardEmbedMode`、`scripts/build/dashboardEmbed.mjs`）。
@@ -121,7 +121,7 @@ npm start
 
 | 症状                                                          | 原因／解決方法                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| モデル選択リストに OmniRoute モデルが表示されない             | サーバーに到達できません。ステータスバーのドットが灰色になります。`OmniRoute: Check Connection` を実行してください。検出処理は設計上サイレントに行われ、ユーザーに確認を求める代わりに、モデルを追加しません。                                                                     |
+| モデル選択リストに 67router モデルが表示されない              | サーバーに到達できません。ステータスバーのドットが灰色になります。`OmniRoute: Check Connection` を実行してください。検出処理は設計上サイレントに行われ、ユーザーに確認を求める代わりに、モデルを追加しません。                                                                     |
 | すべてのモデルが二重に表示される                              | 使用している OmniCopilot が 1.0.1 より古いため、更新してください。拡張機能は現在 `?prefix=alias` を指定してリクエストします。                                                                                                                                                      |
 | 以前表示されていた画像／音声モデルが表示されなくなった        | 1.0.1 以降の意図的な変更です。これらのモデルはチャットリクエストに応答できませんでした。                                                                                                                                                                                           |
 | Activity Bar にパネルが表示されない                           | VS Code は追加のビューコンテナーを Activity Bar 下部の **「…」** オーバーフローに移動します。また、右クリックで非表示にしたコンテナーは非表示のままになります。Activity Bar を右クリックして **OmniRoute** にチェックを入れるか、`OmniRoute: Manage Connection` で開いてください。 |
@@ -133,6 +133,6 @@ npm start
 ## 関連項目
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — その他すべてのコーディングツール
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — リモートの OmniRoute を操作する
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — リモートの 67router を操作する
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — `/v1/models` の契約
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — 拡張機能独自のカタログに関する注記

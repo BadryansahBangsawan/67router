@@ -4,7 +4,7 @@
 
 ---
 
-Gumagamit ang OmniRoute ng **parallel-cycle** na modelo ng release: isang nakalaang `release/vX.Y.Z`
+Gumagamit ang 67router ng **parallel-cycle** na modelo ng release: isang nakalaang `release/vX.Y.Z`
 na branch para sa aktibong cycle, `main` para sa nailathalang linya, at isang hindi nababagong
 `vX.Y.Z` na tag kapag inilabas ang cycle na iyon. Inaasahang may mga commit na napupunta sa `release/*` _at_ sa
 `main` — hindi ito pagkakamali.

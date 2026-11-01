@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` đưa toàn bộ danh mục OmniRoute của bạn — các model, combo và
+`@omniroute/opencode-plugin-v2` đưa toàn bộ danh mục 67router của bạn — các model, combo và
 auto-combo — vào trình chọn model của OpenCode v2, kèm theo tên hiển thị, giá và hạn mức
 gói miễn phí.
 
@@ -15,7 +15,7 @@ plugin thông qua các giao diện khác nhau. Hãy chọn package phù hợp v�
 ## Yêu cầu
 
 - OpenCode v2.
-- Một gateway OmniRoute có thể truy cập được (mặc định là `http://localhost:20128`).
+- Một gateway 67router có thể truy cập được (mặc định là `http://localhost:20128`).
 - Node.js 22 hoặc 24.
 
 ## Cài đặt
@@ -124,7 +124,7 @@ tham chiếu sẽ mở rộng schema thành "chấp nhận mọi thứ".
 
 | Triệu chứng                                   | Nguyên nhân                                                                                                                    |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Bộ chọn không hiển thị mô hình OmniRoute      | Không phân giải được khóa nào (hãy kiểm tra cảnh báo khi khởi động), hoặc không thể kết nối tới gateway                        |
+| Bộ chọn không hiển thị mô hình 67router       | Không phân giải được khóa nào (hãy kiểm tra cảnh báo khi khởi động), hoặc không thể kết nối tới gateway                        |
 | ID mô hình thô, không có tổ hợp, không có giá | Các endpoint quản lý đã từ chối token — hãy đặt `managementReadToken`                                                          |
 | Danh mục `freeOnly` ngắn hoặc trống           | Không có token quản lý hoặc token bị từ chối — hãy đọc dòng tóm tắt làm mới (số lượng `unmatched-free`) trong nhật ký của host |
 | Một phiên được ghim vào `opencode-<id>/…`     | Plugin v1 đã công bố `opencode-<id>`; v2 công bố trực tiếp `<id>`, vì vậy hãy chọn lại mô hình trong `<id>/…`                  |

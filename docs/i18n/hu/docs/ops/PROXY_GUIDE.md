@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (Magyar)
+# 🌐 67router Proxy Guide (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **Kerülje meg a földrajzi korlátozásokat, védje személyazonosságát, és irányítsa az AI-forgalmat bármilyen proxyn keresztül — mindezt konfigurációs bonyodalmak nélkül.**
 
-Az OmniRoute teljes funkcionalitású proxykezelő rendszert tartalmaz, amellyel a felsőbb szintű AI-szolgáltatók felé irányuló forgalmat HTTP-, HTTPS- vagy SOCKS5-proxykon keresztül továbbíthatja. Akár blokkolt régióban tartózkodik, IP-rotációra van szüksége, vagy rejtett ujjlenyomat-kezelést szeretne — ez az útmutató minden részletre kitér.
+A 67router teljes funkcionalitású proxykezelő rendszert tartalmaz, amellyel a felsőbb szintű AI-szolgáltatók felé irányuló forgalmat HTTP-, HTTPS- vagy SOCKS5-proxykon keresztül továbbíthatja. Akár blokkolt régióban tartózkodik, IP-rotációra van szüksége, vagy rejtett ujjlenyomat-kezelést szeretne — ez az útmutató minden részletre kitér.
 
 ---
 
@@ -51,7 +51,7 @@ A proxyk a blokkolt régiókon kívül is hasznosak:
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute-kiszolgáló                    │
+│                       67router-kiszolgáló                    │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ Proxy-      │    │ Proxy-       │    │ Proxy            │  │
@@ -83,7 +83,7 @@ A proxyk a blokkolt régiókon kívül is hasznosak:
 
 ## Négyszintű proxyrendszer
 
-Az OmniRoute **négy független hatókörben** támogatja a proxykonfigurációt, amelyek kiértékelése prioritási sorrendben történik:
+A 67router **négy független hatókörben** támogatja a proxykonfigurációt, amelyek kiértékelése prioritási sorrendben történik:
 
 ```
 Prioritási sorrend (legmagasabb → legalacsonyabb):
@@ -96,7 +96,7 @@ Prioritási sorrend (legmagasabb → legalacsonyabb):
 
 ### A feloldás működése
 
-Amikor az OmniRoute kérést küld egy felsőbb szintű szolgáltatónak, meghívja a `resolveProxyForConnectionFromRegistry()` függvényt, amely sorrendben ellenőrzi az egyes szinteket:
+Amikor a 67router kérést küld egy felsőbb szintű szolgáltatónak, meghívja a `resolveProxyForConnectionFromRegistry()` függvényt, amely sorrendben ellenőrzi az egyes szinteket:
 
 1. **Fiókszint** — Van proxy hozzárendelve ehhez a konkrét kapcsolatazonosítóhoz?
 2. **Szolgáltatói szint** — Van proxy hozzárendelve ehhez a szolgáltatóhoz (pl. `openai`)?
@@ -238,7 +238,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### Importálás/exportálás
 
-A proxyk szerepelnek a **Biztonsági mentés/visszaállítás** rendszerben. Az OmniRoute-konfiguráció exportálásakor:
+A proxyk szerepelnek a **Biztonsági mentés/visszaállítás** rendszerben. A 67router-konfiguráció exportálásakor:
 
 1. Lépjen az **Irányítópult → Beállítások → Biztonsági mentés** menüpontra
 2. Kattintson az **Exportálás** lehetőségre — a proxyregiszter és a hozzárendelések is bekerülnek
@@ -248,7 +248,7 @@ A proxyregiszter támogatja a **host+port alapján történő upsert műveletet*
 
 ### Örökölt adatok migrációja
 
-Ha egy régebbi (registry előtti) verzióban konfigurált proxykat, az OmniRoute automatikusan migrálja őket:
+Ha egy régebbi (registry előtti) verzióban konfigurált proxykat, a 67router automatikusan migrálja őket:
 
 ```
 Korábbi key_value tároló → proxy_registry + proxy_assignments
@@ -262,7 +262,7 @@ Ez a frissítés utáni első indításkor egyszer történik meg. Az újbóli f
 
 > 🆕 **Közreműködő: [@oyi77](https://github.com/oyi77)** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847) (Hibajegy: [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788))
 
-Az OmniRoute integrálható a **[1proxy](https://1proxy-api.aitradepulse.com)** közösségi platformmal, így hozzáférést biztosít **több száz ingyenes, ellenőrzött proxyhoz** a világ minden tájáról. Ez tökéletes megoldás azoknak a felhasználóknak, akik nem rendelkeznek saját proxyinfrastruktúrával.
+A 67router integrálható a **[1proxy](https://1proxy-api.aitradepulse.com)** közösségi platformmal, így hozzáférést biztosít **több száz ingyenes, ellenőrzött proxyhoz** a világ minden tájáról. Ez tökéletes megoldás azoknak a felhasználóknak, akik nem rendelkeznek saját proxyinfrastruktúrával.
 
 ### Működés
 
@@ -273,7 +273,7 @@ Az OmniRoute integrálható a **[1proxy](https://1proxy-api.aitradepulse.com)** 
 └─────────────┘       proxy      └─────────────────┘   alapján    └─────────────┘
 ```
 
-1. **Szinkronizálás** — Az OmniRoute lekéri az ellenőrzött proxykat a 1proxy API-ból
+1. **Szinkronizálás** — A 67router lekéri az ellenőrzött proxykat a 1proxy API-ból
 2. **Tárolás** — A proxyk ugyanabban a `proxy_registry` táblában lesznek mentve, `source = 'oneproxy'` értékkel
 3. **Szűrés** — Szűrés protokoll, ország és minőségi pontszám alapján
 4. **Váltás** — A legjobb proxy kiválasztása minőségi, véletlenszerű vagy szekvenciális stratégia használatával
@@ -373,7 +373,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## Észlelés elleni védelem és rejtőzködés
 
-Az OmniRoute nem csupán proxyn keresztül irányítja a forgalmat — hitelesnek is láttatja azt:
+A 67router nem csupán proxyn keresztül irányítja a forgalmat — hitelesnek is láttatja azt:
 
 ### TLS-ujjlenyomat meghamisítása
 
@@ -407,13 +407,13 @@ A jelvény az ellenőrzéshez a feloldott proxy IP-címét is megjeleníti.
 
 ## Kimenő proxy módok
 
-A CLIProxyAPI-mintát használó szolgáltatók esetén az OmniRoute három kimenő proxymódot támogat:
+A CLIProxyAPI-mintát használó szolgáltatók esetén a 67router három kimenő proxymódot támogat:
 
-| Mód           | Leírás                                                                  |
-| ------------- | ----------------------------------------------------------------------- |
-| `native`      | Az OmniRoute közvetlenül kezeli a proxy útválasztását (alapértelmezett) |
-| `cliproxyapi` | Átadja a feladatot egy külső CLIProxyAPI-példánynak                     |
-| `fallback`    | Először a natív módot próbálja, majd visszavált a CLIProxyAPI-ra        |
+| Mód           | Leírás                                                                |
+| ------------- | --------------------------------------------------------------------- |
+| `native`      | A 67router közvetlenül kezeli a proxy útválasztását (alapértelmezett) |
+| `cliproxyapi` | Átadja a feladatot egy külső CLIProxyAPI-példánynak                   |
+| `fallback`    | Először a natív módot próbálja, majd visszavált a CLIProxyAPI-ra      |
 
 Szolgáltatónként konfigurálható:
 
@@ -476,7 +476,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### Alagutak API-ja
 
-Ha az OmniRoute-példányt a nyilvános interneten szeretné elérhetővé tenni (Cloudflare/ngrok/Tailscale) ahelyett, hogy a kimenő forgalmat proxyn keresztül irányítaná, tekintse meg a [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) dokumentumot. Az alagutak REST API-ja az `/api/tunnels/{cloudflared,ngrok,tailscale}/*` alatt érhető el, és független a fent dokumentált kimenő proxylánctól.
+Ha a 67router-példányt a nyilvános interneten szeretné elérhetővé tenni (Cloudflare/ngrok/Tailscale) ahelyett, hogy a kimenő forgalmat proxyn keresztül irányítaná, tekintse meg a [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md) dokumentumot. Az alagutak REST API-ja az `/api/tunnels/{cloudflared,ngrok,tailscale}/*` alatt érhető el, és független a fent dokumentált kimenő proxylánctól.
 
 ### 1proxy API
 
@@ -516,7 +516,7 @@ Ha az OmniRoute-példányt a nyilvános interneten szeretné elérhetővé tenni
 
 ### „socket hang up” hibák proxyn keresztül
 
-Ez megszokott az olyan olcsó proxyknál, amelyek megszakítják az inaktív kapcsolatokat. Az OmniRoute ezt már kezeli a következő módokon:
+Ez megszokott az olyan olcsó proxyknál, amelyek megszakítják az inaktív kapcsolatokat. A 67router ezt már kezeli a következő módokon:
 
 - Letiltja a keep-alive használatát a proxykapcsolatoknál (`keepAliveTimeout: 1`)
 - Letiltja a pipeline-kezelést (`pipelining: 0`)
@@ -526,7 +526,7 @@ Ha a probléma továbbra is fennáll, próbáljon ki egy másik proxyt, vagy has
 
 ### „unsupported_country_region_territory” az OAuth során
 
-Győződjön meg róla, hogy a proxy **az OAuth-folyamat elindítása előtt** van konfigurálva. Az OmniRoute az OAuth-tokenek cseréjét a konfigurált proxyn keresztül irányítja. Először állítson be egy globális vagy szolgáltatói szintű proxyt, majd csatlakozzon.
+Győződjön meg róla, hogy a proxy **az OAuth-folyamat elindítása előtt** van konfigurálva. A 67router az OAuth-tokenek cseréjét a konfigurált proxyn keresztül irányítja. Először állítson be egy globális vagy szolgáltatói szintű proxyt, majd csatlakozzon.
 
 ### A proxy nincs használatban
 
@@ -594,7 +594,7 @@ CREATE TABLE proxy_assignments (
 
 ## Proxyk állapotellenőrzése (v3.8.16+)
 
-Az OmniRoute **proxy gyors hibafelismerési** mechanizmusa (`src/lib/proxyHealth.ts`) egy gyors TCP-kapcsolat-ellenőrzéssel kevesebb mint 2 másodperc alatt észleli a nem működő proxykat, majd **gyorsítótárazza az eredményt**, hogy elkerülje a kérésenkénti többletterhelést.
+A 67router **proxy gyors hibafelismerési** mechanizmusa (`src/lib/proxyHealth.ts`) egy gyors TCP-kapcsolat-ellenőrzéssel kevesebb mint 2 másodperc alatt észleli a nem működő proxykat, majd **gyorsítótárazza az eredményt**, hogy elkerülje a kérésenkénti többletterhelést.
 
 ### Működése
 
@@ -659,11 +659,11 @@ Az URL-ben megadott egyéni portok (`http://host:9999`) mindig elsőbbséget él
 
 ## Proxyanalitika és megfigyelhetőség
 
-Az OmniRoute proxynként követi a használatot, hogy segítsen az üzemeltetőknek az útválasztási minták, a késleltetési kiugrások és az ismétlődő hibák diagnosztizálásában.
+A 67router proxynként követi a használatot, hogy segítsen az üzemeltetőknek az útválasztási minták, a késleltetési kiugrások és az ismétlődő hibák diagnosztizálásában.
 
 ### Nyomon követett adatok
 
-Az OmniRoute minden, beállított proxyn keresztül érkező kérésnél a következőket rögzíti:
+A 67router minden, beállított proxyn keresztül érkező kérésnél a következőket rögzíti:
 
 | Mérőszám     | Leírás                                                            |
 | ------------ | ----------------------------------------------------------------- |
@@ -725,7 +725,7 @@ ORDER BY latency_ms DESC;
 
 ## Forgatási stratégia döntési fája
 
-Ha egy hatókörhöz több proxy van hozzárendelve, az OmniRoute egy **forgatási stratégiával** választja ki, hogy melyiket használja az egyes kérésekhez. A stratégia a hatókör szintjén állítható be (globálisan, szolgáltatónként, fiókonként vagy kombinációnként).
+Ha egy hatókörhöz több proxy van hozzárendelve, a 67router egy **forgatási stratégiával** választja ki, hogy melyiket használja az egyes kérésekhez. A stratégia a hatókör szintjén állítható be (globálisan, szolgáltatónként, fiókonként vagy kombinációnként).
 
 ### Elérhető stratégiák
 

@@ -195,13 +195,13 @@ Az `upstreamDetails` értékre alkalmazott megtisztítási szabályok:
 3. Mélységi korlát: a 4 szintnél mélyebb beágyazások helyére a `"[truncated]"` karakterlánc kerül.
 4. A tömbök legfeljebb 32 elemet tartalmazhatnak.
 
-Csak a feldolgozott szolgáltatói hibatörzzsel rendelkező hívási helyeknek szabad átadniuk az `upstreamDetails` értéket. A belső OmniRoute-hibák (SSE-feldolgozási hibák, üres tartalom, védőkorlát általi blokkolások) nem tartalmazhatják.
+Csak a feldolgozott szolgáltatói hibatörzzsel rendelkező hívási helyeknek szabad átadniuk az `upstreamDetails` értéket. A belső 67router-hibák (SSE-feldolgozási hibák, üres tartalom, védőkorlát általi blokkolások) nem tartalmazhatják.
 
 NE adjon át nyers `err.stack`, `err.message` értéket vagy futásidejű kivételből származó bármilyen karakterláncot az
 `upstreamDetails` számára. Ezeket továbbra is az `errorResponse` / `buildErrorBody(code, msg)`
 használatával, felsőbb rétegbeli törzs nélkül kell kezelni.
 
-A felsőbb rétegbeli 4xx hibák szelektív továbbítása megőrzi a szolgáltató biztonságos JSON-struktúráját és az ügyfél automatikus helyreállításához szükséges megfogalmazását, de ez nem bájtról bájtra történő továbbítás: a rekurzív megtisztító mindig lefut a szerializálás előtt. A ciklikus, BigInt értéket tartalmazó vagy rosszindulatú `toJSON()` törzsek zárt módon meghiúsulnak, és nem jogosultak a továbbításra. Az OCR és a moderálás ugyanezt a szabályt alkalmazza; a nem JSON-formátumú, üres vagy hibásan címkézett felsőbb rétegbeli törzsek a kanonikus OmniRoute JSON-hibaburkolóvá alakulnak.
+A felsőbb rétegbeli 4xx hibák szelektív továbbítása megőrzi a szolgáltató biztonságos JSON-struktúráját és az ügyfél automatikus helyreállításához szükséges megfogalmazását, de ez nem bájtról bájtra történő továbbítás: a rekurzív megtisztító mindig lefut a szerializálás előtt. A ciklikus, BigInt értéket tartalmazó vagy rosszindulatú `toJSON()` törzsek zárt módon meghiúsulnak, és nem jogosultak a továbbításra. Az OCR és a moderálás ugyanezt a szabályt alkalmazza; a nem JSON-formátumú, üres vagy hibásan címkézett felsőbb rétegbeli törzsek a kanonikus 67router JSON-hibaburkolóvá alakulnak.
 
 ## Ismert CodeQL-korlátozás: az egyéni tisztítók felismerésének hiánya
 

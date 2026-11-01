@@ -5,7 +5,7 @@
 ---
 
 Akwụkwọ a na-akọwa ntọala nhazi ụzọ na-agbanwe agbanwe nke nzaghachi na-eduzi, nke agbakwunyere na
-OmniRoute. E kpachapụrụ anya mee ka ọ dị obere: ọ na-ewebata ọwa nsonaazụ-nhazi-ụzọ
+67router. E kpachapụrụ anya mee ka ọ dị obere: ọ na-ewebata ọwa nsonaazụ-nhazi-ụzọ
 nwere ụdị akọwapụtara, mgbaàmà ogo na-arụ ọrụ ozugbo nke na-enye onye na-agbakọ akara auto-combo dị ugbu a ozi, onye
 na-ebupụ OpenTelemetry enwere ike ịhọrọ, yana endpoint nkọwa. Ọ **dịghị**
 edochi usoro nkwụsi ike dị ugbu a (circuit breaker, connection cooldown,
@@ -13,7 +13,7 @@ model lockout, health matrix, autopilot) — kama, ọ na-emeju ya.
 
 ## 1. Ọnọdụ nhazi ụlọ sistemụ
 
-OmniRoute bụ data plane nwere **ụzọ ngwa ngwa nke arịrịọ** na **control/intelligence
+67router bụ data plane nwere **ụzọ ngwa ngwa nke arịrịọ** na **control/intelligence
 plane**. Ụzọ ngwa ngwa ahụ ga-anọgide na-adị ọsọ, na-eji ebe nchekwa nke ọma, asynchronous, na-eguzogide nsogbu ma
 na-arụ ọrụ dịka a tụrụ anya ya. Ntụle, ịgbakọ akara ogo, nnwale na nyocha akụkọ ihe mere eme
 dịịrị control plane.
@@ -23,7 +23,7 @@ AI Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   data plane (ọsọ, sync, n'ime ebe nchekwa)
+│    67router        │   data plane (ọsọ, sync, n'ime ebe nchekwa)
 │  nhazi ụzọ / failover │
 │  ahụike / guardrail │
 │  cache / streaming  │
@@ -49,7 +49,6 @@ AI Agent / IDE
 | Shadow traffic                          | `open-sse/services/combo/shadowRouting.ts`                                                            |
 | Guardrails                              | `src/lib/guardrails/` (hooks tupu/mgbe e mesịrị)                                                      |
 | Exact cache                             | `src/lib/semanticCache.ts` (dabere na signature)                                                      |
-| Ndị ntụle / nhazi ụzọ nke eval na-eduzi | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                  |
 | Nkọwa mkpebi Combo                      | `open-sse/services/combo/decisionTrace.ts`                                                            |
 | Ihe omume dashboard ozugbo              | `src/lib/events/eventBus.ts` (ọwa ọkwa UI, payloads `unknown`, akụkọ ihe omume 100)                   |
 
@@ -234,7 +233,7 @@ Faịlụ: `open-sse/services/routing/otel.ts`
 - Spans na-agbaso ụkpụrụ semantic GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) tinyere àgwà routing
-  OmniRoute (outcome, status, ttft, retries, fallback).
+  67router (outcome, status, ttft, retries, fallback).
 - `record()` na-etinye naanị ihe n'ahịrị nchere buffer nwere oke (O(1)); timer dị
   n'azụ na-eme flush site na `POST {endpoint}/v1/traces` n'ụzọ asynchronous. Mgbe
   ibu karịrị akarị, a na-atụfu events kacha ochie (counter `dropped`) — ọ naghị
@@ -256,7 +255,7 @@ Faịlụ: `open-sse/services/routing/otel.ts`
 
 ## 6. Njikọ evaluation-plane (Njikere maka Future AGI)
 
-OmniRoute na-ele Future AGI (ma ọ bụ evaluator ọ bụla) anya dịka **backend nwere
+67router na-ele Future AGI (ma ọ bụ evaluator ọ bụla) anya dịka **backend nwere
 ike ịnye ọgụgụ isi/evaluation, ọ bụghị dependency**. Ebe njikọ ndị ahụ bụ:
 
 - `RoutingEventSink` nwere ike izigara evaluator events n'ụzọ asynchronous.
@@ -265,8 +264,6 @@ ike ịnye ọgụgụ isi/evaluation, ọ bụghị dependency**. Ebe njikọ n
 - `Evaluator` n'ọdịnihu (deterministic, local judge, HTTP, WASM) ga-anata
   events/traces wee weghachi `QualityScore` nke na-abanye n'otu ụzọ
   `getQualityScore`/quality-factor ahụ.
-- Routing nke eval na-achị dị ugbu a (`open-sse/services/evalRouting.ts`) emeelarị
-  nhazi combo targets ọzọ dabere na pass-rates nke `eval_runs` mgbe agbanyere ya.
 
 Ọ dịghị evaluation na-agba ọsọ synchronously n'ụzọ request, gateway ahụ na-arụkwa
 ọrụ n'ụzọ zuru ezu mgbe evaluator adịghị.

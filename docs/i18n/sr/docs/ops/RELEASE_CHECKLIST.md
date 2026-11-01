@@ -45,7 +45,7 @@ npm run test:e2e           # опционално, али препоручено
 WS1.3 гаранције (процурели токен не може самостално да објави пакет — јер токен не постоји).
 
 **Једнократно подешавање (власник):** npmjs.com → пакет `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: власник `diegosouzapw`, репозиторијум `OmniRoute`, радни ток `npm-publish.yml`
+Publisher_ → GitHub: власник `diegosouzapw`, репозиторијум `67router`, радни ток `npm-publish.yml`
 (окружење: нема). Док то не буде подешено, аутоматски корак се завршава грешком `ENEEDAUTH`:
 поново га покрените са `publish_mode=staged` (испод) или `direct`.
 

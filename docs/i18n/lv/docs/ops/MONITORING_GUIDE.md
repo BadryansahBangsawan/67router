@@ -4,7 +4,7 @@
 
 ---
 
-> **Īsumā**: OmniRoute ietver iebūvētu darbspējas uzraudzību, pakalpojumu sniedzēju autopilotu, kvotu uzskaiti un novērojamības integrācijas punktus. Šajā ceļvedī ir aprakstīts informācijas panelis, brīdinājumi un problēmu novēršana.
+> **Īsumā**: 67router ietver iebūvētu darbspējas uzraudzību, pakalpojumu sniedzēju autopilotu, kvotu uzskaiti un novērojamības integrācijas punktus. Šajā ceļvedī ir aprakstīts informācijas panelis, brīdinājumi un problēmu novēršana.
 
 **Avoti:**
 
@@ -20,7 +20,7 @@
 
 ## Pārskats
 
-OmniRoute ir **3 uzraudzības slāņi**:
+67router ir **3 uzraudzības slāņi**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -103,7 +103,7 @@ Katrai kombinācijai:
 
 ## Veselības pārbaudes API
 
-OmniRoute nodrošina **divas** HTTP veselības pārbaudes saskarnes. Orķestratoros tās nav savstarpēji aizvietojamas.
+67router nodrošina **divas** HTTP veselības pārbaudes saskarnes. Orķestratoros tās nav savstarpēji aizvietojamas.
 
 | Ceļš                         | Nolūks                                                                              | Slodze                                | Izmantošana                                                                                    |
 | ---------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -182,7 +182,7 @@ galapunkta. Izmantojiet `failed` + `failedConnections` aktuālām pārbaužu kļ
 
 ### Kubernetes pārbaužu ieteikumi
 
-OmniRoute ir **viens Node process** (viens notikumu cikls). Docker standarta `HEALTHCHECK` izmanto vieglo `/healthz`. `/api/monitoring/health` ir **pārāk smags** kubelet darbspējas pārbaudes intervāliem.
+67router ir **viens Node process** (viens notikumu cikls). Docker standarta `HEALTHCHECK` izmanto vieglo `/healthz`. `/api/monitoring/health` ir **pārāk smags** kubelet darbspējas pārbaudes intervāliem.
 
 | Pārbaude                           | Ieteicamais mērķis                                                                          | Piezīmes                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -229,7 +229,7 @@ Saistīts: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (pā
 
 ### systemd sargsuns (iesaldēts notikumu cikls)
 
-systemd resursdatorā OmniRoute paziņo pakalpojumu pārvaldniekam, kad tas ir gatavs, un turpina regulāri sūtīt tam signālus, lai serveris, kura notikumu cikls ir iestrēdzis, tiktu nogalināts un restartēts, nevis turpinātu darboties bez reakcijas. Signāli nāk no paša servera notikumu cikla: kad tas tiek bloķēts, signāli apstājas, un systemd restartē pakalpojumu, tiklīdz `WatchdogSec` norādītais laiks paiet bez neviena signāla.
+systemd resursdatorā 67router paziņo pakalpojumu pārvaldniekam, kad tas ir gatavs, un turpina regulāri sūtīt tam signālus, lai serveris, kura notikumu cikls ir iestrēdzis, tiktu nogalināts un restartēts, nevis turpinātu darboties bez reakcijas. Signāli nāk no paša servera notikumu cikla: kad tas tiek bloķēts, signāli apstājas, un systemd restartē pakalpojumu, tiklīdz `WatchdogSec` norādītais laiks paiet bez neviena signāla.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) jau izveido lietotāja vienību ar šo konfigurāciju. Paša izveidotai vienībai (ar noklusējuma `Type=simple`) sargsuņa nav, tāpēc pievienojiet šīs rindas tās sadaļai `[Service]`:
 
@@ -445,7 +445,7 @@ Tokena darbspējas pārbaudes konfigurāciju iekšēji apstrādā `tokenHealthCh
 
 ### Iebūvētie kanāli
 
-OmniRoute atbalsta **3 brīdinājumu kanālus**:
+67router atbalsta **3 brīdinājumu kanālus**:
 
 | Kanāls                          | Iestatīšana       | Lietojums                  |
 | ------------------------------- | ----------------- | -------------------------- |
@@ -561,7 +561,7 @@ Izveidojiet `~/.omniroute/dashboard.json`:
 ### „Kvotas statuss ir kārtībā, bet es redzu 429 kļūdas”
 
 - 429 nozīmē, ka pakalpojumu sniedzējs norāda uz kvotas izlietojumu
-- OmniRoute kvotas uzskaites dati var būt **novecojuši** — noteicošie ir pakalpojumu sniedzēja pusē esošie dati
+- 67router kvotas uzskaites dati var būt **novecojuši** — noteicošie ir pakalpojumu sniedzēja pusē esošie dati
 - Kvotas dati tiek automātiski atsvaidzināti, izmantojot iekšējo kvotu pārraugu
 
 ### „Kombinācija nedarbojas, bet visi mērķi izskatās pieejami”
@@ -574,7 +574,7 @@ Izveidojiet `~/.omniroute/dashboard.json`:
 
 - Palaidiet `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Ja rezultāts ir „ok” — tā ir viltus trauksme, veselības pārbaude ir pārāk stingra
-- Ja rezultāts ir jebkas cits — **apturiet OmniRoute** un izpildiet [avārijas atkopšanas rokasgrāmatā](./DATABASE_GUIDE.md#disaster-recovery) sniegtos norādījumus
+- Ja rezultāts ir jebkas cits — **apturiet 67router** un izpildiet [avārijas atkopšanas rokasgrāmatā](./DATABASE_GUIDE.md#disaster-recovery) sniegtos norādījumus
 
 ### „Atmiņas kaudzes noslodze ir kritiska”
 

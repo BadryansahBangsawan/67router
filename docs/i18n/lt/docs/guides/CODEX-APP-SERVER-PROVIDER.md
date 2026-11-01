@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute suteikia **du** būdus naudoti OpenAI Codex:
+67router suteikia **du** būdus naudoti OpenAI Codex:
 
 | Teikėjas               | Kaip jis palaiko ryšį su OpenAI                                                                                                                                                                | Naudojimo išlyga                                                                                 |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | **`codex`**            | Tiesiogiai pakartotinai perduoda jūsų ChatGPT/OpenAI OAuth prieigos raktą Responses API                                                                                                        | **Taip** — oficialus seansas nėra autorizuotas naudoti per tarpinį serverį / maršruto parinktuvą |
-| **`codex-app-server`** | Valdo **Codex CLI nuosavą `codex app-server`** per JSON-RPC/WebSocket; CLI valdo ir automatiškai atnaujina savo OAuth (`~/.codex/auth.json`) lygiai taip pat kaip interaktyvus `codex` seansas | **Ne** — OmniRoute niekada pakartotinai neperduoda prieigos rakto API                            |
+| **`codex-app-server`** | Valdo **Codex CLI nuosavą `codex app-server`** per JSON-RPC/WebSocket; CLI valdo ir automatiškai atnaujina savo OAuth (`~/.codex/auth.json`) lygiai taip pat kaip interaktyvus `codex` seansas | **Ne** — 67router niekada pakartotinai neperduoda prieigos rakto API                             |
 
 Kadangi `codex-app-server` niekada pakartotinai neperduoda prieigos rakto, jam
 netaikoma seanso pakartotinio perdavimo naudojimo išlyga. Tačiau būtina, kad
@@ -21,7 +21,7 @@ netaikoma seanso pakartotinio perdavimo naudojimo išlyga. Tačiau būtina, kad
 ## 1. Architektūra
 
 ```
-┌─ OmniRoute programa ─────────────┐        ┌─ codex-app-server pagalbinis konteineris ┐
+┌─ 67router programa ─────────────┐        ┌─ codex-app-server pagalbinis konteineris ┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                        │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456              │
 │  (+ galimybių prieigos raktas)   │  JSON  │  --ws-auth capability-token              │
@@ -81,7 +81,7 @@ atsarginė kopija).
 - **Viešas naudotojas, kurio kompiuteryje Codex neįdiegta** — tai nesvarbu:
   pagalbiniame konteineryje CLI jau yra. Naudotojas autentifikuojasi tik per
   valdymo skydelį.
-- **Tiesiogiai kompiuteryje veikianti OmniRoute (be pagalbinio konteinerio, su
+- **Tiesiogiai kompiuteryje veikianti 67router (be pagalbinio konteinerio, su
   pagrindinio kompiuterio Codex)** — nustatykite
   `OMNIROUTE_CODEX_APPSERVER_WS`, kad ji nurodytų jūsų `codex app-server`, ir
   įsitikinkite, kad pagrindinio kompiuterio Codex yra prisijungusi; jei dvejetainio

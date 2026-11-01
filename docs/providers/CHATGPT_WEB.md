@@ -43,9 +43,9 @@ same turn-bound local tool capability when the tunnel and connector are configur
    name. New tool-capable setups must use a newly created connector named exactly
    `OmniRoute Codex v2`, with Authentication set to None and Permissions set to Allow all
    actions.
-3. Run the connection check. OmniRoute opens a browser-backed Temporary Chat and detects
+3. Run the connection check. 67router opens a browser-backed Temporary Chat and detects
    whether Sol and Pro are available for the account.
-4. Save the connection. OmniRoute replaces the pasted cookie with the verified
+4. Save the connection. 67router replaces the pasted cookie with the verified
    Playwright storage state and stores it with the runtime key through the encrypted
    credential abstraction.
 
@@ -102,19 +102,19 @@ a new `OmniRoute Codex v2` connector.
 
 ## Displayless VPS and Docker
 
-For npm, systemd, and PM2 installs, OmniRoute detects common Chrome and Chromium paths.
+For npm, systemd, and PM2 installs, 67router detects common Chrome and Chromium paths.
 Alternatively, set `CHATGPT_WEB_CODEX_CHROME_PATH`. Runtime turns deliberately use headed
 Chrome because ChatGPT rejects the true-headless browser shape. A displayless host must therefore
-run OmniRoute with a private Xvfb display; setting the Chrome path alone does not provide one.
+run 67router with a private Xvfb display; setting the Chrome path alone does not provide one.
 
 The Docker `web` profile starts `chatgpt-web-codex-browser` on the internal Compose
 network. The sidecar runs headed Chrome inside Xvfb, so no physical display is required. Its CDP
 port is not published on the host. The protected browser profile volume is separate from the
-OmniRoute data volume, and the browser receives enough shared memory. The internal CDP proxy
+67router data volume, and the browser receives enough shared memory. The internal CDP proxy
 listens only on port `9223` inside the Compose network; Chrome remains bound to loopback in the
 sidecar.
 
-A supervisor lease under `DATA_DIR` prevents multiple OmniRoute processes from owning
+A supervisor lease under `DATA_DIR` prevents multiple 67router processes from owning
 the same tunnel and broker state. A conflict is reported by the doctor.
 
 ## Interactive recovery
@@ -146,6 +146,5 @@ Retirement regression guards live in:
 
 - `tests/unit/chatgpt-web-retirement.test.ts`
 - `tests/unit/chatgpt-web-runtime-block.test.ts`
-- `tests/unit/chatgpt-web-image-handler-retirement.test.ts`
 - `tests/unit/chatgpt-web-source-retirement.test.ts`
 - `tests/unit/migration-168-retire-chatgpt-web.test.ts`

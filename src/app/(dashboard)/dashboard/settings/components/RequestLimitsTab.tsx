@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Button, Card, Input } from "@/shared/components";
+import { Button, Input } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import {
   DEFAULT_REQUEST_BODY_LIMIT_MB,
   MAX_REQUEST_BODY_LIMIT_MB,
@@ -107,7 +108,10 @@ export default function RequestLimitsTab() {
   }, [dirty, t, validationError, value]);
 
   return (
-    <Card title={t("requestBodyLimitTitle")} subtitle={t("requestBodyLimitDescription")}>
+    <SettingsSection
+      title={t("requestBodyLimitTitle")}
+      description={t("requestBodyLimitDescription")}
+    >
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap items-end gap-3">
           <Input
@@ -154,6 +158,6 @@ export default function RequestLimitsTab() {
           </p>
         )}
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

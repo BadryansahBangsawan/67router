@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector, OmniRoute'un yerleşik HTTPS trafik hata ayıklayıcısıdır — Charles Proxy / mitmweb / HTTP Toolkit benzeri, **LLM farkındalığına** ve **agent farkındalığına** sahip bir araçtır. `/dashboard/tools/traffic-inspector` adresinde bulunur ve aynı anda en fazla 5 yakalama kaynağından canlı trafik alır.
+Traffic Inspector, 67router'un yerleşik HTTPS trafik hata ayıklayıcısıdır — Charles Proxy / mitmweb / HTTP Toolkit benzeri, **LLM farkındalığına** ve **agent farkındalığına** sahip bir araçtır. `/dashboard/tools/traffic-inspector` adresinde bulunur ve aynı anda en fazla 5 yakalama kaynağından canlı trafik alır.
 
 **Dashboard konumu:** `/dashboard/tools/traffic-inspector`
 **Kenar çubuğu grubu:** Araçlar (AgentBridge'den sonra)
@@ -16,21 +16,21 @@ Traffic Inspector, OmniRoute'un yerleşik HTTPS trafik hata ayıklayıcısıdır
 
 ### Traffic Inspector'ı benzersiz kılan özellikler
 
-| Özellik                                                                                  | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Web tabanlı                                                                              |    ✓    |    ✗    |    ✗    |                ✓                |
-| Açık kaynaklı                                                                            |    ✓    |    ✗    | kısmen  |                ✓                |
-| **Agent farkındalığı** (isteğin Antigravity/Copilot/vb. kaynaklı olup olmadığını bilir)  |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM farkındalığı** (OpenAI/Anthropic/Gemini biçimini, token'ları ve modeli ayrıştırır) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Model eşlemesi görünür** (gemini-3-flash → claude-sonnet-4.7)                          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Proxy/yukarı akış gecikme ayrımı**                                                     | kısmen  |    ✗    |    ✗    |                ✓                |
-| **OmniRoute ile entegre** yönlendirme, geri dönüş ve maliyet                             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sistem genelinde proxy hata ayıklama** (makinedeki herhangi bir uygulama)              |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Özel ana makine yakalama** (ana makine başına DNS yönlendirmesi)                       |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY ortam modu**                                                                |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Konuşma görünümü** (çok turlu baloncuklar, tool_use/tool_result)                       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE akış birleştiricisi** (delta olaylarından yeniden oluşturur)                       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Oturum kaydı** (adlandırılabilir, .har/.jsonl olarak dışa aktarılabilir)               |    ✗    |    ✓    |    ✓    |                ✓                |
+| Özellik                                                                                  | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Web tabanlı                                                                              |    ✓    |    ✗    |    ✗    |               ✓                |
+| Açık kaynaklı                                                                            |    ✓    |    ✗    | kısmen  |               ✓                |
+| **Agent farkındalığı** (isteğin Antigravity/Copilot/vb. kaynaklı olup olmadığını bilir)  |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM farkındalığı** (OpenAI/Anthropic/Gemini biçimini, token'ları ve modeli ayrıştırır) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Model eşlemesi görünür** (gemini-3-flash → claude-sonnet-4.7)                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Proxy/yukarı akış gecikme ayrımı**                                                     | kısmen  |    ✗    |    ✗    |               ✓                |
+| **67router ile entegre** yönlendirme, geri dönüş ve maliyet                              |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sistem genelinde proxy hata ayıklama** (makinedeki herhangi bir uygulama)              |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Özel ana makine yakalama** (ana makine başına DNS yönlendirmesi)                       |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY ortam modu**                                                                |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Konuşma görünümü** (çok turlu baloncuklar, tool_use/tool_result)                       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE akış birleştiricisi** (delta olaylarından yeniden oluşturur)                       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Oturum kaydı** (adlandırılabilir, .har/.jsonl olarak dışa aktarılabilir)               |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Tek paragrafta mimari
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSE yanıtıysa true
   mappedTo: string | null; // x-omniroute-mapped üst bilgisi
-  costEstimateUsd: number | null; // OmniRoute fiyatlandırmasına dayalı tahmini maliyet
+  costEstimateUsd: number | null; // 67router fiyatlandırmasına dayalı tahmini maliyet
 }
 ```
 
@@ -395,7 +395,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Sistem proxy'sinin geri alınmaması
 
-OmniRoute, sistem genelinde proxy modu etkinken çökerse:
+67router, sistem genelinde proxy modu etkinken çökerse:
 
 **macOS:**
 
@@ -440,7 +440,7 @@ Temel yol: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | İstekleri listele (filtrelenebilir: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Tek bir isteğin ayrıntıları                                                                 |
 | DELETE | `/requests`                 | Bellek içi arabelleği temizle                                                               |
-| POST   | `/requests/{id}/replay`     | Aynı isteği OmniRoute yönlendiricisi üzerinden yeniden yürüt                                |
+| POST   | `/requests/{id}/replay`     | Aynı isteği 67router yönlendiricisi üzerinden yeniden yürüt                                 |
 | PUT    | `/requests/{id}/annotation` | Bir istek üzerindeki notu kaydet veya güncelle                                              |
 
 ### WebSocket

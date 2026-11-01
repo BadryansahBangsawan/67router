@@ -1,4 +1,4 @@
-# OmniRoute Architecture (हिन्दी)
+# 67router Architecture (हिन्दी)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _अंतिम अपडेट: 2026-06-28_
 
 ## कार्यकारी सारांश
 
-OmniRoute, Next.js पर निर्मित एक स्थानीय AI रूटिंग गेटवे और डैशबोर्ड है।
+67router, Next.js पर निर्मित एक स्थानीय AI रूटिंग गेटवे और डैशबोर्ड है।
 यह एकल OpenAI-संगत एंडपॉइंट (`/v1/*`) प्रदान करता है और अनुवाद, फ़ॉलबैक, टोकन रीफ़्रेश तथा उपयोग ट्रैकिंग के साथ ट्रैफ़िक को कई अपस्ट्रीम प्रदाताओं में रूट करता है।
 
 मुख्य क्षमताएँ:
@@ -128,13 +128,11 @@ v3.8.0 प्लेटफ़ॉर्म के लिए कैनोनिक�
 - `/dashboard/limits` — कोटा/दर नियंत्रण
 - `/dashboard/cli-tools` — CLI ऑनबोर्डिंग, रनटाइम पहचान, कॉन्फ़िगरेशन जनरेशन
 - `/dashboard/agents` — पहचाने गए ACP एजेंट + कस्टम एजेंट पंजीकरण
-- `/dashboard/cloud-agents` — क्लाउड-होस्ट किए गए एजेंट कार्य (Codex Cloud, Devin, Jules) और कार्य जीवनचक्र
 - `/dashboard/skills` — A2A कौशल रजिस्ट्री, सैंडबॉक्स निष्पादन, अंतर्निहित कौशल कैटलॉग
 - `/dashboard/memory` — स्थायी संवादात्मक मेमोरी का निरीक्षण और पुनर्प्राप्ति
 - `/dashboard/webhooks` — आउटबाउंड वेबहुक सदस्यताएँ, सीक्रेट रोटेशन, पुनः प्रयास के आँकड़े
 - `/dashboard/batch` — बैच जॉब सबमिशन और प्रगति
 - `/dashboard/cache` — रीड-थ्रू और रीजनिंग कैश के आँकड़े, निष्कासन नियंत्रण
-- `/dashboard/playground` — किसी भी कॉन्फ़िगर किए गए कॉम्बो/मॉडल के साथ इंटरैक्टिव चैट प्लेग्राउंड
 - `/dashboard/changelog` — इन-ऐप चेंजलॉग व्यूअर (`CHANGELOG.md` को रेंडर करता है)
 - `/dashboard/system` — रनटाइम डायग्नोस्टिक्स, संस्करण जानकारी, परिवेश सत्यापन सतह
 - `/dashboard/onboarding` — नए इंस्टॉलेशन के लिए प्रथम-रन सेटअप विज़ार्ड
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[ब्राउज़र डैशबोर्ड]
     end
 
-    subgraph Router[OmniRoute लोकल प्रोसेस]
+    subgraph Router[67router लोकल प्रोसेस]
         API[V1 संगतता API\n/v1/*]
         DASH[डैशबोर्ड + प्रबंधन API\n/api/*]
         CORE[SSE + अनुवाद कोर\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - बजट: `src/app/api/usage/budget` (GET/POST)
 - फ़ॉलबैक शृंखलाएँ: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - अनुपालन ऑडिट: `src/app/api/compliance/audit-log` (GET, पेजिनेशन + संरचित मेटाडेटा के साथ)
-- मूल्यांकन: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - नीतियाँ: `src/app/api/policies` (GET/POST)
 - सिंक टोकन: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - कॉन्फ़िगरेशन बंडल: `src/app/api/sync/bundle` (GET, सेटिंग्स/प्रदाताओं/कॉम्बो/कुंजियों का ETag-संस्करणयुक्त स्नैपशॉट)
@@ -316,7 +313,6 @@ flowchart LR
 - फ़ेच टाइमआउट: `src/shared/utils/fetchTimeout.ts`
 - अनुरोध टेलीमेट्री: `src/shared/utils/requestTelemetry.ts`
 - अनुपालन/ऑडिट: `src/lib/compliance/index.ts`
-- मूल्यांकन रनर: `src/lib/evals/evalRunner.ts`
 - डोमेन स्थिति स्थायित्व: `src/lib/db/domainState.ts` — फ़ॉलबैक चेन, बजट, लागत इतिहास, लॉकआउट स्थिति और सर्किट ब्रेकर के लिए SQLite CRUD
 
 OAuth प्रदाता मॉड्यूल (`src/lib/oauth/providers/` के अंतर्गत 27 अलग-अलग फ़ाइलें):
@@ -328,7 +324,7 @@ OAuth प्रदाता मॉड्यूल (`src/lib/oauth/providers/` �
 
 ## 5) एम्बेडेड सेवाएँ (v3.8.4)
 
-OmniRoute स्थानीय रूप से चलने वाली AI टूल प्रक्रियाओं को इंस्टॉल कर सकता है, उनकी निगरानी कर सकता है और उन तक रूट कर सकता है,
+67router स्थानीय रूप से चलने वाली AI टूल प्रक्रियाओं को इंस्टॉल कर सकता है, उनकी निगरानी कर सकता है और उन तक रूट कर सकता है,
 जिन्हें **एम्बेडेड सेवाएँ** कहा जाता है। पाँच सेवाएँ शामिल हैं: 9Router, CLIProxyAPI, Bifrost, Mux और Dario।
 
 आर्किटेक्चर की परतें:
@@ -385,23 +381,6 @@ Auto Combo स्थिर कॉम्बो परिभाषा पर न�
 पूर्ण एल्गोरिद्मिक विवरण (कारक सूत्र, भार समायोजन) के लिए,
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md) देखें।
 
-### B. Cloud Agents
-
-Cloud Agents तृतीय-पक्ष द्वारा होस्ट किए गए कोड-एजेंट प्लेटफ़ॉर्म (Codex Cloud, Devin,
-Jules) को एक समान, DB-समर्थित कार्य जीवनचक्र के पीछे समाहित करता है। कार्य बनाने और उनका निरीक्षण करने वाले
-सभी एंडपॉइंट के लिए प्रबंधन प्रमाणीकरण आवश्यक है।
-
-- मॉड्यूल रूट: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, साथ ही `agents/` के अंतर्गत प्रत्येक एजेंट की उप-डायरेक्टरी)
-- प्रत्येक एजेंट का कार्यान्वयन: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- सार्वजनिक एंडपॉइंट: `/api/v1/agents/tasks/*` (सूचीबद्ध करना/बनाना/प्राप्त करना/रद्द करना)
-- प्रबंधन एंडपॉइंट: `/api/cloud/*` (प्रोविज़निंग, स्थिति, बैच)
-- डैशबोर्ड: `/dashboard/cloud-agents`
-- स्टोरेज: `cloud_agent_tasks` तालिका
-
-प्रत्येक एजेंट की प्रोविज़निंग और OAuth संबंधी विशिष्टताओं के लिए,
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md) देखें।
-
 ### C. Guardrails
 
 guardrails मॉड्यूल एक हॉट-रीलोड योग्य मिडलवेयर परत है, जो PII, प्रॉम्प्ट इंजेक्शन और
@@ -437,7 +416,7 @@ guardrails मॉड्यूल एक हॉट-रीलोड योग्�
 - कोटा कैश: `src/domain/quotaCache.ts`
 - अवक्रमण स्थिति: `src/domain/degradation.ts`
 - कॉन्फ़िगरेशन ऑडिट: `src/domain/configAudit.ts`
-- OmniRoute प्रतिक्रिया मेटाडेटा बिल्डर: `src/domain/omnirouteResponseMeta.ts`
+- 67router प्रतिक्रिया मेटाडेटा बिल्डर: `src/domain/omnirouteResponseMeta.ts`
 - आकलन उप-प्रणाली: `src/domain/assessment/` — आवधिक मूल्यांकन कार्य
 
 ### E. प्राधिकरण पाइपलाइन
@@ -804,7 +783,7 @@ flowchart LR
         Browser[डैशबोर्ड ब्राउज़र]
     end
 
-    subgraph ContainerOrProcess[OmniRoute रनटाइम]
+    subgraph ContainerOrProcess[67router रनटाइम]
         Next[Next.js सर्वर\nPORT=20128]
         Core[SSE कोर + एक्ज़ीक्यूटर]
         MainDB[(storage.sqlite)]
@@ -922,7 +901,7 @@ flowchart LR
 
 ## प्रदाता संगतता मैट्रिक्स
 
-> **नोट:** नीचे दिया गया मैट्रिक्स OmniRoute v3.8.0 में पंजीकृत 351 प्रदाताओं का एक प्रतिनिधि नमूना है।
+> **नोट:** नीचे दिया गया मैट्रिक्स 67router v3.8.0 में पंजीकृत 351 प्रदाताओं का एक प्रतिनिधि नमूना है।
 > प्रामाणिक और निरंतर अद्यतन की जाने वाली सूची के लिए,
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (स्वतः-जनित) या
 > `src/shared/constants/providers.ts` में उपलब्ध आधिकारिक स्रोत देखें (लोड के समय Zod द्वारा सत्यापित)।
@@ -1105,7 +1084,7 @@ flowchart LR
 - क्लाइंट से प्राप्त अपरिष्कृत अनुरोध
 - वास्तव में अपस्ट्रीम भेजा गया अनुवादित अनुरोध
 - JSON के रूप में पुनर्निर्मित प्रदाता प्रतिक्रिया; स्ट्रीम की गई प्रतिक्रियाओं को अंतिम सारांश और स्ट्रीम मेटाडेटा तक संक्षिप्त किया जाता है
-- OmniRoute द्वारा लौटाई गई अंतिम क्लाइंट प्रतिक्रिया; स्ट्रीम की गई प्रतिक्रियाएँ उसी संक्षिप्त सारांश प्रारूप में संग्रहीत की जाती हैं
+- 67router द्वारा लौटाई गई अंतिम क्लाइंट प्रतिक्रिया; स्ट्रीम की गई प्रतिक्रियाएँ उसी संक्षिप्त सारांश प्रारूप में संग्रहीत की जाती हैं
 
 ## सुरक्षा-संवेदनशील सीमाएँ
 

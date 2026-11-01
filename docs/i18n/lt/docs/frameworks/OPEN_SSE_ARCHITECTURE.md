@@ -4,7 +4,7 @@
 
 ---
 
-> **Trumpai**: `open-sse/` yra pagrindinis srautinio perdavimo variklis, apdorojantis kiekvieną LLM užklausą sistemoje „OmniRoute“. Jį sudaro ~1 400 failų, kuriuose įgyvendintas užklausų apdorojimo konvejeris, vykdyklės, paslaugos, MCP serveris ir vertimo sluoksnis. Šiame vadove paaiškinama, kaip šios dalys susijungia į bendrą visumą.
+> **Trumpai**: `open-sse/` yra pagrindinis srautinio perdavimo variklis, apdorojantis kiekvieną LLM užklausą sistemoje „67router“. Jį sudaro ~1 400 failų, kuriuose įgyvendintas užklausų apdorojimo konvejeris, vykdyklės, paslaugos, MCP serveris ir vertimo sluoksnis. Šiame vadove paaiškinama, kaip šios dalys susijungia į bendrą visumą.
 
 **Šaltinis:** `open-sse/` (darbo srities paketas, ~1 440 ne testinių `.ts` failų)
 
@@ -12,10 +12,10 @@
 
 ## Kodėl naudojamas atskiras darbo srities paketas?
 
-`open-sse/` yra **savarankiška darbo sritis** „OmniRoute“ monorepozitorijoje dėl kelių priežasčių:
+`open-sse/` yra **savarankiška darbo sritis** „67router“ monorepozitorijoje dėl kelių priežasčių:
 
 1. **Pakartotinis panaudojimas** — `open-sse` publikuojamas npm kaip `@omniroute/open-sse`, todėl kiti projektai gali jį naudoti nepriklausomai
-2. **Aiškios ribos** — srautinio perdavimo variklis atskirtas nuo „OmniRoute“ specifinio UI / DB sluoksnio
+2. **Aiškios ribos** — srautinio perdavimo variklis atskirtas nuo „67router“ specifinio UI / DB sluoksnio
 3. **Našumas** — variklis neturi Next.js priklausomybių, todėl CLI ir serverio neturinčiose aplinkose paleidimas iš neaktyvios būsenos yra spartesnis
 4. **Versijų valdymas** — `open-sse` gali leisti versijas pagal savo tvarkaraštį
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Kodėl naudojamas atskiras transformatorius?
 
-Responses API yra naujasis OpenAI formatas, palaikantis **būseną išlaikančius pokalbius** (`previous_response_id`). Kai klientas siunčia Responses užklausą, OmniRoute:
+Responses API yra naujasis OpenAI formatas, palaikantis **būseną išlaikančius pokalbius** (`previous_response_id`). Kai klientas siunčia Responses užklausą, 67router:
 
 1. Viduje konvertuoja Responses → Chat Completions
 2. Išsiunčia teikėjui (bet kuriam teikėjui, palaikančiam Chat Completions)
@@ -573,5 +573,4 @@ Maršrutizavimo varikliui taikomi griežti našumo reikalavimai:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — kiekvieno katalogo aprašas
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16 veiksnių vertinimas
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP serveris
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A serveris
 - Šaltinis: `open-sse/` (daugiau nei 400 failų, ~143 tūkst. kodo eilučių)

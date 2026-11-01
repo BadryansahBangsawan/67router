@@ -40,8 +40,8 @@ import { isPrivateRelayHostname } from "@/lib/proxyRelay/privateHostname";
  * In production `globalThis.fetch` is patched (`open-sse/utils/proxyFetch.ts`)
  * with `node_modules/undici`'s own `fetch`, whose `FormData`/`Request` classes
  * differ from the runtime's global `FormData` (same cross-realm class
- * mismatch already fixed for image edits in #3273 —
- * `open-sse/handlers/imageGeneration.ts::handleOpenAIImageEdit`). Passing a
+ * mismatch fixed for image edits in #3273, a feature 67router has since
+ * removed). Passing a
  * native `FormData` instance through that patched fetch makes undici
  * serialize the body as the literal string `"[object FormData]"` with
  * `Content-Type: text/plain;charset=UTF-8` — which Cloudflare's API rejects
@@ -82,7 +82,7 @@ export function buildCloudflareWorkerScript(relayAuth: string): string {
   // relayAuth is generated server-side via randomBytes(24).toString("hex") — no
   // user-controlled input ever reaches this template, so direct interpolation
   // into the worker source string is safe.
-  return `// OmniRoute Cloudflare Worker proxy relay — generated at deploy time.
+  return `// 67router Cloudflare Worker proxy relay — generated at deploy time.
 const resolveRelayTarget = ${resolveRelayTarget.toString()};
 
 const isPrivateHostname = ${isPrivateRelayHostname.toString()};

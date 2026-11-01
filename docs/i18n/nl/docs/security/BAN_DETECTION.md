@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute scant upstream-foutreacties op signalen die aangeven dat een provideraccount
+67router scant upstream-foutreacties op signalen die aangeven dat een provideraccount
 **permanent onbruikbaar is** (opgeschort / gedeactiveerd / geblokkeerd wegens schending van de gebruiksvoorwaarden) en verplaatst die verbinding, wanneer
 er een overeenkomst is, naar een **terminale status `banned`**, zodat deze niet
 langer voor verzoeken wordt geselecteerd. Dit is wat de instellingenkaart **Beveiliging → Verboden trefwoorden**

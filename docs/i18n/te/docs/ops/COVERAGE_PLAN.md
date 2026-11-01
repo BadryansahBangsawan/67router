@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@ Phases 6-7 కోసం ప్రధాన అంశాలు:
 
 - `open-sse/services/compression/**` అనేది తక్కువ కవరేజ్ కలిగిన ఫైళ్లలో అత్యంత సాంద్రమైన సమూహం మరియు మిగిలిన అంతరంలో ప్రధాన భాగాన్ని ఆక్రమిస్తుంది.
 - బ్యాచ్ మరియు రీరాంక్ API రూట్లకు (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) హ్యాండ్లర్-స్థాయి పరీక్షలు అవసరం.
-- క్లౌడ్ ఏజెంట్ అడాప్టర్లకు (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) మరియు `tierResolver.ts`కు సినారియో పరీక్షలు అవసరం.
 - డాక్స్ UI కంపోనెంట్లు మరియు `src/mitm/systemCommands.ts` తక్కువ ప్రాధాన్యత కలిగినవి, కానీ తక్కువ శ్రమతో బ్రాంచ్ కవరేజ్ మెరుగుదలలను అందిస్తాయి.
 
 ## అమలు చెక్లిస్ట్

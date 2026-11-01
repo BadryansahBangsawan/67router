@@ -10,7 +10,7 @@
 
 ## Muktadha
 
-Kwa sasa OmniRoute inawasilisha vitendaji vya uhifadhi vinavyolenga vikoa kutoka `src/lib/db/`, huku
+Kwa sasa 67router inawasilisha vitendaji vya uhifadhi vinavyolenga vikoa kutoka `src/lib/db/`, huku
 muunganisho wa pamoja unaorejeshwa na `src/lib/db/core.ts` ukitekeleza mkataba landanishi wa `SqliteAdapter`
 katika `src/lib/db/adapters/types.ts`. Adapta hiyo inatumia mazingira kadhaa ya utekelezaji ya SQLite, lakini
 kiolesura chake bado kimeundwa kwa mtindo wa SQLite: kauli zilizoandaliwa landanishi, `pragma`, miamala iliyoahirishwa na ya papo hapo,

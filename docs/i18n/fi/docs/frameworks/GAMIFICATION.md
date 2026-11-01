@@ -7,7 +7,7 @@
 > **Totuuden lähde:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Päivitetty viimeksi:** 2026-06-28 — v3.8.40
 
-OmniRoute sisältää ensisijaisesti paikallisesti toimivan pelillistämiskerroksen, joka palkitsee käyttäjiä
+67router sisältää ensisijaisesti paikallisesti toimivan pelillistämiskerroksen, joka palkitsee käyttäjiä
 alustan käytöstä — pyyntöjen tekemisestä, palveluntarjoajien vaihtamisesta, yhdistelmien
 luomisesta, tokenien jakamisesta ja yhteisöön osallistumisesta. Kaikki tila sijaitsee
 SQLitessa; federointi yhteisöpalvelimien kanssa on valinnaista ja perustuu tietojen lähettämiseen.
@@ -36,7 +36,7 @@ jakaminen, kutsupalkkiot).
 | Tulostaulukot              | Globaalit, viikoittaiset, kuukausittaiset, tokenien jakamiseen perustuvat ja osallistumiseen perustuvat näkymät |
 | Tokenien jakaminen         | Siirrä krediittejä käyttäjien välillä kahdenkertaisen kirjanpidon avulla                                        |
 | Kutsuminen ja lunastaminen | Suosittelukoodit, jotka tallennetaan SHA-256-tiivisteinä                                                        |
-| Yhteisöpalvelimet          | Federointi ulkoisten OmniRoute-instanssien kanssa                                                               |
+| Yhteisöpalvelimet          | Federointi ulkoisten 67router-instanssien kanssa                                                                |
 | Huijausten esto            | Palvelinpuolen pisteytys, nopeusrajoitus ja z-pisteisiin perustuva poikkeamien tunnistus                        |
 
 ### Suunnitteluperiaatteet
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Tietokantataulut
 
-Kaikki taulut sijaitsevat OmniRouten SQLite-päätietokannassa, jonka migraatio
+Kaikki taulut sijaitsevat 67routerin SQLite-päätietokannassa, jonka migraatio
 `060_create_gamification.sql` luo. WAL-lokin käyttö periytyy singleton-funktiolta
 `getDbInstance()`, joka sijaitsee tiedostossa `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Kaikki taulut sijaitsevat OmniRouten SQLite-päätietokannassa, jonka migraatio
 
 ### Toimialamoduuli: `src/lib/db/gamification.ts`
 
-Noudattaa OmniRouten vakiintunutta mallia — tuo funktion `getDbInstance()`
+Noudattaa 67routerin vakiintunutta mallia — tuo funktion `getDbInstance()`
 tiedostosta `core.ts` ja vie tyypitetyt CRUD-funktiot. Reittikäsittelijöissä ei käytetä raakaa SQL:ää.
 
 Keskeiset funktiot:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Toiminto          | XP  | Kuvaus                                                                |
 | ----------------- | --- | --------------------------------------------------------------------- |
-| `request`         | 1   | Jokaisesta OmniRouten kautta reititetystä API-pyynnöstä               |
+| `request`         | 1   | Jokaisesta 67routerin kautta reititetystä API-pyynnöstä               |
 | `provider_switch` | 5   | Vaihtamisesta toiseen palveluntarjoajaan                              |
 | `model_switch`    | 3   | Vaihtamisesta toiseen malliin                                         |
 | `combo_create`    | 10  | Uuden yhdistelmän luomisesta                                          |
@@ -579,7 +579,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (yksilöllinen, indeksoitu) |
 | `token_hash` | SHA-256(raw_token)                    |
 
-Raakatoken palautetaan käyttäjälle tasan kerran sen luomisen yhteydessä. OmniRoute
+Raakatoken palautetaan käyttäjälle tasan kerran sen luomisen yhteydessä. 67router
 ei koskaan tallenna tai näytä sitä uudelleen — vain tiiviste säilytetään.
 
 ### Itseviittauksen estäminen
@@ -712,7 +712,7 @@ Ylläpitäjät voivat hakea koko kirjausketjun päätepisteen `GET /api/gamifica
 
 ## API-reitit
 
-Kaikki reitit noudattavat OmniRoute-vakiomallia:
+Kaikki reitit noudattavat 67router-vakiomallia:
 
 ```
 Reitti → CORS-esitarkistus → Rungon validointi (Zod) → Todennus (extractApiKey)

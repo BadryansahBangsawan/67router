@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Yorùbá)
+# 67router MCP Server Documentation (Yorùbá)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Fífi sori ẹrọ
 
-OmniRoute MCP wà nínú rẹ̀ láti ìbẹ̀rẹ̀. Bẹ̀rẹ̀ rẹ̀ pẹ̀lú:
+67router MCP wà nínú rẹ̀ láti ìbẹ̀rẹ̀. Bẹ̀rẹ̀ rẹ̀ pẹ̀lú:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline, àti àwọn oníbàárà MCP tó bá a mu.
 | `omniroute_switch_combo`        | `write:combos`        | Mú combo kan ṣiṣẹ́ tàbí dá a dúró                                                                                        |
 | `omniroute_create_combo`        | `write:combos`        | Ṣẹ̀dá combo tí a ti fìdí rẹ̀ múlẹ̀ nípasẹ̀ API combo tó wà tẹ́lẹ̀                                                             |
 | `omniroute_check_quota`         | `read:quota`          | Ìpín tí a lò/lápapọ̀, ìdá ọgọ́rùn-ún tó kù, àkókò àtúntò, ìlera token                                                     |
-| `omniroute_route_request`       | `execute:completions` | Fi ìbéèrè ìparí ìfọ̀rọ̀wérọ̀ ránṣẹ́ nípasẹ̀ ìdarí ọ̀nà OmniRoute                                                              |
+| `omniroute_route_request`       | `execute:completions` | Fi ìbéèrè ìparí ìfọ̀rọ̀wérọ̀ ránṣẹ́ nípasẹ̀ ìdarí ọ̀nà 67router                                                               |
 | `omniroute_cost_report`         | `read:usage`          | Ìròyìn iye owó gẹ́gẹ́ bí àkókò (ìgbà/ọjọ́/ọ̀sẹ̀/oṣù)                                                                         |
 | `omniroute_list_models_catalog` | `read:models`         | Àkójọ model kíkún pẹ̀lú àwọn agbára, ipò, àti ìdíyelé                                                                    |
 | `omniroute_radar_catalog`       | `read:radar`          | Àkójọ Radar agbègbè tí a fọwọ́ sí; àwọn àsẹ̀ olùpèsè/ẹbí jẹ́ àṣàyàn                                                        |
@@ -152,7 +152,7 @@ a sì máa ń fi `source: "mcp_metadata_estimate"` sàmì sí wọn.
 
 ### Ajọ Igi Ìráàyèsí MCP (v3.8.0)
 
-Yàtọ̀ sí àwọn irinṣẹ́ fúnmọ́ra tó wà lókè, OmniRoute ní ajọ lẹ́yìn-ìmúṣẹ tí
+Yàtọ̀ sí àwọn irinṣẹ́ fúnmọ́ra tó wà lókè, 67router ní ajọ lẹ́yìn-ìmúṣẹ tí
 ó máa ń fún **àwọn èsì irinṣẹ́** ti àwọn irinṣẹ́ aṣàwákiri/ìráàyèsí MCP pọ̀ kí wọ́n tó dá wọn padà sí
 aṣojú náà. Ajọ yìí kì í ṣe irinṣẹ́ fúnra rẹ̀ — ó máa ń ṣiṣẹ́ láìfarahàn lórí èsì irinṣẹ́ èyíkéyìí tó ní
 ọ̀rọ̀ igi ìráàyèsí tàbí àwòrán-ìṣẹ́jú aṣàwákiri tó gùn jù (≥2000 àmì-ọ̀rọ̀).
@@ -245,17 +245,6 @@ Wo [AGENT-SKILLS.md](./AGENT-SKILLS.md) fún àkójọ kíkún àti bí àwọn 
 Àkójọ irinṣẹ́ MCP tó wà lókè (àwọn irinṣẹ́ aláìlẹ́ẹ̀ke 110, tí `countUniqueMcpTools()` ṣírò) ni a mọ̀ọ́mọ̀
 fi ààlà sí àwọn iṣẹ́ routing/cache/compression/memory/skills/proxy/context-source ní àkókò ìṣiṣẹ́. Àwọn
 framework méjì tó sún mọ́ ọn wà pẹ̀lú olupin MCP nínú v3.8.0, a sì ṣe àkọsílẹ̀ wọn lọ́tọ̀ọ̀tọ̀:
-
-### Àwọn Aṣojú Cloud
-
-Àwọn Aṣojú Cloud jẹ́ àwọn aṣojú AI fún kíkọ kóòdù tí ń ṣiṣẹ́ níta process (codex-cloud, cursor-cloud, devin, jules), tí a so mọ́
-OmniRoute nípasẹ̀ àwòṣe ìsopọ̀ kan náà tí a ń lò fún àwọn olùpèsè LLM. A ṣí wọn sílẹ̀ nípasẹ̀
-REST surface tiwọn (`/api/v1/agents/*`), wọn kò sì jẹ́ apá kan nínú àkójọ irinṣẹ́ MCP
-— pípè Aṣojú Cloud kan kì í lo ààlà MCP kan.
-
-- Ìmúṣẹ: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ìgbésí-ayé: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Ìwé àkọsílẹ̀: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Àwọn Guardrail
 
@@ -411,8 +400,6 @@ Irú irinṣẹ́ kọ̀ọ̀kan nílò àwọn scope pàtó:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | Àwọn irinṣẹ́ kíkà 13 — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | Àwọn irinṣẹ́ kíkọ 9 — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -466,7 +453,7 @@ olùdarí kan ti mú ààyè MCP láti ọ̀nà jíjìn/tí kì í ṣe loopback
 
 | Àyípadà                                 | Àiyípadà                                 | Ète                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | :-------------------------------------- | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                 | URL ìpìlẹ̀ tí olupin MCP ń lò nígbà tí ó bá ń pe àwọn API abẹ́nú OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`                 | URL ìpìlẹ̀ tí olupin MCP ń lò nígbà tí ó bá ń pe àwọn API abẹ́nú 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `OMNIROUTE_API_KEY`                     | (òfo)                                    | Kọ́kọ́rọ́ API tí a ń fi ránṣẹ́ sí àwọn ìpè API abẹ́nú gẹ́gẹ́ bí `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (`"true"` nìkan ló ń mú un ṣiṣẹ́) | Nígbà tí a bá mú un ṣiṣẹ́, àìsí àwọn scope yóò kọ àwọn ìpè irinṣẹ́, yóò sì kọ `scope_denied:<reason>` sínú àkọsílẹ̀ àyẹ̀wò. A tún máa fipá mú ìmúlò yìí ṣiṣẹ́ láìka àmì yìí sí fún olùpè HTTP/SSE èyíkéyìí tí a dá mọ̀ láti inú àkọlé Authorization fún kọ́kọ́rọ́ kọ̀ọ̀kan (`source === "authInfo"`) tí kò ní scope `manage`/`admin` kíkún — fún àpẹẹrẹ, kọ́kọ́rọ́ kan tí ó ní scope ìkọjá `mcp:connect` tóóró nìkan — nítorí náà, àiyípadà yìí kò léwu fún ìṣàn olùṣàkóso kan ṣoṣo ti agbègbè/stdio nìkan, kì í ṣe fún ìráàyèsí jíjìnnà tí kì í ṣe loopback láé |
 | `OMNIROUTE_MCP_SCOPES`                  | (òfo)                                    | Àtòjọ àwọn scope tí a yà pẹ̀lú àmì kọ́má, tí a kà sí “tó wà” nípa àiyípadà (a máa ń lò ó nígbà tí olùpè kò bá pèsè àwọn scope tirẹ̀)                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -569,7 +556,6 @@ Lo dashboard tàbí àwọn endpoint REST `/api/mcp/audit` àti `/api/mcp/audit/
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Àwọn ìtumọ̀ irinṣẹ́ ọgbọ́n (irinṣẹ́ 4)                                      |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Àwọn ìtumọ̀ irinṣẹ́ orísun àyíká-ọ̀rọ̀ Notion (irinṣẹ́ 6)                    |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Àwọn ìtumọ̀ irinṣẹ́ ìsọdi-nǹkan-sí-eré (irinṣẹ́ 8)                         |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Ìforúkọsílẹ̀ plugin àti àwọn irinṣẹ́ ìṣàkóso (irinṣẹ́ 8)                   |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint `/api/mcp/status`                                              |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint `/api/mcp/tools`                                               |
 | `src/app/api/mcp/sse/route.ts`                                           | Ọ̀nà ìgbéjàde SSE `/api/mcp/sse`                                         |

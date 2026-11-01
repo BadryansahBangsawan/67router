@@ -45,7 +45,7 @@ npm run test:e2e           # ընտրովի է, բայց խորհուրդ է տ�
 WS1.3-ի երաշխիքը (արտահոսած նշագիրը միայնակ չի կարող հրապարակում կատարել, քանի որ նշագիր չկա)։
 
 **Մեկանգամյա կարգավորում (սեփականատեր)՝** npmjs.com → `omniroute` փաթեթ → Settings → _Trusted
-Publisher_ → GitHub՝ owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub՝ owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none)։ Քանի դեռ սա գոյություն չունի, ավտոմատ քայլը ձախողվում է `ENEEDAUTH` սխալով․
 կրկին գործարկեք `publish_mode=staged`-ով (ստորև) կամ `direct`-ով։
 

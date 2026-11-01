@@ -4,7 +4,8 @@
  * The combo pipeline used to branch on raw string comparisons of the strategy name
  * scattered across ~12 slices. Those decisions now live in a typed trait registry
  * (`open-sse/services/combo/strategyRegistry.ts`). This suite pins:
- *   1. coverage — every canonical strategy (20 public + internal `quota-share`) has an
+ *   1. coverage — every canonical strategy (the 20 public ones; 67router removed the internal
+ *      `quota-share` strategy with Quota Share pools) has an
  *      entry, and the known-symbols gate's HANDLED_COMBO_STRATEGIES is derived from it;
  *   2. the safe default — an unknown strategy resolves to the exact fall-through of the
  *      former `else` chains (prototype keys included);
@@ -55,7 +56,6 @@ const LEGACY_DECISIONS: { [K in keyof StrategyTraits]: (s: string) => StrategyTr
       "cache-optimized",
       "headroom",
       "quota-weighted",
-      "quota-share",
     ];
     return (reordering.includes(s) ? s : "declared") as StrategyTraits["ordering"];
   },
@@ -86,11 +86,10 @@ const LEGACY_DECISIONS: { [K in keyof StrategyTraits]: (s: string) => StrategyTr
   preScreensTargets: (s) => s === "priority",
   // targetResolution.ts modelOrderPreservingStrategies (#8370)
   promptCacheAffinityScope: (s) =>
-    ["priority", "weighted", "fill-first", "quota-share"].includes(s) ? "model" : "global",
+    ["priority", "weighted", "fill-first"].includes(s) ? "model" : "global",
   // promptCacheAffinity.ts shouldProtectOriginalFirst (#8370)
   protectsFirstTargetFromAffinity: (s) =>
     s === "auto" ||
-    s === "quota-share" ||
     s === "weighted" ||
     s === "priority" ||
     s === "fill-first" ||
@@ -105,16 +104,13 @@ const LEGACY_DECISIONS: { [K in keyof StrategyTraits]: (s: string) => StrategyTr
   // executeTargetGates.ts quota-exhaustion cutoff (`!== "auto"`)
   appliesQuotaCutoffGate: (s) => s !== "auto",
   // targetResolution.ts in-flight slot transfer
-  inflightReservation: (s) =>
-    s === "quota-weighted" ? "quota-weighted" : s === "quota-share" ? "quota-share" : "none",
-  // combo.ts quotaShareConcurrencyEnabled
-  quotaShareConcurrencySlot: (s) => s === "quota-share",
+  inflightReservation: (s) => (s === "quota-weighted" ? "quota-weighted" : "none"),
   // comboSetup.ts relayConfig + executeTargetAttempt.ts handoff
   contextRelay: (s) => s === "context-relay",
 };
 
-test("registry covers every canonical strategy (20 public + quota-share) and nothing else", () => {
-  assert.equal(CANONICAL.length, 21);
+test("registry covers every canonical strategy (20 public) and nothing else", () => {
+  assert.equal(CANONICAL.length, 20);
   assert.deepEqual([...REGISTERED_COMBO_STRATEGIES].sort(), [...CANONICAL].sort());
   for (const strategy of CANONICAL) {
     assert.ok(Object.hasOwn(COMBO_STRATEGY_REGISTRY, strategy), `missing ${strategy}`);

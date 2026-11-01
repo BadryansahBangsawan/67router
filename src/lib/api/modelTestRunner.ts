@@ -1,10 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { prepareConnectionModelTest } from "@/lib/providerModels/prepareConnectionModelTest";
 import { POST as postChatCompletion } from "@/app/api/v1/chat/completions/route";
-import { POST as postAudioSpeech } from "@/app/api/v1/audio/speech/route";
 import { POST as postAudioTranscription } from "@/app/api/v1/audio/transcriptions/route";
-import { handleValidatedEmbeddingRequestBody } from "@/app/api/v1/embeddings/route";
-import { POST as postRerank } from "@/app/api/v1/rerank/route";
 import { POST as postResponses } from "@/app/api/v1/responses/route";
 import {
   buildComboTestPrompt,
@@ -231,26 +228,6 @@ export function buildInternalResponsesRequest(
   });
 }
 
-export function buildInternalRerankRequest(
-  testBody: Record<string, unknown>,
-  signal: AbortSignal,
-  connectionId?: string
-) {
-  return new Request(`${INTERNAL_ORIGIN}/v1/rerank`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Internal-Test": "combo-health-check",
-      "X-OmniRoute-No-Cache": "true",
-      "X-OmniRoute-Compression": "off",
-      "X-Request-Id": `model-test-${randomUUID()}`,
-      ...(connectionId ? { "X-OmniRoute-Connection": connectionId } : {}),
-    },
-    body: JSON.stringify(testBody),
-    signal,
-  });
-}
-
 function buildTinyWavFile(): File {
   return new File(
     [
@@ -288,26 +265,6 @@ export function buildInternalAudioTranscriptionRequest(
   });
 }
 
-export function buildInternalAudioSpeechRequest(
-  model: string,
-  signal: AbortSignal,
-  connectionId?: string
-) {
-  return new Request(`${INTERNAL_ORIGIN}/v1/audio/speech`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Internal-Test": "combo-health-check",
-      "X-OmniRoute-No-Cache": "true",
-      "X-OmniRoute-Compression": "off",
-      "X-Request-Id": `model-test-${randomUUID()}`,
-      ...(connectionId ? { "X-OmniRoute-Connection": connectionId } : {}),
-    },
-    body: JSON.stringify({ model, input: "Hi", voice: "alloy", response_format: "mp3" }),
-    signal,
-  });
-}
-
 export function detectTestKind(modelStr: string, customModel: any, nodeApiType?: string) {
   const supportedEndpoints = Array.isArray(customModel?.supportedEndpoints)
     ? customModel.supportedEndpoints
@@ -330,6 +287,8 @@ export function detectTestKind(modelStr: string, customModel: any, nodeApiType?:
     (apiFormat === "audio-transcriptions" ||
       nodeType === "audio-transcriptions" ||
       supportedEndpoints.includes("audio-transcriptions"));
+  // Text-to-speech models: 67router removed /v1/audio/speech, so there is no endpoint to
+  // probe them on. They are skipped like the other non-chat generation models below.
   const isAudioSpeech =
     !isExplicitChat &&
     !isAudioTranscription &&
@@ -390,13 +349,12 @@ export function detectTestKind(modelStr: string, customModel: any, nodeApiType?:
     !isRerank &&
     !isEmbedding &&
     !isResponses &&
-    (isGenerationFormat || isGenerationOnlyTag || isImageOnlyModel(modelStr));
+    (isAudioSpeech || isGenerationFormat || isGenerationOnlyTag || isImageOnlyModel(modelStr));
 
   return {
     isRerank,
     isEmbedding,
     isAudioTranscription,
-    isAudioSpeech,
     isResponses,
     isNonChatGeneration,
   };
@@ -468,19 +426,9 @@ export function classifyModelTestOutput(
 
 export async function extractModelTestResponseText(
   response: Response,
-  streamChat: boolean,
-  isAudioSpeech = false
+  streamChat: boolean
 ): Promise<ModelTestResponseText> {
   const contentType = (response.headers.get("content-type") || "").toLowerCase();
-  if (isAudioSpeech) {
-    const audio = await response.arrayBuffer();
-    return {
-      text:
-        contentType.startsWith("audio/") && audio.byteLength > 0
-          ? `Audio generated (${audio.byteLength} bytes)`
-          : "",
-    };
-  }
   if (streamChat && !contentType.includes("application/json")) {
     return extractComboTestStreamResult(await response.text());
   }
@@ -593,14 +541,8 @@ export async function runSingleModelTest(
     findCustomModelMetadata(providerId, fullModelStr),
     findProviderNodeApiType(providerId),
   ]);
-  const {
-    isRerank,
-    isEmbedding,
-    isAudioTranscription,
-    isAudioSpeech,
-    isResponses,
-    isNonChatGeneration,
-  } = detectTestKind(fullModelStr, customModel, nodeApiType);
+  const { isRerank, isEmbedding, isAudioTranscription, isResponses, isNonChatGeneration } =
+    detectTestKind(fullModelStr, customModel, nodeApiType);
 
   // #13376: Skip image/music/video generation models — dispatching them as
   // chat completions incurs real billable generations the operator never asked for.
@@ -615,14 +557,25 @@ export async function runSingleModelTest(
       httpStatus: 422,
       skipped: true,
       error:
-        "Skipped: non-chat generation model (images/music/video) — use the corresponding generation endpoint instead",
+        "Skipped: non-chat generation model (images/speech/music/video) — chat model tests cannot exercise it",
     };
   }
 
-  if (
-    options.prompt !== undefined &&
-    (isEmbedding || isRerank || isAudioTranscription || isAudioSpeech)
-  ) {
+  // Embedding and rerank models stay classified so they are never dispatched as chat, but
+  // there is no /v1/embeddings or /v1/rerank endpoint to exercise them any more.
+  if (isEmbedding || isRerank) {
+    const kind = isEmbedding ? "embedding" : "rerank";
+    return {
+      modelId: fullModelStr,
+      status: "error",
+      latencyMs: 0,
+      httpStatus: 422,
+      skipped: true,
+      error: `Skipped: ${kind} models cannot be tested (the ${kind === "embedding" ? "embeddings" : "rerank"} endpoint was removed)`,
+    };
+  }
+
+  if (options.prompt !== undefined && isAudioTranscription) {
     return {
       modelId: fullModelStr,
       status: "error",
@@ -632,35 +585,24 @@ export async function runSingleModelTest(
     };
   }
 
-  const testBody = isRerank
-    ? {
-        model: fullModelStr,
-        query: "What is OmniRoute?",
-        documents: [
-          "OmniRoute routes AI requests across configured providers.",
-          "This document is unrelated to the test query.",
-        ],
-        top_n: 1,
-        return_documents: false,
-      }
-    : isAudioTranscription
-      ? { model: fullModelStr }
-      : isResponses
-        ? {
-            model: fullModelStr,
-            // Responses takes `input`, not `messages`.
-            input: buildComboTestPrompt(),
-            max_output_tokens: RESPONSES_TEST_MAX_OUTPUT_TOKENS,
-            // Non-streaming on purpose: the SSE reader below understands Chat
-            // Completions deltas and the `output_text`/`output[]` shapes, but not
-            // Responses stream events (`response.output_text.delta`), so a
-            // streamed answer would read as empty — the very failure being fixed.
-            stream: false,
-          }
-        : buildComboTestRequestBody(fullModelStr, isEmbedding, {
-            stream: !isEmbedding && streamChat,
-            maxTokens: !isEmbedding && streamChat ? STREAMING_CHAT_TEST_MAX_TOKENS : undefined,
-          });
+  const testBody = isAudioTranscription
+    ? { model: fullModelStr }
+    : isResponses
+      ? {
+          model: fullModelStr,
+          // Responses takes `input`, not `messages`.
+          input: buildComboTestPrompt(),
+          max_output_tokens: RESPONSES_TEST_MAX_OUTPUT_TOKENS,
+          // Non-streaming on purpose: the SSE reader below understands Chat
+          // Completions deltas and the `output_text`/`output[]` shapes, but not
+          // Responses stream events (`response.output_text.delta`), so a
+          // streamed answer would read as empty — the very failure being fixed.
+          stream: false,
+        }
+      : buildComboTestRequestBody(fullModelStr, false, {
+          stream: streamChat,
+          maxTokens: streamChat ? STREAMING_CHAT_TEST_MAX_TOKENS : undefined,
+        });
 
   if (options.prompt !== undefined && "messages" in testBody) {
     testBody.messages = [{ role: "user", content: options.prompt }];
@@ -677,19 +619,6 @@ export async function runSingleModelTest(
   }, effectiveTimeoutMs);
 
   const runInner = async (signal: AbortSignal): Promise<Response> => {
-    if (isEmbedding) {
-      return handleValidatedEmbeddingRequestBody(
-        testBody as Record<string, unknown> & { model: string },
-        { connectionId: connectionId || undefined }
-      );
-    }
-    if (isRerank) {
-      return postRerank(buildInternalRerankRequest(testBody, signal, connectionId));
-    }
-    if (isAudioSpeech) {
-      return postAudioSpeech(buildInternalAudioSpeechRequest(fullModelStr, signal, connectionId));
-    }
-
     if (isAudioTranscription) {
       return postAudioTranscription(
         buildInternalAudioTranscriptionRequest(fullModelStr, signal, connectionId)
@@ -802,11 +731,7 @@ export async function runSingleModelTest(
       // deactivated") would run outside runAsProbe and could still reach
       // markAccountUnavailable (#9817).
       const parsedResponse = await runAsProbe(() =>
-        extractModelTestResponseText(
-          res,
-          !isEmbedding && !isRerank && !isResponses && streamChat,
-          isAudioSpeech
-        )
+        extractModelTestResponseText(res, !isEmbedding && !isRerank && !isResponses && streamChat)
       );
       responseText = parsedResponse.text;
       streamError = parsedResponse.error;
@@ -850,15 +775,6 @@ export async function runSingleModelTest(
         httpStatus: 504,
         error: `No model output within ${Math.round(effectiveTimeoutMs / 1000)}s`,
         isTimeout: true,
-      };
-    }
-    if (isRerank) {
-      return {
-        modelId: fullModelStr,
-        status: "ok",
-        latencyMs,
-        httpStatus: 200,
-        responseText: "[Rerank completed successfully]",
       };
     }
     if (outputState === "empty") {

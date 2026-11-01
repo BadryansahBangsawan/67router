@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (Slovenčina)
+# 📖 Setup Guide — 67router (Slovenčina)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> Kompletná referencia nastavenia OmniRoute. Stručnú verziu nájdete v časti [Rýchly štart v README](../README.md#-quick-start).
+> Kompletná referencia nastavenia 67router. Stručnú verziu nájdete v časti [Rýchly štart v README](../README.md#-quick-start).
 
 ## Obsah
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-[Balík AUR](https://aur.archlinux.org/packages/omniroute-bin) nainštaluje OmniRoute a poskytuje používateľskú službu systemd.
+[Balík AUR](https://aur.archlinux.org/packages/omniroute-bin) nainštaluje 67router a poskytuje používateľskú službu systemd.
 
 ### Zo zdrojového kódu
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **Poznámka pre Windows:** OmniRoute predvolene používa `%APPDATA%\omniroute`, ak starší adresár `%USERPROFILE%\.omniroute` neexistuje. Nastavením `DATA_DIR` môžete vybrať iné umiestnenie dátového adresára.
+> **Poznámka pre Windows:** 67router predvolene používa `%APPDATA%\omniroute`, ak starší adresár `%USERPROFILE%\.omniroute` neexistuje. Nastavením `DATA_DIR` môžete vybrať iné umiestnenie dátového adresára.
 
 > **Poznámka:** Pri prvom spustení `npm install` automaticky vygeneruje `.env` zo súboru `.env.example`. Pri ďalších inštaláciách sa existujúci súbor `.env` neprepíše, takže vlastné úpravy zostanú zachované. Ak ho chcete znova vytvoriť z predlohy, pred opätovným spustením odstráňte `.env`.
 
@@ -64,7 +64,7 @@ Kompletné nastavenie Dockeru vrátane profilov Compose a HTTPS cez Caddy nájde
 
 ### Desktopová aplikácia (Electron)
 
-OmniRoute obsahuje desktopový obal vytvorený pomocou Electron 41 + electron-builder 26.10. Dostupné skripty (koreň pracovného priestoru):
+67router obsahuje desktopový obal vytvorený pomocou Electron 41 + electron-builder 26.10. Dostupné skripty (koreň pracovného priestoru):
 
 ```bash
 npm run electron:dev          # Spustenie desktopovej aplikácie s automatickým opätovným načítaním
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-V kombinácii s premennými prostredia (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` atď.) tak môžete spustiť inštanciu OmniRoute úplne skriptovateľným spôsobom.
+V kombinácii s premennými prostredia (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE_SECRET` atď.) tak môžete spustiť inštanciu 67router úplne skriptovateľným spôsobom.
 
 ### Možnosti CLI
 
@@ -99,7 +99,7 @@ V kombinácii s premennými prostredia (`INITIAL_PASSWORD`, `OMNIROUTE_WS_BRIDGE
 | `omniroute config`      | Konfigurácia nástroja CLI — výpis, získanie, nastavenie a overenie konfigurácií                      |
 | `omniroute status`      | Offline ovládací panel stavu — verzia, databáza, nástroje, konfigurácia                              |
 | `omniroute logs`        | Prenáša denníky používania z API (podporuje `--follow`)                                              |
-| `omniroute update`      | Skontroluje alebo použije aktualizácie OmniRoute                                                     |
+| `omniroute update`      | Skontroluje alebo použije aktualizácie 67router                                                      |
 | `omniroute provider`    | Spravuje pripojenia poskytovateľov — pridanie, výpis, odstránenie, testovanie, predvolené nastavenie |
 | `omniroute --port 3000` | Nastaví kanonický port/port API na 3000                                                              |
 | `omniroute --mcp`       | Spustí server MCP (prenos stdio)                                                                     |
@@ -165,7 +165,7 @@ Funguje s nástrojmi Claude Code, Codex CLI, Cursor, Cline, OpenClaw, OpenCode a
 
 #### Automatická konfigurácia pomocou `setup-*`
 
-Namiesto ručného vkladania základnej URL a kľúča nechajte OmniRoute zapísať vlastnú
+Namiesto ručného vkladania základnej URL a kľúča nechajte 67router zapísať vlastnú
 konfiguráciu každého nástroja podľa aktuálneho katalógu modelov. Jeden príkaz pre každý nástroj:
 
 ```bash
@@ -185,7 +185,7 @@ omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
 Každý z nich podporuje `--remote <url> --api-key <key>` na konfiguráciu lokálneho nástroja voči
-**vzdialenému** OmniRoute a tiež `--dry-run` na zobrazenie náhľadu. Ak chcete spustiť CLI so správne
+**vzdialenému** 67router a tiež `--dry-run` na zobrazenie náhľadu. Ak chcete spustiť CLI so správne
 vloženými premennými prostredia bez akéhokoľvek zápisu konfigurácie, použite všeobecný spúšťač
 `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini);
 pôvodné spúšťače pre jednotlivé nástroje `omniroute launch` (Claude Code) a
@@ -248,26 +248,6 @@ Pridajte do svojich nastavení MCP:
 
 **Úplná dokumentácia MCP:** [README servera MCP](../../open-sse/mcp-server/README.md) — 110 nástrojov, konfigurácie IDE, klienti pre Python/TS/Go.
 
-### Nastavenie A2A (Agent-to-Agent Protocol)
-
-Overte kartu agenta:
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-Odošlite úlohu:
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**Úplná dokumentácia A2A:** [README servera A2A](../../src/lib/a2a/README.md) — JSON-RPC 2.0, zručnosti, streamovanie, životný cyklus úloh.
-
----
-
 ## Konfigurácia časových limitov
 
 ### Základné časové limity
@@ -277,15 +257,15 @@ Pre väčšinu nasadení potrebujete iba tieto dve premenné:
 | Premenná                 | Predvolená hodnota          | Účel                                                                                                                                                                                    |
 | ------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                    | Spoločná základná hodnota časového limitu začiatku odpovede upstreamu, skrytých časových limitov Undici, požiadaviek na TLS fingerprint a časových limitov požiadaviek/proxy API bridge |
-| `STREAM_IDLE_TIMEOUT_MS` | dedí z `REQUEST_TIMEOUT_MS` | Maximálna medzera medzi streamovanými blokmi, po ktorej OmniRoute preruší SSE stream                                                                                                    |
+| `STREAM_IDLE_TIMEOUT_MS` | dedí z `REQUEST_TIMEOUT_MS` | Maximálna medzera medzi streamovanými blokmi, po ktorej 67router preruší SSE stream                                                                                                     |
 
 Spätná kompatibilita je zachovaná: existujúce premenné `FETCH_TIMEOUT_MS`, `API_BRIDGE_PROXY_TIMEOUT_MS` a ďalšie premenné časových limitov jednotlivých vrstiev naďalej fungujú a prepíšu spoločnú základnú hodnotu.
 
 ### Poznámky špecifické pre poskytovateľov
 
-Pre upstreamy kompatibilné s Claude Code (`anthropic-compatible-cc-*`) OmniRoute odvodzuje odchádzajúcu hlavičku `X-Stainless-Timeout` z výsledného časového limitu fetch, aby časové limity čítania na strane poskytovateľa zostali zosúladené s vašou konfiguráciou prostredia.
+Pre upstreamy kompatibilné s Claude Code (`anthropic-compatible-cc-*`) 67router odvodzuje odchádzajúcu hlavičku `X-Stainless-Timeout` z výsledného časového limitu fetch, aby časové limity čítania na strane poskytovateľa zostali zosúladené s vašou konfiguráciou prostredia.
 
-Pre reverzné proxy tretích strán kompatibilné s Claude Code ponecháva OmniRoute predvolenú množinu `anthropic-beta` konzervatívnu a v prípade, že je možnosť `Client Cache Control` ponechaná na hodnote `Auto`, preposiela iba značky `cache_control` poskytnuté klientom. Prepínač „Enable redact-thinking beta“ pre jednotlivé pripojenia zapnite iba vtedy, keď upstream výslovne vyžaduje streamy Claude thinking s redigovaným obsahom.
+Pre reverzné proxy tretích strán kompatibilné s Claude Code ponecháva 67router predvolenú množinu `anthropic-beta` konzervatívnu a v prípade, že je možnosť `Client Cache Control` ponechaná na hodnote `Auto`, preposiela iba značky `cache_control` poskytnuté klientom. Prepínač „Enable redact-thinking beta“ pre jednotlivé pripojenia zapnite iba vtedy, keď upstream výslovne vyžaduje streamy Claude thinking s redigovaným obsahom.
 
 ### Pokročilé prepísanie časových limitov
 
@@ -303,11 +283,11 @@ Pre reverzné proxy tretích strán kompatibilné s Claude Code ponecháva OmniR
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | Časový limit keep-alive na serveri API bridge                                     |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | Časový limit nečinnosti socketu na serveri API bridge (`0` ho vypne)              |
 
-> **Poznámka:** Pri streamovaných požiadavkách sa `FETCH_TIMEOUT_MS` vzťahuje iba na vytvorenie pripojenia / čakanie na prvú odpoveď upstreamu. Po aktivovaní streamu ho OmniRoute preruší iba pri skutočnom zastavení (`STREAM_IDLE_TIMEOUT_MS`) alebo nečinnosti tela v Undici (`FETCH_BODY_TIMEOUT_MS`).
+> **Poznámka:** Pri streamovaných požiadavkách sa `FETCH_TIMEOUT_MS` vzťahuje iba na vytvorenie pripojenia / čakanie na prvú odpoveď upstreamu. Po aktivovaní streamu ho 67router preruší iba pri skutočnom zastavení (`STREAM_IDLE_TIMEOUT_MS`) alebo nečinnosti tela v Undici (`FETCH_BODY_TIMEOUT_MS`).
 
 ### Kompatibilita s reverzným proxy
 
-Ak OmniRoute prevádzkujete za Nginx, Caddy, Cloudflare alebo iným reverzným proxy, uistite sa, že časové limity proxy sú tiež vyššie než časové limity streamu/fetch v OmniRoute.
+Ak 67router prevádzkujete za Nginx, Caddy, Cloudflare alebo iným reverzným proxy, uistite sa, že časové limity proxy sú tiež vyššie než časové limity streamu/fetch v 67router.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort gezegd**: Neem je eigen geschikte provideraccounts mee. OmniRoute combineert de verbindingen die je configureert; het verstrekt niet zelf het geadverteerde totale tokenbudget. Voor gratis toegang kunnen registratie, een API-sleutel, goedkeuring of een betaalmethode vereist zijn. De limieten, privacybeleidsregels en voorwaarden van providers blijven van toepassing.
+> **Kort gezegd**: Neem je eigen geschikte provideraccounts mee. 67router combineert de verbindingen die je configureert; het verstrekt niet zelf het geadverteerde totale tokenbudget. Voor gratis toegang kunnen registratie, een API-sleutel, goedkeuring of een betaalmethode vereist zijn. De limieten, privacybeleidsregels en voorwaarden van providers blijven van toepassing.
 
 ---
 
@@ -15,7 +15,7 @@ een endpoint zonder authenticatie, een periodiek vernieuwd quotum, onbeperkte to
 handmatige goedkeuring of een tijdelijke actie betekenen. Voor sommige opties zijn een account, API-sleutel,
 creditcard, KYC of acceptatie van providerspecifieke voorwaarden vereist.
 
-OmniRoute **voegt** geconfigureerde verbindingen samen in één endpoint. Je moet je nog steeds afzonderlijk registreren bij elke provider waarvoor een account vereist is. Koppel die accounts en gebruik `model: "auto"` om verzoeken naar geschikte doelen te routeren. Een nieuwe installatie heeft mogelijk geen geschikt doelsysteem zonder sleutel; alleen OmniRoute installeren garandeert geen succesvol chatantwoord.
+67router **voegt** geconfigureerde verbindingen samen in één endpoint. Je moet je nog steeds afzonderlijk registreren bij elke provider waarvoor een account vereist is. Koppel die accounts en gebruik `model: "auto"` om verzoeken naar geschikte doelen te routeren. Een nieuwe installatie heeft mogelijk geen geschikt doelsysteem zonder sleutel; alleen 67router installeren garandeert geen succesvol chatantwoord.
 
 ---
 
@@ -60,7 +60,7 @@ Deze providers hebben **gratis niveaus** met specifieke limieten:
 
 ## Gratis niveaus stapelen
 
-De kracht van OmniRoute is het **stapelen van gratis niveaus**. In plaats van afhankelijk te zijn van één provider, verbind je meerdere gratis providers en laat je OmniRoute automatisch voor elk verzoek de beste kiezen.
+De kracht van 67router is het **stapelen van gratis niveaus**. In plaats van afhankelijk te zijn van één provider, verbind je meerdere gratis providers en laat je 67router automatisch voor elk verzoek de beste kiezen.
 
 ### Voorbeeld: bredere dekking met gratis niveaus
 
@@ -71,7 +71,7 @@ Verbind meerdere providers om de afhankelijkheid van één afzonderlijk quotum t
 3. **Pollinations** — toegang zonder sleutel, met snelheidslimiet
 4. **LongCat** — eenmalig tegoed bij registratie (vereist KYC)
 
-Gebruik vervolgens `model: "auto"` en OmniRoute zal:
+Gebruik vervolgens `model: "auto"` en 67router zal:
 
 - Eerst de hoogst gerangschikte geschikte verbinding proberen
 - Als het quotum of de statuscontrole mislukt → de volgende geconfigureerde provider proberen
@@ -104,7 +104,7 @@ onbeperkte/sleutelloze toegang, registratietegoeden, niet langer beschikbare ver
 
 ### Stap 5: Klik op Verbinden
 
-Voor een `NOAUTH`-provider vraagt OmniRoute niet om inloggegevens voor de upstreamdienst. Dit garandeert niet dat de upstreamdienst externe clients accepteert of voldoende capaciteit beschikbaar heeft. Providers die OAuth- of API-sleutels gebruiken, moeten via hun gedocumenteerde accountprocedure worden verbonden. Je client gebruikt nog steeds de OmniRoute-API-sleutel die wordt weergegeven onder **Dashboard → Endpoints** wanneer routerauthenticatie is ingeschakeld.
+Voor een `NOAUTH`-provider vraagt 67router niet om inloggegevens voor de upstreamdienst. Dit garandeert niet dat de upstreamdienst externe clients accepteert of voldoende capaciteit beschikbaar heeft. Providers die OAuth- of API-sleutels gebruiken, moeten via hun gedocumenteerde accountprocedure worden verbonden. Je client gebruikt nog steeds de 67router-API-sleutel die wordt weergegeven onder **Dashboard → Endpoints** wanneer routerauthenticatie is ingeschakeld.
 
 ### Stap 6: Herhaal dit proces
 
@@ -114,7 +114,7 @@ Verbind meerdere providers waarvan de voorwaarden en het privacymodel bij je geb
 
 ## De catalogus correct interpreteren
 
-- `NOAUTH` betekent dat OmniRoute u niet om inloggegevens van een provider vraagt; dit
+- `NOAUTH` betekent dat 67router u niet om inloggegevens van een provider vraagt; dit
   garandeert geen uptime, privacy of onbeperkte capaciteit.
 - `hasFree` is metadata voor vindbaarheid. Dit kan staan voor een terugkerend quotum, toegang zonder sleutel,
   registratietegoed, een goedkeuringsprogramma of een promotie.
@@ -127,15 +127,15 @@ Verbind meerdere providers waarvan de voorwaarden en het privacymodel bij je geb
 
 ---
 
-## Hoe OmniRoute gratis niveaus verbetert
+## Hoe 67router gratis niveaus verbetert
 
 ### 1. Automatische uitwijkmogelijkheid
 
-Als een gratis provider bezet of niet beschikbaar is, probeert OmniRoute automatisch de volgende. Je hoeft niets te doen.
+Als een gratis provider bezet of niet beschikbaar is, probeert 67router automatisch de volgende. Je hoeft niets te doen.
 
 ### 2. Slimme routering
 
-OmniRoute kiest voor elke aanvraag de **beste gratis provider** op basis van:
+67router kiest voor elke aanvraag de **beste gratis provider** op basis van:
 
 - Snelheid — Welke provider is momenteel het snelst?
 - Kwaliteit — Welke provider is het meest geschikt voor deze taak?
@@ -143,13 +143,13 @@ OmniRoute kiest voor elke aanvraag de **beste gratis provider** op basis van:
 
 ### 3. Tokenbesparing
 
-De compressiepijplijn van OmniRoute kan het aantal daarvoor geschikte tokens in prompts en tooluitvoer verminderen. De
+De compressiepijplijn van 67router kan het aantal daarvoor geschikte tokens in prompts en tooluitvoer verminderen. De
 werkelijke besparing hangt af van de inhoud, de geselecteerde engines, de verrekeningsmethode van de provider en de
 getrouwheidsinstellingen; compressie vermenigvuldigt niet elk providerquotum met een vaste factor.
 
 ### 4. Ondersteuning voor meerdere accounts
 
-Als de voorwaarden van de provider meerdere accounts of inloggegevens toestaan, kan OmniRoute elke
+Als de voorwaarden van de provider meerdere accounts of inloggegevens toestaan, kan 67router elke
 verbinding als een afzonderlijke kandidaat voor routering behandelen. Maak geen extra accounts aan om het
 quotum- of toegangsbeleid van een provider te omzeilen.
 
@@ -164,7 +164,7 @@ De actuele, op pools ontdubbelde catalogus vermeldt momenteel:
 | Terugkerende gekwantificeerde toekenning |       **~1.62B tokens/maand** | Gedeelde pools zijn één keer meegeteld; providers zonder limiet zijn uitgesloten van de som |
 | Eerste maand met registratiecredits      |             **~2.22B tokens** | Terugkerend totaal plus eenmalige en terugkerende credits                                   |
 
-Dit zijn schattingen voor de volledige catalogus, verdeeld over afzonderlijke in aanmerking komende accounts, en geen tegoed dat door OmniRoute wordt verstrekt of een voorspelling voor een nieuwe installatie. Uw bruikbare capaciteit is afhankelijk van de providers die u koppelt en hun actuele voorwaarden. De waarden worden berekend op basis van `open-sse/config/freeModelCatalog.ts`; raadpleeg de
+Dit zijn schattingen voor de volledige catalogus, verdeeld over afzonderlijke in aanmerking komende accounts, en geen tegoed dat door 67router wordt verstrekt of een voorspelling voor een nieuwe installatie. Uw bruikbare capaciteit is afhankelijk van de providers die u koppelt en hun actuele voorwaarden. De waarden worden berekend op basis van `open-sse/config/freeModelCatalog.ts`; raadpleeg de
 [Referentie voor gratis niveaus](../reference/FREE_TIERS.md) voor ontdubbeling van pools, ToS-markeringen,
 beëindigde vermeldingen en de methodologie voor registratiecredits.
 
@@ -191,7 +191,7 @@ voldoen. Kritieke workloads moeten een bewaakte, contractueel geschikte terugval
 
 Mogelijke nadelen zijn strenge limieten, wachtlijsten, KYC, creditcardverificatie, training op
 prompts, minder privacy, geen SLA, frequente modelwisselingen, geografische beperkingen, betaalde overschrijdingen of
-risico's rond accountbeleid. OmniRoute toont de beschikbare metadata; jij kiest wat je inschakelt.
+risico's rond accountbeleid. 67router toont de beschikbare metadata; jij kiest wat je inschakelt.
 
 ### "Hoe krijg ik meer gratis quotum?"
 
@@ -210,7 +210,7 @@ met ranglijsten van gratis providers als kwaliteitssignaal en controleer welk mo
 
 ## Wat nu?
 
-- **[Handleiding voor automatische combinaties](./AUTO-COMBO-GUIDE.md)** — Laat OmniRoute de beste AI voor je kiezen
+- **[Handleiding voor automatische combinaties](./AUTO-COMBO-GUIDE.md)** — Laat 67router de beste AI voor je kiezen
 - **[Handleiding voor providers](./PROVIDERS-GUIDE.md)** — Verbind meer providers
 - **[Probleemoplossing](../guides/TROUBLESHOOTING.md)** — Los veelvoorkomende problemen op
 - **[Overzicht van gratis abonnementen](../reference/FREE_TIERS.md)** — Volledige lijst met gratis abonnementen

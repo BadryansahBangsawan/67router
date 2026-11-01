@@ -14,7 +14,7 @@ Profile compose ដែលអាចជ្រើសបើកបានចំនួ�
 
 ## ហេតុអ្វីបានជាវិធីនេះមានលក្ខណៈប្រុងប្រយ័ត្ន
 
-ទម្រង់នៃការដាក់ឱ្យដំណើរការដែលមានស្រាប់របស់ OmniRoute មានភាពស្រាល និងត្រូវបានបញ្ជាក់ប្រសិទ្ធភាពរួចហើយ៖
+ទម្រង់នៃការដាក់ឱ្យដំណើរការដែលមានស្រាប់របស់ 67router មានភាពស្រាល និងត្រូវបានបញ្ជាក់ប្រសិទ្ធភាពរួចហើយ៖
 
 - **`redis:7-alpine`** គ្រប់គ្រងបន្ទុកការងារ rate-limit/cache នៅកម្រិត production។
 - **SQLite + sqlite-vec + FTS5** គ្របដណ្ដប់លើ memory មូលដ្ឋាន + vector + ការស្វែងរកអត្ថបទ (សូមមើល [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts))។
@@ -49,7 +49,7 @@ Profile ទាំងពីរនៅទីនេះគឺជា **ជម្រើ
 
 - អ្នកដំណើរការ replica `omniroute` ≥3 ហើយចង់គ្រប់គ្រងការប្ដូរ provider ពីទីតាំងកណ្ដាលនៅក្នុង Go process តែមួយ។
 - អ្នកចង់បានផ្ទៃ audit/logging តែមួយសម្រាប់សំណើទៅកាន់ upstream-provider នៅទូទាំង replica ទាំងអស់។
-- អ្នកចង់ពង្រីក routing layer Tier-1 តាមផ្ដេក ដោយឯករាជ្យពី replica របស់ OmniRoute។
+- អ្នកចង់ពង្រីក routing layer Tier-1 តាមផ្ដេក ដោយឯករាជ្យពី replica របស់ 67router។
 
 **អ្វីដែលវាបន្ថែម៖**
 

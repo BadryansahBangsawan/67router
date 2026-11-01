@@ -54,7 +54,7 @@ dažnio ribotuvas, dėl kurio protarpiais kyla `400 content-blocked` klaidos, ka
 Claude Code arba Codex CLI greitai viena po kitos atlieka kelias įrankių naudojimo /
 žinučių siuntimo užklausas.
 
-## „OmniRoute“ jau pritaikytos priemonės
+## „67router“ jau pritaikytos priemonės
 
 1. **`open-sse/services/wafRateLimit.ts`** — pliūpsnių ribotuvas, užtikrinantis
    mažiausiai 500 ms tarpą tarp siunčiamų užklausų į bet kurį `agentrouter:*`

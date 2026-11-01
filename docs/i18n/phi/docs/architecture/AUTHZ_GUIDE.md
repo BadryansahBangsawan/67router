@@ -7,7 +7,7 @@
 > **Pinagmulan ng katotohanan:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Huling na-update:** 2026-09-22 — ang mga namespace ng saklaw ay tumuturo sa MCP-SERVER.md
 
-Ang OmniRoute ay may pipeline ng awtorisasyon na may kamalayan sa ruta na nagbabantay sa bawat kahilingan ng API. Ang klasipikasyon ay **deterministic** at **fail-closed** — anumang hindi maiklasipika ay nagtatapos bilang `MANAGEMENT` at nangangailangan ng session o token na pang-pamamahala. Ipinaliliwanag ng pahinang ito ang modelo para sa mga inhinyero na nagpapanatili ng mga ruta o nagdidisenyo ng mga bagong endpoint.
+Ang 67router ay may pipeline ng awtorisasyon na may kamalayan sa ruta na nagbabantay sa bawat kahilingan ng API. Ang klasipikasyon ay **deterministic** at **fail-closed** — anumang hindi maiklasipika ay nagtatapos bilang `MANAGEMENT` at nangangailangan ng session o token na pang-pamamahala. Ipinaliliwanag ng pahinang ito ang modelo para sa mga inhinyero na nagpapanatili ng mga ruta o nagdidisenyo ng mga bagong endpoint.
 
 ![AuthZ pipeline (3 klase ng ruta + pagsusuri ng patakaran)](../diagrams/exported/authz-pipeline.svg)
 
@@ -214,8 +214,6 @@ Ang `isAuthRequired()` sa `src/shared/utils/apiAuth.ts` ang nagpapasya kung **an
 Ang client API key enforcement ay gumagamit ng `isRequireApiKeyEnabled()` sa `src/shared/utils/featureFlags.ts`, hindi ng direktang pagbasa sa `process.env.REQUIRE_API_KEY`. Mahalaga ito para sa mga naka-deploy na instance: ang pagpapalit ng `REQUIRE_API_KEY` sa Dashboard → Feature Flags ay nag-iimbak ng DB override at agad na nakaaapekto sa `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*`, at iba pang client-API auth check na gumagamit ng parehong helper. Kung hindi mabasa ang feature flag store, nagfa-fail closed ang client API auth at humihingi ng key.
 
 ## Breaking Change — v3.8.0
-
-Ang mga endpoint na `/api/v1/agents/tasks/*` at `/api/resilience/model-cooldowns` ay **nangangailangan na ngayon ng management auth** (commit `588a0333`). Ang mga client na dati ay nagpapadala ng karaniwang API key na walang `manage` scope ay makatatanggap ng `403`. Pag-migrate: italaga sa key ang `manage` scope sa API Keys dashboard, o gumamit ng naka-log-in na dashboard session.
 
 ## Pagbabago sa Gawi — v3.8.2
 

@@ -8,7 +8,7 @@
 
 > **Zdroj pravdy:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute umožňuje každé proxy nést **direktivu rodiny adres pro odchozí připojení**. Ve výchozím nastavení vybírá IPv4 nebo IPv6 operační systém (duální zásobník, „Happy Eyeballs“). Když direktivu nastavíte na `ipv4` nebo `ipv6`, OmniRoute připne každé připojení přes danou proxy ke zvolené rodině a **při selhání připojení ukončí**, místo aby přešel na druhou rodinu.
+67router umožňuje každé proxy nést **direktivu rodiny adres pro odchozí připojení**. Ve výchozím nastavení vybírá IPv4 nebo IPv6 operační systém (duální zásobník, „Happy Eyeballs“). Když direktivu nastavíte na `ipv4` nebo `ipv6`, 67router připne každé připojení přes danou proxy ke zvolené rodině a **při selhání připojení ukončí**, místo aby přešel na druhou rodinu.
 
 Tato stránka popisuje, co tato direktiva představuje, proč existuje, kde ji můžete nakonfigurovat a jak ji běhové prostředí vyhodnocuje.
 
@@ -122,7 +122,7 @@ Informace o zbývajících operacích CRUD a API pro přiřazování proxy najde
 
 ## Jak se vyhodnocuje `auto`
 
-Pokud je `family` nastaveno na `auto`, OmniRoute **nepřidává** žádnou direktivu — URL proxy se použije beze změny a rodina připojení se určí inherentně.
+Pokud je `family` nastaveno na `auto`, 67router **nepřidává** žádnou direktivu — URL proxy se použije beze změny a rodina připojení se určí inherentně.
 
 Při sestavování URL (`proxyConfigToUrl` / `normalizeProxyUrl` v `open-sse/utils/proxyDispatcher.ts`) vytvoří proxy s nastavením `auto` prostou URL bez značky:
 
@@ -158,7 +158,7 @@ Tedy:
 
 Direktiva jiná než `auto` se přenáší jako jediný syntetický parametr dotazu — `?family=ipv4` nebo `?family=ipv6` — připojený právě jednou k normalizované URL proxy. Funkce `normalizeProxyUrl` tento parametr pečlivě odebere a znovu připojí právě jednou, takže nikdy nenaruší parsování portu.
 
-Při sestavování dispatcheru je parametr načten a převeden na konkrétní rodinu připojení. Pokud je hostitel IP literálem **opačné** rodiny, OmniRoute vyvolá výjimku (při rozporu se postupuje metodou fail-closed):
+Při sestavování dispatcheru je parametr načten a převeden na konkrétní rodinu připojení. Pokud je hostitel IP literálem **opačné** rodiny, 67router vyvolá výjimku (při rozporu se postupuje metodou fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Konkrétní rodina je poté pevně nastavena na konektoru:
 
 ## Kompatibilita se SOCKS5
 
-Pevné nastavení rodiny funguje s proxy SOCKS5, ale standardní `fetch-socks` nezpřístupňuje volby soketu potřebné k pevnému nastavení rodiny pro připojení k proxy. OmniRoute proto obsahuje vlastní konektor:
+Pevné nastavení rodiny funguje s proxy SOCKS5, ale standardní `fetch-socks` nezpřístupňuje volby soketu potřebné k pevnému nastavení rodiny pro připojení k proxy. 67router proto obsahuje vlastní konektor:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

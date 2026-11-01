@@ -34,7 +34,7 @@ Para cada candidato do conjunto (`open-sse/services/autoCombo/virtualFactory.ts:
 imediatamente após `filterPaidOnlyCandidates`):
 
 1. **Não consta de todo em `FREE_MODEL_BUDGETS`** → excluído. Isto abrange modelos efetivamente
-   pagos e qualquer fornecedor/modelo que o OmniRoute ainda não tenha classificado — os novos
+   pagos e qualquer fornecedor/modelo que o 67router ainda não tenha classificado — os novos
    candidatos começam como excluídos, não incluídos.
 2. **`freeType: "keyless"`** → passa imediatamente, **mas apenas no caso de um candidato que tenha
    efetivamente chegado através do percurso sem autenticação** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -94,7 +94,7 @@ nunca uma conta diferente e não verificada do mesmo candidato. Consulte
 (casos A/B/C de contorno sem chave, casos 1-5 com múltiplas contas).
 
 `descoberto automaticamente`: um fornecedor/modelo disponibilizado amanhã com os metadados corretos (no
-catálogo, com um adaptador de utilização, `hardStopGuaranteed: true`) pode ser utilizado assim que o OmniRoute tiver
+catálogo, com um adaptador de utilização, `hardStopGuaranteed: true`) pode ser utilizado assim que o 67router tiver
 conhecimento dele — sem alterações ao código, sem entradas numa lista de permissões, sem nada para editar neste módulo. Um elemento removido do
 catálogo desaparece da mesma forma. Consulte
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` para a prova de regressão (através de

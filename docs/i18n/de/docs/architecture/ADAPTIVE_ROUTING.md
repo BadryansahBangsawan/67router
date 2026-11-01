@@ -5,7 +5,7 @@
 ---
 
 Dieses Dokument beschreibt die Grundlage für feedbackgesteuertes adaptives Routing, die
-OmniRoute hinzugefügt wurde. Sie ist bewusst schlank gehalten: Sie führt einen typisierten
+67router hinzugefügt wurde. Sie ist bewusst schlank gehalten: Sie führt einen typisierten
 Kanal für Routing-Ergebnisse, ein Online-Qualitätssignal zur Einspeisung in den bestehenden
 Auto-Combo-Scorer, einen optionalen OpenTelemetry-Exporter und einen Endpunkt zur
 Erklärbarkeit ein. Sie ersetzt **nicht** den bestehenden Resilienz-Stack (Circuit Breaker,
@@ -13,7 +13,7 @@ Connection Cooldown, Model Lockout, Health Matrix, Autopilot), sondern ergänzt 
 
 ## 1. Architekturkontext
 
-OmniRoute ist eine Datenebene mit einem **Request-Hot-Path** und einer
+67router ist eine Datenebene mit einem **Request-Hot-Path** und einer
 **Steuerungs-/Intelligenzebene**. Der Hot Path muss schnell, speichereffizient, asynchron,
 resilient und vorhersehbar bleiben. Evaluierung, Qualitätsbewertung, Experimente und
 historische Analysen gehören zur Steuerungsebene.
@@ -23,7 +23,7 @@ KI-Agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   Datenebene (schnell, synchron, In-Memory)
+│    67router        │   Datenebene (schnell, synchron, In-Memory)
 │ Routing / Failover  │
 │ Zustand / Leitplanke│
 │ Cache / Streaming   │
@@ -42,16 +42,15 @@ KI-Agent / IDE
 
 ### Was bereits vorhanden war (geprüft, nicht dupliziert)
 
-| Konzept                                       | Bestehende Implementierung                                                                              |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Verfügbarkeit (können wir Traffic senden?)    | Circuit Breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-persistiert), Connection Cooldown, Model Lockout    |
-| Zustandsberichte                              | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                 |
-| Shadow-Traffic                                | `open-sse/services/combo/shadowRouting.ts`                                                              |
-| Leitplanken                                   | `src/lib/guardrails/` (Pre-/Post-Hooks)                                                                 |
-| Exakter Cache                                 | `src/lib/semanticCache.ts` (signaturbasiert)                                                            |
-| Evaluatoren / evaluierungsgesteuertes Routing | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                    |
-| Erklärbarkeit von Combo-Entscheidungen        | `open-sse/services/combo/decisionTrace.ts`                                                              |
-| Echtzeitereignisse des Dashboards             | `src/lib/events/eventBus.ts` (UI-Benachrichtigungskanal, `unknown`-Payloads, Verlauf mit 100 Einträgen) |
+| Konzept                                    | Bestehende Implementierung                                                                              |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| Verfügbarkeit (können wir Traffic senden?) | Circuit Breaker (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-persistiert), Connection Cooldown, Model Lockout    |
+| Zustandsberichte                           | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                 |
+| Shadow-Traffic                             | `open-sse/services/combo/shadowRouting.ts`                                                              |
+| Leitplanken                                | `src/lib/guardrails/` (Pre-/Post-Hooks)                                                                 |
+| Exakter Cache                              | `src/lib/semanticCache.ts` (signaturbasiert)                                                            |
+| Erklärbarkeit von Combo-Entscheidungen     | `open-sse/services/combo/decisionTrace.ts`                                                              |
+| Echtzeitereignisse des Dashboards          | `src/lib/events/eventBus.ts` (UI-Benachrichtigungskanal, `unknown`-Payloads, Verlauf mit 100 Einträgen) |
 
 Die Routing-Ereignisebene ist **keine** Neuimplementierung von `eventBus`: Dieser Bus ist
 der Echtzeit-Benachrichtigungskanal des Dashboards (typisierte _Ereignisnamen_, opake
@@ -242,7 +241,7 @@ Dateien: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*`-SDK).
 - Spans folgen den semantischen GenAI-Konventionen (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) sowie den OmniRoute-Routing-
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) sowie den 67router-Routing-
   Attributen (Ergebnis, Status, TTFT, Wiederholungsversuche, Fallback).
 - `record()` reiht Elemente lediglich in einen begrenzten Puffer ein (O(1)); ein Hintergrund-Timer
   überträgt sie asynchron mittels `POST {endpoint}/v1/traces`. Bei Überlast werden die
@@ -265,7 +264,7 @@ Dateien: `open-sse/services/routing/otel.ts`
 
 ## 6. Integration der Evaluierungsebene (Vorbereitung auf Future AGI)
 
-OmniRoute behandelt Future AGI (oder jeden anderen Evaluator) als **potenzielles
+67router behandelt Future AGI (oder jeden anderen Evaluator) als **potenzielles
 Intelligenz-/Evaluierungs-Backend, nicht als Abhängigkeit**. Die Integrationspunkte:
 
 - Eine `RoutingEventSink` kann Ereignisse asynchron an einen Evaluator weiterleiten.
@@ -274,8 +273,6 @@ Intelligenz-/Evaluierungs-Backend, nicht als Abhängigkeit**. Die Integrationspu
 - Ein zukünftiger `Evaluator` (deterministisch, lokaler Judge, HTTP, WASM) würde
   Ereignisse/Traces verarbeiten und einen `QualityScore` zurückgeben, der in denselben
   `getQualityScore`-/Qualitätsfaktor-Pfad einfließt.
-- Das bestehende evaluierungsgesteuerte Routing (`open-sse/services/evalRouting.ts`)
-  ordnet Combo-Ziele bereits anhand der Erfolgsraten von `eval_runs` neu, wenn es aktiviert ist.
 
 Auf dem Request-Pfad werden keine Evaluierungen synchron ausgeführt, und das Gateway
 funktioniert auch ohne Evaluator vollständig.

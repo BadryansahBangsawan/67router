@@ -7,7 +7,7 @@
 > **Source de vérité :** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Dernière mise à jour :** 2026-09-22 — les espaces de noms de portée pointent vers MCP-SERVER.md
 
-OmniRoute dispose d'un pipeline d'autorisation sensible aux routes qui filtre chaque requête API. La classification est **déterministe** et **fermée par défaut** — tout ce qui ne peut pas être classifié est considéré comme `MANAGEMENT` et exige une session ou un jeton de niveau gestion. Cette page explique le modèle aux ingénieurs qui maintiennent des routes ou conçoivent de nouveaux points de terminaison.
+67router dispose d'un pipeline d'autorisation sensible aux routes qui filtre chaque requête API. La classification est **déterministe** et **fermée par défaut** — tout ce qui ne peut pas être classifié est considéré comme `MANAGEMENT` et exige une session ou un jeton de niveau gestion. Cette page explique le modèle aux ingénieurs qui maintiennent des routes ou conçoivent de nouveaux points de terminaison.
 
 ![Pipeline d'autorisation (3 classes de routes + évaluation des politiques)](../diagrams/exported/authz-pipeline.svg)
 
@@ -266,8 +266,6 @@ du jeton d'accès. Voir [Authentification de gestion](../guides/MANAGEMENT-AUTH.
 L'application des clés d'API client utilise `isRequireApiKeyEnabled()` dans `src/shared/utils/featureFlags.ts`, et non une lecture directe de `process.env.REQUIRE_API_KEY`. Cela compte pour les instances déployées : activer ou désactiver `REQUIRE_API_KEY` dans Dashboard → Feature Flags enregistre une surcharge en base et affecte immédiatement `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` et les autres vérifications d'authentification de l'API client qui partagent ce helper. Si le magasin des feature flags ne peut pas être lu, l'authentification de l'API client échoue en mode fermé et exige une clé.
 
 ## Changement incompatible — v3.8.0
-
-Les points de terminaison `/api/v1/agents/tasks/*` et `/api/resilience/model-cooldowns` **nécessitent désormais une authentification de gestion** (commit `588a0333`). Les clients qui envoyaient auparavant une clé d’API normale sans la portée `manage` reçoivent une réponse `403`. Migration : attribuez la portée `manage` à la clé dans le tableau de bord API Keys, ou utilisez une session de tableau de bord authentifiée.
 
 ## Changement de comportement — v3.8.2
 

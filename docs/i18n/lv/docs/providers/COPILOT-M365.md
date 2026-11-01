@@ -39,7 +39,7 @@ Pilnajam URL ir šāds formāts:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Rīkā OmniRoute dodieties uz **Providers → Add Provider**, atlasiet **Microsoft 365 Copilot
+6. Rīkā 67router dodieties uz **Providers → Add Provider**, atlasiet **Microsoft 365 Copilot
    (BizChat)** un ielīmējiet akreditācijas datus šādā formātā:
 
 ```
@@ -56,9 +56,9 @@ failu:
 1. Atveriet **DevTools → Network**.
 2. Sāciet vai turpiniet BizChat sarunu (tas izveido WebSocket savienojumu).
 3. Ar peles labo pogu noklikšķiniet panelī Network un atlasiet **Save all as HAR with content**.
-4. Rīka OmniRoute nodrošinātāja savienojuma dialoglodziņā izmantojiet pogu **Import .har file**.
+4. Rīka 67router nodrošinātāja savienojuma dialoglodziņā izmantojiet pogu **Import .har file**.
 
-OmniRoute HAR failā meklē Chathub WebSocket URL, izgūst
+67router HAR failā meklē Chathub WebSocket URL, izgūst
 `access_token` un `chathubPath` un automātiski aizpilda akreditācijas datu laukus. HAR
 importēšanas laikā tiek dekodēts JWT derīguma termiņš un parādīts atlikušais marķiera derīguma laiks.
 
@@ -81,7 +81,7 @@ sadaļā **Advanced Settings → providerSpecificData**:
 | `tier`         | `individual` (noklusējums), `edu` vai `enterprise`                                |
 
 Iegūstiet atsvaidzināšanas marķieri no Microsoft ierīces koda vai autorizācijas koda plūsmas,
-kuras tvērums ir `substrate.office.com/sydney`. Ja ir iestatīts `refreshToken`, OmniRoute
+kuras tvērums ir `substrate.office.com/sydney`. Ja ir iestatīts `refreshToken`, 67router
 pirms katra pieprasījuma iepriekš atsvaidzina `access_token`, tāpēc tas nav atkārtoti
 jāiegūst pēc katra ~75 minūšu derīguma termiņa beigām.
 

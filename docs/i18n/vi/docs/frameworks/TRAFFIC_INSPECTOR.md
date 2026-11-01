@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector là trình gỡ lỗi lưu lượng HTTPS tích hợp sẵn của OmniRoute — một công cụ tương tự Charles Proxy / mitmweb / HTTP Toolkit, có khả năng **nhận biết LLM** và **nhận biết agent**. Công cụ này nằm tại `/dashboard/tools/traffic-inspector` và tiếp nhận lưu lượng trực tiếp từ tối đa 5 nguồn thu thập đồng thời.
+Traffic Inspector là trình gỡ lỗi lưu lượng HTTPS tích hợp sẵn của 67router — một công cụ tương tự Charles Proxy / mitmweb / HTTP Toolkit, có khả năng **nhận biết LLM** và **nhận biết agent**. Công cụ này nằm tại `/dashboard/tools/traffic-inspector` và tiếp nhận lưu lượng trực tiếp từ tối đa 5 nguồn thu thập đồng thời.
 
 **Vị trí trên dashboard:** `/dashboard/tools/traffic-inspector`
 **Nhóm trên thanh bên:** Tools (sau AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector là trình gỡ lỗi lưu lượng HTTPS tích hợp sẵn c�
 
 ### Điều gì làm Traffic Inspector trở nên độc đáo
 
-| Tính năng                                                                           | mitmweb  | Charles | Fiddler  | **OmniRoute Traffic Inspector** |
-| ----------------------------------------------------------------------------------- | :------: | :-----: | :------: | :-----------------------------: |
-| Hoạt động trên nền web                                                              |    ✓     |    ✗    |    ✗     |                ✓                |
-| Mã nguồn mở                                                                         |    ✓     |    ✗    | một phần |                ✓                |
-| **Nhận biết agent** (biết yêu cầu đến từ Antigravity/Copilot/v.v.)                  |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Nhận biết LLM** (phân tích cấu trúc OpenAI/Anthropic/Gemini, token, mô hình)      |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Hiển thị ánh xạ mô hình** (gemini-3-flash → claude-sonnet-4.7)                    |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Phân tách độ trễ proxy/upstream**                                                 | một phần |    ✗    |    ✗     |                ✓                |
-| **Tích hợp với OmniRoute** về định tuyến, phương án dự phòng, chi phí               |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Gỡ lỗi proxy trên toàn hệ thống** (bất kỳ ứng dụng nào trên máy)                  |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Thu thập máy chủ tùy chỉnh** (chuyển hướng DNS theo từng máy chủ)                 |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Chế độ biến môi trường HTTP_PROXY**                                               |    ✓     |    ✓    |    ✓     |                ✓                |
-| **Chế độ xem hội thoại** (các bong bóng hội thoại nhiều lượt, tool_use/tool_result) |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Trình hợp nhất luồng SSE** (tái dựng từ các sự kiện delta)                        |    ✗     |    ✗    |    ✗     |                ✓                |
-| **Ghi phiên** (có tên, có thể xuất dưới dạng .har/.jsonl)                           |    ✗     |    ✓    |    ✓     |                ✓                |
+| Tính năng                                                                           | mitmweb  | Charles | Fiddler  | **67router Traffic Inspector** |
+| ----------------------------------------------------------------------------------- | :------: | :-----: | :------: | :----------------------------: |
+| Hoạt động trên nền web                                                              |    ✓     |    ✗    |    ✗     |               ✓                |
+| Mã nguồn mở                                                                         |    ✓     |    ✗    | một phần |               ✓                |
+| **Nhận biết agent** (biết yêu cầu đến từ Antigravity/Copilot/v.v.)                  |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Nhận biết LLM** (phân tích cấu trúc OpenAI/Anthropic/Gemini, token, mô hình)      |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Hiển thị ánh xạ mô hình** (gemini-3-flash → claude-sonnet-4.7)                    |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Phân tách độ trễ proxy/upstream**                                                 | một phần |    ✗    |    ✗     |               ✓                |
+| **Tích hợp với 67router** về định tuyến, phương án dự phòng, chi phí                |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Gỡ lỗi proxy trên toàn hệ thống** (bất kỳ ứng dụng nào trên máy)                  |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Thu thập máy chủ tùy chỉnh** (chuyển hướng DNS theo từng máy chủ)                 |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Chế độ biến môi trường HTTP_PROXY**                                               |    ✓     |    ✓    |    ✓     |               ✓                |
+| **Chế độ xem hội thoại** (các bong bóng hội thoại nhiều lượt, tool_use/tool_result) |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Trình hợp nhất luồng SSE** (tái dựng từ các sự kiện delta)                        |    ✗     |    ✗    |    ✗     |               ✓                |
+| **Ghi phiên** (có tên, có thể xuất dưới dạng .har/.jsonl)                           |    ✗     |    ✓    |    ✓     |               ✓                |
 
 ### Kiến trúc trong một đoạn
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true nếu là phản hồi SSE
   mappedTo: string | null; // header x-omniroute-mapped
-  costEstimateUsd: number | null; // chi phí ước tính dựa trên bảng giá OmniRoute
+  costEstimateUsd: number | null; // chi phí ước tính dựa trên bảng giá 67router
 }
 ```
 
@@ -394,7 +394,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Proxy hệ thống không được khôi phục
 
-Nếu OmniRoute gặp sự cố trong khi chế độ proxy toàn hệ thống đang hoạt động:
+Nếu 67router gặp sự cố trong khi chế độ proxy toàn hệ thống đang hoạt động:
 
 **macOS:**
 
@@ -439,7 +439,7 @@ Tất cả các route đều là `LOCAL_ONLY` (chỉ loopback) và `SPAWN_CAPABL
 | GET         | `/requests`                 | Liệt kê yêu cầu (có thể lọc: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET         | `/requests/{id}`            | Chi tiết của một yêu cầu                                                             |
 | DELETE      | `/requests`                 | Xóa bộ đệm trong bộ nhớ                                                              |
-| POST        | `/requests/{id}/replay`     | Thực thi lại cùng yêu cầu thông qua bộ định tuyến OmniRoute                          |
+| POST        | `/requests/{id}/replay`     | Thực thi lại cùng yêu cầu thông qua bộ định tuyến 67router                           |
 | PUT         | `/requests/{id}/annotation` | Lưu hoặc cập nhật ghi chú cho một yêu cầu                                            |
 
 ### WebSocket

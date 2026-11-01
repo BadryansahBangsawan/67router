@@ -29,7 +29,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "cli-code",
   "cli-agents",
   "acp-agents",
-  "cloud-agents",
   "conductor",
   "orchestration",
   "agent-bridge",
@@ -37,11 +36,9 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "discovery",
   // OmniProxy > Integrations
   "api-endpoints",
-  "webhooks",
   "log-export",
   // OmniProxy — proxy tools
   "mitm-proxy",
-  "1proxy",
   // Analytics
   "analytics",
   "analytics-combo-health",
@@ -50,7 +47,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "cache",
   "analytics-compression",
   "analytics-search",
-  "analytics-evals",
   "provider-stats",
   // Monitoring — flat
   "activity",
@@ -66,28 +62,20 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "resilience-cooldowns",
   // Costs section
   "costs-pricing",
-  "costs-budget",
   "costs-free-tiers",
-  "costs-quota-share",
   "free-provider-rankings",
   "radar",
   "radar-admin",
   // Monitoring > Audit
   "audit",
   "audit-mcp",
-  "audit-a2a",
   // Dev Tools
   "translator",
-  "playground",
   "search-tools",
   // Agentic Features
-  "memory",
-  "skills",
   "agent-skills",
   "chaos-config",
   "mcp",
-  "a2a",
-  "plugins",
   // Gamification
   "leaderboard",
   "profile",
@@ -95,9 +83,6 @@ export const HIDEABLE_SIDEBAR_ITEM_IDS = [
   "gamification-admin",
   // Other Features — flat
   "media",
-  // Other Features > Batch
-  "batch",
-  "batch-files",
   // Configuration
   "settings-general",
   "settings-appearance",
@@ -124,9 +109,16 @@ export type AlwaysVisibleSidebarItemId = "proxy";
 
 export type SidebarItemId = HideableSidebarItemId | AlwaysVisibleSidebarItemId;
 
+/** Sidebar v2 (67router) sections, plus the synthetic "pinned" items section. */
 export type SidebarSectionId =
+  "pinned" | "routing" | "optimize" | "agents" | "access" | "observe" | "system";
+
+/**
+ * Section ids saved before sidebar v2. Still accepted on load / save and migrated with
+ * `migrateSidebarSectionId()` (sidebarVisibility/legacy.ts).
+ */
+export type LegacySidebarSectionId =
   | "home"
-  | "pinned"
   | "omni-proxy"
   | "analytics"
   | "costs"

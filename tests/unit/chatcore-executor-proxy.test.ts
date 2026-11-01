@@ -147,7 +147,7 @@ test("connection proxy overrides cannot bypass Microsoft Designer retirement", a
         (error: unknown) => {
           assert.ok(error instanceof Error);
           assert.equal((error as Error & { status?: number }).status, 410);
-          assert.equal(error.message, "Provider has been retired from OmniRoute runtime.");
+          assert.equal(error.message, "Provider has been retired from 67router runtime.");
           return true;
         }
       );

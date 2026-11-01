@@ -4,7 +4,7 @@
 
 ---
 
-Vissa tjänster integrerades i OmniRoute och togs senare bort eftersom personerna som driver
+Vissa tjänster integrerades i 67router och togs senare bort eftersom personerna som driver
 dem begärde det. Den här sidan är den beständiga dokumentationen över dessa borttagningar. Dess enda syfte är att
 förhindra att de återkommer av misstag: en bidragsgivare som hittar en gammal fork, en cachad npm-
 tarball, ett arkiverat ärende eller en begäran om att ”återställa leverantör X” behöver en plats där det står **återinför
@@ -17,10 +17,10 @@ begäran, och detta tillstånd måste länkas från posten.
 
 ## Policy
 
-1. **En begäran om borttagning från en tjänsteoperatör respekteras, inte förhandlas.** OmniRoute är
+1. **En begäran om borttagning från en tjänsteoperatör respekteras, inte förhandlas.** 67router är
    inte anslutet till någon extern tjänst. När operatören av en tjänst ber att
    integrationen ska tas bort, tas den bort, oavsett om integrationen använde ett officiellt API eller inte.
-2. **”Borttagen” avser varje yta som OmniRoute kontrollerar.** Exekverare, registerpost, leverantörs-
+2. **”Borttagen” avser varje yta som 67router kontrollerar.** Exekverare, registerpost, leverantörs-
    id och alias, modellista, ändpunkter, miljövariabler, ikon, panelkort, den
    genererade leverantörsreferensen, `FREE_TIERS.md`, miljöreferensen, antal i README,
    `llm.txt`-speglingar, särskilda tester och golden snapshots, kodkommentarer, CHANGELOG-punkter
@@ -31,7 +31,7 @@ begäran, och detta tillstånd måste länkas från posten.
 3. **Återinför aldrig en post på den här sidan utan skriftligt tillstånd.** Det omfattar
    att lägga tillbaka id:t eller aliaset i någon leverantörskatalog, lägga till domänerna i en exekverare,
    godkänna en pull request från en bidragsgivare som ”återställer” den, lägga till den i katalogen över kostnadsfria modeller eller
-   dokumentera ett manuellt sätt att nå den via OmniRoute. Stäng sådana pull requests och ärenden med en
+   dokumentera ett manuellt sätt att nå den via 67router. Stäng sådana pull requests och ärenden med en
    länk till den här sidan.
 4. **Håll posten minimal.** Registrera endast det som en granskare behöver för att känna igen ett
    återinförande: identifierare, domäner, datum och den pull request som utförde borttagningen.
@@ -48,7 +48,7 @@ begäran, och detta tillstånd måste länkas från posten.
 | 2026-08-12    | `puter`           | `pu`     | `puter.com`                                                              | Puters ägare (Nariman Jelveh)                                                                                                                                           | [#10210](https://github.com/diegosouzapw/OmniRoute/pull/10210) | Leverantör med API-nyckel. Migreringen `152_remove_puter_provider.sql` rensar den lagrade konfigurationen.                                                                                                                                                                                                                                                                                                                       |
 | 2026-09-02    | `theoldllm`       | `tllm`   | `theoldllm.com`, `theoldllm.vercel.app`                                  | Tjänsteoperatören (e-post till supporten)                                                                                                                               | [#12440](https://github.com/diegosouzapw/OmniRoute/pull/12440) | Nyckellös leverantör. Skriftlig begäran mottogs 2026-08-30. Dedikerade ärenden och diskussioner raderades, och PR:er fick nya rubriker.                                                                                                                                                                                                                                                                                          |
 | 2026-09-21    | `gemini-business` | `gembiz` | `business.gemini.google`                                                 | Beslut av projektägaren (ärende [#14217](https://github.com/diegosouzapw/OmniRoute/issues/14217))                                                                       | [#14467](https://github.com/diegosouzapw/OmniRoute/pull/14467) | Cookiebaserad webbleverantör. Google avvecklade slutpunkten `BardFrontendService/StreamGenerate` som exekveraren använde. Ersättaren (`biz-discoveryengine.googleapis.com` `widgetStreamAssist`, Bearer-JWT initierad från `__Secure-C_SES`/`csesidx`) kan inte byggas eller valideras utan ett aktivt Gemini Enterprise-/Workspace-konto, vilket projektet inte har. Avvecklades i stället för att skrivas om utan verifiering. |
-| 2026-09-21    | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Beslut av projektägaren (`#14224`)                                                                                                                                      | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Leverantör med cookieautentisering, inte en nedtagning på operatörens begäran. `studio-api.suno.ai` stängdes av (503); den aktiva värden kräver ett Clerk-JWT-utbyte samt ett avgiftsbelagt beroende för att lösa hCaptcha, vilket OmniRoute valde att inte lägga till för en enda musikleverantör. `kie/suno-v4.0` och `kie/suno-v3.5` (hostade av kie.ai) påverkas inte och stöds fortfarande.                                 |
+| 2026-09-21    | `suno`            | `suno`   | `studio-api.suno.ai`, `studio-api-prod.suno.com`                         | Beslut av projektägaren (`#14224`)                                                                                                                                      | [#14468](https://github.com/diegosouzapw/OmniRoute/pull/14468) | Leverantör med cookieautentisering, inte en nedtagning på operatörens begäran. `studio-api.suno.ai` stängdes av (503); den aktiva värden kräver ett Clerk-JWT-utbyte samt ett avgiftsbelagt beroende för att lösa hCaptcha, vilket 67router valde att inte lägga till för en enda musikleverantör. `kie/suno-v4.0` och `kie/suno-v3.5` (hostade av kie.ai) påverkas inte och stöds fortfarande.                                  |
 | 2026-10-10    | `opencode`        | `oc`     | `opencode.ai/zen/v1` (kostnadsfri nivå; värden delas med `opencode-zen`) | Förebyggande borttagning (beslut av projektägaren), med hänsyn till OpenCode-operatörens offentliga begäran om borttagning till uppströmsprojektet 9router (2026-09-19) | [#16310](https://github.com/diegosouzapw/OmniRoute/pull/16310) | Endast den nyckellösa leverantören ”OpenCode Free” tas bort. Autentiserade `opencode-zen` och `opencode-go`, alla modeller i Zen-katalogen och deras begärandekontrakt, OpenCode-klientintegrationerna samt `@omniroute/opencode-plugin*` finns kvar. Migreringen `207_remove_opencode_free_provider.sql` flyttar äldre anslutningar som innehåller en API-nyckel till Zen och rensar nyckellös konfiguration.                   |
 
 ## Lägga till en post
@@ -63,5 +63,5 @@ När en ny begäran om borttagning kommer in:
    leverantör med API-nyckel och lagrade anslutningar (lägg till en migrering).
 3. Lägg till en rad i tabellen ovan och identifierarna i
    `tests/unit/removed-providers-blocklist.test.ts` i samma pull request.
-4. Svara operatören när denna pull request har slagits samman och ange vad som togs bort och vad OmniRoute
+4. Svara operatören när denna pull request har slagits samman och ange vad som togs bort och vad 67router
    inte kan ändra (redan publicerade npm- och Docker-versioner, git-historik och fork:ar från tredje part).

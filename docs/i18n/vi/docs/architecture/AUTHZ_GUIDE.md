@@ -7,7 +7,7 @@
 > **Nguồn đáng tin cậy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Cập nhật lần cuối:** 2026-09-22 — các không gian tên phạm vi trỏ đến MCP-SERVER.md
 
-OmniRoute có một quy trình ủy quyền nhận biết tuyến đường, kiểm soát mọi yêu cầu API. Phân loại là **xác định** và **đóng khi lỗi** — bất cứ thứ gì không thể phân loại sẽ được xếp vào loại `MANAGEMENT` và yêu cầu một phiên hoặc mã thông báo cấp quản lý. Trang này giải thích mô hình cho các kỹ sư duy trì các tuyến đường hoặc thiết kế các điểm cuối mới.
+67router có một quy trình ủy quyền nhận biết tuyến đường, kiểm soát mọi yêu cầu API. Phân loại là **xác định** và **đóng khi lỗi** — bất cứ thứ gì không thể phân loại sẽ được xếp vào loại `MANAGEMENT` và yêu cầu một phiên hoặc mã thông báo cấp quản lý. Trang này giải thích mô hình cho các kỹ sư duy trì các tuyến đường hoặc thiết kế các điểm cuối mới.
 
 ![Quy trình AuthZ (3 lớp tuyến đường + đánh giá chính sách)](../diagrams/exported/authz-pipeline.svg)
 
@@ -238,8 +238,6 @@ mã thông báo truy cập. Xem [Xác thực quản lý](../guides/MANAGEMENT-AU
 Việc cưỡng chế khóa API client dùng `isRequireApiKeyEnabled()` trong `src/shared/utils/featureFlags.ts`, không đọc trực tiếp `process.env.REQUIRE_API_KEY`. Điều này quan trọng với các instance đã triển khai: bật tắt `REQUIRE_API_KEY` trong Dashboard → Feature Flags sẽ lưu một ghi đè DB và ảnh hưởng ngay đến `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` cùng các kiểm tra xác thực API client khác dùng chung hàm trợ giúp này. Nếu kho feature flag không đọc được, xác thực API client thất bại đóng và yêu cầu một khóa.
 
 ## Thay đổi không tương thích — v3.8.0
-
-Các endpoint `/api/v1/agents/tasks/*` và `/api/resilience/model-cooldowns` **hiện yêu cầu xác thực quản lý** (commit `588a0333`). Các client trước đây gửi khóa API thông thường không có phạm vi `manage` sẽ nhận được `403`. Cách chuyển đổi: cấp phạm vi `manage` cho khóa trong dashboard API Keys hoặc sử dụng một phiên dashboard đã đăng nhập.
 
 ## Thay đổi hành vi — v3.8.2
 

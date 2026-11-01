@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoutessa on **kaksi** prosessikohtaista kaistajärjestelmää, joilla on eri
+67routerissa on **kaksi** prosessikohtaista kaistajärjestelmää, joilla on eri
 soveltamisalat. Ne täydentävät toisiaan; ylläpitäjien tulee tietää, kumpaa he
 tarkastelevat.
 

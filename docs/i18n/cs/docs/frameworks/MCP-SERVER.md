@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Čeština)
+# 67router MCP Server Documentation (Čeština)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Instalace
 
-OmniRoute MCP je integrován. Spustíte jej pomocí:
+67router MCP je integrován. Spustíte jej pomocí:
 
 ```bash
 omniroute --mcp
@@ -88,7 +88,7 @@ Informace o nastavení Claude Desktop, Cursoru, Cline a kompatibilních klientů
 | `omniroute_switch_combo`        | `write:combos`        | Aktivace nebo deaktivace komba                                                                                                                       |
 | `omniroute_create_combo`        | `write:combos`        | Vytvoření ověřeného komba prostřednictvím stávajícího API pro komba                                                                                  |
 | `omniroute_check_quota`         | `read:quota`          | Využitá/celková kvóta, zbývající procenta, čas obnovení, stav tokenu                                                                                 |
-| `omniroute_route_request`       | `execute:completions` | Odeslání dokončení chatu prostřednictvím směrování OmniRoute                                                                                         |
+| `omniroute_route_request`       | `execute:completions` | Odeslání dokončení chatu prostřednictvím směrování 67router                                                                                          |
 | `omniroute_cost_report`         | `read:usage`          | Přehled nákladů podle období (relace/den/týden/měsíc)                                                                                                |
 | `omniroute_list_models_catalog` | `read:models`         | Úplný katalog modelů s možnostmi, stavem a cenami                                                                                                    |
 | `omniroute_radar_catalog`       | `read:radar`          | Lokální podepsaný katalog Radar; volitelné filtry podle poskytovatele/rodiny                                                                         |
@@ -151,7 +151,7 @@ od poskytovatele a jsou označeny pomocí `source: "mcp_metadata_estimate"`.
 
 ### Filtr stromu přístupnosti MCP (v3.8.0)
 
-Nezávisle na výše uvedených kompresních nástrojích obsahuje OmniRoute filtr následného zpracování,
+Nezávisle na výše uvedených kompresních nástrojích obsahuje 67router filtr následného zpracování,
 který komprimuje **výsledky nástrojů** prohlížeče/přístupnosti MCP před jejich vrácením agentovi.
 Tento filtr není sám o sobě nástrojem — spouští se transparentně nad každým výsledkem nástroje,
 který obsahuje podrobný text stromu přístupnosti nebo snímku prohlížeče (≥2000 znaků).
@@ -235,7 +235,7 @@ Definovány v `open-sse/mcp-server/tools/agentSkillTools.ts`. Využívají `src/
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------ |
 | `omniroute_agent_skills_list`     | `read:catalog` | Vypíše všech 45 dovedností agentů s volitelnými filtry `category` (api\|cli) a `area`; vrací metadata a pokrytí                 |
 | `omniroute_agent_skills_get`      | `read:catalog` | Získá úplná metadata a obsah souboru SKILL.md pro jednu dovednost podle kanonického `id`                                        |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiky pokrytí: kolik z 23 API, 21 CLI a 1 konfigurační dovednosti má v souborovém systému soubory SKILL.md oproti katalogu |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistiky pokrytí: kolik z 22 API, 20 CLI a 1 konfigurační dovednosti má v souborovém systému soubory SKILL.md oproti katalogu |
 
 Úplný katalog a informace o tom, jak jej využívají externí agenti, najdete v [AGENT-SKILLS.md](./AGENT-SKILLS.md).
 
@@ -244,17 +244,6 @@ Definovány v `open-sse/mcp-server/tools/agentSkillTools.ts`. Využívají `src/
 Výše uvedený inventář nástrojů MCP (110 jedinečných nástrojů, vypočítáno pomocí `countUniqueMcpTools()`) je záměrně
 omezen na běhové operace směrování, mezipaměti, komprese, paměti, dovedností, proxy a zdrojů kontextu. Společně
 se serverem MCP jsou ve v3.8.0 dodávány dva související frameworky, které jsou zdokumentovány samostatně:
-
-### Cloudoví agenti
-
-Cloudoví agenti jsou AI agenti pro programování běžící mimo proces (codex-cloud, cursor-cloud, devin, jules), kteří jsou
-propojeni s OmniRoute prostřednictvím stejného modelu připojení, jaký se používá pro poskytovatele LLM. Jsou zpřístupněni
-prostřednictvím vlastního rozhraní REST (`/api/v1/agents/*`) a **nejsou** součástí katalogu nástrojů MCP
-— volání cloudového agenta nespotřebovává rozsah MCP.
-
-- Implementace: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Životní cyklus: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentace: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Ochranná pravidla
 
@@ -426,8 +415,6 @@ Každý nástroj vyžaduje konkrétní rozsahy:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                            |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                     |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                       |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                   |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                      |
 | `read:obsidian`       | 13 nástrojů pro čtení — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 nástrojů pro zápis — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …                |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                    |
@@ -480,7 +467,7 @@ stávající chování řízené pomocí `OMNIROUTE_MCP_ENFORCE_SCOPES` beze zm�
 
 | Proměnná                                | Výchozí hodnota                       | Účel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | :-------------------------------------- | :------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Základní URL, kterou server MCP používá při volání interních API OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Základní URL, kterou server MCP používá při volání interních API 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `OMNIROUTE_API_KEY`                     | (prázdné)                             | Klíč API předávaný interním voláním API jako `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (aktivuje jej pouze `"true"`) | Pokud je povoleno, chybějící rozsahy oprávnění způsobí zamítnutí volání nástrojů a zapsání `scope_denied:<reason>` do protokolu auditu. Vynucení je BEZ OHLEDU na tento příznak aktivováno také pro každého volajícího přes HTTP/SSE, který je určen z hlavičky Authorization specifické pro daný klíč (`source === "authInfo"`) a nemá úplný rozsah `manage`/`admin` — např. klíč, který má pouze úzký obcházející rozsah `mcp:connect` — proto je tato výchozí hodnota bezpečná pouze pro lokální tok stdio s jediným operátorem, nikdy pro vzdálený přístup mimo loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (prázdné)                             | Čárkami oddělený seznam povolených rozsahů oprávnění, které jsou ve výchozím nastavení považovány za „dostupné“ (použije se, když volající neposkytne vlastní rozsahy oprávnění)                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -583,7 +570,6 @@ K prohlížení nedávných volání použijte řídicí panel nebo koncové bod
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definice nástrojů pro dovednosti (4 nástroje)                                    |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definice nástrojů zdroje kontextu Notion (6 nástrojů)                            |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definice nástrojů pro gamifikaci (8 nástrojů)                                    |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Nástroje pro registraci a správu pluginů (8 nástrojů)                            |
 | `src/app/api/mcp/status/route.ts`                                        | Koncový bod `/api/mcp/status`                                                    |
 | `src/app/api/mcp/tools/route.ts`                                         | Koncový bod `/api/mcp/tools`                                                     |
 | `src/app/api/mcp/sse/route.ts`                                           | Trasa transportu SSE `/api/mcp/sse`                                              |

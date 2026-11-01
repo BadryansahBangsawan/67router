@@ -1,4 +1,4 @@
-# CLI Tools — OmniRoute (Gaeilge)
+# CLI Tools — 67router (Gaeilge)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../reference/CLI-TOOLS.md) · 🇪🇹 [am](../../../am/docs/reference/CLI-TOOLS.md) · 🇸🇦 [ar](../../../ar/docs/reference/CLI-TOOLS.md) · 🇦🇿 [az](../../../az/docs/reference/CLI-TOOLS.md) · 🇧🇬 [bg](../../../bg/docs/reference/CLI-TOOLS.md) · 🇧🇩 [bn](../../../bn/docs/reference/CLI-TOOLS.md) · 🇧🇦 [bs](../../../bs/docs/reference/CLI-TOOLS.md) · 🇨🇿 [cs](../../../cs/docs/reference/CLI-TOOLS.md) · 🇩🇰 [da](../../../da/docs/reference/CLI-TOOLS.md) · 🇩🇪 [de](../../../de/docs/reference/CLI-TOOLS.md) · 🇬🇷 [el](../../../el/docs/reference/CLI-TOOLS.md) · 🇪🇸 [es](../../../es/docs/reference/CLI-TOOLS.md) · 🇪🇪 [et](../../../et/docs/reference/CLI-TOOLS.md) · 🇮🇷 [fa](../../../fa/docs/reference/CLI-TOOLS.md) · 🇫🇮 [fi](../../../fi/docs/reference/CLI-TOOLS.md) · 🇫🇷 [fr](../../../fr/docs/reference/CLI-TOOLS.md) · 🇮🇳 [gu](../../../gu/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ha](../../../ha/docs/reference/CLI-TOOLS.md) · 🇮🇱 [he](../../../he/docs/reference/CLI-TOOLS.md) · 🇮🇳 [hi](../../../hi/docs/reference/CLI-TOOLS.md) · 🇭🇷 [hr](../../../hr/docs/reference/CLI-TOOLS.md) · 🇭🇺 [hu](../../../hu/docs/reference/CLI-TOOLS.md) · 🇦🇲 [hy](../../../hy/docs/reference/CLI-TOOLS.md) · 🇮🇩 [id](../../../id/docs/reference/CLI-TOOLS.md) · 🇳🇬 [ig](../../../ig/docs/reference/CLI-TOOLS.md) · 🇮🇹 [it](../../../it/docs/reference/CLI-TOOLS.md) · 🇯🇵 [ja](../../../ja/docs/reference/CLI-TOOLS.md) · 🇬🇪 [ka](../../../ka/docs/reference/CLI-TOOLS.md) · 🇰🇭 [km](../../../km/docs/reference/CLI-TOOLS.md) · 🇮🇳 [kn](../../../kn/docs/reference/CLI-TOOLS.md) · 🇰🇷 [ko](../../../ko/docs/reference/CLI-TOOLS.md) · 🇱🇹 [lt](../../../lt/docs/reference/CLI-TOOLS.md) · 🇱🇻 [lv](../../../lv/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ml](../../../ml/docs/reference/CLI-TOOLS.md) · 🇮🇳 [mr](../../../mr/docs/reference/CLI-TOOLS.md) · 🇲🇾 [ms](../../../ms/docs/reference/CLI-TOOLS.md) · 🇲🇹 [mt](../../../mt/docs/reference/CLI-TOOLS.md) · 🇲🇲 [my](../../../my/docs/reference/CLI-TOOLS.md) · 🇳🇵 [ne](../../../ne/docs/reference/CLI-TOOLS.md) · 🇳🇱 [nl](../../../nl/docs/reference/CLI-TOOLS.md) · 🇳🇴 [no](../../../no/docs/reference/CLI-TOOLS.md) · 🇮🇳 [or](../../../or/docs/reference/CLI-TOOLS.md) · 🇮🇳 [pa](../../../pa/docs/reference/CLI-TOOLS.md) · 🇵🇭 [phi](../../../phi/docs/reference/CLI-TOOLS.md) · 🇵🇱 [pl](../../../pl/docs/reference/CLI-TOOLS.md) · 🇵🇹 [pt](../../../pt/docs/reference/CLI-TOOLS.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/reference/CLI-TOOLS.md) · 🇷🇴 [ro](../../../ro/docs/reference/CLI-TOOLS.md) · 🇷🇺 [ru](../../../ru/docs/reference/CLI-TOOLS.md) · 🇱🇰 [si](../../../si/docs/reference/CLI-TOOLS.md) · 🇸🇰 [sk](../../../sk/docs/reference/CLI-TOOLS.md) · 🇸🇮 [sl](../../../sl/docs/reference/CLI-TOOLS.md) · 🇷🇸 [sr](../../../sr/docs/reference/CLI-TOOLS.md) · 🇸🇪 [sv](../../../sv/docs/reference/CLI-TOOLS.md) · 🇰🇪 [sw](../../../sw/docs/reference/CLI-TOOLS.md) · 🇮🇳 [ta](../../../ta/docs/reference/CLI-TOOLS.md) · 🇮🇳 [te](../../../te/docs/reference/CLI-TOOLS.md) · 🇹🇭 [th](../../../th/docs/reference/CLI-TOOLS.md) · 🇹🇷 [tr](../../../tr/docs/reference/CLI-TOOLS.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/reference/CLI-TOOLS.md) · 🇵🇰 [ur](../../../ur/docs/reference/CLI-TOOLS.md) · 🇺🇿 [uz](../../../uz/docs/reference/CLI-TOOLS.md) · 🇻🇳 [vi](../../../vi/docs/reference/CLI-TOOLS.md) · 🇳🇬 [yo](../../../yo/docs/reference/CLI-TOOLS.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/reference/CLI-TOOLS.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/reference/CLI-TOOLS.md)
 
@@ -6,13 +6,13 @@
 
 Nuashonrú is déanaí: 2026-08-23
 
-Comhtháthaíonn OmniRoute le trí chatagóir d’uirlisí CLI atá scaipthe thar thrí leathanach tiomnaithe ar an deais:
+Comhtháthaíonn 67router le trí chatagóir d’uirlisí CLI atá scaipthe thar thrí leathanach tiomnaithe ar an deais:
 
-| Leathanach     | Bealach                 | Coincheap                                                                                   | Líon               |
-| -------------- | ----------------------- | ------------------------------------------------------------------------------------------- | ------------------ |
-| **CLI Code's** | `/dashboard/cli-code`   | Uirlisí códaithe a dhíríonn tú ar OmniRoute (Cliant → CLI → OmniRoute → Soláthraí)          | 26                 |
-| **CLI Agents** | `/dashboard/cli-agents` | Gníomhairí uathrialacha a dhíríonn tú ar OmniRoute (an sreabhadh céanna, raon níos leithne) | 10                 |
-| **ACP Agents** | `/dashboard/acp-agents` | CLIanna a sheolann OmniRoute mar inneall cúil trí stdio/ACP (sreabhadh droim ar ais)        | féach an chlárlann |
+| Leathanach     | Bealach                 | Coincheap                                                                                  | Líon               |
+| -------------- | ----------------------- | ------------------------------------------------------------------------------------------ | ------------------ |
+| **CLI Code's** | `/dashboard/cli-code`   | Uirlisí códaithe a dhíríonn tú ar 67router (Cliant → CLI → 67router → Soláthraí)           | 26                 |
+| **CLI Agents** | `/dashboard/cli-agents` | Gníomhairí uathrialacha a dhíríonn tú ar 67router (an sreabhadh céanna, raon níos leithne) | 10                 |
+| **ACP Agents** | `/dashboard/acp-agents` | CLIanna a sheolann 67router mar inneall cúil trí stdio/ACP (sreabhadh droim ar ais)        | féach an chlárlann |
 
 Atreoraítear bealaí oidhreachta trí 308: `/dashboard/cli-tools` → `/dashboard/cli-code`, `/dashboard/agents` → `/dashboard/acp-agents`.
 
@@ -24,14 +24,14 @@ Atreoraítear bealaí oidhreachta trí 308: `/dashboard/cli-tools` → `/dashboa
 CLI Code's / CLI Agents (sreabhadh úsáide):
 Claude / Codex / OpenCode / Cline / KiloCode / Continue / Hermes Agent / Goose / ...
            │
-           ▼  (díríonn siad uile ar OmniRoute)
+           ▼  (díríonn siad uile ar 67router)
     http://YOUR_SERVER:20128/v1
            │
-           ▼  (treoraíonn OmniRoute chuig an soláthraí ceart)
+           ▼  (treoraíonn 67router chuig an soláthraí ceart)
     Anthropic / OpenAI / Gemini / DeepSeek / Groq / Mistral / ...
 
 ACP Agents (sreabhadh seolta droim ar ais):
-    Iarratas cliaint → OmniRoute → seolann sé CLI trí stdio/ACP → freagra
+    Iarratas cliaint → 67router → seolann sé CLI trí stdio/ACP → freagra
 ```
 
 **Buntáistí:**
@@ -45,9 +45,9 @@ ACP Agents (sreabhadh seolta droim ar ais):
 
 ## Uathchumraigh le `setup-*`
 
-Ní gá duit cumraíocht gach uirlise a scríobh de láimh. Cuireann OmniRoute ordú `setup-*`
+Ní gá duit cumraíocht gach uirlise a scríobh de láimh. Cuireann 67router ordú `setup-*`
 ar fáil do gach CLI a dtacaítear leis; léann sé catalóg na samhlacha **beo** ó
-OmniRoute atá ag rith (go háitiúil nó go cianda) agus scríobhann sé cumraíocht
+67router atá ag rith (go háitiúil nó go cianda) agus scríobhann sé cumraíocht
 na huirlise féin ar do ríomhaire:
 
 ```bash
@@ -59,7 +59,7 @@ omniroute setup-5dive        omniroute setup-zed
 ```
 
 Glacann gach ceann acu le `--remote <url> --api-key <key>` (chun uirlis áitiúil
-a chumrú in aghaidh OmniRoute chianda), `--dry-run` (réamhamharc gan scríobh),
+a chumrú in aghaidh 67router chianda), `--dry-run` (réamhamharc gan scríobh),
 agus `--port`. Glacann uirlisí nach bhfuil uathfhionnachtain samhlacha acu
 (Cline, Kilo, Roo, Goose, Aider, Qwen, 5dive) le `--model <id>` (agus `--yes`
 le haghaidh rite neamh-idirghníomhacha). Is é `setup-5dive` an t-aon oideas
@@ -81,9 +81,9 @@ agus `omniroute launch-codex` (Codex), fós ar fáil. Is le haghaidh seolta amh�
 
 ### Iad seo a rith laistigh de choimeádán
 
-Scríobhann ordú `setup-*` a ritear laistigh de choimeádán OmniRoute isteach i
+Scríobhann ordú `setup-*` a ritear laistigh de choimeádán 67router isteach i
 bhfillteán baile an choimeádáin féin, rud nach léann aon CLI ar an óstríomhaire
-agus a imíonn leis an gcoimeádán. Braitheann OmniRoute é sin agus scoireann sé
+agus a imíonn leis an gcoimeádán. Braitheann 67router é sin agus scoireann sé
 le `2` agus treoracha á dtabhairt aige, seachas scríobh. Tá dhá bhealach tacaithe
 chun dul ar aghaidh — suiteáil an CLI ar an óstríomhaire agus úsáid
 `omniroute connect` chun ceangal leis an gcoimeádán, nó gléas na heolairí
@@ -206,7 +206,7 @@ Gníomhairí uathrialacha atá le feiceáil in `/dashboard/cli-agents`:
 
 ## 3. Gníomhairí ACP (/dashboard/acp-agents)
 
-Taispeánann an leathanach seo (a athainmníodh ó `/dashboard/agents`) CLIanna ar féidir le OmniRoute iad a **sheoladh** mar innill fhorghníomhaithe inneall droma tríd an bprótacal stdio/ACP. Coinnítear an catalóg ar leithligh in `src/lib/acp/registry.ts` agus **ní** hionann í agus `CLI_TOOLS`.
+Taispeánann an leathanach seo (a athainmníodh ó `/dashboard/agents`) CLIanna ar féidir le 67router iad a **sheoladh** mar innill fhorghníomhaithe inneall droma tríd an bprótacal stdio/ACP. Coinnítear an catalóg ar leithligh in `src/lib/acp/registry.ts` agus **ní** hionann í agus `CLI_TOOLS`.
 
 ---
 
@@ -333,7 +333,7 @@ Cuirtear aistriúcháin iomlána PT-BR agus EN ar fáil. Téann 39 logchaighdeá
 
 ## 9. Tús Tapa
 
-### Céim 1 — Faigh Eochair API OmniRoute
+### Céim 1 — Faigh Eochair API 67router
 
 1. Oscail `/dashboard/api-manager` → **Cruthaigh Eochair API**
 2. Tabhair ainm di (m.sh. `cli-tools`) agus roghnaigh gach cead
@@ -397,7 +397,7 @@ cargo install smelt  # Bunaithe ar Rust
 ### Céim 4 — Socraigh Athróga Timpeallachta Domhanda
 
 ```bash
-# Críochphointe Uilíoch OmniRoute
+# Críochphointe Uilíoch 67router
 export OPENAI_BASE_URL="http://localhost:20128/v1"
 export OPENAI_API_KEY="sk-your-omniroute-key"
 export ANTHROPIC_BASE_URL="http://localhost:20128"
@@ -506,7 +506,7 @@ EOF
 **Mód VS Code:**
 Socruithe eisínteachta Cline → Soláthraí API: `OpenAI Compatible` → Bun-URL: `http://localhost:20128/v1`
 
-Nó úsáid deais OmniRoute → **Uirlisí CLI → Cline → Cuir an Chumraíocht i bhFeidhm**.
+Nó úsáid deais 67router → **Uirlisí CLI → Cline → Cuir an Chumraíocht i bhFeidhm**.
 
 ---
 
@@ -527,7 +527,7 @@ kilocode --api-base http://localhost:20128/v1 --api-key sk-your-omniroute-key
 }
 ```
 
-Nó úsáid deais OmniRoute → **Uirlisí CLI → KiloCode → Cuir an Chumraíocht i bhFeidhm**.
+Nó úsáid deais 67router → **Uirlisí CLI → KiloCode → Cuir an Chumraíocht i bhFeidhm**.
 
 ---
 
@@ -551,14 +551,14 @@ Atosaigh VS Code tar éis eagarthóireachta.
 
 #### VS Code Insiders (`chatLanguageModels.json`)
 
-Úsáid é seo nuair atá VS Code Insiders cumraithe le haghaidh samhlacha críochphointe saincheaptha agus nuair is mian leat go n-oibreodh OmniRoute gan réimse ceanntáisc saincheaptha.
+Úsáid é seo nuair atá VS Code Insiders cumraithe le haghaidh samhlacha críochphointe saincheaptha agus nuair is mian leat go n-oibreodh 67router gan réimse ceanntáisc saincheaptha.
 
 **Suíomh molta:**
 
 - Linux: `~/.config/Code - Insiders/User/chatLanguageModels.json`
 - Windows: `%APPDATA%/Code - Insiders/User/chatLanguageModels.json`
 
-**Sampla ag úsáid ailias tokenaithe OmniRoute:**
+**Sampla ag úsáid ailias tokenaithe 67router:**
 
 ```json
 [
@@ -582,7 +582,7 @@ Atosaigh VS Code tar éis eagarthóireachta.
 
 **Nótaí:**
 
-- Cuir eochair API a cruthaíodh in OmniRoute in ionad `sk-your-omniroute-key`.
+- Cuir eochair API a cruthaíodh in 67router in ionad `sk-your-omniroute-key`.
 - Ba cheart don réimse `url` a bheith dírithe ar `/api/v1/vscode/{token}/chat/completions`.
 - Ba cheart don réimse `modelsUrl` a bheith dírithe ar `/api/v1/vscode/{token}/models`.
 - Tabhair tús áite don ghnáthshreabhadh `/v1` + ceanntásc Bearer nuair a thacaíonn an cliant le ceanntásca saincheaptha.
@@ -596,17 +596,17 @@ Atosaigh VS Code tar éis eagarthóireachta.
 # Logáil isteach i do chuntas AWS/Kiro:
 kiro-cli login
 
-# Úsáideann an CLI a fhíordheimhniú féin — ní theastaíonn OmniRoute mar inneall óstach do Kiro CLI féin.
-# Úsáid kiro-cli taobh le OmniRoute le haghaidh uirlisí eile.
+# Úsáideann an CLI a fhíordheimhniú féin — ní theastaíonn 67router mar inneall óstach do Kiro CLI féin.
+# Úsáid kiro-cli taobh le 67router le haghaidh uirlisí eile.
 kiro-cli status
 ```
 
-Maidir le feidhmchlár deisce **Kiro IDE**, úsáid an críochphointe MITM a nochtann OmniRoute
+Maidir le feidhmchlár deisce **Kiro IDE**, úsáid an críochphointe MITM a nochtann 67router
 faoi `/dashboard/cli-tools → Kiro`.
 
 ---
 
-## 10. CLI Inmheánach OmniRoute
+## 10. CLI Inmheánach 67router
 
 Soláthraíonn an comhad dénártha `omniroute` orduithe do shaolré an fhreastalaí, don chumrú, do dhiagnóisic agus do bhainistiú soláthraithe. Pointe iontrála: `bin/omniroute.mjs`.
 
@@ -640,7 +640,7 @@ Athróga timpeallachta a aithnítear don chumrú neamh-idirghníomhach:
 | Athróg              | Cuspóir                                                                      |
 | ------------------- | ---------------------------------------------------------------------------- |
 | `OMNIROUTE_API_KEY` | Eochair API an tsoláthraí (ceangailte le `--api-key` trí `.env()` Commander) |
-| `DATA_DIR`          | Sáraigh comhadlann sonraí OmniRoute                                          |
+| `DATA_DIR`          | Sáraigh comhadlann sonraí 67router                                           |
 
 Cuirtear gach ionchur neamh-idirghníomhach eile ar aghaidh mar bhratacha, ní mar athróga timpeallachta:
 `--password`, `--provider`, `--provider-name`, `--provider-base-url`, `--default-model`
@@ -663,7 +663,7 @@ Ritheann an dochtúir na seiceálacha seo: `Config`, `Database`, `Storage/encryp
 ### Bainistiú Soláthraithe
 
 ```bash
-omniroute providers available                       # Catalóg soláthraithe OmniRoute
+omniroute providers available                       # Catalóg soláthraithe 67router
 omniroute providers available --search openai       # Scag an chatalóg de réir aitheantais/ainm/ailias/catagóire
 omniroute providers available --category api-key    # Scag de réir catagóire (api-key, oauth, free, ...)
 omniroute providers available --json                # JSON atá inléite ag meaisín
@@ -683,7 +683,7 @@ omniroute providers remove <id|name> --yes
 
 Úsáideann `providers add/import/auth/edit/remove` an API ar dtús agus, dá bhrí sin, oibríonn siad i gcoinne an chomhthéacs ghníomhaigh logánta nó chianda. Ba cheart ionchur dintiúr a sholáthar trí
 `--credential-stdin` nó `--credential-env`; ní thuairiscíonn `--dry-run --json` ach
-láithreacht/cruth folaithe. Léann `providers available` catalóg OmniRoute;
+láithreacht/cruth folaithe. Léann `providers available` catalóg 67router;
 coinníonn `providers list/test/test-all/validate` a n-iompar logánta SQLite agus
 ní gá don fhreastalaí a bheith ag rith.
 
@@ -726,7 +726,7 @@ bheith socraithe. Tuairiscítear réimse nach féidir a dhíchriptiú (eochair a
 
 ### Fo-orduithe eile
 
-Glacann siad seo leis go bhfuil freastalaí OmniRoute ag rith, mura luaitear a mhalairt:
+Glacann siad seo leis go bhfuil freastalaí 67router ag rith, mura luaitear a mhalairt:
 
 ```bash
 omniroute status                       # Stádas cuimsitheach ama rite
@@ -734,7 +734,7 @@ omniroute logs                         # Sruthaigh logaí iarratais (--json, --s
 omniroute config list                  # Taispeáin uirlisí CLI cumraithe
 
 omniroute provider list                # Liostaigh soláthraithe atá ar fáil (ailias de providers list)
-omniroute provider add                 # Cláraigh OmniRoute mar sholáthraí ar uirlis
+omniroute provider add                 # Cláraigh 67router mar sholáthraí ar uirlis
 omniroute keys add | list | remove     # Bainistigh eochracha API
 omniroute models [provider]            # Liostaigh samhlacha (--json, --search)
 omniroute combo list | switch | create | delete
@@ -748,7 +748,6 @@ omniroute cache                        # Stádas na taisce
 omniroute cache clear                  # Glan taiscí séimeantacha + sínithe
 
 omniroute mcp status | restart         # Stádas / atosú fhreastalaí MCP
-omniroute a2a status | card            # Stádas fhreastalaí A2A / cárta gníomhaire
 
 omniroute tunnel list | create | stop  # Bainistigh tolláin (cloudflare/tailscale/ngrok)
 omniroute env show | get <k> | set <k> <v>  # Scrúdaigh / socraigh athróga timpeallachta (sealadach)
@@ -784,7 +783,7 @@ omniroute completion                   # Gin comhlánú blaoisce
 | `/v1/audio/speech`         | Téacs-go-hurlabhra                   | ElevenLabs, OpenAI TTS                  |
 | `/v1/audio/transcriptions` | Urlabhra-go-téacs                    | Deepgram, AssemblyAI                    |
 
-Samplaí réidh le greamú le URL OmniRoute a bhfuil comhartha ann:
+Samplaí réidh le greamú le URL 67router a bhfuil comhartha ann:
 
 ```txt
 Sampla comhartha: sk-a3ab3c080beaee3a-69f4a4-070d71af
@@ -803,7 +802,7 @@ Comhrá Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-
 
 | Earráid                                              | Cúis                                | Réiteach                                                          |
 | ---------------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------- |
-| `Connection refused`                                 | Níl OmniRoute ag rith               | `omniroute serve`                                                 |
+| `Connection refused`                                 | Níl 67router ag rith                | `omniroute serve`                                                 |
 | `401 Unauthorized`                                   | Eochair API mhícheart               | Seiceáil in `/dashboard/api-manager`                              |
 | `No combo configured`                                | Níl aon teaglaim ródaithe gníomhach | Socraigh in `/dashboard/combos`                                   |
 | Taispeánann CLI "not installed"                      | Níl an dénártha in PATH             | Seiceáil `which <command>`                                        |
@@ -811,7 +810,7 @@ Comhrá Ollama: http://localhost:20128/api/v1/vscode/sk-a3ab3c080beaee3a-69f4a4-
 | Seannasc `/dashboard/cli-tools`                      | Leabharmharc roimh v3.8.6           | Atreoraítear go huathoibríoch chuig `/dashboard/cli-code` (308)   |
 | Seannasc `/dashboard/agents`                         | Leabharmharc roimh v3.8.6           | Atreoraítear go huathoibríoch chuig `/dashboard/acp-agents` (308) |
 
-## Bainistigh polasaí na heochrach tátail le CLI OmniRoute
+## Bainistigh polasaí na heochrach tátail le CLI 67router
 
 Úsáid comhthéacs bainistíochta fíordheimhnithe (féach [Mód Cianda](../guides/REMOTE-MODE.md))
 chun eochair thátail atá ann cheana a iniúchadh nó a nuashonrú de réir a haitheantais:

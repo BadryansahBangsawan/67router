@@ -11,11 +11,11 @@
 
 ## Ihe ọ bụ
 
-OmniRoute nwere ike ijikọ na workspace **Notion** dịka **isi iyi ọnọdụ** — ebe nchekwa
+67router nwere ike ijikọ na workspace **Notion** dịka **isi iyi ọnọdụ** — ebe nchekwa
 ihe ọmụma a pụrụ ịgụ/dee nke ndị agent na-enweta site na sava MCP arụnyere n'ime ya. Ozugbo
 ahaziri token njikọta Notion, ngwaọrụ MCP na-enye LLM ohere ịchọ peeji na database,
 ịgụ ọdịnaya peeji na osisi block, iji filter/sort mee query na database, na ịgbakwunye
-block ọhụrụ — a na-ebufe ha niile site na OmniRoute (nwere retry, timeout, na nhazi njehie)
+block ọhụrụ — a na-ebufe ha niile site na 67router (nwere retry, timeout, na nhazi njehie)
 ka model ghara imetụ Notion API aka ozugbo.
 
 Njikọta a bụ wrapper dị mfe ma sie ike nke dị n'elu Notion REST API gọọmentị
@@ -40,7 +40,7 @@ Enweghị **environment variable** maka token Notion — a na-echekwa ya na teb�
 > [!NOTE]
 > Token ahụ bụ **token njikọta ime Notion**. Mepụta integration na
 > <https://www.notion.com/my-integrations>, wee kesaa peeji/database ndị ịchọrọ ka
-> OmniRoute nweta na integration ahụ (usoro ikike Notion dabere na nkekọrịta,
+> 67router nweta na integration ahụ (usoro ikike Notion dabere na nkekọrịta,
 > ọ bụghị workspace niile).
 
 ### Hazie site na REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Ụzọ atọ a niile chọrọ nyocha njirimara dashboard (`isAuthenticated`). Na `POST`,
-OmniRoute na-echekwa token ahụ ma na-eme ọchụchọ ule nwere nsonaazụ 1 ozugbo; ọ bụrụ na Notion
+67router na-echekwa token ahụ ma na-eme ọchụchọ ule nwere nsonaazụ 1 ozugbo; ọ bụrụ na Notion
 weghachite ihe njehie, a ga-ehichapụ token ahụ, oku ahụ adaakwa na `400`.
 
 ## Ngwaọrụ MCP (6)

@@ -203,13 +203,13 @@ builder-க்குப் பிந்தைய mutation, public projection-ஐ
 3. ஆழ வரம்பு: 4 நிலைகளுக்கு அப்பாற்பட்ட nesting, `"[truncated]"` என்ற string-ஆல் மாற்றப்படுகிறது.
 4. Array-கள் அதிகபட்சம் 32 element-களாக வரம்பிடப்படுகின்றன.
 
-Parsed provider error body உள்ள call site-கள் மட்டுமே `upstreamDetails`-ஐ அனுப்ப வேண்டும். உள்துறை OmniRoute error-கள் (SSE parse failure-கள், வெற்று content, guardrail block-கள்) அதைச் சேர்க்கக்கூடாது.
+Parsed provider error body உள்ள call site-கள் மட்டுமே `upstreamDetails`-ஐ அனுப்ப வேண்டும். உள்துறை 67router error-கள் (SSE parse failure-கள், வெற்று content, guardrail block-கள்) அதைச் சேர்க்கக்கூடாது.
 
 Raw `err.stack`, `err.message`, அல்லது runtime exception-இலிருந்து பெறப்படும் எந்த string-ஐயும்
 `upstreamDetails`-க்கு அனுப்ப **வேண்டாம்**. அவை upstream body இல்லாமல்
 `errorResponse` / `buildErrorBody(code, msg)` வழியாகவே செல்ல வேண்டும்.
 
-தேர்ந்தெடுக்கப்பட்ட upstream 4xx passthrough, client auto-recovery-க்குத் தேவையான provider-இன் பாதுகாப்பான JSON வடிவத்தையும் சொற்றொடரையும் பாதுகாக்கிறது; ஆனால் இது byte-for-byte passthrough அல்ல: serialization-க்கு முன்பு recursive sanitizer எப்போதும் இயக்கப்படும். Cyclic, BigInt கொண்ட, அல்லது தீங்கிழைக்கும் `toJSON()` body-கள் பாதுகாப்பாக மறுக்கப்பட்டு passthrough-க்கு தகுதியற்றவையாகும். OCR மற்றும் moderation ஆகியவையும் இதே விதியைப் பயன்படுத்துகின்றன; JSON அல்லாத, வெற்றான, அல்லது தவறாகக் குறியிடப்பட்ட upstream body-கள் canonical OmniRoute JSON error envelope-ஆக மாற்றப்படுகின்றன.
+தேர்ந்தெடுக்கப்பட்ட upstream 4xx passthrough, client auto-recovery-க்குத் தேவையான provider-இன் பாதுகாப்பான JSON வடிவத்தையும் சொற்றொடரையும் பாதுகாக்கிறது; ஆனால் இது byte-for-byte passthrough அல்ல: serialization-க்கு முன்பு recursive sanitizer எப்போதும் இயக்கப்படும். Cyclic, BigInt கொண்ட, அல்லது தீங்கிழைக்கும் `toJSON()` body-கள் பாதுகாப்பாக மறுக்கப்பட்டு passthrough-க்கு தகுதியற்றவையாகும். OCR மற்றும் moderation ஆகியவையும் இதே விதியைப் பயன்படுத்துகின்றன; JSON அல்லாத, வெற்றான, அல்லது தவறாகக் குறியிடப்பட்ட upstream body-கள் canonical 67router JSON error envelope-ஆக மாற்றப்படுகின்றன.
 
 ## அறியப்பட்ட CodeQL வரம்பு: தனிப்பயன் சுத்திகரிப்பான்கள் அங்கீகரிக்கப்படுவதில்லை
 

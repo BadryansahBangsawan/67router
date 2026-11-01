@@ -13,7 +13,7 @@
 
 ## તે શું છે
 
-OmniRoute **Obsidian** વૉલ્ટ સાથે **સંદર્ભ સ્રોત** તરીકે જોડાય છે — એક સ્થાનિક Markdown
+67router **Obsidian** વૉલ્ટ સાથે **સંદર્ભ સ્રોત** તરીકે જોડાય છે — એક સ્થાનિક Markdown
 જ્ઞાનભંડાર, જેને એજન્ટ્સ બિલ્ટ-ઇન MCP સર્વર મારફતે વાંચે અને તેમાં લખે છે. આ
 ઇન્ટિગ્રેશન ડેસ્કટૉપ ઍપની અંદર ચાલી રહેલા **Obsidian Local REST API** કમ્યુનિટી પ્લગઇન
 સાથે સંચાર કરે છે, જેથી એજન્ટ્સ નોંધો શોધી શકે, ફાઇલો વાંચી/લખી/પૅચ કરી શકે, વૉલ્ટની
@@ -77,7 +77,7 @@ curl -X DELETE http://localhost:20128/api/settings/obsidian
 
 `src/app/api/settings/obsidian/webdav/route.ts` વૈકલ્પિક WebDAV-backed
 vault syncનું સંચાલન કરે છે (જે `src/lib/obsidianSync.ts` દ્વારા સંચાલિત થાય છે). તેને સક્ષમ કરવાથી
-OmniRouteને સ્થાનિક vault ડિરેક્ટરી તરફ નિર્દેશિત કરવામાં આવે છે અને એક રૅન્ડમ WebDAV username/password જોડી બનાવવામાં આવે છે:
+67routerને સ્થાનિક vault ડિરેક્ટરી તરફ નિર્દેશિત કરવામાં આવે છે અને એક રૅન્ડમ WebDAV username/password જોડી બનાવવામાં આવે છે:
 
 ```bash
 # vault ડિરેક્ટરી માટે WebDAV sync સક્ષમ કરો (username/password બનાવે છે)
@@ -110,25 +110,25 @@ serverની environment identity વારસામાં મેળવી શ�
 
 ## MCP સાધનો (22)
 
-`open-sse/mcp-server/tools/obsidianTools.ts` માં વ્યાખ્યાયિત છે. ટોકન/base-URL દરેક કૉલ માટે ઉકેલવામાં આવે છે (પહેલાં પ્રતિ-API-key, પછી વૈશ્વિક). OmniRoute **sync server** નો ઉપયોગ કરતા સાધનો (ચાર `obsidian_sync_*` સાધનો) માટે વધુમાં OmniRoute સેટિંગ્સમાં ગોઠવેલ sync auth token જરૂરી છે.
+`open-sse/mcp-server/tools/obsidianTools.ts` માં વ્યાખ્યાયિત છે. ટોકન/base-URL દરેક કૉલ માટે ઉકેલવામાં આવે છે (પહેલાં પ્રતિ-API-key, પછી વૈશ્વિક). 67router **sync server** નો ઉપયોગ કરતા સાધનો (ચાર `obsidian_sync_*` સાધનો) માટે વધુમાં 67router સેટિંગ્સમાં ગોઠવેલ sync auth token જરૂરી છે.
 
 ### વાંચન સાધનો (`read:obsidian`)
 
-| સાધન                         | વર્ણન                                                                                               |
-| ---------------------------- | --------------------------------------------------------------------------------------------------- |
-| `obsidian_check_status`      | Local REST API પહોંચી શકાય તેવું અને પ્રમાણિત છે કે નહીં તે તપાસો.                                  |
-| `obsidian_search_simple`     | નોંધની સામગ્રીમાં પૂર્ણ-ટેક્સ્ટ શોધ; ફાઇલ પાથ સાથે અંશો પરત કરે છે.                                 |
-| `obsidian_search_structured` | JSON Logic અભિવ્યક્તિ (and/or/regex/path ફિલ્ટર્સ) નો ઉપયોગ કરીને શોધો.                             |
-| `obsidian_read_note`         | vault-સાપેક્ષ પાથ દ્વારા નોંધ વાંચો; વૈકલ્પિક રીતે ચોક્કસ heading/block/frontmatter વાંચો.          |
-| `obsidian_list_vault`        | vault માં ફાઇલો અને ડિરેક્ટરીઓની યાદી આપો (entries નું વૃક્ષ).                                      |
-| `obsidian_get_document_map`  | નોંધનું heading માળખું headings → line numbers ના નકશા તરીકે મેળવો.                                 |
-| `obsidian_get_note_metadata` | સંપૂર્ણ સામગ્રી વિના frontmatter, tags, links, char/word count મેળવો.                               |
-| `obsidian_get_active_file`   | Obsidian માં હાલમાં સક્રિય ફાઇલનો પાથ + સામગ્રી મેળવો.                                              |
-| `obsidian_get_periodic_note` | કોઈ તારીખ માટે દૈનિક/સાપ્તાહિક/માસિક આવર્તક નોંધ મેળવો (છોડી દેવાય તો આજની તારીખ).                  |
-| `obsidian_get_tags`          | બધા vault tags ને તેમની આવર્તન સંખ્યા સાથે સૂચિબદ્ધ કરો.                                            |
-| `obsidian_list_commands`     | ઉપલબ્ધ Obsidian command IDs ની યાદી આપો (`obsidian_execute_command` સાથે ઉપયોગ કરો).                |
-| `obsidian_sync_status`       | OmniRoute sync server ની સ્થિતિ: ચાલી રહ્યું છે કે નહીં, vault નું નામ, port, uptime, છેલ્લું sync. |
-| `obsidian_sync_conflicts`    | ઉકેલાયા ન હોય તેવા sync conflicts ની યાદી આપો (path, conflict path, detected-at).                   |
+| સાધન                         | વર્ણન                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| `obsidian_check_status`      | Local REST API પહોંચી શકાય તેવું અને પ્રમાણિત છે કે નહીં તે તપાસો.                                 |
+| `obsidian_search_simple`     | નોંધની સામગ્રીમાં પૂર્ણ-ટેક્સ્ટ શોધ; ફાઇલ પાથ સાથે અંશો પરત કરે છે.                                |
+| `obsidian_search_structured` | JSON Logic અભિવ્યક્તિ (and/or/regex/path ફિલ્ટર્સ) નો ઉપયોગ કરીને શોધો.                            |
+| `obsidian_read_note`         | vault-સાપેક્ષ પાથ દ્વારા નોંધ વાંચો; વૈકલ્પિક રીતે ચોક્કસ heading/block/frontmatter વાંચો.         |
+| `obsidian_list_vault`        | vault માં ફાઇલો અને ડિરેક્ટરીઓની યાદી આપો (entries નું વૃક્ષ).                                     |
+| `obsidian_get_document_map`  | નોંધનું heading માળખું headings → line numbers ના નકશા તરીકે મેળવો.                                |
+| `obsidian_get_note_metadata` | સંપૂર્ણ સામગ્રી વિના frontmatter, tags, links, char/word count મેળવો.                              |
+| `obsidian_get_active_file`   | Obsidian માં હાલમાં સક્રિય ફાઇલનો પાથ + સામગ્રી મેળવો.                                             |
+| `obsidian_get_periodic_note` | કોઈ તારીખ માટે દૈનિક/સાપ્તાહિક/માસિક આવર્તક નોંધ મેળવો (છોડી દેવાય તો આજની તારીખ).                 |
+| `obsidian_get_tags`          | બધા vault tags ને તેમની આવર્તન સંખ્યા સાથે સૂચિબદ્ધ કરો.                                           |
+| `obsidian_list_commands`     | ઉપલબ્ધ Obsidian command IDs ની યાદી આપો (`obsidian_execute_command` સાથે ઉપયોગ કરો).               |
+| `obsidian_sync_status`       | 67router sync server ની સ્થિતિ: ચાલી રહ્યું છે કે નહીં, vault નું નામ, port, uptime, છેલ્લું sync. |
+| `obsidian_sync_conflicts`    | ઉકેલાયા ન હોય તેવા sync conflicts ની યાદી આપો (path, conflict path, detected-at).                  |
 
 ### લેખન સાધનો (`write:obsidian`)
 

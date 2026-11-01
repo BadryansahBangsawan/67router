@@ -1,4 +1,4 @@
-# 🌐 OmniRoute Proxy Guide (中文 (繁體))
+# 🌐 67router Proxy Guide (中文 (繁體))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../ops/PROXY_GUIDE.md) · 🇪🇹 [am](../../../am/docs/ops/PROXY_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/ops/PROXY_GUIDE.md) · 🇦🇿 [az](../../../az/docs/ops/PROXY_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/ops/PROXY_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/ops/PROXY_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/ops/PROXY_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/ops/PROXY_GUIDE.md) · 🇩🇰 [da](../../../da/docs/ops/PROXY_GUIDE.md) · 🇩🇪 [de](../../../de/docs/ops/PROXY_GUIDE.md) · 🇬🇷 [el](../../../el/docs/ops/PROXY_GUIDE.md) · 🇪🇸 [es](../../../es/docs/ops/PROXY_GUIDE.md) · 🇪🇪 [et](../../../et/docs/ops/PROXY_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/ops/PROXY_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/ops/PROXY_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/ops/PROXY_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/ops/PROXY_GUIDE.md) · 🇮🇱 [he](../../../he/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/ops/PROXY_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/ops/PROXY_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/ops/PROXY_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/ops/PROXY_GUIDE.md) · 🇮🇩 [id](../../../id/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/ops/PROXY_GUIDE.md) · 🇮🇹 [it](../../../it/docs/ops/PROXY_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/ops/PROXY_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/ops/PROXY_GUIDE.md) · 🇰🇭 [km](../../../km/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/ops/PROXY_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/ops/PROXY_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/ops/PROXY_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/ops/PROXY_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/ops/PROXY_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/ops/PROXY_GUIDE.md) · 🇲🇲 [my](../../../my/docs/ops/PROXY_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/ops/PROXY_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/ops/PROXY_GUIDE.md) · 🇳🇴 [no](../../../no/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [or](../../../or/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/ops/PROXY_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/ops/PROXY_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/ops/PROXY_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/ops/PROXY_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/ops/PROXY_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/ops/PROXY_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/ops/PROXY_GUIDE.md) · 🇱🇰 [si](../../../si/docs/ops/PROXY_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/ops/PROXY_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/ops/PROXY_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/ops/PROXY_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/ops/PROXY_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/ops/PROXY_GUIDE.md) · 🇮🇳 [te](../../../te/docs/ops/PROXY_GUIDE.md) · 🇹🇭 [th](../../../th/docs/ops/PROXY_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/ops/PROXY_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/ops/PROXY_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/ops/PROXY_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/ops/PROXY_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/ops/PROXY_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/ops/PROXY_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/ops/PROXY_GUIDE.md)
 
@@ -6,7 +6,7 @@
 
 > **繞過地理封鎖、保護您的身分，並透過任意代理路由 AI 流量——完全沒有複雜的設定。**
 
-OmniRoute 包含功能完整的代理管理系統，可讓您透過 HTTP、HTTPS 或 SOCKS5 代理路由上游 AI 提供者的流量。無論您身處受封鎖的地區、需要輪替 IP，或希望使用隱匿式指紋偽裝——本指南都將完整說明。
+67router 包含功能完整的代理管理系統，可讓您透過 HTTP、HTTPS 或 SOCKS5 代理路由上游 AI 提供者的流量。無論您身處受封鎖的地區、需要輪替 IP，或希望使用隱匿式指紋偽裝——本指南都將完整說明。
 
 ---
 
@@ -51,7 +51,7 @@ unsupported_country_region_territory
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│                       OmniRoute 伺服器                        │
+│                       67router 伺服器                        │
 │                                                               │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────┐  │
 │  │ 代理        │    │ 代理         │    │ 代理             │  │
@@ -82,7 +82,7 @@ unsupported_country_region_territory
 
 ## 四層級代理系統
 
-OmniRoute 支援在**四個獨立範圍**設定代理，並依優先順序解析：
+67router 支援在**四個獨立範圍**設定代理，並依優先順序解析：
 
 ```
 優先順序（最高 → 最低）：
@@ -95,7 +95,7 @@ OmniRoute 支援在**四個獨立範圍**設定代理，並依優先順序解析
 
 ### 解析方式
 
-當 OmniRoute 將請求傳送至上游提供者時，會呼叫 `resolveProxyForConnectionFromRegistry()`，依序檢查每個層級：
+當 67router 將請求傳送至上游提供者時，會呼叫 `resolveProxyForConnectionFromRegistry()`，依序檢查每個層級：
 
 1. **帳戶層級** — 是否有代理指派給此特定連線 ID？
 2. **提供者層級** — 是否有代理指派給此提供者（例如 `openai`）？
@@ -237,7 +237,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### 匯入／匯出
 
-代理包含在**備份／還原**系統中。匯出 OmniRoute 設定時：
+代理包含在**備份／還原**系統中。匯出 67router 設定時：
 
 1. 前往**儀表板 → 設定 → 備份**
 2. 按一下**匯出** — 代理登錄與指派也會包含在內
@@ -247,7 +247,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 ### 舊版遷移
 
-如果您在較舊版本（引入 registry 之前）中設定了代理伺服器，OmniRoute 會自動遷移這些設定：
+如果您在較舊版本（引入 registry 之前）中設定了代理伺服器，67router 會自動遷移這些設定：
 
 ```
 舊版 key_value 儲存區 → proxy_registry + proxy_assignments
@@ -261,7 +261,7 @@ curl -X POST http://localhost:20128/api/v1/management/proxies/bulk-assign \
 
 > 🆕 **由 [@oyi77](https://github.com/oyi77) 貢獻** — PR [#1847](https://github.com/diegosouzapw/OmniRoute/pull/1847)（Issue [#1788](https://github.com/diegosouzapw/OmniRoute/issues/1788)）
 
-OmniRoute 整合了 **[1proxy](https://1proxy-api.aitradepulse.com)** 社群平台，可存取來自世界各地**數百個經過驗證的免費代理伺服器**。這非常適合沒有自有代理伺服器基礎設施的使用者。
+67router 整合了 **[1proxy](https://1proxy-api.aitradepulse.com)** 社群平台，可存取來自世界各地**數百個經過驗證的免費代理伺服器**。這非常適合沒有自有代理伺服器基礎設施的使用者。
 
 ### 運作方式
 
@@ -272,7 +272,7 @@ OmniRoute 整合了 **[1proxy](https://1proxy-api.aitradepulse.com)** 社群平�
 └─────────────┘   代理伺服器   └─────────────────┘               └──────────┘
 ```
 
-1. **同步** — OmniRoute 從 1proxy API 擷取經過驗證的代理伺服器
+1. **同步** — 67router 從 1proxy API 擷取經過驗證的代理伺服器
 2. **儲存** — 代理伺服器會儲存在相同的 `proxy_registry` 資料表中，並設為 `source = 'oneproxy'`
 3. **篩選** — 依通訊協定、國家及品質分數進行篩選
 4. **輪替** — 使用品質、隨機或循序策略選擇最佳代理伺服器
@@ -372,7 +372,7 @@ curl -X DELETE "http://localhost:20128/api/settings/oneproxy?clearAll=1"
 
 ## 反偵測與隱匿
 
-OmniRoute 不只是透過代理路由流量，還能讓流量看起來合法：
+67router 不只是透過代理路由流量，還能讓流量看起來合法：
 
 ### TLS 指紋偽裝
 
@@ -406,11 +406,11 @@ OmniRoute 不只是透過代理路由流量，還能讓流量看起來合法：
 
 ## 上游代理模式
 
-針對使用 CLIProxyAPI 模式的提供者，OmniRoute 支援三種上游代理模式：
+針對使用 CLIProxyAPI 模式的提供者，67router 支援三種上游代理模式：
 
 | 模式          | 說明                                   |
 | ------------- | -------------------------------------- |
-| `native`      | OmniRoute 直接處理代理路由（預設）     |
+| `native`      | 67router 直接處理代理路由（預設）      |
 | `cliproxyapi` | 委派給外部 CLIProxyAPI 執行個體        |
 | `fallback`    | 先嘗試原生模式，失敗時改用 CLIProxyAPI |
 
@@ -475,7 +475,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### 通道 API
 
-若要將您的 OmniRoute 執行個體公開至公用網際網路（Cloudflare/ngrok/Tailscale），而非透過代理路由對外流量，請參閱 [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md)。通道 REST API 位於 `/api/tunnels/{cloudflared,ngrok,tailscale}/*`，且與上述對外代理鏈彼此獨立。
+若要將您的 67router 執行個體公開至公用網際網路（Cloudflare/ngrok/Tailscale），而非透過代理路由對外流量，請參閱 [TUNNELS_GUIDE.md](./TUNNELS_GUIDE.md)。通道 REST API 位於 `/api/tunnels/{cloudflared,ngrok,tailscale}/*`，且與上述對外代理鏈彼此獨立。
 
 ### 1proxy API
 
@@ -515,7 +515,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### 透過代理時出現「socket hang up」錯誤
 
-使用會中斷閒置連線的廉價代理時，這是正常現象。OmniRoute 已透過以下方式處理此問題：
+使用會中斷閒置連線的廉價代理時，這是正常現象。67router 已透過以下方式處理此問題：
 
 - 停用代理連線的持續連線（`keepAliveTimeout: 1`）
 - 停用管線化（`pipelining: 0`）
@@ -525,7 +525,7 @@ curl -X PUT "http://localhost:20128/api/upstream-proxy/openai" \
 
 ### OAuth 期間出現「unsupported_country_region_territory」
 
-請確認在啟動 OAuth 流程**之前**已設定代理。OmniRoute 會透過已設定的代理路由 OAuth 權杖交換。請先設定全域或提供者層級的代理，然後再連線。
+請確認在啟動 OAuth 流程**之前**已設定代理。67router 會透過已設定的代理路由 OAuth 權杖交換。請先設定全域或提供者層級的代理，然後再連線。
 
 ### 未使用代理
 
@@ -593,7 +593,7 @@ CREATE TABLE proxy_assignments (
 
 ## 代理健康狀態檢查（v3.8.16+）
 
-OmniRoute 的**代理快速失敗**機制（`src/lib/proxyHealth.ts`）會透過快速 TCP 連線檢查，在 2 秒內偵測無回應的代理，然後**快取結果**，以避免每個請求都產生額外負擔。
+67router 的**代理快速失敗**機制（`src/lib/proxyHealth.ts`）會透過快速 TCP 連線檢查，在 2 秒內偵測無回應的代理，然後**快取結果**，以避免每個請求都產生額外負擔。
 
 ### 運作方式
 
@@ -658,11 +658,11 @@ URL 中的自訂連接埠（`http://host:9999`）一律優先於配置的預設�
 
 ## Proxy 分析與可觀測性
 
-OmniRoute 會追蹤各個 Proxy 的使用情況，協助營運人員診斷路由模式、延遲突增與重複發生的故障。
+67router 會追蹤各個 Proxy 的使用情況，協助營運人員診斷路由模式、延遲突增與重複發生的故障。
 
 ### 追蹤的資料
 
-對於透過已設定 Proxy 傳送的每個請求，OmniRoute 都會記錄：
+對於透過已設定 Proxy 傳送的每個請求，67router 都會記錄：
 
 | 指標         | 說明                                  |
 | ------------ | ------------------------------------- |
@@ -724,7 +724,7 @@ ORDER BY latency_ms DESC;
 
 ## 輪替策略決策樹
 
-當多個 Proxy 被指派至某個範圍時，OmniRoute 會使用**輪替策略**來選擇各個請求所使用的 Proxy。此策略會在範圍層級進行設定（全域、個別提供者、個別帳戶、個別組合）。
+當多個 Proxy 被指派至某個範圍時，67router 會使用**輪替策略**來選擇各個請求所使用的 Proxy。此策略會在範圍層級進行設定（全域、個別提供者、個別帳戶、個別組合）。
 
 ### 可用策略
 

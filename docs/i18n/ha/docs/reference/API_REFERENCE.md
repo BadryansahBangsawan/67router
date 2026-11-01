@@ -6,7 +6,7 @@
 
 🌐 **Harsuna:** 🇺🇸 [Turanci](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Babban kundin bayani na OmniRoute API. Ya ƙunshi ɓangaren jama'a na `/v1` da kuma wuraren ƙarshen gudanarwa da aka fi amfani da su; [`docs/openapi.yaml`](../openapi.yaml) mai sauƙin karantawa ta na'ura da tsarin hanyoyi da ke ƙarƙashin `src/app/api/` su ne cikakkun tushe.
+Babban kundin bayani na 67router API. Ya ƙunshi ɓangaren jama'a na `/v1` da kuma wuraren ƙarshen gudanarwa da aka fi amfani da su; [`docs/openapi.yaml`](../openapi.yaml) mai sauƙin karantawa ta na'ura da tsarin hanyoyi da ke ƙarƙashin `src/app/api/` su ne cikakkun tushe.
 
 Don ƙa'idar da aka mayar da hankali kanta mai dacewa da OpenAI da jadawalin iyawar masu samarwa, duba
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Amsa    | `HIT` ko `MISS` (ba yawo ba)                                                                                                                                                                                                 |
 | `X-OmniRoute-Idempotent` | Amsa    | `true` idan an cire maimaitawa                                                                                                                                                                                               |
 | `X-OmniRoute-Progress`   | Amsa    | `enabled` idan ana bin diddigin ci gaba                                                                                                                                                                                      |
-| `X-OmniRoute-Session-Id` | Amsa    | ID na zaman da OmniRoute ya yi amfani da shi                                                                                                                                                                                 |
+| `X-OmniRoute-Session-Id` | Amsa    | ID na zaman da 67router ya yi amfani da shi                                                                                                                                                                                  |
 | `X-OmniRoute-Request-Id` | Amsa    | id na haɗa buƙata da bayananta (idan an san shi)                                                                                                                                                                             |
-| `X-OmniRoute-Version`    | Amsa    | Sigar ginin OmniRoute (kullum tana nan)                                                                                                                                                                                      |
+| `X-OmniRoute-Version`    | Amsa    | Sigar ginin 67router (kullum tana nan)                                                                                                                                                                                       |
 | `X-OmniRoute-Cost-Saved` | Amsa    | Adadin USD da cache ya hana kashewa a kan HIT (bugun cache kawai)                                                                                                                                                            |
 | `X-OmniRoute-Decision`   | Amsa    | Bayanan bin diddigin turawa: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` shi ne dabarar combo, ko `single` don buƙatar da ba ta combo ba) — kullum yana nan a amsoshin kammalawa                           |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Ɗaure asusu ga kowace buƙata
 
-Idan mai samarwa yana da haɗe-haɗe da yawa (asusun ko maɓallai), OmniRoute yawanci yana zaɓar ɗaya
+Idan mai samarwa yana da haɗe-haɗe da yawa (asusun ko maɓallai), 67router yawanci yana zaɓar ɗaya
 ta hanyar dabararsa ta zaɓen asusu. A maimakon haka, buƙata za ta iya ɗaure takamaiman haɗi guda
 ta amfani da kanun `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ ga kowane aiki:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Tushe: `src/sse/handlers/chat.ts` (karanta kanun), `src/sse/services/auth.ts` da
 ## Keɓantattun Hayar Zaman da Ake Sarrafawa
 
 Hayar zaman da ake sarrafawa ta keɓance hanya ce ta tura buƙatu da ake zaɓar amfani da ita, wadda ba ta fifita wani abokin ciniki: mai shi guda ɗaya mai aiki ne
-ke riƙe haɗin OmniRoute guda ɗaya da ya cancanta. Ba ta hayar da wani samfuri, ba ta buƙatar OAuth, ba ta tantance wani
+ke riƙe haɗin 67router guda ɗaya da ya cancanta. Ba ta hayar da wani samfuri, ba ta buƙatar OAuth, ba ta tantance wani
 takamaiman abokin ciniki, kuma ba ta buƙatar wani takamaiman mai samarwa.
 
 Dole ne maɓallin API da ake tantancewa ya kasance da ikon `lease:exclusive` da kuma jerin
@@ -190,7 +190,7 @@ Mai hayar da ke aiki zai iya neman metadata na nuni mai kiyaye sirri a sarari do
 
 Wannan aikin matsayin da ake zaɓar amfani da shi yana da kariya ta mai shi marar bayyana, ingantaccen maɓallin API da ake sarrafawa, da ainihin
 generation mai aiki a cikin mu’amalar ma’adanar bayanai guda ɗaya. `displayName` shi ne kawai sunan haɗin da aka saita
-wanda aka cire sararin da ya wuce kima daga gare shi; yana zama `null` idan babu amintaccen suna da aka saita. OmniRoute ba ya taɓa maye gurbinsa da
+wanda aka cire sararin da ya wuce kima daga gare shi; yana zama `null` idan babu amintaccen suna da aka saita. 67router ba ya taɓa maye gurbinsa da
 adireshin imel ko bayanan asusun da aka samar. Ƙimar mai samarwa alamar nuni ce marar muhimmanci ga tsaro, kuma ba ta taɓa zama
 wani ganowar mai samarwa mai jituwa da aka samar ba. An cire bayanan shiga, tokens, cookies, ɗanyen ganowar haɗi ko
 ganowar maɓallin API, hashes na masu shi, sirrin shinge, da bayanan tura buƙatu na cikin gida.
@@ -231,7 +231,7 @@ Cunkoso na wucin gadi yana mayar da HTTP `429` tare da `Retry-After` da:
 
 Wannan amsar tana nufin kawai cewa rukunin haɗe-haɗe na yau da kullum da suka cancanta ba komai ba ne, kuma kowanne ɗan takara da ke samuwa
 yana hannun wata hayar mai aiki ta wani daban. Samfura/masu samarwa da ba a tallafawa, rashin dacewar manufofi, lokacin dakatawa, quota,
-lafiya, da sauran gazawar cancanta ta yau da kullum suna riƙe amsoshin OmniRoute da suke da su.
+lafiya, da sauran gazawar cancanta ta yau da kullum suna riƙe amsoshin 67router da suke da su.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request na asali na Jina kuma yana **tura su ba tare da canji ba** z
 ```
 
 Ƙimomin asali na `{ image | audio | video | pdf }` na iya zama URL na HTTPS na jama'a, URI na `data:`, ko ɗanyen
-base64. OmniRoute ba ya sauya waɗannan objects zuwa strings ko ɗauko URLs na hotuna na asali — Jina da kansa ke ɗauko
+base64. 67router ba ya sauya waɗannan objects zuwa strings ko ɗauko URLs na hotuna na asali — Jina da kansa ke ɗauko
 kafofin watsa labarai na jama'a. Ana tura ƙarin filayen Jina (`task`, `normalized`, `truncate`, `embedding_type`).
 SKUs na Jina masu rubutu kaɗai har yanzu suna ƙin takardun da ba rubutu ba.
 
@@ -454,7 +454,7 @@ mai kira, don haka lambar abokin hulɗa ba ta buƙatar ware mai samarwan ta hany
 
 ### Tantancewar Vertex AI DeepSeek OCR da warware maƙura
 
-`vertex-deepseek-ocr` yana sake amfani da tantancewar Vertex AI iri ɗaya da OmniRoute ya riga ya tallafa wa
+`vertex-deepseek-ocr` yana sake amfani da tantancewar Vertex AI iri ɗaya da 67router ya riga ya tallafa wa
 zirga-zirgar taɗi/hoto (`open-sse/executors/vertex.ts`): mabuɗin API na haɗin ko dai
 takardar shaidar Service Account JSON ce (wadda ake musanyawa da alamar samun damar OAuth mai ɗan gajeren wa'adin aiki ta hanyar
 gudanarwar JWT-bearer) ko kuma alamar samun damar OAuth da aka riga aka samar, wadda ake amfani da ita yadda take. URL na maƙurar tushe shi ne
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Farashin samfura (`pricing`)
 
-Shigarwa tana ɗauke da abin `pricing` idan OmniRoute ya san farashin samfurin. Farashin yana fitowa
+Shigarwa tana ɗauke da abin `pricing` idan 67router ya san farashin samfurin. Farashin yana fitowa
 daga jadawalin farashin da lissafin kuɗi ke amfani da shi: tsoffin ƙimomi na ciki, farashin da aka daidaita, da
 gyare-gyaren da aka saita ta `/api/pricing`. Waɗannan farashin jeri ne, don haka masu samar da biyan kuɗin rajista ma
 suna nuna farashin kowace token.
@@ -633,8 +633,8 @@ Yi amfani da wannan endpoint lokacin da sidecar ke gudana a wajen process kuma b
 
 ## Samar da sauti na ElevenLabs
 
-Saita haɗin mai bayarwa na `elevenlabs` a OmniRoute da maɓallin API ɗinka na ElevenLabs.
-Abokan ciniki suna tabbatar da sahihancinsu da maɓallin **OmniRoute** nasu (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Saita haɗin mai bayarwa na `elevenlabs` a 67router da maɓallin API ɗinka na ElevenLabs.
+Abokan ciniki suna tabbatar da sahihancinsu da maɓallin **67router** nasu (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 gateway ɗin yana samar da maɓallin mai bayarwa da aka adana a matsayin `xi-api-key`. Kada ka taɓa aika maɓallin ElevenLabs
 a matsayin bearer token na gateway.
 
@@ -699,7 +699,7 @@ asali suna mayar da status codes da jikin kuskure na upstream ba tare da canji b
 ƙuntatawar tsari da `429` don iyakar quota. Ana kiyaye headers na `character-cost`, `song-id`, `request-id` da `retry-after`
 idan suna nan. Samun ma'aunin kuɗin amfani na kyauta ba ya tabbatar da damar amfani da kowane
 model na waƙa, tsarin fitarwa ko fasalin API: ElevenLabs ne ke yanke shawarar izinin kowace buƙata.
-Haɗaɗɗen endpoint yana kiyaye status codes na kuskure a cikin daidaitaccen kunshin kuskure na OmniRoute.
+Haɗaɗɗen endpoint yana kiyaye status codes na kuskure a cikin daidaitaccen kunshin kuskure na 67router.
 
 Yarjejeniyoyin upstream: [tasirin sauti](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [haɗa waƙa](https://elevenlabs.io/docs/api-reference/music/compose) da
@@ -740,7 +740,7 @@ Yarjejeniyoyin upstream: [tasirin sauti](https://elevenlabs.io/docs/api-referenc
 
 Duk hanyoyin POST suna bin tsari iri ɗaya: `Bearer your-api-key` + jikin JSON da Zod ya inganta (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, da sauransu, duba `src/shared/validation/schemas.ts`). Ana mayar da 4xx idan ingancin schema ya gaza.
 
-Ga abokan hulɗa waɗanda ba za su iya haɗa `Authorization: Bearer ...` ba, OmniRoute kuma yana karɓar maɓallan API a cikin URL ta hanyar daidaituwar query-string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ko kuma keɓaɓɓun wuraren ƙarshen `/api/v1/vscode/{token}/...` da aka bayyana a ƙasa.
+Ga abokan hulɗa waɗanda ba za su iya haɗa `Authorization: Bearer ...` ba, 67router kuma yana karɓar maɓallan API a cikin URL ta hanyar daidaituwar query-string (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) ko kuma keɓaɓɓun wuraren ƙarshen `/api/v1/vscode/{token}/...` da aka bayyana a ƙasa.
 
 ```bash
 # Sake jeri (mai bayarwa daga rajistar cloud, ko kumburin mai bayarwa mai dacewa da OpenAI a matsayin "<prefix>/<model>")
@@ -902,7 +902,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, maɓallin API iri ɗaya da na Parallel Search) yana mayar da Markdown
 kawai — duk wani `format` daban zai haifar da `400` — kuma yana iyakance abun ciki zuwa haruffa 100,000. Idan
 ba za a iya cirato shafin da ake nufi da kansa ba, sabis na sama yana bayar da rahoton hakan a cikin HTTP 200;
-OmniRoute yana bayyana wannan a matsayin `422` tare da tsayayyen saƙo.
+67router yana bayyana wannan a matsayin `422` tare da tsayayyen saƙo.
 
 | Hanya | Path            | Bayani                                                    |
 | ----- | --------------- | --------------------------------------------------------- |
@@ -963,14 +963,14 @@ dole ne ya zama entrypoint mai aiki (kuma shi ne, ta tsohuwa, idan `app/server-w
 OpenAI **Codex CLI** yana tantance sunan model a gefen client idan
 `supports_websockets = true` kuma yana **ƙin IDs masu prefix na provider** kamar
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Aika **tsantsar** ID (misali `gpt-5.5`). Bridge na OmniRoute
+a ChatGPT account`). Aika **tsantsar** ID (misali `gpt-5.5`). Bridge na 67router
 na codex kawai ne, saboda haka yana sake warware tsantsar ID a matsayin model na codex
 (`resolveCodexWsModelInfo`) kafin ya buɗe tunnel zuwa sabis na sama — ko da yake tsantsar
 `gpt-5.5` in ba haka ba zai bi route zuwa wani provider ta HTTP.
 
 #### Saita OpenAI Codex CLI
 
-Nuna Codex CLI zuwa OmniRoute ta ƙara custom provider mai goyon bayan WebSocket
+Nuna Codex CLI zuwa 67router ta ƙara custom provider mai goyon bayan WebSocket
 zuwa `~/.codex/config.toml` (yi amfani da `CODEX_HOME` daban don guje wa taɓa
 config da ke akwai):
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # babu slash a ƙarshe; ana samo URL na WS daga gare shi (yi amfani da https/wss a production)
 wire_api = "responses"                    # ƙima ɗaya tilo da ake goyon baya tun Feb 2026
 supports_websockets = true                # yana kunna transport na Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # yana riƙe da maɓallin API na OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # yana riƙe da maɓallin API na 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # maɓallin API na OmniRoute (kowane maɓalli idan REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # maɓallin API na 67router (kowane maɓalli idan REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI yana haɓaka `base_url + /responses` zuwa WebSocket, sannan OmniRoute yana buɗe masa tunnel
+CLI yana haɓaka `base_url + /responses` zuwa WebSocket, sannan 67router yana buɗe masa tunnel
 zuwa zaɓaɓɓen haɗin OAuth na codex. An tantance shi daga farko har ƙarshe a kan local
 server: ChatGPT yana mayar da `codex.rate_limits` + `response.created` kuma yana watsa
 completion ɗin a hankali.
@@ -1075,7 +1075,7 @@ kason da **fitowar rubutu marar tsari** ke gabatarwa da wanda tsararren **fitowa
 
 #### Tsarin Lissafin Daidaita Iyakar Yankewa
 
-OmniRoute yana goyon bayan yankewar ƙayyadadden amfani tun da wuri domin hana ƙarewar albarkatun upstream (ana saita shi ta
+67router yana goyon bayan yankewar ƙayyadadden amfani tun da wuri domin hana ƙarewar albarkatun upstream (ana saita shi ta
 `quotaWindowThresholds` na connection, tsoffin ƙimomin provider, ko saitunan juriya na gama-gari). Lokacin da aka kunna iyakar yankewa
 (misali, `cutoff = 25%`) a kan taga na ƙayyadadden amfani, mai fitar da rubutu yana lissafa adadin da ya rage kamar haka:
 
@@ -1437,9 +1437,8 @@ Amsar GET ta haɗa da `agents[]` (id, name, binary, version, installed, protocol
 
 ### Kimantawa
 
-| Endpoint     | Hanya    | Bayani                                      |
-| ------------ | -------- | ------------------------------------------- |
-| `/api/evals` | GET/POST | Jera tarin kimantawa / gudanar da kimantawa |
+| Endpoint | Hanya | Bayani |
+| -------- | ----- | ------ |
 
 ### Manufofi
 
@@ -1620,7 +1619,7 @@ Bayanan lura:
 
 - Madadin hanyoyin masu token suna sake amfani da handlers iri ɗaya da `/v1/*` da `/api/tags`; siffofin amsa suna nan iri ɗaya.
 - Fi son amfani da `Authorization: Bearer ...` a duk lokacin da abokin ciniki ke tallafawa headers na musamman.
-- Tokens da ke cikin URL na iya bayyana a cikin rajistan ayyukan reverse-proxy, tarihin burauza, da telemetry da ke wajen OmniRoute. Ɗauke su a matsayin zaɓin daidaituwa, ba tsohuwar hanyar tabbatar da sahihanci ba.
+- Tokens da ke cikin URL na iya bayyana a cikin rajistan ayyukan reverse-proxy, tarihin burauza, da telemetry da ke wajen 67router. Ɗauke su a matsayin zaɓin daidaituwa, ba tsohuwar hanyar tabbatar da sahihanci ba.
 
 ---
 
@@ -1728,7 +1727,7 @@ Hakanan za a iya daidaita manyan routing combos (waɗanda aka riga aka taƙaita 
 
 ## Webhooks
 
-Biyan kuɗin webhook masu fita don abubuwan da suka faru na OmniRoute (kammala buƙata, ƙarewar ƙayyadadden amfani, sauya maɓalli, da sauransu).
+Biyan kuɗin webhook masu fita don abubuwan da suka faru na 67router (kammala buƙata, ƙarewar ƙayyadadden amfani, sauya maɓalli, da sauransu).
 
 | Hanya  | Path                      | Bayani                                                                     |
 | ------ | ------------------------- | -------------------------------------------------------------------------- |
@@ -1759,31 +1758,6 @@ Tsarin gudanar da maɓalli ta atomatik yana amfani da su don bayarwa da sauya ma
 
 ---
 
-## Ka'idar Wakilai
-
-Ayyukan wakilan girgije (Claude Code, Codex Cloud, OpenHands, da sauransu) waɗanda ake aiwatarwa daga nesa a madadin masu amfani da OmniRoute.
-
-| Hanya  | Tafarki                       | Bayani                                                                                                                                                   |
-| ------ | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Jera ayyuka — `?provider=`, `?status=`, `?limit=` na zaɓi ne (1–500, tsoho 50)                                                                           |
-| POST   | `/api/v1/agents/tasks`        | Ƙirƙiri aiki — ana inganta jiki ta `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Yana dawo da `201` tare da kunshin aikin |
-| DELETE | `/api/v1/agents/tasks?id=...` | Share aiki                                                                                                                                               |
-| GET    | `/api/v1/agents/tasks/[id]`   | Karanta aiki — yana sabunta matsayi kai tsaye daga wakilin girgije na sama idan an saita `external_id`                                                   |
-| POST   | `/api/v1/agents/tasks/[id]`   | Aikin da aka bambanta: `{action: "approve"}`, `{action: "message", message}`, ko `{action: "cancel"}`                                                    |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Share takamaiman aiki ta id                                                                                                                              |
-
-> **Tabbatarwa:** ana buƙatar tabbatarwar gudanarwa a kowace hanya (`requireCloudAgentManagementAuth`). Kafin v3.8.0 waɗannan ba su buƙatar tabbatarwa ba — duba commit `588a0333` don sauyin da ya karya dacewa.
-
-```bash
-# Ƙirƙiri aikin girgije na Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Wakilan Tsakani na Gudanarwa
 
 Wakilan tsakani na HTTP(S)/SOCKS masu fita waɗanda za a iya sanyawa ga masu samarwa, asusu, ko a matakin duniya.
@@ -1807,7 +1781,7 @@ Wakilan tsakani na HTTP(S)/SOCKS masu fita waɗanda za a iya sanyawa ga masu sam
 
 ## Juriya (faɗaɗɗe)
 
-OmniRoute yana samar da hanyoyi uku masu zaman kansu don magance gazawar wucin gadi; maƙararan gudanarwa da ke ƙasa suna ba masu gudanarwa damar karantawa da sauya saitunansu:
+67router yana samar da hanyoyi uku masu zaman kansu don magance gazawar wucin gadi; maƙararan gudanarwa da ke ƙasa suna ba masu gudanarwa damar karantawa da sauya saitunansu:
 
 | Iyaka                | Ma'ajiyar yanayi                               | Karantawa                                 | Sake saiti / gogewa                                                   |
 | -------------------- | ---------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- |
@@ -1842,7 +1816,7 @@ Don cikakken bayani kan tsarin da tsoffin saitunan katsewa: duba [`CLAUDE.md`](.
 
 ## Ƙwarewa
 
-Tsarin ƙwarewa don faɗaɗa OmniRoute da masu sarrafa umarni na musamman waɗanda za a iya aiwatarwa, tare da haɗin gwiwar kasuwar ƙwarewa.
+Tsarin ƙwarewa don faɗaɗa 67router da masu sarrafa umarni na musamman waɗanda za a iya aiwatarwa, tare da haɗin gwiwar kasuwar ƙwarewa.
 
 | Hanya  | Tafarki                           | Bayani                                                                                                                                           |
 | ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1879,7 +1853,7 @@ Ma'ajiyar ƙwaƙwalwar tattaunawa/bayanan gaskiya mai ɗorewa, wadda aka keɓanc
 
 ## Sabar MCP
 
-OmniRoute yana zuwa da sabar Model Context Protocol da aka haɗa cikinsa, mai hanyoyin jigilar bayanai guda 3 (stdio, SSE, streamable-http) da kayan aikin da aka keɓance iyakokinsu. Endpoints na dashboard da ke ƙasa suna karanta bayanan matsayi/audit kuma suna wakiltar hanyoyin jigilar HTTP.
+67router yana zuwa da sabar Model Context Protocol da aka haɗa cikinsa, mai hanyoyin jigilar bayanai guda 3 (stdio, SSE, streamable-http) da kayan aikin da aka keɓance iyakokinsu. Endpoints na dashboard da ke ƙasa suna karanta bayanan matsayi/audit kuma suna wakiltar hanyoyin jigilar HTTP.
 
 | Hanya | Tafarki | Bayani |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1901,50 +1875,12 @@ OmniRoute yana zuwa da sabar Model Context Protocol da aka haɗa cikinsa, mai ha
 
 ## Sabar A2A
 
-OmniRoute yana samar da mashigar A2A (Agent-to-Agent) ta JSON-RPC 2.0 tare da marufin REST don dubawa/amfani da dashboard.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # na zaɓi ne sai dai idan an saita OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Hanyoyin da ake tallafawa (duk suna dogara da `settings.a2aEnabled`):
-
-| Hanya            | Bayani                                                                   |
-| ---------------- | ------------------------------------------------------------------------ |
-| `message/send`   | Gudanar da ƙwarewa kai-tsaye; yana dawo da `{task, artifacts, metadata}` |
-| `message/stream` | Gudanarwar SSE mai gudana ta saitin ƙwarewa iri ɗaya                     |
-| `tasks/get`      | Ɗauko aiki ta amfani da `taskId`                                         |
-| `tasks/cancel`   | Soke aiki ta amfani da `taskId`                                          |
-
-Ƙwarewar da ke ciki tun farko: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Katin Wakili
-
-```bash
-GET /.well-known/agent.json
-```
-
-Yana dawo da katin wakilin A2A na jama'a (suna, bayani, iyawa, kundin ƙwarewa, tsarin tantancewa) — ana adana shi a cache na jama'a na awa 1. Ba a buƙatar tantancewa.
+67router yana samar da mashigar A2A (Agent-to-Agent) ta JSON-RPC 2.0 tare da marufin REST don dubawa/amfani da dashboard.
 
 ### Mataimakan REST
 
 | Hanya | Tafarki                      | Bayani                                                                                                           |
 | ----- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| GET   | `/api/a2a/status`            | Ko an kunna A2A + ƙididdigar ayyuka + taƙaitaccen katin wakili da aka adana a cache                              |
 | GET   | `/api/a2a/tasks`             | Jera ayyuka — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST  | `/api/a2a/tasks`             | (Ba a aiwatar da shi a matsayin mataimakin REST ba — ƙirƙira ta JSON-RPC `message/send`)                         |
 | GET   | `/api/a2a/tasks/[id]`        | Ɗauko aiki guda ɗaya                                                                                             |
@@ -1964,12 +1900,8 @@ Yana dawo da katin wakilin A2A na jama'a (suna, bayani, iyawa, kundin ƙwarewa, 
 | GET | `/api/cloud/models/alias` | Jera laƙaban samfura kamar yadda ake nuna su ga daidaitawar gajimare |
 | GET | `/api/assess` | Karanta sabbin rabe-raben tantancewa (na kowane mai samarwa/samfuri) |
 | POST | `/api/assess` | Gudanar da tantancewa — jiki: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Jera rukunin eval da ke ciki tun farko + ayyukan da aka gudanar kwanan nan |
-| POST | `/api/evals` | Fara gudanar da eval |
-| POST | `/api/evals/suites` | Ƙirƙiri rukunin eval na musamman — ana tantance jiki ta `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Ɗauko rukunin eval na musamman |
 
-**Tantancewa:** `/api/cloud/auth` yana tantance maɓallin Bearer kai-tsaye sannan ya dawo da maɓallin da aka ɓoye wani ɓangarensa da `projectId` na kowane haɗi kawai ga maɓalli mai ikon `manage` / `admin`; sauran hanyoyin `/api/cloud/*`, `/api/evals/*`, da `/api/assess` suna buƙatar zaman gudanarwa/maɓallin API. POST na `/api/assess` yana amfani da `validateBody` tare da tsarin scope na discriminated-union.
+**Tantancewa:** `/api/cloud/auth` yana tantance maɓallin Bearer kai-tsaye sannan ya dawo da maɓallin da aka ɓoye wani ɓangarensa da `projectId` na kowane haɗi kawai ga maɓalli mai ikon `manage` / `admin`; sauran hanyoyin `/api/cloud/*`, da `/api/assess` suna buƙatar zaman gudanarwa/maɓallin API. POST na `/api/assess` yana amfani da `validateBody` tare da tsarin scope na discriminated-union.
 
 ---
 
@@ -2130,7 +2062,7 @@ Endpoints na admin kawai don gudanar da ayyuka.
 
 ## Gudanar da Kayan Aikin CLI
 
-Gudanar da kayan aikin CLI da ke haɗuwa da OmniRoute (antigravity, commandCode,
+Gudanar da kayan aikin CLI da ke haɗuwa da 67router (antigravity, commandCode,
 devin-cli, da sauransu). Duba [Manazartar Masu Bayarwa](./PROVIDER_REFERENCE.md) don cikakken jerin.
 
 | Hanya | Path                                    | Bayani                                                                                                                                                                             |
@@ -2239,26 +2171,6 @@ Duba [Tsarin Skills](../frameworks/SKILLS.md) don cikakkun bayanai.
 
 ---
 
-## Plugins
-
-Sarrafa plugins na OmniRoute (faɗaɗa ayyuka daga wasu kamfanoni).
-
-| Hanya  | Path                               | Bayani                        |
-| ------ | ---------------------------------- | ----------------------------- |
-| GET    | `/api/plugins`                     | Jera plugins da aka girka     |
-| POST   | `/api/plugins/marketplace/install` | Girka plugin daga marketplace |
-| DELETE | `/api/plugins/[name]`              | Cire plugin                   |
-| POST   | `/api/plugins/[name]/activate`     | Kunna plugin                  |
-| POST   | `/api/plugins/[name]/deactivate`   | Kashe plugin                  |
-| GET    | `/api/plugins/[name]/config`       | Samu saitunan plugin          |
-| PUT    | `/api/plugins/[name]/config`       | Sabunta saitunan plugin       |
-
-**Tabbatar da Shaida:** Ana buƙatar zaman gudanarwa.
-
-Duba [Tsarin Plugins](../frameworks/PLUGIN_SDK.md) don cikakkun bayanai.
-
----
-
 ## Shadow Routing
 
 Kwatanta masu samarwa ta Shadow / A-B **ba wani keɓantaccen REST surface ba ne** — ana saita shi ta hanyar combo routing (duba [Auto-Combo](../routing/AUTO-COMBO.md)). Ana samar da ma'aunin kwatantawa na kowane combo ta `GET /api/combos/metrics`.
@@ -2293,5 +2205,3 @@ maɓallin API mai izinin gudanarwa) da yadda suka bambanta da maɓallan inferenc
 - Ana iya kunna ko kashe `requireLogin` ta hanyar `/api/settings/require-login`
 - Hanyoyin `/v1/*` za su iya buƙatar maɓallin API na Bearer idan `REQUIRE_API_KEY=true`
 - “token na gudanarwa” / “maɓallin API mai izinin gudanarwa” a wannan bayanin yana nufin ɗaya daga cikin nau’ukan da ke cikin wancan jagorar — ba wani ƙarin nau’in sirri da ba a bayyana ba
-
-> **Canji mai karya dacewa (v3.8.0)** — `/api/v1/agents/tasks/*` da wuraren ƙarshen gudanar da cooldown yanzu suna buƙatar **tantancewar gudanarwa** (kukin dashboard na `auth_token` ko maɓallin API mai izinin gudanarwa). Abokan hulɗa da a baya suke kiran waɗannan hanyoyin ba tare da tantancewa ba za su karɓi `401 Unauthorized`. Duba commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

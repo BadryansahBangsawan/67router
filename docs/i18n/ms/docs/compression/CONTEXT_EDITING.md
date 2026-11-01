@@ -5,12 +5,12 @@
 ---
 
 **Penyuntingan Konteks** yang diwakilkan ialah ciri pengurusan konteks khusus untuk Claude. Tidak seperti enjin
-pemampatan setempat OmniRoute (Caveman, RTK, LLMLingua, saluran paip bertindan) — yang menulis semula badan permintaan
+pemampatan setempat 67router (Caveman, RTK, LLMLingua, saluran paip bertindan) — yang menulis semula badan permintaan
 _sebelum_ ia meninggalkan proksi — Penyuntingan Konteks meminta **penyedia** mengosongkan blok
-penggunaan alat / hasil alat yang lapuk daripada tetingkap konteks aktifnya sendiri. OmniRoute hanya melampirkan parameter badan
+penggunaan alat / hasil alat yang lapuk daripada tetingkap konteks aktifnya sendiri. 67router hanya melampirkan parameter badan
 (`context_management.edits[]`); Claude melakukan pengosongan sebenar berdasarkan pentokennya sendiri.
 
-Secara semula jadi, ini ialah keupayaan yang diwakilkan: penyedia lain menolak parameter tersebut, jadi OmniRoute mengehadkan
+Secara semula jadi, ini ialah keupayaan yang diwakilkan: penyedia lain menolak parameter tersebut, jadi 67router mengehadkan
 penggunaannya secara ketat kepada Claude dan geganti yang serasi dengan Claude Code.
 
 Sumber rujukan utama: `open-sse/config/contextEditing.ts` (ID strategi, suntikan badan, pengekstrakan
@@ -19,7 +19,7 @@ telemetri), `open-sse/executors/base.ts` (get suntikan + sandaran 400), dan
 
 ## Fungsi `clear_tool_uses`
 
-OmniRoute menyuntik satu suntingan ke dalam badan Anthropic Messages keluar:
+67router menyuntik satu suntingan ke dalam badan Anthropic Messages keluar:
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute menyuntik satu suntingan ke dalam badan Anthropic Messages keluar:
   (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
 Beta tersebut diiklankan melalui pengepala `anthropic-beta: context-management-2025-06-27`, yang
-sudah dikeluarkan oleh OmniRoute pada permintaan Claude.
+sudah dikeluarkan oleh 67router pada permintaan Claude.
 
 Suntikan dilakukan oleh `applyContextEditingToBody()` dan bersifat **idempoten**: jika suntingan `clear_tool_uses`
 sudah wujud dalam badan (ditambahkan oleh panggilan terdahulu atau dibekalkan oleh klien), badan tersebut
-dibiarkan seperti sedia ada. Jika suntingan `clear_thinking_20251015` turut hadir, OmniRoute mengisih secara stabil
+dibiarkan seperti sedia ada. Jika suntingan `clear_thinking_20251015` turut hadir, 67router mengisih secara stabil
 suntingan `clear_thinking` ke bahagian hadapan kerana Anthropic menghendaki `clear_thinking` mendahului
 `clear_tool_uses` dalam tatasusunan `edits[]`.
 
@@ -144,7 +144,7 @@ Claude tulen membawa beta dalam `ANTHROPIC_BETA_BASE` dan tidak melalui laluan s
 
 ## Telemetri `applied_edits`
 
-Selepas respons Claude, OmniRoute merekodkan jumlah konteks yang sebenarnya dikosongkan oleh penyedia. Ini
+Selepas respons Claude, 67router merekodkan jumlah konteks yang sebenarnya dikosongkan oleh penyedia. Ini
 **tidak** distrim — ia diekstrak daripada isi respons bukan penstriman secara usaha terbaik dan tidak pernah
 mempengaruhi respons (kegagalan telemetri diabaikan).
 
@@ -172,16 +172,16 @@ label enjin `context-editing`, dan boleh dibezakan daripada penjimatan RTK/Cavem
 
 ## Hubungan dengan enjin pemampatan setempat
 
-| Aspek                    | Enjin setempat (Caveman / RTK / LLMLingua / bertindan)  | Penyuntingan Konteks Terwakil                     |
-| ------------------------ | ------------------------------------------------------- | ------------------------------------------------- |
-| Tempat ia dijalankan     | Dalam OmniRoute, sebelum permintaan meninggalkan proksi | Dalam penyedia (Claude), pada bahagian pelayan    |
-| Kandungan yang disunting | Teks prom / konteks / hasil alat                        | Blok penggunaan alat / hasil alat yang lama       |
-| Skop penyedia            | Semua penyedia                                          | `claude` + `anthropic-compatible-cc-*` sahaja     |
-| Togol                    | Tetapan mod pemampatan                                  | `contextEditing.enabled`                          |
-| Mod kegagalan            | Teruskan apabila gagal (teks asal)                      | Sandaran 400: buang parameter, cuba semula sekali |
-| Telemetri penjimatan     | `engine: <engine id>`                                   | `engine: "context-editing"`                       |
+| Aspek                    | Enjin setempat (Caveman / RTK / LLMLingua / bertindan) | Penyuntingan Konteks Terwakil                     |
+| ------------------------ | ------------------------------------------------------ | ------------------------------------------------- |
+| Tempat ia dijalankan     | Dalam 67router, sebelum permintaan meninggalkan proksi | Dalam penyedia (Claude), pada bahagian pelayan    |
+| Kandungan yang disunting | Teks prom / konteks / hasil alat                       | Blok penggunaan alat / hasil alat yang lama       |
+| Skop penyedia            | Semua penyedia                                         | `claude` + `anthropic-compatible-cc-*` sahaja     |
+| Togol                    | Tetapan mod pemampatan                                 | `contextEditing.enabled`                          |
+| Mod kegagalan            | Teruskan apabila gagal (teks asal)                     | Sandaran 400: buang parameter, cuba semula sekali |
+| Telemetri penjimatan     | `engine: <engine id>`                                  | `engine: "context-editing"`                       |
 
-Kedua-duanya saling melengkapi: enjin setempat memampatkan bait yang dihantar oleh OmniRoute; Penyuntingan Konteks membolehkan
+Kedua-duanya saling melengkapi: enjin setempat memampatkan bait yang dihantar oleh 67router; Penyuntingan Konteks membolehkan
 Claude memangkas konteks yang sedang berjalan merentasi giliran. Kedua-duanya boleh didayakan bersama.
 
 ## Lihat Juga

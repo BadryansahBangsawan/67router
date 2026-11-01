@@ -45,7 +45,7 @@ npm для цього запуску — без довготривалого т�
 гарантію WS1.3 (витік токена сам по собі не дає змоги виконати публікацію — токена немає).
 
 **Одноразове налаштування (власник):** npmjs.com → пакет `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: власник `diegosouzapw`, репозиторій `OmniRoute`, робочий процес `npm-publish.yml`
+Publisher_ → GitHub: власник `diegosouzapw`, репозиторій `67router`, робочий процес `npm-publish.yml`
 (середовище: немає). Поки це не налаштовано, автоматичний крок завершується помилкою `ENEEDAUTH`:
 повторно запустіть із `publish_mode=staged` (нижче) або `direct`.
 

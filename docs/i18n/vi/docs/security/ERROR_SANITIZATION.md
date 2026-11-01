@@ -195,13 +195,13 @@ Các quy tắc làm sạch áp dụng cho `upstreamDetails`:
 3. Giới hạn độ sâu: cấu trúc lồng nhau vượt quá 4 cấp sẽ được thay thế bằng chuỗi `"[truncated]"`.
 4. Mảng được giới hạn ở 32 phần tử.
 
-Chỉ các vị trí gọi có body lỗi của nhà cung cấp đã được phân tích cú pháp mới nên truyền `upstreamDetails`. Các lỗi OmniRoute nội bộ (lỗi phân tích cú pháp SSE, nội dung trống, bị guardrail chặn) không được chứa giá trị này.
+Chỉ các vị trí gọi có body lỗi của nhà cung cấp đã được phân tích cú pháp mới nên truyền `upstreamDetails`. Các lỗi 67router nội bộ (lỗi phân tích cú pháp SSE, nội dung trống, bị guardrail chặn) không được chứa giá trị này.
 
 KHÔNG truyền trực tiếp `err.stack`, `err.message` hoặc bất kỳ chuỗi nào từ ngoại lệ runtime vào
 `upstreamDetails`. Các giá trị đó vẫn phải đi qua `errorResponse` / `buildErrorBody(code, msg)`
 mà không có body upstream.
 
-Việc truyền tiếp có chọn lọc lỗi 4xx từ upstream sẽ bảo toàn cấu trúc JSON an toàn và cách diễn đạt của nhà cung cấp mà cơ chế tự động khôi phục phía client yêu cầu, nhưng đây không phải là truyền tiếp nguyên trạng từng byte: bộ làm sạch đệ quy luôn chạy trước khi tuần tự hóa. Các body có tham chiếu vòng, chứa BigInt hoặc có `toJSON()` nguy hiểm sẽ bị từ chối theo nguyên tắc an toàn và không đủ điều kiện để truyền tiếp. OCR và kiểm duyệt áp dụng cùng một quy tắc; các body upstream không phải JSON, trống hoặc bị gắn nhãn sai sẽ được chuyển đổi thành phong bì lỗi JSON OmniRoute chuẩn.
+Việc truyền tiếp có chọn lọc lỗi 4xx từ upstream sẽ bảo toàn cấu trúc JSON an toàn và cách diễn đạt của nhà cung cấp mà cơ chế tự động khôi phục phía client yêu cầu, nhưng đây không phải là truyền tiếp nguyên trạng từng byte: bộ làm sạch đệ quy luôn chạy trước khi tuần tự hóa. Các body có tham chiếu vòng, chứa BigInt hoặc có `toJSON()` nguy hiểm sẽ bị từ chối theo nguyên tắc an toàn và không đủ điều kiện để truyền tiếp. OCR và kiểm duyệt áp dụng cùng một quy tắc; các body upstream không phải JSON, trống hoặc bị gắn nhãn sai sẽ được chuyển đổi thành phong bì lỗi JSON 67router chuẩn.
 
 ## Hạn chế đã biết của CodeQL: không nhận diện trình làm sạch tùy chỉnh
 

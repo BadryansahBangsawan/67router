@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute controla quais **origens de navegador** podem ler respostas entre origens
+O 67router controla quais **origens de navegador** podem ler respostas entre origens
 a partir de uma única lista de permissões centralizada. O modelo é **restritivo por padrão**:
 nenhuma origem é permitida até que você a autorize explicitamente. Esta página documenta como a lista de permissões
 é resolvida, o que `CORS_ALLOW_ALL=true` realmente expõe (e, principalmente, o que
@@ -45,13 +45,13 @@ nesta ordem:
 ## Modelo de ameaças — o que `CORS_ALLOW_ALL=true` realmente expõe
 
 Vale a pena levar a sério o alerta genérico da OWASP ("CORS com curinga = qualquer site
-pode chamar sua API"), mas a exposição do OmniRoute é **mais restrita do que no caso genérico**,
+pode chamar sua API"), mas a exposição do 67router é **mais restrita do que no caso genérico**,
 devido a um fato concreto da implementação:
 
 > **O `applyCorsHeaders()` central nunca emite
 > `Access-Control-Allow-Credentials`.** Um navegador não expõe uma resposta entre origens
 > _com credenciais_ (contendo cookies), a menos que o servidor envie
-> `Access-Control-Allow-Credentials: true`. O caminho CORS compartilhado do OmniRoute nunca
+> `Access-Control-Allow-Credentials: true`. O caminho CORS compartilhado do 67router nunca
 > faz isso.
 
 O que isso significa para cada superfície, mesmo com `CORS_ALLOW_ALL=true`:
@@ -68,20 +68,6 @@ permitir que o **preflight** CORS seja aprovado em rotas de gerenciamento — qu
 que uma página de outra origem não consegue fornecer. Isso **não** constitui um vetor de sequestro de sessão ou
 roubo de credenciais no caminho CORS compartilhado.
 
-### Uma exceção real — `/api/v1/agents/`
-
-As rotas do Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) definem
-seus **próprios** cabeçalhos CORS
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) e **emitem**
-`Access-Control-Allow-Origin: <origin>|*` juntamente com
-`Access-Control-Allow-Credentials: true`. Essa é a única superfície em que
-o reflexo da origem e as credenciais coexistem, e ela é **independente de
-`CORS_ALLOW_ALL`**. Essas rotas são autenticadas para gerenciamento
-(`requireManagementAuth`); operadores que expõem o dashboard fora do host devem
-estar cientes de que esse é o único local onde uma leitura entre origens com credenciais é permitida pelos
-cabeçalhos da resposta. A restrição a uma lista de permissões explícita é acompanhada
-separadamente desta orientação sobre CORS.
-
 ## Checklist de produção
 
 - **Nunca defina `CORS_ALLOW_ALL=true` em produção.** Deixe essa variável sem valor.
@@ -91,7 +77,7 @@ separadamente desta orientação sobre CORS.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Se o OmniRoute for executado atrás de um proxy reverso/túnel (nginx, Caddy, Cloudflare
+- Se o 67router for executado atrás de um proxy reverso/túnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale), o CORS **não** será seu único controle — a proteção de rotas
   de loopback continuará protegendo as rotas capazes de iniciar processos (consulte
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Não falsifique
@@ -109,7 +95,7 @@ Raramente é necessário usar o curinga, mesmo em desenvolvimento. Permita apena
 servidores de desenvolvimento que você utiliza:
 
 ```bash
-# Servidores de desenvolvimento Vite (5173) + Next.js (3000) acessando um OmniRoute local
+# Servidores de desenvolvimento Vite (5173) + Next.js (3000) acessando um 67router local
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -130,14 +116,14 @@ Security → CORS Allowed Origins**, sem necessidade de reinicialização.
   Mantenha as origens de gerenciamento/dashboard fora de qualquer configuração
   permissiva; elas devem permanecer estritamente bloqueadas por padrão.
 
-## Exemplo: proxy reverso na frente do OmniRoute
+## Exemplo: proxy reverso na frente do 67router
 
-O CORS é aplicado pelo próprio OmniRoute, portanto, em geral, o proxy **não** deve adicionar nem
+O CORS é aplicado pelo próprio 67router, portanto, em geral, o proxy **não** deve adicionar nem
 reescrever cabeçalhos `Access-Control-*` (cabeçalhos duplicados causam problemas nos navegadores). Encerre o TLS
-e encaminhe — deixe o OmniRoute responder à solicitação de preflight:
+e encaminhe — deixe o 67router responder à solicitação de preflight:
 
 ```nginx
-# nginx — encaminhe para o OmniRoute; NÃO injete Access-Control-* aqui
+# nginx — encaminhe para o 67router; NÃO injete Access-Control-* aqui
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -145,12 +131,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Mantenha os cabeçalhos de encaminhamento: um proxy no mesmo host se conecta pelo loopback, e são eles
-    # que informam ao OmniRoute que o solicitante não é o operador local. Um proxy que não adiciona nenhum deles
+    # que informam ao 67router que o solicitante não é o operador local. Um proxy que não adiciona nenhum deles
     # faz com que todos os solicitantes remotos pareçam locais. Também nunca defina X-Forwarded-For como 127.0.0.1.
 }
 ```
 
-Defina as origens permitidas para navegadores no OmniRoute (`CORS_ALLOWED_ORIGINS` ou na
+Defina as origens permitidas para navegadores no 67router (`CORS_ALLOWED_ORIGINS` ou na
 aba Segurança), não no proxy.
 
 ## Arquivos de origem
@@ -163,7 +149,6 @@ aba Segurança), não no proxy.
 | Status de execução para o dashboard                  | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Banner de aviso do dashboard                         | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Campo CORS Allowed Origins                           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS por rota do Cloud-Agent (a exceção)             | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Veja também
 

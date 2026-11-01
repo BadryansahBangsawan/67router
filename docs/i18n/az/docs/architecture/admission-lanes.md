@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute müxtəlif əhatə dairələrinə malik **iki** proses-lokal zolaq sisteminə malikdir. Onlar
+67router müxtəlif əhatə dairələrinə malik **iki** proses-lokal zolaq sisteminə malikdir. Onlar
 bir-birini tamamlayır; operatorlar hansına baxdıqlarını bilməlidirlər.
 
 ## 1. Bayt səviyyəsində proses üzrə qəbul (`chatBodyAdmission.ts`)

@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Earráid: {message}",
-    "serverOffline": "Tá freastalaí OmniRoute as líne. Tosaigh le: omniroute serve",
+    "serverOffline": "Tá freastalaí 67router as líne. Tosaigh le: omniroute serve",
     "authRequired": "Fíordheimhniú ag teastáil. Socraigh OMNIROUTE_API_KEY nó rith: omniroute setup",
     "rateLimited": "Teorainn ráta sáraithe. Athbheochan i ndiaidh {seconds}s.",
     "timeout": "Am istigh tar éis {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Scipeáil an契ordheimhniú"
   },
   "setup": {
-    "title": "Socrú OmniRoute",
+    "title": "Socrú 67router",
     "passwordPrompt": "Pasfhocal riaracháin",
     "providerPrompt": "Soláthraí réamhshocraithe (fág bán le scipeáil)",
     "done": "Socrú críochnaithe",
@@ -30,7 +30,7 @@
     "opencode": "Suiteáil agus coinníollach an @omniroute/opencode-plugin comhtháite le haghaidh OpenCode"
   },
   "doctor": {
-    "title": "Doiciméadóir OmniRoute",
+    "title": "Doiciméadóir 67router",
     "dbOk": "Bunachar sonraí: ceart go leor ({path})",
     "dbMissing": "Bunachar sonraí: gan túsú — rith `omniroute setup`",
     "portOk": "Port {port}: ar fáil",
@@ -82,7 +82,7 @@
       "providerOpt": "Scag de réir ainm soláthraí",
       "header": "ID         Soláthraí       Ainm                     Stádas dul in éag  Stádas tástála  Fuarú go dtí",
       "noData": "Níl aon sonraí ceangail soláthraí ar fáil.",
-      "requiresServer": "Éilíonn stádas soláthraithe go mbeadh an freastalaí OmniRoute ag rith."
+      "requiresServer": "Éilíonn stádas soláthraithe go mbeadh an freastalaí 67router ag rith."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Cuir leis nó nuashonraigh eochair API do sholáthraí",
     "listDescription": "Liostaigh gach eochair API cumraithe",
     "removeDescription": "Bain eochair API do sholáthraí",
-    "regenerateDescription": "Athghine eochair API OmniRoute",
-    "revokeDescription": "Cealaigh eochair API OmniRoute",
+    "regenerateDescription": "Athghine eochair API 67router",
+    "revokeDescription": "Cealaigh eochair API 67router",
     "revealDescription": "Nocht luach na heochrach API gan masc",
     "usageDescription": "Taispeáin úsáid le déanaí do eochair API",
     "usageLimitOpt": "Líon na n-iarratas le déanaí",
@@ -172,13 +172,6 @@
       "period": "Raithne ama: 1d|7d|30d|90d|ytd|all (réamhshocrú: 30d)",
       "provider": "Scag de réir ID Soláthraí"
     },
-    "budget": {
-      "description": "Bainistigh buiséid costais",
-      "set": {
-        "scope": "Scóp an bhuiséid (réamhshocrú: domhanda)",
-        "period": "Tréimhse buiséid: laethúil|seachtúil|míosúil (réamhshocrú: míosúil)"
-      }
-    },
     "quota": {
       "description": "Taispeáin úsáid cuota an tsoláthraí",
       "provider": "Scag de réir aitheantóra soláthraí",
@@ -225,7 +218,7 @@
     "noCombo": "Níor aimsíodh comhoibriú comhoiriúnach. Cumraigh ceann le: omniroute combo create"
   },
   "chat": {
-    "description": "Seol teachtaireacht comhrá aon-uair go OmniRoute",
+    "description": "Seol teachtaireacht comhrá aon-uair go 67router",
     "file": "Léigh an t-impulse ó chomhad",
     "stdin": "Léigh an t-impulse ó stdin",
     "system": "Impulse córais",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Tosaigh freastalaí OmniRoute (gníomh réamhshocraithe)",
-    "starting": "Ag tosú freastalaí OmniRoute ar port {port}...",
+    "description": "Tosaigh freastalaí 67router (gníomh réamhshocraithe)",
+    "starting": "Ag tosú freastalaí 67router ar port {port}...",
     "ready": "Réidh ag http://localhost:{port}",
     "stopping": "Ag stopadh freastalaí (PID {pid})...",
     "stopped": "Tá an freastalaí stoptha.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Cúltaca",
-    "description": "Cruthaigh cúltaca de shonraí OmniRoute",
+    "description": "Cruthaigh cúltaca de shonraí 67router",
     "creating": "Ag cruthú cúltaca...",
     "done": "Cúltaca shábháilte go {path}",
     "noFiles": "Níl aon chomhaid le cúltaca (níl an bunachar sonraí cumasaithe)",
@@ -277,7 +270,7 @@
     "noBackups": "Níl aon chúltacaí aimsithe.",
     "notFound": "Cúltaca gan aimsiú: {name}",
     "confirmRestore": "Forscríobh sonraí reatha le cúltaca ó {ts}?",
-    "createDescription": "Cruthaigh cúltaca de shonraí OmniRoute",
+    "createDescription": "Cruthaigh cúltaca de shonraí 67router",
     "nameOpt": "Ainm saincheaptha cúltaca",
     "cloudOpt": "Uaslódáil cúltaca go stóráil scamall",
     "encryptOpt": "Criptigh cúltaca le AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Theip ar ghlanadh na taisce."
   },
   "redis": {
-    "description": "Seol coimeádán Redis áitiúil le cliceáil amháin (Podman nó Docker) le haghaidh taisce agus rianú cion le haghaidh OmniRoute"
+    "description": "Seol coimeádán Redis áitiúil le cliceáil amháin (Podman nó Docker) le haghaidh taisce agus rianú cion le haghaidh 67router"
   },
   "test": {
     "description": "Tástáil ceangal soláthraí",
@@ -390,36 +383,8 @@
       "description": "Log iniúcháin MCP (ailias le haghaidh iniúchadh --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Liostaigh scileanna A2A ar fáil ón chárta gníomhaire"
-    },
-    "invoke": {
-      "description": "Glaigh ar scil A2A agus fill ar ID an tasc",
-      "input": "Oibiacht ionchur JSON",
-      "input_file": "Cosán go comhad ionchur JSON",
-      "wait": "Fan le críoch an tasc sula dteagmháil ar ais",
-      "timeout": "Am barraíochta ag fanacht le críoch i ms (réamhshocrú: 60000)"
-    },
-    "tasks": {
-      "description": "Bainistigh tascanna A2A",
-      "list": {
-        "status": "Scag de réir stádais",
-        "skill": "Scag de réir ID scile"
-      },
-      "watch": {
-        "description": "Ceap stádas an tasc go dtí críoch"
-      },
-      "stream": {
-        "description": "Straimh imeartha tasc trí SSE"
-      },
-      "logs": {
-        "description": "Taispeáin teachtaireachtaí tasc agus gléasraí"
-      }
-    }
-  },
   "policy": {
-    "description": "Bainistigh polasaithe údarúcháin OmniRoute",
+    "description": "Bainistigh polasaithe údarúcháin 67router",
     "list": {
       "description": "Liostaigh polasaithe",
       "kind": "Scag de réir cineáil (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Cumraigh agus déan iniúchadh ar phipelines comhbhrúite OmniRoute",
+    "description": "Cumraigh agus déan iniúchadh ar phipelines comhbhrúite 67router",
     "status": {
       "description": "Taispeáin stádas comhbhrúite reatha agus socruithe"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Rothlaigh túinéal {type}? (ginefar URL nua)"
   },
   "stop": {
-    "description": "Stop freastalaí OmniRoute",
+    "description": "Stop freastalaí 67router",
     "stopping": "Ag stopadh freastalaí (PID {pid})...",
     "stopped": "Freastalaí stoptha.",
     "notRunning": "Níl freastalaí ag rith.",
     "portFallback": "Comhad PID gan aimsiú, ag triail stop bunaithe ar phort..."
   },
   "restart": {
-    "description": "Atosaigh freastalaí OmniRoute",
-    "restarting": "Ag atosú freastalaí OmniRoute..."
+    "description": "Atosaigh freastalaí 67router",
+    "restarting": "Ag atosú freastalaí 67router..."
   },
   "dashboard": {
-    "description": "Oscail painéal riaracháin OmniRoute i mbrabhsálaí",
+    "description": "Oscail painéal riaracháin 67router i mbrabhsálaí",
     "opening": "Ag oscailt an phainéil ag {url}",
     "urlOnly": "Priontáil URL an phainéil gan oscailt an bhrabhsálaí",
     "tui": "Oscail painéal idirghníomhach TUI (éadáil teirminéil, 7 cluaisín)"
@@ -560,120 +525,6 @@
       "description": "Faigh iontráil aonair de log iniúchta de réir aitheantais"
     }
   },
-  "skills": {
-    "description": "Bainistigh scileanna OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Liostaigh scileanna suiteáilte",
-      "type": "Scag de réir cineáil (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Taispeáin scileanna cumasaithe amháin",
-      "disabled": "Taispeáin scileanna díchumasaithe amháin",
-      "api_key": "Scag de réir eochair API"
-    },
-    "get": {
-      "description": "Faigh sonraí do scile de réir aitheantais"
-    },
-    "install": {
-      "description": "Suiteáil scile ó chomhad nó URL",
-      "from_file": "Cosán go comhad sainmhínithe JSON scile",
-      "from_url": "URL sainmhínithe scile cianda",
-      "type": "Cineál scile (sandbox|custom|hybrid)",
-      "enable": "Cumasigh scile tar éis suiteála"
-    },
-    "enable": {
-      "description": "Cumasigh scile de réir aitheantais"
-    },
-    "disable": {
-      "description": "Díchumasaigh scile de réir aitheantais",
-      "yes": "Léim thar iarratas dearbhaithe"
-    },
-    "delete": {
-      "description": "Scrios scil le ID",
-      "yes": "Cliceáil Thar ceist deimhnithe"
-    },
-    "execute": {
-      "description": "Rith scil le ID",
-      "input": "Cuspóir ionchurtha JSON",
-      "input_file": "Conair go comhad ionchurtha JSON",
-      "timeout": "Am stad rite i ms (réamhshocrú: 30000)"
-    },
-    "executions": {
-      "description": "Liostáil stair rith scileanna",
-      "skill": "Scag de réir ID scile",
-      "limit": "Uaslíon torthaí (réamhshocrú: 50)",
-      "status": "Scag de réir stádais (ag rith|críochnaithe|teipithe)"
-    },
-    "skillssh": {
-      "description": "Bainistigh scileanna suiteáilte trí SSH"
-    },
-    "marketplace": {
-      "description": "Brabhsáil agus suiteáil scileanna ón gcearnóg"
-    },
-    "mp": {
-      "search": {
-        "description": "Cuardaigh pacáistí cearnóige",
-        "category": "Scag de réir catagóire",
-        "tag": "Scag de réir clib",
-        "limit": "Uaslíon torthaí (réamhshocrú: 30)",
-        "sort": "Sórtáil de réir: íosluchtuithe|ráta|is déanaí"
-      },
-      "info": {
-        "description": "Taispeáin sonraí an phacáiste agus an readme"
-      },
-      "install": {
-        "description": "Suiteáil pacáiste cearnóige",
-        "version": "Leagan pacáiste (réamhshocrú: is déanaí)",
-        "enable": "Cumasaigh tar éis suiteáil",
-        "yes": "Cliceáil Thar ceist deimhnithe"
-      },
-      "categories": {
-        "description": "Liostáil catagóirí cearnóige"
-      },
-      "featured": {
-        "description": "Taispeáin pacáistí cearnóige réadmhaisithe"
-      }
-    }
-  },
-  "memory": {
-    "description": "Bainistigh cuimhne comhrá OmniRoute (FTS5 + veicteoir)",
-    "search": {
-      "description": "Cuardaigh iontrálacha cuimhne le ceist shéimeantach",
-      "type": "Scag de réir cineál cuimhne (úsáideoir|aiseolas|tionscadal|tagairt)",
-      "limit": "Uaslíon torthaí (réamhshocrú: 20)",
-      "api_key": "Scag de réir eochair API",
-      "token_budget": "Teorainn le huaslíon comharthaí i dtorthaí"
-    },
-    "add": {
-      "description": "Cuir iontráil cuimhne nua leis",
-      "content": "Ábhar téacs cuimhne",
-      "file": "Léigh ábhar ó chomhad",
-      "type": "Cineál cuimhne (réamhshocrú: úsáideoir)",
-      "metadata": "Cuspóir metadata JSON",
-      "api_key": "Ceangail le heochair API"
-    },
-    "clear": {
-      "description": "Scrios iontrálacha cuimhne a mheaitseálann scagairí",
-      "type": "Scag de réir cineáil",
-      "older": "Scrios iontrálacha níos sine ná ainm tréimhse (30l, 6m, 1b)",
-      "api_key": "Scag de réir eochair API",
-      "yes": "Cuir an moladh deimhnithe ar ceal"
-    },
-    "list": {
-      "description": "Liostaigh iontrálacha cuimhine gan rátáil cuardaigh",
-      "type": "Scag de réir cineál",
-      "limit": "Uasmhéid torthaí (réamhshocrú: 100)",
-      "api_key": "Scag de réir eochair API"
-    },
-    "get": {
-      "description": "Faigh iontráil cuimhine amháin le ID"
-    },
-    "delete": {
-      "description": "Scrios iontráil cuimhine le ID",
-      "yes": "Cuir an moladh deimhnithe ar ceal"
-    },
-    "health": {
-      "description": "Taispeáin sláinte subsistéim cuimhine (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Bainistigh ceangail soláthraithe OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Cuir an moladh deimhnithe ar ceal"
     }
   },
-  "cloud": {
-    "description": "Bainistigh tascanna gníomhaí cloud AI (codex, devin, jules)",
-    "agents": {
-      "description": "Liostaigh gníomhaí cloud atá ar fáil"
-    },
-    "agent": {
-      "description": "Bainistigh tascanna gníomhaí cloud {agent}",
-      "auth": {
-        "description": "Údáigh {agent} tríd an OAuth"
-      }
-    },
-    "task": {
-      "description": "Bainistigh tascanna gníomhaí cloud",
-      "create": {
-        "description": "Cruthaigh tasc gníomhaí nua",
-        "title": "Teideal tasc (réamhshocraítear go dtí na chéad 80 carachtar den phrómpt)",
-        "prompt": "Téacs prómpta an tasc",
-        "prompt_file": "Léigh prómpt ó chomhad",
-        "repo": "URL stór le clónadh don tasc",
-        "branch": "Ainm brainse le húsáid",
-        "metadata": "Oibiacht mheite sonraí JSON"
-      },
-      "list": {
-        "description": "Liostaigh tascanna gníomhaí",
-        "status": "Scag de réir stádais (ag rith|críochnaithe|teipite|curtha ar ceal)",
-        "limit": "Uasmhéid torthaí (réamhshocrú: 50)"
-      },
-      "get": {
-        "description": "Faigh sonraí tasc le ID"
-      },
-      "status": {
-        "description": "Priontáil stádas tasc (ag rith|críochnaithe|teipite|curtha ar ceal)"
-      },
-      "cancel": {
-        "description": "Cealaigh tasc atá ag rith",
-        "yes": "Neamhordú moladh deimhniú"
-      },
-      "approve": {
-        "description": "Cinnigh plean an tseiseáin chun tosaigh ar fheidhmiú"
-      },
-      "message": {
-        "description": "Seol teachtaireacht go tasc ag rith"
-      }
-    },
-    "sources": {
-      "description": "Liosta comhad foinse cruthaithe le tasc"
-    }
-  },
-  "eval": {
-    "description": "Dírithe ar shuitéanna agus ar reábhanna",
-    "suites": {
-      "description": "Bainistiú suiteanna luachanna",
-      "list": {
-        "description": "Liosta tacair mheastóireachta"
-      },
-      "get": {
-        "description": "Faigh sonraí an tionscadail measúnaithe de réir ID"
-      },
-      "create": {
-        "description": "Cruthaigh eval suite ón chomhaid JSON",
-        "file": "Cosán go dtí an comhad JSON sainiúcháin seifte"
-      }
-    },
-    "run": {
-      "description": "Tosaigh rith luachánoire do shraith",
-      "model": "Aitheantas an Mhúnla le hathbhreithniú (réamhshocrú: uathoibríoch)",
-      "combo": "Fórsaigh teaglaim ar leith le hainm",
-      "concurrency": "Líon na shamhshamplaí comhuaineacha (réamhshocrú: 4)",
-      "tag": "Cuir lipéad ar an rith seo chun é a scagadh ina dhiaidh sin",
-      "watch": "Féach ar dhul chun cinn an rith go dtí go gcríochnaítear é"
-    },
-    "list": {
-      "description": "Liostaigh ritanna meastóireachta",
-      "suite": "Scag de réir Aitheantas an tseisiúin",
-      "status": "Scag de réir stádais",
-      "since": "Fill ar ais rithanna ó an stampa seo amach",
-      "limit": "Torthaí uasta (réamhshocrú: 50)"
-    },
-    "get": {
-      "description": "Faigh sonraí seisiún eval trí ID"
-    },
-    "results": {
-      "description": "Taispeáin sampla torthaí le haghaidh rith luachmhair",
-      "failed": "Taispeáin samplaí nár éirigh leo amháin"
-    },
-    "cancel": {
-      "description": "Cealaigh eval reáchtáilte",
-      "yes": "Léim thar luaidh dheimhnithe"
-    },
-    "scorecard": {
-      "description": "Taispeáin scórchairt i gcomhthráthadh luaidhméadrach críochtha"
-    }
-  },
-  "webhooks": {
-    "description": "Bainistigh ciorcaid shnáithe OmniRoute",
-    "events": {
-      "description": "Liostaigh gach cineál ócáid webhook atá ar fáil"
-    },
-    "list": {
-      "description": "Liostaigh gréasánóideanna cumraithe"
-    },
-    "get": {
-      "description": "Faigh sonraí gréasáin oibre de réir ID"
-    },
-    "add": {
-      "description": "Cláraigh webhook nua",
-      "url": "URL a bhfuil sé dírithe air",
-      "events": "Liosta cineálacha imeartha scartha le camóga",
-      "secret": "Rúin shíniúcháin HMAC",
-      "header": "Buntáiste breise i bhformáid eochair=luach (in-athdhéanta)",
-      "no_enabled": "Cruthaigh giucfhrá i riocht díchumasaithe"
-    },
-    "update": {
-      "description": "Uathghrádaigh webhook atá ann cheana",
-      "enabled": "Socraigh stát cumasaithe (true|false)"
-    },
-    "remove": {
-      "description": "Scriosadh webhook",
-      "yes": "Scipeáil an t-atarraing dearbhaithe"
-    },
-    "test": {
-      "description": "Seol tarlú tástála go webhook",
-      "event": "Cineál tarlú le hiomadú (réamhshocrú: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Ródaí AI Cliste le Filleadh Uathoibríoch",
+    "description": "67router — Ródaí AI Cliste le Filleadh Uathoibríoch",
     "version": "Priontáil leagan agus scoir",
     "output": "Formáid aschuir (bord, json, jsonl, csv)",
     "quiet": "Bac aschur neamhriachtanach",
     "no_color": "Díchumasaigh aschur daite",
     "timeout": "Am ama iarratais HTTP i soicindí milliúmana",
-    "api_key": "Eochair API do fhreastalaí OmniRoute",
-    "base_url": "Bun-URL freastalaí OmniRoute",
+    "api_key": "Eochair API do fhreastalaí 67router",
+    "base_url": "Bun-URL freastalaí 67router",
     "context": "Comhthéacs/próifíl freastalaí le húsáid don ordú seo",
     "lang": "Socraigh teanga taispeáinte CLI (forbronnar OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Bainisteáil comhaid (uaslódáil, liostáil, faigh, íoslódáil, scrios)",
-    "list": {
-      "purpose": "Scag de réir cuspóra",
-      "limit": "Uasmhéid torthaí"
-    },
-    "get": {
-      "description": "Faigh meiteashonraí comhaid"
-    },
-    "upload": {
-      "description": "Uaslódáil comhad",
-      "purpose": "Cuspóir comhaid (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Íoslódáil ábhar comhaid",
-      "out": "Sábháil go cosán (réamhshocrú: stdout)"
-    },
-    "delete": {
-      "yes": "Scipeáil dearbhú"
-    }
-  },
-  "batches": {
-    "description": "Bainisteáil poist bathais comhoiriúnach le OpenAI",
-    "list": {
-      "status": "Scag de réir stádais",
-      "limit": "Uasmhéid torthaí"
-    },
-    "create": {
-      "description": "Cruthaigh post bathais",
-      "inputFile": "ID comhaid ionchuir",
-      "endpoint": "Sprioc-deireadh pointe",
-      "window": "Fuinneog críochnaithe",
-      "metadata": "Cuir eochair meiteashonraí leis key=value"
-    },
-    "submit": {
-      "description": "Uaslódáil comhad JSONL agus cruthaigh bathais",
-      "jsonl": "Cosán go comhad JSONL",
-      "endpoint": "Sprioc-deireadh pointe",
-      "wait": "Fan le críochnú"
-    },
-    "cancel": {
-      "yes": "Scipeáil dearbhú"
-    },
-    "wait": {
-      "timeout": "Am ama i soicindí milliúmana"
-    },
-    "output": {
-      "out": "Sábháil aschur go cosán"
-    },
-    "errors": {
-      "out": "Sábháil earráidí go cosán"
-    }
   },
   "translator": {
     "description": "Aistrigh coirp iarratais idir formáidí LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Rochtain agus tástáil an spec OpenAPI OmniRoute",
+    "description": "Rochtain agus tástáil an spec OpenAPI 67router",
     "dump": {
       "description": "Dumpáil an spec OpenAPI go stdout nó comhad",
       "format": "Formáid aschur: yaml|json (réamhshocrú: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Gníomhachtaigh an comhoiriú is fearr ranga"
     }
   },
-  "oneproxy": {
-    "description": "Bainistigh linn uachtarach OneProxy",
-    "stats": {
-      "provider": "Scag de réir soláthraí",
-      "period": "Tréimhse ama (réamhshocrú: 24h)"
-    },
-    "fetch": {
-      "description": "Faigh seachfhreastalaithe ón linn",
-      "count": "Líon na seachfhreastalaithe le fáil (réamhshocrú: 1)",
-      "type": "Cineál seachfhreastalaí: http|socks5 (réamhshocrú: http)"
-    },
-    "rotate": {
-      "description": "Éiligh rothlú seachfhreastalaí",
-      "provider": "Soláthraí le rothlú dó",
-      "connectionId": "ID ceangail shonrach le rothlú"
-    },
-    "config": {
-      "description": "Taispeáin nó nuashonraigh cumraíocht OneProxy",
-      "enabled": "Cumasaigh linn seachfhreastalaí (true|false)",
-      "poolSize": "Méid na linne",
-      "providerSource": "URL do sholáthraí seachfhreastalaí",
-      "rotationPolicy": "Polasaí rothlú: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Liostáil linn seachfhreastalaí reatha le meitricí"
-    }
-  },
   "open": {
-    "description": "Oscail leathanach painéil rialaithe OmniRoute sonrach sa bhrabhsálaí",
+    "description": "Oscail leathanach painéil rialaithe 67router sonrach sa bhrabhsálaí",
     "url": "Priontáil URL amháin, ná oscail an brabhsálaí"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sioncronaigh cumraíocht idir imthaispíní OmniRoute",
+    "description": "Sioncronaigh cumraíocht idir imthaispíní 67router",
     "push": {
       "description": "Brúigh cumraíocht go scamall nó imthaispín iargúlta"
     },
@@ -1228,7 +874,7 @@
     "filter": "Scag de réir leibhéal (earráid, rabhadh, eolas) — le cultacha leithliseach",
     "lines": "Líon na línte le fáil",
     "timeout": "Am feithimh ceangail i ms",
-    "baseUrl": "URL bonn API OmniRoute",
+    "baseUrl": "URL bonn API 67router",
     "requestId": "Scag de réir ID iarratais",
     "apiKey": "Scag de réir eochair API",
     "combo": "Scag de réir ainm an chomhá",
@@ -1244,10 +890,10 @@
     "description": "Rialaigh an t-ícon trála córais",
     "show": "Taispeáin an t-ícon trála (má tá an tseirbhís ag rith le --tray)",
     "hide": "Folaigh an t-ícon trála",
-    "quit": "Scoir OmniRoute tríd an trála"
+    "quit": "Scoir 67router tríd an trála"
   },
   "autostart": {
-    "description": "Bainistigh tús-uathoibriú OmniRoute ag tosú (Linux: seirbhís úsáideora systemd)",
+    "description": "Bainistigh tús-uathoibriú 67router ag tosú (Linux: seirbhís úsáideora systemd)",
     "enable": "Cumasaigh tús-uathoibriú ag tosú",
     "disable": "Díchumasaigh tús-uathoibriú ag tosú",
     "toggle": "Scoránaigh tús-uathoibriú ag tosú",
@@ -1268,30 +914,20 @@
     "system": "Prasír córas",
     "resume": "Atosaigh seisiún sábháilte de réir ainm"
   },
-  "plugin": {
-    "description": "Bainistigh breiseáin CLI (omniroute-cmd-*)",
-    "list": "Liostaigh breiseáin shuiteáilte",
-    "install": "Suiteáil breiseán ó npm nó conair logánta",
-    "remove": "Bain breiseán shuiteáilte",
-    "info": "Taispeáin sonraí do bhreiseán shuiteáilte",
-    "search": "Cuardaigh reáiste npm le haghaidh breiseáin ar fáil",
-    "update": "Nuashonraigh breiseáin shuiteáilte",
-    "scaffold": "Creadum i mbunchaighde breiseáin nua"
-  },
   "launch": {
-    "description": "Seol Claude Code dírithe ar OmniRoute (logánta nó cianda, le --profile)",
+    "description": "Seol Claude Code dírithe ar 67router (logánta nó cianda, le --profile)",
     "token": "Comhartha a sheolfaidh an cliant Claude (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "Níl OmniRoute inrochtana ag {port}. Tosaigh é le 'omniroute serve'.",
+    "notRunning": "Níl 67router inrochtana ag {port}. Tosaigh é le 'omniroute serve'.",
     "notFound": "Níor aimsíodh an CLI 'claude' i PATH."
   },
   "run": {
-    "description": "Seol sprioc CLI a thacaítear trí OmniRoute"
+    "description": "Seol sprioc CLI a thacaítear trí 67router"
   },
   "setupClaude": {
-    "description": "Gineadh próifílí ~/.claude/profiles Claude Code ó chatalóg samhlacha OmniRoute"
+    "description": "Gineadh próifílí ~/.claude/profiles Claude Code ó chatalóg samhlacha 67router"
   },
   "connect": {
-    "description": "Ceangail le freastalaí cianda OmniRoute agus téigh isteach i mód cianda"
+    "description": "Ceangail le freastalaí cianda 67router agus téigh isteach i mód cianda"
   },
   "tokens": {
     "description": "Bainistigh comharthacha rochtana CLI scópáilte (mód cianda)"
@@ -1300,10 +936,10 @@
     "description": "Roghnaigh soláthraí+samhail ón bhfreastalaí gníomhach agus cumraigh CLI áitiúil a thacaítear"
   },
   "launchCodex": {
-    "description": "Seol Codex CLI dírithe ar OmniRoute (áitiúil nó VPS cianda)"
+    "description": "Seol Codex CLI dírithe ar 67router (áitiúil nó VPS cianda)"
   },
   "setupCodex": {
-    "description": "Gineadh comhaid próifíle ~/.codex ó chatalóg beo samhlacha OmniRoute"
+    "description": "Gineadh comhaid próifíle ~/.codex ó chatalóg beo samhlacha 67router"
   },
   "packs": {
     "description": "Bainistigh paicéid rithaithe roghnach (ML / uathoibriú brabhsálaí)",
@@ -1316,7 +952,7 @@
     "errUnknown": "paicéad anaithnid: {name}",
     "errNoIndex": "innéacs paicéad gan aimsiú; seol --source <dir> a shealbhaíonn ualach an phaicéid (seoltar é i mbraisle deisce in aice an aip)",
     "installed": "paicéad \"{name}\" suiteáilte agus deimhnithe ag {dir}",
-    "restartHint": "atosaigh freastalaí OmniRoute (nó an aip deisce) ionas go bhfaigheann an rith an paicéad suas",
+    "restartHint": "atosaigh freastalaí 67router (nó an aip deisce) ionas go bhfaigheann an rith an paicéad suas",
     "removed": "paicéad \"{name}\" bainte",
     "notInstalled": "paicéad \"{name}\" ní raibh suiteáilte",
     "verifyOk": "gach paicéad suiteáilte deimhnithe",

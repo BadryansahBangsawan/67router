@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Alert } from "@omniroute/ui-kit/alert";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { PageHeader, SectionHeader } from "@omniroute/ui-kit/page-header";
 import { SegmentedControl } from "@/shared/components";
 import Card from "@/shared/components/Card";
@@ -179,7 +180,7 @@ export default function CavemanContextPageClient() {
         compact
         title={
           <span className="flex items-center gap-3">
-            <Icon name="compress" size={30} className="text-primary" />
+            <Icon name="compress" size={24} className="text-text-muted" />
             {t("title")}
           </span>
         }
@@ -197,14 +198,11 @@ export default function CavemanContextPageClient() {
         }
       />
 
-      <section className="grid grid-cols-1 gap-3 sm:grid-cols-4">
+      <KpiStrip columns={4} aria-label={t("title")}>
         {statCards.map(([label, value]) => (
-          <Card key={label} padding="sm">
-            <p className="text-xs uppercase text-text-muted">{label}</p>
-            <p className="mt-1 text-xl font-semibold text-text-main">{value}</p>
-          </Card>
+          <KpiCell key={label} label={label} value={value} />
         ))}
-      </section>
+      </KpiStrip>
 
       <Card padding="sm">
         <SectionHeader title={t("languagePacks")} description={t("languagePacksDesc")} />
@@ -238,7 +236,7 @@ export default function CavemanContextPageClient() {
           {languagePacks.map((pack) => (
             <Checkbox
               key={pack.language}
-              className="justify-between rounded-lg border border-border bg-bg p-3 text-sm text-text-main"
+              className="justify-between rounded-control border border-border bg-surface p-3 text-sm text-text-main"
               label={`${pack.language} - ${t("rulesCount", { count: pack.ruleCount })}`}
               checked={languageConfig.enabledPacks.includes(pack.language)}
               disabled={saving || pack.language === "en"}
@@ -265,8 +263,11 @@ export default function CavemanContextPageClient() {
               <p className="text-text-muted">{t("noAnalytics")}</p>
             ) : (
               modeBreakdown.map(([mode, stats]) => (
-                <div key={mode} className="flex items-center justify-between gap-3">
-                  <span>{mode}</span>
+                <div
+                  key={mode}
+                  className="flex items-center justify-between gap-3 border-b border-border pb-2 last:border-b-0 last:pb-0"
+                >
+                  <span className="font-mono text-xs">{mode}</span>
                   <span className="font-mono text-xs text-text-muted">
                     {formatNumber(stats.tokensSaved)} / {stats.avgSavingsPct}%
                   </span>
@@ -292,7 +293,7 @@ export default function CavemanContextPageClient() {
             // Scrollable region: keyboard users must be able to focus it (axe scrollable-region-focusable).
             tabIndex={0}
             aria-label={t("outputModeTitle")}
-            className="mt-3 overflow-auto rounded-lg border border-border bg-bg p-3 text-xs text-text-main"
+            className="mt-3 overflow-auto rounded-control border border-border bg-bg-subtle p-3 font-mono text-xs leading-5 text-text-main"
           >
             {previewPrompt}
           </pre>

@@ -119,7 +119,11 @@ export default function RadarIntelPage() {
         }
       />
 
-      {error && <div className="rounded-lg bg-error/10 p-3 text-sm text-error">{error}</div>}
+      {error && (
+        <div className="rounded-control border border-error/30 bg-error-bg p-3 text-sm text-error">
+          {error}
+        </div>
+      )}
 
       {loading ? (
         <div className="flex min-h-48 items-center justify-center text-text-muted">
@@ -133,7 +137,9 @@ export default function RadarIntelPage() {
         <>
           <div className="grid gap-4 md:grid-cols-3">
             <Card>
-              <p className="text-xs uppercase tracking-wide text-text-muted">{t("methodology")}</p>
+              <p className="text-xs uppercase tracking-[0.04em] text-text-muted">
+                {t("methodology")}
+              </p>
               <p className="mt-2 font-semibold">
                 {t("eloMethod", {
                   initial: intel.methodology.initialRating,
@@ -142,7 +148,9 @@ export default function RadarIntelPage() {
               </p>
             </Card>
             <Card>
-              <p className="text-xs uppercase tracking-wide text-text-muted">{t("freshness")}</p>
+              <p className="text-xs uppercase tracking-[0.04em] text-text-muted">
+                {t("freshness")}
+              </p>
               <p className="mt-2 font-semibold">
                 {t(`freshnessValues.${intel.catalog.freshness}`)}
               </p>
@@ -151,7 +159,7 @@ export default function RadarIntelPage() {
               </p>
             </Card>
             <Card>
-              <p className="text-xs uppercase tracking-wide text-text-muted">{t("trend")}</p>
+              <p className="text-xs uppercase tracking-[0.04em] text-text-muted">{t("trend")}</p>
               <p className="mt-2 font-semibold">{t(`trendValues.${intel.catalog.trend}`)}</p>
               <p className="mt-1 text-sm text-text-muted">
                 {t("modelDelta", {

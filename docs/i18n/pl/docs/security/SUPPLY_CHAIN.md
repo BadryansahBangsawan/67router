@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute publikuje artefakty npm + Docker. Te bramki zapewniają pochodzenie,
+67router publikuje artefakty npm + Docker. Te bramki zapewniają pochodzenie,
 inwentaryzację (SBOM) i skanowanie CVE, wszystko w ramach OSS, włączone w procesy wydawnicze.
 Postawa **najpierw doradcza** — zgłaszają teraz, promują do blokowania po pierwszym
 zielonym wydaniu.
@@ -57,7 +57,7 @@ niepowodzenie **pomiaru** nigdy nie blokuje, tylko **zmierzona** regresja blokuj
 
 - **Łańcuch zależności:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. Potwierdzone za pomocą `package-lock.json` — dokładnie jeden pakiet w całym drzewie zależności (`@openai/codex-security`) deklaruje `extract-zip`, i dokładnie jeden pakiet (`promptfoo`) deklaruje `@openai/codex-security`.
 - **Brak naprawionej wersji w całym łańcuchu.** `extract-zip@2.0.1` (opublikowany w 2020) jest ostatnią wersją pakietu — nie jest utrzymywany. Obecna wersja npm-latest (`0.1.29`) `@openai/codex-security` nadal pobiera `extract-zip@2.0.1`.
-- **Niedostępne z produkcji.** `promptfoo` jest tylko devDependency (nigdy nie jest wymieniony w `dependencies`), i żaden plik w `src/`, `open-sse/` lub `bin/` nie importuje pakietu npm `extract-zip` — własna funkcja pomocnicza `extractZip()` OmniRoute (`src/lib/versionManager/binaryManager.ts:93`) wywołuje natywne `unzip`/`tar` i jest niezwiązana. `@openai/codex-security` dostarcza również własną ochronę przed przechodzeniem przez dowiązania symboliczne, oprócz funkcji zwrotnej `onEntry` z `extract-zip`.
+- **Niedostępne z produkcji.** `promptfoo` jest tylko devDependency (nigdy nie jest wymieniony w `dependencies`), i żaden plik w `src/`, `open-sse/` lub `bin/` nie importuje pakietu npm `extract-zip` — własna funkcja pomocnicza `extractZip()` 67router (`src/lib/versionManager/binaryManager.ts:93`) wywołuje natywne `unzip`/`tar` i jest niezwiązana. `@openai/codex-security` dostarcza również własną ochronę przed przechodzeniem przez dowiązania symboliczne, oprócz funkcji zwrotnej `onEntry` z `extract-zip`.
 - **Nie** należy tworzyć aliasu dla `extract-zip` za pomocą `package.json` `overrides` — jedyny możliwy zamiennik typu drop-in to Electron-org-internal i jest on niekompatybilny z API własnych kontroli `onEntry`/`defaultDirMode`/`defaultFileMode` `@openai/codex-security`; nadpisanie go spowodowałoby ciche złamanie kontroli bezpieczeństwa tego pakietu.
 - **Poziom bazowy:** zmierzona wartość `vulnCount` (3) z `osv` jest już znacznie poniżej zamrożonego poziomu bazowego `config/quality/quality-baseline.json` (27) — nie jest potrzebna zmiana w mechanizmie zapadkowym.
 - **Zabezpieczenie przed regresją:** `tests/unit/extract-zip-14482-exposure.test.ts` potwierdza powyższy łańcuch i niezmienność braku importu do produkcji; test kończy się niepowodzeniem w CI, jeśli którykolwiek z nich zostanie kiedykolwiek naruszony (np. przyszły PR sprawi, że `extract-zip` będzie dostępny z produkcji).

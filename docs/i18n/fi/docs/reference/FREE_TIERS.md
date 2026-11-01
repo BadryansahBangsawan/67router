@@ -9,9 +9,9 @@
 > **Viimeksi tutkittu:** 2026-06-17 — palveluntarjoajakohtainen verkkotutkimus (viralliset dokumentaatiot + viimeisten 7 päivän uutiset, 50 agentin tarkistus vastakkaisella varmennuksella), jossa päivitettiin jokaisen ilmaistason kiintiö ja käyttöehdot. **Osittainen uudelleentarkastus 2026-09-02** (`gemini`, `ollama-cloud`, `groq`, `nara`, `mistral` — katso alla oleva päivätty huomautus).
 > **Ensisijainen tietolähde (luettelo):** `open-sse/config/freeModelCatalog.ts` (mallikohtaiset budjetit, päällekkäiset poolit poistettu). Alla olevat tokenbudjettiluvut perustuvat ajantasaiseen verkkotutkimukseen ja ovat **arvioita** — katso [Menetelmät ja huomautukset](#methodology--caveats).
 
-## TL;DR — kuinka paljon ilmaista inferenssiä OmniRoute todellisuudessa kokoaa yhteen?
+## TL;DR — kuinka paljon ilmaista inferenssiä 67router todellisuudessa kokoaa yhteen?
 
-Nämä luvut kuvaavat erillisiä kolmannen osapuolen tilejä ja kelpoisuusehtoja koko luettelossa. OmniRoute ei myönnä tätä budjettia: sinun on hankittava tarvittavat tilit tai tunnistetiedot, yhdistettävä kelpoiset palveluntarjoajat ja noudatettava niiden rajoituksia. Todellinen käytettävissä oleva kapasiteetti voi olla pienempi tai jopa nolla uudessa asennuksessa, jossa ei ole yhtään kelpoista reittiä. Palveluntarjoajat, joiden merkintä on `tos: avoid`, jätetään oletusarvoisesti automaattisen reitityksen ulkopuolelle.
+Nämä luvut kuvaavat erillisiä kolmannen osapuolen tilejä ja kelpoisuusehtoja koko luettelossa. 67router ei myönnä tätä budjettia: sinun on hankittava tarvittavat tilit tai tunnistetiedot, yhdistettävä kelpoiset palveluntarjoajat ja noudatettava niiden rajoituksia. Todellinen käytettävissä oleva kapasiteetti voi olla pienempi tai jopa nolla uudessa asennuksessa, jossa ei ole yhtään kelpoista reittiä. Palveluntarjoajat, joiden merkintä on `tos: avoid`, jätetään oletusarvoisesti automaattisen reitityksen ulkopuolelle.
 
 **Tarkistettu 2026-10-08:** [Cerebras](https://www.cerebras.ai/pricing) tarjoaa kertaluonteisen 5 dollarin kampanjakrediitin, joka edellyttää maksutapaa ja vanhenee 30 päivän kuluttua. [Gemini](https://ai.google.dev/gemini-api/docs/rate-limits) julkaisee projekti-, malli- ja tasokohtaiset nopeusrajoitukset; se jää edelleen kvantifioidun kuukausittaisen pääluvun ulkopuolelle.
 
@@ -92,7 +92,7 @@ että ilmaisia krediittejä olisi nolla. Nous-muutokset kuvataan tarkemmin alla 
 
 ## Kaksi järjestelmää — laskenta ja päättäminen
 
-OmniRoute vastaa kysymykseen ”onko se ilmainen?” kahdella järjestelmällä, jotka lukevat
+67router vastaa kysymykseen ”onko se ilmainen?” kahdella järjestelmällä, jotka lukevat
 tarkoituksella eri lähteitä:
 
 | Järjestelmä                | Totuuden lähde                                                                                                                                                                        | Käyttökohteet                                                                                                                         |
@@ -140,7 +140,7 @@ Useimmat tämän alan ”ilmaista tokenia kuukaudessa” -luvut ovat mallikohtai
 
 ### ⚠️ Varauksellinen — tarkistamisen arvoisia henkilökohtaista käyttöä / välityspalvelimia koskevia ehtoja (16)
 
-> Niiden ilmainen käyttöoikeus on todellinen, ja OmniRoute voi reitittää niihin; alla olevat ehdot on vain hyvä tiedostaa. OAuth-pohjaisten ja avaimettomien vaihtoehtojen käyttöä ei voi ilmaista tokeneina, joten niitä ei sisällytetä otsikon lukuun (ei siksi, että niitä ei voisi käyttää).
+> Niiden ilmainen käyttöoikeus on todellinen, ja 67router voi reitittää niihin; alla olevat ehdot on vain hyvä tiedostaa. OAuth-pohjaisten ja avaimettomien vaihtoehtojen käyttöä ei voi ilmaista tokeneina, joten niitä ei sisällytetä otsikon lukuun (ei siksi, että niitä ei voisi käyttää).
 
 | Palveluntarjoaja | Huomautus                                                                                                                                                                                                             |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,7 +154,7 @@ Useimmat tämän alan ”ilmaista tokenia kuukaudessa” -luvut ovat mallikohtai
 | `fireworks`      | Käyttöehdot kieltävät nimenomaisesti välityspalvelin-/välikäsikäytön, API-avainten siirtämisen ja alilisensoinnin (kohdat 2.1 ja 2.2(i)(j)); itse ylläpidettyjä henkilökohtaisia välityspalvelimia ei…                |
 | `friendliai`     | Käyttöehtojen kohdat 8(e) ja 8(f) kieltävät nimenomaisesti FriendliAI:n käyttämisen välityspalvelimena tai erillisen käyttöoikeuden tarjoamisen kolmansille osapuolille sekä jälleenmyynnin/…                         |
 | `iflytek`        | iFlytek Spark LLM -palvelusopimuksen kohta 2.4(3) kieltää nimenomaisesti ”kaikkien automatisoitujen tai ohjelmallisten menetelmien käyttämisen datan tai tulosteiden poimimiseen…                                     |
-| `kiro`           | Kiron UKK kieltää nimenomaisesti käytön ”OpenClawin ja vastaavien kolmansien osapuolten valjaita hyödyntävien työkalujen kanssa” — itse ylläpidetty tekoälyvälityspalvelin (kuten OmniRoute), joka rei…               |
+| `kiro`           | Kiron UKK kieltää nimenomaisesti käytön ”OpenClawin ja vastaavien kolmansien osapuolten valjaita hyödyntävien työkalujen kanssa” — itse ylläpidetty tekoälyvälityspalvelin (kuten 67router), joka rei…                |
 | `modal`          | Käyttöehtojen kohta 1.3 kieltää nimenomaisesti ”vuokraamasta, jälleenmyymästä tai muutoin sallimasta millekään kolmannelle osapuolelle suoraa pääsyä palveluun tai sen käyttöä” — itse ylläpidetyn…                   |
 | `muse-spark-web` | Metan käyttöehdot kieltävät nimenomaisesti automatisoidun käytön ilman ennakkolupaa, takaisinmallinnuksen ilman kirjallista lupaa ja teknologisten…                                                                   |
 | `nlpcloud`       | Käyttöehdot kieltävät nimenomaisesti ”sellaisen välityspalvelimen tai muun laitteen perustamisen, jonka kautta muut voivat käyttää palvelua” ja myöntävät vain ei-siirrettävän,…                                      |
@@ -316,7 +316,7 @@ Useimmat tämän alan ”ilmaista tokenia kuukaudessa” -luvut ovat mallikohtai
 
 - **`360ai`** — Toimitukseen sisältyvä freeNote-merkintä "Ilmaiset 360 AI Brain -mallit" vaikuttaa vanhentuneelta. Nykyinen käyttöoikeus edellyttää hakemusta ja on maksullinen. Vuoden 2023 julkaisun aikaiset kampanjatokenit (100M–250M kertaluonteisesti) ovat saattaneet olla perustana…
 - **`agentrouter`** — Toimitukseen sisältyvä freeNote-merkintämme sanoo: "$200 ilmaisia krediittejä rekisteröitymisen yhteydessä." Todellisuudessa tavallisesta rekisteröitymisestä (ilman suosittelua) saa nykyään vain $100; suosittelun kautta rekisteröityvät voivat saada $200, mutta yhteisön kommentti huhtikuulta 2026…
-- **`agy`** — Toimitukseen sisältyvä freeNote-merkintämme sanoo "(ei mitään)", mikä antaa ymmärtää, ettei ilmaistasoa ole, mutta Antigravityllä on OAuth-kirjautumista edellyttävä ilmaistaso. Käyttöehdot kuitenkin nimenomaisesti kieltävät tämän ilmaistason käyttämisen OmniRouten kaltaisen välityspalvelimen kautta…
+- **`agy`** — Toimitukseen sisältyvä freeNote-merkintämme sanoo "(ei mitään)", mikä antaa ymmärtää, ettei ilmaistasoa ole, mutta Antigravityllä on OAuth-kirjautumista edellyttävä ilmaistaso. Käyttöehdot kuitenkin nimenomaisesti kieltävät tämän ilmaistason käyttämisen 67routerin kaltaisen välityspalvelimen kautta…
 - **`ai21`** — Heikentynyt: kokeilujakso lyheni "3 kuukaudesta" 7 päivään. $10 krediittimäärä pysyi samana, mutta voimassaoloaika lyheni jyrkästi noin 90 päivästä 7 päivään.
 - **`aimlapi`** — Muuttunut merkittävästi. Toimitukseen sisältyvä freeNote mainosti "$0.025/päivä ilmaisia krediittejä — yli 200 mallia", mutta ilmaistaso on nyt keskeytetty/lopetettu. $0.025/päivä krediittikiintiö (50 000 krediittiä/päivä, 10 pyyntöä/p…
 - **`amazon-q`** — Toimitukseen sisältyvä freeNote-merkintämme sanoo "(ei mitään)" — todellisuus on tätäkin huonompi: uusien käyttäjien rekisteröityminen palveluun on nyt lopetettu (15. toukokuuta 2026). Aiemmin ilmaistaso tarjosi 50 agenttipyyntöä kuukaudessa sekä rajattomasti tekstinsisäisiä…

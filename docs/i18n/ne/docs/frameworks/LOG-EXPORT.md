@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute कल लगहरूलाई बाह्य एनालिटिक्स भण्डारमा निरन्तर, क्रमिक रूपमा निर्यात गर्ने।
+67router कल लगहरूलाई बाह्य एनालिटिक्स भण्डारमा निरन्तर, क्रमिक रूपमा निर्यात गर्ने।
 
 Logs ड्यासबोर्ड ट्याबले अनुरोध इतिहास SQLite (`call_logs`) मा राख्छ, जुन
 रोटेसन र रिटेन्सनद्वारा सीमित हुन्छ। लग निर्यातले उही रेकर्ड सेटलाई तालिकाअनुसार बाहिर पठाउँछ, ताकि यो
@@ -272,7 +272,7 @@ dashboard form सबैले registry पढ्छन्।
 - आंशिक विफलतामा `send()` ले **अनिवार्य रूपमा throw गर्नुपर्छ**। Resolve हुनुको अर्थ "गन्तव्यमा यी rows छन्" भन्ने हो,
   र cursor स्थायी रूपमा तिनलाई पार गरेर अगाडि बढ्छ।
 - प्रयोगकर्ताले उपलब्ध गराएको URL लिने गन्तव्यले fetch गर्नुअघि त्यसलाई
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) मार्फत validate गर्नुपर्छ,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) मार्फत validate गर्नुपर्छ,
   ठीक webhooks ले गरेजस्तै। BigQuery लाई यो आवश्यक पर्दैन: यसका hosts constants हुन्।
 
 ---

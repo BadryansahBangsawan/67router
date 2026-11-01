@@ -535,9 +535,9 @@ test("managed provider connection ids include supported static categories and ex
   assert.equal(providerCatalog.isManagedProviderConnectionId("youcom-search"), true);
   assert.equal(providerCatalog.isManagedProviderConnectionId("cliproxyapi"), false);
   assert.equal(providerCatalog.isManagedProviderConnectionId("claude"), false);
-  assert.equal(providerCatalog.isManagedProviderConnectionId("jules"), true);
-  assert.equal(providerCatalog.isManagedProviderConnectionId("devin"), true);
-  assert.equal(providerCatalog.isManagedProviderConnectionId("codex-cloud"), true);
+  assert.equal(providerCatalog.isManagedProviderConnectionId("jules"), false);
+  assert.equal(providerCatalog.isManagedProviderConnectionId("devin"), false);
+  assert.equal(providerCatalog.isManagedProviderConnectionId("codex-cloud"), false);
 });
 
 test("grok-web taxonomy stays web-cookie only and does not leak into api-key entries", () => {
@@ -1119,14 +1119,37 @@ test("#16943 counts bulk cookie imports only on Web Cookie provider cards", () =
   assert.equal(connectionMatchesProviderCard(imported, "deepseek-web", "apikey"), true);
   assert.equal(connectionMatchesProviderCard(added, "deepseek-web", "apikey"), true);
   assert.equal(connectionMatchesProviderCard(imported, "deepseek-web", "free"), true);
-  assert.equal(connectionMatchesProviderCard({ provider: "deepseek-web", authType: "cookie" }, "deepseek-web", "oauth"), false);
-  assert.equal(connectionMatchesProviderCard({ provider: "deepseek-web", authType: "cookie" }, "deepseek-web", "free"), true);
+  assert.equal(
+    connectionMatchesProviderCard(
+      { provider: "deepseek-web", authType: "cookie" },
+      "deepseek-web",
+      "oauth"
+    ),
+    false
+  );
+  assert.equal(
+    connectionMatchesProviderCard(
+      { provider: "deepseek-web", authType: "cookie" },
+      "deepseek-web",
+      "free"
+    ),
+    true
+  );
   assert.equal(connectionMatchesProviderCard(imported, "claude", "apikey"), false);
-  assert.equal(connectionMatchesProviderCard({ provider: "openai", authType: "cookie" }, "openai", "apikey"), false);
-  assert.equal(connectionMatchesProviderCard({ provider: "claude", authType: "cookie" }, "claude", "oauth"), false);
+  assert.equal(
+    connectionMatchesProviderCard({ provider: "openai", authType: "cookie" }, "openai", "apikey"),
+    false
+  );
+  assert.equal(
+    connectionMatchesProviderCard({ provider: "claude", authType: "cookie" }, "claude", "oauth"),
+    false
+  );
 
   const all = [imported, added];
-  assert.equal(all.filter((conn) => connectionMatchesProviderCard(conn, "deepseek-web", "apikey")).length, 2);
+  assert.equal(
+    all.filter((conn) => connectionMatchesProviderCard(conn, "deepseek-web", "apikey")).length,
+    2
+  );
 });
 
 test("#16943 cookie imports are counted for every currently registered Web Cookie provider", () => {
@@ -1137,17 +1160,25 @@ test("#16943 cookie imports are counted for every currently registered Web Cooki
 
   for (const providerId of webCookieIds) {
     const imported = { provider: providerId, authType: "cookie" };
-    assert.equal(connectionMatchesProviderCard(imported, providerId, "apikey"), true,
-      `imported cookie should count for ${providerId}`);
-    assert.equal(connectionMatchesProviderCard(imported, providerId, "oauth"), false,
-      `cookie must not count as OAuth for ${providerId}`);
+    assert.equal(
+      connectionMatchesProviderCard(imported, providerId, "apikey"),
+      true,
+      `imported cookie should count for ${providerId}`
+    );
+    assert.equal(
+      connectionMatchesProviderCard(imported, providerId, "oauth"),
+      false,
+      `cookie must not count as OAuth for ${providerId}`
+    );
     assert.equal(connectionMatchesProviderCard(imported, providerId, "free"), true);
   }
   // Even with a registered cookie provider, a mismatched provider id must
   // never be counted as a connected account on another provider card.
   const first = webCookieIds[0];
-  assert.equal(connectionMatchesProviderCard(
-    { provider: "openai", authType: "cookie" }, first, "apikey"), false);
+  assert.equal(
+    connectionMatchesProviderCard({ provider: "openai", authType: "cookie" }, first, "apikey"),
+    false
+  );
 });
 
 test("unified xAI OAuth card includes canonical and legacy connection provider IDs", () => {

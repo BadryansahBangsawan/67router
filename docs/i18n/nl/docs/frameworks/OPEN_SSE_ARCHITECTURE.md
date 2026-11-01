@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: `open-sse/` is de kernstreamingengine die elk LLM-verzoek in OmniRoute aandrijft. Het bevat ongeveer 1.400 bestanden die de verzoekpijplijn, executors, services, MCP-server en vertaallaag implementeren. Deze handleiding legt uit hoe de onderdelen samenhangen.
+> **TL;DR**: `open-sse/` is de kernstreamingengine die elk LLM-verzoek in 67router aandrijft. Het bevat ongeveer 1.400 bestanden die de verzoekpijplijn, executors, services, MCP-server en vertaallaag implementeren. Deze handleiding legt uit hoe de onderdelen samenhangen.
 
 **Bron:** `open-sse/` (workspacepakket, ongeveer 1.440 `.ts`-bestanden die geen tests zijn)
 
@@ -12,10 +12,10 @@
 
 ## Waarom een afzonderlijk workspacepakket?
 
-`open-sse/` is om verschillende redenen een **zelfstandige workspace** in de OmniRoute-monorepo:
+`open-sse/` is om verschillende redenen een **zelfstandige workspace** in de 67router-monorepo:
 
 1. **Herbruikbaarheid** — `open-sse` wordt als `@omniroute/open-sse` op npm gepubliceerd, zodat andere projecten het onafhankelijk kunnen gebruiken
-2. **Duidelijke grenzen** — de streamingengine is losgekoppeld van de OmniRoute-specifieke UI-/databaselaag
+2. **Duidelijke grenzen** — de streamingengine is losgekoppeld van de 67router-specifieke UI-/databaselaag
 3. **Prestaties** — de engine heeft geen Next.js-afhankelijkheden, wat snellere koude starts in CLI- en serverless-omgevingen mogelijk maakt
 4. **Versiebeheer** — `open-sse` kan volgens zijn eigen planning releases uitbrengen
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Waarom een afzonderlijke transformer?
 
-De Responses API is de nieuwe indeling van OpenAI met **stateful gesprekken** (`previous_response_id`). Wanneer een client een Responses-verzoek verzendt, voert OmniRoute de volgende stappen uit:
+De Responses API is de nieuwe indeling van OpenAI met **stateful gesprekken** (`previous_response_id`). Wanneer een client een Responses-verzoek verzendt, voert 67router de volgende stappen uit:
 
 1. Converteert Responses intern naar Chat Completions
 2. Verzendt het naar de provider (elke provider die Chat Completions ondersteunt)
@@ -573,5 +573,4 @@ De routeringsengine heeft strikte prestatiebudgetten:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — overzicht per directory
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scoring op basis van 16 factoren
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Bron: `open-sse/` (400+ bestanden, ~143K regels code)

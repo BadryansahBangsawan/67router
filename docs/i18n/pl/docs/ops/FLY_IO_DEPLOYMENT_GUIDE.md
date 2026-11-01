@@ -1,12 +1,12 @@
 ---
-title: "Przewodnik wdrażania OmniRoute na Fly.io"
+title: "Przewodnik wdrażania 67router na Fly.io"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# Przewodnik wdrażania OmniRoute na Fly.io
+# Przewodnik wdrażania 67router na Fly.io
 
-Ten dokument opisuje rzeczywisty proces wdrażania OmniRoute na Fly.io i obejmuje dwa scenariusze:
+Ten dokument opisuje rzeczywisty proces wdrażania 67router na Fly.io i obejmuje dwa scenariusze:
 
 - Pierwsze wdrożenie bieżącego projektu na Fly.io
 - Publikowanie kolejnych aktualizacji kodu

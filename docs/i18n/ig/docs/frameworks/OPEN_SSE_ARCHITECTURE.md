@@ -4,7 +4,7 @@
 
 ---
 
-> **Na nkenke**: `open-sse/` bụ injin nkwanye data bụ isi nke na-akwado arịrịọ LLM niile dị na OmniRoute. Ọ nwere ihe dị ka faịlụ 1,400 ndị na-arụpụta usoro nhazi arịrịọ, ndị mmebe arịrịọ, ọrụ, sava MCP, na oyi akwa ntụgharị. Ntuziaka a na-akọwa etu akụkụ ndị a si arụkọ ọrụ.
+> **Na nkenke**: `open-sse/` bụ injin nkwanye data bụ isi nke na-akwado arịrịọ LLM niile dị na 67router. Ọ nwere ihe dị ka faịlụ 1,400 ndị na-arụpụta usoro nhazi arịrịọ, ndị mmebe arịrịọ, ọrụ, sava MCP, na oyi akwa ntụgharị. Ntuziaka a na-akọwa etu akụkụ ndị a si arụkọ ọrụ.
 
 **Isi mmalite:** `open-sse/` (ngwugwu workspace, ihe dị ka faịlụ `.ts` 1,440 na-abụghị nke nnwale)
 
@@ -12,10 +12,10 @@
 
 ## Gịnị Mere E Ji Nwee Ngwugwu Workspace Dị Iche?
 
-`open-sse/` bụ **workspace kwụụrụ onwe ya** n'ime monorepo OmniRoute n'ihi ọtụtụ ihe:
+`open-sse/` bụ **workspace kwụụrụ onwe ya** n'ime monorepo 67router n'ihi ọtụtụ ihe:
 
 1. **Enwere ike iji ya ọzọ** — a na-ebipụta `open-sse` dị ka `@omniroute/open-sse` na npm, ya mere ọrụ ndị ọzọ nwere ike iji ya n'onwe ha
-2. **Oke doro anya** — e kewapụrụ injin nkwanye data ahụ na oyi akwa UI/DB nke OmniRoute
+2. **Oke doro anya** — e kewapụrụ injin nkwanye data ahụ na oyi akwa UI/DB nke 67router
 3. **Ọsọ arụmọrụ** — injin ahụ enweghị ndabere Next.js, nke na-eme ka mmalite oyi dị ngwa karịa n'ọnọdụ CLI/serverless
 4. **Njikwa ụdị** — `open-sse` nwere ike iwepụta ụdị ọhụrụ dịka usoro oge nke ya si dị
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Gịnị Mere E Ji Nwee Transformer Dị Iche?
 
-Responses API bụ usoro ọhụrụ nke OpenAI nwere **mkparịta ụka na-edobe steeti** (`previous_response_id`). Mgbe onye ahịa zipụrụ arịrịọ Responses, OmniRoute:
+Responses API bụ usoro ọhụrụ nke OpenAI nwere **mkparịta ụka na-edobe steeti** (`previous_response_id`). Mgbe onye ahịa zipụrụ arịrịọ Responses, 67router:
 
 1. Na-atụgharị Responses → Chat Completions n'ime sistemụ
 2. Na-ezigara ya onye na-enye ọrụ (onye na-enye ọrụ ọ bụla na-akwado Chat Completions)
@@ -573,5 +573,4 @@ Injin nhazi ụzọ nwere oke arụmọrụ siri ike:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — nkọwa ndekọ n'otu n'otu
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — akara ihe 16
 - [MCP-SERVER.md](./MCP-SERVER.md) — sava MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — sava A2A
 - Isi mmalite: `open-sse/` (faịlụ 400+, ~143K LOC)

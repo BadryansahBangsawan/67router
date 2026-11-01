@@ -4,7 +4,7 @@
 
 ---
 
-Eksport berterusan dan berperingkat bagi log panggilan OmniRoute ke stor analitik luaran.
+Eksport berterusan dan berperingkat bagi log panggilan 67router ke stor analitik luaran.
 
 Tab papan pemuka Logs menyimpan sejarah permintaan dalam SQLite (`call_logs`), yang dihadkan oleh
 putaran dan pengekalan. Eksport log menghantar set rekod yang sama mengikut jadual supaya ia dapat kekal
@@ -270,7 +270,7 @@ Dua peraturan untuk destinasi baharu:
 - `send()` **mesti membuang pengecualian** apabila berlaku kegagalan separa. Penyelesaian bermaksud "destinasi mempunyai baris-baris ini",
   dan kursor bergerak melepasi baris-baris tersebut secara kekal.
 - Destinasi yang menerima URL yang dibekalkan pengguna mesti mengesahkannya melalui
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) sebelum membuat permintaan,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) sebelum membuat permintaan,
   dengan cara yang sama seperti webhook. BigQuery tidak memerlukannya: hosnya ialah pemalar.
 
 ---

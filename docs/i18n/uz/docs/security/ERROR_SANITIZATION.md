@@ -202,11 +202,11 @@ Har bir aniq tasnifni shu to‘rtinchi argument orqali uzating. `buildErrorBody(
 3. Chuqurlik chegarasi: 4 darajadan chuqur joylashuvlar `"[truncated]"` satri bilan almashtiriladi.
 4. Massivlar 32 ta element bilan cheklanadi.
 
-Faqat provayderning tahlil qilingan xato tanasiga ega chaqiruv joylari `upstreamDetails` uzatishi kerak. Ichki OmniRoute xatolari (SSE tahlilidagi nosozliklar, bo‘sh kontent, himoya mexanizmi bloklari) uni o‘z ichiga olmasligi kerak.
+Faqat provayderning tahlil qilingan xato tanasiga ega chaqiruv joylari `upstreamDetails` uzatishi kerak. Ichki 67router xatolari (SSE tahlilidagi nosozliklar, bo‘sh kontent, himoya mexanizmi bloklari) uni o‘z ichiga olmasligi kerak.
 
 Xom `err.stack`, `err.message` yoki ish vaqtidagi istisnodan olingan har qanday satrni `upstreamDetails` ga uzatmang. Ular yuqori oqim tanasisiz hamon `errorResponse` / `buildErrorBody(code, msg)` orqali o‘tishi kerak.
 
-Yuqori oqimdagi 4xx xatolarini tanlab uzatish mijozning avtomatik tiklanishi uchun zarur bo‘lgan provayderning xavfsiz JSON shakli va ifodasini saqlaydi, ammo bu baytma-bayt uzatish emas: rekursiv sanitizator serializatsiyadan oldin har doim ishga tushadi. Siklik, BigInt qiymatlarini o‘z ichiga olgan yoki zararli `toJSON()` tanalari xavfsiz tarzda rad etiladi va uzatish uchun yaroqsiz hisoblanadi. OCR va moderatsiya ham xuddi shu qoidani qo‘llaydi; JSON bo‘lmagan, bo‘sh yoki noto‘g‘ri belgilangan yuqori oqim tanalari kanonik OmniRoute JSON xato konvertiga aylantiriladi.
+Yuqori oqimdagi 4xx xatolarini tanlab uzatish mijozning avtomatik tiklanishi uchun zarur bo‘lgan provayderning xavfsiz JSON shakli va ifodasini saqlaydi, ammo bu baytma-bayt uzatish emas: rekursiv sanitizator serializatsiyadan oldin har doim ishga tushadi. Siklik, BigInt qiymatlarini o‘z ichiga olgan yoki zararli `toJSON()` tanalari xavfsiz tarzda rad etiladi va uzatish uchun yaroqsiz hisoblanadi. OCR va moderatsiya ham xuddi shu qoidani qo‘llaydi; JSON bo‘lmagan, bo‘sh yoki noto‘g‘ri belgilangan yuqori oqim tanalari kanonik 67router JSON xato konvertiga aylantiriladi.
 
 ## CodeQL’ning ma’lum cheklovi: maxsus sanitarizatorlar tanib olinmaydi
 

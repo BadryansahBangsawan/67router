@@ -52,7 +52,7 @@ dīkstāves. Tas ir tas pats ar IP adresi un atslēgu saistītais ātruma ierobe
 periodiskas `400 content-blocked` kļūdas, kad Claude Code vai Codex CLI
 ātrā secībā veic vairākus rīku izmantošanas / ziņojumu nosūtīšanas izsaukumus.
 
-## OmniRoute jau ieviestie mazināšanas pasākumi
+## 67router jau ieviestie mazināšanas pasākumi
 
 1. **`open-sse/services/wafRateLimit.ts`** — pieprasījumu uzplūdu ierobežotājs, kas nodrošina
    vismaz 500 ms intervālu starp izejošajiem pieprasījumiem uz jebkuru `agentrouter:*`

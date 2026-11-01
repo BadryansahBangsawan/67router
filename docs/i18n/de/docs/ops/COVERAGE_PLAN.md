@@ -71,11 +71,9 @@ Diese Dateien weisen derzeit die niedrigste Zeilenabdeckung auf (< 60 %) und bie
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@ Schwerpunkte für die Phasen 6–7:
 
 - `open-sse/services/compression/**` ist die dichteste Gruppe mit niedriger Abdeckung und macht den größten Teil der verbleibenden Lücke aus.
 - Batch- und Rerank-API-Routen (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) benötigen Tests auf Handler-Ebene.
-- Cloud-Agent-Adapter (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) und `tierResolver.ts` benötigen Szenariotests.
 - Komponenten der Dokumentationsoberfläche und `src/mitm/systemCommands.ts` haben eine niedrigere Priorität, bieten aber leicht erreichbare Verbesserungen der Zweigabdeckung.
 
 ## Ausführungs-Checkliste

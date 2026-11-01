@@ -4,7 +4,7 @@
 
 ---
 
-Các nhà cung cấp Web Cookie cho phép OmniRoute sử dụng dịch vụ AI thông qua phiên trình duyệt hiện tại của bạn thay vì dùng API key. Chúng hữu ích khi bạn đã có quyền truy cập vào một dịch vụ thông qua trang web của dịch vụ đó và muốn OmniRoute sử dụng cùng phiên đã xác thực.
+Các nhà cung cấp Web Cookie cho phép 67router sử dụng dịch vụ AI thông qua phiên trình duyệt hiện tại của bạn thay vì dùng API key. Chúng hữu ích khi bạn đã có quyền truy cập vào một dịch vụ thông qua trang web của dịch vụ đó và muốn 67router sử dụng cùng phiên đã xác thực.
 
 Không giống các nhà cung cấp dùng API key, các nhà cung cấp Web Cookie xác thực bằng thông tin đăng nhập mà trình duyệt của bạn gửi đến trang web.
 
@@ -49,7 +49,7 @@ DevTools
 
 Header yêu cầu `Cookie` chứa chính xác thông tin xác thực mà trình duyệt của bạn đã sử dụng thành công.
 
-Đối với hầu hết các nhà cung cấp Web Cookie, đây là giá trị cần được dán vào OmniRoute.
+Đối với hầu hết các nhà cung cấp Web Cookie, đây là giá trị cần được dán vào 67router.
 
 ---
 
@@ -63,7 +63,7 @@ Quy trình thiết lập giống nhau đối với hầu hết các nhà cung c�
 4. Làm mới trang.
 5. Mở một yêu cầu trò chuyện hoặc hội thoại đã xác thực.
 6. Sao chép thông tin xác thực bắt buộc.
-7. Mở OmniRoute.
+7. Mở 67router.
 8. Đi tới **Providers → Add Provider**.
 9. Chọn nhà cung cấp Web Cookie của bạn.
 10. Dán thông tin xác thực.
@@ -92,17 +92,17 @@ Các trang web khác nhau lưu trữ thông tin xác thực theo những cách k
 
 ## NoTrack (notrack-web)
 
-NoTrack ([notrack.ai](https://notrack.ai)) là một nền tảng trò chuyện miễn phí dành cho người dùng, không yêu cầu đăng ký — phiên được tạo ẩn danh trong lần truy cập đầu tiên và được duy trì thông qua ba cookie: `uid`, `si_usr_id` và `si_ses_id`. OmniRoute proxy cùng một endpoint `/api/dispatch` thông qua một id mô hình duy nhất (`notrack-c`, bí danh `ntw`).
+NoTrack ([notrack.ai](https://notrack.ai)) là một nền tảng trò chuyện miễn phí dành cho người dùng, không yêu cầu đăng ký — phiên được tạo ẩn danh trong lần truy cập đầu tiên và được duy trì thông qua ba cookie: `uid`, `si_usr_id` và `si_ses_id`. 67router proxy cùng một endpoint `/api/dispatch` thông qua một id mô hình duy nhất (`notrack-c`, bí danh `ntw`).
 
 ### Các bước kết nối
 
 1. Mở [notrack.ai](https://notrack.ai) trong trình duyệt và để cookie phiên ẩn danh được thiết lập.
 2. Mở **DevTools → Network**, làm mới trang và nhấp vào bất kỳ yêu cầu `/api` nào.
 3. Trong **Request Headers**, sao chép toàn bộ giá trị của header `Cookie`.
-4. Trong OmniRoute, đi tới **Providers → Add Provider → NoTrack Web (Free)**.
+4. Trong 67router, đi tới **Providers → Add Provider → NoTrack Web (Free)**.
 5. Dán chuỗi cookie vào trường `apiKey` và nhấp **Save**.
 
-OmniRoute trích xuất `uid`, `si_usr_id` và `si_ses_id` từ chuỗi đã dán, sau đó tạo lại một header `Cookie` sạch chỉ chứa các cặp đó — cộng thêm `nt_session` (token `ntk_…` được thiết lập cho các tài khoản đã đăng nhập) khi có. Nếu thiếu bất kỳ giá trị nào trong ba giá trị này, chuỗi thô đã dán sẽ được chuyển tiếp mà không thay đổi để người vận hành có thể thử nghiệm với các định dạng khác.
+67router trích xuất `uid`, `si_usr_id` và `si_ses_id` từ chuỗi đã dán, sau đó tạo lại một header `Cookie` sạch chỉ chứa các cặp đó — cộng thêm `nt_session` (token `ntk_…` được thiết lập cho các tài khoản đã đăng nhập) khi có. Nếu thiếu bất kỳ giá trị nào trong ba giá trị này, chuỗi thô đã dán sẽ được chuyển tiếp mà không thay đổi để người vận hành có thể thử nghiệm với các định dạng khác.
 
 ### Id mô hình
 
@@ -198,7 +198,7 @@ Application
 
 ---
 
-## Cookie hoạt động trong trình duyệt nhưng không hoạt động trong OmniRoute
+## Cookie hoạt động trong trình duyệt nhưng không hoạt động trong 67router
 
 Một số nhà cung cấp bao gồm các cookie chỉ được gửi trong những yêu cầu đã xác thực.
 

@@ -4,7 +4,7 @@
 
 ---
 
-`devin-cli-agentic` omogućava stvarnom Claude Code izvršnom okruženju da koristi OmniRouteovu lokalnu Anthropic
+`devin-cli-agentic` omogućava stvarnom Claude Code izvršnom okruženju da koristi 67routerovu lokalnu Anthropic
 Messages krajnju tačku, dok službeni Devin CLI pruža odgovore modela putem ACP stdio. On
 ne mijenja postojeće pružaoce Anthropic, Claude OAuth, Claude Web ili `devin-cli`.
 
@@ -19,7 +19,7 @@ alate izbjegavati.
 > `3000.2.17` i modela `swe-1-7-lightning`; to završno aktivno pokretanje potvrdilo je poteze `Read`,
 > `Edit` i `Bash` kojima upravlja klijent, uspješne rezultate komande `npm test`, otkrivanje projektnih
 > komandi i vještina, usmjeravanje isključivo putem Devina i odsustvo izlaznog prometa prema Claudeu. Fiksirana verzija je zatim podignuta na `2.1.258`
-> (generaciju CLI-ja koju oponaša OmniRouteov Claude identitet i prvu liniju koja izvorno isporučuje
+> (generaciju CLI-ja koju oponaša 67routerov Claude identitet i prvu liniju koja izvorno isporučuje
 > nivo Fable 5.1). Na novoj fiksiranoj verziji verifikovani su instalacijski sloj i `claude --version`
 > na fiksiranoj osnovnoj slici, a skup jediničnih testova mosta, `compose config` i
 > statički dokaz izolacije prolaze — ali vanmrežni simulirani scenarij i aktivni skup od tri scenarija
@@ -52,11 +52,11 @@ Parser prihvata jednu samostalnu `<tool>{...}</tool>` omotnicu po potezu modela.
 naziv prema listi alata iz zahtjeva, validira argumente prema JSON Schema tog alata,
 odbacuje miješani narativ i radnje te dozvoljava jednu ograničenu popravku. Claude Code zatim
 lokalno izvršava rezultirajući Anthropic `tool_use` i šalje `tool_result` nazad putem
-OmniRoutea.
+67routera.
 
 ## Automatsko usmjeravanje
 
-Pružalac ispunjava uslove za OmniRouteove skupove kandidata `auto/*` kada nije blokiran.
+Pružalac ispunjava uslove za 67routerove skupove kandidata `auto/*` kada nije blokiran.
 Ispunjavanje uslova kandidata ne garantuje odabir: strategija usmjeravanja kombinacije (na primjer,
 posljednji poznati ispravan izbor) može dati prednost drugom pružaocu. Koristite `dva/<model>` ili kombinaciju
 s Devinom kao prvim izborom kada zahtijevate da svaki zahtjev prolazi kroz Devin.
@@ -68,16 +68,16 @@ zabranjeni. Compose servisi:
 
 - pokreću se kao UID/GID `10001:10001`, s korijenskim datotečnim sistemom samo za čitanje, uklonjenim mogućnostima i
   opcijom `no-new-privileges`;
-- koriste privatni `/home/bridge`, namjenski volumen za Claude konfiguraciju, izolirane OmniRoute podatke
+- koriste privatni `/home/bridge`, namjenski volumen za Claude konfiguraciju, izolirane 67router podatke
   i zaseban `devin-auth` volumen;
 - montiraju samo privremene `.sandbox` radne prostore/dokaze;
 - ne montiraju početni direktorij hosta, Keychain, SSH, vjerodajnice za oblak niti Docker socket;
 - konstruiraju eksplicitna okruženja i uklanjaju Anthropic API/OAuth varijable i varijable usmjeravanja;
 - usmjeravaju Claude Code zaključivanje isključivo na `http://omniroute:20128` pomoću ključa namijenjenog samo za lokalnu upotrebu.
 
-Vanmrežni profil koristi internu mrežu. U aktivnom profilu OmniRoute pristupa
+Vanmrežni profil koristi internu mrežu. U aktivnom profilu 67router pristupa
 službenim Devin krajnjim tačkama isključivo putem `network-guard`; nepovezana odredišta su odbijena.
-Claude Code ima zasebnu zaštitu odlaznog prometa koja sve odbija i može pristupiti samo lokalnom OmniRoute
+Claude Code ima zasebnu zaštitu odlaznog prometa koja sve odbija i može pristupiti samo lokalnom 67router
 servisu putem `NO_PROXY`. Datoteke revizije zaštite montira isključivo njihov proces zaštite.
 Skripte provjeravaju vlasništvo nad datotekama, način rada, broj veza i svaku odluku prije izvoza
 dokaza bez tokena.

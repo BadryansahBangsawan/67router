@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Nuashonraithe den uair dheireanach:** 2026-06-28 — v3.8.40
 
-Is féidir le OmniRoute a fhreastalaí áitiúil (`http://localhost:20128`) a nochtadh don
+Is féidir le 67router a fhreastalaí áitiúil (`http://localhost:20128`) a nochtadh don
 idirlíon poiblí trí thrí inneall tolláin. Tá sé seo úsáideach le haghaidh:
 
 - Aisghlaonna OAuth ó sholáthraithe néil (Antigravity, Gemini, Cursor) a bhfuil URL
@@ -15,7 +15,7 @@ idirlíon poiblí trí thrí inneall tolláin. Tá sé seo úsáideach le haghai
 - Do shampla áitiúil a roinnt le comhghleacaithe gan VM a imscaradh.
 - Tástáil mhóibíleach, chianda nó trast-líonra.
 
-Déantar na trí inneall a bhainistiú laistigh den phróiseas — tosaíonn/stadann OmniRoute an
+Déantar na trí inneall a bhainistiú laistigh den phróiseas — tosaíonn/stadann 67router an
 dénártha nó an SDK foluiteach ón deais nó ón REST API. Ní theastaíonn aon socrú
 seachfhreastalaí droim ar ais ná systemd.
 
@@ -41,7 +41,7 @@ dhá mhód, a roghnaítear de réir an gcuirtear cumraíocht tolláin ainmnithe 
 http://localhost:<apiPort>` agus parsálann sé an URL sannta `*.trycloudflare.com`
   ón aschur caighdeánach. Tá na URLanna sealadach agus athraíonn siad le gach atosú.
 - **Tollán ainmnithe (rogha roghnach).** Nuair a dhíríonn `CLOUDFLARED_CONFIG` ar
-  `config.yml` cloudflared a bhainistítear go háitiúil, ritheann OmniRoute `cloudflared tunnel --no-autoupdate
+  `config.yml` cloudflared a bhainistítear go háitiúil, ritheann 67router `cloudflared tunnel --no-autoupdate
 --config <path> run`, rud a thugann **óstainm cobhsaí ainmnithe** duit. Soláthraíonn an chumraíocht
   UUID an tolláin, `credentials-file`, agus ródú `ingress`, mar sin ní chuirtear
   `--url` ar aghaidh agus ní theastaíonn aon chomhartha deaise Zero Trust. Léann `run`
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` agus parsálann sé an URL sannta `*.trycloudflare.c
 
 Príomhiompraíochtaí:
 
-- **Uathshuiteáil.** Ar an gcéad úsáid, íoslódálann OmniRoute an dénártha `cloudflared`
+- **Uathshuiteáil.** Ar an gcéad úsáid, íoslódálann 67router an dénártha `cloudflared`
   is déanaí ó eisiúintí oifigiúla GitHub (tá an tsuiteáil bhainistithe faoi
   `DATA_DIR/cloudflared/`). Fíoraítear SHA256 na sócmhainne íoslódáilte i gcoinne
   léiriú na heisiúna sula ritear í.
@@ -68,7 +68,7 @@ Príomhiompraíochtaí:
    ```
 
 2. Scríobh `~/.cloudflared/config.yml` a ródálann d'óstainm chuig port API áitiúil
-   OmniRoute (20128 de réir réamhshocraithe):
+   67router (20128 de réir réamhshocraithe):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Príomhiompraíochtaí:
      - service: http_status:404
    ```
 
-3. Dírigh OmniRoute ar an gcumraíocht agus (atosaigh) an tollán:
+3. Dírigh 67router ar an gcumraíocht agus (atosaigh) an tollán:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # roghnach — sáraíonn sé an t-óstainm a thuairiscíonn OmniRoute; seachas sin léitear é ó
+   # roghnach — sáraíonn sé an t-óstainm a thuairiscíonn 67router; seachas sin léitear é ó
    # chéad riail ingress na cumraíochta:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -120,12 +120,12 @@ Nó tríd an deais: **Socruithe → Tolláin → Cloudflare**.
 
 ### Athróga timpeallachta roghnacha
 
-| Athróg                                               | Cuspóir                                                                                                                                                                                                        |
-| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `CLOUDFLARED_BIN`                                    | Sáraíonn sé conair an chomhaid dhénártha. Má tá sé socraithe agus bailí, úsáideann OmniRoute é seachas é a íoslódáil.                                                                                          |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Prótacal iompair (`http2` de réir réamhshocraithe; `quic` agus `auto` freisin).                                                                                                                                |
-| `CLOUDFLARED_CONFIG`                                 | Conair chuig `config.yml` de chuid cloudflared a bhainistítear go háitiúil. Nuair a bhíonn sé socraithe, ritheann OmniRoute tollán **ainmnithe/seasmhach** (`tunnel --config <path> run`) seachas tollán tapa. |
-| `CLOUDFLARED_HOSTNAME`                               | Sáraíonn sé óstainm poiblí tuairiscithe an tolláin ainmnithe (m.sh. `ai.example.com`). Nuair nach mbíonn sé socraithe, léitear é ón gcéad óstainm `ingress` sa chumraíocht.                                    |
+| Athróg                                               | Cuspóir                                                                                                                                                                                                       |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Sáraíonn sé conair an chomhaid dhénártha. Má tá sé socraithe agus bailí, úsáideann 67router é seachas é a íoslódáil.                                                                                          |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Prótacal iompair (`http2` de réir réamhshocraithe; `quic` agus `auto` freisin).                                                                                                                               |
+| `CLOUDFLARED_CONFIG`                                 | Conair chuig `config.yml` de chuid cloudflared a bhainistítear go háitiúil. Nuair a bhíonn sé socraithe, ritheann 67router tollán **ainmnithe/seasmhach** (`tunnel --config <path> run`) seachas tollán tapa. |
+| `CLOUDFLARED_HOSTNAME`                               | Sáraíonn sé óstainm poiblí tuairiscithe an tolláin ainmnithe (m.sh. `ai.example.com`). Nuair nach mbíonn sé socraithe, léitear é ón gcéad óstainm `ingress` sa chumraíocht.                                   |
 
 ## 2. ngrok
 
@@ -169,7 +169,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 ```
 
 Áirítear sa fhreagra an `publicUrl` sannta (m.sh.
-`https://abcd-1234.ngrok-free.app`). Ní mór fearainn shaincheaptha, réigiúin agus rialacha beartais a chumrú i ndeais ngrok — ní dhéanann OmniRoute féin ach URL na sprice áitiúla a chur ar aghaidh chuig an SDK.
+`https://abcd-1234.ngrok-free.app`). Ní mór fearainn shaincheaptha, réigiúin agus rialacha beartais a chumrú i ndeais ngrok — ní dhéanann 67router féin ach URL na sprice áitiúla a chur ar aghaidh chuig an SDK.
 
 ## 3. Tailscale Funnel
 
@@ -179,12 +179,12 @@ Glaonn an cur chun feidhme ar `tailscale funnel --bg <port>` (mód cúlra). Bío
 
 ### Réamhriachtanais
 
-1. Suiteáil Tailscale (nó lig do OmniRoute é a dhéanamh — féach an críochphointe `install` thíos).
-2. Logáil isteach (`tailscale login` nó trí chríochphointe `login` OmniRoute).
+1. Suiteáil Tailscale (nó lig do 67router é a dhéanamh — féach an críochphointe `install` thíos).
+2. Logáil isteach (`tailscale login` nó trí chríochphointe `login` 67router).
 3. Cumasaigh Funnel do do tailnet i gconsól riaracháin Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
-Ar Linux agus macOS, teastaíonn `sudo` ón deamhan (`tailscaled`) chun é a rialú. Glacann na críochphointí POST le réimse roghnach `sudoPassword`, a chuirtear ar aghaidh chuig taisce pasfhocail MITM OmniRoute (`getCachedPassword` / `setCachedPassword`) ar feadh ré an ghlao. Úsáideann Windows suiteáil réamhshocraithe na seirbhíse ag `C:\Program Files\Tailscale\tailscale.exe`.
+Ar Linux agus macOS, teastaíonn `sudo` ón deamhan (`tailscaled`) chun é a rialú. Glacann na críochphointí POST le réimse roghnach `sudoPassword`, a chuirtear ar aghaidh chuig taisce pasfhocail MITM 67router (`getCachedPassword` / `setCachedPassword`) ar feadh ré an ghlao. Úsáideann Windows suiteáil réamhshocraithe na seirbhíse ag `C:\Program Files\Tailscale\tailscale.exe`.
 
 ### Críochphointí REST
 
@@ -241,7 +241,7 @@ neamhspleách.
 
 ## Breithnithe maidir le haisghlaonna OAuth
 
-Nuair a nochtann tú OmniRoute trí thollán, ní mór don deais agus do shreafaí OAuth
+Nuair a nochtann tú 67router trí thollán, ní mór don deais agus do shreafaí OAuth
 URLanna aisghlao a chruthú bunaithe ar an óstainm **poiblí**, seachas `localhost`. Murach sin,
 atreoraíonn an soláthraí OAuth an t-úsáideoir ar ais chuig URL nach féidir lena fhreastalaithe a rochtain,
 agus teipeann ar an gcroitheadh láimhe.
@@ -257,7 +257,7 @@ Socraigh:
 NEXT_PUBLIC_BASE_URL=https://<d'óstach-tolláin>
 ```
 
-agus atosaigh OmniRoute sula gcuireann tú OAuth ar bun. I gcás Cloudflare Quick
+agus atosaigh 67router sula gcuireann tú OAuth ar bun. I gcás Cloudflare Quick
 Tunnels sealadacha, athraíonn an URL tar éis gach atosaithe, mar sin b’fhearr ngrok le fearann
 forchoimeádta nó Tailscale Funnel a úsáid le haghaidh OAuth táirgthe.
 
@@ -272,14 +272,14 @@ Taispeánann an deais staid an tolláin faoi **Socruithe → Tolláin**:
 - An teachtaireacht earráide is déanaí, más ann di.
 
 Le haghaidh monatóireacht ríomhchláraithe, déan na críochphointí `GET` in aghaidh an innill a pholláil. Ceadaítear níos mó
-ná inneall amháin a rith ag an am céanna; rianóidh OmniRoute gach ceann acu
+ná inneall amháin a rith ag an am céanna; rianóidh 67router gach ceann acu
 go neamhspleách.
 
 ## Fabhtcheartú
 
 ### "níor aimsíodh an dénártha cloudflared"
 
-Déanann OmniRoute iarracht é a uathshuiteáil ar an gcéad úsáid. Má chuirtear bac ar an tsuiteáil
+Déanann 67router iarracht é a uathshuiteáil ar an gcéad úsáid. Má chuirtear bac ar an tsuiteáil
 (líonra srianta, gan rochtain ar GitHub), íoslódáil `cloudflared` de láimh ó
 <https://github.com/cloudflare/cloudflared/releases> agus socraigh
 `CLOUDFLARED_BIN=/path/to/cloudflared`.

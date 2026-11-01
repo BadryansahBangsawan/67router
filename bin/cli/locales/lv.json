@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Kļūda: {message}",
-    "serverOffline": "OmniRoute serveris nedarbojas. Startējiet to ar: omniroute serve",
+    "serverOffline": "67router serveris nedarbojas. Startējiet to ar: omniroute serve",
     "authRequired": "Nepieciešama autentifikācija. Iestatiet OMNIROUTE_API_KEY vai palaidiet: omniroute setup",
     "rateLimited": "Pieprasījumu limits pārsniegs. Mēģiniet vēlreiz pēc {seconds}s.",
     "timeout": "Pieprasījums beidzās pēc {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Izlaist apstiprinājuma pieprasījumu"
   },
   "setup": {
-    "title": "OmniRoute iestatīšana",
+    "title": "67router iestatīšana",
     "passwordPrompt": "Administrēšanas parole",
     "providerPrompt": "Noklusējuma pakalpojumu sniedzējs (atstājiet tukšu, lai izlaistu)",
     "done": "Iestatīšana pabeigta",
@@ -30,7 +30,7 @@
     "opencode": "Instalēt un konfigurēt iekļauto @omniroute/opencode-plugin OpenCode lietošanai"
   },
   "doctor": {
-    "title": "OmniRoute Diagnostika",
+    "title": "67router Diagnostika",
     "dbOk": "Datubāze: kārtībā ({path})",
     "dbMissing": "Datubāze nav inicializēta — palaidiet `omnīroute setup`",
     "portOk": "Ports {port}: pieejams",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrēt pēc pakalpojumu sniedzēja nosaukuma",
       "header": "ID         Pakalpojumu sniedzējs       Nosaukums                     Termiņa beigu statuss  Testa statuss  Atdzesēšana līdz",
       "noData": "Nav pieejamu pakalpojumu sniedzēju savienojumu datu.",
-      "requiresServer": "providers status prasa, lai OmniRoute serveris darbotos."
+      "requiresServer": "providers status prasa, lai 67router serveris darbotos."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Pievienot vai atjaunināt API atslēgu pakalpojumu sniedzējam",
     "listDescription": "Uzskaitīt visus konfigurētos API atslēgas",
     "removeDescription": "Noņemt API atslēgu pakalpojumu sniedzējam",
-    "regenerateDescription": "Ģenerēt OmniRoute API atslēgu atkārtoti",
-    "revokeDescription": "Atsaukt OmniRoute API atslēgu",
+    "regenerateDescription": "Ģenerēt 67router API atslēgu atkārtoti",
+    "revokeDescription": "Atsaukt 67router API atslēgu",
     "revealDescription": "Atklāt neaizsegto API atslēgas vērtību",
     "usageDescription": "Rādīt neseno lietojumu API atslēgai",
     "usageLimitOpt": "Neseno pieprasījumu skaits",
@@ -172,13 +172,6 @@
       "period": "Laika diapazons: 1d|7d|30d|90d|ytd|all (noklusējums: 30d)",
       "provider": "Filtrēt pēc pakalpojuma sniedzēja ID"
     },
-    "budget": {
-      "description": "Pārvaldīt izmaksu budžetus",
-      "set": {
-        "scope": "Budžeta mērogs (noklusējums: globāls)",
-        "period": "Budžeta periods: dienas|nedēļas|mēneša (noklusējums: mēneša)"
-      }
-    },
     "quota": {
       "description": "Rādīt pakalpojuma sniedzēja kvotas izmantojumu",
       "provider": "Filtrēt pēc pakalpojuma sniedzēja ID",
@@ -225,7 +218,7 @@
     "noCombo": "Nav atbilstošas kombinācijas. Konfigurēt vienu ar: omniroute combo create"
   },
   "chat": {
-    "description": "Sūtīt vienreizēju tērzēšanas pieprasījumu uz OmniRoute",
+    "description": "Sūtīt vienreizēju tērzēšanas pieprasījumu uz 67router",
     "file": "Lasīt pieprasījumu no faila",
     "stdin": "Lasīt pieprasījumu no stdin",
     "system": "Sistēmas pieprasījums",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Startēt OmniRoute serveri (noklusējuma darbība)",
-    "starting": "Startēju OmniRoute serveri uz porta {port}...",
+    "description": "Startēt 67router serveri (noklusējuma darbība)",
+    "starting": "Startēju 67router serveri uz porta {port}...",
     "ready": "Gatavs pie http://localhost:{port}",
     "stopping": "Apturot serveri (PID {pid})...",
     "stopped": "Serveris apturēts.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Dublēšana",
-    "description": "Izveidot OmniRoute datu dublējumu",
+    "description": "Izveidot 67router datu dublējumu",
     "creating": "Veido dublējumu...",
     "done": "Dublējums saglabāts {path}",
     "noFiles": "Nav failu dublēšanai (datubāze nav inicializēta)",
@@ -277,7 +270,7 @@
     "noBackups": "Dublējumi nav atrasti.",
     "notFound": "Dublējums nav atrasts: {name}",
     "confirmRestore": "Pārrakstīt pašreizējos datus ar dublējumu no {ts}?",
-    "createDescription": "Izveidot OmniRoute datu dublējumu",
+    "createDescription": "Izveidot 67router datu dublējumu",
     "nameOpt": "Pielāgots dublējuma nosaukums",
     "cloudOpt": "Augšupielādēt dublējumu mākoņkrātuvē",
     "encryptOpt": "Šifrēt dublējumu ar AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Neizdevās iztīrīt kešatmiņu."
   },
   "redis": {
-    "description": "Palaidiet vienas klikšķa lokālo Redis konteineru (Podman vai Docker) OmniRoute kešatmiņai un kvotas izsekošanai"
+    "description": "Palaidiet vienas klikšķa lokālo Redis konteineru (Podman vai Docker) 67router kešatmiņai un kvotas izsekošanai"
   },
   "test": {
     "description": "Testēt pakalpojumu sniedzēja savienojumu",
@@ -390,36 +383,8 @@
       "description": "MCP audita žurnāls (alias for audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Pieejamo A2A prasmju saraksts no aģenta kartītes"
-    },
-    "invoke": {
-      "description": "Izsaukt A2A prasmi un atgriezt uzdevuma ID",
-      "input": "JSON ievades objekts",
-      "input_file": "Ceļš uz JSON ievades failu",
-      "wait": "Gaidīt uzdevuma pabeigšanu pirms atgriešanās",
-      "timeout": "Laika limits gaidot pabeigšanu ms (noklusējums: 60000)"
-    },
-    "tasks": {
-      "description": "Pārvaldīt A2A uzdevumus",
-      "list": {
-        "status": "Filtrēt pēc statusa",
-        "skill": "Filtrēt pēc prasmes ID"
-      },
-      "watch": {
-        "description": "Balsot par uzdevuma statusu līdz pabeigšanai"
-      },
-      "stream": {
-        "description": "Strumēt uzdevuma izpildes notikumus caur SSE"
-      },
-      "logs": {
-        "description": "Rādīt uzdevuma ziņojumus un artefaktus"
-      }
-    }
-  },
   "policy": {
-    "description": "Pārvaldīt OmniRoute autorizācijas politikas",
+    "description": "Pārvaldīt 67router autorizācijas politikas",
     "list": {
       "description": "Uzskaitīt politikas",
       "kind": "Filtrēt pēc veida (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurēt un pārbaudīt OmniRoute saspiešanas kanālu",
+    "description": "Konfigurēt un pārbaudīt 67router saspiešanas kanālu",
     "status": {
       "description": "Parādīt pašreizējo saspiešanas statusu un iestatījumus"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Mainīt tuneļu {type}? (tiks ģenerēts jauns URL)"
   },
   "stop": {
-    "description": "Apturēt OmniRoute serveri",
+    "description": "Apturēt 67router serveri",
     "stopping": "Aptur serveri (PID {pid})...",
     "stopped": "Serveris apturēts.",
     "notRunning": "Nedarbojas neviens serveris.",
     "portFallback": "PID fails nav atrasts, mēģina apturēt, balstoties uz portu..."
   },
   "restart": {
-    "description": "Restartēt OmniRoute serveri",
-    "restarting": "Restartēju OmniRoute serveri..."
+    "description": "Restartēt 67router serveri",
+    "restarting": "Restartēju 67router serveri..."
   },
   "dashboard": {
-    "description": "Atveriet OmniRoute vadīklu pārlūkprogrammā",
+    "description": "Atveriet 67router vadīklu pārlūkprogrammā",
     "opening": "Atveru vadīklu {url}",
     "urlOnly": "Izdrukāt vadīkla URL neatverot pārlūkprogrammu",
     "tui": "Atvērt interaktīvu TUI vadīklu (termināla interfeiss, 7 cilnes)"
@@ -560,120 +525,6 @@
       "description": "Iegūt vienu audita žurnāla ierakstu pēc ID"
     }
   },
-  "skills": {
-    "description": "Pārvaldīt OmniRoute prasmes (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Uzskaitīt instalētās prasmes",
-      "type": "Filtrēt pēc veida (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Rādīt tikai iespējotās prasmes",
-      "disabled": "Rādīt tikai atspējotās prasmes",
-      "api_key": "Filtrēt pēc API atslēgas"
-    },
-    "get": {
-      "description": "Iegūt informāciju par prasmi pēc ID"
-    },
-    "install": {
-      "description": "Instalēt prasmi no faila vai URL",
-      "from_file": "Ceļš uz prasmes JSON definīcijas failu",
-      "from_url": "Attālinātas prasmes definīcijas URL",
-      "type": "Prasmes veids (sandbox|custom|hybrid)",
-      "enable": "Iespējot prasmi pēc instalēšanas"
-    },
-    "enable": {
-      "description": "Iespējot prasmi pēc ID"
-    },
-    "disable": {
-      "description": "Atspējot prasmi pēc ID",
-      "yes": "Izlaidiet apstiprinājuma jautājumu"
-    },
-    "delete": {
-      "description": "Izdzēst prasmi pēc ID",
-      "yes": "Izlaidīt apstiprinājuma pieprasījumu"
-    },
-    "execute": {
-      "description": "Izpildīt prasmi pēc ID",
-      "input": "JSON ievades objekts",
-      "input_file": "Ceļš uz JSON ievades failu",
-      "timeout": "Izpildes taimauts milisekundēs (noklusējums: 30000)"
-    },
-    "executions": {
-      "description": "Sarakstīt prasmju izpildes vēsturi",
-      "skill": "Filtrēt pēc prasmes ID",
-      "limit": "Maksimālie rezultāti (noklusējums: 50)",
-      "status": "Filtrēt pēc statusa (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Pārvaldīt prasmes, kas instalētas caur SSH"
-    },
-    "marketplace": {
-      "description": "Pārlūkot un instalēt prasmes no tirgus"
-    },
-    "mp": {
-      "search": {
-        "description": "Meklēt tirgus paketes",
-        "category": "Filtrēt pēc kategorijas",
-        "tag": "Filtrēt pēc atzīmes",
-        "limit": "Maksimālie rezultāti (noklusējums: 30)",
-        "sort": "Sakārtot pēc: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Rādīt paketes detaļas un readme"
-      },
-      "install": {
-        "description": "Instalēt tirgus paketi",
-        "version": "Paketes versija (noklusējums: latest)",
-        "enable": "Iespējot pēc instalēšanas",
-        "yes": "Izlaidīt apstiprinājuma pieprasījumu"
-      },
-      "categories": {
-        "description": "Sarakstīt tirgus kategorijas"
-      },
-      "featured": {
-        "description": "Rādīt izceltās tirgus paketes"
-      }
-    }
-  },
-  "memory": {
-    "description": "Pārvaldīt OmniRoute sarunu atmiņu (FTS5 + vektors)",
-    "search": {
-      "description": "Meklēt atmiņas ierakstus ar semantisko vaicājumu",
-      "type": "Filtrēt pēc atmiņas veida (user|feedback|project|reference)",
-      "limit": "Maksimālie rezultāti (noklusējums: 20)",
-      "api_key": "Filtrēt pēc API atslēgas",
-      "token_budget": "Ierobežot kopējo žetonu skaitu rezultātos"
-    },
-    "add": {
-      "description": "Pievienot jaunu atmiņas ierakstu",
-      "content": "Atmiņas teksta saturs",
-      "file": "Lasīt saturu no faila",
-      "type": "Atmiņas veids (noklusējums: user)",
-      "metadata": "JSON metadatu objekts",
-      "api_key": "Asociēt ar API atslēgu"
-    },
-    "clear": {
-      "description": "Dzēst atmiņas ierakstus, kas atbilst filtriem",
-      "type": "Filtrēt pēc veida",
-      "older": "Dzēst ierakstus vecākus par ilgumu (30d, 6m, 1y)",
-      "api_key": "Filtrēt pēc API atslēgas",
-      "yes": "Izlaidīt apstiprinājuma uzvedni"
-    },
-    "list": {
-      "description": "Uzskaitīt atmiņas ierakstus bez meklēšanas reitinga",
-      "type": "Filtrēt pēc veida",
-      "limit": "Maksimālie rezultāti (noklusējums: 100)",
-      "api_key": "Filtrēt pēc API atslēgas"
-    },
-    "get": {
-      "description": "Iegūt vienu atmiņas ierakstu pēc ID"
-    },
-    "delete": {
-      "description": "Dzēst atmiņas ierakstu pēc ID",
-      "yes": "Izlaidīt apstiprinājuma uzvedni"
-    },
-    "health": {
-      "description": "Rādīt atmiņas apakšsistēmas veselību (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Pārvaldīt OAuth pakalpojumu sniedzēju savienojumus",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Izlaidīt apstiprinājuma uzvedni"
     }
   },
-  "cloud": {
-    "description": "Pārvaldīt mākoņa AI aģentu uzdevumus (codex, devin, jules)",
-    "agents": {
-      "description": "Uzskaitīt pieejamos mākoņa aģentus"
-    },
-    "agent": {
-      "description": "Pārvaldīt {agent} mākoņa aģenta uzdevumus",
-      "auth": {
-        "description": "Autorizēt {agent} caur OAuth"
-      }
-    },
-    "task": {
-      "description": "Pārvaldīt mākoņa aģenta uzdevumus",
-      "create": {
-        "description": "Izveidot jaunu aģenta uzdevumu",
-        "title": "Udevuma nosaukums (noklusējums: pirmie 80 rakstzīmes no uzvednes)",
-        "prompt": "Uzdevuma uzvednes teksts",
-        "prompt_file": "Lasīt uzvedni no faila",
-        "repo": "Repozitorija URL, ko klonēt uzdevumam",
-        "branch": "Filēja nosaukums, ko izmantot",
-        "metadata": "JSON metadatu objekts"
-      },
-      "list": {
-        "description": "Uzskaitīt aģenta uzdevumus",
-        "status": "Filtrēt pēc statusa (running|completed|failed|cancelled)",
-        "limit": "Maksimālie rezultāti (noklusējums: 50)"
-      },
-      "get": {
-        "description": "Iegūt uzdevuma detaļas pēc ID"
-      },
-      "status": {
-        "description": "Drukāt uzdevuma statusu (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Atcelt darbojošos uzdevumu",
-        "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-      },
-      "approve": {
-        "description": "Apstiprināt aģenta plānu, lai sāktu izpildi"
-      },
-      "message": {
-        "description": "Sūtīt ziņojumu darbojošamies uzdevumam"
-      }
-    },
-    "sources": {
-      "description": "Uzskaitīt avota failus, ko radījis uzdevums"
-    }
-  },
-  "eval": {
-    "description": "Pārvaldīt vērtēšanas komplektus un palaišanas",
-    "suites": {
-      "description": "Pārvaldīt vērtēšanas komplektus",
-      "list": {
-        "description": "Uzskaitīt vērtēšanas komplektus"
-      },
-      "get": {
-        "description": "Iegūt vērtēšanas komplekta detaļas pēc ID"
-      },
-      "create": {
-        "description": "Izveidot vērtēšanas komplektu no JSON faila",
-        "file": "Ceļš uz komplekta definīcijas JSON failu"
-      }
-    },
-    "run": {
-      "description": "Sākt vērtēšanas palaišanu komplektam",
-      "model": "Vērtējamais modeļa ID (noklusējums: auto)",
-      "combo": "Piespiest konkrētu kombināciju pēc nosaukuma",
-      "concurrency": "Vienlaicīgo paraugu skaits (noklusējums: 4)",
-      "tag": "Tagot šo palaišanu vēlākai filtrēšanai",
-      "watch": "Vērot palaišanas progresu līdz pabeigšanai"
-    },
-    "list": {
-      "description": "Uzskaitīt vērtēšanas palaišanas",
-      "suite": "Filtrēt pēc komplekta ID",
-      "status": "Filtrēt pēc statusa",
-      "since": "Atgriezt palaišanas kopš šī laika zīmogā",
-      "limit": "Maksimālie rezultāti (noklusējums: 50)"
-    },
-    "get": {
-      "description": "Iegūt vērtēšanas palaišanas detaļas pēc ID"
-    },
-    "results": {
-      "description": "Rādīt paraugu rezultātus vērtēšanas palaišanai",
-      "failed": "Rādīt tikai neizdevušos paraugus"
-    },
-    "cancel": {
-      "description": "Atcelt darbojošos vērtēšanu",
-      "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-    },
-    "scorecard": {
-      "description": "Rādīt rezultātu karti pabeigtai vērtēšanas palaišanai"
-    }
-  },
-  "webhooks": {
-    "description": "Pārvaldīt OmniRoute tīmekļa āķus",
-    "events": {
-      "description": "Uzskaitīt visus pieejamos tīmekļa āķa notikumu veidus"
-    },
-    "list": {
-      "description": "Uzskaitīt konfigurētos tīmekļa āķus"
-    },
-    "get": {
-      "description": "Iegūt tīmekļa āķa detaļas pēc ID"
-    },
-    "add": {
-      "description": "Reģistrēt jaunu tīmekļa āķi",
-      "url": "Mērķa URL",
-      "events": "Ar komatu atdalīts notikumu veidu saraksts",
-      "secret": "HMAC parakstīšanas noslēpums",
-      "header": "Papildu galvene atslēgas=vērtība formātā (atkārtojama)",
-      "no_enabled": "Izveidot tīmekļa āķi atspējotā stāvoklī"
-    },
-    "update": {
-      "description": "Atjaunināt esošu tīmekļa āķi",
-      "enabled": "Iestatīt iespējošanas stāvokli (true|false)"
-    },
-    "remove": {
-      "description": "Dzēst tīmekļa āķi",
-      "yes": "Izlaidiet apstiprinājuma pieprasījumu"
-    },
-    "test": {
-      "description": "Sūtīt testa notikumu uz tīmekļa āķi",
-      "event": "Notikuma tips, ko simulēt (noklusējums: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Viedais AI maršrutētājs ar automātisko rezerves režīmu",
+    "description": "67router — Viedais AI maršrutētājs ar automātisko rezerves režīmu",
     "version": "Drukāt versiju un iziet",
     "output": "Izvades formāts (table, json, jsonl, csv)",
     "quiet": "Nomāc nebūtisko izvadi",
     "no_color": "Atspējot krāsaino izvadi",
     "timeout": "HTTP pieprasījuma taimauts milisekundēs",
-    "api_key": "API atslēga OmniRoute serverim",
-    "base_url": "OmniRoute servera bāzes URL",
+    "api_key": "API atslēga 67router serverim",
+    "base_url": "67router servera bāzes URL",
     "context": "Servera konteksts/profils šai komandai",
     "lang": "Iestatīt CLI displeja valodu (pārraksta OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Pārvaldīt failus (augšupielādēt, uzskaitīt, iegūt, lejupielādēt, dzēst)",
-    "list": {
-      "purpose": "Filtrēt pēc mērķa",
-      "limit": "Maks. rezultāti"
-    },
-    "get": {
-      "description": "Iegūt faila metadatus"
-    },
-    "upload": {
-      "description": "Augšupielādēt failu",
-      "purpose": "Faila mērķis (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Lejupielādēt faila saturu",
-      "out": "Saglabāt ceļā (noklusējums: stdout)"
-    },
-    "delete": {
-      "yes": "Izlaidiet apstiprinājumu"
-    }
-  },
-  "batches": {
-    "description": "Pārvaldīt OpenAI savietojamus partijas darbus",
-    "list": {
-      "status": "Filtrēt pēc statusa",
-      "limit": "Maks. rezultāti"
-    },
-    "create": {
-      "description": "Izveidot partijas darbu",
-      "inputFile": "Ievades faila ID",
-      "endpoint": "Mērķa gala punkts",
-      "window": "Pabeigšanas logs",
-      "metadata": "Pievienot metadatus atslēga=vērtība"
-    },
-    "submit": {
-      "description": "Augšupielādēt JSONL failu un izveidot partiju",
-      "jsonl": "Ceļš uz JSONL failu",
-      "endpoint": "Mērķa gala punkts",
-      "wait": "Gaidīt pabeigšanu"
-    },
-    "cancel": {
-      "yes": "Izlaidiet apstiprinājumu"
-    },
-    "wait": {
-      "timeout": "Taimauts ms"
-    },
-    "output": {
-      "out": "Saglabāt izvadu ceļā"
-    },
-    "errors": {
-      "out": "Saglabāt kļūdas ceļā"
-    }
   },
   "translator": {
     "description": "Tulkot pieprasījuma ķermeņus starp LLM formātiem",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Piekļūt un pārbaudīt OmniRoute OpenAPI specifikāciju",
+    "description": "Piekļūt un pārbaudīt 67router OpenAPI specifikāciju",
     "dump": {
       "description": "Izvadīt OpenAPI specifikāciju uz stdout vai failu",
       "format": "Izvades formāts: yaml|json (noklusējums: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Aktivizēt visaugstāk novērtēto kombināciju"
     }
   },
-  "oneproxy": {
-    "description": "Pārvaldīt OneProxy augšējā līmeņa baseinu",
-    "stats": {
-      "provider": "Filtrēt pēc pakalpojuma sniedzēja",
-      "period": "Laika periods (noklusējums: 24h)"
-    },
-    "fetch": {
-      "description": "Iegūt starpniekserverus no baseina",
-      "count": "Iegūstamo starpniekserveru skaits (noklusējums: 1)",
-      "type": "Starpniekservera tips: http|socks5 (noklusējums: http)"
-    },
-    "rotate": {
-      "description": "Piespiest starpniekservera maiņu",
-      "provider": "Pakalpojuma sniedzējs, kam veikt maiņu",
-      "connectionId": "Konkrētais savienojuma ID, kam veikt maiņu"
-    },
-    "config": {
-      "description": "Rādīt vai atjaunināt OneProxy konfigurāciju",
-      "enabled": "Iespējot starpniekserveru baseinu (true|false)",
-      "poolSize": "Baseina lielums",
-      "providerSource": "URL starpniekserveru sniedzējam",
-      "rotationPolicy": "Maiņas politika: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Parādīt pašreizējo starpniekserveru baseinu ar metrikām"
-    }
-  },
   "open": {
-    "description": "Atvērt konkrētu OmniRoute informācijas paneli pārlūkā",
+    "description": "Atvērt konkrētu 67router informācijas paneli pārlūkā",
     "url": "Tikai izdrukāt URL, neatvērt pārlūku"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sinhronizēt konfigurāciju starp OmniRoute instancēm",
+    "description": "Sinhronizēt konfigurāciju starp 67router instancēm",
     "push": {
       "description": "Iespiest konfigurāciju mākoņvai attālai instancei"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtrēt pēc līmeņa (error,warn,info) — atdalīts ar komatu",
     "lines": "Ielādējamo rindu skaits",
     "timeout": "Savienojuma taimauts milisekundēs",
-    "baseUrl": "OmniRoute API bāzes URL",
+    "baseUrl": "67router API bāzes URL",
     "requestId": "Filtrēt pēc pieprasījuma ID",
     "apiKey": "Filtrēt pēc API atslēgas",
     "combo": "Filtrēt pēc kombo nosaukuma",
@@ -1244,10 +890,10 @@
     "description": "Kontrolēt sistēkas paneļa ikonu",
     "show": "Rādīt paneļa ikonu (ja serveris darbojas ar --tray)",
     "hide": "Paslēpt paneļa ikonu",
-    "quit": "Iziet no OmniRoute caur paneli"
+    "quit": "Iziet no 67router caur paneli"
   },
   "autostart": {
-    "description": "Pārvaldīt OmniRoute automātisko startu pie startēšanas (Linux: systemd lietotāja pakalpojums)",
+    "description": "Pārvaldīt 67router automātisko startu pie startēšanas (Linux: systemd lietotāja pakalpojums)",
     "enable": "Iespējot automātisko startu pie startēšanas",
     "disable": "Atspējot automātisko startu pie startēšanas",
     "toggle": "Pārslēgt automātisko startu pie startēšanas",
@@ -1268,30 +914,20 @@
     "system": "Sistēmas mudinājums",
     "resume": "Turpināt saglabātu sesiju pēc nosaukuma"
   },
-  "plugin": {
-    "description": "Pārvaldīt CLI spraudņus (omniroute-cmd-*)",
-    "list": "Uzskaitīt instalētos spraudņus",
-    "install": "Instalēt spraudni no npm vai lokālā ceļa",
-    "remove": "Izņemt instalētu spraudni",
-    "info": "Rādīt datus par instalētu spraudni",
-    "search": "Meklēt npm reģistrā pieejamos spraudņus",
-    "update": "Atjaunināt instalēto(s) spraudni(s)",
-    "scaffold": "Izveidot jauna spraudņa veidni"
-  },
   "launch": {
-    "description": "Palaist Claude Code, norādot uz OmniRoute (vietējo vai attālinātu, ar --profile)",
+    "description": "Palaist Claude Code, norādot uz 67router (vietējo vai attālinātu, ar --profile)",
     "token": "Tokens, ko Claude klients jānosūta (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute nav sasniedzams pie {port}. Palaidiet to ar 'omniroute serve'.",
+    "notRunning": "67router nav sasniedzams pie {port}. Palaidiet to ar 'omniroute serve'.",
     "notFound": "'claude' CLI netika atrasts PATH."
   },
   "run": {
-    "description": "Palaidiet atbalstītu CLI mērķi caur OmniRoute"
+    "description": "Palaidiet atbalstītu CLI mērķi caur 67router"
   },
   "setupClaude": {
-    "description": "Ģenerēt ~/.claude/profiles Claude Code profilus no OmniRoute modeļu kataloga"
+    "description": "Ģenerēt ~/.claude/profiles Claude Code profilus no 67router modeļu kataloga"
   },
   "connect": {
-    "description": "Savienoties ar attālinātu OmniRoute serveri un ievadīt attālināto režīmu"
+    "description": "Savienoties ar attālinātu 67router serveri un ievadīt attālināto režīmu"
   },
   "tokens": {
     "description": "Pārvaldīt ierobežotus CLI pieejas žetonus (attālinātais režīms)"
@@ -1300,10 +936,10 @@
     "description": "Izvēlēties piegādātāju+modeli no aktīvā servera un konfigurēt atbalstītu vietējo CLI"
   },
   "launchCodex": {
-    "description": "Palaidiet Codex CLI vērstu uz OmniRoute (vietējā vai attālinātā VPS)"
+    "description": "Palaidiet Codex CLI vērstu uz 67router (vietējā vai attālinātā VPS)"
   },
   "setupCodex": {
-    "description": "Ģenerēt ~/.codex profila failus no OmniRoute dzīvā modeļu kataloga"
+    "description": "Ģenerēt ~/.codex profila failus no 67router dzīvā modeļu kataloga"
   },
   "packs": {
     "description": "Pārvaldīt izvēles runtime pakotnes (ML / pārlūkprogrammu automatizācija)",
@@ -1316,7 +952,7 @@
     "errUnknown": "nezināma pakotne: {name}",
     "errNoIndex": "pakotnes indekss nav atrasts; padod --source <dir>, kas satur pakotnes ielādi (darbvirsmas komplekti to piegādā blakus lietotnei)",
     "installed": "pakotne \"{name}\" instalēta un pārbaudīta {dir}",
-    "restartHint": "restartēt OmniRoute serveri (vai darbvirsmas lietotni), lai runtime pārņemtu pakotni",
+    "restartHint": "restartēt 67router serveri (vai darbvirsmas lietotni), lai runtime pārņemtu pakotni",
     "removed": "pakotne \"{name}\" noņemta",
     "notInstalled": "pakotne \"{name}\" netika instalēta",
     "verifyOk": "visas instalētās pakotnes pārbaudītas",

@@ -1,12 +1,12 @@
 ---
-title: "OmniRoute Documentation"
+title: "67router Documentation"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute Documentation
+# 67router Documentation
 
-Navigable index of the OmniRoute documentation set. Topics are grouped by intent so you can find what you need quickly.
+Navigable index of the 67router documentation set. Topics are grouped by intent so you can find what you need quickly.
 
 > Looking for the project overview, install steps, or release notes? See the root [README.md](../README.md), [ROADMAP.md](../ROADMAP.md), [CHANGELOG.md](../CHANGELOG.md), and [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -14,37 +14,37 @@ Navigable index of the OmniRoute documentation set. Topics are grouped by intent
 
 ## For Non-Tech Users
 
-Simple guides for using OmniRoute — no technical background needed.
+Simple guides for using 67router — no technical background needed.
 
 ### getting-started/
 
-- [QUICK-START.md](getting-started/QUICK-START.md) — install and run OmniRoute in 3 minutes.
-- [AUTO-COMBO-GUIDE.md](getting-started/AUTO-COMBO-GUIDE.md) — let OmniRoute pick the best AI for you.
+- [QUICK-START.md](getting-started/QUICK-START.md) — install and run 67router in 3 minutes.
+- [AUTO-COMBO-GUIDE.md](getting-started/AUTO-COMBO-GUIDE.md) — let 67router pick the best AI for you.
 - [PROVIDERS-GUIDE.md](getting-started/PROVIDERS-GUIDE.md) — how to connect AI providers.
 - [FREE-TIERS-GUIDE.md](getting-started/FREE-TIERS-GUIDE.md) — get free AI with no credit card.
 - [WEB-COOKIE-GUIDE.md](getting-started/WEB-COOKIE-GUIDE.md) — web cookie providers (session-credential setup).
 
 ### guides/
 
-- [SETUP_GUIDE.md](guides/SETUP_GUIDE.md) — first-time setup of OmniRoute.
+- [SETUP_GUIDE.md](guides/SETUP_GUIDE.md) — first-time setup of 67router.
 - [USER_GUIDE.md](guides/USER_GUIDE.md) — daily usage of the dashboard and API.
 - [THINKING_BUDGET.md](guides/THINKING_BUDGET.md) — thinking/reasoning budget modes (passthrough vs auto-strip).
 - [FEATURES.md](guides/FEATURES.md) — dashboard feature gallery.
 - [CHAOS-MODE.md](guides/CHAOS-MODE.md) — multi-model parallel/collaborative execution (setup, permissions, API).
-- [TIERS.md](guides/TIERS.md) — OmniRoute tiers explained (user guide).
+- [TIERS.md](guides/TIERS.md) — 67router tiers explained (user guide).
 - [USAGE_QUOTA_GUIDE.md](guides/USAGE_QUOTA_GUIDE.md) — usage, quota & spend tracking.
 - [COST_TRACKING.md](guides/COST_TRACKING.md) — cost and spend tracking.
 - [FREE_PROVIDER_RANKINGS.md](guides/FREE_PROVIDER_RANKINGS.md) — free provider rankings (Arena ELO).
-- [DOCKER_GUIDE.md](guides/DOCKER_GUIDE.md) — running OmniRoute under Docker, including runtime RAM for coding agents.
+- [DOCKER_GUIDE.md](guides/DOCKER_GUIDE.md) — running 67router under Docker, including runtime RAM for coding agents.
 - [ELECTRON_GUIDE.md](guides/ELECTRON_GUIDE.md) — desktop (Electron) builds.
 - [TERMUX_GUIDE.md](guides/TERMUX_GUIDE.md) — running on Android via Termux.
 - [PWA_GUIDE.md](guides/PWA_GUIDE.md) — installing the dashboard as a PWA.
-- [REMOTE-MODE.md](guides/REMOTE-MODE.md) — exposing OmniRoute remotely + scoped tokens.
+- [REMOTE-MODE.md](guides/REMOTE-MODE.md) — exposing 67router remotely + scoped tokens.
 - [HEADLESS.md](guides/HEADLESS.md) — headless mode: proxy engine only, no dashboard (`OMNIROUTE_HEADLESS=1` / `serve --headless`).
 - [CLI-INTEGRATIONS.md](guides/CLI-INTEGRATIONS.md) — master table of `setup-*` CLI integrations.
 - [OPENCODE-V2-PLUGIN.md](guides/OPENCODE-V2-PLUGIN.md) — installing and configuring the OpenCode v2 plugin.
-- [CLAUDE-CODE-CONFIGURATION.md](guides/CLAUDE-CODE-CONFIGURATION.md) — Claude Code CLI with OmniRoute.
-- [CODEX-CLI-CONFIGURATION.md](guides/CODEX-CLI-CONFIGURATION.md) — Codex CLI with OmniRoute.
+- [CLAUDE-CODE-CONFIGURATION.md](guides/CLAUDE-CODE-CONFIGURATION.md) — Claude Code CLI with 67router.
+- [CODEX-CLI-CONFIGURATION.md](guides/CODEX-CLI-CONFIGURATION.md) — Codex CLI with 67router.
 - [KIRO_SETUP.md](guides/KIRO_SETUP.md) — Kiro setup.
 - [ANTIGRAVITY-ONBOARDING.md](guides/ANTIGRAVITY-ONBOARDING.md) — Antigravity (Google One AI) onboarding.
 - [MANAGEMENT-AUTH.md](guides/MANAGEMENT-AUTH.md) — management authentication.
@@ -88,8 +88,6 @@ Lookup material — API surface, environment variables, CLI flags, provider cata
 - [FEATURE_FLAGS.md](reference/FEATURE_FLAGS.md) — feature flags and their defaults.
 - [CLI-TOOLS.md](reference/CLI-TOOLS.md) — bundled CLI commands.
 - [FREE_TIERS.md](reference/FREE_TIERS.md) — free-tier LLM provider directory.
-- [FREE_PROXIES_API.md](reference/FREE_PROXIES_API.md) — free proxies API.
-- [RELAY_BACKEND_STRATEGY.md](reference/RELAY_BACKEND_STRATEGY.md) — relay backend strategy.
 - [RELAY_TROUBLESHOOTING.md](reference/RELAY_TROUBLESHOOTING.md) — relay troubleshooting.
 
 ## frameworks/
@@ -97,16 +95,10 @@ Lookup material — API surface, environment variables, CLI flags, provider cata
 Pluggable subsystems exposed to clients, agents, and operators.
 
 - [MCP-SERVER.md](frameworks/MCP-SERVER.md) — Model Context Protocol server.
-- [A2A-SERVER.md](frameworks/A2A-SERVER.md) — Agent-to-Agent (A2A) JSON-RPC server.
 - [ACP.md](frameworks/ACP.md) — Agent Client Protocol.
-- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — A2A / ACP / Cloud agent overview.
+- [AGENT_PROTOCOLS_GUIDE.md](frameworks/AGENT_PROTOCOLS_GUIDE.md) — ACP (CLI agent registry) overview.
 - [AGENTBRIDGE.md](frameworks/AGENTBRIDGE.md) — IDE agent bridge.
 - [AGENT-SKILLS.md](frameworks/AGENT-SKILLS.md) — agent skills catalog.
-- [CLOUD_AGENT.md](frameworks/CLOUD_AGENT.md) — cloud agent runtime and providers.
-- [SKILLS.md](frameworks/SKILLS.md) — Skills framework (sandboxed extension).
-- [MEMORY.md](frameworks/MEMORY.md) — persistent memory (FTS5 + Qdrant).
-- [WEBHOOKS.md](frameworks/WEBHOOKS.md) — webhook events and dispatch.
-- [EVALS.md](frameworks/EVALS.md) — eval suites.
 - [GAMIFICATION.md](frameworks/GAMIFICATION.md) — gamification & leaderboard system.
 - [EMBEDDED-SERVICES.md](frameworks/EMBEDDED-SERVICES.md) — embedded sidecar services (9Router, CLIProxyAPI).
 - [NOTION_CONTEXT.md](frameworks/NOTION_CONTEXT.md) — Notion context source.
@@ -114,12 +106,8 @@ Pluggable subsystems exposed to clients, agents, and operators.
 - [LOCAL_CORPUS_CONTEXT.md](frameworks/LOCAL_CORPUS_CONTEXT.md) — local corpus context source (approved directory exposed to MCP).
 - [OPENCODE.md](frameworks/OPENCODE.md) — OpenCode integration.
 - [OPEN_SSE_ARCHITECTURE.md](frameworks/OPEN_SSE_ARCHITECTURE.md) — open-sse streaming engine internals.
-- [PLAYGROUND_STUDIO.md](frameworks/PLAYGROUND_STUDIO.md) — Playground Studio UI.
 - [SEARCH_TOOLS_STUDIO.md](frameworks/SEARCH_TOOLS_STUDIO.md) — Search Tools Studio UI.
 - [TRAFFIC_INSPECTOR.md](frameworks/TRAFFIC_INSPECTOR.md) — traffic inspector (MITM).
-- [PLUGINS.md](frameworks/PLUGINS.md) — CLI plugin system overview.
-- [PLUGIN_SDK.md](frameworks/PLUGIN_SDK.md) — plugin SDK reference.
-- [PLUGIN_MARKETPLACE.md](frameworks/PLUGIN_MARKETPLACE.md) — plugin marketplace.
 - [RADAR.md](frameworks/RADAR.md) — Radar free-model catalog overlay (optional, off by default).
 
 ## routing/
@@ -127,7 +115,6 @@ Pluggable subsystems exposed to clients, agents, and operators.
 Combo routing, scoring, and replay.
 
 - [AUTO-COMBO.md](routing/AUTO-COMBO.md) — Auto-Combo (multi-factor scoring, 20 strategies).
-- [QUOTA_SHARE.md](routing/QUOTA_SHARE.md) — quota sharing engine.
 - [REASONING_REPLAY.md](routing/REASONING_REPLAY.md) — reasoning replay cache.
 - [REASONING_ROUTING.md](routing/REASONING_ROUTING.md) — reasoning routing rules (effort/budget rule engine).
 
@@ -176,7 +163,7 @@ Provider-specific integration guides.
 
 ## comparison/
 
-- [OMNIROUTE_VS_ALTERNATIVES.md](comparison/OMNIROUTE_VS_ALTERNATIVES.md) — how OmniRoute compares to alternatives.
+- [OMNIROUTE_VS_ALTERNATIVES.md](comparison/OMNIROUTE_VS_ALTERNATIVES.md) — how 67router compares to alternatives.
 
 ## ops/
 

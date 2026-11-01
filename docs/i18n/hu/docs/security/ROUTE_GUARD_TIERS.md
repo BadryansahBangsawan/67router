@@ -6,7 +6,7 @@
 
 ## Áttekintés
 
-Az OmniRoute összes felügyeleti API-útvonala három védelmi szint egyikébe van besorolva. A besorolás statikus, a `src/server/authz/routeGuard.ts` fájlban van meghatározva, és kiértékelése minden más hitelesítési ág futása előtt történik.
+A 67router összes felügyeleti API-útvonala három védelmi szint egyikébe van besorolva. A besorolás statikus, a `src/server/authz/routeGuard.ts` fájlban van meghatározva, és kiértékelése minden más hitelesítési ág futása előtt történik.
 
 ## Szintek
 
@@ -25,9 +25,9 @@ Cloudflared/Ngrok-alagúton keresztül) folyamatindítást kezdeményezhetne —
 **Mi a GHSA-fhh6-4qxv-rpqj (a támadási osztály):** egy felügyeleti/ügynökkiszolgáló
 olyan végpontot tesz elérhetővé, amely alfolyamatot indít (`npm install`, `node`, böngésző,
 proxy, `git`, `tar`, …). Ha ez a végpont a gazdagépen kívülről is elérhető — mert
-az üzemeltető az OmniRoute-ot nginx-/Cloudflare-/Tailscale-alagút mögé helyezte, és egy JWT
+az üzemeltető a 67router-ot nginx-/Cloudflare-/Tailscale-alagút mögé helyezte, és egy JWT
 kiszivárgott, vagy a hitelesítés hibásan volt konfigurálva —, akkor a támadó az „API meghívását” „parancs
-futtatásává a gazdagépen” alakítja (távoli kódfuttatás). Az OmniRoute ezt úgy akadályozza meg, hogy
+futtatásává a gazdagépen” alakítja (távoli kódfuttatás). A 67router ezt úgy akadályozza meg, hogy
 **feltétel nélkül, minden hitelesítési ellenőrzés előtt ellenőrzi a visszacsatolási címet** minden
 folyamatindításra képes útvonalon: egy alagúton keresztül kiszivárgott tokennel sem lehet elérni a folyamatindítást.
 
@@ -55,7 +55,6 @@ folyamatindításra képes útvonalon: egy alagúton keresztül kiszivárgott to
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy figyelő és rendszerproxy                                                                  |
 | `/api/settings/mitm`                                                                                     | Engedélyezi a MITM-elfogást (rendszerszintű proxyállapot)                                                                |
 | `/api/issue-agent/`                                                                                      | Hibajegyügynök — helyi eszközöket indít a repón                                                                          |
-| `/api/plugins/`, `/api/plugins`                                                                          | Beépülőmodulok — betöltés/végrehajtás a `worker_threads` + `child_process` használatával                                 |
 | `/api/middleware/`                                                                                       | Felhasználói köztes réteg — a kezelő kódját folyamaton belül tölti be/hajtja végre                                       |
 | `/api/system/version`                                                                                    | Automatikus frissítés (csak POST; a GET/HEAD/OPTIONS kivétel) — elindítja a `git checkout` + `npm install` parancsot     |
 | `/api/db-backups/exportAll`                                                                              | Elindítja a `tar` parancsot az exportarchívum létrehozásához                                                             |
@@ -116,7 +115,7 @@ azon távoli, kizárólag MCP-t használó hívók számára, amelyeknek nincs s
 
 #### Üzemeltetői útmutatás és naplózás
 
-Ha az OmniRoute-ot fordított proxy vagy alagút (nginx, Caddy, Cloudflare
+Ha a 67router-ot fordított proxy vagy alagút (nginx, Caddy, Cloudflare
 Tunnel, Tailscale, Ngrok) mögött futtatja, a loopback-ellenőrzés továbbra is védi a fenti,
 folyamatindításra képes útvonalakat — a nem loopback klienscímről érkező kérést
 `403 LOCAL_ONLY` válasszal utasítja el a rendszer **a hitelesítés futtatása előtt**, így egy kiszivárgott JWT
@@ -154,7 +153,7 @@ nem érheti el a folyamatindítást. Két üzemeltetői felelősség továbbra i
 - Keressen rá a reverse proxy / hozzáférési naplókban a fenti előtagokra, nem loopback
   klienscímmel párosítva. Minden olyan találat, amely `403 LOCAL_ONLY` helyett
   `200` választ adott, azt jelenti, hogy a proxy elfedi a kliens valódi IP-címét — javítsa ki a proxyt.
-- Az OmniRoute naplóiban az ilyen útvonalak egyikénél megjelenő `403 LOCAL_ONLY` azt jelzi, hogy a védelem
+- A 67router naplóiban az ilyen útvonalak egyikénél megjelenő `403 LOCAL_ONLY` azt jelzi, hogy a védelem
   rendeltetésszerűen működik, nem pedig egy elnyomandó hibát.
 
 #### Távolról elérhető útvonalak hívási helyen alkalmazott vizsgálati kapuval

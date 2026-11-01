@@ -5,7 +5,7 @@
 ---
 
 Dit document beschrijft de door feedback gestuurde adaptieve routeringsbasis die aan
-OmniRoute is toegevoegd. Deze is bewust beperkt van omvang: er wordt een getypeerd kanaal voor
+67router is toegevoegd. Deze is bewust beperkt van omvang: er wordt een getypeerd kanaal voor
 routeringsresultaten geïntroduceerd, evenals een online kwaliteitssignaal dat de bestaande
 auto-combo-scorer voedt, een optionele OpenTelemetry-exporter en een endpoint voor
 uitlegbaarheid. Het vervangt **niet** de bestaande weerbaarheidsstack (circuit breaker,
@@ -14,7 +14,7 @@ deze aan.
 
 ## 1. Architecturale context
 
-OmniRoute is een gegevensvlak met een **kritiek verzoekpad** en een **besturings-/intelligentie-
+67router is een gegevensvlak met een **kritiek verzoekpad** en een **besturings-/intelligentie-
 vlak**. Het kritieke pad moet snel, geheugenefficiënt, asynchroon, weerbaar en
 voorspelbaar blijven. Evaluatie, kwaliteitsscores, experimenten en historische analyse horen
 thuis in het besturingsvlak.
@@ -24,7 +24,7 @@ AI-agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   gegevensvlak (snel, synchroon, in-memory)
+│    67router        │   gegevensvlak (snel, synchroon, in-memory)
 │ routering / failover│
 │ gezondheid / vangnet│
 │ cache / streaming   │
@@ -50,7 +50,6 @@ AI-agent / IDE
 | Schaduwverkeer                              | `open-sse/services/combo/shadowRouting.ts`                                                                           |
 | Vangrails                                   | `src/lib/guardrails/` (pre-/post-hooks)                                                                              |
 | Exacte cache                                | `src/lib/semanticCache.ts` (gebaseerd op handtekeningen)                                                             |
-| Evaluatoren / evaluatiegestuurde routering  | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                 |
 | Uitlegbaarheid van combo-beslissingen       | `open-sse/services/combo/decisionTrace.ts`                                                                           |
 | Realtime dashboardgebeurtenissen            | `src/lib/events/eventBus.ts` (UI-meldingskanaal, `unknown`-payloads, geschiedenis van 100 items)                     |
 
@@ -245,7 +244,7 @@ Bestanden: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*`-SDK).
 - Spans volgen de semantische GenAI-conventies (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) plus OmniRoute-routeringsattributen
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) plus 67router-routeringsattributen
   (resultaat, status, TTFT, nieuwe pogingen, fallback).
 - `record()` plaatst uitsluitend items in een begrensde buffer (O(1)); een achtergrondtimer
   verstuurt ze asynchroon via `POST {endpoint}/v1/traces`. Bij overbelasting worden de
@@ -267,7 +266,7 @@ Bestanden: `open-sse/services/routing/otel.ts`
 
 ## 6. Integratie van het evaluatievlak (gereedheid voor Future AGI)
 
-OmniRoute behandelt Future AGI (of elke andere evaluator) als een **potentiële
+67router behandelt Future AGI (of elke andere evaluator) als een **potentiële
 backend voor intelligentie/evaluatie, niet als een afhankelijkheid**. De integratiepunten:
 
 - Een `RoutingEventSink` kan events asynchroon doorsturen naar een evaluator.
@@ -276,8 +275,6 @@ backend voor intelligentie/evaluatie, niet als een afhankelijkheid**. De integra
 - Een toekomstige `Evaluator` (deterministisch, lokale beoordelaar, HTTP, WASM) zou
   events/traces verwerken en een `QualityScore` retourneren die aan hetzelfde
   `getQualityScore`-/kwaliteitsfactorpad wordt doorgegeven.
-- Bestaande evaluatiegestuurde routering (`open-sse/services/evalRouting.ts`)
-  herschikt combinatiedoelen al op basis van slagingspercentages van `eval_runs` wanneer deze is ingeschakeld.
 
 Er worden geen evaluaties synchroon op het aanvraagpad uitgevoerd en de gateway
 functioneert volledig wanneer de evaluator afwezig is.

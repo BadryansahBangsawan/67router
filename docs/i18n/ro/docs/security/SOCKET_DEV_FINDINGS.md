@@ -48,7 +48,7 @@ expus printr-un tunel **nu poate** declanșa această cale de cod.
 | Linux+Firefox/Chromium | actualizarea bazei de date NSS pentru fiecare profil prin `certutil -d sql:<profile>`                             |
 
 Acestea sunt aceleași comenzi utilizate de `mitmproxy`, Charles Proxy, Fiddler și
-Caddy. Faptul că acestea există în OmniRoute este documentat la
+Caddy. Faptul că acestea există în 67router este documentat la
 `docs/security/STEALTH_GUIDE.md`.
 
 **Măsuri de atenuare în v3.8.6**:
@@ -110,7 +110,7 @@ automatizările. Acesta va fi eliminat în v3.9.
 
 **De ce îl păstrăm**: importul din Zed este cea mai accesibilă metodă de
 inițializare pentru utilizatorii care folosesc deja Zed și doresc să-și copieze
-cheile furnizorilor în OmniRoute fără să le lipească din nou.
+cheile furnizorilor în 67router fără să le lipească din nou.
 
 ---
 
@@ -122,7 +122,7 @@ cheile furnizorilor în OmniRoute fără să le lipească din nou.
 `runElevatedPowerShell` și funcția auxiliară comună `quotePowerShell`.
 Clasificatorul AI al Socket.dev le interpretează ca pe un set generic de
 instrumente pentru „execuție pe sistemul gazdă + escaladarea privilegiilor”.
-În OmniRoute, acestea sunt utilizate numai de fluxul de instalare a
+În 67router, acestea sunt utilizate numai de fluxul de instalare a
 certificatului MITM (§1) și de `execFileWithPassword` pentru executarea
 comenzilor `sudo`.
 
@@ -178,7 +178,7 @@ opțională.
 
 ---
 
-## §5 — Rescrierea credențialelor OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Rescrierea credențialelor 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Fișiere sursă**:
 
@@ -210,7 +210,7 @@ rawBody)`) înainte de a analiza JSON-ul. Dacă secretul este setat, semnătura 
    `rateLimitedUntil`, `updatedAt`). Aceasta este o **schimbare incompatibilă** pentru utilizatorii
    care se bazau pe sincronizarea la distanță a tokenurilor — aceștia trebuie să o activeze explicit.
 
-**De ce o păstrăm**: Cloud Sync este singura modalitate prin care un tenant OmniRoute Cloud
+**De ce o păstrăm**: Cloud Sync este singura modalitate prin care un tenant 67router Cloud
 poate centraliza credențialele echipei. Remedierea face ca modelul de amenințări să fie onest:
 „serverul semnează, clientul verifică, operatorul activează explicit”.
 

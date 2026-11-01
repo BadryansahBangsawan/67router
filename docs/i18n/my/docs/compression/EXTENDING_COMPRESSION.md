@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute ၏ ချုံ့ခြင်းအင်ဂျင်သည် **ပလပ်အင်အဖြစ် ထည့်သွင်းအသုံးပြုနိုင်သည်** — စိတ်ကြိုက်အင်ဂျင်များကို မှတ်ပုံတင်နိုင်သည်၊ ဘာသာစကားအသစ်များအတွက် language pack များ ထည့်သွင်းဖြန့်ချိနိုင်သည်၊ ထို့ပြင် အဆင့်ဆင့်ဆက်ထားသော pipeline များကို ပေါင်းစပ်ဖွဲ့စည်းနိုင်သည်။ ဤလမ်းညွှန်တွင် ပြုလုပ်ပုံကို ဖော်ပြထားသည်။
+> **TL;DR**: 67router ၏ ချုံ့ခြင်းအင်ဂျင်သည် **ပလပ်အင်အဖြစ် ထည့်သွင်းအသုံးပြုနိုင်သည်** — စိတ်ကြိုက်အင်ဂျင်များကို မှတ်ပုံတင်နိုင်သည်၊ ဘာသာစကားအသစ်များအတွက် language pack များ ထည့်သွင်းဖြန့်ချိနိုင်သည်၊ ထို့ပြင် အဆင့်ဆင့်ဆက်ထားသော pipeline များကို ပေါင်းစပ်ဖွဲ့စည်းနိုင်သည်။ ဤလမ်းညွှန်တွင် ပြုလုပ်ပုံကို ဖော်ပြထားသည်။
 
 **ဆက်စပ်လမ်းညွှန်များ:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # ပရောဂျက်အဆင့် (စတင်ချိန်တွင် တင်သွင်းသည်)
 ```
 
-သို့မဟုတ် plugin တစ်ခုမှတစ်ဆင့် ပရိုဂရမ်နည်းဖြင့် တင်သွင်းပါ-
+Or register it programmatically at startup:
 
 ```ts
-// သင့် plugin အတွင်း
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // plugin SDK က onRequest / onResponse / onError hook များကို ထုတ်ပေးသည်။ plugin
-  // module တင်သွင်းသည့်အခါ (သို့မဟုတ် ပထမဆုံး onRequest တွင်) engine ကို မှတ်ပုံတင်ပါ၊ ထို့နောက်
-  // သင်၏ကိုယ်ပိုင် teardown လမ်းကြောင်းမှ ၎င်းကို မှတ်ပုံတင်မှု ပယ်ဖျက်ပါ။
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Teardown ပြုလုပ်ချိန်တွင်-
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -231,7 +222,7 @@ export default definePlugin({
 
 ## ဘာသာစကား Pack များ ဖန်တီးခြင်း
 
-Caveman ပုံစံ ချုံ့ခြင်းသည် သဘာဝဘာသာစကားတစ်ခုချင်းစီရှိ ဖြည့်စွက်စကားများ၊ မရေမရာပြောဆိုမှုများနှင့် စကားရှည်သည့် ပုံစံများကို ကိုင်တွယ်ရန် **ဘာသာစကားအလိုက် သတ်မှတ်ထားသော rule pack များ** ကို အသုံးပြုသည်။ OmniRoute တွင် `en`, `es`, `fr`, `de`, `ja`, `pt-BR` ဟူသော **ဘာသာစကား pack ၆ ခု** ပါဝင်သည်။
+Caveman ပုံစံ ချုံ့ခြင်းသည် သဘာဝဘာသာစကားတစ်ခုချင်းစီရှိ ဖြည့်စွက်စကားများ၊ မရေမရာပြောဆိုမှုများနှင့် စကားရှည်သည့် ပုံစံများကို ကိုင်တွယ်ရန် **ဘာသာစကားအလိုက် သတ်မှတ်ထားသော rule pack များ** ကို အသုံးပြုသည်။ 67router တွင် `en`, `es`, `fr`, `de`, `ja`, `pt-BR` ဟူသော **ဘာသာစကား pack ၆ ခု** ပါဝင်သည်။
 
 ### Pack ဖွဲ့စည်းပုံ
 
@@ -387,7 +378,7 @@ engine N ၏ output သည် engine N+1 ၏ input ဖြစ်လာသည်�
 
 ### ချုံ့ခြင်း Mode များ
 
-OmniRoute သည် configuration၊ အလိုအလျောက် စတင်လုပ်ဆောင်သည့် threshold များနှင့် combo override များအပေါ် အခြေခံ၍ **request တစ်ခုစီအတွက် mode တစ်ခုတည်းကိုသာ** ရွေးချယ်သည်။
+67router သည် configuration၊ အလိုအလျောက် စတင်လုပ်ဆောင်သည့် threshold များနှင့် combo override များအပေါ် အခြေခံ၍ **request တစ်ခုစီအတွက် mode တစ်ခုတည်းကိုသာ** ရွေးချယ်သည်။
 ရရှိနိုင်သော mode များကို `open-sse/services/compression/types.ts` (`CompressionMode` type) တွင် သတ်မှတ်ထားသည်။
 
 | Mode         | Engine များ          | အသုံးပြုမှုအခြေအနေ                                                                                                                                                                                                                              |
@@ -504,10 +495,10 @@ pipeline တစ်ခုကို မပေးပို့ပါက မူလသ
 
 ## Upstream Sync မူဝါဒ
 
-OmniRoute ၏ compression engine များသည် README ထဲတွင် upstream project အများအပြားကို အသိအမှတ်ပြုဖော်ပြထားသည်
+67router ၏ compression engine များသည် README ထဲတွင် upstream project အများအပြားကို အသိအမှတ်ပြုဖော်ပြထားသည်
 ("inspired by RTK, Caveman, LLMLingua-2, Troglodita")။ Contributor များ မကြာခဏမေးလေ့ရှိသည့်
 မေးခွန်းမှာ- **upstream RTK က tool filter အသစ်တစ်ခု ထည့်သွင်းသည့်အခါ သို့မဟုတ် Caveman က rule
-pack တစ်ခု ထည့်သွင်းသည့်အခါ ၎င်းသည် OmniRoute သို့ မည်သို့ရောက်ရှိလာသနည်း။** ဤအပိုင်းသည် တရားဝင်အဖြေဖြစ်သည်။
+pack တစ်ခု ထည့်သွင်းသည့်အခါ ၎င်းသည် 67router သို့ မည်သို့ရောက်ရှိလာသနည်း။** ဤအပိုင်းသည် တရားဝင်အဖြေဖြစ်သည်။
 
 ### Vendored မိတ္တူများနှင့် သီးခြားအကောင်အထည်ဖော်မှုများ
 
@@ -527,7 +518,7 @@ upstream မိတ္တူမရှိပါ — ထို့ကြောင့
 
 **အလိုအလျောက် upstream release စောင့်ကြည့်ခြင်းမရှိသည့်အပြင် `compression-sync`
 label လည်း မရှိပါ** — ၎င်းမှာ ရည်ရွယ်ချက်ရှိရှိ ဒီဇိုင်းချထားခြင်းဖြစ်သည်။ Engine များသည် ပြန်လည်အကောင်အထည်ဖော်ထားခြင်းဖြစ်သောကြောင့် upstream RTK
-filter သို့မဟုတ် Caveman rule pack ကို code အဖြစ် ပေါင်းစည်းခြင်းမပြုပါ။ ထိုအစား ၎င်းကို **OmniRoute ၏ ကိုယ်ပိုင် format ဖြင့် rule/filter အသစ်အဖြစ်
+filter သို့မဟုတ် Caveman rule pack ကို code အဖြစ် ပေါင်းစည်းခြင်းမပြုပါ။ ထိုအစား ၎င်းကို **67router ၏ ကိုယ်ပိုင် format ဖြင့် rule/filter အသစ်အဖြစ်
 ပြန်လည်ဖော်ပြသည်** (
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md) ကိုကြည့်ပါ)၊ ထို့နောက်
 ပုံမှန် PR မှတစ်ဆင့် လိုအပ်သလို ထည့်သွင်းသည်။ အထက်ပါ extension point များ (custom engine၊ language pack၊ RTK filter)
@@ -542,14 +533,14 @@ filter သို့မဟုတ် Caveman rule pack ကို code အဖြစ
 ### Headroom (input-compression proxy)
 
 Headroom သည် **အပြည့်အဝ internal** ဖြစ်သည် — သတ်မှတ်ဗားရှင်း၌ ချိတ်ထားသော vendored `gcf` codec snapshot နှင့်
-OmniRoute ၏ ကိုယ်ပိုင် `smartcrusher` / `toon` / `tabular` layer များဖြစ်သည်။ Vendored မိတ္တူအပြင်
+67router ၏ ကိုယ်ပိုင် `smartcrusher` / `toon` / `tabular` layer များဖြစ်သည်။ Vendored မိတ္တူအပြင်
 စောင့်ကြည့်ရန် live upstream မရှိပါ။ `gcf` ၏ update များကို codec ပြောင်းလဲသည့်အခါ
 ကိုယ်တိုင် refresh လုပ်ပြီး compression budget
 gate (`check:compression-budget`) နှင့် ပြန်လည်စစ်ဆေးအတည်ပြုသည်။
 
 ### Upstream မှ မှီငြမ်းထားသော တိုးတက်ကောင်းမွန်မှုတစ်ခု အဆိုပြုခြင်း
 
-1. **Vendor မထည့်ပါနှင့်** — upstream rule/filter ကို OmniRoute ၏ format ဖြင့် ပြန်လည်ဖော်ပြပါ။
+1. **Vendor မထည့်ပါနှင့်** — upstream rule/filter ကို 67router ၏ format ဖြင့် ပြန်လည်ဖော်ပြပါ။
 2. အောက်ပါ သက်ဆိုင်ရာ extension point (language pack၊ RTK filter သို့မဟုတ်
    custom engine) မှတစ်ဆင့် ထည့်သွင်းပါ။
 3. License ပါဝင်သော source ကို ကူးယူခြင်းမပြုဘဲ PR ဖော်ပြချက်တွင် upstream project ကို ကိုးကားဖော်ပြပါ (အသိအမှတ်ပြုရန်)။

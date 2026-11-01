@@ -124,8 +124,6 @@ vi.mock("next-intl", () => ({
       "endpoint.videoDesc": "Video endpoint",
       "endpoint.rerank": "Rerank",
       "endpoint.rerankDesc": "Rerank endpoint",
-      "endpoint.moderations": "Moderations",
-      "endpoint.moderationsDesc": "Moderation endpoint",
       "endpoint.listModels": "List Models",
       "endpoint.listModelsDesc": "List model endpoint",
       "endpoint.overviewTitle": "Endpoint overview",
@@ -254,9 +252,6 @@ describe("EndpointPageClient", () => {
       }
       if (path === "/v1/models") return Promise.resolve(jsonResponse({ data: [] }));
       if (path === "/api/mcp/status") return Promise.resolve(jsonResponse({ online: false }));
-      if (path === "/api/a2a/status") {
-        return Promise.resolve(jsonResponse({ status: "ok", tasks: { activeStreams: 0 } }));
-      }
       if (path === "/api/search/providers") {
         return Promise.resolve(jsonResponse({ providers: [] }));
       }
@@ -354,9 +349,6 @@ describe("EndpointPageClient", () => {
       if (path === "/api/mcp/status") {
         return Promise.resolve(jsonResponse({ online: false }));
       }
-      if (path === "/api/a2a/status") {
-        return Promise.resolve(jsonResponse({ status: "ok", tasks: { activeStreams: 0 } }));
-      }
       if (path === "/api/search/providers") {
         return Promise.resolve(jsonResponse({ providers: [] }));
       }
@@ -414,7 +406,9 @@ describe("EndpointPageClient", () => {
       })
     );
 
-    await waitForText("2 models across");
+    // The embedding row has no endpoint card any more (/v1/embeddings was removed), so only
+    // the chat model is counted.
+    await waitForText("1 models across");
     await waitForText("/api/v1/vscode/sk-test-1234/models");
     expect(document.body.textContent).toContain("VS Code Token Alias");
     expect(document.body.textContent).toContain("/api/v1/vscode/sk-test-1234/models");
@@ -470,9 +464,6 @@ describe("EndpointPageClient", () => {
       }
       if (path === "/api/mcp/status") {
         return Promise.resolve(jsonResponse({ online: false }));
-      }
-      if (path === "/api/a2a/status") {
-        return Promise.resolve(jsonResponse({ status: "ok", tasks: { activeStreams: 0 } }));
       }
       if (path === "/api/search/providers") {
         return Promise.resolve(jsonResponse({ providers: [] }));

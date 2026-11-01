@@ -5,11 +5,11 @@
 ---
 
 > **Stato:** Generalmente disponibile.
-> **Destinatari:** Operatori che collegano OpenCode a un'installazione OmniRoute.
+> **Destinatari:** Operatori che collegano OpenCode a un'installazione 67router.
 > **Fonte di verità (schema di configurazione):** `src/shared/services/opencodeConfig.ts`
 > **Fonte di verità (pacchetto npm):** `@omniroute/opencode-provider/` (workspace pubblicabile)
 
-[OpenCode](https://opencode.ai) è un client IA agentico per CLI/desktop. Legge il proprio catalogo di provider da `~/.config/opencode/opencode.json` (o `opencode.jsonc`) e segue lo schema disponibile all'indirizzo `https://opencode.ai/config.json`. OmniRoute si presenta a OpenCode come uno di questi provider: ogni richiesta passa attraverso l'interfaccia `/v1` standard di OmniRoute compatibile con OpenAI, consentendo a OpenCode di usufruire automaticamente del routing Auto-Combo, dei circuit breaker, delle policy delle chiavi, dell'osservabilità e così via.
+[OpenCode](https://opencode.ai) è un client IA agentico per CLI/desktop. Legge il proprio catalogo di provider da `~/.config/opencode/opencode.json` (o `opencode.jsonc`) e segue lo schema disponibile all'indirizzo `https://opencode.ai/config.json`. 67router si presenta a OpenCode come uno di questi provider: ogni richiesta passa attraverso l'interfaccia `/v1` standard di 67router compatibile con OpenAI, consentendo a OpenCode di usufruire automaticamente del routing Auto-Combo, dei circuit breaker, delle policy delle chiavi, dell'osservabilità e così via.
 
 Sono disponibili **due percorsi di integrazione supportati**. Scegline uno: generano la stessa configurazione.
 
@@ -17,16 +17,16 @@ Sono disponibili **due percorsi di integrazione supportati**. Scegline uno: gene
 
 ## Percorso 1 — Generatore CLI (senza installazione npm)
 
-Consigliato per gli utenti finali. Incluso con OmniRoute. Scrive direttamente in `opencode.json`.
+Consigliato per gli utenti finali. Incluso con 67router. Scrive direttamente in `opencode.json`.
 
 ```bash
-# Dopo aver installato OmniRoute (npm i -g @omniroute/cli o clone locale)
+# Dopo aver installato 67router (npm i -g @omniroute/cli o clone locale)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Dietro le quinte, la CLI chiama `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), quindi un file `opencode.json` esistente mantiene gli altri provider e i commenti. La voce OmniRoute viene aggiunta o sostituita atomicamente.
+Dietro le quinte, la CLI chiama `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), quindi un file `opencode.json` esistente mantiene gli altri provider e i commenti. La voce 67router viene aggiunta o sostituita atomicamente.
 
 File risultante (catalogo dei modelli predefinito):
 
@@ -90,8 +90,8 @@ Entrambi i percorsi producono lo stesso `provider.omniroute.npm: "@ai-sdk/openai
 ```
 Interfaccia utente/agente OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (interfaccia OpenAI di OmniRoute)
-         → gestore OmniRoute /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (interfaccia OpenAI di 67router)
+         → gestore 67router /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → routing combinato / Auto-Combo / esecutore
                → provider upstream
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Puoi sovrascriverli tramite `models: [...]`. Aggiunte consigliate:
 
-- `"auto"` — rende disponibile [Auto-Combo](../routing/AUTO-COMBO.md) di OmniRoute, il router senza configurazione. Consente a OpenCode di scegliere "il miglior modello disponibile" senza dover codificare il catalogo in modo rigido.
-- `"<combo-name>"` — qualsiasi combo definita nella dashboard; OmniRoute la risolve in modo trasparente.
+- `"auto"` — rende disponibile [Auto-Combo](../routing/AUTO-COMBO.md) di 67router, il router senza configurazione. Consente a OpenCode di scegliere "il miglior modello disponibile" senza dover codificare il catalogo in modo rigido.
+- `"<combo-name>"` — qualsiasi combo definita nella dashboard; 67router la risolve in modo trasparente.
 
 ---
 
@@ -135,29 +135,29 @@ Questa deduplicazione risolve **il problema più comune** riscontrato nelle conf
 
 ## Modalità di autenticazione
 
-| Impostazione di OmniRoute                       | Valore `apiKey` consigliato                             |
+| Impostazione di 67router                        | Valore `apiKey` consigliato                             |
 | ----------------------------------------------- | ------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (predefinito in locale) | `sk_omniroute` (segnaposto letterale)                   |
 | `REQUIRE_API_KEY=true`                          | Una vera chiave API per utente da Dashboard → API Keys. |
 
-Per i client in stile Anthropic che inviano `x-api-key` + `anthropic-version`, `extractApiKey` di OmniRoute accetta anche la chiave proveniente da `x-api-key`. OpenCode utilizza l'interfaccia OpenAI, quindi invierà sempre `Authorization: Bearer ${apiKey}` — in questo caso non si applica alcuna gestione speciale per Anthropic.
+Per i client in stile Anthropic che inviano `x-api-key` + `anthropic-version`, `extractApiKey` di 67router accetta anche la chiave proveniente da `x-api-key`. OpenCode utilizza l'interfaccia OpenAI, quindi invierà sempre `Authorization: Bearer ${apiKey}` — in questo caso non si applica alcuna gestione speciale per Anthropic.
 
 ---
 
 ## Risoluzione dei problemi
 
-| Sintomo                                                    | Causa                                                                                                     | Soluzione                                                                                                    |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `404` per ogni richiesta con URL contenente `/v1/v1/`      | Configurazione obsoleta di un plugin precedente alla v3.8 che aggiungeva due volte il suffisso `/v1`.     | Rigenera tramite il Percorso 1 o 2.                                                                          |
-| `401 Invalid API key`                                      | OmniRoute ha `REQUIRE_API_KEY=true` e la chiave è sconosciuta.                                            | Crea la chiave nella dashboard oppure imposta `REQUIRE_API_KEY=false` (solo in locale) e usa `sk_omniroute`. |
-| Elenco dei modelli vuoto nell'interfaccia di OpenCode      | Tutti e 4 i modelli predefiniti sono nascosti nelle impostazioni di visibilità dei provider di OmniRoute. | Passa `models: ["auto", ...]` per rendere disponibili quelli che hai abilitato.                              |
-| Errore 500 di OpenCode con `cannot read property 'models'` | Le versioni meno recenti di OpenCode (< 0.1.x) non accettavano `models` inline.                           | Aggiorna OpenCode a una versione conforme allo schema v1 (`opencode.ai/config.json`).                        |
+| Sintomo                                                    | Causa                                                                                                    | Soluzione                                                                                                    |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `404` per ogni richiesta con URL contenente `/v1/v1/`      | Configurazione obsoleta di un plugin precedente alla v3.8 che aggiungeva due volte il suffisso `/v1`.    | Rigenera tramite il Percorso 1 o 2.                                                                          |
+| `401 Invalid API key`                                      | 67router ha `REQUIRE_API_KEY=true` e la chiave è sconosciuta.                                            | Crea la chiave nella dashboard oppure imposta `REQUIRE_API_KEY=false` (solo in locale) e usa `sk_omniroute`. |
+| Elenco dei modelli vuoto nell'interfaccia di OpenCode      | Tutti e 4 i modelli predefiniti sono nascosti nelle impostazioni di visibilità dei provider di 67router. | Passa `models: ["auto", ...]` per rendere disponibili quelli che hai abilitato.                              |
+| Errore 500 di OpenCode con `cannot read property 'models'` | Le versioni meno recenti di OpenCode (< 0.1.x) non accettavano `models` inline.                          | Aggiorna OpenCode a una versione conforme allo schema v1 (`opencode.ai/config.json`).                        |
 
 ---
 
 ## Vedi anche
 
-- [Riferimento API](../reference/API_REFERENCE.md) — documentazione completa dell'API REST di OmniRoute
+- [Riferimento API](../reference/API_REFERENCE.md) — documentazione completa dell'API REST di 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — cosa significa `model: "auto"`
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Codice sorgente: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

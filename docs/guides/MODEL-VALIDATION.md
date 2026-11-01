@@ -84,7 +84,7 @@ client-redeemable authorization token: validation and registration are one opera
 Common failures are `400` for invalid input/consent, `401`/`403` for management authorization,
 `408` for cancellation/deadline, `409` for conflict, unavailable connection or changed
 configuration, `413` for oversized input, and `422` for incomplete proofs. Errors use the
-sanitized OmniRoute error envelope; upstream response bodies and credentials are not returned.
+sanitized 67router error envelope; upstream response bodies and credentials are not returned.
 
 ## Initial supported dispatch scope
 
@@ -96,18 +96,15 @@ request. Specialized executor subclasses and other provider IDs return
 headers, provider proxies and credential refresh are refused. This restriction applies only
 to Test & Add: normal chat retains its existing provider, refresh, retry and pool behavior.
 
-Active runtime plugins also make strict validation unavailable (`VALIDATION_PLUGINS_UNSUPPORTED`).
-The request does not skip an installed plugin policy: it fails before running that plugin.
-A private async request guard prevents handlers activated during the proof, including delayed
-response/stream work, from executing in the validation scope. Normal requests retain their
-plugin behavior. Plugin configuration is included in the final transactional snapshot check.
+The `plugins` table (left from the removed plugin system) is still part of the final
+transactional snapshot check, so a row changing mid-validation fails closed.
 
 ## Concurrency scope
 
 At most one validation runs per connection at a time (a second concurrent request for the
 same connection is refused). That guard is an in-memory set (`activeConnections` in
 `src/lib/modelValidation/service.ts`), so it is per process: it does not coordinate across
-multiple OmniRoute processes or instances sharing one database.
+multiple 67router processes or instances sharing one database.
 
 ## What this does not establish
 

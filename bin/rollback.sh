@@ -20,7 +20,7 @@ usage() {
   cat <<'EOF'
 Usage: bin/rollback.sh [<version>] [--method npm|docker] [--yes|-y] [-h|--help]
 
-Rolls OmniRoute back to <version> (e.g. 3.8.35 or v3.8.35). With no version,
+Rolls 67router back to <version> (e.g. 3.8.35 or v3.8.35). With no version,
 picks the highest published release below the current package.json version.
 Auto-detects npm vs docker deployment; override with --method.
 EOF
@@ -75,7 +75,7 @@ if [ -z "$VERSION" ]; then
 fi
 
 ops_log "target: omniroute@$VERSION via $METHOD"
-ops_confirm "Roll OmniRoute back to $VERSION via $METHOD?" || ops_die "aborted"
+ops_confirm "Roll 67router back to $VERSION via $METHOD?" || ops_die "aborted"
 
 case "$METHOD" in
   npm)

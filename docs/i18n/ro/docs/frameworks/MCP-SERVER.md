@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Română)
+# 67router MCP Server Documentation (Română)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇪🇪 [et](../../../et/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Instalare
 
-OmniRoute MCP este integrat. Porniți-l cu:
+67router MCP este integrat. Porniți-l cu:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline și a clienților MCP compatibili.
 | `omniroute_switch_combo`        | `write:combos`        | Activează sau dezactivează o combinație                                                                                                  |
 | `omniroute_create_combo`        | `write:combos`        | Creează o combinație validată prin API-ul existent pentru combinații                                                                     |
 | `omniroute_check_quota`         | `read:quota`          | Cotă utilizată/totală, procent rămas, momentul resetării, starea tokenului                                                               |
-| `omniroute_route_request`       | `execute:completions` | Trimite o solicitare de completare a conversației prin rutarea OmniRoute                                                                 |
+| `omniroute_route_request`       | `execute:completions` | Trimite o solicitare de completare a conversației prin rutarea 67router                                                                  |
 | `omniroute_cost_report`         | `read:usage`          | Raport de costuri pe perioadă (sesiune/zi/săptămână/lună)                                                                                |
 | `omniroute_list_models_catalog` | `read:models`         | Catalog complet de modele, cu funcționalități, stare și prețuri                                                                          |
 | `omniroute_radar_catalog`       | `read:radar`          | Catalog Radar local semnat; filtre opționale după furnizor/familie                                                                       |
@@ -152,7 +152,7 @@ principalul cheii API autentificate. Înregistrările de audit conțin hash-uri 
 
 ### Filtrul arborelui de accesibilitate MCP (v3.8.0)
 
-Separat de instrumentele de compresie de mai sus, OmniRoute include un filtru post-execuție care
+Separat de instrumentele de compresie de mai sus, 67router include un filtru post-execuție care
 comprimă **rezultatele instrumentelor** MCP pentru browser/accesibilitate înainte ca acestea să fie returnate
 agentului. Acest filtru nu este el însuși un instrument — rulează transparent pentru orice rezultat al unui instrument care conține
 text detaliat al arborelui de accesibilitate sau al instantaneului browserului (≥2000 de caractere).
@@ -236,7 +236,7 @@ Definite în `open-sse/mcp-server/tools/agentSkillTools.ts`. Susținute de `src/
 | :-------------------------------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Listează toate cele 45 de abilități ale agenților, cu filtre opționale `category` (api\|cli) și `area`; returnează metadate + acoperire                                    |
 | `omniroute_agent_skills_get`      | `read:catalog` | Obține metadatele complete + conținutul SKILL.md pentru o singură abilitate, pe baza `id`-ului canonic                                                                     |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Statistici de acoperire: câte dintre cele 23 de abilități API, 21 CLI și 1 de configurare au fișiere SKILL.md în sistemul de fișiere, comparativ cu totalurile din catalog |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Statistici de acoperire: câte dintre cele 22 de abilități API, 20 CLI și 1 de configurare au fișiere SKILL.md în sistemul de fișiere, comparativ cu totalurile din catalog |
 
 Consultați [AGENT-SKILLS.md](./AGENT-SKILLS.md) pentru catalogul complet și modul în care îl utilizează agenții externi.
 
@@ -245,17 +245,6 @@ Consultați [AGENT-SKILLS.md](./AGENT-SKILLS.md) pentru catalogul complet și mo
 Inventarul de instrumente MCP de mai sus (110 instrumente unice, calculat de `countUniqueMcpTools()`) este în mod intenționat
 limitat la operațiunile de rutare/cache/comprimare/memorie/abilități/proxy/surse de context din timpul execuției. Două cadre adiacente
 sunt livrate împreună cu serverul MCP în v3.8.0 și sunt documentate separat:
-
-### Agenți cloud
-
-Agenții cloud sunt agenți AI de programare care rulează în afara procesului (codex-cloud, cursor-cloud, devin, jules), integrați în
-OmniRoute prin același model de conexiune utilizat pentru furnizorii LLM. Aceștia sunt expuși prin
-propria interfață REST (`/api/v1/agents/*`) și **nu** fac parte din catalogul de instrumente MCP
-— apelarea unui agent cloud nu consumă un domeniu MCP.
-
-- Implementare: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Ciclu de viață: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Documentație: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Mecanisme de protecție
 
@@ -426,8 +415,6 @@ Fiecare instrument necesită domenii specifice:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                               |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                        |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                          |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                      |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                         |
 | `read:obsidian`       | 13 instrumente de citire — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 instrumente de scriere — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …               |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                       |
@@ -480,7 +467,7 @@ neschimbat comportamentul existent condiționat de `OMNIROUTE_MCP_ENFORCE_SCOPES
 
 | Variabilă                               | Valoare implicită                   | Scop                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | :-------------------------------------- | :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL-ul de bază utilizat de serverul MCP când apelează API-urile interne OmniRoute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`            | URL-ul de bază utilizat de serverul MCP când apelează API-urile interne 67router                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `OMNIROUTE_API_KEY`                     | (gol)                               | Cheia API transmisă ca `Authorization: Bearer` către apelurile API interne                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (doar `"true"` o activează) | Când este activată, lipsa domeniilor de acces determină respingerea apelurilor instrumentelor și înregistrează `scope_denied:<reason>` în jurnalul de audit. Aplicarea este DE ASEMENEA impusă indiferent de acest indicator pentru orice apelant HTTP/SSE identificat pe baza unui antet Authorization specific fiecărei chei (`source === "authInfo"`) care nu are domeniul complet `manage`/`admin` — de exemplu, o cheie care deține doar domeniul restrâns de ocolire `mcp:connect` — astfel încât această valoare implicită este sigură numai pentru fluxul local/stdio cu un singur operator, niciodată pentru accesul de la distanță din afara interfeței loopback |
 | `OMNIROUTE_MCP_SCOPES`                  | (gol)                               | Lista de domenii de acces, separate prin virgule, considerate implicit „disponibile” (utilizată când apelantul nu furnizează propriile domenii de acces)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -583,7 +570,6 @@ Utilizați panoul de control sau endpointurile REST `/api/mcp/audit` și `/api/m
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Definiții ale instrumentelor pentru abilități (4 instrumente)                                      |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Definiții ale instrumentelor pentru sursa de context Notion (6 instrumente)                        |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Definiții ale instrumentelor de gamificare (8 instrumente)                                         |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Instrumente pentru înregistrarea și gestionarea pluginurilor (8 instrumente)                       |
 | `src/app/api/mcp/status/route.ts`                                        | Endpoint-ul `/api/mcp/status`                                                                      |
 | `src/app/api/mcp/tools/route.ts`                                         | Endpoint-ul `/api/mcp/tools`                                                                       |
 | `src/app/api/mcp/sse/route.ts`                                           | Rută de transport SSE `/api/mcp/sse`                                                               |

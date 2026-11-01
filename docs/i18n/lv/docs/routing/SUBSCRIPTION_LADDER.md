@@ -10,7 +10,7 @@
 
 ## Kāpēc tas ir vajadzīgs
 
-OmniRoute jau atbild uz diviem ar izmaksām saistītiem jautājumiem, taču neviens no tiem nav tas,
+67router jau atbild uz diviem ar izmaksām saistītiem jautājumiem, taču neviens no tiem nav tas,
 ko uzdod lielākā daļa operatoru.
 
 | Esošais mehānisms                                        | Atbild uz jautājumu                                  |

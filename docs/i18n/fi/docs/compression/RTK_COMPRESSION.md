@@ -4,7 +4,7 @@
 
 ---
 
-RTK-pakkaus on OmniRouten komentotietoinen pakkausmoottori pääte- ja työkalutulosteille. Se on
+RTK-pakkaus on 67routerin komentotietoinen pakkausmoottori pääte- ja työkalutulosteille. Se on
 suunniteltu koodausagentti-istuntoihin, joissa kontekstin kasvu johtuu enimmäkseen testilokeista, koontitulosteista,
 paketinhallinnan ylimääräisestä tulosteesta, komentotulkin istuntotallenteista, Docker-tulosteista, git-tulosteista ja pinojäljityksistä.
 
@@ -17,7 +17,7 @@ rtk -> caveman
 Tässä järjestyksessä pakataan ensin kohinainen konetuloste, minkä jälkeen Caveman tiivistää jäljelle jäävän tekstin.
 
 Alkuperäinen RTK ilmoittaa komentotulosteiden säästöksi `60-90%`. Sen README-tiedoston esimerkki-istunto pienenee
-`~118,000` vakiotokenista `~23,900` RTK-tokeniin, mikä tarkoittaa `79.7%`:n säästöä (`~80%`). OmniRoute käyttää
+`~118,000` vakiotokenista `~23,900` RTK-tokeniin, mikä tarkoittaa `79.7%`:n säästöä (`~80%`). 67router käyttää
 tätä alkuperäisen toteutuksen keskiarvoa laskiessaan pinottua säästöä Cavemanin syötepakkauksen kanssa:
 
 ```txt
@@ -54,7 +54,7 @@ RTK lataa suodattimet tässä järjestyksessä:
 2. Yleiset suodattimet tiedostoista `DATA_DIR/rtk/filters.toml` ja `DATA_DIR/rtk/filters.json`.
 3. Sisäänrakennetut suodattimet hakemistosta `open-sse/services/compression/engines/rtk/filters/`.
 
-Samassa vaikutusalueessa RTK:n TOML-skeeman v1 suodattimet ovat etusijalla OmniRouten JSON-suodattimiin nähden. TOML-muotoiset
+Samassa vaikutusalueessa RTK:n TOML-skeeman v1 suodattimet ovat etusijalla 67routerin JSON-suodattimiin nähden. TOML-muotoiset
 `match_command`-lausekkeet tarkistetaan ennen komentotyyppiin perustuvaa täsmäytystä, jotta tuotu komentokohtainen
 suodatin voi ohittaa saman vaikutusalueen yleisemmän suodattimen. Projektin vaikutusalue on edelleen etusijalla yleiseen
 vaikutusalueeseen nähden tiedostomuodosta riippumatta.
@@ -84,7 +84,7 @@ ohitetaan ja ilmoitetaan `/api/context/rtk/filters`-diagnostiikassa. Virheellise
 
 ## RTK TOML -skeeman v1-yhteensopivuus
 
-OmniRoute voi jäsentää, validoida, testata ja asentaa deklaratiivisia suodatintiedostoja, jotka käyttävät RTK TOML -skeeman versiota 1.
+67router voi jäsentää, validoida, testata ja asentaa deklaratiivisia suodatintiedostoja, jotka käyttävät RTK TOML -skeeman versiota 1.
 Tuetut kentät ovat `description`, `match_command`, `strip_ansi`, `filter_stderr`,
 `strip_lines_matching`, `keep_lines_matching`, `replace`, `match_output`, `truncate_lines_at`,
 `head_lines`, `tail_lines`, `max_lines`, `on_empty` ja sisäiset `[[tests.<filter>]]`-testit.
@@ -93,7 +93,7 @@ Tuntemattomat kentät, virheelliset tai vaaralliset säännölliset lausekkeet, 
 validoida tarkastelua varten, mutta sitä ei voi asentaa tai ladata. Mukautettujen tiedostojen latausvirheet noudattavat edelleen
 fail-open-periaatetta: virheellinen tiedosto ohitetaan, ja jäljellä olevat suodattimet jatkavat toimintaansa.
 
-OmniRoute vastaanottaa työkalun tulosteen vasta sen jälkeen, kun asiakasohjelma on jo tallentanut sen, joten `filter_stderr = true`
+67router vastaanottaa työkalun tulosteen vasta sen jälkeen, kun asiakasohjelma on jo tallentanut sen, joten `filter_stderr = true`
 ei voi muuttaa prosessin tulosteen tallennusta. Kenttä hyväksytään, mutta sillä ei ole vaikutusta, ja validointi palauttaa varoituksen.
 Tätä kuvataan tarkoituksella **RTK TOML -skeeman v1-yhteensopivuudeksi**, ei täydelliseksi yhteensopivuudeksi
 RTK-suoritettavan tiedoston, komentotulkin koukkujen, Rust-komentototeutusten tai sen luottamussäilön rakenteen kanssa.

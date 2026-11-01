@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute'il on **kaks** protsessisisest, erineva ulatusega rajasüsteemi. Need
+67router'il on **kaks** protsessisisest, erineva ulatusega rajasüsteemi. Need
 täiendavad teineteist; operaatorid peaksid teadma, kumba neist nad vaatavad.
 
 ## 1. Baiditasemel kogu protsessi hõlmav vastuvõtukontroll (`chatBodyAdmission.ts`)

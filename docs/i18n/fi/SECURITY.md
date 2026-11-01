@@ -6,7 +6,7 @@
 
 ## Haavoittuvuuksien ilmoittaminen
 
-Jos löydät OmniRoutesta tietoturvahaavoittuvuuden, ilmoita siitä vastuullisesti:
+Jos löydät 67routerista tietoturvahaavoittuvuuden, ilmoita siitä vastuullisesti:
 
 1. **ÄLÄ** avaa julkista GitHub-issue-raporttia
 2. Käytä [GitHub Security Advisories](https://github.com/diegosouzapw/OmniRoute/security/advisories/new) -palvelua
@@ -53,7 +53,7 @@ Versionin 3.8.59 jälkeen seuraava versio on **3.9.0**, joka avaa pitkäaikaisen
 
 ## Tietoturva-arkkitehtuuri
 
-OmniRoute toteuttaa monikerroksisen tietoturvamallin:
+67router toteuttaa monikerroksisen tietoturvamallin:
 
 ```
 Pyyntö → CORS → Authz-putki (luokittele → käytännöt → toimeenpane)
@@ -90,7 +90,7 @@ STORAGE_ENCRYPTION_KEY=$(openssl rand -hex 32)
 
 ### 🛡️ Suojauskehys
 
-OmniRoute sisältää lennossa uudelleenladattavan **suojausrekisterin** (`src/lib/guardrails/`), jossa on kolme prioriteettijärjestykseen asetettua sisäänrakennettua suojausta:
+67router sisältää lennossa uudelleenladattavan **suojausrekisterin** (`src/lib/guardrails/`), jossa on kolme prioriteettijärjestykseen asetettua sisäänrakennettua suojausta:
 
 | Suojaus            | Prioriteetti | Tarkoitus                                                                                                        |
 | ------------------ | ------------ | ---------------------------------------------------------------------------------------------------------------- |

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute mempunyai **empat keluarga kelayakan** yang boleh membenarkan laluan pengurusan.
+67router mempunyai **empat keluarga kelayakan** yang boleh membenarkan laluan pengurusan.
 Ia tidak boleh ditukar ganti. Kunci API Inferens (`sk-…`) **tidak** mengurus pelayan melainkan ia diberikan skop `manage` atau `admin` secara eksplisit.
 
 Pelaksanaan kanonik: `src/lib/api/requireManagementAuth.ts`.

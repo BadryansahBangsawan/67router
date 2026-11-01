@@ -4,7 +4,7 @@
 
 ---
 
-Apabila OmniRoute berjalan di dalam Docker, aliran standard "Import daripada Rantai Kunci Zed" gagal
+Apabila 67router berjalan di dalam Docker, aliran standard "Import daripada Rantai Kunci Zed" gagal
 kerana bekas tidak dapat mencapai daemon rantai kunci OS hos (`libsecret` pada Linux,
 Keychain pada macOS, Credential Manager pada Windows) dan direktori konfigurasi Zed pada
 sistem fail hos tidak kelihatan di dalam bekas secara lalai.
@@ -20,7 +20,7 @@ Dua isu penghalang berlaku di dalam bekas:
    berkomunikasi dengan perkhidmatan rantai kunci OS melalui soket Unix atau sesi D-Bus.
    Kedua-duanya tidak dijambatani ke dalam bekas secara lalai, jadi pembacaan kelayakan sentiasa gagal.
 
-OmniRoute mengesan persekitaran Docker melalui dua heuristik:
+67router mengesan persekitaran Docker melalui dua heuristik:
 
 - Kehadiran `/.dockerenv` (ditulis oleh daemon Docker semasa bekas dimulakan).
 - Rentetan `docker` muncul dalam `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Apabila salah satu heuristik dicetuskan, laluan import mengembalikan HTTP 422 de
 
 1. Buka **Papan Pemuka → Penyedia → Zed**.
 2. Panel **Import Token Manual** muncul di bawah kad import rantai kunci. Apabila
-   OmniRoute mengesan Docker, panel ini dikembangkan secara automatik selepas percubaan pertama
+   67router mengesan Docker, panel ini dikembangkan secara automatik selepas percubaan pertama
    untuk mengimport rantai kunci gagal.
 3. Pilih penyedia daripada menu lungsur (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, atau DeepSeek).

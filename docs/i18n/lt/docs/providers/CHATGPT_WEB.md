@@ -41,9 +41,9 @@ su užklausų ciklu susietą vietinio įrankio galimybę, kai tunelis ir konekto
    pavadinimą. Naujose įrankius palaikančiose sąrankose turi būti naudojama naujai sukurta jungtis, pavadinta tiksliai
    `OmniRoute Codex v2`, kurios autentifikavimo parinktis nustatyta į „None“, o leidimų parinktis – į „Allow all
    actions“.
-3. Paleiskite ryšio patikrą. OmniRoute atidaro naršykle paremtą laikinąjį pokalbį („Temporary Chat“) ir nustato,
+3. Paleiskite ryšio patikrą. 67router atidaro naršykle paremtą laikinąjį pokalbį („Temporary Chat“) ir nustato,
    ar paskyroje pasiekiami Sol ir Pro.
-4. Išsaugokite ryšį. OmniRoute pakeičia įklijuotą slapuką patikrinta
+4. Išsaugokite ryšį. 67router pakeičia įklijuotą slapuką patikrinta
    Playwright saugyklos būsena ir per šifruotų prisijungimo duomenų abstrakciją išsaugo ją kartu su vykdymo aplinkos raktu.
 
 Sėkmingai išsaugojus, neapdorotas slapukas nėra saugomas. Pasibaigus seansui, atidarykite
@@ -99,19 +99,19 @@ naujo `OmniRoute Codex v2` konektoriaus.
 
 ## VPS be ekrano ir Docker
 
-Diegiant naudojant npm, systemd ir PM2, OmniRoute aptinka įprastus Chrome ir Chromium kelius.
+Diegiant naudojant npm, systemd ir PM2, 67router aptinka įprastus Chrome ir Chromium kelius.
 Arba nustatykite `CHATGPT_WEB_CODEX_CHROME_PATH`. Vykdymo metu sąmoningai naudojamas Chrome
 su grafine sąsaja, nes ChatGPT atmeta tikrai begalvės naršyklės konfigūraciją. Todėl serveryje be
-ekrano OmniRoute turi veikti su privačiu Xvfb ekranu; vien Chrome kelio nustatymas jo nesuteikia.
+ekrano 67router turi veikti su privačiu Xvfb ekranu; vien Chrome kelio nustatymas jo nesuteikia.
 
 Docker `web` profilis paleidžia `chatgpt-web-codex-browser` vidiniame Compose
 tinkle. Pagalbinis konteineris paleidžia Chrome su grafine sąsaja Xvfb aplinkoje, todėl fizinio ekrano
 nereikia. Jo CDP prievadas nėra publikuojamas pagrindiniame kompiuteryje. Apsaugotas naršyklės
-profilio tomas yra atskirtas nuo OmniRoute duomenų tomo, o naršyklei suteikiama pakankamai
+profilio tomas yra atskirtas nuo 67router duomenų tomo, o naršyklei suteikiama pakankamai
 bendrinamosios atminties. Vidinis CDP tarpinis serveris klausosi tik `9223` prievado Compose
 tinkle; pagalbiniame konteineryje Chrome lieka susietas su vietine grįžtamojo ryšio sąsaja.
 
-Prižiūrėtojo nuoma kataloge `DATA_DIR` neleidžia keliems OmniRoute procesams valdyti
+Prižiūrėtojo nuoma kataloge `DATA_DIR` neleidžia keliems 67router procesams valdyti
 tos pačios tunelio ir tarpininko būsenos. Apie konfliktą praneša diagnostikos priemonė.
 
 ## Interaktyvus atkūrimas

@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY 透明解密是 OmniRoute 針對
+TPROXY 透明解密是 67router 針對
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM 堆疊所提供的**第 5 種擷取模式**。它在 Linux 上使用核心 TPROXY + 原則路由，攔截並**解密**本機對外的 HTTPS 流量——**無須**偽造 `/etc/hosts`，也**不會**變更整個作業系統的系統代理設定。它適合無頭環境
 （無須清理 DNS 編輯），且防火牆規則會在重新啟動時自動清除。
@@ -42,7 +42,7 @@ TPROXY 透明解密改為在**核心**層導向流量。它會在
 - 不遵循 `HTTP_PROXY`，且
 - 您不希望透過變更全系統代理設定來干擾該程序。
 
-由於攔截發生在核心中，來源程序**不需要變更任何設定**——但該程序必須信任 OmniRoute 安裝的動態 CA（請參閱[§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)）。
+由於攔截發生在核心中，來源程序**不需要變更任何設定**——但該程序必須信任 67router 安裝的動態 CA（請參閱[§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)）。
 
 ---
 
@@ -59,7 +59,7 @@ TPROXY 透明解密改為在**核心**層導向流量。它會在
 addon 未建置），addon 載入器（`src/mitm/tproxy/transparentSocket.ts::loadTransparentAddon`）
 會回傳 `null`，而不是擲出例外。接著，擷取模式狀態會回報
 `available: false`，儀表板切換開關會被**停用**，並顯示工具提示
-「TPROXY 解密需要 Linux + root + 原生 addon」，而 OmniRoute 的其餘部分
+「TPROXY 解密需要 Linux + root + 原生 addon」，而 67router 的其餘部分
 仍會繼續運作。
 
 ---
@@ -240,7 +240,7 @@ CA 私密金鑰**永遠不會離開該機器**。
 | **錯誤清理**            | 此路由的錯誤回應會經過 `sanitizeErrorMessage()` 處理（硬性規則 #12）。                                                                                                                                                                                                                                    |
 
 **MITM CA 是一項功能強大的能力。** 受作業系統信任且能為任何
-主機簽署憑證的 CA，意味著 OmniRoute 攔截的任何內容都能被解密。此功能僅能透過
+主機簽署憑證的 CA，意味著 67router 攔截的任何內容都能被解密。此功能僅能透過
 明確啟用且僅限本機的 TPROXY 擷取模式使用，預設為關閉，且當您停止此模式時，
 信任存放區項目也會被移除。
 
@@ -350,7 +350,7 @@ POST 主體或上述預設值提供。
 ### 當機後殘留的防火牆規則
 
 `revertTproxy()` 與套用操作完全相反，且具有冪等性。停止該模式會還原規則；
-如果 OmniRoute 在工作階段進行期間遭到終止，請使用 AgentBridge 的
+如果 67router 在工作階段進行期間遭到終止，請使用 AgentBridge 的
 **Repair** 動作（`POST /api/tools/agent-bridge/repair`）復原遺留的系統
 狀態（DNS 欺騙、根 CA、系統代理伺服器）。TPROXY `mangle` 規則和路由也會在
 重新開機時自動清除。

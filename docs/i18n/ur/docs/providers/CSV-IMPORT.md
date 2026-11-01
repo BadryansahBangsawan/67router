@@ -25,7 +25,7 @@ Dashboard → Providers → **فائل سے درآمد کریں** CSV یا JSON 
 درآمدی modal سے ابتدائی فائل ڈاؤن لوڈ کریں (**CSV template ڈاؤن لوڈ کریں**)۔ مثال:
 
 ```csv
-# OmniRoute provider درآمد (ترتیبی کالم)
+# 67router provider درآمد (ترتیبی کالم)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

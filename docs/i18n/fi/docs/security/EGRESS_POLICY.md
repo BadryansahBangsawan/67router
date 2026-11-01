@@ -8,7 +8,7 @@
 
 > **Totuuden lähde:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute sallii jokaiselle välityspalvelimelle oman **osoiteperheen lähtevän liikenteen direktiivin**. Oletusarvoisesti käyttöjärjestelmä valitsee IPv4:n tai IPv6:n (kaksipinoinen, "Happy Eyeballs"). Kun asetat direktiiviksi `ipv4` tai `ipv6`, OmniRoute kiinnittää kaikki kyseisen välityspalvelimen kautta kulkevat yhteydet valittuun perheeseen ja **estää yhteyden turvallisesti** sen sijaan, että palaisi käyttämään toista perhettä.
+67router sallii jokaiselle välityspalvelimelle oman **osoiteperheen lähtevän liikenteen direktiivin**. Oletusarvoisesti käyttöjärjestelmä valitsee IPv4:n tai IPv6:n (kaksipinoinen, "Happy Eyeballs"). Kun asetat direktiiviksi `ipv4` tai `ipv6`, 67router kiinnittää kaikki kyseisen välityspalvelimen kautta kulkevat yhteydet valittuun perheeseen ja **estää yhteyden turvallisesti** sen sijaan, että palaisi käyttämään toista perhettä.
 
 Tällä sivulla kerrotaan, mikä direktiivi on, miksi se on olemassa, missä se määritetään ja miten suoritusympäristö ratkaisee sen.
 
@@ -122,7 +122,7 @@ Lisätietoja muusta välityspalvelinten CRUD- ja kohdistus-API:sta on tiedostoss
 
 ## Miten `auto` ratkaistaan
 
-Kun `family` on `auto`, OmniRoute **ei** lisää mitään direktiiviä — välityspalvelimen URL-osoitetta käytetään sellaisenaan, ja yhteyden osoiteperhe määräytyy luontaisesti.
+Kun `family` on `auto`, 67router **ei** lisää mitään direktiiviä — välityspalvelimen URL-osoitetta käytetään sellaisenaan, ja yhteyden osoiteperhe määräytyy luontaisesti.
 
 URL-osoitetta muodostettaessa (`proxyConfigToUrl` / `normalizeProxyUrl` tiedostossa `open-sse/utils/proxyDispatcher.ts`) `auto`-välityspalvelin tuottaa tavallisen URL-osoitteen ilman merkintää:
 
@@ -158,7 +158,7 @@ Siis:
 
 Muu kuin `auto`-direktiivi välitetään yhtenä synteettisenä kyselymerkintänä — `?family=ipv4` tai `?family=ipv6` — joka lisätään kerran normalisoidun välityspalvelimen URL-osoitteen loppuun. `normalizeProxyUrl` poistaa merkinnän huolellisesti ja lisää sen uudelleen täsmälleen kerran, jotta se ei koskaan häiritse portin jäsentämistä.
 
-Kun dispatcher rakennetaan, merkintä luetaan ja muunnetaan konkreettiseksi yhteysperheeksi. Jos isäntä on **vastakkaisen** perheen IP-literaali, OmniRoute aiheuttaa poikkeuksen (ristiriitatilanteessa toiminta estetään):
+Kun dispatcher rakennetaan, merkintä luetaan ja muunnetaan konkreettiseksi yhteysperheeksi. Jos isäntä on **vastakkaisen** perheen IP-literaali, 67router aiheuttaa poikkeuksen (ristiriitatilanteessa toiminta estetään):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Konkreettinen perhe kiinnitetään sitten yhdistimeen:
 
 ## SOCKS5-yhteensopivuus
 
-Perheen kiinnitys toimii SOCKS5-välityspalvelimien kanssa, mutta vakio-`fetch-socks` ei tuo näkyviin välityspalvelinhypyn perheen kiinnittämiseen tarvittavia socket-asetuksia. OmniRoute sisältää tätä varten oman yhdistimensä:
+Perheen kiinnitys toimii SOCKS5-välityspalvelimien kanssa, mutta vakio-`fetch-socks` ei tuo näkyviin välityspalvelinhypyn perheen kiinnittämiseen tarvittavia socket-asetuksia. 67router sisältää tätä varten oman yhdistimensä:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

@@ -6,7 +6,7 @@
 
 ## Vue d’ensemble
 
-Les commandes de l’interface en ligne de commande OmniRoute s’authentifient auprès de l’API de gestion locale à l’aide d’un jeton
+Les commandes de l’interface en ligne de commande 67router s’authentifient auprès de l’API de gestion locale à l’aide d’un jeton
 `HMAC-SHA256(machine-id, salt)` envoyé via l’en-tête de requête
 `x-omniroute-cli-token`.
 

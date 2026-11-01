@@ -7,7 +7,7 @@
 > **Bron van waarheid:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Laatst bijgewerkt:** 2026-09-22 — scope-namespaces verwijzen naar MCP-SERVER.md
 
-OmniRoute heeft een route-bewuste autorisatiepipeline die elke API-aanvraag afschermt. Classificatie is **deterministisch** en **fail-closed** — alles wat niet geclassificeerd kan worden, eindigt als `MANAGEMENT` en vereist een sessie of een token van managementkwaliteit. Deze pagina legt het model uit voor engineers die routes onderhouden of nieuwe endpoints ontwerpen.
+67router heeft een route-bewuste autorisatiepipeline die elke API-aanvraag afschermt. Classificatie is **deterministisch** en **fail-closed** — alles wat niet geclassificeerd kan worden, eindigt als `MANAGEMENT` en vereist een sessie of een token van managementkwaliteit. Deze pagina legt het model uit voor engineers die routes onderhouden of nieuwe endpoints ontwerpen.
 
 ![AuthZ pipeline (3 route classes + policy evaluation)](../diagrams/exported/authz-pipeline.svg)
 
@@ -266,8 +266,6 @@ access-token credential. Zie [Management Authenticatie](../guides/MANAGEMENT-AUT
 Het afdwingen van client-API-sleutels gebruikt `isRequireApiKeyEnabled()` in `src/shared/utils/featureFlags.ts`, en niet een directe lezing van `process.env.REQUIRE_API_KEY`. Dit is belangrijk voor uitgerolde instanties: `REQUIRE_API_KEY` wijzigen in Dashboard → Feature Flags slaat een databaseoverschrijving op en werkt meteen door op `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` en de andere authenticatiecontroles van de client-API die deze helper delen. Als de opslag van de featureflags niet kan worden gelezen, faalt de authenticatie van de client-API gesloten en vereist ze een sleutel.
 
 ## Incompatibele wijziging — v3.8.0
-
-De eindpunten `/api/v1/agents/tasks/*` en `/api/resilience/model-cooldowns` **vereisen nu beheerauthenticatie** (commit `588a0333`). Clients die eerder een normale API-sleutel zonder de scope `manage` verzonden, ontvangen `403`. Migratie: wijs de scope `manage` toe aan de sleutel in het API Keys-dashboard of gebruik een aangemelde dashboardsessie.
 
 ## Gedragswijziging — v3.8.2
 

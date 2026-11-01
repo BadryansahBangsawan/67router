@@ -34,7 +34,7 @@
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. OmniRoute मा **Providers → Add Provider** मा जानुहोस्, **Microsoft 365 Copilot (BizChat)** चयन गर्नुहोस् र निम्न ढाँचामा प्रमाणपत्र टाँस्नुहोस्:
+6. 67router मा **Providers → Add Provider** मा जानुहोस्, **Microsoft 365 Copilot (BizChat)** चयन गर्नुहोस् र निम्न ढाँचामा प्रमाणपत्र टाँस्नुहोस्:
 
 ```
 access_token=<jwt>; chathubPath=<oid>@<tenant>
@@ -49,9 +49,9 @@ WebSocket URL बाट मानहरू म्यानुअल रूपम
 1. **DevTools → Network** खोल्नुहोस्।
 2. BizChat कुराकानी सुरु गर्नुहोस् वा जारी राख्नुहोस् (यसले WebSocket जडान सक्रिय गर्छ)।
 3. Network प्यानलमा दायाँ-क्लिक गर्नुहोस् र **Save all as HAR with content** चयन गर्नुहोस्।
-4. OmniRoute मा, प्रदायक जडान संवादमा रहेको **Import .har file** बटन प्रयोग गर्नुहोस्।
+4. 67router मा, प्रदायक जडान संवादमा रहेको **Import .har file** बटन प्रयोग गर्नुहोस्।
 
-OmniRoute ले Chathub WebSocket URL का लागि HAR स्क्यान गर्छ, `access_token` र `chathubPath` निकाल्छ र प्रमाणपत्र फिल्डहरू स्वचालित रूपमा भर्छ। HAR आयातले JWT को म्याद समाप्त हुने समय डिकोड गर्छ र बाँकी टोकन अवधि देखाउँछ।
+67router ले Chathub WebSocket URL का लागि HAR स्क्यान गर्छ, `access_token` र `chathubPath` निकाल्छ र प्रमाणपत्र फिल्डहरू स्वचालित रूपमा भर्छ। HAR आयातले JWT को म्याद समाप्त हुने समय डिकोड गर्छ र बाँकी टोकन अवधि देखाउँछ।
 
 > **वास्तविक HAR निर्यात, पहुँच टोकन वा रिफ्रेस टोकन कहिल्यै कमिट नगर्नुहोस्।** परीक्षण र कागजातका मानहरू सधैं प्लेसहोल्डर हुनुपर्छ।
 
@@ -68,7 +68,7 @@ OmniRoute ले Chathub WebSocket URL का लागि HAR स्क्य�
 | `refreshToken` | `substrate.office.com/sydney` स्कोपका लागि Microsoft OAuth रिफ्रेस टोकन |
 | `tier`         | `individual` (पूर्वनिर्धारित), `edu`, वा `enterprise`                   |
 
-`substrate.office.com/sydney` मा स्कोप गरिएको Microsoft device-code वा authorization-code फ्लोबाट रिफ्रेस टोकन प्राप्त गर्नुहोस्। `refreshToken` सेट गरिएको अवस्थामा, OmniRoute ले प्रत्येक अनुरोधअघि `access_token` लाई पूर्व-रिफ्रेस गर्छ, त्यसैले प्रत्येक ~75-मिनेटको म्याद समाप्तिपछि पुनः सङ्कलन गर्नुपर्दैन।
+`substrate.office.com/sydney` मा स्कोप गरिएको Microsoft device-code वा authorization-code फ्लोबाट रिफ्रेस टोकन प्राप्त गर्नुहोस्। `refreshToken` सेट गरिएको अवस्थामा, 67router ले प्रत्येक अनुरोधअघि `access_token` लाई पूर्व-रिफ्रेस गर्छ, त्यसैले प्रत्येक ~75-मिनेटको म्याद समाप्तिपछि पुनः सङ्कलन गर्नुपर्दैन।
 
 यदि `refreshToken` सेट गरिएको छैन भने, प्रत्येक पटक म्याद समाप्त भएपछि तपाईंले WebSocket प्रमाणपत्र म्यानुअल रूपमा पुनः सङ्कलन गर्नुपर्छ।
 

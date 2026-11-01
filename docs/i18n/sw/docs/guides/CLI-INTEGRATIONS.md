@@ -6,7 +6,7 @@
 
 Kwa manifesti ya pamoja ya kitekelezwaji, mazingira ya watoto yaliyowekewa vizuizi na usanidi endelevu wa Gemini, angalia [mikataba ya uzinduzi wa CLI](./CLI-LAUNCH-CONTRACTS.md).
 
-OmniRoute huja na familia ya amri za `setup-*` ambazo husanidi CLI ya uandishi wa msimbo (Codex, Claude Code, OpenCode, Cline, …) kutumia OmniRoute kama backend yake — hivyo zana huwasiliana na endpoint **moja**, huku OmniRoute ikielekeza kwa mtoa huduma anayefaa kwa kutumia urejeaji mbadala wa kiotomatiki. Kila amri husoma katalogi ya modeli **inayotumika moja kwa moja** kutoka kwa OmniRoute inayoendeshwa (ya ndani au ya mbali) na huandika faili ya usanidi ya zana hiyo kwenye mashine **yako**. Ufunguo wa API hurejelewa kupitia kigezo cha mazingira popote ambapo zana inakiunga mkono. Amri zinazohifadhi faili ya mazingira ya ndani ya zana zimebainishwa hapa chini.
+67router huja na familia ya amri za `setup-*` ambazo husanidi CLI ya uandishi wa msimbo (Codex, Claude Code, OpenCode, Cline, …) kutumia 67router kama backend yake — hivyo zana huwasiliana na endpoint **moja**, huku 67router ikielekeza kwa mtoa huduma anayefaa kwa kutumia urejeaji mbadala wa kiotomatiki. Kila amri husoma katalogi ya modeli **inayotumika moja kwa moja** kutoka kwa 67router inayoendeshwa (ya ndani au ya mbali) na huandika faili ya usanidi ya zana hiyo kwenye mashine **yako**. Ufunguo wa API hurejelewa kupitia kigezo cha mazingira popote ambapo zana inakiunga mkono. Amri zinazohifadhi faili ya mazingira ya ndani ya zana zimebainishwa hapa chini.
 
 Pia kuna kizinduzi cha jumla — `omniroute run <target>` — ambacho huanzisha `claude`, `codex`, `aider`, `goose`, `opencode`, `qwen` au `gemini` huku mazingira yanayofaa yakiingizwa, bila kuandika usanidi wowote. Malengo na lakabu zake hutoka kwenye manifesti rasmi `bin/cli/cli-manifest.mjs` (`claude-code|cc|anthropic`, `codex-cli|openai-codex|openai`, `goose-cli`, `open-code`, `qwen-code`, `gemini-cli`), na `omniroute completion` hutoa maneno yale yale ya malengo yanayotokana na manifesti. Vizinduzi vya zamani vya kila zana — `omniroute launch` (Claude Code) na `omniroute launch-codex` (Codex) — bado vinapatikana.
 
@@ -28,7 +28,7 @@ Kwa usanidi wa msingi wa mara moja, ulioandikwa kwa mkono, wa miunganisho miwili
 
 - [Usanidi wa Claude Code](./CLAUDE-CODE-CONFIGURATION.md)
 - [Usanidi wa Codex CLI](./CODEX-CLI-CONFIGURATION.md)
-- [Hali ya Mbali](./REMOTE-MODE.md) — dhibiti OmniRoute ya mbali (VPS / Tailnet) kutoka kwenye kompyuta yako mpakato
+- [Hali ya Mbali](./REMOTE-MODE.md) — dhibiti 67router ya mbali (VPS / Tailnet) kutoka kwenye kompyuta yako mpakato
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — kiendelezi cha OmniCopilot; pia kinaweza kutekeleza amri hizi za `setup-*` kwa niaba yako kutoka ndani ya kihariri
 
 ---
@@ -63,7 +63,7 @@ seva hiyo na kuandika usanidi ndani ya mfumo wa ndani.
 
 Maelezo kuhusu bendera (yamethibitishwa katika msimbo wa amri):
 
-- `--remote <url>` — huchukua katalogi kutoka OmniRoute ya mbali (hubatilisha `--port`
+- `--remote <url>` — huchukua katalogi kutoka 67router ya mbali (hubatilisha `--port`
   na muktadha unaotumika). `--api-key <key>` hutoa kitambulisho kwa seva hiyo
   (chaguo-msingi ni kigezo cha mazingira cha `OMNIROUTE_API_KEY`, au tokeni ya muktadha unaotumika).
 - `--only <patterns>` — mifuatano midogo iliyotenganishwa kwa koma; huhifadhi tu vitambulisho vya modeli vinavyolingana
@@ -84,7 +84,7 @@ Maelezo kuhusu bendera (yamethibitishwa katika msimbo wa amri):
   **codex** kupitia hoja za `-c model_providers.omniroute.*`. **Qwen ndiyo lengo pekee la utekelezaji
   ambalo lazima lipewe `--model`** — `omniroute run qwen` bila hiyo hutoka
   kwa msimbo `2` na hitilafu iliyo wazi.
-- `--port <port>` — porti ya OmniRoute ya ndani (chaguo-msingi `20128`, hupuuzwa wakati `--remote`
+- `--port <port>` — porti ya 67router ya ndani (chaguo-msingi `20128`, hupuuzwa wakati `--remote`
   imewekwa). Inapatikana kwenye amri zote za `setup-*` na vizinduzi vyote viwili.
 - Misimbo ya kutoka ya `omniroute run`: msimbo wa kutoka wa CLI ya mchakato mtoto huenezwa
   bila kubadilishwa; `2` = hoja batili (lengo lisilotumika, `--model` inayohitajika
@@ -129,7 +129,7 @@ haviwasilishwi kama malengo yanayoweza kuzinduliwa.
 
 ## Matumizi ya ndani
 
-OmniRoute ikiwa inaendeshwa kwenye `localhost:20128`, tekeleza tu amri ya usanidi ya zana yako. Katalogi hupakuliwa kutoka kwenye seva ya ndani.
+67router ikiwa inaendeshwa kwenye `localhost:20128`, tekeleza tu amri ya usanidi ya zana yako. Katalogi hupakuliwa kutoka kwenye seva ya ndani.
 
 ```bash
 # Codex: andika wasifu mmoja kwa kila modeli inayolingana ndani ya ~/.codex/
@@ -156,8 +156,8 @@ omniroute setup-continue --dry-run
 Zindua bila kuandika usanidi wowote kabisa (uingizaji wa mazingira pekee):
 
 ```bash
-omniroute launch                 # Claude Code → OmniRoute ya ndani
-omniroute launch-codex           # Codex CLI → OmniRoute ya ndani
+omniroute launch                 # Claude Code → 67router ya ndani
+omniroute launch-codex           # Codex CLI → 67router ya ndani
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -175,7 +175,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Matumizi ya mbali
 
-Elekeza amri yoyote ya usanidi kwenye OmniRoute ya mbali kwa kutumia `--remote` + `--api-key`. Katalogi hupakuliwa kutoka kwenye seva ya mbali; usanidi huandikwa kwenye mashine yako ya ndani.
+Elekeza amri yoyote ya usanidi kwenye 67router ya mbali kwa kutumia `--remote` + `--api-key`. Katalogi hupakuliwa kutoka kwenye seva ya mbali; usanidi huandikwa kwenye mashine yako ya ndani.
 
 ```bash
 # OpenCode dhidi ya VPS ya mbali, hifadhi modeli za glm/kimi pekee
@@ -213,7 +213,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Njia zote mbili huandika **wasifu wa uthibitishaji** mmoja wa 5dive, na kila nafasi ya `claude` iliyofungamanishwa na wasifu huo kisha huwasiliana na OmniRoute. Mambo matatu ni mahususi kwa shabaha hii:
+Njia zote mbili huandika **wasifu wa uthibitishaji** mmoja wa 5dive, na kila nafasi ya `claude` iliyofungamanishwa na wasifu huo kisha huwasiliana na 67router. Mambo matatu ni mahususi kwa shabaha hii:
 
 - **Huendeshwa kwenye seva mwenyeji wa kundi, kama root.** Vitenzi vya 5dive hutenda kwenye vitengo vya systemd vya ndani na saraka ya hali inayomilikiwa na root; hakuna hali ya mbali. Utaratibu hujitekeleza upya kupitia `sudo` wakati tayari hauendeshwi kama root (`--no-sudo` huzima hilo na badala yake huchapisha amri).
 - **Endpoint lazima iwe `https://` isipokuwa ikiwa ni loopback.** Ufunguo wa API wa wakala husafirishwa kupitia URL hiyo katika kila ombi, na 5dive hukataa endpoint ya nje ya mashine isiyosimbwa. Anwani ya LAN ya faragha si hali ya kipekee.
@@ -221,13 +221,13 @@ Njia zote mbili huandika **wasifu wa uthibitishaji** mmoja wa 5dive, na kila naf
 
 Ufunguo wa API hupitishwa kwa 5dive kupitia **stdin** (`--api-key=-`), kwa hiyo hauonekani kamwe kwenye matokeo ya `ps`.
 
-Kuelekeza wasifu kwenye **combo** ya OmniRoute badala ya modeli moja ndiko kunakowezesha ubadilishaji wa mtoa huduma kwa kundi: endpoint ya msingi ilipoacha kufanya kazi kabisa katikati ya hatua kwenye utekelezaji uliorekodiwa katika [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), wakala alikamilisha hatua zake zilizosalia kwa kutumia mbadala bila kuonyesha hitilafu hiyo.
+Kuelekeza wasifu kwenye **combo** ya 67router badala ya modeli moja ndiko kunakowezesha ubadilishaji wa mtoa huduma kwa kundi: endpoint ya msingi ilipoacha kufanya kazi kabisa katikati ya hatua kwenye utekelezaji uliorekodiwa katika [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578), wakala alikamilisha hatua zake zilizosalia kwa kutumia mbadala bila kuonyesha hitilafu hiyo.
 
 ---
 
 ## Kanuni za URL msingi (zana zipi zinahitaji `/v1`)
 
-OmniRoute hutoa kiolesura cha OpenAI kwenye `/v1`, kiolesura cha Anthropic kwenye mzizi,
+67router hutoa kiolesura cha OpenAI kwenye `/v1`, kiolesura cha Anthropic kwenye mzizi,
 na kiolesura asilia cha Gemini kwenye `/v1beta`. Kila ujumuishaji umeunganishwa kwa muundo ambao
 zana yake inatarajia (imethibitishwa katika msimbo wa amri):
 
@@ -249,7 +249,7 @@ zana yake inatarajia (imethibitishwa katika msimbo wa amri):
 ## Kuhifadhi vitegemezi asilia wakati wa kusasisha: `--include=optional`
 
 Unaposasisha kwa `omniroute update` (baada ya kuthibitisha, au kwa `--apply`),
-OmniRoute huendesha usakinishaji huku `--include=optional` ikiwa imejumuishwa moja kwa moja:
+67router huendesha usakinishaji huku `--include=optional` ikiwa imejumuishwa moja kwa moja:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -277,13 +277,13 @@ imepitwa na wakati), `--apply` (sakinisha bila kuuliza), `--changelog`, `--no-ba
 Mkataba umethibitishwa dhidi ya `@google/gemini-cli` 0.50.0: CLI hutambua
 `GOOGLE_GEMINI_BASE_URL` na kutuma `POST /v1beta/models/<model>:generateContent`
 (na `:streamGenerateContent?alt=sse`) kwake — sawasawa kabisa na kiolesura asilia cha
-Gemini cha OmniRoute (`/v1beta`). `omniroute run gemini` huunganisha hilo kiotomatiki:
+Gemini cha 67router (`/v1beta`). `omniroute run gemini` huunganisha hilo kiotomatiki:
 
-- `GOOGLE_GEMINI_BASE_URL` → URL msingi inayotumika ya OmniRoute (mzizi, bila `/v1`);
-- `GEMINI_API_KEY` → kitambulisho cha OmniRoute kilichotambuliwa (chaguo/env/muktadha);
+- `GOOGLE_GEMINI_BASE_URL` → URL msingi inayotumika ya 67router (mzizi, bila `/v1`);
+- `GEMINI_API_KEY` → kitambulisho cha 67router kilichotambuliwa (chaguo/env/muktadha);
 - **`GEMINI_CLI_HOME` ya muda na iliyotengwa** ambayo `.gemini/settings.json` yake
   huchagua uthibitishaji wa `gemini-api-key`, ili kipindi cha Google OAuth kilichohifadhiwa (Code Assist)
-  kisibadilishe kamwe uzinduzi unaoelekezwa kwa OmniRoute — huondolewa baada ya kutoka;
+  kisibadilishe kamwe uzinduzi unaoelekezwa kwa 67router — huondolewa baada ya kutoka;
 - **usafi wa env**: env ya mchakato-toto husafishwa kwa kuondoa `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` na `GOOGLE_GENAI_USE_GCA` (ambazo zingeelekeza upya
   uthibitishaji kwenda Vertex/Code Assist), na `GEMINI_DEFAULT_AUTH_TYPE=gemini-api-key`
@@ -307,7 +307,7 @@ muunganisho wa itifaki ya wakala kwa `/dashboard/acp-agents`.
 
 Majaribio ya urejeshi ya mpango wa uanzishaji unaoweza kurudiwa huendeshwa katika CI (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`). Ili kuthibitisha faili HALISI zinazotekelezeka dhidi ya seva HALISI ya
-OmniRoute, kuna mfumo wa majaribio wa hiari katika
+67router, kuna mfumo wa majaribio wa hiari katika
 `tests/integration/upstream-cli-smoke.int.test.ts`. Hauendeshwi kamwe kiotomatiki
 (kila jaribio dogo hurukwa isipokuwa `RUN_CLI_SMOKE=1`), hupitisha kitambulisho kupitia JINA la kigezo cha mazingira
 (kamwe si kupitia thamani), huficha mifuatano inayofanana na funguo kutoka kwenye matokeo yoyote yaliyorekodiwa, huruka

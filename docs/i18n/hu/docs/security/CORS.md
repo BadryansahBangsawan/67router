@@ -4,7 +4,7 @@
 
 ---
 
-Az OmniRoute egyetlen, központi engedélyezési listával szabályozza, hogy mely
+A 67router egyetlen, központi engedélyezési listával szabályozza, hogy mely
 **böngészőeredetek** olvashatják a más eredetű válaszokat. A modell
 **alapértelmezés szerint mindent tilt**: egyetlen eredet sem engedélyezett, amíg
 kifejezetten fel nem veszi. Ez az oldal bemutatja, hogyan történik az engedélyezési
@@ -52,7 +52,7 @@ A köztes réteg minden kérésnél a következő sorrendben számítja ki az
 ## Fenyegetési modell — mit tesz ténylegesen elérhetővé a `CORS_ALLOW_ALL=true`
 
 Az általános OWASP-figyelmeztetést („helyettesítő karakteres CORS = bármely
-webhely meghívhatja az API-t”) érdemes komolyan venni, az OmniRoute kitettsége
+webhely meghívhatja az API-t”) érdemes komolyan venni, a 67router kitettsége
 azonban **szűkebb az általános esetnél**, egy konkrét megvalósítási sajátosság
 miatt:
 
@@ -60,7 +60,7 @@ miatt:
 > `Access-Control-Allow-Credentials` fejlécet.** A böngésző nem teszi elérhetővé a
 > _hitelesítési adatokat tartalmazó_ (sütit hordozó), más eredetű választ, hacsak a
 > kiszolgáló nem küld `Access-Control-Allow-Credentials: true` fejlécet. Az
-> OmniRoute megosztott CORS-útvonala ezt soha nem teszi.
+> 67router megosztott CORS-útvonala ezt soha nem teszi.
 
 Ez felületenként a következőt jelenti, még `CORS_ALLOW_ALL=true` esetén is:
 
@@ -78,22 +78,6 @@ hitelesítést igényelnek, amelyet egy más eredetű oldal nem tud biztosítani
 megosztott CORS-útvonalon ez **nem** munkamenet-eltérítési vagy
 hitelesítőadat-lopási támadási vektor.
 
-### Egy valódi kivétel — `/api/v1/agents/`
-
-A Cloud-Agent útvonalai
-(`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) **saját** CORS-fejléceket
-állítanak be (`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`), és
-**kibocsátják** az `Access-Control-Allow-Origin: <origin>|*` fejlécet az
-`Access-Control-Allow-Credentials: true` fejléccel együtt. Ez az egyetlen olyan
-felület, ahol az eredet visszatükrözése és a hitelesítési adatok együttesen vannak
-jelen, és ez **független a `CORS_ALLOW_ALL` beállítástól**. Ezek a felügyeleti
-hitelesítést használó útvonalak (`requireManagementAuth`); azoknak az
-üzemeltetőknek, akik a gazdagépen kívülről is elérhetővé teszik az irányítópultot,
-tudniuk kell, hogy ez az egyetlen hely, ahol a válaszfejlécek lehetővé teszik a
-hitelesítési adatokat tartalmazó, más eredetű olvasást. Ennek explicit
-engedélyezési listára szűkítését a jelen CORS-útmutatástól elkülönítve követjük
-nyomon.
-
 ## Éles környezet ellenőrzőlistája
 
 - **Éles környezetben soha ne állítsa be a `CORS_ALLOW_ALL=true` értéket.** Hagyja beállítatlanul.
@@ -103,7 +87,7 @@ nyomon.
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Ha az OmniRoute fordított proxy / alagút (nginx, Caddy, Cloudflare
+- Ha a 67router fordított proxy / alagút (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) mögött fut, a CORS **nem** az egyetlen védelmi mechanizmus — a loopback útvonalvédő
   továbbra is védi a folyamatindításra képes útvonalakat (lásd:
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)). Ne hamisítsa meg az
@@ -119,7 +103,7 @@ nyomon.
 Még fejlesztéskor is ritkán van szükség helyettesítő karakterre. Csak a ténylegesen használt fejlesztői kiszolgálókat engedélyezze:
 
 ```bash
-# Vite (5173) + Next.js (3000) fejlesztői kiszolgálók, amelyek egy helyi OmniRoute-ot hívnak
+# Vite (5173) + Next.js (3000) fejlesztői kiszolgálók, amelyek egy helyi 67router-ot hívnak
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -138,12 +122,12 @@ Az eredetek összehasonlítása nem érzékeny a kis- és nagybetűkre, a záró
   felügyeleti/irányítópulti eredeteket ne vegye fel semmilyen megengedő konfigurációba; ezeknek továbbra is
   szigorúan hiba esetén tiltó módon kell működniük.
 
-## Példa: fordított proxy az OmniRoute előtt
+## Példa: fordított proxy a 67router előtt
 
-A CORS-szabályokat maga az OmniRoute érvényesíti, ezért a proxynak általában **nem** szabad `Access-Control-*` fejléceket hozzáadnia vagy átírnia (a duplikált fejlécek hibát okoznak a böngészőkben). Zárja le a TLS-kapcsolatot, majd továbbítsa a kérést — az előzetes kérésre az OmniRoute válaszoljon:
+A CORS-szabályokat maga a 67router érvényesíti, ezért a proxynak általában **nem** szabad `Access-Control-*` fejléceket hozzáadnia vagy átírnia (a duplikált fejlécek hibát okoznak a böngészőkben). Zárja le a TLS-kapcsolatot, majd továbbítsa a kérést — az előzetes kérésre a 67router válaszoljon:
 
 ```nginx
-# nginx — továbbítás az OmniRoute-nak; itt NE szúrjon be Access-Control-* fejléceket
+# nginx — továbbítás a 67router-nak; itt NE szúrjon be Access-Control-* fejléceket
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -151,13 +135,13 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Tartsa meg a továbbítási fejléceket: az azonos gépen futó proxy a loopback felől csatlakozik,
-    # és ezek jelzik az OmniRoute számára, hogy a hívó nem a helyi üzemeltető. Ha a proxy egyiket
+    # és ezek jelzik a 67router számára, hogy a hívó nem a helyi üzemeltető. Ha a proxy egyiket
     # sem adja hozzá, minden távoli hívó helyinek fog látszani. Az X-Forwarded-For értékét se állítsa
     # soha 127.0.0.1-re.
 }
 ```
 
-Az engedélyezett böngészőeredeteket az OmniRoute-ban (`CORS_ALLOWED_ORIGINS` vagy a Security lapon) állítsa be, ne a proxyban.
+Az engedélyezett böngészőeredeteket a 67router-ban (`CORS_ALLOWED_ORIGINS` vagy a Security lapon) állítsa be, ne a proxyban.
 
 ## Forrásfájlok
 
@@ -169,7 +153,6 @@ Az engedélyezett böngészőeredeteket az OmniRoute-ban (`CORS_ALLOWED_ORIGINS`
 | Futásidejű állapot az irányítópult számára        | `src/app/api/settings/authz-inventory/route.ts`                      |
 | Irányítópult figyelmeztetősávja                   | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | Engedélyezett CORS-eredetek mező                  | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent útvonalankénti CORS-a (a kivétel)     | `src/lib/cloudAgent/api.ts`                                          |
 
 ## Lásd még
 

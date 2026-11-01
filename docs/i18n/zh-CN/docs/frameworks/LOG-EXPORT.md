@@ -4,7 +4,7 @@
 
 ---
 
-将 OmniRoute 调用日志持续、增量地导出到外部分析存储。
+将 67router 调用日志持续、增量地导出到外部分析存储。
 
 Logs 仪表板标签页将请求历史记录保存在 SQLite (`call_logs`) 中，其容量受轮换和保留策略限制。日志导出会按计划将同一组记录发送出去，使其存续时间超过本地数据库，并可与其他数据联接。BigQuery 是首个目标端；该管道采用注册表机制，因此可以增量添加更多目标端。
 
@@ -252,7 +252,7 @@ insertAll 调用，因此较大的 `batch_size` 不会触发 BigQuery 的 10 MB 
 - `send()` 在部分失败时**必须抛出异常**。成功返回意味着“目标中已有这些行”，
   此时游标将永久越过这些行。
 - 接受用户提供 URL 的目标在发起请求前，必须通过
-  `parseAndValidateWebhookUrl`（`src/shared/network/outboundUrlGuardPolicy.ts`）进行验证，
+  `parseAndValidatePublicUrl`（`src/shared/network/outboundUrlGuard.ts`）进行验证，
   其方式与 webhook 相同。BigQuery 不需要此验证，因为它的主机地址是常量。
 
 ---

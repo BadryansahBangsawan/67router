@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute បែងចែក **ការរកឃើញ CLI**, **Agent Client Protocol ដើម**, និង
+67router បែងចែក **ការរកឃើញ CLI**, **Agent Client Protocol ដើម**, និង
 **អាដាប់ទ័រ stdio ចាស់** ដាច់ពីគ្នា។ ការរកឃើញ binary ដែលបានដំឡើង មិនមែនជាភស្តុតាងបញ្ជាក់ពី
 ការផ្ទៀងផ្ទាត់អត្តសញ្ញាណ ភាពត្រូវគ្នានៃម៉ូដែល ឬភាពរួចរាល់របស់វាក្នុងការដោះស្រាយ prompt នោះទេ។
 
@@ -119,5 +119,3 @@ fixture ដែលផ្ដល់លទ្ធផលថេរ គ្របដណ�
 - [ពិធីការរបស់ agent](./AGENT_PROTOCOLS_GUIDE.md)
 - [កិច្ចសន្យាសម្រាប់ដំណើរការ CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [ឧបករណ៍ CLI](../reference/CLI-TOOLS.md)
-- [server A2A](./A2A-SERVER.md)
-- [agent លើ cloud](./CLOUD_AGENT.md)

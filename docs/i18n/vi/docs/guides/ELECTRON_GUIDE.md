@@ -7,7 +7,7 @@
 > **Nguồn thông tin chính thức:** workspace `electron/`
 > **Cập nhật lần cuối:** 2026-06-28 — v3.8.40
 
-OmniRoute cung cấp một ứng dụng máy tính đa nền tảng (Windows / macOS / Linux) được xây dựng trên
+67router cung cấp một ứng dụng máy tính đa nền tảng (Windows / macOS / Linux) được xây dựng trên
 **Electron 41** + **electron-builder 26.10**. Ứng dụng máy tính khởi chạy máy chủ độc lập Next.js
 dưới dạng tiến trình con, trỏ một `BrowserWindow` đến máy chủ đó, đồng thời bổ sung
 khay hệ thống, trình tự động cập nhật, cầu nối IPC và cơ chế khởi tạo khóa bí mật không cần cấu hình.
@@ -196,7 +196,7 @@ hãy ưu tiên tệp `.env`, sau đó thoát hoàn toàn (khay, **Thoát**) và 
 - `BrowserWindow`: 1400×900 (tối thiểu 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, các nút điều khiển cửa sổ tại `{ x: 16, y: 16 }`.
 - Windows/Linux: thanh tiêu đề gốc của hệ điều hành.
-- Nút đóng sẽ thu nhỏ ứng dụng xuống khay; menu khay có **Mở OmniRoute**, **Mở bảng điều khiển** (trình duyệt bên ngoài), menu con **Cổng máy chủ**, **Kiểm tra bản cập nhật**, **Thoát**.
+- Nút đóng sẽ thu nhỏ ứng dụng xuống khay; menu khay có **Mở 67router**, **Mở bảng điều khiển** (trình duyệt bên ngoài), menu con **Cổng máy chủ**, **Kiểm tra bản cập nhật**, **Thoát**.
 
 ## Chính sách bảo mật nội dung
 

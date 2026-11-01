@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "שגיאה: {message}",
-    "serverOffline": "שרת OmniRoute אינו מקוון. הפעילו אותו באמצעות: omniroute serve",
+    "serverOffline": "שרת 67router אינו מקוון. הפעילו אותו באמצעות: omniroute serve",
     "authRequired": "נדרש אימות. הגדירו את OMNIROUTE_API_KEY או הריצו: omniroute setup",
     "rateLimited": "חריגה ממגבלת הקצב. נסו שוב בעוד {seconds} שניות.",
     "timeout": "תם הזמן שהוקצב לבקשה לאחר {ms} אלפיות השנייה.",
@@ -15,7 +15,7 @@
     "yesOpt": "דילוג על בקשת האישור"
   },
   "setup": {
-    "title": "הגדרת OmniRoute",
+    "title": "הגדרת 67router",
     "passwordPrompt": "סיסמת מנהל מערכת",
     "providerPrompt": "ספק ברירת מחדל (השאירו ריק כדי לדלג)",
     "done": "ההגדרה הושלמה",
@@ -30,7 +30,7 @@
     "opencode": "התקנה והגדרה של @omniroute/opencode-plugin המצורף עבור OpenCode"
   },
   "doctor": {
-    "title": "אבחון OmniRoute",
+    "title": "אבחון 67router",
     "dbOk": "מסד הנתונים: תקין ({path})",
     "dbMissing": "מסד הנתונים: לא אותחל — הריצו `omniroute setup`",
     "portOk": "יציאה {port}: זמינה",
@@ -82,7 +82,7 @@
       "providerOpt": "סינון לפי שם ספק",
       "header": "מזהה      ספק           שם                      מצב תפוגה    מצב בדיקה    צינון עד",
       "noData": "אין נתונים זמינים על חיבורי ספקים.",
-      "requiresServer": "הפקודה providers status מחייבת ששרת OmniRoute יהיה פעיל."
+      "requiresServer": "הפקודה providers status מחייבת ששרת 67router יהיה פעיל."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "הוספה או עדכון של מפתח API עבור ספק",
     "listDescription": "הצגת כל מפתחות ה-API שהוגדרו",
     "removeDescription": "הסרת מפתח API עבור ספק",
-    "regenerateDescription": "יצירה מחדש של מפתח API של OmniRoute",
-    "revokeDescription": "ביטול מפתח API של OmniRoute",
+    "regenerateDescription": "יצירה מחדש של מפתח API של 67router",
+    "revokeDescription": "ביטול מפתח API של 67router",
     "revealDescription": "חשיפת הערך הלא מוסתר של מפתח ה-API",
     "usageDescription": "הצגת השימוש האחרון במפתח API",
     "usageLimitOpt": "מספר הבקשות האחרונות",
@@ -172,13 +172,6 @@
       "period": "טווח זמן: 1d|7d|30d|90d|ytd|all (ברירת מחדל: 30d)",
       "provider": "סינון לפי מזהה ספק"
     },
-    "budget": {
-      "description": "ניהול תקציבי עלויות",
-      "set": {
-        "scope": "תחום התקציב (ברירת מחדל: global)",
-        "period": "תקופת התקציב: daily|weekly|monthly (ברירת מחדל: monthly)"
-      }
-    },
     "quota": {
       "description": "הצגת ניצול מכסת הספק",
       "provider": "סינון לפי מזהה ספק",
@@ -225,7 +218,7 @@
     "noCombo": "לא נמצא combo תואם. ניתן להגדיר אחד באמצעות: omniroute combo create"
   },
   "chat": {
-    "description": "שליחת הנחיית צ׳אט חד-פעמית אל OmniRoute",
+    "description": "שליחת הנחיית צ׳אט חד-פעמית אל 67router",
     "file": "קריאת ההנחיה מקובץ",
     "stdin": "קריאת ההנחיה מ-stdin",
     "system": "הנחיית מערכת",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "הפעלת שרת OmniRoute (פעולת ברירת המחדל)",
-    "starting": "שרת OmniRoute מופעל ביציאה {port}...",
+    "description": "הפעלת שרת 67router (פעולת ברירת המחדל)",
+    "starting": "שרת 67router מופעל ביציאה {port}...",
     "ready": "מוכן בכתובת http://localhost:{port}",
     "stopping": "השרת נעצר (PID {pid})...",
     "stopped": "השרת נעצר.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "גיבוי",
-    "description": "יצירת גיבוי של נתוני OmniRoute",
+    "description": "יצירת גיבוי של נתוני 67router",
     "creating": "הגיבוי נוצר...",
     "done": "הגיבוי נשמר ב-{path}",
     "noFiles": "אין קבצים לגיבוי (מסד הנתונים לא אותחל)",
@@ -277,7 +270,7 @@
     "noBackups": "לא נמצאו גיבויים.",
     "notFound": "הגיבוי לא נמצא: {name}",
     "confirmRestore": "להחליף את הנתונים הנוכחיים בגיבוי מתאריך {ts}?",
-    "createDescription": "יצירת גיבוי של נתוני OmniRoute",
+    "createDescription": "יצירת גיבוי של נתוני 67router",
     "nameOpt": "שם מותאם אישית לגיבוי",
     "cloudOpt": "העלאת הגיבוי לאחסון בענן",
     "encryptOpt": "הצפנת הגיבוי באמצעות AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "ניקוי המטמון נכשל."
   },
   "redis": {
-    "description": "הפעל מכולת Redis מקומית בלחיצה אחת (Podman או Docker) לשמירת מטמון ומעקב מכסות של OmniRoute"
+    "description": "הפעל מכולת Redis מקומית בלחיצה אחת (Podman או Docker) לשמירת מטמון ומעקב מכסות של 67router"
   },
   "test": {
     "description": "בדיקת חיבור לספק",
@@ -390,36 +383,8 @@
       "description": "יומן הביקורת של MCP (כינוי עבור audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "הצגת כישורי A2A הזמינים מכרטיס הסוכן"
-    },
-    "invoke": {
-      "description": "הפעלת כישור A2A והחזרת מזהה המשימה",
-      "input": "אובייקט קלט מסוג JSON",
-      "input_file": "נתיב לקובץ קלט מסוג JSON",
-      "wait": "המתנה להשלמת המשימה לפני החזרה",
-      "timeout": "זמן קצוב להמתנה להשלמה במילישניות (ברירת מחדל: 60000)"
-    },
-    "tasks": {
-      "description": "ניהול משימות A2A",
-      "list": {
-        "status": "סינון לפי סטטוס",
-        "skill": "סינון לפי מזהה כישור"
-      },
-      "watch": {
-        "description": "בדיקה מחזורית של סטטוס המשימה עד להשלמתה"
-      },
-      "stream": {
-        "description": "הזרמת אירועי ביצוע המשימה באמצעות SSE"
-      },
-      "logs": {
-        "description": "הצגת הודעות ותוצרים של המשימה"
-      }
-    }
-  },
   "policy": {
-    "description": "ניהול מדיניות ההרשאות של OmniRoute",
+    "description": "ניהול מדיניות ההרשאות של 67router",
     "list": {
       "description": "הצגת מדיניות",
       "kind": "סינון לפי סוג (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "הגדרה ובדיקה של תהליך הדחיסה של OmniRoute",
+    "description": "הגדרה ובדיקה של תהליך הדחיסה של 67router",
     "status": {
       "description": "הצגת מצב הדחיסה וההגדרות הנוכחיים"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "להחליף את כתובת המנהרה מסוג {type}? (תיווצר כתובת URL חדשה)"
   },
   "stop": {
-    "description": "עצירת שרת OmniRoute",
+    "description": "עצירת שרת 67router",
     "stopping": "עוצר את השרת (PID {pid})...",
     "stopped": "השרת נעצר.",
     "notRunning": "אין שרת שפועל.",
     "portFallback": "לא נמצא קובץ PID, מנסה לעצור לפי יציאה..."
   },
   "restart": {
-    "description": "הפעלת שרת OmniRoute מחדש",
-    "restarting": "מפעיל מחדש את שרת OmniRoute..."
+    "description": "הפעלת שרת 67router מחדש",
+    "restarting": "מפעיל מחדש את שרת 67router..."
   },
   "dashboard": {
-    "description": "פתיחת לוח הבקרה של OmniRoute בדפדפן",
+    "description": "פתיחת לוח הבקרה של 67router בדפדפן",
     "opening": "פותח את לוח הבקרה בכתובת {url}",
     "urlOnly": "הדפסת כתובת ה-URL של לוח הבקרה מבלי לפתוח דפדפן",
     "tui": "פתיחת לוח בקרה אינטראקטיבי בממשק TUI (ממשק מסוף, 7 כרטיסיות)"
@@ -560,120 +525,6 @@
       "description": "קבלת רשומה יחידה מיומן הביקורת לפי מזהה"
     }
   },
-  "skills": {
-    "description": "ניהול מיומנויות OmniRoute‏ (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "הצגת המיומנויות המותקנות",
-      "type": "סינון לפי סוג (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "הצגת מיומנויות מופעלות בלבד",
-      "disabled": "הצגת מיומנויות מושבתות בלבד",
-      "api_key": "סינון לפי מפתח API"
-    },
-    "get": {
-      "description": "קבלת פרטים על מיומנות לפי מזהה"
-    },
-    "install": {
-      "description": "התקנת מיומנות מקובץ או מכתובת URL",
-      "from_file": "נתיב לקובץ הגדרת המיומנות בפורמט JSON",
-      "from_url": "כתובת URL של הגדרת מיומנות מרוחקת",
-      "type": "סוג מיומנות (sandbox|custom|hybrid)",
-      "enable": "הפעלת המיומנות לאחר ההתקנה"
-    },
-    "enable": {
-      "description": "הפעלת מיומנות לפי מזהה"
-    },
-    "disable": {
-      "description": "השבתת מיומנות לפי מזהה",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "delete": {
-      "description": "מחיקת מיומנות לפי מזהה",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "execute": {
-      "description": "הרצת מיומנות לפי מזהה",
-      "input": "אובייקט קלט מסוג JSON",
-      "input_file": "נתיב לקובץ קלט מסוג JSON",
-      "timeout": "זמן קצוב להרצה במילישניות (ברירת מחדל: 30000)"
-    },
-    "executions": {
-      "description": "הצגת היסטוריית הרצות המיומנויות",
-      "skill": "סינון לפי מזהה מיומנות",
-      "limit": "מספר תוצאות מרבי (ברירת מחדל: 50)",
-      "status": "סינון לפי סטטוס (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "ניהול מיומנויות שהותקנו באמצעות SSH"
-    },
-    "marketplace": {
-      "description": "עיון במיומנויות והתקנתן מהמרקטפלייס"
-    },
-    "mp": {
-      "search": {
-        "description": "חיפוש חבילות במרקטפלייס",
-        "category": "סינון לפי קטגוריה",
-        "tag": "סינון לפי תגית",
-        "limit": "מספר תוצאות מרבי (ברירת מחדל: 30)",
-        "sort": "מיון לפי: downloads|rating|recent"
-      },
-      "info": {
-        "description": "הצגת פרטי החבילה וקובץ ה-readme"
-      },
-      "install": {
-        "description": "התקנת חבילה מהמרקטפלייס",
-        "version": "גרסת החבילה (ברירת מחדל: latest)",
-        "enable": "הפעלה לאחר ההתקנה",
-        "yes": "דילוג על בקשת האישור"
-      },
-      "categories": {
-        "description": "הצגת קטגוריות המרקטפלייס"
-      },
-      "featured": {
-        "description": "הצגת חבילות מומלצות מהמרקטפלייס"
-      }
-    }
-  },
-  "memory": {
-    "description": "ניהול הזיכרון השיחתי של OmniRoute‏ (FTS5 + vector)",
-    "search": {
-      "description": "חיפוש רשומות זיכרון באמצעות שאילתה סמנטית",
-      "type": "סינון לפי סוג זיכרון (user|feedback|project|reference)",
-      "limit": "מספר תוצאות מרבי (ברירת מחדל: 20)",
-      "api_key": "סינון לפי מפתח API",
-      "token_budget": "הגבלת מספר הטוקנים הכולל בתוצאות"
-    },
-    "add": {
-      "description": "הוספת רשומת זיכרון חדשה",
-      "content": "תוכן הטקסט של הזיכרון",
-      "file": "קריאת תוכן מקובץ",
-      "type": "סוג זיכרון (ברירת מחדל: user)",
-      "metadata": "אובייקט מטא-נתונים מסוג JSON",
-      "api_key": "שיוך למפתח API"
-    },
-    "clear": {
-      "description": "מחיקת רשומות זיכרון התואמות למסננים",
-      "type": "סינון לפי סוג",
-      "older": "מחיקת רשומות הישנות ממשך הזמן שצוין (30d, 6m, 1y)",
-      "api_key": "סינון לפי מפתח API",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "list": {
-      "description": "הצגת רשומות זיכרון ללא דירוג חיפוש",
-      "type": "סינון לפי סוג",
-      "limit": "מספר תוצאות מרבי (ברירת מחדל: 100)",
-      "api_key": "סינון לפי מפתח API"
-    },
-    "get": {
-      "description": "קבלת רשומת זיכרון יחידה לפי מזהה"
-    },
-    "delete": {
-      "description": "מחיקת רשומת זיכרון לפי מזהה",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "health": {
-      "description": "הצגת תקינותה של תת-מערכת הזיכרון (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "ניהול חיבורים לספקי OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "דילוג על בקשת האישור"
     }
   },
-  "cloud": {
-    "description": "ניהול משימות של סוכני AI בענן (codex, devin, jules)",
-    "agents": {
-      "description": "הצגת סוכני הענן הזמינים"
-    },
-    "agent": {
-      "description": "ניהול משימות סוכן הענן {agent}",
-      "auth": {
-        "description": "הרשאת {agent} באמצעות OAuth"
-      }
-    },
-    "task": {
-      "description": "ניהול משימות של סוכני ענן",
-      "create": {
-        "description": "יצירת משימת סוכן חדשה",
-        "title": "כותרת המשימה (ברירת המחדל היא 80 התווים הראשונים של ההנחיה)",
-        "prompt": "טקסט ההנחיה למשימה",
-        "prompt_file": "קריאת ההנחיה מקובץ",
-        "repo": "כתובת ה-URL של המאגר לשכפול עבור המשימה",
-        "branch": "שם הענף לשימוש",
-        "metadata": "אובייקט מטא-נתונים של JSON"
-      },
-      "list": {
-        "description": "הצגת משימות סוכן",
-        "status": "סינון לפי סטטוס (running|completed|failed|cancelled)",
-        "limit": "מספר תוצאות מרבי (ברירת מחדל: 50)"
-      },
-      "get": {
-        "description": "קבלת פרטי משימה לפי ID"
-      },
-      "status": {
-        "description": "הצגת סטטוס המשימה (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "ביטול משימה פעילה",
-        "yes": "דילוג על בקשת האישור"
-      },
-      "approve": {
-        "description": "אישור תוכנית הסוכן כדי להתחיל בביצוע"
-      },
-      "message": {
-        "description": "שליחת הודעה למשימה פעילה"
-      }
-    },
-    "sources": {
-      "description": "הצגת קובצי המקור שהופקו על ידי משימה"
-    }
-  },
-  "eval": {
-    "description": "ניהול חבילות הערכה והרצות",
-    "suites": {
-      "description": "ניהול חבילות הערכה",
-      "list": {
-        "description": "הצגת חבילות הערכה"
-      },
-      "get": {
-        "description": "קבלת פרטי חבילת הערכה לפי ID"
-      },
-      "create": {
-        "description": "יצירת חבילת הערכה מקובץ JSON",
-        "file": "נתיב לקובץ JSON המגדיר את החבילה"
-      }
-    },
-    "run": {
-      "description": "התחלת הרצת הערכה עבור חבילה",
-      "model": "ID המודל להערכה (ברירת מחדל: auto)",
-      "combo": "אילוץ שילוב מסוים לפי שם",
-      "concurrency": "מספר דגימות מקבילות (ברירת מחדל: 4)",
-      "tag": "תיוג הרצה זו לצורך סינון מאוחר יותר",
-      "watch": "מעקב אחר התקדמות ההרצה עד להשלמתה"
-    },
-    "list": {
-      "description": "הצגת הרצות הערכה",
-      "suite": "סינון לפי ID החבילה",
-      "status": "סינון לפי סטטוס",
-      "since": "החזרת הרצות מאז חותמת זמן זו",
-      "limit": "מספר תוצאות מרבי (ברירת מחדל: 50)"
-    },
-    "get": {
-      "description": "קבלת פרטי הרצת הערכה לפי ID"
-    },
-    "results": {
-      "description": "הצגת תוצאות דגימות עבור הרצת הערכה",
-      "failed": "הצגת דגימות שנכשלו בלבד"
-    },
-    "cancel": {
-      "description": "ביטול הערכה פעילה",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "scorecard": {
-      "description": "הצגת כרטיס ניקוד עבור הרצת הערכה שהושלמה"
-    }
-  },
-  "webhooks": {
-    "description": "ניהול רכיבי webhook של OmniRoute",
-    "events": {
-      "description": "הצגת כל סוגי אירועי ה-webhook הזמינים"
-    },
-    "list": {
-      "description": "הצגת רכיבי webhook שהוגדרו"
-    },
-    "get": {
-      "description": "קבלת פרטי webhook לפי ID"
-    },
-    "add": {
-      "description": "רישום webhook חדש",
-      "url": "כתובת URL של היעד",
-      "events": "רשימה מופרדת בפסיקים של סוגי אירועים",
-      "secret": "סוד חתימת HMAC",
-      "header": "כותרת נוספת בפורמט key=value (ניתן לחזור עליה)",
-      "no_enabled": "יצירת webhook במצב מושבת"
-    },
-    "update": {
-      "description": "עדכון webhook קיים",
-      "enabled": "הגדרת מצב הפעלה (true|false)"
-    },
-    "remove": {
-      "description": "מחיקת webhook",
-      "yes": "דילוג על בקשת האישור"
-    },
-    "test": {
-      "description": "שליחת אירוע בדיקה ל-webhook",
-      "event": "סוג האירוע להדמיה (ברירת מחדל: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — נתב AI חכם עם מעבר אוטומטי לגיבוי",
+    "description": "67router — נתב AI חכם עם מעבר אוטומטי לגיבוי",
     "version": "הדפסת הגרסה ויציאה",
     "output": "פורמט פלט (table, json, jsonl, csv)",
     "quiet": "הסתרת פלט שאינו חיוני",
     "no_color": "השבתת פלט צבעוני",
     "timeout": "זמן קצוב לבקשת HTTP באלפיות שנייה",
-    "api_key": "מפתח API עבור שרת OmniRoute",
-    "base_url": "כתובת URL בסיסית של שרת OmniRoute",
+    "api_key": "מפתח API עבור שרת 67router",
+    "base_url": "כתובת URL בסיסית של שרת 67router",
     "context": "הקשר/פרופיל שרת לשימוש עבור פקודה זו",
     "lang": "הגדרת שפת התצוגה של CLI (דורסת את OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "ניהול קבצים (העלאה, הצגת רשימה, אחזור, הורדה, מחיקה)",
-    "list": {
-      "purpose": "סינון לפי מטרה",
-      "limit": "מספר תוצאות מרבי"
-    },
-    "get": {
-      "description": "אחזור מטא-נתונים של קובץ"
-    },
-    "upload": {
-      "description": "העלאת קובץ",
-      "purpose": "מטרת הקובץ (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "הורדת תוכן הקובץ",
-      "out": "שמירה לנתיב (ברירת מחדל: stdout)"
-    },
-    "delete": {
-      "yes": "דילוג על האישור"
-    }
-  },
-  "batches": {
-    "description": "ניהול משימות אצווה תואמות OpenAI",
-    "list": {
-      "status": "סינון לפי סטטוס",
-      "limit": "מספר תוצאות מרבי"
-    },
-    "create": {
-      "description": "יצירת משימת אצווה",
-      "inputFile": "מזהה קובץ הקלט",
-      "endpoint": "נקודת קצה יעד",
-      "window": "חלון זמן להשלמה",
-      "metadata": "הוספת מטא-נתונים key=value"
-    },
-    "submit": {
-      "description": "העלאת קובץ JSONL ויצירת אצווה",
-      "jsonl": "נתיב לקובץ JSONL",
-      "endpoint": "נקודת קצה יעד",
-      "wait": "המתנה להשלמה"
-    },
-    "cancel": {
-      "yes": "דילוג על אישור"
-    },
-    "wait": {
-      "timeout": "זמן קצוב באלפיות שנייה"
-    },
-    "output": {
-      "out": "שמירת הפלט בנתיב"
-    },
-    "errors": {
-      "out": "שמירת שגיאות בנתיב"
-    }
   },
   "translator": {
     "description": "תרגום גופי בקשות בין פורמטים של LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "גישה למפרט OpenAPI של OmniRoute ובדיקתו",
+    "description": "גישה למפרט OpenAPI של 67router ובדיקתו",
     "dump": {
       "description": "הפקת מפרט OpenAPI אל stdout או לקובץ",
       "format": "פורמט פלט: yaml|json (ברירת מחדל: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "הפעלת השילוב המדורג במקום הראשון"
     }
   },
-  "oneproxy": {
-    "description": "ניהול מאגר שרתי המקור של OneProxy",
-    "stats": {
-      "provider": "סינון לפי ספק",
-      "period": "תקופת זמן (ברירת מחדל: 24h)"
-    },
-    "fetch": {
-      "description": "משיכת שרתי Proxy מהמאגר",
-      "count": "מספר שרתי ה-Proxy למשיכה (ברירת מחדל: 1)",
-      "type": "סוג Proxy: http|socks5 (ברירת מחדל: http)"
-    },
-    "rotate": {
-      "description": "אילוץ החלפת Proxy",
-      "provider": "הספק שעבורו תתבצע ההחלפה",
-      "connectionId": "מזהה חיבור ספציפי להחלפה"
-    },
-    "config": {
-      "description": "הצגה או עדכון של תצורת OneProxy",
-      "enabled": "הפעלת מאגר Proxy‏ (true|false)",
-      "poolSize": "גודל המאגר",
-      "providerSource": "כתובת URL של ספק ה-Proxy",
-      "rotationPolicy": "מדיניות החלפה: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "הצגת מאגר ה-Proxy הנוכחי עם מדדים"
-    }
-  },
   "open": {
-    "description": "פתיחת דף ספציפי בלוח הבקרה של OmniRoute בדפדפן",
+    "description": "פתיחת דף ספציפי בלוח הבקרה של 67router בדפדפן",
     "url": "הדפסת כתובת URL בלבד, ללא פתיחת הדפדפן"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "סנכרון התצורה בין מופעי OmniRoute",
+    "description": "סנכרון התצורה בין מופעי 67router",
     "push": {
       "description": "דחיפת התצורה לענן או למופע מרוחק"
     },
@@ -1228,7 +874,7 @@
     "filter": "סינון לפי רמה (error,warn,info) — מופרד בפסיקים",
     "lines": "מספר השורות לאחזור",
     "timeout": "זמן קצוב לחיבור באלפיות השנייה",
-    "baseUrl": "כתובת ה-URL הבסיסית של OmniRoute API",
+    "baseUrl": "כתובת ה-URL הבסיסית של 67router API",
     "requestId": "סינון לפי מזהה בקשה",
     "apiKey": "סינון לפי מפתח API",
     "combo": "סינון לפי שם קומבו",
@@ -1244,10 +890,10 @@
     "description": "שליטה בסמל מגש המערכת",
     "show": "הצגת סמל מגש המערכת (אם השרת פועל עם --tray)",
     "hide": "הסתרת סמל מגש המערכת",
-    "quit": "יציאה מ-OmniRoute דרך מגש המערכת"
+    "quit": "יציאה מ-67router דרך מגש המערכת"
   },
   "autostart": {
-    "description": "ניהול ההפעלה האוטומטית של OmniRoute בעת האתחול (Linux: שירות משתמש של systemd)",
+    "description": "ניהול ההפעלה האוטומטית של 67router בעת האתחול (Linux: שירות משתמש של systemd)",
     "enable": "הפעלת הפעלה אוטומטית בעת האתחול",
     "disable": "השבתת הפעלה אוטומטית בעת האתחול",
     "toggle": "החלפת מצב ההפעלה האוטומטית בעת האתחול",
@@ -1268,30 +914,20 @@
     "system": "הנחיית מערכת",
     "resume": "חידוש הפעלה שמורה לפי שם"
   },
-  "plugin": {
-    "description": "ניהול תוספי CLI‏ (omniroute-cmd-*)",
-    "list": "הצגת התוספים המותקנים",
-    "install": "התקנת תוסף מ-npm או מנתיב מקומי",
-    "remove": "הסרת תוסף מותקן",
-    "info": "הצגת פרטים על תוסף מותקן",
-    "search": "חיפוש תוספים זמינים במאגר npm",
-    "update": "עדכון תוספים מותקנים",
-    "scaffold": "יצירת שלד בסיסי לתוסף חדש"
-  },
   "launch": {
-    "description": "הפעלת Claude Code כשהוא מופנה אל OmniRoute (מקומי או מרוחק, עם --profile)",
+    "description": "הפעלת Claude Code כשהוא מופנה אל 67router (מקומי או מרוחק, עם --profile)",
     "token": "האסימון שעל לקוח Claude לשלוח (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute אינו נגיש ביציאה {port}. הפעילו אותו באמצעות 'omniroute serve'.",
+    "notRunning": "67router אינו נגיש ביציאה {port}. הפעילו אותו באמצעות 'omniroute serve'.",
     "notFound": "כלי שורת הפקודה 'claude' לא נמצא ב-PATH."
   },
   "run": {
-    "description": "הפעלת יעד CLI נתמך דרך OmniRoute"
+    "description": "הפעלת יעד CLI נתמך דרך 67router"
   },
   "setupClaude": {
-    "description": "יצירת פרופילי Claude Code תחת ~/.claude/profiles מקטלוג המודלים של OmniRoute"
+    "description": "יצירת פרופילי Claude Code תחת ~/.claude/profiles מקטלוג המודלים של 67router"
   },
   "connect": {
-    "description": "התחברות לשרת OmniRoute מרוחק ומעבר למצב מרוחק"
+    "description": "התחברות לשרת 67router מרוחק ומעבר למצב מרוחק"
   },
   "tokens": {
     "description": "ניהול אסימוני גישה מוגדרי-היקף ל-CLI (מצב מרוחק)"
@@ -1300,10 +936,10 @@
     "description": "בחירת ספק ומודל מהשרת הפעיל והגדרת CLI מקומי נתמך"
   },
   "launchCodex": {
-    "description": "הפעלת Codex CLI כשהוא מופנה אל OmniRoute (מקומי או VPS מרוחק)"
+    "description": "הפעלת Codex CLI כשהוא מופנה אל 67router (מקומי או VPS מרוחק)"
   },
   "setupCodex": {
-    "description": "יצירת קובצי פרופיל תחת ~/.codex מקטלוג המודלים הפעיל של OmniRoute"
+    "description": "יצירת קובצי פרופיל תחת ~/.codex מקטלוג המודלים הפעיל של 67router"
   },
   "packs": {
     "description": "ניהול חבילות זמן ריצה אופציונליות (ML / אוטומציית דפדפן)",
@@ -1316,7 +952,7 @@
     "errUnknown": "חבילה לא מוכרת: {name}",
     "errNoIndex": "אינדקס החבילות לא נמצא; העבירו --source <dir> שמכיל את מטען החבילה (חבילות שולחן העבודה כוללות אותו לצד היישום)",
     "installed": "החבילה \"{name}\" הותקנה ואומתה ב-{dir}",
-    "restartHint": "הפעילו מחדש את שרת OmniRoute (או את יישום שולחן העבודה) כדי שסביבת זמן הריצה תטען את החבילה",
+    "restartHint": "הפעילו מחדש את שרת 67router (או את יישום שולחן העבודה) כדי שסביבת זמן הריצה תטען את החבילה",
     "removed": "החבילה \"{name}\" הוסרה",
     "notInstalled": "החבילה \"{name}\" לא הייתה מותקנת",
     "verifyOk": "כל החבילות המותקנות אומתו",

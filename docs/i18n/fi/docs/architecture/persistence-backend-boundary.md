@@ -10,7 +10,7 @@
 
 ## Konteksti
 
-OmniRoute tarjoaa tällä hetkellä toimialuekohtaisia pysyvyysfunktioita hakemistosta `src/lib/db/`, kun taas tiedoston `src/lib/db/core.ts` palauttama jaettu yhteys toteuttaa tiedostossa `src/lib/db/adapters/types.ts` määritellyn synkronisen `SqliteAdapter`-sopimuksen. Kyseinen sovitin tukee useita SQLite-ajoympäristöjä, mutta sen rajapinta on edelleen SQLite-keskeinen: synkroniset valmistellut lauseet, `pragma`, lykätyt ja välittömät transaktiot, natiivi tai tiedostokopiointiin perustuva varmuuskopiointi, tarkistuspisteet sekä paikallinen tietokantakahva.
+67router tarjoaa tällä hetkellä toimialuekohtaisia pysyvyysfunktioita hakemistosta `src/lib/db/`, kun taas tiedoston `src/lib/db/core.ts` palauttama jaettu yhteys toteuttaa tiedostossa `src/lib/db/adapters/types.ts` määritellyn synkronisen `SqliteAdapter`-sopimuksen. Kyseinen sovitin tukee useita SQLite-ajoympäristöjä, mutta sen rajapinta on edelleen SQLite-keskeinen: synkroniset valmistellut lauseet, `pragma`, lykätyt ja välittömät transaktiot, natiivi tai tiedostokopiointiin perustuva varmuuskopiointi, tarkistuspisteet sekä paikallinen tietokantakahva.
 
 Nykyinen käynnistys- ja palautuspolku hallitsee myös SQLite-tiedoston elinkaarta. `src/lib/db/core.ts` selvittää `storage.sqlite`-tiedoston sijainnin, ylläpitää yhtä prosessinlaajuista sovitinta, luo WAL-tarkistuspisteitä, säilyttää valitut taulut palautuksen aikana ja poistaa SQLite-oheistiedostot tietokantaa uudelleen muodostettaessa. Ajurin valinta tiedostossa `src/lib/db/adapters/driverFactory.ts` valitsee tuettujen SQLite-ajoympäristöjen väliltä; se ei ole ulkoisten taustajärjestelmien abstraktio.
 

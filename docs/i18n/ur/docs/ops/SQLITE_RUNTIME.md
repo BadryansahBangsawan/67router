@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute آغاز کے وقت اپنے SQLite ڈرائیور کو 5 مراحل پر مشتمل متبادل سلسلے کے ذریعے حل کرتا ہے:
+67router آغاز کے وقت اپنے SQLite ڈرائیور کو 5 مراحل پر مشتمل متبادل سلسلے کے ذریعے حل کرتا ہے:
 
 1. **بنڈل شدہ `better-sqlite3`** (`package.json` میں `dependencies` کے ذریعے)
    — سب سے تیز، مقامی بائنری، اور build tools موجود ہونے پر `npm install` کے ذریعے انسٹال ہوتا ہے۔
@@ -28,13 +28,13 @@ OmniRoute آغاز کے وقت اپنے SQLite ڈرائیور کو 5 مراحل 
 - **build tools کی عدم موجودگی**: بعض ماحول (VS Build Tools کے بغیر کارپوریٹ Windows،
   کم سے کم Docker images) `better-sqlite3` کو compile نہیں کر سکتے۔ رن ٹائم installer
   npm registry سے پہلے سے build شدہ بائنری حاصل کرتا ہے؛ اگر یہ بھی ناکام ہو جائے تو
-  متبادل ڈرائیور یقینی بناتے ہیں کہ OmniRoute پھر بھی شروع ہو جائے۔
+  متبادل ڈرائیور یقینی بناتے ہیں کہ 67router پھر بھی شروع ہو جائے۔
 - **ایئر گیپڈ سسٹمز**: اگر npm registry تک رسائی نہ ہو تو `node:sqlite`
   یا `sql.js` بنیادی فعالیت کی ضمانت دیتے ہیں۔
 
 ## Magic-byte کی توثیق
 
-رن ٹائم پر انسٹال شدہ `.node` فائل لوڈ کرنے سے پہلے، OmniRoute ابتدائی 8
+رن ٹائم پر انسٹال شدہ `.node` فائل لوڈ کرنے سے پہلے، 67router ابتدائی 8
 bytes پڑھتا ہے اور انہیں معروف پلیٹ فارم magics سے ملاتا ہے:
 
 | پلیٹ فارم            | Bytes (hex)   | لیبل        |
@@ -104,9 +104,9 @@ timestamps کو slow-operation تنبیہات اور host/storage metrics کے �
 ## واحد-writer topology (HA غیر معاون)
 
 مندرجہ بالا ڈرائیور متبادل سلسلہ پھر بھی **ایک process** میں چلتا ہے۔ ڈیفالٹ SQLite
-OmniRoute ایک **واحد writer** ہے:
+67router ایک **واحد writer** ہے:
 
-- دو OmniRoute replicas کو ایک ہی `storage.sqlite` فائل کے ساتھ منسلک نہ کریں۔
+- دو 67router replicas کو ایک ہی `storage.sqlite` فائل کے ساتھ منسلک نہ کریں۔
 - container restart، Recreate deploy، OOM kill، یا HEALTHCHECK restart سے
   زیر عمل ہر SSE session ختم ہو جاتا ہے۔ stock path پر session drain موجود نہیں۔
 - ایسا orchestrator liveness جو سست `/healthz` کو dead سمجھے، واحد

@@ -9,7 +9,7 @@
 > vilka rutter och svarsvägar hookarna når, de sammanslagna inaktiveringsheadrarna (#16412), injektionsblockeringsläge som en obligatorisk gräns (#16413), och vad som ser ett svar före post-call)
 
 Guardrails upprätthåller säkerhets-, policy- och innehållstransformationer vid
-gränsen mellan OmniRoute och uppströmsleverantörer. Varje guardrail kan
+gränsen mellan 67router och uppströmsleverantörer. Varje guardrail kan
 inspektera (och valfritt avvisa, transformera eller annotera)
 förfrågningsnyttolaster (`preCall`) och uppströmssvar (`postCall`).
 
@@ -112,7 +112,7 @@ När anroparens API-nyckel begränsar `allowedConnections`, kvotpooler
 `modelAccessMode: "restricted"` / `disableNonPublicModels`) väljer bron
 endast omdirigerings- och beskrivningsmodeller som nyckeln får använda, på
 anslutningar som nyckeln får använda. Beskrivningsanropet går då alltid
-genom OmniRoutes självloop med headern `x-omniroute-self-loop-key-id`, så
+genom 67routers självloop med headern `x-omniroute-self-loop-key-id`, så
 att den mottagande chattbegäran återigen upprätthåller nyckelns
 anslutnings- och modellpolicy. `enforceApiKeyPolicy()` respekterar den
 headern endast tillsammans med självloopens bearer, så den kan bara
@@ -143,7 +143,7 @@ OCR-noggrannheten för exakt den texttranskriberingsuppgift som denna prompt
 efterfrågar, så beskrivningsanropet i sig begär alltid hög detaljnivå
 oavsett vilken detaljnivå den ursprungliga inkommande begäran använde.
 Detta påverkar endast den interna beskrivningsbegärans brödtext; det ändrar
-inte hur OmniRoute vidarebefordrar anroparens egen `image_url.detail` på den
+inte hur 67router vidarebefordrar anroparens egen `image_url.detail` på den
 primära begäran — den standarden tillämpas separat, och endast för
 upptäckta OpenCode-klienter, i `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Anthropic-wireformat-grenen
@@ -269,7 +269,7 @@ Speech-to-Text till motsvarande Modality Bridge-flikar utan att ta bort den
 befintliga Speech-to-Text-playgrounden.
 
 **Admission-bypass för self-loop:** när describe-anropet routas genom
-OmniRoutes egen `/v1`-self-loop (providermodell av icke-standardtyp) skickar
+67routers egen `/v1`-self-loop (providermodell av icke-standardtyp) skickar
 delförfrågan `x-omniroute-admission-bypass: internal` och autentiseras med
 den upplösta self-loop-autentiseringsuppgiften — den lokala
 `sk_omniroute`-sentinelen i lokalt läge, eller den operatörskonfigurerade
@@ -475,13 +475,13 @@ besparingar förblir också `HOLD` om inte `--caption-cost-per-call-usd` anger
 en explicit positiv uppskattning per anrop; skriptet fabricerar aldrig något
 av resultaten.
 
-Varje bildruta är begränsad till 4 MiB, alla råa bildrutor tillsammans till 23 MiB och det serialiserade broker-svaret till 32 MiB. En privat temporär katalog tas bort i `finally`. OmniRoute buntar inte in FFmpeg och accepterar inte en anpassad sökväg till en körbar fil. Före textning tillämpar bryggan ett konservativt visuellt dubblettrensningspass: varje JPEG reduceras till en 16×16-gråskalebuffert och jämförs endast med den senast behållna bildrutan. För en begärd textbudget över en bildruta tillhandahåller extraheringen en begränsad kandidatpool på upp till det dubbla av budgeten och aldrig fler än 16 bildrutor. Det begärda taket tillämpas först efter dubblettrensningen, med den första och den sista valda kandidaten bevarade under den slutliga gallringen när budgeten är minst två. Den versionerade policyn `grayscale-16x16-mean-cells-v2` använder det större av genomsnittligt lumadelta och andelen miniatyrbildsceller vars normaliserade delta är minst 0.05. Dubbletttröskeln är konstanten 0.04, vald för förutsägbarhet snarare än exponerad som en körningsinställning. Denna sekundära högkontrastsignal bevarar små rörelser och synliga textändringar som en jämförelse av enbart medelvärde kan dölja. Fel i komparatorn eller avkodaren misslyckas öppet och behåller täckningen. Utmatningsmetadatan skiljer på extraherade kandidater, framgångsrikt använda bildrutor och borttagna visuella dubbletter.
+Varje bildruta är begränsad till 4 MiB, alla råa bildrutor tillsammans till 23 MiB och det serialiserade broker-svaret till 32 MiB. En privat temporär katalog tas bort i `finally`. 67router buntar inte in FFmpeg och accepterar inte en anpassad sökväg till en körbar fil. Före textning tillämpar bryggan ett konservativt visuellt dubblettrensningspass: varje JPEG reduceras till en 16×16-gråskalebuffert och jämförs endast med den senast behållna bildrutan. För en begärd textbudget över en bildruta tillhandahåller extraheringen en begränsad kandidatpool på upp till det dubbla av budgeten och aldrig fler än 16 bildrutor. Det begärda taket tillämpas först efter dubblettrensningen, med den första och den sista valda kandidaten bevarade under den slutliga gallringen när budgeten är minst två. Den versionerade policyn `grayscale-16x16-mean-cells-v2` använder det större av genomsnittligt lumadelta och andelen miniatyrbildsceller vars normaliserade delta är minst 0.05. Dubbletttröskeln är konstanten 0.04, vald för förutsägbarhet snarare än exponerad som en körningsinställning. Denna sekundära högkontrastsignal bevarar små rörelser och synliga textändringar som en jämförelse av enbart medelvärde kan dölja. Fel i komparatorn eller avkodaren misslyckas öppet och behåller täckningen. Utmatningsmetadatan skiljer på extraherade kandidater, framgångsrikt använda bildrutor och borttagna visuella dubbletter.
 
 En uttryckligen markerad videodel kan begära ett tidsstämplat kontaktark. Bryggan bygger som mest ett JPEG-rutnät med 4 kolumner och 16 bildrutor. Varje cell på 512 pixlar bränner in sin källtidsstämpel i ett högkontrastband längst ned, medan samma tidsstämplar finns kvar i textuell metadata för nedströmsassociation och granskning. Den fullständiga JPEG:en förblir begränsad till 32 MiB. Om `sharp` inte kan avkoda eller sätta samman rutnätet faller bryggan tillbaka på de enskilda JPEG-bildrutorna; ett klientavbrott propagerar fortfarande genom arkoperationen.
 
 Befordringsbevis är avsiktligt åtskilda från det syntetiska sammansättningsmikrobenchmarket. `scripts/perf/video-bridge-contact-sheet-eval.ts` definierar en schemaversionerad A/B-testsele för riktiga OpenAI-kompatibla visionsmodeller. Den mäter leverantörsrapporterade tokens, total väggtidsfördröjning (inklusive arksammansättning), antal modellanrop och manifestdefinierad faktaretention. Råa modellsvar skrivs inte till rapporten; endast SHA-256-sammanfattningar och matchade fakta-ID:n bevaras. Testselen gör inga nätverks- eller betalda modellanrop om inte `--execute-real` skickas och `--model`, `OMNIROUTE_BASE_URL` och `OMNIROUTE_API_KEY` är konfigurerade. Utan den uttryckliga verkliga körningen förblir dess maskinläsbara utlåtande `HOLD`; syntetiska mätningar av nyttolast och anropsantal är ensamma inte befordringsbevis.
 
-Anropare kan bifoga en valfri `transcript.cues`-array till en stödd videodel när de redan har tidsjusterad text. Varje cue måste bära `text`, ett ändligt `start`/`end`-intervall inom den undersökta varaktigheten och en vitlistad `source` (`client`, `embedded` eller `audio-bridge`); `confidence` är som standard `1` och måste förbli mellan `0` och `1`. Exakta dubblett-cues slås samman. OmniRoute startar aldrig transkribering utifrån denna metadata: validerade cues kopieras in i det beskrivna resultatet med källa, konfidens och intervall, och renderas som opålitliga observationer vid sidan av bildrutetexterna. Ogiltig text, text utanför intervallet eller text utan proveniens avvisas i stället för att blandas in i textströmmen. Båda transkriptkanalerna i begärans brödtext normaliserar angiven proveniens till `client`, inklusive självdeklarerade `embedded`- eller `audio-bridge`-etiketter. Endast en serverägd adapter kan tilldela dessa betrodda etiketter via argumentet `trustedSource`, som endast kan nås från kod; ett JSON-fält i begäran kan inte nå det argumentet. Transkripttext förblir opålitligt mediehärlett innehåll, oavsett sin proveniens, och får aldrig avgöra auktorisering.
+Anropare kan bifoga en valfri `transcript.cues`-array till en stödd videodel när de redan har tidsjusterad text. Varje cue måste bära `text`, ett ändligt `start`/`end`-intervall inom den undersökta varaktigheten och en vitlistad `source` (`client`, `embedded` eller `audio-bridge`); `confidence` är som standard `1` och måste förbli mellan `0` och `1`. Exakta dubblett-cues slås samman. 67router startar aldrig transkribering utifrån denna metadata: validerade cues kopieras in i det beskrivna resultatet med källa, konfidens och intervall, och renderas som opålitliga observationer vid sidan av bildrutetexterna. Ogiltig text, text utanför intervallet eller text utan proveniens avvisas i stället för att blandas in i textströmmen. Båda transkriptkanalerna i begärans brödtext normaliserar angiven proveniens till `client`, inklusive självdeklarerade `embedded`- eller `audio-bridge`-etiketter. Endast en serverägd adapter kan tilldela dessa betrodda etiketter via argumentet `trustedSource`, som endast kan nås från kod; ett JSON-fält i begäran kan inte nå det argumentet. Transkripttext förblir opålitligt mediehärlett innehåll, oavsett sin proveniens, och får aldrig avgöra auktorisering.
 
 En avancerad anropare kan tillhandahålla ett `audioTranscript`-spår för samma video; det behandlas som klienttillhandahållen text, inte som bevis på servertranskribering. Fusionssömmen kör visuella observationer och ljudobservationer under samma tidsgräns och avbrottssignal, ordnar dem på en gemensam tidslinje, slår samman exakta dubbletter och rapporterar ett delresultat när endast ena sidan lyckas. Ett ogiltigt `audioTranscript` degraderar till det delresultatet — den visuella beskrivningen behålls och ljudgrenen registrerar en sanerad felkod — i stället för att hela videon ska misslyckas. Tillgänglighet per gren, delflaggan och de sanerade felkoderna bevaras i det beskrivna resultatet, i guardrail-metadatan (`audioFusionRuns`/`audioFusionPartials`/`audioFusionFailureCodes`), i metadata för resultatcachen och i bryggans fusionsräknare. Standardvägen för Video Bridge anropar inte tal-till-text och laddar inte ned en andra mediekopia; utan det uttryckliga spåret förblir den endast video.
 
@@ -980,7 +980,7 @@ utlösning) har två jobb:
   previous instructions…", DAN-liknande jailbreaks) kontrollerar att svaret innehåller
   `error.code === "SECURITY_001"`, dvs. att skyddet faktiskt avvisade förfrågan.
 - **`garak` (rådgivande)** — kör garak `--probes promptinject,dan,leakreplay`
-  mot en lokal OmniRoute-instans (`http://localhost:20128/v1`). Kräver en
+  mot en lokal 67router-instans (`http://localhost:20128/v1`). Kräver en
   provider-hemlighet (`PROMPTFOO_PROVIDER_KEY`); hoppar smidigt över och har suffixet
   `|| true`, så den rapporterar utan att misslycka CI.
 

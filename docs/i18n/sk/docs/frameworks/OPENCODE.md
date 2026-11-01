@@ -5,11 +5,11 @@
 ---
 
 > **Stav:** Všeobecne dostupné.
-> **Cieľová skupina:** Operátori prepájajúci OpenCode s nasadením OmniRoute.
+> **Cieľová skupina:** Operátori prepájajúci OpenCode s nasadením 67router.
 > **Zdroj pravdy (schéma konfigurácie):** `src/shared/services/opencodeConfig.ts`
 > **Zdroj pravdy (balík npm):** `@omniroute/opencode-provider/` (publikovateľný pracovný priestor)
 
-[OpenCode](https://opencode.ai) je agentný AI klient pre CLI a desktop. Katalóg poskytovateľov načítava zo súboru `~/.config/opencode/opencode.json` (alebo `opencode.jsonc`) a riadi sa schémou na adrese `https://opencode.ai/config.json`. OmniRoute sa službe OpenCode sprístupňuje ako jeden z týchto poskytovateľov — každá požiadavka prechádza cez štandardné rozhranie `/v1` kompatibilné s OpenAI, takže OpenCode automaticky využíva smerovanie Auto-Combo, ističe, pravidlá pre kľúče, pozorovateľnosť atď.
+[OpenCode](https://opencode.ai) je agentný AI klient pre CLI a desktop. Katalóg poskytovateľov načítava zo súboru `~/.config/opencode/opencode.json` (alebo `opencode.jsonc`) a riadi sa schémou na adrese `https://opencode.ai/config.json`. 67router sa službe OpenCode sprístupňuje ako jeden z týchto poskytovateľov — každá požiadavka prechádza cez štandardné rozhranie `/v1` kompatibilné s OpenAI, takže OpenCode automaticky využíva smerovanie Auto-Combo, ističe, pravidlá pre kľúče, pozorovateľnosť atď.
 
 Podporované sú **dva spôsoby integrácie**. Vyberte si jeden — oba vygenerujú rovnakú konfiguráciu.
 
@@ -17,16 +17,16 @@ Podporované sú **dva spôsoby integrácie**. Vyberte si jeden — oba vygeneru
 
 ## Spôsob 1 — generátor CLI (bez inštalácie npm)
 
-Odporúčané pre koncových používateľov. Dodáva sa s OmniRoute. Zapisuje priamo do súboru `opencode.json`.
+Odporúčané pre koncových používateľov. Dodáva sa s 67router. Zapisuje priamo do súboru `opencode.json`.
 
 ```bash
-# Po inštalácii OmniRoute (npm i -g @omniroute/cli alebo lokálnom klonovaní)
+# Po inštalácii 67router (npm i -g @omniroute/cli alebo lokálnom klonovaní)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-CLI na pozadí volá `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), takže existujúci súbor `opencode.json` si zachová ostatných poskytovateľov aj komentáre. Položka OmniRoute sa pridá alebo nahradí atomicky.
+CLI na pozadí volá `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), takže existujúci súbor `opencode.json` si zachová ostatných poskytovateľov aj komentáre. Položka 67router sa pridá alebo nahradí atomicky.
 
 Výsledný súbor (predvolený katalóg modelov):
 
@@ -90,8 +90,8 @@ Oba spôsoby vytvoria rovnakú hodnotu `provider.omniroute.npm: "@ai-sdk/openai-
 ```
 Používateľské rozhranie/agent OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (rozhranie OmniRoute kompatibilné s OpenAI)
-         → obslužná rutina OmniRoute /v1/chat/completions     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (rozhranie 67router kompatibilné s OpenAI)
+         → obslužná rutina 67router /v1/chat/completions     (open-sse/handlers/chatCore.ts)
             → kombinované smerovanie / Auto-Combo / vykonávací mechanizmus
                → nadradený poskytovateľ
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Môžete ich prepísať pomocou `models: [...]`. Odporúčané doplnky:
 
-- `"auto"` — sprístupní [Auto-Combo](../routing/AUTO-COMBO.md) smerovač OmniRoute bez potreby konfigurácie. Umožňuje OpenCode vybrať „najlepší dostupný model“ bez toho, aby ste katalóg zadávali priamo v kóde.
-- `"<combo-name>"` — ľubovoľná kombinácia, ktorú ste definovali na ovládacom paneli; OmniRoute ju transparentne rozpozná.
+- `"auto"` — sprístupní [Auto-Combo](../routing/AUTO-COMBO.md) smerovač 67router bez potreby konfigurácie. Umožňuje OpenCode vybrať „najlepší dostupný model“ bez toho, aby ste katalóg zadávali priamo v kóde.
+- `"<combo-name>"` — ľubovoľná kombinácia, ktorú ste definovali na ovládacom paneli; 67router ju transparentne rozpozná.
 
 ---
 
@@ -135,12 +135,12 @@ Táto deduplikácia je **najčastejším zdrojom problémov** v starších konfi
 
 ## Režimy autentifikácie
 
-| Nastavenie OmniRoute                         | Odporúčaná hodnota `apiKey`                                   |
+| Nastavenie 67router                          | Odporúčaná hodnota `apiKey`                                   |
 | -------------------------------------------- | ------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (predvolené lokálne) | `sk_omniroute` (doslovný zástupný reťazec)                    |
 | `REQUIRE_API_KEY=true`                       | Skutočný používateľský kľúč API z Ovládací panel → Kľúče API. |
 
-V prípade klientov v štýle Anthropic, ktorí odosielajú `x-api-key` + `anthropic-version`, funkcia `extractApiKey` služby OmniRoute akceptuje aj kľúč z `x-api-key`. OpenCode používa rozhranie OpenAI, takže vždy odošle `Authorization: Bearer ${apiKey}` — osobitné spracovanie pre Anthropic sa tu neuplatňuje.
+V prípade klientov v štýle Anthropic, ktorí odosielajú `x-api-key` + `anthropic-version`, funkcia `extractApiKey` služby 67router akceptuje aj kľúč z `x-api-key`. OpenCode používa rozhranie OpenAI, takže vždy odošle `Authorization: Bearer ${apiKey}` — osobitné spracovanie pre Anthropic sa tu neuplatňuje.
 
 ---
 
@@ -149,15 +149,15 @@ V prípade klientov v štýle Anthropic, ktorí odosielajú `x-api-key` + `anthr
 | Príznak                                                         | Príčina                                                                                           | Riešenie                                                                                                         |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `404` pri každej požiadavke s URL obsahujúcou `/v1/v1/`         | Zastaraná konfigurácia zo zásuvného modulu pred verziou v3.8, ktorý dvakrát pridal príponu `/v1`. | Znova ju vygenerujte pomocou postupu 1 alebo 2.                                                                  |
-| `401 Invalid API key`                                           | OmniRoute má nastavené `REQUIRE_API_KEY=true` a kľúč nie je známy.                                | Vytvorte kľúč na ovládacom paneli alebo nastavte `REQUIRE_API_KEY=false` (iba lokálne) a použite `sk_omniroute`. |
-| Zoznam modelov v používateľskom rozhraní OpenCode je prázdny    | Všetky 4 predvolené modely sú skryté v nastavení viditeľnosti poskytovateľov OmniRoute.           | Zadajte `models: ["auto", ...]`, aby sa zobrazili tie, ktoré ste povolili.                                       |
+| `401 Invalid API key`                                           | 67router má nastavené `REQUIRE_API_KEY=true` a kľúč nie je známy.                                 | Vytvorte kľúč na ovládacom paneli alebo nastavte `REQUIRE_API_KEY=false` (iba lokálne) a použite `sk_omniroute`. |
+| Zoznam modelov v používateľskom rozhraní OpenCode je prázdny    | Všetky 4 predvolené modely sú skryté v nastavení viditeľnosti poskytovateľov 67router.            | Zadajte `models: ["auto", ...]`, aby sa zobrazili tie, ktoré ste povolili.                                       |
 | Chyba 500 v OpenCode s hlásením `cannot read property 'models'` | Staršia verzia OpenCode (< 0.1.x) nepodporovala vložené pole `models`.                            | Aktualizujte OpenCode na verziu, ktorá používa schému v1 (`opencode.ai/config.json`).                            |
 
 ---
 
 ## Pozri tiež
 
-- [Referencia API](../reference/API_REFERENCE.md) — kompletné REST rozhranie OmniRoute
+- [Referencia API](../reference/API_REFERENCE.md) — kompletné REST rozhranie 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — čo znamená `model: "auto"`
 - [README balíka `@omniroute/opencode-provider`](../../@omniroute/opencode-provider/README.md)
 - Zdroj: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

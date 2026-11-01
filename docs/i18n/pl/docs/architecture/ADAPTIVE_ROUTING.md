@@ -5,7 +5,7 @@
 ---
 
 Ten dokument opisuje fundament adaptacyjnego routingu opartego na informacji zwrotnej, dodany do
-OmniRoute. Jest on celowo niewielki: wprowadza typowany kanał wyników routingu,
+67router. Jest on celowo niewielki: wprowadza typowany kanał wyników routingu,
 sygnał jakości aktualizowany na bieżąco, który zasila istniejący mechanizm oceny auto-combo,
 opcjonalny eksporter OpenTelemetry oraz endpoint zapewniający wyjaśnialność. **Nie**
 zastępuje istniejącego stosu odporności (wyłącznika obwodu, okresu karencji połączenia,
@@ -13,7 +13,7 @@ blokady modelu, macierzy kondycji, autopilota) — lecz go uzupełnia.
 
 ## 1. Kontekst architektoniczny
 
-OmniRoute jest płaszczyzną danych z **krytyczną ścieżką żądania** oraz **płaszczyzną
+67router jest płaszczyzną danych z **krytyczną ścieżką żądania** oraz **płaszczyzną
 sterowania/inteligencji**. Ścieżka krytyczna musi pozostać szybka, oszczędna pod względem pamięci, asynchroniczna, odporna i
 przewidywalna. Ewaluacja, ocena jakości, eksperymenty i analiza historyczna należą
 do płaszczyzny sterowania.
@@ -23,7 +23,7 @@ Agent AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   płaszczyzna danych (szybka, synchroniczna, w pamięci)
+│    67router        │   płaszczyzna danych (szybka, synchroniczna, w pamięci)
 │  routing / failover │
 │  kondycja / reguły  │
 │  cache / streaming  │
@@ -49,7 +49,6 @@ Agent AI / IDE
 | Ruch w tle                                 | `open-sse/services/combo/shadowRouting.ts`                                                                             |
 | Reguły ochronne                            | `src/lib/guardrails/` (hooki przed/po)                                                                                 |
 | Pamięć podręczna exact                     | `src/lib/semanticCache.ts` (oparta na sygnaturach)                                                                     |
-| Ewaluatory / routing oparty na ewaluacji   | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                   |
 | Wyjaśnialność decyzji combo                | `open-sse/services/combo/decisionTrace.ts`                                                                             |
 | Zdarzenia dashboardu w czasie rzeczywistym | `src/lib/events/eventBus.ts` (kanał powiadomień interfejsu użytkownika, payloady `unknown`, historia 100 wpisów)       |
 
@@ -239,7 +238,7 @@ Pliki: `open-sse/services/routing/otel.ts`
 - Spany są zgodne z konwencjami semantycznymi GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) oraz zawierają atrybuty
-  routingu OmniRoute (wynik, stan, TTFT, ponowienia, użycie celu zapasowego).
+  routingu 67router (wynik, stan, TTFT, ponowienia, użycie celu zapasowego).
 - `record()` jedynie dodaje element do bufora o ograniczonym rozmiarze (O(1)); licznik czasu działający
   w tle asynchronicznie opróżnia bufor za pomocą `POST {endpoint}/v1/traces`. Przy przeciążeniu
   najstarsze zdarzenia są odrzucane (licznik `dropped`) — bez wywierania presji zwrotnej na
@@ -260,7 +259,7 @@ Pliki: `open-sse/services/routing/otel.ts`
 
 ## 6. Integracja z płaszczyzną ewaluacji (gotowość na Future AGI)
 
-OmniRoute traktuje Future AGI (lub dowolny ewaluator) jako **potencjalny
+67router traktuje Future AGI (lub dowolny ewaluator) jako **potencjalny
 backend inteligencji/ewaluacji, a nie zależność**. Punkty integracji:
 
 - `RoutingEventSink` może asynchronicznie przekazywać zdarzenia do ewaluatora.
@@ -269,8 +268,6 @@ backend inteligencji/ewaluacji, a nie zależność**. Punkty integracji:
 - Przyszły `Evaluator` (deterministyczny, lokalny sędzia, HTTP, WASM) będzie przetwarzać
   zdarzenia/ślady i zwracać `QualityScore`, który zasili tę samą ścieżkę
   `getQualityScore`/współczynnika jakości.
-- Istniejący routing oparty na ewaluacji (`open-sse/services/evalRouting.ts`) już
-  zmienia kolejność celów combo według współczynników zaliczeń `eval_runs`, gdy ta funkcja jest włączona.
 
 Żadna ewaluacja nie jest uruchamiana synchronicznie na ścieżce żądania, a brama działa
 w pełni także bez ewaluatora.

@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Hướng dẫn đầy đủ về cách cấu hình nhà cung cấp, tạo tổ hợp, tích hợp công cụ CLI và triển khai OmniRoute.
+Hướng dẫn đầy đủ về cách cấu hình nhà cung cấp, tạo tổ hợp, tích hợp công cụ CLI và triển khai 67router.
 
 ---
 
@@ -24,7 +24,6 @@ Hướng dẫn đầy đủ về cách cấu hình nhà cung cấp, tạo tổ h
 - [Hệ thống kỹ năng](#-skills-system)
 - [Hệ thống bộ nhớ](#-memory-system)
 - [Webhook](#-webhooks)
-- [Tác nhân đám mây](#-cloud-agents)
 - [Quản lý bằng lập trình](#-programmatic-management)
 - [CLI nội bộ](#-internal-cli)
 - [Ứng dụng máy tính để bàn (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@ Mô hình:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Mẹo chuyên nghiệp:** Dùng Opus cho các tác vụ phức tạp, Sonnet khi cần tốc độ. OmniRoute theo dõi hạn mức theo từng mô hình!
+**Mẹo chuyên nghiệp:** Dùng Opus cho các tác vụ phức tạp, Sonnet khi cần tốc độ. 67router theo dõi hạn mức theo từng mô hình!
 
-Không có trình duyệt trên máy chủ OmniRoute? Chạy `claude setup-token` ở bất kỳ đâu đã đăng nhập Claude Code và dán token có thời hạn một năm vào tab **Setup Token**. Xem [Claude Code với setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Không có trình duyệt trên máy chủ 67router? Chạy `claude setup-token` ở bất kỳ đâu đã đăng nhập Claude Code và dán token có thời hạn một năm vào tab **Setup Token**. Xem [Claude Code với setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Các tuyến Claude và tương thích với Claude Code duy trì mức nỗ lực suy luận `max` cho các mô hình Opus và Sonnet. Các mô hình Haiku không chấp nhận mức nỗ lực `max`, vì vậy OmniRoute sẽ hạ yêu cầu đó xuống ngân sách suy luận cao trước khi gửi đến dịch vụ thượng nguồn.
+Các tuyến Claude và tương thích với Claude Code duy trì mức nỗ lực suy luận `max` cho các mô hình Opus và Sonnet. Các mô hình Haiku không chấp nhận mức nỗ lực `max`, vì vậy 67router sẽ hạ yêu cầu đó xuống ngân sách suy luận cao trước khi gửi đến dịch vụ thượng nguồn.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -262,7 +261,7 @@ Chi phí: hiện được liệt kê là $0; các điều khoản và tính kh�
 
 ### Cursor IDE
 
-**Sử dụng Cursor làm ứng dụng khách OmniRoute** (định tuyến trò chuyện Cursor thông qua OmniRoute):
+**Sử dụng Cursor làm ứng dụng khách 67router** (định tuyến trò chuyện Cursor thông qua 67router):
 
 ```
 Cài đặt → Mô hình → Nâng cao:
@@ -271,7 +270,7 @@ Cài đặt → Mô hình → Nâng cao:
   Mô hình: cc/claude-opus-4-7
 ```
 
-**Sử dụng OmniRoute làm nhà cung cấp Cursor** (OmniRoute gọi đến dịch vụ Cursor thượng nguồn): ưu tiên
+**Sử dụng 67router làm nhà cung cấp Cursor** (67router gọi đến dịch vụ Cursor thượng nguồn): ưu tiên
 **Bảng điều khiển → Nhà cung cấp → Cursor → Đăng nhập bằng Cursor**. Trong Docker, hãy xem
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -358,7 +357,7 @@ CLI tự động tải `.env` từ `~/.omniroute/.env` hoặc `./.env`.
 
 ### Chế độ khay hệ thống
 
-Khởi động OmniRoute trong khay hệ thống:
+Khởi động 67router trong khay hệ thống:
 
 ```bash
 omniroute serve --tray
@@ -375,7 +374,7 @@ Sử dụng menu khay hệ thống cho các thao tác sau:
 - Mở bảng điều khiển.
 - Mở `/dashboard/logs`.
 - Thay đổi chế độ tự động khởi động.
-- Dừng OmniRoute.
+- Dừng 67router.
 
 Không kết hợp `--tray` với các tùy chọn sau:
 
@@ -401,14 +400,14 @@ omniroute autostart disable
 
 ### Gỡ cài đặt
 
-Khi không còn cần OmniRoute, chúng tôi cung cấp hai tập lệnh nhanh để gỡ bỏ sạch sẽ:
+Khi không còn cần 67router, chúng tôi cung cấp hai tập lệnh nhanh để gỡ bỏ sạch sẽ:
 
 | Lệnh                     | Hành động                                                                                           |
 | ------------------------ | --------------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Gỡ ứng dụng khỏi hệ thống nhưng **giữ lại cơ sở dữ liệu và cấu hình của bạn** trong `~/.omniroute`. |
 | `npm run uninstall:full` | Gỡ ứng dụng VÀ **xóa vĩnh viễn tất cả cấu hình, khóa và cơ sở dữ liệu**.                            |
 
-> Lưu ý: Để chạy các lệnh này, hãy chuyển đến thư mục dự án OmniRoute (nếu bạn đã sao chép kho lưu trữ) rồi chạy chúng. Ngoài ra, nếu đã cài đặt toàn cục, bạn chỉ cần chạy `npm uninstall -g omniroute`.
+> Lưu ý: Để chạy các lệnh này, hãy chuyển đến thư mục dự án 67router (nếu bạn đã sao chép kho lưu trữ) rồi chạy chúng. Ngoài ra, nếu đã cài đặt toàn cục, bạn chỉ cần chạy `npm uninstall -g omniroute`.
 
 ### Triển khai trên VPS
 
@@ -480,7 +479,7 @@ docker run -d --name omniroute -p 20128:20128 --env-file ./.env -v omniroute-dat
 
 ### Void Linux (xbps-src)
 
-Người dùng Void Linux có thể đóng gói và cài đặt OmniRoute theo cách nguyên bản bằng framework biên dịch chéo `xbps-src`. Quy trình này tự động hóa việc xây dựng bản độc lập Node.js cùng với các liên kết native `better-sqlite3` bắt buộc.
+Người dùng Void Linux có thể đóng gói và cài đặt 67router theo cách nguyên bản bằng framework biên dịch chéo `xbps-src`. Quy trình này tự động hóa việc xây dựng bản độc lập Node.js cùng với các liên kết native `better-sqlite3` bắt buộc.
 
 <details>
 <summary><b>Xem template xbps-src</b></summary>
@@ -660,7 +659,7 @@ post_install() {
 
 **Các nhà cung cấp tương thích khác** (được chọn): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (thông qua `aws-bedrock`), `azure-ai`, `openrouter` (danh mục chuyển tiếp), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Mỗi nhà cung cấp duy trì danh sách mô hình riêng trong `providerRegistry.ts` và có thể được tự động đồng bộ khi nhà cung cấp công khai điểm cuối `/models`.
 
-**Lưu ý về ID mô hình:** OmniRoute sử dụng ID gốc của nhà cung cấp (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Một số ID bao gồm phiên bản có dấu chấm vì đó là định dạng mà API thượng nguồn yêu cầu. Nếu một mô hình không được liệt kê ở trên, hãy chạy `omniroute models --search <term>` hoặc truy cập `GET /api/models/catalog` để xác nhận tính khả dụng.
+**Lưu ý về ID mô hình:** 67router sử dụng ID gốc của nhà cung cấp (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Một số ID bao gồm phiên bản có dấu chấm vì đó là định dạng mà API thượng nguồn yêu cầu. Nếu một mô hình không được liệt kê ở trên, hãy chạy `omniroute models --search <term>` hoặc truy cập `GET /api/models/catalog` để xác nhận tính khả dụng.
 
 </details>
 
@@ -726,9 +725,9 @@ lỗi nêu tên một nhà cung cấp tích hợp sẵn hoặc thông tin xác t
 phải là tiền tố dành riêng hay không: các nút được lưu trước khi quy tắc này tồn tại vẫn được lưu trữ, nhưng tiền tố của chúng sẽ định tuyến đến
 nhà cung cấp tích hợp sẵn. Hãy chỉnh sửa nút và đặt cho nó một tiền tố mới.
 
-### Kết chuỗi các cổng OmniRoute ngang hàng
+### Kết chuỗi các cổng 67router ngang hàng
 
-Một cổng OmniRoute khác có thể được thêm dưới dạng nhà cung cấp **Tùy chỉnh tương thích với OpenAI**. Hãy sử dụng
+Một cổng 67router khác có thể được thêm dưới dạng nhà cung cấp **Tùy chỉnh tương thích với OpenAI**. Hãy sử dụng
 URL cơ sở `/v1` của cổng ngang hàng và một khóa API chuyên dụng với đặc quyền tối thiểu do cổng đó cấp.
 
 Đối với chuỗi hai chiều hoặc nhiều chặng, hãy bật cơ chế bảo vệ vòng lặp tùy chọn trên mọi cổng:
@@ -754,7 +753,7 @@ Chỉ các yêu cầu được gửi đến URL cổng ngang hàng nằm rõ rà
 Kết chuỗi cổng ngang hàng không phải là sao chép cơ sở dữ liệu hoặc chuyển đổi dự phòng máy chủ. Mỗi cổng duy trì
 trạng thái SQLite, bộ nhớ đệm, bộ đếm giới hạn tốc độ và phiên độc lập. Hãy sử dụng proxy ngược có kiểm tra tình trạng hoặc cơ chế
 chuyển đổi dự phòng phía máy khách để bảo đảm tính sẵn sàng chủ động/thụ động hoặc chủ động/chủ động, và không bao giờ gắn một cơ sở dữ liệu SQLite
-vào nhiều phiên bản OmniRoute đang chạy.
+vào nhiều phiên bản 67router đang chạy.
 
 ### Tuyến nhà cung cấp chuyên dụng
 
@@ -805,7 +804,7 @@ Trả về các mô hình được nhóm theo nhà cung cấp cùng với loại
 - Khả dụng trong **Dashboard → Endpoints** cho Docker và các bản triển khai tự lưu trữ khác
 - Tạo một URL `https://*.trycloudflare.com` tạm thời để chuyển tiếp đến endpoint `/v1` tương thích với OpenAI hiện tại của bạn
 - Lần bật đầu tiên chỉ cài đặt `cloudflared` khi cần; các lần khởi động lại sau đó sẽ tái sử dụng cùng một tệp nhị phân được quản lý
-- Quick Tunnels không được tự động khôi phục sau khi OmniRoute hoặc container khởi động lại; hãy bật lại chúng từ dashboard khi cần
+- Quick Tunnels không được tự động khôi phục sau khi 67router hoặc container khởi động lại; hãy bật lại chúng từ dashboard khi cần
 - URL của tunnel chỉ tồn tại tạm thời và thay đổi mỗi khi bạn dừng/khởi động tunnel
 - Quick Tunnels được quản lý mặc định sử dụng giao thức truyền tải HTTP/2 để tránh các cảnh báo ồn ào về bộ đệm UDP của QUIC trong những container có tài nguyên hạn chế
 - Đặt `CLOUDFLARED_PROTOCOL=quic` hoặc `auto` nếu bạn muốn ghi đè lựa chọn giao thức truyền tải được quản lý
@@ -822,7 +821,7 @@ Trả về các mô hình được nhóm theo nhà cung cấp cùng với loại
 
 ### Sân chơi trình dịch
 
-Truy cập qua **Dashboard → Translator**. Gỡ lỗi và trực quan hóa cách OmniRoute chuyển đổi các yêu cầu API giữa các nhà cung cấp.
+Truy cập qua **Dashboard → Translator**. Gỡ lỗi và trực quan hóa cách 67router chuyển đổi các yêu cầu API giữa các nhà cung cấp.
 
 | Chế độ           | Mục đích                                                                                           |
 | ---------------- | -------------------------------------------------------------------------------------------------- |
@@ -875,7 +874,7 @@ Cấu hình qua **Dashboard → Settings → Routing**. Dashboard hiển thị s
 X-Session-Id: your-session-key
 ```
 
-OmniRoute cũng chấp nhận `x_session_id` và trả về khóa phiên thực tế trong `X-OmniRoute-Session-Id`.
+67router cũng chấp nhận `x_session_id` và trả về khóa phiên thực tế trong `X-OmniRoute-Session-Id`.
 
 Nếu bạn sử dụng Nginx và gửi các header có dạng dấu gạch dưới, hãy bật:
 
@@ -909,7 +908,7 @@ Chuỗi: production-fallback
 
 ### Các tổ hợp nhà cung cấp và mẫu định tuyến phổ biến
 
-Dưới đây là các mẫu ví dụ để kết hợp nhiều nhà cung cấp và định tuyến giữa chúng trong OmniRoute:
+Dưới đây là các mẫu ví dụ để kết hợp nhiều nhà cung cấp và định tuyến giữa chúng trong 67router:
 
 #### 1. Combo tác nhân lập trình: Suy luận cao cấp với phương án dự phòng theo chi phí/tốc độ
 
@@ -970,7 +969,7 @@ Kết hợp các mô hình thị giác chuyên biệt với khả năng tạo v�
 
 Cấu hình qua **Bảng điều khiển → Cài đặt → Khả năng phục hồi**.
 
-OmniRoute triển khai khả năng phục hồi ở cấp nhà cung cấp với năm thành phần:
+67router triển khai khả năng phục hồi ở cấp nhà cung cấp với năm thành phần:
 
 1. **Hàng đợi yêu cầu và điều tiết nhịp độ** — Điều tiết yêu cầu ở cấp hệ thống:
    - **Số yêu cầu mỗi phút (RPM)** — Số yêu cầu tối đa mỗi phút cho mỗi tài khoản
@@ -995,7 +994,7 @@ OmniRoute triển khai khả năng phục hồi ở cấp nhà cung cấp với 
 
    Trạng thái thời gian chạy của bộ ngắt mạch nhà cung cấp chỉ được hiển thị tại **Bảng điều khiển → Tình trạng**.
 
-4. **Chờ hết thời gian tạm ngưng** — Nếu mọi kết nối ứng viên đều đang trong thời gian tạm ngưng, OmniRoute có thể chờ thời gian tạm ngưng sớm nhất kết thúc và tự động thử lại cùng một yêu cầu của máy khách.
+4. **Chờ hết thời gian tạm ngưng** — Nếu mọi kết nối ứng viên đều đang trong thời gian tạm ngưng, 67router có thể chờ thời gian tạm ngưng sớm nhất kết thúc và tự động thử lại cùng một yêu cầu của máy khách.
 
 5. **Tự động phát hiện giới hạn tốc độ** — Khi các nhà cung cấp thượng nguồn trả về khoảng thời gian chờ rõ ràng, các gợi ý đó sẽ ghi đè thời gian tạm ngưng kết nối cục bộ nếu cài đặt này được bật.
 
@@ -1029,7 +1028,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Trường hợp sử dụng:**
 
-- Di chuyển OmniRoute giữa các máy
+- Di chuyển 67router giữa các máy
 - Tạo bản sao lưu bên ngoài để phục hồi sau thảm họa
 - Chia sẻ cấu hình giữa các thành viên trong nhóm (xuất tất cả → chia sẻ kho lưu trữ)
 
@@ -1081,7 +1080,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Phiên âm thanh
 
-OmniRoute hỗ trợ phiên âm thanh thông qua endpoint tương thích với OpenAI:
+67router hỗ trợ phiên âm thanh thông qua endpoint tương thích với OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1157,7 +1156,7 @@ Tắt **Bộ đệm token suy luận** khi các nhà cung cấp thượng nguồ
 `max_tokens` / `maxOutputTokens`. Khi được bật, định tuyến kết hợp chỉ bổ sung khoảng dự phòng cho mô hình suy luận
 đối với các mô hình có giới hạn đầu ra đã biết và giữ nguyên giới hạn token của máy khách khi giá trị
 đã thêm bộ đệm an toàn vượt quá giới hạn đó. Nếu giới hạn của máy khách đã cao hơn một giới hạn đã biết,
-OmniRoute sẽ hạ giới hạn xuống mức đó trước khi gửi yêu cầu thượng nguồn.
+67router sẽ hạ giới hạn xuống mức đó trước khi gửi yêu cầu thượng nguồn.
 
 ---
 
@@ -1180,7 +1179,7 @@ Truy cập qua **Bảng điều khiển → Tình trạng**. Tổng quan tình t
 
 ## 🤖 Tự động định tuyến (Không cần cấu hình)
 
-OmniRoute tích hợp sẵn một **bộ tự động định tuyến dựa trên điểm số**, giúp chọn mô hình tốt nhất cho từng yêu cầu trên tất cả các nhà cung cấp đã kết nối — không cần duy trì tổ hợp nào. Chỉ cần gửi yêu cầu với một trong các tiền tố `auto/*`, OmniRoute sẽ tự động tạo một tổ hợp ảo, chấm điểm các ứng viên dựa trên độ trễ, chi phí, tỷ lệ thành công, mức độ phù hợp với ngữ cảnh, mức độ phù hợp của mô hình với tác vụ, các lỗi gần đây, hạn ngạch và trạng thái bộ ngắt mạch.
+67router tích hợp sẵn một **bộ tự động định tuyến dựa trên điểm số**, giúp chọn mô hình tốt nhất cho từng yêu cầu trên tất cả các nhà cung cấp đã kết nối — không cần duy trì tổ hợp nào. Chỉ cần gửi yêu cầu với một trong các tiền tố `auto/*`, 67router sẽ tự động tạo một tổ hợp ảo, chấm điểm các ứng viên dựa trên độ trễ, chi phí, tỷ lệ thành công, mức độ phù hợp với ngữ cảnh, mức độ phù hợp của mô hình với tác vụ, các lỗi gần đây, hạn ngạch và trạng thái bộ ngắt mạch.
 
 | Tiền tố        | Tiêu chí tối ưu hóa                                                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -1211,7 +1210,7 @@ Bộ tự động định tuyến được mô tả đầy đủ trong [AUTO-COM
 
 ## 🔌 Tích hợp MCP & A2A
 
-OmniRoute vừa là một **máy chủ MCP** (Giao thức Ngữ cảnh Mô hình), vừa là một **máy chủ A2A** (JSON-RPC 2.0 từ tác nhân đến tác nhân). Mọi IDE hoặc máy chủ tác nhân tương thích với MCP đều có thể gọi trực tiếp các công cụ OmniRoute — không cần lớp bao bọc bổ sung.
+67router vừa là một **máy chủ MCP** (Giao thức Ngữ cảnh Mô hình), vừa là một **máy chủ A2A** (JSON-RPC 2.0 từ tác nhân đến tác nhân). Mọi IDE hoặc máy chủ tác nhân tương thích với MCP đều có thể gọi trực tiếp các công cụ 67router — không cần lớp bao bọc bổ sung.
 
 ### Các phương thức truyền tải MCP
 
@@ -1240,17 +1239,14 @@ Sử dụng URL SSE `http://localhost:20128/api/mcp/sse` và khóa API Bearer đ
 
 ### Phạm vi
 
-MCP hiện định nghĩa 32 phạm vi có tên. Mỗi khóa Bearer có thể được giới hạn ở các phạm vi cụ thể — xem [MCP-SERVER.md](../frameworks/MCP-SERVER.md) để biết danh sách phạm vi và công cụ chính thức, cũng như [A2A-SERVER.md](../frameworks/A2A-SERVER.md) để biết lược đồ JSON-RPC.
-
 ---
 
 ## 🧠 Hệ thống kỹ năng
 
-OmniRoute cung cấp một **framework kỹ năng** có khả năng mở rộng (`src/lib/skills/`) để các agent và endpoint A2A có thể chạy các quy trình dành riêng cho từng lĩnh vực (ví dụ: `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router cung cấp một **framework kỹ năng** có khả năng mở rộng (`src/lib/skills/`) để các agent và endpoint A2A có thể chạy các quy trình dành riêng cho từng lĩnh vực (ví dụ: `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Giao diện Marketplace** — Duyệt và cài đặt kỹ năng từ **Dashboard → Skills**
 - **Phạm vi theo từng khóa** — Giới hạn những kỹ năng mà mỗi API key có thể gọi
-- **Kỹ năng tùy chỉnh** — Thêm một tệp TypeScript vào `src/lib/a2a/skills/`, đăng ký tệp đó và kỹ năng sẽ có thể được gọi ngay lập tức qua A2A
 
 Tài liệu tham khảo đầy đủ: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1258,7 +1254,7 @@ Tài liệu tham khảo đầy đủ: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Hệ thống bộ nhớ
 
-OmniRoute lưu trữ **bộ nhớ hội thoại dài hạn** bằng cơ chế truy xuất kết hợp:
+67router lưu trữ **bộ nhớ hội thoại dài hạn** bằng cơ chế truy xuất kết hợp:
 
 - **SQLite FTS5** để tìm kiếm từ khóa trong các lượt hội thoại trước đây
 - **Kho vector Qdrant** (tùy chọn) để truy hồi theo ngữ nghĩa
@@ -1271,7 +1267,7 @@ Quản lý bộ nhớ trong **Dashboard → Memory** (tìm kiếm, chỉnh sửa
 
 ## 🔔 Webhook
 
-Đăng ký nhận các sự kiện OmniRoute để giám sát và tự động hóa theo thời gian thực.
+Đăng ký nhận các sự kiện 67router để giám sát và tự động hóa theo thời gian thực.
 
 - Tạo webhook trong **Dashboard → Webhooks** với URL đích và khóa bí mật ký HMAC
 - Các sự kiện khả dụng: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1282,21 +1278,9 @@ Schema đầy đủ có trong [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Agent đám mây
-
-OmniRoute tích hợp với các agent lập trình trên đám mây (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), cho phép bạn gửi các tác vụ chạy dài từ cùng một dashboard dùng để quản lý việc định tuyến cục bộ.
-
-- Tạo tác vụ trong **Dashboard → Cloud Agents** hoặc qua `POST /api/v1/agents/tasks`
-- Theo dõi trạng thái, nhật ký và các artifact của từng tác vụ
-- Sử dụng API key riêng của bạn cho từng nhà cung cấp — thông tin xác thực không bao giờ rời khỏi phiên bản OmniRoute
-
-Tài liệu tham khảo đầy đủ: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Quản lý theo chương trình
 
-Bạn có thể quản lý mọi tài nguyên OmniRoute (nhà cung cấp, combo, khóa, cài đặt) qua HTTP bằng **khóa Bearer có phạm vi `manage`**.
+Bạn có thể quản lý mọi tài nguyên 67router (nhà cung cấp, combo, khóa, cài đặt) qua HTTP bằng **khóa Bearer có phạm vi `manage`**.
 
 Tạo khóa trong **Dashboard → API Keys → New Key → Scope: manage**, sau đó:
 
@@ -1329,7 +1313,7 @@ Xem [API_REFERENCE.md](../reference/API_REFERENCE.md) để biết danh mục en
 
 ## 💻 CLI nội bộ
 
-OmniRoute cung cấp một CLI nội bộ (`omniroute …`) để thiết lập, chẩn đoán và kiểm soát thời gian chạy. CLI này **tách biệt với trang "Công cụ CLI" trong bảng điều khiển**, nơi cấu hình các CLI của bên thứ ba (Claude Code, Cursor, Codex, Cline, …) để chúng có thể giao tiếp với OmniRoute.
+67router cung cấp một CLI nội bộ (`omniroute …`) để thiết lập, chẩn đoán và kiểm soát thời gian chạy. CLI này **tách biệt với trang "Công cụ CLI" trong bảng điều khiển**, nơi cấu hình các CLI của bên thứ ba (Claude Code, Cursor, Codex, Cline, …) để chúng có thể giao tiếp với 67router.
 
 ```bash
 omniroute setup                    # Trình hướng dẫn tương tác (mật khẩu, nhà cung cấp, tổ hợp)
@@ -1347,7 +1331,6 @@ omniroute restore [<timestamp>]    # Khôi phục từ bản chụp nhanh
 omniroute health                   # Tình trạng chi tiết (bộ ngắt mạch, bộ nhớ đệm, bộ nhớ)
 omniroute quota                    # Mức sử dụng hạn ngạch của nhà cung cấp
 omniroute mcp status               # Trạng thái máy chủ MCP
-omniroute a2a status               # Trạng thái máy chủ A2A
 omniroute tunnel list|create|stop  # Đường hầm Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Đặt lại mật khẩu quản trị viên
 omniroute --mcp                    # Khởi động máy chủ MCP qua stdio
@@ -1360,7 +1343,7 @@ Mẹo: kết hợp `omniroute doctor --json` với công cụ giám sát của b
 
 ## 🖥️ Ứng dụng máy tính (Electron)
 
-OmniRoute có sẵn dưới dạng ứng dụng máy tính gốc dành cho Windows, macOS và Linux.
+67router có sẵn dưới dạng ứng dụng máy tính gốc dành cho Windows, macOS và Linux.
 
 ### Cài đặt
 

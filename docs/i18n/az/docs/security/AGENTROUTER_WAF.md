@@ -45,7 +45,7 @@ WAF yalnız `messages[].content` sahəsini yoxlayır. O, aşağıdakıları **yo
 
 Qısa müddət ərzində təxminən 5 sürətli sorğudan sonra WAF normalda buraxılacaq məzmunu bloklamağa başlayır. Təxminən 5–10 saniyəlik fəaliyyətsizlikdən sonra limit vedrəsi boşalır. Bu, Claude Code və ya Codex CLI ardıcıl olaraq bir neçə alət istifadəsi / mesaj göndərilməsi çağırışı etdikdə fasilələrlə yaranan `400 content-blocked` xətalarına səbəb olan, IP və açarla əlaqələndirilmiş eyni sorğu tezliyi məhdudlaşdırıcısıdır.
 
-## OmniRoute-da artıq tətbiq edilmiş yumşaltma tədbirləri
+## 67router-da artıq tətbiq edilmiş yumşaltma tədbirləri
 
 1. **`open-sse/services/wafRateLimit.ts`** — istənilən `agentrouter:*` URL-inə göndərilən sorğular arasında minimum 500 ms intervalı məcburi edən sıçrayış qoruyucusu. Bu interval insanın gecikməni hiss etmə həddindən xeyli aşağıdır və normal trafik zamanı WAF-ın aktivləşməsinin qarşısını alır.
 

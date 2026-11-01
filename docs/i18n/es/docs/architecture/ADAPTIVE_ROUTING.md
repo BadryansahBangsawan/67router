@@ -5,7 +5,7 @@
 ---
 
 Este documento describe la base de enrutamiento adaptativo basado en retroalimentación añadida a
-OmniRoute. Es deliberadamente pequeña: introduce un canal tipado de resultados de
+67router. Es deliberadamente pequeña: introduce un canal tipado de resultados de
 enrutamiento, una señal de calidad en línea que alimenta el sistema de puntuación
 auto-combo existente, un exportador opcional de OpenTelemetry y un endpoint de
 explicabilidad. **No** reemplaza la pila de resiliencia existente (disyuntor, tiempo
@@ -14,7 +14,7 @@ que la complementa.
 
 ## 1. Contexto arquitectónico
 
-OmniRoute es un plano de datos con una **ruta crítica de solicitudes** y un **plano
+67router es un plano de datos con una **ruta crítica de solicitudes** y un **plano
 de control/inteligencia**. La ruta crítica debe seguir siendo rápida, eficiente en
 memoria, asíncrona, resiliente y predecible. La evaluación, la puntuación de calidad,
 los experimentos y el análisis histórico pertenecen al plano de control.
@@ -24,7 +24,7 @@ Agente de IA / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   plano de datos (rápido, síncrono, en memoria)
+│    67router        │   plano de datos (rápido, síncrono, en memoria)
 │ enrutam. / conmutac.│
 │ estado / protección │
 │ caché / streaming   │
@@ -50,7 +50,6 @@ Agente de IA / IDE
 | Tráfico en sombra                         | `open-sse/services/combo/shadowRouting.ts`                                                                          |
 | Medidas de protección                     | `src/lib/guardrails/` (hooks previos/posteriores)                                                                   |
 | Caché exacta                              | `src/lib/semanticCache.ts` (basada en firmas)                                                                       |
-| Evaluadores / enrutamiento por evaluación | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                |
 | Explicabilidad de decisiones de combos    | `open-sse/services/combo/decisionTrace.ts`                                                                          |
 | Eventos en tiempo real del panel          | `src/lib/events/eventBus.ts` (canal de notificaciones de la IU, cargas útiles `unknown`, historial de 100 entradas) |
 
@@ -248,7 +247,7 @@ Archivos: `open-sse/services/routing/otel.ts`
 - Los spans siguen las convenciones semánticas de GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`), además de los atributos
-  de enrutamiento de OmniRoute (resultado, estado, TTFT, reintentos, fallback).
+  de enrutamiento de 67router (resultado, estado, TTFT, reintentos, fallback).
 - `record()` solo agrega elementos a un búfer acotado (O(1)); un temporizador en
   segundo plano realiza el flush mediante `POST {endpoint}/v1/traces` de forma
   asíncrona. En caso de sobrecarga, se descartan los eventos más antiguos
@@ -271,7 +270,7 @@ Archivos: `open-sse/services/routing/otel.ts`
 
 ## 6. Integración del plano de evaluación (preparación para Future AGI)
 
-OmniRoute trata Future AGI (o cualquier evaluador) como un **backend potencial
+67router trata Future AGI (o cualquier evaluador) como un **backend potencial
 de inteligencia/evaluación, no como una dependencia**. Los puntos de integración:
 
 - Un `RoutingEventSink` puede reenviar eventos a un evaluador de forma asíncrona.
@@ -280,8 +279,6 @@ de inteligencia/evaluación, no como una dependencia**. Los puntos de integraci�
 - Un futuro `Evaluator` (determinista, juez local, HTTP, WASM) consumiría
   eventos/trazas y devolvería un `QualityScore` que alimentaría la misma ruta de
   `getQualityScore`/factor de calidad.
-- El enrutamiento basado en evaluaciones existente (`open-sse/services/evalRouting.ts`)
-  ya reordena los destinos del combo según las tasas de aprobación de `eval_runs`
   cuando está habilitado.
 
 Ninguna evaluación se ejecuta de forma síncrona en la ruta de la solicitud, y el

@@ -7,11 +7,11 @@ import type { OrchSnapshot } from "../../../src/app/(dashboard)/dashboard/orches
 const snap: OrchSnapshot = {
   nodes: [
     { id: "orchestrator", kind: "orchestrator", label: "OmniRoute" },
-    { id: "cloud-agent:1", kind: "work", source: "cloud-agent", state: "running", label: "a" },
+    { id: "conductor:task:1", kind: "work", source: "conductor", state: "running", label: "a" },
     {
-      id: "cloud-agent:2",
+      id: "conductor:task:2",
       kind: "work",
-      source: "cloud-agent",
+      source: "conductor",
       state: "waiting_approval",
       label: "b",
     },
@@ -61,9 +61,9 @@ describe("overviewProjection", () => {
           updatedAt: "2026-08-30T09:00:00Z",
         },
         {
-          id: "cloud-agent:running",
+          id: "conductor:task:running",
           kind: "work",
-          source: "cloud-agent",
+          source: "conductor",
           state: "running",
           label: "not terminal",
           updatedAt: "2026-08-30T13:00:00Z",
@@ -77,9 +77,9 @@ describe("overviewProjection", () => {
           updatedAt: "2026-08-30T12:00:00Z",
         },
         {
-          id: "cloud-agent:middle",
+          id: "conductor:task:middle",
           kind: "work",
-          source: "cloud-agent",
+          source: "conductor",
           state: "cancelled",
           label: "middle",
           updatedAt: "2026-08-30T10:30:00Z",
@@ -92,7 +92,7 @@ describe("overviewProjection", () => {
     const { columns } = overviewProjection(interleaved, 0);
     assert.deepEqual(
       columns.done.map((n) => n.id),
-      ["a2a:newest", "cloud-agent:middle", "a2a:oldest"]
+      ["a2a:newest", "conductor:task:middle", "a2a:oldest"]
     );
     assert.equal(columns.running.length, 1);
   });
@@ -102,9 +102,9 @@ describe("overviewProjection", () => {
       nodes: [
         ...snap.nodes,
         {
-          id: "overflow:cloud-agent",
+          id: "overflow:conductor",
           kind: "overflow",
-          source: "cloud-agent",
+          source: "conductor",
           label: "+7 more",
           droppedByState: { running: 5, failed: 2 },
         },

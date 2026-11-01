@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute tem **quatro famílias de credenciais** que podem autorizar rotas de gestão.
+67router tem **quatro famílias de credenciais** que podem autorizar rotas de gestão.
 Não são intermutáveis. As chaves de API de inferência (`sk-…`) **não** gerem o
 servidor, a menos que lhes tenha sido explicitamente concedido o âmbito `manage` ou `admin`.
 

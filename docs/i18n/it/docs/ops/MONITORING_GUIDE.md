@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute include monitoraggio dello stato integrato, pilota automatico dei provider, tracciamento delle quote e hook di osservabilità. Questa guida illustra la dashboard, gli avvisi e la risoluzione dei problemi.
+> **TL;DR**: 67router include monitoraggio dello stato integrato, pilota automatico dei provider, tracciamento delle quote e hook di osservabilità. Questa guida illustra la dashboard, gli avvisi e la risoluzione dei problemi.
 
 **Fonti:**
 
@@ -20,7 +20,7 @@
 
 ## Panoramica
 
-OmniRoute dispone di **3 livelli di monitoraggio**:
+67router dispone di **3 livelli di monitoraggio**:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ Per ogni combo:
 
 ## API di controllo dello stato
 
-OmniRoute espone **due** endpoint HTTP per il controllo dello stato. Non sono intercambiabili per gli orchestratori.
+67router espone **due** endpoint HTTP per il controllo dello stato. Non sono intercambiabili per gli orchestratori.
 
 | Percorso                     | Scopo                                                                             | Peso                                               | Utilizzo                                                                          |
 | ---------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ endpoint. Utilizzare `failed` + `failedConnections` per gli errori dei probe in 
 
 ### Raccomandazioni per i probe di Kubernetes
 
-OmniRoute è un **singolo processo Node** (un solo event loop). Il `HEALTHCHECK` Docker predefinito usa l'endpoint leggero `/healthz`. `/api/monitoring/health` è **troppo pesante** per gli intervalli di liveness di kubelet.
+67router è un **singolo processo Node** (un solo event loop). Il `HEALTHCHECK` Docker predefinito usa l'endpoint leggero `/healthz`. `/api/monitoring/health` è **troppo pesante** per gli intervalli di liveness di kubelet.
 
 | Sonda                                  | Destinazione consigliata                                                                                   | Note                                                                                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ Argomenti correlati: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/1
 
 ### Watchdog di systemd (event loop bloccato)
 
-Su un host systemd, OmniRoute comunica al gestore dei servizi quando è pronto e continua a inviargli segnali periodici, in modo che un server il cui event loop è bloccato venga terminato e riavviato anziché rimanere attivo e silenzioso. I segnali provengono dall'event loop del server stesso: quando questo si blocca, i segnali cessano e systemd riavvia il servizio una volta trascorso `WatchdogSec` senza averne ricevuto alcuno.
+Su un host systemd, 67router comunica al gestore dei servizi quando è pronto e continua a inviargli segnali periodici, in modo che un server il cui event loop è bloccato venga terminato e riavviato anziché rimanere attivo e silenzioso. I segnali provengono dall'event loop del server stesso: quando questo si blocca, i segnali cessano e systemd riavvia il servizio una volta trascorso `WatchdogSec` senza averne ricevuto alcuno.
 
 [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) crea già un'unità utente con questa configurazione. Un'unità creata manualmente (con il valore predefinito `Type=simple`) non dispone di alcun watchdog, quindi aggiungere queste righe alla relativa sezione `[Service]`:
 
@@ -443,7 +443,7 @@ La configurazione del controllo dell'integrità dei token è gestita internament
 
 ### Canali integrati
 
-OmniRoute supporta **3 canali di avviso**:
+67router supporta **3 canali di avviso**:
 
 | Canale           | Configurazione | Caso d'uso                         |
 | ---------------- | -------------- | ---------------------------------- |
@@ -559,7 +559,7 @@ Crea un file `~/.omniroute/dashboard.json`:
 ### "La quota risulta regolare, ma vedo errori 429"
 
 - 429 indica che, secondo il provider, hai esaurito la quota
-- Il monitoraggio della quota di OmniRoute potrebbe **non essere aggiornato**: i dati effettivi del provider sono a monte
+- Il monitoraggio della quota di 67router potrebbe **non essere aggiornato**: i dati effettivi del provider sono a monte
 - I dati della quota vengono aggiornati automaticamente tramite il monitor interno della quota
 
 ### "La combinazione non funziona, ma tutte le destinazioni sembrano integre"
@@ -572,7 +572,7 @@ Crea un file `~/.omniroute/dashboard.json`:
 
 - Esegui `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Se restituisce "ok", si tratta di un falso allarme: il controllo dello stato di salute è troppo restrittivo
-- Se restituisce qualsiasi altro valore, **arresta OmniRoute** e segui la [guida al ripristino di emergenza](./DATABASE_GUIDE.md#disaster-recovery)
+- Se restituisce qualsiasi altro valore, **arresta 67router** e segui la [guida al ripristino di emergenza](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "La pressione sulla memoria heap è critica"
 

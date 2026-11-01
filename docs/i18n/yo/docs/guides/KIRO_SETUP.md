@@ -4,7 +4,7 @@
 
 ---
 
-Ìtọ́sọ́nà yìí ṣàlàyé bí a ṣe lè ṣàfikún àwọn àkọọ́lẹ̀ Kiro (olùrànlọ́wọ́ ìkọ́ kóòdù AI tí AWS gbàlejò) sí OmniRoute,
+Ìtọ́sọ́nà yìí ṣàlàyé bí a ṣe lè ṣàfikún àwọn àkọọ́lẹ̀ Kiro (olùrànlọ́wọ́ ìkọ́ kóòdù AI tí AWS gbàlejò) sí 67router,
 pẹ̀lú àkíyèsí pàtàkì lórí ṣíṣe àwọn àkọọ́lẹ̀ púpọ̀ ní àkókò kan náà láìsí ìforígbárí sáà.
 
 ---
@@ -22,10 +22,10 @@ oníbàárà kan náà tí a forúkọ rẹ̀ sílẹ̀, ẹ̀yìn-ọ̀rọ̀ n
 
 ---
 
-## Bí OmniRoute Ṣe Yanjú Èyí (v3.8.0+)
+## Bí 67router Ṣe Yanjú Èyí (v3.8.0+)
 
-Bẹ̀rẹ̀ láti v3.8.0, OmniRoute máa ń pe `registerClient()` (AWS SSO OIDC) nígbà gbogbo
-tí a bá ń ṣàgbéwọlé ìsopọ̀ Kiro. Èyí ń fún ìsopọ̀ OmniRoute kọ̀ọ̀kan ní ìforúkọsílẹ̀ oníbàárà OIDC
+Bẹ̀rẹ̀ láti v3.8.0, 67router máa ń pe `registerClient()` (AWS SSO OIDC) nígbà gbogbo
+tí a bá ń ṣàgbéwọlé ìsopọ̀ Kiro. Èyí ń fún ìsopọ̀ 67router kọ̀ọ̀kan ní ìforúkọsílẹ̀ oníbàárà OIDC
 tí a yà sọ́tọ̀ fún un. Nítorí pé ìforúkọsílẹ̀ oníbàárà kọ̀ọ̀kan dá dúró lọ́tọ̀, ìmúdọ̀tun tàbí
 ìfàṣẹsí àkọọ́lẹ̀ kan lẹ́ẹ̀kan sí i kò ní ipa lórí àmì ìdánimọ̀ ìmúdọ̀tun ti àkọọ́lẹ̀ mìíràn.
 
@@ -59,7 +59,7 @@ gba ìforúkọsílẹ̀ oníbàárà tirẹ̀ láìfọwọ́ṣe.
 
 ### Àwọn Ohun Tí A Nílò Ṣáájú
 
-- OmniRoute v3.8.0 tàbí èyí tó tuntun sí i.
+- 67router v3.8.0 tàbí èyí tó tuntun sí i.
 - Àkọọ́lẹ̀ Kiro tó ń ṣiṣẹ́ (ímẹ́lì + ọ̀rọ̀ aṣínà, ìwọlé Google, tàbí GitHub).
 - Àkọọ́lẹ̀ Kiro kejì, bí o bá fẹ́.
 
@@ -70,7 +70,7 @@ gba ìforúkọsílẹ̀ oníbàárà tirẹ̀ láìfọwọ́ṣe.
    - **Ṣàgbéwọlé Àmì Ìdánimọ̀** — lẹ àmì ìdánimọ̀ ìmúdọ̀tun tó bẹ̀rẹ̀ pẹ̀lú `aorAAAAAG` mọ́lẹ̀.
    - **Kọ́kọ́rọ́ API** — lẹ kọ́kọ́rọ́ API Kiro / CodeWhisperer ọlọ́jọ́-pípẹ́ mọ́lẹ̀.
    - **Ìwọlé Google / GitHub** — parí ìṣàn OAuth nínú ẹ̀rọ aṣàwákiri.
-   - **Ìṣàgbéwọlé Aládàáṣiṣẹ́** — tẹ bọ́tìnì náà; OmniRoute máa ka àwọn ẹ̀rí ìwọlé láti inú
+   - **Ìṣàgbéwọlé Aládàáṣiṣẹ́** — tẹ bọ́tìnì náà; 67router máa ka àwọn ẹ̀rí ìwọlé láti inú
      ibi ìpamọ́ dátà kiro-cli abẹ́lẹ̀ tàbí `~/.aws/sso/cache`.
 3. A ó fi ìsopọ̀ náà pamọ́. Àwọn ìṣàn àmì ìdánimọ̀ ìmúdọ̀tun máa forúkọ oníbàárà OIDC tí a yà sọ́tọ̀
    sílẹ̀ láìfọwọ́ṣe. Àwọn ìṣàn kọ́kọ́rọ́ API máa fìdí kọ́kọ́rọ́ náà múlẹ̀ pẹ̀lú AWS, wọn kì í sì í tọ́jú àmì ìdánimọ̀ ìmúdọ̀tun.
@@ -127,7 +127,7 @@ lo ìmúdójúìwọ̀n OAuth, nítorí náà ó yẹra fún fífi ìjókòó OI
 2. Yan **API Key**.
 3. Lẹ API key náà, kí o sì yan ẹkùn AWS: **Auto-detect** (àìyípadà), **US East
    (N. Virginia)** tàbí **Europe (Frankfurt)**.
-4. OmniRoute fìdí key náà múlẹ̀, ó sì fi àsopọ̀ náà pamọ́ ní dídè mọ́ ẹkùn tí
+4. 67router fìdí key náà múlẹ̀, ó sì fi àsopọ̀ náà pamọ́ ní dídè mọ́ ẹkùn tí
    key náà ti ṣiṣẹ́.
 
 ### API
@@ -177,7 +177,7 @@ sí `https://q.<region>.amazonaws.com/generateAssistantResponse` — pẹ̀lú `
 ## Ìparí Àkókò Oníbàárà OIDC
 
 Àwọn oníbàárà gbogbogbò AWS SSO OIDC sábà máa ń parí lẹ́yìn ọjọ́ 90
-(`clientSecretExpiresAt`). OmniRoute ń fi timestamp yìí pamọ́ sínú `providerSpecificData`
+(`clientSecretExpiresAt`). 67router ń fi timestamp yìí pamọ́ sínú `providerSpecificData`
 fún àkíyèsí iṣẹ́. Bí àsopọ̀ kan bá dáwọ́ ìmúdójúìwọ̀n dúró lẹ́yìn nǹkan bí ọjọ́ 90, tún
 gbé àsopọ̀ náà wọlé láti gba ìforúkọsílẹ̀ oníbàárà OIDC tuntun. Ìforúkọsílẹ̀-àtúnṣe
 aládàáṣiṣẹ́ nígbà ìparí àkókò jẹ́ àtúnṣe tí a ń tọ́pa fún ọjọ́ iwájú.
@@ -198,7 +198,7 @@ aládàáṣiṣẹ́ nígbà ìparí àkókò jẹ́ àtúnṣe tí a ń tọ́
 ### Ìgbéwọlé kùnà pẹ̀lú "Ìfìdímúlẹ̀ token kùnà"
 
 - Rí i dájú pé refresh token náà bẹ̀rẹ̀ pẹ̀lú `aorAAAAAG`.
-- Rí i dájú pé OmniRoute lè dé `https://oidc.us-east-1.amazonaws.com` (tàbí ẹkùn tí a ti ṣètò).
+- Rí i dájú pé 67router lè dé `https://oidc.us-east-1.amazonaws.com` (tàbí ẹkùn tí a ti ṣètò).
   Bí o bá wà lẹ́yìn proxy ilé-iṣẹ́ kan, ṣètò proxy ipele-provider kan nínú
   **Dashboard → Settings → Proxies**.
 
@@ -206,7 +206,7 @@ aládàáṣiṣẹ́ nígbà ìparí àkókò jẹ́ àtúnṣe tí a ń tọ́
 
 - Fìdí rẹ̀ múlẹ̀ pé key náà jẹ́ Kiro / CodeWhisperer API key, kì í ṣe refresh token.
 - Fìdí rẹ̀ múlẹ̀ pé ẹkùn AWS náà bá key/àkọọ́lẹ̀ náà mu. `us-east-1` ni àkọ́kọ́.
-- Key náà gbọ́dọ̀ lè pe `ListAvailableProfiles`; bí bẹ́ẹ̀ kọ́, OmniRoute kò lè
+- Key náà gbọ́dọ̀ lè pe `ListAvailableProfiles`; bí bẹ́ẹ̀ kọ́, 67router kò lè
   pinnu `profileArn` tí a nílò.
 
 Fún àwọn ìṣòro mìíràn, wo [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) àkọ́kọ́.

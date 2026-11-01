@@ -7,7 +7,7 @@
 > **Haqiqat manbai:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Oxirgi yangilangan sana:** 2026-09-22 — koʻlam nomfazo (scope namespaces) MCP-SERVER.md ga ishora qiladi
 
-OmniRoute har bir API soʻrovini boshqaradigan marshrutni biluvchi avtorizatsiya quvuriga ega. Tasniflash **deterministik** va **fail-closed** (xato boʻlsa yopiladi) — tasniflanmaydigan har qanday narsa `MANAGEMENT` sifatida yakunlanadi va sessiya yoki boshqaruv darajasidagi token talab qiladi. Ushbu sahifa marshrutlarni saqlovchi yoki yangi yakuniy nuqtalarni loyihalashtiruvchi muhandislar uchun modelni tushuntiradi.
+67router har bir API soʻrovini boshqaradigan marshrutni biluvchi avtorizatsiya quvuriga ega. Tasniflash **deterministik** va **fail-closed** (xato boʻlsa yopiladi) — tasniflanmaydigan har qanday narsa `MANAGEMENT` sifatida yakunlanadi va sessiya yoki boshqaruv darajasidagi token talab qiladi. Ushbu sahifa marshrutlarni saqlovchi yoki yangi yakuniy nuqtalarni loyihalashtiruvchi muhandislar uchun modelni tushuntiradi.
 
 ![AuthZ quvuri (3 ta marshrut sinfi + siyosatni baholash)](../diagrams/exported/authz-pipeline.svg)
 
@@ -222,8 +222,6 @@ Katalog va mos kelish qoidalari (bir xil satr yoki `*` bilan tugaydigan berilgan
 Mijoz API kalitini majburlash `process.env.REQUIRE_API_KEY` ni to‘g‘ridan-to‘g‘ri o‘qish o‘rniga `src/shared/utils/featureFlags.ts` dagi `isRequireApiKeyEnabled()` dan foydalanadi. Bu joylashtirilgan nusxalar uchun muhim: Boshqaruv paneli → Funksiya bayroqlarida `REQUIRE_API_KEY` ni almashtirish DB ustidan bekor qilishni saqlaydi va `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` hamda shu yordamchidan foydalanadigan boshqa mijoz API autentifikatsiya tekshiruvlariga darhol ta’sir qiladi. Agar funksiya bayrog‘i ombori o‘qib bo‘lmasa, mijoz API autentifikatsiyasi yopiq holatda muvaffaqiyatsiz tugaydi va kalit talab qiladi.
 
 ## Moslikni buzuvchi oʻzgarish — v3.8.0
-
-`/api/v1/agents/tasks/*` va `/api/resilience/model-cooldowns` endpointlari **endi boshqaruv autentifikatsiyasini talab qiladi** (`588a0333` kommiti). Avval `manage` qamrovisiz oddiy API kalitini yuborgan mijozlar `403` javobini oladi. Migratsiya: API Keys boshqaruv panelida kalitga `manage` qamrovini bering yoki tizimga kirilgan boshqaruv paneli seansidan foydalaning.
 
 ## Xatti-harakat oʻzgarishi — v3.8.2
 

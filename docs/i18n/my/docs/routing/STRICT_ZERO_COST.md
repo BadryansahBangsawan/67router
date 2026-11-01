@@ -36,7 +36,7 @@ Pool အတွင်းရှိ candidate တိုင်းအတွက် (`o
 `filterPaidOnlyCandidates` ပြီးပြီးချင်း)-
 
 1. **`FREE_MODEL_BUDGETS` ထဲတွင် လုံးဝမရှိပါက** → ဖယ်ထုတ်မည်။ ၎င်းသည် အမှန်တကယ် အခကြေးငွေပေးရသော
-   model များနှင့် OmniRoute က မခွဲခြားရသေးသော provider/model များအားလုံးကို အကျုံးဝင်သည် —
+   model များနှင့် 67router က မခွဲခြားရသေးသော provider/model များအားလုံးကို အကျုံးဝင်သည် —
    candidate အသစ်များကို ထည့်သွင်းထားခြင်းမဟုတ်ဘဲ ဖယ်ထုတ်ထားခြင်းဖြင့် စတင်သည်။
 2. **`freeType: "keyless"`** → ချက်ချင်း အောင်မြင်မည်၊ **သို့သော် no-auth path မှ အမှန်တကယ်
    ဝင်ရောက်လာသော candidate အတွက်သာ** ဖြစ်သည် (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -92,7 +92,7 @@ STRICT_ZERO_COST သည် ထို allowlist ထဲရှိ **ချိတ်
 `tests/unit/autoCombo/strict-zero-cost-connection-safety.test.ts` ကို ကြည့်ပါ
 (keyless-bypass case A/B/C၊ multi-account case 1-5)။
 
-`discovered automatically` ဆိုသည်မှာ မှန်ကန်သော metadata ပါရှိသည့် provider/model တစ်ခုကို နောက်တစ်နေ့တွင် ထုတ်ပေးလိုက်ပါက (catalog ထဲတွင်ရှိခြင်း၊ usage adapter ပါရှိခြင်း၊ `hardStopGuaranteed: true` ဖြစ်ခြင်း) OmniRoute က ၎င်းကို သိရှိသည်နှင့် ချက်ချင်းအသုံးပြုနိုင်ခြင်းကို ဆိုလိုသည် — code ပြောင်းလဲရန် မလို၊ whitelist entry ထည့်ရန် မလိုသကဲ့သို့ ဤ module ထဲတွင်လည်း မည်သည့်အရာကိုမျှ ပြင်ဆင်ရန် မလိုပါ။ catalog မှ ဖယ်ရှားလိုက်သည့်အရာသည်လည်း အလားတူပင် ပျောက်ကွယ်သွားသည်။ regression အထောက်အထားအတွက်
+`discovered automatically` ဆိုသည်မှာ မှန်ကန်သော metadata ပါရှိသည့် provider/model တစ်ခုကို နောက်တစ်နေ့တွင် ထုတ်ပေးလိုက်ပါက (catalog ထဲတွင်ရှိခြင်း၊ usage adapter ပါရှိခြင်း၊ `hardStopGuaranteed: true` ဖြစ်ခြင်း) 67router က ၎င်းကို သိရှိသည်နှင့် ချက်ချင်းအသုံးပြုနိုင်ခြင်းကို ဆိုလိုသည် — code ပြောင်းလဲရန် မလို၊ whitelist entry ထည့်ရန် မလိုသကဲ့သို့ ဤ module ထဲတွင်လည်း မည်သည့်အရာကိုမျှ ပြင်ဆင်ရန် မလိုပါ။ catalog မှ ဖယ်ရှားလိုက်သည့်အရာသည်လည်း အလားတူပင် ပျောက်ကွယ်သွားသည်။ regression အထောက်အထားအတွက်
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` ကို ကြည့်ပါ (တကယ့် catalog ကို ပြောင်းလဲခြင်းမဟုတ်ဘဲ injectable fixture များမှတစ်ဆင့် စမ်းသပ်ထားသည်)။
 
 ## Quota cache ပြုလုပ်ခြင်း (`open-sse/services/autoCombo/freeAccessQuota.ts`)

@@ -32,7 +32,7 @@ Maka candidate ọ bụla dị na pool (`open-sse/services/autoCombo/virtualFact
 ozugbo `filterPaidOnlyCandidates` gachara):
 
 1. **Ọ dịghị na `FREE_MODEL_BUDGETS` ma ọlị** → a na-ewepụ ya. Nke a gụnyere model ndị a na-akwụ ụgwọ n’ezie na
-   provider/model ọ bụla OmniRoute na-ekewabeghị — a na-amalite site n’iwepụ candidate ọhụrụ, ọ bụghị itinye ha.
+   provider/model ọ bụla 67router na-ekewabeghị — a na-amalite site n’iwepụ candidate ọhụrụ, ọ bụghị itinye ha.
 2. **`freeType: "keyless"`** → na-agafe ozugbo, **mana naanị maka candidate nke
    sitere n’ezie n’ụzọ no-auth** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
    `open-sse/services/autoCombo/resilienceCandidateFilter.ts`). Enweghị credential maka
@@ -87,7 +87,7 @@ kwado na njikọ a ga-eji n'ezie n'oge izipu bụ mgbe niile nke nzacha a n'onwe
 (ọnọdụ keyless-bypass A/B/C, ọnọdụ ọtụtụ akaụntụ 1-5).
 
 `discovered automatically`: onye na-eweta ọrụ/ụdị e wepụtara echi nke nwere metadata kwesịrị ekwesị (n'ime
-katalọgụ, nwere usage adapter, `hardStopGuaranteed: true`) ga-amalite ịrụ ọrụ ozugbo OmniRoute matara
+katalọgụ, nwere usage adapter, `hardStopGuaranteed: true`) ga-amalite ịrụ ọrụ ozugbo 67router matara
 ya — enweghị mgbanwe koodu, enweghị ntinye n'ime whitelist, ọ dịghịkwa ihe a ga-edezi n'ime modul a. Mgbe e wepụrụ otu na
 katalọgụ, ọ ga-apụkwa n'otu ụzọ ahụ. Lee
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` maka ihe akaebe ule nlọghachi (site na

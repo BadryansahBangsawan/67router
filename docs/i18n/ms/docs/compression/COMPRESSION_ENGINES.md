@@ -4,7 +4,7 @@
 
 ---
 
-Pemampatan OmniRoute dibina berasaskan kontrak enjin. Sesuatu mod boleh menjalankan satu enjin secara langsung
+Pemampatan 67router dibina berasaskan kontrak enjin. Sesuatu mod boleh menjalankan satu enjin secara langsung
 (`caveman` atau `rtk`) atau saluran paip bertindan yang deterministik, yang melaksanakan berbilang enjin mengikut turutan.
 
 ## Mod
@@ -43,9 +43,9 @@ mengumpul sejarah berhenti pada `below_min_chars` dan enjin tidak mengubah apa-a
 sebabnya lalai adalah `aggressive` dan bukannya `safest profile`.
 
 Pakej menyelesaikan `model scope` dan `profile` sendiri daripada `environment configuration`nya.
-OmniRoute tidak pernah mewakilkan keputusan: `adapter pins` `model gate` kepada `package's`
+67router tidak pernah mewakilkan keputusan: `adapter pins` `model gate` kepada `package's`
 `most restrictive scope`, jadi `host environment settings` hanya boleh mengecilkan `allowlist`,
-tidak pernah meluaskannya melebihi `OmniRoute's measured receipts`.
+tidak pernah meluaskannya melebihi `67router's measured receipts`.
 
 ## Pendaftar Enjin
 
@@ -109,7 +109,7 @@ Mod Caveman memfokuskan pemadatan semantik bagi prosa biasa:
 Permukaan papan pemuka ialah `Dashboard -> Context & Cache -> Caveman`.
 
 Caveman huluan melaporkan `~75%` kurang token output, purata penjimatan output sebanyak `65%` dalam penanda aras
-dengan julat `22-87%`, serta alat pemampatan input sebanyak `~46%`. OmniRoute menggunakan angka sisi input Caveman
+dengan julat `22-87%`, serta alat pemampatan input sebanyak `~46%`. 67router menggunakan angka sisi input Caveman
 semasa mendokumentasikan penjimatan prom/konteks bertindan; mod output Caveman kekal sebagai ciri
 tingkah laku respons yang berasingan.
 

@@ -4,7 +4,7 @@
 
 ---
 
-เอกสารนี้เป็นแหล่งอ้างอิงหลักที่มีผลบังคับใช้สำหรับเกตตรวจสอบคุณภาพ CI ทั้งหมดใน OmniRoute
+เอกสารนี้เป็นแหล่งอ้างอิงหลักที่มีผลบังคับใช้สำหรับเกตตรวจสอบคุณภาพ CI ทั้งหมดใน 67router
 โดยอธิบายแต่ละเกต สิ่งที่เกตตรวจสอบ งาน CI ที่เกตทำงานอยู่ นโยบายที่ใช้ว่าเป็น
 ค่าฐานแบบ ratchet หรือผ่าน/ไม่ผ่าน รวมถึงเกตนั้นบล็อกบิลด์หรือมีไว้เพื่อให้คำแนะนำ
 
@@ -236,14 +236,14 @@ clone ที่ไม่มี base ref) ซึ่งสอดคล้องก
 
 workflow เหล่านี้ทำงานตาม cron schedule (และ `workflow_dispatch`) ไม่เคยทำงานบน PR ทั้งหมดเป็นแบบ advisory
 
-| Workflow               | ตรวจสอบ                                                                                                                                                      | Blocking     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| `nightly-property`     | property test ด้วย fast-check พร้อม random seed + จำนวน run สูง                                                                                              | **Advisory** |
-| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                        | **Advisory** |
-| `nightly-llm-security` | promptfoo injection guard (โหมด block) + garak probe (ข้ามเมื่อไม่มี provider secret)                                                                        | **Advisory** |
-| `nightly-schemathesis` | OpenAPI contract fuzzing (schemathesis) กับ OmniRoute ที่ทำงานอยู่จริงโดยใช้ `docs/openapi.yaml` — เปิดเผยการละเมิด spec / 500 ที่ไม่ได้ handle (Fase 8 B.4) | **Advisory** |
-| `nightly-mutation`     | คะแนน mutation-testing ของ Stryker บน fast unit lane — mutant ที่รอดชีวิตจะเปิดเผย assert ที่อ่อนแอ                                                          | **Advisory** |
-| `nightly-compat`       | เมทริกซ์ความเข้ากันได้ของ Node engine ครอบคลุมช่วง `engines.node` ที่รองรับ                                                                                  | **Advisory** |
+| Workflow               | ตรวจสอบ                                                                                                                                                     | Blocking     |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | property test ด้วย fast-check พร้อม random seed + จำนวน run สูง                                                                                             | **Advisory** |
+| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                       | **Advisory** |
+| `nightly-llm-security` | promptfoo injection guard (โหมด block) + garak probe (ข้ามเมื่อไม่มี provider secret)                                                                       | **Advisory** |
+| `nightly-schemathesis` | OpenAPI contract fuzzing (schemathesis) กับ 67router ที่ทำงานอยู่จริงโดยใช้ `docs/openapi.yaml` — เปิดเผยการละเมิด spec / 500 ที่ไม่ได้ handle (Fase 8 B.4) | **Advisory** |
+| `nightly-mutation`     | คะแนน mutation-testing ของ Stryker บน fast unit lane — mutant ที่รอดชีวิตจะเปิดเผย assert ที่อ่อนแอ                                                         | **Advisory** |
+| `nightly-compat`       | เมทริกซ์ความเข้ากันได้ของ Node engine ครอบคลุมช่วง `engines.node` ที่รองรับ                                                                                 | **Advisory** |
 
 Performance baseline (heap, TTFB, เวลา build) ถูกบันทึกไว้ ไม่ได้ใช้เป็น gate: ดูที่ [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`)
 
@@ -513,7 +513,7 @@ allowlist ที่เพิ่มขึ้นเรื่อย ๆ เป็�
 
 ## เครื่องมือสำหรับเอเจนต์: LSP-in-the-loop (เลือกใช้ได้)
 
-นอกเหนือจากเกต CI แล้ว OmniRoute ยังมาพร้อมโครงร่าง `agent-lsp` แบบ **เลือกใช้ได้**
+นอกเหนือจากเกต CI แล้ว 67router ยังมาพร้อมโครงร่าง `agent-lsp` แบบ **เลือกใช้ได้**
 (`.mcp.json` ระดับโปรเจกต์, Fase 7 Task 15) ให้สร้าง `.mcp.json`
 เพื่อเปิดให้เอเจนต์เขียนโค้ดเข้าถึงเซิร์ฟเวอร์ภาษา TypeScript เพื่อให้เอเจนต์สามารถตรวจหาสัญลักษณ์ /
 การวินิจฉัย **ก่อน** เขียนโค้ด — เป็นกลไกตรวจสอบก่อนกล่าวอ้างว่า compile ได้ ซึ่งทำงานเสริมกับ

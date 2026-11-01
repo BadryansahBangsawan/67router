@@ -113,7 +113,7 @@ illetve dokumentált manuális ellenőrzésre.
 - A CLI-katalógusok külön, a `bin/cli/locales/` alatt találhatók.
 - Az ICU-helyőrzőket és -címkéket pontosan őrizze meg. Ne fordítsa le a termék-/szolgáltató-/modellneveket,
   a protokoll- és fejlécneveket, a parancsokat, a kód-/JSON-azonosítókat, az URL-eket, a környezeti változókat vagy
-  az olyan védett kifejezéseket, mint az `OmniRoute`, `OAuth`, `MCP` és `A2A`. Az aktuális forráslista:
+  az olyan védett kifejezéseket, mint az `67router`, `OAuth`, `MCP` és `A2A`. Az aktuális forráslista:
   `scripts/i18n/glossary/protected-terms.json`.
 
 **Célzott ciklus**
@@ -254,7 +254,7 @@ npm run dev:candidate -- run --from-tarball <file.tgz>  # máshol (CI-ben) létr
 - **Görgesse vissza.** A `run` ismét validálja az előléptetett slotot, és visszacseréli a `current` és a `previous` slotot, ha
   ez az ellenőrzés meghiúsul. Az első validáláson megbukó candidate soha nem kerül előléptetésre.
 
-Minden a git által figyelmen kívül hagyott `_artifacts/candidate/` alatt jön létre; a meglévő OmniRoute-
+Minden a git által figyelmen kívül hagyott `_artifacts/candidate/` alatt jön létre; a meglévő 67router-
 telepítés és annak adatkönyvtára soha nem módosul. Az előléptetett CLI elérési útja:
 `_artifacts/candidate/current/prefix/bin/omniroute`; használatakor saját `DATA_DIR` értékével indítsa el.
 Kilépési kódok: `0` siker, `1` sikertelen validálás vagy előléptetés, `2` használati hiba vagy hiányzó build.

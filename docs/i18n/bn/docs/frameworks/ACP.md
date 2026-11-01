@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI আবিষ্কার**, **নেটিভ Agent Client Protocol**, এবং
+67router **CLI আবিষ্কার**, **নেটিভ Agent Client Protocol**, এবং
 **লিগ্যাসি stdio অ্যাডাপ্টার** আলাদা রাখে। ইনস্টল করা কোনো বাইনারি খুঁজে পাওয়া
 তার প্রমাণীকরণ, মডেল সামঞ্জস্যতা, বা কোনো প্রম্পট পরিচালনার প্রস্তুতি প্রমাণ করে না।
 
@@ -123,5 +123,3 @@ SIGKILL পাঠায়। লিগ্যাসি প্রম্পট ট
 - [এজেন্ট প্রোটোকল](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI লঞ্চ কনট্র্যাক্ট](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI টুল](../reference/CLI-TOOLS.md)
-- [A2A সার্ভার](./A2A-SERVER.md)
-- [ক্লাউড এজেন্ট](./CLOUD_AGENT.md)

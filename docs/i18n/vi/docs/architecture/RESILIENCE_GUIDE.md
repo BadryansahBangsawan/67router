@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute có ba cơ chế khả năng phục hồi (resilience) riêng biệt nhưng liên quan đến nhau. Mỗi cơ chế có phạm vi và mục đích khác nhau. Hãy giữ chúng tách biệt khi gỡ lỗi hành vi định tuyến.
+67router có ba cơ chế khả năng phục hồi (resilience) riêng biệt nhưng liên quan đến nhau. Mỗi cơ chế có phạm vi và mục đích khác nhau. Hãy giữ chúng tách biệt khi gỡ lỗi hành vi định tuyến.
 
 ![Mô hình khả năng phục hồi 3 lớp](../diagrams/exported/resilience-3layers.svg)
 
@@ -216,7 +216,7 @@ Ba header session-affinity không bao giờ được chuyển tiếp lên upstre
 
 ### Lease kết nối độc quyền cho phiên được quản lý
 
-**Phạm vi:** một client/phiên HTTP được quản lý đang hoạt động sở hữu một kết nối OmniRoute đủ điều kiện.
+**Phạm vi:** một client/phiên HTTP được quản lý đang hoạt động sở hữu một kết nối 67router đủ điều kiện.
 
 **Mục đích:** cung cấp quyền sở hữu kết nối độc quyền bền vững cho các client cần một
 rào chắn định tuyến cứng xuyên suốt các request. Điều này khác với session affinity, vốn là một
@@ -240,7 +240,7 @@ cũng liên kết ID khóa API đã xác thực và ID kết nối đang hoạt 
 được loại bỏ khỏi nhật ký, các bản chụp yêu cầu được giữ lại, và các header của executor upstream.
 
 Nếu định tuyến thông thường có các ứng viên được quản lý đủ điều kiện nhưng mọi ứng viên rảnh đều
-bị chiếm bởi một lease ngoại lai đang hoạt động, OmniRoute trả về HTTP `429`, mã
+bị chiếm bởi một lease ngoại lai đang hoạt động, 67router trả về HTTP `429`, mã
 lease-capacity-unavailable, trạng thái waiting-for-capacity, và một giá trị `Retry-After` có giới
 hạn được suy ra từ thời điểm hết hạn liên quan sớm nhất. Trường hợp đủ điều kiện trống thông
 thường không phải là tranh chấp lease và giữ nguyên ngữ nghĩa lỗi định tuyến hiện có.
@@ -265,7 +265,7 @@ vào (`resolveLockoutScope()` trong `open-sse/services/accountFallback/exactMode
   connection đó), với các provider khác là `getQuotaScopedModelForProvider()`.
 - `404` khóa riêng model đó (`getModelLockKey()` thu hẹp trường hợp `not_found`).
 - Bất kỳ status nào khác — các lỗi transport/server `5xx` và lỗi `502` do chính
-  OmniRoute tổng hợp từ bước kiểm tra chất lượng — chỉ khóa **đúng**
+  67router tổng hợp từ bước kiểm tra chất lượng — chỉ khóa **đúng**
   bộ ba provider/connection/model đó. Một stream lỗi trên một model không phải là bằng chứng
   về quota của tài khoản; trước khi có quy tắc này, một phản hồi rỗng trên
   `codex/gpt-5.6-luna` đã loại mọi model `gpt-5*` của connection đó khỏi
@@ -402,7 +402,7 @@ thời theo model**, mỗi dòng một `model=cap`) hoặc qua
   nguyên dương.
 - **Xếp hàng cục bộ, không khám phá:** các yêu cầu vượt mức sẽ xếp hàng cục bộ
   với ngữ nghĩa hàng đợi/timeout hiện có (các lỗi kiểm soát nhận yêu cầu có
-  kiểu `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute không khám phá
+  kiểu `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router không khám phá
   hay suy luận chính sách upstream — nó chỉ thực thi chính xác các ngưỡng trần
   mà người vận hành đã cấu hình. Một cổng model bị bão hòa không bao giờ vô
   hiệu hóa provider và không bao giờ tạo ra khóa model vĩnh viễn; hành vi
@@ -571,7 +571,7 @@ nó có thể được unit-test mà không cần một limiter Bottleneck thậ
 ### Cơ chế an toàn tự động bật giới hạn tốc độ & Bảo vệ kết nối (`rateLimitProtection`)
 
 **Cơ chế an toàn tự động bật** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, mặc định `true`):
-Theo mặc định, OmniRoute tự động bật bảo vệ hàng đợi giới hạn tốc độ cho tất cả các kết nối provider API-key đang hoạt động (`getProviderCategory(provider) === "apikey"`). Điều này đảm bảo các request đến những upstream API key nhạy cảm về tốc độ được đưa vào hàng đợi và điều tiết thông qua Bottleneck thay vì bùng phát thành các lỗi 429 từ upstream. Cơ chế an toàn này có thể bị ghi đè qua biến môi trường `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` để tắt, `true`/`1`/`on` để bắt buộc bật), biến này được ưu tiên hơn cài đặt dashboard đã lưu trữ (**Cài đặt → Khả năng phục hồi** / `PATCH /api/resilience`).
+Theo mặc định, 67router tự động bật bảo vệ hàng đợi giới hạn tốc độ cho tất cả các kết nối provider API-key đang hoạt động (`getProviderCategory(provider) === "apikey"`). Điều này đảm bảo các request đến những upstream API key nhạy cảm về tốc độ được đưa vào hàng đợi và điều tiết thông qua Bottleneck thay vì bùng phát thành các lỗi 429 từ upstream. Cơ chế an toàn này có thể bị ghi đè qua biến môi trường `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` để tắt, `true`/`1`/`on` để bắt buộc bật), biến này được ưu tiên hơn cài đặt dashboard đã lưu trữ (**Cài đặt → Khả năng phục hồi** / `PATCH /api/resilience`).
 
 **Ngữ nghĩa của `rateLimitProtection` theo từng kết nối:**
 Bảo vệ giới hạn tốc độ theo từng kết nối được theo dõi qua trường boolean `rateLimitProtection` trên các kết nối provider (được lưu trữ dưới dạng `rate_limit_protection` trong SQLite):
@@ -925,7 +925,7 @@ hiệu tương đương quota đã cạn. Những giới hạn thực tế:
 > dẫn dành cho agent nằm trong ngân sách context 40k. Đây là phiên bản rút gọn, hướng tới
 > agent, của các phần bên trên; các phần được đánh số vẫn là tài liệu tham khảo đầy đủ.
 
-OmniRoute có ba cơ chế xử lý lỗi tạm thời liên quan nhưng khác biệt nhau. Hãy giữ
+67router có ba cơ chế xử lý lỗi tạm thời liên quan nhưng khác biệt nhau. Hãy giữ
 phạm vi của chúng tách biệt khi gỡ lỗi hành vi định tuyến. Xem
 [sơ đồ resilience 3 lớp](../diagrams/exported/resilience-3layers.svg)
 (nguồn: [diagrams/resilience-3layers.mmd](../diagrams/resilience-3layers.mmd))

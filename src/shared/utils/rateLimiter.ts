@@ -19,8 +19,7 @@ if (process.env.NODE_ENV === "production" && !REDIS_URL) {
 // deep (apiKeys.ts -> mcpCallerIdentity.ts -> compressionTools.ts -> server.ts).
 // A static import forces Node to resolve `ioredis` at module-link time,
 // before any `--mcp` startup code runs, and `ioredis` is not guaranteed to
-// ship in the MCP-only bundle's node_modules. Mirrors the established
-// soft-dependency pattern in src/lib/quota/redisQuotaStore.ts.
+// ship in the MCP-only bundle's node_modules.
 let redisClientPromise: Promise<Redis> | null = null;
 
 export function isRedisConfigured(): boolean {

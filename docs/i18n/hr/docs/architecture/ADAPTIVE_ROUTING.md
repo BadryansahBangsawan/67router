@@ -5,7 +5,7 @@
 ---
 
 Ovaj dokument opisuje temelj prilagodljivog usmjeravanja vođenog povratnim informacijama dodan u
-OmniRoute. Namjerno je malog opsega: uvodi tipizirani kanal ishoda usmjeravanja,
+67router. Namjerno je malog opsega: uvodi tipizirani kanal ishoda usmjeravanja,
 mrežni signal kvalitete koji se prosljeđuje postojećem sustavu bodovanja automatskih
 kombinacija, opcionalni OpenTelemetry izvoznik i krajnju točku za objašnjivost. **Ne**
 zamjenjuje postojeći sloj otpornosti (prekidač strujnog kruga, razdoblje mirovanja veze,
@@ -13,7 +13,7 @@ zaključavanje modela, matrica stanja, autopilot) — već ga nadopunjuje.
 
 ## 1. Arhitektonski kontekst
 
-OmniRoute je podatkovna ravnina s **kritičnom putanjom zahtjeva** i **upravljačkom/inteligentnom
+67router je podatkovna ravnina s **kritičnom putanjom zahtjeva** i **upravljačkom/inteligentnom
 ravninom**. Kritična putanja mora ostati brza, memorijski učinkovita, asinkrona, otporna i
 predvidljiva. Evaluacija, bodovanje kvalitete, eksperimenti i povijesna analiza pripadaju
 upravljačkoj ravnini.
@@ -23,7 +23,7 @@ AI agent / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   podatkovna ravnina (brza, sinkrona, u memoriji)
+│    67router        │   podatkovna ravnina (brza, sinkrona, u memoriji)
 │ usmjeravanje / oporavak │
 │ stanje / zaštitne mjere │
 │ predmemorija / strujanje │
@@ -43,16 +43,15 @@ AI agent / IDE
 
 ### Što je već postojalo (pregledano, bez dupliciranja)
 
-| Koncept                                       | Postojeća implementacija                                                                                                            |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Dostupnost (možemo li slati promet?)          | Prekidač strujnog kruga (CLOSED/DEGRADED/OPEN/HALF_OPEN, pohranjen u bazi podataka), razdoblje mirovanja veze, zaključavanje modela |
-| Izvješćivanje o stanju                        | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                             |
-| Promet u sjeni                                | `open-sse/services/combo/shadowRouting.ts`                                                                                          |
-| Zaštitne mjere                                | `src/lib/guardrails/` (kuke prije/poslije)                                                                                          |
-| Točna predmemorija                            | `src/lib/semanticCache.ts` (temeljena na potpisu)                                                                                   |
-| Evaluatori / usmjeravanje vođeno evaluacijama | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                                |
-| Objašnjivost odluke o kombinaciji             | `open-sse/services/combo/decisionTrace.ts`                                                                                          |
-| Događaji nadzorne ploče u stvarnom vremenu    | `src/lib/events/eventBus.ts` (kanal obavijesti korisničkog sučelja, korisni sadržaji tipa `unknown`, povijest od 100 zapisa)        |
+| Koncept                                    | Postojeća implementacija                                                                                                            |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Dostupnost (možemo li slati promet?)       | Prekidač strujnog kruga (CLOSED/DEGRADED/OPEN/HALF_OPEN, pohranjen u bazi podataka), razdoblje mirovanja veze, zaključavanje modela |
+| Izvješćivanje o stanju                     | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                                             |
+| Promet u sjeni                             | `open-sse/services/combo/shadowRouting.ts`                                                                                          |
+| Zaštitne mjere                             | `src/lib/guardrails/` (kuke prije/poslije)                                                                                          |
+| Točna predmemorija                         | `src/lib/semanticCache.ts` (temeljena na potpisu)                                                                                   |
+| Objašnjivost odluke o kombinaciji          | `open-sse/services/combo/decisionTrace.ts`                                                                                          |
+| Događaji nadzorne ploče u stvarnom vremenu | `src/lib/events/eventBus.ts` (kanal obavijesti korisničkog sučelja, korisni sadržaji tipa `unknown`, povijest od 100 zapisa)        |
 
 Sloj događaja usmjeravanja **nije** ponovna implementacija sustava `eventBus`: taj je sustav
 kanal nadzorne ploče za obavijesti u stvarnom vremenu (tipizirani _nazivi događaja_, neprozirni
@@ -238,7 +237,7 @@ Datoteke: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK-a).
 - Rasponi slijede GenAI semantičke konvencije (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) uz OmniRoute atribute
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) uz 67router atribute
   usmjeravanja (ishod, status, ttft, ponovni pokušaji, pričuvna opcija).
 - `record()` samo dodaje u ograničeni međuspremnik (O(1)); pozadinski vremenski
   okidač asinkrono šalje sadržaj putem `POST {endpoint}/v1/traces`. Pri preopterećenju
@@ -261,7 +260,7 @@ Datoteke: `open-sse/services/routing/otel.ts`
 
 ## 6. Integracija evaluacijske ravnine (spremnost za Future AGI)
 
-OmniRoute tretira Future AGI (ili bilo koji evaluator) kao **potencijalnu
+67router tretira Future AGI (ili bilo koji evaluator) kao **potencijalnu
 pozadinsku uslugu za inteligenciju/evaluaciju, a ne kao ovisnost**. Točke integracije:
 
 - `RoutingEventSink` može asinkrono prosljeđivati događaje evaluatoru.
@@ -270,8 +269,6 @@ pozadinsku uslugu za inteligenciju/evaluaciju, a ne kao ovisnost**. Točke integ
 - Budući `Evaluator` (deterministički, lokalni procjenjivač, HTTP, WASM) obrađivao bi
   događaje/tragove i vraćao `QualityScore` koji se prosljeđuje u istu
   putanju `getQualityScore`/faktora kvalitete.
-- Postojeće usmjeravanje vođeno evaluacijom (`open-sse/services/evalRouting.ts`) već
-  mijenja redoslijed ciljeva kombinacije prema stopama prolaznosti iz `eval_runs` kada je omogućeno.
 
 Nijedna se evaluacija ne izvršava sinkrono na putanji zahtjeva, a pristupnik radi
 u potpunosti i bez evaluatora.

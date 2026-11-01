@@ -108,7 +108,7 @@ test.after(async () => {
   }
 });
 
-test("quota-share: 403 quota_exhausted → NO wait, error propagated immediately", async () => {
+test("fill-first: 403 quota_exhausted → NO wait, error propagated immediately", async () => {
   let calls = 0;
   const handleSingleModel = async () => {
     calls += 1;
@@ -118,7 +118,7 @@ test("quota-share: 403 quota_exhausted → NO wait, error propagated immediately
   const startedAt = Date.now();
   const res = await handleComboChat({
     body: { model: "openai/gpt-4" },
-    combo: comboOf("quota-share"),
+    combo: comboOf("fill-first"),
     handleSingleModel,
     isModelAvailable: async () => true,
     log: createLog() as never,

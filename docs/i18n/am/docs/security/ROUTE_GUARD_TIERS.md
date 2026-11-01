@@ -6,7 +6,7 @@
 
 ## አጠቃላይ እይታ
 
-ሁሉም የOmniRoute አስተዳደር API መስመሮች ከሦስት የጥበቃ ደረጃዎች በአንዱ ይመደባሉ። ምደባው የማይለወጥ ሲሆን፣ በ`src/server/authz/routeGuard.ts` ውስጥ የተገለጸ እና ማንኛውም ሌላ የማረጋገጫ ቅርንጫፍ ከመሄዱ በፊት የሚገመገም ነው።
+ሁሉም የ67router አስተዳደር API መስመሮች ከሦስት የጥበቃ ደረጃዎች በአንዱ ይመደባሉ። ምደባው የማይለወጥ ሲሆን፣ በ`src/server/authz/routeGuard.ts` ውስጥ የተገለጸ እና ማንኛውም ሌላ የማረጋገጫ ቅርንጫፍ ከመሄዱ በፊት የሚገመገም ነው።
 
 ## ደረጃዎች
 
@@ -26,9 +26,9 @@ API key ሲይዝ፣ በ`LOCAL_ONLY_MANAGE_SCOPE_BYPASS_PREFIXES` ውስጥ ላ�
 **GHSA-fhh6-4qxv-rpqj ምንድን ነው (የጥቃቱ class)፦** አንድ management/agent server
 subprocess (`npm install`፣ `node`፣ browser፣
 proxy፣ `git`፣ `tar`፣ …) የሚያስነሳ endpoint ያጋልጣል። ያ endpoint ከhost ውጭ ሊደረስበት የሚችል ከሆነ — ምክንያቱም
-operator OmniRouteን ከnginx/Cloudflare/Tailscale tunnel ጀርባ አድርጎታል እና JWT
+operator 67routerን ከnginx/Cloudflare/Tailscale tunnel ጀርባ አድርጎታል እና JWT
 leak ሆኗል፣ ወይም auth በተሳሳተ ሁኔታ ተዋቅሯል — አጥቂው "API መጥራት"ን ወደ "በhost ላይ
-command ማስኬድ" (remote code execution) ይቀይረዋል። OmniRoute ይህን የሚከለክለው spawn ማድረግ በሚችል እያንዳንዱ
+command ማስኬድ" (remote code execution) ይቀይረዋል። 67router ይህን የሚከለክለው spawn ማድረግ በሚችል እያንዳንዱ
 route ላይ **ምንም ሁኔታ ሳይኖርበት፣ ከማንኛውም auth ማረጋገጫ በፊት የloopback host ማረጋገጫን በማስፈጸም** ነው፦
 በtunnel ላይ leak የሆነ token እንኳን spawn የሚያስነሳበትን መድረስ አይችልም።
 
@@ -56,7 +56,6 @@ route ላይ **ምንም ሁኔታ ሳይኖርበት፣ ከማንኛውም auth
 | `/api/tools/traffic-inspector/`                                                                          | Traffic Inspector — http-proxy listener + system proxy                                                |
 | `/api/settings/mitm`                                                                                     | MITM interceptionን ያነቃል (የsystem-ደረጃ proxy ሁኔታ)                                                       |
 | `/api/issue-agent/`                                                                                      | የIssue agent — በrepo ላይ አካባቢያዊ toolingን ያስነሳል                                                         |
-| `/api/plugins/`, `/api/plugins`                                                                          | Plugins — በ`worker_threads` + `child_process` ይጫናሉ/ይፈጸማሉ                                              |
 | `/api/middleware/`                                                                                       | የተጠቃሚ middleware — የoperator ኮድን በprocess ውስጥ ይጭናል/ያስፈጽማል                                             |
 | `/api/system/version`                                                                                    | ራስ-ሰር ማዘመን (POST ብቻ፤ GET/HEAD/OPTIONS ነጻ ናቸው) — `git checkout` + `npm install` ያስነሳል                  |
 | `/api/db-backups/exportAll`                                                                              | ለexport archive `tar`ን ያስነሳል                                                                          |
@@ -120,7 +119,7 @@ bypass prefix ጨምሮ)፣ እና ሆን ተብሎ ከ`MANAGEMENT_API_KEY_SCOPE
 
 #### የኦፕሬተር መመሪያ እና ኦዲት
 
-OmniRouteን ከreverse proxy ወይም tunnel (nginx፣ Caddy፣ Cloudflare
+67routerን ከreverse proxy ወይም tunnel (nginx፣ Caddy፣ Cloudflare
 Tunnel፣ Tailscale፣ Ngrok) በስተጀርባ ብታስኬዱት፣ የloopback ማረጋገጫው
 አሁንም ከላይ ያሉትን ማስነሳት የሚችሉ routes ይጠብቃል — የclient
 address ከloopback ውጭ የሆነ ጥያቄ **ማንነት ማረጋገጫው ከመከናወኑ
@@ -162,7 +161,7 @@ address ከloopback ውጭ የሆነ ጥያቄ **ማንነት ማረጋገጫው
   ከላይ ላሉት prefixes grep ያድርጉ። `403 LOCAL_ONLY` ፈንታ `200`ን የመለሰ
   ማንኛውም እንዲህ ያለ hit proxyው እውነተኛውን የደንበኛ IP እየደበቀ ነው ማለት ነው —
   proxyውን ያስተካክሉ።
-- ከእነዚህ paths ለአንዱ በOmniRoute logs ውስጥ ያለ `403 LOCAL_ONLY`፣ guardው
+- ከእነዚህ paths ለአንዱ በ67router logs ውስጥ ያለ `403 LOCAL_ONLY`፣ guardው
   እንደታሰበው እየሠራ መሆኑን ያሳያል፤ ሊታፈን የሚገባ ስህተት አይደለም።
 
 #### ከሩቅ ተደራሽ የሆኑ፣ call-site probe gate ያላቸው መንገዶች

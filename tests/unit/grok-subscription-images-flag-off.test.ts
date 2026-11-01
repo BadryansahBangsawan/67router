@@ -7,8 +7,6 @@ import { join } from "node:path";
 process.env.DATA_DIR ??= mkdtempSync(join(tmpdir(), "omniroute-grok-images-off-"));
 delete process.env.GROK_SUBSCRIPTION_IMAGES_ENABLED;
 
-const { buildXaiImageRequest } =
-  await import("../../open-sse/handlers/imageGeneration/providers/xaiImage.ts");
 const { getAllImageModels, getImageProvider, parseImageModel } =
   await import("../../open-sse/config/imageRegistry.ts");
 const { FEATURE_FLAG_DEFINITIONS } =
@@ -31,7 +29,7 @@ test("GROK_SUBSCRIPTION_IMAGES_ENABLED defaults to false and does not flip PII d
   }
 });
 
-test("flag off hides xai-oauth/xao and does not map high/hd quality to medium", () => {
+test("flag off hides xai-oauth/xao from the image registry", () => {
   assert.equal(getImageProvider("xai-oauth"), null);
   assert.equal(getImageProvider("xao"), null);
   assert.equal(getImageProvider("grok-cli"), null);
@@ -56,10 +54,4 @@ test("flag off hides xai-oauth/xao and does not map high/hd quality to medium", 
     ["grok-imagine-image-quality", "grok-imagine-image"]
   );
   assert.deepEqual(xai?.supportedSizes, ["1024x1024", "2048x2048"]);
-
-  for (const quality of ["high", "hd"]) {
-    const result = buildXaiImageRequest(model, { prompt: "A chef preparing pho", quality });
-    assert.equal(result.success, true);
-    if (result.success) assert.equal(result.body.quality, quality);
-  }
 });

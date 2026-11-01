@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Português (Portugal))
+# Providers Guide: Connect AI Models to 67router (Português (Portugal))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Resumindo**: um fornecedor é uma ligação a um serviço de IA (como OpenAI, Anthropic ou Google). Precisa de pelo menos um fornecedor para utilizar o OmniRoute.
+> **Resumindo**: um fornecedor é uma ligação a um serviço de IA (como OpenAI, Anthropic ou Google). Precisa de pelo menos um fornecedor para utilizar o 67router.
 
 ---
 
 ## O que é um fornecedor?
 
-Pense num fornecedor como uma **operadora de telecomunicações**. Tal como precisa de uma operadora para fazer chamadas, precisa de um fornecedor de IA para utilizar modelos de IA. O OmniRoute é como um telemóvel que funciona com **todas as operadoras** — pode alternar automaticamente entre elas.
+Pense num fornecedor como uma **operadora de telecomunicações**. Tal como precisa de uma operadora para fazer chamadas, precisa de um fornecedor de IA para utilizar modelos de IA. O 67router é como um telemóvel que funciona com **todas as operadoras** — pode alternar automaticamente entre elas.
 
 ### Tipos de fornecedores
 
@@ -30,7 +30,7 @@ Consulte **[WEB-COOKIE-GUIDE.md](./WEB-COOKIE-GUIDE.md)** para obter instruçõe
 
 ### Configuração opcional de fornecedores gratuitos na primeira execução
 
-O assistente da primeira execução apresenta um cartão explícito **Configurar fornecedores gratuitos**. Este obtém a lista atual de fornecedores elegíveis a partir do registo de fornecedores sem autenticação do OmniRoute e permite-lhe rever e desmarcar cada fornecedor antes de confirmar. O OmniRoute apresenta o aviso de precaução do fornecedor e uma ligação para o respetivo site, para que possa primeiro analisar os termos, a privacidade, a disponibilidade e os limites de utilização de terceiros.
+O assistente da primeira execução apresenta um cartão explícito **Configurar fornecedores gratuitos**. Este obtém a lista atual de fornecedores elegíveis a partir do registo de fornecedores sem autenticação do 67router e permite-lhe rever e desmarcar cada fornecedor antes de confirmar. O 67router apresenta o aviso de precaução do fornecedor e uma ligação para o respetivo site, para que possa primeiro analisar os termos, a privacidade, a disponibilidade e os limites de utilização de terceiros.
 
 Esta ação é opcional: concluir o assistente nunca cria silenciosamente ligações a fornecedores gratuitos. Cria apenas os fornecedores que ainda estão em falta, mantém inalteradas as ligações existentes personalizadas e comunica individualmente os fornecedores criados, já configurados e com falhas. Após um resultado parcial, pode voltar a tentar apenas os que falharam em segurança.
 
@@ -74,7 +74,7 @@ Esta ação é opcional: concluir o assistente nunca cria silenciosamente ligaç
 
 ### Opção D: Modelos MLX Locais (Apple Silicon)
 
-Para Macs com Apple Silicon e memória unificada, o OmniRoute permite estabelecer ligação a modelos MLX locais em execução através de `mlx-lm.server` como fornecedores locais normais compatíveis com a OpenAI.
+Para Macs com Apple Silicon e memória unificada, o 67router permite estabelecer ligação a modelos MLX locais em execução através de `mlx-lm.server` como fornecedores locais normais compatíveis com a OpenAI.
 
 #### Pré-requisitos
 
@@ -104,14 +104,14 @@ Para Macs com Apple Silicon e memória unificada, o OmniRoute permite estabelece
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Estabeleça ligação no Painel de Controlo do OmniRoute**:
+3. **Estabeleça ligação no Painel de Controlo do 67router**:
    - Aceda a **Fornecedores** → **Adicionar Fornecedor**
    - Selecione **MLX Gemma 26B** ou **MLX Qwen 3.8 27B**
    - Clique em **Ligar** (não requer chave de API)
 
 4. **Utilize com o OpenCode**:
    ```bash
-   # Configure o OpenCode para utilizar o OmniRoute
+   # Configure o OpenCode para utilizar o 67router
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@ Tem de gerir esta situação manualmente:
 - Execute ambos em máquinas separadas, ou
 - Pare um antes de iniciar o outro
 
-O OmniRoute não gere automaticamente os processos dos servidores MLX — apenas encaminha os pedidos para os endpoints compatíveis com a OpenAI que configurar.
+O 67router não gere automaticamente os processos dos servidores MLX — apenas encaminha os pedidos para os endpoints compatíveis com a OpenAI que configurar.
 
 #### Suporte para Chamadas de Ferramentas
 
@@ -152,13 +152,13 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 #### Resolução de Problemas
 
-| Problema                       | Solução                                                                                                               |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| O servidor não inicia          | Consulte `uv run mlx_lm.server --help` e verifique os IDs dos modelos                                                 |
-| Memória insuficiente           | Certifique-se de que apenas um modelo está em execução; feche outras aplicações; consulte o Monitor de Atividade      |
-| Ligação recusada               | Verifique se o servidor está em execução na porta correta (11435/11436)                                               |
-| Respostas lentas               | O primeiro pedido carrega o modelo para a memória (~30-60 s); os pedidos seguintes são rápidos                        |
-| A chamada de ferramentas falha | Certifique-se de que o modelo suporta ferramentas; consulte os registos do OmniRoute para verificar erros de tradução |
+| Problema                       | Solução                                                                                                              |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| O servidor não inicia          | Consulte `uv run mlx_lm.server --help` e verifique os IDs dos modelos                                                |
+| Memória insuficiente           | Certifique-se de que apenas um modelo está em execução; feche outras aplicações; consulte o Monitor de Atividade     |
+| Ligação recusada               | Verifique se o servidor está em execução na porta correta (11435/11436)                                              |
+| Respostas lentas               | O primeiro pedido carrega o modelo para a memória (~30-60 s); os pedidos seguintes são rápidos                       |
+| A chamada de ferramentas falha | Certifique-se de que o modelo suporta ferramentas; consulte os registos do 67router para verificar erros de tradução |
 
 ---
 
@@ -230,12 +230,12 @@ O seu fornecedor está agora ligado. Pode utilizá-lo com `model: "auto"` ou esp
 
 ## Utilizar vários fornecedores
 
-O OmniRoute funciona melhor com **vários fornecedores**. Isto proporciona-lhe:
+O 67router funciona melhor com **vários fornecedores**. Isto proporciona-lhe:
 
-- **Alternativa automática** — Se um fornecedor falhar, o OmniRoute tenta o seguinte
-- **Otimização de custos** — O OmniRoute escolhe o fornecedor mais barato para cada pedido
-- **Otimização da velocidade** — O OmniRoute escolhe o fornecedor mais rápido para cada pedido
-- **Otimização da qualidade** — O OmniRoute escolhe o melhor fornecedor para cada tarefa
+- **Alternativa automática** — Se um fornecedor falhar, o 67router tenta o seguinte
+- **Otimização de custos** — O 67router escolhe o fornecedor mais barato para cada pedido
+- **Otimização da velocidade** — O 67router escolhe o fornecedor mais rápido para cada pedido
+- **Otimização da qualidade** — O 67router escolhe o melhor fornecedor para cada tarefa
 
 ### Configuração recomendada
 
@@ -245,7 +245,7 @@ Ligue pelo menos **3 fornecedores** para obter a melhor experiência:
 2. **Um fornecedor rápido** (Groq, Cerebras) — Para respostas rápidas
 3. **Um fornecedor de qualidade** (OpenAI, Anthropic, Google) — Para tarefas complexas
 
-Em seguida, utilize `model: "auto"` e o OmniRoute escolherá automaticamente o melhor fornecedor para cada pedido.
+Em seguida, utilize `model: "auto"` e o 67router escolherá automaticamente o melhor fornecedor para cada pedido.
 
 ---
 
@@ -254,25 +254,25 @@ Em seguida, utilize `model: "auto"` e o OmniRoute escolherá automaticamente o m
 ### OpenAI
 
 1. Obtenha a chave de API: https://platform.openai.com/api-keys
-2. No OmniRoute: Fornecedores → Adicionar fornecedor → OpenAI
+2. No 67router: Fornecedores → Adicionar fornecedor → OpenAI
 3. Cole a chave de API → Ligar
 
 ### Anthropic
 
 1. Obtenha a chave de API: https://console.anthropic.com/
-2. No OmniRoute: Fornecedores → Adicionar fornecedor → Anthropic
+2. No 67router: Fornecedores → Adicionar fornecedor → Anthropic
 3. Cole a chave de API → Ligar
 
 ### Google (Gemini)
 
 1. Obtenha a chave de API: https://aistudio.google.com/apikey
-2. No OmniRoute: Fornecedores → Adicionar fornecedor → Gemini
+2. No 67router: Fornecedores → Adicionar fornecedor → Gemini
 3. Cole a chave de API → Ligar
 
 ### DeepSeek
 
 1. Obtenha a chave de API: https://platform.deepseek.com/
-2. No OmniRoute: Fornecedores → Adicionar fornecedor → DeepSeek
+2. No 67router: Fornecedores → Adicionar fornecedor → DeepSeek
 3. Cole a chave de API → Ligar
 
 ### Qoder: escolha o transporte de credenciais
@@ -280,12 +280,12 @@ Em seguida, utilize `model: "auto"` e o OmniRoute escolherá automaticamente o m
 O Qoder requer credenciais. Os seus dois transportes têm capacidades diferentes; o nome de um modelo
 por si só não identifica o que uma determinada ligação consegue fazer.
 
-| Credencial                                       | Transporte do OmniRoute                             | Chamadas de ferramentas pelo cliente              | Streaming                                                                  |
-| ------------------------------------------------ | --------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------- |
-| PAT começando por `pt-`                          | Processo `qodercli` local no anfitrião do OmniRoute | Não suportadas                                    | Em buffer: o SSE só é emitido depois de a CLI devolver a resposta completa |
-| Token de acesso que não seja PAT ou chave de API | Endpoint HTTP compatível com OpenAI do DashScope    | Encaminhadas, sujeitas ao modelo/chave a montante | Caminho HTTP/SSE a montante                                                |
+| Credencial                                       | Transporte do 67router                             | Chamadas de ferramentas pelo cliente              | Streaming                                                                  |
+| ------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------- |
+| PAT começando por `pt-`                          | Processo `qodercli` local no anfitrião do 67router | Não suportadas                                    | Em buffer: o SSE só é emitido depois de a CLI devolver a resposta completa |
+| Token de acesso que não seja PAT ou chave de API | Endpoint HTTP compatível com OpenAI do DashScope   | Encaminhadas, sujeitas ao modelo/chave a montante | Caminho HTTP/SSE a montante                                                |
 
-Para uma PAT, instale a CLI do Qoder no mesmo anfitrião ou contentor que o OmniRoute. O executável
+Para uma PAT, instale a CLI do Qoder no mesmo anfitrião ou contentor que o 67router. O executável
 tem de poder ser encontrado como `qodercli`; em alternativa, defina `CLI_QODER_BIN` como o respetivo caminho. Uma CLI
 instalada apenas no anfitrião do Docker não fica automaticamente disponível no contentor. A ausência
 dos binários produz um erro explícito que indica a instalação ou a definição do caminho.
@@ -318,16 +318,16 @@ e um tempo limite configurável são melhorias separadas; este comportamento nã
 ### Groq
 
 1. Obtenha a chave de API: https://console.groq.com/
-2. No OmniRoute: Fornecedores → Adicionar fornecedor → Groq
+2. No 67router: Fornecedores → Adicionar fornecedor → Groq
 3. Cole a chave de API → Ligar
 
 ---
 
 ## Perguntas frequentes
 
-### "Preciso de pagar para utilizar o OmniRoute?"
+### "Preciso de pagar para utilizar o 67router?"
 
-**Não!** O OmniRoute é gratuito e de código aberto. Pode utilizar fornecedores gratuitos (Kiro, Pollinations) sem pagar nada. Só paga se optar por utilizar fornecedores pagos.
+**Não!** O 67router é gratuito e de código aberto. Pode utilizar fornecedores gratuitos (Kiro, Pollinations) sem pagar nada. Só paga se optar por utilizar fornecedores pagos.
 
 ### "Com que fornecedor devo começar?"
 
@@ -335,11 +335,11 @@ Comece pelo **Kiro AI** — é gratuito, não requer uma chave de API e dá-lhe 
 
 ### "Posso utilizar vários fornecedores ao mesmo tempo?"
 
-**Sim!** Esse é o principal objetivo do OmniRoute. Ligue vários fornecedores e utilize `model: "auto"` para permitir que o OmniRoute escolha o melhor para cada pedido.
+**Sim!** Esse é o principal objetivo do 67router. Ligue vários fornecedores e utilize `model: "auto"` para permitir que o 67router escolha o melhor para cada pedido.
 
 ### "E se um fornecedor ficar indisponível?"
 
-O OmniRoute ignora automaticamente os fornecedores que falharem e tenta o seguinte. Não precisa de fazer nada.
+O 67router ignora automaticamente os fornecedores que falharem e tenta o seguinte. Não precisa de fazer nada.
 
 ### "Como desligo um fornecedor?"
 
@@ -347,17 +347,13 @@ Aceda a Fornecedores → clique no fornecedor → clique em **Desligar**.
 
 ### "Posso utilizar as minhas chaves de API existentes?"
 
-**Sim!** Se já tiver chaves de API para a OpenAI, Anthropic, Google, etc., pode utilizá-las no OmniRoute. Basta colá-las ao ligar o fornecedor.
+**Sim!** Se já tiver chaves de API para a OpenAI, Anthropic, Google, etc., pode utilizá-las no 67router. Basta colá-las ao ligar o fornecedor.
 
 ---
 
 ## O que se segue?
 
-- **[Guia de combinação automática](./AUTO-COMBO-GUIDE.md)** — Deixe o OmniRoute escolher a melhor IA para si
+- **[Guia de combinação automática](./AUTO-COMBO-GUIDE.md)** — Deixe o 67router escolher a melhor IA para si
 - **[Guia dos níveis gratuitos](./FREE-TIERS-GUIDE.md)** — Obtenha IA gratuita sem cartão de crédito
 - **[Resolução de problemas](../guides/TROUBLESHOOTING.md)** — Resolva problemas comuns
 - **[Referência de fornecedores](../reference/PROVIDER_REFERENCE.md)** — Lista completa de 226 fornecedores
-
-## Imagens do Cursor
-
-As imagens do plano Cursor utilizam `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`). Consulte [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

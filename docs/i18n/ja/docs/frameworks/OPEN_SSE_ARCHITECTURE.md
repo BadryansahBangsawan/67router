@@ -4,7 +4,7 @@
 
 ---
 
-> **要約**: `open-sse/` は、OmniRoute におけるすべての LLM リクエストを支える中核ストリーミングエンジンです。リクエストパイプライン、エグゼキューター、サービス、MCP サーバー、変換レイヤーを実装する約1,400個のファイルで構成されています。このガイドでは、各要素がどのように連携するかを説明します。
+> **要約**: `open-sse/` は、67router におけるすべての LLM リクエストを支える中核ストリーミングエンジンです。リクエストパイプライン、エグゼキューター、サービス、MCP サーバー、変換レイヤーを実装する約1,400個のファイルで構成されています。このガイドでは、各要素がどのように連携するかを説明します。
 
 **ソース:** `open-sse/`（ワークスペースパッケージ、テスト以外の `.ts` ファイル約1,440個）
 
@@ -12,10 +12,10 @@
 
 ## ワークスペースパッケージを分離する理由
 
-`open-sse/` は、以下の理由により OmniRoute モノレポ内の**独立したワークスペース**となっています。
+`open-sse/` は、以下の理由により 67router モノレポ内の**独立したワークスペース**となっています。
 
 1. **再利用性** — `open-sse` は npm で `@omniroute/open-sse` として公開されているため、他のプロジェクトでも独立して使用できます
-2. **明確な境界** — ストリーミングエンジンが OmniRoute 固有の UI/DB レイヤーから分離されています
+2. **明確な境界** — ストリーミングエンジンが 67router 固有の UI/DB レイヤーから分離されています
 3. **パフォーマンス** — エンジンは Next.js に依存しないため、CLI/サーバーレス環境でのコールドスタートが高速になります
 4. **バージョニング** — `open-sse` は独自のサイクルでリリースできます
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### トランスフォーマーを分離する理由
 
-Responses API は、**ステートフルな会話**（`previous_response_id`）に対応した OpenAI の新しい形式です。クライアントが Responses リクエストを送信すると、OmniRoute は次の処理を行います：
+Responses API は、**ステートフルな会話**（`previous_response_id`）に対応した OpenAI の新しい形式です。クライアントが Responses リクエストを送信すると、67router は次の処理を行います：
 
 1. 内部で Responses → Chat Completions に変換
 2. プロバイダー（Chat Completions をサポートする任意のプロバイダー）に送信
@@ -573,5 +573,4 @@ interface ProviderConfig {
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — ディレクトリごとの説明
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — 16要素スコアリング
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCPサーバー
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2Aサーバー
 - ソース：`open-sse/`（400以上のファイル、約143K LOC）

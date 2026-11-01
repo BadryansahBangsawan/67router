@@ -4,7 +4,7 @@
 
 ---
 
-Mee ka `omniroute` CLI rụọ ọrụ na laptọọpụ gị ebe OmniRoute n’onwe ya na-arụ ọrụ n’ebe ọzọ
+Mee ka `omniroute` CLI rụọ ọrụ na laptọọpụ gị ebe 67router n’onwe ya na-arụ ọrụ n’ebe ọzọ
 (VPS, sava ụlọ, ma ọ bụ kọmputa ọzọ dị na Tailnet gị). Ị ga-eji
 `omniroute connect` banye otu ugboro, site mgbe ahụ gaa n’ihu, **iwu CLI niile** ga-elekwasị anya na sava ahụ dịpụrụ adịpụ
 — otu iwu ahụ, otu nsonaazụ ahụ, naanị na a na-eme ya megide sava ahụ dịpụrụ adịpụ.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← na-edepụta profaịlụ Codex n
 ## Otu o si arụ ọrụ
 
 ```
-laptọọpụ gị                              OmniRoute dịpụrụ adịpụ (VPS)
+laptọọpụ gị                              67router dịpụrụ adịpụ (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  (okwuntughe → token)       │
 │  context: vps      │ ───────────────►  │ na-emepụta access token nwere  │
@@ -108,14 +108,14 @@ sava, ọ bụghị na kọmputa gị, ya mere ihuenyo nkwenye ahụ **na-anọg
 mgbe ebighị ebi ma ọ naghị ewepụta koodu** — usoro ndabere a na-emebu nke “mado URL
 callback” enweghị ihe ọ bụla a ga-amado. (Nke a bụ mmachi sitere n'akụkụ Google:
 otu nkwụsị ahụ na-eme na proxy ọ bụla na-eji Antigravity desktop client e tinyere
-n'ime ya, ọ bụghị naanị OmniRoute.)
+n'ime ya, ọ bụghị naanị 67router.)
 
 Dashboard na-achọpụta nke a tupu ịrapara: imepe **Providers → Antigravity →
 Connect** site na adreesị na-abụghị localhost na-eji ụzọ ngwọta abụọ dị n'okpuru
 dochie ọkwa izugbe “detuo URL callback”, ebe e tinyelarị host na port gị na nke ọ bụla.
 (Adreesị LAN sokwa — `192.168.x.x` abụghị localhost n'ihe gbasara callback a.)
 
-E nwere ụzọ abụọ akwadoro iji jikọọ Antigravity na OmniRoute dịpụrụ adịpụ.
+E nwere ụzọ abụọ akwadoro iji jikọọ Antigravity na 67router dịpụrụ adịpụ.
 
 ### Nhọrọ A — ihe enyemaka nbanye mpaghara (a tụrụ aro)
 
@@ -153,7 +153,7 @@ npx omniroute login antigravity --no-push
 
 Mgbe ahụ, na dashboard **dịpụrụ adịpụ**: **Providers → Antigravity → Connect**, ma
 mado blob `omniroute-cred-v1.…` n'ime mpaghara **Nzọụkwụ 2** (ọ na-anabata ma URL
-callback ma ọ bụ credential blob). OmniRoute na-eme decode ya, na-agba Cloud Code
+callback ma ọ bụ credential blob). 67router na-eme decode ya, na-agba Cloud Code
 onboarding n'akụkụ sava, ma na-echekwa njikọ ahụ.
 
 > Blob ahụ nwere refresh token — were ya dịka okwuntughe. N'ụzọ push, a na-eziga ya
@@ -194,7 +194,7 @@ enweghị provider-specific port nke abụọ a ga-etinye na tunnel.
 ## Ijikọta Codex / Grok na nrụnye dịpụrụ adịpụ (ndị na-eweta nwere loopback a kapịrị ọnụ)
 
 Codex, xAI (`xai-oauth`) na Grok CLI (`grok-cli`) na-edebanye **adreesị loopback a kapịrị ọnụ**
-`redirect_uri` n’ngwa OAuth ha dị n’elu. OmniRoute enweghị ike ịgbanwe ya — onye
+`redirect_uri` n’ngwa OAuth ha dị n’elu. 67router enweghị ike ịgbanwe ya — onye
 na-eweta na-ezighachi ihe nchọgharị mgbe niile n’otu adreesị ahụ e tinyere kpọmkwem:
 
 | Onye na-eweta | Callback a kapịrị ọnụ onye na-eweta na-ezigara ya |
@@ -204,7 +204,7 @@ na-eweta na-ezighachi ihe nchọgharị mgbe niile n’otu adreesị ahụ e tin
 | `grok-cli`    | `http://127.0.0.1:56122/callback`                 |
 
 `localhost` dị ebe ahụ pụtara **igwe na-agba ihe nchọgharị**, ebe sava callback PKCE nke
-OmniRoute na-ege ntị na loopback nke **sava ahụ**. Mepee ogwe njikwa na adreesị LAN
+67router na-ege ntị na loopback nke **sava ahụ**. Mepee ogwe njikwa na adreesị LAN
 dị ka `http://192.168.0.15:20128`, ha abụọ agaghị ezute: a na-ebuga koodu ikike
 na `localhost:1455` nke laptọọpụ gị, ebe ọ dịghị ihe na-ege ntị,
 onye na-ewetakwa agaghị enwe ike ịbanye n’egosighị njehie.
@@ -223,7 +223,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 A chọrọ ntụgharị abụọ, ma ntụgharị naanị otu ka ga-ada:
 
 - **`20128`** (ọdụ ụgbọ mmiri ogwe njikwa) na-eme ka origin bụrụ localhost n’ezie, nke bụ ihe
-  na-eme ka OmniRoute malite sava callback PKCE ma ọlị — origin LAN anaghị
+  na-eme ka 67router malite sava callback PKCE ma ọlị — origin LAN anaghị
   eru ngalaba ahụ.
 - **`1455`** (ọdụ ụgbọ mmiri callback a kapịrị ọnụ nke onye na-eweta) bụ ebe a na-ezighachi ihe nchọgharị
   na ya; ọ ga-agafe n’ime tunnel ruo loopback nke sava ahụ.
@@ -339,7 +339,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

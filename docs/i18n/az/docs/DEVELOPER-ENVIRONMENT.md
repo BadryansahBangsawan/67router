@@ -4,7 +4,7 @@
 
 ---
 
-Bu səhifə OmniRoute-u hazırlayarkən layihənin lokal `.env` davranışını, mühit faylları və məxfi məlumatlarla necə işləməyi izah edir.
+Bu səhifə 67router-u hazırlayarkən layihənin lokal `.env` davranışını, mühit faylları və məxfi məlumatlarla necə işləməyi izah edir.
 
 ## .env postinstall davranışı
 

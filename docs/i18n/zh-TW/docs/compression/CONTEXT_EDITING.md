@@ -4,13 +4,13 @@
 
 ---
 
-委派式 **內容編輯（Context Editing）** 是 Claude 專用的上下文管理功能。不同於 OmniRoute 的本機
+委派式 **內容編輯（Context Editing）** 是 Claude 專用的上下文管理功能。不同於 67router 的本機
 壓縮引擎（Caveman、RTK、LLMLingua、堆疊式管線）會在請求本文離開代理伺服器
 _之前_ 重寫它，內容編輯會要求**提供者**從其自身持續運作的上下文視窗中清除過時的
-工具使用／工具結果區塊。OmniRoute 只會附加一個本文參數
+工具使用／工具結果區塊。67router 只會附加一個本文參數
 （`context_management.edits[]`）；Claude 會依據自己的 tokenizer 實際執行清除。
 
-這項功能本質上是委派式能力：其他提供者會拒絕該參數，因此 OmniRoute 嚴格將其範圍限定於
+這項功能本質上是委派式能力：其他提供者會拒絕該參數，因此 67router 嚴格將其範圍限定於
 Claude 及相容於 Claude Code 的中繼服務。
 
 權威來源：`open-sse/config/contextEditing.ts`（策略 ID、本文注入、遙測
@@ -19,7 +19,7 @@ Claude 及相容於 Claude Code 的中繼服務。
 
 ## `clear_tool_uses` 的作用
 
-OmniRoute 會將單一編輯項目注入外送的 Anthropic Messages 本文中：
+67router 會將單一編輯項目注入外送的 Anthropic Messages 本文中：
 
 ```json
 {
@@ -42,11 +42,11 @@ OmniRoute 會將單一編輯項目注入外送的 Anthropic Messages 本文中�
   （`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`）。
 
 此 beta 功能透過 `anthropic-beta: context-management-2025-06-27` 標頭宣告，
-OmniRoute 已會在 Claude 請求中送出此標頭。
+67router 已會在 Claude 請求中送出此標頭。
 
 注入由 `applyContextEditingToBody()` 執行，且具備**冪等性**：若本文中已存在
 `clear_tool_uses` 編輯項目（由先前的呼叫加入，或由用戶端提供），本文會保持原樣。
-如果也存在 `clear_thinking_20251015` 編輯項目，OmniRoute 會以穩定排序方式將
+如果也存在 `clear_thinking_20251015` 編輯項目，67router 會以穩定排序方式將
 `clear_thinking` 編輯項目移到最前面，因為 Anthropic 要求 `edits[]` 陣列中的
 `clear_thinking` 必須位於 `clear_tool_uses` 之前。
 
@@ -136,7 +136,7 @@ if (
 
 ## `applied_edits` 遙測
 
-在 Claude 回應後，OmniRoute 會記錄提供者實際清除了多少上下文。這**不會**以串流方式傳送，而是以盡力而為的方式從非串流回應主體中擷取，且絕不會影響回應（遙測失敗會被忽略）。
+在 Claude 回應後，67router 會記錄提供者實際清除了多少上下文。這**不會**以串流方式傳送，而是以盡力而為的方式從非串流回應主體中擷取，且絕不會影響回應（遙測失敗會被忽略）。
 
 - 擷取：`open-sse/config/contextEditing.ts` 中的 `extractContextEditingTelemetry(responseBody)`。
   它會在三個位置探查 `applied_edits`（用以防禦不同的回應結構）：
@@ -163,14 +163,14 @@ if (
 
 | 面向       | 本機引擎（Caveman / RTK / LLMLingua / stacked） | 委派式上下文編輯                            |
 | ---------- | ----------------------------------------------- | ------------------------------------------- |
-| 執行位置   | 在 OmniRoute 中，於請求離開代理伺服器之前       | 在提供者（Claude）中，於伺服器端執行        |
+| 執行位置   | 在 67router 中，於請求離開代理伺服器之前        | 在提供者（Claude）中，於伺服器端執行        |
 | 編輯內容   | 提示詞／上下文／工具結果文字                    | 舊的工具使用／工具結果區塊                  |
 | 提供者範圍 | 所有提供者                                      | 僅限 `claude` + `anthropic-compatible-cc-*` |
 | 開關       | 壓縮模式設定                                    | `contextEditing.enabled`                    |
 | 失敗模式   | 開放式失敗（使用原始文字）                      | 400 備援：移除參數，重試一次                |
 | 節省量遙測 | `engine: <engine id>`                           | `engine: "context-editing"`                 |
 
-兩者相輔相成：本機引擎會壓縮 OmniRoute 傳送的位元組；上下文編輯則讓
+兩者相輔相成：本機引擎會壓縮 67router 傳送的位元組；上下文編輯則讓
 Claude 能夠跨對話輪次修剪持續累積的上下文。兩者可以同時啟用。
 
 ## 另請參閱

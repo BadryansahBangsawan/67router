@@ -4,18 +4,18 @@
 
 ---
 
-Dwa sposoby na udostępnienie Cursor za pośrednictwem OmniRoute bez sesji IDE:
+Dwa sposoby na udostępnienie Cursor za pośrednictwem 67router bez sesji IDE:
 
 1. **Dostawca `cursor-api`** (karta „Cursor API”, alias `cua`): dostawca
    korzystający z klucza API użytkownika Cursor (`crsr_…`, wygenerowanego pod
-   adresem `https://cursor.com/dashboard/api`). Każdy klient OmniRoute może
+   adresem `https://cursor.com/dashboard/api`). Każdy klient 67router może
    następnie uzyskiwać dostęp do modeli Cursor przez `/v1/chat/completions` jako
    `cursor-api/<model>` lub `cua/<model>`, z zachowaniem standardowych warstw
    limitów, mechanizmów awaryjnych i rejestrowania. Dostawca IDE (`cursor`,
    sesja OAuth/IDE) pozostaje bez zmian.
 2. **Przekazywanie żądań Cursor CLI**: skonfiguruj Cursor CLI (`agent`) tak, aby
-   korzystał z OmniRoute, dzięki czemu każde wywołanie RPC wykonywane przez CLI
-   będzie uwierzytelniane kluczem API OmniRoute, przekazywane do Cursor przy
+   korzystał z 67router, dzięki czemu każde wywołanie RPC wykonywane przez CLI
+   będzie uwierzytelniane kluczem API 67router, przekazywane do Cursor przy
    użyciu danych uwierzytelniających połączenia `cursor-api` i rejestrowane na
    stronie Logs.
 
@@ -64,7 +64,7 @@ Uwagi:
 
 - Lista modeli dla `cursor-api` pochodzi ze statycznego rejestru Cursor (tej
   samej listy, której dostawca IDE używa awaryjnie); instalacja `cursor-agent`
-  na hoście OmniRoute nie jest wymagana.
+  na hoście 67router nie jest wymagana.
 - `POST /api/providers/{id}/refresh-cursor` jest przeznaczone wyłącznie dla
   dostawcy IDE `cursor`; połączenia `cursor-api` nie mają sesji IDE wymagającej
   odnowienia.
@@ -74,7 +74,7 @@ Uwagi:
 W przypadku `cursor` / `cu` oraz `cursor-api` / `cua` współdzielony normalizator
 poziomu wysiłku Claude pozostawia żądany identyfikator modelu bez zmian. Cursor
 może udostępniać sufiks taki jak `-low` jako część rzeczywistego identyfikatora
-modelu, a nie jako alias poziomu wysiłku OmniRoute. Wykonawca Cursor zachowuje
+modelu, a nie jako alias poziomu wysiłku 67router. Wykonawca Cursor zachowuje
 dokładne dopasowanie do aktywnego katalogu; jeśli nie ma dopasowania, jego
 istniejący mechanizm rozpoznawania modeli odpowiada za awaryjne przekształcenie
 sufiksu na parametr.
@@ -90,19 +90,19 @@ Trasa: `src/app/api/cursor-cli/[...path]/route.ts` →
 zarejestrowany w `src/shared/constants/publicApiRoutes.ts`, ponieważ handler
 samodzielnie wymusza uwierzytelnianie:
 
-| Ścieżka                                                                                                                        | Uwierzytelnianie oczekiwane od CLI | Działanie OmniRoute                                                                                                                                                                      |
+| Ścieżka                                                                                                                        | Uwierzytelnianie oczekiwane od CLI | Działanie 67router                                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <klucz API OmniRoute>`     | Weryfikuje klucz, generuje token JWT HS256 ważny przez 1 godz. (podpisany za pomocą `JWT_SECRET`) i zwraca go                                                                            |
+| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <klucz API 67router>`      | Weryfikuje klucz, generuje token JWT HS256 ważny przez 1 godz. (podpisany za pomocą `JWT_SECRET`) i zwraca go                                                                            |
 | każda inna ścieżka (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <ten token JWT>`           | Weryfikuje wystawcę, odbiorcę i datę wygaśnięcia, wybiera aktywne połączenie `cursor-api`, zastępuje nagłówek Authorization uzyskanym tokenem Cursor i strumieniuje odpowiedź z powrotem |
 
 CLI dekoduje pole `exp` z każdego otrzymanego tokenu, więc przekazanie mu
 nieprzezroczystego tokenu powoduje ponowną wymianę przed niemal każdym
 żądaniem; wygenerowany token JWT pozwala tego uniknąć. Odpowiedź 401 z
-OmniRoute powoduje, że CLI ponownie wykonuje wymianę.
+67router powoduje, że CLI ponownie wykonuje wymianę.
 
 ### Konfiguracja
 
-1. Utwórz klucz API OmniRoute (Panel → Klucze API) oraz połączenie
+1. Utwórz klucz API 67router (Panel → Klucze API) oraz połączenie
    `cursor-api`.
 2. Skonfiguruj CLI tak, aby używał HTTP/1.1 dla strumienia agenta. W pliku
    `~/.cursor/cli-config.json`:
@@ -115,7 +115,7 @@ OmniRoute powoduje, że CLI ponownie wykonuje wymianę.
    osobno skonfigurowanego hosta agenta, a przez ten punkt końcowy przechodzą
    jedynie wywołania RPC płaszczyzny sterowania.
 
-3. Uruchom CLI z OmniRoute jako punktem końcowym:
+3. Uruchom CLI z 67router jako punktem końcowym:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -125,17 +125,17 @@ OmniRoute powoduje, że CLI ponownie wykonuje wymianę.
 
 Każdy etap jest rejestrowany w Logach z dostawcą `cursor-api`, typem żądania
 `cursor-cli` i ścieżką `/api/cursor-cli/<rpc>`, a także przypisywany do klucza
-API OmniRoute oraz połączenia, które go obsłużyło.
+API 67router oraz połączenia, które go obsłużyło.
 
 ### Tryby awarii
 
-| Sytuacja                                          | Odpowiedź dla CLI                                              |
-| ------------------------------------------------- | -------------------------------------------------------------- |
-| Nieznany klucz OmniRoute i `REQUIRE_API_KEY=true` | 401 `unauthenticated` podczas wymiany                          |
-| `REQUIRE_API_KEY=false`                           | sesja anonimowa (analogicznie do zachowania `/v1/*`)           |
-| Wygasły / obcy / zmodyfikowany sesyjny token JWT  | 401, CLI ponownie wykonuje wymianę                             |
-| Klucz API OmniRoute unieważniony po wymianie      | 401 przy następnym wywołaniu RPC                               |
-| Brak aktywnego połączenia `cursor-api`            | 503 `unavailable`                                              |
-| Cursor odrzuca klucz połączenia                   | 401 `unauthenticated`, sesja w pamięci podręcznej jest usuwana |
-| Brak dostępu do usługi nadrzędnej                 | 502 `unavailable` (oczyszczony komunikat)                      |
-| Brak ustawienia `JWT_SECRET`                      | 503 podczas wymiany                                            |
+| Sytuacja                                         | Odpowiedź dla CLI                                              |
+| ------------------------------------------------ | -------------------------------------------------------------- |
+| Nieznany klucz 67router i `REQUIRE_API_KEY=true` | 401 `unauthenticated` podczas wymiany                          |
+| `REQUIRE_API_KEY=false`                          | sesja anonimowa (analogicznie do zachowania `/v1/*`)           |
+| Wygasły / obcy / zmodyfikowany sesyjny token JWT | 401, CLI ponownie wykonuje wymianę                             |
+| Klucz API 67router unieważniony po wymianie      | 401 przy następnym wywołaniu RPC                               |
+| Brak aktywnego połączenia `cursor-api`           | 503 `unavailable`                                              |
+| Cursor odrzuca klucz połączenia                  | 401 `unauthenticated`, sesja w pamięci podręcznej jest usuwana |
+| Brak dostępu do usługi nadrzędnej                | 502 `unavailable` (oczyszczony komunikat)                      |
+| Brak ustawienia `JWT_SECRET`                     | 503 podczas wymiany                                            |

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Il-magna tal-kompressjoni ta’ OmniRoute hija **modulari** — tista’ tirreġistra magni personalizzati, tqassam pakketti lingwistiċi għal lingwi ġodda, u tikkomponi pipelines f’munzelli. Din il-gwida turi kif.
+> **TL;DR**: Il-magna tal-kompressjoni ta’ 67router hija **modulari** — tista’ tirreġistra magni personalizzati, tqassam pakketti lingwistiċi għal lingwi ġodda, u tikkomponi pipelines f’munzelli. Din il-gwida turi kif.
 
 **Gwidi relatati:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # Fil-livell tal-proġett (jitgħabba waqt l-istartjar)
 ```
 
-Jew tellgħu b’mod programmatiku minn plugin:
+Or register it programmatically at startup:
 
 ```ts
-// Fil-plugin tiegħek
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // L-SDK tal-plugin jesponi l-hooks onRequest / onResponse / onError. Irreġistra l-
-  // engine meta jitgħabba l-modulu tal-plugin (jew mal-ewwel onRequest); neħħi r-reġistrazzjoni tiegħu
-  // mill-perkors tat-teardown tiegħek stess.
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// Waqt it-teardown:
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ fis-selettur tal-istrateġija permezz tal-`id` tiegħu. Ittestja l-integrazzjoni
 
 ## Il-Ħolqien ta’ Pakketti tal-Lingwa
 
-Il-kompressjoni stil **Caveman** tuża **pakketti ta’ regoli speċifiċi għal-lingwa** biex tittratta kliem tal-mili, espressjonijiet ta’ inċertezza, u mudelli verbose f’kull lingwa naturali. OmniRoute jiġi b’**6 pakketti tal-lingwa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
+Il-kompressjoni stil **Caveman** tuża **pakketti ta’ regoli speċifiċi għal-lingwa** biex tittratta kliem tal-mili, espressjonijiet ta’ inċertezza, u mudelli verbose f’kull lingwa naturali. 67router jiġi b’**6 pakketti tal-lingwa**: `en`, `es`, `fr`, `de`, `ja`, `pt-BR`.
 
 ### Struttura tal-Pakkett
 
@@ -391,7 +382,7 @@ L-output tal-magna N isir l-input tal-magna N+1.
 
 ### Modi ta' Kompressjoni
 
-OmniRoute jagħżel **MOD WIEĦED għal kull talba** abbażi tal-konfigurazzjoni, il-limiti ta' attivazzjoni awtomatika, u s-sostituzzjonijiet tal-combo.
+67router jagħżel **MOD WIEĦED għal kull talba** abbażi tal-konfigurazzjoni, il-limiti ta' attivazzjoni awtomatika, u s-sostituzzjonijiet tal-combo.
 Il-modi disponibbli huma ddefiniti f'`open-sse/services/compression/types.ts` (it-tip `CompressionMode`):
 
 | Mod          | Magni                  | Każ ta' użu                                                                                                                                                                                                                       |
@@ -511,10 +502,10 @@ Biex tikkontrollaha mill-konfigurazzjoni, issettja `mode: "stacked"` u pprovdi l
 
 ## Politika ta' Sinkronizzazzjoni mal-Upstream
 
-Il-magni tal-kompressjoni ta' OmniRoute jagħtu kreditu lil diversi proġetti upstream fir-README
+Il-magni tal-kompressjoni ta' 67router jagħtu kreditu lil diversi proġetti upstream fir-README
 ("ispirati minn RTK, Caveman, LLMLingua-2, Troglodita"). Mistoqsija komuni mill-kontributuri
 hija: **meta RTK upstream iżid filtru ġdid tal-għodod jew Caveman iżid pakkett ta'
-regoli, dan kif jasal f'OmniRoute?** Din it-taqsima hija t-tweġiba awtorevoli.
+regoli, dan kif jasal f'67router?** Din it-taqsima hija t-tweġiba awtorevoli.
 
 ### Kopji vendorizzati vs. implimentazzjonijiet indipendenti
 
@@ -535,7 +526,7 @@ l-ebda kopja upstream li tista' tinġibed permezz ta' `git pull` — u huwa prop
 **Ma hemm l-ebda traċċar awtomatizzat tar-rilaxxi upstream u l-ebda tikketta `compression-sync`
 ** — dan huwa intenzjonat. Minħabba li l-magni huma implimentazzjonijiet mill-ġdid, filtru RTK
 jew pakkett ta' regoli Caveman upstream ma jingħaqadx bħala kodiċi; minflok, jiġi **espress mill-ġdid bħala
-regola/filtru ġdid fil-format proprju ta' OmniRoute** (ara
+regola/filtru ġdid fil-format proprju ta' 67router** (ara
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)) u jiddaħħal ad hoc permezz
 ta' PR normali. Il-punti ta' estensjoni ta' hawn fuq (magna personalizzata, pakkett lingwistiku, filtru RTK)
 huma l-mod approvat biex tikkontribwixxi wieħed.
@@ -549,14 +540,14 @@ Eżempji reċenti ta' dan il-fluss preċiż:
 ### Headroom (proxy tal-kompressjoni tal-input)
 
 Headroom huwa **kompletament intern** — snapshot ippinjat u vendorizzat tal-codec `gcf` flimkien mas-saffi
-`smartcrusher` / `toon` / `tabular` proprji ta' OmniRoute. Ma hemm l-ebda
+`smartcrusher` / `toon` / `tabular` proprji ta' 67router. Ma hemm l-ebda
 upstream attiv x'jiġi traċċat lil hinn mill-kopja vendorizzata; l-aġġornamenti għal `gcf` jiġu aġġornati
 manwalment meta jinbidel il-codec u jerġgħu jiġu vvalidati mal-gate tal-baġit tal-kompressjoni
 (`check:compression-budget`).
 
 ### Kif tipproponi titjib ispirat mill-upstream
 
-1. **Tivvendorizzax** — esprimi mill-ġdid ir-regola/filtru upstream fil-format ta' OmniRoute.
+1. **Tivvendorizzax** — esprimi mill-ġdid ir-regola/filtru upstream fil-format ta' 67router.
 2. Żidu permezz tal-punt ta' estensjoni korrispondenti hawn taħt (pakkett lingwistiku, filtru RTK, jew
    magna personalizzata).
 3. Irreferi għall-proġett upstream fid-deskrizzjoni tal-PR (attribuzzjoni), mhux billi

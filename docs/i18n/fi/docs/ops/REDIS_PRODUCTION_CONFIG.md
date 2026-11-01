@@ -6,7 +6,7 @@
 
 ## Yleiskatsaus
 
-Redis on OmniRoutessa **valinnainen, pehmeä riippuvuus** — sovellus jatkaa toimintaansa hallitusti
+Redis on 67routerissa **valinnainen, pehmeä riippuvuus** — sovellus jatkaa toimintaansa hallitusti
 (käyttäen muistipohjaisia vararatkaisuja), kun Redis ei ole käytettävissä. Tuotannossa Redisin
 virittäminen vähentää viivettä neljässä erillisessä työkuormassa:
 
@@ -17,7 +17,7 @@ virittäminen vähentää viivettä neljässä erillisessä työkuormassa:
 | Kiintiötallennus        | `redisQuotaStore.ts`          | Erillinen `getRedisClient(url)`-singleton                      | `<prefix>quota:*`, määritettävissä instanssikohtaisesti    |
 | Lämmityksen katkaisija  | `redisCircuitBreakerStore.ts` | Erillinen asiakas tiedostossa `circuitBreakerFactory.ts`       | `<prefix>warmup:cb:<connectionId>`                         |
 
-Kaikki neljä työkuormaa käyttävät samaa nimiavaruuden etuliitettä, jotta OmniRoute voi toimia
+Kaikki neljä työkuormaa käyttävät samaa nimiavaruuden etuliitettä, jotta 67router voi toimia
 samassa Redis-instanssissa muiden sovellusten kanssa (esim. `127.0.0.1:6379`). Katso
 [Avainnimien nimiavaruudet](#key-namespacing).
 
@@ -42,16 +42,16 @@ samassa Redis-instanssissa muiden sovellusten kanssa (esim. `127.0.0.1:6379`). K
 
 ## Avainnimien nimiavaruudet
 
-OmniRoute jakaa Redis-instanssin muiden samalla palvelimella suoritettavien palveluiden kanssa.
+67router jakaa Redis-instanssin muiden samalla palvelimella suoritettavien palveluiden kanssa.
 Ilman nimiavaruutta avaimet, kuten `auth:api_key:<sha256>` tai `rl:*`, voivat törmätä muiden
 samaa Redis-instanssia käyttävien sovellusten avaimiin (tässä instanssissa Redis toimii osoitteessa
 `127.0.0.1:6379` muiden palveluiden rinnalla).
 
-Aseta `REDIS_KEY_PREFIX` tyhjästä poikkeavaksi merkkijonoksi, jotta **jokaisen** OmniRoute-avaimen
+Aseta `REDIS_KEY_PREFIX` tyhjästä poikkeavaksi merkkijonoksi, jotta **jokaisen** 67router-avaimen
 eteen lisätään etuliite:
 
 ```bash
-# .env — kaikista OmniRoute-avaimista tulee omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — kaikista 67router-avaimista tulee omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -107,7 +107,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # jätä tilaa käyttöjärjestelmän sivuvälimuistille
 maxmemory-policy allkeys-lru         # poista vanhentuneita todennusvälimuistin merkintöjä kuormituksen kasvaessa
 
-# Pysyvyys (valinnainen — OmniRoute on vikasietoinen ilman sitä)
+# Pysyvyys (valinnainen — 67router on vikasietoinen ilman sitä)
 save 300 1                           # luo tilannevedos vähintään 5 minuutin välein, jos ≥1 avain on muuttunut
 appendonly no                        # AOF:ää ei tarvita; tiedot voidaan luoda uudelleen
 appendfsync no                       # ei fsync-yleiskustannusta (RDB riittää)

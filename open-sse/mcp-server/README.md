@@ -1,6 +1,6 @@
 # OmniRoute MCP Server
 
-> **Model Context Protocol server** that exposes OmniRoute's gateway intelligence as **110 tools** for AI agents.
+> **Model Context Protocol server** that exposes 67router's gateway intelligence as **89 tools** for AI agents.
 >
 > **Source of truth for the full tool catalog and REST surface:** [`docs/frameworks/MCP-SERVER.md`](../../docs/frameworks/MCP-SERVER.md). This README focuses on architecture, configuration, and integration examples; the catalog below is a summary subset.
 
@@ -20,7 +20,7 @@ The MCP Server allows any AI agent (Claude Desktop, Cursor, VS Code Copilot, cus
 ┌──────────────────────────────────────────────────────────────────┐
 │                      OmniRoute MCP Server                        │
 │  ┌──────────────┐  ┌─────────────────┐  ┌────────────────────┐  │
-│  │ Scope        │  │ 107 MCP Tools   │  │   Audit Logger     │  │
+│  │ Scope        │  │ 89 MCP Tools   │  │   Audit Logger     │  │
 │  │ Enforcement  │──│ (core + memory  │──│   (SHA-256/SQLite) │  │
 │  │              │  │  + skills + …)  │  │                    │  │
 │  └──────────────┘  └────────┬────────┘  └────────────────────┘  │
@@ -193,9 +193,6 @@ mistake metadata shrink estimates for provider token receipts.
 
 | Tool                        | Scopes                            | Description                                                                                |
 | --------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------ |
-| `omniroute_oneproxy_fetch`  | `read:proxies`                    | Fetch free proxies from the 1proxy marketplace (protocol/country/quality/limit filters)    |
-| `omniroute_oneproxy_rotate` | `read:proxies`                    | Get the next available proxy by strategy (`random` / `quality` / `sequential`)             |
-| `omniroute_oneproxy_stats`  | `read:proxies`                    | Pool stats, sync status, distribution by protocol and country                              |
 | `omniroute_sync_pricing`    | `pricing:write`                   | Sync pricing from external sources (LiteLLM) without overwriting user-set prices; `dryRun` |
 | `omniroute_db_health_check` | `read:health`, `write:resilience` | Diagnose (and optionally auto-repair) database drift — broken combo refs, orphan rows      |
 

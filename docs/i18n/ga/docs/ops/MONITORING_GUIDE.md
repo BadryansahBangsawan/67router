@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Tagann OmniRoute le monatóireacht sláinte ionsuite, uathphíolóta soláthraithe, rianú cuótaí, agus crúcaí inbhraiteachta. Clúdaíonn an treoir seo an deais, foláirimh, agus fabhtcheartú.
+> **TL;DR**: Tagann 67router le monatóireacht sláinte ionsuite, uathphíolóta soláthraithe, rianú cuótaí, agus crúcaí inbhraiteachta. Clúdaíonn an treoir seo an deais, foláirimh, agus fabhtcheartú.
 
 **Foinsí:**
 
@@ -20,7 +20,7 @@
 
 ## Forléargas
 
-Tá **3 shraith monatóireachta** ag OmniRoute:
+Tá **3 shraith monatóireachta** ag 67router:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -101,7 +101,7 @@ De réir teaglama:
 
 ## API Seiceála Sláinte
 
-Nochtann OmniRoute **dhá** dhromchla sláinte HTTP. Ní féidir iad a úsáid go hidirmhalartach le haghaidh ceolfhoirneoirí.
+Nochtann 67router **dhá** dhromchla sláinte HTTP. Ní féidir iad a úsáid go hidirmhalartach le haghaidh ceolfhoirneoirí.
 
 | Conair                       | Cuspóir                                                                           | Ualach                                        | Úsáid le haghaidh                                                              |
 | ---------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -172,7 +172,7 @@ Ná heisigh foláireamh bunaithe ar `provider_connections.test_status` amháin a
 
 ### Moltaí maidir le tóireadóirí Kubernetes
 
-Is **próiseas aonair Node** é OmniRoute (lúb theagmhas amháin). Díríonn `HEALTHCHECK` caighdeánach Docker ar `/healthz` éadrom. Tá `/api/monitoring/health` **róthrom** d’eatraimh bheogachta kubelet.
+Is **próiseas aonair Node** é 67router (lúb theagmhas amháin). Díríonn `HEALTHCHECK` caighdeánach Docker ar `/healthz` éadrom. Tá `/api/monitoring/health` **róthrom** d’eatraimh bheogachta kubelet.
 
 | Taiscéalaí           | Sprioc molta                                                                                         | Nótaí                                                                                                                                                                                                                                                                                                                                                                                                           |
 | -------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -219,7 +219,7 @@ Gaolmhar: [#10052](https://github.com/diegosouzapw/OmniRoute/issues/10052) (tais
 
 ### faireoir systemd (lúb teagmhas reoite)
 
-Ar óstach systemd, insíonn OmniRoute do bhainisteoir na seirbhíse nuair atá sé réidh agus leanann sé á phingeáil, ionas go marófar agus go n-atosófar freastalaí a bhfuil a lúb teagmhas greamaithe in ionad é a fhágáil ag rith agus ina thost. Tagann na pingí ó lúb teagmhas an fhreastalaí féin: nuair a chuirtear bac uirthi, stopann siad, agus atosaíonn systemd an tseirbhís nuair a théann `WatchdogSec` thart gan ceann ar bith.
+Ar óstach systemd, insíonn 67router do bhainisteoir na seirbhíse nuair atá sé réidh agus leanann sé á phingeáil, ionas go marófar agus go n-atosófar freastalaí a bhfuil a lúb teagmhas greamaithe in ionad é a fhágáil ag rith agus ina thost. Tagann na pingí ó lúb teagmhas an fhreastalaí féin: nuair a chuirtear bac uirthi, stopann siad, agus atosaíonn systemd an tseirbhís nuair a théann `WatchdogSec` thart gan ceann ar bith.
 
 Scríobhann [`omniroute autostart enable`](../../bin/cli/tray/autostart.mjs) aonad úsáideora ina bhfuil sé seo cheana féin. Ní fhaigheann aonad a scríobhann tú féin (`Type=simple` de réir réamhshocraithe) faireoir ar bith, mar sin cuir na línte seo lena rannán `[Service]`:
 
@@ -435,7 +435,7 @@ Láimhseálann `tokenHealthCheck.ts` cumraíocht na seiceála sláinte comhartha
 
 ### Cainéil Insuite
 
-Tacaíonn OmniRoute le **3 chainéal foláirimh**:
+Tacaíonn 67router le **3 chainéal foláirimh**:
 
 | Cainéal       | Socrú            | Cás úsáide                               |
 | ------------- | ---------------- | ---------------------------------------- |
@@ -551,7 +551,7 @@ Cruthaigh `~/.omniroute/dashboard.json`:
 ### "Deir an cuóta go bhfuil sé sláintiúil ach feicim 429anna"
 
 - Ciallaíonn 429 go ndeir an soláthraí go bhfuil do chuóta úsáidte agat
-- D'fhéadfadh rianú cuóta OmniRoute a bheith **as dáta** — is í fírinne an tsoláthraí réamhtheachtaigh atá i réim
+- D'fhéadfadh rianú cuóta 67router a bheith **as dáta** — is í fírinne an tsoláthraí réamhtheachtaigh atá i réim
 - Athnuachan an monatóir inmheánach cuóta sonraí cuóta go huathoibríoch
 
 ### "Tá an teaglaim ag teip ach tá cuma shláintiúil ar na spriocanna uile"
@@ -564,7 +564,7 @@ Cruthaigh `~/.omniroute/dashboard.json`:
 
 - Rith `sqlite3 ~/.omniroute/storage.sqlite "PRAGMA integrity_check;"`
 - Más "ok" é — aláram bréagach atá ann, tá an tseiceáil sláinte ró-dhian
-- Más aon rud eile é — **stop OmniRoute** agus lean an [treoir athshlánaithe ó thubaiste](./DATABASE_GUIDE.md#disaster-recovery)
+- Más aon rud eile é — **stop 67router** agus lean an [treoir athshlánaithe ó thubaiste](./DATABASE_GUIDE.md#disaster-recovery)
 
 ### "Tá brú carn na cuimhne criticiúil"
 

@@ -1,4 +1,4 @@
-# OmniRoute — Dashboard Features Gallery (Igbo)
+# 67router — Dashboard Features Gallery (Igbo)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/FEATURES.md) · 🇪🇹 [am](../../../am/docs/guides/FEATURES.md) · 🇸🇦 [ar](../../../ar/docs/guides/FEATURES.md) · 🇦🇿 [az](../../../az/docs/guides/FEATURES.md) · 🇧🇬 [bg](../../../bg/docs/guides/FEATURES.md) · 🇧🇩 [bn](../../../bn/docs/guides/FEATURES.md) · 🇧🇦 [bs](../../../bs/docs/guides/FEATURES.md) · 🇨🇿 [cs](../../../cs/docs/guides/FEATURES.md) · 🇩🇰 [da](../../../da/docs/guides/FEATURES.md) · 🇩🇪 [de](../../../de/docs/guides/FEATURES.md) · 🇬🇷 [el](../../../el/docs/guides/FEATURES.md) · 🇪🇸 [es](../../../es/docs/guides/FEATURES.md) · 🇪🇪 [et](../../../et/docs/guides/FEATURES.md) · 🇮🇷 [fa](../../../fa/docs/guides/FEATURES.md) · 🇫🇮 [fi](../../../fi/docs/guides/FEATURES.md) · 🇫🇷 [fr](../../../fr/docs/guides/FEATURES.md) · 🇮🇪 [ga](../../../ga/docs/guides/FEATURES.md) · 🇮🇳 [gu](../../../gu/docs/guides/FEATURES.md) · 🇳🇬 [ha](../../../ha/docs/guides/FEATURES.md) · 🇮🇱 [he](../../../he/docs/guides/FEATURES.md) · 🇮🇳 [hi](../../../hi/docs/guides/FEATURES.md) · 🇭🇷 [hr](../../../hr/docs/guides/FEATURES.md) · 🇭🇺 [hu](../../../hu/docs/guides/FEATURES.md) · 🇦🇲 [hy](../../../hy/docs/guides/FEATURES.md) · 🇮🇩 [id](../../../id/docs/guides/FEATURES.md) · 🇮🇹 [it](../../../it/docs/guides/FEATURES.md) · 🇯🇵 [ja](../../../ja/docs/guides/FEATURES.md) · 🇬🇪 [ka](../../../ka/docs/guides/FEATURES.md) · 🇰🇭 [km](../../../km/docs/guides/FEATURES.md) · 🇮🇳 [kn](../../../kn/docs/guides/FEATURES.md) · 🇰🇷 [ko](../../../ko/docs/guides/FEATURES.md) · 🇱🇹 [lt](../../../lt/docs/guides/FEATURES.md) · 🇱🇻 [lv](../../../lv/docs/guides/FEATURES.md) · 🇮🇳 [ml](../../../ml/docs/guides/FEATURES.md) · 🇮🇳 [mr](../../../mr/docs/guides/FEATURES.md) · 🇲🇾 [ms](../../../ms/docs/guides/FEATURES.md) · 🇲🇹 [mt](../../../mt/docs/guides/FEATURES.md) · 🇲🇲 [my](../../../my/docs/guides/FEATURES.md) · 🇳🇵 [ne](../../../ne/docs/guides/FEATURES.md) · 🇳🇱 [nl](../../../nl/docs/guides/FEATURES.md) · 🇳🇴 [no](../../../no/docs/guides/FEATURES.md) · 🇮🇳 [or](../../../or/docs/guides/FEATURES.md) · 🇮🇳 [pa](../../../pa/docs/guides/FEATURES.md) · 🇵🇭 [phi](../../../phi/docs/guides/FEATURES.md) · 🇵🇱 [pl](../../../pl/docs/guides/FEATURES.md) · 🇵🇹 [pt](../../../pt/docs/guides/FEATURES.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/FEATURES.md) · 🇷🇴 [ro](../../../ro/docs/guides/FEATURES.md) · 🇷🇺 [ru](../../../ru/docs/guides/FEATURES.md) · 🇱🇰 [si](../../../si/docs/guides/FEATURES.md) · 🇸🇰 [sk](../../../sk/docs/guides/FEATURES.md) · 🇸🇮 [sl](../../../sl/docs/guides/FEATURES.md) · 🇷🇸 [sr](../../../sr/docs/guides/FEATURES.md) · 🇸🇪 [sv](../../../sv/docs/guides/FEATURES.md) · 🇰🇪 [sw](../../../sw/docs/guides/FEATURES.md) · 🇮🇳 [ta](../../../ta/docs/guides/FEATURES.md) · 🇮🇳 [te](../../../te/docs/guides/FEATURES.md) · 🇹🇭 [th](../../../th/docs/guides/FEATURES.md) · 🇹🇷 [tr](../../../tr/docs/guides/FEATURES.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/FEATURES.md) · 🇵🇰 [ur](../../../ur/docs/guides/FEATURES.md) · 🇺🇿 [uz](../../../uz/docs/guides/FEATURES.md) · 🇻🇳 [vi](../../../vi/docs/guides/FEATURES.md) · 🇳🇬 [yo](../../../yo/docs/guides/FEATURES.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/FEATURES.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/FEATURES.md)
 
-Ntuziaka anya maka ngalaba niile dị na dashboard OmniRoute.
+Ntuziaka anya maka ngalaba niile dị na dashboard 67router.
 
 > 📅 **Emelitere ikpeazụ:** 2026-06-28 — **v3.8.40**
 
@@ -43,15 +43,13 @@ Usoro v3.7.x → v3.8.0 tinyere ntụgharị akpaaka na-enweghị nhazi, ndị n
 - 🤝 **Onye na-eweta GitLab Duo OAuth** — jiri nzere GitLab banye
 - 🧠 **Reasoning Replay Cache** — nchekwa ngwakọ dị na ebe nchekwa kọmputa + nchekwa SQLite maka akara usoro echiche
 
-📚 **Akwụkwọ ndị metụtara ya:** [Usoro Skills](../frameworks/SKILLS.md) · [Sistemụ Ebe Nchekwa](../frameworks/MEMORY.md) · [Ndị Ọrụ Cloud](../frameworks/CLOUD_AGENT.md) · [Webhooks](../frameworks/WEBHOOKS.md) · [Reasoning Replay Cache](../routing/REASONING_REPLAY.md)
-
 ---
 
 ## 🔌 Ndị Na-eweta Ọrụ
 
 Jikwaa njikọ ndị na-eweta AI: ndị na-eweta OAuth (Claude Code, Codex), ndị na-eweta API key (Groq, DeepSeek, OpenRouter), na ndị na-eweta ọrụ n’efu (Qoder, Kiro). Akaụntụ Kiro gụnyere nsuso ngụkọ kredit — kredit fọdụrụ, ngụkọta oke e nyere, na ụbọchị mmeghari dị na Dashboard → Usage.
 
-Njikọ OpenRouter nwere ike idobe `preset` nke njikọ ọ bụla na Advanced Settings. Mgbe atọrọ ya, OmniRoute na-eziga ya dịka mpaghara arịrịọ OpenRouter nke ọkwa kachasị elu, dịka ọmụmaatụ `"preset": "email-copywriter"`, ma ọ bụrụ na arịrịọ onye ahịa enyebeghị `preset` nke ya.
+Njikọ OpenRouter nwere ike idobe `preset` nke njikọ ọ bụla na Advanced Settings. Mgbe atọrọ ya, 67router na-eziga ya dịka mpaghara arịrịọ OpenRouter nke ọkwa kachasị elu, dịka ọmụmaatụ `"preset": "email-copywriter"`, ma ọ bụrụ na arịrịọ onye ahịa enyebeghị `preset` nke ya.
 
 ![Dashboard Ndị Na-eweta Ọrụ](../screenshots/01-providers.png)
 
@@ -107,12 +105,6 @@ Nlekota ozugbo: uptime, memory, version, percentile latency (p50/p95/p99), ọn�
 
 ---
 
-## 🎮 Ebe Nnwale Model _(v2.0.9+)_
-
-Nwalee model ọ bụla ozugbo site na dashboard. Họrọ provider, model, na endpoint, jiri Monaco Editor dee prompts, nata nzaghachi n'iyi ozugbo, kwụsị ya mgbe ọ ka na-aga, ma lelee metrik oge.
-
----
-
 ## 🎨 Gịm _(v2.0.5+)_
 
 Gịm agba a na-ahazi maka dashboard niile. Họrọ n'ime agba 7 a kwadebere (Coral, Blue, Red, Green, Violet, Orange, Cyan) ma ọ bụ mepụta gịm nke gị site n'ịhọrọ agba hex ọ bụla. Ọ na-akwado ọnọdụ ìhè, ọchịchịrị, na nke sistemụ.
@@ -157,7 +149,7 @@ Dashboard maka ịchọta na ijikwa ndị agent CLI. Ọ na-egosi grid nke ndị
 
 ## 🔗 Mbufe Okwu Gbara Ya Gịrịgịrị _(v3.5.5+)_
 
-Usoro ngwakọta nke na-echekwa njikọ nnọkọ mgbe ntụgharị akaụntụ mere n’etiti mkparịta ụka. Tupu oke akaụntụ na-arụ ọrụ agwụ, OmniRoute na-emepụta nchịkọta nnyefe a haziri ahazi n’azụ. Mgbe arịrịọ na-esote kpebie iji akaụntụ ọzọ, a na-etinye nchịkọta ahụ dịka ozi sistemụ ka akaụntụ ọhụrụ wee jiri ọnọdụ zuru ezu gaa n’ihu.
+Usoro ngwakọta nke na-echekwa njikọ nnọkọ mgbe ntụgharị akaụntụ mere n’etiti mkparịta ụka. Tupu oke akaụntụ na-arụ ọrụ agwụ, 67router na-emepụta nchịkọta nnyefe a haziri ahazi n’azụ. Mgbe arịrịọ na-esote kpebie iji akaụntụ ọzọ, a na-etinye nchịkọta ahụ dịka ozi sistemụ ka akaụntụ ọhụrụ wee jiri ọnọdụ zuru ezu gaa n’ihu.
 
 Enwere ike ịhazi ya site na ntọala ọkwa-ngwakọta ma ọ bụ ntọala zuru ụwa ọnụ:
 
@@ -267,7 +259,7 @@ Nsuso omume nchịkwa nwere nzacha dịka ụdị omume, onye mere ya, ihe e mer
 
 ## 🖥️ Ngwa Desktop
 
-Ngwa desktop Electron e wuru kpọmkwem maka Windows, macOS, na Linux. Gbaa OmniRoute dịka ngwa kwụụrụ onwe ya, yana njikọta system tray, nkwado offline, auto-update, na nrụnye otu-pịa.
+Ngwa desktop Electron e wuru kpọmkwem maka Windows, macOS, na Linux. Gbaa 67router dịka ngwa kwụụrụ onwe ya, yana njikọta system tray, nkwado offline, auto-update, na nrụnye otu-pịa.
 
 Njirimara ndị bụ isi:
 
@@ -286,7 +278,7 @@ Njirimara ndị bụ isi:
 
 ## 🌐 V1 WebSocket Bridge _(v3.6.6+)_
 
-OmniRoute na-akwadozi **WebSocket clients dakọtara na OpenAI** site na `/v1/ws` upgrade endpoint. Server `scripts/dev/v1-ws-bridge.mjs` ahaziri iche na-ekpuchi Next.js ma na-akwalite njikọ WS ka ha bụrụ sessions streaming zuru ezu nke na-aga n'akụkụ abụọ. Authentication na-eji otu API key ahụ ma ọ bụ session cookie dịka arịrịọ HTTP.
+67router na-akwadozi **WebSocket clients dakọtara na OpenAI** site na `/v1/ws` upgrade endpoint. Server `scripts/dev/v1-ws-bridge.mjs` ahaziri iche na-ekpuchi Next.js ma na-akwalite njikọ WS ka ha bụrụ sessions streaming zuru ezu nke na-aga n'akụkụ abụọ. Authentication na-eji otu API key ahụ ma ọ bụ session cookie dịka arịrịọ HTTP.
 
 Àgwà ndị bụ isi:
 
@@ -312,7 +304,7 @@ A na-eji `src/lib/sync/bundle.ts` arụ ngwugwu nhazi ahụ. Ndị na-eji ya na-
 
 **GLM Thinking (`glmt`)** bụzi onye na-eweta ọrụ ọkwa mbụ edebanyere aha: token mmepụta kachasị 65 536, oke echiche 24 576, oge nkwụsị ndabara 900 s, usoro API kwekọrọ na Claude, yana mmekọrịta ojiji a na-ekekọrịta n'ime ezinụlọ GLM.
 
-**Ngụkọta token agwakọtara** bịakwara na v3.6.6: mgbe onye na-eweta ọrụ kwekọrọ na Claude gosipụtara `/messages/count_tokens`, OmniRoute na-akpọ ya tupu arịrịọ buru ibu, ma jiri atụmatụ ndabere na-enweghị nsogbu ma ọ bụrụ na ọ daa.
+**Ngụkọta token agwakọtara** bịakwara na v3.6.6: mgbe onye na-eweta ọrụ kwekọrọ na Claude gosipụtara `/messages/count_tokens`, 67router na-akpọ ya tupu arịrịọ buru ibu, ma jiri atụmatụ ndabere na-enweghị nsogbu ma ọ bụrụ na ọ daa.
 
 ---
 

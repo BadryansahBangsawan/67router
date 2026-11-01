@@ -6,7 +6,7 @@ title: "Claude Code with a `claude setup-token` token"
 
 `claude setup-token` prints a long-lived OAuth token (`sk-ant-oat01-…`) for a Claude Pro/Max
 subscription. It is valid for one year and needs no browser session, which makes it the simplest
-way to connect a headless or containerized OmniRoute to the **Claude Code** provider (`cc/`).
+way to connect a headless or containerized 67router to the **Claude Code** provider (`cc/`).
 
 ## Connect it
 
@@ -18,7 +18,7 @@ way to connect a headless or containerized OmniRoute to the **Claude Code** prov
 
 ![Connect Claude Code dialog on the Setup Token tab](../screenshots/claude-setup-token-1-dialog.png)
 
-Before anything is stored, OmniRoute sends one `max_tokens: 1` request to Anthropic with the token.
+Before anything is stored, 67router sends one `max_tokens: 1` request to Anthropic with the token.
 A token that does not start with `sk-ant-oat`, or that Anthropic rejects, is refused with a 400
 and no connection is created.
 

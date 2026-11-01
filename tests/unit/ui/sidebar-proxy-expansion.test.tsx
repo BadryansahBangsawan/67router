@@ -15,7 +15,8 @@ import {
 
 describe("sidebar proxy expansion", () => {
   it("proxy navigation is always present and cannot be hidden by legacy settings", () => {
-    const omniProxy = SIDEBAR_SECTIONS.find((section) => section.id === "omni-proxy");
+    // Sidebar v2: the proxy entry lives in System (was OmniProxy).
+    const omniProxy = SIDEBAR_SECTIONS.find((section) => section.id === "system");
     expect(omniProxy).toBeDefined();
     expect(getSectionItems(omniProxy!).some((item) => item.id === "proxy")).toBe(true);
     expect((HIDEABLE_SIDEBAR_ITEM_IDS as readonly string[]).includes("proxy")).toBe(false);

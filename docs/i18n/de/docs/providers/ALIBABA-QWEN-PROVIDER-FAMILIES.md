@@ -10,7 +10,7 @@ als vier Anbieterfamilien dargestellt. Die Region gehört zu den Verbindungsdate
 
 ## Entscheidung
 
-| Anbieterfamilie                                           | OmniRoute-ID            | Globale Region | Region China |
+| Anbieterfamilie                                           | 67router-ID             | Globale Region | Region China |
 | --------------------------------------------------------- | ----------------------- | -------------- | ------------ |
 | Alibaba Cloud Model Studio (nutzungsabhängige Abrechnung) | `alibaba`               | Singapur       | Peking       |
 | Alibaba Cloud Token Plan                                  | `bailian-coding-plan`   | Singapur       | Peking       |

@@ -1,4 +1,4 @@
-# OmniRoute Architecture (ไทย)
+# 67router Architecture (ไทย)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _อัปเดตล่าสุด: 2026-06-28_
 
 ## บทสรุปสำหรับผู้บริหาร
 
-OmniRoute คือเกตเวย์กำหนดเส้นทาง AI และแดชบอร์ดภายในเครื่องที่สร้างขึ้นบน Next.js
+67router คือเกตเวย์กำหนดเส้นทาง AI และแดชบอร์ดภายในเครื่องที่สร้างขึ้นบน Next.js
 ระบบมีเอนด์พอยต์เดียวที่เข้ากันได้กับ OpenAI (`/v1/*`) และกำหนดเส้นทางทราฟฟิกไปยังผู้ให้บริการต้นทางหลายราย พร้อมการแปลงรูปแบบ การสำรองเมื่อเกิดข้อผิดพลาด การรีเฟรชโทเค็น และการติดตามการใช้งาน
 
 ความสามารถหลัก:
@@ -128,13 +128,11 @@ OmniRoute คือเกตเวย์กำหนดเส้นทาง AI 
 - `/dashboard/limits` — การควบคุมโควตา/อัตรา
 - `/dashboard/cli-tools` — การเริ่มต้นใช้งาน CLI การตรวจหารันไทม์ และการสร้างการกำหนดค่า
 - `/dashboard/agents` — เอเจนต์ ACP ที่ตรวจพบ + การลงทะเบียนเอเจนต์แบบกำหนดเอง
-- `/dashboard/cloud-agents` — งานของเอเจนต์ที่โฮสต์บนคลาวด์ (Codex Cloud, Devin, Jules) และวงจรชีวิตของงาน
 - `/dashboard/skills` — รีจิสทรีทักษะ A2A การดำเนินการในแซนด์บ็อกซ์ และแค็ตตาล็อกทักษะในตัว
 - `/dashboard/memory` — การตรวจสอบและเรียกคืนหน่วยความจำการสนทนาแบบถาวร
 - `/dashboard/webhooks` — การสมัครรับเว็บฮุกขาออก การหมุนเวียนข้อมูลลับ และสถิติการลองใหม่
 - `/dashboard/batch` — การส่งงานแบบแบตช์และความคืบหน้า
 - `/dashboard/cache` — สถิติแคชแบบอ่านผ่านและแคชการให้เหตุผล รวมถึงการควบคุมการขับข้อมูลออก
-- `/dashboard/playground` — สนามทดลองแชตแบบโต้ตอบกับคอมโบ/โมเดลที่กำหนดค่าไว้
 - `/dashboard/changelog` — ตัวแสดงบันทึกการเปลี่ยนแปลงภายในแอป (เรนเดอร์ `CHANGELOG.md`)
 - `/dashboard/system` — การวินิจฉัยรันไทม์ ข้อมูลเวอร์ชัน และส่วนตรวจสอบความถูกต้องของสภาพแวดล้อม
 - `/dashboard/onboarding` — วิซาร์ดตั้งค่าครั้งแรกสำหรับการติดตั้งใหม่
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[แดชบอร์ดบนเบราว์เซอร์]
     end
 
-    subgraph Router[โปรเซส OmniRoute ภายในเครื่อง]
+    subgraph Router[โปรเซส 67router ภายในเครื่อง]
         API[API ที่เข้ากันได้กับ V1\n/v1/*]
         DASH[แดชบอร์ด + API การจัดการ\n/api/*]
         CORE[แกนหลัก SSE + การแปล\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ flowchart LR
 - งบประมาณ: `src/app/api/usage/budget` (GET/POST)
 - เชนสำรอง: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - การตรวจสอบการปฏิบัติตามข้อกำหนด: `src/app/api/compliance/audit-log` (GET พร้อมการแบ่งหน้า + เมทาดาทาที่มีโครงสร้าง)
-- การประเมินผล: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - นโยบาย: `src/app/api/policies` (GET/POST)
 - โทเค็นการซิงค์: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - บันเดิลการกำหนดค่า: `src/app/api/sync/bundle` (GET, สแนปช็อตของการตั้งค่า/ผู้ให้บริการ/คอมโบ/คีย์ที่กำหนดเวอร์ชันด้วย ETag)
@@ -316,7 +313,6 @@ flowchart LR
 - การหมดเวลาของการดึงข้อมูล: `src/shared/utils/fetchTimeout.ts`
 - เทเลเมทรีของคำขอ: `src/shared/utils/requestTelemetry.ts`
 - การปฏิบัติตามข้อกำหนด/การตรวจสอบ: `src/lib/compliance/index.ts`
-- ตัวรันการประเมิน: `src/lib/evals/evalRunner.ts`
 - การจัดเก็บสถานะโดเมนถาวร: `src/lib/db/domainState.ts` — SQLite CRUD สำหรับเชนตัวสำรอง, งบประมาณ, ประวัติต้นทุน, สถานะการล็อกไม่ให้ใช้งาน และเซอร์กิตเบรกเกอร์
 
 โมดูลผู้ให้บริการ OAuth (ไฟล์แยกกัน 27 ไฟล์ภายใต้ `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ flowchart LR
 
 ## 5) บริการแบบฝังตัว (v3.8.4)
 
-OmniRoute สามารถติดตั้ง กำกับดูแล และกำหนดเส้นทางไปยังกระบวนการเครื่องมือ AI ที่ทำงานอยู่ภายในเครื่อง
+67router สามารถติดตั้ง กำกับดูแล และกำหนดเส้นทางไปยังกระบวนการเครื่องมือ AI ที่ทำงานอยู่ภายในเครื่อง
 ซึ่งเรียกว่า **บริการแบบฝังตัว** โดยมีบริการที่มาพร้อมกันห้ารายการ ได้แก่ 9Router, CLIProxyAPI, Bifrost, Mux และ Dario
 
 ชั้นสถาปัตยกรรม:
@@ -384,23 +380,6 @@ Auto Combo จะให้คะแนนและเลือกเป้าห
 สำหรับรายละเอียดทั้งหมดของอัลกอริทึม (สูตรปัจจัยและการปรับแต่งน้ำหนัก) โปรดดู
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)
 
-### B. Cloud Agents
-
-Cloud Agents ครอบแพลตฟอร์มเอเจนต์เขียนโค้ดแบบโฮสต์โดยบุคคลที่สาม (Codex Cloud, Devin,
-Jules) ไว้เบื้องหลังวงจรชีวิตงานที่มีรูปแบบเดียวกันและรองรับด้วยฐานข้อมูล ปลายทางทั้งหมดสำหรับการสร้าง/ตรวจสอบงาน
-ต้องใช้การยืนยันตัวตนระดับการจัดการ
-
-- รากของโมดูล: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts` รวมถึงไดเรกทอรีย่อยของแต่ละเอเจนต์ภายใต้ `agents/`)
-- การนำไปใช้สำหรับแต่ละเอเจนต์: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- ปลายทางสาธารณะ: `/api/v1/agents/tasks/*` (แสดงรายการ/สร้าง/เรียกดู/ยกเลิก)
-- ปลายทางการจัดการ: `/api/cloud/*` (การจัดเตรียม, สถานะ, การประมวลผลแบบกลุ่ม)
-- แดชบอร์ด: `/dashboard/cloud-agents`
-- พื้นที่จัดเก็บ: ตาราง `cloud_agent_tasks`
-
-สำหรับรายละเอียดเฉพาะของการจัดเตรียมและ OAuth ของแต่ละเอเจนต์ โปรดดู
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)
-
 ### C. Guardrails
 
 โมดูล guardrails เป็นเลเยอร์มิดเดิลแวร์ที่โหลดซ้ำได้แบบทันที ซึ่งตรวจสอบคำขอ
@@ -436,7 +415,7 @@ Jules) ไว้เบื้องหลังวงจรชีวิตงา�
 - แคชโควตา: `src/domain/quotaCache.ts`
 - สถานะการลดระดับการทำงาน: `src/domain/degradation.ts`
 - การตรวจสอบการกำหนดค่า: `src/domain/configAudit.ts`
-- ตัวสร้างเมทาดาทาการตอบกลับ OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- ตัวสร้างเมทาดาทาการตอบกลับ 67router: `src/domain/omnirouteResponseMeta.ts`
 - ระบบย่อยการประเมิน: `src/domain/assessment/` — งานประเมินผลตามรอบเวลา
 
 ### E. ไปป์ไลน์การอนุญาต
@@ -810,7 +789,7 @@ flowchart LR
         Browser[เบราว์เซอร์แดชบอร์ด]
     end
 
-    subgraph ContainerOrProcess[รันไทม์ OmniRoute]
+    subgraph ContainerOrProcess[รันไทม์ 67router]
         Next[เซิร์ฟเวอร์ Next.js\nPORT=20128]
         Core[แกนหลัก SSE + ตัวดำเนินการ]
         MainDB[(storage.sqlite)]
@@ -929,7 +908,7 @@ flowchart LR
 ## เมทริกซ์ความเข้ากันได้ของผู้ให้บริการ
 
 > **หมายเหตุ:** เมทริกซ์ด้านล่างเป็นตัวอย่างที่ใช้เป็นตัวแทนของผู้ให้บริการที่ลงทะเบียนไว้ทั้งหมด 351 รายใน
-> OmniRoute v3.8.0 สำหรับรายการมาตรฐานที่อัปเดตอย่างต่อเนื่อง โปรดดูที่
+> 67router v3.8.0 สำหรับรายการมาตรฐานที่อัปเดตอย่างต่อเนื่อง โปรดดูที่
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (สร้างขึ้นโดยอัตโนมัติ) หรือแหล่งข้อมูล
 > ที่เป็นข้อมูลอ้างอิงหลักที่ `src/shared/constants/providers.ts` (ตรวจสอบความถูกต้องด้วย Zod ขณะโหลด)
 
@@ -1111,7 +1090,7 @@ flowchart LR
 - คำขอดิบที่ได้รับจากไคลเอนต์
 - คำขอที่แปลงแล้วและส่งไปยังต้นทางจริง
 - การตอบกลับจากผู้ให้บริการที่สร้างกลับเป็น JSON โดยการตอบกลับแบบสตรีมจะถูกย่อให้เหลือข้อมูลสรุปสุดท้ายพร้อมข้อมูลเมตาของสตรีม
-- การตอบกลับสุดท้ายของไคลเอนต์ที่ส่งคืนโดย OmniRoute โดยการตอบกลับแบบสตรีมจะถูกจัดเก็บในรูปแบบสรุปแบบย่อเดียวกัน
+- การตอบกลับสุดท้ายของไคลเอนต์ที่ส่งคืนโดย 67router โดยการตอบกลับแบบสตรีมจะถูกจัดเก็บในรูปแบบสรุปแบบย่อเดียวกัน
 
 ## ขอบเขตที่มีความอ่อนไหวด้านความปลอดภัย
 

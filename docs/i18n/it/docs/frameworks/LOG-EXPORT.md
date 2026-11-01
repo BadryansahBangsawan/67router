@@ -4,7 +4,7 @@
 
 ---
 
-Esportazione continua e incrementale dei log delle chiamate di OmniRoute verso un archivio di analisi esterno.
+Esportazione continua e incrementale dei log delle chiamate di 67router verso un archivio di analisi esterno.
 
 La scheda Logs della dashboard conserva la cronologia delle richieste in SQLite (`call_logs`), con limiti imposti da
 rotazione e conservazione. L'esportazione dei log invia periodicamente lo stesso insieme di record all'esterno, affinché possa sopravvivere
@@ -294,7 +294,7 @@ Due regole per una nuova destinazione:
 - `send()` **deve generare un'eccezione** in caso di errore parziale. La risoluzione indica che «la destinazione contiene queste righe»
   e il cursore le supera definitivamente.
 - Una destinazione che accetta un URL fornito dall'utente deve convalidarlo tramite
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) prima di eseguire il recupero,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) prima di eseguire il recupero,
   come avviene per i webhook. BigQuery non ne ha bisogno: i suoi host sono costanti.
 
 ---

@@ -10,7 +10,7 @@
 > block nke injection dị ka ókè a manyere (#16413), na ihe na-ahụ response tupu post-call)
 
 Guardrails na-amanye nchekwa, amụma, na mgbanwe ọdịnaya na ókè dị n'etiti
-OmniRoute na ndị na-enye upstream. Guardrail ọ bụla nwere ike ịnyocha (ma
+67router na ndị na-enye upstream. Guardrail ọ bụla nwere ike ịnyocha (ma
 jụ, gbanwee, ma dee ntụaka n'ụzọ nhọrọ) payload request (`preCall`) na
 response upstream (`postCall`).
 
@@ -115,7 +115,7 @@ Mgbe igodo API nke onye na-akpọ machibidoro `allowedConnections`, ìdé quota
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), bridge na-ahọrọ
 nanị ụdị reroute na describe igodo ahụ nwere ike iji, na njikọ ndị igodo ahụ
 nwere ike iji. Oku describe ahụ na-agafe mgbe niile site na self-loop
-OmniRoute na isi `x-omniroute-self-loop-key-id`, ka arịrịọ chat nnata mee ka
+67router na isi `x-omniroute-self-loop-key-id`, ka arịrịọ chat nnata mee ka
 amụma njikọ na ụdị nke igodo ahụ rụọ ọrụ ọzọ. `enforceApiKeyPolicy()`
 na-anabata isi ahụ nanị tinyere bearer self-loop, ka ọ wee nwee ike ịmē nanị
 ka ohere nweta dị warara, a na-ajụkwa id ọ bụla na-apụtaghị ìhè.
@@ -144,7 +144,7 @@ bụla na-akpọ/onye na-enye, ọ bụghị nke a machibidoro na ngosi client �
 Nhọrọ ogo dị ala na-emebi izuike OCR maka kpọmkwem ọrụ ntụgharị ederede
 prompt a na-arịọ, ya mere oku describe n'onwe ya na-arịọ ogo dị elu mgbe
 niile n'agbanyeghị ọkwa ogo arịrịọ mbụ bataara jiri. Nke a na-emetụta nanị
-ahụ arịrịọ describe dị n'ime; ọ gbanweghị otu OmniRoute si eziga
+ahụ arịrịọ describe dị n'ime; ọ gbanweghị otu 67router si eziga
 `image_url.detail` nke onye na-akpọ na arịrịọ bụ isi — a na-etinye ndabara
 ahụ iche, nanịkwa maka client OpenCode a chọpụtara, na `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). Alaka wire-format Anthropic
@@ -264,7 +264,7 @@ Kaadị Vision Bridge ochie n'okpuru ntọala AI bụ njikọ kwenye na peeji
 iwepụ ebe egwuregwu Speech-to-Text dị ugbu a.
 
 **Ịgafe nnabata self-loop:** mgbe oku describe na-agafe
-self-loop `/v1` nke OmniRoute (ọnụ ọgụgụ na-abụghị nke ọkọlọtọ), arịrị nke
+self-loop `/v1` nke 67router (ọnụ ọgụgụ na-abụghị nke ọkọlọtọ), arịrị nke
 nkeji na-eziga `x-omniroute-admission-bypass: internal` ma jiri ihe nkwenye
 self-loop a haziri nyocha — sentinel `sk_omniroute` nke mpaghara n'ọnọdụ mpaghara, ma ọ bụ
 igodo env `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` onye ọrụ haziri (#1350) ka
@@ -454,7 +454,7 @@ endpoint enyere ikike ma ọ bụ judge edobere. Mbelata ego ka bụkwa `HOLD`
 ọ gwụla ma `--caption-cost-per-call-usd` nyere atụmatụ ego kwa oku doro anya ma dị mma;
 script ahụ anaghị echepụta nke ọ bụla n'ime nsonaazụ abụọ ahụ.
 
-Fremu ọ bụla nwere oke 4 MiB, fremu raw niile n’otu nwere oke 23 MiB, ebe nzaghachi broker e mere serialize nwere oke 32 MiB. A na-ewepụ ndekọ nwa oge nke nzuzo n’ime `finally`. OmniRoute anaghị etinye FFmpeg n’ime ngwugwu ya, ọ naghịkwa anabata ụzọ executable ahaziri iche. Tupu e mepụta nkọwa, bridge ahụ na-eme usoro nlezianya iji wepụ oyiyi ndị yiri ibe ha: a na-ebelata JPEG ọ bụla ka ọ bụrụ buffer grayscale 16×16, wee jiri naanị fremu ikpeazụ e debere tụnyere ya. Maka oke nkọwa a rịọrọ nke karịrị otu fremu, extraction na-enye ọdọ candidate nwere oke ruru ugboro abụọ nke budget ahụ, ma ọ dịghị mgbe ọ ga-agafe fremu 16. A na-etinye oke a rịọrọ naanị mgbe e wepụchara oyiyi ndị yiri ibe ha; a na-echekwa candidate mbụ na nke ikpeazụ ahọpụtara mgbe a na-eme thinning ikpeazụ ma ọ bụrụ na budget ahụ dịkarịa ala abụọ. Policy nwere version
+Fremu ọ bụla nwere oke 4 MiB, fremu raw niile n’otu nwere oke 23 MiB, ebe nzaghachi broker e mere serialize nwere oke 32 MiB. A na-ewepụ ndekọ nwa oge nke nzuzo n’ime `finally`. 67router anaghị etinye FFmpeg n’ime ngwugwu ya, ọ naghịkwa anabata ụzọ executable ahaziri iche. Tupu e mepụta nkọwa, bridge ahụ na-eme usoro nlezianya iji wepụ oyiyi ndị yiri ibe ha: a na-ebelata JPEG ọ bụla ka ọ bụrụ buffer grayscale 16×16, wee jiri naanị fremu ikpeazụ e debere tụnyere ya. Maka oke nkọwa a rịọrọ nke karịrị otu fremu, extraction na-enye ọdọ candidate nwere oke ruru ugboro abụọ nke budget ahụ, ma ọ dịghị mgbe ọ ga-agafe fremu 16. A na-etinye oke a rịọrọ naanị mgbe e wepụchara oyiyi ndị yiri ibe ha; a na-echekwa candidate mbụ na nke ikpeazụ ahọpụtara mgbe a na-eme thinning ikpeazụ ma ọ bụrụ na budget ahụ dịkarịa ala abụọ. Policy nwere version
 `grayscale-16x16-mean-cells-v2` na-eji nke ka ukwuu n’etiti mean luma delta na
 ratio nke cell thumbnail ndị normalized delta ha dịkarịa ala 0.05. Threshold nke duplicate bụ constant 0.04, nke a họọrọ maka ịdị mfe ịkọ amụma kama ikpughe ya dịka setting runtime. Signal nke abụọ a nwere contrast dị elu na-echekwa obere mmegharị na mgbanwe ederede a na-ahụ anya nke ntụnyere dabere naanị na mean nwere ike izochi. Njehie comparator ma ọ bụ decoder anaghị egbochi usoro ahụ ma na-eme ka coverage dịgide. Metadata output na-ekewa candidate ndị e wepụtara, fremu ndị e jiri mee ihe nke ọma, na duplicate anya ndị a tụfuru.
 
@@ -462,7 +462,7 @@ Akụkụ vidiyo e kara akara n'ụzọ doro anya nwere ike ịrịọ contact s
 
 E kewapụrụ evidence maka promotion kpamkpam na microbenchmark nke synthetic composition. `scripts/perf/video-bridge-contact-sheet-eval.ts` na-akọwapụta harness A/B nwere version schema maka model vision dakọtara na OpenAI n’ezie. Ọ na-atụ token ndị provider kọrọ, wall latency site na mmalite ruo na njedebe (gụnyere composition nke sheet), ọnụọgụ model-call, na njigide eziokwu ndị manifest kọwara. A naghị ede nzaghachi raw nke model na report; naanị digest SHA-256 na ID eziokwu ndị dakọtara ka a na-edebe. Harness ahụ anaghị eme network call ma ọ bụ call model a na-akwụ ụgwọ ma ọ bụrụ na e nyeghị `--execute-real`, ma hazie `--model`, `OMNIROUTE_BASE_URL`, na `OMNIROUTE_API_KEY`. Na-enweghị real run ahụ e kwuru kpọmkwem, verdict ya nke igwe nwere ike ịgụ na-anọgide `HOLD`; nha synthetic nke payload/ọnụọgụ call naanị abụghị evidence maka promotion.
 
-Ndị caller nwere ike itinye array `transcript.cues` nke nhọrọ na akụkụ vidiyo akwadoro mgbe ha nwere ederede e mekọrịtara oge ya. Cue ọ bụla ga-enwe `text`, interval `start`/`end` nwere finite value nke dị n’ime duration a nyochara, yana `source` dị na whitelist (`client`, `embedded`, ma ọ bụ `audio-bridge`); default nke `confidence` bụ `1`, ọ ga-adịkwa n’etiti `0` na `1`. A na-ejikọta cue ndị bụ exact duplicate ka ha bụrụ otu. OmniRoute anaghị ebido transcription site na metadata a: a na-edepụta cue ndị e nyochara ma kwado n’ime result a kọwara, tinyere source, confidence, na interval ha, ma gosipụta ha dịka observation a na-atụkwasịghị obi n’akụkụ caption fremu. A na-ajụ ederede na-adịghị valid, nke gafere range, ma ọ bụ nke na-enweghị provenance kama ịgwakọta ya n’ime stream caption. Channel transcript abụọ nke request body na-eme normalize provenance e nyere ka ọ bụrụ `client`, gụnyere label `embedded` ma ọ bụ `audio-bridge` onye zitere request kwupụtara n’onwe ya. Naanị adapter nke server nwe nwere ike ịnye label ndị ahụ a tụkwasịrị obi site na argument code-only `trustedSource`; field JSON dị na request enweghị ike iru argument ahụ. Ederede transcript ka bụ ọdịnaya sitere na media nke a na-atụkwasịghị obi, n’agbanyeghị provenance ya, ọ gaghịkwa ekpebi authorization ma ọlị.
+Ndị caller nwere ike itinye array `transcript.cues` nke nhọrọ na akụkụ vidiyo akwadoro mgbe ha nwere ederede e mekọrịtara oge ya. Cue ọ bụla ga-enwe `text`, interval `start`/`end` nwere finite value nke dị n’ime duration a nyochara, yana `source` dị na whitelist (`client`, `embedded`, ma ọ bụ `audio-bridge`); default nke `confidence` bụ `1`, ọ ga-adịkwa n’etiti `0` na `1`. A na-ejikọta cue ndị bụ exact duplicate ka ha bụrụ otu. 67router anaghị ebido transcription site na metadata a: a na-edepụta cue ndị e nyochara ma kwado n’ime result a kọwara, tinyere source, confidence, na interval ha, ma gosipụta ha dịka observation a na-atụkwasịghị obi n’akụkụ caption fremu. A na-ajụ ederede na-adịghị valid, nke gafere range, ma ọ bụ nke na-enweghị provenance kama ịgwakọta ya n’ime stream caption. Channel transcript abụọ nke request body na-eme normalize provenance e nyere ka ọ bụrụ `client`, gụnyere label `embedded` ma ọ bụ `audio-bridge` onye zitere request kwupụtara n’onwe ya. Naanị adapter nke server nwe nwere ike ịnye label ndị ahụ a tụkwasịrị obi site na argument code-only `trustedSource`; field JSON dị na request enweghị ike iru argument ahụ. Ederede transcript ka bụ ọdịnaya sitere na media nke a na-atụkwasịghị obi, n’agbanyeghị provenance ya, ọ gaghịkwa ekpebi authorization ma ọlị.
 
 Caller nwere ahụmịhe dị elu nwere ike ịnye track `audioTranscript` maka otu vidiyo ahụ; a na-ewere ya dịka ederede client nyere, ọ bụghị ihe akaebe na server mere transcription. Fusion seam na-agba observation anya na nke audio n’okpuru otu deadline na abort signal, na-ahazi ha n’otu timeline, na-ejikọta exact duplicate ka ha bụrụ otu, ma na-akọ partial result mgbe naanị otu akụkụ gara nke ọma. `audioTranscript` na-adịghị valid na-agbadata gaa na partial result ahụ — a na-edobe nkọwa anya, ebe branch audio na-edekọ failure code e mere sanitize — kama ime ka vidiyo niile daa. A na-echekwa availability nke branch ọ bụla, partial flag, na failure code ndị e mere sanitize n’ime result a kọwara, n’ime metadata guardrail (`audioFusionRuns`/`audioFusionPartials`/
 `audioFusionFailureCodes`), n’ime metadata result-cache, nakwa n’ime counter fusion nke bridge. Ụzọ default nke Video Bridge anaghị akpọ speech-to-text ma ọ bụ budata copy media nke abụọ; na-enweghị track ahụ e kwuru kpọmkwem, ọ na-anọgide video-only.
@@ -963,7 +963,7 @@ aka) nwere ọrụ abụọ:
   previous instructions…", jailbreaks ụdị DAN) na-akwado na nzaghachi na-ebu
   `error.code === "SECURITY_001"`, ya bụ nchebe ahụ jụrụ arịrị ahụ n'ezie.
 - **`garak` (ndụmọdụ)** — na-agba garak `--probes promptinject,dan,leakreplay`
-  megide ihe atụ OmniRoute dị n'ime obodo (`http://localhost:20128/v1`). E gburu ya
+  megide ihe atụ 67router dị n'ime obodo (`http://localhost:20128/v1`). E gburu ya
   na nzuzo onye na-enye (`PROMPTFOO_PROVIDER_KEY`); na-awụfe n'ụzọ dị nro ma a na-agbakwụnye ya
   `|| true`, ya mere ọ na-akọ n'adaghịghị CI.
 

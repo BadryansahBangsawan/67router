@@ -15,7 +15,7 @@
 - [OAuth 2.0 fún àwọn ètò ìṣàmúlò abínibí (PKCE)](https://developers.google.com/identity/protocols/oauth2/native-app) — OAuth client_id / client_secret fún àwọn ètò ìṣàmúlò tí a fi sí ẹ̀rọ jẹ́ ti gbogbogbò; PKCE ló ń pèsè ààbò gidi.
 - [Àwọn kọ́kọ́rọ́ Firebase API](https://firebase.google.com/docs/projects/api-keys) — A ṣe àwọn àmì ìdánimọ̀ oníbàárà wẹ́ẹ̀bù láti jẹ́ ti gbogbogbò.
 
-OmniRoute gbọ́dọ̀ fi àwọn iye wọ̀nyí sínú rẹ̀ kí àwọn aṣàmúlò tí kò ṣètò `.env` lè ṣì rí ìṣàn OAuth tó ń ṣiṣẹ́ ní tààrà láìsí àfikún ìṣètò. Láìsí iye àfẹ́yìntì tí a fi sínú rẹ̀, àwọn olùpèsè Gemini / Antigravity yóò dáwọ́ iṣẹ́ dúró fún gbogbo aṣàmúlò tó bá tẹ̀lé ọ̀nà “kan ṣe clone kí o sì ṣiṣẹ́”.
+67router gbọ́dọ̀ fi àwọn iye wọ̀nyí sínú rẹ̀ kí àwọn aṣàmúlò tí kò ṣètò `.env` lè ṣì rí ìṣàn OAuth tó ń ṣiṣẹ́ ní tààrà láìsí àfikún ìṣètò. Láìsí iye àfẹ́yìntì tí a fi sínú rẹ̀, àwọn olùpèsè Gemini / Antigravity yóò dáwọ́ iṣẹ́ dúró fún gbogbo aṣàmúlò tó bá tẹ̀lé ọ̀nà “kan ṣe clone kí o sì ṣiṣẹ́”.
 
 Síbẹ̀, àwọn iye gidi bí `AIzaSy…`, `GOCSPX-…`, `…apps.googleusercontent.com` ni **GitHub Secret Scanning**, **Semgrep**, àti àwọn aṣàyẹ̀wò àpẹẹrẹ tó jọra máa ń bá mu. Gbogbo ìtújáde máa ń di ìṣàn ìkìlọ̀ èké tó kún fún ariwo, ààbò push máa ń dí àwọn commit tó bófin mu, àwọn alákóso sì máa ń jáwọ́ nínú gbígbẹ́kẹ̀lé ìṣàn ìkìlọ̀ náà.
 

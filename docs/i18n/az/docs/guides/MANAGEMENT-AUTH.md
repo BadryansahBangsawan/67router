@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute idarəetmə marşrutlarını avtorizasiya edə bilən **dörd etimadnamə ailəsinə** malikdir.
+67router idarəetmə marşrutlarını avtorizasiya edə bilən **dörd etimadnamə ailəsinə** malikdir.
 Onlar bir-birini əvəz etmir. İnferensiya API açarları (`sk-…`) açıq şəkildə `manage` və ya `admin` əhatə dairəsi ilə təmin edilmədiyi halda serveri **idarə etmir**.
 
 Kanonik reallaşdırma: `src/lib/api/requireManagementAuth.ts`.

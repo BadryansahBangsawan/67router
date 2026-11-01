@@ -4,7 +4,7 @@
 
 ---
 
-O OmniRoute separa a **deteção de CLIs**, o **Agent Client Protocol nativo** e os
+O 67router separa a **deteção de CLIs**, o **Agent Client Protocol nativo** e os
 **adaptadores stdio legados**. Encontrar um binário instalado não comprova a sua
 autenticação, compatibilidade com o modelo ou capacidade para processar um prompt.
 
@@ -131,5 +131,3 @@ teste de fumo com autorização separada no ambiente de destino.
 - [Protocolos de agentes](./AGENT_PROTOCOLS_GUIDE.md)
 - [Contratos de arranque de CLIs](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Ferramentas de CLI](../reference/CLI-TOOLS.md)
-- [Servidor A2A](./A2A-SERVER.md)
-- [Agentes na cloud](./CLOUD_AGENT.md)

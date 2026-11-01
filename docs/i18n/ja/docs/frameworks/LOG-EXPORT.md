@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute のコールログを外部分析ストアへ継続的かつ増分的にエクスポートします。
+67router のコールログを外部分析ストアへ継続的かつ増分的にエクスポートします。
 
 Logs ダッシュボードタブでは、リクエスト履歴を SQLite（`call_logs`）に保持しますが、その量は
 ローテーションと保持期間によって制限されます。ログエクスポートでは、同じレコードセットをスケジュールに従って外部へ送信するため、
@@ -278,7 +278,7 @@ insertAll 呼び出しに分割するため、大きな `batch_size` でも BigQ
 新しい送信先には、次の 2 つのルールがあります。
 
 - 部分的な失敗が発生した場合、`send()` は**必ず例外をスローしなければなりません**。正常終了した場合は「送信先にこれらの行が存在する」ことを意味し、カーソルはそれらの行を完全に通過します。
-- ユーザー指定の URL を受け取る送信先は、webhook と同じ方法で、フェッチ前に `parseAndValidateWebhookUrl`（`src/shared/network/outboundUrlGuardPolicy.ts`）を使用して URL を検証する必要があります。BigQuery ではホストが定数であるため、この検証は不要です。
+- ユーザー指定の URL を受け取る送信先は、webhook と同じ方法で、フェッチ前に `parseAndValidatePublicUrl`（`src/shared/network/outboundUrlGuard.ts`）を使用して URL を検証する必要があります。BigQuery ではホストが定数であるため、この検証は不要です。
 
 ---
 

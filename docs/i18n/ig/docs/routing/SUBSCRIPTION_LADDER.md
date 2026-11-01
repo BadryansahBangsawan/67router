@@ -10,7 +10,7 @@
 
 ## Ihe kpatara nke a ji dị
 
-OmniRoute azaworị ajụjụ abụọ gbasara ọnụ ahịa, ma ọ dịghị nke ọ bụla bụ nke ọtụtụ ndị na-ahụ maka sistemụ na-ajụ.
+67router azaworị ajụjụ abụọ gbasara ọnụ ahịa, ma ọ dịghị nke ọ bụla bụ nke ọtụtụ ndị na-ahụ maka sistemụ na-ajụ.
 
 | Usoro dị ugbu a                                          | Ihe ọ na-aza                                       |
 | -------------------------------------------------------- | -------------------------------------------------- |

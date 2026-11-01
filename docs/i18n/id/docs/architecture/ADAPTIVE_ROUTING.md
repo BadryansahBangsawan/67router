@@ -5,7 +5,7 @@
 ---
 
 Dokumen ini menjelaskan fondasi perutean adaptif berbasis umpan balik yang ditambahkan ke
-OmniRoute. Cakupannya sengaja dibuat kecil: fondasi ini memperkenalkan kanal hasil
+67router. Cakupannya sengaja dibuat kecil: fondasi ini memperkenalkan kanal hasil
 perutean bertipe, sinyal kualitas daring yang menjadi masukan bagi penilai auto-combo
 yang sudah ada, eksportir OpenTelemetry opsional, dan endpoint keterjelasan. Fondasi ini
 **tidak** menggantikan tumpukan ketahanan yang sudah ada (circuit breaker, cooldown koneksi,
@@ -13,7 +13,7 @@ lockout model, matriks kesehatan, autopilot) — melainkan melengkapinya.
 
 ## 1. Konteks arsitektur
 
-OmniRoute adalah bidang data dengan **jalur cepat permintaan** dan **bidang
+67router adalah bidang data dengan **jalur cepat permintaan** dan **bidang
 kontrol/inteligensi**. Jalur cepat harus tetap cepat, hemat memori, asinkron, tangguh, dan
 dapat diprediksi. Evaluasi, penilaian kualitas, eksperimen, dan analisis historis berada
 di bidang kontrol.
@@ -23,7 +23,7 @@ Agen AI / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   bidang data (cepat, sinkron, dalam memori)
+│    67router        │   bidang data (cepat, sinkron, dalam memori)
 │  perutean / failover│
 │  kesehatan/guardrail│
 │  cache / streaming  │
@@ -49,7 +49,6 @@ Agen AI / IDE
 | Traffic bayangan                                  | `open-sse/services/combo/shadowRouting.ts`                                                              |
 | Guardrail                                         | `src/lib/guardrails/` (hook sebelum/sesudah)                                                            |
 | Cache eksak                                       | `src/lib/semanticCache.ts` (berbasis signature)                                                         |
-| Evaluator / perutean berbasis evaluasi            | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                    |
 | Keterjelasan keputusan combo                      | `open-sse/services/combo/decisionTrace.ts`                                                              |
 | Peristiwa real-time dashboard                     | `src/lib/events/eventBus.ts` (kanal notifikasi UI, payload `unknown`, riwayat 100 entri)                |
 
@@ -235,7 +234,7 @@ File: `open-sse/services/routing/otel.ts`
 - Span mengikuti konvensi semantik GenAI (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
   `gen_ai.completion.finish_reason`, `gen_ai.system`) serta atribut perutean
-  OmniRoute (hasil, status, ttft, percobaan ulang, fallback).
+  67router (hasil, status, ttft, percobaan ulang, fallback).
 - `record()` hanya memasukkan data ke dalam buffer terbatas (O(1)); timer latar
   belakang melakukan flush secara asinkron melalui `POST {endpoint}/v1/traces`.
   Saat beban berlebih, event terlama dibuang (penghitung `dropped`) — tidak pernah
@@ -256,7 +255,7 @@ File: `open-sse/services/routing/otel.ts`
 
 ## 6. Integrasi bidang evaluasi (kesiapan Future AGI)
 
-OmniRoute memperlakukan Future AGI (atau evaluator apa pun) sebagai **backend
+67router memperlakukan Future AGI (atau evaluator apa pun) sebagai **backend
 kecerdasan/evaluasi potensial, bukan dependensi**. Titik integrasinya:
 
 - `RoutingEventSink` dapat meneruskan event ke evaluator secara asinkron.
@@ -265,8 +264,6 @@ kecerdasan/evaluasi potensial, bukan dependensi**. Titik integrasinya:
 - `Evaluator` di masa mendatang (deterministik, penilai lokal, HTTP, WASM) akan
   mengonsumsi event/jejak dan mengembalikan `QualityScore` yang masuk ke jalur
   `getQualityScore`/faktor kualitas yang sama.
-- Perutean berbasis evaluasi yang sudah ada (`open-sse/services/evalRouting.ts`)
-  telah mengurutkan ulang target combo berdasarkan tingkat kelulusan `eval_runs`
   saat diaktifkan.
 
 Tidak ada evaluasi yang berjalan secara sinkron pada jalur permintaan, dan gateway

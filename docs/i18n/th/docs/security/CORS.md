@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ควบคุมว่า **origin ของเบราว์เซอร์** ใดบ้างที่สามารถอ่านการตอบกลับแบบข้าม origin
+67router ควบคุมว่า **origin ของเบราว์เซอร์** ใดบ้างที่สามารถอ่านการตอบกลับแบบข้าม origin
 ผ่านรายการอนุญาตที่รวมศูนย์ไว้เพียงรายการเดียว โมเดลนี้ **ปฏิเสธโดยค่าเริ่มต้น (fail-closed)**:
 ไม่มี origin ใดได้รับอนุญาตจนกว่าคุณจะเพิ่มเข้าไป หน้านี้อธิบายวิธีการพิจารณารายการอนุญาต
 สิ่งที่ `CORS_ALLOW_ALL=true` เปิดเผยจริง (และที่สำคัญคือ สิ่งที่
@@ -46,13 +46,13 @@ middleware (`src/server/authz/pipeline.ts`) — handler ของแต่ละ
 ## โมเดลภัยคุกคาม — สิ่งที่ `CORS_ALLOW_ALL=true` เปิดเผยจริง
 
 คำเตือนทั่วไปของ OWASP ("wildcard CORS = เว็บไซต์ใด ๆ ก็เรียก API ของคุณได้") เป็นสิ่งที่
-ควรให้ความสำคัญ แต่ขอบเขตการเปิดเผยของ OmniRoute **แคบกว่ากรณีทั่วไป**
+ควรให้ความสำคัญ แต่ขอบเขตการเปิดเผยของ 67router **แคบกว่ากรณีทั่วไป**
 เนื่องจากข้อเท็จจริงเฉพาะประการหนึ่งของการนำไปใช้:
 
 > **`applyCorsHeaders()` ส่วนกลางจะไม่ส่ง
 > `Access-Control-Allow-Credentials` ออกมา** เบราว์เซอร์จะไม่เปิดให้เข้าถึงการตอบกลับข้าม origin
 > _ที่มีข้อมูลรับรอง_ (มี cookie แนบมาด้วย) เว้นแต่เซิร์ฟเวอร์จะส่ง
-> `Access-Control-Allow-Credentials: true` เส้นทาง CORS ที่ใช้ร่วมกันของ OmniRoute จะไม่
+> `Access-Control-Allow-Credentials: true` เส้นทาง CORS ที่ใช้ร่วมกันของ 67router จะไม่
 > ทำเช่นนั้น
 
 สิ่งนี้มีความหมายต่อแต่ละพื้นผิวดังต่อไปนี้ แม้จะใช้ `CORS_ALLOW_ALL=true`:
@@ -69,20 +69,6 @@ middleware (`src/server/authz/pipeline.ts`) — handler ของแต่ละ
 ที่หน้าเว็บข้าม origin ไม่สามารถจัดหาได้ พฤติกรรมนี้ **ไม่ใช่** ช่องทางสำหรับการยึดครองเซสชันหรือ
 การขโมยข้อมูลรับรองบนเส้นทาง CORS ที่ใช้ร่วมกัน
 
-### ข้อยกเว้นจริงหนึ่งรายการ — `/api/v1/agents/`
-
-route ของ Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) ตั้งค่า
-ส่วนหัว CORS **ของตนเอง**
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) และ**มีการ**ส่ง
-`Access-Control-Allow-Origin: <origin>|*` พร้อมกับ
-`Access-Control-Allow-Credentials: true` นี่เป็นพื้นผิวเดียวที่
-การส่ง origin กลับและข้อมูลรับรองใช้งานร่วมกัน และ **ไม่ขึ้นกับ
-`CORS_ALLOW_ALL`** route เหล่านี้ได้รับการยืนยันตัวตนสำหรับการจัดการ
-(`requireManagementAuth`); ผู้ดูแลระบบที่เปิดให้เข้าถึงแดชบอร์ดจากภายนอกโฮสต์ควร
-ตระหนักว่านี่เป็นจุดเดียวที่ส่วนหัวการตอบกลับอนุญาตให้อ่านแบบข้าม origin
-โดยมีข้อมูลรับรอง การจำกัดให้ใช้รายการอนุญาตที่ระบุไว้อย่างชัดเจนกำลังถูกติดตาม
-แยกต่างหากจากคำแนะนำเกี่ยวกับ CORS นี้
-
 ## รายการตรวจสอบสำหรับระบบโปรดักชัน
 
 - **ห้ามตั้งค่า `CORS_ALLOW_ALL=true` ในระบบโปรดักชันโดยเด็ดขาด** ให้ปล่อยไว้โดยไม่กำหนดค่า
@@ -92,7 +78,7 @@ route ของ Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- หาก OmniRoute ทำงานอยู่หลัง reverse proxy / tunnel (nginx, Caddy, Cloudflare
+- หาก 67router ทำงานอยู่หลัง reverse proxy / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) CORS **ไม่ใช่** กลไกควบคุมเพียงอย่างเดียวของคุณ — ตัวป้องกันเส้นทาง
   loopback ยังคงปกป้องเส้นทางที่สามารถสร้างโปรเซสได้ (ดู
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)) อย่าปลอมแปลง
@@ -108,7 +94,7 @@ route ของ Cloud-Agent (`/api/v1/agents/{health,credentials,tasks,tasks/[id
 แม้แต่ในสภาพแวดล้อมการพัฒนา คุณแทบไม่จำเป็นต้องใช้ wildcard ให้อนุญาตเฉพาะเซิร์ฟเวอร์สำหรับการพัฒนาที่คุณใช้:
 
 ```bash
-# เซิร์ฟเวอร์สำหรับการพัฒนา Vite (5173) + Next.js (3000) ที่เรียก OmniRoute ภายในเครื่อง
+# เซิร์ฟเวอร์สำหรับการพัฒนา Vite (5173) + Next.js (3000) ที่เรียก 67router ภายในเครื่อง
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -128,14 +114,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   ต้นทางสำหรับการจัดการ/แดชบอร์ดลงในการกำหนดค่าแบบอนุญาตกว้าง ต้นทางเหล่านี้ต้องคงพฤติกรรม
   ปิดเมื่อเกิดข้อผิดพลาดไว้อย่างเคร่งครัด
 
-## ตัวอย่าง: reverse proxy ที่อยู่หน้า OmniRoute
+## ตัวอย่าง: reverse proxy ที่อยู่หน้า 67router
 
-OmniRoute บังคับใช้ CORS ด้วยตัวเอง ดังนั้นโดยทั่วไป proxy จึง **ไม่ควร** เพิ่มหรือ
+67router บังคับใช้ CORS ด้วยตัวเอง ดังนั้นโดยทั่วไป proxy จึง **ไม่ควร** เพิ่มหรือ
 เขียนทับ header `Access-Control-*` (header ที่ซ้ำกันทำให้เบราว์เซอร์ทำงานผิดพลาด) ให้ยุติการเชื่อมต่อ TLS
-แล้วส่งต่อ — ปล่อยให้ OmniRoute ตอบคำขอ preflight:
+แล้วส่งต่อ — ปล่อยให้ 67router ตอบคำขอ preflight:
 
 ```nginx
-# nginx — ส่งต่อไปยัง OmniRoute; อย่าแทรก Access-Control-* ที่นี่
+# nginx — ส่งต่อไปยัง 67router; อย่าแทรก Access-Control-* ที่นี่
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -143,12 +129,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # เก็บ header การส่งต่อไว้: proxy บนโฮสต์เดียวกันจะเชื่อมต่อจาก loopback และ header เหล่านี้
-    # จะบอก OmniRoute ว่าผู้เรียกไม่ใช่ผู้ดูแลระบบภายในเครื่อง หาก proxy ไม่เพิ่ม header เหล่านี้เลย
+    # จะบอก 67router ว่าผู้เรียกไม่ใช่ผู้ดูแลระบบภายในเครื่อง หาก proxy ไม่เพิ่ม header เหล่านี้เลย
     # ผู้เรียกจากระยะไกลทุกคนจะดูเหมือนเป็นผู้เรียกภายในเครื่อง และอย่าตั้ง X-Forwarded-For เป็น 127.0.0.1 เช่นกัน
 }
 ```
 
-กำหนด origin ของเบราว์เซอร์ที่อนุญาตใน OmniRoute (`CORS_ALLOWED_ORIGINS` หรือ
+กำหนด origin ของเบราว์เซอร์ที่อนุญาตใน 67router (`CORS_ALLOWED_ORIGINS` หรือ
 แท็บความปลอดภัย) ไม่ใช่ใน proxy
 
 ## ไฟล์ต้นฉบับ
@@ -161,7 +147,6 @@ location / {
 | สถานะรันไทม์สำหรับแดชบอร์ด                         | `src/app/api/settings/authz-inventory/route.ts`                      |
 | แบนเนอร์คำเตือนบนแดชบอร์ด                          | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | ช่อง CORS Allowed Origins                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| CORS รายเส้นทางของ Cloud-Agent (ข้อยกเว้น)         | `src/lib/cloudAgent/api.ts`                                          |
 
 ## ดูเพิ่มเติม
 

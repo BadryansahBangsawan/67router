@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute var darboties kā bezgalvas serveris Android ierīcē, izmantojot Termux. Electron darbvirsmas lietotne Termux vidē netiek atbalstīta, taču tīmekļa informācijas panelis un ar OpenAI saderīgā API darbojas lokālajā pārlūkprogrammā vai citās ierīcēs tajā pašā tīklā.
+67router var darboties kā bezgalvas serveris Android ierīcē, izmantojot Termux. Electron darbvirsmas lietotne Termux vidē netiek atbalstīta, taču tīmekļa informācijas panelis un ar OpenAI saderīgā API darbojas lokālajā pārlūkprogrammā vai citās ierīcēs tajā pašā tīklā.
 
 ## Priekšnosacījumi
 
@@ -16,9 +16,9 @@ pkg upgrade
 pkg install nodejs python build-essential git
 ```
 
-> **Node.js versija:** OmniRoute nepieciešama Node versija `>=22.22.2 <23 || >=24.0.0 <27` (atbilst `engines` failā `package.json` / `SUPPORTED_NODE_RANGE`). Termux pakotne `nodejs-lts` parasti ietver Node 20 LTS, kas **vairs netiek atbalstīta** — tā vietā instalējiet pašreizējo versiju ar `pkg install nodejs` un pārbaudiet, vai `node --version` uzrāda 22.x/24.x+ versiju.
+> **Node.js versija:** 67router nepieciešama Node versija `>=22.22.2 <23 || >=24.0.0 <27` (atbilst `engines` failā `package.json` / `SUPPORTED_NODE_RANGE`). Termux pakotne `nodejs-lts` parasti ietver Node 20 LTS, kas **vairs netiek atbalstīta** — tā vietā instalējiet pašreizējo versiju ar `pkg install nodejs` un pārbaudiet, vai `node --version` uzrāda 22.x/24.x+ versiju.
 
-Ja vietējās pakotnes kompilēšana neizdodas, vēlreiz izpildiet iepriekš norādīto komandu `pkg install` un pēc tam atkārtojiet OmniRoute instalēšanu.
+Ja vietējās pakotnes kompilēšana neizdodas, vēlreiz izpildiet iepriekš norādīto komandu `pkg install` un pēc tam atkārtojiet 67router instalēšanu.
 
 ## Instalēšana
 
@@ -37,7 +37,7 @@ omniroute
 
 ## Palaišana
 
-Palaidiet OmniRoute bezgalvas servera režīmā:
+Palaidiet 67router bezgalvas servera režīmā:
 
 ```bash
 omniroute
@@ -105,11 +105,11 @@ Piemēram:
 http://192.168.1.50:20128
 ```
 
-Tālrunim un klientam jāatrodas vienā uzticamā tīklā. Ja nodrošināt piekļuvi OmniRoute ārpus tālruņa, iespējojiet API atslēgas un informācijas paneļa autentifikāciju.
+Tālrunim un klientam jāatrodas vienā uzticamā tīklā. Ja nodrošināt piekļuvi 67router ārpus tālruņa, iespējojiet API atslēgas un informācijas paneļa autentifikāciju.
 
 ## Datu direktorijs
 
-Pēc noklusējuma OmniRoute glabā datus Termux mājas direktorijā, izmantojot tādu pašu servera puses datu ceļa darbību kā Linux vidē. Lai datubāzi ievietotu skaidri norādītā vietā:
+Pēc noklusējuma 67router glabā datus Termux mājas direktorijā, izmantojot tādu pašu servera puses datu ceļa darbību kā Linux vidē. Lai datubāzi ievietotu skaidri norādītā vietā:
 
 ```bash
 export DATA_DIR="$HOME/.omniroute"
@@ -129,7 +129,7 @@ omniroute
 
 ### Neatbalstīta platforma: android (katrs pieprasījums atgriež HTTP 500)
 
-**Pazīme:** `omniroute` / `omniroute serve` izvada `✔ OmniRoute is running!`, taču katrs informācijas paneļa vai API pieprasījums atgriež tikai `500 Internal Server Error`. Fails `~/.omniroute/logs/application/app.log` paliek tukšs, `APP_LOG_LEVEL=debug` neizvada neko noderīgu, un atbildes pamatteksts ir vienkāršs teksts (`Internal Server Error`) bez JSON informācijas.
+**Pazīme:** `omniroute` / `omniroute serve` izvada `✔ 67router is running!`, taču katrs informācijas paneļa vai API pieprasījums atgriež tikai `500 Internal Server Error`. Fails `~/.omniroute/logs/application/app.log` paliek tukšs, `APP_LOG_LEVEL=debug` neizvada neko noderīgu, un atbildes pamatteksts ir vienkāršs teksts (`Internal Server Error`) bez JSON informācijas.
 
 **Cēlonis:** Dažas Termux/Node būvējuma versijas ziņo `process.platform === "android"`. Next.js `getCacheDirectory()` neapstrādā šo platformu: funkcija pieprasa, lai `~/.cache` (vai vispārīgs pagaidu direktorijs) _jau_ pastāvētu, pretējā gadījumā instrumentācijas āķa ielādes laikā rodas kļūme:
 
@@ -137,7 +137,7 @@ omniroute
 Error: An error occurred while loading instrumentation hook: Unsupported platform: android
 ```
 
-Tā kā āķis netiek ielādēts, reģistrēšana žurnālā netiek sākta — kļūda 500 šķiet pilnīgi nediagnosticējama. OmniRoute pirms Next.js palaišanas CLI ieejas punktā izveido `~/.cache` (un iestata `XDG_CACHE_HOME`, ja tas nav iestatīts), lai šī pārbaude Android/Termux vidē būtu sekmīga.
+Tā kā āķis netiek ielādēts, reģistrēšana žurnālā netiek sākta — kļūda 500 šķiet pilnīgi nediagnosticējama. 67router pirms Next.js palaišanas CLI ieejas punktā izveido `~/.cache` (un iestata `XDG_CACHE_HOME`, ja tas nav iestatīts), lai šī pārbaude Android/Termux vidē būtu sekmīga.
 
 **Atbalstītais risinājums (bez pakotnes modificēšanas):**
 
@@ -146,7 +146,7 @@ mkdir -p ~/.cache
 omniroute serve
 ```
 
-Pašreizējos OmniRoute būvējumos CLI to Android/Termux vidē izdara automātiski — pēc jaunas `npx -y omniroute@latest` palaišanas vai globālas instalēšanas manuālajai darbībai nevajadzētu būt nepieciešamai. Ja pēc jaunināšanas kļūda joprojām parādās, vienreiz izveidojiet `~/.cache`, kā norādīts iepriekš, un restartējiet.
+Pašreizējos 67router būvējumos CLI to Android/Termux vidē izdara automātiski — pēc jaunas `npx -y omniroute@latest` palaišanas vai globālas instalēšanas manuālajai darbībai nevajadzētu būt nepieciešamai. Ja pēc jaunināšanas kļūda joprojām parādās, vienreiz izveidojiet `~/.cache`, kā norādīts iepriekš, un restartējiet.
 
 **Nemodificējiet** `dist/server.js`, lai piespiedu kārtā iestatītu `process.platform = "linux"`. Šāda pakotnes modifikācija tiek pārrakstīta katras atkārtotas instalēšanas vai jaunināšanas laikā un nav nepieciešama, tiklīdz pastāv kešatmiņas direktorijs.
 

@@ -1,15 +1,15 @@
-# OmniRoute Architecture (中文 (简体))
+# 67router Architecture (中文 (简体))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
 ---
 
-title: "OmniRoute 架构"
+title: "67router 架构"
 version: 3.8.40
 lastUpdated: 2026-06-28
 ---
 
-# OmniRoute 架构
+# 67router 架构
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -19,7 +19,7 @@ _最后更新：2026-06-28_
 
 ## 执行摘要
 
-OmniRoute 是一个基于 Next.js 构建的本地 AI 路由网关和仪表板。
+67router 是一个基于 Next.js 构建的本地 AI 路由网关和仪表板。
 它提供单一的 OpenAI 兼容端点（`/v1/*`），并通过格式转换、故障转移、令牌刷新和用量跟踪，将流量路由到多个上游提供者。
 
 核心能力：
@@ -137,13 +137,11 @@ v3.8.0 平台的权威版本控制 Mermaid 源文件位于
 - `/dashboard/limits` — 配额/速率控制
 - `/dashboard/cli-tools` — CLI 接入引导、运行时检测、配置生成
 - `/dashboard/agents` — 已检测的 ACP 代理 + 自定义代理注册
-- `/dashboard/cloud-agents` — 云端托管代理任务（Codex Cloud、Devin、Jules）和任务生命周期
 - `/dashboard/skills` — A2A 技能注册表、沙箱执行、内置技能目录
 - `/dashboard/memory` — 持久化会话记忆查看和检索
 - `/dashboard/webhooks` — 出站 Webhook 订阅、密钥轮换、重试统计
 - `/dashboard/batch` — 批量任务提交和进度
 - `/dashboard/cache` — 读穿式缓存和推理缓存统计、淘汰控制
-- `/dashboard/playground` — 针对任意配置 Combo/模型的交互式对话演练
 - `/dashboard/changelog` — 应用内更新日志查看器（渲染 `CHANGELOG.md`）
 - `/dashboard/system` — 运行时诊断、版本信息、环境校验界面
 - `/dashboard/onboarding` — 新装首次运行设置向导
@@ -173,7 +171,7 @@ flowchart LR
         BROWSER[浏览器仪表板]
     end
 
-    subgraph Router[OmniRoute 本地进程]
+    subgraph Router[67router 本地进程]
         API[V1 兼容 API\n/v1/*]
         DASH[仪表板 + 管理 API\n/api/*]
         CORE[SSE + 转换核心\nopen-sse + src/sse]
@@ -261,7 +259,6 @@ flowchart LR
 - 预算：`src/app/api/usage/budget` (GET/POST)
 - 容灾链：`src/app/api/fallback/chains` (GET/POST/DELETE)
 - 合规审计：`src/app/api/compliance/audit-log` (GET, 含分页 + 结构化元数据)
-- 评估：`src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - 策略：`src/app/api/policies` (GET/POST)
 - 同步 Token：`src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - 配置包：`src/app/api/sync/bundle` (GET, ETag 版本控制的设置/服务商/Combo/Key 快照)
@@ -325,7 +322,6 @@ flowchart LR
 - 请求超时：`src/shared/utils/fetchTimeout.ts`
 - 请求遥测：`src/shared/utils/requestTelemetry.ts`
 - 合规/审计：`src/lib/compliance/index.ts`
-- 评估运行器：`src/lib/evals/evalRunner.ts`
 - 领域状态持久化：`src/lib/db/domainState.ts` — 针对回退链、预算、成本历史、锁定状态和熔断器的 SQLite CRUD
 
 OAuth 提供者模块（`src/lib/oauth/providers/` 下的 27 个独立文件）：
@@ -337,7 +333,7 @@ OAuth 提供者模块（`src/lib/oauth/providers/` 下的 27 个独立文件）�
 
 ## 5) 嵌入式服务（v3.8.4）
 
-OmniRoute 可以安装、监管并路由到本地运行的 AI 工具进程，称为**嵌入式服务**。
+67router 可以安装、监管并路由到本地运行的 AI 工具进程，称为**嵌入式服务**。
 v3.8.4 中发布了两项：9Router 和 CLIProxyAPI。
 
 架构层级：
@@ -391,21 +387,6 @@ v3.8.4 中发布了两项：9Router 和 CLIProxyAPI。
 有关完整的算法细节（因子公式、权重调优），请参阅
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md)。
 
-### B. 云代理
-
-云代理将第三方托管代码代理平台（Codex Cloud、Devin、Jules）封装在统一的、由数据库支持的任务生命周期之后。所有任务创建/检查端点都需要管理身份验证。
-
-- 模块根目录：`src/lib/cloudAgent/`（`baseAgent.ts`、`registry.ts`、`api.ts`、
-  `types.ts`、`db.ts`，以及 `agents/` 下各代理的子目录）
-- 各代理实现：`agents/codex/`、`agents/devin/`、`agents/jules/`
-- 公共端点：`/api/v1/agents/tasks/*`（列出/创建/获取/取消）
-- 管理端点：`/api/cloud/*`（配置、状态、批处理）
-- 仪表板：`/dashboard/cloud-agents`
-- 存储：`cloud_agent_tasks` 表
-
-有关各代理的配置和 OAuth 具体信息，请参阅
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md)。
-
 ### C. 防护机制
 
 防护机制模块是一个支持热重载的中间件层，用于检查请求和响应中是否包含 PII、提示词注入以及不安全的视觉内容。违规行为会立即中止请求，并返回 HTTP **503** 和结构化错误代码，以便下游调用方进行重试或分支处理。
@@ -437,7 +418,7 @@ v3.8.4 中发布了两项：9Router 和 CLIProxyAPI。
 - 配额缓存：`src/domain/quotaCache.ts`
 - 降级状态：`src/domain/degradation.ts`
 - 配置审计：`src/domain/configAudit.ts`
-- OmniRoute 响应元数据构建器：`src/domain/omnirouteResponseMeta.ts`
+- 67router 响应元数据构建器：`src/domain/omnirouteResponseMeta.ts`
 - 评估子系统：`src/domain/assessment/`——周期性评估作业
 
 ### E. 授权流水线
@@ -799,7 +780,7 @@ flowchart LR
         Browser[仪表板浏览器]
     end
 
-    subgraph ContainerOrProcess[OmniRoute 运行时]
+    subgraph ContainerOrProcess[67router 运行时]
         Next[Next.js 服务器\nPORT=20128]
         Core[SSE 核心 + 执行器]
         MainDB[(storage.sqlite)]
@@ -916,7 +897,7 @@ flowchart LR
 
 ## 服务商兼容性矩阵
 
-> **注意：** 下表是 OmniRoute v3.8.0 中 351 个已注册服务商的代表性样本。
+> **注意：** 下表是 67router v3.8.0 中 351 个已注册服务商的代表性样本。
 > 完整且持续更新的列表请参阅
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md)（自动生成）或数据源头
 > `src/shared/constants/providers.ts`（加载时通过 Zod 校验）。
@@ -1100,7 +1081,7 @@ flowchart LR
 - 从客户端接收的原始请求
 - 实际发送到上游的翻译后请求
 - 以 JSON 重构的服务商响应；流式响应压缩为最终摘要加流元数据
-- OmniRoute 返回的最终客户端响应；流式响应以相同压缩摘要形式存储
+- 67router 返回的最终客户端响应；流式响应以相同压缩摘要形式存储
 
 ## 安全敏感边界
 

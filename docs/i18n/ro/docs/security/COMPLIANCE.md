@@ -7,7 +7,7 @@
 > **Sursa de referință:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Ultima actualizare:** 2026-06-28 — v3.8.40
 
-OmniRoute înregistrează acțiunile administrative, evenimentele de autentificare, modificările ciclului de viață al credențialelor furnizorilor și invocările instrumentelor MCP în tabele de audit susținute de SQLite. Această pagină prezintă ce se înregistrează, unde sunt stocate datele, cât timp sunt păstrate, cum pot cheile API să dezactiveze înregistrarea și cum pot fi interogate datele.
+67router înregistrează acțiunile administrative, evenimentele de autentificare, modificările ciclului de viață al credențialelor furnizorilor și invocările instrumentelor MCP în tabele de audit susținute de SQLite. Această pagină prezintă ce se înregistrează, unde sunt stocate datele, cât timp sunt păstrate, cum pot cheile API să dezactiveze înregistrarea și cum pot fi interogate datele.
 
 Implementarea se află în `src/lib/compliance/index.ts` (T-43 — „Controale de conformitate”) și `src/lib/compliance/providerAudit.ts`. Operațiunile de scriere în jurnalul de audit nu generează niciodată excepții: în cazul oricărei erori, apelul este ignorat în mod silențios, astfel încât jurnalizarea de audit să nu poată întrerupe fluxul principal al cererii.
 

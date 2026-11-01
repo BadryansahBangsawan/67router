@@ -6,7 +6,7 @@
 
 ## 概要
 
-OmniRoute CLI コマンドは、`x-omniroute-cli-token` リクエストヘッダーで送信される
+67router CLI コマンドは、`x-omniroute-cli-token` リクエストヘッダーで送信される
 `HMAC-SHA256(machine-id, salt)` トークンを使用して、ローカル管理 API に対して認証を行います。
 
 これにより、CLI サブコマンド（`omniroute status`、`omniroute providers` など）は、

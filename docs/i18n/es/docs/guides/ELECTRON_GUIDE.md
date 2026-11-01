@@ -7,7 +7,7 @@
 > **Fuente de referencia:** espacio de trabajo `electron/`
 > **Última actualización:** 2026-06-28 — v3.8.40
 
-OmniRoute incluye una aplicación de escritorio multiplataforma (Windows / macOS / Linux) creada con
+67router incluye una aplicación de escritorio multiplataforma (Windows / macOS / Linux) creada con
 **Electron 41** + **electron-builder 26.10**. La aplicación de escritorio inicia el servidor
 independiente de Next.js como proceso secundario, dirige una `BrowserWindow` hacia él y añade una
 bandeja del sistema, un actualizador automático, un puente IPC y una inicialización de secretos sin configuración.
@@ -200,7 +200,7 @@ es preferible usar el archivo `.env`; después, cierre la aplicación por comple
 - `BrowserWindow`: 1400×900 (mín. 1024×700), `backgroundColor: "#0a0a0a"`.
 - macOS: `titleBarStyle: "hiddenInset"`, controles de ventana en `{ x: 16, y: 16 }`.
 - Windows/Linux: barra de título nativa.
-- El botón de cierre minimiza la aplicación a la bandeja; el menú de la bandeja incluye **Abrir OmniRoute**, **Abrir panel** (navegador externo), submenú **Puerto del servidor**, **Buscar actualizaciones** y **Salir**.
+- El botón de cierre minimiza la aplicación a la bandeja; el menú de la bandeja incluye **Abrir 67router**, **Abrir panel** (navegador externo), submenú **Puerto del servidor**, **Buscar actualizaciones** y **Salir**.
 
 ## Política de seguridad de contenido
 

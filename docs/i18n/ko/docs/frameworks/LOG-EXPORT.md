@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 호출 로그를 외부 분석 저장소로 지속적이고 증분 방식으로 내보냅니다.
+67router 호출 로그를 외부 분석 저장소로 지속적이고 증분 방식으로 내보냅니다.
 
 로그 대시보드 탭은 요청 기록을 SQLite(`call_logs`)에 보관하며, 이 기록은
 순환 및 보존 정책에 따라 제한됩니다. 로그 내보내기는 동일한 레코드 집합을 일정에 따라 외부로 전송하여
@@ -271,7 +271,7 @@ insertAll 호출로 나누므로, `batch_size`가 커도 BigQuery의 10MB 요청
 - 부분 실패가 발생하면 `send()`는 **반드시 예외를 발생시켜야 합니다**. 정상적으로 반환된다는 것은 "대상에 이 행들이 존재한다"는 의미이며,
   커서는 해당 행들을 영구적으로 지나 이동합니다.
 - 사용자가 제공한 URL을 사용하는 대상은 가져오기를 수행하기 전에 웹후크와 동일한 방식으로
-  `parseAndValidateWebhookUrl`(`src/shared/network/outboundUrlGuardPolicy.ts`)을 통해 URL을 검증해야 합니다.
+  `parseAndValidatePublicUrl`(`src/shared/network/outboundUrlGuard.ts`)을 통해 URL을 검증해야 합니다.
   BigQuery는 호스트가 상수이므로 이 검증이 필요하지 않습니다.
 
 ---

@@ -8,17 +8,17 @@
 
 🌐 **Lingue:** 🇺🇸 [English](./TROUBLESHOOTING.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/TROUBLESHOOTING.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/TROUBLESHOOTING.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/TROUBLESHOOTING.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/TROUBLESHOOTING.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/TROUBLESHOOTING.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/TROUBLESHOOTING.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/TROUBLESHOOTING.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/TROUBLESHOOTING.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/TROUBLESHOOTING.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/TROUBLESHOOTING.md) | 🇪🇸 [Español](../i18n/es/docs/guides/TROUBLESHOOTING.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/TROUBLESHOOTING.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/TROUBLESHOOTING.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/TROUBLESHOOTING.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/TROUBLESHOOTING.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/TROUBLESHOOTING.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/TROUBLESHOOTING.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/TROUBLESHOOTING.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/TROUBLESHOOTING.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/TROUBLESHOOTING.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/TROUBLESHOOTING.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/TROUBLESHOOTING.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/TROUBLESHOOTING.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/TROUBLESHOOTING.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/TROUBLESHOOTING.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/TROUBLESHOOTING.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/TROUBLESHOOTING.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/TROUBLESHOOTING.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/TROUBLESHOOTING.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/TROUBLESHOOTING.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/TROUBLESHOOTING.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/TROUBLESHOOTING.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/TROUBLESHOOTING.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/TROUBLESHOOTING.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/TROUBLESHOOTING.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/TROUBLESHOOTING.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/TROUBLESHOOTING.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/TROUBLESHOOTING.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/TROUBLESHOOTING.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/TROUBLESHOOTING.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/TROUBLESHOOTING.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/TROUBLESHOOTING.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/TROUBLESHOOTING.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/TROUBLESHOOTING.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/TROUBLESHOOTING.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/TROUBLESHOOTING.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/TROUBLESHOOTING.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/TROUBLESHOOTING.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/TROUBLESHOOTING.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/TROUBLESHOOTING.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/TROUBLESHOOTING.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/TROUBLESHOOTING.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/TROUBLESHOOTING.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/TROUBLESHOOTING.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/TROUBLESHOOTING.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/TROUBLESHOOTING.md)
 
-Problemi comuni e soluzioni per OmniRoute.
+Problemi comuni e soluzioni per 67router.
 
 ---
 
 ## Riferimento rapido
 
-**È la prima volta che usi OmniRoute?** Inizia da qui: queste soluzioni risolvono il 90% dei problemi:
+**È la prima volta che usi 67router?** Inizia da qui: queste soluzioni risolvono il 90% dei problemi:
 
 | Vedi questo                           | Cosa significa                                    | Cosa fare                                                                                           |
 | ------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| "Impossibile connettersi"             | OmniRoute non è in esecuzione                     | Esegui `omniroute` o `docker restart omniroute`                                                     |
+| "Impossibile connettersi"             | 67router non è in esecuzione                      | Esegui `omniroute` o `docker restart omniroute`                                                     |
 | "Chiave API non valida"               | La chiave è errata o scaduta                      | Copia nuovamente la chiave dal sito web del provider                                                |
 | "Limite di richieste superato"        | Stai inviando troppe richieste                    | Attendi 1 minuto oppure usa `model: "auto"` per il fallback automatico                              |
 | "Quota superata"                      | Hai esaurito la quota gratuita/a pagamento        | Collega altri provider oppure usa provider gratuiti (Kiro, Pollinations)                            |
@@ -55,13 +55,13 @@ export OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT=4   # limite esplicito di ammissione p
 export OMNIROUTE_CHAT_ADMISSION_QUEUE_MS=20000 # aumenta l'attesa limitata oltre il valore predefinito di RATE_LIMIT_MAX_WAIT_MS per gli upstream lenti
 ```
 
-Impostare queste variabili nell'ambiente del processo OmniRoute (il daemon, ad esempio tramite il plist LaunchAgent o `systemctl edit`), quindi riavviare OmniRoute. Il flag di rotazione è la singola leva con il maggiore impatto: trasforma un errore definitivo in un nuovo tentativo trasparente verso un provider funzionante del pool.
+Impostare queste variabili nell'ambiente del processo 67router (il daemon, ad esempio tramite il plist LaunchAgent o `systemctl edit`), quindi riavviare 67router. Il flag di rotazione è la singola leva con il maggiore impatto: trasforma un errore definitivo in un nuovo tentativo trasparente verso un provider funzionante del pool.
 
 **Nota**: `OMNIROUTE_CHAT_MAX_HEAVY_IN_FLIGHT` limita il numero di richieste pesanti, ovvero con contesto lungo, eseguite contemporaneamente; il limite è un controllo di ammissione, non un limitatore di frequenza del provider. **Aggiornamento #503-fanout:** questa variabile non è più impostata per impostazione predefinita (ora applica un limite solo quando viene configurata esplicitamente, come sopra): l'ammissione delle richieste pesanti è invece regolata da un budget di byte derivato automaticamente (`OMNIROUTE_CHAT_MAX_INFLIGHT_BYTES`), che si adatta al limite di memoria effettivo dell'host. Pertanto, una nuova installazione dovrebbe generare molti meno rifiuti `503 chat_admission_busy` senza dover impostare questa variabile; impostarla esplicitamente come mostrato continua comunque a funzionare esattamente come documentato. Le sostituzioni esplicite del budget di byte sono vincolate all'intervallo 8 MiB–2 GiB. Un errore `413 body_exceeds_budget` non è transitorio: aumentare tale budget di byte, ridurre `OMNIROUTE_CHAT_HARD_MAX_BODY_BYTES` oppure aumentare il limite di memoria del processo. Un'esclusione `inflight_bytes_budget` è dovuta a una contesa temporanea e può essere ritentata. La limitazione della frequenza per provider (`open-sse/services/rateLimitManager.ts`) è gestita separatamente tramite `RATE_LIMIT_MAX_WAIT_MS`, `RATE_LIMIT_MAX_QUEUE_DEPTH` e `RATE_LIMIT_AUTO_ENABLE`: vedere `.env.example`.
 
 **Come verificare che abbia funzionato**: eseguire l'agente/cron due volte in rapida successione e verificare che entrambe le esecuzioni riescano. Prima della correzione, la seconda esecuzione genera generalmente un errore `429`/`401`. Dopo la correzione, gli errori, se presenti, vengono ritentati in modo trasparente e la chiamata viene completata. È inoltre possibile eseguire `curl /monitoring/health` e osservare il campo `rateLimitedUntil` nelle connessioni dei provider e `circuitBreakers.providerBreakers[].state` per i provider interessati: lo stato può essere `CLOSED`, `DEGRADED`, `OPEN` o `HALF_OPEN` (vedere `src/shared/utils/circuitBreaker.ts`) e un provider che continua a non rispondere correttamente passerà da `CLOSED → DEGRADED → OPEN` prima che la finestra di reimpostazione consenta il passaggio di una richiesta di prova (`HALF_OPEN`).
 
-**Se si continua a ricevere 429**: l'account attivo per quel provider ha effettivamente esaurito la propria _quota_ (non si tratta soltanto di limitazione della frequenza). Aggiungere un secondo account per lo stesso provider nella dashboard di OmniRoute → Providers → Accounts oppure includere un altro provider gratuito (ad esempio `routeway`, `auggie`). La rotazione è utile soltanto per errori transitori di frequenza/400/401; l'esaurimento definitivo della quota richiede una seconda credenziale o un provider diverso.
+**Se si continua a ricevere 429**: l'account attivo per quel provider ha effettivamente esaurito la propria _quota_ (non si tratta soltanto di limitazione della frequenza). Aggiungere un secondo account per lo stesso provider nella dashboard di 67router → Providers → Accounts oppure includere un altro provider gratuito (ad esempio `routeway`, `auggie`). La rotazione è utile soltanto per errori transitori di frequenza/400/401; l'esaurimento definitivo della quota richiede una seconda credenziale o un provider diverso.
 
 **Se si riceve 403 sui modelli di visione (`auto/vision`, `bazaarlink/*`)**: l'account connesso non dispone di un piano a pagamento che includa la visione oppure la chiave API non dispone di autorizzazioni sufficienti. Verificare nella dashboard del provider che l'ambito della chiave includa le funzionalità di visione/multimodali oppure connettere un account con un piano a pagamento e mantenerlo come destinazione per la visione.
 
@@ -71,7 +71,7 @@ Impostare queste variabili nell'ambiente del processo OmniRoute (il daemon, ad e
 
 Quando esegui `npm install -g omniroute`, potresti vedere una lunga serie di avvisi come `npm warn ERESOLVE`, notifiche relative alle dipendenze peer e messaggi `deprecated`. **Sono previsti e innocui.** L'installazione è riuscita se nell'output viene visualizzato `added <N> packages`.
 
-Per sopprimere gli avvisi relativi alla risoluzione delle dipendenze peer, utilizza la modalità di installazione supportata da OmniRoute:
+Per sopprimere gli avvisi relativi alla risoluzione delle dipendenze peer, utilizza la modalità di installazione supportata da 67router:
 
 ```bash
 npm install -g omniroute --legacy-peer-deps
@@ -79,7 +79,7 @@ npm install -g omniroute --legacy-peer-deps
 
 `--legacy-peer-deps` sopprime solo `ERESOLVE` e le notifiche relative alle dipendenze peer. Gli avvisi di deprecazione rimangono visibili perché provengono da pacchetti di terze parti transitivi; non indicano che l'installazione non sia riuscita.
 
-Gli avvisi derivano da intervalli obsoleti delle dipendenze peer in pacchetti di terze parti che OmniRoute non controlla:
+Gli avvisi derivano da intervalli obsoleti delle dipendenze peer in pacchetti di terze parti che 67router non controlla:
 
 1. **`marked-terminal` richiede `marked >=1 <16`, ma è stato trovato `marked@18`** — in pratica funziona correttamente; è semplicemente obsoleto l'intervallo peer definito dal progetto upstream.
 2. **`deprecated prebuild-install@7.1.3`** — un helper transitivo per il recupero di binari nativi. Non viene
@@ -104,19 +104,19 @@ npm warn install-scripts 7 pacchetti avevano script di installazione bloccati pe
 
 ### È possibile ignorare questo avviso?
 
-**Parzialmente, ma l'esecuzione senza script non è consigliata.** OmniRoute include meccanismi di fallback affidabili: se non è possibile caricare dal bundle autonomo i binding nativi di `better-sqlite3`, l'applicazione utilizza driver alternativi come `node:sqlite` o `sql.js` (vedere [Risoluzione del runtime SQLite](../ops/SQLITE_RUNTIME.md)). Il server verrà comunque avviato, ma l'esecuzione con fallback WASM come `sql.js` disabilita la modalità WAL (Write-Ahead Logging) di SQLite e aumenta l'utilizzo della memoria e l'overhead di sincronizzazione su disco.
+**Parzialmente, ma l'esecuzione senza script non è consigliata.** 67router include meccanismi di fallback affidabili: se non è possibile caricare dal bundle autonomo i binding nativi di `better-sqlite3`, l'applicazione utilizza driver alternativi come `node:sqlite` o `sql.js` (vedere [Risoluzione del runtime SQLite](../ops/SQLITE_RUNTIME.md)). Il server verrà comunque avviato, ma l'esecuzione con fallback WASM come `sql.js` disabilita la modalità WAL (Write-Ahead Logging) di SQLite e aumenta l'utilizzo della memoria e l'overhead di sincronizzazione su disco.
 
 ### Quali script sono effettivamente necessari?
 
-Non tutti gli script bloccati sono essenziali per eseguire OmniRoute:
+Non tutti gli script bloccati sono essenziali per eseguire 67router:
 
-- **Essenziali (`omniroute`, `better-sqlite3`):** OmniRoute viene eseguito da un bundle applicativo autonomo di Next.js (`dist/`). Durante l'installazione, npm scarica o compila il driver SQLite nativo specifico dell'host nella directory principale `node_modules/better-sqlite3/`. Lo script `postinstall` di OmniRoute (`scripts/build/postinstall.mjs`) verifica e copia quindi questi file binari specifici dell'host in `dist/node_modules/`, affinché il server autonomo possa accedervi. Se lo script postinstall di `omniroute` viene bloccato, questo passaggio di copia viene ignorato.
+- **Essenziali (`omniroute`, `better-sqlite3`):** 67router viene eseguito da un bundle applicativo autonomo di Next.js (`dist/`). Durante l'installazione, npm scarica o compila il driver SQLite nativo specifico dell'host nella directory principale `node_modules/better-sqlite3/`. Lo script `postinstall` di 67router (`scripts/build/postinstall.mjs`) verifica e copia quindi questi file binari specifici dell'host in `dist/node_modules/`, affinché il server autonomo possa accedervi. Se lo script postinstall di `omniroute` viene bloccato, questo passaggio di copia viene ignorato.
 - **Opzionali/transitivi (`keytar`, `@parcel/watcher`, `@swc/core`, `protobufjs`, `esbuild`):** Si tratta di strumenti ausiliari per la compilazione, strumenti di monitoraggio o utilità per il portachiavi di sistema. Consentirne l'esecuzione evita gli avvisi di compilazione, ma non sono necessari per le funzionalità di routing principali.
-- **Escluso (`onnxruntime-node`):** È una dipendenza opzionale per gli embedding IA locali e **non** è necessaria per eseguire OmniRoute. Il relativo script postinstall scarica da NuGet circa 300 MB di risorse CUDA; non includerlo nell'elenco delle autorizzazioni, a meno che non si intenda esplicitamente utilizzare l'accelerazione ONNX locale su hardware supportato.
+- **Escluso (`onnxruntime-node`):** È una dipendenza opzionale per gli embedding IA locali e **non** è necessaria per eseguire 67router. Il relativo script postinstall scarica da NuGet circa 300 MB di risorse CUDA; non includerlo nell'elenco delle autorizzazioni, a meno che non si intenda esplicitamente utilizzare l'accelerazione ONNX locale su hardware supportato.
 
 ### Correzione consigliata
 
-Per consentire gli script di installazione necessari durante un'installazione globale ed eliminare gli avvisi, specificare `--allow-scripts` per OmniRoute e le relative dipendenze native:
+Per consentire gli script di installazione necessari durante un'installazione globale ed eliminare gli avvisi, specificare `--allow-scripts` per 67router e le relative dipendenze native:
 
 ```bash
 npm install -g omniroute --allow-scripts=omniroute,better-sqlite3,keytar,@parcel/watcher,@swc/core,protobufjs,esbuild
@@ -147,15 +147,15 @@ Playwright mantiene intenzionalmente separati i download dei browser
 dall'installazione del pacchetto npm, pertanto questa risposta è prevista finché il browser non viene installato.
 
 Per un'installazione globale di npm, installa Chromium dalla directory del pacchetto
-OmniRoute affinché la cache del browser appartenga alla stessa installazione di Playwright:
+67router affinché la cache del browser appartenga alla stessa installazione di Playwright:
 
 ```bash
 cd "$(npm root -g)/omniroute"
 npx playwright install chromium
 ```
 
-Riavvia OmniRoute dopo l'installazione, quindi riprova la richiesta Gemini Web. Se
-esegui OmniRoute da un'immagine Docker, usa l'immagine `-web` (o la destinazione di build
+Riavvia 67router dopo l'installazione, quindi riprova la richiesta Gemini Web. Se
+esegui 67router da un'immagine Docker, usa l'immagine `-web` (o la destinazione di build
 `runner-web`), che include Chromium e le relative dipendenze; l'immagine di base non
 li include.
 
@@ -188,7 +188,7 @@ li include.
 **Questo è un falso positivo. Nulla è infetto e non è richiesta alcuna azione.**
 
 Avast e AVG utilizzano un'euristica che segnala i file di testo semplice/Markdown contenenti molti
-link che sembrano richieste HTTP. Il file `README.md` di OmniRoute è incluso nel pacchetto npm (è
+link che sembrano richieste HTTP. Il file `README.md` di 67router è incluso nel pacchetto npm (è
 elencato in `package.json` → `files`), quindi, in caso di installazione globale, viene salvato in
 `node_modules/omniroute/README.md` e contiene circa 15 esempi `http://localhost:20128/...` (gli
 endpoint HTTP/SSE MCP, l'URL A2A `.well-known` e frammenti `curl`). Questa densità di link è
@@ -205,7 +205,7 @@ in sicurezza dalla quarantena.
 
 1. **Interrompere le notifiche** — escludere la directory di installazione nell'antivirus
    (Avast: Impostazioni → Eccezioni), aggiungendo il percorso globale di `node_modules` e/o la
-   directory dei dati di OmniRoute (`~/.omniroute/`).
+   directory dei dati di 67router (`~/.omniroute/`).
 2. **Segnalare il falso positivo** — <https://www.avast.com/false-positive-file-form.php>,
    allegando il file `README.md` in quarantena. Questa è la soluzione che aiuta tutti, poiché è
    l'euristica del fornitore a reagire in modo eccessivo a un file di testo.
@@ -270,7 +270,7 @@ nuove versioni.
 
 ### La pagina di accesso si arresta in modo anomalo o mostra l'errore "Module self-registration"
 
-**Causa:** Stai eseguendo una versione di Node.js al di fuori della soglia minima di sicurezza approvata da OmniRoute. Il caso più comune consiste nell'esecuzione di una versione patch meno recente di Node 22 o 24, inferiore alla soglia di sicurezza corretta richiesta da OmniRoute.
+**Causa:** Stai eseguendo una versione di Node.js al di fuori della soglia minima di sicurezza approvata da 67router. Il caso più comune consiste nell'esecuzione di una versione patch meno recente di Node 22 o 24, inferiore alla soglia di sicurezza corretta richiesta da 67router.
 
 **Sintomi:**
 
@@ -286,7 +286,7 @@ nuove versioni.
    nvm use 24
    ```
 2. Verifica la versione: `node --version` dovrebbe mostrare `v24.0.0` o una versione successiva del ramo LTS 24.x
-3. Reinstalla OmniRoute: `npm install -g omniroute`
+3. Reinstalla 67router: `npm install -g omniroute`
 4. Riavvia: `omniroute`
 
 > **Versioni sicure supportate:** `>=22.22.2 <23` o `>=24.0.0 <27`. Node.js 24.x LTS (Krypton) e Node.js 26 sono pienamente supportati.
@@ -367,13 +367,13 @@ omniroute
 
 **Causa:** Su Node.js 22, il dispatcher di undici@8 non è compatibile con l'implementazione integrata di `fetch()` di Node.
 
-**Correzione (v3.5.5+):** OmniRoute ora utilizza la funzione `fetch()` di undici quando è attivo un dispatcher proxy, garantendo un comportamento coerente. Esegui l'aggiornamento alla versione v3.5.5+.
+**Correzione (v3.5.5+):** 67router ora utilizza la funzione `fetch()` di undici quando è attivo un dispatcher proxy, garantendo un comportamento coerente. Esegui l'aggiornamento alla versione v3.5.5+.
 
 ### Proxy MITM in WSL: le applicazioni desktop sull'host Windows non vengono intercettate
 
-**Causa:** Il proxy MITM e il relativo certificato CA vengono installati nell'ambiente in cui viene eseguito OmniRoute. In WSL, tale ambiente è il guest Linux, mentre le applicazioni desktop di IA (Kiro, Trae, Copilot, Zed, …) vengono eseguite sull'host Windows. Le applicazioni dell'host non considerano attendibile l'archivio certificati del guest e non vengono instradate tramite il proxy di sistema del guest, quindi l'intercettazione delle applicazioni desktop non viene attivata.
+**Causa:** Il proxy MITM e il relativo certificato CA vengono installati nell'ambiente in cui viene eseguito 67router. In WSL, tale ambiente è il guest Linux, mentre le applicazioni desktop di IA (Kiro, Trae, Copilot, Zed, …) vengono eseguite sull'host Windows. Le applicazioni dell'host non considerano attendibile l'archivio certificati del guest e non vengono instradate tramite il proxy di sistema del guest, quindi l'intercettazione delle applicazioni desktop non viene attivata.
 
-**Raccomandazione:** Esegui OmniRoute in modo nativo sullo stesso sistema operativo delle applicazioni desktop che desideri intercettare (Windows per le applicazioni Windows; analogamente per macOS/Linux). Mantenere OmniRoute all'interno di WSL mentre si prendono di mira le applicazioni dell'host richiede di rendere manualmente attendibile il certificato CA generato sull'host Windows e di configurare le impostazioni di rete/proxy di ogni applicazione dell'host affinché utilizzino l'endpoint proxy di WSL: si tratta di una configurazione non supportata e fragile.
+**Raccomandazione:** Esegui 67router in modo nativo sullo stesso sistema operativo delle applicazioni desktop che desideri intercettare (Windows per le applicazioni Windows; analogamente per macOS/Linux). Mantenere 67router all'interno di WSL mentre si prendono di mira le applicazioni dell'host richiede di rendere manualmente attendibile il certificato CA generato sull'host Windows e di configurare le impostazioni di rete/proxy di ogni applicazione dell'host affinché utilizzino l'endpoint proxy di WSL: si tratta di una configurazione non supportata e fragile.
 
 ---
 
@@ -400,7 +400,7 @@ omniroute
 
 ### Token OAuth scaduto
 
-OmniRoute aggiorna automaticamente i token. Se i problemi persistono:
+67router aggiorna automaticamente i token. Se i problemi persistono:
 
 1. Dashboard → Provider → Riconnetti
 2. Elimina e aggiungi nuovamente la connessione al provider
@@ -613,7 +613,7 @@ I profili dei provider supportano queste impostazioni:
 
 ### Prevenzione del thundering herd
 
-Quando molte richieste simultanee raggiungono un provider soggetto a rate limiting, OmniRoute utilizza mutex + rate limiting automatico per serializzare le richieste e impedire errori a cascata. Questo avviene automaticamente per i provider con chiave API.
+Quando molte richieste simultanee raggiungono un provider soggetto a rate limiting, 67router utilizza mutex + rate limiting automatico per serializzare le richieste e impedire errori a cascata. Questo avviene automaticamente per i provider con chiave API.
 
 ### Le richieste di chat non riescono con 503 / chat_admission_busy
 
@@ -649,7 +649,7 @@ Con le soglie predefinite, una richiesta è strutturalmente pesante quando conti
 almeno `64` strumenti o almeno `32,000` token stimati, oppure quando la stima limitata della struttura
 esaurisce i propri limiti di `10,000` nodi visitati o di profondità `12`.
 
-**Causa:** Si tratta di una riduzione intenzionale del carico all'interno di OmniRoute, non di un errore del provider upstream.
+**Causa:** Si tratta di una riduzione intenzionale del carico all'interno di 67router, non di un errore del provider upstream.
 Ogni processo utilizza una protezione locale al processo per riservare una capacità pesante limitata prima di conservare
 e analizzare il corpo di una richiesta di grandi dimensioni. Un lease pesante rimane attivo per l'intera durata di una risposta
 SSE.
@@ -694,7 +694,7 @@ per le impostazioni di ammissione ufficiali.
 
 ## Tassonomia facoltativa degli errori RAG / LLM (16 problemi)
 
-Alcuni utenti di OmniRoute posizionano il gateway davanti a stack RAG o di agenti. In queste configurazioni è comune osservare uno schema insolito: OmniRoute sembra funzionare correttamente (provider attivi, profili di instradamento corretti, nessun avviso sui limiti di frequenza), ma la risposta finale è comunque errata.
+Alcuni utenti di 67router posizionano il gateway davanti a stack RAG o di agenti. In queste configurazioni è comune osservare uno schema insolito: 67router sembra funzionare correttamente (provider attivi, profili di instradamento corretti, nessun avviso sui limiti di frequenza), ma la risposta finale è comunque errata.
 
 In pratica, questi incidenti derivano solitamente dalla pipeline RAG a valle, non dal gateway stesso.
 
@@ -713,17 +713,17 @@ L'idea è semplice:
 
 1. Quando analizzi una risposta errata, acquisisci:
    - attività e richiesta dell'utente
-   - combinazione di route o provider in OmniRoute
+   - combinazione di route o provider in 67router
    - qualsiasi contesto RAG utilizzato a valle (documenti recuperati, chiamate agli strumenti e così via)
 2. Associa l'incidente a uno o due numeri di WFGY ProblemMap (`No.1` … `No.16`).
-3. Salva il numero nella tua dashboard, nel tuo runbook o nel tuo sistema di monitoraggio degli incidenti, accanto ai log di OmniRoute.
+3. Salva il numero nella tua dashboard, nel tuo runbook o nel tuo sistema di monitoraggio degli incidenti, accanto ai log di 67router.
 4. Usa la pagina WFGY corrispondente per decidere se modificare lo stack RAG, il sistema di recupero o la strategia di instradamento.
 
 Il testo completo e le procedure concrete sono disponibili qui (licenza MIT, solo testo):
 
 [README di WFGY ProblemMap](https://github.com/onestardao/WFGY/blob/main/ProblemMap/README.md)
 
-Puoi ignorare questa sezione se non esegui pipeline RAG o di agenti dietro OmniRoute.
+Puoi ignorare questa sezione se non esegui pipeline RAG o di agenti dietro 67router.
 
 ---
 
@@ -747,7 +747,7 @@ Problemi specifici della versione v3.8.0 e relative soluzioni alternative attual
 
 1. Installa Devin CLI per la tua piattaforma
 2. Imposta `CLI_DEVIN_BIN=/usr/local/bin/devin` (o il percorso effettivo) in `.env`
-3. Riavvia OmniRoute ed esegui nuovamente il test da **Dashboard → Strumenti CLI**
+3. Riavvia 67router ed esegui nuovamente il test da **Dashboard → Strumenti CLI**
 
 ### Cooldown del modello bloccato (reimpostazione manuale)
 
@@ -802,7 +802,7 @@ Problemi specifici della versione v3.8.0 e relative soluzioni alternative attual
 
 1. Genera un segreto casuale: `openssl rand -hex 32`
 2. Imposta `OMNIROUTE_WS_BRIDGE_SECRET=<random-secret>` nell'ambiente del server di produzione (e in qualsiasi client che comunica con il bridge)
-3. Riavvia OmniRoute
+3. Riavvia 67router
 
 ### Responses API: modalità in background degradata a sincrona
 

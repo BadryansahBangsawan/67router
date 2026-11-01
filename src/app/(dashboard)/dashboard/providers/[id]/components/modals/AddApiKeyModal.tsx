@@ -557,7 +557,7 @@ export default function AddApiKeyModal({
             href={webProviderHostLink.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 rounded-lg border border-primary/30 bg-primary/10 px-3 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/20"
+            className="flex items-center justify-center gap-1.5 rounded-lg border border-border bg-surface px-3 py-2 text-sm font-medium text-text-main transition-colors hover:bg-bg-subtle"
           >
             <Icon name="open_in_new" size={18} />
             {providerText(t, "openWebProviderSite", "Open {host}", {

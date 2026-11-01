@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute udgiver npm + Docker-artefakter. Disse gates leverer proveniens, inventar (SBOM) og CVE-scanning, alt sammen OSS, integreret i release-workflows. **Advisory-first** tilgang — de rapporterer nu, og promoverer til blokerende efter den 1. grønne release.
+67router udgiver npm + Docker-artefakter. Disse gates leverer proveniens, inventar (SBOM) og CVE-scanning, alt sammen OSS, integreret i release-workflows. **Advisory-first** tilgang — de rapporterer nu, og promoverer til blokerende efter den 1. grønne release.
 
 | Gate                  | Værktøj                                        | Hvor                          | Blokerer?                     | Output                                      |
 | :-------------------- | :--------------------------------------------- | :---------------------------- | :---------------------------- | :------------------------------------------ |
@@ -39,7 +39,7 @@ Begge gates **SKIPPER elegant** (exit 0), når værktøjet mangler, eller målin
 
 - **Kæde:** `promptfoo` (devDependency) → `@openai/codex-security` → `extract-zip@2.0.1`. Bekræftet via `package-lock.json` — præcis én pakke i hele afhængighedstræet (`@openai/codex-security`) erklærer `extract-zip`, og præcis én pakke (`promptfoo`) erklærer `@openai/codex-security`.
 - **Ingen rettet udgivelse eksisterer nogen steder i kæden.** `extract-zip@2.0.1` (udgivet 2020) er pakkens sidste udgivelse — den vedligeholdes ikke. `@openai/codex-security`'s nuværende npm-latest (`0.1.29`) trækker stadig `extract-zip@2.0.1`.
-- **Uopnåelig fra produktion.** `promptfoo` er kun devDependency (aldrig opført under `dependencies`), og ingen fil under `src/`, `open-sse/` eller `bin/` importerer `extract-zip` npm-pakken — OmniRoutes egen `extractZip()` hjælpefunktion (`src/lib/versionManager/binaryManager.ts:93`) kalder native `unzip`/`tar` og er urelateret. `@openai/codex-security` leverer også sin egen symlink-traversal-beskyttelse ud over extract-zip's onEntry callback.
+- **Uopnåelig fra produktion.** `promptfoo` er kun devDependency (aldrig opført under `dependencies`), og ingen fil under `src/`, `open-sse/` eller `bin/` importerer `extract-zip` npm-pakken — 67routers egen `extractZip()` hjælpefunktion (`src/lib/versionManager/binaryManager.ts:93`) kalder native `unzip`/`tar` og er urelateret. `@openai/codex-security` leverer også sin egen symlink-traversal-beskyttelse ud over extract-zip's onEntry callback.
 - **Undgå** at aliasere `extract-zip` via `package.json` `overrides` — den eneste levedygtige drop-in-erstatning er Electron-org-internal og API-inkompatibel med `@openai/codex-security`'s egne onEntry/defaultDirMode/defaultFileMode-tjek; at overskrive den ville lydløst bryde pakkens sikkerhedstjek.
 - **Baseline:** målt osv `vulnCount` (3) er allerede et godt stykke under den frosne `config/quality/quality-baseline.json` baseline (27) — ingen ratchet-ændring nødvendig.
 - **Regressionsbeskyttelse:** `tests/unit/extract-zip-14482-exposure.test.ts` bekræfter kæden og den ovenstående no-production-import invariant; den får CI til at fejle, hvis en af delene nogensinde brydes (f.eks. hvis en fremtidig PR gør `extract-zip` tilgængelig fra produktion).

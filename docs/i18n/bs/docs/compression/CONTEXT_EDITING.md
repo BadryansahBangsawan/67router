@@ -6,15 +6,15 @@
 
 # Delegirano uređivanje konteksta (Anthropic)
 
-Delegirano **uređivanje konteksta** (Context Editing) je funkcija upravljanja kontekstom isključivo za Claude. Za razliku od OmniRoute lokalnih engine-a za kompresiju (Caveman, RTK, LLMLingua, stacked pipelines) — koji prepisuju tijelo zahtjeva _prije_ nego što napusti proxy — Context Editing traži od **provider-a** da obriše zastarjele tool-use / tool-result blokove iz svog vlastitog aktivnog prozora konteksta. OmniRoute samo dodaje parametar tijela (`context_management.edits[]`); Claude vrši stvarno brisanje prema vlastitom tokenizer-u.
+Delegirano **uređivanje konteksta** (Context Editing) je funkcija upravljanja kontekstom isključivo za Claude. Za razliku od 67router lokalnih engine-a za kompresiju (Caveman, RTK, LLMLingua, stacked pipelines) — koji prepisuju tijelo zahtjeva _prije_ nego što napusti proxy — Context Editing traži od **provider-a** da obriše zastarjele tool-use / tool-result blokove iz svog vlastitog aktivnog prozora konteksta. 67router samo dodaje parametar tijela (`context_management.edits[]`); Claude vrši stvarno brisanje prema vlastitom tokenizer-u.
 
-Ovo je po prirodi delegirana mogućnost: drugi provider-i odbijaju ovaj parametar, pa ga OmniRoute ograničava isključivo na Claude i Claude-Code-kompatibilne releje.
+Ovo je po prirodi delegirana mogućnost: drugi provider-i odbijaju ovaj parametar, pa ga 67router ograničava isključivo na Claude i Claude-Code-kompatibilne releje.
 
 Izvor istine: `open-sse/config/contextEditing.ts` (strategy ids, body injection, telemetry extraction), `open-sse/executors/base.ts` (injection gate + 400-fallback) i `open-sse/services/compression/types.ts` (config shape + default).
 
 ## Šta `clear_tool_uses` radi
 
-OmniRoute ubacuje jednu izmjenu u odlazno tijelo Anthropic Messages:
+67router ubacuje jednu izmjenu u odlazno tijelo Anthropic Messages:
 
 ```json
 {
@@ -34,9 +34,9 @@ OmniRoute ubacuje jednu izmjenu u odlazno tijelo Anthropic Messages:
 - `trigger.value: 100000` — kada ulazni tokeni zahtjeva premaše ovaj prag, Claude počinje brisati stare tool-use/result parove (`CONTEXT_EDITING_DEFAULT_TRIGGER_TOKENS`, Anthropic-ov default).
 - `keep.value: 3` — N najnovijih tool-use/result parova ostaje netaknuto (`CONTEXT_EDITING_DEFAULT_KEEP_TOOL_USES`).
 
-Beta se oglašava putem `anthropic-beta: context-management-2025-06-27` zaglavlja, koje OmniRoute već šalje u Claude zahtjevima.
+Beta se oglašava putem `anthropic-beta: context-management-2025-06-27` zaglavlja, koje 67router već šalje u Claude zahtjevima.
 
-Ubacivanje vrši `applyContextEditingToBody()` i ono je **idempotentno**: ako `clear_tool_uses` izmjena već postoji u tijelu (dodana prethodnim pozivom ili dostavljena od strane klijenta), tijelo ostaje nepromijenjeno. Ako je prisutna i `clear_thinking_20251015` izmjena, OmniRoute stabilno sortira `clear_thinking` izmjenu na početak, jer Anthropic zahtijeva da `clear_thinking` prethodi `clear_tool_uses` u `edits[]` nizu.
+Ubacivanje vrši `applyContextEditingToBody()` i ono je **idempotentno**: ako `clear_tool_uses` izmjena već postoji u tijelu (dodana prethodnim pozivom ili dostavljena od strane klijenta), tijelo ostaje nepromijenjeno. Ako je prisutna i `clear_thinking_20251015` izmjena, 67router stabilno sortira `clear_thinking` izmjenu na početak, jer Anthropic zahtijeva da `clear_thinking` prethodi `clear_tool_uses` u `edits[]` nizu.
 
 ## Prekidač za omogućavanje po kombinaciji (per-combo)
 
@@ -112,7 +112,7 @@ Pravi Claude nosi beta verziju u `ANTHROPIC_BETA_BASE` i ne nailazi na ovu fallb
 
 ## telemetrija applied_edits
 
-Nakon Claude odgovora, OmniRoute beleži koliko je konteksta provajder zapravo očistio. Ovo se **ne** strimuje — ekstrahuje se iz nestrimujućeg tela odgovora, uz najbolji napor (best-effort), i nikada ne utiče na odgovor (greške telemetrije se zanemaruju).
+Nakon Claude odgovora, 67router beleži koliko je konteksta provajder zapravo očistio. Ovo se **ne** strimuje — ekstrahuje se iz nestrimujućeg tela odgovora, uz najbolji napor (best-effort), i nikada ne utiče na odgovor (greške telemetrije se zanemaruju).
 
 - Ekstrakcija: `extractContextEditingTelemetry(responseBody)` u `open-sse/config/contextEditing.ts`. Proverava `applied_edits` na tri lokacije (defanzivno u odnosu na oblik odgovora):
   - `context_management.applied_edits`
@@ -135,14 +135,14 @@ Dakle, delegirano čišćenje se pojavljuje u analitici kompresije pored lokalni
 
 | Aspekt             | Lokalni mehanizmi (Caveman / RTK / LLMLingua / stacked) | Delegirano uređivanje konteksta                       |
 | ------------------ | ------------------------------------------------------- | ----------------------------------------------------- |
-| Gdje se izvršava   | U OmniRoute, prije nego što zahtjev napusti proxy       | Kod provajdera (Claude), na strani servera            |
+| Gdje se izvršava   | U 67router, prije nego što zahtjev napusti proxy        | Kod provajdera (Claude), na strani servera            |
 | Šta uređuje        | Prompt / kontekst / tekst rezultata alata               | Stari blokovi korištenja alata / rezultata alata      |
 | Opseg provajdera   | Svi provajderi                                          | Samo `claude` + `anthropic-compatible-cc-*`           |
 | Prekidač           | Postavke načina kompresije                              | `contextEditing.enabled`                              |
 | Režim neuspjeha    | Fail-open (originalni tekst)                            | 400-fallback: ukloni parametar, pokušaj ponovo jednom |
 | Telemetrija uštede | `engine: <engine id>`                                   | `engine: "context-editing"`                           |
 
-Ova dva pristupa su komplementarna: lokalni mehanizmi kompresuju bajtove koje OmniRoute šalje; Context Editing omogućava Claude-u da skrati tekući kontekst kroz više krugova interakcije. Mogu se omogućiti istovremeno.
+Ova dva pristupa su komplementarna: lokalni mehanizmi kompresuju bajtove koje 67router šalje; Context Editing omogućava Claude-u da skrati tekući kontekst kroz više krugova interakcije. Mogu se omogućiti istovremeno.
 
 ## Vidi također
 

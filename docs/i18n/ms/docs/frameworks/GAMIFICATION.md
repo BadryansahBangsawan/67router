@@ -7,7 +7,7 @@
 > **Sumber rujukan utama:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Kemas kini terakhir:** 2026-06-28 — v3.8.40
 
-OmniRoute merangkumi lapisan gamifikasi yang mengutamakan penyimpanan setempat dan memberi ganjaran kepada pengguna kerana
+67router merangkumi lapisan gamifikasi yang mengutamakan penyimpanan setempat dan memberi ganjaran kepada pengguna kerana
 berinteraksi dengan platform — membuat permintaan, menukar penyedia, mencipta
 kombo, berkongsi token dan menyumbang kepada komuniti. Semua keadaan disimpan dalam
 SQLite; persekutuan dengan pelayan komuniti adalah berasaskan penyertaan dan tolakan.
@@ -36,7 +36,7 @@ token, ganjaran jemputan).
 | Papan Pendahulu   | Skop global, mingguan, bulanan, perkongsian token dan sumbangan          |
 | Perkongsian Token | Pindahkan kredit antara pengguna melalui lejar catatan bergu             |
 | Jemput & Tebus    | Kod rujukan dengan penyimpanan cincangan SHA-256                         |
-| Pelayan Komuniti  | Bersekutu dengan tika OmniRoute luaran                                   |
+| Pelayan Komuniti  | Bersekutu dengan tika 67router luaran                                    |
 | Antipenipuan      | Penskoran sebelah pelayan, pengehadan kadar, pengesanan anomali skor-z   |
 
 ### Prinsip Reka Bentuk
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Jadual Pangkalan Data
 
-Semua jadual berada dalam pangkalan data SQLite utama OmniRoute, yang dicipta oleh migrasi
+Semua jadual berada dalam pangkalan data SQLite utama 67router, yang dicipta oleh migrasi
 `060_create_gamification.sql`. Penjurnalan WAL diwarisi daripada tika tunggal
 `getDbInstance()` dalam `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Semua jadual berada dalam pangkalan data SQLite utama OmniRoute, yang dicipta ol
 
 ### Modul Domain: `src/lib/db/gamification.ts`
 
-Mengikuti corak standard OmniRoute — mengimport `getDbInstance()` daripada
+Mengikuti corak standard 67router — mengimport `getDbInstance()` daripada
 `core.ts` dan mengeksport fungsi CRUD berjenis. Tiada SQL mentah dalam pengendali laluan.
 
 Fungsi utama:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Tindakan          | XP  | Penerangan                                                          |
 | ----------------- | --- | ------------------------------------------------------------------- |
-| `request`         | 1   | Bagi setiap permintaan API yang dihalakan melalui OmniRoute         |
+| `request`         | 1   | Bagi setiap permintaan API yang dihalakan melalui 67router          |
 | `provider_switch` | 5   | Beralih kepada penyedia yang berbeza                                |
 | `model_switch`    | 3   | Beralih kepada model yang berbeza                                   |
 | `combo_create`    | 10  | Mencipta kombo baharu                                               |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `code`       | `A3K9X7M2` (unik, diindeks) |
 | `token_hash` | SHA-256(raw_token)          |
 
-Token mentah dikembalikan kepada pengguna sekali sahaja semasa penciptaan. OmniRoute
+Token mentah dikembalikan kepada pengguna sekali sahaja semasa penciptaan. 67router
 tidak akan menyimpan atau memaparkannya lagi — hanya cincangan tersebut dikekalkan.
 
 ### Pencegahan Rujukan Kendiri
@@ -703,7 +703,7 @@ Pentadbir boleh mendapatkan keseluruhan jejak audit melalui `GET /api/gamificati
 
 ## Laluan API
 
-Semua laluan mengikut corak OmniRoute standard:
+Semua laluan mengikut corak 67router standard:
 
 ```
 Laluan → Prasemakan CORS → Pengesahan badan (Zod) → Pengesahan (extractApiKey)

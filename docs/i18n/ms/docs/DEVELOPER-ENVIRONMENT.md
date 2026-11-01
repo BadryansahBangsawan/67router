@@ -4,7 +4,7 @@
 
 ---
 
-Halaman ini menerangkan tingkah laku `.env` setempat projek dan cara mengendalikan fail persekitaran serta rahsia semasa membangunkan OmniRoute.
+Halaman ini menerangkan tingkah laku `.env` setempat projek dan cara mengendalikan fail persekitaran serta rahsia semasa membangunkan 67router.
 
 ## Tingkah laku postinstall .env
 

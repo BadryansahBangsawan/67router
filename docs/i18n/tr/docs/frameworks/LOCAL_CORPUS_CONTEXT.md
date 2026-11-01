@@ -13,8 +13,8 @@
 ## Nedir?
 
 Local Corpus, bir operatörün açıkça onaylanmış tek bir metin dosyaları dizinini
-OmniRoute'un MCP sunucusuna sunmasına olanak tanır. Dosyalar özgün dizinlerinde kalır:
-OmniRoute, SQLite'ta yalnızca kanonik kök yolu depolar ve bellek içi bir arama dizini
+67router'un MCP sunucusuna sunmasına olanak tanır. Dosyalar özgün dizinlerinde kalır:
+67router, SQLite'ta yalnızca kanonik kök yolu depolar ve bellek içi bir arama dizini
 tutar. Corpus içeriğini depoya veya veritabanına kopyalamaz.
 
 Dizin yenileme işlemi artımlıdır. Değişmeyen dosyalar boyut ve değiştirilme zamanına

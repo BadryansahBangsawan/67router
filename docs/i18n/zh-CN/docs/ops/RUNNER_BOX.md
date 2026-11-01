@@ -5,7 +5,7 @@
 ---
 
 自 2026-10-18 起，自托管池运行在 **.113** 主机（`tomni-proxmox-113`）上。每个
-OmniRoute 运行器都有**一个角色**、一个标签，以及根据其工作负载实测结果设定的内存/CPU 预算。
+67router 运行器都有**一个角色**、一个标签，以及根据其工作负载实测结果设定的内存/CPU 预算。
 Turbopack 插槽获得构建所需的资源；其他插槽则按照其实际峰值分配资源。只有当 Turbopack 构建、
 Release-Green webpack 构建和 lint 作业同时运行时，该主机才会超额分配；主机的交换空间（16 GB）
 会吸收超出的部分。由于拉取请求的 Build 在托管运行器上执行，Turbopack 插槽大部分时间都处于空闲状态：
@@ -26,7 +26,7 @@ Release-Green webpack 构建和 lint 作业同时运行时，该主机才会超�
 | 交换空间  | 16 GB                     | `omniroute-113-5` 在关闭交换空间的情况下运行（`MemorySwapMax=0`），因此失控的构建会在达到上限时被终止，而不是导致整台主机开始使用交换空间                                                                                                                                                                                                              |
 | `/tmp`    | **12 GB tmpfs = RAM**     | 任何存放在其中的内容都会占用内存；残留内容会在 3 小时后被清理                                                                                                                                                                                                                                                                                          |
 | CPU       | 在 32 核上观察到负载为 60 | 设置配额之前，一个 Turbopack 构建（约 1166 % CPU）加上同一主机上的覆盖率测试套件，会导致其他监听器的心跳无法获得资源（`The self-hosted runner lost communication`，#16853）                                                                                                                                                                            |
-| 运行器    | **6 个监听器**            | 4 个 OmniRoute + OmniHeuris + OmniMind；`omniroute-113-3/-4/-7/-8` 已禁用（`systemctl enable --now` 可重新启用其中一个）                                                                                                                                                                                                                               |
+| 运行器    | **6 个监听器**            | 4 个 67router + OmniHeuris + OmniMind；`omniroute-113-3/-4/-7/-8` 已禁用（`systemctl enable --now` 可重新启用其中一个）                                                                                                                                                                                                                                |
 
 这些限制位于各单元的 `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 中（之前的值保存在 `override.conf.bak-20261018`），并通过
@@ -72,7 +72,7 @@ worker 会将作业报告为已取消，而监听器会自行恢复上线。
 
 runner 的默认 `KillMode=process` 会在单元停止或重启后留下仍在运行的
 `Runner.Worker → npm → next-build`——孤儿构建会在没有关联作业的情况下继续消耗内存和
-CPU。每个 OmniRoute 单元都带有一个 drop-in 配置
+CPU。每个 67router 单元都带有一个 drop-in 配置
 （`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`），
 其中设置了 `KillMode=mixed`：先向监听器发送 SIGTERM，然后在达到 `TimeoutStop` 时向
 整个 cgroup 发送 SIGKILL。该设置会在单元下次重启时生效——每次**仅重启一个 runner，
@@ -113,7 +113,7 @@ CPU。每个 OmniRoute 单元都带有一个 drop-in 配置
   `next build` 的夜间任务（约 5–6 GB；webpack），以及 `quality.yml` 的 `lint-guard`。
   `omniroute-113` 在 2026-10-18 之前一直设置为 `MemoryHigh=4G`——promptfoo 构建在那里因内存回收
   而艰难运行了 54 分钟；提高到 8 GB 后可消除限流。
-- **有意减少监听器数量。** 2026-08-29 禁用了四个 OmniRoute 单元——每增加一个监听器，就会为上述
+- **有意减少监听器数量。** 2026-08-29 禁用了四个 67router 单元——每增加一个监听器，就会为上述
   内存预算增加一个租户。清理程序的上限为 6（cron 中的 `MAX_ACTIVE_RUNNERS=6`）：它会统计该主机上的
   每个 `Runner.Listener`，而 OmniHeuris 和 OmniMind 在我们的四个监听器之外又增加了两个。
 - **任何运行器繁忙时，绝不能手动清理 `/tmp` 或 `_work`。** 先检查、隔一段时间再删除的操作，

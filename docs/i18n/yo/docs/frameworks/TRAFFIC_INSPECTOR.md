@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector jẹ́ olùṣàwárí àṣìṣe ìṣàn HTTPS tí a kọ́ sínú OmniRoute — irinṣẹ́ bíi Charles Proxy / mitmweb / HTTP Toolkit tí ó **mọ nípa LLM** tí ó sì **mọ nípa agent**. Ó wà ní `/dashboard/tools/traffic-inspector`, ó sì ń gba ìṣàn alárìnà láti orísun ìgbàasilẹ tó tó 5 lẹ́ẹ̀kan náà.
+Traffic Inspector jẹ́ olùṣàwárí àṣìṣe ìṣàn HTTPS tí a kọ́ sínú 67router — irinṣẹ́ bíi Charles Proxy / mitmweb / HTTP Toolkit tí ó **mọ nípa LLM** tí ó sì **mọ nípa agent**. Ó wà ní `/dashboard/tools/traffic-inspector`, ó sì ń gba ìṣàn alárìnà láti orísun ìgbàasilẹ tó tó 5 lẹ́ẹ̀kan náà.
 
 **Ibi tó wà lórí dashboard:** `/dashboard/tools/traffic-inspector`
 **Ẹgbẹ́ sidebar:** Àwọn irinṣẹ́ (lẹ́yìn AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector jẹ́ olùṣàwárí àṣìṣe ìṣàn HTTPS tí a kọ́
 
 ### Ohun tó mú Traffic Inspector jẹ́ aláìlẹ́gbẹ́
 
-| Ẹ̀yà                                                                            | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| ------------------------------------------------------------------------------ | :-----: | :-----: | :-----: | :-----------------------------: |
-| Orí wẹ́ẹ̀bù                                                                      |    ✓    |    ✗    |    ✗    |                ✓                |
-| Orísun ṣíṣí                                                                    |    ✓    |    ✗    | apá kan |                ✓                |
-| **Mọ nípa agent** (ó mọ̀ bí ìbéèrè bá ti Antigravity/Copilot/àti bẹ́ẹ̀ bẹ́ẹ̀ lọ wá) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Mọ nípa LLM** (ó ṣe ìtúpalẹ̀ ìrísí OpenAI/Anthropic/Gemini, tokens, model)    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ìyípadà model hàn gbangba** (gemini-3-flash → claude-sonnet-4.7)             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ìpín àkókò ìdádúró proxy/upstream**                                          | apá kan |    ✗    |    ✗    |                ✓                |
-| **A ṣọ̀kan mọ́ OmniRoute** fún routing, fallback, àti iye owó                    |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ìṣàwárí àṣìṣe proxy jákèjádò ẹ̀rọ** (fún app èyíkéyìí lórí ẹ̀rọ náà)           |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Ìgbàasilẹ host àkànṣe** (àtún darí DNS fún host kọ̀ọ̀kan)                      |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Ipò env HTTP_PROXY**                                                         |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Ìwòye ìjíròrò** (àwọn bubble onípele-púpọ̀, tool_use/tool_result)             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Olùdapọ̀ stream SSE** (àtúnkọ́ láti àwọn ìṣẹ̀lẹ̀ delta)                          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Ìgbàasilẹ session** (tó ní orúkọ, tó ṣe é gbé jáde sí .har/.jsonl)           |    ✗    |    ✓    |    ✓    |                ✓                |
+| Ẹ̀yà                                                                            | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| ------------------------------------------------------------------------------ | :-----: | :-----: | :-----: | :----------------------------: |
+| Orí wẹ́ẹ̀bù                                                                      |    ✓    |    ✗    |    ✗    |               ✓                |
+| Orísun ṣíṣí                                                                    |    ✓    |    ✗    | apá kan |               ✓                |
+| **Mọ nípa agent** (ó mọ̀ bí ìbéèrè bá ti Antigravity/Copilot/àti bẹ́ẹ̀ bẹ́ẹ̀ lọ wá) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Mọ nípa LLM** (ó ṣe ìtúpalẹ̀ ìrísí OpenAI/Anthropic/Gemini, tokens, model)    |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ìyípadà model hàn gbangba** (gemini-3-flash → claude-sonnet-4.7)             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ìpín àkókò ìdádúró proxy/upstream**                                          | apá kan |    ✗    |    ✗    |               ✓                |
+| **A ṣọ̀kan mọ́ 67router** fún routing, fallback, àti iye owó                     |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ìṣàwárí àṣìṣe proxy jákèjádò ẹ̀rọ** (fún app èyíkéyìí lórí ẹ̀rọ náà)           |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Ìgbàasilẹ host àkànṣe** (àtún darí DNS fún host kọ̀ọ̀kan)                      |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Ipò env HTTP_PROXY**                                                         |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Ìwòye ìjíròrò** (àwọn bubble onípele-púpọ̀, tool_use/tool_result)             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Olùdapọ̀ stream SSE** (àtúnkọ́ láti àwọn ìṣẹ̀lẹ̀ delta)                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Ìgbàasilẹ session** (tó ní orúkọ, tó ṣe é gbé jáde sí .har/.jsonl)           |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Àpẹrẹ ìṣètò rẹ̀ ní ìpínrọ̀ kan
 
@@ -261,7 +261,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true bí ó bá jẹ́ ìdáhùn SSE
   mappedTo: string | null; // header x-omniroute-mapped
-  costEstimateUsd: number | null; // ìṣírò owó tí a fojú díwọ̀n lórí ìdíyelé OmniRoute
+  costEstimateUsd: number | null; // ìṣírò owó tí a fojú díwọ̀n lórí ìdíyelé 67router
 }
 ```
 
@@ -391,7 +391,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Aṣojú ẹ̀rọ tí a kò dá padà
 
-Tí OmniRoute bá já lulẹ̀ nígbà tí módù aṣojú gbogbo ẹ̀rọ ń ṣiṣẹ́:
+Tí 67router bá já lulẹ̀ nígbà tí módù aṣojú gbogbo ẹ̀rọ ń ṣiṣẹ́:
 
 **macOS:**
 
@@ -436,7 +436,7 @@ Gbogbo àwọn route jẹ́ `LOCAL_ONLY` (loopback nìkan) àti `SPAWN_CAPABLE` 
 | GET    | `/requests`                 | Ṣàkójọ àwọn ìbéèrè (a lè ṣàlẹ̀mọ́: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Àwọn àlàyé ìbéèrè kan ṣoṣo                                                               |
 | DELETE | `/requests`                 | Pa buffer inú-memory rẹ́                                                                  |
-| POST   | `/requests/{id}/replay`     | Ṣi ìbéèrè kan náà ṣiṣẹ́ lẹ́ẹ̀kan sí i nípasẹ̀ router OmniRoute                               |
+| POST   | `/requests/{id}/replay`     | Ṣi ìbéèrè kan náà ṣiṣẹ́ lẹ́ẹ̀kan sí i nípasẹ̀ router 67router                                |
 | PUT    | `/requests/{id}/annotation` | Fi àkọsílẹ̀ kan lórí ìbéèrè pamọ́ tàbí ṣe àfikún rẹ̀                                        |
 
 ### WebSocket

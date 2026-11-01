@@ -71,11 +71,9 @@ Ove datoteke danas imaju najnižu pokrivenost linija (< 60%) i nude najbolji pov
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@ Teme za Faze 6-7:
 
 - `open-sse/services/compression/**` je najgušći skup datoteka s niskom pokrivenošću i dominira preostalim jazom.
 - Rute za batch i rerank API (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) trebaju testove na razini handlera.
-- Adapteri za cloud agente (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) i `tierResolver.ts` trebaju scenarijsko testiranje.
 - Komponente korisničkog sučelja za dokumentaciju i `src/mitm/systemCommands.ts` imaju niži prioritet, ali donose jeftine dobitke za pokrivenost grana.
 
 ## Kontrolni popis izvršavanja

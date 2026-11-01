@@ -6,7 +6,7 @@
 
 🌐 **Bahasa:** 🇺🇸 [Bahasa Inggeris](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Rujukan teras untuk OmniRoute API. Ia merangkumi permukaan awam `/v1` dan titik akhir pengurusan yang paling kerap digunakan; [`docs/openapi.yaml`](../openapi.yaml) yang boleh dibaca mesin dan pepohon laluan di bawah `src/app/api/` ialah sumber yang menyeluruh.
+Rujukan teras untuk 67router API. Ia merangkumi permukaan awam `/v1` dan titik akhir pengurusan yang paling kerap digunakan; [`docs/openapi.yaml`](../openapi.yaml) yang boleh dibaca mesin dan pepohon laluan di bawah `src/app/api/` ialah sumber yang menyeluruh.
 
 Untuk protokol serasi OpenAI yang khusus dan matriks keupayaan penyedia, lihat
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Respons    | `HIT` atau `MISS` (tanpa penstriman)                                                                                                                                                                                                           |
 | `X-OmniRoute-Idempotent` | Respons    | `true` jika dinyahduplikasi                                                                                                                                                                                                                    |
 | `X-OmniRoute-Progress`   | Respons    | `enabled` jika penjejakan kemajuan dihidupkan                                                                                                                                                                                                  |
-| `X-OmniRoute-Session-Id` | Respons    | ID sesi berkuat kuasa yang digunakan oleh OmniRoute                                                                                                                                                                                            |
+| `X-OmniRoute-Session-Id` | Respons    | ID sesi berkuat kuasa yang digunakan oleh 67router                                                                                                                                                                                             |
 | `X-OmniRoute-Request-Id` | Respons    | ID korelasi permintaan (apabila diketahui)                                                                                                                                                                                                     |
-| `X-OmniRoute-Version`    | Respons    | Versi binaan OmniRoute (sentiasa hadir)                                                                                                                                                                                                        |
+| `X-OmniRoute-Version`    | Respons    | Versi binaan 67router (sentiasa hadir)                                                                                                                                                                                                         |
 | `X-OmniRoute-Cost-Saved` | Respons    | Jumlah USD yang dijimatkan oleh cache pada `HIT` (untuk capaian cache sahaja)                                                                                                                                                                  |
 | `X-OmniRoute-Decision`   | Respons    | Jejak penghalaan: `strategy=<name>; provider=<alias>; latency_ms=<n>` (`<name>` ialah strategi kombo, atau `single` bagi permintaan bukan kombo) — sentiasa hadir dalam respons penyelesaian                                                   |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Penyematan akaun bagi setiap permintaan
 
-Apabila penyedia mempunyai beberapa sambungan (akaun atau kunci), OmniRoute biasanya memilih satu
+Apabila penyedia mempunyai beberapa sambungan (akaun atau kunci), 67router biasanya memilih satu
 melalui strategi pemilihan akaunnya. Sebaliknya, permintaan boleh menyematkan satu sambungan tertentu
 dengan pengepala `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ bagi setiap projek:
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ Sumber: `src/sse/handlers/chat.ts` (pembacaan pengepala), `src/sse/services/auth
 ## Pajakan Sesi Terurus Eksklusif
 
 Pajakan sesi terurus eksklusif ialah kontrak penghalaan ikut serta yang neutral klien: satu pemilik aktif
-memegang satu sambungan OmniRoute yang layak. Ia tidak memajak model, memerlukan OAuth, mengenal pasti
+memegang satu sambungan 67router yang layak. Ia tidak memajak model, memerlukan OAuth, mengenal pasti
 klien tertentu atau memerlukan penyedia tertentu.
 
 Kunci API yang membuat pengesahan mesti mempunyai skop `lease:exclusive` dan senarai
@@ -190,7 +190,7 @@ Pemilik pajakan aktif boleh meminta metadata paparan yang selamat dari segi priv
 
 Tindakan status ikut serta ini dipagari oleh pemilik legap, kunci API terurus yang disahkan dan
 generasi aktif yang tepat dalam satu transaksi pangkalan data. `displayName` hanyalah nama
-sambungan dikonfigurasikan yang telah dirapikan; nilainya ialah `null` apabila tiada nama dikonfigurasikan yang selamat. OmniRoute tidak sekali-kali menggantikannya dengan
+sambungan dikonfigurasikan yang telah dirapikan; nilainya ialah `null` apabila tiada nama dikonfigurasikan yang selamat. 67router tidak sekali-kali menggantikannya dengan
 e-mel atau identiti akaun yang dijana. Nilai penyedia ialah label paparan tidak sensitif dan tidak sekali-kali merupakan
 pengecam penyedia serasi yang dijana. Bukti kelayakan, token, kuki, ID mentah sambungan atau kunci
 API, cincangan pemilik, rahsia pemagaran dan data penghalaan dalaman tidak disertakan.
@@ -231,7 +231,7 @@ Perebutan sementara mengembalikan HTTP `429` dengan `Retry-After` dan:
 
 Respons ini hanya bermaksud bahawa set layak biasa tidak kosong dan setiap calon yang bebas sedang
 dipegang oleh pajakan aktif asing. Model/penyedia yang tidak disokong, ketidakpadanan dasar, tempoh bertenang, kuota,
-kesihatan dan kegagalan kelayakan biasa lain mengekalkan respons OmniRoute sedia ada.
+kesihatan dan kegagalan kelayakan biasa lain mengekalkan respons 67router sedia ada.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ EmbeddingsV5Request asli Jina dan **memajukannya tanpa perubahan** kepada `https
 ```
 
 Nilai asli `{ image | audio | video | pdf }` boleh berupa URL HTTPS awam, URI `data:`, atau base64
-mentah. OmniRoute tidak menukarkan objek tersebut kepada rentetan atau mengambil URL imej asli — Jina mendapatkan
+mentah. 67router tidak menukarkan objek tersebut kepada rentetan atau mengambil URL imej asli — Jina mendapatkan
 media awam itu sendiri. Medan Jina tambahan (`task`, `normalized`, `truncate`, `embedding_type`) akan
 dimajukan. SKU Jina teks sahaja masih menolak dokumen bukan teks.
 
@@ -454,7 +454,7 @@ pemanggil, supaya kod klien tidak perlu mengendalikan penyedia secara khusus.
 
 ### Pengesahan dan penyelesaian titik akhir OCR DeepSeek Vertex AI
 
-`vertex-deepseek-ocr` menggunakan semula pengesahan Vertex AI yang sama, yang telah disokong oleh OmniRoute untuk
+`vertex-deepseek-ocr` menggunakan semula pengesahan Vertex AI yang sama, yang telah disokong oleh 67router untuk
 trafik sembang/imej (`open-sse/executors/vertex.ts`): kunci API sambungan sama ada merupakan
 kelayakan JSON Akaun Perkhidmatan (ditukar dengan token akses OAuth jangka pendek melalui aliran JWT-bearer)
 atau token akses OAuth yang telah dikeluarkan dan digunakan seadanya. URL titik akhir huluan ialah titik akhir rakan kongsi
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Harga model (`pricing`)
 
-Entri mengandungi objek `pricing` apabila OmniRoute mengetahui harga model tersebut. Harga ini
+Entri mengandungi objek `pricing` apabila 67router mengetahui harga model tersebut. Harga ini
 berasal daripada jadual harga yang digunakan oleh perakaunan kos: nilai lalai terbina dalam, harga yang disegerakkan dan
 penggantian yang ditetapkan melalui `/api/pricing`. Ini ialah harga senarai, jadi penyedia langganan turut
 memaparkan harga bagi setiap token.
@@ -632,8 +632,8 @@ Gunakan endpoint ini apabila sidecar berjalan di luar proses dan tidak boleh men
 
 ## Penjanaan audio ElevenLabs
 
-Konfigurasikan sambungan penyedia `elevenlabs` dalam OmniRoute dengan kunci API ElevenLabs anda.
-Klien mengesahkan identiti menggunakan kunci **OmniRoute** mereka (`Authorization: Bearer $OMNIROUTE_API_KEY`);
+Konfigurasikan sambungan penyedia `elevenlabs` dalam 67router dengan kunci API ElevenLabs anda.
+Klien mengesahkan identiti menggunakan kunci **67router** mereka (`Authorization: Bearer $OMNIROUTE_API_KEY`);
 get laluan membekalkan kunci penyedia yang disimpan sebagai `xi-api-key`. Jangan sekali-kali menghantar kunci ElevenLabs
 sebagai token pembawa get laluan.
 
@@ -698,7 +698,7 @@ natif mengembalikan kod status dan isi ralat huluan tanpa perubahan, termasuk `4
 pelan dan `429` untuk had kuota. Pengepala `character-cost`, `song-id`, `request-id` dan `retry-after`
 dikekalkan apabila tersedia. Baki kredit percuma tidak menjamin akses kepada setiap
 model muzik, format output atau ciri API: ElevenLabs menentukan kelayakan bagi setiap permintaan.
-Endpoint bersepadu mengekalkan kod status ralat dalam sampul ralat ternormal OmniRoute.
+Endpoint bersepadu mengekalkan kod status ralat dalam sampul ralat ternormal 67router.
 
 Kontrak huluan: [kesan bunyi](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [gubahan muzik](https://elevenlabs.io/docs/api-reference/music/compose) dan
@@ -739,7 +739,7 @@ Kontrak huluan: [kesan bunyi](https://elevenlabs.io/docs/api-reference/text-to-s
 
 Semua laluan POST mengikut bentuk yang sama: `Bearer your-api-key` + isi JSON yang disahkan oleh Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema`, dan sebagainya, lihat `src/shared/validation/schemas.ts`). 4xx dikembalikan apabila pengesahan skema gagal.
 
-Bagi klien yang tidak dapat menyertakan `Authorization: Bearer ...`, OmniRoute juga menerima kunci API dalam URL melalui sama ada keserasian rentetan pertanyaan (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) atau titik akhir khusus `/api/v1/vscode/{token}/...` yang didokumenkan di bawah.
+Bagi klien yang tidak dapat menyertakan `Authorization: Bearer ...`, 67router juga menerima kunci API dalam URL melalui sama ada keserasian rentetan pertanyaan (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) atau titik akhir khusus `/api/v1/vscode/{token}/...` yang didokumenkan di bawah.
 
 ```bash
 # Susun semula (penyedia daftar awan, atau nod penyedia serasi OpenAI sebagai "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Parallel Extract (`parallel-search`, kunci API yang sama seperti Parallel Search) hanya mengembalikan Markdown
 — sebarang `format` lain menghasilkan `400` — dan mengehadkan kandungan kepada 100,000 aksara. Apabila
 halaman sasaran itu sendiri tidak dapat diekstrak, perkhidmatan huluan melaporkannya dalam HTTP 200;
-OmniRoute mendedahkannya sebagai `422` dengan mesej tetap.
+67router mendedahkannya sebagai `422` dengan mesej tetap.
 
 | Kaedah | Laluan          | Penerangan                                             |
 | ------ | --------------- | ------------------------------------------------------ |
@@ -963,14 +963,14 @@ mestilah titik masuk aktif (sememangnya demikian secara lalai apabila `app/serve
 **Codex CLI** OpenAI mengesahkan nama model pada sisi klien apabila
 `supports_websockets = true` dan **menolak ID berawalan penyedia** seperti
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Hantar ID **asas** (contohnya `gpt-5.5`). Jambatan OmniRoute
+a ChatGPT account`). Hantar ID **asas** (contohnya `gpt-5.5`). Jambatan 67router
 adalah untuk codex sahaja, maka ia menyelesaikan semula ID asas sebagai model codex
 (`resolveCodexWsModelInfo`) sebelum membuat terowong ke huluan — walaupun
 `gpt-5.5` asas sebaliknya akan dihalakan kepada penyedia lain melalui HTTP.
 
 #### Mengkonfigurasikan OpenAI Codex CLI
 
-Halakan Codex CLI kepada OmniRoute dengan menambahkan penyedia tersuai yang mempunyai sokongan WebSocket
+Halakan Codex CLI kepada 67router dengan menambahkan penyedia tersuai yang mempunyai sokongan WebSocket
 pada `~/.codex/config.toml` (gunakan `CODEX_HOME` berasingan untuk mengelakkan perubahan
 pada konfigurasi sedia ada):
 
@@ -983,15 +983,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # tanpa garis miring di hujung; URL WS diterbitkan daripadanya (gunakan https/wss dalam pengeluaran)
 wire_api = "responses"                    # satu-satunya nilai yang disokong sejak Feb 2026
 supports_websockets = true                # mendayakan pengangkutan Responses-melalui-WS
-env_key = "OMNIROUTE_API_KEY"             # menyimpan kunci API OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # menyimpan kunci API 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # kunci API OmniRoute (sebarang kunci jika REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # kunci API 67router (sebarang kunci jika REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-CLI menaik taraf `base_url + /responses` kepada WebSocket dan OmniRoute membuat terowong baginya
+CLI menaik taraf `base_url + /responses` kepada WebSocket dan 67router membuat terowong baginya
 ke sambungan OAuth codex yang dipilih. Disahkan secara hujung ke hujung terhadap pelayan
 setempat: ChatGPT mengembalikan `codex.rate_limits` + `response.created` dan menstrim
 pelengkapan.
@@ -1075,7 +1075,7 @@ peratusan yang dipaparkan oleh **output teks biasa** dengan **output JSON** bers
 
 #### Formula Pelarasan Ambang Henti
 
-OmniRoute menyokong ambang henti kuota proaktif untuk mengelakkan kehabisan sumber huluan (dikonfigurasikan melalui
+67router menyokong ambang henti kuota proaktif untuk mengelakkan kehabisan sumber huluan (dikonfigurasikan melalui
 `quotaWindowThresholds` sambungan, tetapan lalai penyedia, atau tetapan ketahanan global). Apabila ambang henti
 (cth., `cutoff = 25%`) aktif pada tetingkap kuota, pemapar teks mengira elaun berbaki seperti berikut:
 
@@ -1437,9 +1437,8 @@ Respons GET merangkumi `agents[]` (id, name, binary, version, installed, protoco
 
 ### Penilaian
 
-| Endpoint     | Kaedah   | Penerangan                                    |
-| ------------ | -------- | --------------------------------------------- |
-| `/api/evals` | GET/POST | Senaraikan sut penilaian / jalankan penilaian |
+| Endpoint | Kaedah | Penerangan |
+| -------- | ------ | ---------- |
 
 ### Dasar
 
@@ -1618,7 +1617,7 @@ Nota:
 
 - Alias bertoken menggunakan semula pengendali yang sama seperti `/v1/*` dan `/api/tags`; bentuk respons kekal sama.
 - Utamakan `Authorization: Bearer ...` apabila klien menyokong pengepala tersuai.
-- Token berasaskan URL mungkin muncul dalam log proksi songsang, sejarah pelayar dan telemetri di luar OmniRoute. Anggap token ini sebagai pilihan keserasian, bukan mod pengesahan lalai.
+- Token berasaskan URL mungkin muncul dalam log proksi songsang, sejarah pelayar dan telemetri di luar 67router. Anggap token ini sebagai pilihan keserasian, bukan mod pengesahan lalai.
 
 ---
 
@@ -1726,7 +1725,7 @@ Kombo penghalaan aras lebih tinggi (yang telah diringkaskan di bawah `/api/combo
 
 ## Webhook
 
-Langganan webhook keluar untuk peristiwa OmniRoute (penyelesaian permintaan, kehabisan kuota, penggiliran kunci dan sebagainya).
+Langganan webhook keluar untuk peristiwa 67router (penyelesaian permintaan, kehabisan kuota, penggiliran kunci dan sebagainya).
 
 | Kaedah | Laluan                    | Penerangan                                                            |
 | ------ | ------------------------- | --------------------------------------------------------------------- |
@@ -1757,31 +1756,6 @@ Digunakan oleh subsistem pengurusan kunci automatik untuk mengeluarkan dan mengg
 
 ---
 
-## Protokol Ejen
-
-Tugas ejen awan (Claude Code, Codex Cloud, OpenHands, dll.) yang dilaksanakan dari jauh bagi pihak pengguna OmniRoute.
-
-| Kaedah | Laluan                        | Penerangan                                                                                                                                                 |
-| ------ | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/v1/agents/tasks`        | Senaraikan tugas — pilihan `?provider=`, `?status=`, `?limit=` (1–500, lalai 50)                                                                           |
-| POST   | `/api/v1/agents/tasks`        | Cipta tugas — kandungan disahkan oleh `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Mengembalikan `201` dengan sampul tugas |
-| DELETE | `/api/v1/agents/tasks?id=...` | Padam tugas                                                                                                                                                |
-| GET    | `/api/v1/agents/tasks/[id]`   | Baca tugas — menyegarkan status secara segerak daripada ejen awan huluan apabila `external_id` ditetapkan                                                  |
-| POST   | `/api/v1/agents/tasks/[id]`   | Tindakan terdiskriminasi: `{action: "approve"}`, `{action: "message", message}`, atau `{action: "cancel"}`                                                 |
-| DELETE | `/api/v1/agents/tasks/[id]`   | Padam tugas tertentu mengikut id                                                                                                                           |
-
-> **Pengesahan:** pengesahan pengurusan diperlukan untuk setiap kaedah (`requireCloudAgentManagementAuth`). Sebelum v3.8.0, kaedah ini tidak memerlukan pengesahan — lihat komit `588a0333` untuk perubahan yang memecahkan keserasian.
-
-```bash
-# Cipta tugas awan Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Proksi Pengurusan
 
 Proksi HTTP(S)/SOCKS keluar yang boleh diberikan kepada penyedia, akaun atau secara global.
@@ -1805,7 +1779,7 @@ Proksi HTTP(S)/SOCKS keluar yang boleh diberikan kepada penyedia, akaun atau sec
 
 ## Daya Tahan (lanjutan)
 
-OmniRoute menyediakan tiga mekanisme kegagalan sementara yang bebas; titik akhir pengurusan di bawah membolehkan pengendali membaca dan menggantikan tetapannya:
+67router menyediakan tiga mekanisme kegagalan sementara yang bebas; titik akhir pengurusan di bawah membolehkan pengendali membaca dan menggantikan tetapannya:
 
 | Skop                       | Storan keadaan                              | Baca                                      | Tetapkan semula / kosongkan                                            |
 | -------------------------- | ------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------- |
@@ -1840,7 +1814,7 @@ Untuk rujukan konsep penuh dan nilai lalai pemutus, lihat [`CLAUDE.md`](../../CL
 
 ## Kemahiran
 
-Rangka kerja kemahiran untuk memperluas OmniRoute dengan pengendali boleh laku tersuai, serta penyepaduan pasaran.
+Rangka kerja kemahiran untuk memperluas 67router dengan pengendali boleh laku tersuai, serta penyepaduan pasaran.
 
 | Kaedah | Laluan                            | Perihalan                                                                                                                                                |
 | ------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1877,7 +1851,7 @@ Storan memori perbualan/fakta yang berterusan, dengan skop mengikut kunci API / 
 
 ## Pelayan MCP
 
-OmniRoute disertakan dengan pelayan Model Context Protocol terbina dalam yang mempunyai 3 pengangkutan (stdio, SSE, streamable-http) dan alat berskop. Titik akhir papan pemuka di bawah membaca data status/audit dan memproksikan pengangkutan HTTP.
+67router disertakan dengan pelayan Model Context Protocol terbina dalam yang mempunyai 3 pengangkutan (stdio, SSE, streamable-http) dan alat berskop. Titik akhir papan pemuka di bawah membaca data status/audit dan memproksikan pengangkutan HTTP.
 
 | Kaedah | Laluan | Penerangan |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1899,50 +1873,12 @@ OmniRoute disertakan dengan pelayan Model Context Protocol terbina dalam yang me
 
 ## Pelayan A2A
 
-OmniRoute menyediakan titik akhir JSON-RPC 2.0 A2A (Ejen-ke-Ejen) serta pembalut REST untuk kegunaan pemeriksaan/papan pemuka.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # pilihan melainkan OMNIROUTE_API_KEY ditetapkan
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Kaedah yang disokong (semuanya bergantung pada `settings.a2aEnabled`):
-
-| Kaedah           | Penerangan                                                                 |
-| ---------------- | -------------------------------------------------------------------------- |
-| `message/send`   | Pelaksanaan kemahiran segerak; mengembalikan `{task, artifacts, metadata}` |
-| `message/stream` | Pelaksanaan penstriman SSE bagi set kemahiran yang sama                    |
-| `tasks/get`      | Dapatkan tugas mengikut `taskId`                                           |
-| `tasks/cancel`   | Batalkan tugas mengikut `taskId`                                           |
-
-Kemahiran terbina dalam: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Kad Ejen
-
-```bash
-GET /.well-known/agent.json
-```
-
-Mengembalikan kad ejen A2A awam (nama, penerangan, keupayaan, katalog kemahiran, skim pengesahan) — dicache secara awam selama 1h. Pengesahan tidak diperlukan.
+67router menyediakan titik akhir JSON-RPC 2.0 A2A (Ejen-ke-Ejen) serta pembalut REST untuk kegunaan pemeriksaan/papan pemuka.
 
 ### Pembantu REST
 
 | Kaedah | Laluan                       | Penerangan                                                                                                            |
 | ------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/api/a2a/status`            | A2A didayakan + statistik tugas + ringkasan kad ejen yang dicache                                                     |
 | GET    | `/api/a2a/tasks`             | Senaraikan tugas — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST   | `/api/a2a/tasks`             | (Tidak dilaksanakan sebagai pembantu REST — cipta melalui JSON-RPC `message/send`)                                    |
 | GET    | `/api/a2a/tasks/[id]`        | Dapatkan satu tugas                                                                                                   |
@@ -1962,12 +1898,8 @@ Mengembalikan kad ejen A2A awam (nama, penerangan, keupayaan, katalog kemahiran,
 | GET | `/api/cloud/models/alias` | Senaraikan alias model seperti yang didedahkan kepada penyegerakan awan |
 | GET | `/api/assess` | Baca pengkategorian pentaksiran terkini (bagi setiap penyedia/model) |
 | POST | `/api/assess` | Jalankan pentaksiran — isi: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Senaraikan suit penilaian terbina dalam + pelaksanaan terkini |
-| POST | `/api/evals` | Cetuskan pelaksanaan penilaian |
-| POST | `/api/evals/suites` | Cipta suit penilaian tersuai — isi disahkan oleh `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Dapatkan suit penilaian tersuai |
 
-**Pengesahan:** `/api/cloud/auth` mengesahkan kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` bagi setiap sambungan hanya untuk kunci dengan skop `manage` / `admin`; laluan `/api/cloud/*`, `/api/evals/*`, dan `/api/assess` yang lain memerlukan sesi/kunci API pengurusan. POST `/api/assess` menggunakan `validateBody` dengan skema skop kesatuan berpenghurai.
+**Pengesahan:** `/api/cloud/auth` mengesahkan kunci Bearer secara langsung dan mengembalikan kunci yang disamarkan serta `projectId` bagi setiap sambungan hanya untuk kunci dengan skop `manage` / `admin`; laluan `/api/cloud/*`, dan `/api/assess` yang lain memerlukan sesi/kunci API pengurusan. POST `/api/assess` menggunakan `validateBody` dengan skema skop kesatuan berpenghurai.
 
 ---
 
@@ -2128,7 +2060,7 @@ Titik akhir khusus pentadbir untuk pengurusan operasi.
 
 ## Pengurusan Alat CLI
 
-Urus alat CLI yang disepadukan dengan OmniRoute (antigravity, commandCode,
+Urus alat CLI yang disepadukan dengan 67router (antigravity, commandCode,
 devin-cli dan sebagainya). Lihat [Rujukan Penyedia](./PROVIDER_REFERENCE.md) untuk senarai penuh.
 
 | Kaedah | Laluan                                  | Penerangan                                                                                                                                                                  |
@@ -2237,26 +2169,6 @@ Lihat [Rangka Kerja Kemahiran](../frameworks/SKILLS.md) untuk butiran lengkap.
 
 ---
 
-## Pemalam
-
-Urus pemalam OmniRoute (sambungan pihak ketiga).
-
-| Kaedah | Laluan                             | Penerangan                       |
-| ------ | ---------------------------------- | -------------------------------- |
-| GET    | `/api/plugins`                     | Senaraikan pemalam yang dipasang |
-| POST   | `/api/plugins/marketplace/install` | Pasang pemalam daripada pasaran  |
-| DELETE | `/api/plugins/[name]`              | Nyahpasang pemalam               |
-| POST   | `/api/plugins/[name]/activate`     | Aktifkan pemalam                 |
-| POST   | `/api/plugins/[name]/deactivate`   | Nyahaktifkan pemalam             |
-| GET    | `/api/plugins/[name]/config`       | Dapatkan konfigurasi pemalam     |
-| PUT    | `/api/plugins/[name]/config`       | Kemas kini konfigurasi pemalam   |
-
-**Pengesahan:** Memerlukan sesi pengurusan.
-
-Lihat [Rangka Kerja Pemalam](../frameworks/PLUGIN_SDK.md) untuk butiran lengkap.
-
----
-
 ## Penghalaan Bayangan
 
 Perbandingan bayangan / A-B bagi penyedia **bukan antara muka REST kendiri** — ia dikonfigurasikan melalui penghalaan kombo (lihat [Kombo Automatik](../routing/AUTO-COMBO.md)). Metrik perbandingan bagi setiap kombo disediakan oleh `GET /api/combos/metrics`.
@@ -2291,5 +2203,3 @@ keluarga kelayakan (sesi papan pemuka, token CLI setempat, Token Akses
 - `requireLogin` boleh ditogol melalui `/api/settings/require-login`
 - Laluan `/v1/*` secara pilihan memerlukan kunci API Bearer apabila `REQUIRE_API_KEY=true`
 - "token pengurusan" / "kunci API berskop pengurusan" dalam rujukan ini bermaksud salah satu keluarga dalam panduan tersebut — bukan jenis rahsia tambahan yang tidak ditakrifkan
-
-> **Perubahan pecah keserasian (v3.8.0)** — `/api/v1/agents/tasks/*` dan titik akhir pengurusan tempoh bertenang kini memerlukan **pengesahan pengurusan** (kuki `auth_token` papan pemuka atau kunci API berskop pengurusan). Klien yang sebelum ini memanggil laluan ini tanpa pengesahan akan menerima `401 Unauthorized`. Lihat komit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

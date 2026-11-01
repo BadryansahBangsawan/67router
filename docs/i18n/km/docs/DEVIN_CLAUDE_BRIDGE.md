@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` អនុញ្ញាតឱ្យ runtime ពិតប្រាកដរបស់ Claude Code ប្រើ endpoint Anthropic
-Messages មូលដ្ឋានរបស់ OmniRoute ខណៈដែល Devin CLI ផ្លូវការផ្តល់ចម្លើយពីម៉ូដែលតាមរយៈ ACP stdio។ វា
+Messages មូលដ្ឋានរបស់ 67router ខណៈដែល Devin CLI ផ្លូវការផ្តល់ចម្លើយពីម៉ូដែលតាមរយៈ ACP stdio។ វា
 មិនកែប្រែ provider Anthropic, Claude OAuth, Claude Web ឬ `devin-cli` ដែលមានស្រាប់ទេ។
 
 សម្រាប់ការហៅឧបករណ៍ដែលគ្រប់គ្រងដោយ client សូមបញ្ជូនតាម `devin-cli-agentic` (ឈ្មោះកាត់ `dva`) ដែលជា
@@ -18,7 +18,7 @@ provider ទម្រង់ Claude ដែលអាចប្រើឧបករណ
 > `3000.2.17` និងម៉ូដែល `swe-1-7-lightning`; ការដំណើរការ live ចុងក្រោយនោះបានបញ្ជាក់ពី turn `Read`,
 > `Edit` និង `Bash` ដែលគ្រប់គ្រងដោយ client, លទ្ធផល `npm test` ដែលជោគជ័យ, ការរកឃើញ command និង skill
 > របស់ project, routing ដែលប្រើតែ Devin និងគ្មានទិន្នន័យចេញទៅ Claude។ បន្ទាប់មក pin ត្រូវបានដំឡើងទៅ `2.1.258`
-> (ជំនាន់ CLI ដែលអត្តសញ្ញាណ Claude របស់ OmniRoute ក្លែងធ្វើ និងជាជំនាន់ដំបូងដែលភ្ជាប់មកជាមួយ
+> (ជំនាន់ CLI ដែលអត្តសញ្ញាណ Claude របស់ 67router ក្លែងធ្វើ និងជាជំនាន់ដំបូងដែលភ្ជាប់មកជាមួយ
 > tier Fable 5.1 ដោយផ្ទាល់)។ នៅលើ pin ថ្មី installation layer និង `claude --version` ត្រូវបាន
 > ផ្ទៀងផ្ទាត់លើ base image ដែលបាន pin ហើយ bridge unit suite, `compose config` និង
 > static isolation proof សុទ្ធតែឆ្លងកាត់ — ប៉ុន្តែ offline mock scenario និង live suite ដែលមានបី scenario
@@ -51,11 +51,11 @@ parser ទទួលយក envelope `<tool>{...}</tool>` ឯករាជ្យត
 ឈ្មោះធៀបនឹងបញ្ជីឧបករណ៍របស់សំណើ ផ្ទៀងផ្ទាត់ argument ធៀបនឹង JSON
 Schema របស់ឧបករណ៍នោះ បដិសេធការលាយបញ្ចូល narrative/action និងអនុញ្ញាតការកែតម្រូវមានដែនកំណត់មួយលើក។ បន្ទាប់មក Claude Code
 ប្រតិបត្តិ Anthropic `tool_use` ដែលជាលទ្ធផលនៅមូលដ្ឋាន ហើយផ្ញើ `tool_result` ត្រឡប់មកវិញតាមរយៈ
-OmniRoute។
+67router។
 
 ## ការកំណត់ routing ដោយស្វ័យប្រវត្តិ
 
-provider នេះមានសិទ្ធិចូលក្នុង candidate pool `auto/*` របស់ OmniRoute នៅពេលវាមិនត្រូវបាន block។
+provider នេះមានសិទ្ធិចូលក្នុង candidate pool `auto/*` របស់ 67router នៅពេលវាមិនត្រូវបាន block។
 សិទ្ធិជាបេក្ខភាពមិនធានាថានឹងត្រូវបានជ្រើសរើសទេ៖ យុទ្ធសាស្ត្រ routing របស់ combo (ឧទាហរណ៍
 last-known-good) អាចផ្តល់អាទិភាពដល់ provider ផ្សេង។ ប្រើ `dva/<model>` ឬ combo ដែលផ្តល់អាទិភាពដល់ Devin នៅមុនគេ នៅពេល
 អ្នកតម្រូវឱ្យរាល់សំណើទាំងអស់ឆ្លងកាត់ Devin។
@@ -67,16 +67,16 @@ last-known-good) អាចផ្តល់អាទិភាពដល់ provider
 
 - ដំណើរការជា UID/GID `10001:10001` ជាមួយប្រព័ន្ធឯកសារឫសដែលបានតែអាន សមត្ថភាពដែលត្រូវបានដកចេញ និង
   `no-new-privileges`;
-- ប្រើ `/home/bridge` ឯកជន volume កំណត់រចនាសម្ព័ន្ធ Claude ជាក់លាក់ ទិន្នន័យ OmniRoute ដែលដាច់ដោយឡែក
+- ប្រើ `/home/bridge` ឯកជន volume កំណត់រចនាសម្ព័ន្ធ Claude ជាក់លាក់ ទិន្នន័យ 67router ដែលដាច់ដោយឡែក
   និង volume `devin-auth` ដោយឡែកមួយ;
 - mount តែ workspace/ភស្តុតាង `.sandbox` ដែលអាចបោះចោលបាន;
 - មិន mount home របស់ម៉ាស៊ីនមេ Keychain ព័ត៌មានសម្ងាត់ SSH ព័ត៌មានសម្ងាត់ cloud ឬ Docker socket ទេ;
 - បង្កើត environment ជាក់លាក់ និងលុបអថេរ API/OAuth/routing របស់ Anthropic;
 - ដឹកនាំ inference របស់ Claude Code ទៅកាន់តែ `http://omniroute:20128` ជាមួយ key ដែលប្រើតែក្នុងមូលដ្ឋាន។
 
-ប្រូហ្វាល់ offline ប្រើបណ្ដាញខាងក្នុង។ នៅក្នុងប្រូហ្វាល់ live OmniRoute អាចទៅដល់
+ប្រូហ្វាល់ offline ប្រើបណ្ដាញខាងក្នុង។ នៅក្នុងប្រូហ្វាល់ live 67router អាចទៅដល់
 endpoint ផ្លូវការរបស់ Devin បានតែតាមរយៈ `network-guard` ប៉ុណ្ណោះ; destination ដែលមិនពាក់ព័ន្ធត្រូវបានបដិសេធ។
-Claude Code មាន guard egress បដិសេធទាំងអស់ដាច់ដោយឡែក ហើយអាចទៅដល់តែសេវាកម្ម OmniRoute ក្នុងមូលដ្ឋាន
+Claude Code មាន guard egress បដិសេធទាំងអស់ដាច់ដោយឡែក ហើយអាចទៅដល់តែសេវាកម្ម 67router ក្នុងមូលដ្ឋាន
 តាមរយៈ `NO_PROXY`។ ឯកសារសវនកម្មរបស់ guard ត្រូវបាន mount តែដោយដំណើរការ guard របស់វាប៉ុណ្ណោះ។ ស្គ្រីប
 ផ្ទៀងផ្ទាត់ភាពជាម្ចាស់ឯកសារ mode ចំនួន link និងរាល់សេចក្ដីសម្រេច មុនពេល export
 ភស្តុតាងដែលគ្មាន token។

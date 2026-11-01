@@ -29,7 +29,7 @@ afterEach(() => {
 describe("CLI companion copy-only flow", () => {
   it("shows server scope, unknown state and copies a safe context runbook without network calls", async () => {
     render(<CliCompanionPanel targets={targets} statuses={null} loading={false} error={false} />);
-    expect(screen.getByText(/Detection describes the OmniRoute server host/)).toBeTruthy();
+    expect(screen.getByText(/Detection describes the 67router server host/)).toBeTruthy();
     expect(screen.getAllByText("Unknown")).toHaveLength(3);
     fireEvent.change(screen.getByLabelText("Existing context name (optional)"), {
       target: { value: "office" },

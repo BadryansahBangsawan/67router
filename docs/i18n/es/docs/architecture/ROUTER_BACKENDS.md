@@ -20,10 +20,10 @@ El rol de un motor se describe mediante **dos ejes independientes**, codificados
 definición `RouterBackendDefinition` del registro:
 
 1. **Ciclo de vida** (`RouterBackendLifecycle`) — _cómo se ejecuta el motor_:
-   - `in-process` — se ejecuta dentro del proceso Node de OmniRoute (el pipeline nativo de TS).
-   - `supervised` — un proceso secundario local que OmniRoute instala/inicia/detiene/supervisa
+   - `in-process` — se ejecuta dentro del proceso Node de 67router (el pipeline nativo de TS).
+   - `supervised` — un proceso secundario local que 67router instala/inicia/detiene/supervisa
      mediante `ServiceSupervisor` y que después consume como una conexión de proveedor.
-   - `external` — un endpoint HTTP al que OmniRoute envía solicitudes, pero que **no** administra
+   - `external` — un endpoint HTTP al que 67router envía solicitudes, pero que **no** administra
      (configurado mediante una URL base de entorno).
    - `disabled` — registrado, pero no seleccionable.
 2. **Eje de selección** (backend de enrutamiento del relay) — _si el relay le envía solicitudes_:

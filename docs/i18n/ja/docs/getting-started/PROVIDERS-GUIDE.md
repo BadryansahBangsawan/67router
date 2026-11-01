@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (日本語)
+# Providers Guide: Connect AI Models to 67router (日本語)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **要約**: プロバイダーとは、AI サービス（OpenAI、Anthropic、Google など）への接続です。OmniRoute を使用するには、少なくとも 1 つのプロバイダーが必要です。
+> **要約**: プロバイダーとは、AI サービス（OpenAI、Anthropic、Google など）への接続です。67router を使用するには、少なくとも 1 つのプロバイダーが必要です。
 
 ---
 
 ## プロバイダーとは？
 
-プロバイダーは、**携帯電話会社**のようなものだと考えてください。電話をかけるのに携帯電話会社が必要なのと同様に、AIモデルを使用するにはAIプロバイダーが必要です。OmniRouteは、**すべての携帯電話会社**に対応する携帯電話のようなもので、プロバイダーを自動的に切り替えられます。
+プロバイダーは、**携帯電話会社**のようなものだと考えてください。電話をかけるのに携帯電話会社が必要なのと同様に、AIモデルを使用するにはAIプロバイダーが必要です。67routerは、**すべての携帯電話会社**に対応する携帯電話のようなもので、プロバイダーを自動的に切り替えられます。
 
 ### プロバイダーの種類
 
@@ -30,7 +30,7 @@
 
 ### 任意の初回無料プロバイダー設定
 
-初回実行ウィザードには、明示的な **無料プロバイダーを設定** カードが表示されます。OmniRoute の認証不要プロバイダーレジストリから現在利用可能な一覧を取得し、確定する前に各プロバイダーを確認して選択を解除できます。OmniRoute にはプロバイダーの注意事項とそのサイトへのリンクが表示されるため、サードパーティの利用規約、プライバシー、可用性、レート制限を事前に確認できます。
+初回実行ウィザードには、明示的な **無料プロバイダーを設定** カードが表示されます。67router の認証不要プロバイダーレジストリから現在利用可能な一覧を取得し、確定する前に各プロバイダーを確認して選択を解除できます。67router にはプロバイダーの注意事項とそのサイトへのリンクが表示されるため、サードパーティの利用規約、プライバシー、可用性、レート制限を事前に確認できます。
 
 この操作は任意です。ウィザードを完了しても、無料プロバイダーへの接続が自動的に作成されることはありません。まだ追加されていないプロバイダーのみが作成され、既存のカスタマイズ済み接続は変更されません。また、作成済み、設定済み、失敗したプロバイダーが個別に報告されます。一部のみ成功した場合は、失敗したものだけを安全に再試行できます。
 
@@ -74,7 +74,7 @@
 
 ### オプション D：ローカル MLX モデル（Apple Silicon）
 
-ユニファイドメモリを搭載した Apple Silicon Mac では、OmniRoute は `mlx-lm.server` 経由で実行されるローカル MLX モデルを、通常の OpenAI 互換ローカルプロバイダーとして接続できます。
+ユニファイドメモリを搭載した Apple Silicon Mac では、67router は `mlx-lm.server` 経由で実行されるローカル MLX モデルを、通常の OpenAI 互換ローカルプロバイダーとして接続できます。
 
 #### 前提条件
 
@@ -104,14 +104,14 @@
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **OmniRoute ダッシュボードで接続します**：
+3. **67router ダッシュボードで接続します**：
    - **プロバイダー** → **プロバイダーを追加** に移動します
    - **MLX Gemma 26B** または **MLX Qwen 3.8 27B** を選択します
    - **接続** をクリックします（API キー不要）
 
 4. **OpenCode で使用します**：
    ```bash
-   # OmniRoute を使用するように OpenCode を設定
+   # 67router を使用するように OpenCode を設定
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -133,7 +133,7 @@
 - それぞれを別のマシンで実行する、または
 - 一方を停止してからもう一方を起動する
 
-OmniRoute は MLX サーバープロセスを自動的に管理しません。設定した OpenAI 互換エンドポイントへリクエストをルーティングするだけです。
+67router は MLX サーバープロセスを自動的に管理しません。設定した OpenAI 互換エンドポイントへリクエストをルーティングするだけです。
 
 #### ツール呼び出しのサポート
 
@@ -158,7 +158,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | メモリ不足               | 1つのモデルだけが実行されていることを確認し、他のアプリを終了してアクティビティモニタを確認してください |
 | 接続が拒否される         | サーバーが正しいポート（11435/11436）で実行されていることを確認してください                             |
 | 応答が遅い               | 最初のリクエストではモデルがメモリに読み込まれます（約30～60秒）。それ以降のリクエストは高速です        |
-| ツール呼び出しが失敗する | モデルがツールをサポートしていることを確認し、OmniRoute のログで変換エラーを確認してください            |
+| ツール呼び出しが失敗する | モデルがツールをサポートしていることを確認し、67router のログで変換エラーを確認してください             |
 
 ---
 
@@ -230,12 +230,12 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 複数プロバイダーの使用
 
-OmniRoute は、**複数のプロバイダー**を使用することで最大限に活用できます。これにより、次のメリットが得られます。
+67router は、**複数のプロバイダー**を使用することで最大限に活用できます。これにより、次のメリットが得られます。
 
-- **自動フォールバック** — 1つのプロバイダーで障害が発生した場合、OmniRoute は次のプロバイダーを試します
-- **コスト最適化** — OmniRoute はリクエストごとに最も安価なプロバイダーを選択します
-- **速度最適化** — OmniRoute はリクエストごとに最も高速なプロバイダーを選択します
-- **品質最適化** — OmniRoute はタスクごとに最適なプロバイダーを選択します
+- **自動フォールバック** — 1つのプロバイダーで障害が発生した場合、67router は次のプロバイダーを試します
+- **コスト最適化** — 67router はリクエストごとに最も安価なプロバイダーを選択します
+- **速度最適化** — 67router はリクエストごとに最も高速なプロバイダーを選択します
+- **品質最適化** — 67router はタスクごとに最適なプロバイダーを選択します
 
 ### 推奨設定
 
@@ -245,7 +245,7 @@ OmniRoute は、**複数のプロバイダー**を使用することで最大限
 2. **高速プロバイダーを1つ**（Groq、Cerebras）— 迅速な応答向け
 3. **高品質プロバイダーを1つ**（OpenAI、Anthropic、Google）— 複雑なタスク向け
 
-その後、`model: "auto"` を使用すると、OmniRoute が各リクエストに最適なプロバイダーを自動的に選択します。
+その後、`model: "auto"` を使用すると、67router が各リクエストに最適なプロバイダーを自動的に選択します。
 
 ---
 
@@ -254,25 +254,25 @@ OmniRoute は、**複数のプロバイダー**を使用することで最大限
 ### OpenAI
 
 1. APIキーを取得: https://platform.openai.com/api-keys
-2. OmniRouteで: プロバイダー → プロバイダーを追加 → OpenAI
+2. 67routerで: プロバイダー → プロバイダーを追加 → OpenAI
 3. APIキーを貼り付け → 接続
 
 ### Anthropic
 
 1. APIキーを取得: https://console.anthropic.com/
-2. OmniRouteで: プロバイダー → プロバイダーを追加 → Anthropic
+2. 67routerで: プロバイダー → プロバイダーを追加 → Anthropic
 3. APIキーを貼り付け → 接続
 
 ### Google (Gemini)
 
 1. APIキーを取得: https://aistudio.google.com/apikey
-2. OmniRouteで: プロバイダー → プロバイダーを追加 → Gemini
+2. 67routerで: プロバイダー → プロバイダーを追加 → Gemini
 3. APIキーを貼り付け → 接続
 
 ### DeepSeek
 
 1. APIキーを取得: https://platform.deepseek.com/
-2. OmniRouteで: プロバイダー → プロバイダーを追加 → DeepSeek
+2. 67routerで: プロバイダー → プロバイダーを追加 → DeepSeek
 3. APIキーを貼り付け → 接続
 
 ### Qoder: 認証情報の転送方式を選択
@@ -280,12 +280,12 @@ OmniRoute は、**複数のプロバイダー**を使用することで最大限
 Qoderには認証情報が必要です。2つの転送方式はそれぞれ機能が異なるため、モデル名
 だけでは、特定の接続で何ができるかを判別できません。
 
-| 認証情報                               | OmniRouteの転送方式                           | 呼び出し元によるツール呼び出し                     | ストリーミング                                               |
-| -------------------------------------- | --------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
-| `pt-`で始まるPAT                       | OmniRouteホスト上のローカル`qodercli`プロセス | 非対応                                             | バッファリング方式: CLIが完全な応答を返した後にのみSSEを送信 |
-| PAT以外のアクセストークンまたはAPIキー | DashScopeのOpenAI互換HTTPエンドポイント       | アップストリームのモデル／キーに応じてそのまま転送 | アップストリームのHTTP/SSE経路                               |
+| 認証情報                               | 67routerの転送方式                           | 呼び出し元によるツール呼び出し                     | ストリーミング                                               |
+| -------------------------------------- | -------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
+| `pt-`で始まるPAT                       | 67routerホスト上のローカル`qodercli`プロセス | 非対応                                             | バッファリング方式: CLIが完全な応答を返した後にのみSSEを送信 |
+| PAT以外のアクセストークンまたはAPIキー | DashScopeのOpenAI互換HTTPエンドポイント      | アップストリームのモデル／キーに応じてそのまま転送 | アップストリームのHTTP/SSE経路                               |
 
-PATを使用する場合は、OmniRouteと同じホストまたはコンテナにQoder CLIをインストールしてください。実行ファイルは
+PATを使用する場合は、67routerと同じホストまたはコンテナにQoder CLIをインストールしてください。実行ファイルは
 `qodercli`として検出可能である必要があります。あるいは、`CLI_QODER_BIN`に実行ファイルのパスを設定してください。Dockerホスト
 にのみインストールされたCLIは、コンテナ内で自動的に利用可能にはなりません。バイナリが見つからない
 場合は、インストールまたはパス設定を案内する明示的なエラーが発生します。
@@ -316,16 +316,16 @@ CLI自体が内部で使用する可能性のあるツールではありませ�
 ### Groq
 
 1. APIキーを取得: https://console.groq.com/
-2. OmniRouteで: プロバイダー → プロバイダーを追加 → Groq
+2. 67routerで: プロバイダー → プロバイダーを追加 → Groq
 3. APIキーを貼り付け → 接続
 
 ---
 
 ## よくある質問
 
-### 「OmniRouteを使用するには料金がかかりますか？」
+### 「67routerを使用するには料金がかかりますか？」
 
-**いいえ！** OmniRouteは無料のオープンソースです。無料のプロバイダー（Kiro、Pollinations）を利用すれば、料金は一切かかりません。有料プロバイダーを選択した場合にのみ料金が発生します。
+**いいえ！** 67routerは無料のオープンソースです。無料のプロバイダー（Kiro、Pollinations）を利用すれば、料金は一切かかりません。有料プロバイダーを選択した場合にのみ料金が発生します。
 
 ### 「最初にどのプロバイダーを使えばよいですか？」
 
@@ -333,11 +333,11 @@ CLI自体が内部で使用する可能性のあるツールではありませ�
 
 ### 「複数のプロバイダーを同時に使用できますか？」
 
-**はい！** それこそがOmniRouteの目的です。複数のプロバイダーを接続し、`model: "auto"`を使用すると、リクエストごとにOmniRouteが最適なプロバイダーを選択します。
+**はい！** それこそが67routerの目的です。複数のプロバイダーを接続し、`model: "auto"`を使用すると、リクエストごとに67routerが最適なプロバイダーを選択します。
 
 ### 「プロバイダーが停止した場合はどうなりますか？」
 
-OmniRouteは障害が発生したプロバイダーを自動的にスキップし、次のプロバイダーを試します。ユーザーが何かする必要はありません。
+67routerは障害が発生したプロバイダーを自動的にスキップし、次のプロバイダーを試します。ユーザーが何かする必要はありません。
 
 ### 「プロバイダーとの接続を解除するにはどうすればよいですか？」
 
@@ -345,17 +345,13 @@ Providers → プロバイダーをクリック → **Disconnect**をクリッ�
 
 ### 「既存のAPIキーを使用できますか？」
 
-**はい！** OpenAI、Anthropic、GoogleなどのAPIキーをすでにお持ちの場合は、OmniRouteで使用できます。プロバイダーに接続するときに貼り付けるだけです。
+**はい！** OpenAI、Anthropic、GoogleなどのAPIキーをすでにお持ちの場合は、67routerで使用できます。プロバイダーに接続するときに貼り付けるだけです。
 
 ---
 
 ## 次のステップ
 
-- **[自動コンボガイド](./AUTO-COMBO-GUIDE.md)** — OmniRouteに最適なAIを選択させる
+- **[自動コンボガイド](./AUTO-COMBO-GUIDE.md)** — 67routerに最適なAIを選択させる
 - **[無料利用枠ガイド](./FREE-TIERS-GUIDE.md)** — クレジットカードなしで無料のAIを利用する
 - **[トラブルシューティング](../guides/TROUBLESHOOTING.md)** — よくある問題を解決する
 - **[プロバイダーリファレンス](../reference/PROVIDER_REFERENCE.md)** — 226のプロバイダーの完全な一覧
-
-## Cursor画像
-
-Cursorプランの画像では`IMAGE_PROVIDERS.cursor`（`cursor-agent-image`）を使用します。[CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md)を参照してください。

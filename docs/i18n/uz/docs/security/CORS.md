@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute qaysi **brauzer originlari** yagona, markazlashtirilgan ruxsat roʻyxati orqali boshqa origindagi javoblarni oʻqishi mumkinligini boshqaradi. Model **standart holatda yopiq**:
+67router qaysi **brauzer originlari** yagona, markazlashtirilgan ruxsat roʻyxati orqali boshqa origindagi javoblarni oʻqishi mumkinligini boshqaradi. Model **standart holatda yopiq**:
 siz originni ruxsat roʻyxatiga kiritmaguningizcha hech bir originga ruxsat berilmaydi. Ushbu sahifada ruxsat roʻyxati qanday aniqlanishi, `CORS_ALLOW_ALL=true` aslida nimalarni ochishi (va, muhimi, nimalarni **ochmasligi**), ishlab chiqish va production muhitlarini qanday xavfsiz sozlash hamda wildcard faol boʻlganda boshqaruv paneli koʻrsatadigan bajarilish vaqtidagi ogohlantirish bayon etiladi.
 
 **Asosiy manba:** `src/server/cors/origins.ts` (`resolveAllowedOrigin`,
@@ -35,12 +35,12 @@ Har bir soʻrov uchun middleware `Access-Control-Allow-Origin` qiymatini quyidag
 
 ## Tahdid modeli — `CORS_ALLOW_ALL=true` aslida nimalarni ochadi
 
-OWASPning umumiy ogohlantirishini ("wildcard CORS = istalgan sayt API'ingizga murojaat qilishi mumkin") jiddiy qabul qilish kerak, ammo OmniRoute ochadigan imkoniyat **umumiy holatga qaraganda torroq**, chunki amalga oshirishga oid bitta aniq fakt mavjud:
+OWASPning umumiy ogohlantirishini ("wildcard CORS = istalgan sayt API'ingizga murojaat qilishi mumkin") jiddiy qabul qilish kerak, ammo 67router ochadigan imkoniyat **umumiy holatga qaraganda torroq**, chunki amalga oshirishga oid bitta aniq fakt mavjud:
 
 > **Markaziy `applyCorsHeaders()` hech qachon
 > `Access-Control-Allow-Credentials` sarlavhasini chiqarmaydi.** Server
 > `Access-Control-Allow-Credentials: true` sarlavhasini yubormasa, brauzer _hisob maʼlumotlari bilan yuborilgan_
-> (cookie mavjud) boshqa origindagi javobni ochmaydi. OmniRoute'ning umumiy CORS yoʻli buni hech qachon
+> (cookie mavjud) boshqa origindagi javobni ochmaydi. 67router'ning umumiy CORS yoʻli buni hech qachon
 > qilmaydi.
 
 Bu `CORS_ALLOW_ALL=true` boʻlganda ham har bir yuza uchun quyidagilarni anglatadi:
@@ -55,15 +55,6 @@ Shunday qilib, `CORS_ALLOW_ALL=true` ning **qoldiq** taʼsiri quyidagilar bilan 
 allaqachon autentifikatsiya talab qilmaydigan maʼlumotlarni hisob maʼlumotlarisiz boshqa origindan **oʻqish** va (b)
 boshqaruv marshrutlarida CORS **preflight tekshiruvining oʻtishiga** ruxsat berish — ammo ular baribir boshqa origin sahifasi taqdim eta olmaydigan autentifikatsiyani talab qiladi. Umumiy CORS yoʻlida bu seansni oʻgʻirlash yoki hisob maʼlumotlarini oʻgʻirlash vektori **emas**.
 
-### Bitta haqiqiy istisno — `/api/v1/agents/`
-
-Cloud-Agent marshrutlari (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) oʻzlarining **alohida** CORS sarlavhalarini oʻrnatadi
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) va
-`Access-Control-Allow-Origin: <origin>|*` bilan birga
-`Access-Control-Allow-Credentials: true` sarlavhasini ham **chiqaradi**. Bu originni qaytarish va hisob maʼlumotlari birga mavjud boʻlgan yagona yuza boʻlib,
-`CORS_ALLOW_ALL` dan **mustaqil**. Ushbu marshrutlar boshqaruv autentifikatsiyasidan oʻtkaziladi
-(`requireManagementAuth`); boshqaruv panelini hostdan tashqariga ochadigan operatorlar aynan shu joyda javob sarlavhalari boshqa origindan hisob maʼlumotlari bilan yuborilgan javobni oʻqishga ruxsat berishini bilishlari kerak. Uni aniq ruxsat roʻyxati bilan cheklash ushbu CORS koʻrsatmalaridan alohida ravishda kuzatib boriladi.
-
 ## Ishlab chiqarish muhiti uchun tekshiruv roʻyxati
 
 - **Ishlab chiqarish muhitida hech qachon `CORS_ALLOW_ALL=true` qilib belgilamang.** Uni belgilanmagan holda qoldiring.
@@ -73,7 +64,7 @@ Cloud-Agent marshrutlari (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- Agar OmniRoute teskari proksi / tunnel (nginx, Caddy, Cloudflare
+- Agar 67router teskari proksi / tunnel (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) ortida ishlasa, CORS sizning yagona nazorat mexanizmingiz
   **emas** — loopback marshrut himoyasi jarayon ishga tushira oladigan marshrutlarni
   hamon himoya qiladi ([ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md) ga qarang).
@@ -91,7 +82,7 @@ Hatto ishlab chiqish muhitida ham universal belgidan foydalanish kamdan-kam zaru
 boʻladi. Faqat foydalanadigan ishlab chiqish serverlaringizga ruxsat bering:
 
 ```bash
-# Mahalliy OmniRouteʼga murojaat qiluvchi Vite (5173) + Next.js (3000) ishlab chiqish serverlari
+# Mahalliy 67routerʼga murojaat qiluvchi Vite (5173) + Next.js (3000) ishlab chiqish serverlari
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -114,14 +105,14 @@ belgilash mumkin.
   konfiguratsiyaga kiritmang; ular aynan xavfsiz tarzda rad etuvchi holatda qolishi
   kerak.
 
-## Misol: OmniRoute oldidagi teskari proksi
+## Misol: 67router oldidagi teskari proksi
 
-CORS OmniRoute tomonidan qoʻllanadi, shuning uchun proksi odatda `Access-Control-*`
+CORS 67router tomonidan qoʻllanadi, shuning uchun proksi odatda `Access-Control-*`
 sarlavhalarini **qoʻshmasligi** yoki qayta yozmasligi kerak (takroriy sarlavhalar brauzerlar ishlashini buzadi). TLS ulanishini
-yakunlang va soʻrovni yoʻnaltiring — dastlabki soʻrovga OmniRoute javob bersin:
+yakunlang va soʻrovni yoʻnaltiring — dastlabki soʻrovga 67router javob bersin:
 
 ```nginx
-# nginx — OmniRouteʼga yoʻnaltiring; bu yerda Access-Control-* sarlavhalarini kiritmang
+# nginx — 67routerʼga yoʻnaltiring; bu yerda Access-Control-* sarlavhalarini kiritmang
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -129,25 +120,24 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # Yoʻnaltirish sarlavhalarini saqlang: ayni xostdagi proksi loopback orqali ulanadi va aynan ular
-    # OmniRouteʼga murojaat qiluvchi mahalliy operator emasligini bildiradi. Ulardan hech birini qoʻshmaydigan proksi
+    # 67routerʼga murojaat qiluvchi mahalliy operator emasligini bildiradi. Ulardan hech birini qoʻshmaydigan proksi
     # barcha masofaviy murojaat qiluvchilarni mahalliy sifatida koʻrsatadi. X-Forwarded-Forʼni ham hech qachon 127.0.0.1 qilib belgilamang.
 }
 ```
 
-Brauzer uchun ruxsat etilgan manbalarni proksida emas, OmniRouteʼda (`CORS_ALLOWED_ORIGINS` yoki
+Brauzer uchun ruxsat etilgan manbalarni proksida emas, 67routerʼda (`CORS_ALLOWED_ORIGINS` yoki
 Security ichki oynasida) belgilang.
 
 ## Manba fayllari
 
-| Vazifa                                                      | Fayl                                                                 |
-| ----------------------------------------------------------- | -------------------------------------------------------------------- |
-| Ruxsat etilgan roʻyxatni aniqlash + `getCorsStatus()`       | `src/server/cors/origins.ts`                                         |
-| Oraliq dastur qoʻllanilishi (yagona haqiqat manbai)         | `src/server/authz/pipeline.ts`                                       |
-| Settings → ish vaqtidagi manbani kiritish                   | `src/lib/config/runtimeSettings.ts`                                  |
-| Boshqaruv paneli uchun ish vaqti holati                     | `src/app/api/settings/authz-inventory/route.ts`                      |
-| Boshqaruv panelidagi ogohlantirish banneri                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins maydoni                                | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Har bir marshrut uchun Cloud-Agent CORS sozlamasi (istisno) | `src/lib/cloudAgent/api.ts`                                          |
+| Vazifa                                                | Fayl                                                                 |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| Ruxsat etilgan roʻyxatni aniqlash + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| Oraliq dastur qoʻllanilishi (yagona haqiqat manbai)   | `src/server/authz/pipeline.ts`                                       |
+| Settings → ish vaqtidagi manbani kiritish             | `src/lib/config/runtimeSettings.ts`                                  |
+| Boshqaruv paneli uchun ish vaqti holati               | `src/app/api/settings/authz-inventory/route.ts`                      |
+| Boshqaruv panelidagi ogohlantirish banneri            | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins maydoni                          | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## Shuningdek qarang
 

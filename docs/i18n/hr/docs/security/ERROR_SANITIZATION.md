@@ -206,11 +206,11 @@ Pravila sanitizacije koja se primjenjuju na `upstreamDetails`:
 3. Ograničenje dubine: ugnježđivanje dublje od 4 razine zamjenjuje se nizom `"[truncated]"`.
 4. Polja su ograničena na 32 elementa.
 
-Samo mjesta poziva s raščlanjenim tijelom pogreške pružatelja trebaju proslijediti `upstreamDetails`. Interne pogreške OmniRoutea (neuspjesi raščlanjivanja SSE-a, prazan sadržaj, blokade zaštitnih ograda) ne smiju ga uključivati.
+Samo mjesta poziva s raščlanjenim tijelom pogreške pružatelja trebaju proslijediti `upstreamDetails`. Interne pogreške 67routera (neuspjesi raščlanjivanja SSE-a, prazan sadržaj, blokade zaštitnih ograda) ne smiju ga uključivati.
 
 NEMOJTE prosljeđivati neobrađeni `err.stack`, `err.message` ni bilo koji niz znakova iz iznimke tijekom izvođenja u `upstreamDetails`. Oni i dalje moraju proći kroz `errorResponse` / `buildErrorBody(code, msg)` bez tijela odgovora nadređenog sustava.
 
-Selektivno prosljeđivanje 4xx odgovora nadređenog sustava zadržava siguran JSON oblik i formulaciju pružatelja potrebne za automatski oporavak klijenta, ali nije riječ o prosljeđivanju bajt-po-bajt: rekurzivni sanitizer uvijek se izvršava prije serijalizacije. Tijela s cikličkim referencama, vrijednostima BigInt ili zlonamjernim `toJSON()` ne prolaze sigurno i ne ispunjavaju uvjete za prosljeđivanje. OCR i moderiranje primjenjuju isto pravilo; ne-JSON, prazna ili pogrešno označena tijela odgovora nadređenog sustava pretvaraju se u kanonsku JSON omotnicu pogreške OmniRoutea.
+Selektivno prosljeđivanje 4xx odgovora nadređenog sustava zadržava siguran JSON oblik i formulaciju pružatelja potrebne za automatski oporavak klijenta, ali nije riječ o prosljeđivanju bajt-po-bajt: rekurzivni sanitizer uvijek se izvršava prije serijalizacije. Tijela s cikličkim referencama, vrijednostima BigInt ili zlonamjernim `toJSON()` ne prolaze sigurno i ne ispunjavaju uvjete za prosljeđivanje. OCR i moderiranje primjenjuju isto pravilo; ne-JSON, prazna ili pogrešno označena tijela odgovora nadređenog sustava pretvaraju se u kanonsku JSON omotnicu pogreške 67routera.
 
 ## Poznato ograničenje CodeQL-a: prilagođeni sanitizatori nisu prepoznati
 

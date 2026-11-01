@@ -4,7 +4,7 @@
 
 ---
 
-`@omniroute/opencode-plugin-v2` bütün OmniRoute kataloqunuzu — modelləri, kombinasiyaları və
+`@omniroute/opencode-plugin-v2` bütün 67router kataloqunuzu — modelləri, kombinasiyaları və
 avtomatik kombinasiyaları — görünən adlar, qiymətlər və pulsuz səviyyə
 limitləri ilə birlikdə OpenCode v2-nin model seçicisinə əlavə edir.
 
@@ -16,7 +16,7 @@ məcbur etmir.
 ## Tələblər
 
 - OpenCode v2.
-- Əlçatan OmniRoute şlüzü (standart olaraq `http://localhost:20128`).
+- Əlçatan 67router şlüzü (standart olaraq `http://localhost:20128`).
 - Node.js 22 və ya 24.
 
 ## Quraşdırma
@@ -120,7 +120,7 @@ Bunu söndürmək üçün `"geminiSanitization": false` təyin edin.
 
 | Əlamət                                                              | Səbəb                                                                                                                        |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Seçicidə heç bir OmniRoute modeli görünmür                          | Heç bir açar müəyyən edilməyib (başlanğıc xəbərdarlığını yoxlayın) və ya şlüz əlçatan deyil                                  |
+| Seçicidə heç bir 67router modeli görünmür                           | Heç bir açar müəyyən edilməyib (başlanğıc xəbərdarlığını yoxlayın) və ya şlüz əlçatan deyil                                  |
 | Xam model identifikatorları var, kombinasiyalar və qiymətlər yoxdur | İdarəetmə endpoint-ləri tokeni rədd edib — `managementReadToken` təyin edin                                                  |
 | `freeOnly` kataloqu qısa və ya boşdur                               | İdarəetmə tokeni yoxdur və ya token rədd edilib — host jurnalındakı yeniləmə xülasəsi sətrini (`unmatched-free` sayı) oxuyun |
 | Sessiya `opencode-<id>/…` üzərinə bərkidilib                        | v1 plagini `opencode-<id>` dərc edirdi; v2 isə yalnız `<id>` dərc edir, buna görə modeli `<id>/…` altında yenidən seçin      |

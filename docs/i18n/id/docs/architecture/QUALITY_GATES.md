@@ -4,7 +4,7 @@
 
 ---
 
-Dokumen ini merupakan referensi otoritatif untuk semua gerbang kualitas CI di OmniRoute.
+Dokumen ini merupakan referensi otoritatif untuk semua gerbang kualitas CI di 67router.
 Dokumen ini menjelaskan setiap gerbang, hal yang divalidasi, job CI tempat gerbang tersebut dijalankan, apakah gerbang tersebut menggunakan
 baseline ratchet atau kebijakan lulus/gagal, serta apakah gerbang tersebut memblokir build atau hanya bersifat saran.
 
@@ -273,14 +273,14 @@ Berjalan setelah `build`. Memblokir merge jika gagal.
 
 Workflow ini berjalan menurut jadwal cron (dan `workflow_dispatch`), tidak pernah pada PR. Semuanya bersifat advisory.
 
-| Workflow               | Memvalidasi                                                                                                                                                                                   | Memblokir    |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | Property test fast-check dengan seed acak + jumlah run tinggi                                                                                                                                 | **Advisory** |
-| `nightly-resilience`   | Gate heap-growth, chaos fault-injection, load/soak k6                                                                                                                                         | **Advisory** |
-| `nightly-llm-security` | Injection guard promptfoo (mode blokir) + probe garak (dilewati tanpa secret provider)                                                                                                        | **Advisory** |
-| `nightly-schemathesis` | Contract fuzzing OpenAPI (schemathesis) terhadap OmniRoute yang berjalan menggunakan `docs/openapi.yaml` — memunculkan pelanggaran spesifikasi / error 500 yang tidak tertangani (Fase 8 B.4) | **Advisory** |
-| `nightly-mutation`     | Skor mutation testing Stryker pada jalur unit-test cepat — mutan yang lolos memunculkan assert yang lemah                                                                                     | **Advisory** |
-| `nightly-compat`       | Matriks kompatibilitas engine Node di seluruh rentang `engines.node` yang didukung                                                                                                            | **Advisory** |
+| Workflow               | Memvalidasi                                                                                                                                                                                  | Memblokir    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | Property test fast-check dengan seed acak + jumlah run tinggi                                                                                                                                | **Advisory** |
+| `nightly-resilience`   | Gate heap-growth, chaos fault-injection, load/soak k6                                                                                                                                        | **Advisory** |
+| `nightly-llm-security` | Injection guard promptfoo (mode blokir) + probe garak (dilewati tanpa secret provider)                                                                                                       | **Advisory** |
+| `nightly-schemathesis` | Contract fuzzing OpenAPI (schemathesis) terhadap 67router yang berjalan menggunakan `docs/openapi.yaml` — memunculkan pelanggaran spesifikasi / error 500 yang tidak tertangani (Fase 8 B.4) | **Advisory** |
+| `nightly-mutation`     | Skor mutation testing Stryker pada jalur unit-test cepat — mutan yang lolos memunculkan assert yang lemah                                                                                    | **Advisory** |
+| `nightly-compat`       | Matriks kompatibilitas engine Node di seluruh rentang `engines.node` yang didukung                                                                                                           | **Advisory** |
 
 Baseline performa (heap, TTFB, waktu build) dicatat, bukan dijadikan gate: lihat [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -550,7 +550,7 @@ yang terus bertambah memberikan kesan kualitas yang semu.
 
 ## Peralatan agen: LSP-in-the-loop (opsional)
 
-Selain gate CI, OmniRoute menyediakan scaffold `agent-lsp` yang **opsional**
+Selain gate CI, 67router menyediakan scaffold `agent-lsp` yang **opsional**
 (`.mcp.json` tingkat proyek, Fase 7 Tugas 15). Buat `.mcp.json`
 untuk mengekspos server bahasa TypeScript kepada agen pengodean, sehingga agen menyelesaikan simbol /
 diagnostik **sebelum** menulis kode — pendamping kompilasi-sebelum-klaim bagi

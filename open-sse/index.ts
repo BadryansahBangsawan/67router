@@ -87,8 +87,7 @@ export {
   createPassthroughStreamWithLogger,
 } from "./utils/stream.ts";
 
-// Embeddings
-export { handleEmbedding } from "./handlers/embeddings.ts";
+// Embeddings (registry only; the /v1/embeddings endpoint was removed)
 export {
   EMBEDDING_PROVIDERS,
   getEmbeddingProvider,
@@ -96,8 +95,7 @@ export {
   getAllEmbeddingModels,
 } from "./config/embeddingRegistry.ts";
 
-// Image Generation
-export { handleImageGeneration } from "./handlers/imageGeneration.ts";
+// Image registry (model catalog only; the image endpoints were removed)
 export {
   IMAGE_PROVIDERS,
   getImageProvider,
@@ -113,8 +111,7 @@ export {
   flushThinkBuffer,
 } from "./utils/thinkTagParser.ts";
 
-// Rerank
-export { handleRerank } from "./handlers/rerank.ts";
+// Rerank (registry only; the /v1/rerank endpoint was removed)
 export {
   RERANK_PROVIDERS,
   getRerankProvider,
@@ -122,9 +119,8 @@ export {
   getAllRerankModels,
 } from "./config/rerankRegistry.ts";
 
-// Audio (Transcription + Speech)
+// Audio (transcription handler; the speech endpoint was removed, its registry stays)
 export { handleAudioTranscription } from "./handlers/audioTranscription.ts";
-export { handleAudioSpeech } from "./handlers/audioSpeech.ts";
 export {
   AUDIO_TRANSCRIPTION_PROVIDERS,
   AUDIO_SPEECH_PROVIDERS,
@@ -136,7 +132,6 @@ export {
 } from "./config/audioRegistry.ts";
 
 // Moderations
-export { handleModeration } from "./handlers/moderations.ts";
 export {
   MODERATION_PROVIDERS,
   getModerationProvider,

@@ -4,7 +4,7 @@
 
 ---
 
-Ang dokumentong ito ang awtoritatibong sanggunian para sa lahat ng CI quality gate sa OmniRoute.
+Ang dokumentong ito ang awtoritatibong sanggunian para sa lahat ng CI quality gate sa 67router.
 Inilalarawan nito ang bawat gate, kung ano ang bine-validate nito, kung saang CI job ito tumatakbo, kung gumagamit ito
 ng ratchet baseline o patakarang pass/fail, at kung hinaharangan nito ang build o nagsisilbi lamang bilang abiso.
 
@@ -281,14 +281,14 @@ Tumatakbo pagkatapos ng `build`. Nagba-block ng merge kapag nabigo.
 
 Ang mga ito ay tumatakbo sa cron schedule (at `workflow_dispatch`), hindi kailanman sa mga PR. Lahat ay advisory.
 
-| Workflow               | Sini-validate                                                                                                                                                                      | Nagba-block  |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | fast-check property tests na may random seed + mataas na run count                                                                                                                 | **Advisory** |
-| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                                              | **Advisory** |
-| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probes (nilalaktawan kapag walang provider secret)                                                                                  | **Advisory** |
-| `nightly-schemathesis` | OpenAPI contract fuzzing (schemathesis) laban sa isang live na OmniRoute gamit ang `docs/openapi.yaml` — naglalabas ng mga paglabag sa spec / hindi-nahahawakang 500s (Fase 8 B.4) | **Advisory** |
-| `nightly-mutation`     | Stryker mutation-testing score sa mabilis na unit lane — ang mga nakaligtas na mutant ay naglalabas ng mahihinang assert                                                           | **Advisory** |
-| `nightly-compat`       | Node engine compatibility matrix sa lahat ng sinusuportahang `engines.node` ranges                                                                                                 | **Advisory** |
+| Workflow               | Sini-validate                                                                                                                                                                     | Nagba-block  |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | fast-check property tests na may random seed + mataas na run count                                                                                                                | **Advisory** |
+| `nightly-resilience`   | heap-growth gate, chaos fault-injection, k6 load/soak                                                                                                                             | **Advisory** |
+| `nightly-llm-security` | promptfoo injection guard (block mode) + garak probes (nilalaktawan kapag walang provider secret)                                                                                 | **Advisory** |
+| `nightly-schemathesis` | OpenAPI contract fuzzing (schemathesis) laban sa isang live na 67router gamit ang `docs/openapi.yaml` — naglalabas ng mga paglabag sa spec / hindi-nahahawakang 500s (Fase 8 B.4) | **Advisory** |
+| `nightly-mutation`     | Stryker mutation-testing score sa mabilis na unit lane — ang mga nakaligtas na mutant ay naglalabas ng mahihinang assert                                                          | **Advisory** |
+| `nightly-compat`       | Node engine compatibility matrix sa lahat ng sinusuportahang `engines.node` ranges                                                                                                | **Advisory** |
 
 Ang mga performance baseline (heap, TTFB, build time) ay naitatala, hindi ginagawang gate: tingnan ang [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -570,7 +570,7 @@ allowlist ay nagbibigay ng maling pakiramdam ng kalidad.
 
 ## Tooling ng agent: LSP-in-the-loop (opt-in)
 
-Bukod sa mga CI gate, kasama sa OmniRoute ang isang **opt-in** na `agent-lsp` scaffold
+Bukod sa mga CI gate, kasama sa 67router ang isang **opt-in** na `agent-lsp` scaffold
 (isang project-level na `.mcp.json`, Fase 7 Task 15). Gumawa ng `.mcp.json`
 upang ilantad ang isang TypeScript language server sa mga coding agent, nang sa gayon ay maresolba nila ang mga simbolo /
 diagnostic **bago** magsulat ng code — isang compile-before-claim na katuwang ng

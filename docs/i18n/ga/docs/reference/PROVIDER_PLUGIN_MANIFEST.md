@@ -15,7 +15,7 @@ a iompórtáil.
 Tá an lastliosta céanna ar fáil thar HTTP ag
 `GET /api/v1/provider-plugin-manifest` do thaobhcharranna a ritheann lasmuigh den phróiseas.
 
-Fógraíonn OmniRoute an URL sin do Bifrost agus CLIProxyAPI tríd an
+Fógraíonn 67router an URL sin do Bifrost agus CLIProxyAPI tríd an
 gceanntásc iarratais `X-OmniRoute-Provider-Manifest-Url`. Socraigh
 `OMNIROUTE_PROVIDER_MANIFEST_URL` nuair a bhíonn URL poiblí nó URL líonra coimeádáin
 de dhíth ar an taobhcharr in ionad bhunphointe áitiúil an iarratais.
@@ -31,7 +31,7 @@ ní mór don taobhcharr iarratas neamhchoinníollach a dhéanamh seachas glacadh
 ## Sprioc
 
 Meiteashonraí soláthraithe a bhogadh i dtreo conradh breiseáin ionas gur féidir le
-taobhcharr a bhfuil aga folaigh níos ísle aige an chonair the iarratais a shealbhú ar deireadh, agus OmniRoute ag coinneáil
+taobhcharr a bhfuil aga folaigh níos ísle aige an chonair the iarratais a shealbhú ar deireadh, agus 67router ag coinneáil
 an bhealaigh TypeScript mar gheata beartais agus mar chúltaca. Is breisiú é an lastliosta: ní
 athraíonn sé ródú iarratas leis féin.
 
@@ -75,7 +75,7 @@ foinsí TypeScript a athléamh.
 | `usage-fetch`        | Tá faighteoir úsáide nó cuóta sreangaithe aige (`getUsageForProvider`).                      |
 | `usage-supported`    | Glacann an API úsáide leis an soláthraí seo (`isSupportedUsageConnection`).                  |
 
-Is le haghaidh fionnachtana amháin atá `usage-fetch`. Tuairiscíonn sé go bhfuil a fhios ag OmniRoute conas úsáid a léamh don
+Is le haghaidh fionnachtana amháin atá `usage-fetch`. Tuairiscíonn sé go bhfuil a fhios ag 67router conas úsáid a léamh don
 soláthraí; ní ghníomhachtaíonn sé an fháil, ní athraíonn sé séimeantaic chuóta, ná ní thugann sé le tuiscint go bhfuil
 giuirléid chuóta an Deais cumasaithe don soláthraí — geataítear an ghiuirléid sin ar leithligh le
 `USAGE_SUPPORTED_PROVIDERS`. Is é `USAGE_FETCHER_PROVIDERS` in

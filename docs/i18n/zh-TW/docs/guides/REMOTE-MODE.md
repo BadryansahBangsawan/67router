@@ -4,7 +4,7 @@
 
 ---
 
-在您的筆記型電腦上執行 `omniroute` CLI，而 OmniRoute 本身則執行於其他位置
+在您的筆記型電腦上執行 `omniroute` CLI，而 67router 本身則執行於其他位置
 （VPS、家用伺服器，或 Tailnet 上的另一台機器）。您只需透過
 `omniroute connect` 登入一次，之後的**每一個** CLI 命令都會以該遠端
 伺服器為目標——命令相同、輸出相同，只是在遠端執行。
@@ -24,7 +24,7 @@ omniroute configure codex                # ← 根據遠端目錄寫入本機 Co
 ## 運作方式
 
 ```
-您的筆記型電腦                          遠端 OmniRoute（VPS）
+您的筆記型電腦                          遠端 67router（VPS）
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ omniroute CLI      │  POST /api/cli/connect  （密碼 → 權杖）             │
 │  context: vps      │ ───────────────►  │ 簽發限定範圍的存取權杖           │
@@ -106,14 +106,14 @@ Antigravity 使用 Google 的第一方／原生應用程式同意畫面。只有
 而不是您的機器上，因此同意畫面會**永遠卡住，且絕不會
 產生授權碼**——一般的「貼上回呼 URL」備援方式沒有任何內容可
 貼上。（這是 Google 端的限制：任何使用內建 Antigravity 桌面用戶端
-的代理都會發生相同的卡住情況，並非只有 OmniRoute。）
+的代理都會發生相同的卡住情況，並非只有 67router。）
 
 儀表板會在您卡住前偵測到此情況：從非 localhost 位址開啟 **Providers → Antigravity →
 Connect** 時，原本通用的「複製回呼 URL」提示會替換為以下兩種解決方法，
 其中已預先填入您的主機與連接埠。
 （LAN 位址也算在內——就此回呼而言，`192.168.x.x` 並不是 localhost。）
 
-有兩種支援的方法可將 Antigravity 連線至遠端 OmniRoute。
+有兩種支援的方法可將 Antigravity 連線至遠端 67router。
 
 ### 選項 A——本機登入輔助程式（建議）
 
@@ -151,7 +151,7 @@ npx omniroute login antigravity --no-push
 
 然後在**遠端**儀表板中前往：**Providers → Antigravity → Connect**，並將
 `omniroute-cred-v1.…` 憑證資料貼入 **Step 2** 欄位（該欄位接受
-回呼 URL 或憑證資料）。OmniRoute 會解碼該資料、在伺服器端執行 Cloud Code
+回呼 URL 或憑證資料）。67router 會解碼該資料、在伺服器端執行 Cloud Code
 引導設定，並保存連線。
 
 > 該憑證資料包含重新整理權杖——請像保護密碼一樣保護它。使用推送流程時，它會
@@ -192,7 +192,7 @@ Antigravity 回呼使用的就是儀表板連接埠，因此不需要轉送第�
 ## 在遠端安裝環境中連線 Codex / Grok（固定迴環位址提供者）
 
 Codex、xAI (`xai-oauth`) 與 Grok CLI (`grok-cli`) 會向其上游 OAuth 應用程式註冊一個**固定的**迴環
-`redirect_uri`。OmniRoute 無法變更它——提供者一律會將瀏覽器重新導向至相同的硬編碼位址：
+`redirect_uri`。67router 無法變更它——提供者一律會將瀏覽器重新導向至相同的硬編碼位址：
 
 | 提供者      | 提供者重新導向至的固定回呼位址        |
 | ----------- | ------------------------------------- |
@@ -200,7 +200,7 @@ Codex、xAI (`xai-oauth`) 與 Grok CLI (`grok-cli`) 會向其上游 OAuth 應用
 | `xai-oauth` | `http://127.0.0.1:56121/callback`     |
 | `grok-cli`  | `http://127.0.0.1:56122/callback`     |
 
-此處的 `localhost` 指的是**執行瀏覽器的機器**，而 OmniRoute 的 PKCE
+此處的 `localhost` 指的是**執行瀏覽器的機器**，而 67router 的 PKCE
 回呼伺服器則監聽於**伺服器的**迴環介面。若透過像 `http://192.168.0.15:20128`
 這樣的 LAN 位址開啟儀表板，兩者便永遠無法連通：授權碼會被傳送至您自己筆記型電腦的
 `localhost:1455`，但該處沒有任何程式正在監聽，因此提供者會讓登入失敗，且不顯示任何錯誤。
@@ -219,7 +219,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 必須設定兩個轉送，只轉送其中一個仍會失敗：
 
 - **`20128`**（儀表板連接埠）會讓來源成為真正的 localhost，這正是
-  讓 OmniRoute 啟動 PKCE 回呼伺服器的必要條件——LAN 來源永遠不會
+  讓 67router 啟動 PKCE 回呼伺服器的必要條件——LAN 來源永遠不會
   進入該分支。
 - **`1455`**（提供者的固定回呼連接埠）是瀏覽器被重新導向返回的位置；
   它必須透過通道連至伺服器的迴環介面。
@@ -335,7 +335,7 @@ omniroute contexts current         # the active server, auth status, scope
 
 ```text
   | Name    | Base URL                  | Auth  | Scope | Description
-● | vps     | http://100.67.86.91:20128 | token | admin | Remote OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token | admin | Remote 67router (…)
   | default | http://localhost:20128    | ✗     |       |
 ```
 

@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Niraranggo ng OmniRoute ang mga **libreng** provider nito batay sa kalidad ng modelo gamit ang mga **ELO score ng Arena AI
+> **TL;DR**: Niraranggo ng 67router ang mga **libreng** provider nito batay sa kalidad ng modelo gamit ang mga **ELO score ng Arena AI
 > (LMArena-style)**. Buksan ang pahina ng **Free Provider Rankings** sa
 > dashboard upang makita kung aling mga libreng provider ang naghahatid ng pinakamahuhusay na modelo para sa iyong gawain —
 > sa kabuuan, o sinala ayon sa kategorya (coding, review, documentation, debugging).
@@ -13,7 +13,7 @@
 
 ## Ano Ito
 
-Ang OmniRoute ay nagrehistro ng 375 provider, kabilang ang 155 catalog entry na minarkahan bilang **free/no-auth** (no-auth, free-tier OAuth, o free-tier API key — tingnan ang [Gabay sa Free Tiers](../getting-started/FREE-TIERS-GUIDE.md) at ang buong [direktoryo ng Free Tiers](../reference/FREE_TIERS.md)). Ang problema: lubhang nagkakaiba-iba ang mga libreng provider sa kalidad ng modelo. Ang isang no-auth provider na naghahatid ng frontier model ay mas kapaki-pakinabang kaysa sa isang naghahatid ng maliit na legacy model.
+Ang 67router ay nagrehistro ng 372 provider, kabilang ang 155 catalog entry na minarkahan bilang **free/no-auth** (no-auth, free-tier OAuth, o free-tier API key — tingnan ang [Gabay sa Free Tiers](../getting-started/FREE-TIERS-GUIDE.md) at ang buong [direktoryo ng Free Tiers](../reference/FREE_TIERS.md)). Ang problema: lubhang nagkakaiba-iba ang mga libreng provider sa kalidad ng modelo. Ang isang no-auth provider na naghahatid ng frontier model ay mas kapaki-pakinabang kaysa sa isang naghahatid ng maliit na legacy model.
 
 Sinasagot ng **Free Provider Rankings** ang tanong na "**alin na libreng provider ang nagbibigay sa akin ng pinakamahusay na modelo?**" sa pamamagitan ng pagsasama ng catalog ng bawat libreng provider sa mga **crowd-sourced na quality score** mula sa **Arena AI leaderboard** (ELO na batay sa kagustuhan ng tao, ang parehong ideya sa likod ng LMArena chatbot arena). Ang mga provider ay iniraranggo batay sa lakas ng kanilang **pinakamahusay na libreng modelo**.
 
@@ -120,9 +120,9 @@ at `code` — mula sa Arena AI leaderboard API
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Ang bawat entry sa leaderboard
 ay naglalaman ng pangalan ng modelo, vendor, ELO `score`, confidence interval, at bilang ng boto.
 
-Ang mga kategorya ng leaderboard ay itinutugma sa mga kategorya ng gawain ng OmniRoute:
+Ang mga kategorya ng leaderboard ay itinutugma sa mga kategorya ng gawain ng 67router:
 
-| Arena leaderboard | Mga kategorya ng gawain ng OmniRoute              |
+| Arena leaderboard | Mga kategorya ng gawain ng 67router               |
 | ----------------- | ------------------------------------------------- |
 | `text`            | `default`, `review`, `documentation`, `debugging` |
 | `code`            | `coding`                                          |
@@ -160,7 +160,7 @@ ng lipas na data.
 - Tumatakbo ito nang isang beses sa pagsisimula ng server at pagkatapos ay sa pana-panahong timer
   (`src/lib/arenaEloSync.ts`, na nakakonekta mula sa `src/instrumentation-node.ts`).
 - Ito ay **non-blocking at hindi kailanman fatal** — kung mabigo ang pagkuha mula sa upstream, patuloy na
-  tumatakbo ang OmniRoute at ipinapakita lamang ng mga ranking ang huling wastong data (o isang walang-lamang estado).
+  tumatakbo ang 67router at ipinapakita lamang ng mga ranking ang huling wastong data (o isang walang-lamang estado).
 
 Dalawang environment variable ang kumokontrol dito (nakadokumento sa
 [`docs/reference/ENVIRONMENT.md`](../reference/ENVIRONMENT.md)):
@@ -194,7 +194,7 @@ flexible matching (`findMatchingIntelligence` sa `src/lib/freeProviderRankings.t
 3. Prefix match (ang pangalan ng modelo sa leaderboard ay prefix ng registry ID).
 
 Sa panig ng pag-sync, inaalis ang mga kilalang vendor prefix (`anthropic/`, `openai/`, `google/`, …)
-at pinapalawak ng isang maliit na alias map ang mga canonical name sa mga variant na ginagamit ng OmniRoute
+at pinapalawak ng isang maliit na alias map ang mga canonical name sa mga variant na ginagamit ng 67router
 sa loob, upang manatiling nahahanap ang mga modelo sa ilalim ng anumang pangalan.
 
 ### Paano niraranggo ang isang provider

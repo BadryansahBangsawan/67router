@@ -6,7 +6,7 @@
 
 ## Ülevaade
 
-Redis on OmniRoute'i **valikuline, nõrk sõltuvus** — rakendus jätkab Redise kättesaamatuse korral sujuvalt tööd (kasutades mälupõhiseid
+Redis on 67router'i **valikuline, nõrk sõltuvus** — rakendus jätkab Redise kättesaamatuse korral sujuvalt tööd (kasutades mälupõhiseid
 varulahendusi). Tootmiskeskkonnas vähendab Redise häälestamine latentsust nelja erineva
 töökoormuse puhul:
 
@@ -17,7 +17,7 @@ töökoormuse puhul:
 | Kvoodihoidla               | `redisQuotaStore.ts`          | Eraldi `getRedisClient(url)`-i üksikeksemplar                  | `<prefix>quota:*`, seadistatav eksemplaripõhiselt                |
 | Eelsoojenduse kaitselüliti | `redisCircuitBreakerStore.ts` | Eraldi klient failis `circuitBreakerFactory.ts`                | `<prefix>warmup:cb:<connectionId>`                               |
 
-Kõik neli töökoormust jagavad üht nimeruumi prefiksit, et OmniRoute saaks ühes
+Kõik neli töökoormust jagavad üht nimeruumi prefiksit, et 67router saaks ühes
 Redise eksemplaris teiste rakendustega koos eksisteerida (nt `127.0.0.1:6379`). Vaadake jaotist [Võtmete nimeruum](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ Redise eksemplaris teiste rakendustega koos eksisteerida (nt `127.0.0.1:6379`). 
 
 ## Võtmete nimeruum
 
-OmniRoute jagab Redise eksemplari kõige muuga, mis hostis töötab. Ilma nimeruumita
+67router jagab Redise eksemplari kõige muuga, mis hostis töötab. Ilma nimeruumita
 võivad võtmed, nagu `auth:api_key:<sha256>` või `rl:*`, sattuda konflikti teiste rakenduste võtmetega,
 mis kasutavad sama Redist (see eksemplar käitab Redist aadressil `127.0.0.1:6379` koos teiste teenustega).
 
-Määrake `REDIS_KEY_PREFIX` mittetühjaks stringiks, et lisada prefiks **igale** OmniRoute'i võtmele:
+Määrake `REDIS_KEY_PREFIX` mittetühjaks stringiks, et lisada prefiks **igale** 67router'i võtmele:
 
 ```bash
-# .env — kõik OmniRoute'i võtmed muutuvad kujule omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — kõik 67router'i võtmed muutuvad kujule omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # jäta ruumi operatsioonisüsteemi leheküljevahemälule
 maxmemory-policy allkeys-lru         # eemalda koormuse all aegunud autentimisvahemälu kirjed
 
-# Püsimälu (valikuline — OmniRoute on ka ilma selleta krahhikindel)
+# Püsimälu (valikuline — 67router on ka ilma selleta krahhikindel)
 save 300 1                           # loo tõmmis vähemalt iga 5 minuti järel, kui ≥1 võti muutus
 appendonly no                        # AOF pole vajalik; andmed on taastoodetavad
 appendfsync no                       # fsync-lisakulu puudub (RDB on piisav)

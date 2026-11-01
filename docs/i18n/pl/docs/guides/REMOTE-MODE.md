@@ -4,7 +4,7 @@
 
 ---
 
-Uruchamiaj CLI `omniroute` na swoim laptopie, podczas gdy sam OmniRoute działa gdzieś indziej
+Uruchamiaj CLI `omniroute` na swoim laptopie, podczas gdy sam 67router działa gdzieś indziej
 (na VPS-ie, serwerze domowym lub innym urządzeniu w Twojej sieci Tailnet). Logujesz się raz za pomocą
 `omniroute connect`, a od tego momentu **każde** polecenie CLI jest kierowane do tego zdalnego
 serwera — te same polecenia, te same dane wyjściowe, tylko wykonywane na serwerze zdalnym.
@@ -24,7 +24,7 @@ omniroute configure codex                # ← zapisuje lokalny profil Codex ze 
 ## Jak to działa
 
 ```
-Twój laptop                              zdalny OmniRoute (VPS)
+Twój laptop                              zdalny 67router (VPS)
 ┌────────────────────┐                   ┌───────────────────────────────┐
 │ CLI omniroute      │  POST /api/cli/connect  (hasło → token)            │
 │  kontekst: vps     │ ───────────────►  │ generuje token dostępu         │
@@ -109,7 +109,7 @@ loopback znajduje się na serwerze, a nie na Twoim komputerze, więc ekran zgody
 „wklej adres URL wywołania zwrotnego” nie ma niczego do wklejenia. (Jest to
 ograniczenie po stronie Google: takie samo zawieszenie występuje w każdym proxy,
 które korzysta z dołączonego klienta desktopowego Antigravity, nie tylko w
-OmniRoute).
+67router).
 
 Panel wykrywa ten problem, zanim utkniesz: otwarcie **Dostawcy → Antigravity →
 Połącz** z adresu innego niż localhost zastępuje ogólny komunikat „skopiuj adres URL
@@ -117,7 +117,7 @@ wywołania zwrotnego” dwoma poniższymi rozwiązaniami, w których host i port
 uzupełnione. (Adres LAN również się liczy — w kontekście tego wywołania zwrotnego
 `192.168.x.x` nie jest adresem localhost).
 
-Istnieją dwa obsługiwane sposoby połączenia Antigravity ze zdalnym OmniRoute.
+Istnieją dwa obsługiwane sposoby połączenia Antigravity ze zdalnym 67router.
 
 ### Opcja A — lokalny pomocnik logowania (zalecane)
 
@@ -156,7 +156,7 @@ npx omniroute login antigravity --no-push
 
 Następnie w **zdalnym** panelu przejdź do: **Dostawcy → Antigravity → Połącz** i wklej
 blob `omniroute-cred-v1.…` w polu **Krok 2** (akceptuje ono zarówno adres URL
-wywołania zwrotnego, jak i blob danych uwierzytelniających). OmniRoute go zdekoduje,
+wywołania zwrotnego, jak i blob danych uwierzytelniających). 67router go zdekoduje,
 przeprowadzi proces wdrażania Cloud Code po stronie serwera i trwale zapisze
 połączenie.
 
@@ -202,7 +202,7 @@ samego panelu, więc nie trzeba tunelować drugiego portu specyficznego dla dost
 ## Łączenie Codex / Grok ze zdalną instalacją (dostawcy ze stałym adresem loopback)
 
 Codex, xAI (`xai-oauth`) i Grok CLI (`grok-cli`) rejestrują **stały** adres loopback
-`redirect_uri` w swojej nadrzędnej aplikacji OAuth. OmniRoute nie może go zmienić —
+`redirect_uri` w swojej nadrzędnej aplikacji OAuth. 67router nie może go zmienić —
 dostawca zawsze przekierowuje przeglądarkę z powrotem na ten sam, zakodowany na stałe adres:
 
 | Dostawca    | Stały adres zwrotny, na który przekierowuje dostawca |
@@ -212,7 +212,7 @@ dostawca zawsze przekierowuje przeglądarkę z powrotem na ten sam, zakodowany n
 | `grok-cli`  | `http://127.0.0.1:56122/callback`                    |
 
 `localhost` oznacza tutaj **maszynę, na której działa przeglądarka**, natomiast serwer
-wywołania zwrotnego PKCE OmniRoute nasłuchuje na interfejsie loopback **serwera**.
+wywołania zwrotnego PKCE 67router nasłuchuje na interfejsie loopback **serwera**.
 Gdy otworzysz panel pod adresem w sieci LAN, takim jak `http://192.168.0.15:20128`,
 te dwa punkty nigdy się nie połączą: kod autoryzacyjny zostanie dostarczony do
 `localhost:1455` Twojego laptopa, gdzie nic nie nasłuchuje, a dostawca przerwie
@@ -232,7 +232,7 @@ ssh -L 20128:127.0.0.1:20128 -L 1455:127.0.0.1:1455 <user>@192.168.0.15
 Wymagane są dwa przekierowania, a przekierowanie tylko jednego portu nadal nie zadziała:
 
 - **`20128`** (port panelu) sprawia, że źródło jest rzeczywiście lokalnym hostem,
-  co jest warunkiem uruchomienia przez OmniRoute serwera wywołania zwrotnego PKCE —
+  co jest warunkiem uruchomienia przez 67router serwera wywołania zwrotnego PKCE —
   źródło w sieci LAN nigdy nie dociera do tej gałęzi.
 - **`1455`** (stały port wywołania zwrotnego dostawcy) to miejsce, do którego
   przekierowywana jest przeglądarka; musi on zostać przesłany przez tunel do
@@ -350,7 +350,7 @@ omniroute contexts current         # aktywny serwer, stan uwierzytelnienia i zak
 
 ```text
   | Nazwa   | Bazowy URL                | Uwierzytelnianie | Zakres | Opis
-● | vps     | http://100.67.86.91:20128 | token            | admin  | Zdalny OmniRoute (…)
+● | vps     | http://100.67.86.91:20128 | token            | admin  | Zdalny 67router (…)
   | default | http://localhost:20128    | ✗                |        |
 ```
 

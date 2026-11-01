@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute verfügt über **zwei** prozesslokale Lane-Systeme mit unterschiedlichen Geltungsbereichen. Sie ergänzen sich; Betreiber sollten wissen, welches davon sie gerade betrachten.
+67router verfügt über **zwei** prozesslokale Lane-Systeme mit unterschiedlichen Geltungsbereichen. Sie ergänzen sich; Betreiber sollten wissen, welches davon sie gerade betrachten.
 
 ## 1. Prozessweite Zulassung auf Byte-Ebene (`chatBodyAdmission.ts`)
 

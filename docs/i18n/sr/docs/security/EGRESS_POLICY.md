@@ -8,7 +8,7 @@
 
 > **Izvor istine:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute omogućava da svaki proksi sadrži **direktivu za familiju izlazne adrese**. Operativni sistem podrazumevano bira IPv4 ili IPv6 (dvostruki stek, „Happy Eyeballs“). Kada direktivu postavite na `ipv4` ili `ipv6`, OmniRoute vezuje svaku vezu preko tog proksija za izabranu familiju i **bezbedno prekida vezu** umesto da pređe na drugu familiju.
+67router omogućava da svaki proksi sadrži **direktivu za familiju izlazne adrese**. Operativni sistem podrazumevano bira IPv4 ili IPv6 (dvostruki stek, „Happy Eyeballs“). Kada direktivu postavite na `ipv4` ili `ipv6`, 67router vezuje svaku vezu preko tog proksija za izabranu familiju i **bezbedno prekida vezu** umesto da pređe na drugu familiju.
 
 Ova stranica objašnjava šta je ova direktiva, zašto postoji, gde je konfigurišete i kako je izvršno okruženje razrešava.
 
@@ -122,7 +122,7 @@ curl -X PATCH http://localhost:20128/api/v1/management/proxies \
 
 ## Како се разрешава `auto`
 
-Када је `family` подешено на `auto`, OmniRoute **не** додаје ниједну директиву — URL проксија користи се такав какав јесте, а фамилија везе одређује се на основу самог хоста.
+Када је `family` подешено на `auto`, 67router **не** додаје ниједну директиву — URL проксија користи се такав какав јесте, а фамилија везе одређује се на основу самог хоста.
 
 При формирању URL-а (`proxyConfigToUrl` / `normalizeProxyUrl` у `open-sse/utils/proxyDispatcher.ts`), прокси са вредношћу `auto` даје обичан URL без ознаке:
 
@@ -158,7 +158,7 @@ function resolveDispatcherFamily(parsed: URL): 4 | 6 | null {
 
 Директива која није `auto` преноси се као један синтетички маркер упита — `?family=ipv4` или `?family=ipv6` — који се једном додаје нормализованом URL-у проксија. `normalizeProxyUrl` пажљиво уклања и поново додаје овај маркер тачно једном, тако да никада не наруши рашчлањивање порта.
 
-Када се диспечер направи, маркер се чита и претвара у конкретну фамилију везе. Ако је хост IP литерал **супротне** фамилије, OmniRoute изазива грешку (у случају противречности примењује се затворено одбијање):
+Када се диспечер направи, маркер се чита и претвара у конкретну фамилију везе. Ако је хост IP литерал **супротне** фамилије, 67router изазива грешку (у случају противречности примењује се затворено одбијање):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ if (literal !== null && literal !== want) {
 
 ## Компатибилност са SOCKS5
 
-Фиксирање фамилије ради са SOCKS5 проксијима, али стандардни `fetch-socks` не излаже опције сокета потребне за фиксирање фамилије прокси везе. OmniRoute зато испоручује сопствени конектор:
+Фиксирање фамилије ради са SOCKS5 проксијима, али стандардни `fetch-socks` не излаже опције сокета потребне за фиксирање фамилије прокси везе. 67router зато испоручује сопствени конектор:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

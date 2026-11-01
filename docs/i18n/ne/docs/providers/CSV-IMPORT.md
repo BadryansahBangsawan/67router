@@ -25,7 +25,7 @@ Dashboard → Providers → **Import from file** ले CSV वा JSON सू�
 आयात मोडलबाट सुरुआती फाइल डाउनलोड गर्नुहोस् (**Download CSV template**)। उदाहरण:
 
 ```csv
-# OmniRoute प्रदायक आयात (स्थानगत स्तम्भहरू)
+# 67router प्रदायक आयात (स्थानगत स्तम्भहरू)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

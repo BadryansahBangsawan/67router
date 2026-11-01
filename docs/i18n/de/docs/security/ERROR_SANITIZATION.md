@@ -206,11 +206,11 @@ Auf `upstreamDetails` angewendete Bereinigungsregeln:
 3. Tiefenbegrenzung: Verschachtelungen über 4 Ebenen hinaus werden durch die Zeichenfolge `"[truncated]"` ersetzt.
 4. Arrays werden auf 32 Elemente begrenzt.
 
-Nur Aufrufstellen mit einem geparsten Provider-Fehlerantwortkörper sollten `upstreamDetails` übergeben. Interne OmniRoute-Fehler (SSE-Parsingfehler, leere Inhalte, Guardrail-Blockierungen) dürfen es nicht enthalten.
+Nur Aufrufstellen mit einem geparsten Provider-Fehlerantwortkörper sollten `upstreamDetails` übergeben. Interne 67router-Fehler (SSE-Parsingfehler, leere Inhalte, Guardrail-Blockierungen) dürfen es nicht enthalten.
 
 Übergeben Sie KEINE unverarbeiteten Werte aus `err.stack`, `err.message` oder sonstige Zeichenfolgen aus einer Laufzeitausnahme an `upstreamDetails`. Diese müssen weiterhin ohne Upstream-Antwortkörper durch `errorResponse` / `buildErrorBody(code, msg)` verarbeitet werden.
 
-Die selektive Durchleitung von Upstream-4xx-Antworten bewahrt die sichere JSON-Struktur und Formulierung des Providers, die für die automatische Wiederherstellung des Clients erforderlich sind. Es handelt sich jedoch nicht um eine bytegenaue Durchleitung: Die rekursive Bereinigung wird vor der Serialisierung immer ausgeführt. Zyklische, BigInt-enthaltende oder bösartige `toJSON()`-Antwortkörper werden nach dem Fail-Closed-Prinzip abgelehnt und kommen für eine Durchleitung nicht infrage. OCR und Moderation wenden dieselbe Regel an; Nicht-JSON-, leere oder falsch gekennzeichnete Upstream-Antwortkörper werden in die kanonische OmniRoute-JSON-Fehlerhülle umgewandelt.
+Die selektive Durchleitung von Upstream-4xx-Antworten bewahrt die sichere JSON-Struktur und Formulierung des Providers, die für die automatische Wiederherstellung des Clients erforderlich sind. Es handelt sich jedoch nicht um eine bytegenaue Durchleitung: Die rekursive Bereinigung wird vor der Serialisierung immer ausgeführt. Zyklische, BigInt-enthaltende oder bösartige `toJSON()`-Antwortkörper werden nach dem Fail-Closed-Prinzip abgelehnt und kommen für eine Durchleitung nicht infrage. OCR und Moderation wenden dieselbe Regel an; Nicht-JSON-, leere oder falsch gekennzeichnete Upstream-Antwortkörper werden in die kanonische 67router-JSON-Fehlerhülle umgewandelt.
 
 ## Bekannte CodeQL-Einschränkung: Benutzerdefinierte Sanitizer werden nicht erkannt
 

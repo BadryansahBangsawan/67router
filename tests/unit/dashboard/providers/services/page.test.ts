@@ -23,12 +23,14 @@ describe("sidebarVisibility — embedded-services", () => {
   it("embedded-services has the correct href", async () => {
     const { SIDEBAR_SECTIONS } =
       await import("../../../../../src/shared/constants/sidebarVisibility.ts");
-    const omniProxy = SIDEBAR_SECTIONS.find((s) => s.id === "omni-proxy");
-    const flat = (omniProxy?.children ?? []).filter((c) => !("type" in c));
-    const item = flat.find((c) => (c as { id: string }).id === "embedded-services") as
-      | { id: string; href: string }
-      | undefined;
-    assert.ok(item, "embedded-services item should exist in omni-proxy section");
+    // Sidebar v2: Routing → "More routing" sub-group (was the OmniProxy section).
+    const { getSectionItems } =
+      await import("../../../../../src/shared/constants/sidebarVisibility.ts");
+    const routing = SIDEBAR_SECTIONS.find((s) => s.id === "routing");
+    const item = (routing ? getSectionItems(routing) : []).find(
+      (c) => c.id === "embedded-services"
+    ) as { id: string; href: string } | undefined;
+    assert.ok(item, "embedded-services item should exist in the routing section");
     assert.equal(item.href, "/dashboard/providers/services");
   });
 });

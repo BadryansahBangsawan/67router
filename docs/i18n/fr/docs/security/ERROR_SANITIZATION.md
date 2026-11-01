@@ -206,11 +206,11 @@ Règles d’assainissement appliquées à `upstreamDetails` :
 3. Limite de profondeur : les imbrications au-delà de 4 niveaux sont remplacées par la chaîne `"[truncated]"`.
 4. Les tableaux sont limités à 32 éléments.
 
-Seuls les sites d’appel disposant d’un corps d’erreur de fournisseur analysé doivent transmettre `upstreamDetails`. Les erreurs OmniRoute internes (échecs d’analyse SSE, contenu vide, blocages par garde-fou) ne doivent pas l’inclure.
+Seuls les sites d’appel disposant d’un corps d’erreur de fournisseur analysé doivent transmettre `upstreamDetails`. Les erreurs 67router internes (échecs d’analyse SSE, contenu vide, blocages par garde-fou) ne doivent pas l’inclure.
 
 Ne transmettez PAS de valeur brute `err.stack`, `err.message` ni aucune chaîne provenant d’une exception d’exécution à `upstreamDetails`. Ces valeurs doivent toujours passer par `errorResponse` / `buildErrorBody(code, msg)` sans corps en amont.
 
-La transmission sélective des erreurs 4xx en amont préserve la structure JSON sûre du fournisseur et la formulation requise par la récupération automatique du client, mais il ne s’agit pas d’une transmission octet pour octet : l’assainisseur récursif s’exécute toujours avant la sérialisation. Les corps cycliques, contenant des valeurs BigInt ou des fonctions `toJSON()` hostiles échouent de manière fermée et ne sont pas éligibles à la transmission. L’OCR et la modération appliquent la même règle ; les corps en amont non JSON, vides ou incorrectement étiquetés sont convertis dans l’enveloppe d’erreur JSON OmniRoute canonique.
+La transmission sélective des erreurs 4xx en amont préserve la structure JSON sûre du fournisseur et la formulation requise par la récupération automatique du client, mais il ne s’agit pas d’une transmission octet pour octet : l’assainisseur récursif s’exécute toujours avant la sérialisation. Les corps cycliques, contenant des valeurs BigInt ou des fonctions `toJSON()` hostiles échouent de manière fermée et ne sont pas éligibles à la transmission. L’OCR et la modération appliquent la même règle ; les corps en amont non JSON, vides ou incorrectement étiquetés sont convertis dans l’enveloppe d’erreur JSON 67router canonique.
 
 ## Limitation connue de CodeQL : les assainisseurs personnalisés ne sont pas reconnus
 

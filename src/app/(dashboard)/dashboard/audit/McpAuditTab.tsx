@@ -13,8 +13,8 @@ import {
   TableRow,
 } from "@omniroute/ui-kit/table";
 import { TableLoadingState } from "@omniroute/ui-kit/table-loading";
-import { Badge, Button, Card, EmptyState, Input, Select } from "@/shared/components";
-import Icon from "@/shared/components/Icon";
+import { Badge, Button, EmptyState, Input, Select } from "@/shared/components";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 
 type McpAuditEntry = {
   id: number;
@@ -127,7 +127,7 @@ export default function McpAuditTab() {
       />
 
       {stats && (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+        <KpiStrip columns={4}>
           {[
             {
               label: t("mcpMetricCalls24h"),
@@ -151,25 +151,14 @@ export default function McpAuditTab() {
               icon: "star",
             },
           ].map((item) => (
-            <Card key={item.label} padding="none" className="px-4 py-3">
-              <div className="mb-1 flex items-center gap-2">
-                <Icon name={item.icon} size={14} className="text-text-muted" />
-                <span className="text-xs uppercase tracking-wider text-text-muted">
-                  {item.label}
-                </span>
-              </div>
-              <p
-                className={
-                  item.highlight
-                    ? "truncate text-lg font-semibold text-success"
-                    : "truncate text-lg font-semibold text-text-main"
-                }
-              >
-                {item.value}
-              </p>
-            </Card>
+            <KpiCell
+              key={item.label}
+              label={item.label}
+              value={item.value}
+              valueClassName={item.highlight ? "text-success" : undefined}
+            />
           ))}
-        </div>
+        </KpiStrip>
       )}
 
       <DataTableShell

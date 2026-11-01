@@ -1,21 +1,13 @@
 @import "tailwindcss" source(none);
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
-/* Keak type ramp — self-hosted (no CDN: Google Fonts is unreachable in some regions, #3695). Inter is the
-   UI family (tracking 0), Instrument Serif only for sparse large headings, IBM Plex Mono for code.
-   Static weights on purpose: the variable Inter package registers the family "Inter Variable",
-   which the kit's `--ci-font-ui: "Inter", …` never matches (spike finding). Mirrors the kit's
-   own Storybook preview. */
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/instrument-serif/400.css";
-@import "@fontsource/instrument-serif/400-italic.css";
-@import "@fontsource/ibm-plex-mono/400.css";
-@import "@fontsource/ibm-plex-mono/500.css";
-@import "@fontsource/ibm-plex-mono/600.css";
-@import "@fontsource/ibm-plex-mono/700.css";
+/* 67router type ramp — self-hosted (no CDN: Google Fonts is unreachable in some regions, #3695).
+   Geist is the UI family, Geist Mono carries model ids, URLs, keys and code. The variable
+   packages register the families "Geist Variable" / "Geist Mono Variable"; the 67router token
+   layer below points the kit's --ci-font-* at them (the kit's own Inter/Plex/Instrument Serif
+   defaults are no longer loaded). */
+@import "@fontsource-variable/geist/wght.css";
+@import "@fontsource-variable/geist-mono/wght.css";
 /* CI UI Kit — vendored snapshot (packages/ui-kit, see UPSTREAM.md). Declares the same
    `@layer theme, base, components, utilities` order as Tailwind v4, so Tailwind utilities on
    legacy screens keep winning over kit components, and the kit's `@layer base` (.ci-theme)
@@ -41,6 +33,205 @@
   --fd-sidebar-width: 220px;
 }
 
+/* ── Adapter extensions: 67router palette (OmniRoute-side; never patch packages/ui-kit) ────
+   The vendored kit ships the Keak lime theme. 67router retargets it here instead of editing the
+   kit: `--r67-*` holds the solid monochrome palette (the only hex in the theme), and the kit's
+   semantic `--ci-*` tokens are re-pointed at it. Everything downstream — kit components and the
+   OmniRoute token bridge below — follows without knowing about 67router.
+   Selectors mirror ci-tokens.css (light `:root, .ci-theme`; dark `[data-theme="dark"]` forms)
+   and come later in source order, so each one wins over the kit block it shadows.
+   Accent rule: the kit "accent" is the solid primary (near-black in light, near-white in dark).
+   The 67router orange (`--r67-fallback`) is NOT an accent — it marks fallback / recovered
+   requests only (`--color-fallback`, `bg-fallback`, `text-fallback`). Text reads
+   `--color-fallback-text` (darker in light mode for WCAG AA); fills keep `--r67-fallback`. */
+:root,
+.ci-theme {
+  --r67-page: #ffffff;
+  --r67-sidebar: #fafafa;
+  --r67-card: #ffffff;
+  --r67-subtle: #fafafa;
+  --r67-muted-fill: #f4f4f4;
+  --r67-border: #ebebeb;
+  --r67-border-strong: #d4d4d4;
+  --r67-field-border: #e3e3e3;
+  --r67-text: #0a0a0a;
+  --r67-text-secondary: #3f3f3f;
+  --r67-text-muted: #737373;
+  --r67-primary-hover: #262626;
+  --r67-primary-active: #3f3f3f;
+  --r67-fallback: #ff4f00;
+  /* #FF4F00 is 3.3:1 on white: text uses this darker orange (5.2:1 on white, 4.8:1 on the tint). */
+  --r67-fallback-text: #c2410c;
+  --r67-fallback-bg: #fff3ec;
+  --r67-success: #16a34a;
+  --r67-success-bg: #effaf3;
+  --r67-warning: #b45309;
+  --r67-warning-bg: #fff8eb;
+  --r67-warning-border: #f5d9a8;
+  --r67-danger: #dc2626;
+  --r67-danger-bg: #fef2f2;
+  --r67-info: #3f3f3f;
+  --r67-info-bg: #f4f4f4;
+  --r67-neutral-dot: #a3a3a3;
+  --r67-chart-2: #737373;
+  --r67-chart-3: #a3a3a3;
+  --r67-chart-5: #d4d4d4;
+  --r67-tint: rgb(10 10 10 / 0.04);
+  --r67-tint-strong: rgb(10 10 10 / 0.08);
+  --r67-track: rgb(10 10 10 / 0.12);
+  --r67-overlay: rgb(10 10 10 / 0.4);
+  --r67-shadow-hairline: 0 1px 2px rgb(0 0 0 / 0.04);
+}
+
+:root[data-theme="dark"],
+.ci-theme[data-theme="dark"],
+[data-theme="dark"] .ci-theme {
+  --r67-page: #0a0a0a;
+  --r67-sidebar: #111111;
+  --r67-card: #111111;
+  --r67-subtle: #111111;
+  --r67-muted-fill: #1c1c1c;
+  --r67-border: #232323;
+  --r67-border-strong: #333333;
+  --r67-field-border: #2c2c2c;
+  --r67-text: #fafafa;
+  --r67-text-secondary: #c7c7c7;
+  --r67-text-muted: #8f8f8f;
+  --r67-primary-hover: #e5e5e5;
+  --r67-primary-active: #d4d4d4;
+  --r67-fallback: #ff4f00;
+  --r67-fallback-text: #ff4f00;
+  --r67-fallback-bg: #2a1305;
+  --r67-success: #22c55e;
+  --r67-success-bg: #0d1f14;
+  --r67-warning: #f59e0b;
+  --r67-warning-bg: #221a0b;
+  --r67-warning-border: #4a3410;
+  --r67-danger: #f87171;
+  --r67-danger-bg: #241010;
+  --r67-info: #c7c7c7;
+  --r67-info-bg: #1c1c1c;
+  --r67-neutral-dot: #737373;
+  --r67-chart-2: #8f8f8f;
+  --r67-chart-3: #5c5c5c;
+  --r67-chart-5: #3f3f3f;
+  --r67-tint: rgb(250 250 250 / 0.04);
+  --r67-tint-strong: rgb(250 250 250 / 0.08);
+  --r67-track: rgb(250 250 250 / 0.14);
+  --r67-overlay: rgb(0 0 0 / 0.7);
+  --r67-shadow-hairline: none;
+}
+
+/* Kit semantic tokens → 67router palette. One block for both themes: on a dark root the
+   `[data-theme="dark"]` selectors match with the kit dark block's specificity and win by source
+   order, so the kit's lime dark overrides never apply. */
+:root,
+.ci-theme,
+:root[data-theme="dark"],
+.ci-theme[data-theme="dark"],
+[data-theme="dark"] .ci-theme {
+  --ci-color-background: var(--r67-page);
+  --ci-color-canvas: var(--r67-page);
+  --ci-color-surface: var(--r67-card);
+  --ci-color-surface-subtle: var(--r67-subtle);
+  --ci-color-surface-muted: var(--r67-muted-fill);
+  --ci-color-surface-inverse: var(--r67-text);
+  --ci-color-foreground: var(--r67-text);
+  --ci-color-text: var(--r67-text);
+  --ci-color-heading: var(--r67-text);
+  --ci-color-brand-mark: var(--r67-text);
+  --ci-color-text-muted: var(--r67-text-muted);
+  --ci-color-text-subtle: var(--r67-text-muted);
+  --ci-color-text-inverse: var(--r67-page);
+  /* Solid primary: near-black on light, near-white on dark, inverse ink on top. */
+  --ci-color-accent: var(--r67-text);
+  --ci-color-accent-hover: var(--r67-primary-hover);
+  --ci-color-accent-active: var(--r67-primary-active);
+  --ci-color-accent-foreground: var(--r67-page);
+  --ci-color-accent-surface-subtle: var(--r67-tint);
+  --ci-color-accent-surface-strong: var(--r67-muted-fill);
+  --ci-color-accent-surface-range: var(--r67-tint-strong);
+  --ci-color-control-active-bg: var(--r67-text);
+  --ci-color-control-active-fg: var(--r67-page);
+  --ci-color-control-thumb: var(--r67-page);
+  --ci-color-control-thumb-checked: var(--r67-page);
+  --ci-color-border-subtle: var(--r67-border);
+  --ci-color-border: var(--r67-border);
+  --ci-color-border-strong: var(--r67-border-strong);
+  --ci-color-focus: var(--r67-text-muted);
+  --ci-color-focus-ring: var(--r67-text-muted);
+  --ci-color-selection: var(--r67-tint-strong);
+  --ci-color-selection-foreground: var(--r67-text);
+  --ci-color-overlay: var(--r67-overlay);
+  --ci-color-track: var(--r67-track);
+  --ci-color-neutral-tint: var(--r67-tint);
+  --ci-color-loading-cell-muted: var(--r67-text-muted);
+
+  --ci-color-live: var(--r67-success);
+  --ci-color-success: var(--r67-success);
+  --ci-color-success-bg: var(--r67-success-bg);
+  --ci-color-warning: var(--r67-warning);
+  --ci-color-warning-bg: var(--r67-warning-bg);
+  --ci-color-danger: var(--r67-danger);
+  --ci-color-danger-bg: var(--r67-danger-bg);
+  --ci-color-danger-foreground: var(--r67-page);
+  --ci-color-info: var(--r67-info);
+  --ci-color-info-bg: var(--r67-info-bg);
+  /* Charts: monochrome series (primary / secondary / tertiary) plus green; orange stays out —
+     it is reserved for fallback data (`--color-fallback`). */
+  --ci-chart-1: var(--r67-text);
+  --ci-chart-2: var(--r67-chart-2);
+  --ci-chart-3: var(--r67-chart-3);
+  --ci-chart-4: var(--r67-success);
+  --ci-chart-5: var(--r67-chart-5);
+
+  /* Type: Geist for UI and headings (no display serif), Geist Mono for technical values. */
+  --ci-font-ui:
+    "Geist Variable", "Geist", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+    sans-serif;
+  --ci-font-display: var(--ci-font-ui);
+  --ci-font-mono:
+    "Geist Mono Variable", "Geist Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --ci-type-display-weight: var(--ci-font-weight-semibold);
+  --ci-type-dashboard-display-weight: var(--ci-font-weight-semibold);
+  --ci-type-dashboard-display-size: 1.625rem;
+  --ci-type-dashboard-display-leading: 1.25;
+
+  /* Geometry: 12 px cards, 8 px controls, 248 px sidebar, essentially no shadows. */
+  --ci-radius-surface: var(--ci-radius-lg);
+  --ci-radius-control: var(--ci-radius-md);
+  --ci-layout-sidebar: 15.5rem;
+  --ci-shadow-xs: var(--r67-shadow-hairline);
+  --ci-shadow-sm: var(--r67-shadow-hairline);
+
+  /* Component aliases */
+  --ci-button-primary-bg: var(--r67-text);
+  --ci-button-primary-fg: var(--r67-page);
+  --ci-button-primary-hover: var(--r67-primary-hover);
+  --ci-button-accent-bg: var(--r67-text);
+  --ci-button-accent-fg: var(--r67-page);
+  --ci-field-bg: var(--r67-card);
+  --ci-field-fg: var(--r67-text);
+  --ci-field-placeholder: var(--r67-text-muted);
+  --ci-field-border: var(--r67-field-border);
+  --ci-card-bg: var(--r67-card);
+  --ci-card-border: var(--r67-border);
+  --ci-sidebar-bg: var(--r67-sidebar);
+  --ci-sidebar-fg: var(--r67-text-secondary);
+  --ci-sidebar-active-bg: var(--r67-page);
+  --ci-sidebar-active-fg: var(--r67-text);
+
+  --primary: var(--r67-text);
+  --primary-foreground: var(--r67-page);
+}
+
+/* Dark: the active nav pill sits on the subtle fill instead of the page colour. */
+:root[data-theme="dark"],
+.ci-theme[data-theme="dark"],
+[data-theme="dark"] .ci-theme {
+  --ci-sidebar-active-bg: var(--r67-muted-fill);
+}
+
 /* ── Token bridge → CI UI Kit ──────────────────────────────────────────────────────────
    Every OmniRoute token keeps its NAME (hundreds of `var(--color-*)` and Tailwind utilities
    depend on it) but now points to the kit token. The kit flips the `--ci-*` values itself via
@@ -51,14 +242,14 @@
   --desktop-safe-bottom: 0px;
   color-scheme: light;
 
-  /* Brand accent (lime) — the only accent; presets were retired (spec D4). */
+  /* Primary = the kit accent, which the 67router layer above makes the solid monochrome primary
+     (near-black on light, near-white on dark). Presets were retired (spec D4). */
   --color-primary: var(--ci-color-accent);
   --color-primary-hover: var(--ci-color-accent-hover);
-  /* Primary as TEXT (`text-primary` via @theme's --text-color-primary): lime is a surface that
-     carries dark ink, never ink on light (lime-400 on the background ≈ 1.1:1). The kit has no
-     accent-ink token yet (pendência), so light uses its lime-800 (≈ 7.1:1); dark flips back
-     to the lime below. */
-  --color-primary-ink: var(--ci-lime-800);
+  /* Primary as TEXT (`text-primary` via @theme's --text-color-primary). The monochrome primary
+     is already readable ink in both themes, so the ink is the accent itself (the lime theme
+     needed a separate lime-800 ink here). */
+  --color-primary-ink: var(--ci-color-accent);
   --color-accent: var(--ci-color-accent);
   --color-accent-light: var(--ci-color-accent-surface-strong);
   --color-accent-foreground: var(--ci-color-accent-foreground);
@@ -72,6 +263,11 @@
   --color-warning-bg: var(--ci-color-warning-bg);
   --color-info: var(--ci-color-info);
   --color-info-bg: var(--ci-color-info-bg);
+  /* 67router fallback orange — ONLY for fallback / recovered-request semantics, never a
+     general accent. No kit equivalent, so it reads the 67router palette directly. */
+  --color-fallback: var(--r67-fallback);
+  --color-fallback-text: var(--r67-fallback-text);
+  --color-fallback-bg: var(--r67-fallback-bg);
 
   /* Orchestration status tokens (flow edges, badges, cockpit) */
   --orch-status-success: var(--ci-color-success);
@@ -87,13 +283,14 @@
   --color-bg-subtle: var(--ci-color-surface-subtle);
   --color-surface: var(--ci-color-surface);
   --color-card: var(--ci-color-surface);
-  --color-sidebar: var(--ci-color-surface);
+  --color-sidebar: var(--ci-sidebar-bg);
   --surface-2: var(--ci-color-surface-muted);
   --color-border: var(--ci-color-border-subtle);
   --color-border-strong: var(--ci-color-border);
   --color-text-main: var(--ci-color-foreground);
   --color-text-primary: var(--ci-color-foreground);
   --color-text-muted: var(--ci-color-text-muted);
+  --color-text-secondary: var(--ci-sidebar-fg);
   --color-heading: var(--ci-color-heading);
 
   /* Charts (categorical) */
@@ -121,12 +318,13 @@
   --color-fd-accent-foreground: var(--ci-color-foreground);
   --color-fd-ring: var(--ci-color-focus-ring);
 
-  /* Shadows (kit has no shadow scale; keep ours, neutral-only) */
-  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.015);
-  --shadow-warm: 0 2px 12px -2px rgba(0, 0, 0, 0.08);
-  --shadow-elevated: 0 12px 28px -4px rgba(0, 0, 0, 0.06);
+  /* Shadows (kit has no shadow scale; keep ours, neutral-only). 67router is flat: hairline at
+     most for resting surfaces, a soft lift only for floating ones. */
+  --shadow-soft: var(--ci-shadow-xs);
+  --shadow-warm: var(--ci-shadow-xs);
+  --shadow-elevated: 0 12px 28px -4px rgba(0, 0, 0, 0.08);
 
-  /* Radius scale → kit (surface 0.25rem, control 0.5rem). The kit's `:root, .ci-theme` block
+  /* Radius scale → kit (67router: surface 0.75rem = 12 px cards, control 0.5rem = 8 px). The kit's `:root, .ci-theme` block
      also sets `--radius` (unlayered, = --ci-radius-md); ours wins by source order because this
      block comes after the kit @import — keep it that way. */
   --radius: var(--ci-radius-surface);
@@ -136,18 +334,12 @@
   --table-header-bg: var(--ci-color-surface-muted);
 }
 
-/* Dark: lime reads on the dark background (≈ 17:1), so the primary ink is the accent itself.
-   Same `data-theme="dark"` hook the kit flips on. */
-:root[data-theme="dark"] {
-  --color-primary-ink: var(--ci-color-accent);
-}
-
 /* Dark: the kit flips every --ci-* value on `data-theme="dark"` (themeStore sets it with the
    class). Only what the kit does not own stays here. */
 .dark {
   color-scheme: dark;
-  --shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
-  --shadow-warm: 0 2px 12px -2px rgba(0, 0, 0, 0.25);
+  --shadow-soft: none;
+  --shadow-warm: none;
   --shadow-elevated: 0 12px 28px -4px rgba(0, 0, 0, 0.3);
 }
 
@@ -155,10 +347,10 @@
   /* Primary */
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
-  /* `text-*` reads --text-color-* before --color-*: text-primary → readable ink, while
-     bg-/border-/ring-primary keep the lime above. */
+  /* `text-*` reads --text-color-* before --color-*: text-primary → the primary ink (today the
+     same monochrome value as bg-/border-/ring-primary, kept as its own seam). */
   --text-color-primary: var(--color-primary-ink);
-  /* --color-accent is the same kit lime (var(--ci-color-accent)), so text-accent gets the ink. */
+  /* --color-accent is the same kit accent (var(--ci-color-accent)), so text-accent gets the ink. */
   --text-color-accent: var(--color-primary-ink);
 
   /* Accent */
@@ -174,6 +366,11 @@
   --color-warning-bg: var(--color-warning-bg);
   --color-info: var(--color-info);
   --color-info-bg: var(--color-info-bg);
+  --color-fallback: var(--color-fallback);
+  --color-fallback-text: var(--color-fallback-text);
+  /* `text-fallback` reads the AA text orange; bg- / border- / fill-fallback keep #FF4F00. */
+  --text-color-fallback: var(--color-fallback-text);
+  --color-fallback-bg: var(--color-fallback-bg);
   --color-accent-foreground: var(--color-accent-foreground);
   --color-border-strong: var(--color-border-strong);
   --color-heading: var(--color-heading);
@@ -194,13 +391,15 @@
   --color-text-main: var(--color-text-main);
   --color-text-primary: var(--color-text-primary);
   --color-text-muted: var(--color-text-muted);
+  --color-text-secondary: var(--color-text-secondary);
 
   /* Shadows */
   --shadow-soft: var(--shadow-soft);
   --shadow-warm: var(--shadow-warm);
   --shadow-elevated: var(--shadow-elevated);
 
-  /* Keak type ramp (kit tokens): Inter / IBM Plex Mono / Instrument Serif (font-display) */
+  /* 67router type ramp (kit tokens, retargeted above): Geist / Geist Mono; font-display is Geist
+     too — the serif display face is gone. */
   --font-sans: var(--ci-font-ui);
   --font-mono: var(--ci-font-mono);
   --font-display: var(--ci-font-display);
@@ -263,7 +462,7 @@ body.electron-macos {
 
 /* Selection — with fallback for browsers that don't support color-mix() */
 ::selection {
-  background-color: rgba(229, 77, 94, 0.22);
+  background-color: rgba(10, 10, 10, 0.12);
   background-color: color-mix(in srgb, var(--color-primary) 22%, transparent);
   color: var(--color-primary-ink);
 }
@@ -822,15 +1021,337 @@ html[dir="rtl"] :where(.react-flow) {
     background: var(--ci-color-info-bg);
     border-color: transparent;
   }
+  /* Primary tone = a neutral chip: primary ink on the muted fill. (The lime theme needed
+     accent-foreground ink plus a dark-only flip; the monochrome primary reads in both.) */
   .ci-badge[data-tone="primary"] {
-    color: var(--ci-color-accent-foreground);
+    color: var(--ci-color-accent);
     background: var(--ci-color-accent-surface-strong);
     border-color: transparent;
   }
-  /* Dark: the surface is a 14 % lime tint over the dark background, so the near-black accent
-     foreground vanished ("8 features" on the translator, F4); the lime itself is the ink. */
-  :root[data-theme="dark"] .ci-badge[data-tone="primary"] {
-    color: var(--ci-color-accent);
+  /* Fallback tone: the one place the 67router orange appears on a badge. */
+  .ci-badge[data-tone="fallback"] {
+    color: var(--color-fallback-text);
+    background: var(--color-fallback-bg);
+    border-color: transparent;
+  }
+}
+
+/* === 67router sidebar v2 (adapter; never patch packages/ui-kit) === */
+@layer components {
+  /* The sidebar carries its own fill (#FAFAFA / #111111), not the page colour. */
+  .ci-sidebar {
+    background: var(--ci-sidebar-bg);
+    border-color: var(--ci-color-border);
+  }
+  /* Brand row: 60 px, hairline under it — lines up with the 60 px topbar. */
+  .ci-sidebar__header.r67-sidebar-header {
+    height: 60px;
+    padding-block: 0;
+    padding-inline: 1.25rem 1rem;
+    border-bottom: var(--ci-border-default) solid var(--ci-color-border);
+  }
+  .ci-sidebar[data-state="collapsed"] .ci-sidebar__header.r67-sidebar-header {
+    padding-inline: 0.5rem;
+  }
+  .ci-sidebar__content {
+    padding: 0.875rem 0.75rem 0.5rem;
+  }
+  .ci-sidebar__group-label {
+    height: auto;
+  }
+  .ci-sidebar__menu {
+    gap: 1px;
+  }
+  /* Rows: 30 px, secondary ink, no lime gradient on hover. */
+  .ci-sidebar__menu-button {
+    min-height: 30px;
+    gap: 0.625rem;
+    padding-inline: 0.6875rem;
+    border: var(--ci-border-default) solid transparent;
+    color: var(--ci-sidebar-fg);
+    font-weight: var(--ci-font-weight-regular);
+  }
+  .ci-sidebar__menu-button:hover {
+    color: var(--ci-color-heading);
+    background: var(--ci-color-neutral-tint);
+  }
+  /* Active row: a white pill with a hairline border (light) / the subtle fill (dark). */
+  .ci-sidebar__menu-button[data-active="true"],
+  .ci-sidebar__branch .ci-sidebar__menu-button[data-active="true"] {
+    color: var(--ci-sidebar-active-fg);
+    background: var(--ci-sidebar-active-bg);
+    border-color: var(--ci-color-border);
+    box-shadow: var(--ci-shadow-xs);
+    font-weight: var(--ci-font-weight-medium);
+  }
+  .ci-sidebar__footer {
+    border-color: var(--ci-color-border);
+  }
+}
+
+/* === 67router topbar (Header) === */
+@layer components {
+  .ci-sidebar-shell-header.r67-topbar {
+    gap: 1rem;
+    padding-inline: 1.25rem 1.5rem;
+    border-bottom-color: var(--ci-color-border);
+  }
+  @media (min-width: 1024px) {
+    .ci-sidebar-shell-header.r67-topbar {
+      padding-inline: 1.5rem 2rem;
+    }
+  }
+  .ci-sidebar-shell-header.r67-topbar .ci-sidebar-trigger {
+    padding-inline-end: 0.75rem;
+    color: var(--ci-color-text-muted);
+  }
+}
+
+/* === 67router core components (adapter; tokens only, never hex) ===
+   Restyles the kit primitives the shared adapters render (Button, Card, Badge, Input, Toggle,
+   SegmentedControl, tabs, DataTable, EmptyState, PageHeader) to the 67router patterns:
+   8 px controls, 12 px cards, hairline borders, a solid monochrome primary, no gradients. */
+@layer components {
+  /* Page header: 26/32 semibold Geist title (the kit default is a 48–88 px display serif). */
+  .ci-page-header__title,
+  .ci-page-header[data-compact="true"] .ci-page-header__title {
+    font-family: var(--ci-font-ui);
+    font-size: 1.625rem;
+    font-weight: var(--ci-font-weight-semibold);
+    line-height: 2rem;
+    letter-spacing: -0.025em;
+  }
+  .ci-page-header__description {
+    font-size: var(--ci-font-size-sm);
+  }
+  /* Section header: 15 px semibold (between the 14 px card title and the 26 px page title);
+     the kit default is font-size-lg (18 px). */
+  .ci-section-header__title {
+    font-size: 0.9375rem;
+  }
+  /* Kit Stat / StatRow values: the 28/600 KPI spec (same as KpiCell) in Geist with tabular
+     figures, instead of the kit's 32–48 px regular display serif. */
+  .ci-stat__value,
+  .ci-stat[data-label-variant="eyebrow"] .ci-stat__value {
+    font-family: var(--ci-font-ui);
+    font-size: 1.75rem;
+    font-weight: var(--ci-font-weight-semibold);
+    line-height: 2.25rem;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums;
+  }
+  .ci-display,
+  .ci-dashboard-display {
+    font-weight: var(--ci-font-weight-semibold);
+  }
+
+  /* Buttons: 8 px radius (kit default is a pill), solid primary with its own hover. */
+  .ci-button {
+    border-radius: var(--ci-radius-control);
+    font-size: 0.8125rem;
+  }
+  .ci-button:hover {
+    color: var(--ci-button-primary-fg);
+    background: var(--ci-button-primary-hover);
+  }
+  .ci-button--secondary,
+  .ci-button--outline {
+    color: var(--ci-color-foreground);
+    border-color: var(--ci-color-border);
+    background: var(--ci-color-surface);
+  }
+  .ci-button--ghost {
+    color: inherit;
+  }
+  .ci-button--outline:hover,
+  .ci-button--secondary:hover,
+  .ci-button--ghost:hover {
+    color: var(--ci-color-heading);
+    background: var(--ci-color-surface-muted);
+  }
+  .ci-button--destructive:hover {
+    color: var(--ci-color-danger-foreground);
+    background: var(--ci-color-danger);
+    filter: brightness(0.92);
+  }
+  .ci-button--link:hover {
+    color: var(--ci-color-text-muted);
+    background: transparent;
+  }
+
+  /* Cards: 12 px, hairline border, flat. */
+  .ci-card {
+    border-color: var(--ci-card-border);
+    box-shadow: none;
+  }
+  .ci-card__header {
+    padding: 1.25rem 1.25rem 0;
+  }
+  .ci-card__title {
+    font-size: var(--ci-font-size-sm);
+    line-height: 1.25rem;
+  }
+  .ci-card__description {
+    font-size: 0.8125rem;
+  }
+  .ci-card__content {
+    padding: 1.25rem;
+  }
+  .ci-card__header + .ci-card__content {
+    padding-top: 1rem;
+  }
+  .ci-card__footer {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  /* Badges: small 6 px chips (11.5 px text), never pills — status dots carry the colour. */
+  .ci-badge,
+  .ci-badge--pill {
+    min-height: 1.25rem;
+    padding: 0.0625rem 0.375rem;
+    border-radius: 0.375rem;
+    font-size: 0.71875rem;
+    font-weight: var(--ci-font-weight-medium);
+  }
+  .ci-badge--secondary {
+    background: var(--ci-color-surface-muted);
+  }
+  .ci-badge--outline {
+    border-color: var(--ci-color-border);
+  }
+  .ci-badge[data-tone="warning"] {
+    border-color: var(--r67-warning-border);
+  }
+
+  /* Inputs: 36 px, 8 px, hairline field border, neutral focus ring. */
+  .ci-input,
+  .ci-input-shell {
+    min-height: var(--ci-control-height-md);
+    font-size: 0.8125rem;
+  }
+  .ci-input-shell .ci-input {
+    min-height: calc(var(--ci-control-height-md) - 2px);
+  }
+  .ci-input:hover:not(:disabled),
+  .ci-input-shell:hover {
+    border-color: var(--ci-color-border-strong);
+  }
+
+  /* Toggle: 32×18 pill, 14 px knob; off = strong-border track, on = solid primary. */
+  .ci-switch__track {
+    width: 2rem;
+    height: 1.125rem;
+    border-color: transparent;
+    background: var(--ci-color-border-strong);
+  }
+  .ci-switch__thumb {
+    top: 0.0625rem;
+    left: 0.0625rem;
+    width: 0.875rem;
+    height: 0.875rem;
+    background: var(--ci-color-control-thumb);
+  }
+  .ci-switch__input:checked + .ci-switch__track .ci-switch__thumb {
+    transform: translateX(0.875rem);
+  }
+
+  /* Segmented control (capsule tabs) and pill tabs: 8 px frame, the active segment is a neutral
+     chip on the subtle fill — the solid primary is for buttons only. */
+  .ci-tabs--capsule .ci-tabs__list,
+  .ci-tabs--pill .ci-tabs__list {
+    padding: 0.125rem;
+    border: var(--ci-border-default) solid var(--ci-color-border);
+    border-radius: var(--ci-radius-control);
+    background: var(--ci-color-surface);
+    box-shadow: none;
+  }
+  .ci-tabs--capsule .ci-tabs__trigger,
+  .ci-tabs--pill .ci-tabs__trigger {
+    border-radius: 0.375rem;
+    font-size: 0.8125rem;
+  }
+  .ci-tabs--capsule .ci-tabs__trigger[data-state="active"],
+  .ci-tabs--pill .ci-tabs__trigger[data-state="active"] {
+    border-color: transparent;
+    background: var(--ci-color-surface-muted);
+    color: var(--ci-color-heading);
+  }
+  .ci-segmented {
+    border-radius: var(--ci-radius-control);
+    padding: 0.125rem;
+  }
+  .ci-segmented__item {
+    border-radius: 0.375rem;
+  }
+  .ci-segmented__item[aria-pressed="true"],
+  .ci-segmented__item[data-active="true"] {
+    color: var(--ci-color-heading);
+    background: var(--ci-color-surface-muted);
+  }
+  /* Underline tabs: text row, 2 px rule under the active tab. */
+  .ci-tabs--underline .ci-tabs__trigger {
+    padding-inline: 0.25rem;
+    margin-inline-end: 1rem;
+    font-size: 0.8125rem;
+  }
+
+  /* Tables: header row on the subtle fill (12 px muted), 13 px rows, hairline separators,
+     a neutral hover (no lime gradient). */
+  .ci-table {
+    font-size: 0.8125rem;
+  }
+  .ci-table__header,
+  .ci-table__head--sticky-end {
+    background: var(--ci-color-surface-subtle);
+  }
+  .ci-table__head {
+    height: 2.5rem;
+    font-size: var(--ci-font-size-xs);
+    font-weight: var(--ci-font-weight-medium);
+  }
+  .ci-table__cell {
+    height: 2.75rem;
+  }
+  .ci-table__head,
+  .ci-table__cell {
+    padding-inline: 1.25rem;
+  }
+  .ci-table__header .ci-table__row {
+    border-bottom-color: var(--ci-color-border);
+  }
+  .ci-table__body .ci-table__row:hover {
+    background: var(--ci-color-neutral-tint);
+  }
+  .ci-table__row[data-state="selected"] {
+    background: var(--ci-color-surface-muted);
+  }
+  .ci-table-container,
+  .ci-data-table__frame {
+    border-color: var(--ci-color-border);
+  }
+
+  /* Empty state: flat card, sans title (no display serif, no radial tint). */
+  .ci-empty-state {
+    background: var(--ci-color-surface);
+    border-style: dashed;
+  }
+  .ci-empty-state__icon {
+    color: var(--ci-color-text-muted);
+  }
+  .ci-empty-state__title {
+    font-family: var(--ci-font-ui);
+    font-size: var(--ci-font-size-md);
+    font-weight: var(--ci-font-weight-semibold);
+    line-height: 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* Technical values (model ids, URLs, keys, code) read in Geist Mono. */
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--ci-font-mono);
   }
 }
 
@@ -867,20 +1388,20 @@ html[dir="rtl"] :where(.react-flow) {
   }
 
   /* Toggle size="xs"|"sm" (Toggle adapter): a smaller kit switch. The class sits on the kit
-     root — the <label> row, or the bare control when there is no label. Track 2.25×1.25rem,
-     thumb 0.875rem; travel = 2.25 − 0.875 − 2×0.125 − 2px border ≈ 1rem. */
+     root — the <label> row, or the bare control when there is no label. 67router: track
+     28×16 px (default is 32×18), thumb 12 px; travel = 28 − 12 − 2×1 px inset − 2 px border = 12 px. */
   .ci-switch--compact .ci-switch__track {
-    width: 2.25rem;
-    height: 1.25rem;
+    width: 1.75rem;
+    height: 1rem;
   }
   .ci-switch--compact .ci-switch__thumb {
-    top: 0.125rem;
-    left: 0.125rem;
-    width: 0.875rem;
-    height: 0.875rem;
+    top: 0.0625rem;
+    left: 0.0625rem;
+    width: 0.75rem;
+    height: 0.75rem;
   }
   .ci-switch--compact .ci-switch__input:checked + .ci-switch__track .ci-switch__thumb {
-    transform: translateX(1rem);
+    transform: translateX(0.75rem);
   }
 
   /* Kit Switch hit target (Toggle adapter): the kit keeps the native input as a 1px box under
@@ -898,4 +1419,24 @@ html[dir="rtl"] :where(.react-flow) {
   .ci-switch__control > .ci-switch__input:disabled {
     cursor: not-allowed;
   }
+}
+
+/* === 67router selection cards (adapter; never patch packages/ui-kit) ===
+   The kit's radio/checkbox cards and ChoiceCard paint tone-tinted diagonal gradients (with the
+   monochrome accent that reads as a grey wash). 67router selection is neutral and flat: the
+   surface at rest, the subtle fill on hover, and the subtle fill plus a solid ink (primary)
+   border when selected. Unlayered on purpose — the kit's ChoiceCard rules are unlayered too, and
+   this block comes after the kit import, so it wins at equal specificity. */
+.ci-choice-card {
+  background: var(--ci-color-surface);
+}
+.ci-radio--card:hover:not([data-disabled="true"]),
+.ci-choice-card:hover:not([data-disabled="true"]) {
+  background: var(--ci-color-surface-subtle);
+}
+.ci-checkbox--card:has(.ci-checkbox__input:checked),
+.ci-radio--card:has(.ci-radio__input:checked),
+.ci-choice-card:has(input:checked) {
+  background: var(--ci-color-surface-subtle);
+  border-color: var(--ci-color-accent);
 }

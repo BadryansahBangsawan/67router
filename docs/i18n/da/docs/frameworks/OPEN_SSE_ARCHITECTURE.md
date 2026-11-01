@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort fortalt**: `open-sse/` er den centrale streamingmotor, som driver alle LLM-anmodninger i OmniRoute. Den indeholder ~1.400 filer, der implementerer anmodningspipelinen, eksekveringskomponenter, tjenester, MCP-serveren og oversættelseslaget. Denne vejledning forklarer, hvordan delene hænger sammen.
+> **Kort fortalt**: `open-sse/` er den centrale streamingmotor, som driver alle LLM-anmodninger i 67router. Den indeholder ~1.400 filer, der implementerer anmodningspipelinen, eksekveringskomponenter, tjenester, MCP-serveren og oversættelseslaget. Denne vejledning forklarer, hvordan delene hænger sammen.
 
 **Kilde:** `open-sse/` (workspace-pakke, ~1.440 `.ts`-filer, som ikke er testfiler)
 
@@ -12,10 +12,10 @@
 
 ## Hvorfor en separat workspace-pakke?
 
-`open-sse/` er et **selvstændigt workspace** i OmniRoute-monorepoet af flere årsager:
+`open-sse/` er et **selvstændigt workspace** i 67router-monorepoet af flere årsager:
 
 1. **Genbrugelighed** — `open-sse` udgives som `@omniroute/open-sse` på npm, så andre projekter kan bruge den uafhængigt
-2. **Klare grænser** — streamingmotoren er afkoblet fra OmniRoute-specifikke UI-/DB-lag
+2. **Klare grænser** — streamingmotoren er afkoblet fra 67router-specifikke UI-/DB-lag
 3. **Ydeevne** — motoren har ingen Next.js-afhængigheder, hvilket muliggør hurtigere koldstarter i CLI-/serverless-sammenhænge
 4. **Versionsstyring** — `open-sse` kan udgives efter sin egen tidsplan
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### Hvorfor en separat transformer?
 
-Responses API er OpenAI's nye format med **tilstandsbevarende samtaler** (`previous_response_id`). Når en klient sender en Responses-anmodning, gør OmniRoute følgende:
+Responses API er OpenAI's nye format med **tilstandsbevarende samtaler** (`previous_response_id`). Når en klient sender en Responses-anmodning, gør 67router følgende:
 
 1. Konverterer internt Responses → Chat Completions
 2. Sender til udbyderen (enhver udbyder, der understøtter Chat Completions)
@@ -573,5 +573,4 @@ Routingmotoren har strenge ydeevnebudgetter:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — mappe for mappe
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scoring baseret på 16 faktorer
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP-server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A-server
 - Kildekode: `open-sse/` (mere end 400 filer, ca. 143.000 kodelinjer)

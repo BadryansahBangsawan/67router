@@ -7,7 +7,7 @@
 > **Foinse na fírinne:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Nuashonraithe go deireanach:** 2026-09-22 — dírithe ar MCP-SERVER.md
 
-Tá píblíne údaraithe atá feasach ar bhealaí ag OmniRoute a chuireann bac ar gach iarratas API. Tá an aicmiú **cinntitheach** agus **teip-dúnta** — críochnaíonn aon rud nach féidir a aicmiú mar `MANAGEMENT` agus éilíonn sé seisiún nó comhartha grád bainistíochta. Míníonn an leathanach seo an tsamhail d'innealtóirí a chothabhálann bealaí nó a dhearann críochphointí nua.
+Tá píblíne údaraithe atá feasach ar bhealaí ag 67router a chuireann bac ar gach iarratas API. Tá an aicmiú **cinntitheach** agus **teip-dúnta** — críochnaíonn aon rud nach féidir a aicmiú mar `MANAGEMENT` agus éilíonn sé seisiún nó comhartha grád bainistíochta. Míníonn an leathanach seo an tsamhail d'innealtóirí a chothabhálann bealaí nó a dhearann críochphointí nua.
 
 ![Píblíne AuthZ (3 aicme bealaigh + meastóireacht beartais)](../diagrams/exported/authz-pipeline.svg)
 
@@ -229,8 +229,6 @@ Socraíonn `isAuthRequired()` i `src/shared/utils/apiAuth.ts` an ndéanfar **aon
 Úsáideann forfheidhmiú eochair API an chliaint `isRequireApiKeyEnabled()` i `src/shared/utils/featureFlags.ts`, ní léamh dhíreach ar `process.env.REQUIRE_API_KEY`. Tá sé seo tábhachtach d'ionstraimí a imscaoileadh: nuair a athraítear `REQUIRE_API_KEY` i Dashboard → Feature Flags, stórálann sé forshárú DB agus dar ndóigh bíonn tionchar aige ar `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*`, agus ar sheiceálacha fíordheimhnithe eile client-API a roinneann an cúntóir seo. Mura féidir stór na mbratach gné a léamh, teipeann ar fhíordheimhniú client API ar dhúnadh agus éilíonn sé eochair.
 
 ## Athrú Bristeach — v3.8.0
-
-Teastaíonn fíordheimhniú bainistíochta **anois** ó na críochphointí `/api/v1/agents/tasks/*` agus `/api/resilience/model-cooldowns` (tiomantas `588a0333`). Faigheann cliaint a sheol eochair API ghnáth gan an scóip `manage` roimhe seo freagra `403`. Aistriú: tabhair an scóip `manage` don eochair i ndeais na nEochracha API, nó úsáid seisiún deaise ina bhfuil tú logáilte isteach.
 
 ## Athrú Iompraíochta — v3.8.2
 

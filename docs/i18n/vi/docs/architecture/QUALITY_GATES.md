@@ -4,7 +4,7 @@
 
 ---
 
-Tài liệu này là tài liệu tham chiếu chính thức cho tất cả các cổng chất lượng CI trong OmniRoute.
+Tài liệu này là tài liệu tham chiếu chính thức cho tất cả các cổng chất lượng CI trong 67router.
 Tài liệu mô tả từng cổng, nội dung được xác thực, công việc CI nơi cổng đó chạy, việc cổng có sử dụng
 đường cơ sở ratchet hay chính sách đạt/không đạt, cũng như việc cổng chặn bản dựng hay chỉ mang tính tư vấn.
 
@@ -240,14 +240,14 @@ Chạy sau `build`. Chặn merge khi thất bại.
 
 Các workflow này chạy theo lịch cron (và `workflow_dispatch`), không bao giờ chạy trên PR. Tất cả đều chỉ mang tính khuyến nghị.
 
-| Workflow               | Kiểm chứng                                                                                                                                                          | Chặn            |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| `nightly-property`     | Property test bằng fast-check với seed ngẫu nhiên + số lần chạy cao                                                                                                 | **Khuyến nghị** |
-| `nightly-resilience`   | Gate tăng trưởng heap, chaos fault-injection, k6 load/soak                                                                                                          | **Khuyến nghị** |
-| `nightly-llm-security` | promptfoo injection guard (chế độ block) + garak probes (bỏ qua nếu không có provider secret)                                                                       | **Khuyến nghị** |
-| `nightly-schemathesis` | Fuzzing hợp đồng OpenAPI (schemathesis) đối với một OmniRoute đang chạy bằng `docs/openapi.yaml` — phơi bày các vi phạm spec / lỗi 500 chưa được xử lý (Fase 8 B.4) | **Khuyến nghị** |
-| `nightly-mutation`     | Điểm mutation-testing của Stryker trên lane unit test nhanh — các mutant sống sót phơi bày những assert yếu                                                         | **Khuyến nghị** |
-| `nightly-compat`       | Ma trận tương thích Node engine trên các dải `engines.node` được hỗ trợ                                                                                             | **Khuyến nghị** |
+| Workflow               | Kiểm chứng                                                                                                                                                         | Chặn            |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `nightly-property`     | Property test bằng fast-check với seed ngẫu nhiên + số lần chạy cao                                                                                                | **Khuyến nghị** |
+| `nightly-resilience`   | Gate tăng trưởng heap, chaos fault-injection, k6 load/soak                                                                                                         | **Khuyến nghị** |
+| `nightly-llm-security` | promptfoo injection guard (chế độ block) + garak probes (bỏ qua nếu không có provider secret)                                                                      | **Khuyến nghị** |
+| `nightly-schemathesis` | Fuzzing hợp đồng OpenAPI (schemathesis) đối với một 67router đang chạy bằng `docs/openapi.yaml` — phơi bày các vi phạm spec / lỗi 500 chưa được xử lý (Fase 8 B.4) | **Khuyến nghị** |
+| `nightly-mutation`     | Điểm mutation-testing của Stryker trên lane unit test nhanh — các mutant sống sót phơi bày những assert yếu                                                        | **Khuyến nghị** |
+| `nightly-compat`       | Ma trận tương thích Node engine trên các dải `engines.node` được hỗ trợ                                                                                            | **Khuyến nghị** |
 
 Các baseline hiệu năng (heap, TTFB, thời gian build) được ghi lại chứ không bị gate: xem [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -524,7 +524,7 @@ danh sách cho phép ngày càng dài chỉ tạo ra cảm giác sai lầm về 
 
 ## Công cụ cho agent: LSP-in-the-loop (tùy chọn)
 
-Ngoài các cổng CI, OmniRoute còn cung cấp một bộ khung `agent-lsp` **tùy chọn**
+Ngoài các cổng CI, 67router còn cung cấp một bộ khung `agent-lsp` **tùy chọn**
 (một `.mcp.json` ở cấp dự án, Fase 7 Task 15). Tạo `.mcp.json`
 để cung cấp máy chủ ngôn ngữ TypeScript cho các agent lập trình, nhờ đó chúng phân giải các ký hiệu /
 chẩn đoán **trước khi** viết mã — một công cụ đồng hành theo nguyên tắc biên dịch-trước-khi-tuyên-bố dành cho

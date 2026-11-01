@@ -5,7 +5,7 @@
 ---
 
 Den självhostade poolen körs på **.113**-maskinen (`tomni-proxmox-113`). Sedan 2026-10-18 har varje
-OmniRoute-runner **en roll**, en etikett och en minnes-/CPU-budget dimensionerad efter den uppmätta
+67router-runner **en roll**, en etikett och en minnes-/CPU-budget dimensionerad efter den uppmätta
 arbetsbelastningen. Turbopack-platsen får de resurser som bygget behöver; de andra platserna är dimensionerade
 efter sina uppmätta toppar. Maskinen överallokerar endast när ett Turbopack-bygge sammanfaller med ett
 Release-Green-webpack-bygge och ett lint-jobb; värdens swap (16 GB) absorberar detta, och eftersom byggen för
@@ -27,7 +27,7 @@ Uppmätt 2026-10-18:
 | swap      | 16 GB                        | `omniroute-113-5` körs med swap avstängt (`MemorySwapMax=0`), så ett skenande bygge stoppas vid sin gräns i stället för att få maskinen att använda swap                                                                                                                                                                                                                                        |
 | `/tmp`    | **12 GB tmpfs = RAM**        | allt som placeras där använder minne; kvarlämnade filer rensas efter 3 h                                                                                                                                                                                                                                                                                                                        |
 | CPU       | load 60 på 32 kärnor uppmätt | före kvoterna gjorde ett Turbopack-bygge (~1166 % CPU) tillsammans med en coverage-svit på samma maskin att de andra lyssnarnas hjärtslag inte fick resurser (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                              |
-| runners   | **6 lyssnare**               | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` är inaktiverade (`systemctl enable --now` återaktiverar en)                                                                                                                                                                                                                                                                     |
+| runners   | **6 lyssnare**               | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` är inaktiverade (`systemctl enable --now` återaktiverar en)                                                                                                                                                                                                                                                                      |
 
 Gränserna finns i varje enhets `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (tidigare värden sparades som `override.conf.bak-20261018`) och tillämpades live med
@@ -72,7 +72,7 @@ rapporterar jobbet som avbrutet och lyssnaren går tillbaka online av sig själv
 
 Runner-processens standardinställning `KillMode=process` lämnar `Runner.Worker → npm → next-build`
 vid liv när en enhet stoppas eller startas om — ett föräldralöst bygge fortsätter förbruka RAM och
-CPU utan något anslutet jobb. Varje OmniRoute-enhet har en drop-in-konfiguration
+CPU utan något anslutet jobb. Varje 67router-enhet har en drop-in-konfiguration
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 med `KillMode=mixed`: SIGTERM skickas först till lyssnaren och därefter SIGKILL till hela cgroup vid
 `TimeoutStop`. Den börjar gälla nästa gång enheten startas om — starta om **en runner i
@@ -115,7 +115,7 @@ taget, endast när den är inaktiv**, med inaktivitetskontrollen och omstarten i
   ett `next build` endast för backend (~5–6 GB; webpack) samt `quality.yml` `lint-guard`. `omniroute-113`
   hade `MemoryHigh=4G` fram till 2026-10-18 — promptfoo-bygget återtog minne under hela sin 54 minuter långa
   körning där; 8 GB eliminerar strypningen.
-- **Färre lyssnare avsiktligt.** Fyra OmniRoute-enheter inaktiverades 2026-08-29 — varje extra
+- **Färre lyssnare avsiktligt.** Fyra 67router-enheter inaktiverades 2026-08-29 — varje extra
   lyssnare är ytterligare en konsument av minnesbudgeten ovan. Vaktmästarens tak är 6 (`MAX_ACTIVE_RUNNERS=6` i cron): den räknar
   varje `Runner.Listener` på servern, och OmniHeuris + OmniMind lägger till två utöver våra fyra.
 - **Rensa aldrig `/tmp` eller `_work` manuellt medan någon runner är upptagen.** En

@@ -8,7 +8,7 @@
 
 > **Sors awtorevoli:** `open-sse/utils/proxyFamily.ts`, `open-sse/utils/proxyDispatcher.ts`, `open-sse/utils/proxyFetch.ts`, `open-sse/utils/socksConnectorWithFamily.ts`, `open-sse/utils/proxyFamilyResolve.ts`, `src/shared/validation/schemas.ts`, `src/lib/db/proxies.ts`, `src/lib/db/upstreamProxy.ts`, `src/lib/db/migrations/099_proxy_family.sql`
 
-OmniRoute jippermetti li kull proxy jkollu **direttiva tal-familja tal-indirizz għall-ħruġ**. B'mod awtomatiku, is-sistema operattiva tagħżel IPv4 jew IPv6 (dual-stack, "Happy Eyeballs"). Meta tissettja d-direttiva għal `ipv4` jew `ipv6`, OmniRoute jorbot kull konnessjoni minn dak il-proxy mal-familja magħżula u **jfalli b'mod magħluq** minflok ma jaqleb lura għall-familja l-oħra.
+67router jippermetti li kull proxy jkollu **direttiva tal-familja tal-indirizz għall-ħruġ**. B'mod awtomatiku, is-sistema operattiva tagħżel IPv4 jew IPv6 (dual-stack, "Happy Eyeballs"). Meta tissettja d-direttiva għal `ipv4` jew `ipv6`, 67router jorbot kull konnessjoni minn dak il-proxy mal-familja magħżula u **jfalli b'mod magħluq** minflok ma jaqleb lura għall-familja l-oħra.
 
 Din il-paġna tiddokumenta x'inhi d-direttiva, għaliex teżisti, fejn tikkonfiguraha, u kif tiġi riżolta waqt l-eżekuzzjoni.
 
@@ -122,7 +122,7 @@ Għall-bqija tal-API tal-CRUD/assenjazzjoni tal-proxy, ara [PROXY_GUIDE.md](../o
 
 ## Kif Jiġi Riżolt `auto`
 
-Meta `family` ikun `auto`, OmniRoute **ma** jżid l-ebda direttiva — il-URL tal-proxy jintuża kif inhu u l-familja tal-konnessjoni tiġi ddeterminata intrinsikament.
+Meta `family` ikun `auto`, 67router **ma** jżid l-ebda direttiva — il-URL tal-proxy jintuża kif inhu u l-familja tal-konnessjoni tiġi ddeterminata intrinsikament.
 
 Meta jinbena l-URL (`proxyConfigToUrl` / `normalizeProxyUrl` f’`open-sse/utils/proxyDispatcher.ts`), proxy `auto` jipproduċi URL sempliċi mingħajr markatur:
 
@@ -158,7 +158,7 @@ Għalhekk:
 
 Direttiva li mhijiex `auto` tivvjaġġa bħala markatur sintetiku wieħed fil-query — `?family=ipv4` jew `?family=ipv6` — miżjud darba biss mal-URL normalizzat tal-proxy. `normalizeProxyUrl` joqgħod attent li jneħħi u jerġa’ jżid dan il-markatur eżattament darba sabiex qatt ma jikkorrompi l-analiżi tal-port.
 
-Meta jinbena d-dispatcher, il-markatur jinqara u jiġi kkonvertit f’familja konkreta għall-konnessjoni. Jekk il-host ikun literal IP tal-familja **opposta**, OmniRoute jiġġenera żball (f’każ ta’ kontradizzjoni, l-imġiba tkun fail-closed):
+Meta jinbena d-dispatcher, il-markatur jinqara u jiġi kkonvertit f’familja konkreta għall-konnessjoni. Jekk il-host ikun literal IP tal-familja **opposta**, 67router jiġġenera żball (f’każ ta’ kontradizzjoni, l-imġiba tkun fail-closed):
 
 ```ts
 // open-sse/utils/proxyDispatcher.ts
@@ -179,7 +179,7 @@ Il-familja konkreta mbagħad tiġi ffissata fuq il-connector:
 
 ## Kompatibbiltà ma’ SOCKS5
 
-L-iffissar tal-familja jaħdem mal-proxies SOCKS5, iżda l-verżjoni standard ta’ `fetch-socks` ma tesponix l-għażliet tas-socket meħtieġa biex tiġi ffissata l-familja tal-pass permezz tal-proxy. Għalhekk, OmniRoute jipprovdi l-connector tiegħu stess:
+L-iffissar tal-familja jaħdem mal-proxies SOCKS5, iżda l-verżjoni standard ta’ `fetch-socks` ma tesponix l-għażliet tas-socket meħtieġa biex tiġi ffissata l-familja tal-pass permezz tal-proxy. Għalhekk, 67router jipprovdi l-connector tiegħu stess:
 
 ```ts
 // open-sse/utils/socksConnectorWithFamily.ts

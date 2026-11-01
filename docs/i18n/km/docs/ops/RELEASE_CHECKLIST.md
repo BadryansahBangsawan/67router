@@ -45,7 +45,7 @@ npm run test:e2e           # មិនចាំបាច់ ប៉ុន្ត�
 ការធានារបស់ WS1.3 (token ដែលបានលេចធ្លាយមិនអាចចេញផ្សាយដោយឯកឯងបានទេ — ព្រោះមិនមាន token)។
 
 **ការរៀបចំតែម្តង (ម្ចាស់)៖** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none)។ រហូតដល់មានការកំណត់នេះ ជំហានស្វ័យប្រវត្តិនឹងបរាជ័យជាមួយ `ENEEDAUTH`៖
 ដំណើរការឡើងវិញជាមួយ `publish_mode=staged` (ខាងក្រោម) ឬ `direct`។
 

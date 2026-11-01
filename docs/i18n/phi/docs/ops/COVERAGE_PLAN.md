@@ -71,11 +71,9 @@ Ang mga file na ito ang may pinakamababang line coverage ngayon (< 60%) at nagbi
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |     13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |     13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |     13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |     13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |     14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |     14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |     15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |     15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |     16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |     16.66% |
 
@@ -83,7 +81,6 @@ Mga tema para sa mga Phase 6-7:
 
 - Ang `open-sse/services/compression/**` ang pinakamakapal na pangkat ng mababang coverage at bumubuo sa pinakamalaking bahagi ng natitirang kakulangan.
 - Kailangan ng mga test sa antas ng handler ang mga batch at rerank API route (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`).
-- Kailangan ng mga scenario test ang mga cloud agent adapter (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) at `tierResolver.ts`.
 - Mas mababa ang prayoridad ng mga Docs UI component at `src/mitm/systemCommands.ts`, ngunit madaling mapataas ang branch coverage ng mga ito.
 
 ## Checklist ng pagpapatupad

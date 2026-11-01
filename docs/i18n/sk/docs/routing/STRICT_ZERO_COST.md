@@ -34,7 +34,7 @@ Pre každého kandidáta vo fonde (`open-sse/services/autoCombo/virtualFactory.t
 hneď za `filterPaidOnlyCandidates`):
 
 1. **Vôbec sa nenachádza v `FREE_MODEL_BUDGETS`** → vylúčený. Zahŕňa to skutočne platené modely
-   aj všetkých poskytovateľov/modely, ktoré OmniRoute zatiaľ neklasifikovalo — noví kandidáti sú
+   aj všetkých poskytovateľov/modely, ktoré 67router zatiaľ neklasifikovalo — noví kandidáti sú
    od začiatku vylúčení, nie zahrnutí.
 2. **`freeType: "keyless"`** → okamžite prejde, **ale iba v prípade kandidáta, ktorý skutočne
    prišiel cestou bez overenia** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -94,7 +94,7 @@ nikdy nie iný, neoverený účet toho istého kandidáta. Regresný dôkaz náj
 (prípady obídenia bez kľúča A/B/C, prípady s viacerými účtami 1 – 5).
 
 `discovered automatically`: poskytovateľa/model vydaný zajtra so správnymi metadátami (v
-katalógu, s adaptérom používania, `hardStopGuaranteed: true`) možno používať hneď, ako sa o ňom OmniRoute
+katalógu, s adaptérom používania, `hardStopGuaranteed: true`) možno používať hneď, ako sa o ňom 67router
 dozvie — bez zmeny kódu, bez záznamu v zozname povolených položiek a bez potreby čokoľvek upravovať v tomto module. Model odstránený z
 katalógu rovnakým spôsobom zmizne. Regresný dôkaz nájdete v
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` (prostredníctvom

@@ -4,7 +4,7 @@
 
 ---
 
-Uhamishaji endelevu na wa hatua kwa hatua wa kumbukumbu za simu za OmniRoute kwenda kwenye hifadhi ya nje ya uchanganuzi.
+Uhamishaji endelevu na wa hatua kwa hatua wa kumbukumbu za simu za 67router kwenda kwenye hifadhi ya nje ya uchanganuzi.
 
 Kichupo cha dashibodi ya Logs huhifadhi historia ya maombi katika SQLite (`call_logs`), ambayo inawekewa kikomo kupitia
 uzungushaji na muda wa kuhifadhi. Uhamishaji wa kumbukumbu husafirisha seti hiyo hiyo ya rekodi kwa ratiba ili iweze kudumu zaidi ya
@@ -270,7 +270,7 @@ Sheria mbili za lengwa jipya:
 - `send()` **lazima itupe hitilafu** ikiwa kuna kutofaulu kwa sehemu. Kukamilika kunamaanisha "lengwa lina safu hizi",
   na kishale husogea mbele yao kabisa.
 - Lengwa linalotumia URL iliyotolewa na mtumiaji lazima liithibitishe kupitia
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`) kabla ya kuichota,
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`) kabla ya kuichota,
   kwa njia ileile inayotumiwa na webhooks. BigQuery haihitaji hili: vipangishi vyake ni thabiti.
 
 ---

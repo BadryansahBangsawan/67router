@@ -1,4 +1,4 @@
-# OmniRoute MCP Server Documentation (Eesti)
+# 67router MCP Server Documentation (Eesti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../frameworks/MCP-SERVER.md) · 🇪🇹 [am](../../../am/docs/frameworks/MCP-SERVER.md) · 🇸🇦 [ar](../../../ar/docs/frameworks/MCP-SERVER.md) · 🇦🇿 [az](../../../az/docs/frameworks/MCP-SERVER.md) · 🇧🇬 [bg](../../../bg/docs/frameworks/MCP-SERVER.md) · 🇧🇩 [bn](../../../bn/docs/frameworks/MCP-SERVER.md) · 🇧🇦 [bs](../../../bs/docs/frameworks/MCP-SERVER.md) · 🇨🇿 [cs](../../../cs/docs/frameworks/MCP-SERVER.md) · 🇩🇰 [da](../../../da/docs/frameworks/MCP-SERVER.md) · 🇩🇪 [de](../../../de/docs/frameworks/MCP-SERVER.md) · 🇬🇷 [el](../../../el/docs/frameworks/MCP-SERVER.md) · 🇪🇸 [es](../../../es/docs/frameworks/MCP-SERVER.md) · 🇮🇷 [fa](../../../fa/docs/frameworks/MCP-SERVER.md) · 🇫🇮 [fi](../../../fi/docs/frameworks/MCP-SERVER.md) · 🇫🇷 [fr](../../../fr/docs/frameworks/MCP-SERVER.md) · 🇮🇪 [ga](../../../ga/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [gu](../../../gu/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ha](../../../ha/docs/frameworks/MCP-SERVER.md) · 🇮🇱 [he](../../../he/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [hi](../../../hi/docs/frameworks/MCP-SERVER.md) · 🇭🇷 [hr](../../../hr/docs/frameworks/MCP-SERVER.md) · 🇭🇺 [hu](../../../hu/docs/frameworks/MCP-SERVER.md) · 🇦🇲 [hy](../../../hy/docs/frameworks/MCP-SERVER.md) · 🇮🇩 [id](../../../id/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [ig](../../../ig/docs/frameworks/MCP-SERVER.md) · 🇮🇹 [it](../../../it/docs/frameworks/MCP-SERVER.md) · 🇯🇵 [ja](../../../ja/docs/frameworks/MCP-SERVER.md) · 🇬🇪 [ka](../../../ka/docs/frameworks/MCP-SERVER.md) · 🇰🇭 [km](../../../km/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [kn](../../../kn/docs/frameworks/MCP-SERVER.md) · 🇰🇷 [ko](../../../ko/docs/frameworks/MCP-SERVER.md) · 🇱🇹 [lt](../../../lt/docs/frameworks/MCP-SERVER.md) · 🇱🇻 [lv](../../../lv/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ml](../../../ml/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [mr](../../../mr/docs/frameworks/MCP-SERVER.md) · 🇲🇾 [ms](../../../ms/docs/frameworks/MCP-SERVER.md) · 🇲🇹 [mt](../../../mt/docs/frameworks/MCP-SERVER.md) · 🇲🇲 [my](../../../my/docs/frameworks/MCP-SERVER.md) · 🇳🇵 [ne](../../../ne/docs/frameworks/MCP-SERVER.md) · 🇳🇱 [nl](../../../nl/docs/frameworks/MCP-SERVER.md) · 🇳🇴 [no](../../../no/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [or](../../../or/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [pa](../../../pa/docs/frameworks/MCP-SERVER.md) · 🇵🇭 [phi](../../../phi/docs/frameworks/MCP-SERVER.md) · 🇵🇱 [pl](../../../pl/docs/frameworks/MCP-SERVER.md) · 🇵🇹 [pt](../../../pt/docs/frameworks/MCP-SERVER.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/frameworks/MCP-SERVER.md) · 🇷🇴 [ro](../../../ro/docs/frameworks/MCP-SERVER.md) · 🇷🇺 [ru](../../../ru/docs/frameworks/MCP-SERVER.md) · 🇱🇰 [si](../../../si/docs/frameworks/MCP-SERVER.md) · 🇸🇰 [sk](../../../sk/docs/frameworks/MCP-SERVER.md) · 🇸🇮 [sl](../../../sl/docs/frameworks/MCP-SERVER.md) · 🇷🇸 [sr](../../../sr/docs/frameworks/MCP-SERVER.md) · 🇸🇪 [sv](../../../sv/docs/frameworks/MCP-SERVER.md) · 🇰🇪 [sw](../../../sw/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [ta](../../../ta/docs/frameworks/MCP-SERVER.md) · 🇮🇳 [te](../../../te/docs/frameworks/MCP-SERVER.md) · 🇹🇭 [th](../../../th/docs/frameworks/MCP-SERVER.md) · 🇹🇷 [tr](../../../tr/docs/frameworks/MCP-SERVER.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/frameworks/MCP-SERVER.md) · 🇵🇰 [ur](../../../ur/docs/frameworks/MCP-SERVER.md) · 🇺🇿 [uz](../../../uz/docs/frameworks/MCP-SERVER.md) · 🇻🇳 [vi](../../../vi/docs/frameworks/MCP-SERVER.md) · 🇳🇬 [yo](../../../yo/docs/frameworks/MCP-SERVER.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/frameworks/MCP-SERVER.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/frameworks/MCP-SERVER.md)
 
@@ -10,7 +10,7 @@
 
 ## Paigaldamine
 
-OmniRoute MCP on sissee ehitatud. Käivitage see järgmiselt:
+67router MCP on sissee ehitatud. Käivitage see järgmiselt:
 
 ```bash
 omniroute --mcp
@@ -89,7 +89,7 @@ Cursor, Cline ja ühilduvate MCP klientide seadistamiseks.
 | `omniroute_switch_combo`        | `write:combos`        | Kombo aktiveerimine või deaktiveerimine                                                                                    |
 | `omniroute_create_combo`        | `write:combos`        | Kinnitatud kombo loomine olemasoleva kombo API kaudu                                                                       |
 | `omniroute_check_quota`         | `read:quota`          | Kasutatud/koguhulk kvoot, protsent järelejäänud, taaskäivituse aeg, tokeni tervis                                          |
-| `omniroute_route_request`       | `execute:completions` | Vestluse lõpetamise (chat completion) päringu saatmine läbi OmniRoute suunamise                                            |
+| `omniroute_route_request`       | `execute:completions` | Vestluse lõpetamise (chat completion) päringu saatmine läbi 67router suunamise                                             |
 | `omniroute_cost_report`         | `read:usage`          | Kuluaruanne perioodi kaupa (seanss/päev/nädal/kuu)                                                                         |
 | `omniroute_list_models_catalog` | `read:models`         | Täielik mudelikataloog koos võimaluste, olekute ja hindadega                                                               |
 | `omniroute_radar_catalog`       | `read:radar`          | Lokaalne allkirjastatud Radar kataloog; valikulised pakkuja/perekonna filtrid                                              |
@@ -152,7 +152,7 @@ kviitungid ja on märgistatud kui `source: "mcp_metadata_estimate"`.
 
 ### MCP ligipääsetavuspuu filter (v3.8.0)
 
-Eraldiseisvalt ülalkirjeldatud tihendustööriistadest sisaldab OmniRoute käitusjärgset filtrit, mis
+Eraldiseisvalt ülalkirjeldatud tihendustööriistadest sisaldab 67router käitusjärgset filtrit, mis
 tihendab MCP brauseri/ligipääsetavuse tööriistade **tulemusi** enne nende tagastamist agendile. See
 filter ei ole iseenesest tööriist — see töötab läbipaistvalt igal tööriistatulemusel, mis sisaldab
 paljusõnalist ligipääsetavuspuu- või brauserimomenttõmmise teksti (≥2000 tähemärki).
@@ -236,7 +236,7 @@ Defineeritud failis `open-sse/mcp-server/tools/agentSkillTools.ts`. Töötab `sr
 | :-------------------------------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `omniroute_agent_skills_list`     | `read:catalog` | Loetleb kõik 45 agendioskust valikuliste `category` (api\|cli) ja `area` filtritega; tagastab metaandmed + katvuse                              |
 | `omniroute_agent_skills_get`      | `read:catalog` | Hangib ühe oskuse täieliku metaandmestiku + SKILL.md sisu kanoonilise `id` järgi                                                                |
-| `omniroute_agent_skills_coverage` | `read:catalog` | Katvuse statistika: kui paljudel 23 API, 21 CLI ja 1 konfiguratsiooni oskusest on failisüsteemis SKILL.md failid võrreldes kataloogi koguarvuga |
+| `omniroute_agent_skills_coverage` | `read:catalog` | Katvuse statistika: kui paljudel 22 API, 20 CLI ja 1 konfiguratsiooni oskusest on failisüsteemis SKILL.md failid võrreldes kataloogi koguarvuga |
 
 Vaata [AGENT-SKILLS.md](./AGENT-SKILLS.md) täielikku kataloogi ja seda, kuidas välised agendid seda kasutavad.
 
@@ -245,17 +245,6 @@ Vaata [AGENT-SKILLS.md](./AGENT-SKILLS.md) täielikku kataloogi ja seda, kuidas 
 Eelpool toodud MCP tööriistade nimekiri (110 unikaalset tööriista, arvutatud funktsiooniga `countUniqueMcpTools()`) on tahtlikult
 piiratud käitusaegse ruutimise/vahemälu/tihendamise/mälu/oskuste/proksi/kontekstiallika toimingutega. Kaks kõrvutist
 raamistikku käivad MCP serveriga kaasas versioonis v3.8.0 ning on dokumenteeritud eraldi:
-
-### Pilveagendid
-
-Pilveagendid on protsessivälised AI koodiagendid (codex-cloud, cursor-cloud, devin, jules), mis on ühendatud
-OmniRoute'iga sama ühendusmudeli kaudu, mida kasutatakse LLM pakkujate puhul. Need on eksponeeritud
-oma REST liidese kaudu (`/api/v1/agents/*`) ja **ei** ole MCP tööriistade kataloogi osa
-— Pilveagendi kutsumine ei tarbi MCP ulatust.
-
-- Rakendus: `src/lib/cloudAgent/` (`registry.ts`, `agents/codex.ts`, `agents/cursor.ts`, `agents/devin.ts`, `agents/jules.ts`).
-- Elutsükkel: `createTask`, `getStatus`, `approvePlan`, `sendMessage`, `listSources`.
-- Dokumentatsioon: [docs/frameworks/CLOUD_AGENT.md](./CLOUD_AGENT.md).
 
 ### Kaitsepiirded (Guardrails)
 
@@ -426,8 +415,6 @@ Iga tööriist nõuab kindlaid lube:
 | `read:radar`          | `omniroute_radar_catalog`                                                                                                                                                          |
 | `read:gamification`   | `gamification_profile`, `gamification_rank`, `gamification_leaderboard`, `gamification_badges`, `gamification_servers`, `gamification_anomalies`                                   |
 | `write:gamification`  | `gamification_invite`, `gamification_transfer`                                                                                                                                     |
-| `read:plugins`        | `plugin_list`, `plugin_executions`                                                                                                                                                 |
-| `write:plugins`       | `plugin_scan`, `plugin_install`, `plugin_uninstall`, `plugin_activate`, `plugin_deactivate`, `plugin_configure`                                                                    |
 | `read:obsidian`       | 13 lugemistööriista — `obsidian_list_vault`, `obsidian_read_note`, `obsidian_search_simple`, `obsidian_search_structured`, `obsidian_get_periodic_note`, `obsidian_sync_status`, … |
 | `write:obsidian`      | 9 kirjutamistööriista — `obsidian_write_note`, `obsidian_append_note`, `obsidian_patch_note`, `obsidian_move_note`, `obsidian_delete_note`, `obsidian_sync_trigger`, …             |
 | `read:local-corpus`   | `local_corpus_search`, `local_corpus_read`, `local_corpus_status`                                                                                                                  |
@@ -485,7 +472,7 @@ olemasolev `OMNIROUTE_MCP_ENFORCE_SCOPES`-iga juhitav käitumine muutmata.
 
 | Muutuja                                 | Vaikeväärtus                          | Otstarve                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | :-------------------------------------- | :------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Baas-URL, mida MCP-server kasutab OmniRoute'i sisemiste API-de kutsumisel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `OMNIROUTE_BASE_URL`                    | `http://localhost:20128`              | Baas-URL, mida MCP-server kasutab 67router'i sisemiste API-de kutsumisel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `OMNIROUTE_API_KEY`                     | (tühi)                                | API-võti, mis edastatakse sisemistele API-kutsetele kujul `Authorization: Bearer`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `OMNIROUTE_MCP_ENFORCE_SCOPES`          | `false` (ainult `"true"` lubab selle) | Kui see on lubatud, keelavad puuduvad õigusalad tööriistakutsed ja auditilogisse kirjutatakse `scope_denied:<reason>`. Jõustamine lülitatakse sellest lipust sõltumata ALATI sisse ka iga HTTP/SSE-kutsuja puhul, mis tuvastatakse võtmepõhise Authorization-päise kaudu (`source === "authInfo"`) ja millel puudub täielik `manage`/`admin`-õigusala — nt võti, millel on ainult kitsas möödapääsuõigusala `mcp:connect` — seega on see vaikeväärtus turvaline ainult kohaliku/stdio ühe operaatoriga töövoo jaoks, mitte kunagi kaugjuurdepääsuks väljaspool loopback-liidest |
 | `OMNIROUTE_MCP_SCOPES`                  | (tühi)                                | Komadega eraldatud lubatud õigusalade loend, mida peetakse vaikimisi „saadaolevaks” (kasutatakse juhul, kui kutsuja ei esita oma õigusalasid)                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -588,7 +575,6 @@ Kasuta töölauda või `/api/mcp/audit` ja `/api/mcp/audit/stats` REST lõpp-pun
 | `open-sse/mcp-server/tools/skillTools.ts`                                | Oskustööriistade definitsioonid (4 tööriista)                                            |
 | `open-sse/mcp-server/tools/notionTools.ts`                               | Notioni kontekstiallika tööriistade definitsioonid (6 tööriista)                         |
 | `open-sse/mcp-server/tools/gamificationTools.ts`                         | Mängustamise tööriistade definitsioonid (8 tööriista)                                    |
-| `open-sse/mcp-server/tools/pluginTools.ts`                               | Pluginate registreerimise ja haldamise tööriistad (8 tööriista)                          |
 | `src/app/api/mcp/status/route.ts`                                        | `/api/mcp/status` lõpp-punkt                                                             |
 | `src/app/api/mcp/tools/route.ts`                                         | `/api/mcp/tools` lõpp-punkt                                                              |
 | `src/app/api/mcp/sse/route.ts`                                           | `/api/mcp/sse` SSE transpordi tee                                                        |

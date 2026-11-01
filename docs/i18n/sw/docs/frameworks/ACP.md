@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute hutenganisha **ugunduzi wa CLI**, **Agent Client Protocol asilia**, na
+67router hutenganisha **ugunduzi wa CLI**, **Agent Client Protocol asilia**, na
 **adapta za zamani za stdio**. Kupatikana kwa binary iliyosakinishwa hakuthibitishi
 uthibitishaji wake, uoanifu wa modeli, au utayari wake wa kushughulikia kidokezo.
 
@@ -124,5 +124,3 @@ lililoidhinishwa katika mazingira lengwa.
 - [Itifaki za mawakala](./AGENT_PROTOCOLS_GUIDE.md)
 - [Mikataba ya uzinduzi wa CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Zana za CLI](../reference/CLI-TOOLS.md)
-- [Seva ya A2A](./A2A-SERVER.md)
-- [Mawakala wa wingu](./CLOUD_AGENT.md)

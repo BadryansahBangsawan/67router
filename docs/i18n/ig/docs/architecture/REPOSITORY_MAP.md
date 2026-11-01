@@ -5,7 +5,7 @@
 ---
 
 > **Nkọwa otu ahịrị maka ndekọ ọ bụla na faịlụ mgbọrọgwụ ọ bụla.**
-> Emelitere ikpeazụ: 2026-06-28 — OmniRoute v3.8.40
+> Emelitere ikpeazụ: 2026-06-28 — 67router v3.8.40
 >
 > Jiri map a gagharịa ngwa ngwa n'ime koodu ahụ. Maka nyocha miri emi, soro njikọ gaa na akwụkwọ nkọwa ndị akọwapụtara.
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Akụrụngwa onyonyo maka mgbasa ozi / README
 ├── @omniroute/           # Ngwugwu ndị enyemaka enwere ike ibipụta (opencode-plugin, opencode-provider)
 ├── skills/               # Ngwugwu nka CLI/agent (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugin nlele + ihe mmalite omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Onyinye ndị obodo (podman/)
 ├── .source/              # Nhazi isi mmalite Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Usoro ọrụ GitHub Actions + ndebiri nsogbu + ndebiri PR
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `app/api/v1/`                                                                | API ọha dakọtara na OpenAI (~ụzọ nta 25: mkparịta ụka, mmecha, embeddings, faịlụ, batches, ọdịyo, onyonyo, vidiyo, egwu, rerank, moderations, ọchụchọ, ws, agents, accounts, providers, wdg.)                                                                                                                          |
 | `app/api/v1beta/`                                                            | Ebe njedebe API ndị yiri Gemini                                                                                                                                                                                                                                                                                        |
-| `app/api/playground/`                                                        | Ụzọ Playground Studio: `improve-prompt/` (POST — onye LLM na-edegharị prompt), `presets/` (GET ndepụta / POST mepụta), `presets/[id]/` (GET / PUT / DELETE) — lee `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                                               |
 | `app/api/` (na-abụghị v1)                                                    | Ụzọ njikwa/onye nchịkwa (~direktori 60: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, wdg.)                                                                                                                                          |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — ụzọ 12 (njikwa sava, ọnọdụ agent/DNS/mappings, bypass, cert, upstream-CA). LOCAL_ONLY + SPAWN_CAPABLE. Lee `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — ụzọ 16+ (requests, sessions, hosts, capture-modes, export, ws). LOCAL_ONLY + SPAWN_CAPABLE. Lee `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                           |
-| `app/a2a/`                                                                   | Ebe ntinye A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                              |
-| `app/.well-known/agent.json/`                                                | Kaadị Agent A2A (nchọpụta)                                                                                                                                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/`                                                 | Peeji UI dashboard (ngalaba 50+, ~faịlụ page.tsx 118: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, wdg.)                                                                                                                                        |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI Search Tools Studio (taabụ 3: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — lee `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                           |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (atụmatụ 21): `page.tsx` (shei taabụ 3), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | Oge nnọkọ, hashing okwuntughe, nkwado izi ezi token                                                                                                                                                                                                                                                                |
 | `batches/`                               | Ndị njikwa API OpenAI Batches                                                                                                                                                                                                                                                                                      |
 | `catalog/`                               | Nkwado izi ezi Zod maka katalọgụ provider + mkpebi ikike                                                                                                                                                                                                                                                           |
-| `cloudAgent/`                            | Cloud Agents (Codex Cloud, Devin, Jules) — lee `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                                    |
 | `combos/`                                | Mkpebi combo + ngwa enyemaka maka ịhazi ọzọ                                                                                                                                                                                                                                                                        |
 | `audit/`                                 | Ngwa enyemaka maka ndepụta ihe omume: `highLevelActions.ts` (ndepụta ndị anabatara + `isHighLevelAction()`), `activityIcons.ts` (maapụ omume → akara/ngwaa), `timeline.ts` (groupByDay/relativeTime) — lee `docs/architecture/MONITORING_SECTIONS.md`                                                              |
 | `compliance/`                            | Ndekọ audit + audit provider — lee `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                                   |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | Ngwa enyemaka maka nhazi UI (ọnụahịa, latency, wdg.)                                                                                                                                                                                                                                                               |
 | `embeddings/`                            | Ngwa enyemaka ọrụ embeddings                                                                                                                                                                                                                                                                                       |
 | `env/`                                   | Ntụgharị + nkwado izi ezi nke mgbanwe Env                                                                                                                                                                                                                                                                          |
-| `evals/`                                 | Framework Eval (suites, runner, runtime) — lee `docs/frameworks/EVALS.md`                                                                                                                                                                                                                                          |
 | `guardrails/`                            | Ihe mkpuchi PII, mgbochi prompt injection, njikọ vision — lee `docs/security/GUARDRAILS.md`                                                                                                                                                                                                                        |
 | `jobs/`                                  | Ọrụ ndabere (dị ka cron)                                                                                                                                                                                                                                                                                           |
 | `memory/`                                | Nchekwa mkparịta ụka (SQLite FTS5 + sqlite-vec hybrid RRF + Qdrant tier 2) — lee `docs/frameworks/MEMORY.md`                                                                                                                                                                                                       |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — na-ahazi ebe nchekwa ndị nwere `needs_reindex=1` na ndabere; `POST /api/memory/reindex` na ụzọ lazy-backfill na-akpọ ya. (atụmatụ 21)                                                                                                                                                        |
 | `monitoring/`                            | Nlele ahụike, izipụ metrik                                                                                                                                                                                                                                                                                         |
 | `oauth/`                                 | Usoro OAuth/mbubata maka modul ndị na-eweta ọrụ 22 (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                     |
-| `plugins/`                               | Ndekọ plugin                                                                                                                                                                                                                                                                                                       |
 | `promptCache/`                           | Ebe nkwụsị cache prompt nke yiri ụdị Anthropic                                                                                                                                                                                                                                                                     |
 | `skills/`                                | Framework nkà (nke etinyere n'ime ya + marketplace + SkillsSH) — lee `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                   |
-| `playground/`                            | Ngwa enyemaka ndị Playground Studio na-ekekọrịta: `codeExport.ts` (ihe na-emepụta curl/Python/TS), `promptImprover.ts` (ihe na-ewu meta-prompt), `streamMetrics.ts` (TTFT/TPS dị ọcha), `types.ts` (tebụl ọnụahịa) — lee `docs/frameworks/PLAYGROUND_STUDIO.md`                                                    |
 | `webhookDispatcher.ts`                   | Nnyefe webhook HMAC — lee `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                            |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | Ndị njikwa tunnel — lee `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                |
 | `cloudSync.ts`, `initCloudSync.ts`       | Mmekọrịta steeti na cloud nke bụ nhọrọ                                                                                                                                                                                                                                                                             |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — Ebe nchekwa data (modulu 147 + migration 208)
 
-| Subdir                    | Ebumnuche                                                                                                                                                                          |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | Singleton `getDbInstance()` nwere ndekọ WAL                                                                                                                                        |
-| `db/migrations/`          | Faịlụ SQL nwere ụdịdị (idempotent, transactional). `073_memory_vec.sql` na-agbakwunye `memory_vec_meta` + kọlụm `needs_reindex` (atụmatụ 21).                                      |
-| `db/playgroundPresets.ts` | Modulu CRUD maka preset Playground Studio (`listPlaygroundPresets`, `getPlaygroundPreset`, `createPlaygroundPreset`, `updatePlaygroundPreset`, `deletePlaygroundPreset`)           |
-| `db/memoryVec.ts`         | CRUD maka `memory_vec_meta` (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue`, wdg. (atụmatụ 21)                    |
-| `db/<domain>.ts`          | Otu modulu maka domain ọ bụla: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache, wdg. |
+| Subdir            | Ebumnuche                                                                                                                                                                          |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | Singleton `getDbInstance()` nwere ndekọ WAL                                                                                                                                        |
+| `db/migrations/`  | Faịlụ SQL nwere ụdịdị (idempotent, transactional). `073_memory_vec.sql` na-agbakwunye `memory_vec_meta` + kọlụm `needs_reindex` (atụmatụ 21).                                      |
+| `db/memoryVec.ts` | CRUD maka `memory_vec_meta` (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue`, wdg. (atụmatụ 21)                    |
+| `db/<domain>.ts`  | Otu modulu maka domain ọ bụla: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache, wdg. |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Usoro mwepụta zuru ezu (nkà, husky, conventional commits, ibuga)                                    |
 | `COVERAGE_PLAN.md`          | Ebumnuche mkpuchi na ọnọdụ dị ugbu a                                                                |
 | `FREE_TIERS.md`             | Ndị na-eweta ọkwa n’efu ahọpụtara nke ọma (48+ n’efu + 11 OAuth)                                    |
-| `CLI-TOOLS.md`              | Njikọ CLI mpụga + CLI OmniRoute nke ime                                                             |
+| `CLI-TOOLS.md`              | Njikọ CLI mpụga + CLI 67router nke ime                                                              |
 | `I18N.md`                   | Nhazi ụlọ i18n, ịgbakwunye asụsụ, locale 67                                                         |
 | `UNINSTALL.md`              | Usoro iwepụ nrụnye kpamkpam                                                                         |
 | `PROVIDER_REFERENCE.md`     | Katalọgụ ndị na-eweta 375 **emepụtara na-akpaghị aka** (megharịa: `npm run gen:provider-reference`) |
@@ -403,13 +395,10 @@ open-sse/
 | Akwụkwọ                                      | Ebumnuche                                                                    |
 | -------------------------------------------- | ---------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                              | Sava MCP: ngwaọrụ 110, ụzọ mbufe 3, scopes 33, endpoint REST                 |
-| `A2A-SERVER.md`                              | A2A v0.3: JSON-RPC, nkà 6, ndị enyemaka REST, kaadị agent                    |
 | `AGENT_PROTOCOLS_GUIDE.md`                   | Ntuziaka jikọtara ọnụ: A2A vs ACP vs Cloud Agents                            |
-| `CLOUD_AGENT.md`                             | Nhazi ọrụ Codex Cloud / Devin / Jules                                        |
 | `SKILLS.md`                                  | Framework nkà (nke arụnyere n’ime + marketplace + SkillsSH + sandbox)        |
 | `RADAR.md`                                   | Overlay katalọgụ ụdị n’efu nke Radar (`RADAR_ENABLED`, agbanyụrụ na ndabara) |
 | `MEMORY.md`                                  | Usoro ebe nchekwa (SQLite FTS5 + Qdrant)                                     |
-| `EVALS.md`                                   | Framework eval (usoro nnwale, ọsọ, rubrics)                                  |
 | `GUARDRAILS.md`                              | Ihe mkpuchi PII, ntinye prompt ọjọọ, àkwà mmiri ọhụụ                         |
 | `COMPLIANCE.md`                              | Ndekọ nyocha, njigide, nhọrọ ịpụ na noLog                                    |
 | `WEBHOOKS.md`                                | Nnyefe webhook e ji HMAC bịanye aka                                          |
@@ -574,7 +563,6 @@ Anaghị etinye ha na nsonaazụ `npm pack`. Lee `.npmignore`.
 - **Ị na-agbakwunye provider?** Soro `docs/architecture/ARCHITECTURE.md § Ịgbakwunye Provider Ọhụrụ` + jiri `docs/reference/PROVIDER_REFERENCE.md` tụlee ya.
 - **Ị na-agbakwunye route?** `docs/architecture/ARCHITECTURE.md § Ịgbakwunye API Route Ọhụrụ` + `src/shared/validation/schemas.ts`.
 - **Ị na-agbakwunye ngwa MCP?** `docs/frameworks/MCP-SERVER.md § Ịgbakwunye Ngwa`.
-- **Ị na-agbakwunye nkà A2A?** `docs/frameworks/A2A-SERVER.md § Ịgbakwunye Nkà Ọhụrụ`.
 - **Ị na-eme ya na kọmputa mpaghara?** `docs/guides/SETUP_GUIDE.md`.
 - **Ị na-ebuga ya?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Ị na-ewepụta ụdị ọhụrụ?** `docs/ops/RELEASE_CHECKLIST.md` (na nkà Claude Code `/generate-release-cc`).

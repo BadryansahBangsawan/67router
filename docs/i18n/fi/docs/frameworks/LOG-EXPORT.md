@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute-kutsulokien jatkuva, inkrementaalinen vienti ulkoiseen analytiikkatietovarastoon.
+67router-kutsulokien jatkuva, inkrementaalinen vienti ulkoiseen analytiikkatietovarastoon.
 
 Lokit-hallintapaneelin välilehti säilyttää pyyntöhistorian SQLite-tietokannassa (`call_logs`), jonka kokoa
 rajoittavat kierto ja säilytysaika. Lokivienti lähettää saman tietuejoukon ajastetusti muualle, jotta se säilyy
@@ -273,7 +273,7 @@ Uutta kohdetta koskee kaksi sääntöä:
 - `send()`-metodin **on aiheutettava poikkeus** osittaisen epäonnistumisen yhteydessä. Onnistunut suoritus tarkoittaa, että kohteessa ovat kyseiset rivit,
   ja kohdistin siirtyy pysyvästi niiden ohi.
 - Käyttäjän antaman URL-osoitteen vastaanottavan kohteen on validoitava se
-  `parseAndValidateWebhookUrl`-funktion (`src/shared/network/outboundUrlGuardPolicy.ts`) avulla ennen noutoa
+  `parseAndValidatePublicUrl`-funktion (`src/shared/network/outboundUrlGuard.ts`) avulla ennen noutoa
   samalla tavalla kuin webhookit. BigQuery ei tarvitse tätä, sillä sen isäntänimet ovat vakioita.
 
 ---

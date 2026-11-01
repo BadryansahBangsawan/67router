@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector ir OmniRoute iebūvētais HTTPS datplūsmas atkļūdotājs — Charles Proxy / mitmweb / HTTP Toolkit līdzīgs rīks, kas **izprot LLM** un **aģentus**. Tas atrodas `/dashboard/tools/traffic-inspector` un saņem datplūsmu reāllaikā no līdz pat 5 vienlaicīgiem tveršanas avotiem.
+Traffic Inspector ir 67router iebūvētais HTTPS datplūsmas atkļūdotājs — Charles Proxy / mitmweb / HTTP Toolkit līdzīgs rīks, kas **izprot LLM** un **aģentus**. Tas atrodas `/dashboard/tools/traffic-inspector` un saņem datplūsmu reāllaikā no līdz pat 5 vienlaicīgiem tveršanas avotiem.
 
 **Atrašanās vieta informācijas panelī:** `/dashboard/tools/traffic-inspector`
 **Sānjoslas grupa:** Rīki (pēc AgentBridge)
@@ -16,21 +16,21 @@ Traffic Inspector ir OmniRoute iebūvētais HTTPS datplūsmas atkļūdotājs —
 
 ### Ar ko Traffic Inspector ir unikāls
 
-| Funkcija                                                                    | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| --------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Tīmekļa risinājums                                                          |    ✓    |    ✗    |    ✗    |                ✓                |
-| Atvērtais pirmkods                                                          |    ✓    |    ✗    | daļēji  |                ✓                |
-| **Izprot aģentus** (zina, vai pieprasījums nāk no Antigravity/Copilot/u.c.) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Izprot LLM** (parsē OpenAI/Anthropic/Gemini struktūru, tokenus, modeli)   |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Redzama modeļu kartēšana** (gemini-3-flash → claude-sonnet-4.7)           |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Atsevišķi starpniekservera un augšupstraumes latentuma rādītāji**         | daļēji  |    ✗    |    ✗    |                ✓                |
-| **Integrēts ar OmniRoute** maršrutēšanu, rezerves mehānismu un izmaksām     |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sistēmas mēroga starpniekservera atkļūdošana** (jebkura lietotne datorā)  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Pielāgotu resursdatoru tveršana** (DNS novirzīšana katram resursdatoram)  |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY vides režīms**                                                 |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Sarunas skats** (vairāku kārtu burbuļi, tool_use/tool_result)             |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE straumes apvienotājs** (rekonstruē no delta notikumiem)               |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sesijas ierakstīšana** (nosaucama, eksportējama .har/.jsonl formātā)      |    ✗    |    ✓    |    ✓    |                ✓                |
+| Funkcija                                                                    | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| --------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Tīmekļa risinājums                                                          |    ✓    |    ✗    |    ✗    |               ✓                |
+| Atvērtais pirmkods                                                          |    ✓    |    ✗    | daļēji  |               ✓                |
+| **Izprot aģentus** (zina, vai pieprasījums nāk no Antigravity/Copilot/u.c.) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Izprot LLM** (parsē OpenAI/Anthropic/Gemini struktūru, tokenus, modeli)   |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Redzama modeļu kartēšana** (gemini-3-flash → claude-sonnet-4.7)           |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Atsevišķi starpniekservera un augšupstraumes latentuma rādītāji**         | daļēji  |    ✗    |    ✗    |               ✓                |
+| **Integrēts ar 67router** maršrutēšanu, rezerves mehānismu un izmaksām      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sistēmas mēroga starpniekservera atkļūdošana** (jebkura lietotne datorā)  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Pielāgotu resursdatoru tveršana** (DNS novirzīšana katram resursdatoram)  |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY vides režīms**                                                 |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Sarunas skats** (vairāku kārtu burbuļi, tool_use/tool_result)             |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE straumes apvienotājs** (rekonstruē no delta notikumiem)               |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sesijas ierakstīšana** (nosaucama, eksportējama .har/.jsonl formātā)      |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arhitektūra vienā rindkopā
 
@@ -266,7 +266,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true, ja tā ir SSE atbilde
   mappedTo: string | null; // x-omniroute-mapped galvene
-  costEstimateUsd: number | null; // aprēķinātās izmaksas, pamatojoties uz OmniRoute cenām
+  costEstimateUsd: number | null; // aprēķinātās izmaksas, pamatojoties uz 67router cenām
 }
 ```
 
@@ -397,7 +397,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Sistēmas starpniekservera iestatījumi netika atjaunoti
 
-Ja OmniRoute avarē, kamēr ir aktīvs visas sistēmas starpniekservera režīms:
+Ja 67router avarē, kamēr ir aktīvs visas sistēmas starpniekservera režīms:
 
 **macOS:**
 
@@ -442,7 +442,7 @@ Bāzes ceļš: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Uzskaitīt pieprasījumus (filtrējami: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Detalizēta informācija par vienu pieprasījumu                                                |
 | DELETE | `/requests`                 | Notīrīt atmiņā glabāto buferi                                                                |
-| POST   | `/requests/{id}/replay`     | Atkārtoti izpildīt to pašu pieprasījumu, izmantojot OmniRoute maršrutētāju                   |
+| POST   | `/requests/{id}/replay`     | Atkārtoti izpildīt to pašu pieprasījumu, izmantojot 67router maršrutētāju                    |
 | PUT    | `/requests/{id}/annotation` | Saglabāt vai atjaunināt pieprasījuma piezīmi                                                 |
 
 ### WebSocket

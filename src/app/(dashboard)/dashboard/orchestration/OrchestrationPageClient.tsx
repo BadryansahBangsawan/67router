@@ -2,6 +2,7 @@
 import { useCallback, useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import { Tabs, TabsList, TabsTrigger } from "@omniroute/ui-kit/tabs";
 import { useLiveComboStatus } from "@/hooks/useLiveDashboard";
 import { useProviderBreakerHealth } from "@/hooks/useProviderBreakerHealth";
@@ -22,7 +23,7 @@ const TABS = ["agents", "routing", "overview", "history"] as const;
 type Tab = (typeof TABS)[number];
 
 const VALID_STATES: ReadonlySet<OrchState> = new Set(ORCH_STATES);
-const VALID_SOURCES: ReadonlySet<OrchSource> = new Set(["cloud-agent", "a2a", "conductor"]);
+const VALID_SOURCES: ReadonlySet<OrchSource> = new Set(["a2a", "conductor"]);
 
 const TAB_KEY: Record<Tab, string> = {
   agents: "tabAgents",
@@ -99,6 +100,7 @@ function TabList({
 
 export default function OrchestrationPageClient() {
   const t = useTranslations("orchestration");
+  const tSidebar = useTranslations("sidebar");
   const { tab, nodeId, filter, collapsed, setParams } = useOrchUrlState();
 
   const { snapshot, showCompleted, setShowCompleted, refetch } = useOrchestrationSnapshot();
@@ -143,6 +145,11 @@ export default function OrchestrationPageClient() {
 
   return (
     <div className="flex flex-col h-[calc(100dvh-6rem)] min-h-[480px] p-4 gap-3">
+      <PageHeader
+        compact
+        title={tSidebar("orchestration")}
+        description={tSidebar("orchestrationSubtitle")}
+      />
       <TabList tab={tab} t={t} onSelect={onSelectTab} />
       <div className="flex-1 min-h-0 flex flex-col gap-2">
         {(tab === "agents" || tab === "overview") && (

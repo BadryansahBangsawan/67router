@@ -106,7 +106,7 @@ export async function runConnectCommand(host, opts = {}) {
     baseUrl,
     accessToken,
     scope,
-    description: `Remote OmniRoute (${host})`,
+    description: `Remote 67router (${host})`,
   };
   cfg.currentContext = name;
   await saveContextsSecure(cfg);
@@ -121,7 +121,7 @@ export function registerConnect(program) {
   program
     .command("connect <host>")
     .description(
-      t("connect.description") || "Connect to a remote OmniRoute server and enter remote mode"
+      t("connect.description") || "Connect to a remote 67router server and enter remote mode"
     )
     .option("--port <port>", "Server port when the host has none", "20128")
     .option("--key <token>", "Use a pre-generated scoped access token (skips the password prompt)")

@@ -9,8 +9,6 @@ import {
   orchStateColor,
   orchStateBadgeBg,
 } from "../../../src/app/(dashboard)/dashboard/orchestration/model/orchestrationTypes.ts";
-import { fromCloudAgent } from "../../../src/app/(dashboard)/dashboard/orchestration/model/fromCloudAgent.ts";
-import type { CloudAgentTask } from "../../../src/lib/cloudAgent/types.ts";
 import { fromA2A } from "../../../src/app/(dashboard)/dashboard/orchestration/model/fromA2A.ts";
 import type { A2ATask } from "../../../src/lib/a2a/taskManager.ts";
 import { fromConductor } from "../../../src/app/(dashboard)/dashboard/orchestration/model/fromConductor.ts";
@@ -46,78 +44,6 @@ describe("orchestrationTypes", () => {
       assert.match(bg, /^color-mix\(in srgb, var\(--orch-status-[a-z]+\) 13%, transparent\)$/, s);
       assert.ok(bg.includes(orchStateColor(s)), `${s} badge bg should embed its own token`);
     }
-  });
-});
-
-function caTask(over: Partial<CloudAgentTask>): CloudAgentTask {
-  return {
-    id: "t1",
-    providerId: "devin",
-    status: "running",
-    prompt: "Fix the flaky test in CI",
-    source: { repoName: "acme/app", repoUrl: "https://github.com/acme/app" },
-    options: {},
-    activities: [],
-    createdAt: "2026-08-30T10:00:00Z",
-    updatedAt: "2026-08-30T10:05:00Z",
-    ...over,
-  } as CloudAgentTask;
-}
-
-describe("fromCloudAgent", () => {
-  it("maps every status to the unified OrchState", () => {
-    const cases: Array<[CloudAgentTask["status"], string]> = [
-      ["queued", "queued"],
-      ["running", "running"],
-      ["awaiting_approval", "waiting_approval"],
-      ["completed", "succeeded"],
-      ["failed", "failed"],
-      ["cancelled", "cancelled"],
-    ];
-    for (const [input, expected] of cases) {
-      const { nodes } = fromCloudAgent([caTask({ status: input })]);
-      const work = nodes.find((n) => n.kind === "work");
-      assert.equal(work?.state, expected, input);
-    }
-  });
-  it("unknown status becomes failed with the raw value in sublabel", () => {
-    const { nodes } = fromCloudAgent([caTask({ status: "exploded" as CloudAgentTask["status"] })]);
-    const work = nodes.find((n) => n.kind === "work");
-    assert.equal(work?.state, "failed");
-    assert.match(work?.sublabel ?? "", /exploded/);
-  });
-  it("running task with activities gets one ActivityNode; completed does not", () => {
-    const running = caTask({
-      activities: [
-        { id: "a1", type: "command", content: "npm test", timestamp: "2026-08-30T10:04:00Z" },
-      ],
-    });
-    const done = caTask({ id: "t2", status: "completed", activities: running.activities });
-    const { nodes, edges } = fromCloudAgent([running, done]);
-    const acts = nodes.filter((n) => n.kind === "activity");
-    assert.equal(acts.length, 1);
-    assert.equal(acts[0].id, "cloud-agent:t1:activity");
-    assert.ok(
-      edges.some(
-        (e) => e.from === "cloud-agent:t1" && e.to === "cloud-agent:t1:activity" && e.active
-      )
-    );
-  });
-  it("emits a SourceNode with per-state counts and owns-edges from it", () => {
-    const { nodes, edges } = fromCloudAgent([caTask({}), caTask({ id: "t2", status: "failed" })]);
-    const src = nodes.find((n) => n.id === "source:cloud-agent");
-    assert.equal(src?.counts?.running, 1);
-    assert.equal(src?.counts?.failed, 1);
-    assert.ok(
-      edges.some(
-        (e) => e.from === "source:cloud-agent" && e.to === "cloud-agent:t1" && e.kind === "owns"
-      )
-    );
-  });
-  it("empty input emits nothing", () => {
-    const out = fromCloudAgent([]);
-    assert.equal(out.nodes.length, 0);
-    assert.equal(out.edges.length, 0);
   });
 });
 
@@ -239,7 +165,6 @@ describe("fromConductor", () => {
 });
 
 const OK_SOURCES = [
-  { source: "cloud-agent" as const, ok: true },
   { source: "a2a" as const, ok: true },
   { source: "conductor" as const, ok: true },
 ];
@@ -248,20 +173,18 @@ const empty = { nodes: [], edges: [] };
 
 describe("mergeSnapshot", () => {
   it("adds the orchestrator root and root→source edges", () => {
-    const snap = mergeSnapshot(
-      { cloudAgent: fromCloudAgent([caTask({})]), a2a: empty, conductor: empty },
-      OK_SOURCES,
-      { now: NOW }
-    );
+    const snap = mergeSnapshot({ a2a: fromA2A([a2aTask({})]), conductor: empty }, OK_SOURCES, {
+      now: NOW,
+    });
     assert.ok(snap.nodes.some((n) => n.id === "orchestrator"));
-    assert.ok(snap.edges.some((e) => e.from === "orchestrator" && e.to === "source:cloud-agent"));
+    assert.ok(snap.edges.some((e) => e.from === "orchestrator" && e.to === "source:a2a"));
   });
   it("dedupes a Conductor-mirrored A2A task into one node with a mirror edge", () => {
     const a2a = fromA2A([
       a2aTask({ id: "am1", skill: "conductor", metadata: { conductor: { task_id: "ct1" } } }),
     ]);
     const conductor = fromConductor(baseSnap); // contains conductor:task:ct1 as activity of r1
-    const snap = mergeSnapshot({ cloudAgent: empty, a2a, conductor }, OK_SOURCES, { now: NOW });
+    const snap = mergeSnapshot({ a2a, conductor }, OK_SOURCES, { now: NOW });
     assert.ok(
       !snap.nodes.some((n) => n.id === "a2a:am1"),
       "mirrored A2A work node must be dropped"
@@ -270,38 +193,34 @@ describe("mergeSnapshot", () => {
     assert.equal(mirrorEdge?.to, "source:a2a");
   });
   it("drops terminal work older than STALE_COMPLETED_MS unless showCompleted", () => {
-    const old = caTask({
+    const old = a2aTask({
       id: "old",
-      status: "completed",
-      completedAt: new Date(NOW - STALE_COMPLETED_MS - 1000).toISOString(),
+      state: "completed",
+      updatedAt: new Date(NOW - STALE_COMPLETED_MS - 1000).toISOString(),
     });
-    const parts = { cloudAgent: fromCloudAgent([old]), a2a: empty, conductor: empty };
+    const parts = { a2a: fromA2A([old]), conductor: empty };
     assert.ok(
-      !mergeSnapshot(parts, OK_SOURCES, { now: NOW }).nodes.some((n) => n.id === "cloud-agent:old")
+      !mergeSnapshot(parts, OK_SOURCES, { now: NOW }).nodes.some((n) => n.id === "a2a:old")
     );
     assert.ok(
       mergeSnapshot(parts, OK_SOURCES, { now: NOW, showCompleted: true }).nodes.some(
-        (n) => n.id === "cloud-agent:old"
+        (n) => n.id === "a2a:old"
       )
     );
   });
   it("caps work nodes at MAX_WORK_NODES with a per-source overflow node", () => {
     const many = Array.from({ length: MAX_WORK_NODES + 10 }, (_, i) =>
-      caTask({ id: `m${i}`, updatedAt: new Date(NOW - i * 1000).toISOString() })
+      a2aTask({ id: `m${i}`, updatedAt: new Date(NOW - i * 1000).toISOString() })
     );
-    const snap = mergeSnapshot(
-      { cloudAgent: fromCloudAgent(many), a2a: empty, conductor: empty },
-      OK_SOURCES,
-      { now: NOW }
-    );
+    const snap = mergeSnapshot({ a2a: fromA2A(many), conductor: empty }, OK_SOURCES, { now: NOW });
     const works = snap.nodes.filter((n) => n.kind === "work");
     assert.ok(works.length <= MAX_WORK_NODES, `got ${works.length}`);
-    const overflow = snap.nodes.find((n) => n.id === "overflow:cloud-agent");
+    const overflow = snap.nodes.find((n) => n.id === "overflow:a2a");
     assert.ok(overflow, "overflow node expected");
   });
   it("keeps SourceStatus[] verbatim on the snapshot", () => {
     const src = [{ source: "conductor" as const, ok: false, offline: true }];
-    const snap = mergeSnapshot({ cloudAgent: empty, a2a: empty, conductor: empty }, src, {
+    const snap = mergeSnapshot({ a2a: empty, conductor: empty }, src, {
       now: NOW,
     });
     assert.deepEqual(snap.sources, src);
@@ -313,7 +232,7 @@ describe("mergeSnapshot", () => {
     const conductor = fromConductor(baseSnap); // contains conductor:task:ct1 as activity of r1
     const originalNode = conductor.nodes.find((n) => n.id === "conductor:task:ct1");
     assert.ok(originalNode, "conductor:task:ct1 must exist in the source part");
-    const snap = mergeSnapshot({ cloudAgent: empty, a2a, conductor }, OK_SOURCES, { now: NOW });
+    const snap = mergeSnapshot({ a2a, conductor }, OK_SOURCES, { now: NOW });
     assert.equal(
       "mirrorOf" in (originalNode as object),
       false,
@@ -324,7 +243,7 @@ describe("mergeSnapshot", () => {
   });
   it("materializes an offline placeholder source node for a source reporting offline:true even when ok:true", () => {
     const src = [{ source: "conductor" as const, ok: true, offline: true }];
-    const snap = mergeSnapshot({ cloudAgent: empty, a2a: empty, conductor: empty }, src, {
+    const snap = mergeSnapshot({ a2a: empty, conductor: empty }, src, {
       now: NOW,
     });
     const node = snap.nodes.find((n) => n.id === "source:conductor");
@@ -338,7 +257,7 @@ describe("mergeSnapshot", () => {
   });
   it("failed source placeholder carries the typed sourceIssue union alongside sublabel", () => {
     const errSrc = [{ source: "conductor" as const, ok: false }];
-    const errSnap = mergeSnapshot({ cloudAgent: empty, a2a: empty, conductor: empty }, errSrc, {
+    const errSnap = mergeSnapshot({ a2a: empty, conductor: empty }, errSrc, {
       now: NOW,
     });
     const errNode = errSnap.nodes.find((n) => n.id === "source:conductor");
@@ -346,11 +265,7 @@ describe("mergeSnapshot", () => {
     assert.equal(errNode?.sublabel, "error");
 
     const offlineSrc = [{ source: "conductor" as const, ok: true, offline: true }];
-    const offlineSnap = mergeSnapshot(
-      { cloudAgent: empty, a2a: empty, conductor: empty },
-      offlineSrc,
-      { now: NOW }
-    );
+    const offlineSnap = mergeSnapshot({ a2a: empty, conductor: empty }, offlineSrc, { now: NOW });
     const offlineNode = offlineSnap.nodes.find((n) => n.id === "source:conductor");
     assert.equal(offlineNode?.sourceIssue, "offline");
     assert.equal(offlineNode?.sublabel, "offline");
@@ -358,7 +273,7 @@ describe("mergeSnapshot", () => {
   it("failed source placeholder carries staleSince from the SourceStatus (undefined when the status has none)", () => {
     const staleSince = "2026-09-01T12:00:00.000Z";
     const errSrc = [{ source: "conductor" as const, ok: false, staleSince }];
-    const errSnap = mergeSnapshot({ cloudAgent: empty, a2a: empty, conductor: empty }, errSrc, {
+    const errSnap = mergeSnapshot({ a2a: empty, conductor: empty }, errSrc, {
       now: NOW,
     });
     const errNode = errSnap.nodes.find((n) => n.id === "source:conductor");
@@ -367,34 +282,29 @@ describe("mergeSnapshot", () => {
     // buildSourceStatuses never sets staleSince for the offline case — mergeSnapshot must
     // not invent one, so the placeholder node's staleSince stays undefined.
     const offlineSrc = [{ source: "conductor" as const, ok: true, offline: true }];
-    const offlineSnap = mergeSnapshot(
-      { cloudAgent: empty, a2a: empty, conductor: empty },
-      offlineSrc,
-      { now: NOW }
-    );
+    const offlineSnap = mergeSnapshot({ a2a: empty, conductor: empty }, offlineSrc, { now: NOW });
     const offlineNode = offlineSnap.nodes.find((n) => n.id === "source:conductor");
     assert.equal(offlineNode?.staleSince, undefined);
   });
   it("flags an EXISTING source node when its status starts failing (kept nodes, still stale)", () => {
     const staleSince = "2026-09-01T12:00:00.000Z";
-    const cloudAgent = fromCloudAgent([caTask({ id: "live" })]);
-    const originalSourceNode = cloudAgent.nodes.find((n) => n.id === "source:cloud-agent");
-    assert.ok(originalSourceNode, "the mapper must already emit source:cloud-agent");
+    const a2aPart = fromA2A([a2aTask({ id: "live" })]);
+    const originalSourceNode = a2aPart.nodes.find((n) => n.id === "source:a2a");
+    assert.ok(originalSourceNode, "the mapper must already emit source:a2a");
     const src = [
-      { source: "cloud-agent" as const, ok: false, staleSince },
-      { source: "a2a" as const, ok: true },
+      { source: "a2a" as const, ok: false, staleSince },
       { source: "conductor" as const, ok: true },
     ];
-    const snap = mergeSnapshot({ cloudAgent, a2a: empty, conductor: empty }, src, { now: NOW });
-    const merged = snap.nodes.find((n) => n.id === "source:cloud-agent");
+    const snap = mergeSnapshot({ a2a: a2aPart, conductor: empty }, src, { now: NOW });
+    const merged = snap.nodes.find((n) => n.id === "source:a2a");
     assert.equal(merged?.sourceIssue, "error");
     assert.equal(merged?.staleSince, staleSince);
     assert.ok(
-      snap.nodes.some((n) => n.id === "cloud-agent:live"),
+      snap.nodes.some((n) => n.id === "a2a:live"),
       "the source's work nodes must be kept, not replaced by a placeholder"
     );
     assert.equal(
-      snap.nodes.filter((n) => n.id === "source:cloud-agent").length,
+      snap.nodes.filter((n) => n.id === "source:a2a").length,
       1,
       "no duplicate placeholder for a source that already had a node"
     );
@@ -405,56 +315,47 @@ describe("mergeSnapshot", () => {
   it("flags an EXISTING source node as offline when its status reports offline:true", () => {
     const conductor = fromConductor(baseSnap);
     const src = [
-      { source: "cloud-agent" as const, ok: true },
       { source: "a2a" as const, ok: true },
       { source: "conductor" as const, ok: true, offline: true },
     ];
-    const snap = mergeSnapshot({ cloudAgent: empty, a2a: empty, conductor }, src, { now: NOW });
+    const snap = mergeSnapshot({ a2a: empty, conductor }, src, { now: NOW });
     const merged = snap.nodes.find((n) => n.id === "source:conductor");
     assert.equal(merged?.sourceIssue, "offline");
     assert.equal(merged?.staleSince, undefined);
   });
   it("leaves a healthy source node free of sourceIssue/staleSince", () => {
-    const cloudAgent = fromCloudAgent([caTask({ id: "ok1" })]);
-    const snap = mergeSnapshot({ cloudAgent, a2a: empty, conductor: empty }, OK_SOURCES, {
+    const a2aPart = fromA2A([a2aTask({ id: "ok1" })]);
+    const snap = mergeSnapshot({ a2a: a2aPart, conductor: empty }, OK_SOURCES, {
       now: NOW,
     });
-    const merged = snap.nodes.find((n) => n.id === "source:cloud-agent");
-    assert.ok(merged, "source:cloud-agent expected");
+    const merged = snap.nodes.find((n) => n.id === "source:a2a");
+    assert.ok(merged, "source:a2a expected");
     assert.equal(merged?.sourceIssue, undefined);
     assert.equal(merged?.staleSince, undefined);
   });
   it("overflow node carries droppedByState with the per-state counts of dropped work nodes", () => {
     const many = Array.from({ length: MAX_WORK_NODES + 5 }, (_, i) =>
-      caTask({
+      a2aTask({
         id: `ov${i}`,
-        status: i < MAX_WORK_NODES ? "running" : "failed",
+        state: i < MAX_WORK_NODES ? "working" : "failed",
         updatedAt: new Date(NOW - i * 1000).toISOString(),
       })
     );
-    const snap = mergeSnapshot(
-      { cloudAgent: fromCloudAgent(many), a2a: empty, conductor: empty },
-      OK_SOURCES,
-      { now: NOW }
-    );
-    const overflow = snap.nodes.find((n) => n.id === "overflow:cloud-agent");
+    const snap = mergeSnapshot({ a2a: fromA2A(many), conductor: empty }, OK_SOURCES, { now: NOW });
+    const overflow = snap.nodes.find((n) => n.id === "overflow:a2a");
     assert.ok(overflow, "overflow node expected");
     assert.deepEqual(overflow?.droppedByState, { failed: 5 });
   });
   it("droppedByState is not a shared reference with counts — mutating counts after merge leaves it untouched", () => {
     const many = Array.from({ length: MAX_WORK_NODES + 5 }, (_, i) =>
-      caTask({
+      a2aTask({
         id: `dbs${i}`,
-        status: i < MAX_WORK_NODES ? "running" : "failed",
+        state: i < MAX_WORK_NODES ? "working" : "failed",
         updatedAt: new Date(NOW - i * 1000).toISOString(),
       })
     );
-    const snap = mergeSnapshot(
-      { cloudAgent: fromCloudAgent(many), a2a: empty, conductor: empty },
-      OK_SOURCES,
-      { now: NOW }
-    );
-    const overflow = snap.nodes.find((n) => n.id === "overflow:cloud-agent");
+    const snap = mergeSnapshot({ a2a: fromA2A(many), conductor: empty }, OK_SOURCES, { now: NOW });
+    const overflow = snap.nodes.find((n) => n.id === "overflow:a2a");
     assert.ok(overflow, "overflow node expected");
     const before = { ...overflow?.droppedByState };
     if (overflow?.counts) overflow.counts.failed = 999;
@@ -474,7 +375,7 @@ describe("mergeSnapshot", () => {
         },
       ],
     };
-    const parts = { cloudAgent: empty, a2a: empty, conductor: fromConductor(staleSnap) };
+    const parts = { a2a: empty, conductor: fromConductor(staleSnap) };
     assert.ok(
       !mergeSnapshot(parts, OK_SOURCES, { now: NOW }).nodes.some(
         (n) => n.id === "conductor:task:ctOld"

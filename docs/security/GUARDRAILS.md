@@ -12,7 +12,7 @@ lastUpdated: 2026-10-17
 > block mode as a mandatory boundary (#16413), and what sees a response before post-call)
 
 Guardrails enforce safety, policy, and content transformations at the boundary
-between OmniRoute and upstream providers. Each guardrail can inspect (and
+between 67router and upstream providers. Each guardrail can inspect (and
 optionally reject, transform, or annotate) request payloads (`preCall`) and
 upstream responses (`postCall`).
 
@@ -107,11 +107,10 @@ is byte-identical to the pre-PR-1 guardrail.
 
 #### API-key scope (`visionBridgeKeyScope.ts`)
 
-When the caller's API key restricts `allowedConnections`, quota pools
-(`allowedQuotas`) or models (`allowedModels` / `blockedModels` /
+When the caller's API key restricts `allowedConnections` or models (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), the bridge only
 picks reroute and describe models the key may use, on connections the key may
-use. The describe call then always goes through the OmniRoute self-loop with
+use. The describe call then always goes through the 67router self-loop with
 the `x-omniroute-self-loop-key-id` header, so the receiving chat request
 enforces that key's connection and model policy again. `enforceApiKeyPolicy()`
 honors that header only together with the self-loop bearer, so it can only
@@ -140,7 +139,7 @@ Low-detail sampling degrades OCR accuracy for exactly the text-transcription
 task this prompt asks for, so the describe call itself always asks for high
 detail regardless of what detail level the original inbound request used. This
 only affects the internal describe request body; it does not change how
-OmniRoute forwards the caller's own `image_url.detail` on the primary request —
+67router forwards the caller's own `image_url.detail` on the primary request —
 that default is applied separately, and only for detected OpenCode clients, in
 `defaultImageDetail()` (`open-sse/handlers/chatCore/upstreamBody.ts`). The
 Anthropic wire-format branch of the describe self-loop has no `detail` field
@@ -258,7 +257,7 @@ new page; it no longer owns a second copy of the form. Media Providers also
 links Image-to-Text and Speech-to-Text workflows to the corresponding Modality
 Bridge tabs without removing the existing Speech-to-Text playground.
 
-**Self-loop admission bypass:** when the describe call routes through OmniRoute's
+**Self-loop admission bypass:** when the describe call routes through 67router's
 own `/v1` self-loop (non-standard provider model), the sub-request sends
 `x-omniroute-admission-bypass: internal` and is authenticated with the resolved
 self-loop credential — the local `sk_omniroute` sentinel in local mode, or the
@@ -448,7 +447,7 @@ estimate; the script never fabricates either result.
 
 Each frame is limited to 4 MiB, all raw frames together to 23 MiB, and the
 serialized broker response to 32 MiB. A private temporary directory is removed
-in `finally`. OmniRoute does not bundle FFmpeg and does not accept a custom
+in `finally`. 67router does not bundle FFmpeg and does not accept a custom
 executable path. Before captioning, the bridge applies a conservative visual
 deduplication pass: each JPEG is reduced to a 16×16 grayscale buffer and is
 compared only with the last frame retained. For a requested caption budget
@@ -490,7 +489,7 @@ part when they already possess aligned text. Each cue must carry `text`, a
 finite `start`/`end` interval inside the probed duration, and a whitelisted
 `source` (`client`, `embedded`, or `audio-bridge`); `confidence` defaults to
 `1` and must remain between `0` and `1`. Exact duplicate cues are collapsed.
-OmniRoute never starts transcription from this metadata: validated cues are
+67router never starts transcription from this metadata: validated cues are
 copied into the described result with source, confidence, and interval, and
 are rendered as untrusted observations alongside the frame captions. Invalid,
 out-of-range, or provenance-free text is rejected rather than mixed into the
@@ -931,18 +930,18 @@ deliberately when the behavior changes.
 
 ### Where the hooks run
 
-| Hook / control                      | Runs on                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `runPreCallHooks`                   | Requests handled by `handleChat` (`src/sse/handlers/chat.ts`): `/v1/chat/completions`, `/v1/completions`, `/v1/messages`, `/v1/responses` (and `/v1/responses/*`), `/v1/relay/chat/completions`, `/v1/providers/{provider}/chat/completions`, `/v1/api/chat`, `/v1/antigravity`, `/v1beta/models/*`, and the Telegram chat proxy. Also the dashboard test endpoint `/api/guardrails/test`. A pre-call block returns HTTP 400. |
-| `runPostCallHooks`                  | **Non-streaming** chat responses only (`open-sse/handlers/chatCore/nonStreamingResponse.ts`). Streamed responses never reach it.                                                                                                                                                                                                                                                                                              |
-| Streaming PII                       | `createPiiSseTransform` (`src/lib/streamingPiiTransform.ts`), piped in `streamingPipeline.ts` when `PII_RESPONSE_SANITIZATION` is on. It is not a guardrail, so the disable channels don't affect it.                                                                                                                                                                                                                         |
-| Injection-guard middleware (legacy) | Every prompt-bearing `/v1` route, chat-family included (see [route coverage](#injection-guard-route-coverage--red-team-phase-8--block-d)). Prompt injection only.                                                                                                                                                                                                                                                             |
+| Hook / control                      | Runs on                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `runPreCallHooks`                   | Requests handled by `handleChat` (`src/sse/handlers/chat.ts`): `/v1/chat/completions`, `/v1/completions`, `/v1/messages`, `/v1/responses` (and `/v1/responses/*`), `/v1/providers/{provider}/chat/completions`, `/v1/api/chat`, `/v1/antigravity`, `/v1beta/models/*`, and the Telegram chat proxy. Also the dashboard test endpoint `/api/guardrails/test`. A pre-call block returns HTTP 400. |
+| `runPostCallHooks`                  | **Non-streaming** chat responses only (`open-sse/handlers/chatCore/nonStreamingResponse.ts`). Streamed responses never reach it.                                                                                                                                                                                                                                                                |
+| Streaming PII                       | `createPiiSseTransform` (`src/lib/streamingPiiTransform.ts`), piped in `streamingPipeline.ts` when `PII_RESPONSE_SANITIZATION` is on. It is not a guardrail, so the disable channels don't affect it.                                                                                                                                                                                           |
+| Injection-guard middleware (legacy) | Every prompt-bearing `/v1` route, chat-family included (see [route coverage](#injection-guard-route-coverage--red-team-phase-8--block-d)). Prompt injection only.                                                                                                                                                                                                                               |
 
 ### What is not covered
 
-- **Media, embeddings and data routes** (`/v1/images/*`, `/v1/embeddings`,
-  `/v1/audio/*`, `/v1/videos/generations`, `/v1/music/generations`,
-  `/v1/rerank`, `/v1/search`, `/v1/moderations`) never reach the registry. No
+- **Media and data routes** (`/v1/audio/*`,
+  transcriptions`/v1/videos/generations`, `/v1/music/generations`, `/v1/search`) never reach the
+  registry. No
   PII masking, credential masking or modality bridge runs there. Their only
   check is the legacy injection-guard middleware.
 - **Streamed responses** get no post-call guardrails: no `pii-masker` or
@@ -1072,11 +1071,11 @@ The injection-guard (`createInjectionGuard` / `withInjectionGuard`) covers all r
 that accept user prompts. It respects `INJECTION_GUARD_MODE` (default `warn` = log only;
 `block` = returns HTTP 400 `SECURITY_001`).
 
-| Type            | Routes                                                                                                                                               | Default mode |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| Text (existing) | `/v1/chat/completions`, `/v1/completions`, `/v1/relay/chat/completions`                                                                              | warn         |
-| Generative      | `/v1/messages`, `/v1/responses`, `/v1/images/generations`, `/v1/images/edits`, `/v1/videos/generations`, `/v1/music/generations`, `/v1/audio/speech` | warn         |
-| Data            | `/v1/embeddings`, `/v1/rerank`, `/v1/search`, `/v1/moderations`                                                                                      | warn         |
+| Type            | Routes                                                                             | Default mode |
+| --------------- | ---------------------------------------------------------------------------------- | ------------ |
+| Text (existing) | `/v1/chat/completions`, `/v1/completions`                                          | warn         |
+| Generative      | `/v1/messages`, `/v1/responses`, `/v1/videos/generations`, `/v1/music/generations` | warn         |
+| Data            | `/v1/search`                                                                       | warn         |
 
 Text extraction (`extractMessageContents`) covers `messages`/`input`/`prompt`/`query`+`documents`/`instructions`/`system`.
 
@@ -1094,7 +1093,7 @@ dispatch) has two jobs:
   previous instructions…", DAN-style jailbreaks) asserts the response carries
   `error.code === "SECURITY_001"`, i.e. the guard actually rejected the request.
 - **`garak` (advisory)** — runs garak `--probes promptinject,dan,leakreplay`
-  against a local OmniRoute instance (`http://localhost:20128/v1`). Gated on a
+  against a local 67router instance (`http://localhost:20128/v1`). Gated on a
   provider secret (`PROMPTFOO_PROVIDER_KEY`); skips gracefully and is suffixed
   `|| true`, so it reports without failing CI.
 

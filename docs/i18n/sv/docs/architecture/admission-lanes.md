@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute har **två** processlokala körfältssystem med olika omfång. De är
+67router har **två** processlokala körfältssystem med olika omfång. De är
 kompletterande; operatörer bör veta vilket av dem de tittar på.
 
 ## 1. Bytebaserad processomfattande åtkomstkontroll (`chatBodyAdmission.ts`)

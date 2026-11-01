@@ -5,11 +5,11 @@
 ---
 
 > **Ìpò:** Ó wà fún lílò ní gbogbogbò.
-> **Àwọn olùkà:** Àwọn olùṣàkóso tó ń so OpenCode pọ̀ mọ́ ìmúṣiṣẹ́ OmniRoute.
+> **Àwọn olùkà:** Àwọn olùṣàkóso tó ń so OpenCode pọ̀ mọ́ ìmúṣiṣẹ́ 67router.
 > **Orísun òtítọ́ (schema àtúnṣe):** `src/shared/services/opencodeConfig.ts`
 > **Orísun òtítọ́ (package npm):** `@omniroute/opencode-provider/` (workspace tí a lè tẹ̀ jáde)
 
-[OpenCode](https://opencode.ai) jẹ́ oníbàárà AI CLI/desktop tó ń ṣiṣẹ́ gẹ́gẹ́ bí aṣojú. Ó ń ka àkójọ àwọn provider rẹ̀ láti `~/.config/opencode/opencode.json` (tàbí `opencode.jsonc`) ó sì ń tẹ̀lé schema tó wà ní `https://opencode.ai/config.json`. OmniRoute ń fi ara rẹ̀ hàn sí OpenCode gẹ́gẹ́ bí ọ̀kan lára àwọn provider wọ̀nyẹn — gbogbo ìbéèrè ń gba ojú-ọ̀nà `/v1` boṣewa OmniRoute tó bá OpenAI mu, nítorí náà OpenCode ń rí àǹfààní ìdarí Auto-Combo, àwọn circuit breaker, àwọn ìlànà key, àkíyèsí iṣẹ́, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ láìfọwọ́sí.
+[OpenCode](https://opencode.ai) jẹ́ oníbàárà AI CLI/desktop tó ń ṣiṣẹ́ gẹ́gẹ́ bí aṣojú. Ó ń ka àkójọ àwọn provider rẹ̀ láti `~/.config/opencode/opencode.json` (tàbí `opencode.jsonc`) ó sì ń tẹ̀lé schema tó wà ní `https://opencode.ai/config.json`. 67router ń fi ara rẹ̀ hàn sí OpenCode gẹ́gẹ́ bí ọ̀kan lára àwọn provider wọ̀nyẹn — gbogbo ìbéèrè ń gba ojú-ọ̀nà `/v1` boṣewa 67router tó bá OpenAI mu, nítorí náà OpenCode ń rí àǹfààní ìdarí Auto-Combo, àwọn circuit breaker, àwọn ìlànà key, àkíyèsí iṣẹ́, àti bẹ́ẹ̀ bẹ́ẹ̀ lọ láìfọwọ́sí.
 
 Àwọn **ọ̀nà ìsopọ̀ méjì ni a ṣe àtìlẹ́yìn fún**. Yan ọ̀kan — àtúnṣe kan náà ni wọ́n ń ṣe.
 
@@ -17,16 +17,16 @@
 
 ## Ọ̀nà 1 — Ẹ̀rọ amújáde CLI (kò nílò fifi npm sílẹ̀)
 
-A dábàá rẹ̀ fún àwọn olùlò. Ó wà pẹ̀lú OmniRoute. Ó ń kọ `opencode.json` sí ibi rẹ̀.
+A dábàá rẹ̀ fún àwọn olùlò. Ó wà pẹ̀lú 67router. Ó ń kọ `opencode.json` sí ibi rẹ̀.
 
 ```bash
-# Lẹ́yìn fífi OmniRoute sílẹ̀ (npm i -g @omniroute/cli tàbí ẹ̀dà abẹ́lé)
+# Lẹ́yìn fífi 67router sílẹ̀ (npm i -g @omniroute/cli tàbí ẹ̀dà abẹ́lé)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Ní abẹ́lẹ̀, CLI náà ń pe `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), nítorí náà `opencode.json` tó ti wà tẹ́lẹ̀ yóò pa àwọn provider mìíràn àti àwọn àlàyé rẹ̀ mọ́. A máa fi àkọsílẹ̀ OmniRoute kún un tàbí rọ́pò ó ní ọ̀nà atomic.
+Ní abẹ́lẹ̀, CLI náà ń pe `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), nítorí náà `opencode.json` tó ti wà tẹ́lẹ̀ yóò pa àwọn provider mìíràn àti àwọn àlàyé rẹ̀ mọ́. A máa fi àkọsílẹ̀ 67router kún un tàbí rọ́pò ó ní ọ̀nà atomic.
 
 Fáìlì tí yóò jáde (àkójọ model àìyípadà):
 
@@ -90,8 +90,8 @@ Wo [README package náà](../../@omniroute/opencode-provider/README.md) fún API
 ```
 UI/aṣojú OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (ojú-ọ̀nà OpenAI ti OmniRoute)
-         → OmniRoute /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (ojú-ọ̀nà OpenAI ti 67router)
+         → 67router /v1/chat/completions handler     (open-sse/handlers/chatCore.ts)
             → ìdarí combo / Auto-Combo / executor
                → provider òkè
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 O lè ṣe àtúnṣe rẹ̀ nípasẹ̀ `models: [...]`. Àwọn àfikún tí a dámọ̀ràn:
 
-- `"auto"` — ń mú router [Auto-Combo](../routing/AUTO-COMBO.md) ti OmniRoute tí kò nílò ìṣètò wá sí ojú. Ó ń jẹ́ kí OpenCode yan “model tó dára jù lọ tó wà” láìjẹ́ pé o fi àkójọ náà sínú kóòdù ní tààrà.
-- `"<combo-name>"` — combo èyíkéyìí tí o ti ṣàlàyé nínú dashboard; OmniRoute yóò yanjú rẹ̀ láìsí ìdíwọ́.
+- `"auto"` — ń mú router [Auto-Combo](../routing/AUTO-COMBO.md) ti 67router tí kò nílò ìṣètò wá sí ojú. Ó ń jẹ́ kí OpenCode yan “model tó dára jù lọ tó wà” láìjẹ́ pé o fi àkójọ náà sínú kóòdù ní tààrà.
+- `"<combo-name>"` — combo èyíkéyìí tí o ti ṣàlàyé nínú dashboard; 67router yóò yanjú rẹ̀ láìsí ìdíwọ́.
 
 ---
 
@@ -135,29 +135,29 @@ Yíyọ àtúnṣe méjì yìí kúrò ni **ìṣòro tó wọ́pọ̀ jù lọ*
 
 ## Àwọn ọ̀nà ìfàṣẹsí
 
-| Ètò OmniRoute                                      | Iye `apiKey` tí a dámọ̀ràn                                |
+| Ètò 67router                                       | Iye `apiKey` tí a dámọ̀ràn                                |
 | -------------------------------------------------- | -------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (àiyípadà àkọ́kọ́ fún local) | `sk_omniroute` (ààyè ìgbà díẹ̀ gẹ́gẹ́ bí ó ṣe wà)           |
 | `REQUIRE_API_KEY=true`                             | API key gidi fún olùlò kọ̀ọ̀kan láti Dashboard → API Keys. |
 
-Fún àwọn client ara Anthropic tí ń fi `x-api-key` + `anthropic-version` ránṣẹ́, `extractApiKey` ti OmniRoute tún ń gba key láti `x-api-key`. OpenCode ń lo ojú OpenAI, nítorí náà yóò máa fi `Authorization: Bearer ${apiKey}` ránṣẹ́ nígbà gbogbo — kò sí ìmúlò pàtàkì Anthropic níbí.
+Fún àwọn client ara Anthropic tí ń fi `x-api-key` + `anthropic-version` ránṣẹ́, `extractApiKey` ti 67router tún ń gba key láti `x-api-key`. OpenCode ń lo ojú OpenAI, nítorí náà yóò máa fi `Authorization: Bearer ${apiKey}` ránṣẹ́ nígbà gbogbo — kò sí ìmúlò pàtàkì Anthropic níbí.
 
 ---
 
 ## Yíyanjú ìṣòro
 
-| Ààmì ìṣòro                                        | Ohun tó fà á                                                                           | Àtúnṣe                                                                                                   |
-| ------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `404` lórí gbogbo ìbéèrè pẹ̀lú URL tó ní `/v1/v1/` | Config àtijọ́ láti plugin ṣáájú v3.8 tó fi `/v1` kún un lẹ́ẹ̀mejì.                        | Tún un ṣẹ̀dá nípasẹ̀ Ọ̀nà 1 tàbí 2.                                                                         |
-| `401 Invalid API key`                             | OmniRoute ní `REQUIRE_API_KEY=true`, key náà kò sì jẹ́ mímọ̀.                            | Ṣẹ̀dá key náà nínú dashboard, tàbí ṣètò `REQUIRE_API_KEY=false` (local nìkan), kí o sì lo `sk_omniroute`. |
-| Àkójọ model ṣófo nínú UI OpenCode                 | Gbogbo model àiyípadà àkọ́kọ́ mẹ́rẹ̀ẹ̀rin ni a fi pamọ́ nínú ìfarahàn provider ti OmniRoute. | Fi `models: ["auto", ...]` ránṣẹ́ láti mú àwọn tí o ti mú ṣiṣẹ́ hàn.                                       |
-| OpenCode 500 pẹ̀lú `cannot read property 'models'` | OpenCode àtijọ́ (< 0.1.x) kò gba `models` inú-láìnì.                                    | Ṣe ìgbésókè OpenCode sí version tó tẹ̀lé schema v1 (`opencode.ai/config.json`).                           |
+| Ààmì ìṣòro                                        | Ohun tó fà á                                                                          | Àtúnṣe                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `404` lórí gbogbo ìbéèrè pẹ̀lú URL tó ní `/v1/v1/` | Config àtijọ́ láti plugin ṣáájú v3.8 tó fi `/v1` kún un lẹ́ẹ̀mejì.                       | Tún un ṣẹ̀dá nípasẹ̀ Ọ̀nà 1 tàbí 2.                                                                         |
+| `401 Invalid API key`                             | 67router ní `REQUIRE_API_KEY=true`, key náà kò sì jẹ́ mímọ̀.                            | Ṣẹ̀dá key náà nínú dashboard, tàbí ṣètò `REQUIRE_API_KEY=false` (local nìkan), kí o sì lo `sk_omniroute`. |
+| Àkójọ model ṣófo nínú UI OpenCode                 | Gbogbo model àiyípadà àkọ́kọ́ mẹ́rẹ̀ẹ̀rin ni a fi pamọ́ nínú ìfarahàn provider ti 67router. | Fi `models: ["auto", ...]` ránṣẹ́ láti mú àwọn tí o ti mú ṣiṣẹ́ hàn.                                       |
+| OpenCode 500 pẹ̀lú `cannot read property 'models'` | OpenCode àtijọ́ (< 0.1.x) kò gba `models` inú-láìnì.                                   | Ṣe ìgbésókè OpenCode sí version tó tẹ̀lé schema v1 (`opencode.ai/config.json`).                           |
 
 ---
 
 ## Wo pẹ̀lú
 
-- [Ìtọ́kasí API](../reference/API_REFERENCE.md) — gbogbo ojú-iṣẹ́ OmniRoute REST
+- [Ìtọ́kasí API](../reference/API_REFERENCE.md) — gbogbo ojú-iṣẹ́ 67router REST
 - [Auto-Combo](../routing/AUTO-COMBO.md) — ohun tí `model: "auto"` túmọ̀ sí
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Kóòdù ìpilẹ̀ṣẹ̀: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

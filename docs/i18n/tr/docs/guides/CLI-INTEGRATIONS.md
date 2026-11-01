@@ -7,11 +7,11 @@
 Paylaşılan çalıştırılabilir dosya manifesti, kısıtlanmış alt ortamlar ve kalıcı
 Gemini kurulumu için [CLI başlatma sözleşmeleri](./CLI-LAUNCH-CONTRACTS.md) belgesine bakın.
 
-OmniRoute, bir kodlama CLI'ını (Codex, Claude Code, OpenCode, Cline, …) arka uç
-olarak OmniRoute'u kullanacak şekilde yapılandıran bir `setup-*` komutları ailesi
-sunar; böylece araç **tek** bir uç noktayla iletişim kurar ve OmniRoute, otomatik
+67router, bir kodlama CLI'ını (Codex, Claude Code, OpenCode, Cline, …) arka uç
+olarak 67router'u kullanacak şekilde yapılandıran bir `setup-*` komutları ailesi
+sunar; böylece araç **tek** bir uç noktayla iletişim kurar ve 67router, otomatik
 yedek sağlayıcıya geçiş özelliğiyle istekleri doğru sağlayıcıya yönlendirir. Her
-komut, çalışan bir OmniRoute'tan (yerel veya uzak) **canlı** model kataloğunu okur
+komut, çalışan bir 67router'tan (yerel veya uzak) **canlı** model kataloğunu okur
 ve aracın kendi yapılandırma dosyasını **sizin** makinenize yazar. Araç desteklediği
 sürece API anahtarına bir ortam değişkeni üzerinden başvurulur. Araca özgü kalıcı
 bir ortam dosyası oluşturan komutlar aşağıda belirtilmiştir.
@@ -55,7 +55,7 @@ başına ayrıntılı kılavuzlara bakın:
 
 - [Claude Code yapılandırması](./CLAUDE-CODE-CONFIGURATION.md)
 - [Codex CLI yapılandırması](./CODEX-CLI-CONFIGURATION.md)
-- [Uzak Mod](./REMOTE-MODE.md) — dizüstü bilgisayarınızdan uzak bir OmniRoute'u (VPS / Tailnet) yönetin
+- [Uzak Mod](./REMOTE-MODE.md) — dizüstü bilgisayarınızdan uzak bir 67router'u (VPS / Tailnet) yönetin
 - [VS Code Copilot Chat](./VSCODE-COPILOT.md) — OmniCopilot uzantısı; bu `setup-*`
   komutlarını sizin için düzenleyicinin içinden de çalıştırabilir
 
@@ -91,7 +91,7 @@ sunucudan alınır ve yapılandırma yerel olarak yazılır.
 
 Bayraklarla ilgili notlar (komut kaynağında doğrulanmıştır):
 
-- `--remote <url>` — kataloğu uzak bir OmniRoute'tan alır (`--port`
+- `--remote <url>` — kataloğu uzak bir 67router'tan alır (`--port`
   ve etkin bağlamı geçersiz kılar). `--api-key <key>`, söz konusu
   sunucu için kimlik bilgilerini sağlar (varsayılan olarak `OMNIROUTE_API_KEY` ortam değişkeni veya etkin bağlamın belirteci kullanılır).
 - `--only <patterns>` — virgülle ayrılmış alt dizeler; yalnızca eşleşen model kimliklerini
@@ -112,7 +112,7 @@ Bayraklarla ilgili notlar (komut kaynağında doğrulanmıştır):
   **codex** de `-c model_providers.omniroute.*` bağımsız değişkenleri aracılığıyla alır. **Qwen, `--model` seçeneğini
   kesin olarak gerektiren tek çalıştırma hedefidir** — bu seçenek olmadan `omniroute run qwen`,
   açık bir hatayla `2` koduyla sonlanır.
-- `--port <port>` — yerel OmniRoute bağlantı noktası (varsayılan `20128`; `--remote`
+- `--port <port>` — yerel 67router bağlantı noktası (varsayılan `20128`; `--remote`
   ayarlandığında yok sayılır). Tüm `setup-*` komutlarında ve her iki başlatıcıda bulunur.
 - `omniroute run` çıkış kodları: alt CLI'ın kendi çıkış kodu
   olduğu gibi aktarılır; `2` = geçersiz bağımsız değişkenler (desteklenmeyen hedef, gerekli
@@ -157,7 +157,7 @@ başlatılabilir hedefler olarak sunulmaz.
 
 ## Yerel kullanım
 
-OmniRoute `localhost:20128` üzerinde çalışırken aracınız için kurulum komutunu çalıştırmanız yeterlidir. Katalog yerel sunucudan alınır.
+67router `localhost:20128` üzerinde çalışırken aracınız için kurulum komutunu çalıştırmanız yeterlidir. Katalog yerel sunucudan alınır.
 
 ```bash
 # Codex: eşleşen her model için ~/.codex/ içine bir profil yaz
@@ -184,8 +184,8 @@ omniroute setup-continue --dry-run
 Hiçbir yapılandırma yazmadan başlatın (yalnızca ortam değişkeni enjeksiyonu):
 
 ```bash
-omniroute launch                 # Claude Code → yerel OmniRoute
-omniroute launch-codex           # Codex CLI → yerel OmniRoute
+omniroute launch                 # Claude Code → yerel 67router
+omniroute launch-codex           # Codex CLI → yerel 67router
 omniroute launch-codex --profile glm52
 omniroute run claude --model openai/gpt-5.4
 omniroute run codex --model openai/gpt-5.4 --dry-run --json
@@ -203,7 +203,7 @@ omniroute run claude -- --print-system-prompt "review this diff"
 
 ## Uzak kullanım
 
-Herhangi bir kurulum komutunu `--remote` + `--api-key` ile uzak bir OmniRoute'a yönlendirin. Katalog uzak sunucudan alınır; yapılandırma ise yerel makinenize yazılır.
+Herhangi bir kurulum komutunu `--remote` + `--api-key` ile uzak bir 67router'a yönlendirin. Katalog uzak sunucudan alınır; yapılandırma ise yerel makinenize yazılır.
 
 ```bash
 # Uzak bir VPS üzerindeki OpenCode; yalnızca glm/kimi modellerini tut
@@ -241,7 +241,7 @@ omniroute configure 5dive --model failover-demo --yes
 omniroute setup-5dive --model failover-demo --auth-profile omniroute --agent worker1
 ```
 
-Her iki biçim de bir 5dive **kimlik doğrulama profili** yazar ve bu profile bağlı her `claude` lisansı bundan sonra OmniRoute ile iletişim kurar. Bu hedefe özgü üç nokta vardır:
+Her iki biçim de bir 5dive **kimlik doğrulama profili** yazar ve bu profile bağlı her `claude` lisansı bundan sonra 67router ile iletişim kurar. Bu hedefe özgü üç nokta vardır:
 
 - **Filo ana makinesinde root olarak çalışır.** 5dive komutları yerel systemd birimleri ve root'a ait bir durum dizini üzerinde işlem yapar; uzak mod yoktur. Tarif, zaten root olarak çalışmıyorsa `sudo` üzerinden kendini yeniden çalıştırır (`--no-sudo` bunu devre dışı bırakır ve bunun yerine komutu yazdırır).
 - **Geri döngü adresi olmadığı sürece uç nokta `https://` olmalıdır.** Ajanın API anahtarı her istekte bu URL üzerinden taşınır ve 5dive, makine dışındaki şifrelenmemiş bir uç noktayı reddeder. Özel bir LAN adresi de istisna değildir.
@@ -249,13 +249,13 @@ Her iki biçim de bir 5dive **kimlik doğrulama profili** yazar ve bu profile ba
 
 API anahtarı 5dive'a **stdin** üzerinden (`--api-key=-`) verildiği için hiçbir zaman `ps` çıktısında görünmez.
 
-Profili tek bir model yerine bir OmniRoute **kombosuna** yönlendirmek, filoya sağlayıcı yük devretme özelliğini kazandırır: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) üzerinde kaydedilen çalıştırmada birincil uç nokta turun ortasında tamamen devre dışı kaldığında ajan, kalan adımlarını yedek uç noktada tamamladı ve kesintiyi hiçbir zaman kullanıcıya yansıtmadı.
+Profili tek bir model yerine bir 67router **kombosuna** yönlendirmek, filoya sağlayıcı yük devretme özelliğini kazandırır: [#11578](https://github.com/diegosouzapw/OmniRoute/issues/11578) üzerinde kaydedilen çalıştırmada birincil uç nokta turun ortasında tamamen devre dışı kaldığında ajan, kalan adımlarını yedek uç noktada tamamladı ve kesintiyi hiçbir zaman kullanıcıya yansıtmadı.
 
 ---
 
 ## Temel URL kuralları (hangi araçlar `/v1` ister)
 
-OmniRoute, OpenAI yüzeyini `/v1` konumunda, Anthropic yüzeyini kök dizinde
+67router, OpenAI yüzeyini `/v1` konumunda, Anthropic yüzeyini kök dizinde
 ve yerel Gemini yüzeyini `/v1beta` konumunda sunar. Her entegrasyon, aracın
 beklediği biçime göre yapılandırılmıştır (komut kaynağında doğrulanmıştır):
 
@@ -277,7 +277,7 @@ beklediği biçime göre yapılandırılmıştır (komut kaynağında doğrulanm
 ## Güncelleme sırasında yerel bağımlılıkları koruma: `--include=optional`
 
 `omniroute update` ile güncelleme yaptığınızda (onayladıktan sonra veya `--apply`
-ile), OmniRoute kurulumu yerleşik olarak `--include=optional` seçeneğiyle çalıştırır:
+ile), 67router kurulumu yerleşik olarak `--include=optional` seçeneğiyle çalıştırır:
 
 ```bash
 npm install -g omniroute@latest --include=optional
@@ -306,15 +306,15 @@ değilse 1 koduyla çık), `--apply` (sormadan kur), `--changelog`, `--no-backup
 Sözleşme `@google/gemini-cli` 0.50.0 ile doğrulanmıştır: CLI,
 `GOOGLE_GEMINI_BASE_URL` değişkenini dikkate alır ve buna karşı
 `POST /v1beta/models/<model>:generateContent` (ve
-`:streamGenerateContent?alt=sse`) isteklerini gönderir — bu, OmniRoute'un yerel
+`:streamGenerateContent?alt=sse`) isteklerini gönderir — bu, 67router'un yerel
 Gemini yüzeyiyle (`/v1beta`) tam olarak eşleşir. `omniroute run gemini` bunu
 otomatik olarak yapılandırır:
 
-- `GOOGLE_GEMINI_BASE_URL` → etkin OmniRoute temel URL'si (kök, `/v1` olmadan);
-- `GEMINI_API_KEY` → çözümlenen OmniRoute kimlik bilgisi (seçenek/ortam/bağlam);
+- `GOOGLE_GEMINI_BASE_URL` → etkin 67router temel URL'si (kök, `/v1` olmadan);
+- `GEMINI_API_KEY` → çözümlenen 67router kimlik bilgisi (seçenek/ortam/bağlam);
 - `.gemini/settings.json` dosyası `gemini-api-key` kimlik doğrulamasını seçen
   **geçici ve yalıtılmış bir `GEMINI_CLI_HOME`**; böylece saklanan bir Google OAuth
-  oturumu (Code Assist), OmniRoute'a yönlendirilen başlatmayı hiçbir zaman geçersiz
+  oturumu (Code Assist), 67router'a yönlendirilen başlatmayı hiçbir zaman geçersiz
   kılmaz — çıkıştan sonra kaldırılır;
 - **ortam hijyeni**: alt işlemin ortamından `GOOGLE_API_KEY`,
   `GOOGLE_GENAI_USE_VERTEXAI` ve `GOOGLE_GENAI_USE_GCA` kaldırılır (bunlar kimlik
@@ -339,7 +339,7 @@ entegrasyonu olarak kalmaya devam eden **ACP kaydından**
 
 Deterministik başlatma planı regresyon testleri CI'da (`tests/unit/cli/run-command.test.ts`,
 `tests/unit/cli/run-execution.test.ts`) çalışır. GERÇEK çalıştırılabilir dosyaları GERÇEK bir
-OmniRoute sunucusuna karşı doğrulamak için
+67router sunucusuna karşı doğrulamak için
 `tests/integration/upstream-cli-smoke.int.test.ts` konumunda isteğe bağlı bir test düzeneği bulunur. Bu düzenek hiçbir zaman otomatik olarak çalışmaz
 (`RUN_CLI_SMOKE=1` ayarlanmadıkça her alt test atlanır), kimlik bilgisini DEĞER olarak değil, ortam değişkeni ADI olarak iletir, kaydedilen tüm çıktılardaki anahtar biçimli dizeleri maskeler, çalıştırılabilir dosyası yüklü olmayan hedefleri atlar ve hataları yalnızca bir mantıksal değer yerine
 kimlik doğrulama / upstream / yapılandırma olarak sınıflandırır:

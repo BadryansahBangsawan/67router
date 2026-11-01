@@ -4,16 +4,16 @@
 
 ---
 
-Du būdai naudoti „Cursor“ per „OmniRoute“ be IDE seanso:
+Du būdai naudoti „Cursor“ per „67router“ be IDE seanso:
 
 1. **`cursor-api` teikėjas** (kortelė „Cursor API“, alternatyvusis pavadinimas `cua`): API rakto
    teikėjas, kuriame saugomas „Cursor“ naudotojo API raktas (`crsr_…`, sugeneruotas
-   adresu `https://cursor.com/dashboard/api`). Tada bet kuris „OmniRoute“ klientas gali pasiekti
+   adresu `https://cursor.com/dashboard/api`). Tada bet kuris „67router“ klientas gali pasiekti
    „Cursor“ modelius per `/v1/chat/completions` kaip `cursor-api/<model>` arba
    `cua/<model>`, naudodamas įprastus kvotos, atsarginio maršruto ir žurnalų registravimo sluoksnius. IDE
    teikėjas (`cursor`, OAuth / IDE seansas) lieka nepakeistas.
-2. **„Cursor“ CLI tiesioginis persiuntimas**: nukreipkite „Cursor“ CLI (`agent`) į „OmniRoute“, kad
-   kiekviena CLI atliekama RPC užklausa būtų autentifikuojama naudojant „OmniRoute“ API raktą, persiunčiama
+2. **„Cursor“ CLI tiesioginis persiuntimas**: nukreipkite „Cursor“ CLI (`agent`) į „67router“, kad
+   kiekviena CLI atliekama RPC užklausa būtų autentifikuojama naudojant „67router“ API raktą, persiunčiama
    į „Cursor“ naudojant `cursor-api` ryšio prisijungimo duomenis ir įrašoma
    žurnalų puslapyje.
 
@@ -59,7 +59,7 @@ curl -sS http://localhost:20128/v1/chat/completions \
 Pastabos:
 
 - `cursor-api` modelių sąrašas gaunamas iš statinio „Cursor“ registro (to
-  paties sąrašo, kurį IDE teikėjas naudoja kaip atsarginį); „OmniRoute“ pagrindiniame kompiuteryje
+  paties sąrašo, kurį IDE teikėjas naudoja kaip atsarginį); „67router“ pagrindiniame kompiuteryje
   nereikia įdiegti `cursor-agent`.
 - `POST /api/providers/{id}/refresh-cursor` skirtas tik `cursor` IDE teikėjui;
   `cursor-api` ryšiai neturi atnaujintino IDE seanso.
@@ -68,7 +68,7 @@ Pastabos:
 
 Naudojant `cursor` / `cu` ir `cursor-api` / `cua`, bendras „Claude“ pastangų lygio normalizatorius
 palieka prašomo modelio ID nepakeistą. „Cursor“ gali nurodyti tokią priesagą kaip
-`-low` kaip tikro modelio ID dalį, o ne kaip „OmniRoute“ pastangų lygio alternatyvųjį pavadinimą.
+`-low` kaip tikro modelio ID dalį, o ne kaip „67router“ pastangų lygio alternatyvųjį pavadinimą.
 „Cursor“ vykdyklė išsaugo tikslų atitikmenį aktyviajame kataloge; kai
 atitikmens nėra, esamas modelio parinkiklis pats atlieka priesagos konvertavimą į parametrą.
 
@@ -83,19 +83,19 @@ Maršrutas: `src/app/api/cursor-cli/[...path]/route.ts` →
 užregistruotas faile `src/shared/constants/publicApiRoutes.ts`, nes apdorojimo programa
 pati vykdo autentifikavimą:
 
-| Kelias                                                                                                                       | CLI naudojamas autentifikavimas | Ką daro OmniRoute                                                                                                                                                             |
+| Kelias                                                                                                                       | CLI naudojamas autentifikavimas | Ką daro 67router                                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <OmniRoute API raktas>` | Patikrina raktą, išduoda 1 val. galiojantį HS256 JWT (pasirašytą naudojant `JWT_SECRET`) ir jį grąžina                                                                        |
+| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <67router API raktas>`  | Patikrina raktą, išduoda 1 val. galiojantį HS256 JWT (pasirašytą naudojant `JWT_SECRET`) ir jį grąžina                                                                        |
 | visi kiti keliai (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <tas JWT>`              | Patikrina išdavėją, auditoriją ir galiojimo laiką, parenka aktyvų `cursor-api` ryšį, pakeičia Authorization antraštę į gautą Cursor prieigos raktą ir srautu grąžina atsakymą |
 
 CLI iškoduoja `exp` iš bet kokio gauto prieigos rakto, todėl, pateikus jam
 nepermatomą prieigos raktą, jis bando atlikti pakartotinį keitimą beveik prieš kiekvieną užklausą;
-išduotas JWT padeda to išvengti. Iš OmniRoute gautas 401 atsakymas priverčia CLI
+išduotas JWT padeda to išvengti. Iš 67router gautas 401 atsakymas priverčia CLI
 dar kartą atlikti keitimą.
 
 ### Sąranka
 
-1. Sukurkite OmniRoute API raktą (Valdymo skydas → API raktai) ir `cursor-api`
+1. Sukurkite 67router API raktą (Valdymo skydas → API raktai) ir `cursor-api`
    ryšį.
 2. Nurodykite CLI naudoti HTTP/1.1 agento srautui. Faile
    `~/.cursor/cli-config.json`:
@@ -108,7 +108,7 @@ dar kartą atlikti keitimą.
    sukonfigūruotą agento pagrindinį kompiuterį, o per galinį tašką siunčiami tik
    valdymo lygmens RPC.
 
-3. Paleiskite CLI naudodami OmniRoute:
+3. Paleiskite CLI naudodami 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -117,18 +117,18 @@ dar kartą atlikti keitimą.
    ```
 
 Kiekvienas perdavimo etapas žurnaluose rodomas su teikėju `cursor-api`, užklausos tipu `cursor-cli`,
-keliu `/api/cursor-cli/<rpc>` ir yra priskiriamas OmniRoute API raktui bei
+keliu `/api/cursor-cli/<rpc>` ir yra priskiriamas 67router API raktui bei
 jį aptarnavusiam ryšiui.
 
 ### Trikčių scenarijai
 
-| Situacija                                            | Atsakymas CLI                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------------- |
-| Nežinomas OmniRoute raktas ir `REQUIRE_API_KEY=true` | 401 `unauthenticated` keičiant raktą                          |
-| `REQUIRE_API_KEY=false`                              | anoniminis seansas (atitinka `/v1/*` veikimą)                 |
-| Nebegaliojantis / svetimas / pakeistas seanso JWT    | 401, CLI dar kartą atlieka keitimą                            |
-| OmniRoute API raktas atšauktas po keitimo            | 401 per kitą RPC                                              |
-| Nėra aktyvaus `cursor-api` ryšio                     | 503 `unavailable`                                             |
-| Cursor atmeta ryšio raktą                            | 401 `unauthenticated`, talpykloje esantis seansas pašalinamas |
-| Aukštesnio lygio paslauga nepasiekiama               | 502 `unavailable` (išvalytas pranešimas)                      |
-| `JWT_SECRET` nenustatytas                            | 503 keičiant raktą                                            |
+| Situacija                                           | Atsakymas CLI                                                 |
+| --------------------------------------------------- | ------------------------------------------------------------- |
+| Nežinomas 67router raktas ir `REQUIRE_API_KEY=true` | 401 `unauthenticated` keičiant raktą                          |
+| `REQUIRE_API_KEY=false`                             | anoniminis seansas (atitinka `/v1/*` veikimą)                 |
+| Nebegaliojantis / svetimas / pakeistas seanso JWT   | 401, CLI dar kartą atlieka keitimą                            |
+| 67router API raktas atšauktas po keitimo            | 401 per kitą RPC                                              |
+| Nėra aktyvaus `cursor-api` ryšio                    | 503 `unavailable`                                             |
+| Cursor atmeta ryšio raktą                           | 401 `unauthenticated`, talpykloje esantis seansas pašalinamas |
+| Aukštesnio lygio paslauga nepasiekiama              | 502 `unavailable` (išvalytas pranešimas)                      |
+| `JWT_SECRET` nenustatytas                           | 503 keičiant raktą                                            |

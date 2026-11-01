@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import type { SearchProviderCatalogItem } from "@/shared/schemas/searchTools";
-import type { PlaygroundState } from "@/lib/playground/codeExport";
+import type { PlaygroundState } from "@/lib/codeExport";
 
 import SearchToolsTopBar, { type ActiveTab } from "./components/SearchToolsTopBar";
 import SearchToolsConfigPane, { type ConfigState } from "./components/SearchToolsConfigPane";
@@ -27,10 +29,10 @@ const DEFAULT_CONFIG: ConfigState = {
   searchType: "web",
   fetchFormat: "markdown",
   fullPage: false,
-  rerankModel: "",
 };
 
 export default function SearchToolsClient() {
+  const tSidebar = useTranslations("sidebar");
   const [activeTab, setActiveTab] = useState<ActiveTab>("search");
   const [configState, setConfigState] = useState<ConfigState>(DEFAULT_CONFIG);
   const [catalogProviders, setCatalogProviders] = useState<SearchProviderCatalogItem[]>([]);
@@ -75,6 +77,12 @@ export default function SearchToolsClient() {
 
   return (
     <div className="flex flex-col h-[calc(100vh-120px)]" data-testid="search-tools-studio">
+      <PageHeader
+        compact
+        className="px-4 pb-3"
+        title={tSidebar("searchTools")}
+        description={tSidebar("searchToolsSubtitle")}
+      />
       {/* Top bar: tabs + metrics + export */}
       <SearchToolsTopBar
         activeTab={activeTab}
@@ -92,7 +100,12 @@ export default function SearchToolsClient() {
       {/* Main area: tab content + config pane */}
       <div className="flex flex-1 overflow-hidden">
         {/* Tab content */}
-        <div className="flex-1 overflow-y-auto" role="tabpanel" id={`tabpanel-${activeTab}`} aria-labelledby={`tab-${activeTab}`}>
+        <div
+          className="flex-1 overflow-y-auto"
+          role="tabpanel"
+          id={`tabpanel-${activeTab}`}
+          aria-labelledby={`tab-${activeTab}`}
+        >
           {activeTab === "search" && (
             <SearchTab
               configState={configState}

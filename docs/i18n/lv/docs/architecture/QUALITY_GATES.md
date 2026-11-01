@@ -4,7 +4,7 @@
 
 ---
 
-Šis dokuments ir autoritatīvā atsauce visām OmniRoute CI kvalitātes kontrolēm.
+Šis dokuments ir autoritatīvā atsauce visām 67router CI kvalitātes kontrolēm.
 Tajā ir aprakstīta katra kontrole, ko tā validē, kurā CI uzdevumā tā tiek izpildīta, vai tā izmanto
 pakāpeniski paaugstināmu bāzes līmeni vai izpildes/neizpildes politiku un vai tā bloķē būvējumu vai ir tikai informatīva.
 
@@ -264,14 +264,14 @@ Palaižas pēc `build`. Kļūmes gadījumā bloķē sapludināšanu.
 
 Tās palaižas pēc cron grafika (un ar `workflow_dispatch`), nekad pie PR. Visas ir nebloķējošas.
 
-| Darbplūsma             | Validē                                                                                                                                                                         | Bloķējošs       |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| `nightly-property`     | fast-check īpašību testi ar nejaušu seed un lielu izpildu skaitu                                                                                                               | **Nebloķējošs** |
-| `nightly-resilience`   | kaudzes pieauguma slieksnis, haosa kļūmju injekcija, k6 slodzes/ilgstošās slodzes testi                                                                                        | **Nebloķējošs** |
-| `nightly-llm-security` | promptfoo injekciju aizsardzība (bloķēšanas režīms) + garak zondes (izlaistas, ja nav pakalpojumu sniedzēja noslēpuma)                                                         | **Nebloķējošs** |
-| `nightly-schemathesis` | OpenAPI līgumu fuzzing (schemathesis) pret dzīvu OmniRoute instanci, izmantojot `docs/openapi.yaml` — atklāj specifikācijas pārkāpumus / neapstrādātas 500 kļūdas (Fase 8 B.4) | **Nebloķējošs** |
-| `nightly-mutation`     | Stryker mutāciju testēšanas rādītājs ātrajā vienību testu joslā — izdzīvojušie mutanti atklāj vājus apgalvojumus (assert)                                                      | **Nebloķējošs** |
-| `nightly-compat`       | Node dzinēja saderības matrica pāri atbalstītajiem `engines.node` diapazoniem                                                                                                  | **Nebloķējošs** |
+| Darbplūsma             | Validē                                                                                                                                                                        | Bloķējošs       |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `nightly-property`     | fast-check īpašību testi ar nejaušu seed un lielu izpildu skaitu                                                                                                              | **Nebloķējošs** |
+| `nightly-resilience`   | kaudzes pieauguma slieksnis, haosa kļūmju injekcija, k6 slodzes/ilgstošās slodzes testi                                                                                       | **Nebloķējošs** |
+| `nightly-llm-security` | promptfoo injekciju aizsardzība (bloķēšanas režīms) + garak zondes (izlaistas, ja nav pakalpojumu sniedzēja noslēpuma)                                                        | **Nebloķējošs** |
+| `nightly-schemathesis` | OpenAPI līgumu fuzzing (schemathesis) pret dzīvu 67router instanci, izmantojot `docs/openapi.yaml` — atklāj specifikācijas pārkāpumus / neapstrādātas 500 kļūdas (Fase 8 B.4) | **Nebloķējošs** |
+| `nightly-mutation`     | Stryker mutāciju testēšanas rādītājs ātrajā vienību testu joslā — izdzīvojušie mutanti atklāj vājus apgalvojumus (assert)                                                     | **Nebloķējošs** |
+| `nightly-compat`       | Node dzinēja saderības matrica pāri atbalstītajiem `engines.node` diapazoniem                                                                                                 | **Nebloķējošs** |
 
 Veiktspējas bāzes līnijas (kaudze, TTFB, būvējuma laiks) tiek fiksētas, bet neizmantotas kā sliekšņi: skat. [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -545,7 +545,7 @@ atļauto vienumu sarakstu rada maldīgu kvalitātes iespaidu.
 
 ## Aģentu rīki: LSP-in-the-loop (pēc izvēles)
 
-Papildus CI pārbaudēm OmniRoute ietver **pēc izvēles izmantojamu** `agent-lsp` sagatavi
+Papildus CI pārbaudēm 67router ietver **pēc izvēles izmantojamu** `agent-lsp` sagatavi
 (projekta līmeņa `.mcp.json`, Fase 7 Task 15). Izveidojiet `.mcp.json`,
 lai kodēšanas aģentiem nodrošinātu piekļuvi TypeScript valodas serverim un tie atrisinātu simbolus /
 diagnostikas problēmas **pirms** koda rakstīšanas — tas ir kompilēšanas pirms apgalvošanas papildinājums

@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector je ugrađeni OmniRouteov alat za otklanjanje pogrešaka u HTTPS prometu — alat nalik na Charles Proxy / mitmweb / HTTP Toolkit koji **prepoznaje LLM-ove** i **agente**. Nalazi se na `/dashboard/tools/traffic-inspector` i prima promet uživo iz najviše 5 istodobnih izvora snimanja.
+Traffic Inspector je ugrađeni 67routerov alat za otklanjanje pogrešaka u HTTPS prometu — alat nalik na Charles Proxy / mitmweb / HTTP Toolkit koji **prepoznaje LLM-ove** i **agente**. Nalazi se na `/dashboard/tools/traffic-inspector` i prima promet uživo iz najviše 5 istodobnih izvora snimanja.
 
 **Lokacija na nadzornoj ploči:** `/dashboard/tools/traffic-inspector`
 **Grupa na bočnoj traci:** Alati (nakon AgentBridgea)
@@ -16,21 +16,21 @@ Traffic Inspector je ugrađeni OmniRouteov alat za otklanjanje pogrešaka u HTTP
 
 ### Po čemu je Traffic Inspector jedinstven
 
-| Značajka                                                                                       |  mitmweb   | Charles |  Fiddler   | **OmniRoute Traffic Inspector** |
-| ---------------------------------------------------------------------------------------------- | :--------: | :-----: | :--------: | :-----------------------------: |
-| Temeljen na webu                                                                               |     ✓      |    ✗    |     ✗      |                ✓                |
-| Otvorenog koda                                                                                 |     ✓      |    ✗    | djelomično |                ✓                |
-| **Prepoznaje agente** (zna dolazi li zahtjev iz Antigravityja/Copilota/itd.)                   |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Prepoznaje LLM-ove** (raščlanjuje strukturu OpenAI-ja/Anthropica/Geminija, tokene, model)    |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Vidljivo mapiranje modela** (gemini-3-flash → claude-sonnet-4.7)                             |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Odvojena latencija proxyja/uzvodnog poslužitelja**                                           | djelomično |    ✗    |     ✗      |                ✓                |
-| **Integriran s OmniRouteovim** usmjeravanjem, rezervnim odabirom i troškovima                  |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Otklanjanje pogrešaka proxyja na razini cijelog sustava** (bilo koja aplikacija na računalu) |     ✓      |    ✓    |     ✓      |                ✓                |
-| **Snimanje prilagođenog hosta** (DNS preusmjeravanje po hostu)                                 |     ✓      |    ✓    |     ✓      |                ✓                |
-| **Način rada s okruženjem HTTP_PROXY**                                                         |     ✓      |    ✓    |     ✓      |                ✓                |
-| **Prikaz razgovora** (oblačići s više poruka, tool_use/tool_result)                            |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Spajanje SSE tokova** (rekonstrukcija iz događaja razlika)                                   |     ✗      |    ✗    |     ✗      |                ✓                |
-| **Snimanje sesije** (imenovane sesije koje se mogu izvesti kao .har/.jsonl)                    |     ✗      |    ✓    |     ✓      |                ✓                |
+| Značajka                                                                                       |  mitmweb   | Charles |  Fiddler   | **67router Traffic Inspector** |
+| ---------------------------------------------------------------------------------------------- | :--------: | :-----: | :--------: | :----------------------------: |
+| Temeljen na webu                                                                               |     ✓      |    ✗    |     ✗      |               ✓                |
+| Otvorenog koda                                                                                 |     ✓      |    ✗    | djelomično |               ✓                |
+| **Prepoznaje agente** (zna dolazi li zahtjev iz Antigravityja/Copilota/itd.)                   |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Prepoznaje LLM-ove** (raščlanjuje strukturu OpenAI-ja/Anthropica/Geminija, tokene, model)    |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Vidljivo mapiranje modela** (gemini-3-flash → claude-sonnet-4.7)                             |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Odvojena latencija proxyja/uzvodnog poslužitelja**                                           | djelomično |    ✗    |     ✗      |               ✓                |
+| **Integriran s 67routerovim** usmjeravanjem, rezervnim odabirom i troškovima                   |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Otklanjanje pogrešaka proxyja na razini cijelog sustava** (bilo koja aplikacija na računalu) |     ✓      |    ✓    |     ✓      |               ✓                |
+| **Snimanje prilagođenog hosta** (DNS preusmjeravanje po hostu)                                 |     ✓      |    ✓    |     ✓      |               ✓                |
+| **Način rada s okruženjem HTTP_PROXY**                                                         |     ✓      |    ✓    |     ✓      |               ✓                |
+| **Prikaz razgovora** (oblačići s više poruka, tool_use/tool_result)                            |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Spajanje SSE tokova** (rekonstrukcija iz događaja razlika)                                   |     ✗      |    ✗    |     ✗      |               ✓                |
+| **Snimanje sesije** (imenovane sesije koje se mogu izvesti kao .har/.jsonl)                    |     ✗      |    ✓    |     ✓      |               ✓                |
 
 ### Arhitektura u jednom odlomku
 
@@ -262,7 +262,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // true ako je odgovor SSE
   mappedTo: string | null; // zaglavlje x-omniroute-mapped
-  costEstimateUsd: number | null; // procijenjeni trošak na temelju cijena OmniRoutea
+  costEstimateUsd: number | null; // procijenjeni trošak na temelju cijena 67routera
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Sistemski proxy nije vraćen na prethodne postavke
 
-Ako se OmniRoute sruši dok je aktivan način rada sistemskog proxyja:
+Ako se 67router sruši dok je aktivan način rada sistemskog proxyja:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Osnovna putanja: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Popis zahtjeva (moguće filtriranje: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Pojedinosti pojedinačnog zahtjeva                                                           |
 | DELETE | `/requests`                 | Brisanje međuspremnika u memoriji                                                           |
-| POST   | `/requests/{id}/replay`     | Ponovno izvršavanje istog zahtjeva putem usmjerivača OmniRoute                              |
+| POST   | `/requests/{id}/replay`     | Ponovno izvršavanje istog zahtjeva putem usmjerivača 67router                               |
 | PUT    | `/requests/{id}/annotation` | Spremanje ili ažuriranje bilješke o zahtjevu                                                |
 
 ### WebSocket

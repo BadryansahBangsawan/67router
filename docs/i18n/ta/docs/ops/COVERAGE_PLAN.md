@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |   13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |   13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |   13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |   13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |   14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |   14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |   15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |   15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |   16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |   16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` என்பது குறைந்த கவரேஜைக் கொண்ட கோப்புகளின் மிக அடர்த்தியான தொகுப்பாகும்; எஞ்சியுள்ள இடைவெளியில் இதுவே பெரும்பங்கு வகிக்கிறது.
 - தொகுதி மற்றும் மறுதரவரிசைப்படுத்தல் API வழித்தடங்களுக்கு (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) கையாளுநர்-நிலைச் சோதனைகள் தேவை.
-- கிளவுட் ஏஜென்ட் அடாப்டர்களுக்கும் (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) `tierResolver.ts`க்கும் சூழ்நிலைச் சோதனைகள் தேவை.
 - ஆவண UI கூறுகளும் `src/mitm/systemCommands.ts`உம் குறைந்த முன்னுரிமை கொண்டவை; ஆனால் கிளைக் கவரேஜில் எளிதான முன்னேற்றங்களை வழங்கக்கூடியவை.
 
 ## செயல்படுத்தல் சரிபார்ப்புப் பட்டியல்

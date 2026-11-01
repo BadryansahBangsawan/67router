@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "အမှား: {message}",
-    "serverOffline": "OmniRoute ဆာဗာ အော့ဖ်လိုင်းဖြစ်နေသည်။ စတင်ရန်: omniroute serve",
+    "serverOffline": "67router ဆာဗာ အော့ဖ်လိုင်းဖြစ်နေသည်။ စတင်ရန်: omniroute serve",
     "authRequired": "စစ်မှန်ကြောင်း အတည်ပြုရန် လိုအပ်သည်။ OMNIROUTE_API_KEY ကို သတ်မှတ်ပါ သို့မဟုတ် ဤအမိန့်ကို လုပ်ဆောင်ပါ: omniroute setup",
     "rateLimited": "အသုံးပြုမှုနှုန်း ကန့်သတ်ချက် ကျော်လွန်သွားသည်။ {seconds}s ကြာပြီးနောက် ထပ်မံကြိုးစားပါ။",
     "timeout": "တောင်းဆိုမှုသည် {ms}ms ကြာပြီးနောက် အချိန်ကုန်သွားသည်။",
@@ -15,7 +15,7 @@
     "yesOpt": "အတည်ပြုချက် တောင်းခံမှုကို ကျော်ရန်"
   },
   "setup": {
-    "title": "OmniRoute စနစ်ထည့်သွင်းခြင်း",
+    "title": "67router စနစ်ထည့်သွင်းခြင်း",
     "passwordPrompt": "စီမံခန့်ခွဲသူ စကားဝှက်",
     "providerPrompt": "မူလ provider (ကျော်ရန် အလွတ်ထားပါ)",
     "done": "စနစ်ထည့်သွင်းမှု ပြီးပါပြီ",
@@ -30,7 +30,7 @@
     "opencode": "OpenCode အတွက် တွဲဖက်ပါရှိသော @omniroute/opencode-plugin ကို ထည့်သွင်းပြီး စီစဉ်သတ်မှတ်ရန်"
   },
   "doctor": {
-    "title": "OmniRoute စနစ်စစ်ဆေးခြင်း",
+    "title": "67router စနစ်စစ်ဆေးခြင်း",
     "dbOk": "ဒေတာဘေ့စ်: ကောင်းမွန်သည် ({path})",
     "dbMissing": "ဒေတာဘေ့စ်ကို စတင်သတ်မှတ်မထားပါ — `omniroute setup` ကို လုပ်ဆောင်ပါ",
     "portOk": "Port {port}: အသုံးပြုနိုင်သည်",
@@ -82,7 +82,7 @@
       "providerOpt": "ဝန်ဆောင်မှုပေးသူ အမည်ဖြင့် စစ်ထုတ်ရန်",
       "header": "ID         ဝန်ဆောင်မှုပေးသူ       အမည်                     သက်တမ်းကုန်ဆုံးမှု အခြေအနေ  စမ်းသပ်မှုအခြေအနေ  ခေတ္တရပ်နားမှု ပြီးဆုံးချိန်",
       "noData": "ဝန်ဆောင်မှုပေးသူ ချိတ်ဆက်မှုဒေတာ မရရှိနိုင်ပါ။",
-      "requiresServer": "providers status ကို အသုံးပြုရန် OmniRoute server လည်ပတ်နေရန် လိုအပ်သည်။"
+      "requiresServer": "providers status ကို အသုံးပြုရန် 67router server လည်ပတ်နေရန် လိုအပ်သည်။"
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "ဝန်ဆောင်မှုပေးသူတစ်ခုအတွက် API key ကို ထည့်ရန် သို့မဟုတ် အပ်ဒိတ်လုပ်ရန်",
     "listDescription": "ပြင်ဆင်သတ်မှတ်ထားသော API key အားလုံးကို စာရင်းပြုစုရန်",
     "removeDescription": "ဝန်ဆောင်မှုပေးသူတစ်ခုအတွက် API key ကို ဖယ်ရှားရန်",
-    "regenerateDescription": "OmniRoute API key ကို ပြန်လည်ထုတ်လုပ်ရန်",
-    "revokeDescription": "OmniRoute API key ကို ရုပ်သိမ်းရန်",
+    "regenerateDescription": "67router API key ကို ပြန်လည်ထုတ်လုပ်ရန်",
+    "revokeDescription": "67router API key ကို ရုပ်သိမ်းရန်",
     "revealDescription": "ဖုံးကွယ်ထားခြင်းမရှိသော API key တန်ဖိုးကို ဖော်ပြရန်",
     "usageDescription": "API key တစ်ခုအတွက် လတ်တလောအသုံးပြုမှုကို ပြသရန်",
     "usageLimitOpt": "လတ်တလော တောင်းဆိုမှုအရေအတွက်",
@@ -172,13 +172,6 @@
       "period": "အချိန်အပိုင်းအခြား: 1d|7d|30d|90d|ytd|all (မူလသတ်မှတ်ချက်: 30d)",
       "provider": "Provider ID ဖြင့် စစ်ထုတ်ပါ"
     },
-    "budget": {
-      "description": "ကုန်ကျစရိတ် ဘတ်ဂျက်များကို စီမံပါ",
-      "set": {
-        "scope": "ဘတ်ဂျက်အတိုင်းအတာ (မူလသတ်မှတ်ချက်: global)",
-        "period": "ဘတ်ဂျက်ကာလ: daily|weekly|monthly (မူလသတ်မှတ်ချက်: monthly)"
-      }
-    },
     "quota": {
       "description": "Provider quota အသုံးပြုမှုကို ပြပါ",
       "provider": "Provider ID ဖြင့် စစ်ထုတ်ပါ",
@@ -225,7 +218,7 @@
     "noCombo": "ကိုက်ညီသော combo ကို ရှာမတွေ့ပါ။ ဤ command ဖြင့် တစ်ခုဖန်တီးသတ်မှတ်ပါ: omniroute combo create"
   },
   "chat": {
-    "description": "OmniRoute သို့ တစ်ကြိမ်တည်းသုံး chat prompt ပို့ရန်",
+    "description": "67router သို့ တစ်ကြိမ်တည်းသုံး chat prompt ပို့ရန်",
     "file": "ဖိုင်မှ prompt ကို ဖတ်ရန်",
     "stdin": "stdin မှ prompt ကို ဖတ်ရန်",
     "system": "စနစ်ညွှန်ကြားချက်",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "OmniRoute server ကို စတင်ရန် (မူလလုပ်ဆောင်ချက်)",
-    "starting": "port {port} တွင် OmniRoute server ကို စတင်နေသည်...",
+    "description": "67router server ကို စတင်ရန် (မူလလုပ်ဆောင်ချက်)",
+    "starting": "port {port} တွင် 67router server ကို စတင်နေသည်...",
     "ready": "http://localhost:{port} တွင် အသင့်ဖြစ်ပါပြီ",
     "stopping": "server (PID {pid}) ကို ရပ်တန့်နေသည်...",
     "stopped": "server ရပ်တန့်ပြီးပါပြီ။",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "အရန်သိမ်းခြင်း",
-    "description": "OmniRoute ဒေတာကို အရန်သိမ်းပါ",
+    "description": "67router ဒေတာကို အရန်သိမ်းပါ",
     "creating": "အရန်ဖိုင် ဖန်တီးနေသည်...",
     "done": "အရန်ဖိုင်ကို {path} တွင် သိမ်းဆည်းပြီးပါပြီ",
     "noFiles": "အရန်သိမ်းရန် ဖိုင်မရှိပါ (ဒေတာဘေ့စ်ကို စတင်သတ်မှတ်ရသေးပါ)",
@@ -277,7 +270,7 @@
     "noBackups": "အရန်ဖိုင်များ မတွေ့ပါ။",
     "notFound": "အရန်ဖိုင် မတွေ့ပါ: {name}",
     "confirmRestore": "လက်ရှိဒေတာကို {ts} မှ အရန်ဖိုင်ဖြင့် အစားထိုးမလား။",
-    "createDescription": "OmniRoute ဒေတာကို အရန်သိမ်းပါ",
+    "createDescription": "67router ဒေတာကို အရန်သိမ်းပါ",
     "nameOpt": "စိတ်ကြိုက် အရန်ဖိုင်အမည်",
     "cloudOpt": "အရန်ဖိုင်ကို cloud storage သို့ တင်ပါ",
     "encryptOpt": "အရန်ဖိုင်ကို AES-256-GCM ဖြင့် ကုဒ်ဝှက်ပါ",
@@ -321,7 +314,7 @@
     "clearFailed": "ကက်ရှ်ကို ရှင်းလင်း၍ မရပါ။"
   },
   "redis": {
-    "description": "OmniRoute ၏ ကက်ရှ်သိမ်းဆည်းမှုနှင့် ခွဲတမ်းခြေရာခံမှုအတွက် စက်တွင်း Redis ကွန်တိန်နာတစ်ခုကို (Podman သို့မဟုတ် Docker ဖြင့်) တစ်ချက်နှိပ်၍ စတင်ရန်"
+    "description": "67router ၏ ကက်ရှ်သိမ်းဆည်းမှုနှင့် ခွဲတမ်းခြေရာခံမှုအတွက် စက်တွင်း Redis ကွန်တိန်နာတစ်ခုကို (Podman သို့မဟုတ် Docker ဖြင့်) တစ်ချက်နှိပ်၍ စတင်ရန်"
   },
   "test": {
     "description": "ဝန်ဆောင်မှုပေးသူ ချိတ်ဆက်မှုကို စမ်းသပ်ရန်",
@@ -390,36 +383,8 @@
       "description": "MCP စစ်ဆေးမှတ်တမ်း (audit --source mcp အတွက် အမည်ပွား)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "agent card မှ အသုံးပြုနိုင်သော A2A စွမ်းရည်များကို စာရင်းပြုစုပါ"
-    },
-    "invoke": {
-      "description": "A2A စွမ်းရည်တစ်ခုကို ခေါ်ယူပြီး task ID ကို ပြန်ပေးပါ",
-      "input": "JSON အဝင် object",
-      "input_file": "JSON အဝင်ဖိုင်သို့ လမ်းကြောင်း",
-      "wait": "ပြန်မပေးမီ task ပြီးဆုံးသည်အထိ စောင့်ပါ",
-      "timeout": "ပြီးဆုံးမှုကို စောင့်ဆိုင်းရန် အချိန်ကန့်သတ်ချက်၊ ms ဖြင့် (မူလသတ်မှတ်ချက်- 60000)"
-    },
-    "tasks": {
-      "description": "A2A tasks များကို စီမံပါ",
-      "list": {
-        "status": "အခြေအနေအလိုက် စစ်ထုတ်ပါ",
-        "skill": "စွမ်းရည် ID အလိုက် စစ်ထုတ်ပါ"
-      },
-      "watch": {
-        "description": "ပြီးဆုံးသည်အထိ task အခြေအနေကို အချိန်မှန် စစ်ဆေးပါ"
-      },
-      "stream": {
-        "description": "SSE မှတစ်ဆင့် task လုပ်ဆောင်မှုဖြစ်ရပ်များကို တိုက်ရိုက်ပို့လွှင့်ပါ"
-      },
-      "logs": {
-        "description": "task မက်ဆေ့ချ်များနှင့် artifacts များကို ပြပါ"
-      }
-    }
-  },
   "policy": {
-    "description": "OmniRoute ခွင့်ပြုချက်ဆိုင်ရာ မူဝါဒများကို စီမံပါ",
+    "description": "67router ခွင့်ပြုချက်ဆိုင်ရာ မူဝါဒများကို စီမံပါ",
     "list": {
       "description": "မူဝါဒများကို စာရင်းပြုစုပါ",
       "kind": "အမျိုးအစားအလိုက် စစ်ထုတ်ပါ (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "OmniRoute ချုံ့သိပ်မှု ပိုက်လိုင်းကို စီစဉ်သတ်မှတ်ပြီး စစ်ဆေးပါ",
+    "description": "67router ချုံ့သိပ်မှု ပိုက်လိုင်းကို စီစဉ်သတ်မှတ်ပြီး စစ်ဆေးပါ",
     "status": {
       "description": "လက်ရှိ ချုံ့သိပ်မှု အခြေအနေနှင့် ဆက်တင်များကို ပြပါ"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "တန်နယ် {type} ၏ URL ကို အသစ်ပြောင်းမလား။ (URL အသစ်တစ်ခု ဖန်တီးပါမည်)"
   },
   "stop": {
-    "description": "OmniRoute ဆာဗာကို ရပ်တန့်ပါ",
+    "description": "67router ဆာဗာကို ရပ်တန့်ပါ",
     "stopping": "ဆာဗာကို ရပ်တန့်နေပါသည် (PID {pid})...",
     "stopped": "ဆာဗာကို ရပ်တန့်ပြီးပါပြီ။",
     "notRunning": "လည်ပတ်နေသော ဆာဗာမရှိပါ။",
     "portFallback": "PID ဖိုင်ကို မတွေ့ပါ၊ port အခြေပြု ရပ်တန့်မှုကို ကြိုးစားနေပါသည်..."
   },
   "restart": {
-    "description": "OmniRoute ဆာဗာကို ပြန်လည်စတင်ပါ",
-    "restarting": "OmniRoute ဆာဗာကို ပြန်လည်စတင်နေသည်..."
+    "description": "67router ဆာဗာကို ပြန်လည်စတင်ပါ",
+    "restarting": "67router ဆာဗာကို ပြန်လည်စတင်နေသည်..."
   },
   "dashboard": {
-    "description": "OmniRoute dashboard ကို browser တွင် ဖွင့်ပါ",
+    "description": "67router dashboard ကို browser တွင် ဖွင့်ပါ",
     "opening": "Dashboard ကို {url} တွင် ဖွင့်နေသည်",
     "urlOnly": "Browser မဖွင့်ဘဲ dashboard URL ကိုသာ ထုတ်ပြပါ",
     "tui": "အပြန်အလှန်တုံ့ပြန်နိုင်သော TUI dashboard ကို ဖွင့်ပါ (terminal UI၊ tab ၇ ခု)"
@@ -560,120 +525,6 @@
       "description": "ID ဖြင့် audit log မှတ်တမ်းတစ်ခုကို ရယူပါ"
     }
   },
-  "skills": {
-    "description": "OmniRoute skill များကို စီမံပါ (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "ထည့်သွင်းထားသော skill များကို စာရင်းပြုစုပါ",
-      "type": "အမျိုးအစားအလိုက် စစ်ထုတ်ပါ (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "ဖွင့်ထားသော skill များကိုသာ ပြပါ",
-      "disabled": "ပိတ်ထားသော skill များကိုသာ ပြပါ",
-      "api_key": "API key ဖြင့် စစ်ထုတ်ပါ"
-    },
-    "get": {
-      "description": "ID ဖြင့် skill တစ်ခု၏ အသေးစိတ်အချက်အလက်များကို ရယူပါ"
-    },
-    "install": {
-      "description": "ဖိုင် သို့မဟုတ် URL မှ skill တစ်ခုကို ထည့်သွင်းပါ",
-      "from_file": "Skill JSON သတ်မှတ်ချက်ဖိုင်သို့ လမ်းကြောင်း",
-      "from_url": "အဝေးရှိ skill သတ်မှတ်ချက်၏ URL",
-      "type": "Skill အမျိုးအစား (sandbox|custom|hybrid)",
-      "enable": "ထည့်သွင်းပြီးနောက် skill ကို ဖွင့်ပါ"
-    },
-    "enable": {
-      "description": "ID ဖြင့် skill တစ်ခုကို ဖွင့်ပါ"
-    },
-    "disable": {
-      "description": "ID ဖြင့် skill တစ်ခုကို ပိတ်ပါ",
-      "yes": "အတည်ပြုချက်တောင်းဆိုမှုကို ကျော်ပါ"
-    },
-    "delete": {
-      "description": "ID ဖြင့် skill တစ်ခုကို ဖျက်ရန်",
-      "yes": "အတည်ပြုချက် တောင်းဆိုမှုကို ကျော်ရန်"
-    },
-    "execute": {
-      "description": "ID ဖြင့် skill တစ်ခုကို လုပ်ဆောင်ရန်",
-      "input": "JSON ထည့်သွင်း object",
-      "input_file": "JSON ထည့်သွင်းဖိုင်သို့ လမ်းကြောင်း",
-      "timeout": "လုပ်ဆောင်မှု အချိန်ကုန်ဆုံးကန့်သတ်ချက်၊ ms ဖြင့် (မူလသတ်မှတ်ချက်: 30000)"
-    },
-    "executions": {
-      "description": "skill လုပ်ဆောင်မှု မှတ်တမ်းကို စာရင်းပြုစုရန်",
-      "skill": "skill ID ဖြင့် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 50)",
-      "status": "အခြေအနေဖြင့် စစ်ထုတ်ရန် (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "SSH မှတစ်ဆင့် ထည့်သွင်းထားသော skill များကို စီမံရန်"
-    },
-    "marketplace": {
-      "description": "marketplace မှ skill များကို ရှာဖွေကြည့်ရှုပြီး ထည့်သွင်းရန်"
-    },
-    "mp": {
-      "search": {
-        "description": "marketplace package များကို ရှာဖွေရန်",
-        "category": "အမျိုးအစားဖြင့် စစ်ထုတ်ရန်",
-        "tag": "tag ဖြင့် စစ်ထုတ်ရန်",
-        "limit": "အများဆုံး ရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 30)",
-        "sort": "စီရန်: downloads|rating|recent"
-      },
-      "info": {
-        "description": "package အသေးစိတ်နှင့် readme ကို ပြရန်"
-      },
-      "install": {
-        "description": "marketplace package တစ်ခုကို ထည့်သွင်းရန်",
-        "version": "Package ဗားရှင်း (မူလသတ်မှတ်ချက်: latest)",
-        "enable": "ထည့်သွင်းပြီးနောက် ဖွင့်ရန်",
-        "yes": "အတည်ပြုချက် တောင်းဆိုမှုကို ကျော်ရန်"
-      },
-      "categories": {
-        "description": "marketplace အမျိုးအစားများကို စာရင်းပြုစုရန်"
-      },
-      "featured": {
-        "description": "အထူးရွေးချယ်ထားသော marketplace package များကို ပြရန်"
-      }
-    }
-  },
-  "memory": {
-    "description": "OmniRoute စကားပြောဆိုမှု memory (FTS5 + vector) ကို စီမံရန်",
-    "search": {
-      "description": "အဓိပ္ပာယ်ဆိုင်ရာ query ဖြင့် memory entry များကို ရှာဖွေရန်",
-      "type": "memory အမျိုးအစားဖြင့် စစ်ထုတ်ရန် (user|feedback|project|reference)",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 20)",
-      "api_key": "API key ဖြင့် စစ်ထုတ်ရန်",
-      "token_budget": "ရလဒ်များရှိ စုစုပေါင်း token အရေအတွက်ကို ကန့်သတ်ရန်"
-    },
-    "add": {
-      "description": "memory entry အသစ်တစ်ခု ထည့်ရန်",
-      "content": "Memory စာသားအကြောင်းအရာ",
-      "file": "ဖိုင်မှ အကြောင်းအရာကို ဖတ်ရန်",
-      "type": "Memory အမျိုးအစား (မူလသတ်မှတ်ချက်: user)",
-      "metadata": "JSON မက်တာဒေတာ အရာဝတ္ထု",
-      "api_key": "API key နှင့် ချိတ်ဆက်ရန်"
-    },
-    "clear": {
-      "description": "စစ်ထုတ်မှုများနှင့် ကိုက်ညီသော memory entry များကို ဖျက်ရန်",
-      "type": "အမျိုးအစားဖြင့် စစ်ထုတ်ရန်",
-      "older": "သတ်မှတ်ကာလထက် ပိုဟောင်းသော entry များကို ဖျက်ရန် (30d, 6m, 1y)",
-      "api_key": "API key ဖြင့် စစ်ထုတ်ရန်",
-      "yes": "အတည်ပြုရန် အချက်ပေးချက်ကို ကျော်ရန်"
-    },
-    "list": {
-      "description": "ရှာဖွေမှုအဆင့်သတ်မှတ်ချက်မပါဘဲ memory မှတ်တမ်းများကို စာရင်းပြုရန်",
-      "type": "အမျိုးအစားအလိုက် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံးရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 100)",
-      "api_key": "API key အလိုက် စစ်ထုတ်ရန်"
-    },
-    "get": {
-      "description": "ID ဖြင့် memory မှတ်တမ်းတစ်ခုကို ရယူရန်"
-    },
-    "delete": {
-      "description": "ID ဖြင့် memory မှတ်တမ်းတစ်ခုကို ဖျက်ရန်",
-      "yes": "အတည်ပြုရန် အချက်ပေးချက်ကို ကျော်ရန်"
-    },
-    "health": {
-      "description": "memory စနစ်ခွဲ၏ ကျန်းမာရေးအခြေအနေကို ပြရန် (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "OAuth provider ချိတ်ဆက်မှုများကို စီမံရန်",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "အတည်ပြုရန် အချက်ပေးချက်ကို ကျော်ရန်"
     }
   },
-  "cloud": {
-    "description": "cloud AI agent လုပ်ဆောင်စရာများကို စီမံရန် (codex, devin, jules)",
-    "agents": {
-      "description": "အသုံးပြုနိုင်သော cloud agent များကို စာရင်းပြုရန်"
-    },
-    "agent": {
-      "description": "{agent} cloud agent လုပ်ဆောင်စရာများကို စီမံရန်",
-      "auth": {
-        "description": "OAuth မှတစ်ဆင့် {agent} ကို ခွင့်ပြုရန်"
-      }
-    },
-    "task": {
-      "description": "cloud agent လုပ်ဆောင်စရာများကို စီမံရန်",
-      "create": {
-        "description": "agent လုပ်ဆောင်စရာအသစ်တစ်ခု ဖန်တီးရန်",
-        "title": "လုပ်ဆောင်စရာ ခေါင်းစဉ် (မူလအားဖြင့် prompt ၏ ပထမစာလုံး 80 လုံး)",
-        "prompt": "လုပ်ဆောင်စရာ prompt စာသား",
-        "prompt_file": "ဖိုင်မှ prompt ကို ဖတ်ရန်",
-        "repo": "လုပ်ဆောင်စရာအတွက် clone ပြုလုပ်မည့် repository URL",
-        "branch": "အသုံးပြုမည့် branch အမည်",
-        "metadata": "JSON မက်တာဒေတာ အရာဝတ္ထု"
-      },
-      "list": {
-        "description": "agent လုပ်ဆောင်စရာများကို စာရင်းပြုရန်",
-        "status": "အခြေအနေအလိုက် စစ်ထုတ်ရန် (running|completed|failed|cancelled)",
-        "limit": "အများဆုံးရလဒ်အရေအတွက် (မူလသတ်မှတ်ချက်: 50)"
-      },
-      "get": {
-        "description": "ID ဖြင့် လုပ်ဆောင်စရာအသေးစိတ်ကို ရယူရန်"
-      },
-      "status": {
-        "description": "လုပ်ဆောင်စရာအခြေအနေကို ဖော်ပြရန် (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "လုပ်ဆောင်နေသည့် တာဝန်ကို ပယ်ဖျက်ရန်",
-        "yes": "အတည်ပြုချက်တောင်းခံမှုကို ကျော်ရန်"
-      },
-      "approve": {
-        "description": "စတင်လုပ်ဆောင်ရန် အေးဂျင့်အစီအစဉ်ကို အတည်ပြုရန်"
-      },
-      "message": {
-        "description": "လုပ်ဆောင်နေသည့် တာဝန်ထံ မက်ဆေ့ချ်ပို့ရန်"
-      }
-    },
-    "sources": {
-      "description": "တာဝန်တစ်ခုမှ ထုတ်ပေးထားသည့် ရင်းမြစ်ဖိုင်များကို စာရင်းပြုစုရန်"
-    }
-  },
-  "eval": {
-    "description": "အကဲဖြတ်မှုအစုံများနှင့် လုပ်ဆောင်မှုများကို စီမံရန်",
-    "suites": {
-      "description": "အကဲဖြတ်မှုအစုံများကို စီမံရန်",
-      "list": {
-        "description": "အကဲဖြတ်မှုအစုံများကို စာရင်းပြုစုရန်"
-      },
-      "get": {
-        "description": "ID ဖြင့် အကဲဖြတ်မှုအစုံ၏ အသေးစိတ်အချက်အလက်များကို ရယူရန်"
-      },
-      "create": {
-        "description": "JSON ဖိုင်မှ အကဲဖြတ်မှုအစုံတစ်ခု ဖန်တီးရန်",
-        "file": "အစုံသတ်မှတ်ချက် JSON ဖိုင်၏ လမ်းကြောင်း"
-      }
-    },
-    "run": {
-      "description": "အစုံတစ်ခုအတွက် အကဲဖြတ်မှု လုပ်ဆောင်ချက်ကို စတင်ရန်",
-      "model": "အကဲဖြတ်မည့် မော်ဒယ် ID (မူလတန်ဖိုး: auto)",
-      "combo": "အမည်ဖြင့် သီးခြား combo တစ်ခုကို အတင်းအကျပ် အသုံးပြုရန်",
-      "concurrency": "တစ်ပြိုင်နက် လုပ်ဆောင်မည့် နမူနာအရေအတွက် (မူလတန်ဖိုး: 4)",
-      "tag": "နောက်ပိုင်း စစ်ထုတ်နိုင်ရန် ဤလုပ်ဆောင်မှုကို တဂ်တပ်ရန်",
-      "watch": "ပြီးဆုံးသည်အထိ လုပ်ဆောင်မှုတိုးတက်မှုကို စောင့်ကြည့်ရန်"
-    },
-    "list": {
-      "description": "အကဲဖြတ်မှု လုပ်ဆောင်ချက်များကို စာရင်းပြုစုရန်",
-      "suite": "အစုံ ID ဖြင့် စစ်ထုတ်ရန်",
-      "status": "အခြေအနေဖြင့် စစ်ထုတ်ရန်",
-      "since": "ဤအချိန်မှတ်နောက်ပိုင်း လုပ်ဆောင်ချက်များကို ပြန်ပေးရန်",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက် (မူလတန်ဖိုး: 50)"
-    },
-    "get": {
-      "description": "ID ဖြင့် အကဲဖြတ်မှု လုပ်ဆောင်ချက်၏ အသေးစိတ်အချက်အလက်များကို ရယူရန်"
-    },
-    "results": {
-      "description": "အကဲဖြတ်မှု လုပ်ဆောင်ချက်တစ်ခု၏ နမူနာရလဒ်များကို ပြရန်",
-      "failed": "မအောင်မြင်သည့် နမူနာများကိုသာ ပြရန်"
-    },
-    "cancel": {
-      "description": "လုပ်ဆောင်နေသည့် အကဲဖြတ်မှုကို ပယ်ဖျက်ရန်",
-      "yes": "အတည်ပြုချက်တောင်းခံမှုကို ကျော်ရန်"
-    },
-    "scorecard": {
-      "description": "ပြီးဆုံးသည့် အကဲဖြတ်မှု လုပ်ဆောင်ချက်အတွက် ရမှတ်ကတ်ကို ပြရန်"
-    }
-  },
-  "webhooks": {
-    "description": "OmniRoute webhooks များကို စီမံရန်",
-    "events": {
-      "description": "ရရှိနိုင်သည့် webhook ဖြစ်ရပ်အမျိုးအစားအားလုံးကို စာရင်းပြုစုရန်"
-    },
-    "list": {
-      "description": "ပြင်ဆင်သတ်မှတ်ထားသည့် webhooks များကို စာရင်းပြုစုရန်"
-    },
-    "get": {
-      "description": "ID ဖြင့် webhook အသေးစိတ်အချက်အလက်များကို ရယူရန်"
-    },
-    "add": {
-      "description": "webhook အသစ်တစ်ခုကို မှတ်ပုံတင်ရန်",
-      "url": "ပို့ဆောင်မည့် URL",
-      "events": "ကော်မာဖြင့် ခွဲထားသည့် ဖြစ်ရပ်အမျိုးအစားစာရင်း",
-      "secret": "HMAC လက်မှတ်ရေးထိုးခြင်း လျှို့ဝှက်ချက်",
-      "header": "key=value ပုံစံဖြင့် အပို header (ထပ်ခါတလဲလဲ အသုံးပြုနိုင်သည်)",
-      "no_enabled": "ပိတ်ထားသည့် အခြေအနေဖြင့် webhook ကို ဖန်တီးရန်"
-    },
-    "update": {
-      "description": "ရှိပြီးသား webhook ကို အပ်ဒိတ်လုပ်ရန်",
-      "enabled": "ဖွင့်ထားမှုအခြေအနေကို သတ်မှတ်ရန် (true|false)"
-    },
-    "remove": {
-      "description": "Webhook တစ်ခုကို ဖျက်ရန်",
-      "yes": "အတည်ပြုချက်တောင်းဆိုမှုကို ကျော်ရန်"
-    },
-    "test": {
-      "description": "Webhook တစ်ခုသို့ စမ်းသပ် event ပို့ရန်",
-      "event": "တုပမည့် event အမျိုးအစား (မူလသတ်မှတ်ချက်: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — အလိုအလျောက် အရန်ပြောင်းစနစ်ပါဝင်သော စမတ် AI Router",
+    "description": "67router — အလိုအလျောက် အရန်ပြောင်းစနစ်ပါဝင်သော စမတ် AI Router",
     "version": "ဗားရှင်းကို ပြသပြီး ထွက်ရန်",
     "output": "အထွက်ပုံစံ (table, json, jsonl, csv)",
     "quiet": "မလိုအပ်သော အထွက်များကို ဖျောက်ရန်",
     "no_color": "အရောင်ပါသော အထွက်ကို ပိတ်ရန်",
     "timeout": "HTTP တောင်းဆိုမှု အချိန်ကုန်ဆုံးကာလကို မီလီစက္ကန့်ဖြင့် သတ်မှတ်ရန်",
-    "api_key": "OmniRoute ဆာဗာအတွက် API key",
-    "base_url": "OmniRoute ဆာဗာ၏ အခြေခံ URL",
+    "api_key": "67router ဆာဗာအတွက် API key",
+    "base_url": "67router ဆာဗာ၏ အခြေခံ URL",
     "context": "ဤ command အတွက် အသုံးပြုမည့် ဆာဗာ context/profile",
     "lang": "CLI ပြသဘာသာစကား သတ်မှတ်ရန် (OMNIROUTE_LANG ကို ထပ်ဆင့်အစားထိုးသည်)"
-  },
-  "files": {
-    "description": "ဖိုင်များကို စီမံရန် (အပ်လုဒ်တင်ခြင်း၊ စာရင်းပြုစုခြင်း၊ ရယူခြင်း၊ ဒေါင်းလုဒ်လုပ်ခြင်း၊ ဖျက်ခြင်း)",
-    "list": {
-      "purpose": "ရည်ရွယ်ချက်အလိုက် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက်"
-    },
-    "get": {
-      "description": "ဖိုင် metadata ကို ရယူရန်"
-    },
-    "upload": {
-      "description": "ဖိုင်တစ်ခုကို အပ်လုဒ်တင်ရန်",
-      "purpose": "ဖိုင်ရည်ရွယ်ချက် (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "ဖိုင်အကြောင်းအရာကို ဒေါင်းလုဒ်လုပ်ရန်",
-      "out": "သိမ်းဆည်းမည့် path (မူလသတ်မှတ်ချက်: stdout)"
-    },
-    "delete": {
-      "yes": "အတည်ပြုချက်ကို ကျော်ရန်"
-    }
-  },
-  "batches": {
-    "description": "OpenAI နှင့် ကိုက်ညီသော batch အလုပ်များကို စီမံရန်",
-    "list": {
-      "status": "အခြေအနေအလိုက် စစ်ထုတ်ရန်",
-      "limit": "အများဆုံး ရလဒ်အရေအတွက်"
-    },
-    "create": {
-      "description": "Batch အလုပ်တစ်ခု ဖန်တီးရန်",
-      "inputFile": "ထည့်သွင်းဖိုင် ID",
-      "endpoint": "ပစ်မှတ် endpoint",
-      "window": "ပြီးစီးရမည့် အချိန်ကာလ",
-      "metadata": "Metadata key=value ထည့်ရန်"
-    },
-    "submit": {
-      "description": "JSONL ဖိုင်ကို အပ်လုဒ်တင်ပြီး batch ဖန်တီးရန်",
-      "jsonl": "JSONL ဖိုင်သို့ path",
-      "endpoint": "ပစ်မှတ် endpoint",
-      "wait": "ပြီးစီးသည်အထိ စောင့်ရန်"
-    },
-    "cancel": {
-      "yes": "အတည်ပြုချက်ကို ကျော်ရန်"
-    },
-    "wait": {
-      "timeout": "အချိန်ကုန်ဆုံးကာလကို ms ဖြင့်"
-    },
-    "output": {
-      "out": "အထွက်ကို path တွင် သိမ်းရန်"
-    },
-    "errors": {
-      "out": "အမှားများကို path တွင် သိမ်းရန်"
-    }
   },
   "translator": {
     "description": "တောင်းဆိုမှု body များကို LLM format များအကြား ဘာသာပြန်ရန်",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "OmniRoute OpenAPI spec ကို ရယူအသုံးပြုပြီး စမ်းသပ်ရန်",
+    "description": "67router OpenAPI spec ကို ရယူအသုံးပြုပြီး စမ်းသပ်ရန်",
     "dump": {
       "description": "OpenAPI spec ကို stdout သို့မဟုတ် ဖိုင်သို့ ထုတ်ပေးရန်",
       "format": "အထွက်ပုံစံ: yaml|json (မူလသတ်မှတ်ချက်: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "အဆင့်အမြင့်ဆုံး combo ကို အသက်သွင်းပါ"
     }
   },
-  "oneproxy": {
-    "description": "OneProxy အထက်ပိုင်း pool ကို စီမံပါ",
-    "stats": {
-      "provider": "ပံ့ပိုးသူအလိုက် စစ်ထုတ်ပါ",
-      "period": "အချိန်ကာလ (မူလသတ်မှတ်ချက်: 24h)"
-    },
-    "fetch": {
-      "description": "pool မှ proxy များကို ရယူပါ",
-      "count": "ရယူမည့် proxy အရေအတွက် (မူလသတ်မှတ်ချက်: 1)",
-      "type": "Proxy အမျိုးအစား: http|socks5 (မူလသတ်မှတ်ချက်: http)"
-    },
-    "rotate": {
-      "description": "Proxy လှည့်ပြောင်းခြင်းကို အတင်းလုပ်ဆောင်ပါ",
-      "provider": "လှည့်ပြောင်းမည့် ပံ့ပိုးသူ",
-      "connectionId": "လှည့်ပြောင်းမည့် သီးခြား ချိတ်ဆက်မှု ID"
-    },
-    "config": {
-      "description": "OneProxy config ကို ပြပါ သို့မဟုတ် အပ်ဒိတ်လုပ်ပါ",
-      "enabled": "Proxy pool ကို ဖွင့်ပါ (true|false)",
-      "poolSize": "Pool အရွယ်အစား",
-      "providerSource": "Proxy ပံ့ပိုးသူအတွက် URL",
-      "rotationPolicy": "လှည့်ပြောင်းမှု မူဝါဒ: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "လက်ရှိ proxy pool ကို တိုင်းတာချက်များနှင့်အတူ စာရင်းပြုစုပါ"
-    }
-  },
   "open": {
-    "description": "သီးခြား OmniRoute dashboard စာမျက်နှာကို browser တွင် ဖွင့်ပါ",
+    "description": "သီးခြား 67router dashboard စာမျက်နှာကို browser တွင် ဖွင့်ပါ",
     "url": "URL ကိုသာ ထုတ်ပြပြီး browser ကို မဖွင့်ပါနှင့်"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "OmniRoute instance များအကြား config ကို ထပ်တူပြုပါ",
+    "description": "67router instance များအကြား config ကို ထပ်တူပြုပါ",
     "push": {
       "description": "Config ကို cloud သို့မဟုတ် အဝေးရှိ instance သို့ ပို့ပါ"
     },
@@ -1228,7 +874,7 @@
     "filter": "အဆင့်အလိုက် စစ်ထုတ်ရန် (error,warn,info) — ကော်မာဖြင့် ခွဲခြားထားသည်",
     "lines": "ရယူမည့် စာကြောင်းအရေအတွက်",
     "timeout": "ချိတ်ဆက်မှု အချိန်ကုန်ဆုံးကာလ (ms)",
-    "baseUrl": "OmniRoute API အခြေခံ URL",
+    "baseUrl": "67router API အခြေခံ URL",
     "requestId": "တောင်းဆိုမှု ID ဖြင့် စစ်ထုတ်ရန်",
     "apiKey": "API key ဖြင့် စစ်ထုတ်ရန်",
     "combo": "Combo အမည်ဖြင့် စစ်ထုတ်ရန်",
@@ -1244,10 +890,10 @@
     "description": "စနစ် tray အိုင်ကွန်ကို ထိန်းချုပ်ရန်",
     "show": "tray အိုင်ကွန်ကို ပြရန် (ဆာဗာသည် --tray ဖြင့် လုပ်ဆောင်နေပါက)",
     "hide": "tray အိုင်ကွန်ကို ဖျောက်ရန်",
-    "quit": "tray မှတစ်ဆင့် OmniRoute မှ ထွက်ရန်"
+    "quit": "tray မှတစ်ဆင့် 67router မှ ထွက်ရန်"
   },
   "autostart": {
-    "description": "စနစ်စတင်ချိန်တွင် OmniRoute အလိုအလျောက်စတင်ခြင်းကို စီမံရန် (Linux: systemd user service)",
+    "description": "စနစ်စတင်ချိန်တွင် 67router အလိုအလျောက်စတင်ခြင်းကို စီမံရန် (Linux: systemd user service)",
     "enable": "စနစ်စတင်ချိန်တွင် အလိုအလျောက်စတင်ခြင်းကို ဖွင့်ရန်",
     "disable": "စနစ်စတင်ချိန်တွင် အလိုအလျောက်စတင်ခြင်းကို ပိတ်ရန်",
     "toggle": "စနစ်စတင်ချိန်တွင် အလိုအလျောက်စတင်ခြင်းကို အဖွင့်အပိတ်လုပ်ရန်",
@@ -1268,30 +914,20 @@
     "system": "စနစ်ညွှန်ကြားချက်",
     "resume": "သိမ်းဆည်းထားသော session ကို အမည်ဖြင့် ပြန်လည်စတင်ရန်"
   },
-  "plugin": {
-    "description": "CLI plugin များကို စီမံရန် (omniroute-cmd-*)",
-    "list": "ထည့်သွင်းထားသော plugin များကို စာရင်းပြရန်",
-    "install": "npm သို့မဟုတ် local path မှ plugin တစ်ခုကို ထည့်သွင်းရန်",
-    "remove": "ထည့်သွင်းထားသော plugin တစ်ခုကို ဖယ်ရှားရန်",
-    "info": "ထည့်သွင်းထားသော plugin တစ်ခု၏ အသေးစိတ်အချက်အလက်များကို ပြရန်",
-    "search": "ရရှိနိုင်သော plugin များအတွက် npm registry တွင် ရှာဖွေရန်",
-    "update": "ထည့်သွင်းထားသော plugin များကို အပ်ဒိတ်လုပ်ရန်",
-    "scaffold": "plugin boilerplate အသစ်တစ်ခုကို ဖန်တီးရန်"
-  },
   "launch": {
-    "description": "OmniRoute သို့ ချိတ်ဆက်ထားသော Claude Code ကို စတင်ရန် (local သို့မဟုတ် remote၊ --profile ဖြင့်)",
+    "description": "67router သို့ ချိတ်ဆက်ထားသော Claude Code ကို စတင်ရန် (local သို့မဟုတ် remote၊ --profile ဖြင့်)",
     "token": "Claude client က ပေးပို့သင့်သည့် token (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "{port} တွင် OmniRoute ကို ဆက်သွယ်၍မရပါ။ 'omniroute serve' ဖြင့် စတင်ပါ။",
+    "notRunning": "{port} တွင် 67router ကို ဆက်သွယ်၍မရပါ။ 'omniroute serve' ဖြင့် စတင်ပါ။",
     "notFound": "PATH တွင် 'claude' CLI ကို ရှာမတွေ့ပါ။"
   },
   "run": {
-    "description": "OmniRoute မှတစ်ဆင့် ပံ့ပိုးထားသော CLI ပစ်မှတ်တစ်ခုကို စတင်ပါ"
+    "description": "67router မှတစ်ဆင့် ပံ့ပိုးထားသော CLI ပစ်မှတ်တစ်ခုကို စတင်ပါ"
   },
   "setupClaude": {
-    "description": "OmniRoute မော်ဒယ်ကတ်တလောက်မှ ~/.claude/profiles Claude Code ပရိုဖိုင်များကို ဖန်တီးပါ"
+    "description": "67router မော်ဒယ်ကတ်တလောက်မှ ~/.claude/profiles Claude Code ပရိုဖိုင်များကို ဖန်တီးပါ"
   },
   "connect": {
-    "description": "အဝေးရှိ OmniRoute ဆာဗာသို့ ချိတ်ဆက်ပြီး အဝေးထိန်းမုဒ်သို့ ဝင်ပါ"
+    "description": "အဝေးရှိ 67router ဆာဗာသို့ ချိတ်ဆက်ပြီး အဝေးထိန်းမုဒ်သို့ ဝင်ပါ"
   },
   "tokens": {
     "description": "နယ်ပယ်ကန့်သတ်ထားသော CLI အသုံးပြုခွင့် တိုကင်များကို စီမံပါ (အဝေးထိန်းမုဒ်)"
@@ -1300,10 +936,10 @@
     "description": "လက်ရှိအသုံးပြုနေသော ဆာဗာမှ ပံ့ပိုးသူ+မော်ဒယ်ကို ရွေးချယ်ပြီး ပံ့ပိုးထားသော စက်တွင်း CLI ကို စီစဉ်သတ်မှတ်ပါ"
   },
   "launchCodex": {
-    "description": "OmniRoute သို့ ညွှန်ထားသော Codex CLI ကို စတင်ပါ (စက်တွင်း သို့မဟုတ် အဝေးရှိ VPS)"
+    "description": "67router သို့ ညွှန်ထားသော Codex CLI ကို စတင်ပါ (စက်တွင်း သို့မဟုတ် အဝေးရှိ VPS)"
   },
   "setupCodex": {
-    "description": "OmniRoute တိုက်ရိုက်မော်ဒယ်ကတ်တလောက်မှ ~/.codex ပရိုဖိုင်ဖိုင်များကို ဖန်တီးပါ"
+    "description": "67router တိုက်ရိုက်မော်ဒယ်ကတ်တလောက်မှ ~/.codex ပရိုဖိုင်ဖိုင်များကို ဖန်တီးပါ"
   },
   "packs": {
     "description": "ထည့်သွင်းရွေးချယ်နိုင်သော runtime pack များကို စီမံပါ (ML / ဘရောက်ဇာ အလိုအလျောက်လုပ်ဆောင်မှု)",
@@ -1316,7 +952,7 @@
     "errUnknown": "မသိသော pack: {name}",
     "errNoIndex": "pack အညွှန်းကို မတွေ့ပါ။ pack payload ပါရှိသော --source <dir> ကို ထည့်သွင်းပေးပါ (desktop bundle များတွင် ၎င်းကို app ဘေးတွင် ထည့်သွင်းပေးထားသည်)",
     "installed": "pack \"{name}\" ကို {dir} တွင် ထည့်သွင်းပြီး တိုက်ဆိုင်စစ်ဆေးပြီးပါပြီ",
-    "restartHint": "runtime က pack ကို အသုံးပြုနိုင်ရန် OmniRoute ဆာဗာ (သို့မဟုတ် desktop app) ကို ပြန်လည်စတင်ပါ",
+    "restartHint": "runtime က pack ကို အသုံးပြုနိုင်ရန် 67router ဆာဗာ (သို့မဟုတ် desktop app) ကို ပြန်လည်စတင်ပါ",
     "removed": "pack \"{name}\" ကို ဖယ်ရှားပြီးပါပြီ",
     "notInstalled": "pack \"{name}\" ကို ထည့်သွင်းထားခြင်းမရှိပါ",
     "verifyOk": "ထည့်သွင်းထားသော pack အားလုံးကို အောင်မြင်စွာ တိုက်ဆိုင်စစ်ဆေးပြီးပါပြီ",

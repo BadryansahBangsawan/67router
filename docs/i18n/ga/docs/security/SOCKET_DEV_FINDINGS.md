@@ -49,7 +49,7 @@ a nochtar trí thollán an cosán cóid seo a spreagadh.
 
 Is ionann iad seo agus na horduithe a úsáideann `mitmproxy`, Charles Proxy, Fiddler, agus
 Caddy. Tá sé doiciméadaithe ag
-`docs/security/STEALTH_GUIDE.md` go bhfuil siad ann in OmniRoute.
+`docs/security/STEALTH_GUIDE.md` go bhfuil siad ann in 67router.
 
 **Maolú v3.8.6**:
 
@@ -108,7 +108,7 @@ v3.8.5 d’oibreoirí nár nuashonraigh a n-uathoibriú fós. Bainfear é in v3.
 
 **Cén fáth a gcoinnímid é**: Is é iompórtáil Zed an bealach ionduchtaithe is
 cairdiúla d’úsáideoirí a úsáideann Zed cheana féin agus ar mian leo eochracha a
-soláthraithe a scáthánú isteach in OmniRoute gan iad a ghreamú arís.
+soláthraithe a scáthánú isteach in 67router gan iad a ghreamú arís.
 
 ---
 
@@ -119,7 +119,7 @@ soláthraithe a scáthánú isteach in OmniRoute gan iad a ghreamú arís.
 **Cén fáth ar marcáladh é**: athonnmhairíonn an smután `execFileWithPassword`,
 `runElevatedPowerShell`, agus an cúntóir comhroinnte `quotePowerShell`. Feiceann
 aicmitheoir AI Socket.dev iad mar “fhoireann uirlisí ghinearálta chun orduithe a
-rith ar an óstríomhaire agus pribhléidí a ardú.” Laistigh de OmniRoute, ní úsáidtear
+rith ar an óstríomhaire agus pribhléidí a ardú.” Laistigh de 67router, ní úsáidtear
 iad ach ag cosán suiteála teastais MITM (§1) agus ag `execFileWithPassword` chun
 orduithe `sudo` a rith.
 
@@ -172,7 +172,7 @@ docht.
 
 ---
 
-## §5 — Aisscríobh dintiúr OmniRoute Cloud Sync (`api/keys/[id]/route.js`)
+## §5 — Aisscríobh dintiúr 67router Cloud Sync (`api/keys/[id]/route.js`)
 
 **Comhaid fhoinse**:
 
@@ -207,7 +207,7 @@ rawBody)`) sula bparsáiltear an JSON. Má tá an rún socraithe, tá an síniú
    a dhéanamh go sainráite.
 
 **Cén fáth a gcoinnímid é**: Is é Cloud Sync an t-aon bhealach atá ag tionónta
-OmniRoute Cloud chun dintiúir foirne a lárú. Déanann an ceartúchán an tsamhail
+67router Cloud chun dintiúir foirne a lárú. Déanann an ceartúchán an tsamhail
 bhagartha macánta: "síníonn an freastalaí, fíoraíonn an cliant, roghnaíonn an
 t-oibreoir dul isteach."
 

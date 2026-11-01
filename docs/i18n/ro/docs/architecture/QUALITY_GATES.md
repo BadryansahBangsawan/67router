@@ -4,7 +4,7 @@
 
 ---
 
-Acest document este referința oficială pentru toate porțile de calitate CI din OmniRoute.
+Acest document este referința oficială pentru toate porțile de calitate CI din 67router.
 Acesta descrie fiecare poartă, ce validează, în ce job CI rulează, dacă utilizează
 o referință de tip ratchet sau o politică de tip admis/respins și dacă blochează compilarea sau are rol consultativ.
 
@@ -243,14 +243,14 @@ Rulează după `build`. Blochează merge-ul la eșec.
 
 Acestea rulează pe un program cron (și `workflow_dispatch`), niciodată pe PR-uri. Toate sunt consultative.
 
-| Workflow               | Validează                                                                                                                                                              | Blocant         |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| `nightly-property`     | teste de proprietate fast-check cu seed aleatoriu + număr mare de rulări                                                                                               | **Consultativ** |
-| `nightly-resilience`   | poartă de creștere a heap-ului, injectare de erori haotice, încărcare/soak k6                                                                                          | **Consultativ** |
-| `nightly-llm-security` | gardă de injecție promptfoo (mod blocare) + sonde garak (omise fără un secret de provider)                                                                             | **Consultativ** |
-| `nightly-schemathesis` | fuzzing de contract OpenAPI (schemathesis) împotriva unui OmniRoute live folosind `docs/openapi.yaml` — evidențiază încălcări de spec / 500-uri netratate (Fase 8 B.4) | **Consultativ** |
-| `nightly-mutation`     | scor de mutation-testing Stryker pe calea rapidă de teste unitare — mutanții supraviețuitori evidențiază aserțiuni slabe                                               | **Consultativ** |
-| `nightly-compat`       | matrice de compatibilitate a motorului Node între intervalele `engines.node` suportate                                                                                 | **Consultativ** |
+| Workflow               | Validează                                                                                                                                                             | Blocant         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `nightly-property`     | teste de proprietate fast-check cu seed aleatoriu + număr mare de rulări                                                                                              | **Consultativ** |
+| `nightly-resilience`   | poartă de creștere a heap-ului, injectare de erori haotice, încărcare/soak k6                                                                                         | **Consultativ** |
+| `nightly-llm-security` | gardă de injecție promptfoo (mod blocare) + sonde garak (omise fără un secret de provider)                                                                            | **Consultativ** |
+| `nightly-schemathesis` | fuzzing de contract OpenAPI (schemathesis) împotriva unui 67router live folosind `docs/openapi.yaml` — evidențiază încălcări de spec / 500-uri netratate (Fase 8 B.4) | **Consultativ** |
+| `nightly-mutation`     | scor de mutation-testing Stryker pe calea rapidă de teste unitare — mutanții supraviețuitori evidențiază aserțiuni slabe                                              | **Consultativ** |
+| `nightly-compat`       | matrice de compatibilitate a motorului Node între intervalele `engines.node` suportate                                                                                | **Consultativ** |
 
 Baseline-urile de performanță (heap, TTFB, timp de build) sunt înregistrate, nu impuse ca poartă: vezi [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -521,7 +521,7 @@ listă de permisiuni în continuă creștere oferă o falsă impresie de calitat
 
 ## Instrumente pentru agenți: LSP integrat în buclă (opțional)
 
-Pe lângă controalele CI, OmniRoute include o structură de bază **opțională** `agent-lsp`
+Pe lângă controalele CI, 67router include o structură de bază **opțională** `agent-lsp`
 (un fișier `.mcp.json` la nivel de proiect, Faza 7, Sarcina 15). Creați `.mcp.json`
 pentru a expune un server de limbaj TypeScript agenților de programare, astfel încât aceștia să rezolve simbolurile /
 diagnosticele **înainte** de a scrie cod — un mecanism complementar „compilare înainte de afirmare” pentru

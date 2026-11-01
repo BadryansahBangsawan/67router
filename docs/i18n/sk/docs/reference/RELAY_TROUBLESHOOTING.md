@@ -5,9 +5,9 @@
 ---
 
 Relé (Vercel, Deno, Cloudflare) ukončujú upstreamové pripojenie na
-bezserverovom backende, takže OmniRoute môže odosielať prevádzku zo stabilného regiónu, pričom
+bezserverovom backende, takže 67router môže odosielať prevádzku zo stabilného regiónu, pričom
 API kľúč poskytovateľa zostáva na strane servera. Tento dokument opisuje dva režimy zlyhania,
-s ktorými sa operátori stretávajú v produkcii, a postupy obnovy, ktoré OmniRoute poskytuje
+s ktorými sa operátori stretávajú v produkcii, a postupy obnovy, ktoré 67router poskytuje
 pre každý z nich.
 
 ## Ako sa ukladá autentifikácia relé
@@ -35,7 +35,7 @@ neodošle žiadne autentifikačné údaje.
 1. Otvorte **Nastavenia → Fond proxy**.
 2. Riadky relé s chýbajúcimi autentifikačnými údajmi zobrazujú žltý odznak `chýbajúca autentifikácia` a
    tlačidlo **Opraviť**.
-3. Kliknite na **Opraviť**. OmniRoute zavolá
+3. Kliknite na **Opraviť**. 67router zavolá
    `POST /api/settings/proxies/[id]/repair-relay`, ktorý:
    - dešifruje `relayAuthEnc` pomocou **aktuálneho** kľúča,
    - zapíše nešifrovanú hodnotu `relayAuth` späť do `notes`,
@@ -67,7 +67,7 @@ token nie je možné obnoviť, takže ho nikdy nemusíte hľadať manuálne.
 **Príznak:** test proxy (tlačidlo `speed`) ukazuje, že relé je dostupné, ale požiadavky
 napriek tomu občas zlyhávajú.
 
-Skontrolujte hlavičky s informáciami o relé, ktoré vracia automatická testovacia sonda OmniRoute
+Skontrolujte hlavičky s informáciami o relé, ktoré vracia automatická testovacia sonda 67router
 (pozrite si **Nastavenia → Fond proxy** a počítadlá `relayTested` / `relayAlive`):
 
 - `x-relay-url` — ktorý backend relé odpovedal.

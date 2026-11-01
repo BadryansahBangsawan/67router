@@ -8,7 +8,7 @@ import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 if (typeof mock.module !== "function") {
-  test("#15889 all 14 scenarios execute under the standard unit runner", (t) => {
+  test("#15889 all 13 scenarios execute under the standard unit runner", (t) => {
     const env = { ...process.env };
     delete env.NODE_TEST_CONTEXT;
     const child = spawnSync(
@@ -35,10 +35,10 @@ if (typeof mock.module !== "function") {
       }
     );
     assert.equal(child.status, 0, `${child.error || ""}\n${child.stdout}\n${child.stderr}`);
-    assert.match(child.stdout, /# tests 14\b/);
-    assert.match(child.stdout, /# pass 14\b/);
+    assert.match(child.stdout, /# tests 13\b/);
+    assert.match(child.stdout, /# pass 13\b/);
     assert.match(child.stdout, /# skipped 0\b/);
-    t.diagnostic("Child isolation executed 14 tests: 14 PASS, 0 FAIL, 0 SKIP.");
+    t.diagnostic("Child isolation executed 13 tests: 13 PASS, 0 FAIL, 0 SKIP.");
   });
 } else {
   const dataDir = fs.mkdtempSync(path.join(os.tmpdir(), "omniroute-15889-"));
@@ -107,7 +107,6 @@ if (typeof mock.module !== "function") {
 
   for (const [source, pattern] of [
     ["api_key_allowlist", /API key.*allowlist/i],
-    ["api_key_quota", /API key.*quota/i],
     ["combo_pin", /combo.*pin/i],
     ["routing_allowlist", /routing.*allowlist/i],
   ] as const) {

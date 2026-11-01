@@ -4,7 +4,7 @@
 
 ---
 
-**OmniCopilot** meletakkan setiap model yang disediakan oleh OmniRoute anda ke dalam pemilih model
+**OmniCopilot** meletakkan setiap model yang disediakan oleh 67router anda ke dalam pemilih model
 _asli_ GitHub Copilot Chat. Tiada bar sisi kedua, tiada UI sembang berasingan — mod ejen Copilot, panggilan alat,
 pelayan MCP dan arahan tersuai semuanya terus berfungsi, cuma dijalankan pada model yang anda pilih.
 
@@ -23,13 +23,13 @@ pelayan MCP dan arahan tersuai semuanya terus berfungsi, cuma dijalankan pada mo
 
 ## Persediaan
 
-1. **Jalankan OmniRoute** — `npm install -g omniroute && omniroute` (papan pemuka di `http://localhost:20128`).
+1. **Jalankan 67router** — `npm install -g omniroute && omniroute` (papan pemuka di `http://localhost:20128`).
 2. **Pasang sambungan** — cari "OmniRoute" dalam paparan Extensions.
 3. **Pilih model** — Copilot Chat → pemilih model → **Manage Models…** → **OmniRoute**, kemudian tandakan
    model yang anda mahu.
 
-Tiada apa-apa yang perlu dikonfigurasikan apabila OmniRoute berjalan pada port lalai. Untuk tika jauh, buka
-**ikon OmniRoute dalam Activity Bar** (atau jalankan `OmniRoute: Manage Connection`) dan tetapkan:
+Tiada apa-apa yang perlu dikonfigurasikan apabila 67router berjalan pada port lalai. Untuk tika jauh, buka
+**ikon 67router dalam Activity Bar** (atau jalankan `OmniRoute: Manage Connection`) dan tetapkan:
 
 - **URL pelayan** — akar pelayan, contohnya `http://192.168.0.15:20128`. Akhiran `/v1`
   ditambahkan oleh sambungan; jangan sertakannya.
@@ -75,7 +75,7 @@ HTTP 400 — Model '<id>' ialah model penjanaan imej dan tidak boleh digunakan p
 
 oleh itu, model tersebut ditapis berdasarkan medan `type` sebelum sampai kepada pemilih. **Model Responses-API
 dikekalkan** — setiap entri Codex / GPT-5.x mengiklankan `supported_endpoints: ["responses"]`,
-dan OmniRoute menterjemahkannya untuk `/v1/chat/completions`, maka semuanya boleh digunakan dengan sempurna.
+dan 67router menterjemahkannya untuk `/v1/chat/completions`, maka semuanya boleh digunakan dengan sempurna.
 
 ### Penyedia yang tidak pernah anda konfigurasikan
 
@@ -88,11 +88,11 @@ sambungan.
 
 ## Papan pemuka dalam tab VS Code
 
-`omnicopilot.dashboardOpen: "editor"` memaparkan papan pemuka OmniRoute dalam tab editor melalui
+`omnicopilot.dashboardOpen: "editor"` memaparkan papan pemuka 67router dalam tab editor melalui
 Simple Browser dan bukannya pelayar luaran. Pembenaman perlu **didayakan secara pilihan pada pelayan** melalui
 `DASHBOARD_ALLOW_EMBED=vscode`, yang menyediakan halaman HTML dengan
 `frame-ancestors 'self' vscode-webview:` dan bukannya tetapan lalai `frame-ancestors 'none'` +
-`X-Frame-Options: DENY`. Permukaan API (`/api`, `/v1`, `/v1beta`, `/a2a`, `/healthz`) mengekalkan
+`X-Frame-Options: DENY`. Permukaan API (`/api`, `/v1`, `/v1beta`, `/healthz`) mengekalkan
 pengepala yang ketat dalam kedua-dua keadaan.
 
 > ⚠️ **Ini ialah penanda masa binaan, bukan masa jalan.** Next.js mengkompil `headers()` ke dalam manifes
@@ -133,7 +133,7 @@ Kilo dan Roo — konfigurasi yang sama seperti yang diterangkan dalam
 
 | Gejala                                                        | Punca / penyelesaian                                                                                                                                                                                                                                                         |
 | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tiada model OmniRoute dalam pemilih                           | Pelayan tidak dapat dicapai. Titik bar status bertukar kelabu; jalankan `OmniRoute: Check Connection`. Penemuan tidak memaparkan pemberitahuan secara sengaja dan tidak menyumbang sebarang model, dan bukannya memaparkan gesaan.                                           |
+| Tiada model 67router dalam pemilih                            | Pelayan tidak dapat dicapai. Titik bar status bertukar kelabu; jalankan `OmniRoute: Check Connection`. Penemuan tidak memaparkan pemberitahuan secara sengaja dan tidak menyumbang sebarang model, dan bukannya memaparkan gesaan.                                           |
 | Setiap model muncul dua kali                                  | Anda menggunakan OmniCopilot yang lebih lama daripada 1.0.1 — kemas kini. Sambungan kini meminta `?prefix=alias`.                                                                                                                                                            |
 | Model imej/audio yang pernah disenaraikan kini tiada          | Disengajakan sejak 1.0.1 — model tersebut sememangnya tidak dapat menjawab permintaan sembang.                                                                                                                                                                               |
 | Panel tiada pada Bar Aktiviti                                 | VS Code memindahkan bekas paparan tambahan ke limpahan **"…"** di bahagian bawah Bar Aktiviti, dan bekas yang disembunyikan melalui klik kanan akan kekal tersembunyi. Klik kanan Bar Aktiviti → tandakan **OmniRoute**, atau bukanya dengan `OmniRoute: Manage Connection`. |
@@ -145,6 +145,6 @@ Kilo dan Roo — konfigurasi yang sama seperti yang diterangkan dalam
 ## Lihat juga
 
 - [`CLI-INTEGRATIONS.md`](CLI-INTEGRATIONS.md) — semua alat pengekodan yang lain
-- [`REMOTE-MODE.md`](REMOTE-MODE.md) — mengendalikan OmniRoute dari jauh
+- [`REMOTE-MODE.md`](REMOTE-MODE.md) — mengendalikan 67router dari jauh
 - [`../reference/API_REFERENCE.md`](../reference/API_REFERENCE.md) — kontrak `/v1/models`
 - [`docs/CATALOG.md`](https://github.com/diegosouzapw/OmniCopilot/blob/main/docs/CATALOG.md) — nota katalog sambungan itu sendiri

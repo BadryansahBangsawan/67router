@@ -25,7 +25,7 @@ Ensimmäinen rivi, jonka ensimmäisessä sarakkeessa on sana `provider` sellaise
 Lataa aloitustiedosto tuontimodaalista (**Lataa CSV-malli**). Esimerkki:
 
 ```csv
-# OmniRoute-palveluntarjoajien tuonti (sijaintiin perustuvat sarakkeet)
+# 67router-palveluntarjoajien tuonti (sijaintiin perustuvat sarakkeet)
 provider,name,apiKey,baseUrl,priority
 openai,Prod OpenAI,sk-your-openai-key,,1
 ```

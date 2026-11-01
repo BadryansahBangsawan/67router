@@ -6,7 +6,7 @@
 
 ## Ülevaade
 
-OmniRoute CLI käsud autendivad kohaliku haldus-API vastu
+67router CLI käsud autendivad kohaliku haldus-API vastu
 `HMAC-SHA256(machine-id, salt)` loaga, mis saadetakse päringu päises
 `x-omniroute-cli-token`.
 

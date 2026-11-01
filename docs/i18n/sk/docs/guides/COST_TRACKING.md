@@ -4,7 +4,7 @@
 
 ---
 
-Ako OmniRoute odhaduje, zaznamenáva a vykazuje náklady na každú požiadavku — a prečo je
+Ako 67router odhaduje, zaznamenáva a vykazuje náklady na každú požiadavku — a prečo je
 číslo na ovládacom paneli **ukazovateľom úspor**, nie faktúrou.
 
 Pozri tiež: [Používateľská príručka](./USER_GUIDE.md) · [Galéria funkcií](./FEATURES.md)
@@ -13,11 +13,11 @@ Pozri tiež: [Používateľská príručka](./USER_GUIDE.md) · [Galéria funkci
 
 ## Čo to je (a čo to nie je)
 
-OmniRoute priraďuje každému dokončeniu náklady v USD na jednu požiadavku vynásobením počtu
+67router priraďuje každému dokončeniu náklady v USD na jednu požiadavku vynásobením počtu
 tokenov cenovými sadzbami modelu. Tieto čísla sa používajú na ovládacom paneli **Náklady**,
 v CLI `omniroute cost` / `omniroute usage`, exportoch CSV/JSON a rozpočtoch jednotlivých API kľúčov.
 
-> **„Náklady“ na ovládacom paneli sú ukazovateľom úspor, nie faktúrou.** OmniRoute vám nikdy
+> **„Náklady“ na ovládacom paneli sú ukazovateľom úspor, nie faktúrou.** 67router vám nikdy
 > nič neúčtuje — smeruje vaše požiadavky k poskytovateľom, ktorých ste už pripojili (vaše
 > vlastné predplatné, bezplatné úrovne a API kľúče). „Celkové náklady 290 USD“ vytvorené výlučne
 > na bezplatných modeloch znamenajú približne **290 USD, ktoré ste _nezaplatili_**
@@ -30,7 +30,7 @@ na ovládacom paneli sú ukazovateľom úspor, nie faktúrou).
 
 Keďže toto číslo je odhad:
 
-- Závisí od cenovej tabuľky, ktorú má OmniRoute pre každý model. Model bez záznamu
+- Závisí od cenovej tabuľky, ktorú má 67router pre každý model. Model bez záznamu
   o cene prispieva nákladmi `0` (v prehľade sa zobrazuje ako riadok „Starší / bezplatný“).
 - Prevádzke v rámci bezplatnej úrovne a predplatného sa stále pripočítavajú _odhadované_
   náklady — ide o sumu, ktorú ušetríte, nie o dlžnú sumu.
@@ -48,7 +48,7 @@ Náklady pochádzajú z cenovej tabuľky určenej podľa nasledujúceho poradia 
 2. **Synchronizované externé ceny** — načítané z verejného súboru
    `model_prices_and_context_window.json` služby LiteLLM, keď je synchronizácia povolená (ukladajú sa v samostatnom
    mennom priestore `pricing_synced`, takže nikdy neprepíšu vaše vlastné nastavenia).
-3. **Predvolené hodnoty zapísané v kóde** — dodávané s OmniRoute.
+3. **Predvolené hodnoty zapísané v kóde** — dodávané s 67router.
 
 Synchronizácia externých cien je **voliteľná** a predvolene vypnutá. Súvisiace premenné prostredia
 (pozri [`.env.example`](../../.env.example)):
@@ -193,7 +193,7 @@ nie je uvedené inak.
 
 ## CLI
 
-CLI nástroja OmniRoute sprístupňuje príkazy na prácu s nákladmi, využitím a cenami (registrované v
+CLI nástroja 67router sprístupňuje príkazy na prácu s nákladmi, využitím a cenami (registrované v
 [`bin/cli/commands/registry.mjs`](../../bin/cli/commands/registry.mjs)).
 
 ### `omniroute cost`

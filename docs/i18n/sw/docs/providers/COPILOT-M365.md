@@ -39,7 +39,7 @@ URL kamili ina umbizo lifuatalo:
 wss://substrate.office.com/m365Copilot/Chathub/<oid>@<tenant>?...&access_token=<jwt>
 ```
 
-6. Katika OmniRoute, nenda kwenye **Providers → Add Provider**, chagua **Microsoft 365 Copilot
+6. Katika 67router, nenda kwenye **Providers → Add Provider**, chagua **Microsoft 365 Copilot
    (BizChat)**, na ubandike kitambulisho katika umbizo:
 
 ```
@@ -55,9 +55,9 @@ Badala ya kunakili mwenyewe thamani kutoka kwenye URL ya WebSocket, unaweza kuha
 1. Fungua **DevTools → Network**.
 2. Anza au endelea na mazungumzo ya BizChat (hili huanzisha muunganisho wa WebSocket).
 3. Bofya kulia kwenye paneli ya Network na uchague **Save all as HAR with content**.
-4. Katika OmniRoute, tumia kitufe cha **Import .har file** kwenye kisanduku cha mazungumzo cha muunganisho wa mtoa huduma.
+4. Katika 67router, tumia kitufe cha **Import .har file** kwenye kisanduku cha mazungumzo cha muunganisho wa mtoa huduma.
 
-OmniRoute hukagua HAR ili kupata URL ya Chathub WebSocket, huchopoa
+67router hukagua HAR ili kupata URL ya Chathub WebSocket, huchopoa
 `access_token` na `chathubPath`, na hujaza sehemu za kitambulisho kiotomatiki.
 Uingizaji wa HAR husimbua muda wa kuisha kwa JWT na huonyesha muda uliosalia wa tokeni.
 
@@ -80,7 +80,7 @@ Ili kuepuka kunasa upya mwenyewe, unaweza kuhifadhi tokeni ya kuonyesha upya ya 
 | `tier`         | `individual` (chaguo-msingi), `edu`, au `enterprise`                                  |
 
 Pata tokeni ya kuonyesha upya kutoka kwenye mtiririko wa Microsoft wa msimbo wa kifaa au msimbo wa uidhinishaji
-wenye upeo wa `substrate.office.com/sydney`. `refreshToken` ikiwa imewekwa, OmniRoute
+wenye upeo wa `substrate.office.com/sydney`. `refreshToken` ikiwa imewekwa, 67router
 huonyesha upya `access_token` kabla ya kila ombi, kwa hivyo huhitaji
 kunasa upya baada ya kila muda wa ~dakika 75 kuisha.
 

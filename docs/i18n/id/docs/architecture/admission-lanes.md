@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memiliki **dua** sistem jalur lokal-proses dengan cakupan berbeda. Keduanya
+67router memiliki **dua** sistem jalur lokal-proses dengan cakupan berbeda. Keduanya
 saling melengkapi; operator harus mengetahui sistem mana yang sedang mereka lihat.
 
 ## 1. Penerimaan seluruh proses berbasis byte (`chatBodyAdmission.ts`)

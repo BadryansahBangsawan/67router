@@ -7,7 +7,7 @@
 > **Pinagmumulan ng katotohanan:** `src/lib/gamification/`, `src/lib/db/gamification.ts`, `src/app/api/gamification/`
 > **Huling na-update:** 2026-06-28 — v3.8.40
 
-Kabilang sa OmniRoute ang isang lokal-munang gamification layer na nagbibigay ng mga gantimpala sa mga user para sa
+Kabilang sa 67router ang isang lokal-munang gamification layer na nagbibigay ng mga gantimpala sa mga user para sa
 pakikipag-ugnayan sa platform — paggawa ng mga request, pagpapalit ng mga provider, paggawa ng
 mga combo, pagbabahagi ng mga token, at pag-aambag sa komunidad. Nasa
 SQLite ang lahat ng state; opsyonal at nakabatay sa push ang federation sa mga community server.
@@ -36,7 +36,7 @@ mga gantimpala sa pag-imbita).
 | Mga Leaderboard          | Mga saklaw na pandaigdigan, lingguhan, buwanan, pagbabahagi ng token, at kontribusyon      |
 | Pagbabahagi ng Token     | Maglipat ng mga credit sa pagitan ng mga user sa pamamagitan ng double-entry ledger        |
 | Pag-imbita at Pag-redeem | Mga referral code na may SHA-256 hashed storage                                            |
-| Mga Community Server     | Makipag-federate sa mga external na instance ng OmniRoute                                  |
+| Mga Community Server     | Makipag-federate sa mga external na instance ng 67router                                   |
 | Anti-Cheat               | Server-side na pagmamarka, rate limiting, at z-score anomaly detection                     |
 
 ### Mga Prinsipyo ng Disenyo
@@ -114,7 +114,7 @@ src/app/api/gamification/
 
 ### Mga Talahanayan ng Database
 
-Nasa pangunahing OmniRoute SQLite database ang lahat ng talahanayan, na ginawa ng migration na
+Nasa pangunahing 67router SQLite database ang lahat ng talahanayan, na ginawa ng migration na
 `060_create_gamification.sql`. Ang WAL journaling ay minana mula sa singleton na
 `getDbInstance()` sa `src/lib/db/core.ts`.
 
@@ -173,7 +173,7 @@ Nasa pangunahing OmniRoute SQLite database ang lahat ng talahanayan, na ginawa n
 
 ### Module ng Domain: `src/lib/db/gamification.ts`
 
-Sinusunod nito ang karaniwang pattern ng OmniRoute — ini-import ang `getDbInstance()` mula sa
+Sinusunod nito ang karaniwang pattern ng 67router — ini-import ang `getDbInstance()` mula sa
 `core.ts` at nag-e-export ng mga naka-type na CRUD function. Walang raw SQL sa mga route handler.
 
 Mga pangunahing function:
@@ -236,7 +236,7 @@ xp_for_level(n) = floor(100 * n^1.5)
 
 | Aksyon            | XP  | Paglalarawan                                                            |
 | ----------------- | --- | ----------------------------------------------------------------------- |
-| `request`         | 1   | Bawat API request na niruruta sa pamamagitan ng OmniRoute               |
+| `request`         | 1   | Bawat API request na niruruta sa pamamagitan ng 67router                |
 | `provider_switch` | 5   | Paglipat sa ibang provider                                              |
 | `model_switch`    | 3   | Paglipat sa ibang model                                                 |
 | `combo_create`    | 10  | Paglikha ng bagong combo                                                |
@@ -580,7 +580,7 @@ export async function transferTokens(
 | `token_hash` | SHA-256(raw_token)                 |
 
 Isang beses lamang ibinabalik sa user ang raw token sa oras ng paggawa. Hindi na ito
-kailanman iniimbak o ipinapakita muli ng OmniRoute — ang hash lamang ang nananatili.
+kailanman iniimbak o ipinapakita muli ng 67router — ang hash lamang ang nananatili.
 
 ### Pag-iwas sa Self-Referral
 
@@ -714,7 +714,7 @@ Maaaring i-query ng mga admin ang buong audit trail sa pamamagitan ng `GET /api/
 
 ## Mga API Route
 
-Sinusunod ng lahat ng route ang karaniwang pattern ng OmniRoute:
+Sinusunod ng lahat ng route ang karaniwang pattern ng 67router:
 
 ```
 Route → CORS preflight → Pagpapatunay ng body (Zod) → Auth (extractApiKey)

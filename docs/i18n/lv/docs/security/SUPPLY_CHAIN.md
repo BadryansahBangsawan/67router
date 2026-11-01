@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute publicē npm + Docker artefaktus. Šie vārti nodrošina izcelsmi (provenance),
+67router publicē npm + Docker artefaktus. Šie vārti nodrošina izcelsmi (provenance),
 inventāru (SBOM) un CVE skenēšanu, viss ir atvērtā koda (OSS), integrēts izlaišanas darbplūsmās.
 **Konsultatīvā pieeja vispirms** — tie ziņo tagad, bet paaugstina līdz bloķējošam pēc pirmās
 veiksmīgās (zaļās) izlaišanas.
@@ -65,7 +65,7 @@ Saskaņā ar iepriekš minēto CVE novirzes risinājuma "nav augšupējā laboju
   pašreizējā npm-latest (`0.1.29`) joprojām izmanto `extract-zip@2.0.1`.
 - **Nav sasniedzams no ražošanas.** `promptfoo` ir tikai izstrādes atkarība (nekad nav norādīta
   sadaļā `dependencies`), un neviens fails `src/`, `open-sse/` vai `bin/` neimportē
-  `extract-zip` npm pakotni — OmniRoute paša `extractZip()` palīgfunkcija
+  `extract-zip` npm pakotni — 67router paša `extractZip()` palīgfunkcija
   (`src/lib/versionManager/binaryManager.ts:93`) izmanto vietējos `unzip`/`tar`
   un nav saistīta. `@openai/codex-security` arī nodrošina savu symlink-traversal
   aizsardzību papildus `extract-zip` onEntry atzvanam.

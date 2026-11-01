@@ -4,7 +4,7 @@
 
 ---
 
-Le déchiffrement transparent TPROXY est le **5e mode de capture** d’OmniRoute pour la pile MITM
+Le déchiffrement transparent TPROXY est le **5e mode de capture** de 67router pour la pile MITM
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md).
 Il intercepte et **déchiffre** le trafic HTTPS local sortant sous Linux à l’aide de
 TPROXY au niveau du noyau et du routage basé sur des politiques — **sans** usurper `/etc/hosts` et
@@ -55,7 +55,7 @@ Utilisez-le lorsque vous souhaitez capturer et déchiffrer le trafic d’un proc
 
 Comme l’interception s’effectue dans le noyau, le processus d’origine ne nécessite **aucune
 modification de configuration** — mais il doit faire confiance à l’autorité de certification dynamique installée par
-OmniRoute (voir [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
+67router (voir [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
 
@@ -73,7 +73,7 @@ addon non compilé), le chargeur d’addon (`src/mitm/tproxy/transparentSocket.t
 renvoie `null` au lieu de lever une exception. L’état du mode de capture indique alors
 `available: false`, le bouton d’activation du tableau de bord est **désactivé** avec l’infobulle
 « Le déchiffrement TPROXY nécessite Linux + root + l’addon natif », et le reste
-d’OmniRoute continue de fonctionner.
+de 67router continue de fonctionner.
 
 ---
 
@@ -263,7 +263,7 @@ grâce à une marque de contournement sur le socket (**SO_MARK**) :
 | **Assainissement des erreurs**             | Les réponses d’erreur de la route passent par `sanitizeErrorMessage()` (règle stricte nº 12).                                                                                                                                                                                                                                                                                                                                                                      |
 
 **L’AC MITM constitue une capacité puissante.** Une AC approuvée par le système d’exploitation et capable de signer pour n’importe quel
-hôte permet de déchiffrer tout ce qu’OmniRoute intercepte. Elle est protégée par le
+hôte permet de déchiffrer tout ce que 67router intercepte. Elle est protégée par le
 mode de capture TPROXY explicite, limité à l’accès local et désactivé par défaut, et l’entrée du magasin de confiance
 est supprimée lorsque vous arrêtez ce mode.
 
@@ -373,7 +373,7 @@ renvoie `available: false` lorsque l’extension est absente.
 ### Règles de pare-feu obsolètes après un plantage
 
 `revertTproxy()` est l’inverse exact de l’application et est idempotente. L’arrêt du
-mode annule les règles ; si OmniRoute a été interrompu pendant une session, utilisez l’action
+mode annule les règles ; si 67router a été interrompu pendant une session, utilisez l’action
 **Repair** d’AgentBridge (`POST /api/tools/agent-bridge/repair`) pour annuler l’état système
 orphelin (usurpation DNS, AC racine, proxy système). Les règles TPROXY `mangle` et la route sont également
 automatiquement supprimées au redémarrage.

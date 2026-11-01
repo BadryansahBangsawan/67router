@@ -10,7 +10,7 @@
 
 ## Lý do tồn tại
 
-OmniRoute đã trả lời hai câu hỏi về chi phí, nhưng cả hai đều không phải là điều mà phần lớn đơn vị vận hành quan tâm.
+67router đã trả lời hai câu hỏi về chi phí, nhưng cả hai đều không phải là điều mà phần lớn đơn vị vận hành quan tâm.
 
 | Cơ chế hiện có                                           | Trả lời                                      |
 | -------------------------------------------------------- | -------------------------------------------- |

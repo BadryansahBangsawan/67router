@@ -4,18 +4,18 @@
 
 ---
 
-Bu sənəd OmniRoute-a əlavə edilmiş geribildirimlə idarə olunan adaptiv marşrutlaşdırma təməlini təsvir edir. O, bilərəkdən kiçik saxlanılıb: tipləşdirilmiş marşrutlaşdırma nəticəsi kanalı, mövcud avtomatik kombinasiya qiymətləndiricisini məlumatlandıran onlayn keyfiyyət siqnalı, istəyə bağlı OpenTelemetry ixracatçısı və izaholunma endpoint-i təqdim edir. O, mövcud dayanıqlılıq stekini (dövrə açarı, bağlantının soyuma müddəti, modelin bloklanması, sağlamlıq matrisi, avtopilot) **əvəz etmir** — onu tamamlayır.
+Bu sənəd 67router-a əlavə edilmiş geribildirimlə idarə olunan adaptiv marşrutlaşdırma təməlini təsvir edir. O, bilərəkdən kiçik saxlanılıb: tipləşdirilmiş marşrutlaşdırma nəticəsi kanalı, mövcud avtomatik kombinasiya qiymətləndiricisini məlumatlandıran onlayn keyfiyyət siqnalı, istəyə bağlı OpenTelemetry ixracatçısı və izaholunma endpoint-i təqdim edir. O, mövcud dayanıqlılıq stekini (dövrə açarı, bağlantının soyuma müddəti, modelin bloklanması, sağlamlıq matrisi, avtopilot) **əvəz etmir** — onu tamamlayır.
 
 ## 1. Arxitektur kontekst
 
-OmniRoute **sorğular üçün qaynar yola** və **idarəetmə/intellekt müstəvisinə** malik məlumat müstəvisidir. Qaynar yol sürətli, yaddaş baxımından səmərəli, asinxron, dayanıqlı və proqnozlaşdırıla bilən qalmalıdır. Qiymətləndirmə, keyfiyyətin hesablanması, eksperimentlər və tarixi təhlil idarəetmə müstəvisinə aiddir.
+67router **sorğular üçün qaynar yola** və **idarəetmə/intellekt müstəvisinə** malik məlumat müstəvisidir. Qaynar yol sürətli, yaddaş baxımından səmərəli, asinxron, dayanıqlı və proqnozlaşdırıla bilən qalmalıdır. Qiymətləndirmə, keyfiyyətin hesablanması, eksperimentlər və tarixi təhlil idarəetmə müstəvisinə aiddir.
 
 ```
 AI Agenti / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   məlumat müstəvisi (sürətli, sinxron, yaddaşdaxili)
+│    67router        │   məlumat müstəvisi (sürətli, sinxron, yaddaşdaxili)
 │ marşrutlama / keçid │
 │ sağlamlıq / qoruma  │
 │ keş / axın          │
@@ -34,16 +34,15 @@ AI Agenti / IDE
 
 ### Əvvəldən mövcud olanlar (audit edilib, təkrarlanmayıb)
 
-| Konsepsiya                                                       | Mövcud reallaşdırma                                                                                             |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Əlçatanlıq (trafik göndərə bilərikmi?)                           | Dövrə açarı (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-də saxlanılan), bağlantının soyuma müddəti, modelin bloklanması |
-| Sağlamlıq hesabatı                                               | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                         |
-| Kölgə trafik                                                     | `open-sse/services/combo/shadowRouting.ts`                                                                      |
-| Qoruyucu mexanizmlər                                             | `src/lib/guardrails/` (əvvəl/sonra qarmaqları)                                                                  |
-| Dəqiq keş                                                        | `src/lib/semanticCache.ts` (imza əsaslı)                                                                        |
-| Qiymətləndiricilər / qiymətləndirmə ilə idarə olunan marşrutlama | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                            |
-| Kombinasiya qərarlarının izaholunması                            | `open-sse/services/combo/decisionTrace.ts`                                                                      |
-| İdarəetmə panelinin real vaxt hadisələri                         | `src/lib/events/eventBus.ts` (UI bildiriş kanalı, `unknown` faydalı yüklər, 100 qeyddən ibarət tarixçə)         |
+| Konsepsiya                               | Mövcud reallaşdırma                                                                                             |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Əlçatanlıq (trafik göndərə bilərikmi?)   | Dövrə açarı (CLOSED/DEGRADED/OPEN/HALF_OPEN, DB-də saxlanılan), bağlantının soyuma müddəti, modelin bloklanması |
+| Sağlamlıq hesabatı                       | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                         |
+| Kölgə trafik                             | `open-sse/services/combo/shadowRouting.ts`                                                                      |
+| Qoruyucu mexanizmlər                     | `src/lib/guardrails/` (əvvəl/sonra qarmaqları)                                                                  |
+| Dəqiq keş                                | `src/lib/semanticCache.ts` (imza əsaslı)                                                                        |
+| Kombinasiya qərarlarının izaholunması    | `open-sse/services/combo/decisionTrace.ts`                                                                      |
+| İdarəetmə panelinin real vaxt hadisələri | `src/lib/events/eventBus.ts` (UI bildiriş kanalı, `unknown` faydalı yüklər, 100 qeyddən ibarət tarixçə)         |
 
 Marşrutlaşdırma hadisəsi qatı `eventBus`-ın yenidən reallaşdırılması **deyil**: həmin şin idarəetmə panelinin real vaxt bildiriş kanalıdır (tipləşdirilmiş _hadisə adları_, qeyri-şəffaf faydalı yüklər, UI istehlakçıları). `RoutingEvent` idarəetmə müstəvisinin geribildirim qəbulediciləri (keyfiyyət izləyicisi, OTel ixracatçısı, izah saxlancı) tərəfindən istehlak olunan tipləşdirilmiş _nəticə_ strukturudur (gecikmə/tokenlər/xərc/nəticə/bitmə səbəbi).
 
@@ -219,7 +218,7 @@ Fayllar: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK istifadə etmir).
 - Span-lar GenAI semantik konvensiyalarına (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`), həmçinin OmniRoute marşrutlaşdırma
+  `gen_ai.completion.finish_reason`, `gen_ai.system`), həmçinin 67router marşrutlaşdırma
   atributlarına (nəticə, status, ttft, təkrar cəhdlər, ehtiyat keçid) uyğundur.
 - `record()` yalnız məhdud ölçülü buferə növbələyir (O(1)); fon taymeri
   asinxron şəkildə `POST {endpoint}/v1/traces` vasitəsilə göndəriş edir. Həddindən artıq yük zamanı
@@ -241,7 +240,7 @@ Fayllar: `open-sse/services/routing/otel.ts`
 
 ## 6. Qiymətləndirmə müstəvisi ilə inteqrasiya (Future AGI hazırlığı)
 
-OmniRoute Future AGI-ni (və ya istənilən qiymətləndiricini) **potensial
+67router Future AGI-ni (və ya istənilən qiymətləndiricini) **potensial
 intellekt/qiymətləndirmə bekendi kimi qəbul edir, asılılıq kimi yox**. İnteqrasiya nöqtələri:
 
 - `RoutingEventSink` hadisələri qiymətləndiriciyə asinxron şəkildə yönləndirə bilər.
@@ -250,8 +249,6 @@ intellekt/qiymətləndirmə bekendi kimi qəbul edir, asılılıq kimi yox**. İ
 - Gələcək `Evaluator` (deterministik, lokal hakim, HTTP, WASM)
   hadisələri/treysləri qəbul edib eyni `getQualityScore`/keyfiyyət əmsalı yoluna ötürülən
   `QualityScore` qaytara bilər.
-- Mövcud qiymətləndirməyə əsaslanan marşrutlaşdırma (`open-sse/services/evalRouting.ts`)
-  aktiv olduqda kombinasiya hədəflərini `eval_runs` keçid nisbətlərinə əsasən artıq
   yenidən sıralayır.
 
 Heç bir qiymətləndirmə sorğu yolunda sinxron şəkildə işləmir və şlüz

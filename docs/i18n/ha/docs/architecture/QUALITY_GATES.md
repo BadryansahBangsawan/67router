@@ -4,7 +4,7 @@
 
 ---
 
-Wannan takarda ita ce madogara mafi inganci ga dukkan ƙofofin ingancin CI a OmniRoute.
+Wannan takarda ita ce madogara mafi inganci ga dukkan ƙofofin ingancin CI a 67router.
 Tana bayyana kowace ƙofa, abin da take tantancewa, aikin CI da take gudana a cikinsa, ko tana amfani da
 ma’aunin ratchet ko tsarin wucewa/faɗuwa, da kuma ko tana hana ginin ci gaba ko kuwa shawara ce kawai.
 
@@ -256,14 +256,14 @@ Yana gudana bayan `build`. Yana toshe merge idan ya kasa.
 
 Waɗannan suna gudana a kan jadawalin cron (da `workflow_dispatch`), ba taba a kan PRs ba. Dukansu masu shawara ne.
 
-| Tsarin aiki            | Yana tabbatar da                                                                                                                                                          | Mai toshewa     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| `nightly-property`     | gwaje-gwajen kaddarorin fast-check tare da random seed + babban adadin gudu                                                                                               | **Mai shawara** |
-| `nightly-resilience`   | ƙofar heap-growth, shigar da kuskuren chaos, k6 load/soak                                                                                                                 | **Mai shawara** |
-| `nightly-llm-security` | tsaron injection na promptfoo (yanayin toshewa) + garak probes (ana tsallake su ba tare da secret na mai samarwa ba)                                                      | **Mai shawara** |
-| `nightly-schemathesis` | fuzzing na kwantiragin OpenAPI (schemathesis) a kan OmniRoute mai rai ta amfani da `docs/openapi.yaml` — yana bayyana keta ka'idojin spec / 500s marasa kula (Fase 8 B.4) | **Mai shawara** |
-| `nightly-mutation`     | maki na gwajin juyin halitta na Stryker a kan hanar unit mai sauri — mutants da suka tsira suna bayyana asserts masu rauni                                                | **Mai shawara** |
-| `nightly-compat`       | tsarin dacewar injin Node a kan jerin `engines.node` da ake tallafawa                                                                                                     | **Mai shawara** |
+| Tsarin aiki            | Yana tabbatar da                                                                                                                                                         | Mai toshewa     |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `nightly-property`     | gwaje-gwajen kaddarorin fast-check tare da random seed + babban adadin gudu                                                                                              | **Mai shawara** |
+| `nightly-resilience`   | ƙofar heap-growth, shigar da kuskuren chaos, k6 load/soak                                                                                                                | **Mai shawara** |
+| `nightly-llm-security` | tsaron injection na promptfoo (yanayin toshewa) + garak probes (ana tsallake su ba tare da secret na mai samarwa ba)                                                     | **Mai shawara** |
+| `nightly-schemathesis` | fuzzing na kwantiragin OpenAPI (schemathesis) a kan 67router mai rai ta amfani da `docs/openapi.yaml` — yana bayyana keta ka'idojin spec / 500s marasa kula (Fase 8 B.4) | **Mai shawara** |
+| `nightly-mutation`     | maki na gwajin juyin halitta na Stryker a kan hanar unit mai sauri — mutants da suka tsira suna bayyana asserts masu rauni                                               | **Mai shawara** |
+| `nightly-compat`       | tsarin dacewar injin Node a kan jerin `engines.node` da ake tallafawa                                                                                                    | **Mai shawara** |
 
 Ana rubuta baselines na aiki (heap, TTFB, lokacin gini) kawai, ba a toshe su: duba [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -538,7 +538,7 @@ mai ci gaba da ƙaruwa yana ba da ruɗin inganci ne kawai.
 
 ## Kayan aikin wakili: LSP-in-the-loop (na zaɓi)
 
-Baya ga ƙofofin CI, OmniRoute yana zuwa da tsarin farawa na **zaɓi** na `agent-lsp`
+Baya ga ƙofofin CI, 67router yana zuwa da tsarin farawa na **zaɓi** na `agent-lsp`
 (`.mcp.json` na matakin aikin, Fase 7 Task 15). Ƙirƙiri `.mcp.json`
 don samar wa wakilan rubuta lamba damar amfani da uwar garken harshen TypeScript, domin su tantance alamomi /
 binciken kurakurai **kafin** rubuta lamba — abokin `typecheck:core` na tantancewa-kafin-da'awa

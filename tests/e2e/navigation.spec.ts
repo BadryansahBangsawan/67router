@@ -25,9 +25,10 @@ test.describe("Dashboard Navigation", () => {
       if (isRscPrefetch) speculativeRequests.push(request.url());
     });
 
-    // Home activation closes unpinned sections; keep the navigation target mounted.
+    // Home activation closes unpinned sections; keep the navigation target mounted
+    // (sidebar v2: Providers lives in Routing; the pinned-section key moved to -v2).
     await page.addInitScript(() => {
-      localStorage.setItem("sidebar-pinned-sections", JSON.stringify(["omni-proxy"]));
+      localStorage.setItem("sidebar-pinned-sections-v2", JSON.stringify(["routing"]));
     });
     await gotoDashboardRoute(page, "/home");
     const providersLink = page.locator('a[href="/dashboard/providers"]').first();

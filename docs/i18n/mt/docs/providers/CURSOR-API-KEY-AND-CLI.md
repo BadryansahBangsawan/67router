@@ -4,18 +4,18 @@
 
 ---
 
-Żewġ modi kif tqiegħed lil Cursor wara OmniRoute mingħajr sessjoni tal-IDE:
+Żewġ modi kif tqiegħed lil Cursor wara 67router mingħajr sessjoni tal-IDE:
 
 1. **Fornitur `cursor-api`** (kard "Cursor API", alias `cua`): fornitur b'API key
    li jżomm API key ta' utent ta' Cursor (`crsr_…`, iġġenerata minn
-   `https://cursor.com/dashboard/api`). Kwalunkwe klijent ta' OmniRoute mbagħad
+   `https://cursor.com/dashboard/api`). Kwalunkwe klijent ta' 67router mbagħad
    jaċċessa l-mudelli ta' Cursor permezz ta' `/v1/chat/completions` bħala
    `cursor-api/<model>` jew `cua/<model>`, bis-saffi tas-soltu għall-kwota,
    il-fallback u l-logging. Il-fornitur tal-IDE (`cursor`, sessjoni OAuth/IDE)
    jibqa' l-istess.
 2. **Passthrough tas-CLI ta' Cursor**: ipponta s-CLI ta' Cursor (`agent`) lejn
-   OmniRoute sabiex kull RPC li tagħmel is-CLI tiġi awtentikata b'API key ta'
-   OmniRoute, mgħoddija lil Cursor bil-kredenzjali ta' konnessjoni `cursor-api`,
+   67router sabiex kull RPC li tagħmel is-CLI tiġi awtentikata b'API key ta'
+   67router, mgħoddija lil Cursor bil-kredenzjali ta' konnessjoni `cursor-api`,
    u rreġistrata fil-paġna Logs.
 
 ## Għaliex issir il-bidla tal-key
@@ -63,7 +63,7 @@ Noti:
 
 - Il-lista tal-mudelli għal `cursor-api` tiġi mir-reġistru statiku ta' Cursor
   (l-istess lista li juża l-fornitur tal-IDE bħala fallback); l-ebda installazzjoni
-  ta' `cursor-agent` mhi meħtieġa fuq il-host ta' OmniRoute.
+  ta' `cursor-agent` mhi meħtieġa fuq il-host ta' 67router.
 - `POST /api/providers/{id}/refresh-cursor` huwa għall-fornitur `cursor` tal-IDE
   biss; il-konnessjonijiet `cursor-api` m'għandhomx sessjoni tal-IDE x'ġedded.
 
@@ -72,7 +72,7 @@ Noti:
 Għal `cursor` / `cu` u `cursor-api` / `cua`, in-normalizzatur kondiviż
 tal-effort ta' Claude jħalli l-ID tal-mudell mitlub intatt. Cursor jista'
 jirreklama suffiss bħal `-low` bħala parti minn ID reali ta' mudell, minflok
-bħala alias tal-effort ta' OmniRoute. L-executor ta' Cursor jippreserva qbil
+bħala alias tal-effort ta' 67router. L-executor ta' Cursor jippreserva qbil
 eżatt mal-katalgu live; meta ma jkunx hemm qbil, ir-resolver eżistenti
 tal-mudelli tiegħu jieħu ħsieb il-fallback minn suffiss għal parametru.
 
@@ -87,18 +87,18 @@ Rotta: `src/app/api/cursor-cli/[...path]/route.ts` →
 rreġistrat f'`src/shared/constants/publicApiRoutes.ts` għax il-handler
 jinforza l-awtentikazzjoni tiegħu stess:
 
-| Mogħdija                                                                                                                       | Awtentikazzjoni mistennija mis-CLI | X'jagħmel OmniRoute                                                                                                                                                                    |
+| Mogħdija                                                                                                                       | Awtentikazzjoni mistennija mis-CLI | X'jagħmel 67router                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <OmniRoute API key>`       | Jivvalida ċ-ċavetta, joħloq JWT HS256 ta' siegħa (iffirmat b'`JWT_SECRET`) u jirritornah                                                                                               |
+| `POST /auth/exchange_user_api_key`                                                                                             | `Bearer <67router API key>`        | Jivvalida ċ-ċavetta, joħloq JWT HS256 ta' siegħa (iffirmat b'`JWT_SECRET`) u jirritornah                                                                                               |
 | kull mogħdija oħra (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <that JWT>`                | Jivverifika l-emittent/l-udjenza/l-iskadenza, jagħżel konnessjoni `cursor-api` attiva, jissostitwixxi l-header Authorization bit-token ta' Cursor skambjat u jistrimja r-risposta lura |
 
 Is-CLI jiddekodifika `exp` minn kwalunkwe token li jirċievi, għalhekk jekk jingħata
 token opak jerġa' jiskambjah qabel kważi kull talba; il-JWT maħluq jevita
-dan. Risposta 401 minn OmniRoute ġġiegħel lis-CLI jerġa' jagħmel l-iskambju.
+dan. Risposta 401 minn 67router ġġiegħel lis-CLI jerġa' jagħmel l-iskambju.
 
 ### Konfigurazzjoni
 
-1. Oħloq ċavetta API ta' OmniRoute (Dashboard → API keys) u konnessjoni
+1. Oħloq ċavetta API ta' 67router (Dashboard → API keys) u konnessjoni
    `cursor-api`.
 2. Għid lis-CLI juża HTTP/1.1 għall-istrim tal-aġent. F'
    `~/.cursor/cli-config.json`:
@@ -111,7 +111,7 @@ dan. Risposta 401 minn OmniRoute ġġiegħel lis-CLI jerġa' jagħmel l-iskambju
    ikkonfigurat separatament, u l-RPCs tal-pjan ta' kontroll biss jgħaddu
    mill-endpoint.
 
-3. Ħaddem is-CLI kontra OmniRoute:
+3. Ħaddem is-CLI kontra 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -121,17 +121,17 @@ dan. Risposta 401 minn OmniRoute ġġiegħel lis-CLI jerġa' jagħmel l-iskambju
 
 Kull qabża tidher f'Logs bħala l-fornitur `cursor-api`, bit-tip ta' talba
 `cursor-cli`, bil-mogħdija `/api/cursor-cli/<rpc>`, attribwita liċ-ċavetta API
-ta' OmniRoute u lill-konnessjoni li qdietha.
+ta' 67router u lill-konnessjoni li qdietha.
 
 ### Modi ta' falliment
 
-| Sitwazzjoni                                              | Risposta lis-CLI                                      |
-| -------------------------------------------------------- | ----------------------------------------------------- |
-| Ċavetta OmniRoute mhux magħrufa u `REQUIRE_API_KEY=true` | 401 `unauthenticated` waqt l-iskambju                 |
-| `REQUIRE_API_KEY=false`                                  | sessjoni anonima (tirrifletti l-imġiba ta' `/v1/*`)   |
-| JWT tas-sessjoni skadut / barrani / imbabas              | 401, is-CLI jerġa' jagħmel l-iskambju                 |
-| Ċavetta API ta' OmniRoute revokata wara l-iskambju       | 401 fuq l-RPC li jmiss                                |
-| Ebda konnessjoni `cursor-api` attiva                     | 503 `unavailable`                                     |
-| Cursor jirrifjuta ċ-ċavetta tal-konnessjoni              | 401 `unauthenticated`, is-sessjoni fil-cache titneħħa |
-| Is-servizz upstream ma jistax jintlaħaq                  | 502 `unavailable` (messaġġ sanitizzat)                |
-| `JWT_SECRET` mhux issettjat                              | 503 waqt l-iskambju                                   |
+| Sitwazzjoni                                             | Risposta lis-CLI                                      |
+| ------------------------------------------------------- | ----------------------------------------------------- |
+| Ċavetta 67router mhux magħrufa u `REQUIRE_API_KEY=true` | 401 `unauthenticated` waqt l-iskambju                 |
+| `REQUIRE_API_KEY=false`                                 | sessjoni anonima (tirrifletti l-imġiba ta' `/v1/*`)   |
+| JWT tas-sessjoni skadut / barrani / imbabas             | 401, is-CLI jerġa' jagħmel l-iskambju                 |
+| Ċavetta API ta' 67router revokata wara l-iskambju       | 401 fuq l-RPC li jmiss                                |
+| Ebda konnessjoni `cursor-api` attiva                    | 503 `unavailable`                                     |
+| Cursor jirrifjuta ċ-ċavetta tal-konnessjoni             | 401 `unauthenticated`, is-sessjoni fil-cache titneħħa |
+| Is-servizz upstream ma jistax jintlaħaq                 | 502 `unavailable` (messaġġ sanitizzat)                |
+| `JWT_SECRET` mhux issettjat                             | 503 waqt l-iskambju                                   |

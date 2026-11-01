@@ -4,7 +4,7 @@
 
 ---
 
-Kapag tumatakbo ang OmniRoute sa loob ng Docker, nabibigo ang karaniwang daloy na "Import from Zed Keychain"
+Kapag tumatakbo ang 67router sa loob ng Docker, nabibigo ang karaniwang daloy na "Import from Zed Keychain"
 dahil hindi maaabot ng container ang keychain daemon ng host OS (libsecret sa Linux,
 Keychain sa macOS, Credential Manager sa Windows), at hindi nakikita sa loob ng container
 bilang default ang mga directory ng Zed config sa host filesystem.
@@ -20,7 +20,7 @@ May dalawang problemang humahadlang sa loob ng isang container:
    module na `keytar` sa serbisyo ng OS keychain sa pamamagitan ng Unix socket o D-Bus session.
    Walang naka-bridge sa mga ito papunta sa container bilang default, kaya palaging nabibigo ang pagbasa ng credential.
 
-Tinutukoy ng OmniRoute ang Docker environment gamit ang dalawang heuristic:
+Tinutukoy ng 67router ang Docker environment gamit ang dalawang heuristic:
 
 - Pagkakaroon ng `/.dockerenv` (isinusulat ng Docker daemon kapag nagsisimula ang container).
 - Paglitaw ng string na `docker` sa `/proc/1/cgroup` (Linux cgroup v1).
@@ -32,7 +32,7 @@ Kapag na-trigger ang alinman sa mga heuristic, magbabalik ang import route ng HT
 
 1. Buksan ang **Dashboard → Providers → Zed**.
 2. Lalabas ang panel na **Manual Token Import** sa ibaba ng keychain import card. Kapag
-   natukoy ng OmniRoute ang Docker, awtomatikong lalawak ang panel na ito pagkatapos ng unang
+   natukoy ng 67router ang Docker, awtomatikong lalawak ang panel na ito pagkatapos ng unang
    nabigong pagtatangkang mag-import mula sa keychain.
 3. Piliin ang provider mula sa dropdown (OpenAI, Anthropic, Google, Mistral, xAI,
    OpenRouter, o DeepSeek).

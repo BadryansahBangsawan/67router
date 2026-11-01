@@ -7,7 +7,7 @@
 > **Doğruluk Kaynağı:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Son Güncelleme:** 2026-09-22 — kapsam ad alanları `MCP-SERVER.md`'yi işaret ediyor
 
-OmniRoute, her API isteğini denetleyen rota-farkındalıklı bir yetkilendirme hattına sahiptir. Sınıflandırma **deterministik** ve **kapalı-güvenli**dir — sınıflandırılamayan her şey `MANAGEMENT` olarak sonuçlanır ve bir oturum veya yönetim düzeyinde bir jeton gerektirir. Bu sayfa, rotaları sürdüren veya yeni uç noktalar tasarlayan mühendisler için modeli açıklar.
+67router, her API isteğini denetleyen rota-farkındalıklı bir yetkilendirme hattına sahiptir. Sınıflandırma **deterministik** ve **kapalı-güvenli**dir — sınıflandırılamayan her şey `MANAGEMENT` olarak sonuçlanır ve bir oturum veya yönetim düzeyinde bir jeton gerektirir. Bu sayfa, rotaları sürdüren veya yeni uç noktalar tasarlayan mühendisler için modeli açıklar.
 
 ![Yetkilendirme hattı (3 rota sınıfı + politika değerlendirmesi)](../diagrams/exported/authz-pipeline.svg)
 
@@ -224,8 +224,6 @@ Katalog ve eşleştirme kuralları (aynı dize veya `*` ile biten verilmiş bir 
 İstemci API anahtarı zorlaması, doğrudan `process.env.REQUIRE_API_KEY` okumak yerine `src/shared/utils/featureFlags.ts` içindeki `isRequireApiKeyEnabled()` fonksiyonunu kullanır. Bu, dağıtılmış örnekler için önemlidir: Kontrol Paneli → Özellik Bayrakları içinde `REQUIRE_API_KEY` değiştirmek bir DB geçersiz kılma kaydeder ve `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` ve bu yardımcıyı paylaşan diğer istemci API kimlik denetimlerini anında etkiler. Özellik bayrağı deposu okunamıyorsa istemci API kimlik doğrulaması kapalı duruma geçer ve bir anahtar ister.
 
 ## Uyumluluğu Bozan Değişiklik — v3.8.0
-
-`/api/v1/agents/tasks/*` ve `/api/resilience/model-cooldowns` uç noktaları **artık yönetim kimlik doğrulaması gerektirir** (`588a0333` commit'i). Daha önce `manage` kapsamı olmadan normal bir API anahtarı gönderen istemciler `403` yanıtı alır. Geçiş: API Keys panosunda anahtara `manage` kapsamını verin veya oturum açılmış bir dashboard oturumu kullanın.
 
 ## Davranış Değişikliği — v3.8.2
 

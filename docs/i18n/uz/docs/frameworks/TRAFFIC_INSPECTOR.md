@@ -4,7 +4,7 @@
 
 ---
 
-Traffic Inspector — OmniRoute’ning o‘rnatilgan HTTPS trafik tuzatuvchisi bo‘lib, Charles Proxy / mitmweb / HTTP Toolkit’ga o‘xshash, ammo **LLM’dan xabardor** va **agentdan xabardor** vositadir. U `/dashboard/tools/traffic-inspector` manzilida joylashgan va bir vaqtning o‘zida 5 tagacha trafikni yozib olish manbasidan jonli trafikni qabul qiladi.
+Traffic Inspector — 67router’ning o‘rnatilgan HTTPS trafik tuzatuvchisi bo‘lib, Charles Proxy / mitmweb / HTTP Toolkit’ga o‘xshash, ammo **LLM’dan xabardor** va **agentdan xabardor** vositadir. U `/dashboard/tools/traffic-inspector` manzilida joylashgan va bir vaqtning o‘zida 5 tagacha trafikni yozib olish manbasidan jonli trafikni qabul qiladi.
 
 **Boshqaruv panelidagi joylashuvi:** `/dashboard/tools/traffic-inspector`
 **Yon panel guruhi:** Vositalar (AgentBridge’dan keyin)
@@ -16,21 +16,21 @@ Traffic Inspector — OmniRoute’ning o‘rnatilgan HTTPS trafik tuzatuvchisi b
 
 ### Traffic Inspector’ning o‘ziga xos jihatlari
 
-| Xususiyat                                                                                     | mitmweb | Charles | Fiddler | **OmniRoute Traffic Inspector** |
-| --------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :-----------------------------: |
-| Veb-asosli                                                                                    |    ✓    |    ✗    |    ✗    |                ✓                |
-| Ochiq manbali                                                                                 |    ✓    |    ✗    | qisman  |                ✓                |
-| **Agentdan xabardor** (so‘rov Antigravity/Copilot/va hokazolardan kelganini biladi)           |    ✗    |    ✗    |    ✗    |                ✓                |
-| **LLM’dan xabardor** (OpenAI/Anthropic/Gemini tuzilmasi, tokenlari va modelini tahlil qiladi) |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Model moslashtirishi ko‘rinadi** (gemini-3-flash → claude-sonnet-4.7)                       |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Proksi/yuqori oqim kechikishini ajratish**                                                  | qisman  |    ✗    |    ✗    |                ✓                |
-| **OmniRoute bilan integratsiyalangan** marshrutlash, zaxira va xarajat                        |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Butun tizim bo‘ylab proksi tuzatish** (kompyuterdagi istalgan ilova)                        |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Maxsus xostni yozib olish** (har bir xost uchun DNS qayta yo‘naltirishi)                    |    ✓    |    ✓    |    ✓    |                ✓                |
-| **HTTP_PROXY muhit rejimi**                                                                   |    ✓    |    ✓    |    ✓    |                ✓                |
-| **Suhbat ko‘rinishi** (ko‘p bosqichli pufakchalar, tool_use/tool_result)                      |    ✗    |    ✗    |    ✗    |                ✓                |
-| **SSE oqimini birlashtiruvchi** (delta hodisalaridan qayta tiklaydi)                          |    ✗    |    ✗    |    ✗    |                ✓                |
-| **Sessiyani yozib olish** (nomlanadigan, .har/.jsonl formatida eksport qilinadigan)           |    ✗    |    ✓    |    ✓    |                ✓                |
+| Xususiyat                                                                                     | mitmweb | Charles | Fiddler | **67router Traffic Inspector** |
+| --------------------------------------------------------------------------------------------- | :-----: | :-----: | :-----: | :----------------------------: |
+| Veb-asosli                                                                                    |    ✓    |    ✗    |    ✗    |               ✓                |
+| Ochiq manbali                                                                                 |    ✓    |    ✗    | qisman  |               ✓                |
+| **Agentdan xabardor** (so‘rov Antigravity/Copilot/va hokazolardan kelganini biladi)           |    ✗    |    ✗    |    ✗    |               ✓                |
+| **LLM’dan xabardor** (OpenAI/Anthropic/Gemini tuzilmasi, tokenlari va modelini tahlil qiladi) |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Model moslashtirishi ko‘rinadi** (gemini-3-flash → claude-sonnet-4.7)                       |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Proksi/yuqori oqim kechikishini ajratish**                                                  | qisman  |    ✗    |    ✗    |               ✓                |
+| **67router bilan integratsiyalangan** marshrutlash, zaxira va xarajat                         |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Butun tizim bo‘ylab proksi tuzatish** (kompyuterdagi istalgan ilova)                        |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Maxsus xostni yozib olish** (har bir xost uchun DNS qayta yo‘naltirishi)                    |    ✓    |    ✓    |    ✓    |               ✓                |
+| **HTTP_PROXY muhit rejimi**                                                                   |    ✓    |    ✓    |    ✓    |               ✓                |
+| **Suhbat ko‘rinishi** (ko‘p bosqichli pufakchalar, tool_use/tool_result)                      |    ✗    |    ✗    |    ✗    |               ✓                |
+| **SSE oqimini birlashtiruvchi** (delta hodisalaridan qayta tiklaydi)                          |    ✗    |    ✗    |    ✗    |               ✓                |
+| **Sessiyani yozib olish** (nomlanadigan, .har/.jsonl formatida eksport qilinadigan)           |    ✗    |    ✓    |    ✓    |               ✓                |
 
 ### Arxitektura bir xatboshida
 
@@ -263,7 +263,7 @@ interface LlmMetadata {
   tokensOut: number | null; // usage.completion_tokens / usage.output_tokens
   streamed: boolean; // SSE javobi boʻlsa true
   mappedTo: string | null; // x-omniroute-mapped sarlavhasi
-  costEstimateUsd: number | null; // OmniRoute narxlari asosidagi taxminiy xarajat
+  costEstimateUsd: number | null; // 67router narxlari asosidagi taxminiy xarajat
 }
 ```
 
@@ -393,7 +393,7 @@ INSPECTOR_HTTP_PROXY_PORT=8888
 
 ### Tizim proksisi asl holatiga qaytarilmagan
 
-Agar butun tizim proksi rejimi faol bo‘lgan vaqtda OmniRoute ishdan chiqsa:
+Agar butun tizim proksi rejimi faol bo‘lgan vaqtda 67router ishdan chiqsa:
 
 **macOS:**
 
@@ -438,7 +438,7 @@ Asosiy yoʻl: `/api/tools/traffic-inspector/`
 | GET    | `/requests`                 | Soʻrovlar roʻyxati (filtrlash mumkin: `?profile=llm&host=&agent=&status=&source=&sessionId=`) |
 | GET    | `/requests/{id}`            | Bitta soʻrov tafsilotlari                                                                     |
 | DELETE | `/requests`                 | Xotiradagi buferni tozalash                                                                   |
-| POST   | `/requests/{id}/replay`     | Xuddi shu soʻrovni OmniRoute routeri orqali qayta bajarish                                    |
+| POST   | `/requests/{id}/replay`     | Xuddi shu soʻrovni 67router routeri orqali qayta bajarish                                     |
 | PUT    | `/requests/{id}/annotation` | Soʻrovga eslatma saqlash yoki uni yangilash                                                   |
 
 ### WebSocket

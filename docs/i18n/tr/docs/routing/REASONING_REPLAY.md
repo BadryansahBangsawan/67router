@@ -7,7 +7,7 @@
 > **Doğruluk kaynağı:** `src/lib/db/reasoningCache.ts`, `open-sse/services/reasoningCache.ts`
 > **Son güncelleme:** 2026-06-28 — v3.8.40
 
-OmniRoute, düşünme modu modelleri tarafından üretilen asistan `reasoning_content` içeriğini yakalar ve yukarı akış sağlayıcısının bunu gerektirdiği çok turlu isteklerde şeffaf biçimde yeniden oynatır. Bu, istemcinin konuşma geçmişinde önceki turun akıl yürütme içeriği bulunmadığında katı sağlayıcıların döndürdüğü HTTP 400 hatalarını ortadan kaldırır.
+67router, düşünme modu modelleri tarafından üretilen asistan `reasoning_content` içeriğini yakalar ve yukarı akış sağlayıcısının bunu gerektirdiği çok turlu isteklerde şeffaf biçimde yeniden oynatır. Bu, istemcinin konuşma geçmişinde önceki turun akıl yürütme içeriği bulunmadığında katı sağlayıcıların döndürdüğü HTTP 400 hatalarını ortadan kaldırır.
 
 ## Neden Buna İhtiyaç Var?
 
@@ -17,7 +17,7 @@ Bazı düşünme modu sağlayıcıları, **önceki asistan mesajı özgün `reas
 Parametre Hatalı: Düşünme modundaki reasoning_content API'ye geri gönderilmelidir.
 ```
 
-Ancak tipik istemciler (Cursor, Cline, Roo Code, OpenAI SDK), yeniden oynattıkları geçmişten `reasoning_content` alanını çıkarır. OmniRoute, yukarı akışın gördüğü isteğin tutarlı olması için bu içeriği sunucu tarafındaki bir önbellekten geri yükler. #1628 numaralı sorun, önbelleğin süreç yeniden başlatmalarından sonra da korunması için hibrit bellek/SQLite kalıcılığını kullanıma sundu.
+Ancak tipik istemciler (Cursor, Cline, Roo Code, OpenAI SDK), yeniden oynattıkları geçmişten `reasoning_content` alanını çıkarır. 67router, yukarı akışın gördüğü isteğin tutarlı olması için bu içeriği sunucu tarafındaki bir önbellekten geri yükler. #1628 numaralı sorun, önbelleğin süreç yeniden başlatmalarından sonra da korunması için hibrit bellek/SQLite kalıcılığını kullanıma sundu.
 
 ## Mimari
 

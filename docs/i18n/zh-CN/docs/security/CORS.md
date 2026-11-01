@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 通过一个集中式允许列表，控制哪些**浏览器源**可以读取跨源响应。该模型**默认拒绝**：在你明确将某个源加入允许列表之前，不允许任何源。本页面说明允许列表如何解析、`CORS_ALLOW_ALL=true` 实际会暴露哪些内容（以及更重要的是，它**不会**暴露哪些内容）、如何安全地配置开发环境与生产环境，以及通配符生效时仪表板显示的运行时警告。
+67router 通过一个集中式允许列表，控制哪些**浏览器源**可以读取跨源响应。该模型**默认拒绝**：在你明确将某个源加入允许列表之前，不允许任何源。本页面说明允许列表如何解析、`CORS_ALLOW_ALL=true` 实际会暴露哪些内容（以及更重要的是，它**不会**暴露哪些内容）、如何安全地配置开发环境与生产环境，以及通配符生效时仪表板显示的运行时警告。
 
 **权威来源：** `src/server/cors/origins.ts`（`resolveAllowedOrigin`、`applyCorsHeaders`、`getCorsStatus`）。允许列表仅在中间件（`src/server/authz/pipeline.ts`）中应用一次——各路由处理程序不会自行设置 `Access-Control-Allow-Origin`。
 
@@ -26,12 +26,12 @@ OmniRoute 通过一个集中式允许列表，控制哪些**浏览器源**可以
 
 ## 威胁模型——`CORS_ALLOW_ALL=true` 实际会暴露什么
 
-通用的 OWASP 警告（“通配符 CORS = 任何网站都可以调用你的 API”）值得认真对待，但 OmniRoute 的暴露范围比通用情形**更窄**，这是由一个具体的实现事实决定的：
+通用的 OWASP 警告（“通配符 CORS = 任何网站都可以调用你的 API”）值得认真对待，但 67router 的暴露范围比通用情形**更窄**，这是由一个具体的实现事实决定的：
 
 > **中央 `applyCorsHeaders()` 永远不会发出
 > `Access-Control-Allow-Credentials`。** 除非服务器发送
 > `Access-Control-Allow-Credentials: true`，否则浏览器不会向调用方公开携带凭据
-> （Cookie）的跨源响应。OmniRoute 的共享 CORS 路径从不这样做。
+> （Cookie）的跨源响应。67router 的共享 CORS 路径从不这样做。
 
 这意味着，即使设置了 `CORS_ALLOW_ALL=true`，各接口面的情况仍如下：
 
@@ -43,10 +43,6 @@ OmniRoute 通过一个集中式允许列表，控制哪些**浏览器源**可以
 
 因此，`CORS_ALLOW_ALL=true` 的**剩余**暴露仅限于：(a) 对本就无需身份验证的数据进行不带凭据的跨源**读取**；以及 (b) 允许管理路由的 CORS **预检请求通过**——但这些路由仍然需要身份验证，而跨源页面无法提供相应凭据。在共享 CORS 路径上，这**不会**导致会话劫持或凭据窃取。
 
-### 一个真正的例外——`/api/v1/agents/`
-
-Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）会设置其**自己的** CORS 响应头（`src/lib/cloudAgent/api.ts`、`getCloudAgentCorsHeaders`），并且**确实会**同时发出 `Access-Control-Allow-Origin: <origin>|*` 和 `Access-Control-Allow-Credentials: true`。这是唯一同时存在源回显与凭据的接口面，并且它**独立于 `CORS_ALLOW_ALL`**。这些路由需要管理身份验证（`requireManagementAuth`）；将仪表板暴露到主机外部的运维人员应注意，这是唯一一个响应头允许跨源读取凭据响应的位置。将其限制为显式允许列表的工作会与本 CORS 指南分开跟踪。
-
 ## 生产环境检查清单
 
 - **切勿在生产环境中设置 `CORS_ALLOW_ALL=true`。** 请保持其未设置状态。
@@ -56,7 +52,7 @@ Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- 如果 OmniRoute 运行在反向代理 / 隧道（nginx、Caddy、Cloudflare
+- 如果 67router 运行在反向代理 / 隧道（nginx、Caddy、Cloudflare
   Tunnel、Tailscale）后面，CORS **并非**唯一的控制措施——环回路由
   防护仍会保护能够生成进程的路由（请参阅
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md)）。不要伪造
@@ -72,7 +68,7 @@ Cloud-Agent 路由（`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`）�
 即使在开发环境中，通常也不需要通配符。只允许你实际使用的开发服务器：
 
 ```bash
-# 调用本地 OmniRoute 的 Vite (5173) + Next.js (3000) 开发服务器
+# 调用本地 67router 的 Vite (5173) + Next.js (3000) 开发服务器
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -89,14 +85,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   共享路径上不存在 `Access-Control-Allow-Credentials` 的双重保护。
   不要将管理/控制面板源纳入任何宽松配置；它们必须严格保持默认拒绝。
 
-## 示例：在 OmniRoute 前设置反向代理
+## 示例：在 67router 前设置反向代理
 
-CORS 由 OmniRoute 自身强制执行，因此代理通常**不应**添加或
+CORS 由 67router 自身强制执行，因此代理通常**不应**添加或
 重写 `Access-Control-*` 标头（重复标头会导致浏览器出错）。终止 TLS
-并转发请求——让 OmniRoute 响应预检请求：
+并转发请求——让 67router 响应预检请求：
 
 ```nginx
-# nginx — 转发到 OmniRoute；请勿在此处注入 Access-Control-*
+# nginx — 转发到 67router；请勿在此处注入 Access-Control-*
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -104,25 +100,24 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # 保留这些转发标头：同一主机上的代理会通过环回地址连接，而这些标头
-    # 会告知 OmniRoute 调用方并非本地操作员。完全不添加这些标头的代理
+    # 会告知 67router 调用方并非本地操作员。完全不添加这些标头的代理
     # 会让所有远程调用方看起来都来自本地。也绝不要将 X-Forwarded-For 设置为 127.0.0.1。
 }
 ```
 
-请在 OmniRoute（`CORS_ALLOWED_ORIGINS` 或“安全”选项卡）中设置允许的浏览器来源，
+请在 67router（`CORS_ALLOWED_ORIGINS` 或“安全”选项卡）中设置允许的浏览器来源，
 而不是在代理中设置。
 
 ## 源文件
 
-| 关注点                              | 文件                                                                 |
-| ----------------------------------- | -------------------------------------------------------------------- |
-| 允许列表解析 + `getCorsStatus()`    | `src/server/cors/origins.ts`                                         |
-| 中间件应用（单一事实来源）          | `src/server/authz/pipeline.ts`                                       |
-| Settings → 运行时源注入             | `src/lib/config/runtimeSettings.ts`                                  |
-| 控制面板的运行时状态                | `src/app/api/settings/authz-inventory/route.ts`                      |
-| 控制面板警告横幅                    | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
-| CORS Allowed Origins 字段           | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent 每路由 CORS（例外情况） | `src/lib/cloudAgent/api.ts`                                          |
+| 关注点                           | 文件                                                                 |
+| -------------------------------- | -------------------------------------------------------------------- |
+| 允许列表解析 + `getCorsStatus()` | `src/server/cors/origins.ts`                                         |
+| 中间件应用（单一事实来源）       | `src/server/authz/pipeline.ts`                                       |
+| Settings → 运行时源注入          | `src/lib/config/runtimeSettings.ts`                                  |
+| 控制面板的运行时状态             | `src/app/api/settings/authz-inventory/route.ts`                      |
+| 控制面板警告横幅                 | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
+| CORS Allowed Origins 字段        | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
 
 ## 另请参阅
 

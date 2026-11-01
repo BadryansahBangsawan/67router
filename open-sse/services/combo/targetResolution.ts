@@ -28,7 +28,6 @@ import { getModelLockoutInfo, isModelLocked } from "../accountFallback.ts";
 import { parseAutoPrefix } from "../autoCombo/autoPrefix.ts";
 import { handlePipelineCombo, buildPipelineResponse } from "../autoCombo/pipelineRouter.ts";
 import type { resolveComboSetupConfig } from "../comboConfig.ts";
-import { orderTargetsByEvalScores } from "../evalRouting.ts";
 import { parseModel } from "../model.ts";
 import { getRemainingCooldownMs, isProviderInCooldown } from "../providerCooldownTracker.ts";
 import {
@@ -134,10 +133,9 @@ export interface ResolvedComboTargetPipeline {
   preScreenMap: Map<string, PreScreenResult>;
   /**
    * Idempotent release for the in-flight slot reserved for the winner.
-   * Non-null for `quota-share` (reserved inside selectQuotaShareTarget) and for
-   * `quota-weighted` (reserved in the orderer on the draw). Stickiness/cache may
-   * still move [0]; this pipeline transfers the slot onto the dispatched account
-   * for both strategies. The host MUST invoke it when the request settles; this
+   * Non-null for `quota-weighted` (reserved in the orderer on the draw).
+   * Stickiness/cache may still move [0]; this pipeline transfers the slot onto the
+   * dispatched account. The host MUST invoke it when the request settles; this
    * pipeline already releases it on any earlyResponse it produces after selection.
    */
   quotaShareRelease: (() => void) | null;
@@ -525,7 +523,7 @@ async function applyContinuityFilters(
   const traits = getStrategyTraits(strategy);
   // An explicit cache-optimized combo outranks the global cache-affinity default,
   // but only protects its ordering when this request actually produced a reusable
-  // cache key. Cache misses retain the normal session/eval routing behavior.
+  // cache key. Cache misses retain the normal session routing behavior.
   const cacheStrategyAffinityApplied =
     traits.cacheAffinityOwnsOrdering &&
     applyPromptCacheAffinity(initialOrderedTargets, body).applied;
@@ -563,9 +561,6 @@ async function applyContinuityFilters(
         { respectDeclaredOrder: traits.stickinessRespectsDeclaredOrder }
       );
   let orderedTargets = sticky.targets;
-  if (!cacheStrategyAffinityApplied) {
-    orderedTargets = orderTargetsByEvalScores(orderedTargets, config.evalRouting, log);
-  }
   // #8488 / #8494: fail closed when hard capability filters empty the pool.
   // Opt-in escape hatch: combo.config.compatFilterFailOpen OR settings.compatFilterFailOpen.
   const compatFilterFailOpen =
@@ -747,7 +742,7 @@ async function applyPromptCacheStage(
   // strategies. Per #8370, lkgp/auto/cache-optimized explicitly support promoting
   // a previously-successful model ahead of the declared order, so they must stay
   // cross-model ("global") rather than be locked into a single model step.
-  // The model-order-preserving set (priority / weighted / fill-first / quota-share) is
+  // The model-order-preserving set (priority / weighted / fill-first) is
   // the `promptCacheAffinityScope: "model"` trait in the strategy registry.
   const promptCacheAffinity = applyPromptCacheAffinity(
     promptCacheAffinityTargets,
@@ -809,11 +804,9 @@ function reserveInflightSlot(connectionId: string): () => void {
 
 /**
  * quota-weighted reserves the draw inside the orderer (same synchronous turn as the
- * pick). quota-share reserves inside selectQuotaShareTarget. Stickiness / prompt-cache
- * may still move [0]; transfer the slot so the reserved account is the one that will be
- * dispatched. The empty-id fallback (drawn target had no connectionId, later filters put
- * a real id in [0]) is quota-weighted only — quota-share always hands back a release,
- * even a no-op, and inventing a slot here would double-count.
+ * pick). Stickiness / prompt-cache may still move [0]; transfer the slot so the reserved
+ * account is the one that will be dispatched. The empty-id fallback (drawn target had
+ * no connectionId, later filters put a real id in [0]) reserves a fresh slot.
  */
 function transferInflightReservation(
   reservation: StrategyTraits["inflightReservation"],

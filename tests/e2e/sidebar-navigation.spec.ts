@@ -16,9 +16,10 @@ for (const theme of ["light", "dark"] as const) {
     // Kit shell: the kit <Sidebar> renders the <aside data-slot="sidebar">.
     const sidebar = page.locator('aside[data-slot="sidebar"]');
     await expect(sidebar.locator('a[aria-current="page"]')).toHaveAttribute("href", "/home");
-    const section = sidebar.getByRole("button", { name: "OmniProxy", exact: true });
+    // Sidebar v2: the compression group sits in Optimize (sections start pinned open).
+    const section = sidebar.getByRole("button", { name: "Optimize", exact: true });
     if ((await section.getAttribute("aria-expanded")) === "false") await section.click();
-    const group = sidebar.getByRole("button", { name: "Compression Context", exact: true });
+    const group = sidebar.getByRole("button", { name: "Context & compression", exact: true });
     await expect(group).toHaveAttribute("aria-expanded", "false");
     await group.focus();
     await expect(group).toBeFocused();

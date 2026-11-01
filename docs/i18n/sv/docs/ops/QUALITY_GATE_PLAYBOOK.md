@@ -4,7 +4,7 @@
 
 ---
 
-> **Vad det här dokumentet är.** En kritisk bedömning av OmniRoutes kvalitetsspärrsystem,
+> **Vad det här dokumentet är.** En kritisk bedömning av 67routers kvalitetsspärrsystem,
 > jämfört med bästa praxis i branschen, **plus** en heltäckande katalog över alla
 > kvalitetskontroller och en **verktygsoberoende replikeringsplan** för att tillämpa samma system på
 > valfritt projekt. Genererad 2026-06-16 utifrån datalagrets faktiska tillstånd (inte ur minnet).
@@ -101,62 +101,62 @@ för att återskapa det i valfri teknikstack.
 
 ### 1. Stil och formatering (deterministiskt, snabbt)
 
-- **OmniRoute:** Prettier + ESLint via lint-staged (pre-commit), 2 mellanslag/dubbla citattecken/100 kolumner.
+- **67router:** Prettier + ESLint via lint-staged (pre-commit), 2 mellanslag/dubbla citattecken/100 kolumner.
 - **Generellt:** ett formateringsverktyg med automatisk korrigering + en linter, som körs i pre-commit på stage:ade filer.
 
 ### 2. Typer
 
-- **OmniRoute:** `typecheck:core` (blockerande) + `typecheck:noimplicit:core` (rådgivande) + `type-coverage`-spärrhake på 92.17 % + any-budget per fil.
+- **67router:** `typecheck:core` (blockerande) + `typecheck:noimplicit:core` (rådgivande) + `type-coverage`-spärrhake på 92.17 % + any-budget per fil.
 - **Generellt:** strikt typkontroll i CI + typ­täckningsmått med spärrhake + budget per fil för `any`/undantagsmekanismer.
 
 ### 3. Tester (intensitet)
 
-- **OmniRoute:** 2 icke-överlappande testkörare (inbyggd i Node + vitest), 8 shardar, global täckning på 60/60/60/60 + spärrhake på ~76 % + **8 miniminivåer per modul för kritiska moduler** + nattliga egenskapsbaserade tester + nattlig **mutationstestning**.
+- **67router:** 2 icke-överlappande testkörare (inbyggd i Node + vitest), 8 shardar, global täckning på 60/60/60/60 + spärrhake på ~76 % + **8 miniminivåer per modul för kritiska moduler** + nattliga egenskapsbaserade tester + nattlig **mutationstestning**.
 - **Generellt:** testkörare + **absolut** lägstanivå för täckning (skydd mot noll) + **spärrhake** för täckning (skydd mot regression) + **miniminivåer per modul för högriskkod** (skydd mot Goodharts lag) + egenskapsbaserade tester för ren logik + nattlig **mutationstestning** som det verkliga måttet på testkvalitet.
 
 ### 4. Testpolicy (skydd mot manipulation)
 
-- **OmniRoute:** `pr-test-policy` (produktionskod kräver ett test), `check-test-masking` (blockerar försvagade kontroller), `pr-evidence` (påståenden om framgång kräver ett evidensblock), `test-discovery` (varje test samlas in av en testkörare).
+- **67router:** `pr-test-policy` (produktionskod kräver ett test), `check-test-masking` (blockerar försvagade kontroller), `pr-evidence` (påståenden om framgång kräver ett evidensblock), `test-discovery` (varje test samlas in av en testkörare).
 - **Generellt:** spärren ”ny kod ⇒ nytt test” + detektor för borttagna kontroller/tautologier + evidenskrav (TDD eller levande test) + garanti för att inget test lämnas föräldralöst utanför globmönstren.
 
 ### 5. Komplexitet och kodhälsa (spärrhakar)
 
-- **OmniRoute:** ESLint-varningar (3769↓), jscpd-duplicering (5.72 %↓), cyklomatisk komplexitet + max antal rader (1800↓), kognitiv komplexitet med sonarjs (753↓), död kod/oanvända exporter med knip (339↓), filstorlek per fil (fryst, får endast minska), cirkulära beroenden (anpassad Tarjan, blockerande).
+- **67router:** ESLint-varningar (3769↓), jscpd-duplicering (5.72 %↓), cyklomatisk komplexitet + max antal rader (1800↓), kognitiv komplexitet med sonarjs (753↓), död kod/oanvända exporter med knip (339↓), filstorlek per fil (fryst, får endast minska), cirkulära beroenden (anpassad Tarjan, blockerande).
 - **Generellt:** använd en spärrhake för varje hälsomått (varningar, duplicering, cyklomatisk **och** kognitiv komplexitet, död kod, filstorlek, importcykler). Riktningen är alltid ”försämra inte”.
 
 ### 6. Statisk säkerhet (SAST + hemligheter)
 
-- **OmniRoute:** CodeQL (spärrhake för varningar = 0), gitleaks (`[extend] useDefault=true` — kritiskt!), SonarQube, anpassade säkerhetsregler (public-creds, error-helper, route-guard-membership, route-validation).
+- **67router:** CodeQL (spärrhake för varningar = 0), gitleaks (`[extend] useDefault=true` — kritiskt!), SonarQube, anpassade säkerhetsregler (public-creds, error-helper, route-guard-membership, route-validation).
 - **Generellt:** SAST (CodeQL/Sonar/semgrep) med spärrhake för varningar + hemlighetsskanner med **ärvd standardregeluppsättning** (en anpassad konfiguration som åsidosätter standarden = blindhet) + projektspecifika säkerhetsspärrar i form av hårda regler.
 
 ### 7. Leveranskedja (beroenden)
 
-- **OmniRoute:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-tillåtelselista), lockfile-lint (HTTPS+sha512+register), `check-deps` mot slopsquatting (tillåtelselista + ålder ≥72 h).
+- **67router:** osv-scanner + npm-audit + Trivy + Dependabot (SCA), license-checker (SPDX-tillåtelselista), lockfile-lint (HTTPS+sha512+register), `check-deps` mot slopsquatting (tillåtelselista + ålder ≥72 h).
 - **Generellt:** SCA från flera källor + tillåtelselista för licenser + integritetskontroll av låsfil + tillåtelselista för beroenden med ålders-/typosquattingkontroll + uppdateringsbot med grupperade uppdateringar.
 
 ### 8. Leveranskedja (bygge och lansering)
 
-- **OmniRoute:** SBOM (CycloneDX + syft), SLSA-proveniens (`--provenance`), OpenSSF Scorecard (varje vecka), härdning av arbetsflöden (zizmor: artipacked→`persist-credentials:false`, cacheförgiftning, tokenbehörigheter).
+- **67router:** SBOM (CycloneDX + syft), SLSA-proveniens (`--provenance`), OpenSSF Scorecard (varje vecka), härdning av arbetsflöden (zizmor: artipacked→`persist-credentials:false`, cacheförgiftning, tokenbehörigheter).
 - **Generellt:** generera en SBOM vid publicering + signerad proveniens (SLSA L2+) + schemalagd Scorecard + härda alla arbetsflöden (token med minsta möjliga behörighet, inga beständiga autentiseringsuppgifter vid checkout som inte ska pusha, actions fästa vid SHA).
 
 ### 9. Kontrakt och API
 
-- **OmniRoute:** oasdiff (brytande OpenAPI-ändringar), schemathesis (nattlig fuzzning av kontrakt), openapi-coverage (% dokumenterade routes, spärrhake på 38.3 %), openapi-security-tiers (specifikation kontra route-guard).
+- **67router:** oasdiff (brytande OpenAPI-ändringar), schemathesis (nattlig fuzzning av kontrakt), openapi-coverage (% dokumenterade routes, spärrhake på 38.3 %), openapi-security-tiers (specifikation kontra route-guard).
 - **Generellt:** kontraktsdiff för brytande ändringar (oasdiff/buf) + egenskapsbaserad fuzzning mot specifikationen (schemathesis) + dokumentationstäckning med spärrhake + konsekvens mellan specifikation och kod.
 
 ### 10. Dokumentation och i18n (skydd mot föråldring)
 
-- **OmniRoute:** docs-sync (speglade versioner), docs-counts-sync (siffror i dokumentation kontra kod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + spärrhake på 80.1 %).
+- **67router:** docs-sync (speglade versioner), docs-counts-sync (siffror i dokumentation kontra kod), env-doc-sync, doc-links, fabricated-docs, cli-i18n, i18n-ui-coverage (`--threshold=65` + spärrhake på 80.1 %).
 - **Generellt:** synkronisera versioner/antal/miljövariabler mellan dokumentation och kod (spärr, inte tillit) + validera interna länkar + i18n-täckning med spärrhake.
 
 ### 11. Skydd mot hallucinationer/konsekvenskontroll (den ovanliga kategorin)
 
-- **OmniRoute:** known-symbols (strängdispatch ⇒ levande symbol), provider-consistency, fetch-targets (klientens fetch ⇒ verklig route), docs-symbols, db-rules (hårda regler nr 2/5), migration-numbering.
+- **67router:** known-symbols (strängdispatch ⇒ levande symbol), provider-consistency, fetch-targets (klientens fetch ⇒ verklig route), docs-symbols, db-rules (hårda regler nr 2/5), migration-numbering.
 - **Generellt:** för varje ”duplicerad sanningskälla” (register, strängdispatch, referenser mellan lager), en spärr som bevisar att båda sidor stämmer överens. Fångar den föråldring som typkontroller/tester inte upptäcker.
 
 ### 12. Motståndskraft och domän (produktspecifikt)
 
-- **OmniRoute:** chaos (felinjektion), heap-growth (läckage), k6 (uthållighetstest), promptfoo+garak (LLM-red-team enligt OWASP LLM Top 10), de 3 motståndskraftslagarna (circuit-breaker/cooldown/lockout).
+- **67router:** chaos (felinjektion), heap-growth (läckage), k6 (uthållighetstest), promptfoo+garak (LLM-red-team enligt OWASP LLM Top 10), de 3 motståndskraftslagarna (circuit-breaker/cooldown/lockout).
 - **Generellt:** identifiera feltillstånden i **din** domän och ha en spärr (även om den bara körs nattligen) för vart och ett. För AI-appar: red-team-testning av injektioner. För distribuerade system: kaos- + läckage- + uthållighetstestning.
 
 ---

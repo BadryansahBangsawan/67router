@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ń pinnu awakọ SQLite rẹ nígbà ìbẹ̀rẹ̀ nípasẹ̀ ẹ̀wọ̀n àṣàyàn-àfẹ́yinti onígbésẹ̀ 5:
+67router ń pinnu awakọ SQLite rẹ nígbà ìbẹ̀rẹ̀ nípasẹ̀ ẹ̀wọ̀n àṣàyàn-àfẹ́yinti onígbésẹ̀ 5:
 
 1. **`better-sqlite3` tí a kó sínú rẹ̀** (nípasẹ̀ `dependencies` nínú `package.json`)
    — ó yára jù lọ, ó jẹ́ native binary, `npm install` sì máa ń fi sílẹ̀ nígbà tí àwọn irinṣẹ́ build bá wà.
@@ -28,13 +28,13 @@ OmniRoute ń pinnu awakọ SQLite rẹ nígbà ìbẹ̀rẹ̀ nípasẹ̀ ẹ̀w
 - **Kò sí àwọn irinṣẹ́ build**: Àwọn environment kan (Windows ilé-iṣẹ́ tí kò ní VS Build
   Tools, àwọn Docker image kékeré) kò lè compile `better-sqlite3`. Runtime
   installer máa ń gba binary tí a ti kọ́ tẹ́lẹ̀ láti npm registry; àwọn awakọ
-  àfẹ́yinti sì ń rí i dájú pé OmniRoute ṣì lè boot bí ìyẹn bá tilẹ̀ kùnà.
+  àfẹ́yinti sì ń rí i dájú pé 67router ṣì lè boot bí ìyẹn bá tilẹ̀ kùnà.
 - **Àwọn system tí kò ní àsopọ̀ síta**: Bí npm registry kò bá ṣe é dé, `node:sqlite`
   tàbí `sql.js` máa ń ṣe ìdánilójú pé iṣẹ́ ìpìlẹ̀ ṣì wà.
 
 ## Ìfìdímúlẹ̀ magic-byte
 
-Kí OmniRoute tó load file `.node` tí a fi sílẹ̀ ní runtime, ó máa ń ka àwọn byte 8
+Kí 67router tó load file `.node` tí a fi sílẹ̀ ní runtime, ó máa ń ka àwọn byte 8
 àkọ́kọ́, ó sì fi wọ́n wé àwọn magic platform tí a mọ̀:
 
 | Platform              | Àwọn byte (hex) | Àmì         |
@@ -104,9 +104,9 @@ kì í ṣe average gbogbo ìgbésí-ayé. Fi àwọn timestamp rẹ̀ wé àw�
 ## Topology olùkọ̀wé-kan ṣoṣo (HA kò ní àtìlẹ́yìn)
 
 Ẹ̀wọ̀n àṣàyàn-àfẹ́yinti awakọ lókè ṣì ń ṣiṣẹ́ nínú **process kan ṣoṣo**. SQLite
-default OmniRoute jẹ́ **olùkọ̀wé kan ṣoṣo**:
+default 67router jẹ́ **olùkọ̀wé kan ṣoṣo**:
 
-- Má ṣe so replica OmniRoute méjì mọ́ file `storage.sqlite` kan náà.
+- Má ṣe so replica 67router méjì mọ́ file `storage.sqlite` kan náà.
 - Container restart, Recreate deploy, OOM kill, tàbí HEALTHCHECK restart máa ń gé
   gbogbo session SSE tó ń lọ lọ́wọ́. Kò sí session drain lórí ọ̀nà boṣewa.
 - Orchestrator liveness tí ó ka `/healthz` tó lọ́ra sí ohun tó ti kú yóò pa

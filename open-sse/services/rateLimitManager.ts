@@ -852,7 +852,7 @@ export async function withRateLimit(
       );
       throw markLocalRateLimitError(
         new Error(
-          `Request exceeded OmniRoute's local rate-limit execution expiration ` +
+          `Request exceeded 67router's local rate-limit execution expiration ` +
             `(resilienceSettings.requestQueue.executionMaxWaitMs=${executionExpirationMs}ms) for ` +
             `${model ? `${provider}/${model}` : provider}. Bottleneck applies this deadline only ` +
             `after dispatch; it does not bound queue wait and is not an upstream-generated timeout.`,
@@ -881,7 +881,7 @@ export async function withRateLimit(
       logRateLimit(`↪️ [RATE-LIMIT] ${key} — surfacing local wedge; caller will not be replayed`);
       const wedgeErr = new Error(
         `Request dropped: the local rate-limit queue for ${model ? `${provider}/${model}` : provider} ` +
-          `was detected as wedged (stalled with nothing executing) and force-reset. OmniRoute does ` +
+          `was detected as wedged (stalled with nothing executing) and force-reset. 67router does ` +
           `not replay dropped work automatically; combo routing may fall back to another target.`,
         { cause: err }
       ) as Error & { cleanupError?: unknown };

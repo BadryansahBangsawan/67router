@@ -45,7 +45,7 @@ npm run test:e2e           # 可选，但建议运行
 WS1.3 保证（泄露的令牌无法单独执行发布——因为根本不存在令牌）。
 
 **一次性设置（所有者）：**npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub：owner `diegosouzapw`、repo `OmniRoute`、workflow `npm-publish.yml`
+Publisher_ → GitHub：owner `diegosouzapw`、repo `67router`、workflow `npm-publish.yml`
 （environment：none）。在完成该设置之前，自动步骤将以 `ENEEDAUTH` 失败：
 请使用 `publish_mode=staged`（见下文）或 `direct` 重新分派。
 

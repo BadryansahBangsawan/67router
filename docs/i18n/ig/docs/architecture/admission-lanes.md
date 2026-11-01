@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nwere usoro lane abụọ dị n'ime process, nke ọ bụla nwere oke ọrụ dị iche. Ha na-arụkọ ọrụ ọnụ; ndị na-ahụ maka sistemụ kwesịrị ịma nke ha na-ele anya na ya.
+67router nwere usoro lane abụọ dị n'ime process, nke ọ bụla nwere oke ọrụ dị iche. Ha na-arụkọ ọrụ ọnụ; ndị na-ahụ maka sistemụ kwesịrị ịma nke ha na-ele anya na ya.
 
 ## 1. Nnabata n'ogo byte gafee usoro niile (`chatBodyAdmission.ts`)
 

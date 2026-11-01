@@ -6,7 +6,7 @@
 
 🌐 **Γλώσσες:** 🇺🇸 [Αγγλικά](./API_REFERENCE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/reference/API_REFERENCE.md) | 🇸🇦 [العربية](../i18n/ar/docs/reference/API_REFERENCE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/reference/API_REFERENCE.md) | 🇧🇬 [Български](../i18n/bg/docs/reference/API_REFERENCE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/reference/API_REFERENCE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/reference/API_REFERENCE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/reference/API_REFERENCE.md) | 🇩🇰 [Dansk](../i18n/da/docs/reference/API_REFERENCE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/reference/API_REFERENCE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/reference/API_REFERENCE.md) | 🇪🇸 [Español](../i18n/es/docs/reference/API_REFERENCE.md) | 🇪🇪 [Eesti](../i18n/et/docs/reference/API_REFERENCE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/reference/API_REFERENCE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/reference/API_REFERENCE.md) | 🇫🇷 [Français](../i18n/fr/docs/reference/API_REFERENCE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/reference/API_REFERENCE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/reference/API_REFERENCE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/reference/API_REFERENCE.md) | 🇮🇱 [עברית](../i18n/he/docs/reference/API_REFERENCE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/reference/API_REFERENCE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/reference/API_REFERENCE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/reference/API_REFERENCE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/reference/API_REFERENCE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/reference/API_REFERENCE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/reference/API_REFERENCE.md) | 🇮🇹 [Italiano](../i18n/it/docs/reference/API_REFERENCE.md) | 🇯🇵 [日本語](../i18n/ja/docs/reference/API_REFERENCE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/reference/API_REFERENCE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/reference/API_REFERENCE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/reference/API_REFERENCE.md) | 🇰🇷 [한국어](../i18n/ko/docs/reference/API_REFERENCE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/reference/API_REFERENCE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/reference/API_REFERENCE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/reference/API_REFERENCE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/reference/API_REFERENCE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/reference/API_REFERENCE.md) | 🇲🇹 [Malti](../i18n/mt/docs/reference/API_REFERENCE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/reference/API_REFERENCE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/reference/API_REFERENCE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/reference/API_REFERENCE.md) | 🇳🇴 [Norsk](../i18n/no/docs/reference/API_REFERENCE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/reference/API_REFERENCE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/reference/API_REFERENCE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/reference/API_REFERENCE.md) | 🇵🇱 [Polski](../i18n/pl/docs/reference/API_REFERENCE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/reference/API_REFERENCE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/reference/API_REFERENCE.md) | 🇷🇴 [Română](../i18n/ro/docs/reference/API_REFERENCE.md) | 🇷🇺 [Русский](../i18n/ru/docs/reference/API_REFERENCE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/reference/API_REFERENCE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/reference/API_REFERENCE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/reference/API_REFERENCE.md) | 🇷🇸 [Српски](../i18n/sr/docs/reference/API_REFERENCE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/reference/API_REFERENCE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/reference/API_REFERENCE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/reference/API_REFERENCE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/reference/API_REFERENCE.md) | 🇹🇭 [ไทย](../i18n/th/docs/reference/API_REFERENCE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/reference/API_REFERENCE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/reference/API_REFERENCE.md) | 🇵🇰 [اردو](../i18n/ur/docs/reference/API_REFERENCE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/reference/API_REFERENCE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/reference/API_REFERENCE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/reference/API_REFERENCE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/reference/API_REFERENCE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/reference/API_REFERENCE.md)
 
-Βασική τεκμηρίωση αναφοράς για το API του OmniRoute. Καλύπτει τη δημόσια επιφάνεια `/v1` και τα συχνότερα χρησιμοποιούμενα τελικά σημεία διαχείρισης· το μηχανικώς αναγνώσιμο [`docs/openapi.yaml`](../openapi.yaml) και το δέντρο διαδρομών στο `src/app/api/` αποτελούν τις εξαντλητικές πηγές.
+Βασική τεκμηρίωση αναφοράς για το API του 67router. Καλύπτει τη δημόσια επιφάνεια `/v1` και τα συχνότερα χρησιμοποιούμενα τελικά σημεία διαχείρισης· το μηχανικώς αναγνώσιμο [`docs/openapi.yaml`](../openapi.yaml) και το δέντρο διαδρομών στο `src/app/api/` αποτελούν τις εξαντλητικές πηγές.
 
 Για το ειδικά εστιασμένο πρωτόκολλο συμβατότητας με το OpenAI και τον πίνακα δυνατοτήτων των παρόχων, ανατρέξτε στο
 [`OPENAI_COMPATIBILITY.md`](./OPENAI_COMPATIBILITY.md).
@@ -78,9 +78,9 @@ Content-Type: application/json
 | `X-OmniRoute-Cache`      | Απόκριση   | `HIT` ή `MISS` (χωρίς ροή)                                                                                                                                                                                                                  |
 | `X-OmniRoute-Idempotent` | Απόκριση   | `true` εάν έγινε αποδιπλοποίηση                                                                                                                                                                                                             |
 | `X-OmniRoute-Progress`   | Απόκριση   | `enabled` εάν είναι ενεργοποιημένη η παρακολούθηση προόδου                                                                                                                                                                                  |
-| `X-OmniRoute-Session-Id` | Απόκριση   | Πραγματικό αναγνωριστικό συνεδρίας που χρησιμοποιήθηκε από το OmniRoute                                                                                                                                                                     |
+| `X-OmniRoute-Session-Id` | Απόκριση   | Πραγματικό αναγνωριστικό συνεδρίας που χρησιμοποιήθηκε από το 67router                                                                                                                                                                      |
 | `X-OmniRoute-Request-Id` | Απόκριση   | Αναγνωριστικό συσχέτισης αιτήματος (όταν είναι γνωστό)                                                                                                                                                                                      |
-| `X-OmniRoute-Version`    | Απόκριση   | Έκδοση δομής του OmniRoute (υπάρχει πάντα)                                                                                                                                                                                                  |
+| `X-OmniRoute-Version`    | Απόκριση   | Έκδοση δομής του 67router (υπάρχει πάντα)                                                                                                                                                                                                   |
 | `X-OmniRoute-Cost-Saved` | Απόκριση   | Ποσό σε USD που εξοικονομήθηκε από την κρυφή μνήμη σε περίπτωση HIT (μόνο για επιτυχίες κρυφής μνήμης)                                                                                                                                      |
 | `X-OmniRoute-Decision`   | Απόκριση   | Ίχνος δρομολόγησης: `strategy=<name>; provider=<alias>; latency_ms=<n>` (το `<name>` είναι η στρατηγική συνδυασμού ή `single` για αίτημα χωρίς συνδυασμό) — υπάρχει πάντα στις αποκρίσεις ολοκλήρωσης                                       |
 
@@ -88,13 +88,13 @@ Content-Type: application/json
 
 #### Καθήλωση λογαριασμού ανά αίτημα
 
-Όταν ένας πάροχος διαθέτει πολλές συνδέσεις (λογαριασμούς ή κλειδιά), το OmniRoute συνήθως επιλέγει μία
+Όταν ένας πάροχος διαθέτει πολλές συνδέσεις (λογαριασμούς ή κλειδιά), το 67router συνήθως επιλέγει μία
 μέσω της στρατηγικής επιλογής λογαριασμού του. Εναλλακτικά, ένα αίτημα μπορεί να καθηλώσει μία συγκεκριμένη σύνδεση
 με την κεφαλίδα `x-omniroute-connection`:
 
 ```bash
 curl http://localhost:20128/v1/chat/completions \
-  -H "Authorization: Bearer <your OmniRoute API key>" \
+  -H "Authorization: Bearer <your 67router API key>" \
   -H "Content-Type: application/json" \
   -H "x-omniroute-connection: <connection id>" \
   -d '{"model": "codex/gpt-5.5", "messages": [{"role": "user", "content": "hi"}]}'
@@ -123,8 +123,8 @@ curl http://localhost:20128/v1/chat/completions \
 ```jsonc
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "http://<your OmniRoute>:20128",
-    "ANTHROPIC_AUTH_TOKEN": "<your OmniRoute API key>",
+    "ANTHROPIC_BASE_URL": "http://<your 67router>:20128",
+    "ANTHROPIC_AUTH_TOKEN": "<your 67router API key>",
     "ANTHROPIC_CUSTOM_HEADERS": "x-omniroute-connection: <connection id>",
   },
 }
@@ -140,7 +140,7 @@ curl http://localhost:20128/v1/chat/completions \
 ## Αποκλειστικές μισθώσεις διαχειριζόμενων συνεδριών
 
 Η αποκλειστική μίσθωση διαχειριζόμενων συνεδριών είναι μια προαιρετική σύμβαση δρομολόγησης, ανεξάρτητη από τον πελάτη: ένας ενεργός κάτοχος
-δεσμεύει μία επιλέξιμη σύνδεση OmniRoute. Δεν μισθώνει κάποιο μοντέλο, δεν απαιτεί OAuth, δεν προσδιορίζει
+δεσμεύει μία επιλέξιμη σύνδεση 67router. Δεν μισθώνει κάποιο μοντέλο, δεν απαιτεί OAuth, δεν προσδιορίζει
 συγκεκριμένο πελάτη και δεν απαιτεί συγκεκριμένο πάροχο.
 
 Το API key που χρησιμοποιείται για τον έλεγχο ταυτότητας πρέπει να διαθέτει το scope `lease:exclusive` και μια ρητή, μη κενή
@@ -190,7 +190,7 @@ X-OmniRoute-Lease-Owner: vlo_<43-base64url-characters>
 
 Αυτή η προαιρετική ενέργεια κατάστασης προστατεύεται από τον αδιαφανή κάτοχο, το ελεγμένο διαχειριζόμενο API key και την ακριβή
 ενεργή γενιά μέσα σε μία συναλλαγή βάσης δεδομένων. Το `displayName` είναι μόνο το διαμορφωμένο όνομα
-σύνδεσης χωρίς κενά στην αρχή ή στο τέλος· είναι `null` όταν δεν υπάρχει ασφαλές διαμορφωμένο όνομα. Το OmniRoute δεν αντικαθιστά ποτέ το όνομα με
+σύνδεσης χωρίς κενά στην αρχή ή στο τέλος· είναι `null` όταν δεν υπάρχει ασφαλές διαμορφωμένο όνομα. Το 67router δεν αντικαθιστά ποτέ το όνομα με
 διεύθυνση email ή παραγόμενη ταυτότητα λογαριασμού. Η τιμή παρόχου είναι μια μη ευαίσθητη ετικέτα εμφάνισης και ποτέ
 ένα παραγόμενο αναγνωριστικό συμβατού παρόχου. Εξαιρούνται τα διαπιστευτήρια, τα token, τα cookie, τα ανεπεξέργαστα αναγνωριστικά σύνδεσης ή
 API key, τα hash κατόχων, τα μυστικά προστασίας και τα εσωτερικά δεδομένα δρομολόγησης.
@@ -231,7 +231,7 @@ X-OmniRoute-Lease-Generation: 1
 
 Αυτή η απόκριση σημαίνει μόνο ότι το συνήθες σύνολο επιλέξιμων συνδέσεων δεν ήταν κενό και κάθε ελεύθερη υποψήφια σύνδεση
 δεσμευόταν από μια ξένη ενεργή μίσθωση. Τα μη υποστηριζόμενα μοντέλα/οι μη υποστηριζόμενοι πάροχοι, η ασυμφωνία πολιτικής, η περίοδος αναμονής, το όριο χρήσης,
-η εύρυθμη λειτουργία και άλλες συνήθεις αποτυχίες επιλεξιμότητας διατηρούν τις υπάρχουσες αποκρίσεις OmniRoute.
+η εύρυθμη λειτουργία και άλλες συνήθεις αποτυχίες επιλεξιμότητας διατηρούν τις υπάρχουσες αποκρίσεις 67router.
 
 ### `x-omniroute-compression`
 
@@ -304,7 +304,7 @@ Content-Type: application/json
 ```
 
 Οι εγγενείς τιμές `{ image | audio | video | pdf }` μπορεί να είναι ένα δημόσιο URL HTTPS, ένα URI `data:` ή ακατέργαστα
-δεδομένα base64. Το OmniRoute δεν μετατρέπει αυτά τα αντικείμενα σε συμβολοσειρές ούτε ανακτά εγγενή URL εικόνων — η Jina ανακτά
+δεδομένα base64. Το 67router δεν μετατρέπει αυτά τα αντικείμενα σε συμβολοσειρές ούτε ανακτά εγγενή URL εικόνων — η Jina ανακτά
 τα δημόσια πολυμέσα η ίδια. Τα πρόσθετα πεδία της Jina (`task`, `normalized`, `truncate`, `embedding_type`)
 προωθούνται. Τα SKU της Jina που υποστηρίζουν μόνο κείμενο εξακολουθούν να απορρίπτουν έγγραφα που δεν είναι κείμενο.
 
@@ -454,7 +454,7 @@ Mistral (`mistral-ocr-latest`). Καταχωρισμένοι πάροχοι (`op
 
 ### Έλεγχος ταυτότητας και επίλυση endpoint για το Vertex AI DeepSeek OCR
 
-Το `vertex-deepseek-ocr` επαναχρησιμοποιεί τον ίδιο έλεγχο ταυτότητας Vertex AI που υποστηρίζει ήδη το OmniRoute για
+Το `vertex-deepseek-ocr` επαναχρησιμοποιεί τον ίδιο έλεγχο ταυτότητας Vertex AI που υποστηρίζει ήδη το 67router για
 κίνηση συνομιλίας/εικόνων (`open-sse/executors/vertex.ts`): το κλειδί API της σύνδεσης είναι είτε ένα
 διαπιστευτήριο Service Account JSON (το οποίο ανταλλάσσεται με ένα βραχύβιο διακριτικό πρόσβασης OAuth μέσω της ροής JWT-bearer)
 είτε ένα ήδη εκδοθέν διακριτικό πρόσβασης OAuth που χρησιμοποιείται ως έχει. Το upstream URL του endpoint είναι το γενικό
@@ -478,7 +478,7 @@ Authorization: Bearer your-api-key
 
 ### Τιμές μοντέλων (`pricing`)
 
-Μια καταχώριση περιλαμβάνει ένα αντικείμενο `pricing` όταν το OmniRoute γνωρίζει την τιμή του μοντέλου. Η τιμή προέρχεται
+Μια καταχώριση περιλαμβάνει ένα αντικείμενο `pricing` όταν το 67router γνωρίζει την τιμή του μοντέλου. Η τιμή προέρχεται
 από τον πίνακα τιμολόγησης που χρησιμοποιεί η λογιστική κόστους: ενσωματωμένες προεπιλογές, συγχρονισμένες τιμές και
 παρακάμψεις που ορίζονται μέσω του `/api/pricing`. Αυτές είναι τιμές καταλόγου, επομένως οι πάροχοι συνδρομών επίσης
 εμφανίζουν μια τιμή ανά token.
@@ -632,8 +632,8 @@ GET /api/v1/provider-plugin-manifest
 
 ## Δημιουργία ήχου με το ElevenLabs
 
-Διαμορφώστε μια σύνδεση παρόχου `elevenlabs` στο OmniRoute με το κλειδί API του ElevenLabs.
-Οι πελάτες πραγματοποιούν έλεγχο ταυτότητας με το κλειδί τους για το **OmniRoute** (`Authorization: Bearer $OMNIROUTE_API_KEY`)·
+Διαμορφώστε μια σύνδεση παρόχου `elevenlabs` στο 67router με το κλειδί API του ElevenLabs.
+Οι πελάτες πραγματοποιούν έλεγχο ταυτότητας με το κλειδί τους για το **67router** (`Authorization: Bearer $OMNIROUTE_API_KEY`)·
 η πύλη παρέχει το αποθηκευμένο κλειδί παρόχου ως `xi-api-key`. Μην αποστέλλετε ποτέ ένα κλειδί ElevenLabs
 ως διακριτικό bearer της πύλης.
 
@@ -698,7 +698,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 προγράμματος και του `429` για ένα όριο ποσόστωσης. Οι κεφαλίδες `character-cost`, `song-id`, `request-id` και `retry-after`
 διατηρούνται όταν υπάρχουν. Ένα δωρεάν πιστωτικό υπόλοιπο δεν εγγυάται πρόσβαση σε κάθε
 μοντέλο μουσικής, μορφή εξόδου ή δυνατότητα API: το ElevenLabs αποφασίζει τα δικαιώματα πρόσβασης για κάθε αίτημα.
-Το ενοποιημένο endpoint διατηρεί τους κωδικούς κατάστασης σφαλμάτων στο κανονικοποιημένο περίβλημα σφάλματος του OmniRoute.
+Το ενοποιημένο endpoint διατηρεί τους κωδικούς κατάστασης σφαλμάτων στο κανονικοποιημένο περίβλημα σφάλματος του 67router.
 
 Συμβάσεις upstream: [ηχητικά εφέ](https://elevenlabs.io/docs/api-reference/text-to-sound-effects/convert),
 [μουσική σύνθεση](https://elevenlabs.io/docs/api-reference/music/compose) και
@@ -739,7 +739,7 @@ curl --fail-with-body "$OMNIROUTE_BASE_URL/v1/music/generations" \
 
 Όλες οι διαδρομές POST ακολουθούν την ίδια δομή: `Bearer your-api-key` + σώμα JSON επικυρωμένο μέσω Zod (`v1RerankSchema`, `v1ModerationSchema`, `v1AudioSpeechSchema` κ.λπ., βλ. `src/shared/validation/schemas.ts`). Σε περίπτωση αποτυχίας επικύρωσης του σχήματος επιστρέφεται 4xx.
 
-Για πελάτες που δεν μπορούν να επισυνάψουν `Authorization: Bearer ...`, το OmniRoute δέχεται επίσης κλειδιά API στη διεύθυνση URL είτε μέσω παραμέτρων συμβατότητας στη συμβολοσειρά ερωτήματος (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) είτε μέσω των αποκλειστικών τελικών σημείων `/api/v1/vscode/{token}/...` που τεκμηριώνονται παρακάτω.
+Για πελάτες που δεν μπορούν να επισυνάψουν `Authorization: Bearer ...`, το 67router δέχεται επίσης κλειδιά API στη διεύθυνση URL είτε μέσω παραμέτρων συμβατότητας στη συμβολοσειρά ερωτήματος (`?token=...`, `?apiKey=...`, `?api_key=...`, `?key=...`) είτε μέσω των αποκλειστικών τελικών σημείων `/api/v1/vscode/{token}/...` που τεκμηριώνονται παρακάτω.
 
 ```bash
 # Ανακατάταξη (πάροχος μητρώου cloud ή κόμβος παρόχου συμβατού με OpenAI ως "<prefix>/<model>")
@@ -901,7 +901,7 @@ Reader, Tavily Extract, TinyFish Fetch, Nimble Extract, Parallel Extract).
 Το Parallel Extract (`parallel-search`, ίδιο κλειδί API με το Parallel Search) επιστρέφει μόνο Markdown
 — οποιοδήποτε άλλο `format` επιστρέφει `400` — και περιορίζει το περιεχόμενο στους 100.000 χαρακτήρες. Όταν
 η ίδια η σελίδα προορισμού δεν μπορεί να εξαχθεί, η υπηρεσία ανάντη ροής το αναφέρει μέσα σε μια απόκριση HTTP 200·
-το OmniRoute το εμφανίζει ως `422` με ένα σταθερό μήνυμα.
+το 67router το εμφανίζει ως `422` με ένα σταθερό μήνυμα.
 
 | Μέθοδος | Διαδρομή        | Περιγραφή                                                             |
 | ------- | --------------- | --------------------------------------------------------------------- |
@@ -964,14 +964,14 @@ ChatGPT). Ακούει στην ίδια θύρα με το API/τον πίνα�
 Το **Codex CLI** της OpenAI επικυρώνει το όνομα του μοντέλου στην πλευρά του πελάτη όταν
 `supports_websockets = true` και **απορρίπτει αναγνωριστικά με πρόθεμα παρόχου** όπως
 `codex/gpt-5.5` (`The 'codex/gpt-5.5' model is not supported when using Codex with
-a ChatGPT account`). Στείλτε το **σκέτο** αναγνωριστικό (π.χ. `gpt-5.5`). Η γέφυρα του OmniRoute είναι
+a ChatGPT account`). Στείλτε το **σκέτο** αναγνωριστικό (π.χ. `gpt-5.5`). Η γέφυρα του 67router είναι
 μόνο για codex, επομένως επιλύει εκ νέου ένα σκέτο αναγνωριστικό ως μοντέλο codex
 (`resolveCodexWsModelInfo`) πριν από τη διοχέτευση προς την υπηρεσία ανάντη ροής — παρόλο που ένα σκέτο
 `gpt-5.5` θα δρομολογούνταν διαφορετικά σε άλλον πάροχο μέσω HTTP.
 
 #### Διαμόρφωση του OpenAI Codex CLI
 
-Κατευθύνετε το Codex CLI στο OmniRoute προσθέτοντας έναν προσαρμοσμένο πάροχο με υποστήριξη WebSocket
+Κατευθύνετε το Codex CLI στο 67router προσθέτοντας έναν προσαρμοσμένο πάροχο με υποστήριξη WebSocket
 στο `~/.codex/config.toml` (χρησιμοποιήστε ξεχωριστό `CODEX_HOME` ώστε να μην τροποποιήσετε
 μια υπάρχουσα διαμόρφωση):
 
@@ -984,15 +984,15 @@ name = "OmniRoute (WS)"
 base_url = "http://localhost:20128/v1"   # χωρίς τελική κάθετο· το URL του WS παράγεται αυτόματα (χρησιμοποιήστε https/wss στην παραγωγή)
 wire_api = "responses"                    # η μόνη υποστηριζόμενη τιμή από τον Φεβ 2026
 supports_websockets = true                # ενεργοποιεί τη μεταφορά Responses-over-WS
-env_key = "OMNIROUTE_API_KEY"             # περιέχει το κλειδί API του OmniRoute (Bearer)
+env_key = "OMNIROUTE_API_KEY"             # περιέχει το κλειδί API του 67router (Bearer)
 ```
 
 ```bash
-export OMNIROUTE_API_KEY=sk-...           # ένα κλειδί API του OmniRoute (οποιοδήποτε κλειδί εάν REQUIRE_API_KEY=false)
+export OMNIROUTE_API_KEY=sk-...           # ένα κλειδί API του 67router (οποιοδήποτε κλειδί εάν REQUIRE_API_KEY=false)
 codex exec "Responda apenas: PONG"
 ```
 
-Το CLI αναβαθμίζει το `base_url + /responses` σε WebSocket και το OmniRoute το διοχετεύει
+Το CLI αναβαθμίζει το `base_url + /responses` σε WebSocket και το 67router το διοχετεύει
 στην επιλεγμένη σύνδεση OAuth του codex. Έχει επικυρωθεί από άκρο σε άκρο με τον τοπικό
 διακομιστή: το ChatGPT επιστρέφει `codex.rate_limits` + `response.created` και μεταδίδει σταδιακά την
 ολοκλήρωση.
@@ -1076,7 +1076,7 @@ curl -H "Authorization: Bearer <your-api-key>" \
 
 #### Ο Τύπος Προσαρμογής βάσει Ορίου
 
-Το OmniRoute υποστηρίζει προληπτικά όρια διακοπής χρήσης για την αποτροπή εξάντλησης του upstream (διαμορφωμένα μέσω των
+Το 67router υποστηρίζει προληπτικά όρια διακοπής χρήσης για την αποτροπή εξάντλησης του upstream (διαμορφωμένα μέσω των
 `quotaWindowThresholds` της σύνδεσης, των προεπιλογών του παρόχου ή των καθολικών ρυθμίσεων ανθεκτικότητας). Όταν ένα όριο διακοπής
 (π.χ. `cutoff = 25%`) είναι ενεργό σε ένα παράθυρο ορίου χρήσης, ο αποτυπωτής κειμένου υπολογίζει το εναπομένον περιθώριο ως εξής:
 
@@ -1439,9 +1439,8 @@ curl -X PATCH "$OMNIROUTE_URL/api/keys/$KEY_ID" \
 
 ### Αξιολογήσεις
 
-| Endpoint     | Μέθοδος  | Περιγραφή                                           |
-| ------------ | -------- | --------------------------------------------------- |
-| `/api/evals` | GET/POST | Παράθεση σουιτών αξιολόγησης / εκτέλεση αξιολόγησης |
+| Endpoint | Μέθοδος | Περιγραφή |
+| -------- | ------- | --------- |
 
 ### Πολιτικές
 
@@ -1625,7 +1624,7 @@ curl -X POST https://your-host.example/api/v1/vscode/YOUR_API_KEY/chat/completio
 
 - Τα ψευδώνυμα με διακριτικό επαναχρησιμοποιούν τους ίδιους χειριστές με τα `/v1/*` και `/api/tags`· οι μορφές των αποκρίσεων παραμένουν ίδιες.
 - Προτιμήστε το `Authorization: Bearer ...` όποτε το πρόγραμμα-πελάτης υποστηρίζει προσαρμοσμένες κεφαλίδες.
-- Τα διακριτικά που βασίζονται σε URL ενδέχεται να εμφανίζονται σε αρχεία καταγραφής αντίστροφων διακομιστών μεσολάβησης, στο ιστορικό του προγράμματος περιήγησης και σε δεδομένα τηλεμετρίας εκτός του OmniRoute. Αντιμετωπίστε τα ως επιλογή συμβατότητας και όχι ως προεπιλεγμένη μέθοδο ελέγχου ταυτότητας.
+- Τα διακριτικά που βασίζονται σε URL ενδέχεται να εμφανίζονται σε αρχεία καταγραφής αντίστροφων διακομιστών μεσολάβησης, στο ιστορικό του προγράμματος περιήγησης και σε δεδομένα τηλεμετρίας εκτός του 67router. Αντιμετωπίστε τα ως επιλογή συμβατότητας και όχι ως προεπιλεγμένη μέθοδο ελέγχου ταυτότητας.
 
 ---
 
@@ -1733,7 +1732,7 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ## Webhooks
 
-Συνδρομές εξερχόμενων webhook για συμβάντα του OmniRoute (ολοκλήρωση αιτήματος, εξάντληση ορίου, εναλλαγή κλειδιού κ.λπ.).
+Συνδρομές εξερχόμενων webhook για συμβάντα του 67router (ολοκλήρωση αιτήματος, εξάντληση ορίου, εναλλαγή κλειδιού κ.λπ.).
 
 | Μέθοδος | Διαδρομή                  | Περιγραφή                                                                                                   |
 | ------- | ------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -1764,31 +1763,6 @@ DELETE /api/usage/token-limits?id=tl-abc
 
 ---
 
-## Πρωτόκολλο Agents
-
-Εργασίες πρακτόρων cloud (Claude Code, Codex Cloud, OpenHands κ.λπ.) που εκτελούνται απομακρυσμένα για λογαριασμό χρηστών του OmniRoute.
-
-| Μέθοδος | Διαδρομή                      | Περιγραφή                                                                                                                                                            |
-| ------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/v1/agents/tasks`        | Παραθέτει τις εργασίες — προαιρετικά `?provider=`, `?status=`, `?limit=` (1–500, προεπιλογή 50)                                                                      |
-| POST    | `/api/v1/agents/tasks`        | Δημιουργεί εργασία — το σώμα επικυρώνεται από το `CreateCloudAgentTaskSchema` (`providerId`, `prompt`, `source`, `options?`). Επιστρέφει `201` με περίβλημα εργασίας |
-| DELETE  | `/api/v1/agents/tasks?id=...` | Διαγράφει μια εργασία                                                                                                                                                |
-| GET     | `/api/v1/agents/tasks/[id]`   | Διαβάζει την εργασία — ανανεώνει συγχρονισμένα την κατάσταση από τον ανάντη πράκτορα cloud όταν έχει οριστεί ένα `external_id`                                       |
-| POST    | `/api/v1/agents/tasks/[id]`   | Διακριτή ενέργεια: `{action: "approve"}`, `{action: "message", message}` ή `{action: "cancel"}`                                                                      |
-| DELETE  | `/api/v1/agents/tasks/[id]`   | Διαγράφει μια συγκεκριμένη εργασία βάσει id                                                                                                                          |
-
-> **Έλεγχος ταυτότητας:** απαιτείται έλεγχος ταυτότητας διαχείρισης για κάθε μέθοδο (`requireCloudAgentManagementAuth`). Πριν από την v3.8.0, αυτές οι μέθοδοι δεν απαιτούσαν έλεγχο ταυτότητας — δείτε το commit `588a0333` για την ασύμβατη αλλαγή.
-
-```bash
-# Δημιουργία εργασίας cloud του Claude Code
-curl -X POST http://localhost:20128/api/v1/agents/tasks \
-  -H "Authorization: Bearer your-management-key" \
-  -H "Content-Type: application/json" \
-  -d '{"providerId":"claude-code-cloud","prompt":"Fix the failing test","source":{"repo":"...","branch":"..."}}'
-```
-
----
-
 ## Διακομιστές μεσολάβησης διαχείρισης
 
 Εξερχόμενοι διακομιστές μεσολάβησης HTTP(S)/SOCKS που μπορούν να εκχωρηθούν σε παρόχους, λογαριασμούς ή καθολικά.
@@ -1812,7 +1786,7 @@ curl -X POST http://localhost:20128/api/v1/agents/tasks \
 
 ## Ανθεκτικότητα (εκτεταμένη)
 
-Το OmniRoute παρέχει τρεις ανεξάρτητους μηχανισμούς προσωρινής αποτυχίας· τα παρακάτω endpoints διαχείρισης επιτρέπουν στους διαχειριστές να διαβάζουν και να παρακάμπτουν τις ρυθμίσεις τους:
+Το 67router παρέχει τρεις ανεξάρτητους μηχανισμούς προσωρινής αποτυχίας· τα παρακάτω endpoints διαχείρισης επιτρέπουν στους διαχειριστές να διαβάζουν και να παρακάμπτουν τις ρυθμίσεις τους:
 
 | Εμβέλεια                   | Αποθήκευση κατάστασης                     | Ανάγνωση                                  | Επαναφορά / εκκαθάριση                                     |
 | -------------------------- | ----------------------------------------- | ----------------------------------------- | ---------------------------------------------------------- |
@@ -1847,7 +1821,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## Δεξιότητες
 
-Πλαίσιο δεξιοτήτων για την επέκταση του OmniRoute με προσαρμοσμένους εκτελέσιμους χειριστές, καθώς και ενσωματώσεις με αγορές.
+Πλαίσιο δεξιοτήτων για την επέκταση του 67router με προσαρμοσμένους εκτελέσιμους χειριστές, καθώς και ενσωματώσεις με αγορές.
 
 | Μέθοδος | Διαδρομή                          | Περιγραφή                                                                                                                                        |
 | ------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1884,7 +1858,7 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## Διακομιστής MCP
 
-Το OmniRoute περιλαμβάνει έναν ενσωματωμένο διακομιστή Model Context Protocol με 3 τρόπους μεταφοράς (stdio, SSE, streamable-http) και εργαλεία περιορισμένης εμβέλειας. Τα παρακάτω τελικά σημεία του πίνακα ελέγχου διαβάζουν δεδομένα κατάστασης/ελέγχου και λειτουργούν ως διακομιστές μεσολάβησης για τους τρόπους μεταφοράς HTTP.
+Το 67router περιλαμβάνει έναν ενσωματωμένο διακομιστή Model Context Protocol με 3 τρόπους μεταφοράς (stdio, SSE, streamable-http) και εργαλεία περιορισμένης εμβέλειας. Τα παρακάτω τελικά σημεία του πίνακα ελέγχου διαβάζουν δεδομένα κατάστασης/ελέγχου και λειτουργούν ως διακομιστές μεσολάβησης για τους τρόπους μεταφοράς HTTP.
 
 | Μέθοδος | Διαδρομή | Περιγραφή |
 | ------ | ---------------------- | ------------------------------------------------------------------------------------------------ | -------------------- |
@@ -1906,50 +1880,12 @@ curl -X DELETE http://localhost:20128/api/resilience/model-cooldowns \
 
 ## Διακομιστής A2A
 
-Το OmniRoute εκθέτει ένα endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, καθώς και ένα REST wrapper για χρήση επιθεώρησης/πίνακα ελέγχου.
-
-### JSON-RPC
-
-```bash
-POST /a2a
-Authorization: Bearer your-api-key   # προαιρετικό, εκτός αν έχει οριστεί το OMNIROUTE_API_KEY
-Content-Type: application/json
-
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "message/send",
-  "params": {
-    "skill": "smart-routing",
-    "messages": [{"role": "user", "content": "Route this coding task"}]
-  }
-}
-```
-
-Υποστηριζόμενες μέθοδοι (όλες ελέγχονται από το `settings.a2aEnabled`):
-
-| Μέθοδος          | Περιγραφή                                                              |
-| ---------------- | ---------------------------------------------------------------------- |
-| `message/send`   | Σύγχρονη εκτέλεση δεξιότητας· επιστρέφει `{task, artifacts, metadata}` |
-| `message/stream` | Εκτέλεση ροής SSE για το ίδιο σύνολο δεξιοτήτων                        |
-| `tasks/get`      | Ανάκτηση μιας εργασίας μέσω `taskId`                                   |
-| `tasks/cancel`   | Ακύρωση μιας εργασίας μέσω `taskId`                                    |
-
-Ενσωματωμένες δεξιότητες: `smart-routing`, `quota-management`, `provider-discovery`, `cost-analysis`, `health-report`.
-
-### Κάρτα πράκτορα
-
-```bash
-GET /.well-known/agent.json
-```
-
-Επιστρέφει τη δημόσια κάρτα πράκτορα A2A (όνομα, περιγραφή, δυνατότητες, κατάλογος δεξιοτήτων, σχήμα ελέγχου ταυτότητας) — αποθηκεύεται δημόσια στην κρυφή μνήμη για 1 ώρα. Δεν απαιτείται έλεγχος ταυτότητας.
+Το 67router εκθέτει ένα endpoint A2A (Agent-to-Agent) JSON-RPC 2.0, καθώς και ένα REST wrapper για χρήση επιθεώρησης/πίνακα ελέγχου.
 
 ### Βοηθητικά endpoints REST
 
 | Μέθοδος | Διαδρομή                     | Περιγραφή                                                                                                           |
 | ------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| GET     | `/api/a2a/status`            | Κατάσταση ενεργοποίησης A2A + στατιστικά εργασιών + σύνοψη κάρτας πράκτορα από την κρυφή μνήμη                      |
 | GET     | `/api/a2a/tasks`             | Λίστα εργασιών — `?state=submitted\|working\|completed\|failed\|cancelled`, `?skill=`, `?limit=` (≤200), `?offset=` |
 | POST    | `/api/a2a/tasks`             | (Δεν έχει υλοποιηθεί ως βοηθητικό endpoint REST — δημιουργήστε μέσω JSON-RPC `message/send`)                        |
 | GET     | `/api/a2a/tasks/[id]`        | Ανάκτηση μίας εργασίας                                                                                              |
@@ -1969,12 +1905,8 @@ GET /.well-known/agent.json
 | GET | `/api/cloud/models/alias` | Παραθέτει τα ψευδώνυμα μοντέλων όπως εκτίθενται στον συγχρονισμό cloud |
 | GET | `/api/assess` | Διαβάζει τις πιο πρόσφατες κατηγοριοποιήσεις αποτίμησης (ανά πάροχο/μοντέλο) |
 | POST | `/api/assess` | Εκτελεί μια αποτίμηση — σώμα: `{scope: {type:"all"}                                                   | {type:"provider", providerId} | {type:"model", modelId}, trigger?}` |
-| GET | `/api/evals` | Παραθέτει τις ενσωματωμένες σουίτες αξιολόγησης + τις πιο πρόσφατες εκτελέσεις |
-| POST | `/api/evals` | Ενεργοποιεί μια εκτέλεση αξιολόγησης |
-| POST | `/api/evals/suites` | Δημιουργεί μια προσαρμοσμένη σουίτα αξιολόγησης — το σώμα επικυρώνεται από το `evalSuiteSaveSchema` |
-| GET | `/api/evals/suites/[id]` | Ανακτά μια προσαρμοσμένη σουίτα αξιολόγησης |
 
-**Έλεγχος ταυτότητας:** το `/api/cloud/auth` επικυρώνει απευθείας ένα κλειδί Bearer και επιστρέφει το καλυμμένο κλειδί και το `projectId` κάθε σύνδεσης μόνο για κλειδί με scope `manage` / `admin`· οι άλλες διαδρομές `/api/cloud/*`, `/api/evals/*` και `/api/assess` απαιτούν συνεδρία διαχείρισης/κλειδί API. Το POST του `/api/assess` χρησιμοποιεί το `validateBody` με ένα σχήμα scope τύπου discriminated union.
+**Έλεγχος ταυτότητας:** το `/api/cloud/auth` επικυρώνει απευθείας ένα κλειδί Bearer και επιστρέφει το καλυμμένο κλειδί και το `projectId` κάθε σύνδεσης μόνο για κλειδί με scope `manage` / `admin`· οι άλλες διαδρομές `/api/cloud/*` και `/api/assess` απαιτούν συνεδρία διαχείρισης/κλειδί API. Το POST του `/api/assess` χρησιμοποιεί το `validateBody` με ένα σχήμα scope τύπου discriminated union.
 
 ---
 
@@ -2132,7 +2064,7 @@ Endpoints αναλυτικών στοιχείων σε πραγματικό χρ
 
 ## Διαχείριση Εργαλείων CLI
 
-Διαχειριστείτε εργαλεία CLI που ενσωματώνονται με το OmniRoute (antigravity, commandCode,
+Διαχειριστείτε εργαλεία CLI που ενσωματώνονται με το 67router (antigravity, commandCode,
 devin-cli κ.λπ.). Δείτε την [Αναφορά Παρόχων](./PROVIDER_REFERENCE.md) για την πλήρη λίστα.
 
 | Μέθοδος | Διαδρομή                                | Περιγραφή                                                                                                                                                                                                        |
@@ -2241,26 +2173,6 @@ devin-cli κ.λπ.). Δείτε την [Αναφορά Παρόχων](./PROVIDE
 
 ---
 
-## Πρόσθετα
-
-Διαχειριστείτε τα πρόσθετα του OmniRoute (επεκτάσεις τρίτων).
-
-| Μέθοδος | Διαδρομή                           | Περιγραφή                                 |
-| ------- | ---------------------------------- | ----------------------------------------- |
-| GET     | `/api/plugins`                     | Παραθέτει τα εγκατεστημένα πρόσθετα       |
-| POST    | `/api/plugins/marketplace/install` | Εγκαθιστά ένα πρόσθετο από το marketplace |
-| DELETE  | `/api/plugins/[name]`              | Απεγκαθιστά ένα πρόσθετο                  |
-| POST    | `/api/plugins/[name]/activate`     | Ενεργοποιεί ένα πρόσθετο                  |
-| POST    | `/api/plugins/[name]/deactivate`   | Απενεργοποιεί ένα πρόσθετο                |
-| GET     | `/api/plugins/[name]/config`       | Λαμβάνει τη διαμόρφωση του πρόσθετου      |
-| PUT     | `/api/plugins/[name]/config`       | Ενημερώνει τη διαμόρφωση του πρόσθετου    |
-
-**Έλεγχος ταυτότητας:** Απαιτεί συνεδρία διαχείρισης.
-
-Ανατρέξτε στο [Πλαίσιο πρόσθετων](../frameworks/PLUGIN_SDK.md) για πλήρεις λεπτομέρειες.
-
----
-
 ## Σκιώδης δρομολόγηση
 
 Η σκιώδης σύγκριση / σύγκριση A-B παρόχων **δεν αποτελεί αυτόνομη επιφάνεια REST** — διαμορφώνεται μέσω συνδυαστικής δρομολόγησης (ανατρέξτε στο [Αυτόματος συνδυασμός](../routing/AUTO-COMBO.md)). Οι μετρικές σύγκρισης ανά συνδυασμό παρέχονται από το `GET /api/combos/metrics`.
@@ -2295,5 +2207,3 @@ devin-cli κ.λπ.). Δείτε την [Αναφορά Παρόχων](./PROVIDE
 - Το `requireLogin` μπορεί να ενεργοποιηθεί ή να απενεργοποιηθεί μέσω του `/api/settings/require-login`
 - Οι διαδρομές `/v1/*` απαιτούν προαιρετικά κλειδί API τύπου Bearer όταν `REQUIRE_API_KEY=true`
 - Οι όροι «διακριτικό διαχείρισης» / «κλειδί API με εμβέλεια διαχείρισης» σε αυτήν την αναφορά σημαίνουν μία από τις οικογένειες του συγκεκριμένου οδηγού — όχι έναν απροσδιόριστο πρόσθετο τύπο μυστικού
-
-> **Αλλαγή που διακόπτει τη συμβατότητα (v3.8.0)** — Τα `/api/v1/agents/tasks/*` και τα τελικά σημεία διαχείρισης χρόνου αναμονής απαιτούν πλέον **έλεγχο ταυτότητας διαχείρισης** (cookie πίνακα ελέγχου `auth_token` ή κλειδί API με εμβέλεια διαχείρισης). Οι πελάτες που προηγουμένως καλούσαν αυτές τις διαδρομές χωρίς έλεγχο ταυτότητας θα λαμβάνουν `401 Unauthorized`. Ανατρέξτε στο commit `588a0333` (`fix(auth): require management auth for agent and cooldown APIs`).

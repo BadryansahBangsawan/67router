@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: Is é `open-sse/` an croí-inneall sruthaithe a chumhachtaíonn gach iarratas LLM in OmniRoute. Tá ~1,400 comhad ann a chuireann píblíne na n-iarratas, na seiceadóirí, na seirbhísí, an freastalaí MCP agus an tsraith aistriúcháin i bhfeidhm. Míníonn an treoir seo conas a oibríonn na codanna le chéile.
+> **TL;DR**: Is é `open-sse/` an croí-inneall sruthaithe a chumhachtaíonn gach iarratas LLM in 67router. Tá ~1,400 comhad ann a chuireann píblíne na n-iarratas, na seiceadóirí, na seirbhísí, an freastalaí MCP agus an tsraith aistriúcháin i bhfeidhm. Míníonn an treoir seo conas a oibríonn na codanna le chéile.
 
 **Foinse:** `open-sse/` (pacáiste spáis oibre, ~1,440 comhad `.ts` nach comhaid tástála iad)
 
@@ -12,10 +12,10 @@
 
 ## Cén Fáth a bhfuil Pacáiste Spáis Oibre ar Leith ann?
 
-Is **spás oibre neamhspleách** é `open-sse/` i monorepo OmniRoute ar roinnt cúiseanna:
+Is **spás oibre neamhspleách** é `open-sse/` i monorepo 67router ar roinnt cúiseanna:
 
 1. **In-athúsáidteacht** — foilsítear `open-sse` mar `@omniroute/open-sse` ar npm, ionas gur féidir le tionscadail eile é a úsáid go neamhspleách
-2. **Teorainneacha soiléire** — tá an t-inneall sruthaithe díchúpláilte ón tsraith UI/DB a bhaineann go sonrach le OmniRoute
+2. **Teorainneacha soiléire** — tá an t-inneall sruthaithe díchúpláilte ón tsraith UI/DB a bhaineann go sonrach le 67router
 3. **Feidhmíocht** — níl aon spleáchais Next.js ag an inneall, rud a chumasaíonn tosuithe fuara níos tapúla i gcomhthéacsanna CLI/gan fhreastalaí
 4. **Leaganú** — is féidir le `open-sse` leaganacha a eisiúint de réir a sceidil féin
 
@@ -460,7 +460,7 @@ Tiontaíonn `open-sse/transformer/` idir formáidí **Chat Completions** agus **
 
 ### Cén Fáth a bhfuil Trasfhoirmeoir ar Leith Ann?
 
-Is í Responses API formáid nua OpenAI ina bhfuil **comhráite staideacha** (`previous_response_id`). Nuair a sheolann cliant iarratas Responses, déanann OmniRoute an méid seo a leanas:
+Is í Responses API formáid nua OpenAI ina bhfuil **comhráite staideacha** (`previous_response_id`). Nuair a sheolann cliant iarratas Responses, déanann 67router an méid seo a leanas:
 
 1. Tiontaíonn sé Responses → Chat Completions go hinmheánach
 2. Seolann sé chuig an soláthraí é (aon soláthraí a thacaíonn le Chat Completions)
@@ -573,5 +573,4 @@ Tá buiséid dhiana feidhmíochta ag an inneall ródaithe:
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — eolaire ar eolaire
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — scóráil 16 fhachtóir
 - [MCP-SERVER.md](./MCP-SERVER.md) — freastalaí MCP
-- [A2A-SERVER.md](./A2A-SERVER.md) — freastalaí A2A
 - Foinse: `open-sse/` (400+ comhad, ~143K líne de chód)

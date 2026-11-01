@@ -8,7 +8,7 @@
 > **Oxirgi yangilangan:** 2026-10-17 — v3.8.52 (qo'shildi: [Qamrov va cheklovlar](#coverage-and-limits):
 > hook'lar qaysi marshrutlar va javob yo'llariga yetishi, birlashtirilgan o'chirish sarlavhalari (#16412), majburiy chegara sifatida in'eksiyani bloklash rejimi (#16413) va post-call'dan oldin javobni nima ko'rishi)
 
-Guardrail'lar OmniRoute va yuqori oqim provayderlari o'rtasidagi chegarada xavfsizlik, siyosat va kontent transformatsiyalarini amalga oshiradi. Har bir guardrail so'rov yuklamalarini (`preCall`) va yuqori oqim javoblarini (`postCall`) tekshirishi (va ixtiyoriy ravishda rad etishi, transformatsiya qilishi yoki izohlashi) mumkin.
+Guardrail'lar 67router va yuqori oqim provayderlari o'rtasidagi chegarada xavfsizlik, siyosat va kontent transformatsiyalarini amalga oshiradi. Har bir guardrail so'rov yuklamalarini (`preCall`) va yuqori oqim javoblarini (`postCall`) tekshirishi (va ixtiyoriy ravishda rad etishi, transformatsiya qilishi yoki izohlashi) mumkin.
 
 Tizim **fail-open** tamoyilida ishlaydi: agar guardrail bajarilish paytida xatolik tashlasa, reyestr xatolikni qayd etadi va so'rovni muvaffaqiyatsiz qilish o'rniga keyingi guardrail bilan davom etadi. Bloklash aniq qarordir (`block: true`), hech qachon tasodif emas. Yagona istisno — bekor qilingan so'rov: chaqiruvchining `signal`i bekor qilinganda, xatolik tashlagan guardrail o'tkazib yuborilish o'rniga hook ishga tushirilishini rad etadi.
 
@@ -90,7 +90,7 @@ Chaqiruvchining API kaliti `allowedConnections`, kvota havzalarini
 `modelAccessMode: "restricted"` / `disableNonPublicModels`) cheklaganda,
 bridge faqat kalitga ruxsat etilgan ulanishlarda, kalit foydalanishi mumkin
 boʻlgan reroute va describe modellarni tanlaydi. Keyin describe chaqiruvi
-har doim `x-omniroute-self-loop-key-id` sarlavhasi bilan OmniRoute
+har doim `x-omniroute-self-loop-key-id` sarlavhasi bilan 67router
 self-loop orqali oʻtadi, shu tufayli qabul qiluvchi chat soʻrovi oʻsha
 kalitning ulanish va model siyosatini yana bir bor qoʻllaydi.
 `enforceApiKeyPolicy()` bu sarlavhani faqat self-loop bearer bilan birga
@@ -125,7 +125,7 @@ matn-transkripsiya vazifasi uchun OCR aniqligini pasaytiradi, shuning
 uchun describe chaqiruvining oʻzi asl kiruvchi soʻrov qaysi batafsillik
 darajasidan foydalanganidan qat'i nazar, har doim yuqori batafsillik
 soʻraydi. Bu faqat ichki describe soʻrovining tanasiga taʼsir qiladi; u
-OmniRoute asosiy soʻrovda chaqiruvchining oʻz `image_url.detail`
+67router asosiy soʻrovda chaqiruvchining oʻz `image_url.detail`
 qiymatini qanday uzatishini oʻzgartirmaydi — bu standart alohida
 qoʻllanadi va faqat aniqlangan OpenCode mijozlari uchun,
 `defaultImageDetail()` da (`open-sse/handlers/chatCore/upstreamBody.ts`).
@@ -196,7 +196,7 @@ Maxsus boshqaruv paneli sahifasi —
 
 AI sozlamalari ostidagi avvalgi Vision Bridge kartasi yangi sahifaga muvofiqlik havolasi hisoblanadi; u endi formaning ikkinchi nusxasiga ega emas. Media Providers ham Image-to-Text va Speech-to-Text ish oqimlarini mavjud Speech-to-Text playground'ini olib tashlamasdan tegishli Modality Bridge tablariga bogʻlaydi.
 
-**Self-loop kirishni chetlab oʻtish:** describe chaqirigʻi OmniRoute'ning oʻz `/v1` self-loop'i orqali yoʻnaltirilganda (nostandart provayder modeli), kichik soʻrov `x-omniroute-admission-bypass: internal` yuboradi va hal qilingan self-loop maʼlumotnomasi bilan autentifikatsiya qilinadi — lokal rejimda lokal `sk_omniroute` sentineli yoki operator sozlagan `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` muhit kaliti (#1350), shunday qilib `REQUIRE_API_KEY=true` joylashtirishlari ham describe chaqirigʻini ishga tushira oladi. Chetlab oʻtish faqat aynan shu maʼlumotnomalar uchun qabul qilinadi, shuning uchun tashqi mijozlar kirishdan oʻtish uchun bu sarlavhani ishlata olmaydi.
+**Self-loop kirishni chetlab oʻtish:** describe chaqirigʻi 67router'ning oʻz `/v1` self-loop'i orqali yoʻnaltirilganda (nostandart provayder modeli), kichik soʻrov `x-omniroute-admission-bypass: internal` yuboradi va hal qilingan self-loop maʼlumotnomasi bilan autentifikatsiya qilinadi — lokal rejimda lokal `sk_omniroute` sentineli yoki operator sozlagan `OMNIROUTE_API_KEY` / `ROUTER_API_KEY` muhit kaliti (#1350), shunday qilib `REQUIRE_API_KEY=true` joylashtirishlari ham describe chaqirigʻini ishga tushira oladi. Chetlab oʻtish faqat aynan shu maʼlumotnomalar uchun qabul qilinadi, shuning uchun tashqi mijozlar kirishdan oʻtish uchun bu sarlavhani ishlata olmaydi.
 
 Eski standart qiymatlar `src/shared/constants/visionBridgeDefaults.ts` da joylashgan; yangi rejim/vazifaga-mos/kesh standartlari va sozlamalar hal qiluvchisi `src/shared/constants/modalityBridgeDefaults.ts` da joylashgan. Guardrail testlar soxta `getSettings` va `callVisionModel` implementatsiyalarini kiritishi uchun `deps` konstruktor opsiyasini taqdim etadi.
 
@@ -323,7 +323,7 @@ Yetishmayotgan filtrlar, notoʻgʻri/boʻsh dalillar, detektor xatosi yoki chekl
 
 Har bir kadr 4 MiB bilan cheklangan, barcha xom kadrlar birgalikda 23 MiB bilan,
 seriyalangan broker javobi esa 32 MiB bilan cheklangan. Maxsus vaqtinchalik
-katalog `finally` ichida o'chiriladi. OmniRoute FFmpeg ni o'z tarkibiga kiritmaydi
+katalog `finally` ichida o'chiriladi. 67router FFmpeg ni o'z tarkibiga kiritmaydi
 va maxsus bajariladigan fayl yo'lini qabul qilmaydi. Taglavhalashdan oldin
 ko'prik ehtiyotkor vizual takrorlarni olib tashlash bosqichini qo'llaydi: har bir
 JPEG 16×16 kulrang buferga kichraytiriladi va faqat oxirgi saqlab qolingan kadr
@@ -373,7 +373,7 @@ biriktirishi mumkin. Har bir cue `text`, aniqlangan (probe qilingan) davomiylik
 ichidagi chekli `start`/`end` intervali va oq ro'yxatga kiritilgan `source`
 (`client`, `embedded` yoki `audio-bridge`) ni o'z ichiga olishi shart;
 `confidence` sukut bo'yicha `1` ga teng bo'lib, `0` va `1` orasida qolishi kerak.
-Aynan bir xil takroriy cue lar birlashtiriladi. OmniRoute hech qachon ushbu
+Aynan bir xil takroriy cue lar birlashtiriladi. 67router hech qachon ushbu
 metama'lumotlardan transkripsiyani boshlamaydi: tekshirilgan cue lar manba,
 ishonch darajasi va interval bilan tavsiflangan natijaga ko'chiriladi hamda kadr
 taglavhalari yonida ishonchsiz kuzatuvlar sifatida ko'rsatiladi. Yaroqsiz,
@@ -864,6 +864,6 @@ Matn ajratib olish (`extractMessageContents`) `messages`/`input`/`prompt`/`query
 Har tungi workflow (`.github/workflows/nightly-llm-security.yml`, cron + qo'lda ishga tushirish) ikkita job'ga ega:
 
 - **`promptfoo-guard` (bloklovchi)** — `INJECTION_GUARD_MODE=block` bilan `promptfoo eval -c promptfooconfig.yaml` ni ishga tushiradi. Har bir adversarial holat (masalan, "oldingi barcha ko'rsatmalarni e'tiborsiz qoldiring…", DAN-uslubidagi jailbreak'lar) javob `error.code === "SECURITY_001"` ni o'z ichiga olishini tasdiqlaydi, ya'ni guard so'rovni haqiqatda rad etgan.
-- **`garak` (maslahat)** — mahalliy OmniRoute instansiyasiga (`http://localhost:20128/v1`) nisbatan garak `--probes promptinject,dan,leakreplay` ni ishga tushiradi. Provayder secret'iga bog'langan (`PROMPTFOO_PROVIDER_KEY`); muammosiz o'tkazib yuboradi va `|| true` bilan yakunlanadi, shuning uchun CI'ni buzmasdan hisobot beradi.
+- **`garak` (maslahat)** — mahalliy 67router instansiyasiga (`http://localhost:20128/v1`) nisbatan garak `--probes promptinject,dan,leakreplay` ni ishga tushiradi. Provayder secret'iga bog'langan (`PROMPTFOO_PROVIDER_KEY`); muammosiz o'tkazib yuboradi va `|| true` bilan yakunlanadi, shuning uchun CI'ni buzmasdan hisobot beradi.
 
 Guard yordamchisining qamrovi (`createInjectionGuard` / `withInjectionGuard`) prompt olib yuruvchi har bir `/v1` marshrutini o'z ichiga oladi; prompt matni `src/shared/utils/inputSanitizer.ts` ichidagi `extractMessageContents()` tomonidan `messages`/`input`/`prompt`/`query`+`documents`/`instructions`/`system` maydonlaridan olinadi.

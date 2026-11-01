@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl";
 import { Field } from "@omniroute/ui-kit/field";
 
 import {
-  Card,
   Collapsible,
   Input,
   ModelSelectField,
@@ -23,6 +22,7 @@ import { VISION_BRIDGE_DEFAULTS } from "@/shared/constants/visionBridgeDefaults"
 
 import ModalityBridgeStatsRow from "./ModalityBridgeStatsRow";
 import ModalityBridgeTestButton from "./ModalityBridgeTestButton";
+import { SettingsSection } from "../SettingsSection";
 
 interface VisionState {
   modalityBridgeVisionEnabled: boolean;
@@ -132,10 +132,9 @@ export default function ModalityBridgeVisionTab() {
   };
 
   return (
-    <Card
+    <SettingsSection
       title={t("modalityBridgeVisionTitle")}
-      subtitle={t("modalityBridgeVisionDesc")}
-      icon="image_search"
+      description={t("modalityBridgeVisionDesc")}
     >
       <div className="space-y-4">
         <Toggle
@@ -312,7 +311,7 @@ export default function ModalityBridgeVisionTab() {
         <ModalityBridgeStatsRow kind="vision" />
         <ModalityBridgeTestButton />
       </div>
-    </Card>
+    </SettingsSection>
   );
 }
 

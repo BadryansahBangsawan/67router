@@ -4,7 +4,7 @@
 
 ---
 
-TPROXY şeffaf şifre çözme, OmniRoute'un
+TPROXY şeffaf şifre çözme, 67router'un
 [Traffic Inspector](../frameworks/TRAFFIC_INSPECTOR.md) / [AgentBridge](../frameworks/AGENTBRIDGE.md)
 MITM yığını için **5. yakalama modudur**. Linux'ta yerel giden HTTPS trafiğini,
 çekirdek TPROXY + ilke tabanlı yönlendirme kullanarak — `/etc/hosts` üzerinde
@@ -60,7 +60,7 @@ istediğinizde kullanın:
 - sistem geneli bir proxy değişikliğiyle işleyişini bozmak istemiyorsanız.
 
 Yakalama çekirdekte gerçekleştiği için kaynak işlemin **yapılandırmasında herhangi
-bir değişiklik gerekmez** — ancak işlem, OmniRoute'un yüklediği dinamik CA'ya
+bir değişiklik gerekmez** — ancak işlem, 67router'un yüklediği dinamik CA'ya
 güvenmelidir (bkz. [§4](#4-the-per-sni-dynamic-ca-and-trust-store-installer)).
 
 ---
@@ -80,7 +80,7 @@ araç zincirinin bulunmaması, eklentinin derlenmemiş olması), eklenti yükley
 yerine `null` döndürür. Bu durumda yakalama modu durumu `available: false`
 olarak bildirilir, kontrol panelindeki geçiş düğmesi
 "TPROXY decrypt requires Linux + root + the native addon" araç ipucuyla birlikte
-**devre dışı bırakılır** ve OmniRoute'un geri kalanı çalışmaya devam eder.
+**devre dışı bırakılır** ve 67router'un geri kalanı çalışmaya devam eder.
 
 ---
 
@@ -274,7 +274,7 @@ oluşurdu. İletim yolu, bypass soket işareti (**SO_MARK**) kullanarak bunu ön
 | **Yukarı akış sertifikası doğrulaması**   | Yeniden şifrelenen yönlendirme, varsayılan olarak yukarı akış sertifikasını doğrular (`rejectUnauthorized: true`).                                                                                                                                                                                                                                                                                            |
 | **Hata temizleme**                        | Rotanın hata yanıtları `sanitizeErrorMessage()` işlevinden geçirilir (Kesin Kural #12).                                                                                                                                                                                                                                                                                                                       |
 
-**MITM CA güçlü bir yetenektir.** Herhangi bir ana makine için sertifika imzalayabilen ve işletim sistemi tarafından güvenilen bir CA, OmniRoute'un yakaladığı her şeyin şifresinin çözülebileceği anlamına gelir. Bu özellik, varsayılan olarak kapalı olan açık ve yalnızca yerel TPROXY yakalama moduyla sınırlandırılmıştır ve modu durdurduğunuzda güven deposu girdisi kaldırılır.
+**MITM CA güçlü bir yetenektir.** Herhangi bir ana makine için sertifika imzalayabilen ve işletim sistemi tarafından güvenilen bir CA, 67router'un yakaladığı her şeyin şifresinin çözülebileceği anlamına gelir. Bu özellik, varsayılan olarak kapalı olan açık ve yalnızca yerel TPROXY yakalama moduyla sınırlandırılmıştır ve modu durdurduğunuzda güven deposu girdisi kaldırılır.
 
 ---
 
@@ -377,7 +377,7 @@ Geçiş düğmesini `isTransparentSocketAvailable()` denetler; eklenti eksik old
 ### Çökme sonrasında kalan güvenlik duvarı kuralları
 
 `revertTproxy()`, uygulama işleminin tam tersidir ve idempotenttir. Modun durdurulması
-kuralları geri alır; OmniRoute oturumun ortasında sonlandırıldıysa, sahipsiz sistem
+kuralları geri alır; 67router oturumun ortasında sonlandırıldıysa, sahipsiz sistem
 durumunu (DNS yanıltma, kök CA, sistem proxy'si) geri almak için AgentBridge
 **Repair** eylemini (`POST /api/tools/agent-bridge/repair`) kullanın. TPROXY `mangle`
 kuralları ve yönlendirme de yeniden başlatma sırasında otomatik olarak temizlenir.

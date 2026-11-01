@@ -1,10 +1,10 @@
-# Codex CLI — Configuration with OmniRoute (Malti)
+# Codex CLI — Configuration with 67router (Malti)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇹 [am](../../../am/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇦 [ar](../../../ar/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇿 [az](../../../az/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇬 [bg](../../../bg/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇩 [bn](../../../bn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇦 [bs](../../../bs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇿 [cs](../../../cs/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇰 [da](../../../da/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇩🇪 [de](../../../de/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇷 [el](../../../el/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇸 [es](../../../es/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇪🇪 [et](../../../et/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇷 [fa](../../../fa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇮 [fi](../../../fi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇫🇷 [fr](../../../fr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇪 [ga](../../../ga/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [gu](../../../gu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ha](../../../ha/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇱 [he](../../../he/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [hi](../../../hi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇷 [hr](../../../hr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇭🇺 [hu](../../../hu/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇦🇲 [hy](../../../hy/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇩 [id](../../../id/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [ig](../../../ig/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇹 [it](../../../it/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇯🇵 [ja](../../../ja/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇬🇪 [ka](../../../ka/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇭 [km](../../../km/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [kn](../../../kn/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇷 [ko](../../../ko/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇹 [lt](../../../lt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇻 [lv](../../../lv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ml](../../../ml/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [mr](../../../mr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇾 [ms](../../../ms/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇲🇲 [my](../../../my/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇵 [ne](../../../ne/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇱 [nl](../../../nl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇴 [no](../../../no/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [or](../../../or/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [pa](../../../pa/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇭 [phi](../../../phi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇱 [pl](../../../pl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇹 [pt](../../../pt/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇴 [ro](../../../ro/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇺 [ru](../../../ru/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇱🇰 [si](../../../si/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇰 [sk](../../../sk/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇮 [sl](../../../sl/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇷🇸 [sr](../../../sr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇸🇪 [sv](../../../sv/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇰🇪 [sw](../../../sw/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [ta](../../../ta/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇮🇳 [te](../../../te/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇭 [th](../../../th/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇷 [tr](../../../tr/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇵🇰 [ur](../../../ur/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇺🇿 [uz](../../../uz/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇻🇳 [vi](../../../vi/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇳🇬 [yo](../../../yo/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/CODEX-CLI-CONFIGURATION.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/CODEX-CLI-CONFIGURATION.md)
 
 ---
 
-Gwida kompluta biex tuża l-Codex CLI dirett lejn OmniRoute bħala backend kompatibbli ma’ OpenAI.
+Gwida kompluta biex tuża l-Codex CLI dirett lejn 67router bħala backend kompatibbli ma’ OpenAI.
 
 ---
 
@@ -60,17 +60,17 @@ command -v codex
 codex --version
 ```
 
-### OmniRoute lokali mingħajr awtentikazzjoni: ċavetta fittizja hija biżżejjed
+### 67router lokali mingħajr awtentikazzjoni: ċavetta fittizja hija biżżejjed
 
 Codex jivvalida li l-varjabbli tal-ambjent imsemmi minn `env_key` jeżisti
-**qabel** ma l-ewwel talba titlaq mill-CLI. Jekk l-istanza **lokali** tiegħek ta’ OmniRoute
+**qabel** ma l-ewwel talba titlaq mill-CLI. Jekk l-istanza **lokali** tiegħek ta’ 67router
 ma teħtieġx awtentikazzjoni, kwalunkwe valur fittizju mhux vojt jaħdem:
 
 ```bash
 export OMNIROUTE_API_KEY="${OMNIROUTE_API_KEY:-local}"
 ```
 
-Minflok, uża ċavetta vera meta s-server OmniRoute tiegħek ikun protett jew remot.
+Minflok, uża ċavetta vera meta s-server 67router tiegħek ikun protett jew remot.
 
 > **Għażliet komuni tal-host**
 >
@@ -86,19 +86,19 @@ Minflok, uża ċavetta vera meta s-server OmniRoute tiegħek ikun protett jew re
 
 Codex CLI iddepreka `wire_api = "chat"` (Chat Completions) fi Frar 2026 u issa **jeħtieġ** `wire_api = "responses"` (OpenAI Responses API). L-issettjar ta’ `wire_api = "chat"` jikkawża crash immedjat waqt l-istartjar minn v0.138 ’il quddiem.
 
-Ħafna providers, inklużi GLM u Kimi, għadhom jesponu biss endpoint ta’ Chat Completions. DeepSeek V4 issa jesponi wkoll Responses API nattiva kif ukoll endpoint kompatibbli ma’ Anthropic; OmniRoute juża Responses b’mod awtomatiku u jippermetti lil kull konnessjoni DeepSeek tagħżel il-kompatibbiltà ma’ Anthropic.
+Ħafna providers, inklużi GLM u Kimi, għadhom jesponu biss endpoint ta’ Chat Completions. DeepSeek V4 issa jesponi wkoll Responses API nattiva kif ukoll endpoint kompatibbli ma’ Anthropic; 67router juża Responses b’mod awtomatiku u jippermetti lil kull konnessjoni DeepSeek tagħżel il-kompatibbiltà ma’ Anthropic.
 
-**OmniRoute isolvi dan b’mod trasparenti:**
+**67router isolvi dan b’mod trasparenti:**
 
 ```
 Codex CLI
   → wire_api = "responses"
-  → POST /v1/responses (OmniRoute)
-    → OmniRoute jagħżel il-protokoll nattiv tal-provider u jittraduċi meta jkun meħtieġ
+  → POST /v1/responses (67router)
+    → 67router jagħżel il-protokoll nattiv tal-provider u jittraduċi meta jkun meħtieġ
     → POST /responses (DeepSeek V4) jew /chat/completions (Mistral / GLM / Kimi / oħrajn)
 ```
 
-Meta tuża OmniRoute, qatt ma jkollok bżonn proxy tat-traduzzjoni separat. **Il-mudelli kollha jużaw `wire_api = "responses"`** — OmniRoute jieħu ħsieb il-bqija.
+Meta tuża 67router, qatt ma jkollok bżonn proxy tat-traduzzjoni separat. **Il-mudelli kollha jużaw `wire_api = "responses"`** — 67router jieħu ħsieb il-bqija.
 
 > **`wire_api` huwa l-valur awtomatiku** — il-field għandu valur awtomatiku ta’ `"responses"` u jista’ jitħalla barra għalkollox minn `config.toml`. Issettjah b’mod espliċitu biss jekk tkun qed tiddokumenta l-intenzjoni.
 
@@ -119,7 +119,7 @@ Meta tuża OmniRoute, qatt ma jkollok bżonn proxy tat-traduzzjoni separat. **Il
 
 ### Twieqi tal-kuntest skont il-mudell
 
-| Mudell                               | ID ta’ OmniRoute                     | Tieqa tal-kuntest                | `auto_compact` | `tool_output_limit` |
+| Mudell                               | ID ta’ 67router                      | Tieqa tal-kuntest                | `auto_compact` | `tool_output_limit` |
 | ------------------------------------ | ------------------------------------ | -------------------------------- | -------------- | ------------------- |
 | GPT-5.5                              | `cx/gpt-5.5`                         | 400k affidabbli (massimu ta’ 1M) | 350,000        | 32,768              |
 | Kimi K2.7 (raġunament)               | `kmc/kimi-k2.7`                      | 131,072                          | 112,000        | 32,768              |
@@ -147,16 +147,16 @@ Meta tuża OmniRoute, qatt ma jkollok bżonn proxy tat-traduzzjoni separat. **Il
 
 ## Prefiss tal-mudell: `cx/`
 
-Il-mudelli Codex kollha f'OmniRoute jużaw il-prefiss `cx/`:
+Il-mudelli Codex kollha f'67router jużaw il-prefiss `cx/`:
 
-| Isem fil-Codex CLI      | Mudell OmniRoute   |
+| Isem fil-Codex CLI      | Mudell 67router    |
 | ----------------------- | ------------------ |
 | `cx/gpt-5.5`            | GPT-5.5 standard   |
 | `cx/gpt-5.4`            | GPT-5.4 standard   |
 | `cx/gpt-5.4-mini`       | GPT-5.4 mini       |
 | `cx/gpt-5.1-codex-mini` | GPT-5.1 Codex mini |
 
-Fornituri oħra jużaw il-prefiss tagħhom stess (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — il-prefiss jaqbel mal-alias tal-fornitur f'OmniRoute.
+Fornituri oħra jużaw il-prefiss tagħhom stess (`kmc/`, `glm/`, `ds/`, `ollamacloud/`, `opencode-go/`, `mistral/`) — il-prefiss jaqbel mal-alias tal-fornitur f'67router.
 
 ---
 
@@ -186,9 +186,9 @@ model_reasoning_effort = "xhigh"   # jew ultra meta jkun appoġġjat
 model_reasoning_summary = "detailed"  # auto | concise | detailed | none
 ```
 
-### Baġit tal-Ħsieb ta' OmniRoute (issettjar tas-server)
+### Baġit tal-Ħsieb ta' 67router (issettjar tas-server)
 
-Fuq il-host ta' OmniRoute, **Settings → AI → Thinking Budget** irid ikun **`passthrough`** sabiex l-isforz/is-sommarju ta' Codex jasal għand il-fornitur upstream. Il-modalità **`auto` tneħħi** l-fields `reasoning` / `reasoning_effort` kollha tal-klijent u tħalli l-panels tal-ħsieb vojta anke meta Codex ikun ikkonfigurat sew.
+Fuq il-host ta' 67router, **Settings → AI → Thinking Budget** irid ikun **`passthrough`** sabiex l-isforz/is-sommarju ta' Codex jasal għand il-fornitur upstream. Il-modalità **`auto` tneħħi** l-fields `reasoning` / `reasoning_effort` kollha tal-klijent u tħalli l-panels tal-ħsieb vojta anke meta Codex ikun ikkonfigurat sew.
 
 Gwida sħiħa: [THINKING_BUDGET.md](./THINKING_BUDGET.md).
 
@@ -274,10 +274,10 @@ codex -p chat     # cx/gpt-5.5, ebda sforz issettjat (valur predefinit tas-serve
 
 ## Ġenerazzjoni awtomatika ta’ profili b’`omniroute setup-codex`
 
-Jekk tħaddem OmniRoute fuq VPS, tista’ tiġġenera awtomatikament fajls tal-profili mill-katalgu attiv tal-mudelli:
+Jekk tħaddem 67router fuq VPS, tista’ tiġġenera awtomatikament fajls tal-profili mill-katalgu attiv tal-mudelli:
 
 ```bash
-# Minn VPS (juża l-OmniRoute lokali fuq il-port 20128)
+# Minn VPS (juża l-67router lokali fuq il-port 20128)
 omniroute setup-codex
 
 # Minn kwalunkwe magna — ipponta lejn il-VPS tiegħek
@@ -304,7 +304,7 @@ jwaqqaf il-ġenerazzjoni qabel ma jinkitbu l-profili.
 Meta tipprovdi `--api-key` jew `OMNIROUTE_API_KEY`, fornitur definit ġdid jirreferi għal
 `env_key = "OMNIROUTE_API_KEY"`; iċ-ċavetta nnifisha qatt ma tiġi ssejvjata jew stampata fil-
 previżjoni. Issettja dik il-varjabbli fl-ambjent minn fejn tħaddem Codex. Mingħajr ċavetta
-pprovduta, id-definizzjoni l-ġdida ma jkollhiex rekwiżit ta’ ċavetta, għal istanza ta’ OmniRoute
+pprovduta, id-definizzjoni l-ġdida ma jkollhiex rekwiżit ta’ ċavetta, għal istanza ta’ 67router
 kkonfigurata biex taċċetta talbiet mhux awtentikati.
 
 Is-sinkronizzazzjoni awtomatika fakultattiva tal-katalgu deskritta hawn taħt iżżomm id-definizzjonijiet tal-fornituri li diġà
@@ -312,16 +312,16 @@ jinsabu f’overlay iżda ma toħloqx settings ġodda tal-fornitur; l-ewwel ikko
 permezz ta’ setup espliċitu jew mid-dashboard. Is-settings eżistenti tal-fornitur jitħallew barra
 mill-previżjonijiet dry-run għax jista’ jkun fihom kredenzjali ġestiti mill-operatur.
 
-OmniRoute jista’ wkoll **jissinkronizza awtomatikament** dawn l-istess fajls tal-profili wara li skoperta/importazzjoni b’suċċess ta’ mudelli tal-fornitur tibdel il-katalgu attiv. Din hija **fakultattiva u diżattivata b’mod awtomatiku**: attivaha mid-**dashboard ta’ CLI Code** ("Sinkronizzazzjoni awtomatika tal-profili CLI" → Codex), jew issettja `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (jirrispetta wkoll `CLI_ALLOW_CONFIG_WRITES`, attiv b’mod awtomatiku). Meta tkun attivata, tikteb biss fajls separati tal-profili `~/.codex/*.config.toml`; qatt ma tibdel il-`~/.codex/config.toml` attiv/predefinit, is-settings ta’ Codex-lb, l-awtentikazzjoni, jew l-għażla tal-fornitur.
+67router jista’ wkoll **jissinkronizza awtomatikament** dawn l-istess fajls tal-profili wara li skoperta/importazzjoni b’suċċess ta’ mudelli tal-fornitur tibdel il-katalgu attiv. Din hija **fakultattiva u diżattivata b’mod awtomatiku**: attivaha mid-**dashboard ta’ CLI Code** ("Sinkronizzazzjoni awtomatika tal-profili CLI" → Codex), jew issettja `OMNIROUTE_AUTO_SYNC_CODEX_PROFILES=true` (jirrispetta wkoll `CLI_ALLOW_CONFIG_WRITES`, attiv b’mod awtomatiku). Meta tkun attivata, tikteb biss fajls separati tal-profili `~/.codex/*.config.toml`; qatt ma tibdel il-`~/.codex/config.toml` attiv/predefinit, is-settings ta’ Codex-lb, l-awtentikazzjoni, jew l-għażla tal-fornitur.
 
 ---
 
 ## Tnedija ta' Codex b'`omniroute launch-codex`
 
-Jiċċekkja s-saħħa tal-istanza OmniRoute tiegħek qabel iniedi Codex:
+Jiċċekkja s-saħħa tal-istanza 67router tiegħek qabel iniedi Codex:
 
 ```bash
-# Niedi kontra OmniRoute lokali (il-port predefinit huwa 20128)
+# Niedi kontra 67router lokali (il-port predefinit huwa 20128)
 omniroute launch-codex
 
 # Niedi bi profil speċifiku
@@ -471,7 +471,7 @@ codex debug models --bundled       # elenka l-katalgu ta’ mudelli inklużi bħ
 
 ## Kompiti li jdumu għaddejjin
 
-Żewġ valuri predefiniti ta’ OmniRoute jistgħu fis-skiet ifixklu sessjonijiet ta’ Codex CLI li jdumu diversi sigħat. L-ebda wieħed minnhom mhu setting ta’ Codex CLI — it-tnejn jinsabu fuq in-naħa ta’ OmniRoute. Utenti li jemigraw konfigurazzjoni minn proxies upstream li jorbtu l-kontijiet u jiddiżattivaw il-limiti ta’ inattività spiss jiltaqgħu mat-tnejn u jikkonkludu li OmniRoute “ma jistax iżomm sessjoni twila.”
+Żewġ valuri predefiniti ta’ 67router jistgħu fis-skiet ifixklu sessjonijiet ta’ Codex CLI li jdumu diversi sigħat. L-ebda wieħed minnhom mhu setting ta’ Codex CLI — it-tnejn jinsabu fuq in-naħa ta’ 67router. Utenti li jemigraw konfigurazzjoni minn proxies upstream li jorbtu l-kontijiet u jiddiżattivaw il-limiti ta’ inattività spiss jiltaqgħu mat-tnejn u jikkonkludu li 67router “ma jistax iżomm sessjoni twila.”
 
 | Sintomu                                                                                                | Kawża probabbli                                                                    | Kontroll                 |
 | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------ |
@@ -493,7 +493,7 @@ Diskussjonijiet relatati: [#7126](https://github.com/diegosouzapw/OmniRoute/disc
 
 **X’jieqaf jaħdem meta jibqa’ f’0**
 
-Kull dawra ta’ konverżazzjoni Codex b’diversi dawriet tiġi diretta b’mod indipendenti mill-istrateġija combo attiva u tista’ tasal f’**kont differenti għal kull dawra**. Dan jikser il-kontinwità tas-sessjoni / tal-cache tal-prompt upstream. OmniRoute jikkonsulta biss il-headers tas-sessjoni ta’ Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) u oqsma tal-body bħal `prompt_cache_key` / `session_id` meta t-TTL ikun akbar minn `0` (`extractSessionAffinityKey` f’`src/sse/services/auth.ts`).
+Kull dawra ta’ konverżazzjoni Codex b’diversi dawriet tiġi diretta b’mod indipendenti mill-istrateġija combo attiva u tista’ tasal f’**kont differenti għal kull dawra**. Dan jikser il-kontinwità tas-sessjoni / tal-cache tal-prompt upstream. 67router jikkonsulta biss il-headers tas-sessjoni ta’ Codex (`x-codex-session-id` / `x-session-id` / `x-omniroute-session`) u oqsma tal-body bħal `prompt_cache_key` / `session_id` meta t-TTL ikun akbar minn `0` (`extractSessionAffinityKey` f’`src/sse/services/auth.ts`).
 
 **Rakkomandat għal kompitu wieħed li jdum diversi sigħat**
 
@@ -515,13 +515,13 @@ L-għażla volontarja hija intenzjonata: id-diżattivazzjoni tal-affinità tiffa
 
 Turn ta’ raġunament / għodda ta’ Codex li jibqa’ sieket għal aktar minn 10 minuti **mingħajr ebda blokka reali upstream** jingħalaq bil-forza mill-għassies tal-inattività SSE (`open-sse/utils/stream.ts`). Il-klijent spiss jara biss qtugħ tal-konnessjoni — li jaqbel ma’ “waqaf awtomatikament mingħajr ebda notifika.”
 
-Dettall kritiku: Il-**heartbeat** SSE sintetiku ta’ OmniRoute ma jirrisettjax l-arloġġ tal-inattività. Blokka reali biss mill-body upstream taġġorna `lastChunkTime`. Mudell sieket li għadu qed “jaħseb” jidher identiku għal upstream imwaħħal mill-perspettiva tal-għassies.
+Dettall kritiku: Il-**heartbeat** SSE sintetiku ta’ 67router ma jirrisettjax l-arloġġ tal-inattività. Blokka reali biss mill-body upstream taġġorna `lastChunkTime`. Mudell sieket li għadu qed “jaħseb” jidher identiku għal upstream imwaħħal mill-perspettiva tal-għassies.
 
 Inattività relatata tal-body ta’ Undici: `FETCH_BODY_TIMEOUT_MS` (b’mod awtomatiku juża wkoll l-istess bażi ta’ 10 minuti; `0` jiddiżattivah). Għall-istreaming, `FETCH_TIMEOUT_MS` ikopri biss l-istabbiliment tal-konnessjoni / l-ewwel headers — ladarba l-istream ikun attiv, il-waqfiet jiġu rregolati minn `STREAM_IDLE_TIMEOUT_MS` u `FETCH_BODY_TIMEOUT_MS`.
 
 **Rakkomandat għal kompitu wieħed ta’ diversi sigħat**
 
-Fl-ambjent tal-proċess ta’ OmniRoute (`.env` / compose / systemd):
+Fl-ambjent tal-proċess ta’ 67router (`.env` / compose / systemd):
 
 ```bash
 # Iddiżattiva l-limiti tal-inattività tal-istream u tal-body għal turns twal ta’ raġunament
@@ -537,12 +537,12 @@ STREAM_IDLE_TIMEOUT_MS=7200000
 FETCH_BODY_TIMEOUT_MS=7200000
 ```
 
-Erġa’ ibda OmniRoute wara li tibdel dawn il-varjabbli tal-ambjent.
+Erġa’ ibda 67router wara li tibdel dawn il-varjabbli tal-ambjent.
 
 ### Riċetta konkreta — kompitu Codex ta’ diversi sigħat
 
 1. **Waħħal il-kont:** Dashboard → Settings → Routing → Session affinity → Affinity TTL = `43200` (12h) jew `86400` (massimu ta’ 24h).
-2. **Għolli / iddiżattiva l-limiti tal-inattività** fl-ambjent ta’ OmniRoute:
+2. **Għolli / iddiżattiva l-limiti tal-inattività** fl-ambjent ta’ 67router:
 
 ```bash
 STREAM_IDLE_TIMEOUT_MS=0
@@ -550,7 +550,7 @@ FETCH_BODY_TIMEOUT_MS=0
 ```
 
 3. Żomm il-`config.toml` tas-soltu ta’ Codex (`wire_api = "responses"`, `base_url` korrett, `OMNIROUTE_API_KEY`) — ma jeżistux settings min-naħa ta’ Codex għall-affinità/inattività għal dawn iż-żewġ imġibiet.
-4. Erġa’ ibda OmniRoute, imbagħad ibda l-kompitu twil ta’ Codex.
+4. Erġa’ ibda 67router, imbagħad ibda l-kompitu twil ta’ Codex.
 
 ### Deċiżjoni dwar il-valuri awtomatiċi (#7287)
 
@@ -563,13 +563,13 @@ Il-bidla ta’ kwalunkwe wieħed minn dawn il-valuri awtomatiċi globalment tibd
 
 ### Dijanjosi ta’ qtugħ minħabba inattività
 
-Meta jiskatta l-għassies tal-inattività, OmniRoute jirreġistra linja b’din il-forma:
+Meta jiskatta l-għassies tal-inattività, 67router jirreġistra linja b’din il-forma:
 
 ```text
 [STREAM] Idle timeout: no data from codex for 600000ms (model: cx/gpt-5.5)
 ```
 
-Fittex b’grep għal `Idle timeout: no data from` (jew il-kodiċi `stream_idle_timeout` / l-isem tal-iżball `StreamIdleTimeoutError`). Is-segment tal-fornitur ikun dak li OmniRoute uża għal dik it-talba (`codex`, id ta’ fornitur ieħor, jew `provider` jekk mhux magħruf) — mhux dejjem ikun litteralment is-string `codex`.
+Fittex b’grep għal `Idle timeout: no data from` (jew il-kodiċi `stream_idle_timeout` / l-isem tal-iżball `StreamIdleTimeoutError`). Is-segment tal-fornitur ikun dak li 67router uża għal dik it-talba (`codex`, id ta’ fornitur ieħor, jew `provider` jekk mhux magħruf) — mhux dejjem ikun litteralment is-string `codex`.
 
 ---
 
@@ -579,7 +579,7 @@ Fittex b’grep għal `Idle timeout: no data from` (jew il-kodiċi `stream_idle_
 Neħħi `wire_api = "chat"` mill-konfigurazzjoni tiegħek. Issettja `wire_api = "responses"` jew ħalli barra dan il-field (minn v0.138, il-valur default huwa `"responses"`).
 
 **`Error: model not found`**
-Ivverifika li l-mudell jeżisti f’OmniRoute bil-prefiss korrett. Uża `omniroute models list` jew iftaħ `/dashboard/providers/<provider>`.
+Ivverifika li l-mudell jeżisti f’67router bil-prefiss korrett. Uża `omniroute models list` jew iftaħ `/dashboard/providers/<provider>`.
 
 **`Authentication error`**
 Ikkonferma li `OMNIROUTE_API_KEY` hija esportata: `echo $OMNIROUTE_API_KEY`.
@@ -587,11 +587,11 @@ Ikkonferma li `OMNIROUTE_API_KEY` hija esportata: `echo $OMNIROUTE_API_KEY`.
 **`ERROR: Missing environment variable: OMNIROUTE_API_KEY`**
 Codex jivvalida li l-varjabbli tal-ambjent teżisti qabel ma jagħmel l-ewwel talba. Esporta
 ċavetta reali għal servers protetti, jew placeholder mhux vojt bħal
-`OMNIROUTE_API_KEY=local` meta l-istanza **lokali** tiegħek ta’ OmniRoute ma
+`OMNIROUTE_API_KEY=local` meta l-istanza **lokali** tiegħek ta’ 67router ma
 teħtieġx awtentikazzjoni. Erġa’ ibda s-shell jekk żidtha ma’ `~/.bashrc` jew `~/.zshrc`.
 
 **`Connection refused`**
-Ivverifika li OmniRoute qed jaħdem u li l-host/port ta’ `base_url` huwa korrett għan-network tiegħek (lokali vs Tailscale vs VPS).
+Ivverifika li 67router qed jaħdem u li l-host/port ta’ `base_url` huwa korrett għan-network tiegħek (lokali vs Tailscale vs VPS).
 
 **Is-sessjoni tiġġarraf qrib il-limitu tal-kuntest**
 Issettja `model_context_window` u `model_auto_compact_token_limit` b’mod espliċitu. Ara t-tabella tat-tieqa tal-kuntest hawn fuq.
@@ -603,4 +603,4 @@ Naqqas `model_auto_compact_token_limit` għal 80–85% tat-tieqa. Qatt tissettja
 Ikkonferma li l-file jeżisti f’`~/.codex/<name>.config.toml` (mingħajr il-prefiss `profile-`). Ħaddem `ls ~/.codex/*.config.toml`.
 
 **Task twil ta’ Codex jieqaf f’nofs l-eżekuzzjoni / jaqleb bejn il-kontijiet bejn turn u ieħor**
-Ara [Tasks li jdumu għaddejjin](#long-running-tasks). Attiva l-affinità tas-sessjoni (b’TTL itwal mit-tul tat-task) u żid jew iddiżattiva `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Fittex fil-logs ta’ OmniRoute għal `Idle timeout: no data from`.
+Ara [Tasks li jdumu għaddejjin](#long-running-tasks). Attiva l-affinità tas-sessjoni (b’TTL itwal mit-tul tat-task) u żid jew iddiżattiva `STREAM_IDLE_TIMEOUT_MS` / `FETCH_BODY_TIMEOUT_MS`. Fittex fil-logs ta’ 67router għal `Idle timeout: no data from`.

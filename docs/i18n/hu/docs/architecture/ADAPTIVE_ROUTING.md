@@ -4,18 +4,18 @@
 
 ---
 
-Ez a dokumentum az OmniRoute-hoz hozzáadott, visszajelzés-vezérelt adaptív útválasztási alapokat ismerteti. Szándékosan kis terjedelmű: bevezet egy típusos útválasztási eredménycsatornát, egy online minőségi jelet, amely a meglévő auto-combo pontozót táplálja, egy opcionális OpenTelemetry-exportálót, valamint egy magyarázhatósági végpontot. **Nem** helyettesíti a meglévő rezilienciaréteget (áramkör-megszakító, kapcsolati várakozási idő, modellzárolás, állapotmátrix, autopilot) — hanem kiegészíti azt.
+Ez a dokumentum a 67router-hoz hozzáadott, visszajelzés-vezérelt adaptív útválasztási alapokat ismerteti. Szándékosan kis terjedelmű: bevezet egy típusos útválasztási eredménycsatornát, egy online minőségi jelet, amely a meglévő auto-combo pontozót táplálja, egy opcionális OpenTelemetry-exportálót, valamint egy magyarázhatósági végpontot. **Nem** helyettesíti a meglévő rezilienciaréteget (áramkör-megszakító, kapcsolati várakozási idő, modellzárolás, állapotmátrix, autopilot) — hanem kiegészíti azt.
 
 ## 1. Architekturális kontextus
 
-Az OmniRoute egy adatsík, amely rendelkezik egy **kérések gyors feldolgozási útvonalával** és egy **vezérlési/intelligencia-síkkal**. A gyors útvonalnak gyorsnak, memóriatakarékosnak, aszinkronnak, reziliensnek és kiszámíthatónak kell maradnia. A kiértékelés, a minőségpontozás, a kísérletek és az előzmények elemzése a vezérlési síkhoz tartozik.
+A 67router egy adatsík, amely rendelkezik egy **kérések gyors feldolgozási útvonalával** és egy **vezérlési/intelligencia-síkkal**. A gyors útvonalnak gyorsnak, memóriatakarékosnak, aszinkronnak, reziliensnek és kiszámíthatónak kell maradnia. A kiértékelés, a minőségpontozás, a kísérletek és az előzmények elemzése a vezérlési síkhoz tartozik.
 
 ```
 AI-ügynök / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   adatsík (gyors, szinkron, memórián belüli)
+│    67router        │   adatsík (gyors, szinkron, memórián belüli)
 │ útválasztás/átállás │
 │ állapot/védőkorlát  │
 │ gyorsítótár/adatfolyam │
@@ -34,16 +34,15 @@ AI-ügynök / IDE
 
 ### Ami már rendelkezésre állt (auditálva, nem duplikálva)
 
-| Fogalom                                        | Meglévő megvalósítás                                                                                                |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Elérhetőség (küldhetünk forgalmat?)            | Áramkör-megszakító (CLOSED/DEGRADED/OPEN/HALF_OPEN, adatbázisban tárolva), kapcsolati várakozási idő, modellzárolás |
-| Állapotjelentés                                | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
-| Árnyékforgalom                                 | `open-sse/services/combo/shadowRouting.ts`                                                                          |
-| Védőkorlátok                                   | `src/lib/guardrails/` (elő-/utófeldolgozási horgok)                                                                 |
-| Egzakt gyorsítótár                             | `src/lib/semanticCache.ts` (aláírás-alapú)                                                                          |
-| Kiértékelők / kiértékelés-vezérelt útválasztás | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                                |
-| Combo-döntések magyarázhatósága                | `open-sse/services/combo/decisionTrace.ts`                                                                          |
-| Irányítópult valós idejű eseményei             | `src/lib/events/eventBus.ts` (UI-értesítési csatorna, `unknown` hasznos adatok, 100 bejegyzéses előzmény)           |
+| Fogalom                             | Meglévő megvalósítás                                                                                                |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Elérhetőség (küldhetünk forgalmat?) | Áramkör-megszakító (CLOSED/DEGRADED/OPEN/HALF_OPEN, adatbázisban tárolva), kapcsolati várakozási idő, modellzárolás |
+| Állapotjelentés                     | `providerHealthMatrix.ts`, `providerHealthAutopilot.ts`                                                             |
+| Árnyékforgalom                      | `open-sse/services/combo/shadowRouting.ts`                                                                          |
+| Védőkorlátok                        | `src/lib/guardrails/` (elő-/utófeldolgozási horgok)                                                                 |
+| Egzakt gyorsítótár                  | `src/lib/semanticCache.ts` (aláírás-alapú)                                                                          |
+| Combo-döntések magyarázhatósága     | `open-sse/services/combo/decisionTrace.ts`                                                                          |
+| Irányítópult valós idejű eseményei  | `src/lib/events/eventBus.ts` (UI-értesítési csatorna, `unknown` hasznos adatok, 100 bejegyzéses előzmény)           |
 
 Az útválasztásiesemény-réteg **nem** az `eventBus` újraimplementálása: ez a busz az irányítópult valós idejű értesítési csatornája (típusos _eseménynevek_, átlátszatlan hasznos adatok, UI-fogyasztók). A `RoutingEvent` egy típusos _eredmény_-struktúra (késleltetés/tokenek/költség/eredmény/befejezési ok), amelyet a vezérlési sík visszajelzés-fogadói (minőségkövető, OTel-exportáló, magyarázattároló) használnak fel.
 
@@ -231,7 +230,7 @@ Fájlok: `open-sse/services/routing/otel.ts`
   `@opentelemetry/*` SDK nélkül).
 - A spanek követik a GenAI szemantikai konvencióit (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`), valamint az OmniRoute útválasztási
+  `gen_ai.completion.finish_reason`, `gen_ai.system`), valamint a 67router útválasztási
   attribútumait (eredmény, állapot, TTFT, újrapróbálkozások, tartalék útvonal).
 - A `record()` csak egy korlátozott méretű pufferbe helyezi az adatot (O(1)); egy háttérben
   futó időzítő aszinkron módon üríti azt a `POST {endpoint}/v1/traces` kéréssel. Túlterhelés
@@ -254,7 +253,7 @@ Fájlok: `open-sse/services/routing/otel.ts`
 
 ## 6. Integráció a kiértékelési síkkal (felkészülés a Future AGI-ra)
 
-Az OmniRoute a Future AGI-t (vagy bármely kiértékelőt) **lehetséges
+A 67router a Future AGI-t (vagy bármely kiértékelőt) **lehetséges
 intelligencia-/kiértékelési háttérrendszerként, nem pedig függőségként** kezeli. Az illesztési pontok:
 
 - Egy `RoutingEventSink` aszinkron módon továbbíthat eseményeket egy kiértékelőnek.
@@ -263,8 +262,6 @@ intelligencia-/kiértékelési háttérrendszerként, nem pedig függőségként
 - Egy jövőbeli `Evaluator` (determinisztikus, helyi bíráló, HTTP, WASM) eseményeket/nyomkövetéseket
   fogyasztana, és egy `QualityScore` értéket adna vissza, amely ugyanabba a
   `getQualityScore`/minőségi tényező útvonalba kerülne.
-- A meglévő, kiértékelésvezérelt útválasztás (`open-sse/services/evalRouting.ts`) engedélyezés
-  esetén már most is átrendezi a kombináció célpontjait az `eval_runs` sikerességi arányai alapján.
 
 Egyetlen kiértékelés sem fut szinkron módon a kérési útvonalon, és az átjáró a kiértékelő
 hiányában is teljes funkcionalitással működik.

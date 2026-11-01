@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Hitilafu: {message}",
-    "serverOffline": "Seva ya OmniRoute haiko mtandaoni. Ianzishe kwa: omniroute serve",
+    "serverOffline": "Seva ya 67router haiko mtandaoni. Ianzishe kwa: omniroute serve",
     "authRequired": "Uthibitishaji unahitajika. Weka OMNIROUTE_API_KEY au endesha: omniroute setup",
     "rateLimited": "Kikomo cha maombi kimezidi. Jaribu tena baada ya sekunde {seconds}.",
     "timeout": "Muda wa ombi uliisha baada ya ms {ms}.",
@@ -15,7 +15,7 @@
     "yesOpt": "Ruka kidokezo cha uthibitishaji"
   },
   "setup": {
-    "title": "Usanidi wa OmniRoute",
+    "title": "Usanidi wa 67router",
     "passwordPrompt": "Nenosiri la msimamizi",
     "providerPrompt": "Mtoa huduma chaguo-msingi (acha wazi ili kuruka)",
     "done": "Usanidi umekamilika",
@@ -30,7 +30,7 @@
     "opencode": "Sakinisha na usanidi @omniroute/opencode-plugin iliyojumuishwa kwa OpenCode"
   },
   "doctor": {
-    "title": "Uchunguzi wa OmniRoute",
+    "title": "Uchunguzi wa 67router",
     "dbOk": "Hifadhidata: SAWA ({path})",
     "dbMissing": "Hifadhidata: haijaanzishwa — endesha `omniroute setup`",
     "portOk": "Mlango {port}: unapatikana",
@@ -82,7 +82,7 @@
       "providerOpt": "Chuja kwa jina la mtoa huduma",
       "header": "ID         Mtoa huduma   Jina                     Hali ya Kuisha  Hali ya Jaribio  Kusubiri Hadi",
       "noData": "Hakuna data ya muunganisho wa mtoa huduma inayopatikana.",
-      "requiresServer": "providers status inahitaji seva ya OmniRoute iwe inaendeshwa."
+      "requiresServer": "providers status inahitaji seva ya 67router iwe inaendeshwa."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Ongeza au sasisha ufunguo wa API wa mtoa huduma",
     "listDescription": "Orodhesha funguo zote za API zilizosanidiwa",
     "removeDescription": "Ondoa ufunguo wa API wa mtoa huduma",
-    "regenerateDescription": "Zalisha upya ufunguo wa API wa OmniRoute",
-    "revokeDescription": "Batilisha ufunguo wa API wa OmniRoute",
+    "regenerateDescription": "Zalisha upya ufunguo wa API wa 67router",
+    "revokeDescription": "Batilisha ufunguo wa API wa 67router",
     "revealDescription": "Onyesha thamani kamili ya ufunguo wa API iliyofichwa",
     "usageDescription": "Onyesha matumizi ya hivi karibuni ya ufunguo wa API",
     "usageLimitOpt": "Idadi ya maombi ya hivi karibuni",
@@ -172,13 +172,6 @@
       "period": "Kipindi: 1d|7d|30d|90d|ytd|all (chaguo-msingi: 30d)",
       "provider": "Chuja kwa kitambulisho cha mtoa huduma"
     },
-    "budget": {
-      "description": "Dhibiti bajeti za gharama",
-      "set": {
-        "scope": "Upeo wa bajeti (chaguo-msingi: global)",
-        "period": "Kipindi cha bajeti: daily|weekly|monthly (chaguo-msingi: monthly)"
-      }
-    },
     "quota": {
       "description": "Onyesha matumizi ya kiwango cha mtoa huduma",
       "provider": "Chuja kwa kitambulisho cha mtoa huduma",
@@ -225,7 +218,7 @@
     "noCombo": "Hakuna combo inayolingana iliyopatikana. Sanidi moja kwa: omniroute combo create"
   },
   "chat": {
-    "description": "Tuma kidokezo cha gumzo cha mara moja kwa OmniRoute",
+    "description": "Tuma kidokezo cha gumzo cha mara moja kwa 67router",
     "file": "Soma kidokezo kutoka faili",
     "stdin": "Soma kidokezo kutoka stdin",
     "system": "Kidokezo cha mfumo",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Anzisha seva ya OmniRoute (kitendo chaguo-msingi)",
-    "starting": "Inaanzisha seva ya OmniRoute kwenye porti {port}...",
+    "description": "Anzisha seva ya 67router (kitendo chaguo-msingi)",
+    "starting": "Inaanzisha seva ya 67router kwenye porti {port}...",
     "ready": "Tayari kwenye http://localhost:{port}",
     "stopping": "Inasimamisha seva (PID {pid})...",
     "stopped": "Seva imesimamishwa.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Nakala rudufu",
-    "description": "Unda nakala rudufu ya data ya OmniRoute",
+    "description": "Unda nakala rudufu ya data ya 67router",
     "creating": "Inaunda nakala rudufu...",
     "done": "Nakala rudufu imehifadhiwa kwenye {path}",
     "noFiles": "Hakuna faili za kuhifadhi katika nakala rudufu (hifadhidata haijaanzishwa)",
@@ -277,7 +270,7 @@
     "noBackups": "Hakuna nakala rudufu zilizopatikana.",
     "notFound": "Nakala rudufu haijapatikana: {name}",
     "confirmRestore": "Ungependa kubatilisha data ya sasa kwa nakala rudufu ya {ts}?",
-    "createDescription": "Unda nakala rudufu ya data ya OmniRoute",
+    "createDescription": "Unda nakala rudufu ya data ya 67router",
     "nameOpt": "Jina maalum la nakala rudufu",
     "cloudOpt": "Pakia nakala rudufu kwenye hifadhi ya wingu",
     "encryptOpt": "Simba nakala rudufu kwa AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Imeshindwa kufuta akiba."
   },
   "redis": {
-    "description": "Anzisha kontena la Redis la ndani kwa kubofya mara moja (Podman au Docker) kwa ajili ya kuhifadhi ya OmniRoute na ufuatiliaji wa mgao"
+    "description": "Anzisha kontena la Redis la ndani kwa kubofya mara moja (Podman au Docker) kwa ajili ya kuhifadhi ya 67router na ufuatiliaji wa mgao"
   },
   "test": {
     "description": "Jaribu muunganisho wa mtoa huduma",
@@ -390,36 +383,8 @@
       "description": "Kumbukumbu ya ukaguzi ya MCP (jina mbadala la audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Orodhesha ujuzi wa A2A unaopatikana kutoka kwenye kadi ya ajenti"
-    },
-    "invoke": {
-      "description": "Tekeleza ujuzi wa A2A na urudishe kitambulisho cha jukumu",
-      "input": "Objekti ya ingizo la JSON",
-      "input_file": "Njia ya faili ya ingizo la JSON",
-      "wait": "Subiri jukumu likamilike kabla ya kurudi",
-      "timeout": "Muda wa juu wa kusubiri kukamilika kwa ms (chaguo-msingi: 60000)"
-    },
-    "tasks": {
-      "description": "Dhibiti majukumu ya A2A",
-      "list": {
-        "status": "Chuja kwa hali",
-        "skill": "Chuja kwa kitambulisho cha ujuzi"
-      },
-      "watch": {
-        "description": "Kagua hali ya jukumu mara kwa mara hadi likamilike"
-      },
-      "stream": {
-        "description": "Tiririsha matukio ya utekelezaji wa jukumu kupitia SSE"
-      },
-      "logs": {
-        "description": "Onyesha ujumbe na vizalia vya jukumu"
-      }
-    }
-  },
   "policy": {
-    "description": "Dhibiti sera za uidhinishaji za OmniRoute",
+    "description": "Dhibiti sera za uidhinishaji za 67router",
     "list": {
       "description": "Orodhesha sera",
       "kind": "Chuja kwa aina (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Sanidi na ukague mchakato wa ubanaji wa OmniRoute",
+    "description": "Sanidi na ukague mchakato wa ubanaji wa 67router",
     "status": {
       "description": "Onyesha hali na mipangilio ya sasa ya ubanaji"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Badilisha URL ya kichuguu cha aina ya {type}? (URL mpya itazalishwa)"
   },
   "stop": {
-    "description": "Simamisha seva ya OmniRoute",
+    "description": "Simamisha seva ya 67router",
     "stopping": "Inasimamisha seva (PID {pid})...",
     "stopped": "Seva imesimamishwa.",
     "notRunning": "Hakuna seva inayoendeshwa.",
     "portFallback": "Hakuna faili la PID lililopatikana, inajaribu kusimamisha kulingana na porti..."
   },
   "restart": {
-    "description": "Anzisha upya seva ya OmniRoute",
-    "restarting": "Inaanzisha upya seva ya OmniRoute..."
+    "description": "Anzisha upya seva ya 67router",
+    "restarting": "Inaanzisha upya seva ya 67router..."
   },
   "dashboard": {
-    "description": "Fungua dashibodi ya OmniRoute katika kivinjari",
+    "description": "Fungua dashibodi ya 67router katika kivinjari",
     "opening": "Inafungua dashibodi kwenye {url}",
     "urlOnly": "Chapisha URL ya dashibodi bila kufungua kivinjari",
     "tui": "Fungua dashibodi shirikishi ya TUI (kiolesura cha terminali, vichupo 7)"
@@ -560,120 +525,6 @@
       "description": "Pata ingizo moja la kumbukumbu ya ukaguzi kwa kitambulisho"
     }
   },
-  "skills": {
-    "description": "Dhibiti ujuzi wa OmniRoute (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Orodhesha ujuzi uliosakinishwa",
-      "type": "Chuja kwa aina (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Onyesha ujuzi uliowezeshwa pekee",
-      "disabled": "Onyesha ujuzi uliozimwa pekee",
-      "api_key": "Chuja kwa ufunguo wa API"
-    },
-    "get": {
-      "description": "Pata maelezo ya ujuzi kwa kitambulisho"
-    },
-    "install": {
-      "description": "Sakinisha ujuzi kutoka kwenye faili au URL",
-      "from_file": "Njia ya faili ya ufafanuzi wa JSON wa ujuzi",
-      "from_url": "URL ya ufafanuzi wa skill ya mbali",
-      "type": "Aina ya skill (sandbox|custom|hybrid)",
-      "enable": "Washa skill baada ya kusakinisha"
-    },
-    "enable": {
-      "description": "Washa skill kwa kutumia ID"
-    },
-    "disable": {
-      "description": "Zima skill kwa kutumia ID",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "delete": {
-      "description": "Futa skill kwa kutumia ID",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "execute": {
-      "description": "Tekeleza skill kwa kutumia ID",
-      "input": "Kipengee cha ingizo cha JSON",
-      "input_file": "Njia ya faili ya ingizo la JSON",
-      "timeout": "Muda wa mwisho wa utekelezaji kwa ms (chaguo-msingi: 30000)"
-    },
-    "executions": {
-      "description": "Orodhesha historia ya utekelezaji wa skill",
-      "skill": "Chuja kwa ID ya skill",
-      "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)",
-      "status": "Chuja kwa hali (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Dhibiti skill zilizosakinishwa kupitia SSH"
-    },
-    "marketplace": {
-      "description": "Vinjari na usakinishe skill kutoka marketplace"
-    },
-    "mp": {
-      "search": {
-        "description": "Tafuta vifurushi vya marketplace",
-        "category": "Chuja kwa kategoria",
-        "tag": "Chuja kwa tagi",
-        "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 30)",
-        "sort": "Panga kwa: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Onyesha maelezo ya kifurushi na readme"
-      },
-      "install": {
-        "description": "Sakinisha kifurushi cha marketplace",
-        "version": "Toleo la kifurushi (chaguo-msingi: latest)",
-        "enable": "Washa baada ya kusakinisha",
-        "yes": "Ruka ombi la uthibitisho"
-      },
-      "categories": {
-        "description": "Orodhesha kategoria za marketplace"
-      },
-      "featured": {
-        "description": "Onyesha vifurushi vilivyoangaziwa vya marketplace"
-      }
-    }
-  },
-  "memory": {
-    "description": "Dhibiti kumbukumbu ya mazungumzo ya OmniRoute (FTS5 + vector)",
-    "search": {
-      "description": "Tafuta maingizo ya kumbukumbu kwa hoja ya kisemantiki",
-      "type": "Chuja kwa aina ya kumbukumbu (user|feedback|project|reference)",
-      "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 20)",
-      "api_key": "Chuja kwa ufunguo wa API",
-      "token_budget": "Weka kikomo cha jumla ya tokeni katika matokeo"
-    },
-    "add": {
-      "description": "Ongeza ingizo jipya la kumbukumbu",
-      "content": "Maudhui ya maandishi ya kumbukumbu",
-      "file": "Soma maudhui kutoka kwenye faili",
-      "type": "Aina ya kumbukumbu (chaguo-msingi: user)",
-      "metadata": "Kipengee cha metadata cha JSON",
-      "api_key": "Husianisha na ufunguo wa API"
-    },
-    "clear": {
-      "description": "Futa maingizo ya kumbukumbu yanayolingana na vichujio",
-      "type": "Chuja kwa aina",
-      "older": "Futa maingizo yaliyo na umri unaozidi muda uliobainishwa (30d, 6m, 1y)",
-      "api_key": "Chuja kwa ufunguo wa API",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "list": {
-      "description": "Orodhesha maingizo ya kumbukumbu bila upangaji wa matokeo ya utafutaji",
-      "type": "Chuja kwa aina",
-      "limit": "Idadi ya juu ya matokeo (chaguo-msingi: 100)",
-      "api_key": "Chuja kwa ufunguo wa API"
-    },
-    "get": {
-      "description": "Pata ingizo moja la kumbukumbu kwa ID"
-    },
-    "delete": {
-      "description": "Futa ingizo la kumbukumbu kwa ID",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "health": {
-      "description": "Onyesha hali ya mfumo mdogo wa kumbukumbu (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Dhibiti miunganisho ya watoa huduma wa OAuth",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Ruka ombi la uthibitisho"
     }
   },
-  "cloud": {
-    "description": "Dhibiti majukumu ya mawakala wa AI wa wingu (codex, devin, jules)",
-    "agents": {
-      "description": "Orodhesha mawakala wa wingu wanaopatikana"
-    },
-    "agent": {
-      "description": "Dhibiti majukumu ya wakala wa wingu wa {agent}",
-      "auth": {
-        "description": "Idhinisha {agent} kupitia OAuth"
-      }
-    },
-    "task": {
-      "description": "Dhibiti majukumu ya wakala wa wingu",
-      "create": {
-        "description": "Unda jukumu jipya la wakala",
-        "title": "Kichwa cha jukumu (chaguo-msingi ni herufi 80 za kwanza za kidokezo)",
-        "prompt": "Maandishi ya kidokezo cha jukumu",
-        "prompt_file": "Soma kidokezo kutoka kwenye faili",
-        "repo": "URL ya hazina ya kunakili kwa ajili ya jukumu",
-        "branch": "Jina la tawi la kutumia",
-        "metadata": "Kipengee cha metadata cha JSON"
-      },
-      "list": {
-        "description": "Orodhesha kazi za ajenti",
-        "status": "Chuja kwa hali (running|completed|failed|cancelled)",
-        "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)"
-      },
-      "get": {
-        "description": "Pata maelezo ya kazi kwa ID"
-      },
-      "status": {
-        "description": "Chapisha hali ya kazi (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Ghairi kazi inayoendelea",
-        "yes": "Ruka kidokezo cha uthibitishaji"
-      },
-      "approve": {
-        "description": "Idhinisha mpango wa ajenti ili kuanza utekelezaji"
-      },
-      "message": {
-        "description": "Tuma ujumbe kwa kazi inayoendelea"
-      }
-    },
-    "sources": {
-      "description": "Orodhesha faili chanzo zilizoundwa na kazi"
-    }
-  },
-  "eval": {
-    "description": "Dhibiti seti na uendeshaji wa tathmini",
-    "suites": {
-      "description": "Dhibiti seti za tathmini",
-      "list": {
-        "description": "Orodhesha seti za tathmini"
-      },
-      "get": {
-        "description": "Pata maelezo ya seti ya tathmini kwa ID"
-      },
-      "create": {
-        "description": "Unda seti ya tathmini kutoka kwenye faili ya JSON",
-        "file": "Njia ya faili ya JSON yenye ufafanuzi wa seti"
-      }
-    },
-    "run": {
-      "description": "Anzisha uendeshaji wa tathmini kwa seti",
-      "model": "ID ya modeli ya kutathmini (chaguo-msingi: auto)",
-      "combo": "Lazimisha mseto mahususi kwa jina",
-      "concurrency": "Idadi ya sampuli zinazoendeshwa kwa wakati mmoja (chaguo-msingi: 4)",
-      "tag": "Weka lebo kwenye uendeshaji huu kwa ajili ya kuchuja baadaye",
-      "watch": "Fuatilia maendeleo ya uendeshaji hadi ukamilike"
-    },
-    "list": {
-      "description": "Orodhesha uendeshaji wa tathmini",
-      "suite": "Chuja kwa ID ya seti",
-      "status": "Chuja kwa hali",
-      "since": "Rejesha uendeshaji tangu muhuri huu wa muda",
-      "limit": "Idadi ya juu zaidi ya matokeo (chaguo-msingi: 50)"
-    },
-    "get": {
-      "description": "Pata maelezo ya uendeshaji wa tathmini kwa ID"
-    },
-    "results": {
-      "description": "Onyesha matokeo ya sampuli kwa uendeshaji wa tathmini",
-      "failed": "Onyesha sampuli zilizofeli pekee"
-    },
-    "cancel": {
-      "description": "Ghairi tathmini inayoendelea",
-      "yes": "Ruka kidokezo cha uthibitishaji"
-    },
-    "scorecard": {
-      "description": "Onyesha kadi ya alama ya uendeshaji wa tathmini uliokamilika"
-    }
-  },
-  "webhooks": {
-    "description": "Dhibiti webhook za OmniRoute",
-    "events": {
-      "description": "Orodhesha aina zote za matukio ya webhook zinazopatikana"
-    },
-    "list": {
-      "description": "Orodhesha webhook zilizosanidiwa"
-    },
-    "get": {
-      "description": "Pata maelezo ya webhook kwa ID"
-    },
-    "add": {
-      "description": "Sajili webhook mpya",
-      "url": "URL lengwa",
-      "events": "Orodha ya aina za matukio zilizotenganishwa kwa koma",
-      "secret": "Siri ya kutia saini ya HMAC",
-      "header": "Kichwa cha ziada katika muundo wa key=value (kinaweza kurudiwa)",
-      "no_enabled": "Unda webhook ikiwa imezimwa"
-    },
-    "update": {
-      "description": "Sasisha webhook iliyopo",
-      "enabled": "Weka hali ya kuwashwa (true|false)"
-    },
-    "remove": {
-      "description": "Futa webhook",
-      "yes": "Ruka ombi la uthibitisho"
-    },
-    "test": {
-      "description": "Tuma tukio la majaribio kwa webhook",
-      "event": "Aina ya tukio la kuiga (chaguomsingi: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Kipanga Njia Mahiri cha AI chenye Njia Mbadala ya Kiotomatiki",
+    "description": "67router — Kipanga Njia Mahiri cha AI chenye Njia Mbadala ya Kiotomatiki",
     "version": "Chapisha toleo na uondoke",
     "output": "Muundo wa matokeo (table, json, jsonl, csv)",
     "quiet": "Ficha matokeo yasiyo muhimu",
     "no_color": "Zima matokeo yenye rangi",
     "timeout": "Muda wa mwisho wa ombi la HTTP kwa milisekunde",
-    "api_key": "Ufunguo wa API wa seva ya OmniRoute",
-    "base_url": "URL msingi ya seva ya OmniRoute",
+    "api_key": "Ufunguo wa API wa seva ya 67router",
+    "base_url": "URL msingi ya seva ya 67router",
     "context": "Muktadha/wasifu wa seva wa kutumia kwa amri hii",
     "lang": "Weka lugha ya kuonyesha ya CLI (inabatilisha OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Dhibiti faili (pakia, orodhesha, pata, pakua, futa)",
-    "list": {
-      "purpose": "Chuja kulingana na kusudi",
-      "limit": "Idadi ya juu ya matokeo"
-    },
-    "get": {
-      "description": "Pata metadata ya faili"
-    },
-    "upload": {
-      "description": "Pakia faili",
-      "purpose": "Kusudi la faili (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Pakua maudhui ya faili",
-      "out": "Hifadhi kwenye njia (chaguomsingi: stdout)"
-    },
-    "delete": {
-      "yes": "Ruka uthibitisho"
-    }
-  },
-  "batches": {
-    "description": "Dhibiti kazi za batch zinazooana na OpenAI",
-    "list": {
-      "status": "Chuja kulingana na hali",
-      "limit": "Idadi ya juu ya matokeo"
-    },
-    "create": {
-      "description": "Unda kazi ya batch",
-      "inputFile": "Kitambulisho cha faili ya ingizo",
-      "endpoint": "Endpoint lengwa",
-      "window": "Kipindi cha ukamilishaji",
-      "metadata": "Ongeza metadata key=value"
-    },
-    "submit": {
-      "description": "Pakia faili ya JSONL na uunde batch",
-      "jsonl": "Njia ya faili ya JSONL",
-      "endpoint": "Endpoint lengwa",
-      "wait": "Subiri hadi ikamilike"
-    },
-    "cancel": {
-      "yes": "Ruka uthibitishaji"
-    },
-    "wait": {
-      "timeout": "Muda wa kusubiri kwa ms"
-    },
-    "output": {
-      "out": "Hifadhi matokeo kwenye njia"
-    },
-    "errors": {
-      "out": "Hifadhi hitilafu kwenye njia"
-    }
   },
   "translator": {
     "description": "Tafsiri miili ya maombi kati ya miundo ya LLM",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Fikia na ujaribu vipimo vya OmniRoute OpenAPI",
+    "description": "Fikia na ujaribu vipimo vya 67router OpenAPI",
     "dump": {
       "description": "Toa vipimo vya OpenAPI kwenye stdout au faili",
       "format": "Muundo wa towe: yaml|json (chaguo-msingi: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Washa mseto ulioorodheshwa wa kwanza"
     }
   },
-  "oneproxy": {
-    "description": "Dhibiti hifadhi ya seva za juu za OneProxy",
-    "stats": {
-      "provider": "Chuja kulingana na mtoa huduma",
-      "period": "Kipindi cha muda (chaguo-msingi: 24h)"
-    },
-    "fetch": {
-      "description": "Leta proksi kutoka kwenye hifadhi",
-      "count": "Idadi ya proksi za kuleta (chaguo-msingi: 1)",
-      "type": "Aina ya proksi: http|socks5 (chaguo-msingi: http)"
-    },
-    "rotate": {
-      "description": "Lazimisha ubadilishaji wa proksi",
-      "provider": "Mtoa huduma wa kufanyiwa ubadilishaji",
-      "connectionId": "Kitambulisho mahususi cha muunganisho cha kubadilisha"
-    },
-    "config": {
-      "description": "Onyesha au sasisha usanidi wa OneProxy",
-      "enabled": "Washa hifadhi ya proksi (true|false)",
-      "poolSize": "Ukubwa wa hifadhi",
-      "providerSource": "URL ya mtoa huduma wa proksi",
-      "rotationPolicy": "Sera ya ubadilishaji: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Orodhesha hifadhi ya sasa ya proksi pamoja na vipimo"
-    }
-  },
   "open": {
-    "description": "Fungua ukurasa mahususi wa dashibodi ya OmniRoute kwenye kivinjari",
+    "description": "Fungua ukurasa mahususi wa dashibodi ya 67router kwenye kivinjari",
     "url": "Chapisha URL pekee, usifungue kivinjari"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Sawazisha usanidi kati ya matukio ya OmniRoute",
+    "description": "Sawazisha usanidi kati ya matukio ya 67router",
     "push": {
       "description": "Tuma usanidi kwenye wingu au tukio la mbali"
     },
@@ -1228,7 +874,7 @@
     "filter": "Chuja kwa kiwango (error,warn,info) — vilivyotenganishwa kwa koma",
     "lines": "Idadi ya mistari ya kuleta",
     "timeout": "Muda wa kuisha kwa muunganisho kwa ms",
-    "baseUrl": "URL msingi ya API ya OmniRoute",
+    "baseUrl": "URL msingi ya API ya 67router",
     "requestId": "Chuja kwa kitambulisho cha ombi",
     "apiKey": "Chuja kwa ufunguo wa API",
     "combo": "Chuja kwa jina la mchanganyiko",
@@ -1244,10 +890,10 @@
     "description": "Dhibiti ikoni ya trei ya mfumo",
     "show": "Onyesha ikoni ya trei (ikiwa seva inaendeshwa na --tray)",
     "hide": "Ficha ikoni ya trei",
-    "quit": "Funga OmniRoute kupitia trei"
+    "quit": "Funga 67router kupitia trei"
   },
   "autostart": {
-    "description": "Dhibiti kuanza kiotomatiki kwa OmniRoute wakati wa kuwasha mfumo (Linux: huduma ya mtumiaji ya systemd)",
+    "description": "Dhibiti kuanza kiotomatiki kwa 67router wakati wa kuwasha mfumo (Linux: huduma ya mtumiaji ya systemd)",
     "enable": "Washa kuanza kiotomatiki wakati wa kuwasha mfumo",
     "disable": "Zima kuanza kiotomatiki wakati wa kuwasha mfumo",
     "toggle": "Badilisha hali ya kuanza kiotomatiki wakati wa kuwasha mfumo",
@@ -1268,30 +914,20 @@
     "system": "Kidokezo cha mfumo",
     "resume": "Endelea na kipindi kilichohifadhiwa kwa jina"
   },
-  "plugin": {
-    "description": "Dhibiti programu-jalizi za CLI (omniroute-cmd-*)",
-    "list": "Orodhesha programu-jalizi zilizosakinishwa",
-    "install": "Sakinisha programu-jalizi kutoka npm au njia ya ndani",
-    "remove": "Ondoa programu-jalizi iliyosakinishwa",
-    "info": "Onyesha maelezo ya programu-jalizi iliyosakinishwa",
-    "search": "Tafuta programu-jalizi zinazopatikana katika sajili ya npm",
-    "update": "Sasisha programu-jalizi zilizosakinishwa",
-    "scaffold": "Unda kiolezo cha msingi cha programu-jalizi mpya"
-  },
   "launch": {
-    "description": "Zindua Claude Code ikielekezwa kwenye OmniRoute (ya ndani au ya mbali, kwa kutumia --profile)",
+    "description": "Zindua Claude Code ikielekezwa kwenye 67router (ya ndani au ya mbali, kwa kutumia --profile)",
     "token": "Tokeni ambayo kiteja cha Claude kinapaswa kutuma (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute haipatikani kwenye {port}. Iwashe kwa kutumia 'omniroute serve'.",
+    "notRunning": "67router haipatikani kwenye {port}. Iwashe kwa kutumia 'omniroute serve'.",
     "notFound": "CLI ya 'claude' haikupatikana katika PATH."
   },
   "run": {
-    "description": "Zindua lengwa la CLI linalotumika kupitia OmniRoute"
+    "description": "Zindua lengwa la CLI linalotumika kupitia 67router"
   },
   "setupClaude": {
-    "description": "Zalisha wasifu wa Claude Code katika ~/.claude/profiles kutoka kwenye katalogi ya modeli za OmniRoute"
+    "description": "Zalisha wasifu wa Claude Code katika ~/.claude/profiles kutoka kwenye katalogi ya modeli za 67router"
   },
   "connect": {
-    "description": "Unganisha kwenye seva ya mbali ya OmniRoute na uingie katika hali ya mbali"
+    "description": "Unganisha kwenye seva ya mbali ya 67router na uingie katika hali ya mbali"
   },
   "tokens": {
     "description": "Dhibiti tokeni za ufikiaji wa CLI zenye mawanda (hali ya mbali)"
@@ -1300,10 +936,10 @@
     "description": "Chagua mtoa huduma+modeli kutoka kwenye seva inayotumika na usanidi CLI ya ndani inayotumika"
   },
   "launchCodex": {
-    "description": "Zindua Codex CLI ikielekezwa kwenye OmniRoute (ya ndani au VPS ya mbali)"
+    "description": "Zindua Codex CLI ikielekezwa kwenye 67router (ya ndani au VPS ya mbali)"
   },
   "setupCodex": {
-    "description": "Zalisha faili za wasifu za ~/.codex kutoka kwenye katalogi hai ya modeli za OmniRoute"
+    "description": "Zalisha faili za wasifu za ~/.codex kutoka kwenye katalogi hai ya modeli za 67router"
   },
   "packs": {
     "description": "Dhibiti vifurushi vya hiari vya wakati wa utekelezaji (ML / uendeshaji otomatiki wa kivinjari)",
@@ -1316,7 +952,7 @@
     "errUnknown": "kifurushi kisichojulikana: {name}",
     "errNoIndex": "faharasa ya vifurushi haikupatikana; pitisha --source <dir> iliyo na maudhui ya kifurushi (vifurushi vya desktop huiweka karibu na programu)",
     "installed": "kifurushi \"{name}\" kimesakinishwa na kuthibitishwa katika {dir}",
-    "restartHint": "anzisha upya seva ya OmniRoute (au programu ya desktop) ili mazingira ya utekelezaji yatambue kifurushi",
+    "restartHint": "anzisha upya seva ya 67router (au programu ya desktop) ili mazingira ya utekelezaji yatambue kifurushi",
     "removed": "kifurushi \"{name}\" kimeondolewa",
     "notInstalled": "kifurushi \"{name}\" hakikuwa kimesakinishwa",
     "verifyOk": "vifurushi vyote vilivyosakinishwa vimethibitishwa",

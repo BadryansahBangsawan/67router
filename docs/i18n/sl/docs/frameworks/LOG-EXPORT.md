@@ -4,7 +4,7 @@
 
 ---
 
-Neprekinjen, inkrementalen izvoz dnevnikov klicev OmniRoute v zunanjo analitično shrambo.
+Neprekinjen, inkrementalen izvoz dnevnikov klicev 67router v zunanjo analitično shrambo.
 
 Zavihek nadzorne plošče Dnevniki hrani zgodovino zahtev v SQLite (`call_logs`), njena velikost pa je omejena z
 rotacijo in obdobjem hrambe. Izvoz dnevnikov po urniku pošilja isti nabor zapisov drugam, da se lahko ohranijo
@@ -271,7 +271,7 @@ Za nov cilj veljata dve pravili:
 - `send()` **mora sprožiti izjemo** ob delnem neuspehu. Uspešen zaključek pomeni »cilj ima te vrstice«,
   kazalec pa se trajno premakne prek njih.
 - Cilj, ki sprejema URL, ki ga vnese uporabnik, ga mora pred pridobivanjem preveriti s
-  `parseAndValidateWebhookUrl` (`src/shared/network/outboundUrlGuardPolicy.ts`),
+  `parseAndValidatePublicUrl` (`src/shared/network/outboundUrlGuard.ts`),
   enako kot spletni kavlji. BigQuery tega ne potrebuje, saj so njegovi gostitelji nespremenljive vrednosti.
 
 ---

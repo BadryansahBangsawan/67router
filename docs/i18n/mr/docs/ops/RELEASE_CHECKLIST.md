@@ -45,7 +45,7 @@ credential शी देवाणघेवाण करते — repository sec
 प्रवाह पुन्हा उपलब्ध होतो (लीक झालेला token एकट्याने प्रकाशित करू शकत नाही — कारण token अस्तित्वातच नाही).
 
 **एकदाच करायचे सेटअप (मालक):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`, repo `OmniRoute`, workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`, repo `67router`, workflow `npm-publish.yml`
 (environment: none). हे अस्तित्वात येईपर्यंत स्वयंचलित पायरी `ENEEDAUTH` सह अयशस्वी होते:
 `publish_mode=staged` (खाली) किंवा `direct` वापरून पुन्हा dispatch करा.
 

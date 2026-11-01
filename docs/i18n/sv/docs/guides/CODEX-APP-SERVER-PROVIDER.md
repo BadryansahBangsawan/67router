@@ -4,12 +4,12 @@
 
 ---
 
-OmniRoute erbjuder **två** sätt att använda OpenAI Codex:
+67router erbjuder **två** sätt att använda OpenAI Codex:
 
 | Leverantör             | Så kommunicerar den med OpenAI                                                                                                                                                         | Användningsförbehåll                                                                   |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | **`codex`**            | Återanvänder din OAuth-token för ChatGPT/OpenAI direkt mot Responses API                                                                                                               | **Ja** — den officiella sessionen är inte auktoriserad för användning via proxy/router |
-| **`codex-app-server`** | Styr **Codex CLI:s egen `codex app-server`** via JSON-RPC/WebSocket; CLI:t hanterar och förnyar automatiskt sin OAuth (`~/.codex/auth.json`), precis som en interaktiv `codex`-session | **Nej** — OmniRoute återanvänder aldrig en token mot API:t                             |
+| **`codex-app-server`** | Styr **Codex CLI:s egen `codex app-server`** via JSON-RPC/WebSocket; CLI:t hanterar och förnyar automatiskt sin OAuth (`~/.codex/auth.json`), precis som en interaktiv `codex`-session | **Nej** — 67router återanvänder aldrig en token mot API:t                              |
 
 Eftersom `codex-app-server` aldrig återanvänder en token omfattas den inte av
 användningsförbehållet för återanvändning av sessioner. Den kräver dock ett
@@ -21,7 +21,7 @@ måste vara **inloggat**.
 ## 1. Arkitektur
 
 ```
-┌─ OmniRoute-app ────────────────┐        ┌─ codex-app-server-sidovagn ─────────┐
+┌─ 67router-app ────────────────┐        ┌─ codex-app-server-sidovagn ─────────┐
 │  CodexAppServerExecutor          │  WS    │  codex app-server                   │
 │  ws://codex-app-server:1456 ─────┼───────▶│  --listen ws://0.0.0.0:1456         │
 │  (+ behörighetstoken)            │  JSON  │  --ws-auth capability-token         │
@@ -81,7 +81,7 @@ inaktuell (en säkerhetskopia skapas alltid).
 - **Offentlig användare utan lokalt installerad codex** — irrelevant:
   sidovagnen innehåller CLI:t. Användaren autentiserar sig endast via
   instrumentpanelen.
-- **OmniRoute på fysisk server (ingen sidovagn, codex på värden)** — låt
+- **67router på fysisk server (ingen sidovagn, codex på värden)** — låt
   `OMNIROUTE_CODEX_APPSERVER_WS` peka på din egen `codex app-server` och se till
   att codex på värden är inloggat; tipset "codex är inte installerat" visas om
   binärfilen saknas.

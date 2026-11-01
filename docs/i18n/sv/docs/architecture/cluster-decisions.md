@@ -14,7 +14,7 @@ Två valfria Compose-profiler (`memory`, `bifrost`) för den befintliga driftsä
 
 ## Varför detta är en försiktig förändring
 
-OmniRoutes befintliga driftsättningsarkitektur är redan resurssnål och beprövad:
+67routers befintliga driftsättningsarkitektur är redan resurssnål och beprövad:
 
 - **`redis:7-alpine`** hanterar belastningen från hastighetsbegränsning och cachelagring i produktionsskala.
 - **SQLite + sqlite-vec + FTS5** täcker lokalt minne samt vektor- och textsökning (se [`src/lib/memory/vectorStore.ts:108`](../../src/lib/memory/vectorStore.ts)).
@@ -49,7 +49,7 @@ De två profilerna här är **alternativ för horisontell skalning av driftsätt
 
 - Du kör ≥3 `omniroute`-repliker och vill centralisera leverantörsrotationen i en enda Go-process.
 - Du vill ha en gemensam yta för granskning och loggning av förfrågningar till uppströmsleverantörer från alla repliker.
-- Du vill kunna skala Tier-1-routinglagret horisontellt oberoende av OmniRoute-replikerna.
+- Du vill kunna skala Tier-1-routinglagret horisontellt oberoende av 67router-replikerna.
 
 **Vad den lägger till:**
 

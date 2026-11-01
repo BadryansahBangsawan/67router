@@ -38,7 +38,7 @@ Pool-ലുള്ള ഓരോ candidate-നും
 `filterPaidOnlyCandidates`-ന് തൊട്ടുപിന്നാലെ):
 
 1. **`FREE_MODEL_BUDGETS`-ൽ ഒട്ടും ഇല്ല** → ഒഴിവാക്കപ്പെടുന്നു. യഥാർത്ഥത്തിൽ പണം നൽകേണ്ട മോഡലുകളും
-   OmniRoute ഇതുവരെ വർഗ്ഗീകരിച്ചിട്ടില്ലാത്ത ഏതൊരു provider/model-ഉം ഇതിൽ ഉൾപ്പെടുന്നു — പുതിയ
+   67router ഇതുവരെ വർഗ്ഗീകരിച്ചിട്ടില്ലാത്ത ഏതൊരു provider/model-ഉം ഇതിൽ ഉൾപ്പെടുന്നു — പുതിയ
    candidates ഉൾപ്പെടുത്തപ്പെട്ടല്ല, ഒഴിവാക്കപ്പെട്ട നിലയിലാണ് ആരംഭിക്കുന്നത്.
 2. **`freeType: "keyless"`** → ഉടൻ കടന്നുപോകുന്നു, **എന്നാൽ യഥാർത്ഥത്തിൽ no-auth path വഴി
    എത്തിയ candidate-ന് മാത്രം** (`connectionId === SYNTHETIC_NOAUTH_CONNECTION_ID`,
@@ -97,7 +97,7 @@ dispatch ചെയ്യാനുള്ള കണക്ഷൻ തിരഞ്ഞ
 (keyless-bypass കേസുകൾ A/B/C, multi-account കേസുകൾ 1-5).
 
 `discovered automatically`: ശരിയായ മെറ്റാഡാറ്റയോടെ നാളെ പുറത്തിറങ്ങുന്ന ഒരു പ്രൊവൈഡർ/മോഡൽ (catalog-ൽ,
-ഒരു usage adapter സഹിതം, `hardStopGuaranteed: true`) OmniRoute അതിനെക്കുറിച്ച് അറിയുന്ന നിമിഷം മുതൽ
+ഒരു usage adapter സഹിതം, `hardStopGuaranteed: true`) 67router അതിനെക്കുറിച്ച് അറിയുന്ന നിമിഷം മുതൽ
 ഉപയോഗിക്കാനാകും — കോഡ് മാറ്റമോ whitelist എൻട്രിയോ ഈ മൊഡ്യൂളിൽ തിരുത്തേണ്ട ഒന്നുമോ ഇല്ല. catalog-ൽ നിന്ന്
 നീക്കം ചെയ്യപ്പെടുന്ന ഒന്ന് അതേ രീതിയിൽ അപ്രത്യക്ഷമാകും. റിഗ്രഷൻ തെളിവിനായി
 `tests/unit/autoCombo/strict-zero-cost-autodiscovery.test.ts` കാണുക (യഥാർത്ഥ catalog മാറ്റാതെ,

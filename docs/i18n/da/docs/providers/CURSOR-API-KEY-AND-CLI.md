@@ -4,16 +4,16 @@
 
 ---
 
-To måder at placere Cursor bag OmniRoute uden en IDE-session:
+To måder at placere Cursor bag 67router uden en IDE-session:
 
 1. **`cursor-api`-udbyder** (kortet "Cursor API", alias `cua`): en API-nøgleudbyder,
    der indeholder en Cursor-bruger-API-nøgle (`crsr_…`, genereret på
-   `https://cursor.com/dashboard/api`). Enhver OmniRoute-klient kan derefter tilgå
+   `https://cursor.com/dashboard/api`). Enhver 67router-klient kan derefter tilgå
    Cursor-modeller gennem `/v1/chat/completions` som `cursor-api/<model>` eller
    `cua/<model>` med de sædvanlige lag til kvoter, fallback og logning. IDE-udbyderen
    (`cursor`, OAuth/IDE-session) er uændret.
-2. **Cursor CLI-videresendelse**: Peg Cursor CLI (`agent`) mod OmniRoute, så
-   hvert RPC-kald, som CLI'en foretager, godkendes med en OmniRoute-API-nøgle, videresendes
+2. **Cursor CLI-videresendelse**: Peg Cursor CLI (`agent`) mod 67router, så
+   hvert RPC-kald, som CLI'en foretager, godkendes med en 67router-API-nøgle, videresendes
    til Cursor med legitimationsoplysningerne fra en `cursor-api`-forbindelse og registreres på
    siden Logs.
 
@@ -60,7 +60,7 @@ Bemærkninger:
 
 - Modellisten for `cursor-api` kommer fra det statiske Cursor-register (den
   samme liste, som IDE-udbyderen falder tilbage til); ingen installation af `cursor-agent`
-  er nødvendig på OmniRoute-værten.
+  er nødvendig på 67router-værten.
 - `POST /api/providers/{id}/refresh-cursor` er kun til `cursor`-IDE-udbyderen;
   `cursor-api`-forbindelser har ingen IDE-session, der skal fornys.
 
@@ -68,7 +68,7 @@ Bemærkninger:
 
 For `cursor` / `cu` og `cursor-api` / `cua` lader den fælles normalisering af Claude-indsats
 det anmodede model-id forblive intakt. Cursor kan annoncere et suffiks som
-`-low` som en del af et reelt model-id i stedet for som et OmniRoute-indsatsalias.
+`-low` som en del af et reelt model-id i stedet for som et 67router-indsatsalias.
 Cursor-executoren bevarer et nøjagtigt match i livekataloget; når der ikke findes
 et match, håndterer dens eksisterende modelresolver fallback fra suffiks til parameter.
 
@@ -83,18 +83,18 @@ Rute: `src/app/api/cursor-cli/[...path]/route.ts` →
 registreret i `src/shared/constants/publicApiRoutes.ts`, fordi handleren
 håndhæver sin egen godkendelse:
 
-| Sti                                                                                                                          | Godkendelse forventet fra CLI'en | Hvad OmniRoute gør                                                                                                                                                                  |
+| Sti                                                                                                                          | Godkendelse forventet fra CLI'en | Hvad 67router gør                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <OmniRoute API-nøgle>`   | Validerer nøglen, udsteder en HS256-JWT med 1 times gyldighed (signeret med `JWT_SECRET`) og returnerer den                                                                         |
+| `POST /auth/exchange_user_api_key`                                                                                           | `Bearer <67router API-nøgle>`    | Validerer nøglen, udsteder en HS256-JWT med 1 times gyldighed (signeret med `JWT_SECRET`) og returnerer den                                                                         |
 | alle andre stier (`/aiserver.v1.*`, `/agent.v1.AgentService/RunSSE`, `/aiserver.v1.BidiService/BidiAppend`, `/v1/traces`, …) | `Bearer <den pågældende JWT>`    | Verificerer udsteder, målgruppe og udløbstid, vælger en aktiv `cursor-api`-forbindelse, erstatter Authorization-headeren med det udvekslede Cursor-token og streamer svaret tilbage |
 
 CLI'en afkoder `exp` fra det token, den modtager, så hvis den får et uigennemsigtigt
 token, udveksler den igen før næsten hver anmodning; den udstedte JWT undgår
-dette. Et 401-svar fra OmniRoute får CLI'en til at udveksle igen.
+dette. Et 401-svar fra 67router får CLI'en til at udveksle igen.
 
 ### Opsætning
 
-1. Opret en OmniRoute API-nøgle (Dashboard → API-nøgler) og en `cursor-api`-
+1. Opret en 67router API-nøgle (Dashboard → API-nøgler) og en `cursor-api`-
    forbindelse.
 2. Indstil CLI'en til at bruge HTTP/1.1 til agentstreamen. I
    `~/.cursor/cli-config.json`:
@@ -107,7 +107,7 @@ dette. Et 401-svar fra OmniRoute får CLI'en til at udveksle igen.
    konfigureret agentvært, og kun kontrolplans-RPC'erne går gennem
    slutpunktet.
 
-3. Kør CLI'en mod OmniRoute:
+3. Kør CLI'en mod 67router:
 
    ```bash
    export CURSOR_API_ENDPOINT=http://localhost:20128/api/cursor-cli
@@ -116,18 +116,18 @@ dette. Et 401-svar fra OmniRoute får CLI'en til at udveksle igen.
    ```
 
 Hvert hop vises i logfilerne med udbyderen `cursor-api`, anmodningstypen `cursor-cli`
-og stien `/api/cursor-cli/<rpc>`, tilskrevet den OmniRoute API-nøgle og den
+og stien `/api/cursor-cli/<rpc>`, tilskrevet den 67router API-nøgle og den
 forbindelse, der betjente anmodningen.
 
 ### Fejltilstande
 
-| Situation                                         | Svar til CLI'en                               |
-| ------------------------------------------------- | --------------------------------------------- |
-| Ukendt OmniRoute-nøgle og `REQUIRE_API_KEY=true`  | 401 `unauthenticated` ved udveksling          |
-| `REQUIRE_API_KEY=false`                           | anonym session (afspejler `/v1/*`-adfærd)     |
-| Udløbet / fremmed / manipuleret sessions-JWT      | 401, CLI'en udveksler igen                    |
-| OmniRoute API-nøgle tilbagekaldt efter udveksling | 401 ved næste RPC                             |
-| Ingen aktiv `cursor-api`-forbindelse              | 503 `unavailable`                             |
-| Cursor afviser forbindelsens nøgle                | 401 `unauthenticated`, cachet session fjernes |
-| Upstream kan ikke nås                             | 502 `unavailable` (renset meddelelse)         |
-| `JWT_SECRET` er ikke angivet                      | 503 ved udveksling                            |
+| Situation                                        | Svar til CLI'en                               |
+| ------------------------------------------------ | --------------------------------------------- |
+| Ukendt 67router-nøgle og `REQUIRE_API_KEY=true`  | 401 `unauthenticated` ved udveksling          |
+| `REQUIRE_API_KEY=false`                          | anonym session (afspejler `/v1/*`-adfærd)     |
+| Udløbet / fremmed / manipuleret sessions-JWT     | 401, CLI'en udveksler igen                    |
+| 67router API-nøgle tilbagekaldt efter udveksling | 401 ved næste RPC                             |
+| Ingen aktiv `cursor-api`-forbindelse             | 503 `unavailable`                             |
+| Cursor afviser forbindelsens nøgle               | 401 `unauthenticated`, cachet session fjernes |
+| Upstream kan ikke nås                            | 502 `unavailable` (renset meddelelse)         |
+| `JWT_SECRET` er ikke angivet                     | 503 ved udveksling                            |

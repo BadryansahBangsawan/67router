@@ -45,7 +45,7 @@ npm run test:e2e           # اختیاری مگر تجویز کردہ
 (لیک شدہ ٹوکن اکیلا شائع نہیں کر سکتا — کیونکہ کوئی ٹوکن موجود ہی نہیں ہے)۔
 
 **ایک بار کا سیٹ اپ (مالک):** npmjs.com → package `omniroute` → Settings → _Trusted
-Publisher_ → GitHub: owner `diegosouzapw`، repo `OmniRoute`، workflow `npm-publish.yml`
+Publisher_ → GitHub: owner `diegosouzapw`، repo `67router`، workflow `npm-publish.yml`
 (environment: none)۔ اس کے موجود ہونے تک خودکار مرحلہ `ENEEDAUTH` کے ساتھ ناکام ہوگا:
 `publish_mode=staged` (ذیل میں) یا `direct` کے ساتھ دوبارہ dispatch کریں۔
 

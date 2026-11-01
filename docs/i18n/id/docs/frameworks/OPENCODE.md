@@ -5,11 +5,11 @@
 ---
 
 > **Status:** Tersedia secara umum.
-> **Audiens:** Operator yang menghubungkan OpenCode ke deployment OmniRoute.
+> **Audiens:** Operator yang menghubungkan OpenCode ke deployment 67router.
 > **Sumber kebenaran (skema konfigurasi):** `src/shared/services/opencodeConfig.ts`
 > **Sumber kebenaran (paket npm):** `@omniroute/opencode-provider/` (workspace yang dapat dipublikasikan)
 
-[OpenCode](https://opencode.ai) adalah klien AI agentik berbasis CLI/desktop. OpenCode membaca katalog penyedianya dari `~/.config/opencode/opencode.json` (atau `opencode.jsonc`) dan mengikuti skema di `https://opencode.ai/config.json`. OmniRoute mengekspos dirinya kepada OpenCode sebagai salah satu penyedia tersebut — setiap permintaan mengalir melalui antarmuka `/v1` standar OmniRoute yang kompatibel dengan OpenAI, sehingga OpenCode secara otomatis mendapatkan manfaat dari perutean Auto-Combo, circuit breaker, kebijakan kunci, observabilitas, dan sebagainya.
+[OpenCode](https://opencode.ai) adalah klien AI agentik berbasis CLI/desktop. OpenCode membaca katalog penyedianya dari `~/.config/opencode/opencode.json` (atau `opencode.jsonc`) dan mengikuti skema di `https://opencode.ai/config.json`. 67router mengekspos dirinya kepada OpenCode sebagai salah satu penyedia tersebut — setiap permintaan mengalir melalui antarmuka `/v1` standar 67router yang kompatibel dengan OpenAI, sehingga OpenCode secara otomatis mendapatkan manfaat dari perutean Auto-Combo, circuit breaker, kebijakan kunci, observabilitas, dan sebagainya.
 
 Ada **dua jalur integrasi yang didukung**. Pilih salah satu — keduanya menghasilkan konfigurasi yang sama.
 
@@ -17,16 +17,16 @@ Ada **dua jalur integrasi yang didukung**. Pilih salah satu — keduanya menghas
 
 ## Jalur 1 — Generator CLI (tanpa instalasi npm)
 
-Direkomendasikan untuk pengguna akhir. Disertakan bersama OmniRoute. Menulis `opencode.json` secara langsung.
+Direkomendasikan untuk pengguna akhir. Disertakan bersama 67router. Menulis `opencode.json` secara langsung.
 
 ```bash
-# Setelah menginstal OmniRoute (npm i -g @omniroute/cli atau clone lokal)
+# Setelah menginstal 67router (npm i -g @omniroute/cli atau clone lokal)
 omniroute config opencode \
   --base-url http://localhost:20128 \
   --api-key "$OMNIROUTE_API_KEY"
 ```
 
-Di balik layar, CLI memanggil `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), sehingga `opencode.json` yang sudah ada tetap mempertahankan penyedia lain dan komentarnya. Entri OmniRoute ditambahkan/diganti secara atomik.
+Di balik layar, CLI memanggil `mergeOpenCodeConfigText()` (`src/shared/services/opencodeConfig.ts:104`), sehingga `opencode.json` yang sudah ada tetap mempertahankan penyedia lain dan komentarnya. Entri 67router ditambahkan/diganti secara atomik.
 
 File yang dihasilkan (katalog model default):
 
@@ -90,8 +90,8 @@ Kedua jalur menghasilkan `provider.omniroute.npm: "@ai-sdk/openai-compatible"` y
 ```
 UI/agen OpenCode
    → @ai-sdk/openai-compatible
-      → HTTP POST {baseURL}/chat/completions          (antarmuka OpenAI OmniRoute)
-         → handler /v1/chat/completions OmniRoute     (open-sse/handlers/chatCore.ts)
+      → HTTP POST {baseURL}/chat/completions          (antarmuka OpenAI 67router)
+         → handler /v1/chat/completions 67router     (open-sse/handlers/chatCore.ts)
             → perutean kombo / Auto-Combo / eksekutor
                → penyedia upstream
 ```
@@ -113,8 +113,8 @@ export const OMNIROUTE_DEFAULT_OPENCODE_MODELS = [
 
 Anda dapat menggantinya melalui `models: [...]`. Penambahan yang direkomendasikan:
 
-- `"auto"` — menampilkan router [Auto-Combo](../routing/AUTO-COMBO.md) tanpa konfigurasi milik OmniRoute. Memungkinkan OpenCode memilih "model terbaik yang tersedia" tanpa harus menetapkan katalog secara langsung.
-- `"<combo-name>"` — kombo apa pun yang telah Anda definisikan di dasbor; OmniRoute akan menanganinya secara transparan.
+- `"auto"` — menampilkan router [Auto-Combo](../routing/AUTO-COMBO.md) tanpa konfigurasi milik 67router. Memungkinkan OpenCode memilih "model terbaik yang tersedia" tanpa harus menetapkan katalog secara langsung.
+- `"<combo-name>"` — kombo apa pun yang telah Anda definisikan di dasbor; 67router akan menanganinya secara transparan.
 
 ---
 
@@ -135,12 +135,12 @@ Deduplikasi ini adalah **penyebab kerusakan yang paling umum** pada konfigurasi 
 
 ## Mode autentikasi
 
-| Pengaturan OmniRoute                          | Nilai `apiKey` yang direkomendasikan                            |
+| Pengaturan 67router                           | Nilai `apiKey` yang direkomendasikan                            |
 | --------------------------------------------- | --------------------------------------------------------------- |
 | `REQUIRE_API_KEY=false` (default untuk lokal) | `sk_omniroute` (placeholder literal)                            |
 | `REQUIRE_API_KEY=true`                        | Kunci API per pengguna yang sebenarnya dari Dasbor → Kunci API. |
 
-Untuk klien bergaya Anthropic yang mengirim `x-api-key` + `anthropic-version`, `extractApiKey` milik OmniRoute juga menerima kunci dari `x-api-key`. OpenCode menggunakan antarmuka OpenAI, sehingga akan selalu mengirim `Authorization: Bearer ${apiKey}` — tidak ada perlakuan khusus Anthropic yang berlaku di sini.
+Untuk klien bergaya Anthropic yang mengirim `x-api-key` + `anthropic-version`, `extractApiKey` milik 67router juga menerima kunci dari `x-api-key`. OpenCode menggunakan antarmuka OpenAI, sehingga akan selalu mengirim `Authorization: Bearer ${apiKey}` — tidak ada perlakuan khusus Anthropic yang berlaku di sini.
 
 ---
 
@@ -149,15 +149,15 @@ Untuk klien bergaya Anthropic yang mengirim `x-api-key` + `anthropic-version`, `
 | Gejala                                                   | Penyebab                                                                           | Perbaikan                                                                                          |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `404` pada setiap permintaan dengan URL berisi `/v1/v1/` | Konfigurasi usang dari plugin sebelum v3.8 yang menambahkan sufiks `/v1` dua kali. | Buat ulang melalui Jalur 1 atau 2.                                                                 |
-| `401 Invalid API key`                                    | OmniRoute memiliki `REQUIRE_API_KEY=true` dan kunci tersebut tidak dikenal.        | Buat kunci di dasbor, atau atur `REQUIRE_API_KEY=false` (khusus lokal) dan gunakan `sk_omniroute`. |
-| Daftar model kosong di UI OpenCode                       | Keempat model default disembunyikan dalam visibilitas penyedia OmniRoute.          | Teruskan `models: ["auto", ...]` untuk menampilkan model yang telah Anda aktifkan.                 |
+| `401 Invalid API key`                                    | 67router memiliki `REQUIRE_API_KEY=true` dan kunci tersebut tidak dikenal.         | Buat kunci di dasbor, atau atur `REQUIRE_API_KEY=false` (khusus lokal) dan gunakan `sk_omniroute`. |
+| Daftar model kosong di UI OpenCode                       | Keempat model default disembunyikan dalam visibilitas penyedia 67router.           | Teruskan `models: ["auto", ...]` untuk menampilkan model yang telah Anda aktifkan.                 |
 | OpenCode 500 dengan `cannot read property 'models'`      | OpenCode versi lama (< 0.1.x) tidak menerima `models` inline.                      | Tingkatkan OpenCode ke versi yang mengikuti skema v1 (`opencode.ai/config.json`).                  |
 
 ---
 
 ## Lihat juga
 
-- [Referensi API](../reference/API_REFERENCE.md) — keseluruhan antarmuka REST OmniRoute
+- [Referensi API](../reference/API_REFERENCE.md) — keseluruhan antarmuka REST 67router
 - [Auto-Combo](../routing/AUTO-COMBO.md) — arti `model: "auto"`
 - [`@omniroute/opencode-provider` README](../../@omniroute/opencode-provider/README.md)
 - Sumber: `src/shared/services/opencodeConfig.ts`, `src/lib/cli-helper/config-generator/opencode.ts`, `@omniroute/opencode-provider/src/index.ts`

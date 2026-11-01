@@ -45,7 +45,7 @@ npm run test:e2e           # אופציונלי אך מומלץ
 ההבטחה של WS1.3 (אסימון שדלף אינו יכול לפרסם לבדו — אין אסימון).
 
 **הגדרה חד־פעמית (בעלים):** npmjs.com ← החבילה `omniroute` ← Settings ← _Trusted
-Publisher_ ← GitHub: בעלים `diegosouzapw`, מאגר `OmniRoute`, תהליך עבודה `npm-publish.yml`
+Publisher_ ← GitHub: בעלים `diegosouzapw`, מאגר `67router`, תהליך עבודה `npm-publish.yml`
 (סביבה: ללא). עד שהגדרה זו קיימת, השלב האוטומטי נכשל עם `ENEEDAUTH`:
 הפעילו מחדש עם `publish_mode=staged` (להלן) או `direct`.
 

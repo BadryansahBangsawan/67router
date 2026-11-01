@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 發布 npm + Docker 構件。這些關卡提供溯源、庫存（SBOM）和 CVE 掃描，全部都是開源軟體（OSS），並整合到發布工作流程中。**建議優先**的姿態 — 它們現在會報告，在第一次綠色發布後才會升級為阻擋。
+67router 發布 npm + Docker 構件。這些關卡提供溯源、庫存（SBOM）和 CVE 掃描，全部都是開源軟體（OSS），並整合到發布工作流程中。**建議優先**的姿態 — 它們現在會報告，在第一次綠色發布後才會升級為阻擋。
 
 | 關卡                  | 工具                                           | 位置                          | 阻擋？         | 輸出                                        |
 | --------------------- | ---------------------------------------------- | ----------------------------- | -------------- | ------------------------------------------- |
@@ -47,7 +47,7 @@ osv 和 Trivy 會將依賴項與**持續增長**的 CVE 資料庫進行比較。
   當前 npm-latest (`0.1.29`) 仍然拉取 `extract-zip@2.0.1`。
 - **無法從生產環境中觸及。** `promptfoo` 僅為 devDependency (從未列在
   `dependencies` 下)，並且 `src/`、`open-sse/` 或 `bin/` 下沒有任何檔案匯入
-  `extract-zip` npm 套件 — OmniRoute 自己的 `extractZip()` 輔助函數
+  `extract-zip` npm 套件 — 67router 自己的 `extractZip()` 輔助函數
   (`src/lib/versionManager/binaryManager.ts:93`) 呼叫原生 `unzip`/`tar`
   且與之無關。`@openai/codex-security` 還在其 `extract-zip` 的 onEntry 回調之上
   提供了自己的符號連結遍歷防護。

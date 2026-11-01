@@ -5,7 +5,7 @@
 ---
 
 Itse ylläpidetty pooli toimii **.113**-palvelimella (`tomni-proxmox-113`). Jokaisella
-OmniRoute-suorittajalla on 2026-10-18 lähtien **yksi rooli**, yksi tunniste sekä sen työkuormalle
+67router-suorittajalla on 2026-10-18 lähtien **yksi rooli**, yksi tunniste sekä sen työkuormalle
 mitoitettu muisti- ja CPU-budjetti. Turbopack-paikka saa koonnin tarvitsemat resurssit; muut paikat
 on mitoitettu niiden mitattujen huippujen mukaan. Palvelimen resurssit ylivarataan vain silloin, kun
 Turbopack-koonti osuu samanaikaisesti Release-Green-webpack-koonnin ja lint-työn kanssa; palvelimen
@@ -28,7 +28,7 @@ Mitattu 2026-10-18:
 | swap        | 16 GB                             | `omniroute-113-5` toimii ilman sivutusta (`MemorySwapMax=0`), joten hallitsemattomasti kasvava koonti katkaistaan sen saavuttaessa rajansa sen sijaan, että koko palvelin alkaisi käyttää sivutusta                                                                                                                                                                                                                  |
 | `/tmp`      | **12 GB tmpfs = RAM**             | kaikki sinne tallennettu kuluttaa muistia; jäänteet poistetaan 3 tunnin kuluttua                                                                                                                                                                                                                                                                                                                                     |
 | CPU         | kuormaksi havaittu 60 32 ytimellä | ennen kiintiöitä yksi Turbopack-koonti (~1166 % CPU) sekä samalla palvelimella ajettu kattavuustestikokonaisuus estivät muita kuuntelijoita lähettämästä heartbeat-signaalejaan (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                                |
-| suorittajat | **6 kuuntelijaa**                 | 4 OmniRoute + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` on poistettu käytöstä (`systemctl enable --now` ottaa yhden takaisin käyttöön)                                                                                                                                                                                                                                                                       |
+| suorittajat | **6 kuuntelijaa**                 | 4 67router + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` on poistettu käytöstä (`systemctl enable --now` ottaa yhden takaisin käyttöön)                                                                                                                                                                                                                                                                        |
 
 Rajat sijaitsevat kunkin yksikön tiedostossa `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (aiemmat arvot on säilytetty nimellä `override.conf.bak-20261018`), ja ne otettiin käyttöön ajon aikana komennolla
@@ -73,7 +73,7 @@ työprosessi ilmoittaa työn peruutetuksi, ja kuuntelija palaa automaattisesti t
 
 Suoritusagentin oletusarvoinen `KillMode=process` jättää ketjun `Runner.Worker → npm → next-build`
 käyntiin, kun yksikkö pysäytetään tai käynnistetään uudelleen — orvoksi jäänyt koonti kuluttaa edelleen RAM-muistia ja
-suoritinaikaa ilman siihen liitettyä työtä. Jokaisella OmniRoute-yksiköllä on lisämääritystiedosto
+suoritinaikaa ilman siihen liitettyä työtä. Jokaisella 67router-yksiköllä on lisämääritystiedosto
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`),
 jossa on `KillMode=mixed`: ensin SIGTERM kuuntelijalle ja sitten SIGKILL koko cgroup-ryhmälle
 `TimeoutStop`-ajan kohdalla. Se tulee voimaan yksikön seuraavan uudelleenkäynnistyksen yhteydessä — käynnistä uudelleen **yksi suoritusagentti
@@ -116,7 +116,7 @@ kerrallaan ja vain sen ollessa käyttämätön** siten, että käyttämättömyy
   vain taustajärjestelmän `next build` -koonnin (~5–6 Gt; webpack), sekä `quality.yml`-tiedoston `lint-guard`-työn. Palvelimella `omniroute-113`
   oli `MemoryHigh=4G` päivään 2026-10-18 asti — promptfoo-koonti käytti 54 minuuttia muistinhallinnan aiheuttamaan hidasteluun;
   8 Gt poistaa rajoittamisen.
-- **Tarkoituksella vähemmän kuuntelijoita.** Neljä OmniRoute-yksikköä poistettiin käytöstä 2026-08-29 — jokainen ylimääräinen
+- **Tarkoituksella vähemmän kuuntelijoita.** Neljä 67router-yksikköä poistettiin käytöstä 2026-08-29 — jokainen ylimääräinen
   kuuntelija kuluttaa osansa edellä mainitusta muistibudjetista. Siivoojan yläraja on 6 (`MAX_ACTIVE_RUNNERS=6` cronissa): se laskee
   kaikki palvelimen `Runner.Listener`-prosessit, ja OmniHeuris sekä OmniMind lisäävät kaksi kuuntelijaa meidän neljämme lisäksi.
 - **Älä koskaan siivoa `/tmp`- tai `_work`-hakemistoa käsin, kun jokin suorittaja on varattuna.**

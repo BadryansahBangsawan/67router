@@ -4,7 +4,7 @@
 
 ---
 
-E2E-validatie in een echte omgeving van de OmniRoute-deployment die op de homologatie-VPS draait
+E2E-validatie in een echte omgeving van de 67router-deployment die op de homologatie-VPS draait
 (`HOMOLOG_BASE_URL`, bijv. `http://192.168.0.15:20128`). Eén opdracht vervangt de handmatige
 STOP #2-checklist voor releases door een geautomatiseerde uitvoering die bewijsmateriaal produceert.
 

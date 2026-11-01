@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **parallel sikl** reliz modelidan foydalanadi: faol sikl uchun alohida `release/vX.Y.Z`
+67router **parallel sikl** reliz modelidan foydalanadi: faol sikl uchun alohida `release/vX.Y.Z`
 shoxi, eʼlon qilingan yoʻnalish uchun `main` va sikl chiqarilganda oʻzgarmas
 `vX.Y.Z` tegi. Kommitlarning `release/*`ga _ham_, `main`ga ham tushishi kutilgan holat — bu chalkashlik emas.
 

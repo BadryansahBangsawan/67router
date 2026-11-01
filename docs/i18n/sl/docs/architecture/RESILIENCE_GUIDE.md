@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute ima tri ločene, a med seboj povezane mehanizme odpornosti. Vsak ima drugačen obseg in namen. Pri razhroščevanju vedenja usmerjanja jih obravnavajte ločeno.
+67router ima tri ločene, a med seboj povezane mehanizme odpornosti. Vsak ima drugačen obseg in namen. Pri razhroščevanju vedenja usmerjanja jih obravnavajte ločeno.
 
 ![Trislojni model odpornosti](../diagrams/exported/resilience-3layers.svg)
 
@@ -155,7 +155,7 @@ Te tri glave afinitete seje se nikoli ne posredujejo upstream — izvajalci svoj
 
 ### Ekskluzivni zaklepi povezav za upravljane seje
 
-**Obseg:** en aktiven upravljan odjemalec/seja HTTP poseduje eno upravičeno povezavo OmniRoute.
+**Obseg:** en aktiven upravljan odjemalec/seja HTTP poseduje eno upravičeno povezavo 67router.
 
 **Namen:** zagotoviti trajno ekskluzivno lastništvo povezave odjemalcem, ki potrebujejo trdo
 usmerjevalno pregrado med zahtevami. To se razlikuje od afinitete seje, ki je mehka želja
@@ -179,7 +179,7 @@ ID aktivne povezave. Glave za nadzor zakupa se odstranijo iz dnevnikov, ohranjen
 glav izvajalcev navzgor.
 
 Če ima običajno usmerjanje primerne upravljane kandidate, vendar je vsak prosti kandidat zaseden s
-tujim aktivnim zakupom, OmniRoute vrne HTTP `429`, kodo lease-capacity-unavailable, stanje
+tujim aktivnim zakupom, 67router vrne HTTP `429`, kodo lease-capacity-unavailable, stanje
 waiting-for-capacity in omejeno vrednost `Retry-After`, izpeljano iz najzgodnejšega ustreznega izteka.
 Običajna prazna primernost ni spopad za zakup in ohranja obstoječo semantiko napak usmerjanja.
 
@@ -203,7 +203,7 @@ Sorodni mehanizmi ostajajo ločeni:
   povezave), za druge ponudnike `getQuotaScopedModelForProvider()`.
 - `404` zaklene goli model (`getModelLockKey()` zoži `not_found`).
 - Vsak drug status — napake prenosa/strežnika `5xx` in lastna sintetizirana `502`
-  sistema OmniRoute iz preverjanja kakovosti — zaklene le **točno**
+  sistema 67router iz preverjanja kakovosti — zaklene le **točno**
   trojko ponudnik/povezava/model. Slab tok pri enem modelu ni dokaz
   o kvoti računa; pred tem pravilom je en sam prazen odziv pri
   `codex/gpt-5.6-luna` za 2–30 min (naraščajoče) odstranil iz usmerjanja vsak
@@ -342,7 +342,7 @@ Omejitve sočasnosti po modelih**, en `model=cap` na vrstico) ali prek
   pozitivnih celih števil.
 - **Lokalno vrstenje, brez odkrivanja:** presežne zahteve se vrstijo lokalno z
   obstoječo semantiko vrste/časovne omejitve (tipizirani napaki sprejema
-  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). OmniRoute ne odkriva in ne
+  `SEMAPHORE_TIMEOUT` / `SEMAPHORE_QUEUE_FULL`). 67router ne odkriva in ne
   sklepa upstream politike — uveljavlja natančno tiste zgornje meje, ki jih je
   nastavil operater. Zasičena zapora modela nikoli ne onemogoči ponudnika in
   nikoli ne ustvari trajne blokade modela; upstream vedenje
@@ -515,7 +515,7 @@ ga je mogoče enotsko testirati brez pravega omejevalnika Bottleneck.
 ### Varnostna mreža samodejnega omogočanja omejevanja hitrosti in zaščita povezav (`rateLimitProtection`)
 
 **Varnostna mreža samodejnega omogočanja** (`resilienceSettings.requestQueue.autoEnableApiKeyProviders`, privzeto `true`):
-OmniRoute privzeto samodejno omogoči zaščito vrste omejevanja hitrosti za vse aktivne povezave ponudnikov z API-ključi (`getProviderCategory(provider) === "apikey"`). To zagotavlja, da se dohodne zahteve do na hitrost občutljivih API-ključev virov uvrščajo v vrsto in dušijo prek Bottleneck, namesto da bi izbruhnile v napake 429 pri virih. Varnostno mrežo je mogoče preglasiti z okoljsko spremenljivko `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` onemogoči, `true`/`1`/`on` vsili vklop), ki ima prednost pred shranjeno nastavitvijo nadzorne plošče (**Nastavitve → Odpornost** / `PATCH /api/resilience`).
+67router privzeto samodejno omogoči zaščito vrste omejevanja hitrosti za vse aktivne povezave ponudnikov z API-ključi (`getProviderCategory(provider) === "apikey"`). To zagotavlja, da se dohodne zahteve do na hitrost občutljivih API-ključev virov uvrščajo v vrsto in dušijo prek Bottleneck, namesto da bi izbruhnile v napake 429 pri virih. Varnostno mrežo je mogoče preglasiti z okoljsko spremenljivko `RATE_LIMIT_AUTO_ENABLE` (`false`/`0`/`off` onemogoči, `true`/`1`/`on` vsili vklop), ki ima prednost pred shranjeno nastavitvijo nadzorne plošče (**Nastavitve → Odpornost** / `PATCH /api/resilience`).
 
 **Semantika `rateLimitProtection` za posamezno povezavo:**
 Zaščita omejevanja hitrosti za posamezno povezavo se spremlja prek logičnega polja `rateLimitProtection` na povezavah ponudnikov (shranjenega kot `rate_limit_protection` v SQLite):
@@ -869,7 +869,7 @@ segmentirana po IP-ju, enak signal kot izčrpana kvota. Poštene omejitve:
 > za agente ostane znotraj proračuna konteksta 40k. To je zgoščen pogled zgornjih razdelkov,
 > namenjen agentom; oštevilčeni razdelki ostajajo popolna referenca.
 
-OmniRoute ima tri povezane, a ločene mehanizme za obravnavo začasnih napak. Pri
+67router ima tri povezane, a ločene mehanizme za obravnavo začasnih napak. Pri
 razhroščevanju obnašanja usmerjanja ohranjajte njihova področja ločena. Za pregled na
 prvi pogled glejte
 [diagram 3-slojne odpornosti](../diagrams/exported/resilience-3layers.svg)

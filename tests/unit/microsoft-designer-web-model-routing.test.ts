@@ -13,7 +13,6 @@ const providersDb = await import("../../src/lib/db/providers.ts");
 const settingsDb = await import("../../src/lib/db/settings.ts");
 const { getModelInfo } = await import("../../src/sse/services/model.ts");
 const { resolveModelOrError } = await import("../../src/sse/handlers/chatHelpers.ts");
-const { resolveImageRouteModel } = await import("../../src/lib/images/imageRouteModel.ts");
 const { RESERVED_PROVIDER_PREFIXES, isReservedProviderPrefix } =
   await import("../../src/shared/constants/reservedProviderPrefixes.ts");
 const { createProviderNodeSchema, updateProviderNodeSchema } =
@@ -41,7 +40,7 @@ async function createCompatibleNode(id: string, prefix: string): Promise<void> {
 function assertRetiredError(error: unknown): boolean {
   assert.ok(error instanceof Error);
   assert.equal((error as Error & { status?: number }).status, 410);
-  assert.equal(error.message, "Provider has been retired from OmniRoute runtime.");
+  assert.equal(error.message, "Provider has been retired from 67router runtime.");
   return true;
 }
 
@@ -105,7 +104,7 @@ test("compatible-node remapping cannot erase a retired Designer prefix", async (
   assert.equal(resolved.error.status, 410);
   assert.deepEqual(await resolved.error.json(), {
     error: {
-      message: "Provider has been retired from OmniRoute runtime.",
+      message: "Provider has been retired from 67router runtime.",
       type: "invalid_request_error",
       code: "model_shutdown",
     },
@@ -116,18 +115,4 @@ test("stripModelPrefix cannot erase the retired Designer alias", async () => {
   await settingsDb.updateSettings({ stripModelPrefix: true });
 
   await assert.rejects(() => getModelInfo("  MSDESIGNER  /gpt-4o"), assertRetiredError);
-});
-
-test("image prefix resolution refuses retired nodes but preserves a similar control", async () => {
-  await createCompatibleNode("openai-compatible-images-designer-retired", "msdesigner");
-  await createCompatibleNode(
-    "openai-compatible-images-designer-preview",
-    "microsoft-designer-web-preview"
-  );
-
-  await assert.rejects(() => resolveImageRouteModel("msdesigner/dall-e-3"), assertRetiredError);
-  assert.equal(
-    await resolveImageRouteModel("microsoft-designer-web-preview/control-image"),
-    "openai-compatible-images-designer-preview/control-image"
-  );
 });

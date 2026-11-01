@@ -148,7 +148,7 @@ Playwrightist sõltuvad testjuhud failis `tests/unit/claude-web-auto-refresh.tes
 
 ### Seadistamine
 
-1. Käivitage OmniRoute käsuga `npm run dev` või kompileeritud paigaldusest.
+1. Käivitage 67router käsuga `npm run dev` või kompileeritud paigaldusest.
 2. Avage Dashboard → Providers → Add Provider.
 3. Valige kategooria Web Cookie ja Claude Web.
 4. Kleepige autenditud `claude.ai` päringust kopeeritud täielik Cookie-päis.

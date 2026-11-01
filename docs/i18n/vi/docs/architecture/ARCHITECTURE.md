@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Tiếng Việt)
+# 67router Architecture (Tiếng Việt)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇵🇹 [pt](../../../pt/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Cập nhật lần cuối: 2026-06-28_
 
 ## Tóm tắt điều hành
 
-OmniRoute là một cổng định tuyến AI cục bộ và bảng điều khiển được xây dựng trên Next.js.
+67router là một cổng định tuyến AI cục bộ và bảng điều khiển được xây dựng trên Next.js.
 Nó cung cấp một endpoint duy nhất tương thích với OpenAI (`/v1/*`) và định tuyến lưu lượng qua nhiều nhà cung cấp thượng nguồn, đồng thời hỗ trợ chuyển đổi, dự phòng, làm mới token và theo dõi mức sử dụng.
 
 Các khả năng cốt lõi:
@@ -128,13 +128,11 @@ Các trang chính trong `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — kiểm soát hạn ngạch/tần suất
 - `/dashboard/cli-tools` — hướng dẫn thiết lập CLI ban đầu, phát hiện môi trường chạy, tạo cấu hình
 - `/dashboard/agents` — các tác nhân ACP được phát hiện + đăng ký tác nhân tùy chỉnh
-- `/dashboard/cloud-agents` — tác vụ của tác nhân được lưu trữ trên đám mây (Codex Cloud, Devin, Jules) và vòng đời tác vụ
 - `/dashboard/skills` — sổ đăng ký kỹ năng A2A, thực thi trong sandbox, danh mục kỹ năng tích hợp sẵn
 - `/dashboard/memory` — kiểm tra và truy xuất bộ nhớ hội thoại bền vững
 - `/dashboard/webhooks` — đăng ký webhook gửi đi, luân chuyển bí mật, số liệu thống kê thử lại
 - `/dashboard/batch` — gửi công việc hàng loạt và theo dõi tiến độ
 - `/dashboard/cache` — số liệu thống kê về bộ nhớ đệm đọc xuyên qua và suy luận, các tùy chọn kiểm soát loại bỏ
-- `/dashboard/playground` — môi trường thử nghiệm trò chuyện tương tác với bất kỳ combo/mô hình nào đã được cấu hình
 - `/dashboard/changelog` — trình xem nhật ký thay đổi trong ứng dụng (hiển thị `CHANGELOG.md`)
 - `/dashboard/system` — chẩn đoán môi trường chạy, thông tin phiên bản, giao diện xác thực môi trường
 - `/dashboard/onboarding` — trình hướng dẫn thiết lập lần đầu cho các bản cài đặt mới
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Bảng điều khiển trên trình duyệt]
     end
 
-    subgraph Router[Tiến trình cục bộ OmniRoute]
+    subgraph Router[Tiến trình cục bộ 67router]
         API[API tương thích V1\n/v1/*]
         DASH[Bảng điều khiển + API quản lý\n/api/*]
         CORE[Lõi SSE + chuyển đổi\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Các miền quản lý:
 - Ngân sách: `src/app/api/usage/budget` (GET/POST)
 - Chuỗi dự phòng: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Kiểm toán tuân thủ: `src/app/api/compliance/audit-log` (GET, có phân trang + siêu dữ liệu có cấu trúc)
-- Đánh giá: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Chính sách: `src/app/api/policies` (GET/POST)
 - Token đồng bộ: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Gói cấu hình: `src/app/api/sync/bundle` (GET, ảnh chụp nhanh cài đặt/nhà cung cấp/tổ hợp/khóa được quản lý phiên bản bằng ETag)
@@ -316,7 +313,6 @@ Các mô-đun tầng miền:
 - Thời gian chờ truy xuất: `src/shared/utils/fetchTimeout.ts`
 - Dữ liệu đo từ xa của yêu cầu: `src/shared/utils/requestTelemetry.ts`
 - Tuân thủ/kiểm toán: `src/lib/compliance/index.ts`
-- Trình chạy đánh giá: `src/lib/evals/evalRunner.ts`
 - Lưu trữ trạng thái miền: `src/lib/db/domainState.ts` — CRUD SQLite cho các chuỗi dự phòng, ngân sách, lịch sử chi phí, trạng thái khóa và bộ ngắt mạch
 
 Các mô-đun nhà cung cấp OAuth (27 tệp riêng lẻ trong `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ Các mô-đun nhà cung cấp OAuth (27 tệp riêng lẻ trong `src/lib/oauth/p
 
 ## 5) Dịch vụ nhúng (v3.8.4)
 
-OmniRoute có thể cài đặt, giám sát và định tuyến đến các tiến trình công cụ AI chạy cục bộ
+67router có thể cài đặt, giám sát và định tuyến đến các tiến trình công cụ AI chạy cục bộ
 được gọi là **dịch vụ nhúng**. Có năm dịch vụ được cung cấp: 9Router, CLIProxyAPI, Bifrost, Mux và Dario.
 
 Các lớp kiến trúc:
@@ -386,23 +382,6 @@ Các khả năng chính:
 Để biết đầy đủ chi tiết về thuật toán (công thức của các yếu tố, tinh chỉnh trọng số), hãy xem
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Cloud Agents
-
-Cloud Agents bao bọc các nền tảng tác nhân mã được lưu trữ bởi bên thứ ba (Codex Cloud, Devin,
-Jules) sau một vòng đời tác vụ thống nhất được hỗ trợ bởi cơ sở dữ liệu. Tất cả endpoint tạo/kiểm tra
-tác vụ đều yêu cầu xác thực quản trị.
-
-- Thư mục gốc của mô-đun: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, cùng các thư mục con cho từng tác nhân trong `agents/`)
-- Phần triển khai cho từng tác nhân: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Các endpoint công khai: `/api/v1/agents/tasks/*` (liệt kê/tạo/lấy/hủy)
-- Các endpoint quản trị: `/api/cloud/*` (cấp phát, trạng thái, xử lý hàng loạt)
-- Bảng điều khiển: `/dashboard/cloud-agents`
-- Lưu trữ: bảng `cloud_agent_tasks`
-
-Để biết chi tiết về cấp phát và OAuth cho từng tác nhân, hãy xem
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Các rào chắn
 
 Mô-đun rào chắn là một lớp middleware có thể tải lại nóng, dùng để kiểm tra yêu cầu
@@ -438,7 +417,7 @@ phải tự lắp ghép logic khóa, ngân sách và dự phòng.
 - Bộ nhớ đệm hạn ngạch: `src/domain/quotaCache.ts`
 - Trạng thái suy giảm: `src/domain/degradation.ts`
 - Kiểm tra cấu hình: `src/domain/configAudit.ts`
-- Trình tạo siêu dữ liệu phản hồi OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Trình tạo siêu dữ liệu phản hồi 67router: `src/domain/omnirouteResponseMeta.ts`
 - Phân hệ đánh giá: `src/domain/assessment/` — các tác vụ đánh giá định kỳ
 
 ### E. Pipeline phân quyền
@@ -816,7 +795,7 @@ flowchart LR
         Browser[Trình duyệt Bảng điều khiển]
     end
 
-    subgraph ContainerOrProcess[Thời gian chạy OmniRoute]
+    subgraph ContainerOrProcess[Thời gian chạy 67router]
         Next[Máy chủ Next.js\nPORT=20128]
         Core[Lõi SSE + Bộ thực thi]
         MainDB[(storage.sqlite)]
@@ -935,7 +914,7 @@ Tất cả các trình cung cấp khác (bao gồm cả các nút tương thích
 ## Ma trận tương thích của nhà cung cấp
 
 > **Lưu ý:** Ma trận dưới đây là mẫu đại diện cho 351 nhà cung cấp đã đăng ký trong
-> OmniRoute v3.8.0. Để xem danh sách chuẩn và được cập nhật liên tục, hãy tham khảo
+> 67router v3.8.0. Để xem danh sách chuẩn và được cập nhật liên tục, hãy tham khảo
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (được tạo tự động) hoặc nguồn
 > chính xác tại `src/shared/constants/providers.ts` (được Zod xác thực khi tải).
 
@@ -1117,7 +1096,7 @@ Chức năng ghi lại dữ liệu tải chi tiết của yêu cầu lưu tối 
 - yêu cầu thô nhận được từ máy khách
 - yêu cầu đã chuyển đổi thực sự được gửi lên thượng nguồn
 - phản hồi của nhà cung cấp được tái tạo dưới dạng JSON; các phản hồi dạng luồng được rút gọn thành bản tóm tắt cuối cùng cùng siêu dữ liệu luồng
-- phản hồi cuối cùng từ OmniRoute được trả về cho máy khách; các phản hồi dạng luồng được lưu dưới cùng dạng tóm tắt rút gọn
+- phản hồi cuối cùng từ 67router được trả về cho máy khách; các phản hồi dạng luồng được lưu dưới cùng dạng tóm tắt rút gọn
 
 ## Các Ranh giới Nhạy cảm về Bảo mật
 

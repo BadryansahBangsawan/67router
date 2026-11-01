@@ -6,7 +6,7 @@ lastUpdated: 2026-07-17
 
 # Diagrams
 
-Mermaid sources (`.mmd`) and exported SVGs for OmniRoute v3.8.0 architecture flows.
+Mermaid sources (`.mmd`) and exported SVGs for 67router v3.8.0 architecture flows.
 
 ## Canonical diagrams
 
@@ -17,7 +17,6 @@ Mermaid sources (`.mmd`) and exported SVGs for OmniRoute v3.8.0 architecture flo
 | [resilience-3layers.mmd](./resilience-3layers.mmd) | [SVG](./exported/resilience-3layers.svg) | docs/architecture/RESILIENCE_GUIDE.md, CLAUDE.md                               |
 | [i18n-flow.mmd](./i18n-flow.mmd)                   | [SVG](./exported/i18n-flow.svg)          | docs/guides/I18N.md                                                            |
 | [mcp-tools.mmd](./mcp-tools.mmd)                   | [SVG](./exported/mcp-tools.svg)          | docs/frameworks/MCP-SERVER.md                                                  |
-| [cloud-agent-flow.mmd](./cloud-agent-flow.mmd)     | [SVG](./exported/cloud-agent-flow.svg)   | docs/frameworks/CLOUD_AGENT.md                                                 |
 | [authz-pipeline.mmd](./authz-pipeline.mmd)         | [SVG](./exported/authz-pipeline.svg)     | docs/architecture/AUTHZ_GUIDE.md                                               |
 | [db-schema-overview.mmd](./db-schema-overview.mmd) | [SVG](./exported/db-schema-overview.svg) | docs/architecture/CODEBASE_DOCUMENTATION.md                                    |
 
@@ -37,7 +36,7 @@ inside GitHub's `<img>` sandbox:
 | [free-tier-budget.svg](./free-tier-budget.svg)         | README.md (root) | Animated free-tier budget card (~1.62B/mo quantified headline, 17-pool + Groq-caps budget bar, per-pool grid, signup credits, 10s loop). Edit the SVG directly — there is no `.mmd` source.                               |
 | [readme-hero.svg](./readme-hero.svg)                   | README.md (root) | Animated hero card (tagline, live provider/free-access headline, full-width compression bar demo, 6 stat chips). Edit the SVG directly — there is no `.mmd` source.                                                       |
 | [promise-pillars.svg](./promise-pillars.svg)           | README.md (root) | Animated "The Promise" 6-pillar card (12s border-highlight sweep). Edit the SVG directly — there is no `.mmd` source.                                                                                                     |
-| [why-pain-fix.svg](./why-pain-fix.svg)                 | README.md (root) | Animated "Why OmniRoute" 10-row pain-vs-fix ledger (15s green row sweep). Edit the SVG directly — there is no `.mmd` source.                                                                                              |
+| [why-pain-fix.svg](./why-pain-fix.svg)                 | README.md (root) | Animated "Why 67router" 10-row pain-vs-fix ledger (15s green row sweep). Edit the SVG directly — there is no `.mmd` source.                                                                                               |
 | [strategies-grid.svg](./strategies-grid.svg)           | README.md (root) | Animated grid illustrating 18 of the 20 routing strategies; `cache-optimized` and `quota-weighted` remain documented in the adjacent table. Edit the SVG directly — there is no `.mmd` source.                            |
 | [privacy-local.svg](./privacy-local.svg)               | README.md (root) | Animated "Private & Local-First" 11-row guarantee ledger with receipt chips (16s green row sweep). Edit the SVG directly — there is no `.mmd` source.                                                                     |
 | [resilience-layers.svg](./resilience-layers.svg)       | README.md (root) | Animated 3-layer resilience card (breaker states CLOSED→OPEN→HALF-OPEN, key cooldown with ×2 backoff, model lockout — 18s loops). Edit the SVG directly — there is no `.mmd` source.                                      |

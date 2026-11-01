@@ -1,6 +1,6 @@
-# OmniRoute Quota Telemetry
+# 67router Quota Telemetry
 
-OmniRoute separates provider quota telemetry from Ghostlight accounting.
+67router separates provider quota telemetry from Ghostlight accounting.
 
 ## Truthful states
 

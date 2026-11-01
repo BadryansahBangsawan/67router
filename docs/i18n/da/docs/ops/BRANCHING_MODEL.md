@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute bruger en **parallelcyklusbaseret** udgivelsesmodel: en dedikeret `release/vX.Y.Z`-gren
+67router bruger en **parallelcyklusbaseret** udgivelsesmodel: en dedikeret `release/vX.Y.Z`-gren
 til den aktive cyklus, `main` til den udgivne linje og et uforanderligt
 `vX.Y.Z`-tag, når cyklussen udgives. Det er forventeligt, at commits lander både på `release/*` _og_ på
 `main` — det er ikke en fejl.

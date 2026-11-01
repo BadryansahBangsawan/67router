@@ -15,9 +15,9 @@ ADR này xác định rõ mối quan hệ giữa `ts` (gốc), `bifrost`, `clipr
 Vai trò của một engine được mô tả bằng **hai trục độc lập**, được mã hóa cùng nhau trong `RouterBackendDefinition` của registry:
 
 1. **Vòng đời** (`RouterBackendLifecycle`) — _engine chạy như thế nào_:
-   - `in-process` — chạy bên trong tiến trình Node của OmniRoute (pipeline TS gốc).
-   - `supervised` — một tiến trình con cục bộ mà OmniRoute cài đặt/khởi động/dừng/kiểm tra tình trạng thông qua `ServiceSupervisor`, sau đó sử dụng dưới dạng một kết nối nhà cung cấp.
-   - `external` — một endpoint HTTP mà OmniRoute gửi yêu cầu tới nhưng **không** quản lý (được cấu hình bằng URL cơ sở qua biến môi trường).
+   - `in-process` — chạy bên trong tiến trình Node của 67router (pipeline TS gốc).
+   - `supervised` — một tiến trình con cục bộ mà 67router cài đặt/khởi động/dừng/kiểm tra tình trạng thông qua `ServiceSupervisor`, sau đó sử dụng dưới dạng một kết nối nhà cung cấp.
+   - `external` — một endpoint HTTP mà 67router gửi yêu cầu tới nhưng **không** quản lý (được cấu hình bằng URL cơ sở qua biến môi trường).
    - `disabled` — đã đăng ký nhưng không thể được chọn.
 2. **Trục lựa chọn** (backend định tuyến relay) — _relay có gửi yêu cầu tới đó hay không_:
    `RelayRoutingBackend = "ts" | "bifrost" | "auto"` trong

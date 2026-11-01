@@ -41,7 +41,6 @@ const PATH_LABELS = {
   console: "console",
   logger: "logger",
   translator: "translator",
-  playground: "playground",
   add: "add",
   edit: "edit",
   keys: "apiKeys",
@@ -58,25 +57,19 @@ const PATH_LABELS = {
   costs: "costs",
   health: "health",
   runtime: "runtime",
-  webhooks: "webhooks",
   home: "home",
   activity: "activity",
   "agent-skills": "agentSkills",
   "combo-health": "comboHealth",
-  evals: "evals",
   search: "search",
   utilization: "utilization",
   "api-endpoints": "apiEndpoints",
   audit: "audit",
-  a2a: "a2a",
   mcp: "mcp",
-  batch: "batch",
-  files: "files",
   media: "media",
   cache: "cache",
   changelog: "changelog",
   chaos: "chaos",
-  "cloud-agents": "cloudAgents",
   live: "live",
   studio: "studio",
   aggressive: "aggressive",
@@ -89,9 +82,7 @@ const PATH_LABELS = {
   rtk: "rtk",
   "session-dedup": "sessionDedup",
   ultra: "ultra",
-  budget: "budget",
   pricing: "pricing",
-  "quota-share": "quotaShare",
   discovery: "discovery",
   "free-provider-rankings": "freeProviderRankings",
   radar: "radar",
@@ -101,11 +92,9 @@ const PATH_LABELS = {
   leaderboard: "leaderboard",
   limits: "limits",
   profile: "profile",
-  plugins: "plugins",
   "provider-stats": "providerStats",
   new: "new",
   quota: "quota",
-  relay: "relay",
   "search-tools": "searchTools",
   security: "security",
   sidebar: "sidebar",
@@ -133,6 +122,9 @@ export default function Breadcrumbs() {
   if (!pathname || pathname === "/dashboard") return null;
 
   const segments = pathname.split("/").filter(Boolean);
+  // The 60 px topbar (Header) already shows "section / page" for top-level pages, so the
+  // in-content trail only appears on deeper paths, where it adds the parent links.
+  if (segments.length <= 2) return null;
   const crumbs = segments.map((seg, idx) => ({
     label: getLabel(seg, t),
     href: "/" + segments.slice(0, idx + 1).join("/"),
@@ -140,7 +132,7 @@ export default function Breadcrumbs() {
   }));
 
   return (
-    <Breadcrumb aria-label={t("ariaLabel")} className="mb-2 py-2">
+    <Breadcrumb aria-label={t("ariaLabel")} className="mb-4 text-[13px]">
       <BreadcrumbList>
         {crumbs.map((crumb, i) => (
           <Fragment key={crumb.href}>

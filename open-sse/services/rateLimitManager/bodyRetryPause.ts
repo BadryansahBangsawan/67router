@@ -126,7 +126,7 @@ export function checkLimiterPause(
   return markLocalRateLimitError(
     new Error(
       `Request not queued: the local rate-limit pause for ${identity} lasts ${until - now}ms more, ` +
-        `past the ${budgetMs}ms left in its queue budget — this is OmniRoute's request queue ` +
+        `past the ${budgetMs}ms left in its queue budget — this is 67router's request queue ` +
         `honouring an upstream retry-after, not a new upstream rejection.`
     ),
     LEGACY_RATE_LIMIT_QUEUE_TIMEOUT_CODE

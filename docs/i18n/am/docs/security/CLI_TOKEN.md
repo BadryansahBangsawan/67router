@@ -6,7 +6,7 @@
 
 ## አጠቃላይ እይታ
 
-የOmniRoute CLI ትዕዛዞች በ`x-omniroute-cli-token` የጥያቄ ራስጌ በኩል የሚላክን
+የ67router CLI ትዕዛዞች በ`x-omniroute-cli-token` የጥያቄ ራስጌ በኩል የሚላክን
 `HMAC-SHA256(machine-id, salt)` ቶከን በመጠቀም ከአካባቢያዊው የአስተዳደር API ጋር
 ማንነታቸውን ያረጋግጣሉ።
 

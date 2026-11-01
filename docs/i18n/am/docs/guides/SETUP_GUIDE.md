@@ -1,10 +1,10 @@
-# 📖 Setup Guide — OmniRoute (አማርኛ)
+# 📖 Setup Guide — 67router (አማርኛ)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/SETUP_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/SETUP_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/SETUP_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/SETUP_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/SETUP_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/SETUP_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/SETUP_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/SETUP_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/SETUP_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/SETUP_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/SETUP_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/SETUP_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/SETUP_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/SETUP_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/SETUP_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/SETUP_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/SETUP_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/SETUP_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/SETUP_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/SETUP_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/SETUP_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/SETUP_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/SETUP_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/SETUP_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/SETUP_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/SETUP_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/SETUP_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/SETUP_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/SETUP_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/SETUP_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/SETUP_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/SETUP_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/SETUP_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/SETUP_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/SETUP_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/SETUP_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/SETUP_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/SETUP_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/SETUP_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/SETUP_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/SETUP_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/SETUP_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/SETUP_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/SETUP_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/SETUP_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/SETUP_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/SETUP_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/SETUP_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/SETUP_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/SETUP_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/SETUP_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/SETUP_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/SETUP_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/SETUP_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/SETUP_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/SETUP_GUIDE.md)
 
 ---
 
-> የOmniRoute ሙሉ የማዋቀሪያ ማጣቀሻ። ለአጭር ስሪቱ፣ [README ውስጥ ያለውን ፈጣን ጅምር](../README.md#-quick-start) ይመልከቱ።
+> የ67router ሙሉ የማዋቀሪያ ማጣቀሻ። ለአጭር ስሪቱ፣ [README ውስጥ ያለውን ፈጣን ጅምር](../README.md#-quick-start) ይመልከቱ።
 
 ## ማውጫ
 
@@ -45,7 +45,7 @@ yay -S omniroute-bin
 systemctl --user enable --now omniroute.service
 ```
 
-የ[AUR ጥቅል](https://aur.archlinux.org/packages/omniroute-bin) OmniRouteን ይጭናል፣ እንዲሁም የsystemd ተጠቃሚ አገልግሎትን ያቀርባል።
+የ[AUR ጥቅል](https://aur.archlinux.org/packages/omniroute-bin) 67routerን ይጭናል፣ እንዲሁም የsystemd ተጠቃሚ አገልግሎትን ያቀርባል።
 
 ### ከምንጭ ኮድ
 
@@ -54,7 +54,7 @@ npm install
 PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm run dev
 ```
 
-> **የWindows ማስታወሻ፦** በነባሪነት፣ የቀድሞው `%USERPROFILE%\.omniroute` ማውጫ ከሌለ OmniRoute `%APPDATA%\omniroute`ን ይጠቀማል። የተለየ የውሂብ ማውጫ አካባቢ ለመምረጥ `DATA_DIR`ን ያዘጋጁ።
+> **የWindows ማስታወሻ፦** በነባሪነት፣ የቀድሞው `%USERPROFILE%\.omniroute` ማውጫ ከሌለ 67router `%APPDATA%\omniroute`ን ይጠቀማል። የተለየ የውሂብ ማውጫ አካባቢ ለመምረጥ `DATA_DIR`ን ያዘጋጁ።
 
 > **ማስታወሻ፦** `npm install` በመጀመሪያው ማስኬድ `.env`ን ከ`.env.example` በራስ-ሰር ያመነጫል። ተከታይ ጭነቶች ነባር `.env`ን አይተኩም፤ ስለዚህ ብጁ ለውጦች ይጠበቃሉ። እንደገና ለማመንጨት፣ ዳግም ከማስኬድዎ በፊት `.env`ን ይሰርዙ።
 
@@ -64,7 +64,7 @@ PORT=20128 DASHBOARD_PORT=20129 NEXT_PUBLIC_BASE_URL=http://localhost:20129 npm 
 
 ### የዴስክቶፕ መተግበሪያ (Electron)
 
-OmniRoute በElectron 41 + electron-builder 26.10 ላይ የተገነባ የዴስክቶፕ መጠቅለያ ይዞ ይመጣል። የሚገኙ ስክሪፕቶች (የworkspace ሥር)፦
+67router በElectron 41 + electron-builder 26.10 ላይ የተገነባ የዴስክቶፕ መጠቅለያ ይዞ ይመጣል። የሚገኙ ስክሪፕቶች (የworkspace ሥር)፦
 
 ```bash
 npm run electron:dev          # ዴስክቶፕን በቀጥታ ዳግም መጫን ያስኪዱ
@@ -86,7 +86,7 @@ omniroute setup --non-interactive
 omniroute providers test-batch
 ```
 
-ከenv ተለዋዋጮች (`INITIAL_PASSWORD`፣ `OMNIROUTE_WS_BRIDGE_SECRET`፣ ወዘተ) ጋር ሲጣመር፣ ሙሉ በሙሉ በስክሪፕት ሊቆጣጠር የሚችል የOmniRoute ኢንስታንስ እንዲያስነሱ ያስችልዎታል።
+ከenv ተለዋዋጮች (`INITIAL_PASSWORD`፣ `OMNIROUTE_WS_BRIDGE_SECRET`፣ ወዘተ) ጋር ሲጣመር፣ ሙሉ በሙሉ በስክሪፕት ሊቆጣጠር የሚችል የ67router ኢንስታንስ እንዲያስነሱ ያስችልዎታል።
 
 ### የCLI አማራጮች
 
@@ -99,7 +99,7 @@ omniroute providers test-batch
 | `omniroute config`      | የCLI መሣሪያ ውቅር — ውቅሮችን ይዘርዝሩ፣ ያግኙ፣ ያዘጋጁ፣ ያረጋግጡ            |
 | `omniroute status`      | ከመስመር ውጭ የሁኔታ ዳሽቦርድ — ስሪት፣ DB፣ መሣሪያዎች፣ ውቅር               |
 | `omniroute logs`        | የአጠቃቀም ምዝግቦችን ከAPI በቀጥታ ይልቀቁ (`--follow`ን ይደግፋል)         |
-| `omniroute update`      | የOmniRoute ዝማኔዎችን ይፈትሹ ወይም ይተግብሩ                         |
+| `omniroute update`      | የ67router ዝማኔዎችን ይፈትሹ ወይም ይተግብሩ                          |
 | `omniroute provider`    | የአቅራቢ ግንኙነቶችን ያስተዳድሩ — ያክሉ፣ ይዘርዝሩ፣ ያስወግዱ፣ ይፈትሹ፣ ነባሪ ያድርጉ |
 | `omniroute --port 3000` | ዋናውን/API ፖርት ወደ 3000 ያዘጋጁ                                |
 | `omniroute --mcp`       | የMCP አገልጋይን ያስጀምሩ (stdio ማጓጓዣ)                           |
@@ -165,7 +165,7 @@ API ቁልፍ:     [ከEndpoint ገጽ ይቅዱ]
 
 #### `setup-*`ን በመጠቀም በራስ-ሰር ያዋቅሩ
 
-መሠረታዊ URLን እና ቁልፉን በእጅ ከመለጠፍ ይልቅ፣ OmniRoute ከቀጥታ የሞዴል ካታሎጉ በመነሳት የእያንዳንዱን መሣሪያ የራሱን ውቅር እንዲጽፍ ያድርጉ። ለእያንዳንዱ መሣሪያ አንድ ትዕዛዝ፦
+መሠረታዊ URLን እና ቁልፉን በእጅ ከመለጠፍ ይልቅ፣ 67router ከቀጥታ የሞዴል ካታሎጉ በመነሳት የእያንዳንዱን መሣሪያ የራሱን ውቅር እንዲጽፍ ያድርጉ። ለእያንዳንዱ መሣሪያ አንድ ትዕዛዝ፦
 
 ```bash
 omniroute setup-codex        # ~/.codex/<name>.config.toml መገለጫዎች
@@ -183,7 +183,7 @@ omniroute setup-aider        # ~/.aider.conf.yml
 omniroute setup-qwen         # ~/.qwen/settings.json + ~/.qwen/.env
 ```
 
-እያንዳንዱ፣ አካባቢያዊ መሣሪያን ከ**ርቀት** OmniRoute ጋር ለማዋቀር `--remote <url> --api-key <key>`ን፣ እንዲሁም ቅድመ ዕይታ ለማግኘት `--dry-run`ን ይቀበላል። ትክክለኛው env ተጨምሮለት እና ምንም ውቅር ሳይጻፍ CLIን ለማስጀመር፣ አጠቃላዩን ማስጀመሪያ `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini) ይጠቀሙ፤ የቀድሞዎቹ ለእያንዳንዱ መሣሪያ የተለዩ ማስጀመሪያዎች `omniroute launch` (Claude Code) እና `omniroute launch-codex` (Codex) አሁንም ይገኛሉ።
+እያንዳንዱ፣ አካባቢያዊ መሣሪያን ከ**ርቀት** 67router ጋር ለማዋቀር `--remote <url> --api-key <key>`ን፣ እንዲሁም ቅድመ ዕይታ ለማግኘት `--dry-run`ን ይቀበላል። ትክክለኛው env ተጨምሮለት እና ምንም ውቅር ሳይጻፍ CLIን ለማስጀመር፣ አጠቃላዩን ማስጀመሪያ `omniroute run <target>` (claude, codex, aider, goose, opencode, qwen, gemini) ይጠቀሙ፤ የቀድሞዎቹ ለእያንዳንዱ መሣሪያ የተለዩ ማስጀመሪያዎች `omniroute launch` (Claude Code) እና `omniroute launch-codex` (Codex) አሁንም ይገኛሉ።
 
 ሙሉውን ሰንጠረዥ (እያንዳንዱ ትዕዛዝ ምን እንደሚጽፍ፣ ሁሉንም ፍላጎች፣ አካባቢያዊ እና የርቀት ልዩነቶችን፣ የመሠረታዊ-URL `/v1` ስምምነቶችን) ለማየት **[የCLI ውህደቶች](./CLI-INTEGRATIONS.md)**ን ይመልከቱ።
 
@@ -241,26 +241,6 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 **ሙሉ የMCP ሰነድ፦** [የMCP አገልጋይ README](../../open-sse/mcp-server/README.md) — 110 መሣሪያዎች፣ የIDE ውቅሮች፣ Python/TS/Go ደንበኞች።
 
-### A2A ማዋቀር (ከወኪል-ወደ-ወኪል ፕሮቶኮል)
-
-Agent Cardን ያረጋግጡ፦
-
-```bash
-curl http://localhost:20128/.well-known/agent.json
-```
-
-ተግባር ይላኩ፦
-
-```bash
-curl -X POST http://localhost:20128/a2a \
-  -H 'content-type: application/json' \
-  -d '{"jsonrpc":"2.0","id":"quickstart","method":"message/send","params":{"skill":"quota-management","messages":[{"role":"user","content":"Give me a short quota summary."}]}}'
-```
-
-**ሙሉ የA2A ሰነድ፦** [የA2A አገልጋይ README](../../src/lib/a2a/README.md) — JSON-RPC 2.0፣ ክህሎቶች፣ streaming፣ የተግባር የሕይወት ዑደት።
-
----
-
 ## የጊዜ ገደብ ውቅር
 
 ### መሠረታዊ የጊዜ ገደቦች
@@ -270,15 +250,15 @@ curl -X POST http://localhost:20128/a2a \
 | ተለዋዋጭ                    | ነባሪ                         | ዓላማ                                                                                                                  |
 | ------------------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `REQUEST_TIMEOUT_MS`     | `600000`                    | የላይኛው አገልግሎት ምላሽ-መጀመሪያ ጊዜ ገደብ፣ የተደበቁ Undici ጊዜ ገደቦች፣ TLS fingerprint ጥያቄዎች እና API bridge ጥያቄ/ፕሮክሲ ጊዜ ገደቦች የጋራ መነሻ ዋጋ |
-| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS`ን ይወርሳል | OmniRoute የSSE ዥረቱን ከማቋረጡ በፊት በዥረት ቁርጥራጮች መካከል የሚፈቀደው ከፍተኛው ክፍተት                                                     |
+| `STREAM_IDLE_TIMEOUT_MS` | `REQUEST_TIMEOUT_MS`ን ይወርሳል | 67router የSSE ዥረቱን ከማቋረጡ በፊት በዥረት ቁርጥራጮች መካከል የሚፈቀደው ከፍተኛው ክፍተት                                                      |
 
 ከቀድሞ ስሪቶች ጋር ተኳሃኝነት ተጠብቋል፦ ነባር `FETCH_TIMEOUT_MS`፣ `API_BRIDGE_PROXY_TIMEOUT_MS` እና ሌሎች የየደረጃው የጊዜ ገደብ ተለዋዋጮች አሁንም ይሠራሉ፣ እንዲሁም የጋራውን መነሻ ዋጋ ይተካሉ።
 
 ### ለአቅራቢዎች የተለዩ ማስታወሻዎች
 
-Claude Code-ተኳሃኝ ለሆኑ የላይኛው አገልግሎቶች (`anthropic-compatible-cc-*`)፣ የአቅራቢው ወገን የንባብ ጊዜ ገደቦች ከenv ውቅርዎ ጋር እንዲጣጣሙ፣ OmniRoute የወጪውን `X-Stainless-Timeout` header ከተወሰነው fetch ጊዜ ገደብ ያመነጫል።
+Claude Code-ተኳሃኝ ለሆኑ የላይኛው አገልግሎቶች (`anthropic-compatible-cc-*`)፣ የአቅራቢው ወገን የንባብ ጊዜ ገደቦች ከenv ውቅርዎ ጋር እንዲጣጣሙ፣ 67router የወጪውን `X-Stainless-Timeout` header ከተወሰነው fetch ጊዜ ገደብ ያመነጫል።
 
-ከሦስተኛ ወገን Claude Code-ተኳሃኝ reverse proxyዎች ጋር፣ OmniRoute ነባሪውን `anthropic-beta` ስብስብ ጥንቃቄ የተሞላበት እንዲሆን ያደርጋል፤ እንዲሁም `Client Cache Control` በ`Auto` ላይ ሲተው፣ ደንበኛው ያቀረባቸውን `cache_control` ምልክቶች ብቻ ወደፊት ያስተላልፋል። የየግንኙነቱን "Enable redact-thinking beta" መቀያየሪያ የላይኛው አገልግሎት የተደበቁ የClaude አስተሳሰብ ዥረቶችን በተለይ ሲፈልግ ብቻ ያንቁ።
+ከሦስተኛ ወገን Claude Code-ተኳሃኝ reverse proxyዎች ጋር፣ 67router ነባሪውን `anthropic-beta` ስብስብ ጥንቃቄ የተሞላበት እንዲሆን ያደርጋል፤ እንዲሁም `Client Cache Control` በ`Auto` ላይ ሲተው፣ ደንበኛው ያቀረባቸውን `cache_control` ምልክቶች ብቻ ወደፊት ያስተላልፋል። የየግንኙነቱን "Enable redact-thinking beta" መቀያየሪያ የላይኛው አገልግሎት የተደበቁ የClaude አስተሳሰብ ዥረቶችን በተለይ ሲፈልግ ብቻ ያንቁ።
 
 ### የላቁ የጊዜ ገደብ መተኪያዎች
 
@@ -296,11 +276,11 @@ Claude Code-ተኳሃኝ ለሆኑ የላይኛው አገልግሎቶች (`anthr
 | `API_BRIDGE_SERVER_KEEPALIVE_TIMEOUT_MS` | `5000`                                     | በAPI bridge server ላይ የkeep-alive ጊዜ ገደብ                            |
 | `API_BRIDGE_SERVER_SOCKET_TIMEOUT_MS`    | `0`                                        | በAPI bridge server ላይ የsocket እንቅስቃሴ-አልባነት ጊዜ ገደብ (`0` ያሰናክለዋል)     |
 
-> **ማስታወሻ፦** ለዥረት ጥያቄዎች፣ `FETCH_TIMEOUT_MS` የግንኙነት ማዋቀርን / የመጀመሪያውን የላይኛው አገልግሎት ምላሽ መጠበቅን ብቻ ይሸፍናል። ዥረቱ ገቢር ከሆነ በኋላ፣ OmniRoute የሚያቋርጠው ትክክለኛ መቆም (`STREAM_IDLE_TIMEOUT_MS`) ወይም የUndici body እንቅስቃሴ-አልባነት (`FETCH_BODY_TIMEOUT_MS`) ሲኖር ብቻ ነው።
+> **ማስታወሻ፦** ለዥረት ጥያቄዎች፣ `FETCH_TIMEOUT_MS` የግንኙነት ማዋቀርን / የመጀመሪያውን የላይኛው አገልግሎት ምላሽ መጠበቅን ብቻ ይሸፍናል። ዥረቱ ገቢር ከሆነ በኋላ፣ 67router የሚያቋርጠው ትክክለኛ መቆም (`STREAM_IDLE_TIMEOUT_MS`) ወይም የUndici body እንቅስቃሴ-አልባነት (`FETCH_BODY_TIMEOUT_MS`) ሲኖር ብቻ ነው።
 
 ### የReverse Proxy ተኳሃኝነት
 
-OmniRouteን ከNginx፣ Caddy፣ Cloudflare ወይም ሌላ reverse proxy ጀርባ የሚያስኬዱ ከሆነ፣ የproxy ጊዜ ገደቦችም ከOmniRoute stream/fetch ጊዜ ገደቦችዎ ከፍ ያሉ መሆናቸውን ያረጋግጡ።
+67routerን ከNginx፣ Caddy፣ Cloudflare ወይም ሌላ reverse proxy ጀርባ የሚያስኬዱ ከሆነ፣ የproxy ጊዜ ገደቦችም ከ67router stream/fetch ጊዜ ገደቦችዎ ከፍ ያሉ መሆናቸውን ያረጋግጡ።
 
 ---
 

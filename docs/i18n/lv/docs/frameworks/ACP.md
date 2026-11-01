@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nodala **CLI noteikšanu**, **vietējo Agent Client Protocol** un
+67router nodala **CLI noteikšanu**, **vietējo Agent Client Protocol** un
 **mantotos stdio adapterus**. Instalēta binārā faila atrašana neapliecina tā
 autentifikāciju, modeļa saderību vai gatavību apstrādāt uzvedni.
 
@@ -127,5 +127,3 @@ tam nepieciešams atsevišķi autorizēts pārbaudes tests mērķa vidē.
 - [Aģentu protokoli](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI palaišanas līgumi](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI rīki](../reference/CLI-TOOLS.md)
-- [A2A serveris](./A2A-SERVER.md)
-- [Mākoņa aģenti](./CLOUD_AGENT.md)

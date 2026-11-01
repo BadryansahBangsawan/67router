@@ -8,8 +8,8 @@
 
 Mevcut çalışma zamanı model seçimi için öncelikli (priority) yönlendirme gibi davranır, ardından üzerine bir devir (handoff) katmanı ekler:
 
-- Aktif hesap tükenmeden önce OmniRoute kompakt ve yapılandırılmış bir özet üretir
-- Kimlik doğrulama aynı oturum için farklı bir hesap seçtikten sonra, OmniRoute bu özeti sonraki isteğe bir sistem mesajı olarak enjekte eder
+- Aktif hesap tükenmeden önce 67router kompakt ve yapılandırılmış bir özet üretir
+- Kimlik doğrulama aynı oturum için farklı bir hesap seçtikten sonra, 67router bu özeti sonraki isteğe bir sistem mesajı olarak enjekte eder
 - Devir başarıyla tüketildiğinde depodan silinir
 
 ## Ne Zaman Kullanılmalı
@@ -32,7 +32,7 @@ Hiçbir devir özeti üretilmez. İstekler normal öncelik yönlendirmesi gibi d
 
 ### %85 ila %94 Kota Kullanımı
 
-Aktif sağlayıcı `handoffProviders` içinde etkinleştirilmişse, OmniRoute hesap tamamen tükenmeden önce arka planda yapılandırılmış bir devir özeti üretir.
+Aktif sağlayıcı `handoffProviders` içinde etkinleştirilmişse, 67router hesap tamamen tükenmeden önce arka planda yapılandırılmış bir devir özeti üretir.
 
 Önemli detaylar:
 
@@ -47,7 +47,7 @@ Yeni bir devir üretilmez. Bu noktada sistem zaten tükenme sınırındadır vey
 
 ### Hesap Rotasyonundan Sonra
 
-Aynı oturum için bir sonraki istek farklı bir kimliği doğrulanmış hesaba çözümlendiğinde, OmniRoute saklanan devir özetini bir sistem mesajı olarak başa ekler. Enjeksiyon yalnızca gerçek hesap değişikliği bilindikten sonra gerçekleşir.
+Aynı oturum için bir sonraki istek farklı bir kimliği doğrulanmış hesaba çözümlendiğinde, 67router saklanan devir özetini bir sistem mesajı olarak başa ekler. Enjeksiyon yalnızca gerçek hesap değişikliği bilindikten sonra gerçekleşir.
 
 ## Devir Yükü (Handoff Payload)
 
@@ -77,7 +77,7 @@ Kalıcı devir yükü `context_handoffs` tablosunda saklanır ve şunları içer
 }
 ```
 
-Enjeksiyon anında OmniRoute bu yükü bir `<context_handoff>` sistem mesajına dönüştürür; böylece sonraki hesap doğru yerel bağlamla devam edebilir.
+Enjeksiyon anında 67router bu yükü bir `<context_handoff>` sistem mesajına dönüştürür; böylece sonraki hesap doğru yerel bağlamla devam edebilir.
 
 ## Yapılandırma
 

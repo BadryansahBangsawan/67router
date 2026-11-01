@@ -7,7 +7,7 @@
 > **အမှန်တရား၏ မူရင်းရင်းမြစ်:** `electron/` workspace
 > **နောက်ဆုံးအပ်ဒိတ်လုပ်ခဲ့သည့်ရက်:** 2026-06-28 — v3.8.40
 
-OmniRoute တွင် **Electron 41** + **electron-builder 26.10** ဖြင့် တည်ဆောက်ထားသည့် ပလက်ဖောင်းစုံ desktop app (Windows / macOS / Linux) ပါဝင်သည်။ Desktop app သည် Next.js standalone server ကို child process အဖြစ် စတင်ပေးပြီး `BrowserWindow` ကို ထို server သို့ ညွှန်ပေးကာ system tray၊ auto-updater၊ IPC bridge နှင့် configuration မလိုအပ်သော secret bootstrap တို့ကို ထည့်သွင်းပေးသည်။
+67router တွင် **Electron 41** + **electron-builder 26.10** ဖြင့် တည်ဆောက်ထားသည့် ပလက်ဖောင်းစုံ desktop app (Windows / macOS / Linux) ပါဝင်သည်။ Desktop app သည် Next.js standalone server ကို child process အဖြစ် စတင်ပေးပြီး `BrowserWindow` ကို ထို server သို့ ညွှန်ပေးကာ system tray၊ auto-updater၊ IPC bridge နှင့် configuration မလိုအပ်သော secret bootstrap တို့ကို ထည့်သွင်းပေးသည်။
 
 ## ဗိသုကာဖွဲ့စည်းပုံ
 
@@ -188,7 +188,7 @@ runtime ချိန်ညှိချက်များအတွက် ([Enviro
 - `BrowserWindow`: 1400×900 (အနည်းဆုံး 1024×700)၊ `backgroundColor: "#0a0a0a"`။
 - macOS: `titleBarStyle: "hiddenInset"`၊ traffic-light ကို `{ x: 16, y: 16 }` တွင်ထားသည်။
 - Windows/Linux: မူရင်း native title bar။
-- ပိတ်ရန် ခလုတ်သည် tray သို့ လျှော့ချပေးသည်။ tray menu တွင် **OmniRoute ကို ဖွင့်ရန်**၊ **Dashboard ကို ဖွင့်ရန်** (ပြင်ပ browser)၊ **Server Port** submenu၊ **အပ်ဒိတ်များကို စစ်ဆေးရန်**၊ **ပိတ်ရန်** တို့ ပါဝင်သည်။
+- ပိတ်ရန် ခလုတ်သည် tray သို့ လျှော့ချပေးသည်။ tray menu တွင် **67router ကို ဖွင့်ရန်**၊ **Dashboard ကို ဖွင့်ရန်** (ပြင်ပ browser)၊ **Server Port** submenu၊ **အပ်ဒိတ်များကို စစ်ဆေးရန်**၊ **ပိတ်ရန်** တို့ ပါဝင်သည်။
 
 ## အကြောင်းအရာ လုံခြုံရေး မူဝါဒ
 

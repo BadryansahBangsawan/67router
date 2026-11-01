@@ -4,7 +4,7 @@
 
 ---
 
-> **Qısa xülasə**: Uyğun provayder hesablarınızı özünüz təmin edin. OmniRoute konfiqurasiya etdiyiniz bağlantıları birləşdirir; elan edilən ümumi token büdcəsini özü təqdim etmir. Pulsuz giriş qeydiyyat, API açarı, təsdiq və ya ödəniş üsulu tələb edə bilər. Provayder limitləri, məxfilik siyasətləri və şərtləri qüvvədə qalır.
+> **Qısa xülasə**: Uyğun provayder hesablarınızı özünüz təmin edin. 67router konfiqurasiya etdiyiniz bağlantıları birləşdirir; elan edilən ümumi token büdcəsini özü təqdim etmir. Pulsuz giriş qeydiyyat, API açarı, təsdiq və ya ödəniş üsulu tələb edə bilər. Provayder limitləri, məxfilik siyasətləri və şərtləri qüvvədə qalır.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Bir çox AI provayderi müəyyən formada **pulsuz giriş** təklif edir. Provayderdən asılı olaraq bu, autentifikasiya tələb etməyən son nöqtə, mütəmadi yenilənən kvota, sürət məhdudiyyətli limitsiz giriş, qeydiyyat bonusu, manual təsdiq və ya müvəqqəti kampaniya ola bilər. Bəzi seçimlər hesab, API açarı, kredit kartı, KYC və ya provayderə xas şərtlərin qəbul edilməsini tələb edir.
 
-OmniRoute konfiqurasiya edilmiş bağlantıları bir son nöqtədə **birləşdirir**. Hesab tələb edən hər bir provayderdə yenə də ayrıca qeydiyyatdan keçməlisiniz. Həmin hesabları qoşun və uyğun hədəflər arasında marşrutlaşdırma aparmaq üçün `model: "auto"` istifadə edin. Yeni quraşdırmada açarsız uyğun hədəf olmaya bilər; təkcə OmniRoute-un quraşdırılması uğurlu çat cavabına zəmanət vermir.
+67router konfiqurasiya edilmiş bağlantıları bir son nöqtədə **birləşdirir**. Hesab tələb edən hər bir provayderdə yenə də ayrıca qeydiyyatdan keçməlisiniz. Həmin hesabları qoşun və uyğun hədəflər arasında marşrutlaşdırma aparmaq üçün `model: "auto"` istifadə edin. Yeni quraşdırmada açarsız uyğun hədəf olmaya bilər; təkcə 67router-un quraşdırılması uğurlu çat cavabına zəmanət vermir.
 
 ---
 
@@ -57,7 +57,7 @@ Bu təminatçıların xüsusi limitləri olan **pulsuz səviyyələri** var:
 
 ## Pulsuz Səviyyələri Necə Birləşdirmək Olar
 
-OmniRoute-un əsas üstünlüyü **pulsuz səviyyələri birləşdirməkdir**. Tək bir provayderə güvənmək əvəzinə, bir neçə pulsuz provayderi qoşur və OmniRoute-a hər sorğu üçün ən uyğun olanı avtomatik seçməyə imkan verirsiniz.
+67router-un əsas üstünlüyü **pulsuz səviyyələri birləşdirməkdir**. Tək bir provayderə güvənmək əvəzinə, bir neçə pulsuz provayderi qoşur və 67router-a hər sorğu üçün ən uyğun olanı avtomatik seçməyə imkan verirsiniz.
 
 ### Nümunə: Daha Geniş Pulsuz Səviyyə Əhatəsi
 
@@ -68,7 +68,7 @@ Hər hansı bir kvotadan asılılığı azaltmaq üçün bir neçə provayder qo
 3. **Pollinations** — açarsız, sorğu tezliyi məhdudlaşdırılmış giriş
 4. **LongCat** — qeydiyyat zamanı birdəfəlik verilən kredit (KYC tələb olunur)
 
-Sonra `model: "auto"` istifadə edin və OmniRoute:
+Sonra `model: "auto"` istifadə edin və 67router:
 
 - Əvvəlcə uyğun olan ən yüksək prioritetli bağlantını sınayacaq
 - Onun kvotası tükənərsə və ya sağlamlıq yoxlaması uğursuz olarsa → növbəti konfiqurasiya edilmiş provayderi sınayacaq
@@ -101,7 +101,7 @@ limitsiz/açarsız girişi, qeydiyyat kreditlərini, dayandırılmış seçimlə
 
 ### Addım 5: Qoşul Düyməsinə Klikləyin
 
-`NOAUTH` provayderi üçün OmniRoute yuxarı səviyyəli giriş məlumatı tələb etmir. Bu, yuxarı səviyyəli xidmətin üçüncü tərəf klientlərini qəbul etdiyinə və ya əlçatan tutuma malik olduğuna zəmanət vermir. OAuth və API açarı tələb edən provayderlər sənədləşdirilmiş hesab proseduru vasitəsilə qoşulmalıdır. Router autentifikasiyası aktiv olduqda, klientiniz yenə də **İdarəetmə Paneli → Son Nöqtələr** bölməsində göstərilən OmniRoute API açarından istifadə edir.
+`NOAUTH` provayderi üçün 67router yuxarı səviyyəli giriş məlumatı tələb etmir. Bu, yuxarı səviyyəli xidmətin üçüncü tərəf klientlərini qəbul etdiyinə və ya əlçatan tutuma malik olduğuna zəmanət vermir. OAuth və API açarı tələb edən provayderlər sənədləşdirilmiş hesab proseduru vasitəsilə qoşulmalıdır. Router autentifikasiyası aktiv olduqda, klientiniz yenə də **İdarəetmə Paneli → Son Nöqtələr** bölməsində göstərilən 67router API açarından istifadə edir.
 
 ### Addım 6: Təkrarlayın
 
@@ -111,7 +111,7 @@ limitsiz/açarsız girişi, qeydiyyat kreditlərini, dayandırılmış seçimlə
 
 ## Kataloqu düzgün oxumaq
 
-- `NOAUTH` o deməkdir ki, OmniRoute sizdən provayder giriş məlumatı tələb etmir; bu,
+- `NOAUTH` o deməkdir ki, 67router sizdən provayder giriş məlumatı tələb etmir; bu,
   fasiləsiz işləməyə, məxfiliyə və ya limitsiz tutuma zəmanət vermir.
 - `hasFree` aşkarlama metadatasıdır. Bu, təkrarlanan kvotanı, açarsız girişi,
   qeydiyyat kreditini, təsdiq proqramını və ya kampaniyanı ifadə edə bilər.
@@ -124,15 +124,15 @@ limitsiz/açarsız girişi, qeydiyyat kreditlərini, dayandırılmış seçimlə
 
 ---
 
-## OmniRoute pulsuz səviyyələri necə yaxşılaşdırır
+## 67router pulsuz səviyyələri necə yaxşılaşdırır
 
 ### 1. Avtomatik ehtiyat keçid
 
-Pulsuz provayderlərdən biri məşğul və ya əlçatmaz olarsa, OmniRoute avtomatik olaraq növbətisini sınayır. Heç nə etməyinizə ehtiyac yoxdur.
+Pulsuz provayderlərdən biri məşğul və ya əlçatmaz olarsa, 67router avtomatik olaraq növbətisini sınayır. Heç nə etməyinizə ehtiyac yoxdur.
 
 ### 2. Ağıllı marşrutlaşdırma
 
-OmniRoute hər sorğu üçün **ən yaxşı pulsuz provayderi** aşağıdakılara əsasən seçir:
+67router hər sorğu üçün **ən yaxşı pulsuz provayderi** aşağıdakılara əsasən seçir:
 
 - Sürət — Hazırda hansı provayder daha sürətlidir?
 - Keyfiyyət — Bu tapşırıq üçün hansı provayder daha uyğundur?
@@ -140,13 +140,13 @@ OmniRoute hər sorğu üçün **ən yaxşı pulsuz provayderi** aşağıdakılar
 
 ### 3. Token qənaəti
 
-OmniRoute-un sıxılma konveyeri uyğun sorğu və alət çıxışı tokenlərinin sayını azalda bilər.
+67router-un sıxılma konveyeri uyğun sorğu və alət çıxışı tokenlərinin sayını azalda bilər.
 Faktiki qənaət məzmundan, seçilmiş mühərriklərdən, provayderin hesablama qaydasından və dəqiqlik
 parametrlərindən asılıdır; sıxılma hər provayderin kvotasını sabit bir əmsalla artırmır.
 
 ### 4. Çoxsaylı hesab dəstəyi
 
-Provayderin şərtləri bir neçə hesaba və ya giriş məlumatına icazə verirsə, OmniRoute hər
+Provayderin şərtləri bir neçə hesaba və ya giriş məlumatına icazə verirsə, 67router hər
 bağlantını ayrıca marşrutlaşdırma namizədi kimi qəbul edə bilər. Provayderin kvota və ya
 giriş siyasətindən yayınmaq üçün əlavə hesablar yaratmayın.
 
@@ -161,7 +161,7 @@ Canlı, hovuzlar üzrə dublikatları aradan qaldırılmış kataloq hazırda a�
 | Təkrarlanan hesablanmış limit  |      **~1.62B token/ay** | Ortaq hovuzlar bir dəfə hesablanıb; limitsiz provayderlər cəmdən çıxarılıb |
 | Qeydiyyat limitləri ilə ilk ay |         **~2.22B token** | Təkrarlanan cəm, üstəgəl birdəfəlik və təkrarlanan kreditlər               |
 
-Bunlar ayrı-ayrı uyğun hesablara əsaslanan, bütün kataloqu əhatə edən təxmini göstəricilərdir; OmniRoute tərəfindən təqdim olunan limit və ya yeni quraşdırma üçün proqnoz deyil. İstifadə edə biləcəyiniz tutum qoşduğunuz provayderlərdən və onların cari şərtlərindən asılıdır. Dəyərlər `open-sse/config/freeModelCatalog.ts` faylından hesablanır; hovuzların dublikatlarının aradan qaldırılması, ToS işarələri,
+Bunlar ayrı-ayrı uyğun hesablara əsaslanan, bütün kataloqu əhatə edən təxmini göstəricilərdir; 67router tərəfindən təqdim olunan limit və ya yeni quraşdırma üçün proqnoz deyil. İstifadə edə biləcəyiniz tutum qoşduğunuz provayderlərdən və onların cari şərtlərindən asılıdır. Dəyərlər `open-sse/config/freeModelCatalog.ts` faylından hesablanır; hovuzların dublikatlarının aradan qaldırılması, ToS işarələri,
 dayandırılmış qeydlər və qeydiyyat krediti metodologiyası üçün
 [Pulsuz Səviyyələr üzrə İstinad](../reference/FREE_TIERS.md) sənədinə baxın.
 
@@ -188,7 +188,7 @@ tələblərinizə cavab verirsə. Kritik iş yükləri monitorinq edilən və m�
 
 Mənfi cəhətlərə sərt limitlər, gözləmə siyahıları, KYC, kredit kartı yoxlaması, sorğular üzərində
 təlim, daha zəif məxfilik, SLA-nın olmaması, modellərin tez-tez dəyişməsi, coğrafi məhdudiyyətlər, limitdən artıq istifadəyə görə ödəniş və ya
-hesab siyasəti riski daxil ola bilər. OmniRoute mövcud metadatanı göstərir; nəyi aktivləşdirəcəyinizi siz seçirsiniz.
+hesab siyasəti riski daxil ola bilər. 67router mövcud metadatanı göstərir; nəyi aktivləşdirəcəyinizi siz seçirsiniz.
 
 ### "Daha çox pulsuz kvotanı necə əldə edə bilərəm?"
 
@@ -207,7 +207,7 @@ Keyfiyyət göstəricisi kimi Pulsuz Provayder Reytinqləri səhifəsindən isti
 
 ## Növbəti addım nədir?
 
-- **[Avtomatik kombinasiya təlimatı](./AUTO-COMBO-GUIDE.md)** — Qoy OmniRoute sizin üçün ən yaxşı süni intellekti seçsin
+- **[Avtomatik kombinasiya təlimatı](./AUTO-COMBO-GUIDE.md)** — Qoy 67router sizin üçün ən yaxşı süni intellekti seçsin
 - **[Provayderlər üzrə təlimat](./PROVIDERS-GUIDE.md)** — Daha çox provayder qoşun
 - **[Nasazlıqların aradan qaldırılması](../guides/TROUBLESHOOTING.md)** — Ümumi problemləri həll edin
 - **[Pulsuz paketlər üzrə arayış](../reference/FREE_TIERS.md)** — Pulsuz paketlərin tam siyahısı

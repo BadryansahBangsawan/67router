@@ -11,11 +11,11 @@
 
 ## Mikä se on
 
-OmniRoute voidaan yhdistää **Notion**-työtilaan **kontekstilähteenä** — luku- ja kirjoitusoikeudellisena
+67router voidaan yhdistää **Notion**-työtilaan **kontekstilähteenä** — luku- ja kirjoitusoikeudellisena
 tietämyskanta, jota agentit käyttävät sisäänrakennetun MCP-palvelimen kautta. Kun Notion-
 integraatiotunnus on määritetty, MCP-työkaluilla LLM voi hakea sivuja ja tietokantoja,
 lukea sivujen sisältöä ja lohkopuita, tehdä tietokantakyselyjä suodattimilla ja lajitteluilla sekä lisätä uusia
-lohkoja — kaikki välitetään OmniRouten kautta (uudelleenyrityksillä, aikakatkaisulla ja virheluokittelulla),
+lohkoja — kaikki välitetään 67routerin kautta (uudelleenyrityksillä, aikakatkaisulla ja virheluokittelulla),
 joten malli ei koskaan käytä Notion APIa suoraan.
 
 Integraatio on ohut ja vahvistettu kääre virallisen Notion REST APIn ympärillä
@@ -40,7 +40,7 @@ SQLiten `key_value`-tauluun (nimiavaruus `notion`, avain `integration_token`) ti
 > [!NOTE]
 > Tunnus on **Notionin sisäinen integraatiotunnus**. Luo integraatio osoitteessa
 > <https://www.notion.com/my-integrations> ja jaa sitten sivut/tietokannat, joihin haluat
-> OmniRouten pääsevän, kyseisen integraation kanssa (Notionin käyttöoikeusmalli perustuu jakamiseen,
+> 67routerin pääsevän, kyseisen integraation kanssa (Notionin käyttöoikeusmalli perustuu jakamiseen,
 > ei koko työtilan kattaviin oikeuksiin).
 
 ### Määritys RESTin kautta
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Kaikki kolme metodia edellyttävät hallintapaneelin todennusta (`isAuthenticated`). `POST`-pyynnön yhteydessä
-OmniRoute tallentaa tunnuksen ja suorittaa välittömästi yhden tuloksen testihaun. Jos Notion
+67router tallentaa tunnuksen ja suorittaa välittömästi yhden tuloksen testihaun. Jos Notion
 palauttaa virheobjektin, tunnus poistetaan ja kutsu epäonnistuu tilakoodilla `400`.
 
 ## MCP-työkalut (6)

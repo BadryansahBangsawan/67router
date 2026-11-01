@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute trennt **CLI-Erkennung**, das **native Agent Client Protocol** und
+67router trennt **CLI-Erkennung**, das **native Agent Client Protocol** und
 **Legacy-stdio-Adapter** voneinander. Das Auffinden einer installierten Binärdatei belegt weder deren
 Authentifizierung noch deren Modellkompatibilität oder Bereitschaft zur Verarbeitung eines Prompts.
 
@@ -119,5 +119,3 @@ in der Zielumgebung erforderlich.
 - [Agentenprotokolle](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-Startverträge](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-Werkzeuge](../reference/CLI-TOOLS.md)
-- [A2A-Server](./A2A-SERVER.md)
-- [Cloud-Agenten](./CLOUD_AGENT.md)

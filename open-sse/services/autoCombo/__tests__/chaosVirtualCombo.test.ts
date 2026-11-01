@@ -14,9 +14,7 @@ import { afterAll, beforeAll, describe, it, expect } from "vitest";
 
 const testDataDir = fs.mkdtempSync(path.join(os.tmpdir(), "omniroute-chaos-virtual-"));
 const originalDataDir = process.env.DATA_DIR;
-const originalPluginsDir = process.env.OMNIROUTE_PLUGINS_DIR;
 process.env.DATA_DIR = testDataDir;
-process.env.OMNIROUTE_PLUGINS_DIR = path.join(testDataDir, "plugins");
 
 const { resetDbInstance } = await import("../../../../src/lib/db/core");
 const { createProviderConnection } = await import("../../../../src/lib/db/providers");
@@ -44,8 +42,6 @@ afterAll(() => {
   fs.rmSync(testDataDir, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
   if (originalDataDir === undefined) delete process.env.DATA_DIR;
   else process.env.DATA_DIR = originalDataDir;
-  if (originalPluginsDir === undefined) delete process.env.OMNIROUTE_PLUGINS_DIR;
-  else process.env.OMNIROUTE_PLUGINS_DIR = originalPluginsDir;
 });
 
 describe("auto/chaos virtual combo", () => {

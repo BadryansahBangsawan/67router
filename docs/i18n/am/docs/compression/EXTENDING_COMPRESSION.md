@@ -4,7 +4,7 @@
 
 ---
 
-> **በአጭሩ**: የOmniRoute የማመቅ ሞተር **ሊሰካ የሚችል** ነው — ብጁ ሞተሮችን መመዝገብ፣ ለአዳዲስ ቋንቋዎች የቋንቋ ጥቅሎችን ማቅረብ እና የተደራረቡ የሂደት መስመሮችን ማቀናጀት ይችላሉ። ይህ መመሪያ እንዴት እንደሚደረግ ያሳያል።
+> **በአጭሩ**: የ67router የማመቅ ሞተር **ሊሰካ የሚችል** ነው — ብጁ ሞተሮችን መመዝገብ፣ ለአዳዲስ ቋንቋዎች የቋንቋ ጥቅሎችን ማቅረብ እና የተደራረቡ የሂደት መስመሮችን ማቀናጀት ይችላሉ። ይህ መመሪያ እንዴት እንደሚደረግ ያሳያል።
 
 **ተዛማጅ መመሪያዎች፦**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # የፕሮጀክት ደረጃ (ሲጀመር የሚጫን)
 ```
 
-ወይም ከፕለጊን በፕሮግራም ይጫኑ፦
+Or register it programmatically at startup:
 
 ```ts
-// በፕለጊንዎ ውስጥ
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // የፕለጊኑ SDK የonRequest / onResponse / onError ማያያዣዎችን ያቀርባል።
-  // የፕለጊኑ ሞጁል ሲጫን (ወይም በመጀመሪያው onRequest) ሞተሩን ይመዝግቡ፤
-  // ከራስዎ የማፍረሻ መንገድ ደግሞ ምዝገባውን ይሰርዙ።
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// በማፍረስ ጊዜ፦
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -231,7 +222,7 @@ export default definePlugin({
 
 ## የቋንቋ ጥቅሎችን መፍጠር
 
-የCaveman ቅጥ መጭመቅ በእያንዳንዱ ተፈጥሯዊ ቋንቋ ውስጥ ሙሌት ቃላትን፣ አሻሚ አገላለጾችን እና ረዥም የአጻጻፍ ንድፎችን ለመቆጣጠር **ለቋንቋው የተወሰኑ የደንብ ጥቅሎችን** ይጠቀማል። OmniRoute ከ**6 የቋንቋ ጥቅሎች** ጋር ይቀርባል፦ `en`፣ `es`፣ `fr`፣ `de`፣ `ja`፣ `pt-BR`።
+የCaveman ቅጥ መጭመቅ በእያንዳንዱ ተፈጥሯዊ ቋንቋ ውስጥ ሙሌት ቃላትን፣ አሻሚ አገላለጾችን እና ረዥም የአጻጻፍ ንድፎችን ለመቆጣጠር **ለቋንቋው የተወሰኑ የደንብ ጥቅሎችን** ይጠቀማል። 67router ከ**6 የቋንቋ ጥቅሎች** ጋር ይቀርባል፦ `en`፣ `es`፣ `fr`፣ `de`፣ `ja`፣ `pt-BR`።
 
 ### የጥቅል መዋቅር
 
@@ -390,7 +381,7 @@ await loadRulePack("./my-custom-rules/hi/filler.json");
 
 ### የመጭመቂያ ሁነታዎች
 
-OmniRoute በውቅር፣ ራስ-ሰር ማስጀመሪያ ገደቦች እና የጥምር ለውጦች መሠረት **ለእያንዳንዱ ጥያቄ አንድ ሁነታ** ይመርጣል።
+67router በውቅር፣ ራስ-ሰር ማስጀመሪያ ገደቦች እና የጥምር ለውጦች መሠረት **ለእያንዳንዱ ጥያቄ አንድ ሁነታ** ይመርጣል።
 የሚገኙት ሁነታዎች በ`open-sse/services/compression/types.ts` (`CompressionMode` ዓይነት) ውስጥ ተገልጸዋል፦
 
 | ሁነታ          | ኤንጂኖች                | የአጠቃቀም ሁኔታ                                                                                                                                               |
@@ -507,11 +498,11 @@ pipeline ካላስተላለፉ፣ በነባሪ `rtk(standard) → caveman(full)`
 
 ## የዋና ምንጭ ማመሳሰል ፖሊሲ
 
-የOmniRoute ማመቂያ ሞተሮች README ውስጥ ለበርካታ የዋና ምንጭ ፕሮጀክቶች
+የ67router ማመቂያ ሞተሮች README ውስጥ ለበርካታ የዋና ምንጭ ፕሮጀክቶች
 ዕውቅና ይሰጣሉ
 ("በRTK፣ Caveman፣ LLMLingua-2፣ Troglodita የተነሳሳ")። አበርካቾች በተደጋጋሚ
 የሚጠይቁት ጥያቄ፦ **ዋናው RTK አዲስ የመሣሪያ ማጣሪያ ሲጨምር ወይም Caveman የደንብ
-ጥቅል ሲጨምር፣ ያ ወደ OmniRoute እንዴት ይደርሳል?** ይህ ክፍል በጉዳዩ ላይ ሥልጣን ያለው መልስ ነው።
+ጥቅል ሲጨምር፣ ያ ወደ 67router እንዴት ይደርሳል?** ይህ ክፍል በጉዳዩ ላይ ሥልጣን ያለው መልስ ነው።
 
 ### በፕሮጀክቱ ውስጥ የተካተቱ ቅጂዎች ከገለልተኛ ትግበራዎች ጋር ሲነጻጸሩ
 
@@ -531,7 +522,7 @@ pipeline ካላስተላለፉ፣ በነባሪ `rtk(standard) → caveman(full)`
 
 **ራስ-ሰር የዋና ምንጭ ልቀት ክትትል እና `compression-sync`
 መለያ የለም** — ይህም ሆን ተብሎ ነው። ሞተሮቹ ዳግም ትግበራዎች ስለሆኑ፣ የዋናው RTK
-ማጣሪያ ወይም የCaveman ደንብ ጥቅል እንደ ኮድ አይዋሃድም፤ ይልቁንም **በOmniRoute የራሱ ቅርጸት እንደ አዲስ
+ማጣሪያ ወይም የCaveman ደንብ ጥቅል እንደ ኮድ አይዋሃድም፤ ይልቁንም **በ67router የራሱ ቅርጸት እንደ አዲስ
 ደንብ/ማጣሪያ ዳግም ይገለጻል** ([COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md)ን ይመልከቱ) እና
 በመደበኛ PR በየአጋጣሚው ይገባል። ከላይ ያሉት የማስፋፊያ ነጥቦች (ብጁ ሞተር፣ የቋንቋ ጥቅል፣ RTK ማጣሪያ)
 አንድን ለማበርከት የተፈቀደው መንገድ ናቸው።
@@ -545,13 +536,13 @@ pipeline ካላስተላለፉ፣ በነባሪ `rtk(standard) → caveman(full)`
 ### Headroom (የግቤት ማመቂያ ፕሮክሲ)
 
 Headroom **ሙሉ በሙሉ ውስጣዊ ነው** — በአንድ ስሪት ላይ የተቆለፈ የ`gcf` ኮዴክ ቅጽበተ-ቅጂ እና
-የOmniRoute የራሱ `smartcrusher` / `toon` / `tabular` ንብርብሮች። ከተካተተው ቅጂ ባሻገር
+የ67router የራሱ `smartcrusher` / `toon` / `tabular` ንብርብሮች። ከተካተተው ቅጂ ባሻገር
 ለመከታተል የቀጥታ ዋና ምንጭ የለም፤ ኮዴኩ ሲቀየር የ`gcf` ዝማኔዎች በእጅ ይታደሳሉ
 እና ከማመቂያ በጀት መግቢያ (`check:compression-budget`) ጋር እንደገና ይረጋገጣሉ።
 
 ### በዋና ምንጭ የተነሳሳ ማሻሻያ ማቅረብ
 
-1. **በፕሮጀክቱ ውስጥ ቅጂውን አታካትቱ** — የዋናውን ምንጭ ደንብ/ማጣሪያ በOmniRoute ቅርጸት ዳግም ይግለጹ።
+1. **በፕሮጀክቱ ውስጥ ቅጂውን አታካትቱ** — የዋናውን ምንጭ ደንብ/ማጣሪያ በ67router ቅርጸት ዳግም ይግለጹ።
 2. ከታች ባለው ተዛማጅ የማስፋፊያ ነጥብ (የቋንቋ ጥቅል፣ RTK ማጣሪያ ወይም
    ብጁ ሞተር) በኩል ያክሉት።
 3. ፈቃድ የያዘውን ምንጭ ከመቅዳት ይልቅ በPR መግለጫው ውስጥ የዋናውን ምንጭ ፕሮጀክት ይጥቀሱ (ዕውቅና)።

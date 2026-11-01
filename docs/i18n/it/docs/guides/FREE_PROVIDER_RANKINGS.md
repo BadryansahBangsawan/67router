@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute classifica i suoi provider **gratuiti** in base alla qualità dei modelli utilizzando i **punteggi ELO di Arena AI
+> **TL;DR**: 67router classifica i suoi provider **gratuiti** in base alla qualità dei modelli utilizzando i **punteggi ELO di Arena AI
 > (in stile LMArena)**. Apri la pagina **Classifica dei provider gratuiti** nella
 > dashboard per vedere quali provider gratuiti offrono i modelli migliori per la tua attività —
 > complessivamente oppure filtrati per categoria (programmazione, revisione, documentazione, debugging).
@@ -13,7 +13,7 @@
 
 ## Che cos'è
 
-OmniRoute registra 375 provider, di cui 155 voci di catalogo contrassegnate come **free/no-auth**
+67router registra 372 provider, di cui 155 voci di catalogo contrassegnate come **free/no-auth**
 (no-auth,
 OAuth con livello gratuito, o chiave API con livello gratuito — vedi la
 [Guida ai livelli gratuiti](../getting-started/FREE-TIERS-GUIDE.md) e la directory completa
@@ -129,9 +129,9 @@ e `code` — dall'API della classifica Arena AI
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`). Ogni voce della classifica
 include il nome del modello, il fornitore, il `score` ELO, l'intervallo di confidenza e il numero di voti.
 
-Le categorie della classifica sono associate alle categorie di attività di OmniRoute:
+Le categorie della classifica sono associate alle categorie di attività di 67router:
 
-| Classifica Arena | Categorie di attività OmniRoute                   |
+| Classifica Arena | Categorie di attività 67router                    |
 | ---------------- | ------------------------------------------------- |
 | `text`           | `default`, `review`, `documentation`, `debugging` |
 | `code`           | `coding`                                          |
@@ -168,7 +168,7 @@ La sincronizzazione è **attiva per impostazione predefinita**:
 
 - Viene eseguita una volta all'avvio del server e successivamente tramite un timer periodico
   (`src/lib/arenaEloSync.ts`, collegato da `src/instrumentation-node.ts`).
-- È **non bloccante e mai fatale**: se il recupero dei dati dal servizio upstream non riesce, OmniRoute continua
+- È **non bloccante e mai fatale**: se il recupero dei dati dal servizio upstream non riesce, 67router continua
   a funzionare e le classifiche mostrano semplicemente gli ultimi dati validi (oppure uno stato vuoto).
 
 Due variabili di ambiente ne controllano il funzionamento (documentate in
@@ -203,7 +203,7 @@ un'associazione flessibile (`findMatchingIntelligence` in `src/lib/freeProviderR
 3. Corrispondenza per prefisso (il nome di un modello nella classifica è un prefisso dell'ID nel registro).
 
 Durante la sincronizzazione, i prefissi dei fornitori noti (`anthropic/`, `openai/`, `google/`, …) vengono
-rimossi e una piccola mappa di alias espande i nomi canonici nelle varianti utilizzate internamente da OmniRoute,
+rimossi e una piccola mappa di alias espande i nomi canonici nelle varianti utilizzate internamente da 67router,
 così i modelli restano individuabili con qualsiasi nome.
 
 ### Come viene classificato un fornitore

@@ -6,7 +6,7 @@
 
 🌐 **语言：** 🇺🇸 [英语](./USER_GUIDE.md) | 🇪🇹 [አማርኛ](../i18n/am/docs/guides/USER_GUIDE.md) | 🇸🇦 [العربية](../i18n/ar/docs/guides/USER_GUIDE.md) | 🇦🇿 [Azərbaycan dili](../i18n/az/docs/guides/USER_GUIDE.md) | 🇧🇬 [Български](../i18n/bg/docs/guides/USER_GUIDE.md) | 🇧🇩 [বাংলা](../i18n/bn/docs/guides/USER_GUIDE.md) | 🇧🇦 [Bosanski](../i18n/bs/docs/guides/USER_GUIDE.md) | 🇨🇿 [Čeština](../i18n/cs/docs/guides/USER_GUIDE.md) | 🇩🇰 [Dansk](../i18n/da/docs/guides/USER_GUIDE.md) | 🇩🇪 [Deutsch](../i18n/de/docs/guides/USER_GUIDE.md) | 🇬🇷 [Ελληνικά](../i18n/el/docs/guides/USER_GUIDE.md) | 🇪🇸 [Español](../i18n/es/docs/guides/USER_GUIDE.md) | 🇪🇪 [Eesti](../i18n/et/docs/guides/USER_GUIDE.md) | 🇮🇷 [فارسی](../i18n/fa/docs/guides/USER_GUIDE.md) | 🇫🇮 [Suomi](../i18n/fi/docs/guides/USER_GUIDE.md) | 🇫🇷 [Français](../i18n/fr/docs/guides/USER_GUIDE.md) | 🇮🇪 [Gaeilge](../i18n/ga/docs/guides/USER_GUIDE.md) | 🇮🇳 [ગુજરાતી](../i18n/gu/docs/guides/USER_GUIDE.md) | 🇳🇬 [Hausa](../i18n/ha/docs/guides/USER_GUIDE.md) | 🇮🇱 [עברית](../i18n/he/docs/guides/USER_GUIDE.md) | 🇮🇳 [हिन्दी](../i18n/hi/docs/guides/USER_GUIDE.md) | 🇭🇷 [Hrvatski](../i18n/hr/docs/guides/USER_GUIDE.md) | 🇭🇺 [Magyar](../i18n/hu/docs/guides/USER_GUIDE.md) | 🇦🇲 [Հայերեն](../i18n/hy/docs/guides/USER_GUIDE.md) | 🇮🇩 [Bahasa Indonesia](../i18n/id/docs/guides/USER_GUIDE.md) | 🇳🇬 [Igbo](../i18n/ig/docs/guides/USER_GUIDE.md) | 🇮🇹 [Italiano](../i18n/it/docs/guides/USER_GUIDE.md) | 🇯🇵 [日本語](../i18n/ja/docs/guides/USER_GUIDE.md) | 🇬🇪 [ქართული](../i18n/ka/docs/guides/USER_GUIDE.md) | 🇰🇭 [ខ្មែរ](../i18n/km/docs/guides/USER_GUIDE.md) | 🇮🇳 [ಕನ್ನಡ](../i18n/kn/docs/guides/USER_GUIDE.md) | 🇰🇷 [한국어](../i18n/ko/docs/guides/USER_GUIDE.md) | 🇱🇹 [Lietuvių](../i18n/lt/docs/guides/USER_GUIDE.md) | 🇱🇻 [Latviešu](../i18n/lv/docs/guides/USER_GUIDE.md) | 🇮🇳 [മലയാളം](../i18n/ml/docs/guides/USER_GUIDE.md) | 🇮🇳 [मराठी](../i18n/mr/docs/guides/USER_GUIDE.md) | 🇲🇾 [Bahasa Melayu](../i18n/ms/docs/guides/USER_GUIDE.md) | 🇲🇹 [Malti](../i18n/mt/docs/guides/USER_GUIDE.md) | 🇲🇲 [မြန်မာ](../i18n/my/docs/guides/USER_GUIDE.md) | 🇳🇵 [नेपाली](../i18n/ne/docs/guides/USER_GUIDE.md) | 🇳🇱 [Nederlands](../i18n/nl/docs/guides/USER_GUIDE.md) | 🇳🇴 [Norsk](../i18n/no/docs/guides/USER_GUIDE.md) | 🇮🇳 [ଓଡ଼ିଆ](../i18n/or/docs/guides/USER_GUIDE.md) | 🇮🇳 [ਪੰਜਾਬੀ](../i18n/pa/docs/guides/USER_GUIDE.md) | 🇵🇭 [Filipino](../i18n/phi/docs/guides/USER_GUIDE.md) | 🇵🇱 [Polski](../i18n/pl/docs/guides/USER_GUIDE.md) | 🇵🇹 [Português (Portugal)](../i18n/pt/docs/guides/USER_GUIDE.md) | 🇧🇷 [Português (Brasil)](../i18n/pt-BR/docs/guides/USER_GUIDE.md) | 🇷🇴 [Română](../i18n/ro/docs/guides/USER_GUIDE.md) | 🇷🇺 [Русский](../i18n/ru/docs/guides/USER_GUIDE.md) | 🇱🇰 [සිංහල](../i18n/si/docs/guides/USER_GUIDE.md) | 🇸🇰 [Slovenčina](../i18n/sk/docs/guides/USER_GUIDE.md) | 🇸🇮 [Slovenščina](../i18n/sl/docs/guides/USER_GUIDE.md) | 🇷🇸 [Српски](../i18n/sr/docs/guides/USER_GUIDE.md) | 🇸🇪 [Svenska](../i18n/sv/docs/guides/USER_GUIDE.md) | 🇰🇪 [Kiswahili](../i18n/sw/docs/guides/USER_GUIDE.md) | 🇮🇳 [தமிழ்](../i18n/ta/docs/guides/USER_GUIDE.md) | 🇮🇳 [తెలుగు](../i18n/te/docs/guides/USER_GUIDE.md) | 🇹🇭 [ไทย](../i18n/th/docs/guides/USER_GUIDE.md) | 🇹🇷 [Türkçe](../i18n/tr/docs/guides/USER_GUIDE.md) | 🇺🇦 [Українська](../i18n/uk-UA/docs/guides/USER_GUIDE.md) | 🇵🇰 [اردو](../i18n/ur/docs/guides/USER_GUIDE.md) | 🇺🇿 [Oʻzbekcha](../i18n/uz/docs/guides/USER_GUIDE.md) | 🇻🇳 [Tiếng Việt](../i18n/vi/docs/guides/USER_GUIDE.md) | 🇳🇬 [Yorùbá](../i18n/yo/docs/guides/USER_GUIDE.md) | 🇨🇳 [中文 (简体)](../i18n/zh-CN/docs/guides/USER_GUIDE.md) | 🇹🇼 [中文 (繁體)](../i18n/zh-TW/docs/guides/USER_GUIDE.md)
 
-关于配置提供者、创建组合、集成 CLI 工具以及部署 OmniRoute 的完整指南。
+关于配置提供者、创建组合、集成 CLI 工具以及部署 67router 的完整指南。
 
 ---
 
@@ -24,7 +24,6 @@
 - [技能系统](#-skills-system)
 - [记忆系统](#-memory-system)
 - [Webhook](#-webhooks)
-- [云端智能体](#-cloud-agents)
 - [编程式管理](#-programmatic-management)
 - [内部 CLI](#-internal-cli)
 - [桌面应用程序（Electron）](#-desktop-application-electron)
@@ -137,11 +136,11 @@
   cc/claude-haiku-4-5-20251001
 ```
 
-**专业提示：** 复杂任务使用 Opus，追求速度则使用 Sonnet。OmniRoute 会按模型跟踪配额！
+**专业提示：** 复杂任务使用 Opus，追求速度则使用 Sonnet。67router 会按模型跟踪配额！
 
-OmniRoute 主机上没有浏览器？在任何已登录 Claude Code 的环境中运行 `claude setup-token`，然后将有效期一年的令牌粘贴到 **Setup Token** 选项卡中。请参阅[使用 setup token 的 Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md)。
+67router 主机上没有浏览器？在任何已登录 Claude Code 的环境中运行 `claude setup-token`，然后将有效期一年的令牌粘贴到 **Setup Token** 选项卡中。请参阅[使用 setup token 的 Claude Code](../providers/CLAUDE_CODE_SETUP_TOKEN.md)。
 
-Claude 及与 Claude Code 兼容的路由会为 Opus 和 Sonnet 模型保留 `max` 思考强度。Haiku 模型不接受 `max` 强度级别，因此 OmniRoute 会在向上游发送请求前，将其降级为较高的思考预算。
+Claude 及与 Claude Code 兼容的路由会为 Opus 和 Sonnet 模型保留 `max` 思考强度。Haiku 模型不接受 `max` 强度级别，因此 67router 会在向上游发送请求前，将其降级为较高的思考预算。
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -260,16 +259,16 @@ Claude 及与 Claude Code 兼容的路由会为 Opus 和 Sonnet 模型保留 `ma
 
 ### Cursor IDE
 
-**将 Cursor 用作 OmniRoute 客户端**（通过 OmniRoute 路由 Cursor 聊天）：
+**将 Cursor 用作 67router 客户端**（通过 67router 路由 Cursor 聊天）：
 
 ```
 设置 → 模型 → 高级：
   OpenAI API 基础 URL：http://localhost:20128/v1
-  OpenAI API 密钥：[从 OmniRoute 仪表盘获取]
+  OpenAI API 密钥：[从 67router 仪表盘获取]
   模型：cc/claude-opus-4-7
 ```
 
-**将 OmniRoute 用作 Cursor 提供者**（OmniRoute 调用上游 Cursor）：建议使用
+**将 67router 用作 Cursor 提供者**（67router 调用上游 Cursor）：建议使用
 **仪表盘 → 提供者 → Cursor → 使用 Cursor 登录**。在 Docker 中，请参阅
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md)。
 
@@ -356,7 +355,7 @@ CLI 会自动从 `~/.omniroute/.env` 或 `./.env` 加载 `.env`。
 
 ### 托盘模式
 
-在系统托盘中启动 OmniRoute：
+在系统托盘中启动 67router：
 
 ```bash
 omniroute serve --tray
@@ -373,7 +372,7 @@ omniroute serve --tray
 - 打开仪表盘。
 - 打开 `/dashboard/logs`。
 - 更改自动启动设置。
-- 停止 OmniRoute。
+- 停止 67router。
 
 不要将 `--tray` 与以下选项组合使用：
 
@@ -399,14 +398,14 @@ omniroute autostart disable
 
 ### 卸载
 
-当你不再需要 OmniRoute 时，我们提供了两个快速脚本以进行彻底移除：
+当你不再需要 67router 时，我们提供了两个快速脚本以进行彻底移除：
 
 | 命令                     | 操作                                                         |
 | ------------------------ | ------------------------------------------------------------ |
 | `npm run uninstall`      | 移除系统应用，但会**保留 `~/.omniroute` 中的数据库和配置**。 |
 | `npm run uninstall:full` | 移除应用，并永久**删除所有配置、密钥和数据库**。             |
 
-> 注意：要运行这些命令，请导航到 OmniRoute 项目文件夹（如果你克隆了该项目），然后运行它们。或者，如果是全局安装，只需运行 `npm uninstall -g omniroute`。
+> 注意：要运行这些命令，请导航到 67router 项目文件夹（如果你克隆了该项目），然后运行它们。或者，如果是全局安装，只需运行 `npm uninstall -g omniroute`。
 
 ### VPS 部署
 
@@ -478,7 +477,7 @@ docker run -d --name omniroute -p 20128:20128 --env-file ./.env -v omniroute-dat
 
 ### Void Linux (xbps-src)
 
-Void Linux 用户可以使用 `xbps-src` 交叉编译框架，以原生方式打包和安装 OmniRoute。此过程会自动完成 Node.js 独立构建，并编译所需的 `better-sqlite3` 原生绑定。
+Void Linux 用户可以使用 `xbps-src` 交叉编译框架，以原生方式打包和安装 67router。此过程会自动完成 Node.js 独立构建，并编译所需的 `better-sqlite3` 原生绑定。
 
 <details>
 <summary><b>查看 xbps-src 模板</b></summary>
@@ -658,7 +657,7 @@ post_install() {
 
 **其他兼容提供者**（部分）：`cohere`、`databricks`、`snowflake`、`together`、`vertex`、`alibaba`、`alibaba-cn`、`bedrock`（通过 `aws-bedrock`）、`azure-ai`、`openrouter`（直通目录）、`siliconflow`、`hyperbolic`、`huggingface`、`featherless-ai`、`cloudflare-ai`、`scaleway`、`deepinfra`、`vercel-ai-gateway`、`bazaarlink`、`friendliai`、`nous-research`、`reka`、`volcengine`、`ai21`、`gigachat`。每个提供者都在 `providerRegistry.ts` 中维护自己的模型列表，并且当提供者公开 `/models` 端点时，可以自动同步。
 
-**关于模型 ID 的说明：** OmniRoute 使用提供者原生 ID（`claude-opus-4-8`、`gpt-5.5`、`glm-5.1`、`MiniMax-M2.7`、`kimi-k2.5`、`grok-4.20-0309-reasoning`）。某些 ID 包含带点号的版本，因为上游 API 要求采用这种格式。如果某个模型未在上方列出，请运行 `omniroute models --search <term>` 或访问 `GET /api/models/catalog` 以确认可用性。
+**关于模型 ID 的说明：** 67router 使用提供者原生 ID（`claude-opus-4-8`、`gpt-5.5`、`glm-5.1`、`MiniMax-M2.7`、`kimi-k2.5`、`grok-4.20-0309-reasoning`）。某些 ID 包含带点号的版本，因为上游 API 要求采用这种格式。如果某个模型未在上方列出，请运行 `omniroute models --search <term>` 或访问 `GET /api/models/catalog` 以确认可用性。
 
 </details>
 
@@ -710,9 +709,9 @@ prefix: "<prefix>" is a reserved provider prefix — choose a different prefix (
 
 请选择不同的前缀（如 `mygw`、`acme-proxy`）。如果发送到自定义节点的请求失败，且错误消息提到了某个内置提供者或其凭据，请检查节点前缀是否为保留前缀：在此规则引入之前保存的节点仍会保留，但其前缀会将请求路由到内置提供者。请编辑该节点并为其指定新前缀。
 
-### 串联 OmniRoute 对等节点
+### 串联 67router 对等节点
 
-可以将另一个 OmniRoute 网关添加为**自定义 OpenAI 兼容**提供者。请使用对等节点的 `/v1` 基础 URL，以及由该对等节点签发的专用最小权限 API 密钥。
+可以将另一个 67router 网关添加为**自定义 OpenAI 兼容**提供者。请使用对等节点的 `/v1` 基础 URL，以及由该对等节点签发的专用最小权限 API 密钥。
 
 对于双向或多跳链路，请在每个网关上启用选择加入式循环防护：
 
@@ -732,7 +731,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 
 只有发送到明确列入允许列表的对等节点 URL 的请求才会收到 `X-OmniRoute-Peer-Trace` 标头。如果检测到重复的实例 ID 或跳数预算已耗尽，网关会以 HTTP `508 Loop Detected` 拒绝请求；普通上游提供者不会收到任何对等节点元数据。
 
-对等节点串联并不等同于数据库复制或主机故障转移。每个网关都维护独立的 SQLite 状态、缓存、速率计数器和会话。若要实现主动/被动或主动/主动可用性，请使用带健康检查的反向代理或客户端故障转移，并且切勿将同一个 SQLite 数据库挂载到多个正在运行的 OmniRoute 实例中。
+对等节点串联并不等同于数据库复制或主机故障转移。每个网关都维护独立的 SQLite 状态、缓存、速率计数器和会话。若要实现主动/被动或主动/主动可用性，请使用带健康检查的反向代理或客户端故障转移，并且切勿将同一个 SQLite 数据库挂载到多个正在运行的 67router 实例中。
 
 ### 提供者专用路由
 
@@ -783,7 +782,7 @@ curl http://localhost:20128/api/models/catalog
 - 适用于 Docker 和其他自托管部署，可在 **Dashboard → Endpoints** 中使用
 - 创建临时 `https://*.trycloudflare.com` URL，并将请求转发到当前兼容 OpenAI 的 `/v1` 端点
 - 首次启用时仅在需要时安装 `cloudflared`；后续重启会复用同一个托管二进制文件
-- OmniRoute 或容器重启后不会自动恢复 Quick Tunnels；需要时请从仪表板重新启用
+- 67router 或容器重启后不会自动恢复 Quick Tunnels；需要时请从仪表板重新启用
 - 隧道 URL 是临时的，每次停止/启动隧道时都会改变
 - 托管的 Quick Tunnels 默认使用 HTTP/2 传输，以避免在受限容器中出现大量 QUIC UDP 缓冲区警告
 - 如果要覆盖托管传输方式的选择，请将 `CLOUDFLARED_PROTOCOL` 设置为 `quic` 或 `auto`
@@ -800,7 +799,7 @@ curl http://localhost:20128/api/models/catalog
 
 ### 转换器演练场
 
-通过 **Dashboard → Translator** 访问。调试并可视化 OmniRoute 如何在不同提供者之间转换 API 请求。
+通过 **Dashboard → Translator** 访问。调试并可视化 67router 如何在不同提供者之间转换 API 请求。
 
 | 模式           | 用途                                                |
 | -------------- | --------------------------------------------------- |
@@ -853,7 +852,7 @@ curl http://localhost:20128/api/models/catalog
 X-Session-Id: your-session-key
 ```
 
-OmniRoute 也接受 `x_session_id`，并在 `X-OmniRoute-Session-Id` 中返回实际使用的会话密钥。
+67router 也接受 `x_session_id`，并在 `X-OmniRoute-Session-Id` 中返回实际使用的会话密钥。
 
 如果使用 Nginx 并发送下划线形式的请求头，请启用：
 
@@ -887,7 +886,7 @@ underscores_in_headers on;
 
 ### 常见提供者组合与路由模式
 
-以下是在 OmniRoute 中组合多个提供者并在它们之间进行路由的示例模式：
+以下是在 67router 中组合多个提供者并在它们之间进行路由的示例模式：
 
 #### 1. 编程智能体组合：高端推理与成本/速度回退
 
@@ -948,7 +947,7 @@ omniroute combo create free-stack \
 
 通过**仪表板 → 设置 → 弹性**进行配置。
 
-OmniRoute 通过五个组件实现提供者级弹性：
+67router 通过五个组件实现提供者级弹性：
 
 1. **请求队列与节流** — 系统级请求整形：
    - **每分钟请求数 (RPM)** — 每个账户每分钟允许的最大请求数
@@ -973,7 +972,7 @@ OmniRoute 通过五个组件实现提供者级弹性：
 
    提供者断路器的运行时状态仅显示在**仪表板 → 健康状态**中。
 
-4. **等待冷却结束** — 如果所有候选连接都已处于冷却状态，OmniRoute 可以等待最早结束的冷却，并自动重试同一个客户端请求。
+4. **等待冷却结束** — 如果所有候选连接都已处于冷却状态，67router 可以等待最早结束的冷却，并自动重试同一个客户端请求。
 
 5. **速率限制自动检测** — 当上游提供者返回明确的等待时间窗口时，如果启用了此设置，这些提示将覆盖本地连接冷却时间。
 
@@ -1007,7 +1006,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **使用场景：**
 
-- 在不同计算机之间迁移 OmniRoute
+- 在不同计算机之间迁移 67router
 - 创建用于灾难恢复的外部备份
 - 在团队成员之间共享配置（全部导出 → 共享归档）
 
@@ -1059,7 +1058,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### 音频转录
 
-OmniRoute 通过与 OpenAI 兼容的端点支持音频转录：
+67router 通过与 OpenAI 兼容的端点支持音频转录：
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1130,7 +1129,7 @@ curl -X POST http://localhost:20128/v1/audio/transcriptions \
 跳过和主动回退压缩，以牺牲路由/请求保真度为代价降低尾部
 延迟。
 
-当上游提供者要求严格遵守 `max_tokens` / `maxOutputTokens` 限制时，请禁用**推理令牌缓冲区**。启用后，组合路由仅为具有已知输出上限的推理模型增加余量；如果安全缓冲后的值会超过该上限，则保持客户端令牌限制不变。如果客户端限制已经高于已知上限，OmniRoute 会先将其限制到该上限，再发送上游请求。
+当上游提供者要求严格遵守 `max_tokens` / `maxOutputTokens` 限制时，请禁用**推理令牌缓冲区**。启用后，组合路由仅为具有已知输出上限的推理模型增加余量；如果安全缓冲后的值会超过该上限，则保持客户端令牌限制不变。如果客户端限制已经高于已知上限，67router 会先将其限制到该上限，再发送上游请求。
 
 ---
 
@@ -1153,7 +1152,7 @@ curl -X POST http://localhost:20128/v1/audio/transcriptions \
 
 ## 🤖 自动路由（零配置）
 
-OmniRoute 内置了一个**由评分驱动的自动路由器**，它会在所有已连接的提供者中，为每个请求选择最佳模型——无需维护任何组合。只需使用任一 `auto/*` 前缀发送请求，OmniRoute 就会即时构建一个虚拟组合，并根据延迟、成本、成功率、上下文适配度、模型对任务的适用性、近期故障、配额和熔断器状态对候选模型进行评分。
+67router 内置了一个**由评分驱动的自动路由器**，它会在所有已连接的提供者中，为每个请求选择最佳模型——无需维护任何组合。只需使用任一 `auto/*` 前缀发送请求，67router 就会即时构建一个虚拟组合，并根据延迟、成本、成功率、上下文适配度、模型对任务的适用性、近期故障、配额和熔断器状态对候选模型进行评分。
 
 | 前缀           | 优化目标                                                                   |
 | -------------- | -------------------------------------------------------------------------- |
@@ -1184,7 +1183,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 ## 🔌 MCP 与 A2A 集成
 
-OmniRoute 既是 **MCP 服务器**（模型上下文协议），也是 **A2A 服务器**（智能体间 JSON-RPC 2.0）。任何兼容 MCP 的 IDE 或智能体宿主都可以直接调用 OmniRoute 工具——无需额外的封装器。
+67router 既是 **MCP 服务器**（模型上下文协议），也是 **A2A 服务器**（智能体间 JSON-RPC 2.0）。任何兼容 MCP 的 IDE 或智能体宿主都可以直接调用 67router 工具——无需额外的封装器。
 
 ### MCP 传输方式
 
@@ -1213,17 +1212,14 @@ OmniRoute 既是 **MCP 服务器**（模型上下文协议），也是 **A2A 服
 
 ### 作用域
 
-MCP 目前定义了 32 个命名作用域。每个 Bearer 密钥都可以限制为仅允许特定作用域——有关权威的作用域和工具清单，请参阅 [MCP-SERVER.md](../frameworks/MCP-SERVER.md)；有关 JSON-RPC 模式，请参阅 [A2A-SERVER.md](../frameworks/A2A-SERVER.md)。
-
 ---
 
 ## 🧠 技能系统
 
-OmniRoute 提供了一个可扩展的**技能框架**（`src/lib/skills/`），使智能体和 A2A 端点能够运行特定领域的例程（例如 `code-review`、`summarize`、`extract-facts`、`web-research`）。
+67router 提供了一个可扩展的**技能框架**（`src/lib/skills/`），使智能体和 A2A 端点能够运行特定领域的例程（例如 `code-review`、`summarize`、`extract-facts`、`web-research`）。
 
 - **技能市场 UI** — 在**控制面板 → 技能**中浏览和安装技能
 - **按密钥划分的作用域** — 限制各 API 密钥可以调用的技能
-- **自定义技能** — 将 TypeScript 文件放入 `src/lib/a2a/skills/` 并注册，即可立即通过 A2A 调用
 
 完整参考：[SKILLS.md](../frameworks/SKILLS.md)。
 
@@ -1231,7 +1227,7 @@ OmniRoute 提供了一个可扩展的**技能框架**（`src/lib/skills/`），�
 
 ## 💾 记忆系统
 
-OmniRoute 通过混合检索持久保存**长期对话记忆**：
+67router 通过混合检索持久保存**长期对话记忆**：
 
 - **SQLite FTS5**，用于在历史对话轮次中进行关键词搜索
 - **Qdrant 向量存储**（可选），用于语义回忆
@@ -1244,7 +1240,7 @@ OmniRoute 通过混合检索持久保存**长期对话记忆**：
 
 ## 🔔 Webhook
 
-订阅 OmniRoute 事件，以进行实时监控和自动化处理。
+订阅 67router 事件，以进行实时监控和自动化处理。
 
 - 在**控制面板 → Webhook**中使用目标 URL 和 HMAC 签名密钥创建 Webhook
 - 可用事件：`request.completed`、`request.failed`、`provider.unavailable`、`budget.exceeded`、`combo.switched`、`circuit_breaker.opened`、`circuit_breaker.closed`
@@ -1255,21 +1251,9 @@ OmniRoute 通过混合检索持久保存**长期对话记忆**：
 
 ---
 
-## ☁️ 云端智能体
-
-OmniRoute 集成了云端编码智能体（**OpenAI Codex Cloud**、**Devin**、**Jules**、**Antigravity**），因此你可以通过处理本地路由的同一个控制面板分派长时间运行的任务。
-
-- 在**控制面板 → 云端智能体**中或通过 `POST /api/v1/agents/tasks` 创建任务
-- 跟踪每个任务的状态、日志和产物
-- 每个提供者均可使用自有 API 密钥 — 凭据绝不会离开 OmniRoute 实例
-
-完整参考：[CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md)。
-
----
-
 ## 🛠️ 编程式管理
 
-你可以通过 HTTP 管理所有 OmniRoute 资源（提供者、组合、密钥、设置），只需使用具有 `manage` 权限范围的 **Bearer 密钥**。
+你可以通过 HTTP 管理所有 67router 资源（提供者、组合、密钥、设置），只需使用具有 `manage` 权限范围的 **Bearer 密钥**。
 
 在 **控制面板 → API 密钥 → 新建密钥 → 权限范围：manage** 中生成密钥，然后：
 
@@ -1302,7 +1286,7 @@ curl -X POST http://localhost:20128/api/keys -H "Authorization: Bearer $OMNIROUT
 
 ## 💻 内部 CLI
 
-OmniRoute 提供了一个内部 CLI（`omniroute …`），用于设置、诊断和运行时控制。它与仪表板中的“CLI 工具”页面**相互独立**；该页面用于配置第三方 CLI（Claude Code、Cursor、Codex、Cline 等），使其能够与 OmniRoute 通信。
+67router 提供了一个内部 CLI（`omniroute …`），用于设置、诊断和运行时控制。它与仪表板中的“CLI 工具”页面**相互独立**；该页面用于配置第三方 CLI（Claude Code、Cursor、Codex、Cline 等），使其能够与 67router 通信。
 
 ```bash
 omniroute setup                    # 交互式向导（密码、提供者、组合）
@@ -1320,7 +1304,6 @@ omniroute restore [<timestamp>]    # 从快照恢复
 omniroute health                   # 详细健康状态（断路器、缓存、内存）
 omniroute quota                    # 提供者配额使用情况
 omniroute mcp status               # MCP 服务器状态
-omniroute a2a status               # A2A 服务器状态
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok 隧道
 omniroute reset-password           # 重置管理员密码
 omniroute --mcp                    # 通过 stdio 启动 MCP 服务器
@@ -1333,7 +1316,7 @@ omniroute --port 3000              # 在自定义端口上启动服务器
 
 ## 🖥️ 桌面应用程序（Electron）
 
-OmniRoute 提供适用于 Windows、macOS 和 Linux 的原生桌面应用程序。
+67router 提供适用于 Windows、macOS 和 Linux 的原生桌面应用程序。
 
 ### 安装
 

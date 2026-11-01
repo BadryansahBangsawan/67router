@@ -4,7 +4,7 @@
 
 ---
 
-„OmniRoute“ tikrina pirminio teikėjo klaidų atsakymus, ieškodama požymių, rodančių, kad teikėjo
+„67router“ tikrina pirminio teikėjo klaidų atsakymus, ieškodama požymių, rodančių, kad teikėjo
 **paskyra visam laikui nebeveikia** (sustabdyta / deaktyvuota / užblokuota dėl paslaugų teikimo sąlygų pažeidimo), ir, aptikusi
 atitiktį, perkelia tą ryšį į **galutinę `banned` būseną**, kad jis
 nebebūtų pasirenkamas užklausoms. Būtent tai konfigūruojama **Security → Banned Keywords**

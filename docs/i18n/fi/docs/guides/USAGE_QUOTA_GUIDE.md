@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute seuraa jokaisen pyynnön tokenien käyttöä, laskee kustannukset, valvoo API-avainkohtaisia kiintiöitä ja näyttää analytiikan hallintapaneelissa. Tässä oppaassa selitetään, miten tämä kaikki toimii.
+> **TL;DR**: 67router seuraa jokaisen pyynnön tokenien käyttöä, laskee kustannukset, valvoo API-avainkohtaisia kiintiöitä ja näyttää analytiikan hallintapaneelissa. Tässä oppaassa selitetään, miten tämä kaikki toimii.
 
 **Lähteet:**
 
@@ -17,7 +17,7 @@
 
 ## Yleiskatsaus
 
-Jokainen OmniRouten kautta kulkeva pyyntö luo **käyttötietueen**, johon tallennetaan:
+Jokainen 67routerin kautta kulkeva pyyntö luo **käyttötietueen**, johon tallennetaan:
 
 - **Tunnistetiedot**: API-avain, palveluntarjoaja, malli ja yhdistelmä
 - **Tokenit**: kehotetokenit, vastaustokenit, välimuistissa olevat tokenit ja kokonaismäärä
@@ -74,11 +74,11 @@ const usage = response.usage || {
 };
 ```
 
-Jos palveluntarjoaja ei palauta käyttötietoja (esimerkiksi jotkin verkkoevästeitä käyttävät palveluntarjoajat), OmniRoute **arvioi** tokenien määrän heuristiikalla `~4 merkkiä tokenia kohden` (katso `open-sse/services/autoCombo/pipelineRouter.ts`).
+Jos palveluntarjoaja ei palauta käyttötietoja (esimerkiksi jotkin verkkoevästeitä käyttävät palveluntarjoajat), 67router **arvioi** tokenien määrän heuristiikalla `~4 merkkiä tokenia kohden` (katso `open-sse/services/autoCombo/pipelineRouter.ts`).
 
 ### Välimuistissa olevat tokenit
 
-OmniRoute seuraa `cached_tokens`-tokeneita erillään `prompt_tokens`-tokeneista, koska:
+67router seuraa `cached_tokens`-tokeneita erillään `prompt_tokens`-tokeneista, koska:
 
 - Anthropicin kehotevälimuistissa olevista tokeneista veloitetaan alennettu hinta (10 % normaalihinnasta)
 - Jotkin palveluntarjoajat palauttavat `cache_read_input_tokens`-arvon, joka pitää hinnoitella eri tavalla
@@ -117,7 +117,7 @@ Hinnoittelutiedot synkronoidaan automaattisesti LiteLLM:stä `/api/pricing/sync`
 curl -X POST http://localhost:20128/api/pricing/sync
 ```
 
-Malleille, joille ei ole saatavilla hinnoittelutietoja, OmniRoute **arvioi kustannukset** käyttäen sisäisiä keskimääräisiä hintoja (jotka perustuvat LiteLLM:n hinnoittelutietoihin).
+Malleille, joille ei ole saatavilla hinnoittelutietoja, 67router **arvioi kustannukset** käyttäen sisäisiä keskimääräisiä hintoja (jotka perustuvat LiteLLM:n hinnoittelutietoihin).
 
 ---
 

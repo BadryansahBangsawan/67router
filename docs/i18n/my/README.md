@@ -6,14 +6,16 @@
 
 <div align="center">
 
-<img src="./docs/screenshots/MainOmniRoute.png" alt="OmniRoute ဒက်ရှ်ဘုတ်" width="820"/>
+<img src="./docs/screenshots/MainOmniRoute.png" alt="67router ဒက်ရှ်ဘုတ်" width="820"/>
 
 <br/>
 <br/>
 
-# 🚀 OmniRoute — အခမဲ့ AI Gateway
+# 🚀 67router — အခမဲ့ AI Gateway
 
-<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="OmniRoute — ကုဒ်ရေးသားမှုကို ဘယ်တော့မှ မရပ်လိုက်ပါနှင့်။ AI ကိရိယာတိုင်း → ဝန်ဆောင်မှုပေးသူ 375 ခု — အခမဲ့ 150+ ခု — endpoint တစ်ခုတည်းမှတစ်ဆင့်။ Claude Code၊ Codex၊ Cursor၊ Cline၊ Copilot နှင့် Antigravity တို့ကို အလိုအလျောက် fallback ပါရှိသော အခမဲ့ Claude / GPT / Gemini နှင့် ချိတ်ဆက်ပါ။ RTK + Caveman အဆင့်ဆင့်ဖိသိပ်မှုက token 15–95% (~89% ပျမ်းမျှ) ကို ချွေတာပေးသောကြောင့် ကန့်သတ်ချက်များကို ဘယ်တော့မှ မထိတော့ပါ။ AI ဝန်ဆောင်မှုပေးသူ 375 ခု · အခမဲ့အဆင့် 150+ ခု · တစ်လလျှင် အခမဲ့ token ~1.62B · လမ်းကြောင်းရွေးချယ်မှု မဟာဗျူဟာ 20 ခု · စတင်ရန် $0။"/>
+<sub>67router is a fork of [OmniRoute](https://github.com/diegosouzapw/OmniRoute) by diegosouzapw. The npm package, the `omniroute` CLI command, `OMNIROUTE_*` environment variables and the `~/.omniroute` data directory keep their upstream names.</sub>
+
+<img src="./docs/diagrams/readme-hero.svg" width="100%" alt="67router — ကုဒ်ရေးသားမှုကို ဘယ်တော့မှ မရပ်လိုက်ပါနှင့်။ AI ကိရိယာတိုင်း → ဝန်ဆောင်မှုပေးသူ 375 ခု — အခမဲ့ 150+ ခု — endpoint တစ်ခုတည်းမှတစ်ဆင့်။ Claude Code၊ Codex၊ Cursor၊ Cline၊ Copilot နှင့် Antigravity တို့ကို အလိုအလျောက် fallback ပါရှိသော အခမဲ့ Claude / GPT / Gemini နှင့် ချိတ်ဆက်ပါ။ RTK + Caveman အဆင့်ဆင့်ဖိသိပ်မှုက token 15–95% (~89% ပျမ်းမျှ) ကို ချွေတာပေးသောကြောင့် ကန့်သတ်ချက်များကို ဘယ်တော့မှ မထိတော့ပါ။ AI ဝန်ဆောင်မှုပေးသူ 375 ခု · အခမဲ့အဆင့် 150+ ခု · တစ်လလျှင် အခမဲ့ token ~1.62B · လမ်းကြောင်းရွေးချယ်မှု မဟာဗျူဟာ 20 ခု · စတင်ရန် $0။"/>
 
 </div>
 
@@ -23,11 +25,11 @@
 
 </div>
 
-> **သင့်ကိုယ်ပိုင် ဝန်ဆောင်မှုပေးသူအကောင့်များကို ယူဆောင်လာပါ။** ဤပမာဏသည် OmniRoute က ပေးအပ်သည့် တိုကင်မဟုတ်ဘဲ သီးခြားစီ အရည်အချင်းပြည့်မီသော ပြင်ပဝန်ဆောင်မှုပေးသူများ၏ အခမဲ့အဆင့်များကို စုစုပေါင်း ခန့်မှန်းထားခြင်းဖြစ်သည်။ အကောင့်ဖွင့်ပါ၊ လိုအပ်သည့်နေရာတွင် အထောက်အထားများ ရယူပြီး သင်အသုံးပြုနိုင်သော ဝန်ဆောင်မှုပေးသူများကို ချိတ်ဆက်ပါ။ ဝန်ဆောင်မှုပေးသူတစ်ခုစီက ၎င်း၏ ကန့်သတ်ချက်များ၊ ရရှိနိုင်မှုနှင့် စည်းမျဉ်းသတ်မှတ်ချက်များကို ကိုယ်တိုင် ထိန်းချုပ်သည်။
+> **သင့်ကိုယ်ပိုင် ဝန်ဆောင်မှုပေးသူအကောင့်များကို ယူဆောင်လာပါ။** ဤပမာဏသည် 67router က ပေးအပ်သည့် တိုကင်မဟုတ်ဘဲ သီးခြားစီ အရည်အချင်းပြည့်မီသော ပြင်ပဝန်ဆောင်မှုပေးသူများ၏ အခမဲ့အဆင့်များကို စုစုပေါင်း ခန့်မှန်းထားခြင်းဖြစ်သည်။ အကောင့်ဖွင့်ပါ၊ လိုအပ်သည့်နေရာတွင် အထောက်အထားများ ရယူပြီး သင်အသုံးပြုနိုင်သော ဝန်ဆောင်မှုပေးသူများကို ချိတ်ဆက်ပါ။ ဝန်ဆောင်မှုပေးသူတစ်ခုစီက ၎င်း၏ ကန့်သတ်ချက်များ၊ ရရှိနိုင်မှုနှင့် စည်းမျဉ်းသတ်မှတ်ချက်များကို ကိုယ်တိုင် ထိန်းချုပ်သည်။
 >
-> အခမဲ့အဆင့်များကို ကိုယ်တိုင် စုပေါင်းအသုံးပြုရခြင်းသည် ခက်ခဲသည် — SDK ဒါဇင်များစွာ၊ နှုန်းထားကန့်သတ်ချက် ဒါဇင်များစွာရှိပြီး သင့်တွင် အမှန်တကယ် ဘယ်လောက်ရှိသည်ကိုလည်း မသိနိုင်ပါ။ OmniRoute သည် **ထပ်တလဲလဲရရှိသော pool key 34 ခုအတွင်းရှိ အခမဲ့အဆင့်စာရင်း 471 ခု** ကို စုစည်းထားပြီး **ထုတ်ပြန်ထားသော အပြုသဘော လစဉ်ဘတ်ဂျက်ရှိသည့် pool 17 ခုနှင့် model တစ်ခုချင်းစီအလိုက် Groq ကန့်သတ်ချက်ငါးခု** မှ တိုကင်စုစုပေါင်းကို တွက်ချက်ကာ မျှဝေထားသော pool များအလိုက် ထပ်နေမှုများကို ဖယ်ရှားထားသည်။ ဒေသဆိုင်ရာ အထောက်အထားစစ်ဆေးမှု ပြီးမြောက်မှသာ ရရှိနိုင်သော quota များကို (လက်ရှိတွင် ModelScope) သီးခြားပြသထားပြီး ဒေသဆိုင်ရာ အထောက်အထားအတည်ပြုမှုနောက်ကွယ်တွင် +~6M ရှိသော်လည်း အဓိကစုစုပေါင်းထဲတွင် လုံးဝ ထည့်မတွက်ပါ။ ရလဒ်ကို dashboard (`/dashboard/free-tiers`) ပေါ်တွင် အမြဲမြင်နိုင်သည်။
+> အခမဲ့အဆင့်များကို ကိုယ်တိုင် စုပေါင်းအသုံးပြုရခြင်းသည် ခက်ခဲသည် — SDK ဒါဇင်များစွာ၊ နှုန်းထားကန့်သတ်ချက် ဒါဇင်များစွာရှိပြီး သင့်တွင် အမှန်တကယ် ဘယ်လောက်ရှိသည်ကိုလည်း မသိနိုင်ပါ။ 67router သည် **ထပ်တလဲလဲရရှိသော pool key 34 ခုအတွင်းရှိ အခမဲ့အဆင့်စာရင်း 471 ခု** ကို စုစည်းထားပြီး **ထုတ်ပြန်ထားသော အပြုသဘော လစဉ်ဘတ်ဂျက်ရှိသည့် pool 17 ခုနှင့် model တစ်ခုချင်းစီအလိုက် Groq ကန့်သတ်ချက်ငါးခု** မှ တိုကင်စုစုပေါင်းကို တွက်ချက်ကာ မျှဝေထားသော pool များအလိုက် ထပ်နေမှုများကို ဖယ်ရှားထားသည်။ ဒေသဆိုင်ရာ အထောက်အထားစစ်ဆေးမှု ပြီးမြောက်မှသာ ရရှိနိုင်သော quota များကို (လက်ရှိတွင် ModelScope) သီးခြားပြသထားပြီး ဒေသဆိုင်ရာ အထောက်အထားအတည်ပြုမှုနောက်ကွယ်တွင် +~6M ရှိသော်လည်း အဓိကစုစုပေါင်းထဲတွင် လုံးဝ ထည့်မတွက်ပါ။ ရလဒ်ကို dashboard (`/dashboard/free-tiers`) ပေါ်တွင် အမြဲမြင်နိုင်သည်။
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute အခမဲ့အဆင့် ဘတ်ဂျက်ကတ် — ပုံမှန်အနေဖြင့် တစ်လလျှင် အခမဲ့တိုကင် ~1.62B၊ အကောင့်ဖွင့်ခြင်းခရက်ဒစ်များဖြင့် ပထမလတွင် ~2.22B အထိ ရရှိနိုင်ပြီး endpoint တစ်ခုတည်း၏ နောက်ကွယ်တွင် စာရင်းပြုစုထားသော အခမဲ့အဆင့် entry 471 ခုကို လွှမ်းခြုံသည့် မှတ်တမ်းတင်ထားသော ထပ်တလဲလဲရရှိသော pool key 34 ခုမှ ရရှိသည်။ မျှဝေထားသော pool တစ်ခုစီကို တစ်ကြိမ်သာ ရေတွက်သည့် ရိုးသားသော pool-ထပ်နေမှုဖယ်ရှားထားသည့် တွက်ချက်မှုဖြစ်ပြီး ထုတ်ပြန်ထားသော အပြုသဘော လစဉ်တိုကင်ဘတ်ဂျက်ရှိသည့် ထပ်တလဲလဲရရှိသော pool 17 ခုနှင့် model တစ်ခုချင်းစီအလိုက် Groq ကန့်သတ်ချက်ငါးခု ပါဝင်သည်။ ဝန်ဆောင်မှုပေးသူ 12 ခုကို စည်းမျဉ်းအန္တရာယ်စာရင်းတွင် ရှောင်ရန်ဟု အမှတ်အသားပြုထားသောကြောင့် သင်ကိုယ်တိုင် ဆုံးဖြတ်နိုင်သည်။ ဘတ်ဂျက်ဘားတွင် Mistral 1B၊ Nara 210M၊ LLM7 150M၊ xKiro 150M၊ Groq 30M (model တစ်ခုချင်းစီအလိုက် ကန့်သတ်ချက်ငါးခု) နှင့် ပိုမိုသေးငယ်သော pool များအပြင် ပထမလ အကောင့်ဖွင့်ခြင်းခရက်ဒစ်များ ပါဝင်သည်။ အမြဲတမ်းအခမဲ့ဖြစ်ပြီး တိုကင်ကန့်သတ်ချက်မရှိသော ဝန်ဆောင်မှုပေးသူများကိုလည်း သီးခြားဖော်ပြထားသဖြင့် ၎င်းတို့ကြောင့် အဓိကစုစုပေါင်း အတုအယောင် မြင့်တက်ခြင်းမရှိပါ။ တိုက်ရိုက်အသုံးပြုပြီး/ကျန်ရှိမှုကို /dashboard/free-tiers တွင် ကြည့်နိုင်သည်။"/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="67router အခမဲ့အဆင့် ဘတ်ဂျက်ကတ် — ပုံမှန်အနေဖြင့် တစ်လလျှင် အခမဲ့တိုကင် ~1.62B၊ အကောင့်ဖွင့်ခြင်းခရက်ဒစ်များဖြင့် ပထမလတွင် ~2.22B အထိ ရရှိနိုင်ပြီး endpoint တစ်ခုတည်း၏ နောက်ကွယ်တွင် စာရင်းပြုစုထားသော အခမဲ့အဆင့် entry 471 ခုကို လွှမ်းခြုံသည့် မှတ်တမ်းတင်ထားသော ထပ်တလဲလဲရရှိသော pool key 34 ခုမှ ရရှိသည်။ မျှဝေထားသော pool တစ်ခုစီကို တစ်ကြိမ်သာ ရေတွက်သည့် ရိုးသားသော pool-ထပ်နေမှုဖယ်ရှားထားသည့် တွက်ချက်မှုဖြစ်ပြီး ထုတ်ပြန်ထားသော အပြုသဘော လစဉ်တိုကင်ဘတ်ဂျက်ရှိသည့် ထပ်တလဲလဲရရှိသော pool 17 ခုနှင့် model တစ်ခုချင်းစီအလိုက် Groq ကန့်သတ်ချက်ငါးခု ပါဝင်သည်။ ဝန်ဆောင်မှုပေးသူ 12 ခုကို စည်းမျဉ်းအန္တရာယ်စာရင်းတွင် ရှောင်ရန်ဟု အမှတ်အသားပြုထားသောကြောင့် သင်ကိုယ်တိုင် ဆုံးဖြတ်နိုင်သည်။ ဘတ်ဂျက်ဘားတွင် Mistral 1B၊ Nara 210M၊ LLM7 150M၊ xKiro 150M၊ Groq 30M (model တစ်ခုချင်းစီအလိုက် ကန့်သတ်ချက်ငါးခု) နှင့် ပိုမိုသေးငယ်သော pool များအပြင် ပထမလ အကောင့်ဖွင့်ခြင်းခရက်ဒစ်များ ပါဝင်သည်။ အမြဲတမ်းအခမဲ့ဖြစ်ပြီး တိုကင်ကန့်သတ်ချက်မရှိသော ဝန်ဆောင်မှုပေးသူများကိုလည်း သီးခြားဖော်ပြထားသဖြင့် ၎င်းတို့ကြောင့် အဓိကစုစုပေါင်း အတုအယောင် မြင့်တက်ခြင်းမရှိပါ။ တိုက်ရိုက်အသုံးပြုပြီး/ကျန်ရှိမှုကို /dashboard/free-tiers တွင် ကြည့်နိုင်သည်။"/>
 
 > တိုက်ရိုက် `/dashboard/free-tiers` စာမျက်နှာ၏ လှုပ်ရှားမှုပါသော အကျဉ်းချုပ်။ နည်းစနစ်အပြည့်အစုံ (pool ထပ်နေမှုဖယ်ရှားခြင်း၊ ခရက်ဒစ်အဆင့်များ၊ ဝန်ဆောင်မှုပေးသူ စည်းမျဉ်းများ) — **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**။
 >
@@ -106,7 +108,7 @@
   <tr>
     <td align="right"><b>💡 လေ့လာရန်</b></td>
     <td align="center"><a href="#-the-promise">💥 ကတိကဝတ်</a></td>
-    <td align="center"><a href="#-why-omniroute">🤔 OmniRoute ကို ဘာကြောင့် သုံးသင့်သလဲ</a></td>
+    <td align="center"><a href="#-why-omniroute">🤔 67router ကို ဘာကြောင့် သုံးသင့်သလဲ</a></td>
     <td align="center"><a href="#-what-sets-omniroute-apart">🏆 ထူးခြားစေသောအရာများ</a></td>
   </tr>
   <tr>
@@ -226,10 +228,10 @@
 
 </div>
 
-<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="အဆင့်သုံးဆင့်- OmniRoute ကို ထည့်သွင်းပြီး စတင်ပါ၊ သင့်ကိုယ်ပိုင် account သို့မဟုတ် API key ဖြင့် eligible provider တစ်ခု ချိတ်ဆက်ပါ၊ ပြီးနောက် OmniRoute API key နှင့် model auto ကို အသုံးပြု၍ သင့် tool ကို localhost:20128/v1 သို့ ညွှန်ပါ။ Routing သည် ရရှိနိုင်သော eligible ချိတ်ဆက်မှုများနှင့် provider ကန့်သတ်ချက်များပေါ် မူတည်သည်။"/>
+<img src="./docs/diagrams/works-zero-config.svg" width="100%" alt="အဆင့်သုံးဆင့်- 67router ကို ထည့်သွင်းပြီး စတင်ပါ၊ သင့်ကိုယ်ပိုင် account သို့မဟုတ် API key ဖြင့် eligible provider တစ်ခု ချိတ်ဆက်ပါ၊ ပြီးနောက် 67router API key နှင့် model auto ကို အသုံးပြု၍ သင့် tool ကို localhost:20128/v1 သို့ ညွှန်ပါ။ Routing သည် ရရှိနိုင်သော eligible ချိတ်ဆက်မှုများနှင့် provider ကန့်သတ်ချက်များပေါ် မူတည်သည်။"/>
 
 ```bash
-# Provider တစ်ခု ချိတ်ဆက်ပြီးနောက်၊ Dashboard → Endpoints မှ သင့် OmniRoute key ကို ကူးယူပါ-
+# Provider တစ်ခု ချိတ်ဆက်ပြီးနောက်၊ Dashboard → Endpoints မှ သင့် 67router key ကို ကူးယူပါ-
 curl http://localhost:20128/v1/chat/completions \
   -H "Authorization: Bearer YOUR_OMNIROUTE_KEY" \
   -H "Content-Type: application/json" \
@@ -255,15 +257,15 @@ curl http://localhost:20128/v1/chat/completions \
 
 <div align="center">
 
-# 🤔 ဘာကြောင့် OmniRoute လဲ?
+# 🤔 ဘာကြောင့် 67router လဲ?
 
 </div>
 
-<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="ဘာကြောင့် OmniRoute လဲ — dashboard 10 ခု၊ သေသွားသော API key များနှင့် မမျှော်လင့်ထားသော ဘေလ်များကို ရင်ဆိုင်နေရခြင်းမှ ရပ်တန့်ပါ။ နေ့စဉ် နာကျင်မှုဆယ်ခုနှင့် ဖြေရှင်းချက်များ- မသုံးဘဲ သက်တမ်းကုန်သွားသော quota → subscription များကို အကျိုးရှိဆုံး အသုံးချပါ; code ရေးနေစဉ် rate limit → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool output များက token များ လောင်ကျွမ်းစေခြင်း → RTK + Caveman compression (15–95%); expensive API များ → cost-optimized routing; tool တိုင်းအတွက် ကိုယ်ပိုင် setup → endpoint တစ်ခု၊ dashboard တစ်ခု; AI ပိတ်ဆို့ခံရခြင်း → 3-level proxy + TLS stealth; သေသွားသော key များ → 3-layer resilience (circuit breaker, key cooldown, model lockout); team တစ်ခုလုံး subscription တစ်ခု မျှဝေသုံးခြင်း → fair-share quota ပါသော key pool များ; prompt များ တစ်ခြားသူ၏ cloud မှတဆင့် → AES-256-GCM encryption လုပ်ထားသော key များဖြင့် local-first; အသုံးစာရိတ် မမြင်နိုင်ခြင်း → live analytics (usage, quota, savings, p95 latency)"/>
+<img src="./docs/diagrams/why-pain-fix.svg" width="100%" alt="ဘာကြောင့် 67router လဲ — dashboard 10 ခု၊ သေသွားသော API key များနှင့် မမျှော်လင့်ထားသော ဘေလ်များကို ရင်ဆိုင်နေရခြင်းမှ ရပ်တန့်ပါ။ နေ့စဉ် နာကျင်မှုဆယ်ခုနှင့် ဖြေရှင်းချက်များ- မသုံးဘဲ သက်တမ်းကုန်သွားသော quota → subscription များကို အကျိုးရှိဆုံး အသုံးချပါ; code ရေးနေစဉ် rate limit → 4-tier auto-fallback (Subscription → API → Cheap → Free); tool output များက token များ လောင်ကျွမ်းစေခြင်း → RTK + Caveman compression (15–95%); expensive API များ → cost-optimized routing; tool တိုင်းအတွက် ကိုယ်ပိုင် setup → endpoint တစ်ခု၊ dashboard တစ်ခု; AI ပိတ်ဆို့ခံရခြင်း → 3-level proxy + TLS stealth; သေသွားသော key များ → 3-layer resilience (circuit breaker, key cooldown, model lockout); team တစ်ခုလုံး subscription တစ်ခု မျှဝေသုံးခြင်း → fair-share quota ပါသော key pool များ; prompt များ တစ်ခြားသူ၏ cloud မှတဆင့် → AES-256-GCM encryption လုပ်ထားသော key များဖြင့် local-first; အသုံးစာရိတ် မမြင်နိုင်ခြင်း → live analytics (usage, quota, savings, p95 latency)"/>
 
 <div align="center">
 
-<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="OmniRoute request flow- သင့် IDE သို့မဟုတ် CLI (Claude Code, Cursor, Cline…) က local endpoint တစ်ခု (http://localhost:20128/v1) ကို ခေါ်ဆိုသည်။ OmniRoute Smart Router (RTK + Caveman compression, routing strategy 20 ခု, circuit breaker, TLS stealth, MCP, A2A, guardrail) သည် eligible ကျန်းမာသော target ကျန်ရှိနေသေးသရွေ့ provider tier 4 ခုအပေါ် fallback လုပ်နိုင်သည် — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap နှင့် Tier 4 Free"/>
+<img src="./docs/diagrams/tier-cascade.svg" width="100%" alt="67router request flow- သင့် IDE သို့မဟုတ် CLI (Claude Code, Cursor, Cline…) က local endpoint တစ်ခု (http://localhost:20128/v1) ကို ခေါ်ဆိုသည်။ 67router Smart Router (RTK + Caveman compression, routing strategy 20 ခု, circuit breaker, TLS stealth, MCP, A2A, guardrail) သည် eligible ကျန်းမာသော target ကျန်ရှိနေသေးသရွေ့ provider tier 4 ခုအပေါ် fallback လုပ်နိုင်သည် — Tier 1 Subscription, Tier 2 API Key, Tier 3 Cheap နှင့် Tier 4 Free"/>
 
 </div>
 
@@ -281,7 +283,7 @@ curl http://localhost:20128/v1/chat/completions \
   </a>
 </p>
 
-> **Open Source သူငယ်ချင်းအဖြစ် ပါဝင်လိုပါသလား။** ၎င်းတို့သည် open source ကို ထောက်ခံပြီး OmniRoute ကို ဆက်လက်လည်ပတ်နိုင်ရန် ကူညီပေးသည့် ကုမ္ပဏီများဖြစ်သည် — ၎င်းတို့ပေးသော တိုကင်တိုင်း မည်သည့်နေရာသို့ ရောက်ရှိသည်ကို ကျွန်ုပ်တို့ လူသိရှင်ကြား ပြောပြပါသည်။ ဆက်သွယ်ရန်- [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
+> **Open Source သူငယ်ချင်းအဖြစ် ပါဝင်လိုပါသလား။** ၎င်းတို့သည် open source ကို ထောက်ခံပြီး 67router ကို ဆက်လက်လည်ပတ်နိုင်ရန် ကူညီပေးသည့် ကုမ္ပဏီများဖြစ်သည် — ၎င်းတို့ပေးသော တိုကင်တိုင်း မည်သည့်နေရာသို့ ရောက်ရှိသည်ကို ကျွန်ုပ်တို့ လူသိရှင်ကြား ပြောပြပါသည်။ ဆက်သွယ်ရန်- [diegosouza.pw@outlook.com](mailto:diegosouza.pw@outlook.com)
 
 <table>
   <tr>
@@ -296,9 +298,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Founding_Friend-1783FF?style=flat-square" alt="Founding Open Source Friend"/>
     </td>
     <td>
-      ဤပရောဂျက်ကို ပံ့ပိုးပေးသည့် ကျွန်ုပ်တို့၏ တည်ထောင်သူ Open Source သူငယ်ချင်း <b>Kimi (Moonshot AI)</b> အား ကျေးဇူးတင်ပါသည်။ Kimi သည် open-weight K2 နှင့် K3 မော်ဒယ်မိသားစုများနောက်ကွယ်မှ AI ဓာတ်ခွဲခန်းဖြစ်သည် — <b>Kimi K3</b> သည် 1M-token context window၊ native vision နှင့် frontier-level coding တို့ကို closed-model ဈေးနှုန်း၏ အစိတ်အပိုင်းတစ်ခုဖြင့် ပေးစွမ်းပြီး Claude Code၊ Codex နှင့် OmniRoute မှ ပံ့ပိုးပေးသည့် coding tool တိုင်းနှင့် အဆင်ပြေစွာ အလုပ်လုပ်ပါသည်။
+      ဤပရောဂျက်ကို ပံ့ပိုးပေးသည့် ကျွန်ုပ်တို့၏ တည်ထောင်သူ Open Source သူငယ်ချင်း <b>Kimi (Moonshot AI)</b> အား ကျေးဇူးတင်ပါသည်။ Kimi သည် open-weight K2 နှင့် K3 မော်ဒယ်မိသားစုများနောက်ကွယ်မှ AI ဓာတ်ခွဲခန်းဖြစ်သည် — <b>Kimi K3</b> သည် 1M-token context window၊ native vision နှင့် frontier-level coding တို့ကို closed-model ဈေးနှုန်း၏ အစိတ်အပိုင်းတစ်ခုဖြင့် ပေးစွမ်းပြီး Claude Code၊ Codex နှင့် 67router မှ ပံ့ပိုးပေးသည့် coding tool တိုင်းနှင့် အဆင်ပြေစွာ အလုပ်လုပ်ပါသည်။
       <br/><br/>
-      <b>Kimi ၏ ပံ့ပိုးမှုက ဘာတွေလုပ်ဆောင်ပေးသလဲ-</b> Kimi ၏ API credits များသည် OmniRoute ၏ AI-validated release pipeline ကို အားဖြည့်ပေးသည် — pull request တိုင်းကို မထုတ်ပြန်မီ ပြန်လည်သုံးသပ်သည့် <i>merge validation powered by Kimi K3</i> အဆင့် — အပြင် နေ့စဉ် feature development ကိုပါ ပံ့ပိုးပေးပါသည်။ First-class Kimi support သည် လမ်းကြောင်းနှစ်ခုလုံးတွင် ပါဝင်သည်- တိုက်ရိုက် <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) နှင့် <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code coding plan</a> (OAuth နှင့် API key)။ OmniRoute သည် Kimi ၏ ပံ့ပိုးမှုအစီအစဉ်တွင် ပထမဆုံး ဘရာဇီးလ် open-source ပရောဂျက်လည်းဖြစ်သည်။ <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>15% အပို credits ဖြင့် Kimi API key ရယူပါ →</b></a>
+      <b>Kimi ၏ ပံ့ပိုးမှုက ဘာတွေလုပ်ဆောင်ပေးသလဲ-</b> Kimi ၏ API credits များသည် 67router ၏ AI-validated release pipeline ကို အားဖြည့်ပေးသည် — pull request တိုင်းကို မထုတ်ပြန်မီ ပြန်လည်သုံးသပ်သည့် <i>merge validation powered by Kimi K3</i> အဆင့် — အပြင် နေ့စဉ် feature development ကိုပါ ပံ့ပိုးပေးပါသည်။ First-class Kimi support သည် လမ်းကြောင်းနှစ်ခုလုံးတွင် ပါဝင်သည်- တိုက်ရိုက် <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute">Kimi API</a> (<code>kimi-k3</code>) နှင့် <a href="https://www.kimi.ai/code?aff=omniroute">Kimi Code coding plan</a> (OAuth နှင့် API key)။ 67router သည် Kimi ၏ ပံ့ပိုးမှုအစီအစဉ်တွင် ပထမဆုံး ဘရာဇီးလ် open-source ပရောဂျက်လည်းဖြစ်သည်။ <a href="https://platform.kimi.ai?track_id=track-8197581fdd7d4139a0f562e4a03c3798&aff=omniroute"><b>15% အပို credits ဖြင့် Kimi API key ရယူပါ →</b></a>
     </td>
   </tr>
   <tr>
@@ -310,9 +312,9 @@ curl http://localhost:20128/v1/chat/completions \
       <img src="https://img.shields.io/badge/Open_Source_Friend-31f889?style=flat-square&labelColor=04170d" alt="Open Source Friend"/>
     </td>
     <td>
-      ဤပရောဂျက်ကို ပံ့ပိုးပေးသည့် OmniRoute Open Source သူငယ်ချင်း <b>Cheaper Inference</b> အား ကျေးဇူးတင်ပါသည်။ Cheaper Inference သည် Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok နှင့် MiniMax အပါအဝင် frontier မော်ဒယ် ၄၂ ခုကို OpenAI-compatible endpoint တစ်ခုနောက်ကွယ်မှ ပြန်လည်ရောင်းချသည့် ကုန်ကျစရိတ်အလိုက် အဆင့်သတ်မှတ်ထားသော gateway တစ်ခုဖြစ်ပြီး မော်ဒယ်ထုတ်လုပ်သူ၏ စာရင်းဈေးနှုန်းထက် ပိုမိုမကောက်ခံဘဲ တောင်းဆိုမှုတိုင်းကို ဈေးအသက်သာဆုံး အရည်အချင်းပြည့်မီသော ပံ့ပိုးသူထံသို့ လမ်းကြောင်းပြောင်းပေးပါသည်။
+      ဤပရောဂျက်ကို ပံ့ပိုးပေးသည့် 67router Open Source သူငယ်ချင်း <b>Cheaper Inference</b> အား ကျေးဇူးတင်ပါသည်။ Cheaper Inference သည် Claude, GPT-5.x, Gemini, Kimi K3, GLM, DeepSeek, Grok နှင့် MiniMax အပါအဝင် frontier မော်ဒယ် ၄၂ ခုကို OpenAI-compatible endpoint တစ်ခုနောက်ကွယ်မှ ပြန်လည်ရောင်းချသည့် ကုန်ကျစရိတ်အလိုက် အဆင့်သတ်မှတ်ထားသော gateway တစ်ခုဖြစ်ပြီး မော်ဒယ်ထုတ်လုပ်သူ၏ စာရင်းဈေးနှုန်းထက် ပိုမိုမကောက်ခံဘဲ တောင်းဆိုမှုတိုင်းကို ဈေးအသက်သာဆုံး အရည်အချင်းပြည့်မီသော ပံ့ပိုးသူထံသို့ လမ်းကြောင်းပြောင်းပေးပါသည်။
       <br/><br/>
-      <b>OmniRoute တွင် First-class support-</b> Chat Completions၊ native <code>/v1/responses</code> endpoint၊ vision၊ tool calling နှင့် image မော်ဒယ် ၃ ခု (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, <code>cheaperinference/&lt;model&gt;</code> အဖြစ် ရရှိနိုင်သည်)။ <a href="https://cheaperinference.com/?utm_source=omniroute"><b>API key ရယူပါ →</b></a>
+      <b>67router တွင် First-class support-</b> Chat Completions၊ native <code>/v1/responses</code> endpoint၊ vision၊ tool calling နှင့် image မော်ဒယ် ၃ ခု (<code>grok-imagine</code>, <code>nano-banana-pro</code>, <code>nano-banana-2</code>, <code>cheaperinference/&lt;model&gt;</code> အဖြစ် ရရှိနိုင်သည်)။ <a href="https://cheaperinference.com/?utm_source=omniroute"><b>API key ရယူပါ →</b></a>
     </td>
   </tr>
 </table>
@@ -324,7 +326,7 @@ curl http://localhost:20128/v1/chat/completions \
 <details open>
 <summary><sub><b>🎟️ Affiliates Promo</b> — ကျွန်ုပ်တို့ မပံ့ပိုးသော ပံ့ပိုးသူများထံမှ အခမဲ့ စာရင်းသွင်းကူပွန်များ (ချဲ့ရန် နှိပ်ပါ)</sub></summary>
 
-<sub><i>ဤအပိုင်းသည် referral/coupon codes များအတွက်သာဖြစ်သည်။ ပံ့ပိုးထားသော ပူးပေါင်းဆောင်ရွက်မှုများသည် အထက်ပါ <b>🤝 Supported by our Open Source Friends</b> တွင် ရှိပါသည်။ OmniRoute သည် ဤနေရာတွင် ဖော်ပြထားသော ပံ့ပိုးသူများနှင့် ပံ့ပိုးမှု သို့မဟုတ် ပူးပေါင်းဆောင်ရွက်မှု မရှိပါ — ၎င်းတို့သည် မည်သူမဆို အသုံးပြုနိုင်သော အများပြည်သူသုံး ကူပွန်များဖြစ်သည်။</i></sub>
+<sub><i>ဤအပိုင်းသည် referral/coupon codes များအတွက်သာဖြစ်သည်။ ပံ့ပိုးထားသော ပူးပေါင်းဆောင်ရွက်မှုများသည် အထက်ပါ <b>🤝 Supported by our Open Source Friends</b> တွင် ရှိပါသည်။ 67router သည် ဤနေရာတွင် ဖော်ပြထားသော ပံ့ပိုးသူများနှင့် ပံ့ပိုးမှု သို့မဟုတ် ပူးပေါင်းဆောင်ရွက်မှု မရှိပါ — ၎င်းတို့သည် မည်သူမဆို အသုံးပြုနိုင်သော အများပြည်သူသုံး ကူပွန်များဖြစ်သည်။</i></sub>
 
 <table>
   <tr>
@@ -335,14 +337,14 @@ curl http://localhost:20128/v1/chat/completions \
       <br/><sub><b>AgentRouter</b></sub><br/><sub>agentrouter.org</sub>
     </td>
     <td>
-      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — affiliate စာရင်းသွင်းခြင်း · စာရင်းသွင်းခြင်းတွင် <b>$100 အခမဲ့ credits</b> (အခမဲ့ server၊ latency ပိုများနိုင်သည် — စမ်းသပ်ရန် အကောင်းဆုံး၊ ထုတ်လုပ်မှုအတွက် မဟုတ်ပါ)။ OmniRoute တွင် <b>v3.8.50</b> မှစ၍ First-class support- Chat Completions၊ Anthropic-compatible wire format နှင့် OpenAI-compatible path။ ရရှိနိုင်သော မော်ဒယ်များတွင် <code>claude-opus-4-8</code>၊ <code>claude-opus-5</code>၊ <code>gpt-5.6-sol</code> နှင့် အခြားအရာများ ပါဝင်သည်။ <b><a href="https://agentrouter.org/register?aff=70LM">သင့် $100 ကို ရယူပါ →</a></b></sub>
+      <sub><b><a href="https://agentrouter.org/register?aff=70LM">AgentRouter</a></b> — affiliate စာရင်းသွင်းခြင်း · စာရင်းသွင်းခြင်းတွင် <b>$100 အခမဲ့ credits</b> (အခမဲ့ server၊ latency ပိုများနိုင်သည် — စမ်းသပ်ရန် အကောင်းဆုံး၊ ထုတ်လုပ်မှုအတွက် မဟုတ်ပါ)။ 67router တွင် <b>v3.8.50</b> မှစ၍ First-class support- Chat Completions၊ Anthropic-compatible wire format နှင့် OpenAI-compatible path။ ရရှိနိုင်သော မော်ဒယ်များတွင် <code>claude-opus-4-8</code>၊ <code>claude-opus-5</code>၊ <code>gpt-5.6-sol</code> နှင့် အခြားအရာများ ပါဝင်သည်။ <b><a href="https://agentrouter.org/register?aff=70LM">သင့် $100 ကို ရယူပါ →</a></b></sub>
       <br/><br/>
-      <sub>⚠️ <i>Affiliate link — OmniRoute သည် ဤပံ့ပိုးသူနှင့် ပံ့ပိုးမှု သို့မဟုတ် ပူးပေါင်းဆောင်ရွက်မှု မရှိပါ။</i></sub>
+      <sub>⚠️ <i>Affiliate link — 67router သည် ဤပံ့ပိုးသူနှင့် ပံ့ပိုးမှု သို့မဟုတ် ပူးပေါင်းဆောင်ရွက်မှု မရှိပါ။</i></sub>
     </td>
   </tr>
 </table>
 
-<sub>OmniRoute အသုံးပြုသူများအတွက် အကျိုးရှိစေမည့် ရက်ရောသော အခမဲ့ စာရင်းသွင်းကူပွန်ပါရှိသော အခြားပံ့ပိုးသူကို သိပါသလား။ issue တစ်ခုဖွင့်ပါ၊ ကျွန်ုပ်တို့ ဤနေရာတွင် ထည့်သွင်းပေးပါမည်။</sub>
+<sub>67router အသုံးပြုသူများအတွက် အကျိုးရှိစေမည့် ရက်ရောသော အခမဲ့ စာရင်းသွင်းကူပွန်ပါရှိသော အခြားပံ့ပိုးသူကို သိပါသလား။ issue တစ်ခုဖွင့်ပါ၊ ကျွန်ုပ်တို့ ဤနေရာတွင် ထည့်သွင်းပေးပါမည်။</sub>
 
 </details>
 
@@ -356,11 +358,11 @@ curl http://localhost:20128/v1/chat/completions \
 
 <img src="./docs/diagrams/strategies-grid.svg" width="100%" alt="ကွန်ဘို routing strategy 20 ခုအနက် 18 ခုအတွက် လှုပ်ရှားသရုပ်ပြနမူနာများ — strategy တစ်ခုလျှင် tile တစ်ခုစီဖြင့် priority, fill-first, weighted, round-robin, p2c, least-used, random, strict-random, cost-optimized, headroom, reset-window, reset-aware, context-relay, context-optimized, lkgp, auto, fusion, pipeline တို့ကို ပြသထားသည်။ cache-optimized နှင့် quota-weighted ကို လှုပ်ရှားသရုပ်ပြမထားပါ။ အောက်ပါဇယားတွင် 20 ခုလုံးကို ဖော်ပြထားသည်။"/>
 
-> **ကွန်ဘို** ဆိုသည်မှာ OmniRoute က **အလိုအလျောက်** ဖြတ်သန်း route လုပ်ပေးသည့် model များ၏ အစဉ်တန်းတစ်ခုဖြစ်သည်။ quota ကုန်သွားလျှင်၊ provider တစ်ခု ပျက်ကွက်လျှင် သို့မဟုတ် ကုန်ကျစရိတ်များ ရုတ်တရက်မြင့်တက်လာလျှင် ကွန်ဘိုသည် သတ်မှတ်ချက်နှင့်ကိုက်ညီပြီး ကောင်းမွန်စွာအလုပ်လုပ်နေသည့် နောက် model တစ်ခုသို့ ပြောင်းနိုင်သည်။ 🛡️
+> **ကွန်ဘို** ဆိုသည်မှာ 67router က **အလိုအလျောက်** ဖြတ်သန်း route လုပ်ပေးသည့် model များ၏ အစဉ်တန်းတစ်ခုဖြစ်သည်။ quota ကုန်သွားလျှင်၊ provider တစ်ခု ပျက်ကွက်လျှင် သို့မဟုတ် ကုန်ကျစရိတ်များ ရုတ်တရက်မြင့်တက်လာလျှင် ကွန်ဘိုသည် သတ်မှတ်ချက်နှင့်ကိုက်ညီပြီး ကောင်းမွန်စွာအလုပ်လုပ်နေသည့် နောက် model တစ်ခုသို့ ပြောင်းနိုင်သည်။ 🛡️
 
 ### ⚡ Zero-config — `auto` ကိုသာ အသုံးပြုပါ
 
-ကွန်ဘိုဖန်တီးရန် မလိုပါ။ သင့် model ကို `auto` (သို့မဟုတ် variant တစ်ခု) ဟု သတ်မှတ်လိုက်ပါက OmniRoute သည် သင်ချိတ်ဆက်ထားသော provider များမှ virtual combo တစ်ခုကို တိုက်ရိုက်ရမှတ်ပေး၍ တည်ဆောက်ပေးသည်-
+ကွန်ဘိုဖန်တီးရန် မလိုပါ။ သင့် model ကို `auto` (သို့မဟုတ် variant တစ်ခု) ဟု သတ်မှတ်လိုက်ပါက 67router သည် သင်ချိတ်ဆက်ထားသော provider များမှ virtual combo တစ်ခုကို တိုက်ရိုက်ရမှတ်ပေး၍ တည်ဆောက်ပေးသည်-
 
 <table>
   <tr><th align="left">Model ID</th><th align="left">ဦးစားပေး အကောင်းဆုံးဖြစ်အောင် လုပ်ဆောင်သည့်အရာ</th></tr>
@@ -496,7 +498,7 @@ strategy **20** ခုလုံးကို ကွန်ဘိုအဆင့်
 
 ### 🧱 ခံနိုင်ရည်ရှိမှုကို မူလကတည်းက ထည့်သွင်းတည်ဆောက်ထားသည် (သီးခြားအလွှာ 3 ခု)
 
-<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="OmniRoute ၏ ခံနိုင်ရည်ရှိမှု — အချင်းချင်း သီးခြားဖြစ်သော ကိုယ်တိုင်ပြန်လည်ပြုပြင်နိုင်သည့် အလွှာ 3 ခု၊ ချို့ယွင်းမှုတစ်မျိုးစီအတွက် သင့်တော်သောအလွှာ။ အလွှာ 1 provider circuit breaker (provider တစ်ခုလုံး)- 408/5xx တွင်သာ အလုပ်လုပ်ပြီး OAuth 8× / API-key 12× / local 2× ဟူသော သတ်မှတ်ချက်များရှိကာ 60s/30s/15s အကြာတွင် HALF-OPEN စမ်းသပ်မှုအဖြစ် ပြန်လည်သတ်မှတ်ပြီး လိုအပ်သည့်အချိန်မှသာ ပြန်လည်ရယူသည်။ OPEN ဖြစ်နေစဉ် combo သည် နောက် provider သို့ လမ်းကြောင်းပြောင်းပေးသည်။ အလွှာ 2 connection cooldown (key/account တစ်ခု)- OAuth အတွက် အခြေခံ 5s / API-key အတွက် 3s၊ တစ်ပြိုင်နက်တည်း အစုလိုက်ပြန်လည်ကြိုးစားခြင်းကို တားဆီးသည့် ကာကွယ်မှုနှင့်အတူ ×2 exponential backoff ကို အသုံးပြုသည်၊ 429 ဖြစ်လျှင် Retry-After ကို လိုက်နာပြီး အောင်မြင်ပါက error အခြေအနေအားလုံးကို ရှင်းလင်းသည်။ cooldown ဖြစ်နေသော key တစ်ခုကို ကျော်သွားသော်လည်း အခြား key များက ဆက်လက်ဝန်ဆောင်မှုပေးသည်။ အလွှာ 3 model lockout (model တစ်ခု)- model တစ်ခုချင်းစီ၏ 429၊ local 404 သို့မဟုတ် mode ငြင်းပယ်မှုများသည် ထို model တစ်ခုတည်းကိုသာ ပိတ်ဆို့ပြီး connection တစ်ခုလုံးကို မည်သည့်အခါမျှ မပိတ်ဆို့ပါ။ အဆုံးသတ်အခြေအနေများ (ပိတ်ပင်ခံရခြင်း၊ သက်တမ်းကုန်ခြင်း၊ credits ကုန်ဆုံးခြင်း) သည် operator က ကိုင်တွယ်ရန်ဖြစ်ပြီး cooldown များ မဟုတ်ပါ။"/>
+<img src="./docs/diagrams/resilience-layers.svg" width="100%" alt="67router ၏ ခံနိုင်ရည်ရှိမှု — အချင်းချင်း သီးခြားဖြစ်သော ကိုယ်တိုင်ပြန်လည်ပြုပြင်နိုင်သည့် အလွှာ 3 ခု၊ ချို့ယွင်းမှုတစ်မျိုးစီအတွက် သင့်တော်သောအလွှာ။ အလွှာ 1 provider circuit breaker (provider တစ်ခုလုံး)- 408/5xx တွင်သာ အလုပ်လုပ်ပြီး OAuth 8× / API-key 12× / local 2× ဟူသော သတ်မှတ်ချက်များရှိကာ 60s/30s/15s အကြာတွင် HALF-OPEN စမ်းသပ်မှုအဖြစ် ပြန်လည်သတ်မှတ်ပြီး လိုအပ်သည့်အချိန်မှသာ ပြန်လည်ရယူသည်။ OPEN ဖြစ်နေစဉ် combo သည် နောက် provider သို့ လမ်းကြောင်းပြောင်းပေးသည်။ အလွှာ 2 connection cooldown (key/account တစ်ခု)- OAuth အတွက် အခြေခံ 5s / API-key အတွက် 3s၊ တစ်ပြိုင်နက်တည်း အစုလိုက်ပြန်လည်ကြိုးစားခြင်းကို တားဆီးသည့် ကာကွယ်မှုနှင့်အတူ ×2 exponential backoff ကို အသုံးပြုသည်၊ 429 ဖြစ်လျှင် Retry-After ကို လိုက်နာပြီး အောင်မြင်ပါက error အခြေအနေအားလုံးကို ရှင်းလင်းသည်။ cooldown ဖြစ်နေသော key တစ်ခုကို ကျော်သွားသော်လည်း အခြား key များက ဆက်လက်ဝန်ဆောင်မှုပေးသည်။ အလွှာ 3 model lockout (model တစ်ခု)- model တစ်ခုချင်းစီ၏ 429၊ local 404 သို့မဟုတ် mode ငြင်းပယ်မှုများသည် ထို model တစ်ခုတည်းကိုသာ ပိတ်ဆို့ပြီး connection တစ်ခုလုံးကို မည်သည့်အခါမျှ မပိတ်ဆို့ပါ။ အဆုံးသတ်အခြေအနေများ (ပိတ်ပင်ခံရခြင်း၊ သက်တမ်းကုန်ခြင်း၊ credits ကုန်ဆုံးခြင်း) သည် operator က ကိုင်တွယ်ရန်ဖြစ်ပြီး cooldown များ မဟုတ်ပါ။"/>
 
 <sub>📖 [Auto-Combo အင်ဂျင်](docs/routing/AUTO-COMBO.md) · [ခံနိုင်ရည်ရှိမှု လမ်းညွှန်](docs/architecture/RESILIENCE_GUIDE.md)</sub>
 
@@ -504,22 +506,22 @@ strategy **20** ခုလုံးကို ကွန်ဘိုအဆင့်
 
 <div align="center">
 
-## 🏆 OmniRoute ကို ထူးခြားစေသည့်အရာများ
+## 🏆 67router ကို ထူးခြားစေသည့်အရာများ
 
 </div>
 
-<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="OmniRoute ကို ထူးခြားစေသည့်အရာများ — စွမ်းဆောင်ရည် 13 မျိုးအရ 9router၊ OpenRouter၊ CLIProxyAPI နှင့် LiteLLM တို့နှင့် ရက်စွဲအလိုက် နှိုင်းယှဉ်ထားသည့် စွမ်းဆောင်ချက်အကျဉ်းချုပ်။ OmniRoute တွင် ဝန်ဆောင်မှုပေးသူ 375 ခု၊ အသင့်ထည့်သွင်းထားသော အခမဲ့အဆင့် 150 ကျော်၊ လမ်းကြောင်းသတ်မှတ်ခြင်းနည်းဗျူဟာ 20 မျိုး၊ အင်ဂျင် 12 ခုသုံး တိုကင်ချုံ့စနစ်၊ ကိရိယာ 110 ပါသည့် အသင့်ထည့်သွင်းထားသော MCP ဆာဗာ၊ A2A အေးဂျင့်ပရိုတိုကော၊ အမြဲတမ်းမှတ်ဉာဏ်၊ ကာကွယ်ရေးစည်းမျဉ်းများ၊ ကလောက်ဒ်အေးဂျင့်များ၊ TLS fingerprint ကို ဖုံးကွယ်ခြင်း၊ Desktop/Termux/PWA နှင့် i18n UI ဒေသသုံးဘာသာစကား 67 မျိုး ပါဝင်သည်။ OmniRoute သည် MIT လိုင်စင်ဖြင့် ထုတ်ဝေထားပြီး ကိုယ်ပိုင်ဆာဗာတွင် လက်ခံတင်ဆက်နိုင်သည်။ ပြိုင်ဘက်များ၏ စွမ်းဆောင်ရည်များနှင့် အရေအတွက်များသည် ပြောင်းလဲနိုင်သည်။ လင့်ခ်ချိတ်ထားသော နည်းစနစ်ကို ကြည့်ပါ။"/>
+<img src="./docs/diagrams/comparison-table.svg" width="100%" alt="67router ကို ထူးခြားစေသည့်အရာများ — စွမ်းဆောင်ရည် 13 မျိုးအရ 9router၊ OpenRouter၊ CLIProxyAPI နှင့် LiteLLM တို့နှင့် ရက်စွဲအလိုက် နှိုင်းယှဉ်ထားသည့် စွမ်းဆောင်ချက်အကျဉ်းချုပ်။ 67router တွင် ဝန်ဆောင်မှုပေးသူ 375 ခု၊ အသင့်ထည့်သွင်းထားသော အခမဲ့အဆင့် 150 ကျော်၊ လမ်းကြောင်းသတ်မှတ်ခြင်းနည်းဗျူဟာ 20 မျိုး၊ အင်ဂျင် 12 ခုသုံး တိုကင်ချုံ့စနစ်၊ ကိရိယာ 110 ပါသည့် အသင့်ထည့်သွင်းထားသော MCP ဆာဗာ၊ A2A အေးဂျင့်ပရိုတိုကော၊ အမြဲတမ်းမှတ်ဉာဏ်၊ ကာကွယ်ရေးစည်းမျဉ်းများ၊ ကလောက်ဒ်အေးဂျင့်များ၊ TLS fingerprint ကို ဖုံးကွယ်ခြင်း၊ Desktop/Termux/PWA နှင့် i18n UI ဒေသသုံးဘာသာစကား 67 မျိုး ပါဝင်သည်။ 67router သည် MIT လိုင်စင်ဖြင့် ထုတ်ဝေထားပြီး ကိုယ်ပိုင်ဆာဗာတွင် လက်ခံတင်ဆက်နိုင်သည်။ ပြိုင်ဘက်များ၏ စွမ်းဆောင်ရည်များနှင့် အရေအတွက်များသည် ပြောင်းလဲနိုင်သည်။ လင့်ခ်ချိတ်ထားသော နည်းစနစ်ကို ကြည့်ပါ။"/>
 
 <sub>📊 နည်းစနစ်အပြည့်အစုံနှင့် စွမ်းဆောင်ချက်တစ်ခုချင်းအလိုက် 9router၊ OpenRouter၊ CLIProxyAPI နှင့် LiteLLM တို့နှင့် အသေးစိတ်နှိုင်းယှဉ်ချက် → [`docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md`](docs/comparison/OMNIROUTE_VS_ALTERNATIVES.md)</sub>
 
 <br/>
 
-## 💚 OmniRoute ကို ပံ့ပိုးပါ
+## 💚 67router ကို ပံ့ပိုးပါ
 
-OmniRoute သည် MIT လိုင်စင်ရရှိထားပြီး အများမြင်နိုင်စွာ ထိန်းသိမ်းဖွံ့ဖြိုးထားသည်။ ၎င်းက သင့်အချိန် သို့မဟုတ် ငွေကြေးကို ချွေတာပေးပါက လွတ်လပ်စွာ ဆက်လက်ရပ်တည်နိုင်ရန် သင့်နှင့်ကိုက်ညီသည့် နည်းလမ်းကို ရွေးချယ်ပံ့ပိုးနိုင်သည်။ ပံ့ပိုးကူညီမှုသည် လမ်းကြောင်းရွေးချယ်မှု ဦးစားပေးအစီအစဉ်ကို မည်သည့်အခါမျှ မသက်ရောက်ပါ၊ ၎င်းသည် အဆင့်သတ်မှတ်ချက်မဟုတ်ဘဲ မြင်သာမှုကိုသာ ဝယ်ယူခြင်းဖြစ်သည်။
+67router သည် MIT လိုင်စင်ရရှိထားပြီး အများမြင်နိုင်စွာ ထိန်းသိမ်းဖွံ့ဖြိုးထားသည်။ ၎င်းက သင့်အချိန် သို့မဟုတ် ငွေကြေးကို ချွေတာပေးပါက လွတ်လပ်စွာ ဆက်လက်ရပ်တည်နိုင်ရန် သင့်နှင့်ကိုက်ညီသည့် နည်းလမ်းကို ရွေးချယ်ပံ့ပိုးနိုင်သည်။ ပံ့ပိုးကူညီမှုသည် လမ်းကြောင်းရွေးချယ်မှု ဦးစားပေးအစီအစဉ်ကို မည်သည့်အခါမျှ မသက်ရောက်ပါ၊ ၎င်းသည် အဆင့်သတ်မှတ်ချက်မဟုတ်ဘဲ မြင်သာမှုကိုသာ ဝယ်ယူခြင်းဖြစ်သည်။
 
 <table>
-  <tr><td nowrap>⭐ <b>Repo ကို ကြယ်ပေးပါ</b></td><td>အခမဲ့ — မြင်သာမှုကို အမှန်တကယ် အထောက်အကူပြုသည်</td><td><a href="https://github.com/diegosouzapw/OmniRoute">OmniRoute ကို ကြယ်ပေးပါ</a></td></tr>
+  <tr><td nowrap>⭐ <b>Repo ကို ကြယ်ပေးပါ</b></td><td>အခမဲ့ — မြင်သာမှုကို အမှန်တကယ် အထောက်အကူပြုသည်</td><td><a href="https://github.com/diegosouzapw/OmniRoute">67router ကို ကြယ်ပေးပါ</a></td></tr>
   <tr><td nowrap>🐙 <b>GitHub Sponsors</b></td><td>တစ်ကြိမ်တည်း သို့မဟုတ် လစဉ် · ပလက်ဖောင်းအခကြေးငွေ လုံးဝမရှိ</td><td><a href="https://github.com/sponsors/diegosouzapw">github.com/sponsors/diegosouzapw</a></td></tr>
   <tr><td nowrap>☕ <b>Ko-fi</b></td><td>လျင်မြန်သော တစ်ကြိမ်တည်း အလှူငွေ၊ အလှူရှင်အတွက် စာရင်းသွင်းရန်မလို</td><td><a href="https://ko-fi.com/diegosouzapw">ko-fi.com/diegosouzapw</a></td></tr>
   <tr><td nowrap>🧋 <b>Buy Me a Coffee</b></td><td>သေးငယ်ပြီး အလွတ်သဘော ပံ့ပိုးမှု</td><td><a href="https://www.buymeacoffee.com/diegosouzapw">buymeacoffee.com/diegosouzapw</a></td></tr>
@@ -530,7 +532,7 @@ OmniRoute သည် MIT လိုင်စင်ရရှိထားပြီ�
 
 **🇧🇷 PIX** — ချက်ချင်း၊ အခကြေးငွေမရှိ (ဘရာဇီး)
 
-<img src="docs/assets/pix-qr.png" width="140" align="right" alt="OmniRoute PIX QR ကုဒ်"/>
+<img src="docs/assets/pix-qr.png" width="140" align="right" alt="67router PIX QR ကုဒ်"/>
 
 သော့ (ကျပန်း): `5d865059-bc44-483a-962d-43ceb80126eb`
 
@@ -562,15 +564,15 @@ Pix copia-e-cola:
 
 <p><strong>ဆော့ဖ်ဝဲရေးသားသူ မှတ်စုများ:</strong> ဆော့ဖ်ဝဲရေးသားသူများ အဆင်ပြေစေရန် ပရောဂျက်သည် npm install/postinstall လုပ်ဆောင်စဉ် စက်တွင်း <code>.env</code> ဖိုင်တစ်ခုကို ထုတ်လုပ်နိုင်သည်။ ဤဖိုင်ကို <code>.gitignore</code> မှတစ်ဆင့် ရည်ရွယ်ချက်ရှိရှိ လျစ်လျူရှုထားပြီး (<code>.gitignore</code> ကို ကြည့်ပါ) မည်သည့်အခါမျှ commit မလုပ်ရပါ — မတော်တဆ commit လုပ်မိပါက ဖော်ထုတ်ခံထားရသည့် လျှို့ဝှက်ချက်များကို ပြောင်းလဲပြီး ဖိုင်ကို မှတ်တမ်းမှ ဖယ်ရှားပါ။ စက်တွင်း ပတ်ဝန်းကျင်ဖိုင်များနှင့် လျှို့ဝှက်ချက်များကို စီမံခန့်ခွဲရန် လမ်းညွှန်ချက်များအတွက် <a href="docs/DEVELOPER-ENVIRONMENT.md">docs/DEVELOPER-ENVIRONMENT.md</a> ကို ကြည့်ပါ။</p>
 
-## 📡 OmniRoute Radar
+## 📡 67router Radar
 
 အထက်တွင် မှတ်တမ်းပြုစုဖော်ပြထားပြီး pool အလိုက် ထပ်နေမှုများကို ဖယ်ရှားထားသည့် catalog မှ အဓိက free-tier ပမာဏသည် **တစ်လလျှင် token ~1.62B** အဖြစ် ဆက်လက်ရှိနေပါသည်။
-ယာယီ provider signup credit များကြောင့် ပထမလတွင် သီးခြားစီ **~2.22B** အထိ တိုးမြင့်နိုင်ပါသည်။ Radar သည် OmniRoute release များကြားတွင် free-model ရရှိနိုင်မှုဆိုင်ရာ အချက်အလက်များကို ပိုမိုလတ်ဆတ်စွာ ရယူလိုသူများအတွက် စိတ်ကြိုက်ရွေးချယ်အသုံးပြုနိုင်သည့်၊ လက်မှတ်ရေးထိုးအတည်ပြုထားသော catalog overlay တစ်ခုဖြစ်ပါသည်။ community catalog နှင့် လက်ရှိရှိပြီးသား အခမဲ့ feature အားလုံးသည် ဆက်လက်၍ အခမဲ့ဖြစ်ပါသည်။
+ယာယီ provider signup credit များကြောင့် ပထမလတွင် သီးခြားစီ **~2.22B** အထိ တိုးမြင့်နိုင်ပါသည်။ Radar သည် 67router release များကြားတွင် free-model ရရှိနိုင်မှုဆိုင်ရာ အချက်အလက်များကို ပိုမိုလတ်ဆတ်စွာ ရယူလိုသူများအတွက် စိတ်ကြိုက်ရွေးချယ်အသုံးပြုနိုင်သည့်၊ လက်မှတ်ရေးထိုးအတည်ပြုထားသော catalog overlay တစ်ခုဖြစ်ပါသည်။ community catalog နှင့် လက်ရှိရှိပြီးသား အခမဲ့ feature အားလုံးသည် ဆက်လက်၍ အခမဲ့ဖြစ်ပါသည်။
 
 ပံ့ပိုးသူများသည် live catalog နှင့် ထပ်ဆောင်း provider အခွင့်အလမ်းများကို ရရှိနိုင်ပါသည်။ Provider များ၏ ရရှိနိုင်မှုအပေါ် မူတည်၍ ၎င်း၏ သီးခြားပြောင်းလဲနိုင်သော အမြင့်ဆုံးပမာဏမှာ **အများဆုံး တစ်လလျှင် token ခန့်မှန်းခြေ 3B** ဖြစ်ပါသည်။
 ထိုအမြင့်ဆုံးပမာဏသည် အာမခံချက်မဟုတ်ပါ။ Provider များသည် quota၊ eligibility၊ model သို့မဟုတ် region များကို အချိန်မရွေး ပြောင်းလဲနိုင်ပါသည်။
 
-Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသည်။ OmniRoute client သည် prompt များ၊ traffic၊ provider configuration၊ usage telemetry သို့မဟုတ် local announcement-dismiss state တို့ကို upload မလုပ်ပါ။ Eligibility နှင့် လက်ရှိ catalog အကြောင်းကို **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)** တွင် လေ့လာနိုင်ပါသည်။
+Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသည်။ 67router client သည် prompt များ၊ traffic၊ provider configuration၊ usage telemetry သို့မဟုတ် local announcement-dismiss state တို့ကို upload မလုပ်ပါ။ Eligibility နှင့် လက်ရှိ catalog အကြောင်းကို **[radar.omniroute.online/planos](https://radar.omniroute.online/planos)** တွင် လေ့လာနိုင်ပါသည်။
 
 <br/>
 
@@ -588,14 +590,14 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 - **🔑 Per-key routing ထိန်းချုပ်မှု** — `forcedModel` ဖြင့် API key တစ်ခုကို မော်ဒယ် သို့မဟုတ် combo တစ်ခုသို့ pin လုပ်နိုင်ပြီး၊ key ရဲ့ မော်ဒယ်တွေနဲ့ combo တွေကို atomically ထည့်/ဖြုတ်နိုင်သည် (`/api/keys/{id}/access`)။ → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
 - **🛡️ ပိုသေးစိတ်တဲ့ PII ထိန်းချုပ်မှုများ** — type အလိုက် ရွေးချယ်နိုင်မှု၊ အတည်ပြုပြီးသော စိတ်ကြိုက် masking pattern ၂၀ ခုအထိနဲ့ type အလိုက် detection counter များ; masking ကိုယ်တိုင်ကတော့ opt-in အဖြစ်သာ ဆက်ရှိနေသည်။ → [Guardrails](docs/security/GUARDRAILS.md)
 - **🌍 ဘာသာစကား ၆၇ ခု** — dashboard, docs mirror များနဲ့ CLI အတွက်၊ `npm run i18n:add-locale` က ဘာသာစကားတစ်ခုကို command တစ်ခုတည်းနဲ့ နေရာတိုင်းသို့ ထည့်ပေးသည်။ → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — သင့် agent fleet သို့ inbound A2A delegation၊ Agent Card ပေါ်က Conductor skill များ၊ Faro push-to-talk voice chat ပါဝင်တဲ့ dashboard panel တစ်ခု။ → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🎛️ OmniConductor** — သင့် agent fleet သို့ inbound A2A delegation၊ Agent Card ပေါ်က Conductor skill များ၊ Faro push-to-talk voice chat ပါဝင်တဲ့ dashboard panel တစ်ခု။
 - **🛂 Adaptive admission & overload ကာကွယ်မှု** — heavyweight chat request တွေကို 503 မဖြစ်စေဘဲ queue ထဲတင်ပေးပြီး၊ connection တစ်ခုချင်းစီအတွက် atomic RPM rolling lease များ အသုံးပြုသည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🗂️ Canonical `/v1/models` စီစဉ်မှု** — provider တစ်ခုချင်းစီအတွက် provider-အုပ်စုလိုက် ဆက်စပ် block တစ်ခုချင်း (combo တွေကို အရင် pin ထား)၊ catalog source အားလုံးမှာ တည်ငြိမ်နေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🗜️ Compression ခိုင်မာစေခြင်း** — default-on inflation guard၊ DE / FR / JA + တရုတ် (wényán) အတွက် Caveman pack များ၊ Gradle & .NET အတွက် RTK filter များ။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
 - **💸 ရိုးသားတဲ့ flat-rate ကုန်ကျစရိတ်** — subscription / coding-plan provider တွေကို cost analytics မှာ **$0** အဖြစ် ဖော်ပြပြီး; budget, quota & routing ကတော့ ခန့်မှန်းချက်တွေ ဆက်လုပ်နေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **⚖️ Quota-Share routing** — shared account တစ်ခုရဲ့ quota ကို pooled key တွေကြား မျှတစွာ ခွဲဝေပြီး၊ idle slice တွေကို အခြားသူများအား ငှားထားနိုင်အောင် work-conserving ဖြစ်သည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
 - **🤖 Command တစ်ခုတည်း CLI/agent setup** — register လုပ်ထားတဲ့ `setup-*` command ၁၅ ခု; `omniroute run` က CLI ၇ ခု (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI) ကို launch လုပ်သည်; `omniroute configure` က interactive provider+model picker နဲ့ per-context favorites ဖြင့် target ၁၁ ခုကို support လုပ်သည်။ → [CLI Integrations](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote မုဒ်** — scoped token များ (`connect` / `contexts` / `tokens`) ဖြင့် remote OmniRoute ကို ထိန်းချုပ်နိုင်ပြီး၊ VPS install များအတွက် `antigravity` OAuth helper ပါ။ → [Remote Mode](docs/guides/REMOTE-MODE.md)
+- **🛰️ Remote မုဒ်** — scoped token များ (`connect` / `contexts` / `tokens`) ဖြင့် remote 67router ကို ထိန်းချုပ်နိုင်ပြီး၊ VPS install များအတွက် `antigravity` OAuth helper ပါ။ → [Remote Mode](docs/guides/REMOTE-MODE.md)
 - **🧭 ပိုဉာဏ်ရည်မြင့်တဲ့ auto-routing** — `auto/<category>:<tier>` combo များ၊ **Fusion** (model panel + judge), task-aware routing, per-request model / mode / USD-budget override များ။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🗜️ Pluggable compression** — composable engine ၁၂ ခု + Compression Studios: LLMLingua-2, two-tier Ultra, omniglyph, per-step fidelity gate, GCF v3.2, drag-reorder editor။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
 - **🕵️ Transparent MITM decrypt (TPROXY)** — proxy env var တွေကို လျစ်လျူရှုတဲ့ CLI တွေကို ဖမ်းဆီးနိုင်ပြီး၊ per-SNI CA + trust-store installer ပါဝင်သည်။ → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
@@ -605,7 +607,7 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 - **🖼️ Endpoint အသစ်များ** — `/v1/ocr` (Mistral OCR) နဲ့ `/v1/audio/translations` (Whisper-style) တို့က media surface ကို ပြည့်စုံစေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🎨 ပုံရိပ် / ဗီဒီယို / အသံ ထုတ်လုပ်မှု** — media အတွက် API တစ်ခုတည်း: xAI Grok Imagine & Novita AI video, ComfyUI, Magnific, Adobe Firefly, Segmind, ElevenLabs ကဲ့သို့ speech provider များ။ → [API Reference](docs/reference/API_REFERENCE.md)
 - **🌍 Deployment & ops** — reverse-proxy `basePath`, browser-language auto-detect, per-key device tracking, root-less MITM trust, zh-TW localization။ → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Provider နဲ့ agent ပိုများလာသည်** — cloud agent များ (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login ပါတဲ့ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi တရားဝင် မိတ်ဆွေဖက် (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… နဲ့ ပြန်လည်ဆန်းသစ်ထားတဲ့ **375-provider catalog**။ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **🤝 Provider နဲ့ agent ပိုများလာသည်** — cloud agent များ (Codex Cloud, Cursor, Devin, Jules), browser + OAuth login ပါတဲ့ Grok Build (xAI), Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi တရားဝင် မိတ်ဆွေဖက် (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… နဲ့ ပြန်လည်ဆန်းသစ်ထားတဲ့ **372-provider catalog**။ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
 - **📡 Routing ပွင့်လင်းမြင်သာမှု** — response တိုင်းမှာ ၎င်းကို ဝန်ဆောင်မှုပေးတဲ့ strategy/provider/latency ကို ဖော်ပြတဲ့ `X-OmniRoute-Decision` header ပါဝင်ပြီး၊ `cache-optimized` combo strategy အသစ် + Auto-Combo `cacheAffinity` factor က ထပ်လာတဲ့ request တွေကို cached prefix ကိုင်ဆောင်ထားတဲ့ connection ဆီ ပြန်ပို့ပေးသည်၊ read-only `/v1/auto-combo/{channel}/candidates` endpoint ကလည်း `auto/*` channel တစ်ခုရဲ့ live candidate pool ကို ဖော်ပြပေးသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **⚡ ဒေသတွင်း စွမ်းဆောင်ရည်နှင့် အခြေခံအဆောက်အအုံ** — တစ်ချက်နှိပ်ရုံဖြင့် အသုံးပြုနိုင်သော local Redis၊ Cloudflare Workers / Deno Deploy relay deployer များ၊ ကြီးကြပ်ခံ embedded service များအဖြစ် ပါဝင်သော Bifrost နှင့် Mux။ → [Embedded ဝန်ဆောင်မှုများ](docs/frameworks/EMBEDDED-SERVICES.md)
 - **🧩 ထပ်ပါဝင်သောအရာများ** — plugin framework + marketplace၊ Omni/Agent/GitHub skills framework များ၊ Obsidian vault ပေါင်းစည်းမှု (MCP tool 22 ခု)၊ OpenAI-compatible Batch & Files API များ၊ semantic response cache၊ leaderboard များပါ gamification၊ ACP agent ရှာဖွေတွေ့ရှိမှု (built-in agent 15 ခု)၊ BigQuery သို့ စီစဉ်ထားသော log တင်ပို့မှု၊ `auto/chaos` parallel multi-model fan-out၊ Telegram bot တံတား၊ app အတွင်းရှိ version manager နှင့် LMArena-ELO free-provider အဆင့်သတ်မှတ်ချက်များ။ → [စာရွက်စာတမ်းများ](docs/README.md)
@@ -665,7 +667,7 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 
 <br/>
 
-**ပံ့ပိုးထားသည့် မည်သည့် CLI ကိုမဆို command တစ်ခုတည်းဖြင့် OmniRoute မှတစ်ဆင့် စတင်ပါ** — config ဖိုင်များ ရေးသားခြင်းမရှိဘဲ၊
+**ပံ့ပိုးထားသည့် မည်သည့် CLI ကိုမဆို command တစ်ခုတည်းဖြင့် 67router မှတစ်ဆင့် စတင်ပါ** — config ဖိုင်များ ရေးသားခြင်းမရှိဘဲ၊
 လုပ်ငန်းစဉ်တစ်ခုချင်းစီအလိုက် အထောက်အထားများကို ထည့်သွင်းပေးပြီး Qwen/Gemini အတွက် တစ်ခါသုံး သီးခြား home ကို အသုံးပြုသည်-
 
 ```bash
@@ -758,7 +760,7 @@ command တိုင်းသည် လက်ရှိအသုံးပြု�
 
 <div align="center">
 
-## 🖥️ OmniRoute လည်ပတ်နိုင်သည့်နေရာ — နေရာတိုင်း
+## 🖥️ 67router လည်ပတ်နိုင်သည့်နေရာ — နေရာတိုင်း
 
 </div>
 
@@ -774,7 +776,7 @@ command တိုင်းသည် လက်ရှိအသုံးပြု�
   <tr><td align="left" nowrap>📱 <b>Android (Termux)</b></td><td align="left" nowrap><code>pkg install nodejs && npx -y omniroute</code></td><td align="left"><b>သင့်ဖုန်းပေါ်တွင်</b> 24/7 လည်ပတ်ပြီး root မလိုပါ</td></tr>
   <tr><td align="left" nowrap>📲 <b>PWA</b></td><td align="left" nowrap>"ပင်မမျက်နှာပြင်သို့ ထည့်ရန်"</td><td align="left">မျက်နှာပြင်အပြည့်၊ အော့ဖ်လိုင်း၊ browser မှ ထည့်သွင်းနိုင်မှု</td></tr>
   <tr><td align="left" nowrap>🧩 <b>OpenCode plugin</b></td><td align="left" nowrap><code>@omniroute/opencode-provider</code></td><td align="left">မူရင်း OpenCode ပေါင်းစပ်မှု</td></tr>
-  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap><b>OmniCopilot</b> extension ကို ထည့်သွင်းပါ</td><td align="left">မူရင်း Copilot Chat ရွေးချယ်ကိရိယာအတွင်းရှိ OmniRoute model အားလုံး — stable နှင့် Insiders</td></tr>
+  <tr><td align="left" nowrap>🤖 <b>VS Code Copilot Chat</b></td><td align="left" nowrap><b>OmniCopilot</b> extension ကို ထည့်သွင်းပါ</td><td align="left">မူရင်း Copilot Chat ရွေးချယ်ကိရိယာအတွင်းရှိ 67router model အားလုံး — stable နှင့် Insiders</td></tr>
   <tr><td align="left" nowrap>🛠️ <b>source မှ</b></td><td align="left" nowrap><code>npm install && npm run dev</code></td><td align="left">ပြင်ဆင်စမ်းသပ်ပြီး ပါဝင်ကူညီပါ</td></tr>
 </table>
 
@@ -784,18 +786,18 @@ command တိုင်းသည် လက်ရှိအသုံးပြု�
 
 <div align="center">
 
-### 🧩 အသစ်: VS Code ၏ မူရင်း Copilot Chat အတွင်းရှိ OmniRoute
+### 🧩 အသစ်: VS Code ၏ မူရင်း Copilot Chat အတွင်းရှိ 67router
 
 </div>
 
-> sidebar အသစ်လည်း မလို၊ chat UI အသစ်လည်း မလိုပါ — OmniRoute က ဝန်ဆောင်မှုပေးသည့် model အားလုံးသည်
+> sidebar အသစ်လည်း မလို၊ chat UI အသစ်လည်း မလိုပါ — 67router က ဝန်ဆောင်မှုပေးသည့် model အားလုံးသည်
 > **သင်အသုံးပြုနေပြီးသား Copilot Chat model ရွေးချယ်ကိရိယာ** ထဲတွင် တိုက်ရိုက်ပေါ်လာပါသည်။ VS Code 1.122 မှစ၍ provider model များသည်
 > GitHub အကောင့်ဝင်ခြင်း သို့မဟုတ် Copilot subscription မပါဘဲ အလုပ်လုပ်ပါသည် — agent mode၊ tool calling နှင့် vision တို့ကို
 > အခမဲ့ အသုံးပြုနိုင်သည်။
 
-**[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)** extension ကို ထည့်သွင်းပြီး သင့် OmniRoute ဆာဗာသို့
+**[OmniCopilot](https://github.com/diegosouzapw/OmniCopilot)** extension ကို ထည့်သွင်းပြီး သင့် 67router ဆာဗာသို့
 ညွှန်ပေးပါ (မူလတန်ဖိုးမှာ `localhost:20128`)၊ ထို့နောက် Copilot Chat → model ရွေးချယ်ကိရိယာ
-→ **Model များကို စီမံရန်…** → **OmniRoute** ကို ဖွင့်ပါ။
+→ **Model များကို စီမံရန်…** → **67router** ကို ဖွင့်ပါ။
 
 <table>
   <tr><th align="left">Store</th><th align="left">လင့်ခ်</th><th align="left">တွဲဖက်အသုံးပြုနိုင်သည့်အရာများ</th></tr>
@@ -803,7 +805,7 @@ command တိုင်းသည် လက်ရှိအသုံးပြု�
   <tr><td align="left" nowrap>🔓 <b>Open VSX Registry</b></td><td align="left"><a href="https://open-vsx.org/extension/diegosouzapw/omnicopilot">ထည့်သွင်းရန် →</a></td><td align="left">Cursor၊ Windsurf၊ VSCodium၊ Theia၊ code-server၊ Gitpod၊ Antigravity၊ Kiro…</td></tr>
 </table>
 
-Editor အတွင်းမှ **Extensions** မြင်ကွင်းကို ဖွင့်ပြီး **"OmniRoute"** ဟု ရှာကာ **ထည့်သွင်းရန်** ကို နှိပ်ပါ
+Editor အတွင်းမှ **Extensions** မြင်ကွင်းကို ဖွင့်ပြီး **"67router"** ဟု ရှာကာ **ထည့်သွင်းရန်** ကို နှိပ်ပါ
 — store နှစ်ခုစလုံးတွင် အလုပ်လုပ်ပုံ အတူတူဖြစ်သည်။ Source၊ issue များနှင့် ဖြန့်ချိရေး runbook ကို
 [diegosouzapw/OmniCopilot](https://github.com/diegosouzapw/OmniCopilot) တွင် ရရှိနိုင်သည်။
 
@@ -823,9 +825,9 @@ Editor အတွင်းမှ **Extensions** မြင်ကွင်းကိ
 > terminal window မလိုသလို `npm install -g omniroute` ကိုလည်း အမြဲစောင့်ကြည့်ပေးနေရန် မလိုပါ။**
 
 [Tauri v2](https://v2.tauri.app/) ဖြင့် တည်ဆောက်ထားပြီး (ပမာဏမှာ အနီးစပ်ဆုံးတွက်ချက်မှုအမှားလောက်သာရှိသည့် Rust core) ၎င်းတွင်
-ကိုယ်ပိုင် လက်မှတ်ထိုးထားသော Node 24 runtime ပါဝင်ကာ အက်ပ်ပိုင် OmniRoute ထည့်သွင်းမှုကို စီမံပေးသောကြောင့် သင့်
+ကိုယ်ပိုင် လက်မှတ်ထိုးထားသော Node 24 runtime ပါဝင်ကာ အက်ပ်ပိုင် 67router ထည့်သွင်းမှုကို စီမံပေးသောကြောင့် သင့်
 ကမ္ဘာလုံးဆိုင်ရာ `node`/`bun` နှင့် မည်သည့်အခါမျှ ပဋိပက္ခမဖြစ်ပါ။ ၎င်းသည် **သင်၏ ရှိပြီးသား `~/.omniroute/` config နှင့် database ကို မျှဝေအသုံးပြုသည်** — ထို့ကြောင့်
-၎င်းသည် သင်လည်ပတ်နေပြီးသား OmniRoute အတူတူပင်ဖြစ်ပြီး ဦးထုပ်တစ်လုံးသာ ဆောင်းထားခြင်းဖြစ်သည်။ 🎩
+၎င်းသည် သင်လည်ပတ်နေပြီးသား 67router အတူတူပင်ဖြစ်ပြီး ဦးထုပ်တစ်လုံးသာ ဆောင်းထားခြင်းဖြစ်သည်။ 🎩
 
 <table>
   <tr><th align="left">လုပ်ဆောင်ပေးသည့်အရာ</th><th align="left">လုပ်ဆောင်ပုံ</th></tr>
@@ -843,7 +845,7 @@ brew install --cask zoispag/tap/omniroute-tray
 <sub>ဒေါင်းလုဒ်ရယူလိုပါသလား။ နောက်ဆုံးထွက် <code>.dmg</code> ကို
 <a href="https://github.com/zoispag/omniroute-tray/releases">Releases</a> မှ ရယူပါ။ Source၊ issues နှင့် build
 ဆိုင်ရာ စာရွက်စာတမ်းများကို <a href="https://github.com/zoispag/omniroute-tray">zoispag/omniroute-tray</a> တွင် ရရှိနိုင်ပါသည်။
-<br/>💛 <a href="https://github.com/zoispag">@zoispag</a> မှ ဖန်တီးထားသော community project တစ်ခုဖြစ်ပြီး တရားဝင် OmniRoute release မဟုတ်ပါ။</sub>
+<br/>💛 <a href="https://github.com/zoispag">@zoispag</a> မှ ဖန်တီးထားသော community project တစ်ခုဖြစ်ပြီး တရားဝင် 67router release မဟုတ်ပါ။</sub>
 
 <br/>
 
@@ -853,7 +855,7 @@ brew install --cask zoispag/tap/omniroute-tray
 
 </div>
 
-<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="သီးသန့်ဖြစ်ပြီး local-first — OmniRoute ၏ gateway နှင့် control plane တို့သည် သင့်စက်ပေါ်တွင် အလုပ်လုပ်သည်။ Prompt များကို request တစ်ခုစီအတွက် ရွေးချယ်ထားသော upstream provider ထံ ပေးပို့သည်။ OmniRoute သည် hosted prompt-processing hop ထပ်မထည့်သည့်အပြင် telemetry ကိုလည်း ပုံမှန်အားဖြင့် ပိတ်ထားသည်။ အထောက်အထားများကို AES-256-GCM ဖြင့် သိမ်းဆည်းထားချိန်တွင် ကုဒ်ဝှက်ထားသည်။ ထိန်းချုပ်မှုများတွင် API-key scope သတ်မှတ်ခြင်း၊ IP filtering၊ rate limit များ၊ prompt-injection အကာအကွယ်များ၊ upstream-header ရှင်းလင်းခြင်း၊ ရွေးချယ်ဖွင့်နိုင်သော PII ဖယ်ရှားခြင်း၊ လုံခြုံအောင် ရှင်းလင်းထားသော error များနှင့် local SQLite audit trail တို့ ပါဝင်သည်။ OmniRoute သည် MIT လိုင်စင်ဖြင့် ဖြန့်ချိထားပြီး ကိုယ်တိုင် host လုပ်နိုင်သည်။"/>
+<img src="./docs/diagrams/privacy-local.svg" width="100%" alt="သီးသန့်ဖြစ်ပြီး local-first — 67router ၏ gateway နှင့် control plane တို့သည် သင့်စက်ပေါ်တွင် အလုပ်လုပ်သည်။ Prompt များကို request တစ်ခုစီအတွက် ရွေးချယ်ထားသော upstream provider ထံ ပေးပို့သည်။ 67router သည် hosted prompt-processing hop ထပ်မထည့်သည့်အပြင် telemetry ကိုလည်း ပုံမှန်အားဖြင့် ပိတ်ထားသည်။ အထောက်အထားများကို AES-256-GCM ဖြင့် သိမ်းဆည်းထားချိန်တွင် ကုဒ်ဝှက်ထားသည်။ ထိန်းချုပ်မှုများတွင် API-key scope သတ်မှတ်ခြင်း၊ IP filtering၊ rate limit များ၊ prompt-injection အကာအကွယ်များ၊ upstream-header ရှင်းလင်းခြင်း၊ ရွေးချယ်ဖွင့်နိုင်သော PII ဖယ်ရှားခြင်း၊ လုံခြုံအောင် ရှင်းလင်းထားသော error များနှင့် local SQLite audit trail တို့ ပါဝင်သည်။ 67router သည် MIT လိုင်စင်ဖြင့် ဖြန့်ချိထားပြီး ကိုယ်တိုင် host လုပ်နိုင်သည်။"/>
 
 <sub>📖 [ခွင့်ပြုချက်သတ်မှတ်ခြင်း](docs/architecture/AUTHZ_GUIDE.md) · [အကာအကွယ်စည်းမျဉ်းများ](docs/security/GUARDRAILS.md) · [စည်းမျဉ်းလိုက်နာမှု](docs/security/COMPLIANCE.md)</sub>
 
@@ -865,7 +867,7 @@ brew install --cask zoispag/tap/omniroute-tray
 
 </div>
 
-> ဆာဗာအပြင် OmniRoute သည် **command 80+ ပါဝင်သော ပြည့်စုံသည့် command-line ထိန်းချုပ်ခန်း**တစ်ခုဖြစ်ပြီး၊ AI agent တစ်ခုက **ကိုယ်တိုင်** ထိန်းချုပ်မောင်းနှင်နိုင်စေရန် open agent protocol များလည်း ပါဝင်သည်။
+> ဆာဗာအပြင် 67router သည် **command 80+ ပါဝင်သော ပြည့်စုံသည့် command-line ထိန်းချုပ်ခန်း**တစ်ခုဖြစ်ပြီး၊ AI agent တစ်ခုက **ကိုယ်တိုင်** ထိန်းချုပ်မောင်းနှင်နိုင်စေရန် open agent protocol များလည်း ပါဝင်သည်။
 
 ### ⌨️ တကယ့် CLI (`start` တစ်ခုတည်းသာ မဟုတ်ပါ)
 
@@ -876,9 +878,9 @@ omniroute setup         # လမ်းညွှန်ချက်ပါသော
 omniroute doctor        # provider များ၊ port များနှင့် native dependency များကို စစ်ဆေးဖော်ထုတ်ရန်
 ```
 
-### 🛰️ Remote mode — CLI ကို ဤနေရာတွင် အသုံးပြုပြီး OmniRoute ကို VPS ပေါ်တွင် လည်ပတ်ပါ
+### 🛰️ Remote mode — CLI ကို ဤနေရာတွင် အသုံးပြုပြီး 67router ကို VPS ပေါ်တွင် လည်ပတ်ပါ
 
-OmniRoute ကို ဆာဗာတစ်ခုပေါ်တွင် လည်ပတ်နေပါသလား။ **တူညီသော CLI** ကို အသုံးပြုပြီး သင့် laptop မှ ထိန်းချုပ်ပါ။ Scope သတ်မှတ်ထားသော access token ဖြင့် တစ်ကြိမ် login ဝင်ပြီးနောက်
+67router ကို ဆာဗာတစ်ခုပေါ်တွင် လည်ပတ်နေပါသလား။ **တူညီသော CLI** ကို အသုံးပြုပြီး သင့် laptop မှ ထိန်းချုပ်ပါ။ Scope သတ်မှတ်ထားသော access token ဖြင့် တစ်ကြိမ် login ဝင်ပြီးနောက်
 command အားလုံးသည် remote ကို ဦးတည်လုပ်ဆောင်မည်ဖြစ်သည်။
 
 ```bash
@@ -894,31 +896,30 @@ Token များတွင် `read` / `write` / `admin` scope များ သ
 
 <div align="left">
 
-<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="OmniRoute CLI ကို သရုပ်ပြသည့် လှုပ်ရှားနေသော terminal — omniroute providers list၊ omniroute combo list နှင့် omniroute health — command 89 ခုပါသော top-level မျက်နှာပြင်တစ်လျှောက် အလှည့်ကျပြသသည်: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
+<img src="./docs/diagrams/cli-terminal.svg" width="50%" alt="67router CLI ကို သရုပ်ပြသည့် လှုပ်ရှားနေသော terminal — omniroute providers list၊ omniroute combo list နှင့် omniroute health — command 89 ခုပါသော top-level မျက်နှာပြင်တစ်လျှောက် အလှည့်ကျပြသသည်: providers · oauth · keys · combo · nodes · models · cache · compression · cost · usage · quota · health · resilience · telemetry · logs · audit · mcp · a2a · cloud · memory · skills · eval · tunnel · backup · sync · webhooks · policy · pricing · translator · simulate …"/>
 
 </div>
 
-### 🤝 Agent တစ်ခုကို ချိတ်ဆက်ပါ — ထို့နောက် ၎င်းက OmniRoute ကို ကိုယ်တိုင်ထိန်းချုပ်နိုင်သည်
+### 🤝 Agent တစ်ခုကို ချိတ်ဆက်ပါ — ထို့နောက် ၎င်းက 67router ကို ကိုယ်တိုင်ထိန်းချုပ်နိုင်သည်
 
-OmniRoute ကို **MCP**၊ **A2A**၊ **REST API**၊ **webhooks** သို့မဟုတ် **remote CLI** မှတစ်ဆင့် ဖွင့်ပေးပါ — လုပ်ဆောင်နိုင်စွမ်းရှိသော မည်သည့် agent မဆို (သို့မဟုတ် သင့်ကိုယ်ပိုင် code) သည် routing၊ provider များ၊ combo များ၊ cache၊ compression နှင့် memory အပါအဝင် gateway တစ်ခုလုံးကို အလိုအလျောက် ထိန်းချုပ်နိုင်မည်ဖြစ်သည်။ အောက်ပါ HTTP endpoint များကို `http://localhost:20128` အောက်တွင် ဝန်ဆောင်မှုပေးထားသည်။
+67router ကို **MCP**၊ **A2A**၊ **REST API**၊ **webhooks** သို့မဟုတ် **remote CLI** မှတစ်ဆင့် ဖွင့်ပေးပါ — လုပ်ဆောင်နိုင်စွမ်းရှိသော မည်သည့် agent မဆို (သို့မဟုတ် သင့်ကိုယ်ပိုင် code) သည် routing၊ provider များ၊ combo များ၊ cache၊ compression နှင့် memory အပါအဝင် gateway တစ်ခုလုံးကို အလိုအလျောက် ထိန်းချုပ်နိုင်မည်ဖြစ်သည်။ အောက်ပါ HTTP endpoint များကို `http://localhost:20128` အောက်တွင် ဝန်ဆောင်မှုပေးထားသည်။
 
 <table>
   <tr><th align="left">Interface</th><th align="left">Endpoint / command</th><th align="left">အသုံးပြုရန်</th></tr>
   <tr><td align="left" nowrap>🧰 <b>MCP (stdio)</b></td><td align="left" nowrap><code>omniroute --mcp</code></td><td align="left">Claude Desktop၊ Cursor သို့မဟုတ် မည်သည့် MCP client နှင့်မဆို ချိတ်ဆက်ရန်</td></tr>
   <tr><td align="left" nowrap>🌊 <b>MCP (HTTP)</b></td><td align="left" nowrap><code>/api/mcp/stream</code></td><td align="left">Remote MCP — <b>tool 110 ခု</b>၊ scope 33 ခု (အကောင်အထည်ဖော်ကန့်သတ်မှုကို ရွေးချယ်ဖွင့်နိုင်သည်)၊ audit trail အပြည့်အစုံ</td></tr>
   <tr><td align="left" nowrap>📡 <b>MCP (SSE)</b></td><td align="left" nowrap><code>/api/mcp/sse</code></td><td align="left">Streaming MCP transport</td></tr>
-  <tr><td align="left" nowrap>🤝 <b>A2A</b></td><td align="left" nowrap><code>/.well-known/agent.json</code></td><td align="left">Agent အချင်းချင်း ဆက်သွယ်မှု၊ <b>JSON-RPC 2.0</b> + SSE၊ skill 6 ခု</td></tr>
   <tr><td align="left" nowrap>🌐 <b>REST API</b></td><td align="left" nowrap><code>/v1/*</code></td><td align="left">OpenAI နှင့် တွဲဖက်အသုံးပြုနိုင်သည် — chat၊ embedding များ၊ image များ၊ audio နှင့် OCR</td></tr>
   <tr><td align="left" nowrap>🔔 <b>Webhooks</b></td><td align="left" nowrap><code>/api/webhooks</code></td><td align="left">Request / quota event များကို Slack၊ Discord၊ Telegram သို့မဟုတ် မည်သည့် URL သို့မဆို ပို့ရန်</td></tr>
   <tr><td align="left" nowrap>🛰️ <b>Remote CLI</b></td><td align="left" nowrap><code>omniroute connect <host></code></td><td align="left">Scope သတ်မှတ်ထားသော access token များဖြင့် remote instance တစ်ခုကို ထိန်းချုပ်ရန်</td></tr>
 </table>
 
 ```bash
-# Claude Code ကို MCP မှတစ်ဆင့် OmniRoute toolset အပြည့်အစုံ အသုံးပြုခွင့်ပေးရန်:
+# Claude Code ကို MCP မှတစ်ဆင့် 67router toolset အပြည့်အစုံ အသုံးပြုခွင့်ပေးရန်:
 claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp/stream
 ```
 
-<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [A2A Server](docs/frameworks/A2A-SERVER.md) · [Agent Protocols](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
+<sub>📖 [MCP Server](docs/frameworks/MCP-SERVER.md) · [Agent Protocols](docs/frameworks/AGENT_PROTOCOLS_GUIDE.md)</sub>
 
 <br/>
 
@@ -930,7 +931,7 @@ claude mcp add-server omniroute --type http --url http://localhost:20128/api/mcp
 
 ### 📖 အလုပ်လုပ်ပုံ — pipeline၊ ဗိသုကာပုံစံနှင့် သက်သာမှုတွက်ချက်နည်း
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: ပုံဖော်ထားသော 10,000-token client request တစ်ခုသည် composable engine ၁၂ ခု — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra နှင့် OmniGlyph — ကို ဖြတ်သန်းသွားကာ မှတ်တမ်းတင်ထားသော stacked ဥပမာအရ provider ဆီသို့ token ခန့်မှန်း 1,080 ဖြင့် ရောက်ရှိနိုင်ပါသည်။ Structured content ကို preservation guard များနှင့် အဆင့်ချင်း fidelity gate များဖြင့် ကာကွယ်ထားပါသည်။ explicit lossy သို့မဟုတ် experimental mode များက အရည်အချင်းပြည့်မီသော content ကို ပြောင်းလဲနိုင်ပါသည်။"/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="67router compression pipeline: ပုံဖော်ထားသော 10,000-token client request တစ်ခုသည် composable engine ၁၂ ခု — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra နှင့် OmniGlyph — ကို ဖြတ်သန်းသွားကာ မှတ်တမ်းတင်ထားသော stacked ဥပမာအရ provider ဆီသို့ token ခန့်မှန်း 1,080 ဖြင့် ရောက်ရှိနိုင်ပါသည်။ Structured content ကို preservation guard များနှင့် အဆင့်ချင်း fidelity gate များဖြင့် ကာကွယ်ထားပါသည်။ explicit lossy သို့မဟုတ် experimental mode များက အရည်အချင်းပြည့်မီသော content ကို ပြောင်းလဲနိုင်ပါသည်။"/>
 
 မူရင်း stacked combo သည် `RTK → Caveman` ကို run ပါသည်။ နှစ်ခုလုံးက tool/context payload တစ်ခုတည်းပေါ်တွင် လုပ်ဆောင်သောအခါ သက်သာမှုများ ပေါင်းစည်းကြီးထွားသွားပါသည်:
 
@@ -942,7 +943,7 @@ range    = 78.4 – 94.6%
 
 Code block များ၊ URL များ၊ JSON နှင့် structured data များကို preservation engine က **အမြဲတမ်း ကာကွယ်ပေးထားပါသည်**။
 
-> **Token အနည်းငယ်နဲ့ အလုပ်လုံလောက်ရင် Token များများ ဘာလို့သုံးရမှာလဲ?** Request တိုင်းကို OmniRoute ၏ compression pipeline မှ **transparent** အနေဖြင့် ဖြတ်သန်းစေပါသည် — client ဘက်မှ ပြောင်းလဲမှုမလိုပါ။ ယခုအခါ၎င်းသည် အစဉ်အတိုင်း run ပြီး routing combo တစ်ခုချင်းစီအလိုက် mix & match လုပ်နိုင်သော **composable engine ၁၂ ခုပါ stack** ဖြစ်နေပါပြီ — [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) နှင့် [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) တို့၏ အကြံဉာဏ်များပေါ် အခြေခံထားပါသည်။
+> **Token အနည်းငယ်နဲ့ အလုပ်လုံလောက်ရင် Token များများ ဘာလို့သုံးရမှာလဲ?** Request တိုင်းကို 67router ၏ compression pipeline မှ **transparent** အနေဖြင့် ဖြတ်သန်းစေပါသည် — client ဘက်မှ ပြောင်းလဲမှုမလိုပါ။ ယခုအခါ၎င်းသည် အစဉ်အတိုင်း run ပြီး routing combo တစ်ခုချင်းစီအလိုက် mix & match လုပ်နိုင်သော **composable engine ၁၂ ခုပါ stack** ဖြစ်နေပါပြီ — [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) နှင့် [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) တို့၏ အကြံဉာဏ်များပေါ် အခြေခံထားပါသည်။
 
 ### 🧱 Engine ၁၂ ခုပါ stack
 
@@ -1027,7 +1028,7 @@ omniroute
 ```
 
 > 💡 `npm warn ERESOLVE` သို့မဟုတ် peer-dep warning များ တွေ့ရသလား။ [အန္တရာယ်မရှိပါ](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated)။
-> **npm 11 သို့မဟုတ် ထိုအထက် သုံးနေပါသလား။** npm သည် ခွင့်ပြုထားခြင်းမရှိလျှင် package lifecycle script များကို ပိတ်ဆို့နိုင်သည်။ OmniRoute ၏ `postinstall` (`node scripts/build/postinstall.mjs`) သည် ၎င်း၏ native runtime ဖိုင်များကို ပြင်ဆင်ရန် လိုအပ်သည်။ globally install လုပ်သည့်အခါ npm ၏ warning တွင် ဖော်ပြထားသော package များကို ခွင့်ပြုပါ။ OmniRoute 3.8.53 မှ ဖော်ပြသော package set အတွက်-
+> **npm 11 သို့မဟုတ် ထိုအထက် သုံးနေပါသလား။** npm သည် ခွင့်ပြုထားခြင်းမရှိလျှင် package lifecycle script များကို ပိတ်ဆို့နိုင်သည်။ 67router ၏ `postinstall` (`node scripts/build/postinstall.mjs`) သည် ၎င်း၏ native runtime ဖိုင်များကို ပြင်ဆင်ရန် လိုအပ်သည်။ globally install လုပ်သည့်အခါ npm ၏ warning တွင် ဖော်ပြထားသော package များကို ခွင့်ပြုပါ။ 67router 3.8.53 မှ ဖော်ပြသော package set အတွက်-
 >
 > ```bash
 > npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
@@ -1066,9 +1067,9 @@ Model:    auto            (routes among eligible connections — or choose provi
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-သင် ချိတ်ဆက်ထားသော model များ စာရင်းပြကို တွေ့ရပါမည်။ 🎉 ဒါပါပဲ — coding စလုပ်ပါ၊ OmniRoute က သင့်အတွက် auto-route လုပ်ပြီး fallback ပေးပါလိမ့်မည်။
+သင် ချိတ်ဆက်ထားသော model များ စာရင်းပြကို တွေ့ရပါမည်။ 🎉 ဒါပါပဲ — coding စလုပ်ပါ၊ 67router က သင့်အတွက် auto-route လုပ်ပြီး fallback ပေးပါလိမ့်မည်။
 
-သင်၏ client က custom header များ ပို့မရလျှင်၊ OmniRoute သည် tokenized compatibility alias များကိုလည်း ထုတ်ပေးထားသည်။
+သင်၏ client က custom header များ ပို့မရလျှင်၊ 67router သည် tokenized compatibility alias များကိုလည်း ထုတ်ပေးထားသည်။
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1118,7 +1119,7 @@ docker run -d --name omniroute --restart unless-stopped --stop-timeout 40 \
 
 ပုံမှန် `bun install` နှင့် global ထည့်သွင်းခြင်း (`bun install -g omniroute`) တို့ကို Bun runtime စစ်ဆေးမှုမှတစ်ဆင့် ပံ့ပိုးထားသည်-
 
-- **ပါဝင်ပြီးသား `bun:sqlite`**: Bun အောက်တွင် လုပ်ဆောင်နေချိန်၌ OmniRoute သည် Bun ၏ ပါဝင်ပြီးသား `bun:sqlite` driver ကို အသုံးပြုပြီး Node.js သို့မဟုတ် `sql.js` တွင် `better-sqlite3` ကို အစားထိုးအသုံးပြုသည်။
+- **ပါဝင်ပြီးသား `bun:sqlite`**: Bun အောက်တွင် လုပ်ဆောင်နေချိန်၌ 67router သည် Bun ၏ ပါဝင်ပြီးသား `bun:sqlite` driver ကို အသုံးပြုပြီး Node.js သို့မဟုတ် `sql.js` တွင် `better-sqlite3` ကို အစားထိုးအသုံးပြုသည်။
 - **Development တွင် Webpack bundler အလိုအလျောက် ရွေးချယ်ခြင်း**: Development (`bun run dev`) သည် Bun ကို အလိုအလျောက် စစ်ဆေးသိရှိပြီး native V8 binding မကိုက်ညီမှုများကို ကာကွယ်ရန် Turbopack ကို ပိတ်ကာ Webpack ကို အသုံးပြုသည်။ Production build များ (`bun run build`) သည် Node တွင်ကဲ့သို့ `OMNIROUTE_USE_TURBOPACK` ကို အတိအကျ လိုက်နာသည်- မူလအနေဖြင့် Turbopack ကို အသုံးပြုပြီး Webpack ဖြင့် build လုပ်ရန် `OMNIROUTE_USE_TURBOPACK=0` ကို အသုံးပြုပါ (`Dockerfile.bun` က ၎င်းကို `--build-arg` အဖြစ် ဖော်ထုတ်ပေးထားသည်)။
 - **Bun အတွက် သီးသန့် Dockerfile**: Native Bun production deployment များအတွက် အဆင့်များစွာပါဝင်သော `Dockerfile.bun` (`docker build -f Dockerfile.bun -t omniroute:bun .`)။
 
@@ -1202,7 +1203,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 
 <div align="center">
 
-# 🎬 လက်တွေ့အသုံးပြုနေသော OmniRoute
+# 🎬 လက်တွေ့အသုံးပြုနေသော 67router
 
 </div>
 
@@ -1266,7 +1267,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 
 2026-10-18 ရက်နေ့ရှိ canonical မက်ထရစ်များ: **သီးခြားဗီဒီယို 1.976 ခု** · **သိရှိထားသော ကြည့်ရှုမှု 20.220.289 ကြိမ်** (`v > 0`) · **ကွန်ရက်အလိုက် ချန်နယ်/ပရိုဖိုင် 1.210 ခု**။ မူရင်းဒက်ရှ်ဘုတ်တွင် အတန်း 1.976 တန်း (YouTube 1.352 = ဗီဒီယိုအရှည် 740 ခု + Shorts 612 ခု · TikTok 334 ခု · Instagram 290 ခု) ပါဝင်သည်။ ဗီဒီယိုတစ်ခုစီအတွက် အများဆုံးကြည့်ရှုမှုအရေအတွက်ကို ထိန်းသိမ်းထားသည့် canonical URL ဖြင့် စံသတ်မှတ်ပြီးနောက် ထပ်နေသည့်အရာ တစ်ခုမျှ မကျန်တော့ပါ။ YouTube ဒေတာစုဆောင်းမှုကို 2026-10-13 ရက်နေ့တွင် ရပ်တန့်ထားသည် (14 မှ 18/10 အတွင်း API quota ကုန်ဆုံးသွားသောကြောင့်)။ TikTok/Instagram ဒေတာစုဆောင်းမှုကိုလည်း 2026-09-02 မှစ၍ ရပ်တန့်ထားသည် (ဒေတာစုဆောင်းရန် ခရက်ဒစ်မရှိသောကြောင့်)။ ဗီဒီယို 76 ခုအတွက် ကြည့်ရှုမှုအရေအတွက် မရှိသေးပါ။
 
-> 🎬 **OmniRoute အကြောင်း ဗီဒီယိုတစ်ခု ဖန်တီးထားပါသလား။** လင့်ခ်နှင့်အတူ [ပြဿနာတစ်ခု](https://github.com/diegosouzapw/OmniRoute/issues/new) သို့မဟုတ် [ဆွေးနွေးမှုတစ်ခု](https://github.com/diegosouzapw/OmniRoute/discussions) ဖွင့်ပါ — ၎င်းကို ဤနေရာတွင် ဖော်ပြပေးပါမည်။
+> 🎬 **67router အကြောင်း ဗီဒီယိုတစ်ခု ဖန်တီးထားပါသလား။** လင့်ခ်နှင့်အတူ [ပြဿနာတစ်ခု](https://github.com/diegosouzapw/OmniRoute/issues/new) သို့မဟုတ် [ဆွေးနွေးမှုတစ်ခု](https://github.com/diegosouzapw/OmniRoute/discussions) ဖွင့်ပါ — ၎င်းကို ဤနေရာတွင် ဖော်ပြပေးပါမည်။
 
 <br/>
 
@@ -1285,7 +1286,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 | 🟢 **WhatsApp — 🌍 ကမ္ဘာတစ်ဝန်း**                                      | [အဖွဲ့သို့ ဝင်ရောက်ရန်](https://chat.whatsapp.com/FvuCbrpZmQ6I85n2vW5QIC?s=cl&p=a&mlu=4)                                                         |
 | 🟢 **WhatsApp — 🇧🇷 ဘရာဇီး**                                            | [အဖွဲ့သို့ ဝင်ရောက်ရန်](https://chat.whatsapp.com/KWgatljAjmbELQory59Oti?s=cl&p=a&mlu=4)                                                         |
 | 🌍 **ဝဘ်ဆိုက်**                                                        | [omniroute.online](https://omniroute.online)                                                                                                     |
-| 🌍 **🌍StHub OmniRoute အသိုင်းအဝိုင်း (အခမဲ့)**                        | [StHub ပေါ်တယ်](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                                           |
+| 🌍 **🌍StHub 67router အသိုင်းအဝိုင်း (အခမဲ့)**                         | [StHub ပေါ်တယ်](https://portal.sthub.com.br/communities/groups/st-hub/channels/Omniroute-World-8kRjmK)                                           |
 | 📦 **အရင်းအမြစ်ကုဒ်**                                                  | [github.com/diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute)                                                                   |
 | 🐛 **ချို့ယွင်းချက်တစ်ခုကို တိုင်ကြားရန်**                             | [ပြဿနာတစ်ခု ဖွင့်ရန်](https://github.com/diegosouzapw/OmniRoute/issues) — `npm run system-info` ၏ ရလဒ်ကို ပူးတွဲပါ                               |
 | 🤝 **ပါဝင်ကူညီရန်**                                                    | [CONTRIBUTING.md](CONTRIBUTING.md) · [ဘရန်ချ်ခွဲခြင်းနှင့် ထုတ်ဝေမှုပုံစံ](docs/ops/BRANCHING_MODEL.md) · `good first issue` တစ်ခုကို ရွေးချယ်ပါ |
@@ -1338,8 +1339,8 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
   <tr><td nowrap><b><a href="docs/guides/USER_GUIDE.md">အသုံးပြုသူလမ်းညွှန်</a></b></td><td>Provider များ၊ combo များ၊ CLI ပေါင်းစည်းမှုနှင့် ဖြန့်ကျက်တပ်ဆင်မှု</td></tr>
   <tr><td nowrap><b><a href="docs/guides/SETUP_GUIDE.md">တပ်ဆင်မှုလမ်းညွှန်</a></b></td><td>တပ်ဆင်နည်းအပြည့်အစုံ၊ CLI tool configuration များ၊ protocol ပြင်ဆင်မှုနှင့် timeout ချိန်ညှိမှု</td></tr>
   <tr><td nowrap><b><a href="docs/reference/CLI-TOOLS.md">CLI Tool များဆိုင်ရာ လမ်းညွှန်</a></b></td><td>Claude Code၊ Codex၊ Cursor၊ Cline၊ OpenClaw၊ Kilo နှင့် Copilot တစ်ခုချင်းစီအတွက် ပြင်ဆင်မှု</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">အဝေးထိန်းမုဒ်</a></b></td><td>နယ်ပယ်ကန့်သတ်ထားသော access token များကို အသုံးပြုပြီး သင့်လက်ပ်တော့၏ CLI မှ အဝေးရှိ OmniRoute (VPS) ကို ထိန်းချုပ်ခြင်း</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code ပြင်ဆင်မှု</a></b></td><td><code>launch</code> နှင့် model အလိုက် profile များဖြင့် Claude Code ကို OmniRoute (စက်တွင်း/အဝေး) သို့ ချိတ်ဆက်ခြင်း</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/REMOTE-MODE.md">အဝေးထိန်းမုဒ်</a></b></td><td>နယ်ပယ်ကန့်သတ်ထားသော access token များကို အသုံးပြုပြီး သင့်လက်ပ်တော့၏ CLI မှ အဝေးရှိ 67router (VPS) ကို ထိန်းချုပ်ခြင်း</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/CLAUDE-CODE-CONFIGURATION.md">Claude Code ပြင်ဆင်မှု</a></b></td><td><code>launch</code> နှင့် model အလိုက် profile များဖြင့် Claude Code ကို 67router (စက်တွင်း/အဝေး) သို့ ချိတ်ဆက်ခြင်း</td></tr>
   <tr><td nowrap><b><a href="README.md#-quick-start">အမြန်စတင်ရန်</a></b></td><td>အဆင့် ၃ ဆင့်ဖြင့် တပ်ဆင် → ချိတ်ဆက် → ပြင်ဆင်ခြင်း</td></tr>
 </table>
 
@@ -1351,7 +1352,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
   <tr><td nowrap><b><a href="contrib/podman/README.md">Podman လမ်းညွှန်</a></b></td><td>Quadlet systemd ပေါင်းစည်းမှု၊ podman-compose နှင့် SELinux</td></tr>
   <tr><td nowrap><b><a href="docs/ops/VM_DEPLOYMENT_GUIDE.md">VM ဖြန့်ကျက်တပ်ဆင်မှု</a></b></td><td>အပြည့်အစုံလမ်းညွှန်- VM + nginx + Cloudflare ပြင်ဆင်မှု</td></tr>
   <tr><td nowrap><b><a href="docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md">Fly.io ဖြန့်ကျက်တပ်ဆင်မှု</a></b></td><td>အမြဲတမ်းသိုလှောင်မှုဖြင့် Fly.io သို့ ဖြန့်ကျက်တပ်ဆင်ခြင်း</td></tr>
-  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux လမ်းညွှန်</a></b></td><td>Termux မှတစ်ဆင့် Android တွင် OmniRoute ကို လည်ပတ်ခြင်း</td></tr>
+  <tr><td nowrap><b><a href="docs/guides/TERMUX_GUIDE.md">Termux လမ်းညွှန်</a></b></td><td>Termux မှတစ်ဆင့် Android တွင် 67router ကို လည်ပတ်ခြင်း</td></tr>
   <tr><td nowrap><b><a href="docs/guides/PWA_GUIDE.md">PWA လမ်းညွှန်</a></b></td><td>Progressive Web App တပ်ဆင်မှု၊ cache သိမ်းဆည်းမှုနှင့် ဗိသုကာပုံစံ</td></tr>
   <tr><td nowrap><b><a href="docs/guides/UNINSTALL.md">ဖြုတ်ချခြင်းလမ်းညွှန်</a></b></td><td>တပ်ဆင်နည်းအားလုံးအတွက် ရှင်းလင်းစွာ ဖယ်ရှားခြင်း</td></tr>
   <tr><td nowrap><b><a href="docs/reference/ENVIRONMENT.md">Environment ပြင်ဆင်မှု</a></b></td><td><code>.env</code> variable များနှင့် ရည်ညွှန်းချက်များ အပြည့်အစုံ</td></tr>
@@ -1384,7 +1385,6 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
   <tr><td nowrap><b><a href="open-sse/mcp-server/README.md">MCP Server</a></b></td><td>MCP tool ၁၁၀ ခု၊ IDE configuration များနှင့် Python/TS/Go client များ</td></tr>
   <tr><td nowrap><b><a href="docs/frameworks/MCP-SERVER.md">MCP Server လမ်းညွှန်</a></b></td><td>MCP တပ်ဆင်မှု၊ transport များနှင့် tool ရည်ညွှန်းချက်</td></tr>
   <tr><td nowrap><b><a href="src/lib/a2a/README.md">A2A Server</a></b></td><td>JSON-RPC 2.0 protocol၊ skill များ၊ streaming နှင့် task စီမံခန့်ခွဲမှု</td></tr>
-  <tr><td nowrap><b><a href="docs/frameworks/A2A-SERVER.md">A2A Server လမ်းညွှန်</a></b></td><td>A2A agent card၊ task များ၊ skill များနှင့် streaming</td></tr>
 </table>
 
 ### 📋 ပရောဂျက်နှင့် အရည်အသွေး
@@ -1406,7 +1406,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 
 # ⭐ ထိပ်တန်း ပံ့ပိုးပါဝင်သူများ
 
-> OmniRoute ကို စိတ်အားထက်သန်သော open-source အသိုင်းအဝိုင်းက ပုံဖော်တည်ဆောက်ထားပါသည်။ ဤပုဂ္ဂိုလ်များသည် ပရောဂျက်၏ အရည်အသွေး၊ တည်ငြိမ်မှုနှင့် လက်လှမ်းမီမှုတို့အပေါ် တိုက်ရိုက်သက်ရောက်စေသည့် ထူးခြားကောင်းမွန်သော ပံ့ပိုးမှုများ ပြုလုပ်ခဲ့ကြပါသည်။ **ကျေးဇူးတင်ပါသည်။**
+> 67router ကို စိတ်အားထက်သန်သော open-source အသိုင်းအဝိုင်းက ပုံဖော်တည်ဆောက်ထားပါသည်။ ဤပုဂ္ဂိုလ်များသည် ပရောဂျက်၏ အရည်အသွေး၊ တည်ငြိမ်မှုနှင့် လက်လှမ်းမီမှုတို့အပေါ် တိုက်ရိုက်သက်ရောက်စေသည့် ထူးခြားကောင်းမွန်သော ပံ့ပိုးမှုများ ပြုလုပ်ခဲ့ကြပါသည်။ **ကျေးဇူးတင်ပါသည်။**
 
 ### Merge လုပ်ပြီးသော pull request အရ ပြင်ပပံ့ပိုးပါဝင်သူများ
 
@@ -1524,7 +1524,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 
 <sub>2026-10-18 14:44:45 UTC တွင် ပြန်လည်စစ်ဆေးခဲ့သည်- repository Contributors API က <code>release/v3.8.52</code> မူလ branch အတွက် အစီရင်ခံထားသော GitHub က သတ်မှတ်သည့် commit များဖြစ်သည်။ API က identity 849 ခု (အသုံးပြုသူ 429 ဦး၊ bot 2 ခု၊ အမည်မသိ 418 ဦး) ကို ပြန်ပေးခဲ့သည်။ ဤဇယားတွင် ထိန်းသိမ်းသူ၊ bot များနှင့် အမည်မသိ identity များကို ဖယ်ထုတ်ထားပြီး အဆင့်တူသူများကို ဆက်လက်ထည့်သွင်းထားသည်။ ၎င်းသည် အထက်ပါ ပေါင်းစည်းပြီးသော PR အဆင့်သတ်မှတ်ချက်နှင့် အောက်ပါ Git metadata စာရင်းကောက်ယူမှု နှစ်ခုစလုံးမှ သီးခြားဖြစ်သည်။</sub>
 
-> 🙏 ဤပံ့ပိုးကူညီသူများ၏ လုပ်ဆောင်ချက်အသစ်များ၊ bug ပြင်ဆင်မှုများနှင့် အခြေခံအဆောက်အအုံ မြှင့်တင်မှုများသည် OmniRoute ကို ယုံကြည်စိတ်ချရပြီး လုပ်ဆောင်ချက်စုံလင်စေသည့်အရာများ၏ **အဓိကအစိတ်အပိုင်း** ဖြစ်သည်။ pull request တိုင်း၊ test case တိုင်းနှင့် i18n ဘာသာပြန်ဖိုင်တိုင်းသည် အရေးပါသည်။ Open source ကို သူတို့ကဲ့သို့သော လူများက တည်ဆောက်ကြသည်။
+> 🙏 ဤပံ့ပိုးကူညီသူများ၏ လုပ်ဆောင်ချက်အသစ်များ၊ bug ပြင်ဆင်မှုများနှင့် အခြေခံအဆောက်အအုံ မြှင့်တင်မှုများသည် 67router ကို ယုံကြည်စိတ်ချရပြီး လုပ်ဆောင်ချက်စုံလင်စေသည့်အရာများ၏ **အဓိကအစိတ်အပိုင်း** ဖြစ်သည်။ pull request တိုင်း၊ test case တိုင်းနှင့် i18n ဘာသာပြန်ဖိုင်တိုင်းသည် အရေးပါသည်။ Open source ကို သူတို့ကဲ့သို့သော လူများက တည်ဆောက်ကြသည်။
 
 </div>
 
@@ -1536,7 +1536,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 
 <div align="center">
 
-မိမိတို့၏ ကိုယ်ပိုင်ငွေဖြင့် OmniRoute ကို ရန်ပုံငွေထောက်ပံ့ပေးကြသူများအား လှိုက်လှဲစွာ ကျေးဇူးတင်ရှိပါသည် — ပံ့ပိုးမှုတိုင်းက ဤပရောဂျက်ကို အခမဲ့၊ အမှီအခိုကင်းစွာနှင့် ဆက်လက်တိုးတက်စေရန် အထောက်အကူပြုပါသည်။
+မိမိတို့၏ ကိုယ်ပိုင်ငွေဖြင့် 67router ကို ရန်ပုံငွေထောက်ပံ့ပေးကြသူများအား လှိုက်လှဲစွာ ကျေးဇူးတင်ရှိပါသည် — ပံ့ပိုးမှုတိုင်းက ဤပရောဂျက်ကို အခမဲ့၊ အမှီအခိုကင်းစွာနှင့် ဆက်လက်တိုးတက်စေရန် အထောက်အကူပြုပါသည်။
 
 <table>
   <tr>
@@ -1626,7 +1626,7 @@ port တစ်ခုတည်းရှိ process တစ်ခုတည်းက
 
 <sub>အများမြင်နိုင်သော GitHub Sponsors စာရင်းကို GitHub Sponsors GraphQL API မှတစ်ဆင့် 2026-10-18 တွင် ပြန်လည်အတည်ပြုခဲ့ပါသည်- စုစုပေါင်း ပံ့ပိုးမှု 14 ခုအနက် အများမြင်နိုင်သော ပံ့ပိုးမှု 11 ခု (လက်ရှိ 6 ခု၊ ယခင် 5 ခု) ရှိပါသည်။ အထက်ပါ လက်ရှိအခြေအနေ အညွှန်းများကို GitHub ၏ <code>isActive</code> အခြေအနေက သတ်မှတ်ပေးပါသည်။ ယခင်က အများမြင်နိုင်သော တစ်ကြိမ်တည်းပံ့ပိုးသူများကို ဆက်လက်ကျေးဇူးတင်ဖော်ပြထားပြီး သီးသန့်ပံ့ပိုးသူများ၏ အမည်များကို လျှို့ဝှက်ထားပါသည်။ Ko-fi၊ Buy Me a Coffee၊ Liberapay၊ PIX နှင့် ခရစ်ပတိုငွေကြေးဖြင့် လှူဒါန်းမှုများတွင် အများမြင်နိုင်သော ပံ့ပိုးသူမှတ်တမ်း မရှိသောကြောင့် ဤနေရာတွင် မဖော်ပြထားပါ။</sub>
 
-<b><a href="https://github.com/sponsors/diegosouzapw">💖 ပံ့ပိုးသူတစ်ဦး ဖြစ်လာရန် →</a></b> — ဒေါ်လာတိုင်းက OmniRoute ကို အခမဲ့နှင့် အမှီအခိုကင်းစွာ ဆက်လက်တည်ရှိစေပါသည်။
+<b><a href="https://github.com/sponsors/diegosouzapw">💖 ပံ့ပိုးသူတစ်ဦး ဖြစ်လာရန် →</a></b> — ဒေါ်လာတိုင်းက 67router ကို အခမဲ့နှင့် အမှီအခိုကင်းစွာ ဆက်လက်တည်ရှိစေပါသည်။
 
 </div>
 
@@ -1698,14 +1698,14 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
 
 </div>
 
-OmniRoute သည် ရှေ့ဆောင်ပညာရှင်ကြီးများ၏ အောင်မြင်မှုများအပေါ် အခြေခံတည်ဆောက်ထားပါသည်။ ၎င်းသည် **[9router](https://github.com/decolua/9router)** ၏ fork တစ်ခုနှင့် Go ပရောဂျက် **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** ၏ TypeScript port တစ်ခုအဖြစ် စတင်ခဲ့ပြီး — ထိုမှတစ်ဆင့် အောက်ပါ subsystem တစ်ခုစီသည် ရှေ့က ဦးစွာ အကောင်အထည်ဖော်ခဲ့သော open-source ပရောဂျက်တစ်ခုစီထံမှ စိတ်ကူးရယူထားပါသည်။ ၎င်းတို့တစ်ခုစီက OmniRoute ၏ သီးခြားအစိတ်အပိုင်းတစ်ခုကို ပုံဖော်ပေးခဲ့ပါသည်။ ဤသည်မှာ ၎င်းတို့အားလုံးအတွက် ကျွန်ုပ်တို့၏ ကျေးဇူးတင်စကားဖြစ်ပါသည်။ 🙏
+67router သည် ရှေ့ဆောင်ပညာရှင်ကြီးများ၏ အောင်မြင်မှုများအပေါ် အခြေခံတည်ဆောက်ထားပါသည်။ ၎င်းသည် **[9router](https://github.com/decolua/9router)** ၏ fork တစ်ခုနှင့် Go ပရောဂျက် **[CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)** ၏ TypeScript port တစ်ခုအဖြစ် စတင်ခဲ့ပြီး — ထိုမှတစ်ဆင့် အောက်ပါ subsystem တစ်ခုစီသည် ရှေ့က ဦးစွာ အကောင်အထည်ဖော်ခဲ့သော open-source ပရောဂျက်တစ်ခုစီထံမှ စိတ်ကူးရယူထားပါသည်။ ၎င်းတို့တစ်ခုစီက 67router ၏ သီးခြားအစိတ်အပိုင်းတစ်ခုကို ပုံဖော်ပေးခဲ့ပါသည်။ ဤသည်မှာ ၎င်းတို့အားလုံးအတွက် ကျွန်ုပ်တို့၏ ကျေးဇူးတင်စကားဖြစ်ပါသည်။ 🙏
 
 > ⭐ star အရေအတွက်များကို 2026 ခုနှစ်၊ အောက်တိုဘာလ 18 ရက်နေ့တွင် GitHub ၏ REST API မှတစ်ဆင့် အတည်ပြုထားပါသည် — ဤပရောဂျက်များကို star ပေးလိုက်ပါ။ အရေအတွက်များသည် ထိုရက်စွဲရှိ အတိအကျ snapshot ဖြစ်ပြီး ပုံမှန်အားဖြင့် ပြောင်းလဲသွားမည်ဖြစ်ပါသည်။
 
 ### 🧬 မျိုးဆက်ရင်းမြစ်နှင့် gateway
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute ကို မည်သို့ စိတ်ကူးပေးခဲ့သနည်း</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router ကို မည်သို့ စိတ်ကူးပေးခဲ့သနည်း</th></tr>
   <tr><td nowrap><b><a href="https://github.com/decolua/9router">9router</a></b></td><td align="center">31,004</td><td>ဤ fork ကို အခြေခံတည်ဆောက်ထားသော မူလပရောဂျက်ဖြစ်ပြီး — ဤနေရာတွင် multi-modal API များနှင့် အပြည့်အစုံ TypeScript ပြန်လည်ရေးသားမှုတို့ဖြင့် တိုးချဲ့ထားပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/router-for-me/CLIProxyAPI">CLIProxyAPI</a></b></td><td align="center">55,591</td><td>ဤ JavaScript / TypeScript port အတွက် စိတ်ကူးရရှိစေခဲ့သော Go implementation ဖြစ်ပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/BerriAI/litellm">LiteLLM</a></b></td><td align="center">61,482</td><td>၎င်း၏ အများပြည်သူသုံး pricing dataset က ကျွန်ုပ်တို့၏ ကုန်ကျစရိတ်ခြေရာခံခြင်း sync ကို ဒေတာပံ့ပိုးပေးပြီး ၎င်း၏ provider-normalization model က ကျွန်ုပ်တို့၏ routing ပုံစံကို လမ်းညွှန်ပေးခဲ့သော AI gateway ဖြစ်ပါသည်။</td></tr>
@@ -1713,19 +1713,19 @@ OmniRoute သည် ရှေ့ဆောင်ပညာရှင်ကြီး
   <tr><td nowrap><b><a href="https://github.com/Alishahryar1/free-claude-code">free-claude-code</a></b></td><td align="center">61,430</td><td>stream recovery၊ no-thinking alias များ၊ fallback web search၊ sliding-window limit များ၊ log redaction နှင့် ပိုမိုခိုင်မာလုံခြုံစေသော launcher flow များထဲသို့ pattern များကို port လုပ်ထားပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/standardagents/composer-api">composer-api</a></b></td><td align="center">346</td><td>Cursor Composer ၏ tool-choice၊ output-constraint နှင့် tool-commit pattern များကို native Cursor executor ထဲသို့ ပြုပြင်အသုံးချထားပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ndycode/codex-multi-auth">codex-multi-auth</a></b></td><td align="center">553</td><td>fresh-login နှင့် refresh-token rotation pattern များကို Codex OAuth reauthentication ထဲသို့ port လုပ်ထားပါသည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Claude Code-compatible transform default များနှင့် billing-header အပြုအမူကို OmniRoute ၏ config-driven bridge ထဲတွင် ယေဘုယျပုံစံဖြင့် အသုံးချထားပါသည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>၎င်း၏ Grok model mapping များ၊ fake-TypeError Statsig generator၊ request နှင့် device default များ၊ NDJSON response processor တို့ကို OmniRoute ၏ Grok Web executor ထဲသို့ အဓိကအားဖြင့် ပြုပြင်အသုံးချထားပါသည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ex-machina-co/opencode-anthropic-auth">opencode-anthropic-auth</a></b></td><td align="center">558</td><td>Claude Code-compatible transform default များနှင့် billing-header အပြုအမူကို 67router ၏ config-driven bridge ထဲတွင် ယေဘုယျပုံစံဖြင့် အသုံးချထားပါသည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/520mmxx/grok2api-merged">grok2api-merged</a></b></td><td align="center">2</td><td>၎င်း၏ Grok model mapping များ၊ fake-TypeError Statsig generator၊ request နှင့် device default များ၊ NDJSON response processor တို့ကို 67router ၏ Grok Web executor ထဲသို့ အဓိကအားဖြင့် ပြုပြင်အသုံးချထားပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/TQZHR/grok2api">TQZHR/grok2api</a></b></td><td align="center">706</td><td>grok2api-merged နောက်ကွယ်ရှိ အဓိက ဆင့်ကဲကုဒ်ရင်းမြစ်ဖြစ်ပြီး ၎င်း၏ model၊ header၊ payload၊ Statsig နှင့် processor implementation များကို Grok Web မျိုးဆက်ရင်းမြစ်တွင် ဆက်လက်ထိန်းသိမ်းထားပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/chenyme/grok2api">chenyme/grok2api</a></b></td><td align="center">7,819</td><td>TQZHR နှင့် grok2api-merged မှတစ်ဆင့် ဆက်လက်သယ်ဆောင်လာသော Grok payload နှင့် device default များ၊ Statsig generator နှင့် <code>result.response</code> processor တို့အတွက် အခြေခံ MIT source ဖြစ်ပါသည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>၎င်း၏ proxy-pool layer အတွက် grok2api-merged က အသိအမှတ်ပြုထားသော ဆင့်ကဲရင်းမြစ်တစ်ခုဖြစ်ပါသည်။ OmniRoute သည် ထိုမျိုးဆက်ရင်းမြစ်ဆိုင်ရာ အသိပေးချက်ကို ဆက်လက်ထိန်းသိမ်းထားသော်လည်း ၎င်း၏ ကန့်သတ်နယ်ပယ်ရှိ Grok Web executor တွင် proxy-pool port တစ်ခု ပါဝင်သည်ဟု မဆိုထားပါ။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>၎င်း၏ cookie ဖြင့် စစ်မှန်ကြောင်းအတည်ပြုထားသော Grok proxy နှင့် <code>result.response.token</code> streaming pattern က OmniRoute ၏ Grok Web transport ကို လမ်းညွှန်ပေးခဲ့ပါသည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/miuzhaii/grok2api-pro">grok2api-pro</a></b></td><td align="center">27</td><td>၎င်း၏ proxy-pool layer အတွက် grok2api-merged က အသိအမှတ်ပြုထားသော ဆင့်ကဲရင်းမြစ်တစ်ခုဖြစ်ပါသည်။ 67router သည် ထိုမျိုးဆက်ရင်းမြစ်ဆိုင်ရာ အသိပေးချက်ကို ဆက်လက်ထိန်းသိမ်းထားသော်လည်း ၎င်း၏ ကန့်သတ်နယ်ပယ်ရှိ Grok Web executor တွင် proxy-pool port တစ်ခု ပါဝင်သည်ဟု မဆိုထားပါ။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/CNFlyCat/GrokProxy">GrokProxy</a></b></td><td align="center">51</td><td>၎င်း၏ cookie ဖြင့် စစ်မှန်ကြောင်းအတည်ပြုထားသော Grok proxy နှင့် <code>result.response.token</code> streaming pattern က 67router ၏ Grok Web transport ကို လမ်းညွှန်ပေးခဲ့ပါသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/lianying1716/GrokBridge">GrokBridge</a></b></td><td align="center">5</td><td>မူလ Grok Web implementation သည် ၎င်း၏ HTTP/browser upstream design ကို ကိုးကားအသုံးပြုခဲ့ပါသည်။ ၎င်း၏ direct HTTP path သည် GrokProxy မှ ဆင်းသက်လာသောကြောင့် သီးခြား code port တစ်ခုအဖြစ် မဆိုထားပါ။</td></tr>
 </table>
 
 ### 🗜️ Context နှင့် token compression — engine များ
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် မည်သို့ စိတ်ကူးရစေခဲ့သည်</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် မည်သို့ စိတ်ကူးရစေခဲ့သည်</th></tr>
   <tr><td nowrap><b><a href="https://github.com/JuliusBrussee/caveman">Caveman</a></b></td><td align="center">113,396</td><td>လူကြိုက်များခဲ့သည့် "စကားလုံးအနည်းငယ်နဲ့ အလုပ်ဖြစ်ရင် စကားလုံးအများကြီး ဘာလို့သုံးမလဲ" ပရောဂျက်ဖြစ်ပြီး ၎င်း၏ caveman စကားပြောပုံ အယူအဆက ကျွန်ုပ်တို့၏ စံချုံ့မှုမုဒ်နှင့် ဖြည့်စွက်စာသားဖယ်ရှားခြင်း/သိပ်သည်းအောင်ပြုလုပ်ခြင်း စည်းမျဉ်း 30+ ခုကို အခြေခံပံ့ပိုးပေးထားသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/rtk-ai/rtk">RTK – Rust Token Killer</a></b></td><td align="center">83,835</td><td>စွမ်းဆောင်ရည်မြင့် command output ချုံ့ခြင်းသည် ကျွန်ုပ်တို့၏ RTK engine၊ JSON filter DSL၊ မူရင်း output ပြန်လည်ရယူခြင်းနှင့် အဆင့်ဆင့်ပေါင်းစပ်ထားသော RTK → Caveman pipeline တို့ကို ဖန်တီးရန် စိတ်ကူးပေးခဲ့သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/headroomlabs-ai/headroom">headroom</a></b></td><td align="center">75,741</td><td>ပြန်လည်ဖော်ထုတ်နိုင်သော context ချုံ့ခြင်း (SmartCrusher) သည် ကျွန်ုပ်တို့၏ <code>headroom</code> engine နှင့် <code>ccr</code> retrieve-marker pattern တို့အတွက် စိတ်ကူးပေးခဲ့သည်။</td></tr>
@@ -1733,15 +1733,15 @@ OmniRoute သည် ရှေ့ဆောင်ပညာရှင်ကြီး
   <tr><td nowrap><b><a href="https://github.com/atjsh/llmlingua-2-js">llmlingua-2-js</a></b></td><td align="center">32</td><td>ကျွန်ုပ်တို့၏ LLMLingua engine အတွက် worker-thread backend အဖြစ် အသုံးပြုထားသည့် JS/ONNX port (MobileBERT / XLM-RoBERTa) ဖြစ်သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/leninejunior/troglodita">Troglodita</a></b></td><td align="center">50</td><td>PT-BR token ချုံ့ခြင်းသည် ကျွန်ုပ်တို့၏ pt-BR language pack ကို အားဖြည့်ပေးထားပြီး Brazilian-Portuguese သဒ္ဒါနှင့် ကိုက်ညီအောင် ချိန်ညှိထားသော pleonasm လျှော့ချခြင်းနှင့် ဖြည့်စွက်စာသားဖယ်ရှားခြင်းတို့ ပါဝင်သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/DietrichGebert/ponytail">ponytail</a></b></td><td align="center">166,731</td><td>လူကြိုက်များခဲ့သည့် "ပျင်းရိသော အကြီးတန်း developer" YAGNI-coder skill သည် ကျွန်ုပ်တို့၏ <b>less-code</b> Output Style အတွက် စိတ်ကူးပေးခဲ့သည်။ ၎င်းသည် _ထုတ်လုပ်လိုက်သည့်_ code ကို လျှော့ချပေးသော၊ အလုပ်ဖြစ်နိုင်သည့် အသေးဆုံးပြောင်းလဲမှုကို ဦးတည်စေသည့် ပုံစံဖြစ်ပြီး Caveman ၏ တိုတောင်းသော စကားပြေနှင့် output ဘက်ဆိုင်ရာ မျိုးတူဖြစ်သည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>၎င်း၏ လုပ်ဆောင်ချက်ကို ဦးစားပေးပြီး ADHD နှင့် အဆင်ပြေသည့် တုံ့ပြန်မှုပုံစံကို ဘာသာစကားငါးမျိုးအတွက် OmniRoute ၏ တိုတောင်းကျစ်လျစ်သော output style အဖြစ် ပြောင်းလဲအသုံးချထားသည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/ayghri/i-have-adhd">i-have-adhd</a></b></td><td align="center">57,628</td><td>၎င်း၏ လုပ်ဆောင်ချက်ကို ဦးစားပေးပြီး ADHD နှင့် အဆင်ပြေသည့် တုံ့ပြန်မှုပုံစံကို ဘာသာစကားငါးမျိုးအတွက် 67router ၏ တိုတောင်းကျစ်လျစ်သော output style အဖြစ် ပြောင်းလဲအသုံးချထားသည်။</td></tr>
 </table>
 
 ### 🧩 ကျစ်လျစ်သော format များ၊ token သုတေသနနှင့် code-aware tooling
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် မည်သို့ စိတ်ကူးရစေခဲ့သည်</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် မည်သို့ စိတ်ကူးရစေခဲ့သည်</th></tr>
   <tr><td nowrap><b><a href="https://github.com/toon-format/toon">TOON</a></b></td><td align="center">25,509</td><td>Token-Oriented Object Notation ဖြစ်ပြီး ၎င်း၏ ကော်လံပုံစံ၊ header နှင့် row များ ပေါင်းစပ်ထားသော model က ကျွန်ုပ်တို့၏ tabular compaction အဆင့်ကို ပုံဖော်ပေးခဲ့သည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>၎င်း၏ ကျစ်လျစ်သော graph format နှင့် generic-profile design တို့က OmniRoute ၏ tabular compaction နှင့် Headroom codec format ကို ပုံဖော်ရာတွင် အထောက်အကူပြုခဲ့သည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf">GCF – Graph Compact Format</a></b></td><td align="center">59</td><td>၎င်း၏ ကျစ်လျစ်သော graph format နှင့် generic-profile design တို့က 67router ၏ tabular compaction နှင့် Headroom codec format ကို ပုံဖော်ရာတွင် အထောက်အကူပြုခဲ့သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/blackwell-systems/gcf-typescript">gcf-typescript</a></b></td><td align="center">4</td><td>Headroom generic-profile codec အဖြစ် တိုက်ရိုက်ထည့်သွင်းပြီး တိုးချဲ့ထားသည့် MIT TypeScript implementation ဖြစ်သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/ooples/token-optimizer-mcp">token-optimizer-mcp</a></b></td><td align="center">551</td><td>Brotli/SQLite cache နှင့် session တစ်ခုချင်းစီအလိုက် context-delta တို့သည် ကျွန်ုပ်တို့၏ <code>session-dedup</code> engine အတွက် စိတ်ကူးပေးခဲ့သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/Mibayy/token-savior">token-savior</a></b></td><td align="center">1,182</td><td>Bash output ကျစ်လျစ်အောင်ပြုလုပ်ခြင်းနှင့် MCP profile များသည် ကျွန်ုပ်တို့၏ ချုံ့ခြင်းမှ ရပ်တန့်ထွက်ခွာသည့် စည်းကမ်းနှင့် MCP tool-manifest လျှော့ချခြင်းတို့အတွက် စိတ်ကူးပေးခဲ့သည်။</td></tr>
@@ -1758,7 +1758,7 @@ OmniRoute သည် ရှေ့ဆောင်ပညာရှင်ကြီး
 ### 🧠 Memory နှင့် RAG
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
   <tr><td nowrap><b><a href="https://github.com/mem0ai/mem0">Mem0</a></b></td><td align="center">67,385</td><td>အလုံးစုံသုံးနိုင်သော မှတ်ဉာဏ်အလွှာ — ၎င်း၏ proxy-as-write/read-boundary မော်ဒယ်က ကျွန်ုပ်တို့၏ မှတ်ဉာဏ်တည်ဆောက်ပုံကို ပုံဖော်ပေးခဲ့သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/letta-ai/letta">Letta (MemGPT)</a></b></td><td align="center">25,179</td><td>အဆင့်လိုက် မှတ်ဉာဏ်ပါဝင်သည့် အခြေအနေထိန်းသိမ်းနိုင်သော agent များ — ကျွန်ုပ်တို့၏ Context Control & Recovery (CCR) အဆင့်လိုက်မော်ဒယ်အတွက် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/onestardao/WFGY">WFGY</a></b></td><td align="center">1,800</td><td>ထပ်တလဲလဲ ဖြစ်ပေါ်လေ့ရှိသော RAG/LLM ချို့ယွင်းမှုပုံစံ ၁၆ မျိုးပါဝင်သည့် ProblemMap အမျိုးအစားခွဲခြားမှု — ကျွန်ုပ်တို့၏ ပြဿနာဖြေရှင်းရေးလမ်းညွှန်တွင် အသုံးပြုသည့် ဘုံဝေါဟာရများ ဖြစ်သည်။</td></tr>
@@ -1767,15 +1767,15 @@ OmniRoute သည် ရှေ့ဆောင်ပညာရှင်ကြီး
 ### 🛰️ အသွားအလာ စစ်ဆေးခြင်း၊ MITM နှင့် ပွင့်လင်းမြင်သာသော proxy
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
-  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>coding-assistant ↔ LLM အသွားအလာကို MITM ဖြင့် ကြားဖြတ်ခြင်း/ခွဲခြမ်းစိတ်ဖြာခြင်းက အစောပိုင်း Traffic Inspector လိုအပ်ချက်များအတွက် အထောက်အကူပြုခဲ့သည်။ ယခင်က ဆင်းသက်ရယူထားသော module လေးခု — SSE ပေါင်းစည်းခြင်း၊ စကားဝိုင်းပုံစံ စံသတ်မှတ်ခြင်း၊ လျှို့ဝှက်ချက်များ ဖုံးကွယ်ခြင်းနှင့် header သန့်စင်ခြင်း — ကို အများပြည်သူသုံး protocol စံနှုန်းများအပေါ် အခြေခံ၍ သီးခြား clean-room အကောင်အထည်ဖော်မှုများဖြင့် အစားထိုးထားသည်။ host-passthrough မျက်နှာပြင်နှစ်ခုဖြစ်သည့် (<code>passthrough.ts</code> နှင့် <code>_internal/bypass.cjs</code>) သည် သီးခြားအမျိုးအစားခွဲထားသော OmniRoute အတွင်းပိုင်း အကောင်အထည်ဖော်မှုများအဖြစ် ဆက်လက်တည်ရှိပြီး ထိုအစားထိုးမှု၏ အစိတ်အပိုင်းအဖြစ် ပြန်လည်ရေးသားထားခြင်း မရှိပါ။</td></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
+  <tr><td nowrap><b><a href="https://github.com/chouzz/llm-interceptor">llm-interceptor</a></b></td><td align="center">79</td><td>coding-assistant ↔ LLM အသွားအလာကို MITM ဖြင့် ကြားဖြတ်ခြင်း/ခွဲခြမ်းစိတ်ဖြာခြင်းက အစောပိုင်း Traffic Inspector လိုအပ်ချက်များအတွက် အထောက်အကူပြုခဲ့သည်။ ယခင်က ဆင်းသက်ရယူထားသော module လေးခု — SSE ပေါင်းစည်းခြင်း၊ စကားဝိုင်းပုံစံ စံသတ်မှတ်ခြင်း၊ လျှို့ဝှက်ချက်များ ဖုံးကွယ်ခြင်းနှင့် header သန့်စင်ခြင်း — ကို အများပြည်သူသုံး protocol စံနှုန်းများအပေါ် အခြေခံ၍ သီးခြား clean-room အကောင်အထည်ဖော်မှုများဖြင့် အစားထိုးထားသည်။ host-passthrough မျက်နှာပြင်နှစ်ခုဖြစ်သည့် (<code>passthrough.ts</code> နှင့် <code>_internal/bypass.cjs</code>) သည် သီးခြားအမျိုးအစားခွဲထားသော 67router အတွင်းပိုင်း အကောင်အထည်ဖော်မှုများအဖြစ် ဆက်လက်တည်ရှိပြီး ထိုအစားထိုးမှု၏ အစိတ်အပိုင်းအဖြစ် ပြန်လည်ရေးသားထားခြင်း မရှိပါ။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/InterceptSuite/ProxyBridge">ProxyBridge</a></b></td><td align="center">6,814</td><td>process တစ်ခုချင်းစီအလိုက် ပွင့်လင်းမြင်သာသော proxy လမ်းကြောင်းရွေးချယ်ခြင်း — ကျွန်ုပ်တို့၏ crash-safe MITM ဖယ်ရှားပိတ်သိမ်းမှု၊ socket idle-timeout များ၊ <code>/proc</code> process ချိတ်ဆက်သတ်မှတ်မှုနှင့် TPROXY ဖမ်းယူမှုတို့အတွက် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
 </table>
 
 ### 📚 မော်ဒယ်ဒေတာ၊ လေ့လာစောင့်ကြည့်နိုင်စွမ်းနှင့် UI
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
   <tr><td nowrap><b><a href="https://github.com/anomalyco/models.dev">models.dev</a></b></td><td align="center">7,286</td><td>AI မော်ဒယ်သတ်မှတ်ချက်များ၊ ဈေးနှုန်းများနှင့် စွမ်းဆောင်ရည်များပါဝင်သည့် ပွင့်လင်းဒေတာဘေ့စ် — ကျွန်ုပ်တို့၏ မော်ဒယ်ကတ်တလောက်ထဲသို့ မူလစနစ်ဖြင့် ထပ်တူပြုထားသည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/xyflow/xyflow">React Flow / xyflow</a></b></td><td align="center">38,705</td><td>ကျွန်ုပ်တို့၏ အချိန်နှင့်တစ်ပြေးညီ Compression Studio နှင့် Combo/Routing Studio တို့ကို လည်ပတ်စေသည့် node အခြေပြု graph library ဖြစ်သည်။</td></tr>
   <tr><td nowrap><b><a href="https://github.com/langchain-ai/langgraph">LangGraph</a></b></td><td align="center">43,443</td><td>LangGraph Studio ၏ တိုက်ရိုက် workflow-graph ပုံဖော်ပြသမှုက ကျွန်ုပ်တို့၏ Studios များရှိ အချိန်နှင့်တစ်ပြေးညီ cascade မြင်ကွင်းအတွက် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
@@ -1788,19 +1788,19 @@ OmniRoute သည် ရှေ့ဆောင်ပညာရှင်ကြီး
 ### 🛡️ လုံခြုံရေး
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
   <tr><td nowrap><b><a href="https://github.com/tldrsec/awesome-secure-defaults">awesome-secure-defaults</a></b></td><td align="center">722</td><td>ကျွန်ုပ်တို့၏ လုံခြုံရေးရွေးချယ်မှုများကို လမ်းညွှန်ပေးသည့် မူလအတိုင်း လုံခြုံသော library များ၏ စိစစ်ရွေးချယ်ထားသော စာရင်းဖြစ်သည် (Helmet.js, DOMPurify, ssrf-req-filter, safe-regex, Google Tink)။</td></tr>
 </table>
 
 ### 🧭 ဖြည့်စွက်အသုံးဝင်သော ကိရိယာများ
 
 <table>
-  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">OmniRoute အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
+  <tr><th align="left">ပရောဂျက်</th><th align="center">⭐</th><th align="left">67router အတွက် လှုံ့ဆော်မှုပေးခဲ့ပုံ</th></tr>
   <tr><td nowrap><b><a href="https://github.com/BlockRunAI/ClawRouter">ClawRouter</a></b></td><td align="center">6,628</td><td>တောင်းဆိုချက် ထပ်နေမှုဖယ်ရှားခြင်း၊ အရေးပေါ် ကုန်ကျစရိတ်မရှိ fallback၊ ထည့်သွင်းချိတ်ဆက်နိုင်သော Auto-Combo မဟာဗျူဟာများနှင့် ဘာသာစကားစုံ ရည်ရွယ်ချက်အမျိုးအစားခွဲခြားမှုတို့အတွက် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>၎င်း၏ အကောင့်အခြေအနေကို သိရှိနိုင်သော မော်ဒယ်ပြန်လည်ချိတ်ဆက်သတ်မှတ်မှု၊ executable လမ်းကြောင်းအတည်ပြုခြင်းနှင့် plan-label အပြုအမူတို့က OmniRoute ၏ Antigravity runtime အတွက် အထောက်အကူပြုခဲ့သည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>၎င်း၏ ကျစ်လျစ်သော quota-reset နှစ်ပြန်ရေတွက်မှုပုံစံက OmniRoute ရှိ သက်ဆိုင်ရာ provider ကန့်သတ်ချက်ပြသမှုအတွက် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>၎င်း၏ ACP ချိတ်ဆက်မှုများက ထည့်သွင်းထားသော CLI agent များကို OmniRoute က အလိုအလျောက် ရှာဖွေသိရှိနိုင်စေရန် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
-  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Grok Build quota မျက်နှာပြင်ကို ဖော်ထုတ်ပေးခဲ့ပြီးနောက် OmniRoute က လက်ရှိအသုံးပြုနေသော wire format ကို သီးခြားအတည်ပြုကာ ပြင်ဆင်ခဲ့သည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/lbjlaq/Antigravity-Manager">Antigravity-Manager</a></b></td><td align="center">32,333</td><td>၎င်း၏ အကောင့်အခြေအနေကို သိရှိနိုင်သော မော်ဒယ်ပြန်လည်ချိတ်ဆက်သတ်မှတ်မှု၊ executable လမ်းကြောင်းအတည်ပြုခြင်းနှင့် plan-label အပြုအမူတို့က 67router ၏ Antigravity runtime အတွက် အထောက်အကူပြုခဲ့သည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/jlcodes99/vscode-antigravity-cockpit">vscode-antigravity-cockpit</a></b></td><td align="center">4,850</td><td>၎င်း၏ ကျစ်လျစ်သော quota-reset နှစ်ပြန်ရေတွက်မှုပုံစံက 67router ရှိ သက်ဆိုင်ရာ provider ကန့်သတ်ချက်ပြသမှုအတွက် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/iOfficeAI/AionUi">AionUi</a></b></td><td align="center">33,611</td><td>၎င်း၏ ACP ချိတ်ဆက်မှုများက ထည့်သွင်းထားသော CLI agent များကို 67router က အလိုအလျောက် ရှာဖွေသိရှိနိုင်စေရန် လှုံ့ဆော်မှုပေးခဲ့သည်။</td></tr>
+  <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,616</td><td>Grok Build quota မျက်နှာပြင်ကို ဖော်ထုတ်ပေးခဲ့ပြီးနောက် 67router က လက်ရှိအသုံးပြုနေသော wire format ကို သီးခြားအတည်ပြုကာ ပြင်ဆင်ခဲ့သည်။</td></tr>
 </table>
 
 ## 📄 လိုင်စင်
@@ -1813,7 +1813,7 @@ MIT လိုင်စင် - အသေးစိတ်အတွက် [LICENSE]
 
 **[⬆ အပေါ်ဆုံးသို့ ပြန်သွားရန်](#-omniroute)** · open-source AI အသိုင်းအဝိုင်းအတွက် ❤️ ဖြင့် တည်ဆောက်ထားပါသည်။
 
-<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT License · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>67router v3.8.53 · Node ≥22.22.2 · MIT License · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- အသိုင်းအဝိုင်း Q&A အတွက် GitHub Discussions ကို ဖွင့်ထားပါသည် -->

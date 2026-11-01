@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute maakt onderscheid tussen **CLI-detectie**, het **native Agent Client Protocol** en
+67router maakt onderscheid tussen **CLI-detectie**, het **native Agent Client Protocol** en
 **verouderde stdio-adapters**. Het vinden van een geïnstalleerd binair bestand bewijst niet dat
 de authenticatie is geslaagd, dat modellen compatibel zijn of dat het gereed is om een prompt te verwerken.
 
@@ -119,5 +119,3 @@ in de doelomgeving vereist.
 - [Agentprotocollen](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI-startcontracten](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI-tools](../reference/CLI-TOOLS.md)
-- [A2A-server](./A2A-SERVER.md)
-- [Cloudagents](./CLOUD_AGENT.md)

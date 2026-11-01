@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Cikakken jagora don saita masu samarwa, ƙirƙirar haɗe-haɗe, haɗa kayan aikin CLI, da tura OmniRoute.
+Cikakken jagora don saita masu samarwa, ƙirƙirar haɗe-haɗe, haɗa kayan aikin CLI, da tura 67router.
 
 ---
 
@@ -24,7 +24,6 @@ Cikakken jagora don saita masu samarwa, ƙirƙirar haɗe-haɗe, haɗa kayan aiki
 - [Tsarin Ƙwarewa](#-skills-system)
 - [Tsarin Ƙwaƙwalwa](#-memory-system)
 - [Webhooks](#-webhooks)
-- [Wakilan Cloud](#-cloud-agents)
 - [Gudanarwa ta Shirye-shirye](#-programmatic-management)
 - [CLI na Ciki](#-internal-cli)
 - [Manhajar Kwamfutar Tebur (Electron)](#-desktop-application-electron)
@@ -137,11 +136,11 @@ Samfura:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Shawarar Ƙwararru:** Yi amfani da Opus don ayyuka masu sarƙaƙiya, Sonnet kuma don sauri. OmniRoute yana bibiyar ƙayyadadden amfani ga kowane samfuri!
+**Shawarar Ƙwararru:** Yi amfani da Opus don ayyuka masu sarƙaƙiya, Sonnet kuma don sauri. 67router yana bibiyar ƙayyadadden amfani ga kowane samfuri!
 
-Babu burauza a kan na'urar da ke karɓar baƙuncin OmniRoute? Gudanar da `claude setup-token` a duk inda aka shiga Claude Code sannan a liƙa token na shekara ɗaya a cikin shafin **Setup Token**. Duba [Claude Code tare da setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+Babu burauza a kan na'urar da ke karɓar baƙuncin 67router? Gudanar da `claude setup-token` a duk inda aka shiga Claude Code sannan a liƙa token na shekara ɗaya a cikin shafin **Setup Token**. Duba [Claude Code tare da setup token](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
-Hanyoyin Claude da masu jituwa da Claude Code suna kiyaye matakin ƙoƙarin tunani na `max` ga samfuran Opus da Sonnet. Samfuran Haiku ba sa karɓar matakin ƙoƙarin `max`, don haka OmniRoute yana saukar da wannan buƙatar zuwa babban kasafin tunani kafin aika ta zuwa sama.
+Hanyoyin Claude da masu jituwa da Claude Code suna kiyaye matakin ƙoƙarin tunani na `max` ga samfuran Opus da Sonnet. Samfuran Haiku ba sa karɓar matakin ƙoƙarin `max`, don haka 67router yana saukar da wannan buƙatar zuwa babban kasafin tunani kafin aika ta zuwa sama.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -261,7 +260,7 @@ Kuɗi: a halin yanzu an jera shi a matsayin $0; sharuɗɗa da samuwa na iya canz
 
 ### Cursor IDE
 
-**Amfani da Cursor a matsayin abokin cinikin OmniRoute** (bi da tattaunawar Cursor ta OmniRoute):
+**Amfani da Cursor a matsayin abokin cinikin 67router** (bi da tattaunawar Cursor ta 67router):
 
 ```
 Settings → Models → Advanced:
@@ -270,7 +269,7 @@ Settings → Models → Advanced:
   Model: cc/claude-opus-4-7
 ```
 
-**Amfani da OmniRoute a matsayin mai samar da Cursor** (OmniRoute yana kiran Cursor na sama): fi son
+**Amfani da 67router a matsayin mai samar da Cursor** (67router yana kiran Cursor na sama): fi son
 **Dashboard → Providers → Cursor → Login with Cursor**. A Docker, duba
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -357,7 +356,7 @@ CLI yana loda `.env` kai tsaye daga `~/.omniroute/.env` ko `./.env`.
 
 ### Yanayin tray
 
-Fara OmniRoute a tray na tsarin:
+Fara 67router a tray na tsarin:
 
 ```bash
 omniroute serve --tray
@@ -374,7 +373,7 @@ Yi amfani da menu na tray don waɗannan ayyukan:
 - Buɗe dashboard.
 - Buɗe `/dashboard/logs`.
 - Canja farawa ta atomatik.
-- Dakatar da OmniRoute.
+- Dakatar da 67router.
 
 Kada ka haɗa `--tray` da waɗannan zaɓuɓɓukan:
 
@@ -400,14 +399,14 @@ omniroute autostart disable
 
 ### Cire Shigarwa
 
-Idan ba ka ƙara buƙatar OmniRoute ba, muna samar da rubutun umarni biyu masu sauri don cire shi tsaf:
+Idan ba ka ƙara buƙatar 67router ba, muna samar da rubutun umarni biyu masu sauri don cire shi tsaf:
 
 | Umarni                   | Aiki                                                                                          |
 | ------------------------ | --------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Yana cire manhajar tsarin amma **yana barin DB da daidaitawarka** a `~/.omniroute`.           |
 | `npm run uninstall:full` | Yana cire manhajar KUMA yana **goge duk daidaitawa, maɓallai, da ma'ajin bayanai har abada**. |
 
-> Lura: Don gudanar da waɗannan umarnin, je zuwa babban fayil ɗin aikin OmniRoute (idan ka clone shi) sannan ka gudanar da su. A madadin haka, idan an shigar da shi na gaba ɗaya, za ka iya kawai gudanar da `npm uninstall -g omniroute`.
+> Lura: Don gudanar da waɗannan umarnin, je zuwa babban fayil ɗin aikin 67router (idan ka clone shi) sannan ka gudanar da su. A madadin haka, idan an shigar da shi na gaba ɗaya, za ka iya kawai gudanar da `npm uninstall -g omniroute`.
 
 ### Turawa zuwa VPS
 
@@ -479,7 +478,7 @@ Don yanayin da aka haɗa da host tare da binaries na CLI, duba sashen Docker a c
 
 ### Void Linux (xbps-src)
 
-Masu amfani da Void Linux za su iya shirya fakiti da girka OmniRoute kai tsaye ta amfani da tsarin haɗa-giciye na `xbps-src`. Wannan yana sarrafa gina sigar Node.js mai zaman kanta ta atomatik tare da ɗaurin asali na `better-sqlite3` da ake buƙata.
+Masu amfani da Void Linux za su iya shirya fakiti da girka 67router kai tsaye ta amfani da tsarin haɗa-giciye na `xbps-src`. Wannan yana sarrafa gina sigar Node.js mai zaman kanta ta atomatik tare da ɗaurin asali na `better-sqlite3` da ake buƙata.
 
 <details>
 <summary><b>Duba samfurin xbps-src</b></summary>
@@ -659,7 +658,7 @@ Don cikakken bayani game da maɓallan muhalli, duba [README](../README.md).
 
 **Sauran masu samarwa masu jituwa** (zaɓaɓɓu): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (ta hanyar `aws-bedrock`), `azure-ai`, `openrouter` (kundin da ake wucewa kai tsaye), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Kowanne yana kula da nasa jerin samfura a cikin `providerRegistry.ts`, kuma ana iya daidaita shi kai-tsaye idan mai samarwar ya bayar da maƙurar `/models`.
 
-**Bayani kan ID ɗin samfura:** OmniRoute yana amfani da ID na asali na mai samarwa (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Wasu ID sun haɗa da nau'ukan da ke da ɗigo saboda haka API na tushen sama yake buƙatar su. Idan ba a jera wani samfuri a sama ba, gudanar da `omniroute models --search <term>` ko aika buƙata zuwa `GET /api/models/catalog` don tabbatar da samuwarsa.
+**Bayani kan ID ɗin samfura:** 67router yana amfani da ID na asali na mai samarwa (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Wasu ID sun haɗa da nau'ukan da ke da ɗigo saboda haka API na tushen sama yake buƙatar su. Idan ba a jera wani samfuri a sama ba, gudanar da `omniroute models --search <term>` ko aika buƙata zuwa `GET /api/models/catalog` don tabbatar da samuwarsa.
 
 </details>
 
@@ -725,9 +724,9 @@ kuskuren da ya ambaci ginannen mai bayarwa ko bayanan shaidarsa, duba ko prefix 
 an keɓe shi: kullayen da aka adana kafin wannan ƙa'ida su na nan a ajiye, amma prefix ɗinsu yana tura buƙatu zuwa
 ginannen mai bayarwa. Gyara kullin ka ba shi sabon prefix.
 
-### Haɗa Abokan OmniRoute a Sarƙaƙƙiya
+### Haɗa Abokan 67router a Sarƙaƙƙiya
 
-Za a iya ƙara wata mashigar OmniRoute a matsayin mai bayarwa na **Custom OpenAI-compatible**. Yi amfani da
+Za a iya ƙara wata mashigar 67router a matsayin mai bayarwa na **Custom OpenAI-compatible**. Yi amfani da
 Base URL na `/v1` na abokin da kuma keɓaɓɓen API key mai mafi ƙarancin izini wanda wannan abokin ya bayar.
 
 Don sarƙoƙin juna ko masu matakai da yawa, kunna kariyar madauwari ta zaɓi a kowace mashiga:
@@ -753,7 +752,7 @@ da ta ƙare da HTTP `508 Loop Detected`; masu bayarwa na upstream na yau da kull
 Haɗa abokai a sarƙaƙƙiya ba maimaita bayanan database ba ne ko sauya host idan ya gaza. Kowace mashiga tana riƙe da nata
 yanayin SQLite, caches, ƙididdigar ƙimar amfani, da sessions daban. Yi amfani da reverse proxy mai duba lafiya ko sauyawar
 abokin hulɗa idan ya gaza don samuwar active/passive ko active/active, kuma kada a taɓa haɗa database ɗin SQLite guda ɗaya
-zuwa instances na OmniRoute da yawa da ke gudana.
+zuwa instances na 67router da yawa da ke gudana.
 
 ### Hanyoyin Mai Bayarwa na Musamman
 
@@ -804,7 +803,7 @@ Yana mayar da samfura da aka haɗa rukuni-rukuni bisa mai bayarwa tare da nau'ik
 - Ana samunsa a **Dashboard → Endpoints** don Docker da sauran tsarin da ake karɓar baƙuncinsu da kai
 - Yana ƙirƙirar URL na wucin gadi `https://*.trycloudflare.com` wanda ke tura buƙatu zuwa endpoint ɗinka na yanzu mai dacewa da OpenAI `/v1`
 - Kunna shi a karon farko yana girka `cloudflared` ne kawai idan ana buƙata; sake farawa daga baya yana amfani da binary ɗin da aka sarrafa iri ɗaya
-- Ba a maido da Quick Tunnels ta atomatik bayan sake farawa na OmniRoute ko container; sake kunna su daga dashboard idan ana buƙata
+- Ba a maido da Quick Tunnels ta atomatik bayan sake farawa na 67router ko container; sake kunna su daga dashboard idan ana buƙata
 - URLs na tunnel na wucin gadi ne kuma suna canzawa duk lokacin da ka dakatar/kunna tunnel
 - Managed Quick Tunnels suna amfani da jigilar HTTP/2 ta tsohuwa don kauce wa gargaɗin buffer na QUIC UDP masu hayaniya a cikin containers masu ƙarancin albarkatu
 - Saita `CLOUDFLARED_PROTOCOL=quic` ko `auto` idan kana son sauya zaɓin jigilar da aka sarrafa
@@ -821,7 +820,7 @@ Yana mayar da samfura da aka haɗa rukuni-rukuni bisa mai bayarwa tare da nau'ik
 
 ### Filin Gwajin Mai Fassara
 
-Shiga ta **Dashboard → Translator**. Yi debugging kuma ka ga yadda OmniRoute ke fassara buƙatun API tsakanin providers.
+Shiga ta **Dashboard → Translator**. Yi debugging kuma ka ga yadda 67router ke fassara buƙatun API tsakanin providers.
 
 | Yanayi           | Manufa                                                                                             |
 | ---------------- | -------------------------------------------------------------------------------------------------- |
@@ -874,7 +873,7 @@ Don session affinity na waje (misali, agents na Claude Code/Codex da ke bayan re
 X-Session-Id: your-session-key
 ```
 
-OmniRoute kuma yana karɓar `x_session_id` kuma yana mayar da session key da ake amfani da ita a `X-OmniRoute-Session-Id`.
+67router kuma yana karɓar `x_session_id` kuma yana mayar da session key da ake amfani da ita a `X-OmniRoute-Session-Id`.
 
 Idan kana amfani da Nginx kuma kana aika headers masu tsarin underscore, kunna:
 
@@ -908,7 +907,7 @@ Chain: production-fallback
 
 ### Haɗe-haɗen Provider da Tsarin Routing da Aka Fi Amfani da Su
 
-Ga misalan tsarin haɗa providers da yawa da yin routing a tsakaninsu a OmniRoute:
+Ga misalan tsarin haɗa providers da yawa da yin routing a tsakaninsu a 67router:
 
 #### 1. Combo na Coding Agent: Ƙwaƙƙwaran Tunani tare da Fallback na Farashi/Gudu
 
@@ -969,7 +968,7 @@ Haɗa samfuran gani na musamman da samar da rubutu mai sauri don ayyukan da suka
 
 Saita ta **Dashboard → Settings → Resilience**.
 
-OmniRoute yana aiwatar da juriya a matakin mai samar da sabis ta hanyar abubuwa biyar:
+67router yana aiwatar da juriya a matakin mai samar da sabis ta hanyar abubuwa biyar:
 
 1. **Jerin Jira da Daidaita Gudun Buƙatu** — Tsara buƙatu a matakin tsarin:
    - **Buƙatu a Kowane Minti (RPM)** — Matsakaicin buƙatu a kowane minti ga kowane asusu
@@ -994,7 +993,7 @@ OmniRoute yana aiwatar da juriya a matakin mai samar da sabis ta hanyar abubuwa 
 
    Ana nuna halin aiki na mai katse da'irar mai samar da sabis a **Dashboard → Health** kawai.
 
-4. **Jira Lokacin Jira** — Idan duk haɗinan da za a iya zaɓa sun riga sun shiga lokacin jira, OmniRoute zai iya jira wanda zai fara ƙarewa sannan ya sake gwada wannan buƙatar abokin ciniki ta atomatik.
+4. **Jira Lokacin Jira** — Idan duk haɗinan da za a iya zaɓa sun riga sun shiga lokacin jira, 67router zai iya jira wanda zai fara ƙarewa sannan ya sake gwada wannan buƙatar abokin ciniki ta atomatik.
 
 5. **Gano Iyakar Ƙima ta Atomatik** — Idan masu samar da sabis na sama suka dawo da takamaiman tazarar jira, waɗannan alamomin suna maye gurbin lokacin jiran haɗi na cikin gida idan an kunna saitin.
 
@@ -1028,7 +1027,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Abubuwan Amfani:**
 
-- Ƙaura da OmniRoute tsakanin kwamfutoci
+- Ƙaura da 67router tsakanin kwamfutoci
 - Ƙirƙiri kwafin ajiya na waje don murmurewa daga bala'i
 - Raba saituna tsakanin mambobin ƙungiya (fitar da duka → raba rumbu)
 
@@ -1080,7 +1079,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Rubuta Sauti Zuwa Rubutu
 
-OmniRoute yana goyon bayan rubuta sauti zuwa rubutu ta endpoint mai dacewa da OpenAI:
+67router yana goyon bayan rubuta sauti zuwa rubutu ta endpoint mai dacewa da OpenAI:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1155,7 +1154,7 @@ jinkirin ƙarshen rarrabawa.
 Kashe **Ma'ajin token na Tunani** idan masu samarwa na sama suna buƙatar tsauraran iyakokin
 `max_tokens` / `maxOutputTokens`. Idan an kunna shi, hanyar haɗaka tana ƙara sararin
 samfurin tunani ne kawai ga samfuran da aka san iyakar fitarsu, kuma tana barin iyakar token ta abokin hulɗa ba tare da canji ba idan amintacciyar ƙimar da aka ƙara wa ma'aji za ta wuce wannan iyaka. Idan iyakar abokin hulɗa ta riga ta haura sananniyar iyaka,
-OmniRoute zai rage ta zuwa wannan iyakar kafin aika buƙatar zuwa sama.
+67router zai rage ta zuwa wannan iyakar kafin aika buƙatar zuwa sama.
 
 ---
 
@@ -1178,7 +1177,7 @@ Shiga ta **Dashboard → Health**. Bayanin lafiyar tsarin kai-tsaye mai ɗauke d
 
 ## 🤖 Zaɓin Hanya ta Atomatik (Ba tare da saiti ba)
 
-OmniRoute yana zuwa da **mai zaɓin hanya ta atomatik bisa maki** wanda ke zaɓar mafi kyawun model ga kowace buƙata daga dukkan provider da aka haɗa — babu combo da za a riƙa kulawa da shi. Kawai aika buƙatar da ɗaya daga cikin prefix na `auto/*`, sannan OmniRoute zai haɗa virtual combo nan take, yana ba wa candidates maki bisa latency, cost, success rate, dacewar context, dacewar model da aikin, failures na baya-bayan nan, quota, da yanayin circuit-breaker.
+67router yana zuwa da **mai zaɓin hanya ta atomatik bisa maki** wanda ke zaɓar mafi kyawun model ga kowace buƙata daga dukkan provider da aka haɗa — babu combo da za a riƙa kulawa da shi. Kawai aika buƙatar da ɗaya daga cikin prefix na `auto/*`, sannan 67router zai haɗa virtual combo nan take, yana ba wa candidates maki bisa latency, cost, success rate, dacewar context, dacewar model da aikin, failures na baya-bayan nan, quota, da yanayin circuit-breaker.
 
 | Prefix         | Abin da yake ingantawa                                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1209,7 +1208,7 @@ An yi cikakken bayanin mai zaɓin hanya ta atomatik a cikin [AUTO-COMBO.md](../r
 
 ## 🔌 Haɗin MCP & A2A
 
-OmniRoute duka **MCP server** ne (Model Context Protocol) kuma **A2A server** ne (Agent-to-Agent JSON-RPC 2.0). Duk wani IDE ko agent host da ya dace da MCP zai iya kiran kayan aikin OmniRoute kai tsaye — ba a buƙatar ƙarin wrapper.
+67router duka **MCP server** ne (Model Context Protocol) kuma **A2A server** ne (Agent-to-Agent JSON-RPC 2.0). Duk wani IDE ko agent host da ya dace da MCP zai iya kiran kayan aikin 67router kai tsaye — ba a buƙatar ƙarin wrapper.
 
 ### MCP transports
 
@@ -1238,17 +1237,14 @@ Yi amfani da SSE URL `http://localhost:20128/api/mcp/sse` da Bearer API key da a
 
 ### Scopes
 
-A halin yanzu MCP yana ayyana scopes 32 masu suna. Ana iya iyakance kowace Bearer key zuwa takamaiman scopes — duba [MCP-SERVER.md](../frameworks/MCP-SERVER.md) don tabbataccen jerin scope da tool, da kuma [A2A-SERVER.md](../frameworks/A2A-SERVER.md) don JSON-RPC schema.
-
 ---
 
 ## 🧠 Tsarin Ƙwarewa
 
-OmniRoute yana samar da **tsarin ƙwarewa mai faɗaɗawa** (`src/lib/skills/`) domin wakilai da endpoint na A2A su iya gudanar da ayyuka na takamaiman fanni (misali `code-review`, `summarize`, `extract-facts`, `web-research`).
+67router yana samar da **tsarin ƙwarewa mai faɗaɗawa** (`src/lib/skills/`) domin wakilai da endpoint na A2A su iya gudanar da ayyuka na takamaiman fanni (misali `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **UI na Marketplace** — Bincika kuma shigar da ƙwarewa daga **Dashboard → Skills**
 - **Scopes na kowane maɓalli** — Ƙayyade waɗanne maɓallan API ne za su iya kiran waɗanne ƙwarewa
-- **Ƙwarewa na musamman** — Saka fayil na TypeScript a `src/lib/a2a/skills/`, yi masa rajista, kuma nan take zai zama abin kira ta A2A
 
 Cikakken bayani: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1256,7 +1252,7 @@ Cikakken bayani: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Tsarin Ƙwaƙwalwa
 
-OmniRoute yana adana **ƙwaƙwalwar tattaunawa ta dogon lokaci** tare da tsarin dawo da bayanai na haɗaka:
+67router yana adana **ƙwaƙwalwar tattaunawa ta dogon lokaci** tare da tsarin dawo da bayanai na haɗaka:
 
 - **SQLite FTS5** don binciken kalmomi a duk tattaunawar da ta gabata
 - **Ma’ajiyar vector ta Qdrant** (na zaɓi) don tuna bayanai bisa ma’ana
@@ -1269,7 +1265,7 @@ Sarrafa ƙwaƙwalwa a **Dashboard → Memory** (bincike, gyarawa, fitarwa, gogew
 
 ## 🔔 Webhooks
 
-Yi rajista ga abubuwan da ke faruwa a OmniRoute domin sa ido da sarrafa ayyuka ta atomatik a ainihin lokaci.
+Yi rajista ga abubuwan da ke faruwa a 67router domin sa ido da sarrafa ayyuka ta atomatik a ainihin lokaci.
 
 - Ƙirƙiri webhook a **Dashboard → Webhooks** tare da URL na manufa da sirrin sa hannun HMAC
 - Abubuwan da ake da su: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1280,21 +1276,9 @@ Cikakken schema yana cikin [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Wakilan Cloud
-
-OmniRoute yana haɗuwa da wakilan rubuta lamba na cloud (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**) domin ku iya aika ayyuka masu ɗaukar dogon lokaci daga dashboard ɗin da ke kula da routing na cikin gida.
-
-- Ƙirƙiri ayyuka a **Dashboard → Cloud Agents** ko ta `POST /api/v1/agents/tasks`
-- Bibiyi matsayi, logs, da artifacts na kowane aiki
-- Yi amfani da maɓallin API naka ga kowane provider — bayanan shiga ba sa taɓa barin instance na OmniRoute
-
-Cikakken bayani: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Gudanarwa ta Shirye-shirye
 
-Kuna iya sarrafa kowane albarkatun OmniRoute (providers, combos, keys, settings) ta HTTP ta amfani da **maɓallin Bearer mai scope na `manage`**.
+Kuna iya sarrafa kowane albarkatun 67router (providers, combos, keys, settings) ta HTTP ta amfani da **maɓallin Bearer mai scope na `manage`**.
 
 Samar da maɓallin a **Dashboard → API Keys → New Key → Scope: manage**, sannan:
 
@@ -1327,7 +1311,7 @@ Duba [API_REFERENCE.md](../reference/API_REFERENCE.md) don cikakken kundin endpo
 
 ## 💻 CLI na Ciki
 
-OmniRoute yana zuwa da CLI na ciki (`omniroute …`) don saiti, binciken matsaloli, da sarrafa lokacin aiki. Wannan **ya bambanta da shafin "CLI Tools" da ke cikin dashboard**, wanda yake saita CLI na wasu kamfanoni (Claude Code, Cursor, Codex, Cline, …) domin su iya sadarwa da OmniRoute.
+67router yana zuwa da CLI na ciki (`omniroute …`) don saiti, binciken matsaloli, da sarrafa lokacin aiki. Wannan **ya bambanta da shafin "CLI Tools" da ke cikin dashboard**, wanda yake saita CLI na wasu kamfanoni (Claude Code, Cursor, Codex, Cline, …) domin su iya sadarwa da 67router.
 
 ```bash
 omniroute setup                    # Jagorar saiti mai mu'amala (kalmar sirri, masu samarwa, haɗe-haɗe)
@@ -1345,7 +1329,6 @@ omniroute restore [<timestamp>]    # Mayar da bayanai daga hoton ajiya
 omniroute health                   # Cikakken bayani kan lafiya (breakers, cache, memory)
 omniroute quota                    # Amfani da ƙayyadadden kaso na mai samarwa
 omniroute mcp status               # Matsayin uwar garken MCP
-omniroute a2a status               # Matsayin uwar garken A2A
 omniroute tunnel list|create|stop  # Tunnels na Cloudflare/Tailscale/ngrok
 omniroute reset-password           # Sake saita kalmar sirrin mai gudanarwa
 omniroute --mcp                    # Fara uwar garken MCP ta stdio
@@ -1358,7 +1341,7 @@ Shawara: haɗa `omniroute doctor --json` da kayan aikinka na sa ido domin samun 
 
 ## 🖥️ Manhajar Kwamfuta (Electron)
 
-Ana samun OmniRoute a matsayin manhajar kwamfuta ta asali don Windows, macOS, da Linux.
+Ana samun 67router a matsayin manhajar kwamfuta ta asali don Windows, macOS, da Linux.
 
 ### Shigarwa
 

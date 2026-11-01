@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute **CLI డిస్కవరీ**, **స్థానిక Agent Client Protocol**, మరియు
+67router **CLI డిస్కవరీ**, **స్థానిక Agent Client Protocol**, మరియు
 **లెగసీ stdio అడాప్టర్లను** వేరు చేస్తుంది. ఇన్స్టాల్ చేసిన బైనరీ కనుగొనబడటం వల్ల దాని
 ప్రమాణీకరణ, మోడల్ అనుకూలత లేదా ప్రాంప్ట్ను నిర్వహించడానికి సిద్ధంగా ఉందని నిర్ధారణ కాదు.
 
@@ -119,5 +119,3 @@ try {
 - [ఏజెంట్ ప్రోటోకాల్లు](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI లాంచ్ కాంట్రాక్ట్లు](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI టూల్లు](../reference/CLI-TOOLS.md)
-- [A2A సర్వర్](./A2A-SERVER.md)
-- [క్లౌడ్ ఏజెంట్లు](./CLOUD_AGENT.md)

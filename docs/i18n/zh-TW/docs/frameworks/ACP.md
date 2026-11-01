@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute 將 **CLI 探索**、**原生 Agent Client Protocol** 與
+67router 將 **CLI 探索**、**原生 Agent Client Protocol** 與
 **舊版 stdio 轉接器**分開處理。找到已安裝的二進位檔，並不代表其
 驗證狀態、模型相容性，或處理提示的就緒狀態已獲確認。
 
@@ -119,5 +119,3 @@ try {
 - [代理程式通訊協定](./AGENT_PROTOCOLS_GUIDE.md)
 - [CLI 啟動合約](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [CLI 工具](../reference/CLI-TOOLS.md)
-- [A2A 伺服器](./A2A-SERVER.md)
-- [雲端代理程式](./CLOUD_AGENT.md)

@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute यह नियंत्रित करता है कि कौन-से **ब्राउज़र origins** किसी एक केंद्रीकृत allowlist से cross-origin responses पढ़ सकते हैं। यह मॉडल **डिफ़ॉल्ट रूप से fail-closed** है:
+67router यह नियंत्रित करता है कि कौन-से **ब्राउज़र origins** किसी एक केंद्रीकृत allowlist से cross-origin responses पढ़ सकते हैं। यह मॉडल **डिफ़ॉल्ट रूप से fail-closed** है:
 जब तक आप किसी origin को स्पष्ट रूप से अनुमति नहीं देते, तब तक किसी भी origin को अनुमति नहीं मिलती। यह पृष्ठ बताता है कि allowlist
 कैसे resolve होती है, `CORS_ALLOW_ALL=true` वास्तव में क्या उजागर करता है (और, महत्वपूर्ण रूप से, क्या
 **नहीं** करता), dev और production को सुरक्षित रूप से कैसे configure करें, और wildcard सक्रिय होने पर
@@ -45,13 +45,13 @@ middleware (`src/server/authz/pipeline.ts`) में लागू होती 
 ## Threat model — `CORS_ALLOW_ALL=true` वास्तव में क्या उजागर करता है
 
 सामान्य OWASP warning ("wildcard CORS = कोई भी site आपके API को call कर सकती है") को
-गंभीरता से लेना उचित है, लेकिन OmniRoute का exposure **सामान्य स्थिति की तुलना में सीमित** है,
+गंभीरता से लेना उचित है, लेकिन 67router का exposure **सामान्य स्थिति की तुलना में सीमित** है,
 क्योंकि implementation से जुड़ा एक ठोस तथ्य है:
 
 > **केंद्रीय `applyCorsHeaders()` कभी भी
 > `Access-Control-Allow-Credentials` emit नहीं करता।** कोई ब्राउज़र किसी _credentialed_
 > (cookie वाली) cross-origin response को तब तक उजागर नहीं करेगा, जब तक server
-> `Access-Control-Allow-Credentials: true` न भेजे। OmniRoute का shared CORS path ऐसा कभी
+> `Access-Control-Allow-Credentials: true` न भेजे। 67router का shared CORS path ऐसा कभी
 > नहीं करता।
 
 `CORS_ALLOW_ALL=true` के साथ भी, प्रत्येक surface के लिए इसका अर्थ यह है:
@@ -68,20 +68,6 @@ management routes पर CORS **preflight को pass होने देना*
 की आवश्यकता होती है जिसे कोई cross-origin page उपलब्ध नहीं करा सकता। shared CORS path पर यह
 session-hijack या credential-theft vector **नहीं** है।
 
-### एक वास्तविक अपवाद — `/api/v1/agents/`
-
-Cloud-Agent routes (`/api/v1/agents/{health,credentials,tasks,tasks/[id]}`) अपने
-**स्वयं के** CORS headers सेट करते हैं
-(`src/lib/cloudAgent/api.ts`, `getCloudAgentCorsHeaders`) और
-`Access-Control-Allow-Origin: <origin>|*` को
-`Access-Control-Allow-Credentials: true` के साथ emit **करते हैं**। यह एकमात्र surface है जहाँ
-origin-echo और credentials साथ मौजूद हैं, और यह
-`CORS_ALLOW_ALL` से **स्वतंत्र** है। ये routes management-authenticated हैं
-(`requireManagementAuth`); जो operators dashboard को host के बाहर expose करते हैं, उन्हें
-ध्यान रखना चाहिए कि यह एकमात्र स्थान है जहाँ response headers द्वारा cross-origin credentialed read की अनुमति दी जाती है।
-इसे explicit allowlist तक सीमित करने का कार्य
-इस CORS guidance से अलग track किया जाता है।
-
 ## प्रोडक्शन चेकलिस्ट
 
 - **प्रोडक्शन में कभी भी `CORS_ALLOW_ALL=true` सेट न करें।** इसे अनसेट ही छोड़ें।
@@ -91,7 +77,7 @@ origin-echo और credentials साथ मौजूद हैं, और य�
   CORS_ALLOWED_ORIGINS="https://app.example.com, https://admin.example.com"
   ```
 
-- यदि OmniRoute किसी रिवर्स प्रॉक्सी / टनल (nginx, Caddy, Cloudflare
+- यदि 67router किसी रिवर्स प्रॉक्सी / टनल (nginx, Caddy, Cloudflare
   Tunnel, Tailscale) के पीछे चलता है, तो CORS आपका **एकमात्र** नियंत्रण नहीं है —
   loopback रूट गार्ड अभी भी spawn-सक्षम रूटों की सुरक्षा करता है (देखें
   [ROUTE_GUARD_TIERS](./ROUTE_GUARD_TIERS.md))। 403 को "ठीक" करने के लिए
@@ -108,7 +94,7 @@ origin-echo और credentials साथ मौजूद हैं, और य�
 को अनुमति दें जिनका आप उपयोग करते हैं:
 
 ```bash
-# स्थानीय OmniRoute को कॉल करने वाले Vite (5173) + Next.js (3000) dev सर्वर
+# स्थानीय 67router को कॉल करने वाले Vite (5173) + Next.js (3000) dev सर्वर
 CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
 ```
 
@@ -127,14 +113,14 @@ CORS_ALLOWED_ORIGINS="http://localhost:5173, http://localhost:3000"
   `Access-Control-Allow-Credentials` की अनुपस्थिति द्वारा सुरक्षित है। प्रबंधन/डैशबोर्ड
   ओरिजिन को किसी भी अनुमेय कॉन्फ़िगरेशन से बाहर रखें; उन्हें पूर्णतः fail-closed रहना चाहिए।
 
-## उदाहरण: OmniRoute के आगे रिवर्स प्रॉक्सी
+## उदाहरण: 67router के आगे रिवर्स प्रॉक्सी
 
-CORS को OmniRoute स्वयं लागू करता है, इसलिए प्रॉक्सी को सामान्यतः `Access-Control-*`
+CORS को 67router स्वयं लागू करता है, इसलिए प्रॉक्सी को सामान्यतः `Access-Control-*`
 हेडर **नहीं** जोड़ने या फिर से लिखने चाहिए (दोहरा हेडर ब्राउज़र को बाधित करता है)। TLS
-को टर्मिनेट करके अनुरोध फ़ॉरवर्ड करें — प्रीफ़्लाइट का उत्तर OmniRoute को देने दें:
+को टर्मिनेट करके अनुरोध फ़ॉरवर्ड करें — प्रीफ़्लाइट का उत्तर 67router को देने दें:
 
 ```nginx
-# nginx — OmniRoute पर फ़ॉरवर्ड करें; यहाँ Access-Control-* इंजेक्ट न करें
+# nginx — 67router पर फ़ॉरवर्ड करें; यहाँ Access-Control-* इंजेक्ट न करें
 location / {
     proxy_pass http://127.0.0.1:20128;
     proxy_set_header Host $host;
@@ -142,12 +128,12 @@ location / {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     # फ़ॉरवर्डिंग हेडर बनाए रखें: उसी होस्ट पर मौजूद प्रॉक्सी लूपबैक से कनेक्ट होती है, और ये
-    # OmniRoute को बताते हैं कि कॉलर स्थानीय ऑपरेटर नहीं है। इनमें से कोई भी हेडर न जोड़ने वाली प्रॉक्सी
+    # 67router को बताते हैं कि कॉलर स्थानीय ऑपरेटर नहीं है। इनमें से कोई भी हेडर न जोड़ने वाली प्रॉक्सी
     # प्रत्येक रिमोट कॉलर को स्थानीय दिखाती है। X-Forwarded-For को कभी भी 127.0.0.1 पर सेट न करें।
 }
 ```
 
-अनुमत ब्राउज़र ओरिजिन प्रॉक्सी में नहीं, बल्कि OmniRoute (`CORS_ALLOWED_ORIGINS` या
+अनुमत ब्राउज़र ओरिजिन प्रॉक्सी में नहीं, बल्कि 67router (`CORS_ALLOWED_ORIGINS` या
 सुरक्षा टैब) में सेट करें।
 
 ## स्रोत फ़ाइलें
@@ -160,7 +146,6 @@ location / {
 | डैशबोर्ड के लिए रनटाइम स्थिति          | `src/app/api/settings/authz-inventory/route.ts`                      |
 | डैशबोर्ड चेतावनी बैनर                  | `src/app/(dashboard)/dashboard/settings/components/AuthzSection.tsx` |
 | CORS Allowed Origins फ़ील्ड            | `src/app/(dashboard)/dashboard/settings/components/SecurityTab.tsx`  |
-| Cloud-Agent प्रति-रूट CORS (अपवाद)     | `src/lib/cloudAgent/api.ts`                                          |
 
 ## यह भी देखें
 

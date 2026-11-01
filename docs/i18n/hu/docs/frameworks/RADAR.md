@@ -42,7 +42,7 @@ egy adott hosztolt telepítés vagy külső integráció jelenleg elérhető.
 | Támogatói ajánlatok                  | Különálló, aláírt, kizárólag élő adatfolyamként és irányítópult-oldalként implementálva. A kliens újra ellenőrzi a zárt juttatási sémát, megőrzi az utolsó érvényes gyorsítótárat, kiszűri a lejárt bejegyzéseket, és egyértelműen megjelöli a partnerajánlatokat.                    |
 | Információk és támogatói elismerés   | Szigorúan aláírt, kizárólag élő adatfolyamként implementálva, a Radar saját ELO-pontszámával, tényszerű katalógusfrissességi és trendadatokkal, ellenőrzött helyi támogatói jelvénnyel, irányítópult-oldallal, valamint kizárólag helyi CLI-állapot- és szinkronizálási parancsokkal. |
 | Fizetések és tranzakciós e-mailek    | Nincs implementálva a nyílt forráskódú kliensben. A vásárlás, adományozás, bizonylat-ellenőrzés, helyreállítás és e-mail-kézbesítés a privát szolgáltatáshoz tartozik; a hosztolt elérhetőség továbbra is annak felügyelt telepítésétől és szolgáltatói konfigurációjától függ.       |
-| Kutatási ügynök munkafolyamata       | Nem része ennek a klienskiadásnak. A gondozott adatfolyamok tartalma továbbra is szerveroldali adat; egyetlen OmniRoute-telepítésben sem fut autonóm kutatási ügynök.                                                                                                                 |
+| Kutatási ügynök munkafolyamata       | Nem része ennek a klienskiadásnak. A gondozott adatfolyamok tartalma továbbra is szerveroldali adat; egyetlen 67router-telepítésben sem fut autonóm kutatási ügynök.                                                                                                                  |
 
 ---
 
@@ -124,7 +124,7 @@ Ha mindkettő be van kapcsolva, a szinkronizálás menete a következő:
    csonkolt HMAC-értékét használja a manuális visszaélés-ellenőrzéshez; ezek a táblák sem a
    kulcsot, sem az IP-címet nem őrzik meg nyers formában. Az infrastruktúra hozzáférési naplói
    és a titkosított kézbesítési kimenő tár különálló üzemeltetési határokat képeznek.
-3. Az OmniRoute soha nem küld promptokat, válaszokat, beszélgetéseket, szolgáltatói hitelesítő
+3. A 67router soha nem küld promptokat, válaszokat, beszélgetéseket, szolgáltatói hitelesítő
    adatokat, modellforgalmat, üzemidőt, késleltetést vagy helyi szolgáltatói konfigurációt a
    Radar szolgáltatásnak.
 4. A válasz hitelesítése és ellenőrzése után az helyileg gyorsítótárazásra kerül (lásd:
@@ -248,13 +248,13 @@ aki már rendelkezik kulccsal.
 ### Teljes körű aktiválás és vezetett beállítás
 
 A privát hírcsatorna-szolgáltatás és ez az OSS-kliens között szándékosan szűk a határ: a szolgáltatás
-bocsátja ki és ellenőrzi a támogatói kulcsot, míg a helyi OmniRoute-telepítés titkosítja azt,
+bocsátja ki és ellenőrzi a támogatói kulcsot, míg a helyi 67router-telepítés titkosítja azt,
 kiszolgálóoldalon szinkronizálja az aláírt összetevőket, és végigvezeti a szolgáltató beállításán. A támogatott ellenőrzés sorrendje:
 
 1. Szerezzen be egy újonnan kiadott vagy helyreállított kulcsot a közreműködői igénylésből, a csomagválasztási/fizetési vagy helyreállítási
    folyamatból, illetve egy jogosult privát szerverüzemeltetőtől. Ne illessze be a nyers kulcsot naplókba,
    képernyőképekbe, hibajegy-megjegyzésekbe vagy parancssori argumentumokba.
-2. Engedélyezze a `RADAR_ENABLED` funkciójelzőt a helyi OmniRoute-telepítésen. Ez elérhetővé teszi a felhasználói felületet,
+2. Engedélyezze a `RADAR_ENABLED` funkciójelzőt a helyi 67router-telepítésen. Ez elérhetővé teszi a felhasználói felületet,
    de az külön hozzájárulás mentéséig nem végez hálózati kommunikációt.
 3. Nyissa meg a `/dashboard/radar` oldalt, illessze be a kulcsot, majd aktiválja. A böngésző egyetlen helyi
    `POST /api/radar/settings` kérést küld a következő tartalommal: `{ optIn: true, supporterKey }`; a kulcs titkosítása helyben történik, és
@@ -319,7 +319,7 @@ gyorsítótárazott hírcsatornák az újraszinkronizálásig érvényesek marad
 ### Forkbarát környezetiváltozó-felülbírálások
 
 Két környezeti változó lehetővé teszi, hogy a forkok és a saját tárhelyen futtatott
-példányok az alapértelmezett OmniRoute szolgáltatás helyett a saját hírcsatornájukra
+példányok az alapértelmezett 67router szolgáltatás helyett a saját hírcsatornájukra
 irányítsák a klienst — lásd alább:
 [Hírcsatorna futtatása saját tárhelyen](#how-to-self-host-a-feed)
 
@@ -480,7 +480,7 @@ A feed `enabled: false` értéke továbbra is biztonsági kivétel: elsőbbsége
 A katalóguskiadványok `schemaVersion: 2` értéket használnak. A `contextWindow`, valamint a `tools`, a `vision` és a
 `thinking` mind egymástól függetlenül `number | null` / `boolean | null`: a `null` azt jelenti, hogy ismeretlen, míg a
 `false` azt jelenti, hogy egy D16 által megerősített hivatalos szolgáltatói forrás kifejezetten azt állítja, hogy a képesség nem érhető el.
-Az OmniRoute belső beállításjegyzék-/modellspecifikációs jelzői soha nem minősülnek közvetlenül feedtényeknek. A kliens
+A 67router belső beállításjegyzék-/modellspecifikációs jelzői soha nem minősülnek közvetlenül feedtényeknek. A kliens
 továbbra is elfogadja a v1 pillanatképeket; mivel a régi összeállító a `false` értéket a hiány helyőrzőjeként használta, a v1 `false`
 ismeretlenre normalizálódik, míg a v1 `true` tényszerű marad. Az ismeretlen sémaverziók biztonságosan meghiúsulnak, és az
 utolsó érvényes gyorsítótár továbbra is elérhető marad. Minden olyan v2 modellnek, amely nem null értékű kontextussal/képességgel rendelkezik,
@@ -541,7 +541,7 @@ Az alábbi helyi Radar-útvonalcsaládok szolgálják ki a `src/app/api/radar/` 
 | `/api/radar/local-model-state` | DELETE  | Törli a szerkeszthető felülírási mezőket, miközben megőrzi az esetleges tombstone-t.                                                             |
 
 **Szigorú szabály: ezek az útvonalak soha nem proxyzzák a feedszolgáltatást.** A böngésző kizárólag
-a helyi OmniRoute-szerverrel kommunikál. A Radar-szolgáltatással kapcsolatba lépő négy modul:
+a helyi 67router-szerverrel kommunikál. A Radar-szolgáltatással kapcsolatba lépő négy modul:
 `src/lib/radar/sync.ts` (katalógus), `src/lib/radar/referralsSync.ts` (ajánlások),
 `src/lib/radar/offersSync.ts` (ajánlatok), valamint `src/lib/radar/intelSync.ts` (Intel);
 mindegyik szerveroldalon fut, soha nem kliensoldalon. Ez teljes mértékben távol tartja
@@ -585,7 +585,7 @@ Az Intel egy aláírt artefaktum a `GET /v1/intel/latest` végponton. A zárt `R
 
 A `syncRadarIntel()` ugyanazokat a kiszolgálóoldali Bearer-hitelesítési, 30 másodperces időkorlát-, 10 MiB-os adatfolyam-korlát-, pontos bájtokon végzett Ed25519-ellenőrzési, szigorú séma-, `live` törzs-/fejléc-követelmény-, verzióminimum- és utolsó érvényes gyorsítótár-megőrzési szabályokat alkalmazza, mint az ajánlatok. Egy ellenőrzött aktív pillanatkép tartós mentése után a kliens előállítja a `radar:<sha256(supporter key)>` értéket, kizárólag ezt az egyirányú identitást tárolja, és kibocsátja a dedikált `radar_supporter` elismerési eseményt. A hozzá tartozó `radar-supporter` jelvény idempotens, és nulla XP-t ad; soha nem frissíti a ranglistákat, és nem használja újra a `token_share` értéket. A `/dashboard/radar/intel` kizárólag ellenőrzött helyi gyorsítótár-metaadatok alapján jeleníti meg a jelvényt.
 
-A CLI elérhetővé teszi az `omniroute radar status` és az `omniroute radar sync` parancsot. Mindkettő kizárólag a helyi OmniRoute API-val kommunikál. A `status` csak olvasási célú `GET /api/radar/status` kérést hajt végre; a `sync` egyetlen `POST /api/radar/sync-all` kérést küld, és hírfolyamonként kinyomtatja az eredményt. Egyik parancs sem olvassa be, fogadja el vagy nyomtatja ki a támogatói kulcsot, és egyik sem lép közvetlenül kapcsolatba a Radar szolgáltatással.
+A CLI elérhetővé teszi az `omniroute radar status` és az `omniroute radar sync` parancsot. Mindkettő kizárólag a helyi 67router API-val kommunikál. A `status` csak olvasási célú `GET /api/radar/status` kérést hajt végre; a `sync` egyetlen `POST /api/radar/sync-all` kérést küld, és hírfolyamonként kinyomtatja az eredményt. Egyik parancs sem olvassa be, fogadja el vagy nyomtatja ki a támogatói kulcsot, és egyik sem lép közvetlenül kapcsolatba a Radar szolgáltatással.
 
 ---
 

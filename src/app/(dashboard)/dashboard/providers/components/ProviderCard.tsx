@@ -100,13 +100,12 @@ const DOT_COLORS: Record<string, string> = {
   "no-auth": "bg-stone-500",
   oauth: "bg-blue-500",
   apikey: "bg-amber-500",
-  compatible: "bg-orange-500",
+  compatible: "bg-sky-500",
   "web-cookie": "bg-purple-500",
   search: "bg-teal-500",
   audio: "bg-rose-500",
   local: "bg-emerald-500",
   "upstream-proxy": "bg-indigo-500",
-  "cloud-agent": "bg-violet-500",
 };
 
 type ProviderMessageTranslator = ((key: string, values?: Record<string, unknown>) => string) & {
@@ -302,14 +301,13 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
 
   // Show the Test button for LLM providers (when serviceKinds includes "llm"
   // OR when the provider has no explicit serviceKinds but is a regular LLM provider
-  // i.e. not a search/audio/cloud-agent type).
+  // i.e. not a search/audio type).
   const serviceKinds = provider.serviceKinds ?? [];
   const isLlmProvider =
     serviceKinds.includes("llm") ||
     (serviceKinds.length === 0 &&
       authType !== "search" &&
       authType !== "audio" &&
-      authType !== "cloud-agent" &&
       authType !== "upstream-proxy" &&
       authType !== "no-auth");
 
@@ -372,7 +370,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
       title={providerText(
         t,
         "kimiOfficialSupporterTooltip",
-        "Kimi (Moonshot AI) is OmniRoute's founding Open Source Friend"
+        "Kimi (Moonshot AI) is 67router's founding Open Source Friend"
       )}
     >
       <Icon name="verified" size={10} className="leading-none" />
@@ -390,7 +388,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
       title={providerText(
         t,
         "cheaperInferenceSupporterTooltip",
-        "Cheaper Inference backs OmniRoute as an Open Source Friend"
+        "Cheaper Inference backs 67router as an Open Source Friend"
       )}
     >
       <Icon name="verified" size={10} className="leading-none" />
@@ -442,7 +440,6 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
     audio: t("audioProvidersHeading"),
     local: t("localProviders"),
     "upstream-proxy": t("upstreamProxyProviders"),
-    "cloud-agent": t("cloudAgentProviders"),
   };
 
   const staticIconPath = (() => {
@@ -471,7 +468,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
         onClick={handleCardClick}
       >
         <Card
-          padding="xs"
+          padding="sm"
           className={`h-full flex flex-col hover:bg-bg-subtle transition-colors cursor-pointer ${
             isKimiPartner
               ? // Kimi (Moonshot AI) official-partnership accent — official Kimi blue
@@ -492,10 +489,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
           <div className="flex flex-col gap-2 h-full">
             {/* Row 1 — Identity: icon + full name + risk/category indicators */}
             <div className="flex items-start gap-3 min-w-0">
-              <div
-                className="size-9 rounded-lg flex items-center justify-center shrink-0"
-                style={{ backgroundColor: `${provider.color || "#64748b"}15` }}
-              >
+              <div className="size-9 rounded-lg flex items-center justify-center shrink-0 border border-border bg-surface">
                 {provider.iconUrl ? (
                   <ProviderIcon
                     providerId={provider.id || providerId}
@@ -598,7 +592,7 @@ const ProviderCard = forwardRef<ProviderCardHandle, ProviderCardProps>(function 
             )}
 
             {/* Row 3 — Footer: connection status + controls (toggle, test) */}
-            <div className="flex items-center justify-between gap-2 mt-auto pt-1.5 border-t border-border/40">
+            <div className="flex items-center justify-between gap-2 mt-auto pt-2.5 border-t border-border">
               <div className="flex items-center gap-1.5 text-xs flex-nowrap min-w-0 overflow-hidden">
                 {allDisabled ? (
                   <Badge variant="default" size="sm">

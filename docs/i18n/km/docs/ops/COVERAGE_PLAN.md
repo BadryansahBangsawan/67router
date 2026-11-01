@@ -71,11 +71,9 @@
 | 11  | `open-sse/services/compression/progressiveAging.ts`          |    13.26% |
 | 12  | `open-sse/services/compression/engines/rtk/smartTruncate.ts` |    13.43% |
 | 13  | `open-sse/services/compression/engines/rtk/deduplicator.ts`  |    13.51% |
-| 14  | `src/lib/cloudAgent/agents/jules.ts`                         |    13.52% |
 | 15  | `open-sse/services/compression/lite.ts`                      |    14.46% |
 | 16  | `src/app/api/v1/rerank/route.ts`                             |    14.94% |
 | 17  | `open-sse/services/compression/preservation.ts`              |    15.07% |
-| 18  | `src/lib/cloudAgent/agents/codex.ts`                         |    15.54% |
 | 19  | `open-sse/services/tierResolver.ts`                          |    16.66% |
 | 20  | `src/app/docs/components/DocsLazyWrapper.tsx`                |    16.66% |
 
@@ -83,7 +81,6 @@
 
 - `open-sse/services/compression/**` គឺជាក្រុមឯកសារដែលមានកម្រិតគ្របដណ្តប់ទាបក្រាស់បំផុត និងជាចំណែកធំបំផុតនៃគម្លាតដែលនៅសល់។
 - ផ្លូវ API សម្រាប់ batch និង rerank (`src/app/api/v1/batches/**`, `src/app/api/v1/rerank/route.ts`) ត្រូវការការធ្វើតេស្តកម្រិត handler។
-- អាដាប់ទ័រ cloud agent (`src/lib/cloudAgent/agents/jules.ts`, `codex.ts`) និង `tierResolver.ts` ត្រូវការការធ្វើតេស្តតាមសេណារីយ៉ូ។
 - សមាសភាគ UI ឯកសារ និង `src/mitm/systemCommands.ts` មានអាទិភាពទាបជាង ប៉ុន្តែអាចទទួលបានការគ្របដណ្តប់ branch បន្ថែមដោយចំណាយតិច។
 
 ## បញ្ជីត្រួតពិនិត្យការអនុវត្ត

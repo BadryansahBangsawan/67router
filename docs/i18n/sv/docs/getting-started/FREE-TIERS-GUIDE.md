@@ -4,7 +4,7 @@
 
 ---
 
-> **Kort sagt**: Använd dina egna berättigade leverantörskonton. OmniRoute kombinerar de anslutningar du konfigurerar; tjänsten tillhandahåller inte den annonserade sammanlagda tokenbudgeten. Kostnadsfri åtkomst kan kräva registrering, en API-nyckel, godkännande eller en betalningsmetod. Leverantörernas begränsningar, integritetspolicyer och villkor gäller fortfarande.
+> **Kort sagt**: Använd dina egna berättigade leverantörskonton. 67router kombinerar de anslutningar du konfigurerar; tjänsten tillhandahåller inte den annonserade sammanlagda tokenbudgeten. Kostnadsfri åtkomst kan kräva registrering, en API-nyckel, godkännande eller en betalningsmetod. Leverantörernas begränsningar, integritetspolicyer och villkor gäller fortfarande.
 
 ---
 
@@ -15,7 +15,7 @@ innebära en slutpunkt utan autentisering, en återkommande kvot, obegränsad å
 manuellt godkännande eller en tillfällig kampanj. Vissa alternativ kräver ett konto, en API-nyckel,
 ett kreditkort, KYC eller godkännande av leverantörsspecifika villkor.
 
-OmniRoute **sammanför** konfigurerade anslutningar i en enda slutpunkt. Du måste fortfarande registrera dig separat hos varje leverantör som kräver ett konto. Anslut dessa konton och använd `model: "auto"` för att dirigera mellan behöriga mål. En ny installation kan sakna ett behörigt mål utan nyckel; att enbart installera OmniRoute garanterar inte ett lyckat chattsvar.
+67router **sammanför** konfigurerade anslutningar i en enda slutpunkt. Du måste fortfarande registrera dig separat hos varje leverantör som kräver ett konto. Anslut dessa konton och använd `model: "auto"` för att dirigera mellan behöriga mål. En ny installation kan sakna ett behörigt mål utan nyckel; att enbart installera 67router garanterar inte ett lyckat chattsvar.
 
 ---
 
@@ -60,7 +60,7 @@ Dessa leverantörer har **kostnadsfria nivåer** med specifika begränsningar:
 
 ## Så kombinerar du kostnadsfria nivåer
 
-Det smarta med OmniRoute är att **kombinera kostnadsfria nivåer**. I stället för att förlita dig på en enda leverantör ansluter du flera kostnadsfria leverantörer och låter OmniRoute automatiskt välja den bästa för varje begäran.
+Det smarta med 67router är att **kombinera kostnadsfria nivåer**. I stället för att förlita dig på en enda leverantör ansluter du flera kostnadsfria leverantörer och låter 67router automatiskt välja den bästa för varje begäran.
 
 ### Exempel: Bredare täckning med kostnadsfria nivåer
 
@@ -71,7 +71,7 @@ Anslut flera leverantörer för att minska beroendet av en enskild kvot:
 3. **Pollinations** — nyckelfri, hastighetsbegränsad åtkomst
 4. **LongCat** — engångskredit vid registrering (kräver KYC)
 
-Använd sedan `model: "auto"`, så kommer OmniRoute att:
+Använd sedan `model: "auto"`, så kommer 67router att:
 
 - Först prova den högst rankade kvalificerade anslutningen
 - Om dess kvot- eller hälsokontroll misslyckas → prova nästa konfigurerade leverantör
@@ -105,7 +105,7 @@ obegränsad/nyckelfri åtkomst, registreringskrediter, utgångna poster och käl
 
 ### Steg 5: Klicka på Anslut
 
-För en `NOAUTH`-leverantör begär OmniRoute inga autentiseringsuppgifter för den externa tjänsten. Detta garanterar inte att den externa tjänsten accepterar tredjepartsklienter eller har tillgänglig kapacitet. Leverantörer som använder OAuth och API-nycklar måste anslutas via deras dokumenterade kontoflöde. Din klient använder fortfarande OmniRoute API-nyckeln som visas under **Kontrollpanel → Slutpunkter** när routerautentisering är aktiverad.
+För en `NOAUTH`-leverantör begär 67router inga autentiseringsuppgifter för den externa tjänsten. Detta garanterar inte att den externa tjänsten accepterar tredjepartsklienter eller har tillgänglig kapacitet. Leverantörer som använder OAuth och API-nycklar måste anslutas via deras dokumenterade kontoflöde. Din klient använder fortfarande 67router API-nyckeln som visas under **Kontrollpanel → Slutpunkter** när routerautentisering är aktiverad.
 
 ### Steg 6: Upprepa
 
@@ -115,7 +115,7 @@ Anslut flera leverantörer vars villkor och integritetsmodell passar ditt använ
 
 ## Läs katalogen korrekt
 
-- `NOAUTH` innebär att OmniRoute inte ber dig om autentiseringsuppgifter för en leverantör; det
+- `NOAUTH` innebär att 67router inte ber dig om autentiseringsuppgifter för en leverantör; det
   garanterar inte drifttid, integritet eller obegränsad kapacitet.
 - `hasFree` är metadata för identifiering. Det kan avse en återkommande kvot, åtkomst utan nyckel,
   registreringskredit, godkännandeprogram eller kampanj.
@@ -128,15 +128,15 @@ Anslut flera leverantörer vars villkor och integritetsmodell passar ditt använ
 
 ---
 
-## Så förbättrar OmniRoute kostnadsfria nivåer
+## Så förbättrar 67router kostnadsfria nivåer
 
 ### 1. Automatisk reservväxling
 
-Om en kostnadsfri leverantör är överbelastad eller otillgänglig provar OmniRoute automatiskt nästa. Du behöver inte göra något.
+Om en kostnadsfri leverantör är överbelastad eller otillgänglig provar 67router automatiskt nästa. Du behöver inte göra något.
 
 ### 2. Smart dirigering
 
-OmniRoute väljer den **bästa kostnadsfria leverantören** för varje begäran baserat på:
+67router väljer den **bästa kostnadsfria leverantören** för varje begäran baserat på:
 
 - Hastighet — Vilken leverantör är snabbast just nu?
 - Kvalitet — Vilken leverantör är bäst för denna uppgift?
@@ -144,13 +144,13 @@ OmniRoute väljer den **bästa kostnadsfria leverantören** för varje begäran 
 
 ### 3. Tokenbesparingar
 
-OmniRoutes komprimeringsflöde kan minska antalet token för berättigade prompter och verktygsutdata. De
+67routers komprimeringsflöde kan minska antalet token för berättigade prompter och verktygsutdata. De
 faktiska besparingarna beror på innehåll, valda motorer, leverantörens beräkningsmetod och inställningar för
 återgivningsnoggrannhet; komprimering multiplicerar inte varje leverantörskvot med ett fast värde.
 
 ### 4. Stöd för flera konton
 
-Om leverantörens villkor tillåter flera konton eller autentiseringsuppgifter kan OmniRoute behandla varje
+Om leverantörens villkor tillåter flera konton eller autentiseringsuppgifter kan 67router behandla varje
 anslutning som en separat dirigeringskandidat. Skapa inte extra konton för att kringgå en
 leverantörs kvot- eller åtkomstpolicy.
 
@@ -165,7 +165,7 @@ Den aktiva katalogen, där delade pooler har deduplicerats, rapporterar för nä
 | Återkommande kvantifierad kvot           |   **~1.62B tokens/månad** | Delade pooler räknas en gång; leverantörer utan tak ingår inte i summan |
 | Första månaden med registreringskrediter |         **~2.22B tokens** | Återkommande total plus engångskrediter och återkommande krediter       |
 
-Detta är uppskattningar för hela katalogen, fördelade över separata berättigade konton, inte en kvot som tillhandahålls av OmniRoute eller en prognos för en ny installation. Din användbara kapacitet beror på vilka leverantörer du ansluter och deras aktuella villkor. Värdena beräknas från `open-sse/config/freeModelCatalog.ts`; se
+Detta är uppskattningar för hela katalogen, fördelade över separata berättigade konton, inte en kvot som tillhandahålls av 67router eller en prognos för en ny installation. Din användbara kapacitet beror på vilka leverantörer du ansluter och deras aktuella villkor. Värdena beräknas från `open-sse/config/freeModelCatalog.ts`; se
 [Referens för kostnadsfria nivåer](../reference/FREE_TIERS.md) för deduplicering av pooler, flaggor för användarvillkor,
 avslutade poster och metodiken för registreringskrediter.
 
@@ -192,7 +192,7 @@ Kritiska arbetsbelastningar bör ha övervakade, avtalsmässigt lämpliga reserv
 
 Kompromisserna kan omfatta strikta begränsningar, väntelistor, KYC, kreditkortsverifiering, träning på
 prompter, svagare integritetsskydd, avsaknad av SLA, frekventa modellbyten, geografiska begränsningar, debitering vid överanvändning eller
-risker kopplade till kontopolicyer. OmniRoute visar tillgänglig metadata; du väljer vad som ska aktiveras.
+risker kopplade till kontopolicyer. 67router visar tillgänglig metadata; du väljer vad som ska aktiveras.
 
 ### "Hur får jag en större gratiskvot?"
 
@@ -211,7 +211,7 @@ med rankningar av kostnadsfria leverantörer som en kvalitetsindikator och verif
 
 ## Vad händer härnäst?
 
-- **[Guide för automatisk kombination](./AUTO-COMBO-GUIDE.md)** — Låt OmniRoute välja den bästa AI:n åt dig
+- **[Guide för automatisk kombination](./AUTO-COMBO-GUIDE.md)** — Låt 67router välja den bästa AI:n åt dig
 - **[Leverantörsguide](./PROVIDERS-GUIDE.md)** — Anslut fler leverantörer
 - **[Felsökning](../guides/TROUBLESHOOTING.md)** — Åtgärda vanliga problem
 - **[Referens för kostnadsfria nivåer](../reference/FREE_TIERS.md)** — Fullständig lista över kostnadsfria nivåer

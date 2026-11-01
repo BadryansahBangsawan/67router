@@ -7,7 +7,7 @@
 > **Zdroj pravdy:** `src/server/authz/`, `src/shared/constants/publicApiRoutes.ts`, `src/lib/api/requireManagementAuth.ts`, `src/shared/utils/apiAuth.ts`
 > **Posledná aktualizácia:** 2026-09-22 — menné priestory rozsahu ukazujú na MCP-SERVER.md
 
-OmniRoute má autorizačný pipeline, ktorý je citlivý na trasy a stráži každú požiadavku API. Klasifikácia je **deterministická** a **fail-closed** — čokoľvek, čo nemožno klasifikovať, skončí ako `MANAGEMENT` a vyžaduje reláciu alebo token s úrovňou riadenia. Táto stránka vysvetľuje model pre inžinierov, ktorí udržiavajú trasy alebo navrhujú nové koncové body.
+67router má autorizačný pipeline, ktorý je citlivý na trasy a stráži každú požiadavku API. Klasifikácia je **deterministická** a **fail-closed** — čokoľvek, čo nemožno klasifikovať, skončí ako `MANAGEMENT` a vyžaduje reláciu alebo token s úrovňou riadenia. Táto stránka vysvetľuje model pre inžinierov, ktorí udržiavajú trasy alebo navrhujú nové koncové body.
 
 ![AuthZ pipeline (3 triedy trás + vyhodnotenie politiky)](../diagrams/exported/authz-pipeline.svg)
 
@@ -229,8 +229,6 @@ Pozri [Autentifikácia správy](../guides/MANAGEMENT-AUTH.md).
 Vynucovanie kľúča klientskeho API používa `isRequireApiKeyEnabled()` v `src/shared/utils/featureFlags.ts`, nie priame čítanie `process.env.REQUIRE_API_KEY`. Pre nasadené inštancie to má význam: prepnutie `REQUIRE_API_KEY` v Dashboard → Feature Flags uloží prepísanie do databázy a okamžite ovplyvní `/v1/*`, `/v1beta/*`, `/models`, `/responses`, `/chat/completions`, `/codex/*` a ďalšie kontroly autentizácie klientského API, ktoré zdieľajú tohto pomocníka. Ak sa úložisko feature flagov nedá prečítať, autentizácia klientského API zlyhá uzavreto a vyžaduje kľúč.
 
 ## Nekompatibilná zmena — v3.8.0
-
-Koncové body `/api/v1/agents/tasks/*` a `/api/resilience/model-cooldowns` **teraz vyžadujú autentifikáciu správy** (commit `588a0333`). Klienti, ktorí predtým odosielali bežný kľúč API bez rozsahu `manage`, dostanú odpoveď `403`. Migrácia: buď priraďte kľúču rozsah `manage` v ovládacom paneli API Keys, alebo použite prihlásenú reláciu ovládacieho panela.
 
 ## Zmena správania — v3.8.2
 

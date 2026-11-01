@@ -1,7 +1,7 @@
 {
   "common": {
     "error": "Fel: {message}",
-    "serverOffline": "OmniRoute-servern är offline. Starta med: omniroute serve",
+    "serverOffline": "67router-servern är offline. Starta med: omniroute serve",
     "authRequired": "Autentisering krävs. Ange OMNIROUTE_API_KEY eller kör: omniroute setup",
     "rateLimited": "Begäransgräns nådd. Försök igen om {seconds}s.",
     "timeout": "Begäran tog slut efter {ms}ms.",
@@ -15,7 +15,7 @@
     "yesOpt": "Hoppa över bekräftelse"
   },
   "setup": {
-    "title": "OmniRoute-konfiguration",
+    "title": "67router-konfiguration",
     "passwordPrompt": "Administratörslösenord",
     "providerPrompt": "Standardleverantör (lämna tomt för att hoppa över)",
     "done": "Konfigurationen är klar",
@@ -30,7 +30,7 @@
     "opencode": "Installera och konfigurera det medföljande @omniroute/opencode-plugin för OpenCode"
   },
   "doctor": {
-    "title": "OmniRoute-diagnostik",
+    "title": "67router-diagnostik",
     "dbOk": "Databas: OK ({path})",
     "dbMissing": "Databas: inte initierad – kör `omniroute setup`",
     "portOk": "Port {port}: tillgänglig",
@@ -82,7 +82,7 @@
       "providerOpt": "Filtrera efter leverantörsnamn",
       "header": "ID         Leverantör     Namn                     Utgång Status  Teststatus   Vänteperiod till",
       "noData": "Det finns inga data om leverantörsanslutningar.",
-      "requiresServer": "providers status kräver att OmniRoute-servern körs."
+      "requiresServer": "providers status kräver att 67router-servern körs."
     }
   },
   "keys": {
@@ -90,8 +90,8 @@
     "addDescription": "Lägg till eller uppdatera en API-nyckel för en leverantör",
     "listDescription": "Lista alla konfigurerade API-nycklar",
     "removeDescription": "Ta bort en API-nyckel för en leverantör",
-    "regenerateDescription": "Generera en ny OmniRoute API-nyckel",
-    "revokeDescription": "Återkalla en OmniRoute API-nyckel",
+    "regenerateDescription": "Generera en ny 67router API-nyckel",
+    "revokeDescription": "Återkalla en 67router API-nyckel",
     "revealDescription": "Visa det omaskerade API-nyckelvärdet",
     "usageDescription": "Visa senaste användningen av en API-nyckel",
     "usageLimitOpt": "Antal senaste förfrågningar",
@@ -172,13 +172,6 @@
       "period": "Tidsintervall: 1d|7d|30d|90d|ytd|all (standard: 30d)",
       "provider": "Filtrera efter leverantörs-ID"
     },
-    "budget": {
-      "description": "Hantera kostnadsbudgetar",
-      "set": {
-        "scope": "Budgetomfattning (standard: global)",
-        "period": "Budgetperiod: daily|weekly|monthly (standard: monthly)"
-      }
-    },
     "quota": {
       "description": "Visa användning av leverantörskvot",
       "provider": "Filtrera efter leverantörs-ID",
@@ -225,7 +218,7 @@
     "noCombo": "Ingen matchande kombination hittades. Konfigurera en med: omniroute combo create"
   },
   "chat": {
-    "description": "Skicka en enstaka chattprompt till OmniRoute",
+    "description": "Skicka en enstaka chattprompt till 67router",
     "file": "Läs prompt från fil",
     "stdin": "Läs prompt från standardindata",
     "system": "Systemprompt",
@@ -244,8 +237,8 @@
     }
   },
   "serve": {
-    "description": "Starta OmniRoute-servern (standardåtgärd)",
-    "starting": "Startar OmniRoute-servern på port {port}...",
+    "description": "Starta 67router-servern (standardåtgärd)",
+    "starting": "Startar 67router-servern på port {port}...",
     "ready": "Redo på http://localhost:{port}",
     "stopping": "Stoppar servern (PID {pid})...",
     "stopped": "Servern har stoppats.",
@@ -265,7 +258,7 @@
   },
   "backup": {
     "title": "Säkerhetskopiering",
-    "description": "Skapa en säkerhetskopia av OmniRoute-data",
+    "description": "Skapa en säkerhetskopia av 67router-data",
     "creating": "Skapar säkerhetskopia...",
     "done": "Säkerhetskopian sparades i {path}",
     "noFiles": "Inga filer att säkerhetskopiera (databasen har inte initierats)",
@@ -277,7 +270,7 @@
     "noBackups": "Inga säkerhetskopior hittades.",
     "notFound": "Säkerhetskopian hittades inte: {name}",
     "confirmRestore": "Skriv över aktuella data med säkerhetskopian från {ts}?",
-    "createDescription": "Skapa en säkerhetskopia av OmniRoute-data",
+    "createDescription": "Skapa en säkerhetskopia av 67router-data",
     "nameOpt": "Anpassat namn på säkerhetskopian",
     "cloudOpt": "Ladda upp säkerhetskopian till molnlagring",
     "encryptOpt": "Kryptera säkerhetskopian med AES-256-GCM",
@@ -321,7 +314,7 @@
     "clearFailed": "Det gick inte att rensa cachen."
   },
   "redis": {
-    "description": "Starta en lokal Redis-container med ett klick (Podman eller Docker) för OmniRoute-cachning och kvotspårning"
+    "description": "Starta en lokal Redis-container med ett klick (Podman eller Docker) för 67router-cachning och kvotspårning"
   },
   "test": {
     "description": "Testa en leverantörsanslutning",
@@ -390,36 +383,8 @@
       "description": "MCP-granskningslogg (alias för audit --source mcp)"
     }
   },
-  "a2a": {
-    "skills": {
-      "description": "Lista tillgängliga A2A-färdigheter från agentkortet"
-    },
-    "invoke": {
-      "description": "Anropa en A2A-färdighet och returnera uppgifts-ID:t",
-      "input": "JSON-indataobjekt",
-      "input_file": "Sökväg till JSON-indatafil",
-      "wait": "Vänta tills uppgiften har slutförts innan retur",
-      "timeout": "Tidsgräns för väntan på slutförande i ms (standard: 60000)"
-    },
-    "tasks": {
-      "description": "Hantera A2A-uppgifter",
-      "list": {
-        "status": "Filtrera efter status",
-        "skill": "Filtrera efter färdighets-ID"
-      },
-      "watch": {
-        "description": "Kontrollera uppgiftsstatusen regelbundet tills uppgiften har slutförts"
-      },
-      "stream": {
-        "description": "Strömma händelser från uppgiftskörningen via SSE"
-      },
-      "logs": {
-        "description": "Visa uppgiftsmeddelanden och artefakter"
-      }
-    }
-  },
   "policy": {
-    "description": "Hantera OmniRoute-auktoriseringspolicyer",
+    "description": "Hantera 67router-auktoriseringspolicyer",
     "list": {
       "description": "Lista policyer",
       "kind": "Filtrera efter typ (allow|deny|rate-limit|cost-cap)",
@@ -456,7 +421,7 @@
     }
   },
   "compression": {
-    "description": "Konfigurera och inspektera OmniRoutes komprimeringspipeline",
+    "description": "Konfigurera och inspektera 67routers komprimeringspipeline",
     "status": {
       "description": "Visa aktuell komprimeringsstatus och aktuella inställningar"
     },
@@ -510,18 +475,18 @@
     "confirmRotate": "Rotera tunnel {type}? (en ny URL kommer att genereras)"
   },
   "stop": {
-    "description": "Stoppa OmniRoute-servern",
+    "description": "Stoppa 67router-servern",
     "stopping": "Stoppar servern (PID {pid})...",
     "stopped": "Servern stoppades.",
     "notRunning": "Ingen server körs.",
     "portFallback": "Ingen PID-fil hittades, försöker stoppa baserat på port..."
   },
   "restart": {
-    "description": "Starta om OmniRoute-servern",
-    "restarting": "Startar om OmniRoute-servern..."
+    "description": "Starta om 67router-servern",
+    "restarting": "Startar om 67router-servern..."
   },
   "dashboard": {
-    "description": "Öppna OmniRoute-instrumentpanelen i en webbläsare",
+    "description": "Öppna 67router-instrumentpanelen i en webbläsare",
     "opening": "Öppnar instrumentpanelen på {url}",
     "urlOnly": "Skriv ut instrumentpanelens URL utan att öppna webbläsaren",
     "tui": "Öppna en interaktiv TUI-instrumentpanel (terminalgränssnitt, 7 flikar)"
@@ -560,120 +525,6 @@
       "description": "Hämta en enskild granskningsloggpost efter ID"
     }
   },
-  "skills": {
-    "description": "Hantera OmniRoute-färdigheter (sandbox, builtin, custom, hybrid, skillssh)",
-    "list": {
-      "description": "Lista installerade färdigheter",
-      "type": "Filtrera efter typ (sandbox|custom|builtin|hybrid|skillssh)",
-      "enabled": "Visa endast aktiverade färdigheter",
-      "disabled": "Visa endast inaktiverade färdigheter",
-      "api_key": "Filtrera efter API-nyckel"
-    },
-    "get": {
-      "description": "Hämta information om en färdighet efter ID"
-    },
-    "install": {
-      "description": "Installera en färdighet från en fil eller URL",
-      "from_file": "Sökväg till JSON-definitionsfilen för färdigheten",
-      "from_url": "URL till fjärrdefinitionen av färdigheten",
-      "type": "Färdighetstyp (sandbox|custom|hybrid)",
-      "enable": "Aktivera färdigheten efter installation"
-    },
-    "enable": {
-      "description": "Aktivera en färdighet efter ID"
-    },
-    "disable": {
-      "description": "Inaktivera en färdighet efter ID",
-      "yes": "Hoppa över bekräftelseprompten"
-    },
-    "delete": {
-      "description": "Ta bort en färdighet efter ID",
-      "yes": "Hoppa över bekräftelseprompten"
-    },
-    "execute": {
-      "description": "Kör en färdighet efter ID",
-      "input": "JSON-indataobjekt",
-      "input_file": "Sökväg till JSON-indatafilen",
-      "timeout": "Tidsgräns för körning i ms (standard: 30000)"
-    },
-    "executions": {
-      "description": "Lista körningshistorik för färdigheter",
-      "skill": "Filtrera efter färdighets-ID",
-      "limit": "Maximalt antal resultat (standard: 50)",
-      "status": "Filtrera efter status (running|completed|failed)"
-    },
-    "skillssh": {
-      "description": "Hantera färdigheter installerade via SSH"
-    },
-    "marketplace": {
-      "description": "Bläddra bland och installera färdigheter från marknadsplatsen"
-    },
-    "mp": {
-      "search": {
-        "description": "Sök efter paket på marknadsplatsen",
-        "category": "Filtrera efter kategori",
-        "tag": "Filtrera efter tagg",
-        "limit": "Maximalt antal resultat (standard: 30)",
-        "sort": "Sortera efter: downloads|rating|recent"
-      },
-      "info": {
-        "description": "Visa paketinformation och README"
-      },
-      "install": {
-        "description": "Installera ett paket från marknadsplatsen",
-        "version": "Paketversion (standard: latest)",
-        "enable": "Aktivera efter installation",
-        "yes": "Hoppa över bekräftelsefrågan"
-      },
-      "categories": {
-        "description": "Lista kategorier på marknadsplatsen"
-      },
-      "featured": {
-        "description": "Visa utvalda paket på marknadsplatsen"
-      }
-    }
-  },
-  "memory": {
-    "description": "Hantera OmniRoutes konversationsminne (FTS5 + vektor)",
-    "search": {
-      "description": "Sök efter minnesposter med en semantisk fråga",
-      "type": "Filtrera efter minnestyp (user|feedback|project|reference)",
-      "limit": "Maximalt antal resultat (standard: 20)",
-      "api_key": "Filtrera efter API-nyckel",
-      "token_budget": "Begränsa det totala antalet token i resultaten"
-    },
-    "add": {
-      "description": "Lägg till en ny minnespost",
-      "content": "Minnets textinnehåll",
-      "file": "Läs innehåll från fil",
-      "type": "Minnestyp (standard: user)",
-      "metadata": "JSON-metadataobjekt",
-      "api_key": "Koppla till API-nyckel"
-    },
-    "clear": {
-      "description": "Ta bort minnesposter som matchar filtren",
-      "type": "Filtrera efter typ",
-      "older": "Ta bort poster som är äldre än angiven tidsperiod (30d, 6m, 1y)",
-      "api_key": "Filtrera efter API-nyckel",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "list": {
-      "description": "Lista minnesposter utan sökrankning",
-      "type": "Filtrera efter typ",
-      "limit": "Maximalt antal resultat (standard: 100)",
-      "api_key": "Filtrera efter API-nyckel"
-    },
-    "get": {
-      "description": "Hämta en enskild minnespost efter ID"
-    },
-    "delete": {
-      "description": "Ta bort en minnespost efter ID",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "health": {
-      "description": "Visa hälsostatus för minnesundersystemet (FTS5 + Qdrant)"
-    }
-  },
   "oauth": {
     "description": "Hantera anslutningar till OAuth-leverantörer",
     "providers": {
@@ -698,195 +549,17 @@
       "yes": "Hoppa över bekräftelsefrågan"
     }
   },
-  "cloud": {
-    "description": "Hantera molnbaserade AI-agentuppgifter (codex, devin, jules)",
-    "agents": {
-      "description": "Lista tillgängliga molnagenter"
-    },
-    "agent": {
-      "description": "Hantera molnagentuppgifter för {agent}",
-      "auth": {
-        "description": "Auktorisera {agent} via OAuth"
-      }
-    },
-    "task": {
-      "description": "Hantera molnagentuppgifter",
-      "create": {
-        "description": "Skapa en ny agentuppgift",
-        "title": "Uppgiftens titel (som standard de första 80 tecknen i prompten)",
-        "prompt": "Text för uppgiftsprompt",
-        "prompt_file": "Läs prompt från fil",
-        "repo": "URL till kodarkiv att klona för uppgiften",
-        "branch": "Grennamn att använda",
-        "metadata": "JSON-metadataobjekt"
-      },
-      "list": {
-        "description": "Lista agentuppgifter",
-        "status": "Filtrera efter status (running|completed|failed|cancelled)",
-        "limit": "Maximalt antal resultat (standard: 50)"
-      },
-      "get": {
-        "description": "Hämta uppgiftsinformation efter ID"
-      },
-      "status": {
-        "description": "Skriv ut uppgiftsstatus (running|completed|failed|cancelled)"
-      },
-      "cancel": {
-        "description": "Avbryt en pågående uppgift",
-        "yes": "Hoppa över bekräftelsefrågan"
-      },
-      "approve": {
-        "description": "Godkänn agentplanen för att starta körningen"
-      },
-      "message": {
-        "description": "Skicka ett meddelande till en pågående uppgift"
-      }
-    },
-    "sources": {
-      "description": "Lista källfiler som skapats av en uppgift"
-    }
-  },
-  "eval": {
-    "description": "Hantera utvärderingssviter och körningar",
-    "suites": {
-      "description": "Hantera utvärderingssviter",
-      "list": {
-        "description": "Lista evalueringssviter"
-      },
-      "get": {
-        "description": "Hämta information om evalueringssvit via ID"
-      },
-      "create": {
-        "description": "Skapa en evalueringssvit från en JSON-fil",
-        "file": "Sökväg till JSON-filen med svitdefinitionen"
-      }
-    },
-    "run": {
-      "description": "Starta en evalueringskörning för en svit",
-      "model": "Modell-ID att utvärdera (standard: auto)",
-      "combo": "Framtvinga en specifik kombination via namn",
-      "concurrency": "Antal samtidiga testfall (standard: 4)",
-      "tag": "Tagga körningen för senare filtrering",
-      "watch": "Övervaka körningsförloppet tills det är slutfört"
-    },
-    "list": {
-      "description": "Lista evalueringskörningar",
-      "suite": "Filtrera efter svit-ID",
-      "status": "Filtrera efter status",
-      "since": "Returnera körningar sedan denna tidsstämpel",
-      "limit": "Maximalt antal resultat (standard: 50)"
-    },
-    "get": {
-      "description": "Hämta information om evalueringskörning via ID"
-    },
-    "results": {
-      "description": "Visa testfallsresultat för en evalueringskörning",
-      "failed": "Visa endast misslyckade testfall"
-    },
-    "cancel": {
-      "description": "Avbryt en pågående evaluering",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "scorecard": {
-      "description": "Visa resultatkortet för en slutförd evalueringskörning"
-    }
-  },
-  "webhooks": {
-    "description": "Hantera OmniRoute-webhooks",
-    "events": {
-      "description": "Lista alla tillgängliga händelsetyper för webhooks"
-    },
-    "list": {
-      "description": "Lista konfigurerade webhooks"
-    },
-    "get": {
-      "description": "Hämta information om webhook via ID"
-    },
-    "add": {
-      "description": "Registrera en ny webhook",
-      "url": "Mål-URL",
-      "events": "Kommaseparerad lista över händelsetyper",
-      "secret": "HMAC-signeringshemlighet",
-      "header": "Extra rubrik i formatet key=value (kan upprepas)",
-      "no_enabled": "Skapa webhook i inaktiverat tillstånd"
-    },
-    "update": {
-      "description": "Uppdatera en befintlig webhook",
-      "enabled": "Ange aktiverat tillstånd (true|false)"
-    },
-    "remove": {
-      "description": "Ta bort en webhook",
-      "yes": "Hoppa över bekräftelsefrågan"
-    },
-    "test": {
-      "description": "Skicka en testhändelse till en webhook",
-      "event": "Händelsetyp att simulera (standard: request.completed)"
-    }
-  },
   "program": {
-    "description": "OmniRoute — Smart AI-router med automatisk fallback",
+    "description": "67router — Smart AI-router med automatisk fallback",
     "version": "Skriv ut version och avsluta",
     "output": "Utdataformat (table, json, jsonl, csv)",
     "quiet": "Undertryck icke-väsentlig utdata",
     "no_color": "Inaktivera färgad utdata",
     "timeout": "HTTP-begärans timeout i millisekunder",
-    "api_key": "API-nyckel för OmniRoute-servern",
-    "base_url": "OmniRoute-serverns bas-URL",
+    "api_key": "API-nyckel för 67router-servern",
+    "base_url": "67router-serverns bas-URL",
     "context": "Serverkontext/profil för det här kommandot",
     "lang": "Ange CLI-visningsspråk (åsidosätter OMNIROUTE_LANG)"
-  },
-  "files": {
-    "description": "Hantera filer (ladda upp, lista, hämta, ladda ner, ta bort)",
-    "list": {
-      "purpose": "Filtrera efter syfte",
-      "limit": "Maximalt antal resultat"
-    },
-    "get": {
-      "description": "Hämta filmetadata"
-    },
-    "upload": {
-      "description": "Ladda upp en fil",
-      "purpose": "Filens syfte (batch, assistants, fine-tune)"
-    },
-    "content": {
-      "description": "Ladda ned filinnehåll",
-      "out": "Spara till sökväg (standard: stdout)"
-    },
-    "delete": {
-      "yes": "Hoppa över bekräftelse"
-    }
-  },
-  "batches": {
-    "description": "Hantera OpenAI-kompatibla batchjobb",
-    "list": {
-      "status": "Filtrera efter status",
-      "limit": "Maximalt antal resultat"
-    },
-    "create": {
-      "description": "Skapa ett batchjobb",
-      "inputFile": "ID för indatafil",
-      "endpoint": "Målslutpunkt",
-      "window": "Tidsfönster för slutförande",
-      "metadata": "Lägg till metadata key=value"
-    },
-    "submit": {
-      "description": "Ladda upp JSONL-fil och skapa batch",
-      "jsonl": "Sökväg till JSONL-fil",
-      "endpoint": "Målslutpunkt",
-      "wait": "Vänta på slutförande"
-    },
-    "cancel": {
-      "yes": "Hoppa över bekräftelse"
-    },
-    "wait": {
-      "timeout": "Tidsgräns i ms"
-    },
-    "output": {
-      "out": "Spara utdata till sökväg"
-    },
-    "errors": {
-      "out": "Spara fel till sökväg"
-    }
   },
   "translator": {
     "description": "Översätt begärandetexter mellan LLM-format",
@@ -1082,7 +755,7 @@
     }
   },
   "openapi": {
-    "description": "Öppna och testa OmniRoute OpenAPI-specifikationen",
+    "description": "Öppna och testa 67router OpenAPI-specifikationen",
     "dump": {
       "description": "Skriv OpenAPI-specifikationen till stdout eller en fil",
       "format": "Utdataformat: yaml|json (standard: yaml)",
@@ -1124,35 +797,8 @@
       "switch": "Aktivera den högst rankade kombinationen"
     }
   },
-  "oneproxy": {
-    "description": "Hantera OneProxys uppströmspool",
-    "stats": {
-      "provider": "Filtrera efter leverantör",
-      "period": "Tidsperiod (standard: 24h)"
-    },
-    "fetch": {
-      "description": "Hämta proxyservrar från poolen",
-      "count": "Antal proxyservrar att hämta (standard: 1)",
-      "type": "Proxytyp: http|socks5 (standard: http)"
-    },
-    "rotate": {
-      "description": "Framtvinga proxyrotation",
-      "provider": "Leverantör att rotera för",
-      "connectionId": "Specifikt anslutnings-ID att rotera"
-    },
-    "config": {
-      "description": "Visa eller uppdatera OneProxy-konfigurationen",
-      "enabled": "Aktivera proxypool (true|false)",
-      "poolSize": "Poolstorlek",
-      "providerSource": "URL för proxyleverantör",
-      "rotationPolicy": "Rotationspolicy: sticky|per-request|periodic"
-    },
-    "pool": {
-      "description": "Lista aktuell proxypool med mätvärden"
-    }
-  },
   "open": {
-    "description": "Öppna en specifik OmniRoute-instrumentpanelsida i webbläsaren",
+    "description": "Öppna en specifik 67router-instrumentpanelsida i webbläsaren",
     "url": "Skriv endast ut URL:en, öppna inte webbläsaren"
   },
   "telemetry": {
@@ -1169,7 +815,7 @@
     }
   },
   "sync": {
-    "description": "Synkronisera konfiguration mellan OmniRoute-instanser",
+    "description": "Synkronisera konfiguration mellan 67router-instanser",
     "push": {
       "description": "Skicka konfiguration till molnet eller en fjärrinstans"
     },
@@ -1228,7 +874,7 @@
     "filter": "Filtrera efter nivå (error,warn,info) — kommaseparerat",
     "lines": "Antal rader att hämta",
     "timeout": "Tidsgräns för anslutning i ms",
-    "baseUrl": "Bas-URL för OmniRoute API",
+    "baseUrl": "Bas-URL för 67router API",
     "requestId": "Filtrera efter begärande-ID",
     "apiKey": "Filtrera efter API-nyckel",
     "combo": "Filtrera efter kombinationsnamn",
@@ -1244,10 +890,10 @@
     "description": "Styr ikonen i systemfältet",
     "show": "Visa ikonen i systemfältet (om servern körs med --tray)",
     "hide": "Dölj ikonen i systemfältet",
-    "quit": "Avsluta OmniRoute via systemfältet"
+    "quit": "Avsluta 67router via systemfältet"
   },
   "autostart": {
-    "description": "Hantera automatisk start av OmniRoute vid systemstart (Linux: systemd-användartjänst)",
+    "description": "Hantera automatisk start av 67router vid systemstart (Linux: systemd-användartjänst)",
     "enable": "Aktivera automatisk start vid systemstart",
     "disable": "Inaktivera automatisk start vid systemstart",
     "toggle": "Växla automatisk start vid systemstart",
@@ -1268,30 +914,20 @@
     "system": "Systemprompt",
     "resume": "Återuppta en sparad session efter namn"
   },
-  "plugin": {
-    "description": "Hantera CLI-insticksprogram (omniroute-cmd-*)",
-    "list": "Lista installerade insticksprogram",
-    "install": "Installera ett insticksprogram från npm eller en lokal sökväg",
-    "remove": "Ta bort ett installerat insticksprogram",
-    "info": "Visa information om ett installerat insticksprogram",
-    "search": "Sök i npm-registret efter tillgängliga insticksprogram",
-    "update": "Uppdatera installerade insticksprogram",
-    "scaffold": "Skapa en grundstruktur för ett nytt insticksprogram"
-  },
   "launch": {
-    "description": "Starta Claude Code ansluten till OmniRoute (lokalt eller på distans, med --profile)",
+    "description": "Starta Claude Code ansluten till 67router (lokalt eller på distans, med --profile)",
     "token": "Token som Claude-klienten ska skicka (ANTHROPIC_AUTH_TOKEN)",
-    "notRunning": "OmniRoute kan inte nås på {port}. Starta det med 'omniroute serve'.",
+    "notRunning": "67router kan inte nås på {port}. Starta det med 'omniroute serve'.",
     "notFound": "CLI-verktyget 'claude' hittades inte i PATH."
   },
   "run": {
-    "description": "Starta ett CLI-mål som stöds via OmniRoute"
+    "description": "Starta ett CLI-mål som stöds via 67router"
   },
   "setupClaude": {
-    "description": "Generera Claude Code-profiler i ~/.claude/profiles från OmniRoutes modellkatalog"
+    "description": "Generera Claude Code-profiler i ~/.claude/profiles från 67routers modellkatalog"
   },
   "connect": {
-    "description": "Anslut till en fjärrserver för OmniRoute och aktivera fjärrläge"
+    "description": "Anslut till en fjärrserver för 67router och aktivera fjärrläge"
   },
   "tokens": {
     "description": "Hantera omfångsbegränsade CLI-åtkomsttoken (fjärrläge)"
@@ -1300,10 +936,10 @@
     "description": "Välj en leverantör och modell från den aktiva servern och konfigurera ett lokalt CLI-verktyg som stöds"
   },
   "launchCodex": {
-    "description": "Starta Codex CLI anslutet till OmniRoute (lokalt eller på en fjärr-VPS)"
+    "description": "Starta Codex CLI anslutet till 67router (lokalt eller på en fjärr-VPS)"
   },
   "setupCodex": {
-    "description": "Generera profilfiler i ~/.codex från OmniRoutes aktuella modellkatalog"
+    "description": "Generera profilfiler i ~/.codex från 67routers aktuella modellkatalog"
   },
   "packs": {
     "description": "Hantera valfria körningspaket (ML/webbläsarautomatisering)",
@@ -1316,7 +952,7 @@
     "errUnknown": "okänt paket: {name}",
     "errNoIndex": "paketindexet hittades inte; ange --source <dir> som innehåller paketdata (i skrivbordspaketen finns det bredvid appen)",
     "installed": "paketet \"{name}\" har installerats och verifierats i {dir}",
-    "restartHint": "starta om OmniRoute-servern (eller skrivbordsappen) så att körmiljön registrerar paketet",
+    "restartHint": "starta om 67router-servern (eller skrivbordsappen) så att körmiljön registrerar paketet",
     "removed": "paketet \"{name}\" har tagits bort",
     "notInstalled": "paketet \"{name}\" var inte installerat",
     "verifyOk": "alla installerade paket har verifierats",

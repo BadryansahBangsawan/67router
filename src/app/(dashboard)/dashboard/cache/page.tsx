@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, type ReactNode } from "react";
+import { PageHeader } from "@omniroute/ui-kit/page-header";
 import { Progress } from "@omniroute/ui-kit/progress";
 import {
   Table,
@@ -15,6 +16,7 @@ import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
 import EmptyState from "@/shared/components/EmptyState";
 import Icon from "@/shared/components/Icon";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { Skeleton } from "@/shared/components/Loading";
 import SegmentedControl from "@/shared/components/SegmentedControl";
 import { useNotificationStore } from "@/store/notificationStore";
@@ -82,45 +84,6 @@ interface CacheStats {
 
 type CacheView = "prompt" | "semantic" | "reasoning";
 
-function StatCard({
-  icon,
-  label,
-  value,
-  sub,
-  accent = "text-text-main",
-  size = "default",
-}: {
-  icon: string;
-  label: string;
-  value: string | number;
-  sub?: string;
-  accent?: string;
-  size?: "default" | "hero";
-}) {
-  const isHero = size === "hero";
-
-  return (
-    <div
-      className={
-        isHero
-          ? "rounded-xl border border-border bg-bg-subtle p-5"
-          : "rounded-lg border border-border bg-bg-subtle p-4"
-      }
-    >
-      <div className="flex items-center gap-1.5 text-xs text-text-muted">
-        <Icon name={icon} size={isHero ? 18 : 16} />
-        <span>{label}</span>
-      </div>
-      <div
-        className={`mt-3 font-semibold tabular-nums ${accent} ${isHero ? "text-3xl" : "text-2xl"}`}
-      >
-        {value}
-      </div>
-      {sub && <div className={`mt-1 text-text-muted ${isHero ? "text-sm" : "text-xs"}`}>{sub}</div>}
-    </div>
-  );
-}
-
 function SectionBadge({
   icon,
   children,
@@ -165,8 +128,10 @@ function DetailStat({
   accent?: string;
 }) {
   return (
-    <div className="rounded-lg bg-bg-subtle px-3 py-2.5">
-      <div className="text-[11px] uppercase tracking-[0.12em] text-text-muted">{label}</div>
+    <div className="rounded-control border border-border bg-bg-subtle px-3 py-2.5">
+      <div className="text-[11px] font-medium uppercase tracking-[0.04em] text-text-muted">
+        {label}
+      </div>
       <div className={`mt-1 text-sm font-semibold tabular-nums ${accent}`}>{value}</div>
     </div>
   );
@@ -175,7 +140,7 @@ function DetailStat({
 function InfoRow({ icon, children }: { icon: string; children: ReactNode }) {
   return (
     <div className="flex gap-2 text-sm text-text-muted">
-      <Icon name={icon} size={16} className="mt-0.5 text-info" />
+      <Icon name={icon} size={16} className="mt-0.5 text-text-muted" />
       <span>{children}</span>
     </div>
   );
@@ -220,7 +185,7 @@ function PromptTrendPanel({
 }) {
   if (trend.length === 0) {
     return (
-      <div className="rounded-xl border border-border bg-bg-subtle p-5">
+      <div className="rounded-card border border-border bg-surface p-5">
         <div className="flex items-center gap-2">
           <Icon name="timeline" size={16} className="text-text-muted" />
           <h3 className="text-sm font-medium text-text-main">{title}</h3>
@@ -243,7 +208,7 @@ function PromptTrendPanel({
   const maxRequests = Math.max(1, ...trend.map((point) => point.requests));
 
   return (
-    <div className="w-full self-start rounded-xl border border-border bg-bg-subtle p-5">
+    <div className="w-full self-start rounded-card border border-border bg-surface p-5">
       <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
         <div>
           <div className="flex items-center gap-2">
@@ -310,7 +275,7 @@ function PromptTrendPanel({
                   <TableCell className="font-semibold tabular-nums text-text-main">
                     {cacheRate.toFixed(1)}%
                   </TableCell>
-                  <TableCell className="font-semibold tabular-nums text-chart-2">
+                  <TableCell className="font-semibold tabular-nums text-text-main">
                     {point.cachedTokens.toLocaleString()}
                   </TableCell>
                 </TableRow>
@@ -328,6 +293,7 @@ const REFRESH_INTERVAL_SECONDS = REFRESH_INTERVAL_MS / 1000;
 export default function CachePage() {
   const t = useTranslations("cache");
   const tSettings = useTranslations("settings");
+  const tSidebar = useTranslations("sidebar");
   const tRoot = useTranslations();
   const notify = useNotificationStore();
   const nodeMap = useProviderNodeMap();
@@ -410,18 +376,23 @@ export default function CachePage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex justify-end">
-        <Button
-          variant="secondary"
-          icon="refresh"
-          size="sm"
-          onClick={() => void fetchStats()}
-          disabled={loading}
-          aria-label={t("refresh")}
-        >
-          {t("refresh")}
-        </Button>
-      </div>
+      <PageHeader
+        compact
+        title={tSidebar("cache")}
+        description={tSidebar("cacheSubtitle")}
+        actions={
+          <Button
+            variant="secondary"
+            icon="refresh"
+            size="sm"
+            onClick={() => void fetchStats()}
+            disabled={loading}
+            aria-label={t("refresh")}
+          >
+            {t("refresh")}
+          </Button>
+        }
+      />
 
       <SegmentedControl
         aria-label={t("viewSwitcherAria")}
@@ -459,7 +430,9 @@ export default function CachePage() {
                   {t("promptCache")}
                 </SectionBadge>
                 <div>
-                  <h2 className="text-lg font-semibold text-text-main">{t("promptCache")}</h2>
+                  <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main">
+                    {t("promptCache")}
+                  </h2>
                   <p className="mt-1 max-w-3xl text-sm text-text-muted">
                     {t("promptCacheSectionDesc")}
                   </p>
@@ -474,50 +447,35 @@ export default function CachePage() {
 
             {pc ? (
               <>
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-                  <StatCard
-                    icon="speed"
+                <KpiStrip gridClassName="md:grid-cols-2 xl:grid-cols-5">
+                  <KpiCell
                     label={t("cacheRate")}
                     value={`${promptCacheRate.toFixed(1)}%`}
-                    sub={`${pc.requestsWithCacheControl.toLocaleString()} / ${pc.totalRequests.toLocaleString()} ${t("requests").toLowerCase()}`}
-                    accent="text-success"
-                    size="hero"
+                    footnote={`${pc.requestsWithCacheControl.toLocaleString()} / ${pc.totalRequests.toLocaleString()} ${t("requests").toLowerCase()}`}
                   />
-                  <StatCard
-                    icon="savings"
+                  <KpiCell
                     label={t("cacheReuseRatio")}
                     value={`${promptReuseRatio.toFixed(1)}%`}
-                    sub={t("cacheReuseRatioDesc")}
-                    accent="text-info"
-                    size="hero"
+                    footnote={t("cacheReuseRatioDesc")}
                   />
-                  <StatCard
-                    icon="token"
+                  <KpiCell
                     label={t("cachedTokens")}
                     value={pc.totalCachedTokens.toLocaleString()}
-                    sub={t("cachedTokensRead")}
-                    accent="text-chart-2"
-                    size="hero"
+                    footnote={t("cachedTokensRead")}
                   />
-                  <StatCard
-                    icon="upload"
+                  <KpiCell
                     label={t("cacheCreationTokens")}
                     value={pc.totalCacheCreationTokens.toLocaleString()}
-                    sub={t("cacheCreationWrite")}
-                    accent="text-chart-4"
-                    size="hero"
+                    footnote={t("cacheCreationWrite")}
                   />
-                  <StatCard
-                    icon="attach_money"
+                  <KpiCell
                     label={t("estCostSaved")}
                     value={`$${pc.estimatedCostSaved.toFixed(4)}`}
-                    sub={t("promptCache")}
-                    accent="text-success"
-                    size="hero"
+                    footnote={t("promptCache")}
                   />
-                </div>
+                </KpiStrip>
 
-                <div className="w-full rounded-xl border border-border bg-bg-subtle p-5">
+                <div className="w-full rounded-card border border-border bg-surface p-5">
                   <div>
                     <h3 className="text-sm font-medium text-text-main">{t("byProvider")}</h3>
                     <p className="mt-1 text-sm text-text-muted">{t("providerCacheRateDesc")}</p>
@@ -562,13 +520,13 @@ export default function CachePage() {
                               <TableCell className="tabular-nums text-text-main">
                                 {data.inputTokens.toLocaleString()}
                               </TableCell>
-                              <TableCell className="tabular-nums text-chart-2">
+                              <TableCell className="tabular-nums text-text-main">
                                 {data.cachedTokens.toLocaleString()}
                               </TableCell>
-                              <TableCell className="tabular-nums text-chart-4">
+                              <TableCell className="tabular-nums text-text-main">
                                 {data.cacheCreationTokens.toLocaleString()}
                               </TableCell>
-                              <TableCell className="font-semibold tabular-nums text-info">
+                              <TableCell className="font-semibold tabular-nums text-text-main">
                                 {reuseRatio.toFixed(1)}%
                               </TableCell>
                               <TableCell className="font-semibold tabular-nums text-success">
@@ -583,7 +541,7 @@ export default function CachePage() {
                       </TableBody>
                     </Table>
                   ) : (
-                    <div className="mt-3 rounded-lg border border-dashed border-border px-4 py-6 text-sm text-text-muted">
+                    <div className="mt-3 rounded-control border border-dashed border-border px-4 py-6 text-sm text-text-muted">
                       {t("noPromptCacheData")}
                     </div>
                   )}
@@ -606,7 +564,7 @@ export default function CachePage() {
                 />
               </>
             ) : (
-              <div className="rounded-lg border border-dashed border-border px-4 py-6 text-sm text-text-muted">
+              <div className="rounded-control border border-dashed border-border px-4 py-6 text-sm text-text-muted">
                 {t("noPromptCacheData")}
               </div>
             )}
@@ -634,7 +592,9 @@ export default function CachePage() {
                   </SectionBadge>
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-text-main">{t("semanticCache")}</h2>
+                  <h2 className="text-base font-semibold tracking-[-0.01em] text-text-main">
+                    {t("semanticCache")}
+                  </h2>
                   <p className="mt-1 max-w-3xl text-sm text-text-muted">
                     {t("semanticCacheSectionDesc")}
                   </p>
@@ -655,42 +615,36 @@ export default function CachePage() {
             </div>
 
             {!semanticCacheEnabled && (
-              <div className="rounded-lg border border-warning/30 bg-warning-bg px-4 py-3 text-sm text-warning">
+              <div className="rounded-control border border-warning/30 bg-warning-bg px-4 py-3 text-sm text-warning">
                 {t("semanticCacheDisabledDesc")}
               </div>
             )}
 
-            <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
-              <StatCard
-                icon="memory"
+            <KpiStrip gridClassName="grid-cols-2 xl:grid-cols-4">
+              <KpiCell
                 label={t("memoryEntries")}
                 value={sc?.memoryEntries ?? 0}
-                sub={t("memoryEntriesSub")}
+                footnote={t("memoryEntriesSub")}
               />
-              <StatCard
-                icon="storage"
+              <KpiCell
                 label={t("dbEntries")}
                 value={sc?.dbEntries ?? 0}
-                sub={t("dbEntriesSub")}
+                footnote={t("dbEntriesSub")}
               />
-              <StatCard
-                icon="trending_up"
+              <KpiCell
                 label={t("cacheHits")}
                 value={sc?.hits ?? 0}
-                sub={t("cacheHitsSub", { total: semanticTotalRequests })}
-                accent="text-success"
+                footnote={t("cacheHitsSub", { total: semanticTotalRequests })}
               />
-              <StatCard
-                icon="token"
+              <KpiCell
                 label={t("tokensSaved")}
                 value={(sc?.tokensSaved ?? 0).toLocaleString()}
-                sub={t("tokensSavedSub")}
-                accent="text-info"
+                footnote={t("tokensSavedSub")}
               />
-            </div>
+            </KpiStrip>
 
             <div className="grid gap-4 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
-              <div className="rounded-xl border border-border bg-bg-subtle p-5">
+              <div className="rounded-card border border-border bg-surface p-5">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <h3 className="text-sm font-medium text-text-main">{t("performance")}</h3>
@@ -730,7 +684,7 @@ export default function CachePage() {
               </div>
 
               <div className="space-y-4">
-                <div className="rounded-xl border border-border bg-bg-subtle p-5">
+                <div className="rounded-card border border-border bg-surface p-5">
                   <h3 className="text-sm font-medium text-text-main">{t("behavior")}</h3>
                   <div className="mt-4 grid gap-3">
                     <InfoRow icon="info">{t("behaviorDeterministic")}</InfoRow>
@@ -744,7 +698,7 @@ export default function CachePage() {
                   </div>
                 </div>
 
-                <div className="rounded-xl border border-border bg-bg-subtle p-5">
+                <div className="rounded-card border border-border bg-surface p-5">
                   <div className="flex items-center gap-2">
                     <Icon name="fingerprint" size={16} className="text-text-muted" />
                     <h3 className="text-sm font-medium text-text-main">{t("idempotency")}</h3>
@@ -764,7 +718,7 @@ export default function CachePage() {
               </div>
             </div>
 
-            <div className="rounded-xl border border-border bg-bg-subtle p-5">
+            <div className="rounded-card border border-border bg-surface p-5">
               <div className="mb-4 flex flex-col gap-1">
                 <h3 className="text-sm font-medium text-text-main">{t("entries")}</h3>
                 <p className="text-sm text-text-muted">{t("semanticEntriesDesc")}</p>

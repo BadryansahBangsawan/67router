@@ -4,7 +4,7 @@
 
 ---
 
-> **TL;DR**: OmniRoute bewertet seine **kostenlosen** Anbieter anhand der Modellqualität mithilfe von **Arena AI-
+> **TL;DR**: 67router bewertet seine **kostenlosen** Anbieter anhand der Modellqualität mithilfe von **Arena AI-
 > ELO-Werten (im LMArena-Stil)**. Öffnen Sie im Dashboard die Seite **Rangliste kostenloser Anbieter**, um zu sehen, welche kostenlosen Anbieter die leistungsstärksten Modelle für Ihre Aufgabe bereitstellen —
 > entweder insgesamt oder nach Kategorie gefiltert (Programmierung, Review, Dokumentation, Debugging).
 
@@ -12,7 +12,7 @@
 
 ## Was es ist
 
-OmniRoute registriert 375 Anbieter, darunter 155 Katalogeinträge mit der Markierung **kostenlos/ohne Auth**
+67router registriert 375 Anbieter, darunter 155 Katalogeinträge mit der Markierung **kostenlos/ohne Auth**
 (ohne Auth,
 kostenloser OAuth-Tier oder kostenloser API-Key-Tier — siehe den
 [Free-Tiers-Leitfaden](../getting-started/FREE-TIERS-GUIDE.md) und das vollständige
@@ -128,9 +128,9 @@ und `code` — von der Arena-AI-Bestenlisten-API
 (`https://api.wulong.dev/arena-ai-leaderboards/v1/leaderboard`) ab. Jeder Bestenlisteneintrag
 enthält einen Modellnamen, Anbieter, ELO-`score`, ein Konfidenzintervall und die Anzahl der Stimmen.
 
-Die Bestenlistenkategorien werden den OmniRoute-Aufgabenkategorien wie folgt zugeordnet:
+Die Bestenlistenkategorien werden den 67router-Aufgabenkategorien wie folgt zugeordnet:
 
-| Arena-Bestenliste | OmniRoute-Aufgabenkategorien                      |
+| Arena-Bestenliste | 67router-Aufgabenkategorien                       |
 | ----------------- | ------------------------------------------------- |
 | `text`            | `default`, `review`, `documentation`, `debugging` |
 | `code`            | `coding`                                          |
@@ -167,7 +167,7 @@ Die Synchronisierung ist **standardmäßig aktiviert**:
 
 - Sie wird einmal beim Serverstart und anschließend in regelmäßigen Abständen ausgeführt
   (`src/lib/arenaEloSync.ts`, eingebunden über `src/instrumentation-node.ts`).
-- Sie ist **nicht blockierend und niemals fatal** — wenn der Abruf von der vorgelagerten Quelle fehlschlägt, läuft OmniRoute
+- Sie ist **nicht blockierend und niemals fatal** — wenn der Abruf von der vorgelagerten Quelle fehlschlägt, läuft 67router
   weiter, und die Ranglisten zeigen einfach die letzten gültigen Daten an (oder einen leeren Zustand).
 
 Sie wird durch zwei Umgebungsvariablen gesteuert (dokumentiert in
@@ -202,7 +202,7 @@ einen flexiblen Abgleich (`findMatchingIntelligence` in `src/lib/freeProviderRan
 3. Präfixübereinstimmung (ein Modellname aus der Bestenliste ist ein Präfix der Registry-ID).
 
 Auf der Synchronisierungsseite werden bekannte Anbieterpräfixe (`anthropic/`, `openai/`, `google/`, …)
-entfernt, und eine kleine Alias-Zuordnung erweitert kanonische Namen um die Varianten, die OmniRoute
+entfernt, und eine kleine Alias-Zuordnung erweitert kanonische Namen um die Varianten, die 67router
 intern verwendet, sodass Modelle unter jedem Namen auffindbar bleiben.
 
 ### Einstufung eines Anbieters

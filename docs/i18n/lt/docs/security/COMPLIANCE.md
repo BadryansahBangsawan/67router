@@ -7,7 +7,7 @@
 > **Patikimas šaltinis:** `src/lib/compliance/`, `src/app/api/compliance/`
 > **Paskutinį kartą atnaujinta:** 2026-06-28 — v3.8.40
 
-„OmniRoute“ registruoja administracinius veiksmus, autentifikavimo įvykius, teikėjų
+„67router“ registruoja administracinius veiksmus, autentifikavimo įvykius, teikėjų
 prisijungimo duomenų gyvavimo ciklo pakeitimus ir MCP įrankių iškvietimus „SQLite“
 pagrįstose audito lentelėse. Šiame puslapyje aprašoma, kas registruojama, kur
 saugomi duomenys, kiek laiko jie išlaikomi, kaip API raktams galima išjungti

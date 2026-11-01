@@ -169,5 +169,4 @@ curl / Python / TypeScript สำหรับการเรียกทั้�
 - แผนหลัก: `_tasks/features-v3.8.6/refactorpages/_orchestration/master-plan-group-C.md`
 - แผนฟีเจอร์: `_tasks/features-v3.8.6/refactorpages/18-search-tools-studio-redesign.plan.md`
 - รีจิสทรีผู้ให้บริการค้นหา: `open-sse/config/searchRegistry.ts`
-- Playground Studio (`ExportCodeModal` + `codeExport.ts` ที่ใช้ร่วมกัน): `docs/frameworks/PLAYGROUND_STUDIO.md`
 - แบ็กเอนด์สำหรับการดึงข้อมูลเว็บ: `src/app/api/v1/web/fetch/route.ts`

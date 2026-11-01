@@ -1,9 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { Card, Input, Toggle } from "@/shared/components";
-import Icon from "@/shared/components/Icon";
+import { Input, Toggle } from "@/shared/components";
 import { useTranslations } from "next-intl";
+import { SettingsSection } from "./SettingsSection";
 
 type RoutingSettings = {
   fallbackStrategy?: string;
@@ -263,17 +263,7 @@ export default function RoutingStrategyCard() {
   const comboStickyDisplay = numericLimit(settings.comboStickyRoundRobinLimit, 1);
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-4">
-        <div className="p-2 rounded-lg bg-bg-subtle text-text-muted shrink-0">
-          <Icon name="route" size={20} />
-        </div>
-        <div>
-          <h3 className="text-base sm:text-lg font-semibold">{t("routingStrategyTitle")}</h3>
-          <p className="text-xs text-text-muted">{t("routingStrategySubtitle")}</p>
-        </div>
-      </div>
-
+    <SettingsSection title={t("routingStrategyTitle")} description={t("routingStrategySubtitle")}>
       {loading ? (
         <p className="text-sm text-text-muted">{tc("loading")}</p>
       ) : (
@@ -301,6 +291,6 @@ export default function RoutingStrategyCard() {
           />
         </div>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

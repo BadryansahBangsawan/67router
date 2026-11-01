@@ -10,7 +10,7 @@
 > mode de blocage d'injection comme limite obligatoire (#16413), et ce qui voit une réponse avant le post-appel)
 
 Les guardrails appliquent des transformations de sécurité, de politique et de contenu à la frontière
-entre OmniRoute et les fournisseurs amont. Chaque guardrail peut inspecter (et
+entre 67router et les fournisseurs amont. Chaque guardrail peut inspecter (et
 éventuellement rejeter, transformer ou annoter) les charges utiles des requêtes (`preCall`) et
 les réponses amont (`postCall`).
 
@@ -110,7 +110,7 @@ quota (`allowedQuotas`) ou les modèles (`allowedModels` / `blockedModels` /
 `modelAccessMode: "restricted"` / `disableNonPublicModels`), le bridge ne
 choisit que des modèles de reroutage et de description que la clé est
 autorisée à utiliser, sur des connexions que la clé peut utiliser. L'appel de
-description passe alors toujours par la boucle locale (self-loop) d'OmniRoute
+description passe alors toujours par la boucle locale (self-loop) de 67router
 avec l'en-tête `x-omniroute-self-loop-key-id`, de sorte que la requête de
 chat réceptrice applique à nouveau la politique de connexions et de modèles
 de cette clé. `enforceApiKeyPolicy()` ne prend en compte cet en-tête qu'en
@@ -143,7 +143,7 @@ de transcription de texte demandée par ce prompt ; l'appel de description
 lui-même demande donc toujours un niveau de détail élevé, quel que soit le
 niveau de détail utilisé par la requête entrante d'origine. Cela n'affecte
 que le corps de la requête interne de description ; cela ne change pas la
-façon dont OmniRoute transmet le `image_url.detail` de l'appelant sur la
+façon dont 67router transmet le `image_url.detail` de l'appelant sur la
 requête principale — cette valeur par défaut est appliquée séparément, et
 uniquement pour les clients OpenCode détectés, dans `defaultImageDetail()`
 (`open-sse/handlers/chatCore/upstreamBody.ts`). La branche au format filaire
@@ -276,7 +276,7 @@ Image-to-Text et Speech-to-Text aux onglets Modality Bridge correspondants
 sans supprimer le bac à sable Speech-to-Text existant.
 
 **Contournement d'admission du self-loop :** lorsque l'appel describe passe
-par le self-loop `/v1` propre à OmniRoute (modèle de fournisseur non
+par le self-loop `/v1` propre à 67router (modèle de fournisseur non
 standard), la sous-requête envoie `x-omniroute-admission-bypass: internal`
 et est authentifiée avec l'identifiant self-loop résolu — la sentinelle
 locale `sk_omniroute` en mode local, ou la clé d'environnement
@@ -417,7 +417,7 @@ Des filtres manquants, des preuves malformées ou vides, une erreur du détecteu
 
 Chaque frame est limitée à 4 Mio, l'ensemble des frames brutes à 23 Mio, et la
 réponse sérialisée du broker à 32 Mio. Un répertoire temporaire privé est
-supprimé dans le bloc `finally`. OmniRoute n'intègre pas FFmpeg et n'accepte
+supprimé dans le bloc `finally`. 67router n'intègre pas FFmpeg et n'accepte
 pas de chemin d'exécutable personnalisé. Avant la génération des légendes, le
 pont applique une passe de déduplication visuelle conservatrice : chaque JPEG
 est réduit à un tampon en niveaux de gris de 16×16 et n'est comparé qu'à la
@@ -467,7 +467,7 @@ partie vidéo prise en charge lorsqu'ils disposent déjà d'un texte aligné.
 Chaque cue doit porter un champ `text`, un intervalle fini `start`/`end` compris
 dans la durée sondée, et une `source` figurant sur liste blanche (`client`,
 `embedded` ou `audio-bridge`) ; `confidence` vaut `1` par défaut et doit rester
-entre `0` et `1`. Les cues strictement identiques sont fusionnés. OmniRoute ne
+entre `0` et `1`. Les cues strictement identiques sont fusionnés. 67router ne
 lance jamais de transcription à partir de ces métadonnées : les cues validés
 sont copiés dans le résultat décrit avec leur source, leur confiance et leur
 intervalle, et sont restitués comme des observations non fiables aux côtés des
@@ -1066,7 +1066,7 @@ déclenchement manuel) comporte deux tâches :
   réponse contient `error.code === "SECURITY_001"`, c'est-à-dire que le
   garde-fou a effectivement rejeté la requête.
 - **`garak` (informatif)** — exécute garak `--probes promptinject,dan,leakreplay`
-  contre une instance OmniRoute locale (`http://localhost:20128/v1`).
+  contre une instance 67router locale (`http://localhost:20128/v1`).
   Conditionné par un secret de fournisseur (`PROMPTFOO_PROVIDER_KEY`) ; s'ignore
   proprement et est suffixé par `|| true`, de sorte qu'il rapporte ses résultats
   sans faire échouer la CI.

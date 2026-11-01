@@ -233,8 +233,9 @@ test("#11632 ?prefix=alias suppresses canonical and bare rows for Codex-native r
 
   const rows = await getRows("http://localhost/api/v1/models?prefix=alias");
   // Guard: a broken import/seed would yield an empty or trivial catalog, and an
-  // empty id-set would satisfy an "absent" assertion vacuously.
-  assert.ok(rows.length > 100, `expected a populated catalog, got ${rows.length} rows`);
+  // empty id-set would satisfy an "absent" assertion vacuously. (Threshold lowered
+  // from 100 when 67router stopped listing image models.)
+  assert.ok(rows.length > 50, `expected a populated catalog, got ${rows.length} rows`);
 
   assert.deepEqual(
     rowsForRoot(rows, CODEX_NATIVE_ROOT),
@@ -249,7 +250,7 @@ test("#11632 ?prefix=canonical suppresses alias and bare rows for Codex-native r
   await seedCodexConnection("codex-primary");
 
   const rows = await getRows("http://localhost/api/v1/models?prefix=canonical");
-  assert.ok(rows.length > 100, `expected a populated catalog, got ${rows.length} rows`);
+  assert.ok(rows.length > 50, `expected a populated catalog, got ${rows.length} rows`);
 
   assert.deepEqual(
     rowsForRoot(rows, CODEX_NATIVE_ROOT),
@@ -264,7 +265,7 @@ test("#11632 ?prefix=dual keeps the full three-level Codex-native chain", async 
   await seedCodexConnection("codex-primary");
 
   const rows = await getRows("http://localhost/api/v1/models?prefix=dual");
-  assert.ok(rows.length > 100, `expected a populated catalog, got ${rows.length} rows`);
+  assert.ok(rows.length > 50, `expected a populated catalog, got ${rows.length} rows`);
 
   assert.deepEqual(
     rowsForRoot(rows, CODEX_NATIVE_ROOT),
@@ -281,7 +282,7 @@ test("#11632 MODELS_CATALOG_PREFIX_MODE=alias flag path gates Codex-native roots
     // No ?prefix= query param: the mode must resolve through
     // getModelsCatalogPrefixMode() at catalog.ts:304-305.
     const rows = await getRows("http://localhost/api/v1/models");
-    assert.ok(rows.length > 100, `expected a populated catalog, got ${rows.length} rows`);
+    assert.ok(rows.length > 50, `expected a populated catalog, got ${rows.length} rows`);
 
     assert.deepEqual(
       rowsForRoot(rows, CODEX_NATIVE_ROOT),
@@ -300,7 +301,7 @@ test("#11632 MODELS_CATALOG_PREFIX_MODE=canonical flag path gates Codex-native r
     await seedCodexConnection("codex-primary");
 
     const rows = await getRows("http://localhost/api/v1/models");
-    assert.ok(rows.length > 100, `expected a populated catalog, got ${rows.length} rows`);
+    assert.ok(rows.length > 50, `expected a populated catalog, got ${rows.length} rows`);
 
     assert.deepEqual(
       rowsForRoot(rows, CODEX_NATIVE_ROOT),
@@ -324,7 +325,7 @@ test("#11632 canonical mode re-roots the surviving row instead of dangling at a 
   await seedCodexConnection("codex-primary");
 
   const rows = await getRows("http://localhost/api/v1/models?prefix=canonical");
-  assert.ok(rows.length > 100, `expected a populated catalog, got ${rows.length} rows`);
+  assert.ok(rows.length > 50, `expected a populated catalog, got ${rows.length} rows`);
 
   assert.deepEqual(rowsForRoot(rows, "codex-auto-review"), [["codex/codex-auto-review", null]]);
   assert.deepEqual(rowsForRoot(rows, CODEX_NATIVE_ROOT), EXPECTED_CANONICAL_MODE_ROWS);

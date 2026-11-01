@@ -5,7 +5,7 @@
 ---
 
 > **Deskripsi satu baris untuk setiap direktori dan file root.**
-> Terakhir diperbarui: 2026-06-28 — OmniRoute v3.8.40
+> Terakhir diperbarui: 2026-06-28 — 67router v3.8.40
 >
 > Gunakan peta ini untuk menavigasi basis kode dengan cepat. Untuk pembahasan mendalam, ikuti tautan ke dokumentasi khusus.
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # Aset gambar pemasaran / README
 ├── @omniroute/           # Paket pendamping yang dapat dipublikasikan (opencode-plugin, opencode-provider)
 ├── skills/               # Paket keterampilan CLI/agen (cli-* + omni-* + config-codex-cli)
-├── examples/             # Plugin contoh + templat awal omniroute-cmd-hello
+├── examples/             # Quickstart client samples
 ├── contrib/              # Kontribusi komunitas (podman/)
 ├── .source/              # Konfigurasi sumber Fumadocs (source.config.mjs + server/browser/dynamic)
 ├── .github/              # Workflow GitHub Actions + templat isu + templat PR
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `app/api/v1/`                                                                | API publik yang kompatibel dengan OpenAI (~25 sub-rute: chat, completions, embeddings, files, batches, audio, images, videos, music, rerank, moderations, search, ws, agents, accounts, providers, dll.)                                                                                                                 |
 | `app/api/v1beta/`                                                            | Endpoint API bergaya Gemini                                                                                                                                                                                                                                                                                              |
-| `app/api/playground/`                                                        | Rute Playground Studio: `improve-prompt/` (POST — penulis ulang prompt LLM), `presets/` (GET daftar / POST buat), `presets/[id]/` (GET / PUT / DELETE) — lihat `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                                                    |
 | `app/api/` (non-v1)                                                          | Rute pengelolaan/admin (~60 direktori: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools, dll.)                                                                                                                                             |
 | `app/api/tools/agent-bridge/`                                                | REST API AgentBridge — 12 rute (kontrol server, status/DNS/pemetaan agen, bypass, sertifikat, CA upstream). LOCAL_ONLY + SPAWN_CAPABLE. Lihat `docs/frameworks/AGENTBRIDGE.md §7`.                                                                                                                                       |
 | `app/api/tools/traffic-inspector/`                                           | REST + WS API Traffic Inspector — 16+ rute (requests, sessions, hosts, capture-modes, export, ws). LOCAL_ONLY + SPAWN_CAPABLE. Lihat `docs/frameworks/TRAFFIC_INSPECTOR.md §8`.                                                                                                                                          |
-| `app/a2a/`                                                                   | Titik masuk A2A JSON-RPC 2.0 (`POST /a2a`)                                                                                                                                                                                                                                                                               |
-| `app/.well-known/agent.json/`                                                | Kartu Agen A2A (penemuan)                                                                                                                                                                                                                                                                                                |
 | `app/(dashboard)/dashboard/`                                                 | Halaman UI dasbor (50+ bagian, ~118 file page.tsx: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity, dll.)                                                                                                                                             |
 | `app/(dashboard)/dashboard/search-tools/`                                    | UI Search Tools Studio (3 tab: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — lihat `docs/frameworks/SEARCH_TOOLS_STUDIO.md`                                                                                                                                                                             |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (rencana 21): `page.tsx` (kerangka 3 tab), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | Sesi, hashing kata sandi, validasi token                                                                                                                                                                                                                                                                                |
 | `batches/`                               | Handler OpenAI Batches API                                                                                                                                                                                                                                                                                              |
 | `catalog/`                               | Validasi Zod katalog penyedia + resolusi kapabilitas                                                                                                                                                                                                                                                                    |
-| `cloudAgent/`                            | Agen Cloud (Codex Cloud, Devin, Jules) — lihat `docs/frameworks/CLOUD_AGENT.md`                                                                                                                                                                                                                                         |
 | `combos/`                                | Resolusi kombo + pembantu pengurutan ulang                                                                                                                                                                                                                                                                              |
 | `audit/`                                 | Pembantu umpan aktivitas: `highLevelActions.ts` (daftar yang diizinkan + `isHighLevelAction()`), `activityIcons.ts` (pemetaan tindakan → ikon/kata kerja), `timeline.ts` (groupByDay/relativeTime) — lihat `docs/architecture/MONITORING_SECTIONS.md`                                                                   |
 | `compliance/`                            | Log audit + audit penyedia — lihat `docs/security/COMPLIANCE.md`                                                                                                                                                                                                                                                        |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | Utilitas pemformatan UI (biaya, latensi, dll.)                                                                                                                                                                                                                                                                          |
 | `embeddings/`                            | Utilitas layanan embedding                                                                                                                                                                                                                                                                                              |
 | `env/`                                   | Penguraian + validasi variabel lingkungan                                                                                                                                                                                                                                                                               |
-| `evals/`                                 | Kerangka kerja evaluasi (suite, runner, runtime) — lihat `docs/frameworks/EVALS.md`                                                                                                                                                                                                                                     |
 | `guardrails/`                            | Penyamar PII, injeksi prompt, bridge visi — lihat `docs/security/GUARDRAILS.md`                                                                                                                                                                                                                                         |
 | `jobs/`                                  | Pekerjaan latar belakang (seperti cron)                                                                                                                                                                                                                                                                                 |
 | `memory/`                                | Memori percakapan (RRF hibrida SQLite FTS5 + sqlite-vec + Qdrant tingkat 2) — lihat `docs/frameworks/MEMORY.md`                                                                                                                                                                                                         |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — memproses memori dengan `needs_reindex=1` di latar belakang; dipanggil oleh `POST /api/memory/reindex` dan jalur lazy-backfill. (rencana 21)                                                                                                                                                      |
 | `monitoring/`                            | Pemeriksaan kesehatan, emisi metrik                                                                                                                                                                                                                                                                                     |
 | `oauth/`                                 | Alur OAuth/impor untuk 22 modul penyedia (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                                    |
-| `plugins/`                               | Registri plugin                                                                                                                                                                                                                                                                                                         |
 | `promptCache/`                           | Breakpoint cache prompt bergaya Anthropic                                                                                                                                                                                                                                                                               |
 | `skills/`                                | Kerangka kerja Skills (bawaan + marketplace + SkillsSH) — lihat `docs/frameworks/SKILLS.md`                                                                                                                                                                                                                             |
-| `playground/`                            | Helper bersama Playground Studio: `codeExport.ts` (generator curl/Python/TS), `promptImprover.ts` (pembuat meta-prompt), `streamMetrics.ts` (TTFT/TPS murni), `types.ts` (tabel harga) — lihat `docs/frameworks/PLAYGROUND_STUDIO.md`                                                                                   |
 | `webhookDispatcher.ts`                   | Pengiriman webhook HMAC — lihat `docs/frameworks/WEBHOOKS.md`                                                                                                                                                                                                                                                           |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | Pengelola tunnel — lihat `docs/ops/TUNNELS_GUIDE.md`                                                                                                                                                                                                                                                                    |
 | `cloudSync.ts`, `initCloudSync.ts`       | Sinkronisasi status ke cloud secara opsional                                                                                                                                                                                                                                                                            |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — Basis Data (147 modul + 208 migrasi)
 
-| Subdir                    | Tujuan                                                                                                                                                                     |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | Singleton `getDbInstance()` dengan penjurnalan WAL                                                                                                                         |
-| `db/migrations/`          | File SQL berversi (idempoten, transaksional). `073_memory_vec.sql` menambahkan kolom `memory_vec_meta` + `needs_reindex` (rencana 21).                                     |
-| `db/playgroundPresets.ts` | Modul CRUD untuk preset Playground Studio (`listPlaygroundPresets`, `getPlaygroundPreset`, `createPlaygroundPreset`, `updatePlaygroundPreset`, `deletePlaygroundPreset`)   |
-| `db/memoryVec.ts`         | CRUD untuk `memory_vec_meta` (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue`, dll. (rencana 21)           |
-| `db/<domain>.ts`          | Satu modul per domain: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache, dll. |
+| Subdir            | Tujuan                                                                                                                                                                     |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | Singleton `getDbInstance()` dengan penjurnalan WAL                                                                                                                         |
+| `db/migrations/`  | File SQL berversi (idempoten, transaksional). `073_memory_vec.sql` menambahkan kolom `memory_vec_meta` + `needs_reindex` (rencana 21).                                     |
+| `db/memoryVec.ts` | CRUD untuk `memory_vec_meta` (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue`, dll. (rencana 21)           |
+| `db/<domain>.ts`  | Satu modul per domain: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache, dll. |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | Alur rilis lengkap (skill, husky, conventional commit, deployment)                           |
 | `COVERAGE_PLAN.md`          | Sasaran cakupan dan status saat ini                                                          |
 | `FREE_TIERS.md`             | Penyedia tingkat gratis pilihan (48+ gratis + 11 OAuth)                                      |
-| `CLI-TOOLS.md`              | Integrasi CLI eksternal + CLI OmniRoute Internal                                             |
+| `CLI-TOOLS.md`              | Integrasi CLI eksternal + CLI 67router Internal                                              |
 | `I18N.md`                   | Arsitektur i18n, penambahan bahasa, 67 locale                                                |
 | `UNINSTALL.md`              | Langkah-langkah penghapusan instalasi secara bersih                                          |
 | `PROVIDER_REFERENCE.md`     | Katalog 375 penyedia yang **dibuat otomatis** (buat ulang: `npm run gen:provider-reference`) |
@@ -403,13 +395,10 @@ open-sse/
 | Dokumen                                       | Tujuan                                                                        |
 | --------------------------------------------- | ----------------------------------------------------------------------------- |
 | `MCP-SERVER.md`                               | Server MCP: 110 alat, 3 transport, 33 cakupan, endpoint REST                  |
-| `A2A-SERVER.md`                               | A2A v0.3: JSON-RPC, 6 skill, pembantu REST, kartu agen                        |
 | `AGENT_PROTOCOLS_GUIDE.md`                    | Panduan terpadu: A2A vs ACP vs Agen Cloud                                     |
-| `CLOUD_AGENT.md`                              | Orkestrasi Codex Cloud / Devin / Jules                                        |
 | `SKILLS.md`                                   | Kerangka kerja skill (bawaan + marketplace + SkillsSH + sandbox)              |
 | `RADAR.md`                                    | Overlay katalog model gratis Radar (`RADAR_ENABLED`, nonaktif secara default) |
 | `MEMORY.md`                                   | Sistem memori (SQLite FTS5 + Qdrant)                                          |
-| `EVALS.md`                                    | Kerangka kerja evaluasi (suite, eksekusi, rubrik)                             |
 | `GUARDRAILS.md`                               | Penyamar PII, injeksi prompt, jembatan visi                                   |
 | `COMPLIANCE.md`                               | Log audit, retensi, pilihan penolakan noLog                                   |
 | `WEBHOOKS.md`                                 | Pengiriman webhook bertanda tangan HMAC                                       |
@@ -572,7 +561,6 @@ Tidak disertakan dalam keluaran `npm pack`. Lihat `.npmignore`.
 - **Menambahkan provider?** Ikuti `docs/architecture/ARCHITECTURE.md § Adding a New Provider` + periksa silang dengan `docs/reference/PROVIDER_REFERENCE.md`.
 - **Menambahkan route?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **Menambahkan tool MCP?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **Menambahkan skill A2A?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **Menjalankan secara lokal?** `docs/guides/SETUP_GUIDE.md`.
 - **Melakukan deployment?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **Melakukan rilis?** `docs/ops/RELEASE_CHECKLIST.md` (dan skill Claude Code `/generate-release-cc`).

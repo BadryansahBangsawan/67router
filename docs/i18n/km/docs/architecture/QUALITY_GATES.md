@@ -4,7 +4,7 @@
 
 ---
 
-ឯកសារនេះគឺជាឯកសារយោងផ្លូវការសម្រាប់ច្រកត្រួតពិនិត្យគុណភាព CI ទាំងអស់នៅក្នុង OmniRoute។
+ឯកសារនេះគឺជាឯកសារយោងផ្លូវការសម្រាប់ច្រកត្រួតពិនិត្យគុណភាព CI ទាំងអស់នៅក្នុង 67router។
 វាពណ៌នាអំពីច្រកត្រួតពិនិត្យនីមួយៗ អ្វីដែលវាផ្ទៀងផ្ទាត់ កិច្ចការ CI ណាដែលវាដំណើរការនៅក្នុង ថាតើវាប្រើ
 ខ្សែគោល ratchet ឬគោលការណ៍ជាប់/ធ្លាក់ និងថាតើវារារាំងការបង្កើតឬគ្រាន់តែជាការណែនាំ។
 
@@ -263,14 +263,14 @@ clone ដោយគ្មាន base ref) ដោយធ្វើតាមគំរ
 
 ទាំងនេះរត់តាមកាលវិភាគ cron (និង `workflow_dispatch`) មិនដែលលើ PR ទេ។ ទាំងអស់គឺជាប្រឹក្សា។
 
-| Workflow               | ផ្ទៀងផ្ទាត់                                                                                                                                                           | រាំងខ្ទប់    |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `nightly-property`     | តេស្ត property របស់ fast-check ជាមួយ seed ចៃដន្យ + ចំនួនដងរត់ខ្ពស់                                                                                                    | **ប្រឹក្សា** |
-| `nightly-resilience`   | gate កំណើន heap, chaos fault-injection, k6 load/soak                                                                                                                  | **ប្រឹក្សា** |
-| `nightly-llm-security` | promptfoo injection guard (របៀបប្លុក) + garak probes (រំលងបើគ្មាន provider secret)                                                                                    | **ប្រឹក្សា** |
-| `nightly-schemathesis` | OpenAPI contract fuzzing (schemathesis) ប្រឆាំងនឹង OmniRoute ដែលកំពុងរត់ផ្ទាល់ ដោយប្រើ `docs/openapi.yaml` — បង្ហាញការរំលោភ spec / 500 ដែលមិនបានដោះស្រាយ (Fase 8 B.4) | **ប្រឹក្សា** |
-| `nightly-mutation`     | ពិន្ទុ mutation-testing របស់ Stryker លើ lane ឯកតារហ័ស — mutant ដែលរួចផុតបង្ហាញ assert ខ្សោយ                                                                           | **ប្រឹក្សា** |
-| `nightly-compat`       | ម៉ាទ្រីសភាពឆបគ្នារបស់ Node engine នៅទូទាំងជួរ `engines.node` ដែលគាំទ្រ                                                                                                | **ប្រឹក្សា** |
+| Workflow               | ផ្ទៀងផ្ទាត់                                                                                                                                                          | រាំងខ្ទប់    |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `nightly-property`     | តេស្ត property របស់ fast-check ជាមួយ seed ចៃដន្យ + ចំនួនដងរត់ខ្ពស់                                                                                                   | **ប្រឹក្សា** |
+| `nightly-resilience`   | gate កំណើន heap, chaos fault-injection, k6 load/soak                                                                                                                 | **ប្រឹក្សា** |
+| `nightly-llm-security` | promptfoo injection guard (របៀបប្លុក) + garak probes (រំលងបើគ្មាន provider secret)                                                                                   | **ប្រឹក្សា** |
+| `nightly-schemathesis` | OpenAPI contract fuzzing (schemathesis) ប្រឆាំងនឹង 67router ដែលកំពុងរត់ផ្ទាល់ ដោយប្រើ `docs/openapi.yaml` — បង្ហាញការរំលោភ spec / 500 ដែលមិនបានដោះស្រាយ (Fase 8 B.4) | **ប្រឹក្សា** |
+| `nightly-mutation`     | ពិន្ទុ mutation-testing របស់ Stryker លើ lane ឯកតារហ័ស — mutant ដែលរួចផុតបង្ហាញ assert ខ្សោយ                                                                          | **ប្រឹក្សា** |
+| `nightly-compat`       | ម៉ាទ្រីសភាពឆបគ្នារបស់ Node engine នៅទូទាំងជួរ `engines.node` ដែលគាំទ្រ                                                                                               | **ប្រឹក្សា** |
 
 Baseline ដំណើរការ (heap, TTFB, ពេលវេលា build) ត្រូវបានកត់ត្រា មិនមែនត្រូវបាន gate ទេ៖ មើល [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`)។
 
@@ -532,7 +532,7 @@ Job នេះមិនដែល push ទៅ `release/*` ទេ — មនុស�
 
 ## ឧបករណ៍សម្រាប់ភ្នាក់ងារ៖ LSP ក្នុងដំណើរការ (ជាជម្រើស)
 
-ក្រៅពីច្រកត្រួតពិនិត្យ CI OmniRoute ផ្តល់គ្រោង `agent-lsp` **ជាជម្រើស**
+ក្រៅពីច្រកត្រួតពិនិត្យ CI 67router ផ្តល់គ្រោង `agent-lsp` **ជាជម្រើស**
 (`.mcp.json` កម្រិតគម្រោង, Fase 7 Task 15)។ បង្កើត `.mcp.json`
 ដើម្បីផ្តល់ម៉ាស៊ីនបម្រើភាសា TypeScript ឱ្យភ្នាក់ងារសរសេរកូដ ដើម្បីឱ្យពួកវាអាចដោះស្រាយសញ្ញាសម្គាល់ /
 ការវិនិច្ឆ័យ **មុនពេល** សរសេរកូដ — ជាដៃគូពិនិត្យការចងក្រងមុនពេលអះអាងសម្រាប់

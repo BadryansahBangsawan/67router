@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute memisahkan **penemuan CLI**, **Agent Client Protocol native**, dan
+67router memisahkan **penemuan CLI**, **Agent Client Protocol native**, dan
 **adaptor stdio lama**. Menemukan biner yang terinstal tidak membuktikan
 autentikasi, kompatibilitas model, atau kesiapannya untuk menangani prompt.
 
@@ -121,5 +121,3 @@ secara terpisah di environment target.
 - [Protokol agen](./AGENT_PROTOCOLS_GUIDE.md)
 - [Kontrak peluncuran CLI](../guides/CLI-LAUNCH-CONTRACTS.md)
 - [Alat CLI](../reference/CLI-TOOLS.md)
-- [Server A2A](./A2A-SERVER.md)
-- [Agen cloud](./CLOUD_AGENT.md)

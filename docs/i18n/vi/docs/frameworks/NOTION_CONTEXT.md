@@ -11,11 +11,11 @@
 
 ## Đây là gì
 
-OmniRoute có thể kết nối với một không gian làm việc **Notion** làm **nguồn ngữ cảnh** — một
+67router có thể kết nối với một không gian làm việc **Notion** làm **nguồn ngữ cảnh** — một
 cơ sở tri thức có thể đọc/ghi mà các tác tử truy cập thông qua máy chủ MCP tích hợp sẵn. Sau khi
 token tích hợp Notion được cấu hình, các công cụ MCP cho phép LLM tìm kiếm các trang và cơ sở dữ liệu,
 đọc nội dung trang và cây khối, truy vấn cơ sở dữ liệu bằng bộ lọc/cách sắp xếp, cũng như nối thêm các
-khối mới — tất cả đều được ủy quyền thông qua OmniRoute (với cơ chế thử lại, thời gian chờ và phân loại lỗi)
+khối mới — tất cả đều được ủy quyền thông qua 67router (với cơ chế thử lại, thời gian chờ và phân loại lỗi)
 để mô hình không bao giờ truy cập trực tiếp API Notion.
 
 Tích hợp này là một lớp bọc mỏng, được gia cố trên API REST chính thức của Notion
@@ -40,7 +40,7 @@ bảng SQLite `key_value` (không gian tên `notion`, khóa `integration_token`)
 > [!NOTE]
 > Token là một **token tích hợp nội bộ của Notion**. Tạo một tích hợp tại
 > <https://www.notion.com/my-integrations>, sau đó chia sẻ các trang/cơ sở dữ liệu mà bạn muốn
-> OmniRoute truy cập với tích hợp đó (mô hình quyền của Notion dựa trên việc chia sẻ,
+> 67router truy cập với tích hợp đó (mô hình quyền của Notion dựa trên việc chia sẻ,
 > không áp dụng cho toàn bộ không gian làm việc).
 
 ### Cấu hình qua REST
@@ -59,7 +59,7 @@ curl -X DELETE http://localhost:20128/api/settings/notion
 ```
 
 Cả ba phương thức đều yêu cầu xác thực bảng điều khiển (`isAuthenticated`). Khi gọi `POST`,
-OmniRoute lưu token và ngay lập tức chạy một tìm kiếm thử với 1 kết quả; nếu Notion
+67router lưu token và ngay lập tức chạy một tìm kiếm thử với 1 kết quả; nếu Notion
 trả về một đối tượng lỗi, token sẽ bị xóa và lệnh gọi thất bại với `400`.
 
 ## Công cụ MCP (6)

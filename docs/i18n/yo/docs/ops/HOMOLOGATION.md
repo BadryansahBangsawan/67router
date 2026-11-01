@@ -4,7 +4,7 @@
 
 ---
 
-Ìfàṣẹ̀sí E2E ní àyíká gidi fún ìmúṣiṣẹ́ OmniRoute tí ń ṣiṣẹ́ lórí VPS homologation
+Ìfàṣẹ̀sí E2E ní àyíká gidi fún ìmúṣiṣẹ́ 67router tí ń ṣiṣẹ́ lórí VPS homologation
 (`HOMOLOG_BASE_URL`, àpẹẹrẹ `http://192.168.0.15:20128`). Àṣẹ kan ṣoṣo ni ó fi ìṣiṣẹ́ aládàáṣiṣẹ́ tí ń pèsè ẹ̀rí
 rọ́pò àtòjọ ìṣàyẹ̀wò release STOP #2 tí a máa ń ṣe lọ́wọ́.
 

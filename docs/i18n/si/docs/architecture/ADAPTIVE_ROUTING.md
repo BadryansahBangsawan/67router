@@ -4,18 +4,18 @@
 
 ---
 
-මෙම ලේඛනය OmniRoute වෙත එක් කරන ලද ප්රතිපෝෂණ-මෙහෙයවන අනුවර්තනීය මාර්ගගත කිරීමේ පදනම විස්තර කරයි. එය හිතාමතාම කුඩා පරාසයක තබා ඇත: එය ටයිප් කළ මාර්ගගත කිරීමේ ප්රතිඵල නාලිකාවක්, පවතින auto-combo ලකුණුකරණයට දත්ත සපයන මාර්ගගත තත්ත්ව සංඥාවක්, විකල්ප OpenTelemetry නිර්යාතකයක් සහ පැහැදිලි කිරීමේ හැකියාව සපයන අන්ත ලක්ෂ්යයක් හඳුන්වා දෙයි. එය පවතින ප්රත්යස්ථතා තොගය (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) **ප්රතිස්ථාපනය නොකරයි** — එයට අනුපූරක වේ.
+මෙම ලේඛනය 67router වෙත එක් කරන ලද ප්රතිපෝෂණ-මෙහෙයවන අනුවර්තනීය මාර්ගගත කිරීමේ පදනම විස්තර කරයි. එය හිතාමතාම කුඩා පරාසයක තබා ඇත: එය ටයිප් කළ මාර්ගගත කිරීමේ ප්රතිඵල නාලිකාවක්, පවතින auto-combo ලකුණුකරණයට දත්ත සපයන මාර්ගගත තත්ත්ව සංඥාවක්, විකල්ප OpenTelemetry නිර්යාතකයක් සහ පැහැදිලි කිරීමේ හැකියාව සපයන අන්ත ලක්ෂ්යයක් හඳුන්වා දෙයි. එය පවතින ප්රත්යස්ථතා තොගය (circuit breaker, connection cooldown, model lockout, health matrix, autopilot) **ප්රතිස්ථාපනය නොකරයි** — එයට අනුපූරක වේ.
 
 ## 1. වාස්තු විද්යාත්මක සන්දර්භය
 
-OmniRoute යනු **ඉල්ලීම් උණුසුම් මාර්ගයක්** සහ **පාලන/බුද්ධි තලයක්** සහිත දත්ත තලයකි. උණුසුම් මාර්ගය වේගවත්, මතක-කාර්යක්ෂම, අසමමුහුර්ත, ප්රත්යස්ථ සහ පුරෝකථනය කළ හැකි ලෙස පැවතිය යුතුය. ඇගයීම, තත්ත්ව ලකුණුකරණය, අත්හදා බැලීම් සහ ඓතිහාසික විශ්ලේෂණය පාලන තලයට අයත් වේ.
+67router යනු **ඉල්ලීම් උණුසුම් මාර්ගයක්** සහ **පාලන/බුද්ධි තලයක්** සහිත දත්ත තලයකි. උණුසුම් මාර්ගය වේගවත්, මතක-කාර්යක්ෂම, අසමමුහුර්ත, ප්රත්යස්ථ සහ පුරෝකථනය කළ හැකි ලෙස පැවතිය යුතුය. ඇගයීම, තත්ත්ව ලකුණුකරණය, අත්හදා බැලීම් සහ ඓතිහාසික විශ්ලේෂණය පාලන තලයට අයත් වේ.
 
 ```
 AI නියෝජිතයා / IDE
       │
       ▼
 ┌─────────────────────┐
-│    OmniRoute        │   දත්ත තලය (වේගවත්, සමමුහුර්ත, මතකය තුළ)
+│    67router        │   දත්ත තලය (වේගවත්, සමමුහුර්ත, මතකය තුළ)
 │  මාර්ගගත කිරීම / අසාර්ථකවීම් මාරුව │
 │  සෞඛ්යය / ආරක්ෂක සීමාව │
 │  හැඹිලිය / ප්රවාහනය  │
@@ -41,7 +41,6 @@ AI නියෝජිතයා / IDE
 | ඡායා ගමනාගමනය                             | `open-sse/services/combo/shadowRouting.ts`                                                           |
 | ආරක්ෂක සීමා                               | `src/lib/guardrails/` (පෙර/පසු hooks)                                                                |
 | නිශ්චිත හැඹිලිය                           | `src/lib/semanticCache.ts` (signature-පාදක)                                                          |
-| ඇගයුම්කාරක / ඇගයීම්-මෙහෙයවන මාර්ගගත කිරීම | `src/lib/evals/`, `open-sse/services/evalRouting.ts`                                                 |
 | Combo තීරණ පැහැදිලි කිරීමේ හැකියාව        | `open-sse/services/combo/decisionTrace.ts`                                                           |
 | උපකරණ පුවරුවේ තත්ය කාලීන සිදුවීම්         | `src/lib/events/eventBus.ts` (UI දැනුම්දීම් නාලිකාව, `unknown` payloads, ඇතුළත් කිරීම් 100ක ඉතිහාසය) |
 
@@ -221,7 +220,7 @@ OTel sink මඟින් GenAI/OmniRoute span attributes ලෙස නිර්
   `@opentelemetry/*` SDK නොවේ).
 - Spans, GenAI semantic conventions (`gen_ai.provider.name`,
   `gen_ai.request.model`, `gen_ai.usage.input_tokens/output_tokens`,
-  `gen_ai.completion.finish_reason`, `gen_ai.system`) සහ OmniRoute routing
+  `gen_ai.completion.finish_reason`, `gen_ai.system`) සහ 67router routing
   attributes (ප්රතිඵලය, තත්ත්වය, ttft, නැවත උත්සාහ, fallback) අනුගමනය කරයි.
 - `record()` සිදු කරන්නේ සීමිත buffer එකකට පෝලිම්ගත කිරීම පමණි (O(1)); පසුබිම් timer එකක්
   `POST {endpoint}/v1/traces` හරහා අසමමුහුර්තව flush කරයි. අධිභාරයක් යටතේ
@@ -243,7 +242,7 @@ OTel sink මඟින් GenAI/OmniRoute span attributes ලෙස නිර්
 
 ## 6. ඇගයීම් තල ඒකාබද්ධ කිරීම (Future AGI සූදානම)
 
-OmniRoute විසින් Future AGI (හෝ ඕනෑම evaluator එකක්) **විභව
+67router විසින් Future AGI (හෝ ඕනෑම evaluator එකක්) **විභව
 බුද්ධිමය/ඇගයීම් backend එකක් ලෙස සලකනු ලබන අතර, පරායත්තතාවක් ලෙස නොසලකයි**. ඒ සඳහා වන සන්ධි:
 
 - `RoutingEventSink` එකකට events අසමමුහුර්තව evaluator එකක් වෙත යොමු කළ හැක.
@@ -252,8 +251,6 @@ OmniRoute විසින් Future AGI (හෝ ඕනෑම evaluator එකක
 - අනාගත `Evaluator` එකක් (deterministic, local judge, HTTP, WASM) විසින්
   events/traces පරිභෝජනය කර, එම
   `getQualityScore`/quality-factor මාර්ගයටම සපයන `QualityScore` එකක් ආපසු ලබා දෙනු ඇත.
-- දැනට පවතින eval-මඟින් මෙහෙයවන routing (`open-sse/services/evalRouting.ts`) සක්රීය කළ විට,
-  `eval_runs` pass-rates අනුව combo targets දැනටමත් නැවත අනුපිළිවෙළගස්වයි.
 
 කිසිදු evaluation එකක් request path එක මත සමමුහුර්තව ක්රියාත්මක නොවන අතර,
 evaluator එක නොමැතිවද gateway එක සම්පූර්ණයෙන් ක්රියාත්මක වේ.

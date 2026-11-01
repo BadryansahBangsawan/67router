@@ -1,8 +1,6 @@
 import { fisherYatesShuffle, getNextFromDeck } from "../../../src/shared/utils/shuffleDeck";
 import { generateRoutingHints } from "../manifestAdapter";
-import { resolveMaxConcurrentByConnection } from "./concurrencyCaps.ts";
 import { sortTargetsByContextSize } from "./comboStructure.ts";
-import { selectQuotaShareTarget } from "./quotaShareStrategy.ts";
 import {
   applyPromptCacheAffinity,
   expandPromptCacheAffinityTargets,
@@ -27,10 +25,9 @@ import type { ComboLike, ComboLogger, ResolvedComboTarget } from "./types.ts";
  * Result of {@link applyStrategyOrdering}.
  *
  * `quotaShareRelease` carries the idempotent release for the in-flight slot that
- * quota-share and quota-weighted reserve for their winner. quota-share reserves
- * inside selectQuotaShareTarget; quota-weighted reserves inside the orderer so
- * two in-process draws cannot both see inflight=0. Stickiness may then move [0];
- * resolveComboTargetPipeline transfers the slot for both strategies. The caller
+ * quota-weighted reserves for its winner, inside the orderer so two in-process
+ * draws cannot both see inflight=0. Stickiness may then move [0];
+ * resolveComboTargetPipeline transfers the slot. The caller
  * MUST invoke the callback exactly once when the request settles — dropping it
  * leaks the counter and degenerates later draws toward whoever looks idle.
  */
@@ -238,25 +235,6 @@ async function orderByQuotaWeighted(
   return { orderedTargets: nextTargets, quotaShareRelease };
 }
 
-async function orderByQuotaShare(
-  orderedTargets: ResolvedComboTarget[],
-  { combo, body, log }: ApplyStrategyOrderingDeps
-): Promise<ApplyStrategyOrderingResult> {
-  // Internal quota-share combos (qtSd/): delegate to the dedicated module (DRR +
-  // P2C in-flight + per-model bucket gating + per-connection concurrency gating).
-  const qsModel =
-    typeof body?.model === "string" ? body.model : (orderedTargets[0]?.modelStr ?? "");
-  const qsMaxConcurrent = await resolveMaxConcurrentByConnection(orderedTargets);
-  const qsSelection = selectQuotaShareTarget(orderedTargets, combo.name, qsModel, Date.now(), {
-    maxConcurrentByConnection: qsMaxConcurrent,
-  });
-  const nextTargets = qsSelection.orderedTargets;
-  log.info("COMBO", `Quota-share ordering: ${describeFirstTarget(nextTargets)} selected (DRR+P2C)`);
-  // #11371: the reservation made inside selectQuotaShareTarget must outlive this
-  // call — hand the release to the host so it can fire it when the request settles.
-  return { orderedTargets: nextTargets, quotaShareRelease: qsSelection.decrementInflight };
-}
-
 /**
  * One orderer per {@link StrategyOrderingKind} that reorders targets. `declared` (no
  * reorder) and `auto` (resolveAutoStrategyOrder) are intentionally absent; the exhaustive
@@ -333,7 +311,6 @@ const STRATEGY_ORDERERS: Record<
     return orderedOnly(nextTargets);
   },
   "quota-weighted": orderByQuotaWeighted,
-  "quota-share": orderByQuotaShare,
 };
 
 /**

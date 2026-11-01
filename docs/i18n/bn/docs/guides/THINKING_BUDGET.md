@@ -8,11 +8,11 @@
 > **API:** `GET` / `PUT` `/api/settings/thinking-budget`  
 > **সোর্স:** `open-sse/services/thinkingBudget.ts`
 
-Thinking Budget নির্ধারণ করে যে OmniRoute প্রোভাইডারদের কাছে পাঠানোর সময় **ক্লায়েন্টের thinking/reasoning প্যারামিটার পুনর্লিখন করবে কি না**। এটি compression, routing বা prompt cache চালু কিংবা বন্ধ করে **না**।
+Thinking Budget নির্ধারণ করে যে 67router প্রোভাইডারদের কাছে পাঠানোর সময় **ক্লায়েন্টের thinking/reasoning প্যারামিটার পুনর্লিখন করবে কি না**। এটি compression, routing বা prompt cache চালু কিংবা বন্ধ করে **না**।
 
 ## মোডসমূহ
 
-| মোড                        | OmniRoute যা করে                                                                                                               | কখন ব্যবহার করবেন                                                                                                                                                                       |
+| মোড                        | 67router যা করে                                                                                                                | কখন ব্যবহার করবেন                                                                                                                                                                       |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **`passthrough`** (ডিফল্ট) | ক্লায়েন্টের ফিল্ডগুলো অপরিবর্তিত রাখে (`reasoning`, `reasoning_effort`, Claude `thinking`, Gemini `thinking_config` ইত্যাদি)। | **Codex / Desktop / এমন যেকোনো ক্লায়েন্ট, যার effort + reasoning summary নিয়ন্ত্রণ করা উচিত।** ক্লায়েন্ট `reasoning.summary` অনুরোধ করলে দৃশ্যমান thinking panel-এর জন্য এটি আবশ্যক। |
 | **`auto`**                 | upstream-এ পাঠানোর আগে request body থেকে thinking/reasoning-এর **সব ফিল্ড সরিয়ে দেয়**।                                       | কেবল তখনই, যখন আপনি ইচ্ছাকৃতভাবে চান যে **প্রোভাইডার** ডিফল্ট মান নির্ধারণ করুক এবং আপনার client-controlled thinking-এর প্রয়োজন নেই। এটি **“স্বয়ংক্রিয়ভাবে thinking দেখানো” নয়**।   |
@@ -38,7 +38,7 @@ Thinking Budget নির্ধারণ করে যে OmniRoute প্রো
 | **Combo routing / fallbacks**              | আলাদা। প্রভাবিত হয় না।                                                                                                         |
 | **API-key token limits / cost budgets**    | আলাদা। প্রভাবিত হয় না।                                                                                                         |
 | **Reasoning replay cache**                 | কঠোর প্রোভাইডারগুলোর জন্য multi-turn re-inject (DeepSeek, Kimi, Qwen-thinking, …)। Desktop-এর “thinking দেখানো”-এর সমতুল্য নয়। |
-| **`encrypted_content` ডিক্রিপ্ট করা**      | **অসম্ভব।** OpenAI/Codex-এর private reasoning blob অস্বচ্ছ। OmniRoute কখনো এগুলো ডিক্রিপ্ট করে না (#7095 / #7176 / #7304)।      |
+| **`encrypted_content` ডিক্রিপ্ট করা**      | **অসম্ভব।** OpenAI/Codex-এর private reasoning blob অস্বচ্ছ। 67router কখনো এগুলো ডিক্রিপ্ট করে না (#7095 / #7176 / #7304)।       |
 
 ## দৃশ্যমান চিন্তা (Codex / Responses ক্লায়েন্ট)
 
@@ -51,7 +51,7 @@ Thinking Budget নির্ধারণ করে যে OmniRoute প্রো
 আপনি যদি শুধু “encrypted private reasoning” পান, তাহলে হয়:
 
 - mode ছিল **`auto`** (ক্লায়েন্টের অনুরোধ সরিয়ে দেওয়া হয়েছিল), অথবা
-- আপস্ট্রিম summary টেক্সট ছাড়াই `encrypted_content` ফেরত দিয়েছে (প্রোভাইডারের সীমাবদ্ধতা; OmniRoute কেবল একটি placeholder দেখাতে পারে, plaintext নয়)।
+- আপস্ট্রিম summary টেক্সট ছাড়াই `encrypted_content` ফেরত দিয়েছে (প্রোভাইডারের সীমাবদ্ধতা; 67router কেবল একটি placeholder দেখাতে পারে, plaintext নয়)।
 
 ## API উদাহরণ
 
@@ -71,7 +71,7 @@ Schema (`updateThinkingBudgetSchema`): `mode` ∈ `passthrough|auto|custom|adapt
 
 ### স্থায়িত্ব / পুনরায় চালু করা
 
-মানটি settings key `thinkingBudget`-এর অধীনে সংরক্ষিত হয় এবং process চালুর সময় hydrate করা হয় (`hydrateThinkingBudgetConfig`)। DB বা কিছু non-API পাথের মাধ্যমে পরিবর্তন করার পর, **OmniRoute process পুনরায় চালু করুন**, যাতে in-memory singleton ডিস্কের সঙ্গে মিলে যায়।
+মানটি settings key `thinkingBudget`-এর অধীনে সংরক্ষিত হয় এবং process চালুর সময় hydrate করা হয় (`hydrateThinkingBudgetConfig`)। DB বা কিছু non-API পাথের মাধ্যমে পরিবর্তন করার পর, **67router process পুনরায় চালু করুন**, যাতে in-memory singleton ডিস্কের সঙ্গে মিলে যায়।
 
 ## অপারেটর চেকলিস্ট
 

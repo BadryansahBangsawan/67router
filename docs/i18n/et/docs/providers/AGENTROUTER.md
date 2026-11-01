@@ -12,7 +12,7 @@ User-Agent, `anthropic-beta` lipud, Stainless SDK päised jne).
 
 ## Kiiralustus — kasutage natiivset `agentrouter` teenusepakkujat (soovitatav)
 
-Enamiku kasutajate jaoks **pole eriseadistust vaja**. OmniRoute sisaldab sisseehitatud
+Enamiku kasutajate jaoks **pole eriseadistust vaja**. 67router sisaldab sisseehitatud
 `agentrouter` teenusepakkujat, millesse on juba kaasatud täielik Claude Code'i võrgukuju (vt
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Selle kasutamiseks tehke järgmist:
 
@@ -34,7 +34,7 @@ komplekti alistamisel.
 
 ## Täpsem: ühenduse loomine Claude Code'iga ühilduva teenusepakkuja tüübi kaudu
 
-OmniRoute toetab AgentRouterit (ja sarnaseid vahendusteenuseid) ka **Claude Code'iga
+67router toetab AgentRouterit (ja sarnaseid vahendusteenuseid) ka **Claude Code'iga
 ühilduva** teenusepakkuja tüübi (`anthropic-compatible-cc-*`) kaudu, mis kasutab
 õige võrgukujuga Anthropic Messages API-t. Üldine
 `openai-compatible-chat` teenusepakkuja, mis osutab aadressile `https://agentrouter.org`,
@@ -47,14 +47,14 @@ Code'i omad.
 
 - AgentRouteri konto ja API-võti. Uued registreerujad saavad tasuta krediiti projekti
   [README](../README.md)-s oleva partnerlingi kaudu.
-- OmniRoute peab töötama nii, et funktsioonilipp `ENABLE_CC_COMPATIBLE_PROVIDER` oleks lubatud
+- 67router peab töötama nii, et funktsioonilipp `ENABLE_CC_COMPATIBLE_PROVIDER` oleks lubatud
   (vt allpool).
 
 ## 1. Lubage CC-ga ühilduva teenusepakkuja tüüp
 
 Claude Code'iga ühilduv teenusepakkuja tüüp on funktsioonilipu taga, kuna see
 saadab liiklust, mis jäljendab täpselt ametlikku Claude Code'i klienti. Selle lubamiseks
-määrake enne OmniRoute'i käivitamist keskkonnamuutuja:
+määrake enne 67router'i käivitamist keskkonnamuutuja:
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

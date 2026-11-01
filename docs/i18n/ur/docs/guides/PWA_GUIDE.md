@@ -4,11 +4,11 @@
 
 ---
 
-OmniRoute ایک مکمل طور پر قابلِ تنصیب Progressive Web App کے طور پر فراہم کیا جاتا ہے۔ جب آپ کسی بھی موبائل براؤزر — Android (Chrome) یا iOS (Safari) — سے ڈیش بورڈ تک رسائی حاصل کرتے ہیں، تو آپ "ہوم اسکرین میں شامل کریں" کا انتخاب کر کے کسی app store کی ضرورت کے بغیر مقامی ایپ جیسا تجربہ حاصل کر سکتے ہیں۔
+67router ایک مکمل طور پر قابلِ تنصیب Progressive Web App کے طور پر فراہم کیا جاتا ہے۔ جب آپ کسی بھی موبائل براؤزر — Android (Chrome) یا iOS (Safari) — سے ڈیش بورڈ تک رسائی حاصل کرتے ہیں، تو آپ "ہوم اسکرین میں شامل کریں" کا انتخاب کر کے کسی app store کی ضرورت کے بغیر مقامی ایپ جیسا تجربہ حاصل کر سکتے ہیں۔
 
 ## PWA کیا ہے؟
 
-Progressive Web App، OmniRoute ویب ڈیش بورڈ کو ایک ایسی چیز میں تبدیل کر دیتا ہے جو مقامی موبائل ایپ جیسی نظر آتی اور محسوس ہوتی ہے۔ تنصیب کے بعد، یہ:
+Progressive Web App، 67router ویب ڈیش بورڈ کو ایک ایسی چیز میں تبدیل کر دیتا ہے جو مقامی موبائل ایپ جیسی نظر آتی اور محسوس ہوتی ہے۔ تنصیب کے بعد، یہ:
 
 - اپنے آئیکن کے ساتھ آپ کی ہوم اسکرین سے شروع ہوتی ہے
 - پوری اسکرین میں کھلتی ہے — براؤزر کا address bar یا tab UI موجود نہیں ہوتا
@@ -20,26 +20,26 @@ Progressive Web App، OmniRoute ویب ڈیش بورڈ کو ایک ایسی چی
 
 ### Android (Chrome)
 
-1. Chrome میں OmniRoute ڈیش بورڈ کھولیں: `http://YOUR_IP:20128`
-2. Chrome خودکار طور پر **"OmniRoute کو ہوم اسکرین میں شامل کریں"** کا بینر دکھائے گا، یا:
+1. Chrome میں 67router ڈیش بورڈ کھولیں: `http://YOUR_IP:20128`
+2. Chrome خودکار طور پر **"67router کو ہوم اسکرین میں شامل کریں"** کا بینر دکھائے گا، یا:
    - **⋮** مینیو (تین نقطے) پر ٹیپ کریں → **"ہوم اسکرین میں شامل کریں"** یا **"ایپ انسٹال کریں"**
 3. اشارے کی تصدیق کریں
-4. OmniRoute آپ کی ہوم اسکرین پر ایک علیحدہ ایپ کے طور پر ظاہر ہو جائے گا
+4. 67router آپ کی ہوم اسکرین پر ایک علیحدہ ایپ کے طور پر ظاہر ہو جائے گا
 
 ### iOS (Safari)
 
-1. Safari میں OmniRoute ڈیش بورڈ کھولیں: `http://YOUR_IP:20128`
+1. Safari میں 67router ڈیش بورڈ کھولیں: `http://YOUR_IP:20128`
 2. **شیئر** بٹن (تیر والا خانہ) پر ٹیپ کریں
 3. نیچے اسکرول کریں اور **"ہوم اسکرین میں شامل کریں"** پر ٹیپ کریں
-4. اسے نام دیں (طے شدہ نام "OmniRoute" ہے) اور **شامل کریں** پر ٹیپ کریں
-5. OmniRoute ایپ آئیکن کے ساتھ آپ کی ہوم اسکرین پر ظاہر ہو جائے گا
+4. اسے نام دیں (طے شدہ نام "67router" ہے) اور **شامل کریں** پر ٹیپ کریں
+5. 67router ایپ آئیکن کے ساتھ آپ کی ہوم اسکرین پر ظاہر ہو جائے گا
 
 ### ڈیسک ٹاپ (Chrome / Edge)
 
-1. OmniRoute ڈیش بورڈ کھولیں
-2. address bar میں **تنصیب کے آئیکن** پر کلک کریں (یا ⋮ → "OmniRoute انسٹال کریں...")
+1. 67router ڈیش بورڈ کھولیں
+2. address bar میں **تنصیب کے آئیکن** پر کلک کریں (یا ⋮ → "67router انسٹال کریں...")
 3. اشارے کی تصدیق کریں
-4. OmniRoute ایک علیحدہ ونڈو کے طور پر کھلے گا — کوئی tabs یا address bar نہیں ہوگا
+4. 67router ایک علیحدہ ونڈو کے طور پر کھلے گا — کوئی tabs یا address bar نہیں ہوگا
 
 ## خصوصیات
 
@@ -49,15 +49,15 @@ manifest کو `display: "fullscreen"` کے ساتھ ترتیب دیا گیا ہ�
 
 ### آف لائن سپورٹ
 
-OmniRoute میں ایک service worker (`sw.js`) شامل ہے جو ذہین caching فراہم کرتا ہے:
+67router میں ایک service worker (`sw.js`) شامل ہے جو ذہین caching فراہم کرتا ہے:
 
-| Asset کی قسم                                               | حکمتِ عملی                          | طرزِ عمل                                                                                                       |
-| ---------------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| **App Shell**                                              | پہلے cache                          | `/`، `/offline`، manifest، اور icons تنصیب کے وقت پہلے سے cache کیے جاتے ہیں                                   |
-| **Static assets** (CSS, JS, images, fonts)                 | cache fallback کے ساتھ پہلے network | تازہ مواد network سے حاصل کرتا ہے؛ آف لائن ہونے پر cache استعمال کرتا ہے                                       |
-| **Next.js bundles** (`/_next/`)                            | cache update کے ساتھ پہلے network   | network سے حاصل کر کے cache کو update کرتا ہے؛ آف لائن ہونے پر cached version فراہم کرتا ہے                    |
-| **Navigation requests**                                    | Bypass (کبھی intercept نہیں ہوتے)   | HTTP/3→HTTP/2 fallback براؤزر کے زیرِ اختیار ہوتا ہے؛ ناکارہ QUIC socket کو `Response.error()` نہیں بننا چاہیے |
-| **API / dashboard routes** (`/api/`, `/a2a`, `/dashboard`) | Bypass (کبھی cache نہیں ہوتے)       | ہمیشہ براہِ راست server تک جاتے ہیں — service worker کبھی انہیں intercept نہیں کرتا                            |
+| Asset کی قسم                                       | حکمتِ عملی                          | طرزِ عمل                                                                                                       |
+| -------------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **App Shell**                                      | پہلے cache                          | `/`، `/offline`، manifest، اور icons تنصیب کے وقت پہلے سے cache کیے جاتے ہیں                                   |
+| **Static assets** (CSS, JS, images, fonts)         | cache fallback کے ساتھ پہلے network | تازہ مواد network سے حاصل کرتا ہے؛ آف لائن ہونے پر cache استعمال کرتا ہے                                       |
+| **Next.js bundles** (`/_next/`)                    | cache update کے ساتھ پہلے network   | network سے حاصل کر کے cache کو update کرتا ہے؛ آف لائن ہونے پر cached version فراہم کرتا ہے                    |
+| **Navigation requests**                            | Bypass (کبھی intercept نہیں ہوتے)   | HTTP/3→HTTP/2 fallback براؤزر کے زیرِ اختیار ہوتا ہے؛ ناکارہ QUIC socket کو `Response.error()` نہیں بننا چاہیے |
+| **API / dashboard routes** (`/api/`, `/dashboard`) | Bypass (کبھی cache نہیں ہوتے)       | ہمیشہ براہِ راست server تک جاتے ہیں — service worker کبھی انہیں intercept نہیں کرتا                            |
 
 ### آف لائن صفحہ
 
@@ -70,7 +70,7 @@ OmniRoute میں ایک service worker (`sw.js`) شامل ہے جو ذہین cac
 
 ### ایپ آئیکنز
 
-OmniRoute ہر platform کے لیے موزوں بنائے گئے icons فراہم کرتا ہے:
+67router ہر platform کے لیے موزوں بنائے گئے icons فراہم کرتا ہے:
 
 | File                   | Size             | استعمال کرنے والا                     |
 | ---------------------- | ---------------- | ------------------------------------- |
@@ -93,9 +93,9 @@ Next.js کے ذریعے `src/app/manifest.ts` سے تیار کیا جاتا ہے
 
 ```json
 {
-  "name": "OmniRoute",
-  "short_name": "OmniRoute",
-  "description": "OmniRoute is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
+  "name": "67router",
+  "short_name": "67router",
+  "description": "67router is an AI gateway for multi-provider LLMs. One endpoint for all your AI providers.",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
@@ -145,9 +145,9 @@ Next.js کے ذریعے `src/app/manifest.ts` سے تیار کیا جاتا ہے
 
 ## Termux (Android) کے ساتھ استعمال
 
-Android پر Termux کے ذریعے OmniRoute چلاتے وقت، PWA بغیر کسی رکاوٹ کے کام کرتا ہے:
+Android پر Termux کے ذریعے 67router چلاتے وقت، PWA بغیر کسی رکاوٹ کے کام کرتا ہے:
 
-1. Termux میں OmniRoute شروع کریں: `npx omniroute`
+1. Termux میں 67router شروع کریں: `npx omniroute`
 2. اسی فون پر Chrome کھولیں: `http://localhost:20128`
 3. "ہوم اسکرین میں شامل کریں" کے ذریعے PWA انسٹال کریں
 4. PWA مقامی Termux سرور سے منسلک ہو جاتا ہے — ہر چیز اسی ڈیوائس پر چلتی ہے
@@ -156,7 +156,7 @@ Android پر Termux کے ذریعے OmniRoute چلاتے وقت، PWA بغیر �
 
 ## دیگر ڈیوائسز سے استعمال
 
-PWA کو کسی بھی ایسی ڈیوائس پر انسٹال کریں جسے براؤزر کے ذریعے آپ کے OmniRoute سرور تک رسائی حاصل ہو:
+PWA کو کسی بھی ایسی ڈیوائس پر انسٹال کریں جسے براؤزر کے ذریعے آپ کے 67router سرور تک رسائی حاصل ہو:
 
 - **دوسرا فون/ٹیبلٹ**: `http://PHONE_IP:20128` پر جائیں اور PWA انسٹال کریں
 - **لیپ ٹاپ**: Chrome/Edge کھولیں اور اسے desktop PWA کے طور پر انسٹال کریں

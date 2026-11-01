@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Azərbaycan dili)
+# Providers Guide: Connect AI Models to 67router (Azərbaycan dili)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Qısa xülasə**: Provayder AI xidmətinə (OpenAI, Anthropic, Google kimi) bağlantıdır. OmniRoute-dan istifadə etmək üçün ən azı bir provayderə ehtiyacınız var.
+> **Qısa xülasə**: Provayder AI xidmətinə (OpenAI, Anthropic, Google kimi) bağlantıdır. 67router-dan istifadə etmək üçün ən azı bir provayderə ehtiyacınız var.
 
 ---
 
 ## Provayder nədir?
 
-Provayderi **mobil operator** kimi düşünün. Zəng etmək üçün mobil operatora ehtiyacınız olduğu kimi, AI modellərindən istifadə etmək üçün də AI provayderinə ehtiyacınız var. OmniRoute **bütün operatorlarla** işləyən telefon kimidir — onlar arasında avtomatik keçid edə bilərsiniz.
+Provayderi **mobil operator** kimi düşünün. Zəng etmək üçün mobil operatora ehtiyacınız olduğu kimi, AI modellərindən istifadə etmək üçün də AI provayderinə ehtiyacınız var. 67router **bütün operatorlarla** işləyən telefon kimidir — onlar arasında avtomatik keçid edə bilərsiniz.
 
 ### Provayder növləri
 
@@ -31,8 +31,8 @@ Provayderi **mobil operator** kimi düşünün. Zəng etmək üçün mobil opera
 ### İlk işə salınma zamanı pulsuz provayderlərin istəyə bağlı quraşdırılması
 
 İlk işə salınma sehrbazı açıq şəkildə **Pulsuz provayderləri quraşdırın** kartını təklif edir. O, cari
-uyğun siyahını OmniRoute-un autentifikasiya tələb etməyən provayder reyestrindən əldə edir və təsdiqləməzdən əvvəl hər bir
-provayderi nəzərdən keçirməyə və seçimi ləğv etməyə imkan verir. OmniRoute əvvəlcədən üçüncü tərəfin şərtlərini, məxfilik siyasətini, əlçatanlığını və sorğu limitlərini nəzərdən keçirə bilməyiniz üçün provayderin xəbərdarlıq bildirişini və saytına keçidi göstərir.
+uyğun siyahını 67router-un autentifikasiya tələb etməyən provayder reyestrindən əldə edir və təsdiqləməzdən əvvəl hər bir
+provayderi nəzərdən keçirməyə və seçimi ləğv etməyə imkan verir. 67router əvvəlcədən üçüncü tərəfin şərtlərini, məxfilik siyasətini, əlçatanlığını və sorğu limitlərini nəzərdən keçirə bilməyiniz üçün provayderin xəbərdarlıq bildirişini və saytına keçidi göstərir.
 
 Bu əməliyyat istəyə bağlıdır: sehrbazın tamamlanması heç vaxt səssizcə pulsuz provayder bağlantıları yaratmır.
 O, yalnız hələ mövcud olmayan provayderləri yaradır, fərdiləşdirilmiş mövcud bağlantılara
@@ -79,7 +79,7 @@ təhlükəsiz şəkildə yenidən sınaya bilərsiniz.
 
 ### D variantı: Lokal MLX modelləri (Apple Silicon)
 
-Vahid yaddaşa malik Apple Silicon Mac kompüterləri üçün OmniRoute, `mlx-lm.server` vasitəsilə işləyən lokal MLX modellərinə adi OpenAI-uyğun lokal provayderlər kimi qoşulmanı dəstəkləyir.
+Vahid yaddaşa malik Apple Silicon Mac kompüterləri üçün 67router, `mlx-lm.server` vasitəsilə işləyən lokal MLX modellərinə adi OpenAI-uyğun lokal provayderlər kimi qoşulmanı dəstəkləyir.
 
 #### İlkin tələblər
 
@@ -109,14 +109,14 @@ Vahid yaddaşa malik Apple Silicon Mac kompüterləri üçün OmniRoute, `mlx-lm
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **OmniRoute idarəetmə panelində qoşulun**:
+3. **67router idarəetmə panelində qoşulun**:
    - **Provayderlər** → **Provayder əlavə edin** bölməsinə keçin
    - **MLX Gemma 26B** və ya **MLX Qwen 3.8 27B** seçin
    - **Qoşulun** düyməsinə klikləyin (API açarı tələb olunmur)
 
 4. **OpenCode ilə istifadə edin**:
    ```bash
-   # OpenCode-u OmniRoute-dan istifadə etmək üçün konfiqurasiya edin
+   # OpenCode-u 67router-dan istifadə etmək üçün konfiqurasiya edin
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -138,7 +138,7 @@ Bunu əl ilə idarə etməlisiniz:
 - Hər ikisini ayrı-ayrı maşınlarda işlədin və ya
 - Digərini başlatmazdan əvvəl birini dayandırın
 
-OmniRoute MLX server proseslərini avtomatik idarə etmir — o, yalnız sorğuları konfiqurasiya etdiyiniz OpenAI-uyğun son nöqtələrə yönləndirir.
+67router MLX server proseslərini avtomatik idarə etmir — o, yalnız sorğuları konfiqurasiya etdiyiniz OpenAI-uyğun son nöqtələrə yönləndirir.
 
 #### Alət çağırışı dəstəyi
 
@@ -157,13 +157,13 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 
 #### Problemlərin aradan qaldırılması
 
-| Problem                  | Həll                                                                                             |
-| ------------------------ | ------------------------------------------------------------------------------------------------ |
-| Server işə düşmür        | `uv run mlx_lm.server --help` əmrini yoxlayın və model ID-lərini təsdiqləyin                     |
-| Yaddaş çatışmazlığı      | Yalnız bir modelin işlədiyinə əmin olun; digər tətbiqləri bağlayın; Activity Monitor-u yoxlayın  |
-| Qoşulmadan imtina edilir | Serverin düzgün portda (11435/11436) işlədiyini yoxlayın                                         |
-| Cavablar yavaşdır        | İlk sorğu modeli yaddaşa yükləyir (~30-60s); sonrakı sorğular sürətli olur                       |
-| Alət çağırışı uğursuzdur | Modelin alətləri dəstəklədiyinə əmin olun; tərcümə xətaları üçün OmniRoute jurnallarını yoxlayın |
+| Problem                  | Həll                                                                                            |
+| ------------------------ | ----------------------------------------------------------------------------------------------- |
+| Server işə düşmür        | `uv run mlx_lm.server --help` əmrini yoxlayın və model ID-lərini təsdiqləyin                    |
+| Yaddaş çatışmazlığı      | Yalnız bir modelin işlədiyinə əmin olun; digər tətbiqləri bağlayın; Activity Monitor-u yoxlayın |
+| Qoşulmadan imtina edilir | Serverin düzgün portda (11435/11436) işlədiyini yoxlayın                                        |
+| Cavablar yavaşdır        | İlk sorğu modeli yaddaşa yükləyir (~30-60s); sonrakı sorğular sürətli olur                      |
+| Alət çağırışı uğursuzdur | Modelin alətləri dəstəklədiyinə əmin olun; tərcümə xətaları üçün 67router jurnallarını yoxlayın |
 
 ---
 
@@ -235,12 +235,12 @@ Provayderiniz artıq qoşulub. Ondan `model: "auto"` ilə istifadə edə və ya 
 
 ## Bir Neçə Provayderdən İstifadə
 
-OmniRoute **bir neçə provayderlə** ən yaxşı şəkildə işləyir. Bu, sizə aşağıdakı imkanları verir:
+67router **bir neçə provayderlə** ən yaxşı şəkildə işləyir. Bu, sizə aşağıdakı imkanları verir:
 
-- **Avtomatik ehtiyat keçid** — Bir provayder uğursuz olarsa, OmniRoute növbəti provayderi sınayır
-- **Xərc optimallaşdırması** — OmniRoute hər sorğu üçün ən ucuz provayderi seçir
-- **Sürət optimallaşdırması** — OmniRoute hər sorğu üçün ən sürətli provayderi seçir
-- **Keyfiyyət optimallaşdırması** — OmniRoute hər tapşırıq üçün ən yaxşı provayderi seçir
+- **Avtomatik ehtiyat keçid** — Bir provayder uğursuz olarsa, 67router növbəti provayderi sınayır
+- **Xərc optimallaşdırması** — 67router hər sorğu üçün ən ucuz provayderi seçir
+- **Sürət optimallaşdırması** — 67router hər sorğu üçün ən sürətli provayderi seçir
+- **Keyfiyyət optimallaşdırması** — 67router hər tapşırıq üçün ən yaxşı provayderi seçir
 
 ### Tövsiyə Olunan Quraşdırma
 
@@ -250,7 +250,7 @@ OmniRoute **bir neçə provayderlə** ən yaxşı şəkildə işləyir. Bu, siz�
 2. **Bir sürətli provayder** (Groq, Cerebras) — Sürətli cavablar üçün
 3. **Bir yüksək keyfiyyətli provayder** (OpenAI, Anthropic, Google) — Mürəkkəb tapşırıqlar üçün
 
-Sonra `model: "auto"` parametrindən istifadə edin və OmniRoute hər sorğu üçün ən uyğun provayderi avtomatik seçəcək.
+Sonra `model: "auto"` parametrindən istifadə edin və 67router hər sorğu üçün ən uyğun provayderi avtomatik seçəcək.
 
 ---
 
@@ -259,25 +259,25 @@ Sonra `model: "auto"` parametrindən istifadə edin və OmniRoute hər sorğu ü
 ### OpenAI
 
 1. API açarı əldə edin: https://platform.openai.com/api-keys
-2. OmniRoute-da: Provayderlər → Provayder əlavə et → OpenAI
+2. 67router-da: Provayderlər → Provayder əlavə et → OpenAI
 3. API açarını daxil edin → Qoşul
 
 ### Anthropic
 
 1. API açarı əldə edin: https://console.anthropic.com/
-2. OmniRoute-da: Provayderlər → Provayder əlavə et → Anthropic
+2. 67router-da: Provayderlər → Provayder əlavə et → Anthropic
 3. API açarını daxil edin → Qoşul
 
 ### Google (Gemini)
 
 1. API açarı əldə edin: https://aistudio.google.com/apikey
-2. OmniRoute-da: Provayderlər → Provayder əlavə et → Gemini
+2. 67router-da: Provayderlər → Provayder əlavə et → Gemini
 3. API açarını daxil edin → Qoşul
 
 ### DeepSeek
 
 1. API açarı əldə edin: https://platform.deepseek.com/
-2. OmniRoute-da: Provayderlər → Provayder əlavə et → DeepSeek
+2. 67router-da: Provayderlər → Provayder əlavə et → DeepSeek
 3. API açarını daxil edin → Qoşul
 
 ### Qoder: etimad məlumatlarının ötürülmə üsulunu seçin
@@ -285,12 +285,12 @@ Sonra `model: "auto"` parametrindən istifadə edin və OmniRoute hər sorğu ü
 Qoder etimad məlumatları tələb edir. Onun iki ötürülmə üsulu fərqli imkanlara malikdir; yalnız model adı
 konkret bağlantının nə edə biləcəyini müəyyən etmir.
 
-| Etimad məlumatı                          | OmniRoute ötürülmə üsulu                    | Çağıran tərəfin alət çağırışı                           | Axın                                                                 |
-| ---------------------------------------- | ------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------- |
-| `pt-` ilə başlayan PAT                   | OmniRoute hostunda lokal `qodercli` prosesi | Dəstəklənmir                                            | Buferlənmiş: SSE yalnız CLI tam cavabı qaytardıqdan sonra göndərilir |
-| PAT olmayan giriş tokeni və ya API açarı | DashScope OpenAI-uyğun HTTP son nöqtəsi     | Yuxarı səviyyəli modeldən/açardan asılı olaraq ötürülür | Yuxarı səviyyəli HTTP/SSE yolu                                       |
+| Etimad məlumatı                          | 67router ötürülmə üsulu                    | Çağıran tərəfin alət çağırışı                           | Axın                                                                 |
+| ---------------------------------------- | ------------------------------------------ | ------------------------------------------------------- | -------------------------------------------------------------------- |
+| `pt-` ilə başlayan PAT                   | 67router hostunda lokal `qodercli` prosesi | Dəstəklənmir                                            | Buferlənmiş: SSE yalnız CLI tam cavabı qaytardıqdan sonra göndərilir |
+| PAT olmayan giriş tokeni və ya API açarı | DashScope OpenAI-uyğun HTTP son nöqtəsi    | Yuxarı səviyyəli modeldən/açardan asılı olaraq ötürülür | Yuxarı səviyyəli HTTP/SSE yolu                                       |
 
-PAT üçün Qoder CLI-ni OmniRoute ilə eyni hostda və ya konteynerdə quraşdırın. İcra edilə bilən fayl
+PAT üçün Qoder CLI-ni 67router ilə eyni hostda və ya konteynerdə quraşdırın. İcra edilə bilən fayl
 `qodercli` kimi aşkarlana bilməli və ya `CLI_QODER_BIN` onun icra edilə bilən fayl yoluna təyin edilməlidir. Yalnız
 Docker hostunda quraşdırılmış CLI avtomatik olaraq konteynerdə mövcud olmur. Çatışmayan
 icra faylları sizi quraşdırmaya və ya yol parametrinə yönləndirən aydın xəta yaradır.
@@ -323,16 +323,16 @@ və konfiqurasiya edilə bilən taym-aut ayrıca təkmilləşdirmələrdir; bu d
 ### Groq
 
 1. API açarı əldə edin: https://console.groq.com/
-2. OmniRoute-da: Provayderlər → Provayder əlavə et → Groq
+2. 67router-da: Provayderlər → Provayder əlavə et → Groq
 3. API açarını daxil edin → Qoşul
 
 ---
 
 ## Tez-tez verilən suallar
 
-### "OmniRoute-dan istifadə etmək üçün ödəniş etməliyəm?"
+### "67router-dan istifadə etmək üçün ödəniş etməliyəm?"
 
-**Xeyr!** OmniRoute pulsuz və açıq mənbəlidir. Heç bir ödəniş etmədən pulsuz provayderlərdən (Kiro, Pollinations) istifadə edə bilərsiniz. Yalnız ödənişli provayderlərdən istifadə etməyi seçsəniz, ödəniş edirsiniz.
+**Xeyr!** 67router pulsuz və açıq mənbəlidir. Heç bir ödəniş etmədən pulsuz provayderlərdən (Kiro, Pollinations) istifadə edə bilərsiniz. Yalnız ödənişli provayderlərdən istifadə etməyi seçsəniz, ödəniş edirsiniz.
 
 ### "Hansı provayderlə başlamalıyam?"
 
@@ -340,11 +340,11 @@ və konfiqurasiya edilə bilən taym-aut ayrıca təkmilləşdirmələrdir; bu d
 
 ### "Eyni anda bir neçə provayderdən istifadə edə bilərəm?"
 
-**Bəli!** OmniRoute-un əsas məqsədi məhz budur. Bir neçə provayder qoşun və OmniRoute-un hər sorğu üçün ən uyğun olanı seçməsi üçün `model: "auto"` parametrindən istifadə edin.
+**Bəli!** 67router-un əsas məqsədi məhz budur. Bir neçə provayder qoşun və 67router-un hər sorğu üçün ən uyğun olanı seçməsi üçün `model: "auto"` parametrindən istifadə edin.
 
 ### "Provayderlərdən biri işləməsə nə baş verər?"
 
-OmniRoute işləməyən provayderləri avtomatik olaraq ötürür və növbəti provayderi sınayır. Sizin heç nə etməyinizə ehtiyac yoxdur.
+67router işləməyən provayderləri avtomatik olaraq ötürür və növbəti provayderi sınayır. Sizin heç nə etməyinizə ehtiyac yoxdur.
 
 ### "Provayder bağlantısını necə kəsə bilərəm?"
 
@@ -352,17 +352,13 @@ Providers bölməsinə keçin → provayderin üzərinə klikləyin → **Discon
 
 ### "Mövcud API açarlarımdan istifadə edə bilərəm?"
 
-**Bəli!** OpenAI, Anthropic, Google və s. üçün artıq API açarlarınız varsa, onlardan OmniRoute-da istifadə edə bilərsiniz. Provayderə qoşularkən sadəcə onları daxil edin.
+**Bəli!** OpenAI, Anthropic, Google və s. üçün artıq API açarlarınız varsa, onlardan 67router-da istifadə edə bilərsiniz. Provayderə qoşularkən sadəcə onları daxil edin.
 
 ---
 
 ## Növbəti Addım Nədir?
 
-- **[Avtomatik Kombinasiya Təlimatı](./AUTO-COMBO-GUIDE.md)** — OmniRoute-un sizin üçün ən yaxşı süni intellekti seçməsinə imkan verin
+- **[Avtomatik Kombinasiya Təlimatı](./AUTO-COMBO-GUIDE.md)** — 67router-un sizin üçün ən yaxşı süni intellekti seçməsinə imkan verin
 - **[Pulsuz Tariflər Təlimatı](./FREE-TIERS-GUIDE.md)** — Kredit kartı olmadan pulsuz süni intellekt əldə edin
 - **[Problemlərin Aradan Qaldırılması](../guides/TROUBLESHOOTING.md)** — Ümumi problemləri həll edin
 - **[Provayder Arayışı](../reference/PROVIDER_REFERENCE.md)** — 226 provayderin tam siyahısı
-
-## Cursor şəkilləri
-
-Cursor plan şəkilləri `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) istifadə edir. [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md) sənədinə baxın.

@@ -7,7 +7,7 @@
 > **Sumber acuan:** `src/lib/{cloudflaredTunnel,ngrokTunnel,tailscaleTunnel}.ts`, `src/app/api/tunnels/`
 > **Terakhir diperbarui:** 2026-06-28 — v3.8.40
 
-OmniRoute dapat mengekspos server lokalnya (`http://localhost:20128`) ke internet
+67router dapat mengekspos server lokalnya (`http://localhost:20128`) ke internet
 publik melalui tiga backend tunnel. Ini berguna untuk:
 
 - Callback OAuth dari penyedia cloud (Antigravity, Gemini, Cursor) yang memerlukan
@@ -15,7 +15,7 @@ publik melalui tiga backend tunnel. Ini berguna untuk:
 - Membagikan instans lokal Anda kepada rekan satu tim tanpa menerapkan VM.
 - Pengujian melalui perangkat seluler, jarak jauh, atau lintas jaringan.
 
-Ketiga backend dikelola di dalam proses — OmniRoute memulai/menghentikan biner
+Ketiga backend dikelola di dalam proses — 67router memulai/menghentikan biner
 atau SDK yang mendasarinya dari dasbor atau REST API. Tidak diperlukan penyiapan
 reverse proxy atau systemd.
 
@@ -41,7 +41,7 @@ dua mode, yang dipilih berdasarkan apakah konfigurasi named tunnel disediakan:
 http://localhost:<apiPort>` dan mengurai URL `*.trycloudflare.com` yang ditetapkan
   dari stdout. URL bersifat sementara dan berubah setiap kali dimulai ulang.
 - **Named tunnel (opsional).** Ketika `CLOUDFLARED_CONFIG` menunjuk ke
-  `config.yml` cloudflared yang dikelola secara lokal, OmniRoute menjalankan `cloudflared tunnel --no-autoupdate
+  `config.yml` cloudflared yang dikelola secara lokal, 67router menjalankan `cloudflared tunnel --no-autoupdate
 --config <path> run`, sehingga Anda mendapatkan **hostname bernama yang stabil**. Konfigurasi
   menyediakan UUID tunnel, `credentials-file`, dan perutean `ingress`, sehingga
   `--url` tidak diteruskan dan token dasbor Zero Trust tidak diperlukan. `run` membaca
@@ -50,7 +50,7 @@ http://localhost:<apiPort>` dan mengurai URL `*.trycloudflare.com` yang ditetapk
 
 Perilaku utama:
 
-- **Instalasi otomatis.** Saat pertama kali digunakan, OmniRoute mengunduh biner
+- **Instalasi otomatis.** Saat pertama kali digunakan, 67router mengunduh biner
   `cloudflared` terbaru dari rilis GitHub resmi (instalasi terkelola berada di bawah
   `DATA_DIR/cloudflared/`). SHA256 aset yang diunduh diverifikasi terhadap manifes
   rilis sebelum dieksekusi.
@@ -68,7 +68,7 @@ Perilaku utama:
    ```
 
 2. Buat `~/.cloudflared/config.yml` yang merutekan hostname Anda ke port API lokal
-   OmniRoute (default 20128):
+   67router (default 20128):
 
    ```yaml
    tunnel: <UUID-from-create>
@@ -79,11 +79,11 @@ Perilaku utama:
      - service: http_status:404
    ```
 
-3. Arahkan OmniRoute ke konfigurasi tersebut dan mulai (ulang) tunnel:
+3. Arahkan 67router ke konfigurasi tersebut dan mulai (ulang) tunnel:
 
    ```bash
    export CLOUDFLARED_CONFIG="/home/you/.cloudflared/config.yml"
-   # opsional — mengganti hostname yang dilaporkan OmniRoute; jika tidak, dibaca dari
+   # opsional — mengganti hostname yang dilaporkan 67router; jika tidak, dibaca dari
    # aturan ingress pertama dalam konfigurasi:
    # export CLOUDFLARED_HOSTNAME="ai.example.com"
    ```
@@ -121,12 +121,12 @@ Atau melalui dasbor: **Settings → Tunnels → Cloudflare**.
 
 ### Variabel lingkungan opsional
 
-| Variabel                                             | Tujuan                                                                                                                                                                               |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `CLOUDFLARED_BIN`                                    | Menimpa path biner. Jika ditetapkan dan valid, OmniRoute akan menggunakannya alih-alih mengunduhnya.                                                                                 |
-| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protokol transportasi (default `http2`; juga mendukung `quic`, `auto`).                                                                                                              |
-| `CLOUDFLARED_CONFIG`                                 | Path ke `config.yml` cloudflared yang dikelola secara lokal. Jika ditetapkan, OmniRoute menjalankan tunnel **bernama/persisten** (`tunnel --config <path> run`), bukan tunnel cepat. |
-| `CLOUDFLARED_HOSTNAME`                               | Menimpa hostname publik yang dilaporkan oleh tunnel bernama (misalnya, `ai.example.com`). Jika tidak ditetapkan, nilainya dibaca dari hostname `ingress` pertama pada konfigurasi.   |
+| Variabel                                             | Tujuan                                                                                                                                                                              |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CLOUDFLARED_BIN`                                    | Menimpa path biner. Jika ditetapkan dan valid, 67router akan menggunakannya alih-alih mengunduhnya.                                                                                 |
+| `CLOUDFLARED_PROTOCOL` / `TUNNEL_TRANSPORT_PROTOCOL` | Protokol transportasi (default `http2`; juga mendukung `quic`, `auto`).                                                                                                             |
+| `CLOUDFLARED_CONFIG`                                 | Path ke `config.yml` cloudflared yang dikelola secara lokal. Jika ditetapkan, 67router menjalankan tunnel **bernama/persisten** (`tunnel --config <path> run`), bukan tunnel cepat. |
+| `CLOUDFLARED_HOSTNAME`                               | Menimpa hostname publik yang dilaporkan oleh tunnel bernama (misalnya, `ai.example.com`). Jika tidak ditetapkan, nilainya dibaca dari hostname `ingress` pertama pada konfigurasi.  |
 
 ## 2. ngrok
 
@@ -173,7 +173,7 @@ curl -X POST http://localhost:20128/api/tunnels/ngrok \
 
 Respons menyertakan `publicUrl` yang ditetapkan (misalnya
 `https://abcd-1234.ngrok-free.app`). Domain kustom, wilayah, dan aturan kebijakan
-harus dikonfigurasi di dasbor ngrok — OmniRoute sendiri hanya meneruskan URL
+harus dikonfigurasi di dasbor ngrok — 67router sendiri hanya meneruskan URL
 target lokal ke SDK.
 
 ## 3. Tailscale Funnel
@@ -187,14 +187,14 @@ publik memiliki format `https://<machine>.<tailnet>.ts.net/`.
 
 ### Prasyarat
 
-1. Instal Tailscale (atau biarkan OmniRoute melakukannya — lihat endpoint `install` di bawah).
-2. Masuk (`tailscale login` atau melalui endpoint `login` milik OmniRoute).
+1. Instal Tailscale (atau biarkan 67router melakukannya — lihat endpoint `install` di bawah).
+2. Masuk (`tailscale login` atau melalui endpoint `login` milik 67router).
 3. Aktifkan Funnel untuk tailnet Anda di konsol admin Tailscale:
    <https://login.tailscale.com/admin/settings/features>.
 
 Di Linux dan macOS, daemon (`tailscaled`) memerlukan `sudo` agar dapat dikontrol. Endpoint
 POST menerima kolom opsional `sudoPassword` yang diteruskan ke
-cache kata sandi MITM OmniRoute (`getCachedPassword` / `setCachedPassword`) selama
+cache kata sandi MITM 67router (`getCachedPassword` / `setCachedPassword`) selama
 pemanggilan berlangsung. Windows menggunakan instalasi layanan default di
 `C:\Program Files\Tailscale\tailscale.exe`.
 
@@ -255,7 +255,7 @@ independen.
 
 ## Pertimbangan callback OAuth
 
-Saat Anda mengekspos OmniRoute melalui tunnel, dashboard dan alur OAuth harus
+Saat Anda mengekspos 67router melalui tunnel, dashboard dan alur OAuth harus
 membuat URL callback berdasarkan nama host **publik**, bukan `localhost`. Jika
 tidak, penyedia OAuth akan mengarahkan pengguna kembali ke URL yang tidak dapat
 dijangkau oleh servernya sehingga proses handshake gagal.
@@ -272,7 +272,7 @@ Tetapkan:
 NEXT_PUBLIC_BASE_URL=https://<host-tunnel-Anda>
 ```
 
-lalu mulai ulang OmniRoute sebelum memulai OAuth. Untuk Cloudflare Quick Tunnel
+lalu mulai ulang 67router sebelum memulai OAuth. Untuk Cloudflare Quick Tunnel
 yang temporer, URL berubah setelah setiap kali dimulai ulang. Oleh karena itu,
 untuk penggunaan OAuth produksi, sebaiknya gunakan ngrok dengan domain yang
 dicadangkan atau Tailscale Funnel.
@@ -289,13 +289,13 @@ Dashboard menampilkan status tunnel di **Pengaturan → Tunnel**:
 
 Untuk pemantauan terprogram, lakukan polling pada endpoint `GET` masing-masing
 backend. Menjalankan lebih dari satu backend secara bersamaan diperbolehkan;
-OmniRoute akan melacak masing-masing secara independen.
+67router akan melacak masing-masing secara independen.
 
 ## Pemecahan masalah
 
 ### "binary cloudflared tidak ditemukan"
 
-OmniRoute mencoba melakukan instalasi otomatis saat pertama kali digunakan. Jika
+67router mencoba melakukan instalasi otomatis saat pertama kali digunakan. Jika
 instalasi diblokir (jaringan terbatas, tidak ada akses GitHub), unduh
 `cloudflared` secara manual dari
 <https://github.com/cloudflare/cloudflared/releases> dan tetapkan

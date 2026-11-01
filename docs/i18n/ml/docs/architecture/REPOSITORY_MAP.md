@@ -5,7 +5,7 @@
 ---
 
 > **ഓരോ ഡയറക്ടറിയുടെയും റൂട്ട് ഫയലിന്റെയും ഒറ്റവരി വിവരണം.**
-> അവസാനം പുതുക്കിയത്: 2026-06-28 — OmniRoute v3.8.40
+> അവസാനം പുതുക്കിയത്: 2026-06-28 — 67router v3.8.40
 >
 > കോഡ്ബേസിലൂടെ വേഗത്തിൽ സഞ്ചരിക്കാൻ ഈ മാപ്പ് ഉപയോഗിക്കുക. വിശദമായ പഠനത്തിനായി, സമർപ്പിത ഡോക്യുമെന്റേഷനിലേക്കുള്ള ലിങ്കുകൾ പിന്തുടരുക.
 
@@ -25,7 +25,7 @@ OmniRoute/
 ├── images/               # മാർക്കറ്റിംഗ് / README ഇമേജ് അസറ്റുകൾ
 ├── @omniroute/           # പ്രസിദ്ധീകരിക്കാവുന്ന അനുബന്ധ പാക്കേജുകൾ (opencode-plugin, opencode-provider)
 ├── skills/               # CLI/ഏജന്റ് സ്കിൽ പാക്കുകൾ (cli-* + omni-* + config-codex-cli)
-├── examples/             # മാതൃകാ പ്ലഗിനുകൾ + omniroute-cmd-hello സ്റ്റാർട്ടർ
+├── examples/             # Quickstart client samples
 ├── contrib/              # കമ്മ്യൂണിറ്റി സംഭാവനകൾ (podman/)
 ├── .source/              # Fumadocs സോഴ്സ് കോൺഫിഗ് (source.config.mjs + server/browser/dynamic)
 ├── .github/              # GitHub Actions വർക്ക്ഫ്ലോകൾ + ഇഷ്യൂ ടെംപ്ലേറ്റുകൾ + PR ടെംപ്ലേറ്റ്
@@ -140,12 +140,9 @@ src/
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `app/api/v1/`                                                                | പൊതു OpenAI-അനുയോജ്യ API (~25 ഉപ-റൂട്ടുകൾ: chat, completions, embeddings, files, batches, audio, images, videos, music, rerank, moderations, search, ws, agents, accounts, providers മുതലായവ)                                                                                                                      |
 | `app/api/v1beta/`                                                            | Gemini-ശൈലിയിലുള്ള API എൻഡ്പോയിന്റുകൾ                                                                                                                                                                                                                                                                              |
-| `app/api/playground/`                                                        | Playground Studio റൂട്ടുകൾ: `improve-prompt/` (POST — LLM പ്രോംപ്റ്റ് പുനർലേഖകൻ), `presets/` (GET പട്ടിക / POST സൃഷ്ടിക്കൽ), `presets/[id]/` (GET / PUT / DELETE) — `docs/frameworks/PLAYGROUND_STUDIO.md` കാണുക                                                                                                   |
 | `app/api/` (non-v1)                                                          | മാനേജ്മെന്റ്/അഡ്മിൻ റൂട്ടുകൾ (~60 ഡയറക്ടറികൾ: providers, combos, settings, mcp, a2a, evals, memory, skills, webhooks, compliance, resilience, monitoring, tunnels, cli-tools മുതലായവ)                                                                                                                              |
 | `app/api/tools/agent-bridge/`                                                | AgentBridge REST API — 12 റൂട്ടുകൾ (സെർവർ നിയന്ത്രണം, ഏജന്റ് നില/DNS/മാപ്പിങ്ങുകൾ, ബൈപാസ്, സർട്ടിഫിക്കറ്റ്, അപ്സ്ട്രീം-CA). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/AGENTBRIDGE.md §7` കാണുക.                                                                                                                 |
 | `app/api/tools/traffic-inspector/`                                           | Traffic Inspector REST + WS API — 16+ റൂട്ടുകൾ (അഭ്യർത്ഥനകൾ, സെഷനുകൾ, ഹോസ്റ്റുകൾ, ക്യാപ്ചർ മോഡുകൾ, എക്സ്പോർട്ട്, ws). LOCAL_ONLY + SPAWN_CAPABLE. `docs/frameworks/TRAFFIC_INSPECTOR.md §8` കാണുക.                                                                                                                 |
-| `app/a2a/`                                                                   | A2A JSON-RPC 2.0 പ്രവേശന പോയിന്റ് (`POST /a2a`)                                                                                                                                                                                                                                                                    |
-| `app/.well-known/agent.json/`                                                | A2A Agent Card (കണ്ടെത്തൽ)                                                                                                                                                                                                                                                                                         |
 | `app/(dashboard)/dashboard/`                                                 | Dashboard UI പേജുകൾ (50+ വിഭാഗങ്ങൾ, ~118 page.tsx ഫയലുകൾ: providers, combos, settings, memory, skills, webhooks, evals, audit, batch, cache, costs, health, system, activity മുതലായവ)                                                                                                                              |
 | `app/(dashboard)/dashboard/search-tools/`                                    | Search Tools Studio UI (3 ടാബുകൾ: Search/Scrape/Compare + SearchConceptCard + ProviderCatalog) — `docs/frameworks/SEARCH_TOOLS_STUDIO.md` കാണുക                                                                                                                                                                    |
 | `app/(dashboard)/dashboard/memory/`                                          | Memory Studio (പ്ലാൻ 21): `page.tsx` (3-ടാബ് ഷെൽ), `components/` (MemoryConceptCard, MemoryEngineStatus, EmbeddingSourceSelector, EditMemoryModal, RetrievePreview, QdrantConfigCard, RerankConfigCard), `components/tabs/` (MemoriesTab, PlaygroundTab, EngineTab), `hooks/` (useEngineStatus, useMemorySettings) |
@@ -172,7 +169,6 @@ src/
 | `auth/`                                  | സെഷൻ, പാസ്വേഡ് ഹാഷിംഗ്, ടോക്കൺ വാലിഡേഷൻ                                                                                                                                                                                                                                                                                        |
 | `batches/`                               | OpenAI Batches API ഹാൻഡ്ലറുകൾ                                                                                                                                                                                                                                                                                                  |
 | `catalog/`                               | പ്രൊവൈഡർ കാറ്റലോഗ് Zod വാലിഡേഷൻ + ശേഷി നിർണയം                                                                                                                                                                                                                                                                                  |
-| `cloudAgent/`                            | ക്ലൗഡ് ഏജന്റുകൾ (Codex Cloud, Devin, Jules) — `docs/frameworks/CLOUD_AGENT.md` കാണുക                                                                                                                                                                                                                                           |
 | `combos/`                                | കോംബോ നിർണയം + പുനഃക്രമീകരണ ഹെൽപ്പറുകൾ                                                                                                                                                                                                                                                                                         |
 | `audit/`                                 | ആക്റ്റിവിറ്റി ഫീഡ് ഹെൽപ്പറുകൾ: `highLevelActions.ts` (അനുവദനീയ പട്ടിക + `isHighLevelAction()`), `activityIcons.ts` (ആക്ഷൻ → ഐക്കൺ/ക്രിയ മാപ്പ്), `timeline.ts` (groupByDay/relativeTime) — `docs/architecture/MONITORING_SECTIONS.md` കാണുക                                                                                    |
 | `compliance/`                            | ഓഡിറ്റ് ലോഗ് + പ്രൊവൈഡർ ഓഡിറ്റ് — `docs/security/COMPLIANCE.md` കാണുക                                                                                                                                                                                                                                                          |
@@ -184,7 +180,6 @@ src/
 | `display/`                               | UI ഫോർമാറ്റിംഗ് സഹായികൾ (ചെലവ്, ലേറ്റൻസി മുതലായവ)                                                                                                                                                                                                                                                                              |
 | `embeddings/`                            | Embeddings സേവന സഹായികൾ                                                                                                                                                                                                                                                                                                        |
 | `env/`                                   | പരിസ്ഥിതി വേരിയബിൾ പാർസിംഗും സാധൂകരണവും                                                                                                                                                                                                                                                                                        |
-| `evals/`                                 | Eval ഫ്രെയിംവർക്ക് (സ്യൂട്ടുകൾ, റണ്ണർ, റൺടൈം) — `docs/frameworks/EVALS.md` കാണുക                                                                                                                                                                                                                                               |
 | `guardrails/`                            | PII മാസ്കർ, പ്രോംപ്റ്റ് ഇൻജക്ഷൻ, വിഷൻ ബ്രിഡ്ജ് — `docs/security/GUARDRAILS.md` കാണുക                                                                                                                                                                                                                                           |
 | `jobs/`                                  | പശ്ചാത്തല ജോലികൾ (cron പോലുള്ളവ)                                                                                                                                                                                                                                                                                               |
 | `memory/`                                | സംഭാഷണ മെമ്മറി (SQLite FTS5 + sqlite-vec ഹൈബ്രിഡ് RRF + Qdrant ടയർ 2) — `docs/frameworks/MEMORY.md` കാണുക                                                                                                                                                                                                                      |
@@ -193,10 +188,8 @@ src/
 | `memory/reindex.ts`                      | `runReindexBatch()` — പശ്ചാത്തലത്തിൽ `needs_reindex=1` ഉള്ള മെമ്മറികൾ പ്രോസസ്സ് ചെയ്യുന്നു; `POST /api/memory/reindex`, ലേസി-ബാക്ക്ഫിൽ പാത എന്നിവ വഴി വിളിക്കപ്പെടുന്നു. (പ്ലാൻ 21)                                                                                                                                            |
 | `monitoring/`                            | ആരോഗ്യ പരിശോധനകൾ, മെട്രിക്സ് എമിഷൻ                                                                                                                                                                                                                                                                                             |
 | `oauth/`                                 | 22 പ്രൊവൈഡർ മൊഡ്യൂളുകൾക്കായുള്ള OAuth/ഇംപോർട്ട് ഫ്ലോകൾ (agy, antigravity, claude, cline, codebuddy-cn, codex, cursor, devin-desktop, ghe-copilot, github, gitlab-duo, grok-cli-oauth, grok-cli, kilocode, kimi-coding, kiro, openference, qoder, trae, xai-oauth, zed-hosted, zed)                                             |
-| `plugins/`                               | പ്ലഗിൻ രജിസ്ട്രി                                                                                                                                                                                                                                                                                                               |
 | `promptCache/`                           | Anthropic-ശൈലിയിലുള്ള പ്രോംപ്റ്റ് കാഷ് ബ്രേക്ക്പോയിന്റുകൾ                                                                                                                                                                                                                                                                      |
 | `skills/`                                | Skills ഫ്രെയിംവർക്ക് (ബിൽറ്റ്-ഇൻ + മാർക്കറ്റ്പ്ലേസ് + SkillsSH) — `docs/frameworks/SKILLS.md` കാണുക                                                                                                                                                                                                                            |
-| `playground/`                            | Playground Studio-യുടെ പങ്കിട്ട സഹായികൾ: `codeExport.ts` (curl/Python/TS ജനറേറ്റർ), `promptImprover.ts` (മെറ്റാ-പ്രോംപ്റ്റ് ബിൽഡർ), `streamMetrics.ts` (ശുദ്ധമായ TTFT/TPS), `types.ts` (വിലനിർണ്ണയ പട്ടിക) — `docs/frameworks/PLAYGROUND_STUDIO.md` കാണുക                                                                      |
 | `webhookDispatcher.ts`                   | HMAC വെബ്ഹുക്ക് ഡെലിവറി — `docs/frameworks/WEBHOOKS.md` കാണുക                                                                                                                                                                                                                                                                  |
 | `cloudflaredTunnel.ts`, `ngrokTunnel.ts` | ടണൽ മാനേജർമാർ — `docs/ops/TUNNELS_GUIDE.md` കാണുക                                                                                                                                                                                                                                                                              |
 | `cloudSync.ts`, `initCloudSync.ts`       | സ്റ്റേറ്റിന്റെ ഐച്ഛിക ക്ലൗഡ് സമന്വയം                                                                                                                                                                                                                                                                                           |
@@ -206,13 +199,12 @@ src/
 
 ### `src/lib/db/` — ഡാറ്റാബേസ് (147 മൊഡ്യൂളുകൾ + 208 മൈഗ്രേഷനുകൾ)
 
-| ഉപഡയറക്ടറി                | ഉദ്ദേശ്യം                                                                                                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `db/core.ts`              | WAL ജേണലിങ്ങോടുകൂടിയ `getDbInstance()` സിംഗിൾട്ടൺ                                                                                                                                     |
-| `db/migrations/`          | പതിപ്പ് നൽകിയ SQL ഫയലുകൾ (ഐഡംപൊട്ടന്റ്, ട്രാൻസാക്ഷണൽ). `073_memory_vec.sql`, `memory_vec_meta` + `needs_reindex` കോളം ചേർക്കുന്നു (പ്ലാൻ 21).                                         |
-| `db/playgroundPresets.ts` | Playground Studio പ്രീസെറ്റുകൾക്കായുള്ള CRUD മൊഡ്യൂൾ (`listPlaygroundPresets`, `getPlaygroundPreset`, `createPlaygroundPreset`, `updatePlaygroundPreset`, `deletePlaygroundPreset`)   |
-| `db/memoryVec.ts`         | `memory_vec_meta`-നുള്ള CRUD (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue` തുടങ്ങിയവ (പ്ലാൻ 21)                    |
-| `db/<domain>.ts`          | ഓരോ ഡൊമെയ്നിനും ഒരു മൊഡ്യൂൾ: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache തുടങ്ങിയവ. |
+| ഉപഡയറക്ടറി        | ഉദ്ദേശ്യം                                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `db/core.ts`      | WAL ജേണലിങ്ങോടുകൂടിയ `getDbInstance()` സിംഗിൾട്ടൺ                                                                                                                                     |
+| `db/migrations/`  | പതിപ്പ് നൽകിയ SQL ഫയലുകൾ (ഐഡംപൊട്ടന്റ്, ട്രാൻസാക്ഷണൽ). `073_memory_vec.sql`, `memory_vec_meta` + `needs_reindex` കോളം ചേർക്കുന്നു (പ്ലാൻ 21).                                         |
+| `db/memoryVec.ts` | `memory_vec_meta`-നുള്ള CRUD (active_dim, embedding_signature, last_reset_at, vec_loaded) + `markMemoryNeedsReindex`, `getMemoryReindexQueue` തുടങ്ങിയവ (പ്ലാൻ 21)                    |
+| `db/<domain>.ts`  | ഓരോ ഡൊമെയ്നിനും ഒരു മൊഡ്യൂൾ: providers, combos, apiKeys, users, sessions, usage, audit*log, webhooks, skills, memory_entries, cloud_agent_tasks, evals*\*, reasoning_cache തുടങ്ങിയവ. |
 
 ### `src/domain/`
 
@@ -393,7 +385,7 @@ open-sse/
 | `RELEASE_CHECKLIST.md`      | സമ്പൂർണ്ണ റിലീസ് പ്രവാഹം (സ്കില്ലുകൾ, husky, conventional commits, ഡിപ്ലോയ്മെന്റ്)                         |
 | `COVERAGE_PLAN.md`          | കവറേജ് ലക്ഷ്യങ്ങളും നിലവിലെ അവസ്ഥയും                                                                       |
 | `FREE_TIERS.md`             | തിരഞ്ഞെടുത്ത ഫ്രീ-ടയർ പ്രൊവൈഡർമാർ (48+ സൗജന്യം + 11 OAuth)                                                 |
-| `CLI-TOOLS.md`              | ബാഹ്യ CLI ഇന്റഗ്രേഷനുകൾ + ആന്തരിക OmniRoute CLI                                                            |
+| `CLI-TOOLS.md`              | ബാഹ്യ CLI ഇന്റഗ്രേഷനുകൾ + ആന്തരിക 67router CLI                                                             |
 | `I18N.md`                   | i18n ആർക്കിടെക്ചർ, ഒരു ഭാഷ ചേർക്കൽ, 67 ലൊക്കേലുകൾ                                                          |
 | `UNINSTALL.md`              | പൂർണ്ണമായി അൺഇൻസ്റ്റാൾ ചെയ്യുന്നതിനുള്ള ഘട്ടങ്ങൾ                                                           |
 | `PROVIDER_REFERENCE.md`     | 375 പ്രൊവൈഡർമാരുടെ **സ്വയമേവ സൃഷ്ടിച്ച** കാറ്റലോഗ് (വീണ്ടും സൃഷ്ടിക്കാൻ: `npm run gen:provider-reference`) |
@@ -403,13 +395,10 @@ open-sse/
 | ഡോക്യുമെന്റ്                                    | ഉദ്ദേശ്യം                                                                      |
 | ----------------------------------------------- | ------------------------------------------------------------------------------ |
 | `MCP-SERVER.md`                                 | MCP സെർവർ: 110 ടൂളുകൾ, 3 ട്രാൻസ്പോർട്ടുകൾ, 33 സ്കോപ്പുകൾ, REST എൻഡ്പോയിന്റുകൾ  |
-| `A2A-SERVER.md`                                 | A2A v0.3: JSON-RPC, 6 സ്കില്ലുകൾ, REST ഹെൽപ്പറുകൾ, ഏജന്റ് കാർഡ്                |
 | `AGENT_PROTOCOLS_GUIDE.md`                      | ഏകീകൃത ഗൈഡ്: A2A vs ACP vs ക്ലൗഡ് ഏജന്റുകൾ                                     |
-| `CLOUD_AGENT.md`                                | Codex Cloud / Devin / Jules ഓർക്കസ്ട്രേഷൻ                                      |
 | `SKILLS.md`                                     | സ്കിൽസ് ഫ്രെയിംവർക്ക് (ബിൽറ്റ്-ഇൻ + മാർക്കറ്റ്പ്ലേസ് + SkillsSH + സാൻഡ്ബോക്സ്) |
 | `RADAR.md`                                      | Radar സൗജന്യ-മോഡൽ കാറ്റലോഗ് ഓവർലേ (`RADAR_ENABLED`, ഡിഫോൾട്ടായി ഓഫ്)           |
 | `MEMORY.md`                                     | മെമ്മറി സിസ്റ്റം (SQLite FTS5 + Qdrant)                                        |
-| `EVALS.md`                                      | ഇവാലുവേഷൻ ഫ്രെയിംവർക്ക് (സ്യൂട്ടുകൾ, റണ്ണുകൾ, റൂബ്രിക്കുകൾ)                    |
 | `GUARDRAILS.md`                                 | PII മാസ്കർ, പ്രോംപ്റ്റ് ഇൻജെക്ഷൻ, വിഷൻ ബ്രിഡ്ജ്                                |
 | `COMPLIANCE.md`                                 | ഓഡിറ്റ് ലോഗ്, നിലനിർത്തൽ, noLog ഒഴിവാക്കൽ ഓപ്ഷൻ                                |
 | `WEBHOOKS.md`                                   | HMAC-സൈൻ ചെയ്ത വെബ്ഹുക്ക് ഡെലിവറി                                              |
@@ -574,7 +563,6 @@ open-sse/
 - **ഒരു പ്രൊവൈഡർ ചേർക്കുകയാണോ?** `docs/architecture/ARCHITECTURE.md § Adding a New Provider` പിന്തുടരുക + `docs/reference/PROVIDER_REFERENCE.md` ഉപയോഗിച്ച് ക്രോസ്-ചെക്ക് ചെയ്യുക.
 - **ഒരു റൂട്ട് ചേർക്കുകയാണോ?** `docs/architecture/ARCHITECTURE.md § Adding a New API Route` + `src/shared/validation/schemas.ts`.
 - **ഒരു MCP ടൂൾ ചേർക്കുകയാണോ?** `docs/frameworks/MCP-SERVER.md § Adding a Tool`.
-- **ഒരു A2A സ്കിൽ ചേർക്കുകയാണോ?** `docs/frameworks/A2A-SERVER.md § Adding a New Skill`.
 - **ലോക്കലായി പ്രവർത്തിപ്പിക്കുകയാണോ?** `docs/guides/SETUP_GUIDE.md`.
 - **ഡിപ്ലോയ് ചെയ്യുകയാണോ?** `docs/guides/DOCKER_GUIDE.md` / `docs/ops/VM_DEPLOYMENT_GUIDE.md` / `docs/ops/FLY_IO_DEPLOYMENT_GUIDE.md`.
 - **റിലീസ് ചെയ്യുകയാണോ?** `docs/ops/RELEASE_CHECKLIST.md` (കൂടാതെ `/generate-release-cc` Claude Code സ്കിൽ).

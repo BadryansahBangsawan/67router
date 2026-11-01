@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute nwere **ụdị nzere anọ** nwere ike inye ikike ụzọ njikwa.
+67router nwere **ụdị nzere anọ** nwere ike inye ikike ụzọ njikwa.
 Ha anaghị agbanwe agbanwe. Igodo API nkwubi okwu (`sk-…`) anaghị **ejikwa** ihe nkesa ọ gwụla ma enyere ha ikike `manage` ma ọ bụ `admin` n'ụzọ doro anya.
 
 Mmejuputa iwu: `src/lib/api/requireManagementAuth.ts`.

@@ -12,7 +12,7 @@ indicateurs `anthropic-beta`, en-têtes du SDK Stainless, etc.).
 
 ## Démarrage rapide — utiliser le fournisseur `agentrouter` natif (recommandé)
 
-Pour la plupart des utilisateurs, **aucune configuration particulière n'est requise**. OmniRoute intègre un
+Pour la plupart des utilisateurs, **aucune configuration particulière n'est requise**. 67router intègre un
 fournisseur `agentrouter` avec la signature réseau complète de Claude Code déjà configurée (voir
 `open-sse/config/providerRegistry.ts` → `agentrouter`). Pour l'utiliser :
 
@@ -34,7 +34,7 @@ l'URL de base, le chemin de chat ou l'ensemble d'en-têtes.
 
 ## Avancé : connexion via le type de fournisseur compatible avec Claude Code
 
-OmniRoute prend également en charge AgentRouter (et les relais similaires) via le type de fournisseur
+67router prend également en charge AgentRouter (et les relais similaires) via le type de fournisseur
 **compatible avec Claude Code** (`anthropic-compatible-cc-*`), qui communique avec
 l'API Anthropic Messages en utilisant la signature réseau appropriée. Un fournisseur générique
 `openai-compatible-chat` pointant vers `https://agentrouter.org`
@@ -47,14 +47,14 @@ Code.
 
 - Un compte AgentRouter et une clé API. Les nouvelles inscriptions bénéficient de crédits gratuits via le lien d'affiliation
   figurant dans le fichier [README](../README.md) du projet.
-- Une instance OmniRoute exécutée avec l'indicateur de fonctionnalité `ENABLE_CC_COMPATIBLE_PROVIDER` activé
+- Une instance 67router exécutée avec l'indicateur de fonctionnalité `ENABLE_CC_COMPATIBLE_PROVIDER` activé
   (voir ci-dessous).
 
 ## 1. Activer le type de fournisseur compatible avec CC
 
 Le type de fournisseur compatible avec Claude Code est protégé par un indicateur de fonctionnalité, car il
 envoie du trafic qui reproduit fidèlement celui du client officiel Claude Code. Activez-le en
-définissant une variable d'environnement avant de démarrer OmniRoute :
+définissant une variable d'environnement avant de démarrer 67router :
 
 ```bash
 ENABLE_CC_COMPATIBLE_PROVIDER=true

@@ -4,7 +4,7 @@
 
 ---
 
-> **အကျဉ်းချုပ်**: `open-sse/` သည် OmniRoute ရှိ LLM တောင်းဆိုမှုတိုင်းကို မောင်းနှင်ပေးသည့် အဓိက streaming engine ဖြစ်သည်။ ၎င်းတွင် request pipeline၊ executors၊ services၊ MCP server နှင့် translation layer တို့ကို အကောင်အထည်ဖော်ထားသည့် ဖိုင် ~1,400 ပါဝင်သည်။ ဤလမ်းညွှန်တွင် အစိတ်အပိုင်းများ အချင်းချင်း မည်သို့ချိတ်ဆက်လုပ်ဆောင်သည်ကို ရှင်းပြထားသည်။
+> **အကျဉ်းချုပ်**: `open-sse/` သည် 67router ရှိ LLM တောင်းဆိုမှုတိုင်းကို မောင်းနှင်ပေးသည့် အဓိက streaming engine ဖြစ်သည်။ ၎င်းတွင် request pipeline၊ executors၊ services၊ MCP server နှင့် translation layer တို့ကို အကောင်အထည်ဖော်ထားသည့် ဖိုင် ~1,400 ပါဝင်သည်။ ဤလမ်းညွှန်တွင် အစိတ်အပိုင်းများ အချင်းချင်း မည်သို့ချိတ်ဆက်လုပ်ဆောင်သည်ကို ရှင်းပြထားသည်။
 
 **ရင်းမြစ်:** `open-sse/` (workspace package၊ test မဟုတ်သော `.ts` ဖိုင် ~1,440)
 
@@ -12,10 +12,10 @@
 
 ## အဘယ်ကြောင့် သီးခြား Workspace Package တစ်ခုထားရသနည်း?
 
-`open-sse/` သည် အကြောင်းရင်းများစွာကြောင့် OmniRoute monorepo အတွင်းရှိ **သီးခြားရပ်တည်နိုင်သော workspace** တစ်ခုဖြစ်သည်-
+`open-sse/` သည် အကြောင်းရင်းများစွာကြောင့် 67router monorepo အတွင်းရှိ **သီးခြားရပ်တည်နိုင်သော workspace** တစ်ခုဖြစ်သည်-
 
 1. **ပြန်လည်အသုံးပြုနိုင်မှု** — `open-sse` ကို npm ပေါ်တွင် `@omniroute/open-sse` အဖြစ် ဖြန့်ချိထားသောကြောင့် အခြား project များက သီးခြားအသုံးပြုနိုင်သည်
-2. **ရှင်းလင်းသော နယ်နိမိတ်များ** — streaming engine ကို OmniRoute သီးသန့် UI/DB layer နှင့် သီးခြားခွဲထားသည်
+2. **ရှင်းလင်းသော နယ်နိမိတ်များ** — streaming engine ကို 67router သီးသန့် UI/DB layer နှင့် သီးခြားခွဲထားသည်
 3. **စွမ်းဆောင်ရည်** — engine တွင် Next.js dependency များမရှိသောကြောင့် CLI/serverless ပတ်ဝန်းကျင်များတွင် cold start ပိုမိုမြန်ဆန်စေသည်
 4. **ဗားရှင်းစီမံခန့်ခွဲမှု** — `open-sse` ကို ၎င်း၏ကိုယ်ပိုင် အချိန်ဇယားအတိုင်း release လုပ်နိုင်သည်
 
@@ -460,7 +460,7 @@ if (!hasScope(apiKey, "providers:read")) {
 
 ### သီးခြား Transformer တစ်ခု အဘယ်ကြောင့် လိုအပ်သနည်း။
 
-Responses API သည် **stateful conversation များ** (`previous_response_id`) ပါဝင်သည့် OpenAI ၏ ဖော်မတ်အသစ်ဖြစ်သည်။ Client တစ်ခုက Responses request တစ်ခု ပေးပို့သည့်အခါ OmniRoute သည်-
+Responses API သည် **stateful conversation များ** (`previous_response_id`) ပါဝင်သည့် OpenAI ၏ ဖော်မတ်အသစ်ဖြစ်သည်။ Client တစ်ခုက Responses request တစ်ခု ပေးပို့သည့်အခါ 67router သည်-
 
 1. Responses → Chat Completions အဖြစ် အတွင်းပိုင်းတွင် ပြောင်းလဲသည်
 2. Provider ထံသို့ ပေးပို့သည် (Chat Completions ကို ပံ့ပိုးသည့် မည်သည့် provider မဆို)
@@ -573,5 +573,4 @@ Routing engine တွင် တင်းကျပ်သော စွမ်းဆ
 - [REPOSITORY_MAP.md](../architecture/REPOSITORY_MAP.md) — Directory တစ်ခုချင်းစီအလိုက် ဖော်ပြချက်
 - [AUTO-COMBO.md](../routing/AUTO-COMBO.md) — အချက် 16 ချက်ပါ scoring
 - [MCP-SERVER.md](./MCP-SERVER.md) — MCP server
-- [A2A-SERVER.md](./A2A-SERVER.md) — A2A server
 - Source- `open-sse/` (ဖိုင် 400 ကျော်၊ LOC ~143K)

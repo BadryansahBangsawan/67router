@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute utilizza un modello di rilascio a **cicli paralleli**: un branch dedicato `release/vX.Y.Z`
+67router utilizza un modello di rilascio a **cicli paralleli**: un branch dedicato `release/vX.Y.Z`
 per il ciclo attivo, `main` per la linea pubblicata e un tag immutabile
 `vX.Y.Z` quando il ciclo viene rilasciato. È normale vedere commit arrivare sia su `release/*` _sia_ su
 `main`: non si tratta di un errore.

@@ -5,7 +5,7 @@
 ---
 
 `devin-cli-agentic` ń jẹ́ kí runtime Claude Code gidi lo endpoint Messages Anthropic ti
-OmniRoute ti agbègbè, nígbà tí Devin CLI àṣẹ́fọwọ́sí ń pèsè àwọn ìdáhùn model nípasẹ̀ ACP stdio. Kò
+67router ti agbègbè, nígbà tí Devin CLI àṣẹ́fọwọ́sí ń pèsè àwọn ìdáhùn model nípasẹ̀ ACP stdio. Kò
 ṣe àtúnṣe àwọn provider Anthropic, Claude OAuth, Claude Web, tàbí `devin-cli` tó ti wà tẹ́lẹ̀.
 
 Fún àwọn tool call tí client ní, darí wọn gba `devin-cli-agentic` (alias `dva`), provider
@@ -18,7 +18,7 @@ samisi metadata model rẹ̀ gẹ́gẹ́ bẹ́ẹ̀, kí combo routing tó ní
 > `3000.2.17` àti model `swe-1-7-lightning`; live run ìkẹyìn yẹn fi hàn pé àwọn turn `Read`,
 > `Edit`, àti `Bash` tí client ní ṣiṣẹ́, àwọn èsì `npm test` ṣàṣeyọrí, project command àti skill
 > discovery ṣiṣẹ́, routing Devin-nìkan ṣẹlẹ̀, kò sì sí Claude egress rárá. Lẹ́yìn náà, a gbé pin náà sókè sí `2.1.258`
-> (ìran CLI tí identity Claude ti OmniRoute ń fara wé, àti line àkọ́kọ́ tó ní
+> (ìran CLI tí identity Claude ti 67router ń fara wé, àti line àkọ́kọ́ tó ní
 > tier Fable 5.1 lọ́nà abinibi). Lórí pin tuntun náà, a ti ṣàyẹ̀wò install layer àti `claude --version`
 > lórí base image tí a pin mọ́, bridge unit suite, `compose config`, àti
 > ẹ̀rí static isolation sì kọjá — ṣùgbọ́n a kò tíì tún offline mock scenario àti live three-scenario
@@ -51,11 +51,11 @@ Parser náà ń gba envelope `<tool>{...}</tool>` kan ṣoṣo tó dúró lọ́
 name náà pẹ̀lú àkójọ tool inú request, ó ń fìdí àwọn argument múlẹ̀ pẹ̀lú JSON
 Schema ti tool náà, ó ń kọ ìdàpọ̀ narrative/action, ó sì ń gba repair kan tó ní ààlà láyè. Lẹ́yìn náà, Claude Code
 ń ṣiṣẹ́ Anthropic `tool_use` tó yọ jáde ní agbègbè, ó sì ń fi `tool_result` náà padà nípasẹ̀
-OmniRoute.
+67router.
 
 ## Routing aládàáṣe
 
-Provider náà lè kópa nínú àwọn candidate pool `auto/*` ti OmniRoute nígbà tí a kò bá dènà rẹ̀.
+Provider náà lè kópa nínú àwọn candidate pool `auto/*` ti 67router nígbà tí a kò bá dènà rẹ̀.
 Yíyẹ láti jẹ́ candidate kò ṣe ìdánilójú pé a ó yan án: routing strategy combo náà (fún àpẹẹrẹ,
 last-known-good) lè fẹ́ provider mìíràn. Lo `dva/<model>` tàbí combo Devin-first nígbà tí
 o bá fẹ́ kí gbogbo request gba Devin kọjá.
@@ -67,16 +67,16 @@ tí a kọ̀ láti lò. Àwọn iṣẹ́ Compose:
 
 - ń ṣiṣẹ́ gẹ́gẹ́ bí UID/GID `10001:10001`, pẹ̀lú ètò fáìlì gbòǹgbò tí a lè kà nìkan, àwọn agbára tí a ti yọ kúrò, àti
   `no-new-privileges`;
-- ń lo `/home/bridge` aládàáni, volume ìṣètò Claude tí a yà sọ́tọ̀, dátà OmniRoute tí a dá sọ́tọ̀,
+- ń lo `/home/bridge` aládàáni, volume ìṣètò Claude tí a yà sọ́tọ̀, dátà 67router tí a dá sọ́tọ̀,
   àti volume `devin-auth` ọ̀tọ̀;
 - ń mount àwọn workspace/ẹ̀rí `.sandbox` tí a lè sọ nù nìkan;
 - kò mount home olùgbàlejò, Keychain, SSH, àwọn ìjẹ́rìísí cloud, tàbí socket Docker;
 - ń kọ àwọn environment tí a sọ pàtó, wọ́n sì ń yọ àwọn variable API/OAuth/routing Anthropic kúrò;
 - ń darí inference Claude Code sí `http://omniroute:20128` nìkan pẹ̀lú key tí a lò ní agbègbè náà nìkan.
 
-Profile offline ń lo network inú. Nínú profile live, OmniRoute ń dé àwọn endpoint Devin
+Profile offline ń lo network inú. Nínú profile live, 67router ń dé àwọn endpoint Devin
 ìfọwọ́sowọ́pọ̀ nìkan nípasẹ̀ `network-guard`; a kọ àwọn ibi míì tí kò ní í ṣe pẹ̀lú rẹ̀.
-Claude Code ní guard egress ọ̀tọ̀ tí ń kọ gbogbo ohun, ó sì lè dé iṣẹ́ OmniRoute agbègbè náà
+Claude Code ní guard egress ọ̀tọ̀ tí ń kọ gbogbo ohun, ó sì lè dé iṣẹ́ 67router agbègbè náà
 nìkan nípasẹ̀ `NO_PROXY`. Àwọn fáìlì audit guard ni process guard wọn nìkan ń mount. Àwọn
 script náà ń ṣàyẹ̀wò olúwa fáìlì, mode, iye link, àti gbogbo ìpinnu kí wọ́n tó export
 ẹ̀rí tí kò ní token.

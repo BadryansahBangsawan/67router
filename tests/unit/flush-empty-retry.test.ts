@@ -394,11 +394,10 @@ test("retry credentials are null when no selection yields a connection", async (
   assert.equal(afterThrow, null);
 });
 
-test("a lease, a pinned connection or a quota key replays without a selection", async () => {
+test("a lease or a pinned connection replays without a selection", async () => {
   const cases = [
     { ...unconstrained, leased: true },
     { ...unconstrained, forcedConnectionId: "conn-a" },
-    { ...unconstrained, apiKey: { allowedQuotas: ["pool-1"] } },
   ];
   for (const routing of cases) {
     const { calls, select } = recordingSelector({ "conn-a": { connectionId: "conn-b" } });

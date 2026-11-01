@@ -6,7 +6,7 @@
 
 ## Ikhtisar
 
-Redis merupakan **dependensi lunak yang opsional** di OmniRoute — aplikasi akan menurun fungsinya secara bertahap (menggunakan
+Redis merupakan **dependensi lunak yang opsional** di 67router — aplikasi akan menurun fungsinya secara bertahap (menggunakan
 fallback dalam memori) ketika Redis tidak tersedia. Dalam produksi, penyetelan Redis mengurangi latensi untuk empat
 beban kerja yang berbeda:
 
@@ -17,7 +17,7 @@ beban kerja yang berbeda:
 | Penyimpanan kuota         | `redisQuotaStore.ts`          | Singleton `getRedisClient(url)` terpisah                               | `<prefix>quota:*` yang dapat dikonfigurasi per instans |
 | Circuit breaker pemanasan | `redisCircuitBreakerStore.ts` | Klien terpisah di `circuitBreakerFactory.ts`                           | `<prefix>warmup:cb:<connectionId>`                     |
 
-Keempat beban kerja menggunakan satu prefiks namespace yang sama agar OmniRoute dapat berjalan berdampingan dengan aplikasi lain pada
+Keempat beban kerja menggunakan satu prefiks namespace yang sama agar 67router dapat berjalan berdampingan dengan aplikasi lain pada
 satu instans Redis (misalnya `127.0.0.1:6379`). Lihat [Namespace Kunci](#key-namespacing).
 
 ---
@@ -41,14 +41,14 @@ satu instans Redis (misalnya `127.0.0.1:6379`). Lihat [Namespace Kunci](#key-nam
 
 ## Namespace Kunci
 
-OmniRoute berbagi sebuah instans Redis dengan layanan lain apa pun yang berjalan pada host tersebut. Tanpa namespace,
+67router berbagi sebuah instans Redis dengan layanan lain apa pun yang berjalan pada host tersebut. Tanpa namespace,
 kunci seperti `auth:api_key:<sha256>` atau `rl:*` dapat bertabrakan dengan kunci dari aplikasi lain
 yang menggunakan Redis yang sama (instans ini menjalankan Redis pada `127.0.0.1:6379` bersama layanan lain).
 
-Tetapkan `REDIS_KEY_PREFIX` ke string yang tidak kosong untuk menambahkan prefiks ke **setiap** kunci OmniRoute:
+Tetapkan `REDIS_KEY_PREFIX` ke string yang tidak kosong untuk menambahkan prefiks ke **setiap** kunci 67router:
 
 ```bash
-# .env — semua kunci OmniRoute menjadi omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
+# .env — semua kunci 67router menjadi omniroute:rl:*, omniroute:auth:*, omniroute:quota:*, omniroute:warmup:cb:*
 REDIS_KEY_PREFIX=omniroute:
 ```
 
@@ -103,7 +103,7 @@ const redis = new Redis(REDIS_URL, {
 maxmemory 80%                        # sisakan ruang untuk cache halaman OS
 maxmemory-policy allkeys-lru         # keluarkan entri cache autentikasi yang usang saat ada tekanan memori
 
-# Persistensi (opsional — OmniRoute aman dari crash tanpanya)
+# Persistensi (opsional — 67router aman dari crash tanpanya)
 save 300 1                           # buat snapshot setidaknya setiap 5 menit jika ≥1 kunci berubah
 appendonly no                        # AOF tidak diperlukan; data dapat dibuat ulang
 appendfsync no                       # tanpa overhead fsync (RDB sudah memadai)

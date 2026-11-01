@@ -8,7 +8,7 @@
 > **最後更新：** 2026-09-16
 > **適用對象：** 新增、維護或偵錯嵌入式服務（9Router、CLIProxyAPI、Mux、Bifrost、open-wa、LLMLingua）的工程師。
 
-嵌入式服務是安裝於本機的行程伴隨工具，由 OmniRoute 負責安裝、監督，並將其公開為一級路由目標。不同於外部提供者（透過網際網路使用 API 金鑰連線），嵌入式服務與 OmniRoute 在同一台機器上執行，並透過迴送介面進行通訊。
+嵌入式服務是安裝於本機的行程伴隨工具，由 67router 負責安裝、監督，並將其公開為一級路由目標。不同於外部提供者（透過網際網路使用 API 金鑰連線），嵌入式服務與 67router 在同一台機器上執行，並透過迴送介面進行通訊。
 
 ---
 
@@ -33,7 +33,7 @@
 
 | 服務            | npm 套件                            | 預設連接埠 | 用途                                                                                                                                                                                                                                                                    |
 | --------------- | ----------------------------------- | :--------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                           |   20130    | OmniRoute 可作為次級提供者使用的 AI 路由器。模型會公開為 `9router/{sub}/{model}`                                                                                                                                                                                        |
+| **9Router**     | `9router`                           |   20130    | 67router 可作為次級提供者使用的 AI 路由器。模型會公開為 `9router/{sub}/{model}`                                                                                                                                                                                         |
 | **CLIProxyAPI** | GitHub 發行版二進位檔（`cliproxy`） |    8317    | 用於 Anthropic CLI 驗證流程的本機代理配接器。當 OAuth 權杖過期時提供備援路由                                                                                                                                                                                            |
 | **Mux**         | `mux`（無介面的 `mux server`）      |    8322    | 本機代理程式協調守護程序（coder/mux）。僅管理生命週期——不是路由目標（不進行 LLM 代理）。                                                                                                                                                                                |
 | **Bifrost**     | `@maximhq/bifrost`                  |    8080    | Go AI 閘道轉送後端。執行時，會由轉送路由（`/v1/relay/`）自動選取                                                                                                                                                                                                        |
@@ -43,21 +43,21 @@
 
 這七項服務皆採用相同的監管模型：
 
-- OmniRoute 會將它們安裝於 `DATA_DIR/services/{name}/` 下（與 OmniRoute 自身的 `package.json` 隔離）
-- OmniRoute 會將它們作為子程序啟動並加以監控
-- OmniRoute 會將暫時性 API 金鑰注入子程序的環境中，並在不中斷服務的情況下輪替金鑰（如適用）
+- 67router 會將它們安裝於 `DATA_DIR/services/{name}/` 下（與 67router 自身的 `package.json` 隔離）
+- 67router 會將它們作為子程序啟動並加以監控
+- 67router 會將暫時性 API 金鑰注入子程序的環境中，並在不中斷服務的情況下輪替金鑰（如適用）
 - 所有管理路由（`/api/services/*`）皆為 **LOCAL_ONLY**——只能從迴路介面存取（硬性規則 #17）
 
 ### 關鍵決策（源自設計方案）
 
-| 決策                       | 值                                                                  |
-| -------------------------- | ------------------------------------------------------------------- |
-| 儀表板存取 9Router 原生 UI | 位於 `/dashboard/providers/services/9router/embed/*` 的反向代理     |
-| 安裝機制                   | 透過 `execFile` 執行 `npm install {package}`（不使用 shell 插值）   |
-| 使用模式                   | 在路由引擎中將提供者註冊為 `9router/{sub}/{model}`                  |
-| API 金鑰管理               | OmniRoute 產生金鑰、進行靜態加密（AES-256-GCM），並透過環境變數注入 |
-| 儀表板位置                 | `/dashboard/providers/services`（三個分頁）                         |
-| 自動啟動                   | 各服務可個別切換，預設為關閉                                        |
+| 決策                       | 值                                                                 |
+| -------------------------- | ------------------------------------------------------------------ |
+| 儀表板存取 9Router 原生 UI | 位於 `/dashboard/providers/services/9router/embed/*` 的反向代理    |
+| 安裝機制                   | 透過 `execFile` 執行 `npm install {package}`（不使用 shell 插值）  |
+| 使用模式                   | 在路由引擎中將提供者註冊為 `9router/{sub}/{model}`                 |
+| API 金鑰管理               | 67router 產生金鑰、進行靜態加密（AES-256-GCM），並透過環境變數注入 |
+| 儀表板位置                 | `/dashboard/providers/services`（三個分頁）                        |
+| 自動啟動                   | 各服務可個別切換，預設為關閉                                       |
 
 ---
 
@@ -217,7 +217,7 @@
 #### `POST /api/services/9router/install`
 
 從 npm 安裝 9Router。建立包含其自身 `package.json` 與 `node_modules/` 的
-`DATA_DIR/services/9router/`。不會與 OmniRoute 自身的相依套件衝突。
+`DATA_DIR/services/9router/`。不會與 67router 自身的相依套件衝突。
 
 **請求主體**（皆為選填）：
 
@@ -375,7 +375,7 @@ EACCES 錯誤會以易讀的訊息呈現。
 
 #### `POST /api/services/9router/auto-start`
 
-切換自動啟動旗標。當 `enabled: true` 時，服務會在 OmniRoute 下次啟動時自動
+切換自動啟動旗標。當 `enabled: true` 時，服務會在 67router 下次啟動時自動
 啟動（前提是已安裝該服務）。
 
 **請求主體：**
@@ -582,7 +582,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 此代理：
 
 - 將請求轉送至 `http://127.0.0.1:{port}/{path}`（僅限迴路介面）
-- 移除傳入的 `cookie` 和 `authorization` 標頭（避免 OmniRoute 工作階段外洩）
+- 移除傳入的 `cookie` 和 `authorization` 標頭（避免 67router 工作階段外洩）
 - 注入 `Authorization: Bearer {apiKey}` 以進行 9Router 驗證
 - 從回應中移除 `set-cookie`、`content-security-policy`、`x-frame-options`、`cross-origin-*`
 - 重寫 HTML 回應以注入 `<base href>`，並正規化絕對路徑（`/foo` → `/dashboard/.../embed/foo`）
@@ -613,7 +613,7 @@ Cloudflare/Ngrok 通道取得 JWT，也無法代理至嵌入式服務。
 
 ### API 金鑰注入
 
-9Router 與 Mux 的 HTTP 端點需要 API 金鑰／Bearer 權杖。OmniRoute：
+9Router 與 Mux 的 HTTP 端點需要 API 金鑰／Bearer 權杖。67router：
 
 1. 使用 `crypto.randomBytes(32).toString("base64url")` 產生金鑰，並加上服務專用前綴（9Router 使用 `nr_`，Mux 使用 `mx_`）。
 2. 使用 AES-256-GCM 將其加密後靜態儲存（與提供者憑證使用相同的密碼）。
@@ -761,7 +761,7 @@ auto-start/route.ts POST——切換 auto_start 旗標
 **檢查清單：**
 
 1. 檢查 `GET /api/services/{name}/logs`（或儀表板中的「記錄」面板）。尋找類似 `Error: ENOENT`、`address already in use` 或 `Cannot find module` 的內容。
-2. 確認 `npm` 位於 PATH 中：使用執行 OmniRoute 的同一使用者帳戶執行 `which npm`。
+2. 確認 `npm` 位於 PATH 中：使用執行 67router 的同一使用者帳戶執行 `which npm`。
 3. 確認服務已安裝：檢查 `GET /api/services/{name}/status` 中的 `installedVersion`。如果是 `null`，請先執行安裝。
 4. 檢查 `DATA_DIR/services/{name}/node_modules/` 是否存在且並非空目錄。
 5. 檢查狀態回應中的 `lastError` 欄位，以取得經過清理的結束原因。
@@ -793,7 +793,7 @@ auto-start/route.ts POST——切換 auto_start 旗標
 2. 找出並終止衝突的程序：`lsof -ti :20130 | xargs kill -9`。
 3. 可透過 `bootstrap.ts` 中的 `port` 欄位，為每個服務設定連接埠。
 
-**注意：** 9Router 特別預設使用連接埠 20130，以避免與 OmniRoute 的預設連接埠 20128 衝突。
+**注意：** 9Router 特別預設使用連接埠 20130，以避免與 67router 的預設連接埠 20128 衝突。
 
 ---
 
@@ -803,13 +803,13 @@ auto-start/route.ts POST——切換 auto_start 旗標
 
 **原因：**
 
-- OmniRoute 程序無法寫入 `DATA_DIR` 或其父目錄。
+- 67router 程序無法寫入 `DATA_DIR` 或其父目錄。
 - 在無根 Docker 中執行，但沒有對映磁碟區的寫入權限。
 
 **修正方法：**
 
 1. 檢查 `DATA_DIR`（預設值：`~/.omniroute/`）：`ls -la ~/.omniroute/`
-2. 確保 OmniRoute 程序的使用者擁有該目錄：`chown -R $USER ~/.omniroute/`
+2. 確保 67router 程序的使用者擁有該目錄：`chown -R $USER ~/.omniroute/`
 3. 在 Docker 中，確保磁碟區掛載具有適用於容器使用者的正確權限。
 
 ---
@@ -854,16 +854,16 @@ auto-start/route.ts POST——切換 auto_start 旗標
 
 **問：9Router 和 CLIProxyAPI 可在正式環境／雲端部署中使用嗎？**
 
-可以。這兩項服務都遵循與 OmniRoute 本身相同的本機優先模型。它們在
+可以。這兩項服務都遵循與 67router 本身相同的本機優先模型。它們在
 同一台機器上執行，並透過迴路介面通訊。此處的「正式環境」是指部署
-OmniRoute 的 VPS 或本機伺服器，而非遠端雲端提供者。
+67router 的 VPS 或本機伺服器，而非遠端雲端提供者。
 
 ---
 
 **問：如何偵錯監督器？**
 
 1. 持續查看 SSE 日誌串流：`curl -N http://localhost:20128/api/services/9router/logs`。
-2. 在 OmniRoute 的 pino 輸出中檢查結構化日誌，並依
+2. 在 67router 的 pino 輸出中檢查結構化日誌，並依
    `service:supervisor` 命名空間篩選。
 3. 檢查資料庫資料列：`sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`。
 4. 使用 `GET /api/services/9router/status`，透過單次呼叫查看目前的即時狀態、PID、健康狀況

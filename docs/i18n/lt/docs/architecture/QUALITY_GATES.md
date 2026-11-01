@@ -4,7 +4,7 @@
 
 ---
 
-Šis dokumentas yra pagrindinis visų „OmniRoute“ CI kokybės vartų informacijos šaltinis.
+Šis dokumentas yra pagrindinis visų „67router“ CI kokybės vartų informacijos šaltinis.
 Jame aprašomi visi vartai, ką jie tikrina, kurioje CI užduotyje jie vykdomi, ar jiems
 taikoma reketo bazinė reikšmė, ar sėkmės / nesėkmės politika, ir ar jie blokuoja komponavimą, ar yra tik rekomendaciniai.
 
@@ -268,14 +268,14 @@ Vykdoma po `build`. Nepavykus blokuoja sujungimą.
 
 Jos vykdomos pagal cron tvarkaraštį (ir `workflow_dispatch`), niekada — PR'ams. Visos yra patariamosios.
 
-| Darbo eiga             | Tikrina                                                                                                                                                                           | Blokuojantis     |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `nightly-property`     | fast-check savybių (property) testus su atsitiktine pradine reikšme (seed) ir dideliu vykdymų skaičiumi                                                                           | **Patariamasis** |
-| `nightly-resilience`   | heap augimo tikrintuvą, chaos klaidų injekciją, k6 apkrovos / ilgalaikius (soak) testus                                                                                           | **Patariamasis** |
-| `nightly-llm-security` | promptfoo injekcijų apsaugą (blokavimo režimas) + garak zondus (praleidžiami be tiekėjo slėpinio)                                                                                 | **Patariamasis** |
-| `nightly-schemathesis` | OpenAPI kontrakto fuzzing'ą (schemathesis) prieš veikiantį OmniRoute naudojant `docs/openapi.yaml` — atskleidžia specifikacijos pažeidimus / neapdorotas 500 klaidas (Fazė 8 B.4) | **Patariamasis** |
-| `nightly-mutation`     | Stryker mutacinio testavimo balą greitoje vienetinių testų juostoje — išgyvenę mutantai atskleidžia silpnus teiginius                                                             | **Patariamasis** |
-| `nightly-compat`       | Node variklio suderinamumo matricą per palaikomas `engines.node` sritis                                                                                                           | **Patariamasis** |
+| Darbo eiga             | Tikrina                                                                                                                                                                          | Blokuojantis     |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `nightly-property`     | fast-check savybių (property) testus su atsitiktine pradine reikšme (seed) ir dideliu vykdymų skaičiumi                                                                          | **Patariamasis** |
+| `nightly-resilience`   | heap augimo tikrintuvą, chaos klaidų injekciją, k6 apkrovos / ilgalaikius (soak) testus                                                                                          | **Patariamasis** |
+| `nightly-llm-security` | promptfoo injekcijų apsaugą (blokavimo režimas) + garak zondus (praleidžiami be tiekėjo slėpinio)                                                                                | **Patariamasis** |
+| `nightly-schemathesis` | OpenAPI kontrakto fuzzing'ą (schemathesis) prieš veikiantį 67router naudojant `docs/openapi.yaml` — atskleidžia specifikacijos pažeidimus / neapdorotas 500 klaidas (Fazė 8 B.4) | **Patariamasis** |
+| `nightly-mutation`     | Stryker mutacinio testavimo balą greitoje vienetinių testų juostoje — išgyvenę mutantai atskleidžia silpnus teiginius                                                            | **Patariamasis** |
+| `nightly-compat`       | Node variklio suderinamumo matricą per palaikomas `engines.node` sritis                                                                                                          | **Patariamasis** |
 
 Našumo bazinės vertės (heap, TTFB, surinkimo trukmė) fiksuojamos, bet netikrinamos: žr. [`PERF_BASELINE.md`](../ops/PERF_BASELINE.md) (`npm run perf:lts-baseline`).
 
@@ -558,7 +558,7 @@ leidžiamųjų sąrašu sukuria klaidingą kokybės įspūdį.
 
 ## Agentų įrankiai: LSP cikle (pasirenkama)
 
-Be CI patikrų, „OmniRoute“ pateikia **pasirenkamą** `agent-lsp` karkasą
+Be CI patikrų, „67router“ pateikia **pasirenkamą** `agent-lsp` karkasą
 (projekto lygmens `.mcp.json`, 7 etapas, 15 užduotis). Sukurkite `.mcp.json`,
 kad programavimo agentams būtų pasiekiamas TypeScript kalbos serveris ir jie galėtų išspręsti simbolių /
 diagnostikos problemas **prieš** rašydami kodą — tai kompiliavimo prieš teiginį papildinys

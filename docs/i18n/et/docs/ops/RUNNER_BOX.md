@@ -5,7 +5,7 @@
 ---
 
 Isehostitud ressursikogum töötab **.113** masinas (`tomni-proxmox-113`). Alates 2026-10-18 on igal
-OmniRoute'i täituril **üks roll**, üks silt ning selle töökoormuse mõõtmistulemustele vastav mälu- ja
+67router'i täituril **üks roll**, üks silt ning selle töökoormuse mõõtmistulemustele vastav mälu- ja
 CPU-eelarve. Turbopacki pesa saab koosteks vajalikud ressursid; teised pesad on seadistatud vastavalt
 nende mõõdetud tippkoormustele. Masinas tekib ülebroneerimine ainult siis, kui Turbopacki kooste langeb
 kokku Release-Greeni webpacki kooste ja lint-tööga; hosti saaleala (16 GB) tasandab selle ning kuna
@@ -27,7 +27,7 @@ Mõõdetud 2026-10-18:
 | saaleala  | 16 GB                                    | `omniroute-113-5` töötab ilma saalealata (`MemorySwapMax=0`), et kontrolli alt väljunud kooste peatuks piirangu saavutamisel ega sunniks kogu masinat saalima                                                                                                                                                                                                                                         |
 | `/tmp`    | **12 GB tmpfs = RAM**                    | kõik sinna paigutatu kasutab mälu; ülejäägid eemaldatakse 3 tunni pärast                                                                                                                                                                                                                                                                                                                              |
 | CPU       | 32 tuumaga masinas täheldati koormust 60 | enne kvootide rakendamist jättis üks Turbopacki kooste (~1166 % CPU) koos samas masinas töötava katvustestide komplektiga teiste kuulajate südamelöögid ressurssideta (`The self-hosted runner lost communication`, #16853)                                                                                                                                                                           |
-| täiturid  | **6 kuulajat**                           | 4 OmniRoute'i + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` on keelatud (`systemctl enable --now` toob ühe neist tagasi)                                                                                                                                                                                                                                                                        |
+| täiturid  | **6 kuulajat**                           | 4 67router'i + OmniHeuris + OmniMind; `omniroute-113-3/-4/-7/-8` on keelatud (`systemctl enable --now` toob ühe neist tagasi)                                                                                                                                                                                                                                                                         |
 
 Piirangud asuvad iga üksuse failis `/etc/systemd/system/actions.runner.<…>.service.d/override.conf`
 (varasemad väärtused on säilitatud failis `override.conf.bak-20261018`) ning need rakendati töötavas süsteemis käsuga
@@ -75,7 +75,7 @@ töö on tühistatud, ja kuulaja läheb ise uuesti võrku.
 
 Runner'i vaikimisi `KillMode=process` jätab üksuse peatamisel või taaskäivitamisel
 `Runner.Worker → npm → next-build` tööle — orvuks jäänud build jätkab RAM-i ja CPU
-tarbimist, ilma et sellega oleks seotud ühtegi tööd. Igal OmniRoute'i üksusel on
+tarbimist, ilma et sellega oleks seotud ühtegi tööd. Igal 67router'i üksusel on
 lisakonfiguratsioon
 (`/etc/systemd/system/actions.runner.diegosouzapw-OmniRoute.<name>.service.d/10-killmode.conf`)
 väärtusega `KillMode=mixed`: esmalt saadetakse kuulajale SIGTERM ja `TimeoutStop`
@@ -120,7 +120,7 @@ jõudeoleku kontrolli ja taaskäivituse sama käsuga.
   ainult taustarakenduse `next build`i (~5–6 GB; webpack), ning `quality.yml` tööd `lint-guard`. Masinal `omniroute-113`
   oli kuni 2026-10-18 väärtus `MemoryHigh=4G` — promptfoo build veetis seal mälu tagasinõudmise tõttu 54 minutit;
   8 GB eemaldab pidurdamise.
-- **Teadlikult vähem listenereid.** Neli OmniRoute'i üksust keelati 2026-08-29 — iga täiendav
+- **Teadlikult vähem listenereid.** Neli 67router'i üksust keelati 2026-08-29 — iga täiendav
   listener on eespool kirjeldatud mälueelarve uus tarbija. Koristaja ülempiir on 6 (`MAX_ACTIVE_RUNNERS=6` cronis): see loendab
   masinas iga `Runner.Listener`i ning OmniHeuris + OmniMind lisavad meie neljale veel kaks.
 - **Ärge kunagi puhastage `/tmp` ega `_work`i käsitsi, kui mõni runner on hõivatud.**

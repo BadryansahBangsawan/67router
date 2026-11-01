@@ -4,7 +4,7 @@
 
 ---
 
-Ojú-ìwé yìí ṣàlàyé ìhùwàsí `.env` abẹ́lé ti iṣẹ́ náà àti bí a ṣe lè bójú tó àwọn fáìlì àyíká àti àwọn àṣírí nígbà tí a bá ń ṣe àgbékalẹ̀ OmniRoute.
+Ojú-ìwé yìí ṣàlàyé ìhùwàsí `.env` abẹ́lé ti iṣẹ́ náà àti bí a ṣe lè bójú tó àwọn fáìlì àyíká àti àwọn àṣírí nígbà tí a bá ń ṣe àgbékalẹ̀ 67router.
 
 ## Ìhùwàsí `.env` lẹ́yìn ìfìmọ́lẹ̀
 

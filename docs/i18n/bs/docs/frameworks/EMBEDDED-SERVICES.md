@@ -8,9 +8,9 @@
 > **Posljednje ažuriranje:** 2026-09-16
 > **Ciljna publika:** Inženjeri koji dodaju, održavaju ili otklanjaju greške u ugrađenim servisima (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Ugrađeni servisi su lokalno instalirani pomoćni procesni alati koje OmniRoute instalira, nadzire i
+Ugrađeni servisi su lokalno instalirani pomoćni procesni alati koje 67router instalira, nadzire i
 izlaže kao punopravna odredišta za usmjeravanje. Za razliku od vanjskih pružalaca usluga (kojima se pristupa putem interneta
-pomoću API ključeva), ugrađeni servisi izvršavaju se na istom računaru kao OmniRoute i komuniciraju putem povratne petlje.
+pomoću API ključeva), ugrađeni servisi izvršavaju se na istom računaru kao 67router i komuniciraju putem povratne petlje.
 
 ---
 
@@ -35,7 +35,7 @@ Ugrađeno je sedam servisa:
 
 | Servis          | npm paket                                       | Zadani port | Namjena                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------- | ----------------------------------------------- | :---------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                                       |    20130    | AI usmjerivač koji OmniRoute može koristiti kao podpružaoca. Modeli su izloženi kao `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                    |
+| **9Router**     | `9router`                                       |    20130    | AI usmjerivač koji 67router može koristiti kao podpružaoca. Modeli su izloženi kao `9router/{sub}/{model}`                                                                                                                                                                                                                                                                                     |
 | **CLIProxyAPI** | Binarna datoteka GitHub izdanja (`cliproxy`)    |    8317     | Lokalni proxy adapter za tokove autentifikacije Anthropic CLI-ja. Omogućava rezervno usmjeravanje kada OAuth tokeni isteknu                                                                                                                                                                                                                                                                    |
 | **Mux**         | `mux` (`mux server` bez korisničkog interfejsa) |    8322     | Lokalni demon za orkestraciju agenata (coder/mux). Upravlja se samo životnim ciklusom — nije odredište usmjeravanja (nema LLM proxyja).                                                                                                                                                                                                                                                        |
 | **Bifrost**     | `@maximhq/bifrost`                              |    8080     | Pozadinski Go relejni AI pristupnik. Kada je pokrenut, automatski ga odabire relejna ruta (`/v1/relay/`)                                                                                                                                                                                                                                                                                       |
@@ -45,21 +45,21 @@ Ugrađeno je sedam servisa:
 
 Svih sedam koristi isti nadzorni model:
 
-- OmniRoute ih instalira u `DATA_DIR/services/{name}/` (izolirano od OmniRouteove vlastite datoteke `package.json`)
-- OmniRoute ih pokreće i nadzire kao podređene procese
-- OmniRoute umeće privremeni API ključ u okruženje podređenog procesa i rotira ga bez prekida rada (gdje je primjenjivo)
+- 67router ih instalira u `DATA_DIR/services/{name}/` (izolirano od 67routerove vlastite datoteke `package.json`)
+- 67router ih pokreće i nadzire kao podređene procese
+- 67router umeće privremeni API ključ u okruženje podređenog procesa i rotira ga bez prekida rada (gdje je primjenjivo)
 - Sve upravljačke rute (`/api/services/*`) su **LOCAL_ONLY** — dostupne samo s povratne petlje (strogo pravilo #17)
 
 ### Ključne odluke (iz plana dizajna)
 
-| Odluka                                                          | Vrijednost                                                                                 |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Pristup nadzorne ploče izvornom korisničkom interfejsu 9Routera | Obrnuti proxy na `/dashboard/providers/services/9router/embed/*`                           |
-| Mehanizam instalacije                                           | `npm install {package}` putem `execFile` (bez interpolacije ljuske)                        |
-| Način korištenja                                                | Pružalac registriran kao `9router/{sub}/{model}` u mehanizmu usmjeravanja                  |
-| Upravljanje API ključem                                         | OmniRoute ga generira, šifrira pri pohrani (AES-256-GCM) i umeće putem varijable okruženja |
-| Lokacija nadzorne ploče                                         | `/dashboard/providers/services` (tri kartice)                                              |
-| Automatsko pokretanje                                           | Prekidač za svaki servis, zadano ISKLJUČENO                                                |
+| Odluka                                                          | Vrijednost                                                                                |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Pristup nadzorne ploče izvornom korisničkom interfejsu 9Routera | Obrnuti proxy na `/dashboard/providers/services/9router/embed/*`                          |
+| Mehanizam instalacije                                           | `npm install {package}` putem `execFile` (bez interpolacije ljuske)                       |
+| Način korištenja                                                | Pružalac registriran kao `9router/{sub}/{model}` u mehanizmu usmjeravanja                 |
+| Upravljanje API ključem                                         | 67router ga generira, šifrira pri pohrani (AES-256-GCM) i umeće putem varijable okruženja |
+| Lokacija nadzorne ploče                                         | `/dashboard/providers/services` (tri kartice)                                             |
+| Automatsko pokretanje                                           | Prekidač za svaki servis, zadano ISKLJUČENO                                               |
 
 ---
 
@@ -223,7 +223,7 @@ Zahtjevi koji ne dolaze s povratne petlje dobijaju `403 LOCAL_ONLY` bez obzira n
 #### `POST /api/services/9router/install`
 
 Instalira 9Router iz npm-a. Kreira `DATA_DIR/services/9router/` s vlastitim
-`package.json` i `node_modules/`. Nije u konfliktu s vlastitim zavisnostima OmniRoutea.
+`package.json` i `node_modules/`. Nije u konfliktu s vlastitim zavisnostima 67routera.
 
 **Tijelo zahtjeva** (sve opcionalno):
 
@@ -384,7 +384,7 @@ Vraća kombinovani status uživo i status iz baze podataka, uključujući metapo
 #### `POST /api/services/9router/auto-start`
 
 Uključuje ili isključuje zastavicu automatskog pokretanja. Kada je `enabled: true`, servis se automatski pokreće
-sljedeći put kada se OmniRoute pokrene (ako je servis instaliran).
+sljedeći put kada se 67router pokrene (ako je servis instaliran).
 
 **Tijelo zahtjeva:**
 
@@ -593,7 +593,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Ovaj proxy:
 
 - Prosljeđuje zahtjev na `http://127.0.0.1:{port}/{path}` (samo povratna petlja)
-- Uklanja dolazna zaglavlja `cookie` i `authorization` (bez curenja OmniRoute sesije)
+- Uklanja dolazna zaglavlja `cookie` i `authorization` (bez curenja 67router sesije)
 - Umeće `Authorization: Bearer {apiKey}` za 9Router autentifikaciju
 - Uklanja `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` iz odgovora
 - Prepravlja HTML odgovore radi umetanja `<base href>` i normaliziranja apsolutnih putanja (`/foo` → `/dashboard/.../embed/foo`)
@@ -629,7 +629,7 @@ nivoa.
 ### Umetanje API ključa
 
 9Router i Mux zahtijevaju API ključ/bearer token za vlastite HTTP krajnje tačke.
-OmniRoute:
+67router:
 
 1. Generira ključ putem `crypto.randomBytes(32).toString("base64url")` s
    prefiksom specifičnim za servis (`nr_` za 9Router, `mx_` za Mux).
@@ -809,7 +809,7 @@ Ako ugrađeni servis izlaže krajnju tačku `/v1/chat/completions` kompatibilnu 
 
 1. Provjerite `GET /api/services/{name}/logs` (ili panel Logs na nadzornoj ploči). Potražite
    redove poput `Error: ENOENT`, `address already in use` ili `Cannot find module`.
-2. Provjerite je li `npm` u PATH-u: pokrenite `which npm` s istog korisničkog računa pod kojim je pokrenut OmniRoute.
+2. Provjerite je li `npm` u PATH-u: pokrenite `which npm` s istog korisničkog računa pod kojim je pokrenut 67router.
 3. Provjerite je li servis instaliran: provjerite `GET /api/services/{name}/status` i
    polje `installedVersion`. Ako je `null`, prvo pokrenite instalaciju.
 4. Provjerite postoji li `DATA_DIR/services/{name}/node_modules/` i da nije prazan.
@@ -847,7 +847,7 @@ vremena za pokretanje povećajte `healthIntervalMs` na 5000 i `stopTimeoutMs` na
 3. Port se može konfigurirati zasebno za svaki servis u `bootstrap.ts` putem polja `port`.
 
 **Napomena:** 9Router zadano koristi port 20130 kako bi se izbjegao sukob sa
-zadanim portom 20128 za OmniRoute.
+zadanim portom 20128 za 67router.
 
 ---
 
@@ -857,13 +857,13 @@ zadanim portom 20128 za OmniRoute.
 
 **Uzroci:**
 
-- OmniRoute proces nema dozvolu za pisanje u `DATA_DIR` ili njegov nadređeni direktorij.
+- 67router proces nema dozvolu za pisanje u `DATA_DIR` ili njegov nadređeni direktorij.
 - Pokretanje unutar Docker okruženja bez root ovlasti i bez pristupa za pisanje na mapirani volumen.
 
 **Rješenje:**
 
 1. Provjerite `DATA_DIR` (zadano: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Osigurajte da je korisnik OmniRoute procesa vlasnik direktorija: `chown -R $USER ~/.omniroute/`
+2. Osigurajte da je korisnik 67router procesa vlasnik direktorija: `chown -R $USER ~/.omniroute/`
 3. U Dockeru osigurajte da montirani volumen ima odgovarajuće dozvole za korisnika kontejnera.
 
 ---
@@ -912,9 +912,9 @@ iz liste za zaobilaženje provjere opsega manage. Pogledajte
 
 **P: Hoće li 9Router i CLIProxyAPI biti dostupni u produkcijskim/cloud implementacijama?**
 
-Da. Oba servisa slijede isti model prvenstveno lokalnog rada kao i sam OmniRoute.
+Da. Oba servisa slijede isti model prvenstveno lokalnog rada kao i sam 67router.
 Pokreću se na istom računaru i komuniciraju preko loopback interfejsa. „Produkcija“
-ovdje znači VPS ili lokalni server na kojem je OmniRoute implementiran, a ne udaljenog
+ovdje znači VPS ili lokalni server na kojem je 67router implementiran, a ne udaljenog
 cloud pružaoca usluga.
 
 ---
@@ -922,7 +922,7 @@ cloud pružaoca usluga.
 **P: Kako mogu otkloniti greške u supervizoru?**
 
 1. Pratite SSE tok logova: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Provjerite strukturirane logove u OmniRoute pino izlazu, filtrirane prema
+2. Provjerite strukturirane logove u 67router pino izlazu, filtrirane prema
    prostoru imena `service:supervisor`.
 3. Pregledajte red u bazi podataka: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Koristite `GET /api/services/9router/status` da biste u jednom pozivu vidjeli trenutno stanje uživo, PID, zdravlje

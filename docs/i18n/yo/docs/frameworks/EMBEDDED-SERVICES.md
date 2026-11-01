@@ -8,7 +8,7 @@
 > **Ìgbà ìmúdójúìwọ̀n tó kẹ́yìn:** 2026-09-16
 > **Àwọn olùkà:** Àwọn onímọ̀-ẹ̀rọ tó ń ṣàfikún, tọ́jú, tàbí ṣàtúnṣe àṣìṣe àwọn iṣẹ́ tó wà nínú ètò (9Router, CLIProxyAPI, Mux, Bifrost, open-wa, LLMLingua).
 
-Àwọn iṣẹ́ tó wà nínú ètò jẹ́ àwọn irinṣẹ́ sidecar tó ń ṣiṣẹ́ gẹ́gẹ́ bí process, tí a fi sórí ẹ̀rọ náà fúnra rẹ̀, tí OmniRoute sì ń fi sórí ẹ̀rọ, ń ṣàbójútó, tí ó sì ń mú kí wọ́n ṣeé lò gẹ́gẹ́ bí àwọn ibi-afẹ́ ìdarí ọ̀nà àkọ́kọ́. Yàtọ̀ sí àwọn olùpèsè òde (tí a máa ń dé ọ̀dọ̀ wọn lórí íńtánẹ́ẹ̀tì nípasẹ̀ àwọn API keys), àwọn iṣẹ́ tó wà nínú ètò ń ṣiṣẹ́ lórí ẹ̀rọ kan náà pẹ̀lú OmniRoute, wọ́n sì ń bá ara wọn sọ̀rọ̀ nípasẹ̀ loopback.
+Àwọn iṣẹ́ tó wà nínú ètò jẹ́ àwọn irinṣẹ́ sidecar tó ń ṣiṣẹ́ gẹ́gẹ́ bí process, tí a fi sórí ẹ̀rọ náà fúnra rẹ̀, tí 67router sì ń fi sórí ẹ̀rọ, ń ṣàbójútó, tí ó sì ń mú kí wọ́n ṣeé lò gẹ́gẹ́ bí àwọn ibi-afẹ́ ìdarí ọ̀nà àkọ́kọ́. Yàtọ̀ sí àwọn olùpèsè òde (tí a máa ń dé ọ̀dọ̀ wọn lórí íńtánẹ́ẹ̀tì nípasẹ̀ àwọn API keys), àwọn iṣẹ́ tó wà nínú ètò ń ṣiṣẹ́ lórí ẹ̀rọ kan náà pẹ̀lú 67router, wọ́n sì ń bá ara wọn sọ̀rọ̀ nípasẹ̀ loopback.
 
 ---
 
@@ -33,7 +33,7 @@
 
 | Iṣẹ́             | Package npm                        | Port àìyípadà | Ète                                                                                                                                                                                                                                                                                                                                            |
 | --------------- | ---------------------------------- | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9Router**     | `9router`                          |     20130     | Olùdarí AI tí OmniRoute lè lò gẹ́gẹ́ bí olùpèsè abẹ́lé. Àwọn model ni a fi hàn gẹ́gẹ́ bí `9router/{sub}/{model}`                                                                                                                                                                                                                                    |
+| **9Router**     | `9router`                          |     20130     | Olùdarí AI tí 67router lè lò gẹ́gẹ́ bí olùpèsè abẹ́lé. Àwọn model ni a fi hàn gẹ́gẹ́ bí `9router/{sub}/{model}`                                                                                                                                                                                                                                     |
 | **CLIProxyAPI** | Binary ìtújáde GitHub (`cliproxy`) |     8317      | Adapter proxy agbègbè fún àwọn ìṣàn ìfàṣẹsí Anthropic CLI. Ó ń pèsè ìdarí àfẹ́yìntì nígbà tí àwọn token OAuth bá parí                                                                                                                                                                                                                           |
 | **Mux**         | `mux` (`mux server` aláìní UI)     |     8322      | Daemon agbègbè fún ìṣètò àwọn agent (coder/mux). Ìgbésí-ayé rẹ̀ nìkan ni a ń ṣàkóso — kì í ṣe ibi-àfojúsùn ìdarí (kò sí proxy LLM).                                                                                                                                                                                                             |
 | **Bifrost**     | `@maximhq/bifrost`                 |     8080      | Backend relay ẹnu-ọ̀nà AI Go. Nígbà tí ó bá ń ṣiṣẹ́, ipa-ọ̀nà relay (`/v1/relay/`) yóò yàn án fúnra rẹ̀                                                                                                                                                                                                                                            |
@@ -43,21 +43,21 @@
 
 Gbogbo àwọn méje náà ń tẹ̀lé àwòṣe àbójútó kan náà:
 
-- OmniRoute ń fi wọ́n sí abẹ́ `DATA_DIR/services/{name}/` (tí a yà sọ́tọ̀ kúrò nínú `package.json` ti OmniRoute fúnra rẹ̀)
-- OmniRoute ń dá wọn sílẹ̀, ó sì ń ṣàbójútó wọn gẹ́gẹ́ bí child processes
-- OmniRoute ń fi API key ìgbà díẹ̀ sínú environment ti child, ó sì ń yí i padà láìdá iṣẹ́ dúró (níbi tí ó bá wúlò)
+- 67router ń fi wọ́n sí abẹ́ `DATA_DIR/services/{name}/` (tí a yà sọ́tọ̀ kúrò nínú `package.json` ti 67router fúnra rẹ̀)
+- 67router ń dá wọn sílẹ̀, ó sì ń ṣàbójútó wọn gẹ́gẹ́ bí child processes
+- 67router ń fi API key ìgbà díẹ̀ sínú environment ti child, ó sì ń yí i padà láìdá iṣẹ́ dúró (níbi tí ó bá wúlò)
 - Gbogbo àwọn ipa-ọ̀nà ìṣàkóso (`/api/services/*`) jẹ́ **LOCAL_ONLY** — loopback nìkan ni wọ́n ti lè wọ̀ wọ́n (òfin líle #17)
 
 ### Àwọn ìpinnu pàtàkì (láti inú ètò àpẹẹrẹ)
 
-| Ìpinnu                                | Iye                                                                                |
-| ------------------------------------- | ---------------------------------------------------------------------------------- |
-| Ìwọlé dashboard sí UI abinibi 9Router | Reverse proxy ní `/dashboard/providers/services/9router/embed/*`                   |
-| Ọ̀nà ìfikún                            | `npm install {package}` nípasẹ̀ `execFile` (kò sí shell interpolation)              |
-| Ìlànà lílò                            | A forúkọsílẹ̀ olùpèsè gẹ́gẹ́ bí `9router/{sub}/{model}` nínú routing engine           |
-| Ìṣàkóso API key                       | OmniRoute ń ṣẹ̀dá rẹ̀, ó ń encrypt rẹ̀ níbi ìpamọ́ (AES-256-GCM), ó sì ń fi í sínú env |
-| Ibi tí dashboard wà                   | `/dashboard/providers/services` (tabs mẹ́ta)                                        |
-| Ìbẹ̀rẹ̀ aládàáṣiṣẹ́                      | Toggle fún iṣẹ́ kọ̀ọ̀kan, OFF ni àìyípadà                                             |
+| Ìpinnu                                | Iye                                                                               |
+| ------------------------------------- | --------------------------------------------------------------------------------- |
+| Ìwọlé dashboard sí UI abinibi 9Router | Reverse proxy ní `/dashboard/providers/services/9router/embed/*`                  |
+| Ọ̀nà ìfikún                            | `npm install {package}` nípasẹ̀ `execFile` (kò sí shell interpolation)             |
+| Ìlànà lílò                            | A forúkọsílẹ̀ olùpèsè gẹ́gẹ́ bí `9router/{sub}/{model}` nínú routing engine          |
+| Ìṣàkóso API key                       | 67router ń ṣẹ̀dá rẹ̀, ó ń encrypt rẹ̀ níbi ìpamọ́ (AES-256-GCM), ó sì ń fi í sínú env |
+| Ibi tí dashboard wà                   | `/dashboard/providers/services` (tabs mẹ́ta)                                       |
+| Ìbẹ̀rẹ̀ aládàáṣiṣẹ́                      | Toggle fún iṣẹ́ kọ̀ọ̀kan, OFF ni àìyípadà                                            |
 
 ---
 
@@ -218,7 +218,7 @@ Gbogbo àwọn ipa-ọ̀nà lábẹ́ `/api/services/` jẹ́ **LOCAL_ONLY** (lo
 #### `POST /api/services/9router/install`
 
 Fi 9Router sori ẹrọ láti npm. Èyí ṣẹ̀dá `DATA_DIR/services/9router/` pẹ̀lú
-`package.json` àti `node_modules/` tirẹ̀. Kò ní tako àwọn dependency ti OmniRoute fúnra rẹ̀.
+`package.json` àti `node_modules/` tirẹ̀. Kò ní tako àwọn dependency ti 67router fúnra rẹ̀.
 
 **Ara ìbéèrè** (gbogbo rẹ̀ jẹ́ àṣàyàn):
 
@@ -379,7 +379,7 @@ A tọ́jú rẹ̀ ní ìrísí encrypted (AES-256-GCM) nínú table `version_ma
 #### `POST /api/services/9router/auto-start`
 
 Tan tàbí pa àmì auto-start. Nígbà tí `enabled: true`, service náà yóò bẹ̀rẹ̀ fúnra rẹ̀
-nígbà míràn tí OmniRoute bá boot (bí a bá ti fi service náà sori ẹrọ).
+nígbà míràn tí 67router bá boot (bí a bá ti fi service náà sori ẹrọ).
 
 **Ara ìbéèrè:**
 
@@ -587,7 +587,7 @@ GET|POST|... /dashboard/providers/services/9router/embed/[...path]
 Proxy yìí:
 
 - Ń fi ìbéèrè náà ránṣẹ́ sí `http://127.0.0.1:{port}/{path}` (loopback nìkan)
-- Ń yọ àwọn àkọlé `cookie` àti `authorization` tó wọlé kúrò (kò sí jíjó session OmniRoute jáde)
+- Ń yọ àwọn àkọlé `cookie` àti `authorization` tó wọlé kúrò (kò sí jíjó session 67router jáde)
 - Ń fi `Authorization: Bearer {apiKey}` sínú fún ìfàṣẹsí 9Router
 - Ń yọ `set-cookie`, `content-security-policy`, `x-frame-options`, `cross-origin-*` kúrò nínú èsì
 - Ń tún àwọn èsì HTML kọ láti fi `<base href>` sínú àti láti mú àwọn path pípé dọ́gba (`/foo` → `/dashboard/.../embed/foo`)
@@ -623,7 +623,7 @@ kíkún.
 ### Ìfi API key sínú
 
 9Router àti Mux nílò API key/bearer token fún àwọn endpoint HTTP tiwọn.
-OmniRoute:
+67router:
 
 1. Ń ṣẹ̀dá key kan nípasẹ̀ `crypto.randomBytes(32).toString("base64url")` pẹ̀lú
    ìpele-iṣáájú tí ó jẹ́ ti service náà (`nr_` fún 9Router, `mx_` fún Mux).
@@ -803,7 +803,7 @@ Tí service tí a fi sínú rẹ̀ bá ń pèsè endpoint `/v1/chat/completions`
 
 1. Ṣàyẹ̀wò `GET /api/services/{name}/logs` (tàbí pánẹ́ẹ̀lì Logs nínú dashboard). Wá
    àwọn ìlà bíi `Error: ENOENT`, `address already in use`, tàbí `Cannot find module`.
-2. Jẹ́rìí pé `npm` wà nínú PATH: lo `which npm` láti inú àkọọ́lẹ̀ onílò kan náà tí ó ń ṣiṣẹ́ OmniRoute.
+2. Jẹ́rìí pé `npm` wà nínú PATH: lo `which npm` láti inú àkọọ́lẹ̀ onílò kan náà tí ó ń ṣiṣẹ́ 67router.
 3. Jẹ́rìí pé a ti fi iṣẹ́ náà sílẹ̀: ṣàyẹ̀wò `GET /api/services/{name}/status` fún
    `installedVersion`. Tí ó bá jẹ́ `null`, kọ́kọ́ ṣiṣẹ́ ìfisílẹ̀.
 4. Ṣàyẹ̀wò pé `DATA_DIR/services/{name}/node_modules/` wà àti pé kò ṣófo.
@@ -841,7 +841,7 @@ supervisor tó kéde pé àkókò ti parí (ṣùgbọ́n ó máa ń tẹ̀síw�
 3. A lè tún port ṣe fún iṣẹ́ kọ̀ọ̀kan nínú `bootstrap.ts` nípasẹ̀ ààyè `port`.
 
 **Àkíyèsí:** 9Router máa ń lo port 20130 gẹ́gẹ́ bí àkọ́kọ́ ní pàtó láti yẹra fún ìkọlù pẹ̀lú
-port àkọ́kọ́ OmniRoute, 20128.
+port àkọ́kọ́ 67router, 20128.
 
 ---
 
@@ -851,13 +851,13 @@ port àkọ́kọ́ OmniRoute, 20128.
 
 **Àwọn okùnfà:**
 
-- Process OmniRoute kò ní àṣẹ láti kọ sínú `DATA_DIR` tàbí directory òbí rẹ̀.
+- Process 67router kò ní àṣẹ láti kọ sínú `DATA_DIR` tàbí directory òbí rẹ̀.
 - Ṣíṣiṣẹ́ nínú Docker rootless láìní àṣẹ láti kọ sínú volume tí a so mọ́.
 
 **Àtúnṣe:**
 
 1. Ṣàyẹ̀wò `DATA_DIR` (àkọ́kọ́: `~/.omniroute/`): `ls -la ~/.omniroute/`
-2. Rí i dájú pé onílò process OmniRoute ni directory náà: `chown -R $USER ~/.omniroute/`
+2. Rí i dájú pé onílò process 67router ni directory náà: `chown -R $USER ~/.omniroute/`
 3. Nínú Docker, rí i dájú pé volume mount ní àwọn ìyọ̀nda tó tọ́ fún onílò container náà.
 
 ---
@@ -905,16 +905,16 @@ manage-scope. Wo `docs/security/ROUTE_GUARD_TIERS.md`.
 
 **Ì: Ṣé 9Router àti CLIProxyAPI yóò wà fún àwọn ìmúṣiṣẹ́ production/cloud?**
 
-Bẹ́ẹ̀ ni. Àwọn iṣẹ́ méjèèjì ń tẹ̀lé àwòṣe local-first kan náà bí OmniRoute fúnra rẹ̀. Wọ́n ń ṣiṣẹ́
+Bẹ́ẹ̀ ni. Àwọn iṣẹ́ méjèèjì ń tẹ̀lé àwòṣe local-first kan náà bí 67router fúnra rẹ̀. Wọ́n ń ṣiṣẹ́
 lórí ẹ̀rọ kan náà, wọ́n sì ń bá ara wọn sọ̀rọ̀ nípasẹ̀ loopback. "Production" níbí túmọ̀ sí VPS
-tàbí server agbègbè tí a ti fi OmniRoute sí, kì í ṣe cloud provider jíjìnnà kan.
+tàbí server agbègbè tí a ti fi 67router sí, kì í ṣe cloud provider jíjìnnà kan.
 
 ---
 
 **Ì: Báwo ni mo ṣe lè ṣe àyẹ̀wò àṣìṣe supervisor náà?**
 
 1. Tẹ̀lé ìṣàn log SSE náà: `curl -N http://localhost:20128/api/services/9router/logs`.
-2. Ṣàyẹ̀wò àwọn log tí a ṣètò létòlétò nínú output pino ti OmniRoute, tí a ti ṣe filter rẹ̀ pẹ̀lú
+2. Ṣàyẹ̀wò àwọn log tí a ṣètò létòlétò nínú output pino ti 67router, tí a ti ṣe filter rẹ̀ pẹ̀lú
    namespace `service:supervisor`.
 3. Ṣàyẹ̀wò row DB náà: `sqlite3 ~/.omniroute/omniroute.db "SELECT * FROM version_manager WHERE tool='9router'"`.
 4. Lo `GET /api/services/9router/status` láti wo state tó ń ṣiṣẹ́ lọ́wọ́lọ́wọ́, PID, health,

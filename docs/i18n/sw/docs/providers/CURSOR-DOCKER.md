@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute inapoendeshwa ndani ya Docker, mitiririko ya zamani ya **Leta kutoka Cursor IDE** /
+67router inapoendeshwa ndani ya Docker, mitiririko ya zamani ya **Leta kutoka Cursor IDE** /
 `cursor-agent` hushindwa kwa sababu kontena haliwezi kuona usakinishaji wa Cursor kwenye mfumo mwenyeji.
 Badala yake, tumia **Ingia kwa Cursor** (deep-control PKCE).
 
@@ -14,7 +14,7 @@ Badala yake, tumia **Ingia kwa Cursor** (deep-control PKCE).
    `~/.config/Cursor/User/globalStorage/state.vscdb` _ndani_ ya kontena.
    Kwenye Docker Desktop ya macOS, hifadhidata ya IDE ya mfumo mwenyeji haijaunganishwa kwa chaguo-msingi, na
    OS ya kontena ni Linux hata wakati mfumo mwenyeji ni Darwin.
-2. **Hakuna faili tekelezi ya `cursor-agent`** — Picha rasmi za OmniRoute haziji na
+2. **Hakuna faili tekelezi ya `cursor-agent`** — Picha rasmi za 67router haziji na
    `cursor-agent`. Hapo awali, Miundo Inayopatikana ilitekeleza
    `cursor-agent --list-models` kupitia shell na, ikishindwa, ilitumia katalogi tuli.
 3. **Faili tekelezi isiyo sahihi** — **Usiunganishe** `cursor-agent` ya macOS kwenye kontena la
@@ -24,11 +24,11 @@ Badala yake, tumia **Ingia kwa Cursor** (deep-control PKCE).
 
 1. Fungua **Dashibodi → Watoa Huduma → Cursor**.
 2. Chagua kichupo cha **Ingia kwa Cursor**.
-3. Bofya **Ingia kwa Cursor** — OmniRoute hufungua
+3. Bofya **Ingia kwa Cursor** — 67router hufungua
    `https://cursor.com/loginDeepControl?…` katika kivinjari cha **mfumo wako mwenyeji**.
-4. Idhinisha kuingia katika kivinjari, kisha urudi kwenye dashibodi. OmniRoute
+4. Idhinisha kuingia katika kivinjari, kisha urudi kwenye dashibodi. 67router
    huuliza `api2.cursor.sh/auth/poll` mara kwa mara hadi tokeni zipatikane.
-5. OmniRoute huhifadhi tokeni za **ufikiaji + uonyeshaji upya** na kuzionyesha upya kupitia
+5. 67router huhifadhi tokeni za **ufikiaji + uonyeshaji upya** na kuzionyesha upya kupitia
    `https://api2.cursor.sh/auth/exchange_user_api_key`.
 
 Njia hii haihitaji Cursor IDE au `cursor-agent` ndani ya kontena.
@@ -37,10 +37,10 @@ Njia hii haihitaji Cursor IDE au `cursor-agent` ndani ya kontena.
 
 Ukiwa na muunganisho ulioingia, **Miundo Inayopatikana / Usawazishaji Otomatiki** hutanguliza katalogi ya
 HTTP `AiService/AvailableModels` ya Cursor kwa kutumia tokeni bearer ya muunganisho.
-Hilo likishindwa, OmniRoute bado hujaribu `cursor-agent` ya mfumo mwenyeji (ikiwa ipo), kisha
+Hilo likishindwa, 67router bado hujaribu `cursor-agent` ya mfumo mwenyeji (ikiwa ipo), kisha
 mbegu ya sajili tuli.
 
-OmniRoute daima huonyesha **`auto`** katika katalogi (jina linaloonyeshwa “Otomatiki”), pamoja na
+67router daima huonyesha **`auto`** katika katalogi (jina linaloonyeshwa “Otomatiki”), pamoja na
 hali za kipanga-njia za mtindo wa OpenCodex **`auto-cost`**, **`auto-balance`**, na
 **`auto-intelligence`**. Katika mawasiliano, hizi huelekezwa kwenye muundo wa `default` wa Cursor
 (zikiwa na `optimization` ModelParameter kwa aina hizo tatu). Pendelea
@@ -87,7 +87,7 @@ pekee hauhitajiki tena).
 ## Zamu tupu / matumizi yamekwisha
 
 Cursor inapokubali Run lakini hairudishi maandishi ya msaidizi (jambo la kawaida wakati matumizi ya
-kulipia yamekwisha), OmniRoute huonyesha hitilafu ya **429** inayoweza kufanyiwa kazi (viashiria vya kiasi cha matumizi) au
+kulipia yamekwisha), 67router huonyesha hitilafu ya **429** inayoweza kufanyiwa kazi (viashiria vya kiasi cha matumizi) au
 **502** yenye mwongozo — si ujumbe usio na maelezo wa “Mtoa huduma amerudisha maudhui tupu”. Hitilafu za
 utiririshaji kama `not_found: AI Model Not Found` (dirisha la matumizi limekwisha) huainishwa kama
 **kikomo cha kasi cha Cursor / matumizi yamezidi** na huhifadhi ujumbe huo katika mtiririko wa
@@ -96,7 +96,7 @@ Angalia Vikomo vya Mtoa Huduma, jaribu muundo **`auto`**, au ongeza vikomo vya m
 
 ## Toleo la kiteja (bila kiolesura)
 
-Bila usakinishaji wa ndani wa `cursor-agent`, OmniRoute hubaini
+Bila usakinishaji wa ndani wa `cursor-agent`, 67router hubaini
 `x-cursor-client-version` kupitia env `CURSOR_AGENT_CLI_VERSION`, kisha uchambuzi uliohifadhiwa kwenye
 diski wa hati ya usakinishaji ya Cursor, halafu kitambulisho cha toleo kilichobandikwa. Batilisha kwa
 `CURSOR_AGENT_CLI_VERSION` inapohitajika.

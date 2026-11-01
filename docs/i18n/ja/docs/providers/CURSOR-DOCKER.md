@@ -4,7 +4,7 @@
 
 ---
 
-OmniRoute を Docker 内で実行すると、コンテナからホスト側の Cursor
+67router を Docker 内で実行すると、コンテナからホスト側の Cursor
 インストールを参照できないため、従来の **Import from Cursor IDE** /
 `cursor-agent` フローは失敗します。代わりに **Login with Cursor**（deep-control PKCE）
 を使用してください。
@@ -15,7 +15,7 @@ OmniRoute を Docker 内で実行すると、コンテナからホスト側の C
    `~/.config/Cursor/User/globalStorage/state.vscdb` などの Linux パスを検索します。
    macOS 向け Docker Desktop では、ホスト IDE の DB はデフォルトでマウントされず、
    ホストが Darwin であってもコンテナ OS は Linux です。
-2. **`cursor-agent` バイナリがない** — 公式 OmniRoute イメージには
+2. **`cursor-agent` バイナリがない** — 公式 67router イメージには
    `cursor-agent` は含まれていません。以前の Available Models は
    `cursor-agent --list-models` をシェル経由で実行し、失敗した場合は静的カタログに
    フォールバックしていました。
@@ -26,11 +26,11 @@ OmniRoute を Docker 内で実行すると、コンテナからホスト側の C
 
 1. **Dashboard → Providers → Cursor** を開きます。
 2. **Login with Cursor** タブを選択します。
-3. **Login with Cursor** をクリックします。OmniRoute が
+3. **Login with Cursor** をクリックします。67router が
    **ホスト**のブラウザーで `https://cursor.com/loginDeepControl?…` を開きます。
-4. ブラウザーでログインを承認してから、ダッシュボードに戻ります。OmniRoute は
+4. ブラウザーでログインを承認してから、ダッシュボードに戻ります。67router は
    トークンを受信するまで `api2.cursor.sh/auth/poll` をポーリングします。
-5. OmniRoute は **アクセス + リフレッシュ**トークンを保存し、
+5. 67router は **アクセス + リフレッシュ**トークンを保存し、
    `https://api2.cursor.sh/auth/exchange_user_api_key` を通じて更新します。
 
 この方法では、コンテナ内に Cursor IDE や `cursor-agent` は必要ありません。
@@ -39,10 +39,10 @@ OmniRoute を Docker 内で実行すると、コンテナからホスト側の C
 
 ログイン済みの接続がある場合、**Available Models / Auto-Sync** は接続の Bearer
 トークンを使用して、Cursor の HTTP `AiService/AvailableModels` カタログを優先します。
-これが失敗した場合、OmniRoute は引き続きホストの `cursor-agent`（存在する場合）を試し、
+これが失敗した場合、67router は引き続きホストの `cursor-agent`（存在する場合）を試し、
 その後、静的レジストリのシードを使用します。
 
-OmniRoute は常に **`auto`**（表示名「Auto」）をカタログに公開し、それに加えて
+67router は常に **`auto`**（表示名「Auto」）をカタログに公開し、それに加えて
 OpenCodex 形式のルーターモード **`auto-cost`**、**`auto-balance`**、
 **`auto-intelligence`** も公開します。通信上では、これらは Cursor の `default`
 モデルにマッピングされます（3 つのバリアントでは `optimization` ModelParameter を使用）。
@@ -92,7 +92,7 @@ Cursor の **Usage → Provider Limits** は、PKCE またはトークンイン�
 ## 空のターン / 使用量超過
 
 Cursor が Run を受け付けたものの、アシスタントのテキストを返さない場合
-（プレミアム使用量を使い切った際によく発生）、OmniRoute は単なる
+（プレミアム使用量を使い切った際によく発生）、67router は単なる
 「Provider returned empty content」ではなく、対応方法を示す **429**
 （クォータの手掛かり）または **502** を返します。
 `not_found: AI Model Not Found`（使用期間の利用枠超過）などのストリーミングエラーは、
@@ -103,7 +103,7 @@ Cursor プランの上限を引き上げてください。
 
 ## クライアントバージョン（ヘッドレス）
 
-ローカルに `cursor-agent` がインストールされていない場合、OmniRoute は
+ローカルに `cursor-agent` がインストールされていない場合、67router は
 `x-cursor-client-version` を、まず環境変数 `CURSOR_AGENT_CLI_VERSION`、
 次に Cursor インストーラースクリプトのスクレイピング結果を保存したディスクキャッシュ、
 最後に固定されたビルド ID の順で解決します。必要に応じて

@@ -22,10 +22,9 @@ export interface ScopedApiKeyPolicy {
 /** `enforceApiKeyPolicy`, then the key's connection scope computed the way chat does. */
 export async function enforceApiKeyPolicyWithScope(
   request: Request,
-  modelStr: string | null,
-  options?: Parameters<typeof enforceApiKeyPolicy>[2]
+  modelStr: string | null
 ): Promise<ScopedApiKeyPolicy> {
-  const policy = await enforceApiKeyPolicy(request, modelStr, options);
+  const policy = await enforceApiKeyPolicy(request, modelStr);
   if (policy.rejection) return { policy, allowedConnections: null, rejection: policy.rejection };
   const scope = await resolveKeyConnectionScope(policy.apiKeyInfo);
   return { policy, allowedConnections: scope.allowedConnections, rejection: scope.rejection };

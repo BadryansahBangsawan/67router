@@ -13,15 +13,9 @@ import {
 } from "./catalogSyncedCoverage";
 import { buildSyncedCapabilities, mergeSyncedCapabilities } from "./syncedCapabilities";
 import { getAllEmbeddingModels } from "@omniroute/open-sse/config/embeddingRegistry";
-import {
-  getAllImageModels,
-  isRegisteredImageModel,
-  parseImageModel,
-} from "@omniroute/open-sse/config/imageRegistry";
-import { aiHordeImageCatalog } from "@omniroute/open-sse/services/aihordeImageCatalog";
+import { isRegisteredImageModel } from "@omniroute/open-sse/config/imageRegistry";
 import { getAllRerankModels } from "@omniroute/open-sse/config/rerankRegistry";
 import { getAllAudioModels } from "@omniroute/open-sse/config/audioRegistry";
-import { getAllModerationModels } from "@omniroute/open-sse/config/moderationRegistry";
 import { getAllVideoModels } from "@omniroute/open-sse/config/videoRegistry";
 import { getAllMusicModels } from "@omniroute/open-sse/config/musicRegistry";
 import {
@@ -352,7 +346,7 @@ async function buildUnifiedModelsResponseCore(
     // #6316: Opt-in filter — hide paid-only models via `isFreeModel()`. Only applied to
     // PROVIDER_MODELS + OpenRouter loops (where pricing metadata / :free suffix / catalog
     // membership is available). Modality registries (embedding/image/rerank/audio/
-    // moderation/video/music) represent local capabilities without pricing, so they are
+    // video/music) represent local capabilities without pricing, so they are
     // exempt. Combos + auto/* + synced/custom/alias-backed rows also stay unfiltered —
     // extending v1 scope to those requires per-entry pricing lookup not available today.
     const hidePaid = settings.hidePaidModels === true;
@@ -860,14 +854,6 @@ async function buildUnifiedModelsResponseCore(
       },
     };
 
-    // #8770 follow-up: a quota-exclusive key (allowedQuotas non-empty) only ever
-    // receives the pool's `qtSd/*` combos — the key-permission step further down
-    // discards the entire catalog for it. Building that catalog first costs ~1.2s
-    // of CPU on a 1 vCPU host (measured), enough for Claude Code's 3s gateway model
-    // discovery to time out under contention, and every byte of it is thrown away.
-    // Everything the quota path needs (`combos`, `timestamp`,
-    // `buildComboCatalogMetadata`) already exists here, so return before the
-    // provider/auto-combo/registry loops start.
     const earlyApiKey = extractApiKey(request);
     let earlyKeyMeta: Awaited<
       ReturnType<typeof import("@/lib/db/apiKeys").getApiKeyMetadata>
@@ -875,20 +861,6 @@ async function buildUnifiedModelsResponseCore(
     if (earlyApiKey) {
       const { getApiKeyMetadata } = await import("@/lib/db/apiKeys");
       earlyKeyMeta = await getApiKeyMetadata(earlyApiKey);
-      if (earlyKeyMeta?.allowedQuotas && earlyKeyMeta.allowedQuotas.length > 0) {
-        const { buildQuotaExclusiveModels } = await import("@/lib/quota/quotaCombos");
-        const quotaModels = await buildQuotaExclusiveModels(
-          earlyKeyMeta.allowedQuotas,
-          combos,
-          timestamp,
-          (c) => buildComboCatalogMetadata(c, combos)
-        );
-        const quotaFinal = await applyCatalogPostFilters(request, quotaModels, postFilterContext);
-        return finalizeCatalogResponse(request, quotaFinal, () => undefined, {
-          ...corsHeaders,
-          ...diagnosticHeaders,
-        });
-      }
     }
 
     // #4164: advertise the built-in zero-setup `auto/*` combos at the very top.
@@ -1297,7 +1269,7 @@ async function buildUnifiedModelsResponseCore(
           // them as chat-capable. Skip a registered image model only when its
           // synced metadata does not explicitly advertise a chat endpoint.
           // Multi-capability models may intentionally share an id between the
-          // chat and image catalogs; getAllImageModels() adds the image entry.
+          // chat and image catalogs; the image entry itself is no longer listed.
           const explicitlySupportsChat = sm.supportedEndpoints?.some(
             (endpoint) => endpoint === "chat" || endpoint === "responses"
           );
@@ -1587,38 +1559,7 @@ async function buildUnifiedModelsResponseCore(
       });
     }
 
-    // Add image models (filtered by active providers).
-    // AI Horde image workers come and go — refresh the live detector first.
-    if (isProviderActive("aihorde")) {
-      try {
-        await aiHordeImageCatalog.ensureFresh();
-      } catch {
-        // Keep the last good snapshot (or none) if Horde is unreachable.
-      }
-    }
-    for (const imgModel of getAllImageModels()) {
-      await maybeYieldCatalogBuild();
-      if (!isProviderActive(imgModel.provider)) continue;
-      const parsedImageModel = parseImageModel(imgModel.id);
-      const rawModelId =
-        parsedImageModel.provider === imgModel.provider && parsedImageModel.model
-          ? parsedImageModel.model
-          : getSpecialtyModelRelativeId(imgModel.id, imgModel.provider);
-      if (!providerSupportsModel(imgModel.provider, rawModelId)) continue;
-      if (isModelHiddenBulk(imgModel.provider, rawModelId, null, "images")) continue;
-      models.push({
-        id: imgModel.id,
-        object: "model",
-        created: timestamp,
-        owned_by: imgModel.provider,
-        type: "image",
-        supported_sizes: imgModel.supportedSizes,
-        input_modalities: imgModel.inputModalities || ["text"],
-        output_modalities: ["image"],
-        ...(imgModel.description ? { description: imgModel.description } : {}),
-        ...(imgModel.mediaCapabilities ? { media_capabilities: imgModel.mediaCapabilities } : {}),
-      });
-    }
+    // Image models are not listed: 67router removed /v1/images/*.
 
     // Add rerank models (filtered by active providers)
     for (const rerankModel of getAllRerankModels()) {
@@ -1640,9 +1581,11 @@ async function buildUnifiedModelsResponseCore(
       });
     }
 
-    // Add audio models (filtered by active providers)
+    // Add audio models (filtered by active providers). Only transcription is listed:
+    // 67router removed /v1/audio/speech, so speech models would only lead to a 404.
     for (const audioModel of getAllAudioModels()) {
       await maybeYieldCatalogBuild();
+      if (audioModel.subtype !== "transcription") continue;
       if (!isProviderActive(audioModel.provider)) continue;
       const rawModelId = getSpecialtyModelRelativeId(audioModel.id, audioModel.provider);
       if (!providerSupportsModel(audioModel.provider, rawModelId)) continue;
@@ -1654,22 +1597,6 @@ async function buildUnifiedModelsResponseCore(
         owned_by: audioModel.provider,
         type: "audio",
         subtype: audioModel.subtype,
-      });
-    }
-
-    // Add moderation models (filtered by active providers)
-    for (const modModel of getAllModerationModels()) {
-      await maybeYieldCatalogBuild();
-      if (!isProviderActive(modModel.provider)) continue;
-      const rawModelId = getSpecialtyModelRelativeId(modModel.id, modModel.provider);
-      if (!providerSupportsModel(modModel.provider, rawModelId)) continue;
-      if (isModelHiddenBulk(modModel.provider, rawModelId, null, "moderation")) continue;
-      models.push({
-        id: modModel.id,
-        object: "model",
-        created: timestamp,
-        owned_by: modModel.provider,
-        type: "moderation",
       });
     }
 
@@ -2049,19 +1976,8 @@ async function buildUnifiedModelsResponseCore(
       const apiKeyPermissions = await import("@/lib/db/apiKeys");
       const { filterCatalogModelsForKey } = await import("./catalogKeyFilter");
 
-      // Quota-exclusive keys (allowedQuotas non-empty): list ONLY the pool's qtSd/*
-      // virtual models. #4806: build from the hidden qtSd/* combos directly — the base
-      // `models` list drops hidden combos, so filtering it returned nothing (0 models).
       const keyMeta = await apiKeyPermissions.getApiKeyMetadata(apiKey);
-      if (keyMeta && keyMeta.allowedQuotas && keyMeta.allowedQuotas.length > 0) {
-        const { buildQuotaExclusiveModels } = await import("@/lib/quota/quotaCombos");
-        finalModels = await buildQuotaExclusiveModels(
-          keyMeta.allowedQuotas,
-          combos,
-          timestamp,
-          (c) => buildComboCatalogMetadata(c, combos)
-        );
-      } else if (!keyMeta) {
+      if (!keyMeta) {
         // #6406: A valid apiKey without a DB metadata row is an env-var master key
         // (OMNIROUTE_API_KEY / ROUTER_API_KEY per isValidApiKey). Those keys have no
         // per-key allow/deny/quota restrictions — they authenticate the request but

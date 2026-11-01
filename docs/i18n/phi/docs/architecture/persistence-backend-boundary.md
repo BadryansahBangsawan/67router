@@ -10,7 +10,7 @@
 
 ## Konteksto
 
-Kasalukuyang naglalahad ang OmniRoute ng mga function ng persistence na nakatuon sa domain mula sa `src/lib/db/`, habang ipinapatupad ng nakabahaging koneksiyong ibinabalik ng `src/lib/db/core.ts` ang synchronous na kontratang `SqliteAdapter` sa `src/lib/db/adapters/types.ts`. Sinusuportahan ng adapter na iyon ang ilang SQLite runtime, ngunit nananatiling nakahubog sa SQLite ang interface nito: mga synchronous na prepared statement, `pragma`, mga deferred at immediate na transaksyon, native/file-copy na backup, checkpoint, at lokal na database handle.
+Kasalukuyang naglalahad ang 67router ng mga function ng persistence na nakatuon sa domain mula sa `src/lib/db/`, habang ipinapatupad ng nakabahaging koneksiyong ibinabalik ng `src/lib/db/core.ts` ang synchronous na kontratang `SqliteAdapter` sa `src/lib/db/adapters/types.ts`. Sinusuportahan ng adapter na iyon ang ilang SQLite runtime, ngunit nananatiling nakahubog sa SQLite ang interface nito: mga synchronous na prepared statement, `pragma`, mga deferred at immediate na transaksyon, native/file-copy na backup, checkpoint, at lokal na database handle.
 
 Pinamamahalaan din ng kasalukuyang daloy ng pagsisimula at pag-recover ang lifecycle ng SQLite file. Tinutukoy ng `src/lib/db/core.ts` ang `storage.sqlite`, nagpapanatili ng isang process-global na adapter, nagsasagawa ng checkpoint sa WAL, pinananatili ang mga napiling table habang nagre-recover, at nag-aalis ng mga kasamang SQLite file kapag muling binubuo ang isang database. Pumipili ang driver selection sa `src/lib/db/adapters/driverFactory.ts` mula sa mga sinusuportahang SQLite runtime; hindi ito isang abstraction para sa panlabas na backend.
 

@@ -1,16 +1,16 @@
-# Providers Guide: Connect AI Models to OmniRoute (Magyar)
+# Providers Guide: Connect AI Models to 67router (Magyar)
 
 🌐 **Languages:** 🇺🇸 [English](../../../../getting-started/PROVIDERS-GUIDE.md) · 🇪🇹 [am](../../../am/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇿 [az](../../../az/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇰 [da](../../../da/docs/getting-started/PROVIDERS-GUIDE.md) · 🇩🇪 [de](../../../de/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇷 [el](../../../el/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇸 [es](../../../es/docs/getting-started/PROVIDERS-GUIDE.md) · 🇪🇪 [et](../../../et/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇱 [he](../../../he/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇩 [id](../../../id/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇹 [it](../../../it/docs/getting-started/PROVIDERS-GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/getting-started/PROVIDERS-GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇭 [km](../../../km/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇹 [lt](../../../lt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇲🇲 [my](../../../my/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇴 [no](../../../no/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [or](../../../or/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/getting-started/PROVIDERS-GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/getting-started/PROVIDERS-GUIDE.md) · 🇱🇰 [si](../../../si/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/getting-started/PROVIDERS-GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/getting-started/PROVIDERS-GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/getting-started/PROVIDERS-GUIDE.md) · 🇮🇳 [te](../../../te/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇭 [th](../../../th/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/getting-started/PROVIDERS-GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/getting-started/PROVIDERS-GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/getting-started/PROVIDERS-GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/getting-started/PROVIDERS-GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/getting-started/PROVIDERS-GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/getting-started/PROVIDERS-GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/getting-started/PROVIDERS-GUIDE.md)
 
 ---
 
-> **Röviden**: A szolgáltató egy AI-szolgáltatáshoz (például OpenAI, Anthropic vagy Google) való kapcsolódás. Az OmniRoute használatához legalább egy szolgáltatóra van szüksége.
+> **Röviden**: A szolgáltató egy AI-szolgáltatáshoz (például OpenAI, Anthropic vagy Google) való kapcsolódás. A 67router használatához legalább egy szolgáltatóra van szüksége.
 
 ---
 
 ## Mi az a szolgáltató?
 
-Gondoljon a szolgáltatóra úgy, mint egy **mobilszolgáltatóra**. Ahogyan a telefonáláshoz mobilszolgáltatóra van szüksége, úgy az AI-modellek használatához AI-szolgáltatóra van szüksége. Az OmniRoute olyan, mint egy **minden szolgáltatóval** működő telefon — automatikusan válthat közöttük.
+Gondoljon a szolgáltatóra úgy, mint egy **mobilszolgáltatóra**. Ahogyan a telefonáláshoz mobilszolgáltatóra van szüksége, úgy az AI-modellek használatához AI-szolgáltatóra van szüksége. A 67router olyan, mint egy **minden szolgáltatóval** működő telefon — automatikusan válthat közöttük.
 
 ### Szolgáltatótípusok
 
@@ -31,8 +31,8 @@ Az általános beállítási utasításokat, korlátozásokat, hibaelhárítási
 ### Opcionális kezdeti beállítás ingyenes szolgáltatókhoz
 
 Az első indításkor megjelenő varázsló egy külön **Ingyenes szolgáltatók beállítása** kártyát kínál. Az aktuálisan
-jogosult szolgáltatók listáját az OmniRoute hitelesítést nem igénylő szolgáltatói nyilvántartásából állítja össze, majd lehetővé teszi az egyes
-szolgáltatók áttekintését és kijelölésük megszüntetését a megerősítés előtt. Az OmniRoute megjeleníti a szolgáltató figyelmeztetését és a webhelyére mutató hivatkozást,
+jogosult szolgáltatók listáját a 67router hitelesítést nem igénylő szolgáltatói nyilvántartásából állítja össze, majd lehetővé teszi az egyes
+szolgáltatók áttekintését és kijelölésük megszüntetését a megerősítés előtt. A 67router megjeleníti a szolgáltató figyelmeztetését és a webhelyére mutató hivatkozást,
 így előzetesen áttekintheti a harmadik fél feltételeit, adatvédelmi szabályzatát, rendelkezésre állását és használati korlátait.
 
 Ez a művelet opcionális: a varázsló befejezése soha nem hoz létre észrevétlenül kapcsolatokat ingyenes szolgáltatókhoz.
@@ -80,7 +80,7 @@ biztonságosan újrapróbálhatja csak a sikertelen műveleteket.
 
 ### D lehetőség: Helyi MLX-modellek (Apple Silicon)
 
-Az egyesített memóriával rendelkező Apple Silicon Mac gépeken az OmniRoute támogatja a `mlx-lm.server` használatával futtatott helyi MLX-modellek normál, OpenAI-kompatibilis helyi szolgáltatóként való csatlakoztatását.
+Az egyesített memóriával rendelkező Apple Silicon Mac gépeken a 67router támogatja a `mlx-lm.server` használatával futtatott helyi MLX-modellek normál, OpenAI-kompatibilis helyi szolgáltatóként való csatlakoztatását.
 
 #### Előfeltételek
 
@@ -110,14 +110,14 @@ Az egyesített memóriával rendelkező Apple Silicon Mac gépeken az OmniRoute 
    uv run mlx_lm.server --model maglun/Qwen3.8-27B-MLX-Mixed-3.80bpw --port 11436 --host 127.0.0.1
    ```
 
-3. **Csatlakoztatás az OmniRoute irányítópultján**:
+3. **Csatlakoztatás a 67router irányítópultján**:
    - Lépjen a **Szolgáltatók** → **Szolgáltató hozzáadása** menüpontra
    - Válassza az **MLX Gemma 26B** vagy az **MLX Qwen 3.8 27B** lehetőséget
    - Kattintson a **Csatlakozás** gombra (nincs szükség API-kulcsra)
 
 4. **Használat az OpenCode-dal**:
    ```bash
-   # Az OpenCode beállítása az OmniRoute használatára
+   # Az OpenCode beállítása a 67router használatára
    opencode config set api.base_url http://localhost:20128/v1
    opencode config set api.key <your-omniroute-api-key>
 
@@ -139,7 +139,7 @@ Ezt kézzel kell kezelnie:
 - Futtassa őket külön gépeken, vagy
 - Állítsa le az egyiket, mielőtt elindítja a másikat
 
-Az OmniRoute nem kezeli automatikusan az MLX-kiszolgálófolyamatokat — csak a beállított OpenAI-kompatibilis végpontokra irányítja a kéréseket.
+A 67router nem kezeli automatikusan az MLX-kiszolgálófolyamatokat — csak a beállított OpenAI-kompatibilis végpontokra irányítja a kéréseket.
 
 #### Eszközhívások támogatása
 
@@ -164,7 +164,7 @@ curl -X POST http://localhost:20128/v1/chat/completions \
 | Nincs elegendő memória    | Győződjön meg arról, hogy csak egy modell fut; zárja be a többi alkalmazást; ellenőrizze az Activity Monitor alkalmazást |
 | A kapcsolat elutasítva    | Ellenőrizze, hogy a kiszolgáló a megfelelő porton (11435/11436) fut-e                                                    |
 | Lassú válaszok            | Az első kérés betölti a modellt a memóriába (~30-60s); a további kérések gyorsak                                         |
-| Az eszközhívás sikertelen | Győződjön meg arról, hogy a modell támogatja az eszközöket; ellenőrizze az OmniRoute naplóit fordítási hibákért          |
+| Az eszközhívás sikertelen | Győződjön meg arról, hogy a modell támogatja az eszközöket; ellenőrizze a 67router naplóit fordítási hibákért            |
 
 ---
 
@@ -236,12 +236,12 @@ A szolgáltatód most már csatlakoztatva van. Használhatod a `model: "auto"` b
 
 ## Több szolgáltató használata
 
-Az OmniRoute **több szolgáltatóval** működik a legjobban. Ez a következő előnyöket biztosítja:
+A 67router **több szolgáltatóval** működik a legjobban. Ez a következő előnyöket biztosítja:
 
-- **Automatikus tartalékra váltás** — Ha az egyik szolgáltató meghibásodik, az OmniRoute megpróbálja a következőt
-- **Költségoptimalizálás** — Az OmniRoute minden kéréshez a legolcsóbb szolgáltatót választja
-- **Sebességoptimalizálás** — Az OmniRoute minden kéréshez a leggyorsabb szolgáltatót választja
-- **Minőségoptimalizálás** — Az OmniRoute minden feladathoz a legjobb szolgáltatót választja
+- **Automatikus tartalékra váltás** — Ha az egyik szolgáltató meghibásodik, a 67router megpróbálja a következőt
+- **Költségoptimalizálás** — A 67router minden kéréshez a legolcsóbb szolgáltatót választja
+- **Sebességoptimalizálás** — A 67router minden kéréshez a leggyorsabb szolgáltatót választja
+- **Minőségoptimalizálás** — A 67router minden feladathoz a legjobb szolgáltatót választja
 
 ### Ajánlott beállítás
 
@@ -251,7 +251,7 @@ A legjobb felhasználói élmény érdekében csatlakoztasson legalább **3 szol
 2. **Egy gyors szolgáltató** (Groq, Cerebras) — Gyors válaszokhoz
 3. **Egy minőségi szolgáltató** (OpenAI, Anthropic, Google) — Összetett feladatokhoz
 
-Ezután használja a `model: "auto"` beállítást, és az OmniRoute automatikusan kiválasztja az egyes kérésekhez legmegfelelőbb szolgáltatót.
+Ezután használja a `model: "auto"` beállítást, és a 67router automatikusan kiválasztja az egyes kérésekhez legmegfelelőbb szolgáltatót.
 
 ---
 
@@ -260,37 +260,37 @@ Ezután használja a `model: "auto"` beállítást, és az OmniRoute automatikus
 ### OpenAI
 
 1. API-kulcs beszerzése: https://platform.openai.com/api-keys
-2. Az OmniRoute-ban: Szolgáltatók → Szolgáltató hozzáadása → OpenAI
+2. A 67router-ban: Szolgáltatók → Szolgáltató hozzáadása → OpenAI
 3. Illessze be az API-kulcsot → Csatlakozás
 
 ### Anthropic
 
 1. API-kulcs beszerzése: https://console.anthropic.com/
-2. Az OmniRoute-ban: Szolgáltatók → Szolgáltató hozzáadása → Anthropic
+2. A 67router-ban: Szolgáltatók → Szolgáltató hozzáadása → Anthropic
 3. Illessze be az API-kulcsot → Csatlakozás
 
 ### Google (Gemini)
 
 1. API-kulcs beszerzése: https://aistudio.google.com/apikey
-2. Az OmniRoute-ban: Szolgáltatók → Szolgáltató hozzáadása → Gemini
+2. A 67router-ban: Szolgáltatók → Szolgáltató hozzáadása → Gemini
 3. Illessze be az API-kulcsot → Csatlakozás
 
 ### DeepSeek
 
 1. API-kulcs beszerzése: https://platform.deepseek.com/
-2. Az OmniRoute-ban: Szolgáltatók → Szolgáltató hozzáadása → DeepSeek
+2. A 67router-ban: Szolgáltatók → Szolgáltató hozzáadása → DeepSeek
 3. Illessze be az API-kulcsot → Csatlakozás
 
 ### Qoder: válassza ki a hitelesítő adatok továbbítási módját
 
 A Qoder hitelesítő adatokat igényel. A két továbbítási mód eltérő képességekkel rendelkezik; önmagában a modell neve nem határozza meg, hogy egy adott kapcsolat mire képes.
 
-| Hitelesítő adat                                 | OmniRoute-továbbítási mód                         | A hívó eszközhívásai                                    | Streamelés                                                                               |
-| ----------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `pt-` kezdetű PAT                               | Helyi `qodercli` folyamat az OmniRoute-gazdagépen | Nem támogatott                                          | Pufferelt: az SSE csak azután kerül kibocsátásra, hogy a CLI visszaadta a teljes választ |
-| Nem PAT típusú hozzáférési token vagy API-kulcs | DashScope OpenAI-kompatibilis HTTP-végpont        | Továbbítva, a felsőbb szintű modelltől/kulcstól függően | Felsőbb szintű HTTP/SSE-útvonal                                                          |
+| Hitelesítő adat                                 | 67router-továbbítási mód                        | A hívó eszközhívásai                                    | Streamelés                                                                               |
+| ----------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `pt-` kezdetű PAT                               | Helyi `qodercli` folyamat a 67router-gazdagépen | Nem támogatott                                          | Pufferelt: az SSE csak azután kerül kibocsátásra, hogy a CLI visszaadta a teljes választ |
+| Nem PAT típusú hozzáférési token vagy API-kulcs | DashScope OpenAI-kompatibilis HTTP-végpont      | Továbbítva, a felsőbb szintű modelltől/kulcstól függően | Felsőbb szintű HTTP/SSE-útvonal                                                          |
 
-PAT használata esetén telepítse a Qoder CLI-t ugyanarra a gazdagépre vagy konténerbe, amelyen az OmniRoute fut. A végrehajtható fájlnak `qodercli` néven elérhetőnek kell lennie, vagy állítsa a `CLI_QODER_BIN` értékét a végrehajtható fájl elérési útjára. A csak a Docker-gazdagépre telepített CLI nem lesz automatikusan elérhető a konténerben. A hiányzó bináris fájlok egyértelmű hibaüzenetet eredményeznek, amely a telepítésre vagy az elérési út beállítására irányítja.
+PAT használata esetén telepítse a Qoder CLI-t ugyanarra a gazdagépre vagy konténerbe, amelyen a 67router fut. A végrehajtható fájlnak `qodercli` néven elérhetőnek kell lennie, vagy állítsa a `CLI_QODER_BIN` értékét a végrehajtható fájl elérési útjára. A csak a Docker-gazdagépre telepített CLI nem lesz automatikusan elérhető a konténerben. A hiányzó bináris fájlok egyértelmű hibaüzenetet eredményeznek, amely a telepítésre vagy az elérési út beállítására irányítja.
 
 A PAT-alapú csevegési útvonal folyamat-időtúllépése 45 másodperc. A beszélgetést egyetlen prompttá alakítja, és nem streamelő nyomtatási módban hívja meg a CLI-t. A `stream: true` kérése SSE-re módosítja a válasz burkolóformátumát; nem biztosítja a felsőbb szintű tokenek fokozatos továbbítását. A CLI-ellenőrzés és a modelllista lekérése különálló, 20 másodperces időtúllépést használ. Ezek a kód jelenlegi alapértelmezései, nem konfigurálható irányítópult-beállítások.
 
@@ -306,16 +306,16 @@ Megvalósítási hivatkozások: [Qoder-végrehajtó](../../open-sse/executors/qo
 ### Groq
 
 1. API-kulcs beszerzése: https://console.groq.com/
-2. Az OmniRoute-ban: Szolgáltatók → Szolgáltató hozzáadása → Groq
+2. A 67router-ban: Szolgáltatók → Szolgáltató hozzáadása → Groq
 3. Illessze be az API-kulcsot → Csatlakozás
 
 ---
 
 ## Gyakori kérdések
 
-### „Kell fizetnem az OmniRoute használatáért?”
+### „Kell fizetnem a 67router használatáért?”
 
-**Nem!** Az OmniRoute ingyenes és nyílt forráskódú. Az ingyenes szolgáltatókat (Kiro, Pollinations) fizetés nélkül használhatod. Csak akkor kell fizetned, ha fizetős szolgáltatókat választasz.
+**Nem!** A 67router ingyenes és nyílt forráskódú. Az ingyenes szolgáltatókat (Kiro, Pollinations) fizetés nélkül használhatod. Csak akkor kell fizetned, ha fizetős szolgáltatókat választasz.
 
 ### „Melyik szolgáltatóval érdemes kezdenem?”
 
@@ -323,11 +323,11 @@ Kezdd a **Kiro AI** szolgáltatóval — ingyenes, nem igényel API-kulcsot, és
 
 ### „Használhatok egyszerre több szolgáltatót?”
 
-**Igen!** Pontosan ez az OmniRoute lényege. Csatlakoztass több szolgáltatót, és használd a `model: "auto"` beállítást, hogy az OmniRoute minden kéréshez kiválaszthassa a legmegfelelőbbet.
+**Igen!** Pontosan ez a 67router lényege. Csatlakoztass több szolgáltatót, és használd a `model: "auto"` beállítást, hogy a 67router minden kéréshez kiválaszthassa a legmegfelelőbbet.
 
 ### „Mi történik, ha egy szolgáltató leáll?”
 
-Az OmniRoute automatikusan átugorja a hibás szolgáltatókat, és megpróbálja a következőt. Neked semmit sem kell tenned.
+A 67router automatikusan átugorja a hibás szolgáltatókat, és megpróbálja a következőt. Neked semmit sem kell tenned.
 
 ### „Hogyan választhatok le egy szolgáltatót?”
 
@@ -335,17 +335,13 @@ Lépj a Providers menübe → kattints a szolgáltatóra → kattints a **Discon
 
 ### „Használhatom a meglévő API-kulcsaimat?”
 
-**Igen!** Ha már rendelkezel API-kulcsokkal az OpenAI, az Anthropic, a Google stb. szolgáltatásaihoz, használhatod őket az OmniRoute-ban. Egyszerűen illeszd be őket a szolgáltató csatlakoztatásakor.
+**Igen!** Ha már rendelkezel API-kulcsokkal az OpenAI, az Anthropic, a Google stb. szolgáltatásaihoz, használhatod őket a 67router-ban. Egyszerűen illeszd be őket a szolgáltató csatlakoztatásakor.
 
 ---
 
 ## Mi következik?
 
-- **[Automatikus kombináció útmutató](./AUTO-COMBO-GUIDE.md)** — Bízza az OmniRoute-ra a legjobb MI kiválasztását
+- **[Automatikus kombináció útmutató](./AUTO-COMBO-GUIDE.md)** — Bízza a 67router-ra a legjobb MI kiválasztását
 - **[Ingyenes csomagok útmutatója](./FREE-TIERS-GUIDE.md)** — Használjon ingyenes MI-t bankkártya nélkül
 - **[Hibaelhárítás](../guides/TROUBLESHOOTING.md)** — Gyakori problémák megoldása
 - **[Szolgáltatói referencia](../reference/PROVIDER_REFERENCE.md)** — A 226 szolgáltató teljes listája
-
-## Cursor-képek
-
-A Cursor-csomag képei az `IMAGE_PROVIDERS.cursor` (`cursor-agent-image`) szolgáltatót használják. Lásd: [CURSOR_IMAGE.md](../providers/CURSOR_IMAGE.md).

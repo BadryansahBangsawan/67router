@@ -6,7 +6,7 @@
 
 🌐 **Languages:** 🇺🇸 [English](../../../../guides/USER_GUIDE.md) · 🇪🇹 [am](../../../am/docs/guides/USER_GUIDE.md) · 🇸🇦 [ar](../../../ar/docs/guides/USER_GUIDE.md) · 🇦🇿 [az](../../../az/docs/guides/USER_GUIDE.md) · 🇧🇬 [bg](../../../bg/docs/guides/USER_GUIDE.md) · 🇧🇩 [bn](../../../bn/docs/guides/USER_GUIDE.md) · 🇧🇦 [bs](../../../bs/docs/guides/USER_GUIDE.md) · 🇨🇿 [cs](../../../cs/docs/guides/USER_GUIDE.md) · 🇩🇰 [da](../../../da/docs/guides/USER_GUIDE.md) · 🇩🇪 [de](../../../de/docs/guides/USER_GUIDE.md) · 🇬🇷 [el](../../../el/docs/guides/USER_GUIDE.md) · 🇪🇸 [es](../../../es/docs/guides/USER_GUIDE.md) · 🇪🇪 [et](../../../et/docs/guides/USER_GUIDE.md) · 🇮🇷 [fa](../../../fa/docs/guides/USER_GUIDE.md) · 🇫🇮 [fi](../../../fi/docs/guides/USER_GUIDE.md) · 🇫🇷 [fr](../../../fr/docs/guides/USER_GUIDE.md) · 🇮🇪 [ga](../../../ga/docs/guides/USER_GUIDE.md) · 🇮🇳 [gu](../../../gu/docs/guides/USER_GUIDE.md) · 🇳🇬 [ha](../../../ha/docs/guides/USER_GUIDE.md) · 🇮🇱 [he](../../../he/docs/guides/USER_GUIDE.md) · 🇮🇳 [hi](../../../hi/docs/guides/USER_GUIDE.md) · 🇭🇷 [hr](../../../hr/docs/guides/USER_GUIDE.md) · 🇭🇺 [hu](../../../hu/docs/guides/USER_GUIDE.md) · 🇦🇲 [hy](../../../hy/docs/guides/USER_GUIDE.md) · 🇮🇩 [id](../../../id/docs/guides/USER_GUIDE.md) · 🇳🇬 [ig](../../../ig/docs/guides/USER_GUIDE.md) · 🇮🇹 [it](../../../it/docs/guides/USER_GUIDE.md) · 🇯🇵 [ja](../../../ja/docs/guides/USER_GUIDE.md) · 🇬🇪 [ka](../../../ka/docs/guides/USER_GUIDE.md) · 🇰🇭 [km](../../../km/docs/guides/USER_GUIDE.md) · 🇮🇳 [kn](../../../kn/docs/guides/USER_GUIDE.md) · 🇰🇷 [ko](../../../ko/docs/guides/USER_GUIDE.md) · 🇱🇻 [lv](../../../lv/docs/guides/USER_GUIDE.md) · 🇮🇳 [ml](../../../ml/docs/guides/USER_GUIDE.md) · 🇮🇳 [mr](../../../mr/docs/guides/USER_GUIDE.md) · 🇲🇾 [ms](../../../ms/docs/guides/USER_GUIDE.md) · 🇲🇹 [mt](../../../mt/docs/guides/USER_GUIDE.md) · 🇲🇲 [my](../../../my/docs/guides/USER_GUIDE.md) · 🇳🇵 [ne](../../../ne/docs/guides/USER_GUIDE.md) · 🇳🇱 [nl](../../../nl/docs/guides/USER_GUIDE.md) · 🇳🇴 [no](../../../no/docs/guides/USER_GUIDE.md) · 🇮🇳 [or](../../../or/docs/guides/USER_GUIDE.md) · 🇮🇳 [pa](../../../pa/docs/guides/USER_GUIDE.md) · 🇵🇭 [phi](../../../phi/docs/guides/USER_GUIDE.md) · 🇵🇱 [pl](../../../pl/docs/guides/USER_GUIDE.md) · 🇵🇹 [pt](../../../pt/docs/guides/USER_GUIDE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/guides/USER_GUIDE.md) · 🇷🇴 [ro](../../../ro/docs/guides/USER_GUIDE.md) · 🇷🇺 [ru](../../../ru/docs/guides/USER_GUIDE.md) · 🇱🇰 [si](../../../si/docs/guides/USER_GUIDE.md) · 🇸🇰 [sk](../../../sk/docs/guides/USER_GUIDE.md) · 🇸🇮 [sl](../../../sl/docs/guides/USER_GUIDE.md) · 🇷🇸 [sr](../../../sr/docs/guides/USER_GUIDE.md) · 🇸🇪 [sv](../../../sv/docs/guides/USER_GUIDE.md) · 🇰🇪 [sw](../../../sw/docs/guides/USER_GUIDE.md) · 🇮🇳 [ta](../../../ta/docs/guides/USER_GUIDE.md) · 🇮🇳 [te](../../../te/docs/guides/USER_GUIDE.md) · 🇹🇭 [th](../../../th/docs/guides/USER_GUIDE.md) · 🇹🇷 [tr](../../../tr/docs/guides/USER_GUIDE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/guides/USER_GUIDE.md) · 🇵🇰 [ur](../../../ur/docs/guides/USER_GUIDE.md) · 🇺🇿 [uz](../../../uz/docs/guides/USER_GUIDE.md) · 🇻🇳 [vi](../../../vi/docs/guides/USER_GUIDE.md) · 🇳🇬 [yo](../../../yo/docs/guides/USER_GUIDE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/guides/USER_GUIDE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/guides/USER_GUIDE.md)
 
-Išsamus paslaugų teikėjų konfigūravimo, derinių kūrimo, CLI įrankių integravimo ir „OmniRoute“ diegimo vadovas.
+Išsamus paslaugų teikėjų konfigūravimo, derinių kūrimo, CLI įrankių integravimo ir „67router“ diegimo vadovas.
 
 ---
 
@@ -24,7 +24,6 @@ Išsamus paslaugų teikėjų konfigūravimo, derinių kūrimo, CLI įrankių int
 - [Įgūdžių sistema](#-skills-system)
 - [Atminties sistema](#-memory-system)
 - [Žiniatinklio sąsajos](#-webhooks)
-- [Debesijos agentai](#-cloud-agents)
 - [Programinis valdymas](#-programmatic-management)
 - [Vidinė CLI](#-internal-cli)
 - [Darbalaukio programa („Electron“)](#-desktop-application-electron)
@@ -137,13 +136,13 @@ Modeliai:
   cc/claude-haiku-4-5-20251001
 ```
 
-**Profesionalo patarimas:** sudėtingoms užduotims naudokite Opus, o kai svarbus greitis – Sonnet. OmniRoute stebi kiekvieno modelio kvotą!
+**Profesionalo patarimas:** sudėtingoms užduotims naudokite Opus, o kai svarbus greitis – Sonnet. 67router stebi kiekvieno modelio kvotą!
 
-OmniRoute pagrindiniame kompiuteryje nėra naršyklės? Paleiskite `claude setup-token` bet kur, kur prisijungta prie Claude Code, ir įklijuokite vienus metus galiojantį prieigos raktą skirtuke **Sąrankos prieigos raktas**. Žr. [Claude Code naudojimas su sąrankos prieigos raktu](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
+67router pagrindiniame kompiuteryje nėra naršyklės? Paleiskite `claude setup-token` bet kur, kur prisijungta prie Claude Code, ir įklijuokite vienus metus galiojantį prieigos raktą skirtuke **Sąrankos prieigos raktas**. Žr. [Claude Code naudojimas su sąrankos prieigos raktu](../providers/CLAUDE_CODE_SETUP_TOKEN.md).
 
 Claude ir su Claude Code suderinami maršrutai išsaugo `max` samprotavimo pastangų lygį Opus ir Sonnet
 modeliams. Haiku modeliai nepriima `max` pastangų lygio, todėl prieš siųsdama užklausą pirminiam
-teikėjui OmniRoute sumažina jį iki didelio samprotavimo biudžeto.
+teikėjui 67router sumažina jį iki didelio samprotavimo biudžeto.
 
 #### OpenAI Codex (Plus/Pro)
 
@@ -264,16 +263,16 @@ Kaina: šiuo metu nurodoma kaip $0; sąlygos ir prieinamumas gali keistis
 
 ### Cursor IDE
 
-**Cursor naudojimas kaip OmniRoute kliento** (nukreipkite Cursor pokalbius per OmniRoute):
+**Cursor naudojimas kaip 67router kliento** (nukreipkite Cursor pokalbius per 67router):
 
 ```
 Nustatymai → Modeliai → Išplėstiniai:
   OpenAI API bazinis URL: http://localhost:20128/v1
-  OpenAI API raktas: [iš OmniRoute valdymo skydelio]
+  OpenAI API raktas: [iš 67router valdymo skydelio]
   Modelis: cc/claude-opus-4-7
 ```
 
-**OmniRoute naudojimas kaip Cursor teikėjo** (OmniRoute kreipiasi į Cursor aukštesniojo lygio paslaugą): rekomenduojama
+**67router naudojimas kaip Cursor teikėjo** (67router kreipiasi į Cursor aukštesniojo lygio paslaugą): rekomenduojama
 **Valdymo skydelis → Teikėjai → Cursor → Prisijungti naudojant Cursor**. Apie Docker žr.
 [`docs/providers/CURSOR-DOCKER.md`](../providers/CURSOR-DOCKER.md).
 
@@ -360,7 +359,7 @@ CLI automatiškai įkelia `.env` iš `~/.omniroute/.env` arba `./.env`.
 
 ### Sistemos dėklo režimas
 
-Paleiskite OmniRoute sistemos dėkle:
+Paleiskite 67router sistemos dėkle:
 
 ```bash
 omniroute serve --tray
@@ -377,7 +376,7 @@ Naudokite sistemos dėklo meniu šiems veiksmams:
 - Atidaryti valdymo skydelį.
 - Atidaryti `/dashboard/logs`.
 - Keisti automatinio paleidimo nustatymą.
-- Sustabdyti OmniRoute.
+- Sustabdyti 67router.
 
 Nenaudokite `--tray` kartu su šiomis parinktimis:
 
@@ -403,14 +402,14 @@ omniroute autostart disable
 
 ### Šalinimas
 
-Kai OmniRoute nebebus reikalingas, švariam pašalinimui pateikiame du sparčiuosius scenarijus:
+Kai 67router nebebus reikalingas, švariam pašalinimui pateikiame du sparčiuosius scenarijus:
 
 | Komanda                  | Veiksmas                                                                                       |
 | ------------------------ | ---------------------------------------------------------------------------------------------- |
 | `npm run uninstall`      | Pašalina sistemos programą, bet **išsaugo jūsų DB ir konfigūracijas** kataloge `~/.omniroute`. |
 | `npm run uninstall:full` | Pašalina programą IR visam laikui **ištrina visas konfigūracijas, raktus ir duomenų bazes**.   |
 
-> Pastaba: norėdami vykdyti šias komandas, eikite į OmniRoute projekto aplanką (jei jį klonavote) ir paleiskite jas. Arba, jei įdiegėte visuotinai, galite tiesiog paleisti `npm uninstall -g omniroute`.
+> Pastaba: norėdami vykdyti šias komandas, eikite į 67router projekto aplanką (jei jį klonavote) ir paleiskite jas. Arba, jei įdiegėte visuotinai, galite tiesiog paleisti `npm uninstall -g omniroute`.
 
 ### Diegimas VPS serveryje
 
@@ -482,7 +481,7 @@ Apie su pagrindine sistema integruotą režimą su CLI dvejetainiais failais žr
 
 ### Void Linux (xbps-src)
 
-Void Linux naudotojai gali sukurti OmniRoute paketą ir įdiegti jį sistemoje naudodami `xbps-src` kryžminio kompiliavimo sistemą. Ji automatizuoja savarankiško Node.js paketo kūrimą kartu su reikalingomis savosiomis `better-sqlite3` susiejimo bibliotekomis.
+Void Linux naudotojai gali sukurti 67router paketą ir įdiegti jį sistemoje naudodami `xbps-src` kryžminio kompiliavimo sistemą. Ji automatizuoja savarankiško Node.js paketo kūrimą kartu su reikalingomis savosiomis `better-sqlite3` susiejimo bibliotekomis.
 
 <details>
 <summary><b>Peržiūrėti xbps-src šabloną</b></summary>
@@ -662,7 +661,7 @@ Visą aplinkos kintamųjų žinyną rasite [README](../README.md).
 
 **Kiti suderinami teikėjai** (atrinkti): `cohere`, `databricks`, `snowflake`, `together`, `vertex`, `alibaba`, `alibaba-cn`, `bedrock` (per `aws-bedrock`), `azure-ai`, `openrouter` (tiesiogiai perduodamas katalogas), `siliconflow`, `hyperbolic`, `huggingface`, `featherless-ai`, `cloudflare-ai`, `scaleway`, `deepinfra`, `vercel-ai-gateway`, `bazaarlink`, `friendliai`, `nous-research`, `reka`, `volcengine`, `ai21`, `gigachat`. Kiekvienas turi savo modelių sąrašą faile `providerRegistry.ts` ir gali būti automatiškai sinchronizuojamas, kai teikėjas pateikia `/models` galinį tašką.
 
-**Pastaba apie modelių ID:** „OmniRoute“ naudoja teikėjų savuosius ID (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Kai kuriuose ID yra versijų su taškais, nes tokio formato tikisi pirminio šaltinio API. Jei modelis nepateiktas pirmiau, paleiskite `omniroute models --search <term>` arba iškvieskite `GET /api/models/catalog`, kad patvirtintumėte jo prieinamumą.
+**Pastaba apie modelių ID:** „67router“ naudoja teikėjų savuosius ID (`claude-opus-4-8`, `gpt-5.5`, `glm-5.1`, `MiniMax-M2.7`, `kimi-k2.5`, `grok-4.20-0309-reasoning`). Kai kuriuose ID yra versijų su taškais, nes tokio formato tikisi pirminio šaltinio API. Jei modelis nepateiktas pirmiau, paleiskite `omniroute models --search <term>` arba iškvieskite `GET /api/models/catalog`, kad patvirtintumėte jo prieinamumą.
 
 </details>
 
@@ -714,9 +713,9 @@ prefix: „<prefix>“ yra rezervuotas teikėjo priešdėlis — pasirinkite kit
 
 Pasirinkite unikalų priešdėlį (`mygw`, `acme-proxy`). Jei užklausos pasirinktiniam mazgui nepavyksta ir klaidoje nurodomas integruotas teikėjas arba jo prisijungimo duomenys, patikrinkite, ar mazgo priešdėlis nėra rezervuotas: prieš įvedant šią taisyklę išsaugoti mazgai vis dar saugomi, tačiau jų priešdėlis nukreipia į integruotą teikėją. Redaguokite mazgą ir suteikite jam naują priešdėlį.
 
-### OmniRoute lygiaverčių mazgų grandinės sudarymas
+### 67router lygiaverčių mazgų grandinės sudarymas
 
-Kitas OmniRoute tinklų sietuvas gali būti pridėtas kaip **pasirinktinis su OpenAI suderinamas** teikėjas. Naudokite lygiaverčio mazgo `/v1` bazinį URL ir specialų, mažiausių būtinų teisių principu to mazgo išduotą API raktą.
+Kitas 67router tinklų sietuvas gali būti pridėtas kaip **pasirinktinis su OpenAI suderinamas** teikėjas. Naudokite lygiaverčio mazgo `/v1` bazinį URL ir specialų, mažiausių būtinų teisių principu to mazgo išduotą API raktą.
 
 Abipusėms arba kelių etapų grandinėms kiekviename tinklų sietuve įjunkite pasirenkamą apsaugą nuo kilpų:
 
@@ -736,7 +735,7 @@ OMNIROUTE_PEER_MAX_HOPS=4
 
 `X-OmniRoute-Peer-Trace` antraštę gauna tik į aiškiai leistinų lygiaverčių mazgų URL sąrašą įtrauktu adresu siunčiamos užklausos. Tinklų sietuvas atmeta pasikartojantį egzemplioriaus ID arba išnaudotą leidžiamų etapų limitą, grąžindamas HTTP `508 Loop Detected`; įprasti aukštesnio lygio teikėjai negauna jokių lygiaverčių mazgų metaduomenų.
 
-Lygiaverčių mazgų grandinės sudarymas nėra duomenų bazės replikavimas ar pagrindinio kompiuterio perjungimas gedimo atveju. Kiekvienas tinklų sietuvas turi nepriklausomą SQLite būseną, podėlius, dažnio skaitiklius ir seansus. Aktyviajam / pasyviajam arba aktyviajam / aktyviajam pasiekiamumui naudokite būklę tikrinantį atvirkštinį tarpinį serverį arba kliento perjungimą gedimo atveju ir niekada neprijunkite vienos SQLite duomenų bazės prie kelių veikiančių OmniRoute egzempliorių.
+Lygiaverčių mazgų grandinės sudarymas nėra duomenų bazės replikavimas ar pagrindinio kompiuterio perjungimas gedimo atveju. Kiekvienas tinklų sietuvas turi nepriklausomą SQLite būseną, podėlius, dažnio skaitiklius ir seansus. Aktyviajam / pasyviajam arba aktyviajam / aktyviajam pasiekiamumui naudokite būklę tikrinantį atvirkštinį tarpinį serverį arba kliento perjungimą gedimo atveju ir niekada neprijunkite vienos SQLite duomenų bazės prie kelių veikiančių 67router egzempliorių.
 
 ### Specialieji teikėjų maršrutai
 
@@ -787,7 +786,7 @@ Grąžina pagal teikėjus sugrupuotus modelius su tipais (`chat`, `embedding`, `
 - Pasiekiama skiltyje **Valdymo skydelis → Galiniai taškai**, naudojant Docker ir kitus savarankiškai talpinamus diegimus
 - Sukuria laikiną `https://*.trycloudflare.com` URL, kuris nukreipia į dabartinį su OpenAI suderinamą `/v1` galinį tašką
 - Pirmą kartą įjungus, `cloudflared` įdiegiamas tik tada, kai jo reikia; vėliau paleidžiant iš naujo naudojamas tas pats valdomas dvejetainis failas
-- „Quick Tunnels“ nėra automatiškai atkuriami iš naujo paleidus OmniRoute arba konteinerį; prireikus vėl juos įjunkite valdymo skydelyje
+- „Quick Tunnels“ nėra automatiškai atkuriami iš naujo paleidus 67router arba konteinerį; prireikus vėl juos įjunkite valdymo skydelyje
 - Tunelių URL yra laikini ir keičiasi kiekvieną kartą sustabdžius ir paleidus tunelį
 - Valdomi „Quick Tunnels“ pagal numatytąsias nuostatas naudoja HTTP/2 perdavimą, kad ribotų išteklių konteineriuose būtų išvengta triukšmingų QUIC UDP buferio įspėjimų
 - Nustatykite `CLOUDFLARED_PROTOCOL=quic` arba `auto`, jei norite pakeisti valdomo perdavimo parinktį
@@ -804,7 +803,7 @@ Grąžina pagal teikėjus sugrupuotus modelius su tipais (`chat`, `embedding`, `
 
 ### Vertėjo bandymų aplinka
 
-Pasiekiama per **Valdymo skydelis → Vertėjas**. Derinkite ir vizualizuokite, kaip OmniRoute verčia API užklausas tarp teikėjų.
+Pasiekiama per **Valdymo skydelis → Vertėjas**. Derinkite ir vizualizuokite, kaip 67router verčia API užklausas tarp teikėjų.
 
 | Režimas                    | Paskirtis                                                                                                     |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -857,7 +856,7 @@ Norėdami užtikrinti išorinį sesijos susiejimą (pavyzdžiui, Claude Code/Cod
 X-Session-Id: your-session-key
 ```
 
-OmniRoute taip pat priima `x_session_id` ir grąžina galiojantį sesijos raktą antraštėje `X-OmniRoute-Session-Id`.
+67router taip pat priima `x_session_id` ir grąžina galiojantį sesijos raktą antraštėje `X-OmniRoute-Session-Id`.
 
 Jei naudojate Nginx ir siunčiate antraštes su pabraukimo brūkšniais, įjunkite:
 
@@ -891,7 +890,7 @@ Grandinė: production-fallback
 
 ### Dažniausi teikėjų deriniai ir maršruto parinkimo šablonai
 
-Toliau pateikiami keli kelių teikėjų sujungimo ir maršruto tarp jų parinkimo OmniRoute pavyzdžiai:
+Toliau pateikiami keli kelių teikėjų sujungimo ir maršruto tarp jų parinkimo 67router pavyzdžiai:
 
 #### 1. Programavimo agento derinys: aukšto lygio samprotavimas su atsarginiu kainos ir spartos pasirinkimu
 
@@ -952,7 +951,7 @@ Specializuoti vaizdų modeliai derinami su sparčiu teksto generavimu darbo eigo
 
 Konfigūruokite per **Valdymo skydas → Nustatymai → Atsparumas**.
 
-OmniRoute užtikrina teikėjo lygmens atsparumą naudodama penkis komponentus:
+67router užtikrina teikėjo lygmens atsparumą naudodama penkis komponentus:
 
 1. **Užklausų eilė ir dažnio valdymas** — Sistemos lygmens užklausų srauto formavimas:
    - **Užklausos per minutę (RPM)** — Didžiausias vienai paskyrai tenkantis užklausų skaičius per minutę
@@ -977,7 +976,7 @@ OmniRoute užtikrina teikėjo lygmens atsparumą naudodama penkis komponentus:
 
    Teikėjo pertraukiklio vykdymo būsena rodoma tik puslapyje **Valdymo skydas → Būklė**.
 
-4. **Laukti atvėsimo laikotarpio** — Jei visi galimi ryšiai jau yra atvėsimo būsenoje, OmniRoute gali palaukti, kol baigsis anksčiausiai pasibaigiantis atvėsimo laikotarpis, ir automatiškai pakartoti tą pačią kliento užklausą.
+4. **Laukti atvėsimo laikotarpio** — Jei visi galimi ryšiai jau yra atvėsimo būsenoje, 67router gali palaukti, kol baigsis anksčiausiai pasibaigiantis atvėsimo laikotarpis, ir automatiškai pakartoti tą pačią kliento užklausą.
 
 5. **Automatinis spartos apribojimo aptikimas** — Kai išoriniai teikėjai grąžina aiškius laukimo laikotarpius, įjungus šį nustatymą tos užuominos pakeičia vietinį ryšio atvėsimo laikotarpį.
 
@@ -1011,7 +1010,7 @@ curl -X POST http://localhost:20128/api/db-backups/import \
 
 **Naudojimo atvejai:**
 
-- Perkelti OmniRoute iš vieno kompiuterio į kitą
+- Perkelti 67router iš vieno kompiuterio į kitą
 - Kurti išorines atsargines kopijas atkūrimui po nelaimės
 - Bendrinti konfigūracijas tarp komandos narių (eksportuoti viską → bendrinti archyvą)
 
@@ -1063,7 +1062,7 @@ curl http://localhost:20128/api/usage/budget
 
 ### Garso transkribavimas
 
-OmniRoute palaiko garso transkribavimą per su OpenAI suderinamą galinį tašką:
+67router palaiko garso transkribavimą per su OpenAI suderinamą galinį tašką:
 
 ```bash
 POST /v1/audio/transcriptions
@@ -1139,7 +1138,7 @@ Išjunkite **samprotavimo žetonų buferį**, kai pirminiai paslaugų teikėjai 
 `max_tokens` / `maxOutputTokens` apribojimų. Kai ši funkcija įjungta, kombinuotas maršruto parinkimas prideda
 papildomą samprotavimo modelio rezervą tik modeliams, kurių išvesties riba yra žinoma, ir nekeičia kliento žetonų limito, jei
 saugi buferinė reikšmė viršytų tą ribą. Jei kliento limitas jau viršija žinomą ribą,
-prieš siųsdama užklausą pirminiam paslaugų teikėjui „OmniRoute“ sumažina jį iki tos ribos.
+prieš siųsdama užklausą pirminiam paslaugų teikėjui „67router“ sumažina jį iki tos ribos.
 
 ---
 
@@ -1162,7 +1161,7 @@ Pasiekiama per **Valdymo skydas → Sistemos būklė**. Sistemos būklės apžva
 
 ## 🤖 Automatinis maršruto parinkimas (be konfigūravimo)
 
-„OmniRoute“ turi **vertinimu pagrįstą automatinį maršruto parinktuvą**, kuris kiekvienai užklausai parenka geriausią modelį iš visų prijungtų teikėjų — nereikia prižiūrėti jokių derinių. Tiesiog siųskite užklausą su vienu iš `auto/*` prefiksų, o „OmniRoute“ dinamiškai sudarys virtualų derinį, įvertindama kandidatus pagal delsą, kainą, sėkmės rodiklį, konteksto atitiktį, modelio tinkamumą užduočiai, naujausias triktis, kvotą ir grandinės pertraukiklio būseną.
+„67router“ turi **vertinimu pagrįstą automatinį maršruto parinktuvą**, kuris kiekvienai užklausai parenka geriausią modelį iš visų prijungtų teikėjų — nereikia prižiūrėti jokių derinių. Tiesiog siųskite užklausą su vienu iš `auto/*` prefiksų, o „67router“ dinamiškai sudarys virtualų derinį, įvertindama kandidatus pagal delsą, kainą, sėkmės rodiklį, konteksto atitiktį, modelio tinkamumą užduočiai, naujausias triktis, kvotą ir grandinės pertraukiklio būseną.
 
 | Prefiksas      | Optimizuojama pagal                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -1193,7 +1192,7 @@ Automatinis maršruto parinktuvas išsamiai aprašytas dokumente [AUTO-COMBO.md]
 
 ## 🔌 MCP ir A2A integracija
 
-„OmniRoute“ yra ir **MCP serveris** („Model Context Protocol“), ir **A2A serveris** („Agent-to-Agent JSON-RPC 2.0“). Bet kuri su MCP suderinama IDE ar agentų prieglobos sistema gali tiesiogiai iškviesti „OmniRoute“ įrankius — papildomas tarpinis komponentas nereikalingas.
+„67router“ yra ir **MCP serveris** („Model Context Protocol“), ir **A2A serveris** („Agent-to-Agent JSON-RPC 2.0“). Bet kuri su MCP suderinama IDE ar agentų prieglobos sistema gali tiesiogiai iškviesti „67router“ įrankius — papildomas tarpinis komponentas nereikalingas.
 
 ### MCP perdavimo būdai
 
@@ -1222,17 +1221,14 @@ Naudokite SSE URL `http://localhost:20128/api/mcp/sse` ir „Bearer“ API rakt�
 
 ### Aprėptys
 
-Šiuo metu MCP apibrėžia 32 įvardytas aprėptis. Kiekvieną „Bearer“ raktą galima apriboti konkrečiomis aprėptimis — autoritetingą aprėpčių ir įrankių sąrašą rasite dokumente [MCP-SERVER.md](../frameworks/MCP-SERVER.md), o JSON-RPC schemą — dokumente [A2A-SERVER.md](../frameworks/A2A-SERVER.md).
-
 ---
 
 ## 🧠 Įgūdžių sistema
 
-„OmniRoute“ suteikia išplečiamą **įgūdžių sistemą** (`src/lib/skills/`), kad agentai ir A2A galinis taškas galėtų vykdyti konkrečioms sritims skirtas procedūras (pvz., `code-review`, `summarize`, `extract-facts`, `web-research`).
+„67router“ suteikia išplečiamą **įgūdžių sistemą** (`src/lib/skills/`), kad agentai ir A2A galinis taškas galėtų vykdyti konkrečioms sritims skirtas procedūras (pvz., `code-review`, `summarize`, `extract-facts`, `web-research`).
 
 - **Prekyvietės sąsaja** — Naršykite ir diekite įgūdžius skiltyje **Valdymo skydas → Įgūdžiai**
 - **Atskirų raktų aprėptys** — Apribokite, kurie API raktai gali iškviesti konkrečius įgūdžius
-- **Pasirinktiniai įgūdžiai** — Įkelkite TypeScript failą į `src/lib/a2a/skills/`, užregistruokite jį ir jį iš karto bus galima iškviesti per A2A
 
 Išsami dokumentacija: [SKILLS.md](../frameworks/SKILLS.md).
 
@@ -1240,7 +1236,7 @@ Išsami dokumentacija: [SKILLS.md](../frameworks/SKILLS.md).
 
 ## 💾 Atminties sistema
 
-„OmniRoute“ išsaugo **ilgalaikę pokalbių atmintį**, kurioje naudojama hibridinė paieška:
+„67router“ išsaugo **ilgalaikę pokalbių atmintį**, kurioje naudojama hibridinė paieška:
 
 - **SQLite FTS5** raktažodžių paieškai ankstesniuose pokalbiuose
 - **Qdrant vektorių saugykla** (pasirinktinė) semantiniam prisiminimui
@@ -1253,7 +1249,7 @@ Tvarkykite atminties įrašus skiltyje **Valdymo skydas → Atmintis** (ieškoki
 
 ## 🔔 Webhook pranešimai
 
-Prenumeruokite „OmniRoute“ įvykius, kad galėtumėte stebėti sistemą ir automatizuoti veiksmus realiuoju laiku.
+Prenumeruokite „67router“ įvykius, kad galėtumėte stebėti sistemą ir automatizuoti veiksmus realiuoju laiku.
 
 - Sukurkite webhook skiltyje **Valdymo skydas → Webhook pranešimai**, nurodydami paskirties URL ir HMAC pasirašymo slaptąjį raktą
 - Galimi įvykiai: `request.completed`, `request.failed`, `provider.unavailable`, `budget.exceeded`, `combo.switched`, `circuit_breaker.opened`, `circuit_breaker.closed`
@@ -1264,21 +1260,9 @@ Visa schema pateikta [WEBHOOKS.md](../frameworks/WEBHOOKS.md).
 
 ---
 
-## ☁️ Debesijos agentai
-
-„OmniRoute“ integruojama su debesijos programavimo agentais (**OpenAI Codex Cloud**, **Devin**, **Jules**, **Antigravity**), todėl ilgai vykdomas užduotis galite siųsti iš to paties valdymo skydo, kuriame tvarkomas vietinis maršruto parinkimas.
-
-- Kurkite užduotis skiltyje **Valdymo skydas → Debesijos agentai** arba naudodami `POST /api/v1/agents/tasks`
-- Stebėkite kiekvienos užduoties būseną, žurnalus ir artefaktus
-- Kiekvienam teikėjui naudokite savo API raktą — prisijungimo duomenys niekada nepalieka „OmniRoute“ egzemplioriaus
-
-Išsami dokumentacija: [CLOUD_AGENT.md](../frameworks/CLOUD_AGENT.md).
-
----
-
 ## 🛠️ Programinis valdymas
 
-Kiekvieną „OmniRoute“ išteklių (teikėjus, derinius, raktus, nuostatas) galite valdyti per HTTP naudodami **Bearer raktą su `manage` aprėptimi**.
+Kiekvieną „67router“ išteklių (teikėjus, derinius, raktus, nuostatas) galite valdyti per HTTP naudodami **Bearer raktą su `manage` aprėptimi**.
 
 Sugeneruokite raktą skiltyje **Valdymo skydas → API raktai → Naujas raktas → Aprėptis: manage**, tada:
 
@@ -1311,7 +1295,7 @@ Visą galinių taškų katalogą ir užklausų bei atsakymų schemas rasite [API
 
 ## 💻 Vidinė CLI
 
-„OmniRoute“ pateikiama su vidine CLI (`omniroute …`), skirta konfigūravimui, diagnostikai ir veikimo valdymui. Ji yra **atskira nuo valdymo skydelio puslapio „CLI įrankiai“**, kuriame konfigūruojamos trečiųjų šalių CLI („Claude Code“, „Cursor“, „Codex“, „Cline“, …), kad jos galėtų palaikyti ryšį su „OmniRoute“.
+„67router“ pateikiama su vidine CLI (`omniroute …`), skirta konfigūravimui, diagnostikai ir veikimo valdymui. Ji yra **atskira nuo valdymo skydelio puslapio „CLI įrankiai“**, kuriame konfigūruojamos trečiųjų šalių CLI („Claude Code“, „Cursor“, „Codex“, „Cline“, …), kad jos galėtų palaikyti ryšį su „67router“.
 
 ```bash
 omniroute setup                    # Interaktyvus vediklis (slaptažodis, teikėjai, deriniai)
@@ -1329,7 +1313,6 @@ omniroute restore [<timestamp>]    # Atkurti iš momentinės kopijos
 omniroute health                   # Išsami būklė (grandinės pertraukikliai, podėlis, atmintis)
 omniroute quota                    # Teikėjų kvotų naudojimas
 omniroute mcp status               # MCP serverio būsena
-omniroute a2a status               # A2A serverio būsena
 omniroute tunnel list|create|stop  # Cloudflare/Tailscale/ngrok tuneliai
 omniroute reset-password           # Iš naujo nustatyti administratoriaus slaptažodį
 omniroute --mcp                    # Paleisti MCP serverį per stdio
@@ -1342,7 +1325,7 @@ Patarimas: naudokite `omniroute doctor --json` kartu su savo stebėjimo įrankiu
 
 ## 🖥️ Darbalaukio programa („Electron“)
 
-„OmniRoute“ galima naudoti kaip savąją darbalaukio programą, skirtą „Windows“, „macOS“ ir „Linux“.
+„67router“ galima naudoti kaip savąją darbalaukio programą, skirtą „Windows“, „macOS“ ir „Linux“.
 
 ### Diegimas
 

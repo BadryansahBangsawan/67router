@@ -1,4 +1,4 @@
-# OmniRoute Architecture (Português (Portugal))
+# 67router Architecture (Português (Portugal))
 
 🌐 **Languages:** 🇺🇸 [English](../../../../architecture/ARCHITECTURE.md) · 🇪🇹 [am](../../../am/docs/architecture/ARCHITECTURE.md) · 🇸🇦 [ar](../../../ar/docs/architecture/ARCHITECTURE.md) · 🇦🇿 [az](../../../az/docs/architecture/ARCHITECTURE.md) · 🇧🇬 [bg](../../../bg/docs/architecture/ARCHITECTURE.md) · 🇧🇩 [bn](../../../bn/docs/architecture/ARCHITECTURE.md) · 🇧🇦 [bs](../../../bs/docs/architecture/ARCHITECTURE.md) · 🇨🇿 [cs](../../../cs/docs/architecture/ARCHITECTURE.md) · 🇩🇰 [da](../../../da/docs/architecture/ARCHITECTURE.md) · 🇩🇪 [de](../../../de/docs/architecture/ARCHITECTURE.md) · 🇬🇷 [el](../../../el/docs/architecture/ARCHITECTURE.md) · 🇪🇸 [es](../../../es/docs/architecture/ARCHITECTURE.md) · 🇪🇪 [et](../../../et/docs/architecture/ARCHITECTURE.md) · 🇮🇷 [fa](../../../fa/docs/architecture/ARCHITECTURE.md) · 🇫🇮 [fi](../../../fi/docs/architecture/ARCHITECTURE.md) · 🇫🇷 [fr](../../../fr/docs/architecture/ARCHITECTURE.md) · 🇮🇪 [ga](../../../ga/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [gu](../../../gu/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ha](../../../ha/docs/architecture/ARCHITECTURE.md) · 🇮🇱 [he](../../../he/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [hi](../../../hi/docs/architecture/ARCHITECTURE.md) · 🇭🇷 [hr](../../../hr/docs/architecture/ARCHITECTURE.md) · 🇭🇺 [hu](../../../hu/docs/architecture/ARCHITECTURE.md) · 🇦🇲 [hy](../../../hy/docs/architecture/ARCHITECTURE.md) · 🇮🇩 [id](../../../id/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [ig](../../../ig/docs/architecture/ARCHITECTURE.md) · 🇮🇹 [it](../../../it/docs/architecture/ARCHITECTURE.md) · 🇯🇵 [ja](../../../ja/docs/architecture/ARCHITECTURE.md) · 🇬🇪 [ka](../../../ka/docs/architecture/ARCHITECTURE.md) · 🇰🇭 [km](../../../km/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [kn](../../../kn/docs/architecture/ARCHITECTURE.md) · 🇰🇷 [ko](../../../ko/docs/architecture/ARCHITECTURE.md) · 🇱🇹 [lt](../../../lt/docs/architecture/ARCHITECTURE.md) · 🇱🇻 [lv](../../../lv/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ml](../../../ml/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [mr](../../../mr/docs/architecture/ARCHITECTURE.md) · 🇲🇾 [ms](../../../ms/docs/architecture/ARCHITECTURE.md) · 🇲🇹 [mt](../../../mt/docs/architecture/ARCHITECTURE.md) · 🇲🇲 [my](../../../my/docs/architecture/ARCHITECTURE.md) · 🇳🇵 [ne](../../../ne/docs/architecture/ARCHITECTURE.md) · 🇳🇱 [nl](../../../nl/docs/architecture/ARCHITECTURE.md) · 🇳🇴 [no](../../../no/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [or](../../../or/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [pa](../../../pa/docs/architecture/ARCHITECTURE.md) · 🇵🇭 [phi](../../../phi/docs/architecture/ARCHITECTURE.md) · 🇵🇱 [pl](../../../pl/docs/architecture/ARCHITECTURE.md) · 🇧🇷 [pt-BR](../../../pt-BR/docs/architecture/ARCHITECTURE.md) · 🇷🇴 [ro](../../../ro/docs/architecture/ARCHITECTURE.md) · 🇷🇺 [ru](../../../ru/docs/architecture/ARCHITECTURE.md) · 🇱🇰 [si](../../../si/docs/architecture/ARCHITECTURE.md) · 🇸🇰 [sk](../../../sk/docs/architecture/ARCHITECTURE.md) · 🇸🇮 [sl](../../../sl/docs/architecture/ARCHITECTURE.md) · 🇷🇸 [sr](../../../sr/docs/architecture/ARCHITECTURE.md) · 🇸🇪 [sv](../../../sv/docs/architecture/ARCHITECTURE.md) · 🇰🇪 [sw](../../../sw/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [ta](../../../ta/docs/architecture/ARCHITECTURE.md) · 🇮🇳 [te](../../../te/docs/architecture/ARCHITECTURE.md) · 🇹🇭 [th](../../../th/docs/architecture/ARCHITECTURE.md) · 🇹🇷 [tr](../../../tr/docs/architecture/ARCHITECTURE.md) · 🇺🇦 [uk-UA](../../../uk-UA/docs/architecture/ARCHITECTURE.md) · 🇵🇰 [ur](../../../ur/docs/architecture/ARCHITECTURE.md) · 🇺🇿 [uz](../../../uz/docs/architecture/ARCHITECTURE.md) · 🇻🇳 [vi](../../../vi/docs/architecture/ARCHITECTURE.md) · 🇳🇬 [yo](../../../yo/docs/architecture/ARCHITECTURE.md) · 🇨🇳 [zh-CN](../../../zh-CN/docs/architecture/ARCHITECTURE.md) · 🇹🇼 [zh-TW](../../../zh-TW/docs/architecture/ARCHITECTURE.md)
 
@@ -10,7 +10,7 @@ _Última atualização: 2026-06-28_
 
 ## Resumo Executivo
 
-O OmniRoute é um gateway local de encaminhamento de IA e um painel de controlo, desenvolvido sobre Next.js.
+O 67router é um gateway local de encaminhamento de IA e um painel de controlo, desenvolvido sobre Next.js.
 Disponibiliza um único endpoint compatível com OpenAI (`/v1/*`) e encaminha o tráfego entre vários fornecedores a montante, com tradução, recurso alternativo, renovação de tokens e monitorização da utilização.
 
 Capacidades principais:
@@ -128,13 +128,11 @@ Páginas principais em `src/app/(dashboard)/dashboard/`:
 - `/dashboard/limits` — controlos de quotas/taxas
 - `/dashboard/cli-tools` — integração inicial da CLI, deteção do runtime, geração de configuração
 - `/dashboard/agents` — agentes ACP detetados + registo de agentes personalizados
-- `/dashboard/cloud-agents` — tarefas de agentes alojados na cloud (Codex Cloud, Devin, Jules) e ciclo de vida das tarefas
 - `/dashboard/skills` — registo de competências A2A, execução em sandbox, catálogo de competências integradas
 - `/dashboard/memory` — inspeção e recuperação da memória conversacional persistente
 - `/dashboard/webhooks` — subscrições de webhooks de saída, rotação de segredos, estatísticas de novas tentativas
 - `/dashboard/batch` — submissão de tarefas em lote e progresso
 - `/dashboard/cache` — estatísticas de cache de leitura e raciocínio, controlos de expulsão
-- `/dashboard/playground` — playground de chat interativo para qualquer combo/modelo configurado
 - `/dashboard/changelog` — visualizador do registo de alterações na aplicação (renderiza `CHANGELOG.md`)
 - `/dashboard/system` — diagnóstico do runtime, informações da versão, superfície de validação do ambiente
 - `/dashboard/onboarding` — assistente de configuração da primeira execução para novas instalações
@@ -164,7 +162,7 @@ flowchart LR
         BROWSER[Painel do Navegador]
     end
 
-    subgraph Router[Processo Local OmniRoute]
+    subgraph Router[Processo Local 67router]
         API[API de Compatibilidade V1\n/v1/*]
         DASH[Painel + API de Gestão\n/api/*]
         CORE[Núcleo de SSE + Tradução\nopen-sse + src/sse]
@@ -252,7 +250,6 @@ Domínios de gestão:
 - Orçamento: `src/app/api/usage/budget` (GET/POST)
 - Cadeias de recurso: `src/app/api/fallback/chains` (GET/POST/DELETE)
 - Auditoria de conformidade: `src/app/api/compliance/audit-log` (GET, com paginação + metadados estruturados)
-- Avaliações: `src/app/api/evals` (GET/POST), `src/app/api/evals/[suiteId]` (GET)
 - Políticas: `src/app/api/policies` (GET/POST)
 - Tokens de sincronização: `src/app/api/sync/tokens` (GET/POST), `src/app/api/sync/tokens/[id]` (GET/DELETE)
 - Pacote de configuração: `src/app/api/sync/bundle` (GET, instantâneo de definições/fornecedores/combinações/chaves com controlo de versão por ETag)
@@ -316,7 +313,6 @@ Módulos da camada de domínio:
 - Tempo limite de pedidos: `src/shared/utils/fetchTimeout.ts`
 - Telemetria de pedidos: `src/shared/utils/requestTelemetry.ts`
 - Conformidade/auditoria: `src/lib/compliance/index.ts`
-- Executor de avaliações: `src/lib/evals/evalRunner.ts`
 - Persistência do estado do domínio: `src/lib/db/domainState.ts` — operações CRUD em SQLite para cadeias de contingência, orçamentos, histórico de custos, estado de bloqueio e disjuntores
 
 Módulos de fornecedores OAuth (27 ficheiros individuais em `src/lib/oauth/providers/`):
@@ -328,7 +324,7 @@ Módulos de fornecedores OAuth (27 ficheiros individuais em `src/lib/oauth/provi
 
 ## 5) Serviços Incorporados (v3.8.4)
 
-O OmniRoute pode instalar, supervisionar e encaminhar pedidos para processos de ferramentas de IA executados localmente, denominados **serviços incorporados**. São fornecidos cinco: 9Router, CLIProxyAPI, Bifrost, Mux e Dario.
+O 67router pode instalar, supervisionar e encaminhar pedidos para processos de ferramentas de IA executados localmente, denominados **serviços incorporados**. São fornecidos cinco: 9Router, CLIProxyAPI, Bifrost, Mux e Dario.
 
 Camadas da arquitetura:
 
@@ -385,23 +381,6 @@ Principais capacidades:
 Para obter todos os detalhes algorítmicos (fórmulas dos fatores, ajuste de ponderações), consulte
 [`docs/routing/AUTO-COMBO.md`](../routing/AUTO-COMBO.md).
 
-### B. Agentes na Nuvem
-
-Os Agentes na Nuvem encapsulam plataformas de agentes de código alojadas por terceiros (Codex Cloud, Devin,
-Jules) através de um ciclo de vida de tarefas uniforme e baseado em base de dados. Todos os endpoints de criação/inspeção
-de tarefas requerem autenticação de gestão.
-
-- Raiz do módulo: `src/lib/cloudAgent/` (`baseAgent.ts`, `registry.ts`, `api.ts`,
-  `types.ts`, `db.ts`, além dos subdiretórios de cada agente em `agents/`)
-- Implementações por agente: `agents/codex/`, `agents/devin/`, `agents/jules/`
-- Endpoints públicos: `/api/v1/agents/tasks/*` (listar/criar/obter/cancelar)
-- Endpoints de gestão: `/api/cloud/*` (aprovisionamento, estado, lote)
-- Painel: `/dashboard/cloud-agents`
-- Armazenamento: tabela `cloud_agent_tasks`
-
-Para obter detalhes específicos sobre o aprovisionamento e o OAuth de cada agente, consulte
-[`docs/frameworks/CLOUD_AGENT.md`](../frameworks/CLOUD_AGENT.md).
-
 ### C. Salvaguardas
 
 O módulo de salvaguardas é uma camada de middleware com recarregamento dinâmico que inspeciona pedidos
@@ -437,7 +416,7 @@ tenham de compor autonomamente a lógica de bloqueio/orçamento/fallback.
 - Cache de quotas: `src/domain/quotaCache.ts`
 - Estado de degradação: `src/domain/degradation.ts`
 - Auditoria de configuração: `src/domain/configAudit.ts`
-- Construtor de metadados de resposta do OmniRoute: `src/domain/omnirouteResponseMeta.ts`
+- Construtor de metadados de resposta do 67router: `src/domain/omnirouteResponseMeta.ts`
 - Subsistema de avaliação: `src/domain/assessment/` — tarefas de avaliação periódicas
 
 ### E. Pipeline de Autorização
@@ -815,7 +794,7 @@ flowchart LR
         Browser[Browser do Painel]
     end
 
-    subgraph ContainerOrProcess[Execução do OmniRoute]
+    subgraph ContainerOrProcess[Execução do 67router]
         Next[Servidor Next.js\nPORT=20128]
         Core[Núcleo SSE + Executores]
         MainDB[(storage.sqlite)]
@@ -934,7 +913,7 @@ Todos os outros fornecedores (incluindo nós personalizados compatíveis) utiliz
 ## Matriz de Compatibilidade de Fornecedores
 
 > **Nota:** A matriz abaixo é uma amostra representativa dos 351 fornecedores registados no
-> OmniRoute v3.8.0. Para consultar a lista canónica e continuamente atualizada, consulte
+> 67router v3.8.0. Para consultar a lista canónica e continuamente atualizada, consulte
 > [`docs/reference/PROVIDER_REFERENCE.md`](../reference/PROVIDER_REFERENCE.md) (gerada automaticamente) ou a fonte
 > oficial em `src/shared/constants/providers.ts` (validada pelo Zod durante o carregamento).
 
@@ -1116,7 +1095,7 @@ A captura detalhada dos payloads dos pedidos armazena até quatro fases de paylo
 - pedido não processado recebido do cliente
 - pedido traduzido efetivamente enviado a montante
 - resposta do fornecedor reconstruída como JSON; as respostas transmitidas em fluxo são condensadas no resumo final juntamente com os metadados do fluxo
-- resposta final do cliente devolvida pelo OmniRoute; as respostas transmitidas em fluxo são armazenadas no mesmo formato de resumo condensado
+- resposta final do cliente devolvida pelo 67router; as respostas transmitidas em fluxo são armazenadas no mesmo formato de resumo condensado
 
 ## Limites Sensíveis à Segurança
 

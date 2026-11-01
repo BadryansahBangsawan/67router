@@ -4,7 +4,7 @@
 
 ---
 
-> **要約**: OmniRoute の圧縮エンジンは**プラガブル**です。カスタムエンジンの登録、新しい言語向けの言語パックの提供、スタック型パイプラインの構成が可能です。このガイドでは、その方法を説明します。
+> **要約**: 67router の圧縮エンジンは**プラガブル**です。カスタムエンジンの登録、新しい言語向けの言語パックの提供、スタック型パイプラインの構成が可能です。このガイドでは、その方法を説明します。
 
 **関連ガイド:**
 
@@ -199,27 +199,18 @@ registerCompressionEngine(whitespaceEngine);
 <project>/compression-engines/my-engine.ts        # プロジェクトレベル（起動時に読み込まれる）
 ```
 
-または、プラグインからプログラムで読み込みます。
+Or register it programmatically at startup:
 
 ```ts
-// プラグイン内
 import {
   registerCompressionEngine,
   unregisterCompressionEngine,
 } from "@omniroute/open-sse/services/compression/engines/registry";
 import { myEngine } from "./engines/my-engine";
 
-export default definePlugin({
-  name: "my-compression-plugin",
-  // プラグイン SDK は onRequest / onResponse / onError フックを公開する。プラグイン
-  // モジュールの読み込み時（または最初の onRequest 時）にエンジンを登録し、独自の
-  // ティアダウン処理から登録を解除する。
-  onRequest: async (ctx) => {
-    registerCompressionEngine(myEngine);
-  },
-});
+registerCompressionEngine(myEngine);
 
-// ティアダウン時：
+// On teardown:
 // unregisterCompressionEngine("my-engine");
 ```
 
@@ -232,7 +223,7 @@ export default definePlugin({
 
 ## 言語パックの作成
 
-Caveman スタイルの圧縮では、自然言語ごとのフィラー表現、婉曲表現、冗長なパターンを処理するために、**言語固有のルールパック**を使用します。OmniRoute には、`en`、`es`、`fr`、`de`、`ja`、`pt-BR` の **6 つの言語パック**が付属しています。
+Caveman スタイルの圧縮では、自然言語ごとのフィラー表現、婉曲表現、冗長なパターンを処理するために、**言語固有のルールパック**を使用します。67router には、`en`、`es`、`fr`、`de`、`ja`、`pt-BR` の **6 つの言語パック**が付属しています。
 
 ### パックの構造
 
@@ -390,7 +381,7 @@ await loadRulePack("./my-custom-rules/hi/filler.json");
 
 ### 圧縮モード
 
-OmniRouteは、設定、自動トリガーのしきい値、およびコンボのオーバーライドに基づいて、**リクエストごとに1つのモード**を選択します。
+67routerは、設定、自動トリガーのしきい値、およびコンボのオーバーライドに基づいて、**リクエストごとに1つのモード**を選択します。
 利用可能なモードは `open-sse/services/compression/types.ts`（型 `CompressionMode`）で定義されています。
 
 | モード       | エンジン             | ユースケース                                                                                                                                                                                              |
@@ -507,10 +498,10 @@ const result = applyStackedCompression(body, [
 
 ## アップストリーム同期ポリシー
 
-OmniRoute の圧縮エンジンは、README で複数のアップストリームプロジェクトをクレジットしています
+67router の圧縮エンジンは、README で複数のアップストリームプロジェクトをクレジットしています
 （「RTK、Caveman、LLMLingua-2、Troglodita に着想を得た」）。コントリビューターから
 よく寄せられる質問は、**アップストリームの RTK に新しいツールフィルターが追加された場合や、Caveman にルール
-パックが追加された場合、それらはどのように OmniRoute に取り込まれるのか？**というものです。このセクションが正式な回答です。
+パックが追加された場合、それらはどのように 67router に取り込まれるのか？**というものです。このセクションが正式な回答です。
 
 ### ベンダー化されたコピーと独立実装
 
@@ -530,7 +521,7 @@ _アイデア_ をクリーンルーム方式で TypeScript により実装し�
 
 設計上、**アップストリームリリースの自動追跡も、`compression-sync`
 ラベルもありません**。これらのエンジンは再実装であるため、アップストリームの RTK
-フィルターや Caveman ルールパックがコードとしてマージされることはありません。代わりに、**OmniRoute 独自の形式で新しい
+フィルターや Caveman ルールパックがコードとしてマージされることはありません。代わりに、**67router 独自の形式で新しい
 ルール／フィルターとして再表現**され（
 [COMPRESSION_RULES_FORMAT.md](./COMPRESSION_RULES_FORMAT.md) を参照）、通常の PR を通じて
 必要に応じて取り込まれます。上記の拡張ポイント（カスタムエンジン、言語パック、RTK フィルター）が、
@@ -545,13 +536,13 @@ _アイデア_ をクリーンルーム方式で TypeScript により実装し�
 ### Headroom（入力圧縮プロキシ）
 
 Headroom は**完全な内部実装**です。固定されたベンダー版 `gcf` コーデックのスナップショットと、
-OmniRoute 独自の `smartcrusher` / `toon` / `tabular` レイヤーで構成されています。ベンダー化されたコピー以外に
+67router 独自の `smartcrusher` / `toon` / `tabular` レイヤーで構成されています。ベンダー化されたコピー以外に
 追跡対象となる稼働中のアップストリームはありません。`gcf` の更新は、コーデックに変更があった際に
 手動で反映され、圧縮予算ゲート（`check:compression-budget`）に対して再検証されます。
 
 ### アップストリームに着想を得た改善の提案
 
-1. **ベンダー化しないでください** — アップストリームのルール／フィルターを OmniRoute の形式で再表現してください。
+1. **ベンダー化しないでください** — アップストリームのルール／フィルターを 67router の形式で再表現してください。
 2. 以下の該当する拡張ポイント（言語パック、RTK フィルター、または
    カスタムエンジン）を通じて追加してください。
 3. ライセンス付きのソースをコピーするのではなく、PR の説明でアップストリームプロジェクトを参照してください（帰属表示）。
