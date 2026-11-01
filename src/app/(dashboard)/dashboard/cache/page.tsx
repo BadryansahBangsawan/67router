@@ -16,6 +16,7 @@ import Button from "@/shared/components/Button";
 import Card from "@/shared/components/Card";
 import EmptyState from "@/shared/components/EmptyState";
 import Icon from "@/shared/components/Icon";
+import { KpiCell, KpiStrip } from "@/shared/components/KpiStrip";
 import { Skeleton } from "@/shared/components/Loading";
 import SegmentedControl from "@/shared/components/SegmentedControl";
 import { useNotificationStore } from "@/store/notificationStore";
@@ -82,42 +83,6 @@ interface CacheStats {
 }
 
 type CacheView = "prompt" | "semantic" | "reasoning";
-
-/**
- * 67router KPI cell: muted 13 px label, 28/600 tabular value, optional footnote. The parent
- * strip (STAT_STRIP) draws the single bordered card and the hairline dividers.
- */
-function StatCard({
-  icon,
-  label,
-  value,
-  sub,
-}: {
-  icon: string;
-  label: string;
-  value: string | number;
-  sub?: string;
-  /** Kept for call-site compatibility; 67router values are monochrome ink. */
-  accent?: string;
-  size?: "default" | "hero";
-}) {
-  return (
-    <div className="flex min-w-0 flex-col gap-1 px-5 py-4">
-      <div className="flex items-center gap-1.5 text-[13px] text-text-muted">
-        <Icon name={icon} size={14} />
-        <span className="truncate">{label}</span>
-      </div>
-      <div className="truncate text-[28px] font-semibold leading-9 tracking-[-0.03em] tabular-nums text-text-main">
-        {value}
-      </div>
-      {sub && <div className="truncate text-[12.5px] text-text-muted">{sub}</div>}
-    </div>
-  );
-}
-
-/** One bordered card split into equal cells by hairline dividers (the 67router KPI row). */
-const STAT_STRIP_OUTER = "overflow-hidden rounded-card border border-border bg-surface";
-const STAT_STRIP_GRID = "-ml-px -mt-px grid [&>*]:border-l [&>*]:border-t [&>*]:border-border";
 
 function SectionBadge({
   icon,
@@ -482,50 +447,33 @@ export default function CachePage() {
 
             {pc ? (
               <>
-                <div className={STAT_STRIP_OUTER}>
-                  <div className={`${STAT_STRIP_GRID} md:grid-cols-2 xl:grid-cols-5`}>
-                    <StatCard
-                      icon="speed"
-                      label={t("cacheRate")}
-                      value={`${promptCacheRate.toFixed(1)}%`}
-                      sub={`${pc.requestsWithCacheControl.toLocaleString()} / ${pc.totalRequests.toLocaleString()} ${t("requests").toLowerCase()}`}
-                      accent="text-success"
-                      size="hero"
-                    />
-                    <StatCard
-                      icon="savings"
-                      label={t("cacheReuseRatio")}
-                      value={`${promptReuseRatio.toFixed(1)}%`}
-                      sub={t("cacheReuseRatioDesc")}
-                      accent="text-info"
-                      size="hero"
-                    />
-                    <StatCard
-                      icon="token"
-                      label={t("cachedTokens")}
-                      value={pc.totalCachedTokens.toLocaleString()}
-                      sub={t("cachedTokensRead")}
-                      accent="text-chart-2"
-                      size="hero"
-                    />
-                    <StatCard
-                      icon="upload"
-                      label={t("cacheCreationTokens")}
-                      value={pc.totalCacheCreationTokens.toLocaleString()}
-                      sub={t("cacheCreationWrite")}
-                      accent="text-chart-4"
-                      size="hero"
-                    />
-                    <StatCard
-                      icon="attach_money"
-                      label={t("estCostSaved")}
-                      value={`$${pc.estimatedCostSaved.toFixed(4)}`}
-                      sub={t("promptCache")}
-                      accent="text-success"
-                      size="hero"
-                    />
-                  </div>
-                </div>
+                <KpiStrip gridClassName="md:grid-cols-2 xl:grid-cols-5">
+                  <KpiCell
+                    label={t("cacheRate")}
+                    value={`${promptCacheRate.toFixed(1)}%`}
+                    footnote={`${pc.requestsWithCacheControl.toLocaleString()} / ${pc.totalRequests.toLocaleString()} ${t("requests").toLowerCase()}`}
+                  />
+                  <KpiCell
+                    label={t("cacheReuseRatio")}
+                    value={`${promptReuseRatio.toFixed(1)}%`}
+                    footnote={t("cacheReuseRatioDesc")}
+                  />
+                  <KpiCell
+                    label={t("cachedTokens")}
+                    value={pc.totalCachedTokens.toLocaleString()}
+                    footnote={t("cachedTokensRead")}
+                  />
+                  <KpiCell
+                    label={t("cacheCreationTokens")}
+                    value={pc.totalCacheCreationTokens.toLocaleString()}
+                    footnote={t("cacheCreationWrite")}
+                  />
+                  <KpiCell
+                    label={t("estCostSaved")}
+                    value={`$${pc.estimatedCostSaved.toFixed(4)}`}
+                    footnote={t("promptCache")}
+                  />
+                </KpiStrip>
 
                 <div className="w-full rounded-card border border-border bg-surface p-5">
                   <div>
@@ -672,36 +620,28 @@ export default function CachePage() {
               </div>
             )}
 
-            <div className={STAT_STRIP_OUTER}>
-              <div className={`${STAT_STRIP_GRID} grid-cols-2 xl:grid-cols-4`}>
-                <StatCard
-                  icon="memory"
-                  label={t("memoryEntries")}
-                  value={sc?.memoryEntries ?? 0}
-                  sub={t("memoryEntriesSub")}
-                />
-                <StatCard
-                  icon="storage"
-                  label={t("dbEntries")}
-                  value={sc?.dbEntries ?? 0}
-                  sub={t("dbEntriesSub")}
-                />
-                <StatCard
-                  icon="trending_up"
-                  label={t("cacheHits")}
-                  value={sc?.hits ?? 0}
-                  sub={t("cacheHitsSub", { total: semanticTotalRequests })}
-                  accent="text-success"
-                />
-                <StatCard
-                  icon="token"
-                  label={t("tokensSaved")}
-                  value={(sc?.tokensSaved ?? 0).toLocaleString()}
-                  sub={t("tokensSavedSub")}
-                  accent="text-info"
-                />
-              </div>
-            </div>
+            <KpiStrip gridClassName="grid-cols-2 xl:grid-cols-4">
+              <KpiCell
+                label={t("memoryEntries")}
+                value={sc?.memoryEntries ?? 0}
+                footnote={t("memoryEntriesSub")}
+              />
+              <KpiCell
+                label={t("dbEntries")}
+                value={sc?.dbEntries ?? 0}
+                footnote={t("dbEntriesSub")}
+              />
+              <KpiCell
+                label={t("cacheHits")}
+                value={sc?.hits ?? 0}
+                footnote={t("cacheHitsSub", { total: semanticTotalRequests })}
+              />
+              <KpiCell
+                label={t("tokensSaved")}
+                value={(sc?.tokensSaved ?? 0).toLocaleString()}
+                footnote={t("tokensSavedSub")}
+              />
+            </KpiStrip>
 
             <div className="grid gap-4 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
               <div className="rounded-card border border-border bg-surface p-5">

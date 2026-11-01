@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Button } from "@/shared/components";
 import { extractApiErrorMessage } from "@/shared/http/apiErrorMessage";
+import { SettingsRow, SettingsSection } from "./SettingsSection";
 
 type IntegrityState = {
   integrityCheck: "ok" | "error" | null;
@@ -92,11 +93,11 @@ export default function StorageIntegrityCheckControl() {
   };
 
   return (
-    <div className="p-3 rounded-lg bg-bg border border-border mb-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p className="text-sm font-semibold">{t("storageIntegrityCheck")}</p>
-          <p className="text-sm text-text-muted">
+    <SettingsSection>
+      <SettingsRow
+        label={t("storageIntegrityCheck")}
+        description={
+          <>
             {state.integrityCheck === "ok" ? (
               <span className="text-success">{t("storageIntegrityOk")}</span>
             ) : state.integrityCheck === "error" ? (
@@ -105,20 +106,23 @@ export default function StorageIntegrityCheckControl() {
               t("storageIntegrityNotChecked")
             )}
             {checkedLabel ? ` · ${t("storageIntegrityLastCheck", { date: checkedLabel })}` : ""}
-          </p>
-        </div>
-        <Button onClick={handleRunCheck} loading={loading}>
-          {t("storageIntegrityRunCheck")}
-        </Button>
-      </div>
-      {status.message ? (
-        <div
-          className="mt-3 p-3 rounded-lg text-sm bg-error/10 text-error border border-error/20"
-          role="alert"
-        >
-          {status.message}
-        </div>
-      ) : null}
-    </div>
+          </>
+        }
+        control={
+          <Button onClick={handleRunCheck} loading={loading}>
+            {t("storageIntegrityRunCheck")}
+          </Button>
+        }
+      >
+        {status.message ? (
+          <div
+            className="p-3 rounded-lg text-sm bg-error/10 text-error border border-error/20"
+            role="alert"
+          >
+            {status.message}
+          </div>
+        ) : null}
+      </SettingsRow>
+    </SettingsSection>
   );
 }

@@ -8353,7 +8353,8 @@
       "aggressive": "Mạnh",
       "ultra": "Cực mạnh",
       "responsesToolOutput": "Đầu ra công cụ Responses"
-    }
+    },
+    "pipelineStep": "Bước {current}/{total}"
   },
   "contextCombos": {
     "title": "Tổ hợp nén",
@@ -8477,7 +8478,9 @@
     "encoder": "bộ mã hóa",
     "bytes": "byte",
     "tokensCl100k": "token (cl100k)",
-    "studioViews": "Các chế độ xem của studio"
+    "studioViews": "Các chế độ xem của studio",
+    "liveTitle": "Nén trực tiếp",
+    "liveSubtitle": "Yêu cầu được nén gần nhất, theo từng engine, ngay khi đến."
   },
   "omniglyph": {
     "preview": "Xem trước",

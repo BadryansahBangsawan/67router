@@ -8353,7 +8353,8 @@
       "aggressive": "Agressivo",
       "ultra": "Ultra",
       "responsesToolOutput": "Saída da ferramenta de respostas"
-    }
+    },
+    "pipelineStep": "Etapa {current} de {total}"
   },
   "contextCombos": {
     "title": "Combos de Compressao",
@@ -8477,7 +8478,9 @@
     "encoder": "codificador",
     "bytes": "bytes",
     "tokensCl100k": "tokens (cl100k)",
-    "studioViews": "Visões do estúdio"
+    "studioViews": "Visões do estúdio",
+    "liveTitle": "Compressão ao vivo",
+    "liveSubtitle": "A requisição comprimida mais recente, engine por engine, assim que chega."
   },
   "omniglyph": {
     "preview": "Visualização",

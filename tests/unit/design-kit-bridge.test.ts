@@ -192,15 +192,30 @@ test("no class literal pairs a solid bg-accent/bg-primary with text-white (the p
   );
 });
 
-test("STATUS_HEX mirrors the kit status palette (ReactFlow/SVG need hex)", async () => {
+test("STATUS_HEX is the 67router status palette (ReactFlow/SVG need hex)", async () => {
   const { STATUS_HEX } = await import("../../src/shared/constants/statusColors.ts");
-  const { ciTokens } = await import("../../packages/ui-kit/src/tokens.ts");
-  assert.equal(STATUS_HEX.success, ciTokens.color.status.success);
-  assert.equal(STATUS_HEX.warning, ciTokens.color.status.warning);
-  assert.equal(STATUS_HEX.error, ciTokens.color.status.danger);
-  assert.equal(STATUS_HEX.muted, ciTokens.color.neutral[500]);
-  assert.equal(STATUS_HEX.approval, ciTokens.color.chart[3]);
-  assert.doesNotMatch(read("src/shared/constants/statusColors.ts"), /#[0-9a-fA-F]{6}/);
+  assert.deepEqual(
+    { ...STATUS_HEX },
+    {
+      success: "#16a34a",
+      warning: "#d97706",
+      error: "#dc2626",
+      muted: "#a3a3a3",
+      approval: "#737373",
+      fallback: "#ff4f00",
+    }
+  );
+  // The hexes that have a light-mode 67router token must stay equal to it.
+  const css = read("src/app/globals.css");
+  const light = (name: string) => css.match(new RegExp(`--r67-${name}:\\s*(#[0-9a-f]{6})`))?.[1];
+  assert.equal(STATUS_HEX.success, light("success"));
+  assert.equal(STATUS_HEX.error, light("danger"));
+  assert.equal(STATUS_HEX.muted, light("neutral-dot"));
+  assert.equal(STATUS_HEX.fallback, light("fallback"));
+  // No Keak kit hue survives (old success/warning/danger/violet).
+  for (const keak of ["#087a4f", "#a75a00", "#bf3636", "#7d4fc7"]) {
+    assert.ok(!Object.values(STATUS_HEX).includes(keak as never), `${keak} is a Keak hue`);
+  }
 });
 
 test("<html> opts into the kit theme surface", () => {

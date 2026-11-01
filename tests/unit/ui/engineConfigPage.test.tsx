@@ -103,11 +103,11 @@ const SETTINGS_PAYLOAD = {
   },
 };
 
-function setupFetchMock() {
+function setupFetchMock(enginesPayload: { engines: unknown[] } = ENGINE_PAYLOAD) {
   vi.spyOn(globalThis, "fetch").mockImplementation(async (input: RequestInfo | URL) => {
     const url = input.toString();
     if (url.includes("/api/compression/engines")) {
-      return new Response(JSON.stringify(ENGINE_PAYLOAD), {
+      return new Response(JSON.stringify(enginesPayload), {
         status: 200,
         headers: { "Content-Type": "application/json" },
       });
@@ -150,6 +150,49 @@ function setupFetchMock() {
 // ── Tests ─────────────────────────────────────────────────────────────────
 
 describe("EngineConfigPage", () => {
+  it("shows the engine's pipeline position (stackable engines in stackPriority order)", async () => {
+    const headroom = ENGINE_PAYLOAD.engines[0];
+    setupFetchMock({
+      engines: [
+        { ...headroom, id: "late", name: "Late", stackPriority: 90 },
+        { ...headroom, id: "solo", name: "Solo", stackable: false, stackPriority: 0 },
+        { ...headroom, stackPriority: 20 },
+        { ...headroom, id: "early", name: "Early", stackPriority: 3 },
+      ],
+    });
+    const { EngineConfigPage } =
+      await import("../../../src/shared/components/compression/EngineConfigPage");
+
+    let container!: HTMLElement;
+    await act(async () => {
+      container = mountInContainer(<EngineConfigPage engineId="headroom" />);
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(container.querySelector('[data-testid="engine-pipeline-step"]')?.textContent).toBe(
+      "Step 2 of 3"
+    );
+  });
+
+  it("shows no pipeline position for a non-stackable engine", async () => {
+    setupFetchMock({ engines: [{ ...ENGINE_PAYLOAD.engines[0], stackable: false }] });
+    const { EngineConfigPage } =
+      await import("../../../src/shared/components/compression/EngineConfigPage");
+
+    let container!: HTMLElement;
+    await act(async () => {
+      container = mountInContainer(<EngineConfigPage engineId="headroom" />);
+    });
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    expect(container.textContent).toContain("Headroom");
+    expect(container.querySelector('[data-testid="engine-pipeline-step"]')).toBeNull();
+  });
+
   it("renders the engine name after fetching engine list", async () => {
     setupFetchMock();
     const { EngineConfigPage } =

@@ -4,7 +4,8 @@ import { useCallback, useEffect, useId, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Alert } from "@omniroute/ui-kit/alert";
 import { Field } from "@omniroute/ui-kit/field";
-import { Badge, Card, Button, Textarea } from "@/shared/components";
+import { Badge, Button, Textarea } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 
 const EMPTY_PAYLOAD_RULES_TEMPLATE = {
@@ -182,7 +183,7 @@ export default function PayloadRulesTab() {
   ] as const;
 
   return (
-    <Card title={t("payloadRulesTitle")} subtitle={t("payloadRulesDesc")} icon="data_object">
+    <SettingsSection title={t("payloadRulesTitle")} description={t("payloadRulesDesc")}>
       <div className="flex flex-col gap-5">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
           {ruleCards.map(([titleKey, descKey]) => (
@@ -279,6 +280,6 @@ export default function PayloadRulesTab() {
           </Button>
         </div>
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

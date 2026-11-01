@@ -2,16 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import {
-  Badge,
-  Button,
-  Card,
-  Collapsible,
-  Input,
-  ModelSelectField,
-  Toggle,
-} from "@/shared/components";
+import { Badge, Button, Collapsible, Input, ModelSelectField, Toggle } from "@/shared/components";
 import Icon from "@/shared/components/Icon";
+import { SettingsSection } from "./SettingsSection";
 
 export default function BackgroundDegradationTab() {
   const [config, setConfig] = useState({
@@ -94,24 +87,17 @@ export default function BackgroundDegradationTab() {
   const mapEntries = Object.entries(config.degradationMap || {}) as [string, string][];
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-5">
-        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
-          <Icon name="speed" size={20} />
-        </div>
-        <div className="flex-1">
-          <h3 className="text-base font-semibold tracking-[-0.01em]">
-            {t("backgroundDegradationTitle")}
-          </h3>
-          <p className="text-sm text-text-muted">{t("backgroundDegradationDesc")}</p>
-        </div>
-        {status === "saved" && (
+    <SettingsSection
+      title={t("backgroundDegradationTitle")}
+      description={t("backgroundDegradationDesc")}
+      action={
+        status === "saved" ? (
           <span className="text-xs font-medium text-success flex items-center gap-1">
             <Icon name="check_circle" size={14} /> {t("saved")}
           </span>
-        )}
-      </div>
-
+        ) : null
+      }
+    >
       {/* Toggle */}
       <div className="flex items-center justify-between p-4 rounded-lg bg-surface/30 border border-border/30 mb-4">
         <div>
@@ -239,6 +225,6 @@ export default function BackgroundDegradationTab() {
           </Collapsible>
         </>
       )}
-    </Card>
+    </SettingsSection>
   );
 }

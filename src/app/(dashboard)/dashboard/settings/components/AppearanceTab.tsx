@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { RadioGroup, RadioGroupItem } from "@omniroute/ui-kit/radio-group";
-import { Button, Card, Input, Toggle } from "@/shared/components";
+import { Button, Input, Toggle } from "@/shared/components";
+import { SettingsSection } from "./SettingsSection";
 import Icon from "@/shared/components/Icon";
 import { useTheme } from "@/shared/hooks/useTheme";
 import { useIsElectron } from "@/shared/hooks/useElectron";
@@ -117,7 +118,7 @@ export default function AppearanceTab() {
     : 180;
 
   return (
-    <Card title={t("appearance")} icon="palette">
+    <SettingsSection title={t("appearance")}>
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div>
@@ -685,6 +686,6 @@ export default function AppearanceTab() {
           </div>
         </div>
       </div>
-    </Card>
+    </SettingsSection>
   );
 }

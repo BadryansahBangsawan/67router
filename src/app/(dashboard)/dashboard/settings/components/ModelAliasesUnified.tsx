@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Button, Card, Collapsible, Input, SegmentedControl } from "@/shared/components";
+import { Button, Collapsible, Input, SegmentedControl } from "@/shared/components";
 import Icon from "@/shared/components/Icon";
+import { SettingsSection } from "./SettingsSection";
 
 interface WildcardAlias {
   pattern: string;
@@ -177,24 +178,15 @@ export default function ModelAliasesUnified() {
   };
 
   return (
-    <Card>
-      <div className="flex items-center gap-3 mb-5">
-        <div className="p-1.5 rounded-control border border-border bg-surface text-text-muted">
-          <Icon name="swap_horiz" size={20} />
-        </div>
-        <div className="flex-1">
-          <h3 className="text-base font-semibold tracking-[-0.01em]">
-            {translateOrFallback(t, "modelAliasesTitle", "Model Aliases")}
-          </h3>
-          <p className="text-sm text-text-muted">
-            {translateOrFallback(
-              t,
-              "modelAliasesDesc",
-              "Remap model names using exact matches or wildcard patterns."
-            )}
-          </p>
-        </div>
-        {status.message && (
+    <SettingsSection
+      title={translateOrFallback(t, "modelAliasesTitle", "Model Aliases")}
+      description={translateOrFallback(
+        t,
+        "modelAliasesDesc",
+        "Remap model names using exact matches or wildcard patterns."
+      )}
+      action={
+        status.message ? (
           <span
             className={`text-xs font-medium flex items-center gap-1 ${
               status.type === "success" ? "text-success" : "text-error"
@@ -203,9 +195,9 @@ export default function ModelAliasesUnified() {
             <Icon name={status.type === "success" ? "check_circle" : "error"} size={14} />
             {status.message}
           </span>
-        )}
-      </div>
-
+        ) : null
+      }
+    >
       <div className="mb-5 rounded-lg border border-border/30 bg-surface/20 p-4">
         <SegmentedControl
           className="mb-3"
@@ -358,6 +350,6 @@ export default function ModelAliasesUnified() {
           ))}
         </div>
       </Collapsible>
-    </Card>
+    </SettingsSection>
   );
 }
