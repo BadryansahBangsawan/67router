@@ -4,7 +4,7 @@
  * Verifies:
  *  1. Every catalog ID has a skills/<id>/SKILL.md on disk.
  *  2. Each SKILL.md has valid frontmatter (name + description) and body ≥ 100 chars.
- *  3. MCP tool omniroute_agent_skills_list handler returns 43 entries.
+ *  3. MCP tool omniroute_agent_skills_list handler returns 42 entries.
  *
  * Does NOT spin up a server — tests handlers directly via imports.
  */
@@ -79,8 +79,8 @@ test("every config skill ID has skills/<id>/SKILL.md on disk", () => {
   assert.deepEqual(missing, [], `Missing config SKILL.md files: ${missing.join(", ")}`);
 });
 
-test("canonical skill count is exactly 42 (22 API + 19 CLI + 1 config)", () => {
-  assert.equal(CANONICAL_IDS.length, 42);
+test("canonical skill count is exactly 41 (22 API + 18 CLI + 1 config)", () => {
+  assert.equal(CANONICAL_IDS.length, 41);
 });
 
 // ── §2: Frontmatter validation ────────────────────────────────────────────────
@@ -130,14 +130,14 @@ test("each SKILL.md body is at least 100 chars", () => {
 
 // ── §3: MCP tool omniroute_agent_skills_list ─────────────────────────────────
 
-test("MCP omniroute_agent_skills_list handler returns count 43", async () => {
+test("MCP omniroute_agent_skills_list handler returns count 42", async () => {
   const result = await agentSkillTools.omniroute_agent_skills_list.handler({});
-  assert.equal(result.count, 43, `Expected 43 but got ${result.count}`);
+  assert.equal(result.count, 42, `Expected 42 but got ${result.count}`);
   assert.ok(Array.isArray(result.skills));
-  assert.equal(result.skills.length, 43);
+  assert.equal(result.skills.length, 42);
 });
 
-test("MCP omniroute_agent_skills_list result has all 43 IDs", async () => {
+test("MCP omniroute_agent_skills_list result has all 42 IDs", async () => {
   const result = await agentSkillTools.omniroute_agent_skills_list.handler({});
   const returnedIds = new Set(result.skills.map((s: { id: string }) => s.id));
   for (const id of ALL_IDS) {

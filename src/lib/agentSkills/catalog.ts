@@ -63,7 +63,6 @@ export const CLI_SKILL_IDS: readonly string[] = [
   "cli-backup-sync",
   "cli-policy-audit",
   "cli-eval",
-  "cli-plugins-skills",
   "cli-setup",
   "cli-skill-collector",
 ] as const;

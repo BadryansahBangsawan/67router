@@ -166,7 +166,7 @@ curl http://localhost:20128/api/services/9router/status \
 
 Toggle 9Router auto-start
 
-When enabled, 9Router starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, 9Router starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/9router/auto-start \
@@ -179,7 +179,7 @@ curl -X POST http://localhost:20128/api/services/9router/auto-start \
 
 Toggle 9Router auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) 9Router process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) 9Router process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/9router/auto-restart-adopted \
@@ -268,7 +268,7 @@ curl http://localhost:20128/api/services/cliproxy/status \
 
 Toggle CLIProxyAPI auto-start
 
-When enabled, CLIProxyAPI starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, CLIProxyAPI starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/cliproxy/auto-start \
@@ -281,7 +281,7 @@ curl -X POST http://localhost:20128/api/services/cliproxy/auto-start \
 
 Toggle CLIProxyAPI auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) CLIProxyAPI process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) CLIProxyAPI process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/cliproxy/auto-restart-adopted \
@@ -370,7 +370,7 @@ curl http://localhost:20128/api/services/mux/status \
 
 Toggle Mux auto-start
 
-When enabled, Mux starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, Mux starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/mux/auto-start \
@@ -383,7 +383,7 @@ curl -X POST http://localhost:20128/api/services/mux/auto-start \
 
 Toggle Mux auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) Mux process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) Mux process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/mux/auto-restart-adopted \
@@ -472,7 +472,7 @@ curl http://localhost:20128/api/services/openwa/status \
 
 Toggle open-wa auto-start
 
-When enabled, open-wa starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, open-wa starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/openwa/auto-start \
@@ -485,7 +485,7 @@ curl -X POST http://localhost:20128/api/services/openwa/auto-start \
 
 Toggle open-wa auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) open-wa process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) open-wa process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/openwa/auto-restart-adopted \
@@ -574,7 +574,7 @@ curl http://localhost:20128/api/services/bifrost/status \
 
 Toggle Bifrost auto-start
 
-When enabled, Bifrost starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, Bifrost starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/bifrost/auto-start \
@@ -587,7 +587,7 @@ curl -X POST http://localhost:20128/api/services/bifrost/auto-start \
 
 Toggle Bifrost auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) Bifrost process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) Bifrost process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/bifrost/auto-restart-adopted \
@@ -676,7 +676,7 @@ curl http://localhost:20128/api/services/dario/status \
 
 Toggle Dario auto-start
 
-When enabled, Dario starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, Dario starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/dario/auto-start \
@@ -689,7 +689,7 @@ curl -X POST http://localhost:20128/api/services/dario/auto-start \
 
 Toggle Dario auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) Dario process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) Dario process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/dario/auto-restart-adopted \
@@ -748,9 +748,9 @@ curl -X DELETE http://localhost:20128/api/services/dario/admin/accounts \
 
 ### GET /api/services/dario/admin/import-from-omniroute
 
-List OmniRoute claude connections eligible for Dario import
+List 67router claude connections eligible for Dario import
 
-Returns eligible OmniRoute `claude` OAuth provider connections (metadata only — id/name/email/org tier, never tokens) so the UI can offer a picker when more than one exists. **LOCAL_ONLY** — loopback only.
+Returns eligible 67router `claude` OAuth provider connections (metadata only — id/name/email/org tier, never tokens) so the UI can offer a picker when more than one exists. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl http://localhost:20128/api/services/dario/admin/import-from-omniroute \
@@ -759,7 +759,7 @@ curl http://localhost:20128/api/services/dario/admin/import-from-omniroute \
 
 ### POST /api/services/dario/admin/import-from-omniroute
 
-Import an OmniRoute claude connection's OAuth tokens into Dario
+Import a 67router claude connection's OAuth tokens into Dario
 
 Writes the source connection's access/refresh token pair directly into Dario's own account-file store (`~/.dario/accounts/<alias>.json`), reusing the shared Claude Code OAuth client_id, then restarts the Dario supervisor so it picks up the new account. **LOCAL_ONLY** — loopback only.
 
@@ -850,7 +850,7 @@ curl http://localhost:20128/api/services/llmlingua/status \
 
 Toggle LLMLingua auto-start
 
-When enabled, LLMLingua starts automatically on the next OmniRoute boot. **LOCAL_ONLY** — loopback only.
+When enabled, LLMLingua starts automatically on the next 67router boot. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/llmlingua/auto-start \
@@ -863,7 +863,7 @@ curl -X POST http://localhost:20128/api/services/llmlingua/auto-start \
 
 Toggle LLMLingua auto-restart-when-adopted
 
-When enabled, an externally-adopted (not OmniRoute-spawned) LLMLingua process is restarted under OmniRoute's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
+When enabled, an externally-adopted (not 67router-spawned) LLMLingua process is restarted under 67router's own supervisor on the next health-check cycle instead of being left as adopted-only. **LOCAL_ONLY** — loopback only.
 
 ```bash
 curl -X POST http://localhost:20128/api/services/llmlingua/auto-restart-adopted \

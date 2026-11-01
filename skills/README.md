@@ -44,7 +44,7 @@ Each manifest URL follows the pattern:
 | `omni-sync-cloud`      | Cloud Sync                    | Synchronise OmniRoute configuration, provider connections, and settings to/from cloud storage. Manage cloud worker authentication and remote backup targets.                                   |
 | `omni-db-backups`      | Database & Backups            | Trigger system backups, restore from backup files, and manage the SQLite database lifecycle. Supports export, import, and incremental snapshot strategies.                                     |
 | `omni-webhooks`        | Webhooks                      | Register, list, test, and remove webhook endpoints. Configure event subscriptions (request.completed, provider.error, budget.exceeded, etc.) and manage delivery retries.                      |
-| `omni-mcp`             | MCP Server                    | Connect to the OmniRoute MCP server (99 tools, 3 transports: SSE/stdio/HTTP) across 30 permission scopes.                                                                                      |
+| `omni-mcp`             | MCP Server                    | Connect to the OmniRoute MCP server (89 tools, 3 transports: SSE/stdio/HTTP) across 25 permission scopes.                                                                                      |
 | `omni-agents-a2a`      | Agents & A2A Protocol         | Interact with OmniRoute via JSON-RPC 2.0 agent-to-agent protocol. 6 built-in A2A skills: smart-routing, quota-management, provider-discovery, cost-analysis, health-report, list-capabilities. |
 | `omni-version-manager` | Version Manager               | Install, start, stop, restart, and update embedded services (9Router, CLIProxyAPI). Monitor service status, retrieve logs, and configure auto-start.                                           |
 | `omni-inference`       | Inference (OpenAI-compatible) | The core OpenAI-compatible inference endpoints: chat completions, embeddings, images, audio (TTS/STT), moderations, rerank, and the Responses API.                                             |
@@ -74,7 +74,6 @@ Each manifest URL follows the pattern:
 | `cli-policy-audit`    | CLI: Policy & Audit      | Inspect audit logs, manage access policies, view telemetry data, and review request history from the CLI. Filter by event type, user, or time range for compliance workflows.                  |
 | `cli-eval`            | CLI: Evals               | Create and run evaluation suites, watch live benchmark progress, view scorecards, compare model performance, and integrate eval runs with CI workflows from the CLI.                           |
 | `cli-eval`            | CLI: Simulate            | Simulate how a combo would route a request from the CLI, using live combo, health and quota data, without sending traffic upstream.                                                            |
-| `cli-plugins-skills`  | CLI: Skills & Memory     | Manage Omni Skills (list, install, test, remove) and persistent memory (search, add, clear) from the CLI.                                                                                      |
 | `cli-setup`           | CLI: Setup & Config      | Run initial setup, configure global CLI settings, manage environment variables, check for updates, and configure autostart via the CLI setup and config commands.                              |
 | `cli-skill-collector` | CLI: Skill Collector     | Detect installed coding CLI tools, search GitHub for matching agent skills, and plan their installation into the detected tools' skill directories.                                            |
 
@@ -111,7 +110,7 @@ examples, and error codes. Assume the reader is an agent with no prior context.
 
 ## What makes OmniRoute skills unique
 
-- `omni-mcp` — 99 MCP tools across 30 scopes over SSE/stdio/Streamable HTTP
+- `omni-mcp` — 89 MCP tools across 25 scopes over SSE/stdio/Streamable HTTP
 - `omni-agents-a2a` — 6 A2A skills (smart-routing, quota, discovery, cost, health, list-capabilities) via JSON-RPC 2.0
 - `omni-combos-routing` — create/configure combos, 19 strategies, Auto-combo scoring, fallback chains
 - `omni-compression` — RTK + Caveman + stacked mode + MCP accessibility filter (60–90% token savings)

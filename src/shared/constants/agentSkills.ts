@@ -203,7 +203,7 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     id: "omni-mcp",
     name: "MCP Server",
     description:
-      "Connect to the 67router MCP server (97 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, providers, and audit tools across 27 permission scopes.",
+      "Connect to the 67router MCP server (89 tools, 3 transports: SSE/stdio/HTTP). Covers routing, cache, compression, providers, and audit tools across 25 permission scopes.",
     category: "api",
     area: "mcp",
     icon: "electrical_services",
@@ -382,14 +382,6 @@ export const CURATED_SKILLS: CuratedSkillEntry[] = [
     category: "cli",
     area: "cli-eval",
     icon: "science",
-  },
-  {
-    id: "cli-plugins-skills",
-    name: "CLI: Plugins",
-    description: "Manage plugins (list, install, scaffold) from the CLI.",
-    category: "cli",
-    area: "cli-plugins-skills",
-    icon: "extension",
   },
   {
     id: "cli-setup",

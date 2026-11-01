@@ -32,7 +32,7 @@ omniroute quota
 
 ### `quota status`
 
-Show truthful OmniRoute gateway, quota, and circuit state
+Show truthful 67router gateway, quota, and circuit state
 
 **Example:**
 

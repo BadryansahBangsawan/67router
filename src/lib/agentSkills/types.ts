@@ -44,7 +44,6 @@ export type SkillArea =
   | "cli-backup-sync"
   | "cli-policy-audit"
   | "cli-eval"
-  | "cli-plugins-skills"
   | "cli-setup"
   | "cli-skill-collector"
   // External (third-party) skills

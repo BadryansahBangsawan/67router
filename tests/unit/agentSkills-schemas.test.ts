@@ -136,7 +136,7 @@ test("AgentSkillSchema — .parse throws on invalid input", () => {
 test("SkillCoverageSchema — valid coverage parses successfully", () => {
   const input = {
     api: { have: 22, total: 22 },
-    cli: { have: 19, total: 19 },
+    cli: { have: 18, total: 18 },
     config: { have: 1, total: 1 },
     totalSkills: 42,
     generatedAt: new Date().toISOString(),
@@ -148,7 +148,7 @@ test("SkillCoverageSchema — valid coverage parses successfully", () => {
 test("SkillCoverageSchema — wrong total literal (api.total=21) fails", () => {
   const input = {
     api: { have: 21, total: 21 },
-    cli: { have: 19, total: 19 },
+    cli: { have: 18, total: 18 },
     config: { have: 1, total: 1 },
     totalSkills: 43,
     generatedAt: new Date().toISOString(),
@@ -157,10 +157,10 @@ test("SkillCoverageSchema — wrong total literal (api.total=21) fails", () => {
   assert.equal(result.success, false);
 });
 
-test("SkillCoverageSchema — wrong total literal (cli.total=18) fails", () => {
+test("SkillCoverageSchema — wrong total literal (cli.total=19) fails", () => {
   const input = {
     api: { have: 22, total: 22 },
-    cli: { have: 18, total: 18 },
+    cli: { have: 19, total: 19 },
     config: { have: 1, total: 1 },
     totalSkills: 42,
     generatedAt: new Date().toISOString(),
@@ -172,7 +172,7 @@ test("SkillCoverageSchema — wrong total literal (cli.total=18) fails", () => {
 test("SkillCoverageSchema — invalid datetime fails", () => {
   const input = {
     api: { have: 22, total: 22 },
-    cli: { have: 19, total: 19 },
+    cli: { have: 18, total: 18 },
     config: { have: 1, total: 1 },
     totalSkills: 42,
     generatedAt: "not-a-date",
@@ -184,7 +184,7 @@ test("SkillCoverageSchema — invalid datetime fails", () => {
 test("SkillCoverageSchema — negative have value fails", () => {
   const input = {
     api: { have: -1, total: 22 },
-    cli: { have: 19, total: 19 },
+    cli: { have: 18, total: 18 },
     config: { have: 1, total: 1 },
     totalSkills: 42,
     generatedAt: new Date().toISOString(),
