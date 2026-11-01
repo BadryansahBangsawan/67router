@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "Serveur MCP",
-        "description": "Se connecter au serveur MCP d'67router (97 outils, 3 transports : SSE/stdio/HTTP). Couvre le routage, le cache, la compression, la mémoire, les compétences, les fournisseurs et les outils d'audit sur 27 scopes de permission."
+        "description": "Se connecter au serveur MCP d'67router (89 outils, 3 transports : SSE/stdio/HTTP). Couvre le routage, le cache, la compression, la mémoire, les compétences, les fournisseurs et les outils d'audit sur 25 scopes de permission."
       },
       "omni-agents-a2a": {
         "name": "Agents et protocole A2A",

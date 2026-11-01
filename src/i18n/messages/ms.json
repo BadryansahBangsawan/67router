@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "Pelayan MCP",
-        "description": "Sambung ke pelayan MCP 67router (97 alatan, 3 pengangkutan: SSE/stdio/HTTP). Meliputi penghalaan, cache, pemampatan, memori, kemahiran, penyedia dan alatan audit merentasi 27 skop kebenaran."
+        "description": "Sambung ke pelayan MCP 67router (89 alatan, 3 pengangkutan: SSE/stdio/HTTP). Meliputi penghalaan, cache, pemampatan, memori, kemahiran, penyedia dan alatan audit merentasi 25 skop kebenaran."
       },
       "omni-agents-a2a": {
         "name": "Ejen & Protokol A2A",

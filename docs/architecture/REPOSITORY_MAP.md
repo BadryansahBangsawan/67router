@@ -258,7 +258,7 @@ open-sse/
 ├── translator/          # Format converters (9 request, 9 response, 9 helpers)
 ├── transformer/         # Responses API ↔ Chat Completions (TransformStream)
 ├── services/            # ~80+ service modules (combo, accountFallback, autoCombo, reasoningCache, claude code/chatgpt stealth, modelDeprecation, taskAwareRouter, workflowFSM, etc.)
-├── mcp-server/          # MCP server (97 tools, 3 transports, 27 scopes)
+├── mcp-server/          # MCP server (89 tools, 3 transports, 25 scopes)
 ├── config/              # Provider/model registries, header config, model aliases
 ├── utils/               # TLS client, proxy fetch/dispatcher, network helpers
 ├── index.ts             # Workspace entry
@@ -405,7 +405,7 @@ open-sse/
 
 | Doc                                         | Purpose                                                              |
 | ------------------------------------------- | -------------------------------------------------------------------- |
-| `MCP-SERVER.md`                             | MCP server: 97 tools, 3 transports, 27 scopes, REST endpoints        |
+| `MCP-SERVER.md`                             | MCP server: 89 tools, 3 transports, 25 scopes, REST endpoints        |
 | `AGENT_PROTOCOLS_GUIDE.md`                  | ACP (CLI agent registry) guide                                       |
 | `RADAR.md`                                  | Radar free-model catalog overlay (`RADAR_ENABLED`, off by default)   |
 | `GUARDRAILS.md`                             | PII masker, prompt injection, vision bridge                          |

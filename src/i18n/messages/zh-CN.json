@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP 服务器",
-        "description": "连接到 67router MCP 服务器（97 个工具，3 种传输方式：SSE/stdio/HTTP）。涵盖 27 个权限范围内的路由、缓存、压缩、内存、技能、提供者和审计工具。"
+        "description": "连接到 67router MCP 服务器（89 个工具，3 种传输方式：SSE/stdio/HTTP）。涵盖 25 个权限范围内的路由、缓存、压缩、内存、技能、提供者和审计工具。"
       },
       "omni-agents-a2a": {
         "name": "智能体与 A2A 协议",

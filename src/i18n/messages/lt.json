@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP serveris",
-        "description": "Prisijunkite prie 67router MCP serverio (97 įrankių, 3 perdavimo būdai: SSE/stdio/HTTP). Jis apima maršruto parinkimo, talpyklos, glaudinimo, atminties, įgūdžių, teikėjų ir audito įrankius 27 leidimų taikymo srityse."
+        "description": "Prisijunkite prie 67router MCP serverio (89 įrankių, 3 perdavimo būdai: SSE/stdio/HTTP). Jis apima maršruto parinkimo, talpyklos, glaudinimo, atminties, įgūdžių, teikėjų ir audito įrankius 25 leidimų taikymo srityse."
       },
       "omni-agents-a2a": {
         "name": "Agentai ir A2A protokolas",

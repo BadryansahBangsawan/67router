@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP server",
-        "description": "Připojte se k MCP serveru 67router (97 nástrojů, 3 přenosy: SSE/stdio/HTTP). Zahrnuje směrování, mezipaměť, kompresi, paměť, dovednosti, poskytovatele a auditní nástroje napříč 27 rozsahy oprávnění."
+        "description": "Připojte se k MCP serveru 67router (89 nástrojů, 3 přenosy: SSE/stdio/HTTP). Zahrnuje směrování, mezipaměť, kompresi, paměť, dovednosti, poskytovatele a auditní nástroje napříč 25 rozsahy oprávnění."
       },
       "omni-agents-a2a": {
         "name": "Agenti a protokol A2A",

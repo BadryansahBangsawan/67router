@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "Server MCP",
-        "description": "Connettiti al server MCP di 67router (97 strumenti, 3 trasporti: SSE/stdio/HTTP). Copre routing, cache, compressione, memoria, skill, provider e strumenti di audit su 27 ambiti di autorizzazione."
+        "description": "Connettiti al server MCP di 67router (89 strumenti, 3 trasporti: SSE/stdio/HTTP). Copre routing, cache, compressione, memoria, skill, provider e strumenti di audit su 25 ambiti di autorizzazione."
       },
       "omni-agents-a2a": {
         "name": "Agenti e protocollo A2A",

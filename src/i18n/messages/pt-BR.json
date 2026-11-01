@@ -11523,7 +11523,7 @@
       },
       "omni-mcp": {
         "name": "MCP",
-        "description": "Conecte-se ao servidor MCP do 67router (97 ferramentas, 3 transportes: SSE/stdio/HTTP). Abrange ferramentas de roteamento, cache, compressão, memória, skills, provedores e auditoria em 27 escopos de permissão."
+        "description": "Conecte-se ao servidor MCP do 67router (89 ferramentas, 3 transportes: SSE/stdio/HTTP). Abrange ferramentas de roteamento, cache, compressão, memória, skills, provedores e auditoria em 25 escopos de permissão."
       },
       "omni-agents-a2a": {
         "name": "Agentes e Protocolo A2A",

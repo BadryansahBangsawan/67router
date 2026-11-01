@@ -53,7 +53,7 @@ Core capabilities:
 - Compliance audit logging with opt-out per API key
 - Eval framework for LLM quality assurance
 - Health dashboard with real-time provider circuit breaker status
-- MCP Server (97 tools) with 3 transports (stdio/SSE/Streamable HTTP)
+- MCP Server (89 tools) with 3 transports (stdio/SSE/Streamable HTTP)
 - A2A task store (Conductor-mirrored tasks, `/api/a2a/tasks`)
 - Memory system (extraction, injection, retrieval, summarization)
 - Skills system (registry, executor, sandbox, built-in skills)

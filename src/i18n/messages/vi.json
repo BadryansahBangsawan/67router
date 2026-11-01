@@ -11523,7 +11523,7 @@
       },
       "omni-mcp": {
         "name": "Máy chủ MCP",
-        "description": "Kết nối máy chủ MCP 67router với 97 công cụ và 3 transport SSE/stdio/HTTP. Bao phủ định tuyến, cache, nén, bộ nhớ, skill, nhà cung cấp và kiểm toán trong 27 phạm vi quyền."
+        "description": "Kết nối máy chủ MCP 67router với 89 công cụ và 3 transport SSE/stdio/HTTP. Bao phủ định tuyến, cache, nén, bộ nhớ, skill, nhà cung cấp và kiểm toán trong 25 phạm vi quyền."
       },
       "omni-agents-a2a": {
         "name": "Agent & giao thức A2A",

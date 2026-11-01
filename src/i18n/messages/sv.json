@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP-server",
-        "description": "Anslut till 67router MCP-servern (97 verktyg, 3 transporter: SSE/stdio/HTTP). Omfattar dirigering, cache, komprimering, minne, färdigheter, leverantörer och granskningsverktyg över 27 behörighetsomfång."
+        "description": "Anslut till 67router MCP-servern (89 verktyg, 3 transporter: SSE/stdio/HTTP). Omfattar dirigering, cache, komprimering, minne, färdigheter, leverantörer och granskningsverktyg över 25 behörighetsomfång."
       },
       "omni-agents-a2a": {
         "name": "Agenter & A2A-protokoll",

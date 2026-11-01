@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP server",
-        "description": "Povežite se sa 67router MCP serverom (97 alata, 3 transporta: SSE/stdio/HTTP). Obuhvata alate za rutiranje, keš, kompresiju, memoriju, veštine, provajdere i reviziju u okviru 27 obima ovlašćenja."
+        "description": "Povežite se sa 67router MCP serverom (89 alata, 3 transporta: SSE/stdio/HTTP). Obuhvata alate za rutiranje, keš, kompresiju, memoriju, veštine, provajdere i reviziju u okviru 25 obima ovlašćenja."
       },
       "omni-agents-a2a": {
         "name": "Agenti i A2A protokol",

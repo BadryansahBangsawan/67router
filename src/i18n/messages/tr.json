@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP Sunucusu",
-        "description": "67router MCP sunucusuna bağlanın (97 araç, 3 taşıma protokolü: SSE/stdio/HTTP). 27 izin kapsamı genelinde yönlendirme, önbellek, sıkıştırma, bellek, yetenekler, sağlayıcılar ve denetim araçlarını kapsar."
+        "description": "67router MCP sunucusuna bağlanın (89 araç, 3 taşıma protokolü: SSE/stdio/HTTP). 25 izin kapsamı genelinde yönlendirme, önbellek, sıkıştırma, bellek, yetenekler, sağlayıcılar ve denetim araçlarını kapsar."
       },
       "omni-agents-a2a": {
         "name": "Temsilciler ve A2A Protokolü",

@@ -401,7 +401,7 @@ Common translations:
 
 `open-sse/mcp-server/` implements the **Model Context Protocol** server:
 
-- **99 tools** (provider management, combos, memory, cache, compression, proxy, skills, gamification, Notion, Obsidian, local corpus)
+- **89 tools** (provider management, combos, memory, cache, compression, proxy, skills, gamification, Notion, Obsidian, local corpus)
 - **3 transports**: stdio, SSE, Streamable HTTP
 - **33 scopes** for fine-grained authorization
 

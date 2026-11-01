@@ -52,7 +52,8 @@ test("#6854: countUniqueMcpTools de-duplicates tools registered in multiple coll
   };
 
   const total = countUniqueMcpTools(collections);
-  assert.equal(total, 97, "the published MCP inventory must match the registered tool set");
+  // 67router: PR-3 removed the 8 plugin tools and PR-6 the 10 memory/skill tools (107 -> 89).
+  assert.equal(total, 89, "the published MCP inventory must match the registered tool set");
 
   // Independently compute the "true" unique count by unioning every collection's
   // tool names into a Set — this must equal countUniqueMcpTools's own result AND

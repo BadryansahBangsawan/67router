@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "Serwer MCP",
-        "description": "Połącz się z serwerem MCP 67router (97 narzędzi, 3 transporty: SSE/stdio/HTTP). Obejmuje routing, pamięć podręczną, kompresję, pamięć, umiejętności, dostawców i narzędzia audytowe w ramach 27 zakresów uprawnień."
+        "description": "Połącz się z serwerem MCP 67router (89 narzędzi, 3 transporty: SSE/stdio/HTTP). Obejmuje routing, pamięć podręczną, kompresję, pamięć, umiejętności, dostawców i narzędzia audytowe w ramach 25 zakresów uprawnień."
       },
       "omni-agents-a2a": {
         "name": "Agenci i protokół A2A",

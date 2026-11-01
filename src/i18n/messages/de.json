@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP-Server",
-        "description": "Verbindung zum 67router-MCP-Server herstellen (97 Tools, 3 Transporte: SSE/stdio/HTTP). Deckt Routing-, Cache-, Komprimierungs-, Speicher-, Skill-, Anbieter- und Audit-Tools über 27 Berechtigungsbereiche hinweg ab."
+        "description": "Verbindung zum 67router-MCP-Server herstellen (89 Tools, 3 Transporte: SSE/stdio/HTTP). Deckt Routing-, Cache-, Komprimierungs-, Speicher-, Skill-, Anbieter- und Audit-Tools über 25 Berechtigungsbereiche hinweg ab."
       },
       "omni-agents-a2a": {
         "name": "Agenten & A2A-Protokoll",

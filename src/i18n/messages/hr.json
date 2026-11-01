@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP poslužitelj",
-        "description": "Povežite se s 67router MCP poslužiteljem (97 alata, 3 načina prijenosa: SSE/stdio/HTTP). Obuhvaća alate za usmjeravanje, predmemoriju, kompresiju, memoriju, vještine, pružatelje i reviziju, raspoređene u 27 opsega dopuštenja."
+        "description": "Povežite se s 67router MCP poslužiteljem (89 alata, 3 načina prijenosa: SSE/stdio/HTTP). Obuhvaća alate za usmjeravanje, predmemoriju, kompresiju, memoriju, vještine, pružatelje i reviziju, raspoređene u 25 opsega dopuštenja."
       },
       "omni-agents-a2a": {
         "name": "Agenti i A2A protokol",

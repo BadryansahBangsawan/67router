@@ -11451,7 +11451,7 @@
       },
       "omni-mcp": {
         "name": "MCP serveris",
-        "description": "Izveidojiet savienojumu ar 67router MCP serveri (97 rīki, 3 transporti: SSE/stdio/HTTP). Tas aptver maršrutēšanas, kešatmiņas, saspiešanas, atmiņas, prasmju, nodrošinātāju un audita rīkus 27 atļauju tvērumos."
+        "description": "Izveidojiet savienojumu ar 67router MCP serveri (89 rīki, 3 transporti: SSE/stdio/HTTP). Tas aptver maršrutēšanas, kešatmiņas, saspiešanas, atmiņas, prasmju, nodrošinātāju un audita rīkus 25 atļauju tvērumos."
       },
       "omni-agents-a2a": {
         "name": "Aģenti un A2A protokols",
