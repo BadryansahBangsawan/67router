@@ -1,6 +1,6 @@
 # OmniRoute
 
-> 67router is a free, open-source AI Gateway that acts as a universal API proxy for multi-provider LLMs. It provides smart routing, automatic fallback, load balancing, and format translation across 372 AI providers — all through a single OpenAI-compatible endpoint. Includes a built-in MCP Server (89 tools), Memory/Skills systems, Guardrails framework, and an Electron desktop app.
+> 67router is a free, open-source AI Gateway that acts as a universal API proxy for multi-provider LLMs. It provides smart routing, automatic fallback, load balancing, and format translation across 372 AI providers — all through a single OpenAI-compatible endpoint. Includes a built-in MCP Server (89 tools), a Guardrails framework, and an Electron desktop app.
 
 ## Overview
 
@@ -47,7 +47,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │       ├── health/       # System health (uptime, circuit breakers, latency)
 │   │   │       ├── limits/       # Rate limits dashboard
 │   │   │       ├── logs/         # Request, Proxy, Audit, Console logs (tabbed)
-│   │   │       ├── media/        # Image/video/music generation + transcription
+│   │   │       ├── media-providers/ # Video/music generation, transcription, OCR, search providers
 │   │   │       ├── onboarding/   # Onboarding wizard
 │   │   │       ├── providers/    # Provider management (OAuth + API key + free)
 │   │   │       ├── search-tools/ # Search tools configuration
@@ -56,7 +56,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   │       └── usage/        # Usage history
 │   │   ├── api/                  # REST API endpoints (100+ route directories)
 │   │   │   ├── v1/               # OpenAI-compatible API (chat, completions, models,
-│   │   │   │                     #   images, audio, videos, music, search,
+│   │   │   │                     #   audio/transcriptions, videos, music, ocr, search,
 │   │   │   │                     #   responses, messages, registered-keys, quotas, accounts)
 │   │   │   ├── v1beta/           # Gemini-compatible API
 │   │   │   ├── a2a/              # A2A task list/detail/cancel API (Conductor)
@@ -171,13 +171,11 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   │   ├── cloudflare-ai.ts      # Cloudflare Workers AI
 │   │   ├── opencode.ts           # OpenCode Zen/Go
 │   │   └── pollinations.ts       # Pollinations AI
-│   ├── handlers/                 # Request handlers per API type (25 handlers)
+│   ├── handlers/                 # Request handlers per API type (18 handler modules)
 │   │   ├── chatCore.ts           # Main chat completions handler
 │   │   ├── responsesHandler.ts   # OpenAI Responses API handler
-│   │   ├── imageGeneration.ts    # Image generation (GPT-Image, FLUX, SD, etc.)
 │   │   ├── videoGeneration.ts    # Video generation
 │   │   ├── musicGeneration.ts    # Music generation
-│   │   ├── audioSpeech.ts        # Text-to-speech
 │   │   ├── audioTranscription.ts # Speech-to-text (Whisper, Deepgram, AssemblyAI)
 │   │   └── search.ts             # Web search API
 │   ├── mcp-server/               # Built-in MCP server (89 tools, 3 transports: stdio/SSE/streamable-HTTP)
@@ -217,8 +215,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 │   ├── translator/               # Format translators (OpenAI ↔ Claude ↔ Gemini ↔ Responses ↔ Ollama ↔ DeepSeek)
 │   │   ├── request/              # Request translators per provider
 │   │   ├── response/             # Response translators per provider
-│   │   ├── helpers/              # Translation helpers
-│   │   └── image/                # Image format translation
+│   │   └── helpers/              # Translation helpers
 │   └── utils/                    # 100+ utility modules (stream, TLS, proxy, logging, etc.)
 ├── electron/                     # Electron desktop app (cross-platform)
 │   ├── main.js                   # Electron main process
@@ -292,7 +289,7 @@ OmniRoute solves the problem of managing multiple AI provider subscriptions, quo
 - **Cache** — Semantic cache statistics and management
 - **CLI Tools** — One-click configuration for 10+ AI CLI tools
 - **CLI Agents** — Grid of 14+ built-in agents with ProviderIcon and install detection + custom agent registration
-- **Media** — Image/video/music generation (GPT-Image, FLUX, etc.) + audio transcription (up to 2GB files)
+- **Media** — Video/music generation + audio transcription (up to 2GB files)
 - **Search Tools** — Search provider configuration and testing
 - **Translator** — Format debugging: chat tester, test bench, live monitor
 - **Settings** — General, Appearance (7 color themes), Security (TLS/CLI fingerprint, IP filter), Routing, Resilience, Advanced
@@ -437,7 +434,7 @@ diagnostics) plus **agentSkill**, **pool**, **notion**,
 - **20 routing strategies** — including `fusion` (parallel panel + judge synthesis), `pipeline`, `reset-aware`, `reset-window`, `headroom`, and `context-relay`
 - **16-factor Auto-Combo scoring** with bandit exploration and progressive cooldown
 - **MCP server expanded to 89 tools / 25 scopes** (canonical + agentSkill/pool/notion/obsidian/localCorpus/gamification modules)
-- **Guardrails**, **Webhooks**, **Compliance** frameworks
+- **Guardrails** and **Compliance** frameworks
 - **Embedded services** manager (install/start/stop bundled services from the dashboard)
 - **Prompt compression** (RTK + Caveman codecs) saving up to ~95% tokens on eligible traffic
 - Full changelog: `CHANGELOG.md`
