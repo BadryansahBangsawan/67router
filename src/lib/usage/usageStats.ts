@@ -15,7 +15,7 @@ import { getAccountDisplayName } from "@/lib/display/names";
 import { calculateCost } from "./costCalculator";
 import { isFlatRateProvider } from "./flatRateProviders";
 import { getRawDataCutoffDate, isAggregationEnabled } from "./aggregateHistory";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 type JsonRecord = Record<string, unknown>;
 type UsageBucket = {

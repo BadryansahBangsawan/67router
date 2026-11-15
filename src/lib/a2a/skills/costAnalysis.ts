@@ -8,7 +8,7 @@ import type { A2ATask, TaskArtifact } from "../taskManager";
 import { buildSelfLoopHeaders, type A2ACallerContext } from "../selfLoopAuth";
 import { resolveOmniRouteBaseUrl } from "@/shared/utils/resolveOmniRouteBaseUrl";
 import { formatCost } from "@/shared/utils/formatting";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 type AnalyticsRecord = Record<string, unknown>;
 

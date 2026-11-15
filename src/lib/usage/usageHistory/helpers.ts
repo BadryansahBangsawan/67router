@@ -6,10 +6,10 @@ import { storedUsageEvidence } from "../storedUsageEvidence";
 
 // #7879: re-export the canonical helper so existing consumers of this module
 // keep importing `toNumber` from here unchanged.
-export { toNumber } from "@/shared/utils/numeric";
+export { toNumber } from "@omniroute/open-sse/utils/numeric";
 // #13130: shared TPS math (generation-time denominator, reasoning-aware numerator).
 import { resolveGenerationMs, resolveTpsOutputTokens } from "@/shared/utils/logTps";
-import { toNumber as toNumberValue } from "@/shared/utils/numeric";
+import { toNumber as toNumberValue } from "@omniroute/open-sse/utils/numeric";
 
 type JsonRecord = Record<string, unknown>;
 

@@ -5,7 +5,7 @@ import { buildErrorBody } from "@omniroute/open-sse/utils/error.ts";
 
 import { getProviderMetrics, type ProviderMetricRow } from "@/lib/db/callLogStats";
 import { foldMetricRowsByFamily } from "@/lib/providerFamilyAgg";
-import { toNumber, toNumberOrNull } from "@/shared/utils/numeric";
+import { toNumber, toNumberOrNull } from "@omniroute/open-sse/utils/numeric";
 
 const logger = pino({ name: "provider-metrics-api" });
 

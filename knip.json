@@ -21,7 +21,8 @@
         ".build/**",
         "dist/**",
         "coverage/**",
-        "**/.next/**"
+        "**/.next/**",
+        ".claude/**"
       ],
       "ignoreDependencies": [
         "typescript",
@@ -68,6 +69,7 @@
     "coverage/**",
     "**/.next/**",
     "electron/dist-electron/**",
-    "scripts/**"
+    "scripts/**",
+    ".claude/**"
   ]
 }

@@ -7,7 +7,7 @@
  * @module lib/usage/costCalculator
  */
 
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import { splitCodexReasoningSuffix } from "@omniroute/open-sse/executors/codex/reasoningSuffix.ts";
 import { resolveClaudeEffortVariantBase } from "@omniroute/open-sse/handlers/chatCore/claudeEffortVariant.ts";
 import { isCreditMeteredProvider } from "./creditMeteredProviders";
