@@ -5,7 +5,7 @@ import { executeCostAnalysis } from "../../src/lib/a2a/skills/costAnalysis.ts";
 import type { A2ATask } from "../../src/lib/a2a/taskManager.ts";
 
 // #7879: the cost-analysis A2A skill migrated its local `toNumber` to the
-// canonical `@/shared/utils/numeric` helper. This test proves the 0-fallback
+// canonical `@omniroute/open-sse/utils/numeric` helper. This test proves the 0-fallback
 // semantics for missing/non-numeric analytics fields still hold after the
 // migration (the whole point of the tier-1 move).
 

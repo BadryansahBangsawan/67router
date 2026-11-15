@@ -14,7 +14,7 @@
  */
 
 import { getDbInstance } from "./core";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 // ---------------------------------------------------------------------------
 // Types

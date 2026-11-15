@@ -17,7 +17,7 @@ import crypto from "crypto";
 import { canonicalJson } from "./skills/stableJson";
 import { LRUCache } from "./cacheLayer";
 import { getDbInstance } from "./db/core";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import { conversationSignatureFields } from "../../open-sse/utils/conversationSignatureFields";
 
 type JsonRecord = Record<string, unknown>;

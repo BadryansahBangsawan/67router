@@ -59,6 +59,7 @@
     ".worktrees",
     "@omniroute",
     "_tasks",
+    "_artifacts",
     "_ideia",
     "_mono_repo",
     "_references",

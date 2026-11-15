@@ -29,7 +29,7 @@ import { findModelPricing, findProviderPricing } from "@/lib/db/settings/pricing
 import { getPricingLookupModels } from "@/lib/usage/costCalculator";
 import { isCreditMeteredProvider } from "@/lib/usage/creditMeteredProviders";
 import { isCatalogFreeModel } from "@/shared/utils/freeModels";
-import { toNumberOrNull } from "@/shared/utils/numeric";
+import { toNumberOrNull } from "@omniroute/open-sse/utils/numeric";
 
 type PricingRow = Record<string, unknown>;
 type PricingTable = Record<string, Record<string, PricingRow>>;

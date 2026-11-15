@@ -17,7 +17,7 @@
 import { recordLedgerEntrySafe } from "@/lib/db/costLedger";
 import { getPricingForModel } from "@/lib/db/settings/pricing";
 import { getLoggedInputTokens, getLoggedOutputTokens, getReasoningTokens } from "./tokenAccounting";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 export interface CostLedgerRecorderInput {
   apiKeyId: string | null | undefined;

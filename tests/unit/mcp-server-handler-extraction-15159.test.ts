@@ -92,7 +92,7 @@ const EXTRACTED: Record<string, readonly string[]> = {
  * have to land in a leaf both sides can import.
  *
  * `toFiniteNumber`, not `toNumber`: `no-restricted-syntax` (#7879) bars a local
- * `toNumber` because `src/shared/utils/numeric.ts` owns that name, and the old
+ * `toNumber` because `open-sse/utils/numeric.ts` owns that name, and the old
  * `server.ts` carried a suppression for it. The rename removes that suppression
  * instead of relocating it into a new file. Semantics are deliberately
  * unchanged by the move — see the note on the function itself.

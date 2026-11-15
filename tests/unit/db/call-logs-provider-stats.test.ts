@@ -50,7 +50,7 @@ test("avgLatencyMs is null when all durations are NULL, and the route propagates
      VALUES ('log-1', ?, 'openai', 200, NULL)`
   ).run(now);
 
-  const { toNumberOrNull } = await import("../../../src/shared/utils/numeric.ts");
+  const { toNumberOrNull } = await import("../../../open-sse/utils/numeric.ts");
   const rows = stats.getProviderMetrics();
   assert.equal(rows.length, 1);
   // Lib-level: passes before AND after (the driver already returns null — only

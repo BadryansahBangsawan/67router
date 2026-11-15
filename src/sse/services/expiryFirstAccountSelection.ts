@@ -13,7 +13,7 @@
  */
 
 import { getQuotaCache } from "@/domain/quotaCache";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import {
   resolveExpiryFirstConfig,
   scoreExpiryFirstQuota,

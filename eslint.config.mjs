@@ -11,7 +11,7 @@ const TO_NUMBER_RESTRICTION = {
   selector: "FunctionDeclaration[id.name='toNumber'], VariableDeclarator[id.name='toNumber']",
   message:
     "New local `toNumber` definitions are barred — import `toNumber` from " +
-    "`@/shared/utils/numeric` instead (#7879). See that module's JSDoc for the " +
+    "`@omniroute/open-sse/utils/numeric` instead (#7879). See that module's JSDoc for the " +
     "canonical coercion shape and the `toNumberOrNull`/`toNumberArray` variants.",
 };
 
@@ -145,7 +145,7 @@ const eslintConfig = [
   },
   // Canonical helper module itself is exempt from its own restriction.
   {
-    files: ["src/shared/utils/numeric.ts"],
+    files: ["open-sse/utils/numeric.ts"],
     rules: {
       "no-restricted-syntax": "off",
     },

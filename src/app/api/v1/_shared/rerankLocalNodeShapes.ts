@@ -31,7 +31,7 @@
  *    and the upstream did not echo them.
  */
 
-import { toNumberOrNull } from "@/shared/utils/numeric";
+import { toNumberOrNull } from "@omniroute/open-sse/utils/numeric";
 
 export interface LocalRerankRequestInput {
   model: string;

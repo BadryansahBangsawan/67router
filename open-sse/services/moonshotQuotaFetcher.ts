@@ -10,7 +10,7 @@
  * Cache: 60s in-memory. Registration: registerMoonshotQuotaFetcher() at startup.
  */
 
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import {
   registerQuotaCacheInvalidator,
   registerQuotaFetcher,

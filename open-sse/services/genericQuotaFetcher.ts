@@ -16,7 +16,7 @@
  * tests) can discover which windows that provider exposes.
  */
 
-import { toNumberOrNull } from "@/shared/utils/numeric";
+import { toNumberOrNull } from "@omniroute/open-sse/utils/numeric";
 
 import { hasOllamaPurchasedCredits } from "./ollamaPurchasedCredits.ts";
 import { getUsageForProvider, USAGE_FETCHER_PROVIDERS } from "./usage.ts";
