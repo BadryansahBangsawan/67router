@@ -11,7 +11,7 @@ export function asRecord(value: unknown): JsonRecord | null {
   return value && typeof value === "object" && !Array.isArray(value) ? (value as JsonRecord) : null;
 }
 
-export { toNumber } from "@/shared/utils/numeric";
+export { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 export function roundNumber(value: number, precision = 6): number {
   if (!Number.isFinite(value)) return 0;

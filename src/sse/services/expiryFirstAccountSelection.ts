@@ -15,7 +15,7 @@
  */
 
 import { getQuotaCacheOrSnapshot } from "@/domain/quotaCache";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import {
   expiryFirstQuotaProvider,
   expiryFirstWindowName,

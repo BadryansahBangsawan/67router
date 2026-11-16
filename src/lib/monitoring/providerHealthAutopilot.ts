@@ -4,7 +4,7 @@ import { getProviderConnections, updateProviderConnection } from "@/lib/db/provi
 import { getCachedProviderConnectionById } from "@/lib/db/readCache";
 import { isRetestAutoDisabledEnabled } from "@/lib/credentialHealth/retestAutoDisabledFlag";
 import { applyOperatorActivationIntent } from "@/lib/providers/operatorDisable";
-import { toNumberOrNull } from "@/shared/utils/numeric";
+import { toNumberOrNull } from "@omniroute/open-sse/utils/numeric";
 import { clearProviderFailure, clearModelLock } from "@omniroute/open-sse/services/accountFallback";
 import { resolveProviderAlias } from "@omniroute/open-sse/services/model";
 

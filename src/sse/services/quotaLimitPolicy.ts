@@ -1,7 +1,7 @@
 import { DEFAULT_QUOTA_THRESHOLD_PERCENT, getQuotaWindowStatus } from "@/domain/quotaCache";
 import { defersQuotaCutoff } from "@/lib/providers/quotaCutoffOptIns";
 import { applyCodexWindowPolicy } from "@omniroute/open-sse/services/codexQuotaWindowPolicy.ts";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import { toCodexScopedQuotaWindowName } from "@omniroute/open-sse/config/codexQuotaScopes.ts";
 import { cooldownUntilMs } from "@omniroute/open-sse/services/accountFallback.ts";
 import { formatQuotaUsageReason } from "@omniroute/open-sse/services/quotaWindowLabel.ts";

@@ -7,7 +7,7 @@ import {
 } from "@/lib/db/teams";
 import { computeCostFromPricing, resolvePricingRow } from "./costCalculator";
 import { buildErrorBody, sanitizeErrorMessage } from "@omniroute/open-sse/utils/error.ts";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import { isAnthropicMessagesRequest } from "@/shared/utils/anthropicErrorEnvelope";
 import { parseShapeCounts, type TeamCostShape } from "@/lib/usage/teamCostShapes";
 

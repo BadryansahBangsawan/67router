@@ -2,7 +2,7 @@
  * Connection-state terms of the p2c account score (moved out of src/sse/services/auth.ts so
  * the selector stays under its file-size ceiling). Lower is better.
  */
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import type { ProviderConnectionView } from "@/lib/db/providers/lazyConnectionView";
 
 function normalizeStatus(value: string | null): string {

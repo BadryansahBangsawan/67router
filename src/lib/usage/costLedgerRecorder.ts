@@ -24,7 +24,7 @@ import {
   getPromptCacheReadTokens,
   getReasoningTokens,
 } from "./tokenAccounting";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 export interface CostLedgerRecorderInput {
   apiKeyId: string | null | undefined;

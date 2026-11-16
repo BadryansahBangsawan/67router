@@ -1,5 +1,5 @@
 import { isFlatRateProvider } from "./flatRateProviders";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 
 type PricingByProvider = Record<string, Record<string, Record<string, unknown>>>;
 type ComputeCostFromPricing = (

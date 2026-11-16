@@ -1,6 +1,6 @@
 import { getDbInstance } from "./core";
 import { calculateCostDetailed } from "@/lib/usage/costCalculator";
-import { toNumber } from "@/shared/utils/numeric";
+import { toNumber } from "@omniroute/open-sse/utils/numeric";
 import { parseShapeCounts } from "@/lib/usage/teamCostShapes";
 
 export interface TeamUsageReport {
